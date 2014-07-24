@@ -87,7 +87,12 @@ INTER_FILE := $(shell mktemp --dry-run --tmpdir=$(SRC_DIR) --suffix=.js)
 
 #######################################################################3
 
-all: link deps compile start_files
+all: directories link deps compile start_files
+
+directories: $(BIN_DIR)
+
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
 
 lint: 
 	$(GJSLINT) $(SRC_DIR)
@@ -113,7 +118,7 @@ $(DEPS):
 	@$(DEPSWRITER) --root_with_prefix="$(SRC_DIR) ../../../" > $(DEPS)
 
 
-start_files: $(START) $(INTERACTIVE)
+start_files: directories $(START) $(INTERACTIVE)
 
 start: link $(START)
 
@@ -126,7 +131,7 @@ $(START):
 	@chmod 755 $@
 
 
-interactive: link $(INTERACTIVE) deps
+interactive: directories link $(INTERACTIVE) deps
 
 $(INTERACTIVE): 
 	@echo "Making interactive script."
