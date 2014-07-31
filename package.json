@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "maintainers": [
-    "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)",
+    "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
   ],
   "bugs": {
     "email": "volker.sorge@gmail.com",
@@ -31,9 +31,10 @@
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
     "closure-library": "*",
+    "closure": "*",
     "xmldom": "*",
     "xpath": "*",
     "fs": "*"
   },
-  "main": "./src/.js"
+  "main": "./bin/sre4node.js"
 }
