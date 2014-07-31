@@ -33,8 +33,7 @@
     "closure-library": "*",
     "closure": "*",
     "xmldom": "*",
-    "xpath": "*",
-    "fs": "*"
+    "xpath": "*"
   },
   "main": "./bin/sre4node.js"
 }
