@@ -35,5 +35,5 @@
     "xmldom": "*",
     "xpath": "*"
   },
-  "main": "./bin/sre4node.js"
+  "main": "index.js"
 }
