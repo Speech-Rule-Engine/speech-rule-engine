@@ -174,10 +174,7 @@ sre.System.prototype.processExpression = function(expr) {
  */
 sre.System.prototype.processFile = function(input, output) {
   var expr = sre.SystemExternal.fs.readFileSync(input, {encoding: 'utf8'});
-  console.log(typeof(expr));
-
   var descr = this.processExpression(expr);
-  console.log(descr);
   sre.SystemExternal.fs.writeFileSync(output, descr);
 };
 

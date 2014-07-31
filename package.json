@@ -1,0 +1,39 @@
+{
+  "name": "speech-rule-engine",
+  "version": "0.1.0",
+  "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "maintainers": [
+    "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)",
+  ],
+  "bugs": {
+    "email": "volker.sorge@gmail.com",
+    "url": "https://github.com/zorkow/speech-rule-engine/issues"
+  },
+  "license": {
+    "type": "Apache",
+    "url": "http://github.com/mathjax/MathJax-node/blob/master/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zorkow/speech-rule-engine"
+  },
+  "keywords": [
+    "screen-reader",
+    "xml",
+    "a11y"
+  ],
+  "homepage": "https://github.com/zorkow/speech-rule-engine",
+  "dependencies": {
+    "closure-library": "*",
+    "xmldom": "*",
+    "xpath": "*",
+    "fs": "*"
+  },
+  "main": "./src/.js"
+}
