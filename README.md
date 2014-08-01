@@ -19,8 +19,13 @@ Then import into a running node or a source file using require:
      
 Current API functions are
      
-     processExpression(mathml);  returns Speech string
+     processExpression(mathml); 
+
+Takes a string containing a MathML expression and returns the corresponding speech string.
+
      processFile(input, output);
+
+Takes an input file containing a MathML expression and writes the corresponding speech string to the output file.
 
 
 Standalone Engine
