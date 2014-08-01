@@ -1,6 +1,6 @@
 #
 # Makefile for Speech Rule Engine
-# Copyright 2014, Volker Sorge <V.Sorge@cs.bham.ac.uk>
+# Copyright 2014, Volker Sorge <Volker.Sorge@gmail.com>
 #
 
 PREFIX = $(HOME)
