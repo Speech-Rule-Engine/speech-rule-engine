@@ -85,7 +85,6 @@ sre.MathMap.prototype.stringify = function() {
  * @private
  */
 sre.MathMap.MATHMAP_PATH_ = sre.SystemExternal.jsonPath;
-//'chromevox/background/mathmaps/'; // Remove VS
 
 
 /**

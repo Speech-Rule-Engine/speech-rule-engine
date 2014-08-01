@@ -14,10 +14,10 @@
 
 
 /**
- * @fileoverview This is the file that takes care of some of the underlying system
- * dependencies.  In particular, any dependency on NodeJS, like require
- * statements, should go in this file.
- * Ideally only this file should depend on extern.js.
+ * @fileoverview This is the file that takes care of some of the underlying
+ * system dependencies.  In particular, any dependency on NodeJS, like require
+ * statements, should go in this file.  Ideally only this file should depend on
+ * extern.js.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -37,7 +37,7 @@ sre.SystemExternal = function() { };
  * @type {string}
  */
 sre.SystemExternal.jsonPath =
-    process.env.SRE_JSON_PATH || process.cwd() + '/mathmaps/';
+    process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd() + '/mathmaps/';
 
 
 /**

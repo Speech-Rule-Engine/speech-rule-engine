@@ -6,7 +6,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "make clean; make compile; make maps"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
@@ -30,11 +31,13 @@
   ],
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
-    "closure-library": "*",
-    "closurecompiler": "*",
-    "closure": "*",
+    "commander": "*",
     "xmldom": "*",
     "xpath": "*"
   },
+  "files": [
+      "index.js",
+      "lib/"
+  ],
   "main": "index.js"
 }

@@ -27,10 +27,10 @@
 goog.provide('sre.SemanticTree');
 goog.provide('sre.SemanticTree.Node');
 
+goog.require('goog.array');
 goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticUtil');
-goog.require('goog.array');
 
 
 

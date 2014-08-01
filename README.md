@@ -9,11 +9,11 @@ Node dependencies you have to install:
      closure-library
      xmldom
      xpath
-     fs
+     commander
  
 Using npm run
 
-     npm install closure-library xmldom xpath fs
+     npm install closure-library xmldom xpath commander
  
  
 Build

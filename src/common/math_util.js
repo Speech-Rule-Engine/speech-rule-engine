@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview DOM utility functions to aid in math expressions navigation.
- * 
+ *
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -95,8 +95,8 @@ sre.MathUtil.isToken = function(element) {
  * @type {!Array.<string>}
  */
 sre.MathUtil.LAYOUT_LIST = ['MROW', 'MFRAC', 'MSQRT', 'MROOT', 'MSTYLE',
-                             'MERROR', 'MPADDED', 'MPHANTOM', 'MFENCED',
-                             'MENCLOSE'];
+  'MERROR', 'MPADDED', 'MPHANTOM', 'MFENCED',
+  'MENCLOSE'];
 
 
 /**
@@ -126,7 +126,7 @@ sre.MathUtil.isLayout = function(element) {
  * @type {!Array.<string>}
  */
 sre.MathUtil.SCRIPT_LIST = ['MSUB', 'MSUP', 'MSUBSUP', 'MUNDER', 'MOVER',
-                             'MUNDEROVER', 'MMULTISCRIPTS', 'MPRESCRIPTS'];
+  'MUNDEROVER', 'MMULTISCRIPTS', 'MPRESCRIPTS'];
 
 
 /**
@@ -156,7 +156,7 @@ sre.MathUtil.isScript = function(element) {
  * @type {!Array.<string>}
  */
 sre.MathUtil.TABLES_LIST = ['MTABLE', 'MLABELEDTR', 'MTR', 'MTD',
-                             'MALIGNGROUP', 'MALIGNMARK'];
+  'MALIGNGROUP', 'MALIGNMARK'];
 
 
 /**
@@ -181,7 +181,7 @@ sre.MathUtil.isTables = function(element) {
  * @type {!Array.<string>}
  */
 sre.MathUtil.ELEMENTARY_LIST = ['MSTACK', 'MLONGDIV', 'MSGROUP', 'MSROW',
-                                 'MSCARRIES', 'MSCARRY', 'MSLINE'];
+  'MSCARRIES', 'MSCARRY', 'MSLINE'];
 
 
 /**
@@ -200,7 +200,7 @@ sre.MathUtil.ELEMENTARY_LIST = ['MSTACK', 'MLONGDIV', 'MSGROUP', 'MSROW',
  */
 sre.MathUtil.isElementary = function(element) {
   return sre.MathUtil.isMathNodeOfClass_(element,
-                                          sre.MathUtil.ELEMENTARY_LIST);
+      sre.MathUtil.ELEMENTARY_LIST);
 };
 
 
@@ -225,7 +225,7 @@ sre.MathUtil.MATHML_TAG_LIST = [
  */
 sre.MathUtil.isMathmlTag = function(element) {
   return sre.MathUtil.isMathNodeOfClass_(element,
-                                          sre.MathUtil.MATHML_TAG_LIST);
+      sre.MathUtil.MATHML_TAG_LIST);
 };
 
 
@@ -235,7 +235,7 @@ sre.MathUtil.isMathmlTag = function(element) {
  * @type {!Array.<string>}
  */
 sre.MathUtil.WHITESPACE_LIST = ['MSROW', 'MROW', 'MSPACE',
-                                 'MPHANTOM', 'MPADDED'];
+  'MPHANTOM', 'MPADDED'];
 
 
 /**
@@ -246,7 +246,7 @@ sre.MathUtil.WHITESPACE_LIST = ['MSROW', 'MROW', 'MSPACE',
  */
 sre.MathUtil.isWhitespace = function(element) {
   return sre.MathUtil.isMathNodeOfClass_(element,
-                                          sre.MathUtil.WHITESPACE_LIST);
+      sre.MathUtil.WHITESPACE_LIST);
 };
 
 
