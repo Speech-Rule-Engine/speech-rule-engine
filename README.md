@@ -52,7 +52,7 @@ Then simply run
 
     make
 
-### Run  ############
+### Run on command line ############
 
 
     bin/sre -i infile -o outfile
@@ -60,3 +60,12 @@ Then simply run
 As an example run
 
     bin/sre -i samples/sample1.xml -o sample1.txt
+    
+### Run interactively ############
+
+Import into a running node process
+
+    require('./lib/sre4node.js');
+
+Note, that this will import the full functionality of the speech rule engine in the sre namespace and of the closure library in the goog namespace.
+  
