@@ -37,6 +37,8 @@
   },
   "files": [
       "index.js",
+      "LICENSE",
+      "README.md",
       "lib/"
   ],
   "main": "index.js"
