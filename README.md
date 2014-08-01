@@ -17,6 +17,8 @@ Then import into a running node or a source file using require:
 
      require('speech-rule-engine');
      
+### API #######
+
 Current API functions are
      
      processExpression(mathml); 
