@@ -224,7 +224,8 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
       if (i < nodes.length - 1) {
         var text = sepClosure();
         if (text) {
-          result.push(new sre.AuditoryDescription({text: text}));
+          result.push(new sre.AuditoryDescription({text: text,
+                                                   preprocess : true}));
         }
       }
     }
