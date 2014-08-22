@@ -37,10 +37,10 @@ sre.SystemExternal = function() { };
  * @type {string}
  */
 sre.SystemExternal.jsonPath =
-  (process.env.SRE_JSON_PATH ||
-   global.SRE_JSON_PATH ||
-   process.cwd() + '/mathmaps') +
-  '/';
+    (process.env.SRE_JSON_PATH ||
+    global.SRE_JSON_PATH ||
+    process.cwd() + '/mathmaps') +
+    '/';
 
 
 /**

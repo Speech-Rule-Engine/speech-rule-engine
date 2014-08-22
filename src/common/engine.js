@@ -65,6 +65,12 @@ sre.Engine = function() {
    * @type {string}
    */
   this.style = 'short';
+
+  /**
+   * Semantics flag.
+   * @type {boolean}
+   */
+  this.semantics = false;
 };
 goog.addSingletonGetter(sre.Engine);
 

@@ -72,7 +72,7 @@ sre.System.prototype.trimInput_ = function(input) {
 /**
  * Parses the XML input string into an XML structure.
  * @param {string} input The XML input string.
- * @return {Node} The XML document structure corresponding to the node.
+ * @return {!Element} The XML document structure corresponding to the node.
  * @private
  */
 sre.System.prototype.parseInput_ = function(input) {
@@ -82,7 +82,7 @@ sre.System.prototype.parseInput_ = function(input) {
     throw new sre.System.Error('Empty input!');
   }
   try {
-    return dp.parseFromString(clean_input, 'text/xml');
+    return dp.parseFromString(clean_input, 'text/xml').documentElement;
   } catch (err) {
     throw new sre.System.Error('Illegal input: ' + err.message);
   }
@@ -134,12 +134,16 @@ sre.System.prototype.preprocessDescriptionList_ = function(descrList) {
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
- * @param {Object.<string, string>} feature An object describing some setup
- *     features.
+ * @param {Object.<string, (boolean|string)>} feature An object describing some
+ *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
-  sre.SpeechRuleEngine.getInstance().parameterize(
-      sre.MathmlStore.getInstance());
+  var engine = sre.Engine.getInstance();
+  engine.style = feature.style || engine.style;
+  engine.domain = feature.domain || engine.domain;
+  engine.semantics = !!feature.semantics;
+  sre.SpeechRuleEngine.getInstance().
+      parameterize(sre.MathmlStore.getInstance());
 };
 
 
@@ -151,13 +155,14 @@ sre.System.prototype.setupEngine = function(feature) {
 sre.System.prototype.processExpression = function(expr) {
   try {
     var xml = sre.System.getInstance().parseInput_(expr);
+    if (sre.Engine.getInstance().semantics) {
+      xml = new sre.SemanticTree(xml).xml();
+    }
   } catch (err) {
     console.log('Parse Error: ' + err.message);
     return '';
   }
-  this.setupEngine({});
-  var descrs = sre.SpeechRuleEngine.getInstance().
-      evaluateNode(xml.childNodes[0]);
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   this.preprocessDescriptionList_(descrs);
   return descrs.map(
       function(x) {return x.descriptionString();}).
@@ -191,14 +196,30 @@ sre.System.prototype.commandLine = function() {
   commander.output = '';
   /** @type {!boolean} */
   commander.verbose = false;
+  /** @type {!boolean} */
+  commander.semantics = false;
+  /** @type {!string} */
+  // commander.domain is already in use by the commander module!
+  commander.area = '';
+  /** @type {!string} */
+  commander.style = '';
 
   commander.version(this.version).
       option('-i, --input [name]', 'Input file [name]').
       option('-o, --output [name]', 'Output file [name]').
+      option('-s, --semantics', 'Switch on semantics interpretation').
+      option('-a, --area [name]', 'Subject area [name]').
+      option('-t, --style [name]', 'Speech style [name]').
       option('-v, --verbose', 'Verbose mode').
       parse(process.argv);
+  sre.System.prototype.setupEngine(
+      {
+        'semantics': commander.semantics,
+        'domain': commander.area,
+        'style': commander.style
+      });
   if (commander.input) { this.processFile(commander.input, commander.output);}
-  if (commander.verbose) { console.log('Here we are!');}
+  if (commander.verbose) { console.log('Currently unused.');}
 };
 
 

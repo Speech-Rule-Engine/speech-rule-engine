@@ -23,13 +23,20 @@ goog.provide('sre.Api');
 goog.require('sre.System');
 
 
+/**
+ * Basic structure for api functions (not a constructor!).
+ */
 sre.Api = { };
 
 
+/**
+ * Main function to translate expressions into auditory descriptions.
+ * @param {string} expr Processes a given XML expression for translation.
+ * @return {string} The auditory description.
+ */
 sre.Api.processExpression = function(expr) {
   return sre.System.getInstance().processExpression(expr);
 };
-
 
 
 /**

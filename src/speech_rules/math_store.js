@@ -256,7 +256,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
 sre.MathStore.prototype.evaluate_ = function(text) {
   return new sre.AuditoryDescription(
       {'text': text,
-       'preprocess': true
+        'preprocess': true
       });
 };
 

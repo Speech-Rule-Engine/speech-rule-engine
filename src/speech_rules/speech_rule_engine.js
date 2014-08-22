@@ -23,7 +23,7 @@
  * is applicable to a current node, by computing a speech object in the form of
  * an array of auditory descriptions.
  *
- * Consequently the rule engine is parameterisable wrt. rule stores and
+ * Consequently the rule engine is parameterizable wrt. rule stores and
  * evaluator function.
  * @author sorge@google.com (Volker Sorge)
  */
@@ -32,6 +32,7 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
+goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
 goog.require('sre.XpathUtil');
 
@@ -225,7 +226,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
         var text = sepClosure();
         if (text) {
           result.push(new sre.AuditoryDescription({text: text,
-                                                   preprocess : true}));
+            preprocess: true}));
         }
       }
     }

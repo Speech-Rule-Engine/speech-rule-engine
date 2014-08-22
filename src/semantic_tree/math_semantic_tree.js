@@ -86,7 +86,8 @@ sre.SemanticTree.Node = function(id) {
   /** @type {string} */
   this.textContent = '';
 
-  /** Branch nodes can store additional nodes that can be useful.
+  /**
+   * Branch nodes can store additional nodes that can be useful.
    * E.g. a node of type FENCED can have the opening and closing fences here.
    * @type {!Array.<sre.SemanticTree.Node>}
    */
@@ -121,11 +122,7 @@ sre.SemanticTree.Node.prototype.querySelectorAll = function(pred) {
 sre.SemanticTree.prototype.xml = function(opt_brief) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();  // just for now VS
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
-
-  var xmlRoot = this.root.xml(xml, opt_brief);
-  xml.childNodes[0].appendChild(xmlRoot);
-
-  return xml.childNodes[0];
+  return this.root.xml(xml, opt_brief);
 };
 
 
