@@ -134,7 +134,9 @@ sre.System.prototype.preprocessDescriptionList_ = function(descrList) {
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
- * @param {Object.<string, (boolean|string)>} feature An object describing some
+ * @param {{domain: string,
+ *          style: string,
+ *          semantics: boolean}} feature An object describing some
  *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
