@@ -159,9 +159,9 @@ sre.System.prototype.setupEngine = function(feature) {
  */
 sre.System.prototype.processExpression = function(expr) {
   try {
-    var xml = sre.System.getInstance().parseInput_(expr);
+    var xml = this.parseInput_(expr);
     if (sre.Engine.getInstance().semantics) {
-      xml = new sre.SemanticTree(xml).xml();
+      xml = this.getSemanticTree_(xml);
     }
   } catch (err) {
     console.log('Parse Error: ' + err.message);
@@ -172,6 +172,18 @@ sre.System.prototype.processExpression = function(expr) {
   return descrs.map(
       function(x) {return x.descriptionString();}).
          join(' ');
+};
+
+
+/**
+ * Creates a clean XML version of the semantic tree for a given MathML node.
+ * @param {!Element} mml The MathML node.
+ * @return {!Element} Semantic tree for input node as newly created XML node.
+ * @private
+ */
+sre.System.prototype.getSemanticTree_ = function(mml) {
+  var tree = new sre.SemanticTree(mml);
+  return this.parseInput_(tree.xml().toString());
 };
 
 

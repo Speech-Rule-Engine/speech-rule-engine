@@ -235,7 +235,9 @@ sre.XpathUtil.prefixNamespace = function(node) {
     attr.localName = prefix;
     attr.nodeName = attr.nodeName + ':' + prefix;
   }
-  node._nsMap[prefix] = node.namespaceURI;
-  delete node._nsMap[''];
-  sre.XpathUtil.defaultNamespace_(node);
+  if (node.namespaceURI) {
+    node._nsMap[prefix] = node.namespaceURI;
+    delete node._nsMap[''];
+    sre.XpathUtil.defaultNamespace_(node);
+  }
 };

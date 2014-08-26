@@ -615,7 +615,7 @@ sre.MathmlStoreRules.initSemanticRules_ = function() {
       './children/function or ./children/appl');
 
   defineRule(
-      'multrel', 'default.default',
+      'relseq', 'default.default',
       '[m] children/* (separator:./text())',
       'self::relseq');
 

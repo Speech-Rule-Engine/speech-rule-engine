@@ -124,7 +124,7 @@ sre.SemanticTree.prototype.xml = function(opt_brief) {
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
   var xmlRoot = this.root.xml(xml, opt_brief);
   xml.childNodes[0].appendChild(xmlRoot);
-  return xml.childNodes[0];
+  return xml;
 };
 
 
