@@ -120,6 +120,7 @@ sre.MathmlStoreRules.initCustomFunctions_ = function() {
 sre.MathmlStoreRules.initDefaultRules_ = function() {
   // Initial rule
   defineDefaultMathmlRule('math', '[m] ./*');
+  defineDefaultMathmlRule('semantics', '[n] ./*[1]');
 
   // Space elements
   defineDefaultMathmlRule('mspace', '[p] (pause:250)');
@@ -139,18 +140,18 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
       '[t] "begin"; [t] @mathvariant (pause:150);' +
           '[t] text() (pause:150); [t] "end"; ' +
           '[t] @mathvariant (pause:200)',
-      'self::mtext', '@mathvariant', '@mathvariant!="normal"');
+      'self::mathml:mtext', '@mathvariant', '@mathvariant!="normal"');
 
   defineRule('mi-variant', 'default.default',
       '[t] @mathvariant; [n] text()',
-      'self::mi', '@mathvariant', '@mathvariant!="normal"');
+      'self::mathml:mi', '@mathvariant', '@mathvariant!="normal"');
 
-  defineRuleAlias('mi-variant', 'self::mn',  // mn
+  defineRuleAlias('mi-variant', 'self::mathml:mn',  // mn
       '@mathvariant', '@mathvariant!="normal"');
 
   defineRule('mo-variant', 'default.default',
       '[t] @mathvariant; [n] text() (rate:-0.1)',
-      'self::mo', '@mathvariant', '@mathvariant!="normal"');
+      'self::mathml:mo', '@mathvariant', '@mathvariant!="normal"');
 
   defineDefaultMathmlRule(
       'ms',
@@ -189,72 +190,89 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
   defineDefaultMathmlRule(
       'mfrac', ' [p] (pause:400); [n] ./*[1] (pitch:0.3);' +
           ' [t] "divided by"; [n] ./*[2] (pitch:-0.3); [p] (pause:400)');
+  defineRule(
+      'mfrac', 'default.short', '[p] (pause:200); [t] "start frac";' +
+          '[n] ./*[1] (pitch:0.3); [t] "over"; ' +
+          '[n] ./*[2] (pitch:-0.3); [p] (pause:400); [t] "end frac"',
+      'self::mathml:mfrac');
 
 
   defineRule(
       'mfenced-single', 'default.default',
-      '[t] @open (context:"opening"); [m] ./* (separator:@separators);' +
-          '[t] @close (context:"closing")',
-      'self::mfenced', 'string-length(string(@separators))=1');
+      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
+          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
+          '[m] ./* (separator:@separators); ' +
+          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
+          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
+      'self::mathml:mfenced', 'string-length(string(@separators))=1');
 
   defineRule(
       'mfenced-empty', 'default.default',
-      '[t] @open (context:"opening"); [m] ./*;' +
-          '[t] @close (context:"closing")',
-      'self::mfenced', 'string-length(string(@separators))=1',
+      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
+          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
+          '[m] ./*;' +
+          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
+          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
+      'self::mathml:mfenced', 'string-length(string(@separators))=1',
       'string(@separators)=" "');
 
   defineRule(
       'mfenced-comma', 'default.default',
-      '[t] @open (context:"opening"); [m] ./* (separator:"comma");' +
-          '[t] @close (context:"closing")',
-      'self::mfenced');
+      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
+          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
+          '[m] ./* (separator:"comma");' +
+          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
+          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
+      'self::mathml:mfenced');
 
   defineRule(
       'mfenced-multi', 'default.default',
-      '[t] @open (context:"opening"); [m] ./* (sepFunc:CTXFmfSeparators,' +
-          'separator:@separators); [t] @close (context:"closing")',
-      'self::mfenced', 'string-length(string(@separators))>1');
+      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
+          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
+          '[m] ./* (sepFunc:CTXFmfSeparators, separator:@separators); ' +
+          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
+          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
+      'self::mathml:mfenced', 'string-length(string(@separators))>1');
 
   // Mtable rules.
   defineRule(
       'mtable', 'default.default',
       '[t] "matrix"; [m] ./* (ctxtFunc:CTXFnodeCounter,' +
           'context:"row",pause:100)',
-      'self::mtable');
+      'self::mathml:mtable');
 
   defineRule(
       'mtr', 'default.default',
       '[m] ./* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
-      'self::mtr');
+      'self::mathml:mtr');
 
   defineRule(
       'mtd', 'default.default',
-      '[m] ./*', 'self::mtd');
+      '[m] ./*', 'self::mathml:mtd');
 
   // Mtable superbrief rules.
   defineRule(
       'mtable', 'default.superbrief',
-      '[t] count(child::mtr);  [t] "by";' +
-          '[t] count(child::mtr[1]/mtd); [t] "matrix";',
-      'self::mtable');
+      '[t] count(child::mathml:mtr);  [t] "by";' +
+          '[t] count(child::mathml:mtr[1]/mathml:mtd); [t] "matrix";',
+      'self::mathml:mtable');
 
   // Mtable short rules.
   defineRule(
       'mtable', 'default.short',
       '[t] "matrix"; [m] ./*',
-      'self::mtable');
+      'self::mathml:mtable');
 
   defineRule(
       'mtr', 'default.short',
-      '[m] ./*', 'self::mtr');
+      '[m] ./*', 'self::mathml:mtr');
 
   defineRule(
       'mtd', 'default.short',
-      '[t] "Element"; [t] count(./preceding-sibling::mtd)+1;' +
-          '[t] count(./parent::mtr/preceding-sibling::mtr)+1;' +
+      '[t] "Element"; [t] count(./preceding-sibling::mathml:mtd)+1;' +
+          '[t] count(./parent::mathml:mtr/preceding-sibling::mathml:mtr)+1;' +
               '[p] (pause:500); [m] ./*',
-      'self::mtd');
+      'self::mathml:mtd');
 
   // Mmultiscripts rules.
   defineRule(
@@ -264,60 +282,60 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
       '[t] "left super"; [n] ./*[6] (pitch:0.35); [p] (pause:200);' +
       '[t] "right sub"; [n] ./*[2] (pitch:-0.35); [p] (pause:200);' +
       '[t] "right super"; [n] ./*[3] (pitch:0.35); [p] (pause:300);',
-      'self::mmultiscripts');
+      'self::mathml:mmultiscripts');
   defineRule(
       'mmultiscripts-3-1', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left sub"; [n] ./*[5] (pitch:-0.35); [p] (pause:200);' +
       '[t] "left super"; [n] ./*[6] (pitch:0.35); [p] (pause:200);' +
       '[t] "right super"; [n] ./*[3] (pitch:0.35); [p] (pause:300);',
-      'self::mmultiscripts', './none=./*[2]',
-      './mprescripts=./*[4]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[2]',
+      './mathml:mprescripts=./*[4]');
   defineRule(
       'mmultiscripts-3-2', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left sub"; [n] ./*[5] (pitch:-0.35); [p] (pause:200);' +
       '[t] "left super"; [n] ./*[6] (pitch:0.35); [p] (pause:200);' +
       '[t] "right sub"; [n] ./*[2] (pitch:-0.35); [p] (pause:200);',
-      'self::mmultiscripts', './none=./*[3]',
-      './mprescripts=./*[4]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[3]',
+      './mathml:mprescripts=./*[4]');
   defineRule(
       'mmultiscripts-3-3', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left super"; [n] ./*[6] (pitch:0.35); [p] (pause:200);' +
       '[t] "right sub"; [n] ./*[2] (pitch:-0.35); [p] (pause:200);' +
       '[t] "right super"; [n] ./*[3] (pitch:0.35); [p] (pause:300);',
-      'self::mmultiscripts', './none=./*[5]',
-      './mprescripts=./*[4]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[5]',
+      './mathml:mprescripts=./*[4]');
   defineRule(
       'mmultiscripts-3-4', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left sub"; [n] ./*[5] (pitch:-0.35); [p] (pause:200);' +
       '[t] "right sub"; [n] ./*[2] (pitch:-0.35); [p] (pause:200);' +
       '[t] "right super"; [n] ./*[3] (pitch:0.35); [p] (pause:300);',
-      'self::mmultiscripts', './none=./*[6]',
-      './mprescripts=./*[4]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[6]',
+      './mathml:mprescripts=./*[4]');
   defineRule(
       'mmultiscripts-2-1', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left sub"; [n] ./*[5] (pitch:-0.35); [p] (pause:200);' +
       '[t] "left super"; [n] ./*[6] (pitch:0.35); [p] (pause:300);',
-      'self::mmultiscripts', './none=./*[2]',
-      './none=./*[3]', './mprescripts=./*[4]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[2]',
+      './mathml:none=./*[3]', './mathml:mprescripts=./*[4]');
   defineRule(
       'mmultiscripts-1-1', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left super"; [n] ./*[6] (pitch:0.35); [p] (pause:300);',
-      'self::mmultiscripts', './none=./*[2]',
-      './none=./*[3]', './mprescripts=./*[4]',
-      './none=./*[5]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[2]',
+      './mathml:none=./*[3]', './mathml:mprescripts=./*[4]',
+      './mathml:none=./*[5]');
   defineRule(
       'mmultiscripts-1-2', 'default.default',
       '[n] ./*[1]; [p] (pause:200);' +
       '[t] "left sub"; [n] ./*[5] (pitch:-0.35); [p] (pause:200);',
-      'self::mmultiscripts', './none=./*[2]',
-      './none=./*[3]', './mprescripts=./*[4]',
-      './none=./*[6]');
+      'self::mathml:mmultiscripts', './mathml:none=./*[2]',
+      './mathml:none=./*[3]', './mathml:mprescripts=./*[4]',
+      './mathml:none=./*[6]');
 };
 
 
@@ -455,36 +473,36 @@ sre.MathmlStoreRules.initSpecializationRules_ = function() {
   defineRule(
       'square', 'default.default',
       '[n] ./*[1]; [t] "square" (pitch:0.35); [p] (pause:300)',
-      'self::msup', './*[2][text()=2]');
+      'self::mathml:msup', './*[2][text()=2]');
   defineRuleAlias(
-      'square', 'self::msup',
-      './mrow=./*[2]', 'count(./*[2]/*)=1', './*[2]/*[1][text()=2]');
+      'square', 'self::mathml:msup',
+      './mathml:mrow=./*[2]', 'count(./*[2]/*)=1', './*[2]/*[1][text()=2]');
 
   defineRule(
       'cube', 'default.default',
       '[n] ./*[1]; [t] "cube" (pitch:0.35); [p] (pause:300)',
-      'self::msup', './*[2][text()=3]');
+      'self::mathml:msup', './*[2][text()=3]');
   defineRuleAlias(
-      'cube', 'self::msup',
-      './mrow=./*[2]', 'count(./*[2]/*)=1', './*[2]/*[1][text()=3]');
+      'cube', 'self::mathml:msup',
+      './mathml:mrow=./*[2]', 'count(./*[2]/*)=1', './*[2]/*[1][text()=3]');
 
   defineRule(
       'square-sub', 'default.default',
       '[n] ./*[1]; [t] "sub"; [n] ./*[2] (pitch:-0.35);' +
           '[p] (pause:300); [t] "square" (pitch:0.35); [p] (pause:400)',
-      'self::msubsup', './*[3][text()=2]');
+      'self::mathml:msubsup', './*[3][text()=2]');
   defineRuleAlias(
-      'square-sub', 'self::msubsup',
-      './mrow=./*[3]', 'count(./*[3]/*)=1', './*[3]/*[1][text()=2]');
+      'square-sub', 'self::mathml:msubsup',
+      './mathml:mrow=./*[3]', 'count(./*[3]/*)=1', './*[3]/*[1][text()=2]');
 
   defineRule(
       'cube-sub', 'default.default',
       '[n] ./*[1]; [t] "sub"; [n] ./*[2] (pitch:-0.35);' +
           '[p] (pause:300); [t] "cube" (pitch:0.35); [p] (pause:400)',
-      'self::msubsup', './*[3][text()=3]');
+      'self::mathml:msubsup', './*[3][text()=3]');
   defineRuleAlias(
-      'cube-sub', 'self::msubsup',
-      './mrow=./*[3]', 'count(./*[3]/*)=1', './*[3]/*[1][text()=3]');
+      'cube-sub', 'self::mathml:msubsup',
+      './mathml:mrow=./*[3]', 'count(./*[3]/*)=1', './*[3]/*[1][text()=3]');
 
   // MathJax
   defineRule(

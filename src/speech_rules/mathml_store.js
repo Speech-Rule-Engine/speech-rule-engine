@@ -43,7 +43,7 @@ goog.addSingletonGetter(sre.MathmlStore);
  * @param {string} rule String version of the speech rule.
  */
 sre.MathmlStore.prototype.defineMathmlRule = function(name, domain, rule) {
-  this.defineRule(name, domain, rule, 'self::' + name);
+  this.defineRule(name, domain, rule, 'self::mathml:' + name);
 };
 
 
@@ -53,5 +53,5 @@ sre.MathmlStore.prototype.defineMathmlRule = function(name, domain, rule) {
  * @param {string} rule String version of the speech rule.
  */
 sre.MathmlStore.prototype.defineDefaultMathmlRule = function(name,  rule) {
-  this.defineRule(name, 'default.default', rule, 'self::' + name);
+  this.defineRule(name, 'default.default', rule, 'self::mathml:' + name);
 };
