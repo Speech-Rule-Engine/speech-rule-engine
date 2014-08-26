@@ -65,8 +65,8 @@ sre.XpathUtil.xpathResult = sre.XpathUtil.xpathSupported() ?
 /**
  * @type {Function}
  */
-// sre.XpathUtil.useNamespaces = sre.XpathUtil.xpathSupported() ?
-//     XPathResult : sre.SystemExternal.xpath.XPathResult;
+sre.XpathUtil.createNSResolver = sre.XpathUtil.xpathSupported() ?
+    document.createNSResolver : sre.SystemExternal.xpath.createNSResolver;
 
 
 /**
@@ -75,20 +75,9 @@ sre.XpathUtil.xpathResult = sre.XpathUtil.xpathSupported() ?
  * @private
  */
 sre.XpathUtil.nameSpaces_ = {
-  'xhtml' : 'http://www.w3.org/1999/xhtml',
+  'xhtml': 'http://www.w3.org/1999/xhtml',
   'mathml': 'http://www.w3.org/1998/Math/MathML',
-  null: 'http://www.w3.org/1998/Math/MathML'
-};
-
-
-/**
- * Resolve some default name spaces.
- * @param {string} prefix Namespace prefix.
- * @return {string} The corresponding namespace URI.
- */
-sre.XpathUtil.resolveNameSpace = function(prefix) {
-  return sre.XpathUtil.xpathSupported() ?
-      sre.XpathUtil.nameSpaces_[prefix] || null : null;
+  'svg': 'http://www.w3.org/2000/svg'
 };
 
 
@@ -102,17 +91,11 @@ sre.XpathUtil.resolveNameSpace = function(prefix) {
  * @return {Array} The array of children nodes that match.
  */
 sre.XpathUtil.evalXPath = function(expression, rootNode) {
-  console.log(rootNode.namespaceURI);
-  console.log(rootNode.prefix);
-  sre.SystemExternal.xpath.useNamespaces(sre.XpathUtil.nameSpaces_);
-  var resolver = sre.SystemExternal.xpath.createNSResolver(rootNode);
   try {
     var xpathIterator = sre.XpathUtil.xpathEvaluate(
         expression,
         rootNode,
-        resolver,
-      //sre.XpathUtil.resolveNameSpace,
-      //null,
+        sre.XpathUtil.createNSResolver(rootNode),
         sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE,
         null); // no existing results
   } catch (err) {
@@ -168,8 +151,7 @@ sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
     var xpathResult = sre.XpathUtil.xpathEvaluate(
         expression,
         rootNode,
-        //sre.XpathUtil.resolveNameSpace,
-        null,
+        sre.XpathUtil.createNSResolver(rootNode),
         sre.XpathUtil.xpathResult.BOOLEAN_TYPE,
         null); // no existing results
   } catch (err) {
@@ -191,8 +173,7 @@ sre.XpathUtil.evaluateString = function(expression, rootNode) {
     var xpathResult = sre.XpathUtil.xpathEvaluate(
         expression,
         rootNode,
-        //sre.XpathUtil.resolveNameSpace,
-        null,
+        sre.XpathUtil.createNSResolver(rootNode),
         sre.XpathUtil.xpathResult.STRING_TYPE,
         null); // no existing results
   } catch (err) {
@@ -202,19 +183,59 @@ sre.XpathUtil.evaluateString = function(expression, rootNode) {
 };
 
 
-sre.XpathUtil.traverse_ = function(node) {
-  console.log(node.toString() + ": " + node.prefix + " : " + node.namespaceURI);
+/**
+ * Mapping of namespaces to prefixes.
+ * @type {Object.<string, string>}
+ * @private
+ */
+sre.XpathUtil.prefixes_ = function() {
+  var result = {};
+  Object.keys(sre.XpathUtil.nameSpaces_).map(function(value) {
+    result[sre.XpathUtil.nameSpaces_[value]] = value;
+  });
+  return result;
+}();
+
+
+/**
+ * Adds the default namespace recursively in a node as prefix.
+ * @param {Node} node The node that is rewritten.
+ * @private
+ */
+sre.XpathUtil.defaultNamespace_ = function(node) {
   if (!node || node.nodeType !== 1) {
     return;
   }
-  var attributes = node.attributes;
-  for (var i = 0, attr; attr = attributes[i]; i++) {
-    console.log(attr.toString());
-    console.log(attr.prefix);
-    console.log(attr.namespaceURI);
+  if (!node.prefix && node.namespaceURI) {
+    node.prefix = sre.XpathUtil.prefixes_[node.namespaceURI];
+    node.nodeName = node.prefix + ':' + node.nodeName;
   }
   var children = node.childNodes;
   for (var i = 0, child; child = children[i]; i++) {
-    sre.XpathUtil.traverse_(child);
+    sre.XpathUtil.defaultNamespace_(child);
   }
+};
+
+
+/**
+ * Adds the default namespace as a proper prefix in a node.
+ * @param {Node} node The node that is rewritten.
+ */
+sre.XpathUtil.prefixNamespace = function(node) {
+  var attributes = node.attributes;
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    if (attr.name != 'xmlns' || attr.prefix) {
+      continue;
+    }
+    var prefix = sre.XpathUtil.prefixes_[node.namespaceURI];
+    if (!prefix) {
+      continue;
+    }
+    attr.prefix = attr.name;
+    attr.localName = prefix;
+    attr.nodeName = attr.nodeName + ':' + prefix;
+  }
+  node._nsMap[prefix] = node.namespaceURI;
+  delete node._nsMap[''];
+  sre.XpathUtil.defaultNamespace_(node);
 };

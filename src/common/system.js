@@ -27,6 +27,7 @@ goog.require('sre.MathmlStoreRules');
 goog.require('sre.SemanticTree');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
+goog.require('sre.XpathUtil');
 
 
 
@@ -82,7 +83,9 @@ sre.System.prototype.parseInput_ = function(input) {
     throw new sre.System.Error('Empty input!');
   }
   try {
-    return dp.parseFromString(clean_input, 'text/xml').documentElement;
+    var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
+    sre.XpathUtil.prefixNamespace(result);
+    return result;
   } catch (err) {
     throw new sre.System.Error('Illegal input: ' + err.message);
   }

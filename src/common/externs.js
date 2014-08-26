@@ -10,3 +10,5 @@ commander.parse;
 var module;
 module.exports;
 var global;
+var node;
+node._nsMap;

@@ -120,9 +120,11 @@ sre.SemanticTree.Node.prototype.querySelectorAll = function(pred) {
   * @return {Node} The XML representation of the tree.
   */
 sre.SemanticTree.prototype.xml = function(opt_brief) {
-  var dp = new sre.SystemExternal.xmldom.DOMParser();  // just for now VS
+  var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
-  return this.root.xml(xml, opt_brief);
+  var xmlRoot = this.root.xml(xml, opt_brief);
+  xml.childNodes[0].appendChild(xmlRoot);
+  return xml.childNodes[0];
 };
 
 
