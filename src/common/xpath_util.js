@@ -63,13 +63,21 @@ sre.XpathUtil.xpathResult = sre.XpathUtil.xpathSupported() ?
 
 
 /**
+ * @type {Function}
+ */
+// sre.XpathUtil.useNamespaces = sre.XpathUtil.xpathSupported() ?
+//     XPathResult : sre.SystemExternal.xpath.XPathResult;
+
+
+/**
  * Mapping for some default namespaces.
  * @const
  * @private
  */
 sre.XpathUtil.nameSpaces_ = {
   'xhtml' : 'http://www.w3.org/1999/xhtml',
-  'mathml': 'http://www.w3.org/1998/Math/MathML'
+  'mathml': 'http://www.w3.org/1998/Math/MathML',
+  null: 'http://www.w3.org/1998/Math/MathML'
 };
 
 
@@ -94,12 +102,17 @@ sre.XpathUtil.resolveNameSpace = function(prefix) {
  * @return {Array} The array of children nodes that match.
  */
 sre.XpathUtil.evalXPath = function(expression, rootNode) {
+  console.log(rootNode.namespaceURI);
+  console.log(rootNode.prefix);
+  sre.SystemExternal.xpath.useNamespaces(sre.XpathUtil.nameSpaces_);
+  var resolver = sre.SystemExternal.xpath.createNSResolver(rootNode);
   try {
     var xpathIterator = sre.XpathUtil.xpathEvaluate(
         expression,
         rootNode,
-        //sre.XpathUtil.resolveNameSpace,
-        null,
+        resolver,
+      //sre.XpathUtil.resolveNameSpace,
+      //null,
         sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE,
         null); // no existing results
   } catch (err) {
@@ -186,4 +199,22 @@ sre.XpathUtil.evaluateString = function(expression, rootNode) {
     return '';
   }
   return xpathResult.stringValue;
+};
+
+
+sre.XpathUtil.traverse_ = function(node) {
+  console.log(node.toString() + ": " + node.prefix + " : " + node.namespaceURI);
+  if (!node || node.nodeType !== 1) {
+    return;
+  }
+  var attributes = node.attributes;
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    console.log(attr.toString());
+    console.log(attr.prefix);
+    console.log(attr.namespaceURI);
+  }
+  var children = node.childNodes;
+  for (var i = 0, child; child = children[i]; i++) {
+    sre.XpathUtil.traverse_(child);
+  }
 };

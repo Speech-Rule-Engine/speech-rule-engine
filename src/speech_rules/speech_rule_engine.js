@@ -144,6 +144,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   if (!rule) {
     return this.activeStore_.evaluateDefault(node);
   }
+  sre.SpeechRuleEngine.outputDebug(rule.name, node.toString());
   var components = rule.action.components;
   var result = [];
   for (var i = 0, component; component = components[i]; i++) {
@@ -328,14 +329,14 @@ sre.SpeechRuleEngine.debugSpeechRule = function(rule, node) {
   var store = sre.SpeechRuleEngine.getInstance().activeStore_;
   if (store) {
     var prec = rule.precondition;
+    var queryResult = store.applyQuery(node, prec.query);
     sre.SpeechRuleEngine.outputDebug(
-        prec.query, store.applyQuery(node, prec.query));
+        prec.query, queryResult ? queryResult.toString() : queryResult);
     prec.constraints.forEach(
         function(cstr) {
           sre.SpeechRuleEngine.outputDebug(
               cstr, store.applyConstraint(node, cstr));});
-  }
-};
+  }};
 
 
 /**

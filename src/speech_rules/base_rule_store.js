@@ -277,7 +277,7 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
     dynamic, rule) {
   // We allow a default value for each dynamic constraints attribute.
   // The idea is that when we can not find a speech rule matching the value for
-  // a particular attribute in the dynamic constraintwe choose the one that has
+  // a particular attribute in the dynamic constraint we choose the one that has
   // the value 'default'.
   var allKeys = /** @type {Array.<sre.SpeechRule.DynamicCstrAttrib>} */ (
       Object.keys(dynamic));
