@@ -90,7 +90,7 @@ INTER_FILE := $(shell mktemp --dry-run --tmpdir=$(SRC_DIR) --suffix=.js)
 
 #######################################################################3
 
-all: directories link deps compile start_files maps
+all: directories link deps compile start_files
 
 directories: $(BIN_DIR)
 
@@ -112,7 +112,7 @@ $(TARGET): $(SRC) # start_file
 	@echo $^
 #	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
 # The following command has to become the final namespace that gets everything together.
-	@$(CLOSURE_COMPILER) --namespace="sre.Api" --output_file $(TARGET)
+	@$(CLOSURE_COMPILER) --namespace="sre.Cli" --output_file $(TARGET)
 
 deps: $(DEPS)
 
@@ -153,11 +153,6 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-maps: $(MAPS)
-
-$(MAPS): 
-	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
-
 clean: 
 	rm -f $(TARGET)
 	rm -f $(DEPS)
@@ -170,3 +165,19 @@ test:
 	@echo $(CLOSURE_FLAGS)
 	@echo $(CLOSURE_ERRORS_FLAGS)
 	@echo $(CLOSURE_COMPILER)
+
+## Publish the API via npm.
+
+publish: api maps
+
+maps: $(MAPS)
+
+$(MAPS): 
+	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
+
+api: $(SRC) # start_file
+	@echo Compiling Speech Rule Engine
+	@echo $^
+#	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
+# The following command has to become the final namespace that gets everything together.
+	@$(CLOSURE_COMPILER) --namespace="sre.Api" --output_file $(TARGET)

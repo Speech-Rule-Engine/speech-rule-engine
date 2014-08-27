@@ -55,3 +55,9 @@ module.exports.processFile = sre.System.getInstance().processFile;
  * Exporting method to set up and parameterise the Engine.
  */
 module.exports.setupEngine = sre.System.getInstance().setupEngine;
+
+
+/**
+ * Default setup of the Engine.
+ */
+(sre.System.getInstance()).setupEngine({});

@@ -137,9 +137,7 @@ sre.System.prototype.preprocessDescriptionList_ = function(descrList) {
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
- * @param {{domain: string,
- *          style: string,
- *          semantics: boolean}} feature An object describing some
+ * @param {Object.<string, (string|null)>} feature An object describing some
  *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
@@ -199,45 +197,3 @@ sre.System.prototype.processFile = function(input, output) {
   var descr = this.processExpression(expr);
   sre.SystemExternal.fs.writeFileSync(output, descr);
 };
-
-
-/**
- * Method for the command line interface of the Speech Rule Engine
- */
-sre.System.prototype.commandLine = function() {
-  var commander = sre.SystemExternal.commander;
-  // These are necessary to avoid closure errors.
-  /** @type {!string} */
-  commander.input = '';
-  /** @type {!string} */
-  commander.output = '';
-  /** @type {!boolean} */
-  commander.verbose = false;
-  /** @type {!boolean} */
-  commander.semantics = false;
-  /** @type {!string} */
-  // commander.domain is already in use by the commander module!
-  commander.area = '';
-  /** @type {!string} */
-  commander.style = '';
-
-  commander.version(this.version).
-      option('-i, --input [name]', 'Input file [name]').
-      option('-o, --output [name]', 'Output file [name]').
-      option('-s, --semantics', 'Switch on semantics interpretation').
-      option('-a, --area [name]', 'Subject area [name]').
-      option('-t, --style [name]', 'Speech style [name]').
-      option('-v, --verbose', 'Verbose mode').
-      parse(process.argv);
-  sre.System.prototype.setupEngine(
-      {
-        'semantics': commander.semantics,
-        'domain': commander.area,
-        'style': commander.style
-      });
-  if (commander.input) { this.processFile(commander.input, commander.output);}
-  if (commander.verbose) { console.log('Currently unused.');}
-};
-
-
-(new sre.System()).commandLine();
