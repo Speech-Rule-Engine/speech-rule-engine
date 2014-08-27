@@ -4,7 +4,11 @@ speech-rule-engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
-There are two ways of useing this engine. Either as a package via npm or by building it as a standalone tool. 
+There are two ways of useing this engine. Either as a package via npm or by
+building it as a standalone tool.  The former is the easiest way to use the
+speech rule engine via its Api and is the preferred option if you just want to
+include it in your project. The latter is useful if you want to use the speech
+rule engine in batch mode or interactivley to add your own code.
 
 Node Module
 -----------
@@ -23,11 +27,13 @@ Current API functions are
      
      processExpression(mathml); 
 
-Takes a string containing a MathML expression and returns the corresponding speech string.
+Takes a string containing a MathML expression and returns the corresponding
+speech string.
 
      processFile(input, output);
 
-Takes an input file containing a MathML expression and writes the corresponding speech string to the output file.
+Takes an input file containing a MathML expression and writes the corresponding
+speech string to the output file.
 
 
 Standalone Engine
@@ -35,6 +41,8 @@ Standalone Engine
 
 Node dependencies you have to install:
 
+     closure
+     closurecompiler
      closure-library
      xmldom
      xpath
@@ -42,13 +50,16 @@ Node dependencies you have to install:
  
 Using npm run
 
-     npm install closure-library xmldom xpath commander
+     npm install closure closurecompiler closure-library xmldom xpath commander
  
- 
+You might have to remove the -d32 flag in 
+
+    closure-library/closure/bin/build/jscompiler.py 
+
 ### Build #############
 
-Depending on your setup you might need to adapt the NODEJS and NODE_MODULES variable in the Makefile. 
-Then simply run
+Depending on your setup you might need to adapt the NODEJS and NODE_MODULES
+variable in the Makefile.  Then simply run
 
     make
 
@@ -67,5 +78,6 @@ Import into a running node process
 
     require('./lib/sre4node.js');
 
-Note, that this will import the full functionality of the speech rule engine in the sre namespace and of the closure library in the goog namespace.
+Note, that this will import the full functionality of the speech rule engine in
+the sre namespace and of the closure library in the goog namespace.
   
