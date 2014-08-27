@@ -66,7 +66,7 @@ Please change
 to 
 
     # Attempt 32-bit mode if we're <= Java 1.7
-    if java_version >= 1.7:
+    if java_version <= 1.7:
       args += ['-d32']
 
 ### Build #############
