@@ -21,7 +21,7 @@ Then import into a running node or a source file using require:
 
      require('speech-rule-engine');
      
-### API #######
+#### API #######
 
 Current API functions are
      
@@ -69,14 +69,14 @@ to
     if java_version <= 1.7:
       args += ['-d32']
 
-### Build #############
+#### Build #############
 
 Depending on your setup you might need to adapt the NODEJS and NODE_MODULES
 variable in the Makefile.  Then simply run
 
     make
 
-### Run on command line ############
+#### Run on command line ############
 
 
     bin/sre -i infile -o outfile
@@ -85,7 +85,7 @@ As an example run
 
     bin/sre -i samples/sample1.xml -o sample1.txt
     
-### Run interactively ############
+#### Run interactively ############
 
 Import into a running node process
 
