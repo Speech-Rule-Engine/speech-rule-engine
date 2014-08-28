@@ -57,7 +57,7 @@ In version 1.43 of the closure library there is a mistake in the file
 
     closure-library/closure/bin/build/jscompiler.py 
 
-Please change
+You might need to change
 
     # Attempt 32-bit mode if we're <= Java 1.7
     if java_version >= 1.7:
