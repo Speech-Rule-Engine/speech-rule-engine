@@ -74,9 +74,8 @@ sre.System.prototype.trimInput_ = function(input) {
  * Parses the XML input string into an XML structure.
  * @param {string} input The XML input string.
  * @return {!Element} The XML document structure corresponding to the node.
- * @private
  */
-sre.System.prototype.parseInput_ = function(input) {
+sre.System.prototype.parseInput = function(input) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var clean_input = this.trimInput_(input);
   if (!clean_input) {
@@ -157,7 +156,7 @@ sre.System.prototype.setupEngine = function(feature) {
  */
 sre.System.prototype.processExpression = function(expr) {
   try {
-    var xml = this.parseInput_(expr);
+    var xml = this.parseInput(expr);
     if (sre.Engine.getInstance().semantics) {
       xml = this.getSemanticTree_(xml);
     }
@@ -181,7 +180,7 @@ sre.System.prototype.processExpression = function(expr) {
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {
   var tree = new sre.SemanticTree(mml);
-  return this.parseInput_(tree.xml().toString());
+  return this.parseInput(tree.xml().toString());
 };
 
 

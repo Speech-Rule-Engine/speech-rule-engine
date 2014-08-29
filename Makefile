@@ -22,8 +22,12 @@ INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols
 
-
-# Use closure in binary. Maybe change to node.js closure.
+TEST_DIR = $(abspath ./tests)
+TEST_TARGET = $(LIB_DIR)/test.js
+TEST_DEPS = $(TEST_DIR)/deps.js
+TEST = $(BIN_DIR)/test_sre
+TEST_SRC = $(TEST_DIR)/*.js
+# Use installed closure binary, NOT node.js closure.
 
 ## Separate binary
 # Closure compiler as binary
@@ -99,15 +103,17 @@ $(BIN_DIR):
 
 lint: 
 	$(GJSLINT) $(SRC_DIR)
+	$(GJSLINT) $(TEST_DIR)
 
 
 fixjsstyle:
 	$(FIXJSSTYLE) $(SRC_DIR)
+	$(FIXJSSTYLE) $(TEST_DIR)
 
 
 compile: $(TARGET)
 
-$(TARGET): $(SRC) # start_file
+$(TARGET): $(SRC)
 	@echo Compiling Speech Rule Engine
 	@echo $^
 #	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
@@ -153,7 +159,7 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-clean: 
+clean: clean_test
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
@@ -161,10 +167,49 @@ clean:
 	rm -f $(CLOSURE_LIB_LINK)
 	$(foreach map, $(MAPS), rm -rf $(LIB_DIR)/$(map))
 
-test:
-	@echo $(CLOSURE_FLAGS)
-	@echo $(CLOSURE_ERRORS_FLAGS)
-	@echo $(CLOSURE_COMPILER)
+
+##################################################################
+# Test environment.
+##################################################################
+# Extern files.
+##################################################################
+TEST_EXTERN_FILES = $(shell find $(TEST_DIR) -type f -name 'externs.js')
+TEST_EXTERN_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
+TEST_FLAGS = $(foreach flag, $(TEST_EXTERN_FLAGS), $(MAKE_FLAG))
+
+test_deps: $(TEST_DEPS)
+
+$(TEST_DEPS):
+	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
+	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) ../../../" > $(TEST_DEPS)
+
+test: directories link test_deps deps test_compile test_script run_test
+
+test_compile: $(TEST_TARGET)
+
+$(TEST_TARGET): $(TEST_SRC) $(SRC)
+	@echo Compiling test version of Speech Rule Engine
+	@echo $^
+	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --root=$(TEST_DIR) --namespace="sre.Tests" --output_file $(TEST_TARGET)
+
+test_script: $(TEST)
+
+$(TEST): 
+	@echo "Making test script."
+	@echo "#!/bin/bash" > $@
+	@echo "## This script is automatically generated. Do not edit!" >> $@
+	@echo "\nexport SRE_JSON_PATH=$(JSON_DIR)\n" >> $@
+	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
+	@chmod 755 $@
+
+run_test:
+	@$(TEST)
+
+clean_test:
+	rm -f $(TEST_TARGET)
+	rm -f $(TEST_DEPS)
+	rm -f $(TEST)
+
 
 ## Publish the API via npm.
 
