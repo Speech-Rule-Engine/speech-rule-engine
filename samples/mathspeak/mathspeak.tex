@@ -1,4 +1,17 @@
 \documentclass{article}
+\usepackage[paper=a4paper]{geometry}
+\usepackage{longtable}
+%\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{leftidx}
+\usepackage{soul}
+\usepackage{stackrel}
+\usepackage{accents}
+
+\newcommand{\toprule}{\hline}
+\newcommand{\bottomrule}{\hline}
+\newcommand{\addlinespace}{\vspace{1ex}}
 
 \newcounter{rule}
 \newcounter{example}
@@ -22,41 +35,27 @@
   {\textbf{Example \theexample: }}%
 }
 
+\newcommand\sout[1]{\text{\st{#1}}}
+
 \title{MathSpeak Rules}
 \author{Volker Sorge}
 
 \begin{document}
-\section{Numbers}
-\label{sec:numbers}
-
-\R
-\E $\pi \approx 3.14159$
-
-\E $102 + 2214 + 15 = 2331$
-
-\E $59 \times 0 = 0$
-
-\R
-\E $3 - -2$
-
-\E $-y$
-
-\E $-32$
-
-\R
-
-\R
-\E $t2e4$
-
-\E $\#FF0000$
-
-\E $0x15FF + 0x2B01 = 0x4100$
-
-\R
-\E $I,II,III,IV,V.$
-
-\R
-\E $\frac{22}{7}=3.\overline{142857}$
+\input{chap1.tex}
+\input{chap2.tex}
+\input{chap3.tex}
+\input{chap4.tex}
+\input{chap5.tex}
+\input{chap6.tex}
+\input{chap7.tex}
+\input{chap8.tex}
+\input{chap9.tex}
+\input{chap10.tex}
+\input{chap11.tex}
+\input{chap12.tex}
+\input{chap13.tex}
+\input{chap14.tex}
+\input{chap15.tex}
 
 \end{document}
 

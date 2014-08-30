@@ -1,0 +1,231 @@
+
+\section{Fractions}
+\label{sec:fractions}
+
+\R
+\E \[\frac{1}{x}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartFraction 1 Over x EndFraction &
+
+\\\addlinespace
+brief & StartFrac 1 Over x EndFrac &
+
+\\\addlinespace
+superbrief & Frac 1 Over x EndFrac &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[a-\frac{b+c}{d-e}\times f\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & a minus StartFraction b plus c Over d minus e EndFraction
+times f &
+
+\\\addlinespace
+brief & a minus StartFrac b plus c Over d minus e EndFrac times f &
+
+\\\addlinespace
+superbrief & a minus Frac b plus c Over d minus e EndFrac times f &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[\frac{\frac{x}{y}}{z}\neq \frac{x}{\frac{y}{z}}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartStartFraction StartFraction x Over y EndFraction OverOver
+z EndEndFraction not-equals StartStartFraction x OverOver StartFraction
+y Over z EndFraction EndEndFraction &
+
+\\\addlinespace
+brief & StartStartFrac StartFrac x Over y EndFrac OverOver z EndEndFrac
+not-equals StartStartFrac x OverOver StartFrac y Over z EndFrac
+EndEndFrac &
+
+\\\addlinespace
+superbrief & NestFrac Frac x Over y EndFrac NestOver z NestEndFrac
+not-equals NestFrac x NestOver Frac y Over z EndFrac NestEndFrac &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[\frac{\frac{\left(1-x\right)\frac{d}{dx}\left(2x\right)-2x\frac{d}{dx}\left(1-x\right)}{\left(1-x\right)^2}}{1+\left(\frac{2x}{1-x}\right)^2}\]
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartStartStartFraction StartStartFraction left-parenthesis 1
+minus x right-parenthesis StartFraction d Over d x EndFraction
+left-parenthesis 2 x right-parenthesis minus 2 x StartFraction d Over d
+x EndFraction left-parenthesis 1 minus x right-parenthesis OverOver
+left-parenthesis 1 minus x right-parenthesis squared EndEndFraction
+OverOverOver 1 plus left-parenthesis StartFraction 2 x Over 1 minus x
+EndFraction right-parenthesis squared EndEndEndFraction &
+
+\\\addlinespace
+brief & StartStartStartFrac StartStartFrac left-p'ren 1 minus x
+right-p'ren StartFrac d Over d x EndFrac left-p'ren 2 x right-p'ren
+minus 2 x StartFrac d Over d x EndFrac left-p'ren 1 minus x right-p'ren
+OverOver left-p'ren 1 minus x right-p'ren squared EndEndFrac
+OverOverOver 1 plus left-p'ren StartFrac 2 x Over 1 minus x EndFrac
+right-p'ren squared EndEndEndFrac &
+
+\\\addlinespace
+superbrief & NestTwiceFrac NestFrac L p'ren 1 minus x R p'ren Frac d
+Over d x EndFrac L p'ren 2 x R p'ren minus 2 x Frac d Over d x EndFrac L
+p'ren 1 minus x R p'ren NestOver L p'ren 1 minus x R p'ren squared
+NestEndFrac NestTwiceOver 1 plus L p'ren Frac 2 x Over 1 minus x EndFrac
+R p'ren squared NestTwiceEndFrac &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+
+\E \[a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{\ldots + \frac{1}{a_n}}}}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & a 0 plus StartStartStartStartFraction 1 OverOverOverOver a 1
+plus StartStartStartFraction 1 OverOverOver a 2 plus StartStartFraction
+1 OverOver ellipsis plus StartFraction 1 Over a Subscript n Baseline
+EndFraction EndEndFraction EndEndEndFraction EndEndEndEndFraction &
+
+\\\addlinespace
+brief & a 0 plus StartStartStartStartFrac 1 OverOverOverOver a 1 plus
+StartStartStartFrac 1 OverOverOver a 2 plus StartStartFrac 1 OverOver
+ellipsis plus StartFrac 1 Over a Sub n Base EndFrac EndEndFrac
+EndEndEndFrac EndEndEndEndFrac &
+
+\\\addlinespace
+superbrief & a 0 plus Nest3Frac 1 Nest3Over a 1 plus NestTwiceFrac 1
+NestTwiceOver a 2 plus NestFrac 1 NestOver ellipsis plus Frac 1 Over a
+Sub n Base EndFrac NestEndFrac NestTwiceEndFrac Nest3EndFrac &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[\frac{1}{2}+\frac{2}{2}+\frac{3}{2}+\frac{4}{2}+\ldots = \sum_{n=1}^{\inf}\frac{n}{2}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & one-half plus two-halves plus three-halves plus four-halves
+plus ellipsis equals sigma-summation Underscript n equals 1 Overscript
+infinity EndScripts StartFraction n Over 2 EndFraction &
+
+\\\addlinespace
+brief & one-half plus two-halves plus three-halves plus four-halves plus
+ellipsis equals sigma-summation Underscript n equals 1 Overscript
+infinity EndScripts StartFrac n Over 2 EndFrac &
+
+\\\addlinespace
+superbrief & one-half plus two-halves plus three-halves plus four-halves
+plus ellipsis equals sigma-summation Underscript n equals 1 Overscript
+infinity EndScripts Frac n Over 2 EndFrac &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\frac{20}{5}\times \frac{1}{100}=\frac{1}{25}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartFraction 20 Over 5 EndFraction times StartFraction 1 Over
+100 EndFraction equals one-twenty-fifth &
+
+\\\addlinespace
+brief & StartFrac 20 Over 5 EndFrac times StartFrac 1 Over 100 EndFrac
+equals one-twenty-fifth &
+
+\\\addlinespace
+superbrief & Frac 20 Over 5 EndFrac times Frac 1 Over 100 EndFrac equals
+one-twenty-fifth &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\frac{\frac{3}{5}}{8} = \frac{3}{5}\times \frac{1}{8}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartFraction three-fifths Over 8 EndFraction equals
+three-fifths times one-eighth &
+
+\\\addlinespace
+brief & StartFrac three-fifths Over 8 EndFrac equals three-fifths times
+one-eighth &
+
+\\\addlinespace
+superbrief & Frac three-fifths Over 8 EndFrac equals three-fifths times
+one-eighth &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[3\frac{5}{8} = \frac{29}{8}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & 3 and five-eighths equals StartFraction 29 Over 8 EndFraction
+&
+
+\\\addlinespace
+brief & 3 and five-eighths equals StartFrac 29 Over 8 EndFrac &
+
+\\\addlinespace
+superbrief & 3 and five-eighths equals Frac 29 Over 8 EndFrac &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[a_0+\frac{b_1}{a_1+\frac{b_2}{a_2+\frac{b_3}{a_3 + \ldots}}} = a_0 + \frac{b_1}{a_1} + \frac{b_2}{a_2} + \ldots\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & a 0 plus ContinuedFraction b 1 Over a 1 plus StartFraction b 2
+Over a 2 plus StartFraction b 3 Over a 3 plus ellipsis equals a 0 plus
+StartFraction b 1 Over a 1 EndFraction plus StartFraction b 2 Over a 2
+EndFraction plus ellipsis &
+
+\\\addlinespace
+brief & a 0 plus ContinuedFrac b 1 Over a 1 plus StartFrac b 2 Over a 2
+plus StartFrac b 3 Over a 3 plus ellipsis equals a 0 plus StartFrac b 1
+Over a 1 EndFrac plus StartFrac b 2 Over a 2 EndFrac plus ellipsis &
+
+\\\addlinespace
+superbrief & a 0 plus ContinuedFrac b 1 Over a 1 plus Frac b 2 Over a 2
+plus Frac b 3 Over a 3 plus ellipsis equals a 0 plus Frac b 1 Over a 1
+EndFrac plus Frac b 2 Over a 2 EndFrac plus ellipsis &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+
+
+
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mathspeak"
+%%% End: 

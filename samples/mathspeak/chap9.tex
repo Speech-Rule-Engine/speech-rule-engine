@@ -1,0 +1,193 @@
+
+\section{Radicals}
+\label{sec:radicals}
+
+\R
+\E \[\sqrt{2}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartRoot 2 EndRoot &
+
+\\\addlinespace
+brief & StartRoot 2 EndRoot &
+
+\\\addlinespace
+superbrief & Root 2 EndRoot &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\sqrt{m+n}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartRoot m plus n EndRoot &
+
+\\\addlinespace
+brief & StartRoot m plus n EndRoot &
+
+\\\addlinespace
+superbrief & Root m plus n EndRoot &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[\sqrt[m+n]{x+y}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & RootIndex m plus n StartRoot x plus y EndRoot &
+
+\\\addlinespace
+brief & RootIndex m plus n StartRoot x plus y EndRoot &
+
+\\\addlinespace
+superbrief & Index m plus n Root x plus y EndRoot &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\sqrt[n]{x^m}=\left(\sqrt[n]{x}\right)^m=x^{\frac{m}{n}}, x>0\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & RootIndex n StartRoot x Superscript m Baseline EndRoot equals
+left-parenthesis RootIndex n StartRoot x EndRoot right-parenthesis
+Superscript m Baseline equals x Superscript StartFraction m Over n
+EndFraction Baseline comma x greater-than 0 &
+
+\\\addlinespace
+brief & RootIndex n StartRoot x Sup m Base EndRoot equals left-p'ren
+RootIndex n StartRoot x EndRoot right-p'ren Sup m Base equals x Sup
+StartFrac m Over n EndFrac Base comma x greater-than 0 &
+
+\\\addlinespace
+superbrief & Index n Root x Sup m Base EndRoot equals L p'ren Index n
+Root x EndRoot R p'ren Sup m Base equals x Sup Frac m Over n EndFrac
+Base comma x greater-than 0 &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\sqrt[3]{x}=x^{\frac{1}{3}}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & RootIndex 3 StartRoot x EndRoot equals x Superscript one-third
+&
+
+\\\addlinespace
+brief & RootIndex 3 StartRoot x EndRoot equals x Sup one-third &
+
+\\\addlinespace
+superbrief & Index 3 Root x EndRoot equals x Sup one-third &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\R
+\E \[\sqrt{\sqrt{x+1}+\sqrt{y+1}}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & NestedStartRoot StartRoot x plus 1 EndRoot plus StartRoot y
+plus 1 EndRoot NestedEndRoot &
+
+\\\addlinespace
+brief & NestStartRoot StartRoot x plus 1 EndRoot plus StartRoot y plus 1
+EndRoot NestEndRoot &
+
+\\\addlinespace
+superbrief & NestRoot Root x plus 1 EndRoot plus Root y plus 1 EndRoot
+NestEndRoot &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\sqrt[n]{\sqrt[m]{x}}=\sqrt[m]{\sqrt[n]{x}}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & NestedRootIndex n NestedStartRoot RootIndex m StartRoot x
+EndRoot NestedEndRoot equals NestedRootIndex m NestedStartRoot RootIndex
+n StartRoot x EndRoot NestedEndRoot &
+
+\\\addlinespace
+brief & NestRootIndex n NestStartRoot RootIndex m StartRoot x EndRoot
+NestEndRoot equals NestRootIndex m NestStartRoot RootIndex n StartRoot x
+EndRoot NestEndRoot &
+
+\\\addlinespace
+superbrief & NestIndex n NestRoot Index m Root x EndRoot NestEndRoot
+equals NestIndex m NestRoot Index n Root x EndRoot NestEndRoot &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[x^{e-2}=\sqrt{x\sqrt[3]{x\sqrt[4]{x\sqrt[5]{x\ldots}}}}, x\in\mathbb{R}\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & x Superscript e minus 2 Baseline equals Nested3StartRoot x
+NestedTwiceRootIndex 3 NestedTwiceStartRoot x NestedRootIndex 4
+NestedStartRoot x RootIndex 5 StartRoot x ellipsis EndRoot NestedEndRoot
+NestedTwiceEndRoot Nested3EndRoot comma x Element-of double-struck upper
+R &
+
+\\\addlinespace
+brief & x Sup e minus 2 Base equals Nest3StartRoot x NestTwiceRootIndex
+3 NestTwiceStartRoot x NestRootIndex 4 NestStartRoot x RootIndex 5
+StartRoot x ellipsis EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot
+comma x Element-of double-struck upper R &
+
+\\\addlinespace
+superbrief & x Sup e minus 2 Base equals Nest3Root x NestTwiceIndex 3
+NestTwiceRoot x NestIndex 4 NestRoot x Index 5 Root x ellipsis EndRoot
+NestEndRoot NestTwiceEndRoot Nest3EndRoot comma x Element-of
+double-struck upper R &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+\E \[\frac{2}{\pi}=\frac{\sqrt{2}{2}}{2}\frac{\sqrt{2+\sqrt{2}}}{2}\frac{\sqrt{2+\sqrt{2+\sqrt{2}}}}{2}\ldots\]
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+verbose & StartFraction 2 Over pi EndFraction equals StartFraction
+StartRoot 2 EndRoot Over 2 EndFraction StartFraction NestedStartRoot 2
+plus StartRoot 2 EndRoot NestedEndRoot Over 2 EndFraction StartFraction
+NestedTwiceStartRoot 2 plus NestedStartRoot 2 plus StartRoot 2 EndRoot
+NestedEndRoot NestedTwiceEndRoot Over 2 EndFraction ellipsis &
+
+\\\addlinespace
+brief & StartFrac 2 Over pi EndFrac equals StartFrac StartRoot 2 EndRoot
+Over 2 EndFrac StartFrac NestStartRoot 2 plus StartRoot 2 EndRoot
+NestEndRoot Over 2 EndFrac StartFrac NestTwiceStartRoot 2 plus
+NestStartRoot 2 plus StartRoot 2 EndRoot NestEndRoot NestTwiceEndRoot
+Over 2 EndFrac ellipsis &
+
+\\\addlinespace
+superbrief & Frac 2 Over pi EndFrac equals Frac Root 2 EndRoot Over 2
+EndFrac Frac NestRoot 2 plus Root 2 EndRoot NestEndRoot Over 2 EndFrac
+Frac NestTwiceRoot 2 plus NestRoot 2 plus Root 2 EndRoot NestEndRoot
+NestTwiceEndRoot Over 2 EndFrac ellipsis &
+
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mathspeak"
+%%% End: 
