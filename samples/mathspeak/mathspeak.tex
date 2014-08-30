@@ -1,0 +1,66 @@
+\documentclass{article}
+
+\newcounter{rule}
+\newcounter{example}
+\makeatletter
+\renewcommand\section{\setcounter{rule}{0}%
+  \@startsection {section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\normalfont\Large\bfseries}%
+}
+\makeatother
+\setlength{\parindent}{0pt}
+
+\newcommand\R{\addtocounter{rule}{1}
+  \setcounter{example}{0}
+  \vspace{1ex}
+  {\large \textbf{Rule \thesection.\therule}}%
+
+}
+\newcommand\E{\addtocounter{example}{1}
+  {\textbf{Example \theexample: }}%
+}
+
+\title{MathSpeak Rules}
+\author{Volker Sorge}
+
+\begin{document}
+\section{Numbers}
+\label{sec:numbers}
+
+\R
+\E $\pi \approx 3.14159$
+
+\E $102 + 2214 + 15 = 2331$
+
+\E $59 \times 0 = 0$
+
+\R
+\E $3 - -2$
+
+\E $-y$
+
+\E $-32$
+
+\R
+
+\R
+\E $t2e4$
+
+\E $\#FF0000$
+
+\E $0x15FF + 0x2B01 = 0x4100$
+
+\R
+\E $I,II,III,IV,V.$
+
+\R
+\E $\frac{22}{7}=3.\overline{142857}$
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
