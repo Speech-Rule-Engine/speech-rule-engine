@@ -1,522 +1,522 @@
 [
-{"category": "Ll",
- "names": [],
- "key": "0061",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter a",
-   "alternative": "",
-   "short": "a"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0062",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter b",
-   "alternative": "",
-   "short": "b"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0063",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter c",
-   "alternative": "",
-   "short": "c"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0064",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter d",
-   "alternative": "",
-   "short": "d"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0065",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter e",
-   "alternative": "",
-   "short": "e"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0066",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter f",
-   "alternative": "",
-   "short": "f"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0067",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter g",
-   "alternative": "",
-   "short": "g"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0068",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter h",
-   "alternative": "",
-   "short": "h"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0069",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter i",
-   "alternative": "",
-   "short": "i"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "006A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter j",
-   "alternative": "",
-   "short": "j"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "006B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter k",
-   "alternative": "",
-   "short": "k"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "006C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter l",
-   "alternative": "",
-   "short": "l"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "006D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter m",
-   "alternative": "",
-   "short": "m"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "006E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter n",
-   "alternative": "",
-   "short": "n"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "006F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter o",
-   "alternative": "",
-   "short": "o"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0070",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter p",
-   "alternative": "",
-   "short": "p"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0071",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter q",
-   "alternative": "",
-   "short": "q"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0072",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter r",
-   "alternative": "",
-   "short": "r"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0073",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter s",
-   "alternative": "",
-   "short": "s"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0074",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter t",
-   "alternative": "",
-   "short": "t"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0075",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter u",
-   "alternative": "",
-   "short": "u"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0076",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter v",
-   "alternative": "",
-   "short": "v"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0077",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter w",
-   "alternative": "",
-   "short": "w"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0078",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter x",
-   "alternative": "",
-   "short": "x"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "0079",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter y",
-   "alternative": "",
-   "short": "y"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "007A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin small letter z",
-   "alternative": "",
-   "short": "z"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF41",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter a",
-   "alternative": "",
-   "short": "a"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF42",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter b",
-   "alternative": "",
-   "short": "b"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF43",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter c",
-   "alternative": "",
-   "short": "c"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF44",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter d",
-   "alternative": "",
-   "short": "d"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF45",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter e",
-   "alternative": "",
-   "short": "e"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF46",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter f",
-   "alternative": "",
-   "short": "f"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF47",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter g",
-   "alternative": "",
-   "short": "g"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF48",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter h",
-   "alternative": "",
-   "short": "h"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF49",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter i",
-   "alternative": "",
-   "short": "i"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF4A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter j",
-   "alternative": "",
-   "short": "j"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF4B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter k",
-   "alternative": "",
-   "short": "k"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF4C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter l",
-   "alternative": "",
-   "short": "l"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF4D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter m",
-   "alternative": "",
-   "short": "m"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF4E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter n",
-   "alternative": "",
-   "short": "n"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF4F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter o",
-   "alternative": "",
-   "short": "o"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF50",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter p",
-   "alternative": "",
-   "short": "p"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF51",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter q",
-   "alternative": "",
-   "short": "q"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF52",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter r",
-   "alternative": "",
-   "short": "r"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF53",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter s",
-   "alternative": "",
-   "short": "s"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF54",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter t",
-   "alternative": "",
-   "short": "t"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF55",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter u",
-   "alternative": "",
-   "short": "u"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF56",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter v",
-   "alternative": "",
-   "short": "v"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF57",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter w",
-   "alternative": "",
-   "short": "w"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF58",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter x",
-   "alternative": "",
-   "short": "x"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF59",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter y",
-   "alternative": "",
-   "short": "y"
-  }}},
-{"category": "Ll",
- "names": [],
- "key": "FF5A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin small letter z",
-   "alternative": "",
-   "short": "z"
-  }}}
+  {
+    "category": "Ll",
+    "key": "0061",
+    "mappings": {
+      "default": {
+        "default": "latin small letter a",
+        "short": "a"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0062",
+    "mappings": {
+      "default": {
+        "default": "latin small letter b",
+        "short": "b"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0063",
+    "mappings": {
+      "default": {
+        "default": "latin small letter c",
+        "short": "c"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0064",
+    "mappings": {
+      "default": {
+        "default": "latin small letter d",
+        "short": "d"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0065",
+    "mappings": {
+      "default": {
+        "default": "latin small letter e",
+        "short": "e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0066",
+    "mappings": {
+      "default": {
+        "default": "latin small letter f",
+        "short": "f"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0067",
+    "mappings": {
+      "default": {
+        "default": "latin small letter g",
+        "short": "g"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0068",
+    "mappings": {
+      "default": {
+        "default": "latin small letter h",
+        "short": "h"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0069",
+    "mappings": {
+      "default": {
+        "default": "latin small letter i",
+        "short": "i"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "006A",
+    "mappings": {
+      "default": {
+        "default": "latin small letter j",
+        "short": "j"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "006B",
+    "mappings": {
+      "default": {
+        "default": "latin small letter k",
+        "short": "k"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "006C",
+    "mappings": {
+      "default": {
+        "default": "latin small letter l",
+        "short": "l"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "006D",
+    "mappings": {
+      "default": {
+        "default": "latin small letter m",
+        "short": "m"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "006E",
+    "mappings": {
+      "default": {
+        "default": "latin small letter n",
+        "short": "n"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "006F",
+    "mappings": {
+      "default": {
+        "default": "latin small letter o",
+        "short": "o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0070",
+    "mappings": {
+      "default": {
+        "default": "latin small letter p",
+        "short": "p"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0071",
+    "mappings": {
+      "default": {
+        "default": "latin small letter q",
+        "short": "q"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0072",
+    "mappings": {
+      "default": {
+        "default": "latin small letter r",
+        "short": "r"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0073",
+    "mappings": {
+      "default": {
+        "default": "latin small letter s",
+        "short": "s"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0074",
+    "mappings": {
+      "default": {
+        "default": "latin small letter t",
+        "short": "t"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0075",
+    "mappings": {
+      "default": {
+        "default": "latin small letter u",
+        "short": "u"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0076",
+    "mappings": {
+      "default": {
+        "default": "latin small letter v",
+        "short": "v"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0077",
+    "mappings": {
+      "default": {
+        "default": "latin small letter w",
+        "short": "w"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0078",
+    "mappings": {
+      "default": {
+        "default": "latin small letter x",
+        "short": "x"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0079",
+    "mappings": {
+      "default": {
+        "default": "latin small letter y",
+        "short": "y"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "007A",
+    "mappings": {
+      "default": {
+        "default": "latin small letter z",
+        "short": "z"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF41",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter a",
+        "short": "a"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF42",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter b",
+        "short": "b"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF43",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter c",
+        "short": "c"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF44",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter d",
+        "short": "d"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF45",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter e",
+        "short": "e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF46",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter f",
+        "short": "f"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF47",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter g",
+        "short": "g"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF48",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter h",
+        "short": "h"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF49",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter i",
+        "short": "i"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF4A",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter j",
+        "short": "j"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF4B",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter k",
+        "short": "k"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF4C",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter l",
+        "short": "l"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF4D",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter m",
+        "short": "m"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF4E",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter n",
+        "short": "n"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF4F",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter o",
+        "short": "o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF50",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter p",
+        "short": "p"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF51",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter q",
+        "short": "q"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF52",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter r",
+        "short": "r"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF53",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter s",
+        "short": "s"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF54",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter t",
+        "short": "t"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF55",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter u",
+        "short": "u"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF56",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter v",
+        "short": "v"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF57",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter w",
+        "short": "w"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF58",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter x",
+        "short": "x"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF59",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter y",
+        "short": "y"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "FF5A",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin small letter z",
+        "short": "z"
+      }
+    }
+  }
 ]

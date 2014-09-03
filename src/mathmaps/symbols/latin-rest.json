@@ -1,2402 +1,2819 @@
 [
-{"category": "Mn",
- "names": [],
- "key": "0363",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter a",
-   "alternative": "",
-   "short": "combining a"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "0364",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter e",
-   "alternative": "",
-   "short": "combining e"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "0365",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter i",
-   "alternative": "",
-   "short": "combining i"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "0366",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter o",
-   "alternative": "",
-   "short": "combining o"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "0367",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter u",
-   "alternative": "",
-   "short": "combining u"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "0368",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter c",
-   "alternative": "",
-   "short": "combining c"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "0369",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter d",
-   "alternative": "",
-   "short": "combining d"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "036A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter h",
-   "alternative": "",
-   "short": "combining h"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "036B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter m",
-   "alternative": "",
-   "short": "combining m"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "036C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter r",
-   "alternative": "",
-   "short": "combining r"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "036D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter t",
-   "alternative": "",
-   "short": "combining t"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "036E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter v",
-   "alternative": "",
-   "short": "combining v"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "036F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter x",
-   "alternative": "",
-   "short": "combining x"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "1D62",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter i",
-   "alternative": "",
-   "short": "subscript i"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "1D63",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter r",
-   "alternative": "",
-   "short": "subscript r"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "1D64",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter u",
-   "alternative": "",
-   "short": "subscript u"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "1D65",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter v",
-   "alternative": "",
-   "short": "subscript v"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DCA",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter r below",
-   "alternative": "",
-   "short": "combining r below"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter flattened open a above",
-   "alternative": "",
-   "short": "combining flattened open a above"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter ae",
-   "alternative": "",
-   "short": "combining ae"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter ao",
-   "alternative": "",
-   "short": "combining ao"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter av",
-   "alternative": "",
-   "short": "combining av"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD7",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter c cedilla",
-   "alternative": "",
-   "short": "combining c cedilla"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD8",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter insular d",
-   "alternative": "",
-   "short": "combining insular d"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DD9",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter eth",
-   "alternative": "",
-   "short": "combining eth"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DDA",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter g",
-   "alternative": "",
-   "short": "combining g"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DDB",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin letter small capital g",
-   "alternative": "",
-   "short": "combining small cap g"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DDC",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter k",
-   "alternative": "",
-   "short": "combining k"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DDD",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter l",
-   "alternative": "",
-   "short": "combining l"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DDE",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin letter small capital l",
-   "alternative": "",
-   "short": "combining small cap l"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DDF",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin letter small capital m",
-   "alternative": "",
-   "short": "combining small cap m"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE0",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter n",
-   "alternative": "",
-   "short": "combining n"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE1",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin letter small capital n",
-   "alternative": "",
-   "short": "combining small cap n"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE2",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin letter small capital r",
-   "alternative": "",
-   "short": "combining small cap r"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter r rotunda",
-   "alternative": "",
-   "short": "combining r rotunda"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter s",
-   "alternative": "",
-   "short": "combining s"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter long s",
-   "alternative": "",
-   "short": "combining long s"
-  }}},
-{"category": "Mn",
- "names": [],
- "key": "1DE6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "combining latin small letter z",
-   "alternative": "",
-   "short": "combining z"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2071",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "superscript latin small letter i",
-   "alternative": "",
-   "short": "superscript i"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "207F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "superscript latin small letter n",
-   "alternative": "",
-   "short": "superscript n"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2090",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter a",
-   "alternative": "",
-   "short": "subscript a"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2091",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter e",
-   "alternative": "",
-   "short": "subscript e"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2092",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter o",
-   "alternative": "",
-   "short": "subscript o"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2093",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter x",
-   "alternative": "",
-   "short": "subscript x"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2094",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter schwa",
-   "alternative": "",
-   "short": "subscript schwa"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2095",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter h",
-   "alternative": "",
-   "short": "subscript h"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2096",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter k",
-   "alternative": "",
-   "short": "subscript k"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2097",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter l",
-   "alternative": "",
-   "short": "subscript l"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2098",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter m",
-   "alternative": "",
-   "short": "subscript m"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2099",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter n",
-   "alternative": "",
-   "short": "subscript n"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "209A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter p",
-   "alternative": "",
-   "short": "subscript p"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "209B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter s",
-   "alternative": "",
-   "short": "subscript s"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "209C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter t",
-   "alternative": "",
-   "short": "subscript t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "249C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter a",
-   "alternative": "",
-   "short": "parenthesized a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "249D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter b",
-   "alternative": "",
-   "short": "parenthesized b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "249E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter c",
-   "alternative": "",
-   "short": "parenthesized c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "249F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter d",
-   "alternative": "",
-   "short": "parenthesized d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A0",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter e",
-   "alternative": "",
-   "short": "parenthesized e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A1",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter f",
-   "alternative": "",
-   "short": "parenthesized f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A2",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter g",
-   "alternative": "",
-   "short": "parenthesized g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter h",
-   "alternative": "",
-   "short": "parenthesized h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter i",
-   "alternative": "",
-   "short": "parenthesized i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter j",
-   "alternative": "",
-   "short": "parenthesized j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter k",
-   "alternative": "",
-   "short": "parenthesized k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A7",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter l",
-   "alternative": "",
-   "short": "parenthesized l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A8",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter m",
-   "alternative": "",
-   "short": "parenthesized m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24A9",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter n",
-   "alternative": "",
-   "short": "parenthesized n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24AA",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter o",
-   "alternative": "",
-   "short": "parenthesized o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24AB",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter p",
-   "alternative": "",
-   "short": "parenthesized p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24AC",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter q",
-   "alternative": "",
-   "short": "parenthesized q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24AD",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter r",
-   "alternative": "",
-   "short": "parenthesized r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24AE",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter s",
-   "alternative": "",
-   "short": "parenthesized s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24AF",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter t",
-   "alternative": "",
-   "short": "parenthesized t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B0",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter u",
-   "alternative": "",
-   "short": "parenthesized u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B1",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter v",
-   "alternative": "",
-   "short": "parenthesized v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B2",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter w",
-   "alternative": "",
-   "short": "parenthesized w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter x",
-   "alternative": "",
-   "short": "parenthesized x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter y",
-   "alternative": "",
-   "short": "parenthesized y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin small letter z",
-   "alternative": "",
-   "short": "parenthesized z"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter a",
-   "alternative": "",
-   "short": "circled cap a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B7",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter b",
-   "alternative": "",
-   "short": "circled cap b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B8",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter c",
-   "alternative": "",
-   "short": "circled cap c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24B9",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter d",
-   "alternative": "",
-   "short": "circled cap d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24BA",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter e",
-   "alternative": "",
-   "short": "circled cap e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24BB",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter f",
-   "alternative": "",
-   "short": "circled cap f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24BC",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter g",
-   "alternative": "",
-   "short": "circled cap g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24BD",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter h",
-   "alternative": "",
-   "short": "circled cap h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24BE",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter i",
-   "alternative": "",
-   "short": "circled cap i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24BF",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter j",
-   "alternative": "",
-   "short": "circled cap j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C0",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter k",
-   "alternative": "",
-   "short": "circled cap k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C1",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter l",
-   "alternative": "",
-   "short": "circled cap l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C2",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter m",
-   "alternative": "",
-   "short": "circled cap m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter n",
-   "alternative": "",
-   "short": "circled cap n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter o",
-   "alternative": "",
-   "short": "circled cap o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter p",
-   "alternative": "",
-   "short": "circled cap p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter q",
-   "alternative": "",
-   "short": "circled cap q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C7",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter r",
-   "alternative": "",
-   "short": "circled cap r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C8",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter s",
-   "alternative": "",
-   "short": "circled cap s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24C9",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter t",
-   "alternative": "",
-   "short": "circled cap t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24CA",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter u",
-   "alternative": "",
-   "short": "circled cap u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24CB",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter v",
-   "alternative": "",
-   "short": "circled cap v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24CC",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter w",
-   "alternative": "",
-   "short": "circled cap w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24CD",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter x",
-   "alternative": "",
-   "short": "circled cap x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24CE",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter y",
-   "alternative": "",
-   "short": "circled cap y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24CF",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin capital letter z",
-   "alternative": "",
-   "short": "circled cap z"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D0",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter a",
-   "alternative": "",
-   "short": "circled a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D1",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter b",
-   "alternative": "",
-   "short": "circled b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D2",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter c",
-   "alternative": "",
-   "short": "circled c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter d",
-   "alternative": "",
-   "short": "circled d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter e",
-   "alternative": "",
-   "short": "circled e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter f",
-   "alternative": "",
-   "short": "circled f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter g",
-   "alternative": "",
-   "short": "circled g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D7",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter h",
-   "alternative": "",
-   "short": "circled h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D8",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter i",
-   "alternative": "",
-   "short": "circled i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24D9",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter j",
-   "alternative": "",
-   "short": "circled j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24DA",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter k",
-   "alternative": "",
-   "short": "circled k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24DB",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter l",
-   "alternative": "",
-   "short": "circled l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24DC",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter m",
-   "alternative": "",
-   "short": "circled m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24DD",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter n",
-   "alternative": "",
-   "short": "circled n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24DE",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter o",
-   "alternative": "",
-   "short": "circled o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24DF",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter p",
-   "alternative": "",
-   "short": "circled p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E0",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter q",
-   "alternative": "",
-   "short": "circled q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E1",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter r",
-   "alternative": "",
-   "short": "circled r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E2",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter s",
-   "alternative": "",
-   "short": "circled s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E3",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter t",
-   "alternative": "",
-   "short": "circled t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E4",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter u",
-   "alternative": "",
-   "short": "circled u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E5",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter v",
-   "alternative": "",
-   "short": "circled v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E6",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter w",
-   "alternative": "",
-   "short": "circled w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E7",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter x",
-   "alternative": "",
-   "short": "circled x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E8",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter y",
-   "alternative": "",
-   "short": "circled y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "24E9",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled latin small letter z",
-   "alternative": "",
-   "short": "circled z"
-  }}},
-{"category": "Lm",
- "names": [],
- "key": "2C7C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin subscript small letter j",
-   "alternative": "",
-   "short": "subscript j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F110",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter a",
-   "alternative": "",
-   "short": "parenthesized cap a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F111",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter b",
-   "alternative": "",
-   "short": "parenthesized cap b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F112",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter c",
-   "alternative": "",
-   "short": "parenthesized cap c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F113",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter d",
-   "alternative": "",
-   "short": "parenthesized cap d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F114",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter e",
-   "alternative": "",
-   "short": "parenthesized cap e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F115",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter f",
-   "alternative": "",
-   "short": "parenthesized cap f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F116",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter g",
-   "alternative": "",
-   "short": "parenthesized cap g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F117",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter h",
-   "alternative": "",
-   "short": "parenthesized cap h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F118",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter i",
-   "alternative": "",
-   "short": "parenthesized cap i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F119",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter j",
-   "alternative": "",
-   "short": "parenthesized cap j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F11A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter k",
-   "alternative": "",
-   "short": "parenthesized cap k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F11B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter l",
-   "alternative": "",
-   "short": "parenthesized cap l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F11C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter m",
-   "alternative": "",
-   "short": "parenthesized cap m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F11D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter n",
-   "alternative": "",
-   "short": "parenthesized cap n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F11E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter o",
-   "alternative": "",
-   "short": "parenthesized cap o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F11F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter p",
-   "alternative": "",
-   "short": "parenthesized cap p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F120",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter q",
-   "alternative": "",
-   "short": "parenthesized cap q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F121",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter r",
-   "alternative": "",
-   "short": "parenthesized cap r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F122",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter s",
-   "alternative": "",
-   "short": "parenthesized cap s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F123",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter t",
-   "alternative": "",
-   "short": "parenthesized cap t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F124",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter u",
-   "alternative": "",
-   "short": "parenthesized cap u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F125",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter v",
-   "alternative": "",
-   "short": "parenthesized cap v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F126",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter w",
-   "alternative": "",
-   "short": "parenthesized cap w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F127",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter x",
-   "alternative": "",
-   "short": "parenthesized cap x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F128",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter y",
-   "alternative": "",
-   "short": "parenthesized cap y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F129",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "parenthesized latin capital letter z",
-   "alternative": "",
-   "short": "parenthesized cap z"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F12A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "tortoise shell bracketed latin capital letter s",
-   "alternative": "",
-   "short": "tortoise shell bracketed cap s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F12B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled italic latin capital letter c",
-   "alternative": "",
-   "short": "circled italic cap c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F12C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "circled italic latin capital letter r",
-   "alternative": "",
-   "short": "circled italic cap r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F130",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter a",
-   "alternative": "",
-   "short": "squared cap a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F131",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter b",
-   "alternative": "",
-   "short": "squared cap b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F132",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter c",
-   "alternative": "",
-   "short": "squared cap c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F133",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter d",
-   "alternative": "",
-   "short": "squared cap d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F134",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter e",
-   "alternative": "",
-   "short": "squared cap e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F135",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter f",
-   "alternative": "",
-   "short": "squared cap f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F136",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter g",
-   "alternative": "",
-   "short": "squared cap g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F137",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter h",
-   "alternative": "",
-   "short": "squared cap h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F138",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter i",
-   "alternative": "",
-   "short": "squared cap i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F139",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter j",
-   "alternative": "",
-   "short": "squared cap j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F13A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter k",
-   "alternative": "",
-   "short": "squared cap k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F13B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter l",
-   "alternative": "",
-   "short": "squared cap l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F13C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter m",
-   "alternative": "",
-   "short": "squared cap m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F13D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter n",
-   "alternative": "",
-   "short": "squared cap n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F13E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter o",
-   "alternative": "",
-   "short": "squared cap o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F13F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter p",
-   "alternative": "",
-   "short": "squared cap p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F140",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter q",
-   "alternative": "",
-   "short": "squared cap q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F141",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter r",
-   "alternative": "",
-   "short": "squared cap r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F142",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter s",
-   "alternative": "",
-   "short": "squared cap s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F143",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter t",
-   "alternative": "",
-   "short": "squared cap t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F144",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter u",
-   "alternative": "",
-   "short": "squared cap u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F145",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter v",
-   "alternative": "",
-   "short": "squared cap v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F146",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter w",
-   "alternative": "",
-   "short": "squared cap w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F147",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter x",
-   "alternative": "",
-   "short": "squared cap x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F148",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter y",
-   "alternative": "",
-   "short": "squared cap y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F149",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "squared latin capital letter z",
-   "alternative": "",
-   "short": "squared cap z"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F150",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter a",
-   "alternative": "",
-   "short": "negative circled cap a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F151",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter b",
-   "alternative": "",
-   "short": "negative circled cap b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F152",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter c",
-   "alternative": "",
-   "short": "negative circled cap c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F153",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter d",
-   "alternative": "",
-   "short": "negative circled cap d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F154",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter e",
-   "alternative": "",
-   "short": "negative circled cap e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F155",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter f",
-   "alternative": "",
-   "short": "negative circled cap f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F156",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter g",
-   "alternative": "",
-   "short": "negative circled cap g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F157",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter h",
-   "alternative": "",
-   "short": "negative circled cap h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F158",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter i",
-   "alternative": "",
-   "short": "negative circled cap i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F159",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter j",
-   "alternative": "",
-   "short": "negative circled cap j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F15A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter k",
-   "alternative": "",
-   "short": "negative circled cap k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F15B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter l",
-   "alternative": "",
-   "short": "negative circled cap l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F15C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter m",
-   "alternative": "",
-   "short": "negative circled cap m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F15D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter n",
-   "alternative": "",
-   "short": "negative circled cap n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F15E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter o",
-   "alternative": "",
-   "short": "negative circled cap o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F15F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter p",
-   "alternative": "",
-   "short": "negative circled cap p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F160",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter q",
-   "alternative": "",
-   "short": "negative circled cap q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F161",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter r",
-   "alternative": "",
-   "short": "negative circled cap r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F162",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter s",
-   "alternative": "",
-   "short": "negative circled cap s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F163",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter t",
-   "alternative": "",
-   "short": "negative circled cap t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F164",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter u",
-   "alternative": "",
-   "short": "negative circled cap u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F165",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter v",
-   "alternative": "",
-   "short": "negative circled cap v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F166",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter w",
-   "alternative": "",
-   "short": "negative circled cap w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F167",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter x",
-   "alternative": "",
-   "short": "negative circled cap x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F168",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter y",
-   "alternative": "",
-   "short": "negative circled cap y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F169",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative circled latin capital letter z",
-   "alternative": "",
-   "short": "negative circled cap z"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F170",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter a",
-   "alternative": "",
-   "short": "negative squared cap a"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F171",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter b",
-   "alternative": "",
-   "short": "negative squared cap b"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F172",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter c",
-   "alternative": "",
-   "short": "negative squared cap c"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F173",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter d",
-   "alternative": "",
-   "short": "negative squared cap d"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F174",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter e",
-   "alternative": "",
-   "short": "negative squared cap e"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F175",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter f",
-   "alternative": "",
-   "short": "negative squared cap f"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F176",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter g",
-   "alternative": "",
-   "short": "negative squared cap g"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F177",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter h",
-   "alternative": "",
-   "short": "negative squared cap h"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F178",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter i",
-   "alternative": "",
-   "short": "negative squared cap i"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F179",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter j",
-   "alternative": "",
-   "short": "negative squared cap j"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F17A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter k",
-   "alternative": "",
-   "short": "negative squared cap k"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F17B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter l",
-   "alternative": "",
-   "short": "negative squared cap l"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F17C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter m",
-   "alternative": "",
-   "short": "negative squared cap m"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F17D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter n",
-   "alternative": "",
-   "short": "negative squared cap n"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F17E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter o",
-   "alternative": "",
-   "short": "negative squared cap o"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F17F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter p",
-   "alternative": "",
-   "short": "negative squared cap p"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F180",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter q",
-   "alternative": "",
-   "short": "negative squared cap q"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F181",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter r",
-   "alternative": "",
-   "short": "negative squared cap r"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F182",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter s",
-   "alternative": "",
-   "short": "negative squared cap s"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F183",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter t",
-   "alternative": "",
-   "short": "negative squared cap t"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F184",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter u",
-   "alternative": "",
-   "short": "negative squared cap u"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F185",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter v",
-   "alternative": "",
-   "short": "negative squared cap v"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F186",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter w",
-   "alternative": "",
-   "short": "negative squared cap w"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F187",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter x",
-   "alternative": "",
-   "short": "negative squared cap x"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F188",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter y",
-   "alternative": "",
-   "short": "negative squared cap y"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F189",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "negative squared latin capital letter z",
-   "alternative": "",
-   "short": "negative squared cap z"
-  }}},
-{"category": "So",
- "names": [],
- "key": "1F18A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "crossed negative squared latin capital letter p",
-   "alternative": "",
-   "short": "crossed negative squared cap p"
-  }}}
+  {
+    "category": "Mn",
+    "key": "0363",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter a",
+        "short": "combining a"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0364",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter e",
+        "short": "combining e"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0365",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter i",
+        "short": "combining i"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0366",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter o",
+        "short": "combining o"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0367",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter u",
+        "short": "combining u"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0368",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter c",
+        "short": "combining c"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0369",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter d",
+        "short": "combining d"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036A",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter h",
+        "short": "combining h"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036B",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter m",
+        "short": "combining m"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036C",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter r",
+        "short": "combining r"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036D",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter t",
+        "short": "combining t"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036E",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter v",
+        "short": "combining v"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036F",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter x",
+        "short": "combining x"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D62",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter i",
+        "short": "subscript i"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D63",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter r",
+        "short": "subscript r"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D64",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter u",
+        "short": "subscript u"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D65",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter v",
+        "short": "subscript v"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DCA",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter r below",
+        "short": "combining r below"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD3",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter flattened open a above",
+        "short": "combining flattened open a above"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD4",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter ae",
+        "short": "combining ae"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD5",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter ao",
+        "short": "combining ao"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD6",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter av",
+        "short": "combining av"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD7",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter c cedilla",
+        "short": "combining c cedilla"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD8",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter insular d",
+        "short": "combining insular d"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD9",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter eth",
+        "short": "combining eth"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDA",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter g",
+        "short": "combining g"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDB",
+    "mappings": {
+      "default": {
+        "default": "combining latin letter small capital g",
+        "short": "combining small cap g"
+      },
+      "mathspeak": {
+        "default": "combining small upper g"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDC",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter k",
+        "short": "combining k"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDD",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter l",
+        "short": "combining l"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDE",
+    "mappings": {
+      "default": {
+        "default": "combining latin letter small capital l",
+        "short": "combining small cap l"
+      },
+      "mathspeak": {
+        "default": "combining small upper l"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDF",
+    "mappings": {
+      "default": {
+        "default": "combining latin letter small capital m",
+        "short": "combining small cap m"
+      },
+      "mathspeak": {
+        "default": "combining small upper m"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE0",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter n",
+        "short": "combining n"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE1",
+    "mappings": {
+      "default": {
+        "default": "combining latin letter small capital n",
+        "short": "combining small cap n"
+      },
+      "mathspeak": {
+        "default": "combining small upper n"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE2",
+    "mappings": {
+      "default": {
+        "default": "combining latin letter small capital r",
+        "short": "combining small cap r"
+      },
+      "mathspeak": {
+        "default": "combining small upper r"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE3",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter r rotunda",
+        "short": "combining r rotunda"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE4",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter s",
+        "short": "combining s"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE5",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter long s",
+        "short": "combining long s"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE6",
+    "mappings": {
+      "default": {
+        "default": "combining latin small letter z",
+        "short": "combining z"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2071",
+    "mappings": {
+      "default": {
+        "default": "superscript latin small letter i",
+        "short": "superscript i"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "207F",
+    "mappings": {
+      "default": {
+        "default": "superscript latin small letter n",
+        "short": "superscript n"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2090",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter a",
+        "short": "subscript a"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2091",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter e",
+        "short": "subscript e"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2092",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter o",
+        "short": "subscript o"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2093",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter x",
+        "short": "subscript x"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2094",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter schwa",
+        "short": "subscript schwa"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2095",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter h",
+        "short": "subscript h"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2096",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter k",
+        "short": "subscript k"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2097",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter l",
+        "short": "subscript l"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2098",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter m",
+        "short": "subscript m"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2099",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter n",
+        "short": "subscript n"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209A",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter p",
+        "short": "subscript p"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209B",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter s",
+        "short": "subscript s"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209C",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter t",
+        "short": "subscript t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "249C",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter a",
+        "short": "parenthesized a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "249D",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter b",
+        "short": "parenthesized b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "249E",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter c",
+        "short": "parenthesized c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "249F",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter d",
+        "short": "parenthesized d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A0",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter e",
+        "short": "parenthesized e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A1",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter f",
+        "short": "parenthesized f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A2",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter g",
+        "short": "parenthesized g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A3",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter h",
+        "short": "parenthesized h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A4",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter i",
+        "short": "parenthesized i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A5",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter j",
+        "short": "parenthesized j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A6",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter k",
+        "short": "parenthesized k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A7",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter l",
+        "short": "parenthesized l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A8",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter m",
+        "short": "parenthesized m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24A9",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter n",
+        "short": "parenthesized n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24AA",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter o",
+        "short": "parenthesized o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24AB",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter p",
+        "short": "parenthesized p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24AC",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter q",
+        "short": "parenthesized q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24AD",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter r",
+        "short": "parenthesized r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24AE",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter s",
+        "short": "parenthesized s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24AF",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter t",
+        "short": "parenthesized t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B0",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter u",
+        "short": "parenthesized u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B1",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter v",
+        "short": "parenthesized v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B2",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter w",
+        "short": "parenthesized w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B3",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter x",
+        "short": "parenthesized x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B4",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter y",
+        "short": "parenthesized y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B5",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin small letter z",
+        "short": "parenthesized z"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B6",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter a",
+        "short": "circled cap a"
+      },
+      "mathspeak": {
+        "default": "circled upper a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B7",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter b",
+        "short": "circled cap b"
+      },
+      "mathspeak": {
+        "default": "circled upper b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B8",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter c",
+        "short": "circled cap c"
+      },
+      "mathspeak": {
+        "default": "circled upper c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24B9",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter d",
+        "short": "circled cap d"
+      },
+      "mathspeak": {
+        "default": "circled upper d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24BA",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter e",
+        "short": "circled cap e"
+      },
+      "mathspeak": {
+        "default": "circled upper e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24BB",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter f",
+        "short": "circled cap f"
+      },
+      "mathspeak": {
+        "default": "circled upper f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24BC",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter g",
+        "short": "circled cap g"
+      },
+      "mathspeak": {
+        "default": "circled upper g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24BD",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter h",
+        "short": "circled cap h"
+      },
+      "mathspeak": {
+        "default": "circled upper h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24BE",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter i",
+        "short": "circled cap i"
+      },
+      "mathspeak": {
+        "default": "circled upper i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24BF",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter j",
+        "short": "circled cap j"
+      },
+      "mathspeak": {
+        "default": "circled upper j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C0",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter k",
+        "short": "circled cap k"
+      },
+      "mathspeak": {
+        "default": "circled upper k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C1",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter l",
+        "short": "circled cap l"
+      },
+      "mathspeak": {
+        "default": "circled upper l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C2",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter m",
+        "short": "circled cap m"
+      },
+      "mathspeak": {
+        "default": "circled upper m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C3",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter n",
+        "short": "circled cap n"
+      },
+      "mathspeak": {
+        "default": "circled upper n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C4",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter o",
+        "short": "circled cap o"
+      },
+      "mathspeak": {
+        "default": "circled upper o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C5",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter p",
+        "short": "circled cap p"
+      },
+      "mathspeak": {
+        "default": "circled upper p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C6",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter q",
+        "short": "circled cap q"
+      },
+      "mathspeak": {
+        "default": "circled upper q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C7",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter r",
+        "short": "circled cap r"
+      },
+      "mathspeak": {
+        "default": "circled upper r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C8",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter s",
+        "short": "circled cap s"
+      },
+      "mathspeak": {
+        "default": "circled upper s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24C9",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter t",
+        "short": "circled cap t"
+      },
+      "mathspeak": {
+        "default": "circled upper t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24CA",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter u",
+        "short": "circled cap u"
+      },
+      "mathspeak": {
+        "default": "circled upper u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24CB",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter v",
+        "short": "circled cap v"
+      },
+      "mathspeak": {
+        "default": "circled upper v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24CC",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter w",
+        "short": "circled cap w"
+      },
+      "mathspeak": {
+        "default": "circled upper w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24CD",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter x",
+        "short": "circled cap x"
+      },
+      "mathspeak": {
+        "default": "circled upper x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24CE",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter y",
+        "short": "circled cap y"
+      },
+      "mathspeak": {
+        "default": "circled upper y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24CF",
+    "mappings": {
+      "default": {
+        "default": "circled latin capital letter z",
+        "short": "circled cap z"
+      },
+      "mathspeak": {
+        "default": "circled upper z"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D0",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter a",
+        "short": "circled a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D1",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter b",
+        "short": "circled b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D2",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter c",
+        "short": "circled c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D3",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter d",
+        "short": "circled d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D4",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter e",
+        "short": "circled e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D5",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter f",
+        "short": "circled f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D6",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter g",
+        "short": "circled g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D7",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter h",
+        "short": "circled h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D8",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter i",
+        "short": "circled i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24D9",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter j",
+        "short": "circled j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24DA",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter k",
+        "short": "circled k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24DB",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter l",
+        "short": "circled l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24DC",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter m",
+        "short": "circled m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24DD",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter n",
+        "short": "circled n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24DE",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter o",
+        "short": "circled o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24DF",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter p",
+        "short": "circled p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E0",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter q",
+        "short": "circled q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E1",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter r",
+        "short": "circled r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E2",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter s",
+        "short": "circled s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E3",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter t",
+        "short": "circled t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E4",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter u",
+        "short": "circled u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E5",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter v",
+        "short": "circled v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E6",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter w",
+        "short": "circled w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E7",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter x",
+        "short": "circled x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E8",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter y",
+        "short": "circled y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "24E9",
+    "mappings": {
+      "default": {
+        "default": "circled latin small letter z",
+        "short": "circled z"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2C7C",
+    "mappings": {
+      "default": {
+        "default": "latin subscript small letter j",
+        "short": "subscript j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F110",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter a",
+        "short": "parenthesized cap a"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F111",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter b",
+        "short": "parenthesized cap b"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F112",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter c",
+        "short": "parenthesized cap c"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F113",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter d",
+        "short": "parenthesized cap d"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F114",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter e",
+        "short": "parenthesized cap e"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F115",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter f",
+        "short": "parenthesized cap f"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F116",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter g",
+        "short": "parenthesized cap g"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F117",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter h",
+        "short": "parenthesized cap h"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F118",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter i",
+        "short": "parenthesized cap i"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F119",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter j",
+        "short": "parenthesized cap j"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F11A",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter k",
+        "short": "parenthesized cap k"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F11B",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter l",
+        "short": "parenthesized cap l"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F11C",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter m",
+        "short": "parenthesized cap m"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F11D",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter n",
+        "short": "parenthesized cap n"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F11E",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter o",
+        "short": "parenthesized cap o"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F11F",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter p",
+        "short": "parenthesized cap p"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F120",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter q",
+        "short": "parenthesized cap q"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F121",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter r",
+        "short": "parenthesized cap r"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F122",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter s",
+        "short": "parenthesized cap s"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F123",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter t",
+        "short": "parenthesized cap t"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F124",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter u",
+        "short": "parenthesized cap u"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F125",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter v",
+        "short": "parenthesized cap v"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F126",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter w",
+        "short": "parenthesized cap w"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F127",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter x",
+        "short": "parenthesized cap x"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F128",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter y",
+        "short": "parenthesized cap y"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F129",
+    "mappings": {
+      "default": {
+        "default": "parenthesized latin capital letter z",
+        "short": "parenthesized cap z"
+      },
+      "mathspeak": {
+        "default": "parenthesized upper z"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12A",
+    "mappings": {
+      "default": {
+        "default": "tortoise shell bracketed latin capital letter s",
+        "short": "tortoise shell bracketed cap s"
+      },
+      "mathspeak": {
+        "default": "tortoise shell bracketed upper s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12B",
+    "mappings": {
+      "default": {
+        "default": "circled italic latin capital letter c",
+        "short": "circled italic cap c"
+      },
+      "mathspeak": {
+        "default": "circled italic upper c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12C",
+    "mappings": {
+      "default": {
+        "default": "circled italic latin capital letter r",
+        "short": "circled italic cap r"
+      },
+      "mathspeak": {
+        "default": "circled italic upper r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F130",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter a",
+        "short": "squared cap a"
+      },
+      "mathspeak": {
+        "default": "squared upper a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F131",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter b",
+        "short": "squared cap b"
+      },
+      "mathspeak": {
+        "default": "squared upper b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F132",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter c",
+        "short": "squared cap c"
+      },
+      "mathspeak": {
+        "default": "squared upper c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F133",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter d",
+        "short": "squared cap d"
+      },
+      "mathspeak": {
+        "default": "squared upper d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F134",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter e",
+        "short": "squared cap e"
+      },
+      "mathspeak": {
+        "default": "squared upper e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F135",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter f",
+        "short": "squared cap f"
+      },
+      "mathspeak": {
+        "default": "squared upper f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F136",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter g",
+        "short": "squared cap g"
+      },
+      "mathspeak": {
+        "default": "squared upper g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F137",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter h",
+        "short": "squared cap h"
+      },
+      "mathspeak": {
+        "default": "squared upper h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F138",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter i",
+        "short": "squared cap i"
+      },
+      "mathspeak": {
+        "default": "squared upper i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F139",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter j",
+        "short": "squared cap j"
+      },
+      "mathspeak": {
+        "default": "squared upper j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F13A",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter k",
+        "short": "squared cap k"
+      },
+      "mathspeak": {
+        "default": "squared upper k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F13B",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter l",
+        "short": "squared cap l"
+      },
+      "mathspeak": {
+        "default": "squared upper l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F13C",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter m",
+        "short": "squared cap m"
+      },
+      "mathspeak": {
+        "default": "squared upper m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F13D",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter n",
+        "short": "squared cap n"
+      },
+      "mathspeak": {
+        "default": "squared upper n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F13E",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter o",
+        "short": "squared cap o"
+      },
+      "mathspeak": {
+        "default": "squared upper o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F13F",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter p",
+        "short": "squared cap p"
+      },
+      "mathspeak": {
+        "default": "squared upper p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F140",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter q",
+        "short": "squared cap q"
+      },
+      "mathspeak": {
+        "default": "squared upper q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F141",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter r",
+        "short": "squared cap r"
+      },
+      "mathspeak": {
+        "default": "squared upper r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F142",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter s",
+        "short": "squared cap s"
+      },
+      "mathspeak": {
+        "default": "squared upper s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F143",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter t",
+        "short": "squared cap t"
+      },
+      "mathspeak": {
+        "default": "squared upper t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F144",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter u",
+        "short": "squared cap u"
+      },
+      "mathspeak": {
+        "default": "squared upper u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F145",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter v",
+        "short": "squared cap v"
+      },
+      "mathspeak": {
+        "default": "squared upper v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F146",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter w",
+        "short": "squared cap w"
+      },
+      "mathspeak": {
+        "default": "squared upper w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F147",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter x",
+        "short": "squared cap x"
+      },
+      "mathspeak": {
+        "default": "squared upper x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F148",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter y",
+        "short": "squared cap y"
+      },
+      "mathspeak": {
+        "default": "squared upper y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F149",
+    "mappings": {
+      "default": {
+        "default": "squared latin capital letter z",
+        "short": "squared cap z"
+      },
+      "mathspeak": {
+        "default": "squared upper z"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F150",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter a",
+        "short": "negative circled cap a"
+      },
+      "mathspeak": {
+        "default": "negative circled upper a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F151",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter b",
+        "short": "negative circled cap b"
+      },
+      "mathspeak": {
+        "default": "negative circled upper b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F152",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter c",
+        "short": "negative circled cap c"
+      },
+      "mathspeak": {
+        "default": "negative circled upper c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F153",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter d",
+        "short": "negative circled cap d"
+      },
+      "mathspeak": {
+        "default": "negative circled upper d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F154",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter e",
+        "short": "negative circled cap e"
+      },
+      "mathspeak": {
+        "default": "negative circled upper e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F155",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter f",
+        "short": "negative circled cap f"
+      },
+      "mathspeak": {
+        "default": "negative circled upper f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F156",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter g",
+        "short": "negative circled cap g"
+      },
+      "mathspeak": {
+        "default": "negative circled upper g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F157",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter h",
+        "short": "negative circled cap h"
+      },
+      "mathspeak": {
+        "default": "negative circled upper h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F158",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter i",
+        "short": "negative circled cap i"
+      },
+      "mathspeak": {
+        "default": "negative circled upper i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F159",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter j",
+        "short": "negative circled cap j"
+      },
+      "mathspeak": {
+        "default": "negative circled upper j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F15A",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter k",
+        "short": "negative circled cap k"
+      },
+      "mathspeak": {
+        "default": "negative circled upper k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F15B",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter l",
+        "short": "negative circled cap l"
+      },
+      "mathspeak": {
+        "default": "negative circled upper l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F15C",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter m",
+        "short": "negative circled cap m"
+      },
+      "mathspeak": {
+        "default": "negative circled upper m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F15D",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter n",
+        "short": "negative circled cap n"
+      },
+      "mathspeak": {
+        "default": "negative circled upper n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F15E",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter o",
+        "short": "negative circled cap o"
+      },
+      "mathspeak": {
+        "default": "negative circled upper o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F15F",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter p",
+        "short": "negative circled cap p"
+      },
+      "mathspeak": {
+        "default": "negative circled upper p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F160",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter q",
+        "short": "negative circled cap q"
+      },
+      "mathspeak": {
+        "default": "negative circled upper q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F161",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter r",
+        "short": "negative circled cap r"
+      },
+      "mathspeak": {
+        "default": "negative circled upper r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F162",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter s",
+        "short": "negative circled cap s"
+      },
+      "mathspeak": {
+        "default": "negative circled upper s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F163",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter t",
+        "short": "negative circled cap t"
+      },
+      "mathspeak": {
+        "default": "negative circled upper t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F164",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter u",
+        "short": "negative circled cap u"
+      },
+      "mathspeak": {
+        "default": "negative circled upper u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F165",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter v",
+        "short": "negative circled cap v"
+      },
+      "mathspeak": {
+        "default": "negative circled upper v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F166",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter w",
+        "short": "negative circled cap w"
+      },
+      "mathspeak": {
+        "default": "negative circled upper w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F167",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter x",
+        "short": "negative circled cap x"
+      },
+      "mathspeak": {
+        "default": "negative circled upper x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F168",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter y",
+        "short": "negative circled cap y"
+      },
+      "mathspeak": {
+        "default": "negative circled upper y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F169",
+    "mappings": {
+      "default": {
+        "default": "negative circled latin capital letter z",
+        "short": "negative circled cap z"
+      },
+      "mathspeak": {
+        "default": "negative circled upper z"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F170",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter a",
+        "short": "negative squared cap a"
+      },
+      "mathspeak": {
+        "default": "negative squared upper a"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F171",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter b",
+        "short": "negative squared cap b"
+      },
+      "mathspeak": {
+        "default": "negative squared upper b"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F172",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter c",
+        "short": "negative squared cap c"
+      },
+      "mathspeak": {
+        "default": "negative squared upper c"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F173",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter d",
+        "short": "negative squared cap d"
+      },
+      "mathspeak": {
+        "default": "negative squared upper d"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F174",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter e",
+        "short": "negative squared cap e"
+      },
+      "mathspeak": {
+        "default": "negative squared upper e"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F175",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter f",
+        "short": "negative squared cap f"
+      },
+      "mathspeak": {
+        "default": "negative squared upper f"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F176",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter g",
+        "short": "negative squared cap g"
+      },
+      "mathspeak": {
+        "default": "negative squared upper g"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F177",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter h",
+        "short": "negative squared cap h"
+      },
+      "mathspeak": {
+        "default": "negative squared upper h"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F178",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter i",
+        "short": "negative squared cap i"
+      },
+      "mathspeak": {
+        "default": "negative squared upper i"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F179",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter j",
+        "short": "negative squared cap j"
+      },
+      "mathspeak": {
+        "default": "negative squared upper j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F17A",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter k",
+        "short": "negative squared cap k"
+      },
+      "mathspeak": {
+        "default": "negative squared upper k"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F17B",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter l",
+        "short": "negative squared cap l"
+      },
+      "mathspeak": {
+        "default": "negative squared upper l"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F17C",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter m",
+        "short": "negative squared cap m"
+      },
+      "mathspeak": {
+        "default": "negative squared upper m"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F17D",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter n",
+        "short": "negative squared cap n"
+      },
+      "mathspeak": {
+        "default": "negative squared upper n"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F17E",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter o",
+        "short": "negative squared cap o"
+      },
+      "mathspeak": {
+        "default": "negative squared upper o"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F17F",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter p",
+        "short": "negative squared cap p"
+      },
+      "mathspeak": {
+        "default": "negative squared upper p"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F180",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter q",
+        "short": "negative squared cap q"
+      },
+      "mathspeak": {
+        "default": "negative squared upper q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F181",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter r",
+        "short": "negative squared cap r"
+      },
+      "mathspeak": {
+        "default": "negative squared upper r"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F182",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter s",
+        "short": "negative squared cap s"
+      },
+      "mathspeak": {
+        "default": "negative squared upper s"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F183",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter t",
+        "short": "negative squared cap t"
+      },
+      "mathspeak": {
+        "default": "negative squared upper t"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F184",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter u",
+        "short": "negative squared cap u"
+      },
+      "mathspeak": {
+        "default": "negative squared upper u"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F185",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter v",
+        "short": "negative squared cap v"
+      },
+      "mathspeak": {
+        "default": "negative squared upper v"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F186",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter w",
+        "short": "negative squared cap w"
+      },
+      "mathspeak": {
+        "default": "negative squared upper w"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F187",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter x",
+        "short": "negative squared cap x"
+      },
+      "mathspeak": {
+        "default": "negative squared upper x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F188",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter y",
+        "short": "negative squared cap y"
+      },
+      "mathspeak": {
+        "default": "negative squared upper y"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F189",
+    "mappings": {
+      "default": {
+        "default": "negative squared latin capital letter z",
+        "short": "negative squared cap z"
+      },
+      "mathspeak": {
+        "default": "negative squared upper z"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F18A",
+    "mappings": {
+      "default": {
+        "default": "crossed negative squared latin capital letter p",
+        "short": "crossed negative squared cap p"
+      },
+      "mathspeak": {
+        "default": "crossed negative squared upper p"
+      }
+    }
+  }
 ]

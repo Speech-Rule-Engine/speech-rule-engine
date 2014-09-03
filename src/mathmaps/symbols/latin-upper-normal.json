@@ -1,522 +1,704 @@
 [
-{"category": "Lu",
- "names": [],
- "key": "0041",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter a",
-   "alternative": "",
-   "short": "cap a"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0042",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter b",
-   "alternative": "",
-   "short": "cap b"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0043",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter c",
-   "alternative": "",
-   "short": "cap c"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0044",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter d",
-   "alternative": "",
-   "short": "cap d"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0045",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter e",
-   "alternative": "",
-   "short": "cap e"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0046",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter f",
-   "alternative": "",
-   "short": "cap f"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0047",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter g",
-   "alternative": "",
-   "short": "cap g"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0048",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter h",
-   "alternative": "",
-   "short": "cap h"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0049",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter i",
-   "alternative": "",
-   "short": "cap i"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "004A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter j",
-   "alternative": "",
-   "short": "cap j"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "004B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter k",
-   "alternative": "",
-   "short": "cap k"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "004C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter l",
-   "alternative": "",
-   "short": "cap l"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "004D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter m",
-   "alternative": "",
-   "short": "cap m"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "004E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter n",
-   "alternative": "",
-   "short": "cap n"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "004F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter o",
-   "alternative": "",
-   "short": "cap o"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0050",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter p",
-   "alternative": "",
-   "short": "cap p"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0051",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter q",
-   "alternative": "",
-   "short": "cap q"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0052",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter r",
-   "alternative": "",
-   "short": "cap r"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0053",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter s",
-   "alternative": "",
-   "short": "cap s"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0054",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter t",
-   "alternative": "",
-   "short": "cap t"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0055",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter u",
-   "alternative": "",
-   "short": "cap u"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0056",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter v",
-   "alternative": "",
-   "short": "cap v"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0057",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter w",
-   "alternative": "",
-   "short": "cap w"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0058",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter x",
-   "alternative": "",
-   "short": "cap x"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "0059",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter y",
-   "alternative": "",
-   "short": "cap y"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "005A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "latin capital letter z",
-   "alternative": "",
-   "short": "cap z"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF21",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter a",
-   "alternative": "fullwidth latin cap a",
-   "short": "cap a"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF22",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter b",
-   "alternative": "fullwidth latin cap b",
-   "short": "cap b"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF23",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter c",
-   "alternative": "fullwidth latin cap c",
-   "short": "cap c"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF24",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter d",
-   "alternative": "fullwidth latin cap d",
-   "short": "cap d"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF25",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter e",
-   "alternative": "fullwidth latin cap e",
-   "short": "cap e"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF26",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter f",
-   "alternative": "fullwidth latin cap f",
-   "short": "cap f"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF27",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter g",
-   "alternative": "fullwidth latin cap g",
-   "short": "cap g"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF28",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter h",
-   "alternative": "fullwidth latin cap h",
-   "short": "cap h"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF29",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter i",
-   "alternative": "fullwidth latin cap i",
-   "short": "cap i"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF2A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter j",
-   "alternative": "fullwidth latin cap j",
-   "short": "cap j"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF2B",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter k",
-   "alternative": "fullwidth latin cap k",
-   "short": "cap k"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF2C",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter l",
-   "alternative": "fullwidth latin cap l",
-   "short": "cap l"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF2D",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter m",
-   "alternative": "fullwidth latin cap m",
-   "short": "cap m"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF2E",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter n",
-   "alternative": "fullwidth latin cap n",
-   "short": "cap n"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF2F",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter o",
-   "alternative": "fullwidth latin cap o",
-   "short": "cap o"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF30",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter p",
-   "alternative": "fullwidth latin cap p",
-   "short": "cap p"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF31",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter q",
-   "alternative": "fullwidth latin cap q",
-   "short": "cap q"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF32",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter r",
-   "alternative": "fullwidth latin cap r",
-   "short": "cap r"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF33",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter s",
-   "alternative": "fullwidth latin cap s",
-   "short": "cap s"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF34",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter t",
-   "alternative": "fullwidth latin cap t",
-   "short": "cap t"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF35",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter u",
-   "alternative": "fullwidth latin cap u",
-   "short": "cap u"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF36",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter v",
-   "alternative": "fullwidth latin cap v",
-   "short": "cap v"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF37",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter w",
-   "alternative": "fullwidth latin cap w",
-   "short": "cap w"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF38",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter x",
-   "alternative": "fullwidth latin cap x",
-   "short": "cap x"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF39",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter y",
-   "alternative": "fullwidth latin cap y",
-   "short": "cap y"
-  }}},
-{"category": "Lu",
- "names": [],
- "key": "FF3A",
- "active": true,
- "mappings": {
-  "default": {
-   "default": "fullwidth latin capital letter z",
-   "alternative": "fullwidth latin cap z",
-   "short": "cap z"
-  }}}
+  {
+    "category": "Lu",
+    "key": "0041",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter a",
+        "short": "cap a"
+      },
+      "mathspeak": {
+        "default": "upper a"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0042",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter b",
+        "short": "cap b"
+      },
+      "mathspeak": {
+        "default": "upper b"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0043",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter c",
+        "short": "cap c"
+      },
+      "mathspeak": {
+        "default": "upper c"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0044",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter d",
+        "short": "cap d"
+      },
+      "mathspeak": {
+        "default": "upper d"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0045",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter e",
+        "short": "cap e"
+      },
+      "mathspeak": {
+        "default": "upper e"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0046",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter f",
+        "short": "cap f"
+      },
+      "mathspeak": {
+        "default": "upper f"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0047",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter g",
+        "short": "cap g"
+      },
+      "mathspeak": {
+        "default": "upper g"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0048",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter h",
+        "short": "cap h"
+      },
+      "mathspeak": {
+        "default": "upper h"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0049",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter i",
+        "short": "cap i"
+      },
+      "mathspeak": {
+        "default": "upper i"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "004A",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter j",
+        "short": "cap j"
+      },
+      "mathspeak": {
+        "default": "upper j"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "004B",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter k",
+        "short": "cap k"
+      },
+      "mathspeak": {
+        "default": "upper k"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "004C",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter l",
+        "short": "cap l"
+      },
+      "mathspeak": {
+        "default": "upper l"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "004D",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter m",
+        "short": "cap m"
+      },
+      "mathspeak": {
+        "default": "upper m"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "004E",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter n",
+        "short": "cap n"
+      },
+      "mathspeak": {
+        "default": "upper n"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "004F",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter o",
+        "short": "cap o"
+      },
+      "mathspeak": {
+        "default": "upper o"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0050",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter p",
+        "short": "cap p"
+      },
+      "mathspeak": {
+        "default": "upper p"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0051",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter q",
+        "short": "cap q"
+      },
+      "mathspeak": {
+        "default": "upper q"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0052",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter r",
+        "short": "cap r"
+      },
+      "mathspeak": {
+        "default": "upper r"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0053",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter s",
+        "short": "cap s"
+      },
+      "mathspeak": {
+        "default": "upper s"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0054",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter t",
+        "short": "cap t"
+      },
+      "mathspeak": {
+        "default": "upper t"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0055",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter u",
+        "short": "cap u"
+      },
+      "mathspeak": {
+        "default": "upper u"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0056",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter v",
+        "short": "cap v"
+      },
+      "mathspeak": {
+        "default": "upper v"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0057",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter w",
+        "short": "cap w"
+      },
+      "mathspeak": {
+        "default": "upper w"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0058",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter x",
+        "short": "cap x"
+      },
+      "mathspeak": {
+        "default": "upper x"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0059",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter y",
+        "short": "cap y"
+      },
+      "mathspeak": {
+        "default": "upper y"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "005A",
+    "mappings": {
+      "default": {
+        "default": "latin capital letter z",
+        "short": "cap z"
+      },
+      "mathspeak": {
+        "default": "upper z"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF21",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter a",
+        "alternative": "fullwidth latin cap a",
+        "short": "cap a"
+      },
+      "mathspeak": {
+        "default": "upper a"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF22",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter b",
+        "alternative": "fullwidth latin cap b",
+        "short": "cap b"
+      },
+      "mathspeak": {
+        "default": "upper b"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF23",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter c",
+        "alternative": "fullwidth latin cap c",
+        "short": "cap c"
+      },
+      "mathspeak": {
+        "default": "upper c"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF24",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter d",
+        "alternative": "fullwidth latin cap d",
+        "short": "cap d"
+      },
+      "mathspeak": {
+        "default": "upper d"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF25",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter e",
+        "alternative": "fullwidth latin cap e",
+        "short": "cap e"
+      },
+      "mathspeak": {
+        "default": "upper e"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF26",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter f",
+        "alternative": "fullwidth latin cap f",
+        "short": "cap f"
+      },
+      "mathspeak": {
+        "default": "upper f"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF27",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter g",
+        "alternative": "fullwidth latin cap g",
+        "short": "cap g"
+      },
+      "mathspeak": {
+        "default": "upper g"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF28",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter h",
+        "alternative": "fullwidth latin cap h",
+        "short": "cap h"
+      },
+      "mathspeak": {
+        "default": "upper h"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF29",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter i",
+        "alternative": "fullwidth latin cap i",
+        "short": "cap i"
+      },
+      "mathspeak": {
+        "default": "upper i"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF2A",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter j",
+        "alternative": "fullwidth latin cap j",
+        "short": "cap j"
+      },
+      "mathspeak": {
+        "default": "upper j"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF2B",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter k",
+        "alternative": "fullwidth latin cap k",
+        "short": "cap k"
+      },
+      "mathspeak": {
+        "default": "upper k"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF2C",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter l",
+        "alternative": "fullwidth latin cap l",
+        "short": "cap l"
+      },
+      "mathspeak": {
+        "default": "upper l"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF2D",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter m",
+        "alternative": "fullwidth latin cap m",
+        "short": "cap m"
+      },
+      "mathspeak": {
+        "default": "upper m"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF2E",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter n",
+        "alternative": "fullwidth latin cap n",
+        "short": "cap n"
+      },
+      "mathspeak": {
+        "default": "upper n"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF2F",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter o",
+        "alternative": "fullwidth latin cap o",
+        "short": "cap o"
+      },
+      "mathspeak": {
+        "default": "upper o"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF30",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter p",
+        "alternative": "fullwidth latin cap p",
+        "short": "cap p"
+      },
+      "mathspeak": {
+        "default": "upper p"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF31",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter q",
+        "alternative": "fullwidth latin cap q",
+        "short": "cap q"
+      },
+      "mathspeak": {
+        "default": "upper q"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF32",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter r",
+        "alternative": "fullwidth latin cap r",
+        "short": "cap r"
+      },
+      "mathspeak": {
+        "default": "upper r"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF33",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter s",
+        "alternative": "fullwidth latin cap s",
+        "short": "cap s"
+      },
+      "mathspeak": {
+        "default": "upper s"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF34",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter t",
+        "alternative": "fullwidth latin cap t",
+        "short": "cap t"
+      },
+      "mathspeak": {
+        "default": "upper t"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF35",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter u",
+        "alternative": "fullwidth latin cap u",
+        "short": "cap u"
+      },
+      "mathspeak": {
+        "default": "upper u"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF36",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter v",
+        "alternative": "fullwidth latin cap v",
+        "short": "cap v"
+      },
+      "mathspeak": {
+        "default": "upper v"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF37",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter w",
+        "alternative": "fullwidth latin cap w",
+        "short": "cap w"
+      },
+      "mathspeak": {
+        "default": "upper w"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF38",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter x",
+        "alternative": "fullwidth latin cap x",
+        "short": "cap x"
+      },
+      "mathspeak": {
+        "default": "upper x"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF39",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter y",
+        "alternative": "fullwidth latin cap y",
+        "short": "cap y"
+      },
+      "mathspeak": {
+        "default": "upper y"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "FF3A",
+    "mappings": {
+      "default": {
+        "default": "fullwidth latin capital letter z",
+        "alternative": "fullwidth latin cap z",
+        "short": "cap z"
+      },
+      "mathspeak": {
+        "default": "upper z"
+      }
+    }
+  }
 ]
