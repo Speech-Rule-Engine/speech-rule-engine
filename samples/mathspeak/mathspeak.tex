@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[paper=a4paper]{geometry}
 \usepackage{longtable}
-%\usepackage{booktabs}
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{leftidx}
@@ -9,20 +9,9 @@
 \usepackage{stackrel}
 \usepackage{accents}
 
-\newcommand{\toprule}{\hline}
-\newcommand{\bottomrule}{\hline}
-\newcommand{\addlinespace}{\vspace{1ex}}
-
 \newcounter{rule}
 \newcounter{example}
-\makeatletter
-\renewcommand\section{\setcounter{rule}{0}%
-  \@startsection {section}{1}{\z@}%
-  {-3.5ex \@plus -1ex \@minus -.2ex}%
-  {2.3ex \@plus.2ex}%
-  {\normalfont\Large\bfseries}%
-}
-\makeatother
+\newcommand\SEC[1]{\setcounter{rule}{0}\section{#1}}
 \setlength{\parindent}{0pt}
 
 \newcommand\R{\addtocounter{rule}{1}
