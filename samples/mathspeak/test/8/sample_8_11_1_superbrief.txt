@@ -1,0 +1,1 @@
+2 by 3 matrix 1st row 1st column x sup n 2nd column y sup n 3rd column z sup n 2nd row 1st column x sup n plus 1 2nd column y sup n plus 1 3rd column z sup n plus 1 endmatrix

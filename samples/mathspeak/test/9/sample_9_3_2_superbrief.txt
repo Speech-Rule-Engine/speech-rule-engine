@@ -1,0 +1,1 @@
+nestindex n nestroot index m root x endroot nestendroot equals nestindex m nestroot index n root x endroot nestendroot

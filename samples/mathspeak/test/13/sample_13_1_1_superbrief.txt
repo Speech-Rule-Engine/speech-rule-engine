@@ -1,0 +1,1 @@
+frac 60 crossout miles endcrossout over crossout hours endcrossout endfrac times frac 5,280 feet over 1 crossout miles endcrossout endfrac times frac 1 crossout hours endcrossout over 60 minutes endfrac equals frac 5,280 feet over minutes endfrac

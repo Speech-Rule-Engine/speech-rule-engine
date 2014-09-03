@@ -1,0 +1,1 @@
+startfrac 12 over 18 endfrac equals startfrac crossout 12 with 2 endcrossout over crossout 18 with 3 endcrossout endfrac equals two-thirds

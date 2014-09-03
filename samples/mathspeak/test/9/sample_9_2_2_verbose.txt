@@ -1,0 +1,1 @@
+rootindex n startroot x superscript m baseline endroot equals left-parenthesis rootindex n startroot x endroot right-parenthesis superscript m baseline equals x superscript startfraction m over n endfraction baseline comma x greater-than 0

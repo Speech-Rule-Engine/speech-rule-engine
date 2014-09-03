@@ -1,0 +1,1 @@
+if upper a rightarrow upper b and upper b rightarrow upper c then upper a rightarrow upper c period

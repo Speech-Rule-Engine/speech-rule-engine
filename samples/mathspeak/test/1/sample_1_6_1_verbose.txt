@@ -1,0 +1,1 @@
+startfraction 22 over 7 endfraction equals 3 point modifyingabove 1 4 2 8 5 7 with bar

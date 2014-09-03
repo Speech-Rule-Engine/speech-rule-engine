@@ -1,0 +1,1 @@
+x superscript e minus 2 baseline equals nested3startroot x nestedtwicerootindex 3 nestedtwicestartroot x nestedrootindex 4 nestedstartroot x rootindex 5 startroot x ellipsis endroot nestedendroot nestedtwiceendroot nested3endroot comma x element-of double-struck upper r

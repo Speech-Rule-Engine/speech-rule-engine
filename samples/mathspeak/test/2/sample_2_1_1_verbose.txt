@@ -1,0 +1,1 @@
+d equals startroot left-parenthesis upper x minus x right-parenthesis squared minus left-parenthesis upper y minus y right-parenthesis squared endroot

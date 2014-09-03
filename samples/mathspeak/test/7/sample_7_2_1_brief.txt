@@ -1,0 +1,1 @@
+startstartfrac startfrac x over y endfrac overover z endendfrac not-equals startstartfrac x overover startfrac y over z endfrac endendfrac

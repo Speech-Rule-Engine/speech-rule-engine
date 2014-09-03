@@ -1,0 +1,1 @@
+start 2 by 2 determinant 1st row 1st column a plus 1 2nd column b 2nd row 1st column c 2nd column d enddeterminant equals left-parenthesis a plus 1 right-parenthesis d minus b c

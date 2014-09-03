@@ -1,0 +1,1 @@
+contour integral upper e dot d bold l equals minus startfraction d upper phi upper b over d t endfraction

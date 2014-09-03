@@ -1,0 +1,1 @@
+d equals startroot left-p’ren upper x minus x right-p’ren squared minus left-p’ren upper y minus y right-p’ren squared endroot

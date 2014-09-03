@@ -1,0 +1,1 @@
+nesttwicefrac nestfrac l p’ren 1 minus x r p’ren frac d over d x endfrac l p’ren 2 x r p’ren minus 2 x frac d over d x endfrac l p’ren 1 minus x r p’ren nestover l p’ren 1 minus x r p’ren squared nestendfrac nesttwiceover 1 plus l p’ren frac 2 x over 1 minus x endfrac r p’ren squared nesttwiceendfrac

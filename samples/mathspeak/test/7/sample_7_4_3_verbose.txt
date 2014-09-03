@@ -1,0 +1,1 @@
+startfraction three-fifths over 8 endfraction equals three-fifths times one-eighth

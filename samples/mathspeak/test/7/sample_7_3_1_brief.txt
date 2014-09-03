@@ -1,0 +1,1 @@
+startstartstartfrac startstartfrac left-p’ren 1 minus x right-p’ren startfrac d over d x endfrac left-p’ren 2 x right-p’ren minus 2 x startfrac d over d x endfrac left-p’ren 1 minus x right-p’ren overover left-p’ren 1 minus x right-p’ren squared endendfrac overoverover 1 plus left-p’ren startfrac 2 x over 1 minus x endfrac right-p’ren squared endendendfrac

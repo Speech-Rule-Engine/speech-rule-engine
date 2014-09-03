@@ -1,0 +1,1 @@
+startfrac 60 crossout miles endcrossout over crossout hours endcrossout endfrac times startfrac 5,280 feet over 1 crossout miles endcrossout endfrac times startfrac 1 crossout hours endcrossout over 60 minutes endfrac equals startfrac 5,280 feet over minutes endfrac

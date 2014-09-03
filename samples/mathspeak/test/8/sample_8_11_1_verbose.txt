@@ -1,0 +1,1 @@
+start 2 by 3 matrix 1st row 1st column x superscript n 2nd column y superscript n 3rd column z superscript n 2nd row 1st column x superscript n plus 1 2nd column y superscript n plus 1 3rd column z superscript n plus 1 endmatrix

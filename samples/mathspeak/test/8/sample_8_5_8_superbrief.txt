@@ -1,0 +1,1 @@
+log sub 2 base l p’ren x r p’ren equals frac log sub 10 base l p’ren x r p’ren over log sub 10 base l p’ren 2 r p’ren endfrac

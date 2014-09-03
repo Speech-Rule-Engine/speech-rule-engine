@@ -1,0 +1,1 @@
+3 by 3 matrix 1st row 1st column x plus a 2nd column x plus b 3rd column x plus c 2nd row 1st column y plus a 2nd column y plus b 3rd column y plus c 3rd row 1st column z plus a 2nd column z plus b 3rd column z plus c endmatrix

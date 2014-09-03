@@ -1,0 +1,1 @@
+startfrac 2 over pi endfrac equals startfrac startroot 2 endroot over 2 endfrac startfrac neststartroot 2 plus startroot 2 endroot nestendroot over 2 endfrac startfrac nesttwicestartroot 2 plus neststartroot 2 plus startroot 2 endroot nestendroot nesttwiceendroot over 2 endfrac ellipsis

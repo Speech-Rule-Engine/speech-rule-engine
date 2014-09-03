@@ -1,0 +1,1 @@
+l n x equals integral sub 1 sup x base frac d t over t endfrac

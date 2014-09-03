@@ -1,0 +1,1 @@
+log subscript 2 baseline left-parenthesis x right-parenthesis equals startfraction log subscript 10 baseline left-parenthesis x right-parenthesis over log subscript 10 baseline left-parenthesis 2 right-parenthesis endfraction

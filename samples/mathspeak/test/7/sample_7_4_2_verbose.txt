@@ -1,0 +1,1 @@
+startfraction 20 over 5 endfraction times startfraction 1 over 100 endfraction equals one-twenty-fifth

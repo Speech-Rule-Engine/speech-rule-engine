@@ -1,0 +1,1 @@
+rootindex n startroot x sup m base endroot equals left-p’ren rootindex n startroot x endroot right-p’ren sup m base equals x sup startfrac m over n endfrac base comma x greater-than 0

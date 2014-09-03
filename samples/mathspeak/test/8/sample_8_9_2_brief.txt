@@ -1,0 +1,1 @@
+f triple-prime left-p’ren y right-p’ren equals startfrac d f double-prime left-p’ren y right-p’ren over d y endfrac

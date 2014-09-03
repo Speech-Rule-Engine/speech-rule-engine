@@ -1,0 +1,1 @@
+startfrac d squared y over d x squared endfrac plus left-p’ren a x squared plus b x plus c right-p’ren y equals 0

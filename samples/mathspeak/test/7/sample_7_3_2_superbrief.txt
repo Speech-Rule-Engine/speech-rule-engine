@@ -1,0 +1,1 @@
+a 0 plus nest3frac 1 nest3over a 1 plus nesttwicefrac 1 nesttwiceover a 2 plus nestfrac 1 nestover ellipsis plus frac 1 over a sub n base endfrac nestendfrac nesttwiceendfrac nest3endfrac

@@ -1,0 +1,1 @@
+uppercase left-parenthesis startset alpha comma beta comma chi comma delta comma epsilon comma phi endset right-parenthesis equals startset upper alpha comma upper beta comma upper chi comma upper delta comma upper epsilon comma upper phi endset

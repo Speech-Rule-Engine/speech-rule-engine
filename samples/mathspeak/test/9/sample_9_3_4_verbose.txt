@@ -1,0 +1,1 @@
+startfraction 2 over pi endfraction equals startfraction startroot 2 endroot over 2 endfraction startfraction nestedstartroot 2 plus startroot 2 endroot nestedendroot over 2 endfraction startfraction nestedtwicestartroot 2 plus nestedstartroot 2 plus startroot 2 endroot nestedendroot nestedtwiceendroot over 2 endfraction ellipsis

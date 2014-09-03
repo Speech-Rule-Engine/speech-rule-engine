@@ -1,0 +1,1 @@
+a 0 plus continuedfraction b 1 over a 1 plus startfraction b 2 over a 2 plus startfraction b 3 over a 3 plus ellipsis equals a 0 plus startfraction b 1 over a 1 endfraction plus startfraction b 2 over a 2 endfraction plus ellipsis
