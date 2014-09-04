@@ -1,0 +1,5 @@
+bin/
+lib/
+*.bak
+*~
+deps.js

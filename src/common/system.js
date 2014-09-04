@@ -21,9 +21,9 @@
  */
 goog.provide('sre.System');
 
+goog.require('sre.CombinedStore');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreRules');
 goog.require('sre.SemanticTree');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
