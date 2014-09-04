@@ -7,6 +7,11 @@
         "default": "latin small letter a with grave",
         "alternative": "latin small letter a grave",
         "short": "a grave"
+      },
+      "mathspeak": {
+        "default": "modifying above a with grave",
+        "brief": "mod above a with grave",
+        "sbrief": "mod above a with grave"
       }
     }
   },
@@ -18,6 +23,11 @@
         "default": "latin small letter a with acute",
         "alternative": "latin small letter a acute",
         "short": "a acute"
+      },
+      "mathspeak": {
+        "default": "modifying above a with acute",
+        "brief": "mod above a with acute",
+        "sbrief": "mod above a with acute"
       }
     }
   },
@@ -29,6 +39,11 @@
         "default": "latin small letter a with circumflex",
         "alternative": "latin small letter a hat",
         "short": "a hat"
+      },
+      "mathspeak": {
+        "default": "modifying above a with caret",
+        "brief": "mod above a with caret",
+        "sbrief": "mod above a with caret"
       }
     }
   },
@@ -40,6 +55,11 @@
         "default": "latin small letter a with tilde",
         "alternative": "latin small letter a tilde",
         "short": "a tilde"
+      },
+      "mathspeak": {
+        "default": "a overtilde",
+        "brief": "a overtilde",
+        "sbrief": "a overtilde"
       }
     }
   },
@@ -51,6 +71,11 @@
         "default": "latin small letter a with diaeresis",
         "alternative": "latin small letter a double overdot",
         "short": "a double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above a with double dot",
+        "brief": "mod above a with double dot",
+        "sbrief": "mod above a with double dot"
       }
     }
   },
@@ -62,6 +87,11 @@
         "default": "latin small letter a with ring above",
         "alternative": "latin small letter a ring",
         "short": "a ring"
+      },
+      "mathspeak": {
+        "default": "modifying above a with ring",
+        "brief": "mod above a with ring",
+        "sbrief": "mod above a with ring"
       }
     }
   },
@@ -73,6 +103,11 @@
         "default": "latin small letter c with cedilla",
         "alternative": "latin small letter c cedilla",
         "short": "c cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above c with cedilla",
+        "brief": "mod above c with cedilla",
+        "sbrief": "mod above c with cedilla"
       }
     }
   },
@@ -84,6 +119,11 @@
         "default": "latin small letter e with grave",
         "alternative": "latin small letter e grave",
         "short": "e grave"
+      },
+      "mathspeak": {
+        "default": "modifying above e with grave",
+        "brief": "mod above e with grave",
+        "sbrief": "mod above e with grave"
       }
     }
   },
@@ -95,6 +135,11 @@
         "default": "latin small letter e with acute",
         "alternative": "latin small letter e acute",
         "short": "e acute"
+      },
+      "mathspeak": {
+        "default": "modifying above e with acute",
+        "brief": "mod above e with acute",
+        "sbrief": "mod above e with acute"
       }
     }
   },
@@ -106,6 +151,11 @@
         "default": "latin small letter e with circumflex",
         "alternative": "latin small letter e hat",
         "short": "e hat"
+      },
+      "mathspeak": {
+        "default": "modifying above e with caret",
+        "brief": "mod above e with caret",
+        "sbrief": "mod above e with caret"
       }
     }
   },
@@ -117,6 +167,11 @@
         "default": "latin small letter e with diaeresis",
         "alternative": "latin small letter e double overdot",
         "short": "e double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above e with double dot",
+        "brief": "mod above e with double dot",
+        "sbrief": "mod above e with double dot"
       }
     }
   },
@@ -128,6 +183,11 @@
         "default": "latin small letter i with grave",
         "alternative": "latin small letter i grave",
         "short": "i grave"
+      },
+      "mathspeak": {
+        "default": "modifying above i with grave",
+        "brief": "mod above i with grave",
+        "sbrief": "mod above i with grave"
       }
     }
   },
@@ -139,6 +199,11 @@
         "default": "latin small letter i with acute",
         "alternative": "latin small letter i acute",
         "short": "i acute"
+      },
+      "mathspeak": {
+        "default": "modifying above i with acute",
+        "brief": "mod above i with acute",
+        "sbrief": "mod above i with acute"
       }
     }
   },
@@ -150,6 +215,11 @@
         "default": "latin small letter i with circumflex",
         "alternative": "latin small letter i hat",
         "short": "i hat"
+      },
+      "mathspeak": {
+        "default": "modifying above i with caret",
+        "brief": "mod above i with caret",
+        "sbrief": "mod above i with caret"
       }
     }
   },
@@ -161,6 +231,11 @@
         "default": "latin small letter i with diaeresis",
         "alternative": "latin small letter i double overdot",
         "short": "i double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above i with double dot",
+        "brief": "mod above i with double dot",
+        "sbrief": "mod above i with double dot"
       }
     }
   },
@@ -172,6 +247,11 @@
         "default": "latin small letter n with tilde",
         "alternative": "latin small letter n tilde",
         "short": "n tilde"
+      },
+      "mathspeak": {
+        "default": "n overtilde",
+        "brief": "n overtilde",
+        "sbrief": "n overtilde"
       }
     }
   },
@@ -183,6 +263,11 @@
         "default": "latin small letter o with grave",
         "alternative": "latin small letter o grave",
         "short": "o grave"
+      },
+      "mathspeak": {
+        "default": "modifying above o with grave",
+        "brief": "mod above o with grave",
+        "sbrief": "mod above o with grave"
       }
     }
   },
@@ -194,6 +279,11 @@
         "default": "latin small letter o with acute",
         "alternative": "latin small letter o acute",
         "short": "o acute"
+      },
+      "mathspeak": {
+        "default": "modifying above o with acute",
+        "brief": "mod above o with acute",
+        "sbrief": "mod above o with acute"
       }
     }
   },
@@ -205,6 +295,11 @@
         "default": "latin small letter o with circumflex",
         "alternative": "latin small letter o hat",
         "short": "o hat"
+      },
+      "mathspeak": {
+        "default": "modifying above o with caret",
+        "brief": "mod above o with caret",
+        "sbrief": "mod above o with caret"
       }
     }
   },
@@ -216,6 +311,11 @@
         "default": "latin small letter o with tilde",
         "alternative": "latin small letter o tilde",
         "short": "o tilde"
+      },
+      "mathspeak": {
+        "default": "o overtilde",
+        "brief": "o overtilde",
+        "sbrief": "o overtilde"
       }
     }
   },
@@ -227,6 +327,11 @@
         "default": "latin small letter o with diaeresis",
         "alternative": "latin small letter o double overdot",
         "short": "o double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above o with double dot",
+        "brief": "mod above o with double dot",
+        "sbrief": "mod above o with double dot"
       }
     }
   },
@@ -238,6 +343,11 @@
         "default": "latin small letter u with grave",
         "alternative": "latin small letter u grave",
         "short": "u grave"
+      },
+      "mathspeak": {
+        "default": "modifying above u with grave",
+        "brief": "mod above u with grave",
+        "sbrief": "mod above u with grave"
       }
     }
   },
@@ -249,6 +359,11 @@
         "default": "latin small letter u with acute",
         "alternative": "latin small letter u acute",
         "short": "u acute"
+      },
+      "mathspeak": {
+        "default": "modifying above u with acute",
+        "brief": "mod above u with acute",
+        "sbrief": "mod above u with acute"
       }
     }
   },
@@ -260,6 +375,11 @@
         "default": "latin small letter u with circumflex",
         "alternative": "latin small letter u hat",
         "short": "u hat"
+      },
+      "mathspeak": {
+        "default": "modifying above u with caret",
+        "brief": "mod above u with caret",
+        "sbrief": "mod above u with caret"
       }
     }
   },
@@ -271,6 +391,11 @@
         "default": "latin small letter u with diaeresis",
         "alternative": "latin small letter u double overdot",
         "short": "u double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above u with double dot",
+        "brief": "mod above u with double dot",
+        "sbrief": "mod above u with double dot"
       }
     }
   },
@@ -282,6 +407,11 @@
         "default": "latin small letter y with acute",
         "alternative": "latin small letter y acute",
         "short": "y acute"
+      },
+      "mathspeak": {
+        "default": "modifying above y with acute",
+        "brief": "mod above y with acute",
+        "sbrief": "mod above y with acute"
       }
     }
   },
@@ -293,6 +423,11 @@
         "default": "latin small letter y with diaeresis",
         "alternative": "latin small letter y double overdot",
         "short": "y double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above y with double dot",
+        "brief": "mod above y with double dot",
+        "sbrief": "mod above y with double dot"
       }
     }
   },
@@ -304,6 +439,11 @@
         "default": "latin small letter a with macron",
         "alternative": "latin small letter a overbar",
         "short": "a overbar"
+      },
+      "mathspeak": {
+        "default": "a overbar",
+        "brief": "a overbar",
+        "sbrief": "a overbar"
       }
     }
   },
@@ -315,6 +455,11 @@
         "default": "latin small letter a with breve",
         "alternative": "latin small letter a breve",
         "short": "a breve"
+      },
+      "mathspeak": {
+        "default": "modifying above a with breve",
+        "brief": "mod above a with breve",
+        "sbrief": "mod above a with breve"
       }
     }
   },
@@ -326,6 +471,11 @@
         "default": "latin small letter a with ogonek",
         "alternative": "latin small letter a ogonek",
         "short": "a ogonek"
+      },
+      "mathspeak": {
+        "default": "modifying above a with ogonek",
+        "brief": "mod above a with ogonek",
+        "sbrief": "mod above a with ogonek"
       }
     }
   },
@@ -337,6 +487,11 @@
         "default": "latin small letter c with acute",
         "alternative": "latin small letter c acute",
         "short": "c acute"
+      },
+      "mathspeak": {
+        "default": "modifying above c with acute",
+        "brief": "mod above c with acute",
+        "sbrief": "mod above c with acute"
       }
     }
   },
@@ -348,6 +503,11 @@
         "default": "latin small letter c with circumflex",
         "alternative": "latin small letter c hat",
         "short": "c hat"
+      },
+      "mathspeak": {
+        "default": "modifying above c with caret",
+        "brief": "mod above c with caret",
+        "sbrief": "mod above c with caret"
       }
     }
   },
@@ -359,6 +519,11 @@
         "default": "latin small letter c with dot above",
         "alternative": "latin small letter c dot",
         "short": "c overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above c with dot",
+        "brief": "mod above c with dot",
+        "sbrief": "mod above c with dot"
       }
     }
   },
@@ -370,6 +535,11 @@
         "default": "latin small letter c with caron",
         "alternative": "latin small letter c hacek",
         "short": "c caron"
+      },
+      "mathspeak": {
+        "default": "modifying above c with caron",
+        "brief": "mod above c with caron",
+        "sbrief": "mod above c with caron"
       }
     }
   },
@@ -381,6 +551,11 @@
         "default": "latin small letter d with caron",
         "alternative": "latin small letter d hacek",
         "short": "d caron"
+      },
+      "mathspeak": {
+        "default": "modifying above d with caron",
+        "brief": "mod above d with caron",
+        "sbrief": "mod above d with caron"
       }
     }
   },
@@ -392,6 +567,11 @@
         "default": "latin small letter e with macron",
         "alternative": "latin small letter e overbar",
         "short": "e overbar"
+      },
+      "mathspeak": {
+        "default": "e overbar",
+        "brief": "e overbar",
+        "sbrief": "e overbar"
       }
     }
   },
@@ -403,6 +583,11 @@
         "default": "latin small letter e with breve",
         "alternative": "latin small letter e breve",
         "short": "e breve"
+      },
+      "mathspeak": {
+        "default": "modifying above e with breve",
+        "brief": "mod above e with breve",
+        "sbrief": "mod above e with breve"
       }
     }
   },
@@ -414,6 +599,11 @@
         "default": "latin small letter e with dot above",
         "alternative": "latin small letter e dot",
         "short": "e overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above e with dot",
+        "brief": "mod above e with dot",
+        "sbrief": "mod above e with dot"
       }
     }
   },
@@ -425,6 +615,11 @@
         "default": "latin small letter e with ogonek",
         "alternative": "latin small letter e ogonek",
         "short": "e ogonek"
+      },
+      "mathspeak": {
+        "default": "modifying above e with ogonek",
+        "brief": "mod above e with ogonek",
+        "sbrief": "mod above e with ogonek"
       }
     }
   },
@@ -436,6 +631,11 @@
         "default": "latin small letter e with caron",
         "alternative": "latin small letter e hacek",
         "short": "e caron"
+      },
+      "mathspeak": {
+        "default": "modifying above e with caron",
+        "brief": "mod above e with caron",
+        "sbrief": "mod above e with caron"
       }
     }
   },
@@ -447,6 +647,11 @@
         "default": "latin small letter g with circumflex",
         "alternative": "latin small letter g hat",
         "short": "g hat"
+      },
+      "mathspeak": {
+        "default": "modifying above g with caret",
+        "brief": "mod above g with caret",
+        "sbrief": "mod above g with caret"
       }
     }
   },
@@ -458,6 +663,11 @@
         "default": "latin small letter g with breve",
         "alternative": "latin small letter g breve",
         "short": "g breve"
+      },
+      "mathspeak": {
+        "default": "modifying above g with breve",
+        "brief": "mod above g with breve",
+        "sbrief": "mod above g with breve"
       }
     }
   },
@@ -469,6 +679,11 @@
         "default": "latin small letter g with dot above",
         "alternative": "latin small letter g dot",
         "short": "g overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above g with dot",
+        "brief": "mod above g with dot",
+        "sbrief": "mod above g with dot"
       }
     }
   },
@@ -480,6 +695,11 @@
         "default": "latin small letter g with cedilla",
         "alternative": "latin small letter g cedilla",
         "short": "g cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above g with cedilla",
+        "brief": "mod above g with cedilla",
+        "sbrief": "mod above g with cedilla"
       }
     }
   },
@@ -491,6 +711,11 @@
         "default": "latin small letter h with circumflex",
         "alternative": "latin small letter h hat",
         "short": "h hat"
+      },
+      "mathspeak": {
+        "default": "modifying above h with caret",
+        "brief": "mod above h with caret",
+        "sbrief": "mod above h with caret"
       }
     }
   },
@@ -502,6 +727,11 @@
         "default": "latin small letter i with tilde",
         "alternative": "latin small letter i tilde",
         "short": "i tilde"
+      },
+      "mathspeak": {
+        "default": "i overtilde",
+        "brief": "i overtilde",
+        "sbrief": "i overtilde"
       }
     }
   },
@@ -513,6 +743,11 @@
         "default": "latin small letter i with macron",
         "alternative": "latin small letter i overbar",
         "short": "i overbar"
+      },
+      "mathspeak": {
+        "default": "i overbar",
+        "brief": "i overbar",
+        "sbrief": "i overbar"
       }
     }
   },
@@ -524,6 +759,11 @@
         "default": "latin small letter i with breve",
         "alternative": "latin small letter i breve",
         "short": "i breve"
+      },
+      "mathspeak": {
+        "default": "modifying above i with breve",
+        "brief": "mod above i with breve",
+        "sbrief": "mod above i with breve"
       }
     }
   },
@@ -535,6 +775,11 @@
         "default": "latin small letter i with ogonek",
         "alternative": "latin small letter i ogonek",
         "short": "i ogonek"
+      },
+      "mathspeak": {
+        "default": "modifying above i with ogonek",
+        "brief": "mod above i with ogonek",
+        "sbrief": "mod above i with ogonek"
       }
     }
   },
@@ -546,6 +791,11 @@
         "default": "latin small letter dotless i",
         "alternative": "latin small letter dotless i",
         "short": "dotless i"
+      },
+      "mathspeak": {
+        "default": "modifying above d with tless i",
+        "brief": "mod above d with tless i",
+        "sbrief": "mod above d with tless i"
       }
     }
   },
@@ -557,6 +807,11 @@
         "default": "latin small letter j circumflex",
         "alternative": "latin small letter j hat",
         "short": "j hat"
+      },
+      "mathspeak": {
+        "default": "modifying above j with caret",
+        "brief": "mod above j with caret",
+        "sbrief": "mod above j with caret"
       }
     }
   },
@@ -568,6 +823,11 @@
         "default": "latin small letter k with cedilla",
         "alternative": "latin small letter k cedilla",
         "short": "k cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above k with cedilla",
+        "brief": "mod above k with cedilla",
+        "sbrief": "mod above k with cedilla"
       }
     }
   },
@@ -579,6 +839,11 @@
         "default": "latin small letter l with acute",
         "alternative": "latin small letter l acute",
         "short": "l acute"
+      },
+      "mathspeak": {
+        "default": "modifying above l with acute",
+        "brief": "mod above l with acute",
+        "sbrief": "mod above l with acute"
       }
     }
   },
@@ -590,6 +855,11 @@
         "default": "latin small letter l with cedilla",
         "alternative": "latin small letter l cedilla",
         "short": "l cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above l with cedilla",
+        "brief": "mod above l with cedilla",
+        "sbrief": "mod above l with cedilla"
       }
     }
   },
@@ -601,6 +871,11 @@
         "default": "latin small letter l with caron",
         "alternative": "latin small letter l hacek",
         "short": "l caron"
+      },
+      "mathspeak": {
+        "default": "modifying above l with caron",
+        "brief": "mod above l with caron",
+        "sbrief": "mod above l with caron"
       }
     }
   },
@@ -612,6 +887,11 @@
         "default": "latin small letter l with middle dot",
         "alternative": "latin small letter l middle dot",
         "short": "l middle dot"
+      },
+      "mathspeak": {
+        "default": "modifying above l with middle dot",
+        "brief": "mod above l with middle dot",
+        "sbrief": "mod above l with middle dot"
       }
     }
   },
@@ -623,6 +903,11 @@
         "default": "latin small letter n with acute",
         "alternative": "latin small letter n acute",
         "short": "n acute"
+      },
+      "mathspeak": {
+        "default": "modifying above n with acute",
+        "brief": "mod above n with acute",
+        "sbrief": "mod above n with acute"
       }
     }
   },
@@ -634,6 +919,11 @@
         "default": "latin small letter n with cedilla",
         "alternative": "latin small letter n cedilla",
         "short": "n cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above n with cedilla",
+        "brief": "mod above n with cedilla",
+        "sbrief": "mod above n with cedilla"
       }
     }
   },
@@ -645,6 +935,11 @@
         "default": "latin small letter n with caron",
         "alternative": "latin small letter n hacek",
         "short": "n caron"
+      },
+      "mathspeak": {
+        "default": "modifying above n with caron",
+        "brief": "mod above n with caron",
+        "sbrief": "mod above n with caron"
       }
     }
   },
@@ -656,6 +951,11 @@
         "default": "latin small letter o macron",
         "alternative": "latin small letter o overbar",
         "short": "o overbar"
+      },
+      "mathspeak": {
+        "default": "o overbar",
+        "brief": "o overbar",
+        "sbrief": "o overbar"
       }
     }
   },
@@ -667,6 +967,11 @@
         "default": "latin small letter o with breve",
         "alternative": "latin small letter o breve",
         "short": "o breve"
+      },
+      "mathspeak": {
+        "default": "modifying above o with breve",
+        "brief": "mod above o with breve",
+        "sbrief": "mod above o with breve"
       }
     }
   },
@@ -678,6 +983,11 @@
         "default": "latin small letter o with double acute",
         "alternative": "latin small letter o double acute",
         "short": "o double acute"
+      },
+      "mathspeak": {
+        "default": "modifying above o with double acute",
+        "brief": "mod above o with double acute",
+        "sbrief": "mod above o with double acute"
       }
     }
   },
@@ -689,6 +999,11 @@
         "default": "latin small letter r with acute",
         "alternative": "latin small letter r acute",
         "short": "r acute"
+      },
+      "mathspeak": {
+        "default": "modifying above r with acute",
+        "brief": "mod above r with acute",
+        "sbrief": "mod above r with acute"
       }
     }
   },
@@ -700,6 +1015,11 @@
         "default": "latin small letter r with cedilla",
         "alternative": "latin small letter r cedilla",
         "short": "r cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above r with cedilla",
+        "brief": "mod above r with cedilla",
+        "sbrief": "mod above r with cedilla"
       }
     }
   },
@@ -711,6 +1031,11 @@
         "default": "latin small letter r with caron",
         "alternative": "latin small letter r hacek",
         "short": "r caron"
+      },
+      "mathspeak": {
+        "default": "modifying above r with caron",
+        "brief": "mod above r with caron",
+        "sbrief": "mod above r with caron"
       }
     }
   },
@@ -722,6 +1047,11 @@
         "default": "latin small letter s with acute",
         "alternative": "latin small letter s acute",
         "short": "s acute"
+      },
+      "mathspeak": {
+        "default": "modifying above s with acute",
+        "brief": "mod above s with acute",
+        "sbrief": "mod above s with acute"
       }
     }
   },
@@ -733,6 +1063,11 @@
         "default": "latin small letter s with circumflex",
         "alternative": "latin small letter s hat",
         "short": "s hat"
+      },
+      "mathspeak": {
+        "default": "modifying above s with caret",
+        "brief": "mod above s with caret",
+        "sbrief": "mod above s with caret"
       }
     }
   },
@@ -744,6 +1079,11 @@
         "default": "latin small letter s with cedilla",
         "alternative": "latin small letter s cedilla",
         "short": "s cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above s with cedilla",
+        "brief": "mod above s with cedilla",
+        "sbrief": "mod above s with cedilla"
       }
     }
   },
@@ -755,6 +1095,11 @@
         "default": "latin small letter s with caron",
         "alternative": "latin small letter s hacek",
         "short": "s caron"
+      },
+      "mathspeak": {
+        "default": "modifying above s with caron",
+        "brief": "mod above s with caron",
+        "sbrief": "mod above s with caron"
       }
     }
   },
@@ -766,6 +1111,11 @@
         "default": "latin small letter t with cedilla",
         "alternative": "latin small letter t cedilla",
         "short": "t cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above t with cedilla",
+        "brief": "mod above t with cedilla",
+        "sbrief": "mod above t with cedilla"
       }
     }
   },
@@ -777,6 +1127,11 @@
         "default": "latin small letter t with caron",
         "alternative": "latin small letter t hacek",
         "short": "t caron"
+      },
+      "mathspeak": {
+        "default": "modifying above t with caron",
+        "brief": "mod above t with caron",
+        "sbrief": "mod above t with caron"
       }
     }
   },
@@ -788,6 +1143,11 @@
         "default": "latin small letter u with tilde",
         "alternative": "latin small letter u tilde",
         "short": "u tilde"
+      },
+      "mathspeak": {
+        "default": "u overtilde",
+        "brief": "u overtilde",
+        "sbrief": "u overtilde"
       }
     }
   },
@@ -799,6 +1159,11 @@
         "default": "latin small letter u with macron",
         "alternative": "latin small letter u overbar",
         "short": "u overbar"
+      },
+      "mathspeak": {
+        "default": "u overbar",
+        "brief": "u overbar",
+        "sbrief": "u overbar"
       }
     }
   },
@@ -810,6 +1175,11 @@
         "default": "latin small letter u with breve",
         "alternative": "latin small letter u breve",
         "short": "u breve"
+      },
+      "mathspeak": {
+        "default": "modifying above u with breve",
+        "brief": "mod above u with breve",
+        "sbrief": "mod above u with breve"
       }
     }
   },
@@ -821,6 +1191,11 @@
         "default": "latin small letter u with ring above",
         "alternative": "latin small letter u ring",
         "short": "u ring"
+      },
+      "mathspeak": {
+        "default": "modifying above u with ring",
+        "brief": "mod above u with ring",
+        "sbrief": "mod above u with ring"
       }
     }
   },
@@ -832,6 +1207,11 @@
         "default": "latin small letter u with double acute",
         "alternative": "latin small letter u double acute",
         "short": "u double acute"
+      },
+      "mathspeak": {
+        "default": "modifying above u with double acute",
+        "brief": "mod above u with double acute",
+        "sbrief": "mod above u with double acute"
       }
     }
   },
@@ -843,6 +1223,11 @@
         "default": "latin small letter u with ogonek",
         "alternative": "latin small letter u ogonek",
         "short": "u ogonek"
+      },
+      "mathspeak": {
+        "default": "modifying above u with ogonek",
+        "brief": "mod above u with ogonek",
+        "sbrief": "mod above u with ogonek"
       }
     }
   },
@@ -854,6 +1239,11 @@
         "default": "latin small letter w with circumflex",
         "alternative": "latin small letter w hat",
         "short": "w hat"
+      },
+      "mathspeak": {
+        "default": "modifying above w with caret",
+        "brief": "mod above w with caret",
+        "sbrief": "mod above w with caret"
       }
     }
   },
@@ -865,6 +1255,11 @@
         "default": "latin small letter y with circumflex",
         "alternative": "latin small letter y hat",
         "short": "y hat"
+      },
+      "mathspeak": {
+        "default": "modifying above y with caret",
+        "brief": "mod above y with caret",
+        "sbrief": "mod above y with caret"
       }
     }
   },
@@ -876,6 +1271,11 @@
         "default": "latin small letter z with acute",
         "alternative": "latin small letter z acute",
         "short": "z acute"
+      },
+      "mathspeak": {
+        "default": "modifying above z with acute",
+        "brief": "mod above z with acute",
+        "sbrief": "mod above z with acute"
       }
     }
   },
@@ -887,6 +1287,11 @@
         "default": "latin small letter z with dot above",
         "alternative": "latin small letter z dot",
         "short": "z overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above z with dot",
+        "brief": "mod above z with dot",
+        "sbrief": "mod above z with dot"
       }
     }
   },
@@ -898,6 +1303,11 @@
         "default": "latin small letter z with caron",
         "alternative": "latin small letter z hacek",
         "short": "z caron"
+      },
+      "mathspeak": {
+        "default": "modifying above z with caron",
+        "brief": "mod above z with caron",
+        "sbrief": "mod above z with caron"
       }
     }
   },
@@ -909,6 +1319,11 @@
         "default": "latin small letter a with caron",
         "alternative": "latin small letter a hacek",
         "short": "a caron"
+      },
+      "mathspeak": {
+        "default": "modifying above a with caron",
+        "brief": "mod above a with caron",
+        "sbrief": "mod above a with caron"
       }
     }
   },
@@ -920,6 +1335,11 @@
         "default": "latin small letter i with caron",
         "alternative": "latin small letter i hacek",
         "short": "i caron"
+      },
+      "mathspeak": {
+        "default": "modifying above i with caron",
+        "brief": "mod above i with caron",
+        "sbrief": "mod above i with caron"
       }
     }
   },
@@ -931,6 +1351,11 @@
         "default": "latin small letter o with caron",
         "alternative": "latin small letter o hacek",
         "short": "o caron"
+      },
+      "mathspeak": {
+        "default": "modifying above o with caron",
+        "brief": "mod above o with caron",
+        "sbrief": "mod above o with caron"
       }
     }
   },
@@ -942,6 +1367,11 @@
         "default": "latin small letter u with caron",
         "alternative": "latin small letter u hacek",
         "short": "u caron"
+      },
+      "mathspeak": {
+        "default": "modifying above u with caron",
+        "brief": "mod above u with caron",
+        "sbrief": "mod above u with caron"
       }
     }
   },
@@ -953,6 +1383,11 @@
         "default": "latin small letter g with caron",
         "alternative": "latin small letter g hacek",
         "short": "g caron"
+      },
+      "mathspeak": {
+        "default": "modifying above g with caron",
+        "brief": "mod above g with caron",
+        "sbrief": "mod above g with caron"
       }
     }
   },
@@ -964,6 +1399,11 @@
         "default": "latin small letter k with caron",
         "alternative": "latin small letter k hacek",
         "short": "k caron"
+      },
+      "mathspeak": {
+        "default": "modifying above k with caron",
+        "brief": "mod above k with caron",
+        "sbrief": "mod above k with caron"
       }
     }
   },
@@ -975,6 +1415,11 @@
         "default": "latin small letter o with ogonek",
         "alternative": "latin small letter o ogonek",
         "short": "o ogonek"
+      },
+      "mathspeak": {
+        "default": "modifying above o with ogonek",
+        "brief": "mod above o with ogonek",
+        "sbrief": "mod above o with ogonek"
       }
     }
   },
@@ -986,6 +1431,11 @@
         "default": "latin small letter j with caron",
         "alternative": "latin small letter j hacek",
         "short": "j caron"
+      },
+      "mathspeak": {
+        "default": "modifying above j with caron",
+        "brief": "mod above j with caron",
+        "sbrief": "mod above j with caron"
       }
     }
   },
@@ -997,6 +1447,11 @@
         "default": "latin small letter g with acute",
         "alternative": "latin small letter g acute",
         "short": "g acute"
+      },
+      "mathspeak": {
+        "default": "modifying above g with acute",
+        "brief": "mod above g with acute",
+        "sbrief": "mod above g with acute"
       }
     }
   },
@@ -1008,6 +1463,11 @@
         "default": "latin small letter n with grave",
         "alternative": "latin small letter n grave",
         "short": "n grave"
+      },
+      "mathspeak": {
+        "default": "modifying above n with grave",
+        "brief": "mod above n with grave",
+        "sbrief": "mod above n with grave"
       }
     }
   },
@@ -1019,6 +1479,11 @@
         "default": "latin small letter a with double grave",
         "alternative": "latin small letter a double grave",
         "short": "a double grave"
+      },
+      "mathspeak": {
+        "default": "modifying above a with double grave",
+        "brief": "mod above a with double grave",
+        "sbrief": "mod above a with double grave"
       }
     }
   },
@@ -1030,6 +1495,11 @@
         "default": "latin small letter a with inverted breve",
         "alternative": "latin small letter a inverted breve",
         "short": "a inverted breve"
+      },
+      "mathspeak": {
+        "default": "modifying above a with inverted breve",
+        "brief": "mod above a with inverted breve",
+        "sbrief": "mod above a with inverted breve"
       }
     }
   },
@@ -1041,6 +1511,11 @@
         "default": "latin small letter e with double grave",
         "alternative": "latin small letter e double grave",
         "short": "e double grave"
+      },
+      "mathspeak": {
+        "default": "modifying above e with double grave",
+        "brief": "mod above e with double grave",
+        "sbrief": "mod above e with double grave"
       }
     }
   },
@@ -1052,6 +1527,11 @@
         "default": "latin small letter e with inverted breve",
         "alternative": "latin small letter e inverted breve",
         "short": "e inverted breve"
+      },
+      "mathspeak": {
+        "default": "modifying above e with inverted breve",
+        "brief": "mod above e with inverted breve",
+        "sbrief": "mod above e with inverted breve"
       }
     }
   },
@@ -1063,6 +1543,11 @@
         "default": "latin small letter i with double grave",
         "alternative": "latin small letter i double grave",
         "short": "i double grave"
+      },
+      "mathspeak": {
+        "default": "modifying above i with double grave",
+        "brief": "mod above i with double grave",
+        "sbrief": "mod above i with double grave"
       }
     }
   },
@@ -1074,6 +1559,11 @@
         "default": "latin small letter i with inverted breve",
         "alternative": "latin small letter i inverted breve",
         "short": "i inverted breve"
+      },
+      "mathspeak": {
+        "default": "modifying above i with inverted breve",
+        "brief": "mod above i with inverted breve",
+        "sbrief": "mod above i with inverted breve"
       }
     }
   },
@@ -1085,6 +1575,11 @@
         "default": "latin small letter o with double grave",
         "alternative": "latin small letter o double grave",
         "short": "o double grave"
+      },
+      "mathspeak": {
+        "default": "modifying above o with double grave",
+        "brief": "mod above o with double grave",
+        "sbrief": "mod above o with double grave"
       }
     }
   },
@@ -1096,6 +1591,11 @@
         "default": "latin small letter o with inverted breve",
         "alternative": "latin small letter o inverted breve",
         "short": "o inverted breve"
+      },
+      "mathspeak": {
+        "default": "modifying above o with inverted breve",
+        "brief": "mod above o with inverted breve",
+        "sbrief": "mod above o with inverted breve"
       }
     }
   },
@@ -1107,6 +1607,11 @@
         "default": "latin small letter r with double grave",
         "alternative": "latin small letter r double grave",
         "short": "r double grave"
+      },
+      "mathspeak": {
+        "default": "modifying above r with double grave",
+        "brief": "mod above r with double grave",
+        "sbrief": "mod above r with double grave"
       }
     }
   },
@@ -1118,6 +1623,11 @@
         "default": "latin small letter r with inverted breve",
         "alternative": "latin small letter r inverted breve",
         "short": "r inverted breve"
+      },
+      "mathspeak": {
+        "default": "modifying above r with inverted breve",
+        "brief": "mod above r with inverted breve",
+        "sbrief": "mod above r with inverted breve"
       }
     }
   },
@@ -1129,6 +1639,11 @@
         "default": "latin small letter u with double grave",
         "alternative": "latin small letter u double grave",
         "short": "u double grave"
+      },
+      "mathspeak": {
+        "default": "modifying above u with double grave",
+        "brief": "mod above u with double grave",
+        "sbrief": "mod above u with double grave"
       }
     }
   },
@@ -1140,6 +1655,11 @@
         "default": "latin small letter u with inverted breve",
         "alternative": "latin small letter u inverted breve",
         "short": "u inverted breve"
+      },
+      "mathspeak": {
+        "default": "modifying above u with inverted breve",
+        "brief": "mod above u with inverted breve",
+        "sbrief": "mod above u with inverted breve"
       }
     }
   },
@@ -1151,6 +1671,11 @@
         "default": "latin small letter s with comma below",
         "alternative": "latin small letter s comma below",
         "short": "s comma below"
+      },
+      "mathspeak": {
+        "default": "modifying below s with comma below",
+        "brief": "mod below s with comma below",
+        "sbrief": "mod below s with comma below"
       }
     }
   },
@@ -1162,6 +1687,11 @@
         "default": "latin small letter t with comma below",
         "alternative": "latin small letter t comma below",
         "short": "t comma below"
+      },
+      "mathspeak": {
+        "default": "modifying below t with comma below",
+        "brief": "mod below t with comma below",
+        "sbrief": "mod below t with comma below"
       }
     }
   },
@@ -1173,6 +1703,11 @@
         "default": "latin small letter h with caron",
         "alternative": "latin small letter h caron",
         "short": "h caron"
+      },
+      "mathspeak": {
+        "default": "modifying above h with caron",
+        "brief": "mod above h with caron",
+        "sbrief": "mod above h with caron"
       }
     }
   },
@@ -1184,6 +1719,11 @@
         "default": "latin small letter a with dot above",
         "alternative": "latin small letter a overdot",
         "short": "a overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above a with dot",
+        "brief": "mod above a with dot",
+        "sbrief": "mod above a with dot"
       }
     }
   },
@@ -1195,6 +1735,11 @@
         "default": "latin small letter e with cedilla",
         "alternative": "latin small letter e cedilla",
         "short": "e cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above e with cedilla",
+        "brief": "mod above e with cedilla",
+        "sbrief": "mod above e with cedilla"
       }
     }
   },
@@ -1206,6 +1751,11 @@
         "default": "latin small letter o with dot above",
         "alternative": "latin small letter o overdot",
         "short": "o overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above o with dot",
+        "brief": "mod above o with dot",
+        "sbrief": "mod above o with dot"
       }
     }
   },
@@ -1217,6 +1767,11 @@
         "default": "latin small letter y with macron",
         "alternative": "latin small letter y overbar",
         "short": "y overbar"
+      },
+      "mathspeak": {
+        "default": "y overbar",
+        "brief": "y overbar",
+        "sbrief": "y overbar"
       }
     }
   },
@@ -1228,6 +1783,11 @@
         "default": "latin small letter dotless j",
         "alternative": "latin small letter dotless j",
         "short": "dotless j"
+      },
+      "mathspeak": {
+        "default": "modifying above d with tless j",
+        "brief": "mod above d with tless j",
+        "sbrief": "mod above d with tless j"
       }
     }
   },
@@ -1239,6 +1799,11 @@
         "default": "latin small letter a ring below",
         "alternative": "latin small letter a ring below",
         "short": "a ring below"
+      },
+      "mathspeak": {
+        "default": "modifying below a with ring below",
+        "brief": "mod below a with ring below",
+        "sbrief": "mod below a with ring below"
       }
     }
   },
@@ -1250,6 +1815,11 @@
         "default": "latin small letter b with dot above",
         "alternative": "latin small letter b overdot",
         "short": "b overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above b with dot",
+        "brief": "mod above b with dot",
+        "sbrief": "mod above b with dot"
       }
     }
   },
@@ -1261,6 +1831,11 @@
         "default": "latin small letter b with dot below",
         "alternative": "latin small letter b underdot",
         "short": "b underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below b with dot",
+        "brief": "mod below b with dot",
+        "sbrief": "mod below b with dot"
       }
     }
   },
@@ -1272,6 +1847,11 @@
         "default": "latin small letter b with line below",
         "alternative": "latin small letter b underbar",
         "short": "b underbar"
+      },
+      "mathspeak": {
+        "default": "b underbar",
+        "brief": "b underbar",
+        "sbrief": "b underbar"
       }
     }
   },
@@ -1283,6 +1863,11 @@
         "default": "latin small letter d with dot above",
         "alternative": "latin small letter d overdot",
         "short": "d overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above d with dot",
+        "brief": "mod above d with dot",
+        "sbrief": "mod above d with dot"
       }
     }
   },
@@ -1294,6 +1879,11 @@
         "default": "latin small letter d with dot below",
         "alternative": "latin small letter d underdot",
         "short": "d underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below d with dot",
+        "brief": "mod below d with dot",
+        "sbrief": "mod below d with dot"
       }
     }
   },
@@ -1305,6 +1895,11 @@
         "default": "latin small letter d with line below",
         "alternative": "latin small letter d underbar",
         "short": "d underbar"
+      },
+      "mathspeak": {
+        "default": "d underbar",
+        "brief": "d underbar",
+        "sbrief": "d underbar"
       }
     }
   },
@@ -1316,6 +1911,11 @@
         "default": "latin small letter d with cedilla",
         "alternative": "latin small letter d cedilla",
         "short": "d cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above d with cedilla",
+        "brief": "mod above d with cedilla",
+        "sbrief": "mod above d with cedilla"
       }
     }
   },
@@ -1327,6 +1927,11 @@
         "default": "latin small letter d with circumflex below",
         "alternative": "latin small letter d underhat",
         "short": "d underhat"
+      },
+      "mathspeak": {
+        "default": "modifying below d with caret",
+        "brief": "mod below d with caret",
+        "sbrief": "mod below d with caret"
       }
     }
   },
@@ -1338,6 +1943,11 @@
         "default": "latin small letter e with circumflex below",
         "alternative": "latin small letter e underhat",
         "short": "e underhat"
+      },
+      "mathspeak": {
+        "default": "modifying below e with caret",
+        "brief": "mod below e with caret",
+        "sbrief": "mod below e with caret"
       }
     }
   },
@@ -1349,6 +1959,11 @@
         "default": "latin small letter e with tilde below",
         "alternative": "latin small letter e tilde below",
         "short": "e tilde below"
+      },
+      "mathspeak": {
+        "default": "e undertilde",
+        "brief": "e undertilde",
+        "sbrief": "e undertilde"
       }
     }
   },
@@ -1360,6 +1975,11 @@
         "default": "latin small letter f with dot above",
         "alternative": "latin small letter f overdot",
         "short": "f overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above f with dot",
+        "brief": "mod above f with dot",
+        "sbrief": "mod above f with dot"
       }
     }
   },
@@ -1371,6 +1991,11 @@
         "default": "latin small letter g with macron",
         "alternative": "latin small letter g overbar",
         "short": "g overbar"
+      },
+      "mathspeak": {
+        "default": "g overbar",
+        "brief": "g overbar",
+        "sbrief": "g overbar"
       }
     }
   },
@@ -1382,6 +2007,11 @@
         "default": "latin small letter h with dot above",
         "alternative": "latin small letter h overdot",
         "short": "h overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above h with dot",
+        "brief": "mod above h with dot",
+        "sbrief": "mod above h with dot"
       }
     }
   },
@@ -1393,6 +2023,11 @@
         "default": "latin small letter h with dot below",
         "alternative": "latin small letter h underdot",
         "short": "h underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below h with dot",
+        "brief": "mod below h with dot",
+        "sbrief": "mod below h with dot"
       }
     }
   },
@@ -1404,6 +2039,11 @@
         "default": "latin small letter h with diaeresis",
         "alternative": "latin small letter h double overdot",
         "short": "h double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above h with double dot",
+        "brief": "mod above h with double dot",
+        "sbrief": "mod above h with double dot"
       }
     }
   },
@@ -1415,6 +2055,11 @@
         "default": "latin small letter h with cedilla",
         "alternative": "latin small letter h cedilla",
         "short": "h cedilla"
+      },
+      "mathspeak": {
+        "default": "modifying above h with cedilla",
+        "brief": "mod above h with cedilla",
+        "sbrief": "mod above h with cedilla"
       }
     }
   },
@@ -1426,6 +2071,11 @@
         "default": "latin small letter h with breve below",
         "alternative": "latin small letter h breve below",
         "short": "h breve below"
+      },
+      "mathspeak": {
+        "default": "modifying below h with breve below",
+        "brief": "mod below h with breve below",
+        "sbrief": "mod below h with breve below"
       }
     }
   },
@@ -1437,6 +2087,11 @@
         "default": "latin small letter i with tilde below",
         "alternative": "latin small letter i tilde below",
         "short": "i tilde below"
+      },
+      "mathspeak": {
+        "default": "i undertilde",
+        "brief": "i undertilde",
+        "sbrief": "i undertilde"
       }
     }
   },
@@ -1448,6 +2103,11 @@
         "default": "latin small letter k with acute",
         "alternative": "latin small letter k acute",
         "short": "k acute"
+      },
+      "mathspeak": {
+        "default": "modifying above k with acute",
+        "brief": "mod above k with acute",
+        "sbrief": "mod above k with acute"
       }
     }
   },
@@ -1459,6 +2119,11 @@
         "default": "latin small letter k with dot below",
         "alternative": "latin small letter k underdot",
         "short": "k underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below k with dot",
+        "brief": "mod below k with dot",
+        "sbrief": "mod below k with dot"
       }
     }
   },
@@ -1470,6 +2135,11 @@
         "default": "latin small letter k with line below",
         "alternative": "latin small letter k underbar",
         "short": "k underbar"
+      },
+      "mathspeak": {
+        "default": "k underbar",
+        "brief": "k underbar",
+        "sbrief": "k underbar"
       }
     }
   },
@@ -1481,6 +2151,11 @@
         "default": "latin small letter l with dot below",
         "alternative": "latin small letter l underdot",
         "short": "l underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below l with dot",
+        "brief": "mod below l with dot",
+        "sbrief": "mod below l with dot"
       }
     }
   },
@@ -1492,6 +2167,11 @@
         "default": "latin small letter l with line below",
         "alternative": "latin small letter l underbar",
         "short": "l underbar"
+      },
+      "mathspeak": {
+        "default": "l underbar",
+        "brief": "l underbar",
+        "sbrief": "l underbar"
       }
     }
   },
@@ -1503,6 +2183,11 @@
         "default": "latin small letter l with circumflex below",
         "alternative": "latin small letter l underhat",
         "short": "l underhat"
+      },
+      "mathspeak": {
+        "default": "modifying below l with caret",
+        "brief": "mod below l with caret",
+        "sbrief": "mod below l with caret"
       }
     }
   },
@@ -1514,6 +2199,11 @@
         "default": "latin small letter m with acute",
         "alternative": "latin small letter m acute",
         "short": "m acute"
+      },
+      "mathspeak": {
+        "default": "modifying above m with acute",
+        "brief": "mod above m with acute",
+        "sbrief": "mod above m with acute"
       }
     }
   },
@@ -1525,6 +2215,11 @@
         "default": "latin small letter m with dot above",
         "alternative": "latin small letter m overdot",
         "short": "m overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above m with dot",
+        "brief": "mod above m with dot",
+        "sbrief": "mod above m with dot"
       }
     }
   },
@@ -1536,6 +2231,11 @@
         "default": "latin small letter m with dot below",
         "alternative": "latin small letter m underdot",
         "short": "m underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below m with dot",
+        "brief": "mod below m with dot",
+        "sbrief": "mod below m with dot"
       }
     }
   },
@@ -1547,6 +2247,11 @@
         "default": "latin small letter n with dot above",
         "alternative": "latin small letter n overdot",
         "short": "n overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above n with dot",
+        "brief": "mod above n with dot",
+        "sbrief": "mod above n with dot"
       }
     }
   },
@@ -1558,6 +2263,11 @@
         "default": "latin small letter n with dot below",
         "alternative": "latin small letter n underdot",
         "short": "n underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below n with dot",
+        "brief": "mod below n with dot",
+        "sbrief": "mod below n with dot"
       }
     }
   },
@@ -1569,6 +2279,11 @@
         "default": "latin small letter n with line below",
         "alternative": "latin small letter n underbar",
         "short": "n underbar"
+      },
+      "mathspeak": {
+        "default": "n underbar",
+        "brief": "n underbar",
+        "sbrief": "n underbar"
       }
     }
   },
@@ -1580,6 +2295,11 @@
         "default": "latin small letter n with circumflex below",
         "alternative": "latin small letter n underhat",
         "short": "n underhat"
+      },
+      "mathspeak": {
+        "default": "modifying below n with caret",
+        "brief": "mod below n with caret",
+        "sbrief": "mod below n with caret"
       }
     }
   },
@@ -1591,6 +2311,11 @@
         "default": "latin small letter p with acute",
         "alternative": "latin small letter p acute",
         "short": "p acute"
+      },
+      "mathspeak": {
+        "default": "modifying above p with acute",
+        "brief": "mod above p with acute",
+        "sbrief": "mod above p with acute"
       }
     }
   },
@@ -1602,6 +2327,11 @@
         "default": "latin small letter p with dot above",
         "alternative": "latin small letter p overdot",
         "short": "p overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above p with dot",
+        "brief": "mod above p with dot",
+        "sbrief": "mod above p with dot"
       }
     }
   },
@@ -1613,6 +2343,11 @@
         "default": "latin small letter r with dot above",
         "alternative": "latin small letter r overdot",
         "short": "r overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above r with dot",
+        "brief": "mod above r with dot",
+        "sbrief": "mod above r with dot"
       }
     }
   },
@@ -1624,6 +2359,11 @@
         "default": "latin small letter r with dot below",
         "alternative": "latin small letter r underdot",
         "short": "r underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below r with dot",
+        "brief": "mod below r with dot",
+        "sbrief": "mod below r with dot"
       }
     }
   },
@@ -1635,6 +2375,11 @@
         "default": "latin small letter r with line below",
         "alternative": "latin small letter r underbar",
         "short": "r underbar"
+      },
+      "mathspeak": {
+        "default": "r underbar",
+        "brief": "r underbar",
+        "sbrief": "r underbar"
       }
     }
   },
@@ -1646,6 +2391,11 @@
         "default": "latin small letter s with dot above",
         "alternative": "latin small letter s overdot",
         "short": "s overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above s with dot",
+        "brief": "mod above s with dot",
+        "sbrief": "mod above s with dot"
       }
     }
   },
@@ -1657,6 +2407,11 @@
         "default": "latin small letter s with dot below",
         "alternative": "latin small letter s underdot",
         "short": "s underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below s with dot",
+        "brief": "mod below s with dot",
+        "sbrief": "mod below s with dot"
       }
     }
   },
@@ -1668,6 +2423,11 @@
         "default": "latin small letter t with dot above",
         "alternative": "latin small letter t overdot",
         "short": "t overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above t with dot",
+        "brief": "mod above t with dot",
+        "sbrief": "mod above t with dot"
       }
     }
   },
@@ -1679,6 +2439,11 @@
         "default": "latin small letter t with dot below",
         "alternative": "latin small letter t underdot",
         "short": "t underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below t with dot",
+        "brief": "mod below t with dot",
+        "sbrief": "mod below t with dot"
       }
     }
   },
@@ -1690,6 +2455,11 @@
         "default": "latin small letter t with line below",
         "alternative": "latin small letter t underbar",
         "short": "t underbar"
+      },
+      "mathspeak": {
+        "default": "t underbar",
+        "brief": "t underbar",
+        "sbrief": "t underbar"
       }
     }
   },
@@ -1701,6 +2471,11 @@
         "default": "latin small letter t with circumflex below",
         "alternative": "latin small letter t underhat",
         "short": "t underhat"
+      },
+      "mathspeak": {
+        "default": "modifying below t with caret",
+        "brief": "mod below t with caret",
+        "sbrief": "mod below t with caret"
       }
     }
   },
@@ -1712,6 +2487,11 @@
         "default": "latin small letter u with diaeresis below",
         "alternative": "latin small letter u double underdot",
         "short": "u double underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below u with double dot",
+        "brief": "mod below u with double dot",
+        "sbrief": "mod below u with double dot"
       }
     }
   },
@@ -1723,6 +2503,11 @@
         "default": "latin small letter u with tilde below",
         "alternative": "latin small letter u tilde below",
         "short": "u tilde below"
+      },
+      "mathspeak": {
+        "default": "u undertilde",
+        "brief": "u undertilde",
+        "sbrief": "u undertilde"
       }
     }
   },
@@ -1734,6 +2519,11 @@
         "default": "latin small letter u with circumflex below",
         "alternative": "latin small letter u underhat",
         "short": "u underhat"
+      },
+      "mathspeak": {
+        "default": "modifying below u with caret",
+        "brief": "mod below u with caret",
+        "sbrief": "mod below u with caret"
       }
     }
   },
@@ -1745,6 +2535,11 @@
         "default": "latin small letter v with tilde",
         "alternative": "latin small letter v tilde",
         "short": "v tilde"
+      },
+      "mathspeak": {
+        "default": "v overtilde",
+        "brief": "v overtilde",
+        "sbrief": "v overtilde"
       }
     }
   },
@@ -1756,6 +2551,11 @@
         "default": "latin small letter v with dot below",
         "alternative": "latin small letter v underdot",
         "short": "v underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below v with dot",
+        "brief": "mod below v with dot",
+        "sbrief": "mod below v with dot"
       }
     }
   },
@@ -1767,6 +2567,11 @@
         "default": "latin small letter w with grave",
         "alternative": "latin small letter w grave",
         "short": "w grave"
+      },
+      "mathspeak": {
+        "default": "modifying above w with grave",
+        "brief": "mod above w with grave",
+        "sbrief": "mod above w with grave"
       }
     }
   },
@@ -1778,6 +2583,11 @@
         "default": "latin small letter w with acute",
         "alternative": "latin small letter w acute",
         "short": "w acute"
+      },
+      "mathspeak": {
+        "default": "modifying above w with acute",
+        "brief": "mod above w with acute",
+        "sbrief": "mod above w with acute"
       }
     }
   },
@@ -1789,6 +2599,11 @@
         "default": "latin small letter w with diaeresis",
         "alternative": "latin small letter w double overdot",
         "short": "w double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above w with double dot",
+        "brief": "mod above w with double dot",
+        "sbrief": "mod above w with double dot"
       }
     }
   },
@@ -1800,6 +2615,11 @@
         "default": "latin small letter w with dot above",
         "alternative": "latin small letter w overdot",
         "short": "w overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above w with dot",
+        "brief": "mod above w with dot",
+        "sbrief": "mod above w with dot"
       }
     }
   },
@@ -1811,6 +2631,11 @@
         "default": "latin small letter w with dot below",
         "alternative": "latin small letter w underdot",
         "short": "w underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below w with dot",
+        "brief": "mod below w with dot",
+        "sbrief": "mod below w with dot"
       }
     }
   },
@@ -1822,6 +2647,11 @@
         "default": "latin small letter x with dot above",
         "alternative": "latin small letter x overdot",
         "short": "x overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above x with dot",
+        "brief": "mod above x with dot",
+        "sbrief": "mod above x with dot"
       }
     }
   },
@@ -1833,6 +2663,11 @@
         "default": "latin small letter x with diaeresis",
         "alternative": "latin small letter x double overdot",
         "short": "x double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above x with double dot",
+        "brief": "mod above x with double dot",
+        "sbrief": "mod above x with double dot"
       }
     }
   },
@@ -1844,6 +2679,11 @@
         "default": "latin small letter y with dot above",
         "alternative": "latin small letter y overdot",
         "short": "y overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above y with dot",
+        "brief": "mod above y with dot",
+        "sbrief": "mod above y with dot"
       }
     }
   },
@@ -1855,6 +2695,11 @@
         "default": "latin small letter z with circumflex",
         "alternative": "latin small letter z hat",
         "short": "z hat"
+      },
+      "mathspeak": {
+        "default": "modifying above z with caret",
+        "brief": "mod above z with caret",
+        "sbrief": "mod above z with caret"
       }
     }
   },
@@ -1866,6 +2711,11 @@
         "default": "latin small letter z with dot below",
         "alternative": "latin small letter z underdot",
         "short": "z underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below z with dot",
+        "brief": "mod below z with dot",
+        "sbrief": "mod below z with dot"
       }
     }
   },
@@ -1877,6 +2727,11 @@
         "default": "latin small letter z with line below",
         "alternative": "latin small letter z underbar",
         "short": "z underbar"
+      },
+      "mathspeak": {
+        "default": "z underbar",
+        "brief": "z underbar",
+        "sbrief": "z underbar"
       }
     }
   },
@@ -1888,6 +2743,11 @@
         "default": "latin small letter h with line below",
         "alternative": "latin small letter h underbar",
         "short": "h underbar"
+      },
+      "mathspeak": {
+        "default": "h underbar",
+        "brief": "h underbar",
+        "sbrief": "h underbar"
       }
     }
   },
@@ -1899,6 +2759,11 @@
         "default": "latin small letter t with diaeresis",
         "alternative": "latin small letter t double overdot",
         "short": "t double overdot"
+      },
+      "mathspeak": {
+        "default": "modifying above t with double dot",
+        "brief": "mod above t with double dot",
+        "sbrief": "mod above t with double dot"
       }
     }
   },
@@ -1910,6 +2775,11 @@
         "default": "latin small letter w with ring above",
         "alternative": "latin small letter w ring",
         "short": "w ring"
+      },
+      "mathspeak": {
+        "default": "modifying above w with ring",
+        "brief": "mod above w with ring",
+        "sbrief": "mod above w with ring"
       }
     }
   },
@@ -1921,6 +2791,11 @@
         "default": "latin small letter y with ring above",
         "alternative": "latin small letter y ring",
         "short": "y ring"
+      },
+      "mathspeak": {
+        "default": "modifying above y with ring",
+        "brief": "mod above y with ring",
+        "sbrief": "mod above y with ring"
       }
     }
   },
@@ -1932,6 +2807,11 @@
         "default": "latin small letter a with right half ring",
         "alternative": "latin small letter a right half ring",
         "short": "a right half ring"
+      },
+      "mathspeak": {
+        "default": "modifying above a with right half ring",
+        "brief": "mod above a with right half ring",
+        "sbrief": "mod above a with right half ring"
       }
     }
   },
@@ -1943,6 +2823,11 @@
         "default": "latin small letter a with dot below",
         "alternative": "latin small letter a underdot",
         "short": "a underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below a with dot",
+        "brief": "mod below a with dot",
+        "sbrief": "mod below a with dot"
       }
     }
   },
@@ -1954,6 +2839,11 @@
         "default": "latin small letter a with hook above",
         "alternative": "latin small letter a hook",
         "short": "a hook"
+      },
+      "mathspeak": {
+        "default": "modifying above a with hook",
+        "brief": "mod above a with hook",
+        "sbrief": "mod above a with hook"
       }
     }
   },
@@ -1965,6 +2855,11 @@
         "default": "latin small letter e with dot below",
         "alternative": "latin small letter e underdot",
         "short": "e underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below e with dot",
+        "brief": "mod below e with dot",
+        "sbrief": "mod below e with dot"
       }
     }
   },
@@ -1976,6 +2871,11 @@
         "default": "latin small letter e with hook above",
         "alternative": "latin small letter e hook",
         "short": "e hook"
+      },
+      "mathspeak": {
+        "default": "modifying above e with hook",
+        "brief": "mod above e with hook",
+        "sbrief": "mod above e with hook"
       }
     }
   },
@@ -1987,6 +2887,11 @@
         "default": "latin small letter e with tilde",
         "alternative": "latin small letter e tilde",
         "short": "e tilde"
+      },
+      "mathspeak": {
+        "default": "e overtilde",
+        "brief": "e overtilde",
+        "sbrief": "e overtilde"
       }
     }
   },
@@ -1998,6 +2903,11 @@
         "default": "latin small letter i with hook above",
         "alternative": "latin small letter i hook",
         "short": "i hook"
+      },
+      "mathspeak": {
+        "default": "modifying above i with hook",
+        "brief": "mod above i with hook",
+        "sbrief": "mod above i with hook"
       }
     }
   },
@@ -2009,6 +2919,11 @@
         "default": "latin small letter i with dot below",
         "alternative": "latin small letter i underdot",
         "short": "i underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below i with dot",
+        "brief": "mod below i with dot",
+        "sbrief": "mod below i with dot"
       }
     }
   },
@@ -2020,6 +2935,11 @@
         "default": "latin small letter o with dot below",
         "alternative": "latin small letter o underdot",
         "short": "o underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below o with dot",
+        "brief": "mod below o with dot",
+        "sbrief": "mod below o with dot"
       }
     }
   },
@@ -2031,6 +2951,11 @@
         "default": "latin small letter o with hook above",
         "alternative": "latin small letter o hook",
         "short": "o hook"
+      },
+      "mathspeak": {
+        "default": "modifying above o with hook",
+        "brief": "mod above o with hook",
+        "sbrief": "mod above o with hook"
       }
     }
   },
@@ -2042,6 +2967,11 @@
         "default": "latin small letter u with dot below",
         "alternative": "latin small letter u underdot",
         "short": "u underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below u with dot",
+        "brief": "mod below u with dot",
+        "sbrief": "mod below u with dot"
       }
     }
   },
@@ -2053,6 +2983,11 @@
         "default": "latin small letter u with hook above",
         "alternative": "latin small letter u hook",
         "short": "u hook"
+      },
+      "mathspeak": {
+        "default": "modifying above u with hook",
+        "brief": "mod above u with hook",
+        "sbrief": "mod above u with hook"
       }
     }
   },
@@ -2064,6 +2999,11 @@
         "default": "latin small letter y with grave",
         "alternative": "latin small letter y grave",
         "short": "y grave"
+      },
+      "mathspeak": {
+        "default": "modifying above y with grave",
+        "brief": "mod above y with grave",
+        "sbrief": "mod above y with grave"
       }
     }
   },
@@ -2075,6 +3015,11 @@
         "default": "latin small letter y with dot below",
         "alternative": "latin small letter y underdot",
         "short": "y underdot"
+      },
+      "mathspeak": {
+        "default": "modifying below y with dot",
+        "brief": "mod below y with dot",
+        "sbrief": "mod below y with dot"
       }
     }
   },
@@ -2086,6 +3031,11 @@
         "default": "latin small letter y with hook above",
         "alternative": "latin small letter y hook",
         "short": "y hook"
+      },
+      "mathspeak": {
+        "default": "modifying above y with hook",
+        "brief": "mod above y with hook",
+        "sbrief": "mod above y with hook"
       }
     }
   },
@@ -2097,6 +3047,11 @@
         "default": "latin small letter y with tilde",
         "alternative": "latin small letter y tilde",
         "short": "y tilde"
+      },
+      "mathspeak": {
+        "default": "y overtilde",
+        "brief": "y overtilde",
+        "sbrief": "y overtilde"
       }
     }
   }

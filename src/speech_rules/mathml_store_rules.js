@@ -889,6 +889,12 @@ sre.MathmlStoreRules.initSemanticRules_ = function() {
       'text-no-mult', 'default.default',
       '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',
       'self::infixop', 'children/text');
+
+  defineRule(
+      'text', 'default.default',
+      '[t] text(); [p] (pause:200)',
+      'self::text');
+
 };
 
 });  // goog.scope

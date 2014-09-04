@@ -9,7 +9,9 @@
         "short": "cap a grave"
       },
       "mathspeak": {
-        "default": "upper a grave"
+        "default": "modifying above upper a with grave",
+        "brief": "mod above upper a with grave",
+        "sbrief": "mod above upper a with grave"
       }
     }
   },
@@ -23,7 +25,9 @@
         "short": "cap a acute"
       },
       "mathspeak": {
-        "default": "upper a acute"
+        "default": "modifying above upper a with acute",
+        "brief": "mod above upper a with acute",
+        "sbrief": "mod above upper a with acute"
       }
     }
   },
@@ -37,7 +41,9 @@
         "short": "cap a hat"
       },
       "mathspeak": {
-        "default": "upper a hat"
+        "default": "modifying above upper a with caret",
+        "brief": "mod above upper a with caret",
+        "sbrief": "mod above upper a with caret"
       }
     }
   },
@@ -51,7 +57,9 @@
         "short": "cap a tilde"
       },
       "mathspeak": {
-        "default": "upper a tilde"
+        "default": "upper a overtilde",
+        "brief": "upper a overtilde",
+        "sbrief": "upper a overtilde"
       }
     }
   },
@@ -65,7 +73,9 @@
         "short": "cap a double overdot"
       },
       "mathspeak": {
-        "default": "upper a double overdot"
+        "default": "modifying above upper a with double dot",
+        "brief": "mod above upper a with double dot",
+        "sbrief": "mod above upper a with double dot"
       }
     }
   },
@@ -79,7 +89,9 @@
         "short": "cap a ring"
       },
       "mathspeak": {
-        "default": "upper a ring"
+        "default": "modifying above upper a with ring",
+        "brief": "mod above upper a with ring",
+        "sbrief": "mod above upper a with ring"
       }
     }
   },
@@ -93,7 +105,9 @@
         "short": "cap c cedilla"
       },
       "mathspeak": {
-        "default": "upper c cedilla"
+        "default": "modifying above upper c with cedilla",
+        "brief": "mod above upper c with cedilla",
+        "sbrief": "mod above upper c with cedilla"
       }
     }
   },
@@ -107,7 +121,9 @@
         "short": "cap e grave"
       },
       "mathspeak": {
-        "default": "upper e grave"
+        "default": "modifying above upper e with grave",
+        "brief": "mod above upper e with grave",
+        "sbrief": "mod above upper e with grave"
       }
     }
   },
@@ -121,7 +137,9 @@
         "short": "cap e acute"
       },
       "mathspeak": {
-        "default": "upper e acute"
+        "default": "modifying above upper e with acute",
+        "brief": "mod above upper e with acute",
+        "sbrief": "mod above upper e with acute"
       }
     }
   },
@@ -135,7 +153,9 @@
         "short": "cap e hat"
       },
       "mathspeak": {
-        "default": "upper e hat"
+        "default": "modifying above upper e with caret",
+        "brief": "mod above upper e with caret",
+        "sbrief": "mod above upper e with caret"
       }
     }
   },
@@ -149,7 +169,9 @@
         "short": "cap e double overdot"
       },
       "mathspeak": {
-        "default": "upper e double overdot"
+        "default": "modifying above upper e with double dot",
+        "brief": "mod above upper e with double dot",
+        "sbrief": "mod above upper e with double dot"
       }
     }
   },
@@ -163,7 +185,9 @@
         "short": "cap i grave"
       },
       "mathspeak": {
-        "default": "upper i grave"
+        "default": "modifying above upper i with grave",
+        "brief": "mod above upper i with grave",
+        "sbrief": "mod above upper i with grave"
       }
     }
   },
@@ -177,7 +201,9 @@
         "short": "cap i acute"
       },
       "mathspeak": {
-        "default": "upper i acute"
+        "default": "modifying above upper i with acute",
+        "brief": "mod above upper i with acute",
+        "sbrief": "mod above upper i with acute"
       }
     }
   },
@@ -191,7 +217,9 @@
         "short": "cap i hat"
       },
       "mathspeak": {
-        "default": "upper i hat"
+        "default": "modifying above upper i with caret",
+        "brief": "mod above upper i with caret",
+        "sbrief": "mod above upper i with caret"
       }
     }
   },
@@ -205,7 +233,9 @@
         "short": "cap i double overdot"
       },
       "mathspeak": {
-        "default": "upper i double overdot"
+        "default": "modifying above upper i with double dot",
+        "brief": "mod above upper i with double dot",
+        "sbrief": "mod above upper i with double dot"
       }
     }
   },
@@ -219,7 +249,9 @@
         "short": "cap n tilde"
       },
       "mathspeak": {
-        "default": "upper n tilde"
+        "default": "upper n overtilde",
+        "brief": "upper n overtilde",
+        "sbrief": "upper n overtilde"
       }
     }
   },
@@ -233,7 +265,9 @@
         "short": "cap o grave"
       },
       "mathspeak": {
-        "default": "upper o grave"
+        "default": "modifying above upper o with grave",
+        "brief": "mod above upper o with grave",
+        "sbrief": "mod above upper o with grave"
       }
     }
   },
@@ -247,7 +281,9 @@
         "short": "cap o acute"
       },
       "mathspeak": {
-        "default": "upper o acute"
+        "default": "modifying above upper o with acute",
+        "brief": "mod above upper o with acute",
+        "sbrief": "mod above upper o with acute"
       }
     }
   },
@@ -261,7 +297,9 @@
         "short": "cap o hat"
       },
       "mathspeak": {
-        "default": "upper o hat"
+        "default": "modifying above upper o with caret",
+        "brief": "mod above upper o with caret",
+        "sbrief": "mod above upper o with caret"
       }
     }
   },
@@ -275,7 +313,9 @@
         "short": "cap o tilde"
       },
       "mathspeak": {
-        "default": "upper o tilde"
+        "default": "upper o overtilde",
+        "brief": "upper o overtilde",
+        "sbrief": "upper o overtilde"
       }
     }
   },
@@ -289,7 +329,9 @@
         "short": "cap o double overdot"
       },
       "mathspeak": {
-        "default": "upper o double overdot"
+        "default": "modifying above upper o with double dot",
+        "brief": "mod above upper o with double dot",
+        "sbrief": "mod above upper o with double dot"
       }
     }
   },
@@ -303,7 +345,9 @@
         "short": "cap u grave"
       },
       "mathspeak": {
-        "default": "upper u grave"
+        "default": "modifying above upper u with grave",
+        "brief": "mod above upper u with grave",
+        "sbrief": "mod above upper u with grave"
       }
     }
   },
@@ -317,7 +361,9 @@
         "short": "cap u acute"
       },
       "mathspeak": {
-        "default": "upper u acute"
+        "default": "modifying above upper u with acute",
+        "brief": "mod above upper u with acute",
+        "sbrief": "mod above upper u with acute"
       }
     }
   },
@@ -331,7 +377,9 @@
         "short": "cap u hat"
       },
       "mathspeak": {
-        "default": "upper u hat"
+        "default": "modifying above upper u with caret",
+        "brief": "mod above upper u with caret",
+        "sbrief": "mod above upper u with caret"
       }
     }
   },
@@ -345,7 +393,9 @@
         "short": "cap u double overdot"
       },
       "mathspeak": {
-        "default": "upper u double overdot"
+        "default": "modifying above upper u with double dot",
+        "brief": "mod above upper u with double dot",
+        "sbrief": "mod above upper u with double dot"
       }
     }
   },
@@ -359,7 +409,9 @@
         "short": "cap y acute"
       },
       "mathspeak": {
-        "default": "upper y acute"
+        "default": "modifying above upper y with acute",
+        "brief": "mod above upper y with acute",
+        "sbrief": "mod above upper y with acute"
       }
     }
   },
@@ -373,7 +425,9 @@
         "short": "cap a overbar"
       },
       "mathspeak": {
-        "default": "upper a overbar"
+        "default": "upper a overbar",
+        "brief": "upper a overbar",
+        "sbrief": "upper a overbar"
       }
     }
   },
@@ -387,7 +441,9 @@
         "short": "cap a breve"
       },
       "mathspeak": {
-        "default": "upper a breve"
+        "default": "modifying above upper a with breve",
+        "brief": "mod above upper a with breve",
+        "sbrief": "mod above upper a with breve"
       }
     }
   },
@@ -401,7 +457,9 @@
         "short": "cap a ogonek"
       },
       "mathspeak": {
-        "default": "upper a ogonek"
+        "default": "modifying above upper a with ogonek",
+        "brief": "mod above upper a with ogonek",
+        "sbrief": "mod above upper a with ogonek"
       }
     }
   },
@@ -415,7 +473,9 @@
         "short": "cap c acute"
       },
       "mathspeak": {
-        "default": "upper c acute"
+        "default": "modifying above upper c with acute",
+        "brief": "mod above upper c with acute",
+        "sbrief": "mod above upper c with acute"
       }
     }
   },
@@ -429,7 +489,9 @@
         "short": "cap c hat"
       },
       "mathspeak": {
-        "default": "upper c hat"
+        "default": "modifying above upper c with caret",
+        "brief": "mod above upper c with caret",
+        "sbrief": "mod above upper c with caret"
       }
     }
   },
@@ -443,7 +505,9 @@
         "short": "cap c overdot"
       },
       "mathspeak": {
-        "default": "upper c overdot"
+        "default": "modifying above upper c with dot",
+        "brief": "mod above upper c with dot",
+        "sbrief": "mod above upper c with dot"
       }
     }
   },
@@ -457,7 +521,9 @@
         "short": "cap c caron"
       },
       "mathspeak": {
-        "default": "upper c caron"
+        "default": "modifying above upper c with caron",
+        "brief": "mod above upper c with caron",
+        "sbrief": "mod above upper c with caron"
       }
     }
   },
@@ -471,7 +537,9 @@
         "short": "cap d caron"
       },
       "mathspeak": {
-        "default": "upper d caron"
+        "default": "modifying above upper d with caron",
+        "brief": "mod above upper d with caron",
+        "sbrief": "mod above upper d with caron"
       }
     }
   },
@@ -485,7 +553,9 @@
         "short": "cap e overbar"
       },
       "mathspeak": {
-        "default": "upper e overbar"
+        "default": "upper e overbar",
+        "brief": "upper e overbar",
+        "sbrief": "upper e overbar"
       }
     }
   },
@@ -499,7 +569,9 @@
         "short": "cap e breve"
       },
       "mathspeak": {
-        "default": "upper e breve"
+        "default": "modifying above upper e with breve",
+        "brief": "mod above upper e with breve",
+        "sbrief": "mod above upper e with breve"
       }
     }
   },
@@ -513,7 +585,9 @@
         "short": "cap e overdot"
       },
       "mathspeak": {
-        "default": "upper e overdot"
+        "default": "modifying above upper e with dot",
+        "brief": "mod above upper e with dot",
+        "sbrief": "mod above upper e with dot"
       }
     }
   },
@@ -527,7 +601,9 @@
         "short": "cap e ogonek"
       },
       "mathspeak": {
-        "default": "upper e ogonek"
+        "default": "modifying above upper e with ogonek",
+        "brief": "mod above upper e with ogonek",
+        "sbrief": "mod above upper e with ogonek"
       }
     }
   },
@@ -541,7 +617,9 @@
         "short": "cap e caron"
       },
       "mathspeak": {
-        "default": "upper e caron"
+        "default": "modifying above upper e with caron",
+        "brief": "mod above upper e with caron",
+        "sbrief": "mod above upper e with caron"
       }
     }
   },
@@ -555,7 +633,9 @@
         "short": "cap g hat"
       },
       "mathspeak": {
-        "default": "upper g hat"
+        "default": "modifying above upper g with caret",
+        "brief": "mod above upper g with caret",
+        "sbrief": "mod above upper g with caret"
       }
     }
   },
@@ -569,7 +649,9 @@
         "short": "cap g breve"
       },
       "mathspeak": {
-        "default": "upper g breve"
+        "default": "modifying above upper g with breve",
+        "brief": "mod above upper g with breve",
+        "sbrief": "mod above upper g with breve"
       }
     }
   },
@@ -583,7 +665,9 @@
         "short": "cap g overdot"
       },
       "mathspeak": {
-        "default": "upper g overdot"
+        "default": "modifying above upper g with dot",
+        "brief": "mod above upper g with dot",
+        "sbrief": "mod above upper g with dot"
       }
     }
   },
@@ -597,7 +681,9 @@
         "short": "cap g cedilla"
       },
       "mathspeak": {
-        "default": "upper g cedilla"
+        "default": "modifying above upper g with cedilla",
+        "brief": "mod above upper g with cedilla",
+        "sbrief": "mod above upper g with cedilla"
       }
     }
   },
@@ -611,7 +697,9 @@
         "short": "cap h hat"
       },
       "mathspeak": {
-        "default": "upper h hat"
+        "default": "modifying above upper h with caret",
+        "brief": "mod above upper h with caret",
+        "sbrief": "mod above upper h with caret"
       }
     }
   },
@@ -625,7 +713,9 @@
         "short": "cap i tilde"
       },
       "mathspeak": {
-        "default": "upper i tilde"
+        "default": "upper i overtilde",
+        "brief": "upper i overtilde",
+        "sbrief": "upper i overtilde"
       }
     }
   },
@@ -639,7 +729,9 @@
         "short": "cap i overbar"
       },
       "mathspeak": {
-        "default": "upper i overbar"
+        "default": "upper i overbar",
+        "brief": "upper i overbar",
+        "sbrief": "upper i overbar"
       }
     }
   },
@@ -653,7 +745,9 @@
         "short": "cap i breve"
       },
       "mathspeak": {
-        "default": "upper i breve"
+        "default": "modifying above upper i with breve",
+        "brief": "mod above upper i with breve",
+        "sbrief": "mod above upper i with breve"
       }
     }
   },
@@ -667,7 +761,9 @@
         "short": "cap i ogonek"
       },
       "mathspeak": {
-        "default": "upper i ogonek"
+        "default": "modifying above upper i with ogonek",
+        "brief": "mod above upper i with ogonek",
+        "sbrief": "mod above upper i with ogonek"
       }
     }
   },
@@ -681,7 +777,9 @@
         "short": "cap i overdot"
       },
       "mathspeak": {
-        "default": "upper i overdot"
+        "default": "modifying above upper i with dot",
+        "brief": "mod above upper i with dot",
+        "sbrief": "mod above upper i with dot"
       }
     }
   },
@@ -695,7 +793,9 @@
         "short": "cap j hat"
       },
       "mathspeak": {
-        "default": "upper j hat"
+        "default": "modifying above upper j with caret",
+        "brief": "mod above upper j with caret",
+        "sbrief": "mod above upper j with caret"
       }
     }
   },
@@ -709,7 +809,9 @@
         "short": "cap k cedilla"
       },
       "mathspeak": {
-        "default": "upper k cedilla"
+        "default": "modifying above upper k with cedilla",
+        "brief": "mod above upper k with cedilla",
+        "sbrief": "mod above upper k with cedilla"
       }
     }
   },
@@ -723,7 +825,9 @@
         "short": "cap l acute"
       },
       "mathspeak": {
-        "default": "upper l acute"
+        "default": "modifying above upper l with acute",
+        "brief": "mod above upper l with acute",
+        "sbrief": "mod above upper l with acute"
       }
     }
   },
@@ -737,7 +841,9 @@
         "short": "cap l cedilla"
       },
       "mathspeak": {
-        "default": "upper l cedilla"
+        "default": "modifying above upper l with cedilla",
+        "brief": "mod above upper l with cedilla",
+        "sbrief": "mod above upper l with cedilla"
       }
     }
   },
@@ -751,7 +857,9 @@
         "short": "cap l caron"
       },
       "mathspeak": {
-        "default": "upper l caron"
+        "default": "modifying above upper l with caron",
+        "brief": "mod above upper l with caron",
+        "sbrief": "mod above upper l with caron"
       }
     }
   },
@@ -765,7 +873,9 @@
         "short": "cap l middle dot"
       },
       "mathspeak": {
-        "default": "upper l middle dot"
+        "default": "modifying above upper l with middle dot",
+        "brief": "mod above upper l with middle dot",
+        "sbrief": "mod above upper l with middle dot"
       }
     }
   },
@@ -779,7 +889,9 @@
         "short": "cap n acute"
       },
       "mathspeak": {
-        "default": "upper n acute"
+        "default": "modifying above upper n with acute",
+        "brief": "mod above upper n with acute",
+        "sbrief": "mod above upper n with acute"
       }
     }
   },
@@ -793,7 +905,9 @@
         "short": "cap n cedilla"
       },
       "mathspeak": {
-        "default": "upper n cedilla"
+        "default": "modifying above upper n with cedilla",
+        "brief": "mod above upper n with cedilla",
+        "sbrief": "mod above upper n with cedilla"
       }
     }
   },
@@ -807,7 +921,9 @@
         "short": "cap n caron"
       },
       "mathspeak": {
-        "default": "upper n caron"
+        "default": "modifying above upper n with caron",
+        "brief": "mod above upper n with caron",
+        "sbrief": "mod above upper n with caron"
       }
     }
   },
@@ -821,7 +937,9 @@
         "short": "cap o overbar"
       },
       "mathspeak": {
-        "default": "upper o overbar"
+        "default": "upper o overbar",
+        "brief": "upper o overbar",
+        "sbrief": "upper o overbar"
       }
     }
   },
@@ -835,7 +953,9 @@
         "short": "cap o breve"
       },
       "mathspeak": {
-        "default": "upper o breve"
+        "default": "modifying above upper o with breve",
+        "brief": "mod above upper o with breve",
+        "sbrief": "mod above upper o with breve"
       }
     }
   },
@@ -849,7 +969,9 @@
         "short": "cap o double acute"
       },
       "mathspeak": {
-        "default": "upper o double acute"
+        "default": "modifying above upper o with double acute",
+        "brief": "mod above upper o with double acute",
+        "sbrief": "mod above upper o with double acute"
       }
     }
   },
@@ -863,7 +985,9 @@
         "short": "cap r acute"
       },
       "mathspeak": {
-        "default": "upper r acute"
+        "default": "modifying above upper r with acute",
+        "brief": "mod above upper r with acute",
+        "sbrief": "mod above upper r with acute"
       }
     }
   },
@@ -877,7 +1001,9 @@
         "short": "cap r cedilla"
       },
       "mathspeak": {
-        "default": "upper r cedilla"
+        "default": "modifying above upper r with cedilla",
+        "brief": "mod above upper r with cedilla",
+        "sbrief": "mod above upper r with cedilla"
       }
     }
   },
@@ -891,7 +1017,9 @@
         "short": "cap r caron"
       },
       "mathspeak": {
-        "default": "upper r caron"
+        "default": "modifying above upper r with caron",
+        "brief": "mod above upper r with caron",
+        "sbrief": "mod above upper r with caron"
       }
     }
   },
@@ -905,7 +1033,9 @@
         "short": "cap s acute"
       },
       "mathspeak": {
-        "default": "upper s acute"
+        "default": "modifying above upper s with acute",
+        "brief": "mod above upper s with acute",
+        "sbrief": "mod above upper s with acute"
       }
     }
   },
@@ -919,7 +1049,9 @@
         "short": "cap s hat"
       },
       "mathspeak": {
-        "default": "upper s hat"
+        "default": "modifying above upper s with caret",
+        "brief": "mod above upper s with caret",
+        "sbrief": "mod above upper s with caret"
       }
     }
   },
@@ -933,7 +1065,9 @@
         "short": "cap s cedilla"
       },
       "mathspeak": {
-        "default": "upper s cedilla"
+        "default": "modifying above upper s with cedilla",
+        "brief": "mod above upper s with cedilla",
+        "sbrief": "mod above upper s with cedilla"
       }
     }
   },
@@ -947,7 +1081,9 @@
         "short": "cap s caron"
       },
       "mathspeak": {
-        "default": "upper s caron"
+        "default": "modifying above upper s with caron",
+        "brief": "mod above upper s with caron",
+        "sbrief": "mod above upper s with caron"
       }
     }
   },
@@ -961,7 +1097,9 @@
         "short": "cap t cedilla"
       },
       "mathspeak": {
-        "default": "upper t cedilla"
+        "default": "modifying above upper t with cedilla",
+        "brief": "mod above upper t with cedilla",
+        "sbrief": "mod above upper t with cedilla"
       }
     }
   },
@@ -975,7 +1113,9 @@
         "short": "cap t caron"
       },
       "mathspeak": {
-        "default": "upper t caron"
+        "default": "modifying above upper t with caron",
+        "brief": "mod above upper t with caron",
+        "sbrief": "mod above upper t with caron"
       }
     }
   },
@@ -989,7 +1129,9 @@
         "short": "cap u tilde"
       },
       "mathspeak": {
-        "default": "upper u tilde"
+        "default": "upper u overtilde",
+        "brief": "upper u overtilde",
+        "sbrief": "upper u overtilde"
       }
     }
   },
@@ -1003,7 +1145,9 @@
         "short": "cap u overbar"
       },
       "mathspeak": {
-        "default": "upper u overbar"
+        "default": "upper u overbar",
+        "brief": "upper u overbar",
+        "sbrief": "upper u overbar"
       }
     }
   },
@@ -1017,7 +1161,9 @@
         "short": "cap u breve"
       },
       "mathspeak": {
-        "default": "upper u breve"
+        "default": "modifying above upper u with breve",
+        "brief": "mod above upper u with breve",
+        "sbrief": "mod above upper u with breve"
       }
     }
   },
@@ -1031,7 +1177,9 @@
         "short": "cap u ring"
       },
       "mathspeak": {
-        "default": "upper u ring"
+        "default": "modifying above upper u with ring",
+        "brief": "mod above upper u with ring",
+        "sbrief": "mod above upper u with ring"
       }
     }
   },
@@ -1045,7 +1193,9 @@
         "short": "cap u double acute"
       },
       "mathspeak": {
-        "default": "upper u double acute"
+        "default": "modifying above upper u with double acute",
+        "brief": "mod above upper u with double acute",
+        "sbrief": "mod above upper u with double acute"
       }
     }
   },
@@ -1059,7 +1209,9 @@
         "short": "cap u ogonek"
       },
       "mathspeak": {
-        "default": "upper u ogonek"
+        "default": "modifying above upper u with ogonek",
+        "brief": "mod above upper u with ogonek",
+        "sbrief": "mod above upper u with ogonek"
       }
     }
   },
@@ -1073,7 +1225,9 @@
         "short": "cap w hat"
       },
       "mathspeak": {
-        "default": "upper w hat"
+        "default": "modifying above upper w with caret",
+        "brief": "mod above upper w with caret",
+        "sbrief": "mod above upper w with caret"
       }
     }
   },
@@ -1087,7 +1241,9 @@
         "short": "cap y hat"
       },
       "mathspeak": {
-        "default": "upper y hat"
+        "default": "modifying above upper y with caret",
+        "brief": "mod above upper y with caret",
+        "sbrief": "mod above upper y with caret"
       }
     }
   },
@@ -1101,7 +1257,9 @@
         "short": "cap y double overdot"
       },
       "mathspeak": {
-        "default": "upper y double overdot"
+        "default": "modifying above upper y with double dot",
+        "brief": "mod above upper y with double dot",
+        "sbrief": "mod above upper y with double dot"
       }
     }
   },
@@ -1115,7 +1273,9 @@
         "short": "cap z acute"
       },
       "mathspeak": {
-        "default": "upper z acute"
+        "default": "modifying above upper z with acute",
+        "brief": "mod above upper z with acute",
+        "sbrief": "mod above upper z with acute"
       }
     }
   },
@@ -1129,7 +1289,9 @@
         "short": "cap z overdot"
       },
       "mathspeak": {
-        "default": "upper z overdot"
+        "default": "modifying above upper z with dot",
+        "brief": "mod above upper z with dot",
+        "sbrief": "mod above upper z with dot"
       }
     }
   },
@@ -1143,7 +1305,9 @@
         "short": "cap z caron"
       },
       "mathspeak": {
-        "default": "upper z caron"
+        "default": "modifying above upper z with caron",
+        "brief": "mod above upper z with caron",
+        "sbrief": "mod above upper z with caron"
       }
     }
   },
@@ -1157,7 +1321,9 @@
         "short": "cap a caron"
       },
       "mathspeak": {
-        "default": "upper a caron"
+        "default": "modifying above upper a with caron",
+        "brief": "mod above upper a with caron",
+        "sbrief": "mod above upper a with caron"
       }
     }
   },
@@ -1171,7 +1337,9 @@
         "short": "cap i caron"
       },
       "mathspeak": {
-        "default": "upper i caron"
+        "default": "modifying above upper i with caron",
+        "brief": "mod above upper i with caron",
+        "sbrief": "mod above upper i with caron"
       }
     }
   },
@@ -1185,7 +1353,9 @@
         "short": "cap o caron"
       },
       "mathspeak": {
-        "default": "upper o caron"
+        "default": "modifying above upper o with caron",
+        "brief": "mod above upper o with caron",
+        "sbrief": "mod above upper o with caron"
       }
     }
   },
@@ -1199,7 +1369,9 @@
         "short": "cap u caron"
       },
       "mathspeak": {
-        "default": "upper u caron"
+        "default": "modifying above upper u with caron",
+        "brief": "mod above upper u with caron",
+        "sbrief": "mod above upper u with caron"
       }
     }
   },
@@ -1213,7 +1385,9 @@
         "short": "cap g caron"
       },
       "mathspeak": {
-        "default": "upper g caron"
+        "default": "modifying above upper g with caron",
+        "brief": "mod above upper g with caron",
+        "sbrief": "mod above upper g with caron"
       }
     }
   },
@@ -1227,7 +1401,9 @@
         "short": "cap k caron"
       },
       "mathspeak": {
-        "default": "upper k caron"
+        "default": "modifying above upper k with caron",
+        "brief": "mod above upper k with caron",
+        "sbrief": "mod above upper k with caron"
       }
     }
   },
@@ -1241,7 +1417,9 @@
         "short": "cap o ogonek"
       },
       "mathspeak": {
-        "default": "upper o ogonek"
+        "default": "modifying above upper o with ogonek",
+        "brief": "mod above upper o with ogonek",
+        "sbrief": "mod above upper o with ogonek"
       }
     }
   },
@@ -1255,7 +1433,9 @@
         "short": "cap g acute"
       },
       "mathspeak": {
-        "default": "upper g acute"
+        "default": "modifying above upper g with acute",
+        "brief": "mod above upper g with acute",
+        "sbrief": "mod above upper g with acute"
       }
     }
   },
@@ -1269,7 +1449,9 @@
         "short": "cap n grave"
       },
       "mathspeak": {
-        "default": "upper n grave"
+        "default": "modifying above upper n with grave",
+        "brief": "mod above upper n with grave",
+        "sbrief": "mod above upper n with grave"
       }
     }
   },
@@ -1283,7 +1465,9 @@
         "short": "cap a double grave"
       },
       "mathspeak": {
-        "default": "upper a double grave"
+        "default": "modifying above upper a with double grave",
+        "brief": "mod above upper a with double grave",
+        "sbrief": "mod above upper a with double grave"
       }
     }
   },
@@ -1297,7 +1481,9 @@
         "short": "cap a inverted breve"
       },
       "mathspeak": {
-        "default": "upper a inverted breve"
+        "default": "modifying above upper a with inverted breve",
+        "brief": "mod above upper a with inverted breve",
+        "sbrief": "mod above upper a with inverted breve"
       }
     }
   },
@@ -1311,7 +1497,9 @@
         "short": "cap e double grave"
       },
       "mathspeak": {
-        "default": "upper e double grave"
+        "default": "modifying above upper e with double grave",
+        "brief": "mod above upper e with double grave",
+        "sbrief": "mod above upper e with double grave"
       }
     }
   },
@@ -1325,7 +1513,9 @@
         "short": "cap e inverted breve"
       },
       "mathspeak": {
-        "default": "upper e inverted breve"
+        "default": "modifying above upper e with inverted breve",
+        "brief": "mod above upper e with inverted breve",
+        "sbrief": "mod above upper e with inverted breve"
       }
     }
   },
@@ -1339,7 +1529,9 @@
         "short": "cap i double grave"
       },
       "mathspeak": {
-        "default": "upper i double grave"
+        "default": "modifying above upper i with double grave",
+        "brief": "mod above upper i with double grave",
+        "sbrief": "mod above upper i with double grave"
       }
     }
   },
@@ -1353,7 +1545,9 @@
         "short": "cap i inverted breve"
       },
       "mathspeak": {
-        "default": "upper i inverted breve"
+        "default": "modifying above upper i with inverted breve",
+        "brief": "mod above upper i with inverted breve",
+        "sbrief": "mod above upper i with inverted breve"
       }
     }
   },
@@ -1367,7 +1561,9 @@
         "short": "cap o double grave"
       },
       "mathspeak": {
-        "default": "upper o double grave"
+        "default": "modifying above upper o with double grave",
+        "brief": "mod above upper o with double grave",
+        "sbrief": "mod above upper o with double grave"
       }
     }
   },
@@ -1381,7 +1577,9 @@
         "short": "cap o inverted breve"
       },
       "mathspeak": {
-        "default": "upper o inverted breve"
+        "default": "modifying above upper o with inverted breve",
+        "brief": "mod above upper o with inverted breve",
+        "sbrief": "mod above upper o with inverted breve"
       }
     }
   },
@@ -1395,7 +1593,9 @@
         "short": "cap r double grave"
       },
       "mathspeak": {
-        "default": "upper r double grave"
+        "default": "modifying above upper r with double grave",
+        "brief": "mod above upper r with double grave",
+        "sbrief": "mod above upper r with double grave"
       }
     }
   },
@@ -1409,7 +1609,9 @@
         "short": "cap r inverted breve"
       },
       "mathspeak": {
-        "default": "upper r inverted breve"
+        "default": "modifying above upper r with inverted breve",
+        "brief": "mod above upper r with inverted breve",
+        "sbrief": "mod above upper r with inverted breve"
       }
     }
   },
@@ -1423,7 +1625,9 @@
         "short": "cap u double grave"
       },
       "mathspeak": {
-        "default": "upper u double grave"
+        "default": "modifying above upper u with double grave",
+        "brief": "mod above upper u with double grave",
+        "sbrief": "mod above upper u with double grave"
       }
     }
   },
@@ -1437,7 +1641,9 @@
         "short": "cap u inverted breve"
       },
       "mathspeak": {
-        "default": "upper u inverted breve"
+        "default": "modifying above upper u with inverted breve",
+        "brief": "mod above upper u with inverted breve",
+        "sbrief": "mod above upper u with inverted breve"
       }
     }
   },
@@ -1451,7 +1657,9 @@
         "short": "cap s comma below"
       },
       "mathspeak": {
-        "default": "upper s comma below"
+        "default": "modifying below upper s with comma below",
+        "brief": "mod below upper s with comma below",
+        "sbrief": "mod below upper s with comma below"
       }
     }
   },
@@ -1465,7 +1673,9 @@
         "short": "cap t comma below"
       },
       "mathspeak": {
-        "default": "upper t comma below"
+        "default": "modifying below upper t with comma below",
+        "brief": "mod below upper t with comma below",
+        "sbrief": "mod below upper t with comma below"
       }
     }
   },
@@ -1478,7 +1688,9 @@
         "short": "cap h caron"
       },
       "mathspeak": {
-        "default": "upper h caron"
+        "default": "modifying above upper h with caron",
+        "brief": "mod above upper h with caron",
+        "sbrief": "mod above upper h with caron"
       }
     }
   },
@@ -1492,7 +1704,9 @@
         "short": "cap a overdot"
       },
       "mathspeak": {
-        "default": "upper a overdot"
+        "default": "modifying above upper a with dot",
+        "brief": "mod above upper a with dot",
+        "sbrief": "mod above upper a with dot"
       }
     }
   },
@@ -1506,7 +1720,9 @@
         "short": "cap e cedilla"
       },
       "mathspeak": {
-        "default": "upper e cedilla"
+        "default": "modifying above upper e with cedilla",
+        "brief": "mod above upper e with cedilla",
+        "sbrief": "mod above upper e with cedilla"
       }
     }
   },
@@ -1520,7 +1736,9 @@
         "short": "cap o overdot"
       },
       "mathspeak": {
-        "default": "upper o overdot"
+        "default": "modifying above upper o with dot",
+        "brief": "mod above upper o with dot",
+        "sbrief": "mod above upper o with dot"
       }
     }
   },
@@ -1534,7 +1752,9 @@
         "short": "cap y overbar"
       },
       "mathspeak": {
-        "default": "upper y overbar"
+        "default": "upper y overbar",
+        "brief": "upper y overbar",
+        "sbrief": "upper y overbar"
       }
     }
   },
@@ -1548,7 +1768,9 @@
         "short": "cap a ring below"
       },
       "mathspeak": {
-        "default": "upper a ring below"
+        "default": "modifying below upper a with ring below",
+        "brief": "mod below upper a with ring below",
+        "sbrief": "mod below upper a with ring below"
       }
     }
   },
@@ -1562,7 +1784,9 @@
         "short": "cap b overdot"
       },
       "mathspeak": {
-        "default": "upper b overdot"
+        "default": "modifying above upper b with dot",
+        "brief": "mod above upper b with dot",
+        "sbrief": "mod above upper b with dot"
       }
     }
   },
@@ -1576,7 +1800,9 @@
         "short": "cap b underdot"
       },
       "mathspeak": {
-        "default": "upper b underdot"
+        "default": "modifying below upper b with dot",
+        "brief": "mod below upper b with dot",
+        "sbrief": "mod below upper b with dot"
       }
     }
   },
@@ -1590,7 +1816,9 @@
         "short": "cap b underbar"
       },
       "mathspeak": {
-        "default": "upper b underbar"
+        "default": "upper b underbar",
+        "brief": "upper b underbar",
+        "sbrief": "upper b underbar"
       }
     }
   },
@@ -1604,7 +1832,9 @@
         "short": "cap d overdot"
       },
       "mathspeak": {
-        "default": "upper d overdot"
+        "default": "modifying above upper d with dot",
+        "brief": "mod above upper d with dot",
+        "sbrief": "mod above upper d with dot"
       }
     }
   },
@@ -1618,7 +1848,9 @@
         "short": "cap d underdot"
       },
       "mathspeak": {
-        "default": "upper d underdot"
+        "default": "modifying below upper d with dot",
+        "brief": "mod below upper d with dot",
+        "sbrief": "mod below upper d with dot"
       }
     }
   },
@@ -1632,7 +1864,9 @@
         "short": "cap d underbar"
       },
       "mathspeak": {
-        "default": "upper d underbar"
+        "default": "upper d underbar",
+        "brief": "upper d underbar",
+        "sbrief": "upper d underbar"
       }
     }
   },
@@ -1646,7 +1880,9 @@
         "short": "cap d cedilla"
       },
       "mathspeak": {
-        "default": "upper d cedilla"
+        "default": "modifying above upper d with cedilla",
+        "brief": "mod above upper d with cedilla",
+        "sbrief": "mod above upper d with cedilla"
       }
     }
   },
@@ -1660,7 +1896,9 @@
         "short": "cap d underhat"
       },
       "mathspeak": {
-        "default": "upper d underhat"
+        "default": "modifying below upper d with caret",
+        "brief": "mod below upper d with caret",
+        "sbrief": "mod below upper d with caret"
       }
     }
   },
@@ -1674,7 +1912,9 @@
         "short": "cap e underhat"
       },
       "mathspeak": {
-        "default": "upper e underhat"
+        "default": "modifying below upper e with caret",
+        "brief": "mod below upper e with caret",
+        "sbrief": "mod below upper e with caret"
       }
     }
   },
@@ -1688,7 +1928,9 @@
         "short": "cap e tilde below"
       },
       "mathspeak": {
-        "default": "upper e tilde below"
+        "default": "upper e undertilde",
+        "brief": "upper e undertilde",
+        "sbrief": "upper e undertilde"
       }
     }
   },
@@ -1702,7 +1944,9 @@
         "short": "cap f overdot"
       },
       "mathspeak": {
-        "default": "upper f overdot"
+        "default": "modifying above upper f with dot",
+        "brief": "mod above upper f with dot",
+        "sbrief": "mod above upper f with dot"
       }
     }
   },
@@ -1716,7 +1960,9 @@
         "short": "cap g overbar"
       },
       "mathspeak": {
-        "default": "upper g overbar"
+        "default": "upper g overbar",
+        "brief": "upper g overbar",
+        "sbrief": "upper g overbar"
       }
     }
   },
@@ -1730,7 +1976,9 @@
         "short": "cap h overdot"
       },
       "mathspeak": {
-        "default": "upper h overdot"
+        "default": "modifying above upper h with dot",
+        "brief": "mod above upper h with dot",
+        "sbrief": "mod above upper h with dot"
       }
     }
   },
@@ -1744,7 +1992,9 @@
         "short": "cap h underdot"
       },
       "mathspeak": {
-        "default": "upper h underdot"
+        "default": "modifying below upper h with dot",
+        "brief": "mod below upper h with dot",
+        "sbrief": "mod below upper h with dot"
       }
     }
   },
@@ -1758,7 +2008,9 @@
         "short": "cap h double overdot"
       },
       "mathspeak": {
-        "default": "upper h double overdot"
+        "default": "modifying above upper h with double dot",
+        "brief": "mod above upper h with double dot",
+        "sbrief": "mod above upper h with double dot"
       }
     }
   },
@@ -1772,7 +2024,9 @@
         "short": "cap h cedilla"
       },
       "mathspeak": {
-        "default": "upper h cedilla"
+        "default": "modifying above upper h with cedilla",
+        "brief": "mod above upper h with cedilla",
+        "sbrief": "mod above upper h with cedilla"
       }
     }
   },
@@ -1786,7 +2040,9 @@
         "short": "cap h breve below"
       },
       "mathspeak": {
-        "default": "upper h breve below"
+        "default": "modifying below upper h with breve below",
+        "brief": "mod below upper h with breve below",
+        "sbrief": "mod below upper h with breve below"
       }
     }
   },
@@ -1800,7 +2056,9 @@
         "short": "cap i tilde below"
       },
       "mathspeak": {
-        "default": "upper i tilde below"
+        "default": "upper i undertilde",
+        "brief": "upper i undertilde",
+        "sbrief": "upper i undertilde"
       }
     }
   },
@@ -1814,7 +2072,9 @@
         "short": "cap k acute"
       },
       "mathspeak": {
-        "default": "upper k acute"
+        "default": "modifying above upper k with acute",
+        "brief": "mod above upper k with acute",
+        "sbrief": "mod above upper k with acute"
       }
     }
   },
@@ -1828,7 +2088,9 @@
         "short": "cap k underdot"
       },
       "mathspeak": {
-        "default": "upper k underdot"
+        "default": "modifying below upper k with dot",
+        "brief": "mod below upper k with dot",
+        "sbrief": "mod below upper k with dot"
       }
     }
   },
@@ -1842,7 +2104,9 @@
         "short": "cap k underbar"
       },
       "mathspeak": {
-        "default": "upper k underbar"
+        "default": "upper k underbar",
+        "brief": "upper k underbar",
+        "sbrief": "upper k underbar"
       }
     }
   },
@@ -1856,7 +2120,9 @@
         "short": "cap l underdot"
       },
       "mathspeak": {
-        "default": "upper l underdot"
+        "default": "modifying below upper l with dot",
+        "brief": "mod below upper l with dot",
+        "sbrief": "mod below upper l with dot"
       }
     }
   },
@@ -1870,7 +2136,9 @@
         "short": "cap l underbar"
       },
       "mathspeak": {
-        "default": "upper l underbar"
+        "default": "upper l underbar",
+        "brief": "upper l underbar",
+        "sbrief": "upper l underbar"
       }
     }
   },
@@ -1884,7 +2152,9 @@
         "short": "cap l underhat"
       },
       "mathspeak": {
-        "default": "upper l underhat"
+        "default": "modifying below upper l with caret",
+        "brief": "mod below upper l with caret",
+        "sbrief": "mod below upper l with caret"
       }
     }
   },
@@ -1898,7 +2168,9 @@
         "short": "cap m acute"
       },
       "mathspeak": {
-        "default": "upper m acute"
+        "default": "modifying above upper m with acute",
+        "brief": "mod above upper m with acute",
+        "sbrief": "mod above upper m with acute"
       }
     }
   },
@@ -1912,7 +2184,9 @@
         "short": "cap m overdot"
       },
       "mathspeak": {
-        "default": "upper m overdot"
+        "default": "modifying above upper m with dot",
+        "brief": "mod above upper m with dot",
+        "sbrief": "mod above upper m with dot"
       }
     }
   },
@@ -1926,7 +2200,9 @@
         "short": "cap m underdot"
       },
       "mathspeak": {
-        "default": "upper m underdot"
+        "default": "modifying below upper m with dot",
+        "brief": "mod below upper m with dot",
+        "sbrief": "mod below upper m with dot"
       }
     }
   },
@@ -1940,7 +2216,9 @@
         "short": "cap n overdot"
       },
       "mathspeak": {
-        "default": "upper n overdot"
+        "default": "modifying above upper n with dot",
+        "brief": "mod above upper n with dot",
+        "sbrief": "mod above upper n with dot"
       }
     }
   },
@@ -1954,7 +2232,9 @@
         "short": "cap n underdot"
       },
       "mathspeak": {
-        "default": "upper n underdot"
+        "default": "modifying below upper n with dot",
+        "brief": "mod below upper n with dot",
+        "sbrief": "mod below upper n with dot"
       }
     }
   },
@@ -1968,7 +2248,9 @@
         "short": "cap n underbar"
       },
       "mathspeak": {
-        "default": "upper n underbar"
+        "default": "upper n underbar",
+        "brief": "upper n underbar",
+        "sbrief": "upper n underbar"
       }
     }
   },
@@ -1982,7 +2264,9 @@
         "short": "cap n underhat"
       },
       "mathspeak": {
-        "default": "upper n underhat"
+        "default": "modifying below upper n with caret",
+        "brief": "mod below upper n with caret",
+        "sbrief": "mod below upper n with caret"
       }
     }
   },
@@ -1996,7 +2280,9 @@
         "short": "cap p acute"
       },
       "mathspeak": {
-        "default": "upper p acute"
+        "default": "modifying above upper p with acute",
+        "brief": "mod above upper p with acute",
+        "sbrief": "mod above upper p with acute"
       }
     }
   },
@@ -2010,7 +2296,9 @@
         "short": "cap p overdot"
       },
       "mathspeak": {
-        "default": "upper p overdot"
+        "default": "modifying above upper p with dot",
+        "brief": "mod above upper p with dot",
+        "sbrief": "mod above upper p with dot"
       }
     }
   },
@@ -2024,7 +2312,9 @@
         "short": "cap r overdot"
       },
       "mathspeak": {
-        "default": "upper r overdot"
+        "default": "modifying above upper r with dot",
+        "brief": "mod above upper r with dot",
+        "sbrief": "mod above upper r with dot"
       }
     }
   },
@@ -2038,7 +2328,9 @@
         "short": "cap r underdot"
       },
       "mathspeak": {
-        "default": "upper r underdot"
+        "default": "modifying below upper r with dot",
+        "brief": "mod below upper r with dot",
+        "sbrief": "mod below upper r with dot"
       }
     }
   },
@@ -2052,7 +2344,9 @@
         "short": "cap r underbar"
       },
       "mathspeak": {
-        "default": "upper r underbar"
+        "default": "upper r underbar",
+        "brief": "upper r underbar",
+        "sbrief": "upper r underbar"
       }
     }
   },
@@ -2066,7 +2360,9 @@
         "short": "cap s overdot"
       },
       "mathspeak": {
-        "default": "upper s overdot"
+        "default": "modifying above upper s with dot",
+        "brief": "mod above upper s with dot",
+        "sbrief": "mod above upper s with dot"
       }
     }
   },
@@ -2080,7 +2376,9 @@
         "short": "cap s underdot"
       },
       "mathspeak": {
-        "default": "upper s underdot"
+        "default": "modifying below upper s with dot",
+        "brief": "mod below upper s with dot",
+        "sbrief": "mod below upper s with dot"
       }
     }
   },
@@ -2094,7 +2392,9 @@
         "short": "cap t overdot"
       },
       "mathspeak": {
-        "default": "upper t overdot"
+        "default": "modifying above upper t with dot",
+        "brief": "mod above upper t with dot",
+        "sbrief": "mod above upper t with dot"
       }
     }
   },
@@ -2108,7 +2408,9 @@
         "short": "cap t underdot"
       },
       "mathspeak": {
-        "default": "upper t underdot"
+        "default": "modifying below upper t with dot",
+        "brief": "mod below upper t with dot",
+        "sbrief": "mod below upper t with dot"
       }
     }
   },
@@ -2122,7 +2424,9 @@
         "short": "cap t underbar"
       },
       "mathspeak": {
-        "default": "upper t underbar"
+        "default": "upper t underbar",
+        "brief": "upper t underbar",
+        "sbrief": "upper t underbar"
       }
     }
   },
@@ -2136,7 +2440,9 @@
         "short": "cap t underhat"
       },
       "mathspeak": {
-        "default": "upper t underhat"
+        "default": "modifying below upper t with caret",
+        "brief": "mod below upper t with caret",
+        "sbrief": "mod below upper t with caret"
       }
     }
   },
@@ -2150,7 +2456,9 @@
         "short": "cap u double underdot"
       },
       "mathspeak": {
-        "default": "upper u double underdot"
+        "default": "modifying below upper u with double dot",
+        "brief": "mod below upper u with double dot",
+        "sbrief": "mod below upper u with double dot"
       }
     }
   },
@@ -2164,7 +2472,9 @@
         "short": "cap u tilde below"
       },
       "mathspeak": {
-        "default": "upper u tilde below"
+        "default": "upper u undertilde",
+        "brief": "upper u undertilde",
+        "sbrief": "upper u undertilde"
       }
     }
   },
@@ -2178,7 +2488,9 @@
         "short": "cap u underhat"
       },
       "mathspeak": {
-        "default": "upper u underhat"
+        "default": "modifying below upper u with caret",
+        "brief": "mod below upper u with caret",
+        "sbrief": "mod below upper u with caret"
       }
     }
   },
@@ -2192,7 +2504,9 @@
         "short": "cap v tilde"
       },
       "mathspeak": {
-        "default": "upper v tilde"
+        "default": "upper v overtilde",
+        "brief": "upper v overtilde",
+        "sbrief": "upper v overtilde"
       }
     }
   },
@@ -2206,7 +2520,9 @@
         "short": "cap v underdot"
       },
       "mathspeak": {
-        "default": "upper v underdot"
+        "default": "modifying below upper v with dot",
+        "brief": "mod below upper v with dot",
+        "sbrief": "mod below upper v with dot"
       }
     }
   },
@@ -2220,7 +2536,9 @@
         "short": "cap w grave"
       },
       "mathspeak": {
-        "default": "upper w grave"
+        "default": "modifying above upper w with grave",
+        "brief": "mod above upper w with grave",
+        "sbrief": "mod above upper w with grave"
       }
     }
   },
@@ -2234,7 +2552,9 @@
         "short": "cap w acute"
       },
       "mathspeak": {
-        "default": "upper w acute"
+        "default": "modifying above upper w with acute",
+        "brief": "mod above upper w with acute",
+        "sbrief": "mod above upper w with acute"
       }
     }
   },
@@ -2248,7 +2568,9 @@
         "short": "cap w double overdot"
       },
       "mathspeak": {
-        "default": "upper w double overdot"
+        "default": "modifying above upper w with double dot",
+        "brief": "mod above upper w with double dot",
+        "sbrief": "mod above upper w with double dot"
       }
     }
   },
@@ -2262,7 +2584,9 @@
         "short": "cap w overdot"
       },
       "mathspeak": {
-        "default": "upper w overdot"
+        "default": "modifying above upper w with dot",
+        "brief": "mod above upper w with dot",
+        "sbrief": "mod above upper w with dot"
       }
     }
   },
@@ -2276,7 +2600,9 @@
         "short": "cap w underdot"
       },
       "mathspeak": {
-        "default": "upper w underdot"
+        "default": "modifying below upper w with dot",
+        "brief": "mod below upper w with dot",
+        "sbrief": "mod below upper w with dot"
       }
     }
   },
@@ -2290,7 +2616,9 @@
         "short": "cap x overdot"
       },
       "mathspeak": {
-        "default": "upper x overdot"
+        "default": "modifying above upper x with dot",
+        "brief": "mod above upper x with dot",
+        "sbrief": "mod above upper x with dot"
       }
     }
   },
@@ -2304,7 +2632,9 @@
         "short": "cap x double overdot"
       },
       "mathspeak": {
-        "default": "upper x double overdot"
+        "default": "modifying above upper x with double dot",
+        "brief": "mod above upper x with double dot",
+        "sbrief": "mod above upper x with double dot"
       }
     }
   },
@@ -2318,7 +2648,9 @@
         "short": "cap y overdot"
       },
       "mathspeak": {
-        "default": "upper y overdot"
+        "default": "modifying above upper y with dot",
+        "brief": "mod above upper y with dot",
+        "sbrief": "mod above upper y with dot"
       }
     }
   },
@@ -2332,7 +2664,9 @@
         "short": "cap z circumflex"
       },
       "mathspeak": {
-        "default": "upper z circumflex"
+        "default": "modifying above upper z with circumflex",
+        "brief": "mod above upper z with circumflex",
+        "sbrief": "mod above upper z with circumflex"
       }
     }
   },
@@ -2346,7 +2680,9 @@
         "short": "cap z underdot"
       },
       "mathspeak": {
-        "default": "upper z underdot"
+        "default": "modifying below upper z with dot",
+        "brief": "mod below upper z with dot",
+        "sbrief": "mod below upper z with dot"
       }
     }
   },
@@ -2360,7 +2696,9 @@
         "short": "cap z underbar"
       },
       "mathspeak": {
-        "default": "upper z underbar"
+        "default": "upper z underbar",
+        "brief": "upper z underbar",
+        "sbrief": "upper z underbar"
       }
     }
   },
@@ -2374,7 +2712,9 @@
         "short": "cap a underdot"
       },
       "mathspeak": {
-        "default": "upper a underdot"
+        "default": "modifying below upper a with dot",
+        "brief": "mod below upper a with dot",
+        "sbrief": "mod below upper a with dot"
       }
     }
   },
@@ -2388,7 +2728,9 @@
         "short": "cap a hook"
       },
       "mathspeak": {
-        "default": "upper a hook"
+        "default": "modifying above upper a with hook",
+        "brief": "mod above upper a with hook",
+        "sbrief": "mod above upper a with hook"
       }
     }
   },
@@ -2402,7 +2744,9 @@
         "short": "cap e underdot"
       },
       "mathspeak": {
-        "default": "upper e underdot"
+        "default": "modifying below upper e with dot",
+        "brief": "mod below upper e with dot",
+        "sbrief": "mod below upper e with dot"
       }
     }
   },
@@ -2416,7 +2760,9 @@
         "short": "cap e hook"
       },
       "mathspeak": {
-        "default": "upper e hook"
+        "default": "modifying above upper e with hook",
+        "brief": "mod above upper e with hook",
+        "sbrief": "mod above upper e with hook"
       }
     }
   },
@@ -2430,7 +2776,9 @@
         "short": "cap e tilde"
       },
       "mathspeak": {
-        "default": "upper e tilde"
+        "default": "upper e overtilde",
+        "brief": "upper e overtilde",
+        "sbrief": "upper e overtilde"
       }
     }
   },
@@ -2444,7 +2792,9 @@
         "short": "cap i hook"
       },
       "mathspeak": {
-        "default": "upper i hook"
+        "default": "modifying above upper i with hook",
+        "brief": "mod above upper i with hook",
+        "sbrief": "mod above upper i with hook"
       }
     }
   },
@@ -2458,7 +2808,9 @@
         "short": "cap i underdot"
       },
       "mathspeak": {
-        "default": "upper i underdot"
+        "default": "modifying below upper i with dot",
+        "brief": "mod below upper i with dot",
+        "sbrief": "mod below upper i with dot"
       }
     }
   },
@@ -2472,7 +2824,9 @@
         "short": "cap o underdot"
       },
       "mathspeak": {
-        "default": "upper o underdot"
+        "default": "modifying below upper o with dot",
+        "brief": "mod below upper o with dot",
+        "sbrief": "mod below upper o with dot"
       }
     }
   },
@@ -2486,7 +2840,9 @@
         "short": "cap o hook"
       },
       "mathspeak": {
-        "default": "upper o hook"
+        "default": "modifying above upper o with hook",
+        "brief": "mod above upper o with hook",
+        "sbrief": "mod above upper o with hook"
       }
     }
   },
@@ -2500,7 +2856,9 @@
         "short": "cap u underdot"
       },
       "mathspeak": {
-        "default": "upper u underdot"
+        "default": "modifying below upper u with dot",
+        "brief": "mod below upper u with dot",
+        "sbrief": "mod below upper u with dot"
       }
     }
   },
@@ -2514,7 +2872,9 @@
         "short": "cap u hook"
       },
       "mathspeak": {
-        "default": "upper u hook"
+        "default": "modifying above upper u with hook",
+        "brief": "mod above upper u with hook",
+        "sbrief": "mod above upper u with hook"
       }
     }
   },
@@ -2528,7 +2888,9 @@
         "short": "cap y grave"
       },
       "mathspeak": {
-        "default": "upper y grave"
+        "default": "modifying above upper y with grave",
+        "brief": "mod above upper y with grave",
+        "sbrief": "mod above upper y with grave"
       }
     }
   },
@@ -2542,7 +2904,9 @@
         "short": "cap y underdot"
       },
       "mathspeak": {
-        "default": "upper y underdot"
+        "default": "modifying below upper y with dot",
+        "brief": "mod below upper y with dot",
+        "sbrief": "mod below upper y with dot"
       }
     }
   },
@@ -2556,7 +2920,9 @@
         "short": "cap y hook"
       },
       "mathspeak": {
-        "default": "upper y hook"
+        "default": "modifying above upper y with hook",
+        "brief": "mod above upper y with hook",
+        "sbrief": "mod above upper y with hook"
       }
     }
   },
@@ -2570,7 +2936,9 @@
         "short": "cap y tilde"
       },
       "mathspeak": {
-        "default": "upper y tilde"
+        "default": "upper y overtilde",
+        "brief": "upper y overtilde",
+        "sbrief": "upper y overtilde"
       }
     }
   }
