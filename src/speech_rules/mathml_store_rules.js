@@ -560,7 +560,7 @@ sre.MathmlStoreRules.initSpecializationRules_ = function() {
 
 
 /**
- * Initialize mathJax Aliases
+ * Semantic rules.
  * @private
  */
 sre.MathmlStoreRules.initSemanticRules_ = function() {
