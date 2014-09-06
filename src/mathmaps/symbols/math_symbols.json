@@ -1961,7 +1961,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "asymptotically equal to"
+        "default": "asymptotically equals"
       }
     },
     "key": "2243"
@@ -1970,7 +1970,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "not asymptotically equal to"
+        "default": "not asymptotically equals"
       }
     },
     "key": "2244"
@@ -1979,7 +1979,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "approximately equal to"
+        "default": "approximately equals"
       }
     },
     "key": "2245"
@@ -1988,7 +1988,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "approximately but not actually equal to"
+        "default": "approximately but not actually equals"
       }
     },
     "key": "2246"
@@ -1997,7 +1997,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither approximately nor actually equal to"
+        "default": "neither approximately nor actually equals"
       }
     },
     "key": "2247"
@@ -2006,7 +2006,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "almost equal to"
+        "default": "almost equals"
       }
     },
     "key": "2248"
@@ -2015,7 +2015,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "not almost equal to"
+        "default": "not almost equals"
       }
     },
     "key": "2249"
@@ -2024,7 +2024,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "almost equal or equal to"
+        "default": "almost equal or equals"
       }
     },
     "key": "224A"
@@ -2042,7 +2042,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "all equal to"
+        "default": "all equals"
       }
     },
     "key": "224C"
@@ -2087,7 +2087,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "geometrically equal to"
+        "default": "geometrically equals"
       }
     },
     "key": "2251"
@@ -2096,7 +2096,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "approximately equal to or the image of"
+        "default": "approximately equals or the image of"
       }
     },
     "key": "2252"
@@ -2105,7 +2105,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "image of or approximately equal to"
+        "default": "image of or approximately equals"
       }
     },
     "key": "2253"
@@ -2134,7 +2134,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "ring in equal to"
+        "default": "ring in equals"
       }
     },
     "key": "2256"
@@ -2143,7 +2143,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "ring equal to"
+        "default": "ring equals"
       }
     },
     "key": "2257"
@@ -2188,7 +2188,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "delta equal to"
+        "default": "delta equals"
       }
     },
     "key": "225C"
@@ -2197,7 +2197,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equal to by definition"
+        "default": "equals by definition"
       }
     },
     "key": "225D"
@@ -2215,7 +2215,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "questioned equal to"
+        "default": "questioned equals"
       }
     },
     "key": "225F"
@@ -2224,7 +2224,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "not equal to"
+        "default": "not equals"
       }
     },
     "key": "2260"
@@ -2260,8 +2260,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than or equal to",
-        "alternative": "less than or equal to"
+        "default": "less than or equals",
+        "alternative": "less than or equals"
       }
     },
     "key": "2264"
@@ -2270,8 +2270,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than or equal to",
-        "alternative": "greater than or equal to"
+        "default": "greater than or equals",
+        "alternative": "greater than or equals"
       }
     },
     "key": "2265"
@@ -2280,8 +2280,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than over equal to",
-        "alternative": "less than over equal to"
+        "default": "less than over equals",
+        "alternative": "less than over equals"
       }
     },
     "key": "2266"
@@ -2290,8 +2290,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than over equal to",
-        "alternative": "greater than over equal to"
+        "default": "greater than over equals",
+        "alternative": "greater than over equals"
       }
     },
     "key": "2267"
@@ -2300,8 +2300,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than but not equal to",
-        "alternative": "less than but not equal to"
+        "default": "less than but not equals",
+        "alternative": "less than but not equals"
       }
     },
     "key": "2268"
@@ -2310,8 +2310,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than but not equal to",
-        "alternative": "greater than but not equal to"
+        "default": "greater than but not equals",
+        "alternative": "greater than but not equals"
       }
     },
     "key": "2269"
@@ -2378,8 +2378,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither less than nor equal to",
-        "alternative": "neither less than nor equal to"
+        "default": "neither less than nor equals",
+        "alternative": "neither less than nor equals"
       }
     },
     "key": "2270"
@@ -2388,8 +2388,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither greater than nor equal to",
-        "alternative": "neither greater than nor equal to"
+        "default": "neither greater than nor equals",
+        "alternative": "neither greater than nor equals"
       }
     },
     "key": "2271"
@@ -2496,7 +2496,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "precedes or equal to"
+        "default": "precedes or equals"
       }
     },
     "key": "227C"
@@ -2505,7 +2505,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "succeeds or equal to"
+        "default": "succeeds or equals"
       }
     },
     "key": "227D"
@@ -2586,7 +2586,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset of or equal to"
+        "default": "subset of or equals"
       }
     },
     "key": "2286"
@@ -2595,7 +2595,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset of or equal to"
+        "default": "superset of or equals"
       }
     },
     "key": "2287"
@@ -2604,7 +2604,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither a subset of nor equal to"
+        "default": "neither a subset of nor equals"
       }
     },
     "key": "2288"
@@ -2613,7 +2613,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "neither a superset of nor equal to"
+        "default": "neither a superset of nor equals"
       }
     },
     "key": "2289"
@@ -2622,9 +2622,9 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset of with not equal to",
-        "alternative": "subset of or not equal to",
-        "short": "subset of or not equal to"
+        "default": "subset of with not equals",
+        "alternative": "subset of or not equals",
+        "short": "subset of or not equals"
       }
     },
     "key": "228A"
@@ -2633,9 +2633,9 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset of with not equal to",
-        "alternative": "superset of or not equal to",
-        "short": "superset of or not equal to"
+        "default": "superset of with not equals",
+        "alternative": "superset of or not equals",
+        "short": "superset of or not equals"
       }
     },
     "key": "228B"
@@ -2689,7 +2689,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "square image of or equal to"
+        "default": "square image of or equals"
       }
     },
     "key": "2291"
@@ -2698,7 +2698,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "square original of or equal to"
+        "default": "square original of or equals"
       }
     },
     "key": "2292"
@@ -3004,7 +3004,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "normal subgroup of or equal to"
+        "default": "normal subgroup of or equals"
       }
     },
     "key": "22B4"
@@ -3013,7 +3013,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "contains as normal subgroup or equal to"
+        "default": "contains as normal subgroup or equals"
       }
     },
     "key": "22B5"
@@ -3343,8 +3343,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than equal to or greater than",
-        "alternative": "less than equal to or greater than"
+        "default": "less than equals or greater than",
+        "alternative": "less than equals or greater than"
       }
     },
     "key": "22DA"
@@ -3353,8 +3353,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than equal to or less than",
-        "alternative": "greater than equal to or less than"
+        "default": "greater than equals or less than",
+        "alternative": "greater than equals or less than"
       }
     },
     "key": "22DB"
@@ -3363,8 +3363,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equal to or less than",
-        "alternative": "equal to or less than"
+        "default": "equals or less than",
+        "alternative": "equals or less than"
       }
     },
     "key": "22DC"
@@ -3373,8 +3373,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equal to or greater than",
-        "alternative": "equal to or greater than"
+        "default": "equals or greater than",
+        "alternative": "equals or greater than"
       }
     },
     "key": "22DD"
@@ -3383,7 +3383,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equal to or precedes"
+        "default": "equals or precedes"
       }
     },
     "key": "22DE"
@@ -3392,7 +3392,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equal to or succeeds"
+        "default": "equals or succeeds"
       }
     },
     "key": "22DF"
@@ -3419,7 +3419,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "not square image of or equal to"
+        "default": "not square image of or equals"
       }
     },
     "key": "22E2"
@@ -3428,7 +3428,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "not square original of or equal to"
+        "default": "not square original of or equals"
       }
     },
     "key": "22E3"
@@ -3437,7 +3437,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "square image of or not equal to"
+        "default": "square image of or not equals"
       }
     },
     "key": "22E4"
@@ -3446,7 +3446,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "square original of or not equal to"
+        "default": "square original of or not equals"
       }
     },
     "key": "22E5"
@@ -3511,7 +3511,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "not normal subgroup of or equal to"
+        "default": "not normal subgroup of or equals"
       }
     },
     "key": "22EC"
@@ -5822,7 +5822,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "almost equal to with circumflex accent",
+        "default": "almost equals with circumflex accent",
         "short": "almost equal hat"
       }
     },
@@ -5832,7 +5832,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "approximately equal or equal to"
+        "default": "approximately equal or equals"
       }
     },
     "key": "2A70"
@@ -5954,7 +5954,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than or slanted equal to"
+        "default": "less than or slanted equals"
       }
     },
     "key": "2A7D"
@@ -5963,7 +5963,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than or slanted equal to"
+        "default": "greater than or slanted equals"
       }
     },
     "key": "2A7E"
@@ -5972,7 +5972,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than or slanted equal to with dot inside"
+        "default": "less than or slanted equals with dot inside"
       }
     },
     "key": "2A7F"
@@ -5981,7 +5981,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than or slanted equal to with dot inside"
+        "default": "greater than or slanted equals with dot inside"
       }
     },
     "key": "2A80"
@@ -5990,7 +5990,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than or slanted equal to with dot above"
+        "default": "less than or slanted equals with dot above"
       }
     },
     "key": "2A81"
@@ -5999,7 +5999,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than or slanted equal to with dot above"
+        "default": "greater than or slanted equals with dot above"
       }
     },
     "key": "2A82"
@@ -6008,7 +6008,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than or slanted equal to with dot above right"
+        "default": "less than or slanted equals with dot above right"
       }
     },
     "key": "2A83"
@@ -6017,7 +6017,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than or slanted equal to with dot above left"
+        "default": "greater than or slanted equals with dot above left"
       }
     },
     "key": "2A84"
@@ -6044,7 +6044,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than and single line not equal to"
+        "default": "less than and single line not equals"
       }
     },
     "key": "2A87"
@@ -6053,7 +6053,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than and single line not equal to"
+        "default": "greater than and single line not equals"
       }
     },
     "key": "2A88"
@@ -6170,7 +6170,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "slanted equal to or less than"
+        "default": "slanted equals or less than"
       }
     },
     "key": "2A95"
@@ -6179,7 +6179,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "slanted equal to or greater than"
+        "default": "slanted equals or greater than"
       }
     },
     "key": "2A96"
@@ -6188,7 +6188,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "slanted equal to or less than with dot inside"
+        "default": "slanted equals or less than with dot inside"
       }
     },
     "key": "2A97"
@@ -6197,7 +6197,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "slanted equal to or greater than with dot inside"
+        "default": "slanted equals or greater than with dot inside"
       }
     },
     "key": "2A98"
@@ -6206,7 +6206,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double line equal to or less than"
+        "default": "double line equals or less than"
       }
     },
     "key": "2A99"
@@ -6215,7 +6215,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double line equal to or greater than"
+        "default": "double line equals or greater than"
       }
     },
     "key": "2A9A"
@@ -6224,7 +6224,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double line slanted equal to or less than"
+        "default": "double line slanted equals or less than"
       }
     },
     "key": "2A9B"
@@ -6233,7 +6233,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double line slanted equal to or greater than"
+        "default": "double line slanted equals or greater than"
       }
     },
     "key": "2A9C"
@@ -6377,7 +6377,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "smaller than or equal to"
+        "default": "smaller than or equals"
       }
     },
     "key": "2AAC"
@@ -6386,7 +6386,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "larger than or equal to"
+        "default": "larger than or equals"
       }
     },
     "key": "2AAD"
@@ -6422,7 +6422,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "precedes above single line not equal to"
+        "default": "precedes above single line not equals"
       }
     },
     "key": "2AB1"
@@ -6431,7 +6431,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "succeeds above single line not equal to"
+        "default": "succeeds above single line not equals"
       }
     },
     "key": "2AB2"
@@ -6458,7 +6458,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "precedes above not equal to"
+        "default": "precedes above not equals"
       }
     },
     "key": "2AB5"
@@ -6467,7 +6467,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "succeeds above not equal to"
+        "default": "succeeds above not equals"
       }
     },
     "key": "2AB6"
@@ -6476,7 +6476,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "precedes above almost equal to"
+        "default": "precedes above almost equals"
       }
     },
     "key": "2AB7"
@@ -6485,7 +6485,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "succeeds above almost equal to"
+        "default": "succeeds above almost equals"
       }
     },
     "key": "2AB8"
@@ -6494,7 +6494,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "precedes above not almost equal to"
+        "default": "precedes above not almost equals"
       }
     },
     "key": "2AB9"
@@ -6503,7 +6503,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "succeeds above not almost equal to"
+        "default": "succeeds above not almost equals"
       }
     },
     "key": "2ABA"
@@ -6584,7 +6584,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset of or equal to with dot above"
+        "default": "subset of or equals with dot above"
       }
     },
     "key": "2AC3"
@@ -6593,7 +6593,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset of or equal to with dot above"
+        "default": "superset of or equals with dot above"
       }
     },
     "key": "2AC4"
@@ -6638,7 +6638,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset of above almost equal to"
+        "default": "subset of above almost equals"
       }
     },
     "key": "2AC9"
@@ -6647,7 +6647,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset of above almost equal to"
+        "default": "superset of above almost equals"
       }
     },
     "key": "2ACA"
@@ -6656,7 +6656,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset of above not equal to"
+        "default": "subset of above not equals"
       }
     },
     "key": "2ACB"
@@ -6665,7 +6665,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset of above not equal to"
+        "default": "superset of above not equals"
       }
     },
     "key": "2ACC"
@@ -6710,7 +6710,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "closed subset or equal to"
+        "default": "closed subset or equals"
       }
     },
     "key": "2AD1"
@@ -6719,7 +6719,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "closed superset or equal to"
+        "default": "closed superset or equals"
       }
     },
     "key": "2AD2"
@@ -7070,7 +7070,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double line slanted less than or equal to"
+        "default": "double line slanted less than or equals"
       }
     },
     "key": "2AF9"
@@ -7079,7 +7079,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double line slanted greater than or equal to"
+        "default": "double line slanted greater than or equals"
       }
     },
     "key": "2AFA"

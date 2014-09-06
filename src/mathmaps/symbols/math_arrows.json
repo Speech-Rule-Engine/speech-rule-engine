@@ -2352,8 +2352,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above almost equal to",
-        "short": "right arrow above almost equal to"
+        "default": "rightwards arrow above almost equals",
+        "short": "right arrow above almost equals"
       }
     },
     "key": "2975"
@@ -2832,8 +2832,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above reverse almost equal to",
-        "short": "left arrow above reverse almost equal to"
+        "default": "leftwards arrow above reverse almost equals",
+        "short": "left arrow above reverse almost equals"
       }
     },
     "key": "2B42"
@@ -2892,8 +2892,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards arrow above reverse almost equal to",
-        "short": "right arrow above reverse almost equal to"
+        "default": "rightwards arrow above reverse almost equals",
+        "short": "right arrow above reverse almost equals"
       }
     },
     "key": "2B48"
@@ -2912,8 +2912,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards arrow above almost equal to",
-        "short": "left arrow above almost equal to"
+        "default": "leftwards arrow above almost equals",
+        "short": "left arrow above almost equals"
       }
     },
     "key": "2B4A"
