@@ -501,6 +501,9 @@
       "default": {
         "default": "multiplication sign",
         "short": "multiplication"
+      },
+      "mathspeak": {
+        "default": "times"
       }
     },
     "key": "00D7"

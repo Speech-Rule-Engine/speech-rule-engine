@@ -81,10 +81,15 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
-  // Initial rule
+  // Number rules
   defineRule(
       'number', 'mathspeak.default',
       '[n] text()', 'self::number');
+
+  defineRule(
+      'binary-operation', 'mathspeak.default',
+      '[m] children/* (separator:text());',
+      'self::infixop', 'self::infixop[@role="addition"]');
 
 };
 

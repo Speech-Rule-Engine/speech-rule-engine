@@ -100,6 +100,10 @@ sre.System.prototype.parseInput = function(input) {
  * @private
  */
 sre.System.prototype.preprocessString_ = function(text) {
+  // TODO (sorge) Find a proper treatment of single numbers.
+  if (sre.Engine.getInstance().domain == "mathspeak" && text.match(/^\d{1}$/)) {
+    return text;
+  }
   var dynamicCstr = sre.MathStore.createDynamicConstraint(
       sre.Engine.getInstance().domain,
       sre.Engine.getInstance().style);
@@ -170,7 +174,6 @@ sre.System.prototype.processExpression = function(expr) {
   }
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   this.preprocessDescriptionList_(descrs);
-  console.log(descrs);
   return sre.DomUtil.removeEmpty(
       descrs.map(
           function(x) {return x.descriptionString();})).
