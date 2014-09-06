@@ -21,6 +21,7 @@
 goog.provide('sre.MathStore');
 
 goog.require('sre.BaseRuleStore');
+goog.require('sre.DomUtil');
 goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
 
@@ -207,7 +208,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
-  var split = sre.MathStore.removeEmpty_(str.replace(/\s/g, ' ').split(' '));
+  var split = sre.DomUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
@@ -218,7 +219,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       var rest = s;
       var count = 0;
       while (rest) {
-        var num = rest.match(/^\d+/);
+        var num = rest.match(/^(\d*\.\d+|\d+)/);
         var alpha = rest.match(/^[a-zA-Z]+/);
         if (num) {
           descs.push(this.evaluate_(num[0]));
@@ -259,15 +260,3 @@ sre.MathStore.prototype.evaluate_ = function(text) {
         'preprocess': true
       });
 };
-
-
-/**
- * Removes all empty strings from an array of strings.
- * @param {Array.<string>} strs An array of strings.
- * @return {Array.<string>} The cleaned array.
- * @private
- */
-sre.MathStore.removeEmpty_ = function(strs) {
-  return strs.filter(function(str) {return str;});
-};
-

@@ -46,3 +46,13 @@ sre.DomUtil.toArray = function(nodeList) {
   }
   return nodeArray;
 };
+
+
+/**
+ * Removes all empty strings from an array of strings.
+ * @param {Array.<string>} strs An array of strings.
+ * @return {Array.<string>} The cleaned array.
+ */
+sre.DomUtil.removeEmpty = function(strs) {
+  return strs.filter(function(str) {return str;});
+};

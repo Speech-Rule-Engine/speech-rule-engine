@@ -62,11 +62,8 @@ sre.SpeechRule = function(name, dynamic, prec, action) {
  * @override
  */
 sre.SpeechRule.prototype.toString = function() {
-  var cstrStrings = [];
-  for (var key in this.dynamicCstr) {
-    cstrStrings.push(this.dynamicCstr[key]);
-  }
-  return this.name + ' | ' + cstrStrings.join('.') + ' | ' +
+  return this.name + ' | ' +
+      sre.SpeechRule.stringifyCstr(this.dynamicCstr) + ' | ' +
       this.precondition.toString() + ' ==> ' +
       this.action.toString();
 };
@@ -380,6 +377,20 @@ sre.SpeechRule.DynamicCstrAttrib =
  * @typedef {!Object.<sre.SpeechRule.DynamicCstrAttrib, string>}
  */
 sre.SpeechRule.DynamicCstr;
+
+
+/**
+ * Stringifies a dynamic constraint.
+ * @param {sre.SpeechRule.DynamicCstr} cstr The constraint.
+ * @return {string} The string version.
+ */
+sre.SpeechRule.stringifyCstr = function(cstr) {
+  var cstrStrings = [];
+  for (var key in cstr) {
+    cstrStrings.push(cstr[key]);
+  }
+  return cstrStrings.join('.');
+};
 
 
 

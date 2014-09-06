@@ -84,7 +84,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Initial rule
   defineRule(
       'number', 'mathspeak.default',
-      '[t] "number"; [n] text()', 'self::number');
+      '[n] text()', 'self::number');
 
 };
 

@@ -23,6 +23,7 @@ goog.provide('sre.System');
 
 goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');
+goog.require('sre.DomUtil');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.SemanticTree');
@@ -169,9 +170,11 @@ sre.System.prototype.processExpression = function(expr) {
   }
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   this.preprocessDescriptionList_(descrs);
-  return descrs.map(
-      function(x) {return x.descriptionString();}).
-         join(' ');
+  console.log(descrs);
+  return sre.DomUtil.removeEmpty(
+      descrs.map(
+          function(x) {return x.descriptionString();})).
+      join(' ');
 };
 
 

@@ -47,6 +47,7 @@ sre.CombinedStore.mathStore = sre.MathmlStore.getInstance();
 sre.CombinedStore.mathStore.initialize = function() {
   sre.MathmlStoreRules.getInstance();
   sre.SemanticTreeRules.getInstance();
+  sre.MathspeakRules.getInstance();
 };
 
 
