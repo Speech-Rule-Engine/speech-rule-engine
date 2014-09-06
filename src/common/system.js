@@ -22,6 +22,7 @@
 goog.provide('sre.System');
 
 goog.require('sre.CombinedStore');
+goog.require('sre.Debugger');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.SemanticTree');
@@ -160,6 +161,8 @@ sre.System.prototype.processExpression = function(expr) {
     if (sre.Engine.getInstance().semantics) {
       xml = this.getSemanticTree_(xml);
     }
+    sre.Debugger.getInstance().generateOutput(
+        goog.bind(function() {return xml.toString();}, this));
   } catch (err) {
     console.log('Parse Error: ' + err.message);
     return '';
@@ -184,15 +187,28 @@ sre.System.prototype.getSemanticTree_ = function(mml) {
 };
 
 
-// TODO(sorge) maybe split those into two functions.
 /**
  * Reads an xml expression from a file and returns the auditory description to a
  * file.
  * @param {string} input The input filename.
- * @param {string} output The output filename.
+ * @return {string} The resulting speech string.
+ * @private
  */
-sre.System.prototype.processFile = function(input, output) {
+sre.System.prototype.processFile_ = function(input) {
   var expr = sre.SystemExternal.fs.readFileSync(input, {encoding: 'utf8'});
-  var descr = this.processExpression(expr);
-  sre.SystemExternal.fs.writeFileSync(output, descr);
+  return this.processExpression(expr);
+};
+
+
+/**
+ * Reads an xml expression from a file and returns the auditory description to a
+ * file.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ */
+sre.System.prototype.processFile = function(input, opt_output) {
+  var descr = this.processFile_(input);
+  opt_output ?
+      sre.SystemExternal.fs.writeFileSync(opt_output, descr) :
+      console.log(descr);
 };

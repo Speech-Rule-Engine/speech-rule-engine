@@ -12,3 +12,8 @@ module.exports;
 var global;
 var node;
 node._nsMap;
+function require(library) { }
+var fs;
+fs.readFileSync = function(name) { };
+fs.writeFileSync = function(name, data) { };
+fs.createWriteStream = function(name) { };

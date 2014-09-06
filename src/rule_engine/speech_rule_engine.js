@@ -32,6 +32,7 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
+goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
 goog.require('sre.XpathUtil');
@@ -144,7 +145,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   if (!rule) {
     return this.activeStore_.evaluateDefault(node);
   }
-  sre.SpeechRuleEngine.outputDebug(rule.name, node.toString());
+  sre.Debugger.getInstance().generateOutput(
+      goog.bind(function() {return [rule.name, node.toString()];}, this));
   var components = rule.action.components;
   var result = [];
   for (var i = 0, component; component = components[i]; i++) {
@@ -289,26 +291,6 @@ sre.SpeechRuleEngine.prototype.addRelativePersonality_ = function(
 
 
 /**
- * Flag for the debug mode of the speech rule engine.
- * @type {boolean}
- */
-sre.SpeechRuleEngine.debugMode = false;
-
-
-/**
- * Give debug output.
- * @param {...*} var_args Rest elements of debug output.
- */
-sre.SpeechRuleEngine.outputDebug = function(var_args) {
-  if (sre.SpeechRuleEngine.debugMode) {
-    var outputList = Array.prototype.slice.call(arguments, 0);
-    console.log.apply(console,
-                      ['Speech Rule Engine Debugger:'].concat(outputList));
-  }
-};
-
-
-/**
  * Prints the list of all current rules in ChromeVox to the console.
  * @return {string} A textual representation of all rules in the speech rule
  *     engine.
@@ -330,11 +312,11 @@ sre.SpeechRuleEngine.debugSpeechRule = function(rule, node) {
   if (store) {
     var prec = rule.precondition;
     var queryResult = store.applyQuery(node, prec.query);
-    sre.SpeechRuleEngine.outputDebug(
+    sre.Debugger.getInstance().output(
         prec.query, queryResult ? queryResult.toString() : queryResult);
     prec.constraints.forEach(
         function(cstr) {
-          sre.SpeechRuleEngine.outputDebug(
+          sre.Debugger.getInstance().output(
               cstr, store.applyConstraint(node, cstr));});
   }};
 
@@ -349,7 +331,7 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
   var allRules = store.findAllRules(
       function(rule) {return rule.name == name;});
   for (var i = 0, rule; rule = allRules[i]; i++) {
-    sre.SpeechRuleEngine.outputDebug('Rule', name, 'number', i);
+    sre.Debugger.getInstance().output('Rule', name, 'number', i);
     sre.SpeechRuleEngine.debugSpeechRule(rule, node);
   }
 };
