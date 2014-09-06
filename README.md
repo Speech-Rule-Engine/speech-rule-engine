@@ -4,7 +4,7 @@ speech-rule-engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
-There are two ways of useing this engine. Either as a package via npm or by
+There are two ways of using this engine. Either as a package via npm or by
 building it as a standalone tool.  The former is the easiest way to use the
 speech rule engine via its Api and is the preferred option if you just want to
 include it in your project. The latter is useful if you want to use the speech

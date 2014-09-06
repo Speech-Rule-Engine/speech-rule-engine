@@ -20,6 +20,7 @@
  */
 goog.provide('sre.Cli');
 
+goog.require('sre.Debugger');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
 
@@ -38,24 +39,27 @@ sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
   // These are necessary to avoid closure errors.
   /** @type {!string} */
-  commander.input = '';
-  /** @type {!string} */
-  commander.output = '';
-  /** @type {!boolean} */
-  commander.verbose = false;
-  /** @type {!boolean} */
-  commander.semantics = false;
-  /** @type {!string} */
   // commander.domain is already in use by the commander module!
   commander.area = '';
   /** @type {!string} */
+  commander.input = '';
+  /** @type {!string} */
+  commander.log = '';
+  /** @type {!string} */
+  commander.output = '';
+  /** @type {!boolean} */
+  commander.semantics = false;
+  /** @type {!string} */
   commander.style = '';
+  /** @type {!boolean} */
+  commander.verbose = false;
 
   commander.version(sre.System.getInstance().version).
+      option('-a, --area [name]', 'Subject area [name]').
       option('-i, --input [name]', 'Input file [name]').
+      option('-l, --log [name]', 'Log file [name]').
       option('-o, --output [name]', 'Output file [name]').
       option('-s, --semantics', 'Switch on semantics interpretation').
-      option('-a, --area [name]', 'Subject area [name]').
       option('-t, --style [name]', 'Speech style [name]').
       option('-v, --verbose', 'Verbose mode').
       parse(process.argv);
@@ -65,11 +69,11 @@ sre.Cli.prototype.commandLine = function() {
         'domain': commander.area,
         'style': commander.style
       });
+  if (commander.verbose) {
+    sre.Debugger.getInstance().init(commander.log);
+  }
   if (commander.input) {
     sre.System.getInstance().processFile(commander.input, commander.output);
-  }
-  if (commander.verbose) {
-    console.log('Currently unused.');
   }
 };
 
