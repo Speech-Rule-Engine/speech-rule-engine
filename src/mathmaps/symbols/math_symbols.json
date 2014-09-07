@@ -26,6 +26,9 @@
         "default": "number sign",
         "alternative": "hash",
         "short": "number"
+      },
+      "mathspeak": {
+        "default": "number sign"
       }
     },
     "key": "0023"
@@ -113,6 +116,9 @@
       "default": {
         "default": "full stop",
         "alternative": "period"
+      },
+      "mathspeak": {
+        "default": "period"
       }
     },
     "key": "002E"

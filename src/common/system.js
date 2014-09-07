@@ -101,7 +101,7 @@ sre.System.prototype.parseInput = function(input) {
  */
 sre.System.prototype.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
-  if (sre.Engine.getInstance().domain == "mathspeak" && text.match(/^\d{1}$/)) {
+  if (sre.Engine.getInstance().domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
   }
   var dynamicCstr = sre.MathStore.createDynamicConstraint(
@@ -152,6 +152,8 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.semantics = !!feature.semantics;
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
 };
 
 

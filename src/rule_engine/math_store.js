@@ -210,7 +210,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
   }
   var split = sre.DomUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
-    console.log(s);
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
     } else if (s.match(/^[a-zA-Z]+$/)) {
@@ -221,7 +220,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       var count = 0;
       while (rest) {
         var num = rest.match(
-            /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|\d*\.\d+|\d+/);
+            /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
         var alpha = rest.match(/^[a-zA-Z]+/);
         if (num) {
           descs.push(this.evaluate_(num[0]));

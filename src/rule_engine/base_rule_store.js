@@ -23,6 +23,7 @@
 
 goog.provide('sre.BaseRuleStore');
 
+goog.require('sre.Debugger');
 goog.require('sre.MathUtil');
 goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
@@ -322,7 +323,7 @@ sre.BaseRuleStore.prototype.countMatchingDynamicConstraintValues_ = function(
     dynamic, rule) {
   var result = 0;
   for (var i = 0, key; key = this.dynamicCstrAttribs[i]; i++) {
-    if (dynamic[key] == rule.dynamicCstr[key]) {
+    if (dynamic[key] === rule.dynamicCstr[key]) {
       result++;
     } else break;
   }
@@ -357,6 +358,13 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
         return (r2.precondition.constraints.length -
             r1.precondition.constraints.length);},
       this));
+  sre.Debugger.getInstance().generateOutput(
+      goog.bind(function() {
+        return rules.map(function(x) {
+          return x.name + '(' +
+              sre.SpeechRule.stringifyCstr(x.dynamicCstr) + ')';});
+      }, this)
+  );
   return rules[0];
 };
 
