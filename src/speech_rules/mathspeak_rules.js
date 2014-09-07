@@ -114,14 +114,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E' +
       '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9",' +
       '"")');
-  
+
   defineRule(
       'binary-operation', 'mathspeak.default',
       '[m] children/* (separator:text());', 'self::infixop');
 
-
-// xpath.evaluate('translate(self::text(), "abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")', res, null, xpath.XPathResult.ANY_TYPE, null);
-  
 };
 
 });  // goog.scope
