@@ -285,6 +285,8 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
   return allKeys.every(
       function(key) {
         return dynamic[key] == rule.dynamicCstr[key] ||
+          // TODO (sorge) Sort this out with a ordered list of constraints.
+            rule.dynamicCstr[key] == 'short' ||
             rule.dynamicCstr[key] == 'default';
       });
 };
