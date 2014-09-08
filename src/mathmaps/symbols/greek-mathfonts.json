@@ -8,7 +8,7 @@
         "short": "bold cap alpha"
       },
       "mathspeak": {
-        "default": "bold upper alpha"
+        "default": "bold upper Alpha"
       }
     },
     "key": "1D6A8"
@@ -22,7 +22,7 @@
         "short": "bold cap beta"
       },
       "mathspeak": {
-        "default": "bold upper beta"
+        "default": "bold upper Beta"
       }
     },
     "key": "1D6A9"
@@ -36,7 +36,7 @@
         "short": "bold cap gamma"
       },
       "mathspeak": {
-        "default": "bold upper gamma"
+        "default": "bold upper Gamma"
       }
     },
     "key": "1D6AA"
@@ -50,7 +50,7 @@
         "short": "bold cap delta"
       },
       "mathspeak": {
-        "default": "bold upper delta"
+        "default": "bold upper Delta"
       }
     },
     "key": "1D6AB"
@@ -64,7 +64,7 @@
         "short": "bold cap epsilon"
       },
       "mathspeak": {
-        "default": "bold upper epsilon"
+        "default": "bold upper Epsilon"
       }
     },
     "key": "1D6AC"
@@ -78,7 +78,7 @@
         "short": "bold cap zeta"
       },
       "mathspeak": {
-        "default": "bold upper zeta"
+        "default": "bold upper Zeta"
       }
     },
     "key": "1D6AD"
@@ -92,7 +92,7 @@
         "short": "bold cap eta"
       },
       "mathspeak": {
-        "default": "bold upper eta"
+        "default": "bold upper Eta"
       }
     },
     "key": "1D6AE"
@@ -106,7 +106,7 @@
         "short": "bold cap theta"
       },
       "mathspeak": {
-        "default": "bold upper theta"
+        "default": "bold upper Theta"
       }
     },
     "key": "1D6AF"
@@ -120,7 +120,7 @@
         "short": "bold cap iota"
       },
       "mathspeak": {
-        "default": "bold upper iota"
+        "default": "bold upper Iota"
       }
     },
     "key": "1D6B0"
@@ -134,7 +134,7 @@
         "short": "bold cap kappa"
       },
       "mathspeak": {
-        "default": "bold upper kappa"
+        "default": "bold upper Kappa"
       }
     },
     "key": "1D6B1"
@@ -148,7 +148,7 @@
         "short": "bold cap lamda"
       },
       "mathspeak": {
-        "default": "bold upper lamda"
+        "default": "bold upper Lamda"
       }
     },
     "key": "1D6B2"
@@ -162,7 +162,7 @@
         "short": "bold cap mu"
       },
       "mathspeak": {
-        "default": "bold upper mu"
+        "default": "bold upper Mu"
       }
     },
     "key": "1D6B3"
@@ -176,7 +176,7 @@
         "short": "bold cap nu"
       },
       "mathspeak": {
-        "default": "bold upper nu"
+        "default": "bold upper Nu"
       }
     },
     "key": "1D6B4"
@@ -190,7 +190,7 @@
         "short": "bold cap xi"
       },
       "mathspeak": {
-        "default": "bold upper xi"
+        "default": "bold upper Xi"
       }
     },
     "key": "1D6B5"
@@ -204,7 +204,7 @@
         "short": "bold cap omicron"
       },
       "mathspeak": {
-        "default": "bold upper omicron"
+        "default": "bold upper Omicron"
       }
     },
     "key": "1D6B6"
@@ -218,7 +218,7 @@
         "short": "bold cap pi"
       },
       "mathspeak": {
-        "default": "bold upper pi"
+        "default": "bold upper Pi"
       }
     },
     "key": "1D6B7"
@@ -232,7 +232,7 @@
         "short": "bold cap rho"
       },
       "mathspeak": {
-        "default": "bold upper rho"
+        "default": "bold upper Rho"
       }
     },
     "key": "1D6B8"
@@ -246,7 +246,7 @@
         "short": "bold cap theta"
       },
       "mathspeak": {
-        "default": "bold upper theta"
+        "default": "bold upper Theta"
       }
     },
     "key": "1D6B9"
@@ -260,7 +260,7 @@
         "short": "bold cap sigma"
       },
       "mathspeak": {
-        "default": "bold upper sigma"
+        "default": "bold upper Sigma"
       }
     },
     "key": "1D6BA"
@@ -274,7 +274,7 @@
         "short": "bold cap tau"
       },
       "mathspeak": {
-        "default": "bold upper tau"
+        "default": "bold upper Tau"
       }
     },
     "key": "1D6BB"
@@ -288,7 +288,7 @@
         "short": "bold cap upsilon"
       },
       "mathspeak": {
-        "default": "bold upper upsilon"
+        "default": "bold upper Upsilon"
       }
     },
     "key": "1D6BC"
@@ -302,7 +302,7 @@
         "short": "bold cap phi"
       },
       "mathspeak": {
-        "default": "bold upper phi"
+        "default": "bold upper Phi"
       }
     },
     "key": "1D6BD"
@@ -316,7 +316,7 @@
         "short": "bold cap chi"
       },
       "mathspeak": {
-        "default": "bold upper chi"
+        "default": "bold upper Chi"
       }
     },
     "key": "1D6BE"
@@ -330,7 +330,7 @@
         "short": "bold cap psi"
       },
       "mathspeak": {
-        "default": "bold upper psi"
+        "default": "bold upper Psi"
       }
     },
     "key": "1D6BF"
@@ -344,7 +344,7 @@
         "short": "bold cap omega"
       },
       "mathspeak": {
-        "default": "bold upper omega"
+        "default": "bold upper Omega"
       }
     },
     "key": "1D6C0"
@@ -633,7 +633,7 @@
         "short": "italic cap alpha"
       },
       "mathspeak": {
-        "default": "italic upper alpha"
+        "default": "italic upper Alpha"
       }
     },
     "key": "1D6E2"
@@ -647,7 +647,7 @@
         "short": "italic cap beta"
       },
       "mathspeak": {
-        "default": "italic upper beta"
+        "default": "italic upper Beta"
       }
     },
     "key": "1D6E3"
@@ -661,7 +661,7 @@
         "short": "italic cap gamma"
       },
       "mathspeak": {
-        "default": "italic upper gamma"
+        "default": "italic upper Gamma"
       }
     },
     "key": "1D6E4"
@@ -675,7 +675,7 @@
         "short": "italic cap delta"
       },
       "mathspeak": {
-        "default": "italic upper delta"
+        "default": "italic upper Delta"
       }
     },
     "key": "1D6E5"
@@ -689,7 +689,7 @@
         "short": "italic cap epsilon"
       },
       "mathspeak": {
-        "default": "italic upper epsilon"
+        "default": "italic upper Epsilon"
       }
     },
     "key": "1D6E6"
@@ -703,7 +703,7 @@
         "short": "italic cap zeta"
       },
       "mathspeak": {
-        "default": "italic upper zeta"
+        "default": "italic upper Zeta"
       }
     },
     "key": "1D6E7"
@@ -717,7 +717,7 @@
         "short": "italic cap eta"
       },
       "mathspeak": {
-        "default": "italic upper eta"
+        "default": "italic upper Eta"
       }
     },
     "key": "1D6E8"
@@ -731,7 +731,7 @@
         "short": "italic cap theta"
       },
       "mathspeak": {
-        "default": "italic upper theta"
+        "default": "italic upper Theta"
       }
     },
     "key": "1D6E9"
@@ -745,7 +745,7 @@
         "short": "italic cap iota"
       },
       "mathspeak": {
-        "default": "italic upper iota"
+        "default": "italic upper Iota"
       }
     },
     "key": "1D6EA"
@@ -759,7 +759,7 @@
         "short": "italic cap kappa"
       },
       "mathspeak": {
-        "default": "italic upper kappa"
+        "default": "italic upper Kappa"
       }
     },
     "key": "1D6EB"
@@ -773,7 +773,7 @@
         "short": "italic cap lamda"
       },
       "mathspeak": {
-        "default": "italic upper lamda"
+        "default": "italic upper Lamda"
       }
     },
     "key": "1D6EC"
@@ -787,7 +787,7 @@
         "short": "italic cap mu"
       },
       "mathspeak": {
-        "default": "italic upper mu"
+        "default": "italic upper Mu"
       }
     },
     "key": "1D6ED"
@@ -801,7 +801,7 @@
         "short": "italic cap nu"
       },
       "mathspeak": {
-        "default": "italic upper nu"
+        "default": "italic upper Nu"
       }
     },
     "key": "1D6EE"
@@ -815,7 +815,7 @@
         "short": "italic cap xi"
       },
       "mathspeak": {
-        "default": "italic upper xi"
+        "default": "italic upper Xi"
       }
     },
     "key": "1D6EF"
@@ -829,7 +829,7 @@
         "short": "italic cap omicron"
       },
       "mathspeak": {
-        "default": "italic upper omicron"
+        "default": "italic upper Omicron"
       }
     },
     "key": "1D6F0"
@@ -843,7 +843,7 @@
         "short": "italic cap pi"
       },
       "mathspeak": {
-        "default": "italic upper pi"
+        "default": "italic upper Pi"
       }
     },
     "key": "1D6F1"
@@ -857,7 +857,7 @@
         "short": "italic cap rho"
       },
       "mathspeak": {
-        "default": "italic upper rho"
+        "default": "italic upper Rho"
       }
     },
     "key": "1D6F2"
@@ -871,7 +871,7 @@
         "short": "italic cap theta"
       },
       "mathspeak": {
-        "default": "italic upper theta"
+        "default": "italic upper Theta"
       }
     },
     "key": "1D6F3"
@@ -885,7 +885,7 @@
         "short": "italic cap sigma"
       },
       "mathspeak": {
-        "default": "italic upper sigma"
+        "default": "italic upper Sigma"
       }
     },
     "key": "1D6F4"
@@ -899,7 +899,7 @@
         "short": "italic cap tau"
       },
       "mathspeak": {
-        "default": "italic upper tau"
+        "default": "italic upper Tau"
       }
     },
     "key": "1D6F5"
@@ -913,7 +913,7 @@
         "short": "italic cap upsilon"
       },
       "mathspeak": {
-        "default": "italic upper upsilon"
+        "default": "italic upper Upsilon"
       }
     },
     "key": "1D6F6"
@@ -927,7 +927,7 @@
         "short": "italic cap phi"
       },
       "mathspeak": {
-        "default": "italic upper phi"
+        "default": "italic upper Phi"
       }
     },
     "key": "1D6F7"
@@ -941,7 +941,7 @@
         "short": "italic cap chi"
       },
       "mathspeak": {
-        "default": "italic upper chi"
+        "default": "italic upper Chi"
       }
     },
     "key": "1D6F8"
@@ -955,7 +955,7 @@
         "short": "italic cap psi"
       },
       "mathspeak": {
-        "default": "italic upper psi"
+        "default": "italic upper Psi"
       }
     },
     "key": "1D6F9"
@@ -969,7 +969,7 @@
         "short": "italic cap omega"
       },
       "mathspeak": {
-        "default": "italic upper omega"
+        "default": "italic upper Omega"
       }
     },
     "key": "1D6FA"
@@ -1258,7 +1258,7 @@
         "short": "sans serif bold cap alpha"
       },
       "mathspeak": {
-        "default": "sans serif bold upper alpha"
+        "default": "sans serif bold upper Alpha"
       }
     },
     "key": "1D756"
@@ -1272,7 +1272,7 @@
         "short": "sans serif bold cap beta"
       },
       "mathspeak": {
-        "default": "sans serif bold upper beta"
+        "default": "sans serif bold upper Beta"
       }
     },
     "key": "1D757"
@@ -1286,7 +1286,7 @@
         "short": "sans serif bold cap gamma"
       },
       "mathspeak": {
-        "default": "sans serif bold upper gamma"
+        "default": "sans serif bold upper Gamma"
       }
     },
     "key": "1D758"
@@ -1300,7 +1300,7 @@
         "short": "sans serif bold cap delta"
       },
       "mathspeak": {
-        "default": "sans serif bold upper delta"
+        "default": "sans serif bold upper Delta"
       }
     },
     "key": "1D759"
@@ -1314,7 +1314,7 @@
         "short": "sans serif bold cap epsilon"
       },
       "mathspeak": {
-        "default": "sans serif bold upper epsilon"
+        "default": "sans serif bold upper Epsilon"
       }
     },
     "key": "1D75A"
@@ -1328,7 +1328,7 @@
         "short": "sans serif bold cap zeta"
       },
       "mathspeak": {
-        "default": "sans serif bold upper zeta"
+        "default": "sans serif bold upper Zeta"
       }
     },
     "key": "1D75B"
@@ -1342,7 +1342,7 @@
         "short": "sans serif bold cap eta"
       },
       "mathspeak": {
-        "default": "sans serif bold upper eta"
+        "default": "sans serif bold upper Eta"
       }
     },
     "key": "1D75C"
@@ -1356,7 +1356,7 @@
         "short": "sans serif bold cap theta"
       },
       "mathspeak": {
-        "default": "sans serif bold upper theta"
+        "default": "sans serif bold upper Theta"
       }
     },
     "key": "1D75D"
@@ -1370,7 +1370,7 @@
         "short": "sans serif bold cap iota"
       },
       "mathspeak": {
-        "default": "sans serif bold upper iota"
+        "default": "sans serif bold upper Iota"
       }
     },
     "key": "1D75E"
@@ -1384,7 +1384,7 @@
         "short": "sans serif bold cap kappa"
       },
       "mathspeak": {
-        "default": "sans serif bold upper kappa"
+        "default": "sans serif bold upper Kappa"
       }
     },
     "key": "1D75F"
@@ -1398,7 +1398,7 @@
         "short": "sans serif bold cap lamda"
       },
       "mathspeak": {
-        "default": "sans serif bold upper lamda"
+        "default": "sans serif bold upper Lamda"
       }
     },
     "key": "1D760"
@@ -1412,7 +1412,7 @@
         "short": "sans serif bold cap mu"
       },
       "mathspeak": {
-        "default": "sans serif bold upper mu"
+        "default": "sans serif bold upper Mu"
       }
     },
     "key": "1D761"
@@ -1426,7 +1426,7 @@
         "short": "sans serif bold cap nu"
       },
       "mathspeak": {
-        "default": "sans serif bold upper nu"
+        "default": "sans serif bold upper Nu"
       }
     },
     "key": "1D762"
@@ -1440,7 +1440,7 @@
         "short": "sans serif bold cap xi"
       },
       "mathspeak": {
-        "default": "sans serif bold upper xi"
+        "default": "sans serif bold upper Xi"
       }
     },
     "key": "1D763"
@@ -1454,7 +1454,7 @@
         "short": "sans serif bold cap omicron"
       },
       "mathspeak": {
-        "default": "sans serif bold upper omicron"
+        "default": "sans serif bold upper Omicron"
       }
     },
     "key": "1D764"
@@ -1468,7 +1468,7 @@
         "short": "sans serif bold cap pi"
       },
       "mathspeak": {
-        "default": "sans serif bold upper pi"
+        "default": "sans serif bold upper Pi"
       }
     },
     "key": "1D765"
@@ -1482,7 +1482,7 @@
         "short": "sans serif bold cap rho"
       },
       "mathspeak": {
-        "default": "sans serif bold upper rho"
+        "default": "sans serif bold upper Rho"
       }
     },
     "key": "1D766"
@@ -1496,7 +1496,7 @@
         "short": "sans serif bold cap theta"
       },
       "mathspeak": {
-        "default": "sans serif bold upper theta"
+        "default": "sans serif bold upper Theta"
       }
     },
     "key": "1D767"
@@ -1510,7 +1510,7 @@
         "short": "sans serif bold cap sigma"
       },
       "mathspeak": {
-        "default": "sans serif bold upper sigma"
+        "default": "sans serif bold upper Sigma"
       }
     },
     "key": "1D768"
@@ -1524,7 +1524,7 @@
         "short": "sans serif bold cap tau"
       },
       "mathspeak": {
-        "default": "sans serif bold upper tau"
+        "default": "sans serif bold upper Tau"
       }
     },
     "key": "1D769"
@@ -1538,7 +1538,7 @@
         "short": "sans serif bold cap upsilon"
       },
       "mathspeak": {
-        "default": "sans serif bold upper upsilon"
+        "default": "sans serif bold upper Upsilon"
       }
     },
     "key": "1D76A"
@@ -1552,7 +1552,7 @@
         "short": "sans serif bold cap phi"
       },
       "mathspeak": {
-        "default": "sans serif bold upper phi"
+        "default": "sans serif bold upper Phi"
       }
     },
     "key": "1D76B"
@@ -1566,7 +1566,7 @@
         "short": "sans serif bold cap chi"
       },
       "mathspeak": {
-        "default": "sans serif bold upper chi"
+        "default": "sans serif bold upper Chi"
       }
     },
     "key": "1D76C"
@@ -1580,7 +1580,7 @@
         "short": "sans serif bold cap psi"
       },
       "mathspeak": {
-        "default": "sans serif bold upper psi"
+        "default": "sans serif bold upper Psi"
       }
     },
     "key": "1D76D"
@@ -1594,7 +1594,7 @@
         "short": "sans serif bold cap omega"
       },
       "mathspeak": {
-        "default": "sans serif bold upper omega"
+        "default": "sans serif bold upper Omega"
       }
     },
     "key": "1D76E"

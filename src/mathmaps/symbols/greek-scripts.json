@@ -9,7 +9,7 @@
         "short": "small cap gamma"
       },
       "mathspeak": {
-        "default": "small upper gamma"
+        "default": "small upper Gamma"
       }
     }
   },
@@ -23,7 +23,7 @@
         "short": "small cap lamda"
       },
       "mathspeak": {
-        "default": "small upper lamda"
+        "default": "small upper Lamda"
       }
     }
   },
@@ -37,7 +37,7 @@
         "short": "small cap pi"
       },
       "mathspeak": {
-        "default": "small upper pi"
+        "default": "small upper Pi"
       }
     }
   },
@@ -51,7 +51,7 @@
         "short": "small cap rho"
       },
       "mathspeak": {
-        "default": "small upper rho"
+        "default": "small upper Rho"
       }
     }
   },
@@ -65,7 +65,7 @@
         "short": "small cap psi"
       },
       "mathspeak": {
-        "default": "small upper psi"
+        "default": "small upper Psi"
       }
     }
   },

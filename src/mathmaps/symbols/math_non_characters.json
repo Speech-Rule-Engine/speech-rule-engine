@@ -175,7 +175,7 @@
         "short": "turned cap f"
       },
       "mathspeak": {
-        "default": "turned upper f"
+        "default": "turned upper F"
       }
     },
     "key": "2132"
@@ -197,7 +197,7 @@
         "short": "rotated cap q"
       },
       "mathspeak": {
-        "default": "rotated upper q"
+        "default": "rotated upper Q"
       }
     },
     "key": "213A"
@@ -219,7 +219,7 @@
         "short": "turned sans serif cap g"
       },
       "mathspeak": {
-        "default": "turned sans serif upper g"
+        "default": "turned sans serif upper G"
       }
     },
     "key": "2141"
@@ -232,7 +232,7 @@
         "short": "turned sans serif cap l"
       },
       "mathspeak": {
-        "default": "turned sans serif upper l"
+        "default": "turned sans serif upper L"
       }
     },
     "key": "2142"
@@ -245,7 +245,7 @@
         "short": "reversed sans serif cap l"
       },
       "mathspeak": {
-        "default": "reversed sans serif upper l"
+        "default": "reversed sans serif upper L"
       }
     },
     "key": "2143"
@@ -258,7 +258,7 @@
         "short": "turned sans serif cap y"
       },
       "mathspeak": {
-        "default": "turned sans serif upper y"
+        "default": "turned sans serif upper Y"
       }
     },
     "key": "2144"

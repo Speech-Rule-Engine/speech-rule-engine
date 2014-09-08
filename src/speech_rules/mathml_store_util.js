@@ -21,7 +21,6 @@
 goog.provide('sre.MathmlStoreUtil');
 
 goog.require('sre.Engine');
-goog.require('sre.MathUtil');
 goog.require('sre.XpathUtil');
 
 

@@ -8,7 +8,7 @@
         "short": "cap alpha"
       },
       "mathspeak": {
-        "default": "upper alpha"
+        "default": "upper Alpha"
       }
     }
   },
@@ -21,7 +21,7 @@
         "short": "cap beta"
       },
       "mathspeak": {
-        "default": "upper beta"
+        "default": "upper Beta"
       }
     }
   },
@@ -34,7 +34,7 @@
         "short": "cap gamma"
       },
       "mathspeak": {
-        "default": "upper gamma"
+        "default": "upper Gamma"
       }
     }
   },
@@ -47,7 +47,7 @@
         "short": "cap delta"
       },
       "mathspeak": {
-        "default": "upper delta"
+        "default": "upper Delta"
       }
     }
   },
@@ -60,7 +60,7 @@
         "short": "cap epsilon"
       },
       "mathspeak": {
-        "default": "upper epsilon"
+        "default": "upper Epsilon"
       }
     }
   },
@@ -73,7 +73,7 @@
         "short": "cap zeta"
       },
       "mathspeak": {
-        "default": "upper zeta"
+        "default": "upper Zeta"
       }
     }
   },
@@ -86,7 +86,7 @@
         "short": "cap eta"
       },
       "mathspeak": {
-        "default": "upper eta"
+        "default": "upper Eta"
       }
     }
   },
@@ -99,7 +99,7 @@
         "short": "cap theta"
       },
       "mathspeak": {
-        "default": "upper theta"
+        "default": "upper Theta"
       }
     }
   },
@@ -112,7 +112,7 @@
         "short": "cap iota"
       },
       "mathspeak": {
-        "default": "upper iota"
+        "default": "upper Iota"
       }
     }
   },
@@ -125,7 +125,7 @@
         "short": "cap kappa"
       },
       "mathspeak": {
-        "default": "upper kappa"
+        "default": "upper Kappa"
       }
     }
   },
@@ -139,7 +139,7 @@
         "short": "cap lamda"
       },
       "mathspeak": {
-        "default": "upper lamda"
+        "default": "upper Lamda"
       }
     }
   },
@@ -152,7 +152,7 @@
         "short": "cap mu"
       },
       "mathspeak": {
-        "default": "upper mu"
+        "default": "upper Mu"
       }
     }
   },
@@ -165,7 +165,7 @@
         "short": "cap nu"
       },
       "mathspeak": {
-        "default": "upper nu"
+        "default": "upper Nu"
       }
     }
   },
@@ -178,7 +178,7 @@
         "short": "cap xi"
       },
       "mathspeak": {
-        "default": "upper xi"
+        "default": "upper Xi"
       }
     }
   },
@@ -191,7 +191,7 @@
         "short": "cap omicron"
       },
       "mathspeak": {
-        "default": "upper omicron"
+        "default": "upper Omicron"
       }
     }
   },
@@ -204,7 +204,7 @@
         "short": "cap pi"
       },
       "mathspeak": {
-        "default": "upper pi"
+        "default": "upper Pi"
       }
     }
   },
@@ -217,7 +217,7 @@
         "short": "cap rho"
       },
       "mathspeak": {
-        "default": "upper rho"
+        "default": "upper Rho"
       }
     }
   },
@@ -230,7 +230,7 @@
         "short": "cap sigma"
       },
       "mathspeak": {
-        "default": "upper sigma"
+        "default": "upper Sigma"
       }
     }
   },
@@ -243,7 +243,7 @@
         "short": "cap tau"
       },
       "mathspeak": {
-        "default": "upper tau"
+        "default": "upper Tau"
       }
     }
   },
@@ -256,7 +256,7 @@
         "short": "cap upsilon"
       },
       "mathspeak": {
-        "default": "upper upsilon"
+        "default": "upper Upsilon"
       }
     }
   },
@@ -269,7 +269,7 @@
         "short": "cap phi"
       },
       "mathspeak": {
-        "default": "upper phi"
+        "default": "upper Phi"
       }
     }
   },
@@ -282,7 +282,7 @@
         "short": "cap chi"
       },
       "mathspeak": {
-        "default": "upper chi"
+        "default": "upper Chi"
       }
     }
   },
@@ -295,7 +295,7 @@
         "short": "cap psi"
       },
       "mathspeak": {
-        "default": "upper psi"
+        "default": "upper Psi"
       }
     }
   },
@@ -308,7 +308,7 @@
         "short": "cap omega"
       },
       "mathspeak": {
-        "default": "upper omega"
+        "default": "upper Omega"
       }
     }
   }

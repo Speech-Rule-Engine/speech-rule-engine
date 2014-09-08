@@ -1,4 +1,5 @@
 // Copyright 2013 Google Inc.
+// Copyright 2014 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,6 +30,11 @@ goog.require('sre.AbstractTest');
  */
 sre.SpeechRuleTest = function() {
   goog.base(this);
+
+  /**
+   * @override
+   */
+  this.information = 'Speech rule tests.';
 };
 goog.inherits(sre.SpeechRuleTest, sre.AbstractTest);
 

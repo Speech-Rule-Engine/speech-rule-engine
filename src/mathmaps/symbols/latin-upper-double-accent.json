@@ -9,7 +9,7 @@
         "short": "cap u double overdot overbar"
       },
       "mathspeak": {
-        "default": "upper u double overdot overbar"
+        "default": "upper U double overdot overbar"
       }
     }
   },
@@ -23,7 +23,7 @@
         "short": "cap u double overdot acute"
       },
       "mathspeak": {
-        "default": "upper u double overdot acute"
+        "default": "upper U double overdot acute"
       }
     }
   },
@@ -37,7 +37,7 @@
         "short": "cap u double overdot caron"
       },
       "mathspeak": {
-        "default": "upper u double overdot caron"
+        "default": "upper U double overdot caron"
       }
     }
   },
@@ -51,7 +51,7 @@
         "short": "cap u double overdot grave"
       },
       "mathspeak": {
-        "default": "upper u double overdot grave"
+        "default": "upper U double overdot grave"
       }
     }
   },
@@ -65,7 +65,7 @@
         "short": "cap a double overdot overbar"
       },
       "mathspeak": {
-        "default": "upper a double overdot overbar"
+        "default": "upper A double overdot overbar"
       }
     }
   },
@@ -79,7 +79,7 @@
         "short": "cap a overdot overbar"
       },
       "mathspeak": {
-        "default": "upper a overdot overbar"
+        "default": "upper A overdot overbar"
       }
     }
   },
@@ -93,7 +93,7 @@
         "short": "cap o ogonek overbar"
       },
       "mathspeak": {
-        "default": "upper o ogonek overbar"
+        "default": "upper O ogonek overbar"
       }
     }
   },
@@ -107,7 +107,7 @@
         "short": "cap a ring acute"
       },
       "mathspeak": {
-        "default": "upper a ring acute"
+        "default": "upper A ring acute"
       }
     }
   },
@@ -121,7 +121,7 @@
         "short": "cap o double overdot overbar"
       },
       "mathspeak": {
-        "default": "upper o double overdot overbar"
+        "default": "upper O double overdot overbar"
       }
     }
   },
@@ -135,7 +135,7 @@
         "short": "cap o tilde overbar"
       },
       "mathspeak": {
-        "default": "upper o tilde overbar"
+        "default": "upper O tilde overbar"
       }
     }
   },
@@ -149,7 +149,7 @@
         "short": "cap o overdot overbar"
       },
       "mathspeak": {
-        "default": "upper o overdot overbar"
+        "default": "upper O overdot overbar"
       }
     }
   },
@@ -163,7 +163,7 @@
         "short": "cap c cedilla acute"
       },
       "mathspeak": {
-        "default": "upper c cedilla acute"
+        "default": "upper C cedilla acute"
       }
     }
   },
@@ -177,7 +177,7 @@
         "short": "cap e overbar grave"
       },
       "mathspeak": {
-        "default": "upper e overbar grave"
+        "default": "upper E overbar grave"
       }
     }
   },
@@ -191,7 +191,7 @@
         "short": "cap e overbar acute"
       },
       "mathspeak": {
-        "default": "upper e overbar acute"
+        "default": "upper E overbar acute"
       }
     }
   },
@@ -205,7 +205,7 @@
         "short": "cap e cedilla breve"
       },
       "mathspeak": {
-        "default": "upper e cedilla breve"
+        "default": "upper E cedilla breve"
       }
     }
   },
@@ -219,7 +219,7 @@
         "short": "cap i double overdot acute"
       },
       "mathspeak": {
-        "default": "upper i double overdot acute"
+        "default": "upper I double overdot acute"
       }
     }
   },
@@ -233,7 +233,7 @@
         "short": "cap l underdot overbar"
       },
       "mathspeak": {
-        "default": "upper l underdot overbar"
+        "default": "upper L underdot overbar"
       }
     }
   },
@@ -247,7 +247,7 @@
         "short": "cap o tilde acute"
       },
       "mathspeak": {
-        "default": "upper o tilde acute"
+        "default": "upper O tilde acute"
       }
     }
   },
@@ -261,7 +261,7 @@
         "short": "cap o tilde double overdot"
       },
       "mathspeak": {
-        "default": "upper o tilde double overdot"
+        "default": "upper O tilde double overdot"
       }
     }
   },
@@ -275,7 +275,7 @@
         "short": "cap o overbar grave"
       },
       "mathspeak": {
-        "default": "upper o overbar grave"
+        "default": "upper O overbar grave"
       }
     }
   },
@@ -289,7 +289,7 @@
         "short": "cap o overbar acute"
       },
       "mathspeak": {
-        "default": "upper o overbar acute"
+        "default": "upper O overbar acute"
       }
     }
   },
@@ -303,7 +303,7 @@
         "short": "cap r overbar underdot"
       },
       "mathspeak": {
-        "default": "upper r overbar underdot"
+        "default": "upper R overbar underdot"
       }
     }
   },
@@ -317,7 +317,7 @@
         "short": "cap s acute overdot"
       },
       "mathspeak": {
-        "default": "upper s acute overdot"
+        "default": "upper S acute overdot"
       }
     }
   },
@@ -331,7 +331,7 @@
         "short": "cap s caron overdot"
       },
       "mathspeak": {
-        "default": "upper s caron overdot"
+        "default": "upper S caron overdot"
       }
     }
   },
@@ -345,7 +345,7 @@
         "short": "cap s underdot overdot"
       },
       "mathspeak": {
-        "default": "upper s underdot overdot"
+        "default": "upper S underdot overdot"
       }
     }
   },
@@ -359,7 +359,7 @@
         "short": "cap u tilde acute"
       },
       "mathspeak": {
-        "default": "upper u tilde acute"
+        "default": "upper U tilde acute"
       }
     }
   },
@@ -373,7 +373,7 @@
         "short": "cap u overbar double overdot"
       },
       "mathspeak": {
-        "default": "upper u overbar double overdot"
+        "default": "upper U overbar double overdot"
       }
     }
   },
@@ -387,7 +387,7 @@
         "short": "cap a hat acute"
       },
       "mathspeak": {
-        "default": "upper a hat acute"
+        "default": "upper A hat acute"
       }
     }
   },
@@ -401,7 +401,7 @@
         "short": "cap a hat grave"
       },
       "mathspeak": {
-        "default": "upper a hat grave"
+        "default": "upper A hat grave"
       }
     }
   },
@@ -415,7 +415,7 @@
         "short": "cap a hat hook"
       },
       "mathspeak": {
-        "default": "upper a hat hook"
+        "default": "upper A hat hook"
       }
     }
   },
@@ -429,7 +429,7 @@
         "short": "cap a hat tilde"
       },
       "mathspeak": {
-        "default": "upper a hat tilde"
+        "default": "upper A hat tilde"
       }
     }
   },
@@ -443,7 +443,7 @@
         "short": "cap a hat underdot"
       },
       "mathspeak": {
-        "default": "upper a hat underdot"
+        "default": "upper A hat underdot"
       }
     }
   },
@@ -457,7 +457,7 @@
         "short": "cap a breve acute"
       },
       "mathspeak": {
-        "default": "upper a breve acute"
+        "default": "upper A breve acute"
       }
     }
   },
@@ -471,7 +471,7 @@
         "short": "cap a breve grave"
       },
       "mathspeak": {
-        "default": "upper a breve grave"
+        "default": "upper A breve grave"
       }
     }
   },
@@ -485,7 +485,7 @@
         "short": "cap a breve hook"
       },
       "mathspeak": {
-        "default": "upper a breve hook"
+        "default": "upper A breve hook"
       }
     }
   },
@@ -499,7 +499,7 @@
         "short": "cap a breve tilde"
       },
       "mathspeak": {
-        "default": "upper a breve tilde"
+        "default": "upper A breve tilde"
       }
     }
   },
@@ -513,7 +513,7 @@
         "short": "cap a breve underdot"
       },
       "mathspeak": {
-        "default": "upper a breve underdot"
+        "default": "upper A breve underdot"
       }
     }
   },
@@ -527,7 +527,7 @@
         "short": "cap e hat acute"
       },
       "mathspeak": {
-        "default": "upper e hat acute"
+        "default": "upper E hat acute"
       }
     }
   },
@@ -541,7 +541,7 @@
         "short": "cap e hat grave"
       },
       "mathspeak": {
-        "default": "upper e hat grave"
+        "default": "upper E hat grave"
       }
     }
   },
@@ -555,7 +555,7 @@
         "short": "cap e hat hook"
       },
       "mathspeak": {
-        "default": "upper e hat hook"
+        "default": "upper E hat hook"
       }
     }
   },
@@ -569,7 +569,7 @@
         "short": "cap e hat tilde"
       },
       "mathspeak": {
-        "default": "upper e hat tilde"
+        "default": "upper E hat tilde"
       }
     }
   },
@@ -583,7 +583,7 @@
         "short": "cap e hat underdot"
       },
       "mathspeak": {
-        "default": "upper e hat underdot"
+        "default": "upper E hat underdot"
       }
     }
   },
@@ -597,7 +597,7 @@
         "short": "cap o hat acute"
       },
       "mathspeak": {
-        "default": "upper o hat acute"
+        "default": "upper O hat acute"
       }
     }
   },
@@ -611,7 +611,7 @@
         "short": "cap o hat grave"
       },
       "mathspeak": {
-        "default": "upper o hat grave"
+        "default": "upper O hat grave"
       }
     }
   },
@@ -625,7 +625,7 @@
         "short": "cap o hat hook"
       },
       "mathspeak": {
-        "default": "upper o hat hook"
+        "default": "upper O hat hook"
       }
     }
   },
@@ -639,7 +639,7 @@
         "short": "cap o hat tilde"
       },
       "mathspeak": {
-        "default": "upper o hat tilde"
+        "default": "upper O hat tilde"
       }
     }
   },
@@ -653,7 +653,7 @@
         "short": "cap o hat underdot"
       },
       "mathspeak": {
-        "default": "upper o hat underdot"
+        "default": "upper O hat underdot"
       }
     }
   },
@@ -667,7 +667,7 @@
         "short": "cap o acute prime"
       },
       "mathspeak": {
-        "default": "upper o acute prime"
+        "default": "upper O acute prime"
       }
     }
   },
@@ -681,7 +681,7 @@
         "short": "cap o grave prime"
       },
       "mathspeak": {
-        "default": "upper o grave prime"
+        "default": "upper O grave prime"
       }
     }
   },
@@ -695,7 +695,7 @@
         "short": "cap o hook prime"
       },
       "mathspeak": {
-        "default": "upper o hook prime"
+        "default": "upper O hook prime"
       }
     }
   },
@@ -709,7 +709,7 @@
         "short": "cap o tilde prime"
       },
       "mathspeak": {
-        "default": "upper o tilde prime"
+        "default": "upper O tilde prime"
       }
     }
   },
@@ -723,7 +723,7 @@
         "short": "cap o underdot prime"
       },
       "mathspeak": {
-        "default": "upper o underdot prime"
+        "default": "upper O underdot prime"
       }
     }
   },
@@ -737,7 +737,7 @@
         "short": "cap u acute prime"
       },
       "mathspeak": {
-        "default": "upper u acute prime"
+        "default": "upper U acute prime"
       }
     }
   },
@@ -751,7 +751,7 @@
         "short": "cap u grave prime"
       },
       "mathspeak": {
-        "default": "upper u grave prime"
+        "default": "upper U grave prime"
       }
     }
   },
@@ -765,7 +765,7 @@
         "short": "cap u hook prime"
       },
       "mathspeak": {
-        "default": "upper u hook prime"
+        "default": "upper U hook prime"
       }
     }
   },
@@ -779,7 +779,7 @@
         "short": "cap u tilde prime"
       },
       "mathspeak": {
-        "default": "upper u tilde prime"
+        "default": "upper U tilde prime"
       }
     }
   },
@@ -793,7 +793,7 @@
         "short": "cap u underdot prime"
       },
       "mathspeak": {
-        "default": "upper u underdot prime"
+        "default": "upper U underdot prime"
       }
     }
   }

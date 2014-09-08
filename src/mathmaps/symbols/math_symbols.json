@@ -28,7 +28,9 @@
         "short": "number"
       },
       "mathspeak": {
-        "default": "number sign"
+        "default": "number sign",
+        "brief": "num sign",
+        "sbrief": "num sign"
       }
     },
     "key": "0023"

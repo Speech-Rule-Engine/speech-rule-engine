@@ -21,6 +21,7 @@ goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
+goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
 
@@ -30,6 +31,7 @@ goog.require('sre.StoreUtil');
  * @constructor
  */
 sre.MathspeakRules = function() {
+  sre.MathspeakRules.initCustomFunctions_();
   sre.MathspeakRules.initMathspeakRules_();
 };
 goog.addSingletonGetter(sre.MathspeakRules);
@@ -59,10 +61,24 @@ sre.MathspeakRules.addContextFunction_ = goog.bind(
     sre.MathspeakRules.mathStore.contextFunctions);
 
 
+/** @private */
+sre.MathspeakRules.addCustomQuery_ = goog.bind(
+    sre.MathspeakRules.mathStore.customQueries.add,
+    sre.MathspeakRules.mathStore.customQueries);
+
+
+/** @private */
+sre.MathspeakRules.addCustomString_ = goog.bind(
+    sre.MathspeakRules.mathStore.customStrings.add,
+    sre.MathspeakRules.mathStore.customStrings);
+
+
 goog.scope(function() {
 var defineRule = sre.MathspeakRules.defineRule_;
 var defineRuleAlias = sre.MathspeakRules.defineRuleAlias_;
 
+var addCQF = sre.MathspeakRules.addCustomQuery_;
+var addCSF = sre.MathspeakRules.addCustomString_;
 var addCTXF = sre.MathspeakRules.addContextFunction_;
 
 
@@ -71,8 +87,9 @@ var addCTXF = sre.MathspeakRules.addContextFunction_;
  * @private
  */
 sre.MathspeakRules.initCustomFunctions_ = function() {
-  addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
-  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
+
+  addCSF('CSFspaceoutText', sre.MathspeakUtil.spaceoutText);
 };
 
 
@@ -81,28 +98,41 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
+  // Dummy rules
+  defineRule(
+      'unknown', 'mathspeak.default', '[n] text()',
+      'self::unknown');
+
+  defineRule(
+      'protected', 'mathspeak.default', '[t] text()',
+      'self::protected');
+
+
   // Number rules
   defineRule(
-      'number', 'mathspeak.default', '[n] text()', 'self::number');
+      'number', 'mathspeak.default', '[t] text()', 'self::number');
 
   defineRule(
       'number-with-chars', 'mathspeak.default',
-      '[t] "Number"; [n] text()', 'self::number',
-      '"" != translate(text(), "0123456789", "")');
+      '[t] "Number"; [m] CQFspaceoutNumber', 'self::number',
+      '"" != translate(text(), "0123456789.,", "")',
+      'text() != translate(text(), "0123456789.,", "")');
 
   defineRule(
       'number-with-chars', 'mathspeak.brief',
-      '[t] "Num"; [n] text()', 'self::number',
-      '"" != translate(text(), "0123456789", "")');
+      '[t] "Num"; [m] CQFspaceoutNumber', 'self::number',
+      '"" != translate(text(), "0123456789.,", "")',
+      'text() != translate(text(), "0123456789.,", "")');
 
   defineRule(
       'number-with-chars', 'mathspeak.sbrief',
-      '[t] "Num"; [n] text()', 'self::number',
-      '"" != translate(text(), "0123456789", "")');
+      '[t] "Num"; [m] CQFspaceoutNumber', 'self::number',
+      '"" != translate(text(), "0123456789.,", "")',
+      'text() != translate(text(), "0123456789.,", "")');
 
   defineRule(
       'number-as-upper-word', 'mathspeak.default',
-      '[t] "UpperWord"; [n] text()', 'self::number',
+      '[t] "UpperWord"; [t] CSFspaceoutText', 'self::number',
       'string-length(text())>1', 'text()=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +

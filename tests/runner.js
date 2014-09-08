@@ -87,7 +87,7 @@ sre.TestRunner.prototype.registerTest = function(test) {
  */
 sre.TestRunner.prototype.runTests = function() {
   for (var i = 0, test; test = this.testQueue_[i]; i++) {
-    this.output('Running ' + test.information);
+    this.output('\nRunning ' + test.information + '\n');
     this.executeTests(test);
   }
 };

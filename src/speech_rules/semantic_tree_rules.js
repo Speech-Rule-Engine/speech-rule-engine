@@ -32,6 +32,7 @@ goog.require('sre.StoreUtil');
  * @constructor
  */
 sre.SemanticTreeRules = function() {
+  sre.SemanticTreeRules.initCustomFunctions_();
   sre.SemanticTreeRules.initSemanticRules_();
 };
 goog.addSingletonGetter(sre.SemanticTreeRules);

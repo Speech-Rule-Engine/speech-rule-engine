@@ -103,7 +103,7 @@
         "short": "cap theta"
       },
       "mathspeak": {
-        "default": "upper theta"
+        "default": "upper Theta"
       }
     },
     "key": "03F4"
@@ -380,7 +380,7 @@
         "short": "bold cap digamma"
       },
       "mathspeak": {
-        "default": "bold upper digamma"
+        "default": "bold upper Digamma"
       }
     },
     "key": "1D7CA"
