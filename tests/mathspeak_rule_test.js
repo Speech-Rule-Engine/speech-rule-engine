@@ -300,7 +300,7 @@ sre.MathspeakRuleTest.prototype.untestSample_4_2_1 = function() {
 /**
  * Testing Rule 5.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_5_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_5_1_1 = function() {
   var mml = '<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>';
   this.executeRuleTest(mml, 'y minus 1', 'default');
   this.executeRuleTest(mml, 'y minus 1', 'brief');
@@ -311,8 +311,8 @@ sre.MathspeakRuleTest.prototype.untestSample_5_1_1 = function() {
 /**
  * Testing Rule 5.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_5_1_2 = function() {
-  var mml = '<mrow><mo>(</mo><mn>1</mn><mo>-</mo><mi> to </mi><mo>-</mo>' +
+sre.MathspeakRuleTest.prototype.testSample_5_1_2 = function() {
+  var mml = '<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext>' +
       '<mn>1</mn><mo>)</mo></mrow>';
   this.executeRuleTest(mml, 'left-parenthesis 1 hyphen to hyphen 1' +
                        ' right-parenthesis', 'default');
@@ -325,7 +325,7 @@ sre.MathspeakRuleTest.prototype.untestSample_5_1_2 = function() {
 /**
  * Testing Rule 5.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.untestSample_5_1_3 = function() {
+sre.MathspeakRuleTest.prototype.testSample_5_1_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>1</mn></mrow>';
   this.executeRuleTest(mml, 'negative 1', 'default');
   this.executeRuleTest(mml, 'negative 1', 'brief');
@@ -356,7 +356,7 @@ sre.MathspeakRuleTest.prototype.untestSample_6_1_1 = function() {
 /**
  * Testing Rule 6.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_6_2_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_6_2_1 = function() {
   var mml = '<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo>' +
       '<mo>=</mo><mn>3</mn></mrow>';
   this.executeRuleTest(mml, 'startabsolutevalue 4 minus 7 endabsolutevalue' +

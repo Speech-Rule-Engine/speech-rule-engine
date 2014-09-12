@@ -108,6 +108,9 @@
       "default": {
         "default": "hyphen minus",
         "short": "minus"
+      },
+      "mathspeak": {
+        "default": "hyphen"
       }
     },
     "key": "002D"

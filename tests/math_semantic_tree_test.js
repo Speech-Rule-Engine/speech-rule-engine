@@ -6214,3 +6214,131 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</integral>');
 };
+
+
+/**
+ * Variations of integrals.
+ */
+sre.SemanticTreeTest.prototype.testStreeText = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mtext>text only</mtext>',
+      '<text role="unknown" id="0">text only</text>'
+  );
+
+  this.executeTreeTest(
+      '<mi>a</mi><mtext>to</mtext>',
+      '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">a</identifier>' +
+      '<text role="unknown" id="1">to</text>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.executeTreeTest(
+      '<mtext>to</mtext><mi>b</mi>',
+      '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0">to</text>' +
+      '<identifier role="latinletter" font="normal" id="1">b</identifier>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.executeTreeTest(
+      '<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>',
+      '<punctuated role="text" id="6">' +
+      '<content>' +
+      '<punctuation role="dummy" id="5">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">a</identifier>' +
+      '<text role="unknown" id="1">to</text>' +
+      '<identifier role="latinletter" font="normal" id="2">b</identifier>' +
+      '<text role="unknown" id="3">to</text>' +
+      '<identifier role="latinletter" font="normal" id="4">c</identifier>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.brief = true;
+  this.executeTreeTest(
+      '<mrow><mi>a</mi><mo>+</mo><mi>b</mi>' +
+      '<mtext>is generally not the same as</mtext>' +
+      '<mi>a</mi><mi>b</mi><mo>.</mo></mrow>',
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>.</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<text>is generally not the same as</text>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuation>.</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.executeTreeTest(
+      '<mrow><mi>a</mi><mo>+</mo><mi>b</mi>' +
+      '<mtext>is not the same as</mtext>' +
+      '<mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>',
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<text>is not the same as</text>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<text>in general.</text>' +
+      '</children>' +
+      '</punctuated>'
+  );
+};

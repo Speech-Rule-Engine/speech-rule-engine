@@ -1289,6 +1289,7 @@ sre.SemanticAttr.Role = {
   OPENFENCE: 'openfence',
   CLOSEFENCE: 'closefence',
   APPLICATION: 'application', // Function Application.
+  DUMMY: 'dummy', // A dummy separator for text.
 
   // Fences.
   OPEN: 'open',
@@ -1320,6 +1321,7 @@ sre.SemanticAttr.Role = {
   SEQUENCE: 'sequence',
   ENDPUNCT: 'endpunct',
   STARTPUNCT: 'startpunct',
+  TEXT: 'text',
 
   // Operators.
   NEGATIVE: 'negative',
@@ -1359,7 +1361,8 @@ sre.SemanticAttr.Role = {
   TABLE: 'table',
 
   // General
-  UNKNOWN: 'unknown'
+  UNKNOWN: 'unknown',
+  PROTECTED: 'protected'
 };
 
 

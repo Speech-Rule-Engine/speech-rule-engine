@@ -105,12 +105,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'protected', 'mathspeak.default', '[t] text()',
-      'self::protected');
+      'self::*', '@role="protected"');
 
 
   // Number rules
   defineRule(
-      'number', 'mathspeak.default', '[t] text()', 'self::number');
+      'number', 'mathspeak.default', '[n] text()', 'self::number');
 
   defineRule(
       'number-with-chars', 'mathspeak.default',
@@ -145,9 +145,38 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9",' +
       '"")');
 
+
+  // Operator rules
   defineRule(
       'binary-operation', 'mathspeak.default',
       '[m] children/* (separator:text());', 'self::infixop');
+
+  defineRule('subtraction', 'mathspeak.default',
+             '[m] children/* (separator:"minus");', 'self::infixop',
+             '@role="subtraction"');
+
+
+  // Fences rules
+  defineRule(
+      'fences-open-close', 'mathspeak.default',
+      '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
+      'self::fenced', '@role="leftright"');
+
+
+  defineRule(
+      'fences-neutral', 'mathspeak.default',
+      '[t] "startabsolutevalue"; [n] children/*[1]; [t] "endabsolutevalue"',
+      'self::fenced', 'self::fenced[@role="neutral"]');
+
+  defineRule(
+      'fences-neutral', 'mathspeak.sbrief',
+      '[t] "absolutevalue"; [n] children/*[1]; [t] "endabsolutevalue"',
+      'self::fenced', 'self::fenced[@role="neutral"]');
+
+
+  // Text rules
+  defineRule(
+      'text', 'mathspeak.default', '[n] text()', 'self::text');
 
 };
 

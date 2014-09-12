@@ -232,7 +232,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'fences-open-close', 'default.default',
       '[p] (pause:100); [t] "open"; [n] children/*[1]; [p] (pause:200);' +
       '[t] "close"',
-      'self::fenced[@role="leftright"]');
+      'self::fenced', '@role="leftright"');
 
   defineRule(
       'fences-open-close-in-appl', 'default.default',
@@ -412,7 +412,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'text', 'default.default',
-      '[t] text(); [p] (pause:200)',
+      '[n] text(); [p] (pause:200)',
       'self::text');
 
 };

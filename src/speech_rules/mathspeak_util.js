@@ -43,10 +43,14 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
   var content = node.textContent.split('');
   var result = [];
   var dp = new sre.SystemExternal.xmldom.DOMParser();
-  for(var i = 0, chr; chr = content[i]; i++) {
+  for (var i = 0, chr; chr = content[i]; i++) {
     // We ignore Greek characters for now!
-    var type = chr.match(/\W/) ? sre.SemanticAttr.Type.UNKNOWN : 'protected';
-    var doc = dp.parseFromString('<' + type + '>' + chr + '</' + type + '>');
+    var type = sre.SemanticAttr.Type.NUMBER;
+    var role = chr.match(/\W/) ?
+        sre.SemanticAttr.Role.UNKNOWN :
+        sre.SemanticAttr.Role.PROTECTED;
+    var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
+                                 chr + '</' + type + '>');
     result.push(doc.documentElement);
   }
   return result;

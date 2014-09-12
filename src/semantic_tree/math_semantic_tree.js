@@ -689,9 +689,6 @@ sre.SemanticTree.prototype.makePostfixNode_ = function(node, postfixes) {
 };
 
 
-// TODO (sorge) Separate out interspersed text before the relations in row
-// heuristic otherwise we get them as implicit operations!
-// Currently we handle that later in the rules, which is rather messy.
 /**
  * Processes a list of nodes, combining expressions by delimiters, tables,
  * punctuation sequences, function/big operator/integral applications to
@@ -710,8 +707,44 @@ sre.SemanticTree.prototype.processRow_ = function(nodes) {
   nodes = this.getFencesInRow_(nodes);
   nodes = this.processTablesInRow_(nodes);
   nodes = this.getPunctuationInRow_(nodes);
+  nodes = this.getTextInRow_(nodes);
   nodes = this.getFunctionsInRow_(nodes);
   return this.processRelationsInRow_(nodes);
+};
+
+
+/**
+ * Seperates text from math content and combines them into a punctuated node,
+ * with dummy punctuation invisible comma.
+ * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
+ * @return {!Array.<sre.SemanticTree.Node>} The new list of nodes.
+ * @private
+ */
+sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
+  if (nodes.length <= 1) {
+    return nodes;
+  }
+  var partition = sre.SemanticTree.partitionNodes_(
+      nodes, sre.SemanticTree.attrPred_('type', 'TEXT'));
+  if (partition.rel.length == 0) {
+    return nodes;
+  }
+  var result = [];
+  var nextComp = partition.comp[0];
+  if (nextComp.length > 0) {
+    result.push(this.processRow_(nextComp));
+  }
+  for (var i = 0, text; text = partition.rel[i]; i++) {
+    result.push(text);
+    nextComp = partition.comp[i + 1];
+    if (nextComp.length > 0) {
+      result.push(this.processRow_(nextComp));
+    }
+  }
+  var comma = this.createNode_();
+  comma.updateContent_(sre.SemanticAttr.invisibleComma());
+  comma.role = sre.SemanticAttr.Role.DUMMY;
+  return [this.makePunctuatedNode_(result, [comma])];
 };
 
 
@@ -1248,13 +1281,15 @@ sre.SemanticTree.prototype.makePunctuatedNode_ = function(
     nodes, punctuations) {
   var newNode = this.makeBranchNode_(
       sre.SemanticAttr.Type.PUNCTUATED, nodes, punctuations);
-
   if (punctuations.length == 1 &&
       nodes[0].type == sre.SemanticAttr.Type.PUNCTUATION) {
     newNode.role = sre.SemanticAttr.Role.STARTPUNCT;
   } else if (punctuations.length == 1 &&
       nodes[nodes.length - 1].type == sre.SemanticAttr.Type.PUNCTUATION) {
     newNode.role = sre.SemanticAttr.Role.ENDPUNCT;
+  } else if (punctuations.length == 1 &&
+      punctuations[0].role == sre.SemanticAttr.Role.DUMMY) {
+    newNode.role = sre.SemanticAttr.Role.TEXT;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
   }
