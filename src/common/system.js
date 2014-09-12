@@ -203,7 +203,11 @@ sre.System.prototype.getSemanticTree_ = function(mml) {
  * @private
  */
 sre.System.prototype.processFile_ = function(input) {
-  var expr = sre.SystemExternal.fs.readFileSync(input, {encoding: 'utf8'});
+  try {
+    var expr = sre.SystemExternal.fs.readFileSync(input, {encoding: 'utf8'});
+  } catch (err) {
+    throw new sre.System.Error('Can not open file: ' + input);
+  }
   return this.processExpression(expr);
 };
 
@@ -216,7 +220,13 @@ sre.System.prototype.processFile_ = function(input) {
  */
 sre.System.prototype.processFile = function(input, opt_output) {
   var descr = this.processFile_(input);
-  opt_output ?
-      sre.SystemExternal.fs.writeFileSync(opt_output, descr) :
-      console.log(descr);
+  if (!opt_output) {
+    console.log(descr);
+    return;
+  }
+  try {
+    sre.SystemExternal.fs.writeFileSync(opt_output, descr);
+  } catch (err) {
+    throw new sre.System.Error('Can not write to file: ' + opt_output);
+  }
 };
