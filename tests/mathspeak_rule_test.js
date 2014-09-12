@@ -219,20 +219,20 @@ sre.MathspeakRuleTest.prototype.untestSample_2_1_1 = function() {
 /**
  * Testing Rule 2.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_2_3_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_2_3_1 = function() {
   var mml = '<mrow><mtext>If</mtext><mspace width="4.pt"/><mi>A</mi>' +
       '<mo>→</mo><mi>B</mi><mspace width="4.pt"/><mtext>and</mtext>' +
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
       '<mspace width="4.pt"/><mtext>then</mtext><mspace width="4.pt"/>' +
-      '<mi>A</mi><mo>→</mo><mi>C</mi></mrow>';
-  this.executeRuleTest(mml, 'if upper a rightarrow upper b and upper b' +
-                       ' rightarrow upper c then upper a rightarrow upper c' +
+      '<mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>';
+  this.executeRuleTest(mml, 'If upper A right-arrow upper B and upper B' +
+                       ' right-arrow upper C then upper A right-arrow upper C' +
                        ' period', 'default');
-  this.executeRuleTest(mml, 'if upper a right-arrow upper b and upper b' +
-                       ' right-arrow upper c then upper a right-arrow upper' +
-                       ' c period', 'brief');
-  this.executeRuleTest(mml, 'if upper a r arrow upper b and upper b r arrow' +
-                       ' upper c then upper a r arrow upper c period',
+  this.executeRuleTest(mml, 'If upper A right-arrow upper B and upper B' +
+                       ' right-arrow upper C then upper A right-arrow upper' +
+                       ' C period', 'brief');
+  this.executeRuleTest(mml, 'If upper A r arrow upper B and upper B r arrow' +
+                       ' upper C then upper A r arrow upper C period',
                        'sbrief');
 };
 
@@ -241,7 +241,8 @@ sre.MathspeakRuleTest.prototype.untestSample_2_3_1 = function() {
  * Testing Rule 2.6, Example 1.
  */
 sre.MathspeakRuleTest.prototype.untestSample_2_6_1 = function() {
-  var mml = '<mrow><mo>[</mo><mi>x</mi><mo>]</mo></mrow>';
+  var mml = '<mrow><mo mathvariant="bold">[</mo><mi>x</mi>' +
+      '<mo mathvariant="bold">]</mo></mrow>';
   this.executeRuleTest(mml, 'bold left-bracket x bold right-bracket',
                        'default');
   this.executeRuleTest(mml, 'bold left-brack x bold right-brack', 'brief');
@@ -271,29 +272,29 @@ sre.MathspeakRuleTest.prototype.untestSample_2_6_2 = function() {
 /**
  * Testing Rule 4.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_4_2_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_4_2_1 = function() {
   var mml = '<mrow><mi> Uppercase </mi><mo>(</mo><mo>{</mo><mi>α</mi>' +
       '<mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi>' +
       '<mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo>' +
-      '<mo>=</mo><mo>{</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo>' +
-      '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>E</mi><mo>,</mo>' +
+      '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
+      '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'uppercase left-parenthesis startset alpha comma' +
-                       ' beta comma chi comma delta comma epsilon comma phi' +
+  this.executeRuleTest(mml, 'Uppercase left-parenthesis startset alpha comma' +
+                       ' beta comma gamma comma delta comma epsilon comma phi' +
                        ' endset right-parenthesis equals startset upper' +
-                       ' alpha comma upper beta comma upper chi comma upper' +
-                       ' delta comma upper epsilon comma upper phi endset',
+                       ' Alpha comma upper Beta comma upper Gamma comma upper' +
+                       ' Delta comma upper Epsilon comma upper Phi endset',
                        'default');
-  this.executeRuleTest(mml, 'uppercase left-pren startset alpha comma beta' +
-                       ' comma chi comma delta comma epsilon comma phi' +
-                       ' endset right-pren equals startset upper alpha' +
-                       ' comma upper beta comma upper chi comma upper delta' +
-                       ' comma upper epsilon comma upper phi endset', 'brief');
-  this.executeRuleTest(mml, 'uppercase l pren set alpha comma beta comma' +
-                       ' chi comma delta comma epsilon comma phi endset r' +
-                       ' pren equals set upper alpha comma upper beta comma' +
-                       ' upper chi comma upper delta comma upper epsilon' +
-                       ' comma upper phi endset', 'sbrief');
+  this.executeRuleTest(mml, 'Uppercase left-pren startset alpha comma beta' +
+                       ' comma gamma comma delta comma epsilon comma phi' +
+                       ' endset right-pren equals startset upper Alpha' +
+                       ' comma upper Beta comma upper Gamma comma upper Delta' +
+                       ' comma upper Epsilon comma upper Phi endset', 'brief');
+  this.executeRuleTest(mml, 'Uppercase l pren set alpha comma beta comma' +
+                       ' gamma comma delta comma epsilon comma phi endset r' +
+                       ' pren equals set upper Alpha comma upper Beta comma' +
+                       ' upper Gamma comma upper Delta comma upper Epsilon' +
+                       ' comma upper Phi endset', 'sbrief');
 };
 
 

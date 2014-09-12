@@ -155,13 +155,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
              '[m] children/* (separator:"minus");', 'self::infixop',
              '@role="subtraction"');
 
+  // Function rules
+  defineRule(
+      'function-unknown', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::appl', 'children/*[1][@role="unknown"]'
+  );
+
 
   // Fences rules
   defineRule(
       'fences-open-close', 'mathspeak.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
       'self::fenced', '@role="leftright"');
-
 
   defineRule(
       'fences-neutral', 'mathspeak.default',
@@ -172,6 +178,22 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'fences-neutral', 'mathspeak.sbrief',
       '[t] "absolutevalue"; [n] children/*[1]; [t] "endabsolutevalue"',
       'self::fenced', 'self::fenced[@role="neutral"]');
+
+  // TODO (sorge) Maybe promote this to default.default?
+  // Maybe check for punctuated element and singleton?
+  defineRule(
+      'fences-set', 'mathspeak.default',
+      '[t] "startset"; [n] children/*[1]; [t] "endset"',
+      'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
+      'content/*[2][text()]="}"', 'count(children/*)=1');
+
+  defineRule(
+      'fences-set', 'mathspeak.sbrief',
+      '[t] "set"; [n] children/*[1]; [t] "endset"',
+      'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
+      'content/*[2][text()]="}"', 'count(children/*)=1');
+
+
 
 
   // Text rules
