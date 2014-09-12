@@ -415,6 +415,25 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       '[n] text(); [p] (pause:200)',
       'self::text');
 
+  // Font rules.
+  defineRule(
+      'text-font', 'default.default',
+      '[t] "start"; [t] @font; [n] text(); [t] "end"; [t] @font;',
+      'self::text', '@font', '@font!="normal"');
+
+  defineRule(
+      'identifier-font', 'default.default',
+      '[t] @font; [n] text()',
+      'self::identifier', '@font', '@font!="normal"');
+
+  defineRuleAlias(
+      'number-font', 'self::number',
+      '@font', '@font!="normal"');
+
+  defineRule('operator-font', 'default.default',
+      '[t] @font; [n] text()',
+      'self::operator', '@font', '@font!="normal"');
+
 };
 
 });  // goog.scope
