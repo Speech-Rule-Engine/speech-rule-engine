@@ -171,34 +171,53 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'fences-neutral', 'mathspeak.default',
-      '[t] "startabsolutevalue"; [n] children/*[1]; [t] "endabsolutevalue"',
+      '[t] "StartAbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
       'self::fenced', 'self::fenced[@role="neutral"]');
 
   defineRule(
       'fences-neutral', 'mathspeak.sbrief',
-      '[t] "absolutevalue"; [n] children/*[1]; [t] "endabsolutevalue"',
+      '[t] "AbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
       'self::fenced', 'self::fenced[@role="neutral"]');
 
   // TODO (sorge) Maybe promote this to default.default?
   // Maybe check for punctuated element and singleton?
   defineRule(
       'fences-set', 'mathspeak.default',
-      '[t] "startset"; [n] children/*[1]; [t] "endset"',
+      '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
       'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
       'content/*[2][text()]="}"', 'count(children/*)=1');
 
   defineRule(
-      'fences-set', 'mathspeak.sbrief',
-      '[t] "set"; [n] children/*[1]; [t] "endset"',
+      'fences-Set', 'mathspeak.sbrief',
+      '[t] "Set"; [n] children/*[1]; [t] "EndSet"',
       'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
       'content/*[2][text()]="}"', 'count(children/*)=1');
-
-
 
 
   // Text rules
   defineRule(
       'text', 'mathspeak.default', '[n] text()', 'self::text');
+
+
+  // Fraction rules
+  
+  defineRule(
+      'fraction', 'default.default',
+      '[t] "StartFraction"; [n] children/*[1];' +
+          ' [t] "Over"; [n] children/*[2]; [t] "EndFraction"',
+      'self::fraction');
+
+  defineRule(
+      'fraction', 'default.brief',
+      '[t] "StartFrac"; [n] children/*[1];' +
+          ' [t] "Over"; [n] children/*[2]; [t] "EndFrac"',
+      'self::fraction');
+
+  defineRule(
+      'fraction', 'default.sbrief',
+      '[t] "Frac"; [n] children/*[1];' +
+          ' [t] "Over"; [n] children/*[2]; [t] "EndFrac"',
+      'self::fraction');
 
 };
 

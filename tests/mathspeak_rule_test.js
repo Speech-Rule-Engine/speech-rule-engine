@@ -185,12 +185,12 @@ sre.MathspeakRuleTest.prototype.untestSample_1_6_1 = function() {
   var mml = '<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo>' +
       '<mstack stackalign="right"><msline length="6"/><mn>3.142857</mn>' +
       '</mstack></mrow>';
-  this.executeRuleTest(mml, 'startfraction 22 over 7 endfraction equals 3' +
+  this.executeRuleTest(mml, 'StartFraction 22 over 7 EndFraction equals 3' +
                        ' point modifyingabove 1 4 2 8 5 7 with bar',
                        'default');
-  this.executeRuleTest(mml, 'startfrac 22 over 7 endfrac equals 3 point' +
+  this.executeRuleTest(mml, 'StartFrac 22 over 7 EndFrac equals 3 point' +
                        ' modabove 1 4 2 8 5 7 with bar', 'brief');
-  this.executeRuleTest(mml, 'frac 22 over 7 endfrac equals 3 point modabove' +
+  this.executeRuleTest(mml, 'Frac 22 over 7 EndFrac equals 3 point modabove' +
                        ' 1 4 2 8 5 7 with bar', 'sbrief');
 };
 
@@ -203,16 +203,16 @@ sre.MathspeakRuleTest.prototype.untestSample_2_1_1 = function() {
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
       '<mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>';
-  this.executeRuleTest(mml, 'd equals startroot left-parenthesis upper x' +
+  this.executeRuleTest(mml, 'd equals Startroot left-parenthesis upper x' +
                        ' minus x right-parenthesis squared minus' +
                        ' left-parenthesis upper y minus y right-parenthesis' +
-                       ' squared endroot', 'default');
-  this.executeRuleTest(mml, 'd equals startroot left-pren upper x minus x' +
+                       ' squared Endroot', 'default');
+  this.executeRuleTest(mml, 'd equals Startroot left-pren upper x minus x' +
                        ' right-pren squared minus left-pren upper y minus' +
-                       ' y right-pren squared endroot', 'brief');
+                       ' y right-pren squared Endroot', 'brief');
   this.executeRuleTest(mml, 'd equals root l pren upper x minus x r pren' +
                        ' squared minus l pren upper y minus y r pren' +
-                       ' squared endroot', 'sbrief');
+                       ' squared Endroot', 'sbrief');
 };
 
 
@@ -258,13 +258,13 @@ sre.MathspeakRuleTest.prototype.untestSample_2_6_2 = function() {
       '<mo>=</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow>' +
       '<mi>d</mi><mi>t</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus startfraction d upper phi upper b over d t' +
-                       ' endfraction', 'default');
+                       ' minus StartFraction d upper phi upper b over d t' +
+                       ' EndFraction', 'default');
   this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus startfrac d upper phi upper b over d t' +
-                       ' endfrac', 'brief');
+                       ' minus StartFrac d upper phi upper b over d t' +
+                       ' EndFrac', 'brief');
   this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus frac d upper phi upper b over d t endfrac',
+                       ' minus Frac d upper phi upper b over d t EndFrac',
                        'sbrief');
 };
 
@@ -279,22 +279,22 @@ sre.MathspeakRuleTest.prototype.testSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Uppercase left-parenthesis startset alpha comma' +
+  this.executeRuleTest(mml, 'Uppercase left-parenthesis StartSet alpha comma' +
                        ' beta comma gamma comma delta comma epsilon comma phi' +
-                       ' endset right-parenthesis equals startset upper' +
+                       ' EndSet right-parenthesis equals StartSet upper' +
                        ' Alpha comma upper Beta comma upper Gamma comma upper' +
-                       ' Delta comma upper Epsilon comma upper Phi endset',
+                       ' Delta comma upper Epsilon comma upper Phi EndSet',
                        'default');
-  this.executeRuleTest(mml, 'Uppercase left-pren startset alpha comma beta' +
+  this.executeRuleTest(mml, 'Uppercase left-pren StartSet alpha comma beta' +
                        ' comma gamma comma delta comma epsilon comma phi' +
-                       ' endset right-pren equals startset upper Alpha' +
+                       ' EndSet right-pren equals StartSet upper Alpha' +
                        ' comma upper Beta comma upper Gamma comma upper Delta' +
-                       ' comma upper Epsilon comma upper Phi endset', 'brief');
-  this.executeRuleTest(mml, 'Uppercase l pren set alpha comma beta comma' +
-                       ' gamma comma delta comma epsilon comma phi endset r' +
-                       ' pren equals set upper Alpha comma upper Beta comma' +
+                       ' comma upper Epsilon comma upper Phi EndSet', 'brief');
+  this.executeRuleTest(mml, 'Uppercase l pren Set alpha comma beta comma' +
+                       ' gamma comma delta comma epsilon comma phi EndSet r' +
+                       ' pren equals Set upper Alpha comma upper Beta comma' +
                        ' upper Gamma comma upper Delta comma upper Epsilon' +
-                       ' comma upper Phi endset', 'sbrief');
+                       ' comma upper Phi EndSet', 'sbrief');
 };
 
 
@@ -342,15 +342,15 @@ sre.MathspeakRuleTest.prototype.untestSample_6_1_1 = function() {
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
       '<mn>8</mn><mo>,</mo><mo>...</mo><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'the fibonacci numbers are colon startset 0' +
+  this.executeRuleTest(mml, 'The Fibonacci numbers are colon StartSet 0' +
                        ' comma 1 comma 1 comma 2 comma 3 comma 5 comma 8' +
-                       ' comma ellipsis endset', 'default');
-  this.executeRuleTest(mml, 'the fibonacci numbers are colon startset 0' +
+                       ' comma ellipsis EndSet', 'default');
+  this.executeRuleTest(mml, 'The Fibonacci numbers are colon StartSet 0' +
                        ' comma 1 comma 1 comma 2 comma 3 comma 5 comma 8' +
-                       ' comma ellipsis endset', 'brief');
-  this.executeRuleTest(mml, 'the fibonacci numbers are colon set 0 comma 1' +
+                       ' comma ellipsis EndSet', 'brief');
+  this.executeRuleTest(mml, 'The Fibonacci numbers are colon Set 0 comma 1' +
                        ' comma 1 comma 2 comma 3 comma 5 comma 8 comma' +
-                       ' ellipsis endset', 'sbrief');
+                       ' ellipsis EndSet', 'sbrief');
 };
 
 
@@ -360,11 +360,11 @@ sre.MathspeakRuleTest.prototype.untestSample_6_1_1 = function() {
 sre.MathspeakRuleTest.prototype.testSample_6_2_1 = function() {
   var mml = '<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo>' +
       '<mo>=</mo><mn>3</mn></mrow>';
-  this.executeRuleTest(mml, 'startabsolutevalue 4 minus 7 endabsolutevalue' +
+  this.executeRuleTest(mml, 'StartAbsoluteValue 4 minus 7 EndAbsoluteValue' +
                        ' equals 3', 'default');
-  this.executeRuleTest(mml, 'startabsolutevalue 4 minus 7 endabsolutevalue' +
+  this.executeRuleTest(mml, 'StartAbsoluteValue 4 minus 7 EndAbsoluteValue' +
                        ' equals 3', 'brief');
-  this.executeRuleTest(mml, 'absolutevalue 4 minus 7 endabsolutevalue equals' +
+  this.executeRuleTest(mml, 'AbsoluteValue 4 minus 7 EndAbsoluteValue equals' +
                        ' 3', 'sbrief');
 };
 
@@ -379,47 +379,47 @@ sre.MathspeakRuleTest.prototype.untestSample_6_2_2 = function() {
       '<mfenced open="|" close="|"><mi>a</mi></mfenced><mo>±</mo>' +
       '<mi>b</mi><mfenced separators="" open="|" close="|"><mo>-</mo>' +
       '<mn>15</mn></mfenced></mrow>';
-  this.executeRuleTest(mml, 'startabsolutevalue a startabsolutevalue' +
-                       ' plus-or-minus b endabsolutevalue minus 15' +
-                       ' endabsolutevalue not-equals startabsolutevalue a' +
-                       ' endabsolutevalue plus-or-minus b startabsolutevalue' +
-                       ' minus 15 endabsolutevalue', 'default');
-  this.executeRuleTest(mml, 'startabsolutevalue a startabsolutevalue' +
-                       ' plus-or-minus b endabsolutevalue minus 15' +
-                       ' endabsolutevalue not-equals startabsolutevalue a' +
-                       ' endabsolutevalue plus-or-minus b startabsolutevalue' +
-                       ' minus 15 endabsolutevalue', 'brief');
-  this.executeRuleTest(mml, 'absolutevalue a absolutevalue plus-or-minus b' +
-                       ' endabsolutevalue minus 15 endabsolutevalue' +
-                       ' not-equals absolutevalue a endabsolutevalue' +
-                       ' plus-or-minus b absolutevalue minus 15' +
-                       ' endabsolutevalue', 'sbrief');
+  this.executeRuleTest(mml, 'StartAbsoluteValue a StartAbsoluteValue' +
+                       ' plus-or-minus b EndAbsoluteValue minus 15' +
+                       ' EndAbsoluteValue not-equals StartAbsoluteValue a' +
+                       ' EndAbsoluteValue plus-or-minus b StartAbsoluteValue' +
+                       ' minus 15 EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'StartAbsoluteValue a StartAbsoluteValue' +
+                       ' plus-or-minus b EndAbsoluteValue minus 15' +
+                       ' EndAbsoluteValue not-equals StartAbsoluteValue a' +
+                       ' EndAbsoluteValue plus-or-minus b StartAbsoluteValue' +
+                       ' minus 15 EndAbsoluteValue', 'brief');
+  this.executeRuleTest(mml, 'AbsoluteValue a AbsoluteValue plus-or-minus b' +
+                       ' EndAbsoluteValue minus 15 EndAbsoluteValue' +
+                       ' not-equals AbsoluteValue a EndAbsoluteValue' +
+                       ' plus-or-minus b AbsoluteValue minus 15' +
+                       ' EndAbsoluteValue', 'sbrief');
 };
 
 
 /**
  * Testing Rule 7.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_1_1 = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
-  this.executeRuleTest(mml, 'startfraction 1 over x endfraction', 'default');
-  this.executeRuleTest(mml, 'startfrac 1 over x endfrac', 'brief');
-  this.executeRuleTest(mml, 'frac 1 over x endfrac', 'sbrief');
+  this.executeRuleTest(mml, 'StartFraction 1 Over x EndFraction', 'default');
+  this.executeRuleTest(mml, 'StartFrac 1 Over x EndFrac', 'brief');
+  this.executeRuleTest(mml, 'Frac 1 Over x EndFrac', 'sbrief');
 };
 
 
 /**
  * Testing Rule 7.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_1_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_1_2 = function() {
   var mml = '<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo>' +
       '<mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow>' +
       '</mfrac><mo>×</mo><mi>f</mi></mrow>';
-  this.executeRuleTest(mml, 'a minus startfraction b plus c over d minus e' +
-                       ' endfraction times f', 'default');
-  this.executeRuleTest(mml, 'a minus startfrac b plus c over d minus e' +
-                       ' endfrac times f', 'brief');
-  this.executeRuleTest(mml, 'a minus frac b plus c over d minus e endfrac' +
+  this.executeRuleTest(mml, 'a minus StartFraction b plus c Over d minus e' +
+                       ' EndFraction times f', 'default');
+  this.executeRuleTest(mml, 'a minus StartFrac b plus c Over d minus e' +
+                       ' EndFrac times f', 'brief');
+  this.executeRuleTest(mml, 'a minus Frac b plus c Over d minus e EndFrac' +
                        ' times f', 'sbrief');
 };
 
@@ -431,17 +431,17 @@ sre.MathspeakRuleTest.prototype.untestSample_7_2_1 = function() {
   var mml = '<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi>' +
       '</mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi>' +
       '</mfrac></mfrac></mrow>';
-  this.executeRuleTest(mml, 'startstartfraction startfraction x over y' +
-                       ' endfraction overover z endendfraction not-equals' +
-                       ' startstartfraction x overover startfraction y over' +
-                       ' z endfraction endendfraction', 'default');
-  this.executeRuleTest(mml, 'startstartfrac startfrac x over y endfrac' +
-                       ' overover z endendfrac not-equals startstartfrac x' +
-                       ' overover startfrac y over z endfrac endendfrac',
+  this.executeRuleTest(mml, 'StartStartFraction StartFraction x Over y' +
+                       ' EndFraction overover z EndEndFraction not-equals' +
+                       ' StartStartFraction x overover StartFraction y over' +
+                       ' z EndFraction EndEndFraction', 'default');
+  this.executeRuleTest(mml, 'StartStartFrac StartFrac x Over y EndFrac' +
+                       ' overover z EndEndFrac not-equals StartStartFrac x' +
+                       ' overover StartFrac y Over z EndFrac EndEndFrac',
                        'brief');
-  this.executeRuleTest(mml, 'nestfrac frac x over y endfrac nestover z' +
-                       ' nestendfrac not-equals nestfrac x nestover frac y' +
-                       ' over z endfrac nestendfrac', 'sbrief');
+  this.executeRuleTest(mml, 'nestFrac Frac x Over y EndFrac nestover z' +
+                       ' nestEndFrac not-equals nestFrac x nestover Frac y' +
+                       ' Over z EndFrac nestEndFrac', 'sbrief');
 };
 
 
@@ -462,32 +462,32 @@ sre.MathspeakRuleTest.prototype.untestSample_7_3_1 = function() {
       '<mo>+</mo><msup><mfenced separators="" open="(" close=")"><mfrac>' +
       '<mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo>' +
       '<mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>';
-  this.executeRuleTest(mml, 'startstartstartfraction startstartfraction' +
+  this.executeRuleTest(mml, 'StartStartStartFraction StartStartFraction' +
                        ' left-parenthesis 1 minus x right-parenthesis' +
-                       ' startfraction d over d x endfraction' +
+                       ' StartFraction d Over d x EndFraction' +
                        ' left-parenthesis 2 x right-parenthesis minus 2 x' +
-                       ' startfraction d over d x endfraction' +
+                       ' StartFraction d Over d x EndFraction' +
                        ' left-parenthesis 1 minus x right-parenthesis' +
                        ' overover left-parenthesis 1 minus x' +
-                       ' right-parenthesis squared endendfraction' +
-                       ' overoverover 1 plus left-parenthesis startfraction' +
-                       ' 2 x over 1 minus x endfraction right-parenthesis' +
-                       ' squared endendendfraction', 'default');
-  this.executeRuleTest(mml, 'startstartstartfrac startstartfrac left-pren 1' +
-                       ' minus x right-pren startfrac d over d x endfrac' +
-                       ' left-pren 2 x right-pren minus 2 x startfrac d' +
-                       ' over d x endfrac left-pren 1 minus x right-pren' +
+                       ' right-parenthesis squared EndEndFraction' +
+                       ' overoverover 1 plus left-parenthesis StartFraction' +
+                       ' 2 x Over 1 minus x EndFraction right-parenthesis' +
+                       ' squared EndEndEndFraction', 'default');
+  this.executeRuleTest(mml, 'StartStartStartFrac StartStartFrac left-pren 1' +
+                       ' minus x right-pren StartFrac d Over d x EndFrac' +
+                       ' left-pren 2 x right-pren minus 2 x StartFrac d' +
+                       ' Over d x EndFrac left-pren 1 minus x right-pren' +
                        ' overover left-pren 1 minus x right-pren squared' +
-                       ' endendfrac overoverover 1 plus left-pren startfrac' +
-                       ' 2 x over 1 minus x endfrac right-pren squared' +
-                       ' endendendfrac', 'brief');
-  this.executeRuleTest(mml, 'nesttwicefrac nestfrac l pren 1 minus x r' +
-                       ' pren frac d over d x endfrac l pren 2 x r pren' +
-                       ' minus 2 x frac d over d x endfrac l pren 1 minus x' +
+                       ' EndEndFrac overoverover 1 plus left-pren StartFrac' +
+                       ' 2 x Over 1 minus x EndFrac right-pren squared' +
+                       ' EndEndEndFrac', 'brief');
+  this.executeRuleTest(mml, 'nesttwiceFrac nestFrac l pren 1 minus x r' +
+                       ' pren Frac d Over d x EndFrac l pren 2 x r pren' +
+                       ' minus 2 x Frac d Over d x EndFrac l pren 1 minus x' +
                        ' r pren nestover l pren 1 minus x r pren squared' +
-                       ' nestendfrac nesttwiceover 1 plus l pren frac 2 x' +
-                       ' over 1 minus x endfrac r pren squared' +
-                       ' nesttwiceendfrac', 'sbrief');
+                       ' nestEndFrac nesttwiceover 1 plus l pren Frac 2 x' +
+                       ' Over 1 minus x EndFrac r pren squared' +
+                       ' nesttwiceEndFrac', 'sbrief');
 };
 
 
@@ -501,21 +501,21 @@ sre.MathspeakRuleTest.prototype.untestSample_7_3_2 = function() {
       '<mn>1</mn><mrow><mo>...</mo><mo>+</mo><mfrac><mn>1</mn><msub>' +
       '<mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'a 0 plus startstartstartstartfraction 1' +
-                       ' overoveroverover a 1 plus startstartstartfraction 1' +
-                       ' overoverover a 2 plus startstartfraction 1 overover' +
-                       ' ellipsis plus startfraction 1 over a subscript n' +
-                       ' baseline endfraction endendfraction' +
-                       ' endendendfraction endendendendfraction', 'default');
-  this.executeRuleTest(mml, 'a 0 plus startstartstartstartfrac 1' +
-                       ' overoveroverover a 1 plus startstartstartfrac 1' +
-                       ' overoverover a 2 plus startstartfrac 1 overover' +
-                       ' ellipsis plus startfrac 1 over a sub n base endfrac' +
-                       ' endendfrac endendendfrac endendendendfrac', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus nest3frac 1 nest3over a 1 plus' +
-                       ' nesttwicefrac 1 nesttwiceover a 2 plus nestfrac 1' +
-                       ' nestover ellipsis plus frac 1 over a sub n base' +
-                       ' endfrac nestendfrac nesttwiceendfrac nest3endfrac',
+  this.executeRuleTest(mml, 'a 0 plus StartStartStartStartFraction 1' +
+                       ' overoveroverover a 1 plus StartStartStartFraction 1' +
+                       ' overoverover a 2 plus StartStartFraction 1 overover' +
+                       ' ellipsis plus StartFraction 1 Over a subscript n' +
+                       ' baseline EndFraction EndEndFraction' +
+                       ' EndEndEndFraction EndEndEndEndFraction', 'default');
+  this.executeRuleTest(mml, 'a 0 plus StartStartStartStartFrac 1' +
+                       ' overoveroverover a 1 plus StartStartStartFrac 1' +
+                       ' overoverover a 2 plus StartStartFrac 1 overover' +
+                       ' ellipsis plus StartFrac 1 Over a sub n base EndFrac' +
+                       ' EndEndFrac EndEndEndFrac EndEndEndEndFrac', 'brief');
+  this.executeRuleTest(mml, 'a 0 plus nest3Frac 1 nest3over a 1 plus' +
+                       ' nesttwiceFrac 1 nesttwiceover a 2 plus nestFrac 1' +
+                       ' nestover ellipsis plus Frac 1 Over a sub n base' +
+                       ' EndFrac nestEndFrac nesttwiceEndFrac nest3EndFrac',
                        'sbrief');
 };
 
@@ -534,16 +534,16 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_1 = function() {
   this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
                        ' four-halves plus ellipsis equals sigma-summation' +
                        ' underscript n equals 1 overscript infinity' +
-                       ' endscripts startfraction n over 2 endfraction',
+                       ' Endscripts StartFraction n Over 2 EndFraction',
                        'default');
   this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
                        ' four-halves plus ellipsis equals sigma-summation' +
                        ' underscript n equals 1 overscript infinity' +
-                       ' endscripts startfrac n over 2 endfrac', 'brief');
+                       ' Endscripts StartFrac n Over 2 EndFrac', 'brief');
   this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
                        ' four-halves plus ellipsis equals sigma-summation' +
                        ' underscript n equals 1 overscript infinity' +
-                       ' endscripts frac n over 2 endfrac', 'sbrief');
+                       ' Endscripts Frac n Over 2 EndFrac', 'sbrief');
 };
 
 
@@ -554,13 +554,13 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_2 = function() {
   var mml = '<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac>' +
       '<mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn>' +
       '<mn>25</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'startfraction 20 over 5 endfraction times' +
-                       ' startfraction 1 over 100 endfraction equals' +
+  this.executeRuleTest(mml, 'StartFraction 20 Over 5 EndFraction times' +
+                       ' StartFraction 1 Over 100 EndFraction equals' +
                        ' one-twenty-fifth', 'default');
-  this.executeRuleTest(mml, 'startfrac 20 over 5 endfrac times startfrac 1' +
-                       ' over 100 endfrac equals one-twenty-fifth', 'brief');
-  this.executeRuleTest(mml, 'frac 20 over 5 endfrac times frac 1 over 100' +
-                       ' endfrac equals one-twenty-fifth', 'sbrief');
+  this.executeRuleTest(mml, 'StartFrac 20 Over 5 EndFrac times StartFrac 1' +
+                       ' Over 100 EndFrac equals one-twenty-fifth', 'brief');
+  this.executeRuleTest(mml, 'Frac 20 Over 5 EndFrac times Frac 1 Over 100' +
+                       ' EndFrac equals one-twenty-fifth', 'sbrief');
 };
 
 
@@ -571,11 +571,11 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'startfraction three-fifths over 8 endfraction' +
+  this.executeRuleTest(mml, 'StartFraction three-fifths Over 8 EndFraction' +
                        ' equals three-fifths times one-eighth', 'default');
-  this.executeRuleTest(mml, 'startfrac three-fifths over 8 endfrac equals' +
+  this.executeRuleTest(mml, 'StartFrac three-fifths Over 8 EndFrac equals' +
                        ' three-fifths times one-eighth', 'brief');
-  this.executeRuleTest(mml, 'frac three-fifths over 8 endfrac equals' +
+  this.executeRuleTest(mml, 'Frac three-fifths Over 8 EndFrac equals' +
                        ' three-fifths times one-eighth', 'sbrief');
 };
 
@@ -586,12 +586,12 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_3 = function() {
 sre.MathspeakRuleTest.prototype.untestSample_7_5_1 = function() {
   var mml = '<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo>' +
       '<mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, '3 and five-eighths equals startfraction 29 over' +
-                       ' 8 endfraction', 'default');
-  this.executeRuleTest(mml, '3 and five-eighths equals startfrac 29 over 8' +
-                       ' endfrac', 'brief');
-  this.executeRuleTest(mml, '3 and five-eighths equals frac 29 over 8' +
-                       ' endfrac', 'sbrief');
+  this.executeRuleTest(mml, '3 and five-eighths equals StartFraction 29 over' +
+                       ' 8 EndFraction', 'default');
+  this.executeRuleTest(mml, '3 and five-eighths equals StartFrac 29 Over 8' +
+                       ' EndFrac', 'brief');
+  this.executeRuleTest(mml, '3 and five-eighths equals Frac 29 Over 8' +
+                       ' EndFrac', 'sbrief');
 };
 
 
@@ -609,21 +609,21 @@ sre.MathspeakRuleTest.prototype.untestSample_7_6_1 = function() {
       '<mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi>' +
       '<mn>2</mn></msub></mfrac><mo>+</mo><mo>...</mo></mrow>';
-  this.executeRuleTest(mml, 'a 0 plus continuedfraction b 1 over a 1 plus' +
-                       ' startfraction b 2 over a 2 plus startfraction b 3' +
-                       ' over a 3 plus ellipsis equals a 0 plus' +
-                       ' startfraction b 1 over a 1 endfraction plus' +
-                       ' startfraction b 2 over a 2 endfraction plus ellipsis',
+  this.executeRuleTest(mml, 'a 0 plus continuedFraction b 1 Over a 1 plus' +
+                       ' StartFraction b 2 Over a 2 plus StartFraction b 3' +
+                       ' Over a 3 plus ellipsis equals a 0 plus' +
+                       ' StartFraction b 1 Over a 1 EndFraction plus' +
+                       ' StartFraction b 2 Over a 2 EndFraction plus ellipsis',
                        'default');
-  this.executeRuleTest(mml, 'a 0 plus continuedfrac b 1 over a 1 plus' +
-                       ' startfrac b 2 over a 2 plus startfrac b 3 over a 3' +
-                       ' plus ellipsis equals a 0 plus startfrac b 1 over a' +
-                       ' 1 endfrac plus startfrac b 2 over a 2 endfrac plus' +
+  this.executeRuleTest(mml, 'a 0 plus continuedFrac b 1 Over a 1 plus' +
+                       ' StartFrac b 2 Over a 2 plus StartFrac b 3 Over a 3' +
+                       ' plus ellipsis equals a 0 plus StartFrac b 1 Over a' +
+                       ' 1 EndFrac plus StartFrac b 2 Over a 2 EndFrac plus' +
                        ' ellipsis', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus continuedfrac b 1 over a 1 plus frac b' +
-                       ' 2 over a 2 plus frac b 3 over a 3 plus ellipsis' +
-                       ' equals a 0 plus frac b 1 over a 1 endfrac plus frac' +
-                       ' b 2 over a 2 endfrac plus ellipsis', 'sbrief');
+  this.executeRuleTest(mml, 'a 0 plus continuedFrac b 1 Over a 1 plus Frac b' +
+                       ' 2 Over a 2 plus Frac b 3 Over a 3 plus ellipsis' +
+                       ' equals a 0 plus Frac b 1 Over a 1 EndFrac plus Frac' +
+                       ' b 2 Over a 2 EndFrac plus ellipsis', 'sbrief');
 };
 
 
@@ -676,19 +676,19 @@ sre.MathspeakRuleTest.prototype.untestSample_8_11_1 = function() {
       '<mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'start 2 by 3 matrix 1st row 1st column x' +
+  this.executeRuleTest(mml, 'Start 2 by 3 matrix 1st row 1st column x' +
                        ' superscript n 2nd column y superscript n 3rd column' +
                        ' z superscript n 2nd row 1st column x superscript n' +
                        ' plus 1 2nd column y superscript n plus 1 3rd column' +
-                       ' z superscript n plus 1 endmatrix', 'default');
-  this.executeRuleTest(mml, 'start 2 by 3 matrix 1st row 1st column x sup n' +
+                       ' z superscript n plus 1 Endmatrix', 'default');
+  this.executeRuleTest(mml, 'Start 2 by 3 matrix 1st row 1st column x sup n' +
                        ' 2nd column y sup n 3rd column z sup n 2nd row 1st' +
                        ' column x sup n plus 1 2nd column y sup n plus 1 3rd' +
-                       ' column z sup n plus 1 endmatrix', 'brief');
+                       ' column z sup n plus 1 Endmatrix', 'brief');
   this.executeRuleTest(mml, '2 by 3 matrix 1st row 1st column x sup n 2nd' +
                        ' column y sup n 3rd column z sup n 2nd row 1st' +
                        ' column x sup n plus 1 2nd column y sup n plus 1 3rd' +
-                       ' column z sup n plus 1 endmatrix', 'sbrief');
+                       ' column z sup n plus 1 Endmatrix', 'sbrief');
 };
 
 
@@ -742,13 +742,13 @@ sre.MathspeakRuleTest.prototype.untestSample_8_1_2 = function() {
       '<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi>' +
       '<mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo>' +
       '<mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'startfraction d squared y over d x squared' +
-                       ' endfraction plus left-parenthesis a x squared plus' +
+  this.executeRuleTest(mml, 'StartFraction d squared y Over d x squared' +
+                       ' EndFraction plus left-parenthesis a x squared plus' +
                        ' b x plus c right-parenthesis y equals 0', 'default');
-  this.executeRuleTest(mml, 'startfrac d squared y over d x squared endfrac' +
+  this.executeRuleTest(mml, 'StartFrac d squared y Over d x squared EndFrac' +
                        ' plus left-pren a x squared plus b x plus c' +
                        ' right-pren y equals 0', 'brief');
-  this.executeRuleTest(mml, 'frac d squared y over d x squared endfrac plus' +
+  this.executeRuleTest(mml, 'Frac d squared y Over d x squared EndFrac plus' +
                        ' l pren a x squared plus b x plus c r pren y' +
                        ' equals 0', 'sbrief');
 };
@@ -971,12 +971,12 @@ sre.MathspeakRuleTest.prototype.untestSample_8_5_10 = function() {
       '<mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi>' +
       '<mi>t</mi></mrow><mi>t</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'l n x equals integral subscript 1 superscript x' +
-                       ' baseline startfraction d t over t endfraction',
+                       ' baseline StartFraction d t Over t EndFraction',
                        'default');
   this.executeRuleTest(mml, 'l n x equals integral sub 1 sup x base' +
-                       ' startfrac d t over t endfrac', 'brief');
-  this.executeRuleTest(mml, 'l n x equals integral sub 1 sup x base frac d t' +
-                       ' over t endfrac', 'sbrief');
+                       ' StartFrac d t Over t EndFrac', 'brief');
+  this.executeRuleTest(mml, 'l n x equals integral sub 1 sup x base Frac d t' +
+                       ' Over t EndFrac', 'sbrief');
 };
 
 
@@ -1077,18 +1077,18 @@ sre.MathspeakRuleTest.prototype.untestSample_8_5_8 = function() {
       '<mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
       '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'log subscript 2 baseline left-parenthesis x' +
-                       ' right-parenthesis equals startfraction log' +
+                       ' right-parenthesis equals StartFraction log' +
                        ' subscript 10 baseline left-parenthesis x' +
-                       ' right-parenthesis over log subscript 10 baseline' +
-                       ' left-parenthesis 2 right-parenthesis endfraction',
+                       ' right-parenthesis Over log subscript 10 baseline' +
+                       ' left-parenthesis 2 right-parenthesis EndFraction',
                        'default');
   this.executeRuleTest(mml, 'log sub 2 base left-pren x right-pren equals' +
-                       ' startfrac log sub 10 base left-pren x right-pren' +
-                       ' over log sub 10 base left-pren 2 right-pren' +
-                       ' endfrac', 'brief');
-  this.executeRuleTest(mml, 'log sub 2 base l pren x r pren equals frac' +
-                       ' log sub 10 base l pren x r pren over log sub 10' +
-                       ' base l pren 2 r pren endfrac', 'sbrief');
+                       ' StartFrac log sub 10 base left-pren x right-pren' +
+                       ' Over log sub 10 base left-pren 2 right-pren' +
+                       ' EndFrac', 'brief');
+  this.executeRuleTest(mml, 'log sub 2 base l pren x r pren equals Frac' +
+                       ' log sub 10 base l pren x r pren Over log sub 10' +
+                       ' base l pren 2 r pren EndFrac', 'sbrief');
 };
 
 
@@ -1166,14 +1166,14 @@ sre.MathspeakRuleTest.prototype.untestSample_8_9_2 = function() {
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'f triple-prime left-parenthesis y' +
-                       ' right-parenthesis equals startfraction d f' +
+                       ' right-parenthesis equals StartFraction d f' +
                        ' double-prime left-parenthesis y right-parenthesis' +
-                       ' over d y endfraction', 'default');
+                       ' Over d y EndFraction', 'default');
   this.executeRuleTest(mml, 'f triple-prime left-pren y right-pren equals' +
-                       ' startfrac d f double-prime left-pren y right-pren' +
-                       ' over d y endfrac', 'brief');
-  this.executeRuleTest(mml, 'f triple-prime l pren y r pren equals frac d' +
-                       ' f double-prime l pren y r pren over d y endfrac',
+                       ' StartFrac d f double-prime left-pren y right-pren' +
+                       ' Over d y EndFrac', 'brief');
+  this.executeRuleTest(mml, 'f triple-prime l pren y r pren equals Frac d' +
+                       ' f double-prime l pren y r pren Over d y EndFrac',
                        'sbrief');
 };
 
@@ -1183,9 +1183,9 @@ sre.MathspeakRuleTest.prototype.untestSample_8_9_2 = function() {
  */
 sre.MathspeakRuleTest.prototype.untestSample_9_1_1 = function() {
   var mml = '<msqrt><mn>2</mn></msqrt>';
-  this.executeRuleTest(mml, 'startroot 2 endroot', 'default');
-  this.executeRuleTest(mml, 'startroot 2 endroot', 'brief');
-  this.executeRuleTest(mml, 'root 2 endroot', 'sbrief');
+  this.executeRuleTest(mml, 'Startroot 2 Endroot', 'default');
+  this.executeRuleTest(mml, 'Startroot 2 Endroot', 'brief');
+  this.executeRuleTest(mml, 'root 2 Endroot', 'sbrief');
 };
 
 
@@ -1194,9 +1194,9 @@ sre.MathspeakRuleTest.prototype.untestSample_9_1_1 = function() {
  */
 sre.MathspeakRuleTest.prototype.untestSample_9_1_2 = function() {
   var mml = '<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>';
-  this.executeRuleTest(mml, 'startroot m plus n endroot', 'default');
-  this.executeRuleTest(mml, 'startroot m plus n endroot', 'brief');
-  this.executeRuleTest(mml, 'root m plus n endroot', 'sbrief');
+  this.executeRuleTest(mml, 'Startroot m plus n Endroot', 'default');
+  this.executeRuleTest(mml, 'Startroot m plus n Endroot', 'brief');
+  this.executeRuleTest(mml, 'root m plus n Endroot', 'sbrief');
 };
 
 
@@ -1206,11 +1206,11 @@ sre.MathspeakRuleTest.prototype.untestSample_9_1_2 = function() {
 sre.MathspeakRuleTest.prototype.untestSample_9_2_1 = function() {
   var mml = '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow>' +
       '<mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>';
-  this.executeRuleTest(mml, 'rootindex m plus n startroot x plus y endroot',
+  this.executeRuleTest(mml, 'rootindex m plus n Startroot x plus y Endroot',
                        'default');
-  this.executeRuleTest(mml, 'rootindex m plus n startroot x plus y endroot',
+  this.executeRuleTest(mml, 'rootindex m plus n Startroot x plus y Endroot',
                        'brief');
-  this.executeRuleTest(mml, 'index m plus n root x plus y endroot', 'sbrief');
+  this.executeRuleTest(mml, 'index m plus n root x plus y Endroot', 'sbrief');
 };
 
 
@@ -1223,19 +1223,19 @@ sre.MathspeakRuleTest.prototype.untestSample_9_2_2 = function() {
       '<mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup>' +
       '<mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac>' +
       '</msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'rootindex n startroot x superscript m baseline' +
-                       ' endroot equals left-parenthesis rootindex n' +
-                       ' startroot x endroot right-parenthesis superscript m' +
-                       ' baseline equals x superscript startfraction m over' +
-                       ' n endfraction baseline comma x greater-than 0',
+  this.executeRuleTest(mml, 'rootindex n Startroot x superscript m baseline' +
+                       ' Endroot equals left-parenthesis rootindex n' +
+                       ' Startroot x Endroot right-parenthesis superscript m' +
+                       ' baseline equals x superscript StartFraction m over' +
+                       ' n EndFraction baseline comma x greater-than 0',
                        'default');
-  this.executeRuleTest(mml, 'rootindex n startroot x sup m base endroot' +
-                       ' equals left-pren rootindex n startroot x endroot' +
-                       ' right-pren sup m base equals x sup startfrac m' +
-                       ' over n endfrac base comma x greater-than 0', 'brief');
-  this.executeRuleTest(mml, 'index n root x sup m base endroot equals l' +
-                       ' pren index n root x endroot r pren sup m base' +
-                       ' equals x sup frac m over n endfrac base comma x' +
+  this.executeRuleTest(mml, 'rootindex n Startroot x sup m base Endroot' +
+                       ' equals left-pren rootindex n Startroot x Endroot' +
+                       ' right-pren sup m base equals x sup StartFrac m' +
+                       ' Over n EndFrac base comma x greater-than 0', 'brief');
+  this.executeRuleTest(mml, 'index n root x sup m base Endroot equals l' +
+                       ' pren index n root x Endroot r pren sup m base' +
+                       ' equals x sup Frac m Over n EndFrac base comma x' +
                        ' greater-than 0', 'sbrief');
 };
 
@@ -1246,11 +1246,11 @@ sre.MathspeakRuleTest.prototype.untestSample_9_2_2 = function() {
 sre.MathspeakRuleTest.prototype.untestSample_9_2_3 = function() {
   var mml = '<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup>' +
       '<mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>';
-  this.executeRuleTest(mml, 'rootindex 3 startroot x endroot equals x' +
+  this.executeRuleTest(mml, 'rootindex 3 Startroot x Endroot equals x' +
                        ' superscript one-third', 'default');
-  this.executeRuleTest(mml, 'rootindex 3 startroot x endroot equals x sup' +
+  this.executeRuleTest(mml, 'rootindex 3 Startroot x Endroot equals x sup' +
                        ' one-third', 'brief');
-  this.executeRuleTest(mml, 'index 3 root x endroot equals x sup one-third',
+  this.executeRuleTest(mml, 'index 3 root x Endroot equals x sup one-third',
                        'sbrief');
 };
 
@@ -1262,12 +1262,12 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_1 = function() {
   var mml = '<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></msqrt>';
-  this.executeRuleTest(mml, 'nestedstartroot startroot x plus 1 endroot plus' +
-                       ' startroot y plus 1 endroot nestedendroot', 'default');
-  this.executeRuleTest(mml, 'neststartroot startroot x plus 1 endroot plus' +
-                       ' startroot y plus 1 endroot nestendroot', 'brief');
-  this.executeRuleTest(mml, 'nestroot root x plus 1 endroot plus root y plus' +
-                       ' 1 endroot nestendroot', 'sbrief');
+  this.executeRuleTest(mml, 'nestedStartroot Startroot x plus 1 Endroot plus' +
+                       ' Startroot y plus 1 Endroot nestedEndroot', 'default');
+  this.executeRuleTest(mml, 'nestStartroot Startroot x plus 1 Endroot plus' +
+                       ' Startroot y plus 1 Endroot nestEndroot', 'brief');
+  this.executeRuleTest(mml, 'nestroot root x plus 1 Endroot plus root y plus' +
+                       ' 1 Endroot nestEndroot', 'sbrief');
 };
 
 
@@ -1278,17 +1278,17 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_2 = function() {
   var mml = '<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi>' +
       '</mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot>' +
       '<mi>m</mi></mroot></mrow>';
-  this.executeRuleTest(mml, 'nestedrootindex n nestedstartroot rootindex m' +
-                       ' startroot x endroot nestedendroot equals' +
-                       ' nestedrootindex m nestedstartroot rootindex n' +
-                       ' startroot x endroot nestedendroot', 'default');
-  this.executeRuleTest(mml, 'nestrootindex n neststartroot rootindex m' +
-                       ' startroot x endroot nestendroot equals' +
-                       ' nestrootindex m neststartroot rootindex n startroot' +
-                       ' x endroot nestendroot', 'brief');
-  this.executeRuleTest(mml, 'nestindex n nestroot index m root x endroot' +
-                       ' nestendroot equals nestindex m nestroot index n' +
-                       ' root x endroot nestendroot', 'sbrief');
+  this.executeRuleTest(mml, 'nestedrootindex n nestedStartroot rootindex m' +
+                       ' Startroot x Endroot nestedEndroot equals' +
+                       ' nestedrootindex m nestedStartroot rootindex n' +
+                       ' Startroot x Endroot nestedEndroot', 'default');
+  this.executeRuleTest(mml, 'nestrootindex n nestStartroot rootindex m' +
+                       ' Startroot x Endroot nestEndroot equals' +
+                       ' nestrootindex m nestStartroot rootindex n Startroot' +
+                       ' x Endroot nestEndroot', 'brief');
+  this.executeRuleTest(mml, 'nestindex n nestroot index m root x Endroot' +
+                       ' nestEndroot equals nestindex m nestroot index n' +
+                       ' root x Endroot nestEndroot', 'sbrief');
 };
 
 
@@ -1303,22 +1303,22 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_3 = function() {
       '</mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
       '<mo>∈</mo><mi>ℝ</mi></mrow>';
   this.executeRuleTest(mml, 'x superscript e minus 2 baseline equals' +
-                       ' nested3startroot x nestedtwicerootindex 3' +
-                       ' nestedtwicestartroot x nestedrootindex 4' +
-                       ' nestedstartroot x rootindex 5 startroot x ellipsis' +
-                       ' endroot nestedendroot nestedtwiceendroot' +
-                       ' nested3endroot comma x element-of double-struck' +
+                       ' nested3Startroot x nestedtwicerootindex 3' +
+                       ' nestedtwiceStartroot x nestedrootindex 4' +
+                       ' nestedStartroot x rootindex 5 Startroot x ellipsis' +
+                       ' Endroot nestedEndroot nestedtwiceEndroot' +
+                       ' nested3Endroot comma x element-of double-struck' +
                        ' upper r', 'default');
-  this.executeRuleTest(mml, 'x sup e minus 2 base equals nest3startroot x' +
-                       ' nesttwicerootindex 3 nesttwicestartroot x' +
-                       ' nestrootindex 4 neststartroot x rootindex 5' +
-                       ' startroot x ellipsis endroot nestendroot' +
-                       ' nesttwiceendroot nest3endroot comma x element-of' +
+  this.executeRuleTest(mml, 'x sup e minus 2 base equals nest3Startroot x' +
+                       ' nesttwicerootindex 3 nesttwiceStartroot x' +
+                       ' nestrootindex 4 nestStartroot x rootindex 5' +
+                       ' Startroot x ellipsis Endroot nestEndroot' +
+                       ' nesttwiceEndroot nest3Endroot comma x element-of' +
                        ' double-struck upper r', 'brief');
   this.executeRuleTest(mml, 'x sup e minus 2 base equals nest3root x' +
                        ' nesttwiceindex 3 nesttwiceroot x nestindex 4' +
-                       ' nestroot x index 5 root x ellipsis endroot' +
-                       ' nestendroot nesttwiceendroot nest3endroot comma x' +
+                       ' nestroot x index 5 root x ellipsis Endroot' +
+                       ' nestEndroot nesttwiceEndroot nest3Endroot comma x' +
                        ' element-of double-struck upper r', 'sbrief');
 };
 
@@ -1334,26 +1334,26 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_4 = function() {
       '<mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac>' +
       '<mo>...</mo></mrow>';
-  this.executeRuleTest(mml, 'startfraction 2 over pi endfraction equals' +
-                       ' startfraction startroot 2 endroot over 2' +
-                       ' endfraction startfraction nestedstartroot 2 plus' +
-                       ' startroot 2 endroot nestedendroot over 2' +
-                       ' endfraction startfraction nestedtwicestartroot 2' +
-                       ' plus nestedstartroot 2 plus startroot 2 endroot' +
-                       ' nestedendroot nestedtwiceendroot over 2 endfraction' +
+  this.executeRuleTest(mml, 'StartFraction 2 Over pi EndFraction equals' +
+                       ' StartFraction Startroot 2 Endroot Over 2' +
+                       ' EndFraction StartFraction nestedStartroot 2 plus' +
+                       ' Startroot 2 Endroot nestedEndroot Over 2' +
+                       ' EndFraction StartFraction nestedtwiceStartroot 2' +
+                       ' plus nestedStartroot 2 plus Startroot 2 Endroot' +
+                       ' nestedEndroot nestedtwiceEndroot Over 2 EndFraction' +
                        ' ellipsis', 'default');
-  this.executeRuleTest(mml, 'startfrac 2 over pi endfrac equals startfrac' +
-                       ' startroot 2 endroot over 2 endfrac startfrac' +
-                       ' neststartroot 2 plus startroot 2 endroot' +
-                       ' nestendroot over 2 endfrac startfrac' +
-                       ' nesttwicestartroot 2 plus neststartroot 2 plus' +
-                       ' startroot 2 endroot nestendroot nesttwiceendroot' +
-                       ' over 2 endfrac ellipsis', 'brief');
-  this.executeRuleTest(mml, 'frac 2 over pi endfrac equals frac root 2' +
-                       ' endroot over 2 endfrac frac nestroot 2 plus root 2' +
-                       ' endroot nestendroot over 2 endfrac frac' +
-                       ' nesttwiceroot 2 plus nestroot 2 plus root 2 endroot' +
-                       ' nestendroot nesttwiceendroot over 2 endfrac' +
+  this.executeRuleTest(mml, 'StartFrac 2 Over pi EndFrac equals StartFrac' +
+                       ' Startroot 2 Endroot Over 2 EndFrac StartFrac' +
+                       ' nestStartroot 2 plus Startroot 2 Endroot' +
+                       ' nestEndroot Over 2 EndFrac StartFrac' +
+                       ' nesttwiceStartroot 2 plus nestStartroot 2 plus' +
+                       ' Startroot 2 Endroot nestEndroot nesttwiceEndroot' +
+                       ' Over 2 EndFrac ellipsis', 'brief');
+  this.executeRuleTest(mml, 'Frac 2 Over pi EndFrac equals Frac root 2' +
+                       ' Endroot Over 2 EndFrac Frac nestroot 2 plus root 2' +
+                       ' Endroot nestEndroot Over 2 EndFrac Frac' +
+                       ' nesttwiceroot 2 plus nestroot 2 plus root 2 Endroot' +
+                       ' nestEndroot nesttwiceEndroot Over 2 EndFrac' +
                        ' ellipsis', 'sbrief');
 };
 
@@ -1367,14 +1367,14 @@ sre.MathspeakRuleTest.prototype.untestSample_10_1_1 = function() {
       '<mrow><mn>2</mn><menclose notation="updiagonalstrike"><mi>y</mi>' +
       '</menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn>' +
       '</mfrac><mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'startfraction 5 x crossout y endcrossout over 2' +
-                       ' crossout y endcrossout endfraction equals' +
+  this.executeRuleTest(mml, 'StartFraction 5 x crossout y Endcrossout Over 2' +
+                       ' crossout y Endcrossout EndFraction equals' +
                        ' five-halves x', 'default');
-  this.executeRuleTest(mml, 'startfrac 5 x crossout y endcrossout over 2' +
-                       ' crossout y endcrossout endfrac equals five-halves' +
+  this.executeRuleTest(mml, 'StartFrac 5 x crossout y Endcrossout Over 2' +
+                       ' crossout y Endcrossout EndFrac equals five-halves' +
                        ' x', 'brief');
-  this.executeRuleTest(mml, 'frac 5 x crossout y endcrossout over 2 crossout' +
-                       ' y endcrossout endfrac equals five-halves x', 'sbrief');
+  this.executeRuleTest(mml, 'Frac 5 x crossout y Endcrossout Over 2 crossout' +
+                       ' y Endcrossout EndFrac equals five-halves x', 'sbrief');
 };
 
 
@@ -1387,17 +1387,17 @@ sre.MathspeakRuleTest.prototype.untestSample_10_2_1 = function() {
       '<mn>2</mn></mover><munder><menclose notation="updiagonalstrike">' +
       '<mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac>' +
       '<mn>2</mn><mn>3</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'startfraction 12 over 18 endfraction equals' +
-                       ' startfraction crossout 12 with 2 endcrossout over' +
-                       ' crossout 18 with 3 endcrossout endfraction equals' +
+  this.executeRuleTest(mml, 'StartFraction 12 Over 18 EndFraction equals' +
+                       ' StartFraction crossout 12 with 2 Endcrossout over' +
+                       ' crossout 18 with 3 Endcrossout EndFraction equals' +
                        ' two-thirds', 'default');
-  this.executeRuleTest(mml, 'startfrac 12 over 18 endfrac equals startfrac' +
-                       ' crossout 12 with 2 endcrossout over crossout 18' +
-                       ' with 3 endcrossout endfrac equals two-thirds',
+  this.executeRuleTest(mml, 'StartFrac 12 Over 18 EndFrac equals StartFrac' +
+                       ' crossout 12 with 2 Endcrossout Over crossout 18' +
+                       ' with 3 Endcrossout EndFrac equals two-thirds',
                        'brief');
-  this.executeRuleTest(mml, 'frac 12 over 18 endfrac equals frac crossout 12' +
-                       ' with 2 endcrossout over crossout 18 with 3' +
-                       ' endcrossout endfrac equals two-thirds', 'sbrief');
+  this.executeRuleTest(mml, 'Frac 12 Over 18 EndFrac equals Frac crossout 12' +
+                       ' with 2 Endcrossout Over crossout 18 with 3' +
+                       ' Endcrossout EndFrac equals two-thirds', 'sbrief');
 };
 
 
@@ -1530,12 +1530,12 @@ sre.MathspeakRuleTest.prototype.untestSample_11_6_2 = function() {
       '<mo>←</mo></munder><mo>˙</mo></munder>';
   this.executeRuleTest(mml, 'modifyingabove modifyingbelow a plus b with' +
                        ' left-arrow with right-arrow underscript dot' +
-                       ' overscript dot endscripts', 'default');
+                       ' overscript dot Endscripts', 'default');
   this.executeRuleTest(mml, 'modabove modbelow a plus b with left-arrow with' +
                        ' right-arrow underscript dot overscript dot' +
-                       ' endscripts', 'brief');
+                       ' Endscripts', 'brief');
   this.executeRuleTest(mml, 'modabove modbelow a plus b with l arrow with r' +
-                       ' arrow underscript dot overscript dot endscripts',
+                       ' arrow underscript dot overscript dot Endscripts',
                        'sbrief');
 };
 
@@ -1563,12 +1563,12 @@ sre.MathspeakRuleTest.prototype.untestSample_11_7_1 = function() {
       '<mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi>' +
       '</msub></mrow>';
   this.executeRuleTest(mml, 'sigma-summation underscript n equals 1' +
-                       ' overscript infinity endscripts a subscript' +
+                       ' overscript infinity Endscripts a subscript' +
                        ' n', 'default');
   this.executeRuleTest(mml, 'sigma-summation underscript n equals 1' +
-                       ' overscript infinity endscripts a sub n', 'brief');
+                       ' overscript infinity Endscripts a sub n', 'brief');
   this.executeRuleTest(mml, 'sigma-summation underscript n equals 1' +
-                       ' overscript infinity endscripts a sub n', 'sbrief');
+                       ' overscript infinity Endscripts a sub n', 'sbrief');
 };
 
 
@@ -1583,12 +1583,12 @@ sre.MathspeakRuleTest.prototype.untestSample_11_8_1 = function() {
       '<mo>]</mo></mrow><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>̲</mo></munder><mrow/></mrow>';
   this.executeRuleTest(mml, 'modifyingbelow x plus y with bar underscript a' +
-                       ' equals 5 underunderscript b equals 3 endscripts',
+                       ' equals 5 underunderscript b equals 3 Endscripts',
                        'default');
   this.executeRuleTest(mml, 'modbelow x plus y with bar underscript a equals' +
-                       ' 5 underunderscript b equals 3 endscripts', 'brief');
+                       ' 5 underunderscript b equals 3 Endscripts', 'brief');
   this.executeRuleTest(mml, 'modbelow x plus y with bar underscript a equals' +
-                       ' 5 underunderscript b equals 3 endscripts', 'sbrief');
+                       ' 5 underunderscript b equals 3 Endscripts', 'sbrief');
 };
 
 
@@ -1602,12 +1602,12 @@ sre.MathspeakRuleTest.prototype.untestSample_11_8_2 = function() {
       '</mtr><mtr><mtd><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mtd>' +
       '</mtr></mtable></mstyle></mover><mrow/></mrow>';
   this.executeRuleTest(mml, 'modifyingabove x plus y with bar overscript n' +
-                       ' equals 1 overoverscript m equals 2 endscripts',
+                       ' equals 1 overoverscript m equals 2 Endscripts',
                        'default');
   this.executeRuleTest(mml, 'modabove x plus y with bar overscript n equals' +
-                       ' 1 overoverscript m equals 2 endscripts', 'brief');
+                       ' 1 overoverscript m equals 2 Endscripts', 'brief');
   this.executeRuleTest(mml, 'modabove x plus y with bar overscript n equals' +
-                       ' 1 overoverscript m equals 2 endscripts', 'sbrief');
+                       ' 1 overoverscript m equals 2 Endscripts', 'sbrief');
 };
 
 
@@ -1677,25 +1677,25 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
       '</mrow><mrow><mn>60</mn><mtext>min</mtext></mrow></mfrac><mo>=</mo>' +
       '<mfrac><mrow><mn>5</mn><mo>,</mo><mn>280</mn><mtext>ft</mtext>' +
       '</mrow><mtext>min</mtext></mfrac></mrow>';
-  this.executeRuleTest(mml, 'startfraction 60 crossout miles endcrossout' +
-                       ' over crossout hours endcrossout endfraction times' +
-                       ' startfraction 5,280 feet over 1 crossout miles' +
-                       ' endcrossout endfraction times startfraction 1' +
-                       ' crossout hours endcrossout over 60 minutes' +
-                       ' endfraction equals startfraction 5,280 feet over' +
-                       ' minutes endfraction', 'default');
-  this.executeRuleTest(mml, 'startfrac 60 crossout miles endcrossout over' +
-                       ' crossout hours endcrossout endfrac times startfrac' +
-                       ' 5,280 feet over 1 crossout miles endcrossout' +
-                       ' endfrac times startfrac 1 crossout hours' +
-                       ' endcrossout over 60 minutes endfrac equals' +
-                       ' startfrac 5,280 feet over minutes endfrac', 'brief');
-  this.executeRuleTest(mml, 'frac 60 crossout miles endcrossout over' +
-                       ' crossout hours endcrossout endfrac times frac 5,280' +
-                       ' feet over 1 crossout miles endcrossout endfrac' +
-                       ' times frac 1 crossout hours endcrossout over 60' +
-                       ' minutes endfrac equals frac 5,280 feet over minutes' +
-                       ' endfrac', 'sbrief');
+  this.executeRuleTest(mml, 'Startfraction 60 crossout miles Endcrossout' +
+                       ' Over crossout hours Endcrossout Endfraction times' +
+                       ' Startfraction 5,280 feet Over 1 crossout miles' +
+                       ' Endcrossout Endfraction times Startfraction 1' +
+                       ' crossout hours Endcrossout Over 60 minutes' +
+                       ' Endfraction equals Startfraction 5,280 feet over' +
+                       ' minutes Endfraction', 'default');
+  this.executeRuleTest(mml, 'Startfrac 60 crossout miles Endcrossout over' +
+                       ' crossout hours Endcrossout Endfrac times Startfrac' +
+                       ' 5,280 feet Over 1 crossout miles Endcrossout' +
+                       ' Endfrac times Startfrac 1 crossout hours' +
+                       ' Endcrossout Over 60 minutes Endfrac equals' +
+                       ' Startfrac 5,280 feet Over minutes Endfrac', 'brief');
+  this.executeRuleTest(mml, 'frac 60 crossout miles Endcrossout over' +
+                       ' crossout hours Endcrossout Endfrac times frac 5,280' +
+                       ' feet Over 1 crossout miles Endcrossout Endfrac' +
+                       ' times frac 1 crossout hours Endcrossout Over 60' +
+                       ' minutes Endfrac equals frac 5,280 feet Over minutes' +
+                       ' Endfrac', 'sbrief');
 };
 
 
@@ -1725,12 +1725,12 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_3 = function() {
       '<mn>1</mn><mo>,</mo><mn>000</mn></mrow></mfrac><mtext>km</mtext>' +
       '</mrow>';
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
-                       ' startfraction m over 1,000 endfraction kilometers',
+                       ' Startfraction m Over 1,000 Endfraction kilometers',
                        'default');
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
-                       ' startfrac m over 1,000 endfrac kilometers', 'brief');
+                       ' Startfrac m Over 1,000 Endfrac kilometers', 'brief');
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals frac m' +
-                       ' over 1,000 endfrac kilometers', 'sbrief');
+                       ' Over 1,000 Endfrac kilometers', 'sbrief');
 };
 
 
@@ -1757,24 +1757,24 @@ sre.MathspeakRuleTest.prototype.untestSample_14_1_1 = function() {
       '<mtext>flourine</mtext></mtd><mtd/><mtd><mrow>' +
       '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
       '<mtext>flouride</mtext></mrow></mtd></mtr></mtable>';
-  this.executeRuleTest(mml, 'startlayout 1st row 1st column upper h 2 2nd' +
+  this.executeRuleTest(mml, 'Startlayout 1st row 1st column upper h 2 2nd' +
                        ' column plus 3rd column upper f 2 4th column' +
                        ' right-arrow 5th column 2 upper h upper f 2nd row' +
                        ' 1st column hydrogen 2nd column blank 3rd column' +
                        ' flourine 4th column blank 5th column hydrogen' +
-                       ' fluoride endlayout', 'default');
-  this.executeRuleTest(mml, 'startlayout 1st row 1st column upper h 2 2nd' +
+                       ' fluoride Endlayout', 'default');
+  this.executeRuleTest(mml, 'Startlayout 1st row 1st column upper h 2 2nd' +
                        ' column plus 3rd column upper f 2 4th column' +
                        ' right-arrow 5th column 2 upper h upper f 2nd row' +
                        ' 1st column hydrogen 2nd column blank 3rd column' +
                        ' flourine 4th column blank 5th column hydrogen' +
-                       ' fluoride endlayout', 'brief');
+                       ' fluoride Endlayout', 'brief');
   this.executeRuleTest(mml, 'layout 1st row 1st column upper h 2 2nd column' +
                        ' plus 3rd column upper f 2 4th column r arrow 5th' +
                        ' column 2 upper h upper f 2nd row 1st column' +
                        ' hydrogen 2nd column blank 3rd column flourine 4th' +
                        ' column blank 5th column hydrogen fluoride' +
-                       ' endlayout', 'sbrief');
+                       ' Endlayout', 'sbrief');
 };
 
 
@@ -1788,18 +1788,18 @@ sre.MathspeakRuleTest.prototype.untestSample_14_3_1 = function() {
       '</mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd>' +
       '<mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable>' +
       '</mfenced></mrow>';
-  this.executeRuleTest(mml, 'x equals startlayout enlarged left-brace 1st' +
+  this.executeRuleTest(mml, 'x equals Startlayout enlarged left-brace 1st' +
                        ' row 1st column y less-than 0 2nd column 0 2nd row' +
                        ' 1st column y greater-than-or-equal-to 0 2nd column' +
-                       ' 2 y endlayout', 'default');
-  this.executeRuleTest(mml, 'x equals startlayout enlarged left-brace 1st' +
+                       ' 2 y Endlayout', 'default');
+  this.executeRuleTest(mml, 'x equals Startlayout enlarged left-brace 1st' +
                        ' row 1st column y less-than 0 2nd column 0 2nd row' +
                        ' 1st column y greater-than-or-equal-to 0 2nd column' +
-                       ' 2 y endlayout', 'brief');
+                       ' 2 y Endlayout', 'brief');
   this.executeRuleTest(mml, 'x equals layout enlarged l brace 1st row 1st' +
                        ' column y less-than 0 2nd column 0 2nd row 1st' +
                        ' column y greater-than-or-equal-to 0 2nd column 2 y' +
-                       ' endlayout', 'sbrief');
+                       ' Endlayout', 'sbrief');
 };
 
 
@@ -1816,21 +1816,21 @@ sre.MathspeakRuleTest.prototype.untestSample_15_1_1 = function() {
       '<mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow>' +
       '<mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi>' +
       '<mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'start 3 by 3 matrix 1st row 1st column x plus a' +
+  this.executeRuleTest(mml, 'Start 3 by 3 matrix 1st row 1st column x plus a' +
                        ' 2nd column x plus b 3rd column x plus c 2nd row 1st' +
                        ' column y plus a 2nd column y plus b 3rd column y' +
                        ' plus c 3rd row 1st column z plus a 2nd column z' +
-                       ' plus b 3rd column z plus c endmatrix', 'default');
-  this.executeRuleTest(mml, 'start 3 by 3 matrix 1st row 1st column x plus a' +
+                       ' plus b 3rd column z plus c Endmatrix', 'default');
+  this.executeRuleTest(mml, 'Start 3 by 3 matrix 1st row 1st column x plus a' +
                        ' 2nd column x plus b 3rd column x plus c 2nd row 1st' +
                        ' column y plus a 2nd column y plus b 3rd column y' +
                        ' plus c 3rd row 1st column z plus a 2nd column z' +
-                       ' plus b 3rd column z plus c endmatrix', 'brief');
+                       ' plus b 3rd column z plus c Endmatrix', 'brief');
   this.executeRuleTest(mml, '3 by 3 matrix 1st row 1st column x plus a 2nd' +
                        ' column x plus b 3rd column x plus c 2nd row 1st' +
                        ' column y plus a 2nd column y plus b 3rd column y' +
                        ' plus c 3rd row 1st column z plus a 2nd column z' +
-                       ' plus b 3rd column z plus c endmatrix', 'sbrief');
+                       ' plus b 3rd column z plus c Endmatrix', 'sbrief');
 };
 
 
@@ -1844,17 +1844,17 @@ sre.MathspeakRuleTest.prototype.untestSample_15_2_1 = function() {
       '</mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo>' +
       '<mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'start 2 by 2 determinant 1st row 1st column a' +
+  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st row 1st column a' +
                        ' plus 1 2nd column b 2nd row 1st column c 2nd column' +
-                       ' d enddeterminant equals left-parenthesis a plus 1' +
+                       ' d EndDeterminant equals left-parenthesis a plus 1' +
                        ' right-parenthesis d minus b c', 'default');
-  this.executeRuleTest(mml, 'start 2 by 2 determinant 1st row 1st column a' +
+  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st row 1st column a' +
                        ' plus 1 2nd column b 2nd row 1st column c 2nd column' +
-                       ' d enddeterminant equals left-pren a plus 1' +
+                       ' d EndDeterminant equals left-pren a plus 1' +
                        ' right-pren d minus b c', 'brief');
-  this.executeRuleTest(mml, '2 by 2 determinant 1st row 1st column a plus 1' +
+  this.executeRuleTest(mml, '2 by 2 Determinant 1st row 1st column a plus 1' +
                        ' 2nd column b 2nd row 1st column c 2nd column d' +
-                       ' enddeterminant equals l pren a plus 1 r pren d' +
+                       ' EndDeterminant equals l pren a plus 1 r pren d' +
                        ' minus b c', 'sbrief');
 };
 
@@ -1867,12 +1867,12 @@ sre.MathspeakRuleTest.prototype.untestSample_15_4_1 = function() {
       '</mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd>' +
       '<mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi>' +
       '<mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>';
-  this.executeRuleTest(mml, 'start 2 by 2 determinant 1st row a b 2nd row c' +
-                       ' d enddeterminant equals a d minus b c', 'default');
-  this.executeRuleTest(mml, 'start 2 by 2 determinant 1st row a b 2nd row c' +
-                       ' d enddeterminant equals a d minus b c', 'brief');
-  this.executeRuleTest(mml, '2 by 2 determinant 1st row a b 2nd row c d' +
-                       ' enddeterminant equals a d minus b c', 'sbrief');
+  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st row a b 2nd row c' +
+                       ' d EndDeterminant equals a d minus b c', 'default');
+  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st row a b 2nd row c' +
+                       ' d EndDeterminant equals a d minus b c', 'brief');
+  this.executeRuleTest(mml, '2 by 2 Determinant 1st row a b 2nd row c d' +
+                       ' EndDeterminant equals a d minus b c', 'sbrief');
 };
 
 
@@ -1882,10 +1882,10 @@ sre.MathspeakRuleTest.prototype.untestSample_15_4_1 = function() {
 sre.MathspeakRuleTest.prototype.untestSample_15_6_1 = function() {
   var mml = '<mfenced open="(" close=")"><mtable><mtr><mtd><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'startbinomialormatrix x choose y' +
-                       ' endbinomialormatrix', 'default');
-  this.executeRuleTest(mml, 'startbinomialormatrix x choose y' +
-                       ' endbinomialormatrix', 'brief');
-  this.executeRuleTest(mml, 'binomialormatrix x choose y' +
-                       ' endbinomialormatrix', 'sbrief');
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix x choose y' +
+                       ' EndBinomialOrMatrix', 'default');
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix x choose y' +
+                       ' EndBinomialOrMatrix', 'brief');
+  this.executeRuleTest(mml, 'BinomialOrMatrix x choose y' +
+                       ' EndBinomialOrMatrix', 'sbrief');
 };
