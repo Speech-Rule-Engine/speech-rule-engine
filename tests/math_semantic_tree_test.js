@@ -6217,7 +6217,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
 
 
 /**
- * Variations of integrals.
+ * Translation of text elements.
  */
 sre.SemanticTreeTest.prototype.testStreeText = function() {
   this.brief = false;
@@ -6342,3 +6342,472 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '</punctuated>'
   );
 };
+
+
+/**
+ * Translation of mfenced elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<mfenced open="[" close="]" separators="+ - ;"/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" separators=""/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="]"/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced close=")"/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>(</fence>' +
+      '<fence>)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="]" separators="+"><mi>x</mi><mfrac>' +
+      '<mi>x</mi><mi>y</mi></mfrac><mn>5</mn></mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<fraction>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<identifier>y</identifier>' +
+      '</children>' +
+      '</fraction>' +
+      '<number>5</number>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="]" separators="+ - ;">' +
+      '<mi>x</mi>' +
+      '<mfrac>' +
+      '<mi>x</mi>' +
+      '<mi>y</mi>' +
+      '</mfrac>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '</mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>;</punctuation>' +
+      '<punctuation>;</punctuation>' +
+      '<punctuation>;</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>-' +
+      '<content>' +
+      '<operator>-</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<fraction>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<identifier>y</identifier>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</infixop>' +
+      '<number>5</number>' +
+      '</children>' +
+      '</infixop>' +
+      '<punctuation>;</punctuation>' +
+      '<number>5</number>' +
+      '<punctuation>;</punctuation>' +
+      '<number>5</number>' +
+      '<punctuation>;</punctuation>' +
+      '<number>5</number>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="]">' +
+      '<mi>x</mi>' +
+      '<mfrac>' +
+      '<mi>x</mi>' +
+      '<mi>y</mi>' +
+      '</mfrac>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '</mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<punctuation>,</punctuation>' +
+      '<fraction>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<identifier>y</identifier>' +
+      '</children>' +
+      '</fraction>' +
+      '<punctuation>,</punctuation>' +
+      '<number>5</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>5</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>5</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>5</number>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced close="]" separators=" ">' +
+      '<mi>x</mi>' +
+      '<mfrac>' +
+      '<mi>x</mi>' +
+      '<mi>y</mi>' +
+      '</mfrac>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '</mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>(</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<fraction>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<identifier>y</identifier>' +
+      '</children>' +
+      '</fraction>' +
+      '<number>5</number>' +
+      '<number>5</number>' +
+      '<number>5</number>' +
+      '<number>5</number>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced close="]">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>(</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced>' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>(</fence>' +
+      '<fence>)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>[</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation>[</punctuation>' +
+      '<number>1</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="" close="]">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>]</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '<punctuation>]</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open=" " close=" " separators=" ">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<number>2</number>' +
+      '<number>3</number>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</infixop>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="55" close=" ">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<unknown>55</unknown>' +
+      '<number>1</number>' +
+      '</children>' +
+      '</infixop>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="" close="" separator="">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>2</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>3</number>' +
+      '<punctuation>,</punctuation>' +
+      '<number>4</number>' +
+      '</children>' +
+      '</punctuated>'
+  );
+
+};
+
