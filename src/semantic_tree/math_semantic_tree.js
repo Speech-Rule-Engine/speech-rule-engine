@@ -2008,11 +2008,11 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
  * @private
  */
 sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
-  var separators = sre.MathUtil.nextSeparatorFunction(
-      mfenced.getAttribute('separators'));
+  var sepValue = sre.SemanticTree.getAttribute_(mfenced, 'separators', ',');
   var open = sre.SemanticTree.getAttribute_(mfenced, 'open', '(');
   var close = sre.SemanticTree.getAttribute_(mfenced, 'close', ')');
-  if (separators) {
+  if (sepValue) {
+    var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
     var newChildren = [children.shift()];
     children.forEach(goog.bind(function(child) {
       var newNode = this.createNode_();
@@ -2031,10 +2031,8 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
   if (open && close) {
     var ofence = this.createNode_();
     ofence.updateContent_(open);
-    ofence.role = sre.SemanticAttr.Role.OPEN;
     var cfence = this.createNode_();
     cfence.updateContent_(close);
-    cfence.role = sre.SemanticAttr.Role.CLOSE;
     return this.makeHorizontalFencedNode_(ofence, cfence, children);
   }
   if (open) {

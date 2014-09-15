@@ -371,6 +371,7 @@ sre.MathspeakRuleTest.prototype.testSample_6_2_1 = function() {
 
 /**
  * Testing Rule 6.2, Example 2.
+ * This equation does not make sense! We can do it purely syntactically!
  */
 sre.MathspeakRuleTest.prototype.untestSample_6_2_2 = function() {
   var mml = '<mrow><mfenced separators="" open="|" close="|"><mi>a</mi>' +

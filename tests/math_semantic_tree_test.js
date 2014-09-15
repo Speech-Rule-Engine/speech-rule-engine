@@ -6785,29 +6785,120 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
   );
 
   this.executeTreeTest(
-      '<mfenced open="" close="" separator="">' +
+      '<mfenced open="" close="" separators="">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
       '<mn>3</mn>' +
       '<mn>4</mn>' +
       '</mfenced>',
-      '<punctuated>' +
+      '<infixop>\u2062' +
       '<content>' +
-      '<punctuation>,</punctuation>' +
-      '<punctuation>,</punctuation>' +
-      '<punctuation>,</punctuation>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number>1</number>' +
-      '<punctuation>,</punctuation>' +
       '<number>2</number>' +
-      '<punctuation>,</punctuation>' +
       '<number>3</number>' +
-      '<punctuation>,</punctuation>' +
       '<number>4</number>' +
       '</children>' +
-      '</punctuated>'
+      '</infixop>'
   );
 
+  this.executeTreeTest(
+      '<mrow>' +
+      '<mfenced separators="" open="|" close="|">' +
+      '<mi>a</mi>' +
+      '<mo>&#xb1;</mo>' +
+      '<mfenced separators="" open="|" close="|">' +
+      '<mi>b</mi>' +
+      '<mo>-</mo>' +
+      '<mi>c</mi>' +
+      '</mfenced>' +
+      '</mfenced>' +
+      '<mo>&#x2260;</mo>' +
+      '<mfenced open="|" close="|">' +
+      '<mi>a</mi>' +
+      '</mfenced>' +
+      '<mo>&#xb1;</mo>' +
+      '<mfenced separators="" open="|" close="|">' +
+      '<mi>b</mi>' +
+      '<mo>-</mo>' +
+      '<mn>c</mn>' +
+      '</mfenced>' +
+      '</mrow>',
+      '<relseq>\u2260' +
+      '<content>' +
+      '<relation>\u2260</relation>' +
+      '</content>' +
+      '<children>' +
+      '<fenced>' +
+      '<content>' +
+      '<fence>|</fence>' +
+      '<fence>|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u00b1' +
+      '<content>' +
+      '<operator>\u00b1</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<fenced>' +
+      '<content>' +
+      '<fence>|</fence>' +
+      '<fence>|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>-' +
+      '<content>' +
+      '<operator>-</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>b</identifier>' +
+      '<identifier>c</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>' +
+      '<infixop>\u00b1' +
+      '<content>' +
+      '<operator>\u00b1</operator>' +
+      '</content>' +
+      '<children>' +
+      '<fenced>' +
+      '<content>' +
+      '<fence>|</fence>' +
+      '<fence>|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<fenced>' +
+      '<content>' +
+      '<fence>|</fence>' +
+      '<fence>|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>-' +
+      '<content>' +
+      '<operator>-</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>b</identifier>' +
+      '<identifier>c</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</relseq>'
+  );
 };
 
