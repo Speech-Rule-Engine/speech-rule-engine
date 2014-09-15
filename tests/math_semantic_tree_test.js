@@ -6217,7 +6217,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
 
 
 /**
- * Variations of integrals.
+ * Translation of text elements.
  */
 sre.SemanticTreeTest.prototype.testStreeText = function() {
   this.brief = false;
@@ -6342,3 +6342,93 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '</punctuated>'
   );
 };
+
+
+/**
+ * Translation of mfenced elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<mfenced open="[" close="]" separators="+ - ;"/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" separators=""/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="]"/>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced close=")">',
+      '<fenced>' +
+      '<content>' +
+      '<fence>(</fence>' +
+      '<fence>)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<empty/>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+  this.executeTreeTest(
+      '<mfenced open="[" close="]" separators="+"><mi> x </mi><mfrac>' +
+      '<mi> x </mi><mi> y </mi></mfrac><mn> 5 </mn></mfenced>',
+      '<fenced>' +
+      '<content>' +
+      '<fence>[</fence>' +
+      '<fence>]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<fraction>' +
+      '<children>' +
+      '<identifier>x</identifier>' +
+      '<identifier>y</identifier>' +
+      '</children>' +
+      '</fraction>' +
+      '<number>5</number>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</fenced>'
+  );
+
+};
+

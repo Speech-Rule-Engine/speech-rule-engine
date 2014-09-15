@@ -188,7 +188,8 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
           '[n] ./*[2] (pitch:-0.3); [p] (pause:400); [t] "end frac"',
       'self::mathml:mfrac');
 
-
+  // TODO (sorge) Consider problem with open and close spaces. Maybe use Xpath
+  //     translate transform spaces into empty.
   defineRule(
       'mfenced-single', 'default.default',
       '[t] concat(substring(@open, 0 div boolean(@open)), ' +

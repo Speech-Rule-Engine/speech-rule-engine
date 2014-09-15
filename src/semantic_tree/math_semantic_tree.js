@@ -29,6 +29,7 @@ goog.provide('sre.SemanticTree.Node');
 
 goog.require('goog.array');
 goog.require('sre.DomUtil');
+goog.require('sre.MathUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticUtil');
 
@@ -497,6 +498,11 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
         leaf.type = sre.SemanticAttr.Type.OPERATOR;
       }
       return leaf;
+      break;
+    case 'MFENCED':
+      return this.processMfenced_(
+          mml, this.parseMathmlChildren_(
+          sre.SemanticUtil.purgeNodes(children)));
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
@@ -1992,3 +1998,75 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
   return function(node) {return node[prop] == getAttr(prop);};
 };
 
+
+/**
+ * Process an mfenced node.
+ * @param {!Element} mfenced The Mfenced node.
+ * @param {!Array.<sre.SemanticTree.Node>} children List of already translated
+ *     children.
+ * @return {!sre.SemanticTree.Node} The semantic node.
+ * @private
+ */
+sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
+  var separators = sre.MathUtil.nextSeparatorFunction(
+      mfenced.getAttribute('separators'));
+  var open = sre.SemanticTree.getAttribute_(mfenced, 'open', '(');
+  var close = sre.SemanticTree.getAttribute_(mfenced, 'close', ')');
+  if (separators) {
+    var newChildren = [children.shift()];
+    children.forEach(goog.bind(function(child) {
+      var newNode = this.createNode_();
+      newNode.updateContent_(separators());
+      newChildren.push(newNode);
+      newChildren.push(child);
+    }, this));
+    children = newChildren;
+  }
+  // If both open and close are given, we assume those elements to be fences,
+  // regardless of their initial semantic interpretation. However, if only one
+  // of the fences is given we do not explicitly interfere with the semantic
+  // interpretation. In other worde the mfence is ignored and the content is
+  // interpreted as usual. The only effect of the mfence node here is that the
+  // content will be interpreted into a single node.
+  if (open && close) {
+    var ofence = this.createNode_();
+    ofence.updateContent_(open);
+    ofence.role = sre.SemanticAttr.Role.OPEN;
+    var cfence = this.createNode_();
+    cfence.updateContent_(close);
+    cfence.role = sre.SemanticAttr.Role.CLOSE;
+    return this.makeHorizontalFencedNode_(ofence, cfence, children);
+  }
+  if (open) {
+    ofence = this.createNode_();
+    ofence.updateContent_(open);
+    children.unshift(ofence);
+  }
+  if (close) {
+    cfence = this.createNode_();
+    cfence.updateContent_(close);
+    children.unshift(cfence);
+  }
+  return this.processRow_(children);
+};
+
+
+/**
+ * Get an attribute from a node and provide a default if it does not exist.  It
+ * returns null if attribute is empty string or whitespace only.
+ * @param {!Element} node The node from which to retrieve the attribute.
+ * @param {string} attr The attribute.
+ * @param {string} def The default return value.
+ * @return {?string} The value of the attribute or null.
+ * @private
+ */
+sre.SemanticTree.getAttribute_ = function(node, attr, def) {
+  var value = node.getAttribute(attr);
+  if (!value) {
+    return def;
+  }
+  if (value.match(/^\s*$/)) {
+    return null;
+  }
+  return value;
+};
