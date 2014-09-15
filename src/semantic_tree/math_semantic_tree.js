@@ -2045,7 +2045,7 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
   if (close) {
     cfence = this.createNode_();
     cfence.updateContent_(close);
-    children.unshift(cfence);
+    children.push(cfence);
   }
   return this.processRow_(children);
 };
@@ -2061,10 +2061,10 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
  * @private
  */
 sre.SemanticTree.getAttribute_ = function(node, attr, def) {
-  var value = node.getAttribute(attr);
-  if (!value) {
+  if (!node.hasAttribute(attr)) {
     return def;
   }
+  var value = node.getAttribute(attr);
   if (value.match(/^\s*$/)) {
     return null;
   }
