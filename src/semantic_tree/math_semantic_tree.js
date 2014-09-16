@@ -554,15 +554,28 @@ sre.SemanticTree.prototype.makeEmptyNode_ = function() {
 
 
 /**
+ * Create a node with the given text content. The content is semantically
+ * interpreted.
+ * @param {string} content The text content of the node.
+ * @return {!sre.SemanticTree.Node} The new node.
+ * @private
+ */
+sre.SemanticTree.prototype.makeTextNode_ = function(content) {
+  var node = this.createNode_();
+  node.updateContent_(content);
+  return node;
+};
+
+
+/**
  * Create a leaf node.
  * @param {Node} mml The MathML tree.
  * @return {!sre.SemanticTree.Node} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
-  var node = this.createNode_();
+  var node = this.makeTextNode_(mml.textContent);
   node.mathml = [mml];
-  node.updateContent_(mml.textContent);
   node.font = mml.getAttribute('mathvariant') || node.font;
   return node;
 };
@@ -607,9 +620,8 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
   if (nodes.length == 1) {
     return nodes[0];
   }
-  var operator = this.createNode_();
+  var operator = this.makeTextNode_(sre.SemanticAttr.invisibleTimes());
   // For now we assume this is a multiplication using invisible times.
-  operator.updateContent_(sre.SemanticAttr.invisibleTimes());
   var newNode = this.makeInfixNode_(nodes, operator);
   newNode.role = sre.SemanticAttr.Role.IMPLICIT;
   return newNode;
@@ -747,8 +759,7 @@ sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
       result.push(this.processRow_(nextComp));
     }
   }
-  var comma = this.createNode_();
-  comma.updateContent_(sre.SemanticAttr.invisibleComma());
+  var comma = this.makeTextNode_(sre.SemanticAttr.invisibleComma());
   comma.role = sre.SemanticAttr.Role.DUMMY;
   return [this.makePunctuatedNode_(result, [comma])];
 };
@@ -1565,8 +1576,7 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticTree.integralDxBoundary_(firstNode, nodes[1])) {
-    var comma = this.createNode_();
-    comma.updateContent_(sre.SemanticAttr.invisibleComma());
+    var comma = this.makeTextNode_(sre.SemanticAttr.invisibleComma());
     var intvar = this.makePunctuatedNode_(
         [firstNode, comma, nodes[1]], [comma]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
@@ -1585,8 +1595,7 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
  * @private
  */
 sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
-  var applNode = this.createNode_();
-  applNode.updateContent_(sre.SemanticAttr.functionApplication());
+  var applNode = this.makeTextNode_(sre.SemanticAttr.functionApplication());
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
@@ -2008,16 +2017,14 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
  * @private
  */
 sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
-  var separators = sre.MathUtil.nextSeparatorFunction(
-      mfenced.getAttribute('separators'));
+  var sepValue = sre.SemanticTree.getAttribute_(mfenced, 'separators', ',');
   var open = sre.SemanticTree.getAttribute_(mfenced, 'open', '(');
   var close = sre.SemanticTree.getAttribute_(mfenced, 'close', ')');
-  if (separators) {
+  if (sepValue) {
+    var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
     var newChildren = [children.shift()];
     children.forEach(goog.bind(function(child) {
-      var newNode = this.createNode_();
-      newNode.updateContent_(separators());
-      newChildren.push(newNode);
+      newChildren.push(this.makeTextNode_(separators()));
       newChildren.push(child);
     }, this));
     children = newChildren;
@@ -2029,23 +2036,15 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
   // interpreted as usual. The only effect of the mfence node here is that the
   // content will be interpreted into a single node.
   if (open && close) {
-    var ofence = this.createNode_();
-    ofence.updateContent_(open);
-    ofence.role = sre.SemanticAttr.Role.OPEN;
-    var cfence = this.createNode_();
-    cfence.updateContent_(close);
-    cfence.role = sre.SemanticAttr.Role.CLOSE;
-    return this.makeHorizontalFencedNode_(ofence, cfence, children);
+    return this.makeHorizontalFencedNode_(this.makeTextNode_(open),
+                                          this.makeTextNode_(close),
+                                          children);
   }
   if (open) {
-    ofence = this.createNode_();
-    ofence.updateContent_(open);
-    children.unshift(ofence);
+    children.unshift(this.makeTextNode_(open));
   }
   if (close) {
-    cfence = this.createNode_();
-    cfence.updateContent_(close);
-    children.push(cfence);
+    children.push(this.makeTextNode_(close));
   }
   return this.processRow_(children);
 };
