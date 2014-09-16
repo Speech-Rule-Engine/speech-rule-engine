@@ -200,7 +200,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
 
   // Fraction rules
-  
+
   defineRule(
       'fraction', 'default.default',
       '[t] "StartFraction"; [n] children/*[1];' +
