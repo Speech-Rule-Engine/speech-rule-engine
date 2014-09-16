@@ -9,7 +9,7 @@
       "mathspeak": {
         "default": "left-parenthesis",
         "brief": "left-pren",
-        "sbrief": "l pren"
+        "sbrief": "L pren"
       }
     },
     "key": "0028"
@@ -24,7 +24,7 @@
       "mathspeak": {
         "default": "right-parenthesis",
         "brief": "right-pren",
-        "sbrief": "r pren"
+        "sbrief": "R pren"
       }
     },
     "key": "0029"
@@ -276,7 +276,7 @@
       "mathspeak": {
         "default": "left-parenthesis upper hook",
         "brief": "left-pren upper hook",
-        "sbrief": "l pren upper hook"
+        "sbrief": "L pren upper hook"
       }
     },
     "key": "239B"
@@ -290,7 +290,7 @@
       "mathspeak": {
         "default": "left-parenthesis extension",
         "brief": "left-pren extension",
-        "sbrief": "l pren extension"
+        "sbrief": "L pren extension"
       }
     },
     "key": "239C"
@@ -304,7 +304,7 @@
       "mathspeak": {
         "default": "left-parenthesis lower hook",
         "brief": "left-pren lower hook",
-        "sbrief": "l pren lower hook"
+        "sbrief": "L pren lower hook"
       }
     },
     "key": "239D"
@@ -318,7 +318,7 @@
       "mathspeak": {
         "default": "right-parenthesis upper hook",
         "brief": "right-pren upper hook",
-        "sbrief": "r pren upper hook"
+        "sbrief": "R pren upper hook"
       }
     },
     "key": "239E"
@@ -332,7 +332,7 @@
       "mathspeak": {
         "default": "right-parenthesis extension",
         "brief": "right-pren extension",
-        "sbrief": "r pren extension"
+        "sbrief": "R pren extension"
       }
     },
     "key": "239F"
@@ -346,7 +346,7 @@
       "mathspeak": {
         "default": "right-parenthesis lower hook",
         "brief": "right-pren lower hook",
-        "sbrief": "r pren lower hook"
+        "sbrief": "R pren lower hook"
       }
     },
     "key": "23A0"
@@ -735,7 +735,7 @@
       "mathspeak": {
         "default": "medium left-parenthesis ornament",
         "brief": "medium left-pren ornament",
-        "sbrief": "medium l pren ornament"
+        "sbrief": "medium L pren ornament"
       }
     },
     "key": "2768"
@@ -749,7 +749,7 @@
       "mathspeak": {
         "default": "medium right-parenthesis ornament",
         "brief": "medium right-pren ornament",
-        "sbrief": "medium r pren ornament"
+        "sbrief": "medium R pren ornament"
       }
     },
     "key": "2769"
@@ -763,7 +763,7 @@
       "mathspeak": {
         "default": "medium flattened left-parenthesis ornament",
         "brief": "medium flattened left-pren ornament",
-        "sbrief": "medium flattened l pren ornament"
+        "sbrief": "medium flattened L pren ornament"
       }
     },
     "key": "276A"
@@ -777,7 +777,7 @@
       "mathspeak": {
         "default": "medium flattened right-parenthesis ornament",
         "brief": "medium flattened right-pren ornament",
-        "sbrief": "medium flattened r pren ornament"
+        "sbrief": "medium flattened R pren ornament"
       }
     },
     "key": "276B"
@@ -1011,7 +1011,7 @@
       "mathspeak": {
         "default": "mathematical flattened left-parenthesis",
         "brief": "mathematical flattened left-pren",
-        "sbrief": "mathematical flattened l pren"
+        "sbrief": "mathematical flattened L pren"
       }
     },
     "key": "27EE"
@@ -1025,7 +1025,7 @@
       "mathspeak": {
         "default": "mathematical flattened right-parenthesis",
         "brief": "mathematical flattened right-pren",
-        "sbrief": "mathematical flattened r pren"
+        "sbrief": "mathematical flattened R pren"
       }
     },
     "key": "27EF"
@@ -1063,7 +1063,7 @@
       "mathspeak": {
         "default": "white left-parenthesis",
         "brief": "white left-pren",
-        "sbrief": "white l pren"
+        "sbrief": "white L pren"
       }
     },
     "key": "2985"
@@ -1077,7 +1077,7 @@
       "mathspeak": {
         "default": "white right-parenthesis",
         "brief": "white right-pren",
-        "sbrief": "white r pren"
+        "sbrief": "white R pren"
       }
     },
     "key": "2986"
@@ -1425,7 +1425,7 @@
       "mathspeak": {
         "default": "double left-parenthesis",
         "brief": "double left-pren",
-        "sbrief": "double l pren"
+        "sbrief": "double L pren"
       }
     },
     "key": "2E28"
@@ -1439,7 +1439,7 @@
       "mathspeak": {
         "default": "double right-parenthesis",
         "brief": "double right-pren",
-        "sbrief": "double r pren"
+        "sbrief": "double R pren"
       }
     },
     "key": "2E29"
@@ -1680,7 +1680,7 @@
       "mathspeak": {
         "default": "ornate left-parenthesis",
         "brief": "ornate left-pren",
-        "sbrief": "ornate l pren"
+        "sbrief": "ornate L pren"
       }
     },
     "key": "FD3E"
@@ -1694,7 +1694,7 @@
       "mathspeak": {
         "default": "ornate right-parenthesis",
         "brief": "ornate right-pren",
-        "sbrief": "ornate r pren"
+        "sbrief": "ornate R pren"
       }
     },
     "key": "FD3F"
@@ -1727,7 +1727,7 @@
       "mathspeak": {
         "default": "presentation form for vertical left-parenthesis",
         "brief": "presentation form for vertical left-pren",
-        "sbrief": "presentation form for vertical l pren"
+        "sbrief": "presentation form for vertical L pren"
       }
     },
     "key": "FE35"
@@ -1742,7 +1742,7 @@
       "mathspeak": {
         "default": "presentation form for vertical right-parenthesis",
         "brief": "presentation form for vertical right-pren",
-        "sbrief": "presentation form for vertical r pren"
+        "sbrief": "presentation form for vertical R pren"
       }
     },
     "key": "FE36"
@@ -1947,7 +1947,7 @@
       "mathspeak": {
         "default": "small left-parenthesis",
         "brief": "small left-pren",
-        "sbrief": "small l pren"
+        "sbrief": "small L pren"
       }
     },
     "key": "FE59"
@@ -1962,7 +1962,7 @@
       "mathspeak": {
         "default": "small right-parenthesis",
         "brief": "small right-pren",
-        "sbrief": "small r pren"
+        "sbrief": "small R pren"
       }
     },
     "key": "FE5A"
@@ -2025,7 +2025,7 @@
       "mathspeak": {
         "default": "fullwidth left-parenthesis",
         "brief": "fullwidth left-pren",
-        "sbrief": "fullwidth l pren"
+        "sbrief": "fullwidth L pren"
       }
     },
     "key": "FF08"
@@ -2040,7 +2040,7 @@
       "mathspeak": {
         "default": "fullwidth right-parenthesis",
         "brief": "fullwidth right-pren",
-        "sbrief": "fullwidth r pren"
+        "sbrief": "fullwidth R pren"
       }
     },
     "key": "FF09"
@@ -2112,7 +2112,7 @@
       "mathspeak": {
         "default": "fullwidth white left-parenthesis",
         "brief": "fullwidth white left-pren",
-        "sbrief": "fullwidth white l pren"
+        "sbrief": "fullwidth white L pren"
       }
     },
     "key": "FF5F"
@@ -2126,7 +2126,7 @@
       "mathspeak": {
         "default": "fullwidth white right-parenthesis",
         "brief": "fullwidth white right-pren",
-        "sbrief": "fullwidth white r pren"
+        "sbrief": "fullwidth white R pren"
       }
     },
     "key": "FF60"

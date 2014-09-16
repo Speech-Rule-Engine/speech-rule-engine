@@ -210,8 +210,8 @@ sre.MathspeakRuleTest.prototype.untestSample_2_1_1 = function() {
   this.executeRuleTest(mml, 'd equals StartRoot left-pren upper x minus x' +
                        ' right-pren squared minus left-pren upper y minus' +
                        ' y right-pren squared EndRoot', 'brief');
-  this.executeRuleTest(mml, 'd equals Root l pren upper x minus x R pren' +
-                       ' squared minus l pren upper y minus y R pren' +
+  this.executeRuleTest(mml, 'd equals Root L pren upper x minus x R pren' +
+                       ' squared minus L pren upper y minus y R pren' +
                        ' squared EndRoot', 'sbrief');
 };
 
@@ -258,13 +258,13 @@ sre.MathspeakRuleTest.prototype.untestSample_2_6_2 = function() {
       '<mo>=</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow>' +
       '<mi>d</mi><mi>t</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus StartFraction d upper phi upper b over d t' +
+                       ' minus StartFraction d upper phi upper b Over d t' +
                        ' EndFraction', 'default');
   this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus StartFrac d upper phi upper b over d t' +
+                       ' minus StartFrac d upper phi upper b Over d t' +
                        ' EndFrac', 'brief');
   this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus Frac d upper phi upper b over d t EndFrac',
+                       ' minus Frac d upper phi upper b Over d t EndFrac',
                        'sbrief');
 };
 
@@ -290,8 +290,8 @@ sre.MathspeakRuleTest.prototype.testSample_4_2_1 = function() {
                        ' EndSet right-pren equals StartSet upper Alpha' +
                        ' comma upper Beta comma upper Gamma comma upper Delta' +
                        ' comma upper Epsilon comma upper Phi EndSet', 'brief');
-  this.executeRuleTest(mml, 'Uppercase l pren Set alpha comma beta comma' +
-                       ' gamma comma delta comma epsilon comma phi EndSet r' +
+  this.executeRuleTest(mml, 'Uppercase L pren Set alpha comma beta comma' +
+                       ' gamma comma delta comma epsilon comma phi EndSet R' +
                        ' pren equals Set upper Alpha comma upper Beta comma' +
                        ' upper Gamma comma upper Delta comma upper Epsilon' +
                        ' comma upper Phi EndSet', 'sbrief');
@@ -319,7 +319,7 @@ sre.MathspeakRuleTest.prototype.testSample_5_1_2 = function() {
                        ' right-parenthesis', 'default');
   this.executeRuleTest(mml, 'left-pren 1 hyphen to hyphen 1 right-pren',
                        'brief');
-  this.executeRuleTest(mml, 'l pren 1 hyphen to hyphen 1 R pren', 'sbrief');
+  this.executeRuleTest(mml, 'L pren 1 hyphen to hyphen 1 R pren', 'sbrief');
 };
 
 
