@@ -62,10 +62,24 @@ sre.SemanticTreeRules.addContextFunction_ = goog.bind(
     sre.SemanticTreeRules.mathStore.contextFunctions);
 
 
+/** @private */
+sre.SemanticTreeRules.addCustomQuery_ = goog.bind(
+    sre.SemanticTreeRules.mathStore.customQueries.add,
+    sre.SemanticTreeRules.mathStore.customQueries);
+
+
+/** @private */
+sre.SemanticTreeRules.addCustomString_ = goog.bind(
+    sre.SemanticTreeRules.mathStore.customStrings.add,
+    sre.SemanticTreeRules.mathStore.customStrings);
+
+
 goog.scope(function() {
 var defineRule = sre.SemanticTreeRules.defineRule_;
 var defineRuleAlias = sre.SemanticTreeRules.defineRuleAlias_;
 
+var addCQF = sre.SemanticTreeRules.addCustomQuery_;
+var addCSF = sre.SemanticTreeRules.addCustomString_;
 var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 
 
@@ -76,6 +90,9 @@ var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 sre.SemanticTreeRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+
+  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
+  addCQF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -182,6 +199,11 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'number', 'default.default',
       '[n] text()', 'self::number');
+
+  defineRule(
+      'font', 'default.default',
+      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::*', '@font', '@font!="normal"');
 
   defineRule(
       'fraction', 'default.default',
@@ -402,9 +424,15 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'square', 'default.default',
-      '[n] children/*[1]; [t] "square" (pitch:0.35); [p] (pause:300)',
+      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:300)',
       'self::superscript', 'children/*[2][text()=2]');
 
+  defineRule(
+      'cube', 'default.default',
+      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:300)',
+      'self::superscript', 'children/*[2][text()=3]');
+
+  // TODO (sorge) This is probably unnecessary now!
   defineRule(
       'text-no-mult', 'default.default',
       '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',

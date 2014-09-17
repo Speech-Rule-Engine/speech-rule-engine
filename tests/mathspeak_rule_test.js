@@ -240,13 +240,13 @@ sre.MathspeakRuleTest.prototype.testSample_2_3_1 = function() {
 /**
  * Testing Rule 2.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_2_6_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_2_6_1 = function() {
   var mml = '<mrow><mo mathvariant="bold">[</mo><mi>x</mi>' +
       '<mo mathvariant="bold">]</mo></mrow>';
   this.executeRuleTest(mml, 'bold left-bracket x bold right-bracket',
                        'default');
   this.executeRuleTest(mml, 'bold left-brack x bold right-brack', 'brief');
-  this.executeRuleTest(mml, 'bold l brack x bold r brack', 'sbrief');
+  this.executeRuleTest(mml, 'bold L brack x bold R brack', 'sbrief');
 };
 
 
@@ -457,13 +457,13 @@ sre.MathspeakRuleTest.prototype.testSample_7_1_2 = function() {
 /**
  * Testing Rule 7.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_2_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_2_1 = function() {
   var mml = '<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi>' +
       '</mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi>' +
       '</mfrac></mfrac></mrow>';
   this.executeRuleTest(mml, 'StartStartFraction StartFraction x Over y' +
                        ' EndFraction OverOver z EndEndFraction not-equals' +
-                       ' StartStartFraction x OverOver StartFraction y over' +
+                       ' StartStartFraction x OverOver StartFraction y Over' +
                        ' z EndFraction EndEndFraction', 'default');
   this.executeRuleTest(mml, 'StartStartFrac StartFrac x Over y EndFrac' +
                        ' OverOver z EndEndFrac not-equals StartStartFrac x' +
@@ -478,7 +478,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_2_1 = function() {
 /**
  * Testing Rule 7.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_3_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_3_1 = function() {
   var mml = '<mfrac><mfrac><mrow><mfenced separators="" open="(" close=")">' +
       '<mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow>' +
       '<mi>d</mi><mi>x</mi></mrow></mfrac>' +
@@ -553,7 +553,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_3_2 = function() {
 /**
  * Testing Rule 7.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_4_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_4_1 = function() {
   var mml = '<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac>' +
       '<mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn>' +
       '</mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo>' +
@@ -580,7 +580,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_1 = function() {
 /**
  * Testing Rule 7.4, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_4_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_4_2 = function() {
   var mml = '<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac>' +
       '<mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn>' +
       '<mn>25</mn></mfrac></mrow>';
@@ -597,7 +597,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_2 = function() {
 /**
  * Testing Rule 7.4, Example 3.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_4_3 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
@@ -613,7 +613,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_4_3 = function() {
 /**
  * Testing Rule 7.5, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_5_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_5_1 = function() {
   var mml = '<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo>' +
       '<mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>';
   this.executeRuleTest(mml, '3 and five-eighths equals StartFraction 29 over' +
@@ -628,7 +628,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_5_1 = function() {
 /**
  * Testing Rule 7.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_6_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub>' +
       '<mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
@@ -1826,7 +1826,7 @@ sre.MathspeakRuleTest.prototype.untestSample_14_3_1 = function() {
                        ' Row 1st Column y less-than 0 2nd Column 0 2nd row' +
                        ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
                        ' 2 y Endlayout', 'brief');
-  this.executeRuleTest(mml, 'x equals layout enlarged l brace 1st Row 1st' +
+  this.executeRuleTest(mml, 'x equals layout enlarged L brace 1st Row 1st' +
                        ' Column y less-than 0 2nd Column 0 2nd Row 1st' +
                        ' Column y greater-than-or-equal-to 0 2nd Column 2 y' +
                        ' Endlayout', 'sbrief');

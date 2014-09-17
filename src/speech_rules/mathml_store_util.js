@@ -153,3 +153,25 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
     return context + (content ? content.textContent : '');
   };
 };
+
+
+sre.MathmlStoreUtil.hideFont = function(node) {
+  if (node.hasAttribute('font')) {
+    var value = node.getAttribute('font');
+    node.removeAttribute('font');
+    node.setAttribute('hiddenfont', value);
+  }
+  return [node];
+};
+
+
+sre.MathmlStoreUtil.showFont = function(node) {
+  if (node.hasAttribute('hiddenfont')) {
+    var value = node.getAttribute('hiddenfont');
+    node.removeAttribute('hiddenfont');
+    node.setAttribute('font', value);
+  }
+  return '';
+};
+
+

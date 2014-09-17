@@ -90,6 +90,15 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
 
   addCSF('CSFspaceoutText', sre.MathspeakUtil.spaceoutText);
+  // Fraction function.
+  addCSF('CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose);
+  addCSF('CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose);
+  addCSF('CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose);
+  addCSF('CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief);
+  addCSF('CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief);
+  addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
+  addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
+  addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
 };
 
 
@@ -151,6 +160,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'binary-operation', 'mathspeak.default',
       '[m] children/* (separator:text());', 'self::infixop');
 
+  // Implicit times is currently ignored!
+  defineRule(
+      'implicit', 'mathspeak.default',
+      '[m] children/*', 'self::infixop', '@role="implicit"');
+  
   defineRule('subtraction', 'mathspeak.default',
              '[m] children/* (separator:"minus");', 'self::infixop',
              '@role="subtraction"');
@@ -202,21 +216,21 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Fraction rules
 
   defineRule(
-      'fraction', 'default.default',
-      '[t] "StartFraction"; [n] children/*[1];' +
-          ' [t] "Over"; [n] children/*[2]; [t] "EndFraction"',
+      'fraction', 'mathspeak.default',
+      '[t] CSFopenFracVerbose; [n] children/*[1];' +
+          ' [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose',
       'self::fraction');
 
   defineRule(
-      'fraction', 'default.brief',
-      '[t] "StartFrac"; [n] children/*[1];' +
-          ' [t] "Over"; [n] children/*[2]; [t] "EndFrac"',
+      'fraction', 'mathspeak.brief',
+      '[t] CSFopenFracBrief; [n] children/*[1];' +
+          ' [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief',
       'self::fraction');
 
   defineRule(
-      'fraction', 'default.sbrief',
-      '[t] "Frac"; [n] children/*[1];' +
-          ' [t] "Over"; [n] children/*[2]; [t] "EndFrac"',
+      'fraction', 'mathspeak.sbrief',
+      '[t] CSFopenFracSbrief; [n] children/*[1];' +
+          ' [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief',
       'self::fraction');
 
 };
