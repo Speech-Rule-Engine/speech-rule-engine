@@ -92,7 +92,7 @@ sre.SemanticTreeRules.initCustomFunctions_ = function() {
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
-  addCQF('CSFshowFont', sre.MathmlStoreUtil.showFont);
+  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 

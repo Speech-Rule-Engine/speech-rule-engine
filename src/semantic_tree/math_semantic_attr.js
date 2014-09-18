@@ -72,7 +72,7 @@ sre.SemanticAttr = function() {
    */
   this.generalPunctuations =
       [
-        '!', '"', '#', '%', '&', '\'', '*', ',', ':', ';', '?', '@', '\\',
+        '!', '"', '#', '%', '&', '\'', '*', ':', ';', '?', '@', '\\',
         '¡', '§', '¶', '·', '¿', '‗', '†', '‡', '•', '‣', '․', '‥', '‧',
         '‰', '‱', '‸', '※', '‼', '‽', '‾', '⁁', '⁂', '⁃', '⁇', '⁈', '⁉',
         '⁋', '⁌', '⁍', '⁎', '⁏', '⁐', '⁑', '⁓', '⁕', '⁖', '⁘', '⁙', '⁚',
@@ -86,7 +86,13 @@ sre.SemanticAttr = function() {
    * @private
    */
   this.invisibleComma_ = sre.SemanticUtil.numberToUnicode(0x2063);
-  this.generalPunctuations.push(this.invisibleComma_);
+  /**
+   * @type {Array.<string>}
+   */
+  this.commas =
+    [
+      ',', this.invisibleComma_
+    ];
   /**
    * @type {Array.<string>}
    */
@@ -855,6 +861,10 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.UNKNOWN
     },
+    {set: this.commas,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.COMMA
+    },
     {set: this.ellipses,
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.ELLIPSIS
@@ -1119,7 +1129,7 @@ sre.SemanticAttr = function() {
     },
     {set: this.numbers,
       type: sre.SemanticAttr.Type.NUMBER,
-      role: sre.SemanticAttr.Role.INTEGER
+      role: sre.SemanticAttr.Role.FLOAT
     },
     // Operators.
     {set: this.additions,
@@ -1281,6 +1291,7 @@ sre.SemanticAttr.Type = {
  */
 sre.SemanticAttr.Role = {
   // Punctuation.
+  COMMA: 'comma',
   ELLIPSIS: 'ellipsis',
   FULLSTOP: 'fullstop',
   DASH: 'dash',
@@ -1341,9 +1352,12 @@ sre.SemanticAttr.Role = {
   // Binary operations.
   ADDITION: 'addition',
   MULTIPLICATION: 'multiplication',
-  DIVISION: 'division',
   SUBTRACTION: 'subtraction',
   IMPLICIT: 'implicit',
+
+  // Fractions.
+  DIVISION: 'division',
+  VULGAR: 'vulgar',
 
   // Relations.
   EQUALITY: 'equality',

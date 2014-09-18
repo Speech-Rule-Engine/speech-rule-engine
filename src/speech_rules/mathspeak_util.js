@@ -58,89 +58,138 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
 
 
 /**
- * Parameter to count fraction level.
- * @type {number}
+ * Tags that serve as a nesting barrier by default.
+ * @type {Array.<sre.SemanticAttr.Type>}
  */
-sre.MathspeakUtil.fractionLevel = 0;
+sre.MathspeakUtil.nestingBarriers = [
+  sre.SemanticAttr.Type.SQRT,
+  sre.SemanticAttr.Type.ROOT,
+  sre.SemanticAttr.Type.INTEGRAL,
+  sre.SemanticAttr.Type.SUBSCRIPT,
+  sre.SemanticAttr.Type.SUPERSCRIPT,
+  sre.SemanticAttr.Type.TABLE,
+  sre.SemanticAttr.Type.MULTILINE,
+  sre.SemanticAttr.Type.MATRIX,
+  sre.SemanticAttr.Type.VECTOR,
+  sre.SemanticAttr.Type.CASES,
+  sre.SemanticAttr.Type.ROW,
+  sre.SemanticAttr.Type.LINE,
+  sre.SemanticAttr.Type.CELL
+];
 
 
 /**
- * Parameter to count fraction nesting depth.
- * @type {number}
+ * Dictionary to store the nesting depth of each node.
+ * @type {Object.<Element, number>}
  */
-sre.MathspeakUtil.fractionDepth = 0;
+sre.MathspeakUtil.nestingDepth = {};
 
 
-sre.MathspeakUtil.getNestingDepth = function(node, tag) {
-  var query = './/' + tag + '[not(descendant::' + tag + ')] | self::' + tag;
-  var deepestNodes = sre.XpathUtil.evalXPath(query, node);
-  var getDepth = function(subNode) {
-    var depth = 1;
-    while(subNode !== node) {
-      subNode = subNode.parentNode;
-      if (sre.XpathUtil.evaluateBoolean('self::' + tag, subNode)) {
-        depth++;
-      }
-    }
-    return depth;
+// sre.MathspeakUtil.updateNestingDepth = function(node, tag,  depth) {
+//   if (!sre.XpathUtil.evaluateBoolean('self::' + tag, node)) {
+//     return;
+//   }
+//   var current = sre.MathspeakUtil.nestingDepth[node];
+//   current ? Math.max(depth, sre.MathspeakUtil.nestingDepth[node]):
+//     sre.MathspeakUtil.nestingDepth[node] = depth;
+// };
+
+
+/**
+ * Computes the depth of nested descendants of a particular set of tags for a
+ * node.
+ * @param {!Element} node The XML node to check.
+ * @param {Array.<string>} tags The tags to be considered for the nesting depth.
+ * @param {Array.<string>=} opt_barriers Optional list of tags that serve as barrier.
+ * @return {number} The nesting depth.
+ */
+sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barriers) {
+  opt_barriers = opt_barriers || sre.MathspeakUtil.nestingBarriers;
+  if (sre.MathspeakUtil.nestingDepth[node]) {
+    return sre.MathspeakUtil.nestingDepth[node];
+  }
+  if (tags.indexOf(node.tagName) < 0) {
+    return 0;
   };
-  var maxDepth = 0;
-  for(var i = 0, subNode; subNode = deepestNodes[i]; i++) {
-    maxDepth = Math.max(maxDepth, getDepth(subNode));
+  var depth = sre.MathspeakUtil.computeNestingDepth(
+      node, tags, sre.MathUtil.setdifference(opt_barriers, tags), 0);
+  sre.MathspeakUtil.nestingDepth[node] = depth;
+  return depth;
+};
+
+
+sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, depth) {
+  if (barriers.indexOf(node.tagName) > -1) {
+    return depth;
   }
-  return maxDepth;
-};
-
-
-/**
- * String function to generate the opening fraction statement.
- * @param {!Node} node The fraction node.
- * @return {number} The current nesting depth.
- */
-sre.MathspeakUtil.openingFraction = function(node) {
-  if (sre.MathspeakUtil.fractionLevel === 0) {
-    sre.MathspeakUtil.fractionDepth =
-      sre.MathspeakUtil.getNestingDepth(node, 'fraction');
+  if (tags.indexOf(node.tagName) > -1) {
+    depth++;
+  };
+  if (!node.childNodes) {
+    return depth;
   }
-  var current = sre.MathspeakUtil.fractionDepth -
-        sre.MathspeakUtil.fractionLevel;
-  sre.MathspeakUtil.fractionLevel++;
-  return current;
+  var children = sre.DomUtil.toArray(node.childNodes);
+  return Math.max.apply(null, children.map(
+    function(subNode) {
+      return sre.MathspeakUtil.computeNestingDepth(subNode, tags, barriers, depth);
+    }));
 };
 
 
-sre.MathspeakUtil.closingFraction = function(node) {
-  sre.MathspeakUtil.fractionLevel--;
-  return sre.MathspeakUtil.fractionDepth - sre.MathspeakUtil.fractionLevel;
-};
+// sre.MathspeakUtil.computeNestingDepth = function(node, tag) {
+//   var query = './/' + tag + '[not(descendant::' + tag + ')]';
+//   var deepestNodes = sre.XpathUtil.evalXPath(query, node);
+//   deepestNodes.forEach(function(x) {console.log(x.toString());});
+//   var maxDepth = 0;
+//   for(var i = 0, subNode; subNode = deepestNodes[i]; i++) {
+//     var depth = 0;
+//     do {
+//       sre.MathspeakUtil.updateNestingDepth(subNode, tag, ++depth);
+//       subNode = subNode.parentNode;
+//       maxDepth = Math.max(depth, maxDepth);
+//     } while (subNode !== node);
+//   };
+//   sre.MathspeakUtil.updateNestingDepth(node, tag, ++maxDepth);
+//   return sre.MathspeakUtil.nestingDepth[node];
+// };
+
+
+// /**
+//  * Retrieve the internal nesting depth of a node with respect to a tag.
+//  * @param {!Node} node The node.
+//  * @return {number} The maximal nesting depth of nodes with the given tag.
+//  */
+// sre.MathspeakUtil.getNestingDepth = function(node, tag) {
+//   return sre.MathspeakUtil.nestingDepth[node] ||
+//     sre.MathspeakUtil.registerNestingDepth(node, tag);
+// };
 
 
 sre.MathspeakUtil.openingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.openingFraction(node);
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
   return new Array(depth + 1).join('Start') + 'Fraction';
 };
 
 
 sre.MathspeakUtil.closingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.closingFraction(node);
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
   return new Array(depth + 1).join('End') + 'Fraction';
 };
 
 
 sre.MathspeakUtil.overFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionDepth -
-        sre.MathspeakUtil.fractionLevel;
-  return new Array(depth + 2).join('Over');
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  return new Array(depth + 1).join('Over');
 };
 
 sre.MathspeakUtil.openingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.openingFraction(node);
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
   return new Array(depth + 1).join('Start') + 'Frac';
 };
 
 
 sre.MathspeakUtil.closingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.closingFraction(node);
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
   return new Array(depth + 1).join('End') + 'Frac';
 };
 
@@ -158,7 +207,7 @@ sre.MathspeakUtil.nestingToString = function(count) {
 
 
 sre.MathspeakUtil.openingFractionSbrief = function(node) {
-  var depth = sre.MathspeakUtil.openingFraction(node);
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
   if (depth === 1) {
     return 'Frac';
   }
@@ -167,7 +216,7 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
 
 
 sre.MathspeakUtil.closingFractionSbrief = function(node) {
-  var depth = sre.MathspeakUtil.closingFraction(node);
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
   if (depth === 1) {
     return 'EndFrac';
   }
@@ -176,11 +225,10 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
 
 
 sre.MathspeakUtil.overFractionSbrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionDepth -
-        sre.MathspeakUtil.fractionLevel;
-  if (depth === 0) {
+  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  if (depth === 1) {
     return 'Over';
   }
-  return 'Nest' + sre.MathspeakUtil.nestingToString(depth) + 'Over';
+  return 'Nest' + sre.MathspeakUtil.nestingToString(depth - 1) + 'Over';
 };
 

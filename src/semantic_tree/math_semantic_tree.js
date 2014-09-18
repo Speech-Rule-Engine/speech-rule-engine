@@ -422,7 +422,9 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
           sre.SemanticAttr.Type.FRACTION,
           [this.parseMathml_(children[0]), this.parseMathml_(children[1])],
           []);
-      newNode.role = sre.SemanticAttr.Role.DIVISION;
+      newNode.role = newNode.childNodes.every(function(x) {
+        return sre.SemanticTree.attrPred_('role', 'INTEGER')(x);
+      }) ? sre.SemanticAttr.Role.VULGAR : sre.SemanticAttr.Role.DIVISION;
       return newNode;
       break;
     case 'MSUB':
@@ -473,6 +475,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MTEXT':
       var leaf = this.makeLeafNode_(mml);
       leaf.type = sre.SemanticAttr.Type.TEXT;
+      sre.SemanticTree.exprFont_(leaf);
       return leaf;
       break;
     // TODO (sorge) Role and font of multi-character and digits unicode strings.
@@ -490,6 +493,8 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
         leaf.type = sre.SemanticAttr.Type.NUMBER;
       }
+      sre.SemanticTree.numberRole_(leaf);
+      sre.SemanticTree.exprFont_(leaf);
       return leaf;
       break;
     case 'MO':
@@ -2068,4 +2073,62 @@ sre.SemanticTree.getAttribute_ = function(node, attr, def) {
     return null;
   }
   return value;
+};
+
+
+// TODO (sorge) Clean those predicates up!
+/**
+ * Compute the role of a number if it does not have one already.
+ * @param {!sre.SemanticTree.Node} node The semantic tree node.
+ * @private
+ */
+sre.SemanticTree.numberRole_ = function(node) {
+  if (node.role !== sre.SemanticAttr.Role.UNKNOWN) {
+    return;
+  }
+  var content = sre.SemanticUtil.splitUnicode(node.textContent);
+  var meaning = content.map(sre.SemanticAttr.lookupMeaning);
+  if (meaning.every(function(x) {
+    return (x.type == sre.SemanticAttr.Type.NUMBER &&
+            x.role == sre.SemanticAttr.Role.INTEGER) ||
+      (x.type == sre.SemanticAttr.Type.PUNCTUATION &&
+       x.role == sre.SemanticAttr.Role.COMMA);})) {
+    node.role = sre.SemanticAttr.Role.INTEGER;
+    return; }
+  if (meaning.every(function(x) {
+    return (x.type == sre.SemanticAttr.Type.NUMBER &&
+            x.role == sre.SemanticAttr.Role.INTEGER) ||
+      x.type == sre.SemanticAttr.Type.PUNCTUATION;})) {
+    node.role = sre.SemanticAttr.Role.FLOAT;
+    return; }
+  node.role = sre.SemanticAttr.Role.OTHERNUMBER;
+};
+
+
+/**
+ * Updates the font of a node if a single font can be determined.
+ * @param {!sre.SemanticTree.Node} node The semantic tree node.
+ * @private
+ */
+sre.SemanticTree.exprFont_ = function(node) {
+  if (node.font !== sre.SemanticAttr.Font.UNKNOWN) {
+    return;
+  }
+  var content = sre.SemanticUtil.splitUnicode(node.textContent);
+  var meaning = content.map(sre.SemanticAttr.lookupMeaning);
+  var singleFont = meaning.reduce(
+    function(prev, curr) {
+      if (!prev || !curr.font || curr.font == sre.SemanticAttr.Font.UNKNOWN ||
+          curr.font == prev) {
+        return prev;
+      }
+      if (prev == sre.SemanticAttr.Font.UNKNOWN) {
+        return curr.font;
+      }
+      return null;
+    },
+    sre.SemanticAttr.Font.UNKNOWN);
+  if (singleFont) {
+    node.font = singleFont;
+  }
 };

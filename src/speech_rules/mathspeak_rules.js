@@ -233,6 +233,13 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
           ' [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief',
       'self::fraction');
 
+  // Relations
+
+    defineRule(
+      'equality', 'mathspeak.default',
+      '[n] children/*[1]; [n] text(); [n] children/*[2]',
+      'self::relseq[@role="equality"]', 'count(./children/*)=2');
+
 };
 
 });  // goog.scope
