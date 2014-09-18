@@ -1000,7 +1000,7 @@
         "default": "horizontal ellipsis"
       },
       "mathspeak": {
-        "default": "horizontal-ellipsis"
+        "default": "ellipsis"
       }
     },
     "key": "2026"
@@ -1924,7 +1924,7 @@
         "default": "n ary summation"
       },
       "mathspeak": {
-        "default": "n-ary-summation"
+        "default": "sigma-summation"
       }
     },
     "key": "2211"

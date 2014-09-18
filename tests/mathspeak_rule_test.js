@@ -341,7 +341,7 @@ sre.MathspeakRuleTest.prototype.untestSample_6_1_1 = function() {
   var mml = '<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo>' +
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
-      '<mn>8</mn><mo>,</mo><mo>...</mo><mo>}</mo></mrow>';
+      '<mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>';
   this.executeRuleTest(mml, 'The Fibonacci numbers are colon StartSet 0' +
                        ' comma 1 comma 1 comma 2 comma 3 comma 5 comma 8' +
                        ' comma ellipsis EndSet', 'default');
@@ -528,7 +528,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_3_2 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac>' +
       '<mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac>' +
       '<mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac>' +
-      '<mn>1</mn><mrow><mo>...</mo><mo>+</mo><mfrac><mn>1</mn><msub>' +
+      '<mn>1</mn><mrow><mo>&#x2026;</mo><mo>+</mo><mfrac><mn>1</mn><msub>' +
       '<mi>a</mi><mi>n</mi></msub></mfrac></mrow></mfrac></mrow></mfrac>' +
       '</mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'a 0 plus StartStartStartStartFraction 1' +
@@ -557,9 +557,9 @@ sre.MathspeakRuleTest.prototype.testSample_7_4_1 = function() {
   var mml = '<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac>' +
       '<mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn>' +
       '</mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo>' +
-      '<mo>...</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi>' +
+      '<mo>&#x2026;</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi>' +
       '<mo>=</mo><mn>1</mn></mrow>' +
-      '<mo movablelimits="true" form="prefix">inf</mo></munderover><mfrac>' +
+      '<mo movablelimits="true" form="prefix">∞</mo></munderover><mfrac>' +
       '<mi>n</mi><mn>2</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
                        ' four-halves plus ellipsis equals sigma-summation' +
@@ -634,11 +634,11 @@ sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
       '<mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi>' +
       '<mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo>' +
-      '<mo>...</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo>' +
+      '<mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo>' +
       '<msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi>' +
       '<mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi>' +
-      '<mn>2</mn></msub></mfrac><mo>+</mo><mo>...</mo></mrow>';
+      '<mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>';
   this.executeRuleTest(mml, 'a 0 plus continuedFraction b 1 Over a 1 plus' +
                        ' StartFraction b 2 Over a 2 plus StartFraction b 3' +
                        ' Over a 3 plus ellipsis equals a 0 plus' +
@@ -1329,7 +1329,7 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_3 = function() {
   var mml = '<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn>' +
       '</mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mRoot><mrow>' +
       '<mi>x</mi><mRoot><mrow><mi>x</mi><mRoot><mrow><mi>x</mi>' +
-      '<mo>...</mo></mrow><mn>5</mn></mRoot></mrow><mn>4</mn></mRoot>' +
+      '<mo>&#x2026;</mo></mrow><mn>5</mn></mRoot></mrow><mn>4</mn></mRoot>' +
       '</mrow><mn>3</mn></mRoot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
       '<mo>∈</mo><mi>ℝ</mi></mrow>';
   this.executeRuleTest(mml, 'x Superscript e minus 2 Baseline equals' +
@@ -1363,7 +1363,7 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_4 = function() {
       '</mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn>' +
       '<mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn>' +
       '</msqrt></mrow></msqrt></mrow></msqrt><mn>2</mn></mfrac>' +
-      '<mo>...</mo></mrow>';
+      '<mo>&#x2026;</mo></mrow>';
   this.executeRuleTest(mml, 'StartFraction 2 Over pi EndFraction equals' +
                        ' StartFraction StartRoot 2 EndRoot Over 2' +
                        ' EndFraction StartFraction NestedStartRoot 2 plus' +

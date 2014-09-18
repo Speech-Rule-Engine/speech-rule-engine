@@ -5124,7 +5124,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="4">' +
       '<children>' +
-      '<text role="unknown" id="3">often</text>' +
+      '<text role="unknown" font="normal" id="3">often</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5138,7 +5138,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="9">' +
       '<children>' +
-      '<text role="unknown" id="8">sometimes</text>' +
+      '<text role="unknown" font="normal" id="8">sometimes</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5171,7 +5171,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="6">' +
       '<children>' +
-      '<text role="unknown" id="5">often</text>' +
+      '<text role="unknown" font="normal" id="5">often</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5185,7 +5185,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="11">' +
       '<children>' +
-      '<text role="unknown" id="10">sometimes</text>' +
+      '<text role="unknown" font="normal" id="10">sometimes</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5218,7 +5218,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="4">' +
       '<children>' +
-      '<text role="unknown" id="3">often</text>' +
+      '<text role="unknown" font="normal" id="3">often</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5232,7 +5232,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="9">' +
       '<children>' +
-      '<text role="unknown" id="8">sometimes</text>' +
+      '<text role="unknown" font="normal" id="8">sometimes</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5250,8 +5250,8 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>',
       '<punctuated role="sequence" id="17">' +
       '<content>' +
-      '<punctuation role="unknown" id="12">,</punctuation>' +
-      '<punctuation role="unknown" id="14">,</punctuation>' +
+      '<punctuation role="comma" id="12">,</punctuation>' +
+      '<punctuation role="comma" id="14">,</punctuation>' +
       '<punctuation role="fullstop" id="16">.</punctuation>' +
       '</content>' +
       '<children>' +
@@ -5269,7 +5269,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="4">' +
       '<children>' +
-      '<text role="unknown" id="3">often</text>' +
+      '<text role="unknown" font="normal" id="3">often</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
@@ -5283,16 +5283,16 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="cases" id="9">' +
       '<children>' +
-      '<text role="unknown" id="8">sometimes</text>' +
+      '<text role="unknown" font="normal" id="8">sometimes</text>' +
       '</children>' +
       '</cell>' +
       '</children>' +
       '</row>' +
       '</children>' +
       '</cases>' +
-      '<punctuation role="unknown" id="12">,</punctuation>' +
+      '<punctuation role="comma" id="12">,</punctuation>' +
       '<identifier role="latinletter" font="normal" id="13">b</identifier>' +
-      '<punctuation role="unknown" id="14">,</punctuation>' +
+      '<punctuation role="comma" id="14">,</punctuation>' +
       '<identifier role="latinletter" font="normal" id="15">c</identifier>' +
       '<punctuation role="fullstop" id="16">.</punctuation>' +
       '</children>' +
@@ -5305,8 +5305,8 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<mo>,</mo><mi>c</mi><mo>.</mo></mrow>',
       '<punctuated role="sequence" id="19">' +
       '<content>' +
-      '<punctuation role="unknown" id="14">,</punctuation>' +
-      '<punctuation role="unknown" id="16">,</punctuation>' +
+      '<punctuation role="comma" id="14">,</punctuation>' +
+      '<punctuation role="comma" id="16">,</punctuation>' +
       '<punctuation role="fullstop" id="18">.</punctuation>' +
       '</content>' +
       '<children>' +
@@ -5319,12 +5319,12 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<children>' +
       '<punctuated role="sequence" id="4">' +
       '<content>' +
-      '<punctuation role="unknown" id="2">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="1">a</identifier>' +
-      '<punctuation role="unknown" id="2">,</punctuation>' +
-      '<text role="unknown" id="3">often</text>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<text role="unknown" font="normal" id="3">often</text>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
@@ -5333,21 +5333,21 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<children>' +
       '<punctuated role="sequence" id="10">' +
       '<content>' +
-      '<punctuation role="unknown" id="8">,</punctuation>' +
+      '<punctuation role="comma" id="8">,</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="7">b</identifier>' +
-      '<punctuation role="unknown" id="8">,</punctuation>' +
-      '<text role="unknown" id="9">sometimes</text>' +
+      '<punctuation role="comma" id="8">,</punctuation>' +
+      '<text role="unknown" font="normal" id="9">sometimes</text>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
       '</line>' +
       '</children>' +
       '</cases>' +
-      '<punctuation role="unknown" id="14">,</punctuation>' +
+      '<punctuation role="comma" id="14">,</punctuation>' +
       '<identifier role="latinletter" font="normal" id="15">b</identifier>' +
-      '<punctuation role="unknown" id="16">,</punctuation>' +
+      '<punctuation role="comma" id="16">,</punctuation>' +
       '<identifier role="latinletter" font="normal" id="17">c</identifier>' +
       '<punctuation role="fullstop" id="18">.</punctuation>' +
       '</children>' +
@@ -6223,7 +6223,7 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
   this.brief = false;
   this.executeTreeTest(
       '<mtext>text only</mtext>',
-      '<text role="unknown" id="0">text only</text>'
+      '<text role="unknown" font="normal" id="0">text only</text>'
   );
 
   this.executeTreeTest(
@@ -6234,7 +6234,7 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">a</identifier>' +
-      '<text role="unknown" id="1">to</text>' +
+      '<text role="unknown" font="normal" id="1">to</text>' +
       '</children>' +
       '</punctuated>'
   );
@@ -6246,7 +6246,7 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '<punctuation role="dummy" id="2">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<text role="unknown" id="0">to</text>' +
+      '<text role="unknown" font="normal" id="0">to</text>' +
       '<identifier role="latinletter" font="normal" id="1">b</identifier>' +
       '</children>' +
       '</punctuated>'
@@ -6260,9 +6260,9 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">a</identifier>' +
-      '<text role="unknown" id="1">to</text>' +
+      '<text role="unknown" font="normal" id="1">to</text>' +
       '<identifier role="latinletter" font="normal" id="2">b</identifier>' +
-      '<text role="unknown" id="3">to</text>' +
+      '<text role="unknown" font="normal" id="3">to</text>' +
       '<identifier role="latinletter" font="normal" id="4">c</identifier>' +
       '</children>' +
       '</punctuated>'

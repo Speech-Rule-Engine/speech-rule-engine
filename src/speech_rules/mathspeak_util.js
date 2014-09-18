@@ -100,11 +100,16 @@ sre.MathspeakUtil.nestingDepth = {};
  * node.
  * @param {!Element} node The XML node to check.
  * @param {Array.<string>} tags The tags to be considered for the nesting depth.
- * @param {Array.<string>=} opt_barriers Optional list of tags that serve as barrier.
+ * @param {Array.<string>=} opt_barrierTags Optional list of tags that serve as
+ *     barrier.
+ * @param {Object.<string, string>=} opt_barrierAttrs Attribute value pairs that
+ *     serve as barrier.
  * @return {number} The nesting depth.
  */
-sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barriers) {
-  opt_barriers = opt_barriers || sre.MathspeakUtil.nestingBarriers;
+sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barrierTags,
+                                             opt_barrierAttrs) {
+  opt_barrierTags = opt_barrierTags || sre.MathspeakUtil.nestingBarriers;
+  opt_barrierAttrs = opt_barrierAttrs || {};
   if (sre.MathspeakUtil.nestingDepth[node]) {
     return sre.MathspeakUtil.nestingDepth[node];
   }
@@ -112,14 +117,32 @@ sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barriers) {
     return 0;
   };
   var depth = sre.MathspeakUtil.computeNestingDepth(
-      node, tags, sre.MathUtil.setdifference(opt_barriers, tags), 0);
+      node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
+      opt_barrierAttrs, 0);
   sre.MathspeakUtil.nestingDepth[node] = depth;
   return depth;
 };
 
 
-sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, depth) {
-  if (barriers.indexOf(node.tagName) > -1) {
+sre.MathspeakUtil.containsAttr = function(node, attrs) {
+  if (!node.attributes) {
+    return false;
+  }
+  var attributes = sre.DomUtil.toArray(node.attributes);
+  for(var i = 0, attr; attr = attributes[i]; i++) {
+    if (attrs[attr.nodeName] === attr.nodeValue) {
+      return true;
+    }
+  } 
+  return false;
+};
+
+
+
+sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, attrs, depth) {
+  if (barriers.indexOf(node.tagName) > -1 ||
+      sre.MathspeakUtil.containsAttr(node, attrs))
+  {
     return depth;
   }
   if (tags.indexOf(node.tagName) > -1) {
@@ -131,7 +154,7 @@ sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, depth) {
   var children = sre.DomUtil.toArray(node.childNodes);
   return Math.max.apply(null, children.map(
     function(subNode) {
-      return sre.MathspeakUtil.computeNestingDepth(subNode, tags, barriers, depth);
+      return sre.MathspeakUtil.computeNestingDepth(subNode, tags, barriers, attrs, depth);
     }));
 };
 
@@ -165,31 +188,37 @@ sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, depth) {
 // };
 
 
+sre.MathspeakUtil.fractionNestingDepth = function(node) {
+  return sre.MathspeakUtil.getNestingDepth(
+    node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {'role': 'vulgar'});
+};
+
+
 sre.MathspeakUtil.openingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth + 1).join('Start') + 'Fraction';
 };
 
 
 sre.MathspeakUtil.closingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth + 1).join('End') + 'Fraction';
 };
 
 
 sre.MathspeakUtil.overFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth + 1).join('Over');
 };
 
 sre.MathspeakUtil.openingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth + 1).join('Start') + 'Frac';
 };
 
 
 sre.MathspeakUtil.closingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   return new Array(depth + 1).join('End') + 'Frac';
 };
 
@@ -207,7 +236,7 @@ sre.MathspeakUtil.nestingToString = function(count) {
 
 
 sre.MathspeakUtil.openingFractionSbrief = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return 'Frac';
   }
@@ -216,7 +245,7 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
 
 
 sre.MathspeakUtil.closingFractionSbrief = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return 'EndFrac';
   }
@@ -225,10 +254,72 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
 
 
 sre.MathspeakUtil.overFractionSbrief = function(node) {
-  var depth = sre.MathspeakUtil.getNestingDepth(node, ['fraction']);
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return 'Over';
   }
   return 'Nest' + sre.MathspeakUtil.nestingToString(depth - 1) + 'Over';
+};
+
+
+
+sre.MathspeakUtil.lowNumbers = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+sre.MathspeakUtil.tenNumbers = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+sre.MathspeakUtil.numberToWords = function(num) {
+  if ((num = num.toString()).length > 9) return num.toString();
+  var n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+  if (!n) return; var str = '';
+  str += (n[1] != 0) ? (sre.MathspeakUtil.lowNumbers[Number(n[1])] || sre.MathspeakUtil.tenNumbers[n[1][0]] + '-' + sre.MathspeakUtil.lowNumbers[n[1][1]]) + 'billion-' : '';
+  str += (n[2] != 0) ? (sre.MathspeakUtil.lowNumbers[Number(n[2])] || sre.MathspeakUtil.tenNumbers[n[2][0]] + '-' + sre.MathspeakUtil.lowNumbers[n[2][1]]) + 'million-' : '';
+  str += (n[3] != 0) ? (sre.MathspeakUtil.lowNumbers[Number(n[3])] || sre.MathspeakUtil.tenNumbers[n[3][0]] + '-' + sre.MathspeakUtil.lowNumbers[n[3][1]]) + 'thousand-' : '';
+  str += (n[4] != 0) ? (sre.MathspeakUtil.lowNumbers[Number(n[4])] || sre.MathspeakUtil.tenNumbers[n[4][0]] + '-' + sre.MathspeakUtil.lowNumbers[n[4][1]]) + 'hundred-' : '';
+  str += (n[5] != 0) ? ((str != '') ? 'and-' : '') + (sre.MathspeakUtil.lowNumbers[Number(n[5])] || sre.MathspeakUtil.tenNumbers[n[5][0]] + '-' + sre.MathspeakUtil.lowNumbers[n[5][1]]) : '';
+  return str.match(/-$/) ? str.slice(0, -1) : str;
+};
+
+sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
+  if (num === 2) {
+    return plural ? 'halves' : 'half';
+  }
+  var ordinal = sre.MathspeakUtil.numberToWords(num);
+  if (ordinal.match(/one$/)) {
+    ordinal = ordinal.slice(0, -3) + 'first';
+  } else if (ordinal.match(/two$/)) {
+    ordinal = ordinal.slice(0, -3) + 'second';
+  } else if (ordinal.match(/three$/)) {
+    ordinal = ordinal.slice(0, -5) + 'third';
+  } else if (ordinal.match(/five$/)) {
+    ordinal = ordinal.slice(0, -4) + 'fifth';
+  } else if (ordinal.match(/eight$/)) {
+    ordinal = ordinal.slice(0, -5) + 'eighth';
+  } else if (ordinal.match(/nine$/)) {
+    ordinal = ordinal.slice(0, -4) + 'ninth';
+  } else if (ordinal.match(/twelve$/)) {
+    ordinal = ordinal.slice(0, -5) + 'twelfth';
+  } else if (ordinal.match(/ty$/)) {
+    ordinal = ordinal.slice(0, -2) + 'tieth';
+  } else {
+    ordinal = ordinal + 'th';
+  }
+  return plural ? ordinal + 's' : ordinal;
+};
+
+
+sre.MathspeakUtil.vulgarFraction = function(node) {
+  if (!node.childNodes || !node.childNodes[0] ||
+      !node.childNodes[0].childNodes ||
+      node.childNodes[0].childNodes.length < 2) {
+    return node.textContent;
+  }
+  var denStr = node.childNodes[0].childNodes[0].textContent;
+  var enumStr = node.childNodes[0].childNodes[1].textContent;
+  var denominator = Number(denStr);
+  var enumerator = Number(enumStr);
+  if (isNaN(denominator) || isNaN(enumerator)) {
+    return denStr + ' Over ' + enumStr;
+  }
+  return sre.MathspeakUtil.numberToWords(denominator) + '-' +
+    sre.MathspeakUtil.numberToOrdinal(enumerator, denominator !== 1);
 };
 

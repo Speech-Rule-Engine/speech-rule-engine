@@ -380,15 +380,15 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   // Limit operator rules
   defineRule(
-      'limboth', 'default.default',
+      'sum-only', 'default.default',
       '[n] children/*[1]; [t] "from"; [n] children/*[2]; [t] "to";' +
-      '[n] children/*[3]', 'self::limboth');
+      '[n] children/*[3]', 'self::limboth', 'self::limboth[@role="sum"]');
 
   defineRule(
-      'sum-only', 'default.default',
+      'limboth', 'default.default',
       '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
-      '[p] (pause 250);',
-      'self::limboth', 'self::limboth[@role="sum"]');
+      '[t] "under"; [n] children/*[3]; [p] (pause 250);',
+      'self::limboth');
 
   defineRule(
       'limlower', 'default.default',

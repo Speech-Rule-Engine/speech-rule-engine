@@ -99,6 +99,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
+  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
 };
 
 
@@ -232,6 +233,36 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] CSFopenFracSbrief; [n] children/*[1];' +
           ' [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief',
       'self::fraction');
+
+  defineRule(
+      'vulgar-fraction', 'mathspeak.default',
+      '[t] CSFvulgarFraction',
+      'self::fraction', '@role="vulgar"');
+
+  defineRule(
+      'vulgar-fraction', 'mathspeak.sbrief',
+      '[t] CSFvulgarFraction',
+      'self::fraction', '@role="vulgar"');
+
+  defineRule(
+      'vulgar-fraction', 'mathspeak.brief',
+      '[t] CSFvulgarFraction',
+      'self::fraction', '@role="vulgar"');
+
+  // Limits
+  
+  defineRule(
+      'limboth', 'mathspeak.default',
+      '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
+      '[t] "Overscript"; [n] children/*[3]; [t] "Endscripts";',
+      'self::limboth');
+
+  defineRule(
+      'bigop', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2];',
+      'self::bigop');
+
+
 
   // Relations
 
