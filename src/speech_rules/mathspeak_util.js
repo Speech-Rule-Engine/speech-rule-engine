@@ -85,16 +85,6 @@ sre.MathspeakUtil.nestingBarriers = [
 sre.MathspeakUtil.nestingDepth = {};
 
 
-// sre.MathspeakUtil.updateNestingDepth = function(node, tag,  depth) {
-//   if (!sre.XpathUtil.evaluateBoolean('self::' + tag, node)) {
-//     return;
-//   }
-//   var current = sre.MathspeakUtil.nestingDepth[node];
-//   current ? Math.max(depth, sre.MathspeakUtil.nestingDepth[node]):
-//     sre.MathspeakUtil.nestingDepth[node] = depth;
-// };
-
-
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
  * node.
@@ -104,21 +94,25 @@ sre.MathspeakUtil.nestingDepth = {};
  *     barrier.
  * @param {Object.<string, string>=} opt_barrierAttrs Attribute value pairs that
  *     serve as barrier.
+ * @param {function(!Element): boolean=} opt_func A function that overrides both
+ *     tags and attribute barriers, i.e., if function returns true it will be
+ *     considered as barrier, otherwise tags and attributes will be considered.
  * @return {number} The nesting depth.
  */
 sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barrierTags,
-                                             opt_barrierAttrs) {
+                                             opt_barrierAttrs, opt_func) {
   opt_barrierTags = opt_barrierTags || sre.MathspeakUtil.nestingBarriers;
   opt_barrierAttrs = opt_barrierAttrs || {};
+  opt_func = opt_func || function(node) { return false; };
   if (sre.MathspeakUtil.nestingDepth[node]) {
     return sre.MathspeakUtil.nestingDepth[node];
   }
-  if (tags.indexOf(node.tagName) < 0) {
+  if (opt_func(node) || tags.indexOf(node.tagName) < 0) {
     return 0;
   };
-  var depth = sre.MathspeakUtil.computeNestingDepth(
+  var depth = sre.MathspeakUtil.computeNestingDepth_(
       node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
-      opt_barrierAttrs, 0);
+      opt_barrierAttrs, opt_func, 0);
   sre.MathspeakUtil.nestingDepth[node] = depth;
   return depth;
 };
@@ -139,8 +133,9 @@ sre.MathspeakUtil.containsAttr = function(node, attrs) {
 
 
 
-sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, attrs, depth) {
-  if (barriers.indexOf(node.tagName) > -1 ||
+sre.MathspeakUtil.computeNestingDepth_ = function(node, tags, barriers, attrs, func, depth) {
+  if (func(node) ||
+      barriers.indexOf(node.tagName) > -1 ||
       sre.MathspeakUtil.containsAttr(node, attrs))
   {
     return depth;
@@ -154,43 +149,22 @@ sre.MathspeakUtil.computeNestingDepth = function(node, tags, barriers, attrs, de
   var children = sre.DomUtil.toArray(node.childNodes);
   return Math.max.apply(null, children.map(
     function(subNode) {
-      return sre.MathspeakUtil.computeNestingDepth(subNode, tags, barriers, attrs, depth);
+      return sre.MathspeakUtil.computeNestingDepth_(subNode, tags, barriers, attrs, func, depth);
     }));
 };
 
 
-// sre.MathspeakUtil.computeNestingDepth = function(node, tag) {
-//   var query = './/' + tag + '[not(descendant::' + tag + ')]';
-//   var deepestNodes = sre.XpathUtil.evalXPath(query, node);
-//   deepestNodes.forEach(function(x) {console.log(x.toString());});
-//   var maxDepth = 0;
-//   for(var i = 0, subNode; subNode = deepestNodes[i]; i++) {
-//     var depth = 0;
-//     do {
-//       sre.MathspeakUtil.updateNestingDepth(subNode, tag, ++depth);
-//       subNode = subNode.parentNode;
-//       maxDepth = Math.max(depth, maxDepth);
-//     } while (subNode !== node);
-//   };
-//   sre.MathspeakUtil.updateNestingDepth(node, tag, ++maxDepth);
-//   return sre.MathspeakUtil.nestingDepth[node];
-// };
-
-
-// /**
-//  * Retrieve the internal nesting depth of a node with respect to a tag.
-//  * @param {!Node} node The node.
-//  * @return {number} The maximal nesting depth of nodes with the given tag.
-//  */
-// sre.MathspeakUtil.getNestingDepth = function(node, tag) {
-//   return sre.MathspeakUtil.nestingDepth[node] ||
-//     sre.MathspeakUtil.registerNestingDepth(node, tag);
-// };
-
-
 sre.MathspeakUtil.fractionNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-    node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {'role': 'vulgar'});
+    node, ['fraction'], sre.MathspeakUtil.nestingBarriers, [],
+    function(node) {
+      return sre.MathspeakUtil.vulgarFractionSmall(node);
+    }
+  );
+  //   goog.bind(function(node) {
+  //     return sre.MathspeakUtil.vulgarFractionSmall(node);
+  //   }, this)
+  // );
 };
 
 
@@ -264,6 +238,7 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
 
 
 sre.MathspeakUtil.lowNumbers = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+
 sre.MathspeakUtil.tenNumbers = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
 sre.MathspeakUtil.numberToWords = function(num) {
@@ -306,20 +281,55 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
 };
 
 
-sre.MathspeakUtil.vulgarFraction = function(node) {
+sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
   if (!node.childNodes || !node.childNodes[0] ||
       !node.childNodes[0].childNodes ||
-      node.childNodes[0].childNodes.length < 2) {
-    return node.textContent;
+      node.childNodes[0].childNodes.length < 2 ||
+      node.childNodes[0].childNodes[0].tagName !==
+          sre.SemanticAttr.Type.NUMBER ||
+      node.childNodes[0].childNodes[1].tagName !==
+          sre.SemanticAttr.Type.NUMBER
+     ) {
+    return {convertible : false,
+            content: node.textContent};
   }
-  var denStr = node.childNodes[0].childNodes[0].textContent;
-  var enumStr = node.childNodes[0].childNodes[1].textContent;
+  var denStr = node.childNodes[0].childNodes[1].textContent;
+  var enumStr = node.childNodes[0].childNodes[0].textContent;
   var denominator = Number(denStr);
   var enumerator = Number(enumStr);
   if (isNaN(denominator) || isNaN(enumerator)) {
-    return denStr + ' Over ' + enumStr;
+    return {convertible: false,
+            content: enumStr + ' Over ' + denStr};
   }
-  return sre.MathspeakUtil.numberToWords(denominator) + '-' +
-    sre.MathspeakUtil.numberToOrdinal(enumerator, denominator !== 1);
+  return {convertible: true,
+          enumerator: enumerator,
+          denominator: denominator};
 };
 
+
+sre.MathspeakUtil.vulgarFraction = function(node) {
+  var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
+  if (conversion.convertible) {
+    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + '-' +
+      sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
+                                        conversion.enumerator !== 1);
+  }
+  return conversion.content;
+};
+
+
+sre.MathspeakUtil.vulgarFractionSmall = function(node) {
+  var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
+  if (conversion.convertible) {
+    var enumerator = conversion.enumerator;
+    var denominator = conversion.denominator;
+    return enumerator > 0 && enumerator < 10 &&
+      denominator > 0 && denominator < 100;
+  }
+  return false;
+};
+
+
+sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
+  return sre.MathspeakUtil.vulgarFractionSmall(node) ? [node] : [];
+};

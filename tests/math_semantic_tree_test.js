@@ -115,6 +115,63 @@ sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
 };
 
 
+// Numbers.
+/**
+ * Test number representations.
+ */
+sre.SemanticTreeTest.prototype.testStreeNumbers = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mn>2</mn>',
+      '<number role="integer" font="normal" id="0">2</number>');
+  this.executeTreeTest(
+      '<mn>2.0</mn>',
+      '<number role="float" font="normal" id="0">2.0</number>');
+  this.executeTreeTest(
+      '<mn>2t3</mn>',
+      '<number role="othernumber" font="normal" id="0">2t3</number>');
+  this.executeTreeTest(
+      '<mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<fraction role="vulgar" id="2">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">1</number>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</fraction>');
+  this.executeTreeTest(
+      '<mfrac><mn>1</mn><mn>2.5</mn></mfrac>',
+      '<fraction role="division" id="2">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">1</number>' +
+      '<number role="float" font="normal" id="1">2.5</number>' +
+      '</children>' +
+      '</fraction>');
+};
+
+
+/**
+ * Test mixed number representations.
+ */
+sre.SemanticTreeTest.prototype.testStreeMixedNumbers = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<number role="mixed" id="4">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">3</number>' +
+      '<fraction role="vulgar" id="3">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</number>'
+  );
+  this.brief = true;
+};
+
+
 // Relations.
 /**
  * Test relation trees.

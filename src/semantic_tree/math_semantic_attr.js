@@ -1318,7 +1318,8 @@ sre.SemanticAttr.Role = {
   INTEGER: 'integer',
   FLOAT: 'float',
   OTHERNUMBER: 'othernumber',
-
+  MIXED: 'mixed',
+  
   // Accents.
   MULTIACCENT: 'multiaccent',
   OVERACCENT: 'overaccent',

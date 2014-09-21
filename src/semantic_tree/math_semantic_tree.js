@@ -565,7 +565,7 @@ sre.SemanticTree.prototype.makeEmptyNode_ = function() {
  * @return {!sre.SemanticTree.Node} The new node.
  * @private
  */
-sre.SemanticTree.prototype.makeTextNode_ = function(content) {
+sre.SemanticTree.prototype.makeContentNode_ = function(content) {
   var node = this.createNode_();
   node.updateContent_(content);
   return node;
@@ -579,7 +579,7 @@ sre.SemanticTree.prototype.makeTextNode_ = function(content) {
  * @private
  */
 sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
-  var node = this.makeTextNode_(mml.textContent);
+  var node = this.makeContentNode_(mml.textContent);
   node.mathml = [mml];
   node.font = mml.getAttribute('mathvariant') || node.font;
   return node;
@@ -622,10 +622,11 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
  * @private
  */
 sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
+  nodes = this.getMixedNumbers_(nodes);
   if (nodes.length == 1) {
     return nodes[0];
   }
-  var operator = this.makeTextNode_(sre.SemanticAttr.invisibleTimes());
+  var operator = this.makeContentNode_(sre.SemanticAttr.invisibleTimes());
   // For now we assume this is a multiplication using invisible times.
   var newNode = this.makeInfixNode_(nodes, operator);
   newNode.role = sre.SemanticAttr.Role.IMPLICIT;
@@ -737,6 +738,39 @@ sre.SemanticTree.prototype.processRow_ = function(nodes) {
 
 
 /**
+ * Finds mixed numbers in a list of single nodes. A mixed number is an integer
+ * followed by a vulgar fraction.
+ * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @private
+ */
+sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
+  var partition = sre.SemanticTree.partitionNodes_(
+      nodes, function(x) {
+        return sre.SemanticTree.attrPred_('type', 'FRACTION')(x) &&
+          sre.SemanticTree.attrPred_('role', 'VULGAR')(x);});
+  var result = [];
+  for(var i = 0, rel; rel = partition.rel[i]; i++) {
+    var comp = partition.comp[i];
+    var last = comp.length - 1;
+    if (comp[last] &&
+        sre.SemanticTree.attrPred_('type', 'NUMBER')(comp[last]) &&
+        sre.SemanticTree.attrPred_('role', 'INTEGER')(comp[last])) {
+      var newNode = this.makeBranchNode_(
+        sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
+      newNode.role = sre.SemanticAttr.Role.MIXED;
+      result = result.concat(comp.slice(0, last));
+      result.push(newNode);
+    } else {
+      result.concat(comp);
+      result.push(rel);
+    }
+  }
+  return result.concat(partition.comp[partition.comp.length - 1]);
+};
+
+
+/**
  * Seperates text from math content and combines them into a punctuated node,
  * with dummy punctuation invisible comma.
  * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
@@ -764,7 +798,7 @@ sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
       result.push(this.processRow_(nextComp));
     }
   }
-  var comma = this.makeTextNode_(sre.SemanticAttr.invisibleComma());
+  var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
   comma.role = sre.SemanticAttr.Role.DUMMY;
   return [this.makePunctuatedNode_(result, [comma])];
 };
@@ -1581,7 +1615,7 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticTree.integralDxBoundary_(firstNode, nodes[1])) {
-    var comma = this.makeTextNode_(sre.SemanticAttr.invisibleComma());
+    var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
     var intvar = this.makePunctuatedNode_(
         [firstNode, comma, nodes[1]], [comma]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
@@ -1600,7 +1634,7 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
  * @private
  */
 sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
-  var applNode = this.makeTextNode_(sre.SemanticAttr.functionApplication());
+  var applNode = this.makeContentNode_(sre.SemanticAttr.functionApplication());
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
@@ -2029,7 +2063,7 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
     var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
     var newChildren = [children.shift()];
     children.forEach(goog.bind(function(child) {
-      newChildren.push(this.makeTextNode_(separators()));
+      newChildren.push(this.makeContentNode_(separators()));
       newChildren.push(child);
     }, this));
     children = newChildren;
@@ -2041,15 +2075,15 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
   // interpreted as usual. The only effect of the mfence node here is that the
   // content will be interpreted into a single node.
   if (open && close) {
-    return this.makeHorizontalFencedNode_(this.makeTextNode_(open),
-                                          this.makeTextNode_(close),
+    return this.makeHorizontalFencedNode_(this.makeContentNode_(open),
+                                          this.makeContentNode_(close),
                                           children);
   }
   if (open) {
-    children.unshift(this.makeTextNode_(open));
+    children.unshift(this.makeContentNode_(open));
   }
   if (close) {
-    children.push(this.makeTextNode_(close));
+    children.push(this.makeContentNode_(close));
   }
   return this.processRow_(children);
 };

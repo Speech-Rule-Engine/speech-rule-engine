@@ -100,6 +100,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
   addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 };
 
 
@@ -122,6 +123,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'number', 'mathspeak.default', '[n] text()', 'self::number');
 
+  defineRule(
+      'mixed-number', 'mathspeak.default',
+      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ', 
+      'self::number', '@role="mixed"');
+  
   defineRule(
       'number-with-chars', 'mathspeak.default',
       '[t] "Number"; [m] CQFspaceoutNumber', 'self::number',
@@ -237,17 +243,17 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'vulgar-fraction', 'mathspeak.default',
       '[t] CSFvulgarFraction',
-      'self::fraction', '@role="vulgar"');
+      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
 
   defineRule(
       'vulgar-fraction', 'mathspeak.sbrief',
       '[t] CSFvulgarFraction',
-      'self::fraction', '@role="vulgar"');
+      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
 
   defineRule(
       'vulgar-fraction', 'mathspeak.brief',
       '[t] CSFvulgarFraction',
-      'self::fraction', '@role="vulgar"');
+      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
 
   // Limits
   
