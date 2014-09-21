@@ -169,6 +169,92 @@ sre.SemanticTreeTest.prototype.testStreeMixedNumbers = function() {
       '</number>'
   );
   this.brief = true;
+  this.executeTreeTest(
+      '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3</mn>',
+      '<infixop>\u2062' +
+          '<content><operator>\u2062</operator></content>' +
+      '<children>' +
+      '<fraction>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '<number>3</number>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<infixop>\u2062' +
+          '<content><operator>\u2062</operator></content>' +
+      '<children>' +
+      '<number>3.0</number>' +
+      '<fraction>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>',
+      '<infixop>\u2062' +
+          '<content><operator>\u2062</operator></content>' +
+      '<children>' +
+      '<fraction>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '<number>3.0</number>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>',
+      '<infixop>\u2062' +
+          '<content><operator>\u2062</operator></content>' +
+      '<children>' +
+      '<number>' +
+      '<children>' +
+      '<number>3</number>' +
+      '<fraction>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>',
+      '<infixop>\u2062' +
+          '<content><operator>\u2062</operator></content>' +
+      '<children>' +
+      '<identifier>b</identifier>' +
+      '<number>' +
+      '<children>' +
+      '<number>3</number>' +
+      '<fraction>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
 };
 
 

@@ -749,6 +749,9 @@ sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
       nodes, function(x) {
         return sre.SemanticTree.attrPred_('type', 'FRACTION')(x) &&
           sre.SemanticTree.attrPred_('role', 'VULGAR')(x);});
+  if (partition.rel.length === 0) {
+    return nodes;
+  }
   var result = [];
   for(var i = 0, rel; rel = partition.rel[i]; i++) {
     var comp = partition.comp[i];
@@ -762,7 +765,7 @@ sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
       result = result.concat(comp.slice(0, last));
       result.push(newNode);
     } else {
-      result.concat(comp);
+      result = result.concat(comp);
       result.push(rel);
     }
   }
