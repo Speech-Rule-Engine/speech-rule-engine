@@ -425,12 +425,14 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'square', 'default.default',
       '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:300)',
-      'self::superscript', 'children/*[2][text()=2]');
+      'self::superscript', 'children/*[2][text()=2]',
+      'name(./children/*[1])!="text"');
 
   defineRule(
       'cube', 'default.default',
       '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:300)',
-      'self::superscript', 'children/*[2][text()=3]');
+      'self::superscript', 'children/*[2][text()=3]',
+      'name(./children/*[1])!="text"');
 
   // TODO (sorge) This is probably unnecessary now!
   defineRule(

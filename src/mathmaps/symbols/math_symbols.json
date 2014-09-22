@@ -84,7 +84,7 @@
         "alternative": "apostrophe quote"
       },
       "mathspeak": {
-        "default": "apostrophe-quote"
+        "default": "prime"
       }
     },
     "key": "0027"

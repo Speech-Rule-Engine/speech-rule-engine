@@ -270,6 +270,18 @@ sre.MathspeakRuleTest.prototype.testSample_2_6_2 = function() {
 };
 
 
+sre.MathspeakRuleTest.prototype.testNegativeVsMinus = function() {
+  var mml = '<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>';
+  this.executeRuleTest(mml, 'minus StartFraction 1 Over b EndFraction',
+                       'default');
+  mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
+  this.executeRuleTest(mml, 'minus StartFraction a Over b EndFraction',
+                       'default');
+  mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mi>1</mi><mi>2</mi></mfrac></mrow>';
+  this.executeRuleTest(mml, 'negative 3 and one-half', 'default');
+};
+
+
 /**
  * Testing Rule 4.2, Example 1.
  */
@@ -659,6 +671,442 @@ sre.MathspeakRuleTest.prototype.untestSample_7_6_1 = function() {
 
 
 /**
+ * Testing Rule 8.1, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_1_1 = function() {
+  var mml = '<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn>' +
+      '<msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo>' +
+      '<mn>30</mn></mrow>';
+  this.executeRuleTest(mml, 'x cubed plus 6 x squared minus x equals 30',
+                       'default');
+  this.executeRuleTest(mml, 'x cubed plus 6 x squared minus x equals 30',
+                       'brief');
+  this.executeRuleTest(mml, 'x cubed plus 6 x squared minus x equals 30',
+                       'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.1, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_1_2 = function() {
+  var mml = '<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi>' +
+      '</mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
+      '</mfrac><mo>+</mo><mfenced separators="" open="(" close=")">' +
+      '<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi>' +
+      '<mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo>' +
+      '<mn>0</mn></mrow>';
+  this.executeRuleTest(mml, 'StartFraction d squared y Over d x squared' +
+                       ' EndFraction plus left-parenthesis a x squared plus' +
+                       ' b x plus c right-parenthesis y equals 0', 'default');
+  this.executeRuleTest(mml, 'StartFrac d squared y Over d x squared EndFrac' +
+                       ' plus left-pren a x squared plus b x plus c' +
+                       ' right-pren y equals 0', 'brief');
+  this.executeRuleTest(mml, 'Frac d squared y Over d x squared EndFrac plus' +
+                       ' L pren a x squared plus b x plus c R pren y' +
+                       ' equals 0', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.2, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_2_1 = function() {
+  var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
+  this.executeRuleTest(mml, 'x Superscript one-half', 'default');
+  this.executeRuleTest(mml, 'x Sup one-half', 'brief');
+  this.executeRuleTest(mml, 'x Sup one-half', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.2, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_2_2 = function() {
+  var mml = '<msub><mi>x</mi><mi>n</mi></msub>';
+  this.executeRuleTest(mml, 'x Subscript n', 'default');
+  this.executeRuleTest(mml, 'x Sub n', 'brief');
+  this.executeRuleTest(mml, 'x Sub n', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.2, Example 3.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_2_3 = function() {
+  var mml = '<msup><mi>x</mi><mi>a</mi></msup>';
+  this.executeRuleTest(mml, 'x Superscript a', 'default');
+  this.executeRuleTest(mml, 'x Sup a', 'brief');
+  this.executeRuleTest(mml, 'x Sup a', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.3, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_3_1 = function() {
+  var mml = '<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow>' +
+      '</msup>';
+  this.executeRuleTest(mml, 'x Superscript m plus n', 'default');
+  this.executeRuleTest(mml, 'x Sup m plus n', 'brief');
+  this.executeRuleTest(mml, 'x Sup m plus n', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.3, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_3_2 = function() {
+  var mml = '<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
+      '</mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>';
+  this.executeRuleTest(mml, 'upper T Subscript n minus 1 Baseline plus 5' +
+                       ' equals 0', 'default');
+  this.executeRuleTest(mml, 'upper T Sub n minus 1 Base plus 5 equals 0',
+                       'brief');
+  this.executeRuleTest(mml, 'upper T Sub n minus 1 Base plus 5 equals 0',
+                       'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.3, Example 3.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_3_3 = function() {
+  var mml = '<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi>' +
+      '</mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup>' +
+      '<mi>x</mi><mi>n</mi></msup></mrow>';
+  this.executeRuleTest(mml, 'x Superscript m plus n Baseline equals x' +
+                       ' Superscript m Baseline x Superscript n', 'default');
+  this.executeRuleTest(mml, 'x Sup m plus n Base equals x Sup m Base x Sup n',
+                       'brief');
+  this.executeRuleTest(mml, 'x Sup m plus n Base equals x Sup m Base x Sup n',
+                       'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_1 = function() {
+  var mml = '<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub>' +
+      '<mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
+      '</mrow></msub></mrow></msup>';
+  this.executeRuleTest(mml, 'x Superscript a Super Subscript n Superscript' +
+                       ' plus a Super Subscript n minus 1', 'default');
+  this.executeRuleTest(mml, 'x Sup a Sup Sub n Sup plus a Sup Sub n minus' +
+                       ' 1', 'brief');
+  this.executeRuleTest(mml, 'x Sup a Sup Sub n Sup plus a Sup Sub n minus' +
+                       ' 1', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_2 = function() {
+  var mml = '<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>';
+  this.executeRuleTest(mml, 'x Superscript a Super Subscript b', 'default');
+  this.executeRuleTest(mml, 'x Sup a Sup Sub b', 'brief');
+  this.executeRuleTest(mml, 'x Sup a Sup Sub b', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 3.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_3 = function() {
+  var mml = '<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>';
+  this.executeRuleTest(mml, 'x Subscript a Sub Superscript b', 'default');
+  this.executeRuleTest(mml, 'x Sub a Sub Sup b', 'brief');
+  this.executeRuleTest(mml, 'x Sub a Sub Sup b', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 4.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_4 = function() {
+  var mml = '<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi>' +
+      '<mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow>' +
+      '<msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>';
+  this.executeRuleTest(mml, 'y Superscript a Super Superscript b Super Super' +
+                       ' Subscript c Baseline not-equals y Superscript a' +
+                       ' Super Superscript b Superscript c', 'default');
+  this.executeRuleTest(mml, 'y Sup a Sup Sup b Sup Sup Sub c Base not-equals' +
+                       ' y Sup a Sup Sup b Sup c', 'brief');
+  this.executeRuleTest(mml, 'y Sup a Sup Sup b Sup Sup Sub c Base not-equals' +
+                       ' y Sup a Sup Sup b Sup c', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 5.
+ */
+sre.MathspeakRuleTest.prototype.untestSample_8_4_5 = function() {
+  var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
+      '</msub><mi>b</mi></mrow></msup></msup>';
+  this.executeRuleTest(mml, 'y Superscript a Super Super Subscript c Super' +
+                       ' Superscript b', 'default');
+  this.executeRuleTest(mml, 'y Sup a Sup Sup Sub c Sup Sup b', 'brief');
+  this.executeRuleTest(mml, 'y Sup a Sup Sup Sub c Sup Sup b', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 6.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_6 = function() {
+  var mml = '<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>';
+  this.executeRuleTest(mml, 'x Superscript a Super Superscript b', 'default');
+  this.executeRuleTest(mml, 'x Sup a Sup Sup b', 'brief');
+  this.executeRuleTest(mml, 'x Sup a Sup Sup b', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 7.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_7 = function() {
+  var mml = '<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>';
+  this.executeRuleTest(mml, 'x Subscript a Sub Subscript b', 'default');
+  this.executeRuleTest(mml, 'x Sub a Sub Sub b', 'brief');
+  this.executeRuleTest(mml, 'x Sub a Sub Sub b', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 8.
+ */
+sre.MathspeakRuleTest.prototype.untestSample_8_4_8 = function() {
+  var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
+      '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
+      '<mi>b</mi></msup></mfenced></msup>';
+  this.executeRuleTest(mml, 'upper T Superscript left-parenthesis x Super' +
+                       ' Superscript a Superscript plus y Super Superscript' +
+                       ' b Superscript right-parenthesis', 'default');
+  this.executeRuleTest(mml, 'upper T Sup left-pren x Sup Sup a Sup plus y' +
+                       ' Sup Sup b Sup right-pren', 'brief');
+  this.executeRuleTest(mml, 'upper T Sup L pren x Sup Sup a Sup plus y Sup' +
+                       ' Sup b Sup R pren', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_1 = function() {
+  var mml = '<msub><mi>x</mi><mn>1</mn></msub>';
+  this.executeRuleTest(mml, 'x 1', 'default');
+  this.executeRuleTest(mml, 'x 1', 'brief');
+  this.executeRuleTest(mml, 'x 1', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_2 = function() {
+  var mml = '<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>';
+  this.executeRuleTest(mml, 'x Subscript negative 1', 'default');
+  this.executeRuleTest(mml, 'x Sub negative 1', 'brief');
+  this.executeRuleTest(mml, 'x Sub negative 1', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 3.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_3 = function() {
+  var mml = '<msub><mi>x</mi><mrow><mn>10,000</mn></mrow>' +
+      '</msub>';
+  this.executeRuleTest(mml, 'x 10,000', 'default');
+  this.executeRuleTest(mml, 'x 10,000', 'brief');
+  this.executeRuleTest(mml, 'x 10,000', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 4.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_4 = function() {
+  var mml = '<msub><mi>x</mi><mrow><mn>1.3</mn></mrow>' +
+      '</msub>';
+  this.executeRuleTest(mml, 'x 1.3', 'default');
+  this.executeRuleTest(mml, 'x 1.3', 'brief');
+  this.executeRuleTest(mml, 'x 1.3', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 5.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_5 = function() {
+  var mml = '<mrow><mn>4</mn><mi>F</mi><mi>e</mi><mo>+</mo><mn>3</mn><msub>' +
+      '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><mi>F</mi><msub>' +
+      '<mi>e</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
+  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +
+                       ' upper F e 2 upper O 3', 'default');
+  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +
+                       ' upper F e 2 upper O 3', 'brief');
+  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 r arrow 2 upper F' +
+                       ' e 2 upper O 3', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 6.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_6 = function() {
+  var mml = '<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow>' +
+      '</msub>';
+  this.executeRuleTest(mml, 'a Subscript 2 comma 3', 'default');
+  this.executeRuleTest(mml, 'a Sub 2 comma 3', 'brief');
+  this.executeRuleTest(mml, 'a Sub 2 comma 3', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 7.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_7 = function() {
+  var mml = '<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub>' +
+      '<mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>';
+  this.executeRuleTest(mml, 'upper T Subscript n 1 plus n 0', 'default');
+  this.executeRuleTest(mml, 'upper T Sub n 1 plus n 0', 'brief');
+  this.executeRuleTest(mml, 'upper T Sub n 1 plus n 0', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 8.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_8 = function() {
+  var mml = '<mrow><msub><mo form="prefix">log</mo><mn>2</mn></msub>' +
+      '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow>' +
+      '<msub><mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
+      '<mi>x</mi><mo>)</mo></mrow></mrow><mrow><msub>' +
+      '<mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
+      '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
+  this.executeRuleTest(mml, 'log Subscript 2 Baseline left-parenthesis x' +
+                       ' right-parenthesis equals StartFraction log' +
+                       ' Subscript 10 Baseline left-parenthesis x' +
+                       ' right-parenthesis Over log Subscript 10 Baseline' +
+                       ' left-parenthesis 2 right-parenthesis EndFraction',
+                       'default');
+  this.executeRuleTest(mml, 'log Sub 2 Base left-pren x right-pren equals' +
+                       ' StartFrac log Sub 10 Base left-pren x right-pren' +
+                       ' Over log Sub 10 Base left-pren 2 right-pren' +
+                       ' EndFrac', 'brief');
+  this.executeRuleTest(mml, 'log Sub 2 Base L pren x R pren equals Frac' +
+                       ' log Sub 10 Base L pren x R pren Over log Sub 10' +
+                       ' Base L pren 2 R pren EndFrac', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 9.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_9 = function() {
+  var mml = '<msub><mi>Φ</mi><mn>5</mn></msub>';
+  this.executeRuleTest(mml, 'upper Phi 5', 'default');
+  this.executeRuleTest(mml, 'upper Phi 5', 'brief');
+  this.executeRuleTest(mml, 'upper Phi 5', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.5, Example 10.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_5_10 = function() {
+  var mml = '<mrow><mo form="prefix">ln</mo><mi>x</mi><mo>=</mo><msubsup>' +
+      '<mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi>' +
+      '<mi>t</mi></mrow><mi>t</mi></mfrac></mrow>';
+  this.executeRuleTest(mml, 'ln x equals integral Subscript 1 Superscript x' +
+                       ' Baseline StartFraction d t Over t EndFraction',
+                       'default');
+  this.executeRuleTest(mml, 'ln x equals integral Sub 1 Sup x Base' +
+                       ' StartFrac d t Over t EndFrac', 'brief');
+  this.executeRuleTest(mml, 'ln x equals integral Sub 1 Sup x Base Frac d t' +
+                       ' Over t EndFrac', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.6, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_6_1 = function() {
+  var mml = '<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn>' +
+      '<mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>';
+  this.executeRuleTest(mml, 'dollar-sign n Baseline 2 equals 2 asterisk' +
+                       ' dollar-sign n plus 1 semicolon', 'default');
+  this.executeRuleTest(mml, 'dollar-sign n Base 2 equals 2 asterisk' +
+                       ' dollar-sign n plus 1 semicolon', 'brief');
+  this.executeRuleTest(mml, 'dollar-sign n Base 2 equals 2 asterisk' +
+                       ' dollar-sign n plus 1 semicolon', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.8, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.untestSample_8_8_1 = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow>' +
+      '<mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi>' +
+      '<mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript c d Superscript a b Baseline x' +
+                       ' Subscript e f Superscript g h', 'default');
+  this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'brief');
+  this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.8, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_8_2 = function() {
+  var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
+      '<mn>2</mn></msubsup>';
+  this.executeRuleTest(mml, 'upper T Subscript n minus 1 Superscript 2',
+                       'default');
+  this.executeRuleTest(mml, 'upper T Sub n minus 1 Sup 2', 'brief');
+  this.executeRuleTest(mml, 'upper T Sub n minus 1 Sup 2', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.9, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_9_1 = function() {
+  var mml = '<msup><mi>x</mi><mo>\'</mo></msup>';
+  this.executeRuleTest(mml, 'x prime', 'default');
+  this.executeRuleTest(mml, 'x prime', 'brief');
+  this.executeRuleTest(mml, 'x prime', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.9, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.untestSample_8_9_2 = function() {
+  var mml = '<mrow><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo><mo>\'</mo>' +
+      '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo>' +
+      '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
+      '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
+      '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
+  this.executeRuleTest(mml, 'f triple-prime left-parenthesis y' +
+                       ' right-parenthesis equals StartFraction d f' +
+                       ' double-prime left-parenthesis y right-parenthesis' +
+                       ' Over d y EndFraction', 'default');
+  this.executeRuleTest(mml, 'f triple-prime left-pren y right-pren equals' +
+                       ' StartFrac d f double-prime left-pren y right-pren' +
+                       ' Over d y EndFrac', 'brief');
+  this.executeRuleTest(mml, 'f triple-prime L pren y R pren equals Frac d' +
+                       ' f double-prime L pren y R pren Over d y EndFrac',
+                       'sbrief');
+};
+
+
+/**
  * Testing Rule 8.10, Example 1.
  */
 sre.MathspeakRuleTest.prototype.untestSample_8_10_1 = function() {
@@ -724,22 +1172,6 @@ sre.MathspeakRuleTest.prototype.untestSample_8_11_1 = function() {
 
 
 /**
- * Testing Rule 8.1, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_1_1 = function() {
-  var mml = '<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn>' +
-      '<msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo>' +
-      '<mn>30</mn></mrow>';
-  this.executeRuleTest(mml, 'x cubed plus 6 x squared minus x equals 30',
-                       'default');
-  this.executeRuleTest(mml, 'x cubed plus 6 x squared minus x equals 30',
-                       'brief');
-  this.executeRuleTest(mml, 'x cubed plus 6 x squared minus x equals 30',
-                       'sbrief');
-};
-
-
-/**
  * Testing Rule 8.12, Example 1.
  */
 sre.MathspeakRuleTest.prototype.untestSample_8_12_1 = function() {
@@ -764,37 +1196,15 @@ sre.MathspeakRuleTest.prototype.untestSample_8_12_2 = function() {
 
 
 /**
- * Testing Rule 8.1, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_1_2 = function() {
-  var mml = '<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi>' +
-      '</mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
-      '</mfrac><mo>+</mo><mfenced separators="" open="(" close=")">' +
-      '<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi>' +
-      '<mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo>' +
-      '<mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'StartFraction d squared y Over d x squared' +
-                       ' EndFraction plus left-parenthesis a x squared plus' +
-                       ' b x plus c right-parenthesis y equals 0', 'default');
-  this.executeRuleTest(mml, 'StartFrac d squared y Over d x squared EndFrac' +
-                       ' plus left-pren a x squared plus b x plus c' +
-                       ' right-pren y equals 0', 'brief');
-  this.executeRuleTest(mml, 'Frac d squared y Over d x squared EndFrac plus' +
-                       ' L pren a x squared plus b x plus c R pren y' +
-                       ' equals 0', 'sbrief');
-};
-
-
-/**
  * Testing Rule 8.13, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_13_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><msup>' +
       '<mrow/><mi>b</mi></msup><mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'log Superscript 4 Superscript b Baseline x',
                        'default');
-  this.executeRuleTest(mml, 'log sup 4 sup b Base x', 'brief');
-  this.executeRuleTest(mml, 'log sup 4 sup b Base x', 'sbrief');
+  this.executeRuleTest(mml, 'log Sup 4 Sup b Base x', 'brief');
+  this.executeRuleTest(mml, 'log Sup 4 Sup b Base x', 'sbrief');
 };
 
 
@@ -808,404 +1218,6 @@ sre.MathspeakRuleTest.prototype.untestSample_8_13_2 = function() {
                        'default');
   this.executeRuleTest(mml, 'upper t Sub n Sub a Base y', 'brief');
   this.executeRuleTest(mml, 'upper t Sub n Sub a Base y', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.2, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_2_1 = function() {
-  var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
-  this.executeRuleTest(mml, 'x Superscript one-half', 'default');
-  this.executeRuleTest(mml, 'x sup one-half', 'brief');
-  this.executeRuleTest(mml, 'x sup one-half', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.2, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_2_2 = function() {
-  var mml = '<msub><mi>x</mi><mi>n</mi></msub>';
-  this.executeRuleTest(mml, 'x Subscript n', 'default');
-  this.executeRuleTest(mml, 'x Sub n', 'brief');
-  this.executeRuleTest(mml, 'x Sub n', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.2, Example 3.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_2_3 = function() {
-  var mml = '<msup><mi>x</mi><mi>a</mi></msup>';
-  this.executeRuleTest(mml, 'x Superscript a', 'default');
-  this.executeRuleTest(mml, 'x sup a', 'brief');
-  this.executeRuleTest(mml, 'x sup a', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.3, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_3_1 = function() {
-  var mml = '<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow>' +
-      '</msup>';
-  this.executeRuleTest(mml, 'x Superscript m plus n', 'default');
-  this.executeRuleTest(mml, 'x sup m plus n', 'brief');
-  this.executeRuleTest(mml, 'x sup m plus n', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.3, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_3_2 = function() {
-  var mml = '<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
-      '</mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'upper t Subscript n minus 1 Baseline plus 5' +
-                       ' equals 0', 'default');
-  this.executeRuleTest(mml, 'upper t Sub n minus 1 Base plus 5 equals 0',
-                       'brief');
-  this.executeRuleTest(mml, 'upper t Sub n minus 1 Base plus 5 equals 0',
-                       'sbrief');
-};
-
-
-/**
- * Testing Rule 8.3, Example 3.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_3_3 = function() {
-  var mml = '<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi>' +
-      '</mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup>' +
-      '<mi>x</mi><mi>n</mi></msup></mrow>';
-  this.executeRuleTest(mml, 'x Superscript m plus n Baseline equals x' +
-                       ' Superscript m Baseline x Superscript n', 'default');
-  this.executeRuleTest(mml, 'x sup m plus n Base equals x sup m Base x sup n',
-                       'brief');
-  this.executeRuleTest(mml, 'x sup m plus n Base equals x sup m Base x sup n',
-                       'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_1 = function() {
-  var mml = '<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub>' +
-      '<mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
-      '</mrow></msub></mrow></msup>';
-  this.executeRuleTest(mml, 'x Superscript a Super Subscript n Superscript' +
-                       ' plus a Super Subscript n minus 1', 'default');
-  this.executeRuleTest(mml, 'x sup a sup Sub n sup plus a sup Sub n minus' +
-                       ' 1', 'brief');
-  this.executeRuleTest(mml, 'x sup a sup Sub n sup plus a sup Sub n minus' +
-                       ' 1', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_2 = function() {
-  var mml = '<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>';
-  this.executeRuleTest(mml, 'x Superscript a Super Subscript b', 'default');
-  this.executeRuleTest(mml, 'x sup a sup Sub b', 'brief');
-  this.executeRuleTest(mml, 'x sup a sup Sub b', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 3.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_3 = function() {
-  var mml = '<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>';
-  this.executeRuleTest(mml, 'x Subscript a Sub Superscript b', 'default');
-  this.executeRuleTest(mml, 'x Sub a Sub sup b', 'brief');
-  this.executeRuleTest(mml, 'x Sub a Sub sup b', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 4.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_4 = function() {
-  var mml = '<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi>' +
-      '<mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow>' +
-      '<msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'y Superscript a Super Superscript b Super super' +
-                       ' Subscript c Baseline not-equals y Superscript a' +
-                       ' Super Superscript b Superscript c', 'default');
-  this.executeRuleTest(mml, 'y sup a sup sup b sup sup Sub c Base not-equals' +
-                       ' y sup a sup sup b sup c', 'brief');
-  this.executeRuleTest(mml, 'y sup a sup sup b sup sup Sub c Base not-equals' +
-                       ' y sup a sup sup b sup c', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 5.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_5 = function() {
-  var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
-      '</msub><mi>b</mi></mrow></msup></msup>';
-  this.executeRuleTest(mml, 'y Superscript a Super super Subscript c super' +
-                       ' Superscript b', 'default');
-  this.executeRuleTest(mml, 'y sup a sup sup Sub c sup sup b', 'brief');
-  this.executeRuleTest(mml, 'y sup a sup sup Sub c sup sup b', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 6.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_6 = function() {
-  var mml = '<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>';
-  this.executeRuleTest(mml, 'x Superscript a Super Superscript b', 'default');
-  this.executeRuleTest(mml, 'x sup a sup sup b', 'brief');
-  this.executeRuleTest(mml, 'x sup a sup sup b', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 7.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_7 = function() {
-  var mml = '<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>';
-  this.executeRuleTest(mml, 'x Subscript a Sub Subscript b', 'default');
-  this.executeRuleTest(mml, 'x Sub a Sub sub b', 'brief');
-  this.executeRuleTest(mml, 'x Sub a Sub sub b', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.4, Example 8.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_8 = function() {
-  var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
-      '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
-      '<mi>b</mi></msup></mfenced></msup>';
-  this.executeRuleTest(mml, 'upper t Superscript left-parenthesis x super' +
-                       ' Superscript a Superscript plus y Super Superscript' +
-                       ' b Superscript right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'upper t sup left-pren x sup sup a sup plus y' +
-                       ' sup sup b sup right-pren', 'brief');
-  this.executeRuleTest(mml, 'upper t sup L pren x sup sup a sup plus y sup' +
-                       ' sup b sup R pren', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 10.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_10 = function() {
-  var mml = '<mrow><mo form="prefix">ln</mo><mi>x</mi><mo>=</mo><msubsup>' +
-      '<mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi>' +
-      '<mi>t</mi></mrow><mi>t</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'l n x equals integral Subscript 1 Superscript x' +
-                       ' Baseline StartFraction d t Over t EndFraction',
-                       'default');
-  this.executeRuleTest(mml, 'l n x equals integral Sub 1 sup x base' +
-                       ' StartFrac d t Over t EndFrac', 'brief');
-  this.executeRuleTest(mml, 'l n x equals integral Sub 1 sup x Base Frac d t' +
-                       ' Over t EndFrac', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_1 = function() {
-  var mml = '<msub><mi>x</mi><mn>1</mn></msub>';
-  this.executeRuleTest(mml, 'x 1', 'default');
-  this.executeRuleTest(mml, 'x 1', 'brief');
-  this.executeRuleTest(mml, 'x 1', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_2 = function() {
-  var mml = '<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>';
-  this.executeRuleTest(mml, 'x Subscript negative 1', 'default');
-  this.executeRuleTest(mml, 'x Sub negative 1', 'brief');
-  this.executeRuleTest(mml, 'x Sub negative 1', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 3.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_3 = function() {
-  var mml = '<msub><mi>x</mi><mrow><mn>10</mn><mo>,</mo><mn>000</mn></mrow>' +
-      '</msub>';
-  this.executeRuleTest(mml, 'x 10,000', 'default');
-  this.executeRuleTest(mml, 'x 10,000', 'brief');
-  this.executeRuleTest(mml, 'x 10,000', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 4.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_4 = function() {
-  var mml = '<msub><mi>x</mi><mrow><mn>1</mn><mo>.</mo><mn>3</mn></mrow>' +
-      '</msub>';
-  this.executeRuleTest(mml, 'x 1.3', 'default');
-  this.executeRuleTest(mml, 'x 1.3', 'brief');
-  this.executeRuleTest(mml, 'x 1.3', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 5.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_5 = function() {
-  var mml = '<mrow><mn>4</mn><mi>F</mi><mi>e</mi><mo>+</mo><mn>3</mn><msub>' +
-      '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><mi>F</mi><msub>' +
-      '<mi>e</mi><mn>2</mn></msub><msub><mn>0</mn><mn>3</mn></msub></mrow>';
-  this.executeRuleTest(mml, '4 upper f e plus 3 upper o 2 right-arrow 2' +
-                       ' upper f e 2 upper o 3', 'default');
-  this.executeRuleTest(mml, '4 upper f e plus 3 upper o 2 right-arrow 2' +
-                       ' upper f e 2 upper o 3', 'brief');
-  this.executeRuleTest(mml, '4 upper f e plus 3 upper o 2 r arrow 2 upper f' +
-                       ' e 2 upper o 3', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 6.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_6 = function() {
-  var mml = '<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow>' +
-      '</msub>';
-  this.executeRuleTest(mml, 'a Subscript 2 comma 3', 'default');
-  this.executeRuleTest(mml, 'a Sub 2 comma 3', 'brief');
-  this.executeRuleTest(mml, 'a Sub 2 comma 3', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 7.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_7 = function() {
-  var mml = '<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub>' +
-      '<mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>';
-  this.executeRuleTest(mml, 'upper t Subscript n 1 plus n 0', 'default');
-  this.executeRuleTest(mml, 'upper t Sub n 1 plus n 0', 'brief');
-  this.executeRuleTest(mml, 'upper t Sub n 1 plus n 0', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 8.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_8 = function() {
-  var mml = '<mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub>' +
-      '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow>' +
-      '<msub><mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
-      '<mi>X</mi><mo>)</mo></mrow></mrow><mrow><msub>' +
-      '<mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
-      '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'log Subscript 2 Baseline left-parenthesis x' +
-                       ' right-parenthesis equals StartFraction log' +
-                       ' Subscript 10 Baseline left-parenthesis x' +
-                       ' right-parenthesis Over log Subscript 10 Baseline' +
-                       ' left-parenthesis 2 right-parenthesis EndFraction',
-                       'default');
-  this.executeRuleTest(mml, 'log Sub 2 Base left-pren x right-pren equals' +
-                       ' StartFrac log Sub 10 Base left-pren x right-pren' +
-                       ' Over log Sub 10 Base left-pren 2 right-pren' +
-                       ' EndFrac', 'brief');
-  this.executeRuleTest(mml, 'log Sub 2 Base L pren x R pren equals Frac' +
-                       ' log Sub 10 Base L pren x R pren Over log Sub 10' +
-                       ' Base L pren 2 R pren EndFrac', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.5, Example 9.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_5_9 = function() {
-  var mml = '<msub><mi>Φ</mi><mn>5</mn></msub>';
-  this.executeRuleTest(mml, 'upper phi 5', 'default');
-  this.executeRuleTest(mml, 'upper phi 5', 'brief');
-  this.executeRuleTest(mml, 'upper phi 5', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.6, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_6_1 = function() {
-  var mml = '<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn>' +
-      '<mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>';
-  this.executeRuleTest(mml, 'dollar-sign n Baseline 2 equals 2 asterisk' +
-                       ' dollar-sign n plus 1 semicolon', 'default');
-  this.executeRuleTest(mml, 'dollar-sign n Base 2 equals 2 asterisk' +
-                       ' dollar-sign n plus 1 semicolon', 'brief');
-  this.executeRuleTest(mml, 'dollar-sign n Base 2 equals 2 asterisk' +
-                       ' dollar-sign n plus 1 semicolon', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.8, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_8_1 = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow>' +
-      '<mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi>' +
-      '<mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript c d Superscript a b Baseline x' +
-                       ' Subscript e f Superscript g h', 'default');
-  this.executeRuleTest(mml, 'sub c d sup a b Base x Sub e f sup g h', 'brief');
-  this.executeRuleTest(mml, 'sub c d sup a b Base x Sub e f sup g h', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.8, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_8_2 = function() {
-  var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
-      '<mn>2</mn></msubsup>';
-  this.executeRuleTest(mml, 'upper t Subscript n minus 1 Superscript 2',
-                       'default');
-  this.executeRuleTest(mml, 'upper t Sub n minus 1 sup 2', 'brief');
-  this.executeRuleTest(mml, 'upper t Sub n minus 1 sup 2', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.9, Example 1.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_9_1 = function() {
-  var mml = '<msup><mi>x</mi><mo>\'</mo></msup>';
-  this.executeRuleTest(mml, 'x prime', 'default');
-  this.executeRuleTest(mml, 'x prime', 'brief');
-  this.executeRuleTest(mml, 'x prime', 'sbrief');
-};
-
-
-/**
- * Testing Rule 8.9, Example 2.
- */
-sre.MathspeakRuleTest.prototype.untestSample_8_9_2 = function() {
-  var mml = '<mrow><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo><mo>\'</mo>' +
-      '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo>' +
-      '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
-      '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
-      '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'f triple-prime left-parenthesis y' +
-                       ' right-parenthesis equals StartFraction d f' +
-                       ' double-prime left-parenthesis y right-parenthesis' +
-                       ' Over d y EndFraction', 'default');
-  this.executeRuleTest(mml, 'f triple-prime left-pren y right-pren equals' +
-                       ' StartFrac d f double-prime left-pren y right-pren' +
-                       ' Over d y EndFrac', 'brief');
-  this.executeRuleTest(mml, 'f triple-prime L pren y R pren equals Frac d' +
-                       ' f double-prime L pren y R pren Over d y EndFrac',
-                       'sbrief');
 };
 
 
@@ -1260,13 +1272,13 @@ sre.MathspeakRuleTest.prototype.untestSample_9_2_2 = function() {
                        ' Baseline equals x Superscript StartFraction m Over' +
                        ' n EndFraction Baseline comma x greater-than 0',
                        'default');
-  this.executeRuleTest(mml, 'Rootindex n StartRoot x sup m Base EndRoot' +
+  this.executeRuleTest(mml, 'Rootindex n StartRoot x Sup m Base EndRoot' +
                        ' equals left-pren Rootindex n StartRoot x EndRoot' +
-                       ' right-pren sup m Base equals x sup StartFrac m' +
+                       ' right-pren Sup m Base equals x Sup StartFrac m' +
                        ' Over n EndFrac Base comma x greater-than 0', 'brief');
-  this.executeRuleTest(mml, 'index n Root x sup m Base EndRoot equals L' +
-                       ' pren index n Root x EndRoot R pren sup m base' +
-                       ' equals x sup Frac m Over n EndFrac Base comma x' +
+  this.executeRuleTest(mml, 'index n Root x Sup m Base EndRoot equals L' +
+                       ' pren index n Root x EndRoot R pren Sup m base' +
+                       ' equals x Sup Frac m Over n EndFrac Base comma x' +
                        ' greater-than 0', 'sbrief');
 };
 
@@ -1281,7 +1293,7 @@ sre.MathspeakRuleTest.prototype.untestSample_9_2_3 = function() {
                        ' Superscript one-third', 'default');
   this.executeRuleTest(mml, 'Rootindex 3 StartRoot x EndRoot equals x sup' +
                        ' one-third', 'brief');
-  this.executeRuleTest(mml, 'index 3 Root x EndRoot equals x sup one-third',
+  this.executeRuleTest(mml, 'index 3 Root x EndRoot equals x Sup one-third',
                        'sbrief');
 };
 
@@ -1339,18 +1351,18 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_3 = function() {
                        ' NestedStartRoot x Rootindex 5 StartRoot x ellipsis' +
                        ' EndRoot NestedEndRoot NestedtwiceEndRoot' +
                        ' Nested3EndRoot comma x element-of double-struck' +
-                       ' upper r', 'default');
-  this.executeRuleTest(mml, 'x sup e minus 2 Base equals Nest3StartRoot x' +
+                       ' upper R', 'default');
+  this.executeRuleTest(mml, 'x Sup e minus 2 Base equals Nest3StartRoot x' +
                        ' NestTwiceRootindex 3 NestTwiceStartRoot x' +
                        ' NestRootindex 4 NestStartRoot x Rootindex 5' +
                        ' StartRoot x ellipsis EndRoot NestEndRoot' +
                        ' NestTwiceEndRoot Nest3EndRoot comma x element-of' +
-                       ' double-struck upper r', 'brief');
-  this.executeRuleTest(mml, 'x sup e minus 2 Base equals Nest3Root x' +
+                       ' double-struck upper R', 'brief');
+  this.executeRuleTest(mml, 'x Sup e minus 2 Base equals Nest3Root x' +
                        ' NestTwiceindex 3 NestTwiceRoot x Nestindex 4' +
                        ' NestRoot x index 5 Root x ellipsis EndRoot' +
                        ' NestEndRoot NestTwiceEndRoot Nest3EndRoot comma x' +
-                       ' element-of double-struck upper r', 'sbrief');
+                       ' element-of double-struck upper R', 'sbrief');
 };
 
 
@@ -1589,7 +1601,7 @@ sre.MathspeakRuleTest.prototype.untestSample_11_6_3 = function() {
 /**
  * Testing Rule 11.7, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_11_7_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_11_7_1 = function() {
   var mml = '<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi>' +
       '</msub></mrow>';
@@ -1741,9 +1753,9 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
                        ' dot seconds Superscript minus 2', 'default');
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
-                       ' dot seconds sup minus 2', 'brief');
+                       ' dot seconds Sup minus 2', 'brief');
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
-                       ' dot seconds sup minus 2', 'sbrief');
+                       ' dot seconds Sup minus 2', 'sbrief');
 };
 
 
@@ -1788,21 +1800,21 @@ sre.MathspeakRuleTest.prototype.untestSample_14_1_1 = function() {
       '<mtext>flourine</mtext></mtd><mtd/><mtd><mrow>' +
       '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
       '<mtext>flouride</mtext></mrow></mtd></mtr></mtable>';
-  this.executeRuleTest(mml, 'Startlayout 1st Row  1st Column upper h 2 2nd' +
-                       ' Column plus 3rd Column upper f 2 4th Column' +
-                       ' right-arrow 5th Column 2 upper h upper f 2nd row' +
+  this.executeRuleTest(mml, 'Startlayout 1st Row  1st Column upper H 2 2nd' +
+                       ' Column plus 3rd Column upper F 2 4th Column' +
+                       ' right-arrow 5th Column 2 upper H upper F 2nd row' +
                        ' 1st Column hydrogen 2nd Column blank 3rd Column' +
                        ' flourine 4th Column blank 5th Column hydrogen' +
                        ' fluoride Endlayout', 'default');
-  this.executeRuleTest(mml, 'Startlayout 1st Row 1st Column upper h 2 2nd' +
-                       ' Column plus 3rd Column upper f 2 4th Column' +
-                       ' right-arrow 5th Column 2 upper h upper f 2nd row' +
+  this.executeRuleTest(mml, 'Startlayout 1st Row 1st Column upper H 2 2nd' +
+                       ' Column plus 3rd Column upper F 2 4th Column' +
+                       ' right-arrow 5th Column 2 upper H upper F 2nd row' +
                        ' 1st Column hydrogen 2nd Column blank 3rd Column' +
                        ' flourine 4th Column blank 5th Column hydrogen' +
                        ' fluoride Endlayout', 'brief');
-  this.executeRuleTest(mml, 'layout 1st Row 1st Column upper h 2 2nd Column' +
-                       ' plus 3rd Column upper f 2 4th Column r arrow 5th' +
-                       ' Column 2 upper h upper f 2nd Row 1st Column' +
+  this.executeRuleTest(mml, 'layout 1st Row 1st Column upper H 2 2nd Column' +
+                       ' plus 3rd Column upper F 2 4th Column r arrow 5th' +
+                       ' Column 2 upper H upper F 2nd Row 1st Column' +
                        ' hydrogen 2nd Column blank 3rd Column flourine 4th' +
                        ' Column blank 5th Column hydrogen fluoride' +
                        ' Endlayout', 'sbrief');

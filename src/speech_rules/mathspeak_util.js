@@ -504,3 +504,97 @@ sre.MathspeakUtil.vulgarFractionSmall = function(node) {
 sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
   return sre.MathspeakUtil.vulgarFractionSmall(node) ? [node] : [];
 };
+
+
+/**
+ * Computes prefix for sub and superscript nodes.
+ * @param {!Node} node Subscript node.
+ * @param {string} init Initial prefix string.
+ * @param {{sup: string, sub: string}} replace Prefix strings for sub and
+ *     superscript.
+ * @return {string} The complete prefix string.
+ */
+sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
+  while (node.parentNode) {
+    node = node.parentNode;
+    if (node.tagName === sre.SemanticAttr.Type.SUBSCRIPT) {
+      init = replace.sub + ' ' + init;
+    }
+    if (node.tagName === sre.SemanticAttr.Type.SUPERSCRIPT) {
+      init = replace.sup + ' ' + init;
+    }
+  }
+  return init.trim();
+};
+
+
+/**
+ * Computes subscript prefix in verbose mode.
+ * @param {!Node} node Subscript node.
+ * @return {!string} The prefix string.
+ */
+sre.MathspeakUtil.subscriptVerbose = function(node) {
+  return sre.MathspeakUtil.nestedSubSuper(
+    node, 'Subscript', {sup: 'Super', sub: 'Sub'});
+};
+
+
+/**
+ * Computes subscript prefix in brief mode.
+ * @param {!Node} node Subscript node.
+ * @return {!string} The prefix string.
+ */
+sre.MathspeakUtil.subscriptBrief = function(node) {
+  return sre.MathspeakUtil.nestedSubSuper(
+    node, 'Sub', {sup: 'Sup', sub: 'Sub'});
+};
+
+
+/**
+ * Computes subscript prefix in verbose mode.
+ * @param {!Node} node Subscript node.
+ * @return {!string} The prefix string.
+ */
+sre.MathspeakUtil.superscriptVerbose = function(node) {
+  return sre.MathspeakUtil.nestedSubSuper(
+    node, 'Superscript', {sup: 'Super', sub: 'Sub'});
+};
+
+
+/**
+ * Computes subscript prefix in brief mode.
+ * @param {!Node} node Subscript node.
+ * @return {!string} The prefix string.
+ */
+sre.MathspeakUtil.superscriptBrief = function(node) {
+  return sre.MathspeakUtil.nestedSubSuper(
+    node, 'Sup', {sup: 'Sup', sub: 'Sub'});
+};
+
+
+/**
+ * Computes subscript prefix in verbose mode.
+ * @param {!Node} node Subscript node.
+ * @return {!string} The prefix string.
+ */
+sre.MathspeakUtil.baselineVerbose = function(node) {
+  var baseline =  sre.MathspeakUtil.nestedSubSuper(
+    node, '', {sup: 'Super', sub: 'Sub'});
+  if (!baseline) {
+    return 'Baseline';
+  }
+  return baseline.replace(/Sub$/, 'Subscript').
+    replace(/Super$/, 'Superscript');
+};
+
+
+/**
+ * Computes subscript prefix in brief mode.
+ * @param {!Node} node Subscript node.
+ * @return {!string} The prefix string.
+ */
+sre.MathspeakUtil.baselineBrief = function(node) {
+  var baseline =  sre.MathspeakUtil.nestedSubSuper(
+    node, '', {sup: 'Sup', sub: 'Sub'});
+  return baseline || 'Base';
+};

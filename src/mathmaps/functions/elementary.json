@@ -16,7 +16,11 @@
        "default": "natural logarithm",
        "alternative": "natural logarithm function",
        "short": "natural log"
+     },
+     "mathspeak": {
+       "default": "ln"
      }
+
    },
    "key": "ln",
    "names": ["ln"]
@@ -76,6 +80,9 @@
      "default": {
        "default": "imaginary part",
        "short": "imaginary"
+     },
+     "mathspeak": {
+       "default": "im"
      }
    },
    "key": "im",
@@ -86,6 +93,9 @@
      "default": {
        "default": "real part",
        "short": "real"
+     },
+     "mathspeak": {
+       "default": "re"
      }
    },
    "key": "re",

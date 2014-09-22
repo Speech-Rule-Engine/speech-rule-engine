@@ -318,8 +318,7 @@ quickTest = function(mml) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.System.getInstance().parseInput(mathMl);
-  console.log(node.toString());
-  return new sre.SemanticTree(node);
+  return sre.System.getInstance().getSemanticTree_(node);
 };
 
 

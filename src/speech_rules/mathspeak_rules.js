@@ -101,6 +101,13 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
   addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
+  
+  addCSF('CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
+  addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
+  addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
+  addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
 };
 
 
@@ -161,7 +168,37 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9",' +
       '"")');
 
+  defineRule(
+      'number-baseline', 'mathspeak.default',
+      '[t] "Baseline"; [n] text()',
+      'self::number', 'preceding-sibling::identifier', 
+      'preceding-sibling::*[@role="latinletter"] or' +
+      ' preceding-sibling::*[@role="greekletter"] or' +
+      ' preceding-sibling::*[@role="otherletter"]',
+      'parent::*/parent::infixop[@role="implicit"]'
+  );
 
+  defineRule(
+      'number-baseline', 'mathspeak.brief',
+      '[t] "Base"; [n] text()',
+      'self::number', 'preceding-sibling::identifier', 
+      'preceding-sibling::*[@role="latinletter"] or' +
+      ' preceding-sibling::*[@role="greekletter"] or' +
+      ' preceding-sibling::*[@role="otherletter"]',
+      'parent::*/parent::infixop[@role="implicit"]'
+  );
+
+  defineRule(
+      'number-baseline', 'mathspeak.sbrief',
+      '[t] "Base"; [n] text()',
+      'self::number', 'preceding-sibling::identifier', 
+      'preceding-sibling::*[@role="latinletter"] or' +
+      ' preceding-sibling::*[@role="greekletter"] or' +
+      ' preceding-sibling::*[@role="otherletter"]',
+      'parent::*/parent::infixop[@role="implicit"]'
+  );
+
+  
   // minus sign
   defineRule(
       'negative', 'mathspeak.default',
@@ -180,6 +217,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   // Operator rules
   defineRule(
+      'prefix', 'mathspeak.default',
+      '[t] "prefix"; [n] text(); [n] children/*[1]',
+      'self::prefixop');
+
+  defineRule(
       'binary-operation', 'mathspeak.default',
       '[m] children/* (separator:text());', 'self::infixop');
 
@@ -197,6 +239,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'function-unknown', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
       'self::appl', 'children/*[1][@role="unknown"]'
+  );
+
+  defineRule(
+      'function-prefix', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::appl', 'children/*[1][@role="prefix function"]'
   );
 
 
@@ -280,6 +328,24 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::limboth');
 
   defineRule(
+      'integral', 'mathspeak.default',
+      '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
+      '[t] "Superscript"; [n] children/*[3]; [t] "Baseline";',
+      'self::limboth', '@role="integral"');
+
+  defineRule(
+      'integral', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "Sub"; [n] children/*[2];' +
+      '[t] "Sup"; [n] children/*[3]; [t] "Base";',
+      'self::limboth', '@role="integral"');
+
+  defineRule(
+      'integral', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] "Sub"; [n] children/*[2];' +
+      '[t] "Sup"; [n] children/*[3]; [t] "Base";',
+      'self::limboth', '@role="integral"');
+
+  defineRule(
       'bigop', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2];',
       'self::bigop');
@@ -292,6 +358,150 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] text(); [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
+
+  // Subscripts
+  defineRule(
+      'subscript', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]',
+      'self::subscript');
+
+  defineRule(
+      'subscript', 'mathspeak.brief',
+      '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]',
+      'self::subscript');
+
+  defineRule(
+      'subscript', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]',
+      'self::subscript');
+
+  defineRule(
+      'subscript-simple', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::subscript',
+      // First child is a single letter.
+      'name(./children/*[1])="identifier"',
+      // Second child is a number but not mixed or other.
+      'name(./children/*[2])="number"',
+      './children/*[2][@role!="mixed"]',
+      './children/*[2][@role!="othernumber"]'
+  );
+
+  defineRule(
+      'subscript-simple', 'mathspeak.brief',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::subscript',
+      // First child is a single letter.
+      'name(./children/*[1])="identifier"',
+      // Second child is a number but not mixed or other.
+      'name(./children/*[2])="number"',
+      './children/*[2][@role!="mixed"]',
+      './children/*[2][@role!="othernumber"]'
+  );
+
+  defineRule(
+      'subscript-simple', 'mathspeak.sbrief',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::subscript',
+      // First child is a single letter.
+      'name(./children/*[1])="identifier"',
+      // Second child is a number but not mixed or other.
+      'name(./children/*[2])="number"',
+      './children/*[2][@role!="mixed"]',
+      './children/*[2][@role!="othernumber"]'
+  );
+
+
+  defineRule(
+      'subscript-baseline', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose',
+      'self::subscript', 'following-sibling::*');
+
+  defineRule(
+      'subscript-baseline', 'mathspeak.brief',
+      '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief',
+      'self::subscript', 'following-sibling::*');
+
+  defineRule(
+      'subscript-baseline', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief',
+      'self::subscript', 'following-sibling::*');
+
+
+  // Superscripts
+  defineRule(
+      'superscript', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]',
+      'self::superscript');
+
+  defineRule(
+      'superscript', 'mathspeak.brief',
+      '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2]',
+      'self::superscript');
+
+  defineRule(
+      'superscript', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2]',
+      'self::superscript');
+
+
+  defineRule(
+      'superscript-baseline', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];' +
+      '[t] CSFbaselineVerbose',
+      'self::superscript', 'following-sibling::*');
+
+  defineRule(
+      'superscript-baseline', 'mathspeak.brief',
+      '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
+      '[t] CSFbaselineBrief',
+      'self::superscript', 'following-sibling::*');
+
+  defineRule(
+      'superscript-baseline', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
+      '[t] CSFbaselineBrief',
+      'self::superscript', 'following-sibling::*');
+
+
+  // Square
+  defineRule(
+      'square', 'mathspeak.default',
+      '[n] children/*[1]; [t] "squared"',
+      'self::superscript', 'children/*[2][text()=2]',
+      'name(./children/*[1])!="text"');
+
+  defineRule(
+      'square', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "squared"',
+      'self::superscript', 'children/*[2][text()=2]',
+      'name(./children/*[1])!="text"');
+
+  defineRule(
+      'square', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] "squared"',
+      'self::superscript', 'children/*[2][text()=2]',
+      'name(./children/*[1])!="text"');
+
+  // Cube
+  defineRule(
+      'cube', 'mathspeak.default',
+      '[n] children/*[1]; [t] "cubed"',
+      'self::superscript', 'children/*[2][text()=3]',
+      'name(./children/*[1])!="text"');
+
+  defineRule(
+      'cube', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "cubed"',
+      'self::superscript', 'children/*[2][text()=3]',
+      'name(./children/*[1])!="text"');
+
+  defineRule(
+      'cube', 'mathspeak.sbrief',
+      '[n] children/*[1]; [t] "cubed"',
+      'self::superscript', 'children/*[2][text()=3]',
+      'name(./children/*[1])!="text"');
+
 
 };
 

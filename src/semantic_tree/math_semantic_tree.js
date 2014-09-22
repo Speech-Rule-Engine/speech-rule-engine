@@ -405,6 +405,10 @@ sre.SemanticTree.Node.prototype.removeContentNode_ = function(node) {
 sre.SemanticTree.prototype.parseMathml_ = function(mml) {
   var children = sre.DomUtil.toArray(mml.childNodes);
   switch (sre.SemanticUtil.tagName(mml)) {
+    case 'SEMANTICS':
+      if (children.length > 0) {
+        return this.parseMathml_(/** @type {!Element} */(children[0]));
+      }
     case 'MATH':
     case 'MROW':
     case 'MPADDED':
