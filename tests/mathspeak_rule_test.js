@@ -338,7 +338,7 @@ sre.MathspeakRuleTest.prototype.testSample_5_1_3 = function() {
 /**
  * Testing Rule 6.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_6_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_6_1_1 = function() {
   var mml = '<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo>' +
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
@@ -629,7 +629,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_5_1 = function() {
 /**
  * Testing Rule 7.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
+sre.MathspeakRuleTest.prototype.untestSample_7_6_1 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub>' +
       '<mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
