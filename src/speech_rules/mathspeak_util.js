@@ -323,26 +323,59 @@ sre.MathspeakUtil.onesNumbers = [
  * String representation of twenty to ninety.
  * @type {Array.<string>}
  */
-sre.MathspeakUtil.tensNumbers = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+sre.MathspeakUtil.tensNumbers = [
+  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
+  'ninety'
+];
 
 
 /**
- * Translates a number of up to nine digits.
- * @param {}
- * @return {}
+ * Translates a number of up to twelve digits into a string representation.
+ * @param {!number} number The number to translate.
+ * @return {!string} The string representation of that number.
  */
-sre.MathspeakUtil.numberToWords = function(num) {
-  if ((num = num.toString()).length > 9) return num.toString();
-  var n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-  if (!n) return; var str = '';
-  str += (n[1] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[1])] || sre.MathspeakUtil.tensNumbers[n[1][0]] + '-' + sre.MathspeakUtil.onesNumbers[n[1][1]]) + 'billion-' : '';
-  str += (n[2] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[2])] || sre.MathspeakUtil.tensNumbers[n[2][0]] + '-' + sre.MathspeakUtil.onesNumbers[n[2][1]]) + 'million-' : '';
-  str += (n[3] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[3])] || sre.MathspeakUtil.tensNumbers[n[3][0]] + '-' + sre.MathspeakUtil.onesNumbers[n[3][1]]) + 'thousand-' : '';
-  str += (n[4] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[4])] || sre.MathspeakUtil.tensNumbers[n[4][0]] + '-' + sre.MathspeakUtil.onesNumbers[n[4][1]]) + 'hundred-' : '';
-  str += (n[5] != 0) ? ((str != '') ? 'and-' : '') + (sre.MathspeakUtil.onesNumbers[Number(n[5])] || sre.MathspeakUtil.tensNumbers[n[5][0]] + '-' + sre.MathspeakUtil.onesNumbers[n[5][1]]) : '';
+sre.MathspeakUtil.numberToWords = function(number) {
+  var num = number.toString();
+  if (num.length > 9) {
+    return num;
+  }
+  var n = ('000000000' + num).substr(-9).match(
+      /^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+  if (!n) {
+    return '';
+  }
+  var str = '';
+  str += (n[1] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[1])] ||
+                        sre.MathspeakUtil.tensNumbers[n[1][0]] + '-' +
+                        sre.MathspeakUtil.onesNumbers[n[1][1]]) +
+      'billion-' : '';
+  str += (n[2] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[2])] ||
+                        sre.MathspeakUtil.tensNumbers[n[2][0]] + '-' +
+                        sre.MathspeakUtil.onesNumbers[n[2][1]]) +
+      'million-' : '';
+  str += (n[3] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[3])] ||
+                        sre.MathspeakUtil.tensNumbers[n[3][0]] + '-' +
+                        sre.MathspeakUtil.onesNumbers[n[3][1]]) +
+      'thousand-' : '';
+  str += (n[4] != 0) ? (sre.MathspeakUtil.onesNumbers[Number(n[4])] ||
+                        sre.MathspeakUtil.tensNumbers[n[4][0]] + '-' +
+                        sre.MathspeakUtil.onesNumbers[n[4][1]]) +
+      'hundred-' : '';
+  str += (n[5] != 0) ? ((str != '') ? 'and-' : '') +
+      (sre.MathspeakUtil.onesNumbers[Number(n[5])] ||
+      sre.MathspeakUtil.tensNumbers[n[5][0]] + '-' +
+      sre.MathspeakUtil.onesNumbers[n[5][1]]) : '';
   return str.match(/-$/) ? str.slice(0, -1) : str;
 };
 
+
+/**
+ * Translates a number of up to twelve digits into a string representation of
+ * its ordinal.
+ * @param {!number} num The number to translate.
+ * @param {boolean} plural A flag indicating if the oridinal is in plural.
+ * @return {!string} The ordinal of the number as string.
+ */
 sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
   if (num === 2) {
     return plural ? 'halves' : 'half';
@@ -371,6 +404,17 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
 };
 
 
+/**
+ * Checks if a fraction is a convertible vulgar fraction. In this case it
+ * translates enumerator and the denominator.
+ * @param {!Node} node Fraction node to be translated.
+ * @return {{convertible: boolean,
+ *           content: (string|undefined),
+ *           denominator: (number|undefined),
+ *           enumerator: (number|undefined)}} If convertible denominator and
+ *     enumerator are set. Otherwise only the text content is given.
+ * @private
+ */
 sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
   if (!node.childNodes || !node.childNodes[0] ||
       !node.childNodes[0].childNodes ||
@@ -397,17 +441,31 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
 };
 
 
+/**
+ * Converts a vulgar fraction into string representation of enumerator and
+ * denominator as ordinal.
+ * @param {!Node} node Fraction node to be translated.
+ * @return {!string} The string representation if it is a valid vulgar fraction.
+ */
 sre.MathspeakUtil.vulgarFraction = function(node) {
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
-  if (conversion.convertible) {
+  if (conversion.convertible &&
+      conversion.enumerator &&
+      conversion.denominator) {
     return sre.MathspeakUtil.numberToWords(conversion.enumerator) + '-' +
         sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
         conversion.enumerator !== 1);
   }
-  return conversion.content;
+  return conversion.content || '';
 };
 
 
+/**
+ * Checks if a vulgar fraction is small enough to be convertible to string in
+ * MathSpeak, i.e. enumerator in [1..9] and denominator in [1..99].
+ * @param {!Node} node Fraction node to be tested.
+ * @return {boolean} True if it is a valid, small enough fraction.
+ */
 sre.MathspeakUtil.vulgarFractionSmall = function(node) {
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible) {
@@ -420,6 +478,13 @@ sre.MathspeakUtil.vulgarFractionSmall = function(node) {
 };
 
 
+/**
+ * Custom query function to check if a vulgar fraction is small enough to be
+ * spoken as numbers in MathSpeak.
+ * @param {!Node} node Fraction node to be tested.
+ * @return {!Array.<Node>} List containing the node if it is eligible. Otherwise
+ *     empty.
+ */
 sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
   return sre.MathspeakUtil.vulgarFractionSmall(node) ? [node] : [];
 };

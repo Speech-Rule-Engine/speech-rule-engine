@@ -635,9 +635,9 @@ sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
       '<mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi>' +
       '<mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo>' +
-      '<mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac><mo>=</mo>' +
-      '<msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi>' +
-      '<mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac>' +
+      '<mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac>' +
+      '<mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub>' +
+      '<mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi>' +
       '<mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>';
   this.executeRuleTest(mml, 'a 0 plus continuedFraction b 1 Over a 1 plus' +
