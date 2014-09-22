@@ -26,6 +26,11 @@ Blank for empty cells.
 
 Mixed numbers: implicit with number and vulgar to 3 and  one-half....
 
+DONE
+
+Deal with fonts vs named letters (e.g., bold bold l)
+
+
 Comments:
 test/1/sample_1_6_1.xml : mstack not yet implemented!
 

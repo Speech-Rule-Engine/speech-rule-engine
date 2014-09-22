@@ -162,6 +162,22 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '"")');
 
 
+  // minus sign
+  defineRule(
+      'negative', 'mathspeak.default',
+      '[t] "negative"; [n] children/*[1]',
+      'self::prefixop', '@role="negative"', 'children/identifier');
+
+  defineRule(
+      'negative', 'mathspeak.default',
+      '[t] "negative"; [n] children/*[1]',
+      'self::prefixop', '@role="negative"', 'children/number');
+
+  defineRule(
+      'negative', 'mathspeak.default',
+      '[t] "minus"; [n] children/*[1]',
+      'self::prefixop', '@role="negative"');
+
   // Operator rules
   defineRule(
       'binary-operation', 'mathspeak.default',

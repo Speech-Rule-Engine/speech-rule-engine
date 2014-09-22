@@ -253,18 +253,19 @@ sre.MathspeakRuleTest.prototype.testSample_2_6_1 = function() {
 /**
  * Testing Rule 2.6, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_2_6_2 = function() {
-  var mml = '<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi>I</mi>' +
-      '<mo>=</mo><mfrac><mrow><mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow>' +
-      '<mi>d</mi><mi>t</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus StartFraction d upper phi upper b Over d t' +
+sre.MathspeakRuleTest.prototype.testSample_2_6_2 = function() {
+  var mml = '<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi>' +
+        '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
+        '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
+        '</mrow></mfrac></mrow>';
+  this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
+                       ' minus StartFraction d upper Phi upper B Over d t' +
                        ' EndFraction', 'default');
-  this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus StartFrac d upper phi upper b Over d t' +
+  this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
+                       ' minus StartFrac d upper Phi upper B Over d t' +
                        ' EndFrac', 'brief');
-  this.executeRuleTest(mml, 'contour integral upper e dot d bold l equals' +
-                       ' minus Frac d upper phi upper b Over d t EndFrac',
+  this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
+                       ' minus Frac d upper Phi upper B Over d t EndFrac',
                        'sbrief');
 };
 
