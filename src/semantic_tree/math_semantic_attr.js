@@ -90,9 +90,9 @@ sre.SemanticAttr = function() {
    * @type {Array.<string>}
    */
   this.commas =
-    [
-      ',', this.invisibleComma_
-    ];
+      [
+       ',', this.invisibleComma_
+      ];
   /**
    * @type {Array.<string>}
    */
@@ -1319,7 +1319,7 @@ sre.SemanticAttr.Role = {
   FLOAT: 'float',
   OTHERNUMBER: 'othernumber',
   MIXED: 'mixed',
-  
+
   // Accents.
   MULTIACCENT: 'multiaccent',
   OVERACCENT: 'overaccent',

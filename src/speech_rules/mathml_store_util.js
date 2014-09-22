@@ -155,6 +155,12 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
 };
 
 
+/**
+ * Rewrites a font attribute in a node to hide it during application of
+ *    subsequent rules.
+ * @param {!Node} node The node to be modified.
+ * @return {Array.<Node>} The node list containing the modified node only.
+ */
 sre.MathmlStoreUtil.hideFont = function(node) {
   if (node.hasAttribute('font')) {
     var value = node.getAttribute('font');
@@ -165,6 +171,12 @@ sre.MathmlStoreUtil.hideFont = function(node) {
 };
 
 
+/**
+ * Rewrites a hidden font attribute in a node to be visible again as a regular
+ *     font attribute. This is implemented as a custom string function.
+ * @param {!Node} node The node to be modified.
+ * @return {!string} The empty string.
+ */
 sre.MathmlStoreUtil.showFont = function(node) {
   if (node.hasAttribute('hiddenfont')) {
     var value = node.getAttribute('hiddenfont');

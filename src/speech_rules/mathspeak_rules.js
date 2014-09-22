@@ -125,9 +125,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'mixed-number', 'mathspeak.default',
-      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ', 
+      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
       'self::number', '@role="mixed"');
-  
+
   defineRule(
       'number-with-chars', 'mathspeak.default',
       '[t] "Number"; [m] CQFspaceoutNumber', 'self::number',
@@ -187,7 +187,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'implicit', 'mathspeak.default',
       '[m] children/*', 'self::infixop', '@role="implicit"');
-  
+
   defineRule('subtraction', 'mathspeak.default',
              '[m] children/* (separator:"minus");', 'self::infixop',
              '@role="subtraction"');
@@ -272,7 +272,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
 
   // Limits
-  
+
   defineRule(
       'limboth', 'mathspeak.default',
       '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
@@ -288,7 +288,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   // Relations
 
-    defineRule(
+  defineRule(
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] text(); [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');

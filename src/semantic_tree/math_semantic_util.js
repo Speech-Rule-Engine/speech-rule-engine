@@ -106,7 +106,7 @@ sre.SemanticUtil.numberToUnicode = function(number) {
 sre.SemanticUtil.splitUnicode = function(str) {
   var split = str.split('');
   var result = [];
-  for(var i = 0, chr; chr = split[i]; i++) {
+  for (var i = 0, chr; chr = split[i]; i++) {
     if ('\uD800' <= chr && chr <= '\uDBFF' && split[i + 1]) {
       result.push(chr + split[++i]);
     } else {

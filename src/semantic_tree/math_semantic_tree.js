@@ -748,19 +748,19 @@ sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes, function(x) {
         return sre.SemanticTree.attrPred_('type', 'FRACTION')(x) &&
-          sre.SemanticTree.attrPred_('role', 'VULGAR')(x);});
+            sre.SemanticTree.attrPred_('role', 'VULGAR')(x);});
   if (partition.rel.length === 0) {
     return nodes;
   }
   var result = [];
-  for(var i = 0, rel; rel = partition.rel[i]; i++) {
+  for (var i = 0, rel; rel = partition.rel[i]; i++) {
     var comp = partition.comp[i];
     var last = comp.length - 1;
     if (comp[last] &&
         sre.SemanticTree.attrPred_('type', 'NUMBER')(comp[last]) &&
         sre.SemanticTree.attrPred_('role', 'INTEGER')(comp[last])) {
       var newNode = this.makeBranchNode_(
-        sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
+          sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
       newNode.role = sre.SemanticAttr.Role.MIXED;
       result = result.concat(comp.slice(0, last));
       result.push(newNode);
@@ -2128,14 +2128,14 @@ sre.SemanticTree.numberRole_ = function(node) {
   if (meaning.every(function(x) {
     return (x.type == sre.SemanticAttr.Type.NUMBER &&
             x.role == sre.SemanticAttr.Role.INTEGER) ||
-      (x.type == sre.SemanticAttr.Type.PUNCTUATION &&
-       x.role == sre.SemanticAttr.Role.COMMA);})) {
+        (x.type == sre.SemanticAttr.Type.PUNCTUATION &&
+        x.role == sre.SemanticAttr.Role.COMMA);})) {
     node.role = sre.SemanticAttr.Role.INTEGER;
     return; }
   if (meaning.every(function(x) {
     return (x.type == sre.SemanticAttr.Type.NUMBER &&
             x.role == sre.SemanticAttr.Role.INTEGER) ||
-      x.type == sre.SemanticAttr.Type.PUNCTUATION;})) {
+        x.type == sre.SemanticAttr.Type.PUNCTUATION;})) {
     node.role = sre.SemanticAttr.Role.FLOAT;
     return; }
   node.role = sre.SemanticAttr.Role.OTHERNUMBER;
@@ -2154,17 +2154,17 @@ sre.SemanticTree.exprFont_ = function(node) {
   var content = sre.SemanticUtil.splitUnicode(node.textContent);
   var meaning = content.map(sre.SemanticAttr.lookupMeaning);
   var singleFont = meaning.reduce(
-    function(prev, curr) {
-      if (!prev || !curr.font || curr.font == sre.SemanticAttr.Font.UNKNOWN ||
-          curr.font == prev) {
-        return prev;
-      }
-      if (prev == sre.SemanticAttr.Font.UNKNOWN) {
-        return curr.font;
-      }
-      return null;
-    },
-    sre.SemanticAttr.Font.UNKNOWN);
+      function(prev, curr) {
+        if (!prev || !curr.font || curr.font == sre.SemanticAttr.Font.UNKNOWN ||
+            curr.font == prev) {
+          return prev;
+        }
+        if (prev == sre.SemanticAttr.Font.UNKNOWN) {
+          return curr.font;
+        }
+        return null;
+      },
+      sre.SemanticAttr.Font.UNKNOWN);
   if (singleFont) {
     node.font = singleFont;
   }

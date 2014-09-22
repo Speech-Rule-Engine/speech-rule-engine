@@ -255,9 +255,9 @@ sre.MathspeakRuleTest.prototype.testSample_2_6_1 = function() {
  */
 sre.MathspeakRuleTest.prototype.testSample_2_6_2 = function() {
   var mml = '<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi>' +
-        '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
-        '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
-        '</mrow></mfrac></mrow>';
+      '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
+      '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
+      '</mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'contour-integral upper E dot d bold l equals' +
                        ' minus StartFraction d upper Phi upper B Over d t' +
                        ' EndFraction', 'default');
