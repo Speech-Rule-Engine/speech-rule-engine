@@ -185,6 +185,38 @@ sre.MathStore.prototype.addAlias_ = function(rule, query, cstrList) {
 };
 
 
+/**
+ * Duplicates a speech rule for the old dynamic constraint for a new dynamic
+ * constraint, keeping the same precondition, while possibly adding a new
+ * action.
+ * @param {string} name The name of the rule.
+ * @param {string} oldDynamic The old math domain and style assignment.
+ * @param {string} newDynamic The new math domain and style assignment.
+ * @param {string=} opt_action String version of the speech rule.
+ */
+sre.MathStore.prototype.defineSpecialisedRule = function(
+    name, oldDynamic, newDynamic, opt_action) {
+  var dynamicCstr = this.parseDynamicConstraint(oldDynamic);
+  var rule = this.findRule(
+      goog.bind(
+          function(rule) {
+            return rule.name == name &&
+                this.testDynamicConstraints(dynamicCstr, rule);},
+          this));
+  if (!rule) {
+    throw new sre.SpeechRule.OutputError(
+        'Rule named ' + name + ' with style ' +
+        oldDynamic + ' does not exist.');
+  }
+  var newCstr = this.parseDynamicConstraint(newDynamic);
+  var action = opt_action ? sre.SpeechRule.Action.fromString(opt_action)
+        : rule.action;
+  var newRule = new sre.SpeechRule(
+    rule.name, newCstr, rule.precondition, action);
+  this.addRule(newRule);
+};
+
+
 // Evaluator
 /**
  * @override

@@ -56,6 +56,12 @@ sre.MathspeakRules.defineRuleAlias_ = goog.bind(
 
 
 /** @private */
+sre.MathspeakRules.defineSpecialisedRule_ = goog.bind(
+    sre.MathspeakRules.mathStore.defineSpecialisedRule,
+    sre.MathspeakRules.mathStore);
+
+
+/** @private */
 sre.MathspeakRules.addContextFunction_ = goog.bind(
     sre.MathspeakRules.mathStore.contextFunctions.add,
     sre.MathspeakRules.mathStore.contextFunctions);
@@ -76,6 +82,7 @@ sre.MathspeakRules.addCustomString_ = goog.bind(
 goog.scope(function() {
 var defineRule = sre.MathspeakRules.defineRule_;
 var defineRuleAlias = sre.MathspeakRules.defineRuleAlias_;
+var defineSpecialisedRule = sre.MathspeakRules.defineSpecialisedRule_;
 
 var addCQF = sre.MathspeakRules.addCustomQuery_;
 var addCSF = sre.MathspeakRules.addCustomString_;
@@ -141,17 +148,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '"" != translate(text(), "0123456789.,", "")',
       'text() != translate(text(), "0123456789.,", "")');
 
-  defineRule(
-      'number-with-chars', 'mathspeak.brief',
-      '[t] "Num"; [m] CQFspaceoutNumber', 'self::number',
-      '"" != translate(text(), "0123456789.,", "")',
-      'text() != translate(text(), "0123456789.,", "")');
+  defineSpecialisedRule(
+      'number-with-chars', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Num"; [m] CQFspaceoutNumber');
 
-  defineRule(
-      'number-with-chars', 'mathspeak.sbrief',
-      '[t] "Num"; [m] CQFspaceoutNumber', 'self::number',
-      '"" != translate(text(), "0123456789.,", "")',
-      'text() != translate(text(), "0123456789.,", "")');
+  defineSpecialisedRule(
+      'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'number-as-upper-word', 'mathspeak.default',
@@ -175,28 +177,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'preceding-sibling::*[@role="latinletter"] or' +
       ' preceding-sibling::*[@role="greekletter"] or' +
       ' preceding-sibling::*[@role="otherletter"]',
-      'parent::*/parent::infixop[@role="implicit"]'
-  );
+      'parent::*/parent::infixop[@role="implicit"]');
 
-  defineRule(
-      'number-baseline', 'mathspeak.brief',
-      '[t] "Base"; [n] text()',
-      'self::number', 'preceding-sibling::identifier', 
-      'preceding-sibling::*[@role="latinletter"] or' +
-      ' preceding-sibling::*[@role="greekletter"] or' +
-      ' preceding-sibling::*[@role="otherletter"]',
-      'parent::*/parent::infixop[@role="implicit"]'
-  );
+  defineSpecialisedRule(
+      'number-baseline', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Base"; [n] text()');
 
-  defineRule(
-      'number-baseline', 'mathspeak.sbrief',
-      '[t] "Base"; [n] text()',
-      'self::number', 'preceding-sibling::identifier', 
-      'preceding-sibling::*[@role="latinletter"] or' +
-      ' preceding-sibling::*[@role="greekletter"] or' +
-      ' preceding-sibling::*[@role="otherletter"]',
-      'parent::*/parent::infixop[@role="implicit"]'
-  );
+  defineSpecialisedRule(
+      'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
 
   
   // minus sign
@@ -205,9 +193,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "negative"; [n] children/*[1]',
       'self::prefixop', '@role="negative"', 'children/identifier');
 
-  defineRule(
-      'negative', 'mathspeak.default',
-      '[t] "negative"; [n] children/*[1]',
+  defineRuleAlias(
+      'negative', 
       'self::prefixop', '@role="negative"', 'children/number');
 
   defineRule(
@@ -238,14 +225,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'function-unknown', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', 'children/*[1][@role="unknown"]'
-  );
+      'self::appl', 'children/*[1][@role="unknown"]');
 
   defineRule(
       'function-prefix', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', 'children/*[1][@role="prefix function"]'
-  );
+      'self::appl', 'children/*[1][@role="prefix function"]');
 
 
   // Fences rules
@@ -259,10 +244,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "StartAbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
       'self::fenced', 'self::fenced[@role="neutral"]');
 
-  defineRule(
-      'fences-neutral', 'mathspeak.sbrief',
-      '[t] "AbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
-      'self::fenced', 'self::fenced[@role="neutral"]');
+  defineSpecialisedRule(
+      'fences-neutral', 'mathspeak.default', 'mathspeak.sbrief',
+      '[t] "AbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"');
 
   // TODO (sorge) Maybe promote this to default.default?
   // Maybe check for punctuated element and singleton?
@@ -272,11 +256,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
       'content/*[2][text()]="}"', 'count(children/*)=1');
 
-  defineRule(
-      'fences-Set', 'mathspeak.sbrief',
-      '[t] "Set"; [n] children/*[1]; [t] "EndSet"',
-      'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
-      'content/*[2][text()]="}"', 'count(children/*)=1');
+  defineSpecialisedRule(
+      'fences-set', 'mathspeak.default', 'mathspeak.sbrief',
+      '[t] "Set"; [n] children/*[1]; [t] "EndSet"');
 
 
   // Text rules
@@ -333,17 +315,13 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Superscript"; [n] children/*[3]; [t] "Baseline";',
       'self::limboth', '@role="integral"');
 
-  defineRule(
-      'integral', 'mathspeak.brief',
+  defineSpecialisedRule(
+      'integral', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] "Sub"; [n] children/*[2];' +
-      '[t] "Sup"; [n] children/*[3]; [t] "Base";',
-      'self::limboth', '@role="integral"');
+      '[t] "Sup"; [n] children/*[3]; [t] "Base";');
 
-  defineRule(
-      'integral', 'mathspeak.sbrief',
-      '[n] children/*[1]; [t] "Sub"; [n] children/*[2];' +
-      '[t] "Sup"; [n] children/*[3]; [t] "Base";',
-      'self::limboth', '@role="integral"');
+  defineSpecialisedRule(
+      'integral', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'bigop', 'mathspeak.default',
