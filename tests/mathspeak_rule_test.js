@@ -877,7 +877,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_7 = function() {
 /**
  * Testing Rule 8.4, Example 8.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_8 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_4_8 = function() {
   var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
       '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
       '<mi>b</mi></msup></mfenced></msup>';
@@ -1063,7 +1063,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_8_1 = function() {
 /**
  * Testing Rule 8.8, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_8_2 = function() {
+sre.MathspeakRuleTest.prototype.untestSample_8_8_2 = function() {
   var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
       '<mn>2</mn></msubsup>';
   this.executeRuleTest(mml, 'upper T Subscript n minus 1 Superscript 2',
@@ -1076,7 +1076,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_8_2 = function() {
 /**
  * Testing Rule 8.9, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_9_1 = function() {
+sre.MathspeakRuleTest.prototype.untestSample_8_9_1 = function() {
   var mml = '<msup><mi>x</mi><mo>\'</mo></msup>';
   this.executeRuleTest(mml, 'x prime', 'default');
   this.executeRuleTest(mml, 'x prime', 'brief');
@@ -1198,7 +1198,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_12_2 = function() {
 /**
  * Testing Rule 8.13, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_13_1 = function() {
+sre.MathspeakRuleTest.prototype.untestSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><msup>' +
       '<mrow/><mi>b</mi></msup><mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'log Superscript 4 Superscript b Baseline x',

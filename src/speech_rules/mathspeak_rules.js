@@ -51,7 +51,7 @@ sre.MathspeakRules.defineRule_ = goog.bind(
 
 /** @private */
 sre.MathspeakRules.defineRuleAlias_ = goog.bind(
-    sre.MathspeakRules.mathStore.defineRuleAlias,
+    sre.MathspeakRules.mathStore.defineRulesAlias,
     sre.MathspeakRules.mathStore);
 
 
@@ -427,6 +427,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief',
       'self::subscript', 'following-sibling::*');
 
+  defineRuleAlias(
+    'subscript-baseline',
+    'self::subscript', 'not(following-sibling::*)', 'ancestor::fenced'
+  ); // This rule might be too simple.
+  
 
   // Superscripts
   defineRule(
@@ -462,6 +467,26 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
       '[t] CSFbaselineBrief',
       'self::superscript', 'following-sibling::*');
+
+  defineRuleAlias(
+    'superscript-baseline',
+    'self::superscript', 'not(following-sibling::*)', 'ancestor::fenced'
+  );  // This rule might be too simple.
+  
+  // defineRule(
+  //     'superscript-empty', 'mathspeak.default',
+  //     '[n] children/*[2]; [t] CSFbaselineVerbose',
+  //     'self::superscript', 'following-sibling::*', 'name(children/*[1])="empty"');
+
+  // defineRule(
+  //     'superscript-empty', 'mathspeak.brief',
+  //     '[n] children/*[2]; [t] CSFbaselineBrief',
+  //     'self::superscript', 'following-sibling::*', 'name(children/*[1])="empty"');
+
+  // defineRule(
+  //     'superscript-empty', 'mathspeak.sbrief',
+  //     '[n] children/*[2]; [t] CSFbaselineBrief',
+  //     'self::superscript', 'following-sibling::*', 'name(children/*[1])="empty"');
 
 
   // Square
