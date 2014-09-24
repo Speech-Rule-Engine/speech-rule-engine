@@ -209,10 +209,10 @@ sre.MathStore.prototype.defineSpecialisedRule = function(
         oldDynamic + ' does not exist.');
   }
   var newCstr = this.parseDynamicConstraint(newDynamic);
-  var action = opt_action ? sre.SpeechRule.Action.fromString(opt_action)
-        : rule.action;
+  var action = opt_action ? sre.SpeechRule.Action.fromString(opt_action) :
+          rule.action;
   var newRule = new sre.SpeechRule(
-    rule.name, newCstr, rule.precondition, action);
+      rule.name, newCstr, rule.precondition, action);
   this.addRule(newRule);
 };
 

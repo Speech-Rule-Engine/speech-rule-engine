@@ -270,6 +270,9 @@ sre.MathspeakRuleTest.prototype.testSample_2_6_2 = function() {
 };
 
 
+/**
+ * Testing prefix operation as negative or minus.
+ */
 sre.MathspeakRuleTest.prototype.testNegativeVsMinus = function() {
   var mml = '<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'minus StartFraction 1 Over b EndFraction',

@@ -348,13 +348,13 @@ sre.MathspeakUtil.hundredsToWords = function(number) {
   var n = number % 1000;
   var str = '';
   str += sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] ?
-    sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] + '-hundred' : '';
+      sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] + '-hundred' : '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
     str += sre.MathspeakUtil.onesNumbers[n] ||
-      (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] + '-' +
-       sre.MathspeakUtil.onesNumbers[n % 10]);
+        (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] + '-' +
+        sre.MathspeakUtil.onesNumbers[n % 10]);
   }
   return str;
 };
@@ -375,8 +375,8 @@ sre.MathspeakUtil.numberToWords = function(number) {
     var hundreds = number % 1000;
     if (hundreds) {
       str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-        (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] + '-' : '') +
-        str;
+          (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] + '-' : '') +
+          str;
     }
     number = Math.floor(number / 1000);
     pos++;
@@ -535,7 +535,7 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
  */
 sre.MathspeakUtil.subscriptVerbose = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-    node, 'Subscript', {sup: 'Super', sub: 'Sub'});
+      node, 'Subscript', {sup: 'Super', sub: 'Sub'});
 };
 
 
@@ -546,7 +546,7 @@ sre.MathspeakUtil.subscriptVerbose = function(node) {
  */
 sre.MathspeakUtil.subscriptBrief = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-    node, 'Sub', {sup: 'Sup', sub: 'Sub'});
+      node, 'Sub', {sup: 'Sup', sub: 'Sub'});
 };
 
 
@@ -557,7 +557,7 @@ sre.MathspeakUtil.subscriptBrief = function(node) {
  */
 sre.MathspeakUtil.superscriptVerbose = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-    node, 'Superscript', {sup: 'Super', sub: 'Sub'});
+      node, 'Superscript', {sup: 'Super', sub: 'Sub'});
 };
 
 
@@ -568,7 +568,7 @@ sre.MathspeakUtil.superscriptVerbose = function(node) {
  */
 sre.MathspeakUtil.superscriptBrief = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-    node, 'Sup', {sup: 'Sup', sub: 'Sub'});
+      node, 'Sup', {sup: 'Sup', sub: 'Sub'});
 };
 
 
@@ -578,13 +578,13 @@ sre.MathspeakUtil.superscriptBrief = function(node) {
  * @return {!string} The prefix string.
  */
 sre.MathspeakUtil.baselineVerbose = function(node) {
-  var baseline =  sre.MathspeakUtil.nestedSubSuper(
-    node, '', {sup: 'Super', sub: 'Sub'});
+  var baseline = sre.MathspeakUtil.nestedSubSuper(
+      node, '', {sup: 'Super', sub: 'Sub'});
   if (!baseline) {
     return 'Baseline';
   }
   return baseline.replace(/Sub$/, 'Subscript').
-    replace(/Super$/, 'Superscript');
+      replace(/Super$/, 'Superscript');
 };
 
 
@@ -594,7 +594,7 @@ sre.MathspeakUtil.baselineVerbose = function(node) {
  * @return {!string} The prefix string.
  */
 sre.MathspeakUtil.baselineBrief = function(node) {
-  var baseline =  sre.MathspeakUtil.nestedSubSuper(
-    node, '', {sup: 'Sup', sub: 'Sub'});
+  var baseline = sre.MathspeakUtil.nestedSubSuper(
+      node, '', {sup: 'Sup', sub: 'Sub'});
   return baseline || 'Base';
 };
