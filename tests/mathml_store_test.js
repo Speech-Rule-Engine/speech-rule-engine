@@ -191,6 +191,9 @@ sre.MathmlStoreTest.prototype.testMathmlMfencedRules = function() {
   this.executeRuleTest(
       '<mfenced open="{" close="}" separators=" "><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-empty');
+  this.executeRuleTest(
+      '<mfenced open="{" close="}" separators=""><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
   this.executeRuleTest('<mfenced open="{" close="}"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-comma');
   this.executeRuleTest(

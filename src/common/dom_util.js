@@ -36,7 +36,7 @@ sre.DomUtil = function() {
 
 /**
  * Converts a NodeList into an array
- * @param {NodeList} nodeList The nodeList.
+ * @param {(NodeList|NamedNodeMap)} nodeList The nodeList.
  * @return {Array} The array of nodes in the nodeList.
  */
 sre.DomUtil.toArray = function(nodeList) {

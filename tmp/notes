@@ -1,0 +1,177 @@
+
+
+sre = require('speech-rule-engine');
+sre.processExpression('<math><mi>A</mi></math>');
+
+
+-----------------------------------------
+
+
+When not mathspeak.default we want to map to default.short before mapping to default.default!
+Define an order of constraints that should be tested.
+
+Need of additional alias functions to shorten rule definition.
+I.e., 
++ Same selector and constraint, but different postcondition
++ Same rule for different dynamic constraint.
+
+-----------------------------------------
+
+
+Need to take more care on number translation with characters etc. Should be
+separated but not evaluated if number or character.
+
+DONE
+
+-----------------------------------------
+
+Dealing with mfenced!
+
+DONE
+
+-----------------------------------------
+
+Dealing with ellipses other then the Unicode ones.
+
+-----------------------------------------
+
+Set notation! Make sure that there is a distinction for { } vs. just a single { or }.
+
+DONE
+
+
+Blank for empty cells.
+
+-----------------------------------------
+
+Mixed numbers: implicit with number and vulgar to 3 and  one-half....
+
+DONE
+
+-----------------------------------------
+
+Deal with fonts vs named letters (e.g., bold bold l)
+
+-----------------------------------------
+
+
+Comments:
+test/1/sample_1_6_1.xml : mstack not yet implemented!
+
+Temporary comments:
+test/2/sample_2_1_1.xml : need roots.
+
+Tests work:
+test/1/sample_1_1_1.xml
+test/1/sample_1_1_2.xml
+test/1/sample_1_1_3.xml
+test/1/sample_1_2_1.xml
+test/1/sample_1_2_2.xml
+test/1/sample_1_2_3.xml
+test/1/sample_1_4_1.xml
+test/1/sample_1_4_2.xml
+test/1/sample_1_4_3.xml
+test/1/sample_1_5_1.xml
+
+test/2/sample_2_3_1.xml
+test/2/sample_2_6_1.xml
+test/2/sample_2_6_2.xml
+test/4/sample_4_2_1.xml
+test/5/sample_5_1_1.xml
+test/5/sample_5_1_2.xml
+test/5/sample_5_1_3.xml
+test/6/sample_6_1_1.xml
+test/6/sample_6_2_1.xml
+test/6/sample_6_2_2.xml
+test/7/sample_7_1_1.xml
+test/7/sample_7_1_2.xml
+test/7/sample_7_2_1.xml
+test/7/sample_7_3_1.xml
+test/7/sample_7_3_2.xml
+test/7/sample_7_4_1.xml
+test/7/sample_7_4_2.xml
+test/7/sample_7_4_3.xml
+test/7/sample_7_5_1.xml
+test/7/sample_7_6_1.xml
+test/8/sample_8_10_1.xml
+test/8/sample_8_10_2.xml
+test/8/sample_8_10_3.xml
+test/8/sample_8_11_1.xml
+test/8/sample_8_1_1.xml
+test/8/sample_8_12_1.xml
+test/8/sample_8_12_2.xml
+test/8/sample_8_1_2.xml
+test/8/sample_8_13_1.xml
+test/8/sample_8_13_2.xml
+test/8/sample_8_2_1.xml
+test/8/sample_8_2_2.xml
+test/8/sample_8_2_3.xml
+test/8/sample_8_3_1.xml
+test/8/sample_8_3_2.xml
+test/8/sample_8_3_3.xml
+test/8/sample_8_4_1.xml
+test/8/sample_8_4_2.xml
+test/8/sample_8_4_3.xml
+test/8/sample_8_4_4.xml
+test/8/sample_8_4_5.xml
+test/8/sample_8_4_6.xml
+test/8/sample_8_4_7.xml
+test/8/sample_8_4_8.xml
+test/8/sample_8_5_10.xml
+test/8/sample_8_5_1.xml
+test/8/sample_8_5_2.xml
+test/8/sample_8_5_3.xml
+test/8/sample_8_5_4.xml
+test/8/sample_8_5_5.xml
+test/8/sample_8_5_6.xml
+test/8/sample_8_5_7.xml
+test/8/sample_8_5_8.xml
+test/8/sample_8_5_9.xml
+test/8/sample_8_6_1.xml
+test/8/sample_8_8_1.xml
+test/8/sample_8_8_2.xml
+test/8/sample_8_9_1.xml
+test/8/sample_8_9_2.xml
+test/9/sample_9_1_1.xml
+test/9/sample_9_1_2.xml
+test/9/sample_9_2_1.xml
+test/9/sample_9_2_2.xml
+test/9/sample_9_2_3.xml
+test/9/sample_9_3_1.xml
+test/9/sample_9_3_2.xml
+test/9/sample_9_3_3.xml
+test/9/sample_9_3_4.xml
+test/10/sample_10_1_1.xml
+test/10/sample_10_2_1.xml
+test/11/sample_11_1_1.xml
+test/11/sample_11_1_2.xml
+test/11/sample_11_1_3.xml
+test/11/sample_11_2_1.xml
+test/11/sample_11_3_1.xml
+test/11/sample_11_3_2.xml
+test/11/sample_11_3_3.xml
+test/11/sample_11_4_1.xml
+test/11/sample_11_4_2.xml
+test/11/sample_11_6_1.xml
+test/11/sample_11_6_2.xml
+test/11/sample_11_6_3.xml
+test/11/sample_11_7_1.xml
+test/11/sample_11_8_1.xml
+test/11/sample_11_8_2.xml
+test/11/sample_11_9_1.xml
+test/12/sample_12_1_1.xml
+test/12/sample_12_1_2.xml
+test/12/sample_12_1_3.xml
+test/13/sample_13_1_1.xml
+test/13/sample_13_1_2.xml
+test/13/sample_13_1_3.xml
+test/13/sample_13_1_4.xml
+test/14/sample_14_1_1.xml
+test/14/sample_14_3_1.xml
+test/15/sample_15_1_1.xml
+test/15/sample_15_2_1.xml
+test/15/sample_15_4_1.xml
+test/15/sample_15_6_1.xml
+
+
+    

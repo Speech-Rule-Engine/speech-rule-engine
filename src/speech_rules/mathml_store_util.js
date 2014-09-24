@@ -21,6 +21,7 @@
 goog.provide('sre.MathmlStoreUtil');
 
 goog.require('sre.Engine');
+goog.require('sre.MathUtil');
 goog.require('sre.XpathUtil');
 
 
@@ -120,41 +121,6 @@ sre.MathmlStoreUtil.checkMathjaxMsup = function(jax) {
 
 
 /**
- * Constructs a closure that returns separators for an MathML mfenced
- * expression.
- * Separators in MathML are represented by a list and used up one by one
- * until the final element is used as the default.
- * Example: a b c d e  and separators [+,-,*]
- * would result in a + b - c * d * e.
- * @param {string} separators String representing a list of mfenced separators.
- * @return {function(): string|null} A closure that returns the next separator
- * for an mfenced expression starting with the first node in nodes.
- */
-sre.MathmlStoreUtil.nextSeparatorFunction = function(separators) {
-  if (separators) {
-    // Mathjax does not expand empty separators.
-    if (separators.match(/^\s+$/)) {
-      return null;
-    } else {
-      var sepList = separators.replace(/\s/g, '')
-          .split('')
-              .filter(function(x) {return x;});
-    }
-  } else {
-    // When no separator is given MathML uses comma as default.
-    var sepList = [','];
-  }
-
-  return function() {
-    if (sepList.length > 1) {
-      return sepList.shift();
-    }
-    return sepList[0];
-  };
-};
-
-
-/**
  * Computes the correct separators for each node.
  * @param {Array.<Node>} nodes A node array.
  * @param {string} context A context string.
@@ -162,7 +128,7 @@ sre.MathmlStoreUtil.nextSeparatorFunction = function(separators) {
  * mfenced expression starting with the first node in nodes.
  */
 sre.MathmlStoreUtil.mfencedSeparators = function(nodes, context) {
-  var nextSeparator = sre.MathmlStoreUtil.nextSeparatorFunction(context);
+  var nextSeparator = sre.MathUtil.nextSeparatorFunction(context);
   return function() {
     return nextSeparator ? nextSeparator() : '';
   };
@@ -187,3 +153,37 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
     return context + (content ? content.textContent : '');
   };
 };
+
+
+/**
+ * Rewrites a font attribute in a node to hide it during application of
+ *    subsequent rules.
+ * @param {!Node} node The node to be modified.
+ * @return {Array.<Node>} The node list containing the modified node only.
+ */
+sre.MathmlStoreUtil.hideFont = function(node) {
+  if (node.hasAttribute('font')) {
+    var value = node.getAttribute('font');
+    node.removeAttribute('font');
+    node.setAttribute('hiddenfont', value);
+  }
+  return [node];
+};
+
+
+/**
+ * Rewrites a hidden font attribute in a node to be visible again as a regular
+ *     font attribute. This is implemented as a custom string function.
+ * @param {!Node} node The node to be modified.
+ * @return {!string} The empty string.
+ */
+sre.MathmlStoreUtil.showFont = function(node) {
+  if (node.hasAttribute('hiddenfont')) {
+    var value = node.getAttribute('hiddenfont');
+    node.removeAttribute('hiddenfont');
+    node.setAttribute('font', value);
+  }
+  return '';
+};
+
+

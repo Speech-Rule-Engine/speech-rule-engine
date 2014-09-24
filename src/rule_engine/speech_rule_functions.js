@@ -146,7 +146,7 @@ sre.SpeechRuleFunctions.Store_.prototype.
   var reg = new RegExp('^' + this.prefix_);
   if (!name.match(reg)) {
     console.log(
-        'FunctionError: Invalid function name. Expected prefix' +
+        'FunctionError: Invalid function name. Expected prefix ' +
                 this.prefix_);
     return false;
   }

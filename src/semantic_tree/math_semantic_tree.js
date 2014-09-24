@@ -29,6 +29,7 @@ goog.provide('sre.SemanticTree.Node');
 
 goog.require('goog.array');
 goog.require('sre.DomUtil');
+goog.require('sre.MathUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticUtil');
 
@@ -404,6 +405,10 @@ sre.SemanticTree.Node.prototype.removeContentNode_ = function(node) {
 sre.SemanticTree.prototype.parseMathml_ = function(mml) {
   var children = sre.DomUtil.toArray(mml.childNodes);
   switch (sre.SemanticUtil.tagName(mml)) {
+    case 'SEMANTICS':
+      if (children.length > 0) {
+        return this.parseMathml_(/** @type {!Element} */(children[0]));
+      }
     case 'MATH':
     case 'MROW':
     case 'MPADDED':
@@ -421,7 +426,9 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
           sre.SemanticAttr.Type.FRACTION,
           [this.parseMathml_(children[0]), this.parseMathml_(children[1])],
           []);
-      newNode.role = sre.SemanticAttr.Role.DIVISION;
+      newNode.role = newNode.childNodes.every(function(x) {
+        return sre.SemanticTree.attrPred_('role', 'INTEGER')(x);
+      }) ? sre.SemanticAttr.Role.VULGAR : sre.SemanticAttr.Role.DIVISION;
       return newNode;
       break;
     case 'MSUB':
@@ -472,6 +479,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MTEXT':
       var leaf = this.makeLeafNode_(mml);
       leaf.type = sre.SemanticAttr.Type.TEXT;
+      sre.SemanticTree.exprFont_(leaf);
       return leaf;
       break;
     // TODO (sorge) Role and font of multi-character and digits unicode strings.
@@ -489,6 +497,8 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
         leaf.type = sre.SemanticAttr.Type.NUMBER;
       }
+      sre.SemanticTree.numberRole_(leaf);
+      sre.SemanticTree.exprFont_(leaf);
       return leaf;
       break;
     case 'MO':
@@ -497,6 +507,11 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
         leaf.type = sre.SemanticAttr.Type.OPERATOR;
       }
       return leaf;
+      break;
+    case 'MFENCED':
+      return this.processMfenced_(
+          mml, this.parseMathmlChildren_(
+          sre.SemanticUtil.purgeNodes(children)));
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
@@ -548,15 +563,28 @@ sre.SemanticTree.prototype.makeEmptyNode_ = function() {
 
 
 /**
+ * Create a node with the given text content. The content is semantically
+ * interpreted.
+ * @param {string} content The text content of the node.
+ * @return {!sre.SemanticTree.Node} The new node.
+ * @private
+ */
+sre.SemanticTree.prototype.makeContentNode_ = function(content) {
+  var node = this.createNode_();
+  node.updateContent_(content);
+  return node;
+};
+
+
+/**
  * Create a leaf node.
  * @param {Node} mml The MathML tree.
  * @return {!sre.SemanticTree.Node} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
-  var node = this.createNode_();
+  var node = this.makeContentNode_(mml.textContent);
   node.mathml = [mml];
-  node.updateContent_(mml.textContent);
   node.font = mml.getAttribute('mathvariant') || node.font;
   return node;
 };
@@ -598,12 +626,12 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
  * @private
  */
 sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
+  nodes = this.getMixedNumbers_(nodes);
   if (nodes.length == 1) {
     return nodes[0];
   }
-  var operator = this.createNode_();
+  var operator = this.makeContentNode_(sre.SemanticAttr.invisibleTimes());
   // For now we assume this is a multiplication using invisible times.
-  operator.updateContent_(sre.SemanticAttr.invisibleTimes());
   var newNode = this.makeInfixNode_(nodes, operator);
   newNode.role = sre.SemanticAttr.Role.IMPLICIT;
   return newNode;
@@ -714,6 +742,42 @@ sre.SemanticTree.prototype.processRow_ = function(nodes) {
 
 
 /**
+ * Finds mixed numbers in a list of single nodes. A mixed number is an integer
+ * followed by a vulgar fraction.
+ * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @private
+ */
+sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
+  var partition = sre.SemanticTree.partitionNodes_(
+      nodes, function(x) {
+        return sre.SemanticTree.attrPred_('type', 'FRACTION')(x) &&
+            sre.SemanticTree.attrPred_('role', 'VULGAR')(x);});
+  if (partition.rel.length === 0) {
+    return nodes;
+  }
+  var result = [];
+  for (var i = 0, rel; rel = partition.rel[i]; i++) {
+    var comp = partition.comp[i];
+    var last = comp.length - 1;
+    if (comp[last] &&
+        sre.SemanticTree.attrPred_('type', 'NUMBER')(comp[last]) &&
+        sre.SemanticTree.attrPred_('role', 'INTEGER')(comp[last])) {
+      var newNode = this.makeBranchNode_(
+          sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
+      newNode.role = sre.SemanticAttr.Role.MIXED;
+      result = result.concat(comp.slice(0, last));
+      result.push(newNode);
+    } else {
+      result = result.concat(comp);
+      result.push(rel);
+    }
+  }
+  return result.concat(partition.comp[partition.comp.length - 1]);
+};
+
+
+/**
  * Seperates text from math content and combines them into a punctuated node,
  * with dummy punctuation invisible comma.
  * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
@@ -741,8 +805,7 @@ sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
       result.push(this.processRow_(nextComp));
     }
   }
-  var comma = this.createNode_();
-  comma.updateContent_(sre.SemanticAttr.invisibleComma());
+  var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
   comma.role = sre.SemanticAttr.Role.DUMMY;
   return [this.makePunctuatedNode_(result, [comma])];
 };
@@ -1559,8 +1622,7 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticTree.integralDxBoundary_(firstNode, nodes[1])) {
-    var comma = this.createNode_();
-    comma.updateContent_(sre.SemanticAttr.invisibleComma());
+    var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
     var intvar = this.makePunctuatedNode_(
         [firstNode, comma, nodes[1]], [comma]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
@@ -1579,8 +1641,7 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
  * @private
  */
 sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
-  var applNode = this.createNode_();
-  applNode.updateContent_(sre.SemanticAttr.functionApplication());
+  var applNode = this.makeContentNode_(sre.SemanticAttr.functionApplication());
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
@@ -1992,3 +2053,123 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
   return function(node) {return node[prop] == getAttr(prop);};
 };
 
+
+/**
+ * Process an mfenced node.
+ * @param {!Element} mfenced The Mfenced node.
+ * @param {!Array.<sre.SemanticTree.Node>} children List of already translated
+ *     children.
+ * @return {!sre.SemanticTree.Node} The semantic node.
+ * @private
+ */
+sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
+  var sepValue = sre.SemanticTree.getAttribute_(mfenced, 'separators', ',');
+  var open = sre.SemanticTree.getAttribute_(mfenced, 'open', '(');
+  var close = sre.SemanticTree.getAttribute_(mfenced, 'close', ')');
+  if (sepValue) {
+    var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
+    var newChildren = [children.shift()];
+    children.forEach(goog.bind(function(child) {
+      newChildren.push(this.makeContentNode_(separators()));
+      newChildren.push(child);
+    }, this));
+    children = newChildren;
+  }
+  // If both open and close are given, we assume those elements to be fences,
+  // regardless of their initial semantic interpretation. However, if only one
+  // of the fences is given we do not explicitly interfere with the semantic
+  // interpretation. In other worde the mfence is ignored and the content is
+  // interpreted as usual. The only effect of the mfence node here is that the
+  // content will be interpreted into a single node.
+  if (open && close) {
+    return this.makeHorizontalFencedNode_(this.makeContentNode_(open),
+                                          this.makeContentNode_(close),
+                                          children);
+  }
+  if (open) {
+    children.unshift(this.makeContentNode_(open));
+  }
+  if (close) {
+    children.push(this.makeContentNode_(close));
+  }
+  return this.processRow_(children);
+};
+
+
+/**
+ * Get an attribute from a node and provide a default if it does not exist.  It
+ * returns null if attribute is empty string or whitespace only.
+ * @param {!Element} node The node from which to retrieve the attribute.
+ * @param {string} attr The attribute.
+ * @param {string} def The default return value.
+ * @return {?string} The value of the attribute or null.
+ * @private
+ */
+sre.SemanticTree.getAttribute_ = function(node, attr, def) {
+  if (!node.hasAttribute(attr)) {
+    return def;
+  }
+  var value = node.getAttribute(attr);
+  if (value.match(/^\s*$/)) {
+    return null;
+  }
+  return value;
+};
+
+
+// TODO (sorge) Clean those predicates up!
+/**
+ * Compute the role of a number if it does not have one already.
+ * @param {!sre.SemanticTree.Node} node The semantic tree node.
+ * @private
+ */
+sre.SemanticTree.numberRole_ = function(node) {
+  if (node.role !== sre.SemanticAttr.Role.UNKNOWN) {
+    return;
+  }
+  var content = sre.SemanticUtil.splitUnicode(node.textContent);
+  var meaning = content.map(sre.SemanticAttr.lookupMeaning);
+  if (meaning.every(function(x) {
+    return (x.type == sre.SemanticAttr.Type.NUMBER &&
+            x.role == sre.SemanticAttr.Role.INTEGER) ||
+        (x.type == sre.SemanticAttr.Type.PUNCTUATION &&
+        x.role == sre.SemanticAttr.Role.COMMA);})) {
+    node.role = sre.SemanticAttr.Role.INTEGER;
+    return; }
+  if (meaning.every(function(x) {
+    return (x.type == sre.SemanticAttr.Type.NUMBER &&
+            x.role == sre.SemanticAttr.Role.INTEGER) ||
+        x.type == sre.SemanticAttr.Type.PUNCTUATION;})) {
+    node.role = sre.SemanticAttr.Role.FLOAT;
+    return; }
+  node.role = sre.SemanticAttr.Role.OTHERNUMBER;
+};
+
+
+/**
+ * Updates the font of a node if a single font can be determined.
+ * @param {!sre.SemanticTree.Node} node The semantic tree node.
+ * @private
+ */
+sre.SemanticTree.exprFont_ = function(node) {
+  if (node.font !== sre.SemanticAttr.Font.UNKNOWN) {
+    return;
+  }
+  var content = sre.SemanticUtil.splitUnicode(node.textContent);
+  var meaning = content.map(sre.SemanticAttr.lookupMeaning);
+  var singleFont = meaning.reduce(
+      function(prev, curr) {
+        if (!prev || !curr.font || curr.font == sre.SemanticAttr.Font.UNKNOWN ||
+            curr.font == prev) {
+          return prev;
+        }
+        if (prev == sre.SemanticAttr.Font.UNKNOWN) {
+          return curr.font;
+        }
+        return null;
+      },
+      sre.SemanticAttr.Font.UNKNOWN);
+  if (singleFont) {
+    node.font = singleFont;
+  }
+};

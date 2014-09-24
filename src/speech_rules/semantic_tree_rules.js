@@ -62,10 +62,24 @@ sre.SemanticTreeRules.addContextFunction_ = goog.bind(
     sre.SemanticTreeRules.mathStore.contextFunctions);
 
 
+/** @private */
+sre.SemanticTreeRules.addCustomQuery_ = goog.bind(
+    sre.SemanticTreeRules.mathStore.customQueries.add,
+    sre.SemanticTreeRules.mathStore.customQueries);
+
+
+/** @private */
+sre.SemanticTreeRules.addCustomString_ = goog.bind(
+    sre.SemanticTreeRules.mathStore.customStrings.add,
+    sre.SemanticTreeRules.mathStore.customStrings);
+
+
 goog.scope(function() {
 var defineRule = sre.SemanticTreeRules.defineRule_;
 var defineRuleAlias = sre.SemanticTreeRules.defineRuleAlias_;
 
+var addCQF = sre.SemanticTreeRules.addCustomQuery_;
+var addCSF = sre.SemanticTreeRules.addCustomString_;
 var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 
 
@@ -76,6 +90,9 @@ var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 sre.SemanticTreeRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+
+  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
+  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -182,6 +199,11 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'number', 'default.default',
       '[n] text()', 'self::number');
+
+  defineRule(
+      'font', 'default.default',
+      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::*', '@font', '@font!="normal"');
 
   defineRule(
       'fraction', 'default.default',
@@ -358,15 +380,15 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   // Limit operator rules
   defineRule(
-      'limboth', 'default.default',
+      'sum-only', 'default.default',
       '[n] children/*[1]; [t] "from"; [n] children/*[2]; [t] "to";' +
-      '[n] children/*[3]', 'self::limboth');
+      '[n] children/*[3]', 'self::limboth', 'self::limboth[@role="sum"]');
 
   defineRule(
-      'sum-only', 'default.default',
+      'limboth', 'default.default',
       '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
-      '[p] (pause 250);',
-      'self::limboth', 'self::limboth[@role="sum"]');
+      '[t] "under"; [n] children/*[3]; [p] (pause 250);',
+      'self::limboth');
 
   defineRule(
       'limlower', 'default.default',
@@ -402,9 +424,17 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'square', 'default.default',
-      '[n] children/*[1]; [t] "square" (pitch:0.35); [p] (pause:300)',
-      'self::superscript', 'children/*[2][text()=2]');
+      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:300)',
+      'self::superscript', 'children/*[2][text()=2]',
+      'name(./children/*[1])!="text"');
 
+  defineRule(
+      'cube', 'default.default',
+      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:300)',
+      'self::superscript', 'children/*[2][text()=3]',
+      'name(./children/*[1])!="text"');
+
+  // TODO (sorge) This is probably unnecessary now!
   defineRule(
       'text-no-mult', 'default.default',
       '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',

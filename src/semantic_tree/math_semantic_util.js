@@ -98,6 +98,26 @@ sre.SemanticUtil.numberToUnicode = function(number) {
 
 
 /**
+ * Splits a unicode string into array of characters. In particular deals
+ * properly with surrogate pairs.
+ * @param {string} str The string to split.
+ * @return {Array.<string>} List of single characters.
+ */
+sre.SemanticUtil.splitUnicode = function(str) {
+  var split = str.split('');
+  var result = [];
+  for (var i = 0, chr; chr = split[i]; i++) {
+    if ('\uD800' <= chr && chr <= '\uDBFF' && split[i + 1]) {
+      result.push(chr + split[++i]);
+    } else {
+      result.push(chr);
+    }
+  }
+  return result;
+};
+
+
+/**
  * Returns the tagname of an element node in upper case.
  * @param {Element} node The node.
  * @return {string} The node's tagname.
