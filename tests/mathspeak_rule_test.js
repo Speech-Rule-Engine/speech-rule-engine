@@ -198,20 +198,20 @@ sre.MathspeakRuleTest.prototype.untestSample_1_6_1 = function() {
 /**
  * Testing Rule 2.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_2_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_2_1_1 = function() {
   var mml = '<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo>' +
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
       '<mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>';
-  this.executeRuleTest(mml, 'd equals StartRoot left-parenthesis upper x' +
+  this.executeRuleTest(mml, 'd equals StartRoot left-parenthesis upper X' +
                        ' minus x right-parenthesis squared minus' +
-                       ' left-parenthesis upper y minus y right-parenthesis' +
+                       ' left-parenthesis upper Y minus y right-parenthesis' +
                        ' squared EndRoot', 'default');
-  this.executeRuleTest(mml, 'd equals StartRoot left-pren upper x minus x' +
-                       ' right-pren squared minus left-pren upper y minus' +
+  this.executeRuleTest(mml, 'd equals StartRoot left-pren upper X minus x' +
+                       ' right-pren squared minus left-pren upper Y minus' +
                        ' y right-pren squared EndRoot', 'brief');
-  this.executeRuleTest(mml, 'd equals Root L pren upper x minus x R pren' +
-                       ' squared minus L pren upper y minus y R pren' +
+  this.executeRuleTest(mml, 'd equals Root L pren upper X minus x R pren' +
+                       ' squared minus L pren upper Y minus y R pren' +
                        ' squared EndRoot', 'sbrief');
 };
 
@@ -560,7 +560,7 @@ sre.MathspeakRuleTest.prototype.untestSample_7_3_2 = function() {
                        ' EndEndFrac EndEndEndFrac EndEndEndEndFrac', 'brief');
   this.executeRuleTest(mml, 'a 0 plus Nest3Frac 1 Nest3Over a 1 plus' +
                        ' NestTwiceFrac 1 NestTwiceOver a 2 plus NestFrac 1' +
-                       ' NestOver ellipsis plus Frac 1 Over a Sub n base' +
+                       ' NestOver ellipsis plus Frac 1 Over a Sub n Base' +
                        ' EndFrac NestEndFrac NestTwiceEndFrac Nest3EndFrac',
                        'sbrief');
 };
@@ -1227,7 +1227,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_13_2 = function() {
 /**
  * Testing Rule 9.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_9_1_1 = function() {
   var mml = '<msqrt><mn>2</mn></msqrt>';
   this.executeRuleTest(mml, 'StartRoot 2 EndRoot', 'default');
   this.executeRuleTest(mml, 'StartRoot 2 EndRoot', 'brief');
@@ -1238,7 +1238,7 @@ sre.MathspeakRuleTest.prototype.untestSample_9_1_1 = function() {
 /**
  * Testing Rule 9.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_1_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_9_1_2 = function() {
   var mml = '<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>';
   this.executeRuleTest(mml, 'StartRoot m plus n EndRoot', 'default');
   this.executeRuleTest(mml, 'StartRoot m plus n EndRoot', 'brief');
@@ -1249,38 +1249,38 @@ sre.MathspeakRuleTest.prototype.untestSample_9_1_2 = function() {
 /**
  * Testing Rule 9.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_2_1 = function() {
-  var mml = '<mRoot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow>' +
-      '<mi>m</mi><mo>+</mo><mi>n</mi></mrow></mRoot>';
-  this.executeRuleTest(mml, 'Rootindex m plus n StartRoot x plus y EndRoot',
+sre.MathspeakRuleTest.prototype.testSample_9_2_1 = function() {
+  var mml = '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow>' +
+      '<mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>';
+  this.executeRuleTest(mml, 'RootIndex m plus n StartRoot x plus y EndRoot',
                        'default');
-  this.executeRuleTest(mml, 'Rootindex m plus n StartRoot x plus y EndRoot',
+  this.executeRuleTest(mml, 'RootIndex m plus n StartRoot x plus y EndRoot',
                        'brief');
-  this.executeRuleTest(mml, 'index m plus n Root x plus y EndRoot', 'sbrief');
+  this.executeRuleTest(mml, 'Index m plus n Root x plus y EndRoot', 'sbrief');
 };
 
 
 /**
  * Testing Rule 9.2, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_2_2 = function() {
-  var mml = '<mrow><mRoot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi>' +
-      '</mRoot><mo>=</mo><msup><mfenced separators="" open="(" close=")">' +
-      '<mRoot><mi>x</mi><mi>n</mi></mRoot></mfenced><mi>m</mi></msup>' +
+sre.MathspeakRuleTest.prototype.testSample_9_2_2 = function() {
+  var mml = '<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi>' +
+      '</mroot><mo>=</mo><msup><mfenced separators="" open="(" close=")">' +
+      '<mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup>' +
       '<mo>=</mo><msup><mi>x</mi><mfrac><mi>m</mi><mi>n</mi></mfrac>' +
       '</msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'Rootindex n StartRoot x Superscript m Baseline' +
-                       ' EndRoot equals left-parenthesis Rootindex n' +
+  this.executeRuleTest(mml, 'RootIndex n StartRoot x Superscript m Baseline' +
+                       ' EndRoot equals left-parenthesis RootIndex n' +
                        ' StartRoot x EndRoot right-parenthesis Superscript m' +
                        ' Baseline equals x Superscript StartFraction m Over' +
                        ' n EndFraction Baseline comma x greater-than 0',
                        'default');
-  this.executeRuleTest(mml, 'Rootindex n StartRoot x Sup m Base EndRoot' +
-                       ' equals left-pren Rootindex n StartRoot x EndRoot' +
+  this.executeRuleTest(mml, 'RootIndex n StartRoot x Sup m Base EndRoot' +
+                       ' equals left-pren RootIndex n StartRoot x EndRoot' +
                        ' right-pren Sup m Base equals x Sup StartFrac m' +
                        ' Over n EndFrac Base comma x greater-than 0', 'brief');
-  this.executeRuleTest(mml, 'index n Root x Sup m Base EndRoot equals L' +
-                       ' pren index n Root x EndRoot R pren Sup m base' +
+  this.executeRuleTest(mml, 'Index n Root x Sup m Base EndRoot equals L' +
+                       ' pren Index n Root x EndRoot R pren Sup m Base' +
                        ' equals x Sup Frac m Over n EndFrac Base comma x' +
                        ' greater-than 0', 'sbrief');
 };
@@ -1289,14 +1289,14 @@ sre.MathspeakRuleTest.prototype.untestSample_9_2_2 = function() {
 /**
  * Testing Rule 9.2, Example 3.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_2_3 = function() {
-  var mml = '<mrow><mRoot><mi>x</mi><mn>3</mn></mRoot><mo>=</mo><msup>' +
+sre.MathspeakRuleTest.prototype.testSample_9_2_3 = function() {
+  var mml = '<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup>' +
       '<mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>';
-  this.executeRuleTest(mml, 'Rootindex 3 StartRoot x EndRoot equals x' +
+  this.executeRuleTest(mml, 'RootIndex 3 StartRoot x EndRoot equals x' +
                        ' Superscript one-third', 'default');
-  this.executeRuleTest(mml, 'Rootindex 3 StartRoot x EndRoot equals x sup' +
+  this.executeRuleTest(mml, 'RootIndex 3 StartRoot x EndRoot equals x Sup' +
                        ' one-third', 'brief');
-  this.executeRuleTest(mml, 'index 3 Root x EndRoot equals x Sup one-third',
+  this.executeRuleTest(mml, 'Index 3 Root x EndRoot equals x Sup one-third',
                        'sbrief');
 };
 
@@ -1304,7 +1304,7 @@ sre.MathspeakRuleTest.prototype.untestSample_9_2_3 = function() {
 /**
  * Testing Rule 9.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_3_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_9_3_1 = function() {
   var mml = '<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></msqrt>';
@@ -1320,20 +1320,20 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_1 = function() {
 /**
  * Testing Rule 9.3, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_3_2 = function() {
-  var mml = '<mrow><mRoot><mRoot><mi>x</mi><mi>m</mi></mRoot><mi>n</mi>' +
-      '</mRoot><mo>=</mo><mRoot><mRoot><mi>x</mi><mi>n</mi></mRoot>' +
-      '<mi>m</mi></mRoot></mrow>';
-  this.executeRuleTest(mml, 'NestedRootindex n NestedStartRoot Rootindex m' +
+sre.MathspeakRuleTest.prototype.testSample_9_3_2 = function() {
+  var mml = '<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi>' +
+      '</mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot>' +
+      '<mi>m</mi></mroot></mrow>';
+  this.executeRuleTest(mml, 'NestedRootIndex n NestedStartRoot RootIndex m' +
                        ' StartRoot x EndRoot NestedEndRoot equals' +
-                       ' NestedRootindex m NestedStartRoot Rootindex n' +
+                       ' NestedRootIndex m NestedStartRoot RootIndex n' +
                        ' StartRoot x EndRoot NestedEndRoot', 'default');
-  this.executeRuleTest(mml, 'NestRootindex n NestStartRoot Rootindex m' +
+  this.executeRuleTest(mml, 'NestRootIndex n NestStartRoot RootIndex m' +
                        ' StartRoot x EndRoot NestEndRoot equals' +
-                       ' NestRootindex m NestStartRoot Rootindex n StartRoot' +
+                       ' NestRootIndex m NestStartRoot RootIndex n StartRoot' +
                        ' x EndRoot NestEndRoot', 'brief');
-  this.executeRuleTest(mml, 'Nestindex n NestRoot index m Root x EndRoot' +
-                       ' NestEndRoot equals Nestindex m NestRoot index n' +
+  this.executeRuleTest(mml, 'NestIndex n NestRoot Index m Root x EndRoot' +
+                       ' NestEndRoot equals NestIndex m NestRoot Index n' +
                        ' Root x EndRoot NestEndRoot', 'sbrief');
 };
 
@@ -1343,27 +1343,27 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_2 = function() {
  */
 sre.MathspeakRuleTest.prototype.untestSample_9_3_3 = function() {
   var mml = '<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn>' +
-      '</mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mRoot><mrow>' +
-      '<mi>x</mi><mRoot><mrow><mi>x</mi><mRoot><mrow><mi>x</mi>' +
-      '<mo>&#x2026;</mo></mrow><mn>5</mn></mRoot></mrow><mn>4</mn></mRoot>' +
-      '</mrow><mn>3</mn></mRoot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
+      '</mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow>' +
+      '<mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi>' +
+      '<mo>&#x2026;</mo></mrow><mn>5</mn></mroot></mrow><mn>4</mn></mroot>' +
+      '</mrow><mn>3</mn></mroot></mrow></msqrt><mo>,</mo><mi>x</mi>' +
       '<mo>∈</mo><mi>ℝ</mi></mrow>';
   this.executeRuleTest(mml, 'x Superscript e minus 2 Baseline equals' +
-                       ' Nested3StartRoot x NestedtwiceRootindex 3' +
-                       ' NestedtwiceStartRoot x NestedRootindex 4' +
-                       ' NestedStartRoot x Rootindex 5 StartRoot x ellipsis' +
-                       ' EndRoot NestedEndRoot NestedtwiceEndRoot' +
+                       ' Nested3StartRoot x NestedTwiceRootIndex 3' +
+                       ' NestedTwiceStartRoot x NestedRootIndex 4' +
+                       ' NestedStartRoot x RootIndex 5 StartRoot x ellipsis' +
+                       ' EndRoot NestedEndRoot NestedTwiceEndRoot' +
                        ' Nested3EndRoot comma x element-of double-struck' +
                        ' upper R', 'default');
   this.executeRuleTest(mml, 'x Sup e minus 2 Base equals Nest3StartRoot x' +
-                       ' NestTwiceRootindex 3 NestTwiceStartRoot x' +
-                       ' NestRootindex 4 NestStartRoot x Rootindex 5' +
+                       ' NestTwiceRootIndex 3 NestTwiceStartRoot x' +
+                       ' NestRootIndex 4 NestStartRoot x RootIndex 5' +
                        ' StartRoot x ellipsis EndRoot NestEndRoot' +
                        ' NestTwiceEndRoot Nest3EndRoot comma x element-of' +
                        ' double-struck upper R', 'brief');
   this.executeRuleTest(mml, 'x Sup e minus 2 Base equals Nest3Root x' +
-                       ' NestTwiceindex 3 NestTwiceRoot x Nestindex 4' +
-                       ' NestRoot x index 5 Root x ellipsis EndRoot' +
+                       ' NestTwiceIndex 3 NestTwiceRoot x NestIndex 4' +
+                       ' NestRoot x Index 5 Root x ellipsis EndRoot' +
                        ' NestEndRoot NestTwiceEndRoot Nest3EndRoot comma x' +
                        ' element-of double-struck upper R', 'sbrief');
 };
@@ -1372,9 +1372,9 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_3 = function() {
 /**
  * Testing Rule 9.3, Example 4.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_3_4 = function() {
-  var mml = '<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo><mfrac>' +
-      '<mrow><msqrt><mn>2</mn></msqrt><mn>2</mn></mrow><mn>2</mn></mfrac>' +
+sre.MathspeakRuleTest.prototype.testSample_9_3_4 = function() {
+  var mml = '<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo>' +
+      '<mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac>' +
       '<mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
       '</mrow></msqrt><mn>2</mn></mfrac><mfrac><msqrt><mrow><mn>2</mn>' +
       '<mo>+</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn>' +
@@ -1384,9 +1384,9 @@ sre.MathspeakRuleTest.prototype.untestSample_9_3_4 = function() {
                        ' StartFraction StartRoot 2 EndRoot Over 2' +
                        ' EndFraction StartFraction NestedStartRoot 2 plus' +
                        ' StartRoot 2 EndRoot NestedEndRoot Over 2' +
-                       ' EndFraction StartFraction NestedtwiceStartRoot 2' +
+                       ' EndFraction StartFraction NestedTwiceStartRoot 2' +
                        ' plus NestedStartRoot 2 plus StartRoot 2 EndRoot' +
-                       ' NestedEndRoot NestedtwiceEndRoot Over 2 EndFraction' +
+                       ' NestedEndRoot NestedTwiceEndRoot Over 2 EndFraction' +
                        ' ellipsis', 'default');
   this.executeRuleTest(mml, 'StartFrac 2 Over pi EndFrac equals StartFrac' +
                        ' StartRoot 2 EndRoot Over 2 EndFrac StartFrac' +
