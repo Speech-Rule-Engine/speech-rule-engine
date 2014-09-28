@@ -21,6 +21,7 @@ goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
+goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -125,6 +126,9 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
   addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
+
+  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
+  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -142,6 +146,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'protected', 'mathspeak.default', '[t] text()',
       'self::*', '@role="protected"');
 
+
+  defineSpecialisedRule(
+      'font', 'default.default', 'mathspeak.default');
 
   // Number rules
   defineRule(
@@ -182,7 +189,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'number-baseline', 'mathspeak.default',
       '[t] "Baseline"; [n] text()',
-      'self::number', 'preceding-sibling::identifier',
+      'self::number', 'not(@hiddenfont)',
+      'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter"] or' +
       ' preceding-sibling::*[@role="greekletter"] or' +
       ' preceding-sibling::*[@role="otherletter"]',
@@ -192,6 +200,22 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Base"; [n] text()');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
+
+
+  defineRule(
+      'number-baseline-font', 'mathspeak.default',
+      '[t] "Baseline"; [t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::number', '@font', '@font!="normal"',
+      'preceding-sibling::identifier',
+      'preceding-sibling::*[@role="latinletter"] or' +
+      ' preceding-sibling::*[@role="greekletter"] or' +
+      ' preceding-sibling::*[@role="otherletter"]',
+      'parent::*/parent::infixop[@role="implicit"]');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Base"; [n] text()');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
 
   // minus sign

@@ -56,8 +56,35 @@ sre.SpeechRuleEngine = function() {
    */
   this.dynamicCstr = {};
   this.dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.STYLE] = 'short';
+
+  /**
+   * Object holding global parameters that can be set by the stores.
+   * @type {Object.<string, string>}
+   * @private
+   */
+  this.globalParameters_ = {};
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
+
+
+/**
+ * Sets a global parameter in the speech rule engine's store.
+ * @param {string} parameter The parameter name.
+ * @param {string} value The parameter's value.
+ */
+sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
+  this.globalParameters_[parameter] = value;
+};
+
+
+/**
+ * Returns the a global parameter if it exists.
+ * @param {string} parameter The parameter name.
+ * @return {string} The parameter's value.
+ */
+sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
+  return this.globalParameters_[parameter];
+};
 
 
 /**

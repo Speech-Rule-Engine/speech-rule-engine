@@ -291,6 +291,9 @@ sre.MathStore.prototype.evaluate_ = function(text) {
   return new sre.AuditoryDescription(
       {
         'text': text,
-        'preprocess': true
+        'preprocess': true,
+        'correction':
+            sre.SpeechRuleEngine.getInstance().getGlobalParameter('remove') ||
+            ''
       });
 };

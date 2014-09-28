@@ -1341,7 +1341,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_3_2 = function() {
 /**
  * Testing Rule 9.3, Example 3.
  */
-sre.MathspeakRuleTest.prototype.untestSample_9_3_3 = function() {
+sre.MathspeakRuleTest.prototype.testSample_9_3_3 = function() {
   var mml = '<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn>' +
       '</mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow>' +
       '<mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi>' +
