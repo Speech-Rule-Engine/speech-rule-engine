@@ -434,6 +434,12 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::superscript', 'children/*[2][text()=3]',
       'name(./children/*[1])!="text"');
 
+  defineRule(
+      'root', 'default.default',
+      '[t] "root of order"; [n] children/*[1];' +
+          '[t] "over"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+      'self::root');
+
   // TODO (sorge) This is probably unnecessary now!
   defineRule(
       'text-no-mult', 'default.default',

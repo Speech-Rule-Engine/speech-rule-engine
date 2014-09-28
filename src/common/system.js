@@ -113,6 +113,23 @@ sre.System.prototype.preprocessString_ = function(text) {
 
 
 /**
+ * Applies a corrective string to the given description text.
+ * @param {string} text The original description text.
+ * @param {string} correction The correction string to be applied.
+ * @return {string} The cleaned up string.
+ * @private
+ */
+sre.System.prototype.processCorrections_ = function(text, correction) {
+  if (!correction || !text) {
+    return text;
+  }
+  var correctionComp = correction.split(/ |-/);
+  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  return text.replace(regExp, '');
+};
+
+
+/**
  * Preprocess the text of an auditory description if necessary.
  * @param {sre.AuditoryDescription} descr Description representing a single
  *     math expression.
@@ -120,7 +137,8 @@ sre.System.prototype.preprocessString_ = function(text) {
  */
 sre.System.prototype.preprocessDescription_ = function(descr) {
   if (descr.preprocess) {
-    descr.text = this.preprocessString_(descr.text);
+    descr.text = this.processCorrections_(
+        this.preprocessString_(descr.text), descr.correction);
     descr.preprocess = false;
   }
 };

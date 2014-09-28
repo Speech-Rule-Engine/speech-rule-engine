@@ -33,6 +33,7 @@ goog.require('sre.Engine');
  *          text: (string),
  *          userValue: (undefined|string),
  *          annotation: (undefined|string),
+ *          correction: (undefined|string),
  *          personality: (undefined|Object),
  *          preprocess: (undefined|boolean)}} kwargs The arguments for this
  *  description.
@@ -43,7 +44,10 @@ goog.require('sre.Engine');
  *     titles, labels, etc.
  *  userValue The text that the user has entered.
  *  annotation The role and state of the object.
+ *  correction A string that can be exploited as correction of the text.
  *  personality Optional TTS personality to use for the text.
+ *  preprocess Flag indicating if the text needs to be preprocessed for
+ *     non-ASCII characters.
  * @constructor
  */
 sre.AuditoryDescription = function(kwargs) {
@@ -51,6 +55,7 @@ sre.AuditoryDescription = function(kwargs) {
   this.text = kwargs.text ? kwargs.text : '';
   this.userValue = kwargs.userValue ? kwargs.userValue : '';
   this.annotation = kwargs.annotation ? kwargs.annotation : '';
+  this.correction = kwargs.correction ? kwargs.correction : '';
   this.personality = kwargs.personality;
   this.preprocess = !!kwargs.preprocess;
 };

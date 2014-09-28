@@ -3,3 +3,6 @@ lib/
 *.bak
 *~
 deps.js
+samples/mathspeak/
+src/closure-library
+*.html

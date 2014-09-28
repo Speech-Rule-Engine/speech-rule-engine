@@ -443,7 +443,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MROOT':
       return this.makeBranchNode_(
           sre.SemanticAttr.Type.ROOT,
-          [this.parseMathml_(children[0]), this.parseMathml_(children[1])],
+          [this.parseMathml_(children[1]), this.parseMathml_(children[0])],
           []);
       break;
     case 'MSQRT':

@@ -21,6 +21,7 @@ goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
+goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -109,12 +110,25 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
+  // Radical function.
+  addCSF('CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose);
+  addCSF('CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose);
+  addCSF('CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose);
+  addCSF('CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief);
+  addCSF('CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief);
+  addCSF('CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief);
+  addCSF('CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief);
+  addCSF('CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief);
+
   addCSF('CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
   addCSF('CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
   addCSF('CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
   addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
   addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
+
+  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
+  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -132,6 +146,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'protected', 'mathspeak.default', '[t] text()',
       'self::*', '@role="protected"');
 
+
+  defineSpecialisedRule(
+      'font', 'default.default', 'mathspeak.default');
 
   // Number rules
   defineRule(
@@ -172,7 +189,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'number-baseline', 'mathspeak.default',
       '[t] "Baseline"; [n] text()',
-      'self::number', 'preceding-sibling::identifier',
+      'self::number', 'not(@hiddenfont)',
+      'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter"] or' +
       ' preceding-sibling::*[@role="greekletter"] or' +
       ' preceding-sibling::*[@role="otherletter"]',
@@ -182,6 +200,22 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Base"; [n] text()');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
+
+
+  defineRule(
+      'number-baseline-font', 'mathspeak.default',
+      '[t] "Baseline"; [t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::number', '@font', '@font!="normal"',
+      'preceding-sibling::identifier',
+      'preceding-sibling::*[@role="latinletter"] or' +
+      ' preceding-sibling::*[@role="greekletter"] or' +
+      ' preceding-sibling::*[@role="otherletter"]',
+      'parent::*/parent::infixop[@role="implicit"]');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Base"; [n] text()');
+  defineSpecialisedRule(
+      'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
 
   // minus sign
@@ -290,6 +324,47 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'vulgar-fraction', 'mathspeak.default', 'mathspeak.sbrief');
 
+  // Radical rules
+
+  defineRule(
+      'sqrt', 'mathspeak.default',
+      '[t] CSFopenRadicalVerbose; [n] children/*[1];' +
+          ' [t] CSFcloseRadicalVerbose',
+      'self::sqrt');
+
+  defineRule(
+      'sqrt', 'mathspeak.brief',
+      '[t] CSFopenRadicalBrief; [n] children/*[1];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::sqrt');
+
+  defineRule(
+      'sqrt', 'mathspeak.sbrief',
+      '[t] CSFopenRadicalSbrief; [n] children/*[1];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::sqrt');
+
+  defineRule(
+      'root', 'mathspeak.default',
+      '[t] CSFindexRadicalVerbose; [n] children/*[1];' +
+          '[t] CSFopenRadicalVerbose; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalVerbose',
+      'self::root');
+
+  defineRule(
+      'root', 'mathspeak.brief',
+      '[t] CSFindexRadicalBrief; [n] children/*[1];' +
+          '[t] CSFopenRadicalBrief; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::root');
+
+  defineRule(
+      'root', 'mathspeak.sbrief',
+      '[t] CSFindexRadicalSbrief; [n] children/*[1];' +
+          '[t] CSFopenRadicalSbrief; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::root');
+
   // Limits
   defineRule(
       'limboth', 'mathspeak.default',
@@ -321,6 +396,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] text(); [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
+
+  defineRule(
+      'multi-equality', 'mathspeak.default',
+      '[m] ./children/* (separator:./text())',
+      'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   // Subscripts
   defineRule(
@@ -363,7 +443,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'subscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRuleAlias(
       'subscript-baseline',
-      'self::subscript', 'not(following-sibling::*)', 'ancestor::fenced'
+      'self::subscript', 'not(following-sibling::*)',
+      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated'
   ); // This rule might be too simple.
 
 
@@ -392,19 +473,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRuleAlias(
       'superscript-baseline',
-      'self::superscript', 'not(following-sibling::*)', 'ancestor::fenced'
+      'self::superscript', 'not(following-sibling::*)',
+      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated'
   );  // This rule might be too simple.
-
-  // defineRule(
-  //     'superscript-empty', 'mathspeak.default',
-  //     '[n] children/*[2]; [t] CSFbaselineVerbose',
-  //     'self::superscript', 'following-sibling::*',
-  //     'name(children/*[1])="empty"');
-  // defineSpecialisedRule(
-  //     'superscript-empty', 'mathspeak.default', 'mathspeak.brief',
-  //     '[n] children/*[2]; [t] CSFbaselineBrief');
-  // defineSpecialisedRule(
-  //     'superscript-empty', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Square
   defineRule(

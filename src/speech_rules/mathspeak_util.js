@@ -80,7 +80,7 @@ sre.MathspeakUtil.nestingBarriers = [
 
 /**
  * Dictionary to store the nesting depth of each node.
- * @type {Object.<Node, number>}
+ * @type {Object.<string, Object.<Node, number>>}
  */
 sre.MathspeakUtil.nestingDepth = {};
 
@@ -88,6 +88,7 @@ sre.MathspeakUtil.nestingDepth = {};
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
  * node.
+ * @param {string} type The type of nesting depth.
  * @param {!Node} node The XML node to check.
  * @param {Array.<string>} tags The tags to be considered for the nesting depth.
  * @param {Array.<string>=} opt_barrierTags Optional list of tags that serve as
@@ -99,13 +100,16 @@ sre.MathspeakUtil.nestingDepth = {};
  *     considered as barrier, otherwise tags and attributes will be considered.
  * @return {!number} The nesting depth.
  */
-sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barrierTags,
+sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
                                              opt_barrierAttrs, opt_func) {
   opt_barrierTags = opt_barrierTags || sre.MathspeakUtil.nestingBarriers;
   opt_barrierAttrs = opt_barrierAttrs || {};
   opt_func = opt_func || function(node) { return false; };
-  if (sre.MathspeakUtil.nestingDepth[node]) {
-    return sre.MathspeakUtil.nestingDepth[node];
+  if (!sre.MathspeakUtil.nestingDepth[type]) {
+    sre.MathspeakUtil.nestingDepth[type] = {};
+  }
+  if (sre.MathspeakUtil.nestingDepth[type][node]) {
+    return sre.MathspeakUtil.nestingDepth[type][node];
   }
   if (opt_func(node) || tags.indexOf(node.tagName) < 0) {
     return 0;
@@ -113,7 +117,7 @@ sre.MathspeakUtil.getNestingDepth = function(node, tags, opt_barrierTags,
   var depth = sre.MathspeakUtil.computeNestingDepth_(
       node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
       opt_barrierAttrs, opt_func, 0);
-  sre.MathspeakUtil.nestingDepth[node] = depth;
+  sre.MathspeakUtil.nestingDepth[type][node] = depth;
   return depth;
 };
 
@@ -185,7 +189,7 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
  */
 sre.MathspeakUtil.fractionNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-      node, ['fraction'], sre.MathspeakUtil.nestingBarriers, [],
+      'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, [],
       function(node) {
         return sre.MathspeakUtil.vulgarFractionSmall(node);
       }
@@ -598,3 +602,114 @@ sre.MathspeakUtil.baselineBrief = function(node) {
       node, '', {sup: 'Sup', sub: 'Sub'});
   return baseline || 'Base';
 };
+
+
+// TODO (sorge) Refactor the following to functions wrt. style attribute.
+/**
+ * Computes and returns the nesting depth of radical nodes.
+ * @param {!Node} node The radical node.
+ * @return {!number} The nesting depth. 0 if the node is not a radical.
+ */
+sre.MathspeakUtil.radicalNestingDepth = function(node) {
+  return sre.MathspeakUtil.getNestingDepth(
+      'radical', node, ['sqrt', 'root'], sre.MathspeakUtil.nestingBarriers, []);
+};
+
+
+/**
+ * Nested string for radicals in Mathspeak mode putting together the nesting
+ * depth with a pre- and postfix string that depends on the speech style.
+ * @param {!Node} node The radical node.
+ * @param {!string} prefix A prefix string.
+ * @param {!string} postfix A postfix string.
+ * @return {!string} The opening string.
+ */
+sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
+  var depth = sre.MathspeakUtil.radicalNestingDepth(node);
+  if (depth === 1) {
+    return postfix;
+  }
+  return prefix + sre.MathspeakUtil.nestingToString(depth - 1) + postfix;
+};
+
+
+/**
+ * Opening string for radicals in Mathspeak verbose mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The opening string.
+ */
+sre.MathspeakUtil.openingRadicalVerbose = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nested', 'StartRoot');
+};
+
+
+/**
+ * Closing string for radicals in Mathspeak verbose mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The closing string.
+ */
+sre.MathspeakUtil.closingRadicalVerbose = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nested', 'EndRoot');
+};
+
+
+/**
+ * Middle string for radicals in Mathspeak verbose mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The middle string.
+ */
+sre.MathspeakUtil.indexRadicalVerbose = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nested', 'RootIndex');
+};
+
+
+/**
+ * Opening string for radicals in Mathspeak brief mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The opening string.
+ */
+sre.MathspeakUtil.openingRadicalBrief = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'StartRoot');
+};
+
+
+/**
+ * Closing string for radicals in Mathspeak brief mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The closing string.
+ */
+sre.MathspeakUtil.closingRadicalBrief = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'EndRoot');
+};
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The middle string.
+ */
+sre.MathspeakUtil.indexRadicalBrief = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'RootIndex');
+};
+
+
+/**
+ * Opening string for radicals in Mathspeak superbrief mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The opening string.
+ */
+sre.MathspeakUtil.openingRadicalSbrief = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'Root');
+};
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param {!Node} node The radical node.
+ * @return {!string} The middle string.
+ */
+sre.MathspeakUtil.indexRadicalSbrief = function(node) {
+  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'Index');
+};
+
+

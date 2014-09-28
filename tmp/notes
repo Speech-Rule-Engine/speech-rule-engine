@@ -40,7 +40,18 @@ Set notation! Make sure that there is a distinction for { } vs. just a single { 
 DONE
 
 
-Blank for empty cells.
+-----------------------------------------
+
+Layout elements: Blank for empty cells.
+
+
+-----------------------------------------
+
+Empty bases in sub and superscripts
+Simultaneous sub + super 
+Multiscript nodes 
+
+Deal with those in semantic tree.
 
 -----------------------------------------
 

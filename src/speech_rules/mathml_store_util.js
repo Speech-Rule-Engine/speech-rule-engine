@@ -165,6 +165,7 @@ sre.MathmlStoreUtil.hideFont = function(node) {
   if (node.hasAttribute('font')) {
     var value = node.getAttribute('font');
     node.removeAttribute('font');
+    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', value);
     node.setAttribute('hiddenfont', value);
   }
   return [node];
@@ -181,6 +182,7 @@ sre.MathmlStoreUtil.showFont = function(node) {
   if (node.hasAttribute('hiddenfont')) {
     var value = node.getAttribute('hiddenfont');
     node.removeAttribute('hiddenfont');
+    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', '');
     node.setAttribute('font', value);
   }
   return '';
