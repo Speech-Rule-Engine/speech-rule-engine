@@ -395,17 +395,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::superscript', 'not(following-sibling::*)', 'ancestor::fenced'
   );  // This rule might be too simple.
 
-  // defineRule(
-  //     'superscript-empty', 'mathspeak.default',
-  //     '[n] children/*[2]; [t] CSFbaselineVerbose',
-  //     'self::superscript', 'following-sibling::*',
-  //     'name(children/*[1])="empty"');
-  // defineSpecialisedRule(
-  //     'superscript-empty', 'mathspeak.default', 'mathspeak.brief',
-  //     '[n] children/*[2]; [t] CSFbaselineBrief');
-  // defineSpecialisedRule(
-  //     'superscript-empty', 'mathspeak.brief', 'mathspeak.sbrief');
-
   // Square
   defineRule(
       'square', 'mathspeak.default',
