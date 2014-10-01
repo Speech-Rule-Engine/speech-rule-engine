@@ -151,7 +151,7 @@
         "alternative": "slash"
       },
       "mathspeak": {
-        "default": "full-stop"
+        "default": "slash"
       }
     },
     "key": "002F"
