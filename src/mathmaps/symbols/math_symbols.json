@@ -501,7 +501,7 @@
         "short": "degree"
       },
       "mathspeak": {
-        "default": "degree-sign"
+        "default": "degree"
       }
     },
     "key": "00B0"
