@@ -583,6 +583,9 @@ sre.SemanticTree.prototype.makeContentNode_ = function(content) {
  * @private
  */
 sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
+  if (!mml.textContent) {
+    return this.makeEmptyNode_();
+  }
   var node = this.makeContentNode_(mml.textContent);
   node.mathml = [mml];
   node.font = mml.getAttribute('mathvariant') || node.font;
@@ -712,6 +715,9 @@ sre.SemanticTree.prototype.makePrefixNode_ = function(node, prefixes) {
  * @private
  */
 sre.SemanticTree.prototype.makePostfixNode_ = function(node, postfixes) {
+  if (postfixes.length === 0) {
+    return node;
+  }
   return this.makeConcatNode_(
       node, postfixes, sre.SemanticAttr.Type.POSTFIXOP);
 };
@@ -729,6 +735,9 @@ sre.SemanticTree.prototype.makePostfixNode_ = function(node, postfixes) {
  * @private
  */
 sre.SemanticTree.prototype.processRow_ = function(nodes) {
+  nodes = nodes.filter(function(x) {
+    return !sre.SemanticTree.attrPred_('type', 'EMPTY')(x);
+  });
   if (nodes.length == 0) {
     return this.makeEmptyNode_();
   }
@@ -2066,7 +2075,7 @@ sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
   var sepValue = sre.SemanticTree.getAttribute_(mfenced, 'separators', ',');
   var open = sre.SemanticTree.getAttribute_(mfenced, 'open', '(');
   var close = sre.SemanticTree.getAttribute_(mfenced, 'close', ')');
-  if (sepValue) {
+  if (sepValue && children.length > 0) {
     var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
     var newChildren = [children.shift()];
     children.forEach(goog.bind(function(child) {
