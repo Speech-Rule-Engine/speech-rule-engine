@@ -151,7 +151,7 @@
         "alternative": "slash"
       },
       "mathspeak": {
-        "default": "full-stop"
+        "default": "slash"
       }
     },
     "key": "002F"
@@ -501,7 +501,7 @@
         "short": "degree"
       },
       "mathspeak": {
-        "default": "degree-sign"
+        "default": "degree"
       }
     },
     "key": "00B0"
@@ -1995,7 +1995,7 @@
         "default": "asterisk operator"
       },
       "mathspeak": {
-        "default": "asterisk-operator"
+        "default": "asterisk"
       }
     },
     "key": "2217"
@@ -2007,7 +2007,7 @@
         "default": "ring operator"
       },
       "mathspeak": {
-        "default": "ring-operator"
+        "default": "ring"
       }
     },
     "key": "2218"
@@ -2019,7 +2019,7 @@
         "default": "bullet operator"
       },
       "mathspeak": {
-        "default": "bullet-operator"
+        "default": "bullet"
       }
     },
     "key": "2219"
@@ -2404,7 +2404,7 @@
         "default": "tilde operator"
       },
       "mathspeak": {
-        "default": "tilde-operator"
+        "default": "tilde"
       }
     },
     "key": "223C"
@@ -3531,7 +3531,7 @@
         "default": "circled dot operator"
       },
       "mathspeak": {
-        "default": "circled-dot-operator"
+        "default": "circled-dot"
       }
     },
     "key": "2299"
@@ -3543,7 +3543,7 @@
         "default": "circled ring operator"
       },
       "mathspeak": {
-        "default": "circled-ring-operator"
+        "default": "circled-ring"
       }
     },
     "key": "229A"
@@ -3555,7 +3555,7 @@
         "default": "circled asterisk operator"
       },
       "mathspeak": {
-        "default": "circled-asterisk-operator"
+        "default": "circled-asterisk"
       }
     },
     "key": "229B"
@@ -3627,7 +3627,7 @@
         "default": "squared dot operator"
       },
       "mathspeak": {
-        "default": "squared-dot-operator"
+        "default": "squared-dot"
       }
     },
     "key": "22A1"
@@ -4008,7 +4008,7 @@
         "default": "diamond operator"
       },
       "mathspeak": {
-        "default": "diamond-operator"
+        "default": "diamond"
       }
     },
     "key": "22C4"
@@ -4020,7 +4020,7 @@
         "default": "dot operator"
       },
       "mathspeak": {
-        "default": "dot-operator"
+        "default": "dot"
       }
     },
     "key": "22C5"
@@ -4032,7 +4032,7 @@
         "default": "star operator"
       },
       "mathspeak": {
-        "default": "star-operator"
+        "default": "star"
       }
     },
     "key": "22C6"
@@ -6111,7 +6111,7 @@
         "default": "reverse solidus operator"
       },
       "mathspeak": {
-        "default": "reverse-solidus-operator"
+        "default": "reverse-solidus"
       }
     },
     "key": "29F5"
@@ -6213,7 +6213,7 @@
         "default": "n ary circled dot operator"
       },
       "mathspeak": {
-        "default": "n-ary-circled-dot-operator"
+        "default": "n-ary-circled-dot"
       }
     },
     "key": "2A00"
@@ -6225,7 +6225,7 @@
         "default": "n ary circled plus operator"
       },
       "mathspeak": {
-        "default": "n-ary-circled-plus-operator"
+        "default": "n-ary-circled-plus"
       }
     },
     "key": "2A01"
@@ -6237,7 +6237,7 @@
         "default": "n ary circled times operator"
       },
       "mathspeak": {
-        "default": "n-ary-circled-times-operator"
+        "default": "n-ary-circled-times"
       }
     },
     "key": "2A02"
@@ -6249,7 +6249,7 @@
         "default": "n ary union operator with dot"
       },
       "mathspeak": {
-        "default": "n-ary-union-operator-with-dot"
+        "default": "n-ary-union-with-dot"
       }
     },
     "key": "2A03"
@@ -6261,7 +6261,7 @@
         "default": "n ary union operator with plus"
       },
       "mathspeak": {
-        "default": "n-ary-union-operator-with-plus"
+        "default": "n-ary-union-with-plus"
       }
     },
     "key": "2A04"
@@ -6273,7 +6273,7 @@
         "default": "n ary square intersection operator"
       },
       "mathspeak": {
-        "default": "n-ary-square-intersection-operator"
+        "default": "n-ary-square-intersection"
       }
     },
     "key": "2A05"
@@ -6285,7 +6285,7 @@
         "default": "n ary square union operator"
       },
       "mathspeak": {
-        "default": "n-ary-square-union-operator"
+        "default": "n-ary-square-union"
       }
     },
     "key": "2A06"
@@ -6297,7 +6297,7 @@
         "default": "two logical and operator"
       },
       "mathspeak": {
-        "default": "two-logical-and-operator"
+        "default": "two-logical-and"
       }
     },
     "key": "2A07"
@@ -6309,7 +6309,7 @@
         "default": "two logical or operator"
       },
       "mathspeak": {
-        "default": "two-logical-or-operator"
+        "default": "two-logical-or"
       }
     },
     "key": "2A08"
@@ -6321,7 +6321,7 @@
         "default": "n ary times operator"
       },
       "mathspeak": {
-        "default": "n-ary-times-operator"
+        "default": "n-ary-times"
       }
     },
     "key": "2A09"
@@ -6357,7 +6357,7 @@
         "default": "quadruple integral operator"
       },
       "mathspeak": {
-        "default": "quadruple-integral-operator"
+        "default": "quadruple-integral"
       }
     },
     "key": "2A0C"
@@ -6465,7 +6465,7 @@
         "default": "integral around a point operator"
       },
       "mathspeak": {
-        "default": "integral-around-a-point-operator"
+        "default": "integral-around-a-point"
       }
     },
     "key": "2A15"
@@ -6477,7 +6477,7 @@
         "default": "quaternion integral operator"
       },
       "mathspeak": {
-        "default": "quaternion-integral-operator"
+        "default": "quaternion-integral"
       }
     },
     "key": "2A16"
@@ -6559,7 +6559,7 @@
         "default": "large left triangle operator"
       },
       "mathspeak": {
-        "default": "large-left-triangle-operator"
+        "default": "large-left-triangle"
       }
     },
     "key": "2A1E"
@@ -7477,7 +7477,7 @@
         "default": "tilde operator with dot above"
       },
       "mathspeak": {
-        "default": "tilde-operator-with-dot-above"
+        "default": "tilde-with-dot-above"
       }
     },
     "key": "2A6A"
@@ -7489,7 +7489,7 @@
         "default": "tilde operator with rising dots"
       },
       "mathspeak": {
-        "default": "tilde-operator-with-rising-dots"
+        "default": "tilde-with-rising-dots"
       }
     },
     "key": "2A6B"
@@ -7589,7 +7589,7 @@
         "short": "equals above tilde operator"
       },
       "mathspeak": {
-        "default": "equals-above-tilde-operator"
+        "default": "equals-above-tilde"
       }
     },
     "key": "2A73"
@@ -8599,7 +8599,7 @@
         "default": "subset of above tilde operator"
       },
       "mathspeak": {
-        "default": "subset-of-above-tilde-operator"
+        "default": "subset-of-above-tilde"
       }
     },
     "key": "2AC7"
@@ -8611,7 +8611,7 @@
         "default": "superset of above tilde operator"
       },
       "mathspeak": {
-        "default": "superset-of-above-tilde-operator"
+        "default": "superset-of-above-tilde"
       }
     },
     "key": "2AC8"
@@ -8671,7 +8671,7 @@
         "default": "square left open box operator"
       },
       "mathspeak": {
-        "default": "square-left-open-box-operator"
+        "default": "square-left-open-box"
       }
     },
     "key": "2ACD"
@@ -8683,7 +8683,7 @@
         "default": "square right open box operator"
       },
       "mathspeak": {
-        "default": "square-right-open-box-operator"
+        "default": "square-right-open-box"
       }
     },
     "key": "2ACE"
@@ -9121,7 +9121,7 @@
         "default": "parallel with tilde operator"
       },
       "mathspeak": {
-        "default": "parallel-with-tilde-operator"
+        "default": "parallel-with-tilde"
       }
     },
     "key": "2AF3"
@@ -9157,7 +9157,7 @@
         "default": "triple colon operator"
       },
       "mathspeak": {
-        "default": "triple-colon-operator"
+        "default": "triple-colon"
       }
     },
     "key": "2AF6"
@@ -9229,7 +9229,7 @@
         "default": "large triple vertical bar operator"
       },
       "mathspeak": {
-        "default": "large-triple-vertical-bar-operator"
+        "default": "large-triple-vertical-bar"
       }
     },
     "key": "2AFC"
@@ -9241,7 +9241,7 @@
         "default": "double solidus operator"
       },
       "mathspeak": {
-        "default": "double-solidus-operator"
+        "default": "double-solidus"
       }
     },
     "key": "2AFD"
