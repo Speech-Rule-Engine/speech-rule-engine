@@ -191,9 +191,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Baseline"; [n] text()',
       'self::number', 'not(@hiddenfont)',
       'preceding-sibling::identifier',
-      'preceding-sibling::*[@role="latinletter"] or' +
-      ' preceding-sibling::*[@role="greekletter"] or' +
-      ' preceding-sibling::*[@role="otherletter"]',
+      'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
+      ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.default', 'mathspeak.brief',
@@ -207,9 +206,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Baseline"; [t] @font; [n] CQFhideFont; [t] CSFshowFont',
       'self::number', '@font', '@font!="normal"',
       'preceding-sibling::identifier',
-      'preceding-sibling::*[@role="latinletter"] or' +
-      ' preceding-sibling::*[@role="greekletter"] or' +
-      ' preceding-sibling::*[@role="otherletter"]',
+      'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
+      ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
@@ -371,6 +369,23 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
       '[t] "Overscript"; [n] children/*[3]; [t] "Endscripts";',
       'self::limboth');
+  defineRule(
+      'limlower', 'mathspeak.default',
+      '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
+      '[t] "Endscripts"', 'self::limlower');
+  defineRule(
+      'limupper', 'mathspeak.default',
+      '[n] children/*[1]; [t] "Overscript"; [n] children/*[2];' +
+      '[t] "Endscripts"', 'self::limupper');
+  defineRule(
+      'limfunc', 'mathspeak.default',
+      '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
+      '[t] "Endscripts"', 'self::underscore', '@role="limit function"');
+  defineSpecialisedRule(
+      'limfunc', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'limfunc', 'mathspeak.default', 'mathspeak.sbrief');
+
 
   defineRule(
       'integral', 'mathspeak.default',
@@ -499,6 +514,116 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.sbrief');
 
+  // Modifiers
+  defineRule(
+      'overscore', 'mathspeak.default',
+      '[t] "ModifyingAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
+      'self::overscore'
+  );
+  defineSpecialisedRule(
+      'overscore', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "ModAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
+  );
+  defineSpecialisedRule(
+      'overscore', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'double-overscore', 'mathspeak.default',
+      '[t] "ModifyingAbove Above"; [n] children/*[1]; [t] "With";' +
+      ' [n] children/*[2]',
+      'self::overscore', 'name(children/*[1])="overscore"'
+  );
+  defineSpecialisedRule(
+      'double-overscore', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "ModAbove Above"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
+  );
+  defineSpecialisedRule(
+      'double-overscore', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'underscore', 'mathspeak.default',
+      '[t] "ModifyingBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
+      'self::underscore'
+  );
+  defineSpecialisedRule(
+      'underscore', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "ModBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
+  );
+  defineSpecialisedRule(
+      'underscore', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'double-underscore', 'mathspeak.default',
+      '[t] "ModifyingBelow Below"; [n] children/*[1]; [t] "With";' +
+      ' [n] children/*[2]',
+      'self::underscore', 'name(children/*[1])="underscore"'
+  );
+  defineSpecialisedRule(
+      'double-underscore', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "ModBelow Below"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
+  );
+  defineSpecialisedRule(
+      'double-underscore', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'overbar', 'mathspeak.default',
+      '[n] children/*[1]; [t] "overbar"',
+      'self::overscore',
+      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
+      ' or text()="\u005F"]'
+  );
+  defineSpecialisedRule(
+      'overbar', 'mathspeak.default', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "overBar"'
+  );
+  defineSpecialisedRule(
+      'overbar', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'underbar', 'mathspeak.default',
+      '[n] children/*[1]; [t] "underbar"',
+      'self::underscore',
+      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
+      ' or text()="\u005F"]'
+  );
+  defineSpecialisedRule(
+      'underbar', 'mathspeak.default', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "underBar"'
+  );
+  defineSpecialisedRule(
+      'underbar', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'overtilde', 'mathspeak.default',
+      '[n] children/*[1]; [t] "overTilde"',
+      'self::overscore',
+      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
+      ' or text()="\uFF5E"]'
+  );
+  defineSpecialisedRule(
+      'overtilde', 'mathspeak.default', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "overtilde"'
+  );
+  defineSpecialisedRule(
+      'overtilde', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'undertilde', 'mathspeak.default',
+      '[n] children/*[1]; [t] "underTilde"',
+      'self::underscore',
+      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
+      ' or text()="\uFF5E"]'
+  );
+  defineSpecialisedRule(
+      'undertilde', 'mathspeak.default', 'mathspeak.brief',
+      '[n] children/*[1]; [t] "undertilde"'
+  );
+  defineSpecialisedRule(
+      'undertilde', 'mathspeak.brief', 'mathspeak.sbrief');
 };
 
 });  // goog.scope

@@ -117,6 +117,9 @@
      "default": {
        "default": "limit",
        "short": "lim"
+     },
+     "mathspeak": {
+       "default": "limit"
      }
    },
    "key": "lim",

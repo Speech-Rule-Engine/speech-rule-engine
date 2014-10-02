@@ -257,7 +257,7 @@
         "short": "hat"
       },
       "mathspeak": {
-        "default": "spacing-circumflex"
+        "default": "caret"
       }
     },
     "key": "005E"
@@ -270,7 +270,7 @@
         "alternative": "spacing underscore"
       },
       "mathspeak": {
-        "default": "spacing-underscore"
+        "default": "bar"
       }
     },
     "key": "005F"
@@ -284,7 +284,7 @@
         "short": "grave"
       },
       "mathspeak": {
-        "default": "spacing-grave"
+        "default": "grave"
       }
     },
     "key": "0060"
@@ -410,7 +410,7 @@
         "short": "double dot"
       },
       "mathspeak": {
-        "default": "double-dot"
+        "default": "two-dots"
       }
     },
     "key": "00A8"
@@ -488,7 +488,7 @@
         "alternative": "spacing macron"
       },
       "mathspeak": {
-        "default": "spacing-macron"
+        "default": "bar"
       }
     },
     "key": "00AF"
@@ -529,7 +529,7 @@
         "short": "acute"
       },
       "mathspeak": {
-        "default": "spacing-acute"
+        "default": "acute"
       }
     },
     "key": "00B4"
@@ -581,7 +581,7 @@
         "alternative": "spacing cedilla"
       },
       "mathspeak": {
-        "default": "spacing-cedilla"
+        "default": "cedilla"
       }
     },
     "key": "00B8"
@@ -657,7 +657,7 @@
         "alternative": "spacing breve"
       },
       "mathspeak": {
-        "default": "spacing-breve"
+        "default": "breve"
       }
     },
     "key": "02D8"
@@ -670,7 +670,7 @@
         "alternative": "spacing dot above"
       },
       "mathspeak": {
-        "default": "spacing-dot-above"
+        "default": "dot"
       }
     },
     "key": "02D9"
@@ -683,7 +683,7 @@
         "alternative": "spacing ring above"
       },
       "mathspeak": {
-        "default": "spacing-ring-above"
+        "default": "ring-above"
       }
     },
     "key": "02DA"
@@ -696,7 +696,7 @@
         "alternative": "spacing ogonek"
       },
       "mathspeak": {
-        "default": "spacing-ogonek"
+        "default": "ogonek"
       }
     },
     "key": "02DB"
@@ -709,7 +709,7 @@
         "alternative": "spacing tilde"
       },
       "mathspeak": {
-        "default": "spacing-tilde"
+        "default": "tilde"
       }
     },
     "key": "02DC"
@@ -722,7 +722,7 @@
         "alternative": "spacing double acute"
       },
       "mathspeak": {
-        "default": "spacing-double-acute"
+        "default": "double-acute"
       }
     },
     "key": "02DD"
@@ -818,7 +818,7 @@
         "alternative": "spacing double underscore"
       },
       "mathspeak": {
-        "default": "spacing-double-underscore"
+        "default": "double-underscore"
       }
     },
     "key": "2017"
@@ -1188,7 +1188,7 @@
         "alternative": "spacing overscore"
       },
       "mathspeak": {
-        "default": "spacing-overscore"
+        "default": "overscore"
       }
     },
     "key": "203E"
@@ -9401,7 +9401,7 @@
         "alternative": "glyph for vertical spacing underscore"
       },
       "mathspeak": {
-        "default": "glyph-for-vertical-spacing-underscore"
+        "default": "glyph-for-vertical-underscore"
       }
     },
     "key": "FE33"
@@ -9414,7 +9414,7 @@
         "alternative": "glyph for vertical spacing wavy underscore"
       },
       "mathspeak": {
-        "default": "glyph-for-vertical-spacing-wavy-underscore"
+        "default": "glyph-for-vertical-wavy-underscore"
       }
     },
     "key": "FE34"
@@ -9451,7 +9451,7 @@
         "alternative": "spacing dashed overscore"
       },
       "mathspeak": {
-        "default": "spacing-dashed-overscore"
+        "default": "dashed-overscore"
       }
     },
     "key": "FE49"
@@ -9464,7 +9464,7 @@
         "alternative": "spacing centerline overscore"
       },
       "mathspeak": {
-        "default": "spacing-centerline-overscore"
+        "default": "centerline-overscore"
       }
     },
     "key": "FE4A"
@@ -9477,7 +9477,7 @@
         "alternative": "spacing wavy overscore"
       },
       "mathspeak": {
-        "default": "spacing-wavy-overscore"
+        "default": "wavy-overscore"
       }
     },
     "key": "FE4B"
@@ -9490,7 +9490,7 @@
         "alternative": "spacing double wavy overscore"
       },
       "mathspeak": {
-        "default": "spacing-double-wavy-overscore"
+        "default": "double-wavy-overscore"
       }
     },
     "key": "FE4C"
@@ -9503,7 +9503,7 @@
         "alternative": "spacing dashed underscore"
       },
       "mathspeak": {
-        "default": "spacing-dashed-underscore"
+        "default": "dashed-underscore"
       }
     },
     "key": "FE4D"
@@ -9516,7 +9516,7 @@
         "alternative": "spacing centerline underscore"
       },
       "mathspeak": {
-        "default": "spacing-centerline-underscore"
+        "default": "centerline-underscore"
       }
     },
     "key": "FE4E"
@@ -9529,7 +9529,7 @@
         "alternative": "spacing wavy underscore"
       },
       "mathspeak": {
-        "default": "spacing-wavy-underscore"
+        "default": "wavy-underscore"
       }
     },
     "key": "FE4F"
@@ -9771,7 +9771,7 @@
         "default": "fullwidth exclamation mark"
       },
       "mathspeak": {
-        "default": "fullwidth-exclamation-mark"
+        "default": "exclamation-mark"
       }
     },
     "key": "FF01"
@@ -9783,7 +9783,7 @@
         "default": "fullwidth quotation mark"
       },
       "mathspeak": {
-        "default": "fullwidth-quotation-mark"
+        "default": "quotation-mark"
       }
     },
     "key": "FF02"
@@ -9795,7 +9795,7 @@
         "default": "fullwidth number sign"
       },
       "mathspeak": {
-        "default": "fullwidth-number-sign"
+        "default": "number-sign"
       }
     },
     "key": "FF03"
@@ -9807,7 +9807,7 @@
         "default": "fullwidth dollar sign"
       },
       "mathspeak": {
-        "default": "fullwidth-dollar-sign"
+        "default": "dollar-sign"
       }
     },
     "key": "FF04"
@@ -9819,7 +9819,7 @@
         "default": "fullwidth percent sign"
       },
       "mathspeak": {
-        "default": "fullwidth-percent-sign"
+        "default": "percent-sign"
       }
     },
     "key": "FF05"
@@ -9831,7 +9831,7 @@
         "default": "fullwidth ampersand"
       },
       "mathspeak": {
-        "default": "fullwidth-ampersand"
+        "default": "ampersand"
       }
     },
     "key": "FF06"
@@ -9843,7 +9843,7 @@
         "default": "fullwidth apostrophe"
       },
       "mathspeak": {
-        "default": "fullwidth-apostrophe"
+        "default": "apostrophe"
       }
     },
     "key": "FF07"
@@ -9855,7 +9855,7 @@
         "default": "fullwidth asterisk"
       },
       "mathspeak": {
-        "default": "fullwidth-asterisk"
+        "default": "asterisk"
       }
     },
     "key": "FF0A"
@@ -9867,7 +9867,7 @@
         "default": "fullwidth plus sign"
       },
       "mathspeak": {
-        "default": "fullwidth-plus-sign"
+        "default": "plus-sign"
       }
     },
     "key": "FF0B"
@@ -9879,7 +9879,7 @@
         "default": "fullwidth comma"
       },
       "mathspeak": {
-        "default": "fullwidth-comma"
+        "default": "comma"
       }
     },
     "key": "FF0C"
@@ -9891,7 +9891,7 @@
         "default": "fullwidth hyphen minus"
       },
       "mathspeak": {
-        "default": "fullwidth-hyphen-minus"
+        "default": "hyphen-minus"
       }
     },
     "key": "FF0D"
@@ -9904,7 +9904,7 @@
         "alternative": "fullwidth period"
       },
       "mathspeak": {
-        "default": "fullwidth-period"
+        "default": "period"
       }
     },
     "key": "FF0E"
@@ -9917,7 +9917,7 @@
         "alternative": "fullwidth slash"
       },
       "mathspeak": {
-        "default": "fullwidth-slash"
+        "default": "slash"
       }
     },
     "key": "FF0F"
@@ -9929,7 +9929,7 @@
         "default": "fullwidth colon"
       },
       "mathspeak": {
-        "default": "fullwidth-colon"
+        "default": "colon"
       }
     },
     "key": "FF1A"
@@ -9941,7 +9941,7 @@
         "default": "fullwidth semicolon"
       },
       "mathspeak": {
-        "default": "fullwidth-semicolon"
+        "default": "semicolon"
       }
     },
     "key": "FF1B"
@@ -9953,7 +9953,7 @@
         "default": "fullwidth less than sign"
       },
       "mathspeak": {
-        "default": "fullwidth-less-than-sign"
+        "default": "less-than-sign"
       }
     },
     "key": "FF1C"
@@ -9965,7 +9965,7 @@
         "default": "fullwidth equals sign"
       },
       "mathspeak": {
-        "default": "fullwidth-equals"
+        "default": "equals"
       }
     },
     "key": "FF1D"
@@ -9977,7 +9977,7 @@
         "default": "fullwidth greater than sign"
       },
       "mathspeak": {
-        "default": "fullwidth-greater-than-sign"
+        "default": "greater-than-sign"
       }
     },
     "key": "FF1E"
@@ -9989,7 +9989,7 @@
         "default": "fullwidth question mark"
       },
       "mathspeak": {
-        "default": "fullwidth-question-mark"
+        "default": "question-mark"
       }
     },
     "key": "FF1F"
@@ -10001,7 +10001,7 @@
         "default": "fullwidth commercial at"
       },
       "mathspeak": {
-        "default": "fullwidth-commercial-at"
+        "default": "commercial-at"
       }
     },
     "key": "FF20"
@@ -10014,7 +10014,7 @@
         "alternative": "fullwidth backslash"
       },
       "mathspeak": {
-        "default": "fullwidth-backslash"
+        "default": "backslash"
       }
     },
     "key": "FF3C"
@@ -10027,7 +10027,7 @@
         "alternative": "fullwidth spacing circumflex"
       },
       "mathspeak": {
-        "default": "fullwidth-spacing-circumflex"
+        "default": "caret"
       }
     },
     "key": "FF3E"
@@ -10040,7 +10040,7 @@
         "alternative": "fullwidth spacing underscore"
       },
       "mathspeak": {
-        "default": "fullwidth-spacing-underscore"
+        "default": "bar"
       }
     },
     "key": "FF3F"
@@ -10053,7 +10053,7 @@
         "alternative": "fullwidth spacing grave"
       },
       "mathspeak": {
-        "default": "fullwidth-spacing-grave"
+        "default": "grave"
       }
     },
     "key": "FF40"
@@ -10066,7 +10066,7 @@
         "alternative": "fullwidth vertical bar"
       },
       "mathspeak": {
-        "default": "fullwidth-vertical-bar"
+        "default": "vertical-bar"
       }
     },
     "key": "FF5C"
@@ -10079,7 +10079,7 @@
         "alternative": "fullwidth spacing tilde"
       },
       "mathspeak": {
-        "default": "fullwidth-spacing-tilde"
+        "default": "tilde"
       }
     },
     "key": "FF5E"
@@ -10091,7 +10091,7 @@
         "default": "fullwidth cent sign"
       },
       "mathspeak": {
-        "default": "fullwidth-cent-sign"
+        "default": "cent-sign"
       }
     },
     "key": "FFE0"
@@ -10103,7 +10103,7 @@
         "default": "fullwidth pound sign"
       },
       "mathspeak": {
-        "default": "fullwidth-pound-sign"
+        "default": "pound-sign"
       }
     },
     "key": "FFE1"
@@ -10115,7 +10115,7 @@
         "default": "fullwidth not sign"
       },
       "mathspeak": {
-        "default": "fullwidth-not-sign"
+        "default": "not-sign"
       }
     },
     "key": "FFE2"
@@ -10128,7 +10128,7 @@
         "alternative": "fullwidth spacing macron"
       },
       "mathspeak": {
-        "default": "fullwidth-spacing-macron"
+        "default": "bar"
       }
     },
     "key": "FFE3"
@@ -10141,7 +10141,7 @@
         "alternative": "fullwidth broken vertical bar"
       },
       "mathspeak": {
-        "default": "fullwidth-broken-vertical-bar"
+        "default": "broken-vertical-bar"
       }
     },
     "key": "FFE4"
@@ -10153,7 +10153,7 @@
         "default": "fullwidth yen sign"
       },
       "mathspeak": {
-        "default": "fullwidth-yen-sign"
+        "default": "yen-sign"
       }
     },
     "key": "FFE5"
@@ -10165,7 +10165,7 @@
         "default": "fullwidth won sign"
       },
       "mathspeak": {
-        "default": "fullwidth-won-sign"
+        "default": "won-sign"
       }
     },
     "key": "FFE6"
