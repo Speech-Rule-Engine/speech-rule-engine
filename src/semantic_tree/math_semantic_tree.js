@@ -509,9 +509,11 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       return leaf;
       break;
     case 'MFENCED':
-      return this.processMfenced_(
-          mml, this.parseMathmlChildren_(
+      leaf = this.processMfenced_(
+        mml, this.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children)));
+      this.processTablesInRow_([leaf]);
+      return leaf;
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
@@ -1840,7 +1842,9 @@ sre.SemanticTree.isTableOrMultiline_ = function(node) {
  */
 sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
   return !!node && sre.SemanticTree.attrPred_('type', 'FENCED')(node) &&
-      sre.SemanticTree.attrPred_('role', 'LEFTRIGHT')(node) &&
+      (sre.SemanticTree.attrPred_('role', 'LEFTRIGHT')(node) ||
+       sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node))
+       &&
           node.childNodes.length == 1 &&
               sre.SemanticTree.isTableOrMultiline_(node.childNodes[0]);
 };

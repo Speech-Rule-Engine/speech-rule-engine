@@ -1158,16 +1158,16 @@ sre.MathspeakRuleTest.prototype.untestSample_8_11_1 = function() {
       '<mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'Start 2 by 3 matrix 1st Row  1st Column x' +
+  this.executeRuleTest(mml, 'Start 2 By 3 matrix 1st Row  1st Column x' +
                        ' Superscript n 2nd Column y Superscript n 3rd Column' +
                        ' z Superscript n 2nd Row  1st Column x Superscript n' +
                        ' plus 1 2nd Column y Superscript n plus 1 3rd Column' +
                        ' z Superscript n plus 1 Endmatrix', 'default');
-  this.executeRuleTest(mml, 'Start 2 by 3 matrix 1st Row  1st Column x sup n' +
+  this.executeRuleTest(mml, 'Start 2 By 3 matrix 1st Row  1st Column x sup n' +
                        ' 2nd Column y sup n 3rd Column z sup n 2nd Row  1st' +
                        ' Column x sup n plus 1 2nd Column y sup n plus 1 3rd' +
                        ' Column z sup n plus 1 Endmatrix', 'brief');
-  this.executeRuleTest(mml, '2 by 3 matrix 1st Row  1st Column x sup n 2nd' +
+  this.executeRuleTest(mml, '2 By 3 matrix 1st Row  1st Column x sup n 2nd' +
                        ' Column y sup n 3rd Column z sup n 2nd Row  1st' +
                        ' Column x sup n plus 1 2nd Column y sup n plus 1 3rd' +
                        ' Column z sup n plus 1 Endmatrix', 'sbrief');
@@ -1853,7 +1853,7 @@ sre.MathspeakRuleTest.prototype.untestSample_14_3_1 = function() {
 /**
  * Testing Rule 15.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_15_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_15_1_1 = function() {
   var mml = '<mfenced open="[" close="]"><mtable><mtr><mtd><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo>' +
       '<mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi>' +
@@ -1863,43 +1863,43 @@ sre.MathspeakRuleTest.prototype.untestSample_15_1_1 = function() {
       '<mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow>' +
       '<mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi>' +
       '<mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'Start 3 by 3 matrix 1st Row 1st Column x plus a' +
+  this.executeRuleTest(mml, 'Start 3 By 3 Matrix 1st Row 1st Column x plus a' +
                        ' 2nd Column x plus b 3rd Column x plus c 2nd Row 1st' +
                        ' Column y plus a 2nd Column y plus b 3rd Column y' +
                        ' plus c 3rd Row 1st Column z plus a 2nd Column z' +
-                       ' plus b 3rd Column z plus c Endmatrix', 'default');
-  this.executeRuleTest(mml, 'Start 3 by 3 matrix 1st Row 1st Column x plus a' +
+                       ' plus b 3rd Column z plus c EndMatrix', 'default');
+  this.executeRuleTest(mml, 'Start 3 By 3 Matrix 1st Row 1st Column x plus a' +
                        ' 2nd Column x plus b 3rd Column x plus c 2nd Row 1st' +
                        ' Column y plus a 2nd Column y plus b 3rd Column y' +
                        ' plus c 3rd Row 1st Column z plus a 2nd Column z' +
-                       ' plus b 3rd Column z plus c Endmatrix', 'brief');
-  this.executeRuleTest(mml, '3 by 3 matrix 1st Row 1st Column x plus a 2nd' +
+                       ' plus b 3rd Column z plus c EndMatrix', 'brief');
+  this.executeRuleTest(mml, '3 By 3 Matrix 1st Row 1st Column x plus a 2nd' +
                        ' Column x plus b 3rd Column x plus c 2nd Row 1st' +
                        ' Column y plus a 2nd Column y plus b 3rd Column y' +
                        ' plus c 3rd Row 1st Column z plus a 2nd Column z' +
-                       ' plus b 3rd Column z plus c Endmatrix', 'sbrief');
+                       ' plus b 3rd Column z plus c EndMatrix', 'sbrief');
 };
 
 
 /**
  * Testing Rule 15.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_15_2_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_15_2_1 = function() {
   var mml = '<mrow><mfenced open="|" close="|"><mtable><mtr><mtd><mrow>' +
       '<mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd>' +
       '</mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
       '</mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo>' +
       '<mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st Row 1st Column a' +
+  this.executeRuleTest(mml, 'Start 2 By 2 Determinant 1st Row 1st Column a' +
                        ' plus 1 2nd Column b 2nd Row 1st Column c 2nd Column' +
                        ' d EndDeterminant equals left-parenthesis a plus 1' +
                        ' right-parenthesis d minus b c', 'default');
-  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st Row 1st Column a' +
+  this.executeRuleTest(mml, 'Start 2 By 2 Determinant 1st Row 1st Column a' +
                        ' plus 1 2nd Column b 2nd Row 1st Column c 2nd Column' +
                        ' d EndDeterminant equals left-pren a plus 1' +
                        ' right-pren d minus b c', 'brief');
-  this.executeRuleTest(mml, '2 by 2 Determinant 1st Row 1st Column a plus 1' +
+  this.executeRuleTest(mml, '2 By 2 Determinant 1st Row 1st Column a plus 1' +
                        ' 2nd Column b 2nd Row 1st Column c 2nd Column d' +
                        ' EndDeterminant equals L pren a plus 1 R pren d' +
                        ' minus b c', 'sbrief');
@@ -1914,11 +1914,11 @@ sre.MathspeakRuleTest.prototype.untestSample_15_4_1 = function() {
       '</mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd>' +
       '<mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi>' +
       '<mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>';
-  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st Row a b 2nd Row c' +
+  this.executeRuleTest(mml, 'Start 2 By 2 Determinant 1st Row a b 2nd Row c' +
                        ' d EndDeterminant equals a d minus b c', 'default');
-  this.executeRuleTest(mml, 'Start 2 by 2 Determinant 1st Row a b 2nd Row c' +
+  this.executeRuleTest(mml, 'Start 2 By 2 Determinant 1st Row a b 2nd Row c' +
                        ' d EndDeterminant equals a d minus b c', 'brief');
-  this.executeRuleTest(mml, '2 by 2 Determinant 1st Row a b 2nd Row c d' +
+  this.executeRuleTest(mml, '2 By 2 Determinant 1st Row a b 2nd Row c d' +
                        ' EndDeterminant equals a d minus b c', 'sbrief');
 };
 

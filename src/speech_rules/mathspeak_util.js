@@ -393,7 +393,7 @@ sre.MathspeakUtil.numberToWords = function(number) {
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
  * @param {!number} num The number to translate.
- * @param {boolean} plural A flag indicating if the oridinal is in plural.
+ * @param {boolean} plural A flag indicating if the ordinal is in plural.
  * @return {!string} The ordinal of the number as string.
  */
 sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
@@ -421,6 +421,45 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
     ordinal = ordinal + 'th';
   }
   return plural ? ordinal + 's' : ordinal;
+};
+
+
+/**
+ * Creates a simple ordinal string from a number.
+ * @param {number} number The number to be converted.
+ * @return {string} The ordinal string.
+ * @private
+ */
+sre.MathspeakUtil.simpleOrdinal_ = function(number) {
+  var tens = number % 100;
+  var numStr = number.toString();
+  if (tens > 10 && tens < 20) {
+    return numStr + 'th';
+  }
+  switch (number % 10) {
+    case 1:
+      return numStr + 'st';
+    case 2:
+      return numStr + 'nd';
+    case 3:
+      return numStr + 'rd';
+    default:
+      return numStr + 'th';
+  }
+};
+
+
+/**
+ * Simple counter function for counting ordinals.
+ * @param {!Node} node The node for the context function.
+ * @param {string} context The context string.
+ * @return {function(): string} The context function returning ordinals.
+ */
+sre.MathspeakUtil.ordinalCounter = function(node, context) {
+  var counter = 0;
+  return function() {
+    return sre.MathspeakUtil.simpleOrdinal_(++counter) + ' ' + context;
+  };
 };
 
 

@@ -120,6 +120,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief);
   addCSF('CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief);
 
+  // Sub- Superscript.
   addCSF('CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
   addCSF('CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
   addCSF('CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
@@ -127,8 +128,11 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
 
+  // Font related.
   addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
   addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
+
+  addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
 };
 
 
@@ -628,6 +632,59 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   );
   defineSpecialisedRule(
       'undertilde', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  // Layout Elements
+  defineRule(
+      'matrix-fence', 'mathspeak.default',
+      '[n] children/*[1];',
+      'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"');
+
+  defineRule(
+      'matrix', 'mathspeak.default',
+      '[t] "Start"; [t] count(children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndMatrix"',
+      'self::matrix');
+  defineRule(
+      'matrix', 'mathspeak.sbrief',
+      '[t] count(children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndMatrix"', 'self::matrix');
+
+
+  defineRule(
+      'matrix-row', 'mathspeak.default',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row[@role="matrix"]');
+
+  defineRule(
+      'matrix-cell', 'mathspeak.default',
+      '[n] children/*[1]', 'self::cell[@role="matrix"]');
+
+  defineRule(
+      'empty-cell', 'mathspeak.default',
+      '[t] "Blank"', 'self::cell', '@role="matrix" or @role="vector"',
+      'count(children/*)=1', 'children/empty');
+
+
+  defineRule(
+      'determinant', 'mathspeak.default',
+      '[t] "Start"; [t] count(children/*[1]/children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*[1]/children/*); [t] "Determinant";' +
+      ' [m] children/*[1]/children/* ' +
+      '(ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndDeterminant"',
+      'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"',
+      'self::fenced[@role="neutral"]');
+  defineSpecialisedRule(
+      'determinant', 'mathspeak.default', 'mathspeak.sbrief',
+      '[t] count(children/*[1]/children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*[1]/children/*); [t] "Determinant";' +
+      ' [m] children/*[1]/children/* ' +
+      '(ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndDeterminant"');
 };
 
 });  // goog.scope
