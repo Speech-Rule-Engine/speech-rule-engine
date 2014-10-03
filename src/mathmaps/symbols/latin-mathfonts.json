@@ -1294,7 +1294,10 @@
       "default": {
         "default": "mathematical script capital a",
         "alternative": "script capital a",
-        "short": "script a"
+        "short": "script cap a"
+      },
+      "mathspeak": {
+        "default": "script upper A"
       }
     },
     "key": "1D49C"
@@ -1305,7 +1308,10 @@
       "default": {
         "default": "mathematical script capital c",
         "alternative": "script capital c",
-        "short": "script c"
+        "short": "script cap c"
+      },
+      "mathspeak": {
+        "default": "script upper C"
       }
     },
     "key": "1D49E"
@@ -1316,7 +1322,10 @@
       "default": {
         "default": "mathematical script capital d",
         "alternative": "script capital d",
-        "short": "script d"
+        "short": "script cap d"
+      },
+      "mathspeak": {
+        "default": "script upper D"
       }
     },
     "key": "1D49F"
@@ -1327,7 +1336,10 @@
       "default": {
         "default": "mathematical script capital g",
         "alternative": "script capital g",
-        "short": "script g"
+        "short": "script cap g"
+      },
+      "mathspeak": {
+        "default": "script upper G"
       }
     },
     "key": "1D4A2"
@@ -1338,7 +1350,10 @@
       "default": {
         "default": "mathematical script capital j",
         "alternative": "script capital j",
-        "short": "script j"
+        "short": "script cap j"
+      },
+      "mathspeak": {
+        "default": "script upper J"
       }
     },
     "key": "1D4A5"
@@ -1349,7 +1364,10 @@
       "default": {
         "default": "mathematical script capital k",
         "alternative": "script capital k",
-        "short": "script k"
+        "short": "script cap k"
+      },
+      "mathspeak": {
+        "default": "script upper K"
       }
     },
     "key": "1D4A6"
@@ -1360,7 +1378,10 @@
       "default": {
         "default": "mathematical script capital n",
         "alternative": "script capital n",
-        "short": "script n"
+        "short": "script cap n"
+      },
+      "mathspeak": {
+        "default": "script upper N"
       }
     },
     "key": "1D4A9"
@@ -1371,7 +1392,10 @@
       "default": {
         "default": "mathematical script capital o",
         "alternative": "script capital o",
-        "short": "script o"
+        "short": "script cap o"
+      },
+      "mathspeak": {
+        "default": "script upper O"
       }
     },
     "key": "1D4AA"
@@ -1382,7 +1406,10 @@
       "default": {
         "default": "mathematical script capital p",
         "alternative": "script capital p",
-        "short": "script p"
+        "short": "script cap p"
+      },
+      "mathspeak": {
+        "default": "script upper P"
       }
     },
     "key": "1D4AB"
@@ -1393,7 +1420,10 @@
       "default": {
         "default": "mathematical script capital q",
         "alternative": "script capital q",
-        "short": "script q"
+        "short": "script cap q"
+      },
+      "mathspeak": {
+        "default": "script upper Q"
       }
     },
     "key": "1D4AC"
@@ -1404,7 +1434,10 @@
       "default": {
         "default": "mathematical script capital s",
         "alternative": "script capital s",
-        "short": "script s"
+        "short": "script cap s"
+      },
+      "mathspeak": {
+        "default": "script upper S"
       }
     },
     "key": "1D4AE"
@@ -1415,7 +1448,10 @@
       "default": {
         "default": "mathematical script capital t",
         "alternative": "script capital t",
-        "short": "script t"
+        "short": "script cap t"
+      },
+      "mathspeak": {
+        "default": "script upper T"
       }
     },
     "key": "1D4AF"
@@ -1426,7 +1462,10 @@
       "default": {
         "default": "mathematical script capital u",
         "alternative": "script capital u",
-        "short": "script u"
+        "short": "script cap u"
+      },
+      "mathspeak": {
+        "default": "script upper U"
       }
     },
     "key": "1D4B0"
@@ -1437,7 +1476,10 @@
       "default": {
         "default": "mathematical script capital v",
         "alternative": "script capital v",
-        "short": "script v"
+        "short": "script cap v"
+      },
+      "mathspeak": {
+        "default": "script upper V"
       }
     },
     "key": "1D4B1"
@@ -1448,7 +1490,10 @@
       "default": {
         "default": "mathematical script capital w",
         "alternative": "script capital w",
-        "short": "script w"
+        "short": "script cap w"
+      },
+      "mathspeak": {
+        "default": "script upper W"
       }
     },
     "key": "1D4B2"
@@ -1459,7 +1504,10 @@
       "default": {
         "default": "mathematical script capital x",
         "alternative": "script capital x",
-        "short": "script x"
+        "short": "script cap x"
+      },
+      "mathspeak": {
+        "default": "script upper X"
       }
     },
     "key": "1D4B3"
@@ -1470,7 +1518,10 @@
       "default": {
         "default": "mathematical script capital y",
         "alternative": "script capital y",
-        "short": "script y"
+        "short": "script cap y"
+      },
+      "mathspeak": {
+        "default": "script upper Y"
       }
     },
     "key": "1D4B4"
@@ -1481,7 +1532,10 @@
       "default": {
         "default": "mathematical script capital z",
         "alternative": "script capital z",
-        "short": "script z"
+        "short": "script cap z"
+      },
+      "mathspeak": {
+        "default": "script upper Z"
       }
     },
     "key": "1D4B5"

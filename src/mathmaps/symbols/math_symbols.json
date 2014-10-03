@@ -1188,7 +1188,7 @@
         "alternative": "spacing overscore"
       },
       "mathspeak": {
-        "default": "overscore"
+        "default": "bar"
       }
     },
     "key": "203E"
@@ -1900,7 +1900,7 @@
         "default": "n ary product"
       },
       "mathspeak": {
-        "default": "n-ary-product"
+        "default": "big-product"
       }
     },
     "key": "220F"
@@ -1912,7 +1912,7 @@
         "default": "n ary coproduct"
       },
       "mathspeak": {
-        "default": "n-ary-coproduct"
+        "default": "big-coproduct"
       }
     },
     "key": "2210"
@@ -3960,7 +3960,7 @@
         "default": "n ary logical and"
       },
       "mathspeak": {
-        "default": "n-ary-logical-and"
+        "default": "big-logical-and"
       }
     },
     "key": "22C0"
@@ -3972,7 +3972,7 @@
         "default": "n ary logical or"
       },
       "mathspeak": {
-        "default": "n-ary-logical-or"
+        "default": "big-logical-or"
       }
     },
     "key": "22C1"
@@ -3984,7 +3984,7 @@
         "default": "n ary intersection"
       },
       "mathspeak": {
-        "default": "n-ary-intersection"
+        "default": "big-intersection"
       }
     },
     "key": "22C2"
@@ -3996,7 +3996,7 @@
         "default": "n ary union"
       },
       "mathspeak": {
-        "default": "n-ary-union"
+        "default": "big-union"
       }
     },
     "key": "22C3"
@@ -6213,7 +6213,7 @@
         "default": "n ary circled dot operator"
       },
       "mathspeak": {
-        "default": "n-ary-circled-dot"
+        "default": "big-circled-dot"
       }
     },
     "key": "2A00"
@@ -6225,7 +6225,7 @@
         "default": "n ary circled plus operator"
       },
       "mathspeak": {
-        "default": "n-ary-circled-plus"
+        "default": "big-circled-plus"
       }
     },
     "key": "2A01"
@@ -6237,7 +6237,7 @@
         "default": "n ary circled times operator"
       },
       "mathspeak": {
-        "default": "n-ary-circled-times"
+        "default": "big-circled-times"
       }
     },
     "key": "2A02"
@@ -6249,7 +6249,7 @@
         "default": "n ary union operator with dot"
       },
       "mathspeak": {
-        "default": "n-ary-union-with-dot"
+        "default": "big-union-with-dot"
       }
     },
     "key": "2A03"
@@ -6261,7 +6261,7 @@
         "default": "n ary union operator with plus"
       },
       "mathspeak": {
-        "default": "n-ary-union-with-plus"
+        "default": "big-union-with-plus"
       }
     },
     "key": "2A04"
@@ -6273,7 +6273,7 @@
         "default": "n ary square intersection operator"
       },
       "mathspeak": {
-        "default": "n-ary-square-intersection"
+        "default": "big-square-intersection"
       }
     },
     "key": "2A05"
@@ -6285,7 +6285,7 @@
         "default": "n ary square union operator"
       },
       "mathspeak": {
-        "default": "n-ary-square-union"
+        "default": "big-square-union"
       }
     },
     "key": "2A06"
@@ -6321,7 +6321,7 @@
         "default": "n ary times operator"
       },
       "mathspeak": {
-        "default": "n-ary-times"
+        "default": "big-times"
       }
     },
     "key": "2A09"
@@ -9265,7 +9265,7 @@
         "default": "n ary white vertical bar"
       },
       "mathspeak": {
-        "default": "n-ary-white-vertical-bar"
+        "default": "big-white-vertical-bar"
       }
     },
     "key": "2AFF"

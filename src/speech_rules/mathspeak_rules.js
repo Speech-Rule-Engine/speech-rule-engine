@@ -191,7 +191,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Baseline"; [n] text()',
       'self::number', 'not(@hiddenfont)',
       'preceding-sibling::identifier',
-      'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
+      'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
@@ -292,6 +292,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'text', 'mathspeak.default', '[n] text()', 'self::text');
 
+  // Special symbols
+  defineRule(
+      'factorial', 'mathspeak.default', '[t] "factorial"', 'self::punctuation',
+      'text()="!"', 'name(preceding-sibling::*[1])!="text"');
 
   // Fraction rules
 
@@ -571,7 +575,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::overscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-      ' or text()="\u005F"]'
+      ' or text()="\u005F" or text()="\u203E"]'
   );
   defineSpecialisedRule(
       'overbar', 'mathspeak.default', 'mathspeak.brief',
@@ -586,7 +590,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::underscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
-      ' or text()="\u005F"]'
+      ' or text()="\u005F" or text()="\u203E"]'
   );
   defineSpecialisedRule(
       'underbar', 'mathspeak.default', 'mathspeak.brief',
