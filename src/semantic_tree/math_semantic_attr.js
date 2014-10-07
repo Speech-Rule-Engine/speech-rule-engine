@@ -1367,8 +1367,15 @@ sre.SemanticAttr.Role = {
   BINREL: 'binrel',
   ARROW: 'arrow',
 
+  // Roles of matrices or vectors.
+  DETERMINANT: 'determinant',
+  ROWVECTOR: 'rowvector',
+  BINOMIAL: 'binomial',
+  SQUAREMATRIX: 'squarematrix',
+
   // Roles of rows, lines, cells.
-  // They mirror the different types for tables.
+  // They mirror the different types for tables, unless a more specific role is
+  // known.
   MULTILINE: 'multiline',
   MATRIX: 'matrix',
   VECTOR: 'vector',

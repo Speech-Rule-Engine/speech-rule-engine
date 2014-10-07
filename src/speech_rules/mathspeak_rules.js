@@ -652,12 +652,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndMatrix"', 'self::matrix');
+  defineRuleAlias(
+      'matrix', 'self::vector');
 
 
   defineRule(
       'matrix-row', 'mathspeak.default',
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
-      'self::row', '@role="matrix" or @role="table"');
+      'self::row');
 
   defineRule(
       'matrix-cell', 'mathspeak.default',
@@ -670,19 +672,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'determinant', 'mathspeak.default',
-      '[t] "Start"; [t] count(children/*[1]/children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/*[1]/children/* ' +
-      '(ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      '[t] "Start"; [t] count(children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndDeterminant"',
-      'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"',
-      'self::fenced[@role="neutral"]');
+      'self::matrix', '@role="determinant"');
   defineSpecialisedRule(
       'determinant', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] count(children/*[1]/children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/*[1]/children/* ' +
-      '(ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      '[t] count(children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndDeterminant"');
 
   defineRule(

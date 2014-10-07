@@ -5085,10 +5085,10 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
 
 
 /**
- * Variations of tables representing matrices, vectors, case statements,
- * multiline equations and regular tables.
+ * Variations of matrices and their roles as determinants, square matrices or
+ * rowvectors.
  */
-sre.SemanticTreeTest.prototype.testStreeTables = function() {
+sre.SemanticTreeTest.prototype.testStreeMatrices = function() {
   this.brief = false;
   this.executeTreeTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">A</mi>' +
@@ -5102,34 +5102,34 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="bold" id="0">A</identifier>' +
-      '<matrix role="unknown" id="13">' +
+      '<matrix role="squarematrix" id="13">' +
       '<content>' +
       '<fence role="open" id="2">[</fence>' +
       '<fence role="close" id="14">]</fence>' +
       '</content>' +
       '<children>' +
-      '<row role="matrix" id="7">' +
+      '<row role="squarematrix" id="7">' +
       '<children>' +
-      '<cell role="matrix" id="4">' +
+      '<cell role="squarematrix" id="4">' +
       '<children>' +
       '<number role="integer" font="normal" id="3">0</number>' +
       '</children>' +
       '</cell>' +
-      '<cell role="matrix" id="6">' +
+      '<cell role="squarematrix" id="6">' +
       '<children>' +
       '<number role="integer" font="normal" id="5">1</number>' +
       '</children>' +
       '</cell>' +
       '</children>' +
       '</row>' +
-      '<row role="matrix" id="12">' +
+      '<row role="squarematrix" id="12">' +
       '<children>' +
-      '<cell role="matrix" id="9">' +
+      '<cell role="squarematrix" id="9">' +
       '<children>' +
       '<number role="integer" font="normal" id="8">2</number>' +
       '</children>' +
       '</cell>' +
-      '<cell role="matrix" id="11">' +
+      '<cell role="squarematrix" id="11">' +
       '<children>' +
       '<number role="integer" font="normal" id="10">3</number>' +
       '</children>' +
@@ -5142,14 +5142,15 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</relseq>');
 
   this.executeTreeTest(
-      '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em"><mtr>' +
-      '<mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
-      '<mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable>' +
-      '<mo>]</mo>',
-      '<matrix role="unknown" id="11">' +
+      '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
+      '</mtable><mo>]</mo>',
+      '<matrix role="unknown" id="16">' +
       '<content>' +
       '<fence role="open" id="0">[</fence>' +
-      '<fence role="close" id="12">]</fence>' +
+      '<fence role="close" id="17">]</fence>' +
       '</content>' +
       '<children>' +
       '<row role="matrix" id="5">' +
@@ -5180,9 +5181,210 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '</children>' +
       '</row>' +
+      '<row role="matrix" id="15">' +
+      '<children>' +
+      '<cell role="matrix" id="12">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="11">4</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="matrix" id="14">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="13">5</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
       '</children>' +
       '</matrix>');
 
+  this.executeTreeTest(
+      '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '</mtable><mo>]</mo>',
+      '<matrix role="squarematrix" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">[</fence>' +
+      '<fence role="close" id="12">]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<row role="squarematrix" id="5">' +
+      '<children>' +
+      '<cell role="squarematrix" id="2">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="1">0</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="squarematrix" id="4">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="3">1</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="squarematrix" id="10">' +
+      '<children>' +
+      '<cell role="squarematrix" id="7">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="squarematrix" id="9">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="8">3</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</matrix>');
+
+  this.executeTreeTest(
+      '<mfenced open="|" close="|"><mtable>' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<matrix role="unknown" id="15">' +
+      '<content>' +
+      '<fence role="neutral" id="16">|</fence>' +
+      '<fence role="neutral" id="17">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<row role="matrix" id="4">' +
+      '<children>' +
+      '<cell role="matrix" id="1">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">0</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="matrix" id="3">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="2">1</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="matrix" id="9">' +
+      '<children>' +
+      '<cell role="matrix" id="6">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="matrix" id="8">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="7">3</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="matrix" id="14">' +
+      '<children>' +
+      '<cell role="matrix" id="11">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="matrix" id="13">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="12">5</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</matrix>');
+
+  this.executeTreeTest(
+      '<mfenced open="|" close="|"><mtable>' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<matrix role="determinant" id="10">' +
+      '<content>' +
+      '<fence role="neutral" id="11">|</fence>' +
+      '<fence role="neutral" id="12">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<row role="determinant" id="4">' +
+      '<children>' +
+      '<cell role="determinant" id="1">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">0</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="determinant" id="3">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="2">1</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="determinant" id="9">' +
+      '<children>' +
+      '<cell role="determinant" id="6">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="determinant" id="8">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="7">3</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</matrix>');
+
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mtable>' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd>' +
+      '<mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<matrix role="rowvector" id="9">' +
+      '<content>' +
+      '<fence role="open" id="10">(</fence>' +
+      '<fence role="close" id="11">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<row role="rowvector" id="8">' +
+      '<children>' +
+      '<cell role="rowvector" id="1">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">0</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="rowvector" id="3">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="2">1</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="rowvector" id="5">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="rowvector" id="7">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="6">3</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</matrix>');
+};
+
+
+/**
+ * Variations of vectors and their roles as determinants or binomial
+ * coefficients.
+ */
+sre.SemanticTreeTest.prototype.testStreeVectors = function() {
+  this.brief = false;
   this.executeTreeTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">V</mi>' +
       '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
@@ -5248,7 +5450,73 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</children>' +
       '</vector>');
 
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mtable>' +
+      '<mtr><mtd><mn>n</mn></mtd></mtr><mtr><mtd><mn>k</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<vector role="binomial" id="6">' +
+      '<content>' +
+      '<fence role="open" id="7">(</fence>' +
+      '<fence role="close" id="8">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="3">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
 
+  this.executeTreeTest(
+      '<mfenced open="|" close="|"><mtable>' +
+      '<mtr><mtd><mn>n</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<vector role="determinant" id="3">' +
+      '<content>' +
+      '<fence role="neutral" id="4">|</fence>' +
+      '<fence role="neutral" id="5">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="determinant" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mtable>' +
+      '<mtr><mtd><mn>n</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<vector role="unknown" id="3">' +
+      '<content>' +
+      '<fence role="open" id="4">(</fence>' +
+      '<fence role="close" id="5">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="vector" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+
+};
+
+
+/**
+ * Variations of tables representing case statements,
+ * multiline equations and regular tables.
+ */
+sre.SemanticTreeTest.prototype.testStreeTables = function() {
   this.executeTreeTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
       '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +

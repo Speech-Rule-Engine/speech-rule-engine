@@ -511,9 +511,9 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MFENCED':
       leaf = this.processMfenced_(
           mml, this.parseMathmlChildren_(
-            sre.SemanticUtil.purgeNodes(children)));
-      this.processTablesInRow_([leaf]);
-      return leaf;
+          sre.SemanticUtil.purgeNodes(children)));
+      var nodes = this.processTablesInRow_([leaf]);
+      return nodes[0];
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
@@ -1790,8 +1790,8 @@ sre.SemanticTree.generalFunctionBoundary_ = function(node) {
 
 /**
  * Rewrites tables into matrices or case statements in a list of nodes.
- * @param {!Array.<sre.SemanticTree.Node>} nodes List of nodes to rewrite.
- * @return {!Array.<sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<!sre.SemanticTree.Node>} nodes List of nodes to rewrite.
+ * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.processTablesInRow_ = function(nodes) {
@@ -1850,21 +1850,82 @@ sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
 
 
 /**
- * Replaces a fenced node by a matrix or vector node.
+ * Replaces a fenced node by a matrix or vector node and possibly specialises
+ * it's role.
  * @param {!sre.SemanticTree.Node} node The fenced node to be rewritten.
  * @return {!sre.SemanticTree.Node} The matrix or vector node.
  * @private
  */
 sre.SemanticTree.prototype.tableToMatrixOrVector_ = function(node) {
   var matrix = node.childNodes[0];
-  var type = sre.SemanticTree.attrPred_('type', 'MULTILINE')(matrix) ?
-      'VECTOR' : 'MATRIX';
-  matrix.type = sre.SemanticAttr.Type[type];
+  sre.SemanticTree.attrPred_('type', 'MULTILINE')(matrix) ?
+      this.tableToVector_(node) : this.tableToMatrix_(node);
   node.contentNodes.forEach(goog.bind(matrix.appendContentNode_, matrix));
   for (var i = 0, row; row = matrix.childNodes[i]; i++) {
-    sre.SemanticTree.assignRoleToRow_(row, sre.SemanticAttr.Role[type]);
+    sre.SemanticTree.assignRoleToRow_(
+        row, sre.SemanticTree.getComponentRoles_(matrix));
   }
   return matrix;
+};
+
+
+/**
+ * Assigns a specialised roles to a vector node inside the given fenced node.
+ * @param {!sre.SemanticTree.Node} node The fenced node containing the vector.
+ * @private
+ */
+sre.SemanticTree.prototype.tableToVector_ = function(node) {
+  var vector = node.childNodes[0];
+  vector.type = sre.SemanticAttr.Type.VECTOR;
+  if (vector.childNodes.length === 1 &&
+      (sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node))) {
+    vector.role = sre.SemanticAttr.Role.DETERMINANT;
+    return;
+  }
+  if (vector.childNodes.length === 2) {
+    vector.role = sre.SemanticAttr.Role.BINOMIAL;
+  }
+};
+
+
+/**
+ * Assigns a specialised roles to a matrix node inside the given fenced node.
+ * @param {!sre.SemanticTree.Node} node The fenced node containing the matrix.
+ * @private
+ */
+sre.SemanticTree.prototype.tableToMatrix_ = function(node) {
+  var matrix = node.childNodes[0];
+  matrix.type = sre.SemanticAttr.Type.MATRIX;
+  if (matrix.childNodes && matrix.childNodes.length > 0 &&
+      matrix.childNodes[0].childNodes &&
+      matrix.childNodes.length === matrix.childNodes[0].childNodes.length) {
+    if (sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node)) {
+      matrix.role = sre.SemanticAttr.Role.DETERMINANT;
+      return;
+    }
+    matrix.role = sre.SemanticAttr.Role.SQUAREMATRIX;
+    return;
+  }
+  if (matrix.childNodes && matrix.childNodes.length === 1) {
+    matrix.role = sre.SemanticAttr.Role.ROWVECTOR;
+  }
+};
+
+
+/**
+ * Cmoputes the role for the components of a matrix. It is either the role of
+ * that matrix or its type.
+ * @param {!sre.SemanticTree.Node} node The matrix or vector node.
+ * @return {!sre.SemanticAttr.Role} The role to be assigned to the components.
+ * @private
+ */
+sre.SemanticTree.getComponentRoles_ = function(node) {
+  var role = node.role;
+  if (role && role !== sre.SemanticAttr.Role.UNKNOWN) {
+    return role;
+  }
+  return sre.SemanticAttr.Role[node.type.toUpperCase()] ||
+      sre.SemanticAttr.Role.UNKNOWN;
 };
 
 
@@ -1894,7 +1955,6 @@ sre.SemanticTree.tableIsCases_ = function(table, prevNodes) {
 sre.SemanticTree.prototype.tableToCases_ = function(table, openFence) {
   for (var i = 0, row; row = table.childNodes[i]; i++) {
     sre.SemanticTree.assignRoleToRow_(row, sre.SemanticAttr.Role.CASES);
-    // }
   }
   table.type = sre.SemanticAttr.Type.CASES;
   table.appendContentNode_(openFence);

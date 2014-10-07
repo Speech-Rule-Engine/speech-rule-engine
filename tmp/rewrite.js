@@ -322,3 +322,11 @@ quickTest = function(mml) {
 };
 
 
+quickTest2 = function(mml) {
+  var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
+          mml + '</math>';
+  var node = sre.System.getInstance().parseInput(mathMl);
+  return new sre.SemanticTree(node);
+};
+
+
