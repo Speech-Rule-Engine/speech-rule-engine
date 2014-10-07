@@ -1796,32 +1796,32 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
 /**
  * Testing Rule 14.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_14_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
   var mml = '<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow>' +
       '</mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd>' +
-      '<mtext>flourine</mtext></mtd><mtd/><mtd><mrow>' +
+      '<mtext>fluorine</mtext></mtd><mtd/><mtd><mrow>' +
       '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
-      '<mtext>flouride</mtext></mrow></mtd></mtr></mtable>';
-  this.executeRuleTest(mml, 'Startlayout 1st Row  1st Column upper H 2 2nd' +
+      '<mtext>fluoride</mtext></mrow></mtd></mtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row 1st Column upper H 2 2nd' +
                        ' Column plus 3rd Column upper F 2 4th Column' +
-                       ' right-arrow 5th Column 2 upper H upper F 2nd row' +
-                       ' 1st Column hydrogen 2nd Column blank 3rd Column' +
-                       ' flourine 4th Column blank 5th Column hydrogen' +
-                       ' fluoride Endlayout', 'default');
-  this.executeRuleTest(mml, 'Startlayout 1st Row 1st Column upper H 2 2nd' +
+                       ' right-arrow 5th Column 2 upper H upper F 2nd Row' +
+                       ' 1st Column hydrogen 2nd Column Blank 3rd Column' +
+                       ' fluorine 4th Column Blank 5th Column hydrogen' +
+                       ' fluoride EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row 1st Column upper H 2 2nd' +
                        ' Column plus 3rd Column upper F 2 4th Column' +
-                       ' right-arrow 5th Column 2 upper H upper F 2nd row' +
-                       ' 1st Column hydrogen 2nd Column blank 3rd Column' +
-                       ' flourine 4th Column blank 5th Column hydrogen' +
-                       ' fluoride Endlayout', 'brief');
-  this.executeRuleTest(mml, 'layout 1st Row 1st Column upper H 2 2nd Column' +
+                       ' right-arrow 5th Column 2 upper H upper F 2nd Row' +
+                       ' 1st Column hydrogen 2nd Column Blank 3rd Column' +
+                       ' fluorine 4th Column Blank 5th Column hydrogen' +
+                       ' fluoride EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row 1st Column upper H 2 2nd Column' +
                        ' plus 3rd Column upper F 2 4th Column r arrow 5th' +
                        ' Column 2 upper H upper F 2nd Row 1st Column' +
-                       ' hydrogen 2nd Column blank 3rd Column flourine 4th' +
-                       ' Column blank 5th Column hydrogen fluoride' +
-                       ' Endlayout', 'sbrief');
+                       ' hydrogen 2nd Column Blank 3rd Column fluorine 4th' +
+                       ' Column Blank 5th Column hydrogen fluoride' +
+                       ' EndLayout', 'sbrief');
 };
 
 
@@ -1835,18 +1835,18 @@ sre.MathspeakRuleTest.prototype.untestSample_14_3_1 = function() {
       '</mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd>' +
       '<mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable>' +
       '</mfenced></mrow>';
-  this.executeRuleTest(mml, 'x equals Startlayout enlarged left-brace 1st' +
-                       ' Row 1st Column y less-than 0 2nd Column 0 2nd row' +
+  this.executeRuleTest(mml, 'x equals StartLayout enlarged left-brace 1st' +
+                       ' Row 1st Column y less-than 0 2nd Column 0 2nd Row' +
                        ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
-                       ' 2 y Endlayout', 'default');
-  this.executeRuleTest(mml, 'x equals Startlayout enlarged left-brace 1st' +
-                       ' Row 1st Column y less-than 0 2nd Column 0 2nd row' +
+                       ' 2 y EndLayout', 'default');
+  this.executeRuleTest(mml, 'x equals StartLayout enlarged left-brace 1st' +
+                       ' Row 1st Column y less-than 0 2nd Column 0 2nd Row' +
                        ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
-                       ' 2 y Endlayout', 'brief');
-  this.executeRuleTest(mml, 'x equals layout enlarged L brace 1st Row 1st' +
+                       ' 2 y EndLayout', 'brief');
+  this.executeRuleTest(mml, 'x equals Layout enlarged L brace 1st Row 1st' +
                        ' Column y less-than 0 2nd Column 0 2nd Row 1st' +
                        ' Column y greater-than-or-equal-to 0 2nd Column 2 y' +
-                       ' Endlayout', 'sbrief');
+                       ' EndLayout', 'sbrief');
 };
 
 

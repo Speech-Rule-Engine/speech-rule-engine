@@ -237,7 +237,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Operator rules
   defineRule(
       'prefix', 'mathspeak.default',
-      '[t] "prefix"; [n] text(); [n] children/*[1]',
+      '[n] text(); [n] children/*[1]',
       'self::prefixop');
 
   defineRule(
@@ -657,16 +657,15 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'matrix-row', 'mathspeak.default',
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
-      'self::row[@role="matrix"]');
+      'self::row', '@role="matrix" or @role="table"');
 
   defineRule(
       'matrix-cell', 'mathspeak.default',
-      '[n] children/*[1]', 'self::cell[@role="matrix"]');
+      '[n] children/*[1]', 'self::cell');
 
   defineRule(
       'empty-cell', 'mathspeak.default',
-      '[t] "Blank"', 'self::cell', '@role="matrix" or @role="vector"',
-      'count(children/*)=1', 'children/empty');
+      '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
 
 
   defineRule(
@@ -685,6 +684,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       ' [m] children/*[1]/children/* ' +
       '(ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndDeterminant"');
+
+  defineRule(
+      'layout', 'mathspeak.default', '[t] "StartLayout"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndLayout"', 'self::table');
+  defineRule(
+      'layout', 'mathspeak.sbrief', '[t] "Layout"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndLayout"', 'self::table');
+
 };
 
 });  // goog.scope
