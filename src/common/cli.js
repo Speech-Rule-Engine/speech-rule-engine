@@ -40,7 +40,7 @@ sre.Cli.prototype.commandLine = function() {
   // These are necessary to avoid closure errors.
   /** @type {!string} */
   // commander.domain is already in use by the commander module!
-  commander.domain = '';
+  commander.dom = '';
   /** @type {!boolean} */
   commander.enumerate = false;
   /** @type {!string} */
@@ -57,7 +57,7 @@ sre.Cli.prototype.commandLine = function() {
   commander.verbose = false;
 
   commander.version(sre.System.getInstance().version).
-      option('-d, --domain [name]', 'Domain or subject area [name]').
+      option('-d, --dom [name]', 'Domain or subject area [name]').
       option('-e, --enumerate', 'Enumerates available domains and styles').
       option('-i, --input [name]', 'Input file [name]').
       option('-l, --log [name]', 'Log file [name]').
@@ -78,7 +78,7 @@ sre.Cli.prototype.commandLine = function() {
   sre.System.getInstance().setupEngine(
       {
         'semantics': commander.semantics,
-        'domain': commander.domain,
+        'domain': commander.dom,
         'style': commander.style
       });
   if (commander.verbose) {

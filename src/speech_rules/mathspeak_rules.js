@@ -335,6 +335,36 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'vulgar-fraction', 'mathspeak.default', 'mathspeak.sbrief');
 
+  defineRule(
+      'continued-fraction-outer', 'mathspeak.default',
+      '[t] "ContinuedFraction"; [n] children/*[1];' +
+      '[t] "Over"; [n] children/*[2]',
+      'self::fraction', 'not(ancestor::fraction)',
+      'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
+      'not(following-sibling::*)]');
+  defineSpecialisedRule(
+      'continued-fraction-outer', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "ContinuedFrac"; [n] children/*[1];' +
+      '[t] "Over"; [n] children/*[2]');
+  defineSpecialisedRule(
+      'continued-fraction-outer', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'continued-fraction-inner', 'mathspeak.default',
+      '[t] "StartFraction"; [n] children/*[1];' +
+      '[t] "Over"; [n] children/*[2]',
+      'self::fraction', 'ancestor::fraction',
+      'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
+      'not(following-sibling::*)]');
+  defineSpecialisedRule(
+      'continued-fraction-inner', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "StartFrac"; [n] children/*[1];' +
+      '[t] "Over"; [n] children/*[2]');
+  defineSpecialisedRule(
+      'continued-fraction-inner', 'mathspeak.brief', 'mathspeak.sbrief',
+      '[t] "Frac"; [n] children/*[1];' +
+      '[t] "Over"; [n] children/*[2]');
+
   // Radical rules
 
   defineRule(
@@ -472,7 +502,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
-      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated'
+      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|' +
+      'ancestor::fraction'
   ); // This rule might be too simple.
 
 
@@ -502,7 +533,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated'
+      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|' +
+      'ancestor::fraction'
   );  // This rule might be too simple.
 
   // Square

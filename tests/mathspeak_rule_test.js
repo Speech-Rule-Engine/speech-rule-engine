@@ -540,7 +540,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_3_1 = function() {
 /**
  * Testing Rule 7.3, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_3_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_3_2 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac>' +
       '<mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac>' +
       '<mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac>' +
@@ -644,7 +644,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_5_1 = function() {
 /**
  * Testing Rule 7.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_7_6_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub>' +
       '<mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
@@ -655,18 +655,18 @@ sre.MathspeakRuleTest.prototype.untestSample_7_6_1 = function() {
       '<mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>1</mn></msub></mfrac>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><msub><mi>a</mi>' +
       '<mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>';
-  this.executeRuleTest(mml, 'a 0 plus continuedFraction b 1 Over a 1 plus' +
+  this.executeRuleTest(mml, 'a 0 plus ContinuedFraction b 1 Over a 1 plus' +
                        ' StartFraction b 2 Over a 2 plus StartFraction b 3' +
                        ' Over a 3 plus ellipsis equals a 0 plus' +
                        ' StartFraction b 1 Over a 1 EndFraction plus' +
                        ' StartFraction b 2 Over a 2 EndFraction plus ellipsis',
                        'default');
-  this.executeRuleTest(mml, 'a 0 plus continuedFrac b 1 Over a 1 plus' +
+  this.executeRuleTest(mml, 'a 0 plus ContinuedFrac b 1 Over a 1 plus' +
                        ' StartFrac b 2 Over a 2 plus StartFrac b 3 Over a 3' +
                        ' plus ellipsis equals a 0 plus StartFrac b 1 Over a' +
                        ' 1 EndFrac plus StartFrac b 2 Over a 2 EndFrac plus' +
                        ' ellipsis', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus continuedFrac b 1 Over a 1 plus Frac b' +
+  this.executeRuleTest(mml, 'a 0 plus ContinuedFrac b 1 Over a 1 plus Frac b' +
                        ' 2 Over a 2 plus Frac b 3 Over a 3 plus ellipsis' +
                        ' equals a 0 plus Frac b 1 Over a 1 EndFrac plus Frac' +
                        ' b 2 Over a 2 EndFrac plus ellipsis', 'sbrief');
