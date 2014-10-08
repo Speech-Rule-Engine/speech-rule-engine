@@ -1150,7 +1150,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_10_3 = function() {
 /**
  * Testing Rule 8.11, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_11_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_11_1 = function() {
   var mml = '<mfenced open="[" close="]"><mtable><mtr><mtd><msup><mi>x</mi>' +
       '<mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd>' +
       '<mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup>' +
@@ -1158,19 +1158,19 @@ sre.MathspeakRuleTest.prototype.untestSample_8_11_1 = function() {
       '<mtd><msup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msup></mtd><mtd><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo>' +
       '<mn>1</mn></mrow></msup></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'Start 2 By 3 matrix 1st Row  1st Column x' +
+  this.executeRuleTest(mml, 'Start 2 By 3 Matrix 1st Row 1st Column x' +
                        ' Superscript n 2nd Column y Superscript n 3rd Column' +
-                       ' z Superscript n 2nd Row  1st Column x Superscript n' +
+                       ' z Superscript n 2nd Row 1st Column x Superscript n' +
                        ' plus 1 2nd Column y Superscript n plus 1 3rd Column' +
-                       ' z Superscript n plus 1 Endmatrix', 'default');
-  this.executeRuleTest(mml, 'Start 2 By 3 matrix 1st Row  1st Column x sup n' +
-                       ' 2nd Column y sup n 3rd Column z sup n 2nd Row  1st' +
-                       ' Column x sup n plus 1 2nd Column y sup n plus 1 3rd' +
-                       ' Column z sup n plus 1 Endmatrix', 'brief');
-  this.executeRuleTest(mml, '2 By 3 matrix 1st Row  1st Column x sup n 2nd' +
-                       ' Column y sup n 3rd Column z sup n 2nd Row  1st' +
-                       ' Column x sup n plus 1 2nd Column y sup n plus 1 3rd' +
-                       ' Column z sup n plus 1 Endmatrix', 'sbrief');
+                       ' z Superscript n plus 1 EndMatrix', 'default');
+  this.executeRuleTest(mml, 'Start 2 By 3 Matrix 1st Row 1st Column x Sup n' +
+                       ' 2nd Column y Sup n 3rd Column z Sup n 2nd Row 1st' +
+                       ' Column x Sup n plus 1 2nd Column y Sup n plus 1 3rd' +
+                       ' Column z Sup n plus 1 EndMatrix', 'brief');
+  this.executeRuleTest(mml, '2 By 3 Matrix 1st Row 1st Column x Sup n 2nd' +
+                       ' Column y Sup n 3rd Column z Sup n 2nd Row 1st' +
+                       ' Column x Sup n plus 1 2nd Column y Sup n plus 1 3rd' +
+                       ' Column z Sup n plus 1 EndMatrix', 'sbrief');
 };
 
 
@@ -1181,8 +1181,8 @@ sre.MathspeakRuleTest.prototype.untestSample_8_12_1 = function() {
   var mml = '<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi>' +
       '</msup>';
   this.executeRuleTest(mml, 'x Subscript a Baseline Superscript b', 'default');
-  this.executeRuleTest(mml, 'x Sub a Base sup b', 'brief');
-  this.executeRuleTest(mml, 'x Sub a Base sup b', 'sbrief');
+  this.executeRuleTest(mml, 'x Sub a Base Sup b', 'brief');
+  this.executeRuleTest(mml, 'x Sub a Base Sup b', 'sbrief');
 };
 
 
@@ -1193,8 +1193,8 @@ sre.MathspeakRuleTest.prototype.untestSample_8_12_2 = function() {
   var mml = '<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi>' +
       '</msub>';
   this.executeRuleTest(mml, 'x Superscript b Baseline Subscript a', 'default');
-  this.executeRuleTest(mml, 'x sup b Base Sub a', 'brief');
-  this.executeRuleTest(mml, 'x sup b Base Sub a', 'sbrief');
+  this.executeRuleTest(mml, 'x Sup b Base Sub a', 'brief');
+  this.executeRuleTest(mml, 'x Sup b Base Sub a', 'sbrief');
 };
 
 
