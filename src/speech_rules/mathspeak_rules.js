@@ -133,6 +133,11 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 
   addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
+
+  // Layout related.
+  addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
+  addCSF('CSFdetMarkSimple', sre.MathspeakUtil.determinantMarkSimple);
+  addCSF('CSFdetUnMarkSimple', sre.MathspeakUtil.determinantUnMarkSimple);
 };
 
 
@@ -685,6 +690,26 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       ' [t] "EndDeterminant"');
 
   defineRule(
+      'determinant-simple', 'mathspeak.default',
+      '[t] CSFdetMarkSimple;' +
+      '[t] "Start"; [t] count(children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row");' +
+      ' [t] "EndDeterminant"; [t] CSFdetUnMarkSimple',
+      'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
+  defineSpecialisedRule(
+      'determinant-simple', 'mathspeak.default', 'mathspeak.sbrief',
+      '[t] CSFdetMarkSimple;' +
+      '[t] count(children/*);  [t] "By";' +
+      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row");' +
+      ' [t] "EndDeterminant"; [t] CSFdetUnMarkSimple');
+  defineRule(
+      'row-simple', 'mathspeak.default',
+      '[m] children/*;',
+      'self::row', '@role="determinant"', '@sre_flag="simple"');
+
+  defineRule(
       'layout', 'mathspeak.default', '[t] "StartLayout"; ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::table');
@@ -693,6 +718,18 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::table');
 
+  defineRule(
+      'binomial', 'mathspeak.default',
+      '[t] "StartBinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
+      ' [t] "EndBinomialOrMatrix"',
+      'self::vector', '@role="binomial"');
+  defineRule(
+      'binomial', 'mathspeak.sbrief',
+      '[t] "BinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
+      ' [t] "EndBinomialOrMatrix"',
+      'self::vector', '@role="binomial"');
 };
 
 });  // goog.scope

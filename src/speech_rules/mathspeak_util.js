@@ -21,6 +21,7 @@ goog.provide('sre.MathspeakUtil');
 
 goog.require('sre.SemanticTree.Node');
 goog.require('sre.SystemExternal');
+goog.require('sre.XpathUtil');
 
 
 /**
@@ -752,3 +753,56 @@ sre.MathspeakUtil.indexRadicalSbrief = function(node) {
 };
 
 
+/**
+ * Query function that Checks if we have a simple determinant in the sense that
+ * every cell only contains single letters or numbers.
+ * @param {!Node} node The determinant node.
+ * @return {Array.<Node>} List containing input node if true.
+ */
+sre.MathspeakUtil.determinantIsSimple = function(node) {
+  if (node.tagName !== sre.SemanticAttr.Type.MATRIX ||
+      node.getAttribute('role') !== sre.SemanticAttr.Role.DETERMINANT) {
+    return [];
+  }
+  var cells = sre.XpathUtil.evalXPath(
+      'children/row/children/cell/children/*', node);
+  for (var i = 0, cell; cell = cells[i]; i++) {
+    if (cell.tagName === sre.SemanticAttr.Type.NUMBER) {
+      continue;
+    }
+    if (cell.tagName === sre.SemanticAttr.Type.IDENTIFIER) {
+      var role = cell.getAttribute('role');
+      if (role === sre.SemanticAttr.Role.LATINLETTER ||
+          role === sre.SemanticAttr.Role.GREEKLETTER ||
+          role === sre.SemanticAttr.Role.OTHERLETTER) {
+        continue;
+      }
+    }
+    return [];
+  }
+  return [node];
+};
+
+
+/**
+ * String function to mark elements of a determinant as simple.
+ * @param {!Node} node The determinant node.
+ * @return {string} The empty string.
+ */
+sre.MathspeakUtil.determinantMarkSimple = function(node) {
+  var rows = sre.XpathUtil.evalXPath('children/row', node);
+  rows.forEach(function(row) {row.setAttribute('sre_flag', 'simple');});
+  return '';
+};
+
+
+/**
+ * String function to unmark elements of a determinant.
+ * @param {!Node} node The determinant node.
+ * @return {string} The empty string.
+ */
+sre.MathspeakUtil.determinantUnMarkSimple = function(node) {
+  var rows = sre.XpathUtil.evalXPath('children/row', node);
+  rows.forEach(function(row) {row.removeAttribute('sre_flag');});
+  return '';
+};

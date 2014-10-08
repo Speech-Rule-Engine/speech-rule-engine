@@ -1909,7 +1909,7 @@ sre.MathspeakRuleTest.prototype.testSample_15_2_1 = function() {
 /**
  * Testing Rule 15.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_15_4_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_15_4_1 = function() {
   var mml = '<mrow><mfenced open="|" close="|"><mtable><mtr><mtd><mi>a</mi>' +
       '</mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd>' +
       '<mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi>' +
@@ -1926,13 +1926,13 @@ sre.MathspeakRuleTest.prototype.untestSample_15_4_1 = function() {
 /**
  * Testing Rule 15.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_15_6_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_15_6_1 = function() {
   var mml = '<mfenced open="(" close=")"><mtable><mtr><mtd><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, 'StartBinomialOrMatrix x choose y' +
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix x Choose y' +
                        ' EndBinomialOrMatrix', 'default');
-  this.executeRuleTest(mml, 'StartBinomialOrMatrix x choose y' +
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix x Choose y' +
                        ' EndBinomialOrMatrix', 'brief');
-  this.executeRuleTest(mml, 'BinomialOrMatrix x choose y' +
+  this.executeRuleTest(mml, 'BinomialOrMatrix x Choose y' +
                        ' EndBinomialOrMatrix', 'sbrief');
 };
