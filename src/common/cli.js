@@ -40,7 +40,7 @@ sre.Cli.prototype.commandLine = function() {
   // These are necessary to avoid closure errors.
   /** @type {!string} */
   // commander.domain is already in use by the commander module!
-  commander.area = '';
+  commander.domain = '';
   /** @type {!string} */
   commander.input = '';
   /** @type {!string} */
@@ -55,7 +55,7 @@ sre.Cli.prototype.commandLine = function() {
   commander.verbose = false;
 
   commander.version(sre.System.getInstance().version).
-      option('-a, --area [name]', 'Subject area [name]').
+      option('-d, --domain [name]', 'Domain or subject area [name]').
       option('-i, --input [name]', 'Input file [name]').
       option('-l, --log [name]', 'Log file [name]').
       option('-o, --output [name]', 'Output file [name]').
@@ -63,12 +63,14 @@ sre.Cli.prototype.commandLine = function() {
       option('-t, --style [name]', 'Speech style [name]').
       option('-v, --verbose', 'Verbose mode').
       parse(process.argv);
+  console.log(sre.Engine.getInstance().allDomains);
   sre.System.getInstance().setupEngine(
       {
         'semantics': commander.semantics,
-        'domain': commander.area,
+        'domain': commander.domain,
         'style': commander.style
       });
+  console.log(sre.Engine.getInstance().allDomains);
   if (commander.verbose) {
     sre.Debugger.getInstance().init(commander.log);
   }

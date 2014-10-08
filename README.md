@@ -21,7 +21,7 @@ Then import into a running node or a source file using require:
 
      require('speech-rule-engine');
      
-#### API #######
+### API #######
 
 Current API functions are
      
@@ -35,6 +35,20 @@ speech string.
 Takes an input file containing a MathML expression and writes the corresponding
 speech string to the output file.
 
+     setupEngine(options);
+
+Takes an object of option/value pairs to parameterise the Speech Rule Engine.
+Valid options are:
+
+| Option | Value |
+| ---- | ---- |
+| *domain* | Domain or subject area of speech rules (e.g., mathspeak, physics).|
+| *style* | Style of speech rules (e.g., brief).|
+| *semantics* | Boolean flag to swich on semantic interpretation.|
+
+Observe that some speech rule domains only make sense with semantics switched on
+or off and that not every domain implements every style. See also the
+description of the command line parameters in the next section for more details.
 
 Standalone Engine
 -----------------
@@ -69,14 +83,14 @@ to
     if java_version <= 1.7:
       args += ['-d32']
 
-#### Build #############
+### Build #############
 
 Depending on your setup you might need to adapt the NODEJS and NODE_MODULES
 variable in the Makefile.  Then simply run
 
     make
 
-#### Run on command line ############
+### Run on command line ############
 
 
     bin/sre -i infile -o outfile
@@ -85,7 +99,7 @@ As an example run
 
     bin/sre -i samples/sample1.xml -o sample1.txt
     
-#### Run interactively ############
+### Run interactively ############
 
 Import into a running node process
 
@@ -94,3 +108,17 @@ Import into a running node process
 Note, that this will import the full functionality of the speech rule engine in
 the sre namespace and of the closure library in the goog namespace.
   
+
+### Command Line Options ###########
+
+
+
+* *domain* Domain of speech rules. This refers to a particular subject type of
+  speech rules or subject area rules are defined for (e.g., mathspeak, physics).
+* *style* Style of speech rules. Selects a particular speech style (e.g., brief).
+* *semantics* Boolean flag to swich on semantic interpretation.
+
+
+Generally This refers to a particular subject type of
+  speech rules or subject area rules are defined for (e.g., mathspeak, physics).
+* *style* Style of speech rules. Selects a particular speech style (e.g., brief).
