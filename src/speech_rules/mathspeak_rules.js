@@ -305,6 +305,26 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'factorial', 'mathspeak.default', '[t] "factorial"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
+  defineRule(
+      'minus', 'mathspeak.default', '[t] "minus"',
+      'self::operator', 'text()="\u002D"');
+
+  defineRule(
+      'single-prime', 'mathspeak.default', '[t] "prime"',
+      'self::punctuated[@role="prime"]', 'count(children/*)=1');
+  defineRule(
+      'double-prime', 'mathspeak.default', '[t] "double-prime"',
+      'self::punctuated[@role="prime"]', 'count(children/*)=2');
+  defineRule(
+      'triple-prime', 'mathspeak.default', '[t] "triple-prime"',
+      'self::punctuated[@role="prime"]', 'count(children/*)=3');
+  defineRule(
+      'quadruple-prime', 'mathspeak.default', '[t] "quadruple-prime"',
+      'self::punctuated[@role="prime"]', 'count(children/*)=4');
+  defineRule(
+      'counted-prime', 'mathspeak.default',
+      '[t] count(children/*); [t] "prime"',
+      'self::punctuated[@role="prime"]');
 
   // Fraction rules
 
@@ -558,6 +578,61 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.sbrief');
+
+  // Primes
+  defineRule(
+      'prime', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::superscript', 'children/*[2][@role="prime"]');
+  defineSpecialisedRule(
+      'prime', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'prime', 'mathspeak.default', 'mathspeak.sbrief');
+
+  defineRule(
+      'prime-subscript', 'mathspeak.default',
+      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
+      ' [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="subscript"', 'not(following-sibling::*)');
+  defineSpecialisedRule(
+      'prime-subscript', 'mathspeak.default', 'mathspeak.brief',
+      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
+      ' [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]');
+  defineSpecialisedRule(
+      'prime-subscript', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'prime-subscript-baseline', 'mathspeak.default',
+      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
+      ' [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2];' +
+      ' [t] CSFbaselineVerbose',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="subscript"', 'following-sibling::*');
+  defineSpecialisedRule(
+      'prime-subscript-baseline', 'mathspeak.default', 'mathspeak.brief',
+      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
+      ' [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2];' +
+      ' [t] CSFbaselineBrief');
+  defineSpecialisedRule(
+      'prime-subscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
+
+  defineRule(
+      'prime-subscript-simple', 'mathspeak.default',
+      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
+      '[n] children/*[1]/children/*[2]',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="subscript"',
+      'name(children/*[1]/children/*[1])="identifier"',
+      // Second child is a number but not mixed or other.
+      'name(children/*[1]/children/*[2])="number"',
+      'children/*[1]/children/*[2][@role!="mixed"]',
+      'children/*[1]/children/*[2][@role!="othernumber"]'
+  );
+  defineSpecialisedRule(
+      'prime-subscript-simple', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'prime-subscript-simple', 'mathspeak.default', 'mathspeak.sbrief');
 
   // Modifiers
   defineRule(

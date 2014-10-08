@@ -56,6 +56,18 @@ sre.MathspeakRuleTest.prototype.executeRuleTest = function(mml, answer, style) {
 };
 
 
+// In the following default is the verbose version of MathSpeak.
+/**
+ * Testing Rule 1.1, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_1_1_1 = function() {
+  var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>';
+  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'default');
+  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'brief');
+  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'sbrief');
+};
+
+
 /**
  * Testing Rule 1.1, Example 2.
  */
@@ -1067,7 +1079,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_8_2 = function() {
 /**
  * Testing Rule 8.9, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_9_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_9_1 = function() {
   var mml = '<msup><mi>x</mi><mo>\'</mo></msup>';
   this.executeRuleTest(mml, 'x prime', 'default');
   this.executeRuleTest(mml, 'x prime', 'brief');
@@ -1078,7 +1090,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_9_1 = function() {
 /**
  * Testing Rule 8.9, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_9_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_9_2 = function() {
   var mml = '<mrow><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo>' +
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
@@ -1100,7 +1112,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_9_2 = function() {
 /**
  * Testing Rule 8.10, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_10_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_10_1 = function() {
   var mml = '<mrow><msup><mi>ρ</mi><mo>\'</mo></msup><mo>=</mo><msubsup>' +
       '<mi>ρ</mi><mo>+</mo><mo>\'</mo></msubsup><mo>+</mo><msubsup>' +
       '<mi>ρ</mi><mo>-</mo><mo>\'</mo></msubsup></mrow>';
@@ -1116,7 +1128,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_10_1 = function() {
 /**
  * Testing Rule 8.10, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_10_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_10_2 = function() {
   var mml = '<msubsup><mi>x</mi><mn>10</mn><mo>\'</mo></msubsup>';
   this.executeRuleTest(mml, 'x prime 10', 'default');
   this.executeRuleTest(mml, 'x prime 10', 'brief');
@@ -1127,11 +1139,11 @@ sre.MathspeakRuleTest.prototype.untestSample_8_10_2 = function() {
 /**
  * Testing Rule 8.10, Example 3.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_10_3 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_10_3 = function() {
   var mml = '<msubsup><mi>T</mi><mi>n</mi><mo>\'</mo></msubsup>';
-  this.executeRuleTest(mml, 'upper t prime Subscript n', 'default');
-  this.executeRuleTest(mml, 'upper t prime Sub n', 'brief');
-  this.executeRuleTest(mml, 'upper t prime Sub n', 'sbrief');
+  this.executeRuleTest(mml, 'upper T prime Subscript n', 'default');
+  this.executeRuleTest(mml, 'upper T prime Sub n', 'brief');
+  this.executeRuleTest(mml, 'upper T prime Sub n', 'sbrief');
 };
 
 
