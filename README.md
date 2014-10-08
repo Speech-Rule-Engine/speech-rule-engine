@@ -111,14 +111,30 @@ the sre namespace and of the closure library in the goog namespace.
 
 ### Command Line Options ###########
 
+The following is a list of command line options for the speech rule engine.
 
-
-* *domain* Domain of speech rules. This refers to a particular subject type of
-  speech rules or subject area rules are defined for (e.g., mathspeak, physics).
-* *style* Style of speech rules. Selects a particular speech style (e.g., brief).
-* *semantics* Boolean flag to swich on semantic interpretation.
-
-
-Generally This refers to a particular subject type of
-  speech rules or subject area rules are defined for (e.g., mathspeak, physics).
-* *style* Style of speech rules. Selects a particular speech style (e.g., brief).
+| Short | Long | Meaning | 
+| ----- | ---- | :------- |
+| -i | --input [name]  | Input file [name] |
+| -o | --output [name] | Output file [name].
+||| If not given output is printed to stdout. |
+| | |
+| | |
+| | |
+| -d | --domain [name] | Domain or subject area [name]. |
+||| This refers to a particular subject type of speech rules or subject area rules are defined for (e.g., mathspeak, physics). |
+||| If no domain parameter is provided, domain default is used. |
+| -t | --style [name]  | Speech style [name]. |
+||| Selects a particular speech style (e.g., brief). |
+||| If no style parameter is provided, style default is used. |
+| -s | --semantics     | Switch on semantics interpretation. |
+||| Note, that some speech rule domains only make sense with semantics switched on or off. |
+| -e | --enumerate     | Enumerates all available domains and styles. |
+||| Note that not every style is implemented in every domain. |
+| | |
+| -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
+| -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
+||| If not given verbose output is printed to stdout. |
+| | |
+| -h | --help   | output usage information |
+| -V | --version  |      output the version number |
