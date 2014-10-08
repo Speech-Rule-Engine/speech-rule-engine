@@ -19,6 +19,8 @@
 
 goog.provide('sre.CombinedStore');
 
+goog.require('sre.Engine');
+goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreRules');
@@ -48,6 +50,17 @@ sre.CombinedStore.mathStore.initialize = function() {
   sre.MathmlStoreRules.getInstance();
   sre.SemanticTreeRules.getInstance();
   sre.MathspeakRules.getInstance();
+  sre.CombinedStore.getInstance().updateEngine();
 };
 
 
+/**
+ * Updates adminstrative info in the base Engine.
+ */
+sre.CombinedStore.prototype.updateEngine = function() {
+  var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
+  sre.Engine.getInstance().allDomains = sre.MathUtil.union(
+      dynamicCstr.domain, sre.MathMap.getInstance().allDomains);
+  sre.Engine.getInstance().allStyles = sre.MathUtil.union(
+      dynamicCstr.style, sre.MathMap.getInstance().allStyles);
+};

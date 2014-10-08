@@ -2616,7 +2616,7 @@
         "short": "right arrow from bar to black diamond"
       },
       "mathspeak": {
-        "defaul": "right-arrow from bar to black diamond",
+        "default": "right-arrow from bar to black diamond",
         "sbrief": "r arrow from bar to black diamond"
       }
     },

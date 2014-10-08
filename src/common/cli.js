@@ -41,6 +41,8 @@ sre.Cli.prototype.commandLine = function() {
   /** @type {!string} */
   // commander.domain is already in use by the commander module!
   commander.domain = '';
+  /** @type {!boolean} */
+  commander.enumerate = false;
   /** @type {!string} */
   commander.input = '';
   /** @type {!string} */
@@ -56,6 +58,7 @@ sre.Cli.prototype.commandLine = function() {
 
   commander.version(sre.System.getInstance().version).
       option('-d, --domain [name]', 'Domain or subject area [name]').
+      option('-e, --enumerate', 'Enumerates available domains and styles').
       option('-i, --input [name]', 'Input file [name]').
       option('-l, --log [name]', 'Log file [name]').
       option('-o, --output [name]', 'Output file [name]').
@@ -63,14 +66,21 @@ sre.Cli.prototype.commandLine = function() {
       option('-t, --style [name]', 'Speech style [name]').
       option('-v, --verbose', 'Verbose mode').
       parse(process.argv);
-  console.log(sre.Engine.getInstance().allDomains);
+  if (commander.enumerate) {
+    sre.System.getInstance().setupEngine({});
+    var output = 'Domain options: ' +
+        sre.Engine.getInstance().allDomains.sort().join(', ') +
+        'Style options:  ' +
+        sre.Engine.getInstance().allStyles.sort().join(', ');
+    console.log(output);
+    return;
+  }
   sre.System.getInstance().setupEngine(
       {
         'semantics': commander.semantics,
         'domain': commander.domain,
         'style': commander.style
       });
-  console.log(sre.Engine.getInstance().allDomains);
   if (commander.verbose) {
     sre.Debugger.getInstance().init(commander.log);
   }
