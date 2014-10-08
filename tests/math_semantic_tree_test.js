@@ -7313,3 +7313,175 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
   );
 };
 
+
+/**
+ * Punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreePunctuated = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>',
+      '<punctuated role="sequence" id="7">' +
+      '<content>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="3">,</punctuation>' +
+      '<punctuation role="comma" id="5">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">a</identifier>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<identifier role="latinletter" font="normal" id="2">b</identifier>' +
+      '<punctuation role="comma" id="3">,</punctuation>' +
+      '<identifier role="latinletter" font="normal" id="4">c</identifier>' +
+      '<punctuation role="comma" id="5">,</punctuation>' +
+      '<identifier role="latinletter" font="normal" id="6">d</identifier>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>',
+      '<punctuated role="sequence" id="6">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="comma" id="4">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<identifier role="latinletter" font="normal" id="1">b</identifier>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<identifier role="latinletter" font="normal" id="3">c</identifier>' +
+      '<punctuation role="comma" id="4">,</punctuation>' +
+      '<identifier role="latinletter" font="normal" id="5">d</identifier>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<msub><mi>b</mi><mi>1</mi></msub><mo>!</mo>',
+      '<punctuated role="endpunct" id="4">' +
+      '<content>' +
+      '<punctuation role="unknown" id="3">!</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="latinletter" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">b</identifier>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<punctuation role="unknown" id="3">!</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>:</mo><msub><mi>b</mi><mi>1</mi></msub>',
+      '<punctuated role="startpunct" id="4">' +
+      '<content>' +
+      '<punctuation role="unknown" id="0">:</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="unknown" id="0">:</punctuation>' +
+      '<subscript role="latinletter" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="1">b</identifier>' +
+      '<number role="integer" font="normal" id="2">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>:</mo><msub><mi>b</mi><mi>1</mi></msub><mo>!</mo>',
+      '<punctuated role="sequence" id="5">' +
+      '<content>' +
+      '<punctuation role="unknown" id="0">:</punctuation>' +
+      '<punctuation role="unknown" id="4">!</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="unknown" id="0">:</punctuation>' +
+      '<subscript role="latinletter" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="1">b</identifier>' +
+      '<number role="integer" font="normal" id="2">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<punctuation role="unknown" id="4">!</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>,</mo><mo>,</mo><mo>,</mo><mo>!</mo>',
+      '<punctuated role="sequence" id="4">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="unknown" id="3">!</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="unknown" id="3">!</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>,</mo><mo>,</mo><mo>,</mo><mo>,</mo>',
+      '<punctuated role="comma" id="4">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="comma" id="3">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="comma" id="3">,</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>\'</mo><mo>\'</mo><mo>\'</mo><mo>\'</mo>',
+      '<punctuated role="prime" id="4">' +
+      '<content>' +
+      '<punctuation role="prime" id="0">\'</punctuation>' +
+      '<punctuation role="prime" id="1">\'</punctuation>' +
+      '<punctuation role="prime" id="2">\'</punctuation>' +
+      '<punctuation role="prime" id="3">\'</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="prime" id="0">\'</punctuation>' +
+      '<punctuation role="prime" id="1">\'</punctuation>' +
+      '<punctuation role="prime" id="2">\'</punctuation>' +
+      '<punctuation role="prime" id="3">\'</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>\'</mo><mo>\'</mo><mo>,</mo><mo>\'</mo>',
+      '<punctuated role="sequence" id="4">' +
+      '<content>' +
+      '<punctuation role="prime" id="0">\'</punctuation>' +
+      '<punctuation role="prime" id="1">\'</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="prime" id="3">\'</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="prime" id="0">\'</punctuation>' +
+      '<punctuation role="prime" id="1">\'</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '<punctuation role="prime" id="3">\'</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+  this.executeTreeTest(
+      '<mo>!</mo><mo>!</mo><mo>!</mo><mo>!</mo>',
+      '<punctuated role="sequence" id="4">' +
+      '<content>' +
+      '<punctuation role="unknown" id="0">!</punctuation>' +
+      '<punctuation role="unknown" id="1">!</punctuation>' +
+      '<punctuation role="unknown" id="2">!</punctuation>' +
+      '<punctuation role="unknown" id="3">!</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="unknown" id="0">!</punctuation>' +
+      '<punctuation role="unknown" id="1">!</punctuation>' +
+      '<punctuation role="unknown" id="2">!</punctuation>' +
+      '<punctuation role="unknown" id="3">!</punctuation>' +
+      '</children>' +
+      '</punctuated>');
+};

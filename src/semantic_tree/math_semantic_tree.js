@@ -1355,6 +1355,14 @@ sre.SemanticTree.prototype.makePunctuatedNode_ = function(
     nodes, punctuations) {
   var newNode = this.makeBranchNode_(
       sre.SemanticAttr.Type.PUNCTUATED, nodes, punctuations);
+  if (punctuations.length == nodes.length) {
+    var firstRole = punctuations[0].role;
+    if (firstRole != sre.SemanticAttr.Role.UNKNOWN &&
+        punctuations.every(function(punct) {return punct.role == firstRole;})) {
+      newNode.role = firstRole;
+      return newNode;
+    }
+  }
   if (punctuations.length == 1 &&
       nodes[0].type == sre.SemanticAttr.Type.PUNCTUATION) {
     newNode.role = sre.SemanticAttr.Role.STARTPUNCT;

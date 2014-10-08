@@ -56,18 +56,6 @@ sre.MathspeakRuleTest.prototype.executeRuleTest = function(mml, answer, style) {
 };
 
 
-// In the following default is the verbose version of MathSpeak.
-/**
- * Testing Rule 1.1, Example 1.
- */
-sre.MathspeakRuleTest.prototype.testSample_1_1_1 = function() {
-  var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>';
-  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'default');
-  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'brief');
-  this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'sbrief');
-};
-
-
 /**
  * Testing Rule 1.1, Example 2.
  */
