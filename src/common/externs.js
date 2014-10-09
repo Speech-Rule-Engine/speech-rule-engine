@@ -3,6 +3,7 @@ process.env = {};
 process.env.SRE_JSON_PATH;
 process.cwd;
 process.argv;
+process.exit;
 var commander;
 commander.version;
 commander.option;
