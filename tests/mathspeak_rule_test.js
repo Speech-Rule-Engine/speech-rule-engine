@@ -1716,13 +1716,13 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>60</mn>' +
       '<menclose notation="updiagonalstrike"><mtext>mi</mtext></menclose>' +
       '</mrow><menclose notation="updiagonalstrike"><mtext>hr</mtext>' +
-      '</menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5</mn><mo>,</mo>' +
-      '<mn>280</mn><mtext>ft</mtext></mrow><mrow><mn>1</mn>' +
+      '</menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn>' +
+      '<mtext>ft</mtext></mrow><mrow><mn>1</mn>' +
       '<menclose notation="updiagonalstrike"><mtext>mi</mtext></menclose>' +
       '</mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn>' +
       '<menclose notation="updiagonalstrike"><mtext>mi</mtext></menclose>' +
       '</mrow><mrow><mn>60</mn><mtext>min</mtext></mrow></mfrac><mo>=</mo>' +
-      '<mfrac><mrow><mn>5</mn><mo>,</mo><mn>280</mn><mtext>ft</mtext>' +
+      '<mfrac><mrow><mn>5,280</mn><mtext>ft</mtext>' +
       '</mrow><mtext>min</mtext></mfrac></mrow>';
   this.executeRuleTest(mml, 'Startfraction 60 crossout miles Endcrossout' +
                        ' Over crossout hours Endcrossout Endfraction times' +
@@ -1767,9 +1767,9 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
  * Testing Rule 13.1, Example 3.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_3 = function() {
-  var mml = '<mrow><mi>m</mi><mtext>m</mtext><mo>=</mo><mn>100</mn>' +
-      '<mi>m</mi><mtext>cm</mtext><mo>=</mo><mfrac><mi>m</mi><mrow>' +
-      '<mn>1</mn><mo>,</mo><mn>000</mn></mrow></mfrac><mtext>km</mtext>' +
+  var mml = '<mrow><mi>m</mi><mtext>m</mtext></mrow><mo>=</mo><mn>100</mn>' +
+      '<mi>m</mi><mtext>cm</mtext><mo>=</mo><mrow><mfrac><mi>m</mi>' +
+      '<mn>1,000</mn></mfrac><mtext>km</mtext>' +
       '</mrow>';
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
                        ' Startfraction m Over 1,000 Endfraction kilometers',
@@ -1785,11 +1785,22 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_3 = function() {
  * Testing Rule 13.1, Example 4.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
-  var mml = '<mrow><mn>1</mn><mtext>in</mtext><mo>=</mo><mn>2</mn><mo>,</mo>' +
-      '<mn>54</mn><mtext>cm</mtext></mrow>';
+  var mml = '<mrow><mn>1</mn><mtext>mi</mtext></mrow><mo>≈</mo>' +
+        '<mrow><mn>1.6</mn><mtext>km</mtext></mrow>';
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'default');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'brief');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'sbrief');
+};
+
+/**
+ * Testing Rule 13.1, Example 5.
+ */
+sre.MathspeakRuleTest.prototype.untestSample_13_1_5 = function() {
+  var mml = '<mrow><mn>1</mn><mtext>in</mtext><mo>=</mo><mn>2</mn><mo>.</mo>' +
+      '<mn>54</mn><mtext>cm</mtext></mrow>';
+  this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'default');
+  this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'brief');
+  this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'sbrief');
 };
 
 
