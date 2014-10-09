@@ -837,6 +837,18 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
       ' [t] "EndBinomialOrMatrix"',
       'self::vector', '@role="binomial"');
+
+  defineRule(
+      'cases', 'mathspeak.default', '[t] "StartLayout"; ' +
+      '[t] "Enlarged"; [n] content/*[1];' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndLayout"', 'self::cases');
+  defineRule(
+      'cases', 'mathspeak.sbrief', '[t] "Layout"; ' +
+      '[t] "Enlarged"; [n] content/*[1];' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
+      ' [t] "EndLayout"', 'self::cases');
+
 };
 
 });  // goog.scope

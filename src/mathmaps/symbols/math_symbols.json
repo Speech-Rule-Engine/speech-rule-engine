@@ -2572,7 +2572,7 @@
         "default": "almost equal or equals"
       },
       "mathspeak": {
-        "default": "almost-equal-or-equals"
+        "default": "almost-equal-or-equal-to"
       }
     },
     "key": "224A"
@@ -2884,7 +2884,7 @@
         "alternative": "less than or equals"
       },
       "mathspeak": {
-        "default": "less-than-or-equals"
+        "default": "less-than-or-equal-to"
       }
     },
     "key": "2264"
@@ -2897,7 +2897,7 @@
         "alternative": "greater than or equals"
       },
       "mathspeak": {
-        "default": "greater-than-or-equals"
+        "default": "greater-than-or-equal-to"
       }
     },
     "key": "2265"
@@ -3035,7 +3035,7 @@
         "alternative": "neither less than nor equals"
       },
       "mathspeak": {
-        "default": "neither-less-than-nor-equals"
+        "default": "neither-less-than-nor-equal-to"
       }
     },
     "key": "2270"
@@ -3048,7 +3048,7 @@
         "alternative": "neither greater than nor equals"
       },
       "mathspeak": {
-        "default": "neither-greater-than-nor-equals"
+        "default": "neither-greater-than-nor-equal-to"
       }
     },
     "key": "2271"
@@ -3182,7 +3182,7 @@
         "default": "precedes or equals"
       },
       "mathspeak": {
-        "default": "precedes-or-equals"
+        "default": "precedes-or-equal-to"
       }
     },
     "key": "227C"
@@ -3194,7 +3194,7 @@
         "default": "succeeds or equals"
       },
       "mathspeak": {
-        "default": "succeeds-or-equals"
+        "default": "succeeds-or-equal-to"
       }
     },
     "key": "227D"
@@ -3302,7 +3302,7 @@
         "default": "subset of or equals"
       },
       "mathspeak": {
-        "default": "subset-of-or-equals"
+        "default": "subset-of-or-equal-to"
       }
     },
     "key": "2286"
@@ -3314,7 +3314,7 @@
         "default": "superset of or equals"
       },
       "mathspeak": {
-        "default": "superset-of-or-equals"
+        "default": "superset-of-or-equal-to"
       }
     },
     "key": "2287"
@@ -3326,7 +3326,7 @@
         "default": "neither a subset of nor equals"
       },
       "mathspeak": {
-        "default": "neither-a-subset-of-nor-equals"
+        "default": "neither-a-subset-of-nor-equal-to"
       }
     },
     "key": "2288"
@@ -3338,7 +3338,7 @@
         "default": "neither a superset of nor equals"
       },
       "mathspeak": {
-        "default": "neither-a-superset-of-nor-equals"
+        "default": "neither-a-superset-of-nor-equal-to"
       }
     },
     "key": "2289"
@@ -3435,7 +3435,7 @@
         "default": "square image of or equals"
       },
       "mathspeak": {
-        "default": "square-image-of-or-equals"
+        "default": "square-image-of-or-equal-to"
       }
     },
     "key": "2291"
@@ -3447,7 +3447,7 @@
         "default": "square original of or equals"
       },
       "mathspeak": {
-        "default": "square-original-of-or-equals"
+        "default": "square-original-of-or-equal-to"
       }
     },
     "key": "2292"
@@ -3843,7 +3843,7 @@
         "default": "normal subgroup of or equals"
       },
       "mathspeak": {
-        "default": "normal-subgroup-of-or-equals"
+        "default": "normal-subgroup-of-or-equal-to"
       }
     },
     "key": "22B4"
@@ -3855,7 +3855,7 @@
         "default": "contains as normal subgroup or equals"
       },
       "mathspeak": {
-        "default": "contains-as-normal-subgroup-or-equals"
+        "default": "contains-as-normal-subgroup-or-equal-to"
       }
     },
     "key": "22B5"
@@ -4372,7 +4372,7 @@
         "default": "not square image of or equals"
       },
       "mathspeak": {
-        "default": "not-square-image-of-or-equals"
+        "default": "not-square-image-of-or-equal-to"
       }
     },
     "key": "22E2"
@@ -4384,7 +4384,7 @@
         "default": "not square original of or equals"
       },
       "mathspeak": {
-        "default": "not-square-original-of-or-equals"
+        "default": "not-square-original-of-or-equal-to"
       }
     },
     "key": "22E3"
@@ -4494,7 +4494,7 @@
         "default": "not normal subgroup of or equals"
       },
       "mathspeak": {
-        "default": "not-normal-subgroup-of-or-equals"
+        "default": "not-normal-subgroup-of-or-equal-to"
       }
     },
     "key": "22EC"
@@ -7550,7 +7550,7 @@
         "default": "approximately equal or equals"
       },
       "mathspeak": {
-        "default": "approximately-equal-or-equals"
+        "default": "approximately-equal-or-equal-to"
       }
     },
     "key": "2A70"
@@ -8275,7 +8275,7 @@
         "default": "smaller than or equals"
       },
       "mathspeak": {
-        "default": "smaller-than-or-equals"
+        "default": "smaller-than-or-equal-to"
       }
     },
     "key": "2AAC"
@@ -8287,7 +8287,7 @@
         "default": "larger than or equals"
       },
       "mathspeak": {
-        "default": "larger-than-or-equals"
+        "default": "larger-than-or-equal-to"
       }
     },
     "key": "2AAD"
@@ -8551,7 +8551,7 @@
         "default": "subset of or equals with dot above"
       },
       "mathspeak": {
-        "default": "subset-of-or-equals-with-dot-above"
+        "default": "subset-of-or-equal-to-with-dot-above"
       }
     },
     "key": "2AC3"
@@ -8563,7 +8563,7 @@
         "default": "superset of or equals with dot above"
       },
       "mathspeak": {
-        "default": "superset-of-or-equals-with-dot-above"
+        "default": "superset-of-or-equal-to-with-dot-above"
       }
     },
     "key": "2AC4"
@@ -8719,7 +8719,7 @@
         "default": "closed subset or equals"
       },
       "mathspeak": {
-        "default": "closed-subset-or-equals"
+        "default": "closed-subset-or-equal-to"
       }
     },
     "key": "2AD1"
@@ -8731,7 +8731,7 @@
         "default": "closed superset or equals"
       },
       "mathspeak": {
-        "default": "closed-superset-or-equals"
+        "default": "closed-superset-or-equal-to"
       }
     },
     "key": "2AD2"
@@ -9193,7 +9193,7 @@
         "default": "double line slanted less than or equals"
       },
       "mathspeak": {
-        "default": "double-line-slanted-less-than-or-equals"
+        "default": "double-line-slanted-less-than-or-equal-to"
       }
     },
     "key": "2AF9"
@@ -9205,7 +9205,7 @@
         "default": "double line slanted greater than or equals"
       },
       "mathspeak": {
-        "default": "double-line-slanted-greater-than-or-equals"
+        "default": "double-line-slanted-greater-than-or-equal-to"
       }
     },
     "key": "2AFA"
