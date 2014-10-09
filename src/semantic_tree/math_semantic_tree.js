@@ -520,11 +520,12 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
           sre.SemanticUtil.purgeNodes(children));
       newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.ENCLOSE, [this.processRow_(children)], []);
-      newNode.role = mml.getAttribute('notation') ||
+      newNode.role =
+          /** @type {!sre.SemanticAttr.Role} */(mml.getAttribute('notation')) ||
           sre.SemanticAttr.Role.UNKNOWN;
       return newNode;
       break;
-  
+
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
       // Ordinarilly at this point we should not get any other tag.

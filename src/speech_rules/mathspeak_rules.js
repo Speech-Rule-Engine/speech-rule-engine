@@ -849,6 +849,58 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::cases');
 
+  // Enclose
+  defineRule(
+      'enclose', 'mathspeak.default',
+      '[t] "StartEnclose"; [t] @role; [n] children/*[1]; [t] "EndEnclose"',
+      'self::enclose');
+  defineRuleAlias(
+      'overbar', 'self::enclose', '@role="top"');
+  defineRuleAlias(
+      'underbar', 'self::enclose', '@role="bottom"');
+  defineRule(
+      'leftbar', 'mathspeak.default',
+      '[t] "vertical-bar"; [n] children/*[1]',
+      'self::enclose', '@role="left"');
+  defineRule(
+      'rightbar', 'mathspeak.default',
+      '[t] "vertical-bar"; [n] children/*[1]',
+      'self::enclose', '@role="right"');
+
+  // Crossout
+  defineRule(
+      'crossout', 'mathspeak.default',
+      '[t] "CrossOut"; [n] children/*[1]; [t] "EndCrossOut"',
+      'self::enclose', '@role="updiagonalstrike" or' +
+      ' @role="downdiagonalstrike" or @role="horizontalstrike"');
+  defineRule(
+      'cancel', 'mathspeak.default',
+      '[t] "CrossOut"; [n] children/*[1]/children/*[1]; [t] "With";' +
+      ' [n] children/*[2]; [t] "EndCrossOut"',
+      'self::overscore', '@role="updiagonalstrike" or' +
+      ' @role="downdiagonalstrike" or @role="horizontalstrike"');
+  defineSpecialisedRule(
+      'cancel', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'cancel', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias('cancel',
+      'self::underscore', '@role="updiagonalstrike" or' +
+      ' @role="downdiagonalstrike" or @role="horizontalstrike"');
+  defineRule(
+      'cancel-reverse', 'mathspeak.default',
+      '[t] "CrossOut"; [n] children/*[2]/children/*[1]; [t] "With";' +
+      ' [n] children/*[1]; [t] "EndCrossOut"',
+      'self::overscore', 'name(children/*[2])="enclose"',
+      'children/*[2][@role="updiagonalstrike" or' +
+      ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
+  defineSpecialisedRule(
+      'cancel-reverse', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'cancel-reverse', 'mathspeak.default', 'mathspeak.sbrief');
+  defineRuleAlias('cancel-reverse',
+      'self::underscore', 'name(children/*[2])="enclose"',
+      'children/*[2][@role="updiagonalstrike" or' +
+      ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
 };
 
 });  // goog.scope

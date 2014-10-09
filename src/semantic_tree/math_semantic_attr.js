@@ -1280,7 +1280,7 @@ sre.SemanticAttr.Type = {
 
   // Enclosed (counterpart for menclosed).
   ENCLOSE: 'enclose',
-  
+
   // General.
   UNKNOWN: 'unknown',
   EMPTY: 'empty'

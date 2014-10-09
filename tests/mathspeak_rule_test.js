@@ -1407,43 +1407,68 @@ sre.MathspeakRuleTest.prototype.testSample_9_3_4 = function() {
 /**
  * Testing Rule 10.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_10_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_10_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>5</mn><mi>x</mi>' +
       '<menclose notation="updiagonalstrike"><mi>y</mi></menclose></mrow>' +
       '<mrow><mn>2</mn><menclose notation="updiagonalstrike"><mi>y</mi>' +
       '</menclose></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn>' +
       '</mfrac><mi>x</mi></mrow>';
-  this.executeRuleTest(mml, 'StartFraction 5 x crossout y Endcrossout Over 2' +
-                       ' crossout y Endcrossout EndFraction equals' +
+  this.executeRuleTest(mml, 'StartFraction 5 x CrossOut y EndCrossOut Over 2' +
+                       ' CrossOut y EndCrossOut EndFraction equals' +
                        ' five-halves x', 'default');
-  this.executeRuleTest(mml, 'StartFrac 5 x crossout y Endcrossout Over 2' +
-                       ' crossout y Endcrossout EndFrac equals five-halves' +
+  this.executeRuleTest(mml, 'StartFrac 5 x CrossOut y EndCrossOut Over 2' +
+                       ' CrossOut y EndCrossOut EndFrac equals five-halves' +
                        ' x', 'brief');
-  this.executeRuleTest(mml, 'Frac 5 x crossout y Endcrossout Over 2 crossout' +
-                       ' y Endcrossout EndFrac equals five-halves x', 'sbrief');
+  this.executeRuleTest(mml, 'Frac 5 x CrossOut y EndCrossOut Over 2 CrossOut' +
+                       ' y EndCrossOut EndFrac equals five-halves x', 'sbrief');
 };
 
 
 /**
  * Testing Rule 10.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_10_2_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_10_2_1 = function() {
   var mml = '<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac>' +
       '<mover><menclose notation="updiagonalstrike"><mn>12</mn></menclose>' +
       '<mn>2</mn></mover><munder><menclose notation="updiagonalstrike">' +
       '<mn>18</mn></menclose><mn>3</mn></munder></mfrac><mo>=</mo><mfrac>' +
       '<mn>2</mn><mn>3</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'StartFraction 12 Over 18 EndFraction equals' +
-                       ' StartFraction crossout 12 With 2 Endcrossout Over' +
-                       ' crossout 18 With 3 Endcrossout EndFraction equals' +
+                       ' StartFraction CrossOut 12 With 2 EndCrossOut Over' +
+                       ' CrossOut 18 With 3 EndCrossOut EndFraction equals' +
                        ' two-thirds', 'default');
   this.executeRuleTest(mml, 'StartFrac 12 Over 18 EndFrac equals StartFrac' +
-                       ' crossout 12 With 2 Endcrossout Over crossout 18' +
-                       ' With 3 Endcrossout EndFrac equals two-thirds',
+                       ' CrossOut 12 With 2 EndCrossOut Over CrossOut 18' +
+                       ' With 3 EndCrossOut EndFrac equals two-thirds',
                        'brief');
-  this.executeRuleTest(mml, 'Frac 12 Over 18 EndFrac equals Frac crossout 12' +
-                       ' With 2 Endcrossout Over crossout 18 With 3' +
-                       ' Endcrossout EndFrac equals two-thirds', 'sbrief');
+  this.executeRuleTest(mml, 'Frac 12 Over 18 EndFrac equals Frac CrossOut 12' +
+                       ' With 2 EndCrossOut Over CrossOut 18 With 3' +
+                       ' EndCrossOut EndFrac equals two-thirds', 'sbrief');
+};
+
+
+/**
+ * Reversed version of the above example.
+ * Testing Rule 10.2, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_10_2_2 = function() {
+  var mml = '<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac>' +
+      '<munder><mn>2</mn><menclose notation="updiagonalstrike"><mn>12</mn>' +
+      '</menclose></munder><mover><mn>3</mn>' +
+      '<menclose notation="updiagonalstrike">' +
+      '<mn>18</mn></menclose></mover></mfrac><mo>=</mo><mfrac>' +
+      '<mn>2</mn><mn>3</mn></mfrac></mrow>';
+  this.executeRuleTest(mml, 'StartFraction 12 Over 18 EndFraction equals' +
+                       ' StartFraction CrossOut 12 With 2 EndCrossOut Over' +
+                       ' CrossOut 18 With 3 EndCrossOut EndFraction equals' +
+                       ' two-thirds', 'default');
+  this.executeRuleTest(mml, 'StartFrac 12 Over 18 EndFrac equals StartFrac' +
+                       ' CrossOut 12 With 2 EndCrossOut Over CrossOut 18' +
+                       ' With 3 EndCrossOut EndFrac equals two-thirds',
+                       'brief');
+  this.executeRuleTest(mml, 'Frac 12 Over 18 EndFrac equals Frac CrossOut 12' +
+                       ' With 2 EndCrossOut Over CrossOut 18 With 3' +
+                       ' EndCrossOut EndFrac equals two-thirds', 'sbrief');
 };
 
 
@@ -1666,11 +1691,11 @@ sre.MathspeakRuleTest.prototype.untestSample_11_9_1 = function() {
       '<mn>58</mn><mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover></mrow>';
-  this.executeRuleTest(mml, 'seven-twelfths equals .58 modifyingeachabove 3' +
+  this.executeRuleTest(mml, 'seven-twelfths equals .58 ModifyingEachAbove 3' +
                        ' 3 3 With dot', 'default');
-  this.executeRuleTest(mml, 'seven-twelfths equals .58 modeachabove 3 3 3' +
+  this.executeRuleTest(mml, 'seven-twelfths equals .58 ModEachAbove 3 3 3' +
                        ' With dot', 'brief');
-  this.executeRuleTest(mml, 'seven-twelfths equals .58 modeachabove 3 3 3' +
+  this.executeRuleTest(mml, 'seven-twelfths equals .58 ModEachAbove 3 3 3' +
                        ' With dot', 'sbrief');
 };
 
@@ -1724,23 +1749,23 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
       '</mrow><mrow><mn>60</mn><mtext>min</mtext></mrow></mfrac><mo>=</mo>' +
       '<mfrac><mrow><mn>5,280</mn><mtext>ft</mtext>' +
       '</mrow><mtext>min</mtext></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Startfraction 60 crossout miles Endcrossout' +
-                       ' Over crossout hours Endcrossout Endfraction times' +
-                       ' Startfraction 5,280 feet Over 1 crossout miles' +
-                       ' Endcrossout Endfraction times Startfraction 1' +
-                       ' crossout hours Endcrossout Over 60 minutes' +
+  this.executeRuleTest(mml, 'Startfraction 60 CrossOut miles EndCrossOut' +
+                       ' Over CrossOut hours EndCrossOut Endfraction times' +
+                       ' Startfraction 5,280 feet Over 1 CrossOut miles' +
+                       ' EndCrossOut Endfraction times Startfraction 1' +
+                       ' CrossOut hours EndCrossOut Over 60 minutes' +
                        ' Endfraction equals Startfraction 5,280 feet Over' +
                        ' minutes Endfraction', 'default');
-  this.executeRuleTest(mml, 'Startfrac 60 crossout miles Endcrossout Over' +
-                       ' crossout hours Endcrossout Endfrac times Startfrac' +
-                       ' 5,280 feet Over 1 crossout miles Endcrossout' +
-                       ' Endfrac times Startfrac 1 crossout hours' +
-                       ' Endcrossout Over 60 minutes Endfrac equals' +
+  this.executeRuleTest(mml, 'Startfrac 60 CrossOut miles EndCrossOut Over' +
+                       ' CrossOut hours EndCrossOut Endfrac times Startfrac' +
+                       ' 5,280 feet Over 1 CrossOut miles EndCrossOut' +
+                       ' Endfrac times Startfrac 1 CrossOut hours' +
+                       ' EndCrossOut Over 60 minutes Endfrac equals' +
                        ' Startfrac 5,280 feet Over minutes Endfrac', 'brief');
-  this.executeRuleTest(mml, 'frac 60 crossout miles Endcrossout Over' +
-                       ' crossout hours Endcrossout Endfrac times frac 5,280' +
-                       ' feet Over 1 crossout miles Endcrossout Endfrac' +
-                       ' times frac 1 crossout hours Endcrossout Over 60' +
+  this.executeRuleTest(mml, 'frac 60 CrossOut miles EndCrossOut Over' +
+                       ' CrossOut hours EndCrossOut Endfrac times frac 5,280' +
+                       ' feet Over 1 CrossOut miles EndCrossOut Endfrac' +
+                       ' times frac 1 CrossOut hours EndCrossOut Over 60' +
                        ' minutes Endfrac equals frac 5,280 feet Over minutes' +
                        ' Endfrac', 'sbrief');
 };
