@@ -513,9 +513,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2];' +
       ' [t] CSFbaselineVerbose',
       'self::subscript', 'following-sibling::*',
-      'not(following-sibling::subscript/children[1]/empty or ' +
-      'following-sibling::infixop[@role="implicit"]/children[1]/subscript/' +
-      'children[1]/empty)');
+      'not(name(following-sibling::subscript/children/*[1])="empty" or ' +
+      '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
+      '"subscript" and ' +
+      'name(following-sibling::*/children/*[1]/children/*[1])="empty"))');
   defineSpecialisedRule(
       'subscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2];' +
@@ -547,9 +548,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];' +
       '[t] CSFbaselineVerbose',
       'self::superscript', 'following-sibling::*',
-      'not(following-sibling::superscript/children[1]/empty or ' +
-      'following-sibling::infixop[@role="implicit"]/children[1]/superscript/' +
-      'children[1]/empty)');
+      'not(name(following-sibling::superscript/children/*[1])="empty" or ' +
+      '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
+      '"superscript" and ' +
+      'name(following-sibling::*/children/*[1]/children/*[1])="empty"))');
   defineSpecialisedRule(
       'superscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
