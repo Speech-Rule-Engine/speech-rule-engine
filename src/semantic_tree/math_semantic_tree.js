@@ -1543,7 +1543,10 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
       return 'prefix';
       break;
     default:
-      if (funcNode.type == sre.SemanticAttr.Type.IDENTIFIER) {
+      if (funcNode.type == sre.SemanticAttr.Type.IDENTIFIER ||
+          funcNode.role == sre.SemanticAttr.Role.LATINLETTER ||
+          funcNode.role == sre.SemanticAttr.Role.GREEKLETTER ||
+          funcNode.role == sre.SemanticAttr.Role.OTHERLETTER) {
         return 'simple';
       }
   }

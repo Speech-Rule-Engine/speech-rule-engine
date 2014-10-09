@@ -266,7 +266,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'function-unknown', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', 'children/*[1][@role="unknown"]');
+      'self::appl');
 
   defineRule(
       'function-prefix', 'mathspeak.default',
