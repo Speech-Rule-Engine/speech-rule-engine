@@ -1278,6 +1278,9 @@ sre.SemanticAttr.Type = {
   LINE: 'line',
   CELL: 'cell',
 
+  // Enclosed (counterpart for menclosed).
+  ENCLOSE: 'enclose',
+  
   // General.
   UNKNOWN: 'unknown',
   EMPTY: 'empty'

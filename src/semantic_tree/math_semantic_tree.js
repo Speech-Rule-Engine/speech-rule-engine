@@ -515,6 +515,16 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       var nodes = this.processTablesInRow_([leaf]);
       return nodes[0];
       break;
+    case 'MENCLOSE':
+      children = this.parseMathmlChildren_(
+          sre.SemanticUtil.purgeNodes(children));
+      newNode = this.makeBranchNode_(
+          sre.SemanticAttr.Type.ENCLOSE, [this.processRow_(children)], []);
+      newNode.role = mml.getAttribute('notation') ||
+          sre.SemanticAttr.Role.UNKNOWN;
+      return newNode;
+      break;
+  
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
       // Ordinarilly at this point we should not get any other tag.
