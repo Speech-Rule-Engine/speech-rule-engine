@@ -56,31 +56,6 @@ sre.MathspeakRuleTest.prototype.executeRuleTest = function(mml, answer, style) {
 };
 
 
-/**
- * Testing Rule 14.3, Example 1.
- */
-sre.MathspeakRuleTest.prototype.testSample_14_3_1 = function() {
-  var mml = '<mrow><mi>x</mi><mo>=</mo>' +
-      '<mfenced separators="" open="{" close=""><mtable><mtr><mtd><mrow>' +
-      '<mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd>' +
-      '</mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd>' +
-      '<mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable>' +
-      '</mfenced></mrow>';
-  this.executeRuleTest(mml, 'x equals StartLayout Enlarged left-brace 1st' +
-                       ' Row 1st Column y less-than 0 2nd Column 0 2nd Row' +
-                       ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
-                       ' 2 y EndLayout', 'default');
-  this.executeRuleTest(mml, 'x equals StartLayout Enlarged left-brace 1st' +
-                       ' Row 1st Column y less-than 0 2nd Column 0 2nd Row' +
-                       ' 1st Column y greater-than-or-equal-to 0 2nd Column' +
-                       ' 2 y EndLayout', 'brief');
-  this.executeRuleTest(mml, 'x equals Layout Enlarged L brace 1st Row 1st' +
-                       ' Column y less-than 0 2nd Column 0 2nd Row 1st' +
-                       ' Column y greater-than-or-equal-to 0 2nd Column 2 y' +
-                       ' EndLayout', 'sbrief');
-};
-
-
 // In the following default is the verbose version of MathSpeak.
 /**
  * Testing Rule 1.1, Example 1.
@@ -1811,11 +1786,12 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_3 = function() {
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
   var mml = '<mrow><mn>1</mn><mtext>mi</mtext></mrow><mo>≈</mo>' +
-        '<mrow><mn>1.6</mn><mtext>km</mtext></mrow>';
+      '<mrow><mn>1.6</mn><mtext>km</mtext></mrow>';
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'default');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'brief');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'sbrief');
 };
+
 
 /**
  * Testing Rule 13.1, Example 5.
@@ -1864,7 +1840,7 @@ sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
 /**
  * Testing Rule 14.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_14_3_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_14_3_1 = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo>' +
       '<mfenced separators="" open="{" close=""><mtable><mtr><mtd><mrow>' +
       '<mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd>' +
