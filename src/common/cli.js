@@ -66,27 +66,33 @@ sre.Cli.prototype.commandLine = function() {
       option('-t, --style [name]', 'Speech style [name]').
       option('-v, --verbose', 'Verbose mode').
       parse(process.argv);
-  if (commander.enumerate) {
-    sre.System.getInstance().setupEngine({});
-    var output = 'Domain options: ' +
-        sre.Engine.getInstance().allDomains.sort().join(', ') +
-        'Style options:  ' +
-        sre.Engine.getInstance().allStyles.sort().join(', ');
-    console.log(output);
-    return;
-  }
-  sre.System.getInstance().setupEngine(
+  try {
+    if (commander.enumerate) {
+      sre.System.getInstance().setupEngine({});
+      var output = 'Domain options: ' +
+            sre.Engine.getInstance().allDomains.sort().join(', ') +
+            '\nStyle options:  ' +
+            sre.Engine.getInstance().allStyles.sort().join(', ');
+      console.log(output);
+      process.exit(0);
+    }
+    sre.System.getInstance().setupEngine(
       {
         'semantics': commander.semantics,
         'domain': commander.dom,
         'style': commander.style
       });
-  if (commander.verbose) {
-    sre.Debugger.getInstance().init(commander.log);
+    if (commander.verbose) {
+      sre.Debugger.getInstance().init(commander.log);
+    }
+    if (commander.input) {
+      sre.System.getInstance().processFile(commander.input, commander.output);
+    }
+  } catch (err) {
+    console.log(err.message);
+    process.exit(1);
   }
-  if (commander.input) {
-    sre.System.getInstance().processFile(commander.input, commander.output);
-  }
+  process.exit(0);
 };
 
 
