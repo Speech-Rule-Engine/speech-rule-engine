@@ -44,6 +44,7 @@ DONE
 
 Layout elements: Blank for empty cells.
 
+DONE
 
 -----------------------------------------
 
@@ -63,7 +64,36 @@ DONE
 
 Deal with fonts vs named letters (e.g., bold bold l)
 
+DONE, but not too nicely
+
 -----------------------------------------
+
+Cleanup of primes that are not explicity superscripts!
+Possibly combine primes, or is it sufficient to have a single punctuated with
+role "prime"?
+Example: testset 54
+
+-----------------------------------------
+
+Deal with bizarre postfix
+Examples: testset 65, 95, 98
+
+-----------------------------------------
+
+Fences that have super or subscripts should be treated as fences first!
+Examples: testset 65, 66
+
+-----------------------------------------
+
+too many baselines: 91,92
+
+-----------------------------------------
+
+
+
+-----------------------------------------
+
+
 
 
 Comments:

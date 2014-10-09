@@ -62,7 +62,7 @@
         "default": "left right arrow"
       },
       "mathspeak": {
-        "default": "left right-arrow",
+        "default": "left-right-arrow",
         "sbrief": "l r arrow"
       }
     },
@@ -423,7 +423,7 @@
         "default": "left right arrow with stroke"
       },
       "mathspeak": {
-        "default": "left right-arrow with stroke",
+        "default": "left-right-arrow with stroke",
         "sbrief": "l r arrow with stroke"
       }
     },
@@ -1276,7 +1276,7 @@
         "default": "left right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "left right-arrow with vertical stroke",
+        "default": "left-right-arrow with vertical stroke",
         "sbrief": "l r arrow with vertical stroke"
       }
     },
@@ -1317,7 +1317,7 @@
         "default": "left right arrow with double vertical stroke"
       },
       "mathspeak": {
-        "default": "left right-arrow with double vertical stroke",
+        "default": "left-right-arrow with double vertical stroke",
         "sbrief": "l r arrow with double vertical stroke"
       }
     },
@@ -2057,7 +2057,7 @@
         "default": "long left right arrow"
       },
       "mathspeak": {
-        "default": "long left right-arrow",
+        "default": "long left-right-arrow",
         "sbrief": "long l r arrow"
       }
     },
@@ -2236,7 +2236,7 @@
         "short": "double left right arrow with vertical stroke"
       },
       "mathspeak": {
-        "default": "double left right-arrow with vertical stroke",
+        "default": "double left-right-arrow with vertical stroke",
         "sbrief": "double l r arrow with vertical stroke"
       }
     },
@@ -3010,7 +3010,7 @@
         "default": "left right arrow through small circle"
       },
       "mathspeak": {
-        "default": "left right-arrow through small circle",
+        "default": "left-right-arrow through small circle",
         "sbrief": "l r arrow through small circle"
       }
     },

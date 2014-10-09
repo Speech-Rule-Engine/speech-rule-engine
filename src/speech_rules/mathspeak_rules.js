@@ -244,6 +244,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'prefix', 'mathspeak.default',
       '[n] text(); [n] children/*[1]',
       'self::prefixop');
+  defineRule(
+      'postfix', 'mathspeak.default',
+      '[n] children/*[1]; [n] text()',
+      'self::postfixop');
 
   defineRule(
       'binary-operation', 'mathspeak.default',
