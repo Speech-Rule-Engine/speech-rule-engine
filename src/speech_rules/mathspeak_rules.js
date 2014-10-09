@@ -294,8 +294,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'fences-set', 'mathspeak.default',
       '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
       'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
-      'content/*[2][text()]="}"', 'count(children/*)=1');
-
+      'content/*[2][text()]="}"', 'count(children/*)=1',
+      'not(name(../..)="appl")');
   defineSpecialisedRule(
       'fences-set', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] "Set"; [n] children/*[1]; [t] "EndSet"');

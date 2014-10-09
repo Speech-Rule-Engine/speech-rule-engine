@@ -70,18 +70,18 @@ sre.Cli.prototype.commandLine = function() {
     if (commander.enumerate) {
       sre.System.getInstance().setupEngine({});
       var output = 'Domain options: ' +
-            sre.Engine.getInstance().allDomains.sort().join(', ') +
-            '\nStyle options:  ' +
-            sre.Engine.getInstance().allStyles.sort().join(', ');
+          sre.Engine.getInstance().allDomains.sort().join(', ') +
+          '\nStyle options:  ' +
+          sre.Engine.getInstance().allStyles.sort().join(', ');
       console.log(output);
       process.exit(0);
     }
     sre.System.getInstance().setupEngine(
-      {
-        'semantics': commander.semantics,
-        'domain': commander.dom,
-        'style': commander.style
-      });
+        {
+          'semantics': commander.semantics,
+          'domain': commander.dom,
+          'style': commander.style
+        });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);
     }
