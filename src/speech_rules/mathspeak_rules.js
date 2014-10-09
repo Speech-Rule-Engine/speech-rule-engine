@@ -512,7 +512,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'subscript-baseline', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2];' +
       ' [t] CSFbaselineVerbose',
-      'self::subscript', 'following-sibling::*');
+      'self::subscript', 'following-sibling::*',
+      'not(following-sibling::subscript/children[1]/empty or ' +
+      'following-sibling::infixop[@role="implicit"]/children[1]/subscript/' +
+      'children[1]/empty)');
   defineSpecialisedRule(
       'subscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2];' +
@@ -543,7 +546,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];' +
       '[t] CSFbaselineVerbose',
-      'self::superscript', 'following-sibling::*');
+      'self::superscript', 'following-sibling::*',
+      'not(following-sibling::superscript/children[1]/empty or ' +
+      'following-sibling::infixop[@role="implicit"]/children[1]/superscript/' +
+      'children[1]/empty)');
   defineSpecialisedRule(
       'superscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
@@ -580,10 +586,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'cube', 'mathspeak.default', 'mathspeak.sbrief');
 
   // Primes
+  // This rule uses some redundancy for ordering!
   defineRule(
       'prime', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::superscript', 'children/*[2][@role="prime"]');
+      'self::superscript', 'children/*[2]', 'children/*[2][@role="prime"]');
   defineSpecialisedRule(
       'prime', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(

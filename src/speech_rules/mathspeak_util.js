@@ -560,13 +560,17 @@ sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
  */
 sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
   while (node.parentNode) {
-    node = node.parentNode;
-    if (node.tagName === sre.SemanticAttr.Type.SUBSCRIPT) {
+    var children = node.parentNode;
+    var parent = children.parentNode;
+    if (parent.tagName === sre.SemanticAttr.Type.SUBSCRIPT &&
+        node === children.childNodes[1]) {
       init = replace.sub + ' ' + init;
     }
-    if (node.tagName === sre.SemanticAttr.Type.SUPERSCRIPT) {
+    if (parent.tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+        node === children.childNodes[1]) {
       init = replace.sup + ' ' + init;
     }
+    node = parent;
   }
   return init.trim();
 };

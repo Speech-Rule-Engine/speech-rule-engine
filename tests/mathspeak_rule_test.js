@@ -1177,7 +1177,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_11_1 = function() {
 /**
  * Testing Rule 8.12, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_12_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_12_1 = function() {
   var mml = '<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi>' +
       '</msup>';
   this.executeRuleTest(mml, 'x Subscript a Baseline Superscript b', 'default');
@@ -1189,7 +1189,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_12_1 = function() {
 /**
  * Testing Rule 8.12, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_12_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_12_2 = function() {
   var mml = '<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi>' +
       '</msub>';
   this.executeRuleTest(mml, 'x Superscript b Baseline Subscript a', 'default');
@@ -1201,7 +1201,7 @@ sre.MathspeakRuleTest.prototype.untestSample_8_12_2 = function() {
 /**
  * Testing Rule 8.13, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_13_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><msup>' +
       '<mrow/><mi>b</mi></msup><mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'log Superscript 4 Superscript b Baseline x',
@@ -1214,13 +1214,13 @@ sre.MathspeakRuleTest.prototype.untestSample_8_13_1 = function() {
 /**
  * Testing Rule 8.13, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_13_2 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_13_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi>' +
       '</msub><mi>y</mi></mrow>';
-  this.executeRuleTest(mml, 'upper t Subscript n Subscript a Baseline y',
+  this.executeRuleTest(mml, 'upper T Subscript n Subscript a Baseline y',
                        'default');
-  this.executeRuleTest(mml, 'upper t Sub n Sub a Base y', 'brief');
-  this.executeRuleTest(mml, 'upper t Sub n Sub a Base y', 'sbrief');
+  this.executeRuleTest(mml, 'upper T Sub n Sub a Base y', 'brief');
+  this.executeRuleTest(mml, 'upper T Sub n Sub a Base y', 'sbrief');
 };
 
 
