@@ -1,0 +1,33 @@
+(defun rewrite-svg-description ()
+  (interactive)
+  (let (start end)
+    ;; That does not always work as expected!
+    ;; (search-forward-regexp "<desc id=\".*-Desc\">")
+    (search-forward-regexp "<desc id=\"")
+    (search-forward-regexp "\">")
+    (setq start (point))
+    (search-forward "</desc>")
+    (setq end (- (point) 7))
+    (kill-ring-save start end)
+    (search-forward "</li>")
+    (backward-char 5)
+    (newline)
+    (newline)
+    (backward-char 1)
+    (insert "<p>")
+    (yank)
+    (insert "</p>")
+    (goto-char end))
+  )
+
+
+(defun rewrite-svg-file ()
+  (interactive)
+  (beginning-of-buffer)
+  (loop 
+   (condition-case nil
+       (rewrite-svg-description)
+     (error (return-from rewrite-svg-file))
+     )
+   )
+  )
