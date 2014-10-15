@@ -215,8 +215,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
       if (component['context']) {
         descrs[0]['context'] =
-          this.constructString(node, component['context']) +
-              (descrs[0]['context'] || '');
+            this.constructString(node, component['context']) +
+            (descrs[0]['context'] || '');
       }
       if (component['annotation']) {
         descrs[0]['annotation'] = component['annotation'];
@@ -359,7 +359,7 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
   var store = sre.SpeechRuleEngine.getInstance().activeStore_;
   if (store) {
     var allRules = store.findAllRules(
-      function(rule) {return rule.name == name;});
+        function(rule) {return rule.name == name;});
     for (var i = 0, rule; rule = allRules[i]; i++) {
       sre.Debugger.getInstance().output('Rule', name, 'number', i);
       store.debugSpeechRule(rule, node);

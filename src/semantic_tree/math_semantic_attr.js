@@ -1235,7 +1235,7 @@ sre.SemanticAttr.Type = {
   FUNCTION: 'function',
   // Identifier that describes a unit.
   UNIT: 'unit',
-  
+
   // Branches.
   // Compound Symbols.
   ACCENT: 'accent',

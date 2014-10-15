@@ -454,7 +454,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'unit', 'default.default',
       '[n] text() (annotation:unit)', 'self::unit');
-  
+
 };
 
 });  // goog.scope

@@ -181,13 +181,13 @@ sre.BaseRuleStore.prototype.debugSpeechRule = function(rule, node) {
   var prec = rule.precondition;
   var queryResult = this.applyQuery(node, prec.query);
   sre.Debugger.getInstance().output(
-    prec.query, queryResult ? queryResult.toString() : queryResult);
+      prec.query, queryResult ? queryResult.toString() : queryResult);
   prec.constraints.forEach(
-    function(cstr) {
-      sre.Debugger.getInstance().output(
-        cstr, this.applyConstraint(node, cstr));});
+      function(cstr) {
+        sre.Debugger.getInstance().output(
+            cstr, this.applyConstraint(node, cstr));});
 };
-  
+
 
 /**
  * Function to initialize the store with speech rules. It is called by the

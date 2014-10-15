@@ -1648,12 +1648,10 @@ sre.MathspeakRuleTest.prototype.testSample_11_7_1 = function() {
  * Testing Rule 11.8, Example 1.
  */
 sre.MathspeakRuleTest.prototype.untestSample_11_8_1 = function() {
-  var mml = '<mrow><mover><mstyle scriptlevel="2" displaystyle="false">' +
-      '<mrow/></mstyle><mo>[</mo></mover><mtable><mtr><mtd><mrow>' +
-      '<mi>a</mi><mo>=</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
-      '<mi>b</mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr></mtable><mrow>' +
-      '<mo>]</mo></mrow><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
-      '</mrow><mo>\u005F</mo></munder><mrow/></mrow>';
+  var mml = '<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo>' +
+      '<mi>y</mi></mrow> <mo>\u005F</mo></munder><mrow><mi>a</mi>' +
+      '<mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo>' +
+      '<mn>3</mn></mrow></munder></mrow>';
   this.executeRuleTest(mml, 'ModifyingBelow x plus y With bar Underscript a' +
                        ' equals 5 UnderUnderscript b equals 3 Endscripts',
                        'default');
@@ -1668,11 +1666,9 @@ sre.MathspeakRuleTest.prototype.untestSample_11_8_1 = function() {
  * Testing Rule 11.8, Example 2.
  */
 sre.MathspeakRuleTest.prototype.untestSample_11_8_2 = function() {
-  var mml = '<mrow><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>' +
-      '<mo>¯</mo></mover><mstyle scriptlevel="2" displaystyle="false">' +
-      '<mtable><mtr><mtd><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mtd>' +
-      '</mtr><mtr><mtd><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mtd>' +
-      '</mtr></mtable></mstyle></mover><mrow/></mrow>';
+  var mml = '<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
+      '</mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow>' +
+      '</mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>';
   this.executeRuleTest(mml, 'ModifyingAbove x plus y With bar Overscript n' +
                        ' equals 1 OverOverscript m equals 2 Endscripts',
                        'default');
@@ -1739,16 +1735,23 @@ sre.MathspeakRuleTest.prototype.testSample_12_1_3 = function() {
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>60</mn>' +
-      '<menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
-      '</mrow><menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">hr</mi>' +
+      '<menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
+      ' class="MathML-Unit">mi</mi></menclose>' +
+      '</mrow><menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
+      ' class="MathML-Unit">hr</mi>' +
       '</menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn>' +
-      '<mi mathvariant="normal" class="MathML-Unit">ft</mi></mrow><mrow><mn>1</mn>' +
-      '<menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
+      '<mi mathvariant="normal" class="MathML-Unit">ft</mi></mrow><mrow>' +
+      '<mn>1</mn><menclose notation="updiagonalstrike">' +
+      '<mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
       '</mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn>' +
-      '<menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
-      '</mrow><mrow><mn>60</mn><mi mathvariant="normal" class="MathML-Unit">min</mi></mrow></mfrac><mo>=</mo>' +
-      '<mfrac><mrow><mn>5,280</mn><mi mathvariant="normal" class="MathML-Unit">ft</mi>' +
-      '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi></mfrac></mrow>';
+      '<menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
+      ' class="MathML-Unit">mi</mi></menclose>' +
+      '</mrow><mrow><mn>60</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">min</mi></mrow></mfrac><mo>=</mo>' +
+      '<mfrac><mrow><mn>5,280</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">ft</mi>' +
+      '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi>' +
+      '</mfrac></mrow>';
   this.executeRuleTest(mml, 'StartFraction 60 CrossOut miles EndCrossOut' +
                        ' Over CrossOut hours EndCrossOut EndFraction times' +
                        ' StartFraction 5,280 feet Over 1 CrossOut miles' +
@@ -1775,9 +1778,12 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
  * Testing Rule 13.1, Example 2.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
-  var mml = '<mrow><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">J</mi><mo>=</mo><mn>1</mn>' +
-      '<mi mathvariant="normal" class="MathML-Unit">kg</mi><mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">m</mi><mn>2</mn></msup>' +
-      '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">J</mi><mo>=</mo><mn>1</mn>' +
+      '<mi mathvariant="normal" class="MathML-Unit">kg</mi><mo>·</mo><msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">m</mi><mn>2</mn></msup>' +
+      '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup><mi>x</mi></mrow>';
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
                        ' dot seconds Superscript minus 2', 'default');
@@ -1792,10 +1798,11 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
  * Testing Rule 13.1, Example 3.
  */
 sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
-  var mml = '<mrow><mi>m</mi><mi mathvariant="normal" class="MathML-Unit">m</mi></mrow><mo>=</mo><mn>100</mn>' +
-      '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi>' +
-      '<mn>1,000</mn></mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
-      '</mrow>';
+  var mml = '<mrow><mi>m</mi><mi mathvariant="normal"' +
+      ' class="MathML-Unit">m</mi></mrow><mo>=</mo><mn>100</mn>' +
+      '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
+      '<mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
                        ' StartFraction m Over 1,000 EndFraction kilometers',
                        'default');
@@ -1810,8 +1817,10 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
  * Testing Rule 13.1, Example 4.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
-  var mml = '<mrow><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
-      '<mrow><mn>1.6</mn><mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
+      '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">km</mi></mrow>';
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'default');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'brief');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'sbrief');
@@ -1822,8 +1831,10 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
  * Testing Rule 13.1, Example 5.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_5 = function() {
-  var mml = '<mrow><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">in</mi><mo>=</mo><mn>2</mn><mo>.</mo>' +
-      '<mn>54</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">in</mi><mo>=</mo><mn>2</mn><mo>.</mo>' +
+      '<mn>54</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
+      '</mrow>';
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'default');
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'brief');
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'sbrief');
