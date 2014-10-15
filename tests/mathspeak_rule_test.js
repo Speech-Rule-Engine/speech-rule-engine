@@ -1739,16 +1739,16 @@ sre.MathspeakRuleTest.prototype.testSample_12_1_3 = function() {
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>60</mn>' +
-      '<menclose notation="updiagonalstrike"><mtext>mi</mtext></menclose>' +
-      '</mrow><menclose notation="updiagonalstrike"><mtext>hr</mtext>' +
+      '<menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
+      '</mrow><menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">hr</mi>' +
       '</menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn>' +
-      '<mtext>ft</mtext></mrow><mrow><mn>1</mn>' +
-      '<menclose notation="updiagonalstrike"><mtext>mi</mtext></menclose>' +
+      '<mi mathvariant="normal" class="MathML-Unit">ft</mi></mrow><mrow><mn>1</mn>' +
+      '<menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
       '</mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn>' +
-      '<menclose notation="updiagonalstrike"><mtext>mi</mtext></menclose>' +
-      '</mrow><mrow><mn>60</mn><mtext>min</mtext></mrow></mfrac><mo>=</mo>' +
-      '<mfrac><mrow><mn>5,280</mn><mtext>ft</mtext>' +
-      '</mrow><mtext>min</mtext></mfrac></mrow>';
+      '<menclose notation="updiagonalstrike"><mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
+      '</mrow><mrow><mn>60</mn><mi mathvariant="normal" class="MathML-Unit">min</mi></mrow></mfrac><mo>=</mo>' +
+      '<mfrac><mrow><mn>5,280</mn><mi mathvariant="normal" class="MathML-Unit">ft</mi>' +
+      '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'Startfraction 60 CrossOut miles EndCrossOut' +
                        ' Over CrossOut hours EndCrossOut Endfraction times' +
                        ' Startfraction 5,280 feet Over 1 CrossOut miles' +
@@ -1775,9 +1775,9 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
  * Testing Rule 13.1, Example 2.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
-  var mml = '<mrow><mn>1</mn><mtext>J</mtext><mo>=</mo><mn>1</mn>' +
-      '<mtext>kg</mtext><mo>·</mo><msup><mtext>m</mtext><mn>2</mn></msup>' +
-      '<mo>·</mo><msup><mtext>s</mtext><mrow><mo>-</mo><mn>2</mn></mrow>' +
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">J</mi><mo>=</mo><mn>1</mn>' +
+      '<mi mathvariant="normal" class="MathML-Unit">kg</mi><mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">m</mi><mn>2</mn></msup>' +
+      '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup><mi>x</mi></mrow>';
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
                        ' dot seconds Superscript minus 2', 'default');
@@ -1791,10 +1791,10 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
 /**
  * Testing Rule 13.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.untestSample_13_1_3 = function() {
-  var mml = '<mrow><mi>m</mi><mtext>m</mtext></mrow><mo>=</mo><mn>100</mn>' +
-      '<mi>m</mi><mtext>cm</mtext><mo>=</mo><mrow><mfrac><mi>m</mi>' +
-      '<mn>1,000</mn></mfrac><mtext>km</mtext>' +
+sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
+  var mml = '<mrow><mi>m</mi><mi mathvariant="normal" class="MathML-Unit">m</mi></mrow><mo>=</mo><mn>100</mn>' +
+      '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi><mo>=</mo><mrow><mfrac><mi>m</mi>' +
+      '<mn>1,000</mn></mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '</mrow>';
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
                        ' Startfraction m Over 1,000 Endfraction kilometers',
@@ -1810,8 +1810,8 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_3 = function() {
  * Testing Rule 13.1, Example 4.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
-  var mml = '<mrow><mn>1</mn><mtext>mi</mtext></mrow><mo>≈</mo>' +
-      '<mrow><mn>1.6</mn><mtext>km</mtext></mrow>';
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
+      '<mrow><mn>1.6</mn><mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'default');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'brief');
   this.executeRuleTest(mml, '1 miles almost-equals 1.6 kilometers', 'sbrief');
@@ -1822,8 +1822,8 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
  * Testing Rule 13.1, Example 5.
  */
 sre.MathspeakRuleTest.prototype.untestSample_13_1_5 = function() {
-  var mml = '<mrow><mn>1</mn><mtext>in</mtext><mo>=</mo><mn>2</mn><mo>.</mo>' +
-      '<mn>54</mn><mtext>cm</mtext></mrow>';
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">in</mi><mo>=</mo><mn>2</mn><mo>.</mo>' +
+      '<mn>54</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'default');
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'brief');
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'sbrief');
@@ -1837,10 +1837,10 @@ sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
   var mml = '<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow>' +
-      '</mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd>' +
-      '<mtext>fluorine</mtext></mtd><mtd/><mtd><mrow>' +
-      '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
-      '<mtext>fluoride</mtext></mrow></mtd></mtr></mtable>';
+      '</mtd></mtr><mtr><mtd><mi mathvariant="normal" class="MathML-Unit">hydrogen</mtext></mtd><mtd/><mtd>' +
+      '<mi mathvariant="normal" class="MathML-Unit">fluorine</mtext></mtd><mtd/><mtd><mrow>' +
+      '<mi mathvariant="normal" class="MathML-Unit">hydrogen</mtext><mspace width="4.pt"/>' +
+      '<mi mathvariant="normal" class="MathML-Unit">fluoride</mtext></mrow></mtd></mtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row 1st Column upper H 2 2nd' +
                        ' Column plus 3rd Column upper F 2 4th Column' +
                        ' right-arrow 5th Column 2 upper H upper F 2nd Row' +

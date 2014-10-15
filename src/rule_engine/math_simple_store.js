@@ -121,6 +121,24 @@ sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
 
 
 /**
+ * Makes a speech rule for Unicode characters from its JSON representation.
+ * @param {Object} json JSON object of the speech rules.
+ */
+sre.MathCompoundStore.prototype.addUnitRules = function(json) {
+  this.addFunctionRules(json);
+  var names = json['names'];
+  var addCstr = 'parent::mathml:mi[@class="MathML-Unit"]|' +
+        'parent::identifier[@role="unit"]';
+  for (var j = 0, name; name = names[j]; j++) {
+    var rules = this.subStores_[name].findAllRules(function(x) {return true;});
+    console.log('changing unit rules: ' + rules);
+    rules.forEach(function(rule) {rule.precondition.constraints.push(addCstr);});
+    console.log('changed unit rules: ' + rules);
+  }
+};
+
+
+/**
  * Retrieves a rule for the given node if one exists.
  * @param {Node} node A node.
  * @param {!sre.SpeechRule.DynamicCstr} dynamic Additional dynamic

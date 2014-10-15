@@ -1,0 +1,38 @@
+[
+  {"category": "Length",
+   "mappings": {
+     "default": {
+       "default": "millimeters"
+     }
+   },
+   "key": "mm",
+   "names": ["mm"]
+  },
+{"category": "Length",
+   "mappings": {
+     "default": {
+       "default": "centimeters"
+     }
+   },
+   "key": "cm",
+   "names": ["cm"]
+  },
+  {"category": "Length",
+   "mappings": {
+     "default": {
+       "default": "meters"
+     }
+   },
+   "key": "m",
+   "names": ["m"]
+  },
+  {"category": "Length",
+   "mappings": {
+     "default": {
+       "default": "kilometers"
+     }
+   },
+   "key": "km",
+   "names": ["km"]
+  }
+]

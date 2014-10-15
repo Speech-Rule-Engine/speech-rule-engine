@@ -52,6 +52,12 @@ sre.MathMap = function() {
             return sre.MathMap.SYMBOLS_PATH_ + file;
           }))
               .forEach(goog.bind(this.store.addSymbolRules, this.store));
+  sre.MathMap.parseFiles(
+      sre.MathMap.UNITS_FILES_.map(
+          function(file) {
+            return sre.MathMap.UNITS_PATH_ + file;
+          }))
+              .forEach(goog.bind(this.store.addUnitRules, this.store));
 
   var cstrValues = this.store.getDynamicConstraintValues();
   /**
@@ -106,6 +112,15 @@ sre.MathMap.FUNCTIONS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'functions/';
 
 
 /**
+ * Subpath to dir containing ChromeVox JSON definitions for units.
+ * @type {string}
+ * @const
+ * @private
+ */
+sre.MathMap.UNITS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'units/';
+
+
+/**
  * Array of JSON filenames containing symbol definitions for math speak.
  * @type {Array.<string>}
  * @const
@@ -142,6 +157,17 @@ sre.MathMap.SYMBOLS_FILES_ = [
  */
 sre.MathMap.FUNCTIONS_FILES_ = [
   'algebra.json', 'elementary.json', 'hyperbolic.json', 'trigonometry.json'
+];
+
+
+/**
+ * Array of JSON filenames containing unit definitions for math speak.
+ * @type {Array.<string>}
+ * @const
+ * @private
+ */
+sre.MathMap.UNITS_FILES_ = [
+  'length.json'
 ];
 
 
