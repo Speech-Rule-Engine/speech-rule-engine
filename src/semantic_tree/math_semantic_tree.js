@@ -422,14 +422,8 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       return this.processRow_(this.parseMathmlChildren_(children));
       break;
     case 'MFRAC':
-      var newNode = this.makeBranchNode_(
-          sre.SemanticAttr.Type.FRACTION,
-          [this.parseMathml_(children[0]), this.parseMathml_(children[1])],
-          []);
-      newNode.role = newNode.childNodes.every(function(x) {
-        return sre.SemanticTree.attrPred_('role', 'INTEGER')(x);
-      }) ? sre.SemanticAttr.Role.VULGAR : sre.SemanticAttr.Role.DIVISION;
-      return newNode;
+      return this.makeFractionNode_(this.parseMathml_(children[0]),
+                                    this.parseMathml_(children[1]));
       break;
     case 'MSUB':
     case 'MSUP':
@@ -453,7 +447,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
           sre.SemanticAttr.Type.SQRT, [this.processRow_(children)], []);
       break;
     case 'MTABLE':
-      newNode = this.makeBranchNode_(
+      var newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.TABLE,
           this.parseMathmlChildren_(children), []);
       if (sre.SemanticTree.tableIsMultiline_(newNode)) {
@@ -2266,4 +2260,21 @@ sre.SemanticTree.exprFont_ = function(node) {
   if (singleFont) {
     node.font = singleFont;
   }
+};
+
+
+/**
+ * Creates a fraction node with the appropriate role.
+ * @param {!sre.SemanticTree.Node} denom The denominator node.
+ * @param {!sre.SemanticTree.Node} enume The enumerator node.
+ * @return {!sre.SemanticTree.Node} The new fraction node.
+ * @private
+ */
+sre.SemanticTree.prototype.makeFractionNode_ = function(denom, enume) {
+  var newNode = this.makeBranchNode_(
+      sre.SemanticAttr.Type.FRACTION, [denom, enume], []);
+  newNode.role = newNode.childNodes.every(function(x) {
+    return sre.SemanticTree.attrPred_('role', 'INTEGER')(x);
+  }) ? sre.SemanticAttr.Role.VULGAR : sre.SemanticAttr.Role.DIVISION;
+  return newNode;
 };

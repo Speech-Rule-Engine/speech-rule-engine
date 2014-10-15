@@ -211,12 +211,16 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       default:
         descrs = [new sre.AuditoryDescription({text: content})];
     }
-    // Adding overall context if it exists.
-    if (descrs[0] && component['context'] &&
-        component.type != sre.SpeechRule.Type.MULTI) {
-      descrs[0]['context'] =
+    // Adding overall context and annotation if they exist.
+    if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
+      if (component['context']) {
+        descrs[0]['context'] =
           this.constructString(node, component['context']) +
               (descrs[0]['context'] || '');
+      }
+      if (component['annotation']) {
+        descrs[0]['annotation'] = component['annotation'];
+      }
     }
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
@@ -341,15 +345,9 @@ sre.SpeechRuleEngine.prototype.toString = function() {
 sre.SpeechRuleEngine.debugSpeechRule = function(rule, node) {
   var store = sre.SpeechRuleEngine.getInstance().activeStore_;
   if (store) {
-    var prec = rule.precondition;
-    var queryResult = store.applyQuery(node, prec.query);
-    sre.Debugger.getInstance().output(
-        prec.query, queryResult ? queryResult.toString() : queryResult);
-    prec.constraints.forEach(
-        function(cstr) {
-          sre.Debugger.getInstance().output(
-              cstr, store.applyConstraint(node, cstr));});
-  }};
+    store.debugSpeechRule(rule, node);
+  }
+};
 
 
 /**
@@ -358,11 +356,13 @@ sre.SpeechRuleEngine.debugSpeechRule = function(rule, node) {
  * @param {!Node} node DOM node to test applicability of the rule.
  */
 sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
-  var store = sre.SpeechRuleEngine.getInstance().activeStore_;
-  var allRules = store.findAllRules(
+  var activeStore = sre.SpeechRuleEngine.getInstance().activeStore_;
+  if (store) {
+    var allRules = store.findAllRules(
       function(rule) {return rule.name == name;});
-  for (var i = 0, rule; rule = allRules[i]; i++) {
-    sre.Debugger.getInstance().output('Rule', name, 'number', i);
-    sre.SpeechRuleEngine.debugSpeechRule(rule, node);
+    for (var i = 0, rule; rule = allRules[i]; i++) {
+      sre.Debugger.getInstance().output('Rule', name, 'number', i);
+      store.debugSpeechRule(rule, node);
+    }
   }
 };
