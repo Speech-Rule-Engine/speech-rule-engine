@@ -1233,7 +1233,9 @@ sre.SemanticAttr.Type = {
   LARGEOP: 'largeop',
   // Some named function.
   FUNCTION: 'function',
-
+  // Identifier that describes a unit.
+  UNIT: 'unit',
+  
   // Branches.
   // Compound Symbols.
   ACCENT: 'accent',

@@ -125,16 +125,11 @@ sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addUnitRules = function(json) {
-  this.addFunctionRules(json);
   var names = json['names'];
-  var addCstr = 'parent::mathml:mi[@class="MathML-Unit"]|' +
-        'parent::identifier[@role="unit"]';
-  for (var j = 0, name; name = names[j]; j++) {
-    var rules = this.subStores_[name].findAllRules(function(x) {return true;});
-    console.log('changing unit rules: ' + rules);
-    rules.forEach(function(rule) {rule.precondition.constraints.push(addCstr);});
-    console.log('changed unit rules: ' + rules);
+  if (names) {
+    json['names'] = names.map(function(name) {return name + ':' + 'unit';});
   }
+  this.addFunctionRules(json);
 };
 
 

@@ -484,6 +484,9 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
         leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
       }
+      if (mml.getAttribute('class') === 'MathML-Unit') {
+        leaf.type = sre.SemanticAttr.Type.UNIT;
+      }
       return leaf;
       break;
     case 'MN':

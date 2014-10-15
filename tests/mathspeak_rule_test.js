@@ -1749,25 +1749,25 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
       '</mrow><mrow><mn>60</mn><mi mathvariant="normal" class="MathML-Unit">min</mi></mrow></mfrac><mo>=</mo>' +
       '<mfrac><mrow><mn>5,280</mn><mi mathvariant="normal" class="MathML-Unit">ft</mi>' +
       '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Startfraction 60 CrossOut miles EndCrossOut' +
-                       ' Over CrossOut hours EndCrossOut Endfraction times' +
-                       ' Startfraction 5,280 feet Over 1 CrossOut miles' +
-                       ' EndCrossOut Endfraction times Startfraction 1' +
+  this.executeRuleTest(mml, 'StartFraction 60 CrossOut miles EndCrossOut' +
+                       ' Over CrossOut hours EndCrossOut EndFraction times' +
+                       ' StartFraction 5,280 feet Over 1 CrossOut miles' +
+                       ' EndCrossOut EndFraction times StartFraction 1' +
                        ' CrossOut hours EndCrossOut Over 60 minutes' +
-                       ' Endfraction equals Startfraction 5,280 feet Over' +
-                       ' minutes Endfraction', 'default');
-  this.executeRuleTest(mml, 'Startfrac 60 CrossOut miles EndCrossOut Over' +
-                       ' CrossOut hours EndCrossOut Endfrac times Startfrac' +
+                       ' EndFraction equals StartFraction 5,280 feet Over' +
+                       ' minutes EndFraction', 'default');
+  this.executeRuleTest(mml, 'StartFrac 60 CrossOut miles EndCrossOut Over' +
+                       ' CrossOut hours EndCrossOut EndFrac times StartFrac' +
                        ' 5,280 feet Over 1 CrossOut miles EndCrossOut' +
-                       ' Endfrac times Startfrac 1 CrossOut hours' +
-                       ' EndCrossOut Over 60 minutes Endfrac equals' +
-                       ' Startfrac 5,280 feet Over minutes Endfrac', 'brief');
-  this.executeRuleTest(mml, 'frac 60 CrossOut miles EndCrossOut Over' +
-                       ' CrossOut hours EndCrossOut Endfrac times frac 5,280' +
-                       ' feet Over 1 CrossOut miles EndCrossOut Endfrac' +
-                       ' times frac 1 CrossOut hours EndCrossOut Over 60' +
-                       ' minutes Endfrac equals frac 5,280 feet Over minutes' +
-                       ' Endfrac', 'sbrief');
+                       ' EndFrac times StartFrac 1 CrossOut hours' +
+                       ' EndCrossOut Over 60 minutes EndFrac equals' +
+                       ' StartFrac 5,280 feet Over minutes EndFrac', 'brief');
+  this.executeRuleTest(mml, 'Frac 60 CrossOut miles EndCrossOut Over' +
+                       ' CrossOut hours EndCrossOut EndFrac times Frac 5,280' +
+                       ' feet Over 1 CrossOut miles EndCrossOut EndFrac' +
+                       ' times Frac 1 CrossOut hours EndCrossOut Over 60' +
+                       ' minutes EndFrac equals Frac 5,280 feet Over minutes' +
+                       ' EndFrac', 'sbrief');
 };
 
 
@@ -1797,12 +1797,12 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
       '<mn>1,000</mn></mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '</mrow>';
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
-                       ' Startfraction m Over 1,000 Endfraction kilometers',
+                       ' StartFraction m Over 1,000 EndFraction kilometers',
                        'default');
   this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals' +
-                       ' Startfrac m Over 1,000 Endfrac kilometers', 'brief');
-  this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals frac m' +
-                       ' Over 1,000 Endfrac kilometers', 'sbrief');
+                       ' StartFrac m Over 1,000 EndFrac kilometers', 'brief');
+  this.executeRuleTest(mml, 'm meters equals 100 m centimeters equals Frac m' +
+                       ' Over 1,000 EndFrac kilometers', 'sbrief');
 };
 
 
@@ -1837,10 +1837,10 @@ sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
   var mml = '<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow>' +
-      '</mtd></mtr><mtr><mtd><mi mathvariant="normal" class="MathML-Unit">hydrogen</mtext></mtd><mtd/><mtd>' +
-      '<mi mathvariant="normal" class="MathML-Unit">fluorine</mtext></mtd><mtd/><mtd><mrow>' +
-      '<mi mathvariant="normal" class="MathML-Unit">hydrogen</mtext><mspace width="4.pt"/>' +
-      '<mi mathvariant="normal" class="MathML-Unit">fluoride</mtext></mrow></mtd></mtr></mtable>';
+      '</mtd></mtr><mtr><mtd><mtext>hydrogen</mtext></mtd><mtd/><mtd>' +
+      '<mtext>fluorine</mtext></mtd><mtd/><mtd><mrow>' +
+      '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
+      '<mtext>fluoride</mtext></mrow></mtd></mtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row 1st Column upper H 2 2nd' +
                        ' Column plus 3rd Column upper F 2 4th Column' +
                        ' right-arrow 5th Column 2 upper H upper F 2nd Row' +

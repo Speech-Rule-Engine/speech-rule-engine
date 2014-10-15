@@ -356,7 +356,7 @@ sre.SpeechRuleEngine.debugSpeechRule = function(rule, node) {
  * @param {!Node} node DOM node to test applicability of the rule.
  */
 sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
-  var activeStore = sre.SpeechRuleEngine.getInstance().activeStore_;
+  var store = sre.SpeechRuleEngine.getInstance().activeStore_;
   if (store) {
     var allRules = store.findAllRules(
       function(rule) {return rule.name == name;});

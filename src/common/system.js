@@ -136,6 +136,9 @@ sre.System.prototype.processCorrections_ = function(text, correction) {
  * @private
  */
 sre.System.prototype.preprocessDescription_ = function(descr) {
+  if (descr.annotation) {
+    descr.text += ':' + descr.annotation;
+  }
   if (descr.preprocess) {
     descr.text = this.processCorrections_(
         this.preprocessString_(descr.text), descr.correction);
