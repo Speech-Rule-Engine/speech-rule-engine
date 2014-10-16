@@ -502,6 +502,23 @@ sre.SemanticAttr = function() {
         'ℵ', 'ℶ', 'ℷ', 'ℸ'
       ];
 
+  this.allLetters = this.capitalLatin.concat(
+      this.smallLatin, this.capitalLatinFullWidth, this.smallLatinFullWidth,
+      this.capitalLatinBold, this.smallLatinBold, this.capitalLatinItalic,
+      this.smallLatinItalic, this.capitalLatinScript, this.smallLatinScript,
+      this.capitalLatinBoldScript, this.smallLatinBoldScript,
+      this.capitalLatinFraktur, this.smallLatinFraktur,
+      this.capitalLatinDoubleStruck, this.smallLatinDoubleStruck,
+      this.capitalLatinBoldFraktur, this.smallLatinBoldFraktur,
+      this.capitalLatinSansSerif, this.smallLatinSansSerif,
+      this.capitalLatinSansSerifBold, this.smallLatinSansSerifBold,
+      this.capitalLatinSansSerifItalic, this.smallLatinSansSerifItalic,
+      this.capitalLatinMonospace, this.smallLatinMonospace,
+      this.latinDoubleStruckItalic, this.capitalGreek, this.smallGreek,
+      this.capitalGreekBold, this.smallGreekBold, this.capitalGreekItalic,
+      this.smallGreekItalic, this.capitalGreekSansSerifBold,
+      this.smallGreekSansSerifBold, this.greekDoubleStruck, this.hebrewLetters);
+
   //Operator symbols
   /**
    * @type {Array.<string>}

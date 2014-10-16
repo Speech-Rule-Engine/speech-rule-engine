@@ -183,9 +183,10 @@ sre.BaseRuleStore.prototype.debugSpeechRule = function(rule, node) {
   sre.Debugger.getInstance().output(
       prec.query, queryResult ? queryResult.toString() : queryResult);
   prec.constraints.forEach(
-      function(cstr) {
+      goog.bind(function(cstr) {
         sre.Debugger.getInstance().output(
-            cstr, this.applyConstraint(node, cstr));});
+            cstr, this.applyConstraint(node, cstr));},
+      this));
 };
 
 

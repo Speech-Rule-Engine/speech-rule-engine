@@ -128,6 +128,10 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
 
+  // Over- Underscore.
+  addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
+  addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
+
   // Font related.
   addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
   addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
@@ -433,26 +437,54 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Limits
   defineRule(
       'limboth', 'mathspeak.default',
-      '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
-      '[t] "Overscript"; [n] children/*[3]; [t] "Endscripts";',
-      'self::limboth');
+      '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
+      '[t] CSFoverscript; [n] children/*[3]',
+      'self::limboth', 'name(../..)="underscore" or name(../..)="overscore"',
+      'following-sibling::*[@role!="underaccent" and @role!="overaccent"]');
   defineRule(
       'limlower', 'mathspeak.default',
-      '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
-      '[t] "Endscripts"', 'self::limlower');
+      '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];',
+      'self::limlower', 'name(../..)="underscore" or name(../..)="overscore"',
+      'following-sibling::*[@role!="underaccent" and @role!="overaccent"]');
   defineRule(
       'limupper', 'mathspeak.default',
-      '[n] children/*[1]; [t] "Overscript"; [n] children/*[2];' +
-      '[t] "Endscripts"', 'self::limupper');
-  defineRule(
-      'limfunc', 'mathspeak.default',
-      '[n] children/*[1]; [t] "Underscript"; [n] children/*[2];' +
-      '[t] "Endscripts"', 'self::underscore', '@role="limit function"');
-  defineSpecialisedRule(
-      'limfunc', 'mathspeak.default', 'mathspeak.brief');
-  defineSpecialisedRule(
-      'limfunc', 'mathspeak.default', 'mathspeak.sbrief');
+      '[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];',
+      'self::limupper', 'name(../..)="underscore" or name(../..)="overscore"',
+      'following-sibling::*[@role!="underaccent" and @role!="overaccent"]');
+  defineRuleAlias(
+      'limlower', 'self::underscore', '@role="limit function"',
+      'name(../..)="underscore" or name(../..)="overscore"',
+      'following-sibling::*[@role!="underaccent" and @role!="overaccent"]');
+  defineRuleAlias(
+      'limlower', 'self::underscore', 'children/*[2][@role!="underaccent"]',
+      'name(../..)="underscore" or name(../..)="overscore"',
+      'following-sibling::*[@role!="underaccent" and @role!="overaccent"]');
+  defineRuleAlias(
+      'limupper', 'self::overscore', 'children/*[2][@role!="overaccent"]',
+      'name(../..)="underscore" or name(../..)="overscore"',
+      'following-sibling::*[@role!="underaccent" and @role!="overaccent"]');
 
+  defineRule(
+      'limboth-end', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
+      '[t] CSFoverscript; [n] children/*[3]; [t] "Endscripts"',
+      'self::limboth');
+  defineRule(
+      'limlower-end', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
+      ' [t] "Endscripts"',
+      'self::limlower');
+  defineRule(
+      'limupper-end', 'mathspeak.default',
+      '[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];' +
+      ' [t] "Endscripts"',
+      'self::limupper');
+  defineRuleAlias(
+      'limlower-end', 'self::underscore', '@role="limit function"');
+  defineRuleAlias(
+      'limlower-end', 'self::underscore');
+  defineRuleAlias(
+      'limupper-end', 'self::overscore');
 
   defineRule(
       'integral', 'mathspeak.default',
@@ -651,7 +683,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'overscore', 'mathspeak.default',
       '[t] "ModifyingAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
-      'self::overscore'
+      'self::overscore', 'children/*[2][@role="overaccent"]'
   );
   defineSpecialisedRule(
       'overscore', 'mathspeak.default', 'mathspeak.brief',
@@ -664,7 +696,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'double-overscore', 'mathspeak.default',
       '[t] "ModifyingAbove Above"; [n] children/*[1]; [t] "With";' +
       ' [n] children/*[2]',
-      'self::overscore', 'name(children/*[1])="overscore"'
+      'self::overscore', 'children/*[2][@role="overaccent"]',
+      'name(children/*[1])="overscore"',
+      'children/*[1]/children/*[2][@role="overaccent"]'
   );
   defineSpecialisedRule(
       'double-overscore', 'mathspeak.default', 'mathspeak.brief',
@@ -676,7 +710,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'underscore', 'mathspeak.default',
       '[t] "ModifyingBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
-      'self::underscore'
+      'self::underscore', 'children/*[2][@role="underaccent"]'
   );
   defineSpecialisedRule(
       'underscore', 'mathspeak.default', 'mathspeak.brief',
@@ -689,8 +723,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'double-underscore', 'mathspeak.default',
       '[t] "ModifyingBelow Below"; [n] children/*[1]; [t] "With";' +
       ' [n] children/*[2]',
-      'self::underscore', 'name(children/*[1])="underscore"'
-  );
+      'self::underscore', 'children/*[2][@role="underaccent"]',
+      'name(children/*[1])="underscore"',
+      'children/*[1]/children/*[2][@role="underaccent"]');
   defineSpecialisedRule(
       'double-underscore', 'mathspeak.default', 'mathspeak.brief',
       '[t] "ModBelow Below"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
@@ -703,6 +738,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "overbar"',
       'self::overscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][@role="overaccent"]',   // redundancy
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
       ' or text()="\u005F" or text()="\u203E"]'
   );
@@ -718,6 +754,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "underbar"',
       'self::underscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][@role="underaccent"]',   // redundancy
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
       ' or text()="\u005F" or text()="\u203E"]'
   );
@@ -732,6 +769,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'overtilde', 'mathspeak.default',
       '[n] children/*[1]; [t] "overTilde"',
       'self::overscore',
+      'children/*[2][@role="overaccent"]',   // redundancy
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
       ' or text()="\uFF5E"]'
@@ -748,6 +786,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "underTilde"',
       'self::underscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'children/*[2][@role="underaccent"]',   // redundancy
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
       ' or text()="\uFF5E"]'
   );

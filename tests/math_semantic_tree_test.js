@@ -6170,7 +6170,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
 
   this.executeTreeTest(
       '<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo>' +
-      '<mi>\u221E</mi></mrow></munder><mi>lim</mi><munder><mrow><mi>y</mi>' +
+      '<mi>\u221E</mi></mrow></munder><munder><mi>lim</mi><mrow><mi>y</mi>' +
       '<mo>\u2192</mo><mi>\u221E</mi></mrow></munder><mi>x</mi>' +
       '<mi>y</mi></mrow>',
       '<appl>' +
@@ -6197,14 +6197,9 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<punctuation>\u2061</punctuation>' +
       '</content>' +
       '<children>' +
+      '<limlower>' +
+      '<children>' +
       '<function>lim</function>' +
-      '<infixop>\u2062' +
-      '<content>' +
-      '<operator>\u2062</operator>' +
-      '</content>' +
-      '<children>' +
-      '<underscore>' +
-      '<children>' +
       '<relseq>\u2192' +
       '<content>' +
       '<relation>\u2192</relation>' +
@@ -6215,7 +6210,12 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '</children>' +
       '</relseq>' +
       '</children>' +
-      '</underscore>' +
+      '</limlower>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
       '<identifier>x</identifier>' +
       '<identifier>y</identifier>' +
       '</children>' +

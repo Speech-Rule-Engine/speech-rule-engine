@@ -1437,25 +1437,68 @@ sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
         children = [innerNode, children[2]];
         type = sre.SemanticAttr.Type.SUPERSCRIPT;
         break;
+      // TODO (sorge) Refactor the following.
       case 'MOVER':
         type = sre.SemanticAttr.Type.OVERSCORE;
+        if (sre.SemanticTree.isAccent_(children[1])) {
+          children[1].role = sre.SemanticAttr.Role.OVERACCENT;
+        }
         break;
       case 'MUNDER':
         type = sre.SemanticAttr.Type.UNDERSCORE;
+        if (sre.SemanticTree.isAccent_(children[1])) {
+          children[1].role = sre.SemanticAttr.Role.UNDERACCENT;
+        }
         break;
       case 'MUNDEROVER':
       default:
-        var innerNode = this.makeBranchNode_(sre.SemanticAttr.Type.UNDERSCORE,
-            [center, children[1]], []);
-        innerNode.role = center.role;
-        children = [innerNode, children[2]];
-        type = sre.SemanticAttr.Type.OVERSCORE;
+        var underAccent = sre.SemanticTree.isAccent_(children[1]);
+        var overAccent = sre.SemanticTree.isAccent_(children[2]);
+        if (underAccent) {
+          children[1].role = sre.SemanticAttr.Role.UNDERACCENT;
+        }
+        if (overAccent) {
+          children[2].role = sre.SemanticAttr.Role.OVERACCENT;
+        }
+        if (overAccent && !underAccent) {
+          innerNode = this.makeBranchNode_(sre.SemanticAttr.Type.OVERSCORE,
+                                           [center, children[2]], []);
+          innerNode.role = center.role;
+          children = [innerNode, children[1]];
+          type = sre.SemanticAttr.Type.UNDERSCORE;
+        } else {
+          innerNode = this.makeBranchNode_(sre.SemanticAttr.Type.UNDERSCORE,
+                                           [center, children[1]], []);
+          innerNode.role = center.role;
+          children = [innerNode, children[2]];
+          type = sre.SemanticAttr.Type.OVERSCORE;
+        }
         break;
     }
   }
   var newNode = this.makeBranchNode_(type, children, []);
   newNode.role = center.role;
   return newNode;
+};
+
+
+/**
+ * Checks whether a character can be considered as accent.
+ * @param {!sre.SemanticTree.Node} node The node to be tested.
+ * @return {boolean} True if the node is a punctuation, fence or operator.
+ * @private
+ */
+sre.SemanticTree.isAccent_ = function(node) {
+  return sre.SemanticTree.attrPred_('type', 'FENCE')(node) ||
+      sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node) ||
+      sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
+      sre.SemanticTree.attrPred_('type', 'RELATION')(node) ||
+      // TODO (sorge) Simplify this once meaning of all characters is fully
+      // defined.
+      (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) &&
+      sre.SemanticTree.attrPred_('role', 'UNKNOWN')(node) &&
+      !node.textContent.match(new RegExp(
+         (sre.SemanticAttr.getInstance()).allLetters.join('|'))));
 };
 
 

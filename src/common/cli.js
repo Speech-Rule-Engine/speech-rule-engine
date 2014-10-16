@@ -90,8 +90,10 @@ sre.Cli.prototype.commandLine = function() {
     }
   } catch (err) {
     console.log(err.message);
+    sre.Debugger.getInstance().exit();
     process.exit(1);
   }
+  sre.Debugger.getInstance().exit();
   process.exit(0);
 };
 

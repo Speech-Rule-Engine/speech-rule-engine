@@ -63,19 +63,21 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  * @type {Array.<sre.SemanticAttr.Type>}
  */
 sre.MathspeakUtil.nestingBarriers = [
-  sre.SemanticAttr.Type.SQRT,
-  sre.SemanticAttr.Type.ROOT,
+  sre.SemanticAttr.Type.CASES,
+  sre.SemanticAttr.Type.CELL,
   sre.SemanticAttr.Type.INTEGRAL,
+  sre.SemanticAttr.Type.LINE,
+  sre.SemanticAttr.Type.MATRIX,
+  sre.SemanticAttr.Type.MULTILINE,
+  sre.SemanticAttr.Type.OVERSCORE,
+  sre.SemanticAttr.Type.ROOT,
+  sre.SemanticAttr.Type.ROW,
+  sre.SemanticAttr.Type.SQRT,
   sre.SemanticAttr.Type.SUBSCRIPT,
   sre.SemanticAttr.Type.SUPERSCRIPT,
   sre.SemanticAttr.Type.TABLE,
-  sre.SemanticAttr.Type.MULTILINE,
-  sre.SemanticAttr.Type.MATRIX,
-  sre.SemanticAttr.Type.VECTOR,
-  sre.SemanticAttr.Type.CASES,
-  sre.SemanticAttr.Type.ROW,
-  sre.SemanticAttr.Type.LINE,
-  sre.SemanticAttr.Type.CELL
+  sre.SemanticAttr.Type.UNDERSCORE,
+  sre.SemanticAttr.Type.VECTOR
 ];
 
 
@@ -190,7 +192,7 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
  */
 sre.MathspeakUtil.fractionNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-      'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, [],
+      'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
       function(node) {
         return sre.MathspeakUtil.vulgarFractionSmall(node);
       }
@@ -656,7 +658,7 @@ sre.MathspeakUtil.baselineBrief = function(node) {
  */
 sre.MathspeakUtil.radicalNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-      'radical', node, ['sqrt', 'root'], sre.MathspeakUtil.nestingBarriers, []);
+      'radical', node, ['sqrt', 'root'], sre.MathspeakUtil.nestingBarriers, {});
 };
 
 
@@ -754,6 +756,64 @@ sre.MathspeakUtil.openingRadicalSbrief = function(node) {
  */
 sre.MathspeakUtil.indexRadicalSbrief = function(node) {
   return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'Index');
+};
+
+
+/**
+ * Computes and returns the nesting depth of underscore nodes.
+ * @param {!Node} node The underscore node.
+ * @return {!number} The nesting depth. 0 if the node is not an underscore.
+ */
+sre.MathspeakUtil.underscoreNestingDepth = function(node) {
+  return sre.MathspeakUtil.getNestingDepth(
+      'underscore', node, ['underscore'], sre.MathspeakUtil.nestingBarriers,
+      {},
+      function(node) {
+        return node.tagName &&
+            node.tagName === sre.SemanticAttr.Type.UNDERSCORE &&
+            node.childNodes[0].childNodes[1].getAttribute('role') ===
+            sre.SemanticAttr.Role.UNDERACCENT;
+      });
+};
+
+
+/**
+ * String function to construct and underscript prefix.
+ * @param {!Node} node The underscore node.
+ * @return {string} The correct prefix string.
+ */
+sre.MathspeakUtil.nestedUnderscore = function(node) {
+  var depth = sre.MathspeakUtil.underscoreNestingDepth(node);
+  return Array(depth).join('Under') + 'Underscript';
+};
+
+
+/**
+ * Computes and returns the nesting depth of overscore nodes.
+ * @param {!Node} node The overscore node.
+ * @return {!number} The nesting depth. 0 if the node is not an overscore.
+ */
+sre.MathspeakUtil.overscoreNestingDepth = function(node) {
+  return sre.MathspeakUtil.getNestingDepth(
+      'overscore', node, ['overscore'], sre.MathspeakUtil.nestingBarriers,
+      {},
+      function(node) {
+        return node.tagName &&
+            node.tagName === sre.SemanticAttr.Type.OVERSCORE &&
+            node.childNodes[0].childNodes[1].getAttribute('role') ===
+            sre.SemanticAttr.Role.OVERACCENT;
+      });
+};
+
+
+/**
+ * String function to construct and overscript prefix.
+ * @param {!Node} node The overscore node.
+ * @return {string} The correct prefix string.
+ */
+sre.MathspeakUtil.nestedOverscore = function(node) {
+  var depth = sre.MathspeakUtil.overscoreNestingDepth(node);
+  return Array(depth).join('Over') + 'Overscript';
 };
 
 
