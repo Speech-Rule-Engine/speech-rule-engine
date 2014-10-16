@@ -1733,7 +1733,7 @@ sre.MathspeakRuleTest.prototype.testSample_12_1_3 = function() {
 /**
  * Testing Rule 13.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
+sre.MathspeakRuleTest.prototype.testSample_13_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>60</mn>' +
       '<menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
       ' class="MathML-Unit">mi</mi></menclose>' +
@@ -1745,7 +1745,7 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
       '<mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
       '</mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn>' +
       '<menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
-      ' class="MathML-Unit">mi</mi></menclose>' +
+      ' class="MathML-Unit">hr</mi></menclose>' +
       '</mrow><mrow><mn>60</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">min</mi></mrow></mfrac><mo>=</mo>' +
       '<mfrac><mrow><mn>5,280</mn><mi mathvariant="normal"' +
@@ -1774,6 +1774,7 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_1 = function() {
 };
 
 
+// That should be negative 2!
 /**
  * Testing Rule 13.1, Example 2.
  */
@@ -1784,13 +1785,13 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_2 = function() {
       '<mi mathvariant="normal" class="MathML-Unit">m</mi><mn>2</mn></msup>' +
       '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mrow><mo>-</mo><mn>2</mn></mrow>' +
-      '</msup><mi>x</mi></mrow>';
+      '</msup></mrow>';
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
-                       ' dot seconds Superscript minus 2', 'default');
+                       ' dot seconds Superscript negative 2', 'default');
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
-                       ' dot seconds Sup minus 2', 'brief');
+                       ' dot seconds Sup negative 2', 'brief');
   this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
-                       ' dot seconds Sup minus 2', 'sbrief');
+                       ' dot seconds Sup negative 2', 'sbrief');
 };
 
 
@@ -1816,7 +1817,7 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
 /**
  * Testing Rule 13.1, Example 4.
  */
-sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
+sre.MathspeakRuleTest.prototype.testSample_13_1_4 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
       '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
@@ -1830,11 +1831,10 @@ sre.MathspeakRuleTest.prototype.untestSample_13_1_4 = function() {
 /**
  * Testing Rule 13.1, Example 5.
  */
-sre.MathspeakRuleTest.prototype.untestSample_13_1_5 = function() {
+sre.MathspeakRuleTest.prototype.testSample_13_1_5 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
-      ' class="MathML-Unit">in</mi><mo>=</mo><mn>2</mn><mo>.</mo>' +
-      '<mn>54</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
-      '</mrow>';
+      ' class="MathML-Unit">in</mi><mo>=</mo><mn>2.54</mn>' +
+      '<mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'default');
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'brief');
   this.executeRuleTest(mml, '1 inches equals 2.54 centimeters', 'sbrief');

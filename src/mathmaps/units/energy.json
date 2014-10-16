@@ -1,0 +1,47 @@
+[
+  {"category": "",
+   "mappings": {
+     "default": {
+       "default": "watts"
+     }
+   },
+   "key": "W",
+   "names": ["W", "w"]
+  },
+  {"category": "",
+   "mappings": {
+     "default": {
+       "default": "kilowatts"
+     }
+   },
+   "key": "kW",
+   "names": ["kw", "kW"]
+  },
+  {"category": "",
+   "mappings": {
+     "default": {
+       "default": "milliwatts"
+     }
+   },
+   "key": "mW",
+   "names": ["mw", "mW"]
+  },
+  {"category": "",
+   "mappings": {
+     "default": {
+       "default": "kilowatt-hours"
+     }
+   },
+   "key": "kwh",
+   "names": ["kwh", "kWh"]
+  },
+  {"category": "",
+   "mappings": {
+     "default": {
+       "default": "joules"
+     }
+   },
+   "key": "J",
+   "names": ["J"]
+  }
+]

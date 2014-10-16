@@ -1,0 +1,30 @@
+[
+{"category": "",
+ "mappings": {
+   "default": {
+     "default": "Fahrenheit"
+     }
+   },
+ "key": "F",
+ "names": ["F", "F."]
+},
+  {"category": "",
+ "mappings": {
+   "default": {
+     "default": "Celsius"
+     }
+   },
+ "key": "C",
+ "names": ["C"]
+},
+  {"category": "",
+ "mappings": {
+   "default": {
+     "default": "Kelvin"
+     }
+   },
+ "key": "K",
+ "names": ["K"]
+}
+  
+]

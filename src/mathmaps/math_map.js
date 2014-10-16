@@ -167,7 +167,8 @@ sre.MathMap.FUNCTIONS_FILES_ = [
  * @private
  */
 sre.MathMap.UNITS_FILES_ = [
-  'length.json'
+  'energy.json', 'length.json', 'memory.json', 'other.json', 'speed.json',
+  'temperature.json', 'time.json', 'volume.json', 'weight.json'
 ];
 
 
