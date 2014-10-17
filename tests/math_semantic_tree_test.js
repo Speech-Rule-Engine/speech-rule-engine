@@ -7485,3 +7485,239 @@ sre.SemanticTreeTest.prototype.testStreePunctuated = function() {
       '</children>' +
       '</punctuated>');
 };
+
+
+// Units.
+/**
+ * Tests simple expressions containing units.
+ */
+sre.SemanticTreeTest.prototype.testStreeSimpleUnits = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>',
+      '<identifier role="unit" font="normal" id="0">km</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi>min</mi><mi mathvariant="normal" class="MathML-Unit">min</mi>',
+      '<appl role="limit function" id="3">' +
+      '<content>' +
+      '<punctuation role="application" id="2">⁡</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<function role="limit function" id="0">min</function>' +
+      '<identifier role="unit" font="normal" id="1">min</identifier>' +
+      '</children>' +
+      '</appl>'
+  );
+  this.executeTreeTest(
+      '<msup><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mn>2</mn></msup>',
+      '<superscript role="unit" id="2">' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="0">km</identifier>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children></superscript>'
+  );
+  this.executeTreeTest(
+      '<mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi></mfrac>',
+      '<fraction role="unit" id="2">' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="0">km</identifier>' +
+      '<identifier role="unit" font="normal" id="1">h</identifier>' +
+      '</children></fraction>'
+  );
+  this.executeTreeTest(
+      '<mfrac><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi></mfrac>',
+      '<fraction role="division" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">m</identifier>' +
+      '<identifier role="unit" font="normal" id="1">km</identifier>' +
+      '</children></fraction>'
+  );
+  this.executeTreeTest(
+      '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>',
+      '<infixop role="implicit" id="3">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="2">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">3</number>' +
+      '<identifier role="unit" font="normal" id="1">km</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
+      '<infixop role="implicit" id="6">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="5">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">3</number>' +
+      '<infixop role="unit" id="4">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="3">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="1">km</identifier>' +
+      '<identifier role="unit" font="normal" id="2">h</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+
+/**
+ * Tests more complex expressions containing units.
+ */
+sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
+      '<infixop role="implicit" id="8">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="7">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="0">s</identifier>' +
+      '<number role="integer" font="normal" id="1">3</number>' +
+      '<identifier role="latinletter" font="normal" id="2">m</identifier>' +
+      '<infixop role="unit" id="6">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="5">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="3">km</identifier>' +
+      '<identifier role="unit" font="normal" id="4">h</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>2</mn></msup>' +
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
+      '<infixop role="implicit" id="13">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="12">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="unit" id="9">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="8">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="0">km</identifier>' +
+      '<superscript role="unit" id="3">' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="1">s</identifier>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children></superscript>' +
+      '</children>' +
+      '</infixop>' +
+      '<number role="integer" font="normal" id="4">3</number>' +
+      '<identifier role="latinletter" font="normal" id="5">m</identifier>' +
+      '<infixop role="unit" id="11">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="10">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="6">km</identifier>' +
+      '<identifier role="unit" font="normal" id="7">h</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>' +
+      '<mfrac>' +
+      '<mi>N</mi>' +
+      '<msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>2</mn></msup></mfrac>',
+      '<infixop role="implicit" id="12">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="11">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">3</number>' +
+      '<identifier role="latinletter" font="normal" id="1">m</identifier>' +
+      '<infixop role="unit" id="10">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="9">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="2">km</identifier>' +
+      '<identifier role="unit" font="normal" id="3">h</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<fraction role="division" id="8">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="4">N</identifier>' +
+      '<superscript role="unit" id="7">' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="5">s</identifier>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children></superscript>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>' +
+      '<mfrac>' +
+      '<mi mathvariant="normal" class="MathML-Unit">N</mi>' +
+      '<msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>2</mn></msup></mfrac>',
+      '<infixop role="implicit" id="12">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="11">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">3</number>' +
+      '<identifier role="latinletter" font="normal" id="1">m</identifier>' +
+      '<infixop role="unit" id="10">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="9">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="2">km</identifier>' +
+      '<identifier role="unit" font="normal" id="3">h</identifier>' +
+      '<fraction role="unit" id="8">' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="4">N</identifier>' +
+      '<superscript role="unit" id="7">' +
+      '<children>' +
+      '<identifier role="unit" font="normal" id="5">s</identifier>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children></superscript>' +
+      '</children>' +
+      '</fraction>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+

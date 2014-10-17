@@ -1324,6 +1324,9 @@ sre.SemanticAttr.Role = {
   APPLICATION: 'application', // Function Application.
   DUMMY: 'dummy', // A dummy separator for text.
 
+  // Identifier that describes a unit.
+  UNIT: 'unit',
+
   // Fences.
   OPEN: 'open',
   CLOSE: 'close',

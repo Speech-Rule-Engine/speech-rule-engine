@@ -485,7 +485,8 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
         leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
       }
       if (mml.getAttribute('class') === 'MathML-Unit') {
-        leaf.type = sre.SemanticAttr.Type.UNIT;
+        leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
+        leaf.role = sre.SemanticAttr.Role.UNIT;
       }
       return leaf;
       break;
@@ -640,6 +641,7 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
  */
 sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
   nodes = this.getMixedNumbers_(nodes);
+  nodes = this.combineUnits_(nodes);
   if (nodes.length == 1) {
     return nodes[0];
   }
@@ -757,6 +759,43 @@ sre.SemanticTree.prototype.processRow_ = function(nodes) {
   nodes = this.getTextInRow_(nodes);
   nodes = this.getFunctionsInRow_(nodes);
   return this.processRelationsInRow_(nodes);
+};
+
+
+/**
+ * Combines adjacent units in
+ * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @private
+ */
+sre.SemanticTree.prototype.combineUnits_ = function(nodes) {
+  var partition = sre.SemanticTree.partitionNodes_(
+      nodes, function(x) {
+        return !sre.SemanticTree.attrPred_('role', 'UNIT')(x);
+      }
+      );
+  if (nodes.length === partition.rel.length) {
+    return partition.rel;
+  }
+  var result = [];
+  do {
+    var comp = partition.comp.shift();
+    var rel = partition.rel.shift();
+    if (comp.length == 1) {
+      result = result.concat(comp);
+    }
+    if (comp.length > 1) {
+      var operator = this.makeContentNode_(sre.SemanticAttr.invisibleTimes());
+      // For now we assume this is a multiplication using invisible times.
+      var unitNode = this.makeInfixNode_(comp, operator);
+      unitNode.role = sre.SemanticAttr.Role.UNIT;
+      result.push(unitNode);
+    }
+    if (rel) {
+      result.push(rel);
+    }
+  } while (rel);
+  return result;
 };
 
 
@@ -2321,6 +2360,9 @@ sre.SemanticTree.prototype.makeFractionNode_ = function(denom, enume) {
       sre.SemanticAttr.Type.FRACTION, [denom, enume], []);
   newNode.role = newNode.childNodes.every(function(x) {
     return sre.SemanticTree.attrPred_('role', 'INTEGER')(x);
-  }) ? sre.SemanticAttr.Role.VULGAR : sre.SemanticAttr.Role.DIVISION;
+  }) ? sre.SemanticAttr.Role.VULGAR :
+      newNode.childNodes.every(function(x) {
+        return sre.SemanticTree.attrPred_('role', 'UNIT')(x);
+      }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   return newNode;
 };
