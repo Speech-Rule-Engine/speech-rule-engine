@@ -86,6 +86,8 @@ sre.MathmlStoreTest.prototype.testMathmlEmptyRules = function() {
  */
 sre.MathmlStoreTest.prototype.testMathmlTokenRules = function() {
   this.executeRuleTest('<mi>x</mi>', 'mi');
+  this.executeRuleTest('<mi mathvariant="normal" class="MathML-Unit">km</mi>',
+                       'unit');
   this.executeRuleTest('<mn>1</mn>', 'mn');
   this.executeRuleTest('<mo>+</mo>', 'mo');
   this.executeRuleTest('<mtext>therefore we have</mtext>', 'mtext');

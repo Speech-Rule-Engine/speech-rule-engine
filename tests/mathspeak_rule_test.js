@@ -14,7 +14,7 @@
 
 /**
  * @fileoverview Testcases for mathspeak speech rules.
- * @author sorge@google.com (Volker Sorge)
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.MathspeakRuleTest');
