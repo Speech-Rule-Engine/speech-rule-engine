@@ -21,6 +21,7 @@ goog.provide('sre.Tests');
 
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakRuleTest');
+goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
 goog.require('sre.System');
@@ -55,7 +56,8 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.MathmlStoreTest,
-  sre.MathspeakRuleTest,
+  //  sre.MathspeakRuleTest,
+  sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest
 ];

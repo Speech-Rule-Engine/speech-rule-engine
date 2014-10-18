@@ -43,5 +43,14 @@
    },
    "key": "J",
    "names": ["J"]
+  },
+  {"category": "",
+   "mappings": {
+     "default": {
+       "default": "Newton"
+     }
+   },
+   "key": "N",
+   "names": ["N"]
   }
 ]

@@ -454,6 +454,39 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'unit', 'default.default',
       '[n] text() (annotation:unit)', 'self::identifier', '@role="unit"');
+  defineRule(
+      'unit-square', 'default.default',
+      '[t] "square"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
+      'name(children/*[1])="identifier"');
+
+  defineRule(
+      'unit-cubic', 'default.default',
+      '[t] "cubic"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
+      'name(children/*[1])="identifier"');
+  defineRule(
+      'reciprocal', 'default.default',
+      '[t] "reciprocal"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
+  defineRule(
+      'reciprocal', 'default.default',
+      '[t] "per"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'preceding-sibling::*[@role="unit"]');
+  defineRule(
+      'unit-combine', 'default.default',
+      '[m] children/*', 'self::infixop', '@role="unit"');
+  defineRule(
+      'unit-divide', 'default.default',
+      '[n] children/*[1] (pitch:0.3); [t] "per";' +
+      ' [n] children/*[2] (pitch:-0.3)',
+      'self::fraction', '@role="unit"');
 
 };
 
