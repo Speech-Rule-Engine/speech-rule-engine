@@ -1350,7 +1350,7 @@ sre.SemanticAttr.Role = {
   OVERACCENT: 'overaccent',
   UNDERACCENT: 'underaccent',
   SUBSUP: 'subsup',
-  
+
   // Fenced.
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',

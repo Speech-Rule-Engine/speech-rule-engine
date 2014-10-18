@@ -701,40 +701,195 @@ sre.SemanticTreeTest.prototype.testStreeMultiplicationOperators = function() {
       '</infixop>'
   );
   this.executeTreeTest(
-    '<mrow>' +
-      '<mn>1</mn><mi>a</mi><mo>·</mo>' +
-      '<mi>m</mi>' +
+      '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>\u00B7</mo><mi>m</mi>' +
       '</mrow>',
-    ''
+      '<infixop>\u00B7' +
+      '<content>' +
+      '<operator>\u00B7</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<identifier>m</identifier>' +
+      '</children>' +
+      '</infixop>'
   );
   this.executeTreeTest(
-    '<mrow>' +
-      '<mn>1</mn><mi>a</mi><mo>·</mo>' +
-      '<mi>m</mi>' +
-      '<mo>·</mo>' +
-      '<mi>s</mi>' +
+      '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>\u00B7</mo>' +
+      '<mi>m</mi><mo>\u00B7</mo><mi>s</mi>' +
       '</mrow>',
-    ''
+      '<infixop>\u00B7' +
+      '<content>' +
+      '<operator>\u00B7</operator>' +
+      '<operator>\u00B7</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<identifier>m</identifier>' +
+      '<identifier>s</identifier>' +
+      '</children>' +
+      '</infixop>'
   );
   this.executeTreeTest(
-    '<mrow>' +
-      '<mn>1</mn><mi>a</mi><mo>·</mo>' +
+      '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>\u00B7</mo>' +
+      '<mi>m</mi><mo>\u00B7</mo>' +
+      '<mi>s</mi><mo>\u00B7</mo>' +
+      '<mn>c</mn><mi>b</mi><mo>\u00B7</mo>' +
+      '<mi>k</mi>' +
+      '</mrow>',
+      '<infixop>\u00B7' +
+      '<content>' +
+      '<operator>\u00B7</operator>' +
+      '<operator>\u00B7</operator>' +
+      '<operator>\u00B7</operator>' +
+      '<operator>\u00B7</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<identifier>m</identifier>' +
+      '<identifier>s</identifier>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>c</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<identifier>k</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>\u00B7</mo>' +
       '<msup><mi>m</mi><mn>2</mn></msup>' +
-      '<mo>·</mo>' +
+      '<mo>\u00B7</mo>' +
       '<msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>',
-    ''
+      '<infixop>\u00B7' +
+      '<content>' +
+      '<operator>\u00B7</operator>' +
+      '<operator>\u00B7</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<superscript>' +
+      '<children>' +
+      '<identifier>m</identifier>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<superscript>' +
+      '<children>' +
+      '<identifier>s</identifier>' +
+      '<prefixop>-' +
+      '<content>' +
+      '<operator>-</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</prefixop>' +
+      '</children>' +
+      '</superscript>' +
+      '</children>' +
+      '</infixop>'
   );
   this.executeTreeTest(
-    '<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn>' +
-      '<mi>a</mi><mo>·</mo>' +
+      '<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn>' +
+      '<mi>a</mi><mo>\u00B7</mo>' +
       '<msup><mi>m</mi><mn>2</mn></msup>' +
-      '<mo>·</mo>' +
+      '<mo>\u00B7</mo>' +
       '<msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>',
-    ''
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<identifier>J</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<infixop>\u00B7' +
+      '<content>' +
+      '<operator>\u00B7</operator>' +
+      '<operator>\u00B7</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>\u2062' +
+      '<content>' +
+      '<operator>\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>1</number>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<superscript>' +
+      '<children>' +
+      '<identifier>m</identifier>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<superscript>' +
+      '<children>' +
+      '<identifier>s</identifier>' +
+      '<prefixop>-' +
+      '<content>' +
+      '<operator>-</operator>' +
+      '</content>' +
+      '<children>' +
+      '<number>2</number>' +
+      '</children>' +
+      '</prefixop>' +
+      '</children>' +
+      '</superscript>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</relseq>'
   );
-
 };
 
 

@@ -1028,7 +1028,7 @@ sre.SemanticTree.prototype.appendOperand_ = function(root, op, node) {
 sre.SemanticTree.prototype.appendMultiplicativeOp_ = function(root, op, node) {
   // This ensures that implicit nodes stay together, which is probably what
   // we want.
-  if (root.role ==  sre.SemanticAttr.Role.IMPLICIT) {
+  if (root.role == sre.SemanticAttr.Role.IMPLICIT) {
     return this.makeInfixNode_([root, node], op);
   }
   var lastRoot = root;
@@ -1078,10 +1078,10 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
     return true;
   }
   return this.appendExistingOperator_(
-    // Again, if this is an INFIXOP node, we know it has a child!
-    /** @type {!sre.SemanticTree.Node} */
-    (root.childNodes[root.childNodes.length - 1]),
-    op, node);
+      // Again, if this is an INFIXOP node, we know it has a child!
+      /** @type {!sre.SemanticTree.Node} */
+      (root.childNodes[root.childNodes.length - 1]),
+      op, node);
 };
 
 
