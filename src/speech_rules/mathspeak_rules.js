@@ -598,8 +598,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|' +
-      'ancestor::fraction'
-  );  // This rule might be too simple.
+      'ancestor::fraction');
+  // These rules might be too simple.
 
   // Square
   defineRule(

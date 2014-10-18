@@ -20,7 +20,7 @@ DEPS = $(SRC_DIR)/deps.js
 START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
-MAPS = functions symbols
+MAPS = functions symbols units
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
