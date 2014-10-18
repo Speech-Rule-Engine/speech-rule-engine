@@ -678,6 +678,66 @@ sre.SemanticTreeTest.prototype.testStreeMultipleOperators = function() {
 };
 
 
+/**
+ * Test operator trees with multiplication operators.
+ */
+sre.SemanticTreeTest.prototype.testStreeMultiplicationOperators = function() {
+  this.brief = true;
+  // Addition and subtraction.
+  this.executeTreeTest(
+      '<mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>c</mi><mo>*</mo><mi>d</mi>',
+      '<infixop>*' +
+      '<content>' +
+      '<operator>*</operator>' +
+      '<operator>*</operator>' +
+      '<operator>*</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '<identifier>c</identifier>' +
+      '<identifier>d</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+    '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>·</mo>' +
+      '<mi>m</mi>' +
+      '</mrow>',
+    ''
+  );
+  this.executeTreeTest(
+    '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>·</mo>' +
+      '<mi>m</mi>' +
+      '<mo>·</mo>' +
+      '<mi>s</mi>' +
+      '</mrow>',
+    ''
+  );
+  this.executeTreeTest(
+    '<mrow>' +
+      '<mn>1</mn><mi>a</mi><mo>·</mo>' +
+      '<msup><mi>m</mi><mn>2</mn></msup>' +
+      '<mo>·</mo>' +
+      '<msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
+      '</msup></mrow>',
+    ''
+  );
+  this.executeTreeTest(
+    '<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn>' +
+      '<mi>a</mi><mo>·</mo>' +
+      '<msup><mi>m</mi><mn>2</mn></msup>' +
+      '<mo>·</mo>' +
+      '<msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
+      '</msup></mrow>',
+    ''
+  );
+
+};
+
+
 // Fences.
 /**
  * Test regular directed fences.

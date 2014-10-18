@@ -56,6 +56,83 @@ sre.MathspeakRuleTest.prototype.executeRuleTest = function(mml, answer, style) {
 };
 
 
+/**
+ * Testing Rule additional examples for simple subscripts with square.
+ */
+sre.MathspeakRuleTest.prototype.testSampleSimpleSquare = function() {
+  var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>';
+  this.executeRuleTest(mml, 'upper T 0 squared', 'default');
+  this.executeRuleTest(mml, 'upper T 0 squared', 'brief');
+  this.executeRuleTest(mml, 'upper T 0 squared', 'sbrief');
+  mml = '<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>';
+  this.executeRuleTest(mml, 'upper T 0 squared', 'default');
+  this.executeRuleTest(mml, 'upper T 0 squared', 'brief');
+  this.executeRuleTest(mml, 'upper T 0 squared', 'sbrief');
+};
+
+
+/**
+ * Testing Rule additional examples for simple subscripts with cube.
+ */
+sre.MathspeakRuleTest.prototype.testSampleSimpleCube = function() {
+  var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>';
+  this.executeRuleTest(mml, 'upper T 0 cubed', 'default');
+  this.executeRuleTest(mml, 'upper T 0 cubed', 'brief');
+  this.executeRuleTest(mml, 'upper T 0 cubed', 'sbrief');
+  mml = '<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>';
+  this.executeRuleTest(mml, 'upper T 0 cubed', 'default');
+  this.executeRuleTest(mml, 'upper T 0 cubed', 'brief');
+  this.executeRuleTest(mml, 'upper T 0 cubed', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.8, Example 2.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_8_2 = function() {
+  var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
+      '<mn>2</mn></msubsup>';
+  this.executeRuleTest(mml, 'upper T Subscript n minus 1 Superscript 2',
+                       'default');
+  this.executeRuleTest(mml, 'upper T Sub n minus 1 Sup 2', 'brief');
+  this.executeRuleTest(mml, 'upper T Sub n minus 1 Sup 2', 'sbrief');
+};
+
+
+sre.MathspeakRuleTest.prototype.testSample_13_1_2 = function() {
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">J</mi><mo>=</mo><mn>1</mn>' +
+      '<mi mathvariant="normal" class="MathML-Unit">kg</mi><mo>·</mo><msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">m</mi><mn>2</mn></msup>' +
+      '<mo>·</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mrow><mo>-</mo><mn>2</mn></mrow>' +
+      '</msup></mrow>';
+  this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
+                       ' dot seconds Superscript negative 2', 'default');
+  this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
+                       ' dot seconds Sup negative 2', 'brief');
+  this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
+                       ' dot seconds Sup negative 2', 'sbrief');
+};
+
+
+sre.MathspeakRuleTest.prototype.testSample_13_1_2_plus = function() {
+  var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
+      ' class="MathML-Unit">J</mi><mo>=</mo><mn>1</mn>' +
+      '<mi mathvariant="normal" class="MathML-Unit">kg</mi><mo>+</mo><msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">m</mi><mn>2</mn></msup>' +
+      '<mo>+</mo><msup><mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mrow><mo>-</mo><mn>2</mn></mrow>' +
+      '</msup></mrow>';
+  this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
+                       ' dot seconds Superscript negative 2', 'default');
+  this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
+                       ' dot seconds Sup negative 2', 'brief');
+  this.executeRuleTest(mml, '1 joules equals 1 kilograms dot meters squared' +
+                       ' dot seconds Sup negative 2', 'sbrief');
+};
+
+
 // In the following default is the verbose version of MathSpeak.
 /**
  * Testing Rule 1.1, Example 1.

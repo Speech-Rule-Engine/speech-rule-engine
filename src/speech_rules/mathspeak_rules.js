@@ -532,7 +532,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'subscript-simple', 'mathspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
       'self::subscript',
-      // First child is a single letter.
       'name(./children/*[1])="identifier"',
       // Second child is a number but not mixed or other.
       'name(./children/*[2])="number"',
@@ -552,7 +551,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'not(name(following-sibling::subscript/children/*[1])="empty" or ' +
       '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
       '"subscript" and ' +
-      'name(following-sibling::*/children/*[1]/children/*[1])="empty"))');
+      'name(following-sibling::*/children/*[1]/children/*[1])="empty"))',
+      '@role!="subsup"');
   defineSpecialisedRule(
       'subscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2];' +
@@ -597,8 +597,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|' +
-      'ancestor::fraction');
+      'ancestor::fraction|ancestor::punctuated',
+      'ancestor::*/following-sibling::*');
+  defineRuleAlias(
+      'superscript-baseline',
+      'self::superscript', 'not(following-sibling::*)',
+      'ancestor::fenced|ancestor::root|ancestor::sqrt');
   // These rules might be too simple.
 
   // Square
@@ -606,7 +610,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'square', 'mathspeak.default',
       '[n] children/*[1]; [t] "squared"',
       'self::superscript', 'children/*[2][text()=2]',
-      'name(./children/*[1])!="text"');
+      'name(children/*[1])!="text"',
+      'name(children/*[1])!="subscript" or (' +
+      // Keep squared if we have a simple subscript.
+      'name(children/*[1])="subscript" and ' +
+      'name(children/*[1]/children/*[1])="identifier" and ' +
+      'name(children/*[1]/children/*[2])="number" and ' +
+      'children/*[1]/children/*[2][@role!="mixed"] and ' +
+      'children/*[1]/children/*[2][@role!="othernumber"])');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -617,7 +628,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'cube', 'mathspeak.default',
       '[n] children/*[1]; [t] "cubed"',
       'self::superscript', 'children/*[2][text()=3]',
-      'name(./children/*[1])!="text"');
+      'name(children/*[1])!="text"',
+      'name(children/*[1])!="subscript" or (' +
+      // Keep cubed if we have a simple subscript.
+      'name(children/*[1])="subscript" and ' +
+      'name(children/*[1]/children/*[1])="identifier" and ' +
+      'name(children/*[1]/children/*[2])="number" and ' +
+      'children/*[1]/children/*[2][@role!="mixed"] and ' +
+      'children/*[1]/children/*[2][@role!="othernumber"])');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(

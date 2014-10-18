@@ -1026,6 +1026,10 @@ sre.SemanticTree.prototype.appendOperand_ = function(root, op, node) {
  * @private
  */
 sre.SemanticTree.prototype.appendMultiplicativeOp_ = function(root, op, node) {
+  if (root.role ==  sre.SemanticAttr.Role.IMPLICIT) {
+    console.log('now' + root.textContent + node.textContent);
+    return this.makeInfixNode_([root, node], op);
+  }
   var lastRoot = root;
   var lastChild = root.childNodes[root.childNodes.length - 1];
   while (lastChild && lastChild.type == sre.SemanticAttr.Type.INFIXOP) {
@@ -1061,7 +1065,8 @@ sre.SemanticTree.prototype.appendAdditiveOp_ = function(root, op, node) {
  * @private
  */
 sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
-  if (!root || root.type != sre.SemanticAttr.Type.INFIXOP) {
+  if (!root || root.type != sre.SemanticAttr.Type.INFIXOP ||
+      root.role === sre.SemanticAttr.Role.IMPLICIT) {
     return false;
   }
   if (root.textContent == op.textContent) {
@@ -1069,11 +1074,11 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
     root.appendChild_(node);
     return true;
   }
-  this.appendExistingOperator_(
-      // Again, if this is an INFIXOP node, we know it has a child!
-      /** @type {!sre.SemanticTree.Node} */
-      (root.childNodes[root.childNodes.length - 1]),
-      op, node);
+  return this.appendExistingOperator_(
+    // Again, if this is an INFIXOP node, we know it has a child!
+    /** @type {!sre.SemanticTree.Node} */
+    (root.childNodes[root.childNodes.length - 1]),
+    op, node);
 };
 
 
@@ -1472,7 +1477,7 @@ sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
       case 'MSUBSUP':
         var innerNode = this.makeBranchNode_(sre.SemanticAttr.Type.SUBSCRIPT,
             [center, children[1]], []);
-        innerNode.role = center.role;
+        innerNode.role = sre.SemanticAttr.Role.SUBSUP;
         children = [innerNode, children[2]];
         type = sre.SemanticAttr.Type.SUPERSCRIPT;
         break;

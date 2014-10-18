@@ -72,8 +72,8 @@ sre.SemanticAttr = function() {
    */
   this.generalPunctuations =
       [
-        '!', '"', '#', '%', '&', '*', ':', ';', '?', '@', '\\',
-        '¡', '§', '¶', '·', '¿', '‗', '†', '‡', '•', '‣', '․', '‥', '‧',
+        '!', '"', '#', '%', '&', ':', ';', '?', '@', '\\',
+        '¡', '§', '¶', '¿', '‗', '†', '‡', '•', '‣', '․', '‥', '‧',
         '‰', '‱', '‸', '※', '‼', '‽', '‾', '⁁', '⁂', '⁃', '⁇', '⁈', '⁉',
         '⁋', '⁌', '⁍', '⁎', '⁏', '⁐', '⁑', '⁓', '⁕', '⁖', '⁘', '⁙', '⁚',
         '⁛', '⁜', '⁝', '⁞', '︐', '︓', '︔', '︕', '︖', '︰', '﹅', '﹆',
@@ -530,8 +530,8 @@ sre.SemanticAttr = function() {
         '◁', '⩞', '⊕'
       ];
   /**
-       * @type {Array.<string>}
-           */
+   * @type {Array.<string>}
+   */
   /**
    * Invisible operator for plus.
    * @type {string}
@@ -545,7 +545,7 @@ sre.SemanticAttr = function() {
   this.multiplications =
       [
         '†', '‡', '∐', '∗', '∘', '∙', '≀', '⊚', '⊛', '⊠', '⊡', '⋅', '⋆', '⋇',
-        '⋉', '⋊', '⋋', '⋌', '○'
+        '⋉', '⋊', '⋋', '⋌', '○', '·', '*'
       ];
   /**
    * Invisible operator for multiplication.
@@ -1349,7 +1349,8 @@ sre.SemanticAttr.Role = {
   MULTIACCENT: 'multiaccent',
   OVERACCENT: 'overaccent',
   UNDERACCENT: 'underaccent',
-
+  SUBSUP: 'subsup',
+  
   // Fenced.
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',
