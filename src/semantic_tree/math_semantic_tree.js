@@ -863,9 +863,7 @@ sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
       result.push(this.processRow_(nextComp));
     }
   }
-  var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
-  comma.role = sre.SemanticAttr.Role.DUMMY;
-  return [this.makePunctuatedNode_(result, [comma])];
+  return [this.makeDummyNode_(result)];
 };
 
 
@@ -1431,6 +1429,20 @@ sre.SemanticTree.prototype.makePunctuatedNode_ = function(
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
   }
   return newNode;
+};
+
+
+/**
+ * Create an dummy punctuated node.
+ * @param {!Array.<!sre.SemanticTree.Node>} children The child nodes to be
+ *     separated by invisible comma.
+ * @return {!sre.SemanticTree.Node} The new node.
+ * @private
+ */
+sre.SemanticTree.prototype.makeDummyNode_ = function(children) {
+  var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
+  comma.role = sre.SemanticAttr.Role.DUMMY;
+  return this.makePunctuatedNode_(children, [comma]);
 };
 
 

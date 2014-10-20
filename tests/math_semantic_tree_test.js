@@ -7933,6 +7933,18 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '</children>' +
       '</infixop>'
   );
+
+  // Units.
+  /**
+   * Tests simple expressions containing units.
+   */
+  sre.SemanticTreeTest.prototype.testStreeSimpleUnits = function() {
+    this.brief = false;
+    this.executeTreeTest(
+        '<mmultiscript><mi>X</mi></mmultiscript>',
+        ''
+    );
+  };
 };
 
 

@@ -1285,6 +1285,7 @@ sre.SemanticAttr.Type = {
   SUPERSCRIPT: 'superscript',
   UNDERSCORE: 'underscore',
   OVERSCORE: 'overscore',
+  TENSOR: 'tensor',
 
   // Tables and their elements.
   TABLE: 'table',
