@@ -523,7 +523,8 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
           sre.SemanticAttr.Role.UNKNOWN;
       return newNode;
       break;
-
+    case 'MMULTISCRIPT':
+      return this.processMultiScript_(mml, children);
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
       // Ordinarilly at this point we should not get any other tag.
@@ -2385,4 +2386,17 @@ sre.SemanticTree.prototype.makeFractionNode_ = function(denom, enume) {
         return sre.SemanticTree.attrPred_('role', 'UNIT')(x);
       }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   return newNode;
+};
+
+
+/**
+ * Processes a multscript node into a tensor representation.
+ * @param {!sre.SemanticTree.Node} node The multiscript node.
+ * @param {!Array.<sre.SemanticTree.Node>} children The nodes children.
+ * @return {!sre.SemanticTree.Node} The semantic tensor node.
+ * @private
+ */
+// TMP: Do we even need mml?
+sre.SemanticTree.prototype.processMultiScript_ = function(mml, children) {
+  
 };
