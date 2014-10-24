@@ -7944,33 +7944,34 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
 sre.SemanticTreeTest.prototype.testStreeEmptyTensors = function() {
   this.brief = false;
   this.executeTreeTest(
-    '<mmultiscripts></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<mmultiscripts></mmultiscripts>',
+      '<empty role="unknown" id="0"></empty>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><none/></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<mmultiscripts><none/></mmultiscripts>',
+      '<empty role="unknown" id="0"></empty>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><none/><mprescripts/></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<mmultiscripts><none/><mprescripts/></mmultiscripts>',
+      '<empty role="unknown" id="0"></empty>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>',
+      '<empty role="unknown" id="0"></empty>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>',
+      '<empty role="unknown" id="0"></empty>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><none/><none/><none/><mprescripts/><none/></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<mmultiscripts><none/><none/><none/>' +
+      '<mprescripts/><none/></mmultiscripts>',
+      '<empty role="unknown" id="0"></empty>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><none/><none/><none/><mprescripts/>' +
+      '<mmultiscripts><none/><none/><none/><mprescripts/>' +
       '<none/><mpadded/></mmultiscripts>',
-    '<empty role="unknown" id="0"></empty>'
+      '<empty role="unknown" id="0"></empty>'
   );
 };
 
@@ -7981,30 +7982,30 @@ sre.SemanticTreeTest.prototype.testStreeEmptyTensors = function() {
 sre.SemanticTreeTest.prototype.testStreeBaseTensors = function() {
   this.brief = false;
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi></mmultiscripts>',
-    '<identifier role="latinletter" font="normal" id="0">X</identifier>'
+      '<mmultiscripts><mi>X</mi></mmultiscripts>',
+      '<identifier role="latinletter" font="normal" id="0">X</identifier>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><none/></mmultiscripts>',
-    '<identifier role="latinletter" font="normal" id="0">X</identifier>'
+      '<mmultiscripts><mi>X</mi><none/></mmultiscripts>',
+      '<identifier role="latinletter" font="normal" id="0">X</identifier>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><none/><mprescripts/></mmultiscripts>',
-    '<identifier role="latinletter" font="normal" id="0">X</identifier>'
+      '<mmultiscripts><mi>X</mi><none/><mprescripts/></mmultiscripts>',
+      '<identifier role="latinletter" font="normal" id="0">X</identifier>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><none/><mprescripts/><none/></mmultiscripts>',
-    '<identifier role="latinletter" font="normal" id="0">X</identifier>'
+      '<mmultiscripts><mi>X</mi><none/><mprescripts/><none/></mmultiscripts>',
+      '<identifier role="latinletter" font="normal" id="0">X</identifier>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><none/><none/><none/><mprescripts/><none/>' +
+      '<mmultiscripts><mi>X</mi><none/><none/><none/><mprescripts/><none/>' +
       '</mmultiscripts>',
-    '<identifier role="latinletter" font="normal" id="0">X</identifier>'
+      '<identifier role="latinletter" font="normal" id="0">X</identifier>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
+      '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
       '<none/><mpadded/></mmultiscripts>',
-    '<infixop role="addition" id="3">+' +
+      '<infixop role="addition" id="3">+' +
       '<content><operator role="addition" id="1">+</operator></content>' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">X</identifier>' +
@@ -8022,8 +8023,8 @@ sre.SemanticTreeTest.prototype.testStreeBaseTensors = function() {
 sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   this.brief = false;
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>',
-    '<subscript role="latinletter" id="2">' +
+      '<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>',
+      '<subscript role="latinletter" id="2">' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">X</identifier>' +
       '<identifier role="latinletter" font="normal" id="1">i</identifier>' +
@@ -8031,8 +8032,8 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</subscript>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
-    '<subscript role="latinletter" id="2">' +
+      '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
+      '<subscript role="latinletter" id="2">' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">X</identifier>' +
       '<identifier role="latinletter" font="normal" id="1">i</identifier>' +
@@ -8040,8 +8041,8 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</subscript>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
-    '<superscript role="latinletter" id="2">' +
+      '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
+      '<superscript role="latinletter" id="2">' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">X</identifier>' +
       '<identifier role="latinletter" font="normal" id="1">i</identifier>' +
@@ -8049,8 +8050,8 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>',
-    '<superscript role="latinletter" id="4">' +
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>',
+      '<superscript role="latinletter" id="4">' +
       '<children>' +
       '<subscript role="subsup" id="3">' +
       '<children>' +
@@ -8063,9 +8064,9 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
-    '<superscript role="latinletter" id="4">' +
+      '<superscript role="latinletter" id="4">' +
       '<children>' +
       '<subscript role="subsup" id="3">' +
       '<children>' +
@@ -8078,9 +8079,9 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
-    '<superscript role="latinletter" id="10">' +
+      '<superscript role="latinletter" id="10">' +
       '<children>' +
       '<subscript role="subsup" id="9">' +
       '<children>' +
@@ -8117,9 +8118,9 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
 sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.brief = false;
   this.executeTreeTest(
-    '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-    '<tensor role="unknown" id="5">' +
+      '<tensor role="unknown" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8130,15 +8131,132 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
       '</tensor>'
   );
   this.executeTreeTest(
-    '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
+      '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-    '<tensor role="unknown" id="5">' +
+      '<tensor role="unknown" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
       '<number role="leftsuper" font="normal" id="2">4</number>' +
       '<number role="rightsub" font="normal" id="3">1</number>' +
       '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<number role="rightsub" font="normal" id="3">1</number>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<number role="rightsuper" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><none/><none/><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mpadded/><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mprescripts/>' +
+      '<mn>3</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<empty role="leftsuper" id="2"></empty>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mprescripts/>' +
+      '<none/><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<empty role="leftsub" id="1"></empty>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
+      '<none/><mn>4</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<empty role="leftsub" id="1"></empty>' +
+      '<number role="leftsuper" font="normal" id="2">4</number>' +
+      '<number role="rightsub" font="normal" id="3">1</number>' +
+      '<empty role="rightsuper" id="4"></empty>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
+      '<mn>3</mn></mmultiscripts>',
+      '<tensor role="unknown" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<number role="leftsub" font="normal" id="1">3</number>' +
+      '<empty role="leftsuper" id="2"></empty>' +
+      '<empty role="rightsub" id="3"></empty>' +
+      '<number role="rightsuper" font="normal" id="4">2</number>' +
       '</children>' +
       '</tensor>'
   );
@@ -8150,34 +8268,94 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
  */
 sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
   this.executeTreeTest(
-    '<mmultiscripts><mi>A</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
-      '<mprescripts/><none/></mmultiscripts>',
-    '<superscript role="latinletter" id="10">' +
-      '<children>' +
-      '<subscript role="subsup" id="9">' +
+      '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>',
+      '<tensor role="unknown" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
-      '<infixop role="implicit" id="4">\u2062' +
+      '<punctuated role="leftsub" id="4">' +
       '<content>' +
-      '<operator role="multiplication" id="3">\u2062</operator>' +
+      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<identifier role="latinletter" font="normal" id="1">i</identifier>' +
-      '<identifier role="latinletter" font="normal" id="2">k</identifier>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '<identifier role="latinletter" font="normal" id="2">i</identifier>' +
       '</children>' +
-      '</infixop>' +
-      '</children>' +
-      '</subscript>' +
-      '<infixop role="implicit" id="8">\u2062' +
+      '</punctuated>' +
+      '<punctuated role="leftsuper" id="8">' +
       '<content>' +
-      '<operator role="multiplication" id="7">\u2062</operator>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<identifier role="latinletter" font="normal" id="5">j</identifier>' +
-      '<identifier role="latinletter" font="normal" id="6">l</identifier>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '<identifier role="latinletter" font="normal" id="6">j</identifier>' +
       '</children>' +
-      '</infixop>' +
+      '</punctuated>' +
+      '<punctuated role="rightsub" id="12">' +
+      '<content>' +
+      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '<identifier role="latinletter" font="normal" id="10">k</identifier>' +
       '</children>' +
-      '</superscript>'
+      '</punctuated>' +
+      '<punctuated role="rightsuper" id="16">' +
+      '<content>' +
+      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="13">4</number>' +
+      '<identifier role="latinletter" font="normal" id="14">l</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</tensor>'
   );
+  this.executeTreeTest(
+      '<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>',
+      '<tensor role="unknown" id="17">' +
+      '<children>' +
+      '<identifier role="latinletter" font="normal" id="0">A</identifier>' +
+      '<punctuated role="leftsub" id="4">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '<empty role="unknown" id="2"></empty>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="leftsuper" id="8">' +
+      '<content>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"></empty>' +
+      '<identifier role="latinletter" font="normal" id="6">j</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="rightsub" id="12">' +
+      '<content>' +
+      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '<identifier role="latinletter" font="normal" id="10">k</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="rightsuper" id="16">' +
+      '<content>' +
+      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"></empty>' +
+      '<identifier role="latinletter" font="normal" id="14">l</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</tensor>'
+  );
+
 };

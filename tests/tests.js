@@ -56,8 +56,8 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.MathmlStoreTest,
-  //sre.MathspeakRuleTest,
-  //sre.SemanticRuleTest,
+  sre.MathspeakRuleTest,
+  sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest
 ];

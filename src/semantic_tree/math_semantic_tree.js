@@ -524,7 +524,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       return newNode;
       break;
     case 'MMULTISCRIPTS':
-      return this.processMultiScript_(mml, children);
+      return this.processMultiScript_(children);
       break;
     case 'NONE':
       return this.makeEmptyNode_();
@@ -2395,55 +2395,45 @@ sre.SemanticTree.prototype.makeFractionNode_ = function(denom, enume) {
 
 /**
  * Processes a mmultiscript node into a tensor representation.
- * @param {!Element} mml The multiscript node.
  * @param {!Array.<Element>} children The nodes children.
  * @return {!sre.SemanticTree.Node} The semantic tensor node.
  * @private
  */
-// TMP: Do we even need mml?
-sre.SemanticTree.prototype.processMultiScript_ = function(mml, children) {
-  sre.SemanticTree.printMmlList_(children);
+sre.SemanticTree.prototype.processMultiScript_ = function(children) {
   // Empty node. Illegal MathML markup, but valid in MathJax.
   if (!children.length) {
     return this.makeEmptyNode_();
   }
-  var base = this.parseMathml_(/** @type{!Element} */(children.shift()));
+  var base = this.parseMathml_(/** @type {!Element} */(children.shift()));
   if (!children.length) {
     return base;
   }
-  console.log('OK');
   var lsup = [];
   var lsub = [];
   var rsup = [];
   var rsub = [];
   var prescripts = false;
+  var scriptcount = 0;
   for (var i = 0, child; child = children[i]; i++) {
     if (sre.SemanticUtil.tagName(child) === 'MPRESCRIPTS') {
       prescripts = true;
+      scriptcount = 0;
       continue;
     }
     prescripts ?
-      (i & 1 ? lsub.push(child) : lsup.push(child)) :
-      (i & 1 ? rsup.push(child) : rsub.push(child));
+        (scriptcount & 1 ? lsup.push(child) : lsub.push(child)) :
+        (scriptcount & 1 ? rsup.push(child) : rsub.push(child));
+    scriptcount++;
   }
   // This is the pathological msubsup case.
-  // 
+  //
   // The treatment of elements here is debatable, as we explicitly purge NONE
   // elements, which could be retained in order to get the correct correlation
   // between super and subscript nodes.
-  // 
-  // sre.SemanticTree.printMmlList_(lsub);
-  // sre.SemanticTree.printMmlList_(lsup);
-  // sre.SemanticTree.printMmlList_(rsub);
-  // sre.SemanticTree.printMmlList_(rsup);
   if (!sre.SemanticUtil.purgeNodes(lsup).length &&
       !sre.SemanticUtil.purgeNodes(lsub).length) {
     rsup = sre.SemanticUtil.purgeNodes(rsup);
     rsub = sre.SemanticUtil.purgeNodes(rsub);
-  // sre.SemanticTree.printMmlList_(lsub);
-  // sre.SemanticTree.printMmlList_(lsup);
-  // sre.SemanticTree.printMmlList_(rsub);
-  // sre.SemanticTree.printMmlList_(rsup);
     if (!rsup.length && !rsub.length) {
       return base;
     }
@@ -2460,15 +2450,15 @@ sre.SemanticTree.prototype.processMultiScript_ = function(mml, children) {
   // We really deal with a multiscript tensor.
   //
   return this.makeBranchNode_(
-    sre.SemanticAttr.Type.TENSOR,
-    [
-      base,
-      this.makeScriptNode_(lsub, sre.SemanticAttr.Role.LEFTSUB),
-      this.makeScriptNode_(lsup, sre.SemanticAttr.Role.LEFTSUPER),
-      this.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
-      this.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
-    ],
-    []);
+      sre.SemanticAttr.Type.TENSOR,
+      [
+       base,
+       this.makeScriptNode_(lsub, sre.SemanticAttr.Role.LEFTSUB),
+       this.makeScriptNode_(lsup, sre.SemanticAttr.Role.LEFTSUPER),
+       this.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
+       this.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
+      ],
+      []);
 };
 
 
@@ -2478,6 +2468,7 @@ sre.SemanticTree.prototype.processMultiScript_ = function(mml, children) {
  *      that script.
  * @param {sre.SemanticAttr.Role} role The role of the dummy node.
  * @return {!sre.SemanticTree.Node} The semantic tensor node.
+ * @private
  */
 sre.SemanticTree.prototype.makeScriptNode_ = function(nodes, role) {
   switch (nodes.length) {
@@ -2485,18 +2476,11 @@ sre.SemanticTree.prototype.makeScriptNode_ = function(nodes, role) {
       var newNode = this.makeEmptyNode_();
       break;
     case 1:
-      newNode = this.parseMathml_(/** @type{!Element} */(nodes[0]));
+      newNode = this.parseMathml_(/** @type {!Element} */(nodes[0]));
       break;
     default:
       newNode = this.makeDummyNode_(this.parseMathmlChildren_(nodes));
   }
   newNode.role = role;
   return newNode;
-};
-
-
-sre.SemanticTree.printMmlList_ = function(list) {
-  for (var i = 0, node; node = list[i]; i++) {
-    console.log(node.tagName);
-  }
 };
