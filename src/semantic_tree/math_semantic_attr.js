@@ -1350,7 +1350,13 @@ sre.SemanticAttr.Role = {
   MULTIACCENT: 'multiaccent',
   OVERACCENT: 'overaccent',
   UNDERACCENT: 'underaccent',
+
+  // Index and tensor roles.
   SUBSUP: 'subsup',
+  LEFTSUB: 'leftsub',
+  LEFTSUPER: 'leftsuper',
+  RIGHTSUB: 'rightsub',
+  RIGHTSUPER: 'rightsuper',
 
   // Fenced.
   LEFTRIGHT: 'leftright',

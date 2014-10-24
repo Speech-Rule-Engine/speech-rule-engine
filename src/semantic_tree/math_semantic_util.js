@@ -134,7 +134,7 @@ sre.SemanticUtil.tagName = function(node) {
  */
 sre.SemanticUtil.IGNORETAGS = [
   'MERROR', 'MPHANTOM', 'MSPACE', 'MACTION', 'MALIGNGROUP', 'MALIGNMARK',
-  'MACTION'
+  'MACTION', 'NONE'
 ];
 
 
