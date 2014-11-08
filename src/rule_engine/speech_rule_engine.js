@@ -361,7 +361,10 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
     var allRules = store.findAllRules(
         function(rule) {return rule.name == name;});
     for (var i = 0, rule; rule = allRules[i]; i++) {
-      sre.Debugger.getInstance().output('Rule', name, 'number', i);
+      sre.Debugger.getInstance().output(
+          'Rule', name, 'DynamicCstr:',
+          sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
+          'number', i);
       store.debugSpeechRule(rule, node);
     }
   }

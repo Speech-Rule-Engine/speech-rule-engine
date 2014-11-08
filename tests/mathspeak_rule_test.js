@@ -56,205 +56,6 @@ sre.MathspeakRuleTest.prototype.executeRuleTest = function(mml, answer, style) {
 };
 
 
-/**
- * Testing Rule 8.8, Example 1.
- */
-sre.MathspeakRuleTest.prototype.testSample_8_8_1 = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>e</mi>' +
-      '<mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi>' +
-      '<mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript c d Superscript a b Baseline x' +
-                       ' Subscript e f Superscript g h', 'default');
-  this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'brief');
-  this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'sbrief');
-};
-
-
-/**
- * Testing tensors Multi scripts.
- */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimple = function() {
-  var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c Sub Superscript l Superscript d', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Super l Sup d', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Super l Sup d', 'sbrief');
-};
-
-
-/**
- * Testing tensors Multi scripts.
- */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiComplex = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c k Sub Superscript l Superscript d', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c k Sub Super l Sup d', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c k Sub Super l Sup d', 'sbrief');
-};
-
-
-/**
- * Testing tensors ABCD.
- */
-sre.MathspeakRuleTest.prototype.testSampleTwoTensors = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>' +
-      '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d Baseline ' +
-                       'Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base ' +
-                       'Sub a Sup b Base x Sub c Sup d', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base ' +
-                       'Sub a Sup b Base x Sub c Sup d', 'sbrief');
-};
-
-
-// Tensor tests are named with the convention of including the indices that are
-// present:
-// 
-//   B      D
-//     Base     R 
-//   A      C
-//  Where R is the rest.
-/**
- * Testing tensors ABCD.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCD = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d', 'sbrief');
-};
-
-
-/**
- * Testing tensors ABC.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABC = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c', 'sbrief');
-};
-
-
-/**
- * Testing tensors ABD.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABD = function() {
-  var mml = '<mmultiscripts><mi>x</mi><none/><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Superscript d', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sup d', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sup d', 'sbrief');
-};
-
-
-/**
- * Testing tensors AB.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorAB = function() {
-  var mml = '<mmultiscripts><mi>x</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x', 'sbrief');
-};
-
-
-/**
- * Testing tensors ABCR.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCR = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c Baseline r', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Base r', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Base r', 'sbrief');
-};
-
-
-/**
- * Testing tensors ABCDR.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDR = function() {
-  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
-  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d Baseline r', 'default');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base r', 'brief');
-  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base r', 'sbrief');
-};
-
-
-/**
- * Testing tensors Root of ABCD.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRoot = function() {
-  var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>';
-  this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d Baseline EndRoot', 'default');
-  this.executeRuleTest(mml, 'StartRoot Sub a Sup b Base x Sub c Sup d Base EndRoot', 'brief');
-  this.executeRuleTest(mml, 'Root Sub a Sup b Base x Sub c Sup d Base EndRoot', 'sbrief');
-};
-
-
-/**
- * Testing tensors Root ABCD . R.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRootR = function() {
-  var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>';
-  this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d Baseline EndRoot r', 'default');
-  this.executeRuleTest(mml, 'StartRoot Sub a Sup b Base x Sub c Sup d Base EndRoot r', 'brief');
-  this.executeRuleTest(mml, 'Root Sub a Sup b Base x Sub c Sup d Base EndRoot r', 'sbrief');
-};
-
-
-/**
- * Testing tensors Frac of ABCD.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFrac = function() {
-  var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
-  this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d Baseline EndFraction', 'default');
-  this.executeRuleTest(mml, 'StartFrac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac', 'brief');
-  this.executeRuleTest(mml, 'Frac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac', 'sbrief');
-};
-
-
-/**
- * Testing tensors Frac ABCD . R.
- */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFracR = function() {
-  var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
-      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
-  this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b Baseline x' +
-                       ' Subscript c Superscript d Baseline EndFraction r', 'default');
-  this.executeRuleTest(mml, 'StartFrac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac r', 'brief');
-  this.executeRuleTest(mml, 'Frac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac r', 'sbrief');
-};
-
-
-
-
-
-
 // In the following default is the verbose version of MathSpeak.
 /**
  * Testing Rule 1.1, Example 1.
@@ -1259,6 +1060,265 @@ sre.MathspeakRuleTest.prototype.testSample_8_8_1_naive = function() {
                        ' Subscript e f Superscript g h', 'default');
   this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'brief');
   this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.8, Example 1.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_8_1 = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mi>e</mi>' +
+      '<mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi>' +
+      '<mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript c d Superscript a b Baseline x' +
+                       ' Subscript e f Superscript g h', 'default');
+  this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'brief');
+  this.executeRuleTest(mml, 'Sub c d Sup a b Base x Sub e f Sup g h', 'sbrief');
+};
+
+
+/**
+ * Testing tensors Multi scripts.
+ */
+sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimpleABC = function() {
+  var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Sub Superscript l', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sup l', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sup l', 'sbrief');
+};
+
+
+/**
+ * Testing tensors Multi scripts.
+ */
+sre.MathspeakRuleTest.prototype.testSampleTensorMultiSub = function() {
+  var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub>' +
+      '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Sub Subscript l Superscript d', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sub l Sup d',
+                       'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sub l Sup d',
+                       'sbrief');
+};
+
+
+/**
+ * Testing tensors Multi scripts.
+ */
+sre.MathspeakRuleTest.prototype.testSampleTensorMultiSubSup = function() {
+  var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi>' +
+      '<mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Sub Subscript l Sub Sub Superscript k' +
+                       ' Subscript e Superscript d', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sub l Sub Sub' +
+                       ' Sup k Sub e Sup d', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sub l Sub Sub' +
+                       ' Sup k Sub e Sup d', 'sbrief');
+};
+
+
+/**
+ * Testing tensors Multi scripts.
+ */
+sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimple = function() {
+  var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
+      '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Sub Superscript l Superscript d',
+                       'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sup l Sup d',
+                       'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sub Sup l Sup d',
+                       'sbrief');
+};
+
+
+/**
+ * Testing tensors Multi scripts.
+ */
+sre.MathspeakRuleTest.prototype.testSampleTensorMultiComplex = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi>' +
+      '<mi>l</mi></msup></mrow><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c k Sub Superscript l Superscript d',
+                       'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c k Sub Sup l Sup d',
+                       'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c k Sub Sup l Sup d',
+                       'sbrief');
+};
+
+
+/**
+ * Testing tensors ABCD.
+ */
+sre.MathspeakRuleTest.prototype.testSampleTwoTensors = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>' +
+      '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Superscript d Baseline ' +
+                       'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Superscript d', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base ' +
+                       'Sub a Sup b Base x Sub c Sup d', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base ' +
+                       'Sub a Sup b Base x Sub c Sup d', 'sbrief');
+};
+
+
+// Tensor tests are named with the convention of including the indices that are
+// present:
+//
+//   B      D
+//     Base     R
+//   A      C
+//  Where R is the rest.
+/**
+ * Testing tensors ABCD.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCD = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Superscript d', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d', 'sbrief');
+};
+
+
+/**
+ * Testing tensors ABC.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABC = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c', 'sbrief');
+};
+
+
+/**
+ * Testing tensors ABD.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABD = function() {
+  var mml = '<mmultiscripts><mi>x</mi><none/><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Superscript d', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sup d', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sup d', 'sbrief');
+};
+
+
+/**
+ * Testing tensors AB.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorAB = function() {
+  var mml = '<mmultiscripts><mi>x</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x', 'sbrief');
+};
+
+
+/**
+ * Testing tensors ABCR.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCR = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Baseline r', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Base r', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Base r', 'sbrief');
+};
+
+
+/**
+ * Testing tensors ABCDR.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDR = function() {
+  var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
+  this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
+                       ' Subscript c Superscript d Baseline r', 'default');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base r', 'brief');
+  this.executeRuleTest(mml, 'Sub a Sup b Base x Sub c Sup d Base r', 'sbrief');
+};
+
+
+/**
+ * Testing tensors Root of ABCD.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRoot = function() {
+  var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>';
+  this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
+                       ' Subscript c Superscript d Baseline EndRoot',
+                       'default');
+  this.executeRuleTest(mml, 'StartRoot Sub a Sup b Base x Sub c Sup d Base' +
+                       ' EndRoot', 'brief');
+  this.executeRuleTest(mml, 'Root Sub a Sup b Base x Sub c Sup d Base EndRoot',
+                       'sbrief');
+};
+
+
+/**
+ * Testing tensors Root ABCD . R.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRootR = function() {
+  var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>';
+  this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
+                       ' Subscript c Superscript d Baseline EndRoot r',
+                       'default');
+  this.executeRuleTest(mml, 'StartRoot Sub a Sup b Base x Sub c Sup d Base' +
+                       ' EndRoot r', 'brief');
+  this.executeRuleTest(mml, 'Root Sub a Sup b Base x Sub c Sup d Base EndRoot' +
+                       ' r', 'sbrief');
+};
+
+
+/**
+ * Testing tensors Frac of ABCD.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFrac = function() {
+  var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
+  this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b' +
+                       ' Baseline x Subscript c Superscript d Baseline' +
+                       ' EndFraction', 'default');
+  this.executeRuleTest(mml, 'StartFrac 1 Over Sub a Sup b Base x Sub c' +
+                       ' Sup d Base EndFrac', 'brief');
+  this.executeRuleTest(mml, 'Frac 1 Over Sub a Sup b Base x Sub c Sup d' +
+                       ' Base EndFrac', 'sbrief');
+};
+
+
+/**
+ * Testing tensors Frac ABCD . R.
+ */
+sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFracR = function() {
+  var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
+      '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
+  this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b' +
+                       ' Baseline x Subscript c Superscript d Baseline' +
+                       ' EndFraction r', 'default');
+  this.executeRuleTest(mml, 'StartFrac 1 Over Sub a Sup b Base x Sub c Sup d' +
+                       ' Base EndFrac r', 'brief');
+  this.executeRuleTest(mml, 'Frac 1 Over Sub a Sup b Base x Sub c Sup d Base' +
+                       ' EndFrac r', 'sbrief');
 };
 
 

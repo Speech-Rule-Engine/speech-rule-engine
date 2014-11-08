@@ -231,8 +231,7 @@ sre.SemanticTree.formatXml = function(xml) {
 sre.SemanticTree.Node.prototype.toString = function(opt_brief) {
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   var dp = new sre.SystemExternal.xmldom.DOMParser();
-  // That does not seem to work in NodeJS. Need to look into.
-  var xml = dp.parseFromString('', 'text/xml');
+  var xml = dp.parseFromString('//', 'text/xml');
   return xmls.serializeToString(this.xml(xml, opt_brief));
 };
 

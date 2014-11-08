@@ -564,12 +564,19 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
   while (node.parentNode) {
     var children = node.parentNode;
     var parent = children.parentNode;
-    if (parent.tagName === sre.SemanticAttr.Type.SUBSCRIPT &&
-        node === children.childNodes[1]) {
+    var nodeRole = node.getAttribute && node.getAttribute('role');
+    if ((parent.tagName === sre.SemanticAttr.Type.SUBSCRIPT &&
+         node === children.childNodes[1]) ||
+        (parent.tagName === sre.SemanticAttr.Type.TENSOR && nodeRole &&
+        (nodeRole === sre.SemanticAttr.Role.LEFTSUB ||
+        nodeRole === sre.SemanticAttr.Role.RIGHTSUB))) {
       init = replace.sub + ' ' + init;
     }
-    if (parent.tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
-        node === children.childNodes[1]) {
+    if ((parent.tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+         node === children.childNodes[1]) ||
+        (parent.tagName === sre.SemanticAttr.Type.TENSOR && nodeRole &&
+        (nodeRole === sre.SemanticAttr.Role.LEFTSUPER ||
+        nodeRole === sre.SemanticAttr.Role.RIGHTSUPER))) {
       init = replace.sup + ' ' + init;
     }
     node = parent;

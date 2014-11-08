@@ -265,7 +265,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'implicit', 'self::infixop', '@role="leftsuper" or' +
       ' @role="leftsub" or @role="rightsuper" or @role="rightsub"');
-  
+
   defineRule('subtraction', 'mathspeak.default',
              '[m] children/* (separator:"minus");', 'self::infixop',
              '@role="subtraction"');
@@ -555,8 +555,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'not(name(following-sibling::subscript/children/*[1])="empty" or ' +
       '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
       '"subscript" and ' +
-      'name(following-sibling::*/children/*[1]/children/*[1])="empty"))',
-      '@role!="subsup"');
+      'name(following-sibling::*/children/*[1]/children/*[1])="empty")) and ' +
+      '@role!="subsup"',
+      'not(following-sibling::*[@role="rightsuper" or @role="rightsub"' +
+      ' or @role="leftsub" or @role="leftsub"])');
   defineSpecialisedRule(
       'subscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2];' +
@@ -567,7 +569,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
       'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|' +
-      'ancestor::fraction'
+      'ancestor::fraction',
+      'not(ancestor::punctuated[@role="leftsuper" or @role="rightsub"' +
+      ' or @role="rightsuper" or @role="rightsub"])'
   ); // This rule might be too simple.
 
 
@@ -591,7 +595,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'not(name(following-sibling::superscript/children/*[1])="empty" or ' +
       '(name(following-sibling::infixop[@role="implicit"]/children/*[1])=' +
       '"superscript" and ' +
-      'name(following-sibling::*/children/*[1]/children/*[1])="empty"))');
+      'name(following-sibling::*/children/*[1]/children/*[1])="empty")) and ' +
+      'not(following-sibling::*[@role="rightsuper" or @role="rightsub"' +
+      ' or @role="leftsub" or @role="leftsub"])');
   defineSpecialisedRule(
       'superscript-baseline', 'mathspeak.default', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
@@ -602,7 +608,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::fraction|ancestor::punctuated',
-      'ancestor::*/following-sibling::*');
+      'ancestor::*/following-sibling::* and ' +
+      'not(ancestor::punctuated[@role="leftsuper" or @role="rightsub"' +
+      ' or @role="rightsuper" or @role="rightsub"])');
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
@@ -982,6 +990,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 /**
  * Component strings for tensor speech rules.
  * @enum {string}
+ * @private
  */
 sre.MathspeakRules.componentString_ = {
   2 : 'CSFbaseline',
@@ -993,6 +1002,7 @@ sre.MathspeakRules.componentString_ = {
 /**
  * Child number translation for tensor speech rules.
  * @enum {number}
+ * @private
  */
 sre.MathspeakRules.childNumber_ = {
   4 : 2,
@@ -1010,13 +1020,14 @@ sre.MathspeakRules.childNumber_ = {
  * @return {Array.<string>} A list consisting of additional constraints for the
  *     tensor rule, plus the strings for the verbose and brief rule, in that
  *     order.
+ * @private
  */
 sre.MathspeakRules.generateTensorRuleStrings_ = function(constellation) {
   var constraints = [];
   var verbString = '';
   var briefString = '';
   var constel = parseInt(constellation, 2);
-  
+
   for (var i = 0; i < 5; i++) {
     var childString = 'children/*[' + sre.MathspeakRules.childNumber_[i] + ']';
     if (constel & 1) {
@@ -1038,24 +1049,25 @@ sre.MathspeakRules.generateTensorRuleStrings_ = function(constellation) {
 
 /**
  * Generator for tensor speech rules.
+ * @private
  */
 sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
-  // Constellations are build as bitvectors with the meaning:
-  // 
+  // Constellations are built as bitvectors with the meaning:
+  //
   //  lsub lsuper base rsub rsuper
   var constellations = ['11111', '11110', '11101', '11100',
                         '10111', '10110', '10101', '10100',
                         '01111', '01110', '01101', '01100'
-                       ];
+  ];
   for (var i = 0, constel; constel = constellations[i]; i++) {
     var name = 'tensor' + constel;
     var components = sre.MathspeakRules.generateTensorRuleStrings_(constel);
     var briefStr = components.pop();
     var verbStr = components.pop();
     var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
-          concat(components);
+        concat(components);
     var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
-          concat(components);
+        concat(components);
     // Rules without neighbour.
     defineRule.apply(null, verbList);
     defineRule.apply(null, briefList);
@@ -1078,10 +1090,10 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
     var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
                      'ancestor::fraction|ancestor::punctuated|' +
                      'ancestor::fenced|ancestor::root|ancestor::sqrt'].
-          concat(components);
+        concat(components);
     defineRuleAlias.apply(null, aliasList);
   }
 };
-  
+
 });  // goog.scope
 
