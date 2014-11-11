@@ -6,16 +6,17 @@
      }
    },
  "key": "F",
- "names": ["F", "F."]
+ "names": ["F", "F.", "\u00B0F"]
 },
   {"category": "",
  "mappings": {
    "default": {
-     "default": "Celsius"
+     "default": "Celsius",
+     "alternative": "Centigrade"
      }
    },
  "key": "C",
- "names": ["C"]
+ "names": ["C", "\u00B0C"]
 },
   {"category": "",
  "mappings": {
@@ -24,7 +25,7 @@
      }
    },
  "key": "K",
- "names": ["K"]
+ "names": ["K", "\u00B0K"]
 }
   
 ]

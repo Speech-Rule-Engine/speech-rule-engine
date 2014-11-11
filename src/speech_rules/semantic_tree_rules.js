@@ -453,7 +453,8 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'unit', 'default.default',
-      '[n] text() (annotation:unit)', 'self::identifier', '@role="unit"');
+      '[t] text() (annotation:unit, preprocess)',
+      'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'default.default',
       '[t] "square"; [n] children/*[1]',

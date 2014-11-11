@@ -56,13 +56,37 @@ sre.SemanticRuleTest.prototype.executeRuleTest = function(mml, answer) {
 
 // In the following default is the verbose version of MathSpeak.
 /**
- * Testing rules for simple units.
+ * Testing rules for singleton units.
  */
-sre.SemanticRuleTest.prototype.testUnitsSimple = function() {
+sre.SemanticRuleTest.prototype.testUnitsSingle = function() {
   this.executeRuleTest(
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>',
       'kilometers'
   );
+  this.executeRuleTest(
+      '<mi mathvariant="normal" class="MathML-Unit">A</mi>',
+      'amperes'
+  );
+  this.executeRuleTest(
+      '<mi mathvariant="normal" class="MathML-Unit">\u03A9</mi>',
+      'ohm'
+  );
+  this.executeRuleTest(
+      '<mi mathvariant="normal" class="MathML-Unit">k\u03A9</mi>',
+      'kilohm'
+  );
+  this.executeRuleTest(
+      '<mi mathvariant="normal" class="MathML-Unit">\u00B0C</mi>',
+      'Celsius'
+  );
+};
+
+
+// In the following default is the verbose version of MathSpeak.
+/**
+ * Testing rules for simple units.
+ */
+sre.SemanticRuleTest.prototype.testUnitsSimple = function() {
   this.executeRuleTest(
       '<mi>min</mi><mi mathvariant="normal" class="MathML-Unit">min</mi>',
       'min of minutes'

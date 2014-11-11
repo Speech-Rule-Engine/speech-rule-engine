@@ -221,6 +221,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       if (component['annotation']) {
         descrs[0]['annotation'] = component['annotation'];
       }
+      if (component['preprocess']) {
+        descrs[0]['preprocess'] = true;
+      }
     }
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));

@@ -108,7 +108,7 @@ sre.MathCompoundStore.prototype.addSymbolRules = function(json) {
 
 
 /**
- * Makes a speech rule for Unicode characters from its JSON representation.
+ * Makes a speech rule for Function names from its JSON representation.
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
@@ -121,7 +121,7 @@ sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
 
 
 /**
- * Makes a speech rule for Unicode characters from its JSON representation.
+ * Makes a speech rule for Unit descriptors from its JSON representation.
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addUnitRules = function(json) {
