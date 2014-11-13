@@ -19,13 +19,13 @@
 
 goog.provide('sre.SemanticRuleTest');
 
-goog.require('sre.AbstractTest');
+goog.require('sre.AbstractRuleTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sre.AbstractRuleTest}
  */
 sre.SemanticRuleTest = function() {
   goog.base(this);
@@ -34,27 +34,20 @@ sre.SemanticRuleTest = function() {
    * @override
    */
   this.information = 'Semantic rule tests.';
+
+  /**
+   * @override
+   */
+  this.style = 'short';
+
+  /**
+   * @override
+   */
+  this.semantics = true;
 };
-goog.inherits(sre.SemanticRuleTest, sre.AbstractTest);
+goog.inherits(sre.SemanticRuleTest, sre.AbstractRuleTest);
 
 
-/**
- * Tests if for a given html snippet the applicable rule is indeed the same
- * as the one provided.
- * @param {string} mml Snippet of a MathML expression.
- * @param {string} answer Expected speech translation of MathML expression.
- */
-sre.SemanticRuleTest.prototype.executeRuleTest = function(mml, answer) {
-  var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-          mml + '</math>';
-  sre.System.getInstance().setupEngine(
-      {semantics: true, domain: 'default', style: 'short'});
-  var result = sre.System.getInstance().processExpression(mathMl);
-  this.assert.equal(result, answer);
-};
-
-
-// In the following default is the verbose version of MathSpeak.
 /**
  * Testing rules for singleton units.
  */

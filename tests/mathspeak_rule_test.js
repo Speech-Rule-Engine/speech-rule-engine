@@ -19,13 +19,13 @@
 
 goog.provide('sre.MathspeakRuleTest');
 
-goog.require('sre.AbstractTest');
+goog.require('sre.AbstractRuleTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sre.AbstractRuleTest}
  */
 sre.MathspeakRuleTest = function() {
   goog.base(this);
@@ -34,26 +34,18 @@ sre.MathspeakRuleTest = function() {
    * @override
    */
   this.information = 'Mathspeak rule tests.';
-};
-goog.inherits(sre.MathspeakRuleTest, sre.AbstractTest);
 
-
-/**
- * Tests if for a given html snippet the applicable rule is indeed the same
- * as the one provided.
- * @param {string} mml Snippet of a MathML expression.
- * @param {string} answer Expected speech translation of MathML expression.
- * @param {string} style Mathspeak style for translation.
- */
-sre.MathspeakRuleTest.prototype.executeRuleTest = function(mml, answer, style) {
-  var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-          mml + '</math>';
-  sre.System.getInstance().setupEngine({semantics: true,
-    domain: 'mathspeak',
-    style: style});
-  var result = sre.System.getInstance().processExpression(mathMl);
-  this.assert.equal(result, answer);
+  /**
+   * @override
+   */
+  this.domain = 'mathspeak';
+  
+  /**
+   * @override
+   */
+  this.semantics = true;
 };
+goog.inherits(sre.MathspeakRuleTest, sre.AbstractRuleTest);
 
 
 // In the following default is the verbose version of MathSpeak.

@@ -19,12 +19,13 @@
 
 goog.provide('sre.MathmlCloudTest');
 
-goog.require('sre.MathspeakRuleTest');
+goog.require('sre.AbstractRuleTest');
+
 
 
 /**
  * @constructor
- * @extends {sre.MathspeakRuleTest}
+ * @extends {sre.AbstractRuleTest}
  */
 sre.MathmlCloudTest = function() {
   goog.base(this);
@@ -33,18 +34,41 @@ sre.MathmlCloudTest = function() {
    * @override
    */
   this.information = 'Mathml Cloud tests.';
+
+  /**
+   * @override
+   */
+  this.domain = 'mathspeak';
+  
+  /**
+   * @override
+   */
+  this.semantics = true;
 };
-goog.inherits(sre.MathmlCloudTest, sre.MathspeakRuleTest);
+goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
-// In the following default is the verbose version of MathSpeak.
 /**
- * Testing Rule 1.1, Example 1.
+ * Testing Parenthesis with Superscript.
+ * Simplified test case for expression 95.
  */
-sre.MathspeakRuleTest.prototype.testParenSuper = function() {
+sre.MathmlCloudTest.prototype.testParenSuper = function() {
   var mml = '<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>';
   this.executeRuleTest(mml, 'left-parenthesis a right-parenthesis squared', 'default');
   this.executeRuleTest(mml, 'left-pren a right-pren squared', 'brief');
   this.executeRuleTest(mml, 'L pren a R pren squared', 'sbrief');
 };
 
+
+
+/**
+ * Testing Parenthesis with convoluted operator.
+ * Simplified test case for expression 98.
+ */
+sre.MathmlCloudTest.prototype.testParenConvoluted = function() {
+    var mml= '<mo>(</mo><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup>' +
+          '<mo>/2)</mo>';
+  this.executeRuleTest(mml, 'left-parenthesis minus x squared slash 2 right-parenthesis', 'default');
+  this.executeRuleTest(mml, 'left-p\'ren minus x squared slash 2 right-parenthesis', 'brief');
+  this.executeRuleTest(mml, 'L p\'ren minus x squared slash 2 R p\'ren', 'sbrief');
+};
