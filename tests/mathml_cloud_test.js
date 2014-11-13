@@ -56,8 +56,8 @@ sre.MathmlCloudTest.prototype.testParenSuper = function() {
   var mml = '<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>';
   this.executeRuleTest(mml, 'left-parenthesis a right-parenthesis squared',
                        'default');
-  this.executeRuleTest(mml, 'left-pren a right-pren squared', 'brief');
-  this.executeRuleTest(mml, 'L pren a R pren squared', 'sbrief');
+  this.executeRuleTest(mml, 'left-p\'ren a right-p\'ren squared', 'brief');
+  this.executeRuleTest(mml, 'L p\'ren a R p\'ren squared', 'sbrief');
 };
 
 
@@ -70,8 +70,8 @@ sre.MathmlCloudTest.prototype.testParenConvoluted = function() {
           '<mo>/2)</mo>';
   this.executeRuleTest(mml, 'left-parenthesis minus x squared slash' +
                        ' 2 right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'left-pren minus x squared slash 2 right-pren',
+  this.executeRuleTest(mml, 'left-p\'ren minus x squared slash 2 right-p\'ren',
                        'brief');
-  this.executeRuleTest(mml, 'L pren minus x squared slash 2 R pren',
+  this.executeRuleTest(mml, 'L p\'ren minus x squared slash 2 R p\'ren',
                        'sbrief');
 };

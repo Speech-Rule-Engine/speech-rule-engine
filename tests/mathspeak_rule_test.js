@@ -522,9 +522,9 @@ sre.MathspeakRuleTest.prototype.testSample_7_3_1 = function() {
   this.executeRuleTest(mml, 'NestTwiceFrac NestFrac L p\'ren 1 minus x R' +
                        ' p\'ren Frac d Over d x EndFrac L p\'ren 2 x R p\'ren' +
                        ' minus 2 x Frac d Over d x EndFrac L p\'ren 1 minus x' +
-                       ' R p\'ren NestOver L p\'ren 1 minus x R p\'ren squared' +
-                       ' NestEndFrac NestTwiceOver 1 plus L p\'ren Frac 2 x' +
-                       ' Over 1 minus x EndFrac R p\'ren squared' +
+                       ' R p\'ren NestOver L p\'ren 1 minus x R p\'ren' +
+                       ' squared NestEndFrac NestTwiceOver 1 plus L p\'ren' +
+                       ' Frac 2 x Over 1 minus x EndFrac R p\'ren squared' +
                        ' NestTwiceEndFrac', 'sbrief');
 };
 
@@ -1382,8 +1382,8 @@ sre.MathspeakRuleTest.prototype.testSample_8_9_2 = function() {
                        ' double-prime left-parenthesis y right-parenthesis' +
                        ' Over d y EndFraction', 'default');
   this.executeRuleTest(mml, 'f triple-prime left-p\'ren y right-p\'ren equals' +
-                       ' StartFrac d f double-prime left-p\'ren y right-p\'ren' +
-                       ' Over d y EndFrac', 'brief');
+                       ' StartFrac d f double-prime left-p\'ren y' +
+                       ' right-p\'ren Over d y EndFrac', 'brief');
   this.executeRuleTest(mml, 'f triple-prime L p\'ren y R p\'ren equals Frac d' +
                        ' f double-prime L p\'ren y R p\'ren Over d y EndFrac',
                        'sbrief');
