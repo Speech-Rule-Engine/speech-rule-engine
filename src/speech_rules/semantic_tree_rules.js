@@ -356,7 +356,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'start-punct', 'default.default',
-      '[n] content/*[1]; [p] (pause:200); [m] children/*',
+      '[n] content/*[1]; [p] (pause:200); [m] children/*[position()>1]',
       'self::punctuated', '@role="startpunct"');
 
   defineRule(

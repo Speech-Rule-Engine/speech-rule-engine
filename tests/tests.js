@@ -19,6 +19,7 @@
 
 goog.provide('sre.Tests');
 
+goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakRuleTest');
 goog.require('sre.SemanticRuleTest');
@@ -55,6 +56,7 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [
+  sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakRuleTest,
   sre.SemanticRuleTest,
