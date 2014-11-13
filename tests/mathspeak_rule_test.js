@@ -39,7 +39,7 @@ sre.MathspeakRuleTest = function() {
    * @override
    */
   this.domain = 'mathspeak';
-  
+
   /**
    * @override
    */
