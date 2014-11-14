@@ -149,3 +149,67 @@ sre.MathmlCloudTest.prototype.testSubBaseRelseq = function() {
 };
 
 
+/**
+ * Testing Subscript Baseline expression in multi-relation
+ * Simplified test case for expressions similar to 62.
+ */
+sre.MathmlCloudTest.prototype.testSubBaseMultirel = function() {
+  var mml = '<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo>' +
+      '<mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac>' +
+      '<mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>';
+  this.executeRuleTest(mml, 'h Subscript s Baseline less-than-or-equal-to' +
+                       ' StartFraction 1 Over 2 upper T EndFraction' +
+                       ' equals h Subscript s', 'default');
+  this.executeRuleTest(mml, 'h Sub s Base less-than-or-equal-to StartFrac' +
+                       ' 1 Over 2 upper T EndFrac equals h' +
+                       ' Sub s', 'brief');
+  this.executeRuleTest(mml, 'h Sub s Base less-than-or-equal-to Frac 1 Over' +
+                       ' 2 upper T EndFrac equals h Sub s',
+                       'sbrief');
+};
+
+
+/**
+ * Testing SubSuperscript Baseline expression in relation-sequence
+ * Simplified test case for expressions similar to 62.
+ */
+sre.MathmlCloudTest.prototype.testSubSuperBaseRelseq = function() {
+  var mml = '<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>' +
+      '<mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi>' +
+      '</mrow></mfrac><mo>&#x2264;</mo><msubsup><mi>h</mi><mi>s</mi>' +
+      '<mi>t</mi></msubsup>';
+  this.executeRuleTest(mml, 'h Subscript s Superscript t Baseline' +
+                       ' less-than-or-equal-to StartFraction 1 Over 2 upper' +
+                       ' T EndFraction less-than-or-equal-to h Subscript' +
+                       ' s Superscript t', 'default');
+  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to' +
+                       ' StartFrac 1 Over 2 upper T EndFrac' +
+                       ' less-than-or-equal-to h Sub s Sup t', 'brief');
+  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to Frac' +
+                       ' 1 Over 2 upper T EndFrac less-than-or-equal-to' +
+                       ' h Sub s Sup t', 'sbrief');
+};
+
+
+/**
+ * Testing SubSuperscript Baseline expression in multi-relation
+ * Simplified test case for expressions similar to 62.
+ */
+sre.MathmlCloudTest.prototype.testSubSuperBaseMultirel = function() {
+  var mml = '<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>' +
+      '<mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi>' +
+      '</mrow></mfrac><mo>=</mo><msubsup><mi>h</mi><mi>s</mi>' +
+      '<mi>t</mi></msubsup>';
+  this.executeRuleTest(mml, 'h Subscript s Superscript t Baseline' +
+                       ' less-than-or-equal-to StartFraction 1 Over 2 upper' +
+                       ' T EndFraction equals h Subscript s Superscript t',
+                       'default');
+  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to' +
+                       ' StartFrac 1 Over 2 upper T EndFrac' +
+                       ' equals h Sub s Sup t', 'brief');
+  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to Frac' +
+                       ' 1 Over 2 upper T EndFrac equals h Sub s Sup t',
+                       'sbrief');
+};
+
+
