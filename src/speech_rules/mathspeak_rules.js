@@ -520,6 +520,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[m] ./children/* (separator:./text())',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
+  defineRule(
+      'multrel', 'mathspeak.default',
+      '[m] children/* (sepFunc:CTXFcontentIterator)',
+      'self::multirel');
+
   // Subscripts
   defineRule(
       'subscript', 'mathspeak.default',
@@ -572,7 +577,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'ancestor::fraction',
       'not(ancestor::punctuated[@role="leftsuper" or @role="rightsub"' +
       ' or @role="rightsuper" or @role="rightsub"])'
-  ); // This rule might be too simple.
+  ); 
+  defineRuleAlias(
+      'subscript-baseline',
+      'self::subscript', 'not(following-sibling::*)',
+      'ancestor::relseq|ancestor::multirel',
+      'ancestor::*/following-sibling::* and ' +
+      'not(ancestor::subscript or ancestor::superscript or ancestor::tensor) and ' +
+      'not(ancestor::fraction/ancestor::relseq | ancestor::punctuation/ancestor::relseq | ancestor::fenced/ancestor::relseq | ancestor::sqrt/ancestor::relseq | ancestor::root/ancestor::relseq | ancestor::fraction/ancestor::multrel | ancestor::punctuation/ancestor::multrel | ancestor::fenced/ancestor::multrel | ancestor::sqrt/ancestor::multrel | ancestor::root/ancestor::multrel)');
 
 
   // Superscripts
@@ -615,13 +627,26 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::fenced|ancestor::root|ancestor::sqrt');
+  defineRuleAlias(
+      'superscript-baseline',
+      'self::superscript', 'not(following-sibling::*)',
+      'ancestor::relseq|ancestor::multirel',
+      'ancestor::*/following-sibling::* and ' +
+      'not(ancestor::subscript or ancestor::superscript or ancestor::tensor) and ' +
+      'not(ancestor::fraction/ancestor::relseq | ancestor::punctuation/ancestor::relseq | ancestor::fenced/ancestor::relseq | ancestor::sqrt/ancestor::relseq | ancestor::root/ancestor::relseq | ancestor::fraction/ancestor::multrel | ancestor::punctuation/ancestor::multrel | ancestor::fenced/ancestor::multrel | ancestor::sqrt/ancestor::multrel | ancestor::root/ancestor::multrel)');
+  // defineRuleAlias(
+  //     'superscript-baseline',
+  //     'self::superscript', 'not(following-sibling::*)',
+  //     'parent::*/parent::relseq|parent::*/parent::multirel');
+
   // These rules might be too simple.
 
   // Square
   defineRule(
       'square', 'mathspeak.default',
       '[n] children/*[1]; [t] "squared"',
-      'self::superscript', 'children/*[2][text()=2]',
+      'self::superscript', 'children/*[2]',
+      'children/*[2][text()=2]',
       'name(children/*[1])!="text"',
       'name(children/*[1])!="subscript" or (' +
       // Keep squared if we have a simple subscript.
@@ -639,7 +664,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'cube', 'mathspeak.default',
       '[n] children/*[1]; [t] "cubed"',
-      'self::superscript', 'children/*[2][text()=3]',
+      'self::superscript', 'children/*[2]',
+      'children/*[2][text()=3]',
+      'name(children/*[1])!="text"',
+      'name(children/*[1])!="text"',
       'name(children/*[1])!="text"',
       'name(children/*[1])!="subscript" or (' +
       // Keep cubed if we have a simple subscript.
@@ -1089,7 +1117,8 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
     // Rules without neighbour but baseline.
     var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
                      'ancestor::fraction|ancestor::punctuated|' +
-                     'ancestor::fenced|ancestor::root|ancestor::sqrt'].
+                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
+                     'ancestor::relseq|ancestor::multirel'].
         concat(components);
     defineRuleAlias.apply(null, aliasList);
   }
