@@ -67,7 +67,7 @@ sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
                        ' right-arrow upper H 2 upper S i upper F 6 plus 2' +
                        ' upper H 2 upper O', 'brief');
   this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
-                       ' r arrow upper H 2 upper S i upper F 6 plus 2 upper' +
+                       ' R arrow upper H 2 upper S i upper F 6 plus 2 upper' +
                        ' H 2 upper O', 'sbrief');
 };
 

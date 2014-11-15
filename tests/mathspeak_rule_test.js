@@ -223,8 +223,8 @@ sre.MathspeakRuleTest.prototype.testSample_2_3_1 = function() {
   this.executeRuleTest(mml, 'If upper A right-arrow upper B and upper B' +
                        ' right-arrow upper C then upper A right-arrow upper' +
                        ' C period', 'brief');
-  this.executeRuleTest(mml, 'If upper A r arrow upper B and upper B r arrow' +
-                       ' upper C then upper A r arrow upper C period',
+  this.executeRuleTest(mml, 'If upper A R arrow upper B and upper B R arrow' +
+                       ' upper C then upper A R arrow upper C period',
                        'sbrief');
 };
 
@@ -943,7 +943,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_5 = function() {
                        ' upper F e 2 upper O 3', 'default');
   this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +
                        ' upper F e 2 upper O 3', 'brief');
-  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 r arrow 2 upper F' +
+  this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 R arrow 2 upper F' +
                        ' e 2 upper O 3', 'sbrief');
 };
 
@@ -1773,7 +1773,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_1_2 = function() {
   this.executeRuleTest(mml, 'ModifyingAbove x plus y With right-arrow',
                        'default');
   this.executeRuleTest(mml, 'ModAbove x plus y With right-arrow', 'brief');
-  this.executeRuleTest(mml, 'ModAbove x plus y With r arrow', 'sbrief');
+  this.executeRuleTest(mml, 'ModAbove x plus y With R arrow', 'sbrief');
 };
 
 
@@ -2146,7 +2146,7 @@ sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
                        ' fluorine 4th Column Blank 5th Column hydrogen' +
                        ' fluoride EndLayout', 'brief');
   this.executeRuleTest(mml, 'Layout 1st Row 1st Column upper H 2 2nd Column' +
-                       ' plus 3rd Column upper F 2 4th Column r arrow 5th' +
+                       ' plus 3rd Column upper F 2 4th Column R arrow 5th' +
                        ' Column 2 upper H upper F 2nd Row 1st Column' +
                        ' hydrogen 2nd Column Blank 3rd Column fluorine 4th' +
                        ' Column Blank 5th Column hydrogen fluoride' +
