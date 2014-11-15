@@ -618,14 +618,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'ancestor::fraction|ancestor::punctuated',
+      'ancestor::punctuated',
       'ancestor::*/following-sibling::* and ' +
       'not(ancestor::punctuated[@role="leftsuper" or @role="rightsub"' +
       ' or @role="rightsuper" or @role="rightsub"])');
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'ancestor::fenced|ancestor::root|ancestor::sqrt');
+      'ancestor::fraction|ancestor::fenced|ancestor::root|ancestor::sqrt');
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
