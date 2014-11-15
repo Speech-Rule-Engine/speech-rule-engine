@@ -1900,7 +1900,7 @@
         "default": "n ary product"
       },
       "mathspeak": {
-        "default": "big-product"
+        "default": "product"
       }
     },
     "key": "220F"
@@ -1912,7 +1912,7 @@
         "default": "n ary coproduct"
       },
       "mathspeak": {
-        "default": "big-coproduct"
+        "default": "coproduct"
       }
     },
     "key": "2210"
@@ -3960,7 +3960,7 @@
         "default": "n ary logical and"
       },
       "mathspeak": {
-        "default": "big-logical-and"
+        "default": "logical-and"
       }
     },
     "key": "22C0"
@@ -3972,7 +3972,7 @@
         "default": "n ary logical or"
       },
       "mathspeak": {
-        "default": "big-logical-or"
+        "default": "logical-or"
       }
     },
     "key": "22C1"
@@ -3984,7 +3984,7 @@
         "default": "n ary intersection"
       },
       "mathspeak": {
-        "default": "big-intersection"
+        "default": "intersection"
       }
     },
     "key": "22C2"
@@ -3996,7 +3996,7 @@
         "default": "n ary union"
       },
       "mathspeak": {
-        "default": "big-union"
+        "default": "union"
       }
     },
     "key": "22C3"
@@ -6147,7 +6147,7 @@
         "default": "big solidus"
       },
       "mathspeak": {
-        "default": "big-solidus"
+        "default": "solidus"
       }
     },
     "key": "29F8"
@@ -6159,7 +6159,7 @@
         "default": "big reverse solidus"
       },
       "mathspeak": {
-        "default": "big-reverse-solidus"
+        "default": "reverse-solidus"
       }
     },
     "key": "29F9"
@@ -6213,7 +6213,7 @@
         "default": "n ary circled dot operator"
       },
       "mathspeak": {
-        "default": "big-circled-dot"
+        "default": "circled-dot"
       }
     },
     "key": "2A00"
@@ -6225,7 +6225,7 @@
         "default": "n ary circled plus operator"
       },
       "mathspeak": {
-        "default": "big-circled-plus"
+        "default": "circled-plus"
       }
     },
     "key": "2A01"
@@ -6237,7 +6237,7 @@
         "default": "n ary circled times operator"
       },
       "mathspeak": {
-        "default": "big-circled-times"
+        "default": "circled-times"
       }
     },
     "key": "2A02"
@@ -6249,7 +6249,7 @@
         "default": "n ary union operator with dot"
       },
       "mathspeak": {
-        "default": "big-union-with-dot"
+        "default": "union-with-dot"
       }
     },
     "key": "2A03"
@@ -6261,7 +6261,7 @@
         "default": "n ary union operator with plus"
       },
       "mathspeak": {
-        "default": "big-union-with-plus"
+        "default": "union-with-plus"
       }
     },
     "key": "2A04"
@@ -6273,7 +6273,7 @@
         "default": "n ary square intersection operator"
       },
       "mathspeak": {
-        "default": "big-square-intersection"
+        "default": "square-intersection"
       }
     },
     "key": "2A05"
@@ -6285,7 +6285,7 @@
         "default": "n ary square union operator"
       },
       "mathspeak": {
-        "default": "big-square-union"
+        "default": "square-union"
       }
     },
     "key": "2A06"
@@ -6321,7 +6321,7 @@
         "default": "n ary times operator"
       },
       "mathspeak": {
-        "default": "big-times"
+        "default": "times"
       }
     },
     "key": "2A09"
@@ -9265,7 +9265,7 @@
         "default": "n ary white vertical bar"
       },
       "mathspeak": {
-        "default": "big-white-vertical-bar"
+        "default": "white-vertical-bar"
       }
     },
     "key": "2AFF"
