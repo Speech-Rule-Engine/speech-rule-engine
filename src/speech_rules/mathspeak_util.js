@@ -877,3 +877,35 @@ sre.MathspeakUtil.determinantUnMarkSimple = function(node) {
   rows.forEach(function(row) {row.removeAttribute('sre_flag');});
   return '';
 };
+
+
+/**
+ * Generate constraints for the specialised baseline rules of relation
+ * sequences.
+ * @return {!string} The constraint string.
+ */
+sre.MathspeakUtil.generateBaselineConstraint = function() {
+  var ignoreElems = ['subscript', 'superscript', 'tensor'];
+  var mainElems = ['relseq', 'multrel'];
+  var breakElems = ['fraction', 'punctuation', 'fenced', 'sqrt', 'root'];
+
+  var ancestrify = function(elemList) {
+    return elemList.map(function(elem) {return 'ancestor::' + elem;});
+  };
+
+  var notify = function(elem) {
+    return 'not(' + elem + ')';
+  };
+
+  var prefix = 'ancestor::*/following-sibling::*';
+  var middle = notify(ancestrify(ignoreElems).join(' or '));
+  var mainList = ancestrify(mainElems);
+  var breakList = ancestrify(breakElems);
+  var breakCstrs = [];
+  for (var i = 0, brk; brk = breakList[i]; i++) {
+    breakCstrs = breakCstrs.concat(
+        mainList.map(function(elem) {return brk + '/' + elem;}));
+  }
+  var postfix = notify(breakCstrs.join(' | '));
+  return [prefix, middle, postfix].join(' and ');
+};

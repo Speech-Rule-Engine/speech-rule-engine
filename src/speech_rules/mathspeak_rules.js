@@ -151,6 +151,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
+
   // Dummy rules
   defineRule(
       'unknown', 'mathspeak.default', '[n] text()',
@@ -582,9 +583,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
       'ancestor::relseq|ancestor::multirel',
-      'ancestor::*/following-sibling::* and ' +
-      'not(ancestor::subscript or ancestor::superscript or ancestor::tensor) and ' +
-      'not(ancestor::fraction/ancestor::relseq | ancestor::punctuation/ancestor::relseq | ancestor::fenced/ancestor::relseq | ancestor::sqrt/ancestor::relseq | ancestor::root/ancestor::relseq | ancestor::fraction/ancestor::multrel | ancestor::punctuation/ancestor::multrel | ancestor::fenced/ancestor::multrel | ancestor::sqrt/ancestor::multrel | ancestor::root/ancestor::multrel)');
+      sre.MathspeakUtil.generateBaselineConstraint());
 
 
   // Superscripts
@@ -631,15 +630,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::relseq|ancestor::multirel',
-      'ancestor::*/following-sibling::* and ' +
-      'not(ancestor::subscript or ancestor::superscript or ancestor::tensor) and ' +
-      'not(ancestor::fraction/ancestor::relseq | ancestor::punctuation/ancestor::relseq | ancestor::fenced/ancestor::relseq | ancestor::sqrt/ancestor::relseq | ancestor::root/ancestor::relseq | ancestor::fraction/ancestor::multrel | ancestor::punctuation/ancestor::multrel | ancestor::fenced/ancestor::multrel | ancestor::sqrt/ancestor::multrel | ancestor::root/ancestor::multrel)');
-  // defineRuleAlias(
-  //     'superscript-baseline',
-  //     'self::superscript', 'not(following-sibling::*)',
-  //     'parent::*/parent::relseq|parent::*/parent::multirel');
+      sre.MathspeakUtil.generateBaselineConstraint());
 
-  // These rules might be too simple.
 
   // Square
   defineRule(
