@@ -577,7 +577,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'ancestor::fraction',
       'not(ancestor::punctuated[@role="leftsuper" or @role="rightsub"' +
       ' or @role="rightsuper" or @role="rightsub"])'
-  ); 
+  );
   defineRuleAlias(
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
@@ -666,8 +666,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "cubed"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=3]',
-      'name(children/*[1])!="text"',
-      'name(children/*[1])!="text"',
       'name(children/*[1])!="text"',
       'name(children/*[1])!="subscript" or (' +
       // Keep cubed if we have a simple subscript.
