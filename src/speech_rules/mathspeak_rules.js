@@ -97,6 +97,7 @@ var addCTXF = sre.MathspeakRules.addContextFunction_;
  */
 sre.MathspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
+  addCQF('CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier);
 
   addCSF('CSFspaceoutText', sre.MathspeakUtil.spaceoutText);
   // Fraction function.
@@ -230,6 +231,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
+  // identifier
+  defineRule(
+      'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
+      'self::identifier', 'string-length(text())>1', '@role!="unit"');
 
   // minus sign
   defineRule(

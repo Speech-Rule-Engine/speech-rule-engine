@@ -49,6 +49,30 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing Chemistry Upper.
+ */
+sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
+  var mml = '<mrow><mi mathvariant="normal">Si</mi><msub>' +
+        '<mi mathvariant="normal">O</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn>' +
+        '<mi mathvariant="normal">H</mi><mi mathvariant="normal">F</mi>' +
+        '<mo>&#x2192;</mo><msub><mi mathvariant="normal">H</mi><mn>2</mn>' +
+        '</msub><mi mathvariant="normal">Si</mi><msub>' +
+        '<mi mathvariant="normal">F</mi><mn>6</mn></msub><mo>+</mo><mn>2</mn>' +
+        '<msub><mi mathvariant="normal">H</mi><mn>2</mn></msub>' +
+        '<mi mathvariant="normal">O</mi></mrow>';
+  this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
+                       ' right-arrow upper H 2 upper S i upper F 6 plus 2' +
+                       ' upper H 2 upper O', 'default');
+  this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
+                       ' right-arrow upper H 2 upper S i upper F 6 plus 2' +
+                       ' upper H 2 upper O', 'brief');
+  this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
+                       ' r arrow upper H 2 upper S i upper F 6 plus 2 upper' +
+                       ' H 2 upper O', 'sbrief');
+};
+
+
+/**
  * Testing Parenthesis with Superscript.
  * Simplified test case for expression 95.
  */

@@ -281,7 +281,7 @@ sre.MathspeakRuleTest.prototype.testNegativeVsMinus = function() {
  * Testing Rule 4.2, Example 1.
  */
 sre.MathspeakRuleTest.prototype.testSample_4_2_1 = function() {
-  var mml = '<mrow><mi> Uppercase </mi><mo>(</mo><mo>{</mo><mi>α</mi>' +
+  var mml = '<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi>' +
       '<mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi>' +
       '<mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo>' +
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
@@ -936,9 +936,9 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_4 = function() {
  * Testing Rule 8.5, Example 5.
  */
 sre.MathspeakRuleTest.prototype.testSample_8_5_5 = function() {
-  var mml = '<mrow><mn>4</mn><mi>F</mi><mi>e</mi><mo>+</mo><mn>3</mn><msub>' +
-      '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><mi>F</mi><msub>' +
-      '<mi>e</mi><mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
+  var mml = '<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub>' +
+      '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi>' +
+      '<mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
   this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +
                        ' upper F e 2 upper O 3', 'default');
   this.executeRuleTest(mml, '4 upper F e plus 3 upper O 2 right-arrow 2' +

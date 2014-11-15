@@ -59,6 +59,27 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
 
 
 /**
+ * Query function that splits into number nodes and content nodes.
+ * @param {!Node} node The node to be processed.
+ * @return {Array.<Node>} List of number and content nodes.
+ */
+sre.MathspeakUtil.spaceoutIdentifier = function(node) {
+  var content = node.textContent.split('');
+  var result = [];
+  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  for (var i = 0, chr; chr = content[i]; i++) {
+    // We ignore Greek characters for now!
+    var type = sre.SemanticAttr.Type.IDENTIFIER;
+    var role = sre.SemanticAttr.Role.UNKNOWN;
+    var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
+                                 chr + '</' + type + '>');
+    result.push(doc.documentElement);
+  }
+  return result;
+};
+
+
+/**
  * Tags that serve as a nesting barrier by default.
  * @type {Array.<sre.SemanticAttr.Type>}
  */
