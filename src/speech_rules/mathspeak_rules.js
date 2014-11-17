@@ -644,7 +644,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "squared"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=2]',
-      'name(children/*[1])!="text"',
+      'name(children/*[1])!="text" or ' +
+      // Special exception dealing with footnotes.
+      'not(name(children/*[1])="text" and ' +
+      '(name(../../../punctuated[@role="text"]/..)="stree" ' +
+      'or name(..)="stree"))',
       'name(children/*[1])!="subscript" or (' +
       // Keep squared if we have a simple subscript.
       'name(children/*[1])="subscript" and ' +
@@ -663,7 +667,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] children/*[1]; [t] "cubed"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=3]',
-      'name(children/*[1])!="text"',
+      'name(children/*[1])!="text" or ' +
+      // Special exception dealing with footnotes.
+      'not(name(children/*[1])="text" and ' +
+      '(name(../../../punctuated[@role="text"]/..)="stree" ' +
+      'or name(..)="stree"))',
       'name(children/*[1])!="subscript" or (' +
       // Keep cubed if we have a simple subscript.
       'name(children/*[1])="subscript" and ' +
