@@ -243,11 +243,11 @@ sre.MathmlCloudTest.prototype.testSubSuperBaseMultirel = function() {
  */
 sre.MathmlCloudTest.prototype.testSquareWithText = function() {
   var mml = '<mrow><mfrac><mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
-        '</mrow><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow>' +
-        '</mfrac><mo>=</mo><mfrac><mrow><msup><mrow>' +
-        '<mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup></mrow><mrow>' +
-        '<msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup>' +
-        '</mrow></mfrac></mrow>';
+      '</mrow><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow>' +
+      '</mfrac><mo>=</mo><mfrac><mrow><msup><mrow>' +
+      '<mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup></mrow><mrow>' +
+      '<msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup>' +
+      '</mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'StartFraction area of triangle Over area of' +
                        ' square EndFraction equals StartFraction 1 unit' +
                        ' squared Over 16 units cubed EndFraction', 'default');
@@ -266,13 +266,13 @@ sre.MathmlCloudTest.prototype.testSquareWithText = function() {
  */
 sre.MathmlCloudTest.prototype.testFootnoteWithText = function() {
   var mml = '<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
-        '<mtext>&#x00A0;</mtext>' +
-        '<msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext>' +
-        '</mrow><mn>1</mn></msup><mtext>&#x00A0;</mtext>' +
-        '<msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup>' +
-        '<mtext>&#x00A0;</mtext>' +
-        '<msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup>' +
-        '</mrow>';
+      '<mtext>&#x00A0;</mtext>' +
+      '<msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext>' +
+      '</mrow><mn>1</mn></msup><mtext>&#x00A0;</mtext>' +
+      '<msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup>' +
+      '<mtext>&#x00A0;</mtext>' +
+      '<msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup>' +
+      '</mrow>';
   this.executeRuleTest(mml, 'area of triangle area of square' +
                        ' Superscript 1 Baseline 1 unit Superscript 2' +
                        ' Baseline 16 units Superscript 3', 'default');
@@ -291,7 +291,7 @@ sre.MathmlCloudTest.prototype.testFootnoteWithText = function() {
  */
 sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
   var mml = '<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
-        '<mn>2</mn></msup>';
+      '<mn>2</mn></msup>';
   this.executeRuleTest(mml, 'area of triangle Superscript 2', 'default');
   this.executeRuleTest(mml, 'area of triangle Sup 2', 'brief');
   this.executeRuleTest(mml, 'area of triangle Sup 2', 'sbrief');
