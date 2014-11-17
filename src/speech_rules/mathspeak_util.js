@@ -64,6 +64,10 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  * @return {Array.<Node>} List of number and content nodes.
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
+  if (!node.textContent.match(/[a-zA-Z]+/)) {
+    node.setAttribute('role', sre.SemanticAttr.Role.PROTECTED);
+    return [node];
+  }
   var content = node.textContent.split('');
   var result = [];
   var dp = new sre.SystemExternal.xmldom.DOMParser();

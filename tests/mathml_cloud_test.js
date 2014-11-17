@@ -49,6 +49,17 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing non-alpha identifier.
+ */
+sre.MathmlCloudTest.prototype.testNonalphaIdentifier = function() {
+  var mml = '<mi>30°</mi>';
+  this.executeRuleTest(mml, '30 degree', 'default');
+  this.executeRuleTest(mml, '30 degree', 'brief');
+  this.executeRuleTest(mml, '30 degree', 'sbrief');
+};
+
+
+/**
  * Testing Chemistry Upper.
  */
 sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
@@ -262,7 +273,7 @@ sre.MathmlCloudTest.prototype.testSquareWithText = function() {
 
 /**
  * Testing SubSuperscript Baseline expression in multi-relation
- * Simplified test case for expressions similar to 62.
+ * Simplified test case for expressions similar to 18.
  */
 sre.MathmlCloudTest.prototype.testFootnoteWithText = function() {
   var mml = '<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
@@ -287,7 +298,7 @@ sre.MathmlCloudTest.prototype.testFootnoteWithText = function() {
 
 /**
  * Testing SubSuperscript Baseline expression in multi-relation
- * Simplified test case for expressions similar to 62.
+ * Simplified test case for expressions similar to 18.
  */
 sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
   var mml = '<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +

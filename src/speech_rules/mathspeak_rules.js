@@ -234,7 +234,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // identifier
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
-      'self::identifier', 'string-length(text())>1', '@role!="unit"');
+      'self::identifier', 'string-length(text())>1', '@role!="unit"',
+      '@role!="protected"');
+
+  defineRule(
+      'identifier', 'mathspeak.default', '[n] text()',
+      'self::identifier', '@role="protected"');
 
   // minus sign
   defineRule(
