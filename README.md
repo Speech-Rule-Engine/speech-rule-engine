@@ -96,11 +96,23 @@ Other targets are:
     
 Runs all the tests using the Node's assert module. Output is pretty printed to stdout.
 
+    make lint
+    
+Runs the closure linter tool. To use this option, you need to install the appropriate node package with
+
+    npm install closure-linter-wrapper
+
+To automatically fix some of linting errors run:
+    
+    make fixjsstyle
+
+Note, that all JavaScript code in this repository is fully linted and compiles error free with respect to the strictest possible closure compiler settings.
+
     make publish
     
 Builds the publishable Node package. All relevant files will be in the lib subdirectory. This is useful for local testing of the package. This target is called when executing
 
-     npm publish
+    npm publish
 
 
 ### Run on command line ############
