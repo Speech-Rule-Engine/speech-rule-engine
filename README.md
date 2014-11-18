@@ -89,6 +89,19 @@ Depending on your setup you might need to adapt the NODEJS and NODE_MODULES
 variable in the Makefile.  Then simply run
 
     make
+    
+Other targets are:
+
+    make test
+    
+Runs all the tests using the Node's assert module. Output is pretty printed to stdout.
+
+    make publish
+    
+Builds the publishable Node package. All relevant files will be in the lib subdirectory. This is useful for local testing of the package. This target is called when executing
+
+     npm publish
+
 
 ### Run on command line ############
 
