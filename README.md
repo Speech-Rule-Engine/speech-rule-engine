@@ -90,30 +90,7 @@ variable in the Makefile.  Then simply run
 
     make
     
-Other targets are:
-
-    make test
-    
-Runs all the tests using the Node's assert module. Output is pretty printed to stdout.
-
-    make lint
-    
-Runs the closure linter tool. To use this option, you need to install the appropriate node package with
-
-    npm install closure-linter-wrapper
-
-To automatically fix some of linting errors run:
-    
-    make fixjsstyle
-
-Note, that all JavaScript code in this repository is fully linted and compiles error free with respect to the strictest possible closure compiler settings.
-
-    make publish
-    
-Builds the publishable Node package. All relevant files will be in the lib subdirectory. This is useful for local testing of the package. This target is called when executing
-
-    npm publish
-
+This will make both the command line executable and the interactive load script.
 
 ### Run on command line ############
 
@@ -163,3 +140,44 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
+
+
+Developers Notes
+----------------
+
+### Build Options 
+
+Other make targets useful during development are:
+
+    make test
+    
+Runs all the tests using the Node's assert module. Output is pretty printed to stdout.
+
+    make lint
+    
+Runs the closure linter tool. To use this option, you need to install the appropriate node package with
+
+    npm install closure-linter-wrapper
+
+To automatically fix some of linting errors run:
+    
+    make fixjsstyle
+
+Note, that all JavaScript code in this repository is fully linted and compiles error free with respect to the strictest possible closure compiler settings.
+
+When creating a pull request, please make sure that your code compiles and is fully linted.
+
+
+### Node Package
+
+The speech rule engine is published as a node package in fully compiled form, together with the JSON libraries for translating atomic expressions. All relevant files are in the lib subdirectory.
+
+To publish the node package run
+
+    npm publish
+
+This first builds the package by executing
+
+    make publish
+    
+This make command is also useful for local testing of the package.
