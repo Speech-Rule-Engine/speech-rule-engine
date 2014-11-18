@@ -595,6 +595,22 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'ancestor::relseq|ancestor::multirel',
       sre.MathspeakUtil.generateBaselineConstraint());
 
+  defineRule(
+      'subscript-empty-sup', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::subscript',
+      'name(children/*[2])="infixop"',
+      'name(children/*[2][@role="implicit"]/children/*[1])="superscript"',
+      'name(children/*[2]/children/*[1]/children/*[1])="empty"');
+  defineSpecialisedRule(
+      'subscript-empty-sup', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'subscript-empty-sup', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'subscript-empty-sup', 'self::subscript',
+      'name(children/*[2])="superscript"',
+      'name(children/*[2]/children/*[1])="empty"');
+
 
   // Superscripts
   defineRule(
@@ -642,6 +658,21 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'ancestor::relseq|ancestor::multirel',
       sre.MathspeakUtil.generateBaselineConstraint());
 
+  defineRule(
+      'superscript-empty-sub', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::superscript',
+      'name(children/*[2])="infixop"',
+      'name(children/*[2][@role="implicit"]/children/*[1])="subscript"',
+      'name(children/*[2]/children/*[1]/children/*[1])="empty"');
+  defineSpecialisedRule(
+      'superscript-empty-sub', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'superscript-empty-sub', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'superscript-empty-sub', 'self::superscript',
+      'name(children/*[2])="subscript"',
+      'name(children/*[2]/children/*[1])="empty"');
 
   // Square
   defineRule(

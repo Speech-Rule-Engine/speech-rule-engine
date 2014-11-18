@@ -48,7 +48,6 @@ sre.MathspeakRuleTest = function() {
 goog.inherits(sre.MathspeakRuleTest, sre.AbstractRuleTest);
 
 
-// In the following default is the verbose version of MathSpeak.
 /**
  * Testing Rule 1.1, Example 1.
  */
@@ -377,7 +376,7 @@ sre.MathspeakRuleTest.prototype.testSample_6_2_1 = function() {
 };
 
 
-// This equation does not make sense! We can do it purely syntactically!
+// This equation does not make sense! We could do it purely syntactically!
 /**
  * Testing Rule 6.2, Example 2.
  */
@@ -837,13 +836,52 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_4 = function() {
 /**
  * Testing Rule 8.4, Example 5.
  */
-sre.MathspeakRuleTest.prototype.untestSample_8_4_5 = function() {
+sre.MathspeakRuleTest.prototype.testSample_8_4_5 = function() {
   var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
       '</msub><mi>b</mi></mrow></msup></msup>';
   this.executeRuleTest(mml, 'y Superscript a Super Super Subscript c Super' +
                        ' Superscript b', 'default');
   this.executeRuleTest(mml, 'y Sup a Sup Sup Sub c Sup Sup b', 'brief');
   this.executeRuleTest(mml, 'y Sup a Sup Sup Sub c Sup Sup b', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 5, short.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_5Short = function() {
+  var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
+      '</msub></mrow></msup></msup>';
+  this.executeRuleTest(mml, 'y Superscript a Super Super Subscript c',
+                       'default');
+  this.executeRuleTest(mml, 'y Sup a Sup Sup Sub c', 'brief');
+  this.executeRuleTest(mml, 'y Sup a Sup Sup Sub c', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 5, Sup/Sub inversed.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_5Inv = function() {
+  var mml = '<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi>' +
+      '</msup></mrow></msub></msub>';
+  this.executeRuleTest(mml, 'y Subscript a Sub Sub Superscript c',
+                       'default');
+  this.executeRuleTest(mml, 'y Sub a Sub Sub Sup c', 'brief');
+  this.executeRuleTest(mml, 'y Sub a Sub Sub Sup c', 'sbrief');
+};
+
+
+/**
+ * Testing Rule 8.4, Example 5, Sup/Sub inversed, short.
+ */
+sre.MathspeakRuleTest.prototype.testSample_8_4_5InvShort = function() {
+  var mml = '<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi>' +
+      '</msup><mi>b</mi></mrow></msub></msub>';
+  this.executeRuleTest(mml, 'y Subscript a Sub Sub Superscript c' +
+                       ' Sub Subscript b', 'default');
+  this.executeRuleTest(mml, 'y Sub a Sub Sub Sup c Sub Sub b', 'brief');
+  this.executeRuleTest(mml, 'y Sub a Sub Sub Sup c Sub Sub b', 'sbrief');
 };
 
 
@@ -1872,7 +1910,9 @@ sre.MathspeakRuleTest.prototype.testSample_11_6_1 = function() {
 };
 
 
-// This one is odd.
+// This one is odd. This rule example seems to contradict Rule 11.2, where we
+// ModifyAbove/Below with dot.  Here the dot is used as
+// Over/Underscript. However, we express dot as a multi modifier.
 /**
  * Testing Rule 11.6, Example 2.
  */
@@ -1960,12 +2000,14 @@ sre.MathspeakRuleTest.prototype.testSample_11_8_2 = function() {
 };
 
 
+// This rule is currently not possible. It needs an enhanced processing in the
+// semantic tree maybe together with a simultaneous treatment of mstacks.
 /**
  * Testing Rule 11.9, Example 1.
  */
 sre.MathspeakRuleTest.prototype.untestSample_11_9_1 = function() {
-  var mml = '<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo><mo>.</mo>' +
-      '<mn>58</mn><mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
+  var mml = '<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo>' +
+      '<mn>.58</mn><mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover></mrow>';
   this.executeRuleTest(mml, 'seven-twelfths equals .58 ModifyingEachAbove 3' +
