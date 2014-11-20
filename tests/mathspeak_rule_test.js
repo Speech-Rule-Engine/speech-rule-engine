@@ -415,7 +415,7 @@ sre.MathspeakRuleTest.prototype.testSample_6_2_2 = function() {
       '<mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo>' +
       '<mfenced open="|" close="|"><mi>a</mi></mfenced><mo>&#xb1;</mo>' +
       '<mfenced separators="" open="|" close="|"><mi>b</mi><mo>-</mo>' +
-      '<mn>c</mn></mfenced></mrow>';
+      '<mi>c</mi></mfenced></mrow>';
   this.executeRuleTest(mml, 'StartAbsoluteValue a plus-or-minus' +
                        ' StartAbsoluteValue b minus c EndAbsoluteValue' +
                        ' EndAbsoluteValue not-equals StartAbsoluteValue a' +

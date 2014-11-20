@@ -476,22 +476,17 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       return leaf;
       break;
     // TODO (sorge) Role and font of multi-character and digits unicode strings.
-    // TODO (sorge) Reclassify wrongly tagged numbers or identifiers.
+    // TODO (sorge) Reclassify wrongly tagged numbers or identifiers more
+    //              systematically.
     // TODO (sorge) Put this all in a single clean reclassification method.
     case 'MI':
-      leaf = this.makeLeafNode_(mml);
-      if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
-        leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
-      }
-      if (mml.getAttribute('class') === 'MathML-Unit') {
-        leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
-        leaf.role = sre.SemanticAttr.Role.UNIT;
-      }
-      return leaf;
+      return this.makeIdentifierNode_(mml);
       break;
     case 'MN':
       leaf = this.makeLeafNode_(mml);
-      if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
+      if (leaf.type == sre.SemanticAttr.Type.UNKNOWN ||
+          // In case of latin numbers etc.
+          leaf.type == sre.SemanticAttr.Type.IDENTIFIER) {
         leaf.type = sre.SemanticAttr.Type.NUMBER;
       }
       sre.SemanticTree.numberRole_(leaf);
@@ -633,6 +628,36 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
             node.addMathmlNodes_(x.mathml);
           });
   return node;
+};
+
+
+/**
+ * Create an identifier node, with particular emphasis on font disambiguation.
+ * @param {Node} mml The MathML MI node.
+ * @return {!sre.SemanticTree.Node} The new semantic identifier node.
+ * @private
+ */
+sre.SemanticTree.prototype.makeIdentifierNode_ = function(mml) {
+  var leaf = this.makeLeafNode_(mml);
+  var variant = mml.getAttribute('mathvariant');
+  if (mml.getAttribute('class') === 'MathML-Unit') {
+    leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
+    leaf.role = sre.SemanticAttr.Role.UNIT;
+  } else if (!variant && leaf.textContent.length == 1 &&
+             (leaf.role == sre.SemanticAttr.Role.INTEGER ||
+              leaf.role == sre.SemanticAttr.Role.LATINLETTER ||
+              leaf.role == sre.SemanticAttr.Role.GREEKLETTER) &&
+             leaf.font == sre.SemanticAttr.Font.NORMAL) {
+    // If single letter or single integer and font normal but no mathvariant
+    // then this letter/number should be in italic font.
+    leaf.font = sre.SemanticAttr.Font.ITALIC;
+    return leaf;
+  }
+  if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
+    leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
+  }
+  sre.SemanticTree.exprFont_(leaf);
+  return leaf;
 };
 
 

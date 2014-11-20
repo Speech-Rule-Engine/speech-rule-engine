@@ -163,8 +163,22 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::*', '@role="protected"');
 
 
+  // Font rules
+  defineSpecialisedRule('font', 'default.default', 'mathspeak.default');
   defineSpecialisedRule(
-      'font', 'default.default', 'mathspeak.default');
+      'font-identifier', 'default.default', 'mathspeak.default');
+  defineSpecialisedRule(
+      'font-identifier-short', 'default.default', 'mathspeak.default');
+  defineSpecialisedRule('omit-font', 'default.default', 'mathspeak.default');
+  defineRule(
+      'german-font', 'mathspeak.default',
+      '[t] "German"; [n] CQFhideFont; [t] CSFshowFont',
+      'self::*', '@font', '@font="fraktur"');
+
+  defineRule(
+      'german-font', 'mathspeak.default',
+      '[t] "bold German"; [n] CQFhideFont; [t] CSFshowFont',
+      'self::*', '@font', '@font="bold-fraktur"');
 
   // Number rules
   defineRule(
@@ -235,7 +249,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
       'self::identifier', 'string-length(text())>1', '@role!="unit"',
-      '@role!="protected"');
+      '@role!="protected"', 'not(@font) or @font="normal" or @hiddenfont');
 
   defineRule(
       'identifier', 'mathspeak.default', '[n] text()',

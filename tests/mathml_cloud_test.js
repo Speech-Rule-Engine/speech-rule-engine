@@ -49,6 +49,40 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing German fonts.
+ */
+sre.MathmlCloudTest.prototype.testGermanFonts = function() {
+  var mml = '<mi mathvariant="fraktur">A</mi>';
+  this.executeRuleTest(mml, 'German upper A', 'default');
+  mml = '<mi mathvariant="bold-fraktur">A</mi>';
+  this.executeRuleTest(mml, 'bold German upper A', 'default');
+  this.executeRuleTest('<mi>&#x1D504;</mi>', 'German upper A', 'default');
+  this.executeRuleTest('<mi>&#x1D56C;</mi>', 'bold German upper A', 'default');
+  mml = '<mtext mathvariant="bold-fraktur">abc</mtext>';
+  this.executeRuleTest(mml, 'bold German abc', 'default');
+  mml = '<mtext mathvariant="bold-fraktur">ABC</mtext>';
+  this.executeRuleTest(mml, 'bold German ABC', 'default');
+  mml = '<mi mathvariant="bold-fraktur">ABC</mi>';
+  this.executeRuleTest(mml, 'bold German upper A upper B upper C', 'default');
+};
+
+
+/**
+ * Testing German fonts.
+ */
+sre.MathmlCloudTest.prototype.testOtherFonts = function() {
+  this.executeRuleTest('<mi>m</mi>', 'm');
+  this.executeRuleTest('<mi mathvariant="normal">m</mi>', 'normal m');
+  this.executeRuleTest('<mi>mi</mi>', 'm i');
+  this.executeRuleTest('<mi mathvariant="italic">mi</mi>', 'italic m i');
+  this.executeRuleTest('<mi>30</mi>', '30');
+  this.executeRuleTest('<mi>3</mi>', 'italic 3');
+  this.executeRuleTest('<mi>30°</mi>', '30 degree');
+  this.executeRuleTest('<mi>30mA</mi>', '3 0 m upper A');
+};
+
+
+/**
  * Testing non-alpha identifier.
  */
 sre.MathmlCloudTest.prototype.testNonalphaIdentifier = function() {
@@ -71,15 +105,18 @@ sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
       '<mi mathvariant="normal">F</mi><mn>6</mn></msub><mo>+</mo><mn>2</mn>' +
       '<msub><mi mathvariant="normal">H</mi><mn>2</mn></msub>' +
       '<mi mathvariant="normal">O</mi></mrow>';
-  this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
-                       ' right-arrow upper H 2 upper S i upper F 6 plus 2' +
-                       ' upper H 2 upper O', 'default');
-  this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
-                       ' right-arrow upper H 2 upper S i upper F 6 plus 2' +
-                       ' upper H 2 upper O', 'brief');
-  this.executeRuleTest(mml, 'upper S i upper O 2 plus 6 upper H upper F' +
-                       ' R arrow upper H 2 upper S i upper F 6 plus 2 upper' +
-                       ' H 2 upper O', 'sbrief');
+  this.executeRuleTest(mml, 'upper S i normal upper O 2 plus 6 normal upper' +
+                       ' H normal upper F right-arrow normal upper H 2 upper' +
+                       ' S i normal upper F 6 plus 2 normal upper H 2 normal' +
+                       ' upper O', 'default');
+  this.executeRuleTest(mml, 'upper S i normal upper O 2 plus 6 normal upper' +
+                       ' H normal upper F right-arrow normal upper H 2 upper' +
+                       ' S i normal upper F 6 plus 2 normal upper H 2 normal' +
+                       ' upper O', 'brief');
+  this.executeRuleTest(mml, 'upper S i normal upper O 2 plus 6 normal upper' +
+                       ' H normal upper F R arrow normal upper H 2 upper' +
+                       ' S i normal upper F 6 plus 2 normal upper H 2 normal' +
+                       ' upper O', 'sbrief');
 };
 
 

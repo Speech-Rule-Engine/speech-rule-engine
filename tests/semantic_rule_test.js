@@ -158,7 +158,6 @@ sre.SemanticRuleTest.prototype.testUnitsSuperscript = function() {
  * Tests more complex expressions containing units.
  */
 sre.SemanticRuleTest.prototype.testUnitsExpressions = function() {
-  this.brief = false;
   this.executeRuleTest(
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>3</mn><mi>m</mi>' +
@@ -203,3 +202,14 @@ sre.SemanticRuleTest.prototype.testUnitsExpressions = function() {
 };
 
 
+/**
+ * Tests more complex expressions containing units.
+ */
+sre.SemanticRuleTest.prototype.testFonts = function() {
+  this.executeRuleTest('<mi>m</mi>', 'm');
+  this.executeRuleTest('<mi mathvariant="normal">m</mi>', 'normal m');
+  this.executeRuleTest('<mi>mi</mi>', 'mi');
+  this.executeRuleTest('<mi mathvariant="italic">mi</mi>', 'italic mi');
+  this.executeRuleTest('<mi>3</mi>', 'italic three');
+  this.executeRuleTest('<mi>30</mi>', '30');
+};
