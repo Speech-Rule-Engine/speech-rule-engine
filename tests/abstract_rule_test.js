@@ -14,6 +14,8 @@
 
 /**
  * @fileoverview Testcases for ChromeVox's speech rules.
+ *     Abstract superclass that provides facilities to parameterize the speech
+ *     rule engine and to execute rule tests on math expressions.
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
@@ -49,8 +51,8 @@ goog.inherits(sre.AbstractRuleTest, sre.AbstractTest);
 
 
 /**
- * Tests if for a given html snippet the applicable rule is indeed the same
- * as the one provided.
+ * Tests if for speech translation of a given html snippet is equal to the
+ * answer provided.
  * @param {string} mml Snippet of a MathML expression.
  * @param {string} answer Expected speech translation of MathML expression.
  * @param {string=} opt_style Mathspeak style for translation.
