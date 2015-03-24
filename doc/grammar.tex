@@ -157,6 +157,8 @@ entire expressions if they all share a common font. Font values are:\vspace*{.5c
 \section{Schema}
 \label{sec:schema}
 
+{\Large Schemata are not working yet!}
+
 A simple schema, ignoring attributes for the time being.
 
 \begin{lstlisting}
@@ -214,6 +216,61 @@ A simple schema, ignoring attributes for the time being.
 \subsection{Operators}
 \label{sec:operators}
 
+\subsubsection{Trivial}
+\label{sec:trivial-ops}
+
+
+\begin{lstlisting}
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mi>c</mi>
+\end{lstlisting}
+\begin{lstlisting}
+<infixop>+
+  <content>
+    <operator>+</operator>
+    <operator>+</operator>
+  </content>
+  <children>
+    <identifier>a</identifier>
+    <identifier>b</identifier>
+    <identifier>c</identifier>
+  </children>
+</infixop>
+\end{lstlisting}
+
+
+
+Simple Schema:
+\begin{lstlisting}
+<?xml version="1.0" encoding="utf-16"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="infixop" type="infixopType" />
+  <xsd:complexType name="infixopType">
+    <xsd:sequence>
+      <xsd:element name="content" type="contentType" />
+      <xsd:element name="children" type="childrenType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="childrenType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="identifier" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contentType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="operator" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+\end{lstlisting}
+
+\subsubsection{Combined}
+\label{sec:combined-ops}
+
+
 \begin{lstlisting}
   <mi>a</mi>
   <mo>+</mo>
@@ -242,6 +299,33 @@ A simple schema, ignoring attributes for the time being.
 </children>
 </infixop>
 \end{lstlisting}
+
+Simple Schema:
+\begin{lstlisting}
+<?xml version="1.0" encoding="utf-16"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="infixop" type="infixopType" />
+  <xsd:complexType name="infixopType">
+    <xsd:sequence>
+      <xsd:element name="content" type="contentType" />
+      <xsd:element name="children" type="childrenType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="childrenType">
+    <xsd:sequence>
+      <xsd:element name="infixop" type="infixopType" />
+      <xsd:element maxOccurs="unbounded" name="identifier" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contentType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="operator" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+\end{lstlisting}
+
+
 
 \subsection{Relations}
 \label{sec:relations}
