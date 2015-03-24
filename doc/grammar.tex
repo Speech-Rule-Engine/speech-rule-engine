@@ -154,6 +154,59 @@ entire expressions if they all share a common font. Font values are:\vspace*{.5c
   unknown
 \end{tabular}
 
+\section{Schema}
+\label{sec:schema}
+
+A simple schema, ignoring attributes for the time being.
+
+\begin{lstlisting}
+<?xml version="1.0" encoding="utf-16"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="relseq" type="relseqType" />
+  <xsd:complexType name="relseqType">
+    <xsd:sequence>
+      <xsd:element name="content" type="contentType" />
+      <xsd:element name="children" type="childrenType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="childrenType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="infixop" type="infixopType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="infixopType">
+    <xsd:sequence>
+      <xsd:element name="content" type="contentType" />
+      <xsd:element name="children" type="childrenType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="childrenType">
+    <xsd:sequence>
+      <xsd:element name="infixop" type="infixopType" />
+      <xsd:element maxOccurs="unbounded" name="identifier" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="infixopType">
+    <xsd:sequence>
+      <xsd:element name="content" type="contentType" />
+      <xsd:element name="children" type="childrenType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="childrenType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="identifier" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contentType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="operator" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+\end{lstlisting}
+
+
+
 \section{Examples}
 \label{sec:examples}
 
@@ -219,9 +272,132 @@ entire expressions if they all share a common font. Font values are:\vspace*{.5c
 \label{sec:operators-relations}
 
 \begin{lstlisting}
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mi>c</mi>
+  <mo>-</mo>
+  <mi>d</mi>
+  <mo>-</mo>
+  <mi>e</mi>
+  <mo>=</mo>
+  <mi>a</mi>
+  <mo>-</mo>
+  <mi>d</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mi>c</mi>
+  <mo>-</mo>
+  <mi>e</mi>
+  <mo>=</mo>
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <mo>-</mo>
+  <mi>d</mi>
+  <mo>-</mo>
+  <mi>e</mi>
+  <mo>+</mo>
+  <mi>c</mi>
 \end{lstlisting}
 
+\pagebreak
+\scriptsize
 \begin{lstlisting}
+  <relseq>
+    =
+    <content>
+      <relation>=</relation>
+      <relation>=</relation>
+    </content>
+    <children>
+      <infixop>
+        -
+        <content>
+          <operator>-</operator>
+          <operator>-</operator>
+        </content>
+        <children>
+          <infixop>
+            +
+            <content>
+              <operator>+</operator>
+              <operator>+</operator>
+            </content>
+            <children>
+              <identifier>a</identifier>
+              <identifier>b</identifier>
+              <identifier>c</identifier>
+            </children>
+          </infixop>
+          <identifier>d</identifier>
+          <identifier>e</identifier>
+        </children>
+      </infixop>
+      <infixop>
+        -
+        <content>
+          <operator>-</operator>
+        </content>
+        <children>
+          <infixop>
+            +
+            <content>
+              <operator>+</operator>
+              <operator>+</operator>
+            </content>
+            <children>
+              <infixop>
+                -
+                <content>
+                  <operator>-</operator>
+                </content>
+                <children>
+                  <identifier>a</identifier>
+                  <identifier>d</identifier>
+                </children>
+              </infixop>
+              <identifier>b</identifier>
+              <identifier>c</identifier>
+            </children>
+          </infixop>
+          <identifier>e</identifier>
+        </children>
+      </infixop>
+      <infixop>
+        +
+        <content>
+          <operator>+</operator>
+        </content>
+        <children>
+          <infixop>
+            -
+            <content>
+              <operator>-</operator>
+              <operator>-</operator>
+            </content>
+            <children>
+              <infixop>
+                +
+                <content>
+                  <operator>+</operator>
+                </content>
+                <children>
+                  <identifier>a</identifier>
+                  <identifier>b</identifier>
+                </children>
+              </infixop>
+              <identifier>d</identifier>
+              <identifier>e</identifier>
+            </children>
+          </infixop>
+          <identifier>c</identifier>
+        </children>
+      </infixop>
+    </children>
+  </relseq>
 \end{lstlisting}
 
 \end{document}
