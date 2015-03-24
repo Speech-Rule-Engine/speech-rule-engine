@@ -157,6 +157,10 @@ entire expressions if they all share a common font. Font values are:\vspace*{.5c
 \section{Examples}
 \label{sec:examples}
 
+
+\subsection{Operators}
+\label{sec:operators}
+
 \begin{lstlisting}
   <mi>a</mi>
   <mo>+</mo>
@@ -186,6 +190,39 @@ entire expressions if they all share a common font. Font values are:\vspace*{.5c
 </infixop>
 \end{lstlisting}
 
+\subsection{Relations}
+\label{sec:relations}
+
+\begin{lstlisting}
+  <mi>a</mi>
+  <mo>=</mo>
+  <mi>b</mi>
+  <mo>=</mo>
+  <mi>c</mi>
+\end{lstlisting}
+
+\begin{lstlisting}
+<relseq>=
+<content>
+  <relation>=</relation>
+  <relation>=</relation>
+</content>
+<children>
+  <identifier>a</identifier>
+  <identifier>b</identifier>
+  <identifier>c</identifier>
+</children>
+</relseq>
+\end{lstlisting}
+
+\subsection{Mixed Operators and Relation}
+\label{sec:operators-relations}
+
+\begin{lstlisting}
+\end{lstlisting}
+
+\begin{lstlisting}
+\end{lstlisting}
 
 \end{document}
 
