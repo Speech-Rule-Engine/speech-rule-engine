@@ -1,0 +1,191 @@
+\documentclass{article}
+
+\usepackage[paper=a4paper]{geometry}
+\usepackage{array}
+\usepackage{listings}
+\def\lstxml{
+  \lstset{language=XML,
+    keywordstyle=\ttfamily,
+    identifierstyle=\ttfamily,
+    stringstyle=\ttfamily,
+    showstringspaces=false,
+    columns=[l]flexible,
+    escapeinside={(@*}{*@)},
+    morekeywords={encoding,
+      mrow,math,mfrac,mi,msqrt,mo,mn,span,nobr,img}
+  }
+}
+\def\depr#1{#1 (\textit{Deprecated?})}
+
+
+\title{Speech Rule Engine:\\ Semantic Tree Grammar}
+\author{Volker Sorge}
+
+\begin{document}
+\maketitle
+
+Sections~\ref{sec:types},~\ref{sec:roles},~\ref{sec:fonts} presents the types,
+roles and fonts used in the semantic representation. Types are used as tags in
+corresponding XML representation, while roles and fonts are attributes.
+
+\section{Types}
+\label{sec:types}
+
+Types are immutable. Their idea is to capture the basic natur of a symbol.
+
+\subsection{Primitive Types}
+\label{sec:primitive types}
+
+They are assigned by default to single symbols (or combination in the case of
+numbers, functions, units) and never change.
+
+\begin{tabular}{>{\tt}ll}
+  punctuation & Punctuation like comma, dot, ellipses.\\
+  fence & Fence symbol.\\
+  number & One or several digits, plus some punctuation.\\
+  identifier & Single or multiple letters.\\
+  text & Regular text in a math expression.\\
+  operator & e.g. $+, *$.\\
+  relation & Relation symbol, e.g. equals.\\
+  largeop & e.g. Sum, product, integral.\\
+  function & Some named function.\\
+  unit & Identifier that describes a unit.
+\end{tabular}
+
+\subsection{Compound Types}
+\label{sec:compound types}
+
+They are computed once and then never change.
+
+
+\begin{tabular}{>{\tt}ll}
+\multicolumn{2}{l}{\textbf{Compound Symbols}}\\
+accent & \depr{Accented symbols}\\
+fenced & \\
+fraction & \\
+punctuated & \\
+\multicolumn{2}{l}{\textbf{Relations}}\\
+relseq & Relation sequence of a single relation.\\
+multirel & Relation sequence containing at least two different relations.\\
+\multicolumn{2}{l}{\textbf{Operations}}\\
+infixop & Infix operator like $+,\cdot$.\\
+prefixop & Prefix operator like $f(x), \sin(x)$ etc.\\
+postfixop & Postfix operator like \texttt{x++, y--}\\
+\end{tabular}
+
+\begin{tabular}{>{\tt}ll}
+\multicolumn{2}{l}{\textbf{Function and big operator applications}}\\
+appl & General function application\\
+integral & \\
+bigop & \\
+sqrt & \\
+root & \\
+\multicolumn{2}{l}{\textbf{Big operators or functions with limits or indices}}\\
+limupper & \\
+limlower & \\
+limboth & \\
+subscript & \\
+superscript & \\
+underscore & \\
+overscore & \\
+tensor & \\
+
+\multicolumn{2}{l}{\textbf{Tables and their elements}}\\
+table & \\
+multiline & \\
+matrix & \\
+vector & \\
+cases & \\
+row & \\
+cell & \\
+line & Lines are effectively single cell rows\\
+
+\multicolumn{2}{l}{\textbf{Enclosed (counterpart for menclosed)}}\\
+enclose & Enclosed (counterpart for menclosed)\\
+
+\multicolumn{2}{l}{\textbf{General}}\\
+unknown & \\
+empty & \\
+\end{tabular}
+
+\section{Roles}
+\label{sec:roles}
+
+Roles are mutable. They describe the role of a symbol in the context of the
+formula. Initially a symbol is assigned a default role, which can change during
+the course of the semantic interpretation.  Therefore some roles simply mirror
+the type, usually until something more specific is known about the role of this
+particular symbol. As example consider $f$ in the expression $f(x)$. It gets
+assigned type \texttt{identifier} and role \texttt{latinletter}. However, the
+role will eventually change to \texttt{prefix function}.
+
+
+
+
+\section{Fonts}
+\label{sec:fonts}
+
+Some symbols also have a font element attached. Font elements can be extended to
+entire expressions if they all share a common font. Font values are:\vspace*{.5cm}
+
+\noindent
+\begin{tabular}{>{\tt}l}
+  bold\\
+  bold-fraktur\\
+  bold-italic\\
+  bold-script
+\end{tabular}\quad
+\begin{tabular}{>{\tt}l}
+  double-struck\\
+  double-struck-italic\\
+  fraktur\\
+  italic\\
+\end{tabular}\quad
+\begin{tabular}{>{\tt}l}
+  monospace\\
+  normal\\
+  script\\
+  sans-serif\\
+\end{tabular}\quad
+\begin{tabular}{>{\tt}l}
+  sans-serif-italic\\
+  sans-serif-bold\\
+  sans-serif-bold-italic\\
+  unknown
+\end{tabular}
+
+\section{Examples}
+\label{sec:examples}
+
+\begin{lstlisting}
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mi>c</mi>
+  <mo>-</mo>
+  <mi>d</mi>
+  <mo>-</mo>
+  <mi>e</mi>
+\end{lstlisting}
+\begin{lstlisting}
+<infixop>-
+<content><operator>-</operator><operator>-</operator></content>
+<children>
+  <infixop>+
+  <content><operator>+</operator><operator>+</operator></content>
+  <children>
+    <identifier>a</identifier>
+    <identifier>b</identifier>
+    <identifier>c</identifier>
+  </children>
+  </infixop>
+  <identifier>d</identifier>
+  <identifier>e</identifier>
+</children>
+</infixop>
+\end{lstlisting}
+
+
+\end{document}
+
