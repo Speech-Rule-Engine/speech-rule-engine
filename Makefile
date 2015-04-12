@@ -84,7 +84,7 @@ CLOSURE_COMPILER = python $(CLOSURE_ROOT)/closurebuilder.py --root=$(CLOSURE_LIB
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
-GJSLINT = python $(LINT_ROOT)/gjslint.py --strict --jsdoc -r
+GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -r
 FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -r
 
 #######################################################################3
