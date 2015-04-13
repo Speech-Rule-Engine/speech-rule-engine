@@ -272,7 +272,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'omit-empty', 'default.default',
-      '',
+      '[p] (pause:100)',
       'self::empty');
 
   // Fences rules.
