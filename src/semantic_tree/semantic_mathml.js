@@ -39,6 +39,21 @@ sre.SemanticMathml = function() {
 
 
 /**
+ * Mapping for attributes used in semantic enrichment.
+ * @enum {string}
+ */
+sre.SemanticMathml.Attribute = {
+  CONTENT: 'semantic-content',
+  CHILDREN: 'semantic-children',
+  PARENT: 'semantic-parent',
+  TYPE: 'semantic-type',
+  ROLE: 'semantic-role',
+  FONT: 'semantic-font',
+  OPERATOR: 'semantic-operator'
+};
+
+
+/**
  * Creates formated output  for tMathML and semantic tree expression.
  * REMARK: Helper function.
  * @param {!Element} mml The original MathML expression.
@@ -111,16 +126,17 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   var newNode = sre.SystemExternal.document.createElement('mrow');
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   if (newContent.length > 0) {
-    newNode.setAttribute('semantic-content',
+    newNode.setAttribute(sre.SemanticMathml.Attribute.CONTENT,
                          sre.SemanticMathml.makeIdList_(newContent));
   }
-  newNode.setAttribute('semantic-children',
+  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                        sre.SemanticMathml.makeIdList_(newChildren));
   var childrenList = sre.SemanticMathml.combineContentChildren_(
       semantic, newContent, newChildren);
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
-    child.setAttribute('semantic-parent', child.getAttribute('id'));
+    child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
+                       child.getAttribute('id'));
   }
   return newNode;
 };
@@ -146,8 +162,8 @@ sre.SemanticMathml.makeIdList_ = function(nodes) {
  * @private
  */
 sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
-  mml.setAttribute('semantic-type', semantic.type);
-  mml.setAttribute('semantic-role', semantic.role);
+  mml.setAttribute(sre.SemanticMathml.Attribute.TYPE, semantic.type);
+  mml.setAttribute(sre.SemanticMathml.Attribute.ROLE, semantic.role);
   mml.setAttribute('id', semantic.id);
 };
 
@@ -167,17 +183,20 @@ sre.SemanticMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
       content.forEach(function(c) {
-        c.setAttribute('semantic-operator', semantic.textContent);
+        c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR,
+                       semantic.textContent);
       });
       return sre.SemanticMathml.interleave_(content, children);
     case sre.SemanticAttr.Type.PREFIXOP:
       content.forEach(function(c) {
-        c.setAttribute('semantic-operator', semantic.textContent);
+        c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR,
+                       semantic.textContent);
       });
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
       content.forEach(function(c) {
-        c.setAttribute('semantic-operator', semantic.textContent);
+        c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR,
+                       semantic.textContent);
       });
       return children.concat(content);
     case sre.SemanticAttr.Type.MULTIREL:
