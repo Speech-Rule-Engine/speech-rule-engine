@@ -26,6 +26,7 @@ goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
+goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticTree');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
@@ -251,3 +252,19 @@ sre.System.prototype.processFile = function(input, opt_output) {
     throw new sre.System.Error('Can not write to file: ' + opt_output);
   }
 };
+
+
+/**
+ * Enriches a MathML element with semantics from the tree.
+ * REMARK: Very experimental!
+ * @param {!string} expr The MathML expression as a string without math tags.
+ * @return {!Element} The modified MathML element.
+ */
+sre.System.prototype.enrichMathml = function(expr) {
+  //var mmlExpr = '<math>' + expr + '</math>';
+  var mml = this.parseInput(expr);
+  var tree = new sre.SemanticTree(mml);
+  return sre.SemanticMathml.enrich(mml, tree);
+};
+
+

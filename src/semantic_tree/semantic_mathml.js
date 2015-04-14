@@ -27,7 +27,7 @@ goog.provide('sre.SemanticMathml');
 // All this code is experimental and will eventually need refactoring!
 
 goog.require('sre.SemanticTree');
-goog.require('sre.System');
+
 
 
 /**
@@ -39,22 +39,10 @@ sre.SemanticMathml = function() {
 
 
 /**
- * Creates a semantic tree from MathML expression string.
- * @param {!string} expr The MathML expression as a string.
- * @return {!Element}
- */
-sre.SemanticMathml.fromString = function(expr) {
-  var mml = sre.System.getInstance().parseInput(expr);
-  var tree = new sre.SemanticTree(mml);
-  //var semantic = sre.System.getInstance().getSemanticTree_(mathml);
-  return tree;
-};
-
-
-/**
  * Creates formated output  for tMathML and semantic tree expression.
  * REMARK: Helper function.
- * @param {!string} expr The MathML expression as a string without math tags.
+ * @param {!Element} expr The MathML expression as a string without math tags.
+ * @param {!sre.SemanticTree} tree The semantic tree.
  */
 sre.SemanticMathml.formattedOutput = function(expr, tree) {
   console.log(sre.SemanticTree.formatXml(tree.toString()));
@@ -62,32 +50,17 @@ sre.SemanticMathml.formattedOutput = function(expr, tree) {
 };
 
 
-/**
- * Enriches a MathML element with semantics from the tree.
- * REMARK: Very experimental!
- * @param {!string} expr The MathML expression as a string without math tags.
- * @return {!Element} The modified MathML element.
- */
-sre.SemanticMathml.enrich = function(expr) {
-  var mmlExpr = '<math>' + expr + '</math>';
-  var mml = sre.System.getInstance().parseInput(mmlExpr);
-  var tree = new sre.SemanticTree(mml);
-  // TODO (sorge) Redundant parsing!
-  return sre.SemanticMathml.enrichMathml(mml, tree);
-};
-
-
-// Some questions: 
+// Some questions:
 // 1) Should we rewrite the existing element or simply build a new one?
 //
 /**
  * Enriches a MathML element with semantics from the tree.
  * REMARK: Very experimental!
  * @param {!Element} mml The MathML element.
- * @param {!Element} semantic The semantic tree.
+ * @param {!sre.SemanticTree} semantic The semantic tree.
  * @return {!Element} The modified MathML element.
  */
-sre.SemanticMathml.enrichMathml = function(mml, semantic) {
+sre.SemanticMathml.enrich = function(mml, semantic) {
   var newMml = sre.SemanticMathml.walkTree_(semantic.root);
   sre.SemanticMathml.formattedOutput(newMml, semantic);
   return newMml;
@@ -96,7 +69,7 @@ sre.SemanticMathml.enrichMathml = function(mml, semantic) {
 
 /**
  * Adds ids to the MathML nodes corresponding to the leafs of a semantic tree.
- * @param {!sre.SemanticTree} semantic The semantic tree.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree.
  * @private
  */
 sre.SemanticMathml.addLeafId_ = function(semantic) {
@@ -118,8 +91,8 @@ sre.SemanticMathml.addLeafId_ = function(semantic) {
  * expression.
  *
  * Note that the original MathML nodes are cloned!
- * @param {!sre.SemanticTree} semantic The semantic tree.
- * @return {Element} The enriched MathML element.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree.
+ * @return {!Element} The enriched MathML element.
  * @private
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
@@ -128,12 +101,14 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     sre.SemanticMathml.setAttributes_(clone, semantic);
     return clone;
   }
-  var newContent = semantic.contentNodes.map(sre.SemanticMathml.walkTree_);
-  var newChildren = semantic.childNodes.map(sre.SemanticMathml.walkTree_);
+  var newContent = semantic.contentNodes.map(
+      /**@type{Function}*/(sre.SemanticMathml.walkTree_));
+  var newChildren = semantic.childNodes.map(
+      /**@type{Function}*/(sre.SemanticMathml.walkTree_));
   var newNode = sre.SystemExternal.document.createElement('mrow');
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   if (newContent.length > 0) {
-    newNode.setAttribute('semantic-content', 
+    newNode.setAttribute('semantic-content',
                          sre.SemanticMathml.makeIdList_(newContent));
   }
   newNode.setAttribute('semantic-children',
@@ -153,6 +128,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  * Concatenates node ids into a comma separated lists.
  * @param {!Array.<!Element>} nodes The list of nodes.
  * @return {!string} The comma separated lists.
+ * @private
  */
 sre.SemanticMathml.makeIdList_ = function(nodes) {
   return nodes.map(function(node) {
@@ -164,7 +140,7 @@ sre.SemanticMathml.makeIdList_ = function(nodes) {
 /**
  * Sets semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
- * @param {!Element} semantic The semantic tree node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
  * @private
  */
 sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
@@ -177,22 +153,34 @@ sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
 /**
  * Combines contet and children lists depending ont the type of the semantic
  * node.
- * @param {!Element} semantic The semantic tree node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
  * @param {!Array.<!Element>} content The list of content nodes.
  * @param {!Array.<!Element>} children The list of child nodes.
  * @return {!Array.<!Element>} The combined list.
  * @private
  */
-sre.SemanticMathml.combineContentChildren_ = function(semantic, content, children) {
+sre.SemanticMathml.combineContentChildren_ = function(
+    semantic, content, children) {
   switch (semantic.type) {
+    case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
       content.forEach(function(c) {
-          c.setAttribute('semantic-operator', semantic.textContent);
-        //c.setAttribute('semantic-aspect', semantic.role);
-        });
+        c.setAttribute('semantic-operator', semantic.textContent);
+      });
       return sre.SemanticMathml.interleave_(content, children);
+    case sre.SemanticAttr.Type.PREFIXOP:
+      content.forEach(function(c) {
+        c.setAttribute('semantic-operator', semantic.textContent);
+      });
+      return content.concat(children);
+    case sre.SemanticAttr.Type.POSTFIXOP:
+      content.forEach(function(c) {
+        c.setAttribute('semantic-operator', semantic.textContent);
+      });
+      return children.concat(content);
+    case sre.SemanticAttr.Type.MULTIREL:
     default:
-    return content;
+      return content;
   }
 };
 

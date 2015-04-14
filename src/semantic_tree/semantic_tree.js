@@ -52,7 +52,7 @@ sre.SemanticTree = function(mml) {
    */
   this.mathml = mml;
 
-  /** @type {sre.SemanticTree.Node} */
+  /** @type {!sre.SemanticTree.Node} */
   this.root = this.parseMathml_(mml);
 };
 
