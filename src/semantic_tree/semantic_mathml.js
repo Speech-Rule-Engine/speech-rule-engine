@@ -54,16 +54,36 @@ sre.SemanticMathml.Attribute = {
 
 
 /**
- * Creates formated output  for tMathML and semantic tree expression.
+ * Creates formatted output  for MathML and semantic tree expression.
  * REMARK: Helper function.
  * @param {!Element} mml The original MathML expression.
  * @param {!Element} expr The enriched MathML expression.
  * @param {!sre.SemanticTree} tree The semantic tree.
+ * @param {boolean=} opt_wiki Flag to specify wiki output.
  */
-sre.SemanticMathml.formattedOutput = function(mml, expr, tree) {
-  console.log(sre.SemanticTree.formatXml(mml.toString()));
-  console.log(sre.SemanticTree.formatXml(tree.toString()));
-  console.log(sre.SemanticTree.formatXml(expr.toString()));
+sre.SemanticMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
+  var wiki = opt_wiki || false;
+  sre.SemanticMathml.formattedOutput_(mml, 'Original MathML', wiki);
+  sre.SemanticMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
+  sre.SemanticMathml.formattedOutput_(expr, 'Semantically enriched MathML', wiki);
+};
+
+
+/**
+ * Prints formatted output for MathML and semantic tree expression. Depending on
+ * the wiki flag it might wrap it into markup useful for GitHub wikis.
+ * REMARK: Helper function.
+ * @param {!(Element|sre.SemanticTree)} element The original MathML expression.
+ * @param {string} name The name of the expression to be printed in the wiki.
+ * @param {boolean} wiki Flag to specify wiki output.
+ */
+sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
+  var output = sre.SemanticTree.formatXml(element.toString());
+  if (!wiki) {
+    console.log(output);
+    return;
+  }
+  console.log(name + ':\n```html\n' + output + '\n```\n');
 };
 
 
@@ -80,7 +100,7 @@ sre.SemanticMathml.formattedOutput = function(mml, expr, tree) {
 sre.SemanticMathml.enrich = function(mml, semantic) {
   var newMml = sre.SystemExternal.document.createElement('math');
   newMml.appendChild(sre.SemanticMathml.walkTree_(semantic.root));
-  sre.SemanticMathml.formattedOutput(mml, newMml, semantic);
+  sre.SemanticMathml.formattedOutput(mml, newMml, semantic, true);
   return newMml;
 };
 
@@ -136,7 +156,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
     child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
-                       child.getAttribute('id'));
+                       newNode.getAttribute('id'));
   }
   return newNode;
 };
@@ -183,12 +203,21 @@ sre.SemanticMathml.combineContentChildren_ = function(
   switch (semantic.type) {
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
+    case sre.SemanticAttr.Type.MULTIREL:
       return sre.SemanticMathml.interleave_(content, children);
     case sre.SemanticAttr.Type.PREFIXOP:
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
       return children.concat(content);
-    case sre.SemanticAttr.Type.MULTIREL:
+    case sre.SemanticAttr.Type.FENCED:
+      children.unshift(content[0]);
+      children.push(content[1]);
+      return children;
+    case sre.SemanticAttr.Type.PUNCTUATION:
+    // TODO (sorge) Here we loose information through cloning!
+      return children;
+    case sre.SemanticAttr.Type.APPL:
+      return [children[0], content[0], children[1]];
     default:
       return content;
   }
