@@ -2,7 +2,7 @@
 \usepackage{bussproofs}
 \EnableBpAbbreviations
 
-\usepackage[paper=a4paper]{geometry}
+\usepackage[paper=a4paper,margin=1in]{geometry}
 \usepackage{array}
 \usepackage{listings}
 \def\lstxml{
@@ -545,6 +545,52 @@ Simple Schema:
       </infixop>
     </children>
   </relseq>
+\end{lstlisting}
+
+\section{Examples}
+
+\begin{lstlisting}
+<math>
+  <mi>5</mi>
+  <mo>=</mo>
+  <mi>3</mi>
+  <mo>+</mo>
+  <mi>2</mi>
+</math>
+
+<stree>
+  <relseq role="equality" id="6">
+    =
+    <content>
+      <relation role="equality" id="1">=</relation>
+    </content>
+    <children>
+      <number role="integer" font="italic" id="0">5</number>
+      <infixop role="addition" id="5">
+        +
+        <content>
+          <operator role="addition" id="3">+</operator>
+        </content>
+        <children>
+          <number role="integer" font="italic" id="2">3</number>
+          <number role="integer" font="italic" id="4">2</number>
+        </children>
+      </infixop>
+    </children>
+  </relseq>
+</stree>
+
+<math>
+  <mrow semantic-type="relseq" semantic-role="equality" id="6" semantic-content="1" semantic-children="0,5">
+    <mi semantic-type="number" semantic-role="integer" id="0" semantic-parent="0">5</mi>
+    <mo semantic-type="relation" semantic-role="equality" id="1" semantic-operator="=" semantic-parent="1">=</mo>
+    <mrow semantic-type="infixop" semantic-role="addition" id="5" semantic-content="3" semantic-children="2,4" semantic-parent="5">
+      <mi semantic-type="number" semantic-role="integer" id="2" semantic-parent="2">3</mi>
+      <mo semantic-type="operator" semantic-role="addition" id="3" semantic-operator="+" semantic-parent="3">+</mo>
+      <mi semantic-type="number" semantic-role="integer" id="4" semantic-parent="4">2</mi>
+    </mrow>
+  </mrow>
+</math>
 \end{lstlisting}
 
 \end{document}

@@ -41,10 +41,12 @@ sre.SemanticMathml = function() {
 /**
  * Creates formated output  for tMathML and semantic tree expression.
  * REMARK: Helper function.
- * @param {!Element} expr The MathML expression as a string without math tags.
+ * @param {!Element} mml The original MathML expression.
+ * @param {!Element} expr The enriched MathML expression.
  * @param {!sre.SemanticTree} tree The semantic tree.
  */
-sre.SemanticMathml.formattedOutput = function(expr, tree) {
+sre.SemanticMathml.formattedOutput = function(mml, expr, tree) {
+  console.log(sre.SemanticTree.formatXml(mml.toString()));
   console.log(sre.SemanticTree.formatXml(tree.toString()));
   console.log(sre.SemanticTree.formatXml(expr.toString()));
 };
@@ -61,8 +63,9 @@ sre.SemanticMathml.formattedOutput = function(expr, tree) {
  * @return {!Element} The modified MathML element.
  */
 sre.SemanticMathml.enrich = function(mml, semantic) {
-  var newMml = sre.SemanticMathml.walkTree_(semantic.root);
-  sre.SemanticMathml.formattedOutput(newMml, semantic);
+  var newMml = sre.SystemExternal.document.createElement('math');
+  newMml.appendChild(sre.SemanticMathml.walkTree_(semantic.root));
+  sre.SemanticMathml.formattedOutput(mml, newMml, semantic);
   return newMml;
 };
 
@@ -115,7 +118,6 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
                        sre.SemanticMathml.makeIdList_(newChildren));
   var childrenList = sre.SemanticMathml.combineContentChildren_(
       semantic, newContent, newChildren);
-  console.log(childrenList.length);
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
     child.setAttribute('semantic-parent', child.getAttribute('id'));
