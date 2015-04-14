@@ -49,6 +49,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.log = '';
   /** @type {!string} */
   commander.output = '';
+  /** @type {!string} */
+  commander.mathml = '';
   /** @type {!boolean} */
   commander.semantics = false;
   /** @type {!string} */
@@ -61,6 +63,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-e, --enumerate', 'Enumerates available domains and styles').
       option('-i, --input [name]', 'Input file [name]').
       option('-l, --log [name]', 'Log file [name]').
+      option('-m, --mathml [name]', 'Generate MathML output to file.').
       option('-o, --output [name]', 'Output file [name]').
       option('-s, --semantics', 'Switch on semantics interpretation').
       option('-t, --style [name]', 'Speech style [name]').
@@ -76,11 +79,15 @@ sre.Cli.prototype.commandLine = function() {
       console.log(output);
       process.exit(0);
     }
+    if (commander.mathml) {
+      commander.semantics = true;
+    }
     sre.System.getInstance().setupEngine(
         {
           'semantics': commander.semantics,
           'domain': commander.dom,
-          'style': commander.style
+          'style': commander.style,
+          'mathml': commander.mathml
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);

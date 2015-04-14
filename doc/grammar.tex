@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{bussproofs}
+\EnableBpAbbreviations
 
 \usepackage[paper=a4paper]{geometry}
 \usepackage{array}
@@ -154,10 +156,71 @@ entire expressions if they all share a common font. Font values are:\vspace*{.5c
   unknown
 \end{tabular}
 
+\section{Branching Nodes Overview}
+\label{sec:branching-nodes-overview}
+
+Branch nodes have both children and content. 
+
+Node types containing no content are: 
+
+root, sqrt, table, row, cell, enclose, number (with role mixed), subscript,
+superscript, underscore, overscore, bigop, integral, fraction, tensor
+
+Node types containing content: 
+
+infix, prefix, postfix, relseq, multirel, fenced, punctuated, appl
+
+\subsection{Nodes without content}
+
+These are usually quite straightforward and often mirror the corresponding
+MathML element. There are some exception however: 
+
+Number only with role mixed, where the two children are an integer and a vulgar
+fraction.
+
+Bigop consists of big operator and it's arguments. E.g. $\sum f(x) + b$ would
+yield a big operator with children $\sum, f(x)$. $+ b$ would be considered not
+to be part of the sum.
+
+Integral always has three children: Integral symbol, Integrand and Integral
+variable. Note that the last two can be both empty. This allows for $\int$,
+$\int dx$, and $\int f$.
+
+Tensor is similar to mmultiscripts but contains always all four indices.  Some
+might of course be empty.
+
+\subsection{Nodes with content}
+
+
+\noindent
+\begin{tabular}{l||l|l|l||r@{$\quad\longrightarrow\quad$}l}
+  Type & Content & Children & Mixed Element & \multicolumn{2}{l}{Example}\\\hline
+  infix & Operators & Operands & unique operator & $a+b+c$ &  [+, +][a, b, c] ``+" \\
+  prefix & Operators & Operand & concatenated ops & $++a$ & [+, +][a]``++" \\ 
+  postfix & Operators & Operand & concatenated ops & $a--$ & [-, -][a]``--" \\ 
+  relseq & Relations & Operands & unique relation & $a=b=c$ & [=, =][a,b,c]``=" \\ 
+  multirel & Relations & Operands & None & $a=b<c$ & [=, $<$][a,b,c] \\ 
+  fenced & Fences & Content & None & $(a + c)$ & [(,)][a+c]\\
+  punctuated & Punctuations & Full content & None & $a;b;c$ & [;,;][a,b,c]\\
+  appl & Application Char & Function, arguments & None & $f(x)$ & [@][f, (x)]\\
+\end{tabular}
+
+
+
+
+\section{Rules}\label{sec:rules}
+
+
+\subsection{Operator}
+
+The general operator rules are as follows:
+
+\AXC{$A + B$}\RL{$infixop_1$}\UIC{+ A B}\DisplayProof\qquad 
+\AXC{$\Phi + A$}\RL{$infixop_2$ with $\Phi\equiv + A_1\ldots A_n$}\UIC{$+ A_1 \ldots A_n A$}\DisplayProof 
+
+
 \section{Schema}
 \label{sec:schema}
-
-{\Large Schemata are not working yet!}
 
 A simple schema, ignoring attributes for the time being.
 
