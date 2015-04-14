@@ -213,8 +213,16 @@ sre.SemanticMathml.combineContentChildren_ = function(
       children.unshift(content[0]);
       children.push(content[1]);
       return children;
-    case sre.SemanticAttr.Type.PUNCTUATION:
+    case sre.SemanticAttr.Type.PUNCTUATED:
     // TODO (sorge) Here we loose information through cloning!
+      var markupList = [];
+      for (var i = 0, j = 0, child; child = children[i]; i++) {
+        if (child.getAttribute('id') == content[j].getAttribute('id')) {
+          j++;
+          markupList.push(child);
+        }
+      }
+      sre.SemanticMathml.setOperatorAttribute_(semantic, markupList);
       return children;
     case sre.SemanticAttr.Type.APPL:
       return [children[0], content[0], children[1]];
