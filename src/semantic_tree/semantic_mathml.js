@@ -169,7 +169,7 @@ sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
 
 
 /**
- * Combines contet and children lists depending ont the type of the semantic
+ * Combines content and children lists depending ont the type of the semantic
  * node.
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
  * @param {!Array.<!Element>} content The list of content nodes.
@@ -179,30 +179,33 @@ sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
  */
 sre.SemanticMathml.combineContentChildren_ = function(
     semantic, content, children) {
+  sre.SemanticMathml.setOperatorAttribute_(semantic, content);
   switch (semantic.type) {
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
-      content.forEach(function(c) {
-        c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR,
-                       semantic.textContent);
-      });
       return sre.SemanticMathml.interleave_(content, children);
     case sre.SemanticAttr.Type.PREFIXOP:
-      content.forEach(function(c) {
-        c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR,
-                       semantic.textContent);
-      });
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
-      content.forEach(function(c) {
-        c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR,
-                       semantic.textContent);
-      });
       return children.concat(content);
     case sre.SemanticAttr.Type.MULTIREL:
     default:
       return content;
   }
+};
+
+
+/**
+ * Adds a relevant operator attribute to the a list of content nodes.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!Array.<!Element>} content The list of content nodes.
+ * @private
+ */
+sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
+  var operator = semantic.type +
+          (semantic.textContent ? ',' + semantic.textContent : '');
+  content.forEach(function(c) {
+    c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR, operator);});
 };
 
 
