@@ -23,9 +23,6 @@
 
 goog.provide('sre.SemanticMathml');
 
-
-// All this code is experimental and will eventually need refactoring!
-
 goog.require('sre.SemanticTree');
 
 
@@ -65,7 +62,8 @@ sre.SemanticMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
   var wiki = opt_wiki || false;
   sre.SemanticMathml.formattedOutput_(mml, 'Original MathML', wiki);
   sre.SemanticMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
-  sre.SemanticMathml.formattedOutput_(expr, 'Semantically enriched MathML', wiki);
+  sre.SemanticMathml.formattedOutput_(expr, 'Semantically enriched MathML',
+                                      wiki);
 };
 
 
@@ -76,6 +74,7 @@ sre.SemanticMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
  * @param {!(Element|sre.SemanticTree)} element The original MathML expression.
  * @param {string} name The name of the expression to be printed in the wiki.
  * @param {boolean} wiki Flag to specify wiki output.
+ * @private
  */
 sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
   var output = sre.SemanticTree.formatXml(element.toString());
@@ -87,12 +86,9 @@ sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
 };
 
 
-// Some questions:
-// 1) Should we rewrite the existing element or simply build a new one?
-//
 /**
  * Enriches a MathML element with semantics from the tree.
- * REMARK: Very experimental!
+ * REMARK: Very experimental! mml is not really necessary!
  * @param {!Element} mml The MathML element.
  * @param {!sre.SemanticTree} semantic The semantic tree.
  * @return {!Element} The modified MathML element.
@@ -214,7 +210,6 @@ sre.SemanticMathml.combineContentChildren_ = function(
       children.push(content[1]);
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
-    // TODO (sorge) Here we loose information through cloning!
       var markupList = [];
       for (var i = 0, j = 0, child; child = children[i]; i++) {
         if (child.getAttribute('id') == content[j].getAttribute('id')) {
