@@ -56,7 +56,11 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
   for (var domain in mapping) {
     for (var style in mapping[domain]) {
       var content = mapping[domain][style];
-      var cstr = 'self::text() = "' + str + '"';
+      if (str === '"') {
+        var cstr = 'self::text() = \'' + str + '\'';
+      } else {
+        cstr = 'self::text() = "' + str + '"';
+      }
       var rule = this.defineRule(
           name, domain + '.' + style, '[t] "' + content + '"',
           'self::text()', cstr);
