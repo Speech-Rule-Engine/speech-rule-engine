@@ -49,6 +49,21 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing trivial things, often inspired by bugs.
+ */
+sre.MathmlCloudTest.prototype.testTrivialStuff = function() {
+  var mml = '<mtext>a</mtext><mo>=</mo><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals b', 'default');
+  mml = '<mo>"</mo>';
+  this.executeRuleTest(mml, 'quotation-mark', 'default');
+  mml = '<mo>"</mo><mi>x</mi><mo>"</mo>';
+  this.executeRuleTest(mml, 'quotation-mark x quotation-mark', 'default');
+  mml = '<mo>\'</mo>';
+  this.executeRuleTest(mml, 'prime', 'default');
+};
+
+
+/**
  * Testing German fonts.
  */
 sre.MathmlCloudTest.prototype.testGermanFonts = function() {
