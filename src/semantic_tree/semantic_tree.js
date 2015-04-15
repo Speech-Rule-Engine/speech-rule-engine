@@ -88,6 +88,12 @@ sre.SemanticTree.Node = function(id) {
   this.textContent = '';
 
   /**
+   * The complete mml belonging to this node.
+   * @type {Node}
+   */
+  this.mathmlTree = null;
+
+  /**
    * Branch nodes can store additional nodes that can be useful.
    * E.g. a node of type FENCED can have the opening and closing fences here.
    * @type {!Array.<sre.SemanticTree.Node>}
@@ -403,10 +409,12 @@ sre.SemanticTree.Node.prototype.removeContentNode_ = function(node) {
  */
 sre.SemanticTree.prototype.parseMathml_ = function(mml) {
   var children = sre.DomUtil.toArray(mml.childNodes);
+  var newNode;
   switch (sre.SemanticUtil.tagName(mml)) {
     case 'SEMANTICS':
       if (children.length > 0) {
-        return this.parseMathml_(/** @type {!Element} */(children[0]));
+        newNode = this.parseMathml_(/** @type {!Element} */(children[0]));
+        break;
       }
     case 'MATH':
     case 'MROW':
@@ -415,14 +423,15 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       children = sre.SemanticUtil.purgeNodes(children);
       // Single child node, i.e. the row is meaningless.
       if (children.length == 1) {
-        return this.parseMathml_(/** @type {!Element} */(children[0]));
+        newNode = this.parseMathml_(/** @type {!Element} */(children[0]));
+      } else {
+        // Case of a 'meaningful' row, even if they are empty.
+        newNode = this.processRow_(this.parseMathmlChildren_(children));
       }
-      // Case of a 'meaningful' row, even if they are empty.
-      return this.processRow_(this.parseMathmlChildren_(children));
       break;
     case 'MFRAC':
-      return this.makeFractionNode_(this.parseMathml_(children[0]),
-                                    this.parseMathml_(children[1]));
+      newNode = this.makeFractionNode_(this.parseMathml_(children[0]),
+          this.parseMathml_(children[1]));
       break;
     case 'MSUB':
     case 'MSUP':
@@ -430,11 +439,11 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MOVER':
     case 'MUNDER':
     case 'MUNDEROVER':
-      return this.makeLimitNode_(sre.SemanticUtil.tagName(mml),
-                                 this.parseMathmlChildren_(children));
+      newNode = this.makeLimitNode_(sre.SemanticUtil.tagName(mml),
+          this.parseMathmlChildren_(children));
       break;
     case 'MROOT':
-      return this.makeBranchNode_(
+      newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.ROOT,
           [this.parseMathml_(children[1]), this.parseMathml_(children[0])],
           []);
@@ -442,24 +451,22 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MSQRT':
       children = this.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children));
-      return this.makeBranchNode_(
+      newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.SQRT, [this.processRow_(children)], []);
       break;
     case 'MTABLE':
-      var newNode = this.makeBranchNode_(
+      newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.TABLE,
           this.parseMathmlChildren_(children), []);
       if (sre.SemanticTree.tableIsMultiline_(newNode)) {
         this.tableToMultiline_(newNode);
       }
-      return newNode;
       break;
     case 'MTR':
       newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.ROW,
           this.parseMathmlChildren_(children), []);
       newNode.role = sre.SemanticAttr.Role.TABLE;
-      return newNode;
       break;
     case 'MTD':
       children = this.parseMathmlChildren_(
@@ -467,45 +474,41 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       newNode = this.makeBranchNode_(
           sre.SemanticAttr.Type.CELL, [this.processRow_(children)], []);
       newNode.role = sre.SemanticAttr.Role.TABLE;
-      return newNode;
       break;
     case 'MTEXT':
-      var leaf = this.makeLeafNode_(mml);
-      leaf.type = sre.SemanticAttr.Type.TEXT;
-      sre.SemanticTree.exprFont_(leaf);
-      return leaf;
+      newNode = this.makeLeafNode_(mml);
+      newNode.type = sre.SemanticAttr.Type.TEXT;
+      sre.SemanticTree.exprFont_(newNode);
       break;
     // TODO (sorge) Role and font of multi-character and digits unicode strings.
     // TODO (sorge) Reclassify wrongly tagged numbers or identifiers more
     //              systematically.
     // TODO (sorge) Put this all in a single clean reclassification method.
     case 'MI':
-      return this.makeIdentifierNode_(mml);
+      newNode = this.makeIdentifierNode_(mml);
       break;
     case 'MN':
-      leaf = this.makeLeafNode_(mml);
-      if (leaf.type == sre.SemanticAttr.Type.UNKNOWN ||
+      newNode = this.makeLeafNode_(mml);
+      if (newNode.type == sre.SemanticAttr.Type.UNKNOWN ||
           // In case of latin numbers etc.
-          leaf.type == sre.SemanticAttr.Type.IDENTIFIER) {
-        leaf.type = sre.SemanticAttr.Type.NUMBER;
+          newNode.type == sre.SemanticAttr.Type.IDENTIFIER) {
+        newNode.type = sre.SemanticAttr.Type.NUMBER;
       }
-      sre.SemanticTree.numberRole_(leaf);
-      sre.SemanticTree.exprFont_(leaf);
-      return leaf;
+      sre.SemanticTree.numberRole_(newNode);
+      sre.SemanticTree.exprFont_(newNode);
       break;
     case 'MO':
-      leaf = this.makeLeafNode_(mml);
-      if (leaf.type == sre.SemanticAttr.Type.UNKNOWN) {
-        leaf.type = sre.SemanticAttr.Type.OPERATOR;
+      newNode = this.makeLeafNode_(mml);
+      if (newNode.type == sre.SemanticAttr.Type.UNKNOWN) {
+        newNode.type = sre.SemanticAttr.Type.OPERATOR;
       }
-      return leaf;
       break;
     case 'MFENCED':
-      leaf = this.processMfenced_(
+      newNode = this.processMfenced_(
           mml, this.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children)));
-      var nodes = this.processTablesInRow_([leaf]);
-      return nodes[0];
+      var nodes = this.processTablesInRow_([newNode]);
+      newNode = nodes[0];
       break;
     case 'MENCLOSE':
       children = this.parseMathmlChildren_(
@@ -515,19 +518,21 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       newNode.role =
           /** @type {!sre.SemanticAttr.Role} */(mml.getAttribute('notation')) ||
           sre.SemanticAttr.Role.UNKNOWN;
-      return newNode;
       break;
     case 'MMULTISCRIPTS':
-      return this.processMultiScript_(children);
+      newNode = this.processMultiScript_(children);
       break;
     case 'NONE':
-      return this.makeEmptyNode_();
+      newNode = this.makeEmptyNode_();
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
       // Ordinarilly at this point we should not get any other tag.
-      return this.makeUnprocessed_(mml);
+      newNode = this.makeUnprocessed_(mml);
+      break;
   }
+  newNode.mathmlTree = mml;
+  return newNode;
 };
 
 
