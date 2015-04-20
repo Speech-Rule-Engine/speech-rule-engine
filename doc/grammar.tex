@@ -1,6 +1,12 @@
 \documentclass{article}
+\usepackage{ifthen}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 \usepackage{bussproofs}
 \EnableBpAbbreviations
+
+
 
 \usepackage[paper=a4paper,margin=1in]{geometry}
 \usepackage{array}
@@ -211,7 +217,139 @@ might of course be empty.
 \section{Rules}\label{sec:rules}
 
 
+\subsection{Tree Operations}
+
+\def\treeto{\raisebox{20pt}{\ensuremath{\longrightarrow}}}
+\newcommand{\expr}{\ensuremath{e}}
+\newcommand{\ex}[1]{\ensuremath{\expr_{#1}}}
+\newcommand{\opr}{\ensuremath{\circ}}
+\newcommand{\op}[1]{\ensuremath{\opr_{#1}}}
+\newcommand{\ops}[1]{\ifcase#1{\opr}\or{\star}\or{\triangle}\or{\bullet}\else\fi}
+\newcommand{\rel}{\ensuremath{\sim}}
+\newcommand{\re}[1]{\ensuremath{\rel_{#1}}}
+\newcommand{\rels}[1]{\ifcase#1{\ll}\or{\rel}\or{\equiv}\or{\gg}\else\fi}
+
+\subsubsection{Infix}
+
+\begin{tikzpicture}
+  \node {}
+    [edge from parent fork down]
+    child {node {$\ex1$}}
+    child {node {$\opr$}}
+    child {node {$\ex2$}}
+    child {node {$\opr$}}
+    child {node {$\cdots$}}
+    child {node {$\opr$}}
+    child {node {$\ex n$}}
+    ;
+\end{tikzpicture}
+\treeto
+\begin{tikzpicture}
+  \node {Infix: \opr}
+    [edge from parent fork down]
+    child {node {$\ex1$}}
+    child {node {$\ex2$}}
+    child {node {$\cdots$}}
+    child {node {$\ex n$}}
+    ;
+\end{tikzpicture}
+
+
+\subsubsection{Prefix}
+
+\begin{tikzpicture}
+  \node {}
+    [edge from parent fork down]
+    child {node {$\ops0$}}
+    child {node {$\cdots$}}
+    child {node {$\ops1$}}
+    child {node {$\expr$}}
+    ;
+\end{tikzpicture}
+\treeto
+\begin{tikzpicture}
+  \node {Prefix: $\ops1\cdots\ops2$}
+    [edge from parent fork down]
+    child {node {$\expr$}}
+    ;
+\end{tikzpicture}
+
+
+\subsubsection{Postfix}
+
+\begin{tikzpicture}
+  \node {}
+    [edge from parent fork down]
+    child {node {$\expr$}}
+    child {node {$\ops0$}}
+    child {node {$\cdots$}}
+    child {node {$\ops1$}}
+    ;
+\end{tikzpicture}
+\treeto
+\begin{tikzpicture}
+  \node {Postfix: $\ops1\cdots\ops2$}
+    [edge from parent fork down]
+    child {node {$\expr$}}
+    ;
+\end{tikzpicture}
+
+
+\subsubsection{Relseq}
+
+\begin{tikzpicture}
+  \node {}
+    [edge from parent fork down]
+    child {node {$\ex 1$}}
+    child {node {$\rel$}}
+    child {node {$\ex 2$}}
+    child {node {$\rel$}}
+    child {node {$\cdots$}}
+    child {node {$\rel$}}
+    child {node {$\ex n$}}
+    ;
+\end{tikzpicture}
+\treeto
+\begin{tikzpicture}
+  \node {Relseq: \rel}
+    [edge from parent fork down]
+    child {node {$\ex 1$}}
+    child {node {$\ex 2$}}
+    child {node {$\cdots$}}
+    child {node {$\ex n$}}
+    ;
+\end{tikzpicture}
+
+
+\subsubsection{Multirel}
+
+\begin{tikzpicture}
+  \node {}
+    [edge from parent fork down]
+    child {node {$\ex 1$}}
+    child {node {$\rels1$}}
+    child {node {$\ex 2$}}
+    child {node {$\rels2$}}
+    child {node {$\cdots$}}
+    child {node {$\rels3$}}
+    child {node {$\ex n$}}
+    ;
+\end{tikzpicture}
+\treeto
+\begin{tikzpicture}
+  \node {Multirel: $\rels1 \rels2 \ldots \rels3$}
+    [edge from parent fork down]
+    child {node {$\ex 1$}}
+    child {node {$\ex 2$}}
+    child {node {$\cdots$}}
+    child {node {$\ex n$}}
+    ;
+\end{tikzpicture}
+
+
 \subsection{Operator}
+
+\textcolor{red}{The following might be rubbish\ldots}
 
 The general operator rules are as follows:
 
