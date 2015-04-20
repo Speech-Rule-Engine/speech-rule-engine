@@ -423,10 +423,13 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       children = sre.SemanticUtil.purgeNodes(children);
       // Single child node, i.e. the row is meaningless.
       if (children.length == 1) {
-        return this.parseMathml_(/** @type {!Element} */(children[0]));
+        newNode = this.parseMathml_(/** @type {!Element} */(children[0]));
+      } else {
+        // Case of a 'meaningful' row, even if they are empty.
+        newNode = this.processRow_(this.parseMathmlChildren_(children));
       }
-      // Case of a 'meaningful' row, even if they are empty.
-      return this.processRow_(this.parseMathmlChildren_(children));
+      newNode.mathml.unshift(mml);
+      return newNode;
     case 'MFRAC':
       newNode = this.makeFractionNode_(this.parseMathml_(children[0]),
           this.parseMathml_(children[1]));
@@ -529,6 +532,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       newNode = this.makeUnprocessed_(mml);
       break;
   }
+  newNode.mathml.unshift(mml);
   newNode.mathmlTree = mml;
   return newNode;
 };
@@ -600,7 +604,7 @@ sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
     return this.makeEmptyNode_();
   }
   var node = this.makeContentNode_(mml.textContent);
-  node.mathml = [mml];
+  //node.mathml = [mml];
   node.font = mml.getAttribute('mathvariant') || node.font;
   return node;
 };

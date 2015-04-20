@@ -40,13 +40,14 @@ sre.SemanticMathml = function() {
  * @enum {string}
  */
 sre.SemanticMathml.Attribute = {
-  CONTENT: 'semantic-content',
   CHILDREN: 'semantic-children',
-  PARENT: 'semantic-parent',
-  TYPE: 'semantic-type',
-  ROLE: 'semantic-role',
+  CONTENT: 'semantic-content',
   FONT: 'semantic-font',
-  OPERATOR: 'semantic-operator'
+  ID: 'semantic-id',
+  OPERATOR: 'semantic-operator',
+  PARENT: 'semantic-parent',
+  ROLE: 'semantic-role',
+  TYPE: 'semantic-type'
 };
 
 
@@ -94,8 +95,9 @@ sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
  * @return {!Element} The modified MathML element.
  */
 sre.SemanticMathml.enrich = function(mml, semantic) {
-  var newMml = sre.SystemExternal.document.createElement('math');
-  newMml.appendChild(sre.SemanticMathml.walkTree_(semantic.root));
+  // var newMml = sre.SystemExternal.document.createElement('math');
+  // newMml.appendChild();
+  var newMml = sre.SemanticMathml.walkTree_(semantic.root);
   sre.SemanticMathml.formattedOutput(mml, newMml, semantic, true);
   return newMml;
 };
@@ -108,7 +110,8 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
  */
 sre.SemanticMathml.addLeafId_ = function(semantic) {
   if (semantic.mathml.length === 1) {
-    semantic.mathml[0].setAttribute('id', semantic.id);
+    semantic.mathml[0].setAttribute(sre.SemanticMathml.Attribute.ID,
+                                    semantic.id);
     return;
   }
   for (var i = 0, content; content = semantic.contentNodes[i]; i++) {
@@ -135,26 +138,87 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     sre.SemanticMathml.setAttributes_(clone, semantic);
     return clone;
   }
+  var newNode = sre.SemanticMathml.specialCase_(semantic);
+  if (newNode) {
+    return newNode;
+  }
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
-  var newNode = sre.SystemExternal.document.createElement('mrow');
+  if (semantic.mathmlTree === null) {
+    if (semantic.mathml[0] &&
+        ['math', 'mrow', 'mpadded', 'mstyle'].
+            indexOf(semantic.mathml[0].tagName) !== -1) {
+      newNode = semantic.mathml[0].cloneNode(false);
+    } else {
+      newNode = sre.SystemExternal.document.createElement('mrow');
+    }
+  } else {
+    newNode = semantic.mathmlTree.cloneNode(false);
+  }
   sre.SemanticMathml.setAttributes_(newNode, semantic);
+  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                       sre.SemanticMathml.makeIdList_(newChildren));
   if (newContent.length > 0) {
     newNode.setAttribute(sre.SemanticMathml.Attribute.CONTENT,
                          sre.SemanticMathml.makeIdList_(newContent));
+    var childrenList = sre.SemanticMathml.combineContentChildren_(
+        semantic, newContent, newChildren);
+  } else {
+    childrenList = newChildren;
   }
-  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                       sre.SemanticMathml.makeIdList_(newChildren));
-  var childrenList = sre.SemanticMathml.combineContentChildren_(
-      semantic, newContent, newChildren);
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
     child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
-                       newNode.getAttribute('id'));
+                       newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
   }
-  return newNode;
+  if (semantic.mathmlTree === null ||
+      semantic.mathmlTree === semantic.mathml[0]) {
+    return newNode;
+  }
+  return sre.SemanticMathml.wrapNewNode_(newNode, semantic.mathmlTree,
+                                         semantic.mathml);
+};
+
+
+/**
+ * Dealing with special cases in the semantic enrichment.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node.
+ * @return {Element} The enriched MathML node if the node is a special case.
+ * @private
+ */
+sre.SemanticMathml.specialCase_ = function(semantic) {
+  return null;
+};
+
+
+/**
+ * Wraps a new node into a layer of empty layout node from the original MathML
+ * expression.
+ * @param {!Element} newNode The node currently under consideration.
+ * @param {!Node} mathmlTree The MathML node associated with newNode.
+ * @param {!Array<Element>} mathml List of MathML elements.
+ * @return {!Element} The wrapped node.
+ * @private
+ */
+sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
+  // TODO (sorge) We might need to clone all these elements!
+  //     Deep or shallow?
+  var prefix = [];
+  var currentFirst = mathml[0];
+  var i = 0;
+  while (currentFirst && currentFirst !== mathmlTree) {
+    prefix.push(currentFirst);
+    i++;
+    currentFirst = mathml[i];
+  }
+  if (!currentFirst) {
+    return newNode;
+  }
+  currentFirst.parentNode.insertBefore(newNode, currentFirst);
+  currentFirst.parentNode.removeChild(currentFirst);
+  return /** @type {!Element} */(mathml[0]);
 };
 
 
@@ -166,7 +230,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  */
 sre.SemanticMathml.makeIdList_ = function(nodes) {
   return nodes.map(function(node) {
-    return node.getAttribute('id');
+    return node.getAttribute(sre.SemanticMathml.Attribute.ID);
   }).join(',');
 };
 
@@ -180,7 +244,7 @@ sre.SemanticMathml.makeIdList_ = function(nodes) {
 sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
   mml.setAttribute(sre.SemanticMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.SemanticMathml.Attribute.ROLE, semantic.role);
-  mml.setAttribute('id', semantic.id);
+  mml.setAttribute(sre.SemanticMathml.Attribute.ID, semantic.id);
 };
 
 
@@ -212,7 +276,8 @@ sre.SemanticMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.PUNCTUATED:
       var markupList = [];
       for (var i = 0, j = 0, child; child = children[i]; i++) {
-        if (child.getAttribute('id') == content[j].getAttribute('id')) {
+        if (child.getAttribute(sre.SemanticMathml.Attribute.ID) ==
+            content[j].getAttribute(sre.SemanticMathml.Attribute.ID)) {
           j++;
           markupList.push(child);
         }
