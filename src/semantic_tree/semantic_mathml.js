@@ -95,8 +95,6 @@ sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
  * @return {!Element} The modified MathML element.
  */
 sre.SemanticMathml.enrich = function(mml, semantic) {
-  // var newMml = sre.SystemExternal.document.createElement('math');
-  // newMml.appendChild();
   var newMml = sre.SemanticMathml.walkTree_(semantic.root);
   sre.SemanticMathml.formattedOutput(mml, newMml, semantic, true);
   return newMml;
@@ -148,8 +146,8 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
   if (semantic.mathmlTree === null) {
     if (semantic.mathml[0] &&
-        ['math', 'mrow', 'mpadded', 'mstyle'].
-            indexOf(semantic.mathml[0].tagName) !== -1) {
+        sre.SemanticUtil.EMPTYTAGS.
+            indexOf(sre.SemanticUtil.tagName(semantic.mathml[0])) !== -1) {
       newNode = semantic.mathml[0].cloneNode(false);
     } else {
       newNode = sre.SystemExternal.document.createElement('mrow');
