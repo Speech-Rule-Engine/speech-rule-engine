@@ -138,7 +138,8 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   }
   var newNode = sre.SemanticMathml.specialCase_(semantic);
   if (newNode) {
-    return newNode;
+    return sre.SemanticMathml.wrapNewNode_(newNode, semantic.mathmlTree,
+                                           semantic.mathml);
   }
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
@@ -188,13 +189,9 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
   // TODO (sorge) Maybe check with via the subscript role?
-  console.log(semantic.mathmlTree);
-  if (semantic.mathmlTree) {console.log(semantic.mathmlTree.toString());};
-  console.log(semantic.type);
   if (semantic.mathmlTree && 
       sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
-    console.log(semantic.toString());
     var sup = sre.SemanticMathml.walkTree_(
         /** @type {!sre.SemanticTree.Node} */(semantic.childNodes[1]));
     var mmlsub = semantic.childNodes[0];
