@@ -187,6 +187,35 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
+  // TODO (sorge) Maybe check with via the subscript role?
+  console.log(semantic.mathmlTree);
+  if (semantic.mathmlTree) {console.log(semantic.mathmlTree.toString());};
+  console.log(semantic.type);
+  if (semantic.mathmlTree && 
+      sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
+      semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
+    console.log(semantic.toString());
+    var sup = sre.SemanticMathml.walkTree_(
+        /** @type {!sre.SemanticTree.Node} */(semantic.childNodes[1]));
+    var mmlsub = semantic.childNodes[0];
+    var base = sre.SemanticMathml.walkTree_(
+        /** @type {!sre.SemanticTree.Node} */(mmlsub.childNodes[0]));
+    var sub = sre.SemanticMathml.walkTree_(
+        /** @type {!sre.SemanticTree.Node} */(mmlsub.childNodes[1]));
+    var newChildren = [base, sub, sup];
+    var newNode = semantic.mathmlTree.cloneNode(false);
+    sre.SemanticMathml.setAttributes_(newNode, semantic);
+    newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                         sre.SemanticMathml.makeIdList_(newChildren));
+    for (var i = 0, child; child = newChildren[i]; i++) {
+      newNode.appendChild(child);
+      child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
+                         newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
+    }
+    newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
+                         mmlsub.role);
+    return newNode;
+  }
   return null;
 };
 
@@ -195,7 +224,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * Wraps a new node into a layer of empty layout node from the original MathML
  * expression.
  * @param {!Element} newNode The node currently under consideration.
- * @param {!Node} mathmlTree The MathML node associated with newNode.
+ * @param {!Element} mathmlTree The MathML node associated with newNode.
  * @param {!Array<Element>} mathml List of MathML elements.
  * @return {!Element} The wrapped node.
  * @private

@@ -89,7 +89,7 @@ sre.SemanticTree.Node = function(id) {
 
   /**
    * The complete mml belonging to this node.
-   * @type {Node}
+   * @type {Element}
    */
   this.mathmlTree = null;
 
