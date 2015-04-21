@@ -128,6 +128,14 @@ sre.SemanticUtil.tagName = function(node) {
 
 
 /**
+ * List of MathML Tags that are considered to be leafs.
+ * @type {Array.<string>}
+ * @const
+ */
+sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN'];
+
+
+/**
  * List of MathML Tags that are to be ignored.
  * @type {Array.<string>}
  * @const
