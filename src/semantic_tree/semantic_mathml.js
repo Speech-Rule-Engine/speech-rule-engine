@@ -131,15 +131,17 @@ sre.SemanticMathml.addLeafId_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
+  // TODO (sorge) Contains a lot of casting. Rationalise!
   if (semantic.mathml.length === 1) {
-    var clone = sre.SemanticMathml.cloneNode_(semantic.mathml[0]);
+    var clone = sre.SemanticMathml.cloneNode_(
+        /**@type{!Element}*/(semantic.mathml[0]));
     sre.SemanticMathml.setAttributes_(clone, semantic);
     return clone;
   }
   var newNode = sre.SemanticMathml.specialCase_(semantic);
   if (newNode) {
-    return sre.SemanticMathml.wrapNewNode_(newNode, semantic.mathmlTree,
-                                           semantic.mathml);
+    return sre.SemanticMathml.wrapNewNode_(
+      newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
   }
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
@@ -149,7 +151,8 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     if (semantic.mathml[0] &&
         sre.SemanticUtil.EMPTYTAGS.
             indexOf(sre.SemanticUtil.tagName(semantic.mathml[0])) !== -1) {
-      newNode = sre.SemanticMathml.cloneNode_(semantic.mathml[0]);
+      newNode = sre.SemanticMathml.cloneNode_(
+        /**@type{!Element}*/(semantic.mathml[0]));
     } else {
       newNode = sre.SystemExternal.document.createElement('mrow');
     }
@@ -176,8 +179,8 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       semantic.mathmlTree === semantic.mathml[0]) {
     return newNode;
   }
-  return sre.SemanticMathml.wrapNewNode_(newNode, semantic.mathmlTree,
-                                         semantic.mathml);
+  return sre.SemanticMathml.wrapNewNode_(
+    newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
 };
 
 
@@ -189,16 +192,16 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
   // TODO (sorge) Maybe check with via the subscript role?
-  if (semantic.mathmlTree && 
+  if (semantic.mathmlTree &&
       sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
     var sup = sre.SemanticMathml.walkTree_(
-        /** @type {!sre.SemanticTree.Node} */(semantic.childNodes[1]));
+        /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]));
     var mmlsub = semantic.childNodes[0];
     var base = sre.SemanticMathml.walkTree_(
-        /** @type {!sre.SemanticTree.Node} */(mmlsub.childNodes[0]));
+        /**@type {!sre.SemanticTree.Node}*/(mmlsub.childNodes[0]));
     var sub = sre.SemanticMathml.walkTree_(
-        /** @type {!sre.SemanticTree.Node} */(mmlsub.childNodes[1]));
+        /**@type {!sre.SemanticTree.Node}*/(mmlsub.childNodes[1]));
     var newChildren = [base, sub, sup];
     var newNode = semantic.mathmlTree.cloneNode(false);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
@@ -246,7 +249,7 @@ sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
   }
   currentFirst.parentNode.insertBefore(newNode, currentFirst);
   currentFirst.parentNode.removeChild(currentFirst);
-  return /** @type {!Element} */(mathml[0]);
+  return /**@type {!Element}*/(mathml[0]);
 };
 
 

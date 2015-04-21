@@ -22,6 +22,7 @@ goog.provide('sre.Tests');
 goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakRuleTest');
+goog.require('sre.SemanticMathmlTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
@@ -59,6 +60,7 @@ sre.Tests.testList = [
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakRuleTest,
+  sre.SemanticMathmlTest,
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest
