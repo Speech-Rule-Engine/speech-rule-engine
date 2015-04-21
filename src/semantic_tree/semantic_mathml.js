@@ -134,7 +134,7 @@ sre.SemanticMathml.addLeafId_ = function(semantic) {
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
   if (semantic.mathml.length === 1) {
-    var clone = semantic.mathml[0].cloneNode(true);
+    var clone = sre.SemanticMathml.cloneNode_(semantic.mathml[0]);
     sre.SemanticMathml.setAttributes_(clone, semantic);
     return clone;
   }
@@ -150,12 +150,12 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     if (semantic.mathml[0] &&
         ['math', 'mrow', 'mpadded', 'mstyle'].
             indexOf(semantic.mathml[0].tagName) !== -1) {
-      newNode = semantic.mathml[0].cloneNode(false);
+      newNode = sre.SemanticMathml.cloneNode_(semantic.mathml[0]);
     } else {
       newNode = sre.SystemExternal.document.createElement('mrow');
     }
   } else {
-    newNode = semantic.mathmlTree.cloneNode(false);
+    newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
   }
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
@@ -203,8 +203,12 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
+  // TODO (sorge) Currently the outermost wrapping node is linked to the
+  //     parent. This should be changed and wrapping nodes should simply be
+  //     ignored!
+  //
   // TODO (sorge) We might need to clone all these elements!
-  //     Deep or shallow?
+  //     Deep or shallow? Use the custom cloning method.
   var prefix = [];
   var currentFirst = mathml[0];
   var i = 0;
@@ -322,4 +326,22 @@ sre.SemanticMathml.interleave_ = function(content, children) {
     result.push(children.shift());
   }
   return result;
+};
+
+
+/**
+ * Clones an original MathML node. Deep clone only if it is a leave node or was
+ * originally ignored.
+ * @param {!Element} mml The MathML node to clone.
+ * @return {!Element} The cloned node.
+ * @private
+ */
+sre.SemanticMathml.cloneNode_ = function(mml) {
+  // TODO (sorge) Ignored elements do not work yet.
+  var tagName = sre.SemanticUtil.tagName(mml);
+  if (sre.SemanticUtil.LEAFTAGS.indexOf(tagName) !== -1 ||
+      sre.SemanticUtil.IGNORETAGS.indexOf(tagName) !== -1) {
+    return mml.cloneNode(true);
+  }
+  return mml.cloneNode(false);
 };
