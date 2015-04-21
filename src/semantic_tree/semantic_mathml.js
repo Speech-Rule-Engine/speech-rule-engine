@@ -275,9 +275,10 @@ sre.SemanticMathml.combineContentChildren_ = function(
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
       var markupList = [];
-      for (var i = 0, j = 0, child; child = children[i]; i++) {
+      for (var i = 0, j = 0, child, cont;
+           child = children[i], cont = content[j]; i++) {
         if (child.getAttribute(sre.SemanticMathml.Attribute.ID) ==
-            content[j].getAttribute(sre.SemanticMathml.Attribute.ID)) {
+            cont.getAttribute(sre.SemanticMathml.Attribute.ID)) {
           j++;
           markupList.push(child);
         }
