@@ -23,6 +23,7 @@
 
 goog.provide('sre.SemanticMathml');
 
+goog.require('sre.Debugger');
 goog.require('sre.SemanticTree');
 
 
@@ -36,18 +37,28 @@ sre.SemanticMathml = function() {
 
 
 /**
+ * Prefix for semantic attributes.
+ * @type {string}
+ * @const
+ * @private
+ */
+sre.SemanticMathml.ATTRIBUTE_PREFIX_ = 'data-semantic-';
+
+
+/**
  * Mapping for attributes used in semantic enrichment.
  * @enum {string}
  */
 sre.SemanticMathml.Attribute = {
-  CHILDREN: 'semantic-children',
-  CONTENT: 'semantic-content',
-  FONT: 'semantic-font',
-  ID: 'semantic-id',
-  OPERATOR: 'semantic-operator',
-  PARENT: 'semantic-parent',
-  ROLE: 'semantic-role',
-  TYPE: 'semantic-type'
+  CHILDREN: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'children',
+  COLLAPSED: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'collapsed',
+  CONTENT: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'content',
+  FONT: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'font',
+  ID: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'id',
+  OPERATOR: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'operator',
+  PARENT: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'parent',
+  ROLE: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'role',
+  TYPE: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'type'
 };
 
 
@@ -83,7 +94,8 @@ sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
     console.log(output);
     return;
   }
-  console.log(name + ':\n```html\n' + output + '\n```\n');
+  console.log(name + ':\n```html\n' +
+              sre.SemanticMathml.removeAttributePrefix(output) + '\n```\n');
 };
 
 
@@ -96,7 +108,10 @@ sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
  */
 sre.SemanticMathml.enrich = function(mml, semantic) {
   var newMml = sre.SemanticMathml.walkTree_(semantic.root);
-  sre.SemanticMathml.formattedOutput(mml, newMml, semantic, true);
+  sre.Debugger.getInstance().generateOutput(
+      function() {
+        sre.SemanticMathml.formattedOutput(mml, newMml, semantic, true);
+      });
   return newMml;
 };
 
@@ -141,7 +156,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   var newNode = sre.SemanticMathml.specialCase_(semantic);
   if (newNode) {
     return sre.SemanticMathml.wrapNewNode_(
-      newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
+        newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
   }
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
@@ -152,7 +167,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         sre.SemanticUtil.EMPTYTAGS.
             indexOf(sre.SemanticUtil.tagName(semantic.mathml[0])) !== -1) {
       newNode = sre.SemanticMathml.cloneNode_(
-        /**@type{!Element}*/(semantic.mathml[0]));
+          /**@type{!Element}*/(semantic.mathml[0]));
     } else {
       newNode = sre.SystemExternal.document.createElement('mrow');
     }
@@ -180,7 +195,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     return newNode;
   }
   return sre.SemanticMathml.wrapNewNode_(
-    newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
+      newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
 };
 
 
@@ -371,4 +386,23 @@ sre.SemanticMathml.cloneNode_ = function(mml) {
     return mml.cloneNode(true);
   }
   return mml.cloneNode(false);
+};
+
+
+/**
+ * Removes the semantic prefix from the attributes of an enriched MathML element
+ * given as a serialised string. This is useful for more concise display.
+ *
+ * NOTE THAT THIS METHOD IS FRAGILE!
+ *
+ * The result is not necessarily a meaningful XML expression. Attributes might
+ * overwrite or be shadowed by other attributes already in the node. For
+ * example, with both PREFIX-attr and attr present, the latter is overwritten by
+ * the operation.
+ * @param {!string} mml The MathML node.
+ * @return {!string} The MathML node with rewritten attributes.
+ */
+sre.SemanticMathml.removeAttributePrefix = function(mml) {
+  return mml.toString().replace(
+      new RegExp(sre.SemanticMathml.ATTRIBUTE_PREFIX_, 'g'), '');
 };
