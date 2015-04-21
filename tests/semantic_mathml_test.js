@@ -95,4 +95,33 @@ sre.SemanticMathmlTest.prototype.testNumbers = function() {
 };
 
 
+/**
+ * Test mixed number representations.
+ */
+sre.SemanticMathmlTest.prototype.testStreeMixedNumbers = function() {
+  this.executeMathmlTest(
+      '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<math type="number" role="mixed" id="4" children="0,3">' +
+      '<mn type="number" role="integer" id="0" parent="4">3</mn>' +
+      '<mfrac type="fraction" role="vulgar" id="3" children="1,2" parent="4">' +
+      '<mn type="number" role="integer" id="1" parent="3">1</mn>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</mfrac></math>'
+  );
+  this.executeMathmlTest(
+      '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3</mn>',
+      '<math type="infixop" role="implicit" id="5"' +
+      ' children="2,3" content="4">' +
+      '<mfrac type="fraction" role="vulgar" id="2" children="0,1" parent="5">' +
+      '<mn type="number" role="integer" id="0" parent="2">1</mn>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</mfrac>' +
+      '<mrow type="operator" role="multiplication" id="4" children=""' +
+      ' operator="infixop,⁢" parent="5"/>' +
+      '<mn type="number" role="integer" id="3" parent="5">3</mn>' +
+      '</math>'
+  );
+};
+
+
 
