@@ -130,4 +130,5 @@ sre.Debugger.prototype.exit = function() {
   if (this.isActive_ && this.stream_) {
     this.stream_.end();
   }
+  this.isActive_ = false;
 };
