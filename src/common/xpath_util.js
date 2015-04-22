@@ -222,6 +222,9 @@ sre.XpathUtil.defaultNamespace_ = function(node) {
  * @param {Node} node The node that is rewritten.
  */
 sre.XpathUtil.prefixNamespace = function(node) {
+  if (!node || !node._nsMap) {
+    return;
+  }
   var attributes = node.attributes;
   for (var i = 0, attr; attr = attributes[i]; i++) {
     if (attr.name != 'xmlns' || attr.prefix) {

@@ -80,13 +80,16 @@ sre.System.prototype.trimInput_ = function(input) {
  */
 sre.System.prototype.parseInput = function(input) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
+  console.log(dp);
   var clean_input = this.trimInput_(input);
+  console.log(clean_input);
   if (!clean_input) {
     throw new sre.System.Error('Empty input!');
   }
   try {
     var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
     sre.XpathUtil.prefixNamespace(result);
+    console.log(result);
     return result;
   } catch (err) {
     throw new sre.System.Error('Illegal input: ' + err.message);
@@ -256,15 +259,23 @@ sre.System.prototype.processFile = function(input, opt_output) {
 
 /**
  * Enriches a MathML element with semantics from the tree.
- * REMARK: Very experimental!
  * @param {!string} expr The MathML expression as a string without math tags.
  * @return {!Element} The modified MathML element.
  */
 sre.System.prototype.enrichMathml = function(expr) {
-  //var mmlExpr = '<math>' + expr + '</math>';
   var mml = this.parseInput(expr);
   var tree = new sre.SemanticTree(mml);
   return sre.SemanticMathml.enrich(mml, tree);
 };
 
 
+/**
+ * Enriches a MathML element with semantics from the tree.
+ * @param {!string} expr The MathML expression as a string without math tags.
+ * @return {!Element} The modified MathML element.
+ */
+sre.System.prototype.enhanceMathml = function(expr) {
+  var mml = this.parseInput(expr);
+  var tree = new sre.SemanticTree(mml);
+  return sre.SemanticMathml.enrich(mml, tree);
+};

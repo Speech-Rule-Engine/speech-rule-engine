@@ -16,6 +16,7 @@ LIB_DIR = $(abspath ./lib)
 SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
+BROWSER = $(LIB_DIR)/sre_browser.js
 
 START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
@@ -226,3 +227,11 @@ api: $(SRC) # start_file
 #	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
 # The following command has to become the final namespace that gets everything together.
 	@$(CLOSURE_COMPILER) --namespace="sre.Api" --output_file $(TARGET)
+
+
+browser: $(SRC) # start_file
+	@echo Compiling Speech Rule Engine
+	@echo $^
+#	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
+# The following command has to become the final namespace that gets everything together.
+	@$(CLOSURE_COMPILER) --namespace="sre.System" --output_file $(BROWSER)
