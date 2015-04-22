@@ -220,25 +220,3 @@ sre.System.prototype.processFile = function(input, opt_output) {
     throw new sre.System.Error('Can not write to file: ' + opt_output);
   }
 };
-
-
-/**
- * Enriches a MathML element with semantics from the tree.
- * @param {!string} expr The MathML expression as a string without math tags.
- * @return {!Element} The modified MathML element.
- */
-sre.System.prototype.enrichMathml = function(expr) {
-  var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
-  return sre.Semantic.getMathml(mml);
-};
-
-
-/**
- * Enriches a MathML element with semantics from the tree.
- * @param {!string} expr The MathML expression as a string without math tags.
- * @return {!string} The modified MathML element serialised as string.
- */
-sre.System.prototype.enhanceMathml = function(expr) {
-  var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
-  return sre.Semantic.getMathml(mml).toString();
-};

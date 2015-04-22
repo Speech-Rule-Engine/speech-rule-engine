@@ -24,6 +24,7 @@ goog.provide('sre.Semantic.Font');
 goog.provide('sre.Semantic.Role');
 goog.provide('sre.Semantic.Type');
 
+goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticTree');
@@ -59,11 +60,23 @@ sre.Semantic.getTree = function(mml) {
 
 
 /**
+ * Enriches a MathML element with semantics from the tree.
+ * @param {!string} expr The MathML expression as a string without math tags.
+ * @return {!Element} The modified MathML element.
+ */
+sre.Semantic.enrichMathml = function(expr) {
+  // TODO (sorge) Catch error case.
+  var mml = sre.DomUtil.parseInput(expr);
+  return sre.Semantic.annotateMathml(mml);
+};
+
+
+/**
  * Creates the semantically enriched MathML representation.
  * @param {!Element} mml The original MathML node.
  * @return {!Element} Semantically enriched MathML node.
  */
-sre.Semantic.getMathml = function(mml) {
+sre.Semantic.annotateMathml = function(mml) {
   var tree = new sre.SemanticTree(mml);
   return sre.SemanticMathml.enrich(mml, tree);
 };

@@ -20,6 +20,7 @@
 goog.provide('sre.SemanticMathmlTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.Semantic');
 
 
 
@@ -45,7 +46,7 @@ goog.inherits(sre.SemanticMathmlTest, sre.AbstractTest);
  */
 sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var mathMl = '<math>' + mml + '</math>';
-  var node = sre.System.getInstance().enrichMathml(mathMl);
+  var node = sre.Semantic.enrichMathml(mathMl);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
