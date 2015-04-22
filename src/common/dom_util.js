@@ -80,13 +80,14 @@ sre.DomUtil.parseInput = function(input, opt_error) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var clean_input = sre.DomUtil.trimInput_(input);
   if (!clean_input) {
-    throw error.call(null, 'Empty input!');
+    var newError = new error('Empty input!');
+    throw newError;
   }
   try {
     var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
     sre.XpathUtil.prefixNamespace(result);
     return result;
   } catch (err) {
-    throw error.call(null, 'Illegal input: ' + err.message);
+    throw new error('Illegal input: ' + err.message);
   }
 };

@@ -55,7 +55,8 @@ goog.addSingletonGetter(sre.System);
  * @extends {Error}
  */
 sre.System.Error = function(msg) {
-  goog.base(this, msg || '');
+  goog.base(this);
+  this.message = msg || '';
   this.name = 'System Error';
 };
 goog.inherits(sre.System.Error, Error);

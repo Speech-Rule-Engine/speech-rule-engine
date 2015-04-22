@@ -96,7 +96,7 @@ sre.Cli.prototype.commandLine = function() {
       sre.System.getInstance().processFile(commander.input, commander.output);
     }
   } catch (err) {
-    console.log(err.message);
+    console.log(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit();
     process.exit(1);
   }
