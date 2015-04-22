@@ -24,6 +24,7 @@
 goog.provide('sre.BaseRuleStore');
 
 goog.require('sre.Debugger');
+goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
 goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
@@ -83,8 +84,8 @@ sre.BaseRuleStore = function() {
  */
 sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
   if (!node ||
-      (node.nodeType != sre.Engine.NodeType.ELEMENT_NODE &&
-       node.nodeType != sre.Engine.NodeType.TEXT_NODE)) {
+      (node.nodeType != sre.DomUtil.NodeType.ELEMENT_NODE &&
+       node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
   var matchingRules = this.speechRules_.filter(
