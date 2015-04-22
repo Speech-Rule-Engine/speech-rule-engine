@@ -36,11 +36,16 @@ sre.SystemExternal = function() { };
  * @const
  * @type {string}
  */
-sre.SystemExternal.jsonPath =
-    (process.env.SRE_JSON_PATH ||
-    global.SRE_JSON_PATH ||
-    process.cwd() + '/mathmaps') +
-    '/';
+sre.SystemExternal.jsonPath = function() {
+  if (typeof process !== 'undefined' &&
+      typeof global !== 'undefined') {
+    return (process.env.SRE_JSON_PATH ||
+            global.SRE_JSON_PATH ||
+            process.cwd() + '/mathmaps') +
+        '/';
+  }
+  return undefined;
+}();
 
 
 /**
@@ -49,15 +54,11 @@ sre.SystemExternal.jsonPath =
  * @return {Object} The library object that has been loaded.
  */
 sre.SystemExternal.require = function(library) {
-  return require(library);
+  if (typeof require !== 'undefined') {
+    return require(library);
+  }
+  return null;
 };
-
-
-/**
- * Xmldom library.
- * @type {Object}
- */
-sre.SystemExternal.xmldom = sre.SystemExternal.require('xmldom');
 
 
 /**
@@ -67,6 +68,15 @@ sre.SystemExternal.xmldom = sre.SystemExternal.require('xmldom');
 sre.SystemExternal.documentSupported = function() {
   return !(typeof(document) == 'undefined');
 };
+
+
+/**
+ * Xmldom library.
+ * @type {Object}
+ */
+sre.SystemExternal.xmldom = sre.SystemExternal.documentSupported() ?
+    window :
+    sre.SystemExternal.require('xmldom');
 
 
 /**
@@ -83,18 +93,21 @@ sre.SystemExternal.document = sre.SystemExternal.documentSupported() ?
  * Xpath library.
  * @type {Object}
  */
-sre.SystemExternal.xpath = sre.SystemExternal.require('xpath');
+sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
+    document : sre.SystemExternal.require('xpath');
 
 
 /**
  * Commander library.
  * @type {Object}
  */
-sre.SystemExternal.commander = sre.SystemExternal.require('commander');
+sre.SystemExternal.commander = sre.SystemExternal.documentSupported() ?
+    null : sre.SystemExternal.require('commander');
 
 
 /**
  * Filesystem library.
  * @type {Object}
  */
-sre.SystemExternal.fs = sre.SystemExternal.require('fs');
+sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
+    null : sre.SystemExternal.require('fs');
