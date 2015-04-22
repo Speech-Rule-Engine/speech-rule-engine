@@ -50,6 +50,7 @@ sre.SemanticMathml.ATTRIBUTE_PREFIX_ = 'data-semantic-';
  * @enum {string}
  */
 sre.SemanticMathml.Attribute = {
+  ADDED: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'added',
   CHILDREN: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'children',
   COLLAPSED: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'collapsed',
   CONTENT: sre.SemanticMathml.ATTRIBUTE_PREFIX_ + 'content',
@@ -210,14 +211,14 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   if (semantic.mathmlTree &&
       sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
-    var sup = sre.SemanticMathml.walkTree_(
-        /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]));
-    var mmlsub = semantic.childNodes[0];
-    var base = sre.SemanticMathml.walkTree_(
-        /**@type {!sre.SemanticTree.Node}*/(mmlsub.childNodes[0]));
-    var sub = sre.SemanticMathml.walkTree_(
-        /**@type {!sre.SemanticTree.Node}*/(mmlsub.childNodes[1]));
-    var newChildren = [base, sub, sup];
+    var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
+    var ignore = semantic.childNodes[0];
+    var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
+    var subSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[1]);
+    var supMml = sre.SemanticMathml.walkTree_(supSem);
+    var baseMml = sre.SemanticMathml.walkTree_(baseSem);
+    var subMml = sre.SemanticMathml.walkTree_(subSem);
+    var newChildren = [baseMml, subMml, supMml];
     var newNode = semantic.mathmlTree.cloneNode(false);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
@@ -228,7 +229,13 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
                          newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
     }
     newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
-                         mmlsub.role);
+                         ignore.role);
+    // TODO (sorge) But this into separate function when doing the mmultiscript
+    //     work.
+    newNode.setAttribute(sre.SemanticMathml.Attribute.COLLAPSED,
+                         '(' + semantic.id +
+                         ' (' + ignore.id + ' ' + baseSem.id + ' ' +
+                         subSem.id + ') ' + supSem.id + ')');
     return newNode;
   }
   return null;
