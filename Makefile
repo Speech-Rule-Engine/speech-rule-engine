@@ -17,6 +17,7 @@ SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
+SEMANTIC = $(LIB_DIR)/semantic.js
 
 START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
@@ -221,17 +222,21 @@ maps: $(MAPS)
 $(MAPS): 
 	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
 
-api: $(SRC) # start_file
-	@echo Compiling Speech Rule Engine
+api: $(SRC)
+	@echo Compiling Speech Rule Engine API
 	@echo $^
-#	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
-# The following command has to become the final namespace that gets everything together.
 	@$(CLOSURE_COMPILER) --namespace="sre.Api" --output_file $(TARGET)
 
 
-browser: $(SRC) # start_file
-	@echo Compiling Speech Rule Engine
+## Other useful targets.
+
+browser: $(SRC)
+	@echo Compiling browser ready Speech Rule Engine
 	@echo $^
-#	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
-# The following command has to become the final namespace that gets everything together.
 	@$(CLOSURE_COMPILER) --namespace="sre.System" --output_file $(BROWSER)
+
+
+semantic: $(SRC)
+	@echo Compiling browser ready Semantic Tree API
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Semantic" --output_file $(SEMANTIC)
