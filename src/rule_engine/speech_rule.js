@@ -401,7 +401,7 @@ sre.SpeechRule.stringifyCstr = function(cstr) {
  * @extends {Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
+  goog.base(this, msg || '');
   this.name = 'RuleError';
-  this.message = msg || '';
 };
 goog.inherits(sre.SpeechRule.OutputError, Error);
