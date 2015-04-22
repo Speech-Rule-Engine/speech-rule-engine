@@ -51,6 +51,7 @@
  */
 
 goog.provide('sre.SemanticAttr');
+goog.provide('sre.SemanticAttr.Role');
 
 goog.require('sre.SemanticUtil');
 
@@ -1217,13 +1218,6 @@ sre.SemanticAttr = function() {
   this.meaning_ = this.initMeaning_();
 };
 goog.addSingletonGetter(sre.SemanticAttr);
-
-
-/**
- * Union type of semantic attributes.
- * @typedef {sre.SemanticAttr.Type|sre.SemanticAttr.Role}
- */
-sre.SemanticAttr.Attr;
 
 
 /**

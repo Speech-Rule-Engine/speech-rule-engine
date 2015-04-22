@@ -26,8 +26,7 @@ goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.SemanticMathml');
-goog.require('sre.SemanticTree');
+goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
@@ -80,16 +79,13 @@ sre.System.prototype.trimInput_ = function(input) {
  */
 sre.System.prototype.parseInput = function(input) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
-  console.log(dp);
   var clean_input = this.trimInput_(input);
-  console.log(clean_input);
   if (!clean_input) {
     throw new sre.System.Error('Empty input!');
   }
   try {
     var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
     sre.XpathUtil.prefixNamespace(result);
-    console.log(result);
     return result;
   } catch (err) {
     throw new sre.System.Error('Illegal input: ' + err.message);
@@ -215,8 +211,8 @@ sre.System.prototype.processExpression = function(expr) {
  * @private
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {
-  var tree = new sre.SemanticTree(mml);
-  return this.parseInput(tree.xml().toString());
+  var tree = sre.Semantic.getTree(mml);
+  return this.parseInput(tree.toString());
 };
 
 
@@ -264,18 +260,16 @@ sre.System.prototype.processFile = function(input, opt_output) {
  */
 sre.System.prototype.enrichMathml = function(expr) {
   var mml = this.parseInput(expr);
-  var tree = new sre.SemanticTree(mml);
-  return sre.SemanticMathml.enrich(mml, tree);
+  return sre.Semantic.getMathml(mml);
 };
 
 
 /**
  * Enriches a MathML element with semantics from the tree.
  * @param {!string} expr The MathML expression as a string without math tags.
- * @return {!Element} The modified MathML element.
+ * @return {!string} The modified MathML element serialised as string.
  */
 sre.System.prototype.enhanceMathml = function(expr) {
   var mml = this.parseInput(expr);
-  var tree = new sre.SemanticTree(mml);
-  return sre.SemanticMathml.enrich(mml, tree);
+  return sre.Semantic.getMathml(mml).toString();
 };
