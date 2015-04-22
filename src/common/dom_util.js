@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview A collection of JavaScript utilities used to simplify working
- * with the DOM.
+ * with DOM nodes.
  * Currently minimized for the standalone speech rule engine.
  * @author clchen@google.com (Charles L. Chen)
  * @author volker.sorge@gmail.com (Volker Sorge)
@@ -55,4 +55,38 @@ sre.DomUtil.toArray = function(nodeList) {
  */
 sre.DomUtil.removeEmpty = function(strs) {
   return strs.filter(function(str) {return str;});
+};
+
+
+/**
+ * Trims the whitespace in an XML input string.
+ * @param {string} input The XML input string.
+ * @return {string} The string with whitespace removed between tags.
+ * @private
+ */
+sre.DomUtil.trimInput_ = function(input) {
+  return input.replace(/>\s+</g, '><').trim();
+};
+
+
+/**
+ * Parses the XML input string into an XML structure.
+ * @param {string} input The XML input string.
+ * @param {function (new:Error, string)=} opt_error Optional error function.
+ * @return {!Element} The XML document structure corresponding to the node.
+ */
+sre.DomUtil.parseInput = function(input, opt_error) {
+  var error = opt_error || Error;
+  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var clean_input = sre.DomUtil.trimInput_(input);
+  if (!clean_input) {
+    throw error.call(null, 'Empty input!');
+  }
+  try {
+    var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
+    sre.XpathUtil.prefixNamespace(result);
+    return result;
+  } catch (err) {
+    throw error.call(null, 'Illegal input: ' + err.message);
+  }
 };

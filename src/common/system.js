@@ -55,42 +55,10 @@ goog.addSingletonGetter(sre.System);
  * @extends {Error}
  */
 sre.System.Error = function(msg) {
+  goog.base(this, msg || '');
   this.name = 'System Error';
-  this.message = msg || '';
 };
 goog.inherits(sre.System.Error, Error);
-
-
-/**
- * Trims the whitespace in an XML input string.
- * @param {string} input The XML input string.
- * @return {string} The string with whitespace removed between tags.
- * @private
- */
-sre.System.prototype.trimInput_ = function(input) {
-  return input.replace(/>\s+</g, '><').trim();
-};
-
-
-/**
- * Parses the XML input string into an XML structure.
- * @param {string} input The XML input string.
- * @return {!Element} The XML document structure corresponding to the node.
- */
-sre.System.prototype.parseInput = function(input) {
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var clean_input = this.trimInput_(input);
-  if (!clean_input) {
-    throw new sre.System.Error('Empty input!');
-  }
-  try {
-    var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
-    sre.XpathUtil.prefixNamespace(result);
-    return result;
-  } catch (err) {
-    throw new sre.System.Error('Illegal input: ' + err.message);
-  }
-};
 
 
 /**
@@ -185,7 +153,7 @@ sre.System.prototype.setupEngine = function(feature) {
  */
 sre.System.prototype.processExpression = function(expr) {
   try {
-    var xml = this.parseInput(expr);
+    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
     if (sre.Engine.getInstance().semantics) {
       xml = this.getSemanticTree_(xml);
     }
@@ -212,7 +180,7 @@ sre.System.prototype.processExpression = function(expr) {
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {
   var tree = sre.Semantic.getTree(mml);
-  return this.parseInput(tree.toString());
+  return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
 };
 
 
@@ -259,7 +227,7 @@ sre.System.prototype.processFile = function(input, opt_output) {
  * @return {!Element} The modified MathML element.
  */
 sre.System.prototype.enrichMathml = function(expr) {
-  var mml = this.parseInput(expr);
+  var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
   return sre.Semantic.getMathml(mml);
 };
 
@@ -270,6 +238,6 @@ sre.System.prototype.enrichMathml = function(expr) {
  * @return {!string} The modified MathML element serialised as string.
  */
 sre.System.prototype.enhanceMathml = function(expr) {
-  var mml = this.parseInput(expr);
+  var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
   return sre.Semantic.getMathml(mml).toString();
 };

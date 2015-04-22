@@ -21,6 +21,7 @@
 goog.provide('sre.SemanticTreeTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
@@ -103,9 +104,9 @@ sre.SemanticTreeTest.prototype.customizeXml = function(xml) {
 sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  var node = sre.System.getInstance().parseInput(mathMl);
+  var node = sre.DomUtil.parseInput(mathMl);
   var stree = new sre.SemanticTree(node);
-  var sxml = sre.System.getInstance().parseInput(
+  var sxml = sre.DomUtil.parseInput(
       stree.xml(this.brief).toString());
   this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
