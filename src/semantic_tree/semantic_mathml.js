@@ -230,7 +230,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     }
     newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
                          ignore.role);
-    // TODO (sorge) But this into separate function when doing the mmultiscript
+    // TODO (sorge) Put this into separate function when doing the mmultiscript
     //     work.
     newNode.setAttribute(sre.SemanticMathml.Attribute.COLLAPSED,
                          '(' + semantic.id +
@@ -339,10 +339,31 @@ sre.SemanticMathml.combineContentChildren_ = function(
       sre.SemanticMathml.setOperatorAttribute_(semantic, markupList);
       return children;
     case sre.SemanticAttr.Type.APPL:
-      return [children[0], content[0], children[1]];
+      var funcAppl = sre.SemanticMathml.createInvisibleOperator_(
+          /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
+      return [children[0], funcAppl, children[1]];
     default:
+      // TODO (sorge) This should probably be children!
       return content;
   }
+};
+
+
+/**
+ * Makes a new MathML element for an invisible operator.
+ * @param {!sre.SemanticTree.Node} operator The semantic node with the operator.
+ * @return {!Element} The newly created MathML element.
+ * @private
+ */
+sre.SemanticMathml.createInvisibleOperator_ = function(operator) {
+  console.log(operator.toString());
+  var moNode = sre.SystemExternal.document.createElement('mo');
+  var text = sre.SystemExternal.document.
+      createTextNode(operator.textContent);
+  moNode.appendChild(text);
+  sre.SemanticMathml.setAttributes_(moNode, operator);
+  moNode.setAttribute(sre.SemanticMathml.Attribute.ADDED, 'true');
+  return moNode;
 };
 
 
