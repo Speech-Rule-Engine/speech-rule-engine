@@ -113,3 +113,17 @@ sre.DomUtil.NodeType = {
   DOCUMENT_FRAGMENT_NODE: 11,
   NOTATION_NODE: 12
 };
+
+
+/**
+ * Cleanly replaces child nodes in a parent.
+ * @param {!Node} oldNode The node to be replaced.
+ * @param {!Node} newNode The replacement node.
+ */
+sre.DomUtil.replaceNode = function(oldNode, newNode) {
+  if (!oldNode.parentNode) {
+    return;
+  }
+  oldNode.parentNode.insertBefore(newNode, oldNode);
+  oldNode.parentNode.removeChild(oldNode);
+};

@@ -114,16 +114,21 @@ sre.SemanticMathml.formattedOutput_ = function(element, name, wiki) {
 
 /**
  * Enriches a MathML element with semantics from the tree.
- * REMARK: Very experimental! mml is not really necessary!
+ *
+ * NOTE: This is destructive on the MathML expression underlying the semantic
+ *     tree! Make sure to copy the original, if necessary!
  * @param {!Element} mml The MathML element.
  * @param {!sre.SemanticTree} semantic The semantic tree.
  * @return {!Element} The modified MathML element.
  */
 sre.SemanticMathml.enrich = function(mml, semantic) {
+  // The first line is only to preserve output. This should eventually be
+  // deleted.
+  var oldMml = mml.cloneNode(true);
   var newMml = sre.SemanticMathml.walkTree_(semantic.root);
   sre.Debugger.getInstance().generateOutput(
       function() {
-        sre.SemanticMathml.formattedOutput(mml, newMml, semantic, true);
+        sre.SemanticMathml.formattedOutput(oldMml, newMml, semantic, true);
       });
   return newMml;
 };
@@ -207,6 +212,9 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       semantic.mathmlTree === semantic.mathml[0]) {
     return newNode;
   }
+  console.log('Node: ', semantic.toString());
+  semantic.mathml.forEach(function(x) {console.log(x.toString());});
+  console.log('<<<<<<<<<<<<<<<<<');
   return sre.SemanticMathml.wrapNewNode_(
       newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
 };
@@ -301,9 +309,29 @@ sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
   if (!currentFirst) {
     return newNode;
   }
-  currentFirst.parentNode.insertBefore(newNode, currentFirst);
-  currentFirst.parentNode.removeChild(currentFirst);
-  return /**@type {!Element}*/(mathml[0]);
+  prefix.forEach(function(x) {console.log(x.toString());});
+  var oldNode = currentFirst;
+  while (prefix.length > 0) {
+    var oldLast = prefix.pop();
+    sre.SemanticMathml.printNodeList__('oldLast: children', oldLast.childNodes);
+    var newLast = sre.SemanticMathml.cloneNode_(oldLast);
+
+    sre.SemanticMathml.printNodeList__(
+        'newLast: children before', newLast.childNodes);
+    sre.SemanticMathml.printNodeList__(
+        'oldLast: children before', oldLast.childNodes);
+
+    sre.DomUtil.replaceNode(oldNode, newNode);
+    sre.DomUtil.toArray(oldLast.childNodes).
+        forEach(function(x) {newLast.appendChild(x);});
+
+    sre.SemanticMathml.printNodeList__(
+        'newLast: children after', newLast.childNodes);
+    oldNode = oldLast;
+    newNode = newLast;
+  }
+  console.log(newNode.toString());
+  return /**@type {!Element}*/(newNode);
 };
 
 
@@ -465,4 +493,16 @@ sre.SemanticMathml.cloneNode_ = function(mml) {
 sre.SemanticMathml.removeAttributePrefix = function(mml) {
   return mml.toString().replace(
       new RegExp(sre.SemanticMathml.ATTRIBUTE_PREFIX_, 'g'), '');
+};
+
+
+/**
+ * Prints a list of nodes.
+ * @param {string} title A string to print first.
+ * @param {!NodeList} nodes A list of nodes.
+ */
+sre.SemanticMathml.printNodeList__ = function(title, nodes) {
+  console.log(title);
+  sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
+  console.log('<<<<<<<<<<<<<<<<<');
 };

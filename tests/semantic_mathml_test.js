@@ -117,8 +117,8 @@ sre.SemanticMathmlTest.prototype.testStreeMixedNumbers = function() {
       '<mn type="number" role="integer" id="0" parent="2">1</mn>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</mfrac>' +
-      '<mrow type="operator" role="multiplication" id="4" children=""' +
-      ' operator="infixop,⁢" parent="5"/>' +
+      '<mo type="operator" role="multiplication" id="4" added="true"' +
+      ' operator="infixop,⁢" parent="5">⁢</mo>' +
       '<mn type="number" role="integer" id="3" parent="5">3</mn>' +
       '</math>'
   );
