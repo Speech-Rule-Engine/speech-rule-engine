@@ -6886,9 +6886,12 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
 
   this.executeTreeTest(
       '<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>',
-      '<punctuated role="text" id="6">' +
+      '<punctuated role="text" id="9">' +
       '<content>' +
       '<punctuation role="dummy" id="5">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="6">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="8">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
@@ -6912,6 +6915,7 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '<children>' +
       '<punctuated>' +
       '<content>' +
+      '<punctuation>\u2063</punctuation>' +
       '<punctuation>\u2063</punctuation>' +
       '</content>' +
       '<children>' +
@@ -6947,6 +6951,8 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '<mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>',
       '<punctuated>' +
       '<content>' +
+      '<punctuation>\u2063</punctuation>' +
+      '<punctuation>\u2063</punctuation>' +
       '<punctuation>\u2063</punctuation>' +
       '</content>' +
       '<children>' +

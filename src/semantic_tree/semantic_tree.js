@@ -1477,8 +1477,7 @@ sre.SemanticTree.prototype.makePunctuatedNode_ = function(
   } else if (punctuations.length == 1 &&
       nodes[nodes.length - 1].type == sre.SemanticAttr.Type.PUNCTUATION) {
     newNode.role = sre.SemanticAttr.Role.ENDPUNCT;
-  } else if (punctuations.length == 1 &&
-      punctuations[0].role == sre.SemanticAttr.Role.DUMMY) {
+  } else if (punctuations.every(sre.SemanticTree.attrPred_('role', 'DUMMY'))) {
     newNode.role = sre.SemanticAttr.Role.TEXT;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
@@ -1495,9 +1494,10 @@ sre.SemanticTree.prototype.makePunctuatedNode_ = function(
  * @private
  */
 sre.SemanticTree.prototype.makeDummyNode_ = function(children) {
-  var comma = this.makeContentNode_(sre.SemanticAttr.invisibleComma());
-  comma.role = sre.SemanticAttr.Role.DUMMY;
-  return this.makePunctuatedNode_(children, [comma]);
+  var commata = this.makeMultipleContentNodes_(
+      children.length - 1, sre.SemanticAttr.invisibleComma());
+  commata.forEach(function(comma) {comma.role = sre.SemanticAttr.Role.DUMMY;});
+  return this.makePunctuatedNode_(children, commata);
 };
 
 
