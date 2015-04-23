@@ -37,6 +37,18 @@ sre.SemanticMathml = function() {
 
 
 /**
+ * Object containing settings for the semantic enrichment.
+ * @type {{collapsed: boolean,
+ *         implicit : boolean}}
+ * @const
+ */
+sre.SemanticMathml.SETTINGS = {
+  collapsed: true,
+  implicit: true
+};
+
+
+/**
  * Prefix for semantic attributes.
  * @type {string}
  * @const
@@ -160,7 +172,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
   }
   var newContent = semantic.contentNodes.map(
-      /**@type{Function}*/(sre.SemanticMathml.walkTree_));
+      /**@type{Function}*/(sre.SemanticMathml.cloneContentNode_));
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.walkTree_));
   if (semantic.mathmlTree === null) {
@@ -207,7 +219,6 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
-  // TODO (sorge) Maybe check with via the subscript role?
   if (semantic.mathmlTree &&
       sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
@@ -239,6 +250,27 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     return newNode;
   }
   return null;
+};
+
+
+/**
+ * Clones a content node.
+ * @param {!sre.SemanticTree.Node} content The content node.
+ * @return {!Element} The corresponding MathML node.
+ * @private
+ */
+sre.SemanticMathml.cloneContentNode_ = function(content) {
+  var clone;
+  if (content.mathml.length > 0) {
+    clone = sre.SemanticMathml.cloneNode_(
+        /**@type{!Element}*/(content.mathml[0]));
+  } else {
+    clone = sre.SemanticMathml.SETTINGS.implicit ?
+        sre.SemanticMathml.createInvisibleOperator_(content) :
+        sre.SystemExternal.document.createElement('mrow');
+  }
+  sre.SemanticMathml.setAttributes_(clone, content);
+  return clone;
 };
 
 
@@ -327,6 +359,9 @@ sre.SemanticMathml.combineContentChildren_ = function(
       children.push(content[1]);
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
+      if (semantic.role === sre.SemanticAttr.Role.TEXT) {
+        return sre.SemanticMathml.interleave_(content, children);
+      }
       var markupList = [];
       for (var i = 0, j = 0, child, cont;
            child = children[i], cont = content[j]; i++) {
@@ -339,9 +374,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
       sre.SemanticMathml.setOperatorAttribute_(semantic, markupList);
       return children;
     case sre.SemanticAttr.Type.APPL:
-      var funcAppl = sre.SemanticMathml.createInvisibleOperator_(
-          /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
-      return [children[0], funcAppl, children[1]];
+      return [children[0], content[0], children[1]];
     default:
       // TODO (sorge) This should probably be children!
       return content;
@@ -356,7 +389,6 @@ sre.SemanticMathml.combineContentChildren_ = function(
  * @private
  */
 sre.SemanticMathml.createInvisibleOperator_ = function(operator) {
-  console.log(operator.toString());
   var moNode = sre.SystemExternal.document.createElement('mo');
   var text = sre.SystemExternal.document.
       createTextNode(operator.textContent);
