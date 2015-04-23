@@ -176,6 +176,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     return sre.SemanticMathml.wrapNewNode_(
         newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
   }
+
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.cloneContentNode_));
   var newChildren = semantic.childNodes.map(
@@ -193,20 +194,10 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
   }
   sre.SemanticMathml.setAttributes_(newNode, semantic);
-  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                       sre.SemanticMathml.makeIdList_(newChildren));
-  if (newContent.length > 0) {
-    newNode.setAttribute(sre.SemanticMathml.Attribute.CONTENT,
-                         sre.SemanticMathml.makeIdList_(newContent));
-    var childrenList = sre.SemanticMathml.combineContentChildren_(
-        semantic, newContent, newChildren);
-  } else {
-    childrenList = newChildren;
-  }
+  var childrenList = sre.SemanticMathml.combineContentChildren_(
+      semantic, newContent, newChildren);
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
-    child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
-                       newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
   }
   if (semantic.mathmlTree === null ||
       semantic.mathmlTree === semantic.mathml[0]) {
@@ -238,7 +229,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     var newNode = semantic.mathmlTree.cloneNode(false);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                         sre.SemanticMathml.makeIdList_(newChildren));
+                         sre.SemanticMathml.makeIdListOld_(newChildren));
     for (var i = 0, child; child = newChildren[i]; i++) {
       newNode.appendChild(child);
       child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
@@ -289,9 +280,8 @@ sre.SemanticMathml.cloneContentNode_ = function(content) {
  * @private
  */
 sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
-  // TODO (sorge) Currently the outermost wrapping node is linked to the
-  //     parent. This should be changed and wrapping nodes should simply be
-  //     ignored!
+  // TODO (sorge) There is still a problem with wrapped nodes on the very
+  //     outside.
   var prefix = [];
   var currentFirst = mathml[0];
   var i = 0;
@@ -310,11 +300,24 @@ sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
 
 /**
  * Concatenates node ids into a comma separated lists.
- * @param {!Array.<!Element>} nodes The list of nodes.
+ * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
  * @return {!string} The comma separated lists.
  * @private
  */
 sre.SemanticMathml.makeIdList_ = function(nodes) {
+  return nodes.map(function(node) {
+    return node.id;
+  }).join(',');
+};
+
+
+/**
+ * Concatenates node ids into a comma separated lists.
+ * @param {!Array.<!Element>} nodes The list of nodes.
+ * @return {!string} The comma separated lists.
+ * @private
+ */
+sre.SemanticMathml.makeIdListOld_ = function(nodes) {
   return nodes.map(function(node) {
     return node.getAttribute(sre.SemanticMathml.Attribute.ID);
   }).join(',');
@@ -331,6 +334,17 @@ sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
   mml.setAttribute(sre.SemanticMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.SemanticMathml.Attribute.ROLE, semantic.role);
   mml.setAttribute(sre.SemanticMathml.Attribute.ID, semantic.id);
+  if (semantic.childNodes.length > 0) {
+    mml.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                     sre.SemanticMathml.makeIdList_(semantic.childNodes));
+  }
+  if (semantic.contentNodes.length > 0) {
+    mml.setAttribute(sre.SemanticMathml.Attribute.CONTENT,
+                     sre.SemanticMathml.makeIdList_(semantic.contentNodes));
+  }
+  if (semantic.parent) {
+    mml.setAttribute(sre.SemanticMathml.Attribute.PARENT, semantic.parent.id);
+  }
 };
 
 
@@ -378,7 +392,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
       return [children[0], content[0], children[1]];
     default:
       // TODO (sorge) This should probably be children!
-      return content;
+      return children;
   }
 };
 
