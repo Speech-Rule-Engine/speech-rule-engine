@@ -201,9 +201,9 @@ might of course be empty.
 \noindent
 \begin{tabular}{l||l|l|l||r@{$\quad\longrightarrow\quad$}l}
   Type & Content & Children & Mixed Element & \multicolumn{2}{l}{Example}\\\hline
-  infix & Operators & Operands & unique operator & $a+b+c$ &  [+, +][a, b, c] ``+" \\
-  prefix & Operators & Operand & concatenated ops & $++a$ & [+, +][a]``++" \\ 
-  postfix & Operators & Operand & concatenated ops & $a--$ & [-, -][a]``--" \\ 
+  infixop & Operators & Operands & unique operator & $a+b+c$ &  [+, +][a, b, c] ``+" \\
+  prefixop & Operators & Operand & concatenated ops & $++a$ & [+, +][a]``++" \\ 
+  postfixop & Operators & Operand & concatenated ops & $a--$ & [-, -][a]``--" \\ 
   relseq & Relations & Operands & unique relation & $a=b=c$ & [=, =][a,b,c]``=" \\ 
   multirel & Relations & Operands & None & $a=b<c$ & [=, $<$][a,b,c] \\ 
   fenced & Fences & Content & None & $(a + c)$ & [(,)][a+c]\\
@@ -211,6 +211,22 @@ might of course be empty.
   appl & Application Char & Function, arguments & None & $f(x)$ & [@][f, (x)]\\
 \end{tabular}
 
+
+Interesting special cases are implicit infix operators, separated text, and
+function applications as they introduce elements that do not exist in the
+original MathML expression. The latter is already given in the table above. The
+former two correspond to the following two cases:
+
+\begin{enumerate}
+\item A sequence of separated identifiers is translated into an infixop with
+  role implicit, where the operator is the invisible times. The operator is
+  added as the mixed element but only once to the content. Moreover, it does not
+  correspond to an existing MathML element.
+\item A sequence dominated by mtext elements is translated into a punctuated
+  list with role text, where the punctuation is the invisible comma. Similar to
+  the previous case the invisible comma is added as mixed element but only once
+  to the content.
+\end{enumerate}
 
 
 
