@@ -1,6 +1,6 @@
 // Copyright 2015 Volker Sorge
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Apache on 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
@@ -212,9 +212,6 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       semantic.mathmlTree === semantic.mathml[0]) {
     return newNode;
   }
-  console.log('Node: ', semantic.toString());
-  semantic.mathml.forEach(function(x) {console.log(x.toString());});
-  console.log('<<<<<<<<<<<<<<<<<');
   return sre.SemanticMathml.wrapNewNode_(
       newNode, /**@type{!Element}*/(semantic.mathmlTree), semantic.mathml);
 };
@@ -295,9 +292,6 @@ sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
   // TODO (sorge) Currently the outermost wrapping node is linked to the
   //     parent. This should be changed and wrapping nodes should simply be
   //     ignored!
-  //
-  // TODO (sorge) We might need to clone all these elements!
-  //     Deep or shallow? Use the custom cloning method.
   var prefix = [];
   var currentFirst = mathml[0];
   var i = 0;
@@ -309,29 +303,8 @@ sre.SemanticMathml.wrapNewNode_ = function(newNode, mathmlTree, mathml) {
   if (!currentFirst) {
     return newNode;
   }
-  prefix.forEach(function(x) {console.log(x.toString());});
-  var oldNode = currentFirst;
-  while (prefix.length > 0) {
-    var oldLast = prefix.pop();
-    sre.SemanticMathml.printNodeList__('oldLast: children', oldLast.childNodes);
-    var newLast = sre.SemanticMathml.cloneNode_(oldLast);
-
-    sre.SemanticMathml.printNodeList__(
-        'newLast: children before', newLast.childNodes);
-    sre.SemanticMathml.printNodeList__(
-        'oldLast: children before', oldLast.childNodes);
-
-    sre.DomUtil.replaceNode(oldNode, newNode);
-    sre.DomUtil.toArray(oldLast.childNodes).
-        forEach(function(x) {newLast.appendChild(x);});
-
-    sre.SemanticMathml.printNodeList__(
-        'newLast: children after', newLast.childNodes);
-    oldNode = oldLast;
-    newNode = newLast;
-  }
-  console.log(newNode.toString());
-  return /**@type {!Element}*/(newNode);
+  sre.DomUtil.replaceNode(currentFirst, newNode);
+  return /**@type {!Element}*/(mathml[0]);
 };
 
 
