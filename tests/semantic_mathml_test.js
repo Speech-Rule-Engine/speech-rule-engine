@@ -56,12 +56,41 @@ sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
 };
 
 
+// Sub, Superscripts.
+/**
+ * Test for sub super and subsuper scripts.
+ */
+sre.SemanticMathmlTest.prototype.testScripts = function() {
+  this.executeMathmlTest(
+      '<msub><mi>a</mi><mi>b</mi></msub>',
+      '<math>' +
+      '<msub type="subscript" role="latinletter" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">a</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">b</mi>' +
+      '</msub></math>');
+  this.executeMathmlTest(
+      '<msup><mi>a</mi><mi>b</mi></msup>',
+      '<math>' +
+      '<msup type="superscript" role="latinletter" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">a</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">b</mi>' +
+      '</msup></math>');
+  this.executeMathmlTest(
+      '<msubsup><mi>a</mi><mi>b</mi><mi>c</mi></msubsup>',
+      '<math>' +
+      '<msubsup type="subsup" role="latinletter" id="4" children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">a</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">b</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">c</mi>' +
+      '</msubsup></math>');
+};
+
+
 // Numbers.
 /**
  * Test number representations.
  */
 sre.SemanticMathmlTest.prototype.testNumbers = function() {
-  this.brief = false;
   this.executeMathmlTest(
       '<mn>2</mn>',
       '<math>' +
@@ -146,7 +175,6 @@ sre.SemanticMathmlTest.prototype.testStreeMixedNumbers = function() {
  * Test relation trees.
  */
 sre.SemanticMathmlTest.prototype.testStreeRelations = function() {
-  this.brief = true;
   this.executeMathmlTest(
       '<mo>=</mo>',
     '<math><mo type="relation" role="equality" id="0" children="">=</mo></math>'
@@ -172,7 +200,6 @@ sre.SemanticMathmlTest.prototype.testStreeRelations = function() {
  * Test operator trees with pre- and postfixes.
  */
 sre.SemanticMathmlTest.prototype.testStreePrePostfixOperators = function() {
-  this.brief = true;
   // Pathological operator only case.
   this.executeMathmlTest(
       '<mo>+</mo><mo>-</mo><mo>+</mo>',
