@@ -60,6 +60,17 @@ sre.Semantic.getTree = function(mml) {
 
 
 /**
+ * Creates the semantic tree for a MathML string.
+ * @param {!string} expr The string representing the MathML expression.
+ * @return {Node} Semantic tree for input string as XML node.
+ */
+sre.Semantic.getTreeFromString = function(expr) {
+  var mml = sre.DomUtil.parseInput(expr);
+  return (new sre.SemanticTree(mml)).xml();
+};
+
+
+/**
  * Enriches a MathML element with semantics from the tree.
  * @param {!string} expr The MathML expression as a string without math tags.
  * @return {!Element} The modified MathML element.
