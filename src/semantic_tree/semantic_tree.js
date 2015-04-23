@@ -703,6 +703,7 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
   var newNode = this.makeInfixNode_(
       nodes, /**@type{!sre.SemanticTree.Node}*/(operators[0]));
   newNode.role = sre.SemanticAttr.Role.IMPLICIT;
+  operators.forEach(function(op) {op.parent = newNode;});
   newNode.contentNodes = operators;
   return newNode;
 };
