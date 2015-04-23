@@ -594,6 +594,22 @@ sre.SemanticTree.prototype.makeContentNode_ = function(content) {
 
 
 /**
+ * Create a list of content nodes all with the same content.
+ * @param {number} num The number of nodes to create.
+ * @param {string} content The text content of the node.
+ * @return {!Array.<sre.SemanticTree.Node>} The list of new nodes.
+ * @private
+ */
+sre.SemanticTree.prototype.makeMultipleContentNodes_ = function(num, content) {
+  var nodes = [];
+  for (var i = 0; i < num; i++) {
+    nodes.push(this.makeContentNode_(content));
+  }
+  return nodes;
+};
+
+
+/**
  * Create a leaf node.
  * @param {Node} mml The MathML tree.
  * @return {!sre.SemanticTree.Node} The new node.
@@ -681,10 +697,13 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
   if (nodes.length == 1) {
     return nodes[0];
   }
-  var operator = this.makeContentNode_(sre.SemanticAttr.invisibleTimes());
+  var operators = this.makeMultipleContentNodes_(
+      nodes.length - 1, sre.SemanticAttr.invisibleTimes());
   // For now we assume this is a multiplication using invisible times.
-  var newNode = this.makeInfixNode_(nodes, operator);
+  var newNode = this.makeInfixNode_(
+      nodes, /**@type{!sre.SemanticTree.Node}*/(operators[0]));
   newNode.role = sre.SemanticAttr.Role.IMPLICIT;
+  newNode.contentNodes = operators;
   return newNode;
 };
 

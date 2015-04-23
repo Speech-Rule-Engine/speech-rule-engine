@@ -238,7 +238,8 @@ sre.SemanticTreeTest.prototype.testStreeMixedNumbers = function() {
   this.executeTreeTest(
       '<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>',
       '<infixop>\u2062' +
-          '<content><operator>\u2062</operator></content>' +
+          '<content><operator>\u2062</operator>' +
+      '<operator>\u2062</operator></content>' +
       '<children>' +
       '<identifier>b</identifier>' +
       '<number>' +
@@ -476,7 +477,8 @@ sre.SemanticTreeTest.prototype.testStreeSingleOperators = function() {
   this.executeTreeTest(
       '<mi>a</mi><mi>b</mi><mi>c</mi>',
       '<infixop>\u2062' +
-          '<content><operator>\u2062</operator></content>' +
+          '<content><operator>\u2062</operator>' +
+          '<operator>\u2062</operator></content>' +
           '<children>' +
           '<identifier>a</identifier>' +
           '<identifier>b</identifier>' +
@@ -1360,6 +1362,8 @@ sre.SemanticTreeTest.prototype.testStreeMixedFences = function() {
       '<infixop>\u2062' +
       '<content>' +
       '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<fenced>' +
@@ -1398,6 +1402,7 @@ sre.SemanticTreeTest.prototype.testStreeMixedFences = function() {
       '<children>' +
       '<infixop>\u2062' +
       '<content>' +
+      '<operator>\u2062</operator>' +
       '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
@@ -7186,6 +7191,10 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
       '<infixop>\u2062' +
       '<content>' +
       '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<identifier>x</identifier>' +
@@ -7368,6 +7377,8 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
       '<infixop>\u2062' +
       '<content>' +
       '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number>1</number>' +
@@ -7420,6 +7431,8 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
       '</mfenced>',
       '<infixop>\u2062' +
       '<content>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
@@ -7798,9 +7811,11 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      '<infixop role="implicit" id="8">\u2062' +
+      '<infixop role="implicit" id="10">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="7">\u2062</operator>' +
+      '<operator role="multiplication" id="8">\u2062</operator>' +
+      '<operator role="multiplication" id="9">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<identifier role="unit" font="normal" id="0">s</identifier>' +
@@ -7826,9 +7841,11 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      '<infixop role="implicit" id="13">\u2062' +
+      '<infixop role="implicit" id="15">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="12">\u2062</operator>' +
+      '<operator role="multiplication" id="13">\u2062</operator>' +
+      '<operator role="multiplication" id="14">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<infixop role="unit" id="9">\u2062' +
@@ -7867,9 +7884,11 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      '<infixop role="implicit" id="12">\u2062' +
+      '<infixop role="implicit" id="14">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="11">\u2062</operator>' +
+      '<operator role="multiplication" id="12">\u2062</operator>' +
+      '<operator role="multiplication" id="13">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="0">3</number>' +
@@ -7905,9 +7924,10 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      '<infixop role="implicit" id="12">\u2062' +
+      '<infixop role="implicit" id="13">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="11">\u2062</operator>' +
+      '<operator role="multiplication" id="12">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="0">3</number>' +
