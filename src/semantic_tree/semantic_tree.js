@@ -1620,7 +1620,7 @@ sre.SemanticTree.isAccent_ = function(node) {
  * Recursive method to accumulate function expressions.
  *
  * The idea is to process functions in a row from left to right combining them
- * with there arguments. Thereby we take the notion of a function rather broadly
+ * with their arguments. Thereby we take the notion of a function rather broadly
  * as a functional expressions that consists of a prefix and some arguments.
  * In particular we distinguish four types of functional expressions:
  * - integral: Integral expression.
@@ -1671,7 +1671,7 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
   //  We do not allow double function application. This is not lambda calculus!
   if (funcNode.type == sre.SemanticAttr.Type.APPL ||
       funcNode.type == sre.SemanticAttr.Type.BIGOP ||
-          funcNode.type == sre.SemanticAttr.Type.INTEGRAL) {
+      funcNode.type == sre.SemanticAttr.Type.INTEGRAL) {
     return '';
   }
   // Find and remove explicit function applications.
@@ -1682,7 +1682,8 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
     restNodes.shift();
-    sre.SemanticTree.propagatePrefixFunc_(funcNode);
+    sre.SemanticTree.propagateFunctionRole_(
+        funcNode, sre.SemanticAttr.Role.PREFIXFUNC);
     return 'prefix';
   }
   switch (funcNode.role) {
@@ -1701,6 +1702,8 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
           funcNode.role == sre.SemanticAttr.Role.LATINLETTER ||
           funcNode.role == sre.SemanticAttr.Role.GREEKLETTER ||
           funcNode.role == sre.SemanticAttr.Role.OTHERLETTER) {
+        sre.SemanticTree.propagateFunctionRole_(
+            funcNode, sre.SemanticAttr.Role.SIMPLEFUNC);
         return 'simple';
       }
   }
@@ -1709,15 +1712,18 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
 
 
 /**
- * Propagates a prefix function role in a node.
+ * Propagates a function role in a node.
  * @param {sre.SemanticTree.Node} funcNode The node whose role is to be
- * rewritten.
+ *     rewritten.
+ * @param {sre.SemanticAttr.Role} tag The function role to be inserted.
  * @private
  */
-sre.SemanticTree.propagatePrefixFunc_ = function(funcNode) {
+sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
-    funcNode.role = sre.SemanticAttr.Role.PREFIXFUNC;
-    sre.SemanticTree.propagatePrefixFunc_(funcNode.childNodes[0]);
+    if (!sre.SemanticTree.attrPred_('role', 'subsup')) {
+      funcNode.role = tag;
+    }
+    sre.SemanticTree.propagateFunctionRole_(funcNode.childNodes[0], tag);
   }
 };
 
@@ -1858,6 +1864,7 @@ sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
  * Finds first large operator in a partial semantic tree if it exists.
  * @param {!sre.SemanticTree.Node} tree The partial tree.
  * @return {sre.SemanticTree.Node} The big operator.
+ * @private
  */
 sre.SemanticTree.getLargeOp_ = function(tree) {
   if (sre.SemanticTree.attrPred_('type', 'LARGEOP')(tree)) {
@@ -1865,7 +1872,7 @@ sre.SemanticTree.getLargeOp_ = function(tree) {
   }
   for (var i = 0, child; child = tree.childNodes[i]; i++) {
     var op = sre.SemanticTree.getLargeOp_(child);
-    if (op) {  
+    if (op) {
       return op;
     }
   }
