@@ -1682,8 +1682,10 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
     restNodes.shift();
+    // TODO (sorge) Here we should find out exactly what the function is.
+    console.log(funcNode.toString());
     sre.SemanticTree.propagateFunctionRole_(
-        funcNode, sre.SemanticAttr.Role.PREFIXFUNC);
+        funcNode, sre.SemanticAttr.Role.SIMPLEFUNC);
     return 'prefix';
   }
   switch (funcNode.role) {
@@ -1702,8 +1704,6 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
           funcNode.role == sre.SemanticAttr.Role.LATINLETTER ||
           funcNode.role == sre.SemanticAttr.Role.GREEKLETTER ||
           funcNode.role == sre.SemanticAttr.Role.OTHERLETTER) {
-        sre.SemanticTree.propagateFunctionRole_(
-            funcNode, sre.SemanticAttr.Role.SIMPLEFUNC);
         return 'simple';
       }
   }
@@ -1720,7 +1720,7 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
  */
 sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
-    if (!sre.SemanticTree.attrPred_('role', 'subsup')) {
+    if (!sre.SemanticTree.attrPred_('role', 'subsup')(funcNode)) {
       funcNode.role = tag;
     }
     sre.SemanticTree.propagateFunctionRole_(funcNode.childNodes[0], tag);
@@ -1778,6 +1778,8 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
       if (firstArg.type == sre.SemanticAttr.Type.FENCED &&
           firstArg.role != sre.SemanticAttr.Role.NEUTRAL &&
           this.simpleFunctionHeuristic_(firstArg)) {
+        sre.SemanticTree.propagateFunctionRole_(
+            func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = this.makeFunctionNode_(
             func, /** @type {!sre.SemanticTree.Node} */ (rest.shift()));
         rest.unshift(funcNode);
@@ -1837,8 +1839,15 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
   var applNode = this.makeContentNode_(sre.SemanticAttr.functionApplication());
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
+  var funcop = sre.SemanticTree.getFunctionOp_(
+      func, function(node) {
+          return sre.SemanticTree.attrPred_('type', 'FUNCTION')(node) || 
+            (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) && 
+             sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
+      }
+  );
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
-      [applNode]);
+      funcop ? [applNode, funcop] : [applNode]);
   newNode.role = func.role;
   return newNode;
 };

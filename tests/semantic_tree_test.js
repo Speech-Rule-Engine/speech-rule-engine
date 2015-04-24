@@ -2317,6 +2317,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2337,6 +2338,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2366,6 +2368,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2399,6 +2402,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2425,6 +2429,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2451,6 +2456,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2482,6 +2488,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2508,6 +2515,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2534,6 +2542,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2565,6 +2574,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2633,6 +2643,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2661,6 +2672,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2692,6 +2704,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2722,6 +2735,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2750,6 +2764,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2781,6 +2796,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2811,6 +2827,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2839,6 +2856,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2870,6 +2888,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2906,6 +2925,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2923,6 +2943,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -2957,6 +2978,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2974,6 +2996,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -2993,6 +3016,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>h</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>h</identifier>' +
@@ -3027,6 +3051,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3044,6 +3069,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3063,6 +3089,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>h</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>h</identifier>' +
@@ -3101,6 +3128,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3113,6 +3141,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3138,6 +3167,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>h</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>h</identifier>' +
@@ -3155,6 +3185,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3172,6 +3203,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3216,6 +3248,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3233,6 +3266,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3259,6 +3293,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>P</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>P</identifier>' +
@@ -3295,6 +3330,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3330,6 +3366,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3386,6 +3423,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<subscript>' +
@@ -3427,6 +3465,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -3509,6 +3548,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3529,6 +3569,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3558,6 +3599,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3584,6 +3626,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3610,6 +3653,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3641,6 +3685,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3667,6 +3712,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3693,6 +3739,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3724,6 +3771,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3750,6 +3798,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3792,6 +3841,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3820,6 +3870,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3851,6 +3902,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3881,6 +3933,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3909,6 +3962,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3940,6 +3994,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3970,6 +4025,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3998,6 +4054,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4029,6 +4086,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4065,6 +4123,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4082,6 +4141,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4116,6 +4176,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4133,6 +4194,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4152,6 +4214,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4186,6 +4249,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4203,6 +4267,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4222,6 +4287,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4260,6 +4326,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4286,6 +4353,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<subscript>' +
@@ -4312,6 +4380,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4354,6 +4423,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4376,6 +4446,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4413,6 +4484,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4425,6 +4497,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4445,6 +4518,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4462,6 +4536,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4480,6 +4555,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4502,6 +4578,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4519,6 +4596,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4537,6 +4615,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4559,6 +4638,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4590,6 +4670,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4609,6 +4690,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4632,6 +4714,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4653,6 +4736,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4672,6 +4756,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4695,6 +4780,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4716,6 +4802,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4735,6 +4822,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4758,6 +4846,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4785,6 +4874,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4794,6 +4884,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4819,6 +4910,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4828,6 +4920,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4839,6 +4932,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4864,6 +4958,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4873,6 +4968,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4884,6 +4980,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4915,6 +5012,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4932,6 +5030,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<subscript>' +
@@ -4950,6 +5049,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4983,6 +5083,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4997,6 +5098,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5019,6 +5121,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5077,6 +5180,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5091,6 +5195,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5121,6 +5226,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5135,6 +5241,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5163,6 +5270,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -5190,12 +5298,14 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>log</function>' +
       '</content>' +
       '<children>' +
       '<function>log</function>' +
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -5211,6 +5321,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>ln</function>' +
       '</content>' +
       '<children>' +
       '<function>ln</function>' +
@@ -5223,6 +5334,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -5253,12 +5365,14 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>log</function>' +
       '</content>' +
       '<children>' +
       '<function>log</function>' +
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -5270,6 +5384,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>ln</function>' +
       '</content>' +
       '<children>' +
       '<function>ln</function>' +
@@ -5282,6 +5397,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -6130,6 +6246,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6172,6 +6289,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6210,6 +6328,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limupper>' +
@@ -6250,6 +6369,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limboth>' +
@@ -6292,6 +6412,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>liminf</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6322,6 +6443,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>limsup</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6366,6 +6488,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6397,6 +6520,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6416,6 +6540,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6483,6 +6608,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>liminf</function>' +
       '</content>' +
       '<children>' +
       '<function>liminf</function>' +
@@ -6492,6 +6618,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>limsup</function>' +
       '</content>' +
       '<children>' +
       '<function>limsup</function>' +
@@ -6503,6 +6630,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<function>lim</function>' +
@@ -7786,6 +7914,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleUnits = function() {
       '<appl role="limit function" id="3">' +
       '<content>' +
       '<punctuation role="application" id="2">⁡</punctuation>' +
+      '<function role="limit function" font="normal" id="0">min</function>' +
       '</content>' +
       '<children>' +
       '<function role="limit function" font="normal" id="0">min</function>' +
