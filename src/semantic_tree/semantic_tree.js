@@ -1621,7 +1621,7 @@ sre.SemanticTree.isAccent_ = function(node) {
  * Recursive method to accumulate function expressions.
  *
  * The idea is to process functions in a row from left to right combining them
- * with there arguments. Thereby we take the notion of a function rather broadly
+ * with their arguments. Thereby we take the notion of a function rather broadly
  * as a functional expressions that consists of a prefix and some arguments.
  * In particular we distinguish four types of functional expressions:
  * - integral: Integral expression.
@@ -1672,7 +1672,7 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
   //  We do not allow double function application. This is not lambda calculus!
   if (funcNode.type == sre.SemanticAttr.Type.APPL ||
       funcNode.type == sre.SemanticAttr.Type.BIGOP ||
-          funcNode.type == sre.SemanticAttr.Type.INTEGRAL) {
+      funcNode.type == sre.SemanticAttr.Type.INTEGRAL) {
     return '';
   }
   // Find and remove explicit function applications.
@@ -1683,7 +1683,10 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
     restNodes.shift();
-    sre.SemanticTree.propagatePrefixFunc_(funcNode);
+    // TODO (sorge) Here we should find out exactly what the function is.
+    console.log(funcNode.toString());
+    sre.SemanticTree.propagateFunctionRole_(
+        funcNode, sre.SemanticAttr.Role.SIMPLEFUNC);
     return 'prefix';
   }
   switch (funcNode.role) {
@@ -1710,15 +1713,18 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
 
 
 /**
- * Propagates a prefix function role in a node.
+ * Propagates a function role in a node.
  * @param {sre.SemanticTree.Node} funcNode The node whose role is to be
- * rewritten.
+ *     rewritten.
+ * @param {sre.SemanticAttr.Role} tag The function role to be inserted.
  * @private
  */
-sre.SemanticTree.propagatePrefixFunc_ = function(funcNode) {
+sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
-    funcNode.role = sre.SemanticAttr.Role.PREFIXFUNC;
-    sre.SemanticTree.propagatePrefixFunc_(funcNode.childNodes[0]);
+    if (!sre.SemanticTree.attrPred_('role', 'subsup')(funcNode)) {
+      funcNode.role = tag;
+    }
+    sre.SemanticTree.propagateFunctionRole_(funcNode.childNodes[0], tag);
   }
 };
 
@@ -1773,6 +1779,8 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
       if (firstArg.type == sre.SemanticAttr.Type.FENCED &&
           firstArg.role != sre.SemanticAttr.Role.NEUTRAL &&
           this.simpleFunctionHeuristic_(firstArg)) {
+        sre.SemanticTree.propagateFunctionRole_(
+            func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = this.makeFunctionNode_(
             func, /** @type {!sre.SemanticTree.Node} */ (rest.shift()));
         rest.unshift(funcNode);
@@ -1832,8 +1840,15 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
   var applNode = this.makeContentNode_(sre.SemanticAttr.functionApplication());
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
+  var funcop = sre.SemanticTree.getFunctionOp_(
+      func, function(node) {
+          return sre.SemanticTree.attrPred_('type', 'FUNCTION')(node) || 
+            (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) && 
+             sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
+      }
+  );
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
-      [applNode]);
+      funcop ? [applNode, funcop] : [applNode]);
   newNode.role = func.role;
   return newNode;
 };
@@ -1847,8 +1862,10 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
  * @private
  */
 sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
+  var largeop = sre.SemanticTree.getFunctionOp_(
+      bigOp, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
   var newNode = this.makeBranchNode_(
-      sre.SemanticAttr.Type.BIGOP, [bigOp, arg], []);
+      sre.SemanticAttr.Type.BIGOP, [bigOp, arg], largeop ? [largeop] : []);
   newNode.role = bigOp.role;
   return newNode;
 };
@@ -1867,10 +1884,34 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
     integral, integrand, intvar) {
   integrand = integrand || this.makeEmptyNode_();
   intvar = intvar || this.makeEmptyNode_();
+  var largeop = sre.SemanticTree.getFunctionOp_(
+      integral, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.INTEGRAL,
-      [integral, integrand, intvar], []);
+      [integral, integrand, intvar], largeop ? [largeop] : []);
   newNode.role = integral.role;
   return newNode;
+};
+
+
+/**
+ * Finds the function operator in a partial semantic tree if it exists.
+ * @param {!sre.SemanticTree.Node} tree The partial tree.
+ * @param {!function(sre.SemanticTree.Node): boolean} pred Predicate for the
+ *    function operator.
+ * @return {sre.SemanticTree.Node} The function operator.
+ * @private
+ */
+sre.SemanticTree.getFunctionOp_ = function(tree, pred) {
+  if (pred(tree)) {
+    return tree;
+  }
+  for (var i = 0, child; child = tree.childNodes[i]; i++) {
+    var op = sre.SemanticTree.getFunctionOp_(child, pred);
+    if (op) {
+      return op;
+    }
+  }
+  return null;
 };
 
 
