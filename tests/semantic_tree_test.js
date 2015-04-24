@@ -6645,6 +6645,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mi>\u222B</mi><mi>dx</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<empty/>' +
@@ -6655,6 +6656,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mrow><mi>\u222B</mi><mi>x</mi><mi>dx</mi></mrow>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<identifier>x</identifier>' +
@@ -6665,6 +6667,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mrow><mi>\u222B</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<identifier>x</identifier>' +
@@ -6684,6 +6687,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mrow><mi>\u222B</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi><mi>x</mi></mrow>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<infixop>+' +
@@ -6732,6 +6736,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<mn>10</mn></munderover><mi>x</mi>' +
       '<mi>d</mi><mi>x</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6757,6 +6762,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<munder><mi>\u222B</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limlower>' +
       '<children>' +
@@ -6785,6 +6791,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</content>' +
       '<children>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6798,6 +6805,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</integral>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6813,6 +6821,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</infixop>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6831,12 +6840,15 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mi>\u222B</mi><mi>\u222B</mi><mi>\u222B</mi><mi>dx</mi><mi>dy</mi><mi>dz</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<empty/>' +
@@ -6849,6 +6861,39 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<identifier>dz</identifier>' +
       '</children>' +
       '</integral>');
+
+  this.executeTreeTest(
+    '<msub><mo>\u222B</mo><mi>X</mi></msub><mrow><msub><mo>\u2211</mo>' +
+      '<mi>Y</mi></msub><mi>a</mi></mrow><mi>dx</mi>',
+    '<integral>' +
+      '<content>' +
+      '<largeop>\u222B</largeop>' +
+      '</content>' +
+      '<children>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u222B</largeop>' +
+      '<identifier>X</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '<bigop>' +
+      '<content>' +
+      '<largeop>\u2211</largeop>' +
+      '</content>' +
+      '<children>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<identifier>Y</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</bigop>' +
+      '<identifier>dx</identifier>' +
+      '</children>' +
+      '</integral>'
+    );
 };
 
 

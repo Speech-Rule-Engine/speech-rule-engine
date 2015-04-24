@@ -1852,31 +1852,12 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
  * @private
  */
 sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
-  var largeop = sre.SemanticTree.getLargeOp_(bigOp);
+  var largeop = sre.SemanticTree.getFunctionOp_(
+      bigOp, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
   var newNode = this.makeBranchNode_(
       sre.SemanticAttr.Type.BIGOP, [bigOp, arg], largeop ? [largeop] : []);
   newNode.role = bigOp.role;
   return newNode;
-};
-
-
-/**
- * Finds first large operator in a partial semantic tree if it exists.
- * @param {!sre.SemanticTree.Node} tree The partial tree.
- * @return {sre.SemanticTree.Node} The big operator.
- * @private
- */
-sre.SemanticTree.getLargeOp_ = function(tree) {
-  if (sre.SemanticTree.attrPred_('type', 'LARGEOP')(tree)) {
-    return tree;
-  }
-  for (var i = 0, child; child = tree.childNodes[i]; i++) {
-    var op = sre.SemanticTree.getLargeOp_(child);
-    if (op) {
-      return op;
-    }
-  }
-  return null;
 };
 
 
@@ -1893,10 +1874,34 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
     integral, integrand, intvar) {
   integrand = integrand || this.makeEmptyNode_();
   intvar = intvar || this.makeEmptyNode_();
+  var largeop = sre.SemanticTree.getFunctionOp_(
+      integral, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.INTEGRAL,
-      [integral, integrand, intvar], []);
+      [integral, integrand, intvar], largeop ? [largeop] : []);
   newNode.role = integral.role;
   return newNode;
+};
+
+
+/**
+ * Finds the function operator in a partial semantic tree if it exists.
+ * @param {!sre.SemanticTree.Node} tree The partial tree.
+ * @param {!function(sre.SemanticTree.Node): boolean} pred Predicate for the
+ *    function operator.
+ * @return {sre.SemanticTree.Node} The function operator.
+ * @private
+ */
+sre.SemanticTree.getFunctionOp_ = function(tree, pred) {
+  if (pred(tree)) {
+    return tree;
+  }
+  for (var i = 0, child; child = tree.childNodes[i]; i++) {
+    var op = sre.SemanticTree.getFunctionOp_(child, pred);
+    if (op) {
+      return op;
+    }
+  }
+  return null;
 };
 
 
