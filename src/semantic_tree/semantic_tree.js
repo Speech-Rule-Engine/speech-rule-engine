@@ -1846,10 +1846,30 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
  * @private
  */
 sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
+  var largeop = sre.SemanticTree.getLargeOp_(bigOp);
   var newNode = this.makeBranchNode_(
-      sre.SemanticAttr.Type.BIGOP, [bigOp, arg], []);
+      sre.SemanticAttr.Type.BIGOP, [bigOp, arg], largeop ? [largeop] : []);
   newNode.role = bigOp.role;
   return newNode;
+};
+
+
+/**
+ * Finds first large operator in a partial semantic tree if it exists.
+ * @param {!sre.SemanticTree.Node} tree The partial tree.
+ * @return {sre.SemanticTree.Node} The big operator.
+ */
+sre.SemanticTree.getLargeOp_ = function(tree) {
+  if (sre.SemanticTree.attrPred_('type', 'LARGEOP')(tree)) {
+    return tree;
+  }
+  for (var i = 0, child; child = tree.childNodes[i]; i++) {
+    var op = sre.SemanticTree.getLargeOp_(child);
+    if (op) {  
+      return op;
+    }
+  }
+  return null;
 };
 
 

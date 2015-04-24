@@ -6524,6 +6524,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '</mrow><mi>\u221E</mi></munderover><msup><mi>n</mi><mn>2</mn>' +
       '</msup></mrow>',
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6555,6 +6556,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '<mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>\u221E</mi></munderover>' +
       '<msup><mi>n</mi><mi>m</mi></msup></mrow>',
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6572,6 +6574,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '</children>' +
       '</limboth>' +
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6603,6 +6606,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '<mrow><munder><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow></munder><msup><mi>n</mi><mn>2</mn></msup></mrow>',
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limlower>' +
       '<children>' +
