@@ -92,8 +92,8 @@ root & \\
 limupper & \\
 limlower & \\
 limboth & \\
-subscript & \\
-superscript & \\
+subscript & subscript, can have role subsup, meaning that it originated from an msubsup.\\
+superscript & superscript\\
 underscore & \\
 overscore & \\
 tensor & \\
@@ -109,7 +109,8 @@ cell & \\
 line & Lines are effectively single cell rows\\
 
 \multicolumn{2}{l}{\textbf{Enclosed (counterpart for menclosed)}}\\
-enclose & Enclosed (counterpart for menclosed)\\
+enclose & Enclosed (counterpart for menclosed), its role is the type of enclosure. \\
+& This is the only element that has not a standard role!\\
 
 \multicolumn{2}{l}{\textbf{General}}\\
 unknown & \\
@@ -228,6 +229,60 @@ former two correspond to the following two cases:
   to the content.
 \end{enumerate}
 
+
+\subsection{Types, Children and Content}
+
+An overview of arity and meaning of children and content.
+
+
+\begin{tabular}{>{\tt}l||c|l||c|l}
+& \multicolumn{2}{l||}{\textbf{Children}} & \multicolumn{2}{l}{\textbf{Content}}\\\hline
+\multicolumn{5}{l}{\textbf{Compound Symbols}}\\\hline
+accent & 2 & letter, accent& &\\
+fenced & 1 & fenced expression & 2 & opening fence, closing fence\\
+fraction & 2 & denominator, enumerator & & \\
+punctuated & $n$ & expression including puncutation & $m$ & contained punctuation elements \\\hline
+\multicolumn{5}{l}{\textbf{Relations}}\\\hline
+relseq & $n$ & operands & $n - 1$ & relation symbols \\
+multirel & $n$ & operands & $n - 1$ & relation symbols \\\hline
+\multicolumn{5}{l}{\textbf{Operations}}\\\hline
+infixop & $n$ & operands & $n-1$ & operators\\
+prefixop & 1 & operand & $n$ & prefix operators \\
+postfixop & 1 & operand & $n$ & postfix operators \\
+\end{tabular}
+
+\begin{tabular}{>{\tt}l||c|l||c|l}\hline
+& \multicolumn{2}{l||}{\textbf{Children}} & \multicolumn{2}{l}{\textbf{Content}}\\\hline
+\multicolumn{5}{l}{\textbf{Function and big operator applications}}\\\hline
+appl & 2 & function, application & 1 & invisible application \\
+integral & 3 & integral, integrand, integration var & & \\
+bigop & 2 & operator, operand & & \\
+sqrt & 1 & content& & \\
+root & 2 & arity, content& & \\\hline
+\multicolumn{5}{l}{\textbf{Big operators or functions with limits or indices}}\\\hline
+limupper & 2 & center, upper& & \\
+limlower & 2 & center, lower& & \\
+limboth & 3 &  center, lower, upper (check this!)& & \\
+subscript & 2 & base, sub& & \\
+superscript & 2 & base, super& & \\
+underscore & 2 & base, under & & \\
+overscore & 2 & base, over& & \\
+tensor & 5 & base, left sub, left super, right sub, right super& & \\\hline
+\multicolumn{5}{l}{\textbf{Tables and their elements}}\\\hline
+table & & & \\
+multiline & & & \\
+matrix & & & \\
+vector & & & \\
+cases & & & \\
+row & & & \\
+cell & & & \\
+line & & & \\\hline
+\multicolumn{5}{l}{\textbf{Enclosed (counterpart for menclosed)}}\\\hline
+enclose & 1 & enclosed expression& & \\\hline
+\multicolumn{5}{l}{\textbf{General}}\\\hline
+unknown & 1 & whatever we could not interpret/process& & \\
+empty & 0 & & \\
+\end{tabular}
 
 
 \section{Rules}\label{sec:rules}
