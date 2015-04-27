@@ -91,6 +91,3 @@ sre.Semantic.annotateMathml = function(mml) {
   var tree = new sre.SemanticTree(mml);
   return sre.SemanticMathml.enrich(mml, tree);
 };
-
-
-
