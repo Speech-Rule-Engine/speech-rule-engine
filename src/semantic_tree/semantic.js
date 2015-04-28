@@ -88,6 +88,7 @@ sre.Semantic.enrichMathml = function(expr) {
  * @return {!Element} Semantically enriched MathML node.
  */
 sre.Semantic.annotateMathml = function(mml) {
-  var tree = new sre.SemanticTree(mml);
-  return sre.SemanticMathml.enrich(mml, tree);
+  var clone = mml.cloneNode(true);
+  var tree = new sre.SemanticTree(clone);
+  return sre.SemanticMathml.enrich(clone, tree);
 };
