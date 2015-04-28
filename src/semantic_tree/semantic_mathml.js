@@ -234,26 +234,12 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  */
 sre.SemanticMathml.mathmlLca_ = function(children) {
   // Need to avoid newly created children (invisible operators).
-  var length = children.length;
-  var count = 0;
-  var leftMost = null;
-  var rightMost = null;
-  while (!leftMost && count < children.length) {
-    if (children[count].parentNode) {
-      leftMost = children[count];
-    }
-    count++;
-  }
-  count = children.length;
-  while (!rightMost && count > 0) {
-    count--;
-    if (children[count].parentNode) {
-      rightMost = children[count];
-    }
-  }
-  if (!leftMost || !rightMost) {
+  var leftMost = sre.SemanticMathml.attachedElement_(children);
+  if (!leftMost) {
     return {valid: false, node: null};
   }
+  var rightMost = /**@type{!Element}*/(sre.SemanticMathml.attachedElement_(
+      children.slice().reverse()));
   if (leftMost === rightMost) {
     return {valid: true,
       node: sre.SemanticMathml.ascendNewNode_(leftMost)};
@@ -269,6 +255,25 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
   return {valid:
         sre.SemanticMathml.validLca_(leftPath[lIndex + 1], rightPath[1]),
     node: lca};
+};
+
+
+/**
+ * Finds the first elements in a list of nodes that has a parent pointer.
+ * @param {!Array.<Element>} nodes A list of elements.
+ * @return {Element} The first element node with a parent pointer if it exists.
+ * @private
+ */
+sre.SemanticMathml.attachedElement_ = function(nodes) {
+  var count = 0;
+  var attached = null;
+  while (!attached && count < nodes.length) {
+    if (nodes[count].parentNode) {
+      attached = nodes[count];
+    }
+    count++;
+  }
+  return attached;
 };
 
 
