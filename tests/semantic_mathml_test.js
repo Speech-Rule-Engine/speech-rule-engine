@@ -56,6 +56,85 @@ sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
 };
 
 
+// Empty wrappers.
+/**
+ * Test for empty wrapping elements.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlWrappers = function() {
+
+  this.executeMathmlTest(
+      '<math><mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi>' +
+      '</mrow></math>',
+    '<math type="infixop" role="implicit" id="3" children="0,1" content="2">' +
+      '<mrow>' +
+      '<mrow>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="2" parent="3" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">b</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+    '<math><mstyle><mi>q</mi><mpadded><mstyle><mrow><mi>x</mi><mo>+</mo>' +
+      '</mrow></mstyle><mpadded><mrow><mi>a</mi></mrow><mrow><mi>a</mi>' +
+      '</mrow></mpadded><mtext>nix</mtext></mpadded></mstyle></math>', 
+    '<math>' +
+      '<mstyle type="infixop" role="implicit" id="14" children="0,12" content="13">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="14">q</mi>' +
+      '<mo type="operator" role="multiplication" id="13" parent="14" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mpadded type="punctuated" role="text" id="12" children="10,8" content="11" parent="14">' +
+      '<mrow type="infixop" role="implicit" id="10" children="3,7" content="9" parent="12">' +
+      '<mstyle>' +
+      '<mrow type="postfixop" role="multiop" id="3" children="1" content="2" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="3" operator="postfixop,+">+</mo>' +
+      '</mrow>' +
+      '</mstyle>' +
+      '<mo type="operator" role="multiplication" id="9" parent="10" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mpadded type="infixop" role="implicit" id="7" children="4,5" content="6" parent="10">' +
+      '<mrow>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">a</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="6" parent="7" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="7">a</mi>' +
+      '</mrow>' +
+      '</mpadded>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="dummy" id="11" parent="12" added="true" operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="8" parent="12">nix</mtext>' +
+      '</mpadded>' +
+      '</mstyle>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+      '<mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow>' +
+      '<mi>x</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow>' +
+      '</math>',
+      '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+      ' type="fenced" role="neutral" id="3" children="1" content="0,2">' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false" type="fence" role="neutral" id="0"' +
+      ' parent="3" operator="fenced">|</mo>' +
+      '</mrow>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mrow class="MJX-TeXAtom-ORD">' +
+      '<mo stretchy="false" type="fence" role="neutral" id="2"' +
+      ' parent="3" operator="fenced">|</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  
+  
+
+};
+
+
 // Sub, Superscripts.
 /**
  * Test for sub super and subsuper scripts.

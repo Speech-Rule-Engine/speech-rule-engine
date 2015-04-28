@@ -375,14 +375,15 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.cloneContentNode_ = function(content) {
-  var clone;
   if (content.mathml.length > 0) {
-    clone = content.mathml[0];
-  } else {
-    clone = sre.SemanticMathml.SETTINGS.implicit ?
+    return sre.SemanticMathml.walkTree_(content);
+    // sre.SemanticMathml.setAttributes_(
+    //     content.mathml[content.mathml.length - 1], content);
+    // return content.mathml[content.mathml.length - 1];
+  } 
+  var clone = sre.SemanticMathml.SETTINGS.implicit ?
         sre.SemanticMathml.createInvisibleOperator_(content) :
         sre.SystemExternal.document.createElement('mrow');
-  }
   sre.SemanticMathml.setAttributes_(clone, content);
   return clone;
 };
@@ -514,7 +515,21 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
   var operator = semantic.type +
           (semantic.textContent ? ',' + semantic.textContent : '');
   content.forEach(function(c) {
-    c.setAttribute(sre.SemanticMathml.Attribute.OPERATOR, operator);});
+    (sre.SemanticMathml.getInnerNode_(c)).setAttribute(sre.SemanticMathml.Attribute.OPERATOR, operator);});
+};
+
+
+/**
+ * Finds the innermost element node of a MathML node with only one child.
+ * @param {!Element} content The MathML content node to process.
+ * @return {!Element} The innermost element node.
+ */
+sre.SemanticMathml.getInnerNode_ = function(content) {
+  while(content.childNodes && content.childNodes.length === 1 && 
+        content.childNodes[0].nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
+    content = content.childNodes[0];
+  }
+  return content;
 };
 
 
