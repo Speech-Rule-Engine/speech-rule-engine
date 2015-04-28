@@ -321,10 +321,7 @@ sre.SemanticMathml.pathToRoot_ = function(node, opt_test) {
  */
 sre.SemanticMathml.validLca_ = function(left, right) {
   // TODO (sorge) Here we have to account for ignored tags.
-  if (!left || !right || left.previousSibling || right.nextSibling) {
-    return false;
-  }
-  return true;
+  return !!(left && right && !left.previousSibling && !right.nextSibling);
 };
 
 
