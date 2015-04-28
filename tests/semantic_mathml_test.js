@@ -1272,3 +1272,104 @@ sre.SemanticMathmlTest.prototype.testMathmlRegularFences = function() {
 };
 
 
+/**
+ * Test neutral fences.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlNeutralFences = function() {
+  // Empty bars.
+  this.executeMathmlTest(
+      '<mrow><mo>|</mo><mo>|</mo></mrow>',
+      '<math>' +
+      '<mrow type="fenced" role="neutral" id="3" children="2" content="0,1">' +
+      '<mo type="fence" role="neutral" id="0" parent="3"' +
+      ' operator="fenced">|</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '<mo type="fence" role="neutral" id="1" parent="3"' +
+      ' operator="fenced">|</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Simple bar fence.
+  this.executeMathmlTest(
+      '<mrow><mo>|</mo><mi>a</mi><mo>|</mo></mrow>',
+      '<math>' +
+      '<mrow type="fenced" role="neutral" id="3" children="1" content="0,2">' +
+      '<mo type="fence" role="neutral" id="0" parent="3"' +
+      ' operator="fenced">|</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">a</mi>' +
+      '<mo type="fence" role="neutral" id="2" parent="3"' +
+      ' operator="fenced">|</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Parallel bar fences.
+  this.executeMathmlTest(
+      '<mrow><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo>' +
+      '<mo>\u00A6</mo><mi>c</mi><mo>\u00A6</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="12" children="11,9"' +
+      ' content="4">' +
+      '<mrow type="infixop" role="implicit" id="11" children="8,3"' +
+      ' content="10" parent="12">' +
+      '<mrow type="fenced" role="neutral" id="8" children="1" content="0,2"' +
+      ' parent="11">' +
+      '<mo type="fence" role="neutral" id="0" parent="8"' +
+      ' operator="fenced">|</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="8">a</mi>' +
+      '<mo type="fence" role="neutral" id="2" parent="8"' +
+      ' operator="fenced">|</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="10" parent="11"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="11">b</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="12"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="fenced" role="neutral" id="9" children="6" content="5,7"' +
+      ' parent="12">' +
+      '<mo type="fence" role="neutral" id="5" parent="9"' +
+      ' operator="fenced">¦</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="9">c</mi>' +
+      '<mo type="fence" role="neutral" id="7" parent="9"' +
+      ' operator="fenced">¦</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Nested bar fences.
+  this.executeMathmlTest(
+      '<mrow><mo>\u00A6</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi>' +
+      '<mo>+</mo><mi>c</mi><mo>\u00A6</mo></mrow>',
+      '<math>' +
+      '<mrow type="fenced" role="neutral" id="12" children="11"' +
+      ' content="0,7">' +
+      '<mo type="fence" role="neutral" id="0" parent="12"' +
+      ' operator="fenced">¦</mo>' +
+      '<mrow type="infixop" role="addition" id="11" children="10,6"' +
+      ' content="5" parent="12">' +
+      '<mrow type="infixop" role="implicit" id="10" children="8,4"' +
+      ' content="9" parent="11">' +
+      '<mrow type="fenced" role="neutral" id="8" children="2" content="1,3"' +
+      ' parent="10">' +
+      '<mo type="fence" role="neutral" id="1" parent="8"' +
+      ' operator="fenced">|</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="8">a</mi>' +
+      '<mo type="fence" role="neutral" id="3" parent="8"' +
+      ' operator="fenced">|</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="9" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="10">b</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="5" parent="11"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="11">c</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="neutral" id="7" parent="12"' +
+      ' operator="fenced">¦</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
