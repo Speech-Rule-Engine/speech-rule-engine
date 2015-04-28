@@ -6991,9 +6991,9 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</integral>');
 
   this.executeTreeTest(
-    '<msub><mo>\u222B</mo><mi>X</mi></msub><mrow><msub><mo>\u2211</mo>' +
+      '<msub><mo>\u222B</mo><mi>X</mi></msub><mrow><msub><mo>\u2211</mo>' +
       '<mi>Y</mi></msub><mi>a</mi></mrow><mi>dx</mi>',
-    '<integral>' +
+      '<integral>' +
       '<content>' +
       '<largeop>\u222B</largeop>' +
       '</content>' +
@@ -7021,7 +7021,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<identifier>dx</identifier>' +
       '</children>' +
       '</integral>'
-    );
+  );
 };
 
 

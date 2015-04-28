@@ -254,8 +254,7 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
       node: sre.SemanticMathml.ascendNewNode_(leftMost)};
   }
   var leftPath = [leftMost];
-  while (sre.SemanticUtil.tagName(leftMost) !== 'MATH' &&
-         leftMost.parentNode) {
+  while (sre.SemanticUtil.tagName(leftMost) !== 'MATH') {
     leftMost = sre.SemanticMathml.parentNode_(leftMost);
     leftPath.push(leftMost);
   }
@@ -380,10 +379,10 @@ sre.SemanticMathml.cloneContentNode_ = function(content) {
     // sre.SemanticMathml.setAttributes_(
     //     content.mathml[content.mathml.length - 1], content);
     // return content.mathml[content.mathml.length - 1];
-  } 
+  }
   var clone = sre.SemanticMathml.SETTINGS.implicit ?
-        sre.SemanticMathml.createInvisibleOperator_(content) :
-        sre.SystemExternal.document.createElement('mrow');
+      sre.SemanticMathml.createInvisibleOperator_(content) :
+      sre.SystemExternal.document.createElement('mrow');
   sre.SemanticMathml.setAttributes_(clone, content);
   return clone;
 };
@@ -515,7 +514,8 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
   var operator = semantic.type +
           (semantic.textContent ? ',' + semantic.textContent : '');
   content.forEach(function(c) {
-    (sre.SemanticMathml.getInnerNode_(c)).setAttribute(sre.SemanticMathml.Attribute.OPERATOR, operator);});
+    (sre.SemanticMathml.getInnerNode_(c)).setAttribute(
+        sre.SemanticMathml.Attribute.OPERATOR, operator);});
 };
 
 
@@ -523,10 +523,11 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
  * Finds the innermost element node of a MathML node with only one child.
  * @param {!Element} content The MathML content node to process.
  * @return {!Element} The innermost element node.
+ * @private
  */
 sre.SemanticMathml.getInnerNode_ = function(content) {
-  while(content.childNodes && content.childNodes.length === 1 && 
-        content.childNodes[0].nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
+  while (content.childNodes && content.childNodes.length === 1 &&
+      content.childNodes[0].nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
     content = content.childNodes[0];
   }
   return content;
