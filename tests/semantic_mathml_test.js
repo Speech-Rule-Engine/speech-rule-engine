@@ -1000,17 +1000,17 @@ sre.SemanticMathmlTest.prototype.testMathmlRegularFences = function() {
       '</math>'
   );
   // Empty parentheses.
-  // this.executeMathmlTest(
-  //     '<mrow><mo>(</mo><mo>)</mo></mrow>',
-  //     '<math type="fenced" role="leftright" id="3" children="2"' +
-  //     ' content="0,1">' +
-  //     '<mo type="fence" role="open" id="0" parent="3"' +
-  //     ' operator="fenced">(</mo>' +
-  //     '<mrow type="empty" role="unknown" id="2" parent="3"/> ' +
-  //     '<mo type="fence" role="close" id="1" parent="3"' +
-  //     ' operator="fenced">)</mo>' +
-  //     '</math>'
-  // );
+  this.executeMathmlTest(
+      '<mo>(</mo><mo>)</mo>',
+      '<math type="fenced" role="leftright" id="3" children="2"' +
+      ' content="0,1">' +
+      '<mo type="fence" role="open" id="0" parent="3"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '<mo type="fence" role="close" id="1" parent="3"' +
+      ' operator="fenced">)</mo>' +
+      '</math>'
+  );
   // Single Fenced Expression.
   this.executeMathmlTest(
       '<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow>',

@@ -204,7 +204,12 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       // tags only. We then have to return the parent node of the mrow.
       //
       newNode = sre.SystemExternal.document.createElement('mrow');
-      sre.DomUtil.replaceNode(childrenList[0], newNode);
+      if (childrenList[0]) {
+        // If childrenList is empty we get an empty mrow element representing a
+        // node of type empty.
+        //
+        sre.DomUtil.replaceNode(childrenList[0], newNode);
+      }
     }
   } else {
     newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
