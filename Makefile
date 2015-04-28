@@ -161,7 +161,7 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-clean: clean_test
+clean: clean_test clean_semantic clean_browser
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
@@ -235,8 +235,13 @@ browser: $(SRC)
 	@echo $^
 	@$(CLOSURE_COMPILER) --namespace="sre.System" --output_file $(BROWSER)
 
+clean_browser:
+	rm -f $(BROWSER)
 
 semantic: $(SRC)
 	@echo Compiling browser ready Semantic Tree API
 	@echo $^
 	@$(CLOSURE_COMPILER) --namespace="sre.Semantic" --output_file $(SEMANTIC)
+
+clean_semantic:
+	rm -f $(SEMANTIC)
