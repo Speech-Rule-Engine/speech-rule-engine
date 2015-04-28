@@ -783,3 +783,211 @@ sre.SemanticMathmlTest.prototype.testMathmlMultiplicationOperators = function() 
 };
 
 
+// Fences.
+/**
+ * Test regular directed fences.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlRegularFences = function() {
+  // No fence.
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>',
+    '<math>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2" content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Empty parentheses.
+  // this.executeMathmlTest(
+  //   '<mrow><mo>(</mo><mo>)</mo></mrow>',
+  //   '<math type="fenced" role="leftright" id="3" children="2" content="0,1">' +
+  //     '<mo type="fence" role="open" id="0" parent="3" operator="fenced">(</mo>' +
+  //     '<mrow type="empty" role="unknown" id="2" parent="3"/> ' +
+  //     '<mo type="fence" role="close" id="1" parent="3" operator="fenced">)</mo>' +
+  //     '</math>'
+  // );
+  // Single Fenced Expression.
+  this.executeMathmlTest(
+      '<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow>',
+    '<math>' +
+      '<mrow type="fenced" role="leftright" id="6" children="5" content="0,4">' +
+      '<mo type="fence" role="open" id="0" parent="6" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="5" children="1,3" content="2" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">a</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="5" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">b</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="4" parent="6" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Single Fenced Expression and operators.
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo>+</mo><mo>(</mo><mi>b</mi><mo>+</mo><mi>c</mi>' +
+      '<mo>)</mo><mo>+</mo><mi>d</mi></mrow>',
+    '<math>' +
+      '<mrow type="infixop" role="addition" id="11" children="0,10,8" content="1,7">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="11">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="11" operator="infixop,+">+</mo>' +
+      '<mrow type="fenced" role="leftright" id="10" children="9" content="2,6" parent="11">' +
+      '<mo type="fence" role="open" id="2" parent="10" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="9" children="3,5" content="4" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="3" parent="9">b</mi>' +
+      '<mo type="operator" role="addition" id="4" parent="9" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="9">c</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="6" parent="10" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="7" parent="11" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="11">d</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Parallel Parenthesis.
+  this.executeMathmlTest(
+      '<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo>' +
+      '<mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo></mrow>',
+    '<math>' +
+      '<mrow type="infixop" role="implicit" id="15" children="11,13" content="14">' +
+      '<mrow type="fenced" role="leftright" id="11" children="10" content="0,4" parent="15">' +
+      '<mo type="fence" role="open" id="0" parent="11" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="10" children="1,3" content="2" parent="11">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="10">a</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="10" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="10">b</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="4" parent="11" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="14" parent="15" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="fenced" role="leftright" id="13" children="12" content="5,9" parent="15">' +
+      '<mo type="fence" role="open" id="5" parent="13" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="12" children="6,8" content="7" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="6" parent="12">c</mi>' +
+      '<mo type="operator" role="addition" id="7" parent="12" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="12">d</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="9" parent="13" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Nested Parenthesis.
+  this.executeMathmlTest(
+      '<mrow><mo>(</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>' +
+      '<mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo><mo>)</mo></mrow>',
+    '<math>' +
+      '<mrow type="fenced" role="leftright" id="18" children="17" content="0,11">' +
+      '<mo type="fence" role="open" id="0" parent="18" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="implicit" id="17" children="13,15" content="16" parent="18">' +
+      '<mrow type="fenced" role="leftright" id="13" children="12" content="1,5" parent="17">' +
+      '<mo type="fence" role="open" id="1" parent="13" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="12" children="2,4" content="3" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="12">a</mi>' +
+      '<mo type="operator" role="addition" id="3" parent="12" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="12">b</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="5" parent="13" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="16" parent="17" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="fenced" role="leftright" id="15" children="14" content="6,10" parent="17">' +
+      '<mo type="fence" role="open" id="6" parent="15" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="14" children="7,9" content="8" parent="15">' +
+      '<mi type="identifier" role="latinletter" id="7" parent="14">c</mi>' +
+      '<mo type="operator" role="addition" id="8" parent="14" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="14">d</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="10" parent="15" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="11" parent="18" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Nested parenthesis and brackets.
+  this.executeMathmlTest(
+      '<mrow><mo>(</mo><mo>[</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo>' +
+      '<mi>c</mi><mo>]</mo><mo>+</mo><mi>d</mi><mo>)</mo></mrow>',
+    '<math>' +
+      '<mrow type="fenced" role="leftright" id="14" children="13" content="0,10">' +
+      '<mo type="fence" role="open" id="0" parent="14" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="13" children="12,9" content="8" parent="14">' +
+      '<mrow type="fenced" role="leftright" id="12" children="11" content="1,7" parent="13">' +
+      '<mo type="fence" role="open" id="1" parent="12" operator="fenced">[</mo>' +
+      '<mrow type="infixop" role="addition" id="11" children="2,4,6" content="3,5" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="11">a</mi>' +
+      '<mo type="operator" role="addition" id="3" parent="11" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="11">b</mi>' +
+      '<mo type="operator" role="addition" id="5" parent="11" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="11">c</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="7" parent="12" operator="fenced">]</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="8" parent="13" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="13">d</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="10" parent="14" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Nested parenthesis, brackets, braces and superscript operator.
+  this.executeMathmlTest(
+      '<mrow><mo>(</mo><msup><mi>a</mi><mrow><mn>2</mn><mo>[</mo><mi>i</mi>' +
+      '<mo>+</mo><mi>n</mi><mo>]</mo></mrow></msup><mo>+</mo><mi>b</mi>' +
+      '<mo>)</mo><mo>+</mo><mo>{</mo><mi>c</mi><mi>d</mi><mo>-</mo><mo>[</mo>' +
+      '<mi>e</mi><mo>+</mo><mi>f</mi><mo>]</mo><mo>}</mo></mrow>',
+    '<math>' +
+      '<mrow type="infixop" role="addition" id="35" children="28,34" content="16">' +
+      '<mrow type="fenced" role="leftright" id="28" children="27" content="0,15" parent="35">' +
+      '<mo type="fence" role="open" id="0" parent="28" operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="27" children="12,14" content="13" parent="28">' +
+      '<msup type="superscript" role="latinletter" id="12" children="1,11" parent="27">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="12">a</mi>' +
+      '<mrow type="infixop" role="implicit" id="11" children="2,9" content="10" parent="12">' +
+      '<mn type="number" role="integer" id="2" parent="11">2</mn>' +
+      '<mo type="operator" role="multiplication" id="10" parent="11" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="fenced" role="leftright" id="9" children="8" content="3,7" parent="11">' +
+      '<mo type="fence" role="open" id="3" parent="9" operator="fenced">[</mo>' +
+      '<mrow type="infixop" role="addition" id="8" children="4,6" content="5" parent="9">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">i</mi>' +
+      '<mo type="operator" role="addition" id="5" parent="8" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">n</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="7" parent="9" operator="fenced">]</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</msup>' +
+      '<mo type="operator" role="addition" id="13" parent="27" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="14" parent="27">b</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="15" parent="28" operator="fenced">)</mo>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="16" parent="35" operator="infixop,+">+</mo>' +
+      '<mrow type="fenced" role="leftright" id="34" children="33" content="17,26" parent="35">' +
+      '<mo type="fence" role="open" id="17" parent="34" operator="fenced">{</mo>' +
+      '<mrow type="infixop" role="subtraction" id="33" children="32,30" content="20" parent="34">' +
+      '<mrow type="infixop" role="implicit" id="32" children="18,19" content="31" parent="33">' +
+      '<mi type="identifier" role="latinletter" id="18" parent="32">c</mi>' +
+      '<mo type="operator" role="multiplication" id="31" parent="32" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="19" parent="32">d</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="subtraction" id="20" parent="33" operator="infixop,-">-</mo>' +
+      '<mrow type="fenced" role="leftright" id="30" children="29" content="21,25" parent="33">' +
+      '<mo type="fence" role="open" id="21" parent="30" operator="fenced">[</mo>' +
+      '<mrow type="infixop" role="addition" id="29" children="22,24" content="23" parent="30">' +
+      '<mi type="identifier" role="latinletter" id="22" parent="29">e</mi>' +
+      '<mo type="operator" role="addition" id="23" parent="29" operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="24" parent="29">f</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="25" parent="30" operator="fenced">]</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="26" parent="34" operator="fenced">}</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
