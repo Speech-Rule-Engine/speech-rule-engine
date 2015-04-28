@@ -253,25 +253,48 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
     return {valid: true,
       node: sre.SemanticMathml.ascendNewNode_(leftMost)};
   }
-  var leftPath = [leftMost];
-  while (sre.SemanticUtil.tagName(leftMost) !== 'MATH') {
-    leftMost = sre.SemanticMathml.parentNode_(leftMost);
-    leftPath.push(leftMost);
-  }
-  var rightPath = [rightMost];
-  while (leftPath.indexOf(rightMost) === -1 &&
-         sre.SemanticUtil.tagName(rightMost) !== 'MATH') {
-    rightMost = sre.SemanticMathml.parentNode_(rightMost);
-    rightPath.push(rightMost);
-  }
-  if (leftPath.indexOf(rightMost) === -1) {
+  var leftPath = sre.SemanticMathml.pathToRoot_(leftMost);
+  var rightPath = sre.SemanticMathml.pathToRoot_(
+      rightMost, function(x) {return leftPath.indexOf(x) !== -1;});
+  var lca = rightPath[0];
+  var lIndex = leftPath.indexOf(lca);
+  if (lIndex === -1) {
     return {valid: false, node: null};
   }
   return {valid:
-        sre.SemanticMathml.validLca_(
-            leftPath[leftPath.indexOf(rightMost) - 1],
-            rightPath[rightPath.length - 2]),
-    node: rightMost};
+        sre.SemanticMathml.validLca_(leftPath[lIndex + 1], rightPath[1]),
+    node: lca};
+};
+
+
+/**
+ * Type annotation to get around Closure parsing problems for functions as
+ * optional parameters.
+ * @typedef{function(!Element): boolean}
+ * @private
+ */
+sre.SemanticMathml.ElementTest_;
+
+
+/**
+ * Computes the path from a node in the MathML tree to the root or until the
+ * optional test fires.
+ * @param {!Element} node The tree node from where to start.
+ * @param {sre.SemanticMathml.ElementTest_=} opt_test The optional test that
+ *     stops path computation if it fires.
+ * @return {!Array.<!Element>} Path from root to node. That is, node is the last
+ *     element in the array and array contains at least the original node.
+ * @private
+ */
+sre.SemanticMathml.pathToRoot_ = function(node, opt_test) {
+  var test = opt_test || function(x) {return false;};
+  var path = [node];
+  while (!test(node) && sre.SemanticUtil.tagName(node) !== 'MATH' &&
+         node.parentNode) {
+    node = sre.SemanticMathml.parentNode_(node);
+    path.unshift(node);
+  }
+  return path;
 };
 
 
