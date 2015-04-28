@@ -190,7 +190,19 @@ sre.SemanticMathmlTest.prototype.testStreeRelations = function() {
   this.executeMathmlTest(
       '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>' +
           '<mo>\u2264</mo><mi>d</mi>',
-      '<math type="multirel" role="unknown" id="7" children="0,2,4,6" content="1,3,5"><mi type="identifier" role="latinletter" id="0" parent="7">a</mi><mo type="relation" role="equality" id="1" parent="7" operator="multirel">=</mo><mi type="identifier" role="latinletter" id="2" parent="7">b</mi><mo type="relation" role="equality" id="3" parent="7" operator="multirel">=</mo><mi type="identifier" role="latinletter" id="4" parent="7">c</mi></math>'
+      '<math type="multirel" role="unknown" id="7"' +
+      ' children="0,2,4,6" content="1,3,5">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="7"' +
+      ' operator="multirel">=</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
+      '<mo type="relation" role="equality" id="3" parent="7"' +
+      ' operator="multirel">=</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">c</mi>' +
+      '<mo type="relation" role="inequality" id="5" parent="7"' +
+      ' operator="multirel">≤</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">d</mi>' +
+      '</math>'
   );
 };
 
