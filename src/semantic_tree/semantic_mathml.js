@@ -165,7 +165,6 @@ sre.SemanticMathml.addLeafId_ = function(semantic) {
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
   if (semantic.mathml.length === 1) {
-    console.log('Case Leaf');
     var newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
@@ -173,39 +172,34 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
 
   newNode = sre.SemanticMathml.specialCase_(semantic);
   if (newNode) {
-    console.log('Case Special');
     return sre.SemanticMathml.ascendNewNode_(newNode);
   }
 
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.cloneContentNode_));
   var newChildren = semantic.childNodes.map(
-      /**@type{Function}*/(function (x) {
-          return sre.SemanticMathml.walkTree_(x);}));
+      /**@type{Function}*/(function(x) {
+        return sre.SemanticMathml.walkTree_(x);}));
   var childrenList = sre.SemanticMathml.combineContentChildren_(
-    semantic, newContent, newChildren);
+      semantic, newContent, newChildren);
   if (semantic.mathmlTree === null) {
-    console.log('Case Empty');
-    // Need the lca algorithm here.
-    // 
-    // If we have an LCA containing all children, then we simply replace it.
-    // 
-    // If we have an LCA containing only some children, then we replace those
-    // children only and add a new mrow.
+    // In case we do not have an original MathML element, we need to find the
+    // MathML node where to attach the semantically enriched children. We do
+    // this by computing their LCA.
     //
     var newNodeInfo = sre.SemanticMathml.mathmlLca_(childrenList);
     newNode = newNodeInfo.node;
-    if (newNode) {
-      console.log('LCA: ', newNode.toString());
-      childrenList.forEach(function(x) {console.log('child: ', x.toString());});
-    }
     if (newNodeInfo.valid && sre.SemanticUtil.EMPTYTAGS.
         indexOf(sre.SemanticUtil.tagName(newNode)) !== -1) {
-      console.log('Inside with tag: ', newNode.tagName);
-      var oldNode = newNode;
+      // If we have an LCA containing all children, then we simply replace it.
+      //
+      var oldNode = /**@type{!Element}*/(newNode);
       newNode = sre.SemanticMathml.cloneNode_(oldNode);
       sre.DomUtil.replaceNode(oldNode, newNode);
     } else {
+      // If we have an LCA containing only some children, then we replace those
+      // children only and add a new mrow.
+      //
       // TODO (sorge) Here we have to check if the remaining children are ignore
       // tags only. We then have to return the parent node of the mrow.
       //
@@ -213,14 +207,10 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       sre.DomUtil.replaceNode(childrenList[0], newNode);
     }
   } else {
-    console.log('Case Standard');
     newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
-    console.log(newNode.toString());
     sre.DomUtil.replaceNode(semantic.mathmlTree, newNode);
   }
   sre.SemanticMathml.setAttributes_(newNode, semantic);
-  console.log(childrenList.length);
-  console.log('here', newNode.toString());
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
   }
@@ -233,7 +223,9 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
  * Finds the least common ancestor for a list of MathML nodes in the MathML
  * expression.
  * @param {!Array.<Element>} children A list of MathML nodes.
- * @return {{valid: boolean, node: Element}} The least common ancestor if it exits.
+ * @return {{valid: boolean, node: Element}} Structure indicating if the node
+ *     representing the LCA is valid and the least common ancestor if it exits.
+ * @private
  */
 sre.SemanticMathml.mathmlLca_ = function(children) {
   // Need to avoid newly created children (invisible operators).
@@ -254,53 +246,50 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
       rightMost = children[count];
     }
   }
-  if (!leftMost) { 
+  if (!leftMost || !rightMost) {
     return {valid: false, node: null};
   }
-  console.log('Leftmost: ', leftMost.toString());
-  console.log('Rightmost: ', rightMost.toString());
   if (leftMost === rightMost) {
     return {valid: true,
-            node: sre.SemanticMathml.ascendNewNode_(leftMost)};
+      node: sre.SemanticMathml.ascendNewNode_(leftMost)};
   }
   var leftPath = [leftMost];
   while (sre.SemanticUtil.tagName(leftMost) !== 'MATH' &&
          leftMost.parentNode) {
-    console.log('push');
     leftMost = sre.SemanticMathml.parentNode_(leftMost);
     leftPath.push(leftMost);
   }
-  console.log('Parents:');
-  leftPath.forEach(function(x) {console.log('left parent: ', x.toString());});
   var rightPath = [rightMost];
   while (leftPath.indexOf(rightMost) === -1 &&
          sre.SemanticUtil.tagName(rightMost) !== 'MATH') {
     rightMost = sre.SemanticMathml.parentNode_(rightMost);
     rightPath.push(rightMost);
-  };
-  rightPath.forEach(function(x) {console.log('right parent: ', x.toString());});
-  console.log(rightMost.toString());
+  }
   if (leftPath.indexOf(rightMost) === -1) {
     return {valid: false, node: null};
   }
-  return {valid: 
-          sre.SemanticMathml.validLca_(
+  return {valid:
+        sre.SemanticMathml.validLca_(
             leftPath[leftPath.indexOf(rightMost) - 1],
             rightPath[rightPath.length - 2]),
-          node: rightMost};
+    node: rightMost};
 };
 
 
+/**
+ * Checks if a LCA of two nodes is valid. It takes the penultimate node in the
+ * paths of the original nodes to the LCA and sees if they have no siblings.  In
+ * case the have siblings, we can not simply replace the LCA with the node
+ * comprising the children.
+ * @param {Element} left Left path element.
+ * @param {Element} right Right path element.
+ * @return {boolean} True if valid LCA. False if either left or right empty or
+ *     there exist siblings further to the left or right.
+ * @private
+ */
 sre.SemanticMathml.validLca_ = function(left, right) {
-  // return true;
   // TODO (sorge) Here we have to account for ignored tags.
   if (!left || !right || left.previousSibling || right.nextSibling) {
-    console.log('>>>>>>>>>>>>>> HERE <<<<<<<<<<<<<<');
-    console.log(left ? 'LEFT:' + left.toString() : null);
-    if (left) {console.log('LEFT:' , left.toString());
-    if (left.previousSibling) {console.log(left.previousSibling.toString());}}
-    if (right) {console.log('RIGHT: ', right.toString());
-    if (right.nextSibling) {console.log(right.nextSibling.toString());}}
     return false;
   }
   return true;
@@ -315,8 +304,6 @@ sre.SemanticMathml.validLca_ = function(left, right) {
  * @private
  */
 sre.SemanticMathml.ascendNewNode_ = function(newNode) {
-  // TODO (sorge) There is still a problem with wrapped nodes on the very
-  //     outside.
   while (sre.SemanticUtil.tagName(newNode) !== 'MATH' &&
          newNode.parentNode &&
          sre.SemanticUtil.EMPTYTAGS.
@@ -540,14 +527,11 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
  * @private
  */
 sre.SemanticMathml.interleave_ = function(content, children) {
-  console.log(content.length);
-  console.log(children.length);
   var result = [children.shift()];
   while (children.length > 0 && content.length > 0) {
     result.push(content.shift());
     result.push(children.shift());
   }
-  console.log(result.length);
   return result;
 };
 
@@ -564,12 +548,9 @@ sre.SemanticMathml.cloneNode_ = function(mml) {
   var tagName = sre.SemanticUtil.tagName(mml);
   if (sre.SemanticUtil.LEAFTAGS.indexOf(tagName) !== -1 ||
       sre.SemanticUtil.IGNORETAGS.indexOf(tagName) !== -1) {
-    console.log('Cloning case inner');
     return mml.cloneNode(true);
   }
-  console.log('Cloning case outer');
   return mml.cloneNode(false);
-  // return mml;
 };
 
 

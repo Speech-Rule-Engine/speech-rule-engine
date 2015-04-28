@@ -1842,11 +1842,11 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var funcop = sre.SemanticTree.getFunctionOp_(
       func, function(node) {
-          return sre.SemanticTree.attrPred_('type', 'FUNCTION')(node) || 
-            (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) && 
+        return sre.SemanticTree.attrPred_('type', 'FUNCTION')(node) ||
+            (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) &&
              sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
       }
-  );
+      );
   var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
       funcop ? [applNode, funcop] : [applNode]);
   newNode.role = func.role;
