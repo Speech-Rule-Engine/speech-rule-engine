@@ -17,4 +17,6 @@ function require(library) { }
 var fs;
 fs.readFileSync = function(name) { };
 fs.writeFileSync = function(name, data) { };
+fs.appendFileSync = function(name, data) { };
+fs.openSync = function(name, parameters) { };
 fs.createWriteStream = function(name) { };

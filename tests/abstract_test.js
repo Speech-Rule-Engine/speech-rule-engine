@@ -47,3 +47,8 @@ sre.AbstractTest = function() {
  */
 sre.AbstractTest.prototype.setUpTest = function() { };
 
+
+/**
+ * Finalises the test.
+ */
+sre.AbstractTest.prototype.tearDownTest = function() { };

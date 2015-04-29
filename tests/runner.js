@@ -105,6 +105,7 @@ sre.TestRunner.prototype.executeTests = function(testcase) {
                         goog.bind(testcase[propertyName], testcase));
     }
   }
+  testcase.tearDownTest();
 };
 
 

@@ -1684,7 +1684,6 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
     // underlying list.
     restNodes.shift();
     // TODO (sorge) Here we should find out exactly what the function is.
-    console.log(funcNode.toString());
     sre.SemanticTree.propagateFunctionRole_(
         funcNode, sre.SemanticAttr.Role.SIMPLEFUNC);
     return 'prefix';
