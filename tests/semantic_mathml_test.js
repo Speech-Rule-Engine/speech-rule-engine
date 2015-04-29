@@ -53,7 +53,7 @@ goog.inherits(sre.SemanticMathmlTest, sre.AbstractTest);
 
 /**
  * An optional file for HTML output.
- * @type {string} 
+ * @type {string}
  * @const
  */
 sre.SemanticMathmlTest.HTML_OUTPUT = 'output.html';
@@ -73,7 +73,6 @@ sre.SemanticMathmlTest.prototype.setUpTest = function() {
 };
 
 
-
 /**
  * Appends a string to the HTML file if it exists.
  * @param {string} output The output string.
@@ -89,7 +88,7 @@ sre.SemanticMathmlTest.prototype.appendToFile = function(output) {
   }
 };
 
- 
+
 /**
  * @override
  */
@@ -111,7 +110,7 @@ sre.SemanticMathmlTest.prototype.tearDownTest = function() {
  */
 sre.SemanticMathmlTest.prototype.htmlOutput = function(mml, smml) {
   var newSmml = smml.replace(/id=/g, 'data-semantic-id=');
-  this.appendToFile('<P>\n Original: ' + sre.SemanticTree.formatXml(mml) + 
+  this.appendToFile('<P>\n Original: ' + sre.SemanticTree.formatXml(mml) +
       '\n Enriched: ' + sre.SemanticTree.formatXml(newSmml) + '\n</P>');
 };
 
@@ -2485,7 +2484,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
 sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow>' +
       '<mi type="identifier" role="latinletter" id="0">f</mi>' +
       '</mrow>' +
@@ -2494,7 +2493,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
 
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="6" children="0,4"' +
       ' content="5,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="6"' +
@@ -2515,7 +2514,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
 
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="9" children="0,7"' +
       ' content="8,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="9"' +
@@ -2543,7 +2542,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi>' +
       '<mo>,</mo><mi>z</mi><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="11" children="0,9"' +
       ' content="10,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="11"' +
@@ -2574,7 +2573,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
       ' content="7,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="8"' +
@@ -2600,7 +2599,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
       ' content="7,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="8"' +
@@ -2626,7 +2625,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn>' +
       '<mn>1</mn></msubsup><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="10" children="0,8"' +
       ' content="9,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="10"' +
@@ -2653,7 +2652,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
       ' content="7,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="8"' +
@@ -2674,62 +2673,66 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
       '</mrow>' +
       '</mrow>' +
       '</math>'
-);
+  );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder>' +
+      '<mrow><mi>f</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
-    '<mrow type="appl" role="simple function" id="8" children="0,6"' +
+      '<math>' +
+      '<mrow type="appl" role="simple function" id="8" children="0,6"' +
       ' content="7,0">' +
-    '<mi type="identifier" role="simple function" id="0" parent="8"' +
+      '<mi type="identifier" role="simple function" id="0" parent="8"' +
       ' operator="appl">f</mi>' +
-    '<mo type="punctuation" role="application" id="7" parent="8"' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
       ' added="true" operator="appl">⁡</mo>' +
-    '<mrow type="fenced" role="leftright" id="6" children="4" content="1,5"' +
+      '<mrow type="fenced" role="leftright" id="6" children="4" content="1,5"' +
       ' parent="8">' +
-    '<mo type="fence" role="open" id="1" parent="6" operator="fenced">(</mo>' +
-    '<munder type="underscore" role="latinletter" id="4" children="2,3"' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<munder type="underscore" role="latinletter" id="4" children="2,3"' +
       ' parent="6">' +
-    '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
-    '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
-    '</munder>' +
-    '<mo type="fence" role="close" id="5" parent="6" operator="fenced">)</mo>' +
-    '</mrow>' +
-    '</mrow>' +
-    '</math>'
-);
-this.executeMathmlTest(
-  '<mrow><mi>f</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn>' +
-    '<mn>1</mn></munderover><mo>)</mo></mrow>',
-  '<math>' +
-  '<mrow type="appl" role="simple function" id="10" children="0,8"' +
-    ' content="9,0">' +
-  '<mi type="identifier" role="simple function" id="0" parent="10"' +
-    ' operator="appl">f</mi>' +
-  '<mo type="punctuation" role="application" id="9" parent="10"' +
-    ' added="true" operator="appl">⁡</mo>' +
-  '<mrow type="fenced" role="leftright" id="8" children="6" content="1,7"' +
-    ' parent="10">' +
-  '<mo type="fence" role="open" id="1" parent="8" operator="fenced">(</mo>' +
-  '<munderover type="overscore" role="latinletter" id="6" children="5,4"' +
-    ' parent="8">' +
-  '<mrow type="underscore" role="latinletter" id="5" children="2,3"' +
-    ' parent="6">' +
-  '<mi type="identifier" role="latinletter" id="2" parent="5">x</mi>' +
-  '<mn type="number" role="integer" id="3" parent="5">2</mn>' +
-  '</mrow>' +
-  '<mn type="number" role="integer" id="4" parent="6">1</mn>' +
-  '</munderover>' +
-  '<mo type="fence" role="close" id="7" parent="8" operator="fenced">)</mo>' +
-  '</mrow>' +
-  '</mrow>' +
-  '</math>'
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
+      '</munder>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mi>f</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn>' +
+      '<mn>1</mn></munderover><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="simple function" id="10" children="0,8"' +
+      ' content="9,0">' +
+      '<mi type="identifier" role="simple function" id="0" parent="10"' +
+      ' operator="appl">f</mi>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="6" content="1,7"' +
+      ' parent="10">' +
+      '<mo type="fence" role="open" id="1" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<munderover type="overscore" role="latinletter" id="6" children="5,4"' +
+      ' parent="8">' +
+      '<mrow type="underscore" role="latinletter" id="5" children="2,3"' +
+      ' parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="5">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="5">2</mn>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="4" parent="6">1</mn>' +
+      '</munderover>' +
+      '<mo type="fence" role="close" id="7" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
   );
 
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
       ' content="7,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="8"' +
@@ -2749,40 +2752,44 @@ this.executeMathmlTest(
       '</mrow>' +
       '</mrow>' +
       '</math>'
-);
+  );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
-    '<mrow type="infixop" role="implicit" id="9" children="0,7" content="8">' +
-    '<mi type="identifier" role="latinletter" id="0" parent="9">f</mi>' +
-    '<mo type="operator" role="multiplication" id="8" parent="9"' +
+      '<math>' +
+      '<mrow type="infixop" role="implicit" id="9" children="0,7"' +
+      ' content="8">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">f</mi>' +
+      '<mo type="operator" role="multiplication" id="8" parent="9"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
-    '<mrow type="fenced" role="leftright" id="7" children="6" content="1,5"' +
+      '<mrow type="fenced" role="leftright" id="7" children="6" content="1,5"' +
       ' parent="9">' +
-    '<mo type="fence" role="open" id="1" parent="7" operator="fenced">(</mo>' +
-    '<mrow type="infixop" role="addition" id="6" children="2,4" content="3"' +
+      '<mo type="fence" role="open" id="1" parent="7"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="6" children="2,4" content="3"' +
       ' parent="7">' +
-    '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
-    '<mo type="operator" role="addition" id="3" parent="6"' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mo type="operator" role="addition" id="3" parent="6"' +
       ' operator="infixop,+">+</mo>' +
-    '<mi type="identifier" role="latinletter" id="4" parent="6">y</mi>' +
-    '</mrow>' +
-    '<mo type="fence" role="close" id="5" parent="7" operator="fenced">)</mo>' +
-    '</mrow>' +
-    '</mrow>' +
-    '</math>'
-);
+      '<mi type="identifier" role="latinletter" id="4" parent="6">y</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="5" parent="7"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
 };
-  
+
+
 /**
  * Simple functions with surrounding operators.
  */
 sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
   this.executeMathmlTest(
-    '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
+      '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="9" children="0,8"' +
       ' content="1">' +
       '<mn type="number" role="integer" id="0" parent="9">1</mn>' +
@@ -2807,9 +2814,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
       '<mn>2</mn></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="9" children="8,5"' +
       ' content="4">' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
@@ -2834,9 +2841,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mn>2</mn></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="11" children="0,10,7"' +
       ' content="1,6">' +
       '<mn type="number" role="integer" id="0" parent="11">1</mn>' +
@@ -2864,9 +2871,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
+      '<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="9" children="0,8"' +
       ' content="1">' +
       '<mo type="identifier" role="latinletter" id="0" parent="9">a</mo>' +
@@ -2891,9 +2898,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
       '<mo>b</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="9" children="8,5"' +
       ' content="4">' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
@@ -2918,9 +2925,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mo>b</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="11" children="0,10,7"' +
       ' content="1,6">' +
       '<mo type="identifier" role="latinletter" id="0" parent="11">a</mo>' +
@@ -2948,9 +2955,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
+      '<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="relseq" role="equality" id="9" children="0,8" content="1">' +
       '<mo type="identifier" role="latinletter" id="0" parent="9">a</mo>' +
       '<mo type="relation" role="equality" id="1" parent="9"' +
@@ -2974,9 +2981,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo>' +
       '<mo>b</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="relseq" role="equality" id="9" children="8,5" content="4">' +
       '<mrow type="appl" role="simple function" id="8" children="0,6"' +
       ' content="7,0" parent="9">' +
@@ -3000,9 +3007,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>=</mo><mo>b</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="relseq" role="equality" id="11" children="0,10,7"' +
       ' content="1,6">' +
       '<mo type="identifier" role="latinletter" id="0" parent="11">a</mo>' +
@@ -3031,14 +3038,15 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
   );
 };
 
+
 /**
  * Multiple simple functions.
  */
 sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="addition" id="15" children="14,12"' +
       ' content="4">' +
       '<mrow type="appl" role="simple function" id="14" children="0,9"' +
@@ -3077,10 +3085,10 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo>' +
       '<mi>x</mi><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="relseq" role="equality" id="24" children="23,18"' +
       ' content="9">' +
       '<mrow type="infixop" role="addition" id="23" children="22,20"' +
@@ -3139,10 +3147,10 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
+      '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo>' +
       '<mi>x</mi><mi>y</mi><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="relseq" role="equality" id="27" children="26,21"' +
       ' content="9">' +
       '<mrow type="infixop" role="addition" id="26" children="25,23"' +
@@ -3208,14 +3216,15 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
   );
 };
 
+
 /**
  * Nested simple functions.
  */
 sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
   this.executeMathmlTest(
-    '<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="12" children="0,10"' +
       ' content="11,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="12"' +
@@ -3248,9 +3257,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="appl" role="simple function" id="21" children="0,19"' +
       ' content="20,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="21"' +
@@ -3303,9 +3312,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>',
-    '<math>' +
+      '<math>' +
       '<mrow type="infixop" role="implicit" id="21" children="0,19"' +
       ' content="20">' +
       '<mi type="identifier" role="latinletter" id="0" parent="21">h</mi>' +
@@ -3357,8 +3366,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mi>P</mi><mo>[</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>]</mo>',
-    '<math type="appl" role="simple function" id="9" children="0,7"' +
+      '<mi>P</mi><mo>[</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>]</mo>',
+      '<math type="appl" role="simple function" id="9" children="0,7"' +
       ' content="8,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="9"' +
       ' operator="appl">P</mi>' +
@@ -3382,14 +3391,15 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
   );
 };
 
+
 /**
  * Simple functions with explicit function application.
  */
 sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
   this.executeMathmlTest(
-    '<mi>f</mi><mo>\u2061</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
+      '<mi>f</mi><mo>\u2061</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo>',
-    '<math type="appl" role="simple function" id="10" children="0,8"' +
+      '<math type="appl" role="simple function" id="10" children="0,8"' +
       ' content="9,0">' +
       '<mi type="identifier" role="simple function" id="0" parent="10"' +
       ' operator="appl">f</mi>' +
@@ -3412,10 +3422,10 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mi>f</mi><mo>\u2061</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
+      '<mi>f</mi><mo>\u2061</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi><mo>)</mo>',
-    '<math type="infixop" role="addition" id="22" children="19,21"' +
+      '<math type="infixop" role="addition" id="22" children="19,21"' +
       ' content="7">' +
       '<mrow type="appl" role="simple function" id="19" children="0,15"' +
       ' content="18,0" parent="22">' +
@@ -3463,9 +3473,9 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<msub><mi>f</mi><mn>1</mn></msub><mo>\u2061</mo><mo>(</mo><mi>x</mi>' +
+      '<msub><mi>f</mi><mn>1</mn></msub><mo>\u2061</mo><mo>(</mo><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi><mo>)</mo>',
-    '<math type="appl" role="simple function" id="12" children="2,10"' +
+      '<math type="appl" role="simple function" id="12" children="2,10"' +
       ' content="11,0">' +
       '<msub type="subscript" role="simple function" id="2" children="0,1"' +
       ' parent="12">' +
@@ -3492,11 +3502,11 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<msup><msub><mi>f</mi><mi>n</mi></msub><mn>2</mn></msup>' +
+      '<msup><msub><mi>f</mi><mi>n</mi></msub><mn>2</mn></msup>' +
       '<mo>\u2061</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>' +
       '<mo>+</mo><msup><msub><mi>f</mi><mi>m</mi></msub><mn>2</mn></msup>' +
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>',
-    '<math type="infixop" role="addition" id="30" children="27,29"' +
+      '<math type="infixop" role="addition" id="30" children="27,29"' +
       ' content="11">' +
       '<mrow type="appl" role="simple function" id="27" children="4,23"' +
       ' content="26,0" parent="30">' +
