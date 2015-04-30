@@ -60,9 +60,9 @@ sre.Tests.testList = [
   // sre.MathmlCloudTest,
   // sre.MathmlStoreTest,
   // sre.MathspeakRuleTest,
-  sre.SemanticMathmlTest
+  sre.SemanticMathmlTest,
   // sre.SemanticRuleTest,
-  // sre.SemanticTreeTest,
+  sre.SemanticTreeTest
   // sre.SpeechRuleTest
 ];
 

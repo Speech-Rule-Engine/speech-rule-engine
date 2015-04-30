@@ -2308,29 +2308,25 @@ sre.SemanticTreeTest.prototype.testStreeMixedUnmatchedFences = function() {
  * Square roots
  */
 sre.SemanticTreeTest.prototype.testStreeSquareRoots = function() {
+  this.brief = false;
   this.executeTreeTest(
       '<msqrt></msqrt>',
-      '<stree>' +
       '<sqrt role="unknown" id="1">' +
       '<children>' +
       '<empty role="unknown" id="0"/>' +
       '</children>' +
-      '</sqrt>' +
-      '</stree>'
+      '</sqrt>'
   );
   this.executeTreeTest(
       '<msqrt><mi>x</mi></msqrt>',
-      '<stree>' +
       '<sqrt role="unknown" id="1">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
       '</children>' +
-      '</sqrt>' +
-      '</stree>'
+      '</sqrt>'
   );
   this.executeTreeTest(
       '<msqrt><msqrt><mi>x</mi></msqrt></msqrt>',
-      '<stree>' +
       '<sqrt role="unknown" id="2">' +
       '<children>' +
       '<sqrt role="unknown" id="1">' +
@@ -2339,12 +2335,10 @@ sre.SemanticTreeTest.prototype.testStreeSquareRoots = function() {
       '</children>' +
       '</sqrt>' +
       '</children>' +
-      '</sqrt>' +
-      '</stree>'
+      '</sqrt>'
   );
   this.executeTreeTest(
       '<msqrt><mi>x</mi><mi>n</mi></msqrt>',
-      '<stree>' +
       '<sqrt role="unknown" id="4">' +
       '<children>' +
       '<infixop role="implicit" id="3">' +
@@ -2358,12 +2352,10 @@ sre.SemanticTreeTest.prototype.testStreeSquareRoots = function() {
       '</children>' +
       '</infixop>' +
       '</children>' +
-      '</sqrt>' +
-      '</stree>'
+      '</sqrt>'
   );
   this.executeTreeTest(
       '<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>',
-      '<stree>' +
       '<sqrt role="unknown" id="6">' +
       '<children>' +
       '<infixop role="implicit" id="5">' +
@@ -2385,8 +2377,7 @@ sre.SemanticTreeTest.prototype.testStreeSquareRoots = function() {
       '</children>' +
       '</infixop>' +
       '</children>' +
-      '</sqrt>' +
-      '</stree>'
+      '</sqrt>'
   );
 };
 
@@ -2395,23 +2386,21 @@ sre.SemanticTreeTest.prototype.testStreeSquareRoots = function() {
  * Regular roots
  */
 sre.SemanticTreeTest.prototype.testStreeRegularRoots = function() {
+  this.brief = false;
   // Not sure if that makes even sense.
   // this.executeTreeTest('<mroot></mroot>');
   this.executeTreeTest(
       '<mroot><mi>x</mi><mi>n</mi></mroot>',
-      '<stree>' +
       '<root role="unknown" id="2">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
       '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
       '</children>' +
-      '</root>' +
-      '</stree>'
+      '</root>'
   );
   this.executeTreeTest(
       '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi>' +
       '<mo>+</mo><mn>1</mn></mrow></mroot>',
-      '<stree>' +
       '<root role="unknown" id="8">' +
       '<children>' +
       '<infixop role="addition" id="3">' +
@@ -2435,12 +2424,10 @@ sre.SemanticTreeTest.prototype.testStreeRegularRoots = function() {
       '</children>' +
       '</infixop>' +
       '</children>' +
-      '</root>' +
-      '</stree>'
+      '</root>'
   );
   this.executeTreeTest(
       '<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>',
-      '<stree>' +
       '<root role="unknown" id="4">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">m</identifier>' +
@@ -2451,13 +2438,11 @@ sre.SemanticTreeTest.prototype.testStreeRegularRoots = function() {
       '</children>' +
       '</root>' +
       '</children>' +
-      '</root>' +
-      '</stree>'
+      '</root>'
   );
   this.executeTreeTest(
       '<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi>' +
       '<mi>l</mi></mroot></mrow><mi>m</mi></mroot>',
-      '<stree>' +
       '<root role="unknown" id="9">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">m</identifier>' +
@@ -2482,8 +2467,7 @@ sre.SemanticTreeTest.prototype.testStreeRegularRoots = function() {
       '</children>' +
       '</infixop>' +
       '</children>' +
-      '</root>' +
-      '</stree>'
+      '</root>'
   );
 };
 
@@ -2492,9 +2476,9 @@ sre.SemanticTreeTest.prototype.testStreeRegularRoots = function() {
  * Mixed roots
  */
 sre.SemanticTreeTest.prototype.testStreeMixedRoots = function() {
+  this.brief = false;
   this.executeTreeTest(
       '<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>',
-      '<stree>' +
       '<sqrt role="unknown" id="3">' +
       '<children>' +
       '<root role="unknown" id="2">' +
@@ -2504,12 +2488,10 @@ sre.SemanticTreeTest.prototype.testStreeMixedRoots = function() {
       '</children>' +
       '</root>' +
       '</children>' +
-      '</sqrt>' +
-      '</stree>'
+      '</sqrt>'
   );
   this.executeTreeTest(
       '<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>',
-      '<stree>' +
       '<root role="unknown" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
@@ -2519,19 +2501,16 @@ sre.SemanticTreeTest.prototype.testStreeMixedRoots = function() {
       '</children>' +
       '</sqrt>' +
       '</children>' +
-      '</root>' +
-      '</stree>'
+      '</root>'
   );
   this.executeTreeTest(
       '<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>',
-      '<stree>' +
       '<root role="unknown" id="6">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
       '<sqrt role="unknown" id="5">' +
       '<children>' +
-      '<infixop role="implicit" id="4">' +
-      '⁢' +
+      '<infixop role="implicit" id="4">⁢' +
       '<content>' +
       '<operator role="multiplication" id="3">⁢</operator>' +
       '</content>' +
@@ -2543,8 +2522,7 @@ sre.SemanticTreeTest.prototype.testStreeMixedRoots = function() {
       '</children>' +
       '</sqrt>' +
       '</children>' +
-      '</root>' +
-      '</stree>'
+      '</root>'
   );
 };
 
