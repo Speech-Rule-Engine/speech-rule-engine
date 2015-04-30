@@ -366,6 +366,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   if (semantic.mathmlTree &&
       sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
+    // TODO (sorge) Needs some refactoring!
     var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
     var ignore = semantic.childNodes[0];
     var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
@@ -510,8 +511,9 @@ sre.SemanticMathml.combineContentChildren_ = function(
       return children;
     case sre.SemanticAttr.Type.APPL:
       return [children[0], content[0], children[1]];
+    case sre.SemanticAttr.Type.ROOT:
+      return [children[1], children[0]];
     default:
-      // TODO (sorge) This should probably be children!
       return children;
   }
 };
@@ -628,4 +630,15 @@ sre.SemanticMathml.printNodeList__ = function(title, nodes) {
   console.log(title);
   sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
+};
+
+
+/**
+ * Tests for an expression with debugger outp
+ * @param {string} expr MathML expression.
+ */
+sre.SemanticMathml.testTranslation__ = function(expr) {
+  sre.Debugger.getInstance().init();
+  sre.SemanticMathml.removeAttributePrefix(
+      sre.Semantic.enrichMathml('<math>' + expr + '</math>').toString());
 };

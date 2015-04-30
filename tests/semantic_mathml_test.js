@@ -2479,6 +2479,191 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
 
 
 /**
+ * Square roots
+ */
+sre.SemanticMathmlTest.prototype.testMathmlSquareRoots = function() {
+  this.executeMathmlTest(
+      '<msqrt></msqrt>',
+      '<math>' +
+      '<msqrt type="sqrt" role="unknown" id="1" children="0">' +
+      '<mrow type="empty" role="unknown" id="0" parent="1"/>' +
+      '</msqrt>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msqrt><mi>x</mi></msqrt>',
+      '<math>' +
+      '<msqrt type="sqrt" role="unknown" id="1" children="0">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">x</mi>' +
+      '</msqrt>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msqrt><msqrt><mi>x</mi></msqrt></msqrt>',
+      '<math>' +
+      '<msqrt type="sqrt" role="unknown" id="2" children="1">' +
+      '<msqrt type="sqrt" role="unknown" id="1" children="0" parent="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">x</mi>' +
+      '</msqrt>' +
+      '</msqrt>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msqrt><mi>x</mi><mi>n</mi></msqrt>',
+      '<math>' +
+      '<msqrt type="sqrt" role="unknown" id="4" children="3">' +
+      '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">x</mi>' +
+      '<mo type="operator" role="multiplication" id="2" parent="3"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
+      '</mrow>' +
+      '</msqrt>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>',
+      '<math>' +
+      '<msqrt type="sqrt" role="unknown" id="6" children="5">' +
+      '<mrow type="infixop" role="implicit" id="5" children="2,3"' +
+      ' content="4" parent="6">' +
+      '<msqrt type="sqrt" role="unknown" id="2" children="1" parent="5">' +
+      '<msqrt type="sqrt" role="unknown" id="1" children="0" parent="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">x</mi>' +
+      '</msqrt>' +
+      '</msqrt>' +
+      '<mo type="operator" role="multiplication" id="4" parent="5"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">y</mi>' +
+      '</mrow>' +
+      '</msqrt>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Regular roots
+ */
+sre.SemanticMathmlTest.prototype.testMathmlRegularRoots = function() {
+  // Not sure if that makes even sense.
+  // this.executeMathmlTest('<mroot></mroot>');
+  this.executeMathmlTest(
+      '<mroot><mi>x</mi><mi>n</mi></mroot>',
+      '<math>' +
+      '<mroot type="root" role="unknown" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
+      '</mroot>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi>' +
+      '<mo>+</mo><mn>1</mn></mrow></mroot>',
+      '<math>' +
+      '<mroot type="root" role="unknown" id="8" children="3,7">' +
+      '<mrow type="infixop" role="addition" id="7" children="4,6"' +
+      ' content="5" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">x</mi>' +
+      '<mo type="operator" role="addition" id="5" parent="7"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">y</mi>' +
+      '</mrow>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">n</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">1</mn>' +
+      '</mrow>' +
+      '</mroot>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>',
+      '<math>' +
+      '<mroot type="root" role="unknown" id="4" children="0,3">' +
+      '<mroot type="root" role="unknown" id="3" children="1,2" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
+      '</mroot>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">m</mi>' +
+      '</mroot>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi>' +
+      '<mi>l</mi></mroot></mrow><mi>m</mi></mroot>',
+      '<math>' +
+      '<mroot type="root" role="unknown" id="9" children="0,8">' +
+      '<mrow type="infixop" role="implicit" id="8" children="3,6"' +
+      ' content="7" parent="9">' +
+      '<mroot type="root" role="unknown" id="3" children="1,2" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
+      '</mroot>' +
+      '<mo type="operator" role="multiplication" id="7" parent="8"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mroot type="root" role="unknown" id="6" children="4,5" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">y</mi>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">l</mi>' +
+      '</mroot>' +
+      '</mrow>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">m</mi>' +
+      '</mroot>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Mixed roots
+ */
+sre.SemanticMathmlTest.prototype.testMathmlMixedRoots = function() {
+  this.executeMathmlTest(
+      '<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>',
+      '<math>' +
+      '<msqrt type="sqrt" role="unknown" id="3" children="2">' +
+      '<mroot type="root" role="unknown" id="2" children="0,1" parent="3">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
+      '</mroot>' +
+      '</msqrt>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>',
+      '<math>' +
+      '<mroot type="root" role="unknown" id="3" children="0,2">' +
+      '<msqrt type="sqrt" role="unknown" id="2" children="1" parent="3">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">x</mi>' +
+      '</msqrt>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">n</mi>' +
+      '</mroot>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>',
+      '<math>' +
+      '<mroot type="root" role="unknown" id="6" children="0,5">' +
+      '<msqrt type="sqrt" role="unknown" id="5" children="4" parent="6">' +
+      '<mrow type="infixop" role="implicit" id="4" children="1,2"' +
+      ' content="3" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="operator" role="multiplication" id="3" parent="4"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">y</mi>' +
+      '</mrow>' +
+      '</msqrt>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="6">n</mi>' +
+      '</mroot>' +
+      '</math>'
+  );
+};
+
+
+/**
  * Simple function applications
  */
 sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
