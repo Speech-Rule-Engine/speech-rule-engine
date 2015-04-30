@@ -200,7 +200,7 @@ might of course be empty.
 
 
 \noindent
-\begin{tabular}{l||l|l|l||r@{$\quad\longrightarrow\quad$}l}
+\begin{tabular}{l||p{3.5cm}|p{3.5cm}|l||r@{$\quad\longrightarrow\quad$}l}
   Type & Content & Children & Mixed Element & \multicolumn{2}{l}{Example}\\\hline
   infixop & Operators & Operands & unique operator & $a+b+c$ &  [+, +][a, b, c] ``+" \\
   prefixop & Operators & Operand & concatenated ops & $++a$ & [+, +][a]``++" \\ 
@@ -209,7 +209,11 @@ might of course be empty.
   multirel & Relations & Operands & None & $a=b<c$ & [=, $<$][a,b,c] \\ 
   fenced & Fences & Content & None & $(a + c)$ & [(,)][a+c]\\
   punctuated & Punctuations & Full content & None & $a;b;c$ & [;,;][a,b,c]\\
-  appl & Application Char & Function, arguments & None & $f(x)$ & [@][f, (x)]\\
+  appl & Appl function, function symbol & Function, arguments & None & $f(x)$ & [@, f][f, (x)]\\ 
+  bigop & large op symbol & operator, arguments & None & $\sum_{i=0}{n} i$ & [$\sum$, f][$\sum_{i=0}{n}$, i]\\ 
+  integral & integral symbol & integral, integrand, variable & None & $\int_{0}{n}x\, dx$ & [($\int$, f][$\int_{0}{n}$, x, dx]\\ 
+  
+
 \end{tabular}
 
 
@@ -254,9 +258,9 @@ postfixop & 1 & operand & $n$ & postfix operators \\
 \begin{tabular}{>{\tt}l||c|l||c|l}\hline
 & \multicolumn{2}{l||}{\textbf{Children}} & \multicolumn{2}{l}{\textbf{Content}}\\\hline
 \multicolumn{5}{l}{\textbf{Function and big operator applications}}\\\hline
-appl & 2 & function, application & 1 & invisible application \\
-integral & 3 & integral, integrand, integration var & & \\
-bigop & 2 & operator, operand & & \\
+appl & 2 & function, application & 2 & invisible application, function symbol \\
+integral & 3 & integral, integrand, integration var & 1 & integration symbol\\
+bigop & 2 & operator, operand & 1 & large operator symbol\\
 sqrt & 1 & content& & \\
 root & 2 & arity, content& & \\\hline
 \multicolumn{5}{l}{\textbf{Big operators or functions with limits or indices}}\\\hline
@@ -271,8 +275,8 @@ tensor & 5 & base, left sub, left super, right sub, right super& & \\\hline
 \multicolumn{5}{l}{\textbf{Tables and their elements}}\\\hline
 table & & & \\
 multiline & & & \\
-matrix & & & \\
-vector & & & \\
+matrix &  & & \\
+vector & $n + 2$ & $n$ lines of type \texttt{line} & 2 & left fence, right fence\\
 cases & & & \\
 row & & & \\
 cell & & & \\
