@@ -394,7 +394,60 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
                          subSem.id + ') ' + supSem.id + ')');
     return newNode;
   }
+
+  if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
+    return sre.SemanticMathml.tensorCase_(semantic);
+  }
   return null;
+};
+
+
+/**
+ * Deals with tensor nodes by readjusting the index structure.
+ * @param {!sre.SemanticTree.Node} tensor The tensor node.
+ * @return {Element} The enriched MathML node for that tensor.
+ * @private
+ */
+sre.SemanticMathml.tensorCase_ = function(tensor) {
+  sre.SemanticMathml.walkTree_(
+      /**@type{!sre.SemanticTree.Node}*/(tensor.childNodes[0]));
+  var lsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
+  var lsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[2]);
+  var rsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[3]);
+  var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[4]);
+  var newNode = /**@type{!Element}*/(tensor.mathmlTree);
+  sre.SemanticMathml.setAttributes_(newNode, tensor);
+  if (lsub || lsup || rsub || rsup) {
+    newNode.setAttribute(sre.SemanticMathml.Attribute.COLLAPSED,
+                         '(' + tensor.id + ' ' +
+                         (lsub || tensor.childNodes[1].id) + ' ' +
+                         (lsup || tensor.childNodes[2].id) + ' ' +
+                         (rsub || tensor.childNodes[3].id) + ' ' +
+                         (rsup || tensor.childNodes[4].id) + ')'
+    );
+  }
+  return sre.SemanticMathml.ascendNewNode_(newNode);
+};
+
+
+/**
+ * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
+ * punctuations.
+ * @param {sre.SemanticTree.Node} index The index node of a tensor.
+ * @return {string} If the index node was a dummy punctuation, i.e. consisted of
+ *     more than one index, a string denoting the collapsed structure is
+ *     returned.
+ * @private
+ */
+sre.SemanticMathml.multiscriptIndex_ = function(index) {
+  if (index.type === sre.SemanticAttr.Type.PUNCTUATED &&
+      index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
+    index.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
+    return '(' + index.id + ' (' +
+        index.childNodes.map(function(x) {return x.id;}).join(' ') + '))';
+  }
+  sre.SemanticMathml.walkTree_(index);
+  return '';
 };
 
 
