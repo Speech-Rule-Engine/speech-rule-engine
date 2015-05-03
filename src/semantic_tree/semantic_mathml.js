@@ -287,6 +287,14 @@ sre.SemanticMathml.ElementTest_;
 
 
 /**
+ * Type annotation for arrays representing collapsed node structures.
+ * @typedef{number|Array.<sre.SemanticMathml.Collapsed_>}
+ * @private
+ */
+sre.SemanticMathml.Collapsed_;
+
+
+/**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
  * @param {!Element} node The tree node from where to start.
@@ -417,16 +425,158 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
   var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[4]);
   var newNode = /**@type{!Element}*/(tensor.mathmlTree);
   sre.SemanticMathml.setAttributes_(newNode, tensor);
-  if (lsub || lsup || rsub || rsup) {
-    newNode.setAttribute(sre.SemanticMathml.Attribute.COLLAPSED,
-                         '(' + tensor.id + ' ' +
-                         (lsub || tensor.childNodes[1].id) + ' ' +
-                         (lsup || tensor.childNodes[2].id) + ' ' +
-                         (rsub || tensor.childNodes[3].id) + ' ' +
-                         (rsup || tensor.childNodes[4].id) + ')'
-    );
+  var collapsed = [tensor.id, lsub, lsup, rsub, rsup];
+  if (!collapsed.every(sre.SemanticMathml.simpleCollapseStructure_)) {
+    sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
   }
+  var childIds = sre.SemanticMathml.collapsedLeafs_(lsub).concat(
+      sre.SemanticMathml.collapsedLeafs_(lsup)).concat(
+      sre.SemanticMathml.collapsedLeafs_(rsub)).concat(
+          sre.SemanticMathml.collapsedLeafs_(rsup));
+  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                       childIds.join(','));
+  sre.SemanticMathml.completeMultiscript_(
+      tensor, newNode,
+      sre.SemanticMathml.interleaveIds_(rsub, rsup),
+      sre.SemanticMathml.interleaveIds_(lsub, lsup));
   return sre.SemanticMathml.ascendNewNode_(newNode);
+};
+
+
+/**
+ * Interleaves the ids of two index lists.
+ * @param {!sre.SemanticMathml.Collapsed_} first A structured list of
+ *     ids.
+ * @param {!sre.SemanticMathml.Collapsed_} second A structured list of
+ *     ids.
+ * @return {!sre.SemanticMathml.Collapsed_} A simple list of ids.
+ * @private
+ */
+sre.SemanticMathml.interleaveIds_ = function(first, second) {
+  var adjFirst = sre.SemanticMathml.collapsedLeafs_(first);
+  var adjSecond = sre.SemanticMathml.collapsedLeafs_(second);
+  var result = [];
+  while (adjFirst.length > 0) {
+    result.push(adjFirst.shift());
+    if (adjSecond.length > 0) {
+      result.push(adjSecond.shift());
+    }
+  }
+  return result;
+};
+
+
+/**
+ * Checks if the structure is simple, i.e., a single id number.
+ * @param {sre.SemanticMathml.Collapsed_} strct The structure.
+ * @return {boolean} True if a simple number.
+ * @private
+ */
+sre.SemanticMathml.simpleCollapseStructure_ = function(strct) {
+  return (typeof strct === 'number');
+};
+
+
+/**
+ * Returns a list of the leaf ids of a collapsed structure.
+ * @param {sre.SemanticMathml.Collapsed_} coll The collapsed structure.
+ * @return {sre.SemanticMathml.Collapsed_} The leafs of the structure.
+ * @private
+ */
+sre.SemanticMathml.collapsedLeafs_ = function(coll) {
+  if (sre.SemanticMathml.simpleCollapseStructure_(coll)) {
+    return [coll];
+  }
+  return coll.slice(1);
+};
+
+
+/**
+ * Adds a collapsed attribute to the given node, according to the collapsed
+ * structure.
+ * @param {!Element} node The MathML node.
+ * @param {!sre.SemanticMathml.Collapsed_} collapsed The collapsed structure
+ *    annotations.
+ * @private
+ */
+sre.SemanticMathml.addCollapsedAttribute_ = function(node, collapsed) {
+  /**
+   * @param {!sre.SemanticMathml.Collapsed_} struct Collapse structure.
+   * @return {!string} The structure as string.
+   */
+  var collapseString = function(struct) {
+    if (sre.SemanticMathml.simpleCollapseStructure_(struct)) {
+      return struct.toString();
+    }
+    return '(' + struct.map(collapseString).join(' ') + ')';
+  };
+  node.setAttribute(sre.SemanticMathml.Attribute.COLLAPSED,
+                    collapseString(collapsed));
+};
+
+
+/**
+ * Completes the mmultiscript by adding missing None nodes and sorting out the
+ * right order of children.
+ * @param {!sre.SemanticTree.Node} tensor The semantic tensor node.
+ * @param {!Element} multiscript Its MathML counterpart.
+ * @param {!sre.SemanticMathml.Collapsed_} rightIndices The ids of the leaf
+ *     nodes of the right indices.
+ * @param {!sre.SemanticMathml.Collapsed_} leftIndices The ids of the leaf
+ *     nodes of the left indices.
+ * @private
+ */
+sre.SemanticMathml.completeMultiscript_ = function(
+    tensor, multiscript, rightIndices, leftIndices) {
+  var children = sre.DomUtil.toArray(multiscript.childNodes).slice(1);
+  var childCounter = 0;
+  // right sub and superscripts
+  for (var i = 0, right; right = rightIndices[i]; i++) {
+    var child = children[childCounter];
+    if (!child ||
+        right != child.getAttribute(sre.SemanticMathml.Attribute.ID)) {
+      var query = tensor.querySelectorAll(function(x) {return x.id === right;});
+      multiscript.insertBefore(sre.SemanticMathml.createNone_(query[0]), child);
+    } else {
+      childCounter++;
+    }
+  }
+  // mprescripts
+  if (children[childCounter] &&
+      sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
+    multiscript.insertBefore(
+        children[childCounter],
+        sre.SystemExternal.document.createElement('mprescripts'));
+  } else {
+    childCounter++;
+  }
+  // left sub and superscripts
+  for (var j = 0, left; left = leftIndices[j]; j++) {
+    child = children[childCounter];
+    if (!child ||
+        left != child.getAttribute(sre.SemanticMathml.Attribute.ID)) {
+      var query = tensor.querySelectorAll(function(x) {return x.id === left;});
+      multiscript.insertBefore(sre.SemanticMathml.createNone_(query[0]), child);
+    } else {
+      childCounter++;
+    }
+  }
+};
+
+
+/**
+ * Creates a None node.
+ * @param {sre.SemanticTree.Node} semantic An empty semantic node.
+ * @return {!Element} The corresponding MathML <None/> node.
+ * @private
+ */
+sre.SemanticMathml.createNone_ = function(semantic) {
+  var newNode = sre.SystemExternal.document.createElement('none');
+  if (semantic) {
+    sre.SemanticMathml.setAttributes_(newNode, semantic);
+  }
+  newNode.setAttribute(sre.SemanticMathml.Attribute.ADDED, 'true');
+  return newNode;
 };
 
 
@@ -434,9 +584,9 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
  * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
  * punctuations.
  * @param {sre.SemanticTree.Node} index The index node of a tensor.
- * @return {string} If the index node was a dummy punctuation, i.e. consisted of
- *     more than one index, a string denoting the collapsed structure is
- *     returned.
+ * @return {!sre.SemanticMathml.Collapsed_} If the index node was a
+ *     dummy punctuation, i.e. consisted of more than one index, a list of
+ *     strings for the collapsed structure is returned, otherwise the node id.
  * @private
  */
 sre.SemanticMathml.multiscriptIndex_ = function(index) {
@@ -444,18 +594,22 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
       index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
     var role = index.role;
     var parentId = index.parent.id;
-    var childIds = [];
+    var childIds = [index.id];
     for (var i = 0, child; child = index.childNodes[i]; i++) {
       var mmlChild = sre.SemanticMathml.walkTree_(child);
       mmlChild.setAttribute(sre.SemanticMathml.Attribute.PARENT, parentId);
       mmlChild.setAttribute(sre.SemanticMathml.Attribute.ROLE, role);
       childIds.push(child.id);
     }
-    return '(' + index.id + ' (' + childIds.join(' ') + '))';
+    return childIds;
   }
   sre.SemanticMathml.walkTree_(index);
-  return '';
+  return index.id;
 };
+
+
+
+// '(' + index.id + ' (' + childIds.join(' ') + '))';
 
 
 /**
@@ -515,6 +669,7 @@ sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
   mml.setAttribute(sre.SemanticMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.SemanticMathml.Attribute.ROLE, semantic.role);
   mml.setAttribute(sre.SemanticMathml.Attribute.ID, semantic.id);
+  //sre.SemanticMathml.printNodeList__('None Nodes: ', semantic.childNodes);
   if (semantic.childNodes.length > 0) {
     mml.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                      sre.SemanticMathml.makeIdList_(semantic.childNodes));
