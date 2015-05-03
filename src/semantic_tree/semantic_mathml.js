@@ -442,9 +442,16 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
 sre.SemanticMathml.multiscriptIndex_ = function(index) {
   if (index.type === sre.SemanticAttr.Type.PUNCTUATED &&
       index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
-    index.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
-    return '(' + index.id + ' (' +
-        index.childNodes.map(function(x) {return x.id;}).join(' ') + '))';
+    var role = index.role;
+    var parentId = index.parent.id;
+    var childIds = [];
+    for (var i = 0, child; child = index.childNodes[i]; i++) {
+      var mmlChild = sre.SemanticMathml.walkTree_(child);
+      mmlChild.setAttribute(sre.SemanticMathml.Attribute.PARENT, parentId);
+      mmlChild.setAttribute(sre.SemanticMathml.Attribute.ROLE, role);
+      childIds.push(child.id);
+    }
+    return '(' + index.id + ' (' + childIds.join(' ') + '))';
   }
   sre.SemanticMathml.walkTree_(index);
   return '';
