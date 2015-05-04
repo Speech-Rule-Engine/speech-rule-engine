@@ -394,12 +394,8 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     }
     newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
                          ignore.role);
-    // TODO (sorge) Put this into separate function when doing the mmultiscript
-    //     work.
-    newNode.setAttribute(sre.SemanticMathml.Attribute.COLLAPSED,
-                         '(' + semantic.id +
-                         ' (' + ignore.id + ' ' + baseSem.id + ' ' +
-                         subSem.id + ') ' + supSem.id + ')');
+    sre.SemanticMathml.addCollapsedAttribute_(
+        newNode, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
     return newNode;
   }
 
