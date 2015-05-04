@@ -1667,7 +1667,7 @@ sre.SemanticTree.prototype.getFunctionsInRow_ = function(
  * Classifies a function wrt. the heuristic that should be applied.
  * @param {!sre.SemanticTree.Node} funcNode The node to be classified.
  * @param {!Array.<sre.SemanticTree.Node>} restNodes The remainder list of
- *     nodes. They can useful to look ahead if there is an explicit function
+ *     nodes. They can be useful to look ahead if there is an explicit function
  *     application. If there is one, it will be destructively removed!
  * @return {!string} The string specifying the heuristic.
  * @private
@@ -1686,10 +1686,14 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
       restNodes[0].textContent == sre.SemanticAttr.functionApplication()) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
+    // TODO (sorge) This should not be distructive!
     restNodes.shift();
-    // TODO (sorge) Here we should find out exactly what the function is.
-    sre.SemanticTree.propagateFunctionRole_(
-        funcNode, sre.SemanticAttr.Role.SIMPLEFUNC);
+    var role = sre.SemanticAttr.Role.SIMPLEFUNC;
+    if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
+        funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
+      role = funcNode.role;
+    }
+    sre.SemanticTree.propagateFunctionRole_(funcNode, role);
     return 'prefix';
   }
   switch (funcNode.role) {
