@@ -192,14 +192,14 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     newNode = newNodeInfo.node;
     if (newNodeInfo.valid && sre.SemanticUtil.EMPTYTAGS.
         indexOf(sre.SemanticUtil.tagName(newNode)) !== -1) {
-    console.log('Case 1.1');
+      console.log('Case 1.1');
       // If we have an LCA containing all children, then we simply replace it.
       //
       var oldNode = /**@type{!Element}*/(newNode);
       newNode = sre.SemanticMathml.cloneNode_(oldNode);
       sre.DomUtil.replaceNode(oldNode, newNode);
     } else {
-    console.log('Case 1.2');
+      console.log('Case 1.2');
       // If we have an LCA containing only some children, then we replace those
       // children only and add a new mrow.
       //
@@ -370,15 +370,15 @@ sre.SemanticMathml.unitChild_ = function(node) {
   var parent = sre.SemanticMathml.parentNode_(node);
   if (!node.parentNode ||
       sre.SemanticUtil.EMPTYTAGS.indexOf(
-        sre.SemanticUtil.tagName(parent)) === -1) {
+      sre.SemanticUtil.tagName(parent)) === -1) {
     return false;
   }
   return sre.DomUtil.toArray(parent.childNodes).every(
-    function(child) {
-      return child === node ||
-        sre.SemanticUtil.IGNORETAGS.indexOf(
-          sre.SemanticUtil.tagName(child)) !== -1;
-    });
+      function(child) {
+        return child === node ||
+            sre.SemanticUtil.IGNORETAGS.indexOf(
+            sre.SemanticUtil.tagName(child)) !== -1;
+      });
 };
 
 

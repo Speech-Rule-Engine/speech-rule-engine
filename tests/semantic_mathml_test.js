@@ -4231,3 +4231,81 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
       '</math>'
   );
 };
+
+
+// Expressions containing ignored tags.
+/**
+ * Expressions containing pseudo unit children, i.e., children whose only
+ * siblings are ignored nodes.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
+  this.executeMathmlTest(
+      '<mi>i</mi><merror>Y</merror>',
+      '<math>' +
+      '<mi type="identifier" role="latinletter" id="0">i</mi>' +
+      '<merror>Y</merror>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mphantom>nix</mphantom><mi>i</mi><merror>Y</merror>',
+      '<math>' +
+      '<mphantom>nix</mphantom>' +
+      '<mi type="identifier" role="latinletter" id="0">i</mi>' +
+      '<merror>Y</merror>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mphantom>nix</mphantom><mi>i</mi><merror>Y</merror></mrow>',
+      '<math>' +
+      '<mrow>' +
+      '<mphantom>nix</mphantom>' +
+      '<mi type="identifier" role="latinletter" id="0">i</mi>' +
+      '<merror>Y</merror>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mphantom>nix</mphantom><mi>i</mi><merror>Y</merror></mrow>' +
+      '<merror>nothing</merror>',
+      '<math>' +
+      '<mrow>' +
+      '<mphantom>nix</mphantom>' +
+      '<mi type="identifier" role="latinletter" id="0">i</mi>' +
+      '<merror>Y</merror>' +
+      '</mrow>' +
+      '<merror>nothing</merror>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mphantom>nix</mphantom><mrow><mi>i</mi></mrow>' +
+      '<merror>Y</merror></mrow><merror>nothing</merror>',
+      '<math>' +
+      '<mrow>' +
+      '<mphantom>nix</mphantom>' +
+      '<mrow>' +
+      '<mi type="identifier" role="latinletter" id="0">i</mi>' +
+      '</mrow>' +
+      '<merror>Y</merror>' +
+      '</mrow>' +
+      '<merror>nothing</merror>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mphantom>nix</mphantom><mrow><mi>i</mi><mi>j</mi></mrow>' +
+      '<merror>Y</merror></mrow><merror>nothing</merror>',
+      '<math>' +
+      '<mrow>' +
+      '<mphantom>nix</mphantom>' +
+      '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<mo type="operator" role="multiplication" id="2" parent="3"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
+      '</mrow>' +
+      '<merror>Y</merror>' +
+      '</mrow>' +
+      '<merror>nothing</merror>' +
+      '</math>'
+  );
+};
