@@ -3771,48 +3771,69 @@ sre.SemanticMathmlTest.prototype.testMathmlEmptyTensors = function() {
       '<mmultiscripts type="empty" role="unknown" id="0"/>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><none/></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '<mmultiscripts type="empty" role="unknown" id="0">' +
+      '<none/>' +
+      '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><none/><mprescripts/></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '<mmultiscripts type="empty" role="unknown" id="0">' +
+      '<none/>' +
+      '<mprescripts/>' +
+      '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '<mmultiscripts type="empty" role="unknown" id="0">' +
+      '<none/>' +
+      '<mprescripts/>' +
+      '<none/>' +
+      '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '<mmultiscripts type="empty" role="unknown" id="0">' +
+      '<none/>' +
+      '<none/>' +
+      '<mprescripts/>' +
+      '<none/>' +
+      '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><none/><none/><none/>' +
       '<mprescripts/><none/></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '<mmultiscripts type="empty" role="unknown" id="0">' +
+      '<none/>' +
+      '<none/>' +
+      '<none/>' +
+      '<mprescripts/>' +
+      '<none/>' +
+      '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><none/><none/><none/><mprescripts/>' +
       '<none/><mpadded/></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '<mmultiscripts type="empty" role="unknown" id="0">' +
+      '<none/>' +
+      '<none/>' +
+      '<none/>' +
+      '<mprescripts/>' +
+      '<none/>' +
+      '<mpadded/>' +
+      '</mmultiscripts>' +
       '</math>'
   );
 };
@@ -4330,7 +4351,8 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mphantom>nix</mphantom><mi>i</mi><mo>',
+      '<mphantom>nix</mphantom><mi>i</mi><mo>+</mo><mi>j</mi>' +
+      '<merror>Y</merror>',
       '<math>' +
       '<mphantom>nix</mphantom>' +
       '<mrow type="infixop" role="addition" id="3" children="0,2"' +
@@ -4359,6 +4381,7 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       '<math type="infixop" role="implicit" id="3" children="0,1"' +
       ' content="2">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<merror>nothing</merror>' +
       '<mo type="operator" role="multiplication" id="2" parent="3"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
@@ -4372,11 +4395,11 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       '<mrow type="infixop" role="addition" id="3" children="0,2"' +
       ' content="1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<merror>nothing</merror>' +
       '<mo type="operator" role="addition" id="1" parent="3"' +
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
       '</mrow>' +
-      '<merror>nothing</merror>' +
       '<merror>Y</merror>' +
       '</math>'
   );

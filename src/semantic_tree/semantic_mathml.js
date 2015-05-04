@@ -195,9 +195,9 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       console.log('Case 1.1');
       // If we have an LCA containing all children, then we simply replace it.
       //
-      var oldNode = /**@type{!Element}*/(newNode);
-      newNode = sre.SemanticMathml.cloneNode_(oldNode);
-      sre.DomUtil.replaceNode(oldNode, newNode);
+      // var oldNode = /**@type{!Element}*/(newNode);
+      // newNode = sre.SemanticMathml.cloneNode_(oldNode);
+      // sre.DomUtil.replaceNode(oldNode, newNode);
     } else {
       console.log('Case 1.2');
       // If we have an LCA containing only some children, then we replace those
@@ -213,24 +213,96 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         // If childrenList is empty we get an empty mrow element representing a
         // node of type empty.
         //
+        var node = sre.SemanticMathml.attachedElement_(childrenList);
+        console.log(node.toString());
+        console.log(node.parentNode.toString());
+        var oldChildren = sre.SemanticMathml.childrenSubset_(node.parentNode, childrenList);
+        sre.DomUtil.replaceNode(node, newNode);
+        console.log(newNode.toString());
+        console.log(newNode.parentNode.toString());
+        oldChildren.forEach(function(x) {newNode.appendChild(x);});
+        console.log(newNode.toString());
+        console.log(newNode.parentNode.toString());
         console.log(childrenList[0].parentNode.toString());
-        sre.DomUtil.replaceNode(childrenList[0], newNode);
       }
     }
+    // for (var i = 0, child; child = childrenList[i]; i++) {
+    //   newNode.appendChild(child);
+    // }
   } else {
     console.log('Case 2');
-    newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
-    console.log(semantic.mathmlTree.parentNode.toString());
-    sre.DomUtil.replaceNode(semantic.mathmlTree, newNode);
-    console.log(newNode.parentNode.toString());
+    newNode = semantic.mathmlTree;
+    // newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
+    // console.log(semantic.mathmlTree.parentNode.toString());
+    // sre.DomUtil.replaceNode(semantic.mathmlTree, newNode);
+
+
+    // for (var i = 0, child; child = childrenList[i]; i++) {
+    //   newNode.appendChild(child);
+    // }
+    // console.log(newNode.parentNode.toString());
   }
+  sre.SemanticMathml.combineChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
-  for (var i = 0, child; child = childrenList[i]; i++) {
-    newNode.appendChild(child);
-  }
   console.log('here');
 
   return sre.SemanticMathml.ascendNewNode_(newNode);
+};
+
+
+sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
+  var oldChildren = sre.DomUtil.toArray(node.childNodes);
+  //sre.SemanticMathml.printNodeList__('Old Children', oldChildren);
+  var leftIndex = +Infinity;
+  var rightIndex = -Infinity;
+  newChildren.forEach(function(child) {
+    var index = oldChildren.indexOf(child);
+    if (index !== -1) {
+      leftIndex = Math.min(leftIndex, index);
+      rightIndex = Math.max(rightIndex, index);
+    }
+  });
+  //sre.SemanticMathml.printNodeList__('Old Children', oldChildren.slice(leftIndex, rightIndex + 1));
+  return oldChildren.slice(leftIndex, rightIndex + 1);
+  // for (var i = 0, newChild; newChild = newChildren[i]; i++) {
+  //   newChild
+  // }
+};
+
+
+sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
+  var oldChildren = node.childNodes;
+  console.log(oldChildren.length);
+  if (!oldChildren.length) {
+    newChildren.forEach(function(x) {node.appendChild(x);});
+    return;
+  }
+  console.log('COMBINING NEW: ', newChildren.length);
+  console.log('COMBINING OLD: ', oldChildren.length);
+  var oldCounter = 0;
+  while (newChildren.length) {
+    if (oldChildren[oldCounter] === newChildren[0]) {
+      // console.log(newChildren[0].toString());
+      newChildren.shift();
+      oldCounter++;
+      continue;
+    }
+    if (newChildren.indexOf(oldChildren[oldCounter]) === -1) {
+      // console.log(oldChildren[oldCounter].toString());
+      oldCounter++;
+      continue;
+    }
+    // if (oldChildren.indexOf(newChildren[0]) === -1) {
+    //   node.insertBefore(newChildren[0], oldChildren[oldCounter]);
+    //   newChildren.shift();
+    //   continue;
+    // }
+    // oldCounter++;
+    // console.log(newChildren[0].toString());
+      node.insertBefore(newChildren[0], oldChildren[oldCounter]);
+      newChildren.shift();
+  }
+  //sre.SemanticMathml.printNodeList__('Combined children', node.childNodes);
 };
 
 
