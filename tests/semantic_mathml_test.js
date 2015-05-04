@@ -4309,3 +4309,75 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '</math>'
   );
 };
+
+
+/**
+ * Expressions with ignore tags, introducing a new mrow.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
+  this.executeMathmlTest(
+      '<mphantom>nix</mphantom><mi>i</mi><mi>j</mi><merror>Y</merror>',
+      '<math>' +
+      '<mphantom>nix</mphantom>' +
+      '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<mo type="operator" role="multiplication" id="2" parent="3"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
+      '</mrow>' +
+      '<merror>Y</merror>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mphantom>nix</mphantom><mi>i</mi><mo>',
+      '<math>' +
+      '<mphantom>nix</mphantom>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
+      '</mrow>' +
+      '<merror>Y</merror>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>i</mi><merror>nothing</merror><mo>+</mo><mi>j</mi>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<merror>nothing</merror>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>i</mi><merror>nothing</merror><mi>j</mi>',
+      '<math type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<mo type="operator" role="multiplication" id="2" parent="3"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mphantom>nix</mphantom><mi>i</mi><merror>nothing</merror><mo>+</mo>' +
+      '<mi>j</mi><merror>Y</merror>',
+      '<math>' +
+      '<mphantom>nix</mphantom>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
+      '</mrow>' +
+      '<merror>nothing</merror>' +
+      '<merror>Y</merror>' +
+      '</math>'
+  );
+};
