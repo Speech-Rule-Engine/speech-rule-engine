@@ -56,11 +56,11 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [
-  sre.SemanticTreeTest,
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakRuleTest,
   sre.SemanticRuleTest,
+  sre.SemanticTreeTest,
   sre.SpeechRuleTest
 ];
 
