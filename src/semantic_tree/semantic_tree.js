@@ -476,9 +476,13 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
           sre.SemanticAttr.Type.CELL, [this.processRow_(children)], []);
       newNode.role = sre.SemanticAttr.Role.TABLE;
       break;
+    case 'MS':
     case 'MTEXT':
       newNode = this.makeLeafNode_(mml);
       newNode.type = sre.SemanticAttr.Type.TEXT;
+      if (sre.SemanticUtil.tagName(mml) === 'MS') {
+        newNode.role = sre.SemanticAttr.Role.STRING;
+      }
       sre.SemanticTree.exprFont_(newNode);
       break;
     // TODO (sorge) Role and font of multi-character and digits unicode strings.
