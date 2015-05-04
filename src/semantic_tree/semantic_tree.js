@@ -2518,23 +2518,25 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
   }
   // This is the pathological msubsup case.
   //
-  // The treatment of elements here is debatable, as we explicitly purge NONE
-  // elements, which could be retained in order to get the correct correlation
-  // between super and subscript nodes.
+  // We retain NONE nodes if necessary, i.e., in a non-empty sub- or
+  // superscript.
   if (!sre.SemanticUtil.purgeNodes(lsup).length &&
       !sre.SemanticUtil.purgeNodes(lsub).length) {
-    rsup = sre.SemanticUtil.purgeNodes(rsup);
-    rsub = sre.SemanticUtil.purgeNodes(rsub);
-    if (!rsup.length && !rsub.length) {
+    var rsupPurged = sre.SemanticUtil.purgeNodes(rsup);
+    var rsubPurged = sre.SemanticUtil.purgeNodes(rsub);
+    if (!rsupPurged.length && !rsubPurged.length) {
       return base;
     }
-    var mmlTag = rsub.length ? (rsup.length ? 'MSUBSUP' : 'MSUB') : 'MSUP';
+    var mmlTag = rsubPurged.length ?
+        (rsupPurged.length ? 'MSUBSUP' : 'MSUB') : 'MSUP';
     var mmlchild = [base];
-    if (rsub.length) {
-      mmlchild.push(this.processRow_(this.parseMathmlChildren_(rsub)));
+    if (rsubPurged.length) {
+      mmlchild.push(this.makeScriptNode_(
+          rsub, sre.SemanticAttr.Role.RIGHTSUB, true));
     }
-    if (rsup.length) {
-      mmlchild.push(this.processRow_(this.parseMathmlChildren_(rsup)));
+    if (rsupPurged.length) {
+      mmlchild.push(this.makeScriptNode_(
+          rsup, sre.SemanticAttr.Role.RIGHTSUPER, true));
     }
     return this.makeLimitNode_(mmlTag, mmlchild);
   }
@@ -2558,16 +2560,22 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
  * @param {!Array.<Element>} nodes A list of unprocessed nodes for
  *      that script.
  * @param {sre.SemanticAttr.Role} role The role of the dummy node.
+ * @param {boolean=} opt_noSingle Flag indicating whether role should be set
+ *      for a single node.
  * @return {!sre.SemanticTree.Node} The semantic tensor node.
  * @private
  */
-sre.SemanticTree.prototype.makeScriptNode_ = function(nodes, role) {
+sre.SemanticTree.prototype.makeScriptNode_ = function(
+    nodes, role, opt_noSingle) {
   switch (nodes.length) {
     case 0:
       var newNode = this.makeEmptyNode_();
       break;
     case 1:
       newNode = this.parseMathml_(/** @type {!Element} */(nodes[0]));
+      if (opt_noSingle) {
+        return newNode;
+      }
       break;
     default:
       newNode = this.makeDummyNode_(this.parseMathmlChildren_(nodes));
