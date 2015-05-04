@@ -183,6 +183,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   var childrenList = sre.SemanticMathml.combineContentChildren_(
       semantic, newContent, newChildren);
   if (semantic.mathmlTree === null) {
+    console.log('Case 1');
     // In case we do not have an original MathML element, we need to find the
     // MathML node where to attach the semantically enriched children. We do
     // this by computing their LCA.
@@ -191,12 +192,14 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     newNode = newNodeInfo.node;
     if (newNodeInfo.valid && sre.SemanticUtil.EMPTYTAGS.
         indexOf(sre.SemanticUtil.tagName(newNode)) !== -1) {
+    console.log('Case 1.1');
       // If we have an LCA containing all children, then we simply replace it.
       //
       var oldNode = /**@type{!Element}*/(newNode);
       newNode = sre.SemanticMathml.cloneNode_(oldNode);
       sre.DomUtil.replaceNode(oldNode, newNode);
     } else {
+    console.log('Case 1.2');
       // If we have an LCA containing only some children, then we replace those
       // children only and add a new mrow.
       //
@@ -205,20 +208,27 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       //
       newNode = sre.SystemExternal.document.createElement('mrow');
       if (childrenList[0]) {
+        //sre.SemanticMathml.printNodeList__('Children List:', childrenList);
+        console.log('Case 1.2.1');
         // If childrenList is empty we get an empty mrow element representing a
         // node of type empty.
         //
+        console.log(childrenList[0].parentNode.toString());
         sre.DomUtil.replaceNode(childrenList[0], newNode);
       }
     }
   } else {
+    console.log('Case 2');
     newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
+    console.log(semantic.mathmlTree.parentNode.toString());
     sre.DomUtil.replaceNode(semantic.mathmlTree, newNode);
+    console.log(newNode.parentNode.toString());
   }
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   for (var i = 0, child; child = childrenList[i]; i++) {
     newNode.appendChild(child);
   }
+  console.log('here');
 
   return sre.SemanticMathml.ascendNewNode_(newNode);
 };
@@ -342,14 +352,33 @@ sre.SemanticMathml.validLca_ = function(left, right) {
  */
 sre.SemanticMathml.ascendNewNode_ = function(newNode) {
   while (sre.SemanticUtil.tagName(newNode) !== 'MATH' &&
-         newNode.parentNode &&
-         sre.SemanticUtil.EMPTYTAGS.
-         indexOf(sre.SemanticUtil.tagName(
-             sre.SemanticMathml.parentNode_(newNode))) !== -1 &&
-         newNode.parentNode.childNodes.length === 1) {
+         sre.SemanticMathml.unitChild_(newNode)) {
     newNode = sre.SemanticMathml.parentNode_(newNode);
   }
   return newNode;
+};
+
+
+/**
+ * Checks if the node is a unit child, meaning it is the only child of its
+ * parent modulo ignored nodes.
+ * @param {!Element} node The node to be tested.
+ * @return {boolean} True if node is a legal unit child.
+ * @private
+ */
+sre.SemanticMathml.unitChild_ = function(node) {
+  var parent = sre.SemanticMathml.parentNode_(node);
+  if (!node.parentNode ||
+      sre.SemanticUtil.EMPTYTAGS.indexOf(
+        sre.SemanticUtil.tagName(parent)) === -1) {
+    return false;
+  }
+  return sre.DomUtil.toArray(parent.childNodes).every(
+    function(child) {
+      return child === node ||
+        sre.SemanticUtil.IGNORETAGS.indexOf(
+          sre.SemanticUtil.tagName(child)) !== -1;
+    });
 };
 
 
