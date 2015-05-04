@@ -132,7 +132,7 @@ sre.SemanticUtil.tagName = function(node) {
  * @type {Array.<string>}
  * @const
  */
-sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT'];
+sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS'];
 
 
 /**

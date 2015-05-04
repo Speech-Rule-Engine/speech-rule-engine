@@ -1356,6 +1356,9 @@ sre.SemanticAttr.Role = {
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',
 
+  // Text.
+  STRING: 'string',
+
   // Punctuated elements.
   SEQUENCE: 'sequence',
   ENDPUNCT: 'endpunct',
