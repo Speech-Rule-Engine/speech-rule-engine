@@ -3757,3 +3757,473 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
 };
 
 
+// Missing tests here!
+
+
+// Tensors.
+/**
+ * Pathological multiscripts expressions that are actually empty.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlEmptyTensors = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><none/><mprescripts/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><none/><none/><none/>' +
+      '<mprescripts/><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><none/><none/><none/><mprescripts/>' +
+      '<none/><mpadded/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="empty" role="unknown" id="0"/>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Pathological multiscript expressions that are just the base element.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlBaseTensors = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="identifier" role="latinletter" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="identifier" role="latinletter" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><none/><mprescripts/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="identifier" role="latinletter" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><none/><mprescripts/><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="identifier" role="latinletter" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><none/><none/><none/><mprescripts/><none/>' +
+      '</mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="identifier" role="latinletter" id="0"/>' +
+      '</math>'
+  );
+  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
+      '<none/><mpadded/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">X</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">Y</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+};
+
+
+// These tests have to be rewritten!
+/**
+ * Pathological multiscript expressions that are actually on right
+ * sub/superscripts.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="subscript" role="latinletter" id="2"' +
+      ' children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">X</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">i</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="subscript" role="latinletter" id="2"' +
+      ' children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">X</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">i</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="superscript" role="latinletter" id="2"' +
+      ' children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">X</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">i</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="superscript" role="latinletter" id="4"' +
+      ' children="3,2">' +
+      '<mrow type="subscript" role="subsup" id="3" children="0,1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">X</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">i</mi>' +
+      '</mrow>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
+      '<mprescripts/><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="superscript" role="latinletter" id="4"' +
+      ' children="3,2">' +
+      '<mrow type="subscript" role="subsup" id="3" children="0,1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">X</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">i</mi>' +
+      '</mrow>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><none/></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="superscript" role="latinletter" id="10"' +
+      ' children="9,8">' +
+      '<mrow type="subscript" role="subsup" id="9" children="0,4"' +
+      ' parent="10">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">X</mi>' +
+      '<mrow type="infixop" role="implicit" id="4" children="1,2"' +
+      ' content="3" parent="9">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">i</mi>' +
+      '<mo type="operator" role="multiplication" id="3" parent="4"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mrow type="infixop" role="implicit" id="8" children="5,6"' +
+      ' content="7" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="5" parent="8">j</mi>' +
+      '<mo type="operator" role="multiplication" id="7" parent="8"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">l</mi>' +
+      '</mrow>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Simple multiscript expressions with some scripts on the left.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
+      '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><none/><none/><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mpadded/><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<mpadded type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mprescripts/>' +
+      '<mn>3</mn><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5" added="true"/>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mprescripts/>' +
+      '<mn>3</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5" added="true"/>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<none type="empty" role="leftsuper" id="2" parent="5" added="true"/>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mprescripts/>' +
+      '<none/><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5" added="true"/>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<none type="empty" role="leftsub" id="1" parent="5"/>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
+      '<none/><mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<none type="empty" role="leftsub" id="1" parent="5"/>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
+      '<mn>3</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<none type="empty" role="leftsuper" id="2" parent="5" added="true"/>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Complex multiscript expressions with some scripts on the left.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="17"' +
+      ' children="1,2,5,6,9,10,13,14" collapsed="(17 (4 1 2) (8 5 6) (12 9' +
+      ' 10) (16 13 14))">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="17">A</mi>' +
+      '<mn type="number" role="rightsub" id="9" parent="17">3</mn>' +
+      '<mn type="number" role="rightsuper" id="13" parent="17">4</mn>' +
+      '<mi type="identifier" role="rightsub" id="10" parent="17">k</mi>' +
+      '<mi type="identifier" role="rightsuper" id="14" parent="17">l</mi>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="17">1</mn>' +
+      '<mn type="number" role="leftsuper" id="5" parent="17">2</mn>' +
+      '<mi type="identifier" role="leftsub" id="2" parent="17">i</mi>' +
+      '<mi type="identifier" role="leftsuper" id="6" parent="17">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="17"' +
+      ' children="1,2,5,6,9,10,13,14" collapsed="(17 (4 1 2) (8 5 6) (12 9' +
+      ' 10) (16 13 14))">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="17">A</mi>' +
+      '<mn type="number" role="rightsub" id="9" parent="17">3</mn>' +
+      '<none type="empty" role="rightsuper" id="13" parent="17"/>' +
+      '<mi type="identifier" role="rightsub" id="10" parent="17">k</mi>' +
+      '<mi type="identifier" role="rightsuper" id="14" parent="17">l</mi>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="17">1</mn>' +
+      '<none type="empty" role="leftsuper" id="5" parent="17"/>' +
+      '<none type="empty" role="leftsub" id="2" parent="17"/>' +
+      '<mi type="identifier" role="leftsuper" id="6" parent="17">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/>' +
+      '<mn>4</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="8"' +
+      ' children="1,2,3,4,7" collapsed="(8 1 2 (6 3 4) 7)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="8">A</mi>' +
+      '<mn type="number" role="rightsub" id="3" parent="8">1</mn>' +
+      '<mn type="number" role="rightsuper" id="7" parent="8">2</mn>' +
+      '<mn type="number" role="rightsub" id="4" parent="8">3</mn>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="8">4</mn>' +
+      '<none type="empty" role="leftsuper" id="2" parent="8" added="true"/>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/>' +
+      '<mn>5</mn><mn>4</mn><mn>6</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="11"' +
+      ' children="1,2,5,6,7,10" collapsed="(11 (4 1 2) 5 (9 6 7) 10)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="11">A</mi>' +
+      '<mn type="number" role="rightsub" id="6" parent="11">1</mn>' +
+      '<mn type="number" role="rightsuper" id="10" parent="11">2</mn>' +
+      '<mn type="number" role="rightsub" id="7" parent="11">3</mn>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="11">5</mn>' +
+      '<mn type="number" role="leftsuper" id="5" parent="11">4</mn>' +
+      '<mn type="number" role="leftsub" id="2" parent="11">6</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
+      '<mn>1</mn><mn>2</mn><mprescripts/><none/><mn>3</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="8" children="4,5,6,7">' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">X</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      '' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">Y</mi>' +
+      '</mrow>' +
+      '<mn type="number" role="rightsub" id="6" parent="8">1</mn>' +
+      '<mn type="number" role="rightsuper" id="7" parent="8">2</mn>' +
+      '<mprescripts/>' +
+      '<none type="empty" role="leftsub" id="4" parent="8"/>' +
+      '<mn type="number" role="leftsuper" id="5" parent="8">3</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+};
