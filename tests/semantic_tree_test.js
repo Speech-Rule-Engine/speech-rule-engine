@@ -8086,26 +8086,26 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<subscript role="subsup" id="9">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<infixop role="implicit" id="4">\u2062' +
+      '<punctuated role="rightsub" id="4">' +
       '<content>' +
-      '<operator role="multiplication" id="3">\u2062</operator>' +
+      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
       '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
       '</children>' +
-      '</infixop>' +
+      '</punctuated>' +
       '</children>' +
       '</subscript>' +
-      '<infixop role="implicit" id="8">\u2062' +
+      '<punctuated role="rightsuper" id="8">' +
       '<content>' +
-      '<operator role="multiplication" id="7">\u2062</operator>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="5">j</identifier>' +
       '<identifier role="latinletter" font="italic" id="6">l</identifier>' +
       '</children>' +
-      '</infixop>' +
+      '</punctuated>' +
       '</children>' +
       '</superscript>'
   );
