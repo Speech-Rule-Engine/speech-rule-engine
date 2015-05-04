@@ -456,9 +456,9 @@ sre.SemanticMathml.interleaveIds_ = function(first, second) {
   var adjFirst = sre.SemanticMathml.collapsedLeafs_(first);
   var adjSecond = sre.SemanticMathml.collapsedLeafs_(second);
   var result = [];
-  while (adjFirst.length > 0) {
+  while (adjFirst.length) {
     result.push(adjFirst.shift());
-    if (adjSecond.length > 0) {
+    if (adjSecond.length) {
       result.push(adjSecond.shift());
     }
   }
@@ -530,17 +530,22 @@ sre.SemanticMathml.completeMultiscript_ = function(
     tensor, multiscript, rightIndices, leftIndices) {
   var children = sre.DomUtil.toArray(multiscript.childNodes).slice(1);
   var childCounter = 0;
-  // right sub and superscripts
-  for (var i = 0, right; right = rightIndices[i]; i++) {
-    var child = children[childCounter];
-    if (!child ||
-        right != child.getAttribute(sre.SemanticMathml.Attribute.ID)) {
-      var query = tensor.querySelectorAll(function(x) {return x.id === right;});
-      multiscript.insertBefore(sre.SemanticMathml.createNone_(query[0]), child);
-    } else {
-      childCounter++;
+  var completeIndices = function(indices) {
+    for (var i = 0, index; index = indices[i]; i++) {
+      var child = children[childCounter];
+      if (!child ||
+          index != child.getAttribute(sre.SemanticMathml.Attribute.ID)) {
+        var query = tensor.querySelectorAll(
+            function(x) {return x.id === index;});
+        multiscript.insertBefore(
+            sre.SemanticMathml.createNone_(query[0]), child);
+      } else {
+        childCounter++;
+      }
     }
-  }
+  };
+  // right sub and superscripts
+  completeIndices(rightIndices);
   // mprescripts
   if (children[childCounter] &&
       sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
@@ -551,16 +556,7 @@ sre.SemanticMathml.completeMultiscript_ = function(
     childCounter++;
   }
   // left sub and superscripts
-  for (var j = 0, left; left = leftIndices[j]; j++) {
-    child = children[childCounter];
-    if (!child ||
-        left != child.getAttribute(sre.SemanticMathml.Attribute.ID)) {
-      var query = tensor.querySelectorAll(function(x) {return x.id === left;});
-      multiscript.insertBefore(sre.SemanticMathml.createNone_(query[0]), child);
-    } else {
-      childCounter++;
-    }
-  }
+  completeIndices(leftIndices);
 };
 
 
@@ -619,7 +615,7 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
  * @private
  */
 sre.SemanticMathml.cloneContentNode_ = function(content) {
-  if (content.mathml.length > 0) {
+  if (content.mathml.length) {
     return sre.SemanticMathml.walkTree_(content);
     // sre.SemanticMathml.setAttributes_(
     //     content.mathml[content.mathml.length - 1], content);
@@ -669,12 +665,11 @@ sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
   mml.setAttribute(sre.SemanticMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.SemanticMathml.Attribute.ROLE, semantic.role);
   mml.setAttribute(sre.SemanticMathml.Attribute.ID, semantic.id);
-  //sre.SemanticMathml.printNodeList__('None Nodes: ', semantic.childNodes);
-  if (semantic.childNodes.length > 0) {
+  if (semantic.childNodes.length) {
     mml.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                      sre.SemanticMathml.makeIdList_(semantic.childNodes));
   }
-  if (semantic.contentNodes.length > 0) {
+  if (semantic.contentNodes.length) {
     mml.setAttribute(sre.SemanticMathml.Attribute.CONTENT,
                      sre.SemanticMathml.makeIdList_(semantic.contentNodes));
   }
@@ -791,7 +786,7 @@ sre.SemanticMathml.getInnerNode_ = function(content) {
  */
 sre.SemanticMathml.interleave_ = function(content, children) {
   var result = [children.shift()];
-  while (children.length > 0 && content.length > 0) {
+  while (children.length && content.length) {
     result.push(content.shift());
     result.push(children.shift());
   }

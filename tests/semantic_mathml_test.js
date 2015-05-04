@@ -3874,7 +3874,6 @@ sre.SemanticMathmlTest.prototype.testMathmlBaseTensors = function() {
 };
 
 
-// These tests have to be rewritten!
 /**
  * Pathological multiscript expressions that are actually on right
  * sub/superscripts.
@@ -3890,6 +3889,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
+  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
       '<math>' +
@@ -3900,6 +3900,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
+  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
       '<math>' +
@@ -3910,6 +3911,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
+  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>',
       '<math>' +
@@ -3923,6 +3925,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
+  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
@@ -3937,33 +3940,34 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
-  this.executeMathmlTest(
-      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
-      '<mprescripts/><none/></mmultiscripts>',
-      '<math>' +
-      '<mmultiscripts type="superscript" role="latinletter" id="10"' +
-      ' children="9,8">' +
-      '<mrow type="subscript" role="subsup" id="9" children="0,4"' +
-      ' parent="10">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="9">X</mi>' +
-      '<mrow type="infixop" role="implicit" id="4" children="1,2"' +
-      ' content="3" parent="9">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="4">i</mi>' +
-      '<mo type="operator" role="multiplication" id="3" parent="4"' +
-      ' added="true" operator="infixop,⁢">⁢</mo>' +
-      '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
-      '</mrow>' +
-      '</mrow>' +
-      '<mrow type="infixop" role="implicit" id="8" children="5,6"' +
-      ' content="7" parent="10">' +
-      '<mi type="identifier" role="latinletter" id="5" parent="8">j</mi>' +
-      '<mo type="operator" role="multiplication" id="7" parent="8"' +
-      ' added="true" operator="infixop,⁢">⁢</mo>' +
-      '<mi type="identifier" role="latinletter" id="6" parent="8">l</mi>' +
-      '</mrow>' +
-      '</mmultiscripts>' +
-      '</math>'
-  );
+  // Rewrite!
+  // this.executeMathmlTest(
+  //     '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
+  //     '<mprescripts/><none/></mmultiscripts>',
+  //     '<math>' +
+  //     '<mmultiscripts type="superscript" role="latinletter" id="10"' +
+  //     ' children="9,8">' +
+  //     '<mrow type="subscript" role="subsup" id="9" children="0,4"' +
+  //     ' parent="10">' +
+  //     '<mi type="identifier" role="latinletter" id="0" parent="9">X</mi>' +
+  //     '<mrow type="infixop" role="implicit" id="4" children="1,2"' +
+  //     ' content="3" parent="9">' +
+  //     '<mi type="identifier" role="latinletter" id="1" parent="4">i</mi>' +
+  //     '<mo type="operator" role="multiplication" id="3" parent="4"' +
+  //     ' added="true" operator="infixop,⁢">⁢</mo>' +
+  //     '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
+  //     '</mrow>' +
+  //     '</mrow>' +
+  //     '<mrow type="infixop" role="implicit" id="8" children="5,6"' +
+  //     ' content="7" parent="10">' +
+  //     '<mi type="identifier" role="latinletter" id="5" parent="8">j</mi>' +
+  //     '<mo type="operator" role="multiplication" id="7" parent="8"' +
+  //     ' added="true" operator="infixop,⁢">⁢</mo>' +
+  //     '<mi type="identifier" role="latinletter" id="6" parent="8">l</mi>' +
+  //     '</mrow>' +
+  //     '</mmultiscripts>' +
+  //     '</math>'
+  // );
 };
 
 
