@@ -206,18 +206,27 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         //
         var node = sre.SemanticMathml.attachedElement_(childrenList);
         var oldChildren = sre.SemanticMathml.childrenSubset_(
-            node.parentNode, childrenList);
+            /**@type{!Element}*/(node.parentNode), childrenList);
         sre.DomUtil.replaceNode(node, newNode);
         oldChildren.forEach(function(x) {newNode.appendChild(x);});
       }
     }
   }
-  sre.SemanticMathml.combineChildren_(newNode, childrenList);
+  sre.SemanticMathml.mergeChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   return sre.SemanticMathml.ascendNewNode_(newNode);
 };
 
 
+/**
+ * Retrieves a minimal subset of children of the node that contain all the nodes
+ * in the newChildren list. If there are elementsi in newChildren not in the
+ * children of node, these are ignored.
+ * @param {!Element} node The node whose children are picked.
+ * @param {!Array<Element>} newChildren The list of new children.
+ * @return {!Array<Element>} The minimal subset.
+ * @private
+ */
 sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
   var oldChildren = sre.DomUtil.toArray(node.childNodes);
   var leftIndex = +Infinity;
@@ -233,7 +242,13 @@ sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
 };
 
 
-sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
+/**
+ * Merges a list of new children with the children of the given node.
+ * @param {!Element} node The node whose children are merged.
+ * @param {!Array<Element>} newChildren The list of children to be merged.
+ * @private
+ */
+sre.SemanticMathml.mergeChildren_ = function(node, newChildren) {
   var oldChildren = node.childNodes;
   if (!oldChildren.length) {
     newChildren.forEach(function(x) {node.appendChild(x);});
@@ -245,9 +260,9 @@ sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
     // function applications are destructively dropped in the semantic tree
     // computation. This should be addressed in the future!
     //
-    if (oldChildren[oldCounter] === newChildren[0] ||
-        sre.SemanticMathml.functionApplication_(
-            oldChildren[oldCounter], newChildren[0])) {
+    if ((oldChildren[oldCounter] === newChildren[0] ||
+         sre.SemanticMathml.functionApplication_(
+             oldChildren[oldCounter], newChildren[0]))) {
       newChildren.shift();
       oldCounter++;
       continue;
@@ -266,13 +281,15 @@ sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
  * Checks if both old and new Node are invisible function applications and if
  * the new node has been explicitly added. If true it replaces the old for the
  * new node destructively.
- * @param {!Element} oldNode The old node.
- * @param {!Element} newNode The new, possibly added node.
+ * @param {Element} oldNode The old node.
+ * @param {Element} newNode The new, possibly added node.
  * @return {boolean} True if condition holds.
+ * @private
  */
 sre.SemanticMathml.functionApplication_ = function(oldNode, newNode) {
   var appl = sre.SemanticAttr.functionApplication();
-  if (oldNode.textContent === appl && newNode.textContent === appl && 
+  if (oldNode && newNode && oldNode.textContent && newNode.textContent &&
+      oldNode.textContent === appl && newNode.textContent === appl &&
       newNode.getAttribute(sre.SemanticMathml.Attribute.ADDED) === 'true') {
     sre.DomUtil.replaceNode(oldNode, newNode);
     return true;

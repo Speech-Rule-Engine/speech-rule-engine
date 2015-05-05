@@ -4261,6 +4261,14 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
  */
 sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
   this.executeMathmlTest(
+      '<mi>a</mi><mspace/>',
+      '<math>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<mspace/>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
       '<mi>i</mi><merror>Y</merror>',
       '<math>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
