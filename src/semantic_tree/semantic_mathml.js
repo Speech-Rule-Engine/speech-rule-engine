@@ -612,16 +612,9 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
  * @private
  */
 sre.SemanticMathml.interleaveIds_ = function(first, second) {
-  var adjFirst = sre.SemanticMathml.collapsedLeafs_(first);
-  var adjSecond = sre.SemanticMathml.collapsedLeafs_(second);
-  var result = [];
-  while (adjFirst.length) {
-    result.push(adjFirst.shift());
-    if (adjSecond.length) {
-      result.push(adjSecond.shift());
-    }
-  }
-  return result;
+  return sre.SemanticMathml.interleaveLists_(
+    sre.SemanticMathml.collapsedLeafs_(first), 
+    sre.SemanticMathml.collapsedLeafs_(second));
 };
 
 
@@ -640,8 +633,7 @@ sre.SemanticMathml.simpleCollapseStructure_ = function(strct) {
  * Returns a list of the leaf ids for the given collapsed structures.
  * @param {...sre.SemanticMathml.Collapsed_} var_args The collapsed structure
  *     annotations.
- * @return {sre.SemanticMathml.Collapsed_} The leafs of the structure
- *     annotations.
+ * @return {!Array.<number>} The leafs of the structure annotations.
  * @private
  */
 sre.SemanticMathml.collapsedLeafs_ = function(var_args) {
@@ -856,7 +848,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
     case sre.SemanticAttr.Type.MULTIREL:
-      return sre.SemanticMathml.interleaveContentChildren_(content, children);
+      return sre.SemanticMathml.interleaveLists_(children, content);
     case sre.SemanticAttr.Type.PREFIXOP:
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
@@ -867,7 +859,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (semantic.role === sre.SemanticAttr.Role.TEXT) {
-        return sre.SemanticMathml.interleaveContentChildren_(content, children);
+        return sre.SemanticMathml.interleaveLists_(children, content);
       }
       var markupList = [];
       for (var i = 0, j = 0, child, cont;
@@ -962,18 +954,22 @@ sre.SemanticMathml.getInnerNode_ = function(node) {
 
 
 /**
- * Interleaves a list of content and child nodes. The former is exactly one less
- * than the latter.
- * @param {!Array.<Element>} content The list of content nodes.
- * @param {!Array.<!Element>} children The list of child nodes.
- * @return {!Array.<!Element>} The combined list.
+ * Interleaves two lists, starting with the first. If either list is longer, it
+ * will be appended at the end.
+ * @param {!Array.<*>} list1 The first list.
+ * @param {!Array.<*>} list2 The second list.
+ * @return {!Array.<*>} The combined list.
  * @private
  */
-sre.SemanticMathml.interleaveContentChildren_ = function(content, children) {
-  var result = [children.shift()];
-  while (children.length && content.length) {
-    result.push(content.shift());
-    result.push(children.shift());
+sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
+  var result = [];
+  while (list1.length || list2.length) {
+    if (list1.length) {
+      result.push(list1.shift());
+    }
+    if (list2.length) {
+      result.push(list2.shift());
+    }
   }
   return result;
 };
