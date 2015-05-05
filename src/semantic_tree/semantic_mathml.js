@@ -517,8 +517,8 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   }
   if (semantic.mathmlTree &&
       sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MMULTISCRIPTS' &&
-      semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-      semantic.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+      (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+       semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
     return sre.SemanticMathml.mmultiscriptCase_(semantic);
   }
   return null;
@@ -532,48 +532,37 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
-  if (tensor.type === sre.SemanticAttr.Type.SUPERSCRIPT &&
-      tensor.childNodes[0] &&
+  var newNode = /**@type{!Element}*/(tensor.mathmlTree);
+  sre.SemanticMathml.setAttributes_(newNode, tensor);
+  if (tensor.childNodes[0] &&
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
     var ignore = tensor.childNodes[0];
     var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
-    var base = sre.SemanticMathml.walkTree_(baseSem);
-    base.setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
     var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
     var rsub = sre.SemanticMathml.multiscriptIndex_(ignore.childNodes[1]);
-    var newNode = /**@type{!Element}*/(tensor.mathmlTree);
-    sre.SemanticMathml.setAttributes_(newNode, tensor);
     var collapsed = [tensor.id, [ignore.id, baseSem.id, rsub], rsup];
     sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
-    var childIds = sre.SemanticMathml.collapsedLeafs_(rsub, rsup);
-    childIds.unshift(baseSem.id);
-    newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                         childIds.join(','));
+    newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
+                         ignore.role);
     sre.SemanticMathml.completeMultiscript_(
         tensor, newNode,
         sre.SemanticMathml.interleaveIds_(rsub, rsup),
         []);
-    newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
-                         ignore.role);
-    return sre.SemanticMathml.ascendNewNode_(newNode);
-  }
-  if (tensor.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-      tensor.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+  } else {
     var baseSem = /**@type {!sre.SemanticTree.Node}*/(tensor.childNodes[0]);
-    sre.SemanticMathml.walkTree_(baseSem);
     var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
-    var newNode = /**@type{!Element}*/(tensor.mathmlTree);
-    sre.SemanticMathml.setAttributes_(newNode, tensor);
     if (!sre.SemanticMathml.simpleCollapseStructure_(rsup)) {
       var collapsed = [tensor.id, baseSem.id, rsup];
       sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
     }
-    var childIds = sre.SemanticMathml.collapsedLeafs_(rsup);
-    childIds.unshift(baseSem.id);
-    newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                         childIds.join(','));
-    return sre.SemanticMathml.ascendNewNode_(newNode);
   }
+  var childIds = sre.SemanticMathml.collapsedLeafs_(rsub || [], rsup);
+  var base = sre.SemanticMathml.walkTree_(baseSem);
+  base.setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
+  childIds.unshift(baseSem.id);
+  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                       childIds.join(','));
+  return sre.SemanticMathml.ascendNewNode_(newNode);
 };
 
 
