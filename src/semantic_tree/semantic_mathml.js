@@ -214,16 +214,16 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         // node of type empty.
         //
         var node = sre.SemanticMathml.attachedElement_(childrenList);
-        console.log(node.toString());
-        console.log(node.parentNode.toString());
+        // console.log(node.toString());
+        // console.log(node.parentNode.toString());
         var oldChildren = sre.SemanticMathml.childrenSubset_(node.parentNode, childrenList);
         sre.DomUtil.replaceNode(node, newNode);
-        console.log(newNode.toString());
-        console.log(newNode.parentNode.toString());
+        // console.log(newNode.toString());
+        // console.log(newNode.parentNode.toString());
         oldChildren.forEach(function(x) {newNode.appendChild(x);});
-        console.log(newNode.toString());
-        console.log(newNode.parentNode.toString());
-        console.log(childrenList[0].parentNode.toString());
+        // console.log(newNode.toString());
+        // console.log(newNode.parentNode.toString());
+        // console.log(childrenList[0].parentNode.toString());
       }
     }
     // for (var i = 0, child; child = childrenList[i]; i++) {
@@ -287,6 +287,17 @@ sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
       oldCounter++;
       continue;
     }
+    // TODO (sorge) This special case is only necessary, because explicit
+    // function applications are destructively dropped in the semantic tree
+    // computation. This should be addressed in the future!
+    //
+    if (sre.SemanticMathml.functionApplication_(
+      oldChildren[oldCounter], newChildren[0])) {
+      sre.DomUtil.replaceNode(oldChildren[oldCounter], newChildren[0]);
+      newChildren.shift();
+      oldCounter++;
+      continue;
+    }
     if (newChildren.indexOf(oldChildren[oldCounter]) === -1) {
       // console.log(oldChildren[oldCounter].toString());
       oldCounter++;
@@ -303,6 +314,20 @@ sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
       newChildren.shift();
   }
   //sre.SemanticMathml.printNodeList__('Combined children', node.childNodes);
+};
+
+
+/**
+ * Checks if both old and new Node are invisible function applications and if
+ * the new node has been explicitly added.
+ * @param {!Element} oldNode The old node.
+ * @param {!Element} newNode The new, possibly added node.
+ * @return {boolean} True if condition holds.
+ */
+sre.SemanticMathml.functionApplication_ = function(oldNode, newNode) {
+  var appl = sre.SemanticAttr.functionApplication();
+  return oldNode.textContent === appl && newNode.textContent === appl && 
+    newNode.getAttribute(sre.SemanticMathml.Attribute.ADDED) === 'true';
 };
 
 
@@ -712,11 +737,9 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
  * @private
  */
 sre.SemanticMathml.cloneContentNode_ = function(content) {
+  //sre.SemanticMathml.printNodeList__('Content: ', content.mathml);
   if (content.mathml.length) {
     return sre.SemanticMathml.walkTree_(content);
-    // sre.SemanticMathml.setAttributes_(
-    //     content.mathml[content.mathml.length - 1], content);
-    // return content.mathml[content.mathml.length - 1];
   }
   var clone = sre.SemanticMathml.SETTINGS.implicit ?
       sre.SemanticMathml.createInvisibleOperator_(content) :
