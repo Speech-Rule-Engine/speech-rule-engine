@@ -165,6 +165,7 @@ sre.SemanticMathml.addLeafId_ = function(semantic) {
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
   if (semantic.mathml.length === 1) {
+    console.log('Case 0', semantic.mathml[0].toString());
     var newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
@@ -195,64 +196,36 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       console.log('Case 1.1');
       // If we have an LCA containing all children, then we simply replace it.
       //
-      // var oldNode = /**@type{!Element}*/(newNode);
-      // newNode = sre.SemanticMathml.cloneNode_(oldNode);
-      // sre.DomUtil.replaceNode(oldNode, newNode);
     } else {
       console.log('Case 1.2');
       // If we have an LCA containing only some children, then we replace those
       // children only and add a new mrow.
       //
-      // TODO (sorge) Here we have to check if the remaining children are ignore
-      // tags only. We then have to return the parent node of the mrow.
-      //
       newNode = sre.SystemExternal.document.createElement('mrow');
       if (childrenList[0]) {
-        //sre.SemanticMathml.printNodeList__('Children List:', childrenList);
         console.log('Case 1.2.1');
         // If childrenList is empty we get an empty mrow element representing a
         // node of type empty.
         //
         var node = sre.SemanticMathml.attachedElement_(childrenList);
-        // console.log(node.toString());
-        // console.log(node.parentNode.toString());
-        var oldChildren = sre.SemanticMathml.childrenSubset_(node.parentNode, childrenList);
+        var oldChildren = sre.SemanticMathml.childrenSubset_(
+            node.parentNode, childrenList);
         sre.DomUtil.replaceNode(node, newNode);
-        // console.log(newNode.toString());
-        // console.log(newNode.parentNode.toString());
         oldChildren.forEach(function(x) {newNode.appendChild(x);});
-        // console.log(newNode.toString());
-        // console.log(newNode.parentNode.toString());
-        // console.log(childrenList[0].parentNode.toString());
       }
     }
-    // for (var i = 0, child; child = childrenList[i]; i++) {
-    //   newNode.appendChild(child);
-    // }
   } else {
     console.log('Case 2');
     newNode = semantic.mathmlTree;
-    // newNode = sre.SemanticMathml.cloneNode_(semantic.mathmlTree);
-    // console.log(semantic.mathmlTree.parentNode.toString());
-    // sre.DomUtil.replaceNode(semantic.mathmlTree, newNode);
-
-
-    // for (var i = 0, child; child = childrenList[i]; i++) {
-    //   newNode.appendChild(child);
-    // }
-    // console.log(newNode.parentNode.toString());
   }
   sre.SemanticMathml.combineChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
-  console.log('here');
-
   return sre.SemanticMathml.ascendNewNode_(newNode);
 };
 
 
 sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
   var oldChildren = sre.DomUtil.toArray(node.childNodes);
-  //sre.SemanticMathml.printNodeList__('Old Children', oldChildren);
   var leftIndex = +Infinity;
   var rightIndex = -Infinity;
   newChildren.forEach(function(child) {
@@ -262,72 +235,55 @@ sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
       rightIndex = Math.max(rightIndex, index);
     }
   });
-  //sre.SemanticMathml.printNodeList__('Old Children', oldChildren.slice(leftIndex, rightIndex + 1));
   return oldChildren.slice(leftIndex, rightIndex + 1);
-  // for (var i = 0, newChild; newChild = newChildren[i]; i++) {
-  //   newChild
-  // }
 };
 
 
 sre.SemanticMathml.combineChildren_ = function(node, newChildren) {
   var oldChildren = node.childNodes;
-  console.log(oldChildren.length);
   if (!oldChildren.length) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;
   }
-  console.log('COMBINING NEW: ', newChildren.length);
-  console.log('COMBINING OLD: ', oldChildren.length);
   var oldCounter = 0;
   while (newChildren.length) {
-    if (oldChildren[oldCounter] === newChildren[0]) {
-      // console.log(newChildren[0].toString());
-      newChildren.shift();
-      oldCounter++;
-      continue;
-    }
     // TODO (sorge) This special case is only necessary, because explicit
     // function applications are destructively dropped in the semantic tree
     // computation. This should be addressed in the future!
     //
-    if (sre.SemanticMathml.functionApplication_(
-      oldChildren[oldCounter], newChildren[0])) {
-      sre.DomUtil.replaceNode(oldChildren[oldCounter], newChildren[0]);
+    if (oldChildren[oldCounter] === newChildren[0] ||
+        sre.SemanticMathml.functionApplication_(
+            oldChildren[oldCounter], newChildren[0])) {
       newChildren.shift();
       oldCounter++;
       continue;
     }
     if (newChildren.indexOf(oldChildren[oldCounter]) === -1) {
-      // console.log(oldChildren[oldCounter].toString());
       oldCounter++;
       continue;
     }
-    // if (oldChildren.indexOf(newChildren[0]) === -1) {
-    //   node.insertBefore(newChildren[0], oldChildren[oldCounter]);
-    //   newChildren.shift();
-    //   continue;
-    // }
-    // oldCounter++;
-    // console.log(newChildren[0].toString());
-      node.insertBefore(newChildren[0], oldChildren[oldCounter]);
-      newChildren.shift();
+    node.insertBefore(newChildren[0], oldChildren[oldCounter]);
+    newChildren.shift();
   }
-  //sre.SemanticMathml.printNodeList__('Combined children', node.childNodes);
 };
 
 
 /**
  * Checks if both old and new Node are invisible function applications and if
- * the new node has been explicitly added.
+ * the new node has been explicitly added. If true it replaces the old for the
+ * new node destructively.
  * @param {!Element} oldNode The old node.
  * @param {!Element} newNode The new, possibly added node.
  * @return {boolean} True if condition holds.
  */
 sre.SemanticMathml.functionApplication_ = function(oldNode, newNode) {
   var appl = sre.SemanticAttr.functionApplication();
-  return oldNode.textContent === appl && newNode.textContent === appl && 
-    newNode.getAttribute(sre.SemanticMathml.Attribute.ADDED) === 'true';
+  if (oldNode.textContent === appl && newNode.textContent === appl && 
+      newNode.getAttribute(sre.SemanticMathml.Attribute.ADDED) === 'true') {
+    sre.DomUtil.replaceNode(oldNode, newNode);
+    return true;
+  }
+  return false;
 };
 
 
@@ -911,24 +867,6 @@ sre.SemanticMathml.interleave_ = function(content, children) {
     result.push(children.shift());
   }
   return result;
-};
-
-
-/**
- * Clones an original MathML node. Deep clone only if it is a leave node or was
- * originally ignored.
- * @param {!Element} mml The MathML node to clone.
- * @return {!Element} The cloned node.
- * @private
- */
-sre.SemanticMathml.cloneNode_ = function(mml) {
-  // TODO (sorge) Ignored elements do not work yet.
-  var tagName = sre.SemanticUtil.tagName(mml);
-  if (sre.SemanticUtil.LEAFTAGS.indexOf(tagName) !== -1 ||
-      sre.SemanticUtil.IGNORETAGS.indexOf(tagName) !== -1) {
-    return mml.cloneNode(true);
-  }
-  return mml.cloneNode(false);
 };
 
 
