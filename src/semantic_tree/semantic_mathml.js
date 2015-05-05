@@ -128,9 +128,9 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
   var newMml = sre.SemanticMathml.walkTree_(semantic.root);
   sre.Debugger.getInstance().generateOutput(
       function() {
-        sre.SemanticMathml.formattedOutput(oldMml, newMml, semantic, true);
+        sre.SemanticMathml.formattedOutput(oldMml, mml, semantic, true);
       });
-  return newMml;
+  return mml;
 };
 
 
@@ -211,6 +211,17 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         oldChildren.forEach(function(x) {newNode.appendChild(x);});
       }
     }
+  } else {
+    var attached = sre.SemanticMathml.attachedElement_(childrenList);
+    console.log('Case 2');
+    if (attached) {
+      console.log('Case 2.1');
+      newNode = attached.parentNode;
+      console.log(newNode.parentNode.toString());
+    } else {
+      console.log('Case 2.2');
+      newNode = sre.SemanticMathml.getInnerNode_(/**@type{!Element}*/(newNode));
+    }
   }
   sre.SemanticMathml.mergeChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
@@ -220,7 +231,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
 
 /**
  * Retrieves a minimal subset of children of the node that contain all the nodes
- * in the newChildren list. If there are elementsi in newChildren not in the
+ * in the newChildren list. If there are elements in newChildren not in the
  * children of node, these are ignored.
  * @param {!Element} node The node whose children are picked.
  * @param {!Array<Element>} newChildren The list of new children.
@@ -260,14 +271,15 @@ sre.SemanticMathml.mergeChildren_ = function(node, newChildren) {
     // function applications are destructively dropped in the semantic tree
     // computation. This should be addressed in the future!
     //
-    if ((oldChildren[oldCounter] === newChildren[0] ||
-         sre.SemanticMathml.functionApplication_(
-             oldChildren[oldCounter], newChildren[0]))) {
+    if (oldChildren[oldCounter] === newChildren[0] ||
+        sre.SemanticMathml.functionApplication_(
+        oldChildren[oldCounter], newChildren[0])) {
       newChildren.shift();
       oldCounter++;
       continue;
     }
-    if (newChildren.indexOf(oldChildren[oldCounter]) === -1) {
+    if (oldChildren[oldCounter] &&
+        newChildren.indexOf(oldChildren[oldCounter]) === -1) {
       oldCounter++;
       continue;
     }
@@ -470,6 +482,8 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
        (sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MUNDEROVER' &&
         semantic.type === sre.SemanticAttr.Type.OVERSCORE))) {
     // TODO (sorge) Needs some refactoring!
+    //     Work around ignored nodes, proper merging of children!
+    //
     var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
     var ignore = semantic.childNodes[0];
     var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
@@ -482,6 +496,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                          sre.SemanticMathml.makeIdListOld_(newChildren));
+    //sre.SemanticMathml.mergeChildren_(newNode, newChildren);
     for (var i = 0, child; child = newChildren[i]; i++) {
       newNode.appendChild(child);
       child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
@@ -493,11 +508,71 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
         newNode, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
     return newNode;
   }
-
   if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
     return sre.SemanticMathml.tensorCase_(semantic);
   }
+  if (semantic.mathmlTree &&
+      sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MMULTISCRIPTS' &&
+      semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      semantic.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+    return sre.SemanticMathml.mmultiscriptCase_(semantic);
+  }
   return null;
+};
+
+
+/**
+ * Deals with degenerated Tensors.
+ * @param {!sre.SemanticTree.Node} tensor The tensor node.
+ * @return {Element} The enriched MathML node for that tensor.
+ * @private
+ */
+sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
+  console.log(tensor.toString());
+  if (tensor.type === sre.SemanticAttr.Type.SUPERSCRIPT &&
+      tensor.childNodes[0] &&
+      tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
+    var ignore = tensor.childNodes[0];
+    var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
+    var base = sre.SemanticMathml.walkTree_(baseSem);
+    base.setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
+    var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
+    var rsub = sre.SemanticMathml.multiscriptIndex_(ignore.childNodes[1]);
+    var newNode = /**@type{!Element}*/(tensor.mathmlTree);
+    sre.SemanticMathml.setAttributes_(newNode, tensor);
+    var collapsed = [tensor.id, [ignore.id, baseSem.id, rsub], rsup];
+    sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
+    var childIds = sre.SemanticMathml.collapsedLeafs_(rsub).concat(
+        sre.SemanticMathml.collapsedLeafs_(rsup));
+    childIds.unshift(baseSem.id);
+    newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                         childIds.join(','));
+    sre.SemanticMathml.completeMultiscript_(
+        tensor, newNode,
+        sre.SemanticMathml.interleaveIds_(rsub, rsup),
+        []);
+    newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
+                         ignore.role);
+    return sre.SemanticMathml.ascendNewNode_(newNode);
+  }
+  if (tensor.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      tensor.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+    var baseSem = /**@type {!sre.SemanticTree.Node}*/(tensor.childNodes[0]);
+    sre.SemanticMathml.walkTree_(baseSem);
+    var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
+    var newNode = /**@type{!Element}*/(tensor.mathmlTree);
+    sre.SemanticMathml.setAttributes_(newNode, tensor);
+    if (!sre.SemanticMathml.simpleCollapseStructure_(rsup)) {
+      var collapsed = [tensor.id, baseSem.id, rsup];
+      sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
+    }
+    var childIds = sre.SemanticMathml.collapsedLeafs_(rsup);
+    childIds.unshift(baseSem.id);
+    newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+                         childIds.join(','));
+    return sre.SemanticMathml.ascendNewNode_(newNode);
+
+  }
 };
 
 
@@ -631,6 +706,7 @@ sre.SemanticMathml.completeMultiscript_ = function(
         multiscript.insertBefore(
             sre.SemanticMathml.createNone_(query[0]), child);
       } else {
+        child.setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
         childCounter++;
       }
     }
@@ -853,11 +929,44 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
  * @private
  */
 sre.SemanticMathml.getInnerNode_ = function(content) {
-  while (content.childNodes && content.childNodes.length === 1 &&
-      content.childNodes[0].nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
-    content = content.childNodes[0];
+  do {
+    var oldContent = content;
+    content = sre.SemanticMathml.nextInnerNode_(content);
+    console.log(content.toString());
+    console.log(oldContent.toString());
+  } while (oldContent !== content);
+  return oldContent;
+};
+
+
+sre.SemanticMathml.nextInnerNode_ = function(node) {
+  var children = sre.DomUtil.toArray(node.childNodes);
+  if (!children) {
+    return node;
   }
-  return content;
+  var remainder = children.filter(function(child) {
+    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
+        sre.SemanticUtil.IGNORETAGS.indexOf(
+        sre.SemanticUtil.tagName(child)) === -1;
+  });
+  var result = [];
+  for (var i = 0, remain; remain = remainder[i]; i++) {
+    console.log('REMAIN', remain.toString());
+    if (sre.SemanticUtil.EMPTYTAGS.indexOf(sre.SemanticUtil.tagName(remain)) !== -1) {
+      console.log('REMAIN Empty', remain.toString());
+      var nextInner = sre.SemanticMathml.nextInnerNode_(remain);
+      if (nextInner && nextInner !== remain) {
+        console.log('INNER', nextInner.toString());
+        result.push(nextInner);
+      }
+    } else {
+      result.push(remain);
+    }
+  }
+  if (result.length === 1) {
+    return result[0];
+  }
+  return node;
 };
 
 

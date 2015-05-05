@@ -142,7 +142,7 @@ sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS'];
  */
 sre.SemanticUtil.IGNORETAGS = [
   'MERROR', 'MPHANTOM', 'MSPACE', 'MACTION', 'MALIGNGROUP', 'MALIGNMARK',
-  'MACTION', 'NONE'
+  'NONE', 'MPRESCRIPTS'
 ];
 
 
