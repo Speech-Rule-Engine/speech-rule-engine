@@ -155,6 +155,39 @@ sre.SemanticUtil.EMPTYTAGS = ['MATH', 'MROW', 'MPADDED', 'MSTYLE'];
 
 
 /**
+ * Checks if an element is a node with a math tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an math node.
+ */
+sre.SemanticUtil.hasMathTag = function(node) {
+  return !!node && sre.SemanticUtil.tagName(node) === 'MATH';
+};
+
+
+/**
+ * Checks if an element is a node with ignore tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an ignore node.
+ */
+sre.SemanticUtil.hasIgnoreTag = function(node) {
+  return !!node &&
+      sre.SemanticUtil.IGNORETAGS.indexOf(
+          sre.SemanticUtil.tagName(node)) !== -1;
+};
+
+
+/**
+ * Checks if an element is a node with empty tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an empty node.
+ */
+sre.SemanticUtil.hasEmptyTag = function(node) {
+  return !!node &&
+      sre.SemanticUtil.EMPTYTAGS.indexOf(sre.SemanticUtil.tagName(node)) !== -1;
+};
+
+
+/**
  * Removes elements from a list of MathML nodes that are either to be ignored or
  * ignored if they have empty children.
  * Observe that this is currently not recursive, i.e. will not take care of

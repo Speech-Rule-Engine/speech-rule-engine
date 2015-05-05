@@ -192,8 +192,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     //
     var newNodeInfo = sre.SemanticMathml.mathmlLca_(childrenList);
     newNode = newNodeInfo.node;
-    if (!newNodeInfo.valid || sre.SemanticUtil.EMPTYTAGS.
-        indexOf(sre.SemanticUtil.tagName(newNode)) === -1) {
+    if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
       sre.Debugger.getInstance().output('Walktree Case 1.1');
       // If we have an LCA containing only some children, then we replace those
       // children only and grouping them in a new mrow.
@@ -380,6 +379,17 @@ sre.SemanticMathml.Collapsed_;
 
 
 /**
+ * Checks if the structure is simple, i.e., a single id number.
+ * @param {sre.SemanticMathml.Collapsed_} strct The structure.
+ * @return {boolean} True if a simple number.
+ * @private
+ */
+sre.SemanticMathml.simpleCollapseStructure_ = function(strct) {
+  return (typeof strct === 'number');
+};
+
+
+/**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
  * @param {!Element} node The tree node from where to start.
@@ -392,8 +402,7 @@ sre.SemanticMathml.Collapsed_;
 sre.SemanticMathml.pathToRoot_ = function(node, opt_test) {
   var test = opt_test || function(x) {return false;};
   var path = [node];
-  while (!test(node) && sre.SemanticUtil.tagName(node) !== 'MATH' &&
-         node.parentNode) {
+  while (!test(node) && !sre.SemanticUtil.hasMathTag(node) && node.parentNode) {
     node = sre.SemanticMathml.parentNode_(node);
     path.unshift(node);
   }
@@ -426,7 +435,7 @@ sre.SemanticMathml.validLca_ = function(left, right) {
  * @private
  */
 sre.SemanticMathml.ascendNewNode_ = function(newNode) {
-  while (sre.SemanticUtil.tagName(newNode) !== 'MATH' &&
+  while (!sre.SemanticUtil.hasMathTag(newNode) &&
          sre.SemanticMathml.unitChild_(newNode)) {
     newNode = sre.SemanticMathml.parentNode_(newNode);
   }
@@ -443,16 +452,12 @@ sre.SemanticMathml.ascendNewNode_ = function(newNode) {
  */
 sre.SemanticMathml.unitChild_ = function(node) {
   var parent = sre.SemanticMathml.parentNode_(node);
-  if (!node.parentNode ||
-      sre.SemanticUtil.EMPTYTAGS.indexOf(
-      sre.SemanticUtil.tagName(parent)) === -1) {
+  if (!parent || !sre.SemanticUtil.hasEmptyTag(parent)) {
     return false;
   }
   return sre.DomUtil.toArray(parent.childNodes).every(
       function(child) {
-        return child === node ||
-            sre.SemanticUtil.IGNORETAGS.indexOf(
-            sre.SemanticUtil.tagName(child)) !== -1;
+        return child === node || sre.SemanticUtil.hasIgnoreTag(child);
       });
 };
 
@@ -613,19 +618,8 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
  */
 sre.SemanticMathml.interleaveIds_ = function(first, second) {
   return sre.SemanticMathml.interleaveLists_(
-    sre.SemanticMathml.collapsedLeafs_(first), 
-    sre.SemanticMathml.collapsedLeafs_(second));
-};
-
-
-/**
- * Checks if the structure is simple, i.e., a single id number.
- * @param {sre.SemanticMathml.Collapsed_} strct The structure.
- * @return {boolean} True if a simple number.
- * @private
- */
-sre.SemanticMathml.simpleCollapseStructure_ = function(strct) {
-  return (typeof strct === 'number');
+      sre.SemanticMathml.collapsedLeafs_(first),
+      sre.SemanticMathml.collapsedLeafs_(second));
 };
 
 
@@ -931,13 +925,11 @@ sre.SemanticMathml.getInnerNode_ = function(node) {
   }
   var remainder = children.filter(function(child) {
     return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        sre.SemanticUtil.IGNORETAGS.indexOf(
-        sre.SemanticUtil.tagName(child)) === -1;
+        !sre.SemanticUtil.hasIgnoreTag(child);
   });
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
-    if (sre.SemanticUtil.EMPTYTAGS.indexOf(
-        sre.SemanticUtil.tagName(remain)) !== -1) {
+    if (sre.SemanticUtil.hasEmptyTag(remain)) {
       var nextInner = sre.SemanticMathml.getInnerNode_(remain);
       if (nextInner && nextInner !== remain) {
         result.push(nextInner);
