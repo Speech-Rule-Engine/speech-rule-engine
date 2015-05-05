@@ -183,7 +183,8 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         return sre.SemanticMathml.walkTree_(x);}));
   var childrenList = sre.SemanticMathml.combineContentChildren_(
       semantic, newContent, newChildren);
-  if (semantic.mathmlTree === null) {
+  newNode = semantic.mathmlTree;
+  if (newNode === null) {
     console.log('Case 1');
     // In case we do not have an original MathML element, we need to find the
     // MathML node where to attach the semantically enriched children. We do
@@ -191,21 +192,17 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     //
     var newNodeInfo = sre.SemanticMathml.mathmlLca_(childrenList);
     newNode = newNodeInfo.node;
-    if (newNodeInfo.valid && sre.SemanticUtil.EMPTYTAGS.
-        indexOf(sre.SemanticUtil.tagName(newNode)) !== -1) {
+    if (!newNodeInfo.valid || sre.SemanticUtil.EMPTYTAGS.
+        indexOf(sre.SemanticUtil.tagName(newNode)) === -1) {
       console.log('Case 1.1');
-      // If we have an LCA containing all children, then we simply replace it.
-      //
-    } else {
-      console.log('Case 1.2');
       // If we have an LCA containing only some children, then we replace those
-      // children only and add a new mrow.
+      // children only and grouping them in a new mrow.
       //
       newNode = sre.SystemExternal.document.createElement('mrow');
       if (childrenList[0]) {
-        console.log('Case 1.2.1');
-        // If childrenList is empty we get an empty mrow element representing a
-        // node of type empty.
+        console.log('Case 1.1.1');
+        // If childrenList is not empty we get the children from the old parent
+        // node of the children, and put them into the new mrow.
         //
         var node = sre.SemanticMathml.attachedElement_(childrenList);
         var oldChildren = sre.SemanticMathml.childrenSubset_(
@@ -214,9 +211,6 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
         oldChildren.forEach(function(x) {newNode.appendChild(x);});
       }
     }
-  } else {
-    console.log('Case 2');
-    newNode = semantic.mathmlTree;
   }
   sre.SemanticMathml.combineChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
