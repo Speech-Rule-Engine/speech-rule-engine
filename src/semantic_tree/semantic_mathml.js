@@ -165,7 +165,7 @@ sre.SemanticMathml.addLeafId_ = function(semantic) {
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
   if (semantic.mathml.length === 1) {
-    console.log('Case 0', semantic.mathml[0].toString());
+    sre.Debugger.getInstance().output('Walktree Case 0');
     var newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
@@ -185,7 +185,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
   if (newNode === null) {
-    console.log('Case 1');
+    sre.Debugger.getInstance().output('Walktree Case 1');
     // In case we do not have an original MathML element, we need to find the
     // MathML node where to attach the semantically enriched children. We do
     // this by computing their LCA.
@@ -194,13 +194,13 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     newNode = newNodeInfo.node;
     if (!newNodeInfo.valid || sre.SemanticUtil.EMPTYTAGS.
         indexOf(sre.SemanticUtil.tagName(newNode)) === -1) {
-      console.log('Case 1.1');
+      sre.Debugger.getInstance().output('Walktree Case 1.1');
       // If we have an LCA containing only some children, then we replace those
       // children only and grouping them in a new mrow.
       //
       newNode = sre.SystemExternal.document.createElement('mrow');
       if (childrenList[0]) {
-        console.log('Case 1.1.1');
+        sre.Debugger.getInstance().output('Walktree Case 1.1.1');
         // If childrenList is not empty we get the children from the old parent
         // node of the children, and put them into the new mrow.
         //
@@ -213,13 +213,12 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     }
   } else {
     var attached = sre.SemanticMathml.attachedElement_(childrenList);
-    console.log('Case 2');
+    sre.Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
-      console.log('Case 2.1');
+      sre.Debugger.getInstance().output('Walktree Case 2.1');
       newNode = attached.parentNode;
-      console.log(newNode.parentNode.toString());
     } else {
-      console.log('Case 2.2');
+      sre.Debugger.getInstance().output('Walktree Case 2.2');
       newNode = sre.SemanticMathml.getInnerNode_(/**@type{!Element}*/(newNode));
     }
   }
@@ -528,7 +527,6 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
-  console.log(tensor.toString());
   if (tensor.type === sre.SemanticAttr.Type.SUPERSCRIPT &&
       tensor.childNodes[0] &&
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
@@ -542,8 +540,7 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
     sre.SemanticMathml.setAttributes_(newNode, tensor);
     var collapsed = [tensor.id, [ignore.id, baseSem.id, rsub], rsup];
     sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
-    var childIds = sre.SemanticMathml.collapsedLeafs_(rsub).concat(
-        sre.SemanticMathml.collapsedLeafs_(rsup));
+    var childIds = sre.SemanticMathml.collapsedLeafs_(rsub, rsup);
     childIds.unshift(baseSem.id);
     newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                          childIds.join(','));
@@ -571,7 +568,6 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
     newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                          childIds.join(','));
     return sre.SemanticMathml.ascendNewNode_(newNode);
-
   }
 };
 
@@ -595,10 +591,7 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
   if (!collapsed.every(sre.SemanticMathml.simpleCollapseStructure_)) {
     sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
   }
-  var childIds = sre.SemanticMathml.collapsedLeafs_(lsub).concat(
-      sre.SemanticMathml.collapsedLeafs_(lsup)).concat(
-      sre.SemanticMathml.collapsedLeafs_(rsub)).concat(
-          sre.SemanticMathml.collapsedLeafs_(rsup));
+  var childIds = sre.SemanticMathml.collapsedLeafs_(lsub, lsup, rsub, rsup);
   newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                        childIds.join(','));
   sre.SemanticMathml.completeMultiscript_(
@@ -644,16 +637,24 @@ sre.SemanticMathml.simpleCollapseStructure_ = function(strct) {
 
 
 /**
- * Returns a list of the leaf ids of a collapsed structure.
- * @param {sre.SemanticMathml.Collapsed_} coll The collapsed structure.
- * @return {sre.SemanticMathml.Collapsed_} The leafs of the structure.
+ * Returns a list of the leaf ids for the given collapsed structures.
+ * @param {...sre.SemanticMathml.Collapsed_} var_args The collapsed structure
+ *     annotations.
+ * @return {sre.SemanticMathml.Collapsed_} The leafs of the structure
+ *     annotations.
  * @private
  */
-sre.SemanticMathml.collapsedLeafs_ = function(coll) {
-  if (sre.SemanticMathml.simpleCollapseStructure_(coll)) {
-    return [coll];
-  }
-  return coll.slice(1);
+sre.SemanticMathml.collapsedLeafs_ = function(var_args) {
+  var collapseStructure = function(coll) {
+    if (sre.SemanticMathml.simpleCollapseStructure_(coll)) {
+      return [coll];
+    }
+    return coll.slice(1);
+  };
+  return Array.prototype.slice.call(arguments, 0).
+      reduce(function(x, y) {
+        return x.concat(collapseStructure(y));
+      }, []);
 };
 
 
@@ -778,7 +779,6 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
  * @private
  */
 sre.SemanticMathml.cloneContentNode_ = function(content) {
-  //sre.SemanticMathml.printNodeList__('Content: ', content.mathml);
   if (content.mathml.length) {
     return sre.SemanticMathml.walkTree_(content);
   }
@@ -856,7 +856,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
     case sre.SemanticAttr.Type.MULTIREL:
-      return sre.SemanticMathml.interleave_(content, children);
+      return sre.SemanticMathml.interleaveContentChildren_(content, children);
     case sre.SemanticAttr.Type.PREFIXOP:
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
@@ -867,7 +867,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (semantic.role === sre.SemanticAttr.Role.TEXT) {
-        return sre.SemanticMathml.interleave_(content, children);
+        return sre.SemanticMathml.interleaveContentChildren_(content, children);
       }
       var markupList = [];
       for (var i = 0, j = 0, child, cont;
@@ -923,8 +923,9 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
 
 
 /**
- * Finds the innermost element node of a MathML node with only one child.
- * @param {!Element} content The MathML content node to process.
+ * Finds the innermost element node of a MathML node with only one non-trivial
+ * child.
+ * @param {!Element} content The MathML node to process.
  * @return {!Element} The innermost element node.
  * @private
  */
@@ -932,13 +933,21 @@ sre.SemanticMathml.getInnerNode_ = function(content) {
   do {
     var oldContent = content;
     content = sre.SemanticMathml.nextInnerNode_(content);
-    console.log(content.toString());
-    console.log(oldContent.toString());
   } while (oldContent !== content);
   return oldContent;
 };
 
 
+/**
+ * Recursively computes the innermost element node. That is for an element it
+ * descends empty tags like mrow, ignoring ignore tags like merror, etc. as long
+ * as there is a single non-trivial node. Returns the non-trivial node lowest in
+ * the tree.
+ * @param {!Element} node The MathML element to process.
+ * @return {!Element} The innermost element node, which can be the original node
+ *     itself.
+ * @private
+ */
 sre.SemanticMathml.nextInnerNode_ = function(node) {
   var children = sre.DomUtil.toArray(node.childNodes);
   if (!children) {
@@ -951,12 +960,10 @@ sre.SemanticMathml.nextInnerNode_ = function(node) {
   });
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
-    console.log('REMAIN', remain.toString());
-    if (sre.SemanticUtil.EMPTYTAGS.indexOf(sre.SemanticUtil.tagName(remain)) !== -1) {
-      console.log('REMAIN Empty', remain.toString());
+    if (sre.SemanticUtil.EMPTYTAGS.indexOf(
+        sre.SemanticUtil.tagName(remain)) !== -1) {
       var nextInner = sre.SemanticMathml.nextInnerNode_(remain);
       if (nextInner && nextInner !== remain) {
-        console.log('INNER', nextInner.toString());
         result.push(nextInner);
       }
     } else {
@@ -978,7 +985,7 @@ sre.SemanticMathml.nextInnerNode_ = function(node) {
  * @return {!Array.<!Element>} The combined list.
  * @private
  */
-sre.SemanticMathml.interleave_ = function(content, children) {
+sre.SemanticMathml.interleaveContentChildren_ = function(content, children) {
   var result = [children.shift()];
   while (children.length && content.length) {
     result.push(content.shift());
