@@ -923,22 +923,6 @@ sre.SemanticMathml.setOperatorAttribute_ = function(semantic, content) {
 
 
 /**
- * Finds the innermost element node of a MathML node with only one non-trivial
- * child.
- * @param {!Element} content The MathML node to process.
- * @return {!Element} The innermost element node.
- * @private
- */
-sre.SemanticMathml.getInnerNode_ = function(content) {
-  do {
-    var oldContent = content;
-    content = sre.SemanticMathml.nextInnerNode_(content);
-  } while (oldContent !== content);
-  return oldContent;
-};
-
-
-/**
  * Recursively computes the innermost element node. That is for an element it
  * descends empty tags like mrow, ignoring ignore tags like merror, etc. as long
  * as there is a single non-trivial node. Returns the non-trivial node lowest in
@@ -948,7 +932,7 @@ sre.SemanticMathml.getInnerNode_ = function(content) {
  *     itself.
  * @private
  */
-sre.SemanticMathml.nextInnerNode_ = function(node) {
+sre.SemanticMathml.getInnerNode_ = function(node) {
   var children = sre.DomUtil.toArray(node.childNodes);
   if (!children) {
     return node;
@@ -962,7 +946,7 @@ sre.SemanticMathml.nextInnerNode_ = function(node) {
   for (var i = 0, remain; remain = remainder[i]; i++) {
     if (sre.SemanticUtil.EMPTYTAGS.indexOf(
         sre.SemanticUtil.tagName(remain)) !== -1) {
-      var nextInner = sre.SemanticMathml.nextInnerNode_(remain);
+      var nextInner = sre.SemanticMathml.getInnerNode_(remain);
       if (nextInner && nextInner !== remain) {
         result.push(nextInner);
       }
