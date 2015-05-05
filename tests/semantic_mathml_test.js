@@ -3910,7 +3910,6 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
       '<math>' +
@@ -3918,16 +3917,17 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       ' children="0,1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="2">X</mi>' +
       '<mi type="identifier" role="latinletter" id="1" parent="2">i</mi>' +
+      '<none/>' +
       '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
       '<math>' +
       '<mmultiscripts type="superscript" role="latinletter" id="2"' +
       ' children="0,1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="2">X</mi>' +
+      '<none/>' +
       '<mi type="identifier" role="latinletter" id="1" parent="2">i</mi>' +
       '</mmultiscripts>' +
       '</math>'
@@ -4267,7 +4267,6 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '<mspace/>' +
       '</math>'
   );
-
   this.executeMathmlTest(
       '<mi>i</mi><merror>Y</merror>',
       '<math>' +
