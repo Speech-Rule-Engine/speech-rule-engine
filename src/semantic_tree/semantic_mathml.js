@@ -465,8 +465,10 @@ sre.SemanticMathml.parentNode_ = function(element) {
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
   if (semantic.mathmlTree &&
-      sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
-      semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
+      ((sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
+        semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
+       (sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MUNDEROVER' &&
+        semantic.type === sre.SemanticAttr.Type.OVERSCORE))) {
     // TODO (sorge) Needs some refactoring!
     var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
     var ignore = semantic.childNodes[0];
@@ -691,10 +693,6 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
   sre.SemanticMathml.walkTree_(index);
   return index.id;
 };
-
-
-
-// '(' + index.id + ' (' + childIds.join(' ') + '))';
 
 
 /**

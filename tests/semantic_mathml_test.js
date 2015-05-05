@@ -2898,13 +2898,10 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
       ' parent="10">' +
       '<mo type="fence" role="open" id="1" parent="8"' +
       ' operator="fenced">(</mo>' +
-      '<munderover type="overscore" role="latinletter" id="6" children="5,4"' +
-      ' parent="8">' +
-      '<mrow type="underscore" role="latinletter" id="5" children="2,3"' +
-      ' parent="6">' +
-      '<mi type="identifier" role="latinletter" id="2" parent="5">x</mi>' +
-      '<mn type="number" role="integer" id="3" parent="5">2</mn>' +
-      '</mrow>' +
+      '<munderover type="latinletter" role="latinletter" id="6"' +
+      ' children="2,3,4" parent="8" collapsed="(6 (5 2 3) 4)">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
       '<mn type="number" role="integer" id="4" parent="6">1</mn>' +
       '</munderover>' +
       '<mo type="fence" role="close" id="7" parent="8"' +
@@ -2913,7 +2910,6 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
       '</mrow>' +
       '</math>'
   );
-
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
       '<mo>)</mo></mrow>',
@@ -4408,6 +4404,43 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
       '</mrow>' +
       '<merror>Y</merror>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with over and under scores.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlMunderOver = function() {
+  this.executeMathmlTest(
+      '<munder><mo>&#x2192;</mo><mi>n</mi></munder>',
+      '<math>' +
+      '<munder type="underscore" role="arrow" id="2" children="0,1">' +
+      '<mo type="relation" role="arrow" id="0" parent="2">→</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">n</mi>' +
+      '</munder>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mover><mo>&#x2192;</mo><mtext>above</mtext></mover>',
+      '<math>' +
+      '<mover type="overscore" role="arrow" id="2" children="0,1">' +
+      '<mo type="relation" role="arrow" id="0" parent="2">→</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="2">above</mtext>' +
+      '</mover>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<munderover><mo>&#x2192;</mo><mi>n</mi><mtext>above</mtext>' +
+      '</munderover>',
+      '<math>' +
+      '<munderover type="arrow" role="arrow" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
+      '<mtext type="text" role="unknown" id="2" parent="4">above</mtext>' +
+      '</munderover>' +
       '</math>'
   );
 };
