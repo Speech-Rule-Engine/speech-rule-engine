@@ -495,17 +495,16 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     var supMml = sre.SemanticMathml.walkTree_(supSem);
     var baseMml = sre.SemanticMathml.walkTree_(baseSem);
     var subMml = sre.SemanticMathml.walkTree_(subSem);
-    var newChildren = [baseMml, subMml, supMml];
     var newNode = semantic.mathmlTree;
     sre.SemanticMathml.setAttributes_(newNode, semantic);
-    newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                         sre.SemanticMathml.makeIdListOld_(newChildren));
-    //sre.SemanticMathml.mergeChildren_(newNode, newChildren);
-    for (var i = 0, child; child = newChildren[i]; i++) {
-      newNode.appendChild(child);
-      child.setAttribute(sre.SemanticMathml.Attribute.PARENT,
-                         newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
-    }
+    newNode.setAttribute(
+        sre.SemanticMathml.Attribute.CHILDREN,
+        sre.SemanticMathml.makeIdList_([baseSem, subSem, supSem]));
+    [baseMml, subMml, supMml].forEach(function(child) {
+      (sre.SemanticMathml.getInnerNode_(child)).setAttribute(
+        sre.SemanticMathml.Attribute.PARENT,
+        newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
+    });
     newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
                          ignore.role);
     sre.SemanticMathml.addCollapsedAttribute_(
