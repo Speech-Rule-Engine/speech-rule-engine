@@ -485,6 +485,83 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
         semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
        (sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MUNDEROVER' &&
         semantic.type === sre.SemanticAttr.Type.OVERSCORE))) {
+    return sre.SemanticMathml.doubleScriptCase_(semantic);
+  }
+  if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
+    return sre.SemanticMathml.tensorCase_(semantic);
+  }
+  if (semantic.mathmlTree &&
+      sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MMULTISCRIPTS' &&
+      (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+       semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
+    return sre.SemanticMathml.mmultiscriptCase_(semantic);
+  }
+  if (semantic.type === sre.SemanticAttr.Type.LINE) {
+    // NOTES: the mathmltree elements are all just the table. Even when embedded
+    // in additional elements.
+    //
+    // Rows and cells work out of the box, Lines need a special case.
+    //
+    // Effectively we need a case of lines. And then deal with the parentheses.
+    //
+    //
+    console.log('Line: ', semantic.mathmlTree.toString());
+    if (semantic.childNodes.length) {
+      sre.SemanticMathml.walkTree_(
+          /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
+    }
+    sre.SemanticMathml.setAttributes_(semantic.mathmlTree, semantic);
+    return sre.SemanticMathml.ascendNewNode_(semantic.mathmlTree);
+  }
+  if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
+      semantic.type === sre.SemanticAttr.Type.VECTOR ||
+      semantic.type === sre.SemanticAttr.Type.CASES) {
+    var lfence = sre.SemanticMathml.walkTree_(
+        /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
+    semantic.childNodes.map(
+        /**@type{Function}*/(function(x) {
+          return sre.SemanticMathml.walkTree_(x);}));
+    var newChildren = [lfence, semantic.mathmlTree];
+    if (semantic.contentNodes[1]) {
+      var rfence = sre.SemanticMathml.walkTree_(
+        /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1]));
+      newChildren.push(rfence);
+    }
+    var newNodeInfo = sre.SemanticMathml.mathmlLca_(newChildren);
+    var newNode = newNodeInfo.node;
+    if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
+      newNode = sre.SystemExternal.document.createElement('mrow');
+      var node = sre.SemanticMathml.attachedElement_(newChildren);
+      var oldChildren = sre.SemanticMathml.childrenSubset_(
+        /**@type{!Element}*/(node.parentNode), newChildren);
+        sre.DomUtil.replaceNode(node, newNode);
+        oldChildren.forEach(function(x) {newNode.appendChild(x);});
+    }
+    sre.SemanticMathml.mergeChildren_(newNode, newChildren);
+    sre.SemanticMathml.setAttributes_(newNode, semantic);
+    return sre.SemanticMathml.ascendNewNode_(newNode);
+    // NOTES: the mathmltree elements are all just the table. Even when embedded
+    // in additional elements.
+    //
+    // Rows and cells work out of the box, Lines need a special case.
+    //
+    // Effectively we need a case of lines. And then deal with the parentheses.
+    //
+    //
+    //console.log('Table: ', semantic.mathmlTree.toString());
+  }
+  return null;
+};
+
+//sre.SemanticUtil.stopRecursion = false;
+
+/**
+ * Deals with double scripts as in msubsup or munderover.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node.
+ * @return {Element} The enriched MathML node for the special case.
+ * @private
+ */
+sre.SemanticMathml.doubleScriptCase_ = function(semantic) {
     // TODO (sorge) Needs some refactoring!
     //
     var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
@@ -494,7 +571,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     var supMml = sre.SemanticMathml.walkTree_(supSem);
     var baseMml = sre.SemanticMathml.walkTree_(baseSem);
     var subMml = sre.SemanticMathml.walkTree_(subSem);
-    var newNode = semantic.mathmlTree;
+    var newNode = /**@type{!Element}*/(semantic.mathmlTree);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     newNode.setAttribute(
         sre.SemanticMathml.Attribute.CHILDREN,
@@ -509,17 +586,6 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     sre.SemanticMathml.addCollapsedAttribute_(
         newNode, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
     return newNode;
-  }
-  if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
-    return sre.SemanticMathml.tensorCase_(semantic);
-  }
-  if (semantic.mathmlTree &&
-      sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MMULTISCRIPTS' &&
-      (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-       semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    return sre.SemanticMathml.mmultiscriptCase_(semantic);
-  }
-  return null;
 };
 
 
