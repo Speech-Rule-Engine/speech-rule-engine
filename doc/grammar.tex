@@ -81,7 +81,7 @@ prefixop & Prefix operator like $f(x), \sin(x)$ etc.\\
 postfixop & Postfix operator like \texttt{x++, y--}\\
 \end{tabular}
 
-\begin{tabular}{>{\tt}ll}
+\begin{tabular}{>{\tt}lp{13cm}}
 \multicolumn{2}{l}{\textbf{Function and big operator applications}}\\
 appl & General function application\\
 integral & \\
@@ -98,15 +98,19 @@ underscore & \\
 overscore & \\
 tensor & \\
 
-\multicolumn{2}{l}{\textbf{Tables and their elements}}\\
-table & \\
-multiline & \\
-matrix & \\
-vector & \\
-cases & \\
-row & \\
-cell & \\
-line & Lines are effectively single cell rows\\
+  \multicolumn{2}{l}{\textbf{Tables and their elements}}\\
+  table & A layout element with multiple columns and one or multipled rows. It contains rows and cells.\\
+  multiline & A layout element with one or multiple rows, where each row contains at
+              most one element. It contains lines as children.\\
+  matrix & Fenced element with multiple columns and one or more rows. Contains rows as children
+           and the fences as content.\\
+  vector & Fenced element with single column and one or more rows. Contains lines as children and
+           the fences as content.\\
+  cases & A layout element starting with a single open fence. It can contain either rows and cells
+          or lines as children. Contains the opening fence as content.\\
+  row & Contain cells as children.\\
+  cell & Represent the column element. Are always children or rows.\\
+  line & Lines are effectively single cell rows.\\
 
 \multicolumn{2}{l}{\textbf{Enclosed (counterpart for menclosed)}}\\
 enclose & Enclosed (counterpart for menclosed), its role is the type of enclosure. \\
@@ -128,8 +132,27 @@ particular symbol. As example consider $f$ in the expression $f(x)$. It gets
 assigned type \texttt{identifier} and role \texttt{latinletter}. However, the
 role will eventually change to \texttt{prefix function}.
 
+\subsection{Tables, Vectors, Matrices}
 
+Unless some special case can be identified the role will be unknown.
 
+\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  Type & Role & Meaning\\\hline
+  vector & binomial & Vector with exactly two line elements.\\
+       & squarematrix & Vector with exactly one element.\\
+       & determinant & Vector with exactly one element and neutral fences.\\
+  matrix & rowvector & A single row with multiple cells. Normally a vector has line elements,
+                       this one has rows and cells, hence is classified as a matrix.\\
+       & squarematrix & Matrix with the number of rows and columns.\\
+       & determinant & Square matrix with neutral fences.\\
+\end{tabular}
+Observe that both vectors and matrices can be determinants or square
+matrices. The type then determines what components they contain, either lines or
+rows and cells.
+
+In general components of tabular expressions, i.e., lines, rows, cells, get the
+same role as the type of the expression. In the particular case, where a tabular
+element has a specialist role, they inherit that role instead.
 
 \section{Fonts}
 \label{sec:fonts}
@@ -211,9 +234,10 @@ might of course be empty.
   punctuated & Punctuations & Full content & None & $a;b;c$ & [;,;][a,b,c]\\
   appl & Appl function, function symbol & Function, arguments & None & $f(x)$ & [@, f][f, (x)]\\ 
   bigop & large op symbol & operator, arguments & None & $\sum_{i=0}{n} i$ & [$\sum$, f][$\sum_{i=0}{n}$, i]\\ 
-  integral & integral symbol & integral, integrand, variable & None & $\int_{0}{n}x\, dx$ & [($\int$, f][$\int_{0}{n}$, x, dx]\\ 
-  
-
+  integral & integral symbol & integral, integrand, variable & None & $\int_{0}{n}x\, dx$ & [($\int$, f][$\int_{0}{n}$, x, dx]\\
+  matrix & Fences & Table & None & $(a)$ & [$(,)$][$a$]\\
+  vector & Fences & Lines & None & $(a)$ & [$(,)$][$a$]\\
+  cases & Opening Fence & Lines or Table & None & $\{a$ & [$\{$][$a$]\\
 \end{tabular}
 
 
@@ -273,14 +297,14 @@ underscore & 2 & base, under & & \\
 overscore & 2 & base, over& & \\
 tensor & 5 & base, left sub, left super, right sub, right super& & \\\hline
 \multicolumn{5}{l}{\textbf{Tables and their elements}}\\\hline
-table & & & \\
-multiline & & & \\
-matrix &  & & \\
-vector & $n + 2$ & $n$ lines of type \texttt{line} & 2 & left fence, right fence\\
-cases & & & \\
-row & & & \\
-cell & & & \\
-line & & & \\\hline
+table & $n$ & rows of type \texttt{row} & \\
+multiline & $n$ & lines of type \texttt{line} & \\
+matrix & $n$ & rows of type \texttt{row} & 2 & left fence, right fence\\
+vector & $n$ & lines of type \texttt{line} & 2 & left fence, right fence\\
+cases & $n$ & lines/rows of type \texttt{line/row} & 1 & left fence\\
+row & $n$ & cells of type \texttt{cell} & \\
+cell & $1$ & cell content & \\
+line & $1$ & line content & \\\hline
 \multicolumn{5}{l}{\textbf{Enclosed (counterpart for menclosed)}}\\\hline
 enclose & 1 & enclosed expression& & \\\hline
 \multicolumn{5}{l}{\textbf{General}}\\\hline
