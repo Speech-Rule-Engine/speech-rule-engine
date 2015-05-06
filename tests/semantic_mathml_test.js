@@ -249,6 +249,87 @@ sre.SemanticMathmlTest.prototype.testMathmlScripts = function() {
       '<mi type="identifier" role="latinletter" id="1" parent="4">b</mi>' +
       '<mi type="identifier" role="latinletter" id="2" parent="4">c</mi>' +
       '</msubsup></math>');
+  this.executeMathmlTest(
+      '<mphantom/><msub><mi>a</mi><mpadded><mi>b</mi></mpadded></msub>' +
+      '<merror/>',
+      '<math>' +
+      '<mphantom/>' +
+      '<msub type="subscript" role="latinletter" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">a</mi>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">b</mi>' +
+      '</mpadded>' +
+      '</msub>' +
+      '<merror/>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<mphantom/><msup><mi>a</mi><mpadded><mi>b</mi></mpadded></msup>' +
+      '<merror/>',
+      '<math>' +
+      '<mphantom/>' +
+      '<msup type="superscript" role="latinletter" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">a</mi>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">b</mi>' +
+      '</mpadded>' +
+      '</msup>' +
+      '<merror/>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi></mpadded>' +
+      '<mpadded><mi>c</mi></mpadded></msubsup><merror/>',
+      '<math>' +
+      '<mphantom/>' +
+      '<msubsup type="subsup" role="latinletter" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">a</mi>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">b</mi>' +
+      '</mpadded>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">c</mi>' +
+      '</mpadded>' +
+      '</msubsup>' +
+      '<merror/>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<mphantom/><msubsup><mpadded><mi>a</mi></mpadded><mi>b</mi>' +
+      '<mpadded><mi>c</mi></mpadded></msubsup><merror/>',
+      '<math>' +
+      '<mphantom/>' +
+      '<msubsup type="subsup" role="latinletter" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">a</mi>' +
+      '</mpadded>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">b</mi>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">c</mi>' +
+      '</mpadded>' +
+      '</msubsup>' +
+      '<merror/>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi><mi>d</mi></mpadded>' +
+      '<mpadded><mi>c</mi></mpadded></msubsup><merror/>',
+      '<math>' +
+      '<mphantom/>' +
+      '<msubsup type="subsup" role="latinletter" id="7" children="0,4,5"' +
+      ' collapsed="(7 (6 0 4) 5)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
+      '<mpadded type="infixop" role="implicit" id="4"' +
+      ' children="1,2" content="3" parent="7">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">b</mi>' +
+      '<mo type="operator" role="multiplication" id="3"' +
+      ' parent="4" added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">d</mi>' +
+      '</mpadded>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="7">c</mi>' +
+      '</mpadded>' +
+      '</msubsup>' +
+      '<merror/>' +
+      '</math>');
 };
 
 
@@ -3948,7 +4029,6 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>',
       '<math>' +
@@ -3960,7 +4040,22 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
+  this.executeMathmlTest(
+      '<mmultiscripts><mpadded><mi>X</mi></mpadded><mi>i</mi>' +
+      '<mpadded><mi>j</mi></mpadded></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="subsup" role="latinletter" id="4"' +
+      ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">X</mi>' +
+      '</mpadded>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">i</mi>' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">j</mi>' +
+      '</mpadded>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
@@ -3975,7 +4070,6 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '</mmultiscripts>' +
       '</math>'
   );
-  // Rewrite!
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
@@ -4035,7 +4129,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5"' +
+      ' children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
       '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
@@ -4049,7 +4144,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5"' +
+      ' children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
       '<none type="empty" role="rightsuper" id="4" parent="5"/>' +
@@ -4063,7 +4159,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
       '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
@@ -4077,7 +4174,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<none type="empty" role="rightsub" id="3" parent="5"/>' +
       '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
@@ -4091,7 +4189,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><none/><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<none type="empty" role="rightsub" id="3" parent="5"/>' +
       '<none type="empty" role="rightsuper" id="4" parent="5"/>' +
@@ -4105,7 +4204,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mpadded/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<mpadded type="empty" role="rightsub" id="3" parent="5"/>' +
       '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
@@ -4119,7 +4219,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<none type="empty" role="rightsub" id="3" parent="5" added="true"/>' +
       '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
@@ -4133,7 +4234,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<none type="empty" role="rightsub" id="3" parent="5" added="true"/>' +
       '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
@@ -4147,7 +4249,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<none type="empty" role="rightsub" id="3" parent="5" added="true"/>' +
       '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
@@ -4161,7 +4264,8 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<mn type="number" role="rightsub" id="3" parent="5">1</mn>' +
       '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
@@ -4175,10 +4279,31 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="5" children="1,2,3,4">' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
       '<none type="empty" role="rightsub" id="3" parent="5"/>' +
       '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
+      '<none type="empty" role="leftsuper" id="2" parent="5" added="true"/>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mpadded><mi>A</mi></mpadded><none/>' +
+      '<mpadded><mn>2</mn></mpadded><mprescripts/>' +
+      '<mn>3</mn></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="5" ' +
+      'children="0,1,2,3,4">' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="5">A</mi>' +
+      '</mpadded>' +
+      '<none type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<mpadded>' +
+      '<mn type="number" role="rightsuper" id="4" parent="5">2</mn>' +
+      '</mpadded>' +
       '<mprescripts/>' +
       '<mn type="number" role="leftsub" id="1" parent="5">3</mn>' +
       '<none type="empty" role="leftsuper" id="2" parent="5" added="true"/>' +
@@ -4197,7 +4322,7 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>',
       '<math>' +
       '<mmultiscripts type="tensor" role="unknown" id="17"' +
-      ' children="1,2,5,6,9,10,13,14" collapsed="(17 (4 1 2) (8 5 6) (12 9' +
+      ' children="0,1,2,5,6,9,10,13,14" collapsed="(17 (4 1 2) (8 5 6) (12 9' +
       ' 10) (16 13 14))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="17">A</mi>' +
       '<mn type="number" role="rightsub" id="9" parent="17">3</mn>' +
@@ -4217,7 +4342,7 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>',
       '<math>' +
       '<mmultiscripts type="tensor" role="unknown" id="17"' +
-      ' children="1,2,5,6,9,10,13,14" collapsed="(17 (4 1 2) (8 5 6) (12 9' +
+      ' children="0,1,2,5,6,9,10,13,14" collapsed="(17 (4 1 2) (8 5 6) (12 9' +
       ' 10) (16 13 14))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="17">A</mi>' +
       '<mn type="number" role="rightsub" id="9" parent="17">3</mn>' +
@@ -4237,7 +4362,7 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<mn>4</mn></mmultiscripts>',
       '<math>' +
       '<mmultiscripts type="tensor" role="unknown" id="8"' +
-      ' children="1,2,3,4,7" collapsed="(8 1 2 (6 3 4) 7)">' +
+      ' children="0,1,2,3,4,7" collapsed="(8 1 2 (6 3 4) 7)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="8">A</mi>' +
       '<mn type="number" role="rightsub" id="3" parent="8">1</mn>' +
       '<mn type="number" role="rightsuper" id="7" parent="8">2</mn>' +
@@ -4253,7 +4378,7 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<mn>5</mn><mn>4</mn><mn>6</mn></mmultiscripts>',
       '<math>' +
       '<mmultiscripts type="tensor" role="unknown" id="11"' +
-      ' children="1,2,5,6,7,10" collapsed="(11 (4 1 2) 5 (9 6 7) 10)">' +
+      ' children="0,1,2,5,6,7,10" collapsed="(11 (4 1 2) 5 (9 6 7) 10)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="11">A</mi>' +
       '<mn type="number" role="rightsub" id="6" parent="11">1</mn>' +
       '<mn type="number" role="rightsuper" id="10" parent="11">2</mn>' +
@@ -4266,10 +4391,40 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
       '</math>'
   );
   this.executeMathmlTest(
+      '<mmultiscripts><mpadded><mi>A</mi></mpadded><mpadded><mn>1</mn>' +
+      '</mpadded><mpadded><mn>2</mn></mpadded><mpadded><mn>3</mn>' +
+      '</mpadded><mprescripts/>' +
+      '<mpadded><mn>5</mn></mpadded><mpadded><mn>4</mn></mpadded>' +
+      '<mpadded><mn>6</mn></mpadded></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="unknown" id="11"' +
+      ' children="0,1,2,5,6,7,10" collapsed="(11 (4 1 2) 5 (9 6 7) 10)">' +
+      '<mpadded>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="11">A</mi>' +
+      '</mpadded><mpadded>' +
+      '<mn type="number" role="rightsub" id="6" parent="11">1</mn>' +
+      '</mpadded><mpadded>' +
+      '<mn type="number" role="rightsuper" id="10" parent="11">2</mn>' +
+      '</mpadded><mpadded>' +
+      '<mn type="number" role="rightsub" id="7" parent="11">3</mn>' +
+      '</mpadded>' +
+      '<mprescripts/>' +
+      '<mpadded>' +
+      '<mn type="number" role="leftsub" id="1" parent="11">5</mn>' +
+      '</mpadded><mpadded>' +
+      '<mn type="number" role="leftsuper" id="5" parent="11">4</mn>' +
+      '</mpadded><mpadded>' +
+      '<mn type="number" role="leftsub" id="2" parent="11">6</mn>' +
+      '</mpadded>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
       '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
       '<mn>1</mn><mn>2</mn><mprescripts/><none/><mn>3</mn></mmultiscripts>',
       '<math>' +
-      '<mmultiscripts type="tensor" role="unknown" id="8" children="4,5,6,7">' +
+      '<mmultiscripts type="tensor" role="unknown" id="8"' +
+      ' children="3,4,5,6,7">' +
       '<mrow type="infixop" role="addition" id="3" children="0,2"' +
       ' content="1" parent="8">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">X</mi>' +

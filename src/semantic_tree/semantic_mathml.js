@@ -486,7 +486,6 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
        (sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MUNDEROVER' &&
         semantic.type === sre.SemanticAttr.Type.OVERSCORE))) {
     // TODO (sorge) Needs some refactoring!
-    //     Work around ignored nodes, proper merging of children!
     //
     var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
     var ignore = semantic.childNodes[0];
@@ -557,7 +556,8 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
   }
   var childIds = sre.SemanticMathml.collapsedLeafs_(rsub || [], rsup);
   var base = sre.SemanticMathml.walkTree_(baseSem);
-  base.setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
+  sre.SemanticMathml.getInnerNode_(base).setAttribute(
+      sre.SemanticMathml.Attribute.PARENT, tensor.id);
   childIds.unshift(baseSem.id);
   newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                        childIds.join(','));
@@ -585,8 +585,10 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
     sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
   }
   var childIds = sre.SemanticMathml.collapsedLeafs_(lsub, lsup, rsub, rsup);
+  childIds.unshift(tensor.childNodes[0].id);
   newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                        childIds.join(','));
+  console.log(newNode.toString());
   sre.SemanticMathml.completeMultiscript_(
       tensor, newNode,
       sre.SemanticMathml.interleaveIds_(rsub, rsup),
@@ -675,19 +677,22 @@ sre.SemanticMathml.completeMultiscript_ = function(
     for (var i = 0, index; index = indices[i]; i++) {
       var child = children[childCounter];
       if (!child ||
-          index != child.getAttribute(sre.SemanticMathml.Attribute.ID)) {
+          index != sre.SemanticMathml.getInnerNode_(child).getAttribute(sre.SemanticMathml.Attribute.ID)) {
         var query = tensor.querySelectorAll(
             function(x) {return x.id === index;});
         multiscript.insertBefore(
             sre.SemanticMathml.createNone_(query[0]), child);
       } else {
-        child.setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
+        sre.SemanticMathml.getInnerNode_(child).setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
         childCounter++;
       }
     }
   };
   // right sub and superscripts
   completeIndices(rightIndices);
+  console.log(rightIndices);
+  console.log(multiscript.toString());
+  // console.log(childCounter);
   // mprescripts
   if (children[childCounter] &&
       sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
@@ -697,6 +702,7 @@ sre.SemanticMathml.completeMultiscript_ = function(
   } else {
     childCounter++;
   }
+  console.log(multiscript.toString());
   // left sub and superscripts
   completeIndices(leftIndices);
 };
@@ -735,8 +741,9 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
     var childIds = [index.id];
     for (var i = 0, child; child = index.childNodes[i]; i++) {
       var mmlChild = sre.SemanticMathml.walkTree_(child);
-      mmlChild.setAttribute(sre.SemanticMathml.Attribute.PARENT, parentId);
-      mmlChild.setAttribute(sre.SemanticMathml.Attribute.ROLE, role);
+      var innerNode = sre.SemanticMathml.getInnerNode_(mmlChild);
+      innerNode.setAttribute(sre.SemanticMathml.Attribute.PARENT, parentId);
+      innerNode.setAttribute(sre.SemanticMathml.Attribute.ROLE, role);
       childIds.push(child.id);
     }
     return childIds;
