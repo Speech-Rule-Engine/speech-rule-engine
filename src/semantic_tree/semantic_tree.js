@@ -2102,9 +2102,8 @@ sre.SemanticTree.prototype.tableToMatrixOrVector_ = function(node) {
 sre.SemanticTree.prototype.tableToVector_ = function(node) {
   var vector = node.childNodes[0];
   vector.type = sre.SemanticAttr.Type.VECTOR;
-  if (vector.childNodes.length === 1 &&
-      (sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node))) {
-    vector.role = sre.SemanticAttr.Role.DETERMINANT;
+  if (vector.childNodes.length === 1) {
+    this.tableToSquare_(node);
     return;
   }
   if (vector.childNodes.length === 2) {
@@ -2124,16 +2123,28 @@ sre.SemanticTree.prototype.tableToMatrix_ = function(node) {
   if (matrix.childNodes && matrix.childNodes.length > 0 &&
       matrix.childNodes[0].childNodes &&
       matrix.childNodes.length === matrix.childNodes[0].childNodes.length) {
-    if (sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node)) {
-      matrix.role = sre.SemanticAttr.Role.DETERMINANT;
-      return;
-    }
-    matrix.role = sre.SemanticAttr.Role.SQUAREMATRIX;
+    this.tableToSquare_(node);
     return;
   }
   if (matrix.childNodes && matrix.childNodes.length === 1) {
     matrix.role = sre.SemanticAttr.Role.ROWVECTOR;
   }
+};
+
+
+/**
+ * Assigns a role to a square, fenced table.
+ * @param {!sre.SemanticTree.Node} node The fenced node containing a square
+ *     table.
+ * @private
+ */
+sre.SemanticTree.prototype.tableToSquare_ = function(node) {
+  var matrix = node.childNodes[0];
+  if (sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node)) {
+    matrix.role = sre.SemanticAttr.Role.DETERMINANT;
+    return;
+  }
+  matrix.role = sre.SemanticAttr.Role.SQUAREMATRIX;
 };
 
 

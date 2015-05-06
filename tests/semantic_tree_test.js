@@ -6056,13 +6056,13 @@ sre.SemanticTreeTest.prototype.testStreeVectors = function() {
       '<mfenced open="(" close=")"><mtable>' +
       '<mtr><mtd><mi>n</mi></mtd></mtr>' +
       '</mtable></mfenced>',
-      '<vector role="unknown" id="3">' +
+      '<vector role="squarematrix" id="3">' +
       '<content>' +
       '<fence role="open" id="4">(</fence>' +
       '<fence role="close" id="5">)</fence>' +
       '</content>' +
       '<children>' +
-      '<line role="vector" id="2">' +
+      '<line role="squarematrix" id="2">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
       '</children>' +
