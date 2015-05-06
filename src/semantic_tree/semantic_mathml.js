@@ -501,8 +501,8 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
         sre.SemanticMathml.makeIdList_([baseSem, subSem, supSem]));
     [baseMml, subMml, supMml].forEach(function(child) {
       (sre.SemanticMathml.getInnerNode_(child)).setAttribute(
-        sre.SemanticMathml.Attribute.PARENT,
-        newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
+          sre.SemanticMathml.Attribute.PARENT,
+          newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
     });
     newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
                          ignore.role);
@@ -588,7 +588,6 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
   childIds.unshift(tensor.childNodes[0].id);
   newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                        childIds.join(','));
-  console.log(newNode.toString());
   sre.SemanticMathml.completeMultiscript_(
       tensor, newNode,
       sre.SemanticMathml.interleaveIds_(rsub, rsup),
@@ -677,22 +676,21 @@ sre.SemanticMathml.completeMultiscript_ = function(
     for (var i = 0, index; index = indices[i]; i++) {
       var child = children[childCounter];
       if (!child ||
-          index != sre.SemanticMathml.getInnerNode_(child).getAttribute(sre.SemanticMathml.Attribute.ID)) {
+          index != sre.SemanticMathml.getInnerNode_(child).
+              getAttribute(sre.SemanticMathml.Attribute.ID)) {
         var query = tensor.querySelectorAll(
             function(x) {return x.id === index;});
         multiscript.insertBefore(
             sre.SemanticMathml.createNone_(query[0]), child);
       } else {
-        sre.SemanticMathml.getInnerNode_(child).setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
+        sre.SemanticMathml.getInnerNode_(child).
+            setAttribute(sre.SemanticMathml.Attribute.PARENT, tensor.id);
         childCounter++;
       }
     }
   };
   // right sub and superscripts
   completeIndices(rightIndices);
-  console.log(rightIndices);
-  console.log(multiscript.toString());
-  // console.log(childCounter);
   // mprescripts
   if (children[childCounter] &&
       sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
@@ -702,7 +700,6 @@ sre.SemanticMathml.completeMultiscript_ = function(
   } else {
     childCounter++;
   }
-  console.log(multiscript.toString());
   // left sub and superscripts
   completeIndices(leftIndices);
 };
