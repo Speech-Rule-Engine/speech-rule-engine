@@ -496,16 +496,8 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
     return sre.SemanticMathml.mmultiscriptCase_(semantic);
   }
-  if (semantic.type === sre.SemanticAttr.Type.LINE) {
-    // NOTES: the mathmltree elements are all just the table. Even when embedded
-    // in additional elements.
-    //
-    // Rows and cells work out of the box, Lines need a special case.
-    //
-    // Effectively we need a case of lines. And then deal with the parentheses.
-    //
-    //
-    console.log('Line: ', semantic.mathmlTree.toString());
+  if (semantic.mathmlTree &&
+      semantic.type === sre.SemanticAttr.Type.LINE) {
     if (semantic.childNodes.length) {
       sre.SemanticMathml.walkTree_(
           /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
@@ -524,7 +516,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     var newChildren = [lfence, semantic.mathmlTree];
     if (semantic.contentNodes[1]) {
       var rfence = sre.SemanticMathml.walkTree_(
-        /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1]));
+          /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1]));
       newChildren.push(rfence);
     }
     var newNodeInfo = sre.SemanticMathml.mathmlLca_(newChildren);
@@ -533,27 +525,16 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
       newNode = sre.SystemExternal.document.createElement('mrow');
       var node = sre.SemanticMathml.attachedElement_(newChildren);
       var oldChildren = sre.SemanticMathml.childrenSubset_(
-        /**@type{!Element}*/(node.parentNode), newChildren);
-        sre.DomUtil.replaceNode(node, newNode);
-        oldChildren.forEach(function(x) {newNode.appendChild(x);});
+          /**@type{!Element}*/(node.parentNode), newChildren);
+      sre.DomUtil.replaceNode(node, newNode);
+      oldChildren.forEach(function(x) {newNode.appendChild(x);});
     }
-    sre.SemanticMathml.mergeChildren_(newNode, newChildren);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
-    // NOTES: the mathmltree elements are all just the table. Even when embedded
-    // in additional elements.
-    //
-    // Rows and cells work out of the box, Lines need a special case.
-    //
-    // Effectively we need a case of lines. And then deal with the parentheses.
-    //
-    //
-    //console.log('Table: ', semantic.mathmlTree.toString());
   }
   return null;
 };
 
-//sre.SemanticUtil.stopRecursion = false;
 
 /**
  * Deals with double scripts as in msubsup or munderover.
@@ -562,30 +543,30 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * @private
  */
 sre.SemanticMathml.doubleScriptCase_ = function(semantic) {
-    // TODO (sorge) Needs some refactoring!
-    //
-    var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
-    var ignore = semantic.childNodes[0];
-    var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
-    var subSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[1]);
-    var supMml = sre.SemanticMathml.walkTree_(supSem);
-    var baseMml = sre.SemanticMathml.walkTree_(baseSem);
-    var subMml = sre.SemanticMathml.walkTree_(subSem);
-    var newNode = /**@type{!Element}*/(semantic.mathmlTree);
-    sre.SemanticMathml.setAttributes_(newNode, semantic);
-    newNode.setAttribute(
-        sre.SemanticMathml.Attribute.CHILDREN,
-        sre.SemanticMathml.makeIdList_([baseSem, subSem, supSem]));
-    [baseMml, subMml, supMml].forEach(function(child) {
-      (sre.SemanticMathml.getInnerNode_(child)).setAttribute(
-          sre.SemanticMathml.Attribute.PARENT,
-          newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
-    });
-    newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
-                         ignore.role);
-    sre.SemanticMathml.addCollapsedAttribute_(
-        newNode, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
-    return newNode;
+  // TODO (sorge) Needs some refactoring!
+  //
+  var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
+  var ignore = semantic.childNodes[0];
+  var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
+  var subSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[1]);
+  var supMml = sre.SemanticMathml.walkTree_(supSem);
+  var baseMml = sre.SemanticMathml.walkTree_(baseSem);
+  var subMml = sre.SemanticMathml.walkTree_(subSem);
+  var newNode = /**@type{!Element}*/(semantic.mathmlTree);
+  sre.SemanticMathml.setAttributes_(newNode, semantic);
+  newNode.setAttribute(
+      sre.SemanticMathml.Attribute.CHILDREN,
+      sre.SemanticMathml.makeIdList_([baseSem, subSem, supSem]));
+  [baseMml, subMml, supMml].forEach(function(child) {
+    (sre.SemanticMathml.getInnerNode_(child)).setAttribute(
+        sre.SemanticMathml.Attribute.PARENT,
+        newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
+  });
+  newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
+      ignore.role);
+  sre.SemanticMathml.addCollapsedAttribute_(
+      newNode, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
+  return newNode;
 };
 
 
