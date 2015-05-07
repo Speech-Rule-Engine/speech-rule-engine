@@ -3834,6 +3834,1711 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
 };
 
 
+/**
+ * Prefix function applications
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsSingle = function() {
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="6" children="0,4"' +
+      ' content="5,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="6"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="5" parent="6"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="4" children="2"' +
+      ' content="1,3" parent="6">' +
+      '<mo type="fence" role="open" id="1" parent="4"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="4"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="9" children="0,7"' +
+      ' content="8,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="9"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="8" parent="9"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="7" children="6"' +
+      ' content="1,4" parent="9">' +
+      '<mo type="fence" role="open" id="1" parent="7"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="implicit" id="6" children="2,3"' +
+      ' content="5" parent="7">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mo type="operator" role="multiplication" id="5" parent="6"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="6">y</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="4" parent="7"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="1,5" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<msup type="superscript" role="latinletter" id="4" children="2,3"' +
+      ' parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
+      '</msup>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="1,5" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<msub type="subscript" role="latinletter" id="4" children="2,3"' +
+      ' parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
+      '</msub>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn>' +
+      '<mn>1</mn></msubsup><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="10" children="0,8"' +
+      ' content="9,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="10"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="6"' +
+      ' content="1,7" parent="10">' +
+      '<mo type="fence" role="open" id="1" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<msubsup type="subsup" role="latinletter" id="6" children="2,3,4"' +
+      ' parent="8" collapsed="(6 (5 2 3) 4)">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
+      '<mn type="number" role="integer" id="4" parent="6">1</mn>' +
+      '</msubsup>' +
+      '<mo type="fence" role="close" id="7" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="1,5" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mover type="overscore" role="latinletter" id="4" children="2,3"' +
+      ' parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
+      '</mover>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="1,5" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<munder type="underscore" role="latinletter" id="4" children="2,3"' +
+      ' parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
+      '</munder>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn>' +
+      '<mn>1</mn></munderover><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="10" children="0,8"' +
+      ' content="9,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="10"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="6"' +
+      ' content="1,7" parent="10">' +
+      '<mo type="fence" role="open" id="1" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<munderover type="latinletter" role="latinletter" id="6"' +
+      ' children="2,3,4" parent="8" collapsed="(6 (5 2 3) 4)">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
+      '<mn type="number" role="integer" id="4" parent="6">1</mn>' +
+      '</munderover>' +
+      '<mo type="fence" role="close" id="7" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="1,5" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mfrac type="fraction" role="vulgar" id="4" children="2,3" parent="6">' +
+      '<mn type="number" role="integer" id="2" parent="4">1</mn>' +
+      '<mn type="number" role="integer" id="3" parent="4">2</mn>' +
+      '</mfrac>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="9" children="0,7"' +
+      ' content="8,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="9"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="8" parent="9"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="7" children="6"' +
+      ' content="1,5" parent="9">' +
+      '<mo type="fence" role="open" id="1" parent="7"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="addition" id="6" children="2,4"' +
+      ' content="3" parent="7">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mo type="operator" role="addition" id="3" parent="6"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">y</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="5" parent="7"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Prefix functions applications with surrounding operators.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsWithOps = function() {
+  this.executeMathmlTest(
+      '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="9" children="0,8"' +
+      ' content="1">' +
+      '<mn type="number" role="integer" id="0" parent="9">1</mn>' +
+      '<mo type="operator" role="addition" id="1" parent="9"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="8" children="2,6"' +
+      ' content="7,2" parent="9">' +
+      '<mi type="function" role="prefix function" id="2" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="3,5" parent="8">' +
+      '<mo type="fence" role="open" id="3" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
+      '<mn>2</mn></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="9" children="8,5"' +
+      ' content="4">' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0" parent="9">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="2"' +
+      ' content="1,3" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="9"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="5" parent="9">2</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mo>+</mo><mn>2</mn></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="11" children="0,10,7"' +
+      ' content="1,6">' +
+      '<mn type="number" role="integer" id="0" parent="11">1</mn>' +
+      '<mo type="operator" role="addition" id="1" parent="11"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="10" children="2,8"' +
+      ' content="9,2" parent="11">' +
+      '<mi type="function" role="prefix function" id="2" parent="10"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="4"' +
+      ' content="3,5" parent="10">' +
+      '<mo type="fence" role="open" id="3" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="6" parent="11"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="7" parent="11">2</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="9" children="0,8"' +
+      ' content="1">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="9">a</mo>' +
+      '<mo type="operator" role="addition" id="1" parent="9"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="8" children="2,6"' +
+      ' content="7,2" parent="9">' +
+      '<mi type="function" role="prefix function" id="2" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="3,5" parent="8">' +
+      '<mo type="fence" role="open" id="3" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
+      '<mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="9" children="8,5"' +
+      ' content="4">' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0" parent="9">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="2"' +
+      ' content="1,3" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="9"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mo type="identifier" role="latinletter" id="5" parent="9">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo><mo>+</mo><mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="11" children="0,10,7"' +
+      ' content="1,6">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="11">a</mo>' +
+      '<mo type="operator" role="addition" id="1" parent="11"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="10" children="2,8"' +
+      ' content="9,2" parent="11">' +
+      '<mi type="function" role="prefix function" id="2" parent="10"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="4"' +
+      ' content="3,5" parent="10">' +
+      '<mo type="fence" role="open" id="3" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="6" parent="11"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mo type="identifier" role="latinletter" id="7" parent="11">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="9" children="0,8" content="1">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="9">a</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="9"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="8" children="2,6"' +
+      ' content="7,2" parent="9">' +
+      '<mi type="function" role="prefix function" id="2" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="3,5" parent="8">' +
+      '<mo type="fence" role="open" id="3" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo>' +
+      '<mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="9" children="8,5" content="4">' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,6"' +
+      ' content="7,0" parent="9">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="2"' +
+      ' content="1,3" parent="8">' +
+      '<mo type="fence" role="open" id="1" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="4" parent="9"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mo type="identifier" role="latinletter" id="5" parent="9">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mo>=</mo><mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="11" children="0,10,7"' +
+      ' content="1,6">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="11">a</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="11"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="10" children="2,8"' +
+      ' content="9,2" parent="11">' +
+      '<mi type="function" role="prefix function" id="2" parent="10"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="4"' +
+      ' content="3,5" parent="10">' +
+      '<mo type="fence" role="open" id="3" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="6" parent="11"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mo type="identifier" role="latinletter" id="7" parent="11">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Multiple prefix function applications.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMulti = function() {
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
+      '<mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="15" children="14,12"' +
+      ' content="4">' +
+      '<mrow type="appl" role="prefix function" id="14" children="0,9"' +
+      ' content="13,0" parent="15">' +
+      '<mi type="function" role="prefix function" id="0" parent="14"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="13" parent="14"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="9" children="2"' +
+      ' content="1,3" parent="14">' +
+      '<mo type="fence" role="open" id="1" parent="9"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="9">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="9"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="15"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="12" children="5,10"' +
+      ' content="11,5" parent="15">' +
+      '<mi type="function" role="prefix function" id="5" parent="12"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="10" children="7"' +
+      ' content="6,8" parent="12">' +
+      '<mo type="fence" role="open" id="6" parent="10"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="10">x</mi>' +
+      '<mo type="fence" role="close" id="8" parent="10"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
+      '<mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo>' +
+      '<mi>x</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="24" children="23,18"' +
+      ' content="9">' +
+      '<mrow type="infixop" role="addition" id="23" children="22,20"' +
+      ' content="4" parent="24">' +
+      '<mrow type="appl" role="prefix function" id="22" children="0,14"' +
+      ' content="21,0" parent="23">' +
+      '<mi type="function" role="prefix function" id="0" parent="22"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="21" parent="22"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="14" children="2"' +
+      ' content="1,3" parent="22">' +
+      '<mo type="fence" role="open" id="1" parent="14"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="14">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="14"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="23"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="20" children="5,15"' +
+      ' content="19,5" parent="23">' +
+      '<mi type="function" role="prefix function" id="5" parent="20"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="19" parent="20"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="15" children="7"' +
+      ' content="6,8" parent="20">' +
+      '<mo type="fence" role="open" id="6" parent="15"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="15">x</mi>' +
+      '<mo type="fence" role="close" id="8" parent="15"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="9" parent="24"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="18" children="10,16"' +
+      ' content="17,10" parent="24">' +
+      '<mi type="function" role="prefix function" id="10" parent="18"' +
+      ' operator="appl">tan</mi>' +
+      '<mo type="punctuation" role="application" id="17" parent="18"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="16" children="12"' +
+      ' content="11,13" parent="18">' +
+      '<mo type="fence" role="open" id="11" parent="16"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="12" parent="16">x</mi>' +
+      '<mo type="fence" role="close" id="13" parent="16"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
+      '<mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo>' +
+      '<mi>x</mi><mi>y</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="27" children="26,21"' +
+      ' content="9">' +
+      '<mrow type="infixop" role="addition" id="26" children="25,23"' +
+      ' content="4" parent="27">' +
+      '<mrow type="appl" role="prefix function" id="25" children="0,15"' +
+      ' content="24,0" parent="26">' +
+      '<mi type="function" role="prefix function" id="0" parent="25"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="24" parent="25"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="15" children="2"' +
+      ' content="1,3" parent="25">' +
+      '<mo type="fence" role="open" id="1" parent="15"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="15">x</mi>' +
+      '<mo type="fence" role="close" id="3" parent="15"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="26"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="23" children="5,16"' +
+      ' content="22,5" parent="26">' +
+      '<mi type="function" role="prefix function" id="5" parent="23"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="22" parent="23"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="16" children="7"' +
+      ' content="6,8" parent="23">' +
+      '<mo type="fence" role="open" id="6" parent="16"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="16">y</mi>' +
+      '<mo type="fence" role="close" id="8" parent="16"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="9" parent="27"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="21" children="10,19"' +
+      ' content="20,10" parent="27">' +
+      '<mi type="function" role="prefix function" id="10" parent="21"' +
+      ' operator="appl">tan</mi>' +
+      '<mo type="punctuation" role="application" id="20" parent="21"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="19" children="18"' +
+      ' content="11,14" parent="21">' +
+      '<mo type="fence" role="open" id="11" parent="19"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="infixop" role="implicit" id="18" children="12,13"' +
+      ' content="17" parent="19">' +
+      '<mi type="identifier" role="latinletter" id="12" parent="18">x</mi>' +
+      '<mo type="operator" role="multiplication" id="17" parent="18"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="13" parent="18">y</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="14" parent="19"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Prefix function applications with sub- and superscripts.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
+  this.executeMathmlTest(
+      '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="2,6"' +
+      ' content="7,0">' +
+      '<msup type="superscript" role="prefix function" id="2"' +
+      ' children="0,1" parent="8">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="3,5" parent="8">' +
+      '<mo type="fence" role="open" id="3" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msub><mi>sin</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="8" children="2,6"' +
+      ' content="7,0">' +
+      '<msub type="subscript" role="prefix function" id="2" children="0,1"' +
+      ' parent="8">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
+      '</msub>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="6" children="4"' +
+      ' content="3,5" parent="8">' +
+      '<mo type="fence" role="open" id="3" parent="6"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="6"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mo>(</mo>' +
+      '<mi>x</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="10" children="4,8"' +
+      ' content="9,0">' +
+      '<msubsup type="subsup" role="prefix function" id="4"' +
+      ' children="0,1,2" parent="10" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="function" role="prefix function" id="0" parent="4"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="4">2</mn>' +
+      '<mn type="number" role="integer" id="2" parent="4">1</mn>' +
+      '</msubsup>' +
+      '<mo type="punctuation" role="application" id="9" parent="10"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="8" children="6"' +
+      ' content="5,7" parent="10">' +
+      '<mo type="fence" role="open" id="5" parent="8"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="7" parent="8"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>(</mo>' +
+      '<mi>y</mi><mo>)</mo><mo>=</mo><mn>1</mn></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="22" children="21,14"' +
+      ' content="13">' +
+      '<mrow type="infixop" role="addition" id="21" children="20,18"' +
+      ' content="6" parent="22">' +
+      '<mrow type="appl" role="prefix function" id="20" children="2,15"' +
+      ' content="19,0" parent="21">' +
+      '<msup type="superscript" role="prefix function" id="2"' +
+      ' children="0,1" parent="20">' +
+      '<mi type="function" role="prefix function" id="0" parent="20"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="19" parent="20"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="15" children="4"' +
+      ' content="3,5" parent="20">' +
+      '<mo type="fence" role="open" id="3" parent="15"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="15">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="15"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="6" parent="21"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="18" children="9,16"' +
+      ' content="17,7" parent="21">' +
+      '<msup type="superscript" role="prefix function" id="9"' +
+      ' children="7,8" parent="18">' +
+      '<mi type="function" role="prefix function" id="7" parent="18"' +
+      ' operator="appl">cos</mi>' +
+      '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="17" parent="18"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="16" children="11"' +
+      ' content="10,12" parent="18">' +
+      '<mo type="fence" role="open" id="10" parent="16"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="11" parent="16">y</mi>' +
+      '<mo type="fence" role="close" id="12" parent="16"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="13" parent="22"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="14" parent="22">1</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Prefix function applications with unfenced arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsUnfenced = function() {
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="3" children="0,1"' +
+      ' content="2,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="3"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="2" parent="3"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mi>y</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="6" children="0,4"' +
+      ' content="5,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="6"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="5" parent="6"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="infixop" role="implicit" id="4" children="1,2"' +
+      ' content="3" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="operator" role="multiplication" id="3" parent="4"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,3"' +
+      ' content="4,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<msup type="superscript" role="latinletter" id="3" children="1,2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msup>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,3"' +
+      ' content="4,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<msub type="subscript" role="latinletter" id="3" children="1,2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><msubsup><mi>x</mi><mn>2</mn><mn>1</mn>' +
+      '</msubsup></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="7" children="0,5"' +
+      ' content="6,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="7"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="6" parent="7"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<msubsup type="subsup" role="latinletter" id="5" children="1,2,3"' +
+      ' parent="7" collapsed="(5 (4 1 2) 3)">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="5">2</mn>' +
+      '<mn type="number" role="integer" id="3" parent="5">1</mn>' +
+      '</msubsup>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mover><mi>x</mi><mn>2</mn></mover></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,3"' +
+      ' content="4,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mover type="overscore" role="latinletter" id="3" children="1,2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</mover>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><munder><mi>x</mi><mn>2</mn></munder></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,3"' +
+      ' content="4,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<munder type="underscore" role="latinletter" id="3" children="1,2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</munder>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><munderover><mi>x</mi><mn>2</mn><mn>1</mn>' +
+      '</munderover></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="7" children="0,5"' +
+      ' content="6,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="7"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="6" parent="7"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<munderover type="latinletter" role="latinletter" id="5"' +
+      ' children="1,2,3" parent="7" collapsed="(5 (4 1 2) 3)">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="5">2</mn>' +
+      '<mn type="number" role="integer" id="3" parent="5">1</mn>' +
+      '</munderover>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,3"' +
+      ' content="4,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mfrac type="fraction" role="vulgar" id="3" children="1,2" parent="5">' +
+      '<mn type="number" role="integer" id="1" parent="3">1</mn>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</mfrac>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Prefix function applications with unfenced arguments in an operator
+ * expression.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsUnfencedOps = function() {
+  this.executeMathmlTest(
+      '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="6" children="0,5"' +
+      ' content="1">' +
+      '<mn type="number" role="integer" id="0" parent="6">1</mn>' +
+      '<mo type="operator" role="addition" id="1" parent="6"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="5" children="2,3"' +
+      ' content="4,2" parent="6">' +
+      '<mi type="function" role="prefix function" id="2" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="6" children="5,3"' +
+      ' content="2">' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,1"' +
+      ' content="4,0" parent="6">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="2" parent="6"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo>' +
+      '<mn>2</mn></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="8" children="0,7,5"' +
+      ' content="1,4">' +
+      '<mn type="number" role="integer" id="0" parent="8">1</mn>' +
+      '<mo type="operator" role="addition" id="1" parent="8"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="7" children="2,3"' +
+      ' content="6,2" parent="8">' +
+      '<mi type="function" role="prefix function" id="2" parent="7"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="6" parent="7"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="8"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="5" parent="8">2</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="6" children="0,5"' +
+      ' content="1">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="6">a</mo>' +
+      '<mo type="operator" role="addition" id="1" parent="6"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="5" children="2,3"' +
+      ' content="4,2" parent="6">' +
+      '<mi type="function" role="prefix function" id="2" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="6" children="5,3"' +
+      ' content="2">' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,1"' +
+      ' content="4,0" parent="6">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="2" parent="6"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mo type="identifier" role="latinletter" id="3" parent="6">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo>' +
+      '<mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="8" children="0,7,5"' +
+      ' content="1,4">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="8">a</mo>' +
+      '<mo type="operator" role="addition" id="1" parent="8"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="7" children="2,3"' +
+      ' content="6,2" parent="8">' +
+      '<mi type="function" role="prefix function" id="2" parent="7"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="6" parent="7"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="8"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mo type="identifier" role="latinletter" id="5" parent="8">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="6" children="0,5" content="1">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="6">a</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="6"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="5" children="2,3"' +
+      ' content="4,2" parent="6">' +
+      '<mi type="function" role="prefix function" id="2" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="6" children="5,3" content="2">' +
+      '<mrow type="appl" role="prefix function" id="5" children="0,1"' +
+      ' content="4,0" parent="6">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="2" parent="6"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mo type="identifier" role="latinletter" id="3" parent="6">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mo>=</mo>' +
+      '<mo>b</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="8" children="0,7,5"' +
+      ' content="1,4">' +
+      '<mo type="identifier" role="latinletter" id="0" parent="8">a</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="8"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="7" children="2,3"' +
+      ' content="6,2" parent="8">' +
+      '<mi type="function" role="prefix function" id="2" parent="7"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="6" parent="7"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">x</mi>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="4" parent="8"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mo type="identifier" role="latinletter" id="5" parent="8">b</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Multiple prefix function applications with unfenced arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMultiUnfenced =
+    function() {
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="9" children="8,6"' +
+      ' content="2">' +
+      '<mrow type="appl" role="prefix function" id="8" children="0,1"' +
+      ' content="7,0" parent="9">' +
+      '<mi type="function" role="prefix function" id="0" parent="8"' +
+                          ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="7" parent="8"' +
+                          ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="8">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="2" parent="9"' +
+                          ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="6" children="3,4"' +
+                          ' content="5,3" parent="9">' +
+      '<mi type="function" role="prefix function" id="3" parent="6"' +
+                          ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="5" parent="6"' +
+                          ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mo>=</mo>' +
+      '<mi>tan</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="15" children="14,9"' +
+      ' content="5">' +
+      '<mrow type="infixop" role="addition" id="14" children="13,11"' +
+      ' content="2" parent="15">' +
+      '<mrow type="appl" role="prefix function" id="13" children="0,1"' +
+      ' content="12,0" parent="14">' +
+      '<mi type="function" role="prefix function" id="0" parent="13"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="12" parent="13"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="13">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="2" parent="14"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="11" children="3,4"' +
+      ' content="10,3" parent="14">' +
+      '<mi type="function" role="prefix function" id="3" parent="11"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="10" parent="11"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="11">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="5" parent="15"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="9" children="6,7"' +
+      ' content="8,6" parent="15">' +
+      '<mi type="function" role="prefix function" id="6" parent="9"' +
+      ' operator="appl">tan</mi>' +
+      '<mo type="punctuation" role="application" id="8" parent="9"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="9">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>y</mi><mo>=</mo>' +
+      '<mi>tan</mi><mi>x</mi><mi>y</mi></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="18" children="17,12"' +
+      ' content="5">' +
+      '<mrow type="infixop" role="addition" id="17" children="16,14"' +
+      ' content="2" parent="18">' +
+      '<mrow type="appl" role="prefix function" id="16" children="0,1"' +
+      ' content="15,0" parent="17">' +
+      '<mi type="function" role="prefix function" id="0" parent="16"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="15" parent="16"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="16">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="2" parent="17"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="14" children="3,4"' +
+      ' content="13,3" parent="17">' +
+      '<mi type="function" role="prefix function" id="3" parent="14"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="13" parent="14"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="14">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="5" parent="18"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="12" children="6,10"' +
+      ' content="11,6" parent="18">' +
+      '<mi type="function" role="prefix function" id="6" parent="12"' +
+      ' operator="appl">tan</mi>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="infixop" role="implicit" id="10" children="7,8"' +
+      ' content="9" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="7" parent="10">x</mi>' +
+      '<mo type="operator" role="multiplication" id="9" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="10">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Prefix function applications with sub- and superscripts and unfenced
+ * arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
+    function() {
+  this.executeMathmlTest(
+      '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="2,3"' +
+      ' content="4,0">' +
+      '<msup type="superscript" role="prefix function" id="2"' +
+      ' children="0,1" parent="5">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msub><mi>sin</mi><mn>1</mn></msub><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="5" children="2,3"' +
+      ' content="4,0">' +
+      '<msub type="subscript" role="prefix function" id="2" children="0,1"' +
+      ' parent="5">' +
+      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
+      '</msub>' +
+      '<mo type="punctuation" role="application" id="4" parent="5"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup>' +
+      '<mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="7" children="4,5"' +
+      ' content="6,0">' +
+      '<msubsup type="subsup" role="prefix function" id="4"' +
+      ' children="0,1,2" parent="7" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="function" role="prefix function" id="0" parent="4"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="4">2</mn>' +
+      '<mn type="number" role="integer" id="2" parent="4">1</mn>' +
+      '</msubsup>' +
+      '<mo type="punctuation" role="application" id="6" parent="7"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="7">x</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup>' +
+      '<mi>cos</mi><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="16" children="15,10"' +
+      ' content="9">' +
+      '<mrow type="infixop" role="addition" id="15" children="14,12"' +
+      ' content="4" parent="16">' +
+      '<mrow type="appl" role="prefix function" id="14" children="2,3"' +
+      ' content="13,0" parent="15">' +
+      '<msup type="superscript" role="prefix function" id="2"' +
+      ' children="0,1" parent="14">' +
+      '<mi type="function" role="prefix function" id="0" parent="14"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="13" parent="14"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="14">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="4" parent="15"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="12" children="7,8"' +
+      ' content="11,5" parent="15">' +
+      '<msup type="superscript" role="prefix function" id="7"' +
+      ' children="5,6" parent="12">' +
+      '<mi type="function" role="prefix function" id="5" parent="12"' +
+      ' operator="appl">cos</mi>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="12">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="9" parent="16"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="10" parent="16">1</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><msubsup><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn>' +
+      '</msubsup><mi>n</mi><mi>m</mi></msubsup><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="11" children="8,9"' +
+      ' content="10,0">' +
+      '<msubsup type="subsup" role="prefix function" id="8"' +
+      ' children="4,5,6" parent="11" collapsed="(8 (7 4 5) 6)">' +
+      '<msubsup type="subsup" role="prefix function" id="4"' +
+      ' children="0,1,2" parent="8" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="function" role="prefix function" id="0" parent="4"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="4">2</mn>' +
+      '<mn type="number" role="integer" id="2" parent="4">1</mn>' +
+      '</msubsup>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="8">n</mi>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">m</mi>' +
+      '</msubsup>' +
+      '<mo type="punctuation" role="application" id="10" parent="11"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="11">x</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Prefix functions without arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
+  this.executeMathmlTest(
+      '<mi>sin</mi>',
+      '<math>' +
+      '<mi type="function" role="prefix function" id="0">sin</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<msup><mi>sin</mi><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="prefix function" id="2" children="0,1">' +
+      '<mi type="function" role="prefix function" id="0" parent="2">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  // Those do not look right!
+  this.executeMathmlTest(
+      '<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi>' +
+      '<mn>2</mn></msup>',
+      '<math type="infixop" role="addition" id="13" children="12,9"' +
+      ' content="3">' +
+      '<mrow type="appl" role="prefix function" id="12" children="2,10"' +
+      ' content="11,0" parent="13">' +
+      '<msup type="superscript" role="prefix function" id="2"' +
+      ' children="0,1" parent="12">' +
+      '<mi type="function" role="prefix function" id="0" parent="12"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="empty" role="unknown" id="10" parent="12"/>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="3" parent="13"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="9" children="6,7"' +
+      ' content="8,4" parent="13">' +
+      '<msup type="superscript" role="prefix function" id="6"' +
+      ' children="4,5" parent="9">' +
+      '<mi type="function" role="prefix function" id="4" parent="9"' +
+      ' operator="appl">cos</mi>' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="8" parent="9"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="empty" role="unknown" id="7" parent="9"/>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Those do not look right!
+  this.executeMathmlTest(
+      '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo>' +
+      '<msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="16" children="15,8"' +
+      ' content="7">' +
+      '<mrow type="infixop" role="addition" id="15" children="14,11"' +
+      ' content="3" parent="16">' +
+      '<mrow type="appl" role="prefix function" id="14" children="2,12"' +
+      ' content="13,0" parent="15">' +
+      '<msup type="superscript" role="prefix function" id="2"' +
+      ' children="0,1" parent="14">' +
+      '<mi type="function" role="prefix function" id="0" parent="14"' +
+      ' operator="appl">sin</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="13" parent="14"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="empty" role="unknown" id="12" parent="14"/>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="3" parent="15"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="prefix function" id="11" children="6,9"' +
+      ' content="10,4" parent="15">' +
+      '<msup type="superscript" role="prefix function" id="6"' +
+      ' children="4,5" parent="11">' +
+      '<mi type="function" role="prefix function" id="4" parent="11"' +
+      ' operator="appl">cos</mi>' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="10" parent="11"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="empty" role="unknown" id="9" parent="11"/>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="7" parent="16"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="8" parent="16">1</mn>' +
+      '</mrow>' +
+      '</math>'
+  );
+  // Those do not look right!
+  this.executeMathmlTest(
+      '<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn>' +
+      '<mi>csc</mi></mfrac></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="8" children="7,4" content="1">' +
+      '<mi type="appl" role="prefix function" id="7" children="0,5"' +
+      ' content="6,0" parent="8">sin</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="8"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mfrac type="fraction" role="division" id="4" children="2,3"' +
+      ' parent="8">' +
+      '<mn type="number" role="integer" id="2" parent="4">1</mn>' +
+      '<mi type="function" role="prefix function" id="3" parent="4">csc</mi>' +
+      '</mfrac>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Nested prefix function applications, both with and without fenced arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNested = function() {
+  this.executeMathmlTest(
+      '<mrow><mi>log</mi><mi>cos</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="6" children="0,4"' +
+      ' content="5,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="6"' +
+      ' operator="appl">log</mi>' +
+      '<mo type="punctuation" role="application" id="5" parent="6"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="appl" role="prefix function" id="4" children="1,2"' +
+      ' content="3,1" parent="6">' +
+      '<mi type="function" role="prefix function" id="1" parent="4"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="3" parent="4"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>ln</mi><mo>(</mo><mi>sin</mi>' +
+      '<mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="prefix function" id="12" children="0,10"' +
+      ' content="11,0">' +
+      '<mi type="function" role="prefix function" id="0" parent="12"' +
+      ' operator="appl">ln</mi>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="10" children="9"' +
+      ' content="1,6" parent="12">' +
+      '<mo type="fence" role="open" id="1" parent="10"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="appl" role="prefix function" id="9" children="2,7"' +
+      ' content="8,2" parent="10">' +
+      '<mi type="function" role="prefix function" id="2" parent="9"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="8" parent="9"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="7" children="4"' +
+      ' content="3,5" parent="9">' +
+      '<mo type="fence" role="open" id="3" parent="7"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">x</mi>' +
+      '<mo type="fence" role="close" id="5" parent="7"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="6" parent="10"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>log</mi><mi>cos</mi><mi>x</mi><mo>=</mo><mi>ln</mi>' +
+      '<mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="21" children="20,16"' +
+      ' content="3">' +
+      '<mrow type="appl" role="prefix function" id="20" children="0,18"' +
+      ' content="19,0" parent="21">' +
+      '<mi type="function" role="prefix function" id="0" parent="20"' +
+      ' operator="appl">log</mi>' +
+      '<mo type="punctuation" role="application" id="19" parent="20"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="appl" role="prefix function" id="18" children="1,2"' +
+      ' content="17,1" parent="20">' +
+      '<mi type="function" role="prefix function" id="1" parent="18"' +
+      ' operator="appl">cos</mi>' +
+      '<mo type="punctuation" role="application" id="17" parent="18"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="18">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="3" parent="21"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="appl" role="prefix function" id="16" children="4,14"' +
+      ' content="15,4" parent="21">' +
+      '<mi type="function" role="prefix function" id="4" parent="16"' +
+      ' operator="appl">ln</mi>' +
+      '<mo type="punctuation" role="application" id="15" parent="16"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="14" children="13"' +
+      ' content="5,10" parent="16">' +
+      '<mo type="fence" role="open" id="5" parent="14"' +
+      ' operator="fenced">(</mo>' +
+      '<mrow type="appl" role="prefix function" id="13" children="6,11"' +
+      ' content="12,6" parent="14">' +
+      '<mi type="function" role="prefix function" id="6" parent="13"' +
+      ' operator="appl">sin</mi>' +
+      '<mo type="punctuation" role="application" id="12" parent="13"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="11" children="8"' +
+      ' content="7,9" parent="13">' +
+      '<mo type="fence" role="open" id="7" parent="11"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="11">x</mi>' +
+      '<mo type="fence" role="close" id="9" parent="11"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="10" parent="14"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
 // Missing tests here!
 
 
