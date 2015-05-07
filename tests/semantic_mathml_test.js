@@ -5324,7 +5324,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
       '</msup>' +
       '</math>'
   );
-  // Those do not look right!
+  // Test needs to be fixed!
   this.executeMathmlTest(
       '<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi>' +
       '<mn>2</mn></msup>',
@@ -5358,7 +5358,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
       '</mrow>' +
       '</math>'
   );
-  // Those do not look right!
+  // Test needs to be fixed!
   this.executeMathmlTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo>' +
       '<msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>',
@@ -5400,7 +5400,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
       '</mrow>' +
       '</math>'
   );
-  // Those do not look right!
+  // Test needs to be fixed!
   this.executeMathmlTest(
       '<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn>' +
       '<mi>csc</mi></mfrac></mrow>',
@@ -5538,6 +5538,856 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNested = function() {
       '</math>'
   );
 };
+
+
+/**
+ * Variations of matrices and their roles as determinants, square matrices or
+ * rowvectors.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlMatrices = function() {
+  this.executeMathmlTest(
+      '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">A</mi>' +
+      '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
+      '<mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>' +
+      '</mrow>',
+      '<math>' +
+      '<mrow class="MJX-TeXAtom-ORD" type="relseq" role="equality" id="16"' +
+      ' children="0,13" content="1">' +
+      '<mi mathvariant="bold" type="identifier" role="latinletter" id="0"' +
+      ' parent="16">A</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="16"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="matrix" role="squarematrix" id="13" children="7,12"' +
+      ' content="2,14" parent="16">' +
+      '<mo type="fence" role="open" id="2" parent="13">[</mo>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="row" role="squarematrix" id="7" children="4,6" parent="13">' +
+      '<mtd type="cell" role="squarematrix" id="4" children="3" parent="7">' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="squarematrix" id="6" children="5" parent="7">' +
+      '<mn type="number" role="integer" id="5" parent="6">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="squarematrix" id="12" children="9,11"' +
+      ' parent="13">' +
+      '<mtd type="cell" role="squarematrix" id="9" children="8" parent="12">' +
+      '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="squarematrix" id="11" children="10"' +
+      ' parent="12">' +
+      '<mn type="number" role="integer" id="10" parent="11">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '<mo type="fence" role="close" id="14" parent="13">]</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
+      '</mtable><mo>]</mo>',
+      '<math type="matrix" role="unknown" id="16" children="5,10,15"' +
+      ' content="0,17" parent="18">' +
+      '<mo type="fence" role="open" id="0" parent="16">[</mo>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="row" role="matrix" id="5" children="2,4" parent="16">' +
+      '<mtd type="cell" role="matrix" id="2" children="1" parent="5">' +
+      '<mn type="number" role="integer" id="1" parent="2">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="matrix" id="4" children="3" parent="5">' +
+      '<mn type="number" role="integer" id="3" parent="4">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="matrix" id="10" children="7,9" parent="16">' +
+      '<mtd type="cell" role="matrix" id="7" children="6" parent="10">' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="matrix" id="9" children="8" parent="10">' +
+      '<mn type="number" role="integer" id="8" parent="9">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="matrix" id="15" children="12,14" parent="16">' +
+      '<mtd type="cell" role="matrix" id="12" children="11" parent="15">' +
+      '<mn type="number" role="integer" id="11" parent="12">4</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="matrix" id="14" children="13" parent="15">' +
+      '<mn type="number" role="integer" id="13" parent="14">5</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '<mo type="fence" role="close" id="17" parent="16">]</mo>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '</mtable><mo>]</mo>',
+      '<math type="matrix" role="squarematrix" id="11" children="5,10"' +
+      ' content="0,12" parent="13">' +
+      '<mo type="fence" role="open" id="0" parent="11">[</mo>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="row" role="squarematrix" id="5" children="2,4" parent="11">' +
+      '<mtd type="cell" role="squarematrix" id="2" children="1" parent="5">' +
+      '<mn type="number" role="integer" id="1" parent="2">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="squarematrix" id="4" children="3" parent="5">' +
+      '<mn type="number" role="integer" id="3" parent="4">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="squarematrix" id="10" children="7,9"' +
+      ' parent="11">' +
+      '<mtd type="cell" role="squarematrix" id="7" children="6" parent="10">' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="squarematrix" id="9" children="8" parent="10">' +
+      '<mn type="number" role="integer" id="8" parent="9">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '<mo type="fence" role="close" id="12" parent="11">]</mo>' +
+      '</math>'
+  );
+  // Test needs to be fixed!
+  this.executeMathmlTest(
+      '<mfenced open="|" close="|"><mtable>' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<math type="matrix" role="unknown" id="15" children="4,9,14"' +
+      ' content="16,17" parent="18">' +
+      '<mfenced open="|" close="|">' +
+      '<mtable>' +
+      '<mtr type="row" role="matrix" id="4" children="1,3" parent="15">' +
+      '<mtd type="cell" role="matrix" id="1" children="0" parent="4">' +
+      '<mn type="number" role="integer" id="0" parent="1">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="matrix" id="3" children="2" parent="4">' +
+      '<mn type="number" role="integer" id="2" parent="3">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="matrix" id="9" children="6,8" parent="15">' +
+      '<mtd type="cell" role="matrix" id="6" children="5" parent="9">' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="matrix" id="8" children="7" parent="9">' +
+      '<mn type="number" role="integer" id="7" parent="8">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="matrix" id="14" children="11,13" parent="15">' +
+      '<mtd type="cell" role="matrix" id="11" children="10" parent="14">' +
+      '<mn type="number" role="integer" id="10" parent="11">4</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="matrix" id="13" children="12" parent="14">' +
+      '<mn type="number" role="integer" id="12" parent="13">5</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mfenced>' +
+      '</math>'
+  );
+  // Test needs to be fixed!
+  this.executeMathmlTest(
+      '<mfenced open="|" close="|"><mtable>' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<math type="matrix" role="determinant" id="10" children="4,9"' +
+      ' content="11,12" parent="13">' +
+      '<mfenced open="|" close="|">' +
+      '<mtable>' +
+      '<mtr type="row" role="determinant" id="4" children="1,3" parent="10">' +
+      '<mtd type="cell" role="determinant" id="1" children="0" parent="4">' +
+      '<mn type="number" role="integer" id="0" parent="1">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="determinant" id="3" children="2" parent="4">' +
+      '<mn type="number" role="integer" id="2" parent="3">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="determinant" id="9" children="6,8" parent="10">' +
+      '<mtd type="cell" role="determinant" id="6" children="5" parent="9">' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="determinant" id="8" children="7" parent="9">' +
+      '<mn type="number" role="integer" id="7" parent="8">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mfenced>' +
+      '</math>'
+  );
+  // Test needs to be fixed!
+  this.executeMathmlTest(
+      '<mfenced open="(" close=")"><mtable>' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd>' +
+      '<mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<math type="matrix" role="rowvector" id="9" children="8"' +
+      ' content="10,11" parent="12">' +
+      '<mfenced open="(" close=")">' +
+      '<mtable>' +
+      '<mtr type="row" role="rowvector" id="8" children="1,3,5,7" parent="9">' +
+      '<mtd type="cell" role="rowvector" id="1" children="0" parent="8">' +
+      '<mn type="number" role="integer" id="0" parent="1">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="rowvector" id="3" children="2" parent="8">' +
+      '<mn type="number" role="integer" id="2" parent="3">1</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="rowvector" id="5" children="4" parent="8">' +
+      '<mn type="number" role="integer" id="4" parent="5">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="rowvector" id="7" children="6" parent="8">' +
+      '<mn type="number" role="integer" id="6" parent="7">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mfenced>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Variations of vectors and their roles as determinants or binomial
+ * coefficients.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlVectors = function() {
+  this.executeMathmlTest(
+      '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">V</mi>' +
+      '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>',
+      '<math>' +
+      '<mrow class="MJX-TeXAtom-ORD" type="relseq" role="equality" id="15"' +
+      ' children="0,12" content="1">' +
+      '<mi mathvariant="bold" type="identifier" role="latinletter" id="0"' +
+      ' parent="15">V</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="15"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="vector" role="unknown" id="12" children="5,8,11"' +
+      ' content="2,13" parent="15">' +
+      '<mo type="fence" role="open" id="2" parent="12">[</mo>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="line" role="vector" id="5" children="3" parent="12">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="3" parent="4">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="vector" id="8" children="6" parent="12">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="vector" id="11" children="9" parent="12">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="9" parent="10">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '<mo type="fence" role="close" id="13" parent="12">]</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>',
+      '<math type="vector" role="unknown" id="10" children="3,6,9"' +
+      ' content="0,11" parent="12">' +
+      '<mo type="fence" role="open" id="0" parent="10">[</mo>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="line" role="vector" id="3" children="1" parent="10">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="vector" id="6" children="4" parent="10">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="4" parent="5">2</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="vector" id="9" children="7" parent="10">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="7" parent="8">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '<mo type="fence" role="close" id="11" parent="10">]</mo>' +
+      '</math>'
+  );
+  // Test needs to be fixed!
+  this.executeMathmlTest(
+      '<mfenced open="(" close=")"><mtable>' +
+      '<mtr><mtd><mi>n</mi></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<math type="vector" role="binomial" id="6" children="2,5"' +
+      ' content="7,8" parent="9">' +
+      '<mfenced open="(" close=")">' +
+      '<mtable>' +
+      '<mtr type="line" role="binomial" id="2" children="0" parent="6">' +
+      '<mtd>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">n</mi>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="binomial" id="5" children="3" parent="6">' +
+      '<mtd>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">k</mi>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mfenced>' +
+      '</math>'
+  );
+  // Test needs to be fixed!
+  this.executeMathmlTest(
+      '<mfenced open="|" close="|"><mtable>' +
+      '<mtr><mtd><mi>n</mi></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<math type="vector" role="determinant" id="3" children="2"' +
+      ' content="4,5" parent="6">' +
+      '<mfenced open="|" close="|">' +
+      '<mtable>' +
+      '<mtr type="line" role="determinant" id="2" children="0" parent="3">' +
+      '<mtd>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">n</mi>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mfenced>' +
+      '</math>'
+  );
+  // Test needs to be fixed!
+  this.executeMathmlTest(
+      '<mfenced open="(" close=")"><mtable>' +
+      '<mtr><mtd><mi>n</mi></mtd></mtr>' +
+      '</mtable></mfenced>',
+      '<math type="vector" role="squarematrix" id="3" children="2"' +
+      ' content="4,5" parent="6">' +
+      '<mfenced open="(" close=")">' +
+      '<mtable>' +
+      '<mtr type="line" role="squarematrix" id="2" children="0" parent="3">' +
+      '<mtd>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">n</mi>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+};
+
+
+/**
+ * Variations of tables representing case statements,
+ * multiline equations and regular tables.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlTables = function() {
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
+      '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '<mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>',
+      '<math>' +
+      '<mrow type="cases" role="unknown" id="11" children="5,10" content="0">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="11">{</mo>' +
+      '<mtable>' +
+      '<mtr type="row" role="cases" id="5" children="2,4" parent="11">' +
+      '<mtd type="cell" role="cases" id="2" children="1" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">a</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="4" children="3" parent="5">' +
+      '<mtext type="text" role="unknown" id="3" parent="4">often</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="cases" id="10" children="7,9" parent="11">' +
+      '<mtd type="cell" role="cases" id="7" children="6" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">b</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="9" children="8" parent="10">' +
+      '<mtext type="text" role="unknown" id="8" parent="9">sometimes</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi mathvariant="bold">A</mi><mo>=</mo><mo>{</mo><mtable>' +
+      '<mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr>' +
+      '<mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr>' +
+      '</mtable></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="14" children="0,13"' +
+      ' content="1">' +
+      '<mi mathvariant="bold" type="identifier" role="latinletter" id="0"' +
+      ' parent="14">A</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="14"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="cases" role="unknown" id="13" children="7,12"' +
+      ' content="2" parent="14">' +
+      '<mo type="punctuation" role="openfence" id="2" parent="13">{</mo>' +
+      '<mtable>' +
+      '<mtr type="row" role="cases" id="7" children="4,6" parent="13">' +
+      '<mtd type="cell" role="cases" id="4" children="3" parent="7">' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">a</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="6" children="5" parent="7">' +
+      '<mtext type="text" role="unknown" id="5" parent="6">often</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="cases" id="12" children="9,11" parent="13">' +
+      '<mtd type="cell" role="cases" id="9" children="8" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">b</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="11" children="10" parent="12">' +
+      '<mtext type="text" role="unknown" id="10"' +
+      ' parent="11">sometimes</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
+      '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd>' +
+      '<mtext>sometimes</mtext></mtd></mtr></mtable><mo>.</mo></mrow>',
+      '<math>' +
+      '<mrow type="punctuated" role="endpunct" id="13" children="11,12"' +
+      ' content="12">' +
+      '<mrow type="cases" role="unknown" id="11" children="5,10"' +
+      ' content="0" parent="13">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="11">{</mo>' +
+      '<mtable>' +
+      '<mtr type="row" role="cases" id="5" children="2,4" parent="11">' +
+      '<mtd type="cell" role="cases" id="2" children="1" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">a</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="4" children="3" parent="5">' +
+      '<mtext type="text" role="unknown" id="3" parent="4">often</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="cases" id="10" children="7,9" parent="11">' +
+      '<mtd type="cell" role="cases" id="7" children="6" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">b</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="9" children="8" parent="10">' +
+      '<mtext type="text" role="unknown" id="8" parent="9">sometimes</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="fullstop" id="12" parent="13"' +
+      ' operator="punctuated">.</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd>' +
+      '<mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '<mtd><mtext>sometimes</mtext></mtd></mtr></mtable>' +
+      '<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>',
+      '<math>' +
+      '<mrow type="punctuated" role="sequence" id="17"' +
+      ' children="11,12,13,14,15,16" content="12,14,16">' +
+      '<mrow type="cases" role="unknown" id="11" children="5,10"' +
+      ' content="0" parent="17">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="11">{</mo>' +
+      '<mtable>' +
+      '<mtr type="row" role="cases" id="5" children="2,4" parent="11">' +
+      '<mtd type="cell" role="cases" id="2" children="1" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">a</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="4" children="3" parent="5">' +
+      '<mtext type="text" role="unknown" id="3" parent="4">often</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="cases" id="10" children="7,9" parent="11">' +
+      '<mtd type="cell" role="cases" id="7" children="6" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">b</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="9" children="8" parent="10">' +
+      '<mtext type="text" role="unknown" id="8" parent="9">sometimes</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="comma" id="12" parent="17"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="13" parent="17">b</mi>' +
+      '<mo type="punctuation" role="comma" id="14" parent="17"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="15" parent="17">c</mi>' +
+      '<mo type="punctuation" role="fullstop" id="16" parent="17"' +
+      ' operator="punctuated">.</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi><mo>,</mo>' +
+      '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi><mo>,</mo>' +
+      '<mtext>sometimes</mtext></mtd></mtr></mtable><mo>,</mo><mi>b</mi>' +
+      '<mo>,</mo><mi>c</mi><mo>.</mo></mrow>',
+      '<math>' +
+      '<mrow type="punctuated" role="sequence" id="19"' +
+      ' children="13,14,15,16,17,18" content="14,16,18">' +
+      '<mrow type="cases" role="unknown" id="13" children="6,12"' +
+      ' content="0" parent="19">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="13">{</mo>' +
+      '<mtable>' +
+      '<mtr type="line" role="cases" id="6" children="4" parent="13">' +
+      '<mtd>' +
+      '<mrow type="punctuated" role="sequence" id="4" children="1,2,3"' +
+      ' content="2" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">a</mi>' +
+      '<mo type="punctuation" role="comma" id="2" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mtext type="text" role="unknown" id="3" parent="4">often</mtext>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="cases" id="12" children="10" parent="13">' +
+      '<mtd>' +
+      '<mrow type="punctuated" role="sequence" id="10" children="7,8,9"' +
+      ' content="8" parent="11">' +
+      '<mi type="identifier" role="latinletter" id="7" parent="10">b</mi>' +
+      '<mo type="punctuation" role="comma" id="8" parent="10"' +
+      ' operator="punctuated">,</mo>' +
+      '<mtext type="text" role="unknown" id="9" parent="10">sometimes</mtext>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="comma" id="14" parent="19"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="15" parent="19">b</mi>' +
+      '<mo type="punctuation" role="comma" id="16" parent="19"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="17" parent="19">c</mi>' +
+      '<mo type="punctuation" role="fullstop" id="18" parent="19"' +
+      ' operator="punctuated">.</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '<mn>6</mn></mtd></mtr></mtable>',
+      '<math>' +
+      '<mtable type="multiline" role="unknown" id="21" children="5,11,20">' +
+      '<mtr type="line" role="multiline" id="5" children="3" parent="21">' +
+      '<mtd>' +
+      '<mrow type="relseq" role="equality" id="3" children="0,2"' +
+      ' content="1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">x</mi>' +
+      '<maligngroup/>' +
+      '<mo type="relation" role="equality" id="1" parent="3"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">4</mn>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="multiline" id="11" children="9" parent="21">' +
+      '<mtd>' +
+      '<mrow type="relseq" role="equality" id="9" children="6,8"' +
+      ' content="7" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="6" parent="9">y</mi>' +
+      '<maligngroup/>' +
+      '<mo type="relation" role="equality" id="7" parent="9"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="multiline" id="20" children="18" parent="21">' +
+      '<mtd>' +
+      '<mrow type="relseq" role="equality" id="18" children="17,15"' +
+      ' content="14" parent="19">' +
+      '<mrow type="infixop" role="implicit" id="17" children="12,13"' +
+      ' content="16" parent="18">' +
+      '<mi type="identifier" role="latinletter" id="12" parent="17">x</mi>' +
+      '<mo type="operator" role="multiplication" id="16" parent="17"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="13" parent="17">y</mi>' +
+      '</mrow>' +
+      '<maligngroup/>' +
+      '<mo type="relation" role="equality" id="14" parent="18"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="15" parent="18">6</mn>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
+      '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
+      '<mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
+      '<math>' +
+      '<mtable type="table" role="unknown" id="24" children="6,13,23">' +
+      '<mtr type="row" role="table" id="6" children="1,3,5" parent="24">' +
+      '<mtd type="cell" role="table" id="1" children="0" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="1">x</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="table" id="3" children="2" parent="6">' +
+      '<mo type="relation" role="equality" id="2" parent="3">=</mo>' +
+      '</mtd>' +
+      '<mtd type="cell" role="table" id="5" children="4" parent="6">' +
+      '<mn type="number" role="integer" id="4" parent="5">4</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="table" id="13" children="8,10,12" parent="24">' +
+      '<mtd type="cell" role="table" id="8" children="7" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="7" parent="8">y</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="table" id="10" children="9" parent="13">' +
+      '<mo type="relation" role="equality" id="9" parent="10">=</mo>' +
+      '</mtd>' +
+      '<mtd type="cell" role="table" id="12" children="11" parent="13">' +
+      '<mn type="number" role="integer" id="11" parent="12">2</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="table" id="23" children="18,20,22" parent="24">' +
+      '<mtd type="cell" role="table" id="18" children="17" parent="23">' +
+      '<mrow type="infixop" role="implicit" id="17" children="14,15"' +
+      ' content="16" parent="18">' +
+      '<mi type="identifier" role="latinletter" id="14" parent="17">x</mi>' +
+      '<mo type="operator" role="multiplication" id="16" parent="17"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="15" parent="17">y</mi>' +
+      '</mrow>' +
+      '</mtd>' +
+      '<mtd type="cell" role="table" id="20" children="19" parent="23">' +
+      '<mo type="relation" role="equality" id="19" parent="20">=</mo>' +
+      '</mtd>' +
+      '<mtd type="cell" role="table" id="22" children="21" parent="23">' +
+      '<mn type="number" role="integer" id="21" parent="22">6</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Tabular structures with fences that have are interspersed with ignored
+ * elements, like merror.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
+  this.executeMathmlTest(
+      '<mi>A</mi><mo>=</mo><mrow><mpadded><mo>[</mo></mpadded><mrow>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
+      '<mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow>' +
+      '<merror>nothing</merror><mo>]</mo></mrow>',
+      '<math type="relseq" role="equality" id="16" children="0,13"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="16">A</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="16"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="matrix" role="squarematrix" id="13" children="7,12"' +
+      ' content="2,14" parent="16">' +
+      '<mpadded>' +
+      '<mo type="fence" role="open" id="2" parent="13">[</mo>' +
+      '</mpadded>' +
+      '<mrow>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="row" role="squarematrix" id="7" children="4,6" parent="13">' +
+      '<mtd type="cell" role="squarematrix" id="4" children="3" parent="7">' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="squarematrix" id="6" children="5" parent="7">' +
+      '<mn type="number" role="integer" id="5" parent="6">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="squarematrix" id="12" children="9,11"' +
+      ' parent="13">' +
+      '<mtd type="cell" role="squarematrix" id="9" children="8" parent="12">' +
+      '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
+      '</mtd>' +
+      '<mtd type="cell" role="squarematrix" id="11" children="10"' +
+      ' parent="12">' +
+      '<mn type="number" role="integer" id="10" parent="11">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '<merror>nothing</merror>' +
+      '<mo type="fence" role="close" id="14" parent="13">]</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">V</mi>' +
+      '<mo>=</mo><mpadded><mo>[</mo></mpadded>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror>nothing</merror>' +
+      '<mo>]</mo></mrow>',
+      '<math>' +
+      '<mrow class="MJX-TeXAtom-ORD" type="relseq" role="equality" id="15"' +
+      ' children="0,12" content="1">' +
+      '<mi mathvariant="bold" type="identifier" role="latinletter" id="0"' +
+      ' parent="15">V</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="15"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="vector" role="unknown" id="12" children="5,8,11"' +
+      ' content="2,13" parent="15">' +
+      '<mpadded>' +
+      '<mo type="fence" role="open" id="2" parent="12">[</mo>' +
+      '</mpadded>' +
+      '<mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr type="line" role="vector" id="5" children="3" parent="12">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="3" parent="4">1</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="vector" id="8" children="6" parent="12">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="vector" id="11" children="9" parent="12">' +
+      '<mtd>' +
+      '<mn type="number" role="integer" id="9" parent="10">3</mn>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '<merror>nothing</merror>' +
+      '<mo type="fence" role="close" id="13" parent="12">]</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>f</mi><mo>=</mo><mrow><mpadded><mo>{</mo></mpadded>' +
+      '<merror>nothing</merror><mtable>' +
+      '<mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr>' +
+      '<mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr>' +
+      '</mtable></mrow>',
+      '<math type="relseq" role="equality" id="14" children="0,13"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="14">f</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="14"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="cases" role="unknown" id="13" children="7,12"' +
+      ' content="2" parent="14">' +
+      '<mpadded>' +
+      '<mo type="punctuation" role="openfence" id="2" parent="13">{</mo>' +
+      '</mpadded>' +
+      '<merror>nothing</merror>' +
+      '<mtable>' +
+      '<mtr type="row" role="cases" id="7" children="4,6" parent="13">' +
+      '<mtd type="cell" role="cases" id="4" children="3" parent="7">' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">a</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="6" children="5" parent="7">' +
+      '<mtext type="text" role="unknown" id="5" parent="6">often</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="row" role="cases" id="12" children="9,11" parent="13">' +
+      '<mtd type="cell" role="cases" id="9" children="8" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">b</mi>' +
+      '</mtd>' +
+      '<mtd type="cell" role="cases" id="11" children="10" parent="12">' +
+      '<mtext type="text" role="unknown" id="10"' +
+      ' parent="11">sometimes</mtext>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>f</mi><mo>=</mo><mpadded><mo>{</mo></mpadded>' +
+      '<merror>nothing</merror>' +
+      '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '<mn>6</mn></mtd></mtr></mtable>',
+      '<math type="relseq" role="equality" id="25" children="0,24"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="25">f</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="25"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="cases" role="unknown" id="24" children="8,14,23"' +
+      ' content="2" parent="25">' +
+      '<mpadded>' +
+      '<mo type="punctuation" role="openfence" id="2" parent="24">{</mo>' +
+      '</mpadded>' +
+      '<merror>nothing</merror>' +
+      '<mtable>' +
+      '<mtr type="line" role="cases" id="8" children="6" parent="24">' +
+      '<mtd>' +
+      '<mrow type="relseq" role="equality" id="6" children="3,5"' +
+      ' content="4" parent="7">' +
+      '<mi type="identifier" role="latinletter" id="3" parent="6">x</mi>' +
+      '<maligngroup/>' +
+      '<mo type="relation" role="equality" id="4" parent="6"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="5" parent="6">4</mn>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="cases" id="14" children="12" parent="24">' +
+      '<mtd>' +
+      '<mrow type="relseq" role="equality" id="12" children="9,11"' +
+      ' content="10" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="9" parent="12">y</mi>' +
+      '<maligngroup/>' +
+      '<mo type="relation" role="equality" id="10" parent="12"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="11" parent="12">2</mn>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '<mtr type="line" role="cases" id="23" children="21" parent="24">' +
+      '<mtd>' +
+      '<mrow type="relseq" role="equality" id="21" children="20,18"' +
+      ' content="17" parent="22">' +
+      '<mrow type="infixop" role="implicit" id="20" children="15,16"' +
+      ' content="19" parent="21">' +
+      '<mi type="identifier" role="latinletter" id="15" parent="20">x</mi>' +
+      '<mo type="operator" role="multiplication" id="19" parent="20"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="16" parent="20">y</mi>' +
+      '</mrow>' +
+      '<maligngroup/>' +
+      '<mo type="relation" role="equality" id="17" parent="21"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="18" parent="21">6</mn>' +
+      '</mrow>' +
+      '</mtd>' +
+      '</mtr>' +
+      '</mtable>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
 
 // Missing tests here!
 
