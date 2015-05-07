@@ -135,26 +135,6 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
 
 
 /**
- * Adds ids to the MathML nodes corresponding to the leafs of a semantic tree.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree.
- * @private
- */
-sre.SemanticMathml.addLeafId_ = function(semantic) {
-  if (semantic.mathml.length === 1) {
-    semantic.mathml[0].setAttribute(sre.SemanticMathml.Attribute.ID,
-                                    semantic.id);
-    return;
-  }
-  for (var i = 0, content; content = semantic.contentNodes[i]; i++) {
-    sre.SemanticMathml.addLeafId_(content);
-  }
-  for (var j = 0, child; child = semantic.childNodes[j]; j++) {
-    sre.SemanticMathml.addLeafId_(child);
-  }
-};
-
-
-/**
  * Walks the semantic tree and reassembles a new semantically enriched MathML
  * expression.
  *
