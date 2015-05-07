@@ -159,43 +159,19 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.cloneContentNode_));
   var newChildren = semantic.childNodes.map(
-      /**@type{Function}*/(function(x) {
-        return sre.SemanticMathml.walkTree_(x);}));
+      /**@type{Function}*/(sre.SemanticMathml.walkTree_));
   var childrenList = sre.SemanticMathml.combineContentChildren_(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
   if (newNode === null) {
     sre.Debugger.getInstance().output('Walktree Case 1');
-    // In case we do not have an original MathML element, we need to find the
-    // MathML node where to attach the semantically enriched children. We do
-    // this by computing their LCA.
-    //
-    var newNodeInfo = sre.SemanticMathml.mathmlLca_(childrenList);
-    newNode = newNodeInfo.node;
-    if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
-      sre.Debugger.getInstance().output('Walktree Case 1.1');
-      // If we have an LCA containing only some children, then we replace those
-      // children only and grouping them in a new mrow.
-      //
-      newNode = sre.SystemExternal.document.createElement('mrow');
-      if (childrenList[0]) {
-        sre.Debugger.getInstance().output('Walktree Case 1.1.1');
-        // If childrenList is not empty we get the children from the old parent
-        // node of the children, and put them into the new mrow.
-        //
-        var node = sre.SemanticMathml.attachedElement_(childrenList);
-        var oldChildren = sre.SemanticMathml.childrenSubset_(
-            /**@type{!Element}*/(node.parentNode), childrenList);
-        sre.DomUtil.replaceNode(node, newNode);
-        oldChildren.forEach(function(x) {newNode.appendChild(x);});
-      }
-    }
+    newNode = sre.SemanticMathml.introduceNewLayer_(childrenList);
   } else {
     var attached = sre.SemanticMathml.attachedElement_(childrenList);
     sre.Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       sre.Debugger.getInstance().output('Walktree Case 2.1');
-      newNode = attached.parentNode;
+      newNode = /**@type{!Element}*/(attached.parentNode);
     } else {
       sre.Debugger.getInstance().output('Walktree Case 2.2');
       newNode = sre.SemanticMathml.getInnerNode_(/**@type{!Element}*/(newNode));
@@ -204,6 +180,47 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   sre.SemanticMathml.mergeChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   return sre.SemanticMathml.ascendNewNode_(newNode);
+};
+
+
+/**
+ * Sorts a list of children into the MathML tree. It introduces a new layer into
+ * the MathML tree, if necessary, in case the semantic node has not been
+ * generated from an original MathML element or the list of children is empty.
+ *
+ * In case we do not have an original MathML element, we need to find the
+ * MathML node where to attach the semantically enriched children. We do
+ * this by computing their LCA.
+ *
+ * If the LCA contains only (a subset) of the given children, it is returned.
+ *
+ * If children is not empty we return a new empty mrow element.
+ *
+ * If we have an LCA containing only some children, then we group the children
+ * together with any interspersed ignored nodes into new mrow and attach this in
+ * place of the original children.
+ *
+ * @param {!Array.<Element>} children The list of children of the MathML
+ *     element.
+ * @return {!Element} The node containing the children.
+ * @private
+ */
+sre.SemanticMathml.introduceNewLayer_ = function(children) {
+  var newNodeInfo = sre.SemanticMathml.mathmlLca_(children);
+  var newNode = newNodeInfo.node;
+  if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
+    sre.Debugger.getInstance().output('Walktree Case 1.1');
+    newNode = sre.SystemExternal.document.createElement('mrow');
+    if (children[0]) {
+      sre.Debugger.getInstance().output('Walktree Case 1.1.1');
+      var node = sre.SemanticMathml.attachedElement_(children);
+      var oldChildren = sre.SemanticMathml.childrenSubset_(
+          /**@type{!Element}*/(node.parentNode), children);
+      sre.DomUtil.replaceNode(node, newNode);
+      oldChildren.forEach(function(x) {newNode.appendChild(x);});
+    }
+  }
+  return /**@type{!Element}*/(newNode);
 };
 
 
@@ -490,25 +507,14 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
       semantic.type === sre.SemanticAttr.Type.CASES) {
     var lfence = sre.SemanticMathml.walkTree_(
         /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
-    semantic.childNodes.map(
-        /**@type{Function}*/(function(x) {
-          return sre.SemanticMathml.walkTree_(x);}));
+    semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
     var newChildren = [lfence, semantic.mathmlTree];
     if (semantic.contentNodes[1]) {
       var rfence = sre.SemanticMathml.walkTree_(
           /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1]));
       newChildren.push(rfence);
     }
-    var newNodeInfo = sre.SemanticMathml.mathmlLca_(newChildren);
-    var newNode = newNodeInfo.node;
-    if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
-      newNode = sre.SystemExternal.document.createElement('mrow');
-      var node = sre.SemanticMathml.attachedElement_(newChildren);
-      var oldChildren = sre.SemanticMathml.childrenSubset_(
-          /**@type{!Element}*/(node.parentNode), newChildren);
-      sre.DomUtil.replaceNode(node, newNode);
-      oldChildren.forEach(function(x) {newNode.appendChild(x);});
-    }
+    var newNode = sre.SemanticMathml.introduceNewLayer_(newChildren);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
   }
