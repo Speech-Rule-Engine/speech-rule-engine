@@ -5324,94 +5324,62 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
       '</msup>' +
       '</math>'
   );
-  // Test needs to be fixed!
   this.executeMathmlTest(
       '<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi>' +
       '<mn>2</mn></msup>',
-      '<math type="infixop" role="addition" id="13" children="12,9"' +
+      '<math type="infixop" role="addition" id="7" children="2,6"' +
       ' content="3">' +
-      '<mrow type="appl" role="prefix function" id="12" children="2,10"' +
-      ' content="11,0" parent="13">' +
       '<msup type="superscript" role="prefix function" id="2"' +
-      ' children="0,1" parent="12">' +
-      '<mi type="function" role="prefix function" id="0" parent="12"' +
-      ' operator="appl">sin</mi>' +
+      ' children="0,1" parent="7">' +
+      '<mi type="function" role="prefix function" id="0" parent="2">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</msup>' +
-      '<mo type="punctuation" role="application" id="11" parent="12"' +
-      ' added="true" operator="appl">⁡</mo>' +
-      '<mrow type="empty" role="unknown" id="10" parent="12"/>' +
-      '</mrow>' +
-      '<mo type="operator" role="addition" id="3" parent="13"' +
+      '<mo type="operator" role="addition" id="3" parent="7"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="appl" role="prefix function" id="9" children="6,7"' +
-      ' content="8,4" parent="13">' +
       '<msup type="superscript" role="prefix function" id="6"' +
-      ' children="4,5" parent="9">' +
-      '<mi type="function" role="prefix function" id="4" parent="9"' +
-      ' operator="appl">cos</mi>' +
+      ' children="4,5" parent="7">' +
+      '<mi type="function" role="prefix function" id="4" parent="6">cos</mi>' +
       '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
       '</msup>' +
-      '<mo type="punctuation" role="application" id="8" parent="9"' +
-      ' added="true" operator="appl">⁡</mo>' +
-      '<mrow type="empty" role="unknown" id="7" parent="9"/>' +
-      '</mrow>' +
       '</math>'
   );
-  // Test needs to be fixed!
   this.executeMathmlTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo>' +
       '<msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>',
       '<math>' +
-      '<mrow type="relseq" role="equality" id="16" children="15,8"' +
+      '<mrow type="relseq" role="equality" id="10" children="9,8"' +
       ' content="7">' +
-      '<mrow type="infixop" role="addition" id="15" children="14,11"' +
-      ' content="3" parent="16">' +
-      '<mrow type="appl" role="prefix function" id="14" children="2,12"' +
-      ' content="13,0" parent="15">' +
+      '<mrow type="infixop" role="addition" id="9" children="2,6"' +
+      ' content="3" parent="10">' +
       '<msup type="superscript" role="prefix function" id="2"' +
-      ' children="0,1" parent="14">' +
-      '<mi type="function" role="prefix function" id="0" parent="14"' +
-      ' operator="appl">sin</mi>' +
+      ' children="0,1" parent="9">' +
+      '<mi type="function" role="prefix function" id="0" parent="2">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</msup>' +
-      '<mo type="punctuation" role="application" id="13" parent="14"' +
-      ' added="true" operator="appl">⁡</mo>' +
-      '<mrow type="empty" role="unknown" id="12" parent="14"/>' +
-      '</mrow>' +
-      '<mo type="operator" role="addition" id="3" parent="15"' +
+      '<mo type="operator" role="addition" id="3" parent="9"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="appl" role="prefix function" id="11" children="6,9"' +
-      ' content="10,4" parent="15">' +
       '<msup type="superscript" role="prefix function" id="6"' +
-      ' children="4,5" parent="11">' +
-      '<mi type="function" role="prefix function" id="4" parent="11"' +
-      ' operator="appl">cos</mi>' +
+      ' children="4,5" parent="9">' +
+      '<mi type="function" role="prefix function" id="4" parent="6">cos</mi>' +
       '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
       '</msup>' +
-      '<mo type="punctuation" role="application" id="10" parent="11"' +
-      ' added="true" operator="appl">⁡</mo>' +
-      '<mrow type="empty" role="unknown" id="9" parent="11"/>' +
       '</mrow>' +
-      '</mrow>' +
-      '<mo type="relation" role="equality" id="7" parent="16"' +
+      '<mo type="relation" role="equality" id="7" parent="10"' +
       ' operator="relseq,=">=</mo>' +
-      '<mn type="number" role="integer" id="8" parent="16">1</mn>' +
+      '<mn type="number" role="integer" id="8" parent="10">1</mn>' +
       '</mrow>' +
       '</math>'
   );
-  // Test needs to be fixed!
   this.executeMathmlTest(
       '<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn>' +
       '<mi>csc</mi></mfrac></mrow>',
       '<math>' +
-      '<mrow type="relseq" role="equality" id="8" children="7,4" content="1">' +
-      '<mi type="appl" role="prefix function" id="7" children="0,5"' +
-      ' content="6,0" parent="8">sin</mi>' +
-      '<mo type="relation" role="equality" id="1" parent="8"' +
+      '<mrow type="relseq" role="equality" id="5" children="0,4" content="1">' +
+      '<mi type="function" role="prefix function" id="0" parent="5">sin</mi>' +
+      '<mo type="relation" role="equality" id="1" parent="5"' +
       ' operator="relseq,=">=</mo>' +
       '<mfrac type="fraction" role="division" id="4" children="2,3"' +
-      ' parent="8">' +
+      ' parent="5">' +
       '<mn type="number" role="integer" id="2" parent="4">1</mn>' +
       '<mi type="function" role="prefix function" id="3" parent="4">csc</mi>' +
       '</mfrac>' +
