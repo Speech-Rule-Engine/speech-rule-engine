@@ -6357,6 +6357,610 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
 };
 
 
+/**
+ * Limit functions.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlLimitFunctions = function() {
+  this.executeMathmlTest(
+      '<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo>' +
+      '<mi>\u221E</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="limit function" id="11" children="5,9"' +
+      ' content="10,0">' +
+      '<munder type="limlower" role="limit function" id="5" children="0,4"' +
+      ' parent="11">' +
+      '<mi type="function" role="limit function" id="0" parent="11"' +
+      ' operator="appl">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="relation" role="arrow" id="2" parent="4"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="3" parent="4">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="10" parent="11"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="9" children="7"' +
+      ' content="6,8" parent="11">' +
+      '<mo type="fence" role="open" id="6" parent="9"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="9">x</mi>' +
+      '<mo type="fence" role="close" id="8" parent="9"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi>' +
+      '<mo>\u2192</mo><mi>\u221E</mi></mrow></munder><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo><mo>+</mo><mi>b</mi></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="16" children="0,15,12"' +
+      ' content="1,11">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="16">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="16"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="limit function" id="15" children="7,13"' +
+      ' content="14,2" parent="16">' +
+      '<munder type="limlower" role="limit function" id="7" children="2,6"' +
+      ' parent="15">' +
+      '<mi type="function" role="limit function" id="2" parent="15"' +
+      ' operator="appl">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="6" children="3,5" content="4"' +
+      ' parent="7">' +
+      '<mi type="identifier" role="latinletter" id="3" parent="6">x</mi>' +
+      '<mo type="relation" role="arrow" id="4" parent="6"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="5" parent="6">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="14" parent="15"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="13" children="9"' +
+      ' content="8,10" parent="15">' +
+      '<mo type="fence" role="open" id="8" parent="13"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="13">x</mi>' +
+      '<mo type="fence" role="close" id="10" parent="13"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="11" parent="16"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="12" parent="16">b</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><msup><munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo>' +
+      '<mi>\u221E</mi></mrow></munder><mo>+</mo></msup><mo>(</mo><mi>x</mi>' +
+      '<mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="limit function" id="13" children="7,11"' +
+      ' content="12,0">' +
+      '<msup type="limupper" role="limit function" id="7" children="5,6"' +
+      ' parent="13">' +
+      '<munder type="limlower" role="limit function" id="5" children="0,4"' +
+      ' parent="7">' +
+      '<mi type="function" role="limit function" id="0" parent="13"' +
+      ' operator="appl">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="relation" role="arrow" id="2" parent="4"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="3" parent="4">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="operator" role="addition" id="6" parent="7">+</mo>' +
+      '</msup>' +
+      '<mo type="punctuation" role="application" id="12" parent="13"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="11" children="9"' +
+      ' content="8,10" parent="13">' +
+      '<mo type="fence" role="open" id="8" parent="11"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="9" parent="11">x</mi>' +
+      '<mo type="fence" role="close" id="10" parent="11"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><munderover><mi>lim</mi><mo>\u2015</mo><mrow><mi>x</mi>' +
+      '<mo>\u2192</mo><mi>\u221E</mi></mrow></munderover><mo>(</mo>' +
+      '<mi>x</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="limit function" id="12" children="6,10"' +
+      ' content="11,0">' +
+      '<munderover type="limboth" role="limit function" id="6"' +
+      ' children="0,1,5" parent="12">' +
+      '<mi type="function" role="limit function" id="0" parent="12"' +
+      ' operator="appl">lim</mi>' +
+      '<mo type="punctuation" role="dash" id="1" parent="6">―</mo>' +
+      '<mrow type="relseq" role="arrow" id="5" children="2,4" content="3"' +
+      ' parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="5">x</mi>' +
+      '<mo type="relation" role="arrow" id="3" parent="5"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="4" parent="5">∞</mi>' +
+      '</mrow>' +
+      '</munderover>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="10" children="8"' +
+      ' content="7,9" parent="12">' +
+      '<mo type="fence" role="open" id="7" parent="10"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="10">x</mi>' +
+      '<mo type="fence" role="close" id="9" parent="10"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><munder><mi>liminf</mi><mrow><mi>x</mi><mo>\u2192</mo>' +
+      '<mi>\u221E</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo>' +
+      '<mo>+</mo><munder><mi>limsup</mi><mrow><mi>y</mi><mo>\u2192</mo>' +
+      '<mi>\u221E</mi></mrow></munder><mo>(</mo><mi>y</mi><mo>)</mo></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="25" children="24,22"' +
+      ' content="9">' +
+      '<mrow type="appl" role="limit function" id="24" children="5,19"' +
+      ' content="23,0" parent="25">' +
+      '<munder type="limlower" role="limit function" id="5" children="0,4"' +
+      ' parent="24">' +
+      '<mi type="function" role="limit function" id="0" parent="24"' +
+      ' operator="appl">liminf</mi>' +
+      '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="relation" role="arrow" id="2" parent="4"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="3" parent="4">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="23" parent="24"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="19" children="7"' +
+      ' content="6,8" parent="24">' +
+      '<mo type="fence" role="open" id="6" parent="19"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="19">x</mi>' +
+      '<mo type="fence" role="close" id="8" parent="19"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="9" parent="25"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="limit function" id="22" children="15,20"' +
+      ' content="21,10" parent="25">' +
+      '<munder type="limlower" role="limit function" id="15"' +
+      ' children="10,14" parent="22">' +
+      '<mi type="function" role="limit function" id="10" parent="22"' +
+      ' operator="appl">limsup</mi>' +
+      '<mrow type="relseq" role="arrow" id="14" children="11,13"' +
+      ' content="12" parent="15">' +
+      '<mi type="identifier" role="latinletter" id="11" parent="14">y</mi>' +
+      '<mo type="relation" role="arrow" id="12" parent="14"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="13" parent="14">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="21" parent="22"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="fenced" role="leftright" id="20" children="17"' +
+      ' content="16,18" parent="22">' +
+      '<mo type="fence" role="open" id="16" parent="20"' +
+      ' operator="fenced">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="17" parent="20">y</mi>' +
+      '<mo type="fence" role="close" id="18" parent="20"' +
+      ' operator="fenced">)</mo>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi>' +
+      '<mo>\u2192</mo><mi>\u221E</mi></mrow></munder><mi>x</mi><mo>+</mo>' +
+      '<mi>b</mi></mrow>',
+      '<math>' +
+      '<mrow type="infixop" role="addition" id="13" children="0,12,10"' +
+      ' content="1,9">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="13">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="13"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="appl" role="limit function" id="12" children="7,8"' +
+      ' content="11,2" parent="13">' +
+      '<munder type="limlower" role="limit function" id="7" children="2,6"' +
+      ' parent="12">' +
+      '<mi type="function" role="limit function" id="2" parent="12"' +
+      ' operator="appl">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="6" children="3,5" content="4"' +
+      ' parent="7">' +
+      '<mi type="identifier" role="latinletter" id="3" parent="6">x</mi>' +
+      '<mo type="relation" role="arrow" id="4" parent="6"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="5" parent="6">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="11" parent="12"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="12">x</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="9" parent="13"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="10" parent="13">b</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo>' +
+      '<mi>\u221E</mi></mrow></munder><munder><mi>lim</mi><mrow><mi>y</mi>' +
+      '<mo>\u2192</mo><mi>\u221E</mi></mrow></munder><mi>x</mi>' +
+      '<mi>y</mi></mrow>',
+      '<math>' +
+      '<mrow type="appl" role="limit function" id="19" children="5,17"' +
+      ' content="18,0">' +
+      '<munder type="limlower" role="limit function" id="5" children="0,4"' +
+      ' parent="19">' +
+      '<mi type="function" role="limit function" id="0" parent="19"' +
+      ' operator="appl">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="relation" role="arrow" id="2" parent="4"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="3" parent="4">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="18" parent="19"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="appl" role="limit function" id="17" children="11,15"' +
+      ' content="16,6" parent="19">' +
+      '<munder type="limlower" role="limit function" id="11"' +
+      ' children="6,10" parent="17">' +
+      '<mi type="function" role="limit function" id="6" parent="17"' +
+      ' operator="appl">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="10" children="7,9" content="8"' +
+      ' parent="11">' +
+      '<mi type="identifier" role="latinletter" id="7" parent="10">y</mi>' +
+      '<mo type="relation" role="arrow" id="8" parent="10"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="9" parent="10">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '<mo type="punctuation" role="application" id="16" parent="17"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mrow type="infixop" role="implicit" id="15" children="12,13"' +
+      ' content="14" parent="17">' +
+      '<mi type="identifier" role="latinletter" id="12" parent="15">x</mi>' +
+      '<mo type="operator" role="multiplication" id="14" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="13" parent="15">y</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Limit functions without arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlLimitFunctionsNoArgs = function() {
+  this.executeMathmlTest(
+      '<mi>liminf</mi>',
+      '<math>' +
+      '<mi type="function" role="limit function" id="0">liminf</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo><mi>\u221E</mi>' +
+      '</mrow></munder>',
+      '<math>' +
+      '<munder type="limlower" role="limit function" id="5" children="0,4">' +
+      '<mi type="function" role="limit function" id="0" parent="5">lim</mi>' +
+      '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">x</mi>' +
+      '<mo type="relation" role="arrow" id="2" parent="4"' +
+      ' operator="relseq,→">→</mo>' +
+      '<mi type="identifier" role="unknown" id="3" parent="4">∞</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mi>liminf</mi><mo>+</mo><mi>limsup</mi><mo>=</mo><mi>lim</mi>',
+      '<math type="relseq" role="equality" id="6" children="5,4" content="3">' +
+      '<mrow type="infixop" role="addition" id="5" children="0,2"' +
+      ' content="1" parent="6">' +
+      '<mi type="function" role="limit function" id="0"' +
+      ' parent="5">liminf</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="5"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="function" role="limit function" id="2"' +
+      ' parent="5">limsup</mi>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="3" parent="6"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mi type="function" role="limit function" id="4" parent="6">lim</mi>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Variations of big operators.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlBigOps = function() {
+  this.executeMathmlTest(
+      '<mrow><munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><msup><mi>n</mi><mn>2</mn>' +
+      '</msup></mrow>',
+      '<math>' +
+      '<mrow type="bigop" role="sum" id="10" children="6,9" content="0">' +
+      '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
+      ' parent="10">' +
+      '<mi type="largeop" role="sum" id="0" parent="10"' +
+      ' operator="bigop">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="4" children="1,3"' +
+      ' content="2" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
+      '<mo type="relation" role="equality" id="2" parent="4"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="5" parent="6">∞</mi>' +
+      '</munderover>' +
+      '<msup type="superscript" role="latinletter" id="9" children="7,8"' +
+      ' parent="10">' +
+      '<mi type="identifier" role="latinletter" id="7" parent="9">n</mi>' +
+      '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
+      '</msup>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><munderover><mi>\u2211</mi><mrow>' +
+      '<mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>\u221E</mi></munderover>' +
+      '<msup><mi>n</mi><mi>m</mi></msup></mrow>',
+      '<math>' +
+      '<mrow type="bigop" role="sum" id="18" children="6,17" content="0">' +
+      '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
+      ' parent="18">' +
+      '<mi type="largeop" role="sum" id="0" parent="18"' +
+      ' operator="bigop">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="4" children="1,3"' +
+      ' content="2" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
+      '<mo type="relation" role="equality" id="2" parent="4"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="5" parent="6">∞</mi>' +
+      '</munderover>' +
+      '<mrow type="bigop" role="sum" id="17" children="13,16" content="7"' +
+      ' parent="18">' +
+      '<munderover type="limboth" role="sum" id="13" children="7,11,12"' +
+      ' parent="17">' +
+      '<mi type="largeop" role="sum" id="7" parent="17"' +
+      ' operator="bigop">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="11" children="8,10"' +
+      ' content="9" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="8" parent="11">m</mi>' +
+      '<mo type="relation" role="equality" id="9" parent="11"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="10" parent="11">0</mn>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="12" parent="13">∞</mi>' +
+      '</munderover>' +
+      '<msup type="superscript" role="latinletter" id="16" children="14,15"' +
+      ' parent="17">' +
+      '<mi type="identifier" role="latinletter" id="14" parent="16">n</mi>' +
+      '<mi type="identifier" role="latinletter" id="15" parent="16">m</mi>' +
+      '</msup>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><munder><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo>' +
+      '<mn>0</mn></mrow></munder><msup><mi>n</mi><mn>2</mn></msup></mrow>',
+      '<math>' +
+      '<mrow type="bigop" role="sum" id="9" children="5,8" content="0">' +
+      '<munder type="limlower" role="sum" id="5" children="0,4" parent="9">' +
+      '<mi type="largeop" role="sum" id="0" parent="9"' +
+      ' operator="bigop">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="4" children="1,3"' +
+      ' content="2" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
+      '<mo type="relation" role="equality" id="2" parent="4"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mrow>' +
+      '</munder>' +
+      '<msup type="superscript" role="latinletter" id="8" children="6,7"' +
+      ' parent="9">' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">n</mi>' +
+      '<mn type="number" role="integer" id="7" parent="8">2</mn>' +
+      '</msup>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Big operators without Arguments.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
+  this.brief = true;
+  this.executeMathmlTest(
+      '<mi>\u2211</mi>',
+      '<math>' +
+      '<mi type="largeop" role="sum" id="0">∑</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<munder><mi>\u220F</mi><mi>n</mi></munder>',
+      '<math>' +
+      '<munder type="limlower" role="sum" id="2" children="0,1">' +
+      '<mi type="largeop" role="sum" id="0" parent="2">∏</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">n</mi>' +
+      '</munder>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover>',
+      '<math>' +
+      '<munderover type="limboth" role="sum" id="6" children="0,4,5">' +
+      '<mi type="largeop" role="sum" id="0" parent="6">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="4" children="1,3"' +
+      ' content="2" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
+      '<mo type="relation" role="equality" id="2" parent="4"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="5" parent="6">∞</mi>' +
+      '</munderover>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>\u2211</mi><mo>+</mo><mi>\u2211</mi><mo>=</mo><mi>\u2211</mi>',
+      '<math type="relseq" role="equality" id="6" children="5,4" content="3">' +
+      '<mrow type="infixop" role="addition" id="5" children="0,2"' +
+      ' content="1" parent="6">' +
+      '<mi type="largeop" role="sum" id="0" parent="5">∑</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="5"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="largeop" role="sum" id="2" parent="5">∑</mi>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="3" parent="6"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mi type="largeop" role="sum" id="4" parent="6">∑</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<munder><mi>\u220F</mi><mi>n</mi></munder><mo>+</mo>' +
+      '<munder><mi>\u220F</mi><mi>m</mi></munder><mo>=</mo>' +
+      '<munder><mi>\u220F</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
+      '</mrow></munder>',
+      '<math type="relseq" role="equality" id="15" children="14,13"' +
+      ' content="7">' +
+      '<mrow type="infixop" role="addition" id="14" children="2,6"' +
+      ' content="3" parent="15">' +
+      '<munder type="limlower" role="sum" id="2" children="0,1" parent="14">' +
+      '<mi type="largeop" role="sum" id="0" parent="2">∏</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">n</mi>' +
+      '</munder>' +
+      '<mo type="operator" role="addition" id="3" parent="14"' +
+      ' operator="infixop,+">+</mo>' +
+      '<munder type="limlower" role="sum" id="6" children="4,5" parent="14">' +
+      '<mi type="largeop" role="sum" id="4" parent="6">∏</mi>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">m</mi>' +
+      '</munder>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="7" parent="15"' +
+      ' operator="relseq,=">=</mo>' +
+      '<munder type="limlower" role="sum" id="13" children="8,12"' +
+      ' parent="15">' +
+      '<mi type="largeop" role="sum" id="8" parent="13">∏</mi>' +
+      '<mrow type="punctuated" role="sequence" id="12" children="9,10,11"' +
+      ' content="10" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="9" parent="12">n</mi>' +
+      '<mo type="punctuation" role="comma" id="10" parent="12"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="11" parent="12">m</mi>' +
+      '</mrow>' +
+      '</munder>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><mo>+</mo>' +
+      '<munderover><mi>\u2211</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><mo>=</mo>' +
+      '<munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
+      '<mo>=</mo><mn>0</mn></mrow><mi>\u221E</mi></munderover></mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="equality" id="27" children="26,25"' +
+      ' content="15">' +
+      '<mrow type="infixop" role="addition" id="26" children="6,14"' +
+      ' content="7" parent="27">' +
+      '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
+      ' parent="26">' +
+      '<mi type="largeop" role="sum" id="0" parent="6">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="4" children="1,3"' +
+      ' content="2" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
+      '<mo type="relation" role="equality" id="2" parent="4"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="3" parent="4">0</mn>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="5" parent="6">∞</mi>' +
+      '</munderover>' +
+      '<mo type="operator" role="addition" id="7" parent="26"' +
+      ' operator="infixop,+">+</mo>' +
+      '<munderover type="limboth" role="sum" id="14" children="8,12,13"' +
+      ' parent="26">' +
+      '<mi type="largeop" role="sum" id="8" parent="14">∑</mi>' +
+      '<mrow type="relseq" role="equality" id="12" children="9,11"' +
+      ' content="10" parent="14">' +
+      '<mi type="identifier" role="latinletter" id="9" parent="12">m</mi>' +
+      '<mo type="relation" role="equality" id="10" parent="12"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="11" parent="12">0</mn>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="13" parent="14">∞</mi>' +
+      '</munderover>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="15" parent="27"' +
+      ' operator="relseq,=">=</mo>' +
+      '<munderover type="limboth" role="sum" id="25" children="16,23,24"' +
+      ' parent="27">' +
+      '<mi type="largeop" role="sum" id="16" parent="25">∑</mi>' +
+      '<mrow type="punctuated" role="sequence" id="23" children="17,18,22"' +
+      ' content="18" parent="25">' +
+      '<mi type="identifier" role="latinletter" id="17" parent="23">n</mi>' +
+      '<mo type="punctuation" role="comma" id="18" parent="23"' +
+      ' operator="punctuated">,</mo>' +
+      '<mrow type="relseq" role="equality" id="22" children="19,21"' +
+      ' content="20" parent="23">' +
+      '<mi type="identifier" role="latinletter" id="19" parent="22">m</mi>' +
+      '<mo type="relation" role="equality" id="20" parent="22"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mn type="number" role="integer" id="21" parent="22">0</mn>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="24" parent="25">∞</mi>' +
+      '</munderover>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
 // Missing tests here!
 
 

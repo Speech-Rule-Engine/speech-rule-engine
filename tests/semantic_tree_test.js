@@ -6919,7 +6919,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
 
 
 /**
- * Variations of integrals.
+ * Big operators without Arguments.
  */
 sre.SemanticTreeTest.prototype.testStreeBigOpsNoArgs = function() {
   this.brief = true;
