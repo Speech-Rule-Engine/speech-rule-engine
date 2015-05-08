@@ -1766,6 +1766,10 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
     case 'bigop':
       var partition = sre.SemanticTree.sliceNodes_(
           rest, sre.SemanticTree.prefixFunctionBoundary_);
+      if (!partition.head.length) {
+        rest.unshift(func);
+        return rest;
+      }
       var arg = this.processRow_(partition.head);
       if (heuristic == 'prefix') {
         funcNode = this.makeFunctionNode_(func, arg);
