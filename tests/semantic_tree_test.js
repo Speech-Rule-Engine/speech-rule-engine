@@ -5401,36 +5401,18 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<operator>+</operator>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '<function>sin</function>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>sin</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '<function>cos</function>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>cos</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</infixop>');
 
@@ -5447,36 +5429,18 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<operator>+</operator>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '<function>sin</function>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>sin</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '<function>cos</function>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>cos</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</infixop>' +
       '<number>1</number>' +
@@ -5491,16 +5455,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<relation>=</relation>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
       '<function>sin</function>' +
-      '</content>' +
-      '<children>' +
-      '<function>sin</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '<fraction>' +
       '<children>' +
       '<number>1</number>' +
@@ -6794,11 +6749,17 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '</appl>' +
       '</children>' +
       '</appl>');
+};
 
+
+/**
+ * Limit functions without arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeLimitFunctionsNoArgs = function() {
+  this.brief = true;
   this.executeTreeTest(
       '<mi>liminf</mi>',
       '<function>liminf</function>');
-
   this.executeTreeTest(
       '<munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo><mi>\u221E</mi>' +
       '</mrow></munder>',
@@ -6816,7 +6777,6 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '</relseq>' +
       '</children>' +
       '</limlower>');
-
   this.executeTreeTest(
       '<mi>liminf</mi><mo>+</mo><mi>limsup</mi><mo>=</mo><mi>lim</mi>',
       '<relseq>=' +
@@ -6829,38 +6789,11 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<operator>+</operator>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
       '<function>liminf</function>' +
-      '</content>' +
-      '<children>' +
-      '<function>liminf</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
       '<function>limsup</function>' +
-      '</content>' +
-      '<children>' +
-      '<function>limsup</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</infixop>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
       '<function>lim</function>' +
-      '</content>' +
-      '<children>' +
-      '<function>lim</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</relseq>');
 };
@@ -6982,6 +6915,189 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '</superscript>' +
       '</children>' +
       '</bigop>');
+};
+
+
+/**
+ * Variations of integrals.
+ */
+sre.SemanticTreeTest.prototype.testStreeBigOpsNoArgs = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<mi>\u2211</mi>',
+      '<largeop>\u2211</largeop>'
+  );
+  this.executeTreeTest(
+      '<munder><mi>\u220F</mi><mi>n</mi></munder>',
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<identifier>n</identifier>' +
+      '</children>' +
+      '</limlower>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover>',
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>'
+  );
+  this.executeTreeTest(
+      '<mi>\u2211</mi><mo>+</mo><mi>\u2211</mi><mo>=</mo><mi>\u2211</mi>',
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<largeop>\u2211</largeop>' +
+      '</children>' +
+      '</infixop>' +
+      '<largeop>\u2211</largeop>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<munder><mi>\u220F</mi><mi>n</mi></munder><mo>+</mo>' +
+      '<munder><mi>\u220F</mi><mi>m</mi></munder><mo>=</mo>' +
+      '<munder><mi>\u220F</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
+      '</mrow></munder>',
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<identifier>n</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<identifier>m</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '</children>' +
+      '</infixop>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<punctuation>,</punctuation>' +
+      '<identifier>m</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</limlower>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<mrow><munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><mo>+</mo>' +
+      '<munderover><mi>\u2211</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><mo>=</mo>' +
+      '<munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
+      '<mo>=</mo><mn>0</mn></mrow><mi>\u221E</mi></munderover></mrow>',
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>' +
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>m</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>' +
+      '</children>' +
+      '</infixop>' +
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<punctuation>,</punctuation>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>m</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</punctuated>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>' +
+      '</children>' +
+      '</relseq>'
+  );
 };
 
 
