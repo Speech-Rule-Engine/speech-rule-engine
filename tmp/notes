@@ -1,4 +1,5 @@
-
+NOTES from the Benetech/MathCloud project:
+==========================================
 
 sre = require('speech-rule-engine');
 sre.processExpression('<math><mi>A</mi></math>');
@@ -127,3 +128,15 @@ vs.
 
 http://www.gh-mathspeak.com/examples/grammar-rules/index.php?verbosity=all&rule=stacked
 
+==========================================
+==========================================
+
+NOTES from the Sloan project:
+==========================================
+
+
+Embellished fences.
+
+---------------------------------
+
+Punctuation vs relation. Example in bigoperators m,n=0, etc.
