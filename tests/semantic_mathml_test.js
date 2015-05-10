@@ -37,16 +37,21 @@ sre.SemanticMathmlTest = function() {
   this.information = 'Semantic enrichment tests.';
 
   /**
-   * Sets HTML output file for tests.
+   * Sets example output file for tests.
    * @type {!string}
    */
-  this.htmlFile = sre.SemanticMathmlTest.HTML_OUTPUT;
+  this.exampleFile = sre.SemanticMathmlTest.HTML_OUTPUT + '.js';
 
   /**
    * Possible file error.
    * @type {!string}
    */
   this.fileError = '';
+
+  /**
+   * @type {!Array.<string>}
+   */
+  this.examples = [];
 };
 goog.inherits(sre.SemanticMathmlTest, sre.AbstractTest);
 
@@ -56,7 +61,7 @@ goog.inherits(sre.SemanticMathmlTest, sre.AbstractTest);
  * @type {string}
  * @const
  */
-sre.SemanticMathmlTest.HTML_OUTPUT = 'output.html';
+sre.SemanticMathmlTest.HTML_OUTPUT = 'tests';
 
 
 /**
@@ -64,12 +69,10 @@ sre.SemanticMathmlTest.HTML_OUTPUT = 'output.html';
  */
 sre.SemanticMathmlTest.prototype.setUpTest = function() {
   try {
-    sre.SystemExternal.fs.openSync(this.htmlFile, 'w+');
+    sre.SystemExternal.fs.openSync(this.exampleFile, 'w+');
   } catch (err) {
-    this.fileError = 'Bad file name ' + this.htmlFile;
+    this.fileError = 'Bad file name ' + sre.SemanticMathmlTest.HTML_OUTPUT;
   }
-  this.appendToFile('<HTML>\n<HEAD>Mathml Output of' +
-                    ' Test Runner</HEAD>\n<BODY>\n\n');
 };
 
 
@@ -79,11 +82,13 @@ sre.SemanticMathmlTest.prototype.setUpTest = function() {
  */
 sre.SemanticMathmlTest.prototype.appendToFile = function(output) {
   // TODO (sorge) Rewrite this asynchronously.
-  if (this.htmlFile && !this.fileError) {
+  if (!this.fileError) {
     try {
-      sre.SystemExternal.fs.appendFileSync(this.htmlFile, output);
+      sre.SystemExternal.fs.appendFileSync(
+	  this.exampleFile,
+	  'Lab.Examples = [\'' + this.examples.join('\', \'') + '\']');
     } catch (err) {
-      this.fileError = 'Could not append to file ' + this.htmlFile;
+      this.fileError = 'Could not append to file ' + this.exampleFile;
     }
   }
 };
@@ -93,10 +98,7 @@ sre.SemanticMathmlTest.prototype.appendToFile = function(output) {
  * @override
  */
 sre.SemanticMathmlTest.prototype.tearDownTest = function() {
-  this.appendToFile('\n\n</BODY>\n');
-  this.appendToFile('<script src="http://cdn.mathjax.org/mathjax/latest/' +
-                    'MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>');
-  this.appendToFile('\n<HTML>\n');
+  this.appendToFile('');
   if (this.fileError) {
     throw new sre.System.Error(this.fileError);
   }
@@ -109,9 +111,7 @@ sre.SemanticMathmlTest.prototype.tearDownTest = function() {
  * @param {string} smml MathML expression with the semantic information.
  */
 sre.SemanticMathmlTest.prototype.htmlOutput = function(mml, smml) {
-  var newSmml = smml.replace(/id=/g, 'data-semantic-id=');
-  this.appendToFile('<P>\n Original: ' + sre.SemanticTree.formatXml(mml) +
-      '\n Enriched: ' + sre.SemanticTree.formatXml(newSmml) + '\n</P>');
+  this.examples.push(mml);
 };
 
 
@@ -138,7 +138,6 @@ sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
  * Test for empty wrapping elements.
  */
 sre.SemanticMathmlTest.prototype.testMathmlWrappers = function() {
-
   this.executeMathmlTest(
       '<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>',
       '<math type="infixop" role="implicit" id="3" children="0,1"' +
