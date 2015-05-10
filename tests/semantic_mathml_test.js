@@ -6169,7 +6169,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow>' +
-      '<merror>nothing</merror><mo>]</mo></mrow>',
+      '<merror><mtext>nothing</mtext></merror><mo>]</mo></mrow>',
       '<math type="relseq" role="equality" id="16" children="0,13"' +
       ' content="1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="16">A</mi>' +
@@ -6202,7 +6202,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '</mtr>' +
       '</mtable>' +
       '</mrow>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mo type="fence" role="close" id="14" parent="13">]</mo>' +
       '</mrow>' +
       '</math>'
@@ -6212,7 +6212,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mo>=</mo><mpadded><mo>[</mo></mpadded>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
-      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror>nothing</merror>' +
+      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror><mtext>nothing</mtext></merror>' +
       '<mo>]</mo></mrow>',
       '<math>' +
       '<mrow class="MJX-TeXAtom-ORD" type="relseq" role="equality" id="15"' +
@@ -6243,7 +6243,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '</mtd>' +
       '</mtr>' +
       '</mtable>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mo type="fence" role="close" id="13" parent="12">]</mo>' +
       '</mrow>' +
       '</mrow>' +
@@ -6251,7 +6251,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
   );
   this.executeMathmlTest(
       '<mi>f</mi><mo>=</mo><mrow><mpadded><mo>{</mo></mpadded>' +
-      '<merror>nothing</merror><mtable>' +
+      '<merror><mtext>nothing</mtext></merror><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr>' +
       '<mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr>' +
       '</mtable></mrow>',
@@ -6265,7 +6265,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mpadded>' +
       '<mo type="punctuation" role="openfence" id="2" parent="13">{</mo>' +
       '</mpadded>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mtable>' +
       '<mtr type="row" role="cases" id="7" children="4,6" parent="13">' +
       '<mtd type="cell" role="cases" id="4" children="3" parent="7">' +
@@ -6290,7 +6290,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
   );
   this.executeMathmlTest(
       '<mi>f</mi><mo>=</mo><mpadded><mo>{</mo></mpadded>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
@@ -6305,7 +6305,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mpadded>' +
       '<mo type="punctuation" role="openfence" id="2" parent="24">{</mo>' +
       '</mpadded>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mtable>' +
       '<mtr type="line" role="cases" id="8" children="6" parent="24">' +
       '<mtd>' +
@@ -7584,62 +7584,62 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mi>i</mi><merror>Y</merror>',
+      '<mi>i</mi><merror><mi>Y</mi></merror>',
       '<math>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mphantom>nix</mphantom><mi>i</mi><merror>Y</merror>',
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror>',
       '<math>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom>nix</mphantom><mi>i</mi><merror>Y</merror></mrow>',
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>',
       '<math>' +
       '<mrow>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</mrow>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom>nix</mphantom><mi>i</mi><merror>Y</merror></mrow>' +
-      '<merror>nothing</merror>',
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>' +
+      '<merror><mtext>nothing</mtext></merror>',
       '<math>' +
       '<mrow>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</mrow>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom>nix</mphantom><mrow><mi>i</mi></mrow>' +
-      '<merror>Y</merror></mrow><merror>nothing</merror>',
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi></mrow>' +
+      '<merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>',
       '<math>' +
       '<mrow>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mrow>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
       '</mrow>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</mrow>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom>nix</mphantom><mrow><mi>i</mi><mi>j</mi></mrow>' +
-      '<merror>Y</merror></mrow><merror>nothing</merror>',
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi><mi>j</mi></mrow>' +
+      '<merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>',
       '<math>' +
       '<mrow>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
       ' content="2">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
@@ -7647,9 +7647,9 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
       '</mrow>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</mrow>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '</math>'
   );
 };
@@ -7660,9 +7660,9 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
  */
 sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
   this.executeMathmlTest(
-      '<mphantom>nix</mphantom><mi>i</mi><mi>j</mi><merror>Y</merror>',
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi><merror><mi>Y</mi></merror>',
       '<math>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
       ' content="2">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
@@ -7670,14 +7670,14 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
       '</mrow>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mphantom>nix</mphantom><mi>i</mi><mo>+</mo><mi>j</mi>' +
-      '<merror>Y</merror>',
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mo>+</mo><mi>j</mi>' +
+      '<merror><mi>Y</mi></merror>',
       '<math>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mrow type="infixop" role="addition" id="3" children="0,2"' +
       ' content="1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
@@ -7685,45 +7685,45 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
       '</mrow>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mi>i</mi><merror>nothing</merror><mo>+</mo><mi>j</mi>',
+      '<mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi>',
       '<math type="infixop" role="addition" id="3" children="0,2"' +
       ' content="1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mo type="operator" role="addition" id="1" parent="3"' +
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mi>i</mi><merror>nothing</merror><mi>j</mi>',
+      '<mi>i</mi><merror><mtext>nothing</mtext></merror><mi>j</mi>',
       '<math type="infixop" role="implicit" id="3" children="0,1"' +
       ' content="2">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mo type="operator" role="multiplication" id="2" parent="3"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">j</mi>' +
       '</math>'
   );
   this.executeMathmlTest(
-      '<mphantom>nix</mphantom><mi>i</mi><merror>nothing</merror><mo>+</mo>' +
-      '<mi>j</mi><merror>Y</merror>',
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo>' +
+      '<mi>j</mi><merror><mi>Y</mi></merror>',
       '<math>' +
-      '<mphantom>nix</mphantom>' +
+      '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mrow type="infixop" role="addition" id="3" children="0,2"' +
       ' content="1">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">i</mi>' +
-      '<merror>nothing</merror>' +
+      '<merror><mtext>nothing</mtext></merror>' +
       '<mo type="operator" role="addition" id="1" parent="3"' +
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="3">j</mi>' +
       '</mrow>' +
-      '<merror>Y</merror>' +
+      '<merror><mi>Y</mi></merror>' +
       '</math>'
   );
 };
