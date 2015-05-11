@@ -7179,6 +7179,130 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
 };
 
 
+/**
+ * Translation of text elements.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlText = function() {
+  this.executeMathmlTest(
+      '<mtext>text only</mtext>',
+      '<math>' +
+      '<mtext type="text" role="unknown" id="0">text only</mtext>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mi>a</mi><mtext>to</mtext>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="3">to</mtext>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mtext>to</mtext><mi>b</mi>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mtext type="text" role="unknown" id="0" parent="3">to</mtext>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">b</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>',
+      '<math type="punctuated" role="text" id="9" children="0,1,2,3,4"' +
+      ' content="5,6,7,8">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<mo type="punctuation" role="dummy" id="5" parent="9" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="9">to</mtext>' +
+      '<mo type="punctuation" role="dummy" id="6" parent="9" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="9">b</mi>' +
+      '<mo type="punctuation" role="dummy" id="7" parent="9" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="3" parent="9">to</mtext>' +
+      '<mo type="punctuation" role="dummy" id="8" parent="9" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">c</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo>+</mo><mi>b</mi>' +
+      '<mtext>is generally not the same as</mtext>' +
+      '<mi>a</mi><mi>b</mi><mo>.</mo></mrow>',
+      '<math>' +
+      '<mrow type="punctuated" role="endpunct" id="13" children="12,6"' +
+      ' content="6">' +
+      '<mrow type="punctuated" role="text" id="12" children="7,3,9"' +
+      ' content="10,11" parent="13">' +
+      '<mrow type="infixop" role="addition" id="7" children="0,2"' +
+      ' content="1" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="7"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="dummy" id="10" parent="12" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="3" parent="12">is generally' +
+      ' not the same as</mtext>' +
+      '<mo type="punctuation" role="dummy" id="11" parent="12" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mrow type="infixop" role="implicit" id="9" children="4,5"' +
+      ' content="8" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">a</mi>' +
+      '<mo type="operator" role="multiplication" id="8" parent="9"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="9">b</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="fullstop" id="6" parent="13"' +
+      ' operator="punctuated">.</mo>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo>+</mo><mi>b</mi>' +
+      '<mtext>is not the same as</mtext>' +
+      '<mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>',
+      '<math>' +
+      '<mrow type="punctuated" role="text" id="13" children="7,3,9,6"' +
+      ' content="10,11,12">' +
+      '<mrow type="infixop" role="addition" id="7" children="0,2"' +
+      ' content="1" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="7"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="dummy" id="10" parent="13" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="3" parent="13">is not the same' +
+      ' as</mtext>' +
+      '<mo type="punctuation" role="dummy" id="11" parent="13" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mrow type="infixop" role="implicit" id="9" children="4,5"' +
+      ' content="8" parent="13">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">a</mi>' +
+      '<mo type="operator" role="multiplication" id="8" parent="9"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="9">b</mi>' +
+      '</mrow>' +
+      '<mo type="punctuation" role="dummy" id="12" parent="13" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="6" parent="13">in' +
+      ' general.</mtext>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
 // Missing tests here!
 
 
