@@ -85,8 +85,8 @@ sre.SemanticMathmlTest.prototype.appendToFile = function(output) {
   if (!this.fileError) {
     try {
       sre.SystemExternal.fs.appendFileSync(
-	  this.exampleFile,
-	  'Lab.Examples = [\'' + this.examples.join('\',\n\'') + '\']');
+          this.exampleFile,
+          'Lab.Examples = [\'' + this.examples.join('\',\n\'') + '\']');
     } catch (err) {
       this.fileError = 'Could not append to file ' + this.exampleFile;
     }
@@ -495,7 +495,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRelations = function() {
   );
   this.executeMathmlTest(
       '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>' +
-          '<mo>&#x2264;</mo><mi>d</mi>',
+      '<mo>&#x2264;</mo><mi>d</mi>',
       '<math type="multirel" role="unknown" id="7"' +
       ' children="0,2,4,6" content="1,3,5">' +
       '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
@@ -611,7 +611,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
   // Two identifiers with pre- and postfixes.
   this.executeMathmlTest(
       '<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>' +
-          '<mi>b</mi><mo>+</mo>',
+      '<mi>b</mi><mo>+</mo>',
       '<math type="infixop" role="addition" id="9" children="7,10"' +
       ' content="3">' +
       '<mrow type="prefixop" role="multiop" id="7" children="2"' +
@@ -639,7 +639,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
   // Three identifiers with pre- and postfixes.
   this.executeMathmlTest(
       '<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>' +
-          '<mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>',
+      '<mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>',
       '<math type="infixop" role="addition" id="14" children="12,15"' +
       ' content="6">' +
       '<mrow type="infixop" role="addition" id="12" children="10,11"' +
@@ -5064,19 +5064,19 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMultiUnfenced =
       '<mrow type="appl" role="prefix function" id="8" children="0,1"' +
       ' content="7,0" parent="9">' +
       '<mi type="function" role="prefix function" id="0" parent="8"' +
-                          ' operator="appl">sin</mi>' +
+      ' operator="appl">sin</mi>' +
       '<mo type="punctuation" role="application" id="7" parent="8"' +
-                          ' added="true" operator="appl">⁡</mo>' +
+      ' added="true" operator="appl">⁡</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="8">x</mi>' +
       '</mrow>' +
       '<mo type="operator" role="addition" id="2" parent="9"' +
-                          ' operator="infixop,+">+</mo>' +
+      ' operator="infixop,+">+</mo>' +
       '<mrow type="appl" role="prefix function" id="6" children="3,4"' +
-                          ' content="5,3" parent="9">' +
+      ' content="5,3" parent="9">' +
       '<mi type="function" role="prefix function" id="3" parent="6"' +
-                          ' operator="appl">cos</mi>' +
+      ' operator="appl">cos</mi>' +
       '<mo type="punctuation" role="application" id="5" parent="6"' +
-                          ' added="true" operator="appl">⁡</mo>' +
+      ' added="true" operator="appl">⁡</mo>' +
       '<mi type="identifier" role="latinletter" id="4" parent="6">x</mi>' +
       '</mrow>' +
       '</mrow>' +
@@ -6212,8 +6212,8 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mo>=</mo><mpadded><mo>[</mo></mpadded>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
-      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror><mtext>nothing</mtext></merror>' +
-      '<mo>]</mo></mrow>',
+      '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror><mtext>nothing' +
+      '</mtext></merror><mo>]</mo></mrow>',
       '<math>' +
       '<mrow class="MJX-TeXAtom-ORD" type="relseq" role="equality" id="15"' +
       ' children="0,12" content="1">' +
@@ -6709,9 +6709,9 @@ sre.SemanticMathmlTest.prototype.testMathmlLimitFunctionsNoArgs = function() {
  */
 sre.SemanticMathmlTest.prototype.testMathmlBigOps = function() {
   this.executeMathmlTest(
-      '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
-      '</mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi><mn>2</mn>' +
-      '</msup></mrow>',
+      '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
+      '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi>' +
+      '<mn>2</mn></msup></mrow>',
       '<math>' +
       '<mrow type="bigop" role="sum" id="10" children="6,9" content="0">' +
       '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
@@ -6737,10 +6737,10 @@ sre.SemanticMathmlTest.prototype.testMathmlBigOps = function() {
   );
 
   this.executeMathmlTest(
-      '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
-      '</mrow><mi>&#x221E;</mi></munderover><munderover><mi>&#x2211;</mi><mrow>' +
-      '<mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>&#x221E;</mi></munderover>' +
-      '<msup><mi>n</mi><mi>m</mi></msup></mrow>',
+      '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
+      '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><munderover>' +
+      '<mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow>' +
+      '<mi>&#x221E;</mi></munderover><msup><mi>n</mi><mi>m</mi></msup></mrow>',
       '<math>' +
       '<mrow type="bigop" role="sum" id="18" children="6,17" content="0">' +
       '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
@@ -6896,8 +6896,8 @@ sre.SemanticMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
-      '</mrow><mi>&#x221E;</mi></munderover><mo>+</mo>' +
+      '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
+      '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><mo>+</mo>' +
       '<munderover><mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn>' +
       '</mrow><mi>&#x221E;</mi></munderover><mo>=</mo>' +
       '<munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
@@ -6955,6 +6955,225 @@ sre.SemanticMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
       '<mi type="identifier" role="unknown" id="24" parent="25">∞</mi>' +
       '</munderover>' +
       '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Variations of integrals.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
+  this.executeMathmlTest(
+      '<mi>\u222B</mi>',
+      '<math>' +
+      '<mi type="largeop" role="integral" id="0">∫</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mi>\u222B</mi><mi>dx</mi>',
+      '<math type="integral" role="integral" id="3" children="0,2,1"' +
+      ' content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="3"' +
+      ' operator="integral">∫</mi>' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '<mi type="identifier" role="unknown" id="1" parent="3">dx</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>\u222B</mi><mi>x</mi><mi>dx</mi></mrow>',
+      '<math>' +
+      '<mrow type="integral" role="integral" id="3" children="0,1,2"' +
+      ' content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="3"' +
+      ' operator="integral">∫</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mi type="identifier" role="unknown" id="2" parent="3">dx</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>\u222B</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="integral" role="integral" id="6" children="0,1,5"' +
+      ' content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="6"' +
+      ' operator="integral">∫</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="6">x</mi>' +
+      '<mrow type="punctuated" role="integral" id="5" children="2,4,3"' +
+      ' content="4" parent="6">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="5">d</mi>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="5"' +
+      ' operator="punctuated"/>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow><mi>\u222B</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
+      '<mi>x</mi></mrow>',
+      '<math>' +
+      '<mrow type="integral" role="integral" id="9" children="0,8,7"' +
+      ' content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="9"' +
+      ' operator="integral">∫</mi>' +
+      '<mrow type="infixop" role="addition" id="8" children="1,3"' +
+      ' content="2" parent="9">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="8">x</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="8"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="8">y</mi>' +
+      '</mrow>' +
+      '<mrow type="punctuated" role="integral" id="7" children="4,6,5"' +
+      ' content="6" parent="9">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">d</mi>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="7"' +
+      ' operator="punctuated"/>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="7">x</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<munderover><mi>\u222B</mi><mn>0</mn><mn>10</mn></munderover>',
+      '<math>' +
+      '<munderover type="limboth" role="integral" id="3" children="0,1,2">' +
+      '<mi type="largeop" role="integral" id="0" parent="3">∫</mi>' +
+      '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
+      '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
+      '</munderover>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<munder><mi>\u222B</mi><mi>X</mi></munder>',
+      '<math>' +
+      '<munder type="limlower" role="integral" id="2" children="0,1">' +
+      '<mi type="largeop" role="integral" id="0" parent="2">∫</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">X</mi>' +
+      '</munder>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<munderover><mi>\u222B</mi><mn>0</mn>' +
+      '<mn>10</mn></munderover><mi>x</mi>' +
+      '<mi>d</mi><mi>x</mi>',
+      '<math type="integral" role="integral" id="9" children="3,4,8"' +
+      ' content="0">' +
+      '<munderover type="limboth" role="integral" id="3" children="0,1,2"' +
+      ' parent="9">' +
+      '<mi type="largeop" role="integral" id="0" parent="9"' +
+      ' operator="integral">∫</mi>' +
+      '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
+      '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
+      '</munderover>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '<mrow type="punctuated" role="integral" id="8" children="5,7,6"' +
+      ' content="7" parent="9">' +
+      '<mi type="identifier" role="latinletter" id="5" parent="8">d</mi>' +
+      '<mrow type="punctuation" role="comma" id="7" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<munder><mi>\u222B</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>',
+      '<math type="integral" role="integral" id="5" children="2,3,4"' +
+      ' content="0">' +
+      '<munder type="limlower" role="integral" id="2" children="0,1"' +
+      ' parent="5">' +
+      '<mi type="largeop" role="integral" id="0" parent="5"' +
+      ' operator="integral">∫</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="2">X</mi>' +
+      '</munder>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '<mi type="identifier" role="unknown" id="4" parent="5">dx</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<munderover><mi>\u222B</mi><mn>0</mn><mn>10</mn></munderover>' +
+      '<mi>x</mi><mi>dx</mi><mo>+</mo><munderover><mi>\u222B</mi><mn>10</mn>' +
+      '<mn>20</mn></munderover><mi>x</mi><mi>dx</mi><mo>=</mo><munderover>' +
+      '<mi>\u222B</mi><mn>0</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi>',
+      '<math type="relseq" role="equality" id="24" children="23,20"' +
+      ' content="13">' +
+      '<mrow type="infixop" role="addition" id="23" children="22,21"' +
+      ' content="6" parent="24">' +
+      '<mrow type="integral" role="integral" id="22" children="3,4,5"' +
+      ' content="0" parent="23">' +
+      '<munderover type="limboth" role="integral" id="3" children="0,1,2"' +
+      ' parent="22">' +
+      '<mi type="largeop" role="integral" id="0" parent="22"' +
+      ' operator="integral">∫</mi>' +
+      '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
+      '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
+      '</munderover>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="22">x</mi>' +
+      '<mi type="identifier" role="unknown" id="5" parent="22">dx</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="6" parent="23"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mrow type="integral" role="integral" id="21" children="10,11,12"' +
+      ' content="7" parent="23">' +
+      '<munderover type="limboth" role="integral" id="10" children="7,8,9"' +
+      ' parent="21">' +
+      '<mi type="largeop" role="integral" id="7" parent="21"' +
+      ' operator="integral">∫</mi>' +
+      '<mn type="number" role="integer" id="8" parent="10">10</mn>' +
+      '<mn type="number" role="integer" id="9" parent="10">20</mn>' +
+      '</munderover>' +
+      '<mi type="identifier" role="latinletter" id="11" parent="21">x</mi>' +
+      '<mi type="identifier" role="unknown" id="12" parent="21">dx</mi>' +
+      '</mrow>' +
+      '</mrow>' +
+      '<mo type="relation" role="equality" id="13" parent="24"' +
+      ' operator="relseq,=">=</mo>' +
+      '<mrow type="integral" role="integral" id="20" children="17,18,19"' +
+      ' content="14" parent="24">' +
+      '<munderover type="limboth" role="integral" id="17"' +
+      ' children="14,15,16" parent="20">' +
+      '<mi type="largeop" role="integral" id="14" parent="20"' +
+      ' operator="integral">∫</mi>' +
+      '<mn type="number" role="integer" id="15" parent="17">0</mn>' +
+      '<mn type="number" role="integer" id="16" parent="17">20</mn>' +
+      '</munderover>' +
+      '<mi type="identifier" role="latinletter" id="18" parent="20">x</mi>' +
+      '<mi type="identifier" role="unknown" id="19" parent="20">dx</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mi>\u222B</mi><mi>\u222B</mi><mi>\u222B</mi><mi>dx</mi>' +
+      '<mi>dy</mi><mi>dz</mi>',
+      '<math type="integral" role="integral" id="9" children="0,8,5"' +
+      ' content="0">' +
+      '<mi type="largeop" role="integral" id="0" parent="9"' +
+      ' operator="integral">∫</mi>' +
+      '<mrow type="integral" role="integral" id="8" children="1,7,4"' +
+      ' content="1" parent="9">' +
+      '<mi type="largeop" role="integral" id="1" parent="8"' +
+      ' operator="integral">∫</mi>' +
+      '<mrow type="integral" role="integral" id="7" children="2,6,3"' +
+      ' content="2" parent="8">' +
+      '<mi type="largeop" role="integral" id="2" parent="7"' +
+      ' operator="integral">∫</mi>' +
+      '<mrow type="empty" role="unknown" id="6" parent="7"/>' +
+      '<mi type="identifier" role="unknown" id="3" parent="7">dx</mi>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="4" parent="8">dy</mi>' +
+      '</mrow>' +
+      '<mi type="identifier" role="unknown" id="5" parent="9">dz</mi>' +
       '</math>'
   );
 };
@@ -7591,7 +7810,8 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror>',
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi>' +
+      '<merror><mi>Y</mi></merror>',
       '<math>' +
       '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mi type="identifier" role="latinletter" id="0">i</mi>' +
@@ -7599,7 +7819,8 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>',
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi>' +
+      '<merror><mi>Y</mi></merror></mrow>',
       '<math>' +
       '<mrow>' +
       '<mphantom><mtext>nix</mtext></mphantom>' +
@@ -7609,7 +7830,8 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>' +
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi>' +
+      '<merror><mi>Y</mi></merror></mrow>' +
       '<merror><mtext>nothing</mtext></merror>',
       '<math>' +
       '<mrow>' +
@@ -7622,7 +7844,8 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
   );
   this.executeMathmlTest(
       '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi></mrow>' +
-      '<merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>',
+      '<merror><mi>Y</mi></merror></mrow><merror>' +
+      '<mtext>nothing</mtext></merror>',
       '<math>' +
       '<mrow>' +
       '<mphantom><mtext>nix</mtext></mphantom>' +
@@ -7635,8 +7858,9 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi><mi>j</mi></mrow>' +
-      '<merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>',
+      '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi' +
+      '><mi>j</mi></mrow><merror><mi>Y</mi></merror></mrow>' +
+      '<merror><mtext>nothing</mtext></merror>',
       '<math>' +
       '<mrow>' +
       '<mphantom><mtext>nix</mtext></mphantom>' +
@@ -7660,7 +7884,8 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
  */
 sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
   this.executeMathmlTest(
-      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi><merror><mi>Y</mi></merror>',
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi>' +
+      '<merror><mi>Y</mi></merror>',
       '<math>' +
       '<mphantom><mtext>nix</mtext></mphantom>' +
       '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
@@ -7711,7 +7936,8 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo>' +
+      '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror>' +
+      '<mtext>nothing</mtext></merror><mo>+</mo>' +
       '<mi>j</mi><merror><mi>Y</mi></merror>',
       '<math>' +
       '<mphantom><mtext>nix</mtext></mphantom>' +
