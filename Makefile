@@ -103,7 +103,7 @@ directories: $(BIN_DIR)
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-lint: 
+lint:
 	$(GJSLINT) $(SRC_DIR)
 	$(GJSLINT) $(TEST_DIR)
 
