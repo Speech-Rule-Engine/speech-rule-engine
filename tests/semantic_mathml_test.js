@@ -7303,6 +7303,488 @@ sre.SemanticMathmlTest.prototype.testMathmlText = function() {
 };
 
 
+/**
+ * Translation of mfenced elements.
+ */
+sre.SemanticMathmlTest.prototype.testMathmlMfenced = function() {
+  this.executeMathmlTest(
+      '<mfenced open="[" close="]" separators="+ - ;"/>',
+      '<math>' +
+      '<mfenced open="[" close="]" separators="+ - ;" collapsed="(3 0 2 1)"' +
+      ' type="fenced" role="leftright" id="3" children="2" content="0,1">' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[" separators=""/>',
+      '<math>' +
+      '<mfenced open="[" separators="" collapsed="(3 0 2 1)" type="fenced"' +
+      ' role="leftright" id="3" children="2" content="0,1">' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[" close="]"/>',
+      '<math>' +
+      '<mfenced open="[" close="]" collapsed="(3 0 2 1)" type="fenced"' +
+      ' role="leftright" id="3" children="2" content="0,1">' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced close=")"/>',
+      '<math>' +
+      '<mfenced close=")" collapsed="(3 0 2 1)" type="fenced"' +
+      ' role="leftright" id="3" children="2" content="0,1">' +
+      '<mrow type="empty" role="unknown" id="2" parent="3"/>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[" close="]" separators="+"><mi>x</mi><mfrac>' +
+      '<mi>x</mi><mi>y</mi></mfrac><mn>5</mn></mfenced>',
+      '<math>' +
+      '<mfenced open="[" close="]" separators="+" collapsed="(10 7 9 8)"' +
+      ' type="fenced" role="leftright" id="10" children="9" content="7,8">' +
+      '<mrow type="infixop" role="addition" id="9" children="0,3,4"' +
+      ' content="5,6" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">x</mi>' +
+      '<mo type="operator" role="addition" id="5" parent="9" added="true"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mfrac type="fraction" role="division" id="3" children="1,2"' +
+      ' parent="9">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">y</mi>' +
+      '</mfrac>' +
+      '<mo type="operator" role="addition" id="6" parent="9" added="true"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="4" parent="9">5</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[" close="]" separators="+ - ;">' +
+      '<mi>x</mi>' +
+      '<mfrac>' +
+      '<mi>x</mi>' +
+      '<mi>y</mi>' +
+      '</mfrac>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="[" close="]" separators="+ - ;" collapsed="(18 13 17' +
+      ' 14)" type="fenced" role="leftright" id="18" children="17"' +
+      ' content="13,14">' +
+      '<mrow type="punctuated" role="sequence" id="17"' +
+      ' children="16,10,5,11,6,12,7" content="10,11,12" parent="18">' +
+      '<mrow type="infixop" role="subtraction" id="16" children="15,4"' +
+      ' content="9" parent="17">' +
+      '<mrow type="infixop" role="addition" id="15" children="0,3"' +
+      ' content="8" parent="16">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="15">x</mi>' +
+      '<mo type="operator" role="addition" id="8" parent="15" added="true"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mfrac type="fraction" role="division" id="3" children="1,2"' +
+      ' parent="15">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">y</mi>' +
+      '</mfrac>' +
+      '</mrow>' +
+      '<mo type="operator" role="subtraction" id="9" parent="16"' +
+      ' added="true" operator="infixop,-">-</mo>' +
+      '<mn type="number" role="integer" id="4" parent="16">5</mn>' +
+      '</mrow>' +
+      '<mrow type="punctuation" role="unknown" id="10" parent="17"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="5" parent="17">5</mn>' +
+      '<mrow type="punctuation" role="unknown" id="11" parent="17"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="6" parent="17">5</mn>' +
+      '<mrow type="punctuation" role="unknown" id="12" parent="17"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="7" parent="17">5</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[" close="]">' +
+      '<mi>x</mi>' +
+      '<mfrac>' +
+      '<mi>x</mi>' +
+      '<mi>y</mi>' +
+      '</mfrac>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="[" close="]" collapsed="(16 13 15 14)" type="fenced"' +
+      ' role="leftright" id="16" children="15" content="13,14">' +
+      '<mrow type="punctuated" role="sequence" id="15"' +
+      ' children="0,8,3,9,4,10,5,11,6,12,7" content="8,9,10,11,12"' +
+      ' parent="16">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="15">x</mi>' +
+      '<mrow type="punctuation" role="comma" id="8" parent="15"' +
+      ' operator="punctuated"/>' +
+      '<mfrac type="fraction" role="division" id="3" children="1,2"' +
+      ' parent="15">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">y</mi>' +
+      '</mfrac>' +
+      '<mrow type="punctuation" role="comma" id="9" parent="15"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="4" parent="15">5</mn>' +
+      '<mrow type="punctuation" role="comma" id="10" parent="15"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="5" parent="15">5</mn>' +
+      '<mrow type="punctuation" role="comma" id="11" parent="15"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="6" parent="15">5</mn>' +
+      '<mrow type="punctuation" role="comma" id="12" parent="15"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="7" parent="15">5</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced close="]" separators=" ">' +
+      '<mi>x</mi>' +
+      '<mfrac>' +
+      '<mi>x</mi>' +
+      '<mi>y</mi>' +
+      '</mfrac>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '<mn>5</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced close="]" separators=" " collapsed="(16 8 15 9)"' +
+      ' type="fenced" role="leftright" id="16" children="15" content="8,9">' +
+      '<mrow type="infixop" role="implicit" id="15" children="0,3,4,5,6,7"' +
+      ' content="10,11,12,13,14" parent="16">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="15">x</mi>' +
+      '<mo type="operator" role="multiplication" id="10" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mfrac type="fraction" role="division" id="3" children="1,2"' +
+      ' parent="15">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">y</mi>' +
+      '</mfrac>' +
+      '<mo type="operator" role="multiplication" id="11" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="4" parent="15">5</mn>' +
+      '<mo type="operator" role="multiplication" id="12" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="5" parent="15">5</mn>' +
+      '<mo type="operator" role="multiplication" id="13" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="6" parent="15">5</mn>' +
+      '<mo type="operator" role="multiplication" id="14" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="7" parent="15">5</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced close="]">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced close="]" collapsed="(10 7 9 8)" type="fenced"' +
+      ' role="leftright" id="10" children="9" content="7,8">' +
+      '<mrow type="punctuated" role="sequence" id="9"' +
+      ' children="0,4,1,5,2,6,3" content="4,5,6" parent="10">' +
+      '<mn type="number" role="integer" id="0" parent="9">1</mn>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="1" parent="9">2</mn>' +
+      '<mrow type="punctuation" role="comma" id="5" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="2" parent="9">3</mn>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="3" parent="9">4</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced>' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced collapsed="(10 7 9 8)" type="fenced" role="leftright"' +
+      ' id="10" children="9" content="7,8">' +
+      '<mrow type="punctuated" role="sequence" id="9"' +
+      ' children="0,4,1,5,2,6,3" content="4,5,6" parent="10">' +
+      '<mn type="number" role="integer" id="0" parent="9">1</mn>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="1" parent="9">2</mn>' +
+      '<mrow type="punctuation" role="comma" id="5" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="2" parent="9">3</mn>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="3" parent="9">4</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="[" collapsed="(10 7 9 8)" type="fenced"' +
+      ' role="leftright" id="10" children="9" content="7,8">' +
+      '<mrow type="punctuated" role="sequence" id="9"' +
+      ' children="0,4,1,5,2,6,3" content="4,5,6" parent="10">' +
+      '<mn type="number" role="integer" id="0" parent="9">1</mn>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="1" parent="9">2</mn>' +
+      '<mrow type="punctuation" role="comma" id="5" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="2" parent="9">3</mn>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="9"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="3" parent="9">4</mn>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="[" close="">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="[" close="" type="punctuated" role="sequence" id="8"' +
+      ' children="7,0,4,1,5,2,6,3" content="7,4,5,6">' +
+      '<mrow type="punctuation" role="openfence" id="7" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="0" parent="8">1</mn>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="1" parent="8">2</mn>' +
+      '<mrow type="punctuation" role="comma" id="5" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="2" parent="8">3</mn>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="3" parent="8">4</mn>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="" close="]">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="" close="]" type="punctuated" role="sequence" id="8"' +
+      ' children="0,4,1,5,2,6,3,7" content="4,5,6,7">' +
+      '<mn type="number" role="integer" id="0" parent="8">1</mn>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="1" parent="8">2</mn>' +
+      '<mrow type="punctuation" role="comma" id="5" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="2" parent="8">3</mn>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="8"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="3" parent="8">4</mn>' +
+      '<mrow type="punctuation" role="closefence" id="7" parent="8"' +
+      ' operator="punctuated"/>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open=" " close=" " separators=" ">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open=" " close=" " separators=" " type="infixop"' +
+      ' role="implicit" id="7" children="0,1,2,3" content="4,5,6">' +
+      '<mn type="number" role="integer" id="0" parent="7">1</mn>' +
+      '<mo type="operator" role="multiplication" id="4" parent="7"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="1" parent="7">2</mn>' +
+      '<mo type="operator" role="multiplication" id="5" parent="7"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="2" parent="7">3</mn>' +
+      '<mo type="operator" role="multiplication" id="6" parent="7"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="3" parent="7">4</mn>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="55" close=" ">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="55" close=" " type="punctuated" role="sequence"' +
+      ' id="10" children="9,4,1,5,2,6,3" content="4,5,6">' +
+      '<mn type="infixop" role="implicit" id="9" children="7,0" content="8"' +
+      ' parent="10">1</mn>' +
+      '<mrow type="punctuation" role="comma" id="4" parent="10"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="1" parent="10">2</mn>' +
+      '<mrow type="punctuation" role="comma" id="5" parent="10"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="2" parent="10">3</mn>' +
+      '<mrow type="punctuation" role="comma" id="6" parent="10"' +
+      ' operator="punctuated"/>' +
+      '<mn type="number" role="integer" id="3" parent="10">4</mn>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mfenced open="" close="" separators="">' +
+      '<mn>1</mn>' +
+      '<mn>2</mn>' +
+      '<mn>3</mn>' +
+      '<mn>4</mn>' +
+      '</mfenced>',
+      '<math>' +
+      '<mfenced open="" close="" separators="" type="infixop"' +
+      ' role="implicit" id="7" children="0,1,2,3" content="4,5,6">' +
+      '<mn type="number" role="integer" id="0" parent="7">1</mn>' +
+      '<mo type="operator" role="multiplication" id="4" parent="7"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="1" parent="7">2</mn>' +
+      '<mo type="operator" role="multiplication" id="5" parent="7"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="2" parent="7">3</mn>' +
+      '<mo type="operator" role="multiplication" id="6" parent="7"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="3" parent="7">4</mn>' +
+      '</mfenced>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<mrow>' +
+      '<mfenced separators="" open="|" close="|">' +
+      '<mi>a</mi>' +
+      '<mo>&#xb1;</mo>' +
+      '<mfenced separators="" open="|" close="|">' +
+      '<mi>b</mi>' +
+      '<mo>-</mo>' +
+      '<mi>c</mi>' +
+      '</mfenced>' +
+      '</mfenced>' +
+      '<mo>&#x2260;</mo>' +
+      '<mfenced open="|" close="|">' +
+      '<mi>a</mi>' +
+      '</mfenced>' +
+      '<mo>&#xb1;</mo>' +
+      '<mfenced separators="" open="|" close="|">' +
+      '<mi>b</mi>' +
+      '<mo>-</mo>' +
+      '<mi>c</mi>' +
+      '</mfenced>' +
+      '</mrow>',
+      '<math>' +
+      '<mrow type="relseq" role="inequality" id="27" children="12,26"' +
+      ' content="13">' +
+      '<mfenced separators="" open="|" close="|" collapsed="(12 9 11 10)"' +
+      ' type="fenced" role="neutral" id="12" children="11" content="9,10"' +
+      ' parent="27">' +
+      '<mrow type="infixop" role="addition" id="11" children="0,8"' +
+      ' content="1" parent="12">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="11">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="11"' +
+      ' operator="infixop,±">±</mo>' +
+      '<mfenced separators="" open="|" close="|" collapsed="(8 5 7 6)"' +
+      ' type="fenced" role="neutral" id="8" children="7" content="5,6"' +
+      ' parent="11">' +
+      '<mrow type="infixop" role="subtraction" id="7" children="2,4"' +
+      ' content="3" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
+      '<mo type="operator" role="subtraction" id="3" parent="7"' +
+      ' operator="infixop,-">-</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">c</mi>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '<mo type="relation" role="inequality" id="13" parent="27"' +
+      ' operator="relseq,≠">≠</mo>' +
+      '<mrow type="infixop" role="addition" id="26" children="17,25"' +
+      ' content="18" parent="27">' +
+      '<mfenced open="|" close="|" collapsed="(17 15 14 16)" type="fenced"' +
+      ' role="neutral" id="17" children="14" content="15,16" parent="26">' +
+      '<mi type="identifier" role="latinletter" id="14" parent="17">a</mi>' +
+      '</mfenced>' +
+      '<mo type="operator" role="addition" id="18" parent="26"' +
+      ' operator="infixop,±">±</mo>' +
+      '<mfenced separators="" open="|" close="|" collapsed="(25 22 24 23)"' +
+      ' type="fenced" role="neutral" id="25" children="24" content="22,23"' +
+      ' parent="26">' +
+      '<mrow type="infixop" role="subtraction" id="24" children="19,21"' +
+      ' content="20" parent="25">' +
+      '<mi type="identifier" role="latinletter" id="19" parent="24">b</mi>' +
+      '<mo type="operator" role="subtraction" id="20" parent="24"' +
+      ' operator="infixop,-">-</mo>' +
+      '<mi type="identifier" role="latinletter" id="21" parent="24">c</mi>' +
+      '</mrow>' +
+      '</mfenced>' +
+      '</mrow>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
 // Missing tests here!
 
 

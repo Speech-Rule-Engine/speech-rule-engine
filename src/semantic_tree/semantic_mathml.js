@@ -874,12 +874,12 @@ sre.SemanticMathml.combineContentChildren_ = function(
       return children.concat(content);
     case sre.SemanticAttr.Type.FENCED:
       if (semantic.mathmlTree &&
-	  sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MFENCED') {
-	sre.SemanticMathml.addCollapsedAttribute_(
-	  semantic.mathmlTree,
-	  [semantic.id, semantic.contentNodes[0].id,
-	   semantic.childNodes[0].id, semantic.contentNodes[1].id]);
-	return children;
+          sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MFENCED') {
+        sre.SemanticMathml.addCollapsedAttribute_(
+            semantic.mathmlTree,
+            [semantic.id, semantic.contentNodes[0].id,
+             semantic.childNodes[0].id, semantic.contentNodes[1].id]);
+        return children;
       }
       children.unshift(content[0]);
       children.push(content[1]);
