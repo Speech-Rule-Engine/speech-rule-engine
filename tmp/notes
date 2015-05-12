@@ -140,3 +140,16 @@ Embellished fences.
 ---------------------------------
 
 Punctuation vs relation. Example in bigoperators m,n=0, etc.
+
+--------------------------------
+
+Introduce spacing elements
+
+>> Maybe replace the invisible comma in the integral with an invisible space.
+
+--------------------------------
+
+Sort out handling of attributes via inheritance from mstyle elements.
+
+--------------------------------
+

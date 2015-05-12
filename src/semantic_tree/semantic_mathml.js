@@ -177,6 +177,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       newNode = sre.SemanticMathml.getInnerNode_(/**@type{!Element}*/(newNode));
     }
   }
+  newNode = sre.SemanticMathml.rewriteMfenced_(newNode);
   sre.SemanticMathml.mergeChildren_(newNode, childrenList);
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   return sre.SemanticMathml.ascendNewNode_(newNode);
@@ -323,7 +324,7 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
       children.slice().reverse()));
   if (leftMost === rightMost) {
     return {valid: true,
-      node: sre.SemanticMathml.ascendNewNode_(leftMost)};
+            node: leftMost}; //sre.SemanticMathml.ascendNewNode_(leftMost)};
   }
   var leftPath = sre.SemanticMathml.pathToRoot_(leftMost);
   var rightPath = sre.SemanticMathml.pathToRoot_(
@@ -505,16 +506,24 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
       semantic.type === sre.SemanticAttr.Type.CASES) {
-    var lfence = sre.SemanticMathml.walkTree_(
+    var newNode = semantic.mathmlTree;
+    var lfence = sre.SemanticMathml.cloneContentNode_(
         /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
-    semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
-    var newChildren = [lfence, semantic.mathmlTree];
-    if (semantic.contentNodes[1]) {
-      var rfence = sre.SemanticMathml.walkTree_(
-          /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1]));
-      newChildren.push(rfence);
+    var rfence = semantic.contentNodes[1] ?
+          sre.SemanticMathml.cloneContentNode_(
+            /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
+          null;
+    if (sre.SemanticUtil.tagName(newNode) === 'MFENCED') {
+      var children = newNode.childNodes;
+      newNode.insertBefore(lfence, children[0]);
+      rfence && newNode.appendChild(rfence);
+      newNode = sre.SemanticMathml.rewriteMfenced_(newNode);
+    } else {
+      semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
+      var newChildren = [lfence, newNode];
+      rfence && newChildren.push(rfence);
+      newNode = sre.SemanticMathml.introduceNewLayer_(newChildren);
     }
-    var newNode = sre.SemanticMathml.introduceNewLayer_(newChildren);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
   }
@@ -796,7 +805,7 @@ sre.SemanticMathml.cloneContentNode_ = function(content) {
   var clone = sre.SemanticMathml.SETTINGS.implicit ?
       sre.SemanticMathml.createInvisibleOperator_(content) :
       sre.SystemExternal.document.createElement('mrow');
-  sre.SemanticMathml.setAttributes_(clone, content);
+  content.mathml = [clone];
   return clone;
 };
 
@@ -873,14 +882,6 @@ sre.SemanticMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.POSTFIXOP:
       return children.concat(content);
     case sre.SemanticAttr.Type.FENCED:
-      if (semantic.mathmlTree &&
-          sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MFENCED') {
-        sre.SemanticMathml.addCollapsedAttribute_(
-            semantic.mathmlTree,
-            [semantic.id, semantic.contentNodes[0].id,
-             semantic.childNodes[0].id, semantic.contentNodes[1].id]);
-        return children;
-      }
       children.unshift(content[0]);
       children.push(content[1]);
       return children;
@@ -910,7 +911,29 @@ sre.SemanticMathml.combineContentChildren_ = function(
 
 
 /**
- * Makes a new MathML element for an invisible operator.
+ * Rewrites an mfenced node to an mrow node.
+ * @param {!Element} mml The MathML node.
+ * @return {!Element} The rewritten element.
+ */
+sre.SemanticMathml.rewriteMfenced_ = function(mml) {
+  if (sre.SemanticUtil.tagName(mml) !== 'MFENCED') {
+    return mml;
+  }
+  var newNode = sre.SystemExternal.document.createElement('mrow');
+  for (var i = 0, attr; attr = mml.attributes[i]; i++) {
+    if (['open', 'close', 'separators'].indexOf(attr.name) === -1) {
+      newNode.setAttribute(attr.name, attr.value);
+    }
+  }
+  sre.DomUtil.toArray(mml.childNodes).
+    forEach(function(x) {newNode.appendChild(x);});
+  sre.DomUtil.replaceNode(mml, newNode);
+  return newNode;
+};
+
+
+/**
+ * Makes a new MathML element for an invisible operator or one added by mfenced.
  * @param {!sre.SemanticTree.Node} operator The semantic node with the operator.
  * @return {!Element} The newly created MathML element.
  * @private
