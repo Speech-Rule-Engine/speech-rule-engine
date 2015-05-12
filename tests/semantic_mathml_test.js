@@ -6965,14 +6965,14 @@ sre.SemanticMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
  */
 sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   this.executeMathmlTest(
-      '<mi>\u222B</mi>',
+      '<mi>&#x222B;</mi>',
       '<math>' +
       '<mi type="largeop" role="integral" id="0">∫</mi>' +
       '</math>'
   );
 
   this.executeMathmlTest(
-      '<mi>\u222B</mi><mi>dx</mi>',
+      '<mi>&#x222B;</mi><mi>dx</mi>',
       '<math type="integral" role="integral" id="3" children="0,2,1"' +
       ' content="0">' +
       '<mi type="largeop" role="integral" id="0" parent="3"' +
@@ -6983,7 +6983,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<mrow><mi>\u222B</mi><mi>x</mi><mi>dx</mi></mrow>',
+      '<mrow><mi>&#x222B;</mi><mi>x</mi><mi>dx</mi></mrow>',
       '<math>' +
       '<mrow type="integral" role="integral" id="3" children="0,1,2"' +
       ' content="0">' +
@@ -6996,7 +6996,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<mrow><mi>\u222B</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
+      '<mrow><mi>&#x222B;</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
       '<math>' +
       '<mrow type="integral" role="integral" id="6" children="0,1,5"' +
       ' content="0">' +
@@ -7015,7 +7015,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<mrow><mi>\u222B</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
+      '<mrow><mi>&#x222B;</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
       '<mi>x</mi></mrow>',
       '<math>' +
       '<mrow type="integral" role="integral" id="9" children="0,8,7"' +
@@ -7041,7 +7041,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<munderover><mi>\u222B</mi><mn>0</mn><mn>10</mn></munderover>',
+      '<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover>',
       '<math>' +
       '<munderover type="limboth" role="integral" id="3" children="0,1,2">' +
       '<mi type="largeop" role="integral" id="0" parent="3">∫</mi>' +
@@ -7052,7 +7052,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<munder><mi>\u222B</mi><mi>X</mi></munder>',
+      '<munder><mi>&#x222B;</mi><mi>X</mi></munder>',
       '<math>' +
       '<munder type="limlower" role="integral" id="2" children="0,1">' +
       '<mi type="largeop" role="integral" id="0" parent="2">∫</mi>' +
@@ -7062,7 +7062,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<munderover><mi>\u222B</mi><mn>0</mn>' +
+      '<munderover><mi>&#x222B;</mi><mn>0</mn>' +
       '<mn>10</mn></munderover><mi>x</mi>' +
       '<mi>d</mi><mi>x</mi>',
       '<math type="integral" role="integral" id="9" children="3,4,8"' +
@@ -7086,7 +7086,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<munder><mi>\u222B</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>',
+      '<munder><mi>&#x222B;</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>',
       '<math type="integral" role="integral" id="5" children="2,3,4"' +
       ' content="0">' +
       '<munder type="limlower" role="integral" id="2" children="0,1"' +
@@ -7101,10 +7101,11 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<munderover><mi>\u222B</mi><mn>0</mn><mn>10</mn></munderover>' +
-      '<mi>x</mi><mi>dx</mi><mo>+</mo><munderover><mi>\u222B</mi><mn>10</mn>' +
-      '<mn>20</mn></munderover><mi>x</mi><mi>dx</mi><mo>=</mo><munderover>' +
-      '<mi>\u222B</mi><mn>0</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi>',
+      '<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover>' +
+      '<mi>x</mi><mi>dx</mi><mo>+</mo><munderover><mi>&#x222B;</mi>' +
+      '<mn>10</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi><mo>=</mo>' +
+      '<munderover><mi>&#x222B;</mi><mn>0</mn><mn>20</mn></munderover>' +
+      '<mi>x</mi><mi>dx</mi>',
       '<math type="relseq" role="equality" id="24" children="23,20"' +
       ' content="13">' +
       '<mrow type="infixop" role="addition" id="23" children="22,21"' +
@@ -7154,7 +7155,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
   );
 
   this.executeMathmlTest(
-      '<mi>\u222B</mi><mi>\u222B</mi><mi>\u222B</mi><mi>dx</mi>' +
+      '<mi>&#x222B;</mi><mi>&#x222B;</mi><mi>&#x222B;</mi><mi>dx</mi>' +
       '<mi>dy</mi><mi>dz</mi>',
       '<math type="integral" role="integral" id="9" children="0,8,5"' +
       ' content="0">' +
