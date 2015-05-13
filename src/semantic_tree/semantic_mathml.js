@@ -498,12 +498,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     return sre.SemanticMathml.mmultiscriptCase_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.LINE) {
-    if (semantic.childNodes.length) {
-      sre.SemanticMathml.walkTree_(
-          /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
-    }
-    sre.SemanticMathml.setAttributes_(mml, semantic);
-    return mml;
+    return sre.SemanticMathml.lineCase_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
@@ -511,6 +506,23 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     return sre.SemanticMathml.tableCase_(semantic, mml);
   }
   return null;
+};
+
+
+/**
+ * Deals with lines in tables.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node.
+ * @param {!Element} mml The corresponding MathML node.
+ * @return {Element} The enriched MathML node for the special case.
+ * @private
+ */
+sre.SemanticMathml.lineCase_ = function(semantic, mml) {
+  if (semantic.childNodes.length) {
+    sre.SemanticMathml.walkTree_(
+          /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
+  }
+  sre.SemanticMathml.setAttributes_(mml, semantic);
+  return mml;
 };
 
 
