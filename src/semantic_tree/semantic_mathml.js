@@ -1013,12 +1013,8 @@ sre.SemanticMathml.getInnerNode_ = function(node) {
 sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
   var result = [];
   while (list1.length || list2.length) {
-    if (list1.length) {
-      result.push(list1.shift());
-    }
-    if (list2.length) {
-      result.push(list2.shift());
-    }
+    list1.length && result.push(list1.shift());
+    list2.length && result.push(list2.shift());
   }
   return result;
 };
