@@ -174,7 +174,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
       newNode = /**@type{!Element}*/(attached.parentNode);
     } else {
       sre.Debugger.getInstance().output('Walktree Case 2.2');
-      newNode = sre.SemanticMathml.getInnerNode_(/**@type{!Element}*/(newNode));
+      newNode = sre.SemanticMathml.getInnerNode_(newNode);
     }
   }
   newNode = sre.SemanticMathml.rewriteMfenced_(newNode);
@@ -487,15 +487,15 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
        semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
       (mmlTag === 'MUNDEROVER' &&
       semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
-    return sre.SemanticMathml.doubleScriptCase_(semantic);
+    return sre.SemanticMathml.doubleScriptCase_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
-    return sre.SemanticMathml.tensorCase_(semantic);
+    return sre.SemanticMathml.tensorCase_(semantic, mml);
   }
   if (mmlTag === 'MMULTISCRIPTS' &&
       (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    return sre.SemanticMathml.mmultiscriptCase_(semantic);
+    return sre.SemanticMathml.mmultiscriptCase_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.LINE) {
     if (semantic.childNodes.length) {
@@ -547,10 +547,11 @@ sre.SemanticMathml.tableCase_ = function(semantic, mml) {
 /**
  * Deals with double scripts as in msubsup or munderover.
  * @param {!sre.SemanticTree.Node} semantic The semantic node.
+ * @param {!Element} mml The corresponding MathML node.
  * @return {Element} The enriched MathML node for the special case.
  * @private
  */
-sre.SemanticMathml.doubleScriptCase_ = function(semantic) {
+sre.SemanticMathml.doubleScriptCase_ = function(semantic, mml) {
   // TODO (sorge) Needs some refactoring!
   //
   var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
@@ -560,33 +561,32 @@ sre.SemanticMathml.doubleScriptCase_ = function(semantic) {
   var supMml = sre.SemanticMathml.walkTree_(supSem);
   var baseMml = sre.SemanticMathml.walkTree_(baseSem);
   var subMml = sre.SemanticMathml.walkTree_(subSem);
-  var newNode = /**@type{!Element}*/(semantic.mathmlTree);
-  sre.SemanticMathml.setAttributes_(newNode, semantic);
-  newNode.setAttribute(
+  sre.SemanticMathml.setAttributes_(mml, semantic);
+  mml.setAttribute(
       sre.SemanticMathml.Attribute.CHILDREN,
       sre.SemanticMathml.makeIdList_([baseSem, subSem, supSem]));
   [baseMml, subMml, supMml].forEach(function(child) {
     (sre.SemanticMathml.getInnerNode_(child)).setAttribute(
         sre.SemanticMathml.Attribute.PARENT,
-        newNode.getAttribute(sre.SemanticMathml.Attribute.ID));
+        mml.getAttribute(sre.SemanticMathml.Attribute.ID));
   });
-  newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
+  mml.setAttribute(sre.SemanticMathml.Attribute.TYPE,
       ignore.role);
   sre.SemanticMathml.addCollapsedAttribute_(
-      newNode, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
-  return newNode;
+      mml, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
+  return mml;
 };
 
 
 /**
  * Deals with degenerated Tensors.
  * @param {!sre.SemanticTree.Node} tensor The tensor node.
+ * @param {!Element} mml The corresponding MathML node.
  * @return {Element} The enriched MathML node for that tensor.
  * @private
  */
-sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
-  var newNode = /**@type{!Element}*/(tensor.mathmlTree);
-  sre.SemanticMathml.setAttributes_(newNode, tensor);
+sre.SemanticMathml.mmultiscriptCase_ = function(tensor, mml) {
+  sre.SemanticMathml.setAttributes_(mml, tensor);
   if (tensor.childNodes[0] &&
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
     var ignore = tensor.childNodes[0];
@@ -594,11 +594,11 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
     var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
     var rsub = sre.SemanticMathml.multiscriptIndex_(ignore.childNodes[1]);
     var collapsed = [tensor.id, [ignore.id, baseSem.id, rsub], rsup];
-    sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
-    newNode.setAttribute(sre.SemanticMathml.Attribute.TYPE,
-                         ignore.role);
+    sre.SemanticMathml.addCollapsedAttribute_(mml, collapsed);
+    mml.setAttribute(sre.SemanticMathml.Attribute.TYPE,
+        ignore.role);
     sre.SemanticMathml.completeMultiscript_(
-        tensor, newNode,
+        tensor, mml,
         sre.SemanticMathml.interleaveIds_(rsub, rsup),
         []);
   } else {
@@ -606,7 +606,7 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
     var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
     if (!sre.SemanticMathml.simpleCollapseStructure_(rsup)) {
       var collapsed = [tensor.id, baseSem.id, rsup];
-      sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
+      sre.SemanticMathml.addCollapsedAttribute_(mml, collapsed);
     }
   }
   var childIds = sre.SemanticMathml.collapsedLeafs_(rsub || [], rsup);
@@ -614,40 +614,40 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
   sre.SemanticMathml.getInnerNode_(base).setAttribute(
       sre.SemanticMathml.Attribute.PARENT, tensor.id);
   childIds.unshift(baseSem.id);
-  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                       childIds.join(','));
-  return newNode;
+  mml.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+      childIds.join(','));
+  return mml;
 };
 
 
 /**
  * Deals with tensor nodes by readjusting the index structure.
  * @param {!sre.SemanticTree.Node} tensor The tensor node.
+ * @param {!Element} mml The corresponding MathML node.
  * @return {Element} The enriched MathML node for that tensor.
  * @private
  */
-sre.SemanticMathml.tensorCase_ = function(tensor) {
+sre.SemanticMathml.tensorCase_ = function(tensor, mml) {
   sre.SemanticMathml.walkTree_(
       /**@type{!sre.SemanticTree.Node}*/(tensor.childNodes[0]));
   var lsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
   var lsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[2]);
   var rsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[3]);
   var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[4]);
-  var newNode = /**@type{!Element}*/(tensor.mathmlTree);
-  sre.SemanticMathml.setAttributes_(newNode, tensor);
+  sre.SemanticMathml.setAttributes_(mml, tensor);
   var collapsed = [tensor.id, lsub, lsup, rsub, rsup];
   if (!collapsed.every(sre.SemanticMathml.simpleCollapseStructure_)) {
-    sre.SemanticMathml.addCollapsedAttribute_(newNode, collapsed);
+    sre.SemanticMathml.addCollapsedAttribute_(mml, collapsed);
   }
   var childIds = sre.SemanticMathml.collapsedLeafs_(lsub, lsup, rsub, rsup);
   childIds.unshift(tensor.childNodes[0].id);
-  newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
-                       childIds.join(','));
+  mml.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
+      childIds.join(','));
   sre.SemanticMathml.completeMultiscript_(
-      tensor, newNode,
+      tensor, mml,
       sre.SemanticMathml.interleaveIds_(rsub, rsup),
       sre.SemanticMathml.interleaveIds_(lsub, lsup));
-  return newNode;
+  return mml;
 };
 
 
