@@ -324,7 +324,7 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
       children.slice().reverse()));
   if (leftMost === rightMost) {
     return {valid: true,
-      node: leftMost}; //sre.SemanticMathml.ascendNewNode_(leftMost)};
+      node: leftMost};
   }
   var leftPath = sre.SemanticMathml.pathToRoot_(leftMost);
   var rightPath = sre.SemanticMathml.pathToRoot_(
@@ -503,7 +503,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
           /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
     }
     sre.SemanticMathml.setAttributes_(mml, semantic);
-    return sre.SemanticMathml.ascendNewNode_(mml);
+    return mml;
   }
   if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
@@ -540,7 +540,7 @@ sre.SemanticMathml.tableCase_ = function(semantic, mml) {
     mml = sre.SemanticMathml.introduceNewLayer_(newChildren);
   }
   sre.SemanticMathml.setAttributes_(mml, semantic);
-  return sre.SemanticMathml.ascendNewNode_(mml);
+  return mml;
 };
 
 
@@ -616,7 +616,7 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor) {
   childIds.unshift(baseSem.id);
   newNode.setAttribute(sre.SemanticMathml.Attribute.CHILDREN,
                        childIds.join(','));
-  return sre.SemanticMathml.ascendNewNode_(newNode);
+  return newNode;
 };
 
 
@@ -647,7 +647,7 @@ sre.SemanticMathml.tensorCase_ = function(tensor) {
       tensor, newNode,
       sre.SemanticMathml.interleaveIds_(rsub, rsup),
       sre.SemanticMathml.interleaveIds_(lsub, lsup));
-  return sre.SemanticMathml.ascendNewNode_(newNode);
+  return newNode;
 };
 
 
