@@ -485,8 +485,8 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   var mmlTag = sre.SemanticUtil.tagName(mml);
   if ((mmlTag === 'MSUBSUP' &&
        semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
-       (mmlTag === 'MUNDEROVER' &&
-        semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
+      (mmlTag === 'MUNDEROVER' &&
+      semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
     return sre.SemanticMathml.doubleScriptCase_(semantic);
   }
   if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
@@ -508,27 +508,39 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
       semantic.type === sre.SemanticAttr.Type.CASES) {
-    var lfence = sre.SemanticMathml.cloneContentNode_(
-        /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
-    var rfence = semantic.contentNodes[1] ?
-        sre.SemanticMathml.cloneContentNode_(
-            /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
-        null;
-    semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
-    if (mmlTag === 'MFENCED') {
-      var children = mml.childNodes;
-      mml.insertBefore(lfence, children[0]);
-      rfence && mml.appendChild(rfence);
-      mml = sre.SemanticMathml.rewriteMfenced_(mml);
-    } else {
-      var newChildren = [lfence, mml];
-      rfence && newChildren.push(rfence);
-      mml = sre.SemanticMathml.introduceNewLayer_(newChildren);
-    }
-    sre.SemanticMathml.setAttributes_(mml, semantic);
-    return sre.SemanticMathml.ascendNewNode_(mml);
+    return sre.SemanticMathml.tableCase_(semantic, mml);
   }
   return null;
+};
+
+
+/**
+ * Deals with fenced tables and rewrites mfenced nodes if necessary.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node.
+ * @param {!Element} mml The corresponding MathML node.
+ * @return {Element} The enriched MathML node for the special case.
+ * @private
+ */
+sre.SemanticMathml.tableCase_ = function(semantic, mml) {
+  var lfence = sre.SemanticMathml.cloneContentNode_(
+      /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
+  var rfence = semantic.contentNodes[1] ?
+      sre.SemanticMathml.cloneContentNode_(
+          /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
+      null;
+  semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
+  if (sre.SemanticUtil.tagName(mml) === 'MFENCED') {
+    var children = mml.childNodes;
+    mml.insertBefore(lfence, children[0]);
+    rfence && mml.appendChild(rfence);
+    mml = sre.SemanticMathml.rewriteMfenced_(mml);
+  } else {
+    var newChildren = [lfence, mml];
+    rfence && newChildren.push(rfence);
+    mml = sre.SemanticMathml.introduceNewLayer_(newChildren);
+  }
+  sre.SemanticMathml.setAttributes_(mml, semantic);
+  return sre.SemanticMathml.ascendNewNode_(mml);
 };
 
 
