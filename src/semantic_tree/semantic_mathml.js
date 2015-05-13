@@ -487,23 +487,23 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
        semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
       (mmlTag === 'MUNDEROVER' &&
       semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
-    return sre.SemanticMathml.doubleScriptCase_(semantic, mml);
+    return sre.SemanticMathml.caseDoubleScript_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
-    return sre.SemanticMathml.tensorCase_(semantic, mml);
+    return sre.SemanticMathml.caseTensor_(semantic, mml);
   }
   if (mmlTag === 'MMULTISCRIPTS' &&
       (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    return sre.SemanticMathml.mmultiscriptCase_(semantic, mml);
+    return sre.SemanticMathml.caseMmultiscript_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.LINE) {
-    return sre.SemanticMathml.lineCase_(semantic, mml);
+    return sre.SemanticMathml.caseLine_(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
       semantic.type === sre.SemanticAttr.Type.CASES) {
-    return sre.SemanticMathml.tableCase_(semantic, mml);
+    return sre.SemanticMathml.caseTable_(semantic, mml);
   }
   return null;
 };
@@ -516,7 +516,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  * @return {Element} The enriched MathML node for the special case.
  * @private
  */
-sre.SemanticMathml.lineCase_ = function(semantic, mml) {
+sre.SemanticMathml.caseLine_ = function(semantic, mml) {
   if (semantic.childNodes.length) {
     sre.SemanticMathml.walkTree_(
           /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
@@ -533,7 +533,7 @@ sre.SemanticMathml.lineCase_ = function(semantic, mml) {
  * @return {Element} The enriched MathML node for the special case.
  * @private
  */
-sre.SemanticMathml.tableCase_ = function(semantic, mml) {
+sre.SemanticMathml.caseTable_ = function(semantic, mml) {
   var lfence = sre.SemanticMathml.cloneContentNode_(
       /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
   var rfence = semantic.contentNodes[1] ?
@@ -563,7 +563,7 @@ sre.SemanticMathml.tableCase_ = function(semantic, mml) {
  * @return {Element} The enriched MathML node for the special case.
  * @private
  */
-sre.SemanticMathml.doubleScriptCase_ = function(semantic, mml) {
+sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
   // TODO (sorge) Needs some refactoring!
   //
   var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
@@ -597,7 +597,7 @@ sre.SemanticMathml.doubleScriptCase_ = function(semantic, mml) {
  * @return {Element} The enriched MathML node for that tensor.
  * @private
  */
-sre.SemanticMathml.mmultiscriptCase_ = function(tensor, mml) {
+sre.SemanticMathml.caseMmultiscript_ = function(tensor, mml) {
   sre.SemanticMathml.setAttributes_(mml, tensor);
   if (tensor.childNodes[0] &&
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
@@ -639,7 +639,7 @@ sre.SemanticMathml.mmultiscriptCase_ = function(tensor, mml) {
  * @return {Element} The enriched MathML node for that tensor.
  * @private
  */
-sre.SemanticMathml.tensorCase_ = function(tensor, mml) {
+sre.SemanticMathml.caseTensor_ = function(tensor, mml) {
   sre.SemanticMathml.walkTree_(
       /**@type{!sre.SemanticTree.Node}*/(tensor.childNodes[0]));
   var lsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
