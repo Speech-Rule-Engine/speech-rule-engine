@@ -478,35 +478,36 @@ sre.SemanticMathml.parentNode_ = function(element) {
  * @private
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
-  if (semantic.mathmlTree &&
-      ((sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MSUBSUP' &&
-        semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
-       (sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MUNDEROVER' &&
-        semantic.type === sre.SemanticAttr.Type.OVERSCORE))) {
+  if (!semantic.mathmlTree) {
+    return null;
+  }
+  var mml = semantic.mathmlTree;
+  var mmlTag = sre.SemanticUtil.tagName(mml);
+  if ((mmlTag === 'MSUBSUP' &&
+       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
+       (mmlTag === 'MUNDEROVER' &&
+        semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
     return sre.SemanticMathml.doubleScriptCase_(semantic);
   }
   if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
     return sre.SemanticMathml.tensorCase_(semantic);
   }
-  if (semantic.mathmlTree &&
-      sre.SemanticUtil.tagName(semantic.mathmlTree) === 'MMULTISCRIPTS' &&
+  if (mmlTag === 'MMULTISCRIPTS' &&
       (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
     return sre.SemanticMathml.mmultiscriptCase_(semantic);
   }
-  if (semantic.mathmlTree &&
-      semantic.type === sre.SemanticAttr.Type.LINE) {
+  if (semantic.type === sre.SemanticAttr.Type.LINE) {
     if (semantic.childNodes.length) {
       sre.SemanticMathml.walkTree_(
           /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
     }
-    sre.SemanticMathml.setAttributes_(semantic.mathmlTree, semantic);
-    return sre.SemanticMathml.ascendNewNode_(semantic.mathmlTree);
+    sre.SemanticMathml.setAttributes_(mml, semantic);
+    return sre.SemanticMathml.ascendNewNode_(mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
       semantic.type === sre.SemanticAttr.Type.CASES) {
-    var newNode = semantic.mathmlTree;
     var lfence = sre.SemanticMathml.cloneContentNode_(
         /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
     var rfence = semantic.contentNodes[1] ?
@@ -514,18 +515,18 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
             /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
         null;
     semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
-    if (sre.SemanticUtil.tagName(newNode) === 'MFENCED') {
-      var children = newNode.childNodes;
-      newNode.insertBefore(lfence, children[0]);
-      rfence && newNode.appendChild(rfence);
-      newNode = sre.SemanticMathml.rewriteMfenced_(newNode);
+    if (mmlTag === 'MFENCED') {
+      var children = mml.childNodes;
+      mml.insertBefore(lfence, children[0]);
+      rfence && mml.appendChild(rfence);
+      mml = sre.SemanticMathml.rewriteMfenced_(mml);
     } else {
-      var newChildren = [lfence, newNode];
+      var newChildren = [lfence, mml];
       rfence && newChildren.push(rfence);
-      newNode = sre.SemanticMathml.introduceNewLayer_(newChildren);
+      mml = sre.SemanticMathml.introduceNewLayer_(newChildren);
     }
-    sre.SemanticMathml.setAttributes_(newNode, semantic);
-    return sre.SemanticMathml.ascendNewNode_(newNode);
+    sre.SemanticMathml.setAttributes_(mml, semantic);
+    return sre.SemanticMathml.ascendNewNode_(mml);
   }
   return null;
 };
