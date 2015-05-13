@@ -324,7 +324,7 @@ sre.SemanticMathml.mathmlLca_ = function(children) {
       children.slice().reverse()));
   if (leftMost === rightMost) {
     return {valid: true,
-            node: leftMost}; //sre.SemanticMathml.ascendNewNode_(leftMost)};
+      node: leftMost}; //sre.SemanticMathml.ascendNewNode_(leftMost)};
   }
   var leftPath = sre.SemanticMathml.pathToRoot_(leftMost);
   var rightPath = sre.SemanticMathml.pathToRoot_(
@@ -510,16 +510,16 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
     var lfence = sre.SemanticMathml.cloneContentNode_(
         /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
     var rfence = semantic.contentNodes[1] ?
-          sre.SemanticMathml.cloneContentNode_(
+        sre.SemanticMathml.cloneContentNode_(
             /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
-          null;
+        null;
+    semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
     if (sre.SemanticUtil.tagName(newNode) === 'MFENCED') {
       var children = newNode.childNodes;
       newNode.insertBefore(lfence, children[0]);
       rfence && newNode.appendChild(rfence);
       newNode = sre.SemanticMathml.rewriteMfenced_(newNode);
     } else {
-      semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
       var newChildren = [lfence, newNode];
       rfence && newChildren.push(rfence);
       newNode = sre.SemanticMathml.introduceNewLayer_(newChildren);
@@ -914,6 +914,7 @@ sre.SemanticMathml.combineContentChildren_ = function(
  * Rewrites an mfenced node to an mrow node.
  * @param {!Element} mml The MathML node.
  * @return {!Element} The rewritten element.
+ * @private
  */
 sre.SemanticMathml.rewriteMfenced_ = function(mml) {
   if (sre.SemanticUtil.tagName(mml) !== 'MFENCED') {
@@ -926,7 +927,7 @@ sre.SemanticMathml.rewriteMfenced_ = function(mml) {
     }
   }
   sre.DomUtil.toArray(mml.childNodes).
-    forEach(function(x) {newNode.appendChild(x);});
+      forEach(function(x) {newNode.appendChild(x);});
   sre.DomUtil.replaceNode(mml, newNode);
   return newNode;
 };
