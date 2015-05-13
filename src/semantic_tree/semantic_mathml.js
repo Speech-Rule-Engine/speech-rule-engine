@@ -230,8 +230,8 @@ sre.SemanticMathml.introduceNewLayer_ = function(children) {
  * in the newChildren list. If there are elements in newChildren not in the
  * children of node, these are ignored.
  * @param {!Element} node The node whose children are picked.
- * @param {!Array<Element>} newChildren The list of new children.
- * @return {!Array<Element>} The minimal subset.
+ * @param {!Array.<Element>} newChildren The list of new children.
+ * @return {!Array.<Element>} The minimal subset.
  * @private
  */
 sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
@@ -252,7 +252,7 @@ sre.SemanticMathml.childrenSubset_ = function(node, newChildren) {
 /**
  * Merges a list of new children with the children of the given node.
  * @param {!Element} node The node whose children are merged.
- * @param {!Array<Element>} newChildren The list of children to be merged.
+ * @param {!Array.<Element>} newChildren The list of children to be merged.
  * @private
  */
 sre.SemanticMathml.mergeChildren_ = function(node, newChildren) {
