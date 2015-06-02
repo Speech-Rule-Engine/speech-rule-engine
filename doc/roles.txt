@@ -1,0 +1,82 @@
+  // Numbers.
+  INTEGER: 'integer',
+  FLOAT: 'float',
+  OTHERNUMBER: 'othernumber',
+  MIXED: 'mixed',
+
+  // Accents.
+  MULTIACCENT: 'multiaccent',
+  OVERACCENT: 'overaccent',
+  UNDERACCENT: 'underaccent',
+
+  // Index and tensor roles.
+  SUBSUP: 'subsup',
+  LEFTSUB: 'leftsub',
+  LEFTSUPER: 'leftsuper',
+  RIGHTSUB: 'rightsub',
+  RIGHTSUPER: 'rightsuper',
+
+  // Fenced.
+  LEFTRIGHT: 'leftright',
+  ABOVEBELOW: 'abovebelow',
+
+  // Text.
+  STRING: 'string',
+
+  // Punctuated elements.
+  SEQUENCE: 'sequence',
+  ENDPUNCT: 'endpunct',
+  STARTPUNCT: 'startpunct',
+  TEXT: 'text',
+
+  // Operators.
+  NEGATIVE: 'negative',
+  NEGATION: 'negation',
+  MULTIOP: 'multiop',
+
+  // Functions.
+  LIMFUNC: 'limit function',
+  INFIXFUNC: 'infix function',
+  PREFIXFUNC: 'prefix function',
+  POSTFIXFUNC: 'postfix function',
+  SIMPLEFUNC: 'simple function',
+
+  // Large operators.
+  SUM: 'sum',
+  INTEGRAL: 'integral',
+
+  // Binary operations.
+  ADDITION: 'addition',
+  MULTIPLICATION: 'multiplication',
+  SUBTRACTION: 'subtraction',
+  IMPLICIT: 'implicit',
+
+  // Fractions.
+  DIVISION: 'division',
+  VULGAR: 'vulgar',
+
+  // Relations.
+  EQUALITY: 'equality',
+  INEQUALITY: 'inequality',
+  ELEMENT: 'element',
+  BINREL: 'binrel',
+  ARROW: 'arrow',
+
+  // Roles of matrices or vectors.
+  DETERMINANT: 'determinant',
+  ROWVECTOR: 'rowvector',
+  BINOMIAL: 'binomial',
+  SQUAREMATRIX: 'squarematrix',
+
+  // Roles of rows, lines, cells.
+  // They mirror the different types for tables, unless a more specific role is
+  // known.
+  MULTILINE: 'multiline',
+  MATRIX: 'matrix',
+  VECTOR: 'vector',
+  CASES: 'cases',
+  TABLE: 'table',
+
+  // General
+  UNKNOWN: 'unknown',
+  PROTECTED: 'protected'

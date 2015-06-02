@@ -132,6 +132,51 @@ particular symbol. As example consider $f$ in the expression $f(x)$. It gets
 assigned type \texttt{identifier} and role \texttt{latinletter}. However, the
 role will eventually change to \texttt{prefix function}.
 
+\subsection{Symbol Roles}
+\label{sec:symbol-roles}
+
+\paragraph{Roles for type \texttt{punctuation}}
+
+\texttt{comma, ellipsis, fullstop, dash, prime, unknown}
+
+\texttt{vbar, openfence, closefence} are punctuation elements, where we have a
+fence (see next paragraph), which is not used as a fence, i.e., it is solitary
+and has no counterpart.
+
+\texttt{dummy} is the usage of invisible comma as the dummy separator for text.
+
+\texttt{application} is the usage of unicode function application symbol.
+
+\paragraph{Roles for type \texttt{fence}}
+
+\texttt{open, close, top, bottom, neutral}
+
+
+\paragraph{Roles for type \texttt{identifier}}
+
+\texttt{latinletter, greekletter, otherletter, unknown}
+
+
+
+\subsection{Roles for Compound Types}
+
+\paragraph{\texttt{number}}
+
+\texttt{integer} exclusively numerical.
+
+\texttt{float} numerical with punctuation.
+
+\texttt{othernumber} other numbers, that might contain alpha characters, etc.
+
+\texttt{mixed} An integer with an vulgar fraction and an implicit multiplication between the two.
+
+\paragraph{\texttt{unit}}
+
+When a term has been identified as type \texttt{unit} and is also assigned the
+same role. This can be propagated to more complex structures, in particular, of
+type \texttt{infixop} with multiplication and \texttt{fraction}.
+
+
 \subsection{Tables, Vectors, Matrices}
 
 Unless some special case can be identified the role will be unknown.
@@ -832,3 +877,8 @@ Simple Schema:
 
 \end{document}
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
