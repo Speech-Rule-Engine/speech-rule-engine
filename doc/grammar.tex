@@ -58,7 +58,6 @@ numbers, functions, units) and never change.
   relation & Relation symbol, e.g. equals.\\
   largeop & e.g. Sum, product, integral.\\
   function & Some named function.\\
-  unit & Identifier that describes a unit.
 \end{tabular}
 
 \subsection{Compound Types}
@@ -159,8 +158,19 @@ role will eventually change to \texttt{prefix function}.
   identifier & latinletter & Latin character.\\
               & greekletter & Greek character.\\
               & otherletter & Character from some other alphabet. Currently Hebrew.\\
+              & unit & A unit name. Normally comes from \mathml{MathML-Unit} class attribute.\\
               & unknown & a designated identifier (\mathml{mi}) that we could not be classified any
-                          further.\\
+                          further. Usually multi character identifier.\\
+  text   & text & regular text.\\
+              & string & text has been identified as string. Usually comes from \mathml{ms} elements.\\
+  number & integer & exclusively numerical.\\
+              & float & numerical with punctuation.\\
+              & othernumber & other numbers, that might contain alpha characters, etc.\\
+              & mixed & An integer with a vulgar fraction and an implicit
+                        multiplication between the two.\\
+         & latinletter & single character that has been explicitly designated as number by \mathml{mn}.\\
+         & greekletter & ditto.\\
+         & otherletter & ditto. \\
   operator    & addition & Addition symbol.\\
               & multiplication & Multiplication symbol.\\
               & subtraction & Subtraction symbol.\\
@@ -173,21 +183,13 @@ role will eventually change to \texttt{prefix function}.
               & integral & Integral symbols.\\
   function & limfunc & Limit functions.\\
               & prefixfunc & Prefix functions like sin, cos, etc.\\
-  unit & unit & \\
 \end{tabular}
 
 
 \subsection{Roles for Compound Types}
 
-\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
-  number & integer & exclusively numerical.\\
-         & float & numerical with punctuation.\\
-         & othernumber & other numbers, that might contain alpha characters, etc.\\
-         & mixed & An integer with a vulgar fraction and an implicit
-           multiplication between the two.\\
-  text   & text & \\
-         & string & text has been identified as string. Usually comes from \mathml{ms} elements.
-\end{tabular}
+% \begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+% \end{tabular}
 
 \paragraph{Roles for type \texttt{unit}: }
 
