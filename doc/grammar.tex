@@ -24,6 +24,7 @@
   }
 }
 \def\depr#1{#1 (\textit{Deprecated?})}
+\def\mathml#1{\texttt{#1}}
 
 
 \title{Speech Rule Engine:\\ Semantic Tree Grammar}
@@ -69,9 +70,9 @@ They are computed once and then never change.
 \begin{tabular}{>{\tt}ll}
 \multicolumn{2}{l}{\textbf{Compound Symbols}}\\
 accent & \depr{Accented symbols}\\
-fenced & \\
-fraction & \\
-punctuated & \\
+fenced & Fenced expression\\
+fraction & Fractions \\
+punctuated & List of punctuated elements\\
 \multicolumn{2}{l}{\textbf{Relations}}\\
 relseq & Relation sequence of a single relation.\\
 multirel & Relation sequence containing at least two different relations.\\
@@ -82,21 +83,23 @@ postfixop & Postfix operator like \texttt{x++, y--}\\
 \end{tabular}
 
 \begin{tabular}{>{\tt}lp{13cm}}
-\multicolumn{2}{l}{\textbf{Function and big operator applications}}\\
-appl & General function application\\
-integral & \\
-bigop & \\
-sqrt & \\
-root & \\
-\multicolumn{2}{l}{\textbf{Big operators or functions with limits or indices}}\\
-limupper & \\
-limlower & \\
-limboth & \\
-subscript & subscript, can have role subsup, meaning that it originated from an msubsup.\\
-superscript & superscript\\
-underscore & \\
-overscore & \\
-tensor & \\
+  \multicolumn{2}{l}{\textbf{Function and big operator applications}}\\
+  appl & General function application\\
+  integral & Integral expression\\
+  bigop & Big operator expression such as a sum or product.\\
+  sqrt & Square root expression, i.e., surds without argument or argument $=2$\\
+  root & Root expression, i.e., surds with argument $\not=2$ \\
+  \multicolumn{2}{l}{\textbf{Big operators or functions with limits or indices}}\\
+  limupper & Large operators or limit functions with upper limit expressions. 
+             Note the difference to the \textit{script} and \textit{score} types.\\
+  limlower & Large operators or limit functions with lower limit. \\
+  limboth & Large operators or limit functions with upper and lower limit. \\
+  subscript & Subscript expression; can have role subsup, meaning that it originated from an msubsup.\\
+  superscript & Superscript expression.\\
+  underscore & Stacked expression with underscript.\\
+  overscore & Stacked expression with overscript.\\
+  tensor & Tensor with four indices. At least one left index is present otherwise it
+           would be sub-superscript expression. \\
 
   \multicolumn{2}{l}{\textbf{Tables and their elements}}\\
   table & A layout element with multiple columns and one or multipled rows. It contains rows and cells.\\
@@ -117,8 +120,8 @@ enclose & Enclosed (counterpart for menclosed), its role is the type of enclosur
 & This is the only element that has not a standard role!\\
 
 \multicolumn{2}{l}{\textbf{General}}\\
-unknown & \\
-empty & \\
+unknown & Unknown expression or symbol.\\
+empty & Empty element.\\
 \end{tabular}
 
 \section{Roles}
@@ -135,42 +138,56 @@ role will eventually change to \texttt{prefix function}.
 \subsection{Symbol Roles}
 \label{sec:symbol-roles}
 
-\paragraph{Roles for type \texttt{punctuation}:}
-
-\begin{description}
-\item[\texttt{comma, ellipsis, fullstop, dash, prime, unknown}]
-\item[\texttt{vbar, openfence, closefence}] are punctuation elements, where we have a
-fence (see next paragraph), which is not used as a fence, i.e., it is solitary
-and has no counterpart.
-\item[\texttt{dummy}] is the usage of invisible comma as the dummy separator for text.
-\item[\texttt{application}] is the usage of unicode function application symbol.
-\end{description}
-
-
-
-\paragraph{Roles for type \texttt{fence}:}
-
-\texttt{open, close, top, bottom, neutral}
-
-
-\paragraph{Roles for type \texttt{identifier}:}
-
-\texttt{latinletter, greekletter, otherletter, unknown}
-
-
-
+\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  punctuation & comma & comma characters\\
+              & dash & dash characters of differing length.\\
+              & ellipsis & unicode ellipses characters. Does not include sequences of separate full stops.\\
+              & fullstop & single period characters.\\
+              & prime & prime characters (includes multiple primes)\\
+              & openfence & an open fence, which is not used as a fence, i.e., it is solitary
+                            and has no counterpart. It is thus considered a punctuation element.\\
+              & closefence & ditto for closed fence.\\
+              & vbar & ditto for neutral fence.\\
+              & dummy & usage of invisible comma as the dummy separator for text.\\
+              & application & usage of unicode function application symbol.\\
+              & unknown & Punctuation element with unknown role.\\
+  fence & open & opening fence.\\
+              & close & closing fence.\\
+              & top & top fence (e.g., overbrace).\\
+              & bottom & bottom fence (e.g., underbrace).\\
+              & neutral & neutral fence (vertical bar, double bar, etc.)\\
+  identifier & latinletter & Latin character.\\
+              & greekletter & Greek character.\\
+              & otherletter & Character from some other alphabet. Currently Hebrew.\\
+              & unknown & a designated identifier (\mathml{mi}) that we could not be classified any
+                          further.\\
+  operator    & addition & Addition symbol.\\
+              & multiplication & Multiplication symbol.\\
+              & subtraction & Subtraction symbol.\\
+              & division & Division symbol.\\
+  relation    & equality & Equality symbol. Also equivalence, etc.\\
+              & inequality & Inequality symbol.\\
+              & arrow & Arrow symbol.\\
+              & unknown & Unknown relation.\\
+  largeop & sum & Large, sum-like operators. E.g. sum, product, co-product, multi-conjunctions.\\
+              & integral & Integral symbols.\\
+  function & limfunc & Limit functions.\\
+              & prefixfunc & Prefix functions like sin, cos, etc.\\
+  unit & unit & \\
+\end{tabular}
 
 
 \subsection{Roles for Compound Types}
 
-\paragraph{Roles for type \texttt{number}:}
-
-\begin{description}
-\item[\texttt{integer}] exclusively numerical.
-\item[\texttt{float}] numerical with punctuation.
-\item[\texttt{othernumber}] other numbers, that might contain alpha characters, etc.
-\item[\texttt{mixed}] An integer with an vulgar fraction and an implicit multiplication between the two.
-\end{description}
+\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  number & integer & exclusively numerical.\\
+         & float & numerical with punctuation.\\
+         & othernumber & other numbers, that might contain alpha characters, etc.\\
+         & mixed & An integer with a vulgar fraction and an implicit
+           multiplication between the two.\\
+  text   & text & \\
+         & string & text has been identified as string. Usually comes from \mathml{ms} elements.
+\end{tabular}
 
 \paragraph{Roles for type \texttt{unit}: }
 
