@@ -6,7 +6,7 @@
 PREFIX = $(HOME)
 
 # Nodejs location.
-NODEJS = /usr/bin/nodejs
+NODEJS = node
 NODE_MODULES = $(PREFIX)/node_modules
 
 # Ideally, no changes necessary beyond this point!
