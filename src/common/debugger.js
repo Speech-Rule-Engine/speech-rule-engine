@@ -41,7 +41,7 @@ sre.Debugger = function() {
    */
   this.outputFunction_ = console.log;
   /**
-   * @type {?Object} Output stream of the debug file.
+   * @type {?stream} Output stream of the debug file.
    * @private
    */
   this.stream_ = null;
