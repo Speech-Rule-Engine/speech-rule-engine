@@ -18,3 +18,10 @@ var fs;
 fs.readFileSync = function(name) { };
 fs.writeFileSync = function(name, data) { };
 fs.createWriteStream = function(name) { };
+
+
+/**
+ * @typedef{stream}
+ */
+var stream;
+stream.on = function(msg, fnc) { };
