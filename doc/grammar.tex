@@ -166,11 +166,12 @@ role will eventually change to \texttt{prefix function}.
   number & integer & exclusively numerical.\\
               & float & numerical with punctuation.\\
               & othernumber & other numbers, that might contain alpha characters, etc.\\
-              & mixed & An integer with a vulgar fraction and an implicit
-                        multiplication between the two.\\
-         & latinletter & single character that has been explicitly designated as number by \mathml{mn}.\\
-         & greekletter & ditto.\\
-         & otherletter & ditto. \\
+              & mixed & An integer with a vulgar fraction and an implicit multiplication between the two.
+                        Note that this is actually a compound element with two children: a number 
+                        with role integer and a fraction with role vulgar.\\
+              & latinletter & single character that has been explicitly designated as number by \mathml{mn}.\\
+              & greekletter & ditto.\\
+              & otherletter & ditto. \\
   operator    & addition & Addition symbol.\\
               & multiplication & Multiplication symbol.\\
               & subtraction & Subtraction symbol.\\
@@ -188,14 +189,32 @@ role will eventually change to \texttt{prefix function}.
 
 \subsection{Roles for Compound Types}
 
-% \begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
-% \end{tabular}
+\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  punctuated & sequence & A sequence of punctuated elements. I.e., at least two non punctuation elements
+                          separated a punctuation element. It can have punctations at start or end.\\
+             & startpunct & Element with a single punctuation as the front.\\
+             & endpunct & Element with a single punctuation as the end. Note, that for elements with
+                          punctuations at front and end we get a sequence.\\
+             & text & Elements separated by one or more dummy punctuation (invisible comma).\\
+  fenced & leftright & Elements with fences at start and end.\\
+             & abovebelow & \depr{Elements with fences above and below.} \\
+  fraction & vulgar & fraction of two integers.\\
+             & division & any other fraction.\\
+\end{tabular}
 
-\paragraph{Roles for type \texttt{unit}: }
+\subsection{The \texttt{unit} role}
 
-When a term has been identified as type \texttt{unit} it is also assigned the
-same role. This can be propagated to more complex structures, in particular, of
-type \texttt{infixop} with multiplication and \texttt{fraction}.
+In addition to being the role of an identifier, \texttt{unit} can be propagated
+to more complex structures. In particular, to types \texttt{subscript,
+  superscript, fraction} and \texttt{infixop} with multiplication.
+
+\subsection{Tensors}
+
+The four indices in the tensor have the role \texttt{leftsub, leftsuper,
+  rightsub, rightsuper}, respectively. Note that these roles are given to the
+element in the respective slot, regardless of the nature of that expression.
+Also note, that sequences of indices are modelled as a \texttt{punctuated
+  sequence} with \texttt{dummy punctuation} element.
 
 
 \subsection{Tables, Vectors, Matrices}
@@ -207,10 +226,12 @@ Unless some special case can be identified the role will be unknown.
   vector & binomial & Vector with exactly two line elements.\\
        & squarematrix & Vector with exactly one element.\\
        & determinant & Vector with exactly one element and neutral fences.\\
+       & vector & A general vector.\\
   matrix & rowvector & A single row with multiple cells. Normally a vector has line elements,
                        this one has rows and cells, hence is classified as a matrix.\\
        & squarematrix & Matrix with the number of rows and columns.\\
        & determinant & Square matrix with neutral fences.\\
+       & matrix & A general matrix.\\
 \end{tabular}
 Observe that both vectors and matrices can be determinants or square
 matrices. The type then determines what components they contain, either lines or

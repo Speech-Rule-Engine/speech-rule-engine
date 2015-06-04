@@ -5,23 +5,6 @@
 
   // Index and tensor roles.
   SUBSUP: 'subsup',
-  LEFTSUB: 'leftsub',
-  LEFTSUPER: 'leftsuper',
-  RIGHTSUB: 'rightsub',
-  RIGHTSUPER: 'rightsuper',
-
-  // Fenced.
-  LEFTRIGHT: 'leftright',
-  ABOVEBELOW: 'abovebelow',
-
-  // Text.
-  STRING: 'string',
-
-  // Punctuated elements.
-  SEQUENCE: 'sequence',
-  ENDPUNCT: 'endpunct',
-  STARTPUNCT: 'startpunct',
-  TEXT: 'text',
 
   // Operators.
   NEGATIVE: 'negative',
@@ -44,17 +27,6 @@
   MULTIPLICATION: 'multiplication',
   SUBTRACTION: 'subtraction',
   IMPLICIT: 'implicit',
-
-  // Fractions.
-  DIVISION: 'division',
-  VULGAR: 'vulgar',
-
-  // Relations.
-  EQUALITY: 'equality',
-  INEQUALITY: 'inequality',
-  ELEMENT: 'element',
-  BINREL: 'binrel',
-  ARROW: 'arrow',
 
   // Roles of matrices or vectors.
   DETERMINANT: 'determinant',
