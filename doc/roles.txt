@@ -11,17 +11,6 @@
   NEGATION: 'negation',
   MULTIOP: 'multiop',
 
-  // Functions.
-  LIMFUNC: 'limit function',
-  INFIXFUNC: 'infix function',
-  PREFIXFUNC: 'prefix function',
-  POSTFIXFUNC: 'postfix function',
-  SIMPLEFUNC: 'simple function',
-
-  // Large operators.
-  SUM: 'sum',
-  INTEGRAL: 'integral',
-
   // Binary operations.
   ADDITION: 'addition',
   MULTIPLICATION: 'multiplication',
@@ -33,15 +22,6 @@
   ROWVECTOR: 'rowvector',
   BINOMIAL: 'binomial',
   SQUAREMATRIX: 'squarematrix',
-
-  // Roles of rows, lines, cells.
-  // They mirror the different types for tables, unless a more specific role is
-  // known.
-  MULTILINE: 'multiline',
-  MATRIX: 'matrix',
-  VECTOR: 'vector',
-  CASES: 'cases',
-  TABLE: 'table',
 
   // General
   UNKNOWN: 'unknown',

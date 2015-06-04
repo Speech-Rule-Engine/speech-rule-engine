@@ -184,6 +184,7 @@ role will eventually change to \texttt{prefix function}.
               & integral & Integral symbols.\\
   function & limfunc & Limit functions.\\
               & prefixfunc & Prefix functions like sin, cos, etc.\\
+              & simplefunc & A simple, onle letter function.\\
 \end{tabular}
 
 
@@ -217,22 +218,27 @@ Also note, that sequences of indices are modelled as a \texttt{punctuated
   sequence} with \texttt{dummy punctuation} element.
 
 
-\subsection{Tables, Vectors, Matrices}
+\subsection{Roles for Tables, Vectors, Matrices}
 
-Unless some special case can be identified the role will be unknown.
+Unless some special case can be identified the role will be unknown. Special
+roles are currently only computed for \texttt{vector} and \texttt{matrix} types.
 
 \begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
   Type & Role & Meaning\\\hline
   vector & binomial & Vector with exactly two line elements.\\
        & squarematrix & Vector with exactly one element.\\
        & determinant & Vector with exactly one element and neutral fences.\\
-       & vector & A general vector.\\
+       & unknown & Vector that could not be further determined.\\
   matrix & rowvector & A single row with multiple cells. Normally a vector has line elements,
                        this one has rows and cells, hence is classified as a matrix.\\
        & squarematrix & Matrix with the number of rows and columns.\\
        & determinant & Square matrix with neutral fences.\\
-       & matrix & A general matrix.\\
+       & unknown & Vector that could not be further determined.\\
+  table & unknown & \\
+  multiline & unknown & \\
+  cases & unknown & \\
 \end{tabular}
+
 Observe that both vectors and matrices can be determinants or square
 matrices. The type then determines what components they contain, either lines or
 rows and cells.
@@ -240,6 +246,29 @@ rows and cells.
 In general components of tabular expressions, i.e., lines, rows, cells, get the
 same role as the type of the expression. In the particular case, where a tabular
 element has a specialist role, they inherit that role instead.
+
+\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  Type & Role & Meaning\\\hline
+  line & vector & Line in some vector.\\
+       & binomial & Line in a binomial vector.\\
+       & squarematrix & Line in one by one vector.\\
+       & determinant & Line in one by one determinant.\\
+       & multiline & Line in a multiline equation.\\
+       & cases & Line in a case statement.\\
+  row & matrix & Row in some matrix.\\
+       & rowvector & Row in a row vector. That means it will only contain one cell.\\
+       & squarematrix & Row in a square matrix.\\
+       & determinant & Row in a determinant.\\
+       & multiline & Row in a multiline statement.\\
+       & cases & Row in a case statement.\\
+  cell & matrix & Cell in some matrix.\\
+       & rowvector & Cell in a row vector.\\
+       & squarematrix & Cell in a square matrix.\\
+       & determinant & Cell in a determinant.\\
+       & multiline & Cell in a multiline statement.\\
+       & cases & Cell in a case statement.\\
+\end{tabular}
+
 
 \section{Fonts}
 \label{sec:fonts}
