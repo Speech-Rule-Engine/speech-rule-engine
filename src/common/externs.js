@@ -20,3 +20,10 @@ fs.writeFileSync = function(name, data) { };
 fs.appendFileSync = function(name, data) { };
 fs.openSync = function(name, parameters) { };
 fs.createWriteStream = function(name) { };
+
+
+/**
+ * @typedef{stream}
+ */
+var stream;
+stream.on = function(msg, fnc) { };
