@@ -169,7 +169,7 @@ sre.SemanticMathmlTest.prototype.testMathmlWrappers = function() {
       '<mrow type="infixop" role="implicit" id="10" children="3,7"' +
       ' content="9" parent="12">' +
       '<mstyle>' +
-      '<mrow type="postfixop" role="multiop" id="3" children="1" content="2"' +
+      '<mrow type="postfixop" role="addition" id="3" children="1" content="2"' +
       ' parent="10">' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
       '<mo type="operator" role="addition" id="2" parent="3"' +
@@ -521,7 +521,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
   // Pathological operator only case.
   this.executeMathmlTest(
       '<mo>+</mo><mo>-</mo><mo>+</mo>',
-      '<math type="prefixop" role="multiop" id="4" children="3" content="0">' +
+      '<math type="prefixop" role="addition" id="4" children="3" content="0">' +
       '<mo type="operator" role="addition" id="0" parent="4"' +
       ' operator="prefixop,+">+</mo>' +
       '<mrow type="prefixop" role="negative" id="3" children="2"' +
@@ -547,7 +547,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
   // Single identifier with prefix and negative.
   this.executeMathmlTest(
       '<mo>+</mo><mo>-</mo><mi>a</mi>',
-      '<math type="prefixop" role="multiop" id="4" children="3" content="0">' +
+      '<math type="prefixop" role="addition" id="4" children="3" content="0">' +
       '<mo type="operator" role="addition" id="0" parent="4"' +
       ' operator="prefixop,+">+</mo>' +
       '<mrow type="prefixop" role="negative" id="3" children="2"' +
@@ -624,9 +624,9 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       ' parent="7">a</mi></mrow>' +
       '<mo type="operator" role="addition" id="3" parent="9"' +
       ' operator="infixop,∓">∓</mo>' +
-      '<mrow type="postfixop" role="multiop" id="10" children="8"' +
+      '<mrow type="postfixop" role="addition" id="10" children="8"' +
       ' content="6" parent="9">' +
-      '<mrow type="prefixop" role="multiop" id="8" children="5" content="4"' +
+      '<mrow type="prefixop" role="addition" id="8" children="5" content="4"' +
       ' parent="10">' +
       '<mo type="operator" role="addition" id="4" parent="8"' +
       ' operator="prefixop,+">+</mo>' +
@@ -654,7 +654,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="3" parent="12"' +
       ' operator="infixop,∓">∓</mo>' +
-      '<mrow type="prefixop" role="multiop" id="11" children="5"' +
+      '<mrow type="prefixop" role="addition" id="11" children="5"' +
       ' content="4" parent="12">' +
       '<mo type="operator" role="addition" id="4" parent="11"' +
       ' operator="prefixop,+">+</mo>' +
@@ -663,9 +663,9 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="6" parent="14"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="postfixop" role="multiop" id="15" children="13"' +
+      '<mrow type="postfixop" role="addition" id="15" children="13"' +
       ' content="9" parent="14">' +
-      '<mrow type="prefixop" role="multiop" id="13" children="8"' +
+      '<mrow type="prefixop" role="addition" id="13" children="8"' +
       ' content="7" parent="15">' +
       '<mo type="operator" role="addition" id="7" parent="13"' +
       ' operator="prefixop,∓">∓</mo>' +
@@ -912,7 +912,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMultipleOperators = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="12" parent="27"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="prefixop" role="multiop" id="26" children="14"' +
+      '<mrow type="prefixop" role="addition" id="26" children="14"' +
       ' content="13" parent="27">' +
       '<mo type="operator" role="addition" id="13" parent="26"' +
       ' operator="prefixop,+">+</mo>' +
@@ -2504,9 +2504,9 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
       ' operator="punctuated">‖</mo>' +
       '<mo type="punctuation" role="openfence" id="5" parent="30"' +
       ' operator="punctuated">[</mo>' +
-      '<mrow type="postfixop" role="multiop" id="27" children="26"' +
+      '<mrow type="postfixop" role="addition" id="27" children="26"' +
       ' content="12" parent="30">' +
-      '<mrow type="prefixop" role="multiop" id="26" children="25"' +
+      '<mrow type="prefixop" role="addition" id="26" children="25"' +
       ' content="6" parent="27">' +
       '<mo type="operator" role="addition" id="6" parent="26"' +
       ' operator="prefixop,+">+</mo>' +
@@ -2546,7 +2546,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
       '<mi type="identifier" role="latinletter" id="20" parent="30">y</mi>' +
       '<mo type="punctuation" role="vbar" id="21" parent="30"' +
       ' operator="punctuated">¦</mo>' +
-      '<mrow type="prefixop" role="multiop" id="29" children="23"' +
+      '<mrow type="prefixop" role="addition" id="29" children="23"' +
       ' content="22" parent="30">' +
       '<mo type="operator" role="addition" id="22" parent="29"' +
       ' operator="prefixop,+">+</mo>' +
