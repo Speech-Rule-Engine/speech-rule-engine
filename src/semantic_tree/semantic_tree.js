@@ -742,7 +742,7 @@ sre.SemanticTree.prototype.makeConcatNode_ = function(inner, nodeList, type) {
   }
   var content = nodeList.map(function(x) {return x.textContent;}).join(' ');
   var newNode = this.makeBranchNode_(type, [inner], nodeList, content);
-  if (nodeList.length > 0) {
+  if (nodeList.length > 1) {
     newNode.role = sre.SemanticAttr.Role.MULTIOP;
   }
   return newNode;
