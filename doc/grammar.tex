@@ -138,6 +138,7 @@ role will eventually change to \texttt{prefix function}.
 \label{sec:symbol-roles}
 
 \begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  Type & Role & Meaning\\\hline
   punctuation & comma & comma characters\\
               & dash & dash characters of differing length.\\
               & ellipsis & unicode ellipses characters. Does not include sequences of separate full stops.\\
@@ -184,55 +185,68 @@ role will eventually change to \texttt{prefix function}.
               & integral & Integral symbols.\\
   function & limfunc & Limit functions.\\
               & prefixfunc & Prefix functions like sin, cos, etc.\\
+              & simplefunc & A simple, onle letter function.\\
 \end{tabular}
 
 
 \subsection{Roles for Compound Types}
 
 \begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  Type & Role & Meaning\\\hline
   punctuated & sequence & A sequence of punctuated elements. I.e., at least two non punctuation elements
                           separated a punctuation element. It can have punctations at start or end.\\
-             & startpunct & Element with a single punctuation as the front.\\
-             & endpunct & Element with a single punctuation as the end. Note, that for elements with
-                          punctuations at front and end we get a sequence.\\
-             & text & Elements separated by one or more dummy punctuation (invisible comma).\\
+       & startpunct & Element with a single punctuation as the front.\\
+       & endpunct & Element with a single punctuation as the end. Note, that for elements with
+                    punctuations at front and end we get a sequence.\\
+       & text & Elements separated by one or more dummy punctuation (invisible comma).\\
   fenced & leftright & Elements with fences at start and end.\\
-             & abovebelow & \depr{Elements with fences above and below.} \\
+       & abovebelow & \depr{Elements with fences above and below.} \\
   fraction & vulgar & fraction of two integers.\\
-             & division & any other fraction.\\
+       & division & any other fraction.\\
+  prefixop & negative & Prefix operation with subtraction operation.\\
+       & multiop & Prefix operation with multiple operands.\\
+  postfixop & multiop & Postfix operation with multiple operands.\\
+  infixop & implicit & Infix operation with an inferred multiplication. Note if an invisible times 
+                       is explicitly given, inheritance will take over. See below.\\
 \end{tabular}
 
-\subsection{The \texttt{unit} role}
 
-In addition to being the role of an identifier, \texttt{unit} can be propagated
-to more complex structures. In particular, to types \texttt{subscript,
-  superscript, fraction} and \texttt{infixop} with multiplication.
+\paragraph{Role Inheritance from Content Elements}
+In addition, certain compound elements can inherit roles from content elements.
 
-\subsection{Tensors}
+\begin{tabular}{>{\tt}l>{\tt}ll}
+  Type & Roles of type & Remark \\\hline
+  punctuated & punctuation & If all content elements are the same.\\
+  infixop & operation & \\
+  prefixop & operation & \\
+  postfixop & operation & \\
+  relseq & relation & If all content elements are the same.\\
+  bigop & largeop & \\
+  integral & largeop & \\
+\end{tabular}
+         
 
-The four indices in the tensor have the role \texttt{leftsub, leftsuper,
-  rightsub, rightsuper}, respectively. Note that these roles are given to the
-element in the respective slot, regardless of the nature of that expression.
-Also note, that sequences of indices are modelled as a \texttt{punctuated
-  sequence} with \texttt{dummy punctuation} element.
+\subsection{Roles for Tables, Vectors, Matrices}
 
-
-\subsection{Tables, Vectors, Matrices}
-
-Unless some special case can be identified the role will be unknown.
+Unless some special case can be identified the role will be unknown. Special
+roles are currently only computed for \texttt{vector} and \texttt{matrix} types.
 
 \begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
   Type & Role & Meaning\\\hline
   vector & binomial & Vector with exactly two line elements.\\
        & squarematrix & Vector with exactly one element.\\
        & determinant & Vector with exactly one element and neutral fences.\\
-       & vector & A general vector.\\
+       & unknown & Vector that could not be further determined.\\
   matrix & rowvector & A single row with multiple cells. Normally a vector has line elements,
                        this one has rows and cells, hence is classified as a matrix.\\
        & squarematrix & Matrix with the number of rows and columns.\\
        & determinant & Square matrix with neutral fences.\\
-       & matrix & A general matrix.\\
+       & unknown & Vector that could not be further determined.\\
+  table & unknown & \\
+  multiline & unknown & \\
+  cases & unknown & \\
 \end{tabular}
+
 Observe that both vectors and matrices can be determinants or square
 matrices. The type then determines what components they contain, either lines or
 rows and cells.
@@ -240,6 +254,90 @@ rows and cells.
 In general components of tabular expressions, i.e., lines, rows, cells, get the
 same role as the type of the expression. In the particular case, where a tabular
 element has a specialist role, they inherit that role instead.
+
+\begin{tabular}{>{\tt}l>{\tt}lp{11cm}}
+  Type & Role & Meaning\\\hline
+  line & vector & Line in some vector.\\
+       & binomial & Line in a binomial vector.\\
+       & squarematrix & Line in one by one vector.\\
+       & determinant & Line in one by one determinant.\\
+       & multiline & Line in a multiline equation.\\
+       & cases & Line in a case statement.\\
+  row & matrix & Row in some matrix.\\
+       & rowvector & Row in a row vector. That means it will only contain one cell.\\
+       & squarematrix & Row in a square matrix.\\
+       & determinant & Row in a determinant.\\
+       & multiline & Row in a multiline statement.\\
+       & cases & Row in a case statement.\\
+  cell & matrix & Cell in some matrix.\\
+       & rowvector & Cell in a row vector.\\
+       & squarematrix & Cell in a square matrix.\\
+       & determinant & Cell in a determinant.\\
+       & multiline & Cell in a multiline statement.\\
+       & cases & Cell in a case statement.\\
+\end{tabular}
+
+
+\subsection{Roles for Sub-elements of Particular Types}
+
+These are roles that indicate that an element belongs to a particular parent
+element. They can be assigned to an arbitrary child or to special type of
+children.
+
+\noindent\begin{tabular}{>{\tt}l>{\tt}lcp{9.5cm}}
+  Parent Type & Role & Child\# & Meaning\\\hline
+  tensor      & leftsub & 2 & Left subscript of a tensor. \\
+              & leftsuper & 3 & Left superscript of a tensor. \\
+              & rightsub & 4 &Right subscript of a tensor. \\
+              & rightsuper & 5 & Right superscript of a tensor. \\
+\end{tabular}
+
+Note that these roles are given to the element in the respective
+slot, regardless of the nature of that expression.  Also note, that sequences of
+indices are modelled as a \texttt{punctuated sequence} with \texttt{dummy
+  punctuation} element.
+
+
+\noindent\begin{tabular}{>{\tt}l>{\tt}lcp{9.5cm}}
+  Parent Type & Role & Child\# & Meaning\\\hline
+  overscore   & overaccent & 2 & Characters that can be considered an accent.\\
+  underscore  & underaccent & 2 & Characters that can be considered an accent. \\
+\end{tabular}
+
+\subsection{Role Inheritance from Children}
+
+Roles can be inherited from children to propagate semantic meaning of compound
+elements. Those roles are therefore not restricted to the roles of a particular
+type but only depend on the role of child at a particular position.
+
+\begin{tabular}{>{\tt}lcp{9.5cm}}
+  Type & Child\# & Meaning\\\hline
+  limlower & 1 & Role of inner operator or function.\\
+  limupper & 1 & Role of inner operator or function.\\
+  limboth & 1 & Role of inner operator or function.\\
+  subscript & 1 & Role of base element.\\
+  superscript & 1 & Role of base element.\\
+  overscore & 1 & Role of base element.\\
+  underscore & 1 & Role of base element.\\
+  tensor & 1 & Role of base element.\\
+\end{tabular}
+         
+\subsection{Specialist roles}
+
+\paragraph{\texttt{subsup}:}
+
+Assigned to elements of type \texttt{superscript}, if they were generated from a
+\mathml{msubsup} element.  This indicates that the first child is of type
+\texttt{subscript}.
+
+
+\paragraph{\texttt{unit}:}
+
+In addition to being the role of an identifier, \texttt{unit} can be propagated
+to more complex structures. In particular, to types \texttt{subscript,
+  superscript, fraction} and \texttt{infixop} with roles \texttt{multiplication,
+  implicit}.
+
 
 \section{Fonts}
 \label{sec:fonts}
