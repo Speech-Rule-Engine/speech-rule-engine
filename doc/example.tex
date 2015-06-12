@@ -1,0 +1,37 @@
+\documentclass{article}
+
+\usepackage{listings}
+\def\lstxml{
+  \lstset{language=XML,
+    keywordstyle=\ttfamily,
+    identifierstyle=\ttfamily,
+    stringstyle=\ttfamily,
+    showstringspaces=false,
+    columns=[l]flexible,
+    escapeinside={(@*}{*@)},
+    morekeywords={encoding,
+      mrow,math,mfrac,mi,msqrt,mo,mn,span,nobr,img}
+  }
+}
+
+\def\lstjs{
+  \lstset{language=Java,
+    keywordstyle=\ttfamily,
+    identifierstyle=\ttfamily\bfseries, 
+    stringstyle=\ttfamily,
+    showstringspaces=false,
+    columns=[l]flexible, 
+    morekeywords={cvox,Api,Math,defineRule}
+  }
+}
+
+\begin{document}
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
