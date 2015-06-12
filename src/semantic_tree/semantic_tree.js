@@ -648,9 +648,10 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
   node.type = type;
   node.childNodes = children;
   node.contentNodes = contentNodes;
-  children.concat(contentNodes)
-      .forEach(
+  children.concat(contentNodes).forEach(
           function(x) {
+            console.log(x);
+            console.log(node.toString());
             x.parent = node;
             node.addMathmlNodes_(x.mathml);
           });
@@ -814,6 +815,7 @@ sre.SemanticTree.prototype.processRow_ = function(nodes) {
     return this.makeEmptyNode_();
   }
   nodes = this.getFencesInRow_(nodes);
+  console.log('After fences: ', nodes.toString());
   nodes = this.processTablesInRow_(nodes);
   nodes = this.getPunctuationInRow_(nodes);
   nodes = this.getTextInRow_(nodes);
@@ -1164,7 +1166,7 @@ sre.SemanticTree.prototype.getFencesInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes, sre.SemanticTree.attrPred_('type', 'FENCE'));
   var felem = partition.comp.shift();
-  return this.processFences_(partition.rel, partition.comp, [], [felem]);
+  return this.processFencesNew_(partition.rel, partition.comp, [], [felem]);
 };
 
 
@@ -1207,6 +1209,8 @@ sre.SemanticTree.prototype.processFences_ = function(
     var result = contentStack.shift();
     while (openStack.length > 0) {
       if (openPred(openStack[0])) {
+        console.log(openStack[0].role);
+        sre.SemanticTree.printNodeList__('Opening fences', openStack);
         var firstOpen = openStack.shift();
         sre.SemanticTree.fenceToPunct_(firstOpen);
         result.push(firstOpen);
@@ -1283,6 +1287,7 @@ sre.SemanticTree.prototype.processFences_ = function(
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
     return this.processFences_(fences, content, split.head, contentStack);
   }
+  sre.SemanticTree.printNodeList__('Closing fences', fences);
   // Final Case: A singular closing fence.
   // We turn the fence into a punctuation.
   var fenced = fences.shift();
@@ -1307,9 +1312,11 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
     return fences;
   }
   if (fences.length == 1) {
+    sre.SemanticTree.printNodeList__('Single neutral fence', fences);
     sre.SemanticTree.fenceToPunct_(fences[0]);
     return fences;
   }
+  sre.SemanticTree.printNodeList__('Rest neutral fence', fences);
   var firstFence = fences.shift();
   var split = sre.SemanticTree.sliceNodes_(
       fences, function(x) {return x.textContent == firstFence.textContent;});
@@ -1363,6 +1370,268 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
   content = content.slice(cutLength);
   var rightContent = content.shift();
   var innerNodes = this.processNeutralFences_(midFences, midContent);
+  leftContent.push.apply(leftContent, innerNodes);
+  leftContent.push.apply(leftContent, rightContent);
+  var fenced = this.makeHorizontalFencedNode_(
+      leftFence, rightFence, leftContent);
+  if (content.length > 0) {
+    content[0].unshift(fenced);
+  } else {
+    content = [[fenced]];
+  }
+  return content;
+};
+
+
+/**
+ * Recursively processes a list of nodes and combines all the fenced expressions
+ * into single nodes. It also processes singular fences, building expressions
+ * that are only fenced left or right.
+ * @param {!Array.<sre.SemanticTree.Node>} fences FIFO queue of fence nodes.
+ * @param {!Array.<Array.<sre.SemanticTree.Node>>} content FIFO queue content
+ *     between fences.
+ * @param {!Array.<sre.SemanticTree.Node>} openStack LIFO stack of open fences.
+ * @param {!Array.<!Array.<sre.SemanticTree.Node>>} contentStack LIFO stack of
+ *     content between fences yet to be processed.
+ * @return {!Array.<sre.SemanticTree.Node>} A list of nodes with all fenced
+ *     expressions processed.
+ * @private
+ */
+sre.SemanticTree.prototype.processFencesNew_ = function(
+    fences, content, openStack, contentStack) {
+  // Base case 1: Everything is used up.
+  if (fences.length == 0 && openStack.length == 0) {
+    return contentStack[0];
+  }
+  var openPred = sre.SemanticTree.attrPred_('role', 'OPEN');
+  // Base case 2: Only open and neutral fences are left on the stack.
+  if (fences.length == 0) {
+    // Basic idea:
+    // - combine as many neutral fences as possible, if the are not separated by
+    //   open fences.
+    // - then eagerly combine open fences with remaining neutral and open
+    //   fences.
+    // The idea is to allow for things like case statements etc. and not bury
+    // them inside a neutral fenced expression.
+    //
+    // 0. We process the list from left to right. Hence the first element on the
+    //    content stack are actually left most elements in the expression.
+    // 1. Slice at open fence.
+    // 2. On tail optimize for neutral fences.
+    // 3. Repeat until fence stack is exhausted.
+    // Push rightmost elements onto the result.
+    return this.processOpenNeutralFences_(openStack, contentStack);
+  }
+  var lastOpen = openStack[openStack.length - 1];
+  var firstRole = fences[0].role;
+  // General opening case.
+  // Either we have an open fence.
+  if (firstRole == sre.SemanticAttr.Role.OPEN ||
+      // Or we have a neutral fence that does not have a counter part.
+          (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
+              (!lastOpen ||
+                  fences[0].textContent != lastOpen.textContent))) {
+    openStack.push(fences.shift());
+    contentStack.push(content.shift());
+    return this.processFencesNew_(fences, content, openStack, contentStack);
+  }
+  // General closing case.
+  if (lastOpen && (
+      // Closing fence for some opening fence.
+      (firstRole == sre.SemanticAttr.Role.CLOSE &&
+          lastOpen.role == sre.SemanticAttr.Role.OPEN) ||
+      // Netural fence with exact counter part.
+      (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
+                  fences[0].textContent == lastOpen.textContent))) {
+    var fenced = this.makeHorizontalFencedNode_(
+        openStack.pop(), fences.shift(), contentStack.pop());
+    contentStack.push(contentStack.pop().concat([fenced], content.shift()));
+    return this.processFencesNew_(fences, content, openStack, contentStack);
+  }
+  // Closing with a neutral fence on the stack.
+  if (lastOpen && firstRole == sre.SemanticAttr.Role.CLOSE &&
+      lastOpen.role == sre.SemanticAttr.Role.NEUTRAL &&
+          openStack.some(openPred)) {
+    // Steps of the algorithm:
+    // 1. Split list at right most opening bracket.
+    // 2. Cut content list at corresponding length.
+    // 3. Optimise the neutral fences.
+    // 4. Make fenced node.
+    //
+    // Careful, this reverses openStack!
+    var split = sre.SemanticTree.sliceNodes_(openStack, openPred, true);
+    // We know that
+    // (a) div & tail exist,
+    // (b) all are combined in this step into a single fenced node,
+    // (c) head is the new openStack,
+    // (d) the new contentStack is remainder of contentStack + new fenced node +
+    // shift of content.
+    var rightContent = contentStack.pop();
+    var cutLength = contentStack.length - split.tail.length + 1;
+    var innerNodes = this.processNeutralFencesNew_(
+        split.tail, contentStack.slice(cutLength));
+    contentStack = contentStack.slice(0, cutLength);
+    var fenced = this.makeHorizontalFencedNode_(
+        split.div, fences.shift(),
+        contentStack.pop().concat(innerNodes, rightContent));
+    contentStack.push(contentStack.pop().concat([fenced], content.shift()));
+    return this.processFencesNew_(fences, content, split.head, contentStack);
+  }
+  sre.SemanticTree.printNodeList__('Closing fences', fences);
+  // Final Case: A singular closing fence.
+  // We turn the fence into a punctuation.
+  var fenced = fences.shift();
+  sre.SemanticTree.fenceToPunct_(fenced);
+  contentStack.push(contentStack.pop().concat([fenced], content.shift()));
+  return this.processFencesNew_(fences, content, openStack, contentStack);
+};
+
+
+sre.SemanticTree.prototype.processOpenNeutralFences_ = function(fences, content) {
+  var openPred = sre.SemanticTree.attrPred_('role', 'OPEN');
+  var result = content.shift();
+  // var partition = sre.SemanticTree.partitionNodes_(openStack, openPred);
+  
+  if (fences.length === 0) {
+    return result;
+  }
+  if (fences.length === 1) {
+    sre.SemanticTree.fenceToPunct_(fences[0]);
+    return result.concat(fences).concat(content.shift());
+  }
+  var restFences = [];
+  var restContent = [];
+  while (fences.length > 0) {
+    var split = sre.SemanticTree.sliceNodes_(fences, openPred);
+    if (split.head.length === 0 && split.div) {
+      restFences.push(fences.shift());
+      restContent.push(content.shift());
+      continue;
+    }
+    var cutLength = split.head.length - 1;
+    var neutral = this.processNeutralFencesNew_(
+      split.head, content.slice(0, cutLength));
+    content = content.slice(cutLength);
+    fences = split.tail;
+    restFences = restFences.concat(neutral.fences);
+    restContent = restContent.concat(neutral.content);
+    restContent.push(content.shift());
+    if (split.div) {
+      restFences.push(split.div);
+      restContent.push(content.shift());
+      continue;
+    }
+  }
+  restContent = restContent.concat(content);
+  // Eager version:
+  return result.concat(this.combineFencesEagerly_(restFences, restContent));
+};
+
+
+/**
+ * Trys to combine neutral fences as much as possible.
+ * @param {!Array.<!sre.SemanticTree.Node>} fences A list of neutral fences.
+ * @param {!Array.<!Array.<sre.SemanticTree.Node>>} content Intermediate
+ *     content. Observe that |content| = |fences| - 1
+ * @return {{fences: !Array.<sre.SemanticTree.Node>, content:
+ *           !Array.<!Array.<sre.SemanticTree.Node>>}} The list of remaining
+ *           fences and content.
+ * @private
+ */
+sre.SemanticTree.prototype.processNeutralFencesNew_ = function(fences, content) {
+  if (fences.length === 0 || fences.length === 1) {
+    return {fences: fences, content: content};
+  }
+  var restFences = [];
+  var restContent = [];
+  while (fences.length > 0) {
+    var firstFence = fences.shift();
+    var split = sre.SemanticTree.sliceNodes_(
+      fences, function(x) {return x.textContent == firstFence.textContent;});
+    if (!split.div) {
+      //sre.SemanticTree.fenceToPunct_(firstFence);
+      restFences.push(firstFence);
+      if (content[0]) {
+        restContent.push(content.shift());
+      }
+      continue;
+    }
+
+    content = this.combineFencedContentNew_(
+      firstFence, split.div, split.head, content);
+    fences = split.tail;
+    var lastContent = restContent.pop();
+    lastContent ? restContent.push(lastContent.concat(content.pop()))
+      : restContent.push(content.pop());
+  }
+  return {fences: restFences, content: restContent};
+};
+
+
+// TODO (sorge) Add special cases when fences are right next to each other.
+//              E.g. on ]{a,b|, we probably want {a,b| as the fenced unit and
+//              not ]{. Maybe we should in general avoid empty fenced elements,
+//              with the exception of matching neutrals and open/closed fences.
+//
+sre.SemanticTree.prototype.combineFencesEagerly_ = function(fences, content) {
+  console.log(fences.length);
+  if (fences.length === 0) {
+    console.log('This content:', content);
+    return content.reduce(function(x, y) {return x.concat(y);}, []);
+  }
+  if (fences.length === 1) {
+    console.log('rewrite fence:', content);
+    sre.SemanticTree.fenceToPunct_(fences[0]);
+    console.log(fences[0].toString());
+    var newContent = content.reduce(function(x, y) {return x.concat(y);}, []);
+    newContent.unshift(fences[0]);
+    sre.SemanticTree.printNodeList__('Content now', content);
+    return newContent;
+  }
+  var fenced = this.makeHorizontalFencedNode_(
+    fences.shift(), fences.shift(), content.shift());
+  var result = [fenced].concat(content.shift());
+  return result.concat(
+    this.combineFencesEagerly_(fences, content));
+};
+
+// Should work!
+/**
+ * Combines nodes framed by two matching fences using the given content.
+ * Example: leftFence: [, rightFence: ], midFences: |, |
+ *          content: c1, c2, c3, c4, ... cn
+ *          return: [c1 | c2 | c3 ], c4, ... cn
+ * @param {!sre.SemanticTree.Node} leftFence The left fence.
+ * @param {!sre.SemanticTree.Node} rightFence The right fence.
+ * @param {!Array.<sre.SemanticTree.Node>} midFences A list of intermediate
+ *     fences.
+ * @param {!Array.<!Array.<sre.SemanticTree.Node>>} content Intermediate
+ *     content. Observe that |content| = |fences| - 1 + k where k >= 0 is the
+ *     remainder.
+ * @return {!Array.<!Array.<sre.SemanticTree.Node>>} List of content nodes
+ *     where the first is the fully fenced node wrt. the given left and right
+ *     fence.
+ * @private
+ */
+sre.SemanticTree.prototype.combineFencedContentNew_ = function(
+    leftFence, rightFence, midFences, content) {
+  console.log('Combine fenced content:', content.toString());
+
+  if (midFences.length == 0) {
+    var fenced = this.makeHorizontalFencedNode_(
+        leftFence, rightFence, content.shift());
+    content.unshift(fenced);
+    return content;
+  }
+
+  var leftContent = content.shift();
+  var cutLength = midFences.length - 1;
+  var midContent = content.slice(0, cutLength);
+  content = content.slice(cutLength);
+  var rightContent = content.shift();
+  //var innerNodes = this.processNeutralFencesNew_(midFences, midContent);
+  var neutral = this.processNeutralFencesNew_(midFences, midContent);
+  var innerNodes = this.combineFencesEagerly_(neutral.fences, neutral.content);
   leftContent.push.apply(leftContent, innerNodes);
   leftContent.push.apply(leftContent, rightContent);
   var fenced = this.makeHorizontalFencedNode_(
@@ -2574,7 +2843,7 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
        this.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
        this.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
       ],
-    []);
+      []);
   newNode.role = base.role;
   return newNode;
 };
@@ -2608,3 +2877,17 @@ sre.SemanticTree.prototype.makeScriptNode_ = function(
   newNode.role = role;
   return newNode;
 };
+
+
+/**
+ * Prints a list of nodes.
+ * @param {string} title A string to print first.
+ * @param {!Array.<sre.SemanticTree.Node>} nodes A list of nodes.
+ */
+sre.SemanticTree.printNodeList__ = function(title, nodes) {
+  console.log(title);
+  nodes.forEach(function(x) {console.log(x.toString());});
+  console.log('<<<<<<<<<<<<<<<<<');
+};
+
+

@@ -519,7 +519,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
 sre.SemanticMathml.caseLine_ = function(semantic, mml) {
   if (semantic.childNodes.length) {
     sre.SemanticMathml.walkTree_(
-          /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
+        /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
   }
   sre.SemanticMathml.setAttributes_(mml, semantic);
   return mml;
