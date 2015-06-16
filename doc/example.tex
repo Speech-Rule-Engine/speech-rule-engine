@@ -1,5 +1,5 @@
 \documentclass{article}
-
+\usepackage{graphicx}
 \usepackage{listings}
 \def\lstxml{
   \lstset{language=XML,
@@ -24,10 +24,41 @@
     morekeywords={cvox,Api,Math,defineRule}
   }
 }
+\setlength{\parindent}{0cm}
+\pagestyle{empty}
 
 \begin{document}
 
+\section*{Fraction Example}
 
+\textbf{Mathematics:}
+\[ \frac{numerator}{denominator} \]
+
+\textbf{MathML representation:}
+\lstxml
+\begin{lstlisting}
+<mfrac>
+  <mrow>Numerator</mrow>
+  <mrow>Denominator</mrow>
+</mfrac>
+\end{lstlisting}
+
+\textbf{JavaScript rule:}
+\lstjs
+\begin{lstlisting}
+  defineRule(
+      'mfrac', 'default.short', 
+          '[t] "Start Frac";
+           [n] ./*[1]; 
+           [t] "Over";
+           [n] ./*[2]; 
+           [t] "End Frac"',
+      'self::mathml:mfrac');
+\end{lstlisting}
+
+\textbf{GUI Mock:}\vspace*{1ex}
+
+\includegraphics[width=\linewidth]{Editor_Mock}
 
 \end{document}
 
