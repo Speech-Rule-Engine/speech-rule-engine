@@ -2574,7 +2574,7 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
        this.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
        this.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
       ],
-    []);
+      []);
   newNode.role = base.role;
   return newNode;
 };
