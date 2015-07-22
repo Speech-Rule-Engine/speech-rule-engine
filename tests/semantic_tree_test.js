@@ -8667,7 +8667,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8680,7 +8680,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8693,7 +8693,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8706,7 +8706,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8719,7 +8719,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><none/><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8732,7 +8732,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mpadded/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8745,7 +8745,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8758,7 +8758,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8771,7 +8771,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<empty role="leftsub" id="1"></empty>' +
@@ -8784,7 +8784,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<empty role="leftsub" id="1"></empty>' +
@@ -8797,7 +8797,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8817,7 +8817,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>',
-      '<tensor role="unknown" id="17">' +
+      '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<punctuated role="leftsub" id="4">' +
@@ -8862,7 +8862,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>',
-      '<tensor role="unknown" id="17">' +
+      '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<punctuated role="leftsub" id="4">' +
