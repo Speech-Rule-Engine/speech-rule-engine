@@ -92,3 +92,13 @@ sre.Semantic.annotateMathml = function(mml) {
   var tree = new sre.SemanticTree(clone);
   return sre.SemanticMathml.enrich(clone, tree);
 };
+
+
+/**
+ * Translates a MathML string into a semantic tree and prints is.
+ * @param {!string} mml A string representation of the MathML.
+ */
+sre.Semantic.testTree__ = function(mml) {
+  console.log(sre.SemanticTree.formatXml(
+      sre.Semantic.getTreeFromString(mml).toString()));
+};
