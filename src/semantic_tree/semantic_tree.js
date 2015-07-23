@@ -1169,12 +1169,12 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
 sre.SemanticTree.prototype.getFencesInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes,
-    sre.SemanticTree.attrPred_('type', 'FENCE'));
-      // function(x) {return sre.SemanticTree.attrPred_('type', 'FENCE')(x) ||
-      //              (!sre.SemanticTree.attrPred_('type', 'FENCED')(x) &&
-      //               (sre.SemanticTree.attrPred_('role', 'OPEN')(x) ||
-      //                sre.SemanticTree.attrPred_('role', 'CLOSE')(x) ||
-      //                sre.SemanticTree.attrPred_('role', 'NEUTRAL')(x)));});
+      sre.SemanticTree.attrPred_('type', 'FENCE'));
+  // function(x) {return sre.SemanticTree.attrPred_('type', 'FENCE')(x) ||
+  //              (!sre.SemanticTree.attrPred_('type', 'FENCED')(x) &&
+  //               (sre.SemanticTree.attrPred_('role', 'OPEN')(x) ||
+  //                sre.SemanticTree.attrPred_('role', 'CLOSE')(x) ||
+  //                sre.SemanticTree.attrPred_('role', 'NEUTRAL')(x)));});
   var felem = partition.comp.shift();
   return this.processFences_(partition.rel, partition.comp, [], [felem]);
 };

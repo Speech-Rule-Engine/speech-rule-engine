@@ -8906,3 +8906,169 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
   );
 
 };
+
+
+/**
+ * Simple embellished arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeSimpleEmbellishment = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<msup><mi>\u222B</mi><mn>2</mn></msup>',
+      '<limupper role="integral" id="2">' +
+      '<children>' +
+      '<largeop role="integral" id="0">∫</largeop>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</limupper>'
+  );
+  this.executeTreeTest(
+      '<msup><mi>f</mi><mn>2</mn></msup>',
+      '<superscript role="latinletter" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">f</identifier>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>(</mo><mn>2</mn></msup>',
+      '<superscript role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>=</mo><mn>2</mn></msup>',
+      '<superscript role="equality" embellished="relation" id="2">' +
+      '<children>' +
+      '<relation role="equality" id="0">=</relation>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>+</mo><mn>2</mn></msup>',
+      '<superscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>,</mo><mn>2</mn></msup>',
+      '<superscript role="comma" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Multi embellished arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeMultiEmbellishment = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>',
+      '<subscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<superscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '</children>' +
+      '</subscript>');
+  this.executeTreeTest(
+      '<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi>' +
+      '</msub><mo>-</mo></mover>',
+      '<overscore role="addition" embellished="operator" id="6">' +
+      '<children>' +
+      '<subscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<superscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '</children>' +
+      '</subscript>' +
+      '<operator role="overaccent" id="5">-</operator>' +
+      '</children>' +
+      '</overscore>');
+  this.executeTreeTest(
+      '<msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></msup>',
+      '<superscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<subscript role="latinletter" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</children>' +
+      '</superscript>');
+  this.executeTreeTest(
+      '<msub><munder><mo>+</mo><mn>2</mn></munder><mi>x</mi></msub>',
+      '<subscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<underscore role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</underscore>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '</children>' +
+      '</subscript>');
+  this.executeTreeTest(
+      '<mmultiscripts><mi>(</mi><none/><none/>' +
+      '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<tensor role="open" embellished="fence" id="5">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="leftsub" font="normal" id="1">1</number>' +
+      '<identifier role="leftsuper" font="italic" id="2">j</identifier>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>');
+  this.executeTreeTest(
+      '<mmultiscripts><mi>(</mi><none/><mi>K</mi>' +
+      '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<tensor role="open" embellished="fence" id="5">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="leftsub" font="normal" id="1">1</number>' +
+      '<identifier role="leftsuper" font="italic" id="2">j</identifier>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<identifier role="rightsuper" font="italic" id="4">K</identifier>' +
+      '</children>' +
+      '</tensor>');
+  this.executeTreeTest(
+      '<mmultiscripts><mi>(</mi><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<superscript role="open" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="2">j</identifier>' +
+      '</children>' +
+      '</superscript>');
+};
+
