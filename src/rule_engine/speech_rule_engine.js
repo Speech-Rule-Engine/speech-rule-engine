@@ -154,7 +154,6 @@ sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
-  console.log(node.toString());
   if (!node) {
     return [];
   }
@@ -268,7 +267,6 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();
-        console.log(text);
         result = result.concat(text);
       }
     }

@@ -57,35 +57,37 @@ goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);
 
 
 /**
- * Testing operator embellished also from the left.
+ * Testing operator embellished with subscript.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpTensor = function() {
-  var mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
-      '</mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
-                       'default');
-  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'brief');
-  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'sbrief');
-  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
-        '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, 'a Superscript 3 Baseline plus Subscript m' +
-                       ' Superscript 2 Baseline b', 'default');
-  this.executeRuleTest(mml, 'a Sup 3 Base plus Sub m Sup 2 Base b', 'brief');
-  this.executeRuleTest(mml, 'a Sup 3 Base plus Sub m Sup 2 Base b', 'sbrief');
-  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
-        '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, 'a Subscript 3 Baseline plus Subscript m' +
-                       ' Superscript 2 Baseline b', 'default');
-  this.executeRuleTest(mml, 'a Sub 3 Base plus Sub m Sup 2 Base b', 'brief');
-  this.executeRuleTest(mml, 'a Sub 3 Base plus Sub m Sup 2 Base b', 'sbrief');
-  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
-        '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, 'a Subscript 3 Superscript n Baseline plus' +
-                       ' Subscript m Superscript 2 Baseline b', 'default');
-  this.executeRuleTest(mml, 'a Sub 3 Sup n Base plus Sub m Sup 2 Base b',
-                       'brief');
-  this.executeRuleTest(mml, 'a Sub 3 Sup n Base plus Sub m Sup 2 Base b',
-                       'sbrief');
+sre.MathspeakEmbellishTest.prototype.testEmbellOpSubscript = function() {
+  var mml = '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'sbrief');
+};
+
+
+/**
+ * Testing operator embellished with superscript. Making sure cases of squared
+ * and cube are not used.
+ */
+sre.MathspeakEmbellishTest.prototype.testEmbellOpSuperscript = function() {
+  var mml = '<mi>a</mi><msup><mo>+</mo><mn>2</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>+</mo><mn>3</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Superscript 3 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sup 3 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sup 3 Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>+</mo><mn>n</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Superscript n Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sup n Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sup n Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>+</mo><mo>\'</mo></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus prime b', 'default');
+  this.executeRuleTest(mml, 'a plus prime b', 'brief');
+  this.executeRuleTest(mml, 'a plus prime b', 'sbrief');
 };
 
 
@@ -119,35 +121,141 @@ sre.MathspeakEmbellishTest.prototype.testEmbellOpSubSuper = function() {
 
 
 /**
- * Testing operator embellished with superscript. Making sure cases of squared
- * and cube are not used.
+ * Testing operator embellished also from the left.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpSuperscript = function() {
-  var mml = '<mi>a</mi><msup><mo>+</mo><mn>2</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, 'a plus Superscript 2 Baseline b', 'default');
-  this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'brief');
-  this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'sbrief');
-  mml = '<mi>a</mi><msup><mo>+</mo><mn>3</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, 'a plus Superscript 3 Baseline b', 'default');
-  this.executeRuleTest(mml, 'a plus Sup 3 Base b', 'brief');
-  this.executeRuleTest(mml, 'a plus Sup 3 Base b', 'sbrief');
-  mml = '<mi>a</mi><msup><mo>+</mo><mn>n</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, 'a plus Superscript n Baseline b', 'default');
-  this.executeRuleTest(mml, 'a plus Sup n Base b', 'brief');
-  this.executeRuleTest(mml, 'a plus Sup n Base b', 'sbrief');
-  mml = '<mi>a</mi><msup><mo>+</mo><mo>\'</mo></msup><mi>b</mi>';
-  this.executeRuleTest(mml, 'a plus prime b', 'default');
-  this.executeRuleTest(mml, 'a plus prime b', 'brief');
-  this.executeRuleTest(mml, 'a plus prime b', 'sbrief');
+sre.MathspeakEmbellishTest.prototype.testEmbellOpTensor = function() {
+  var mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+      '</mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Superscript 3 Baseline plus Subscript m' +
+                       ' Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sup 3 Base plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a Sup 3 Base plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Subscript 3 Baseline plus Subscript m' +
+                       ' Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sub 3 Base plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a Sub 3 Base plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Subscript 3 Superscript n Baseline plus' +
+                       ' Subscript m Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sub 3 Sup n Base plus Sub m Sup 2 Base b',
+                       'brief');
+  this.executeRuleTest(mml, 'a Sub 3 Sup n Base plus Sub m Sup 2 Base b',
+                       'sbrief');
 };
 
 
 /**
- * Testing operator embellished with subscript.
+ * Testing relation embellished with subscript.
  */
-sre.MathspeakEmbellishTest.prototype.testEmbellOpSubscript = function() {
-  var mml = '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi>';
-  this.executeRuleTest(mml, 'a plus Subscript 2 Baseline b', 'default');
-  this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'brief');
-  this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'sbrief');
+sre.MathspeakEmbellishTest.prototype.testEmbellRelSubscript = function() {
+  var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Subscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a equals Sub 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sub 2 Base b', 'sbrief');
+};
+
+
+/**
+ * Testing relation embellished with superscript. Making sure cases of squared
+ * and cube are not used.
+ */
+sre.MathspeakEmbellishTest.prototype.testEmbellRelSuperscript = function() {
+  var mml = '<mi>a</mi><msup><mo>=</mo><mn>2</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a equals Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>=</mo><mn>3</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Superscript 3 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a equals Sup 3 Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sup 3 Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>=</mo><mn>n</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Superscript n Baseline b', 'default');
+  this.executeRuleTest(mml, 'a equals Sup n Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sup n Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>=</mo><mo>\'</mo></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals prime b', 'default');
+  this.executeRuleTest(mml, 'a equals prime b', 'brief');
+  this.executeRuleTest(mml, 'a equals prime b', 'sbrief');
+};
+
+
+/**
+ * Testing relation embellished with sub and superscript. Making sure cases of
+ * squared and cube are not used.
+ */
+sre.MathspeakEmbellishTest.prototype.testEmbellRelSubSuper = function() {
+  var mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>2</mn>' +
+      '</msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Subscript m Superscript 2 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a equals Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>3</mn></msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Subscript m Superscript 3 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a equals Sub m Sup 3 Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sub m Sup 3 Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>n</mn></msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Subscript m Superscript n Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a equals Sub m Sup n Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sub m Sup n Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>\'</mn>' +
+      '</msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals prime Subscript m Baseline b', 'default');
+  this.executeRuleTest(mml, 'a equals prime Sub m Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals prime Sub m Base b', 'sbrief');
+};
+
+
+/**
+ * Testing relation embellished also from the left.
+ */
+sre.MathspeakEmbellishTest.prototype.testEmbellRelTensor = function() {
+  var mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
+      '</mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a equals Subscript m Superscript 2 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a equals Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a equals Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Superscript 3 Baseline equals Subscript m' +
+                       ' Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sup 3 Base equals Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a Sup 3 Base equals Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Subscript 3 Baseline equals Subscript m' +
+                       ' Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sub 3 Base equals Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a Sub 3 Base equals Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Subscript 3 Superscript n Baseline equals' +
+                       ' Subscript m Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sub 3 Sup n Base equals Sub m Sup 2 Base b',
+                       'brief');
+  this.executeRuleTest(mml, 'a Sub 3 Sup n Base equals Sub m Sup 2 Base b',
+                       'sbrief');
+};
+
+
+/**
+ * Testing multiple embellished relations.
+ */
+sre.MathspeakEmbellishTest.prototype.testEmbellMultRelSubscript = function() {
+  var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi><mo>=</mo><mi>c</mi>';
+  this.executeRuleTest(mml, 'a equals Subscript 2 Baseline b equals c', 'default');
+  this.executeRuleTest(mml, 'a equals Sub 2 Base b equals c', 'brief');
+  this.executeRuleTest(mml, 'a equals Sub 2 Base b equals c', 'sbrief');
 };

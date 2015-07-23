@@ -537,12 +537,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Relations
   defineRule(
       'equality', 'mathspeak.default',
-      '[n] children/*[1]; [n] text(); [n] children/*[2]',
+      '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
 
   defineRule(
       'multi-equality', 'mathspeak.default',
-      '[m] ./children/* (separator:./text())',
+      '[m] ./children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
@@ -671,7 +671,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'ancestor::relseq|ancestor::multirel',
+      'ancestor::relseq|ancestor::multirel', 'not(ancestor::content)',
       sre.MathspeakUtil.generateBaselineConstraint());
   defineRuleAlias(
       'superscript-baseline',

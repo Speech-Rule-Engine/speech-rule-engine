@@ -114,64 +114,66 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'variable-equality', 'default.default',
       '[t] "equation sequence"; [m] ./children/* ' +
-          '(context:"part",ctxtFunc:CTXFnodeCounter,separator:./text())',
+          '(context:"part",ctxtFunc:CTXFnodeCounter,' +
+          'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2',
       './children/punct[@role="ellipsis"]');// Make that better!
 
   defineRule(
       'multi-equality', 'default.default',
       '[t] "equation sequence"; [m] ./children/* ' +
-          '(context:"part",ctxtFunc:CTXFnodeCounter,separator:./text())',
+          '(context:"part",ctxtFunc:CTXFnodeCounter,' +
+          'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
       'multi-equality', 'default.short',
       '[t] "equation sequence"; [m] ./children/* ' +
-          '(separator:./text())',
+          '(sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
       'equality', 'default.default',
       '[t] "equation"; [t] "left hand side"; [n] children/*[1];' +
-          '[p] (pause:200); [n] text() (pause:200);' +
+          '[p] (pause:200); [n] content/*[1] (pause:200);' +
           '[t] "right hand side"; [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
 
   defineRule(
       'simple-equality', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] text() (pause:200);' +
+      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/identifier or ./children/number');
 
   defineRule(
       'simple-equality2', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] text() (pause:200);' +
+      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/function or ./children/appl');
 
   defineRule(
       'relseq', 'default.default',
-      '[m] children/* (separator:./text())',
+      '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq');
 
   defineRule(
       'binary-operation', 'default.default',
-      '[m] children/* (separator:text());',
+      '[m] children/* (sepFunc:CTXFcontentIterator);',
       'self::infixop');
 
   defineRule(
       'variable-addition', 'default.default',
       '[t] "sum with variable number of summands";' +
-          '[p] (pause:400); [m] children/* (separator:./text())',
+          '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(children/*)>2',
       'children/punct[@role="ellipsis"]');// Make that better!
 
   defineRule(
       'multi-addition', 'default.default',
       '[t] "sum with,"; [t] count(./children/*); [t] ", summands";' +
-          '[p] (pause:400); [m] ./children/* (separator:./text())',
+          '[p] (pause:400); [m] ./children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(./children/*)>2');
 
   // Prefix Operator

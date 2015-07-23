@@ -659,7 +659,6 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
         x.parent = node;
         node.addMathmlNodes_(x.mathml);
       });
-  console.log(node.role);
   return node;
 };
 
@@ -944,7 +943,7 @@ sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
  */
 sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
-      nodes, sre.SemanticTree.attrPred_('type', 'RELATION'));
+      nodes, sre.SemanticTree.isRelation_);
   var firstRel = partition.rel[0];
 
   if (!firstRel) {
@@ -957,9 +956,10 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
       goog.bind(this.processOperationsInRow_, this));
   if (partition.rel.every(
       function(x) {return x.textContent == firstRel.textContent;})) {
-    return this.makeBranchNode_(
-        sre.SemanticAttr.Type.RELSEQ, children, partition.rel,
-        firstRel.textContent);
+    var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
+        children, partition.rel, firstRel.textContent);
+    node.role = firstRel.role;
+    return node;
   }
   return this.makeBranchNode_(
       sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
@@ -2032,7 +2032,7 @@ sre.SemanticTree.integralDxBoundarySingle_ = function(node) {
  * @private
  */
 sre.SemanticTree.generalFunctionBoundary_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'RELATION')(node) ||
+  return sre.SemanticTree.isRelation_(node) ||
       sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node);
 };
 
@@ -2658,4 +2658,16 @@ sre.SemanticTree.isEmbellished_ = function(node) {
 sre.SemanticTree.isOperator_ = function(node) {
   return sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
       sre.SemanticTree.attrPred_('embellished', 'OPERATOR')(node);
+};
+
+
+/**
+ * Determines if a node is an relation, regular or embellished.
+ * @param {sre.SemanticTree.Node} node A node to test.
+ * @return {boolean} True if the node is considered as relation.
+ * @private
+ */
+sre.SemanticTree.isRelation_ = function(node) {
+  return sre.SemanticTree.attrPred_('type', 'RELATION')(node) ||
+      sre.SemanticTree.attrPred_('embellished', 'RELATION')(node);
 };
