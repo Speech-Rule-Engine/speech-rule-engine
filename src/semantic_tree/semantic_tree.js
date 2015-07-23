@@ -81,6 +81,9 @@ sre.SemanticTree.Node = function(id) {
   /** @type {sre.SemanticAttr.Font} */
   this.font = sre.SemanticAttr.Font.UNKNOWN;
 
+  /** @type {?sre.SemanticAttr.Type} */
+  this.embellished = null;
+
   /** @type {!Array.<sre.SemanticTree.Node>} */
   this.childNodes = [];
 
@@ -251,6 +254,9 @@ sre.SemanticTree.Node.prototype.xmlAttributes_ = function(node) {
   node.setAttribute('role', this.role);
   if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
     node.setAttribute('font', this.font);
+  }
+  if (this.embellished) {
+    node.setAttribute('embellished', this.embellished);
   }
   node.setAttribute('id', this.id);
 };
@@ -441,7 +447,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MUNDER':
     case 'MUNDEROVER':
       newNode = this.makeLimitNode_(sre.SemanticUtil.tagName(mml),
-          this.parseMathmlChildren_(children));
+                                    this.parseMathmlChildren_(children));
       break;
     case 'MROOT':
       newNode = this.makeBranchNode_(
@@ -1162,7 +1168,13 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
  */
 sre.SemanticTree.prototype.getFencesInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
-      nodes, sre.SemanticTree.attrPred_('type', 'FENCE'));
+      nodes,
+    sre.SemanticTree.attrPred_('type', 'FENCE'));
+      // function(x) {return sre.SemanticTree.attrPred_('type', 'FENCE')(x) ||
+      //              (!sre.SemanticTree.attrPred_('type', 'FENCED')(x) &&
+      //               (sre.SemanticTree.attrPred_('role', 'OPEN')(x) ||
+      //                sre.SemanticTree.attrPred_('role', 'CLOSE')(x) ||
+      //                sre.SemanticTree.attrPred_('role', 'NEUTRAL')(x)));});
   var felem = partition.comp.shift();
   return this.processFences_(partition.rel, partition.comp, [], [felem]);
 };
@@ -1246,9 +1258,9 @@ sre.SemanticTree.prototype.processFences_ = function(
       // Closing fence for some opening fence.
       (firstRole == sre.SemanticAttr.Role.CLOSE &&
           lastOpen.role == sre.SemanticAttr.Role.OPEN) ||
-      // Netural fence with exact counter part.
+      // Neutral fence with exact counter part.
       (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
-                  fences[0].textContent == lastOpen.textContent))) {
+          fences[0].textContent == lastOpen.textContent))) {
     var fenced = this.makeHorizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
@@ -1409,6 +1421,7 @@ sre.SemanticTree.fenceToPunct_ = function(fence) {
 sre.SemanticTree.prototype.makeHorizontalFencedNode_ = function(
     ofence, cfence, content) {
   var childNode = this.processRow_(content);
+  // Case analysis for embellished fences.
   var newNode = this.makeBranchNode_(
       sre.SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
   if (ofence.role == sre.SemanticAttr.Role.OPEN) {
@@ -1596,6 +1609,11 @@ sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
     }
   }
   var newNode = this.makeBranchNode_(type, children, []);
+  var embellished = sre.SemanticTree.isEmbellished_(center);
+  if (innerNode) {
+    innerNode.embellished = embellished;
+  }
+  newNode.embellished = embellished;
   newNode.role = center.role;
   return newNode;
 };
@@ -2576,6 +2594,7 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
       ],
       []);
   newNode.role = base.role;
+  newNode.embellished = sre.SemanticTree.isEmbellished_(base);
   return newNode;
 };
 
@@ -2607,4 +2626,22 @@ sre.SemanticTree.prototype.makeScriptNode_ = function(
   }
   newNode.role = role;
   return newNode;
+};
+
+
+/**
+ * Determines if the a node is embellished and returns the its type in case it
+ * is.
+ * @param {sre.SemanticTree.Node} node A node to test.
+ * @return {?sre.SemanticAttr.Type} The type of the node that is embellished.
+ * @private
+ */
+sre.SemanticTree.isEmbellished_ = function(node) {
+  if (node.embellished) {
+    return node.embellished;
+  }
+  if (sre.SemanticAttr.isEmbellishedType(node.type)) {
+    return node.type;
+  }
+  return null;
 };

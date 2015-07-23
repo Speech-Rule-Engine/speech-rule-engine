@@ -1551,6 +1551,20 @@ sre.SemanticAttr.isClosingFence = function(fence) {
 };
 
 
+/**
+ * Determines if a symbol type can be embellished. Primitives that can be
+ * embellished are operators, punctuations, relations, and fences.
+ * @param {sre.SemanticAttr.Type} type The type.
+ * @return {boolean} True if the type can be embellished.
+ */
+sre.SemanticAttr.isEmbellishedType = function(type) {
+  return (type === sre.SemanticAttr.Type.OPERATOR ||
+          type === sre.SemanticAttr.Type.RELATION ||
+          type === sre.SemanticAttr.Type.FENCE ||
+          type === sre.SemanticAttr.Type.PUNCTUATION);
+};
+
+
 // TODO (sorge) Make this depended on position in the alphabets.
 /**
  * Check if a character is a small 'd' in some font.
