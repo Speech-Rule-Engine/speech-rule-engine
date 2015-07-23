@@ -124,13 +124,16 @@ sre.MathmlStoreUtil.checkMathjaxMsup = function(jax) {
  * Computes the correct separators for each node.
  * @param {Array.<Node>} nodes A node array.
  * @param {string} context A context string.
- * @return {function(): string} A closure that returns the next separator for an
- * mfenced expression starting with the first node in nodes.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the next separator for an mfenced expression starting with the first node
+ *     in nodes.
  */
 sre.MathmlStoreUtil.mfencedSeparators = function(nodes, context) {
   var nextSeparator = sre.MathUtil.nextSeparatorFunction(context);
   return function() {
-    return nextSeparator ? nextSeparator() : '';
+    return nextSeparator ?
+        [new sre.AuditoryDescription({text: nextSeparator(),
+           preprocess: true})] : [];
   };
 };
 
@@ -139,8 +142,9 @@ sre.MathmlStoreUtil.mfencedSeparators = function(nodes, context) {
  * Iterates over the list of content nodes of the parent of the given nodes.
  * @param {Array.<Node>} nodes A node array.
  * @param {string} context A context string.
- * @return {function(): string} A closure that returns the content of the next
- *     content node. Returns only context string if list is exhausted.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
  */
 sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
   if (nodes.length > 0) {
@@ -150,7 +154,13 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
   }
   return function() {
     var content = contentNodes.shift();
-    return context + (content ? content.textContent : '');
+    var contextDescr = context ?
+        [new sre.AuditoryDescription({text: context, preprocess: true})] : [];
+    if (!content) {
+      return contextDescr;
+    }
+    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    return contextDescr.concat(descrs);
   };
 };
 
