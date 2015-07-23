@@ -656,8 +656,8 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
   node.contentNodes = contentNodes;
   children.concat(contentNodes).forEach(
       function(x) {
-          x.parent = node;
-          node.addMathmlNodes_(x.mathml);
+        x.parent = node;
+        node.addMathmlNodes_(x.mathml);
       });
   console.log(node.role);
   return node;
@@ -2657,5 +2657,5 @@ sre.SemanticTree.isEmbellished_ = function(node) {
  */
 sre.SemanticTree.isOperator_ = function(node) {
   return sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
-    sre.SemanticTree.attrPred_('embellished', 'OPERATOR')(node);
+      sre.SemanticTree.attrPred_('embellished', 'OPERATOR')(node);
 };
