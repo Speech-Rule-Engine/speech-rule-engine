@@ -48,6 +48,105 @@ sre.MathmlCloudTest = function() {
 goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
+  // mml = '<mi>a</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
+  //   '</msubsup><mi>b</mi><msubsup><mo>+</mo><mn>m</mn><mn>\'</mn>' +
+  //   '</msubsup><mi>c</mi>';
+  // this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b', 'default');
+  // this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
+  // this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
+
+// /**
+//  * Testing operator embellished also from the left.
+//  */
+// sre.MathmlCloudTest.prototype.testEmbellishedOperatorTensor = function() {
+//   var mml = '<mi>a</mi><mmultiscript><mo>+</mo><mi>m</mi><mn>2</mn>' +
+//         '</mmultiscript><mi>b</mi>';
+//   this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
+//                        'default');
+//   this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'brief');
+//   this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'sbrief');
+//   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>3</mn></msubsup><mi>b</mi>';
+//   this.executeRuleTest(mml, 'a plus Subscript m Superscript 3 Baseline b',
+//                        'default');
+//   this.executeRuleTest(mml, 'a plus Sub m Sup 3 Base b', 'brief');
+//   this.executeRuleTest(mml, 'a plus Sub m Sup 3 Base b', 'sbrief');
+//   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>n</mn></msubsup><mi>b</mi>';
+//   this.executeRuleTest(mml, 'a plus Subscript m Superscript n Baseline b',
+//                        'default');
+//   this.executeRuleTest(mml, 'a plus Sub m Sup n Base b', 'brief');
+//   this.executeRuleTest(mml, 'a plus Sub m Sup n Base b', 'sbrief');
+//   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>\'</mn>' +
+//     '</msubsup><mi>b</mi>';
+//   this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b', 'default');
+//   this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
+//   this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
+// };
+
+
+/**
+ * Testing operator embellished with sub and superscript. Making sure cases of squared
+ * and cube are not used.
+ */
+sre.MathmlCloudTest.prototype.testEmbellishedOperatorSubSuper = function() {
+  var mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '</msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>3</mn></msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript m Superscript 3 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 3 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 3 Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>n</mn></msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript m Superscript n Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a plus Sub m Sup n Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub m Sup n Base b', 'sbrief');
+  mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>\'</mn>' +
+    '</msubsup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
+};
+
+
+/**
+ * Testing operator embellished with superscript. Making sure cases of squared
+ * and cube are not used.
+ */
+sre.MathmlCloudTest.prototype.testEmbellishedOperatorSuperscript = function() {
+  var mml = '<mi>a</mi><msup><mo>+</mo><mn>2</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>+</mo><mn>3</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Superscript 3 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sup 3 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sup 3 Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>+</mo><mn>n</mn></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Superscript n Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sup n Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sup n Base b', 'sbrief');
+  mml = '<mi>a</mi><msup><mo>+</mo><mo>\'</mo></msup><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus prime b', 'default');
+  this.executeRuleTest(mml, 'a plus prime b', 'brief');
+  this.executeRuleTest(mml, 'a plus prime b', 'sbrief');
+};
+
+
+/**
+ * Testing operator embellished with subscript.
+ */
+sre.MathmlCloudTest.prototype.testEmbellishedOperatorSubscript = function() {
+  var mml = '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub 2 Base b', 'sbrief');
+};
+
+
 /**
  * Testing trivial things, often inspired by bugs.
  */

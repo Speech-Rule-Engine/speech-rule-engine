@@ -654,12 +654,12 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
   node.type = type;
   node.childNodes = children;
   node.contentNodes = contentNodes;
-  children.concat(contentNodes)
-      .forEach(
-          function(x) {
-            x.parent = node;
-            node.addMathmlNodes_(x.mathml);
-          });
+  children.concat(contentNodes).forEach(
+      function(x) {
+          x.parent = node;
+          node.addMathmlNodes_(x.mathml);
+      });
+  console.log(node.role);
   return node;
 };
 
@@ -727,8 +727,10 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
  * @private
  */
 sre.SemanticTree.prototype.makeInfixNode_ = function(children, opNode) {
-  return this.makeBranchNode_(
+  var node = this.makeBranchNode_(
       sre.SemanticAttr.Type.INFIXOP, children, [opNode], opNode.textContent);
+  node.role = opNode.role;
+  return node;
 };
 
 
@@ -980,7 +982,7 @@ sre.SemanticTree.prototype.processOperationsInRow_ = function(nodes) {
 
   var prefix = [];
   while (nodes.length > 0 &&
-      nodes[0].type == sre.SemanticAttr.Type.OPERATOR) {
+         sre.SemanticTree.isOperator_(nodes[0])) {
     prefix.push(nodes.shift());
   }
   // Pathological case: only operators in row.
@@ -992,7 +994,7 @@ sre.SemanticTree.prototype.processOperationsInRow_ = function(nodes) {
   }
 
   var split = sre.SemanticTree.sliceNodes_(
-      nodes, sre.SemanticTree.attrPred_('type', 'OPERATOR'));
+      nodes, sre.SemanticTree.isOperator_);
   // At this point, we know that split.head is not empty!
   var node = this.makePrefixNode_(
       this.makeImplicitNode_(
@@ -1038,7 +1040,7 @@ sre.SemanticTree.prototype.makeOperationsTree_ = function(
   }
 
   var split = sre.SemanticTree.sliceNodes_(
-      nodes, sre.SemanticTree.attrPred_('type', 'OPERATOR'));
+      nodes, sre.SemanticTree.isOperator_);
 
   if (split.head.length == 0) {
     prefixes.push(split.div);
@@ -1983,7 +1985,7 @@ sre.SemanticTree.prototype.simpleFunctionHeuristic_ = function(node) {
  * @private
  */
 sre.SemanticTree.prefixFunctionBoundary_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
+  return sre.SemanticTree.isOperator_(node) ||
       sre.SemanticTree.generalFunctionBoundary_(node);
 };
 
@@ -2377,6 +2379,7 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
       case 'type': return sre.SemanticAttr.Type[attr];
       case 'role': return sre.SemanticAttr.Role[attr];
       case 'font': return sre.SemanticAttr.Font[attr];
+      case 'embellished': return sre.SemanticAttr.Type[attr];
     }
   };
 
@@ -2630,8 +2633,7 @@ sre.SemanticTree.prototype.makeScriptNode_ = function(
 
 
 /**
- * Determines if the a node is embellished and returns the its type in case it
- * is.
+ * Determines if a node is embellished and returns its type in case it is.
  * @param {sre.SemanticTree.Node} node A node to test.
  * @return {?sre.SemanticAttr.Type} The type of the node that is embellished.
  * @private
@@ -2644,4 +2646,16 @@ sre.SemanticTree.isEmbellished_ = function(node) {
     return node.type;
   }
   return null;
+};
+
+
+/**
+ * Determines if a node is an operator, regular or embellished.
+ * @param {sre.SemanticTree.Node} node A node to test.
+ * @return {boolean} True if the node is considered as operator.
+ * @private
+ */
+sre.SemanticTree.isOperator_ = function(node) {
+  return sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
+    sre.SemanticTree.attrPred_('embellished', 'OPERATOR')(node);
 };

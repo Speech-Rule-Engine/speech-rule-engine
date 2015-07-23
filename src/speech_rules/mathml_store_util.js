@@ -152,8 +152,10 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
   } else {
     var contentNodes = [];
   }
+  console.log(contentNodes.length);
   return function() {
     var content = contentNodes.shift();
+    console.log(content.toString());
     var contextDescr = context ?
         [new sre.AuditoryDescription({text: context, preprocess: true})] : [];
     if (!content) {
