@@ -55,32 +55,37 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
   // this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
   // this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
 
-// /**
-//  * Testing operator embellished also from the left.
-//  */
-// sre.MathmlCloudTest.prototype.testEmbellishedOperatorTensor = function() {
-//   var mml = '<mi>a</mi><mmultiscript><mo>+</mo><mi>m</mi><mn>2</mn>' +
-//         '</mmultiscript><mi>b</mi>';
-//   this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
-//                        'default');
-//   this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'brief');
-//   this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'sbrief');
-//   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>3</mn></msubsup><mi>b</mi>';
-//   this.executeRuleTest(mml, 'a plus Subscript m Superscript 3 Baseline b',
-//                        'default');
-//   this.executeRuleTest(mml, 'a plus Sub m Sup 3 Base b', 'brief');
-//   this.executeRuleTest(mml, 'a plus Sub m Sup 3 Base b', 'sbrief');
-//   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>n</mn></msubsup><mi>b</mi>';
-//   this.executeRuleTest(mml, 'a plus Subscript m Superscript n Baseline b',
-//                        'default');
-//   this.executeRuleTest(mml, 'a plus Sub m Sup n Base b', 'brief');
-//   this.executeRuleTest(mml, 'a plus Sub m Sup n Base b', 'sbrief');
-//   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>\'</mn>' +
-//     '</msubsup><mi>b</mi>';
-//   this.executeRuleTest(mml, 'a plus prime Subscript m Baseline b', 'default');
-//   this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'brief');
-//   this.executeRuleTest(mml, 'a plus prime Sub m Base b', 'sbrief');
-// };
+/**
+ * Testing operator embellished also from the left.
+ */
+sre.MathmlCloudTest.prototype.testEmbellishedOperatorTensor = function() {
+  var mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '</mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a plus Subscript m Superscript 2 Baseline b',
+                       'default');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Superscript 3 Baseline plus Subscript m' +
+                       ' Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sup 3 Base plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a Sup 3 Base plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Subscript 3 Baseline plus Subscript m' +
+                       ' Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sub 3 Base plus Sub m Sup 2 Base b', 'brief');
+  this.executeRuleTest(mml, 'a Sub 3 Base plus Sub m Sup 2 Base b', 'sbrief');
+  mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
+        '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
+  this.executeRuleTest(mml, 'a Subscript 3 Superscript n Baseline plus' +
+                       ' Subscript m Superscript 2 Baseline b', 'default');
+  this.executeRuleTest(mml, 'a Sub 3 Sup n Base plus Sub m Sup 2 Base b',
+                       'brief');
+  this.executeRuleTest(mml, 'a Sub 3 Sup n Base plus Sub m Sup 2 Base b',
+                       'sbrief');
+};
 
 
 /**

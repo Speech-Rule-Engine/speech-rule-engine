@@ -8989,6 +8989,19 @@ sre.SemanticTreeTest.prototype.testStreeMultiEmbellishment = function() {
       '</children>' +
       '</subscript>');
   this.executeTreeTest(
+      '<mmultiscripts><mo>+</mo><mn>2</mn><mi>x</mi></mmultiscripts>',
+      '<superscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="2">x</identifier>' +
+      '</children>' +
+      '</superscript>');
+  this.executeTreeTest(
       '<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi>' +
       '</msub><mo>-</mo></mover>',
       '<overscore role="addition" embellished="operator" id="6">' +

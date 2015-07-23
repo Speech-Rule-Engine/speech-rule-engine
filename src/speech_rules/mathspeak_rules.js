@@ -1185,7 +1185,7 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
     var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
                      'ancestor::fraction|ancestor::punctuated|' +
                      'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel'].
+                     'ancestor::relseq|ancestor::multirel|ancestor::content'].
         concat(components);
     defineRuleAlias.apply(null, aliasList);
   }
