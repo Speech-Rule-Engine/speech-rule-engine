@@ -954,15 +954,15 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
   }
   var children = partition.comp.map(
       goog.bind(this.processOperationsInRow_, this));
-  if (partition.rel.every(
-      function(x) {return x.textContent == firstRel.textContent;})) {
-    var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
-        children, partition.rel, firstRel.textContent);
-    node.role = firstRel.role;
-    return node;
-  }
-  return this.makeBranchNode_(
+  if (partition.rel.some(
+      function(x) {return x.textContent !== firstRel.textContent;})) {
+    return this.makeBranchNode_(
       sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
+  }
+  var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
+      children, partition.rel, firstRel.textContent);
+  node.role = firstRel.role;
+  return node;
 };
 
 
@@ -1390,6 +1390,7 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
 };
 
 
+// TODO (sorge) Work this out for embellished fences.
 /**
  * Rewrite fences into punctuation. This is done with any "leftover" fence.
  * @param {sre.SemanticTree.Node} fence Fence.
@@ -1448,7 +1449,7 @@ sre.SemanticTree.prototype.getPunctuationInRow_ = function(nodes) {
   // In addition we keep the single punctuation nodes as content.
   var partition = sre.SemanticTree.partitionNodes_(
       nodes, function(x) {
-        return sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(x) &&
+        return sre.SemanticTree.isPunctuation_(x) &&
             !sre.SemanticTree.attrPred_('role', 'ELLIPSIS')(x);});
   if (partition.rel.length == 0) {
     return nodes;
@@ -2033,7 +2034,7 @@ sre.SemanticTree.integralDxBoundarySingle_ = function(node) {
  */
 sre.SemanticTree.generalFunctionBoundary_ = function(node) {
   return sre.SemanticTree.isRelation_(node) ||
-      sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node);
+      sre.SemanticTree.isPunctuation_(node);
 };
 
 
@@ -2670,4 +2671,16 @@ sre.SemanticTree.isOperator_ = function(node) {
 sre.SemanticTree.isRelation_ = function(node) {
   return sre.SemanticTree.attrPred_('type', 'RELATION')(node) ||
       sre.SemanticTree.attrPred_('embellished', 'RELATION')(node);
+};
+
+
+/**
+ * Determines if a node is an punctuation, regular or embellished.
+ * @param {sre.SemanticTree.Node} node A node to test.
+ * @return {boolean} True if the node is considered as punctuation.
+ * @private
+ */
+sre.SemanticTree.isPunctuation_ = function(node) {
+  return sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node) ||
+      sre.SemanticTree.attrPred_('embellished', 'PUNCTUATION')(node);
 };
