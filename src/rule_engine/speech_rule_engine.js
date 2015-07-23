@@ -256,7 +256,9 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   var cFunc = this.activeStore_.contextFunctions.lookup(ctxtFunc);
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
   var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
-  var sepClosure = sFunc ? sFunc(nodes, sep) : function() {return sep;};
+  var sepClosure = sFunc ? sFunc(nodes, sep) :
+      function() {return new sre.AuditoryDescription({text: sep,
+        preprocess: true});};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
@@ -265,10 +267,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();
-        if (text) {
-          result.push(new sre.AuditoryDescription({text: text,
-            preprocess: true}));
-        }
+        result = result.concat(text);
       }
     }
   }
