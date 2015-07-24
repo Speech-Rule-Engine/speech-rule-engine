@@ -2377,10 +2377,11 @@ sre.SemanticTree.partitionNodes_ = function(nodes, pred) {
 sre.SemanticTree.attrPred_ = function(prop, attr) {
   var getAttr = function(prop) {
     switch (prop) {
-      case 'type': return sre.SemanticAttr.Type[attr];
       case 'role': return sre.SemanticAttr.Role[attr];
       case 'font': return sre.SemanticAttr.Font[attr];
-      case 'embellished': return sre.SemanticAttr.Type[attr];
+      case 'embellished':
+      case 'type':
+      default: return sre.SemanticAttr.Type[attr];
     }
   };
 
