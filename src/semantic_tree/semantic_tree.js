@@ -759,7 +759,8 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
  */
 sre.SemanticTree.prototype.makeInfixNode_ = function(children, opNode) {
   var node = this.makeBranchNode_(
-      sre.SemanticAttr.Type.INFIXOP, children, [opNode], opNode.textContent);
+      sre.SemanticAttr.Type.INFIXOP, children, [opNode],
+      sre.SemanticTree.getEmbellishedInner_(opNode).textContent); 
   node.role = opNode.role;
   return node;
 };
@@ -992,7 +993,8 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
         sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
   }
   var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
-      children, partition.rel, firstRel.textContent);
+      children, partition.rel,
+      sre.SemanticTree.getEmbellishedInner_(firstRel).textContent);
   node.role = firstRel.role;
   return node;
 };
@@ -2719,4 +2721,19 @@ sre.SemanticTree.isRelation_ = function(node) {
 sre.SemanticTree.isPunctuation_ = function(node) {
   return sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node) ||
       sre.SemanticTree.attrPred_('embellished', 'PUNCTUATION')(node);
+};
+
+
+/**
+ * Finds the innermost element of an embellished operator node.
+ * @param {!sre.SemanticTree.Node} node The embellished node.
+ * @return {!sre.SemanticTree.Node} The innermost node.
+ * @private
+ */
+sre.SemanticTree.getEmbellishedInner_ = function(node) {
+  if (node.embellished || node.childNodes.length > 0) {
+    return sre.SemanticTree.getEmbellishedInner_(
+        /** @type {!sre.SemanticTree.Node} */(node.childNodes[0]));
+  }
+  return node;
 };

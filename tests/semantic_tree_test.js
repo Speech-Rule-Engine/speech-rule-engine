@@ -9093,7 +9093,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
   this.executeTreeTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>2</mn></msub><mi>z</mi>',
-      '<relseq role="equality" id="9">' +
+      '<relseq role="equality" id="9">=' +
       '<content>' +
       '<subscript role="equality" embellished="relation" id="3">' +
       '<children>' +
@@ -9143,7 +9143,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
   this.executeTreeTest(
       '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
       '<mn>2</mn></msub><mi>z</mi>',
-      '<infixop role="addition" id="9">' +
+      '<infixop role="addition" id="9">+' +
       '<content>' +
       '<subscript role="addition" embellished="operator" id="3">' +
       '<children>' +
@@ -9168,7 +9168,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
   this.executeTreeTest(
       '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
       '<mn>4</mn></msub><mi>z</mi>',
-      '<infixop role="addition" id="10">' +
+      '<infixop role="addition" id="10">+' +
       '<content>' +
       '<subscript role="addition" embellished="operator" id="7">' +
       '<children>' +
@@ -9178,7 +9178,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
       '</subscript>' +
       '</content>' +
       '<children>' +
-      '<infixop role="addition" id="9">' +
+      '<infixop role="addition" id="9">+' +
       '<content>' +
       '<subscript role="addition" embellished="operator" id="3">' +
       '<children>' +
@@ -9199,7 +9199,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
   this.executeTreeTest(
       '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo>' +
       '<mo>\'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>',
-      '<relseq role="equality" id="15">' +
+      '<relseq role="equality" id="15">=' +
       '<content>' +
       '<superscript role="equality" embellished="relation" id="7">' +
       '<children>' +
@@ -9209,7 +9209,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
       '</superscript>' +
       '</content>' +
       '<children>' +
-      '<infixop role="addition" id="13">' +
+      '<infixop role="addition" id="13">+' +
       '<content>' +
       '<subscript role="addition" embellished="operator" id="3">' +
       '<children>' +
@@ -9223,7 +9223,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
       '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
       '</children>' +
       '</infixop>' +
-      '<infixop role="addition" id="14">' +
+      '<infixop role="addition" id="14">+' +
       '<content>' +
       '<subscript role="addition" embellished="operator" id="11">' +
       '<children>' +
