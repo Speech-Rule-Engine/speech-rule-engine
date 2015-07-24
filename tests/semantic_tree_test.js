@@ -9085,3 +9085,209 @@ sre.SemanticTreeTest.prototype.testStreeMultiEmbellishment = function() {
       '</superscript>');
 };
 
+
+/**
+ * Expressions with embellished operators and relations.
+ */
+sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
+      '<mn>2</mn></msub><mi>z</mi>',
+      '<relseq role="equality" id="9">' +
+      '<content>' +
+      '<subscript role="equality" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="equality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
+      '<mn>4</mn></msub><mi>z</mi>',
+      '<multirel role="unknown" id="9">' +
+      '<content>' +
+      '<subscript role="equality" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="equality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '<number role="integer" font="normal" id="6">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</multirel>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
+      '<mn>2</mn></msub><mi>z</mi>',
+      '<infixop role="addition" id="9">' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="addition" embellished="operator" id="7">' +
+      '<children>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
+      '<mn>4</mn></msub><mi>z</mi>',
+      '<infixop role="addition" id="10">' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="7">' +
+      '<children>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '<number role="integer" font="normal" id="6">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="addition" id="9">' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo>' +
+      '<mo>\'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>',
+      '<relseq role="equality" id="15">' +
+      '<content>' +
+      '<superscript role="equality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '<punctuation role="prime" id="6">\'</punctuation>' +
+      '</children>' +
+      '</superscript>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="addition" id="13">' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<infixop role="addition" id="14">' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="11">' +
+      '<children>' +
+      '<operator role="addition" id="9">+</operator>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="12">z</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi><msup><mo>,</mo>' +
+      '<mo>\'</mo></msup><mi>x</mi><msub><mo>:</mo><mn>4</mn></msub><mi>z</mi>',
+      '<punctuated role="sequence" id="13">' +
+      '<content>' +
+      '<subscript role="unknown" embellished="punctuation" id="3">' +
+      '<children>' +
+      '<punctuation role="unknown" id="1">:</punctuation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<superscript role="comma" embellished="punctuation" id="7">' +
+      '<children>' +
+      '<punctuation role="comma" id="5">,</punctuation>' +
+      '<punctuation role="prime" id="6">\'</punctuation>' +
+      '</children>' +
+      '</superscript>' +
+      '<subscript role="unknown" embellished="punctuation" id="11">' +
+      '<children>' +
+      '<punctuation role="unknown" id="9">:</punctuation>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<subscript role="unknown" embellished="punctuation" id="3">' +
+      '<children>' +
+      '<punctuation role="unknown" id="1">:</punctuation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '<superscript role="comma" embellished="punctuation" id="7">' +
+      '<children>' +
+      '<punctuation role="comma" id="5">,</punctuation>' +
+      '<punctuation role="prime" id="6">\'</punctuation>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '<subscript role="unknown" embellished="punctuation" id="11">' +
+      '<children>' +
+      '<punctuation role="unknown" id="9">:</punctuation>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="12">z</identifier>' +
+      '</children>' +
+      '</punctuated>'
+  );
+};
