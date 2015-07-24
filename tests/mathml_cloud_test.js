@@ -135,6 +135,9 @@ sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
 };
 
 
+// TODO (sorge) Test currently fails as the parenthesis is seen to be
+//     embellished! Should work again once embellished parenthesis are fully
+//     rewritten.
 /**
  * Testing Parenthesis with Superscript.
  * Simplified test case for expression 95.

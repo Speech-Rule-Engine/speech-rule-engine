@@ -713,7 +713,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
       'children/*[1]/children/*[2][@role!="othernumber"])',
-      'not(ancestor::content)', 'not([@embellish])');
+      'not(ancestor::content)', 'not(self::superscript[@embellished])');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -737,7 +737,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
       'children/*[1]/children/*[2][@role!="othernumber"])',
-      'not(ancestor::content)', 'not([@embellish])');
+      'not(ancestor::content)', 'not(self::superscript[@embellished])');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
