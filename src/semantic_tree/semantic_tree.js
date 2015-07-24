@@ -957,7 +957,7 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
   if (partition.rel.some(
       function(x) {return x.textContent !== firstRel.textContent;})) {
     return this.makeBranchNode_(
-      sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
+        sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
   }
   var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
       children, partition.rel, firstRel.textContent);

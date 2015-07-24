@@ -255,7 +255,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellRelTensor = function() {
  */
 sre.MathspeakEmbellishTest.prototype.testEmbellMultRelSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi>' +
-        '<mo>=</mo><mi>c</mi>';
+      '<mo>=</mo><mi>c</mi>';
   this.executeRuleTest(mml, 'a equals Subscript 2 Baseline b equals c',
                        'default');
   this.executeRuleTest(mml, 'a equals Sub 2 Base b equals c', 'brief');
@@ -365,7 +365,7 @@ sre.MathspeakEmbellishTest.prototype.testEmbellPunctTensor = function() {
  */
 sre.MathspeakEmbellishTest.prototype.testEmbellMultPunctSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi>' +
-        '<mo>:</mo><mi>c</mi>';
+      '<mo>:</mo><mi>c</mi>';
   this.executeRuleTest(mml, 'a colon Subscript 2 Baseline b colon c',
                        'default');
   this.executeRuleTest(mml, 'a colon Sub 2 Base b colon c', 'brief');
