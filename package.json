@@ -17,8 +17,8 @@
     "url": "https://github.com/zorkow/speech-rule-engine/issues"
   },
   "license": {
-    "type": "Apache",
-    "url": "http://github.com/mathjax/MathJax-node/blob/master/LICENSE"
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
   },
   "repository": {
     "type": "git",
