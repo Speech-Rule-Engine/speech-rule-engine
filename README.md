@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine)
+
 speech-rule-engine
 ==================
 
