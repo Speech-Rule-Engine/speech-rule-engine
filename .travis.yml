@@ -10,5 +10,4 @@ branches:
 install:
   - npm install closure closure-library closurecompiler
   - export TRAVIS=true
-  - sed -i s/'>= 1.7'/'<= 1.7'/g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/bin/build/closurebuilder.py
-
+  - sed -i s/'>= 1.7'/'< 1.7'/g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/bin/build/closurebuilder.py
