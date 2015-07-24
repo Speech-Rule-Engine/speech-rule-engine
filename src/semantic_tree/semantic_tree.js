@@ -407,6 +407,38 @@ sre.SemanticTree.Node.prototype.removeContentNode_ = function(node) {
 
 
 /**
+ * Tests if node is equal to the given node. Two nodes are considered equal if
+ * they have the same type, role, content and all its children are equal.
+ * @param {sre.SemanticTree.Node} node The node to test against.
+ * @return {boolean} True if nodes are equal wrt. structure and content.
+ */
+sre.SemanticTree.Node.prototype.equals = function(node) {
+  if (!node) {
+    return false;
+  }
+  if (this.type !== node.type || this.role !== node.role ||
+      this.textContent !== node.textContent ||
+      this.childNodes.length !== node.childNodes.length ||
+      this.contentNodes.length !== node.contentNodes.length) {
+    return false;
+  }
+  for (var i = 0, node1, node2;
+       node1 = this.childNodes[i], node2 = node.childNodes[i]; i++) {
+    if (!node1.equals(node2)) {
+      return false;
+    }
+  }
+  for (i = 0;
+       node1 = this.contentNodes[i], node2 = node.contentNodes[i]; i++) {
+    if (!node1.equals(node2)) {
+      return false;
+    }
+  }
+  return true;
+};
+
+
+/**
  * This is the main function that creates the semantic tree by recursively
  * parsing the initial MathML tree and bottom up assembling the tree.
  * @param {!Element} mml The MathML tree.
@@ -955,7 +987,7 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
   var children = partition.comp.map(
       goog.bind(this.processOperationsInRow_, this));
   if (partition.rel.some(
-      function(x) {return x.textContent !== firstRel.textContent;})) {
+      function(x) {return !x.equals(firstRel);})) {
     return this.makeBranchNode_(
         sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
   }
@@ -1138,7 +1170,7 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
       root.role === sre.SemanticAttr.Role.IMPLICIT) {
     return false;
   }
-  if (root.textContent == op.textContent) {
+  if (root.contentNodes[0].equals(op)) {
     root.appendContentNode_(op);
     root.appendChild_(node);
     return true;
@@ -1250,6 +1282,7 @@ sre.SemanticTree.prototype.processFences_ = function(
       // Or we have a neutral fence that does not have a counter part.
           (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
               (!lastOpen ||
+               // COMPARISON (fences)
                   fences[0].textContent != lastOpen.textContent))) {
     openStack.push(fences.shift());
     contentStack.push(content.shift());
@@ -1262,6 +1295,7 @@ sre.SemanticTree.prototype.processFences_ = function(
           lastOpen.role == sre.SemanticAttr.Role.OPEN) ||
       // Neutral fence with exact counter part.
       (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
+       // COMPARISON (fences)
           fences[0].textContent == lastOpen.textContent))) {
     var fenced = this.makeHorizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
@@ -1326,6 +1360,7 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
   }
   var firstFence = fences.shift();
   var split = sre.SemanticTree.sliceNodes_(
+    // COMPARISON (fences)
       fences, function(x) {return x.textContent == firstFence.textContent;});
   if (!split.div) {
     sre.SemanticTree.fenceToPunct_(firstFence);
