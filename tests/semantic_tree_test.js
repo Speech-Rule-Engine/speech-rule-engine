@@ -9290,4 +9290,50 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
       '</children>' +
       '</punctuated>'
   );
+  this.executeTreeTest(
+      '<msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
+      '<mn>3</mn></msub><mi>x</mi>',
+      '<prefixop role="multiop" id="7">+ +' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="addition" embellished="operator" id="5">' +
+      '<children>' +
+      '<operator role="addition" id="3">+</operator>' +
+      '<number role="integer" font="normal" id="4">3</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</prefixop>'
+  );
+  this.executeTreeTest(
+      '<mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
+      '<mn>3</mn></msub>',
+      '<postfixop role="multiop" id="7">+ +' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="addition" embellished="operator" id="6">' +
+      '<children>' +
+      '<operator role="addition" id="4">+</operator>' +
+      '<number role="integer" font="normal" id="5">3</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '</children>' +
+      '</postfixop>'
+  );
 };
