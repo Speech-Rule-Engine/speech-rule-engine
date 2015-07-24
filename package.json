@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node tests/mathml_store_test.js",
+    "test": "make test",
     "prepublish": "make clean; make publish"
   },
   "maintainers": [
@@ -16,10 +16,7 @@
     "email": "volker.sorge@gmail.com",
     "url": "https://github.com/zorkow/speech-rule-engine/issues"
   },
-  "license": {
-    "type": "Apache",
-    "url": "http://github.com/mathjax/MathJax-node/blob/master/LICENSE"
-  },
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/zorkow/speech-rule-engine"
