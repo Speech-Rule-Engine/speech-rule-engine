@@ -9,4 +9,4 @@ branches:
     - master
 install:
   - npm -g install closure closure-library closurecompiler
-
+  - export TRAVIS=true

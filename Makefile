@@ -4,6 +4,9 @@
 #
 
 PREFIX = $(HOME)
+ifdef TRAVIS
+PREFIX = /home/travis/build/zorkow/speech-rule-engine
+endif
 
 # Nodejs location.
 NODEJS = node
