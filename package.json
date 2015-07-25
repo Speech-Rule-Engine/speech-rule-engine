@@ -32,6 +32,11 @@
     "xmldom": "*",
     "xpath": "*"
   },
+  "devDependencies": {
+    "closure": ">=1.0.0",
+    "closure-library": ">=1.43629075.2",
+    "closurecompiler": ">=1.5.0",
+  },
   "files": [
       "index.js",
       "LICENSE",
