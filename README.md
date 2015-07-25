@@ -1,8 +1,16 @@
-speech-rule-engine
+
+Speech Rule Engine  [![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine)
 ==================
 
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
+
+The speech rule engine can translate XML expression into speech strings according to rules that
+can be specified in a syntax using Xpath expressions.  It was originally designed for translation
+of MathML and MathJax DOM elements for the ChromeVox screen reader. 
+Besides the rules originally designed for the use in ChromeVox, it also has an implemententation of the 
+full set of Mathspeak rules In addition it contains a library for semantic interpretation and enrichment
+of MathML expressions.
 
 There are two ways of using this engine. Either as a package via npm or by
 building it as a standalone tool.  The former is the easiest way to use the
