@@ -1207,12 +1207,8 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
 sre.SemanticTree.prototype.getFencesInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes,
-      sre.SemanticTree.attrPred_('type', 'FENCE'));
-  // function(x) {return sre.SemanticTree.attrPred_('type', 'FENCE')(x) ||
-  //              (!sre.SemanticTree.attrPred_('type', 'FENCED')(x) &&
-  //               (sre.SemanticTree.attrPred_('role', 'OPEN')(x) ||
-  //                sre.SemanticTree.attrPred_('role', 'CLOSE')(x) ||
-  //                sre.SemanticTree.attrPred_('role', 'NEUTRAL')(x)));});
+      sre.SemanticTree.isFence_);
+  partition = sre.SemanticTree.purgeFences_(partition);
   var felem = partition.comp.shift();
   return this.processFences_(partition.rel, partition.comp, [], [felem]);
 };
@@ -1436,18 +1432,27 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
  * @private
  */
 sre.SemanticTree.fenceToPunct_ = function(fence) {
-  fence.type = sre.SemanticAttr.Type.PUNCTUATION;
+  var newRole;
   switch (fence.role) {
     case sre.SemanticAttr.Role.NEUTRAL:
-      fence.role = sre.SemanticAttr.Role.VBAR;
+      newRole = sre.SemanticAttr.Role.VBAR;
       break;
     case sre.SemanticAttr.Role.OPEN:
-      fence.role = sre.SemanticAttr.Role.OPENFENCE;
+      newRole = sre.SemanticAttr.Role.OPENFENCE;
       break;
     case sre.SemanticAttr.Role.CLOSE:
-      fence.role = sre.SemanticAttr.Role.CLOSEFENCE;
+      newRole = sre.SemanticAttr.Role.CLOSEFENCE;
       break;
+    default:
+      return;
   }
+  while (fence.embellished) {
+    fence.embellished = sre.SemanticAttr.Type.PUNCTUATION;
+    fence.role = newRole;
+    fence = fence.childNodes[0];
+  }
+  fence.type = sre.SemanticAttr.Type.PUNCTUATION;
+  fence.role = newRole;
 };
 
 
@@ -2727,6 +2732,18 @@ sre.SemanticTree.isPunctuation_ = function(node) {
 
 
 /**
+ * Determines if a node is an fence, regular or embellished.
+ * @param {sre.SemanticTree.Node} node A node to test.
+ * @return {boolean} True if the node is considered as fence.
+ * @private
+ */
+sre.SemanticTree.isFence_ = function(node) {
+  return sre.SemanticTree.attrPred_('type', 'FENCE')(node) ||
+      sre.SemanticTree.attrPred_('embellished', 'FENCE')(node);
+};
+
+
+/**
  * Finds the innermost element of an embellished operator node.
  * @param {sre.SemanticTree.Node} node The embellished node.
  * @return {sre.SemanticTree.Node} The innermost node.
@@ -2737,4 +2754,84 @@ sre.SemanticTree.getEmbellishedInner_ = function(node) {
     return sre.SemanticTree.getEmbellishedInner_(node.childNodes[0]);
   }
   return node;
+};
+
+
+/**
+ * Rewrites a fences partition to remove non-eligible embellished fences.
+ * It rewrites all other fences into punctuations.
+ * For eligibility see sre.SemanticTree.isElligibleFence_
+ * @param {{rel: !Array.<sre.SemanticTree.Node>,
+ *          comp: !Array.<!Array.<sre.SemanticTree.Node>>}} partition
+ *        A partition for fences.
+ * @return {{rel: !Array.<sre.SemanticTree.Node>,
+ *           comp: !Array.<!Array.<sre.SemanticTree.Node>>}}
+ *    The cleansed partition.
+ * @private
+ */
+sre.SemanticTree.purgeFences_ = function(partition) {
+  var rel = partition.rel;
+  var comp = partition.comp;
+  var newRel = [];
+  var newComp = [];
+    
+  while (rel.length > 0) {
+    var currentRel = rel.shift();
+    var currentComp = comp.shift();
+    if (sre.SemanticTree.isElligibleFence_(currentRel)) {
+      newRel.push(currentRel);
+      newComp.push(currentComp);
+      continue;
+    }
+    sre.SemanticTree.fenceToPunct_(currentRel);
+    currentComp.push(currentRel);
+    currentComp = currentComp.concat(comp.shift());
+    comp.unshift(currentComp);
+  }
+  newComp.push(comp.shift());
+  return {rel: newRel, comp: newComp};
+};
+
+
+/**
+ * Determines if a fence is eligible.
+ *
+ * Currently fences are not eligible if they are opening fences with right
+ * indices, closing fences with left indices or fences with both left and right
+ * indices.
+ * @param {sre.SemanticTree.Node} node A node to test.
+ * @return {boolean} True if the node is considered as fence.
+ * @private
+ */
+sre.SemanticTree.isElligibleFence_ = function(node) {
+  if (!node || !sre.SemanticTree.isFence_(node)) {
+    return false;
+  }
+  if (!node.embellished) {
+    return true;
+  }
+  var bothSide = function(node) {
+    return sre.SemanticTree.attrPred_('type', 'TENSOR')(node) &&
+        (!sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[2]) ||
+        !sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[3]));
+  };
+  var recurseBaseNode = function(node) {
+    if (!node.embellished) {
+      return true;
+    }
+    if (bothSide(node)) {
+      return false;
+    }
+    if (sre.SemanticTree.attrPred_('role', 'CLOSE')(node) &&
+        sre.SemanticTree.attrPred_('type', 'TENSOR')(node)) {
+      return false;
+    }
+    if (sre.SemanticTree.attrPred_('role', 'OPEN')(node) &&
+        (sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(node) ||
+         sre.SemanticTree.attrPred_('type', 'SUPERSCRIPT')(node))) {
+      return false;
+    }
+    return recurseBaseNode(node.childNodes[0]);
+  };
+  return recurseBaseNode(node);
 };
