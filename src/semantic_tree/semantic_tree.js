@@ -1282,7 +1282,7 @@ sre.SemanticTree.prototype.processFences_ = function(
       // Or we have a neutral fence that does not have a counter part.
           (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
               (!lastOpen ||
-               // COMPARISON (fences)
+               // COMPARISON (neutral fences)
                   fences[0].textContent != lastOpen.textContent))) {
     openStack.push(fences.shift());
     contentStack.push(content.shift());
@@ -1295,7 +1295,7 @@ sre.SemanticTree.prototype.processFences_ = function(
           lastOpen.role == sre.SemanticAttr.Role.OPEN) ||
       // Neutral fence with exact counter part.
       (firstRole == sre.SemanticAttr.Role.NEUTRAL &&
-       // COMPARISON (fences)
+       // COMPARISON (neutral fences)
           fences[0].textContent == lastOpen.textContent))) {
     var fenced = this.makeHorizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
@@ -1360,7 +1360,7 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
   }
   var firstFence = fences.shift();
   var split = sre.SemanticTree.sliceNodes_(
-      // COMPARISON (fences)
+      // COMPARISON (neutral fences)
       fences, function(x) {return x.textContent == firstFence.textContent;});
   if (!split.div) {
     sre.SemanticTree.fenceToPunct_(firstFence);
@@ -1469,6 +1469,11 @@ sre.SemanticTree.prototype.makeHorizontalFencedNode_ = function(
     ofence, cfence, content) {
   var childNode = this.processRow_(content);
   // Case analysis for embellished fences.
+  // Rewrite embellished operators:
+  // -- Take out the index parts
+  // -- Retain over/under parts
+  // -- Put the index parts around the fenced expression
+  //
   var newNode = this.makeBranchNode_(
       sre.SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
   if (ofence.role == sre.SemanticAttr.Role.OPEN) {
