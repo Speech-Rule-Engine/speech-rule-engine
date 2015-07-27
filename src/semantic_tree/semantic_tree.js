@@ -1425,7 +1425,6 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
 };
 
 
-// TODO (sorge) Work this out for embellished fences.
 /**
  * Rewrite fences into punctuation. This is done with any "leftover" fence.
  * @param {sre.SemanticTree.Node} fence Fence.
@@ -1468,12 +1467,6 @@ sre.SemanticTree.fenceToPunct_ = function(fence) {
 sre.SemanticTree.prototype.makeHorizontalFencedNode_ = function(
     ofence, cfence, content) {
   var childNode = this.processRow_(content);
-  // Case analysis for embellished fences.
-  // Rewrite embellished operators:
-  // -- Take out the index parts
-  // -- Retain over/under parts
-  // -- Put the index parts around the fenced expression
-  //
   var newNode = this.makeBranchNode_(
       sre.SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
   if (ofence.role == sre.SemanticAttr.Role.OPEN) {
@@ -1481,7 +1474,7 @@ sre.SemanticTree.prototype.makeHorizontalFencedNode_ = function(
   } else {
     newNode.role = ofence.role;
   }
-  return newNode;
+  return sre.SemanticTree.rewriteFencedNode_(newNode);
 };
 
 
@@ -2779,7 +2772,7 @@ sre.SemanticTree.purgeFences_ = function(partition) {
   var comp = partition.comp;
   var newRel = [];
   var newComp = [];
-    
+
   while (rel.length > 0) {
     var currentRel = rel.shift();
     var currentComp = comp.shift();
@@ -2839,4 +2832,54 @@ sre.SemanticTree.isElligibleFence_ = function(node) {
     return recurseBaseNode(node.childNodes[0]);
   };
   return recurseBaseNode(node);
+};
+
+
+/**
+ * Rewrites a fenced node by pulling some embellishments from fences to the
+ * outside.
+ * @param {!sre.SemanticTree.Node} fenced The fenced node.
+ * @return {!sre.SemanticTree.Node} The rewritten node.
+ * @private
+ */
+sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
+  console.log('Here we are: \n' + fenced.childNodes[0].toString());
+  var ofence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[0]);
+  var cfence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[1]);
+  var rewritten = sre.SemanticTree.rewriteFence_(fenced, ofence);
+  fenced.contentNodes[0] = rewritten.fence;
+  console.log(rewritten.node.toString());
+
+  rewritten = sre.SemanticTree.rewriteFence_(rewritten.node, cfence);
+  fenced.contentNodes[1] = rewritten.fence;
+  return rewritten.node;
+};
+
+
+/**
+ * Rewrites a fence by removing embellishments and putting them around the
+ * node. The only embellishments that are not pulled out are overscore and
+ * underscore.
+ * @param {!sre.SemanticTree.Node} node The original fenced node.
+ * @param {!sre.SemanticTree.Node} fence The fenced node.
+ * @return {{node: !sre.SemanticTree.Node,
+ *           fence: !sre.SemanticTree.Node}} The rewritten node and fence.
+ * @private
+ */
+sre.SemanticTree.rewriteFence_ = function(node, fence) {
+  if (!fence.embellished) {
+    return {node: node, fence: fence};
+  }
+  var newFence = /** @type {!sre.SemanticTree.Node} */ (fence.childNodes[0]);
+  if (sre.SemanticTree.attrPred_('type', 'OVERSCORE')(fence) ||
+      sre.SemanticTree.attrPred_('type', 'UNDERSCORE')(fence)) {
+    var rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
+    fence.replaceChild_(newFence, rewritten.fence);
+    return {node: rewritten.node, fence: fence};
+  }
+  // Fence is embellished and needs to be rewritten.
+  fence.replaceChild_(newFence, node);
+  fence.role = node.role;
+  fence.embellished = null;
+  return sre.SemanticTree.rewriteFence_(fence, newFence);
 };
