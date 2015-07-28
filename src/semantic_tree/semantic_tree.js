@@ -2843,13 +2843,10 @@ sre.SemanticTree.isElligibleFence_ = function(node) {
  * @private
  */
 sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
-  console.log('Here we are: \n' + fenced.childNodes[0].toString());
   var ofence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[0]);
   var cfence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[1]);
   var rewritten = sre.SemanticTree.rewriteFence_(fenced, ofence);
   fenced.contentNodes[0] = rewritten.fence;
-  console.log(rewritten.node.toString());
-
   rewritten = sre.SemanticTree.rewriteFence_(rewritten.node, cfence);
   fenced.contentNodes[1] = rewritten.fence;
   return rewritten.node;
