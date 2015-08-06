@@ -2868,15 +2868,22 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
     return {node: node, fence: fence};
   }
   var newFence = /** @type {!sre.SemanticTree.Node} */ (fence.childNodes[0]);
-  if (sre.SemanticTree.attrPred_('type', 'OVERSCORE')(fence) ||
-      sre.SemanticTree.attrPred_('type', 'UNDERSCORE')(fence)) {
-    var rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
-    fence.replaceChild_(newFence, rewritten.fence);
-    return {node: rewritten.node, fence: fence};
+  rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
+  if (sre.SemanticTree.attrPred_('type', 'SUPERSCRIPT')(fence) ||
+      sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(fence) ||
+      sre.SemanticTree.attrPred_('type', 'TENSOR')(fence)) {
+    // Fence is embellished and needs to be rewritten.
+    fence.role = node.role;
+    fence.replaceChild_(newFence, rewritten.node);
+    fence.embellished = newFence.id.toString();
+    return {node: fence, fence: rewritten.fence};
   }
-  // Fence is embellished and needs to be rewritten.
-  fence.replaceChild_(newFence, node);
-  fence.role = node.role;
-  fence.embellished = null;
-  return sre.SemanticTree.rewriteFence_(fence, newFence);
+  fence.replaceChild_(newFence, rewritten.fence);
+  return {node: rewritten.node, fence: fence};
 };
+
+// '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mn>4</mn></mover><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
+// '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mo>)</mo><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
+//  '<math><mo>(</mo><mi>x</mi><msub><munder><msup><mo>)</mo><mn>2</mn></msup><mn>3</mn></munder><mn>1</mn></msub></math>'
+//  '<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>'
+//  '<math><mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>2</mn></msup><mn>1</mn></msub></math>'
