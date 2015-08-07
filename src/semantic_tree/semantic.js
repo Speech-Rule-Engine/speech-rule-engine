@@ -62,11 +62,11 @@ sre.Semantic.getTree = function(mml) {
 /**
  * Creates the semantic tree for a MathML string.
  * @param {!string} expr The string representing the MathML expression.
- * @return {Node} Semantic tree for input string as XML node.
+ * @return {sre.SemanticTree} Semantic tree for input string as XML node.
  */
 sre.Semantic.getTreeFromString = function(expr) {
   var mml = sre.DomUtil.parseInput(expr);
-  return (new sre.SemanticTree(mml)).xml();
+  return new sre.SemanticTree(mml);
 };
 
 
@@ -92,3 +92,6 @@ sre.Semantic.annotateMathml = function(mml) {
   var tree = new sre.SemanticTree(clone);
   return sre.SemanticMathml.enrich(clone, tree);
 };
+
+
+// console.log(sre.SemanticTree.formatXml(sre.Semantic.getTreeFromString('<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>').toString()));

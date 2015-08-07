@@ -144,9 +144,14 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
  * @private
  */
 sre.SemanticMathml.walkTree_ = function(semantic) {
+  var newNode = sre.SemanticMathml.embellishedCase_(semantic);
+  if (newNode) {
+    return sre.SemanticMathml.ascendNewNode_(newNode);
+  }
+
   if (semantic.mathml.length === 1) {
     sre.Debugger.getInstance().output('Walktree Case 0');
-    var newNode = /**@type{!Element}*/(semantic.mathml[0]);
+    newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.SemanticMathml.setAttributes_(newNode, semantic);
     return sre.SemanticMathml.ascendNewNode_(newNode);
   }
@@ -171,6 +176,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
     sre.Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       sre.Debugger.getInstance().output('Walktree Case 2.1');
+      console.log(attached.parentNode.toString());
       newNode = /**@type{!Element}*/(attached.parentNode);
     } else {
       sre.Debugger.getInstance().output('Walktree Case 2.2');
@@ -182,6 +188,7 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   sre.SemanticMathml.setAttributes_(newNode, semantic);
   return sre.SemanticMathml.ascendNewNode_(newNode);
 };
+
 
 
 /**
@@ -1045,6 +1052,95 @@ sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
 };
 
 
+// TODO (sorge) Refactor all this into a sensible separate module.
+// In particular the admin structure EMBELLISHED_INNER needs to be reset!
+/**
+ * Deals with the special case of embellished fences.
+ * @param {!sre.SemanticTree.Node} embellished An embellished semantic node.
+ * @return {!Element} The newly created MathML element.
+ * @private
+ */
+sre.SemanticMathml.embellishedOuterCase_ = function(embellished) {
+  var mtree = /**@type{!Element}*/(embellished.mathmlTree);
+  if (!sre.SemanticMathml.EMBELLISHED_INNER[embellished.embellished]) {
+    sre.SemanticMathml.EMBELLISHED_INNER[embellished.embellished] =
+      mtree.parentNode;
+  }
+
+  if (embellished.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      embellished.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+    sre.SemanticMathml.setAttributes_(mtree, embellished);
+    var child0 = /**@type{!sre.SemanticTree.Node}*/(embellished.childNodes[0]);
+    var mmlChild0 = sre.SemanticMathml.walkTree_(child0);
+    if (!mmlChild0.parentNode) {
+      console.log('Do something!');
+    }
+    // Here search forward to replace exactly the correct node.
+    sre.SemanticMathml.rotateDown(child0.id, mtree, mmlChild0);
+    var child1 = /**@type{!sre.SemanticTree.Node}*/(embellished.childNodes[1]);
+    var mmlChild1 = sre.SemanticMathml.walkTree_(child1);
+  }
+  return mtree;
+};
+
+
+sre.SemanticMathml.rotateDown = function(id, inner, outer) {
+  var children = sre.XpathUtil.evalXPath(
+      '*[@data-semantic-id="'+ id + '"]', outer);
+  if (children.length === 0) {
+    throw new sre.System.Error('Invalid inner node.');
+  }
+  var child = children[0];
+  sre.DomUtil.replaceNode(child, inner);
+  inner.insertBefore(child, inner.childNodes[0]);
+};
+
+sre.SemanticMathml.EMBELLISHED_INNER = {};
+
+// sre.SemanticMathml.embellishedLookup_ = function(node) {
+//   var index = sre.SemanticMathml.EMBELLISHED_INNER.indexOf(node.id.toString());
+//   console.log(index);
+//   if (index == -1) {
+//     return false;
+//   }
+//   sre.SemanticMathml.EMBELLISHED_INNER.splice(index, index + 1);
+//   console.log(sre.SemanticMathml.EMBELLISHED_INNER);
+//   return true;
+// };
+
+
+/**
+ * Deals with the special case of embellished fences.
+ * @param {!sre.SemanticTree.Node} embellished An embellished semantic node.
+ * @return {Element} The newly created MathML element.
+ * @private
+ */
+sre.SemanticMathml.embellishedInnerCase_ = function(embellished) {
+  var parent = sre.SemanticMathml.EMBELLISHED_INNER[embellished.id];
+  if (!parent) {
+    return null;
+  }
+  delete sre.SemanticMathml.EMBELLISHED_INNER[embellished.id];
+  console.log('Inner Node: ' + embellished.toString());
+  console.log(embellished.mathmlTree.toString());
+  
+  var newNode = sre.SemanticMathml.walkTree_(embellished);
+  console.log('Inner new Node: ' + newNode.toString());
+  sre.DomUtil.replaceNode(parent.childNodes[0], newNode);
+  var result = sre.SemanticMathml.ascendNewNode_(parent);
+  console.log('Inner result: ' + result.toString());
+  return result;
+};
+
+
+sre.SemanticMathml.embellishedCase_ = function(semantic) {
+  if (semantic.embellished && !isNaN(Number(semantic.embellished))) {
+    return sre.SemanticMathml.embellishedOuterCase_(semantic);
+  }
+  return sre.SemanticMathml.embellishedInnerCase_(semantic);
+};
+
+
 /**
  * Removes the semantic prefix from the attributes of an enriched MathML element
  * given as a serialised string. This is useful for more concise display.
@@ -1071,7 +1167,10 @@ sre.SemanticMathml.removeAttributePrefix = function(mml) {
  */
 sre.SemanticMathml.printNodeList__ = function(title, nodes) {
   console.log(title);
-  sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
+  for (var i = 0, node; node = nodes[i]; i++) {
+    console.log(node.toString());
+  }
+  // sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
 };
 

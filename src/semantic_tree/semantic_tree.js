@@ -2863,24 +2863,65 @@ sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
  *           fence: !sre.SemanticTree.Node}} The rewritten node and fence.
  * @private
  */
+// TODO (sorge) Maybe remove the superfluous MathML element.
 sre.SemanticTree.rewriteFence_ = function(node, fence) {
   if (!fence.embellished) {
     return {node: node, fence: fence};
   }
-  var newFence = /** @type {!sre.SemanticTree.Node} */ (fence.childNodes[0]);
-  rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
+  var newFence = /** @type {!sre.SemanticTree.Node} */(fence.childNodes[0]);
+  var rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
   if (sre.SemanticTree.attrPred_('type', 'SUPERSCRIPT')(fence) ||
       sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(fence) ||
       sre.SemanticTree.attrPred_('type', 'TENSOR')(fence)) {
     // Fence is embellished and needs to be rewritten.
     fence.role = node.role;
     fence.replaceChild_(newFence, rewritten.node);
-    fence.embellished = newFence.id.toString();
+    sre.SemanticTree.propagateEmbellished_(fence, newFence);
     return {node: fence, fence: rewritten.fence};
   }
   fence.replaceChild_(newFence, rewritten.fence);
   return {node: rewritten.node, fence: fence};
 };
+
+
+sre.SemanticTree.propagateEmbellished_ = function(oldNode, newNode) {
+  oldNode.embellished =
+    !newNode.embellished || isNaN(Number(newNode.embellished)) ?
+    /** @type{sre.SemanticAttr.Type} */(newNode.id.toString()) :
+    newNode.embellished;
+};
+
+
+/**
+ * Convenience method to display the whole tree and its elements.
+ */
+sre.SemanticTree.prototype.displayTree = function() {
+  this.root.displayTree(0);
+};
+
+
+/**
+ * Convenience method to display the whole tree and its elements.
+ * @param {!number} depth The depth of the tree.
+ */
+sre.SemanticTree.Node.prototype.displayTree = function(depth) {
+  depth++;
+  var depthString = Array(depth).join('  ');
+  console.log(depthString + this.toString());
+  console.log(depthString + 'MathmlTree:');
+  console.log(depthString + (this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY'));
+  console.log(depthString + 'MathML:');
+  for (var i = 0, mml; mml = this.mathml[i]; i++) {
+    console.log(depthString + mml.toString());
+  }
+  console.log(depthString + 'Begin Content');  
+  this.contentNodes.forEach(function(x) {x.displayTree(depth);});
+  console.log(depthString + 'End Content');
+  console.log(depthString + 'Begin Children');
+  this.childNodes.forEach(function(x) {x.displayTree(depth);});
+  console.log(depthString + 'End Children');
+};
+
 
 // '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mn>4</mn></mover><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
 // '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mo>)</mo><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
