@@ -580,6 +580,14 @@ sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
   var supMml = sre.SemanticMathml.walkTree(supSem);
   var baseMml = sre.SemanticMathml.walkTree(baseSem);
   var subMml = sre.SemanticMathml.walkTree(subSem);
+  sre.SemanticMathml.structureDoubleScripts(
+      mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore);
+  return mml;
+};
+
+
+sre.SemanticMathml.structureDoubleScripts = function(
+    mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore) {
   sre.SemanticMathml.setAttributes(mml, semantic);
   mml.setAttribute(
       sre.SemanticMathml.Attribute.CHILDREN,
@@ -593,7 +601,6 @@ sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
       ignore.role);
   sre.SemanticMathml.addCollapsedAttribute_(
       mml, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
-  return mml;
 };
 
 

@@ -196,20 +196,27 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   sre.SemanticMathml.setAttributes(
       newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
 
-  // TODO (sorge) Consider the msupsub case.
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     var id = currentNode.id;
     var mml = /** @type {!Element} */(this.outerMap[id]);
-    // if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
-    //   sre.SemanticMathml.caseDoubleScript_(currentNode, mml);
-    //   currentNode = currentNode.childNodes[0].childNodes[0];
-    // } else {
-      sre.SemanticMathml.setAttributes(mml, currentNode);
-      for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
-        sre.SemanticMathml.walkTree(child);
-      }
+    console.log(sre.SemanticUtil.tagName(mml));
+    sre.SemanticMathml.setAttributes(mml, currentNode);
+    var mmlChildren = [];
+    for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
+      mmlChildren.push(sre.SemanticMathml.walkTree(child));
+    }
+    if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
+      var subChild = currentNode.childNodes[0].childNodes[1];
+      var subMml = sre.SemanticMathml.walkTree(subChild);
+      sre.SemanticMathml.structureDoubleScripts(
+        mml, currentNode, currentNode.childNodes[0].childNodes[0],
+        currentNode.childNodes[1], subChild,
+        newNode, subMml, mmlChildren[0], currentNode.childNodes[0]
+      );
+      currentNode = currentNode.childNodes[0].childNodes[0];
+    } else {
       currentNode = currentNode.childNodes[0];
-    // }
+    }
     var dummy = sre.SystemExternal.document.createElement('dummy');
     var saveParent = newNode.parentNode;
     var saveChild = mml.childNodes[0];
