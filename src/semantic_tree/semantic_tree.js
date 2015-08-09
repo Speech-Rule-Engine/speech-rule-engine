@@ -2886,9 +2886,9 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
 
 sre.SemanticTree.propagateEmbellished_ = function(oldNode, newNode) {
   oldNode.embellished =
-    !newNode.embellished || isNaN(Number(newNode.embellished)) ?
-    /** @type{sre.SemanticAttr.Type} */(newNode.id.toString()) :
-    newNode.embellished;
+      !newNode.embellished || isNaN(Number(newNode.embellished)) ?
+      /** @type {sre.SemanticAttr.Type} */(newNode.id.toString()) :
+      newNode.embellished;
 };
 
 
@@ -2914,7 +2914,7 @@ sre.SemanticTree.Node.prototype.displayTree = function(depth) {
   for (var i = 0, mml; mml = this.mathml[i]; i++) {
     console.log(depthString + mml.toString());
   }
-  console.log(depthString + 'Begin Content');  
+  console.log(depthString + 'Begin Content');
   this.contentNodes.forEach(function(x) {x.displayTree(depth);});
   console.log(depthString + 'End Content');
   console.log(depthString + 'Begin Children');

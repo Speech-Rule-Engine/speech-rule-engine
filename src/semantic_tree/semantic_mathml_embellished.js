@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with embellished fenced.
+ * @fileoverview Specialist computations to deal with embellished fences.
  *
  * Take a MathML element, compute the semantic tree and reinject the semantic
  * information into the MathML.
@@ -36,12 +36,12 @@ goog.require('sre.SemanticTree.Node');
  * @param {sre.SemanticTree.Node} node The embellished fence node.
  */
 sre.SemanticMathmlEmbellished = function(node) {
-  
+
   /**
    * @type {sre.SemanticTree.Node}
    */
   this.node = node;
-  
+
   /**
    * @type {sre.SemanticTree.Node}
    */
@@ -126,8 +126,9 @@ sre.SemanticMathmlEmbellished.prototype.getFenced_ = function() {
 
 
 /**
- * Collates the ids of the fenced node.
+ * Collates the id numbers of the fenced node.
  * @param {sre.SemanticTree.Node} fence The fence expression.
+ * @param {!Array.<string>} ids The list of id numbers.
  * @private
  */
 sre.SemanticMathmlEmbellished.fencedMap_ = function(fence, ids) {
@@ -142,6 +143,7 @@ sre.SemanticMathmlEmbellished.fencedMap_ = function(fence, ids) {
 /**
  * Retrieve the actual MathMl element that forms the outermost layer of the
  * fences.
+ * @private
  */
 sre.SemanticMathmlEmbellished.prototype.getFencesMml_ = function() {
   var currentNode = this.node;
@@ -174,6 +176,7 @@ sre.SemanticMathmlEmbellished.prototype.getFencesMml_ = function() {
 /**
  * Rewrites the MathML node with embellished fences.
  * @return {!Element} The new MathML element.
+ * @private
  */
 sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   var currentNode = this.node;
@@ -182,12 +185,12 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
       [this.ofenceMml, this.fencedMml, this.cfenceMml]);
   // Sets the basics composition.
   sre.SemanticMathml.setAttributes(
-      newNode, /** @type{!sre.SemanticTree.Node} */(this.fenced.parent));
+      newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
 
   // TODO (sorge) Consider the msupsub case.
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     var id = currentNode.id;
-    var mml = /** @type{!Element} */(this.outerMap[id]);
+    var mml = /** @type {!Element} */(this.outerMap[id]);
     if (!result) {
       result = mml;
     }
@@ -195,7 +198,7 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
     var dummy = sre.SystemExternal.document.createElement('dummy');
     var saveParent = newNode.parentNode;
     var saveChild = mml.childNodes[0];
-    
+
     sre.DomUtil.replaceNode(mml, dummy);
     sre.DomUtil.replaceNode(newNode, mml);
     sre.DomUtil.replaceNode(mml.childNodes[0], newNode);
@@ -211,9 +214,9 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
 
   // Walk the actual fences.
   sre.SemanticMathml.walkTree(
-    /** @type{!sre.SemanticTree.Node} */(this.ofence));
+      /** @type {!sre.SemanticTree.Node} */(this.ofence));
   sre.SemanticMathml.walkTree(
-    /** @type{!sre.SemanticTree.Node} */(this.cfence));
+      /** @type {!sre.SemanticTree.Node} */(this.cfence));
 
   return result || newNode;
 };

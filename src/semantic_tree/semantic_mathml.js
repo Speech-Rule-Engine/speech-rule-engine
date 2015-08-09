@@ -24,8 +24,8 @@
 goog.provide('sre.SemanticMathml');
 
 goog.require('sre.Debugger');
-goog.require('sre.SemanticTree');
 goog.require('sre.SemanticMathmlEmbellished');
+goog.require('sre.SemanticTree');
 
 
 
@@ -190,7 +190,6 @@ sre.SemanticMathml.walkTree = function(semantic) {
   sre.SemanticMathml.setAttributes(newNode, semantic);
   return sre.SemanticMathml.ascendNewNode(newNode);
 };
-
 
 
 /**
@@ -1065,7 +1064,7 @@ sre.SemanticMathml.embellishedOuterCase_ = function(embellished) {
   var mtree = /**@type{!Element}*/(embellished.mathmlTree);
   if (!sre.SemanticMathml.EMBELLISHED_INNER[embellished.embellished]) {
     sre.SemanticMathml.EMBELLISHED_INNER[embellished.embellished] =
-      mtree.parentNode;
+        mtree.parentNode;
   }
 
   if (embellished.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
@@ -1087,7 +1086,7 @@ sre.SemanticMathml.embellishedOuterCase_ = function(embellished) {
 
 sre.SemanticMathml.rotateDown = function(id, inner, outer) {
   var children = sre.XpathUtil.evalXPath(
-      '*[@data-semantic-id="'+ id + '"]', outer);
+      '*[@data-semantic-id="' + id + '"]', outer);
   if (children.length === 0) {
     throw new sre.System.Error('Invalid inner node.');
   }
@@ -1097,17 +1096,6 @@ sre.SemanticMathml.rotateDown = function(id, inner, outer) {
 };
 
 sre.SemanticMathml.EMBELLISHED_INNER = {};
-
-// sre.SemanticMathml.embellishedLookup_ = function(node) {
-//   var index = sre.SemanticMathml.EMBELLISHED_INNER.indexOf(node.id.toString());
-//   console.log(index);
-//   if (index == -1) {
-//     return false;
-//   }
-//   sre.SemanticMathml.EMBELLISHED_INNER.splice(index, index + 1);
-//   console.log(sre.SemanticMathml.EMBELLISHED_INNER);
-//   return true;
-// };
 
 
 /**
@@ -1124,7 +1112,7 @@ sre.SemanticMathml.embellishedInnerCase_ = function(embellished) {
   delete sre.SemanticMathml.EMBELLISHED_INNER[embellished.id];
   console.log('Inner Node: ' + embellished.toString());
   console.log(embellished.mathmlTree.toString());
-  
+
   var newNode = sre.SemanticMathml.walkTree(embellished);
   console.log('Inner new Node: ' + newNode.toString());
   sre.DomUtil.replaceNode(parent.childNodes[0], newNode);
@@ -1148,10 +1136,6 @@ sre.SemanticMathml.embellishedCase_ = function(semantic) {
     return mml;
   }
   return null;
-  // if (semantic.embellished && !isNaN(Number(semantic.embellished))) {
-  //   return sre.SemanticMathml.embellishedOuterCase_(semantic);
-  // }
-  // return sre.SemanticMathml.embellishedInnerCase_(semantic);
 };
 
 
