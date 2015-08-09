@@ -172,7 +172,7 @@ sre.SemanticMathml.walkTree = function(semantic) {
   newNode = semantic.mathmlTree;
   if (newNode === null) {
     sre.Debugger.getInstance().output('Walktree Case 1');
-    newNode = sre.SemanticMathml.introduceNewLayer_(childrenList);
+    newNode = sre.SemanticMathml.introduceNewLayer(childrenList);
   } else {
     var attached = sre.SemanticMathml.attachedElement_(childrenList);
     sre.Debugger.getInstance().output('Walktree Case 2');
@@ -213,9 +213,8 @@ sre.SemanticMathml.walkTree = function(semantic) {
  * @param {!Array.<Element>} children The list of children of the MathML
  *     element.
  * @return {!Element} The node containing the children.
- * @private
  */
-sre.SemanticMathml.introduceNewLayer_ = function(children) {
+sre.SemanticMathml.introduceNewLayer = function(children) {
   var newNodeInfo = sre.SemanticMathml.mathmlLca_(children);
   var newNode = newNodeInfo.node;
   if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
@@ -558,7 +557,7 @@ sre.SemanticMathml.caseTable_ = function(semantic, mml) {
   } else {
     var newChildren = [lfence, mml];
     rfence && newChildren.push(rfence);
-    mml = sre.SemanticMathml.introduceNewLayer_(newChildren);
+    mml = sre.SemanticMathml.introduceNewLayer(newChildren);
   }
   sre.SemanticMathml.setAttributes(mml, semantic);
   return mml;
