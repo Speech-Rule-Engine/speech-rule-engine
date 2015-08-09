@@ -183,6 +183,15 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   var result = null;
   var newNode = sre.SemanticMathml.introduceNewLayer(
       [this.ofenceMml, this.fencedMml, this.cfenceMml]);
+  // The case of top element math.
+  if (!newNode.parentNode) {
+    var mrow = sre.SystemExternal.document.createElement('mrow');
+    while (newNode.childNodes.length > 0) {
+      mrow.appendChild(newNode.childNodes[0]);
+    }
+    newNode.appendChild(mrow);
+    newNode = mrow;
+  }
   // Sets the basics composition.
   sre.SemanticMathml.setAttributes(
       newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
@@ -191,10 +200,16 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     var id = currentNode.id;
     var mml = /** @type {!Element} */(this.outerMap[id]);
-    if (!result) {
-      result = mml;
-    }
-    sre.SemanticMathml.setAttributes(mml, currentNode);
+    // if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
+    //   sre.SemanticMathml.caseDoubleScript_(currentNode, mml);
+    //   currentNode = currentNode.childNodes[0].childNodes[0];
+    // } else {
+      sre.SemanticMathml.setAttributes(mml, currentNode);
+      for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
+        sre.SemanticMathml.walkTree(child);
+      }
+      currentNode = currentNode.childNodes[0];
+    // }
     var dummy = sre.SystemExternal.document.createElement('dummy');
     var saveParent = newNode.parentNode;
     var saveChild = mml.childNodes[0];
@@ -205,11 +220,10 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
     sre.DomUtil.replaceNode(dummy, saveChild);
     mml.parentNode = saveParent;
 
-    for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
-      sre.SemanticMathml.walkTree(child);
-    }
     newNode = mml.childNodes[0];
-    currentNode = currentNode.childNodes[0];
+    if (!result) {
+      result = mml;
+    }
   }
 
   // Walk the actual fences.
