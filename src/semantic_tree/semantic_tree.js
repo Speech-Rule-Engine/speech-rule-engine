@@ -2909,7 +2909,7 @@ sre.SemanticTree.Node.prototype.displayTree = function(depth) {
   var depthString = Array(depth).join('  ');
   console.log(depthString + this.toString());
   console.log(depthString + 'MathmlTree:');
-  console.log(depthString + (this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY'));
+  console.log(depthString + this.mathmlTreeString());
   console.log(depthString + 'MathML:');
   for (var i = 0, mml; mml = this.mathml[i]; i++) {
     console.log(depthString + mml.toString());
@@ -2922,6 +2922,10 @@ sre.SemanticTree.Node.prototype.displayTree = function(depth) {
   console.log(depthString + 'End Children');
 };
 
+
+sre.SemanticTree.Node.prototype.mathmlTreeString = function() {
+  return this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY';
+};
 
 // '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mn>4</mn></mover><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
 // '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mo>)</mo><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'

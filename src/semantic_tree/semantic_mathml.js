@@ -25,6 +25,7 @@ goog.provide('sre.SemanticMathml');
 
 goog.require('sre.Debugger');
 goog.require('sre.SemanticTree');
+goog.require('sre.SemanticMathmlEmbellished');
 
 
 
@@ -125,7 +126,7 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
-  var newMml = sre.SemanticMathml.walkTree_(semantic.root);
+  var newMml = sre.SemanticMathml.walkTree(semantic.root);
   sre.Debugger.getInstance().generateOutput(
       function() {
         sre.SemanticMathml.formattedOutput(oldMml, mml, semantic, true);
@@ -141,30 +142,31 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
  * Note that the original MathML nodes are cloned!
  * @param {!sre.SemanticTree.Node} semantic The semantic tree.
  * @return {!Element} The enriched MathML element.
- * @private
  */
-sre.SemanticMathml.walkTree_ = function(semantic) {
+sre.SemanticMathml.walkTree = function(semantic) {
   var newNode = sre.SemanticMathml.embellishedCase_(semantic);
   if (newNode) {
-    return sre.SemanticMathml.ascendNewNode_(newNode);
+    console.log(newNode.toString());
+    console.log(newNode.parentNode.toString());
+    return newNode;
   }
 
   if (semantic.mathml.length === 1) {
     sre.Debugger.getInstance().output('Walktree Case 0');
     newNode = /**@type{!Element}*/(semantic.mathml[0]);
-    sre.SemanticMathml.setAttributes_(newNode, semantic);
-    return sre.SemanticMathml.ascendNewNode_(newNode);
+    sre.SemanticMathml.setAttributes(newNode, semantic);
+    return sre.SemanticMathml.ascendNewNode(newNode);
   }
 
   newNode = sre.SemanticMathml.specialCase_(semantic);
   if (newNode) {
-    return sre.SemanticMathml.ascendNewNode_(newNode);
+    return sre.SemanticMathml.ascendNewNode(newNode);
   }
 
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.SemanticMathml.cloneContentNode_));
   var newChildren = semantic.childNodes.map(
-      /**@type{Function}*/(sre.SemanticMathml.walkTree_));
+      /**@type{Function}*/(sre.SemanticMathml.walkTree));
   var childrenList = sre.SemanticMathml.combineContentChildren_(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
@@ -185,8 +187,8 @@ sre.SemanticMathml.walkTree_ = function(semantic) {
   }
   newNode = sre.SemanticMathml.rewriteMfenced_(newNode);
   sre.SemanticMathml.mergeChildren_(newNode, childrenList);
-  sre.SemanticMathml.setAttributes_(newNode, semantic);
-  return sre.SemanticMathml.ascendNewNode_(newNode);
+  sre.SemanticMathml.setAttributes(newNode, semantic);
+  return sre.SemanticMathml.ascendNewNode(newNode);
 };
 
 
@@ -418,7 +420,7 @@ sre.SemanticMathml.pathToRoot_ = function(node, opt_test) {
 /**
  * Checks if a LCA of two nodes is valid. It takes the penultimate node in the
  * paths of the original nodes to the LCA and sees if they have no siblings.  In
- * case the have siblings, we can not simply replace the LCA with the node
+ * case they have siblings, we can not simply replace the LCA with the node
  * comprising the children.
  * @param {Element} left Left path element.
  * @param {Element} right Right path element.
@@ -432,14 +434,14 @@ sre.SemanticMathml.validLca_ = function(left, right) {
 };
 
 
+// Util function.
 /**
  * Computes the empty layout node that is the highest parent of the given node
  * and that only has one child.
  * @param {!Element} newNode The node currently under consideration.
  * @return {!Element} The parent node.
- * @private
  */
-sre.SemanticMathml.ascendNewNode_ = function(newNode) {
+sre.SemanticMathml.ascendNewNode = function(newNode) {
   while (!sre.SemanticUtil.hasMathTag(newNode) &&
          sre.SemanticMathml.unitChild_(newNode)) {
     newNode = sre.SemanticMathml.parentNode_(newNode);
@@ -525,10 +527,10 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
  */
 sre.SemanticMathml.caseLine_ = function(semantic, mml) {
   if (semantic.childNodes.length) {
-    sre.SemanticMathml.walkTree_(
+    sre.SemanticMathml.walkTree(
         /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
   }
-  sre.SemanticMathml.setAttributes_(mml, semantic);
+  sre.SemanticMathml.setAttributes(mml, semantic);
   return mml;
 };
 
@@ -547,7 +549,7 @@ sre.SemanticMathml.caseTable_ = function(semantic, mml) {
       sre.SemanticMathml.cloneContentNode_(
           /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
       null;
-  semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree_));
+  semantic.childNodes.map(/**@type{Function}*/(sre.SemanticMathml.walkTree));
   if (sre.SemanticUtil.tagName(mml) === 'MFENCED') {
     var children = mml.childNodes;
     mml.insertBefore(lfence, children[0]);
@@ -558,7 +560,7 @@ sre.SemanticMathml.caseTable_ = function(semantic, mml) {
     rfence && newChildren.push(rfence);
     mml = sre.SemanticMathml.introduceNewLayer_(newChildren);
   }
-  sre.SemanticMathml.setAttributes_(mml, semantic);
+  sre.SemanticMathml.setAttributes(mml, semantic);
   return mml;
 };
 
@@ -577,10 +579,10 @@ sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
   var ignore = semantic.childNodes[0];
   var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
   var subSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[1]);
-  var supMml = sre.SemanticMathml.walkTree_(supSem);
-  var baseMml = sre.SemanticMathml.walkTree_(baseSem);
-  var subMml = sre.SemanticMathml.walkTree_(subSem);
-  sre.SemanticMathml.setAttributes_(mml, semantic);
+  var supMml = sre.SemanticMathml.walkTree(supSem);
+  var baseMml = sre.SemanticMathml.walkTree(baseSem);
+  var subMml = sre.SemanticMathml.walkTree(subSem);
+  sre.SemanticMathml.setAttributes(mml, semantic);
   mml.setAttribute(
       sre.SemanticMathml.Attribute.CHILDREN,
       sre.SemanticMathml.makeIdList_([baseSem, subSem, supSem]));
@@ -605,7 +607,7 @@ sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
  * @private
  */
 sre.SemanticMathml.caseMmultiscript_ = function(tensor, mml) {
-  sre.SemanticMathml.setAttributes_(mml, tensor);
+  sre.SemanticMathml.setAttributes(mml, tensor);
   if (tensor.childNodes[0] &&
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
     var ignore = tensor.childNodes[0];
@@ -629,7 +631,7 @@ sre.SemanticMathml.caseMmultiscript_ = function(tensor, mml) {
     }
   }
   var childIds = sre.SemanticMathml.collapsedLeafs_(rsub || [], rsup);
-  var base = sre.SemanticMathml.walkTree_(baseSem);
+  var base = sre.SemanticMathml.walkTree(baseSem);
   sre.SemanticMathml.getInnerNode_(base).setAttribute(
       sre.SemanticMathml.Attribute.PARENT, tensor.id);
   childIds.unshift(baseSem.id);
@@ -647,13 +649,13 @@ sre.SemanticMathml.caseMmultiscript_ = function(tensor, mml) {
  * @private
  */
 sre.SemanticMathml.caseTensor_ = function(tensor, mml) {
-  sre.SemanticMathml.walkTree_(
+  sre.SemanticMathml.walkTree(
       /**@type{!sre.SemanticTree.Node}*/(tensor.childNodes[0]));
   var lsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[1]);
   var lsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[2]);
   var rsub = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[3]);
   var rsup = sre.SemanticMathml.multiscriptIndex_(tensor.childNodes[4]);
-  sre.SemanticMathml.setAttributes_(mml, tensor);
+  sre.SemanticMathml.setAttributes(mml, tensor);
   var collapsed = [tensor.id, lsub, lsup, rsub, rsup];
   if (!collapsed.every(sre.SemanticMathml.simpleCollapseStructure_)) {
     sre.SemanticMathml.addCollapsedAttribute_(mml, collapsed);
@@ -788,7 +790,7 @@ sre.SemanticMathml.completeMultiscript_ = function(
 sre.SemanticMathml.createNone_ = function(semantic) {
   var newNode = sre.SystemExternal.document.createElement('none');
   if (semantic) {
-    sre.SemanticMathml.setAttributes_(newNode, semantic);
+    sre.SemanticMathml.setAttributes(newNode, semantic);
   }
   newNode.setAttribute(sre.SemanticMathml.Attribute.ADDED, 'true');
   return newNode;
@@ -811,7 +813,7 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
     var parentId = index.parent.id;
     var childIds = [index.id];
     for (var i = 0, child; child = index.childNodes[i]; i++) {
-      var mmlChild = sre.SemanticMathml.walkTree_(child);
+      var mmlChild = sre.SemanticMathml.walkTree(child);
       var innerNode = sre.SemanticMathml.getInnerNode_(mmlChild);
       innerNode.setAttribute(sre.SemanticMathml.Attribute.PARENT, parentId);
       innerNode.setAttribute(sre.SemanticMathml.Attribute.ROLE, role);
@@ -819,7 +821,7 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
     }
     return childIds;
   }
-  sre.SemanticMathml.walkTree_(index);
+  sre.SemanticMathml.walkTree(index);
   return index.id;
 };
 
@@ -832,7 +834,7 @@ sre.SemanticMathml.multiscriptIndex_ = function(index) {
  */
 sre.SemanticMathml.cloneContentNode_ = function(content) {
   if (content.mathml.length) {
-    return sre.SemanticMathml.walkTree_(content);
+    return sre.SemanticMathml.walkTree(content);
   }
   var clone = sre.SemanticMathml.SETTINGS.implicit ?
       sre.SemanticMathml.createInvisibleOperator_(content) :
@@ -868,13 +870,13 @@ sre.SemanticMathml.makeIdListOld_ = function(nodes) {
 };
 
 
+// Utiltity function.
 /**
  * Sets semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- * @private
  */
-sre.SemanticMathml.setAttributes_ = function(mml, semantic) {
+sre.SemanticMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.SemanticMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.SemanticMathml.Attribute.ROLE, semantic.role);
   mml.setAttribute(sre.SemanticMathml.Attribute.ID, semantic.id);
@@ -976,7 +978,7 @@ sre.SemanticMathml.createInvisibleOperator_ = function(operator) {
   var text = sre.SystemExternal.document.
       createTextNode(operator.textContent);
   moNode.appendChild(text);
-  sre.SemanticMathml.setAttributes_(moNode, operator);
+  sre.SemanticMathml.setAttributes(moNode, operator);
   moNode.setAttribute(sre.SemanticMathml.Attribute.ADDED, 'true');
   return moNode;
 };
@@ -1069,16 +1071,16 @@ sre.SemanticMathml.embellishedOuterCase_ = function(embellished) {
 
   if (embellished.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
       embellished.type === sre.SemanticAttr.Type.SUBSCRIPT) {
-    sre.SemanticMathml.setAttributes_(mtree, embellished);
+    sre.SemanticMathml.setAttributes(mtree, embellished);
     var child0 = /**@type{!sre.SemanticTree.Node}*/(embellished.childNodes[0]);
-    var mmlChild0 = sre.SemanticMathml.walkTree_(child0);
+    var mmlChild0 = sre.SemanticMathml.walkTree(child0);
     if (!mmlChild0.parentNode) {
       console.log('Do something!');
     }
     // Here search forward to replace exactly the correct node.
     sre.SemanticMathml.rotateDown(child0.id, mtree, mmlChild0);
     var child1 = /**@type{!sre.SemanticTree.Node}*/(embellished.childNodes[1]);
-    var mmlChild1 = sre.SemanticMathml.walkTree_(child1);
+    var mmlChild1 = sre.SemanticMathml.walkTree(child1);
   }
   return mtree;
 };
@@ -1124,20 +1126,33 @@ sre.SemanticMathml.embellishedInnerCase_ = function(embellished) {
   console.log('Inner Node: ' + embellished.toString());
   console.log(embellished.mathmlTree.toString());
   
-  var newNode = sre.SemanticMathml.walkTree_(embellished);
+  var newNode = sre.SemanticMathml.walkTree(embellished);
   console.log('Inner new Node: ' + newNode.toString());
   sre.DomUtil.replaceNode(parent.childNodes[0], newNode);
-  var result = sre.SemanticMathml.ascendNewNode_(parent);
+  var result = sre.SemanticMathml.ascendNewNode(parent);
   console.log('Inner result: ' + result.toString());
   return result;
 };
 
 
+sre.SemanticMathml.currentEmbellished = null;
+
+
+// New embellished test with calculation.
 sre.SemanticMathml.embellishedCase_ = function(semantic) {
-  if (semantic.embellished && !isNaN(Number(semantic.embellished))) {
-    return sre.SemanticMathml.embellishedOuterCase_(semantic);
+  if (!sre.SemanticMathml.currentEmbellished &&
+      semantic.embellished && !isNaN(Number(semantic.embellished))) {
+    sre.SemanticMathml.currentEmbellished =
+        new sre.SemanticMathmlEmbellished(semantic);
+    var mml = sre.SemanticMathml.currentEmbellished.getMathml();
+    sre.SemanticMathml.currentEmbellished = null;
+    return mml;
   }
-  return sre.SemanticMathml.embellishedInnerCase_(semantic);
+  return null;
+  // if (semantic.embellished && !isNaN(Number(semantic.embellished))) {
+  //   return sre.SemanticMathml.embellishedOuterCase_(semantic);
+  // }
+  // return sre.SemanticMathml.embellishedInnerCase_(semantic);
 };
 
 
