@@ -1791,7 +1791,7 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
  */
 sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
-    if (!sre.SemanticTree.attrPred_('role', 'subsup')(funcNode)) {
+    if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(funcNode)) {
       funcNode.role = tag;
     }
     sre.SemanticTree.propagateFunctionRole_(funcNode.childNodes[0], tag);
@@ -2874,7 +2874,11 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
       sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(fence) ||
       sre.SemanticTree.attrPred_('type', 'TENSOR')(fence)) {
     // Fence is embellished and needs to be rewritten.
-    fence.role = node.role;
+    console.log(fence.role);
+    if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(fence)) {
+      console.log('rewriting');
+      fence.role = node.role;
+    }
     fence.replaceChild_(newFence, rewritten.node);
     sre.SemanticTree.propagateEmbellished_(fence, newFence);
     return {node: fence, fence: rewritten.fence};
