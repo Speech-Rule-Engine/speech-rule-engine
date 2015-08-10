@@ -21,7 +21,7 @@ fs.createWriteStream = function(name) { };
 
 
 /**
- * @typedef{stream}
+ * @typedef {stream}
  */
 var stream;
 stream.on = function(msg, fnc) { };

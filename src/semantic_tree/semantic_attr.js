@@ -1209,7 +1209,7 @@ sre.SemanticAttr = function() {
 
   /**
    * Dictionary mapping symbols to meanings.
-   * @type{Object.<string, {role: sre.SemanticAttr.Role,
+   * @type {Object.<string, {role: sre.SemanticAttr.Role,
    *           type: sre.SemanticAttr.Type,
    *           font: sre.SemanticAttr.Font}>}
    * @private

@@ -143,7 +143,7 @@ sre.SpeechRuleTest.prototype.testRules = function() {
       ],
       sre.SpeechRule.Action.fromString(
           '[t] "Square root of"; [n] ./*[1] (rate:0.2); [p] (pause:400)')
-              .components
+      .components
   );
 
   this.assertStructEquals(
