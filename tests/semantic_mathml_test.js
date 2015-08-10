@@ -8663,3 +8663,365 @@ sre.SemanticMathmlTest.prototype.testMathmlMunderOver = function() {
       '</math>'
   );
 };
+
+
+// Embellished operators.
+/**
+ * Simple embellished arguments.
+ */
+sre.SemanticMathmlTest.prototype.testStreeSimpleEmbellishment = function() {
+  this.brief = false;
+  this.executeMathmlTest(
+      '<msup><mi>\u222B</mi><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="limupper" role="integral" id="2" children="0,1">' +
+      '<mi type="largeop" role="integral" id="0" parent="2">∫</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mi>f</mi><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="latinletter" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">f</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mo>(</mo><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="open" id="2" children="0,1">' +
+      '<mo type="fence" role="open" id="0" parent="2">(</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mo>=</mo><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="equality" id="2" children="0,1">' +
+      '<mo type="relation" role="equality" id="0" parent="2">=</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mo>+</mo><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="addition" id="2" children="0,1">' +
+      '<mo type="operator" role="addition" id="0" parent="2">+</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mo>,</mo><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="comma" id="2" children="0,1">' +
+      '<mo type="punctuation" role="comma" id="0" parent="2">,</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Multi embellished arguments.
+ */
+sre.SemanticMathmlTest.prototype.testStreeMultiEmbellishment = function() {
+  this.brief = false;
+  this.executeMathmlTest(
+      '<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>',
+      '<math>' +
+      '<msub type="subscript" role="addition" id="4" children="2,3">' +
+      '<msup type="superscript" role="addition" id="2" children="0,1"' +
+      ' parent="4">' +
+      '<mo type="operator" role="addition" id="0" parent="2">+</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">x</mi>' +
+      '</msub>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>+</mo><mn>2</mn><mi>x</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="subsup" role="addition" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="operator" role="addition" id="0" parent="4">+</mo>' +
+      '<mn type="number" role="integer" id="1" parent="4">2</mn>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi>' +
+      '</msub><mo>-</mo></mover>',
+      '<math>' +
+      '<mover type="overscore" role="addition" id="6" children="4,5">' +
+      '<msub type="subscript" role="addition" id="4" children="2,3"' +
+      ' parent="6">' +
+      '<msup type="superscript" role="addition" id="2" children="0,1"' +
+      ' parent="4">' +
+      '<mo type="operator" role="addition" id="0" parent="2">+</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">x</mi>' +
+      '</msub>' +
+      '<mo type="operator" role="overaccent" id="5" parent="6">-</mo>' +
+      '</mover>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></msup>',
+      '<math>' +
+      '<msup type="superscript" role="addition" id="4" children="0,3">' +
+      '<mo type="operator" role="addition" id="0" parent="4">+</mo>' +
+      '<msub type="subscript" role="latinletter" id="3" children="1,2"' +
+      ' parent="4">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">x</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msub><munder><mo>+</mo><mn>2</mn></munder><mi>x</mi></msub>',
+      '<math>' +
+      '<msub type="subscript" role="addition" id="4" children="2,3">' +
+      '<munder type="underscore" role="addition" id="2" children="0,1"' +
+      ' parent="4">' +
+      '<mo type="operator" role="addition" id="0" parent="2">+</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</munder>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">x</mi>' +
+      '</msub>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>(</mi><none/><none/>' +
+      '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="open" id="5" children="0,1,2,3,4">' +
+      '<mi type="fence" role="open" id="0" parent="5">(</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">1</mn>' +
+      '<mi type="identifier" role="leftsuper" id="2" parent="5">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>(</mi><none/><mi>K</mi>' +
+      '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="open" id="5" children="0,1,2,3,4">' +
+      '<mi type="fence" role="open" id="0" parent="5">(</mi>' +
+      '<none type="empty" role="rightsub" id="3" parent="5"/>' +
+      '<mi type="identifier" role="rightsuper" id="4" parent="5">K</mi>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">1</mn>' +
+      '<mi type="identifier" role="leftsuper" id="2" parent="5">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mi>(</mi><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="subsup" role="open" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="fence" role="open" id="0" parent="4">(</mi>' +
+      '<mn type="number" role="integer" id="1" parent="4">1</mn>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">j</mi>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with embellished operators and relations.
+ */
+sre.SemanticMathmlTest.prototype.testStreeComplexEmbellishment = function() {
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
+      '<mn>2</mn></msub><mi>z</mi>',
+      '<math type="relseq" role="equality" id="9" children="0,4,8"' +
+      ' content="3,7">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<msub type="subscript" role="equality" id="3" children="1,2"' +
+      ' parent="9" operator="relseq,=">' +
+      '<mo type="relation" role="equality" id="1" parent="3">=</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '<msub type="subscript" role="equality" id="7" children="5,6"' +
+      ' parent="9" operator="relseq,=">' +
+      '<mo type="relation" role="equality" id="5" parent="7">=</mo>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
+      '<mn>4</mn></msub><mi>z</mi>',
+      '<math type="multirel" role="unknown" id="9" children="0,4,8"' +
+      ' content="3,7">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<msub type="subscript" role="equality" id="3" children="1,2"' +
+      ' parent="9" operator="multirel">' +
+      '<mo type="relation" role="equality" id="1" parent="3">=</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '<msub type="subscript" role="equality" id="7" children="5,6"' +
+      ' parent="9" operator="multirel">' +
+      '<mo type="relation" role="equality" id="5" parent="7">=</mo>' +
+      '<mn type="number" role="integer" id="6" parent="7">4</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
+      '<mn>2</mn></msub><mi>z</mi>',
+      '<math type="infixop" role="addition" id="9" children="0,4,8"' +
+      ' content="3,7">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<msub type="subscript" role="addition" id="3" children="1,2"' +
+      ' parent="9" operator="infixop,+">' +
+      '<mo type="operator" role="addition" id="1" parent="3">+</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '<msub type="subscript" role="addition" id="7" children="5,6"' +
+      ' parent="9" operator="infixop,+">' +
+      '<mo type="operator" role="addition" id="5" parent="7">+</mo>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
+      '<mn>4</mn></msub><mi>z</mi>',
+      '<math type="infixop" role="addition" id="10" children="9,8"' +
+      ' content="7">' +
+      '<mrow type="infixop" role="addition" id="9" children="0,4"' +
+      ' content="3" parent="10">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<msub type="subscript" role="addition" id="3" children="1,2"' +
+      ' parent="9" operator="infixop,+">' +
+      '<mo type="operator" role="addition" id="1" parent="3">+</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '</mrow>' +
+      '<msub type="subscript" role="addition" id="7" children="5,6"' +
+      ' parent="10" operator="infixop,+">' +
+      '<mo type="operator" role="addition" id="5" parent="7">+</mo>' +
+      '<mn type="number" role="integer" id="6" parent="7">4</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="10">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo>' +
+      '<mo>\'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>',
+      '<math type="relseq" role="equality" id="15" children="13,14"' +
+      ' content="7">' +
+      '<mrow type="infixop" role="addition" id="13" children="0,4"' +
+      ' content="3" parent="15">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="13">a</mi>' +
+      '<msub type="subscript" role="addition" id="3" children="1,2"' +
+      ' parent="13" operator="infixop,+">' +
+      '<mo type="operator" role="addition" id="1" parent="3">+</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="13">b</mi>' +
+      '</mrow>' +
+      '<msup type="superscript" role="equality" id="7" children="5,6"' +
+      ' parent="15" operator="relseq,=">' +
+      '<mo type="relation" role="equality" id="5" parent="7">=</mo>' +
+      '<mo type="punctuation" role="prime" id="6" parent="7">\'</mo>' +
+      '</msup>' +
+      '<mrow type="infixop" role="addition" id="14" children="8,12"' +
+      ' content="11" parent="15">' +
+      '<mi type="identifier" role="latinletter" id="8" parent="14">x</mi>' +
+      '<msub type="subscript" role="addition" id="11" children="9,10"' +
+      ' parent="14" operator="infixop,+">' +
+      '<mo type="operator" role="addition" id="9" parent="11">+</mo>' +
+      '<mn type="number" role="integer" id="10" parent="11">4</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="12" parent="14">z</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi><msup><mo>,</mo>' +
+      '<mo>\'</mo></msup><mi>x</mi><msub><mo>:</mo><mn>4</mn></msub><mi>z</mi>',
+      '<math type="punctuated" role="sequence" id="13"' +
+      ' children="0,3,4,7,8,11,12" content="3,7,11">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="13">a</mi>' +
+      '<msub type="subscript" role="unknown" id="3" children="1,2"' +
+      ' parent="13" operator="punctuated">' +
+      '<mo type="punctuation" role="unknown" id="1" parent="3">:</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="13">b</mi>' +
+      '<msup type="superscript" role="comma" id="7" children="5,6"' +
+      ' parent="13" operator="punctuated">' +
+      '<mo type="punctuation" role="comma" id="5" parent="7">,</mo>' +
+      '<mo type="punctuation" role="prime" id="6" parent="7">\'</mo>' +
+      '</msup>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="13">x</mi>' +
+      '<msub type="subscript" role="unknown" id="11" children="9,10"' +
+      ' parent="13" operator="punctuated">' +
+      '<mo type="punctuation" role="unknown" id="9" parent="11">:</mo>' +
+      '<mn type="number" role="integer" id="10" parent="11">4</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="12" parent="13">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
+      '<mn>3</mn></msub><mi>x</mi>',
+      '<math type="prefixop" role="multiop" id="7" children="6"' +
+      ' content="2,5">' +
+      '<msub type="subscript" role="addition" id="2" children="0,1"' +
+      ' parent="7" operator="prefixop,+ +">' +
+      '<mo type="operator" role="addition" id="0" parent="2">+</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msub>' +
+      '<msub type="subscript" role="addition" id="5" children="3,4"' +
+      ' parent="7" operator="prefixop,+ +">' +
+      '<mo type="operator" role="addition" id="3" parent="5">+</mo>' +
+      '<mn type="number" role="integer" id="4" parent="5">3</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">x</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
+      '<mn>3</mn></msub>',
+      '<math type="postfixop" role="multiop" id="7" children="0"' +
+      ' content="3,6">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="7">x</mi>' +
+      '<msub type="subscript" role="addition" id="3" children="1,2"' +
+      ' parent="7" operator="postfixop,+ +">' +
+      '<mo type="operator" role="addition" id="1" parent="3">+</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<msub type="subscript" role="addition" id="6" children="4,5"' +
+      ' parent="7" operator="postfixop,+ +">' +
+      '<mo type="operator" role="addition" id="4" parent="6">+</mo>' +
+      '<mn type="number" role="integer" id="5" parent="6">3</mn>' +
+      '</msub>' +
+      '</math>'
+  );
+};
