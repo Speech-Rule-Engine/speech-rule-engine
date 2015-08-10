@@ -2810,8 +2810,10 @@ sre.SemanticTree.isElligibleFence_ = function(node) {
   }
   var bothSide = function(node) {
     return sre.SemanticTree.attrPred_('type', 'TENSOR')(node) &&
-        (!sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[2]) ||
-        !sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[3]));
+        (!sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[1]) ||
+         !sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[2])) &&
+        (!sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[3]) ||
+         !sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[4]));
   };
   var recurseBaseNode = function(node) {
     if (!node.embellished) {
