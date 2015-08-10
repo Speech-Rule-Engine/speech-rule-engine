@@ -146,8 +146,6 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
 sre.SemanticMathml.walkTree = function(semantic) {
   var newNode = sre.SemanticMathml.embellishedCase_(semantic);
   if (newNode) {
-    console.log(newNode.toString());
-    console.log(newNode.parentNode.toString());
     return newNode;
   }
 
@@ -178,7 +176,6 @@ sre.SemanticMathml.walkTree = function(semantic) {
     sre.Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       sre.Debugger.getInstance().output('Walktree Case 2.1');
-      console.log(attached.parentNode.toString());
       newNode = /**@type{!Element}*/(attached.parentNode);
     } else {
       sre.Debugger.getInstance().output('Walktree Case 2.2');
@@ -494,7 +491,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
        semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
       (mmlTag === 'MUNDEROVER' &&
       semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
-    return sre.SemanticMathml.caseDoubleScript_(semantic, mml);
+    return sre.SemanticMathml.caseDoubleScript(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
     return sre.SemanticMathml.caseTensor_(semantic, mml);
@@ -502,7 +499,7 @@ sre.SemanticMathml.specialCase_ = function(semantic) {
   if (mmlTag === 'MMULTISCRIPTS' &&
       (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    return sre.SemanticMathml.caseMmultiscript_(semantic, mml);
+    return sre.SemanticMathml.caseMmultiscript(semantic, mml);
   }
   if (semantic.type === sre.SemanticAttr.Type.LINE) {
     return sre.SemanticMathml.caseLine_(semantic, mml);
@@ -568,9 +565,8 @@ sre.SemanticMathml.caseTable_ = function(semantic, mml) {
  * @param {!sre.SemanticTree.Node} semantic The semantic node.
  * @param {!Element} mml The corresponding MathML node.
  * @return {Element} The enriched MathML node for the special case.
- * @private
  */
-sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
+sre.SemanticMathml.caseDoubleScript = function(semantic, mml) {
   // TODO (sorge) Needs some refactoring!
   //
   var supSem = /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[1]);
@@ -580,14 +576,20 @@ sre.SemanticMathml.caseDoubleScript_ = function(semantic, mml) {
   var supMml = sre.SemanticMathml.walkTree(supSem);
   var baseMml = sre.SemanticMathml.walkTree(baseSem);
   var subMml = sre.SemanticMathml.walkTree(subSem);
-  sre.SemanticMathml.structureDoubleScripts(
-      mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore);
-  return mml;
-};
+//   sre.SemanticMathml.structureDoubleScripts_(
+//       mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore);
+// };
 
 
-sre.SemanticMathml.structureDoubleScripts = function(
-    mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore) {
+
+// /**
+//  * Sets the attributes 
+//  * @param {}
+//  * @return {}
+//  * @private
+//  */
+// sre.SemanticMathml.structureDoubleScripts_ = function(
+//     mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore) {
   sre.SemanticMathml.setAttributes(mml, semantic);
   mml.setAttribute(
       sre.SemanticMathml.Attribute.CHILDREN,
@@ -601,6 +603,7 @@ sre.SemanticMathml.structureDoubleScripts = function(
       ignore.role);
   sre.SemanticMathml.addCollapsedAttribute_(
       mml, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
+  return mml;
 };
 
 
@@ -609,9 +612,8 @@ sre.SemanticMathml.structureDoubleScripts = function(
  * @param {!sre.SemanticTree.Node} tensor The tensor node.
  * @param {!Element} mml The corresponding MathML node.
  * @return {Element} The enriched MathML node for that tensor.
- * @private
  */
-sre.SemanticMathml.caseMmultiscript_ = function(tensor, mml) {
+sre.SemanticMathml.caseMmultiscript = function(tensor, mml) {
   sre.SemanticMathml.setAttributes(mml, tensor);
   if (tensor.childNodes[0] &&
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
@@ -1059,83 +1061,18 @@ sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
 };
 
 
-// TODO (sorge) Refactor all this into a sensible separate module.
-// In particular the admin structure EMBELLISHED_INNER needs to be reset!
-/**
- * Deals with the special case of embellished fences.
- * @param {!sre.SemanticTree.Node} embellished An embellished semantic node.
- * @return {!Element} The newly created MathML element.
- * @private
- */
-sre.SemanticMathml.embellishedOuterCase_ = function(embellished) {
-  var mtree = /**@type{!Element}*/(embellished.mathmlTree);
-  if (!sre.SemanticMathml.EMBELLISHED_INNER[embellished.embellished]) {
-    sre.SemanticMathml.EMBELLISHED_INNER[embellished.embellished] =
-        mtree.parentNode;
-  }
-
-  if (embellished.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-      embellished.type === sre.SemanticAttr.Type.SUBSCRIPT) {
-    sre.SemanticMathml.setAttributes(mtree, embellished);
-    var child0 = /**@type{!sre.SemanticTree.Node}*/(embellished.childNodes[0]);
-    var mmlChild0 = sre.SemanticMathml.walkTree(child0);
-    if (!mmlChild0.parentNode) {
-      console.log('Do something!');
-    }
-    // Here search forward to replace exactly the correct node.
-    sre.SemanticMathml.rotateDown(child0.id, mtree, mmlChild0);
-    var child1 = /**@type{!sre.SemanticTree.Node}*/(embellished.childNodes[1]);
-    var mmlChild1 = sre.SemanticMathml.walkTree(child1);
-  }
-  return mtree;
-};
-
-
-sre.SemanticMathml.rotateDown = function(id, inner, outer) {
-  var children = sre.XpathUtil.evalXPath(
-      '*[@data-semantic-id="' + id + '"]', outer);
-  if (children.length === 0) {
-    throw new sre.System.Error('Invalid inner node.');
-  }
-  var child = children[0];
-  sre.DomUtil.replaceNode(child, inner);
-  inner.insertBefore(child, inner.childNodes[0]);
-};
-
-sre.SemanticMathml.EMBELLISHED_INNER = {};
-
 
 /**
- * Deals with the special case of embellished fences.
- * @param {!sre.SemanticTree.Node} embellished An embellished semantic node.
- * @return {Element} The newly created MathML element.
+ * Dealing with the special case of rewritten embellished fences.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node.
+ * @return {Element} The enriched MathML node if the node is an embellished
+ *     fenced node.
  * @private
  */
-sre.SemanticMathml.embellishedInnerCase_ = function(embellished) {
-  var parent = sre.SemanticMathml.EMBELLISHED_INNER[embellished.id];
-  if (!parent) {
-    return null;
-  }
-  delete sre.SemanticMathml.EMBELLISHED_INNER[embellished.id];
-  console.log('Inner Node: ' + embellished.toString());
-  console.log(embellished.mathmlTree.toString());
-
-  var newNode = sre.SemanticMathml.walkTree(embellished);
-  console.log('Inner new Node: ' + newNode.toString());
-  sre.DomUtil.replaceNode(parent.childNodes[0], newNode);
-  var result = sre.SemanticMathml.ascendNewNode(parent);
-  console.log('Inner result: ' + result.toString());
-  return result;
-};
-
-
-sre.SemanticMathml.currentEmbellished = null;
-
-
-// New embellished test with calculation.
 sre.SemanticMathml.embellishedCase_ = function(semantic) {
   if (!sre.SemanticMathml.currentEmbellished &&
       semantic.embellished && !isNaN(Number(semantic.embellished))) {
+    console.log('Embellished case');
     sre.SemanticMathml.currentEmbellished =
         new sre.SemanticMathmlEmbellished(semantic);
     var mml = sre.SemanticMathml.currentEmbellished.getMathml();

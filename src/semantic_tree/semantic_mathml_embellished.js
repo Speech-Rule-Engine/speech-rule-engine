@@ -100,14 +100,11 @@ sre.SemanticMathmlEmbellished = function(node) {
 
 /**
  * Computes the Mathml element corresponding to this embellished fence node.
- * @return {Element} The newly compute Mathml element.
+ * @return {!Element} The newly compute Mathml element.
  */
 sre.SemanticMathmlEmbellished.prototype.getMathml = function() {
   this.getFenced_();
-  sre.SemanticMathmlEmbellished.printMap(this.ofenceMap);
-  sre.SemanticMathmlEmbellished.printMap(this.cfenceMap);
-  sre.SemanticMathmlEmbellished.printMap(this.outerMap);
-  this.fencedMml = sre.SemanticMathml.walkTree(this.fenced);
+  this.fencedMml = sre.SemanticMathml.walkTree(/** @type {!sre.SemanticTree.Node} */(this.fenced));
   this.getFencesMml_();
   return this.rewrite_();
 };
@@ -135,7 +132,7 @@ sre.SemanticMathmlEmbellished.prototype.getFenced_ = function() {
 /**
  * Collates the id numbers of the fenced node.
  * @param {sre.SemanticTree.Node} fence The fence expression.
- * @param {!Array.<string>} ids The list of id numbers.
+ * @param {!Object.<number, Element>} ids The list of id numbers.
  * @private
  */
 sre.SemanticMathmlEmbellished.fencedMap_ = function(fence, ids) {
@@ -188,17 +185,7 @@ sre.SemanticMathmlEmbellished.prototype.getFencesMml_ = function() {
 sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   var currentNode = this.node;
   var result = null;
-  var newNode = sre.SemanticMathml.introduceNewLayer(
-      [this.ofenceMml, this.fencedMml, this.cfenceMml]);
-  // The case of top element math.
-  if (!newNode.parentNode) {
-    var mrow = sre.SystemExternal.document.createElement('mrow');
-    while (newNode.childNodes.length > 0) {
-      mrow.appendChild(newNode.childNodes[0]);
-    }
-    newNode.appendChild(mrow);
-    newNode = mrow;
-  }
+  var newNode = this.introduceNewLayer_();
   // Sets the basics composition.
   sre.SemanticMathml.setAttributes(
       newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
@@ -206,34 +193,37 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     var id = currentNode.id;
     var mml = /** @type {!Element} */(this.outerMap[id]);
-    if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
+    var mmlTag = sre.SemanticUtil.tagName(mml);
+    if (mmlTag === 'MSUBSUP') {
       var base = currentNode.childNodes[0].childNodes[0];
-      var mrow = sre.SystemExternal.document.createElement('mrow');
-      var empty = new sre.SemanticTree.Node(base.id);
-      empty.type = sre.SemanticAttr.Type.EMPTY;
-      empty.mathmlTree = mrow;
+      var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
       currentNode.childNodes[0].childNodes[0] = empty;
-      mml = sre.SemanticMathml.caseDoubleScript_(currentNode, mml);
-      console.log('Here is it: ' + mml.toString() + ' ' + mrow.toString());
+      mml = sre.SemanticMathml.caseDoubleScript(currentNode, mml);
       currentNode.childNodes[0].childNodes[0] = base;
       this.parentCleanup.push(mml);
-      console.log(base);
-      console.log(this.fenced);
-      // if (base === this.fenced) {
-      //   this.fenced.setAttribute('data-semantic-parent',  mrow.getAttribute('data-semantic-parent'));
-      // } else {
-      //   base.mathmlTree.setAttribute('data-semantic-parent', mrow.getAttribute('data-semantic-parent'));
-      // }
-      // console.log(base.mathmlTree);
-      newNode.setAttribute('data-semantic-parent', mrow.getAttribute('data-semantic-parent'));
-      // var subChild = currentNode.childNodes[0].childNodes[1];
-      // var subMml = sre.SemanticMathml.walkTree(subChild);
-      // sre.SemanticMathml.structureDoubleScripts(
-      //   mml, currentNode, currentNode.childNodes[0].childNodes[0],
-      //   currentNode.childNodes[1], subChild,
-      //   newNode, subMml, mmlChildren[0], currentNode.childNodes[0]
-      // );
       currentNode = currentNode.childNodes[0].childNodes[0];
+    } else if (mmlTag === 'MMULTISCRIPTS' &&
+               (currentNode.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+                currentNode.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
+      console.log('This is the case!');
+      if (currentNode.childNodes[0] &&
+          currentNode.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
+        var base = currentNode.childNodes[0].childNodes[0];
+        var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
+        currentNode.childNodes[0].childNodes[0] = empty;
+        mml = sre.SemanticMathml.caseMmultiscript(currentNode, mml);
+        currentNode.childNodes[0].childNodes[0] = base;
+        this.parentCleanup.push(mml);
+        currentNode = currentNode.childNodes[0].childNodes[0];
+      } else {
+        var base = currentNode.childNodes[0];
+        var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
+        currentNode.childNodes[0] = empty;
+        mml = sre.SemanticMathml.caseMmultiscript(currentNode, mml);
+        currentNode.childNodes[0] = base;
+        this.parentCleanup.push(mml);
+        currentNode = currentNode.childNodes[0];
+      }
     } else {
       sre.SemanticMathml.setAttributes(mml, currentNode);
       var mmlChildren = [];
@@ -242,25 +232,6 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
       }
       currentNode = currentNode.childNodes[0];
     }
-
-    // sre.SemanticMathml.setAttributes(mml, currentNode);
-    // var mmlChildren = [];
-    // for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
-    //   mmlChildren.push(sre.SemanticMathml.walkTree(child));
-    // }
-    // if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
-    //   var subChild = currentNode.childNodes[0].childNodes[1];
-    //   var subMml = sre.SemanticMathml.walkTree(subChild);
-    //   sre.SemanticMathml.structureDoubleScripts(
-    //     mml, currentNode, currentNode.childNodes[0].childNodes[0],
-    //     currentNode.childNodes[1], subChild,
-    //     newNode, subMml, mmlChildren[0], currentNode.childNodes[0]
-    //   );
-    //   currentNode = currentNode.childNodes[0].childNodes[0];
-    // } else {
-    //   currentNode = currentNode.childNodes[0];
-    // }
-
 
     // Reordering the nodes in the tree.
     var dummy = sre.SystemExternal.document.createElement('dummy');
@@ -284,9 +255,39 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
       /** @type {!sre.SemanticTree.Node} */(this.ofence));
   sre.SemanticMathml.walkTree(
       /** @type {!sre.SemanticTree.Node} */(this.cfence));
+  console.log(this.cfence.mathmlTree.toString());
 
   this.cleanupParents();
   return result || newNode;
+};
+
+
+sre.SemanticMathmlEmbellished.makeEmptyNode_ = function(id) {
+  var mrow = sre.SystemExternal.document.createElement('mrow');
+  var empty = new sre.SemanticTree.Node(id);
+  empty.type = sre.SemanticAttr.Type.EMPTY;
+  empty.mathmlTree = mrow;
+  return empty;
+};
+
+
+/**
+ * Introduces a new layer if necessary before rewriting the fence.
+ * @return {!Element} The node representing the active layer.
+ */
+sre.SemanticMathmlEmbellished.prototype.introduceNewLayer_ = function() {
+  var newNode = sre.SemanticMathml.introduceNewLayer(
+      [this.ofenceMml, this.fencedMml, this.cfenceMml]);
+  // The case of top element math.
+  if (!newNode.parentNode) {
+    var mrow = sre.SystemExternal.document.createElement('mrow');
+    while (newNode.childNodes.length > 0) {
+      mrow.appendChild(newNode.childNodes[0]);
+    }
+    newNode.appendChild(mrow);
+    newNode = mrow;
+  }
+  return newNode;
 };
 
 
@@ -298,6 +299,7 @@ sre.SemanticMathmlEmbellished.prototype.cleanupParents = function() {
 };
 
 
+// Temporary
 sre.SemanticMathmlEmbellished.printMap = function(map) {
   for (var key in map) {
     console.log(key + ': ' + (map[key] ? map[key].toString() : 'Empty'));
