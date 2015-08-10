@@ -48,6 +48,7 @@ sre.Tests.prototype.run = function() {
   }
   this.runner.runTests();
   this.runner.summary();
+  process.exit(this.runner.success() ? 0 : 1);
 };
 
 
