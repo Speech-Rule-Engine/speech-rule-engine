@@ -5,8 +5,8 @@ node_js:
   - "0.10"
   - "iojs"
 branches:
-  only:
-    - master
+  except:
+    - fix_brackeing
 install:
   - npm install closure closure-library closurecompiler commander xmldom xpath
   - export TRAVIS=true
