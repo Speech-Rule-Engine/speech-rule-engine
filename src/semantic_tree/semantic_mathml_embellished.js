@@ -88,13 +88,13 @@ sre.SemanticMathmlEmbellished = function(node) {
    */
   this.outerMap = {};
 
-  
+
   /**
    * List of elements that need to get the parents reset.
    * @type {!Array.<Element>}
    */
   this.parentCleanup = [];
-  
+
 };
 
 
@@ -104,7 +104,8 @@ sre.SemanticMathmlEmbellished = function(node) {
  */
 sre.SemanticMathmlEmbellished.prototype.getMathml = function() {
   this.getFenced_();
-  this.fencedMml = sre.SemanticMathml.walkTree(/** @type {!sre.SemanticTree.Node} */(this.fenced));
+  this.fencedMml = sre.SemanticMathml.walkTree(
+      /** @type {!sre.SemanticTree.Node} */(this.fenced));
   this.getFencesMml_();
   return this.rewrite_();
 };
@@ -191,39 +192,10 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
       newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
 
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
-    var id = currentNode.id;
-    var mml = /** @type {!Element} */(this.outerMap[id]);
-    var mmlTag = sre.SemanticUtil.tagName(mml);
-    if (mmlTag === 'MSUBSUP') {
-      var base = currentNode.childNodes[0].childNodes[0];
-      var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
-      currentNode.childNodes[0].childNodes[0] = empty;
-      mml = sre.SemanticMathml.caseDoubleScript(currentNode, mml);
-      currentNode.childNodes[0].childNodes[0] = base;
-      this.parentCleanup.push(mml);
-      currentNode = currentNode.childNodes[0].childNodes[0];
-    } else if (mmlTag === 'MMULTISCRIPTS' &&
-               (currentNode.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-                currentNode.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-      console.log('This is the case!');
-      if (currentNode.childNodes[0] &&
-          currentNode.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
-        var base = currentNode.childNodes[0].childNodes[0];
-        var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
-        currentNode.childNodes[0].childNodes[0] = empty;
-        mml = sre.SemanticMathml.caseMmultiscript(currentNode, mml);
-        currentNode.childNodes[0].childNodes[0] = base;
-        this.parentCleanup.push(mml);
-        currentNode = currentNode.childNodes[0].childNodes[0];
-      } else {
-        var base = currentNode.childNodes[0];
-        var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
-        currentNode.childNodes[0] = empty;
-        mml = sre.SemanticMathml.caseMmultiscript(currentNode, mml);
-        currentNode.childNodes[0] = base;
-        this.parentCleanup.push(mml);
-        currentNode = currentNode.childNodes[0];
-      }
+    var mml = /** @type {!Element} */(this.outerMap[currentNode.id]);
+    var specialCase = this.specialCase_(currentNode, mml);
+    if (specialCase) {
+      currentNode = specialCase;
     } else {
       sre.SemanticMathml.setAttributes(mml, currentNode);
       var mmlChildren = [];
@@ -255,13 +227,57 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
       /** @type {!sre.SemanticTree.Node} */(this.ofence));
   sre.SemanticMathml.walkTree(
       /** @type {!sre.SemanticTree.Node} */(this.cfence));
-  console.log(this.cfence.mathmlTree.toString());
 
   this.cleanupParents();
   return result || newNode;
 };
 
 
+/**
+ * Treatment of special cases like msubsup and rewritten mmultiscripts.
+ * @param {!sre.SemanticTree.Node} semantic The current semantic node.
+ * @param {!Element} mml The MathML node associated with the semantic node.
+ * @return {sre.SemanticTree.Node} The next semantic node to be rewritten, if
+ *     the original semantic node was a special case.
+ * @private
+ */
+sre.SemanticMathmlEmbellished.prototype.specialCase_ = function(semantic, mml) {
+  var id = semantic.id;
+  var mmlTag = sre.SemanticUtil.tagName(mml);
+  var parent = null;
+  if (mmlTag === 'MSUBSUP') {
+    parent = semantic.childNodes[0];
+    var caller = sre.SemanticMathml.caseDoubleScript;
+  } else if (mmlTag === 'MMULTISCRIPTS' &&
+             (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+              semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
+    caller = sre.SemanticMathml.caseMmultiscript;
+    if (semantic.childNodes[0] &&
+        semantic.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
+      parent = semantic.childNodes[0];
+    } else {
+      parent = semantic;
+    }
+  }
+  if (!parent) {
+    return null;
+  }
+  var base = parent.childNodes[0];
+  var empty = sre.SemanticMathmlEmbellished.makeEmptyNode_(base.id);
+  parent.childNodes[0] = empty;
+  mml = caller(semantic, mml);
+  parent.childNodes[0] = base;
+  this.parentCleanup.push(mml);
+  return parent.childNodes[0];
+};
+
+
+/**
+ * Creates an empty semantic node with an associated empty mrow MathML element.
+ * @param {number} id The id number of the node.
+ * @return {!sre.SemanticTree.Node} The new empty node.
+ * @private
+ */
 sre.SemanticMathmlEmbellished.makeEmptyNode_ = function(id) {
   var mrow = sre.SystemExternal.document.createElement('mrow');
   var empty = new sre.SemanticTree.Node(id);
@@ -274,6 +290,7 @@ sre.SemanticMathmlEmbellished.makeEmptyNode_ = function(id) {
 /**
  * Introduces a new layer if necessary before rewriting the fence.
  * @return {!Element} The node representing the active layer.
+ * @private
  */
 sre.SemanticMathmlEmbellished.prototype.introduceNewLayer_ = function() {
   var newNode = sre.SemanticMathml.introduceNewLayer(
@@ -291,17 +308,15 @@ sre.SemanticMathmlEmbellished.prototype.introduceNewLayer_ = function() {
 };
 
 
+/**
+ * Sets the correct parent pointer for MathML nodes treated and collated in the
+ * special cases. In particular we set the parent of the first child of a node
+ * to the parent of the remaining children.
+ */
 sre.SemanticMathmlEmbellished.prototype.cleanupParents = function() {
   this.parentCleanup.forEach(function(x) {
-    var parent = x.childNodes[1].getAttribute(sre.SemanticMathml.Attribute.PARENT);
+    var parent = x.childNodes[1].getAttribute(
+        sre.SemanticMathml.Attribute.PARENT);
     x.childNodes[0].setAttribute(sre.SemanticMathml.Attribute.PARENT, parent);
   });
-};
-
-
-// Temporary
-sre.SemanticMathmlEmbellished.printMap = function(map) {
-  for (var key in map) {
-    console.log(key + ': ' + (map[key] ? map[key].toString() : 'Empty'));
-  }
 };

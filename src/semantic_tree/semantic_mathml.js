@@ -564,7 +564,7 @@ sre.SemanticMathml.caseTable_ = function(semantic, mml) {
  * Deals with double scripts as in msubsup or munderover.
  * @param {!sre.SemanticTree.Node} semantic The semantic node.
  * @param {!Element} mml The corresponding MathML node.
- * @return {Element} The enriched MathML node for the special case.
+ * @return {!Element} The enriched MathML node for the special case.
  */
 sre.SemanticMathml.caseDoubleScript = function(semantic, mml) {
   // TODO (sorge) Needs some refactoring!
@@ -576,20 +576,6 @@ sre.SemanticMathml.caseDoubleScript = function(semantic, mml) {
   var supMml = sre.SemanticMathml.walkTree(supSem);
   var baseMml = sre.SemanticMathml.walkTree(baseSem);
   var subMml = sre.SemanticMathml.walkTree(subSem);
-//   sre.SemanticMathml.structureDoubleScripts_(
-//       mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore);
-// };
-
-
-
-// /**
-//  * Sets the attributes 
-//  * @param {}
-//  * @return {}
-//  * @private
-//  */
-// sre.SemanticMathml.structureDoubleScripts_ = function(
-//     mml, semantic, baseSem, subSem, supSem, baseMml, subMml, supMml, ignore) {
   sre.SemanticMathml.setAttributes(mml, semantic);
   mml.setAttribute(
       sre.SemanticMathml.Attribute.CHILDREN,
@@ -611,7 +597,7 @@ sre.SemanticMathml.caseDoubleScript = function(semantic, mml) {
  * Deals with degenerated Tensors.
  * @param {!sre.SemanticTree.Node} tensor The tensor node.
  * @param {!Element} mml The corresponding MathML node.
- * @return {Element} The enriched MathML node for that tensor.
+ * @return {!Element} The enriched MathML node for that tensor.
  */
 sre.SemanticMathml.caseMmultiscript = function(tensor, mml) {
   sre.SemanticMathml.setAttributes(mml, tensor);
@@ -1061,7 +1047,6 @@ sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
 };
 
 
-
 /**
  * Dealing with the special case of rewritten embellished fences.
  * @param {!sre.SemanticTree.Node} semantic The semantic node.
@@ -1109,10 +1094,7 @@ sre.SemanticMathml.removeAttributePrefix = function(mml) {
  */
 sre.SemanticMathml.printNodeList__ = function(title, nodes) {
   console.log(title);
-  for (var i = 0, node; node = nodes[i]; i++) {
-    console.log(node.toString());
-  }
-  // sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
+  sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
 };
 

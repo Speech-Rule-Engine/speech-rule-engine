@@ -2889,6 +2889,15 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
 };
 
 
+/**
+ * Propagates the embellished link, that is, the embellishing node links to the
+ * actual fence it embellishes. If the link is valid on the new node, the old
+ * node will point to that link as well. Note, that this fence might still be
+ * embellished itself, e.g. with under or overscore.
+ * @param {!sre.SemanticTree.Node} oldNode The old embellished node.
+ * @param {!sre.SemanticTree.Node} newNode The new embellished node.
+ * @private
+ */
 sre.SemanticTree.propagateEmbellished_ = function(oldNode, newNode) {
   oldNode.embellished =
       !newNode.embellished || isNaN(Number(newNode.embellished)) ?
@@ -2914,7 +2923,7 @@ sre.SemanticTree.Node.prototype.displayTree = function(depth) {
   var depthString = Array(depth).join('  ');
   console.log(depthString + this.toString());
   console.log(depthString + 'MathmlTree:');
-  console.log(depthString + this.mathmlTreeString());
+  console.log(depthString + this.mathmlTreeString_());
   console.log(depthString + 'MathML:');
   for (var i = 0, mml; mml = this.mathml[i]; i++) {
     console.log(depthString + mml.toString());
@@ -2928,9 +2937,15 @@ sre.SemanticTree.Node.prototype.displayTree = function(depth) {
 };
 
 
-sre.SemanticTree.Node.prototype.mathmlTreeString = function() {
+/**
+ * Returns a display version of the node's associated MathML tree.
+ * @return {!string} The MathML tree as string or EMPTY.
+ * @private
+ */
+sre.SemanticTree.Node.prototype.mathmlTreeString_ = function() {
   return this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY';
 };
+
 
 // '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mn>4</mn></mover><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
 // '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mo>)</mo><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
