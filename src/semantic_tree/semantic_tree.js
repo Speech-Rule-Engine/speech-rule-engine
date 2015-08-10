@@ -2874,9 +2874,7 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
       sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(fence) ||
       sre.SemanticTree.attrPred_('type', 'TENSOR')(fence)) {
     // Fence is embellished and needs to be rewritten.
-    console.log(fence.role);
     if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(fence)) {
-      console.log('rewriting');
       fence.role = node.role;
     }
     fence.replaceChild_(newFence, rewritten.node);
@@ -2884,6 +2882,9 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
     return {node: fence, fence: rewritten.fence};
   }
   fence.replaceChild_(newFence, rewritten.fence);
+  if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
+    fence.mathml.push(fence.mathmlTree);
+  }
   return {node: rewritten.node, fence: fence};
 };
 
