@@ -295,7 +295,7 @@ sre.MathUtil.union = function(a, b) {
  * Example: a b c d e  and separators [+,-,*]
  * would result in a + b - c * d * e.
  * @param {string} separators String representing a list of mfenced separators.
- * @return {function(): string|null} A closure that returns the next separator
+ * @return {?function(): string} A closure that returns the next separator
  * for an mfenced expression starting with the first node in nodes.
  */
 sre.MathUtil.nextSeparatorFunction = function(separators) {
