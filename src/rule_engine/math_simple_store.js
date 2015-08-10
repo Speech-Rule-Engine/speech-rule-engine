@@ -166,9 +166,9 @@ sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
     return '';
   }
   return rule.action.components
-    .map(function(comp) {
+      .map(function(comp) {
            return comp.content.slice(1, -1);})
-    .join(' ');
+      .join(' ');
 };
 
 

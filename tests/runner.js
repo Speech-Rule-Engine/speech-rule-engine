@@ -74,6 +74,15 @@ sre.TestRunner.FAIL = 'fail';
 
 
 /**
+ * Success status of the runner.
+ * @return {boolean} True if tests have passed.
+ */
+sre.TestRunner.prototype.success = function() {
+  return this.status_ == sre.TestRunner.PASS;
+};
+
+
+/**
  * Registers an test object to be run with this runner.
  * @param {sre.AbstractTest} test A test case that is added to the runner.
  */
@@ -137,7 +146,7 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
  * Prints a summary of the test runs.
  */
 sre.TestRunner.prototype.summary = function() {
-  if (this.status_ == sre.TestRunner.FAIL) {
+  if (!this.success()) {
     this.output('FAILURE! ', sre.TestRunner.color_.RED);
     this.output('The following tests failed:\n');
     this.output(this.failedTests_.join(', ') + '\n');

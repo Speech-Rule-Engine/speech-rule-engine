@@ -45,19 +45,19 @@ sre.MathMap = function() {
           function(file) {
             return sre.MathMap.FUNCTIONS_PATH_ + file;
           }))
-              .forEach(goog.bind(this.store.addFunctionRules, this.store));
+      .forEach(goog.bind(this.store.addFunctionRules, this.store));
   sre.MathMap.parseFiles(
       sre.MathMap.SYMBOLS_FILES_.map(
           function(file) {
             return sre.MathMap.SYMBOLS_PATH_ + file;
           }))
-              .forEach(goog.bind(this.store.addSymbolRules, this.store));
+      .forEach(goog.bind(this.store.addSymbolRules, this.store));
   sre.MathMap.parseFiles(
       sre.MathMap.UNITS_FILES_.map(
           function(file) {
             return sre.MathMap.UNITS_PATH_ + file;
           }))
-              .forEach(goog.bind(this.store.addUnitRules, this.store));
+      .forEach(goog.bind(this.store.addUnitRules, this.store));
 
   var cstrValues = this.store.getDynamicConstraintValues();
   /**
