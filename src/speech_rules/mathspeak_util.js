@@ -109,7 +109,7 @@ sre.MathspeakUtil.nestingBarriers = [
 
 /**
  * Dictionary to store the nesting depth of each node.
- * @type {Object.<string, Object.<Node, number>>}
+ * @type {Object.<string, Object.<string, number>>}
  */
 sre.MathspeakUtil.nestingDepth = {};
 
@@ -137,8 +137,8 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
   if (!sre.MathspeakUtil.nestingDepth[type]) {
     sre.MathspeakUtil.nestingDepth[type] = {};
   }
-  if (sre.MathspeakUtil.nestingDepth[type][node]) {
-    return sre.MathspeakUtil.nestingDepth[type][node];
+  if (sre.MathspeakUtil.nestingDepth[type][node.toString()]) {
+    return sre.MathspeakUtil.nestingDepth[type][node.toString()];
   }
   if (opt_func(node) || tags.indexOf(node.tagName) < 0) {
     return 0;
@@ -146,7 +146,7 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
   var depth = sre.MathspeakUtil.computeNestingDepth_(
       node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
       opt_barrierAttrs, opt_func, 0);
-  sre.MathspeakUtil.nestingDepth[type][node] = depth;
+  sre.MathspeakUtil.nestingDepth[type][node.toString()] = depth;
   return depth;
 };
 
