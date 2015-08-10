@@ -362,7 +362,7 @@ sre.SemanticMathml.attachedElement_ = function(nodes) {
 /**
  * Type annotation to get around Closure parsing problems for functions as
  * optional parameters.
- * @typedef{function(!Element): boolean}
+ * @typedef {function(!Element): boolean}
  * @private
  */
 sre.SemanticMathml.ElementTest_;
@@ -370,7 +370,7 @@ sre.SemanticMathml.ElementTest_;
 
 /**
  * Type annotation for arrays representing collapsed node structures.
- * @typedef{number|Array.<sre.SemanticMathml.Collapsed_>}
+ * @typedef {number|Array.<sre.SemanticMathml.Collapsed_>}
  * @private
  */
 sre.SemanticMathml.Collapsed_;
