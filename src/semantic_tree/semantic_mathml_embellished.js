@@ -88,6 +88,13 @@ sre.SemanticMathmlEmbellished = function(node) {
    */
   this.outerMap = {};
 
+  
+  /**
+   * List of elements that need to get the parents reset.
+   * @type {!Array.<Element>}
+   */
+  this.parentCleanup = [];
+  
 };
 
 
@@ -199,24 +206,63 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     var id = currentNode.id;
     var mml = /** @type {!Element} */(this.outerMap[id]);
-    console.log(sre.SemanticUtil.tagName(mml));
-    sre.SemanticMathml.setAttributes(mml, currentNode);
-    var mmlChildren = [];
-    for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
-      mmlChildren.push(sre.SemanticMathml.walkTree(child));
-    }
     if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
-      var subChild = currentNode.childNodes[0].childNodes[1];
-      var subMml = sre.SemanticMathml.walkTree(subChild);
-      sre.SemanticMathml.structureDoubleScripts(
-        mml, currentNode, currentNode.childNodes[0].childNodes[0],
-        currentNode.childNodes[1], subChild,
-        newNode, subMml, mmlChildren[0], currentNode.childNodes[0]
-      );
+      var base = currentNode.childNodes[0].childNodes[0];
+      var mrow = sre.SystemExternal.document.createElement('mrow');
+      var empty = new sre.SemanticTree.Node(base.id);
+      empty.type = sre.SemanticAttr.Type.EMPTY;
+      empty.mathmlTree = mrow;
+      currentNode.childNodes[0].childNodes[0] = empty;
+      mml = sre.SemanticMathml.caseDoubleScript_(currentNode, mml);
+      console.log('Here is it: ' + mml.toString() + ' ' + mrow.toString());
+      currentNode.childNodes[0].childNodes[0] = base;
+      this.parentCleanup.push(mml);
+      console.log(base);
+      console.log(this.fenced);
+      // if (base === this.fenced) {
+      //   this.fenced.setAttribute('data-semantic-parent',  mrow.getAttribute('data-semantic-parent'));
+      // } else {
+      //   base.mathmlTree.setAttribute('data-semantic-parent', mrow.getAttribute('data-semantic-parent'));
+      // }
+      // console.log(base.mathmlTree);
+      newNode.setAttribute('data-semantic-parent', mrow.getAttribute('data-semantic-parent'));
+      // var subChild = currentNode.childNodes[0].childNodes[1];
+      // var subMml = sre.SemanticMathml.walkTree(subChild);
+      // sre.SemanticMathml.structureDoubleScripts(
+      //   mml, currentNode, currentNode.childNodes[0].childNodes[0],
+      //   currentNode.childNodes[1], subChild,
+      //   newNode, subMml, mmlChildren[0], currentNode.childNodes[0]
+      // );
       currentNode = currentNode.childNodes[0].childNodes[0];
     } else {
+      sre.SemanticMathml.setAttributes(mml, currentNode);
+      var mmlChildren = [];
+      for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
+        mmlChildren.push(sre.SemanticMathml.walkTree(child));
+      }
       currentNode = currentNode.childNodes[0];
     }
+
+    // sre.SemanticMathml.setAttributes(mml, currentNode);
+    // var mmlChildren = [];
+    // for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
+    //   mmlChildren.push(sre.SemanticMathml.walkTree(child));
+    // }
+    // if (sre.SemanticUtil.tagName(mml) === 'MSUBSUP') {
+    //   var subChild = currentNode.childNodes[0].childNodes[1];
+    //   var subMml = sre.SemanticMathml.walkTree(subChild);
+    //   sre.SemanticMathml.structureDoubleScripts(
+    //     mml, currentNode, currentNode.childNodes[0].childNodes[0],
+    //     currentNode.childNodes[1], subChild,
+    //     newNode, subMml, mmlChildren[0], currentNode.childNodes[0]
+    //   );
+    //   currentNode = currentNode.childNodes[0].childNodes[0];
+    // } else {
+    //   currentNode = currentNode.childNodes[0];
+    // }
+
+
+    // Reordering the nodes in the tree.
     var dummy = sre.SystemExternal.document.createElement('dummy');
     var saveParent = newNode.parentNode;
     var saveChild = mml.childNodes[0];
@@ -239,7 +285,16 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   sre.SemanticMathml.walkTree(
       /** @type {!sre.SemanticTree.Node} */(this.cfence));
 
+  this.cleanupParents();
   return result || newNode;
+};
+
+
+sre.SemanticMathmlEmbellished.prototype.cleanupParents = function() {
+  this.parentCleanup.forEach(function(x) {
+    var parent = x.childNodes[1].getAttribute(sre.SemanticMathml.Attribute.PARENT);
+    x.childNodes[0].setAttribute(sre.SemanticMathml.Attribute.PARENT, parent);
+  });
 };
 
 
