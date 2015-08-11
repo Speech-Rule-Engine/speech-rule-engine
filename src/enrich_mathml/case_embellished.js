@@ -15,16 +15,15 @@
 /**
  * @fileoverview Specialist computations to deal with embellished fences.
  *
- * Take a MathML element, compute the semantic tree and reinject the semantic
- * information into the MathML.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.CaseEmbellished');
 
 goog.require('sre.AbstractEnrichCase');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
+goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree.Node');
 
 
@@ -35,8 +34,8 @@ goog.require('sre.SemanticTree.Node');
  * @override
  * @final
  */
-sre.CaseEmbellished = function(node) {
-  goog.base(this, node);
+sre.CaseEmbellished = function(semantic) {
+  goog.base(this, semantic);
 
   /**
    * @type {sre.SemanticTree.Node}
@@ -91,8 +90,8 @@ goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
 /**
  * @override
  */
-sre.CaseEmbellished.test = function(node) {
-  return node.fencePointer !== null;
+sre.CaseEmbellished.test = function(semantic) {
+  return semantic.mathmlTree && semantic.fencePointer !== null;
 };
 
 
@@ -113,7 +112,7 @@ sre.CaseEmbellished.prototype.getMathml = function() {
  * @private
  */
 sre.CaseEmbellished.prototype.getFenced_ = function() {
-  var currentNode = this.node;
+  var currentNode = this.semantic;
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     currentNode = currentNode.childNodes[0];
   }
@@ -146,7 +145,7 @@ sre.CaseEmbellished.fencedMap_ = function(fence, ids) {
  * @private
  */
 sre.CaseEmbellished.prototype.getFencesMml_ = function() {
-  var currentNode = this.node;
+  var currentNode = this.semantic;
   var ofenceIds = Object.keys(this.ofenceMap);
   var cfenceIds = Object.keys(this.cfenceMap);
   while ((!this.ofenceMml || !this.cfenceMml) && currentNode !== this.fenced) {
@@ -179,7 +178,7 @@ sre.CaseEmbellished.prototype.getFencesMml_ = function() {
  * @private
  */
 sre.CaseEmbellished.prototype.rewrite_ = function() {
-  var currentNode = this.node;
+  var currentNode = this.semantic;
   var result = null;
   var newNode = this.introduceNewLayer_();
   // Sets the basics composition.

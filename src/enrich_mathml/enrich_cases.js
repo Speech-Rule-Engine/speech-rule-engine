@@ -19,7 +19,12 @@
 
 goog.provide('sre.EnrichCases');
 
+goog.require('sre.CaseDoubleScript');
 goog.require('sre.CaseEmbellished');
+goog.require('sre.CaseLine');
+goog.require('sre.CaseMultiscripts');
+goog.require('sre.CaseTable');
+goog.require('sre.CaseTensor');
 goog.require('sre.EnrichCaseFactory');
 
 
@@ -32,7 +37,17 @@ sre.EnrichCases = function() { };
 
 sre.EnrichCaseFactory.cases.push(
     {test: sre.CaseEmbellished.test,
-      constr: sre.CaseEmbellished}
+     constr: sre.CaseEmbellished},
+    {test: sre.CaseDoubleScript.test,
+     constr: sre.CaseDoubleScript},
+    {test: sre.CaseTensor.test,
+     constr: sre.CaseTensor},
+    {test: sre.CaseMultiscripts.test,
+     constr: sre.CaseMultiscripts},
+    {test: sre.CaseLine.test,
+     constr: sre.CaseLine},
+    {test: sre.CaseTable.test,
+     constr: sre.CaseTable}
 );
 
 

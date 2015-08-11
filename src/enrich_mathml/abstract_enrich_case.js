@@ -27,14 +27,14 @@ goog.require('sre.EnrichCase');
 /**
  * @constructor
  * @implements {sre.EnrichCase}
- * @param {!sre.SemanticTree.Node} node The semantic node that is enriched.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node that is enriched.
  */
-sre.AbstractEnrichCase = function(node) {
+sre.AbstractEnrichCase = function(semantic) {
 
   /**
    * @type {!sre.SemanticTree.Node}
    */
-  this.node = node;
+  this.semantic = semantic;
 
 };
 
@@ -47,7 +47,7 @@ sre.AbstractEnrichCase.prototype.getMathml = goog.abstractMethod;
 
 /**
  * Applicability test of the case.
- * @param {!sre.SemanticTree.Node} node semantic node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node.
  * @return {boolean} True if case is applicable.
  */
 sre.AbstractEnrichCase.test = goog.abstractMethod;

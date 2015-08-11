@@ -157,7 +157,7 @@ sre.EnrichMathml.walkTree = function(semantic) {
   }
 
   var newContent = semantic.contentNodes.map(
-      /**@type{Function}*/(sre.EnrichMathml.cloneContentNode_));
+      /**@type{Function}*/(sre.EnrichMathml.cloneContentNode));
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
   var childrenList = sre.EnrichMathml.combineContentChildren_(
@@ -174,10 +174,10 @@ sre.EnrichMathml.walkTree = function(semantic) {
       newNode = /**@type{!Element}*/(attached.parentNode);
     } else {
       sre.Debugger.getInstance().output('Walktree Case 2.2');
-      newNode = sre.EnrichMathml.getInnerNode_(newNode);
+      newNode = sre.EnrichMathml.getInnerNode(newNode);
     }
   }
-  newNode = sre.EnrichMathml.rewriteMfenced_(newNode);
+  newNode = sre.EnrichMathml.rewriteMfenced(newNode);
   sre.EnrichMathml.mergeChildren_(newNode, childrenList);
   sre.EnrichMathml.setAttributes(newNode, semantic);
   return sre.EnrichMathml.ascendNewNode(newNode);
@@ -379,9 +379,8 @@ sre.EnrichMathml.Collapsed_;
  * Checks if the structure is simple, i.e., a single id number.
  * @param {sre.EnrichMathml.Collapsed_} strct The structure.
  * @return {boolean} True if a simple number.
- * @private
  */
-sre.EnrichMathml.simpleCollapseStructure_ = function(strct) {
+sre.EnrichMathml.simpleCollapseStructure = function(strct) {
   return (typeof strct === 'number');
 };
 
@@ -484,78 +483,7 @@ sre.EnrichMathml.specialCase_ = function(semantic) {
   if (embellishedCase) {
     return embellishedCase.getMathml();
   }
-  var mml = semantic.mathmlTree;
-  var mmlTag = sre.SemanticUtil.tagName(mml);
-  if ((mmlTag === 'MSUBSUP' &&
-       semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
-      (mmlTag === 'MUNDEROVER' &&
-      semantic.type === sre.SemanticAttr.Type.OVERSCORE)) {
-    return sre.EnrichMathml.caseDoubleScript(semantic, mml);
-  }
-  if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
-    return sre.EnrichMathml.caseTensor_(semantic, mml);
-  }
-  if (mmlTag === 'MMULTISCRIPTS' &&
-      (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-       semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    return sre.EnrichMathml.caseMmultiscript(semantic, mml);
-  }
-  if (semantic.type === sre.SemanticAttr.Type.LINE) {
-    return sre.EnrichMathml.caseLine_(semantic, mml);
-  }
-  if (semantic.type === sre.SemanticAttr.Type.MATRIX ||
-      semantic.type === sre.SemanticAttr.Type.VECTOR ||
-      semantic.type === sre.SemanticAttr.Type.CASES) {
-    return sre.EnrichMathml.caseTable_(semantic, mml);
-  }
   return null;
-};
-
-
-/**
- * Deals with lines in tables.
- * @param {!sre.SemanticTree.Node} semantic The semantic node.
- * @param {!Element} mml The corresponding MathML node.
- * @return {Element} The enriched MathML node for the special case.
- * @private
- */
-sre.EnrichMathml.caseLine_ = function(semantic, mml) {
-  if (semantic.childNodes.length) {
-    sre.EnrichMathml.walkTree(
-        /**@type{!sre.SemanticTree.Node}*/(semantic.childNodes[0]));
-  }
-  sre.EnrichMathml.setAttributes(mml, semantic);
-  return mml;
-};
-
-
-/**
- * Deals with fenced tables and rewrites mfenced nodes if necessary.
- * @param {!sre.SemanticTree.Node} semantic The semantic node.
- * @param {!Element} mml The corresponding MathML node.
- * @return {Element} The enriched MathML node for the special case.
- * @private
- */
-sre.EnrichMathml.caseTable_ = function(semantic, mml) {
-  var lfence = sre.EnrichMathml.cloneContentNode_(
-      /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[0]));
-  var rfence = semantic.contentNodes[1] ?
-      sre.EnrichMathml.cloneContentNode_(
-          /**@type{!sre.SemanticTree.Node}*/(semantic.contentNodes[1])) :
-      null;
-  semantic.childNodes.map(/**@type{Function}*/(sre.EnrichMathml.walkTree));
-  if (sre.SemanticUtil.tagName(mml) === 'MFENCED') {
-    var children = mml.childNodes;
-    mml.insertBefore(lfence, children[0]);
-    rfence && mml.appendChild(rfence);
-    mml = sre.EnrichMathml.rewriteMfenced_(mml);
-  } else {
-    var newChildren = [lfence, mml];
-    rfence && newChildren.push(rfence);
-    mml = sre.EnrichMathml.introduceNewLayer(newChildren);
-  }
-  sre.EnrichMathml.setAttributes(mml, semantic);
-  return mml;
 };
 
 
@@ -578,15 +506,15 @@ sre.EnrichMathml.caseDoubleScript = function(semantic, mml) {
   sre.EnrichMathml.setAttributes(mml, semantic);
   mml.setAttribute(
       sre.EnrichMathml.Attribute.CHILDREN,
-      sre.EnrichMathml.makeIdList_([baseSem, subSem, supSem]));
+      sre.EnrichMathml.makeIdList([baseSem, subSem, supSem]));
   [baseMml, subMml, supMml].forEach(function(child) {
-    (sre.EnrichMathml.getInnerNode_(child)).setAttribute(
+    (sre.EnrichMathml.getInnerNode(child)).setAttribute(
         sre.EnrichMathml.Attribute.PARENT,
         mml.getAttribute(sre.EnrichMathml.Attribute.ID));
   });
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE,
       ignore.role);
-  sre.EnrichMathml.addCollapsedAttribute_(
+  sre.EnrichMathml.addCollapsedAttribute(
       mml, [semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
   return mml;
 };
@@ -604,62 +532,31 @@ sre.EnrichMathml.caseMmultiscript = function(tensor, mml) {
       tensor.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
     var ignore = tensor.childNodes[0];
     var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
-    var rsup = sre.EnrichMathml.multiscriptIndex_(tensor.childNodes[1]);
-    var rsub = sre.EnrichMathml.multiscriptIndex_(ignore.childNodes[1]);
+    var rsup = sre.EnrichMathml.multiscriptIndex(tensor.childNodes[1]);
+    var rsub = sre.EnrichMathml.multiscriptIndex(ignore.childNodes[1]);
     var collapsed = [tensor.id, [ignore.id, baseSem.id, rsub], rsup];
-    sre.EnrichMathml.addCollapsedAttribute_(mml, collapsed);
+    sre.EnrichMathml.addCollapsedAttribute(mml, collapsed);
     mml.setAttribute(sre.EnrichMathml.Attribute.TYPE,
         ignore.role);
-    sre.EnrichMathml.completeMultiscript_(
+    sre.EnrichMathml.completeMultiscript(
         tensor, mml,
-        sre.EnrichMathml.interleaveIds_(rsub, rsup),
+        sre.EnrichMathml.interleaveIds(rsub, rsup),
         []);
   } else {
     var baseSem = /**@type {!sre.SemanticTree.Node}*/(tensor.childNodes[0]);
-    var rsup = sre.EnrichMathml.multiscriptIndex_(tensor.childNodes[1]);
-    if (!sre.EnrichMathml.simpleCollapseStructure_(rsup)) {
+    var rsup = sre.EnrichMathml.multiscriptIndex(tensor.childNodes[1]);
+    if (!sre.EnrichMathml.simpleCollapseStructure(rsup)) {
       var collapsed = [tensor.id, baseSem.id, rsup];
-      sre.EnrichMathml.addCollapsedAttribute_(mml, collapsed);
+      sre.EnrichMathml.addCollapsedAttribute(mml, collapsed);
     }
   }
-  var childIds = sre.EnrichMathml.collapsedLeafs_(rsub || [], rsup);
+  var childIds = sre.EnrichMathml.collapsedLeafs(rsub || [], rsup);
   var base = sre.EnrichMathml.walkTree(baseSem);
-  sre.EnrichMathml.getInnerNode_(base).setAttribute(
+  sre.EnrichMathml.getInnerNode(base).setAttribute(
       sre.EnrichMathml.Attribute.PARENT, tensor.id);
   childIds.unshift(baseSem.id);
   mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
       childIds.join(','));
-  return mml;
-};
-
-
-/**
- * Deals with tensor nodes by readjusting the index structure.
- * @param {!sre.SemanticTree.Node} tensor The tensor node.
- * @param {!Element} mml The corresponding MathML node.
- * @return {Element} The enriched MathML node for that tensor.
- * @private
- */
-sre.EnrichMathml.caseTensor_ = function(tensor, mml) {
-  sre.EnrichMathml.walkTree(
-      /**@type{!sre.SemanticTree.Node}*/(tensor.childNodes[0]));
-  var lsub = sre.EnrichMathml.multiscriptIndex_(tensor.childNodes[1]);
-  var lsup = sre.EnrichMathml.multiscriptIndex_(tensor.childNodes[2]);
-  var rsub = sre.EnrichMathml.multiscriptIndex_(tensor.childNodes[3]);
-  var rsup = sre.EnrichMathml.multiscriptIndex_(tensor.childNodes[4]);
-  sre.EnrichMathml.setAttributes(mml, tensor);
-  var collapsed = [tensor.id, lsub, lsup, rsub, rsup];
-  if (!collapsed.every(sre.EnrichMathml.simpleCollapseStructure_)) {
-    sre.EnrichMathml.addCollapsedAttribute_(mml, collapsed);
-  }
-  var childIds = sre.EnrichMathml.collapsedLeafs_(lsub, lsup, rsub, rsup);
-  childIds.unshift(tensor.childNodes[0].id);
-  mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
-      childIds.join(','));
-  sre.EnrichMathml.completeMultiscript_(
-      tensor, mml,
-      sre.EnrichMathml.interleaveIds_(rsub, rsup),
-      sre.EnrichMathml.interleaveIds_(lsub, lsup));
   return mml;
 };
 
@@ -671,12 +568,11 @@ sre.EnrichMathml.caseTensor_ = function(tensor, mml) {
  * @param {!sre.EnrichMathml.Collapsed_} second A structured list of
  *     ids.
  * @return {!sre.EnrichMathml.Collapsed_} A simple list of ids.
- * @private
  */
-sre.EnrichMathml.interleaveIds_ = function(first, second) {
-  return sre.EnrichMathml.interleaveLists_(
-      sre.EnrichMathml.collapsedLeafs_(first),
-      sre.EnrichMathml.collapsedLeafs_(second));
+sre.EnrichMathml.interleaveIds = function(first, second) {
+  return sre.EnrichMathml.interleaveLists(
+      sre.EnrichMathml.collapsedLeafs(first),
+      sre.EnrichMathml.collapsedLeafs(second));
 };
 
 
@@ -685,11 +581,10 @@ sre.EnrichMathml.interleaveIds_ = function(first, second) {
  * @param {...sre.EnrichMathml.Collapsed_} var_args The collapsed structure
  *     annotations.
  * @return {!Array.<number>} The leafs of the structure annotations.
- * @private
  */
-sre.EnrichMathml.collapsedLeafs_ = function(var_args) {
+sre.EnrichMathml.collapsedLeafs = function(var_args) {
   var collapseStructure = function(coll) {
-    if (sre.EnrichMathml.simpleCollapseStructure_(coll)) {
+    if (sre.EnrichMathml.simpleCollapseStructure(coll)) {
       return [coll];
     }
     return coll.slice(1);
@@ -707,15 +602,14 @@ sre.EnrichMathml.collapsedLeafs_ = function(var_args) {
  * @param {!Element} node The MathML node.
  * @param {!sre.EnrichMathml.Collapsed_} collapsed The collapsed structure
  *    annotations.
- * @private
  */
-sre.EnrichMathml.addCollapsedAttribute_ = function(node, collapsed) {
+sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
   /**
    * @param {!sre.EnrichMathml.Collapsed_} struct Collapse structure.
    * @return {!string} The structure as string.
    */
   var collapseString = function(struct) {
-    if (sre.EnrichMathml.simpleCollapseStructure_(struct)) {
+    if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
       return struct.toString();
     }
     return '(' + struct.map(collapseString).join(' ') + ')';
@@ -734,9 +628,8 @@ sre.EnrichMathml.addCollapsedAttribute_ = function(node, collapsed) {
  *     nodes of the right indices.
  * @param {!sre.EnrichMathml.Collapsed_} leftIndices The ids of the leaf
  *     nodes of the left indices.
- * @private
  */
-sre.EnrichMathml.completeMultiscript_ = function(
+sre.EnrichMathml.completeMultiscript = function(
     tensor, multiscript, rightIndices, leftIndices) {
   var children = sre.DomUtil.toArray(multiscript.childNodes).slice(1);
   var childCounter = 0;
@@ -744,14 +637,14 @@ sre.EnrichMathml.completeMultiscript_ = function(
     for (var i = 0, index; index = indices[i]; i++) {
       var child = children[childCounter];
       if (!child ||
-          index != sre.EnrichMathml.getInnerNode_(child).
+          index != sre.EnrichMathml.getInnerNode(child).
               getAttribute(sre.EnrichMathml.Attribute.ID)) {
         var query = tensor.querySelectorAll(
             function(x) {return x.id === index;});
         multiscript.insertBefore(
             sre.EnrichMathml.createNone_(query[0]), child);
       } else {
-        sre.EnrichMathml.getInnerNode_(child).
+        sre.EnrichMathml.getInnerNode(child).
             setAttribute(sre.EnrichMathml.Attribute.PARENT, tensor.id);
         childCounter++;
       }
@@ -796,9 +689,8 @@ sre.EnrichMathml.createNone_ = function(semantic) {
  * @return {!sre.EnrichMathml.Collapsed_} If the index node was a
  *     dummy punctuation, i.e. consisted of more than one index, a list of
  *     strings for the collapsed structure is returned, otherwise the node id.
- * @private
  */
-sre.EnrichMathml.multiscriptIndex_ = function(index) {
+sre.EnrichMathml.multiscriptIndex = function(index) {
   if (index.type === sre.SemanticAttr.Type.PUNCTUATED &&
       index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
     var role = index.role;
@@ -806,7 +698,7 @@ sre.EnrichMathml.multiscriptIndex_ = function(index) {
     var childIds = [index.id];
     for (var i = 0, child; child = index.childNodes[i]; i++) {
       var mmlChild = sre.EnrichMathml.walkTree(child);
-      var innerNode = sre.EnrichMathml.getInnerNode_(mmlChild);
+      var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
       innerNode.setAttribute(sre.EnrichMathml.Attribute.PARENT, parentId);
       innerNode.setAttribute(sre.EnrichMathml.Attribute.ROLE, role);
       childIds.push(child.id);
@@ -822,9 +714,8 @@ sre.EnrichMathml.multiscriptIndex_ = function(index) {
  * Clones a content node.
  * @param {!sre.SemanticTree.Node} content The content node.
  * @return {!Element} The corresponding MathML node.
- * @private
  */
-sre.EnrichMathml.cloneContentNode_ = function(content) {
+sre.EnrichMathml.cloneContentNode = function(content) {
   if (content.mathml.length) {
     return sre.EnrichMathml.walkTree(content);
   }
@@ -840,24 +731,10 @@ sre.EnrichMathml.cloneContentNode_ = function(content) {
  * Concatenates node ids into a comma separated lists.
  * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
  * @return {!string} The comma separated lists.
- * @private
  */
-sre.EnrichMathml.makeIdList_ = function(nodes) {
+sre.EnrichMathml.makeIdList = function(nodes) {
   return nodes.map(function(node) {
     return node.id;
-  }).join(',');
-};
-
-
-/**
- * Concatenates node ids into a comma separated lists.
- * @param {!Array.<!Element>} nodes The list of nodes.
- * @return {!string} The comma separated lists.
- * @private
- */
-sre.EnrichMathml.makeIdListOld_ = function(nodes) {
-  return nodes.map(function(node) {
-    return node.getAttribute(sre.EnrichMathml.Attribute.ID);
   }).join(',');
 };
 
@@ -874,11 +751,11 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.ID, semantic.id);
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
-                     sre.EnrichMathml.makeIdList_(semantic.childNodes));
+                     sre.EnrichMathml.makeIdList(semantic.childNodes));
   }
   if (semantic.contentNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CONTENT,
-                     sre.EnrichMathml.makeIdList_(semantic.contentNodes));
+                     sre.EnrichMathml.makeIdList(semantic.contentNodes));
   }
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
@@ -902,7 +779,7 @@ sre.EnrichMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
     case sre.SemanticAttr.Type.MULTIREL:
-      return sre.EnrichMathml.interleaveLists_(children, content);
+      return sre.EnrichMathml.interleaveLists(children, content);
     case sre.SemanticAttr.Type.PREFIXOP:
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
@@ -913,7 +790,7 @@ sre.EnrichMathml.combineContentChildren_ = function(
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (semantic.role === sre.SemanticAttr.Role.TEXT) {
-        return sre.EnrichMathml.interleaveLists_(children, content);
+        return sre.EnrichMathml.interleaveLists(children, content);
       }
       var markupList = [];
       for (var i = 0, j = 0, child, cont;
@@ -940,9 +817,8 @@ sre.EnrichMathml.combineContentChildren_ = function(
  * Rewrites an mfenced node to an mrow node.
  * @param {!Element} mml The MathML node.
  * @return {!Element} The rewritten element.
- * @private
  */
-sre.EnrichMathml.rewriteMfenced_ = function(mml) {
+sre.EnrichMathml.rewriteMfenced = function(mml) {
   if (sre.SemanticUtil.tagName(mml) !== 'MFENCED') {
     return mml;
   }
@@ -986,7 +862,7 @@ sre.EnrichMathml.setOperatorAttribute_ = function(semantic, content) {
   var operator = semantic.type +
           (semantic.textContent ? ',' + semantic.textContent : '');
   content.forEach(function(c) {
-    (sre.EnrichMathml.getInnerNode_(c)).setAttribute(
+    (sre.EnrichMathml.getInnerNode(c)).setAttribute(
         sre.EnrichMathml.Attribute.OPERATOR, operator);});
 };
 
@@ -999,9 +875,8 @@ sre.EnrichMathml.setOperatorAttribute_ = function(semantic, content) {
  * @param {!Element} node The MathML element to process.
  * @return {!Element} The innermost element node, which can be the original node
  *     itself.
- * @private
  */
-sre.EnrichMathml.getInnerNode_ = function(node) {
+sre.EnrichMathml.getInnerNode = function(node) {
   var children = sre.DomUtil.toArray(node.childNodes);
   if (!children) {
     return node;
@@ -1013,7 +888,7 @@ sre.EnrichMathml.getInnerNode_ = function(node) {
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
     if (sre.SemanticUtil.hasEmptyTag(remain)) {
-      var nextInner = sre.EnrichMathml.getInnerNode_(remain);
+      var nextInner = sre.EnrichMathml.getInnerNode(remain);
       if (nextInner && nextInner !== remain) {
         result.push(nextInner);
       }
@@ -1034,9 +909,8 @@ sre.EnrichMathml.getInnerNode_ = function(node) {
  * @param {!Array.<*>} list1 The first list.
  * @param {!Array.<*>} list2 The second list.
  * @return {!Array.<*>} The combined list.
- * @private
  */
-sre.EnrichMathml.interleaveLists_ = function(list1, list2) {
+sre.EnrichMathml.interleaveLists = function(list1, list2) {
   var result = [];
   while (list1.length || list2.length) {
     list1.length && result.push(list1.shift());
