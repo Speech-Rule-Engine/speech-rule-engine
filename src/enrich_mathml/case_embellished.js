@@ -21,23 +21,21 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.EnrichEmbellished');
+goog.provide('sre.CaseEmbellished');
 
-goog.require('sre.Debugger');
+goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
-goog.require('sre.EnrichAbstractCase');
-goog.require('sre.EnrichCaseFactory');
-goog.require('sre.SemanticTree');
 goog.require('sre.SemanticTree.Node');
 
 
 
 /**
  * @constructor
- * @extends {sre.EnrichAbstractCase}
+ * @extends {sre.AbstractEnrichCase}
  * @override
+ * @final
  */
-sre.EnrichEmbellished = function(node) {
+sre.CaseEmbellished = function(node) {
   goog.base(this, node);
   
   /**
@@ -87,13 +85,21 @@ sre.EnrichEmbellished = function(node) {
   this.parentCleanup = [];
 
 };
-goog.inherits(sre.EnrichEmbellished, sre.EnrichAbstractCase);
+goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
 
 
 /**
  * @override
  */
-sre.EnrichEmbellished.prototype.getMathml = function() {
+sre.CaseEmbellished.test = function(node) {
+  return node.fencePointer !== null;
+};
+
+
+/**
+ * @override
+ */
+sre.CaseEmbellished.prototype.getMathml = function() {
   this.getFenced_();
   this.fencedMml = sre.EnrichMathml.walkTree(
       /** @type {!sre.SemanticTree.Node} */(this.fenced));
@@ -106,7 +112,7 @@ sre.EnrichEmbellished.prototype.getMathml = function() {
  * Computes the components of the actual fenced node.
  * @private
  */
-sre.EnrichEmbellished.prototype.getFenced_ = function() {
+sre.CaseEmbellished.prototype.getFenced_ = function() {
   var currentNode = this.node;
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     currentNode = currentNode.childNodes[0];
@@ -114,8 +120,8 @@ sre.EnrichEmbellished.prototype.getFenced_ = function() {
   this.fenced = currentNode.childNodes[0];
   this.ofence = currentNode.contentNodes[0];
   this.cfence = currentNode.contentNodes[1];
-  sre.EnrichEmbellished.fencedMap_(this.ofence, this.ofenceMap);
-  sre.EnrichEmbellished.fencedMap_(this.cfence, this.cfenceMap);
+  sre.CaseEmbellished.fencedMap_(this.ofence, this.ofenceMap);
+  sre.CaseEmbellished.fencedMap_(this.cfence, this.cfenceMap);
 };
 
 
@@ -125,12 +131,12 @@ sre.EnrichEmbellished.prototype.getFenced_ = function() {
  * @param {!Object.<number, Element>} ids The list of id numbers.
  * @private
  */
-sre.EnrichEmbellished.fencedMap_ = function(fence, ids) {
+sre.CaseEmbellished.fencedMap_ = function(fence, ids) {
   ids[fence.id] = fence.mathmlTree;
   if (!fence.embellished) {
     return;
   }
-  sre.EnrichEmbellished.fencedMap_(fence.childNodes[0], ids);
+  sre.CaseEmbellished.fencedMap_(fence.childNodes[0], ids);
 };
 
 
@@ -139,7 +145,7 @@ sre.EnrichEmbellished.fencedMap_ = function(fence, ids) {
  * fences.
  * @private
  */
-sre.EnrichEmbellished.prototype.getFencesMml_ = function() {
+sre.CaseEmbellished.prototype.getFencesMml_ = function() {
   var currentNode = this.node;
   var ofenceIds = Object.keys(this.ofenceMap);
   var cfenceIds = Object.keys(this.cfenceMap);
@@ -172,7 +178,7 @@ sre.EnrichEmbellished.prototype.getFencesMml_ = function() {
  * @return {!Element} The new MathML element.
  * @private
  */
-sre.EnrichEmbellished.prototype.rewrite_ = function() {
+sre.CaseEmbellished.prototype.rewrite_ = function() {
   var currentNode = this.node;
   var result = null;
   var newNode = this.introduceNewLayer_();
@@ -230,7 +236,7 @@ sre.EnrichEmbellished.prototype.rewrite_ = function() {
  *     the original semantic node was a special case.
  * @private
  */
-sre.EnrichEmbellished.prototype.specialCase_ = function(semantic, mml) {
+sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
   var id = semantic.id;
   var mmlTag = sre.SemanticUtil.tagName(mml);
   var parent = null;
@@ -252,7 +258,7 @@ sre.EnrichEmbellished.prototype.specialCase_ = function(semantic, mml) {
     return null;
   }
   var base = parent.childNodes[0];
-  var empty = sre.EnrichEmbellished.makeEmptyNode_(base.id);
+  var empty = sre.CaseEmbellished.makeEmptyNode_(base.id);
   parent.childNodes[0] = empty;
   mml = caller(semantic, mml);
   parent.childNodes[0] = base;
@@ -267,7 +273,7 @@ sre.EnrichEmbellished.prototype.specialCase_ = function(semantic, mml) {
  * @return {!sre.SemanticTree.Node} The new empty node.
  * @private
  */
-sre.EnrichEmbellished.makeEmptyNode_ = function(id) {
+sre.CaseEmbellished.makeEmptyNode_ = function(id) {
   var mrow = sre.SystemExternal.document.createElement('mrow');
   var empty = new sre.SemanticTree.Node(id);
   empty.type = sre.SemanticAttr.Type.EMPTY;
@@ -281,7 +287,7 @@ sre.EnrichEmbellished.makeEmptyNode_ = function(id) {
  * @return {!Element} The node representing the active layer.
  * @private
  */
-sre.EnrichEmbellished.prototype.introduceNewLayer_ = function() {
+sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
   var newNode = sre.EnrichMathml.introduceNewLayer(
       [this.ofenceMml, this.fencedMml, this.cfenceMml]);
   // The case of top element math.
@@ -303,13 +309,10 @@ sre.EnrichEmbellished.prototype.introduceNewLayer_ = function() {
  * to the parent of the remaining children.
  * @private
  */
-sre.EnrichEmbellished.prototype.cleanupParents_ = function() {
+sre.CaseEmbellished.prototype.cleanupParents_ = function() {
   this.parentCleanup.forEach(function(x) {
     var parent = x.childNodes[1].getAttribute(
         sre.EnrichMathml.Attribute.PARENT);
     x.childNodes[0].setAttribute(sre.EnrichMathml.Attribute.PARENT, parent);
   });
 };
-
-
-sre.EnrichCaseFactory.embellishedCase = sre.EnrichEmbellished;

@@ -19,15 +19,24 @@
 
 goog.provide('sre.EnrichCaseFactory');
 
-goog.require('sre.EnrichAbstractCase');
+goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichCase');
 
 
 
 /**
- * @namespace
+ * @constructor
  */
 sre.EnrichCaseFactory = function() {};
+
+
+/**
+ * Type annotation to get around Closure parsing problems for functions as
+ * optional parameters.
+ * @typedef {{test: !function(!sre.SemanticTree.Node): boolean,
+ *      constr: !function(new:sre.AbstractEnrichCase, sre.SemanticTree.Node)}}
+ */
+sre.EnrichCaseFactory.Case;
 
 
 /**
@@ -41,6 +50,30 @@ sre.EnrichCaseFactory.getEmbellishedCase = function(node) {
 
 
 /**
- * @type {function(new:sre.EnrichAbstractCase, sre.SemanticTree.Node)}
+ * @type {function(new:sre.AbstractEnrichCase, sre.SemanticTree.Node)}
  */
 sre.EnrichCaseFactory.embellishedCase;
+
+
+/**
+ * The cases of the factory can provide.
+ * @type {Array.<sre.EnrichCaseFactory.Case>}
+ */
+sre.EnrichCaseFactory.cases = [];
+
+
+/**
+ * Returns the embellished case analysis.
+ * @param {!sre.SemanticTree.Node} node The semantic node.
+ * @return {sre.EnrichCase} The case analysis.
+ */
+sre.EnrichCaseFactory.getCase = function(node) {
+  for (var i = 0, enrich; enrich = sre.EnrichCaseFactory.cases[i]; i++) {
+    if (enrich.test(node)) {
+      return new enrich.constr(node);
+    }
+  }
+  return null;
+};
+
+

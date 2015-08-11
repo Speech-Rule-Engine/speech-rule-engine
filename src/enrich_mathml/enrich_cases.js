@@ -13,33 +13,26 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract procedure for special cases in semantic enrichment of
- *     MathML.
+ * @fileoverview Populates the case factory with case analysis classes.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.EnrichAbstractCase');
+goog.provide('sre.EnrichCases');
 
-goog.require('sre.EnrichCase');
-
+goog.require('sre.CaseEmbellished');
+goog.require('sre.EnrichCaseFactory');
 
 
 /**
  * @constructor
- * @implements {sre.EnrichCase}
- * @override
  */
-sre.EnrichAbstractCase = function(node) {
-
-  /**
-   * @type {!sre.SemanticTree.Node}
-   */
-  this.node = node;
-
-};
+sre.EnrichCases = function() { };
 
 
-/**
- * @override
- */
-sre.EnrichAbstractCase.prototype.getMathml = goog.abstractMethod;
+sre.EnrichCaseFactory.cases.push(
+  {test: sre.CaseEmbellished.test,
+   constr: sre.CaseEmbellished}
+);
+
+
+

@@ -477,8 +477,9 @@ sre.EnrichMathml.parentNode_ = function(element) {
  * @private
  */
 sre.EnrichMathml.specialCase_ = function(semantic) {
-  if (semantic.fencePointer !== null) {
-    return sre.EnrichCaseFactory.getEmbellishedCase(semantic).getMathml();
+  var embellishedCase = sre.EnrichCaseFactory.getCase(semantic);
+  if (embellishedCase) {
+    return embellishedCase.getMathml();
   }
   if (!semantic.mathmlTree) {
     return null;
