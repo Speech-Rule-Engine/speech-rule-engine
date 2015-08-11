@@ -25,15 +25,16 @@ goog.provide('sre.SemanticMathmlEmbellished');
 
 goog.require('sre.Debugger');
 // goog.require('sre.SemanticMathml');
+goog.require('sre.SemanticMathmlCase');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticTree.Node');
 
 
 
 /**
- * Create the namespace
  * @constructor
- * @param {sre.SemanticTree.Node} node The embellished fence node.
+ * @implements {sre.SemanticMathmlCase}
+ * @override
  */
 sre.SemanticMathmlEmbellished = function(node) {
 
@@ -92,8 +93,7 @@ sre.SemanticMathmlEmbellished = function(node) {
 
 
 /**
- * Computes the Mathml element corresponding to this embellished fence node.
- * @return {!Element} The newly compute Mathml element.
+ * @override
  */
 sre.SemanticMathmlEmbellished.prototype.getMathml = function() {
   this.getFenced_();
