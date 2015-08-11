@@ -23,9 +23,8 @@ goog.provide('sre.EnrichCase');
 
 /**
  * @interface
- * @param {!sre.SemanticTree.Node} node The semantic node that is enriched.
  */
-sre.EnrichCase = function(node) { };
+sre.EnrichCase = function() { };
 
 
 /**

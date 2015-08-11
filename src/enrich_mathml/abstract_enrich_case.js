@@ -27,7 +27,7 @@ goog.require('sre.EnrichCase');
 /**
  * @constructor
  * @implements {sre.EnrichCase}
- * @override
+ * @param {!sre.SemanticTree.Node} node The semantic node that is enriched.
  */
 sre.AbstractEnrichCase = function(node) {
 

@@ -89,7 +89,7 @@ sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
   sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
   sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
   sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',
-                                      wiki);
+      wiki);
 };
 
 
