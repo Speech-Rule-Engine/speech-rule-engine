@@ -37,7 +37,7 @@ goog.require('sre.SemanticTree.Node');
  */
 sre.CaseEmbellished = function(node) {
   goog.base(this, node);
-  
+
   /**
    * @type {sre.SemanticTree.Node}
    */

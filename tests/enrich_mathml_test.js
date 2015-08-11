@@ -7852,7 +7852,397 @@ sre.EnrichMathmlTest.prototype.testMathmlMfenced = function() {
 };
 
 
-// Missing tests here!
+/**
+ * Punctuated elements.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlPunctuated = function() {
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>',
+      '<math type="punctuated" role="sequence" id="7"' +
+      ' children="0,1,2,3,4,5,6" content="1,3,5">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
+      '<mo type="punctuation" role="comma" id="1" parent="7"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
+      '<mo type="punctuation" role="comma" id="3" parent="7"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">c</mi>' +
+      '<mo type="punctuation" role="comma" id="5" parent="7"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="7">d</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>',
+      '<math type="punctuated" role="sequence" id="6"' +
+      ' children="0,1,2,3,4,5" content="0,2,4">' +
+      '<mo type="punctuation" role="comma" id="0" parent="6"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="6">b</mi>' +
+      '<mo type="punctuation" role="comma" id="2" parent="6"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="6">c</mi>' +
+      '<mo type="punctuation" role="comma" id="4" parent="6"' +
+      ' operator="punctuated">,</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">d</mi>' +
+      '</math>'
+  );
+
+  this.executeMathmlTest(
+      '<msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>',
+      '<math type="punctuated" role="endpunct" id="4" children="2,3"' +
+      ' content="3">' +
+      '<msub type="subscript" role="latinletter" id="2" children="0,1"' +
+      ' parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">b</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
+      '</msub>' +
+      '<mo type="punctuation" role="unknown" id="3" parent="4"' +
+      ' operator="punctuated">!</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub>',
+      '<math type="punctuated" role="startpunct" id="4" children="0,3"' +
+      ' content="0">' +
+      '<mo type="punctuation" role="unknown" id="0" parent="4"' +
+      ' operator="punctuated">:</mo>' +
+      '<msub type="subscript" role="latinletter" id="3" children="1,2"' +
+      ' parent="4">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">b</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">1</mn>' +
+      '</msub>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>',
+      '<math type="punctuated" role="sequence" id="5" children="0,3,4"' +
+      ' content="0,4">' +
+      '<mo type="punctuation" role="unknown" id="0" parent="5"' +
+      ' operator="punctuated">:</mo>' +
+      '<msub type="subscript" role="latinletter" id="3" children="1,2"' +
+      ' parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">b</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">1</mn>' +
+      '</msub>' +
+      '<mo type="punctuation" role="unknown" id="4" parent="5"' +
+      ' operator="punctuated">!</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>,</mo><mo>,</mo><mo>,</mo><mo>!</mo>',
+      '<math type="punctuated" role="sequence" id="4" children="0,1,2,3"' +
+      ' content="0,1,2,3">' +
+      '<mo type="punctuation" role="comma" id="0" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="comma" id="1" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="comma" id="2" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="unknown" id="3" parent="4"' +
+      ' operator="punctuated">!</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>,</mo><mo>,</mo><mo>,</mo><mo>,</mo>',
+      '<math type="punctuated" role="comma" id="4" children="0,1,2,3"' +
+      ' content="0,1,2,3">' +
+      '<mo type="punctuation" role="comma" id="0" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="comma" id="1" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="comma" id="2" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="comma" id="3" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>\'</mo><mo>\'</mo><mo>\'</mo><mo>\'</mo>',
+      '<math type="punctuated" role="prime" id="4" children="0,1,2,3"' +
+      ' content="0,1,2,3">' +
+      '<mo type="punctuation" role="prime" id="0" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '<mo type="punctuation" role="prime" id="1" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '<mo type="punctuation" role="prime" id="2" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '<mo type="punctuation" role="prime" id="3" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>\'</mo><mo>\'</mo><mo>,</mo><mo>\'</mo>',
+      '<math type="punctuated" role="sequence" id="4" children="0,1,2,3"' +
+      ' content="0,1,2,3">' +
+      '<mo type="punctuation" role="prime" id="0" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '<mo type="punctuation" role="prime" id="1" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '<mo type="punctuation" role="comma" id="2" parent="4"' +
+      ' operator="punctuated">,</mo>' +
+      '<mo type="punctuation" role="prime" id="3" parent="4"' +
+      ' operator="punctuated">\'</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>!</mo><mo>!</mo><mo>!</mo><mo>!</mo>',
+      '<math type="punctuated" role="sequence" id="4" children="0,1,2,3"' +
+      ' content="0,1,2,3">' +
+      '<mo type="punctuation" role="unknown" id="0" parent="4"' +
+      ' operator="punctuated">!</mo>' +
+      '<mo type="punctuation" role="unknown" id="1" parent="4"' +
+      ' operator="punctuated">!</mo>' +
+      '<mo type="punctuation" role="unknown" id="2" parent="4"' +
+      ' operator="punctuated">!</mo>' +
+      '<mo type="punctuation" role="unknown" id="3" parent="4"' +
+      ' operator="punctuated">!</mo>' +
+      '</math>'
+  );
+};
+
+
+// Units.
+/**
+ * Tests simple expressions containing units.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlSimpleUnits = function() {
+  this.executeMathmlTest(
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>',
+      '<math>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="0">km</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>min</mi><mi mathvariant="normal" class="MathML-Unit">min</mi>',
+      '<math type="appl" role="limit function" id="3" children="0,1"' +
+      ' content="2,0">' +
+      '<mi type="function" role="limit function" id="0" parent="3"' +
+      ' operator="appl">min</mi>' +
+      '<mo type="punctuation" role="application" id="2" parent="3"' +
+      ' added="true" operator="appl">⁡</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="1" parent="3">min</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<msup><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="unit" id="2" children="0,1">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="0" parent="2">km</mi>' +
+      '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi></mfrac>',
+      '<math>' +
+      '<mfrac type="fraction" role="unit" id="2" children="0,1">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="0" parent="2">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="1" parent="2">h</mi>' +
+      '</mfrac>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mfrac><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi></mfrac>',
+      '<math>' +
+      '<mfrac type="fraction" role="division" id="2" children="0,1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="1" parent="2">km</mi>' +
+      '</mfrac>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>',
+      '<math type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2">' +
+      '<mn type="number" role="integer" id="0" parent="3">3</mn>' +
+      '<mo type="operator" role="multiplication" id="2" parent="3"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="1" parent="3">km</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
+      '<math type="infixop" role="implicit" id="6" children="0,4"' +
+      ' content="5">' +
+      '<mn type="number" role="integer" id="0" parent="6">3</mn>' +
+      '<mo type="operator" role="multiplication" id="5" parent="6"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="infixop" role="unit" id="4" children="1,2" content="3"' +
+      ' parent="6">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="1" parent="4">km</mi>' +
+      '<mo type="operator" role="multiplication" id="3" parent="4"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="2" parent="4">h</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Tests more complex expressions containing units.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlComplexUnits = function() {
+  this.executeMathmlTest(
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
+      '<math type="infixop" role="implicit" id="10" children="0,1,2,6"' +
+      ' content="7,8,9">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="0" parent="10">s</mi>' +
+      '<mo type="operator" role="multiplication" id="7" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="1" parent="10">3</mn>' +
+      '<mo type="operator" role="multiplication" id="8" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="10">m</mi>' +
+      '<mo type="operator" role="multiplication" id="9" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="infixop" role="unit" id="6" children="3,4" content="5"' +
+      ' parent="10">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="3" parent="6">km</mi>' +
+      '<mo type="operator" role="multiplication" id="5" parent="6"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="4" parent="6">h</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>2</mn></msup>' +
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
+      '<math type="infixop" role="implicit" id="15" children="9,4,5,11"' +
+      ' content="12,13,14">' +
+      '<mrow type="infixop" role="unit" id="9" children="0,3" content="8"' +
+      ' parent="15">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="0" parent="9">km</mi>' +
+      '<mo type="operator" role="multiplication" id="8" parent="9"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<msup type="superscript" role="unit" id="3" children="1,2" parent="9">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="1" parent="3">s</mi>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msup>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="12" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mn type="number" role="integer" id="4" parent="15">3</mn>' +
+      '<mo type="operator" role="multiplication" id="13" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="15">m</mi>' +
+      '<mo type="operator" role="multiplication" id="14" parent="15"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="infixop" role="unit" id="11" children="6,7" content="10"' +
+      ' parent="15">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="6" parent="11">km</mi>' +
+      '<mo type="operator" role="multiplication" id="10" parent="11"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="7" parent="11">h</mi>' +
+      '</mrow>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>' +
+      '<mfrac>' +
+      '<mi>N</mi>' +
+      '<msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>2</mn></msup></mfrac>',
+      '<math type="infixop" role="implicit" id="14" children="0,1,10,8"' +
+      ' content="11,12,13">' +
+      '<mn type="number" role="integer" id="0" parent="14">3</mn>' +
+      '<mo type="operator" role="multiplication" id="11" parent="14"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="14">m</mi>' +
+      '<mo type="operator" role="multiplication" id="12" parent="14"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="infixop" role="unit" id="10" children="2,3" content="9"' +
+      ' parent="14">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="2" parent="10">km</mi>' +
+      '<mo type="operator" role="multiplication" id="9" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="3" parent="10">h</mi>' +
+      '</mrow>' +
+      '<mo type="operator" role="multiplication" id="13" parent="14"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mfrac type="fraction" role="division" id="8" children="4,7"' +
+      ' parent="14">' +
+      '<mi type="identifier" role="latinletter" id="4" parent="8">N</mi>' +
+      '<msup type="superscript" role="unit" id="7" children="5,6" parent="8">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="5" parent="7">s</mi>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</msup>' +
+      '</mfrac>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mn>3</mn><mi>m</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
+      '<mi mathvariant="normal" class="MathML-Unit">h</mi>' +
+      '<mfrac>' +
+      '<mi mathvariant="normal" class="MathML-Unit">N</mi>' +
+      '<msup>' +
+      '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
+      '<mn>2</mn></msup></mfrac>',
+      '<math type="infixop" role="implicit" id="13" children="0,1,10"' +
+      ' content="11,12">' +
+      '<mn type="number" role="integer" id="0" parent="13">3</mn>' +
+      '<mo type="operator" role="multiplication" id="11" parent="13"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="13">m</mi>' +
+      '<mo type="operator" role="multiplication" id="12" parent="13"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mrow type="infixop" role="unit" id="10" children="2,3,8"' +
+      ' content="9" parent="13">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="2" parent="10">km</mi>' +
+      '<mo type="operator" role="multiplication" id="9" parent="10"' +
+      ' added="true" operator="infixop,⁢">⁢</mo>' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="3" parent="10">h</mi>' +
+      '<mfrac type="fraction" role="unit" id="8" children="4,7" parent="10">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="4" parent="8">N</mi>' +
+      '<msup type="superscript" role="unit" id="7" children="5,6" parent="8">' +
+      '<mi mathvariant="normal" class="MathML-Unit" type="identifier"' +
+      ' role="unit" id="5" parent="7">s</mi>' +
+      '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
+      '</msup>' +
+      '</mfrac>' +
+      '</mrow>' +
+      '</math>'
+  );
+};
 
 
 // Tensors.

@@ -23,6 +23,7 @@ goog.require('sre.CaseEmbellished');
 goog.require('sre.EnrichCaseFactory');
 
 
+
 /**
  * @constructor
  */
@@ -30,8 +31,8 @@ sre.EnrichCases = function() { };
 
 
 sre.EnrichCaseFactory.cases.push(
-  {test: sre.CaseEmbellished.test,
-   constr: sre.CaseEmbellished}
+    {test: sre.CaseEmbellished.test,
+      constr: sre.CaseEmbellished}
 );
 
 
