@@ -24,8 +24,9 @@
 goog.provide('sre.SemanticMathmlEmbellished');
 
 goog.require('sre.Debugger');
-// goog.require('sre.SemanticMathml');
-goog.require('sre.SemanticMathmlCase');
+goog.require('sre.SemanticMathml');
+goog.require('sre.SemanticMathmlAbstractCase');
+goog.require('sre.SemanticMathmlCases');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticTree.Node');
 
@@ -33,16 +34,12 @@ goog.require('sre.SemanticTree.Node');
 
 /**
  * @constructor
- * @implements {sre.SemanticMathmlCase}
+ * @extends {sre.SemanticMathmlAbstractCase}
  * @override
  */
 sre.SemanticMathmlEmbellished = function(node) {
-
-  /**
-   * @type {sre.SemanticTree.Node}
-   */
-  this.node = node;
-
+  goog.base(this, node);
+  
   /**
    * @type {sre.SemanticTree.Node}
    */
@@ -90,6 +87,7 @@ sre.SemanticMathmlEmbellished = function(node) {
   this.parentCleanup = [];
 
 };
+goog.inherits(sre.SemanticMathmlEmbellished, sre.SemanticMathmlAbstractCase);
 
 
 /**
@@ -312,3 +310,6 @@ sre.SemanticMathmlEmbellished.prototype.cleanupParents_ = function() {
     x.childNodes[0].setAttribute(sre.SemanticMathml.Attribute.PARENT, parent);
   });
 };
+
+
+sre.SemanticMathmlCases.embellishedCase = sre.SemanticMathmlEmbellished;

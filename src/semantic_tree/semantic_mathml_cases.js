@@ -13,23 +13,34 @@
 // limitations under the License.
 
 /**
- * @fileoverview Procedure for special case in semantic enrichment of MathML.
+ * @fileoverview Factory class for executing case splits.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticMathmlCase');
+goog.provide('sre.SemanticMathmlCases');
+
+goog.require('sre.SemanticMathmlAbstractCase');
+goog.require('sre.SemanticMathmlCase');
 
 
 
 /**
- * @interface
- * @param {!sre.SemanticTree.Node} node The semantic node that is enriched.
+ * @namespace
  */
-sre.SemanticMathmlCase = function(node) { };
+sre.SemanticMathmlCases = function() {};
 
 
 /**
- * Retrieves the MathML node that is the result of the computation.
- * @return {!Element} The enriched MathML node.
+ * Returns the embellished case analysis.
+ * @param {sre.SemanticTree.Node} node The semantic node.
+ * @return {sre.SemanticMathmlCase} The case analysis.
  */
-sre.SemanticMathmlCase.prototype.getMathml = function() { };
+sre.SemanticMathmlCases.getEmbellishedCase = function(node) {
+  return new sre.SemanticMathmlCases.embellishedCase(node);
+};
+
+
+/**
+ * @type {function(new:sre.SemanticMathmlAbstractCase, sre.SemanticTree.Node)}
+ */
+sre.SemanticMathmlCases.embellishedCase;

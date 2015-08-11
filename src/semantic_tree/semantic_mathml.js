@@ -24,7 +24,7 @@
 goog.provide('sre.SemanticMathml');
 
 goog.require('sre.Debugger');
-goog.require('sre.SemanticMathmlEmbellished');
+goog.require('sre.SemanticMathmlCases');
 goog.require('sre.SemanticTree');
 
 
@@ -478,7 +478,7 @@ sre.SemanticMathml.parentNode_ = function(element) {
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
   if (semantic.fencePointer !== null) {
-    return (new sre.SemanticMathmlEmbellished(semantic)).getMathml();
+    return sre.SemanticMathmlCases.getEmbellishedCase(semantic).getMathml();
   }
   if (!semantic.mathmlTree) {
     return null;

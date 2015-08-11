@@ -13,23 +13,33 @@
 // limitations under the License.
 
 /**
- * @fileoverview Procedure for special case in semantic enrichment of MathML.
+ * @fileoverview Abstract procedure for special cases in semantic enrichment of
+ *     MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticMathmlCase');
+goog.provide('sre.SemanticMathmlAbstractCase');
+
+goog.require('sre.SemanticMathmlCase');
 
 
 
 /**
- * @interface
- * @param {!sre.SemanticTree.Node} node The semantic node that is enriched.
+ * @constructor
+ * @implements {sre.SemanticMathmlCase}
+ * @override
  */
-sre.SemanticMathmlCase = function(node) { };
+sre.SemanticMathmlAbstractCase = function(node) {
+
+  /**
+   * @type {!sre.SemanticTree.Node}
+   */
+  this.node = node;
+
+};
 
 
 /**
- * Retrieves the MathML node that is the result of the computation.
- * @return {!Element} The enriched MathML node.
+ * @override
  */
-sre.SemanticMathmlCase.prototype.getMathml = function() { };
+sre.SemanticMathmlAbstractCase.prototype.getMathml = goog.abstractMethod;
