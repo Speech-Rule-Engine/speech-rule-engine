@@ -477,7 +477,7 @@ sre.SemanticMathml.parentNode_ = function(element) {
  * @private
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
-  if (semantic.embellished && !isNaN(Number(semantic.embellished))) {
+  if (semantic.fencePointer !== null) {
     return (new sre.SemanticMathmlEmbellished(semantic)).getMathml();
   }
   if (!semantic.mathmlTree) {

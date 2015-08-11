@@ -84,6 +84,9 @@ sre.SemanticTree.Node = function(id) {
   /** @type {?sre.SemanticAttr.Type} */
   this.embellished = null;
 
+  /** @type {?number} */
+  this.fencePointer = null;
+
   /** @type {!Array.<sre.SemanticTree.Node>} */
   this.childNodes = [];
 
@@ -257,6 +260,9 @@ sre.SemanticTree.Node.prototype.xmlAttributes_ = function(node) {
   }
   if (this.embellished) {
     node.setAttribute('embellished', this.embellished);
+  }
+  if (this.fencePointer !== null) {
+    node.setAttribute('fencepointer', this.fencePointer.toString());
   }
   node.setAttribute('id', this.id);
 };
@@ -2880,7 +2886,7 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
       fence.role = node.role;
     }
     fence.replaceChild_(newFence, rewritten.node);
-    sre.SemanticTree.propagateEmbellished_(fence, newFence);
+    sre.SemanticTree.propagateFencePointer_(fence, newFence);
     return {node: fence, fence: rewritten.fence};
   }
   fence.replaceChild_(newFence, rewritten.fence);
@@ -2892,7 +2898,7 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
 
 
 /**
- * Propagates the embellished link, that is, the embellishing node links to the
+ * Propagates the fence pointer, that is, the embellishing node links to the
  * actual fence it embellishes. If the link is valid on the new node, the old
  * node will point to that link as well. Note, that this fence might still be
  * embellished itself, e.g. with under or overscore.
@@ -2900,11 +2906,9 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
  * @param {!sre.SemanticTree.Node} newNode The new embellished node.
  * @private
  */
-sre.SemanticTree.propagateEmbellished_ = function(oldNode, newNode) {
-  oldNode.embellished =
-      !newNode.embellished || isNaN(Number(newNode.embellished)) ?
-      /** @type {sre.SemanticAttr.Type} */(newNode.id.toString()) :
-      newNode.embellished;
+sre.SemanticTree.propagateFencePointer_ = function(oldNode, newNode) {
+  oldNode.fencePointer = newNode.fencePointer || newNode.id;
+  oldNode.embellished = null;
 };
 
 

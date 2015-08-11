@@ -9346,7 +9346,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
 sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
   this.executeTreeTest(
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>',
-      '<superscript role="leftright" embellished="2" id="4">' +
+      '<superscript role="leftright" fencepointer="2" id="4">' +
       '<children>' +
       '<fenced role="leftright" id="5">' +
       '<content>' +
@@ -9364,9 +9364,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
   this.executeTreeTest(
       '<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mn>2</mn></msub>',
-      '<subscript role="leftright" embellished="2" id="6">' +
+      '<subscript role="leftright" fencepointer="2" id="6">' +
       '<children>' +
-      '<superscript role="leftright" embellished="2" id="4">' +
+      '<superscript role="leftright" fencepointer="2" id="4">' +
       '<children>' +
       '<fenced role="leftright" id="7">' +
       '<content>' +
@@ -9386,9 +9386,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
   );
   this.executeTreeTest(
       '<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>',
-      '<superscript role="leftright" embellished="2" id="6">' +
+      '<superscript role="leftright" fencepointer="2" id="6">' +
       '<children>' +
-      '<subscript role="subsup" embellished="2" id="5">' +
+      '<subscript role="subsup" fencepointer="2" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="7">' +
       '<content>' +
@@ -9409,9 +9409,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
   this.executeTreeTest(
       '<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn>' +
       '</mmultiscripts>',
-      '<superscript role="leftright" embellished="2" id="6">' +
+      '<superscript role="leftright" fencepointer="2" id="6">' +
       '<children>' +
-      '<subscript role="subsup" embellished="2" id="5">' +
+      '<subscript role="subsup" fencepointer="2" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="7">' +
       '<content>' +
@@ -9432,9 +9432,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
   this.executeTreeTest(
       '<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo>' +
       '</mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>',
-      '<superscript role="leftright" embellished="8" id="10">' +
+      '<superscript role="leftright" fencepointer="8" id="10">' +
       '<children>' +
-      '<subscript role="leftright" embellished="4" id="6">' +
+      '<subscript role="leftright" fencepointer="4" id="6">' +
       '<children>' +
       '<fenced role="leftright" id="11">' +
       '<content>' +
@@ -9466,9 +9466,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
       '<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo>' +
       '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
       '</msup></mpadded>',
-      '<superscript role="leftright" embellished="8" id="10">' +
+      '<superscript role="leftright" fencepointer="8" id="10">' +
       '<children>' +
-      '<subscript role="leftright" embellished="4" id="6">' +
+      '<subscript role="leftright" fencepointer="4" id="6">' +
       '<children>' +
       '<fenced role="leftright" id="11">' +
       '<content>' +
@@ -9554,7 +9554,7 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedLeftFence = function() {
   this.executeTreeTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
       '<mi>x</mi><mo>)</mo>',
-      '<tensor role="leftright" embellished="0" id="5">' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="8">' +
       '<content>' +
@@ -9575,7 +9575,7 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedLeftFence = function() {
   this.executeTreeTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>',
-      '<tensor role="leftright" embellished="0" id="5">' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="8">' +
       '<content>' +
@@ -9628,7 +9628,7 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedLeftFence = function() {
       '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
       '<mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>',
-      '<tensor role="leftright" embellished="2" id="7">' +
+      '<tensor role="leftright" fencepointer="2" id="7">' +
       '<children>' +
       '<fenced role="leftright" id="10">' +
       '<content>' +
@@ -9656,9 +9656,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedLeftFence = function() {
       '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
       '</mover><mprescripts/><mn>4</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>',
-      '<tensor role="leftright" embellished="9" id="14">' +
+      '<tensor role="leftright" fencepointer="9" id="14">' +
       '<children>' +
-      '<tensor role="leftright" embellished="2" id="7">' +
+      '<tensor role="leftright" fencepointer="2" id="7">' +
       '<children>' +
       '<fenced role="leftright" id="17">' +
       '<content>' +
@@ -9702,9 +9702,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedBothFences = function() {
   this.executeTreeTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
       '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>',
-      '<superscript role="leftright" embellished="7" id="9">' +
+      '<superscript role="leftright" fencepointer="7" id="9">' +
       '<children>' +
-      '<tensor role="leftright" embellished="0" id="5">' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="10">' +
       '<content>' +
@@ -9729,11 +9729,11 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedBothFences = function() {
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
       '<mn>2</mn></msubsup>',
-      '<superscript role="leftright" embellished="7" id="11">' +
+      '<superscript role="leftright" fencepointer="7" id="11">' +
       '<children>' +
-      '<subscript role="subsup" embellished="7" id="10">' +
+      '<subscript role="subsup" fencepointer="7" id="10">' +
       '<children>' +
-      '<tensor role="leftright" embellished="0" id="5">' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="12">' +
       '<content>' +
@@ -9762,11 +9762,11 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedBothFences = function() {
       '</mmultiscripts><mo>~</mo></munder>' +
       '<mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn>' +
       '</msubsup><mo>^</mo></mover>',
-      '<superscript role="leftright" embellished="9" id="13">' +
+      '<superscript role="leftright" fencepointer="9" id="13">' +
       '<children>' +
-      '<subscript role="subsup" embellished="9" id="12">' +
+      '<subscript role="subsup" fencepointer="9" id="12">' +
       '<children>' +
-      '<tensor role="leftright" embellished="0" id="5">' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="16">' +
       '<content>' +
@@ -9812,9 +9812,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
       '<msub><mover><mo>)</mo>' +
       '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
       '</msup></mpadded>',
-      '<superscript role="leftright" embellished="8" id="10">' +
+      '<superscript role="leftright" fencepointer="8" id="10">' +
       '<children>' +
-      '<subscript role="leftright" embellished="4" id="6">' +
+      '<subscript role="leftright" fencepointer="4" id="6">' +
       '<children>' +
       '<fenced role="leftright" id="11">' +
       '<content>' +
@@ -9848,9 +9848,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
       '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
       '</mover><mprescripts/><mn>4</mn>' +
       '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>',
-      '<tensor role="leftright" embellished="9" id="14">' +
+      '<tensor role="leftright" fencepointer="9" id="14">' +
       '<children>' +
-      '<tensor role="leftright" embellished="2" id="7">' +
+      '<tensor role="leftright" fencepointer="2" id="7">' +
       '<children>' +
       '<fenced role="leftright" id="17">' +
       '<content>' +
@@ -9890,11 +9890,11 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
       '</mmultiscripts><mo>~</mo></munder></mpadded>' +
       '<mi>x</mi><mpadded mathbrackground="red"><mover><msubsup><mo>)</mo>' +
       '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>',
-      '<superscript role="leftright" embellished="9" id="13">' +
+      '<superscript role="leftright" fencepointer="9" id="13">' +
       '<children>' +
-      '<subscript role="subsup" embellished="9" id="12">' +
+      '<subscript role="subsup" fencepointer="9" id="12">' +
       '<children>' +
-      '<tensor role="leftright" embellished="0" id="5">' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
       '<children>' +
       '<fenced role="leftright" id="16">' +
       '<content>' +

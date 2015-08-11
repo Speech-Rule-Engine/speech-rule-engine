@@ -146,10 +146,10 @@ sre.SemanticMathmlEmbellished.prototype.getFencesMml_ = function() {
   var ofenceIds = Object.keys(this.ofenceMap);
   var cfenceIds = Object.keys(this.cfenceMap);
   while ((!this.ofenceMml || !this.cfenceMml) && currentNode !== this.fenced) {
-    if (ofenceIds.indexOf(currentNode.embellished) !== -1 && !this.ofenceMml) {
+    if (ofenceIds.indexOf(currentNode.fencePointer) !== -1 && !this.ofenceMml) {
       this.ofenceMml = currentNode.mathmlTree;
     }
-    if (cfenceIds.indexOf(currentNode.embellished) !== -1 && !this.cfenceMml) {
+    if (cfenceIds.indexOf(currentNode.fencePointer) !== -1 && !this.cfenceMml) {
       this.cfenceMml = currentNode.mathmlTree;
     }
     currentNode = currentNode.childNodes[0];
