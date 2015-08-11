@@ -83,13 +83,6 @@ sre.SemanticMathmlEmbellished = function(node) {
   this.cfenceMap = {};
 
   /**
-   * Maps outer nodes of to their MathML counter part.
-   * @type {!Object.<number, Element>}
-   */
-  this.outerMap = {};
-
-
-  /**
    * List of elements that need to get the parents reset.
    * @type {!Array.<Element>}
    */
@@ -118,10 +111,8 @@ sre.SemanticMathmlEmbellished.prototype.getMathml = function() {
 sre.SemanticMathmlEmbellished.prototype.getFenced_ = function() {
   var currentNode = this.node;
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
-    this.outerMap[currentNode.id] = currentNode.mathmlTree;
     currentNode = currentNode.childNodes[0];
   }
-  delete this.outerMap[currentNode.id];
   this.fenced = currentNode.childNodes[0];
   this.ofence = currentNode.contentNodes[0];
   this.cfence = currentNode.contentNodes[1];
@@ -192,7 +183,7 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
       newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
 
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
-    var mml = /** @type {!Element} */(this.outerMap[currentNode.id]);
+    var mml = /** @type {!Element} */(currentNode.mathmlTree);
     var specialCase = this.specialCase_(currentNode, mml);
     if (specialCase) {
       currentNode = specialCase;
@@ -228,7 +219,7 @@ sre.SemanticMathmlEmbellished.prototype.rewrite_ = function() {
   sre.SemanticMathml.walkTree(
       /** @type {!sre.SemanticTree.Node} */(this.cfence));
 
-  this.cleanupParents();
+  this.cleanupParents_();
   return result || newNode;
 };
 
@@ -312,8 +303,9 @@ sre.SemanticMathmlEmbellished.prototype.introduceNewLayer_ = function() {
  * Sets the correct parent pointer for MathML nodes treated and collated in the
  * special cases. In particular we set the parent of the first child of a node
  * to the parent of the remaining children.
+ * @private
  */
-sre.SemanticMathmlEmbellished.prototype.cleanupParents = function() {
+sre.SemanticMathmlEmbellished.prototype.cleanupParents_ = function() {
   this.parentCleanup.forEach(function(x) {
     var parent = x.childNodes[1].getAttribute(
         sre.SemanticMathml.Attribute.PARENT);
