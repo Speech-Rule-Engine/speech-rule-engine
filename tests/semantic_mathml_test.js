@@ -111,7 +111,7 @@ sre.SemanticMathmlTest.prototype.tearDownTest = function() {
  * @param {string} smml MathML expression with the semantic information.
  */
 sre.SemanticMathmlTest.prototype.htmlOutput = function(mml, smml) {
-  this.examples.push(mml);
+  this.examples.push(mml.replace(/(['"])/g, '\\\''));
 };
 
 
@@ -9022,6 +9022,418 @@ sre.SemanticMathmlTest.prototype.testStreeComplexEmbellishment = function() {
       '<mo type="operator" role="addition" id="4" parent="6">+</mo>' +
       '<mn type="number" role="integer" id="5" parent="6">3</mn>' +
       '</msub>' +
+      '</math>'
+  );
+};
+
+
+// Embellished Fences
+/**
+ * Expressions with embellished fences right.
+ */
+sre.SemanticMathmlTest.prototype.testStreeEmbellishedRightFence = function() {
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="leftright" id="4" children="5,3" parent="5">' +
+      '<mrow type="fenced" role="leftright" id="5" children="1" content="0,2" parent="4">' +
+      '<mo type="fence" role="open" id="0" parent="5">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="3" parent="4">4</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup>' +
+      '<mn>2</mn></msub>',
+      '<math>' +
+      '<msub type="subscript" role="leftright" id="6" children="4,5" parent="7">' +
+      '<msup type="superscript" role="leftright" id="4" children="7,3">' +
+      '<mrow type="fenced" role="leftright" id="7" children="1" content="0,2" parent="4">' +
+      '<mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="3" parent="4">4</mn>' +
+      '</msup>' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</msub>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>',
+      '<math>' +
+      '<msubsup type="subsup" role="leftright" id="6" children="7,3,4" parent="7" collapsed="(6 (5 7 3) 4)">' +
+      '<mrow type="fenced" role="leftright" id="7" children="1" content="0,2" parent="6">' +
+      '<mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="3" parent="6">4</mn>' +
+      '<mn type="number" role="integer" id="4" parent="6">2</mn>' +
+      '</msubsup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn>' +
+      '</mmultiscripts>',
+      '<math>' +
+      '<mmultiscripts type="subsup" role="leftright" id="6" children="7,3,4" parent="7" collapsed="(6 (5 7 3) 4)">' +
+      '<mrow type="fenced" role="leftright" id="7" children="1" content="0,2" parent="6">' +
+      '<mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="3" parent="6">4</mn>' +
+      '<mn type="number" role="integer" id="4" parent="6">2</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo>' +
+      '</mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="leftright" id="10" children="6,9" parent="11">' +
+      '<msub type="subscript" role="leftright" id="6" children="11,5" parent="10">' +
+      '<mrow type="fenced" role="leftright" id="11" children="1" content="0,8" parent="6">' +
+      '<mo type="fence" role="open" id="0" parent="11">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="11">x</mi>' +
+      '<munder type="underscore" role="close" id="8" children="4,7">' +
+      '<mover type="overscore" role="close" id="4" children="2,3" parent="8">' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '<mo type="operator" role="overaccent" id="3" parent="4">^</mo>' +
+      '</mover>' +
+      '<mo type="relation" role="underaccent" id="7" parent="8">~</mo>' +
+      '</munder>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</msub>' +
+      '<mn type="number" role="integer" id="9" parent="10">1</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo>' +
+      '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
+      '</msup></mpadded>',
+      '<math>' +
+      '<msup type="superscript" role="leftright" id="10" children="6,9" parent="11">' +
+      '<msub type="subscript" role="leftright" id="6" children="11,5" parent="10">' +
+      '<mrow type="fenced" role="leftright" id="11" children="1" content="0,8" parent="6">' +
+      '<mo type="fence" role="open" id="0" parent="11">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="11">x</mi>' +
+      '<mpadded>' +
+      '<munder type="underscore" role="close" id="8" children="4,7">' +
+      '<mover type="overscore" role="close" id="4" children="2,3" parent="8">' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '<mo type="operator" role="overaccent" id="3" parent="4">^</mo>' +
+      '</mover>' +
+      '<mo type="relation" role="underaccent" id="7" parent="8">~</mo>' +
+      '</munder>' +
+      '</mpadded>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</msub>' +
+      '<mn type="number" role="integer" id="9" parent="10">3</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences left.
+ */
+sre.SemanticMathmlTest.prototype.testStreeEmbellishedLeftFence = function() {
+  this.executeMathmlTest(
+      '<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>',
+      '<math type="punctuated" role="sequence" id="5" children="2,3,4" content="2,4">' +
+      '<msup type="superscript" role="openfence" id="2" children="0,1" parent="5" operator="punctuated">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="2">(</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">4</mn>' +
+      '</msup>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '<mo type="punctuation" role="closefence" id="4" parent="5" operator="punctuated">)</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<math type="punctuated" role="sequence" id="5" children="2,3,4" content="2,4">' +
+      '<mmultiscripts type="subscript" role="openfence" id="2" children="0,1" parent="5" operator="punctuated">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="2">(</mo>' +
+      '<mn type="number" role="integer" id="1" parent="2">4</mn>' +
+      '</mmultiscripts>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="5">x</mi>' +
+      '<mo type="punctuation" role="closefence" id="4" parent="5" operator="punctuated">)</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><mo>)</mo>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="leftright" id="5" children="8,1,2,3,4" parent="8">' +
+      '<mrow type="fenced" role="leftright" id="8" children="6" content="0,7" parent="5">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="7" parent="8">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="leftright" id="5" children="8,1,2,3,4" parent="8">' +
+      '<mrow type="fenced" role="leftright" id="8" children="6" content="0,7" parent="5">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="7" parent="8">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<math type="punctuated" role="sequence" id="8" children="5,6,7" content="5,7">' +
+      '<mmultiscripts type="tensor" role="openfence" id="5" children="0,1,2,3,4" parent="8" operator="punctuated">' +
+      '<mo type="punctuation" role="openfence" id="0" parent="5">(</mo>' +
+      '<mn type="number" role="rightsub" id="3" parent="5">2</mn>' +
+      '<none type="empty" role="rightsuper" id="4" parent="5" added="true"/>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="8">x</mi>' +
+      '<mo type="punctuation" role="closefence" id="7" parent="8" operator="punctuated">)</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="leftright" id="7" children="10,3,4,5,6" parent="10">' +
+      '<mrow type="fenced" role="leftright" id="10" children="8" content="2,9" parent="7">' +
+      '<munder type="underscore" role="open" id="2" children="0,1">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="2">~</mo>' +
+      '</munder>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="10">x</mi>' +
+      '<mo type="fence" role="close" id="9" parent="10">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="3" parent="7">4</mn>' +
+      '<mn type="number" role="leftsuper" id="4" parent="7">3</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="leftright" id="14" children="7,10,11,12,13" parent="17">' +
+      '<mmultiscripts type="tensor" role="leftright" id="7" children="17,3,4,5,6" parent="14">' +
+      '<mrow type="fenced" role="leftright" id="17" children="15" content="9,16" parent="7">' +
+      '<mover type="overscore" role="open" id="9" children="2,8">' +
+      '<munder type="underscore" role="open" id="2" children="0,1" parent="9">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="2">~</mo>' +
+      '</munder>' +
+      '<mo type="operator" role="overaccent" id="8" parent="9">^</mo>' +
+      '</mover>' +
+      '<mi type="identifier" role="latinletter" id="15" parent="17">x</mi>' +
+      '<mo type="fence" role="close" id="16" parent="17">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<none type="empty" role="leftsub" id="3" parent="7"/>' +
+      '<mn type="number" role="leftsuper" id="4" parent="7">3</mn>' +
+      '</mmultiscripts>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="10" parent="14">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences on both sides.
+ */
+sre.SemanticMathmlTest.prototype.testStreeEmbellishedBothFences = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="leftright" id="9" children="5,8" parent="10">' +
+      '<mmultiscripts type="tensor" role="leftright" id="5" children="10,1,2,3,4" parent="9">' +
+      '<mrow type="fenced" role="leftright" id="10" children="6" content="0,7" parent="5">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="10">x</mi>' +
+      '<mo type="fence" role="close" id="7">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
+      '<mn>2</mn></msubsup>',
+      '<math>' +
+      '<msubsup type="subsup" role="leftright" id="11" children="5,8,9" parent="12" collapsed="(11 (10 5 8) 9)">' +
+      '<mmultiscripts type="tensor" role="leftright" id="5" children="12,1,2,3,4" parent="11">' +
+      '<mrow type="fenced" role="leftright" id="12" children="6" content="0,7" parent="5">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="12">x</mi>' +
+      '<mo type="fence" role="close" id="7">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="8" parent="11">1</mn>' +
+      '<mn type="number" role="integer" id="9" parent="11">2</mn>' +
+      '</msubsup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder>' +
+      '<mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn>' +
+      '</msubsup><mo>^</mo></mover>',
+      '<math>' +
+      '<msubsup type="subsup" role="leftright" id="13" children="5,10,11" collapsed="(13 (12 5 10) 11)">' +
+      '<mmultiscripts type="tensor" role="leftright" id="5" children="16,1,2,3,4" parent="13">' +
+      '<mrow type="fenced" role="leftright" id="16" children="8" content="7,15" parent="5">' +
+      '<munder type="underscore" role="open" id="7" children="0,6" parent="16">' +
+      '<mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mo type="relation" role="underaccent" id="6" parent="7">~</mo>' +
+      '</munder>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="16">x</mi>' +
+      '<mover type="overscore" role="close" id="15" children="9,14" parent="16">' +
+      '<mo type="fence" role="close" id="9" parent="15">)</mo>' +
+      '<mo type="operator" role="overaccent" id="14" parent="15">^</mo>' +
+      '</mover>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="10" parent="13">1</mn>' +
+      '<mn type="number" role="integer" id="11" parent="13">2</mn>' +
+      '</msubsup>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with padded background.
+ */
+sre.SemanticMathmlTest.prototype.testStreeEmbellishedPaddedFences = function() {
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><mpadded mathbackground="red"><msup><munder>' +
+      '<msub><mover><mo>)</mo>' +
+      '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
+      '</msup></mpadded>',
+      '<math>' +
+      '<msup type="superscript" role="leftright" id="10" children="6,9" parent="11">' +
+      '<msub type="subscript" role="leftright" id="6" children="11,5" parent="10">' +
+      '<mrow type="fenced" role="leftright" id="11" children="1" content="0,8" parent="6">' +
+      '<mo type="fence" role="open" id="0" parent="11">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="11">x</mi>' +
+      '<mpadded mathbackground="red">' +
+      '<munder type="underscore" role="close" id="8" children="4,7">' +
+      '<mover type="overscore" role="close" id="4" children="2,3" parent="8">' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '<mo type="operator" role="overaccent" id="3" parent="4">^</mo>' +
+      '</mover>' +
+      '<mo type="relation" role="underaccent" id="7" parent="8">~</mo>' +
+      '</munder>' +
+      '</mpadded>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="5" parent="6">2</mn>' +
+      '</msub>' +
+      '<mn type="number" role="integer" id="9" parent="10">3</mn>' +
+      '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mpadded mathbackground="red"><mmultiscripts><mover><mmultiscripts>' +
+      '<munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>',
+      '<math>' +
+      '<mmultiscripts type="tensor" role="leftright" id="14" children="7,10,11,12,13" parent="17">' +
+      '<mmultiscripts type="tensor" role="leftright" id="7" children="17,3,4,5,6" parent="14">' +
+      '<mrow type="fenced" role="leftright" id="17" children="15" content="9,16" parent="7">' +
+      '<mpadded mathbackground="red">' +
+      '<mover type="overscore" role="open" id="9" children="2,8">' +
+      '<munder type="underscore" role="open" id="2" children="0,1" parent="9">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="2">~</mo>' +
+      '</munder>' +
+      '<mo type="operator" role="overaccent" id="8" parent="9">^</mo>' +
+      '</mover>' +
+      '</mpadded>' +
+      '<mi type="identifier" role="latinletter" id="15" parent="17">x</mi>' +
+      '<mo type="fence" role="close" id="16" parent="17">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<none type="empty" role="leftsub" id="3" parent="7"/>' +
+      '<mn type="number" role="leftsuper" id="4" parent="7">3</mn>' +
+      '</mmultiscripts>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="10" parent="14">4</mn>' +
+      '</mmultiscripts>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder></mpadded>' +
+      '<mi>x</mi><mpadded mathbrackground="red"><mover><msubsup><mo>)</mo>' +
+      '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>',
+      '<math>' +
+      '<msubsup type="subsup" role="leftright" id="13" children="5,10,11" collapsed="(13 (12 5 10) 11)">' +
+      '<mmultiscripts type="tensor" role="leftright" id="5" children="16,1,2,3,4" parent="13">' +
+      '<mrow type="fenced" role="leftright" id="16" children="8" content="7,15" parent="5">' +
+      '<mpadded mathbackground="blue">' +
+      '<munder type="underscore" role="open" id="7" children="0,6" parent="16">' +
+      '<mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mo type="relation" role="underaccent" id="6" parent="7">~</mo>' +
+      '</munder>' +
+      '</mpadded>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="16">x</mi>' +
+      '<mpadded mathbrackground="red">' +
+      '<mover type="overscore" role="close" id="15" children="9,14" parent="16">' +
+      '<mo type="fence" role="close" id="9" parent="15">)</mo>' +
+      '<mo type="operator" role="overaccent" id="14" parent="15">^</mo>' +
+      '</mover>' +
+      '</mpadded>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="10" parent="13">1</mn>' +
+      '<mn type="number" role="integer" id="11" parent="13">2</mn>' +
+      '</msubsup>' +
       '</math>'
   );
 };

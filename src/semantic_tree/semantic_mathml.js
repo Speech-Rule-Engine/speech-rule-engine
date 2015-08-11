@@ -1057,7 +1057,6 @@ sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
 sre.SemanticMathml.embellishedCase_ = function(semantic) {
   if (!sre.SemanticMathml.currentEmbellished &&
       semantic.embellished && !isNaN(Number(semantic.embellished))) {
-    console.log('Embellished case');
     sre.SemanticMathml.currentEmbellished =
         new sre.SemanticMathmlEmbellished(semantic);
     var mml = sre.SemanticMathml.currentEmbellished.getMathml();

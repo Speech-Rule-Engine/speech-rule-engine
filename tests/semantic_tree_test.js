@@ -9337,3 +9337,595 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
       '</postfixop>'
   );
 };
+
+
+// Embellished Fences
+/**
+ * Expressions with embellished fences right.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>',
+      '<superscript role="leftright" embellished="2" id="4">' +
+      '<children>' +
+      '<fenced role="leftright" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup>' +
+      '<mn>2</mn></msub>',
+      '<subscript role="leftright" embellished="2" id="6">' +
+      '<children>' +
+      '<superscript role="leftright" embellished="2" id="4">' +
+      '<children>' +
+      '<fenced role="leftright" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>',
+      '<superscript role="leftright" embellished="2" id="6">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="2" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn>' +
+      '</mmultiscripts>',
+      '<superscript role="leftright" embellished="2" id="6">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="2" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo>' +
+      '</mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>',
+      '<superscript role="leftright" embellished="8" id="10">' +
+      '<children>' +
+      '<subscript role="leftright" embellished="4" id="6">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<underscore role="close" embellished="fence" id="8">' +
+      '<children>' +
+      '<overscore role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<fence role="close" id="2">)</fence>' +
+      '<operator role="overaccent" id="3">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<relation role="underaccent" id="7">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">1</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo>' +
+      '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
+      '</msup></mpadded>',
+      '<superscript role="leftright" embellished="8" id="10">' +
+      '<children>' +
+      '<subscript role="leftright" embellished="4" id="6">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<underscore role="close" embellished="fence" id="8">' +
+      '<children>' +
+      '<overscore role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<fence role="close" id="2">)</fence>' +
+      '<operator role="overaccent" id="3">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<relation role="underaccent" id="7">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences left.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedLeftFence = function() {
+  this.executeTreeTest(
+      '<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>',
+      '<punctuated role="sequence" id="5">' +
+      '<content>' +
+      '<superscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<superscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<punctuated role="sequence" id="5">' +
+      '<content>' +
+      '<subscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" embellished="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="8">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<empty role="leftsuper" id="2"/>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" embellished="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="8">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<punctuated role="sequence" id="8">' +
+      '<content>' +
+      '<tensor role="openfence" embellished="punctuation" id="5">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<number role="rightsub" font="normal" id="3">2</number>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<punctuation role="closefence" id="7">)</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<tensor role="openfence" embellished="punctuation" id="5">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<number role="rightsub" font="normal" id="3">2</number>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '<punctuation role="closefence" id="7">)</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" embellished="2" id="7">' +
+      '<children>' +
+      '<fenced role="leftright" id="10">' +
+      '<content>' +
+      '<underscore role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="1">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<fence role="close" id="9">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="3">4</number>' +
+      '<number role="leftsuper" font="normal" id="4">3</number>' +
+      '<empty role="rightsub" id="5"/>' +
+      '<empty role="rightsuper" id="6"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" embellished="9" id="14">' +
+      '<children>' +
+      '<tensor role="leftright" embellished="2" id="7">' +
+      '<children>' +
+      '<fenced role="leftright" id="17">' +
+      '<content>' +
+      '<overscore role="open" embellished="fence" id="9">' +
+      '<children>' +
+      '<underscore role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="1">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<operator role="overaccent" id="8">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<fence role="close" id="16">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="15">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<empty role="leftsub" id="3"/>' +
+      '<number role="leftsuper" font="normal" id="4">3</number>' +
+      '<empty role="rightsub" id="5"/>' +
+      '<empty role="rightsuper" id="6"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="leftsub" font="normal" id="10">4</number>' +
+      '<empty role="leftsuper" id="11"/>' +
+      '<empty role="rightsub" id="12"/>' +
+      '<empty role="rightsuper" id="13"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences on both sides.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedBothFences = function() {
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>',
+      '<superscript role="leftright" embellished="7" id="9">' +
+      '<children>' +
+      '<tensor role="leftright" embellished="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="10">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<empty role="leftsuper" id="2"/>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="8">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
+      '<mn>2</mn></msubsup>',
+      '<superscript role="leftright" embellished="7" id="11">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="7" id="10">' +
+      '<children>' +
+      '<tensor role="leftright" embellished="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="12">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="8">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder>' +
+      '<mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn>' +
+      '</msubsup><mo>^</mo></mover>',
+      '<superscript role="leftright" embellished="9" id="13">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="9" id="12">' +
+      '<children>' +
+      '<tensor role="leftright" embellished="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="16">' +
+      '<content>' +
+      '<underscore role="open" embellished="fence" id="7">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="6">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<overscore role="close" embellished="fence" id="15">' +
+      '<children>' +
+      '<fence role="close" id="9">)</fence>' +
+      '<operator role="overaccent" id="14">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="10">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="11">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Expressions with padded background.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><mpadded mathbackground="red"><msup><munder>' +
+      '<msub><mover><mo>)</mo>' +
+      '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
+      '</msup></mpadded>',
+      '<superscript role="leftright" embellished="8" id="10">' +
+      '<children>' +
+      '<subscript role="leftright" embellished="4" id="6">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<underscore role="close" embellished="fence" id="8">' +
+      '<children>' +
+      '<overscore role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<fence role="close" id="2">)</fence>' +
+      '<operator role="overaccent" id="3">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<relation role="underaccent" id="7">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mpadded mathbackground="red"><mmultiscripts><mover><mmultiscripts>' +
+      '<munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" embellished="9" id="14">' +
+      '<children>' +
+      '<tensor role="leftright" embellished="2" id="7">' +
+      '<children>' +
+      '<fenced role="leftright" id="17">' +
+      '<content>' +
+      '<overscore role="open" embellished="fence" id="9">' +
+      '<children>' +
+      '<underscore role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="1">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<operator role="overaccent" id="8">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<fence role="close" id="16">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="15">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<empty role="leftsub" id="3"/>' +
+      '<number role="leftsuper" font="normal" id="4">3</number>' +
+      '<empty role="rightsub" id="5"/>' +
+      '<empty role="rightsuper" id="6"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="leftsub" font="normal" id="10">4</number>' +
+      '<empty role="leftsuper" id="11"/>' +
+      '<empty role="rightsub" id="12"/>' +
+      '<empty role="rightsuper" id="13"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder></mpadded>' +
+      '<mi>x</mi><mpadded mathbrackground="red"><mover><msubsup><mo>)</mo>' +
+      '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>',
+      '<superscript role="leftright" embellished="9" id="13">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="9" id="12">' +
+      '<children>' +
+      '<tensor role="leftright" embellished="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="16">' +
+      '<content>' +
+      '<underscore role="open" embellished="fence" id="7">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="6">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<overscore role="close" embellished="fence" id="15">' +
+      '<children>' +
+      '<fence role="close" id="9">)</fence>' +
+      '<operator role="overaccent" id="14">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="10">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="11">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
