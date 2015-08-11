@@ -477,12 +477,12 @@ sre.EnrichMathml.parentNode_ = function(element) {
  * @private
  */
 sre.EnrichMathml.specialCase_ = function(semantic) {
+  if (!semantic.mathmlTree) {
+    return null;
+  }
   var embellishedCase = sre.EnrichCaseFactory.getCase(semantic);
   if (embellishedCase) {
     return embellishedCase.getMathml();
-  }
-  if (!semantic.mathmlTree) {
-    return null;
   }
   var mml = semantic.mathmlTree;
   var mmlTag = sre.SemanticUtil.tagName(mml);
