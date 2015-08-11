@@ -144,20 +144,15 @@ sre.SemanticMathml.enrich = function(mml, semantic) {
  * @return {!Element} The enriched MathML element.
  */
 sre.SemanticMathml.walkTree = function(semantic) {
-  var newNode = sre.SemanticMathml.embellishedCase_(semantic);
+  var newNode = sre.SemanticMathml.specialCase_(semantic);
   if (newNode) {
-    return newNode;
+    return sre.SemanticMathml.ascendNewNode(newNode);
   }
 
   if (semantic.mathml.length === 1) {
     sre.Debugger.getInstance().output('Walktree Case 0');
     newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.SemanticMathml.setAttributes(newNode, semantic);
-    return sre.SemanticMathml.ascendNewNode(newNode);
-  }
-
-  newNode = sre.SemanticMathml.specialCase_(semantic);
-  if (newNode) {
     return sre.SemanticMathml.ascendNewNode(newNode);
   }
 
@@ -482,6 +477,9 @@ sre.SemanticMathml.parentNode_ = function(element) {
  * @private
  */
 sre.SemanticMathml.specialCase_ = function(semantic) {
+  if (semantic.embellished && !isNaN(Number(semantic.embellished))) {
+    return (new sre.SemanticMathmlEmbellished(semantic)).getMathml();
+  }
   if (!semantic.mathmlTree) {
     return null;
   }
@@ -1044,26 +1042,6 @@ sre.SemanticMathml.interleaveLists_ = function(list1, list2) {
     list2.length && result.push(list2.shift());
   }
   return result;
-};
-
-
-/**
- * Dealing with the special case of rewritten embellished fences.
- * @param {!sre.SemanticTree.Node} semantic The semantic node.
- * @return {Element} The enriched MathML node if the node is an embellished
- *     fenced node.
- * @private
- */
-sre.SemanticMathml.embellishedCase_ = function(semantic) {
-  if (!sre.SemanticMathml.currentEmbellished &&
-      semantic.embellished && !isNaN(Number(semantic.embellished))) {
-    sre.SemanticMathml.currentEmbellished =
-        new sre.SemanticMathmlEmbellished(semantic);
-    var mml = sre.SemanticMathml.currentEmbellished.getMathml();
-    sre.SemanticMathml.currentEmbellished = null;
-    return mml;
-  }
-  return null;
 };
 
 
