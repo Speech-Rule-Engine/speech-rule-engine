@@ -26,8 +26,8 @@ goog.provide('sre.Semantic.Type');
 
 goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticMathml');
-goog.require('sre.SemanticMathmlEmbellished');
+goog.require('sre.EnrichMathml');
+goog.require('sre.EnrichEmbellished');
 goog.require('sre.SemanticTree');
 
 
@@ -91,7 +91,7 @@ sre.Semantic.enrichMathml = function(expr) {
 sre.Semantic.annotateMathml = function(mml) {
   var clone = mml.cloneNode(true);
   var tree = new sre.SemanticTree(clone);
-  return sre.SemanticMathml.enrich(clone, tree);
+  return sre.EnrichMathml.enrich(clone, tree);
 };
 
 

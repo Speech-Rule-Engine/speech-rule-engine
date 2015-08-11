@@ -18,18 +18,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticMathmlAbstractCase');
+goog.provide('sre.EnrichAbstractCase');
 
-goog.require('sre.SemanticMathmlCase');
+goog.require('sre.EnrichCase');
 
 
 
 /**
  * @constructor
- * @implements {sre.SemanticMathmlCase}
+ * @implements {sre.EnrichCase}
  * @override
  */
-sre.SemanticMathmlAbstractCase = function(node) {
+sre.EnrichAbstractCase = function(node) {
 
   /**
    * @type {!sre.SemanticTree.Node}
@@ -42,4 +42,4 @@ sre.SemanticMathmlAbstractCase = function(node) {
 /**
  * @override
  */
-sre.SemanticMathmlAbstractCase.prototype.getMathml = goog.abstractMethod;
+sre.EnrichAbstractCase.prototype.getMathml = goog.abstractMethod;

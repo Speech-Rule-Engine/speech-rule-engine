@@ -23,7 +23,7 @@ goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakEmbellishTest');
 goog.require('sre.MathspeakRuleTest');
-goog.require('sre.SemanticMathmlTest');
+goog.require('sre.EnrichMathmlTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
@@ -63,7 +63,7 @@ sre.Tests.testList = [
   // sre.MathmlStoreTest,
   // sre.MathspeakEmbellishTest,
   // sre.MathspeakRuleTest,
-  sre.SemanticMathmlTest,
+  sre.EnrichMathmlTest,
   // sre.SemanticRuleTest,
   sre.SemanticTreeTest
   // sre.SpeechRuleTest

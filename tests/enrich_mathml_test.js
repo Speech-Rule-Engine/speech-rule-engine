@@ -17,7 +17,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticMathmlTest');
+goog.provide('sre.EnrichMathmlTest');
 
 goog.require('sre.AbstractTest');
 goog.require('sre.Semantic');
@@ -28,7 +28,7 @@ goog.require('sre.Semantic');
  * @constructor
  * @extends {sre.AbstractTest}
  */
-sre.SemanticMathmlTest = function() {
+sre.EnrichMathmlTest = function() {
   goog.base(this);
 
   /**
@@ -40,7 +40,7 @@ sre.SemanticMathmlTest = function() {
    * Sets example output file for tests.
    * @type {!string}
    */
-  this.exampleFile = sre.SemanticMathmlTest.HTML_OUTPUT + '.js';
+  this.exampleFile = sre.EnrichMathmlTest.HTML_OUTPUT + '.js';
 
   /**
    * Possible file error.
@@ -53,7 +53,7 @@ sre.SemanticMathmlTest = function() {
    */
   this.examples = [];
 };
-goog.inherits(sre.SemanticMathmlTest, sre.AbstractTest);
+goog.inherits(sre.EnrichMathmlTest, sre.AbstractTest);
 
 
 /**
@@ -61,17 +61,17 @@ goog.inherits(sre.SemanticMathmlTest, sre.AbstractTest);
  * @type {string}
  * @const
  */
-sre.SemanticMathmlTest.HTML_OUTPUT = 'tests';
+sre.EnrichMathmlTest.HTML_OUTPUT = 'tests';
 
 
 /**
  * @override
  */
-sre.SemanticMathmlTest.prototype.setUpTest = function() {
+sre.EnrichMathmlTest.prototype.setUpTest = function() {
   try {
     sre.SystemExternal.fs.openSync(this.exampleFile, 'w+');
   } catch (err) {
-    this.fileError = 'Bad file name ' + sre.SemanticMathmlTest.HTML_OUTPUT;
+    this.fileError = 'Bad file name ' + sre.EnrichMathmlTest.HTML_OUTPUT;
   }
 };
 
@@ -80,7 +80,7 @@ sre.SemanticMathmlTest.prototype.setUpTest = function() {
  * Appends a string to the HTML file if it exists.
  * @param {string} output The output string.
  */
-sre.SemanticMathmlTest.prototype.appendToFile = function(output) {
+sre.EnrichMathmlTest.prototype.appendToFile = function(output) {
   // TODO (sorge) Rewrite this asynchronously.
   if (!this.fileError) {
     try {
@@ -97,7 +97,7 @@ sre.SemanticMathmlTest.prototype.appendToFile = function(output) {
 /**
  * @override
  */
-sre.SemanticMathmlTest.prototype.tearDownTest = function() {
+sre.EnrichMathmlTest.prototype.tearDownTest = function() {
   this.appendToFile('');
   if (this.fileError) {
     throw new sre.System.Error(this.fileError);
@@ -110,7 +110,7 @@ sre.SemanticMathmlTest.prototype.tearDownTest = function() {
  * @param {string} mml MathML expression.
  * @param {string} smml MathML expression with the semantic information.
  */
-sre.SemanticMathmlTest.prototype.htmlOutput = function(mml, smml) {
+sre.EnrichMathmlTest.prototype.htmlOutput = function(mml, smml) {
   this.examples.push(mml.replace(/(['"])/g, '\\\''));
 };
 
@@ -120,7 +120,7 @@ sre.SemanticMathmlTest.prototype.htmlOutput = function(mml, smml) {
  * @param {string} mml MathML expression.
  * @param {string} smml MathML snippet for the semantic information.
  */
-sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
+sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var mathMl = '<math>' + mml + '</math>';
   this.htmlOutput(mathMl, smml);
   var node = sre.Semantic.enrichMathml(mathMl);
@@ -128,7 +128,7 @@ sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   this.assert.equal(
-      sre.SemanticMathml.removeAttributePrefix(xmls.serializeToString(node)),
+      sre.EnrichMathml.removeAttributePrefix(xmls.serializeToString(node)),
       xmls.serializeToString(xml));
 };
 
@@ -137,7 +137,7 @@ sre.SemanticMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
 /**
  * Test for empty wrapping elements.
  */
-sre.SemanticMathmlTest.prototype.testMathmlWrappers = function() {
+sre.EnrichMathmlTest.prototype.testMathmlWrappers = function() {
   this.executeMathmlTest(
       '<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>',
       '<math type="infixop" role="implicit" id="3" children="0,1"' +
@@ -224,7 +224,7 @@ sre.SemanticMathmlTest.prototype.testMathmlWrappers = function() {
 /**
  * Test for sub super and subsuper scripts.
  */
-sre.SemanticMathmlTest.prototype.testMathmlScripts = function() {
+sre.EnrichMathmlTest.prototype.testMathmlScripts = function() {
   this.executeMathmlTest(
       '<msub><mi>a</mi><mi>b</mi></msub>',
       '<math>' +
@@ -336,7 +336,7 @@ sre.SemanticMathmlTest.prototype.testMathmlScripts = function() {
 /**
  * Test number representations.
  */
-sre.SemanticMathmlTest.prototype.testMathmlNumbers = function() {
+sre.EnrichMathmlTest.prototype.testMathmlNumbers = function() {
   this.executeMathmlTest(
       '<mn>2</mn>',
       '<math>' +
@@ -374,7 +374,7 @@ sre.SemanticMathmlTest.prototype.testMathmlNumbers = function() {
 /**
  * Test mixed number representations.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMixedNumbers = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMixedNumbers = function() {
   this.executeMathmlTest(
       '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>',
       '<math type="number" role="mixed" id="4" children="0,3">' +
@@ -466,7 +466,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedNumbers = function() {
 /**
  * Test relation trees.
  */
-sre.SemanticMathmlTest.prototype.testMathmlRelations = function() {
+sre.EnrichMathmlTest.prototype.testMathmlRelations = function() {
   this.executeMathmlTest(
       '<mo>=</mo>',
       '<math><mo type="relation" role="equality" id="0">=</mo></math>'
@@ -517,7 +517,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRelations = function() {
 /**
  * Test operator trees with pre- and postfixes.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
   // Pathological operator only case.
   this.executeMathmlTest(
       '<mo>+</mo><mo>-</mo><mo>+</mo>',
@@ -682,7 +682,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
 /**
  * Test operator trees with single operator.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSingleOperators = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSingleOperators = function() {
   // Single identifier.
   this.executeMathmlTest(
       '<mi>a</mi>',
@@ -766,7 +766,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSingleOperators = function() {
 /**
  * Test operator trees with multiple operators.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMultipleOperators = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMultipleOperators = function() {
   // Addition and subtraction.
   this.executeMathmlTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>-</mo><mi>c</mi><mo>+</mo><mi>d</mi>',
@@ -940,7 +940,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMultipleOperators = function() {
 /**
  * Test operator trees with multiplication operators.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMultiplicationOperators =
+sre.EnrichMathmlTest.prototype.testMathmlMultiplicationOperators =
     function() {
   // Addition and subtraction.
   this.executeMathmlTest(
@@ -1139,7 +1139,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMultiplicationOperators =
 /**
  * Test regular directed fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlRegularFences = function() {
+sre.EnrichMathmlTest.prototype.testMathmlRegularFences = function() {
   // No fence.
   this.executeMathmlTest(
       '<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>',
@@ -1429,7 +1429,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRegularFences = function() {
 /**
  * Test neutral fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlNeutralFences = function() {
+sre.EnrichMathmlTest.prototype.testMathmlNeutralFences = function() {
   // Empty bars.
   this.executeMathmlTest(
       '<mrow><mo>|</mo><mo>|</mo></mrow>',
@@ -1530,7 +1530,7 @@ sre.SemanticMathmlTest.prototype.testMathmlNeutralFences = function() {
 /**
  * Mixed neutral and regular fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMixedFences = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMixedFences = function() {
   // Empty parenthsis inside bars.
   this.executeMathmlTest(
       '<mrow><mo>|</mo><mo>(</mo><mo>)</mo><mo>|</mo></mrow>',
@@ -1711,7 +1711,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedFences = function() {
 /**
  * Mixed with isolated bars.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMixedFencesWithBars = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMixedFencesWithBars = function() {
   // Set notation.
   this.executeMathmlTest(
       '<mrow><mo>{</mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo>' +
@@ -1940,7 +1940,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedFencesWithBars = function() {
 /**
  * Pathological cases with only opening fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlOpeningFencesOnly = function() {
+sre.EnrichMathmlTest.prototype.testMathmlOpeningFencesOnly = function() {
   // Single.
   this.executeMathmlTest(
       '<mrow><mo>[</mo></mrow>',
@@ -2061,7 +2061,7 @@ sre.SemanticMathmlTest.prototype.testMathmlOpeningFencesOnly = function() {
 /**
  * Pathological cases with only closing fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlClosingFencesOnly = function() {
+sre.EnrichMathmlTest.prototype.testMathmlClosingFencesOnly = function() {
   // Single.
   this.executeMathmlTest(
       '<mrow><mo>]</mo></mrow>',
@@ -2177,7 +2177,7 @@ sre.SemanticMathmlTest.prototype.testMathmlClosingFencesOnly = function() {
 /**
  * Pathological cases with only neutral fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlNeutralFencesOnly = function() {
+sre.EnrichMathmlTest.prototype.testMathmlNeutralFencesOnly = function() {
   // Single.
   this.executeMathmlTest(
       '<mrow><mo>|</mo></mrow>',
@@ -2307,7 +2307,7 @@ sre.SemanticMathmlTest.prototype.testMathmlNeutralFencesOnly = function() {
 /**
  * Pathological cases with mixed fences.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
   // Close, );
   // Neutrals and close.
   this.executeMathmlTest(
@@ -2561,7 +2561,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
 /**
  * Square roots
  */
-sre.SemanticMathmlTest.prototype.testMathmlSquareRoots = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSquareRoots = function() {
   this.executeMathmlTest(
       '<msqrt></msqrt>',
       '<math>' +
@@ -2626,7 +2626,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSquareRoots = function() {
 /**
  * Regular roots
  */
-sre.SemanticMathmlTest.prototype.testMathmlRegularRoots = function() {
+sre.EnrichMathmlTest.prototype.testMathmlRegularRoots = function() {
   // Not sure if that makes even sense.
   // this.executeMathmlTest('<mroot></mroot>');
   this.executeMathmlTest(
@@ -2700,7 +2700,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRegularRoots = function() {
 /**
  * Mixed roots
  */
-sre.SemanticMathmlTest.prototype.testMathmlMixedRoots = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMixedRoots = function() {
   this.executeMathmlTest(
       '<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>',
       '<math>' +
@@ -2746,7 +2746,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMixedRoots = function() {
 /**
  * Simple function applications
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi></mrow>',
       '<math>' +
@@ -3046,7 +3046,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
 /**
  * Simple functions with surrounding operators.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
   this.executeMathmlTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>',
@@ -3303,7 +3303,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsWithOps = function() {
 /**
  * Multiple simple functions.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
   this.executeMathmlTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
@@ -3481,7 +3481,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsMulti = function() {
 /**
  * Nested simple functions.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
   this.executeMathmlTest(
       '<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>)</mo></mrow>',
@@ -3656,7 +3656,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsNested = function() {
 /**
  * Simple functions with explicit function application.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
   this.executeMathmlTest(
       '<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo>',
@@ -3836,7 +3836,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
 /**
  * Prefix function applications
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsSingle = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsSingle = function() {
   this.executeMathmlTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
       '<math>' +
@@ -4101,7 +4101,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsSingle = function() {
 /**
  * Prefix functions applications with surrounding operators.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsWithOps = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsWithOps = function() {
   this.executeMathmlTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>',
@@ -4366,7 +4366,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsWithOps = function() {
 /**
  * Multiple prefix function applications.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMulti = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsMulti = function() {
   this.executeMathmlTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
@@ -4546,7 +4546,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMulti = function() {
 /**
  * Prefix function applications with sub- and superscripts.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
   this.executeMathmlTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>',
@@ -4688,7 +4688,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
 /**
  * Prefix function applications with unfenced arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsUnfenced = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsUnfenced = function() {
   this.executeMathmlTest(
       '<mrow><mi>sin</mi><mi>x</mi></mrow>',
       '<math>' +
@@ -4858,7 +4858,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsUnfenced = function() {
  * Prefix function applications with unfenced arguments in an operator
  * expression.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsUnfencedOps = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsUnfencedOps = function() {
   this.executeMathmlTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>',
       '<math>' +
@@ -5054,7 +5054,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsUnfencedOps = function() {
 /**
  * Multiple prefix function applications with unfenced arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMultiUnfenced =
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsMultiUnfenced =
     function() {
   this.executeMathmlTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow>',
@@ -5177,7 +5177,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsMultiUnfenced =
  * Prefix function applications with sub- and superscripts and unfenced
  * arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
     function() {
   this.executeMathmlTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi></mrow>',
@@ -5306,7 +5306,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
 /**
  * Prefix functions without arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
   this.executeMathmlTest(
       '<mi>sin</mi>',
       '<math>' +
@@ -5391,7 +5391,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNoArgs = function() {
 /**
  * Nested prefix function applications, both with and without fenced arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNested = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsNested = function() {
   this.executeMathmlTest(
       '<mrow><mi>log</mi><mi>cos</mi><mi>x</mi></mrow>',
       '<math>' +
@@ -5511,7 +5511,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPrefixFuncsNested = function() {
  * Variations of matrices and their roles as determinants, square matrices or
  * rowvectors.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMatrices = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMatrices = function() {
   this.executeMathmlTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">A</mi>' +
       '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
@@ -5734,7 +5734,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatrices = function() {
  * Variations of vectors and their roles as determinants or binomial
  * coefficients.
  */
-sre.SemanticMathmlTest.prototype.testMathmlVectors = function() {
+sre.EnrichMathmlTest.prototype.testMathmlVectors = function() {
   this.executeMathmlTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">V</mi>' +
       '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
@@ -5870,7 +5870,7 @@ sre.SemanticMathmlTest.prototype.testMathmlVectors = function() {
  * Variations of tables representing case statements,
  * multiline equations and regular tables.
  */
-sre.SemanticMathmlTest.prototype.testMathmlTables = function() {
+sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
   this.executeMathmlTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
       '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
@@ -6173,7 +6173,7 @@ sre.SemanticMathmlTest.prototype.testMathmlTables = function() {
  * Tabular structures with fences that have are interspersed with ignored
  * elements, like merror.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
   this.executeMathmlTest(
       '<mi>A</mi><mo>=</mo><mrow><mpadded><mo>[</mo></mpadded><mrow>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
@@ -6369,7 +6369,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
 /**
  * Limit functions.
  */
-sre.SemanticMathmlTest.prototype.testMathmlLimitFunctions = function() {
+sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
   this.executeMathmlTest(
       '<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo>' +
       '<mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo></mrow>',
@@ -6669,7 +6669,7 @@ sre.SemanticMathmlTest.prototype.testMathmlLimitFunctions = function() {
 /**
  * Limit functions without arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlLimitFunctionsNoArgs = function() {
+sre.EnrichMathmlTest.prototype.testMathmlLimitFunctionsNoArgs = function() {
   this.executeMathmlTest(
       '<mi>liminf</mi>',
       '<math>' +
@@ -6717,7 +6717,7 @@ sre.SemanticMathmlTest.prototype.testMathmlLimitFunctionsNoArgs = function() {
 /**
  * Variations of big operators.
  */
-sre.SemanticMathmlTest.prototype.testMathmlBigOps = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBigOps = function() {
   this.executeMathmlTest(
       '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi>' +
@@ -6821,7 +6821,7 @@ sre.SemanticMathmlTest.prototype.testMathmlBigOps = function() {
 /**
  * Big operators without Arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
   this.brief = true;
   this.executeMathmlTest(
       '<mi>&#x2211;</mi>',
@@ -6973,7 +6973,7 @@ sre.SemanticMathmlTest.prototype.testMathmlBigOpsNoArgs = function() {
 /**
  * Variations of integrals.
  */
-sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
+sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
   this.executeMathmlTest(
       '<mi>&#x222B;</mi>',
       '<math>' +
@@ -7193,7 +7193,7 @@ sre.SemanticMathmlTest.prototype.testMathmlIntegrals = function() {
 /**
  * Translation of text elements.
  */
-sre.SemanticMathmlTest.prototype.testMathmlText = function() {
+sre.EnrichMathmlTest.prototype.testMathmlText = function() {
   this.executeMathmlTest(
       '<mtext>text only</mtext>',
       '<math>' +
@@ -7317,7 +7317,7 @@ sre.SemanticMathmlTest.prototype.testMathmlText = function() {
 /**
  * Translation of mfenced elements.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMfenced = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMfenced = function() {
   this.executeMathmlTest(
       '<mfenced open="[" close="]" separators="+ - ;"/>',
       '<math>' +
@@ -7859,7 +7859,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMfenced = function() {
 /**
  * Pathological multiscripts expressions that are actually empty.
  */
-sre.SemanticMathmlTest.prototype.testMathmlEmptyTensors = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmptyTensors = function() {
   this.executeMathmlTest(
       '<mmultiscripts></mmultiscripts>',
       '<math>' +
@@ -7937,7 +7937,7 @@ sre.SemanticMathmlTest.prototype.testMathmlEmptyTensors = function() {
 /**
  * Pathological multiscript expressions that are just the base element.
  */
-sre.SemanticMathmlTest.prototype.testMathmlBaseTensors = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBaseTensors = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi></mmultiscripts>',
       '<math>' +
@@ -8014,7 +8014,7 @@ sre.SemanticMathmlTest.prototype.testMathmlBaseTensors = function() {
  * Pathological multiscript expressions that are actually on right
  * sub/superscripts.
  */
-sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
+sre.EnrichMathmlTest.prototype.testMathmlRightScriptTensors = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>',
       '<math>' +
@@ -8142,7 +8142,7 @@ sre.SemanticMathmlTest.prototype.testMathmlRightScriptTensors = function() {
 /**
  * Simple multiscript expressions with some scripts on the left.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleTensors = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
@@ -8334,7 +8334,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleTensors = function() {
 /**
  * Complex multiscript expressions with some scripts on the left.
  */
-sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
+sre.EnrichMathmlTest.prototype.testMathmlComplexTensors = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>',
@@ -8467,7 +8467,7 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexTensors = function() {
  * Expressions containing pseudo unit children, i.e., children whose only
  * siblings are ignored nodes.
  */
-sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
+sre.EnrichMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
   this.executeMathmlTest(
       '<mi>a</mi><mspace/>',
       '<math>' +
@@ -8555,7 +8555,7 @@ sre.SemanticMathmlTest.prototype.testMathmlPseudoUnitChildren = function() {
 /**
  * Expressions with ignore tags, introducing a new mrow.
  */
-sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
+sre.EnrichMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
   this.executeMathmlTest(
       '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi>' +
       '<merror><mi>Y</mi></merror>',
@@ -8631,7 +8631,7 @@ sre.SemanticMathmlTest.prototype.testMathmlInterspersedIgnore = function() {
 /**
  * Expressions with over and under scores.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMunderOver = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMunderOver = function() {
   this.executeMathmlTest(
       '<munder><mo>&#x2192;</mo><mi>n</mi></munder>',
       '<math>' +
@@ -8669,7 +8669,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMunderOver = function() {
 /**
  * Simple embellished arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlSimpleEmbellishment = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSimpleEmbellishment = function() {
   this.brief = false;
   this.executeMathmlTest(
       '<msup><mi>\u222B</mi><mn>2</mn></msup>',
@@ -8731,7 +8731,7 @@ sre.SemanticMathmlTest.prototype.testMathmlSimpleEmbellishment = function() {
 /**
  * Multi embellished arguments.
  */
-sre.SemanticMathmlTest.prototype.testMathmlMultiEmbellishment = function() {
+sre.EnrichMathmlTest.prototype.testMathmlMultiEmbellishment = function() {
   this.brief = false;
   this.executeMathmlTest(
       '<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>',
@@ -8846,7 +8846,7 @@ sre.SemanticMathmlTest.prototype.testMathmlMultiEmbellishment = function() {
 /**
  * Expressions with embellished operators and relations.
  */
-sre.SemanticMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
+sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
   this.executeMathmlTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>2</mn></msub><mi>z</mi>',
@@ -9031,7 +9031,7 @@ sre.SemanticMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
 /**
  * Expressions with embellished fences right.
  */
-sre.SemanticMathmlTest.prototype.testMathmlEmbellishedRightFence = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellishedRightFence = function() {
   this.executeMathmlTest(
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>',
       '<math>' +
@@ -9160,7 +9160,7 @@ sre.SemanticMathmlTest.prototype.testMathmlEmbellishedRightFence = function() {
 /**
  * Expressions with embellished fences left.
  */
-sre.SemanticMathmlTest.prototype.testMathmlEmbellishedLeftFence = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellishedLeftFence = function() {
   this.executeMathmlTest(
       '<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>',
       '<math type="punctuated" role="sequence" id="5" children="2,3,4"' +
@@ -9303,7 +9303,7 @@ sre.SemanticMathmlTest.prototype.testMathmlEmbellishedLeftFence = function() {
 /**
  * Expressions with embellished fences on both sides.
  */
-sre.SemanticMathmlTest.prototype.testMathmlEmbellishedBothFences = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellishedBothFences = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
       '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>',
@@ -9388,7 +9388,7 @@ sre.SemanticMathmlTest.prototype.testMathmlEmbellishedBothFences = function() {
 /**
  * Expressions with padded background.
  */
-sre.SemanticMathmlTest.prototype.testMathmlEmbellishedPaddedFences =
+sre.EnrichMathmlTest.prototype.testMathmlEmbellishedPaddedFences =
     function() {
   this.executeMathmlTest(
       '<mo>(</mo><mi>x</mi><mpadded mathbackground="red"><msup><munder>' +

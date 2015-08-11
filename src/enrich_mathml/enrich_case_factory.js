@@ -17,30 +17,30 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticMathmlCases');
+goog.provide('sre.EnrichCaseFactory');
 
-goog.require('sre.SemanticMathmlAbstractCase');
-goog.require('sre.SemanticMathmlCase');
+goog.require('sre.EnrichAbstractCase');
+goog.require('sre.EnrichCase');
 
 
 
 /**
  * @namespace
  */
-sre.SemanticMathmlCases = function() {};
+sre.EnrichCaseFactory = function() {};
 
 
 /**
  * Returns the embellished case analysis.
  * @param {sre.SemanticTree.Node} node The semantic node.
- * @return {sre.SemanticMathmlCase} The case analysis.
+ * @return {sre.EnrichCase} The case analysis.
  */
-sre.SemanticMathmlCases.getEmbellishedCase = function(node) {
-  return new sre.SemanticMathmlCases.embellishedCase(node);
+sre.EnrichCaseFactory.getEmbellishedCase = function(node) {
+  return new sre.EnrichCaseFactory.embellishedCase(node);
 };
 
 
 /**
- * @type {function(new:sre.SemanticMathmlAbstractCase, sre.SemanticTree.Node)}
+ * @type {function(new:sre.EnrichAbstractCase, sre.SemanticTree.Node)}
  */
-sre.SemanticMathmlCases.embellishedCase;
+sre.EnrichCaseFactory.embellishedCase;

@@ -17,7 +17,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticMathmlCase');
+goog.provide('sre.EnrichCase');
 
 
 
@@ -25,11 +25,11 @@ goog.provide('sre.SemanticMathmlCase');
  * @interface
  * @param {!sre.SemanticTree.Node} node The semantic node that is enriched.
  */
-sre.SemanticMathmlCase = function(node) { };
+sre.EnrichCase = function(node) { };
 
 
 /**
  * Retrieves the MathML node that is the result of the computation.
  * @return {!Element} The enriched MathML node.
  */
-sre.SemanticMathmlCase.prototype.getMathml = function() { };
+sre.EnrichCase.prototype.getMathml = function() { };
