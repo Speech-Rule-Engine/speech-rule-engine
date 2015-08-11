@@ -9407,7 +9407,7 @@ sre.SemanticMathmlTest.prototype.testStreeEmbellishedPaddedFences = function() {
       '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
       '<mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mo>~</mo></munder></mpadded>' +
-      '<mi>x</mi><mpadded mathbrackground="red"><mover><msubsup><mo>)</mo>' +
+      '<mi>x</mi><mpadded mathbackground="red"><mover><msubsup><mo>)</mo>' +
       '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>',
       '<math>' +
       '<msubsup type="subsup" role="leftright" id="13" children="5,10,11" collapsed="(13 (12 5 10) 11)">' +
@@ -9420,7 +9420,7 @@ sre.SemanticMathmlTest.prototype.testStreeEmbellishedPaddedFences = function() {
       '</munder>' +
       '</mpadded>' +
       '<mi type="identifier" role="latinletter" id="8" parent="16">x</mi>' +
-      '<mpadded mathbrackground="red">' +
+      '<mpadded mathbackground="red">' +
       '<mover type="overscore" role="close" id="15" children="9,14" parent="16">' +
       '<mo type="fence" role="close" id="9" parent="15">)</mo>' +
       '<mo type="operator" role="overaccent" id="14" parent="15">^</mo>' +
