@@ -20,7 +20,7 @@
 
 goog.provide('sre.CaseMultiscripts');
 
-goog.require('sre.AbstractEnrichCase');
+goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree.Node');
@@ -29,20 +29,14 @@ goog.require('sre.SemanticTree.Node');
 
 /**
  * @constructor
- * @extends {sre.AbstractEnrichCase}
+ * @extends {sre.CaseMultiindex}
  * @override
  * @final
  */
 sre.CaseMultiscripts = function(semantic) {
   goog.base(this, semantic);
-
-  /**
-   * @type {!Element}
-   */
-  this.mml = semantic.mathmlTree;
-
 };
-goog.inherits(sre.CaseMultiscripts, sre.AbstractEnrichCase);
+goog.inherits(sre.CaseMultiscripts, sre.CaseMultiindex);
 
 
 /**
@@ -68,19 +62,16 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
       this.semantic.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
     var ignore = this.semantic.childNodes[0];
     var baseSem = ignore.childNodes[0];
-    var rsup = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[1]);
-    var rsub = sre.EnrichMathml.multiscriptIndex(ignore.childNodes[1]);
+    var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
+    var rsub = sre.CaseMultiindex.multiscriptIndex(ignore.childNodes[1]);
     var collapsed = [this.semantic.id, [ignore.id, baseSem.id, rsub], rsup];
     sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
     this.mml.setAttribute(sre.EnrichMathml.Attribute.TYPE,
         ignore.role);
-    sre.EnrichMathml.completeMultiscript(
-        this.semantic, this.mml,
-        sre.EnrichMathml.interleaveIds(rsub, rsup),
-        []);
+    this.completeMultiscript(sre.EnrichMathml.interleaveIds(rsub, rsup), []);
   } else {
     var baseSem = this.semantic.childNodes[0];
-    var rsup = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[1]);
+    var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
     if (!sre.EnrichMathml.simpleCollapseStructure(rsup)) {
       var collapsed = [this.semantic.id, baseSem.id, rsup];
       sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);

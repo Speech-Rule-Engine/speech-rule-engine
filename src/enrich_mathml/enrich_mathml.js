@@ -331,24 +331,6 @@ sre.EnrichMathml.ElementTest_;
 
 
 /**
- * Type annotation for arrays representing collapsed node structures.
- * @typedef {number|Array.<sre.EnrichMathml.Collapsed_>}
- * @private
- */
-sre.EnrichMathml.Collapsed_;
-
-
-/**
- * Checks if the structure is simple, i.e., a single id number.
- * @param {sre.EnrichMathml.Collapsed_} strct The structure.
- * @return {boolean} True if a simple number.
- */
-sre.EnrichMathml.simpleCollapseStructure = function(strct) {
-  return (typeof strct === 'number');
-};
-
-
-/**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
  * @param {!Element} node The tree node from where to start.
@@ -433,6 +415,24 @@ sre.EnrichMathml.parentNode_ = function(element) {
 
 
 /**
+ * Type annotation for arrays representing collapsed node structures.
+ * @typedef {number|Array.<sre.EnrichMathml.Collapsed_>}
+ * @private
+ */
+sre.EnrichMathml.Collapsed_;
+
+
+/**
+ * Checks if the structure is simple, i.e., a single id number.
+ * @param {sre.EnrichMathml.Collapsed_} strct The structure.
+ * @return {boolean} True if a simple number.
+ */
+sre.EnrichMathml.simpleCollapseStructure = function(strct) {
+  return (typeof strct === 'number');
+};
+
+
+/**
  * Interleaves the ids of two index lists.
  * @param {!sre.EnrichMathml.Collapsed_} first A structured list of
  *     ids.
@@ -491,97 +491,6 @@ sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
 
 
 /**
- * Completes the mmultiscript by adding missing None nodes and sorting out the
- * right order of children.
- * @param {!sre.SemanticTree.Node} tensor The semantic tensor node.
- * @param {!Element} multiscript Its MathML counterpart.
- * @param {!sre.EnrichMathml.Collapsed_} rightIndices The ids of the leaf
- *     nodes of the right indices.
- * @param {!sre.EnrichMathml.Collapsed_} leftIndices The ids of the leaf
- *     nodes of the left indices.
- */
-sre.EnrichMathml.completeMultiscript = function(
-    tensor, multiscript, rightIndices, leftIndices) {
-  var children = sre.DomUtil.toArray(multiscript.childNodes).slice(1);
-  var childCounter = 0;
-  var completeIndices = function(indices) {
-    for (var i = 0, index; index = indices[i]; i++) {
-      var child = children[childCounter];
-      if (!child ||
-          index != sre.EnrichMathml.getInnerNode(child).
-              getAttribute(sre.EnrichMathml.Attribute.ID)) {
-        var query = tensor.querySelectorAll(
-            function(x) {return x.id === index;});
-        multiscript.insertBefore(
-            sre.EnrichMathml.createNone_(query[0]), child);
-      } else {
-        sre.EnrichMathml.getInnerNode(child).
-            setAttribute(sre.EnrichMathml.Attribute.PARENT, tensor.id);
-        childCounter++;
-      }
-    }
-  };
-  // right sub and superscripts
-  completeIndices(rightIndices);
-  // mprescripts
-  if (children[childCounter] &&
-      sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
-    multiscript.insertBefore(
-        children[childCounter],
-        sre.SystemExternal.document.createElement('mprescripts'));
-  } else {
-    childCounter++;
-  }
-  // left sub and superscripts
-  completeIndices(leftIndices);
-};
-
-
-/**
- * Creates a None node.
- * @param {sre.SemanticTree.Node} semantic An empty semantic node.
- * @return {!Element} The corresponding MathML <None/> node.
- * @private
- */
-sre.EnrichMathml.createNone_ = function(semantic) {
-  var newNode = sre.SystemExternal.document.createElement('none');
-  if (semantic) {
-    sre.EnrichMathml.setAttributes(newNode, semantic);
-  }
-  newNode.setAttribute(sre.EnrichMathml.Attribute.ADDED, 'true');
-  return newNode;
-};
-
-
-/**
- * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
- * punctuations.
- * @param {sre.SemanticTree.Node} index The index node of a tensor.
- * @return {!sre.EnrichMathml.Collapsed_} If the index node was a
- *     dummy punctuation, i.e. consisted of more than one index, a list of
- *     strings for the collapsed structure is returned, otherwise the node id.
- */
-sre.EnrichMathml.multiscriptIndex = function(index) {
-  if (index.type === sre.SemanticAttr.Type.PUNCTUATED &&
-      index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
-    var role = index.role;
-    var parentId = index.parent.id;
-    var childIds = [index.id];
-    for (var i = 0, child; child = index.childNodes[i]; i++) {
-      var mmlChild = sre.EnrichMathml.walkTree(child);
-      var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
-      innerNode.setAttribute(sre.EnrichMathml.Attribute.PARENT, parentId);
-      innerNode.setAttribute(sre.EnrichMathml.Attribute.ROLE, role);
-      childIds.push(child.id);
-    }
-    return childIds;
-  }
-  sre.EnrichMathml.walkTree(index);
-  return index.id;
-};
-
-
-/**
  * Clones a content node.
  * @param {!sre.SemanticTree.Node} content The content node.
  * @return {!Element} The corresponding MathML node.
@@ -610,7 +519,6 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 };
 
 
-// Utiltity function.
 /**
  * Sets semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.

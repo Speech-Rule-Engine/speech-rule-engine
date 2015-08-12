@@ -20,7 +20,7 @@
 
 goog.provide('sre.CaseTensor');
 
-goog.require('sre.AbstractEnrichCase');
+goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree.Node');
@@ -29,20 +29,14 @@ goog.require('sre.SemanticTree.Node');
 
 /**
  * @constructor
- * @extends {sre.AbstractEnrichCase}
+ * @extends {sre.CaseMultiindex}
  * @override
  * @final
  */
 sre.CaseTensor = function(semantic) {
   goog.base(this, semantic);
-
-  /**
-   * @type {!Element}
-   */
-  this.mml = semantic.mathmlTree;
-
 };
-goog.inherits(sre.CaseTensor, sre.AbstractEnrichCase);
+goog.inherits(sre.CaseTensor, sre.CaseMultiindex);
 
 
 /**
@@ -59,10 +53,10 @@ sre.CaseTensor.test = function(semantic) {
 sre.CaseTensor.prototype.getMathml = function() {
   sre.EnrichMathml.walkTree(
       /**@type{!sre.SemanticTree.Node}*/(this.semantic.childNodes[0]));
-  var lsub = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[1]);
-  var lsup = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[2]);
-  var rsub = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[3]);
-  var rsup = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[4]);
+  var lsub = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
+  var lsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
+  var rsub = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
+  var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   var collapsed = [this.semantic.id, lsub, lsup, rsub, rsup];
   if (!collapsed.every(sre.EnrichMathml.simpleCollapseStructure)) {
@@ -72,8 +66,7 @@ sre.CaseTensor.prototype.getMathml = function() {
   childIds.unshift(this.semantic.childNodes[0].id);
   this.mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
       childIds.join(','));
-  sre.EnrichMathml.completeMultiscript(
-      this.semantic, this.mml,
+  this.completeMultiscript(
       sre.EnrichMathml.interleaveIds(rsub, rsup),
       sre.EnrichMathml.interleaveIds(lsub, lsup));
   return this.mml;
