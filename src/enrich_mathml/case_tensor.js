@@ -40,7 +40,7 @@ sre.CaseTensor = function(semantic) {
    * @type {!Element}
    */
   this.mml = semantic.mathmlTree;
-  
+
 };
 goog.inherits(sre.CaseTensor, sre.AbstractEnrichCase);
 

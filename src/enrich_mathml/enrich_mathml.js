@@ -77,43 +77,6 @@ sre.EnrichMathml.Attribute = {
 
 
 /**
- * Creates formatted output  for MathML and semantic tree expression.
- * REMARK: Helper function.
- * @param {!Element} mml The original MathML expression.
- * @param {!Element} expr The enriched MathML expression.
- * @param {!sre.SemanticTree} tree The semantic tree.
- * @param {boolean=} opt_wiki Flag to specify wiki output.
- */
-sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
-  var wiki = opt_wiki || false;
-  sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
-  sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
-  sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',
-      wiki);
-};
-
-
-/**
- * Prints formatted output for MathML and semantic tree expression. Depending on
- * the wiki flag it might wrap it into markup useful for GitHub wikis.
- * REMARK: Helper function.
- * @param {!(Element|sre.SemanticTree)} element The original MathML expression.
- * @param {string} name The name of the expression to be printed in the wiki.
- * @param {boolean} wiki Flag to specify wiki output.
- * @private
- */
-sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
-  var output = sre.SemanticTree.formatXml(element.toString());
-  if (!wiki) {
-    console.log(output);
-    return;
-  }
-  console.log(name + ':\n```html\n' +
-              sre.EnrichMathml.removeAttributePrefix(output) + '\n```\n');
-};
-
-
-/**
  * Enriches a MathML element with semantics from the tree.
  *
  * NOTE: This is destructive on the MathML expression underlying the semantic
@@ -144,11 +107,11 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
  * @return {!Element} The enriched MathML element.
  */
 sre.EnrichMathml.walkTree = function(semantic) {
-  var newNode = sre.EnrichMathml.specialCase_(semantic);
-  if (newNode) {
+  var specialCase = sre.EnrichCaseFactory.getCase(semantic);
+  if (specialCase) {
+    var newNode = specialCase.getMathml();
     return sre.EnrichMathml.ascendNewNode(newNode);
   }
-
   if (semantic.mathml.length === 1) {
     sre.Debugger.getInstance().output('Walktree Case 0');
     newNode = /**@type{!Element}*/(semantic.mathml[0]);
@@ -466,24 +429,6 @@ sre.EnrichMathml.unitChild_ = function(node) {
  */
 sre.EnrichMathml.parentNode_ = function(element) {
   return /**@type{!Element}*/(element.parentNode);
-};
-
-
-/**
- * Dealing with special cases in the semantic enrichment.
- * @param {!sre.SemanticTree.Node} semantic The semantic node.
- * @return {Element} The enriched MathML node if the node is a special case.
- * @private
- */
-sre.EnrichMathml.specialCase_ = function(semantic) {
-  if (!semantic.mathmlTree) {
-    return null;
-  }
-  var embellishedCase = sre.EnrichCaseFactory.getCase(semantic);
-  if (embellishedCase) {
-    return embellishedCase.getMathml();
-  }
-  return null;
 };
 
 
@@ -917,6 +862,44 @@ sre.EnrichMathml.interleaveLists = function(list1, list2) {
     list2.length && result.push(list2.shift());
   }
   return result;
+};
+
+
+// Helper functions
+/**
+ * Creates formatted output  for MathML and semantic tree expression.
+ * REMARK: Helper function.
+ * @param {!Element} mml The original MathML expression.
+ * @param {!Element} expr The enriched MathML expression.
+ * @param {!sre.SemanticTree} tree The semantic tree.
+ * @param {boolean=} opt_wiki Flag to specify wiki output.
+ */
+sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
+  var wiki = opt_wiki || false;
+  sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
+  sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
+  sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',
+      wiki);
+};
+
+
+/**
+ * Prints formatted output for MathML and semantic tree expression. Depending on
+ * the wiki flag it might wrap it into markup useful for GitHub wikis.
+ * REMARK: Helper function.
+ * @param {!(Element|sre.SemanticTree)} element The original MathML expression.
+ * @param {string} name The name of the expression to be printed in the wiki.
+ * @param {boolean} wiki Flag to specify wiki output.
+ * @private
+ */
+sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
+  var output = sre.SemanticTree.formatXml(element.toString());
+  if (!wiki) {
+    console.log(output);
+    return;
+  }
+  console.log(name + ':\n```html\n' +
+              sre.EnrichMathml.removeAttributePrefix(output) + '\n```\n');
 };
 
 

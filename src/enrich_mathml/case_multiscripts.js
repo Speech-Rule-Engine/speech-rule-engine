@@ -40,7 +40,7 @@ sre.CaseMultiscripts = function(semantic) {
    * @type {!Element}
    */
   this.mml = semantic.mathmlTree;
-  
+
 };
 goog.inherits(sre.CaseMultiscripts, sre.AbstractEnrichCase);
 
@@ -54,8 +54,8 @@ sre.CaseMultiscripts.test = function(semantic) {
   }
   var mmlTag = sre.SemanticUtil.tagName(semantic.mathmlTree);
   return mmlTag === 'MMULTISCRIPTS' &&
-    (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-     semantic.type === sre.SemanticAttr.Type.SUBSCRIPT);
+      (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      semantic.type === sre.SemanticAttr.Type.SUBSCRIPT);
 };
 
 
@@ -67,7 +67,7 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
   if (this.semantic.childNodes[0] &&
       this.semantic.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
     var ignore = this.semantic.childNodes[0];
-    var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
+    var baseSem = ignore.childNodes[0];
     var rsup = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[1]);
     var rsub = sre.EnrichMathml.multiscriptIndex(ignore.childNodes[1]);
     var collapsed = [this.semantic.id, [ignore.id, baseSem.id, rsub], rsup];
@@ -79,7 +79,7 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
         sre.EnrichMathml.interleaveIds(rsub, rsup),
         []);
   } else {
-    var baseSem = /**@type {!sre.SemanticTree.Node}*/(this.semantic.childNodes[0]);
+    var baseSem = this.semantic.childNodes[0];
     var rsup = sre.EnrichMathml.multiscriptIndex(this.semantic.childNodes[1]);
     if (!sre.EnrichMathml.simpleCollapseStructure(rsup)) {
       var collapsed = [this.semantic.id, baseSem.id, rsup];
@@ -87,7 +87,8 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
     }
   }
   var childIds = sre.EnrichMathml.collapsedLeafs(rsub || [], rsup);
-  var base = sre.EnrichMathml.walkTree(baseSem);
+  var base = sre.EnrichMathml.walkTree(
+      /**@type {!sre.SemanticTree.Node}*/(baseSem));
   sre.EnrichMathml.getInnerNode(base).setAttribute(
       sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
   childIds.unshift(baseSem.id);

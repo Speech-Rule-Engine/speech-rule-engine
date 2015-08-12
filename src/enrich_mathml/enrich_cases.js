@@ -37,18 +37,15 @@ sre.EnrichCases = function() { };
 
 sre.EnrichCaseFactory.cases.push(
     {test: sre.CaseEmbellished.test,
-     constr: sre.CaseEmbellished},
+      constr: sre.CaseEmbellished},
     {test: sre.CaseDoubleScript.test,
-     constr: sre.CaseDoubleScript},
+      constr: sre.CaseDoubleScript},
     {test: sre.CaseTensor.test,
-     constr: sre.CaseTensor},
+      constr: sre.CaseTensor},
     {test: sre.CaseMultiscripts.test,
-     constr: sre.CaseMultiscripts},
+      constr: sre.CaseMultiscripts},
     {test: sre.CaseLine.test,
-     constr: sre.CaseLine},
+      constr: sre.CaseLine},
     {test: sre.CaseTable.test,
-     constr: sre.CaseTable}
+      constr: sre.CaseTable}
 );
-
-
-

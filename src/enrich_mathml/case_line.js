@@ -40,7 +40,7 @@ sre.CaseLine = function(semantic) {
    * @type {!Element}
    */
   this.mml = semantic.mathmlTree;
-  
+
 };
 goog.inherits(sre.CaseLine, sre.AbstractEnrichCase);
 

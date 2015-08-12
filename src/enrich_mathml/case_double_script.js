@@ -41,7 +41,7 @@ sre.CaseDoubleScript = function(semantic) {
    * @type {!Element}
    */
   this.mml = semantic.mathmlTree;
-  
+
 };
 goog.inherits(sre.CaseDoubleScript, sre.AbstractEnrichCase);
 
@@ -56,8 +56,8 @@ sre.CaseDoubleScript.test = function(semantic) {
   var mmlTag = sre.SemanticUtil.tagName(semantic.mathmlTree);
   return (mmlTag === 'MSUBSUP' &&
           semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
-    (mmlTag === 'MUNDEROVER' &&
-     semantic.type === sre.SemanticAttr.Type.OVERSCORE);
+      (mmlTag === 'MUNDEROVER' &&
+      semantic.type === sre.SemanticAttr.Type.OVERSCORE);
 };
 
 
@@ -65,8 +65,6 @@ sre.CaseDoubleScript.test = function(semantic) {
  * @override
  */
 sre.CaseDoubleScript.prototype.getMathml = function() {
-  // TODO (sorge) Needs some refactoring!
-  //
   var supSem = /**@type{!sre.SemanticTree.Node}*/(this.semantic.childNodes[1]);
   var ignore = this.semantic.childNodes[0];
   var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
@@ -79,14 +77,15 @@ sre.CaseDoubleScript.prototype.getMathml = function() {
       sre.EnrichMathml.Attribute.CHILDREN,
       sre.EnrichMathml.makeIdList([baseSem, subSem, supSem]));
   [baseMml, subMml, supMml].forEach(
-    goog.bind(function(child) {
+      goog.bind(function(child) {
         (sre.EnrichMathml.getInnerNode(child)).setAttribute(
-          sre.EnrichMathml.Attribute.PARENT,
-          this.mml.getAttribute(sre.EnrichMathml.Attribute.ID));
-    }, this));
+            sre.EnrichMathml.Attribute.PARENT,
+            this.mml.getAttribute(sre.EnrichMathml.Attribute.ID));
+      }, this));
   this.mml.setAttribute(sre.EnrichMathml.Attribute.TYPE,
       ignore.role);
   sre.EnrichMathml.addCollapsedAttribute(
-      this.mml, [this.semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
+      this.mml, [this.semantic.id,
+                 [ignore.id, baseSem.id, subSem.id], supSem.id]);
   return this.mml;
 };

@@ -40,7 +40,7 @@ sre.CaseTable = function(semantic) {
    * @type {!Element}
    */
   this.mml = semantic.mathmlTree;
-  
+
 };
 goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
 
@@ -50,9 +50,9 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
  */
 sre.CaseTable.test = function(semantic) {
   return semantic.mathmlTree &&
-    (semantic.type === sre.SemanticAttr.Type.MATRIX ||
-     semantic.type === sre.SemanticAttr.Type.VECTOR ||
-     semantic.type === sre.SemanticAttr.Type.CASES);
+      (semantic.type === sre.SemanticAttr.Type.MATRIX ||
+      semantic.type === sre.SemanticAttr.Type.VECTOR ||
+      semantic.type === sre.SemanticAttr.Type.CASES);
 };
 
 
