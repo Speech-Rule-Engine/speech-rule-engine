@@ -21,6 +21,8 @@
 goog.provide('sre.CaseEmbellished');
 
 goog.require('sre.AbstractEnrichCase');
+goog.require('sre.CaseDoubleScript');
+goog.require('sre.CaseMultiscripts');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
@@ -241,11 +243,11 @@ sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
   var parent = null;
   if (mmlTag === 'MSUBSUP') {
     parent = semantic.childNodes[0];
-    var caller = sre.EnrichMathml.caseDoubleScript;
+    var caller = sre.CaseDoubleScript;
   } else if (mmlTag === 'MMULTISCRIPTS' &&
              (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
               semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    caller = sre.EnrichMathml.caseMmultiscript;
+    caller = sre.CaseMultiscripts;
     if (semantic.childNodes[0] &&
         semantic.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
       parent = semantic.childNodes[0];
@@ -259,7 +261,7 @@ sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
   var base = parent.childNodes[0];
   var empty = sre.CaseEmbellished.makeEmptyNode_(base.id);
   parent.childNodes[0] = empty;
-  mml = caller(semantic, mml);
+  mml = new caller(semantic).getMathml();
   parent.childNodes[0] = base;
   this.parentCleanup.push(mml);
   return parent.childNodes[0];
