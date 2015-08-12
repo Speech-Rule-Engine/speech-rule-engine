@@ -368,7 +368,6 @@ sre.EnrichMathml.validLca_ = function(left, right) {
 };
 
 
-// Util function.
 /**
  * Computes the empty layout node that is the highest parent of the given node
  * and that only has one child.
@@ -700,7 +699,6 @@ sre.EnrichMathml.interleaveLists = function(list1, list2) {
 };
 
 
-// Helper functions
 /**
  * Creates formatted output  for MathML and semantic tree expression.
  * REMARK: Helper function.
