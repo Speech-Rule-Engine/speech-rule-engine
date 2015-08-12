@@ -414,6 +414,7 @@ sre.EnrichMathml.parentNode_ = function(element) {
 };
 
 
+// TODO (sorge) Refactor collapsed structures into a dedicated class.
 /**
  * Type annotation for arrays representing collapsed node structures.
  * @typedef {number|Array.<sre.EnrichMathml.Collapsed_>}
