@@ -539,6 +539,11 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
+  var xml = sre.DomUtil.parseInput(
+      '<stree>' + semantic.toString() + '</stree>', sre.System.Error);
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+  var speech = sre.AuditoryDescription.toSimpleString(descrs);
+  mml.setAttribute('speech', speech);
 };
 
 
@@ -767,12 +772,25 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
 };
 
 
+sre.EnrichMathml.prepareMmlString = function(expr) {
+  if (!expr.match(/^<math/)) {
+    expr = '<math>' + expr;
+  }
+  if (!expr.match(/\/math>$/)) {
+    expr += '</math>';
+  }
+  return expr;
+};
+
+
 /**
  * Tests for an expression with debugger outp
  * @param {string} expr MathML expression.
  */
 sre.EnrichMathml.testTranslation__ = function(expr) {
   sre.Debugger.getInstance().init();
-  sre.EnrichMathml.removeAttributePrefix(
-      sre.Semantic.enrichMathml('<math>' + expr + '</math>').toString());
+  var mml = sre.Semantic.enrichMathml(
+      sre.EnrichMathml.prepareMmlString(expr)).toString();
+  sre.EnrichMathml.removeAttributePrefix(mml);
+  return mml;
 };
