@@ -27,7 +27,6 @@
 goog.provide('sre.SemanticTree');
 goog.provide('sre.SemanticTree.Node');
 
-goog.require('goog.array');
 goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
 goog.require('sre.SemanticAttr');
@@ -338,7 +337,7 @@ sre.SemanticTree.Node.prototype.removeMathmlNodes_ = function(mmlNodes) {
   for (var i = 0, mml; mml = mmlNodes[i]; i++) {
     var index = mmlList.indexOf(mml);
     if (index != -1) {
-      goog.array.removeAt(mmlList, index);
+      mmlList.splice(index, 1);
     }
   }
   this.mathml = mmlList;
@@ -406,7 +405,7 @@ sre.SemanticTree.Node.prototype.removeContentNode_ = function(node) {
   if (node) {
     var index = this.contentNodes.indexOf(node);
     if (index != -1) {
-      goog.array.removeAt(this.contentNodes, index);
+      this.contentNodes.slice(index, 1);
     }
   }
 };
