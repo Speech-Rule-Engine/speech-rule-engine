@@ -1,3 +1,4 @@
+
 // Copyright 2014 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -62,73 +63,6 @@ goog.inherits(sre.System.Error, Error);
 
 
 /**
- * Process a math expression into a string suitable for a speech engine.
- * @param {string} text Text representing a math expression.
- * @return {string} The string with a spoken version of the math expression.
- * @private
- */
-sre.System.prototype.preprocessString_ = function(text) {
-  // TODO (sorge) Find a proper treatment of single numbers.
-  if (sre.Engine.getInstance().domain == 'mathspeak' && text.match(/^\d{1}$/)) {
-    return text;
-  }
-  var dynamicCstr = sre.MathStore.createDynamicConstraint(
-      sre.Engine.getInstance().domain,
-      sre.Engine.getInstance().style);
-  var result = sre.MathMap.getInstance().store.lookupString(text, dynamicCstr);
-  return result || text;
-};
-
-
-/**
- * Applies a corrective string to the given description text.
- * @param {string} text The original description text.
- * @param {string} correction The correction string to be applied.
- * @return {string} The cleaned up string.
- * @private
- */
-sre.System.prototype.processCorrections_ = function(text, correction) {
-  if (!correction || !text) {
-    return text;
-  }
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {sre.AuditoryDescription} descr Description representing a single
- *     math expression.
- * @private
- */
-sre.System.prototype.preprocessDescription_ = function(descr) {
-  if (descr.annotation) {
-    descr.text += ':' + descr.annotation;
-  }
-  if (descr.preprocess) {
-    descr.text = this.processCorrections_(
-        this.preprocessString_(descr.text), descr.correction);
-    descr.preprocess = false;
-  }
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {Array.<sre.AuditoryDescription>} descrList Description array
- *     representing a math expression.
- * @private
- */
-sre.System.prototype.preprocessDescriptionList_ = function(descrList) {
-  for (var i = 0, descr; descr = descrList[i]; i++) {
-    this.preprocessDescription_(descr);
-  }
-};
-
-
-/**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
  * @param {Object.<string,? (string)>} feature An object describing some
@@ -164,11 +98,7 @@ sre.System.prototype.processExpression = function(expr) {
     return '';
   }
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  this.preprocessDescriptionList_(descrs);
-  return sre.DomUtil.removeEmpty(
-      descrs.map(
-          function(x) {return x.descriptionString();})).
-      join(' ');
+  return sre.AuditoryDescription.toSimpleString(descrs);
 };
 
 
