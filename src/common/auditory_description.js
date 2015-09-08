@@ -24,6 +24,8 @@ goog.provide('sre.AuditoryDescription');
 
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
+goog.require('sre.MathMap');
+goog.require('sre.MathStore');
 
 
 

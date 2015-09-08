@@ -228,6 +228,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
   }
+  node.setAttribute('speech', sre.AuditoryDescription.toSimpleString(result));
   return result;
 };
 

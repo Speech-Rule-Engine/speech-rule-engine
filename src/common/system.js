@@ -21,6 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.System');
+goog.provide('sre.System.Error');
 
 goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');

@@ -22,10 +22,13 @@
  */
 
 goog.provide('sre.EnrichMathml');
+goog.provide('sre.EnrichMathml.Error');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.Debugger');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.SemanticTree');
+goog.require('sre.SpeechRuleEngine');
 
 
 
@@ -35,6 +38,20 @@ goog.require('sre.SemanticTree');
  */
 sre.EnrichMathml = function() {
 };
+
+
+/**
+ * Error object for signaling enirchment errors.
+ * @param {string} msg The error message.
+ * @constructor
+ * @extends {Error}
+ */
+sre.EnrichMathml.Error = function(msg) {
+  goog.base(this);
+  this.message = msg || '';
+  this.name = 'MathML Enrichment Error';
+};
+goog.inherits(sre.EnrichMathml.Error, Error);
 
 
 /**
@@ -540,7 +557,7 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
   var xml = sre.DomUtil.parseInput(
-      '<stree>' + semantic.toString() + '</stree>', sre.System.Error);
+      '<stree>' + semantic.toString() + '</stree>', sre.EnrichMathml.Error);
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   var speech = sre.AuditoryDescription.toSimpleString(descrs);
   mml.setAttribute('speech', speech);
