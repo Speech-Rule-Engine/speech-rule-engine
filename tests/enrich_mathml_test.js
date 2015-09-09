@@ -20,7 +20,7 @@
 goog.provide('sre.EnrichMathmlTest');
 
 goog.require('sre.AbstractTest');
-goog.require('sre.Semantic');
+goog.require('sre.Enrich');
 
 
 
@@ -121,15 +121,24 @@ sre.EnrichMathmlTest.prototype.htmlOutput = function(mml, smml) {
  * @param {string} smml MathML snippet for the semantic information.
  */
 sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
-  var mathMl = '<math>' + mml + '</math>';
+  var mathMl = sre.Enrich.prepareMmlString(mml);
   this.htmlOutput(mathMl, smml);
-  var node = sre.Semantic.enrichMathml(mathMl);
+  var node = sre.Enrich.semanticMathml(mathMl);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
-  this.assert.equal(
-      sre.EnrichMathml.removeAttributePrefix(xmls.serializeToString(node)),
-      xmls.serializeToString(xml));
+  var cleaned = sre.EnrichMathml.removeAttributePrefix(
+      xmls.serializeToString(node));
+  this.assert.equal(cleaned, xmls.serializeToString(xml));
+  //
+  // Code to replay the MathML enrichment on the enriched element.
+  // Currently this only works on relatively simple elements.
+  // 
+  // if (cleaned.match(/role="implicit"|operator="fenced"/)) return;
+  // var node2 = sre.Semantic.enrichMathml(node.toString());
+  // var cleaned2 = sre.EnrichMathml.removeAttributePrefix(
+  //     xmls.serializeToString(node2));
+  // this.assert.equal(cleaned, cleaned2);
 };
 
 

@@ -27,7 +27,8 @@ goog.provide('sre.EnrichMathml.Error');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.Debugger');
 goog.require('sre.EnrichCaseFactory');
-goog.require('sre.SemanticTree');
+goog.require('sre.MathmlStore');
+goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
 
 
@@ -103,6 +104,18 @@ sre.EnrichMathml.Attribute = {
  * @return {!Element} The modified MathML element.
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
+
+  console.log(semantic.toString());
+  console.log('here');
+  var engine = sre.Engine.getInstance();
+  engine.style = 'default';
+  engine.domain = 'mathspeak';
+  engine.semantics = true;
+  sre.SpeechRuleEngine.getInstance().
+      parameterize(sre.MathmlStore.getInstance());
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
@@ -125,6 +138,7 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
  */
 sre.EnrichMathml.walkTree = function(semantic) {
   var specialCase = sre.EnrichCaseFactory.getCase(semantic);
+
   if (specialCase) {
     var newNode = specialCase.getMathml();
     return sre.EnrichMathml.ascendNewNode(newNode);
@@ -556,11 +570,11 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
-  var xml = sre.DomUtil.parseInput(
-      '<stree>' + semantic.toString() + '</stree>', sre.EnrichMathml.Error);
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  var speech = sre.AuditoryDescription.toSimpleString(descrs);
-  mml.setAttribute('speech', speech);
+  // var xml = sre.DomUtil.parseInput(
+  //     '<stree>' + semantic.toString() + '</stree>', sre.EnrichMathml.Error);
+  // var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+  // var speech = sre.AuditoryDescription.toSimpleString(descrs);
+  // mml.setAttribute('speech', speech);
 };
 
 
@@ -786,28 +800,4 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
   console.log(title);
   sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
-};
-
-
-sre.EnrichMathml.prepareMmlString = function(expr) {
-  if (!expr.match(/^<math/)) {
-    expr = '<math>' + expr;
-  }
-  if (!expr.match(/\/math>$/)) {
-    expr += '</math>';
-  }
-  return expr;
-};
-
-
-/**
- * Tests for an expression with debugger outp
- * @param {string} expr MathML expression.
- */
-sre.EnrichMathml.testTranslation__ = function(expr) {
-  sre.Debugger.getInstance().init();
-  var mml = sre.Semantic.enrichMathml(
-      sre.EnrichMathml.prepareMmlString(expr)).toString();
-  sre.EnrichMathml.removeAttributePrefix(mml);
-  return mml;
 };

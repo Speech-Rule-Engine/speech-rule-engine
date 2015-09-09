@@ -25,8 +25,6 @@ goog.provide('sre.Semantic.Role');
 goog.provide('sre.Semantic.Type');
 
 goog.require('sre.DomUtil');
-goog.require('sre.EnrichCases');
-goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 
@@ -69,30 +67,5 @@ sre.Semantic.getTreeFromString = function(expr) {
   var mml = sre.DomUtil.parseInput(expr);
   return new sre.SemanticTree(mml);
 };
-
-
-/**
- * Enriches a MathML element with semantics from the tree.
- * @param {!string} expr The MathML expression as a string without math tags.
- * @return {!Element} The modified MathML element.
- */
-sre.Semantic.enrichMathml = function(expr) {
-  // TODO (sorge) Catch error case.
-  var mml = sre.DomUtil.parseInput(expr);
-  return sre.Semantic.annotateMathml(mml);
-};
-
-
-/**
- * Creates the semantically enriched MathML representation.
- * @param {!Element} mml The original MathML node.
- * @return {!Element} Semantically enriched MathML node.
- */
-sre.Semantic.annotateMathml = function(mml) {
-  var clone = mml.cloneNode(true);
-  var tree = new sre.SemanticTree(clone);
-  return sre.EnrichMathml.enrich(clone, tree);
-};
-
 
 // console.log(sre.SemanticTree.formatXml(sre.Semantic.getTreeFromString('<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>').toString()));

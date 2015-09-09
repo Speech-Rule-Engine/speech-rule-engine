@@ -21,6 +21,7 @@ TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
 SEMANTIC = $(LIB_DIR)/semantic.js
+ENRICH = $(LIB_DIR)/enrich.js
 
 START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
@@ -164,7 +165,7 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-clean: clean_test clean_semantic clean_browser
+clean: clean_test clean_semantic clean_browser clean_enrich
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
@@ -248,3 +249,11 @@ semantic: $(SRC)
 
 clean_semantic:
 	rm -f $(SEMANTIC)
+
+enrich: $(SRC)
+	@echo Compiling browser ready Tree API
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Enrich" --output_file $(ENRICH)
+
+clean_enrich:
+	rm -f $(ENRICH)
