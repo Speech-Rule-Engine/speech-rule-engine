@@ -52,7 +52,7 @@ sre.MathMap = function() {
   sre.MathMap.retrieveFiles(
     sre.MathMap.UNITS_FILES_,
     sre.MathMap.UNITS_PATH_,
-    goog.bind(this.store.addUnitRules, this.store), 'async');
+    goog.bind(this.store.addUnitRules, this.store));
 
   var cstrValues = this.store.getDynamicConstraintValues();
   /**
@@ -70,7 +70,7 @@ sre.MathMap = function() {
 goog.addSingletonGetter(sre.MathMap);
 
 
-sre.MathMap.toFetch = {};
+sre.MathMap.toFetch = 0;
 
 
 /**
@@ -182,13 +182,18 @@ sre.MathMap.retrieveFiles = function(files, path, func, opt_mode) {
   var mode = opt_mode || 'sync';
   switch (mode) {
   case 'async':
+    // sre.MathMap.toFetch = sre.MathMap.toFetch === -1 ? files.length : sre.MathMap.toFetch + files.length;
+    sre.MathMap.toFetch += files.length;
+    console.log(sre.MathMap.toFetch);
     for (var i = 0, file; file = files[i]; i++) {
-      sre.MathMap.toFetch[file] = true;
+      sre.MathMap.file = file;
       sre.MathMap.fromFile_(path + file,
                             function(err, json) {
+                              console.log(sre.MathMap.toFetch);
+                              sre.MathMap.toFetch--;
+                              if (err) {return;}
                               var retr = JSON.parse(json);
                               retr.forEach(function(x) {func(x);});
-                              delete(sre.MathMap.toFetch[file]);
                             });
   }
     break;
@@ -205,21 +210,21 @@ sre.MathMap.retrieveFiles = function(files, path, func, opt_mode) {
 };
 
 
-sre.MathMap.synchroniseRules = function() {
-  if (Object.keys(sre.MathMap.toFetch).length === 0) {
-    sre.MathMap.redoSynchroniseRules();
-  }
-  // if (sre.MathMap.fetched !== sre.MathMap.toFetch) {
-  //   console.log('continue');
-  //   setTimeout(sre.MathMap.synchroniseRules, 500);
-  // }
-};
+// sre.MathMap.synchroniseRules = function() {
+//   if (Object.keys(sre.MathMap.toFetch).length === 0) {
+//     sre.MathMap.redoSynchroniseRules();
+//   }
+//   // if (sre.MathMap.fetched !== sre.MathMap.toFetch) {
+//   //   console.log('continue');
+//   //   setTimeout(sre.MathMap.synchroniseRules, 500);
+//   // }
+// };
 
-sre.MathMap.redoSynchroniseRules = function() {
-  setTimeout(sre.MathMap.synchroniseRules, 500);
-  sre.MathMap.pausecomp(1000);
-  //sre.MathMap.synchroniseRules();
-};
+// sre.MathMap.redoSynchroniseRules = function() {
+//   setTimeout(sre.MathMap.synchroniseRules, 500);
+//   sre.MathMap.pausecomp(1000);
+//   //sre.MathMap.synchroniseRules();
+// };
 
 sre.MathMap.pausecomp = function(ms) {
   ms += new Date().getTime();
@@ -229,7 +234,7 @@ sre.MathMap.pausecomp = function(ms) {
 /**
  * Takes path to a JSON file and returns a JSON object.
  * @param {string} path Contains the path to a JSON file.
- * @param {function(string)} func Method adding the rules.
+ * @param {function(string, string)} func Method adding the rules.
  * @return {string} JSON.
  * @private
  */
