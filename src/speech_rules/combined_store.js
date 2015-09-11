@@ -59,13 +59,10 @@ sre.CombinedStore.mathStore.initialize = function() {
  */
 sre.CombinedStore.prototype.updateEngine = function() {
   var maps = sre.MathMap.getInstance();
-  console.log('getting the maps');
   console.log(sre.MathMap.toFetch);
   if (sre.MathMap.toFetch) {
     setTimeout(sre.CombinedStore.getInstance().updateEngine, 500);
   } else {
-    console.log('maps');
-    console.log(maps);
     var engine = sre.Engine.getInstance();
     var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
     engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);

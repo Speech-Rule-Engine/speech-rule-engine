@@ -22,6 +22,7 @@
 goog.provide('sre.System');
 
 goog.require('sre.CombinedStore');
+goog.require('sre.Config');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.MathMap');
@@ -219,3 +220,5 @@ sre.System.prototype.processFile = function(input, opt_output) {
     throw new sre.System.Error('Can not write to file: ' + opt_output);
   }
 };
+
+

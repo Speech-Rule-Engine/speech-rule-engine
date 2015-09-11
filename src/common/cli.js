@@ -20,6 +20,7 @@
  */
 goog.provide('sre.Cli');
 
+goog.require('sre.Config');
 goog.require('sre.Debugger');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
@@ -37,6 +38,7 @@ sre.Cli = function() {};
  */
 sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
+  sre.Config.mode = 'sync';
   // These are necessary to avoid closure errors.
   /** @type {!string} */
   // commander.domain is already in use by the commander module!

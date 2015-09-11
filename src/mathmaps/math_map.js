@@ -23,6 +23,7 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.Config');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.MathUtil');
 goog.require('sre.SystemExternal');
@@ -54,18 +55,19 @@ sre.MathMap = function() {
     sre.MathMap.UNITS_PATH_,
     goog.bind(this.store.addUnitRules, this.store));
 
-  var cstrValues = this.store.getDynamicConstraintValues();
   /**
    * Array of domain names.
    * @type {Array.<string>}
    */
-  this.allDomains = cstrValues.domain;
+  this.allDomains = [];
 
   /**
    * Array of style names.
    * @type {Array.<string>}
    */
-  this.allStyles = cstrValues.style;
+  this.allStyles = [];
+
+  this.getDynamicConstraintValues();
 };
 goog.addSingletonGetter(sre.MathMap);
 
@@ -176,24 +178,19 @@ sre.MathMap.UNITS_FILES_ = [
  * @param {Array.<string>} files List of file names.
  * @param {string} path A path name.
  * @param {function(JSONType)} func Method adding the rules.
- * @param {string=} opt_mode The mode of operation.
  */
-sre.MathMap.retrieveFiles = function(files, path, func, opt_mode) {
-  var mode = opt_mode || 'sync';
-  switch (mode) {
+sre.MathMap.retrieveFiles = function(files, path, func) {
+  console.log(sre.Config.mode);
+  
+  switch (sre.Config.mode) {
   case 'async':
-    // sre.MathMap.toFetch = sre.MathMap.toFetch === -1 ? files.length : sre.MathMap.toFetch + files.length;
     sre.MathMap.toFetch += files.length;
-    console.log(sre.MathMap.toFetch);
     for (var i = 0, file; file = files[i]; i++) {
-      sre.MathMap.file = file;
       sre.MathMap.fromFile_(path + file,
                             function(err, json) {
-                              console.log(sre.MathMap.toFetch);
                               sre.MathMap.toFetch--;
-                              if (err) {return;}
-                              var retr = JSON.parse(json);
-                              retr.forEach(function(x) {func(x);});
+                              if (err) return;
+                              JSON.parse(json).forEach(function(x) {func(x);});
                             });
   }
     break;
@@ -311,3 +308,12 @@ sre.MathMap.getAjaxFiles_ = function() {
 };
 
 
+sre.MathMap.prototype.getDynamicConstraintValues = function() {
+  if (sre.MathMap.toFetch) {
+    setTimeout(goog.bind(this.getDynamicConstraintValues, this), 300);
+  } else {
+    var cstr = this.store.getDynamicConstraintValues();
+    this.allDomains = cstr.domain;
+    this.allStyles = cstr.style;
+  }
+};
