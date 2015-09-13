@@ -63,6 +63,12 @@ sre.SpeechRuleEngine = function() {
    * @private
    */
   this.globalParameters_ = {};
+
+  /**
+   * Caches speech strings by node id.
+   * @type {Object.<string, string>}
+   */
+  this.cache_ = {};
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
 
@@ -170,7 +176,9 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
-    return this.activeStore_.evaluateDefault(node);
+    var result = this.activeStore_.evaluateDefault(node);
+    this.pushCache(node, result);
+    return result;
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
@@ -179,7 +187,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
                 node.toString()];},
       this));
   var components = rule.action.components;
-  var result = [];
+  result = [];
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
     var content = component['content'] || '';
@@ -228,8 +236,28 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
   }
-  //node.setAttribute('speech', sre.AuditoryDescription.toSimpleString(result));
+  this.pushCache(node, result);
   return result;
+};
+
+
+sre.SpeechRuleEngine.prototype.clearCache = function() {
+  this.cache_ = {};
+};
+
+
+sre.SpeechRuleEngine.prototype.getCache = function(key) {
+  console.log(key);
+  return this.cache_[key];
+};
+
+
+sre.SpeechRuleEngine.prototype.pushCache = function(node, speech) {
+  if (!node.getAttribute) return;
+  var id = node.getAttribute('id');
+  if (id) {
+    this.cache_[id] = sre.AuditoryDescription.toSimpleString(speech); 
+  }
 };
 
 

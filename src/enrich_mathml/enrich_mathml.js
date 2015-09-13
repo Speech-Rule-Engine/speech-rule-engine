@@ -90,6 +90,7 @@ sre.EnrichMathml.Attribute = {
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
   ROLE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'role',
+  SPEECH: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'speech',
   TYPE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'type'
 };
 
@@ -104,13 +105,12 @@ sre.EnrichMathml.Attribute = {
  * @return {!Element} The modified MathML element.
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
-
-  console.log(semantic.toString());
-  console.log('here');
+  //TODO: (sorge) Move that elsewhere and use system function.
   var engine = sre.Engine.getInstance();
   engine.style = 'default';
   engine.domain = 'mathspeak';
   engine.semantics = true;
+  sre.SpeechRuleEngine.getInstance().clearCache();
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
@@ -570,11 +570,30 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
-  // var xml = sre.DomUtil.parseInput(
-  //     '<stree>' + semantic.toString() + '</stree>', sre.EnrichMathml.Error);
-  // var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  // var speech = sre.AuditoryDescription.toSimpleString(descrs);
-  // mml.setAttribute('speech', speech);
+  sre.EnrichMathml.addSpeech(mml, semantic);
+};
+
+
+/**
+ * Add Sets semantic attributes in a MathML node.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ */
+sre.EnrichMathml.addSpeech = function(mml, semantic) {
+  //TODO: (sorge) Make this optional via global config.
+  console.log(sre.SpeechRuleEngine.getInstance().cache_);
+  var speech = sre.SpeechRuleEngine.getInstance().getCache(semantic.id);
+  console.log('SPeech: ' + speech);
+  if (!speech) {
+    var xml = sre.DomUtil.parseInput('<stree>' + semantic.toString() +
+                                     '</stree>', sre.EnrichMathml.Error);
+    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+    speech = sre.SpeechRuleEngine.getInstance().getCache(semantic.id);
+  } else {
+    console.log('Cache success:' + semantic.toString());
+    
+  }
+  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
 
