@@ -580,19 +580,11 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
  */
 sre.EnrichMathml.addSpeech = function(mml, semantic) {
-  //TODO: (sorge) Make this optional via global config.
-  console.log(sre.SpeechRuleEngine.getInstance().cache_);
-  var speech = sre.SpeechRuleEngine.getInstance().getCache(semantic.id);
-  console.log('SPeech: ' + speech);
-  if (!speech) {
-    var xml = sre.DomUtil.parseInput('<stree>' + semantic.toString() +
-                                     '</stree>', sre.EnrichMathml.Error);
-    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-    speech = sre.SpeechRuleEngine.getInstance().getCache(semantic.id);
-  } else {
-    console.log('Cache success:' + semantic.toString());
-    
-  }
+  //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
+  var xml = sre.DomUtil.parseInput('<stree>' + semantic.toString() +
+                                   '</stree>', sre.EnrichMathml.Error);
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+  var speech = sre.AuditoryDescription.toSimpleString(descrs);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 

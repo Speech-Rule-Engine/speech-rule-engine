@@ -64,6 +64,7 @@ sre.Enrich.testTranslation__ = function(expr) {
   var mml = sre.Enrich.semanticMathml(
       sre.Enrich.prepareMmlString(expr)).toString();
   sre.EnrichMathml.removeAttributePrefix(mml);
+  sre.Debugger.getInstance().exit();
   return mml;
 };
 

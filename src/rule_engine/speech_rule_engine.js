@@ -66,7 +66,7 @@ sre.SpeechRuleEngine = function() {
 
   /**
    * Caches speech strings by node id.
-   * @type {Object.<string, string>}
+   * @type {Object.<string, Array.<sre.AuditoryDescription>>}
    */
   this.cache_ = {};
 };
@@ -151,6 +151,36 @@ sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
 };
 
 
+sre.SpeechRuleEngine.withCache = true;
+
+
+sre.SpeechRuleEngine.prototype.clearCache = function() {
+  this.cache_ = {};
+};
+
+
+sre.SpeechRuleEngine.prototype.getCacheForNode = function(node) {
+  if (!node || !node.getAttribute) return null;
+  var key = node.getAttribute('id');
+  if (key === 'undefined' || key === '') return null;
+  return this.getCache(key);
+};
+
+
+sre.SpeechRuleEngine.prototype.getCache = function(key) {
+  return this.cache_[key];
+};
+
+
+sre.SpeechRuleEngine.prototype.pushCache = function(node, speech) {
+  if (!node.getAttribute) return;
+  var id = node.getAttribute('id');
+  if (id) {
+    this.cache_[id] = speech;
+  }
+};
+
+
 // Dispatch functionality.
 /**
  * Computes a speech object for a given node. Returns the empty list if
@@ -174,9 +204,16 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
+  if (sre.SpeechRuleEngine.withCache) {
+    var result = this.getCacheForNode(node);
+    if (result) {
+      // console.log('Cache success:' + node.toString());
+      return result;
+    }
+  }
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
-    var result = this.activeStore_.evaluateDefault(node);
+    result = this.activeStore_.evaluateDefault(node);
     this.pushCache(node, result);
     return result;
   }
@@ -238,26 +275,6 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   this.pushCache(node, result);
   return result;
-};
-
-
-sre.SpeechRuleEngine.prototype.clearCache = function() {
-  this.cache_ = {};
-};
-
-
-sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  console.log(key);
-  return this.cache_[key];
-};
-
-
-sre.SpeechRuleEngine.prototype.pushCache = function(node, speech) {
-  if (!node.getAttribute) return;
-  var id = node.getAttribute('id');
-  if (id) {
-    this.cache_[id] = sre.AuditoryDescription.toSimpleString(speech); 
-  }
 };
 
 
