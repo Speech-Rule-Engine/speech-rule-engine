@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Cli');
 
-goog.require('sre.Config');
 goog.require('sre.Debugger');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
@@ -38,7 +37,6 @@ sre.Cli = function() {};
  */
 sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
-  sre.Config.mode = 'sync';
   // These are necessary to avoid closure errors.
   /** @type {!string} */
   // commander.domain is already in use by the commander module!
@@ -73,7 +71,7 @@ sre.Cli.prototype.commandLine = function() {
       parse(process.argv);
   try {
     if (commander.enumerate) {
-      sre.System.getInstance().setupEngine({});
+      sre.System.getInstance().setupEngine({'mode': 'sync'});
       var output = 'Domain options: ' +
           sre.Engine.getInstance().allDomains.sort().join(', ') +
           '\nStyle options:  ' +
@@ -89,7 +87,8 @@ sre.Cli.prototype.commandLine = function() {
           'semantics': commander.semantics,
           'domain': commander.dom,
           'style': commander.style,
-          'mathml': commander.mathml
+          'mathml': commander.mathml,
+          'mode': 'sync'
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);
@@ -99,11 +98,9 @@ sre.Cli.prototype.commandLine = function() {
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);
-    sre.Debugger.getInstance().exit();
-    process.exit(1);
+    sre.Debugger.getInstance().exit(function() {process.exit(1);});
   }
-  sre.Debugger.getInstance().exit();
-  process.exit(0);
+  sre.Debugger.getInstance().exit(function() {process.exit(0);});
 };
 
 
