@@ -145,7 +145,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_angles.json', 'math_arrows.json', 'math_characters.json',
   'math_delimiters.json', 'math_digits.json', 'math_geometry.json',
   'math_harpoons.json', 'math_non_characters.json', 'math_symbols.json',
-  'math_whitespace.json', 'other_stars.json'
+  'math_whitespace.json', 'other_stars.json', 'nix.json'
 ];
 
 
@@ -192,9 +192,13 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
                               if (err) return;
                               JSON.parse(json).forEach(function(x) {func(x);});
                             });
-  }
+    }
     break;
   case 'http':
+    sre.MathMap.toFetch += files.length;
+    for (i = 0; file = files[i]; i++) {
+      sre.MathMap.getJsonAjax_(path + file, func);
+    }
     break;
   case 'sync':
   default:
@@ -206,27 +210,6 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
   
 };
 
-
-// sre.MathMap.synchroniseRules = function() {
-//   if (Object.keys(sre.MathMap.toFetch).length === 0) {
-//     sre.MathMap.redoSynchroniseRules();
-//   }
-//   // if (sre.MathMap.fetched !== sre.MathMap.toFetch) {
-//   //   console.log('continue');
-//   //   setTimeout(sre.MathMap.synchroniseRules, 500);
-//   // }
-// };
-
-// sre.MathMap.redoSynchroniseRules = function() {
-//   setTimeout(sre.MathMap.synchroniseRules, 500);
-//   sre.MathMap.pausecomp(1000);
-//   //sre.MathMap.synchroniseRules();
-// };
-
-sre.MathMap.pausecomp = function(ms) {
-  ms += new Date().getTime();
-  while (new Date() < ms){}
-};
 
 /**
  * Takes path to a JSON file and returns a JSON object.
@@ -290,15 +273,16 @@ sre.MathMap.readJSON_ = function(path) {
 };
 
 
-sre.MathMap.getJsonAjax_ = function(file) {
+sre.MathMap.getJsonAjax_ = function(file, func) {
+  console.log('getting json');
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
-    if (httpRequest.readyState === 4) {
-      console.log('Fetching from URL');
-      console.log(JSON.parse(httpRequest.responseText));
+    sre.MathMap.toFetch--;
+    if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+      JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
     }
   };
-  httpRequest.open('GET', sre.MathMap.FUNCTIONS_PATH_ + file, true);
+  httpRequest.open('GET', file, true);
   httpRequest.send();
 };
 
