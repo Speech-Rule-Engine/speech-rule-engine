@@ -198,7 +198,7 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
   if (tags.indexOf(node.tagName) > -1) {
     depth++;
   }
-  if (!node.childNodes) {
+  if (!node.childNodes || node.childNodes.length === 0) {
     return depth;
   }
   var children = sre.DomUtil.toArray(node.childNodes);

@@ -24,9 +24,9 @@ goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
 goog.require('sre.CombinedStore');
-goog.require('sre.Engine');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
