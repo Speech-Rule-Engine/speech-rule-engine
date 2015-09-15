@@ -71,7 +71,7 @@ sre.Cli.prototype.commandLine = function() {
       parse(process.argv);
   try {
     if (commander.enumerate) {
-      sre.System.getInstance().setupEngine({});
+      sre.System.getInstance().setupEngine({'mode': 'sync'});
       var output = 'Domain options: ' +
           sre.Engine.getInstance().allDomains.sort().join(', ') +
           '\nStyle options:  ' +
@@ -87,7 +87,8 @@ sre.Cli.prototype.commandLine = function() {
           'semantics': commander.semantics,
           'domain': commander.dom,
           'style': commander.style,
-          'mathml': commander.mathml
+          'mathml': commander.mathml,
+          'mode': 'sync'
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);
@@ -97,11 +98,9 @@ sre.Cli.prototype.commandLine = function() {
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);
-    sre.Debugger.getInstance().exit();
-    process.exit(1);
+    sre.Debugger.getInstance().exit(function() {process.exit(1);});
   }
-  sre.Debugger.getInstance().exit();
-  process.exit(0);
+  sre.Debugger.getInstance().exit(function() {process.exit(0);});
 };
 
 

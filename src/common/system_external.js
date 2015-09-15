@@ -31,20 +31,24 @@ goog.provide('sre.SystemExternal');
 sre.SystemExternal = function() { };
 
 
+
+/**
+ * The URL for SRE resources.
+ * @const
+ * @type {string}
+ */
+sre.SystemExternal.url = 'https://progressiveaccess.com/content';
+
+
 /**
  * Path to JSON files.
  * @const
  * @type {string}
  */
 sre.SystemExternal.jsonPath = function() {
-  if (typeof process !== 'undefined' &&
-      typeof global !== 'undefined') {
-    return (process.env.SRE_JSON_PATH ||
-            global.SRE_JSON_PATH ||
-            process.cwd() + '/mathmaps') +
-        '/';
-  }
-  return undefined;
+  return ((typeof process !== 'undefined' && typeof global !== 'undefined') ?
+    (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
+          sre.SystemExternal.url + '/mathmaps') + '/';
 }();
 
 

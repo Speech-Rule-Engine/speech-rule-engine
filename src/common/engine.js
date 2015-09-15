@@ -71,6 +71,13 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.semantics = false;
+
+   //TODO: Put this into an enum.
+  /**
+   * The mode in which the engine is running (sync, async, http).
+   * @type {string}
+   */
+  this.mode = 'sync';
 };
 goog.addSingletonGetter(sre.Engine);
 

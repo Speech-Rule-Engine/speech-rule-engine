@@ -16,6 +16,7 @@ node._nsMap;
 function require(library) { }
 var fs;
 fs.readFileSync = function(name) { };
+fs.readFile = function(name, encoding, callback) { };
 fs.writeFileSync = function(name, data) { };
 fs.appendFileSync = function(name, data) { };
 fs.openSync = function(name, parameters) { };

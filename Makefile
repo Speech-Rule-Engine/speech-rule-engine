@@ -156,6 +156,7 @@ $(INTERACTIVE):
 	@echo "process.env.SRE_JSON_PATH = '$(JSON_DIR)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
+	@echo "sre.System.getInstance().setupEngine({'mode': 'async'});" >> $@
 
 CLOSURE_LIB_LINK = $(SRC_DIR)/$(CLOSURE_LIB_NAME)
 
@@ -237,7 +238,7 @@ api: $(SRC)
 browser: $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
 	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.System" --output_file $(BROWSER)
+	@$(CLOSURE_COMPILER) --namespace="sre.Browser" --output_file $(BROWSER)
 
 clean_browser:
 	rm -f $(BROWSER)

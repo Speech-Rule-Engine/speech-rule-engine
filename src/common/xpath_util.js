@@ -49,6 +49,13 @@ sre.XpathUtil.xpathSupported = function() {
 
 
 /**
+ * Current XML Document inside a browser.
+ * @type {Document}
+ */
+sre.XpathUtil.currentDocument = null;
+
+
+/**
  * @type {Function}
  */
 sre.XpathUtil.xpathEvaluate = sre.XpathUtil.xpathSupported() ?
@@ -82,6 +89,35 @@ sre.XpathUtil.nameSpaces_ = {
 
 
 /**
+ * Resolve some default name spaces.
+ * @param {string} prefix Namespace prefix.
+ * @return {string} The corresponding namespace URI.
+ */
+sre.XpathUtil.resolveNameSpace = function(prefix) {
+  return sre.XpathUtil.nameSpaces_[prefix] || null;
+};
+
+
+
+/**
+ * Executes an xpath evaluation.
+ * @param {string} expression The XPath expression to evaluate.
+ * @param {Node} rootNode The HTML node to start evaluating the XPath from.
+ * @param {number} type The xpath result type.
+ * @return {XPathResult} The result of the xpath computation.
+ * @private
+ */
+sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
+  return sre.Engine.getInstance().mode === 'http' ? 
+    sre.XpathUtil.currentDocument.evaluate(
+        expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
+    sre.XpathUtil.xpathEvaluate(
+        expression, rootNode, sre.XpathUtil.createNSResolver(rootNode),
+        type, null);
+};
+
+
+/**
  * Given an XPath expression and rootNode, it returns an array of children nodes
  * that match. The code for this function was taken from Mihai Parparita's GMail
  * Macros Greasemonkey Script.
@@ -92,12 +128,9 @@ sre.XpathUtil.nameSpaces_ = {
  */
 sre.XpathUtil.evalXPath = function(expression, rootNode) {
   try {
-    var xpathIterator = sre.XpathUtil.xpathEvaluate(
-        expression,
-        rootNode,
-        sre.XpathUtil.createNSResolver(rootNode),
-        sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE,
-        null); // no existing results
+    var xpathIterator = sre.XpathUtil.evaluateXpath_(
+        expression, rootNode,
+        sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE);
   } catch (err) {
     return [];
   }
@@ -118,24 +151,7 @@ sre.XpathUtil.evalXPath = function(expression, rootNode) {
  * @return {Array} The array of leaf nodes for the given rootNode.
  */
 sre.XpathUtil.getLeafNodes = function(rootNode) {
-  try {
-    var xpathIterator = sre.XpathUtil.xpathEvaluate(
-        './/*[count(*)=0]',
-        rootNode,
-        null, // no namespace resolver
-        sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE,
-        null); // no existing results
-  } catch (err) {
-    return [];
-  }
-  var results = [];
-  // Convert result to JS array
-  for (var xpathNode = xpathIterator.iterateNext();
-       xpathNode;
-       xpathNode = xpathIterator.iterateNext()) {
-    results.push(xpathNode);
-  }
-  return results;
+  return sre.XpathUtil.evalXPath('.//*[count(*)=0]', rootNode);
 };
 
 
@@ -148,13 +164,10 @@ sre.XpathUtil.getLeafNodes = function(rootNode) {
  */
 sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
   try {
-    var xpathResult = sre.XpathUtil.xpathEvaluate(
-        expression,
-        rootNode,
-        sre.XpathUtil.createNSResolver(rootNode),
-        sre.XpathUtil.xpathResult.BOOLEAN_TYPE,
-        null); // no existing results
+    var xpathResult = sre.XpathUtil.evaluateXpath_(
+        expression, rootNode, sre.XpathUtil.xpathResult.BOOLEAN_TYPE);
   } catch (err) {
+    console.log(err);
     return false;
   }
   return xpathResult.booleanValue;
@@ -170,12 +183,8 @@ sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
  */
 sre.XpathUtil.evaluateString = function(expression, rootNode) {
   try {
-    var xpathResult = sre.XpathUtil.xpathEvaluate(
-        expression,
-        rootNode,
-        sre.XpathUtil.createNSResolver(rootNode),
-        sre.XpathUtil.xpathResult.STRING_TYPE,
-        null); // no existing results
+    var xpathResult = sre.XpathUtil.evaluateXpath_(
+        expression, rootNode, sre.XpathUtil.xpathResult.STRING_TYPE);
   } catch (err) {
     return '';
   }
