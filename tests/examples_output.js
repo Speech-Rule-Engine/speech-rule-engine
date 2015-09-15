@@ -29,26 +29,25 @@ sre.ExamplesOutput = function() { };
 
 /**
  * Activates the example output.
- * @param {boolean} switch The activity flag.
+ * @param {string} file The output file.
  */
-sre.prototype.setActive = function() { };
+sre.ExamplesOutput.prototype.setActive = function(file) { };
 
 
 /**
  * Initialised the examples output but setting up the file.
- * @param {string} file The output file.
  */
-sre.prototype.startExamples = function(file) { };
+sre.ExamplesOutput.prototype.startExamples = function() { };
 
 
 /**
  * Appends a string to the examples file if it exists.
  * @param {string} output The output string.
  */
-sre.prototype.appendExamples = function(example) { };
+sre.ExamplesOutput.prototype.appendExamples = function(example) { };
 
 
 /**
  * Finished writing examples and closes the file.
  */
-sre.prototype.endExamples = function() { };
+sre.ExamplesOutput.prototype.endExamples = function() { };
