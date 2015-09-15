@@ -14,10 +14,17 @@
 
 
 /**
- * @fileoverview Basic configuration elements.
+ * @fileoverview Setup for browser integration of speech rule engine.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-goog.provide('sre.Config');
+goog.provide('sre.Browser');
 
-sre.Config.mode = 'http';
+goog.require('sre.System');
+
+
+
+/**
+ * Default setup of the Engine.
+ */
+(sre.System.getInstance()).setupEngine({'mode': 'http'});

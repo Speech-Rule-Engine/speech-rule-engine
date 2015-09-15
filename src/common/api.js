@@ -60,5 +60,4 @@ module.exports.setupEngine = sre.System.getInstance().setupEngine;
 /**
  * Default setup of the Engine.
  */
-sre.Config.mode = 'async';
-(sre.System.getInstance()).setupEngine({});
+(sre.System.getInstance()).setupEngine({'mode': 'async'});
