@@ -108,9 +108,8 @@ sre.EnrichMathmlTest.prototype.tearDownTest = function() {
 /**
  * Outputs MathML without and with semantics to the HTML file.
  * @param {string} mml MathML expression.
- * @param {string} smml MathML expression with the semantic information.
  */
-sre.EnrichMathmlTest.prototype.htmlOutput = function(mml, smml) {
+sre.EnrichMathmlTest.prototype.htmlOutput = function(mml) {
   this.examples.push(mml.replace(/(['"])/g, '\\\''));
 };
 
@@ -122,7 +121,7 @@ sre.EnrichMathmlTest.prototype.htmlOutput = function(mml, smml) {
  */
 sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var mathMl = '<math>' + mml + '</math>';
-  this.htmlOutput(mathMl, smml);
+  this.htmlOutput(mathMl);
   var node = sre.Semantic.enrichMathml(mathMl);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
