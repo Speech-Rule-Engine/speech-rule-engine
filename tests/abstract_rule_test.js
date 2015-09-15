@@ -21,13 +21,13 @@
 
 goog.provide('sre.AbstractRuleTest');
 
-goog.require('sre.AbstractTest');
+goog.require('sre.AbstractExamples');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sre.AbstractExamples}
  */
 sre.AbstractRuleTest = function() {
   goog.base(this);
@@ -47,7 +47,7 @@ sre.AbstractRuleTest = function() {
    */
   this.semantics = false;
 };
-goog.inherits(sre.AbstractRuleTest, sre.AbstractTest);
+goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
 
 /**
@@ -62,6 +62,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   opt_style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
+  this.appendExamples(mathMl);
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: opt_style});
   var result = sre.System.getInstance().processExpression(mathMl);
