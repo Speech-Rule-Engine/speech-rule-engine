@@ -73,6 +73,7 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
   } catch (err) {
     this.fileError = 'Bad file name ' + sre.EnrichMathmlTest.HTML_OUTPUT;
   }
+  sre.Engine.getInstance().mathmlSpeech = false;
 };
 
 

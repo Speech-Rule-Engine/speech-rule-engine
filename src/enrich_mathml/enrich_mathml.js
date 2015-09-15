@@ -570,7 +570,9 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
-  sre.EnrichMathml.addSpeech(mml, semantic);
+  if (sre.Engine.getInstance().mathmlSpeech) {
+    sre.EnrichMathml.addSpeech(mml, semantic);
+  }
 };
 
 

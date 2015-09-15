@@ -78,6 +78,12 @@ sre.Engine = function() {
    * @type {string}
    */
   this.mode = 'sync';
+
+  /**
+   * Flag indicating whether or not speech should be added to enriched MathML.
+   * @type {boolean}
+   */
+  this.mathmlSpeech = true;
 };
 goog.addSingletonGetter(sre.Engine);
 
