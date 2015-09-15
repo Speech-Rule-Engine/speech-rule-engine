@@ -86,7 +86,12 @@ sre.DomUtil.parseInput = function(input, opt_error) {
     throw newError;
   }
   try {
-    var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
+    var doc = dp.parseFromString(clean_input, 'text/xml');
+    if (sre.Engine.getInstance().mode === 'http') {
+      sre.XpathUtil.currentDocument = doc;
+      return doc.documentElement;
+    }
+    var result = doc.documentElement;
     sre.XpathUtil.prefixNamespace(result);
     return result;
   } catch (err) {
