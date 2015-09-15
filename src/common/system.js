@@ -22,7 +22,7 @@
 goog.provide('sre.System');
 
 goog.require('sre.CombinedStore');
-goog.require('sre.Config');
+goog.require('sre.Engine');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.MathMap');
@@ -140,6 +140,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.semantics = !!feature.semantics;
+  engine.mode = feature.mode || engine.mode;
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
@@ -181,6 +182,9 @@ sre.System.prototype.processExpression = function(expr) {
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {
   var tree = sre.Semantic.getTree(mml);
+  if (sre.Engine.getInstance().mode === 'http') {
+    return tree.firstElementChild;
+  }
   return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
 };
 
