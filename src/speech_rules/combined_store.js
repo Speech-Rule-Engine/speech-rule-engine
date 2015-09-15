@@ -59,7 +59,6 @@ sre.CombinedStore.mathStore.initialize = function() {
  */
 sre.CombinedStore.prototype.updateEngine = function() {
   var maps = sre.MathMap.getInstance();
-  console.log(sre.MathMap.toFetch);
   if (sre.MathMap.toFetch) {
     setTimeout(sre.CombinedStore.getInstance().updateEngine, 500);
   } else {

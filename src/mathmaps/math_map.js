@@ -23,13 +23,18 @@
 
 goog.provide('sre.MathMap');
 
-goog.require('sre.Config');
+goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.MathUtil');
 goog.require('sre.SystemExternal');
 
 
-
+//TODO: (sorge)
+// Refactor code to have uniform retrieval methods for the three system modes.
+// Combine similar code for async and http.
+// Move fetch parameter into engine to be globally available.
+// Provide a generic restarts function.
+//
 /**
  *
  * @constructor
@@ -72,6 +77,11 @@ sre.MathMap = function() {
 goog.addSingletonGetter(sre.MathMap);
 
 
+
+/**
+ * Files left to fetch in asynchronous mode.
+ * @type {number}
+ */
 sre.MathMap.toFetch = 0;
 
 
@@ -145,7 +155,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_angles.json', 'math_arrows.json', 'math_characters.json',
   'math_delimiters.json', 'math_digits.json', 'math_geometry.json',
   'math_harpoons.json', 'math_non_characters.json', 'math_symbols.json',
-  'math_whitespace.json', 'other_stars.json', 'nix.json'
+  'math_whitespace.json', 'other_stars.json'
 ];
 
 
@@ -180,9 +190,7 @@ sre.MathMap.UNITS_FILES_ = [
  * @param {function(JSONType)} func Method adding the rules.
  */
 sre.MathMap.retrieveFiles = function(files, path, func) {
-  console.log(sre.Config.mode);
-  
-  switch (sre.Config.mode) {
+  switch (sre.Engine.getInstance().mode) {
   case 'async':
     sre.MathMap.toFetch += files.length;
     for (var i = 0, file; file = files[i]; i++) {
@@ -207,7 +215,6 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
         forEach(function(json) {func(json);});
     break;
   }
-  
 };
 
 
@@ -226,7 +233,7 @@ sre.MathMap.fromFile_ = function(path, func) {
 /**
  * Loads JSON for a given file name.
  * @param {string} file A valid filename.
- * @return {string} A string representing JSON array.
+ * @return {string} A string representing a JSON array.
  */
 sre.MathMap.loadFile = function(file) {
   try {
@@ -273,13 +280,20 @@ sre.MathMap.readJSON_ = function(path) {
 };
 
 
+/**
+ * Sents AJAX request to retrieve a JSON rule file.
+ * @param {string} file The file to retrieve.
+ * @param {function(JSONType)} func Method adding the retrieved rules.
+ * @private
+ */
 sre.MathMap.getJsonAjax_ = function(file, func) {
-  console.log('getting json');
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
-    sre.MathMap.toFetch--;
-    if (httpRequest.readyState === 4 && httpRequest.status === 200) {
-      JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
+    if (httpRequest.readyState === 4) {
+      sre.MathMap.toFetch--;
+      if (httpRequest.status === 200) {
+        JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
+      }
     }
   };
   httpRequest.open('GET', file, true);
@@ -287,11 +301,9 @@ sre.MathMap.getJsonAjax_ = function(file, func) {
 };
 
 
-sre.MathMap.getAjaxFiles_ = function() {
-  sre.MathMap.FUNCTIONS_FILES_.map(sre.MathMap.getJsonAjax_);
-};
-
-
+/**
+ * Sets the set of all possible dynamic constraint values.
+ */
 sre.MathMap.prototype.getDynamicConstraintValues = function() {
   if (sre.MathMap.toFetch) {
     setTimeout(goog.bind(this.getDynamicConstraintValues, this), 300);
