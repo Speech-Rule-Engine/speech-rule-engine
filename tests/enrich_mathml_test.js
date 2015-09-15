@@ -42,22 +42,6 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
 
 /**
- * @override
- */
-sre.EnrichMathmlTest.prototype.setUpTest = function() {
-  this.startExamples();
-};
-
-
-/**
- * @override
- */
-sre.EnrichMathmlTest.prototype.tearDownTest = function() {
-  this.endExamples();
-};
-
-
-/**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} mml MathML expression.
  * @param {string} smml MathML snippet for the semantic information.

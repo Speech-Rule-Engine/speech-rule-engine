@@ -13,7 +13,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class of test cases.
+ * @fileoverview Abstract class for test cases that produce example output.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -24,7 +24,6 @@ goog.require('sre.ExamplesOutput');
 goog.require('sre.System');
 
 
-//TODO: (sorge) This should be a standalone abstract class!
 /**
  * @constructor
  * @implements {sre.ExamplesOutput}
@@ -124,4 +123,20 @@ sre.AbstractExamples.prototype.endExamples = function() {
   if (this.fileError_) {
     throw new sre.System.Error(this.fileError_);
   }
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractExamples.prototype.setUpTest = function() {
+  this.startExamples();
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractExamples.prototype.tearDownTest = function() {
+  this.endExamples();
 };
