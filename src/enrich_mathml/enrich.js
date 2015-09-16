@@ -48,10 +48,27 @@ sre.Enrich.semanticMathmlNode = function(mml) {
  * @param {!string} expr The MathML expression as a string without math tags.
  * @return {!Element} The modified MathML element.
  */
-sre.Enrich.semanticMathml = function(expr) {
+sre.Enrich.semanticMathmlSync = function(expr) {
   // TODO (sorge) Catch error case.
   var mml = sre.DomUtil.parseInput(expr);
   return sre.Enrich.semanticMathmlNode(mml);
+};
+
+
+/**
+ * Reads a MathML element from a string and semantically enriches its.
+ * @param {!string} expr The MathML expression as a string without math tags.
+ * @param {function(!Element)} callback Function to apply on the result.
+ */
+sre.Enrich.semanticMathml = function(expr, callback) {
+  if (sre.MathMap.toFetch) {
+    setTimeout(function() {
+      sre.Enrich.semanticMathml(expr, callback);
+    }, 500);
+  } else {
+    var mml = sre.DomUtil.parseInput(expr);
+    callback(sre.Enrich.semanticMathmlNode(mml));
+  }
 };
 
 
@@ -61,7 +78,7 @@ sre.Enrich.semanticMathml = function(expr) {
  */
 sre.Enrich.testTranslation__ = function(expr) {
   sre.Debugger.getInstance().init();
-  var mml = sre.Enrich.semanticMathml(
+  var mml = sre.Enrich.semanticMathmlSync(
       sre.Enrich.prepareMmlString(expr)).toString();
   sre.EnrichMathml.removeAttributePrefix(mml);
   sre.Debugger.getInstance().exit();

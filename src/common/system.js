@@ -84,6 +84,7 @@ sre.System.prototype.setupEngine = function(feature) {
 };
 
 
+//TODO: (sorge) Need an async version of this.
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
