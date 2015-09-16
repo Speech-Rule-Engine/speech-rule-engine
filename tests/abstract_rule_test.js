@@ -63,6 +63,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   this.appendExamples(mathMl);
+  sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: opt_style});
   var result = sre.System.getInstance().processExpression(mathMl);
