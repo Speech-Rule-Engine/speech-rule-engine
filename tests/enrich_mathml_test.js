@@ -19,14 +19,14 @@
 
 goog.provide('sre.EnrichMathmlTest');
 
-goog.require('sre.AbstractTest');
+goog.require('sre.AbstractExamples');
 goog.require('sre.Enrich');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sre.AbstractExamples}
  */
 sre.EnrichMathmlTest = function() {
   goog.base(this);
@@ -36,84 +36,9 @@ sre.EnrichMathmlTest = function() {
    */
   this.information = 'Semantic enrichment tests.';
 
-  /**
-   * Sets example output file for tests.
-   * @type {!string}
-   */
-  this.exampleFile = sre.EnrichMathmlTest.HTML_OUTPUT + '.js';
-
-  /**
-   * Possible file error.
-   * @type {!string}
-   */
-  this.fileError = '';
-
-  /**
-   * @type {!Array.<string>}
-   */
-  this.examples = [];
+  this.setActive('EnrichExamples');
 };
-goog.inherits(sre.EnrichMathmlTest, sre.AbstractTest);
-
-
-/**
- * An optional file for HTML output.
- * @type {string}
- * @const
- */
-sre.EnrichMathmlTest.HTML_OUTPUT = 'tests';
-
-
-/**
- * @override
- */
-sre.EnrichMathmlTest.prototype.setUpTest = function() {
-  try {
-    sre.SystemExternal.fs.openSync(this.exampleFile, 'w+');
-  } catch (err) {
-    this.fileError = 'Bad file name ' + sre.EnrichMathmlTest.HTML_OUTPUT;
-  }
-  sre.Engine.getInstance().mathmlSpeech = false;
-};
-
-
-/**
- * Appends a string to the HTML file if it exists.
- * @param {string} output The output string.
- */
-sre.EnrichMathmlTest.prototype.appendToFile = function(output) {
-  // TODO (sorge) Rewrite this asynchronously.
-  if (!this.fileError) {
-    try {
-      sre.SystemExternal.fs.appendFileSync(
-          this.exampleFile,
-          'Lab.Examples = [\'' + this.examples.join('\',\n\'') + '\']');
-    } catch (err) {
-      this.fileError = 'Could not append to file ' + this.exampleFile;
-    }
-  }
-};
-
-
-/**
- * @override
- */
-sre.EnrichMathmlTest.prototype.tearDownTest = function() {
-  this.appendToFile('');
-  if (this.fileError) {
-    throw new sre.System.Error(this.fileError);
-  }
-};
-
-
-/**
- * Outputs MathML without and with semantics to the HTML file.
- * @param {string} mml MathML expression.
- * @param {string} smml MathML expression with the semantic information.
- */
-sre.EnrichMathmlTest.prototype.htmlOutput = function(mml, smml) {
-  this.examples.push(mml.replace(/(['"])/g, '\\\''));
-};
+goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
 
 /**

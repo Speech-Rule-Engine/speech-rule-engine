@@ -167,7 +167,6 @@ sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
     var xpathResult = sre.XpathUtil.evaluateXpath_(
         expression, rootNode, sre.XpathUtil.xpathResult.BOOLEAN_TYPE);
   } catch (err) {
-    console.log(err);
     return false;
   }
   return xpathResult.booleanValue;
