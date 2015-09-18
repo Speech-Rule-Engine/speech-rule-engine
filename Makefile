@@ -20,6 +20,7 @@ SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
+MATHJAX = $(LIB_DIR)/sre_mathjax.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 ENRICH = $(LIB_DIR)/enrich.js
 
@@ -242,6 +243,14 @@ browser: $(SRC)
 
 clean_browser:
 	rm -f $(BROWSER)
+
+mathjax: $(SRC)
+	@echo Compiling MathJax ready Speech Rule Engine
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(MATHJAX)
+
+clean_mathjax:
+	rm -f $(MATHJAX)
 
 semantic: $(SRC)
 	@echo Compiling browser ready Semantic Tree API

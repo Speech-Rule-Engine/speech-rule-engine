@@ -28,3 +28,19 @@ fs.createWriteStream = function(name) { };
  */
 var stream;
 stream.on = function(msg, fnc) { };
+
+
+var MathJax;
+MathJax.Extension = {};
+MathJax.Hub = {};
+MathJax.Hub.Register = {};
+MathJax.Hub.Register.StartupHook = function(signal, callback) { };
+MathJax.Hub.Startup = {};
+MathJax.Hub.Startup.signal;
+MathJax.Callback = {};
+/**
+ * @type {function(...Object)}
+ */
+MathJax.Callback.Queue = function(var_args) { };
+MathJax.Callback.Signal = function(signal) { };
+
