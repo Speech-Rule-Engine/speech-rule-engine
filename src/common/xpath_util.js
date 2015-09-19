@@ -108,7 +108,7 @@ sre.XpathUtil.resolveNameSpace = function(prefix) {
  * @private
  */
 sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
-  return sre.Engine.getInstance().mode === 'http' ? 
+  return sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP ? 
     sre.XpathUtil.currentDocument.evaluate(
         expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
     sre.XpathUtil.xpathEvaluate(

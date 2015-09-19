@@ -32,7 +32,6 @@ goog.require('sre.SystemExternal');
 //TODO: (sorge)
 // Refactor code to have uniform retrieval methods for the three system modes.
 // Combine similar code for async and http.
-// Move fetch parameter into engine to be globally available.
 // Provide a generic restarts function.
 //
 /**
@@ -195,7 +194,7 @@ sre.MathMap.UNITS_FILES_ = [
  */
 sre.MathMap.retrieveFiles = function(files, path, func) {
   switch (sre.Engine.getInstance().mode) {
-  case 'async':
+  case sre.Engine.Mode.ASYNC:
     sre.MathMap.toFetch_ += files.length;
     for (var i = 0, file; file = files[i]; i++) {
       sre.MathMap.fromFile_(path + file,
@@ -206,13 +205,13 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
                             });
     }
     break;
-  case 'http':
+  case sre.Engine.Mode.HTTP:
     sre.MathMap.toFetch_ += files.length;
     for (i = 0; file = files[i]; i++) {
       sre.MathMap.getJsonAjax_(path + file, func);
     }
     break;
-  case 'sync':
+  case sre.Engine.Mode.SYNC:
   default:
     var innerFunc = function(file) { return path + file; };
     sre.MathMap.parseFiles(files.map(innerFunc)).

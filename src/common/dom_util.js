@@ -87,7 +87,7 @@ sre.DomUtil.parseInput = function(input, opt_error) {
   }
   try {
     var doc = dp.parseFromString(clean_input, 'text/xml');
-    if (sre.Engine.getInstance().mode === 'http') {
+    if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
       sre.XpathUtil.currentDocument = doc;
       return doc.documentElement;
     }

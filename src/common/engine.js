@@ -19,6 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.Engine');
+goog.provide('sre.Engine.Mode');
 
 
 
@@ -75,9 +76,9 @@ sre.Engine = function() {
    //TODO: Put this into an enum.
   /**
    * The mode in which the engine is running (sync, async, http).
-   * @type {string}
+   * @type {sre.Engine.Mode}
    */
-  this.mode = 'sync';
+  this.mode = sre.Engine.Mode.SYNC;
 
   /**
    * Flag indicating whether or not speech should be added to enriched MathML.
@@ -103,6 +104,17 @@ sre.Engine.personalityProps = {
   RATE: 'rate',
   VOLUME: 'volume',
   PAUSE: 'pause'
+};
+
+
+/**
+ * Defines the modes in which the engine can run.
+ * @enum {string}
+ */
+sre.Engine.Mode = {
+  SYNC: 'sync',
+  ASYNC: 'async',
+  HTTP: 'http'
 };
 
 
