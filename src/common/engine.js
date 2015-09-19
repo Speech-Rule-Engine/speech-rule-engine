@@ -84,6 +84,12 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.mathmlSpeech = true;
+
+  /**
+   * List of predicates for checking if the engine is set up.
+   * @type {!Array.<function():boolean>}
+   */
+  this.setupTests_ = [];
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -97,4 +103,28 @@ sre.Engine.personalityProps = {
   RATE: 'rate',
   VOLUME: 'volume',
   PAUSE: 'pause'
+};
+
+
+/**
+ * Registers a predicate to test whether the setup of the engine is complete.
+ * The basic idea is that different parts of the system that run asynchronously
+ * can register a test here and the engine can check if it is set up without the
+ * need to know which bits actually run asynchronously.
+ * @param {function():boolean} pred A predicate that takes no input and returns
+ *     a boolean value.
+ */
+sre.Engine.registerTest = function(pred) {
+  sre.Engine.getInstance().setupTests_.push(pred);
+};
+
+
+/**
+ * Test to see if the engine is fully setup. Important for async and http mode.
+ * @return {boolean} True if the engine has completed its setup.
+ */
+sre.Engine.isReady = function() {
+  return sre.Engine.getInstance().setupTests_.every(
+    function(pred) { return pred(); }
+  );
 };

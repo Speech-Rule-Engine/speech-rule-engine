@@ -81,8 +81,12 @@ goog.addSingletonGetter(sre.MathMap);
 /**
  * Files left to fetch in asynchronous mode.
  * @type {number}
+ * @private
  */
-sre.MathMap.toFetch = 0;
+sre.MathMap.toFetch_ = 0;
+sre.Engine.registerTest(function() {
+  return sre.MathMap.getInstance() && !sre.MathMap.toFetch_;
+});
 
 
 /**
@@ -192,18 +196,18 @@ sre.MathMap.UNITS_FILES_ = [
 sre.MathMap.retrieveFiles = function(files, path, func) {
   switch (sre.Engine.getInstance().mode) {
   case 'async':
-    sre.MathMap.toFetch += files.length;
+    sre.MathMap.toFetch_ += files.length;
     for (var i = 0, file; file = files[i]; i++) {
       sre.MathMap.fromFile_(path + file,
                             function(err, json) {
-                              sre.MathMap.toFetch--;
+                              sre.MathMap.toFetch_--;
                               if (err) return;
                               JSON.parse(json).forEach(function(x) {func(x);});
                             });
     }
     break;
   case 'http':
-    sre.MathMap.toFetch += files.length;
+    sre.MathMap.toFetch_ += files.length;
     for (i = 0; file = files[i]; i++) {
       sre.MathMap.getJsonAjax_(path + file, func);
     }
@@ -290,7 +294,7 @@ sre.MathMap.getJsonAjax_ = function(file, func) {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
-      sre.MathMap.toFetch--;
+      sre.MathMap.toFetch_--;
       if (httpRequest.status === 200) {
         JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
       }
@@ -305,7 +309,7 @@ sre.MathMap.getJsonAjax_ = function(file, func) {
  * Sets the set of all possible dynamic constraint values.
  */
 sre.MathMap.prototype.getDynamicConstraintValues = function() {
-  if (sre.MathMap.toFetch) {
+  if (sre.MathMap.toFetch_) {
     setTimeout(goog.bind(this.getDynamicConstraintValues, this), 300);
   } else {
     var cstr = this.store.getDynamicConstraintValues();

@@ -59,12 +59,12 @@ sre.CombinedStore.mathStore.initialize = function() {
  */
 sre.CombinedStore.prototype.updateEngine = function() {
   var maps = sre.MathMap.getInstance();
-  if (sre.MathMap.toFetch) {
+  if (!sre.Engine.isReady()) {
     setTimeout(sre.CombinedStore.getInstance().updateEngine, 500);
-  } else {
-    var engine = sre.Engine.getInstance();
-    var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
-    engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);
-    engine.allStyles = sre.MathUtil.union(dynamicCstr.style, maps.allStyles);
-  }
+    return;
+  } 
+  var engine = sre.Engine.getInstance();
+  var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
+  engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);
+  engine.allStyles = sre.MathUtil.union(dynamicCstr.style, maps.allStyles);
 };

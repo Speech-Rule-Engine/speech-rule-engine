@@ -21,6 +21,7 @@
 goog.provide('sre.Mathjax');
 
 goog.require('sre.System');
+goog.require('sre.Engine');
 
 
 
@@ -36,15 +37,17 @@ goog.require('sre.System');
     signal: SIGNAL,
 
     ConfigSre: function() {
-      if (sre.MathMap.toFetch) {
+      if (!sre.Engine.isReady()) {
         setTimeout(MathJax.Extension.Sre.ConfigSre, 500);
-      } else {
-        MathJax.Callback.Queue(
-          // wait until config is complete
-          MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
-          ['Post', MathJax.Hub.Startup.signal, 'Sre Ready']
-        );
+        return;
       }
+      MathJax.Callback.Queue(
+        // Wait until mml Jax is ready.
+        // This is not strictly necessary for SRE but for the semantic lab.
+        // 
+        MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
+        ['Post', MathJax.Hub.Startup.signal, 'Sre Ready']
+      );
     }
   };
   

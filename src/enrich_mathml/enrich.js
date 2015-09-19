@@ -61,14 +61,12 @@ sre.Enrich.semanticMathmlSync = function(expr) {
  * @param {function(!Element)} callback Function to apply on the result.
  */
 sre.Enrich.semanticMathml = function(expr, callback) {
-  if (sre.MathMap.toFetch) {
-    setTimeout(function() {
-      sre.Enrich.semanticMathml(expr, callback);
-    }, 500);
-  } else {
-    var mml = sre.DomUtil.parseInput(expr);
-    callback(sre.Enrich.semanticMathmlNode(mml));
+  if (!sre.Engine.isReady()) {
+    setTimeout(function() { sre.Enrich.semanticMathml(expr, callback); }, 500);
+    return;
   }
+  var mml = sre.DomUtil.parseInput(expr);
+  callback(sre.Enrich.semanticMathmlNode(mml));
 };
 
 
