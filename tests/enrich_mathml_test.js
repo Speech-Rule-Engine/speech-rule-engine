@@ -49,7 +49,7 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
  */
 sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var mathMl = sre.Enrich.prepareMmlString(mml);
-  var node = sre.Enrich.semanticMathml(mathMl);
+  var node = sre.Enrich.semanticMathmlSync(mathMl);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();

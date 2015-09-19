@@ -42,7 +42,7 @@ sre.ExamplesOutput.prototype.startExamples = function() { };
 
 /**
  * Appends a string to the examples file if it exists.
- * @param {string} output The output string.
+ * @param {string} example The example output.
  */
 sre.ExamplesOutput.prototype.appendExamples = function(example) { };
 
