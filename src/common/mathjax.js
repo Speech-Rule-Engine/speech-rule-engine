@@ -29,7 +29,6 @@ goog.require('sre.System');
  * This is written in MathJax <=2.6 style.
  */
 (function () {
-  console.log('Starting sre!');
   var ENGINE = sre.System.getInstance();
   var SIGNAL = MathJax.Callback.Signal('Sre');
   MathJax.Extension.Sre = {
@@ -37,9 +36,7 @@ goog.require('sre.System');
     signal: SIGNAL,
 
     ConfigSre: function() {
-      console.log('Configuring SRE...');
       if (sre.MathMap.toFetch) {
-        console.log('fetching');
         setTimeout(MathJax.Extension.Sre.ConfigSre, 500);
       } else {
         MathJax.Callback.Queue(
