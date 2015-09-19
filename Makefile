@@ -157,7 +157,7 @@ $(INTERACTIVE):
 	@echo "process.env.SRE_JSON_PATH = '$(JSON_DIR)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
-	@echo "sre.System.getInstance().setupEngine({'mode': 'async'});" >> $@
+	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
 
 CLOSURE_LIB_LINK = $(SRC_DIR)/$(CLOSURE_LIB_NAME)
 

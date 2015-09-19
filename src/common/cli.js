@@ -21,6 +21,8 @@
 goog.provide('sre.Cli');
 
 goog.require('sre.Debugger');
+goog.require('sre.Engine');
+goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
 
@@ -71,7 +73,7 @@ sre.Cli.prototype.commandLine = function() {
       parse(process.argv);
   try {
     if (commander.enumerate) {
-      sre.System.getInstance().setupEngine({'mode': 'sync'});
+      sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.SYNC});
       var output = 'Domain options: ' +
           sre.Engine.getInstance().allDomains.sort().join(', ') +
           '\nStyle options:  ' +
@@ -88,7 +90,7 @@ sre.Cli.prototype.commandLine = function() {
           'domain': commander.dom,
           'style': commander.style,
           'mathml': commander.mathml,
-          'mode': 'sync'
+          'mode': sre.Engine.Mode.SYNC
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);

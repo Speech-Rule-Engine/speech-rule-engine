@@ -20,11 +20,11 @@
  */
 goog.provide('sre.Browser');
 
+goog.require('sre.Engine.Mode');
 goog.require('sre.System');
-
 
 
 /**
  * Default setup of the Engine.
  */
-(sre.System.getInstance()).setupEngine({'mode': 'http'});
+(sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.HTTP});
