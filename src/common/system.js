@@ -105,6 +105,7 @@ sre.System.prototype.processExpression = function(expr) {
     console.log('Parse Error: ' + err.message);
     return '';
   }
+  sre.SpeechRuleEngine.getInstance().clearCache();
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   return sre.AuditoryDescription.toSimpleString(descrs);
 };
