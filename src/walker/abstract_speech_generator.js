@@ -14,32 +14,38 @@
 
 
 /**
- * @fileoverview Direct speech generator that simply picks up the speech
+ * @fileoverview Abstract speech generator that simply picks up the speech
  *     attribute.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.DirectSpeechGenerator');
+goog.provide('sre.AbstractSpeechGenerator');
 
-goog.require('sre.AbstractSpeechGenerator');
+goog.require('sre.SpeechGeneratorInterface');
 
 
 
 /**
  * @constructor
- * @extends{sre.AbstractSpeechGenerator}
+ * @implements{sre.SpeechGeneratorInterface}
  */
-sre.DirectSpeechGenerator = function() {
-  goog.base(this);
-};
-goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
+sre.AbstractSpeechGenerator = function() { };
 
 
 /**
  * @override
  */
-sre.DirectSpeechGenerator.prototype.getSpeech = function(node) {
-    //TODO: Use the correct prefix!
-  return node.getAttribute('data-semantic-speech');
-};
+sre.AbstractSpeechGenerator.prototype.getSpeech = goog.abstractMethod;
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.start = function() { };
+  
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.end = function() { };

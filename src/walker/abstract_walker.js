@@ -49,16 +49,9 @@ sre.AbstractWalker = function(node, generator) {
    */
   this.active_ = false;
 
-  //
-  // Don't think we'll need that!
-  // /**
-  //  * @type {Array.<sre.EventUtils.Event>}
-  //  * @private
-  //  */
-  // this.internalEvents_ = [];
-  
   /**
    * @type {Object.<sre.EventUtil.KeyCode, function()>}
+   * @private
    */
   this.keyMapping_ = {};
   this.keyMapping_[sre.EventUtil.KeyCode.UP] = this.up;
