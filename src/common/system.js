@@ -76,6 +76,9 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.semantics = !!feature.semantics;
+  if (feature.cache !== undefined) {
+    engine.withCache = !!feature.cache;
+  }
   engine.mode = feature.mode || engine.mode;
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());

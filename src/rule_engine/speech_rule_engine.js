@@ -152,13 +152,6 @@ sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
 };
 
 
-//TODO: (sorge) Move to Engine.
-/**
- * @type {boolean}
- */
-sre.SpeechRuleEngine.withCache = true;
-
-
 /**
  * Clears the cache.
  */
@@ -231,10 +224,9 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  if (sre.SpeechRuleEngine.withCache) {
+  if (sre.Engine.getInstance().withCache) {
     var result = this.getCacheForNode_(node);
     if (result) {
-      // console.log('Cache success:' + node.toString());
       return result;
     }
   }

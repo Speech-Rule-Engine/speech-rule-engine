@@ -92,6 +92,12 @@ sre.Engine = function() {
    * @private
    */
   this.setupTests_ = [];
+
+  /**
+   * Caching during speech generation.
+   * @type {boolean}
+   */
+  this.withCache = true;
 };
 goog.addSingletonGetter(sre.Engine);
 
