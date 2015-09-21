@@ -55,36 +55,23 @@ sre.WalkerInterface.prototype.deactivate = function() {};
 
 
 /**
- * Computes the next speech string depending on the key event.
+ * Computes the speech string of the currently examined node.
+ * @return {?string} The current speech string.
+ */
+sre.WalkerInterface.prototype.speech = function(key) {};
+
+
+/**
+ * The node the walker currently sits on.
+ * @return {!Node} The current node.
+ */
+sre.WalkerInterface.prototype.node = function() {};
+
+
+/**
+ * Performs the next move depending on the key event.
  * @param {!sre.EventUtil.KeyCode} key The input key code.
- * @return {?string} The new speech string.
+ * @return {?boolean} True if the move was successful, false, if it was not, and
+ *     null if there was no move of the key.
  */
-sre.WalkerInterface.prototype.getSpeech = function(key) {};
-
-
-/**
- * Moves up from the current node if possible.
- * @return {?Node} 
- */
-sre.WalkerInterface.prototype.up = function() {};
-
-
-/**
- * Moves down from the current node if possible.
- * @return {?Node} 
- */
-sre.WalkerInterface.prototype.down = function() {};
-
-
-/**
- * Moves left from the current node if possible.
- * @return {?Node} 
- */
-sre.WalkerInterface.prototype.left = function() {};
-
-
-/**
- * Moves right from the current node if possible.
- * @return {?Node} 
- */
-sre.WalkerInterface.prototype.right = function() {};
+sre.WalkerInterface.prototype.move = function(key) {};

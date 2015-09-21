@@ -58,13 +58,18 @@ sre.AbstractWalker = function(node, generator) {
   this.keyMapping_[sre.EventUtil.KeyCode.DOWN] = this.down;
   this.keyMapping_[sre.EventUtil.KeyCode.RIGHT] = this.right;
   this.keyMapping_[sre.EventUtil.KeyCode.LEFT] = this.left;
+
+  this.dummy_ = function() {};
+  this.keyMapping_[sre.EventUtil.KeyCode.TAB] = this.dummy_;
+  this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = this.dummy_;
+  this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = this.dummy_;
   
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
    * @type {!Node}
    */
-  this.currentNode = node;
+  this.currentNode = this.getRoot_(node);
 };
 
 
@@ -112,17 +117,15 @@ sre.AbstractWalker.prototype.deactivate = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.getSpeech = function(key) {
-  var direction = this.keyMapping_[key];
-  console.log(direction);
-  console.log(this.up);
-  if (!direction) {
-    return null;
-  }
-  var node = direction();
-  if (!node || node === this.currentNode) {
-    return null;
-  } 
+sre.AbstractWalker.prototype.node = function() {
+  return this.currentNode;
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractWalker.prototype.speech = function() {
   return this.generator.getSpeech(this.currentNode);
 };
 
@@ -130,22 +133,69 @@ sre.AbstractWalker.prototype.getSpeech = function(key) {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.up = goog.abstractMethod;
+sre.AbstractWalker.prototype.move = function(key) {
+  var direction = this.keyMapping_[key];
+  if (!direction) {
+    return null;
+  }
+  var node = direction();
+  if (!node || node === this.currentNode) {
+    return false;
+  }
+  this.currentNode = node;
+  return true;
+};
 
 
 /**
- * @override
+ * Moves up from the current node if possible.
+ * @return {?Node}
+ * @protected
  */
-sre.AbstractWalker.prototype.down = goog.abstractMethod;
+sre.AbstractWalker.prototype.up = function() {};
 
 
 /**
- * @override
+ * Moves down from the current node if possible.
+ * @return {?Node} 
+ * @protected
  */
-sre.AbstractWalker.prototype.left = goog.abstractMethod;
+sre.AbstractWalker.prototype.down = function() {};
 
 
 /**
- * @override
+ * Moves left from the current node if possible.
+ * @return {?Node} 
+ * @protected
  */
-sre.AbstractWalker.prototype.right = goog.abstractMethod;
+sre.AbstractWalker.prototype.left = function() {};
+
+
+/**
+ * Moves right from the current node if possible.
+ * @return {?Node} 
+ * @protected
+ */
+sre.AbstractWalker.prototype.right = function() {};
+
+
+/**
+ * Retrieves the root node of the semantic tree.
+ * @param {!Node} node The math node.
+ * @return {!Node} The root node. If we cannot find one, the input node is
+ *     returned.
+ * @private
+ */
+sre.AbstractWalker.prototype.getRoot_ = function(math) {
+  if (math.hasAttribute('data-semantic-speech') &&
+      !math.hasAttribute('data-semantic-parent')) {
+    return math;
+  }
+  var speechNodes = math.querySelectorAll('span[data-semantic-speech]');
+  for (var i = 0, speechNode; speechNode = speechNodes[i]; i++) {
+    if (!speechNode.hasAttribute('data-semantic-parent')) {
+      return speechNode;
+    }
+  }
+  return math;
+};

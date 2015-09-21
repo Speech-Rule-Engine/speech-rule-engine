@@ -31,6 +31,7 @@ goog.require('sre.AbstractWalker');
  * @override
  */
 sre.SyntaxWalker = function(node, generator) {
+  console.log(node);
   goog.base(this, node, generator);
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
