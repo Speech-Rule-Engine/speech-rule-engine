@@ -117,9 +117,9 @@ sre.AuditoryDescription.toSimpleString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
   sre.AuditoryDescription.preprocessDescriptionList_(descrs);
   return sre.DomUtil.removeEmpty(
-    descrs.map(
+      descrs.map(
       function(x) {return x.descriptionString();})).
-        join(separator);
+      join(separator);
 };
 
 
@@ -171,7 +171,8 @@ sre.AuditoryDescription.preprocessDescription_ = function(descr) {
   }
   if (descr.preprocess) {
     descr.text = sre.AuditoryDescription.processCorrections_(
-        sre.AuditoryDescription.preprocessString_(descr.text), descr.correction);
+        sre.AuditoryDescription.preprocessString_(descr.text),
+        descr.correction);
     descr.preprocess = false;
   }
 };

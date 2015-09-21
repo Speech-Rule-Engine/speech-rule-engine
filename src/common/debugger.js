@@ -94,8 +94,8 @@ sre.Debugger.prototype.startDebugFile_ = function(filename) {
  */
 sre.Debugger.prototype.output_ = function(outputList) {
   this.outputFunction_.apply(
-    console.log === this.outputFunction_ ? console : this.outputFunction_,
-    ['Speech Rule Engine Debugger:'].concat(outputList));
+      console.log === this.outputFunction_ ? console : this.outputFunction_,
+      ['Speech Rule Engine Debugger:'].concat(outputList));
 };
 
 

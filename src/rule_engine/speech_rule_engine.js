@@ -66,7 +66,8 @@ sre.SpeechRuleEngine = function() {
 
   /**
    * Caches speech strings by node id.
-   * @type {Object.<string, Array.<sre.AuditoryDescription>>}
+   * @type {Object.<string, !Array.<sre.AuditoryDescription>>}
+   * @private
    */
   this.cache_ = {};
 };
@@ -151,28 +152,54 @@ sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
 };
 
 
+//TODO: (sorge) Move to Engine.
+/**
+ * @type {boolean}
+ */
 sre.SpeechRuleEngine.withCache = true;
 
 
+/**
+ * Clears the cache.
+ */
 sre.SpeechRuleEngine.prototype.clearCache = function() {
   this.cache_ = {};
 };
 
 
-sre.SpeechRuleEngine.prototype.getCacheForNode = function(node) {
+/**
+ * Retrieves a cached value for a particular element.
+ * @param {Node} node The element to lookup.
+ * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
   if (!node || !node.getAttribute) return null;
   var key = node.getAttribute('id');
   if (key === 'undefined' || key === '') return null;
-  return this.getCache(key);
+  return this.getCache_(key);
 };
 
 
-sre.SpeechRuleEngine.prototype.getCache = function(key) {
+/**
+ * Retrieves a cached value by key.
+ * @param {string} key The node id.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.getCache_ = function(key) {
   return this.cache_[key];
 };
 
 
-sre.SpeechRuleEngine.prototype.pushCache = function(node, speech) {
+/**
+ * Caches speech for a particular node.
+ * @param {!Node} node The node to cache speech for.
+ * @param {!Array.<sre.AuditoryDescription>} speech A list of auditory
+ *     descriptions.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
   if (!node.getAttribute) return;
   var id = node.getAttribute('id');
   if (id) {
@@ -205,7 +232,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   if (sre.SpeechRuleEngine.withCache) {
-    var result = this.getCacheForNode(node);
+    var result = this.getCacheForNode_(node);
     if (result) {
       // console.log('Cache success:' + node.toString());
       return result;
@@ -214,7 +241,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
     result = this.activeStore_.evaluateDefault(node);
-    this.pushCache(node, result);
+    this.pushCache_(node, result);
     return result;
   }
   sre.Debugger.getInstance().generateOutput(
@@ -273,7 +300,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
   }
-  this.pushCache(node, result);
+  this.pushCache_(node, result);
   return result;
 };
 

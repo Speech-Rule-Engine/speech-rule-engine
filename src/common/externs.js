@@ -38,6 +38,8 @@ MathJax.Hub.Register.StartupHook = function(signal, callback) { };
 MathJax.Hub.Startup = {};
 MathJax.Hub.Startup.signal;
 MathJax.Callback = {};
+
+
 /**
  * @type {function(...Object)}
  */

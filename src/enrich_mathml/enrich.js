@@ -30,7 +30,6 @@ goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
 
 
-
 /**
  * Semantically enriches a MathML node.
  * @param {!Element} mml The original MathML node.
@@ -71,8 +70,9 @@ sre.Enrich.semanticMathml = function(expr, callback) {
 
 
 /**
- * Tests for an expression with debugger outp
+ * Tests for an expression with debugger output.
  * @param {string} expr MathML expression.
+ * @return {string} The enriched MathML expression.
  */
 sre.Enrich.testTranslation__ = function(expr) {
   sre.Debugger.getInstance().init();

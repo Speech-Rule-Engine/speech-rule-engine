@@ -161,8 +161,8 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
  */
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var textNode = sre.XpathUtil.currentDocument ?
-        sre.XpathUtil.currentDocument.createTextNode(text) :
-        sre.SystemExternal.document.createTextNode(text);
+      sre.XpathUtil.currentDocument.createTextNode(text) :
+      sre.SystemExternal.document.createTextNode(text);
   var rule = this.lookupRule(textNode, dynamic);
   if (!rule) {
     return '';

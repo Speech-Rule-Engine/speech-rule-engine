@@ -73,7 +73,7 @@ sre.Engine = function() {
    */
   this.semantics = false;
 
-   //TODO: Put this into an enum.
+  //TODO: Put this into an enum.
   /**
    * The mode in which the engine is running (sync, async, http).
    * @type {sre.Engine.Mode}
@@ -89,6 +89,7 @@ sre.Engine = function() {
   /**
    * List of predicates for checking if the engine is set up.
    * @type {!Array.<function():boolean>}
+   * @private
    */
   this.setupTests_ = [];
 };
@@ -137,6 +138,6 @@ sre.Engine.registerTest = function(pred) {
  */
 sre.Engine.isReady = function() {
   return sre.Engine.getInstance().setupTests_.every(
-    function(pred) { return pred(); }
+      function(pred) { return pred(); }
   );
 };

@@ -59,7 +59,7 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   //
   // Code to replay the MathML enrichment on the enriched element.
   // Currently this only works on relatively simple elements.
-  // 
+  //
   // if (cleaned.match(/role="implicit"|operator="fenced"/)) return;
   // var node2 = sre.Semantic.enrichMathml(node.toString());
   // var cleaned2 = sre.EnrichMathml.removeAttributePrefix(

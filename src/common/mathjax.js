@@ -20,16 +20,16 @@
  */
 goog.provide('sre.Mathjax');
 
-goog.require('sre.System');
 goog.require('sre.Engine');
-
+goog.require('sre.Engine.Mode');
+goog.require('sre.System');
 
 
 /**
  * Integration function into MathJax.
  * This is written in MathJax <=2.6 style.
  */
-(function () {
+(function() {
   var ENGINE = sre.System.getInstance();
   var SIGNAL = MathJax.Callback.Signal('Sre');
   MathJax.Extension.Sre = {
@@ -42,18 +42,22 @@ goog.require('sre.Engine');
         return;
       }
       MathJax.Callback.Queue(
-        // Wait until mml Jax is ready.
-        // This is not strictly necessary for SRE but for the semantic lab.
-        // 
-        MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
-        ['Post', MathJax.Hub.Startup.signal, 'Sre Ready']
+          // Wait until mml Jax is ready.
+          // This is not strictly necessary for SRE but for the semantic lab.
+          //
+          MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
+          ['Post', MathJax.Hub.Startup.signal, 'Sre Ready']
       );
     }
   };
-  
+
   (sre.System.getInstance()).setupEngine(
-    {mode: 'http', domain: 'mathspeak', style: 'default', semantics: 'true'});
+      {mode: sre.Engine.Mode.HTTP,
+        domain: 'mathspeak',
+        style: 'default',
+        semantics: 'true'}
+  );
 
   MathJax.Extension.Sre.ConfigSre();
-  
+
 })();

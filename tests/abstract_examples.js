@@ -24,6 +24,7 @@ goog.require('sre.ExamplesOutput');
 goog.require('sre.System');
 
 
+
 /**
  * @constructor
  * @implements {sre.ExamplesOutput}
@@ -31,13 +32,13 @@ goog.require('sre.System');
  */
 sre.AbstractExamples = function() {
   goog.base(this);
-  
+
   /**
    * @type {boolean}
    * @private
    */
   this.active_ = false;
-  
+
   /**
    * Possible file error.
    * @type {!string}
@@ -111,8 +112,8 @@ sre.AbstractExamples.prototype.endExamples = function() {
   if (!this.fileError_) {
     try {
       sre.SystemExternal.fs.appendFileSync(
-        this.examplesFile_,
-        'Lab.' + this.examplesName_ +
+          this.examplesFile_,
+          'Lab.' + this.examplesName_ +
           ' = [\'' + this.examples_.join('\',\n\'') + '\']');
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;

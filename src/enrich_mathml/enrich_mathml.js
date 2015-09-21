@@ -41,6 +41,7 @@ sre.EnrichMathml = function() {
 };
 
 
+
 /**
  * Error object for signaling enirchment errors.
  * @param {string} msg The error message.

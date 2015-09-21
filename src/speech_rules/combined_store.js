@@ -62,7 +62,7 @@ sre.CombinedStore.prototype.updateEngine = function() {
   if (!sre.Engine.isReady()) {
     setTimeout(sre.CombinedStore.getInstance().updateEngine, 500);
     return;
-  } 
+  }
   var engine = sre.Engine.getInstance();
   var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
   engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);

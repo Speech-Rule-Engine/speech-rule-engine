@@ -29,6 +29,7 @@ goog.require('sre.MathUtil');
 goog.require('sre.SystemExternal');
 
 
+
 //TODO: (sorge)
 // Refactor code to have uniform retrieval methods for the three system modes.
 // Combine similar code for async and http.
@@ -47,17 +48,17 @@ sre.MathMap = function() {
   this.store = sre.MathCompoundStore.getInstance();
 
   sre.MathMap.retrieveFiles(
-    sre.MathMap.FUNCTIONS_FILES_,
-    sre.MathMap.FUNCTIONS_PATH_,
-    goog.bind(this.store.addFunctionRules, this.store));
+      sre.MathMap.FUNCTIONS_FILES_,
+      sre.MathMap.FUNCTIONS_PATH_,
+      goog.bind(this.store.addFunctionRules, this.store));
   sre.MathMap.retrieveFiles(
-    sre.MathMap.SYMBOLS_FILES_,
-    sre.MathMap.SYMBOLS_PATH_,
-    goog.bind(this.store.addSymbolRules, this.store));
+      sre.MathMap.SYMBOLS_FILES_,
+      sre.MathMap.SYMBOLS_PATH_,
+      goog.bind(this.store.addSymbolRules, this.store));
   sre.MathMap.retrieveFiles(
-    sre.MathMap.UNITS_FILES_,
-    sre.MathMap.UNITS_PATH_,
-    goog.bind(this.store.addUnitRules, this.store));
+      sre.MathMap.UNITS_FILES_,
+      sre.MathMap.UNITS_PATH_,
+      goog.bind(this.store.addUnitRules, this.store));
 
   /**
    * Array of domain names.
@@ -74,7 +75,6 @@ sre.MathMap = function() {
   this.getDynamicConstraintValues();
 };
 goog.addSingletonGetter(sre.MathMap);
-
 
 
 /**
@@ -194,29 +194,29 @@ sre.MathMap.UNITS_FILES_ = [
  */
 sre.MathMap.retrieveFiles = function(files, path, func) {
   switch (sre.Engine.getInstance().mode) {
-  case sre.Engine.Mode.ASYNC:
-    sre.MathMap.toFetch_ += files.length;
-    for (var i = 0, file; file = files[i]; i++) {
-      sre.MathMap.fromFile_(path + file,
-                            function(err, json) {
-                              sre.MathMap.toFetch_--;
-                              if (err) return;
-                              JSON.parse(json).forEach(function(x) {func(x);});
-                            });
-    }
-    break;
-  case sre.Engine.Mode.HTTP:
-    sre.MathMap.toFetch_ += files.length;
-    for (i = 0; file = files[i]; i++) {
-      sre.MathMap.getJsonAjax_(path + file, func);
-    }
-    break;
-  case sre.Engine.Mode.SYNC:
-  default:
-    var innerFunc = function(file) { return path + file; };
-    sre.MathMap.parseFiles(files.map(innerFunc)).
-        forEach(function(json) {func(json);});
-    break;
+    case sre.Engine.Mode.ASYNC:
+      sre.MathMap.toFetch_ += files.length;
+      for (var i = 0, file; file = files[i]; i++) {
+        sre.MathMap.fromFile_(path + file,
+            function(err, json) {
+              sre.MathMap.toFetch_--;
+              if (err) return;
+              JSON.parse(json).forEach(function(x) {func(x);});
+            });
+      }
+      break;
+    case sre.Engine.Mode.HTTP:
+      sre.MathMap.toFetch_ += files.length;
+      for (i = 0; file = files[i]; i++) {
+        sre.MathMap.getJsonAjax_(path + file, func);
+      }
+      break;
+    case sre.Engine.Mode.SYNC:
+    default:
+      var innerFunc = function(file) { return path + file; };
+      sre.MathMap.parseFiles(files.map(innerFunc)).
+          forEach(function(json) {func(json);});
+      break;
   }
 };
 

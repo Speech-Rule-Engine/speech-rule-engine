@@ -31,7 +31,6 @@ goog.provide('sre.SystemExternal');
 sre.SystemExternal = function() { };
 
 
-
 /**
  * The URL for SRE resources.
  * @const
@@ -47,7 +46,7 @@ sre.SystemExternal.url = 'https://progressiveaccess.com/content';
  */
 sre.SystemExternal.jsonPath = function() {
   return ((typeof process !== 'undefined' && typeof global !== 'undefined') ?
-    (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
+      (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
           sre.SystemExternal.url + '/mathmaps') + '/';
 }();
 
