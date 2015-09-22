@@ -153,7 +153,7 @@ sre.AbstractWalker.prototype.move = function(key) {
  * @return {?Node}
  * @protected
  */
-sre.AbstractWalker.prototype.up = function() {};
+sre.AbstractWalker.prototype.up = goog.abstractMethod;
 
 
 /**
@@ -161,7 +161,7 @@ sre.AbstractWalker.prototype.up = function() {};
  * @return {?Node} 
  * @protected
  */
-sre.AbstractWalker.prototype.down = function() {};
+sre.AbstractWalker.prototype.down = goog.abstractMethod;
 
 
 /**
@@ -169,7 +169,7 @@ sre.AbstractWalker.prototype.down = function() {};
  * @return {?Node} 
  * @protected
  */
-sre.AbstractWalker.prototype.left = function() {};
+sre.AbstractWalker.prototype.left = goog.abstractMethod;
 
 
 /**
@@ -177,7 +177,7 @@ sre.AbstractWalker.prototype.left = function() {};
  * @return {?Node} 
  * @protected
  */
-sre.AbstractWalker.prototype.right = function() {};
+sre.AbstractWalker.prototype.right = goog.abstractMethod;
 
 
 /**
