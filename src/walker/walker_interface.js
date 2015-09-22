@@ -65,7 +65,7 @@ sre.WalkerInterface.prototype.speech = function(key) {};
  * The node the walker currently sits on.
  * @return {!Node} The current node.
  */
-sre.WalkerInterface.prototype.node = function() {};
+sre.WalkerInterface.prototype.getCurrentNode = function() {};
 
 
 /**

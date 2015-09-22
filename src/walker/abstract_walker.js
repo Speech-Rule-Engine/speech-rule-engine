@@ -54,15 +54,15 @@ sre.AbstractWalker = function(node, generator) {
    * @private
    */
   this.keyMapping_ = {};
-  this.keyMapping_[sre.EventUtil.KeyCode.UP] = this.up;
-  this.keyMapping_[sre.EventUtil.KeyCode.DOWN] = this.down;
-  this.keyMapping_[sre.EventUtil.KeyCode.RIGHT] = this.right;
-  this.keyMapping_[sre.EventUtil.KeyCode.LEFT] = this.left;
+  this.keyMapping_[sre.EventUtil.KeyCode.UP] = goog.bind(this.up, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.DOWN] = goog.bind(this.down, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.RIGHT] = goog.bind(this.right, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.LEFT] = goog.bind(this.left, this);
 
   this.dummy_ = function() {};
-  this.keyMapping_[sre.EventUtil.KeyCode.TAB] = this.dummy_;
-  this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = this.dummy_;
-  this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = this.dummy_;
+  this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.dummy_, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.dummy_, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.dummy_, this);
   
   /**
    * The node that currently inspected. Initially this is the entire math
@@ -117,7 +117,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.node = function() {
+sre.AbstractWalker.prototype.getCurrentNode = function() {
   return this.currentNode;
 };
 
@@ -186,16 +186,16 @@ sre.AbstractWalker.prototype.right = function() {};
  *     returned.
  * @private
  */
-sre.AbstractWalker.prototype.getRoot_ = function(math) {
-  if (math.hasAttribute('data-semantic-speech') &&
-      !math.hasAttribute('data-semantic-parent')) {
-    return math;
+sre.AbstractWalker.prototype.getRoot_ = function(node) {
+  if (node.hasAttribute('data-semantic-speech') &&
+      !node.hasAttribute('data-semantic-parent')) {
+    return node;
   }
-  var speechNodes = math.querySelectorAll('span[data-semantic-speech]');
+  var speechNodes = node.querySelectorAll('[data-semantic-speech]');
   for (var i = 0, speechNode; speechNode = speechNodes[i]; i++) {
     if (!speechNode.hasAttribute('data-semantic-parent')) {
       return speechNode;
     }
   }
-  return math;
+  return node;
 };
