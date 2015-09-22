@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2015 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@
 goog.provide('sre.SyntaxWalker');
 
 goog.require('sre.AbstractWalker');
+goog.require('sre.Levels');
+goog.require('sre.WalkerUtil');
 
 
 
@@ -33,7 +35,13 @@ goog.require('sre.AbstractWalker');
 sre.SyntaxWalker = function(node, generator) {
   goog.base(this, node, generator);
 
-  this.level = [this.currentId()];
+  /**
+   * Caching of levels. 
+   * @type {!sre.Levels<string>}
+   */
+  this.levels = new sre.Levels();
+
+  this.levels.push([this.currentId()]);
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
 
@@ -45,7 +53,7 @@ sre.SyntaxWalker.prototype.up = function() {
   var parent = this.currentNode.getAttribute(
       sre.EnrichMathml.Attribute.PARENT);
   if (!parent) return null;
-  this.level = [parent];
+  this.levels.pop();
   return this.getBySemanticId(parent);
 };
 
@@ -54,12 +62,12 @@ sre.SyntaxWalker.prototype.up = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.down = function() {
-  var children = sre.SyntaxWalker.splitAttribute(
+  var children = sre.WalkerUtil.splitAttribute(
       this.currentNode.getAttribute(sre.EnrichMathml.Attribute.CHILDREN));
   if (children.length === 0) {
     return null;
   }
-  this.level = children;
+  this.levels.push(children);
   return this.getBySemanticId(children[0]);
 };
 
@@ -68,8 +76,9 @@ sre.SyntaxWalker.prototype.down = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.left = function() {
-  var index = this.level.indexOf(this.currentId()) - 1;
-  return index < 0 ? null : this.getBySemanticId(this.level[index]);
+  var index = this.levels.indexOf(this.currentId()) - 1;
+  var id = this.levels.get(index);
+  return id ? this.getBySemanticId(id) : null;
 };
 
 
@@ -77,22 +86,11 @@ sre.SyntaxWalker.prototype.left = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.right = function() {
-  var index = this.level.indexOf(this.currentId()) + 1;
-  return index >= this.level.length ? null :
-    this.getBySemanticId(this.level[index]);
+  var index = this.levels.indexOf(this.currentId()) + 1;
+  var id = this.levels.get(index);
+  return id ? this.getBySemanticId(id) : null;
 };
 
-
-//TODO: Put into utilility class.
-/**
- * A comma separated list of attribute values.
- * @param {string} attr The attribute value.
- * @return {!Array.<string>} A list of values.
- */
-sre.SyntaxWalker.splitAttribute = function(attr) {
-  return !attr ? [] : attr.split(/,/);
-};
-  
 
 /**
  * Retrieves a node containing a given semantic id.
@@ -105,6 +103,9 @@ sre.SyntaxWalker.prototype.getBySemanticId = function(id) {
 };
 
 
+/**
+ * @return {string} The id of the currently active node.
+ */
 sre.SyntaxWalker.prototype.currentId = function() {
   return this.currentNode.getAttribute(sre.EnrichMathml.Attribute.ID);
 };
