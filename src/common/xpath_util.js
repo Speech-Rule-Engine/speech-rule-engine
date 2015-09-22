@@ -29,14 +29,6 @@ goog.require('sre.SystemExternal');
 
 
 /**
- * Utilities for simplifying working with xpaths
- * @constructor
- */
-sre.XpathUtil = function() {
-};
-
-
-/**
  * Returns whether or not xpath is supported.
  * @return {boolean} True if xpath is supported.
  */

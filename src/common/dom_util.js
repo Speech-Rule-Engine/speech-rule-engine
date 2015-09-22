@@ -29,14 +29,6 @@ goog.require('sre.XpathUtil');
 
 
 /**
- * Create the namespace
- * @constructor
- */
-sre.DomUtil = function() {
-};
-
-
-/**
  * Converts a NodeList into an array
  * @param {!(NodeList|NamedNodeMap)} nodeList The nodeList.
  * @return {!Array} The array of nodes in the nodeList.
