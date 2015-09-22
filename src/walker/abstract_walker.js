@@ -22,6 +22,7 @@
 goog.provide('sre.AbstractWalker');
 
 goog.require('sre.EventUtil.KeyCode');
+goog.require('sre.EnrichMathml');
 goog.require('sre.WalkerInterface');
 
 
@@ -187,13 +188,14 @@ sre.AbstractWalker.prototype.right = function() {};
  * @private
  */
 sre.AbstractWalker.prototype.getRoot_ = function(node) {
-  if (node.hasAttribute('data-semantic-speech') &&
-      !node.hasAttribute('data-semantic-parent')) {
+  if (node.hasAttribute(sre.EnrichMathml.Attribute.SPEECH) &&
+      !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
     return node;
   }
-  var speechNodes = node.querySelectorAll('[data-semantic-speech]');
+  var speechNodes = node.querySelectorAll(
+      '[' + sre.EnrichMathml.Attribute.SPEECH + ']');
   for (var i = 0, speechNode; speechNode = speechNodes[i]; i++) {
-    if (!speechNode.hasAttribute('data-semantic-parent')) {
+    if (!speechNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
       return speechNode;
     }
   }

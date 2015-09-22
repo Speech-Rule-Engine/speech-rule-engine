@@ -23,6 +23,7 @@
 goog.provide('sre.DirectSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
+goog.require('sre.EnrichMathml');
 
 
 
@@ -40,6 +41,5 @@ goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.DirectSpeechGenerator.prototype.getSpeech = function(node) {
-    //TODO: Use the correct prefix!
-  return node.getAttribute('data-semantic-speech');
+  return node.getAttribute(sre.EnrichMathml.Attribute.SPEECH);
 };
