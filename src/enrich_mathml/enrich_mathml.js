@@ -25,6 +25,7 @@ goog.provide('sre.EnrichMathml');
 goog.provide('sre.EnrichMathml.Error');
 
 goog.require('sre.AuditoryDescription');
+goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.MathmlStore');
@@ -473,7 +474,7 @@ sre.EnrichMathml.simpleCollapseStructure = function(strct) {
  * @return {!sre.EnrichMathml.Collapsed_} A simple list of ids.
  */
 sre.EnrichMathml.interleaveIds = function(first, second) {
-  return sre.EnrichMathml.interleaveLists(
+  return sre.BaseUtil.interleaveLists(
       sre.EnrichMathml.collapsedLeafs(first),
       sre.EnrichMathml.collapsedLeafs(second));
 };
@@ -608,7 +609,7 @@ sre.EnrichMathml.combineContentChildren_ = function(
     case sre.SemanticAttr.Type.RELSEQ:
     case sre.SemanticAttr.Type.INFIXOP:
     case sre.SemanticAttr.Type.MULTIREL:
-      return sre.EnrichMathml.interleaveLists(children, content);
+      return sre.BaseUtil.interleaveLists(children, content);
     case sre.SemanticAttr.Type.PREFIXOP:
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
@@ -619,7 +620,7 @@ sre.EnrichMathml.combineContentChildren_ = function(
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (semantic.role === sre.SemanticAttr.Role.TEXT) {
-        return sre.EnrichMathml.interleaveLists(children, content);
+        return sre.BaseUtil.interleaveLists(children, content);
       }
       var markupList = [];
       for (var i = 0, j = 0, child, cont;
@@ -729,23 +730,6 @@ sre.EnrichMathml.getInnerNode = function(node) {
     return result[0];
   }
   return node;
-};
-
-
-/**
- * Interleaves two lists, starting with the first. If either list is longer, it
- * will be appended at the end.
- * @param {!Array.<*>} list1 The first list.
- * @param {!Array.<*>} list2 The second list.
- * @return {!Array.<*>} The combined list.
- */
-sre.EnrichMathml.interleaveLists = function(list1, list2) {
-  var result = [];
-  while (list1.length || list2.length) {
-    list1.length && result.push(list1.shift());
-    list2.length && result.push(list2.shift());
-  }
-  return result;
 };
 
 

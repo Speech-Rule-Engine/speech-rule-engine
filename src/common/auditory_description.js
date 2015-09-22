@@ -22,7 +22,7 @@
  */
 goog.provide('sre.AuditoryDescription');
 
-goog.require('sre.DomUtil');
+goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
@@ -116,7 +116,7 @@ sre.AuditoryDescription.prototype.equals = function(that) {
 sre.AuditoryDescription.toSimpleString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
   sre.AuditoryDescription.preprocessDescriptionList_(descrs);
-  return sre.DomUtil.removeEmpty(
+  return sre.BaseUtil.removeEmpty(
       descrs.map(
       function(x) {return x.descriptionString();})).
       join(separator);

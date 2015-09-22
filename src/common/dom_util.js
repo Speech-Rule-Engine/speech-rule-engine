@@ -51,16 +51,6 @@ sre.DomUtil.toArray = function(nodeList) {
 
 
 /**
- * Removes all empty strings from an array of strings.
- * @param {Array.<string>} strs An array of strings.
- * @return {Array.<string>} The cleaned array.
- */
-sre.DomUtil.removeEmpty = function(strs) {
-  return strs.filter(function(str) {return str;});
-};
-
-
-/**
  * Trims the whitespace in an XML input string.
  * @param {string} input The XML input string.
  * @return {string} The string with whitespace removed between tags.
@@ -85,7 +75,7 @@ sre.DomUtil.parseInput = function(input, opt_error) {
     var newError = new error('Empty input!');
     throw newError;
   }
-  try {
+  ;  try {
     var doc = dp.parseFromString(clean_input, 'text/xml');
     if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
       sre.XpathUtil.currentDocument = doc;
