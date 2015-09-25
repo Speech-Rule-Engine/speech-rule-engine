@@ -90,23 +90,3 @@ sre.SemanticWalker.prototype.right = function() {
   var id = this.levels.get(index);
   return id ? this.getBySemanticId(id) : null;
 };
-
-
-/**
- * Retrieves a node containing a given semantic id.
- * @param {string} id The id of a semantic node.
- * @return {Node} The node for that id.
- */
-sre.SemanticWalker.prototype.getBySemanticId = function(id) {
-  var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
-  return this.node.querySelector(query);
-};
-
-
-/**
- * @return {string} The id of the currently active node.
- */
-sre.SemanticWalker.prototype.currentId = function() {
-  return this.currentNode.getAttribute(sre.EnrichMathml.Attribute.ID);
-};
-
