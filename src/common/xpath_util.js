@@ -27,7 +27,6 @@ goog.provide('sre.XpathUtil');
 goog.require('sre.SystemExternal');
 
 
-
 /**
  * Returns whether or not xpath is supported.
  * @return {boolean} True if xpath is supported.

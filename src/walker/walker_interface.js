@@ -28,11 +28,8 @@ goog.require('sre.SpeechGeneratorInterface');
 
 /**
  * @interface
- * @param {!Node} node The node on which the walker is called.
- * @param{sre.SpeechGeneratorInterface} generator The speech generator for this
- *     walker.
  */
-sre.WalkerInterface = function(node, generator) { };
+sre.WalkerInterface = function() {};
 
 
 /**
@@ -58,7 +55,7 @@ sre.WalkerInterface.prototype.deactivate = function() {};
  * Computes the speech string of the currently examined node.
  * @return {?string} The current speech string.
  */
-sre.WalkerInterface.prototype.speech = function(key) {};
+sre.WalkerInterface.prototype.speech = function() {};
 
 
 /**

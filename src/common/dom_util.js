@@ -27,7 +27,6 @@ goog.provide('sre.DomUtil');
 goog.require('sre.XpathUtil');
 
 
-
 /**
  * Converts a NodeList into an array
  * @param {!(NodeList|NamedNodeMap)} nodeList The nodeList.
@@ -67,7 +66,7 @@ sre.DomUtil.parseInput = function(input, opt_error) {
     var newError = new error('Empty input!');
     throw newError;
   }
-  ;  try {
+  try {
     var doc = dp.parseFromString(clean_input, 'text/xml');
     if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
       sre.XpathUtil.currentDocument = doc;

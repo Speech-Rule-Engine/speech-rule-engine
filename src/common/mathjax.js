@@ -20,11 +20,11 @@
  */
 goog.provide('sre.Mathjax');
 
+goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
-goog.require('sre.System');
 goog.require('sre.SyntaxWalker');
-goog.require('sre.DirectSpeechGenerator');
+goog.require('sre.System');
 
 
 /**

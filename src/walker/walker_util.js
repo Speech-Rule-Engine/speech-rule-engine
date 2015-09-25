@@ -21,6 +21,8 @@
 
 goog.provide('sre.WalkerUtil');
 
+goog.require('sre.SemanticAttr');
+
 
 /**
  * A comma separated list of attribute values.
@@ -29,4 +31,42 @@ goog.provide('sre.WalkerUtil');
  */
 sre.WalkerUtil.splitAttribute = function(attr) {
   return !attr ? [] : attr.split(/,/);
+};
+
+
+/**
+ * Combines content and children lists depending on semantic type and role.
+ * @param {!sre.SemanticAttr.Type} type The semantic type.
+ * @param {!sre.SemanticAttr.Role} role The semantic role.
+ * @param {!Array.<string>} content The list of content nodes.
+ * @param {!Array.<string>} children The list of child nodes.
+ * @return {!Array.<string>} The combined list.
+ */
+sre.WalkerUtil.combineContentChildren = function(
+    type, role, content, children) {
+  switch (type) {
+    case sre.SemanticAttr.Type.RELSEQ:
+    case sre.SemanticAttr.Type.INFIXOP:
+    case sre.SemanticAttr.Type.MULTIREL:
+      return sre.BaseUtil.interleaveLists(children, content);
+    case sre.SemanticAttr.Type.PREFIXOP:
+      return content.concat(children);
+    case sre.SemanticAttr.Type.POSTFIXOP:
+      return children.concat(content);
+    case sre.SemanticAttr.Type.FENCED:
+      children.unshift(content[0]);
+      children.push(content[1]);
+      return children;
+    case sre.SemanticAttr.Type.PUNCTUATED:
+      if (role === sre.SemanticAttr.Role.TEXT) {
+        return sre.BaseUtil.interleaveLists(children, content);
+      }
+      return children;
+    case sre.SemanticAttr.Type.APPL:
+      return [children[0], content[0], children[1]];
+    case sre.SemanticAttr.Type.ROOT:
+      return [children[1], children[0]];
+    default:
+      return children;
+  }
 };

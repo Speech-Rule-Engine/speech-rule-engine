@@ -97,6 +97,7 @@ sre.EventUtil.EventType = {
 };
 
 
+
 /**
  * The type of events.
  * @param {Node} src The target element of the event.

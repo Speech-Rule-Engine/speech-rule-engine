@@ -22,17 +22,18 @@
 goog.provide('sre.Levels');
 
 
+
 /**
  * @constructor
  * @template T
  */
 sre.Levels = function() {
   /**
-   * Array caching levels. 
+   * Array caching levels.
    * @type {!Array.<Array.<T>>}
    * @private
    */
-  this.level = [];
+  this.level_ = [];
 };
 
 
@@ -41,7 +42,7 @@ sre.Levels = function() {
  * @param {Array.<T>} level The new level.
  */
 sre.Levels.prototype.push = function(level) {
-  this.level.push(level);
+  this.level_.push(level);
 };
 
 
@@ -50,7 +51,7 @@ sre.Levels.prototype.push = function(level) {
  * @return {Array.<T>} The old top level.
  */
 sre.Levels.prototype.pop = function() {
-  return this.level.pop();
+  return this.level_.pop();
 };
 
 
@@ -59,7 +60,7 @@ sre.Levels.prototype.pop = function() {
  * @return {Array.<T>} The top level.
  */
 sre.Levels.prototype.peek = function() {
-  return this.level[this.level.length - 1];
+  return this.level_[this.level_.length - 1];
 };
 
 

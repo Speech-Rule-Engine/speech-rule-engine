@@ -29,7 +29,7 @@ goog.require('sre.EnrichMathml');
 
 /**
  * @constructor
- * @extends{sre.AbstractSpeechGenerator}
+ * @extends {sre.AbstractSpeechGenerator}
  */
 sre.DirectSpeechGenerator = function() {
   goog.base(this);

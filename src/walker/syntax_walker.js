@@ -36,7 +36,7 @@ sre.SyntaxWalker = function(node, generator) {
   goog.base(this, node, generator);
 
   /**
-   * Caching of levels. 
+   * Caching of levels.
    * @type {!sre.Levels<string>}
    */
   this.levels = new sre.Levels();
@@ -62,13 +62,29 @@ sre.SyntaxWalker.prototype.up = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.down = function() {
-  var children = sre.WalkerUtil.splitAttribute(
-      this.currentNode.getAttribute(sre.EnrichMathml.Attribute.CHILDREN));
+  var children = this.nextLevel_();
   if (children.length === 0) {
     return null;
   }
   this.levels.push(children);
   return this.getBySemanticId(children[0]);
+};
+
+
+/**
+ * Computes the next lower level from children and content.
+ * @return {!Array.<string>} The next lower level.
+ * @private
+ */
+sre.SyntaxWalker.prototype.nextLevel_ = function() {
+  var children = sre.WalkerUtil.splitAttribute(
+      this.currentNode.getAttribute(sre.EnrichMathml.Attribute.CHILDREN));
+  var content = sre.WalkerUtil.splitAttribute(
+      this.currentNode.getAttribute(sre.EnrichMathml.Attribute.CONTENT));
+  return sre.WalkerUtil.combineContentChildren(
+      this.currentNode.getAttribute(sre.EnrichMathml.Attribute.TYPE),
+      this.currentNode.getAttribute(sre.EnrichMathml.Attribute.ROLE),
+      content, children);
 };
 
 

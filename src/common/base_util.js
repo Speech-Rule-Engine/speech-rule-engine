@@ -21,7 +21,6 @@
 goog.provide('sre.BaseUtil');
 
 
-
 /**
  * Removes all empty strings from an array of strings.
  * @param {Array.<string>} strs An array of strings.

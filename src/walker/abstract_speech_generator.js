@@ -28,7 +28,7 @@ goog.require('sre.SpeechGeneratorInterface');
 
 /**
  * @constructor
- * @implements{sre.SpeechGeneratorInterface}
+ * @implements {sre.SpeechGeneratorInterface}
  */
 sre.AbstractSpeechGenerator = function() { };
 
@@ -43,7 +43,7 @@ sre.AbstractSpeechGenerator.prototype.getSpeech = goog.abstractMethod;
  * @override
  */
 sre.AbstractSpeechGenerator.prototype.start = function() { };
-  
+
 
 /**
  * @override

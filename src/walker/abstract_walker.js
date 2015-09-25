@@ -21,8 +21,8 @@
 
 goog.provide('sre.AbstractWalker');
 
-goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.EnrichMathml');
+goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.WalkerInterface');
 
 
@@ -30,6 +30,9 @@ goog.require('sre.WalkerInterface');
 /**
  * @constructor
  * @implements {sre.WalkerInterface}
+ * @param {!Node} node The node on which the walker is called.
+ * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
+ *     this walker.
  * @override
  */
 sre.AbstractWalker = function(node, generator) {
@@ -64,7 +67,7 @@ sre.AbstractWalker = function(node, generator) {
   this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.dummy_, this);
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.dummy_, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.dummy_, this);
-  
+
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
@@ -158,7 +161,7 @@ sre.AbstractWalker.prototype.up = goog.abstractMethod;
 
 /**
  * Moves down from the current node if possible.
- * @return {?Node} 
+ * @return {?Node}
  * @protected
  */
 sre.AbstractWalker.prototype.down = goog.abstractMethod;
@@ -166,7 +169,7 @@ sre.AbstractWalker.prototype.down = goog.abstractMethod;
 
 /**
  * Moves left from the current node if possible.
- * @return {?Node} 
+ * @return {?Node}
  * @protected
  */
 sre.AbstractWalker.prototype.left = goog.abstractMethod;
@@ -174,7 +177,7 @@ sre.AbstractWalker.prototype.left = goog.abstractMethod;
 
 /**
  * Moves right from the current node if possible.
- * @return {?Node} 
+ * @return {?Node}
  * @protected
  */
 sre.AbstractWalker.prototype.right = goog.abstractMethod;
