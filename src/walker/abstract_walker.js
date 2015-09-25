@@ -23,6 +23,7 @@ goog.provide('sre.AbstractWalker');
 
 goog.require('sre.EnrichMathml');
 goog.require('sre.EventUtil.KeyCode');
+goog.require('sre.Focus');
 goog.require('sre.WalkerInterface');
 
 
@@ -68,14 +69,15 @@ sre.AbstractWalker = function(node, generator) {
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.dummy_, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.dummy_, this);
 
+  var rootNode = this.getRoot_(node);
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
-   * @type {!Node}
+   * @type {!sre.Focus}
    */
-  this.currentNode = this.getRoot_(node);
-};
+  this.focus_ = new sre.Focus({nodes: [rootNode], primary: rootNode});
 
+};
 
 /**
  * @override
@@ -121,8 +123,8 @@ sre.AbstractWalker.prototype.deactivate = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.getCurrentNode = function() {
-  return this.currentNode;
+sre.AbstractWalker.prototype.getFocus = function() {
+  return this.focus_;
 };
 
 
@@ -130,7 +132,9 @@ sre.AbstractWalker.prototype.getCurrentNode = function() {
  * @override
  */
 sre.AbstractWalker.prototype.speech = function() {
-  return this.generator.getSpeech(this.currentNode);
+  return this.focus_.getNodes().map(
+    goog.bind(function(x) {return this.generator.getSpeech(x);}, this))
+    .join(' ');
 };
 
 
@@ -143,17 +147,17 @@ sre.AbstractWalker.prototype.move = function(key) {
     return null;
   }
   var node = direction();
-  if (!node || node === this.currentNode) {
+  if (!node || node === this.focus_) {
     return false;
   }
-  this.currentNode = node;
+  this.focus_ = node;
   return true;
 };
 
 
 /**
  * Moves up from the current node if possible.
- * @return {?Node}
+ * @return {?sre.Focus}
  * @protected
  */
 sre.AbstractWalker.prototype.up = goog.abstractMethod;
@@ -161,7 +165,7 @@ sre.AbstractWalker.prototype.up = goog.abstractMethod;
 
 /**
  * Moves down from the current node if possible.
- * @return {?Node}
+ * @return {?sre.Focus}
  * @protected
  */
 sre.AbstractWalker.prototype.down = goog.abstractMethod;
@@ -169,7 +173,7 @@ sre.AbstractWalker.prototype.down = goog.abstractMethod;
 
 /**
  * Moves left from the current node if possible.
- * @return {?Node}
+ * @return {?sre.Focus}
  * @protected
  */
 sre.AbstractWalker.prototype.left = goog.abstractMethod;
@@ -177,7 +181,7 @@ sre.AbstractWalker.prototype.left = goog.abstractMethod;
 
 /**
  * Moves right from the current node if possible.
- * @return {?Node}
+ * @return {?sre.Focus}
  * @protected
  */
 sre.AbstractWalker.prototype.right = goog.abstractMethod;
@@ -218,8 +222,20 @@ sre.AbstractWalker.prototype.getBySemanticId = function(id) {
 
 
 /**
- * @return {string} The id of the currently active node.
+ * Retrieves an attribute from the primary focused node if it exists.
+ * @param {sre.EnrichMathml.Attribute} attr The attribute to retrieves.
+ * @return {string} The value of the attribute for the primary node of the
+ *     focus.
  */
-sre.AbstractWalker.prototype.currentId = function() {
-  return this.currentNode.getAttribute(sre.EnrichMathml.Attribute.ID);
+sre.AbstractWalker.prototype.primaryAttribute = function(attr) {
+  var primary = this.focus_.getPrimary();
+  return primary ? primary.getAttribute(attr) : null;
+};
+
+
+/**
+ * @return {string} The id of the primary node of the current focus.
+ */
+sre.AbstractWalker.prototype.primaryId = function() {
+  return this.primaryAttribute(sre.EnrichMathml.Attribute.ID);
 };

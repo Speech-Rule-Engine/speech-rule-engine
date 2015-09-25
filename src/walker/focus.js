@@ -26,11 +26,13 @@ goog.provide('sre.Focus');
 
 /**
  * @constructor
- * @param {{nodes: (undefined|Array.<Node>)}} kwargs The initial arguments for
+ * @param {{nodes: (undefined|Array.<Node>),
+ *          primary: (undefined|Node)}} kwargs The initial arguments for
  *     the description.
  */
 sre.Focus = function(kwargs) {
   this.nodes_ = kwargs.nodes ? kwargs.nodes : [];
+  this.primary_ = kwargs.primary ? kwargs.primary : null;
 };
 
 
@@ -39,4 +41,12 @@ sre.Focus = function(kwargs) {
  */
 sre.Focus.prototype.getNodes = function() {
   return this.nodes_;
+};
+
+
+/**
+ * @return {Node} The primary node of the focus. Can be empty.
+ */
+sre.Focus.prototype.getPrimary = function() {
+  return this.primary_;
 };

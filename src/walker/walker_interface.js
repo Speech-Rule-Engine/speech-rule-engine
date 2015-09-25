@@ -22,6 +22,7 @@
 goog.provide('sre.WalkerInterface');
 
 goog.require('sre.EventUtil.KeyCode');
+goog.require('sre.Focus');
 goog.require('sre.SpeechGeneratorInterface');
 
 
@@ -60,9 +61,9 @@ sre.WalkerInterface.prototype.speech = function() {};
 
 /**
  * The node the walker currently sits on.
- * @return {!Node} The current node.
+ * @return {!sre.Focus} The current focus.
  */
-sre.WalkerInterface.prototype.getCurrentNode = function() {};
+sre.WalkerInterface.prototype.getFocus = function() {};
 
 
 /**

@@ -41,20 +41,44 @@ sre.SemanticWalker = function(node, generator) {
    */
   this.levels = new sre.Levels();
 
-  this.levels.push([this.currentId()]);
+  this.levels.push([this.primaryId()]);
 };
 goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
+
+
+//TODO: Remove or refactor.
+/**
+ * Creates a simple focus for a solitary node.
+ * @param {!Node} node The node to focus.
+ * @return {!sre.Focus} A focus containing only this node and the other
+ *     properties of the old focus.
+ * @private
+ */
+sre.SemanticWalker.prototype.singletonFocus_ = function(node) {
+  return new sre.Focus({nodes: [node], primary: node});
+};
+
+
+/**
+ * Makes a singleton focus from an semantic id, if a corresponding node exits.
+ * @param {string} id The semantic id.
+ * @return {?sre.Focus} The singleton focus for the node.
+ * @private
+ */
+sre.SemanticWalker.prototype.focusFromId_ = function(id) {
+  var node = this.getBySemanticId(id);
+  return node ? this.singletonFocus_(node) : null;
+};
 
 
 /**
  * @override
  */
 sre.SemanticWalker.prototype.up = function() {
-  var parent = this.currentNode.getAttribute(
-      sre.EnrichMathml.Attribute.PARENT);
+  var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
   if (!parent) return null;
   this.levels.pop();
-  return this.getBySemanticId(parent);
+  return this.focusFromId_(parent);
 };
 
 
@@ -63,12 +87,12 @@ sre.SemanticWalker.prototype.up = function() {
  */
 sre.SemanticWalker.prototype.down = function() {
   var children = sre.WalkerUtil.splitAttribute(
-      this.currentNode.getAttribute(sre.EnrichMathml.Attribute.CHILDREN));
+      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
   if (children.length === 0) {
     return null;
   }
   this.levels.push(children);
-  return this.getBySemanticId(children[0]);
+  return this.focusFromId_(children[0]);
 };
 
 
@@ -76,9 +100,9 @@ sre.SemanticWalker.prototype.down = function() {
  * @override
  */
 sre.SemanticWalker.prototype.left = function() {
-  var index = this.levels.indexOf(this.currentId()) - 1;
+  var index = this.levels.indexOf(this.primaryId()) - 1;
   var id = this.levels.get(index);
-  return id ? this.getBySemanticId(id) : null;
+  return id ? this.focusFromId_(id) : null;
 };
 
 
@@ -86,7 +110,7 @@ sre.SemanticWalker.prototype.left = function() {
  * @override
  */
 sre.SemanticWalker.prototype.right = function() {
-  var index = this.levels.indexOf(this.currentId()) + 1;
+  var index = this.levels.indexOf(this.primaryId()) + 1;
   var id = this.levels.get(index);
-  return id ? this.getBySemanticId(id) : null;
+  return id ? this.focusFromId_(id) : null;
 };
