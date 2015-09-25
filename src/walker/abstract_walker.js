@@ -146,11 +146,11 @@ sre.AbstractWalker.prototype.move = function(key) {
   if (!direction) {
     return null;
   }
-  var node = direction();
-  if (!node || node === this.focus_) {
+  var focus = direction();
+  if (!focus || focus === this.focus_) {
     return false;
   }
-  this.focus_ = node;
+  this.focus_ = focus;
   return true;
 };
 
