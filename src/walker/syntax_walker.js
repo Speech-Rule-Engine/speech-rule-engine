@@ -105,10 +105,10 @@ sre.SyntaxWalker.prototype.nextLevel_ = function() {
       this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
+  var primary = this.getFocus().getPrimary();
   return sre.WalkerUtil.combineContentChildren(
-      //TODO: Simplify this.
-      this.getFocus().getPrimary().getAttribute(sre.EnrichMathml.Attribute.TYPE),
-      this.getFocus().getPrimary().getAttribute(sre.EnrichMathml.Attribute.ROLE),
+      primary.getAttribute(sre.EnrichMathml.Attribute.TYPE),
+      primary.getAttribute(sre.EnrichMathml.Attribute.ROLE),
       content, children);
 };
 

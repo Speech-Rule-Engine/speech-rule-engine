@@ -82,14 +82,14 @@ sre.SemanticWalker.prototype.up = function() {
   if (!parent) return null;
   this.levels.pop();
   var found = this.levels.find(
-    function(x) {
-      for (var i = 0, node, nodes = x.getNodes(); node = nodes[i]; i++) {
-        if (node.getAttribute(sre.EnrichMathml.Attribute.ID) === parent) {
-          return true;
+      function(x) {
+        for (var i = 0, node, nodes = x.getNodes(); node = nodes[i]; i++) {
+          if (node.getAttribute(sre.EnrichMathml.Attribute.ID) === parent) {
+            return true;
+          }
         }
-      }
-      return false;
-    });
+        return false;
+      });
   return found;
 };
 
@@ -113,15 +113,15 @@ sre.SemanticWalker.prototype.down = function() {
  * @private
  */
 sre.SemanticWalker.prototype.nextLevel_ = function() {
-var children = sre.WalkerUtil.splitAttribute(
+  var children = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
-    this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
+      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
   if (children.length === 0) return [];
+  var primary = this.getFocus().getPrimary();
   return this.combineContentChildren(
-      //TODO: Simplify this.
-      this.getFocus().getPrimary().getAttribute(sre.EnrichMathml.Attribute.TYPE),
-      this.getFocus().getPrimary().getAttribute(sre.EnrichMathml.Attribute.ROLE),
+      primary.getAttribute(sre.EnrichMathml.Attribute.TYPE),
+      primary.getAttribute(sre.EnrichMathml.Attribute.ROLE),
       content, children);
 };
 
@@ -137,34 +137,35 @@ var children = sre.WalkerUtil.splitAttribute(
 sre.SemanticWalker.prototype.combineContentChildren = function(
     type, role, content, children) {
   switch (type) {
-  case sre.SemanticAttr.Type.RELSEQ:
-  case sre.SemanticAttr.Type.INFIXOP:
-  case sre.SemanticAttr.Type.MULTIREL:
-    return this.makePairList(children, content);
-  case sre.SemanticAttr.Type.PREFIXOP:
-    return [this.focusFromId_(children[0], content.concat(children))];
-  case sre.SemanticAttr.Type.POSTFIXOP:
-    return [this.focusFromId_(children[0], children.concat(content))];
-  case sre.SemanticAttr.Type.FENCED:
-    return [this.focusFromId_(children[0],
-                              [content[0], children[0], content[1]])];
-  case sre.SemanticAttr.Type.PUNCTUATED:
-    if (role === sre.SemanticAttr.Role.TEXT) {
+    case sre.SemanticAttr.Type.RELSEQ:
+    case sre.SemanticAttr.Type.INFIXOP:
+    case sre.SemanticAttr.Type.MULTIREL:
+      return this.makePairList(children, content);
+    case sre.SemanticAttr.Type.PREFIXOP:
+      return [this.focusFromId_(children[0], content.concat(children))];
+    case sre.SemanticAttr.Type.POSTFIXOP:
+      return [this.focusFromId_(children[0], children.concat(content))];
+    case sre.SemanticAttr.Type.FENCED:
+      return [this.focusFromId_(children[0],
+          [content[0], children[0], content[1]])];
+    case sre.SemanticAttr.Type.PUNCTUATED:
+      if (role === sre.SemanticAttr.Role.TEXT) {
+        return children.map(goog.bind(this.singletonFocus_, this));
+      }
+      //TODO: That needs to be fixed!
+      if (children.length === content.length) {
+        return content.map(goog.bind(this.singletonFocus_, this));
+      }
+      var focusList = this.combinePunctuations(children, content, [], []);
+      return focusList;
+    case sre.SemanticAttr.Type.APPL:
+      return [this.focusFromId_(children[0], [children[0], content[0]]),
+        this.singletonFocus_(children[1])];
+    case sre.SemanticAttr.Type.ROOT:
+      return [this.singletonFocus_(children[1]),
+              this.singletonFocus_(children[0])];
+    default:
       return children.map(goog.bind(this.singletonFocus_, this));
-    }
-    //TODO: That needs to be fixed!
-    if (children.length === content.length) {
-      return content.map(goog.bind(this.singletonFocus_, this));
-    }
-    var focusList = this.combinePunctuations(children, content, [], []);
-    return focusList;
-  case sre.SemanticAttr.Type.APPL:
-    return [this.focusFromId_(children[0], [children[0], content[0]]),
-            this.singletonFocus_(children[1])];
-  case sre.SemanticAttr.Type.ROOT:
-    return [this.singletonFocus_(children[1]), this.singletonFocus_(children[0])];
-  default:
-    return children.map(goog.bind(this.singletonFocus_, this));
   }
 };
 
@@ -179,7 +180,7 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
  * @return {!Array.<sre.Focus>} The list of focuses with paired nodes.
  */
 sre.SemanticWalker.prototype.combinePunctuations = function(
-  children, content, prepunct, acc) {
+    children, content, prepunct, acc) {
   var child = children.shift();
   var cont = content.shift();
   if (child === cont) {

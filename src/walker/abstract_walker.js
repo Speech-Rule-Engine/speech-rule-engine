@@ -74,10 +74,12 @@ sre.AbstractWalker = function(node, generator) {
    * The node that currently inspected. Initially this is the entire math
    * expression.
    * @type {!sre.Focus}
+   * @private
    */
   this.focus_ = new sre.Focus({nodes: [rootNode], primary: rootNode});
 
 };
+
 
 /**
  * @override
@@ -133,8 +135,8 @@ sre.AbstractWalker.prototype.getFocus = function() {
  */
 sre.AbstractWalker.prototype.speech = function() {
   return this.focus_.getNodes().map(
-    goog.bind(function(x) {return this.generator.getSpeech(x);}, this))
-    .join(' ');
+      goog.bind(function(x) {return this.generator.getSpeech(x);}, this))
+      .join(' ');
 };
 
 
