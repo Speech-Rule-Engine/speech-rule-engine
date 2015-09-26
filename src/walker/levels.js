@@ -60,7 +60,7 @@ sre.Levels.prototype.pop = function() {
  * @return {Array.<T>} The top level.
  */
 sre.Levels.prototype.peek = function() {
-  return this.level_[this.level_.length - 1];
+  return this.level_[this.level_.length - 1] || null;
 };
 
 
@@ -72,6 +72,22 @@ sre.Levels.prototype.peek = function() {
 sre.Levels.prototype.indexOf = function(element) {
   var last = this.peek();
   return !last ? null : last.indexOf(element);
+};
+
+
+/**
+ * Checks for an element that satisfies the given predicate on the top most
+ * level of the stack.  In ES6 this should be simply an array.find!
+ * @param {function(T):boolean} pred A predicate for testing.
+ * @return {?T} The element matching the predicate.
+ */
+sre.Levels.prototype.find = function(pred) {
+  var last = this.peek();
+  if (!last) return null;
+  for (var i = 0, l = last.length; i < l; i++) {
+    if (pred(last[i])) return last[i];
+  }
+  return null;
 };
 
 
