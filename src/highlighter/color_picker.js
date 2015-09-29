@@ -111,7 +111,12 @@ sre.ColorPicker.DEFAULT_COLOR_ = 'blue';
 sre.ColorPicker.namedColors_ = {
   red: {red: 255, green: 0, blue: 0},
   green: {red: 0, green: 255, blue: 0},
-  blue: {red: 0, green: 0, blue: 255}
+  blue: {red: 0, green: 0, blue: 255},
+  yellow: {red: 255, green: 255, blue: 0},
+  cyan: {red: 0, green: 255, blue: 255},
+  magenta: {red: 255, green: 0, blue: 255},
+  white: {red: 255, green: 255, blue: 255},
+  black: {red: 0, green: 0, blue: 0}
 };
 
 
