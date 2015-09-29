@@ -27,6 +27,7 @@ goog.require('sre.MmlHighlighter');
 goog.require('sre.SvgHighlighter');
 
 
+
 /**
  * Produces a highlighter that goes with the current Mathjax renderer if
  * highlighting is possible.
@@ -40,6 +41,7 @@ sre.HighlighterFactory.highlighter = function(renderer, color) {
   if (!constructor) return null;
   var highlighter = new constructor();
   highlighter.setColor(colorPicker);
+  console.log(highlighter);
   return highlighter;
 };
 

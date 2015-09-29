@@ -99,10 +99,9 @@ sre.AbstractHighlighter.prototype.setColor = function(color) {
 
 /**
  * Turns the current color into a string representation.
- * @return {string} The color string, by default as rgba.
+ * @return {sre.ColorPicker.String} The color string, by default as rgba.
  * @protected
  */
 sre.AbstractHighlighter.prototype.colorString = function() {
-  return 'rgba(' + this.color.red + ',' + this.color.green + ',' +
-      this.color.blue + ',' + this.color.alpha + ')';
+  return this.color.rgba();;
 };

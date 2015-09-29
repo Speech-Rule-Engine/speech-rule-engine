@@ -41,7 +41,7 @@ goog.inherits(sre.MmlHighlighter, sre.AbstractHighlighter);
 sre.MmlHighlighter.prototype.highlightNode = function(node) {
   var style = document.createElementNS(
       'http://www.w3.org/1998/Math/MathML', 'mstyle');
-  style.setAttribute('mathbackground', this.colorString());
+  style.setAttribute('mathbackground', this.colorString().background);
   node.parentNode.replaceChild(style, node);
   style.appendChild(node);
   return {node: style};
@@ -61,19 +61,5 @@ sre.MmlHighlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.MmlHighlighter.prototype.colorString = function() {
-  return '#' + sre.MmlHighlighter.toHex_(this.color.red) +
-      sre.MmlHighlighter.toHex_(this.color.green) +
-      sre.MmlHighlighter.toHex_(this.color.blue);
-};
-
-
-/**
- * Turns a decimal number into a two digit hex string.
- * @param {number} number The decimal.
- * @return {string} The hex string.
- * @private
- */
-sre.MmlHighlighter.toHex_ = function(number) {
-  var hex = number.toString(16);
-  return hex.length === 1 ? '0' + hex : hex;
+  return this.color.hex();
 };

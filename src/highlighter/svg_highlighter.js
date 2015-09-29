@@ -41,7 +41,7 @@ goog.inherits(sre.SvgHighlighter, sre.AbstractHighlighter);
 sre.SvgHighlighter.prototype.highlightNode = function(node) {
   if (node.tagName === 'svg') {
     var info = {node: node, oldColor: node.style.backgroundColor};
-    node.style.backgroundColor = this.colorString();
+    node.style.backgroundColor = this.colorString().background;
     return info;
   }
   var bbox = node.getBBox();
@@ -55,7 +55,7 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
   if (transform) {
     rect.setAttribute('transform', transform);
   }
-  rect.setAttribute('fill', this.colorString());
+  rect.setAttribute('fill', this.colorString().background);
   node.parentNode.insertBefore(rect, node);
   return {node: rect};
 };

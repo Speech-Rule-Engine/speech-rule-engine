@@ -21,43 +21,33 @@
  */
 
 goog.provide('sre.ColorPicker');
+goog.provide('sre.ColorPicker.Color');
+goog.provide('sre.ColorPicker.String');
 
 
 
 /**
  * @constructor
- * @param {sre.ColorPicker.Color} color The definition.
+ * @param {sre.ColorPicker.Color} background The background color definition.
+ * @param {sre.ColorPicker.Color=} opt_foreground The optional foreground color
+ *      definition.
  */
-sre.ColorPicker = function(color) {
-
-  if (sre.ColorPicker.isNamedColor_) {
-    color = sre.ColorPicker.getColorChannels_(
-        /** @type {sre.ColorPicker.NamedColor_} */ (color));
-  }
+sre.ColorPicker = function(background, opt_foreground) {
 
   /**
-   * The red color channel.
-   * @type {number}
+   * The foreground color in RGBa.
+   * @type {sre.ColorPicker.ChannelColor_}
    */
-  this.red = color.red;
-
+  this.foreground = sre.ColorPicker.getChannelColor_(
+      opt_foreground, sre.ColorPicker.DEFAULT_FOREGROUND_);
+  
+  
   /**
-   * The green color channel.
-   * @type {number}
+   * The background color in RGBa.
+   * @type {sre.ColorPicker.ChannelColor_}
    */
-  this.green = color.green;
-
-  /**
-   * The blue color channel.
-   * @type {number}
-   */
-  this.blue = color.blue;
-
-  /**
-   * The alpha color channel.
-   * @type {number}
-   */
-  this.alpha = color.alpha || 1;
+  this.background = sre.ColorPicker.getChannelColor_(
+      background, sre.ColorPicker.DEFAULT_BACKGROUND_);
 
 };
 
@@ -86,14 +76,11 @@ sre.ColorPicker.ChannelColor_;
 
 
 /**
- * Checks if the given color definition is a named definition.
- * @param {sre.ColorPicker.Color} color The definition.
- * @return {boolean} True if named color.
+ * The default background color if a none existing color is provided.
+ * @type {string}
  * @private
  */
-sre.ColorPicker.isNamedColor_ = function(color) {
-  return color.color ? true : false;
-};
+sre.ColorPicker.DEFAULT_BACKGROUND_ = 'blue';
 
 
 /**
@@ -101,7 +88,7 @@ sre.ColorPicker.isNamedColor_ = function(color) {
  * @type {string}
  * @private
  */
-sre.ColorPicker.DEFAULT_COLOR_ = 'blue';
+sre.ColorPicker.DEFAULT_FOREGROUND_ = 'black';
 
 
 /**
@@ -121,14 +108,93 @@ sre.ColorPicker.namedColors_ = {
 
 
 /**
- * Augments the color definition if necessary.
- * @param {sre.ColorPicker.NamedColor_} color The definition.
- * @return {sre.ColorPicker.ChannelColor_} The augmented color definition.
+ * Turns a color definition a channel color definition. Augments it if
+ * necessary.
+ * @param {(sre.ColorPicker.Color|undefined)} color The definition.
+ * @param {string} deflt The default color if color does not exist.
+ * @return {!sre.ColorPicker.ChannelColor_} The augmented color definition.
  * @private
  */
-sre.ColorPicker.getColorChannels_ = function(color) {
-  var channels = sre.ColorPicker.namedColors_[color.color] ||
-      sre.ColorPicker.namedColors_[sre.ColorPicker.DEFAULT_COLOR_];
-  channels.alpha = color.alpha;
-  return channels;
+sre.ColorPicker.getChannelColor_ = function(color, deflt) {
+  var col = color || {color: deflt};
+  var channel = col.color ? sre.ColorPicker.namedColors_[col.color] : col;
+  if (!channel) {
+    channel = sre.ColorPicker.namedColors_[deflt];
+  }
+  return sre.ColorPicker.normalizeColor_(
+      /** @type{!sre.ColorPicker.ChannelColor_} */ (channel));
+};
+
+
+/**
+ * Normalizes the color channels, i.e., rgb in [0,255] and alpha in [0,1].
+ * @param {!sre.ColorPicker.ChannelColor_} color The color definition.
+ * @return {!sre.ColorPicker.ChannelColor_} The normalized color definition.
+ */
+sre.ColorPicker.normalizeColor_ = function(color) {
+  var normalizeCol = function(col) {
+    col = Math.max(col, 0);
+    col = Math.min(255, col);
+    return Math.round(col);
+  };
+  color.red = normalizeCol(color.red);
+  color.green = normalizeCol(color.green);
+  color.blue = normalizeCol(color.blue);
+  color.alpha = Math.max(color.alpha, 0);
+  color.alpha = Math.min(1, color.alpha);
+  return color;
+};
+
+
+/**
+ * Foreground and background color in string format.
+ * @typedef {{background: string, foreground: string}}
+ */
+sre.ColorPicker.String;
+
+
+/**
+ * RGBa version of the colors.
+ * @return {sre.ColorPicker.String} The color in RGBa format.
+ */
+sre.ColorPicker.prototype.rgba = function() {
+  var rgba = function(col) {return 'rgba(' + col.red + ',' + col.green + ',' +
+                            col.blue + ',' + col.alpha + ')';};
+  return {background: rgba(this.background), foreground: rgba(this.foreground)};
+};
+
+
+/**
+ * RGB version of the colors.
+ * @return {sre.ColorPicker.String} The color in Rgb format.
+ */
+sre.ColorPicker.prototype.rgb = function() {
+  var rgb = function(col) {return 'rgb(' + col.red + ',' + col.green + ',' +
+                            col.blue + ')';};
+  return {background: rgb(this.background), foreground: rgb(this.foreground)};
+};
+
+  
+/**
+ * HEX version of the colors.
+ * @return {sre.ColorPicker.String} The color in Hex format.
+ */
+sre.ColorPicker.prototype.hex = function() {
+  var hex = function(col) {
+      return '#' + sre.ColorPicker.toHex_(col.red) +
+      sre.ColorPicker.toHex_(col.green) +
+      sre.ColorPicker.toHex_(col.blue);};
+  return {background: hex(this.background), foreground: hex(this.foreground)};
+};
+
+
+/**
+ * Turns a decimal number into a two digit hex string.
+ * @param {number} number The decimal.
+ * @return {string} The hex string.
+ * @private
+ */
+sre.ColorPicker.toHex_ = function(number) {
+  var hex = number.toString(16);
+  return hex.length === 1 ? '0' + hex : hex;
 };
