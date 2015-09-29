@@ -43,7 +43,7 @@ sre.AbstractHighlighter = function() {
    * @type {sre.ColorPicker}
    * @protected
    */
-  this.color = new sre.ColorPicker({color: 'default'});
+  this.color = null;
 
 };
 

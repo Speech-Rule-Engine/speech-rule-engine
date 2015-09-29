@@ -41,7 +41,6 @@ sre.HighlighterFactory.highlighter = function(renderer, color) {
   if (!constructor) return null;
   var highlighter = new constructor();
   highlighter.setColor(colorPicker);
-  console.log(highlighter);
   return highlighter;
 };
 

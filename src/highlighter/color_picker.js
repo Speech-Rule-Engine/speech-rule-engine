@@ -48,7 +48,6 @@ sre.ColorPicker = function(background, opt_foreground) {
    */
   this.background = sre.ColorPicker.getChannelColor_(
       background, sre.ColorPicker.DEFAULT_BACKGROUND_);
-
 };
 
 
@@ -121,6 +120,7 @@ sre.ColorPicker.getChannelColor_ = function(color, deflt) {
   if (!channel) {
     channel = sre.ColorPicker.namedColors_[deflt];
   }
+  channel.alpha = col.hasOwnProperty('alpha') ? col.alpha : 1.;
   return sre.ColorPicker.normalizeColor_(
       /** @type{!sre.ColorPicker.ChannelColor_} */ (channel));
 };
