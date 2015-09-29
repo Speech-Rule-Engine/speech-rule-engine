@@ -103,5 +103,5 @@ sre.AbstractHighlighter.prototype.setColor = function(color) {
  */
 sre.AbstractHighlighter.prototype.colorString = function() {
   return 'rgba(' + this.color.red + ',' + this.color.green + ',' +
-    this.color.blue + ',' + this.color.alpha + ',' + ')';
+    this.color.blue + ',' + this.color.alpha + ')';
 };

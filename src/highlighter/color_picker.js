@@ -104,7 +104,7 @@ sre.ColorPicker.DEFAULT_COLOR_ = 'blue';
 
 
 /**
- * @type {Object.<string, sre.ColorPicker.Color>}
+ * @type {Object.<string, sre.ColorPicker.ChannelColor_>}
  * @private
  */
 sre.ColorPicker.namedColors_ = {
@@ -124,4 +124,5 @@ sre.ColorPicker.getColorChannels_ = function(color) {
   var channels = sre.ColorPicker.namedColors_[color.color] ||
         sre.ColorPicker.namedColors_[sre.ColorPicker.DEFAULT_COLOR_];
   channels.alpha = color.alpha;
+  return channels;
 };
