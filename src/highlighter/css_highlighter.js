@@ -39,8 +39,11 @@ goog.inherits(sre.CssHighlighter, sre.AbstractHighlighter);
  * @override
  */
 sre.CssHighlighter.prototype.highlightNode = function(node) {
-  var info = {node: node, oldColor: node.style.backgroundColor};
+  var info = {node: node,
+              background: node.style.backgroundColor,
+              foreground: node.style.color};
   node.style.backgroundColor = this.colorString().background;
+  node.style.color = this.colorString().foreground;
   return info;
 };
 
@@ -49,5 +52,6 @@ sre.CssHighlighter.prototype.highlightNode = function(node) {
  * @override
  */
 sre.CssHighlighter.prototype.unhighlightNode = function(info) {
-  info.node.style.backgroundColor = info.oldColor;
+  info.node.style.backgroundColor = info.background;
+  info.node.style.color = info.foreground;
 };

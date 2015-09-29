@@ -42,6 +42,7 @@ sre.MmlHighlighter.prototype.highlightNode = function(node) {
   var style = document.createElementNS(
       'http://www.w3.org/1998/Math/MathML', 'mstyle');
   style.setAttribute('mathbackground', this.colorString().background);
+  style.setAttribute('mathcolor', this.colorString().foreground);
   node.parentNode.replaceChild(style, node);
   style.appendChild(node);
   return {node: style};

@@ -32,11 +32,12 @@ goog.require('sre.SvgHighlighter');
  * Produces a highlighter that goes with the current Mathjax renderer if
  * highlighting is possible.
  * @param {string} renderer The name of the renderer.
- * @param {sre.ColorPicker.Color} color A color specification.
+ * @param {sre.ColorPicker.Color} back A background color specification.
+ * @param {sre.ColorPicker.Color} fore A foreground color specification.
  * @return {?sre.HighlighterInterface} A new highlighter.
  */
-sre.HighlighterFactory.highlighter = function(renderer, color) {
-  var colorPicker = new sre.ColorPicker(color);
+sre.HighlighterFactory.highlighter = function(renderer, back, fore) {
+  var colorPicker = new sre.ColorPicker(back, fore);
   var constructor = sre.HighlighterFactory.highlighterMapping_[renderer];
   if (!constructor) return null;
   var highlighter = new constructor();

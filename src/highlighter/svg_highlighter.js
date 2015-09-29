@@ -40,8 +40,11 @@ goog.inherits(sre.SvgHighlighter, sre.AbstractHighlighter);
  */
 sre.SvgHighlighter.prototype.highlightNode = function(node) {
   if (node.tagName === 'svg') {
-    var info = {node: node, oldColor: node.style.backgroundColor};
+    var info = {node: node,
+                background: node.style.backgroundColor,
+                foreground: node.style.color};
     node.style.backgroundColor = this.colorString().background;
+    node.style.color = this.colorString().foreground;
     return info;
   }
   var bbox = node.getBBox();
@@ -57,7 +60,9 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
   }
   rect.setAttribute('fill', this.colorString().background);
   node.parentNode.insertBefore(rect, node);
-  return {node: rect};
+  info = {node: rect, foreground: node.getAttribute('fill')};
+  node.setAttribute('fill', this.colorString().foreground);
+  return info;
 };
 
 
@@ -65,6 +70,11 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
  * @override
  */
 sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
-  info.oldColor ? info.node.style = info.oldColor :
-      info.node.parentNode.removeChild(info.node);
+  if (info.background) {
+    info.node.style.backgroundColor = info.background;
+    info.node.style.color = info.foreground;
+    return;
+  }
+  info.node.nextSibling.setAttribute('fill', info.foreground);
+  info.node.parentNode.removeChild(info.node);
 };
