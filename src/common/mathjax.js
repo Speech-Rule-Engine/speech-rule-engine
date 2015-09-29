@@ -23,6 +23,7 @@ goog.provide('sre.Mathjax');
 goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
+goog.require('sre.HighlighterFactory');
 goog.require('sre.SemanticWalker');
 goog.require('sre.SyntaxWalker');
 goog.require('sre.System');
