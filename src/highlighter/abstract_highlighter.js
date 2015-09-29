@@ -38,7 +38,7 @@ sre.AbstractHighlighter = function() {
    * @private
    */
   this.currentHighlights_ = [];
-  
+
   /**
    * @type {sre.ColorPicker}
    * @protected
@@ -61,7 +61,8 @@ sre.AbstractHighlighter.prototype.highlight = function(nodes) {
 /**
  * Highlights a single node.
  * @param {!Node} node The node to be highlighted.
- * @return {{node: !Node, oldColor: (undefined|string)}} The old node information.
+ * @return {{node: !Node, oldColor: (undefined|string)}} The old node
+ *     information.
  * @protected
  */
 sre.AbstractHighlighter.prototype.highlightNode = goog.abstractMethod;
@@ -103,5 +104,5 @@ sre.AbstractHighlighter.prototype.setColor = function(color) {
  */
 sre.AbstractHighlighter.prototype.colorString = function() {
   return 'rgba(' + this.color.red + ',' + this.color.green + ',' +
-    this.color.blue + ',' + this.color.alpha + ')';
+      this.color.blue + ',' + this.color.alpha + ')';
 };

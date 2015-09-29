@@ -32,7 +32,7 @@ sre.HighlighterInterface = function() { };
 
 
 /**
- * Sets highlighting on a node. 
+ * Sets highlighting on a node.
  * @param {!Array<Node>} nodes The node to highlight.
  */
 sre.HighlighterInterface.prototype.highlight = function(nodes) { };

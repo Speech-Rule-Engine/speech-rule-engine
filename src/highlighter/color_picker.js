@@ -32,15 +32,15 @@ sre.ColorPicker = function(color) {
 
   if (sre.ColorPicker.isNamedColor_) {
     color = sre.ColorPicker.getColorChannels_(
-        /** @type{sre.ColorPicker.NamedColor_} */ (color));
+        /** @type {sre.ColorPicker.NamedColor_} */ (color));
   }
- 
+
   /**
    * The red color channel.
    * @type {number}
    */
   this.red = color.red;
-  
+
   /**
    * The green color channel.
    * @type {number}
@@ -89,6 +89,7 @@ sre.ColorPicker.ChannelColor_;
  * Checks if the given color definition is a named definition.
  * @param {sre.ColorPicker.Color} color The definition.
  * @return {boolean} True if named color.
+ * @private
  */
 sre.ColorPicker.isNamedColor_ = function(color) {
   return color.color ? true : false;
@@ -122,7 +123,7 @@ sre.ColorPicker.namedColors_ = {
  */
 sre.ColorPicker.getColorChannels_ = function(color) {
   var channels = sre.ColorPicker.namedColors_[color.color] ||
-        sre.ColorPicker.namedColors_[sre.ColorPicker.DEFAULT_COLOR_];
+      sre.ColorPicker.namedColors_[sre.ColorPicker.DEFAULT_COLOR_];
   channels.alpha = color.alpha;
   return channels;
 };

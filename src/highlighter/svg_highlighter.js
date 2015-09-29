@@ -46,7 +46,7 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
   }
   var bbox = node.getBBox();
   var rect = document.createElementNS(
-    'http://www.w3.org/2000/svg', 'rect');
+      'http://www.w3.org/2000/svg', 'rect');
   rect.setAttribute('x', bbox.x);
   rect.setAttribute('y', bbox.y);
   rect.setAttribute('width', bbox.width);
@@ -66,5 +66,5 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
  */
 sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
   info.oldColor ? info.node.style = info.oldColor :
-    info.node.parentNode.removeChild(info.node);
+      info.node.parentNode.removeChild(info.node);
 };
