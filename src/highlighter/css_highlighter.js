@@ -42,8 +42,9 @@ sre.CssHighlighter.prototype.highlightNode = function(node) {
   var info = {node: node,
               background: node.style.backgroundColor,
               foreground: node.style.color};
-  node.style.backgroundColor = this.colorString().background;
-  node.style.color = this.colorString().foreground;
+  var color = this.colorString();
+  node.style.backgroundColor = color.background;
+  node.style.color = color.foreground;
   return info;
 };
 
