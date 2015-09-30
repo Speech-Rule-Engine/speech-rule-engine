@@ -148,7 +148,8 @@ sre.ColorPicker.normalizeColor_ = function(color) {
 
 /**
  * Foreground and background color in string format.
- * @typedef {{background: string, foreground: string}}
+ * @typedef {{background: string, alphaback: (undefined|string),
+ *            foreground: string, alphafore: (undefined|string)}}
  */
 sre.ColorPicker.String;
 
@@ -171,7 +172,10 @@ sre.ColorPicker.prototype.rgba = function() {
 sre.ColorPicker.prototype.rgb = function() {
   var rgb = function(col) {return 'rgb(' + col.red + ',' + col.green + ',' +
                             col.blue + ')';};
-  return {background: rgb(this.background), foreground: rgb(this.foreground)};
+  return {background: rgb(this.background),
+          alphaback: this.background.alpha.toString(),
+          foreground: rgb(this.foreground),
+          alphafore: this.foreground.alpha.toString()};
 };
 
   
@@ -184,7 +188,10 @@ sre.ColorPicker.prototype.hex = function() {
       return '#' + sre.ColorPicker.toHex_(col.red) +
       sre.ColorPicker.toHex_(col.green) +
       sre.ColorPicker.toHex_(col.blue);};
-  return {background: hex(this.background), foreground: hex(this.foreground)};
+  return {background: hex(this.background),
+          alphaback: this.background.alpha.toString(),
+          foreground: hex(this.foreground),
+          alphafore: this.foreground.alpha.toString()};
 };
 
 

@@ -82,8 +82,9 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
 
 /**
  * Unhighlights a single node.
- * @param {{node: !Node, background: (undefined|string),
- *          foreground: (undefined|string)}} info The info for the
+ * @param {{node: !Node, opacity: (undefined|string),
+ *          background: (undefined|string), foreground: (undefined|string)}
+ *         } info The info for the
  *     node to be unhighlighted.
  * @protected
  */
