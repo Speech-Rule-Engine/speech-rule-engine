@@ -42,6 +42,9 @@ goog.require('sre.SvgHighlighter');
  */
 sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
+  var renderer = (rendererInfo.renderer === 'NativeMML' &&
+                  rendererInfo.browser === 'Safari') ?
+      'CommonHtml' : rendererInfo.renderer;
   var constructor =
       sre.HighlighterFactory.highlighterMapping_[rendererInfo.renderer];
   if (!constructor) return null;
@@ -49,10 +52,6 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   highlighter.setColor(colorPicker);
   if (highlighter.setMode) {
     highlighter.setMode(rendererInfo.mode);
-  }
-  //TODO: Browser specific highlighting by class. Safari mml -> css?
-  if (highlighter.setBrowser) {
-    highlighter.setBrowser(rendererInfo.browser);
   }
   return highlighter;
 };
