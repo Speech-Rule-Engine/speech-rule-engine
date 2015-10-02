@@ -31,26 +31,28 @@ goog.require('sre.SvgHighlighter');
 /**
  * Produces a highlighter that goes with the current Mathjax renderer if
  * highlighting is possible.
- * @param {string} renderer The name of the renderer.
  * @param {sre.ColorPicker.Color} back A background color specification.
  * @param {sre.ColorPicker.Color} fore A foreground color specification.
- * @param {{mode: (undefined|string), browser: (undefined|string)}=} opt_info
- *     Optional information on mode and browser.
+ * @param {{renderer: string,
+ *          mode: (undefined|string),
+ *          browser: (undefined|string)}} rendererInfo
+ *     Information on renderer, mode, browser. Has to at least contain the
+ *     renderer field.
  * @return {?sre.HighlighterInterface} A new highlighter.
  */
-sre.HighlighterFactory.highlighter = function(renderer, back, fore, opt_info) {
-  var info = opt_info || {};
+sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
-  var constructor = sre.HighlighterFactory.highlighterMapping_[renderer];
+  var constructor =
+      sre.HighlighterFactory.highlighterMapping_[rendererInfo.renderer];
   if (!constructor) return null;
   var highlighter = new constructor();
   highlighter.setColor(colorPicker);
   if (highlighter.setMode) {
-    highlighter.setMode(info.mode);
+    highlighter.setMode(rendererInfo.mode);
   }
   //TODO: Browser specific highlighting by class. Safari mml -> css?
   if (highlighter.setBrowser) {
-    highlighter.setBrowser(info.browser);
+    highlighter.setBrowser(rendererInfo.browser);
   }
   return highlighter;
 };
