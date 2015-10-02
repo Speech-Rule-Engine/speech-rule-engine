@@ -23,9 +23,9 @@ goog.provide('sre.HighlighterFactory');
 
 goog.require('sre.ColorPicker');
 goog.require('sre.CssHighlighter');
+goog.require('sre.HtmlHighlighter');
 goog.require('sre.MmlHighlighter');
 goog.require('sre.SvgHighlighter');
-
 
 
 /**
@@ -34,14 +34,24 @@ goog.require('sre.SvgHighlighter');
  * @param {string} renderer The name of the renderer.
  * @param {sre.ColorPicker.Color} back A background color specification.
  * @param {sre.ColorPicker.Color} fore A foreground color specification.
+ * @param {{mode: (undefined|string), browser: (undefined|string)}=} opt_info
+ *     Optional information on mode and browser.
  * @return {?sre.HighlighterInterface} A new highlighter.
  */
-sre.HighlighterFactory.highlighter = function(renderer, back, fore) {
+sre.HighlighterFactory.highlighter = function(renderer, back, fore, opt_info) {
+  var info = opt_info || {};
   var colorPicker = new sre.ColorPicker(back, fore);
   var constructor = sre.HighlighterFactory.highlighterMapping_[renderer];
   if (!constructor) return null;
   var highlighter = new constructor();
   highlighter.setColor(colorPicker);
+  if (highlighter.setMode) {
+    highlighter.setMode(info.mode);
+  }
+  //TODO: Browser specific highlighting by class. Safari mml -> css?
+  if (highlighter.setBrowser) {
+    highlighter.setBrowser(info.browser);
+  }
   return highlighter;
 };
 
@@ -53,6 +63,6 @@ sre.HighlighterFactory.highlighter = function(renderer, back, fore) {
 sre.HighlighterFactory.highlighterMapping_ = {
   'SVG': sre.SvgHighlighter,
   'NativeMML': sre.MmlHighlighter,
-  'HTML-CSS': sre.CssHighlighter,
+  'HTML-CSS': sre.HtmlHighlighter,
   'CommonHTML': sre.CssHighlighter
 };

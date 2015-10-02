@@ -40,8 +40,8 @@ sre.ColorPicker = function(background, opt_foreground) {
    */
   this.foreground = sre.ColorPicker.getChannelColor_(
       opt_foreground, sre.ColorPicker.DEFAULT_FOREGROUND_);
-  
-  
+
+
   /**
    * The background color in RGBa.
    * @type {sre.ColorPicker.ChannelColor_}
@@ -122,7 +122,7 @@ sre.ColorPicker.getChannelColor_ = function(color, deflt) {
   }
   channel.alpha = col.hasOwnProperty('alpha') ? col.alpha : 1.;
   return sre.ColorPicker.normalizeColor_(
-      /** @type{!sre.ColorPicker.ChannelColor_} */ (channel));
+      /** @type {!sre.ColorPicker.ChannelColor_} */ (channel));
 };
 
 
@@ -130,6 +130,7 @@ sre.ColorPicker.getChannelColor_ = function(color, deflt) {
  * Normalizes the color channels, i.e., rgb in [0,255] and alpha in [0,1].
  * @param {!sre.ColorPicker.ChannelColor_} color The color definition.
  * @return {!sre.ColorPicker.ChannelColor_} The normalized color definition.
+ * @private
  */
 sre.ColorPicker.normalizeColor_ = function(color) {
   var normalizeCol = function(col) {
@@ -160,7 +161,7 @@ sre.ColorPicker.String;
  */
 sre.ColorPicker.prototype.rgba = function() {
   var rgba = function(col) {return 'rgba(' + col.red + ',' + col.green + ',' +
-                            col.blue + ',' + col.alpha + ')';};
+        col.blue + ',' + col.alpha + ')';};
   return {background: rgba(this.background), foreground: rgba(this.foreground)};
 };
 
@@ -171,27 +172,27 @@ sre.ColorPicker.prototype.rgba = function() {
  */
 sre.ColorPicker.prototype.rgb = function() {
   var rgb = function(col) {return 'rgb(' + col.red + ',' + col.green + ',' +
-                            col.blue + ')';};
+        col.blue + ')';};
   return {background: rgb(this.background),
-          alphaback: this.background.alpha.toString(),
-          foreground: rgb(this.foreground),
-          alphafore: this.foreground.alpha.toString()};
+    alphaback: this.background.alpha.toString(),
+    foreground: rgb(this.foreground),
+    alphafore: this.foreground.alpha.toString()};
 };
 
-  
+
 /**
  * HEX version of the colors.
  * @return {sre.ColorPicker.String} The color in Hex format.
  */
 sre.ColorPicker.prototype.hex = function() {
   var hex = function(col) {
-      return '#' + sre.ColorPicker.toHex_(col.red) +
-      sre.ColorPicker.toHex_(col.green) +
-      sre.ColorPicker.toHex_(col.blue);};
+    return '#' + sre.ColorPicker.toHex_(col.red) +
+        sre.ColorPicker.toHex_(col.green) +
+        sre.ColorPicker.toHex_(col.blue);};
   return {background: hex(this.background),
-          alphaback: this.background.alpha.toString(),
-          foreground: hex(this.foreground),
-          alphafore: this.foreground.alpha.toString()};
+    alphaback: this.background.alpha.toString(),
+    foreground: hex(this.foreground),
+    alphafore: this.foreground.alpha.toString()};
 };
 
 

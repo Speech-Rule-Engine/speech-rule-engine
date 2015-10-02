@@ -21,24 +21,41 @@
 
 goog.provide('sre.MmlHighlighter');
 
-goog.require('sre.AbstractHighlighter');
+goog.require('sre.CssHighlighter');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractHighlighter}
+ * @extends {sre.CssHighlighter}
  */
 sre.MmlHighlighter = function() {
   goog.base(this);
+
+  /**
+   * @type {!string}
+   */
+  this.browser = '';
 };
-goog.inherits(sre.MmlHighlighter, sre.AbstractHighlighter);
+goog.inherits(sre.MmlHighlighter, sre.CssHighlighter);
+
+
+/**
+ * Set the browser name using the highlighter.
+ * @param {!string} browser The browser name.
+ */
+sre.MmlHighlighter.prototype.setBrowser = function(browser) {
+  this.browser = browser;
+};
 
 
 /**
  * @override
  */
 sre.MmlHighlighter.prototype.highlightNode = function(node) {
+  if (this.browser !== 'Firefox') {
+    return goog.base(this, 'highlightNode', node);
+  }
   var style = document.createElementNS(
       'http://www.w3.org/1998/Math/MathML', 'mstyle');
   style.setAttribute('mathbackground', this.colorString().background);
@@ -53,6 +70,10 @@ sre.MmlHighlighter.prototype.highlightNode = function(node) {
  * @override
  */
 sre.MmlHighlighter.prototype.unhighlightNode = function(info) {
+  if (this.browser !== 'Firefox') {
+    goog.base(this, 'unhighlightNode', info);
+    return;
+  }
   var node = info.node;
   node.parentNode.replaceChild(node.firstElementChild, node);
 };
@@ -62,5 +83,5 @@ sre.MmlHighlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.MmlHighlighter.prototype.colorString = function() {
-  return this.color.hex();
+  return this.browser === 'Firefox' ? this.color.hex() : this.color.rgba();
 };

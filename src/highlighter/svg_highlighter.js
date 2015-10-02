@@ -41,8 +41,8 @@ goog.inherits(sre.SvgHighlighter, sre.AbstractHighlighter);
 sre.SvgHighlighter.prototype.highlightNode = function(node) {
   if (node.tagName === 'svg') {
     var info = {node: node,
-                background: node.style.backgroundColor,
-                foreground: node.style.color};
+      background: node.style.backgroundColor,
+      foreground: node.style.color};
     node.style.backgroundColor = this.colorString().background;
     node.style.color = this.colorString().foreground;
     return info;

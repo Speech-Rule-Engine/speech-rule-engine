@@ -40,8 +40,8 @@ goog.inherits(sre.CssHighlighter, sre.AbstractHighlighter);
  */
 sre.CssHighlighter.prototype.highlightNode = function(node) {
   var info = {node: node,
-              background: node.style.backgroundColor,
-              foreground: node.style.color};
+    background: node.style.backgroundColor,
+    foreground: node.style.color};
   var color = this.colorString();
   node.style.backgroundColor = color.background;
   node.style.color = color.foreground;

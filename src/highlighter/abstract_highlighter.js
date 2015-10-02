@@ -34,7 +34,9 @@ sre.AbstractHighlighter = function() {
   //TODO: Put this into a special class.
   /**
    * List of currently highlighted nodes and their original background color.
-   * @type {!Array.<Array.<{node: Node, oldColor: (undefined|string)}>>}
+   * @type {!Array.<Array.<{node: !Node, opacity: (undefined|string),
+   *          background: (undefined|string), foreground: (undefined|string)}
+   *         >>}
    * @private
    */
   this.currentHighlights_ = [];
@@ -61,7 +63,9 @@ sre.AbstractHighlighter.prototype.highlight = function(nodes) {
 /**
  * Highlights a single node.
  * @param {!Node} node The node to be highlighted.
- * @return {{node: !Node, oldColor: (undefined|string)}} The old node
+ * @return {{node: !Node, opacity: (undefined|string),
+ *          background: (undefined|string), foreground: (undefined|string)}
+ *         } The old node
  *     information.
  * @protected
  */
@@ -105,5 +109,5 @@ sre.AbstractHighlighter.prototype.setColor = function(color) {
  * @protected
  */
 sre.AbstractHighlighter.prototype.colorString = function() {
-  return this.color.rgba();;
+  return this.color.rgba();
 };
