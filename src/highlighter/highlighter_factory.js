@@ -44,9 +44,9 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
   var renderer = (rendererInfo.renderer === 'NativeMML' &&
                   rendererInfo.browser === 'Safari') ?
-      'CommonHtml' : rendererInfo.renderer;
+      'CommonHTML' : rendererInfo.renderer;
   var constructor =
-      sre.HighlighterFactory.highlighterMapping_[rendererInfo.renderer];
+      sre.HighlighterFactory.highlighterMapping_[renderer];
   if (!constructor) return null;
   var highlighter = new constructor();
   highlighter.setColor(colorPicker);
