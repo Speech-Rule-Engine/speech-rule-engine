@@ -66,7 +66,7 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
     box = /** @type {!Node} */ (node.previousSibling);
   }
   var info = {node: box,
-    opacity: box.opacity,
+    opacity: box.style.opacity,
     background: box.style.backgroundColor,
     foreground: node.style.color};
   var color = this.color.rgb();
