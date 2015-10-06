@@ -263,6 +263,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'negative',
       'self::prefixop', '@role="negative"', 'children/number');
+  defineRuleAlias(
+      'negative',
+      'self::prefixop', '@role="negative"',
+      'children/fraction[@role="vulgar"]');
 
   defineRule(
       'negative', 'mathspeak.default',
