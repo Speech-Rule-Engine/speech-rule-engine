@@ -13,7 +13,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Testcases resulting from Mathml Cloud project.
+ * @fileoverview Testcases resulting from Mathml Cloud project, often inspired
+ *     by bugs.
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
@@ -49,7 +50,18 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
- * Testing trivial things, often inspired by bugs.
+ * Negative vulgar fraction.
+ */
+sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
+  var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'default');
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'sbrief');
+};
+
+
+/**
+ * Testing trivial things.
  */
 sre.MathmlCloudTest.prototype.testTrivialStuff = function() {
   var mml = '<mtext>a</mtext><mo>=</mo><mi>b</mi>';
