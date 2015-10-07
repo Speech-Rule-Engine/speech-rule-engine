@@ -320,10 +320,17 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'fences-neutral', 'mathspeak.default',
       '[t] "StartAbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
-      'self::fenced', 'self::fenced[@role="neutral"]');
+      'self::fenced', 'self::fenced[@role="neutral"]',
+      'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
+      ' content/*[1][text()]="｜"');
   defineSpecialisedRule(
       'fences-neutral', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] "AbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"');
+  defineRule(
+      'fences-neutral', 'mathspeak.default',
+      '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
+      'self::fenced', 'self::fenced[@role="neutral"]');
+
 
   // TODO (sorge) Maybe promote this to default.default?
   // Maybe check for punctuated element and singleton?

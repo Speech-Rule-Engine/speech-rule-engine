@@ -50,6 +50,28 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Absolute values versus other netural fences.
+ */
+sre.MathmlCloudTest.prototype.testAbsValueVsNeutral = function() {
+  var mml = '<mo>|</mo><mi>a</mi><mo>|</mo>';
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'brief');
+  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  mml = '<mo>｜</mo><mi>a</mi><mo>｜</mo>';
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  mml = '<mo>｜</mo><mi>a</mi><mo>‖</mo>';
+  this.executeRuleTest(mml, 'vertical-bar a double-vertical-bar', 'default');
+  mml = '<mo>‖</mo><mi>a</mi><mo>‖</mo>';
+  this.executeRuleTest(mml, 'double-vertical-bar a double-vertical-bar',
+                       'default');
+  mml = '<mo>¦</mo><mi>a</mi><mo>¦</mo>';
+  this.executeRuleTest(mml, 'broken-vertical-bar a broken-vertical-bar',
+                       'default');
+};
+
+
+/**
  * Negative vulgar fraction.
  */
 sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
