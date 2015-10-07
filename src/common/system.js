@@ -188,7 +188,6 @@ sre.System.prototype.processExpression = function(expr) {
     var xml = this.parseInput(expr);
     if (sre.Engine.getInstance().semantics) {
       xml = this.getSemanticTree_(xml);
-      console.log(xml.toString());
     }
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));

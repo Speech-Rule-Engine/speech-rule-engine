@@ -60,6 +60,9 @@ sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
   mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
     '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
   this.executeRuleTest(mml, 'one-half minus five-eighteenths', 'default');
+  mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
+  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over a EndFraction',
+                       'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac>';
   this.executeRuleTest(mml, 'minus StartFraction 5.2 Over 18 EndFraction',
                        'default');
