@@ -508,9 +508,13 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
       !node.childNodes[0].childNodes ||
       node.childNodes[0].childNodes.length < 2 ||
       node.childNodes[0].childNodes[0].tagName !==
-          sre.Semantic.Type.NUMBER ||
+          sre.SemanticAttr.Type.NUMBER ||
+      node.childNodes[0].childNodes[0].getAttribute('role') !==
+          sre.SemanticAttr.Role.INTEGER ||
       node.childNodes[0].childNodes[1].tagName !==
-          sre.Semantic.Type.NUMBER
+          sre.SemanticAttr.Type.NUMBER ||
+      node.childNodes[0].childNodes[1].getAttribute('role') !==
+          sre.SemanticAttr.Role.INTEGER
   ) {
     return {convertible: false,
       content: node.textContent};

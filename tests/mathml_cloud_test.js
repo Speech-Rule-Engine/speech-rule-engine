@@ -13,7 +13,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Testcases resulting from Mathml Cloud project.
+ * @fileoverview Testcases resulting from Mathml Cloud project, often inspired
+ *     by bugs.
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
@@ -49,7 +50,49 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
- * Testing trivial things, often inspired by bugs.
+ * Absolute values versus other netural fences.
+ */
+sre.MathmlCloudTest.prototype.testAbsValueVsNeutral = function() {
+  var mml = '<mo>|</mo><mi>a</mi><mo>|</mo>';
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'brief');
+  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  mml = '<mo>｜</mo><mi>a</mi><mo>｜</mo>';
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  mml = '<mo>｜</mo><mi>a</mi><mo>‖</mo>';
+  this.executeRuleTest(mml, 'vertical-bar a double-vertical-bar', 'default');
+  mml = '<mo>‖</mo><mi>a</mi><mo>‖</mo>';
+  this.executeRuleTest(mml, 'double-vertical-bar a double-vertical-bar',
+                       'default');
+  mml = '<mo>¦</mo><mi>a</mi><mo>¦</mo>';
+  this.executeRuleTest(mml, 'broken-vertical-bar a broken-vertical-bar',
+                       'default');
+};
+
+
+/**
+ * Negative vulgar fraction.
+ */
+sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
+  var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'default');
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'sbrief');
+  mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
+    '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'one-half minus five-eighteenths', 'default');
+  mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
+  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over a EndFraction',
+                       'default');
+  mml = '<mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over 18 EndFraction',
+                       'default');
+};
+
+
+/**
+ * Testing trivial things.
  */
 sre.MathmlCloudTest.prototype.testTrivialStuff = function() {
   var mml = '<mtext>a</mtext><mo>=</mo><mi>b</mi>';
