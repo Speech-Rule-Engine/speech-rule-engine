@@ -236,6 +236,7 @@ sre.MathStore.prototype.evaluateDefault = function(node) {
  */
 sre.MathStore.prototype.evaluateString_ = function(str) {
   var descs = new Array();
+  str = str.replace(/&nbsp;/g, ' ');
   if (str.match(/^\s+$/)) {
     // Nothing but whitespace: Ignore.
     return descs;
