@@ -421,6 +421,15 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       return this.processRow_(this.parseMathmlChildren_(children));
       break;
     case 'MFRAC':
+      if (sre.SemanticUtil.isZeroLength(mml.getAttribute('linethickness'))) {
+        var child0 = this.makeBranchNode_(
+            sre.SemanticAttr.Type.LINE, [this.parseMathml_(children[0])], []);
+        var child1 = this.makeBranchNode_(
+            sre.SemanticAttr.Type.LINE, [this.parseMathml_(children[1])], []);
+        var newNode = this.makeBranchNode_(
+            sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
+        return newNode;
+      }
       return this.makeFractionNode_(this.parseMathml_(children[0]),
                                     this.parseMathml_(children[1]));
       break;
