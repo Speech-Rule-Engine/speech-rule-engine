@@ -207,3 +207,30 @@ sre.SemanticUtil.purgeNodes = function(nodes) {
   }
   return nodeArray;
 };
+
+
+/**
+ * Determines if an attribute represents zero or negative length.
+ * @param {string} length The lenght value.
+ * @return {boolean} True if the attribute represents zero length.
+ */
+sre.SemanticUtil.isZeroLength = function(length) {
+  if (!length) {
+    return false;
+  }
+  var negativeNamedSpaces = [
+    'negativeveryverythinmathspace', 'negativeverythinmathspace',
+    'negativethinmathspace', 'negativemediummathspace',
+    'negativethickmathspace', 'negativeverythickmathspace',
+    'negativeveryverythickmathspace'];
+  if (negativeNamedSpaces.indexOf(length) !== -1) {
+    return true;
+  }
+  var value = length.match(/[0-9\.]+/);
+  if (!value) {
+    return false;
+  }
+  return parseFloat(value) === 0 ? true : false;
+};
+
+
