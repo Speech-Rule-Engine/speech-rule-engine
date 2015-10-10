@@ -50,6 +50,37 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing binomial coefficients made from fractions.
+ */
+sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
+  var mml = '<mfenced><mfrac linethickness="0pt"><mi>n</mi>' +
+      '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
+                       ' EndBinomialOrMatrix', 'default');
+  mml = '<mfenced><mfrac linethickness="0.0em"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
+                       ' EndBinomialOrMatrix', 'default');
+  mml = '<mfenced><mfrac linethickness="negativeverythinmathspace"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
+                       ' EndBinomialOrMatrix', 'default');
+  mml = '<mfenced><mfrac linethickness="verythinmathspace"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
+                       'EndFraction right-parenthesis', 'default');
+  mml = '<mfenced><mfrac linethickness="1pt"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
+                       'EndFraction right-parenthesis', 'default');
+  mml = '<mfenced><mfrac linethickness="0.5pt"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
+                       'EndFraction right-parenthesis', 'default');
+};
+
+
+/**
  * Absolute values versus other netural fences.
  */
 sre.MathmlCloudTest.prototype.testAbsValueVsNeutral = function() {
@@ -80,7 +111,7 @@ sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
   this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
   this.executeRuleTest(mml, 'negative five-eighteenths', 'sbrief');
   mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
-    '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
+      '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
   this.executeRuleTest(mml, 'one-half minus five-eighteenths', 'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
   this.executeRuleTest(mml, 'minus StartFraction 5.2 Over a EndFraction',
