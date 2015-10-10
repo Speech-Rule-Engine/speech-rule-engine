@@ -24,6 +24,7 @@
 
 goog.provide('sre.DomUtil');
 
+goog.require('sre.Engine');
 goog.require('sre.XpathUtil');
 
 
