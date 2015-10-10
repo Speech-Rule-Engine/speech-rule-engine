@@ -58,6 +58,14 @@ sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
   this.executeRuleTest(mml, 'less-than', 'default');
   mml = '<mo>&gt;</mo>';
   this.executeRuleTest(mml, 'greater-than', 'default');
+  mml = '<mi>n&nbsp;</mi>';
+  this.executeRuleTest(mml, 'n', 'default');
+  mml = '<mi>&nbsp;m</mi>';
+  this.executeRuleTest(mml, 'm', 'default');
+  mml = '<mi>n&nbsp;m</mi>';
+  this.executeRuleTest(mml, 'n m', 'default');
+  mml = '<mi>&nbsp;&nbsp;n&nbsp;&nbsp;m&nbsp;&nbsp;</mi>';
+  this.executeRuleTest(mml, 'n m', 'default');
 };
 
   /**
