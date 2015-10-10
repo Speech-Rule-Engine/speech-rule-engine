@@ -50,6 +50,17 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing for correct treatment of special HTML entities: non-breaking spaces,
+ * left and right angle bracket.
+ */
+sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
+  var mml = '<mo>&lt;</mo>';
+  this.executeRuleTest(mml, 'less-than', 'default');
+  mml = '<mo>&gt;</mo>';
+  this.executeRuleTest(mml, 'greater-than', 'default');
+};
+
+  /**
  * Testing binomial coefficients made from fractions.
  */
 sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
