@@ -65,7 +65,6 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
   var textContent = node.textContent;
-  textContent = textContent.replace(/&nbsp;/g, ' ');
   if (!textContent.match(/[a-zA-Z]+/)) {
     node.setAttribute('role', sre.SemanticAttr.Role.PROTECTED);
     return [node];

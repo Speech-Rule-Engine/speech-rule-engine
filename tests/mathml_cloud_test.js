@@ -105,7 +105,7 @@ sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
 sre.MathmlCloudTest.prototype.testUnnecessarySpaces = function() {
   var mml = '<mn> 5 </mn>';
   this.executeRuleTest(mml, '5', 'default');
-  mml = '<mn>  5   </mn>';
+  mml = '<mn> &nbsp; 5 &nbsp; </mn>';
   this.executeRuleTest(mml, '5', 'default');
 };
 

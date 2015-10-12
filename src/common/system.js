@@ -68,6 +68,7 @@ goog.inherits(sre.System.Error, Error);
  * @private
  */
 sre.System.prototype.trimInput_ = function(input) {
+  input = input.replace(/&nbsp;/g, ' ');
   return input.replace(/>\s+</g, '><').trim();
 };
 
