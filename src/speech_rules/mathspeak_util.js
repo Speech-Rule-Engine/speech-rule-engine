@@ -51,7 +51,7 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
         sre.SemanticAttr.Role.UNKNOWN :
         sre.SemanticAttr.Role.PROTECTED;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 chr + '</' + type + '>');
+                                 chr + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
   }
   return result;
@@ -78,7 +78,7 @@ sre.MathspeakUtil.spaceoutIdentifier = function(node) {
     var type = sre.SemanticAttr.Type.IDENTIFIER;
     var role = sre.SemanticAttr.Role.UNKNOWN;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 chr + '</' + type + '>');
+                                 chr + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
   }
   return result;

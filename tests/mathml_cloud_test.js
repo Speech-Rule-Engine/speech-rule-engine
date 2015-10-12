@@ -68,7 +68,7 @@ sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
   this.executeRuleTest(mml, 'n m', 'default');
 };
 
-  /**
+/**
  * Testing binomial coefficients made from fractions.
  */
 sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
@@ -96,6 +96,17 @@ sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
         '<mi>k</mi></mfrac></mfenced>';
   this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
                        'EndFraction right-parenthesis', 'default');
+};
+
+
+/**
+ * Test unnecessary spaces.
+ */
+sre.MathmlCloudTest.prototype.testUnnecessarySpaces = function() {
+  var mml = '<mn> 5 </mn>';
+  this.executeRuleTest(mml, '5', 'default');
+  mml = '<mn>  5   </mn>';
+  this.executeRuleTest(mml, '5', 'default');
 };
 
 
