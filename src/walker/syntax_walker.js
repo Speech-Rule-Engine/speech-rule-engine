@@ -105,10 +105,14 @@ sre.SyntaxWalker.prototype.nextLevel_ = function() {
       this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
-  var primary = this.getFocus().getPrimary();
+  var primary = /** @type{!Node} */ (this.getFocus().getPrimary());
+  var type = sre.WalkerUtil.getAttribute(
+      primary, sre.EnrichMathml.Attribute.TYPE);
+  var role = sre.WalkerUtil.getAttribute(
+      primary, sre.EnrichMathml.Attribute.ROLE);
   return sre.WalkerUtil.combineContentChildren(
-      primary.getAttribute(sre.EnrichMathml.Attribute.TYPE),
-      primary.getAttribute(sre.EnrichMathml.Attribute.ROLE),
+      /** @type{!sre.SemanticAttr.Type} */ (type),
+      /** @type{!sre.SemanticAttr.Role} */ (role),
       content, children);
 };
 

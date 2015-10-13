@@ -84,7 +84,8 @@ sre.SemanticWalker.prototype.up = function() {
   var found = this.levels.find(
       function(x) {
         for (var i = 0, node, nodes = x.getNodes(); node = nodes[i]; i++) {
-          if (node.getAttribute(sre.EnrichMathml.Attribute.ID) === parent) {
+          if (sre.WalkerUtil.getAttribute(
+              node, sre.EnrichMathml.Attribute.ID) === parent) {
             return true;
           }
         }
@@ -118,10 +119,14 @@ sre.SemanticWalker.prototype.nextLevel_ = function() {
   var content = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
   if (children.length === 0) return [];
-  var primary = this.getFocus().getPrimary();
+  var primary = /** @type{!Node} */ (this.getFocus().getPrimary());
+  var type = sre.WalkerUtil.getAttribute(
+      primary, sre.EnrichMathml.Attribute.TYPE);
+  var role = sre.WalkerUtil.getAttribute(
+      primary, sre.EnrichMathml.Attribute.ROLE);
   return this.combineContentChildren(
-      primary.getAttribute(sre.EnrichMathml.Attribute.TYPE),
-      primary.getAttribute(sre.EnrichMathml.Attribute.ROLE),
+      /** @type{!sre.SemanticAttr.Type} */ (type),
+      /** @type{!sre.SemanticAttr.Role} */ (role),
       content, children);
 };
 
@@ -132,7 +137,7 @@ sre.SemanticWalker.prototype.nextLevel_ = function() {
  * @param {!sre.SemanticAttr.Role} role The semantic role.
  * @param {!Array.<string>} content The list of content nodes.
  * @param {!Array.<string>} children The list of child nodes.
- * @return {!Array.<sre.Focus>} The list focus elements.
+ * @return {!Array.<sre.Focus>} The list of focus elements.
  */
 sre.SemanticWalker.prototype.combineContentChildren = function(
     type, role, content, children) {

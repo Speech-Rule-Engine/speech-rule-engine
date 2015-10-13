@@ -21,12 +21,14 @@
 
 goog.provide('sre.WalkerUtil');
 
+goog.require('sre.BaseUtil');
+goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 
 
 /**
  * A comma separated list of attribute values.
- * @param {string} attr The attribute value.
+ * @param {?string} attr The attribute value.
  * @return {!Array.<string>} A list of values.
  */
 sre.WalkerUtil.splitAttribute = function(attr) {
@@ -69,4 +71,30 @@ sre.WalkerUtil.combineContentChildren = function(
     default:
       return children;
   }
+};
+
+
+/**
+ * Transforms a data attribute name into its camel cased version.
+ * @param{!sre.EnrichMathml.Attribute} attr Micro data attributes.
+ * @return{!string} The camel cased attribute.
+ */
+sre.WalkerUtil.dataAttribute = function(attr) {
+  return attr.substr(5).replace(/-([a-z])/g, function(letter, index) {
+    return index.toUpperCase();});
+};
+
+
+/**
+ * Retrieves a data attribute from a given node. Tries using microdata access if
+ * possible.
+ * @param {!Node} node A DOM node.
+ * @param {!sre.EnrichMathml.Attribute} attr The semantic data attribute.
+ * @return {!string} The value for that attribute.
+ */
+sre.WalkerUtil.getAttribute = function(node, attr) {
+  if (node.dataset) {
+    return node.dataset[sre.WalkerUtil.dataAttribute(attr)];
+  }
+  return node.getAttribute(attr);
 };

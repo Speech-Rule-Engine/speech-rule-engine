@@ -24,6 +24,7 @@ goog.provide('sre.AbstractWalker');
 goog.require('sre.EnrichMathml');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
+goog.require('sre.WalkerUtil');
 goog.require('sre.WalkerInterface');
 
 
@@ -231,7 +232,7 @@ sre.AbstractWalker.prototype.getBySemanticId = function(id) {
  */
 sre.AbstractWalker.prototype.primaryAttribute = function(attr) {
   var primary = this.focus_.getPrimary();
-  return primary ? primary.getAttribute(attr) : null;
+  return primary ? sre.WalkerUtil.getAttribute(primary, attr) : '';
 };
 
 
