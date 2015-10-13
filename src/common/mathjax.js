@@ -21,6 +21,7 @@
 goog.provide('sre.Mathjax');
 
 goog.require('sre.DirectSpeechGenerator');
+goog.require('sre.DummyWalker');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
 goog.require('sre.HighlighterFactory');
