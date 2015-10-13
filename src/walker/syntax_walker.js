@@ -14,7 +14,7 @@
 
 
 /**
- * @fileoverview New key explorer facilities.
+ * @fileoverview A simple syntax walker.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
