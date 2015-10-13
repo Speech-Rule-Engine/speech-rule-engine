@@ -50,6 +50,25 @@ goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
+ * Testing for correct treatment of special HTML entities: non-breaking spaces,
+ * left and right angle bracket.
+ */
+sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
+  var mml = '<mo>&lt;</mo>';
+  this.executeRuleTest(mml, 'less-than', 'default');
+  mml = '<mo>&gt;</mo>';
+  this.executeRuleTest(mml, 'greater-than', 'default');
+  mml = '<mi>n&nbsp;</mi>';
+  this.executeRuleTest(mml, 'n', 'default');
+  mml = '<mi>&nbsp;m</mi>';
+  this.executeRuleTest(mml, 'm', 'default');
+  mml = '<mi>n&nbsp;m</mi>';
+  this.executeRuleTest(mml, 'n m', 'default');
+  mml = '<mi>&nbsp;&nbsp;n&nbsp;&nbsp;m&nbsp;&nbsp;</mi>';
+  this.executeRuleTest(mml, 'n m', 'default');
+};
+
+/**
  * Testing binomial coefficients made from fractions.
  */
 sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
@@ -77,6 +96,17 @@ sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
         '<mi>k</mi></mfrac></mfenced>';
   this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
                        'EndFraction right-parenthesis', 'default');
+};
+
+
+/**
+ * Test unnecessary spaces.
+ */
+sre.MathmlCloudTest.prototype.testUnnecessarySpaces = function() {
+  var mml = '<mn> 5 </mn>';
+  this.executeRuleTest(mml, '5', 'default');
+  mml = '<mn> &nbsp; 5 &nbsp; </mn>';
+  this.executeRuleTest(mml, '5', 'default');
 };
 
 

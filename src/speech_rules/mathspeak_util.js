@@ -52,7 +52,7 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
         sre.Semantic.Role.UNKNOWN :
         sre.Semantic.Role.PROTECTED;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 chr + '</' + type + '>');
+                                 chr + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
   }
   return result;
@@ -65,11 +65,12 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  * @return {Array.<Node>} List of number and content nodes.
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
-  if (!node.textContent.match(/[a-zA-Z]+/)) {
-    node.setAttribute('role', sre.Semantic.Role.PROTECTED);
+  var textContent = node.textContent;
+  if (!textContent.match(/[a-zA-Z]+/)) {
+    node.setAttribute('role', sre.SemanticAttr.Role.PROTECTED);
     return [node];
   }
-  var content = node.textContent.split('');
+  var content = textContent.split('');
   var result = [];
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   for (var i = 0, chr; chr = content[i]; i++) {
@@ -77,7 +78,7 @@ sre.MathspeakUtil.spaceoutIdentifier = function(node) {
     var type = sre.Semantic.Type.IDENTIFIER;
     var role = sre.Semantic.Role.UNKNOWN;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 chr + '</' + type + '>');
+                                 chr + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
   }
   return result;
