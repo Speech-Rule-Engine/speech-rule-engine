@@ -53,17 +53,18 @@ sre.HtmlHighlighter.prototype.setMode = function(mode) {
  * @override
  */
 sre.HtmlHighlighter.prototype.highlightNode = function(node) {
-  if (this.mode === 'walk' ||
-      (node.className !== 'MathJax_HitBox' &&
-       (!node.previousSibling ||
-        node.previousSibling.className !== 'MathJax_HitBox'))) {
+  if (this.mode === 'walk') {
     return goog.base(this, 'highlightNode', node);
   }
-  if (node.className === 'MathJax_HitBox') {
-    var box = node;
-    node = /** @type {!Node} */ (node.nextSibling);
+  if (this.mode === 'flame') {
+    var box = node.firstElementChild;
   } else {
-    box = /** @type {!Node} */ (node.previousSibling);
+    if (node.className === 'MathJax_HitBox') {
+      box = node;
+      node = /** @type {!Node} */ (node.nextSibling);
+    } else {
+      box = /** @type {!Node} */ (node.previousSibling);
+    }
   }
   var info = {node: box,
     opacity: box.style.opacity,
@@ -81,11 +82,15 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
  * @override
  */
 sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
-  if (info.node.className !== 'MathJax_HitBox') {
+  if (this.mode === 'walk') {
     goog.base(this, 'unhighlightNode', info);
     return;
   }
   info.node.style.backgroundColor = info.background;
   info.node.style.opacity = info.opacity;
+  if (this.mode === 'flame') {
+    info.node.parentNode.style.color = info.foreground;
+    return;
+  }
   info.node.nextSibling.style.color = info.foreground;
 };
