@@ -49,6 +49,7 @@ sre.DomUtil.toArray = function(nodeList) {
  * @private
  */
 sre.DomUtil.trimInput_ = function(input) {
+  input = input.replace(/&nbsp;/g, ' ');
   return input.replace(/>\s+</g, '><').trim();
 };
 
