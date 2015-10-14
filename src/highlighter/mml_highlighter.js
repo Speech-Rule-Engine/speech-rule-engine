@@ -33,6 +33,8 @@ goog.require('sre.AbstractHighlighter');
  */
 sre.MmlHighlighter = function() {
   goog.base(this);
+  
+  this.style_ = '';
 };
 goog.inherits(sre.MmlHighlighter, sre.AbstractHighlighter);
 
@@ -41,13 +43,11 @@ goog.inherits(sre.MmlHighlighter, sre.AbstractHighlighter);
  * @override
  */
 sre.MmlHighlighter.prototype.highlightNode = function(node) {
-  var style = document.createElementNS(
-      'http://www.w3.org/1998/Math/MathML', 'mstyle');
-  style.setAttribute('mathbackground', this.colorString().background);
-  style.setAttribute('mathcolor', this.colorString().foreground);
-  node.parentNode.replaceChild(style, node);
-  style.appendChild(node);
-  return {node: style};
+  var style = node.getAttribute('style');
+  style += ';background-color: ' + this.colorString().background;
+  style += ';color: ' + this.colorString().foreground;
+  node.setAttribute('style', style);
+  return {node: node};
 };
 
 
@@ -55,8 +55,11 @@ sre.MmlHighlighter.prototype.highlightNode = function(node) {
  * @override
  */
 sre.MmlHighlighter.prototype.unhighlightNode = function(info) {
-  var node = info.node;
-  node.parentNode.replaceChild(node.firstElementChild, node);
+  var style = info.node.getAttribute('style');
+  style = style.replace(';background-color: ' +
+                        this.colorString().background, '');
+  style = style.replace(';color: ' + this.colorString().foreground, '');
+  info.node.setAttribute('style', style);
 };
 
 
@@ -64,5 +67,5 @@ sre.MmlHighlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.MmlHighlighter.prototype.colorString = function() {
-  return this.color.hex();
+  return this.color.rgba();
 };
