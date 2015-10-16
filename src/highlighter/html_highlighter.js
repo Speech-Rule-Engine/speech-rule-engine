@@ -66,6 +66,7 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
       box = /** @type {!Node} */ (node.previousSibling);
     }
   }
+  sre.HtmlHighlighter.relativePosition_(box.nextSibling);
   var info = {node: box,
     opacity: box.style.opacity,
     background: box.style.backgroundColor,
@@ -75,6 +76,16 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
   box.style.opacity = color.alphaback;
   node.style.color = color.foreground;
   return info;
+};
+
+
+/**
+ * Sets a node position to relative.
+ * @param {Node} node The node to set the position on.
+ * @private
+ */
+sre.HtmlHighlighter.relativePosition_ = function(node) {
+  if (node) node.style.position = "relative";
 };
 
 
