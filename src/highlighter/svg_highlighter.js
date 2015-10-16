@@ -50,10 +50,11 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
   var bbox = node.getBBox();
   var rect = document.createElementNS(
       'http://www.w3.org/2000/svg', 'rect');
-  rect.setAttribute('x', bbox.x);
-  rect.setAttribute('y', bbox.y);
-  rect.setAttribute('width', bbox.width);
-  rect.setAttribute('height', bbox.height);
+  var padding = 40;
+  rect.setAttribute('x', bbox.x - padding);
+  rect.setAttribute('y', bbox.y - padding);
+  rect.setAttribute('width', bbox.width + 2 * padding);
+  rect.setAttribute('height', bbox.height + 2 * padding);
   var transform = node.getAttribute('transform');
   if (transform) {
     rect.setAttribute('transform', transform);
