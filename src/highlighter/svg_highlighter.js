@@ -70,7 +70,7 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
  * @override
  */
 sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
-  if (info.background) {
+  if ('background' in info) {
     info.node.style.backgroundColor = info.background;
     info.node.style.color = info.foreground;
     return;
