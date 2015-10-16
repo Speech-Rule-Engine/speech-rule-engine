@@ -66,12 +66,6 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
       box = /** @type {!Node} */ (node.previousSibling);
     }
   }
-  console.log(node.style.position);
-  console.log(box.style.position);
-  // box.style.position = 'relative';
-  // node.style.position = 'relative';
-  console.log(node.style.position);
-  console.log(box.style.position);
   var info = {node: box,
     opacity: box.style.opacity,
     background: box.style.backgroundColor,
