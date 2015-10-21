@@ -45,6 +45,19 @@ sre.HighlighterInterface.prototype.unhighlight = function() { };
 
 
 /**
+ * Sets highlighting on all maction-like sub nodes of the given node.
+ * @param {!Node} node The node to highlight.
+ */
+sre.HighlighterInterface.prototype.highlightAll = function(node) { };
+
+
+/**
+ * Unhighlights all currently highlighted nodes.
+ */
+sre.HighlighterInterface.prototype.unhighlightAll = function() { };
+
+
+/**
  * Sets of the color the highlighter is using.
  * @param {sre.ColorPicker} color The new color to use.
  */

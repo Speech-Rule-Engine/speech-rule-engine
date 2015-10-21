@@ -31,7 +31,6 @@ goog.require('sre.HighlighterInterface');
  * @implements {sre.HighlighterInterface}
  */
 sre.AbstractHighlighter = function() {
-  //TODO: Put this into a special class.
   /**
    * List of currently highlighted nodes and their original background color.
    * @type {!Array.<Array.<{node: !Node, opacity: (undefined|string),
@@ -81,6 +80,17 @@ sre.AbstractHighlighter.prototype.highlightNode = goog.abstractMethod;
 /**
  * @override
  */
+sre.AbstractHighlighter.prototype.highlightAll = function(node) {
+  var mactions = this.getMactionNodes(node);
+  for (var i = 0, maction; maction = mactions[i]; i++) {
+    this.highlight([maction]);
+  }
+};
+
+
+/**
+ * @override
+ */
 sre.AbstractHighlighter.prototype.unhighlight = function() {
   var nodes = this.currentHighlights_.pop();
   if (!nodes) return;
@@ -99,6 +109,16 @@ sre.AbstractHighlighter.prototype.unhighlight = function() {
  * @protected
  */
 sre.AbstractHighlighter.prototype.unhighlightNode = goog.abstractMethod;
+
+
+/**
+ * @override
+ */
+sre.AbstractHighlighter.prototype.unhighlightAll = function() {
+  while (this.currentHighlights_.length > 0) {
+    this.unhighlight();
+  }
+};
 
 
 /**
@@ -124,7 +144,6 @@ sre.AbstractHighlighter.prototype.colorString = function() {
  */
 sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
   var mactions = this.getMactionNodes(node);
-  console.log(mactions);
   for (var i = 0, maction; maction = mactions[i]; i++) {
     for (var event in events) {
       maction.addEventListener(event, events[event]);

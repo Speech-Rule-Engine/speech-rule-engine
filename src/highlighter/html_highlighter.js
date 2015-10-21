@@ -34,10 +34,6 @@ sre.HtmlHighlighter = function() {
 
   this.mactionName = 'maction';
 
-  /**
-   * @type {!string}
-   */
-  this.mode = '';
 };
 goog.inherits(sre.HtmlHighlighter, sre.CssHighlighter);
 
@@ -55,12 +51,12 @@ sre.HtmlHighlighter.prototype.setMode = function(mode) {
  * @override
  */
 sre.HtmlHighlighter.prototype.highlightNode = function(node) {
-  if (this.mode === 'walk') {
+  if (!node.classList.contains(this.mactionName)) {
     return goog.base(this, 'highlightNode', node);
   }
   var box = node.firstElementChild;
   sre.HtmlHighlighter.relativePosition_(box.nextSibling);
-  var info = {node: box,
+  var info = {node: node,
     opacity: box.style.opacity,
     background: box.style.backgroundColor,
     foreground: node.style.color};
@@ -86,11 +82,12 @@ sre.HtmlHighlighter.relativePosition_ = function(node) {
  * @override
  */
 sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
-  if (this.mode === 'walk') {
+  if (!info.node.classList.contains(this.mactionName)) {
     goog.base(this, 'unhighlightNode', info);
     return;
   }
-  info.node.style.backgroundColor = info.background;
-  info.node.style.opacity = info.opacity;
-  info.node.parentNode.style.color = info.foreground;
+  var box = info.node.firstElementChild;
+  box.style.backgroundColor = info.background;
+  box.style.opacity = info.opacity;
+  info.node.style.color = info.foreground;
 };

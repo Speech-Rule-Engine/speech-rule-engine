@@ -34,9 +34,8 @@ goog.require('sre.SvgHighlighter');
  * @param {sre.ColorPicker.Color} back A background color specification.
  * @param {sre.ColorPicker.Color} fore A foreground color specification.
  * @param {{renderer: string,
- *          mode: (undefined|string),
  *          browser: (undefined|string)}} rendererInfo
- *     Information on renderer, mode, browser. Has to at least contain the
+ *     Information on renderer, browser. Has to at least contain the
  *     renderer field.
  * @return {?sre.HighlighterInterface} A new highlighter.
  */
@@ -49,9 +48,6 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
       sre.HighlighterFactory.highlighterMapping_[renderer];
   if (!highlighter) return null;
   highlighter.setColor(colorPicker);
-  if (highlighter.setMode) {
-    highlighter.setMode(rendererInfo.mode);
-  }
   return highlighter;
 };
 
@@ -63,7 +59,7 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
  *     type and function to execute
  * @param {{renderer: string,
  *          browser: (undefined|string)}} rendererInfo
- *     Information on renderer, mode, browser. Has to at least contain the
+ *     Information on renderer, browser. Has to at least contain the
  *     renderer field.
  */
 sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
