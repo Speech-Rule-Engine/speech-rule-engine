@@ -47,6 +47,12 @@ sre.AbstractHighlighter = function() {
    */
   this.color = null;
 
+  /**
+   * @type {string}
+   * @protected
+   */
+  this.mactionName = '';
+
 };
 
 
@@ -110,4 +116,30 @@ sre.AbstractHighlighter.prototype.setColor = function(color) {
  */
 sre.AbstractHighlighter.prototype.colorString = function() {
   return this.color.rgba();
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
+  var mactions = this.getMactionNodes(node);
+  console.log(mactions);
+  for (var i = 0, maction; maction = mactions[i]; i++) {
+    for (var event in events) {
+      console.log(event);
+      console.log(events);
+      maction.addEventListener(event, events[event]);
+    }
+  }
+};
+
+
+/**
+ * Returns the maction sub nodes of a given node.
+ * @param {!Node} node The root node.
+ * @return {NodeList} The list of maction sub nodes.
+ */
+sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
+  return node.getElementsByClassName(this.mactionName);
 };

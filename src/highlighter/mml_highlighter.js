@@ -34,7 +34,7 @@ goog.require('sre.AbstractHighlighter');
 sre.MmlHighlighter = function() {
   goog.base(this);
   
-  this.style_ = '';
+  this.mactionName = 'maction';
 };
 goog.inherits(sre.MmlHighlighter, sre.AbstractHighlighter);
 
@@ -68,4 +68,12 @@ sre.MmlHighlighter.prototype.unhighlightNode = function(info) {
  */
 sre.MmlHighlighter.prototype.colorString = function() {
   return this.color.rgba();
+};
+
+
+/**
+ * @override
+ */
+sre.MmlHighlighter.prototype.getMactionNodes = function(node) {
+  return node.getElementsByTagName(this.mactionName);
 };

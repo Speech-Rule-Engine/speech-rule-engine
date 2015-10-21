@@ -31,6 +31,8 @@ goog.require('sre.AbstractHighlighter');
  */
 sre.SvgHighlighter = function() {
   goog.base(this);
+
+  this.mactionName = 'mjx-svg-maction';
 };
 goog.inherits(sre.SvgHighlighter, sre.AbstractHighlighter);
 

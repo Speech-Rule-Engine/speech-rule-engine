@@ -31,6 +31,8 @@ goog.require('sre.AbstractHighlighter');
  */
 sre.CssHighlighter = function() {
   goog.base(this);
+
+  this.mactionName = 'mjx-maction';
 };
 goog.inherits(sre.CssHighlighter, sre.AbstractHighlighter);
 

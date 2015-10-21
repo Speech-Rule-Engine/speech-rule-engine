@@ -32,6 +32,8 @@ goog.require('sre.CssHighlighter');
 sre.HtmlHighlighter = function() {
   goog.base(this);
 
+  this.mactionName = 'maction';
+
   /**
    * @type {!string}
    */
@@ -104,4 +106,18 @@ sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
     return;
   }
   info.node.nextSibling.style.color = info.foreground;
+};
+
+
+/**
+ * @override
+ */
+sre.HtmlHighlighter.prototype.addEvents = function(node, events) {
+  var mactions = this.getMactionNodes(node);
+  for (var i = 0, maction; maction = mactions[i]; i++) {
+    for (var event in events) {
+      maction.childNodes[0].addEventListener(event, events[event]);
+      maction.childNodes[1].addEventListener(event, events[event]);
+    }
+  }
 };

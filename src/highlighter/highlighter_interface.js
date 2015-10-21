@@ -49,3 +49,12 @@ sre.HighlighterInterface.prototype.unhighlight = function() { };
  * @param {sre.ColorPicker} color The new color to use.
  */
 sre.HighlighterInterface.prototype.setColor = function(color) { };
+
+
+/**
+ * Adds events to the nodes that can by highlighted.
+ * @param {!Node} node The base node for highlighting.
+ * @param {Object.<string, Function>} events The events to attach given as event
+ *     type and function to execute
+ */
+sre.HighlighterInterface.prototype.addEvents = function(node, events) { };
