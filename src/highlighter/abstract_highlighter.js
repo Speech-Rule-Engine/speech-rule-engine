@@ -127,8 +127,6 @@ sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
   console.log(mactions);
   for (var i = 0, maction; maction = mactions[i]; i++) {
     for (var event in events) {
-      console.log(event);
-      console.log(events);
       maction.addEventListener(event, events[event]);
     }
   }
