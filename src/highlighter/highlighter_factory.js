@@ -67,11 +67,8 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
  *     renderer field.
  */
 sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
-  console.log('adding events');
-  console.log(rendererInfo);
   var highlighter =
       sre.HighlighterFactory.highlighterMapping_[rendererInfo.renderer];
-  console.log(highlighter);
   if (highlighter) {
     highlighter.addEvents(node, events);
   }
