@@ -45,10 +45,9 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var renderer = (rendererInfo.renderer === 'NativeMML' &&
                   rendererInfo.browser === 'Safari') ?
       'CommonHTML' : rendererInfo.renderer;
-  var constructor =
+  var highlighter =
       sre.HighlighterFactory.highlighterMapping_[renderer];
-  if (!constructor) return null;
-  var highlighter = new constructor();
+  if (!highlighter) return null;
   highlighter.setColor(colorPicker);
   if (highlighter.setMode) {
     highlighter.setMode(rendererInfo.mode);
@@ -58,12 +57,13 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
 
 
 /**
- * @type {Object.<string, function(new:sre.HighlighterInterface)>}
+ * @type {Object.<string, sre.HighlighterInterface>}
  * @private
  */
-sre.HighlighterFactory.highlighterMapping_ = {
-  'SVG': sre.SvgHighlighter,
-  'NativeMML': sre.MmlHighlighter,
-  'HTML-CSS': sre.HtmlHighlighter,
-  'CommonHTML': sre.CssHighlighter
-};
+sre.HighlighterFactory.highlighterMapping_ = {};
+sre.HighlighterFactory.highlighterMapping_.SVG = new sre.SvgHighlighter();
+sre.HighlighterFactory.highlighterMapping_.NativeMML= new sre.MmlHighlighter();
+sre.HighlighterFactory.highlighterMapping_['HTML-CSS'] =
+    new sre.HtmlHighlighter();
+sre.HighlighterFactory.highlighterMapping_.CommonHTML= new sre.CssHighlighter();
+
