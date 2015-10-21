@@ -92,9 +92,5 @@ sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
   }
   info.node.style.backgroundColor = info.background;
   info.node.style.opacity = info.opacity;
-  if (this.mode === 'flame') {
-    info.node.parentNode.style.color = info.foreground;
-    return;
-  }
-  info.node.nextSibling.style.color = info.foreground;
+  info.node.parentNode.style.color = info.foreground;
 };
