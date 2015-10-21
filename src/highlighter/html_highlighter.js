@@ -58,16 +58,7 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
   if (this.mode === 'walk') {
     return goog.base(this, 'highlightNode', node);
   }
-  if (this.mode === 'flame') {
-    var box = node.firstElementChild;
-  } else {
-    if (node.className === 'MathJax_HitBox') {
-      box = node;
-      node = /** @type {!Node} */ (node.nextSibling);
-    } else {
-      box = /** @type {!Node} */ (node.previousSibling);
-    }
-  }
+  var box = node.firstElementChild;
   sre.HtmlHighlighter.relativePosition_(box.nextSibling);
   var info = {node: box,
     opacity: box.style.opacity,
@@ -106,18 +97,4 @@ sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
     return;
   }
   info.node.nextSibling.style.color = info.foreground;
-};
-
-
-/**
- * @override
- */
-sre.HtmlHighlighter.prototype.addEvents = function(node, events) {
-  var mactions = this.getMactionNodes(node);
-  for (var i = 0, maction; maction = mactions[i]; i++) {
-    for (var event in events) {
-      maction.childNodes[0].addEventListener(event, events[event]);
-      maction.childNodes[1].addEventListener(event, events[event]);
-    }
-  }
 };
