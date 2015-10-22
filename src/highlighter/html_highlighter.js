@@ -82,7 +82,7 @@ sre.HtmlHighlighter.relativePosition_ = function(node) {
  * @override
  */
 sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
-  if (node.className.search(this.mactionName) === -1) {
+  if (info.node.className.search(this.mactionName) === -1) {
     goog.base(this, 'unhighlightNode', info);
     return;
   }
