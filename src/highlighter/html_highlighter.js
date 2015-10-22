@@ -51,7 +51,7 @@ sre.HtmlHighlighter.prototype.setMode = function(mode) {
  * @override
  */
 sre.HtmlHighlighter.prototype.highlightNode = function(node) {
-  if (!node.classList.contains(this.mactionName)) {
+  if (node.className.search(this.mactionName) === -1) {
     return goog.base(this, 'highlightNode', node);
   }
   var box = node.firstElementChild;
@@ -82,7 +82,7 @@ sre.HtmlHighlighter.relativePosition_ = function(node) {
  * @override
  */
 sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
-  if (!info.node.classList.contains(this.mactionName)) {
+  if (node.className.search(this.mactionName) === -1) {
     goog.base(this, 'unhighlightNode', info);
     return;
   }
