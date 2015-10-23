@@ -99,8 +99,11 @@ sre.XpathUtil.resolveNameSpace = function(prefix) {
  */
 sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
   return sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP ?
-      sre.XpathUtil.currentDocument.evaluate(
-      expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
+      sre.XpathUtil.xpathEvaluate(
+        expression, rootNode, sre.XpathUtil.createNSResolver(rootNode),
+        type, null) :
+      // sre.XpathUtil.currentDocument.evaluate(
+      // expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
       sre.XpathUtil.xpathEvaluate(
       expression, rootNode, sre.XpathUtil.createNSResolver(rootNode),
       type, null);
