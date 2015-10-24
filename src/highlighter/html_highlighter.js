@@ -54,7 +54,7 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
   if (node.className.search(this.mactionName) === -1) {
     return goog.base(this, 'highlightNode', node);
   }
-  var box = node.firstElementChild;
+  var box = node.childNodes[0];
   sre.HtmlHighlighter.relativePosition_(box.nextSibling);
   var info = {node: node,
     opacity: box.style.opacity,
@@ -86,7 +86,7 @@ sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
     goog.base(this, 'unhighlightNode', info);
     return;
   }
-  var box = info.node.firstElementChild;
+  var box = info.node.childNodes[0];
   box.style.backgroundColor = info.background;
   box.style.opacity = info.opacity;
   info.node.style.color = info.foreground;

@@ -120,7 +120,7 @@ sre.System.prototype.processExpression = function(expr) {
 sre.System.prototype.getSemanticTree_ = function(mml) {
   var tree = sre.Semantic.getTree(mml);
   if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    return tree.firstElementChild;
+    return tree.childNodes[0];
   }
   return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
 };
