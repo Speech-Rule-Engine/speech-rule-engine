@@ -45,8 +45,25 @@ sre.CssHighlighter.prototype.highlightNode = function(node) {
     background: node.style.backgroundColor,
     foreground: node.style.color};
   var color = this.colorString();
-  node.style.backgroundColor = color.background;
   node.style.color = color.foreground;
+  if (node.bbox && node.bbox.w) {
+      var bbox = node.bbox;
+      var vpad = 0.05, hpad = 0; // vertical and horizontal padding
+      var span = document.createElement("span");
+      var left = parseFloat(node.style.paddingLeft||"0");
+      span.style.backgroundColor = c.background;
+      span.style.display = "inline-block";
+      span.style.height = (bbox.h+bbox.d+2*vpad)+"em";
+      span.style.verticalAlign = (-bbox.d)+"em";
+      span.style.marginTop = span.style.marginBottom = (-vpad)+"em";
+      span.style.width = (bbox.w+2*hpad)+"em";
+      span.style.marginLeft = (left-hpad)+"em";
+      span.style.marginRight = (-bbox.w-hpad-left)+"em";
+      node.parentNode.insertBefore(span,a);
+      info.box = span;
+  } else {
+    node.style.backgroundColor = color.background;
+  }
   return info;
 };
 
@@ -57,4 +74,5 @@ sre.CssHighlighter.prototype.highlightNode = function(node) {
 sre.CssHighlighter.prototype.unhighlightNode = function(info) {
   info.node.style.backgroundColor = info.background;
   info.node.style.color = info.foreground;
+  if (info.box) info.box.parentNode.removeChild(info.box);
 };
