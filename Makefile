@@ -242,9 +242,6 @@ iemaps:
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
 	@echo '}\n' >> $(IEMAPS_FILE)
 
-#		@echo "'$(subst .json,,$(basename $$i))'" >> $(IEMAPS_FILE); 
-concat_files = $(subst .json,,$(basename $(map))) >> $(IEMAPS_FILE)
-
 api: $(SRC)
 	@echo Compiling Speech Rule Engine API
 	@echo $^
