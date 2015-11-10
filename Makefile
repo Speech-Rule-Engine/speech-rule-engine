@@ -28,6 +28,7 @@ START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
+IEMAPS_FILE = $(JSON_DIR)/mathmaps_ie.js
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -227,6 +228,22 @@ maps: $(MAPS)
 
 $(MAPS): 
 	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
+
+iemaps:
+	@echo 'sre.MathMap.forIE = {' > $(IEMAPS_FILE)
+	@for dir in $(MAPS); do\
+		for i in $(JSON_DIR)/$$dir/*.json; do\
+			echo '"'`basename $$i .json`'": '  >> $(IEMAPS_FILE); \
+			cat $$i >> $(IEMAPS_FILE); \
+			echo ','  >> $(IEMAPS_FILE); \
+		done; \
+	done
+	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
+	@echo '}\n' >> $(IEMAPS_FILE)
+
+#		@echo "'$(subst .json,,$(basename $$i))'" >> $(IEMAPS_FILE); 
+concat_files = $(subst .json,,$(basename $(map))) >> $(IEMAPS_FILE)
 
 api: $(SRC)
 	@echo Compiling Speech Rule Engine API
