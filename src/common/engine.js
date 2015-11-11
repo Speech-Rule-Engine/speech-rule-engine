@@ -21,6 +21,8 @@
 goog.provide('sre.Engine');
 goog.provide('sre.Engine.Mode');
 
+goog.require('sre.BrowserUtil');
+
 
 
 /**
@@ -73,7 +75,6 @@ sre.Engine = function() {
    */
   this.semantics = false;
 
-  //TODO: Put this into an enum.
   /**
    * The mode in which the engine is running (sync, async, http).
    * @type {sre.Engine.Mode}
@@ -98,6 +99,18 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.withCache = true;
+
+  /**
+   * Current browser is MS Internet Explorer but not Edge.
+   * @type {boolean}
+   */
+  this.isIE = sre.BrowserUtil.detectIE();
+
+  /**
+   * Current browser is MS Edge.
+   * @type {boolean}
+   */
+  this.isEdge = sre.BrowserUtil.detectEdge();
 };
 goog.addSingletonGetter(sre.Engine);
 

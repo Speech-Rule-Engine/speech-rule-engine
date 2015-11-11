@@ -198,15 +198,15 @@ sre.AbstractWalker.prototype.right = goog.abstractMethod;
  * @private
  */
 sre.AbstractWalker.prototype.getRoot_ = function(node) {
-  if (node.hasAttribute(sre.EnrichMathml.Attribute.SPEECH) &&
+  if (node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) &&
       !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
     return node;
   }
-  var speechNodes = node.querySelectorAll(
-      '[' + sre.EnrichMathml.Attribute.SPEECH + ']');
-  for (var i = 0, speechNode; speechNode = speechNodes[i]; i++) {
-    if (!speechNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
-      return speechNode;
+  var semanticNodes = node.querySelectorAll(
+      '[' + sre.EnrichMathml.Attribute.TYPE + ']');
+  for (var i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
+    if (!semanticNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
+      return semanticNode;
     }
   }
   return node;
