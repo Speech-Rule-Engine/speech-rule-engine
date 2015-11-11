@@ -47,19 +47,6 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
-  sre.MathMap.retrieveFiles(
-      sre.MathMap.FUNCTIONS_FILES_,
-      sre.MathMap.FUNCTIONS_PATH_,
-      goog.bind(this.store.addFunctionRules, this.store));
-  sre.MathMap.retrieveFiles(
-      sre.MathMap.SYMBOLS_FILES_,
-      sre.MathMap.SYMBOLS_PATH_,
-      goog.bind(this.store.addSymbolRules, this.store));
-  sre.MathMap.retrieveFiles(
-      sre.MathMap.UNITS_FILES_,
-      sre.MathMap.UNITS_PATH_,
-      goog.bind(this.store.addUnitRules, this.store));
-
   /**
    * Array of domain names.
    * @type {Array.<string>}
@@ -71,6 +58,8 @@ sre.MathMap = function() {
    * @type {Array.<string>}
    */
   this.allStyles = [];
+
+  this.retrieveMaps();
 
   this.getDynamicConstraintValues();
 };
@@ -206,9 +195,12 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
       }
       break;
     case sre.Engine.Mode.HTTP:
+      var isIE = sre.MathMap.isIE();
       sre.MathMap.toFetch_ += files.length;
       for (i = 0; file = files[i]; i++) {
-        sre.MathMap.getJsonAjax_(path + file, func);
+        isIE ?
+          sre.MathMap.getJsonIE_(file, func):
+          sre.MathMap.getJsonAjax_(path + file, func);
       }
       break;
     case sre.Engine.Mode.SYNC:
@@ -218,6 +210,86 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
           forEach(function(json) {func(json);});
       break;
   }
+};
+
+
+
+/**
+ * Retrieves mappings and adds them to the respective stores.
+ */
+sre.MathMap.prototype.retrieveMaps = function() {
+  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP &&
+      sre.MathMap.isIE()) {
+    sre.MathMap.loadForIE_();
+  }
+  sre.MathMap.retrieveFiles(
+      sre.MathMap.FUNCTIONS_FILES_,
+      sre.MathMap.FUNCTIONS_PATH_,
+      goog.bind(this.store.addFunctionRules, this.store));
+  sre.MathMap.retrieveFiles(
+      sre.MathMap.SYMBOLS_FILES_,
+      sre.MathMap.SYMBOLS_PATH_,
+      goog.bind(this.store.addSymbolRules, this.store));
+  sre.MathMap.retrieveFiles(
+      sre.MathMap.UNITS_FILES_,
+      sre.MathMap.UNITS_PATH_,
+      goog.bind(this.store.addUnitRules, this.store));
+};
+
+
+
+/**
+ * Predicate to check for MS Internet Explorer.
+ * @return {boolean} True if the browser is IE.
+ */
+sre.MathMap.isIE = function() {
+  return "ActiveXObject" in window && "clipboardData" in window;
+};
+
+
+/**
+ * JSON object with mappings for IE.
+ * @type{Object}
+ */
+sre.MathMap.forIE = null;
+
+
+/**
+ * Gets JSON elements from the global JSON object in case of IE browsers.
+ * @param {string} file The name of a JSON file.
+ * @param {function(JSONType)} func Method adding the rules.
+ * @param {number=} opt_count Optional counter argument for callback. 
+ */
+sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
+  var count = opt_count || 1;
+  if (!sre.MathMap.forIE) {
+    if (count <= 5) {
+      setTimeout(
+        function() {sre.MathMap.getJsonIE_(file, func, count++);},
+        300);
+    } else {
+      sre.MathMap.toFetch_--;
+    }
+    return;
+  }
+  var json = sre.MathMap.forIE[file];
+  if (json) {
+    json.forEach(function(x) {func(x);});
+  }
+  sre.MathMap.toFetch_--;
+};
+
+
+/**
+ * Loads all JSON mappings for IE using a script tag.
+ */
+sre.MathMap.loadForIE_ = function() {
+  var scr = sre.SystemExternal.document.createElement('script');
+  scr.type = 'text/javascript';
+  scr.src = sre.MathMap.MATHMAP_PATH_ + 'mathmaps_ie.js';
+  sre.SystemExternal.document.head ?
+    sre.SystemExternal.document.head.appendChild(scr) :
+    sre.SystemExternal.document.body.appendChild(scr);
 };
 
 
