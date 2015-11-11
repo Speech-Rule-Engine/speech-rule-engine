@@ -195,7 +195,7 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
       }
       break;
     case sre.Engine.Mode.HTTP:
-      var isIE = sre.MathMap.isIE();
+      var isIE = sre.Engine.getInstance().isIE;
       sre.MathMap.toFetch_ += files.length;
       for (i = 0; file = files[i]; i++) {
         isIE ?
@@ -219,7 +219,7 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
  */
 sre.MathMap.prototype.retrieveMaps = function() {
   if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP &&
-      sre.MathMap.isIE()) {
+      sre.Engine.getInstance().isIE) {
     sre.MathMap.loadForIE_();
   }
   sre.MathMap.retrieveFiles(
@@ -234,16 +234,6 @@ sre.MathMap.prototype.retrieveMaps = function() {
       sre.MathMap.UNITS_FILES_,
       sre.MathMap.UNITS_PATH_,
       goog.bind(this.store.addUnitRules, this.store));
-};
-
-
-
-/**
- * Predicate to check for MS Internet Explorer.
- * @return {boolean} True if the browser is IE.
- */
-sre.MathMap.isIE = function() {
-  return "ActiveXObject" in window && "clipboardData" in window;
 };
 
 
