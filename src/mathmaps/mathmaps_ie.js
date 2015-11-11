@@ -1,5 +1,5 @@
 sre.MathMap.forIE = {
-"algebra": 
+"algebra.json": 
 [
   {"category": "Algebra",
    "mappings": {
@@ -59,7 +59,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"elementary": 
+"elementary.json": 
 [
   {"category": "Elementary",
    "mappings": {
@@ -285,7 +285,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"hyperbolic": 
+"hyperbolic.json": 
 [
   {"category": "Hyperbolic",
    "mappings": {
@@ -396,7 +396,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"trigonometry": 
+"trigonometry.json": 
 [
   {"category": "Trigonometric",
    "mappings": {
@@ -508,7 +508,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"greek-capital": 
+"greek-capital.json": 
 [
   {
     "category": "Lu",
@@ -825,7 +825,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"greek-mathfonts": 
+"greek-mathfonts.json": 
 [
   {
     "category": "Lu",
@@ -2704,7 +2704,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"greek-scripts": 
+"greek-scripts.json": 
 [
   {
     "category": "Ll",
@@ -2854,7 +2854,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"greek-small": 
+"greek-small.json": 
 [
   {
     "category": "Ll",
@@ -3108,7 +3108,7 @@ sre.MathMap.forIE = {
     }
   }
 ],
-"greek-symbols": 
+"greek-symbols.json": 
 [
   {
     "category": "Ll",
@@ -3509,7 +3509,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"hebrew_letters": 
+"hebrew_letters.json": 
 [
   {
     "category": "Lo",
@@ -3556,7 +3556,7 @@ sre.MathMap.forIE = {
     "key": "2138"
   }
 ],
-"latin-lower-double-accent": 
+"latin-lower-double-accent.json": 
 [
   {
     "category": "Ll",
@@ -4186,7 +4186,7 @@ sre.MathMap.forIE = {
     }
   }
 ],
-"latin-lower-normal": 
+"latin-lower-normal.json": 
 [
   {
     "category": "Ll",
@@ -4709,7 +4709,7 @@ sre.MathMap.forIE = {
     }
   }
 ],
-"latin-lower-phonetic": 
+"latin-lower-phonetic.json": 
 [
   {
     "category": "Ll",
@@ -6946,7 +6946,7 @@ sre.MathMap.forIE = {
     }
   }
 ],
-"latin-lower-single-accent": 
+"latin-lower-single-accent.json": 
 [
   {
     "category": "Ll",
@@ -10005,7 +10005,7 @@ sre.MathMap.forIE = {
     }
   }
 ],
-"latin-mathfonts": 
+"latin-mathfonts.json": 
 [
   {
     "category": "Lu",
@@ -16857,7 +16857,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"latin-rest": 
+"latin-rest.json": 
 [
   {
     "category": "Mn",
@@ -19678,7 +19678,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"latin-upper-double-accent": 
+"latin-upper-double-accent.json": 
 [
   {
     "category": "Lu",
@@ -20480,7 +20480,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"latin-upper-normal": 
+"latin-upper-normal.json": 
 [
   {
     "category": "Lu",
@@ -21186,7 +21186,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"latin-upper-single-accent": 
+"latin-upper-single-accent.json": 
 [
   {
     "category": "Lu",
@@ -24133,7 +24133,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"math_angles": 
+"math_angles.json": 
 [
   {
     "category": "Sm",
@@ -24352,7 +24352,7 @@ sre.MathMap.forIE = {
     "key": "29AF"
   }
 ],
-"math_arrows": 
+"math_arrows.json": 
 [
   {
     "category": "Sm",
@@ -28292,7 +28292,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"math_characters": 
+"math_characters.json": 
 [
   {
     "category": "Lu",
@@ -28752,7 +28752,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"math_delimiters": 
+"math_delimiters.json": 
 [
   {
     "category": "Ps",
@@ -30908,7 +30908,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"math_digits": 
+"math_digits.json": 
 [
   {
     "category": "Nd",
@@ -33755,7 +33755,7 @@ sre.MathMap.forIE = {
     "key": "1F10A"
   }
 ],
-"math_geometry": 
+"math_geometry.json": 
 [
   {
     "category": "So",
@@ -36575,7 +36575,7 @@ sre.MathMap.forIE = {
     "key": "2B59"
   }
 ],
-"math_harpoons": 
+"math_harpoons.json": 
 [
   {
     "category": "So",
@@ -37086,7 +37086,7 @@ sre.MathMap.forIE = {
     "key": "297F"
   }
 ],
-"math_non_characters": 
+"math_non_characters.json": 
 [
   {
     "category": "Ll",
@@ -37354,7 +37354,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"math_symbols": 
+"math_symbols.json": 
 [
   {
     "category": "Po",
@@ -47565,7 +47565,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"math_whitespace": 
+"math_whitespace.json": 
 [
   {
     "category": "Zs",
@@ -47947,7 +47947,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"other_stars": 
+"other_stars.json": 
 [
   {
     "category": "So",
@@ -48477,7 +48477,7 @@ sre.MathMap.forIE = {
     "key": "274D"
   }
 ],
-"energy": 
+"energy.json": 
 [
   {"category": "energy",
    "mappings": {
@@ -48616,7 +48616,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"length": 
+"length.json": 
 [
   {"category": "Length",
    "mappings": {
@@ -48701,7 +48701,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"memory": 
+"memory.json": 
 [
   {"category": "",
    "mappings": {
@@ -48759,7 +48759,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"other": 
+"other.json": 
 [
   {"category": "",
   "mappings": {
@@ -48790,7 +48790,7 @@ sre.MathMap.forIE = {
  }
 ]
 ,
-"speed": 
+"speed.json": 
 [
 {"category": "",
  "mappings": {
@@ -48830,7 +48830,7 @@ sre.MathMap.forIE = {
 }
 ]
 ,
-"temperature": 
+"temperature.json": 
 [
 {"category": "",
  "mappings": {
@@ -48863,7 +48863,7 @@ sre.MathMap.forIE = {
   
 ]
 ,
-"time": 
+"time.json": 
 [
   {"category": "time",
    "mappings": {
@@ -48921,7 +48921,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"volume": 
+"volume.json": 
 [
   {"category": "volume",
    "mappings": {
@@ -49033,7 +49033,7 @@ sre.MathMap.forIE = {
   }
 ]
 ,
-"weight": 
+"weight.json": 
 [
   {"category": "",
    "mappings": {
