@@ -233,7 +233,7 @@ iemaps:
 	@echo 'sre.MathMap.forIE = {' > $(IEMAPS_FILE)
 	@for dir in $(MAPS); do\
 		for i in $(JSON_DIR)/$$dir/*.json; do\
-			echo '"'`basename $$i .json`'": '  >> $(IEMAPS_FILE); \
+			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 			cat $$i >> $(IEMAPS_FILE); \
 			echo ','  >> $(IEMAPS_FILE); \
 		done; \
