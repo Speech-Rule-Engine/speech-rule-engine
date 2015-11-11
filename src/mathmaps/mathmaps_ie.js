@@ -1,4 +1,4 @@
-sre.MathMap.forIE = {
+sre.BrowserUtil.mapsForIE = {
 "algebra.json": 
 [
   {"category": "Algebra",

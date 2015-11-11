@@ -230,7 +230,7 @@ $(MAPS):
 	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
 
 iemaps:
-	@echo 'sre.MathMap.forIE = {' > $(IEMAPS_FILE)
+	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for dir in $(MAPS); do\
 		for i in $(JSON_DIR)/$$dir/*.json; do\
 			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \

@@ -23,6 +23,7 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.MathUtil');
@@ -218,10 +219,6 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
  * Retrieves mappings and adds them to the respective stores.
  */
 sre.MathMap.prototype.retrieveMaps = function() {
-  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP &&
-      sre.Engine.getInstance().isIE) {
-    sre.MathMap.loadForIE_();
-  }
   sre.MathMap.retrieveFiles(
       sre.MathMap.FUNCTIONS_FILES_,
       sre.MathMap.FUNCTIONS_PATH_,
@@ -238,13 +235,6 @@ sre.MathMap.prototype.retrieveMaps = function() {
 
 
 /**
- * JSON object with mappings for IE.
- * @type{Object}
- */
-sre.MathMap.forIE = null;
-
-
-/**
  * Gets JSON elements from the global JSON object in case of IE browsers.
  * @param {string} file The name of a JSON file.
  * @param {function(JSONType)} func Method adding the rules.
@@ -252,7 +242,7 @@ sre.MathMap.forIE = null;
  */
 sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
   var count = opt_count || 1;
-  if (!sre.MathMap.forIE) {
+  if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
         function() {sre.MathMap.getJsonIE_(file, func, count++);},
@@ -262,24 +252,11 @@ sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
     }
     return;
   }
-  var json = sre.MathMap.forIE[file];
+  var json = sre.BrowserUtil.mapsForIE[file];
   if (json) {
     json.forEach(function(x) {func(x);});
   }
   sre.MathMap.toFetch_--;
-};
-
-
-/**
- * Loads all JSON mappings for IE using a script tag.
- */
-sre.MathMap.loadForIE_ = function() {
-  var scr = sre.SystemExternal.document.createElement('script');
-  scr.type = 'text/javascript';
-  scr.src = sre.MathMap.MATHMAP_PATH_ + 'mathmaps_ie.js';
-  sre.SystemExternal.document.head ?
-    sre.SystemExternal.document.head.appendChild(scr) :
-    sre.SystemExternal.document.body.appendChild(scr);
 };
 
 

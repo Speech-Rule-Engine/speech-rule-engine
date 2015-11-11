@@ -20,6 +20,8 @@
  */
 goog.provide('sre.BrowserUtil');
 
+goog.require('sre.SystemExternal');
+
 
 
 /**
@@ -27,9 +29,13 @@ goog.provide('sre.BrowserUtil');
  * @return {boolean} True if the browser is IE.
  */
 sre.BrowserUtil.detectIE = function() {
-  //console.log(window);
-  return (typeof window !== 'undefined') ?
-      'ActiveXObject' in window && 'clipboardData' in window : false;
+  var isIE = typeof window !== 'undefined' && 
+        'ActiveXObject' in window && 'clipboardData' in window;
+  if (!isIE) {
+    return false;
+  }
+  sre.BrowserUtil.loadMapsForIE_();
+  return true;
 };
 
 
@@ -38,6 +44,30 @@ sre.BrowserUtil.detectIE = function() {
  * @return {boolean} True if the browser is Edge.
  */
 sre.BrowserUtil.detectEdge = function() {
+  console.log('Detecting Edge');
   return (typeof window !== 'undefined') ? 'MSGestureEvent' in window &&
     'chrome' in window && window.chrome.loadTimes == null : false;
 };
+
+
+/**
+ * JSON object with mappings for IE.
+ * @type{Object}
+ */
+sre.BrowserUtil.mapsForIE = null;
+
+
+/**
+ * Loads all JSON mappings for IE using a script tag.
+ * @private
+ */
+sre.BrowserUtil.loadMapsForIE_ = function() {
+  var scr = sre.SystemExternal.document.createElement('script');
+  scr.type = 'text/javascript';
+  scr.src = sre.SystemExternal.jsonPath + 'mathmaps_ie.js';
+  sre.SystemExternal.document.head ?
+    sre.SystemExternal.document.head.appendChild(scr) :
+    sre.SystemExternal.document.body.appendChild(scr);
+};
+
+
