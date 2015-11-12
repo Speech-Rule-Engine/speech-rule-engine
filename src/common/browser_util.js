@@ -35,6 +35,7 @@ sre.BrowserUtil.detectIE = function() {
     return false;
   }
   sre.BrowserUtil.loadMapsForIE_();
+  sre.BrowserUtil.loadWGXpath_();
   return true;
 };
 
@@ -44,9 +45,15 @@ sre.BrowserUtil.detectIE = function() {
  * @return {boolean} True if the browser is Edge.
  */
 sre.BrowserUtil.detectEdge = function() {
+  var isEdge = typeof window !== 'undefined' && 'MSGestureEvent' in window &&
+        'chrome' in window && window.chrome.loadTimes == null;
+  if (!isEdge) {
+    return false;
+  }
   console.log('Detecting Edge');
-  return (typeof window !== 'undefined') ? 'MSGestureEvent' in window &&
-    'chrome' in window && window.chrome.loadTimes == null : false;
+  document.evaluate = null;
+  sre.BrowserUtil.loadWGXpath_();
+  return true;
 };
 
 
@@ -61,10 +68,51 @@ sre.BrowserUtil.mapsForIE = null;
  * Loads all JSON mappings for IE using a script tag.
  * @private
  */
+sre.BrowserUtil.loadWGXpath_ = function() {
+  sre.BrowserUtil.loadScript(sre.SystemExternal.url + '/wgxpath.install.js');
+  sre.BrowserUtil.installWGXpath_();
+};
+
+
+//TODO: Insert counter here.
+/**
+ * Loads all JSON mappings for IE using a script tag.
+ * @param {number=} opt_count Optional counter argument for callback. 
+ * @private
+ */
+sre.BrowserUtil.installWGXpath_ = function(opt_count) {
+  var count = opt_count || 1;
+  if (typeof wgxpath === 'undefined' && count < 10) {
+    setTimeout(function() {sre.BrowserUtil.installWGXpath_(count++);}, 200);
+    return;
+  }
+  if (count >= 10) {
+    return;
+  }
+  wgxpath.install();
+  sre.XpathUtil.xpathEvaluate = document.evaluate;
+  sre.XpathUtil.xpathResult = XPathResult;
+  sre.XpathUtil.createNSResolver = document.createNSResolver;
+};
+
+
+/**
+ * Loads all JSON mappings for IE using a script tag.
+ * @private
+ */
 sre.BrowserUtil.loadMapsForIE_ = function() {
+  sre.BrowserUtil.loadScript(sre.SystemExternal.jsonPath + 'mathmaps_ie.js');
+};
+
+
+/**
+ * Loads a script in a browser page.
+ * @param {string} src The source of the script to load.
+ */
+sre.BrowserUtil.loadScript = function(src) {
   var scr = sre.SystemExternal.document.createElement('script');
   scr.type = 'text/javascript';
-  scr.src = sre.SystemExternal.jsonPath + 'mathmaps_ie.js';
+  scr.src = src;
   sre.SystemExternal.document.head ?
     sre.SystemExternal.document.head.appendChild(scr) :
     sre.SystemExternal.document.body.appendChild(scr);

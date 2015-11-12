@@ -46,3 +46,6 @@ MathJax.Callback = {};
 MathJax.Callback.Queue = function(var_args) { };
 MathJax.Callback.Signal = function(signal) { };
 
+
+var wgxpath;
+wgxpath.install = function() { };
