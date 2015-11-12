@@ -51,43 +51,40 @@ sre.HtmlHighlighter.prototype.setMode = function(mode) {
  * @override
  */
 sre.HtmlHighlighter.prototype.highlightNode = function(node) {
-  if (node.className.search(this.mactionName) === -1) {
-    return goog.base(this, 'highlightNode', node);
-  }
-  var box = node.childNodes[0];
-  sre.HtmlHighlighter.relativePosition_(box.nextSibling);
-  var info = {node: node,
-    opacity: box.style.opacity,
-    background: box.style.backgroundColor,
-    foreground: node.style.color};
+  var info = {
+    node: node,
+    foreground: node.style.color,
+    position: node.style.position
+  };
   var color = this.color.rgb();
-  box.style.backgroundColor = color.background;
-  box.style.opacity = color.alphaback;
   node.style.color = color.foreground;
+  node.style.position = "relative";
+  var bbox = node.bbox;
+  if (bbox && bbox.w) {
+    var vpad = 0.05, hpad = 0; // vertical and horizontal padding
+    var span = document.createElement("span");
+    var left = parseFloat(node.style.paddingLeft||"0");
+    span.style.backgroundColor = color.background;
+    span.style.opacity = color.alphaback;
+    span.style.display = "inline-block";
+    span.style.height = (bbox.h+bbox.d+2*vpad)+"em";
+    span.style.verticalAlign = (-bbox.d)+"em";
+    span.style.marginTop = span.style.marginBottom = (-vpad)+"em";
+    span.style.width = (bbox.w+2*hpad)+"em";
+    span.style.marginLeft = (left-hpad)+"em";
+    span.style.marginRight = (-bbox.w-hpad-left)+"em";
+    node.parentNode.insertBefore(span,node);
+    info.box = span;
+  }
   return info;
 };
-
-
-/**
- * Sets a node position to relative.
- * @param {Node} node The node to set the position on.
- * @private
- */
-sre.HtmlHighlighter.relativePosition_ = function(node) {
-  if (node) node.style.position = "relative";
-};
-
 
 /**
  * @override
  */
 sre.HtmlHighlighter.prototype.unhighlightNode = function(info) {
-  if (info.node.className.search(this.mactionName) === -1) {
-    goog.base(this, 'unhighlightNode', info);
-    return;
-  }
-  var box = info.node.childNodes[0];
-  box.style.backgroundColor = info.background;
-  box.style.opacity = info.opacity;
-  info.node.style.color = info.foreground;
+  var node = info.node;
+  node.style.color = info.foreground;
+  node.style.position = info.position;
+  if (info.box) info.box.parentNode.removeChild(info.box);
 };
