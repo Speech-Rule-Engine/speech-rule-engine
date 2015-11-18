@@ -61,11 +61,13 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
   node.style.position = "relative";
   var bbox = node.bbox;
   if (bbox && bbox.w) {
-    var vpad = 0.05, hpad = 0; // vertical and horizontal padding
+    // vertical and horizontal padding
+    var vpad = 0.05;
+    var hpad = 0;
     var span = document.createElement("span");
     var left = parseFloat(node.style.paddingLeft||"0");
     span.style.backgroundColor = color.background;
-    span.style.opacity = color.alphaback;
+    span.style.opacity = color.alphaback.toString();
     span.style.display = "inline-block";
     span.style.height = (bbox.h+bbox.d+2*vpad)+"em";
     span.style.verticalAlign = (-bbox.d)+"em";
@@ -78,6 +80,7 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
   }
   return info;
 };
+
 
 /**
  * @override

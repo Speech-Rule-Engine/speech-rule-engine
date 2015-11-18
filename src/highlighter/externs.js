@@ -190,3 +190,6 @@ SVGSVGElement.prototype.getBBox = function() {};
  * @return {!SVGSVGElement}
  */
 SVGSVGElement.prototype.getElementById;
+
+
+Node.prototype.bbox;
