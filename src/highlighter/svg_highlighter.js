@@ -75,7 +75,7 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
 sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
   if ('background' in info) {
     info.node.style.backgroundColor = info.background;
-    if (info.foreground) info.node.style.color = info.foreground;
+    info.node.style.color = info.foreground;
     return;
   }
   info.foreground ?
