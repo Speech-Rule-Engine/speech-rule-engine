@@ -75,9 +75,11 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
 sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
   if ('background' in info) {
     info.node.style.backgroundColor = info.background;
-    info.node.style.color = info.foreground;
+    if (info.foreground) info.node.style.color = info.foreground;
     return;
   }
-  info.node.nextSibling.setAttribute('fill', info.foreground);
+  info.foreground ?
+    info.node.nextSibling.setAttribute('fill', info.foreground) :
+    info.node.nextSibling.removeAttribute('fill');
   info.node.parentNode.removeChild(info.node);
 };
