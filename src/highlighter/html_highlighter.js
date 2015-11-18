@@ -58,24 +58,24 @@ sre.HtmlHighlighter.prototype.highlightNode = function(node) {
   };
   var color = this.color.rgb();
   node.style.color = color.foreground;
-  node.style.position = "relative";
+  node.style.position = 'relative';
   var bbox = node.bbox;
   if (bbox && bbox.w) {
     // vertical and horizontal padding
     var vpad = 0.05;
     var hpad = 0;
-    var span = document.createElement("span");
-    var left = parseFloat(node.style.paddingLeft||"0");
+    var span = document.createElement('span');
+    var left = parseFloat(node.style.paddingLeft || '0');
     span.style.backgroundColor = color.background;
     span.style.opacity = color.alphaback.toString();
-    span.style.display = "inline-block";
-    span.style.height = (bbox.h+bbox.d+2*vpad)+"em";
-    span.style.verticalAlign = (-bbox.d)+"em";
-    span.style.marginTop = span.style.marginBottom = (-vpad)+"em";
-    span.style.width = (bbox.w+2*hpad)+"em";
-    span.style.marginLeft = (left-hpad)+"em";
-    span.style.marginRight = (-bbox.w-hpad-left)+"em";
-    node.parentNode.insertBefore(span,node);
+    span.style.display = 'inline-block';
+    span.style.height = (bbox.h + bbox.d + 2 * vpad) + 'em';
+    span.style.verticalAlign = (-bbox.d) + 'em';
+    span.style.marginTop = span.style.marginBottom = (-vpad) + 'em';
+    span.style.width = (bbox.w + 2 * hpad) + 'em';
+    span.style.marginLeft = (left - hpad) + 'em';
+    span.style.marginRight = (-bbox.w - hpad - left) + 'em';
+    node.parentNode.insertBefore(span, node);
     info.box = span;
   }
   return info;

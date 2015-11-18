@@ -76,9 +76,11 @@ sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
  * @private
  */
 sre.HighlighterFactory.highlighterMapping_ = {};
-sre.HighlighterFactory.highlighterMapping_.SVG = new sre.SvgHighlighter();
-sre.HighlighterFactory.highlighterMapping_.NativeMML= new sre.MmlHighlighter();
+sre.HighlighterFactory.highlighterMapping_['SVG'] = new sre.SvgHighlighter();
+sre.HighlighterFactory.highlighterMapping_['NativeMML'] =
+    new sre.MmlHighlighter();
 sre.HighlighterFactory.highlighterMapping_['HTML-CSS'] =
     new sre.HtmlHighlighter();
-sre.HighlighterFactory.highlighterMapping_.CommonHTML= new sre.CssHighlighter();
+sre.HighlighterFactory.highlighterMapping_['CommonHTML'] =
+    new sre.CssHighlighter();
 
