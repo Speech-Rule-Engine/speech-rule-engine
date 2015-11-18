@@ -21,13 +21,13 @@
 
 goog.provide('sre.HtmlHighlighter');
 
-goog.require('sre.CssHighlighter');
+goog.require('sre.AbstractHighlighter');
 
 
 
 /**
  * @constructor
- * @extends {sre.CssHighlighter}
+ * @extends {sre.AbstractHighlighter}
  */
 sre.HtmlHighlighter = function() {
   goog.base(this);
@@ -35,7 +35,7 @@ sre.HtmlHighlighter = function() {
   this.mactionName = 'maction';
 
 };
-goog.inherits(sre.HtmlHighlighter, sre.CssHighlighter);
+goog.inherits(sre.HtmlHighlighter, sre.AbstractHighlighter);
 
 
 /**
