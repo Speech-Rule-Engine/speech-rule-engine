@@ -289,8 +289,11 @@ sre.CaseEmbellished.makeEmptyNode_ = function(id) {
  * @private
  */
 sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
-  var newNode = sre.EnrichMathml.introduceNewLayer(
-      [this.ofenceMml, this.fencedMml, this.cfenceMml]);
+  var fullOfence = this.fullFence(this.ofenceMml);
+  var fullCfence = this.fullFence(this.cfenceMml);
+  var newNode = sre.EnrichMathml.introduceNewLayer([this.fencedMml]);
+  newNode.insertBefore(fullOfence, this.fencedMml);
+  newNode.appendChild(fullCfence);
   // The case of top element math.
   if (!newNode.parentNode) {
     var mrow = sre.SystemExternal.document.createElement('mrow');
@@ -301,6 +304,23 @@ sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
     newNode = mrow;
   }
   return newNode;
+};
+
+
+
+/**
+ * Retrieves the original embellished fence for the given fence.
+ * @param {Element} fence A simple fence.
+ * @return {Element} The embellished version of that fence. Can be the fence
+ *     itself if it was not embellished.
+ */
+sre.CaseEmbellished.prototype.fullFence = function(fence) {
+  var parent = this.fencedMml.parentNode;
+  var currentFence = fence;
+  while (currentFence.parentNode && currentFence.parentNode !== parent) {
+    currentFence = currentFence.parentNode;
+  }
+  return /** @type {Element} */(currentFence);
 };
 
 
