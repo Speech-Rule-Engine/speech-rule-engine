@@ -307,13 +307,20 @@ sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
 };
 
 
+
+/**
+ * Retrieves the original embellished fence for the given fence.
+ * @param {Element} fence A simple fence.
+ * @return {Element} The embellished version of that fence. Can be the fence
+ *     itself if it was not embellished.
+ */
 sre.CaseEmbellished.prototype.fullFence = function(fence) {
   var parent = this.fencedMml.parentNode;
   var currentFence = fence;
   while (currentFence.parentNode && currentFence.parentNode !== parent) {
     currentFence = currentFence.parentNode;
   }
-  return currentFence;
+  return /** @type {Element} */(currentFence);
 };
 
 
