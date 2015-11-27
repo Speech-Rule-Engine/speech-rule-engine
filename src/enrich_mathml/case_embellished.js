@@ -167,9 +167,13 @@ sre.CaseEmbellished.prototype.getFencesMml_ = function() {
   }
   if (this.ofenceMml) {
     this.ofenceMml = sre.EnrichMathml.ascendNewNode(this.ofenceMml);
+    console.log('Ofence');
+    console.log(this.ofenceMml.toString());
   }
   if (this.cfenceMml) {
     this.cfenceMml = sre.EnrichMathml.ascendNewNode(this.cfenceMml);
+    console.log('Cfence');
+    console.log(this.cfenceMml.toString());
   }
 };
 
@@ -202,21 +206,42 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
     }
 
     // Reordering the nodes in the tree.
+    // mml: The embellished fence
+    // newNode: The remainder of the fenced expression in an mrow.
+    //          Or the entire expression?
+    // 
+    console.log(mml.toString());
     var dummy = sre.SystemExternal.document.createElement('dummy');
     var saveParent = newNode.parentNode;
     var saveChild = mml.childNodes[0];
 
+    console.log(newNode.toString());
+    console.log(mml.toString());
     sre.DomUtil.replaceNode(mml, dummy);
     sre.DomUtil.replaceNode(newNode, mml);
     sre.DomUtil.replaceNode(mml.childNodes[0], newNode);
     sre.DomUtil.replaceNode(dummy, saveChild);
     mml.parentNode = saveParent;
 
+    console.log(mml.toString());
+    
     newNode = mml.childNodes[0];
     if (!result) {
       result = mml;
     }
   }
+  // console.log('here1');
+  // if (this.ofence) {
+  //   console.log(this.ofence);
+  // } else {
+  //   console.log('No ofence!');
+  // }
+  // console.log('here2');
+  // if (this.cfence) {
+  //   console.log(this.cfence);
+  // } else {
+  //   console.log('No cfence!');
+  // }
 
   // Walk the actual fences.
   sre.EnrichMathml.walkTree(
@@ -289,8 +314,19 @@ sre.CaseEmbellished.makeEmptyNode_ = function(id) {
  * @private
  */
 sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
-  var newNode = sre.EnrichMathml.introduceNewLayer(
-      [this.ofenceMml, this.fencedMml, this.cfenceMml]);
+  console.log(this.ofenceMml.toString());
+  console.log(this.fencedMml.toString());
+  console.log(this.cfenceMml.toString());
+  
+  var fullOfence = this.fullFence(this.ofenceMml);
+  var fullCfence = this.fullFence(this.cfenceMml);
+
+  var newNode = sre.EnrichMathml.introduceNewLayer([this.fencedMml]);
+  //var newNode = this.fencedMml;
+  newNode.insertBefore(fullOfence, this.fencedMml);
+  newNode.appendChild(fullCfence);
+  console.log('New Node:');
+  console.log(newNode.toString());
   // The case of top element math.
   if (!newNode.parentNode) {
     var mrow = sre.SystemExternal.document.createElement('mrow');
@@ -301,6 +337,16 @@ sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
     newNode = mrow;
   }
   return newNode;
+};
+
+
+sre.CaseEmbellished.prototype.fullFence = function(fence) {
+  var parent = this.fencedMml.parentNode;
+  var currentFence = fence;
+  while (currentFence.parentNode && currentFence.parentNode !== parent) {
+    currentFence = currentFence.parentNode;
+  }
+  return currentFence;
 };
 
 
