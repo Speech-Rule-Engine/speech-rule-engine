@@ -9819,3 +9819,262 @@ sre.EnrichMathmlTest.prototype.testMathmlEmbellishedPaddedFences =
       '</math>'
   );
 };
+
+
+/**
+ * Expressions with embellished right fences as a sub-expression.
+ */
+sre.EnrichMathmlTest.prototype.untestMathmlEmbellRightSubexpr = function() {
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
+      '<mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="8" children="4,6"' +
+      ' content="5">' +
+      '<msup type="superscript" role="leftright" id="4" children="7,3"' +
+      ' parent="8">' +
+      '<mrow type="fenced" role="leftright" id="7" children="1"' +
+      ' content="0,2" parent="4">' +
+      '<mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="3" parent="4">4</mn>' +
+      '</msup>' +
+      '<mo type="operator" role="addition" id="5" parent="8"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="6" parent="8">1</mn>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mn>2</mn><mo>+</mo>' + 
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
+      '<mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="10" children="0,6,8"' +
+      ' content="1,7">' +
+      '<mn type="number" role="integer" id="0" parent="10">2</mn>' +
+      '<mo type="operator" role="addition" id="1" parent="10"' +
+      ' operator="infixop,+">+</mo>' +
+      '<msup type="superscript" role="leftright" id="6" children="9,5"' +
+      ' parent="10">' +
+      '<mrow type="fenced" role="leftright" id="9" children="3"' +
+      ' content="2,4" parent="6">' +
+      '<mo type="fence" role="open" id="2" parent="9">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="9">x</mi>' +
+      '<mo type="fence" role="close" id="4">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="5" parent="6">4</mn>' +
+      '</msup>' +
+      '<mo type="operator" role="addition" id="7" parent="10"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="8" parent="10">1</mn>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>-</mo>' + 
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
+      '<mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="10" children="9,7"' +
+      ' content="6">' +
+      '<mrow type="prefixop" role="negative" id="9" children="5"' +
+      ' content="0" parent="10">' +
+      '<mo type="operator" role="subtraction" id="0" parent="9"' +
+      ' operator="prefixop,-">-</mo>' +
+      '<msup type="superscript" role="leftright" id="5" children="8,4"' +
+      ' parent="9">' +
+      '<mrow type="fenced" role="leftright" id="8" children="2"' +
+      ' content="1,3" parent="5">' +
+      '<mo type="fence" role="open" id="1" parent="8">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="8">x</mi>' +
+      '<mo type="fence" role="close" id="3">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="4" parent="5">4</mn>' +
+      '</msup>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="6" parent="10"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="7" parent="10">1</mn>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with embellished left fences as a sub-expression.
+ */
+sre.EnrichMathmlTest.prototype.untestMathmlEmbellLeftSubexpr = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="11" children="5,9" content="8">' +
+      '<mmultiscripts type="tensor" role="leftright" id="5"' +
+      ' children="10,1,2,3,4" parent="11">' +
+      '<mrow type="fenced" role="leftright" id="10" children="6"' +
+      ' content="0,7" parent="5">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="10">x</mi>' +
+      '<mo type="fence" role="close" id="7" parent="10">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '<mo type="operator" role="addition" id="8" parent="11"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="9" parent="11">1</mn>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="13" children="12,10" content="9">' +
+      '<mrow type="prefixop" role="negative" id="12" children="6"' +
+      ' content="0" parent="13">' +
+      '<mo type="operator" role="subtraction" id="0" parent="12"' +
+      ' operator="prefixop,-">-</mo>' +
+      '<mmultiscripts type="tensor" role="leftright" id="6"' +
+      ' children="11,2,3,4,5" parent="12">' +
+      '<mrow type="fenced" role="leftright" id="11" children="7"' +
+      ' content="1,8" parent="6">' +
+      '<mo type="fence" role="open" id="1">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="11">x</mi>' +
+      '<mo type="fence" role="close" id="8" parent="11">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="2" parent="6">4</mn>' +
+      '<mn type="number" role="leftsuper" id="3" parent="6">3</mn>' +
+      '</mmultiscripts>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="9" parent="13"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="10" parent="13">1</mn>' +
+      '</math>'
+
+  );
+  this.executeMathmlTest(
+      '<mi>k</mi><mo>+</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn>' +
+      '<mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="13" children="0,7,11"' +
+      ' content="1,10">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="13">k</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="13"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mmultiscripts type="tensor" role="leftright" id="7"' +
+      ' children="12,3,4,5,6" parent="13">' +
+      '<mrow type="fenced" role="leftright" id="12" children="8"' +
+      ' content="2,9" parent="7">' +
+      '<mo type="fence" role="open" id="2">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="12">x</mi>' +
+      '<mo type="fence" role="close" id="9" parent="12">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="3" parent="7">4</mn>' +
+      '<mn type="number" role="leftsuper" id="4" parent="7">3</mn>' +
+      '</mmultiscripts>' +
+      '<mo type="operator" role="addition" id="10" parent="13"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="11" parent="13">1</mn>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with embellished both fences as a sub-expression.
+ */
+sre.EnrichMathmlTest.prototype.untestMathmlEmbellBothSubexpr = function() {
+  this.executeMathmlTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
+      '<mn>2</mn></msubsup><mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="15" children="11,13"' +
+      ' content="12">' +
+      '<msubsup type="subsup" role="leftright" id="11" children="5,8,9"' +
+      ' parent="15" collapsed="(11 (10 5 8) 9)">' +
+      '<mmultiscripts type="tensor" role="leftright" id="5"' +
+      ' children="14,1,2,3,4" parent="11">' +
+      '<mrow type="fenced" role="leftright" id="14" children="6"' +
+      ' content="0,7" parent="5">' +
+      '<mo type="fence" role="open" id="0">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="14">x</mi>' +
+      '<mo type="fence" role="close" id="7">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="1" parent="5">4</mn>' +
+      '<mn type="number" role="leftsuper" id="2" parent="5">3</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="8" parent="11">1</mn>' +
+      '<mn type="number" role="integer" id="9" parent="11">2</mn>' +
+      '</msubsup>' +
+      '<mo type="operator" role="addition" id="12" parent="15"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="13" parent="15">1</mn>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
+      '<mn>2</mn></msubsup><mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="17" children="16,14"' +
+      ' content="13">' +
+      '<mrow type="prefixop" role="negative" id="16" children="12"' +
+      ' content="0" parent="17">' +
+      '<mo type="operator" role="subtraction" id="0" parent="16"' +
+      ' operator="prefixop,-">-</mo>' +
+      '<msubsup type="subsup" role="leftright" id="12" children="6,9,10"' +
+      ' parent="16" collapsed="(12 (11 6 9) 10)">' +
+      '<mmultiscripts type="tensor" role="leftright" id="6"' +
+      ' children="15,2,3,4,5" parent="12">' +
+      '<mrow type="fenced" role="leftright" id="15" children="7"' +
+      ' content="1,8" parent="6">' +
+      '<mo type="fence" role="open" id="1">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="7" parent="15">x</mi>' +
+      '<mo type="fence" role="close" id="8">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="2" parent="6">4</mn>' +
+      '<mn type="number" role="leftsuper" id="3" parent="6">3</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="9" parent="12">1</mn>' +
+      '<mn type="number" role="integer" id="10" parent="12">2</mn>' +
+      '</msubsup>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="13" parent="17"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="14" parent="17">1</mn>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>k</mi><mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn>' +
+      '<mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
+      '<mn>2</mn></msubsup><mo>+</mo><mn>1</mn>',
+      '<math type="infixop" role="addition" id="18" children="17,15"' +
+      ' content="14">' +
+      '<mrow type="infixop" role="subtraction" id="17" children="0,13"' +
+      ' content="1" parent="18">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="17">k</mi>' +
+      '<mo type="operator" role="subtraction" id="1" parent="17"' +
+      ' operator="infixop,-">-</mo>' +
+      '<msubsup type="subsup" role="leftright" id="13" children="7,10,11"' +
+      ' parent="17" collapsed="(13 (12 7 10) 11)">' +
+      '<mmultiscripts type="tensor" role="leftright" id="7"' +
+      ' children="16,3,4,5,6" parent="13">' +
+      '<mrow type="fenced" role="leftright" id="16" children="8"' +
+      ' content="2,9" parent="7">' +
+      '<mo type="fence" role="open" id="2">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="16">x</mi>' +
+      '<mo type="fence" role="close" id="9">)</mo>' +
+      '</mrow>' +
+      '<mprescripts/>' +
+      '<mn type="number" role="leftsub" id="3" parent="7">4</mn>' +
+      '<mn type="number" role="leftsuper" id="4" parent="7">3</mn>' +
+      '</mmultiscripts>' +
+      '<mn type="number" role="integer" id="10" parent="13">1</mn>' +
+      '<mn type="number" role="integer" id="11" parent="13">2</mn>' +
+      '</msubsup>' +
+      '</mrow>' +
+      '<mo type="operator" role="addition" id="14" parent="18"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mn type="number" role="integer" id="15" parent="18">1</mn>' +
+      '</math>'
+  );
+};
