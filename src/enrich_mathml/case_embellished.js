@@ -293,7 +293,7 @@ sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
   var fullCfence = this.fullFence(this.cfenceMml);
   // Introduce a definite new layer.
   var newNode = sre.SystemExternal.document.createElement('mrow');
-  sre.DomUtil.replaceNode(this.fencedMml, newNode);
+  sre.DomUtil.replaceNode(/** @type {!Element} */(this.fencedMml), newNode);
   newNode.appendChild(this.fencedMml);
   newNode.insertBefore(fullOfence, this.fencedMml);
   newNode.appendChild(fullCfence);
