@@ -80,7 +80,7 @@ sre.System.prototype.setupEngine = function(feature) {
     engine.withCache = !!feature.cache;
   }
   engine.mode = feature.mode || engine.mode;
-  engine.mathmlSpeech = !!feature.speech;
+  engine.speech = !!feature.speech;
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
