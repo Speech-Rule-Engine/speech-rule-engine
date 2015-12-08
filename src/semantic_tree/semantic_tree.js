@@ -2865,6 +2865,8 @@ sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
   fenced.contentNodes[0] = rewritten.fence;
   rewritten = sre.SemanticTree.rewriteFence_(rewritten.node, cfence);
   fenced.contentNodes[1] = rewritten.fence;
+  fenced.contentNodes[0].parent = fenced;
+  fenced.contentNodes[1].parent = fenced;
   rewritten.node.parent = null;
   return rewritten.node;
 };
@@ -2896,7 +2898,6 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
     }
     if (newFence !== rewritten.node) {
       fence.replaceChild_(newFence, rewritten.node);
-      console.log(newFence.parent);
       newFence.parent = node;
     }
     sre.SemanticTree.propagateFencePointer_(fence, newFence);
