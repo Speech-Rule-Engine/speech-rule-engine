@@ -85,7 +85,7 @@ sre.Engine = function() {
    * Flag indicating whether or not speech should be added to enriched MathML.
    * @type {boolean}
    */
-  this.mathmlSpeech = true;
+  this.speech = false;
 
   /**
    * List of predicates for checking if the engine is set up.

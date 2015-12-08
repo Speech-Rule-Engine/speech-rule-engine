@@ -291,7 +291,10 @@ sre.CaseEmbellished.makeEmptyNode_ = function(id) {
 sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
   var fullOfence = this.fullFence(this.ofenceMml);
   var fullCfence = this.fullFence(this.cfenceMml);
-  var newNode = sre.EnrichMathml.introduceNewLayer([this.fencedMml]);
+  // Introduce a definite new layer.
+  var newNode = sre.SystemExternal.document.createElement('mrow');
+  sre.DomUtil.replaceNode(/** @type {!Element} */(this.fencedMml), newNode);
+  newNode.appendChild(this.fencedMml);
   newNode.insertBefore(fullOfence, this.fencedMml);
   newNode.appendChild(fullCfence);
   // The case of top element math.

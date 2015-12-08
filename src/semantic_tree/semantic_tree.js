@@ -367,8 +367,8 @@ sre.SemanticTree.Node.prototype.replaceChild_ = function(oldNode, newNode) {
   if (index == -1) {
     return;
   }
-  newNode.parent = this;
   oldNode.parent = null;
+  newNode.parent = this;
   this.childNodes[index] = newNode;
   // To not mess up the order of MathML elements more than necessary, we only
   // remove and add difference lists. The hope is that we might end up with
@@ -2865,6 +2865,9 @@ sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
   fenced.contentNodes[0] = rewritten.fence;
   rewritten = sre.SemanticTree.rewriteFence_(rewritten.node, cfence);
   fenced.contentNodes[1] = rewritten.fence;
+  fenced.contentNodes[0].parent = fenced;
+  fenced.contentNodes[1].parent = fenced;
+  rewritten.node.parent = null;
   return rewritten.node;
 };
 
@@ -2872,9 +2875,9 @@ sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
 /**
  * Rewrites a fence by removing embellishments and putting them around the
  * node. The only embellishments that are not pulled out are overscore and
- * underscore.
+           * underscore.
  * @param {!sre.SemanticTree.Node} node The original fenced node.
- * @param {!sre.SemanticTree.Node} fence The fenced node.
+ * @param {!sre.SemanticTree.Node} fence The fence node.
  * @return {{node: !sre.SemanticTree.Node,
  *           fence: !sre.SemanticTree.Node}} The rewritten node and fence.
  * @private
@@ -2893,7 +2896,10 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
     if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(fence)) {
       fence.role = node.role;
     }
-    fence.replaceChild_(newFence, rewritten.node);
+    if (newFence !== rewritten.node) {
+      fence.replaceChild_(newFence, rewritten.node);
+      newFence.parent = node;
+    }
     sre.SemanticTree.propagateFencePointer_(fence, newFence);
     return {node: fence, fence: rewritten.fence};
   }
