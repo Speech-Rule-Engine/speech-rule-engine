@@ -9824,7 +9824,7 @@ sre.EnrichMathmlTest.prototype.testMathmlEmbellishedPaddedFences =
 /**
  * Expressions with embellished right fences as a sub-expression.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellRightSubexpr = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellRightSubexpr = function() {
   this.executeMathmlTest(
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mo>+</mo><mn>1</mn>',
@@ -9901,7 +9901,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellRightSubexpr = function() {
 /**
  * Expressions with embellished left fences as a sub-expression.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellLeftSubexpr = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellLeftSubexpr = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
@@ -9981,7 +9981,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellLeftSubexpr = function() {
 /**
  * Expressions with embellished both fences as a sub-expression.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellBothSubexpr = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellBothSubexpr = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
@@ -10075,6 +10075,28 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellBothSubexpr = function() {
       '<mo type="operator" role="addition" id="14" parent="18"' +
       ' operator="infixop,+">+</mo>' +
       '<mn type="number" role="integer" id="15" parent="18">1</mn>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences right.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellRight = function() {
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>',
+      '<math>' +
+      '<msup type="superscript" role="leftright" id="4" children="5,3"' +
+      ' parent="5">' +
+      '<mrow type="fenced" role="leftright" id="5" children="1"' +
+      ' content="0,2" parent="4">' +
+      '<mo type="fence" role="open" id="0" parent="5">(</mo>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
+      '<mo type="fence" role="close" id="2">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="3" parent="4">4</mn>' +
+      '</msup>' +
       '</math>'
   );
 };
