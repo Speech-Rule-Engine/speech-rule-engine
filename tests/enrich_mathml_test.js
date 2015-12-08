@@ -9713,7 +9713,7 @@ sre.EnrichMathmlTest.prototype.testMathmlEmbellishedBothFences = function() {
 /**
  * Expressions with padded background.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellishedPaddedFences =
+sre.EnrichMathmlTest.prototype.testMathmlEmbellishedPaddedFences =
     function() {
   this.executeMathmlTest(
       '<mo>(</mo><mi>x</mi><mpadded mathbackground="red"><msup><munder>' +
@@ -9721,8 +9721,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellishedPaddedFences =
       '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
       '</msup></mpadded>',
       '<math>' +
-      '<msup type="superscript" role="leftright" id="10" children="6,9"' +
-      ' parent="11">' +
+      '<msup type="superscript" role="leftright" id="10" children="6,9">' +
       '<msub type="subscript" role="leftright" id="6" children="11,5"' +
       ' parent="10">' +
       '<mrow type="fenced" role="leftright" id="11" children="1"' +
@@ -9730,9 +9729,10 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellishedPaddedFences =
       '<mo type="fence" role="open" id="0" parent="11">(</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="11">x</mi>' +
       '<mpadded mathbackground="red">' +
-      '<munder type="underscore" role="close" id="8" children="4,7">' +
+      '<munder type="underscore" role="close" id="8" children="4,7"' +
+      ' parent="11">' +
       '<mover type="overscore" role="close" id="4" children="2,3" parent="8">' +
-      '<mo type="fence" role="close" id="2" parent="11">)</mo>' +
+      '<mo type="fence" role="close" id="2" parent="4">)</mo>' +
       '<mo type="operator" role="overaccent" id="3" parent="4">^</mo>' +
       '</mover>' +
       '<mo type="relation" role="underaccent" id="7" parent="8">~</mo>' +
@@ -9753,16 +9753,17 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellishedPaddedFences =
       '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>',
       '<math>' +
       '<mmultiscripts type="tensor" role="leftright" id="14"' +
-      ' children="7,10,11,12,13" parent="17">' +
+      ' children="7,10,11,12,13">' +
       '<mmultiscripts type="tensor" role="leftright" id="7"' +
       ' children="17,3,4,5,6" parent="14">' +
       '<mrow type="fenced" role="leftright" id="17" children="15"' +
       ' content="9,16" parent="7">' +
       '<mpadded mathbackground="red">' +
-      '<mover type="overscore" role="open" id="9" children="2,8">' +
+      '<mover type="overscore" role="open" id="9" children="2,8"' +
+      ' parent="17">' +
       '<munder type="underscore" role="open" id="2" children="0,1"' +
       ' parent="9">' +
-      '<mo type="fence" role="open" id="0" parent="17">(</mo>' +
+      '<mo type="fence" role="open" id="0" parent="2">(</mo>' +
       '<mo type="relation" role="underaccent" id="1" parent="2">~</mo>' +
       '</munder>' +
       '<mo type="operator" role="overaccent" id="8" parent="9">^</mo>' +
@@ -9824,7 +9825,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellishedPaddedFences =
 /**
  * Expressions with embellished right fences as a sub-expression.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellRightSubexpr = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellRightSubexpr = function() {
   this.executeMathmlTest(
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mo>+</mo><mn>1</mn>',
@@ -9901,7 +9902,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellRightSubexpr = function() {
 /**
  * Expressions with embellished left fences as a sub-expression.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellLeftSubexpr = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellLeftSubexpr = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
@@ -9981,7 +9982,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellLeftSubexpr = function() {
 /**
  * Expressions with embellished both fences as a sub-expression.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlEmbellBothSubexpr = function() {
+sre.EnrichMathmlTest.prototype.testMathmlEmbellBothSubexpr = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
@@ -10081,15 +10082,14 @@ sre.EnrichMathmlTest.prototype.untestMathmlEmbellBothSubexpr = function() {
 
 
 /**
- * Expressions with embellished fences right.
+ * Expressions with embellished fences right and complex content.
  */
-sre.EnrichMathmlTest.prototype.untestMathmlComplexEmbellRight = function() {
+sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellRight = function() {
   this.executeMathmlTest(
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msup><mo>)</mo>' +
       '<mn>4</mn></msup>',
       '<math>' +
-      '<msup type="superscript" role="leftright" id="6" children="8,5"' +
-      ' parent="8">' +
+      '<msup type="superscript" role="leftright" id="6" children="8,5">' +
       '<mrow type="fenced" role="leftright" id="8" children="7"' +
       ' content="0,4" parent="6">' +
       '<mo type="fence" role="open" id="0" parent="8">(</mo>' +
@@ -10104,6 +10104,27 @@ sre.EnrichMathmlTest.prototype.untestMathmlComplexEmbellRight = function() {
       '</mrow>' +
       '<mn type="number" role="integer" id="5" parent="6">4</mn>' +
       '</msup>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo>' +
+      '<mn>4</mn></msub>',
+      '<math>' +
+      '<msub type="subscript" role="leftright" id="6" children="8,5">' +
+      '<mrow type="fenced" role="leftright" id="8" children="7"' +
+      ' content="0,4" parent="6">' +
+      '<mo type="fence" role="open" id="0" parent="8">(</mo>' +
+      '<mrow type="infixop" role="addition" id="7" children="1,3"' +
+      ' content="2" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">x</mi>' +
+      '<mo type="operator" role="addition" id="2" parent="7"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">y</mi>' +
+      '</mrow>' +
+      '<mo type="fence" role="close" id="4" parent="8">)</mo>' +
+      '</mrow>' +
+      '<mn type="number" role="integer" id="5" parent="6">4</mn>' +
+      '</msub>' +
       '</math>'
   );
 };
