@@ -134,6 +134,10 @@ sre.CaseEmbellished.prototype.getFenced_ = function() {
  */
 sre.CaseEmbellished.fencedMap_ = function(fence, ids) {
   ids[fence.id] = fence.mathmlTree;
+  // var parent = this.fencedMml.getAttribute(sre.EnrichMathml.Attribute.PARENT);
+  // if (fence.parent) {
+  //   fence.mathmlTree.setAttribute(sre.EnrichMathml.Attribute.PARENT, fence.parent.id);
+  // }
   if (!fence.embellished) {
     return;
   }
@@ -334,6 +338,18 @@ sre.CaseEmbellished.prototype.fullFence = function(fence) {
  * @private
  */
 sre.CaseEmbellished.prototype.cleanupParents_ = function() {
+  // var parent = this.fencedMml.getAttribute(sre.EnrichMathml.Attribute.PARENT);
+  // var ofenceIds = Object.keys(this.ofenceMap);
+  // var cfenceIds = Object.keys(this.cfenceMap);
+
+  // fullOfence.setAttribute(sre.EnrichMathml.Attribute.PARENT, parent);
+  // fullCfence.setAttribute(sre.EnrichMathml.Attribute.PARENT, parent);
+  // console.log(this.ofenceMml.toString());
+  // console.log(this.cfenceMml.toString());
+  // console.log(this.cfenceMap);
+  // console.log(this.ofenceMap);
+  console.log('cleaning up');
+  
   this.parentCleanup.forEach(function(x) {
     var parent = x.childNodes[1].getAttribute(
         sre.EnrichMathml.Attribute.PARENT);
