@@ -363,9 +363,6 @@ sre.SemanticTree.Node.prototype.appendChild_ = function(child) {
  * @private
  */
 sre.SemanticTree.Node.prototype.replaceChild_ = function(oldNode, newNode) {
-  // console.log('replacing');
-  // console.log(oldNode.id);
-  // console.log(newNode.id);
   var index = this.childNodes.indexOf(oldNode);
   if (index == -1) {
     return;
@@ -2865,18 +2862,9 @@ sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
   var ofence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[0]);
   var cfence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[1]);
   var rewritten = sre.SemanticTree.rewriteFence_(fenced, ofence);
-  // console.log(rewritten.node.type);
-  // console.log(rewritten.node.textContent);
-  // console.log(rewritten.fence.type);
-  // console.log(rewritten.fence.textContent);
   fenced.contentNodes[0] = rewritten.fence;
   rewritten = sre.SemanticTree.rewriteFence_(rewritten.node, cfence);
   fenced.contentNodes[1] = rewritten.fence;
-  // console.log(rewritten.node.type);
-  // console.log(rewritten.node.textContent);
-  // console.log(rewritten.fence.type);
-  // console.log(rewritten.fence.textContent);
-  // New!
   rewritten.node.parent = null;
   return rewritten.node;
 };
@@ -2906,53 +2894,15 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
     if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(fence)) {
       fence.role = node.role;
     }
-    var oldParent = fence.parent;
-    console.log('node');
-    console.log(node.type);
-    console.log(node.id);
-    console.log('fence');
-    console.log(fence.type);
-    console.log(fence.id);
-    console.log('fence parent');
-    console.log(fence.parent.type);
-    console.log(fence.parent.id);
-    console.log('new fence');
-    console.log(newFence.type);
-    console.log(newFence.id);
-    console.log('new fence parent');
-    console.log(newFence.parent.type);
-    console.log(newFence.parent.id);
-    console.log('rewritten node');
-    console.log(rewritten.node.type);
-    console.log(rewritten.node.id);
-    console.log('rewritten fence');
-    console.log(rewritten.fence.type);
-    console.log(rewritten.fence.id);
-    console.log('<<<<<<<<<<<<<<<<<<');
-    console.log(newFence.embellished);
-    console.log(newFence.parent.id);
-
     if (newFence !== rewritten.node) {
       fence.replaceChild_(newFence, rewritten.node);
       console.log(newFence.parent);
       newFence.parent = node;
     }
-    // if (!newFence.embellished) {
-    //   newFence.parent = node;
-    // }
-    console.log(newFence.parent.id);
-    console.log(rewritten.node.parent.id);
-    //rewritten.node.parent = oldParent;
     sre.SemanticTree.propagateFencePointer_(fence, newFence);
-    console.log(fence.parent.id);
     return {node: fence, fence: rewritten.fence};
   }
-  console.log('outside');
-   // console.log(fence.type);
-  // console.log(newFence.type);
-  // console.log(rewritten.fence.type);
   fence.replaceChild_(newFence, rewritten.fence);
-  //newFence.parent = fence.parent;
   if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
     fence.mathml.push(fence.mathmlTree);
   }
