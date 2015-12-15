@@ -50,7 +50,6 @@ sre.BrowserUtil.detectEdge = function() {
   if (!isEdge) {
     return false;
   }
-  console.log('Detecting Edge');
   document.evaluate = null;
   sre.BrowserUtil.loadWGXpath_();
   return true;
