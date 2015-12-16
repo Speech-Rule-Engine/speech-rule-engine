@@ -32,11 +32,22 @@ sre.SystemExternal = function() { };
 
 
 /**
+ * Check if location is already supported in this JS.
+ * @return {boolean} True if location is defined.
+ */
+sre.SystemExternal.locationSupported = function() {
+  return !(typeof(location) == 'undefined');
+};
+
+
+/**
  * The URL for SRE resources.
  * @const
  * @type {string}
  */
-sre.SystemExternal.url = location.protocol + '//' + 'progressiveaccess.com/content';
+sre.SystemExternal.url =  sre.SystemExternal.locationSupported() ?
+    location.protocol + '//' + 'progressiveaccess.com/content' :
+    'https://progressiveaccess.com/content';
 
 
 /**
