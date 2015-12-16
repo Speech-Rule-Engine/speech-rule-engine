@@ -36,7 +36,7 @@ sre.SystemExternal = function() { };
  * @const
  * @type {string}
  */
-sre.SystemExternal.url = 'progressiveaccess.com/content';
+sre.SystemExternal.url = location.protocol + '//' + 'progressiveaccess.com/content';
 
 
 /**
@@ -47,7 +47,7 @@ sre.SystemExternal.url = 'progressiveaccess.com/content';
 sre.SystemExternal.jsonPath = function() {
   return ((typeof process !== 'undefined' && typeof global !== 'undefined') ?
       (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
-          location.protocol + '//' + sre.SystemExternal.url + '/mathmaps')
+          sre.SystemExternal.url + '/mathmaps')
     + '/';
 }();
 
