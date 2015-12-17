@@ -91,9 +91,11 @@ COMPILER_JAR = $(NODE_MODULES)/closurecompiler/compiler/compiler.jar
 CLOSURE_COMPILER = python $(CLOSURE_ROOT)/closurebuilder.py --root=$(CLOSURE_LIB)/ --root=$(SRC_DIR) --output_mode=compiled --compiler_jar=$(COMPILER_JAR) $(CLOSURE_FLAGS)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
+LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
+
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
-GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -r
-FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -r
+GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
+FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
 
 #######################################################################3
 # Probably don't need those!
