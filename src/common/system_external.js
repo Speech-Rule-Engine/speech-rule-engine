@@ -32,11 +32,22 @@ sre.SystemExternal = function() { };
 
 
 /**
+ * Check if location is already supported in this JS.
+ * @return {boolean} True if location is defined.
+ */
+sre.SystemExternal.locationSupported = function() {
+  return !(typeof(location) == 'undefined');
+};
+
+
+/**
  * The URL for SRE resources.
  * @const
  * @type {string}
  */
-sre.SystemExternal.url = 'progressiveaccess.com/content';
+sre.SystemExternal.url =  sre.SystemExternal.locationSupported() ?
+    location.protocol + '//' + 'progressiveaccess.com/content' :
+    'https://progressiveaccess.com/content';
 
 
 /**
@@ -47,7 +58,7 @@ sre.SystemExternal.url = 'progressiveaccess.com/content';
 sre.SystemExternal.jsonPath = function() {
   return ((typeof process !== 'undefined' && typeof global !== 'undefined') ?
       (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
-          location.protocol + '//' + sre.SystemExternal.url + '/mathmaps')
+          sre.SystemExternal.url + '/mathmaps')
     + '/';
 }();
 
