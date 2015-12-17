@@ -238,6 +238,7 @@ sre.MathMap.prototype.retrieveMaps = function() {
  * @param {string} file The name of a JSON file.
  * @param {function(JSONType)} func Method adding the rules.
  * @param {number=} opt_count Optional counter argument for callback.
+ * @private
  */
 sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
   var count = opt_count || 1;

@@ -9906,7 +9906,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmbellLeftSubexpr = function() {
   this.executeMathmlTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
-      '<math type="infixop" role="addition" id="11" children="5,9" content="8">' +
+      '<math type="infixop" role="addition" id="11" children="5,9"' +
+      ' content="8">' +
       '<mmultiscripts type="tensor" role="leftright" id="5"' +
       ' children="10,1,2,3,4" parent="11">' +
       '<mrow type="fenced" role="leftright" id="10" children="6"' +
@@ -9927,7 +9928,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmbellLeftSubexpr = function() {
   this.executeMathmlTest(
       '<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>',
-      '<math type="infixop" role="addition" id="13" children="12,10" content="9">' +
+      '<math type="infixop" role="addition" id="13" children="12,10"' +
+      ' content="9">' +
       '<mrow type="prefixop" role="negative" id="12" children="6"' +
       ' content="0" parent="13">' +
       '<mo type="operator" role="subtraction" id="0" parent="12"' +
