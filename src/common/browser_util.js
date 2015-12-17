@@ -23,14 +23,13 @@ goog.provide('sre.BrowserUtil');
 goog.require('sre.SystemExternal');
 
 
-
 /**
  * Predicate to check for MS Internet Explorer but not Edge.
  * @return {boolean} True if the browser is IE.
  */
 sre.BrowserUtil.detectIE = function() {
-  var isIE = typeof window !== 'undefined' && 
-        'ActiveXObject' in window && 'clipboardData' in window;
+  var isIE = typeof window !== 'undefined' &&
+      'ActiveXObject' in window && 'clipboardData' in window;
   if (!isIE) {
     return false;
   }
@@ -46,7 +45,7 @@ sre.BrowserUtil.detectIE = function() {
  */
 sre.BrowserUtil.detectEdge = function() {
   var isEdge = typeof window !== 'undefined' && 'MSGestureEvent' in window &&
-        'chrome' in window && window.chrome.loadTimes == null;
+      'chrome' in window && window.chrome.loadTimes == null;
   if (!isEdge) {
     return false;
   }
@@ -58,7 +57,7 @@ sre.BrowserUtil.detectEdge = function() {
 
 /**
  * JSON object with mappings for IE.
- * @type{Object}
+ * @type {Object}
  */
 sre.BrowserUtil.mapsForIE = null;
 
@@ -76,7 +75,7 @@ sre.BrowserUtil.loadWGXpath_ = function() {
 //TODO: Insert counter here.
 /**
  * Loads all JSON mappings for IE using a script tag.
- * @param {number=} opt_count Optional counter argument for callback. 
+ * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
 sre.BrowserUtil.installWGXpath_ = function(opt_count) {
@@ -113,8 +112,8 @@ sre.BrowserUtil.loadScript = function(src) {
   scr.type = 'text/javascript';
   scr.src = src;
   sre.SystemExternal.document.head ?
-    sre.SystemExternal.document.head.appendChild(scr) :
-    sre.SystemExternal.document.body.appendChild(scr);
+      sre.SystemExternal.document.head.appendChild(scr) :
+      sre.SystemExternal.document.body.appendChild(scr);
 };
 
 

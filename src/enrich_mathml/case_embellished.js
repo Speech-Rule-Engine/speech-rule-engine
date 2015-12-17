@@ -310,7 +310,6 @@ sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
 };
 
 
-
 /**
  * Retrieves the original embellished fence for the given fence.
  * @param {Element} fence A simple fence.

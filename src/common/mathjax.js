@@ -59,8 +59,8 @@ goog.require('sre.System');
   (sre.System.getInstance()).setupEngine(
       {mode: sre.Engine.Mode.HTTP,
         domain: 'mathspeak',
-       style: 'default',
-       speech: true,
+        style: 'default',
+        speech: true,
         semantics: true}
   );
 

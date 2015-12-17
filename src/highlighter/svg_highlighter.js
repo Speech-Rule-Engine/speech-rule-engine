@@ -49,20 +49,20 @@ sre.SvgHighlighter.prototype.highlightNode = function(node) {
     node.style.color = this.colorString().foreground;
     return info;
   }
-  var rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+  var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
   var padding = 40, bbox;
-  if (node.nodeName === "use") {
+  if (node.nodeName === 'use') {
     //
     //  WebKit has a bug where the x and y attributes for a <use> element
     //  are not taken into account in the getBBox() call
     //  (see https://code.google.com/p/chromium/issues/detail?id=512081)
     //  so we temporarily wrap the <use> in a <g> and use getBBox() on that.
     //
-    var g = document.createElementNS('http://www.w3.org/2000/svg','g');
-    node.parentNode.insertBefore(g,node);
+    var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    node.parentNode.insertBefore(g, node);
     g.appendChild(node);
     bbox = g.getBBox();
-    g.parentNode.replaceChild(node,g);
+    g.parentNode.replaceChild(node, g);
   } else {
     bbox = node.getBBox();
   }
@@ -92,7 +92,7 @@ sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
     return;
   }
   info.foreground ?
-    info.node.nextSibling.setAttribute('fill', info.foreground) :
-    info.node.nextSibling.removeAttribute('fill');
+      info.node.nextSibling.setAttribute('fill', info.foreground) :
+      info.node.nextSibling.removeAttribute('fill');
   info.node.parentNode.removeChild(info.node);
 };

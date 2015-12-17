@@ -24,8 +24,8 @@ goog.provide('sre.AbstractWalker');
 goog.require('sre.EnrichMathml');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
-goog.require('sre.WalkerUtil');
 goog.require('sre.WalkerInterface');
+goog.require('sre.WalkerUtil');
 
 
 

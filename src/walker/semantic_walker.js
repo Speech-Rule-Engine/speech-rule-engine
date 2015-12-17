@@ -119,14 +119,14 @@ sre.SemanticWalker.prototype.nextLevel_ = function() {
   var content = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
   if (children.length === 0) return [];
-  var primary = /** @type{!Node} */ (this.getFocus().getPrimary());
+  var primary = /** @type {!Node} */ (this.getFocus().getPrimary());
   var type = sre.WalkerUtil.getAttribute(
       primary, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(
       primary, sre.EnrichMathml.Attribute.ROLE);
   return this.combineContentChildren(
-      /** @type{!sre.SemanticAttr.Type} */ (type),
-      /** @type{!sre.SemanticAttr.Role} */ (role),
+      /** @type {!sre.SemanticAttr.Type} */ (type),
+      /** @type {!sre.SemanticAttr.Role} */ (role),
       content, children);
 };
 

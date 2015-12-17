@@ -76,8 +76,8 @@ sre.WalkerUtil.combineContentChildren = function(
 
 /**
  * Transforms a data attribute name into its camel cased version.
- * @param{!sre.EnrichMathml.Attribute} attr Micro data attributes.
- * @return{!string} The camel cased attribute.
+ * @param {!sre.EnrichMathml.Attribute} attr Micro data attributes.
+ * @return {!string} The camel cased attribute.
  */
 sre.WalkerUtil.dataAttribute = function(attr) {
   return attr.substr(5).replace(/-([a-z])/g, function(letter, index) {

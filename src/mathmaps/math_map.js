@@ -200,8 +200,8 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
       sre.MathMap.toFetch_ += files.length;
       for (i = 0; file = files[i]; i++) {
         isIE ?
-          sre.MathMap.getJsonIE_(file, func):
-          sre.MathMap.getJsonAjax_(path + file, func);
+            sre.MathMap.getJsonIE_(file, func) :
+            sre.MathMap.getJsonAjax_(path + file, func);
       }
       break;
     case sre.Engine.Mode.SYNC:
@@ -212,7 +212,6 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
       break;
   }
 };
-
 
 
 /**
@@ -238,15 +237,15 @@ sre.MathMap.prototype.retrieveMaps = function() {
  * Gets JSON elements from the global JSON object in case of IE browsers.
  * @param {string} file The name of a JSON file.
  * @param {function(JSONType)} func Method adding the rules.
- * @param {number=} opt_count Optional counter argument for callback. 
+ * @param {number=} opt_count Optional counter argument for callback.
  */
 sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
   var count = opt_count || 1;
   if (!sre.BrowserUtil.mapsForIE) {
     if (count <= 5) {
       setTimeout(
-        function() {sre.MathMap.getJsonIE_(file, func, count++);},
-        300);
+          function() {sre.MathMap.getJsonIE_(file, func, count++);},
+          300);
     } else {
       sre.MathMap.toFetch_--;
     }

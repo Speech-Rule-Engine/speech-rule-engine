@@ -45,7 +45,7 @@ sre.SystemExternal.locationSupported = function() {
  * @const
  * @type {string}
  */
-sre.SystemExternal.url =  sre.SystemExternal.locationSupported() ?
+sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
     location.protocol + '//' + 'progressiveaccess.com/content' :
     'https://progressiveaccess.com/content';
 
@@ -58,8 +58,8 @@ sre.SystemExternal.url =  sre.SystemExternal.locationSupported() ?
 sre.SystemExternal.jsonPath = function() {
   return ((typeof process !== 'undefined' && typeof global !== 'undefined') ?
       (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
-          sre.SystemExternal.url + '/mathmaps')
-    + '/';
+          sre.SystemExternal.url + '/mathmaps') +
+      '/';
 }();
 
 
