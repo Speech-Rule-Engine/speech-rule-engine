@@ -2171,6 +2171,7 @@ sre.SemanticTree.prototype.tableToMatrixOrVector_ = function(node) {
     sre.SemanticTree.assignRoleToRow_(
         row, sre.SemanticTree.getComponentRoles_(matrix));
   }
+  matrix.parent = null;
   return matrix;
 };
 
