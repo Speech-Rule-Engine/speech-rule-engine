@@ -5496,7 +5496,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatrices = function() {
       '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable><mo>]</mo>',
       '<math type="matrix" role="unknown" id="16" children="5,10,15"' +
-      ' content="0,17" parent="18">' +
+      ' content="0,17">' +
       '<mo type="fence" role="open" id="0" parent="16">[</mo>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr type="row" role="matrix" id="5" children="2,4" parent="16">' +
@@ -5534,7 +5534,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatrices = function() {
       '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
       '</mtable><mo>]</mo>',
       '<math type="matrix" role="squarematrix" id="11" children="5,10"' +
-      ' content="0,12" parent="13">' +
+      ' content="0,12">' +
       '<mo type="fence" role="open" id="0" parent="11">[</mo>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr type="row" role="squarematrix" id="5" children="2,4" parent="11">' +
@@ -5566,7 +5566,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatrices = function() {
       '</mtable></mfenced>',
       '<math>' +
       '<mrow type="matrix" role="unknown" id="15" children="4,9,14"' +
-      ' content="16,17" parent="18">' +
+      ' content="16,17">' +
       '<mo type="fence" role="neutral" id="16" parent="15"' +
       ' added="true">|</mo>' +
       '<mtable>' +
@@ -5607,7 +5607,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatrices = function() {
       '</mtable></mfenced>',
       '<math>' +
       '<mrow type="matrix" role="determinant" id="10" children="4,9"' +
-      ' content="11,12" parent="13">' +
+      ' content="11,12">' +
       '<mo type="fence" role="neutral" id="11" parent="10"' +
       ' added="true">|</mo>' +
       '<mtable>' +
@@ -5640,7 +5640,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatrices = function() {
       '</mtable></mfenced>',
       '<math>' +
       '<mrow type="matrix" role="rowvector" id="9" children="8"' +
-      ' content="10,11" parent="12">' +
+      ' content="10,11">' +
       '<mo type="fence" role="open" id="10" parent="9" added="true">(</mo>' +
       '<mtable>' +
       '<mtr type="row" role="rowvector" id="8" children="1,3,5,7" parent="9">' +
@@ -5713,7 +5713,7 @@ sre.EnrichMathmlTest.prototype.testMathmlVectors = function() {
       '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>',
       '<math type="vector" role="unknown" id="10" children="3,6,9"' +
-      ' content="0,11" parent="12">' +
+      ' content="0,11">' +
       '<mo type="fence" role="open" id="0" parent="10">[</mo>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr type="line" role="vector" id="3" children="1" parent="10">' +
@@ -5741,7 +5741,7 @@ sre.EnrichMathmlTest.prototype.testMathmlVectors = function() {
       '</mtable></mfenced>',
       '<math>' +
       '<mrow type="vector" role="binomial" id="6" children="2,5"' +
-      ' content="7,8" parent="9">' +
+      ' content="7,8">' +
       '<mo type="fence" role="open" id="7" parent="6" added="true">(</mo>' +
       '<mtable>' +
       '<mtr type="line" role="binomial" id="2" children="0" parent="6">' +
@@ -5765,7 +5765,7 @@ sre.EnrichMathmlTest.prototype.testMathmlVectors = function() {
       '</mtable></mfenced>',
       '<math>' +
       '<mrow type="vector" role="determinant" id="3" children="2"' +
-      ' content="4,5" parent="6">' +
+      ' content="4,5">' +
       '<mo type="fence" role="neutral" id="4" parent="3" added="true">|</mo>' +
       '<mtable>' +
       '<mtr type="line" role="determinant" id="2" children="0" parent="3">' +
@@ -5784,7 +5784,7 @@ sre.EnrichMathmlTest.prototype.testMathmlVectors = function() {
       '</mtable></mfenced>',
       '<math>' +
       '<mrow type="vector" role="squarematrix" id="3" children="2"' +
-      ' content="4,5" parent="6">' +
+      ' content="4,5">' +
       '<mo type="fence" role="open" id="4" parent="3" added="true">(</mo>' +
       '<mtable>' +
       '<mtr type="line" role="squarematrix" id="2" children="0" parent="3">' +
