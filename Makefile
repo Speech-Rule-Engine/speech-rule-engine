@@ -170,7 +170,7 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-clean: clean_test clean_semantic clean_browser clean_enrich
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
