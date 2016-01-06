@@ -14,3 +14,4 @@ install:
   - npm install closure closure-library closurecompiler commander xmldom xpath
   - export TRAVIS=true
   - sed -i s/\'-d32\'//g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/bin/build/jscompiler.py
+  - sed -i s/goog.global.CLOSURE_IMPORT_SCRIPT\;/goog.global.CLOSURE_IMPORT_SCRIPT = null\;/g /home/test/node_modules/closure-library/closure/bin/build/jscompiler.py
