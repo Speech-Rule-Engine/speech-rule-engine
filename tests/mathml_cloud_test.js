@@ -68,6 +68,7 @@ sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
   this.executeRuleTest(mml, 'n m', 'default');
 };
 
+
 /**
  * Testing binomial coefficients made from fractions.
  */
