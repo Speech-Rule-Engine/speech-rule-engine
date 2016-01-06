@@ -125,6 +125,7 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   sre.Debugger.getInstance().generateOutput(
       function() {
         sre.EnrichMathml.formattedOutput(oldMml, mml, semantic, true);
+        return [];
       });
   return mml;
 };
