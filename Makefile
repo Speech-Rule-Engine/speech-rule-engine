@@ -170,7 +170,7 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-clean: clean_test clean_semantic clean_browser clean_enrich
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
@@ -279,7 +279,7 @@ clean_semantic:
 enrich: $(SRC)
 	@echo Compiling browser ready Tree API
 	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Enrich" --output_file $(ENRICH)
+	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(ENRICH)
 
 clean_enrich:
 	rm -f $(ENRICH)

@@ -1,10 +1,6 @@
 language: node_js
 node_js:
-  - "4.1"
-  - "4.0"
-  - "0.12"
-  - "0.11"
-  - "0.10"
+  - "stable"
   - "iojs"
 sudo: false
 branches:
@@ -14,4 +10,4 @@ install:
   - npm install closure closure-library closurecompiler commander xmldom xpath
   - export TRAVIS=true
   - sed -i s/\'-d32\'//g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/bin/build/jscompiler.py
-sudo: false
+  - sed -i s/'goog.global.CLOSURE_IMPORT_SCRIPT\;'/'goog.global.CLOSURE_IMPORT_SCRIPT = null\;'/g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/goog/base.js

@@ -1819,7 +1819,7 @@ sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
  * @param {!sre.SemanticTree.Node} func A function node.
  * @param {!Array.<sre.SemanticTree.Node>} rest List of nodes to choose
  *     arguments from.
- * @param {string} heuristic The heuristic to follow.
+ * @param {!string} heuristic The heuristic to follow.
  * @return {!Array.<!sre.SemanticTree.Node>} The function and the remainder of
  *     the rest list.
  * @private
@@ -1860,6 +1860,7 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
       return partition.tail;
       break;
     case 'simple':
+    default:
       if (rest.length == 0) {
         return [func];
       }
