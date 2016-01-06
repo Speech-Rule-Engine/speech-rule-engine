@@ -149,6 +149,7 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
   if (store) {
     return store.lookupRule(node, dynamic);
   }
+  return null;
 };
 
 
