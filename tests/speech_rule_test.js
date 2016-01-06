@@ -51,7 +51,7 @@ sre.SpeechRuleTest.prototype.assertStructEquals =
     return this.assert.deepEqual(JSON.stringify(expected),
         JSON.stringify(actual));
   }
-  this.assert.deepEqual(expected, actual);
+  return this.assert.deepEqual(expected, actual);
 };
 
 
