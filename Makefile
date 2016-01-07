@@ -19,11 +19,16 @@ LIB_DIR = $(abspath ./lib)
 SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
+BROWSER = $(LIB_DIR)/sre_browser.js
+MATHJAX = $(LIB_DIR)/sre_mathjax.js
+SEMANTIC = $(LIB_DIR)/semantic.js
+ENRICH = $(LIB_DIR)/enrich.js
 
 START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
+IEMAPS_FILE = $(JSON_DIR)/mathmaps_ie.js
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -86,9 +91,11 @@ COMPILER_JAR = $(NODE_MODULES)/closurecompiler/compiler/compiler.jar
 CLOSURE_COMPILER = python $(CLOSURE_ROOT)/closurebuilder.py --root=$(CLOSURE_LIB)/ --root=$(SRC_DIR) --output_mode=compiled --compiler_jar=$(COMPILER_JAR) $(CLOSURE_FLAGS)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
+LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
+
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
-GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -r
-FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -r
+GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
+FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
 
 #######################################################################3
 # Probably don't need those!
@@ -104,7 +111,7 @@ directories: $(BIN_DIR)
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-lint: 
+lint:
 	$(GJSLINT) $(SRC_DIR)
 	$(GJSLINT) $(TEST_DIR)
 
@@ -153,6 +160,7 @@ $(INTERACTIVE):
 	@echo "process.env.SRE_JSON_PATH = '$(JSON_DIR)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
+	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
 
 CLOSURE_LIB_LINK = $(SRC_DIR)/$(CLOSURE_LIB_NAME)
 
@@ -162,7 +170,7 @@ $(CLOSURE_LIB_LINK):
 	@echo "Making link..."
 	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
 
-clean: clean_test
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
@@ -223,9 +231,55 @@ maps: $(MAPS)
 $(MAPS): 
 	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
 
-api: $(SRC) # start_file
-	@echo Compiling Speech Rule Engine
+iemaps:
+	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
+	@for dir in $(MAPS); do\
+		for i in $(JSON_DIR)/$$dir/*.json; do\
+			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
+			cat $$i >> $(IEMAPS_FILE); \
+			echo ','  >> $(IEMAPS_FILE); \
+		done; \
+	done
+	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
+	@echo '}\n' >> $(IEMAPS_FILE)
+
+api: $(SRC)
+	@echo Compiling Speech Rule Engine API
 	@echo $^
-#	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
-# The following command has to become the final namespace that gets everything together.
 	@$(CLOSURE_COMPILER) --namespace="sre.Api" --output_file $(TARGET)
+
+
+## Other useful targets.
+
+browser: $(SRC)
+	@echo Compiling browser ready Speech Rule Engine
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Browser" --output_file $(BROWSER)
+
+clean_browser:
+	rm -f $(BROWSER)
+
+mathjax: $(SRC)
+	@echo Compiling MathJax ready Speech Rule Engine
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(MATHJAX)
+
+clean_mathjax:
+	rm -f $(MATHJAX)
+
+semantic: $(SRC)
+	@echo Compiling browser ready Semantic Tree API
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Semantic" --output_file $(SEMANTIC)
+
+clean_semantic:
+	rm -f $(SEMANTIC)
+
+enrich: $(SRC)
+	@echo Compiling browser ready Tree API
+	@echo $^
+	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(ENRICH)
+
+clean_enrich:
+	rm -f $(ENRICH)

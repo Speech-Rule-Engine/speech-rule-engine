@@ -128,13 +128,21 @@ sre.SemanticUtil.tagName = function(node) {
 
 
 /**
+ * List of MathML Tags that are considered to be leafs.
+ * @type {Array.<string>}
+ * @const
+ */
+sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS'];
+
+
+/**
  * List of MathML Tags that are to be ignored.
  * @type {Array.<string>}
  * @const
  */
 sre.SemanticUtil.IGNORETAGS = [
   'MERROR', 'MPHANTOM', 'MSPACE', 'MACTION', 'MALIGNGROUP', 'MALIGNMARK',
-  'MACTION', 'NONE'
+  'NONE', 'MPRESCRIPTS'
 ];
 
 
@@ -144,6 +152,39 @@ sre.SemanticUtil.IGNORETAGS = [
  * @const
  */
 sre.SemanticUtil.EMPTYTAGS = ['MATH', 'MROW', 'MPADDED', 'MSTYLE'];
+
+
+/**
+ * Checks if an element is a node with a math tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an math node.
+ */
+sre.SemanticUtil.hasMathTag = function(node) {
+  return !!node && sre.SemanticUtil.tagName(node) === 'MATH';
+};
+
+
+/**
+ * Checks if an element is a node with ignore tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an ignore node.
+ */
+sre.SemanticUtil.hasIgnoreTag = function(node) {
+  return !!node &&
+      sre.SemanticUtil.IGNORETAGS.indexOf(
+          sre.SemanticUtil.tagName(node)) !== -1;
+};
+
+
+/**
+ * Checks if an element is a node with empty tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an empty node.
+ */
+sre.SemanticUtil.hasEmptyTag = function(node) {
+  return !!node &&
+      sre.SemanticUtil.EMPTYTAGS.indexOf(sre.SemanticUtil.tagName(node)) !== -1;
+};
 
 
 /**

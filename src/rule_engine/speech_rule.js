@@ -143,7 +143,7 @@ sre.SpeechRule.Component.fromString = function(input) {
   output.type = sre.SpeechRule.Type.fromString(input.substring(0, 3));
 
   // Prep the rest of the parsing.
-  var rest = input.slice(3).trimLeft();
+  var rest = input.slice(3).trim();
   if (!rest) {
     throw new sre.SpeechRule.OutputError('Missing content.');
   }
@@ -173,7 +173,7 @@ sre.SpeechRule.Component.fromString = function(input) {
         break;
       }
       output.content = rest.substring(0, bracket).trim();
-      rest = rest.slice(bracket).trimLeft();
+      rest = rest.slice(bracket).trim();
       break;
   }
   output = new sre.SpeechRule.Component(output);
@@ -401,7 +401,8 @@ sre.SpeechRule.stringifyCstr = function(cstr) {
  * @extends {Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
-  this.name = 'RuleError';
+  goog.base(this);
   this.message = msg || '';
+  this.name = 'RuleError';
 };
 goog.inherits(sre.SpeechRule.OutputError, Error);

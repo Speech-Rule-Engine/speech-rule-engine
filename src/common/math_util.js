@@ -21,6 +21,8 @@
 
 goog.provide('sre.MathUtil');
 
+goog.require('sre.DomUtil');
+
 
 /**
  * Checks if a node is in a given class of MathML nodes.
@@ -60,7 +62,7 @@ sre.MathUtil.isMathjaxNodeOfClass_ = function(node, tags) {
  * @return {boolean} True if node has a tag name included in tags.
  */
 sre.MathUtil.isMathNodeOfClass_ = function(node, tags) {
-  return (node.nodeType == sre.Engine.NodeType.ELEMENT_NODE &&
+  return (node.nodeType == sre.DomUtil.NodeType.ELEMENT_NODE &&
           (sre.MathUtil.isMathmlNodeOfClass_(node, tags) ||
            sre.MathUtil.isMathjaxNodeOfClass_(node, tags)));
 };

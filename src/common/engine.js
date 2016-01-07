@@ -19,6 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.Engine');
+goog.provide('sre.Engine.Mode');
+
+goog.require('sre.BrowserUtil');
 
 
 
@@ -71,6 +74,43 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.semantics = false;
+
+  /**
+   * The mode in which the engine is running (sync, async, http).
+   * @type {sre.Engine.Mode}
+   */
+  this.mode = sre.Engine.Mode.SYNC;
+
+  /**
+   * Flag indicating whether or not speech should be added to enriched MathML.
+   * @type {boolean}
+   */
+  this.speech = false;
+
+  /**
+   * List of predicates for checking if the engine is set up.
+   * @type {!Array.<function():boolean>}
+   * @private
+   */
+  this.setupTests_ = [];
+
+  /**
+   * Caching during speech generation.
+   * @type {boolean}
+   */
+  this.withCache = true;
+
+  /**
+   * Current browser is MS Internet Explorer but not Edge.
+   * @type {boolean}
+   */
+  this.isIE = sre.BrowserUtil.detectIE();
+
+  /**
+   * Current browser is MS Edge.
+   * @type {boolean}
+   */
+  this.isEdge = sre.BrowserUtil.detectEdge();
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -88,20 +128,35 @@ sre.Engine.personalityProps = {
 
 
 /**
- * Missing Node interface.
- * @enum {number}
+ * Defines the modes in which the engine can run.
+ * @enum {string}
  */
-sre.Engine.NodeType = {
-  ELEMENT_NODE: 1,
-  ATTRIBUTE_NODE: 2,
-  TEXT_NODE: 3,
-  CDATA_SECTION_NODE: 4,
-  ENTITY_REFERENCE_NODE: 5,
-  ENTITY_NODE: 6,
-  PROCESSING_INSTRUCTION_NODE: 7,
-  COMMENT_NODE: 8,
-  DOCUMENT_NODE: 9,
-  DOCUMENT_TYPE_NODE: 10,
-  DOCUMENT_FRAGMENT_NODE: 11,
-  NOTATION_NODE: 12
+sre.Engine.Mode = {
+  SYNC: 'sync',
+  ASYNC: 'async',
+  HTTP: 'http'
+};
+
+
+/**
+ * Registers a predicate to test whether the setup of the engine is complete.
+ * The basic idea is that different parts of the system that run asynchronously
+ * can register a test here and the engine can check if it is set up without the
+ * need to know which bits actually run asynchronously.
+ * @param {function():boolean} pred A predicate that takes no input and returns
+ *     a boolean value.
+ */
+sre.Engine.registerTest = function(pred) {
+  sre.Engine.getInstance().setupTests_.push(pred);
+};
+
+
+/**
+ * Test to see if the engine is fully setup. Important for async and http mode.
+ * @return {boolean} True if the engine has completed its setup.
+ */
+sre.Engine.isReady = function() {
+  return sre.Engine.getInstance().setupTests_.every(
+      function(pred) { return pred(); }
+  );
 };

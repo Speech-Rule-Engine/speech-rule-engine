@@ -21,6 +21,8 @@
 goog.provide('sre.Cli');
 
 goog.require('sre.Debugger');
+goog.require('sre.Engine');
+goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
 
@@ -49,6 +51,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.log = '';
   /** @type {!string} */
   commander.output = '';
+  /** @type {!string} */
+  commander.mathml = '';
   /** @type {!boolean} */
   commander.semantics = false;
   /** @type {!string} */
@@ -61,6 +65,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-e, --enumerate', 'Enumerates available domains and styles').
       option('-i, --input [name]', 'Input file [name]').
       option('-l, --log [name]', 'Log file [name]').
+      option('-m, --mathml [name]', 'Generate MathML output to file.').
       option('-o, --output [name]', 'Output file [name]').
       option('-s, --semantics', 'Switch on semantics interpretation').
       option('-t, --style [name]', 'Speech style [name]').
@@ -68,7 +73,7 @@ sre.Cli.prototype.commandLine = function() {
       parse(process.argv);
   try {
     if (commander.enumerate) {
-      sre.System.getInstance().setupEngine({});
+      sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.SYNC});
       var output = 'Domain options: ' +
           sre.Engine.getInstance().allDomains.sort().join(', ') +
           '\nStyle options:  ' +
@@ -76,11 +81,16 @@ sre.Cli.prototype.commandLine = function() {
       console.log(output);
       process.exit(0);
     }
+    if (commander.mathml) {
+      commander.semantics = true;
+    }
     sre.System.getInstance().setupEngine(
         {
           'semantics': commander.semantics,
           'domain': commander.dom,
-          'style': commander.style
+          'style': commander.style,
+          'mathml': commander.mathml,
+          'mode': sre.Engine.Mode.SYNC
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);
@@ -89,12 +99,10 @@ sre.Cli.prototype.commandLine = function() {
       sre.System.getInstance().processFile(commander.input, commander.output);
     }
   } catch (err) {
-    console.log(err.message);
-    sre.Debugger.getInstance().exit();
-    process.exit(1);
+    console.log(err.name + ': ' + err.message);
+    sre.Debugger.getInstance().exit(function() {process.exit(1);});
   }
-  sre.Debugger.getInstance().exit();
-  process.exit(0);
+  sre.Debugger.getInstance().exit(function() {process.exit(0);});
 };
 
 

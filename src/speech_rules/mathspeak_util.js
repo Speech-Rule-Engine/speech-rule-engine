@@ -19,7 +19,8 @@
 
 goog.provide('sre.MathspeakUtil');
 
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.Semantic.Role');
+goog.require('sre.Semantic.Type');
 goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
@@ -46,10 +47,10 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   for (var i = 0, chr; chr = content[i]; i++) {
     // We ignore Greek characters for now!
-    var type = sre.SemanticAttr.Type.NUMBER;
+    var type = sre.Semantic.Type.NUMBER;
     var role = chr.match(/\W/) ?
-        sre.SemanticAttr.Role.UNKNOWN :
-        sre.SemanticAttr.Role.PROTECTED;
+        sre.Semantic.Role.UNKNOWN :
+        sre.Semantic.Role.PROTECTED;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
                                  chr + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
@@ -74,8 +75,8 @@ sre.MathspeakUtil.spaceoutIdentifier = function(node) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   for (var i = 0, chr; chr = content[i]; i++) {
     // We ignore Greek characters for now!
-    var type = sre.SemanticAttr.Type.IDENTIFIER;
-    var role = sre.SemanticAttr.Role.UNKNOWN;
+    var type = sre.Semantic.Type.IDENTIFIER;
+    var role = sre.Semantic.Role.UNKNOWN;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
                                  chr + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
@@ -86,24 +87,24 @@ sre.MathspeakUtil.spaceoutIdentifier = function(node) {
 
 /**
  * Tags that serve as a nesting barrier by default.
- * @type {Array.<sre.SemanticAttr.Type>}
+ * @type {Array.<sre.Semantic.Type>}
  */
 sre.MathspeakUtil.nestingBarriers = [
-  sre.SemanticAttr.Type.CASES,
-  sre.SemanticAttr.Type.CELL,
-  sre.SemanticAttr.Type.INTEGRAL,
-  sre.SemanticAttr.Type.LINE,
-  sre.SemanticAttr.Type.MATRIX,
-  sre.SemanticAttr.Type.MULTILINE,
-  sre.SemanticAttr.Type.OVERSCORE,
-  sre.SemanticAttr.Type.ROOT,
-  sre.SemanticAttr.Type.ROW,
-  sre.SemanticAttr.Type.SQRT,
-  sre.SemanticAttr.Type.SUBSCRIPT,
-  sre.SemanticAttr.Type.SUPERSCRIPT,
-  sre.SemanticAttr.Type.TABLE,
-  sre.SemanticAttr.Type.UNDERSCORE,
-  sre.SemanticAttr.Type.VECTOR
+  sre.Semantic.Type.CASES,
+  sre.Semantic.Type.CELL,
+  sre.Semantic.Type.INTEGRAL,
+  sre.Semantic.Type.LINE,
+  sre.Semantic.Type.MATRIX,
+  sre.Semantic.Type.MULTILINE,
+  sre.Semantic.Type.OVERSCORE,
+  sre.Semantic.Type.ROOT,
+  sre.Semantic.Type.ROW,
+  sre.Semantic.Type.SQRT,
+  sre.Semantic.Type.SUBSCRIPT,
+  sre.Semantic.Type.SUPERSCRIPT,
+  sre.Semantic.Type.TABLE,
+  sre.Semantic.Type.UNDERSCORE,
+  sre.Semantic.Type.VECTOR
 ];
 
 
@@ -120,8 +121,8 @@ sre.MathspeakUtil.nestingDepth = {};
  * @param {string} type The type of nesting depth.
  * @param {!Node} node The XML node to check.
  * @param {Array.<string>} tags The tags to be considered for the nesting depth.
- * @param {Array.<string>=} opt_barrierTags Optional list of tags that serve as
- *     barrier.
+ * @param {Array.<sre.Semantic.Attr>=} opt_barrierTags Optional list of tags
+ *     that serve as barrier.
  * @param {Object.<string, string>=} opt_barrierAttrs Attribute value pairs that
  *     serve as barrier.
  * @param {function(!Node): boolean=} opt_func A function that overrides both
@@ -198,7 +199,7 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
   if (tags.indexOf(node.tagName) > -1) {
     depth++;
   }
-  if (!node.childNodes) {
+  if (!node.childNodes || node.childNodes.length === 0) {
     return depth;
   }
   var children = sre.DomUtil.toArray(node.childNodes);
@@ -595,18 +596,18 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
     var children = node.parentNode;
     var parent = children.parentNode;
     var nodeRole = node.getAttribute && node.getAttribute('role');
-    if ((parent.tagName === sre.SemanticAttr.Type.SUBSCRIPT &&
+    if ((parent.tagName === sre.Semantic.Type.SUBSCRIPT &&
          node === children.childNodes[1]) ||
-        (parent.tagName === sre.SemanticAttr.Type.TENSOR && nodeRole &&
-        (nodeRole === sre.SemanticAttr.Role.LEFTSUB ||
-        nodeRole === sre.SemanticAttr.Role.RIGHTSUB))) {
+        (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
+        (nodeRole === sre.Semantic.Role.LEFTSUB ||
+        nodeRole === sre.Semantic.Role.RIGHTSUB))) {
       init = replace.sub + ' ' + init;
     }
-    if ((parent.tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+    if ((parent.tagName === sre.Semantic.Type.SUPERSCRIPT &&
          node === children.childNodes[1]) ||
-        (parent.tagName === sre.SemanticAttr.Type.TENSOR && nodeRole &&
-        (nodeRole === sre.SemanticAttr.Role.LEFTSUPER ||
-        nodeRole === sre.SemanticAttr.Role.RIGHTSUPER))) {
+        (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
+        (nodeRole === sre.Semantic.Role.LEFTSUPER ||
+        nodeRole === sre.Semantic.Role.RIGHTSUPER))) {
       init = replace.sup + ' ' + init;
     }
     node = parent;
@@ -807,9 +808,9 @@ sre.MathspeakUtil.underscoreNestingDepth = function(node) {
       {},
       function(node) {
         return node.tagName &&
-            node.tagName === sre.SemanticAttr.Type.UNDERSCORE &&
+            node.tagName === sre.Semantic.Type.UNDERSCORE &&
             node.childNodes[0].childNodes[1].getAttribute('role') ===
-            sre.SemanticAttr.Role.UNDERACCENT;
+            sre.Semantic.Role.UNDERACCENT;
       });
 };
 
@@ -836,9 +837,9 @@ sre.MathspeakUtil.overscoreNestingDepth = function(node) {
       {},
       function(node) {
         return node.tagName &&
-            node.tagName === sre.SemanticAttr.Type.OVERSCORE &&
+            node.tagName === sre.Semantic.Type.OVERSCORE &&
             node.childNodes[0].childNodes[1].getAttribute('role') ===
-            sre.SemanticAttr.Role.OVERACCENT;
+            sre.Semantic.Role.OVERACCENT;
       });
 };
 
@@ -861,21 +862,21 @@ sre.MathspeakUtil.nestedOverscore = function(node) {
  * @return {Array.<Node>} List containing input node if true.
  */
 sre.MathspeakUtil.determinantIsSimple = function(node) {
-  if (node.tagName !== sre.SemanticAttr.Type.MATRIX ||
-      node.getAttribute('role') !== sre.SemanticAttr.Role.DETERMINANT) {
+  if (node.tagName !== sre.Semantic.Type.MATRIX ||
+      node.getAttribute('role') !== sre.Semantic.Role.DETERMINANT) {
     return [];
   }
   var cells = sre.XpathUtil.evalXPath(
       'children/row/children/cell/children/*', node);
   for (var i = 0, cell; cell = cells[i]; i++) {
-    if (cell.tagName === sre.SemanticAttr.Type.NUMBER) {
+    if (cell.tagName === sre.Semantic.Type.NUMBER) {
       continue;
     }
-    if (cell.tagName === sre.SemanticAttr.Type.IDENTIFIER) {
+    if (cell.tagName === sre.Semantic.Type.IDENTIFIER) {
       var role = cell.getAttribute('role');
-      if (role === sre.SemanticAttr.Role.LATINLETTER ||
-          role === sre.SemanticAttr.Role.GREEKLETTER ||
-          role === sre.SemanticAttr.Role.OTHERLETTER) {
+      if (role === sre.Semantic.Role.LATINLETTER ||
+          role === sre.Semantic.Role.GREEKLETTER ||
+          role === sre.Semantic.Role.OTHERLETTER) {
         continue;
       }
     }

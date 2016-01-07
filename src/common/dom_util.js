@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview A collection of JavaScript utilities used to simplify working
- * with the DOM.
+ * with DOM nodes.
  * Currently minimized for the standalone speech rule engine.
  * @author clchen@google.com (Charles L. Chen)
  * @author volker.sorge@gmail.com (Volker Sorge)
@@ -24,14 +24,8 @@
 
 goog.provide('sre.DomUtil');
 
-
-
-/**
- * Create the namespace
- * @constructor
- */
-sre.DomUtil = function() {
-};
+goog.require('sre.Engine');
+goog.require('sre.XpathUtil');
 
 
 /**
@@ -49,10 +43,75 @@ sre.DomUtil.toArray = function(nodeList) {
 
 
 /**
- * Removes all empty strings from an array of strings.
- * @param {Array.<string>} strs An array of strings.
- * @return {Array.<string>} The cleaned array.
+ * Trims the whitespace in an XML input string.
+ * @param {string} input The XML input string.
+ * @return {string} The string with whitespace removed between tags.
+ * @private
  */
-sre.DomUtil.removeEmpty = function(strs) {
-  return strs.filter(function(str) {return str;});
+sre.DomUtil.trimInput_ = function(input) {
+  input = input.replace(/&nbsp;/g, ' ');
+  return input.replace(/>\s+</g, '><').trim();
+};
+
+
+/**
+ * Parses the XML input string into an XML structure.
+ * @param {string} input The XML input string.
+ * @param {function (new:Error, string)=} opt_error Optional error function.
+ * @return {!Element} The XML document structure corresponding to the node.
+ */
+sre.DomUtil.parseInput = function(input, opt_error) {
+  var error = opt_error || Error;
+  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var clean_input = sre.DomUtil.trimInput_(input);
+  if (!clean_input) {
+    var newError = new error('Empty input!');
+    throw newError;
+  }
+  try {
+    var doc = dp.parseFromString(clean_input, 'text/xml');
+    if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
+      sre.XpathUtil.currentDocument = doc;
+      return doc.documentElement;
+    }
+    var result = doc.documentElement;
+    sre.XpathUtil.prefixNamespace(result);
+    return result;
+  } catch (err) {
+    throw new error('Illegal input: ' + err.message);
+  }
+};
+
+
+/**
+ * Missing Node interface.
+ * @enum {number}
+ */
+sre.DomUtil.NodeType = {
+  ELEMENT_NODE: 1,
+  ATTRIBUTE_NODE: 2,
+  TEXT_NODE: 3,
+  CDATA_SECTION_NODE: 4,
+  ENTITY_REFERENCE_NODE: 5,
+  ENTITY_NODE: 6,
+  PROCESSING_INSTRUCTION_NODE: 7,
+  COMMENT_NODE: 8,
+  DOCUMENT_NODE: 9,
+  DOCUMENT_TYPE_NODE: 10,
+  DOCUMENT_FRAGMENT_NODE: 11,
+  NOTATION_NODE: 12
+};
+
+
+/**
+ * Cleanly replaces child nodes in a parent.
+ * @param {!Node} oldNode The node to be replaced.
+ * @param {!Node} newNode The replacement node.
+ */
+sre.DomUtil.replaceNode = function(oldNode, newNode) {
+  if (!oldNode.parentNode) {
+    return;
+  }
+  oldNode.parentNode.insertBefore(newNode, oldNode);
+  oldNode.parentNode.removeChild(oldNode);
 };

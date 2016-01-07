@@ -44,6 +44,8 @@ sre.MathspeakRuleTest = function() {
    * @override
    */
   this.semantics = true;
+
+  this.setActive('MathspeakExamples');
 };
 goog.inherits(sre.MathspeakRuleTest, sre.AbstractRuleTest);
 

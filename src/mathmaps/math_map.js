@@ -23,12 +23,19 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.BrowserUtil');
+goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.MathUtil');
 goog.require('sre.SystemExternal');
 
 
 
+//TODO: (sorge)
+// Refactor code to have uniform retrieval methods for the three system modes.
+// Combine similar code for async and http.
+// Provide a generic restarts function.
+//
 /**
  *
  * @constructor
@@ -40,39 +47,35 @@ sre.MathMap = function() {
    * @type {sre.MathCompoundStore}
    */
   this.store = sre.MathCompoundStore.getInstance();
-  sre.MathMap.parseFiles(
-      sre.MathMap.FUNCTIONS_FILES_.map(
-          function(file) {
-            return sre.MathMap.FUNCTIONS_PATH_ + file;
-          }))
-      .forEach(goog.bind(this.store.addFunctionRules, this.store));
-  sre.MathMap.parseFiles(
-      sre.MathMap.SYMBOLS_FILES_.map(
-          function(file) {
-            return sre.MathMap.SYMBOLS_PATH_ + file;
-          }))
-      .forEach(goog.bind(this.store.addSymbolRules, this.store));
-  sre.MathMap.parseFiles(
-      sre.MathMap.UNITS_FILES_.map(
-          function(file) {
-            return sre.MathMap.UNITS_PATH_ + file;
-          }))
-      .forEach(goog.bind(this.store.addUnitRules, this.store));
 
-  var cstrValues = this.store.getDynamicConstraintValues();
   /**
    * Array of domain names.
    * @type {Array.<string>}
    */
-  this.allDomains = cstrValues.domain;
+  this.allDomains = [];
 
   /**
    * Array of style names.
    * @type {Array.<string>}
    */
-  this.allStyles = cstrValues.style;
+  this.allStyles = [];
+
+  this.retrieveMaps();
+
+  this.getDynamicConstraintValues();
 };
 goog.addSingletonGetter(sre.MathMap);
+
+
+/**
+ * Files left to fetch in asynchronous mode.
+ * @type {number}
+ * @private
+ */
+sre.MathMap.toFetch_ = 0;
+sre.Engine.registerTest(function() {
+  return sre.MathMap.getInstance() && !sre.MathMap.toFetch_;
+});
 
 
 /**
@@ -173,9 +176,106 @@ sre.MathMap.UNITS_FILES_ = [
 
 
 /**
+ * Retrieves JSON rule mappings from a list of files at a given path and adds
+ * them as rules to the current store.
+ * @param {Array.<string>} files List of file names.
+ * @param {string} path A path name.
+ * @param {function(JSONType)} func Method adding the rules.
+ */
+sre.MathMap.retrieveFiles = function(files, path, func) {
+  switch (sre.Engine.getInstance().mode) {
+    case sre.Engine.Mode.ASYNC:
+      sre.MathMap.toFetch_ += files.length;
+      for (var i = 0, file; file = files[i]; i++) {
+        sre.MathMap.fromFile_(path + file,
+            function(err, json) {
+              sre.MathMap.toFetch_--;
+              if (err) return;
+              JSON.parse(json).forEach(function(x) {func(x);});
+            });
+      }
+      break;
+    case sre.Engine.Mode.HTTP:
+      var isIE = sre.Engine.getInstance().isIE;
+      sre.MathMap.toFetch_ += files.length;
+      for (i = 0; file = files[i]; i++) {
+        isIE ?
+            sre.MathMap.getJsonIE_(file, func) :
+            sre.MathMap.getJsonAjax_(path + file, func);
+      }
+      break;
+    case sre.Engine.Mode.SYNC:
+    default:
+      var innerFunc = function(file) { return path + file; };
+      sre.MathMap.parseFiles(files.map(innerFunc)).
+          forEach(function(json) {func(json);});
+      break;
+  }
+};
+
+
+/**
+ * Retrieves mappings and adds them to the respective stores.
+ */
+sre.MathMap.prototype.retrieveMaps = function() {
+  sre.MathMap.retrieveFiles(
+      sre.MathMap.FUNCTIONS_FILES_,
+      sre.MathMap.FUNCTIONS_PATH_,
+      goog.bind(this.store.addFunctionRules, this.store));
+  sre.MathMap.retrieveFiles(
+      sre.MathMap.SYMBOLS_FILES_,
+      sre.MathMap.SYMBOLS_PATH_,
+      goog.bind(this.store.addSymbolRules, this.store));
+  sre.MathMap.retrieveFiles(
+      sre.MathMap.UNITS_FILES_,
+      sre.MathMap.UNITS_PATH_,
+      goog.bind(this.store.addUnitRules, this.store));
+};
+
+
+/**
+ * Gets JSON elements from the global JSON object in case of IE browsers.
+ * @param {string} file The name of a JSON file.
+ * @param {function(JSONType)} func Method adding the rules.
+ * @param {number=} opt_count Optional counter argument for callback.
+ * @private
+ */
+sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
+  var count = opt_count || 1;
+  if (!sre.BrowserUtil.mapsForIE) {
+    if (count <= 5) {
+      setTimeout(
+          function() {sre.MathMap.getJsonIE_(file, func, count++);},
+          300);
+    } else {
+      sre.MathMap.toFetch_--;
+    }
+    return;
+  }
+  var json = sre.BrowserUtil.mapsForIE[file];
+  if (json) {
+    json.forEach(function(x) {func(x);});
+  }
+  sre.MathMap.toFetch_--;
+};
+
+
+/**
+ * Takes path to a JSON file and returns a JSON object.
+ * @param {string} path Contains the path to a JSON file.
+ * @param {function(string, string)} func Method adding the rules.
+ * @return {string} JSON.
+ * @private
+ */
+sre.MathMap.fromFile_ = function(path, func) {
+  return sre.SystemExternal.fs.readFile(path, 'utf8', func);
+};
+
+
+/**
  * Loads JSON for a given file name.
  * @param {string} file A valid filename.
- * @return {string} A string representing JSON array.
+ * @return {string} A string representing a JSON array.
  */
 sre.MathMap.loadFile = function(file) {
   try {
@@ -199,7 +299,7 @@ sre.MathMap.loadFiles = function(files) {
 /**
  * Creates an array of JSON objects from a list of files.
  * @param {Array.<string>} files An array of filenames.
- * @return {Array.<Object>} Array of JSON objects.
+ * @return {Array.<JSONType>} Array of JSON objects.
  */
 sre.MathMap.parseFiles = function(files) {
   var strs = sre.MathMap.loadFiles(files);
@@ -219,4 +319,39 @@ sre.MathMap.parseFiles = function(files) {
  */
 sre.MathMap.readJSON_ = function(path) {
   return sre.SystemExternal.fs.readFileSync(path);
+};
+
+
+/**
+ * Sents AJAX request to retrieve a JSON rule file.
+ * @param {string} file The file to retrieve.
+ * @param {function(JSONType)} func Method adding the retrieved rules.
+ * @private
+ */
+sre.MathMap.getJsonAjax_ = function(file, func) {
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function() {
+    if (httpRequest.readyState === 4) {
+      sre.MathMap.toFetch_--;
+      if (httpRequest.status === 200) {
+        JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
+      }
+    }
+  };
+  httpRequest.open('GET', file, true);
+  httpRequest.send();
+};
+
+
+/**
+ * Sets the set of all possible dynamic constraint values.
+ */
+sre.MathMap.prototype.getDynamicConstraintValues = function() {
+  if (sre.MathMap.toFetch_) {
+    setTimeout(goog.bind(this.getDynamicConstraintValues, this), 300);
+  } else {
+    var cstr = this.store.getDynamicConstraintValues();
+    this.allDomains = cstr.domain;
+    this.allStyles = cstr.style;
+  }
 };

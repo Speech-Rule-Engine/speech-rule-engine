@@ -285,7 +285,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'binary-operation', 'mathspeak.default',
-      '[m] children/* (separator:text());', 'self::infixop');
+      '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop');
 
   // Implicit times is currently ignored!
   defineRule(
@@ -548,12 +548,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Relations
   defineRule(
       'equality', 'mathspeak.default',
-      '[n] children/*[1]; [n] text(); [n] children/*[2]',
+      '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
 
   defineRule(
       'multi-equality', 'mathspeak.default',
-      '[m] ./children/* (separator:./text())',
+      '[m] ./children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
@@ -581,8 +581,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       // Second child is a number but not mixed or other.
       'name(./children/*[2])="number"',
       './children/*[2][@role!="mixed"]',
-      './children/*[2][@role!="othernumber"]'
-  );
+      './children/*[2][@role!="othernumber"]');
   defineSpecialisedRule(
       'subscript-simple', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -612,13 +611,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|' +
       'ancestor::fraction',
       'not(ancestor::punctuated[@role="leftsuper" or @role="rightsub"' +
-      ' or @role="rightsuper" or @role="rightsub"])'
-  );
+      ' or @role="rightsuper" or @role="rightsub"])');
   defineRuleAlias(
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
       'ancestor::relseq|ancestor::multirel',
       sre.MathspeakUtil.generateBaselineConstraint());
+  defineRuleAlias(
+      'subscript-baseline',
+      'self::subscript', 'not(following-sibling::*)',
+      'self::subscript[@embellished]');
 
   defineRule(
       'subscript-empty-sup', 'mathspeak.default',
@@ -681,7 +683,13 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::relseq|ancestor::multirel',
+      'not(self::superscript[@embellished])',
       sre.MathspeakUtil.generateBaselineConstraint());
+  defineRuleAlias(
+      'superscript-baseline',
+      'self::superscript', 'not(following-sibling::*)',
+      'self::superscript[@embellished]', 'not(children/*[2][@role="prime"])');
+
 
   defineRule(
       'superscript-empty-sub', 'mathspeak.default',
@@ -716,7 +724,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[1])="identifier" and ' +
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
-      'children/*[1]/children/*[2][@role!="othernumber"])');
+      'children/*[1]/children/*[2][@role!="othernumber"])',
+      'not(self::superscript[@embellished])');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -739,7 +748,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[1])="identifier" and ' +
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
-      'children/*[1]/children/*[2][@role!="othernumber"])');
+      'children/*[1]/children/*[2][@role!="othernumber"])',
+      'not(self::superscript[@embellished])');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -783,6 +793,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       ' [t] CSFbaselineBrief');
   defineSpecialisedRule(
       'prime-subscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRuleAlias(
+      'prime-subscript-baseline',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="subscript"', 'not(following-sibling::*)',
+      'self::superscript[@embellished]');
 
   defineRule(
       'prime-subscript-simple', 'mathspeak.default',
@@ -1182,7 +1197,8 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
     var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
                      'ancestor::fraction|ancestor::punctuated|' +
                      'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel'].
+                     'ancestor::relseq|ancestor::multirel|' +
+                     'self::tensor[@embellished]'].
         concat(components);
     defineRuleAlias.apply(null, aliasList);
   }

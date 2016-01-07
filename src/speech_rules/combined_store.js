@@ -58,9 +58,13 @@ sre.CombinedStore.mathStore.initialize = function() {
  * Updates adminstrative info in the base Engine.
  */
 sre.CombinedStore.prototype.updateEngine = function() {
+  var maps = sre.MathMap.getInstance();
+  if (!sre.Engine.isReady()) {
+    setTimeout(sre.CombinedStore.getInstance().updateEngine, 500);
+    return;
+  }
+  var engine = sre.Engine.getInstance();
   var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
-  sre.Engine.getInstance().allDomains = sre.MathUtil.union(
-      dynamicCstr.domain, sre.MathMap.getInstance().allDomains);
-  sre.Engine.getInstance().allStyles = sre.MathUtil.union(
-      dynamicCstr.style, sre.MathMap.getInstance().allStyles);
+  engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);
+  engine.allStyles = sre.MathUtil.union(dynamicCstr.style, maps.allStyles);
 };

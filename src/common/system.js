@@ -1,3 +1,4 @@
+
 // Copyright 2014 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,16 +21,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.System');
+goog.provide('sre.System.Error');
 
 goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
+goog.require('sre.Enrich');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.SemanticTree');
+goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
-goog.require('sre.XpathUtil');
 
 
 
@@ -55,110 +58,11 @@ goog.addSingletonGetter(sre.System);
  * @extends {Error}
  */
 sre.System.Error = function(msg) {
-  this.name = 'System Error';
+  goog.base(this);
   this.message = msg || '';
+  this.name = 'System Error';
 };
 goog.inherits(sre.System.Error, Error);
-
-
-/**
- * Trims the whitespace in an XML input string.
- * @param {string} input The XML input string.
- * @return {string} The string with whitespace removed between tags.
- * @private
- */
-sre.System.prototype.trimInput_ = function(input) {
-  input = input.replace(/&nbsp;/g, ' ');
-  return input.replace(/>\s+</g, '><').trim();
-};
-
-
-/**
- * Parses the XML input string into an XML structure.
- * @param {string} input The XML input string.
- * @return {!Element} The XML document structure corresponding to the node.
- */
-sre.System.prototype.parseInput = function(input) {
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var clean_input = this.trimInput_(input);
-  if (!clean_input) {
-    throw new sre.System.Error('Empty input!');
-  }
-  try {
-    var result = dp.parseFromString(clean_input, 'text/xml').documentElement;
-    sre.XpathUtil.prefixNamespace(result);
-    return result;
-  } catch (err) {
-    throw new sre.System.Error('Illegal input: ' + err.message);
-  }
-};
-
-
-/**
- * Process a math expression into a string suitable for a speech engine.
- * @param {string} text Text representing a math expression.
- * @return {string} The string with a spoken version of the math expression.
- * @private
- */
-sre.System.prototype.preprocessString_ = function(text) {
-  // TODO (sorge) Find a proper treatment of single numbers.
-  if (sre.Engine.getInstance().domain == 'mathspeak' && text.match(/^\d{1}$/)) {
-    return text;
-  }
-  var dynamicCstr = sre.MathStore.createDynamicConstraint(
-      sre.Engine.getInstance().domain,
-      sre.Engine.getInstance().style);
-  var result = sre.MathMap.getInstance().store.lookupString(text, dynamicCstr);
-  return result || text;
-};
-
-
-/**
- * Applies a corrective string to the given description text.
- * @param {string} text The original description text.
- * @param {string} correction The correction string to be applied.
- * @return {string} The cleaned up string.
- * @private
- */
-sre.System.prototype.processCorrections_ = function(text, correction) {
-  if (!correction || !text) {
-    return text;
-  }
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {sre.AuditoryDescription} descr Description representing a single
- *     math expression.
- * @private
- */
-sre.System.prototype.preprocessDescription_ = function(descr) {
-  if (descr.annotation) {
-    descr.text += ':' + descr.annotation;
-  }
-  if (descr.preprocess) {
-    descr.text = this.processCorrections_(
-        this.preprocessString_(descr.text), descr.correction);
-    descr.preprocess = false;
-  }
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {Array.<sre.AuditoryDescription>} descrList Description array
- *     representing a math expression.
- * @private
- */
-sre.System.prototype.preprocessDescriptionList_ = function(descrList) {
-  for (var i = 0, descr; descr = descrList[i]; i++) {
-    this.preprocessDescription_(descr);
-  }
-};
 
 
 /**
@@ -172,6 +76,11 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.semantics = !!feature.semantics;
+  if (feature.cache !== undefined) {
+    engine.withCache = !!feature.cache;
+  }
+  engine.mode = feature.mode || engine.mode;
+  engine.speech = !!feature.speech;
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
@@ -179,6 +88,7 @@ sre.System.prototype.setupEngine = function(feature) {
 };
 
 
+//TODO: (sorge) Need an async version of this.
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
@@ -186,7 +96,7 @@ sre.System.prototype.setupEngine = function(feature) {
  */
 sre.System.prototype.processExpression = function(expr) {
   try {
-    var xml = this.parseInput(expr);
+    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
     if (sre.Engine.getInstance().semantics) {
       xml = this.getSemanticTree_(xml);
     }
@@ -196,12 +106,9 @@ sre.System.prototype.processExpression = function(expr) {
     console.log('Parse Error: ' + err.message);
     return '';
   }
+  sre.SpeechRuleEngine.getInstance().clearCache();
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  this.preprocessDescriptionList_(descrs);
-  return sre.DomUtil.removeEmpty(
-      descrs.map(
-          function(x) {return x.descriptionString();})).
-      join(' ');
+  return sre.AuditoryDescription.toSimpleString(descrs);
 };
 
 
@@ -212,8 +119,11 @@ sre.System.prototype.processExpression = function(expr) {
  * @private
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {
-  var tree = new sre.SemanticTree(mml);
-  return this.parseInput(tree.xml().toString());
+  var tree = sre.Semantic.getTree(mml);
+  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
+    return tree.childNodes[0];
+  }
+  return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
 };
 
 
@@ -252,3 +162,5 @@ sre.System.prototype.processFile = function(input, opt_output) {
     throw new sre.System.Error('Can not write to file: ' + opt_output);
   }
 };
+
+

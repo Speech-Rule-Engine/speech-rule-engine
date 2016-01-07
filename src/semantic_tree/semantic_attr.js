@@ -51,6 +51,7 @@
  */
 
 goog.provide('sre.SemanticAttr');
+goog.provide('sre.SemanticAttr.Role');
 
 goog.require('sre.SemanticUtil');
 
@@ -1220,13 +1221,6 @@ goog.addSingletonGetter(sre.SemanticAttr);
 
 
 /**
- * Union type of semantic attributes.
- * @typedef {sre.SemanticAttr.Type|sre.SemanticAttr.Role}
- */
-sre.SemanticAttr.Attr;
-
-
-/**
  * Mapping for types of elements.
  * @enum {string}
  */
@@ -1250,8 +1244,6 @@ sre.SemanticAttr.Type = {
   LARGEOP: 'largeop',
   // Some named function.
   FUNCTION: 'function',
-  // Identifier that describes a unit.
-  UNIT: 'unit',
 
   // Branches.
   // Compound Symbols.
@@ -1362,6 +1354,9 @@ sre.SemanticAttr.Role = {
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',
 
+  // Text.
+  STRING: 'string',
+
   // Punctuated elements.
   SEQUENCE: 'sequence',
   ENDPUNCT: 'endpunct',
@@ -1378,6 +1373,7 @@ sre.SemanticAttr.Role = {
   INFIXFUNC: 'infix function',
   PREFIXFUNC: 'prefix function',
   POSTFIXFUNC: 'postfix function',
+  SIMPLEFUNC: 'simple function',
 
   // Large operators.
   SUM: 'sum',
@@ -1552,6 +1548,20 @@ sre.SemanticAttr.isOpeningFence = function(fence) {
 sre.SemanticAttr.isClosingFence = function(fence) {
   return (fence == sre.SemanticAttr.Role.CLOSE ||
           fence == sre.SemanticAttr.Role.NEUTRAL);
+};
+
+
+/**
+ * Determines if a symbol type can be embellished. Primitives that can be
+ * embellished are operators, punctuations, relations, and fences.
+ * @param {sre.SemanticAttr.Type} type The type.
+ * @return {boolean} True if the type can be embellished.
+ */
+sre.SemanticAttr.isEmbellishedType = function(type) {
+  return (type === sre.SemanticAttr.Type.OPERATOR ||
+          type === sre.SemanticAttr.Type.RELATION ||
+          type === sre.SemanticAttr.Type.FENCE ||
+          type === sre.SemanticAttr.Type.PUNCTUATION);
 };
 
 

@@ -63,6 +63,13 @@ sre.SpeechRuleEngine = function() {
    * @private
    */
   this.globalParameters_ = {};
+
+  /**
+   * Caches speech strings by node id.
+   * @type {Object.<string, !Array.<sre.AuditoryDescription>>}
+   * @private
+   */
+  this.cache_ = {};
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
 
@@ -145,6 +152,55 @@ sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
 };
 
 
+/**
+ * Clears the cache.
+ */
+sre.SpeechRuleEngine.prototype.clearCache = function() {
+  this.cache_ = {};
+};
+
+
+/**
+ * Retrieves a cached value for a particular element.
+ * @param {Node} node The element to lookup.
+ * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
+  if (!node || !node.getAttribute) return null;
+  var key = node.getAttribute('id');
+  if (key === 'undefined' || key === '') return null;
+  return this.getCache_(key);
+};
+
+
+/**
+ * Retrieves a cached value by key.
+ * @param {string} key The node id.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.getCache_ = function(key) {
+  return this.cache_[key];
+};
+
+
+/**
+ * Caches speech for a particular node.
+ * @param {!Node} node The node to cache speech for.
+ * @param {!Array.<sre.AuditoryDescription>} speech A list of auditory
+ *     descriptions.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
+  if (!node.getAttribute) return;
+  var id = node.getAttribute('id');
+  if (id) {
+    this.cache_[id] = speech;
+  }
+};
+
+
 // Dispatch functionality.
 /**
  * Computes a speech object for a given node. Returns the empty list if
@@ -168,9 +224,17 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
+  if (sre.Engine.getInstance().withCache) {
+    var result = this.getCacheForNode_(node);
+    if (result) {
+      return result;
+    }
+  }
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
-    return this.activeStore_.evaluateDefault(node);
+    result = this.activeStore_.evaluateDefault(node);
+    this.pushCache_(node, result);
+    return result;
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
@@ -179,7 +243,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
                 node.toString()];},
       this));
   var components = rule.action.components;
-  var result = [];
+  result = [];
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
     var content = component['content'] || '';
@@ -228,6 +292,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
   }
+  this.pushCache_(node, result);
   return result;
 };
 
@@ -256,7 +321,9 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   var cFunc = this.activeStore_.contextFunctions.lookup(ctxtFunc);
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
   var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
-  var sepClosure = sFunc ? sFunc(nodes, sep) : function() {return sep;};
+  var sepClosure = sFunc ? sFunc(nodes, sep) :
+      function() {return new sre.AuditoryDescription({text: sep,
+        preprocess: true});};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
@@ -265,10 +332,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();
-        if (text) {
-          result.push(new sre.AuditoryDescription({text: text,
-            preprocess: true}));
-        }
+        result = result.concat(text);
       }
     }
   }

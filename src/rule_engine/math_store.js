@@ -21,7 +21,7 @@
 goog.provide('sre.MathStore');
 
 goog.require('sre.BaseRuleStore');
-goog.require('sre.DomUtil');
+goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
 
@@ -240,7 +240,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
-  var split = sre.DomUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
+  var split = sre.BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
       descs.push(this.evaluate_(s));

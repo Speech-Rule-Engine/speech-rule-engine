@@ -20,6 +20,7 @@
  */
 goog.provide('sre.Api');
 
+goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 
 
@@ -60,4 +61,4 @@ module.exports.setupEngine = sre.System.getInstance().setupEngine;
 /**
  * Default setup of the Engine.
  */
-(sre.System.getInstance()).setupEngine({});
+(sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
