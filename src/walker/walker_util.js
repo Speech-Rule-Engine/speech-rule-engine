@@ -55,9 +55,14 @@ sre.WalkerUtil.combineContentChildren = function(
       return content.concat(children);
     case sre.SemanticAttr.Type.POSTFIXOP:
       return children.concat(content);
+    case sre.SemanticAttr.Type.MATRIX:
+    case sre.SemanticAttr.Type.VECTOR:
     case sre.SemanticAttr.Type.FENCED:
       children.unshift(content[0]);
       children.push(content[1]);
+      return children;
+    case sre.SemanticAttr.Type.CASES:
+      children.unshift(content[0]);
       return children;
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (role === sre.SemanticAttr.Role.TEXT) {

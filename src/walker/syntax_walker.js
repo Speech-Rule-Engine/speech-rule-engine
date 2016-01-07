@@ -90,8 +90,11 @@ sre.SyntaxWalker.prototype.down = function() {
   if (children.length === 0) {
     return null;
   }
-  this.levels.push(children);
-  return this.focusFromId_(children[0]);
+  var focus = this.focusFromId_(children[0]);
+  if (focus) {
+    this.levels.push(children);
+  }
+  return focus;
 };
 
 
