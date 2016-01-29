@@ -150,9 +150,14 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
       return [this.focusFromId_(children[0], content.concat(children))];
     case sre.SemanticAttr.Type.POSTFIXOP:
       return [this.focusFromId_(children[0], children.concat(content))];
+    case sre.SemanticAttr.Type.MATRIX:
+    case sre.SemanticAttr.Type.VECTOR:
     case sre.SemanticAttr.Type.FENCED:
       return [this.focusFromId_(children[0],
           [content[0], children[0], content[1]])];
+    case sre.SemanticAttr.Type.CASES:
+      return [this.focusFromId_(children[0],
+          [content[0], children[0]])];
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (role === sre.SemanticAttr.Role.TEXT) {
         return children.map(goog.bind(this.singletonFocus_, this));
