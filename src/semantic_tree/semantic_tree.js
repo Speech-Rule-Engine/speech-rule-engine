@@ -1936,10 +1936,8 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
              sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
       }
       );
-  var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
-      funcop ? [applNode, funcop] : [applNode]);
-  newNode.role = func.role;
-  return newNode;
+  return this.makeFunctionalNode_(sre.SemanticAttr.Type.APPL, [func, arg],
+                                  funcop, [applNode]);
 };
 
 
@@ -1953,10 +1951,8 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
 sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
   var largeop = sre.SemanticTree.getFunctionOp_(
       bigOp, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
-  var newNode = this.makeBranchNode_(
-      sre.SemanticAttr.Type.BIGOP, [bigOp, arg], largeop ? [largeop] : []);
-  newNode.role = bigOp.role;
-  return newNode;
+  return this.makeFunctionalNode_(sre.SemanticAttr.Type.BIGOP, 
+                                  [bigOp, arg], largeop, []);
 };
 
 
@@ -1975,9 +1971,40 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
   intvar = intvar || this.makeEmptyNode_();
   var largeop = sre.SemanticTree.getFunctionOp_(
       integral, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
-  var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.INTEGRAL,
-      [integral, integrand, intvar], largeop ? [largeop] : []);
-  newNode.role = integral.role;
+  return this.makeFunctionalNode_(sre.SemanticAttr.Type.INTEGRAL, 
+                                  [integral, integrand, intvar], largeop, []);
+};
+
+
+/**
+ * Creates a functional node, i.e., integral, bigop, simple function. If the
+ * operator is given, it takes care that th eoperator is contained as a content
+ * node, and that the original parent pointer of the operator node is retained.
+ * 
+ * Example: Function application sin^2(x). The pointer from sin should remain to
+ *          the superscript node, although sin is given as a content node.
+ * @param {!sre.SemanticAttr.Type} type The type of the node.
+ * @param {!Array.<!sre.SemanticTree.Node>} children The children of the
+ *     functional node. The first child must be given is understood to be the
+ *     functional operator.
+ * @param {?sre.SemanticTree.Node} operator The innermost operator (e.g., in the
+ *     case of embellished functions or operators with limits).
+ * @param {!Array.<sre.SemanticTree.Node>} content The list of additional
+ *     content nodes.
+ * @return {!sre.SemanticTree.Node} The new functional node.
+ */
+sre.SemanticTree.prototype.makeFunctionalNode_ = function(
+    type, children, operator, content) {
+  var funcop = children[0];
+  if (operator) {
+    var oldParent = operator.parent;
+    content.push(operator);
+  }
+  var newNode = this.makeBranchNode_(type, children, content);
+  newNode.role = funcop.role;
+  if (oldParent) {
+    operator.parent = oldParent;
+  }
   return newNode;
 };
 
