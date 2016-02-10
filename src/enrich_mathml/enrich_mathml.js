@@ -252,7 +252,7 @@ sre.EnrichMathml.childrenSubset_ = function(node, newChildren) {
  * @private
  */
 sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
-  var oldChildren = node.childNodes;
+  var oldChildren = /**@type{!NodeList.<Element>}*/ (node.childNodes);
   if (!oldChildren.length) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;

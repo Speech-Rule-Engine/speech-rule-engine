@@ -115,7 +115,7 @@ sre.System.prototype.processExpression = function(expr) {
 /**
  * Creates a clean XML version of the semantic tree for a given MathML node.
  * @param {!Element} mml The MathML node.
- * @return {!Element} Semantic tree for input node as newly created XML node.
+ * @return {!Node} Semantic tree for input node as newly created XML node.
  * @private
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {

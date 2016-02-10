@@ -93,7 +93,7 @@ goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseEmbellished.test = function(semantic) {
-  return semantic.mathmlTree && semantic.fencePointer !== null;
+  return semantic.mathmlTree && semantic.fencePointer;
 };
 
 
@@ -212,7 +212,7 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
     sre.DomUtil.replaceNode(dummy, saveChild);
     mml.parentNode = saveParent;
 
-    newNode = mml.childNodes[0];
+    newNode = /** @type {!Element} */(mml.childNodes[0]);
     if (!result) {
       result = mml;
     }
