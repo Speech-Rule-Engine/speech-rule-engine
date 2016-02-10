@@ -83,8 +83,8 @@ sre.SemanticTree.Node = function(id) {
   /** @type {?sre.SemanticAttr.Type} */
   this.embellished = null;
 
-  /** @type {?number} */
-  this.fencePointer = null;
+  /** @type {string} */
+  this.fencePointer = '';
 
   /** @type {!Array.<sre.SemanticTree.Node>} */
   this.childNodes = [];
@@ -260,8 +260,8 @@ sre.SemanticTree.Node.prototype.xmlAttributes_ = function(node) {
   if (this.embellished) {
     node.setAttribute('embellished', this.embellished);
   }
-  if (this.fencePointer !== null) {
-    node.setAttribute('fencepointer', this.fencePointer.toString());
+  if (this.fencePointer) {
+    node.setAttribute('fencepointer', this.fencePointer);
   }
   node.setAttribute('id', this.id);
 };
@@ -315,7 +315,7 @@ sre.SemanticTree.Node.prototype.updateContent_ = function(content) {
  * Adds MathML nodes to the node's store of MathML nodes if necessary only, as
  * we can not necessarily assume that the MathML of the content nodes and
  * children are all disjoint.
- * @param {Array.<Node>} mmlNodes List of MathML nodes.
+ * @param {Array.<Element>} mmlNodes List of MathML nodes.
  * @private
  */
 sre.SemanticTree.Node.prototype.addMathmlNodes_ = function(mmlNodes) {
@@ -329,7 +329,7 @@ sre.SemanticTree.Node.prototype.addMathmlNodes_ = function(mmlNodes) {
 
 /**
  * Removes MathML nodes from the node's store of MathML nodes.
- * @param {Array.<Node>} mmlNodes List of MathML nodes.
+ * @param {Array.<Element>} mmlNodes List of MathML nodes.
  * @private
  */
 sre.SemanticTree.Node.prototype.removeMathmlNodes_ = function(mmlNodes) {
@@ -1299,7 +1299,11 @@ sre.SemanticTree.prototype.processFences_ = function(
                // COMPARISON (neutral fences)
                   fences[0].textContent != lastOpen.textContent))) {
     openStack.push(fences.shift());
-    contentStack.push(content.shift());
+    var cont = content.shift();
+    if (cont) {
+      contentStack.push(cont);
+    }
+    // contentStack.push(content.shift());
     return this.processFences_(fences, content, openStack, contentStack);
   }
   // General closing case.
@@ -1951,7 +1955,7 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
 sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
   var largeop = sre.SemanticTree.getFunctionOp_(
       bigOp, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
-  return this.makeFunctionalNode_(sre.SemanticAttr.Type.BIGOP, 
+  return this.makeFunctionalNode_(sre.SemanticAttr.Type.BIGOP,
                                   [bigOp, arg], largeop, []);
 };
 
@@ -1971,7 +1975,7 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
   intvar = intvar || this.makeEmptyNode_();
   var largeop = sre.SemanticTree.getFunctionOp_(
       integral, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
-  return this.makeFunctionalNode_(sre.SemanticAttr.Type.INTEGRAL, 
+  return this.makeFunctionalNode_(sre.SemanticAttr.Type.INTEGRAL,
                                   [integral, integrand, intvar], largeop, []);
 };
 
@@ -1980,7 +1984,7 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
  * Creates a functional node, i.e., integral, bigop, simple function. If the
  * operator is given, it takes care that th eoperator is contained as a content
  * node, and that the original parent pointer of the operator node is retained.
- * 
+ *
  * Example: Function application sin^2(x). The pointer from sin should remain to
  *          the superscript node, although sin is given as a content node.
  * @param {!sre.SemanticAttr.Type} type The type of the node.
@@ -1992,6 +1996,7 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
  * @param {!Array.<sre.SemanticTree.Node>} content The list of additional
  *     content nodes.
  * @return {!sre.SemanticTree.Node} The new functional node.
+ * @private
  */
 sre.SemanticTree.prototype.makeFunctionalNode_ = function(
     type, children, operator, content) {
@@ -2950,7 +2955,7 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
  * @private
  */
 sre.SemanticTree.propagateFencePointer_ = function(oldNode, newNode) {
-  oldNode.fencePointer = newNode.fencePointer || newNode.id;
+  oldNode.fencePointer = newNode.fencePointer || newNode.id.toString();
   oldNode.embellished = null;
 };
 
