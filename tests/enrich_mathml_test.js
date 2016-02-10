@@ -6661,7 +6661,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBigOps = function() {
       '<mrow type="bigop" role="sum" id="10" children="6,9" content="0">' +
       '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
       ' parent="10">' +
-      '<mi type="largeop" role="sum" id="0" parent="10"' +
+      '<mi type="largeop" role="sum" id="0" parent="6"' +
       ' operator="bigop">∑</mi>' +
       '<mrow type="relseq" role="equality" id="4" children="1,3"' +
       ' content="2" parent="6">' +
@@ -6690,7 +6690,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBigOps = function() {
       '<mrow type="bigop" role="sum" id="18" children="6,17" content="0">' +
       '<munderover type="limboth" role="sum" id="6" children="0,4,5"' +
       ' parent="18">' +
-      '<mi type="largeop" role="sum" id="0" parent="18"' +
+      '<mi type="largeop" role="sum" id="0" parent="6"' +
       ' operator="bigop">∑</mi>' +
       '<mrow type="relseq" role="equality" id="4" children="1,3"' +
       ' content="2" parent="6">' +
@@ -6705,7 +6705,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBigOps = function() {
       ' parent="18">' +
       '<munderover type="limboth" role="sum" id="13" children="7,11,12"' +
       ' parent="17">' +
-      '<mi type="largeop" role="sum" id="7" parent="17"' +
+      '<mi type="largeop" role="sum" id="7" parent="13"' +
       ' operator="bigop">∑</mi>' +
       '<mrow type="relseq" role="equality" id="11" children="8,10"' +
       ' content="9" parent="13">' +
@@ -6732,7 +6732,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBigOps = function() {
       '<math>' +
       '<mrow type="bigop" role="sum" id="9" children="5,8" content="0">' +
       '<munder type="limlower" role="sum" id="5" children="0,4" parent="9">' +
-      '<mi type="largeop" role="sum" id="0" parent="9"' +
+      '<mi type="largeop" role="sum" id="0" parent="5"' +
       ' operator="bigop">∑</mi>' +
       '<mrow type="relseq" role="equality" id="4" children="1,3"' +
       ' content="2" parent="5">' +
@@ -7014,7 +7014,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       ' content="0">' +
       '<munderover type="limboth" role="integral" id="3" children="0,1,2"' +
       ' parent="9">' +
-      '<mi type="largeop" role="integral" id="0" parent="9"' +
+      '<mi type="largeop" role="integral" id="0" parent="3"' +
       ' operator="integral">∫</mi>' +
       '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
       '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
@@ -7036,7 +7036,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       ' content="0">' +
       '<munder type="limlower" role="integral" id="2" children="0,1"' +
       ' parent="5">' +
-      '<mi type="largeop" role="integral" id="0" parent="5"' +
+      '<mi type="largeop" role="integral" id="0" parent="2"' +
       ' operator="integral">∫</mi>' +
       '<mi type="identifier" role="latinletter" id="1" parent="2">X</mi>' +
       '</munder>' +
@@ -7059,7 +7059,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       ' content="0" parent="23">' +
       '<munderover type="limboth" role="integral" id="3" children="0,1,2"' +
       ' parent="22">' +
-      '<mi type="largeop" role="integral" id="0" parent="22"' +
+      '<mi type="largeop" role="integral" id="0" parent="3"' +
       ' operator="integral">∫</mi>' +
       '<mn type="number" role="integer" id="1" parent="3">0</mn>' +
       '<mn type="number" role="integer" id="2" parent="3">10</mn>' +
@@ -7073,7 +7073,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       ' content="7" parent="23">' +
       '<munderover type="limboth" role="integral" id="10" children="7,8,9"' +
       ' parent="21">' +
-      '<mi type="largeop" role="integral" id="7" parent="21"' +
+      '<mi type="largeop" role="integral" id="7" parent="10"' +
       ' operator="integral">∫</mi>' +
       '<mn type="number" role="integer" id="8" parent="10">10</mn>' +
       '<mn type="number" role="integer" id="9" parent="10">20</mn>' +
@@ -7088,7 +7088,7 @@ sre.EnrichMathmlTest.prototype.testMathmlIntegrals = function() {
       ' content="14" parent="24">' +
       '<munderover type="limboth" role="integral" id="17"' +
       ' children="14,15,16" parent="20">' +
-      '<mi type="largeop" role="integral" id="14" parent="20"' +
+      '<mi type="largeop" role="integral" id="14" parent="17"' +
       ' operator="integral">∫</mi>' +
       '<mn type="number" role="integer" id="15" parent="17">0</mn>' +
       '<mn type="number" role="integer" id="16" parent="17">20</mn>' +
