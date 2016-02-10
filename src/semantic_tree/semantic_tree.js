@@ -1936,12 +1936,8 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
              sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
       }
       );
-  var oldParent = funcop.parent;
-  var newNode = this.makeBranchNode_(sre.SemanticAttr.Type.APPL, [func, arg],
-      funcop ? [applNode, funcop] : [applNode]);
-  //  funcop.parent = oldParent;
-  newNode.role = func.role;
-  return newNode;
+  return this.makeFunctionalNode_(sre.SemanticAttr.Type.APPL, [func, arg],
+                                  funcop, [applNode]);
 };
 
 
@@ -1981,7 +1977,12 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
 
 
 /**
- * Creates a functional node, i.e., integral, bigop, simple function.
+ * Creates a functional node, i.e., integral, bigop, simple function. If the
+ * operator is given, it takes care that th eoperator is contained as a content
+ * node, and that the original parent pointer of the operator node is retained.
+ * 
+ * Example: Function application sin^2(x). The pointer from sin should remain to
+ *          the superscript node, although sin is given as a content node.
  * @param {!sre.SemanticAttr.Type} type The type of the node.
  * @param {!Array.<!sre.SemanticTree.Node>} children The children of the
  *     functional node. The first child must be given is understood to be the
@@ -1997,7 +1998,7 @@ sre.SemanticTree.prototype.makeFunctionalNode_ = function(
   var funcop = children[0];
   if (operator) {
     var oldParent = operator.parent;
-    content.unshift(operator);
+    content.push(operator);
   }
   var newNode = this.makeBranchNode_(type, children, content);
   newNode.role = funcop.role;

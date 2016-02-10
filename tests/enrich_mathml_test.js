@@ -3675,7 +3675,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       ' content="11,0">' +
       '<msub type="subscript" role="simple function" id="2" children="0,1"' +
       ' parent="12">' +
-      '<mi type="identifier" role="simple function" id="0" parent="12"' +
+      '<mi type="identifier" role="simple function" id="0" parent="2"' +
       ' operator="appl">f</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
       '</msub>' +
@@ -3710,7 +3710,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsExplicitApp = function() {
       ' children="2,3" parent="27">' +
       '<msub type="subscript" role="simple function" id="2" children="0,1"' +
       ' parent="4">' +
-      '<mi type="identifier" role="simple function" id="0" parent="27"' +
+      '<mi type="identifier" role="simple function" id="0" parent="2"' +
       ' operator="appl">f</mi>' +
       '<mi type="identifier" role="latinletter" id="1" parent="2">n</mi>' +
       '</msub>' +
@@ -4490,7 +4490,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
       ' content="7,0">' +
       '<msup type="superscript" role="prefix function" id="2"' +
       ' children="0,1" parent="8">' +
-      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      '<mi type="function" role="prefix function" id="0" parent="2"' +
       ' operator="appl">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</msup>' +
@@ -4516,7 +4516,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
       ' content="7,0">' +
       '<msub type="subscript" role="prefix function" id="2" children="0,1"' +
       ' parent="8">' +
-      '<mi type="function" role="prefix function" id="0" parent="8"' +
+      '<mi type="function" role="prefix function" id="0" parent="2"' +
       ' operator="appl">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
       '</msub>' +
@@ -4574,7 +4574,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
       ' content="19,0" parent="21">' +
       '<msup type="superscript" role="prefix function" id="2"' +
       ' children="0,1" parent="20">' +
-      '<mi type="function" role="prefix function" id="0" parent="20"' +
+      '<mi type="function" role="prefix function" id="0" parent="2"' +
       ' operator="appl">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</msup>' +
@@ -4595,7 +4595,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScripts = function() {
       ' content="17,7" parent="21">' +
       '<msup type="superscript" role="prefix function" id="9"' +
       ' children="7,8" parent="18">' +
-      '<mi type="function" role="prefix function" id="7" parent="18"' +
+      '<mi type="function" role="prefix function" id="7" parent="9"' +
       ' operator="appl">cos</mi>' +
       '<mn type="number" role="integer" id="8" parent="9">2</mn>' +
       '</msup>' +
@@ -5121,7 +5121,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
       ' content="4,0">' +
       '<msup type="superscript" role="prefix function" id="2"' +
       ' children="0,1" parent="5">' +
-      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      '<mi type="function" role="prefix function" id="0" parent="2"' +
       ' operator="appl">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</msup>' +
@@ -5139,7 +5139,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
       ' content="4,0">' +
       '<msub type="subscript" role="prefix function" id="2" children="0,1"' +
       ' parent="5">' +
-      '<mi type="function" role="prefix function" id="0" parent="5"' +
+      '<mi type="function" role="prefix function" id="0" parent="2"' +
       ' operator="appl">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">1</mn>' +
       '</msub>' +
@@ -5182,7 +5182,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
       ' content="13,0" parent="15">' +
       '<msup type="superscript" role="prefix function" id="2"' +
       ' children="0,1" parent="14">' +
-      '<mi type="function" role="prefix function" id="0" parent="14"' +
+      '<mi type="function" role="prefix function" id="0" parent="2"' +
       ' operator="appl">sin</mi>' +
       '<mn type="number" role="integer" id="1" parent="2">2</mn>' +
       '</msup>' +
@@ -5196,7 +5196,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsScriptUnfenced =
       ' content="11,5" parent="15">' +
       '<msup type="superscript" role="prefix function" id="7"' +
       ' children="5,6" parent="12">' +
-      '<mi type="function" role="prefix function" id="5" parent="12"' +
+      '<mi type="function" role="prefix function" id="5" parent="7"' +
       ' operator="appl">cos</mi>' +
       '<mn type="number" role="integer" id="6" parent="7">2</mn>' +
       '</msup>' +
@@ -6313,7 +6313,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="10,0">' +
       '<munder type="limlower" role="limit function" id="5" children="0,4"' +
       ' parent="11">' +
-      '<mi type="function" role="limit function" id="0" parent="11"' +
+      '<mi type="function" role="limit function" id="0" parent="5"' +
       ' operator="appl">lim</mi>' +
       '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
       ' parent="5">' +
@@ -6351,7 +6351,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="14,2" parent="16">' +
       '<munder type="limlower" role="limit function" id="7" children="2,6"' +
       ' parent="15">' +
-      '<mi type="function" role="limit function" id="2" parent="15"' +
+      '<mi type="function" role="limit function" id="2" parent="7"' +
       ' operator="appl">lim</mi>' +
       '<mrow type="relseq" role="arrow" id="6" children="3,5" content="4"' +
       ' parent="7">' +
@@ -6390,7 +6390,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' parent="13">' +
       '<munder type="limlower" role="limit function" id="5" children="0,4"' +
       ' parent="7">' +
-      '<mi type="function" role="limit function" id="0" parent="13"' +
+      '<mi type="function" role="limit function" id="0" parent="5"' +
       ' operator="appl">lim</mi>' +
       '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
       ' parent="5">' +
@@ -6425,7 +6425,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="11,0">' +
       '<munderover type="limboth" role="limit function" id="6"' +
       ' children="0,1,5" parent="12">' +
-      '<mi type="function" role="limit function" id="0" parent="12"' +
+      '<mi type="function" role="limit function" id="0" parent="6"' +
       ' operator="appl">lim</mi>' +
       '<mo type="punctuation" role="dash" id="1" parent="6">―</mo>' +
       '<mrow type="relseq" role="arrow" id="5" children="2,4" content="3"' +
@@ -6462,7 +6462,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="23,0" parent="25">' +
       '<munder type="limlower" role="limit function" id="5" children="0,4"' +
       ' parent="24">' +
-      '<mi type="function" role="limit function" id="0" parent="24"' +
+      '<mi type="function" role="limit function" id="0" parent="5"' +
       ' operator="appl">liminf</mi>' +
       '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
       ' parent="5">' +
@@ -6489,7 +6489,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="21,10" parent="25">' +
       '<munder type="limlower" role="limit function" id="15"' +
       ' children="10,14" parent="22">' +
-      '<mi type="function" role="limit function" id="10" parent="22"' +
+      '<mi type="function" role="limit function" id="10" parent="15"' +
       ' operator="appl">limsup</mi>' +
       '<mrow type="relseq" role="arrow" id="14" children="11,13"' +
       ' content="12" parent="15">' +
@@ -6528,7 +6528,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="11,2" parent="13">' +
       '<munder type="limlower" role="limit function" id="7" children="2,6"' +
       ' parent="12">' +
-      '<mi type="function" role="limit function" id="2" parent="12"' +
+      '<mi type="function" role="limit function" id="2" parent="7"' +
       ' operator="appl">lim</mi>' +
       '<mrow type="relseq" role="arrow" id="6" children="3,5" content="4"' +
       ' parent="7">' +
@@ -6559,7 +6559,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="18,0">' +
       '<munder type="limlower" role="limit function" id="5" children="0,4"' +
       ' parent="19">' +
-      '<mi type="function" role="limit function" id="0" parent="19"' +
+      '<mi type="function" role="limit function" id="0" parent="5"' +
       ' operator="appl">lim</mi>' +
       '<mrow type="relseq" role="arrow" id="4" children="1,3" content="2"' +
       ' parent="5">' +
@@ -6575,7 +6575,7 @@ sre.EnrichMathmlTest.prototype.testMathmlLimitFunctions = function() {
       ' content="16,6" parent="19">' +
       '<munder type="limlower" role="limit function" id="11"' +
       ' children="6,10" parent="17">' +
-      '<mi type="function" role="limit function" id="6" parent="17"' +
+      '<mi type="function" role="limit function" id="6" parent="11"' +
       ' operator="appl">lim</mi>' +
       '<mrow type="relseq" role="arrow" id="10" children="7,9" content="8"' +
       ' parent="11">' +
