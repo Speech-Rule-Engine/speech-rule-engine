@@ -164,3 +164,49 @@ sre.System.prototype.processFile = function(input, opt_output) {
 };
 
 
+// New Api functions.
+// TODO (sorge): Refactor common functionality.
+//
+/**
+ * Function to translate MathML into Semantic Tree.
+ * @param {string} expr Processes a given MathML expression for translation.
+ * @return {Node} The semantic tree as XML.
+ */
+sre.System.prototype.semanticTreeXML = function(expr) {
+  try {
+    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
+    var stree = this.getSemanticTree_(xml);
+    sre.Debugger.getInstance().generateOutput(
+        goog.bind(function() {return stree.toString();}, this));
+  } catch (err) {
+    console.log('Parse Error: ' + err.message);
+    return null;
+  }
+  sre.SpeechRuleEngine.getInstance().clearCache();
+  return stree;
+};
+
+// sre.System.prototype.semanticTreeJson = function(expr) { }
+
+
+/**
+ * Main function to translate expressions into auditory descriptions.
+ * @param {string} expr Processes a given XML expression for translation.
+ * @return {Array.<sre.AuditoryDescription>} The auditory descriptions.
+ */
+sre.System.prototype.describeExpression = function(expr) {
+  try {
+    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
+    if (sre.Engine.getInstance().semantics) {
+      xml = this.getSemanticTree_(xml);
+    }
+    sre.Debugger.getInstance().generateOutput(
+        goog.bind(function() {return xml.toString();}, this));
+  } catch (err) {
+    console.log('Parse Error: ' + err.message);
+    return '';
+  }
+  sre.SpeechRuleEngine.getInstance().clearCache();
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+  return descrs;
+};
