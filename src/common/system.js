@@ -1,4 +1,3 @@
-
 // Copyright 2014 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,23 +91,59 @@ sre.System.prototype.setupEngine = function(feature) {
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
- * @return {string} The auditory description.
+ * @return {string} The aural rendering of the expression. 
  */
 sre.System.prototype.processExpression = function(expr) {
+  var xml = this.parseExpression_(expr, sre.Engine.getInstance().semantics);
+  if (!xml) {
+    return '';
+  }
+  return this.processXML(xml);
+};
+
+
+/**
+ * Computes auditory descriptions for a given XML node.
+ * @param {!Node} xml The XML node to describe.
+ * @return {string} The aural rendering of the expression. 
+ */
+sre.System.prototype.processXML = function(xml) {
+  var descrs = this.describeXML_(xml);
+  return sre.AuditoryDescription.toSimpleString(descrs);
+};
+
+
+/**
+ * Computes auditory descriptions for a given XML node.
+ * @param {!Node} xml The XML node to describe.
+ * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
+ * @private
+ */
+sre.System.prototype.describeXML_ = function(xml) {
+  sre.SpeechRuleEngine.getInstance().clearCache();
+  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+};
+
+
+/**
+ * Parses a string into a MathML expressions or a semantic tree.
+ * @param {string} expr The string containing a MathML representation.
+ * @return {Node} The XML node.
+ * @private
+ */
+sre.System.prototype.parseExpression_ = function(expr, semantic) {
+  var xml = null;
   try {
-    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
-    if (sre.Engine.getInstance().semantics) {
+    xml = sre.DomUtil.parseInput(expr, sre.System.Error);
+    if (semantic) {
       xml = this.getSemanticTree_(xml);
     }
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));
   } catch (err) {
     console.log('Parse Error: ' + err.message);
-    return '';
   }
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  return sre.AuditoryDescription.toSimpleString(descrs);
+  return xml;
 };
 
 
@@ -173,17 +208,7 @@ sre.System.prototype.processFile = function(input, opt_output) {
  * @return {Node} The semantic tree as XML.
  */
 sre.System.prototype.semanticTreeXML = function(expr) {
-  try {
-    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
-    var stree = this.getSemanticTree_(xml);
-    sre.Debugger.getInstance().generateOutput(
-        goog.bind(function() {return stree.toString();}, this));
-  } catch (err) {
-    console.log('Parse Error: ' + err.message);
-    return null;
-  }
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  return stree;
+  return this.parseExpression_(expr, true);
 };
 
 // sre.System.prototype.semanticTreeJson = function(expr) { }
@@ -192,21 +217,12 @@ sre.System.prototype.semanticTreeXML = function(expr) {
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
- * @return {Array.<sre.AuditoryDescription>} The auditory descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  */
 sre.System.prototype.describeExpression = function(expr) {
-  try {
-    var xml = sre.DomUtil.parseInput(expr, sre.System.Error);
-    if (sre.Engine.getInstance().semantics) {
-      xml = this.getSemanticTree_(xml);
-    }
-    sre.Debugger.getInstance().generateOutput(
-        goog.bind(function() {return xml.toString();}, this));
-  } catch (err) {
-    console.log('Parse Error: ' + err.message);
-    return '';
+  var xml = this.parseExpression_(expr, sre.Engine.getInstance().semantics);
+  if (!xml) {
+    return [];
   }
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  return descrs;
+  return this.describeXML_(xml);
 };
