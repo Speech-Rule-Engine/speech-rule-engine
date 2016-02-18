@@ -115,7 +115,7 @@ sre.AuditoryDescription.prototype.equals = function(that) {
  */
 sre.AuditoryDescription.toSimpleString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
-  sre.AuditoryDescription.preprocessDescriptionList_(descrs);
+  sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return sre.BaseUtil.removeEmpty(
       descrs.map(
       function(x) {return x.descriptionString();})).
@@ -182,9 +182,8 @@ sre.AuditoryDescription.preprocessDescription_ = function(descr) {
  * Preprocess the text of an auditory description if necessary.
  * @param {Array.<sre.AuditoryDescription>} descrList Description array
  *     representing a math expression.
- * @private
  */
-sre.AuditoryDescription.preprocessDescriptionList_ = function(descrList) {
+sre.AuditoryDescription.preprocessDescriptionList = function(descrList) {
   for (var i = 0, descr; descr = descrList[i]; i++) {
     sre.AuditoryDescription.preprocessDescription_(descr);
   }

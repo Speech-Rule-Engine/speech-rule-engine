@@ -94,11 +94,12 @@ sre.System.prototype.setupEngine = function(feature) {
  * @return {string} The aural rendering of the expression. 
  */
 sre.System.prototype.processExpression = function(expr) {
-  var xml = this.parseExpression_(expr, sre.Engine.getInstance().semantics);
+  var xml = sre.System.getInstance().parseExpression_(
+      expr, sre.Engine.getInstance().semantics);
   if (!xml) {
     return '';
   }
-  return this.processXML(xml);
+  return sre.System.getInstance().processXML(xml);
 };
 
 
@@ -108,7 +109,7 @@ sre.System.prototype.processExpression = function(expr) {
  * @return {string} The aural rendering of the expression. 
  */
 sre.System.prototype.processXML = function(xml) {
-  var descrs = this.describeXML_(xml);
+  var descrs = sre.System.getInstance().describeXML_(xml);
   return sre.AuditoryDescription.toSimpleString(descrs);
 };
 
@@ -136,7 +137,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
   try {
     xml = sre.DomUtil.parseInput(expr, sre.System.Error);
     if (semantic) {
-      xml = this.getSemanticTree_(xml);
+      xml = sre.System.getInstance().getSemanticTree_(xml);
     }
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));
@@ -175,7 +176,7 @@ sre.System.prototype.processFile_ = function(input) {
   } catch (err) {
     throw new sre.System.Error('Can not open file: ' + input);
   }
-  return this.processExpression(expr);
+  return sre.System.getInstance().processExpression(expr);
 };
 
 
@@ -186,7 +187,7 @@ sre.System.prototype.processFile_ = function(input) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.processFile = function(input, opt_output) {
-  var descr = this.processFile_(input);
+  var descr = sre.System.getInstance().processFile_(input);
   if (!opt_output) {
     console.log(descr);
     return;
@@ -203,12 +204,12 @@ sre.System.prototype.processFile = function(input, opt_output) {
 // TODO (sorge): Refactor common functionality.
 //
 /**
- * Function to translate MathML into Semantic Tree.
+ * Function to translate MathML string into Semantic Tree.
  * @param {string} expr Processes a given MathML expression for translation.
  * @return {Node} The semantic tree as XML.
  */
 sre.System.prototype.semanticTreeXML = function(expr) {
-  return this.parseExpression_(expr, true);
+  return sre.System.getInstance().parseExpression_(expr, true);
 };
 
 // sre.System.prototype.semanticTreeJson = function(expr) { }
@@ -220,9 +221,12 @@ sre.System.prototype.semanticTreeXML = function(expr) {
  * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  */
 sre.System.prototype.describeExpression = function(expr) {
-  var xml = this.parseExpression_(expr, sre.Engine.getInstance().semantics);
+  var xml = sre.System.getInstance().parseExpression_(
+      expr, sre.Engine.getInstance().semantics);
   if (!xml) {
     return [];
   }
-  return this.describeXML_(xml);
+  var descrs = sre.System.getInstance().describeXML_(xml);
+  sre.AuditoryDescription.preprocessDescriptionList(descrs);
+  return descrs;
 };

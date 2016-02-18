@@ -29,17 +29,45 @@ goog.require('sre.System');
  */
 sre.Api = { };
 
+/**
+ * Main function to translate expressions into auditory descriptions.
+ * @param {string} expr Processes a given XML expression for translation.
+ * @return {string} The auditory description.
+ */
+sre.Api.processExpression = function(expr) {
+  return sre.System.getInstance().processExpression(expr);
+};
+
 
 /**
  * Exporting method to process an expression.
  */
-module.exports.processExpression = sre.System.getInstance().processExpression;
+module.exports.processExpression = sre.Api.processExpression;
+  //sre.System.getInstance().processExpression;
+
+
+/**
+ * Exporting method to process an XML node.
+ */
+module.exports.processXML = sre.System.getInstance().processXML;
 
 
 /**
  * Exporting method to process expression in files.
  */
 module.exports.processFile = sre.System.getInstance().processFile;
+
+
+/**
+ * Exporting method to compute semantic tree from expression.
+ */
+module.exports.semanticTreeXML = sre.System.getInstance().semanticTreeXML;
+
+
+/**
+ * Exporting method to compute auditory descriptions for a MathML string.
+ */
+module.exports.describeExpression = sre.System.getInstance().describeExpression;
 
 
 /**
