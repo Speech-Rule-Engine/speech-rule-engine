@@ -96,7 +96,7 @@ sre.Cli.prototype.commandLine = function() {
       sre.Debugger.getInstance().init(commander.log);
     }
     if (commander.input) {
-      sre.System.getInstance().processFile(commander.input, commander.output);
+      sre.System.getInstance().fileToSpeech(commander.input, commander.output);
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);

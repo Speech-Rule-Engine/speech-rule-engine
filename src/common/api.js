@@ -34,40 +34,62 @@ sre.Api = { };
  * @param {string} expr Processes a given XML expression for translation.
  * @return {string} The auditory description.
  */
-sre.Api.processExpression = function(expr) {
-  return sre.System.getInstance().processExpression(expr);
+sre.Api.toSpeech = function(expr) {
+  return sre.System.getInstance().toSpeech(expr);
 };
 
 
 /**
- * Exporting method to process an expression.
+ * Exporting method to return an aural rendered speech string.
+ * @deprecated Use toSpeech().
  */
-module.exports.processExpression = sre.Api.processExpression;
-  //sre.System.getInstance().processExpression;
+module.exports.processExpression = sre.Api.toSpeech;
 
 
 /**
- * Exporting method to process an XML node.
+ * Exporting method to return an aural rendered speech string.
  */
-module.exports.processXML = sre.System.getInstance().processXML;
+module.exports.toSpeech = sre.Api.toSpeech;
+
+
+/**
+ * Exporting method to return an XML string of the semantic tree.
+ */
+module.exports.toSemantic = sre.System.getInstance().toSemantic;
+
+
+/**
+ * Exporting method to return an Json representation of the semantic tree.
+ */
+// module.exports.toJson = sre.System.getInstance().toJson;
+
+
+/**
+ * Exporting method to return auditory descriptions of the input.
+ */
+module.exports.toDescription = sre.System.getInstance().toDescription;
+
+
+/**
+ * Exporting method to return semantically enriched MathML.
+ */
+module.exports.toEnriched = sre.System.getInstance().toEnriched;
+
+
+module.exports.file = {};
 
 
 /**
  * Exporting method to process expression in files.
  */
-module.exports.processFile = sre.System.getInstance().processFile;
+module.exports.file.toSpeech = sre.System.getInstance().fileToSpeech;
 
 
 /**
- * Exporting method to compute semantic tree from expression.
+ * Exporting method to process expression in files.
+ * @deprecated Use file.toSpeech()
  */
-module.exports.semanticTreeXML = sre.System.getInstance().semanticTreeXML;
-
-
-/**
- * Exporting method to compute auditory descriptions for a MathML string.
- */
-module.exports.describeExpression = sre.System.getInstance().describeExpression;
+module.exports.processFile = sre.System.getInstance().fileToSpeech;
 
 
 /**

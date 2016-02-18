@@ -45,6 +45,7 @@ sre.System = function() {
    * @type {string}
    */
   this.version = '0.8';
+
 };
 goog.addSingletonGetter(sre.System);
 
@@ -93,34 +94,131 @@ sre.System.prototype.setupEngine = function(feature) {
  * @param {string} expr Processes a given XML expression for translation.
  * @return {string} The aural rendering of the expression. 
  */
-sre.System.prototype.processExpression = function(expr) {
+sre.System.prototype.toSpeech = function(expr) {
   var xml = sre.System.getInstance().parseExpression_(
       expr, sre.Engine.getInstance().semantics);
   if (!xml) {
     return '';
   }
-  return sre.System.getInstance().processXML(xml);
+  return sre.System.getInstance().processXml_(xml);
 };
 
 
 /**
- * Computes auditory descriptions for a given XML node.
- * @param {!Node} xml The XML node to describe.
- * @return {string} The aural rendering of the expression. 
+ * @deprecated Use toSpeech().
  */
-sre.System.prototype.processXML = function(xml) {
-  var descrs = sre.System.getInstance().describeXML_(xml);
+sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
+
+
+/**
+ * Function to translate MathML string into Semantic Tree.
+ * @param {string} expr Processes a given MathML expression for translation.
+ * @return {string} The semantic tree as Xml.
+ */
+sre.System.prototype.toSemantic = function(expr) {
+  var stree = sre.System.getInstance().parseExpression_(expr, true);
+  return stree ? stree.toString() : '';
+};
+
+
+// sre.System.prototype.semanticTreeJson = function(expr) { }
+
+
+/**
+ * Main function to translate expressions into auditory descriptions.
+ * @param {string} expr Processes a given Xml expression for translation.
+ * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
+ */
+sre.System.prototype.toDescription = function(expr) {
+  var xml = sre.System.getInstance().parseExpression_(
+      expr, sre.Engine.getInstance().semantics);
+  if (!xml) {
+    return [];
+  }
+  var descrs = sre.System.getInstance().describeXml_(xml);
+  sre.AuditoryDescription.preprocessDescriptionList(descrs);
+  return descrs;
+};
+
+
+/**
+ * Function to translate MathML string into Semantic Tree.
+ * @param {string} expr Processes a given MathML expression for translation.
+ * @return {string} The semantic tree as Xml.
+ */
+sre.System.prototype.toEnriched = function(expr) {
+  var mml = sre.Enrich.semanticMathmlSync(expr);
+  return mml ? mml.toString() : '';
+};
+
+
+/**
+ * Reads an xml expression from a file and returns the auditory description to a
+ * file.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ */
+sre.System.prototype.fileToSpeech = function(input, opt_output) {
+  var descr = sre.System.getInstance().processFile_(input);
+  if (!opt_output) {
+    console.log(descr);
+    return;
+  }
+  try {
+    sre.SystemExternal.fs.writeFileSync(opt_output, descr);
+  } catch (err) {
+    throw new sre.System.Error('Can not write to file: ' + opt_output);
+  }
+};
+
+
+/**
+ * @deprecated Use fileToSpeech().
+ */
+sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
+
+// New Api functions.
+// TODO (sorge): Refactor common functionality.
+//
+
+
+//
+// Naming convention:
+// Input is either an XML expression as a string or from a file.
+//
+// Output:
+//  toSpeech: Aural rendering string.
+//  toSemantic: XML string of semantic tree.
+//  toJson: Json version of the semantic tree.
+//  toEnriched: XML string of enriched MathML.
+//  toDescription: List of preprocessed auditory descriptions.
+//
+// Deprecated:
+//  processExpression: same as toSpeech.
+//  processFile: same as file.toSpeech.
+//
+
+
+/**
+ * Computes auditory descriptions for a given Xml node. This is a private method
+ * as it might depend on a particular implementation of Xml Node API.
+ * @param {!Node} xml The Xml node to describe.
+ * @return {string} The aural rendering of the expression.
+ * @private 
+ */
+sre.System.prototype.processXml_ = function(xml) {
+  var descrs = sre.System.getInstance().describeXml_(xml);
   return sre.AuditoryDescription.toSimpleString(descrs);
 };
 
 
 /**
- * Computes auditory descriptions for a given XML node.
- * @param {!Node} xml The XML node to describe.
+ * Computes auditory descriptions for a given Xml node.
+ * @param {!Node} xml The Xml node to describe.
  * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  * @private
  */
-sre.System.prototype.describeXML_ = function(xml) {
+sre.System.prototype.describeXml_ = function(xml) {
   sre.SpeechRuleEngine.getInstance().clearCache();
   return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
@@ -129,7 +227,7 @@ sre.System.prototype.describeXML_ = function(xml) {
 /**
  * Parses a string into a MathML expressions or a semantic tree.
  * @param {string} expr The string containing a MathML representation.
- * @return {Node} The XML node.
+ * @return {Node} The Xml node.
  * @private
  */
 sre.System.prototype.parseExpression_ = function(expr, semantic) {
@@ -149,9 +247,9 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
 
 
 /**
- * Creates a clean XML version of the semantic tree for a given MathML node.
+ * Creates a clean Xml version of the semantic tree for a given MathML node.
  * @param {!Element} mml The MathML node.
- * @return {!Node} Semantic tree for input node as newly created XML node.
+ * @return {!Node} Semantic tree for input node as newly created Xml node.
  * @private
  */
 sre.System.prototype.getSemanticTree_ = function(mml) {
@@ -176,57 +274,7 @@ sre.System.prototype.processFile_ = function(input) {
   } catch (err) {
     throw new sre.System.Error('Can not open file: ' + input);
   }
-  return sre.System.getInstance().processExpression(expr);
+  return sre.System.getInstance().toSpeech(expr);
 };
 
 
-/**
- * Reads an xml expression from a file and returns the auditory description to a
- * file.
- * @param {string} input The input filename.
- * @param {string=} opt_output The output filename if one is given.
- */
-sre.System.prototype.processFile = function(input, opt_output) {
-  var descr = sre.System.getInstance().processFile_(input);
-  if (!opt_output) {
-    console.log(descr);
-    return;
-  }
-  try {
-    sre.SystemExternal.fs.writeFileSync(opt_output, descr);
-  } catch (err) {
-    throw new sre.System.Error('Can not write to file: ' + opt_output);
-  }
-};
-
-
-// New Api functions.
-// TODO (sorge): Refactor common functionality.
-//
-/**
- * Function to translate MathML string into Semantic Tree.
- * @param {string} expr Processes a given MathML expression for translation.
- * @return {Node} The semantic tree as XML.
- */
-sre.System.prototype.semanticTreeXML = function(expr) {
-  return sre.System.getInstance().parseExpression_(expr, true);
-};
-
-// sre.System.prototype.semanticTreeJson = function(expr) { }
-
-
-/**
- * Main function to translate expressions into auditory descriptions.
- * @param {string} expr Processes a given XML expression for translation.
- * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
- */
-sre.System.prototype.describeExpression = function(expr) {
-  var xml = sre.System.getInstance().parseExpression_(
-      expr, sre.Engine.getInstance().semantics);
-  if (!xml) {
-    return [];
-  }
-  var descrs = sre.System.getInstance().describeXML_(xml);
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
-  return descrs;
-};
