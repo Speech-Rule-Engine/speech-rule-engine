@@ -44,7 +44,7 @@ Current API functions are divided into three categories.
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
-#### Methods that take an in filename and optionally an output filename. 
+#### Methods that take an input filename and optionally an output filename: 
 
 If the output filename is not provided, output will be written to stdout.
 
