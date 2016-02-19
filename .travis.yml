@@ -7,7 +7,7 @@ branches:
   except:
     - fix_brackeing
 install:
-  - npm install closure closure-library closurecompiler commander xmldom xpath
+  - npm install closure closure-library closurecompiler commander xmldom xpath xml-mapping
   - export TRAVIS=true
   - sed -i s/\'-d32\'//g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/bin/build/jscompiler.py
   - sed -i s/'goog.global.CLOSURE_IMPORT_SCRIPT\;'/'goog.global.CLOSURE_IMPORT_SCRIPT = null\;'/g /home/travis/build/zorkow/speech-rule-engine/node_modules/closure-library/closure/goog/base.js
