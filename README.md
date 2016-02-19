@@ -52,7 +52,7 @@ If the output filename is not provided, output will be written to stdout.
 | ---- | ---- |
 | `file.toSpeech(input, output)` | Speech string for the MathML. |
 
-##### A for setting up and controlling the behaviour of the Speech Rule Engine:
+#### A method for setting up and controlling the behaviour of the Speech Rule Engine:
 
 It takes an object of option/value pairs to parameterise the Speech Rule Engine.
 
