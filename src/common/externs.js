@@ -21,7 +21,8 @@ fs.writeFileSync = function(name, data) { };
 fs.appendFileSync = function(name, data) { };
 fs.openSync = function(name, parameters) { };
 fs.createWriteStream = function(name) { };
-
+var xm;
+xm.tojson = function(xml) { };
 
 /**
  * @typedef {stream}

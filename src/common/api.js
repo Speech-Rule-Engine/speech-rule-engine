@@ -61,7 +61,7 @@ module.exports.toSemantic = sre.System.getInstance().toSemantic;
 /**
  * Exporting method to return an Json representation of the semantic tree.
  */
-// module.exports.toJson = sre.System.getInstance().toJson;
+module.exports.toJson = sre.System.getInstance().toJson;
 
 
 /**

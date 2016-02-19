@@ -121,7 +121,15 @@ sre.System.prototype.toSemantic = function(expr) {
 };
 
 
-// sre.System.prototype.semanticTreeJson = function(expr) { }
+/**
+ * Function to translate MathML string into JSON version of the Semantic Tree.
+ * @param {string} expr Processes a given MathML expression for translation.
+ * @return {JSONType} The semantic tree as Json.
+ */
+sre.System.prototype.toJson = function(expr) {
+  var stree = sre.System.getInstance().parseExpression_(expr, true);
+  return stree ? sre.SystemExternal.xm.tojson(stree.toString()) : {};
+};
 
 
 /**
@@ -177,11 +185,6 @@ sre.System.prototype.fileToSpeech = function(input, opt_output) {
  */
 sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
 
-// New Api functions.
-// TODO (sorge): Refactor common functionality.
-//
-
-
 //
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
@@ -195,7 +198,7 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
 //
 // Deprecated:
 //  processExpression: same as toSpeech.
-//  processFile: same as file.toSpeech.
+//  processFile: same as fileToSpeech.
 //
 
 

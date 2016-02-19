@@ -126,3 +126,11 @@ sre.SystemExternal.commander = sre.SystemExternal.documentSupported() ?
  */
 sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
     null : sre.SystemExternal.require('fs');
+
+
+/**
+ * 
+ * @type {Object}
+ */
+sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
+    null : sre.SystemExternal.require('xml-mapping');
