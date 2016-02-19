@@ -32,21 +32,31 @@ Then import into a running node or a source file using require:
      
 ### API #######
 
-Current API functions are
+Current API functions are divided into three categories.
+
+1. Methods that take a string containing a MathML expression:
      
-     processExpression(mathml); 
+| Method | Return Value |
+| ---- | ---- |
+| `toSpeech(mathml)` | Speech string for the MathML. |
+| `toSemantic(mathml)` | String with XML representation of the semantic tree of given MathML. |
+| `toJson(mathml)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
+| `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
+| `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
-Takes a string containing a MathML expression and returns the corresponding
-speech string.
+1. Methods that take an in filename and optionally an output filename. If the
+   output filename is not provided, output will be written to stdout.
 
-     processFile(input, output);
+| Method | Return Value |
+| ---- | ---- |
+| `file.toSpeech(input, output)` | Speech string for the MathML. |
 
-Takes an input file containing a MathML expression and writes the corresponding
-speech string to the output file.
+1. A for setting up and controlling the behaviour of the Speech Rule Engine:
 
-     setupEngine(options);
+It takes an object of option/value pairs to parameterise the Speech Rule Engine.
 
-Takes an object of option/value pairs to parameterise the Speech Rule Engine.
+    setupEngine(options);
+
 Valid options are:
 
 | Option | Value |
@@ -59,6 +69,19 @@ Observe that some speech rule domains only make sense with semantics switched on
 or off and that not every domain implements every style. See also the
 description of the command line parameters in the next section for more details.
 
+
+#### The following are deprecated API functions #########
+
+     processExpression(mathml); 
+
+Takes a string containing a MathML expression and returns the corresponding
+speech string. Same as `toSpeech(mathml)`.
+
+     processFile(input, output);
+
+Takes an input file containing a MathML expression and writes the corresponding
+speech string to the output file. Same as `file.toSpeech(mathml)`.
+
 Standalone Engine
 -----------------
 
@@ -70,10 +93,11 @@ Node dependencies you have to install:
      xmldom
      xpath
      commander
+     xml-mapping
  
 Using npm run
 
-     npm install closure closurecompiler closure-library xmldom xpath commander
+     npm install closure closurecompiler closure-library xmldom xpath commander xml-mapping
 
 
 In version 1.43 of the closure library there is a mistake in the file 
@@ -146,6 +170,8 @@ The following is a list of command line options for the speech rule engine.
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
+<!-- | -m | --mathml [name] | Generate enriched MathML to file. | -->
+<!-- | -j | --json [name] | Generate JSON of semantic tree to file. | -->
 | | |
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
