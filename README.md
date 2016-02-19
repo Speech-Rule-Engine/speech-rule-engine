@@ -34,7 +34,7 @@ Then import into a running node or a source file using require:
 
 Current API functions are divided into three categories.
 
-1. Methods that take a string containing a MathML expression:
+#### Methods that take a string containing a MathML expression: 
      
 | Method | Return Value |
 | ---- | ---- |
@@ -44,14 +44,15 @@ Current API functions are divided into three categories.
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
-1. Methods that take an in filename and optionally an output filename. If the
-   output filename is not provided, output will be written to stdout.
+#### Methods that take an in filename and optionally an output filename. 
+
+If the output filename is not provided, output will be written to stdout.
 
 | Method | Return Value |
 | ---- | ---- |
 | `file.toSpeech(input, output)` | Speech string for the MathML. |
 
-1. A for setting up and controlling the behaviour of the Speech Rule Engine:
+##### A for setting up and controlling the behaviour of the Speech Rule Engine:
 
 It takes an object of option/value pairs to parameterise the Speech Rule Engine.
 
