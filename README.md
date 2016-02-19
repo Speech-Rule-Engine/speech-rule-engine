@@ -171,13 +171,15 @@ The following is a list of command line options for the speech rule engine.
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
-<!-- | -m | --mathml [name] | Generate enriched MathML to file. | -->
-<!-- | -j | --json [name] | Generate JSON of semantic tree to file. | -->
 | | |
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
 
 
+<!-- | -m | --mathml [name] | Generate enriched MathML to file. | -->
+<!-- | -j | --json [name] | Generate JSON of semantic tree to file. | -->
+
+
 Developers Notes
 ----------------
 
