@@ -24,6 +24,7 @@ fs.createWriteStream = function(name) { };
 var xm;
 xm.tojson = function(xml) { };
 
+
 /**
  * @typedef {stream}
  */

@@ -129,7 +129,7 @@ sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
 
 
 /**
- * 
+ *
  * @type {Object}
  */
 sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?

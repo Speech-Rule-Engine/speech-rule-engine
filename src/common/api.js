@@ -29,6 +29,7 @@ goog.require('sre.System');
  */
 sre.Api = { };
 
+
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
@@ -76,6 +77,9 @@ module.exports.toDescription = sre.System.getInstance().toDescription;
 module.exports.toEnriched = sre.System.getInstance().toEnriched;
 
 
+/**
+ * Object for file io.
+ */
 module.exports.file = {};
 
 

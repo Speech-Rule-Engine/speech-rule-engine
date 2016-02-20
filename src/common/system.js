@@ -92,7 +92,7 @@ sre.System.prototype.setupEngine = function(feature) {
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
- * @return {string} The aural rendering of the expression. 
+ * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.toSpeech = function(expr) {
   var xml = sre.System.getInstance().parseExpression_(
@@ -207,7 +207,7 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
  * as it might depend on a particular implementation of Xml Node API.
  * @param {!Node} xml The Xml node to describe.
  * @return {string} The aural rendering of the expression.
- * @private 
+ * @private
  */
 sre.System.prototype.processXml_ = function(xml) {
   var descrs = sre.System.getInstance().describeXml_(xml);
@@ -230,6 +230,8 @@ sre.System.prototype.describeXml_ = function(xml) {
 /**
  * Parses a string into a MathML expressions or a semantic tree.
  * @param {string} expr The string containing a MathML representation.
+ * @param {boolean} semantic Replace parsed MathML by semantic tree
+ *     representation.
  * @return {Node} The Xml node.
  * @private
  */
