@@ -120,7 +120,6 @@ sre.System.prototype.toSemantic = function(expr) {
   return stree ? stree.toString() : '';
 };
 
-
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
  * @param {string} expr Processes a given MathML expression for translation.
@@ -150,7 +149,7 @@ sre.System.prototype.toDescription = function(expr) {
 
 
 /**
- * Function to translate MathML string into Semantic Tree.
+ * Function to translate MathML string into semantically enriched MathML.
  * @param {string} expr Processes a given MathML expression for translation.
  * @return {string} The semantic tree as Xml.
  */
@@ -161,22 +160,14 @@ sre.System.prototype.toEnriched = function(expr) {
 
 
 /**
- * Reads an xml expression from a file and returns the auditory description to a
+ * Reads an xml expression from a file and returns its aural rendering to a
  * file.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSpeech = function(input, opt_output) {
-  var descr = sre.System.getInstance().processFile_(input);
-  if (!opt_output) {
-    console.log(descr);
-    return;
-  }
-  try {
-    sre.SystemExternal.fs.writeFileSync(opt_output, descr);
-  } catch (err) {
-    throw new sre.System.Error('Can not write to file: ' + opt_output);
-  }
+  sre.System.getInstance().processFile_(sre.System.getInstance().toSpeech,
+                                        input, opt_output);
 };
 
 
@@ -184,6 +175,61 @@ sre.System.prototype.fileToSpeech = function(input, opt_output) {
  * @deprecated Use fileToSpeech().
  */
 sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
+
+
+/**
+ * Reads an xml expression from a file and returns the XML for the semantic tree
+ * to a file.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ */
+sre.System.prototype.fileToSemantic = function(input, opt_output) {
+  sre.System.getInstance().processFile_(sre.System.getInstance().toSemantic,
+                                        input, opt_output);
+};
+
+
+/**
+ * Function to translate MathML string into JSON version of the Semantic Tree to
+ * a file.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ */
+sre.System.prototype.fileToJson = function(input, opt_output) {
+  sre.System.getInstance().processFile_(
+    function(x) {
+      return JSON.stringify(sre.System.getInstance().toJson(x));
+    },
+    input, opt_output);
+};
+
+
+/**
+ * Main function to translate expressions into auditory descriptions
+ * a file.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ */
+sre.System.prototype.fileToDescription = function(input, opt_output) {
+  sre.System.getInstance().processFile_(
+    function(x) {
+      return JSON.stringify(sre.System.getInstance().toDescription(x));
+    },
+    input, opt_output);
+};
+
+
+/**
+ * Function to translate MathML string into semantically enriched MathML in a
+ * file.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ */
+sre.System.prototype.fileToEnriched = function(input, opt_output) {
+  sre.System.getInstance().processFile_(sre.System.getInstance().toEnriched,
+                                        input, opt_output);
+};
+
 
 //
 // Naming convention:
@@ -267,19 +313,39 @@ sre.System.prototype.getSemanticTree_ = function(mml) {
 
 
 /**
- * Reads an xml expression from a file and returns the auditory description to a
- * file.
- * @param {string} input The input filename.
- * @return {string} The resulting speech string.
+ * Reads an xml expression from a file. Throws exception if file does not exist.
+ * @param {string} file The input filename.
+ * @return {string} The input string read from file.
  * @private
  */
-sre.System.prototype.processFile_ = function(input) {
+sre.System.prototype.inputFile_ = function(file) {
   try {
-    var expr = sre.SystemExternal.fs.readFileSync(input, {encoding: 'utf8'});
+    var expr = sre.SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
   } catch (err) {
-    throw new sre.System.Error('Can not open file: ' + input);
+    throw new sre.System.Error('Can not open file: ' + file);
   }
-  return sre.System.getInstance().toSpeech(expr);
+  return expr;
 };
 
 
+/**
+ * Reads an xml expression from a file, processes with the given function and
+ * returns the result either to a file or to stdout.
+ * @param {function(string): *} processor The input filename.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ * @private
+ */
+sre.System.prototype.processFile_ = function(processor, input, opt_output) {
+  var expr = sre.System.getInstance().inputFile_(input);
+  var result = processor(expr);
+  if (!opt_output) {
+    console.log(result);
+    return;
+  }
+  try {
+    sre.SystemExternal.fs.writeFileSync(opt_output, result);
+  } catch (err) {
+    throw new sre.System.Error('Can not write to file: ' + opt_output);
+  }
+};

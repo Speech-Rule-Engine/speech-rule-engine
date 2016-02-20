@@ -84,16 +84,43 @@ module.exports.file = {};
 
 
 /**
- * Exporting method to process expression in files.
+ * Exporting method to aural render an expression from a file.
  */
 module.exports.file.toSpeech = sre.System.getInstance().fileToSpeech;
 
 
 /**
- * Exporting method to process expression in files.
+ * Exporting method to aural render an expression from a file.
  * @deprecated Use file.toSpeech()
  */
 module.exports.processFile = sre.System.getInstance().fileToSpeech;
+
+
+/**
+ * Exporting method to compute the semantic tree for an expression from a file.
+ */
+module.exports.file.toSemantic = sre.System.getInstance().fileToSemantic;
+
+
+/**
+ * Exporting method to compute the Json of the semantic tree for an expression
+ * from a file.
+ */
+module.exports.file.toJson = sre.System.getInstance().fileToJson;
+
+
+/**
+ * Exporting method to compute auditory descriptions for an expression from a
+ * file.
+ */
+module.exports.file.toDescription = sre.System.getInstance().fileToDescription;
+
+
+/**
+ * Exporting method to compute semantically enriched MathML for an expression
+ * from a file.
+ */
+module.exports.file.toEnriched = sre.System.getInstance().fileToEnriched;
 
 
 /**
