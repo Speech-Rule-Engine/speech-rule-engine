@@ -120,6 +120,7 @@ sre.System.prototype.toSemantic = function(expr) {
   return stree ? stree.toString() : '';
 };
 
+
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
  * @param {string} expr Processes a given MathML expression for translation.
@@ -197,10 +198,10 @@ sre.System.prototype.fileToSemantic = function(input, opt_output) {
  */
 sre.System.prototype.fileToJson = function(input, opt_output) {
   sre.System.getInstance().processFile_(
-    function(x) {
-      return JSON.stringify(sre.System.getInstance().toJson(x));
-    },
-    input, opt_output);
+      function(x) {
+        return JSON.stringify(sre.System.getInstance().toJson(x));
+      },
+      input, opt_output);
 };
 
 
@@ -212,10 +213,10 @@ sre.System.prototype.fileToJson = function(input, opt_output) {
  */
 sre.System.prototype.fileToDescription = function(input, opt_output) {
   sre.System.getInstance().processFile_(
-    function(x) {
-      return JSON.stringify(sre.System.getInstance().toDescription(x));
-    },
-    input, opt_output);
+      function(x) {
+        return JSON.stringify(sre.System.getInstance().toDescription(x));
+      },
+      input, opt_output);
 };
 
 
