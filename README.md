@@ -1,5 +1,5 @@
 
-Speech Rule Engine  
+Speech Rule Engine
 ==================
 [![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://david-dm.org/zorkow/speech-rule-engine.svg)](https://david-dm.org/zorkow/speech-rule-engine) [![devDependency Status](https://david-dm.org/zorkow/speech-rule-engine/dev-status.svg)](https://david-dm.org/zorkow/speech-rule-engine#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/zorkow/speech-rule-engine/badge.svg?branch=master&service=github)](https://coveralls.io/github/zorkow/speech-rule-engine?branch=master)
 
@@ -51,6 +51,10 @@ If the output filename is not provided, output will be written to stdout.
 | Method | Return Value |
 | ---- | ---- |
 | `file.toSpeech(input, output)` | Speech string for the MathML. |
+| `file.toSemantic(input, output)` | String with XML representation of the semantic tree of given MathML. |
+| `file.toJson(input, output)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
+| `file.toDescription(input, output)` | The array of auditory description objects of the MathML expression. |
+| `file.toEnriched(input, output)` | The semantically enriched MathML expression. |
 
 #### A method for setting up and controlling the behaviour of the Speech Rule Engine:
 
@@ -179,7 +183,7 @@ The following is a list of command line options for the speech rule engine.
 <!-- | -m | --mathml [name] | Generate enriched MathML to file. | -->
 <!-- | -j | --json [name] | Generate JSON of semantic tree to file. | -->
 
-
+
 Developers Notes
 ----------------
 
