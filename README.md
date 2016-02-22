@@ -172,16 +172,26 @@ The following is a list of command line options for the speech rule engine.
 | -e | --enumerate     | Enumerates all available domains and styles. |
 ||| Note that not every style is implemented in every domain. |
 | | |
+| | |
+| | |
+| -a | --audit | Generate auditory descriptions (JSON format). |
+| -j | --json  | Generate JSON of semantic tree. |
+| -m | --mathml  | Generate enriched MathML. |
+| -p | --speech  | Generate speech output (default). |
+| -x | --xml  | Generate XML of semantic tree. |
+| | |
+| | |
+| | |
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
+| | |
+| | |
 | | |
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
 
 
-<!-- | -m | --mathml [name] | Generate enriched MathML to file. | -->
-<!-- | -j | --json [name] | Generate JSON of semantic tree to file. | -->
 
 
 Developers Notes

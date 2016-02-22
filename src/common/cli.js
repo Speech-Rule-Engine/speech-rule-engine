@@ -51,8 +51,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.log = '';
   /** @type {!string} */
   commander.output = '';
-  /** @type {!string} */
-  commander.mathml = '';
+  /** @type {!boolean} */
+  commander.mathml = false;
   /** @type {!boolean} */
   commander.semantics = false;
   /** @type {!string} */
@@ -61,15 +61,15 @@ sre.Cli.prototype.commandLine = function() {
   commander.verbose = false;
 
   commander.version(sre.System.getInstance().version).
-      option('-d, --dom [name]', 'Domain or subject area [name]').
-      option('-e, --enumerate', 'Enumerates available domains and styles').
-      option('-i, --input [name]', 'Input file [name]').
-      option('-l, --log [name]', 'Log file [name]').
-      option('-m, --mathml [name]', 'Generate MathML output to file.').
-      option('-o, --output [name]', 'Output file [name]').
-      option('-s, --semantics', 'Switch on semantics interpretation').
-      option('-t, --style [name]', 'Speech style [name]').
-      option('-v, --verbose', 'Verbose mode').
+      option('-d, --dom [name]', 'Domain or subject area [name].').
+      option('-e, --enumerate', 'Enumerates available domains and styles.').
+      option('-i, --input [name]', 'Input file [name].').
+      option('-l, --log [name]', 'Log file [name].').
+      option('-m, --mathml', 'Generate MathML output.').
+      option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
+      option('-s, --semantics', 'Switch on semantics interpretation.').
+      option('-t, --style [name]', 'Speech style [name].').
+      option('-v, --verbose', 'Verbose mode.').
       parse(process.argv);
   try {
     if (commander.enumerate) {
@@ -89,7 +89,6 @@ sre.Cli.prototype.commandLine = function() {
           'semantics': commander.semantics,
           'domain': commander.dom,
           'style': commander.style,
-          'mathml': commander.mathml,
           'mode': sre.Engine.Mode.SYNC
         });
     if (commander.verbose) {
