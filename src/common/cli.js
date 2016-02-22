@@ -31,7 +31,7 @@ goog.require('sre.SystemExternal');
 /**
  * @constructor
  */
-sre.Cli = function() {};
+sre.Cli = function() { };
 
 
 /**
@@ -39,6 +39,9 @@ sre.Cli = function() {};
  */
 sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
+  var system = sre.System.getInstance();
+  /** @type {function(string, string=)} */
+  var processor = sre.System.getInstance().fileToSpeech;
   // These are necessary to avoid closure errors.
   /** @type {!string} */
   // commander.domain is already in use by the commander module!
@@ -52,15 +55,23 @@ sre.Cli.prototype.commandLine = function() {
   /** @type {!string} */
   commander.output = '';
   /** @type {!boolean} */
-  commander.mathml = false;
-  /** @type {!boolean} */
   commander.semantics = false;
   /** @type {!string} */
   commander.style = '';
   /** @type {!boolean} */
   commander.verbose = false;
+  /** @type {!boolean} */
+  commander.audit = false;
+  /** @type {!boolean} */
+  commander.mathml = false;
+  /** @type {!boolean} */
+  commander.json = false;
+  /** @type {!boolean} */
+  commander.speech = false;
+  /** @type {!boolean} */
+  commander.xml = false;
 
-  commander.version(sre.System.getInstance().version).
+  commander.version(system.version).
       option('').
       option('-i, --input [name]', 'Input file [name].').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
@@ -81,7 +92,7 @@ sre.Cli.prototype.commandLine = function() {
       parse(process.argv);
   try {
     if (commander.enumerate) {
-      sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.SYNC});
+      system.setupEngine({'mode': sre.Engine.Mode.SYNC});
       var output = 'Domain options: ' +
           sre.Engine.getInstance().allDomains.sort().join(', ') +
           '\nStyle options:  ' +
@@ -89,10 +100,7 @@ sre.Cli.prototype.commandLine = function() {
       console.log(output);
       process.exit(0);
     }
-    if (commander.mathml) {
-      commander.semantics = true;
-    }
-    sre.System.getInstance().setupEngine(
+    system.setupEngine(
         {
           'semantics': commander.semantics,
           'domain': commander.dom,
@@ -103,7 +111,12 @@ sre.Cli.prototype.commandLine = function() {
       sre.Debugger.getInstance().init(commander.log);
     }
     if (commander.input) {
-      sre.System.getInstance().fileToSpeech(commander.input, commander.output);
+      if (commander.audit) { processor = system.fileToDescription;}
+      if (commander.json) { processor = system.fileToJson;}
+      if (commander.mathml) { processor = system.fileToEnriched;}
+      if (commander.speech) { processor = system.fileToSpeech;}
+      if (commander.xml) { processor = system.fileToSemantic;}
+      processor(commander.input, commander.output);
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);

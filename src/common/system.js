@@ -88,7 +88,22 @@ sre.System.prototype.setupEngine = function(feature) {
 };
 
 
-//TODO: (sorge) Need an async version of this.
+//
+// Naming convention:
+// Input is either an XML expression as a string or from a file.
+//
+// Output:
+//  toSpeech: Aural rendering string.
+//  toSemantic: XML string of semantic tree.
+//  toJson: Json version of the semantic tree.
+//  toEnriched: XML string of enriched MathML.
+//  toDescription: List of preprocessed auditory descriptions.
+//
+// Deprecated:
+//  processExpression: same as toSpeech.
+//  processFile: same as fileToSpeech.
+//
+//TODO: (sorge) Need an async versions of these.
 /**
  * Main function to translate expressions into auditory descriptions.
  * @param {string} expr Processes a given XML expression for translation.
@@ -230,23 +245,6 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
   sre.System.getInstance().processFile_(sre.System.getInstance().toEnriched,
                                         input, opt_output);
 };
-
-
-//
-// Naming convention:
-// Input is either an XML expression as a string or from a file.
-//
-// Output:
-//  toSpeech: Aural rendering string.
-//  toSemantic: XML string of semantic tree.
-//  toJson: Json version of the semantic tree.
-//  toEnriched: XML string of enriched MathML.
-//  toDescription: List of preprocessed auditory descriptions.
-//
-// Deprecated:
-//  processExpression: same as toSpeech.
-//  processFile: same as fileToSpeech.
-//
 
 
 /**
