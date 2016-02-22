@@ -61,15 +61,23 @@ sre.Cli.prototype.commandLine = function() {
   commander.verbose = false;
 
   commander.version(sre.System.getInstance().version).
-      option('-d, --dom [name]', 'Domain or subject area [name].').
-      option('-e, --enumerate', 'Enumerates available domains and styles.').
+      option('').
       option('-i, --input [name]', 'Input file [name].').
-      option('-l, --log [name]', 'Log file [name].').
-      option('-m, --mathml', 'Generate MathML output.').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
-      option('-s, --semantics', 'Switch on semantics interpretation.').
+      option('').
+      option('-d, --dom [name]', 'Domain or subject area [name].').
       option('-t, --style [name]', 'Speech style [name].').
+      option('-s, --semantics', 'Switch on semantics interpretation.').
+      option('-e, --enumerate', 'Enumerates available domains and styles.').
+      option('').
+      option('-a, --audit', 'Generate auditory descriptions (JSON format).').
+      option('-j, --json', 'Generate JSON of semantic tree.').
+      option('-m, --mathml', 'Generate enriched MathML.').
+      option('-p, --speech', 'Generate speech output (default).').
+      option('-x, --xml', 'Generate XML of semantic tree.').
+      option('').
       option('-v, --verbose', 'Verbose mode.').
+      option('-l, --log [name]', 'Log file [name].').
       parse(process.argv);
   try {
     if (commander.enumerate) {
