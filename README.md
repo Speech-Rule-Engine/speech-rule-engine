@@ -1,5 +1,5 @@
 
-Speech Rule Engine  
+Speech Rule Engine
 ==================
 [![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://david-dm.org/zorkow/speech-rule-engine.svg)](https://david-dm.org/zorkow/speech-rule-engine) [![devDependency Status](https://david-dm.org/zorkow/speech-rule-engine/dev-status.svg)](https://david-dm.org/zorkow/speech-rule-engine#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/zorkow/speech-rule-engine/badge.svg?branch=master&service=github)](https://coveralls.io/github/zorkow/speech-rule-engine?branch=master)
 
@@ -32,21 +32,36 @@ Then import into a running node or a source file using require:
      
 ### API #######
 
-Current API functions are
+Current API functions are divided into three categories.
+
+#### Methods that take a string containing a MathML expression: 
      
-     processExpression(mathml); 
+| Method | Return Value |
+| ---- | ---- |
+| `toSpeech(mathml)` | Speech string for the MathML. |
+| `toSemantic(mathml)` | String with XML representation of the semantic tree of given MathML. |
+| `toJson(mathml)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
+| `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
+| `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
-Takes a string containing a MathML expression and returns the corresponding
-speech string.
+#### Methods that take an input filename and optionally an output filename: 
 
-     processFile(input, output);
+If the output filename is not provided, output will be written to stdout.
 
-Takes an input file containing a MathML expression and writes the corresponding
-speech string to the output file.
+| Method | Return Value |
+| ---- | ---- |
+| `file.toSpeech(input, output)` | Speech string for the MathML. |
+| `file.toSemantic(input, output)` | String with XML representation of the semantic tree of given MathML. |
+| `file.toJson(input, output)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
+| `file.toDescription(input, output)` | The array of auditory description objects of the MathML expression. |
+| `file.toEnriched(input, output)` | The semantically enriched MathML expression. |
 
-     setupEngine(options);
+#### A method for setting up and controlling the behaviour of the Speech Rule Engine:
 
-Takes an object of option/value pairs to parameterise the Speech Rule Engine.
+It takes an object of option/value pairs to parameterise the Speech Rule Engine.
+
+    setupEngine(options);
+
 Valid options are:
 
 | Option | Value |
@@ -59,6 +74,19 @@ Observe that some speech rule domains only make sense with semantics switched on
 or off and that not every domain implements every style. See also the
 description of the command line parameters in the next section for more details.
 
+
+#### The following are deprecated API functions #########
+
+     processExpression(mathml); 
+
+Takes a string containing a MathML expression and returns the corresponding
+speech string. Same as `toSpeech(mathml)`.
+
+     processFile(input, output);
+
+Takes an input file containing a MathML expression and writes the corresponding
+speech string to the output file. Same as `file.toSpeech(mathml)`.
+
 Standalone Engine
 -----------------
 
@@ -70,10 +98,11 @@ Node dependencies you have to install:
      xmldom
      xpath
      commander
+     xml-mapping
  
 Using npm run
 
-     npm install closure closurecompiler closure-library xmldom xpath commander
+     npm install closure closurecompiler closure-library xmldom xpath commander xml-mapping
 
 
 In version 1.43 of the closure library there is a mistake in the file 
@@ -143,12 +172,26 @@ The following is a list of command line options for the speech rule engine.
 | -e | --enumerate     | Enumerates all available domains and styles. |
 ||| Note that not every style is implemented in every domain. |
 | | |
+| | |
+| | |
+| -a | --audit | Generate auditory descriptions (JSON format). |
+| -j | --json  | Generate JSON of semantic tree. |
+| -m | --mathml  | Generate enriched MathML. |
+| -p | --speech  | Generate speech output (default). |
+| -x | --xml  | Generate XML of semantic tree. |
+| | |
+| | |
+| | |
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
 | | |
+| | |
+| | |
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
+
+
 
 
 Developers Notes
