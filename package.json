@@ -1,6 +1,6 @@
 {
   "name": "speech-rule-engine",
-  "version": "0.3.2",
+  "version": "0.4.1",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "directories": {
     "test": "tests"
@@ -31,7 +31,7 @@
     "commander": "*",
     "xmldom": "*",
     "xml-mapping": "*",
-    "xpath": "*"
+    "xpath": "<=0.0.21"
   },
   "devDependencies": {
     "closure": ">=1.0.0",
