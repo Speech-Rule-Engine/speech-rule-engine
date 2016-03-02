@@ -68,4 +68,4 @@ sre.Semantic.getTreeFromString = function(expr) {
   return new sre.SemanticTree(mml);
 };
 
-// console.log(sre.SemanticTree.formatXml(sre.Semantic.getTreeFromString('<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>').toString()));
+// console.log(sre.DomUtil.formatXml(sre.Semantic.getTreeFromString('<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>').toString()));

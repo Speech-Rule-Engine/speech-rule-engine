@@ -761,7 +761,7 @@ sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
  * @private
  */
 sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
-  var output = sre.SemanticTree.formatXml(element.toString());
+  var output = sre.DomUtil.formatXml(element.toString());
   if (!wiki) {
     console.log(output);
     return;
