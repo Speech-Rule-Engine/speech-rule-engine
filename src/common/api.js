@@ -20,6 +20,7 @@
  */
 goog.provide('sre.Api');
 
+goog.require('sre.DomUtil');
 goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 
@@ -127,6 +128,12 @@ module.exports.file.toEnriched = sre.System.getInstance().fileToEnriched;
  * Exporting method to set up and parameterise the Engine.
  */
 module.exports.setupEngine = sre.System.getInstance().setupEngine;
+
+
+/**
+ * Exporting XML pretty printer.
+ */
+module.exports.pprintXML = sre.DomUtil.formatXml;
 
 
 /**
