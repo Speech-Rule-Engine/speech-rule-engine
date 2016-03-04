@@ -66,7 +66,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: opt_style});
-  var result = sre.System.getInstance().processExpression(mathMl);
+  var result = sre.System.getInstance().toSpeech(mathMl);
   this.assert.equal(result, answer);
 };
 

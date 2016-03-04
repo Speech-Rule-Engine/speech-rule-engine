@@ -115,3 +115,39 @@ sre.DomUtil.replaceNode = function(oldNode, newNode) {
   oldNode.parentNode.insertBefore(newNode, oldNode);
   oldNode.parentNode.removeChild(oldNode);
 };
+
+
+/**
+ * Pretty prints an XML representation.
+ * @param {string} xml The serialised XML string.
+ * @return {string} The formatted string.
+ */
+sre.DomUtil.formatXml = function(xml) {
+  var reg = /(>)(<)(\/*)/g;
+  xml = xml.replace(reg, '$1\r\n$2$3');
+  reg = /(>)(.+)(<c)/g;
+  xml = xml.replace(reg, '$1\r\n$2\r\n$3');
+  var formatted = '';
+  var padding = '';
+  xml.split('\r\n')
+      .forEach(function(node) {
+        if (node.match(/.+<\/\w[^>]*>$/)) {
+          // Node with content.
+          formatted += padding + node + '\r\n';
+        } else if (node.match(/^<\/\w/)) {
+          if (padding) {
+            // Closing tag
+            padding = padding.slice(2);
+            formatted += padding + node + '\r\n';
+          }
+        } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
+          // Opening tag
+          formatted += padding + node + '\r\n';
+          padding += '  ';
+        } else {
+          // Empty tag
+          formatted += padding + node + '\r\n';
+        }
+      });
+  return formatted;
+};
