@@ -114,7 +114,7 @@ sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
       sre.XpathUtil.currentDocument.evaluate(
       expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
       sre.XpathUtil.xpathEvaluate(
-        expression, rootNode, new sre.XpathUtil.resolver_(), type, null);
+        expression, rootNode, new sre.XpathUtil.resolver_(),  type, null);
 };
 
 
@@ -189,67 +189,4 @@ sre.XpathUtil.evaluateString = function(expression, rootNode) {
     return '';
   }
   return xpathResult.stringValue;
-};
-
-
-/**
- * Mapping of namespaces to prefixes.
- * @type {Object.<string, string>}
- * @private
- */
-sre.XpathUtil.prefixes_ = function() {
-  var result = {};
-  Object.keys(sre.XpathUtil.nameSpaces_).map(function(value) {
-    result[sre.XpathUtil.nameSpaces_[value]] = value;
-  });
-  return result;
-}();
-
-
-/**
- * Adds the default namespace recursively in a node as prefix.
- * @param {Node} node The node that is rewritten.
- * @private
- */
-sre.XpathUtil.defaultNamespace_ = function(node) {
-  if (!node || node.nodeType !== 1) {
-    return;
-  }
-  if (!node.prefix && node.namespaceURI) {
-    node.prefix = sre.XpathUtil.prefixes_[node.namespaceURI];
-    node.nodeName = node.prefix + ':' + node.nodeName;
-  }
-  var children = node.childNodes;
-  for (var i = 0, child; child = children[i]; i++) {
-    sre.XpathUtil.defaultNamespace_(child);
-  }
-};
-
-
-/**
- * Adds the default namespace as a proper prefix in a node.
- * @param {Node} node The node that is rewritten.
- */
-sre.XpathUtil.prefixNamespace = function(node) {
-  if (!node || !node._nsMap) {
-    return;
-  }
-  var attributes = node.attributes;
-  for (var i = 0, attr; attr = attributes[i]; i++) {
-    if (attr.name != 'xmlns' || attr.prefix) {
-      continue;
-    }
-    var prefix = sre.XpathUtil.prefixes_[node.namespaceURI];
-    if (!prefix) {
-      continue;
-    }
-    attr.prefix = attr.name;
-    attr.localName = prefix;
-    attr.nodeName = attr.nodeName + ':' + prefix;
-  }
-  if (node.namespaceURI) {
-    node._nsMap[prefix] = node.namespaceURI;
-    delete node._nsMap[''];
-    sre.XpathUtil.defaultNamespace_(node);
-  }
 };
