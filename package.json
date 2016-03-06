@@ -31,7 +31,7 @@
     "commander": "*",
     "xmldom": "*",
     "xml-mapping": "*",
-    "xpath": "<=0.0.21"
+    "xpath": "*"
   },
   "devDependencies": {
     "closure": ">=1.0.0",

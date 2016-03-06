@@ -72,11 +72,8 @@ sre.DomUtil.parseInput = function(input, opt_error) {
     var doc = dp.parseFromString(clean_input, 'text/xml');
     if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
       sre.XpathUtil.currentDocument = doc;
-      return doc.documentElement;
     }
-    var result = doc.documentElement;
-    sre.XpathUtil.prefixNamespace(result);
-    return result;
+    return doc.documentElement;
   } catch (err) {
     throw new error('Illegal input: ' + err.message);
   }
