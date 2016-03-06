@@ -89,6 +89,15 @@ sre.XpathUtil.resolveNameSpace = function(prefix) {
 };
 
 
+
+/**
+ * @constructor
+ */
+sre.XpathUtil.resolver_ = function() {
+};
+sre.XpathUtil.resolver_.prototype.lookupNamespaceURI = sre.XpathUtil.resolveNameSpace;
+
+
 /**
  * Executes an xpath evaluation.
  * @param {string} expression The XPath expression to evaluate.
@@ -104,8 +113,10 @@ sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
       sre.XpathUtil.currentDocument.evaluate(
       expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
       sre.XpathUtil.xpathEvaluate(
-      expression, rootNode, sre.XpathUtil.createNSResolver(rootNode),
-      type, null);
+        expression, rootNode,
+        new sre.XpathUtil.resolver_(),
+        // sre.XpathUtil.createNSResolver(rootNode),
+        type, null);
 };
 
 

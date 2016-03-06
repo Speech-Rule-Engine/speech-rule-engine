@@ -75,7 +75,7 @@ sre.DomUtil.parseInput = function(input, opt_error) {
       return doc.documentElement;
     }
     var result = doc.documentElement;
-    sre.XpathUtil.prefixNamespace(result);
+    //sre.XpathUtil.prefixNamespace(result);
     return result;
   } catch (err) {
     throw new error('Illegal input: ' + err.message);
