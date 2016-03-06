@@ -89,13 +89,14 @@ sre.XpathUtil.resolveNameSpace = function(prefix) {
 };
 
 
-
 /**
+ * Resolver to work with xpath in node and wgxpath in IE/Edge.
  * @constructor
  */
 sre.XpathUtil.resolver_ = function() {
+  this.lookupNamespaceURI =
+      sre.XpathUtil.resolveNameSpace;
 };
-sre.XpathUtil.resolver_.prototype.lookupNamespaceURI = sre.XpathUtil.resolveNameSpace;
 
 
 /**
@@ -113,10 +114,7 @@ sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
       sre.XpathUtil.currentDocument.evaluate(
       expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
       sre.XpathUtil.xpathEvaluate(
-        expression, rootNode,
-        new sre.XpathUtil.resolver_(),
-        // sre.XpathUtil.createNSResolver(rootNode),
-        type, null);
+        expression, rootNode, new sre.XpathUtil.resolver_(), type, null);
 };
 
 
