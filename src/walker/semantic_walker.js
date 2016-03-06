@@ -166,6 +166,7 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
       if (children.length === content.length) {
         return content.map(goog.bind(this.singletonFocus_, this));
       }
+    console.log('here we are');
       var focusList = this.combinePunctuations(children, content, [], []);
       return focusList;
     case sre.SemanticAttr.Type.APPL:
@@ -180,7 +181,6 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
 };
 
 
-// This does not work yet!
 /**
  * Makes a focus list from children of a punctuated element.
  * @param {!Array.<string>} children Child node ids.
@@ -191,18 +191,26 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
  */
 sre.SemanticWalker.prototype.combinePunctuations = function(
     children, content, prepunct, acc) {
+  if (children.length === 0) {
+    return acc;
+  }
   var child = children.shift();
   var cont = content.shift();
+  // Case first child element is punctuation.
+  // We have a prefix punctuation.
   if (child === cont) {
     prepunct.push(cont);
     return this.combinePunctuations(children, content, prepunct, acc);
   } else {
+    // Case first child is not punctuation.
     content.unshift(cont);
     prepunct.push(child);
+    // Remaining children are all punctuations.
     if (children.length === content.length) {
       acc.push(this.focusFromId_(child, prepunct.concat(content)));
       return acc;
     } else {
+      // Recurse
       acc.push(this.focusFromId_(child, prepunct));
       return this.combinePunctuations(children, content, [], acc);
     }
