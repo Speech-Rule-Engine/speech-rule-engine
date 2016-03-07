@@ -32,8 +32,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.SyntaxWalker = function(node, generator) {
-  goog.base(this, node, generator);
+sre.SyntaxWalker = function(node, generator, xml) {
+  goog.base(this, node, generator, xml);
 
   /**
    * Caching of levels.

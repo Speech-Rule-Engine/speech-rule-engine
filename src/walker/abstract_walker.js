@@ -32,17 +32,25 @@ goog.require('sre.WalkerUtil');
 /**
  * @constructor
  * @implements {sre.WalkerInterface}
- * @param {!Node} node The node on which the walker is called.
+ * @param {!Node} node The (rendered) node on which the walker is called.
  * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
  *     this walker.
+ * @param {!string} xml The original xml/mathml node on which the walker is
+ *      called as a string.
  * @override
  */
-sre.AbstractWalker = function(node, generator) {
+sre.AbstractWalker = function(node, generator, xml) {
   /**
    * The math expression on which the walker is called.
    * @type {!Node}
    */
   this.node = node;
+
+  /**
+   * The original xml/mathml node on which the walker is called.
+   * @type {!Element}
+   */
+  this.xml = sre.DomUtil.parseInput(xml);
 
   /**
    * @type {!sre.SpeechGeneratorInterface}
@@ -136,7 +144,7 @@ sre.AbstractWalker.prototype.getFocus = function() {
  */
 sre.AbstractWalker.prototype.speech = function() {
   return this.focus_.getNodes().map(
-      goog.bind(function(x) {return this.generator.getSpeech(x);}, this))
+      goog.bind(function(x) {return this.generator.getSpeech(x, this.xml);}, this))
       .join(' ');
 };
 

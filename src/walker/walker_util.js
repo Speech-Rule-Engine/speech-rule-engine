@@ -103,3 +103,9 @@ sre.WalkerUtil.getAttribute = function(node, attr) {
   }
   return node.getAttribute(attr);
 };
+
+
+sre.WalkerUtil.getBySemanticId = function(node, id) {
+  var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
+  return node.querySelector(query);
+};
