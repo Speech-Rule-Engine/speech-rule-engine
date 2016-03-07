@@ -166,7 +166,6 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
       if (children.length === content.length) {
         return content.map(goog.bind(this.singletonFocus_, this));
       }
-    console.log('here we are');
       var focusList = this.combinePunctuations(children, content, [], []);
       return focusList;
     case sre.SemanticAttr.Type.APPL:
