@@ -130,5 +130,5 @@ sre.WalkerUtil.generateSpeech = function(node, xml) {
   var inner = sre.WalkerUtil.getBySemanticId(doc, id);
   var innerXml = inner ? inner : xml;
   var stree = sre.System.getInstance().getSemanticTree(innerXml);
-  return sre.System.getInstance().processXml(innerXml);
+  return sre.System.getInstance().processXml(stree);
 };
