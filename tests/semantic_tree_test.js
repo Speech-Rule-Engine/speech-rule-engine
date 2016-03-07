@@ -9942,5 +9942,5 @@ sre.SemanticTreeTest.prototype.testStreeActions = function() {
     '<number>2</number>');
   this.executeTreeTest(
     '<maction><mtext>something</mtext><mi>a</mi></maction>',
-    '<identifier>2</identifier>');
+    '<identifier>a</identifier>');
 };
