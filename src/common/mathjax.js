@@ -20,6 +20,7 @@
  */
 goog.provide('sre.Mathjax');
 
+goog.require('sre.AdhocSpeechGenerator');
 goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.DummyWalker');
 goog.require('sre.Engine');
