@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview Ad hoc speech generator that computes a new speech string for
- *     an element if no speech attribute is available.
+ *     an element every time.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -42,33 +42,13 @@ goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  if (!node) return '';
-  console.log(typeof xml);
-  console.log(xml);
   var speech = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
   if (speech) return speech;
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  console.log('here');
-  console.log(node);
-  console.log(xml);
-
-  
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
-  console.log(id);
   var doc = xml.parentNode ? xml.parentNode : xml;
   var innerXml = id ? sre.WalkerUtil.getBySemanticId(doc, id) : xml;
-  console.log(innerXml);
-  
-  // speech = sre.System.getInstance().toSpeech(xml.toString());
-  // See getSemanticTree_ , currently http only!
-  var stree = sre.Semantic.getTree(innerXml).childNodes[0];
-  console.log(stree);
-  // Same as processXml_
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(stree);
-  speech = sre.AuditoryDescription.toSimpleString(descrs);
-  //xml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  console.log(speech);
+  var stree = sre.System.getInstance().getSemanticTree(innerXml);
+  speech = sre.System.getInstance().processXml(innerXml);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  //return sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
   return speech;
 };
