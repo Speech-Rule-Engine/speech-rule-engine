@@ -161,6 +161,18 @@ sre.SpeechRuleEngine.prototype.clearCache = function() {
 
 
 /**
+ * An iterator over the cache elements.
+ * @param {function(string, !Array.<sre.AuditoryDescription>)} iter
+ *     The iterator function.
+ */
+sre.SpeechRuleEngine.prototype.forCache = function(iter) {
+  for (var key in this.cache_) {
+    iter(key, this.cache_[key]);
+  }
+};
+
+
+/**
  * Retrieves a cached value for a particular element.
  * @param {Node} node The element to lookup.
  * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
