@@ -42,13 +42,5 @@ goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
-  if (speech) return speech;
-  var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
-  var doc = xml.parentNode ? xml.parentNode : xml;
-  var innerXml = id ? sre.WalkerUtil.getBySemanticId(doc, id) : xml;
-  var stree = sre.System.getInstance().getSemanticTree(innerXml);
-  speech = sre.System.getInstance().processXml(innerXml);
-  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  return speech;
+  return sre.WalkerUtil.generateSpeech(node, xml);
 };

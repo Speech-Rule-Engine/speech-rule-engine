@@ -24,6 +24,7 @@ goog.provide('sre.WalkerUtil');
 goog.require('sre.BaseUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
+goog.require('sre.System');
 
 
 /**
@@ -105,7 +106,29 @@ sre.WalkerUtil.getAttribute = function(node, attr) {
 };
 
 
+/**
+ * Retrieves a node containing a given semantic id.
+ * @param {!Node} node The base node to query.
+ * @param {string} id The id of a semantic node.
+ * @return {Element} The node for that id.
+ */
 sre.WalkerUtil.getBySemanticId = function(node, id) {
   var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
   return node.querySelector(query);
+};
+
+
+/**
+ * Generates speech string for a sub tree of the xml element.
+ * @param {!Node} node The target element of the event.
+ * @param {!Element} xml The base xml element belonging to node.
+ * @return {string} The generated speech string.
+ */
+sre.WalkerUtil.generateSpeech = function(node, xml) {
+  var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
+  var doc = /** @type{!Element} */(xml.parentNode ? xml.parentNode : xml);  
+  var inner = sre.WalkerUtil.getBySemanticId(doc, id);
+  var innerXml = inner ? inner : xml;
+  var stree = sre.System.getInstance().getSemanticTree(innerXml);
+  return sre.System.getInstance().processXml(innerXml);
 };
