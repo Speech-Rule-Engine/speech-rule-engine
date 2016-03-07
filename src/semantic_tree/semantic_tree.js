@@ -546,6 +546,14 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'NONE':
       newNode = this.makeEmptyNode_();
       break;
+    case 'MACTION':
+      // This here is currently geared towards our collapse actions!
+      if (children.length > 1) {
+        newNode =  this.parseMathml_(children[1]);
+      } else {
+        newNode = this.makeUnprocessed_(mml);
+      }
+      break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
       // Ordinarilly at this point we should not get any other tag.
