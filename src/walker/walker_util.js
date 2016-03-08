@@ -98,8 +98,5 @@ sre.WalkerUtil.dataAttribute = function(attr) {
  * @return {!string} The value for that attribute.
  */
 sre.WalkerUtil.getAttribute = function(node, attr) {
-  if (node.dataset) {
-    return node.dataset[sre.WalkerUtil.dataAttribute(attr)];
-  }
-  return node.getAttribute(attr);
+  return sre.DomUtil.getDataAttribute(node, sre.WalkerUtil.dataAttribute(attr));
 };
