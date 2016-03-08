@@ -148,3 +148,18 @@ sre.DomUtil.formatXml = function(xml) {
       });
   return formatted;
 };
+
+
+/**
+ * Retrieves a data attribute from a given node. Tries using microdata access if
+ * possible.
+ * @param {!Node} node A DOM node.
+ * @param {!string} attr The data attribute.
+ * @return {!string} The value for that attribute.
+ */
+sre.DomUtil.getDataAttribute = function(node, attr) {
+  if (node.dataset) {
+    return node.dataset[attr];
+  }
+  return node.getAttribute(attr);
+};
