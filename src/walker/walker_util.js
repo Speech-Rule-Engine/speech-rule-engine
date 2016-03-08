@@ -80,17 +80,6 @@ sre.WalkerUtil.combineContentChildren = function(
 
 
 /**
- * Transforms a data attribute name into its camel cased version.
- * @param {!sre.EnrichMathml.Attribute} attr Micro data attributes.
- * @return {!string} The camel cased attribute.
- */
-sre.WalkerUtil.dataAttribute = function(attr) {
-  return attr.substr(5).replace(/-([a-z])/g, function(letter, index) {
-    return index.toUpperCase();});
-};
-
-
-/**
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
  * @param {!Node} node A DOM node.
@@ -98,7 +87,7 @@ sre.WalkerUtil.dataAttribute = function(attr) {
  * @return {!string} The value for that attribute.
  */
 sre.WalkerUtil.getAttribute = function(node, attr) {
-  return sre.DomUtil.getDataAttribute(node, sre.WalkerUtil.dataAttribute(attr));
+  return sre.DomUtil.getDataAttribute(node, attr);
 };
 
 
@@ -113,8 +102,9 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
       !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
     return node;
   }
-  var semanticNodes = node.querySelectorAll(
-      '[' + sre.EnrichMathml.Attribute.TYPE + ']');
+
+  var semanticNodes = sre.DomUtil.querySelectorAllByAttr(
+      node, sre.EnrichMathml.Attribute.TYPE);
   for (var i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
     if (!semanticNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
       return semanticNode;
