@@ -102,7 +102,7 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
       !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
     return node;
   }
-  
+
   var semanticNodes = sre.DomUtil.querySelectorAllByAttr(
       node, sre.EnrichMathml.Attribute.TYPE);
   for (var i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
