@@ -87,6 +87,8 @@ sre.EnrichMathml.Attribute = {
   CHILDREN: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'children',
   COLLAPSED: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'collapsed',
   CONTENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'content',
+  EMBELLISHED: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'embellished',
+  FENCEPOINTER: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'fencepointer',
   FONT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'font',
   ID: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'id',
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
@@ -561,6 +563,9 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
+  if (semantic.font != sre.SemanticAttr.Font.UNKNOWN) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
+  }
   mml.setAttribute(sre.EnrichMathml.Attribute.ID, semantic.id);
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
@@ -572,6 +577,14 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   }
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
+  }
+  if (semantic.embellished) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.EMBELLISHED,
+                     semantic.embellished);
+  }
+  if (semantic.fencePointer) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.FENCEPOINTER,
+                     semantic.fencePointer);
   }
   if (sre.Engine.getInstance().speech) {
     sre.EnrichMathml.addSpeech(mml, semantic);
