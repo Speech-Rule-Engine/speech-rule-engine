@@ -20,6 +20,7 @@
 goog.provide('sre.EnrichMathmlTest');
 
 goog.require('sre.AbstractExamples');
+goog.require('sre.DomUtil');
 goog.require('sre.Enrich');
 
 
@@ -42,6 +43,16 @@ sre.EnrichMathmlTest = function() {
 goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
 
+
+/**
+ * @override
+ */
+sre.EnrichMathmlTest.prototype.setUpTest = function() {
+  this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
+                        'data-semantic-fencepointer'];
+};
+
+
 /**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} mml MathML expression.
@@ -53,6 +64,7 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+  this.customizeXml(node);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));
@@ -65,6 +77,22 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   // var cleaned2 = sre.EnrichMathml.removeAttributePrefix(
   //     xmls.serializeToString(node2));
   // this.assert.equal(cleaned, cleaned2);
+};
+
+
+/**
+ * Removes XML nodes according to the XPath elements in the blacklist.
+ * @param {!Node} xml Xml representation of the semantic node.
+ */
+sre.EnrichMathmlTest.prototype.customizeXml = function(xml) {
+  this.attrBlacklist.forEach(
+      function(attr) {
+        var removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
+        removes.forEach(
+            function(node) {
+              node.removeAttribute(attr);
+            });
+      });
 };
 
 
