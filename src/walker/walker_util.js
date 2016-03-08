@@ -100,3 +100,25 @@ sre.WalkerUtil.dataAttribute = function(attr) {
 sre.WalkerUtil.getAttribute = function(node, attr) {
   return sre.DomUtil.getDataAttribute(node, sre.WalkerUtil.dataAttribute(attr));
 };
+
+
+/**
+ * Retrieves the node containing the embedding of the root of a semantic tree.
+ * @param {!Node} node The math node.
+ * @return {!Node} The node with the embedded root. If we cannot find one, the
+ *     input node is returned.
+ */
+sre.WalkerUtil.getSemanticRoot = function(node) {
+  if (node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) &&
+      !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
+    return node;
+  }
+  var semanticNodes = node.querySelectorAll(
+      '[' + sre.EnrichMathml.Attribute.TYPE + ']');
+  for (var i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
+    if (!semanticNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
+      return semanticNode;
+    }
+  }
+  return node;
+};
