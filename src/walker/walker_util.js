@@ -113,6 +113,7 @@ sre.WalkerUtil.getAttribute = function(node, attr) {
  * @return {Element} The node for that id.
  */
 sre.WalkerUtil.getBySemanticId = function(node, id) {
+  if (typeof id === 'undefined') return null;
   var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
   return node.querySelector(query);
 };
