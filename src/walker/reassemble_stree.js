@@ -31,20 +31,33 @@ goog.require('sre.Semantic');
 /**
  * @constructor
  * @param {!Node} mathml The enriched MathML node.
+ * @return {sre.SemanticTree} The rebuilt semantic tree.
  */
 sre.ReassembleStree = function(mathml) {
 
   this.mathml = mathml;
 
-  this.root = sre.WalkerUtil.getSemanticRoot(mathml);
-  
-  this.current = mathml;
+  this.mmlRoot = sre.WalkerUtil.getSemanticRoot(mathml);
 
-  this.frontier = [this.root];
+  this.streeRoot = this.assembleTree(this.mmlRoot);
   
-  return this.assembleTree(this.root);
+  this.stree = this.makeTree();
+  
+  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var xml = dp.parseFromString('<stree></stree>', 'text/xml');
+  //xml.childNodes[0].appendChild();
+  return this.stree;
 };
 //goog.addSingletonGetter(sre.ReassembleStree);
+
+
+sre.ReassembleStree.prototype.makeTree = function() {
+  var empty = sre.DomUtil.parseInput('<math/>');
+  var dummy = new sre.SemanticTree(empty);
+  dummy.root = this.streeRoot;
+  dummy.mathml = this.mathml;
+  return dummy;
+};
 
 
 sre.ReassembleStree.prototype.assembleTree = function(node) {
@@ -68,13 +81,9 @@ sre.ReassembleStree.makeNode = function(node) {
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
-  console.log(type);
-  console.log(id);
-  console.log(role);
   var snode = new sre.SemanticTree.Node(parseInt(id, 10));
-  snode.type = sre.SemanticAttr.Type[type];
-  snode.role = sre.SemanticAttr.Role[role];
-  snode.font = sre.SemanticAttr.Font[font];
-  console.log(snode);
+  snode.type = /** @type {sre.SemanticAttr.Type} */(type);
+  snode.role = /** @type {sre.SemanticAttr.Role} */(role);
+  snode.font = /** @type {sre.SemanticAttr.Font} */(font);
   return snode;
 };
