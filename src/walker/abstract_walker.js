@@ -196,8 +196,7 @@ sre.AbstractWalker.prototype.right = goog.abstractMethod;
  * @return {Node} The node for that id.
  */
 sre.AbstractWalker.prototype.getBySemanticId = function(id) {
-  var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
-  return this.node.querySelector(query);
+  return sre.WalkerUtil.getBySemanticId(this.node, id);
 };
 
 

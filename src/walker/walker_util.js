@@ -122,3 +122,15 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
   }
   return node;
 };
+
+
+/**
+ * Retrieves a node containing a given semantic id starting from the given root.
+ * @param {!Node} root Root node for the query.
+ * @param {string} id The id of a semantic node.
+ * @return {Node} The node for that id.
+ */
+sre.WalkerUtil.getBySemanticId = function(root, id) {
+  var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
+  return root.querySelector(query);
+};
