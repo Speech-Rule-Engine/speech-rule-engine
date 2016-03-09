@@ -1628,7 +1628,7 @@ sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
         } else {
           innerNode = this.makeBranchNode_(sre.SemanticAttr.Type.UNDERSCORE,
                                            [center, children[1]], []);
-          innerNode.role = center.role;
+          innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
           children = [innerNode, children[2]];
           type = sre.SemanticAttr.Type.OVERSCORE;
         }
