@@ -91,6 +91,11 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   };
   snode.contentNodes = content.map(goog.bind(setParent, this));
   snode.childNodes = children.map(goog.bind(setParent, this));
+  var collapsed = sre.WalkerUtil.getAttribute(
+    node, sre.EnrichMathml.Attribute.COLLAPSED);
+  if (collapsed) {
+    return sre.RebuildStree.postProcess(snode, collapsed);
+  }
   return snode;
 };
 
@@ -119,10 +124,77 @@ sre.RebuildStree.makeNode = function(node) {
 };
 
 
+
+/**
+ * Rearranges semantic node if there is a collapse structure. 
+ * @param {!sre.SemanticTree.Node} snode The semantic node.
+ * @param {!string} collapsed The collapse structure.
+ * @return {!sre.SemanticTree.Node} The semantic node.
+ */
+sre.RebuildStree.postProcess = function(snode, collapsed) {
+  var array = sre.RebuildStree.parseCollapsed_(collapsed);
+  if (snode.type === sre.SemanticAttr.Role.SUBSUP) {
+    var subscript = new sre.SemanticTree.Node(array[1][0]);
+    subscript.type = sre.SemanticAttr.Type.SUBSCRIPT;
+    subscript.role = sre.SemanticAttr.Role.SUBSUP;
+    snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
+    sre.RebuildStree.collapsedChildren_(snode, [subscript], array);
+    return snode;
+  }
+  // if (snode.type === sre.SemanticAttr.Role.OVERSCORE) {
+  //   var underscore = new sre.SemanticTree.Node(array[1][0]);
+  //   underscore.type = sre.SemanticAttr.Type.OVERSCORE;
+  //   subscript.role = sre.SemanticAttr.Role.SUBSUP;
+  //   snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
+  //   sre.RebuildStree.collapsedChildren_(snode, [subscript], array);
+  //   return snode;
+  // }
+  return snode;
+};
+
+
+sre.RebuildStree.collapsedChildren_ = function(oldNode, newNodes, collapsed) {
+  newNodes.unshift(oldNode);
+  newNodes = newNodes.concat(oldNode.childNodes);
+  var nodeDict = {};
+  for (var i = 0, node; node = newNodes[i]; i++) {
+    nodeDict[node.id] = node;
+  }
+  var recurseCollapsed = function(coll) {
+    var parent = nodeDict[coll[0]];
+    parent.childNodes = [];
+    for (var j = 1, l = coll.length; j < l; j++) {
+      if (typeof coll[j] === 'number') {
+        parent.childNodes.push(nodeDict[coll[j]]);
+      } else {
+        parent.childNodes.push(recurseCollapsed(coll[j]));
+      }
+    }
+    return parent;
+  };
+  recurseCollapsed(collapsed);
+};
+
+
+/**
+ * Parses the collapsed structure into an array of integer arrays.
+ * @param {!string} collapsed String containing the collapsed structure.
+ * @return {!Array} The array of integer arrays.
+ */
+sre.RebuildStree.parseCollapsed_ = function(collapsed) {
+  var str = collapsed.replace(/\(/g, '[');
+  str = str.replace(/\)/g, ']');
+  str = str.replace(/ /g, ',');
+  return /** @type {!Array} */(JSON.parse(str));
+};
+
+
 sre.RebuildStree.experiment__ = function(expr) {
   var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
+  console.log(mml.toString());
   var stree = new sre.SemanticTree(mml);
   var emml = sre.EnrichMathml.enrich(mml, stree);
+  console.log(emml.toString());
   var reass = new sre.RebuildStree(emml);
 
   var str1 = stree.toString();
