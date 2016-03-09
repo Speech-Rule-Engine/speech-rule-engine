@@ -21,6 +21,7 @@ goog.provide('sre.Tests');
 
 goog.require('sre.ColorPickerTest');
 goog.require('sre.EnrichMathmlTest');
+goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakEmbellishTest');
@@ -63,6 +64,7 @@ sre.Tests.prototype.run = function() {
 sre.Tests.testList = [
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
+  sre.EnrichSpeechTest,
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
