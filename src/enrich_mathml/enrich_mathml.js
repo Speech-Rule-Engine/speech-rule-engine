@@ -827,8 +827,8 @@ sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
  */
 sre.EnrichMathml.addSpeech = function(mml, semantic) {
   var descrs = sre.SpeechRuleEngine.getInstance().
-        getCache(semantic.id.toString());
-  if (!descrs) {    
+      getCache(semantic.id.toString());
+  if (!descrs) {
     descrs = sre.EnrichMathml.recomputeSpeech(mml, semantic);
   }
   var speech = sre.AuditoryDescription.toSimpleString(descrs);
