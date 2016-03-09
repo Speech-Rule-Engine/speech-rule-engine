@@ -28,6 +28,7 @@ goog.require('sre.Semantic');
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
+//TODO: This is probably not a class but just a utility procedure.
 /**
  * @constructor
  * @param {!Node} mathml The enriched MathML node.
@@ -45,7 +46,6 @@ sre.ReassembleStree = function(mathml) {
   
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
-  //xml.childNodes[0].appendChild();
   return this.stree;
 };
 //goog.addSingletonGetter(sre.ReassembleStree);
@@ -61,7 +61,6 @@ sre.ReassembleStree.prototype.makeTree = function() {
 
 
 sre.ReassembleStree.prototype.assembleTree = function(node) {
-  console.log(node.toString());
   // if (this.frontier.length === 0) return;
   // var current = this.frontier.shift();
   var snode = sre.ReassembleStree.makeNode(node);
@@ -69,21 +68,66 @@ sre.ReassembleStree.prototype.assembleTree = function(node) {
     sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
     sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CONTENT));
-  snode.content = content.map(goog.bind(this.assembleTree, this));
-  snode.children = children.map(goog.bind(this.assembleTree, this));
+  if (content.length === 0 && children.length === 0) {
+    snode.textContent = node.textContent;
+    return snode;
+  }
+  if (content.length > 0) {
+    var fcontent = sre.WalkerUtil.getBySemanticId(node, content[0]);
+    if (fcontent) {
+      var operator = sre.WalkerUtil.splitAttribute(
+        sre.WalkerUtil.getAttribute(
+          fcontent, sre.EnrichMathml.Attribute.OPERATOR));
+      if (operator.length > 1) {
+        snode.textContent = operator[1];
+      }
+    }
+  }
+  var setParent = function(n) {
+    var mml = sre.WalkerUtil.getBySemanticId(node, n);
+    var sn = this.assembleTree(mml);
+    sn.parent = snode;
+    return sn;
+  };
+  snode.contentNodes = content.map(goog.bind(setParent, this));
+  snode.childNodes = children.map(goog.bind(setParent, this));
   return snode;
 };
 
 
 sre.ReassembleStree.makeNode = function(node) {
-  console.log(sre.EnrichMathml.Attribute.TYPE);
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
+  var embellished = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.EMBELLISHED);
+  var fencepointer = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.FENCEPOINTER);
   var snode = new sre.SemanticTree.Node(parseInt(id, 10));
   snode.type = /** @type {sre.SemanticAttr.Type} */(type);
   snode.role = /** @type {sre.SemanticAttr.Role} */(role);
-  snode.font = /** @type {sre.SemanticAttr.Font} */(font);
+  snode.font = font ? /** @type {sre.SemanticAttr.Font} */(font) :
+    sre.SemanticAttr.Font.UNKNOWN;
+  if (fencepointer) {
+    snode.fencePointer = fencepointer;
+  }
+  if (embellished) {
+    snode.embellished = /** @type {sre.SemanticAttr.Type} */(embellished);
+  }
   return snode;
+};
+
+
+sre.ReassembleStree.experiment__ = function(expr) {
+  var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
+  var stree = new sre.SemanticTree(mml);
+  var emml = sre.EnrichMathml.enrich(mml, stree);
+  var reass = new sre.ReassembleStree(emml);
+
+  var str1 = stree.toString();
+  var str2 = reass.toString();
+  console.log(str1);
+  console.log(str2);
+  return str1 === str2;
 };
