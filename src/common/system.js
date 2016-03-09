@@ -33,7 +33,7 @@ goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
 
-goog.require('sre.ReassembleStree');
+goog.require('sre.RebuildStree');
 goog.require('sre.WalkerUtil');
 
 

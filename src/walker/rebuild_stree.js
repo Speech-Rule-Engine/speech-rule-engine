@@ -20,7 +20,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.ReassembleStree');
+goog.provide('sre.RebuildStree');
 
 goog.require('sre.Semantic');
 
@@ -34,7 +34,7 @@ goog.require('sre.Semantic');
  * @param {!Node} mathml The enriched MathML node.
  * @return {sre.SemanticTree} The rebuilt semantic tree.
  */
-sre.ReassembleStree = function(mathml) {
+sre.RebuildStree = function(mathml) {
 
   this.mathml = mathml;
 
@@ -48,10 +48,10 @@ sre.ReassembleStree = function(mathml) {
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
   return this.stree;
 };
-//goog.addSingletonGetter(sre.ReassembleStree);
+//goog.addSingletonGetter(sre.RebuildStree);
 
 
-sre.ReassembleStree.prototype.makeTree = function() {
+sre.RebuildStree.prototype.makeTree = function() {
   var empty = sre.DomUtil.parseInput('<math/>');
   var dummy = new sre.SemanticTree(empty);
   dummy.root = this.streeRoot;
@@ -60,10 +60,10 @@ sre.ReassembleStree.prototype.makeTree = function() {
 };
 
 
-sre.ReassembleStree.prototype.assembleTree = function(node) {
+sre.RebuildStree.prototype.assembleTree = function(node) {
   // if (this.frontier.length === 0) return;
   // var current = this.frontier.shift();
-  var snode = sre.ReassembleStree.makeNode(node);
+  var snode = sre.RebuildStree.makeNode(node);
   var children = sre.WalkerUtil.splitAttribute(
     sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
@@ -95,7 +95,7 @@ sre.ReassembleStree.prototype.assembleTree = function(node) {
 };
 
 
-sre.ReassembleStree.makeNode = function(node) {
+sre.RebuildStree.makeNode = function(node) {
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
@@ -119,11 +119,11 @@ sre.ReassembleStree.makeNode = function(node) {
 };
 
 
-sre.ReassembleStree.experiment__ = function(expr) {
+sre.RebuildStree.experiment__ = function(expr) {
   var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
   var stree = new sre.SemanticTree(mml);
   var emml = sre.EnrichMathml.enrich(mml, stree);
-  var reass = new sre.ReassembleStree(emml);
+  var reass = new sre.RebuildStree(emml);
 
   var str1 = stree.toString();
   var str2 = reass.toString();

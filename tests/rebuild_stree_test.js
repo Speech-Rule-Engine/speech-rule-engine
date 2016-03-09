@@ -24,7 +24,7 @@ goog.provide('sre.RebuildStreeTest');
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
 goog.require('sre.Enrich');
-goog.require('sre.ReassembleStree');
+goog.require('sre.RebuildStree');
 
 
 
@@ -55,7 +55,7 @@ sre.RebuildStreeTest.prototype.executeRebuildTest = function(expr) {
   var mml = sre.DomUtil.parseInput(mathMl);
   var stree = new sre.SemanticTree(mml);
   var emml = sre.EnrichMathml.enrich(mml, stree);
-  var reass = new sre.ReassembleStree(emml);
+  var reass = new sre.RebuildStree(emml);
 
   this.assert.equal(stree.toString(), reass.toString());
 };
