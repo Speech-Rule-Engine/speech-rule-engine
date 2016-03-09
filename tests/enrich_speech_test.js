@@ -73,7 +73,7 @@ sre.EnrichSpeechTest.prototype.tearDownTest = function() {
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} expr MathML expression.
  */
-sre.EnrichSpeechTest.prototype.executeRebuildTest = function(expr) {
+sre.EnrichSpeechTest.prototype.executeSpeechTest = function(expr) {
   var mml = sre.Enrich.prepareMmlString(expr);
   var sysSpeech = sre.System.getInstance().toSpeech(mml);
   var enr = sre.WalkerUtil.getSemanticRoot(sre.Enrich.semanticMathmlSync(mml));
@@ -86,14 +86,14 @@ sre.EnrichSpeechTest.prototype.executeRebuildTest = function(expr) {
 /**
  * Test for empty wrapping elements.
  */
-sre.EnrichSpeechTest.prototype.testRebuildWrappers = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechWrappers = function() {
+  this.executeSpeechTest(
       '<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mstyle><mi>q</mi><mpadded><mstyle><mrow><mi>x</mi><mo>+</mo>' +
       '</mrow></mstyle><mpadded><mrow><mi>a</mi></mrow><mrow><mi>a</mi>' +
       '</mrow></mpadded><mtext>nix</mtext></mpadded></mstyle>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow>' +
       '<mi>x</mi>' +
       '<mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow>');
@@ -104,24 +104,24 @@ sre.EnrichSpeechTest.prototype.testRebuildWrappers = function() {
 /**
  * Test for sub super and subsuper scripts.
  */
-sre.EnrichSpeechTest.prototype.testRebuildScripts = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechScripts = function() {
+  this.executeSpeechTest(
       '<msub><mi>a</mi><mi>b</mi></msub>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msubsup><mi>a</mi><mi>b</mi><mi>c</mi></msubsup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom/><msub><mi>a</mi><mpadded><mi>b</mi></mpadded></msub>' +
       '<merror/>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom/><msup><mi>a</mi><mpadded><mi>b</mi></mpadded></msup>' +
       '<merror/>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi></mpadded>' +
       '<mpadded><mi>c</mi></mpadded></msubsup><merror/>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom/><msubsup><mpadded><mi>a</mi></mpadded><mi>b</mi>' +
       '<mpadded><mi>c</mi></mpadded></msubsup><merror/>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi><mi>d</mi></mpadded>' +
       '<mpadded><mi>c</mi></mpadded></msubsup><merror/>');
 };
@@ -131,16 +131,16 @@ sre.EnrichSpeechTest.prototype.testRebuildScripts = function() {
 /**
  * Test number representations.
  */
-sre.EnrichSpeechTest.prototype.testRebuildNumbers = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechNumbers = function() {
+  this.executeSpeechTest(
       '<mn>2</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>2.0</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>2t3</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfrac><mn>1</mn><mn>2</mn></mfrac>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfrac><mn>1</mn><mn>2.5</mn></mfrac>');
 };
 
@@ -148,18 +148,18 @@ sre.EnrichSpeechTest.prototype.testRebuildNumbers = function() {
 /**
  * Test mixed number representations.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMixedNumbers = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechMixedNumbers = function() {
+  this.executeSpeechTest(
       '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>');
 };
 
@@ -168,14 +168,14 @@ sre.EnrichSpeechTest.prototype.testRebuildMixedNumbers = function() {
 /**
  * Test relation trees.
  */
-sre.EnrichSpeechTest.prototype.testRebuildRelations = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechRelations = function() {
+  this.executeSpeechTest(
       '<mo>=</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>=</mo><mi>b</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>' +
       '<mo>&#x2264;</mo><mi>d</mi>');
 };
@@ -185,31 +185,31 @@ sre.EnrichSpeechTest.prototype.testRebuildRelations = function() {
 /**
  * Test operator trees with pre- and postfixes.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrePostfixOperators = function() {
+sre.EnrichSpeechTest.prototype.testSpeechPrePostfixOperators = function() {
   // Pathological operator only case.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>+</mo><mo>-</mo><mo>+</mo>');
   // Single identifier with prefixes.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>+</mo><mo>+</mo><mi>a</mi>');
   // Single identifier with prefix and negative.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>+</mo><mo>-</mo><mi>a</mi>');
   // Single identifier with postfixes.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mo>-</mo>');
   // Single identifier with pre- and postfixes.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>+</mo><mo>+</mo><mi>a</mi><mo>+</mo><mo>+</mo>');
   // Single identifier with mixed pre- and postfixes.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>&#x2213;</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>');
   // Two identifiers with pre- and postfixes.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>' +
       '<mi>b</mi><mo>+</mo>');
   // Three identifiers with pre- and postfixes.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>' +
       '<mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>');
 };
@@ -218,24 +218,24 @@ sre.EnrichSpeechTest.prototype.testRebuildPrePostfixOperators = function() {
 /**
  * Test operator trees with single operator.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSingleOperators = function() {
+sre.EnrichSpeechTest.prototype.testSpeechSingleOperators = function() {
   // Single identifier.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi>');
   // Single implicit node.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mi>b</mi>');
   // Implicit multi node.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mi>b</mi><mi>c</mi>');
   // Single addition.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi>');
   // Multi addition.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi>');
   // Multi addition with implicit node.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mi>c</mi><mo>+</mo><mi>d</mi>');
 };
 
@@ -243,25 +243,25 @@ sre.EnrichSpeechTest.prototype.testRebuildSingleOperators = function() {
 /**
  * Test operator trees with multiple operators.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMultipleOperators = function() {
+sre.EnrichSpeechTest.prototype.testSpeechMultipleOperators = function() {
   // Addition and subtraction.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>-</mo><mi>c</mi><mo>+</mo><mi>d</mi>');
   // Addition and subtraction.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>-</mo>' +
       '<mi>d</mi><mo>-</mo><mi>e</mi>');
   // Addition and explicit multiplication.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mo>+</mo>' +
       '<mi>d</mi>');
   // Addition with explicit and implicit multiplication.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mi>d</mi>' +
       '<mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi>');
   // Two Additions, subtraction plus explicit and implicit multiplication,
   // one prefix and one postfix.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mi>d</mi>' +
       '<mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi><mo>-</mo><mi>g</mi>' +
       '<mo>+</mo><mo>+</mo><mi>h</mi><mo>&#x2295;</mo><mi>i</mi>' +
@@ -272,21 +272,21 @@ sre.EnrichSpeechTest.prototype.testRebuildMultipleOperators = function() {
 /**
  * Test operator trees with multiplication operators.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMultiplicationOperators =
+sre.EnrichSpeechTest.prototype.testSpeechMultiplicationOperators =
     function() {
   // Addition and subtraction.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>c</mi><mo>*</mo><mi>d</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow>' +
       '<mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi>' +
       '</mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow>' +
       '<mn>1</mn><mi>a</mi><mo>&#x00B7;</mo>' +
       '<mi>m</mi><mo>&#x00B7;</mo><mi>s</mi>' +
       '</mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow>' +
       '<mn>1</mn><mi>a</mi><mo>&#x00B7;</mo>' +
       '<mi>m</mi><mo>&#x00B7;</mo>' +
@@ -294,14 +294,14 @@ sre.EnrichSpeechTest.prototype.testRebuildMultiplicationOperators =
       '<mi>c</mi><mi>b</mi><mo>&#x00B7;</mo>' +
       '<mi>k</mi>' +
       '</mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow>' +
       '<mn>1</mn><mi>a</mi><mo>&#x00B7;</mo>' +
       '<msup><mi>m</mi><mn>2</mn></msup>' +
       '<mo>&#x00B7;</mo>' +
       '<msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow>' +
       '</msup></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn>' +
       '<mi>a</mi><mo>&#x00B7;</mo>' +
       '<msup><mi>m</mi><mn>2</mn></msup>' +
@@ -315,34 +315,34 @@ sre.EnrichSpeechTest.prototype.testRebuildMultiplicationOperators =
 /**
  * Test regular directed fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildRegularFences = function() {
+sre.EnrichSpeechTest.prototype.testSpeechRegularFences = function() {
   // No fence.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>');
   // Empty parentheses.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mo>)</mo>');
   // Single Fenced Expression.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow>');
   // Single Fenced Expression and operators.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>+</mo><mo>(</mo><mi>b</mi><mo>+</mo><mi>c</mi>' +
       '<mo>)</mo><mo>+</mo><mi>d</mi></mrow>');
   // Parallel Parenthesis.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo>' +
       '<mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo></mrow>');
   // Nested Parenthesis.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>(</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>' +
       '<mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo><mo>)</mo></mrow>');
   // Nested parenthesis and brackets.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>(</mo><mo>[</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo>' +
       '<mi>c</mi><mo>]</mo><mo>+</mo><mi>d</mi><mo>)</mo></mrow>');
   // Nested parenthesis, brackets, braces and superscript operator.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>(</mo><msup><mi>a</mi><mrow><mn>2</mn><mo>[</mo><mi>i</mi>' +
       '<mo>+</mo><mi>n</mi><mo>]</mo></mrow></msup><mo>+</mo><mi>b</mi>' +
       '<mo>)</mo><mo>+</mo><mo>{</mo><mi>c</mi><mi>d</mi><mo>-</mo><mo>[</mo>' +
@@ -353,19 +353,19 @@ sre.EnrichSpeechTest.prototype.testRebuildRegularFences = function() {
 /**
  * Test neutral fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildNeutralFences = function() {
+sre.EnrichSpeechTest.prototype.testSpeechNeutralFences = function() {
   // Empty bars.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo><mo>|</mo></mrow>');
   // Simple bar fence.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo><mi>a</mi><mo>|</mo></mrow>');
   // Parallel bar fences.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo>' +
       '<mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>');
   // Nested bar fences.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x00A6;</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi>' +
       '<mo>+</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>');
 };
@@ -374,21 +374,21 @@ sre.EnrichSpeechTest.prototype.testRebuildNeutralFences = function() {
 /**
  * Mixed neutral and regular fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMixedFences = function() {
+sre.EnrichSpeechTest.prototype.testSpeechMixedFences = function() {
   // Empty parenthsis inside bars.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo><mo>(</mo><mo>)</mo><mo>|</mo></mrow>');
   // Bars inside parentheses.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>(</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi>' +
       '<mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi>' +
       '<mo>)</mo></mrow>');
   // Parentheses inside bards.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>' +
       '<mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>|</mo></mrow>');
   // Parentheses inside bards.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>[</mo><mo>|</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>|</mo>' +
       '<mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x00A6;</mo><mi>d</mi>' +
       '<mo>+</mo><mo>(</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>)</mo>' +
@@ -399,24 +399,24 @@ sre.EnrichSpeechTest.prototype.testRebuildMixedFences = function() {
 /**
  * Mixed with isolated bars.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMixedFencesWithBars = function() {
+sre.EnrichSpeechTest.prototype.testSpeechMixedFencesWithBars = function() {
   // Set notation.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>{</mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo>' +
       '<mi>z</mi><mo>)</mo><mo>|</mo><mi>x</mi><mi>y</mi><mo>=</mo>' +
       '<mo>z</mo><mo>}</mo></mrow>');
   // Disjunction of bracketed parallel statements.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo>' +
       '<mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo>' +
       '</mrow>');
   // Metric over the above.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo>' +
       '<mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo>' +
       '<mi>y</mi><mo>]</mo><mo>&#x2016;</mo></mrow>');
   // Mix of metrics and bracketed expression and single bars.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi>' +
       '<mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo>' +
       '<mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>[</mo>' +
@@ -428,25 +428,25 @@ sre.EnrichSpeechTest.prototype.testRebuildMixedFencesWithBars = function() {
 /**
  * Pathological cases with only opening fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildOpeningFencesOnly = function() {
+sre.EnrichSpeechTest.prototype.testSpeechOpeningFencesOnly = function() {
   // Single.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>[</mo></mrow>');
   // Single right.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>[</mo></mrow>');
   // Single middle.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>[</mo><mi>b</mi></mrow>');
   // Single left.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>[</mo><mi>b</mi></mrow>');
   // Multiple.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mi>c</mi><mo>(</mo><mi>d</mi>' +
       '<mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>');
   // Multiple plus inner fenced.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mo>[</mo><mo>(</mo><mo>(</mo>' +
       '<mi>c</mi><mo>)</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo>' +
       '<mi>f</mi></mrow>');
@@ -456,25 +456,25 @@ sre.EnrichSpeechTest.prototype.testRebuildOpeningFencesOnly = function() {
 /**
  * Pathological cases with only closing fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildClosingFencesOnly = function() {
+sre.EnrichSpeechTest.prototype.testSpeechClosingFencesOnly = function() {
   // Single.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>]</mo></mrow>');
   // Single right.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>]</mo></mrow>');
   // Single middle.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>]</mo><mi>b</mi></mrow>');
   // Single left.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>]</mo><mi>b</mi></mrow>');
   // Multiple.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mi>c</mi><mo>)</mo><mi>d</mi>' +
       '<mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>');
   // Multiple plus inner fenced.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mo>]</mo><mo>(</mo><mi>c</mi>' +
       '<mo>)</mo><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo>' +
       '<mi>f</mi></mrow>');
@@ -484,28 +484,28 @@ sre.EnrichSpeechTest.prototype.testRebuildClosingFencesOnly = function() {
 /**
  * Pathological cases with only neutral fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildNeutralFencesOnly = function() {
+sre.EnrichSpeechTest.prototype.testSpeechNeutralFencesOnly = function() {
   // Single.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo></mrow>');
   // Single right.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>|</mo></mrow>');
   // Single middle.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>|</mo><mi>b</mi></mrow>');
   // Single left.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>|</mo><mi>b</mi></mrow>');
   // Two different bars.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi></mrow>');
   // Three different bars.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi>' +
       '<mo>&#x00A6;</mo><mi>d</mi></mrow>');
   // Multiple plus inner fenced.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi>' +
       '<mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo>' +
       '<mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>');
@@ -515,31 +515,31 @@ sre.EnrichSpeechTest.prototype.testRebuildNeutralFencesOnly = function() {
 /**
  * Pathological cases with mixed fences.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMixedUnmatchedFences = function() {
+sre.EnrichSpeechTest.prototype.testSpeechMixedUnmatchedFences = function() {
   // Close, );
   // Neutrals and close.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi>' +
       '<mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mi>e</mi></mrow>');
   // Neutrals and open.
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo>' +
       '<mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>');
   // Multiple fences, fenced and operations
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi>' +
       '<mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo>' +
       '<mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo>' +
       '<mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi>' +
       '<mo>]</mo></mrow>');
   // Multiple fences, fenced and operations
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x2016;</mo><mo>]</mo><mo>&#x00A6;</mo><mo>&#x2016;</mo>' +
       '<mo>[</mo><mo>|</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi>' +
       '<mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>[</mi><mo>&#x2016;</mo>' +
       '<mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>');
   // Multiple fences, fenced and operations
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x00A6;</mo>' +
       '<mo>&#x2016;</mo><mo>[</mo><mo>+</mo><mo>[</mo><mi>b</mi>' +
       '<mo>&#x2016;</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x2016;</mo>' +
@@ -551,16 +551,16 @@ sre.EnrichSpeechTest.prototype.testRebuildMixedUnmatchedFences = function() {
 /**
  * Square roots
  */
-sre.EnrichSpeechTest.prototype.testRebuildSquareRoots = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSquareRoots = function() {
+  this.executeSpeechTest(
       '<msqrt></msqrt>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msqrt><mi>x</mi></msqrt>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msqrt><msqrt><mi>x</mi></msqrt></msqrt>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msqrt><mi>x</mi><mi>n</mi></msqrt>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>');
 };
 
@@ -568,17 +568,17 @@ sre.EnrichSpeechTest.prototype.testRebuildSquareRoots = function() {
 /**
  * Regular roots
  */
-sre.EnrichSpeechTest.prototype.testRebuildRegularRoots = function() {
+sre.EnrichSpeechTest.prototype.testSpeechRegularRoots = function() {
   // Not sure if that makes even sense.
-  // this.executeRebuildTest('<mroot></mroot>');
-  this.executeRebuildTest(
+  // this.executeSpeechTest('<mroot></mroot>');
+  this.executeSpeechTest(
       '<mroot><mi>x</mi><mi>n</mi></mroot>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi>' +
       '<mo>+</mo><mn>1</mn></mrow></mroot>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi>' +
       '<mi>l</mi></mroot></mrow><mi>m</mi></mroot>');
 };
@@ -587,12 +587,12 @@ sre.EnrichSpeechTest.prototype.testRebuildRegularRoots = function() {
 /**
  * Mixed roots
  */
-sre.EnrichSpeechTest.prototype.testRebuildMixedRoots = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechMixedRoots = function() {
+  this.executeSpeechTest(
       '<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>');
 };
 
@@ -600,45 +600,45 @@ sre.EnrichSpeechTest.prototype.testRebuildMixedRoots = function() {
 /**
  * Simple function applications
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsSingle = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleFuncsSingle = function() {
+  this.executeSpeechTest(
       '<mrow><mi>f</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi>' +
       '<mo>,</mo><mi>z</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn>' +
       '<mn>1</mn></msubsup><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn>' +
       '<mn>1</mn></munderover><mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo></mrow>');
 };
@@ -647,32 +647,32 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsSingle = function() {
 /**
  * Simple functions with surrounding operators.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsWithOps = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleFuncsWithOps = function() {
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
       '<mn>2</mn></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mn>2</mn></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
       '<mo>b</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mo>b</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo>' +
       '<mo>b</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>=</mo><mo>b</mo></mrow>');
 };
@@ -681,15 +681,15 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsWithOps = function() {
 /**
  * Multiple simple functions.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsMulti = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleFuncsMulti = function() {
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo>' +
       '<mi>x</mi><mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi>' +
       '<mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo>' +
       '<mi>x</mi><mi>y</mi><mo>)</mo></mrow>');
@@ -699,17 +699,17 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsMulti = function() {
 /**
  * Nested simple functions.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsNested = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleFuncsNested = function() {
+  this.executeSpeechTest(
       '<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>P</mi><mo>[</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>]</mo>');
 };
 
@@ -717,18 +717,18 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsNested = function() {
 /**
  * Simple functions with explicit function application.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsExplicitApp = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleFuncsExplicitApp = function() {
+  this.executeSpeechTest(
       '<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msub><mi>f</mi><mn>1</mn></msub><mo>&#x2061;</mo><mo>(</mo><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><msub><mi>f</mi><mi>n</mi></msub><mn>2</mn></msup>' +
       '<mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>' +
       '<mo>+</mo><msup><msub><mi>f</mi><mi>m</mi></msub><mn>2</mn></msup>' +
@@ -739,42 +739,42 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleFuncsExplicitApp = function() {
 /**
  * Prefix function applications
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsSingle = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsSingle = function() {
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn>' +
       '<mn>1</mn></msubsup><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn>' +
       '<mn>1</mn></munderover><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '<mo>)</mo></mrow>');
 };
@@ -783,40 +783,40 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsSingle = function() {
 /**
  * Prefix functions applications with surrounding operators.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsWithOps = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsWithOps = function() {
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
       '<mn>2</mn></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><mn>2</mn></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo>' +
       '<mo>b</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo><mo>+</mo><mo>b</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo>' +
       '<mo>b</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>=</mo><mo>b</mo></mrow>');
 };
@@ -825,17 +825,17 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsWithOps = function() {
 /**
  * Multiple prefix function applications.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsMulti = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsMulti = function() {
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo>' +
       '<mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi>' +
       '<mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo>' +
       '<mi>x</mi><mi>y</mi><mo>)</mo></mrow>');
@@ -845,20 +845,20 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsMulti = function() {
 /**
  * Prefix function applications with sub- and superscripts.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsScripts = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsScripts = function() {
+  this.executeSpeechTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msub><mi>sin</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mo>(</mo>' +
       '<mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>(</mo>' +
       '<mi>y</mi><mo>)</mo><mo>=</mo><mn>1</mn></mrow>');
@@ -868,34 +868,34 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsScripts = function() {
 /**
  * Prefix function applications with unfenced arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsUnfenced = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsUnfenced = function() {
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mi>y</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><msubsup><mi>x</mi><mn>2</mn><mn>1</mn>' +
       '</msubsup></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mover><mi>x</mi><mn>2</mn></mover></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><munder><mi>x</mi><mn>2</mn></munder></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><munderover><mi>x</mi><mn>2</mn><mn>1</mn>' +
       '</munderover></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>');
 };
 
@@ -904,34 +904,34 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsUnfenced = function() {
  * Prefix function applications with unfenced arguments in an operator
  * expression.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsUnfencedOps = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsUnfencedOps = function() {
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo>' +
       '<mn>2</mn></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo>' +
       '<mo>b</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mo>=</mo>' +
       '<mo>b</mo></mrow>');
 };
@@ -940,16 +940,16 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsUnfencedOps = function() {
 /**
  * Multiple prefix function applications with unfenced arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsMultiUnfenced =
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsMultiUnfenced =
     function() {
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mo>=</mo>' +
       '<mi>tan</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>y</mi><mo>=</mo>' +
       '<mi>tan</mi><mi>x</mi><mi>y</mi></mrow>');
 };
@@ -959,22 +959,22 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsMultiUnfenced =
  * Prefix function applications with sub- and superscripts and unfenced
  * arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsScriptUnfenced =
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsScriptUnfenced =
     function() {
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msub><mi>sin</mi><mn>1</mn></msub><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup>' +
       '<mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup>' +
       '<mi>cos</mi><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msubsup><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn>' +
       '</msubsup><mi>n</mi><mi>m</mi></msubsup><mi>x</mi></mrow>');
 };
@@ -983,19 +983,19 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsScriptUnfenced =
 /**
  * Prefix functions without arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsNoArgs = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsNoArgs = function() {
+  this.executeSpeechTest(
       '<mi>sin</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mi>sin</mi><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi>' +
       '<mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo>' +
       '<msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn>' +
       '<mi>csc</mi></mfrac></mrow>');
 };
@@ -1004,15 +1004,15 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsNoArgs = function() {
 /**
  * Nested prefix function applications, both with and without fenced arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsNested = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPrefixFuncsNested = function() {
+  this.executeSpeechTest(
       '<mrow><mi>log</mi><mi>cos</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>ln</mi><mo>(</mo><mi>sin</mi>' +
       '<mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>log</mi><mi>cos</mi><mi>x</mi><mo>=</mo><mi>ln</mi>' +
       '<mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>');
 };
@@ -1022,38 +1022,38 @@ sre.EnrichSpeechTest.prototype.testRebuildPrefixFuncsNested = function() {
  * Variations of matrices and their roles as determinants, square matrices or
  * rowvectors.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMatrices = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechMatrices = function() {
+  this.executeSpeechTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">A</mi>' +
       '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>' +
       '</mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
       '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable><mo>]</mo>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
       '</mtable><mo>]</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="|" close="|"><mtable>' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
       '<mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mfenced>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="|" close="|"><mtable>' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '<mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
       '</mtable></mfenced>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="(" close=")"><mtable>' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr>' +
@@ -1065,26 +1065,26 @@ sre.EnrichSpeechTest.prototype.testRebuildMatrices = function() {
  * Variations of vectors and their roles as determinants or binomial
  * coefficients.
  */
-sre.EnrichSpeechTest.prototype.testRebuildVectors = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechVectors = function() {
+  this.executeSpeechTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">V</mi>' +
       '<mo>=</mo><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="(" close=")"><mtable>' +
       '<mtr><mtd><mi>n</mi></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr>' +
       '</mtable></mfenced>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="|" close="|"><mtable>' +
       '<mtr><mtd><mi>n</mi></mtd></mtr>' +
       '</mtable></mfenced>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="(" close=")"><mtable>' +
       '<mtr><mtd><mi>n</mi></mtd></mtr>' +
       '</mtable></mfenced>');
@@ -1096,42 +1096,42 @@ sre.EnrichSpeechTest.prototype.testRebuildVectors = function() {
  * Variations of tables representing case statements,
  * multiline equations and regular tables.
  */
-sre.EnrichSpeechTest.prototype.testRebuildTables = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechTables = function() {
+  this.executeSpeechTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
       '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
       '<mtd><mtext>sometimes</mtext></mtd></mtr></mtable></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi mathvariant="bold">A</mi><mo>=</mo><mo>{</mo><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr>' +
       '<mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr>' +
       '</mtable></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
       '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd>' +
       '<mtext>sometimes</mtext></mtd></mtr></mtable><mo>.</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd>' +
       '<mtd><mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
       '<mtd><mtext>sometimes</mtext></mtd></mtr></mtable>' +
       '<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>.</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi><mo>,</mo>' +
       '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi><mo>,</mo>' +
       '<mtext>sometimes</mtext></mtd></mtr></mtable><mo>,</mo><mi>b</mi>' +
       '<mo>,</mo><mi>c</mi><mo>.</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
       '<mn>6</mn></mtd></mtr></mtable>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
       '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
@@ -1143,27 +1143,27 @@ sre.EnrichSpeechTest.prototype.testRebuildTables = function() {
  * Tabular structures with fences that have are interspersed with ignored
  * elements, like merror.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMatricesWithIgnores = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechMatricesWithIgnores = function() {
+  this.executeSpeechTest(
       '<mi>A</mi><mo>=</mo><mrow><mpadded><mo>[</mo></mpadded><mrow>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mrow>' +
       '<merror><mtext>nothing</mtext></merror><mo>]</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">V</mi>' +
       '<mo>=</mo><mpadded><mo>[</mo></mpadded>' +
       '<mtable rowspacing="4pt" columnspacing="1em">' +
       '<mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr>' +
       '<mtr><mtd><mn>3</mn></mtd></mtr></mtable><merror><mtext>nothing' +
       '</mtext></merror><mo>]</mo></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>f</mi><mo>=</mo><mrow><mpadded><mo>{</mo></mpadded>' +
       '<merror><mtext>nothing</mtext></merror><mtable>' +
       '<mtr><mtd><mi>a</mi></mtd><mtd><mtext>often</mtext></mtd></mtr>' +
       '<mtr><mtd><mi>b</mi></mtd><mtd><mtext>sometimes</mtext></mtd></mtr>' +
       '</mtable></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>f</mi><mo>=</mo><mpadded><mo>{</mo></mpadded>' +
       '<merror><mtext>nothing</mtext></merror>' +
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
@@ -1176,38 +1176,38 @@ sre.EnrichSpeechTest.prototype.testRebuildMatricesWithIgnores = function() {
 /**
  * Limit functions.
  */
-sre.EnrichSpeechTest.prototype.testRebuildLimitFunctions = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechLimitFunctions = function() {
+  this.executeSpeechTest(
       '<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo>' +
       '<mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi>' +
       '<mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo><mo>+</mo><mi>b</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><msup><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo>' +
       '<mi>&#x221E;</mi></mrow></munder><mo>+</mo></msup><mo>(</mo><mi>x</mi>' +
       '<mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><munderover><mi>lim</mi><mo>&#x2015;</mo><mrow><mi>x</mi>' +
       '<mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munderover><mo>(</mo>' +
       '<mi>x</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><munder><mi>liminf</mi><mrow><mi>x</mi><mo>&#x2192;</mo>' +
       '<mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>x</mi><mo>)</mo>' +
       '<mo>+</mo><munder><mi>limsup</mi><mrow><mi>y</mi><mo>&#x2192;</mo>' +
       '<mi>&#x221E;</mi></mrow></munder><mo>(</mo><mi>y</mi><mo>)</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>+</mo><munder><mi>lim</mi><mrow><mi>x</mi>' +
       '<mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mi>x</mi><mo>+</mo>' +
       '<mi>b</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo>' +
       '<mi>&#x221E;</mi></mrow></munder><munder><mi>lim</mi><mrow><mi>y</mi>' +
       '<mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><mi>x</mi>' +
@@ -1218,15 +1218,15 @@ sre.EnrichSpeechTest.prototype.testRebuildLimitFunctions = function() {
 /**
  * Limit functions without arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildLimitFunctionsNoArgs = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechLimitFunctionsNoArgs = function() {
+  this.executeSpeechTest(
       '<mi>liminf</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munder><mi>lim</mi><mrow><mi>x</mi><mo>&#x2192;</mo><mi>&#x221E;</mi>' +
       '</mrow></munder>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>liminf</mi><mo>+</mo><mi>limsup</mi><mo>=</mo><mi>lim</mi>');
 };
 
@@ -1234,19 +1234,19 @@ sre.EnrichSpeechTest.prototype.testRebuildLimitFunctionsNoArgs = function() {
 /**
  * Variations of big operators.
  */
-sre.EnrichSpeechTest.prototype.testRebuildBigOps = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechBigOps = function() {
+  this.executeSpeechTest(
       '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><msup><mi>n</mi>' +
       '<mn>2</mn></msup></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><munderover>' +
       '<mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow>' +
       '<mi>&#x221E;</mi></munderover><msup><mi>n</mi><mi>m</mi></msup></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><munder><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow></munder><msup><mi>n</mi><mn>2</mn></msup></mrow>');
 };
@@ -1255,23 +1255,23 @@ sre.EnrichSpeechTest.prototype.testRebuildBigOps = function() {
 /**
  * Big operators without Arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildBigOpsNoArgs = function() {
+sre.EnrichSpeechTest.prototype.testSpeechBigOpsNoArgs = function() {
   this.brief = true;
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>&#x2211;</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munder><mi>&#x220F;</mi><mi>n</mi></munder>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
       '</mrow><mi>&#x221E;</mi></munderover>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>&#x2211;</mi><mo>+</mo><mi>&#x2211;</mi><mo>=</mo><mi>&#x2211;</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munder><mi>&#x220F;</mi><mi>n</mi></munder><mo>+</mo>' +
       '<munder><mi>&#x220F;</mi><mi>m</mi></munder><mo>=</mo>' +
       '<munder><mi>&#x220F;</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
       '</mrow></munder>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><munderover><mi>&#x2211;</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow><mi>&#x221E;</mi></munderover><mo>+</mo>' +
       '<munderover><mi>&#x2211;</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn>' +
@@ -1284,45 +1284,45 @@ sre.EnrichSpeechTest.prototype.testRebuildBigOpsNoArgs = function() {
 /**
  * Variations of integrals.
  */
-sre.EnrichSpeechTest.prototype.testRebuildIntegrals = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechIntegrals = function() {
+  this.executeSpeechTest(
       '<mi>&#x222B;</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>&#x222B;</mi><mi>dx</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mi>dx</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>&#x222B;</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
       '<mi>x</mi></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munder><mi>&#x222B;</mi><mi>X</mi></munder>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munderover><mi>&#x222B;</mi><mn>0</mn>' +
       '<mn>10</mn></munderover><mi>x</mi>' +
       '<mi>d</mi><mi>x</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munder><mi>&#x222B;</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munderover><mi>&#x222B;</mi><mn>0</mn><mn>10</mn></munderover>' +
       '<mi>x</mi><mi>dx</mi><mo>+</mo><munderover><mi>&#x222B;</mi>' +
       '<mn>10</mn><mn>20</mn></munderover><mi>x</mi><mi>dx</mi><mo>=</mo>' +
       '<munderover><mi>&#x222B;</mi><mn>0</mn><mn>20</mn></munderover>' +
       '<mi>x</mi><mi>dx</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>&#x222B;</mi><mi>&#x222B;</mi><mi>&#x222B;</mi><mi>dx</mi>' +
       '<mi>dy</mi><mi>dz</mi>');
 };
@@ -1331,25 +1331,25 @@ sre.EnrichSpeechTest.prototype.testRebuildIntegrals = function() {
 /**
  * Translation of text elements.
  */
-sre.EnrichSpeechTest.prototype.testRebuildText = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechText = function() {
+  this.executeSpeechTest(
       '<mtext>text only</mtext>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mtext>to</mtext>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mtext>to</mtext><mi>b</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>+</mo><mi>b</mi>' +
       '<mtext>is generally not the same as</mtext>' +
       '<mi>a</mi><mi>b</mi><mo>.</mo></mrow>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mi>a</mi><mo>+</mo><mi>b</mi>' +
       '<mtext>is not the same as</mtext>' +
       '<mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>');
@@ -1359,24 +1359,24 @@ sre.EnrichSpeechTest.prototype.testRebuildText = function() {
 /**
  * Translation of mfenced elements.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechMfenced = function() {
+  this.executeSpeechTest(
       '<mfenced open="[" close="]" separators="+ - ;"/>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[" separators=""/>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[" close="]"/>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced close=")"/>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[" close="]" separators="+"><mi>x</mi><mfrac>' +
       '<mi>x</mi><mi>y</mi></mfrac><mn>5</mn></mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[" close="]" separators="+ - ;">' +
       '<mi>x</mi>' +
       '<mfrac>' +
@@ -1389,7 +1389,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>5</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[" close="]">' +
       '<mi>x</mi>' +
       '<mfrac>' +
@@ -1402,7 +1402,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>5</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced close="]" separators=" ">' +
       '<mi>x</mi>' +
       '<mfrac>' +
@@ -1415,7 +1415,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>5</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced close="]">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1423,7 +1423,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced>' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1431,7 +1431,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1439,7 +1439,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="[" close="">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1447,7 +1447,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="" close="]">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1455,7 +1455,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open=" " close=" " separators=" ">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1463,7 +1463,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="55" close=" ">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1471,7 +1471,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfenced open="" close="" separators="">' +
       '<mn>1</mn>' +
       '<mn>2</mn>' +
@@ -1479,7 +1479,7 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow>' +
       '<mfenced separators="" open="|" close="|">' +
       '<mi>a</mi>' +
@@ -1507,27 +1507,27 @@ sre.EnrichSpeechTest.prototype.testRebuildMfenced = function() {
 /**
  * Punctuated elements.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPunctuated = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPunctuated = function() {
+  this.executeSpeechTest(
       '<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi>');
 
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>:</mo><msub><mi>b</mi><mn>1</mn></msub><mo>!</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>,</mo><mo>,</mo><mo>,</mo><mo>!</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>,</mo><mo>,</mo><mo>,</mo><mo>,</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>\'</mo><mo>\'</mo><mo>\'</mo><mo>\'</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>\'</mo><mo>\'</mo><mo>,</mo><mo>\'</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>!</mo><mo>!</mo><mo>!</mo><mo>!</mo>');
 };
 
@@ -1536,23 +1536,23 @@ sre.EnrichSpeechTest.prototype.testRebuildPunctuated = function() {
 /**
  * Tests simple expressions containing units.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleUnits = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleUnits = function() {
+  this.executeSpeechTest(
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>min</mi><mi mathvariant="normal" class="MathML-Unit">min</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi></mfrac>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mfrac><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi></mfrac>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>3</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>');
 };
@@ -1561,13 +1561,13 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleUnits = function() {
 /**
  * Tests more complex expressions containing units.
  */
-sre.EnrichSpeechTest.prototype.testRebuildComplexUnits = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechComplexUnits = function() {
+  this.executeSpeechTest(
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
@@ -1575,7 +1575,7 @@ sre.EnrichSpeechTest.prototype.testRebuildComplexUnits = function() {
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>' +
@@ -1584,7 +1584,7 @@ sre.EnrichSpeechTest.prototype.testRebuildComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>' +
@@ -1600,21 +1600,21 @@ sre.EnrichSpeechTest.prototype.testRebuildComplexUnits = function() {
 /**
  * Pathological multiscripts expressions that are actually empty.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmptyTensors = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmptyTensors = function() {
+  this.executeSpeechTest(
       '<mmultiscripts></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><none/><mprescripts/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><none/><mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><none/><none/><mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><none/><none/><none/>' +
       '<mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><none/><none/><none/><mprescripts/>' +
       '<none/><mpadded/></mmultiscripts>');
 };
@@ -1623,19 +1623,19 @@ sre.EnrichSpeechTest.prototype.testRebuildEmptyTensors = function() {
 /**
  * Pathological multiscript expressions that are just the base element.
  */
-sre.EnrichSpeechTest.prototype.testRebuildBaseTensors = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechBaseTensors = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><none/><mprescripts/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><none/><mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><none/><none/><none/><mprescripts/><none/>' +
       '</mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
       '<none/><mpadded/></mmultiscripts>');
 };
@@ -1645,28 +1645,28 @@ sre.EnrichSpeechTest.prototype.testRebuildBaseTensors = function() {
  * Pathological multiscript expressions that are actually on right
  * sub/superscripts.
  */
-sre.EnrichSpeechTest.prototype.testRebuildRightScriptTensors = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechRightScriptTensors = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mpadded><mi>X</mi></mpadded><mi>i</mi>' +
       '<mpadded><mi>j</mi></mpadded></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/>' +
       '<mprescripts/><none/></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>');
 };
@@ -1675,41 +1675,41 @@ sre.EnrichSpeechTest.prototype.testRebuildRightScriptTensors = function() {
 /**
  * Simple multiscript expressions with some scripts on the left.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleTensors = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechSimpleTensors = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><none/><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mpadded/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mpadded><mi>A</mi></mpadded><none/>' +
       '<mpadded><mn>2</mn></mpadded><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>');
@@ -1719,26 +1719,26 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleTensors = function() {
 /**
  * Complex multiscript expressions with some scripts on the left.
  */
-sre.EnrichSpeechTest.prototype.testRebuildComplexTensors = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechComplexTensors = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/>' +
       '<mn>4</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mn>3</mn><mprescripts/>' +
       '<mn>5</mn><mn>4</mn><mn>6</mn></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mpadded><mi>A</mi></mpadded><mpadded><mn>1</mn>' +
       '</mpadded><mpadded><mn>2</mn></mpadded><mpadded><mn>3</mn>' +
       '</mpadded><mprescripts/>' +
       '<mpadded><mn>5</mn></mpadded><mpadded><mn>4</mn></mpadded>' +
       '<mpadded><mn>6</mn></mpadded></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow>' +
       '<mn>1</mn><mn>2</mn><mprescripts/><none/><mn>3</mn></mmultiscripts>');
 };
@@ -1749,26 +1749,26 @@ sre.EnrichSpeechTest.prototype.testRebuildComplexTensors = function() {
  * Expressions containing pseudo unit children, i.e., children whose only
  * siblings are ignored nodes.
  */
-sre.EnrichSpeechTest.prototype.testRebuildPseudoUnitChildren = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechPseudoUnitChildren = function() {
+  this.executeSpeechTest(
       '<mi>a</mi><mspace/>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>i</mi><merror><mi>Y</mi></merror>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi>' +
       '<merror><mi>Y</mi></merror>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi>' +
       '<merror><mi>Y</mi></merror></mrow>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi>' +
       '<merror><mi>Y</mi></merror></mrow>' +
       '<merror><mtext>nothing</mtext></merror>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi></mrow>' +
       '<merror><mi>Y</mi></merror></mrow><merror>' +
       '<mtext>nothing</mtext></merror>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi' +
       '><mi>j</mi></mrow><merror><mi>Y</mi></merror></mrow>' +
       '<merror><mtext>nothing</mtext></merror>');
@@ -1778,18 +1778,18 @@ sre.EnrichSpeechTest.prototype.testRebuildPseudoUnitChildren = function() {
 /**
  * Expressions with ignore tags, introducing a new mrow.
  */
-sre.EnrichSpeechTest.prototype.testRebuildInterspersedIgnore = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechInterspersedIgnore = function() {
+  this.executeSpeechTest(
       '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi>' +
       '<merror><mi>Y</mi></merror>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mo>+</mo><mi>j</mi>' +
       '<merror><mi>Y</mi></merror>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>i</mi><merror><mtext>nothing</mtext></merror><mi>j</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror>' +
       '<mtext>nothing</mtext></merror><mo>+</mo>' +
       '<mi>j</mi><merror><mi>Y</mi></merror>');
@@ -1799,12 +1799,12 @@ sre.EnrichSpeechTest.prototype.testRebuildInterspersedIgnore = function() {
 /**
  * Expressions with over and under scores.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMunderOver = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechMunderOver = function() {
+  this.executeSpeechTest(
       '<munder><mo>&#x2192;</mo><mi>n</mi></munder>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mover><mo>&#x2192;</mo><mtext>above</mtext></mover>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munderover><mo>&#x2192;</mo><mi>n</mi><mtext>above</mtext>' +
       '</munderover>');
 };
@@ -1814,19 +1814,19 @@ sre.EnrichSpeechTest.prototype.testRebuildMunderOver = function() {
 /**
  * Simple embellished arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildSimpleEmbellishment = function() {
+sre.EnrichSpeechTest.prototype.testSpeechSimpleEmbellishment = function() {
   this.brief = false;
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mi>\u222B</mi><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mi>f</mi><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mo>(</mo><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mo>=</mo><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mo>+</mo><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mo>,</mo><mn>2</mn></msup>');
 };
 
@@ -1834,26 +1834,26 @@ sre.EnrichSpeechTest.prototype.testRebuildSimpleEmbellishment = function() {
 /**
  * Multi embellished arguments.
  */
-sre.EnrichSpeechTest.prototype.testRebuildMultiEmbellishment = function() {
+sre.EnrichSpeechTest.prototype.testSpeechMultiEmbellishment = function() {
   this.brief = false;
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mo>+</mo><mn>2</mn><mi>x</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi>' +
       '</msub><mo>-</mo></mover>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msub><munder><mo>+</mo><mn>2</mn></munder><mi>x</mi></msub>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>(</mi><none/><none/>' +
       '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>(</mi><none/><mi>K</mi>' +
       '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mi>(</mi><mn>1</mn><mi>j</mi></mmultiscripts>');
 };
 
@@ -1861,29 +1861,29 @@ sre.EnrichSpeechTest.prototype.testRebuildMultiEmbellishment = function() {
 /**
  * Expressions with embellished operators and relations.
  */
-sre.EnrichSpeechTest.prototype.testRebuildComplexEmbellishment = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechComplexEmbellishment = function() {
+  this.executeSpeechTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>2</mn></msub><mi>z</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>4</mn></msub><mi>z</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
       '<mn>2</mn></msub><mi>z</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
       '<mn>4</mn></msub><mi>z</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo>' +
       '<mo>\'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi><msup><mo>,</mo>' +
       '<mo>\'</mo></msup><mi>x</mi><msub><mo>:</mo><mn>4</mn></msub><mi>z</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
       '<mn>3</mn></msub><mi>x</mi>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
       '<mn>3</mn></msub>');
 };
@@ -1893,21 +1893,21 @@ sre.EnrichSpeechTest.prototype.testRebuildComplexEmbellishment = function() {
 /**
  * Expressions with embellished fences right.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellishedRightFence = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmbellishedRightFence = function() {
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mn>2</mn></msub>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn>' +
       '</mmultiscripts>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo>' +
       '</mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo>' +
       '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
       '</msup></mpadded>');
@@ -1917,25 +1917,25 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellishedRightFence = function() {
 /**
  * Expressions with embellished fences left.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellishedLeftFence = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmbellishedLeftFence = function() {
+  this.executeSpeechTest(
       '<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
       '<mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
       '<mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo>' +
       '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
       '</mover><mprescripts/><mn>4</mn>' +
@@ -1946,15 +1946,15 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellishedLeftFence = function() {
 /**
  * Expressions with embellished fences on both sides.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellishedBothFences = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmbellishedBothFences = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
       '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
       '<mn>2</mn></msubsup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mo>~</mo></munder>' +
       '<mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn>' +
@@ -1965,20 +1965,20 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellishedBothFences = function() {
 /**
  * Expressions with padded background.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellishedPaddedFences =
+sre.EnrichSpeechTest.prototype.testSpeechEmbellishedPaddedFences =
     function() {
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><mpadded mathbackground="red"><msup><munder>' +
       '<msub><mover><mo>)</mo>' +
       '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
       '</msup></mpadded>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mpadded mathbackground="red"><mmultiscripts><mover><mmultiscripts>' +
       '<munder><mo>(</mo><mo>~</mo>' +
       '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
       '</mover><mprescripts/><mn>4</mn>' +
       '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
       '<mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mo>~</mo></munder></mpadded>' +
@@ -1990,15 +1990,15 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellishedPaddedFences =
 /**
  * Expressions with embellished right fences as a sub-expression.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellRightSubexpr = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmbellRightSubexpr = function() {
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mo>+</mo><mn>1</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mn>2</mn><mo>+</mo>' +
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mo>+</mo><mn>1</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>-</mo>' +
       '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>' +
       '<mo>+</mo><mn>1</mn>');
@@ -2008,14 +2008,14 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellRightSubexpr = function() {
 /**
  * Expressions with embellished left fences as a sub-expression.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellLeftSubexpr = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmbellLeftSubexpr = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>k</mi><mo>+</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn>' +
       '<mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>');
 };
@@ -2024,16 +2024,16 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellLeftSubexpr = function() {
 /**
  * Expressions with embellished both fences as a sub-expression.
  */
-sre.EnrichSpeechTest.prototype.testRebuildEmbellBothSubexpr = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechEmbellBothSubexpr = function() {
+  this.executeSpeechTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
       '<mn>2</mn></msubsup><mo>+</mo><mn>1</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
       '<mn>2</mn></msubsup><mo>+</mo><mn>1</mn>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mi>k</mi><mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn>' +
       '<mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
       '<mn>2</mn></msubsup><mo>+</mo><mn>1</mn>');
@@ -2043,11 +2043,11 @@ sre.EnrichSpeechTest.prototype.testRebuildEmbellBothSubexpr = function() {
 /**
  * Expressions with embellished fences right and complex content.
  */
-sre.EnrichSpeechTest.prototype.testRebuildComplexEmbellRight = function() {
-  this.executeRebuildTest(
+sre.EnrichSpeechTest.prototype.testSpeechComplexEmbellRight = function() {
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msup><mo>)</mo>' +
       '<mn>4</mn></msup>');
-  this.executeRebuildTest(
+  this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo>' +
       '<mn>4</mn></msub>');
 };
