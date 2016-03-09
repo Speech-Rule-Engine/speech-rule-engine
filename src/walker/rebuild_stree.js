@@ -138,17 +138,22 @@ sre.RebuildStree.postProcess = function(snode, collapsed) {
     subscript.type = sre.SemanticAttr.Type.SUBSCRIPT;
     subscript.role = sre.SemanticAttr.Role.SUBSUP;
     snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
+    subscript.embellished = snode.embellished;
+    subscript.fencePointer = snode.fencePointer;
     sre.RebuildStree.collapsedChildren_(snode, [subscript], array);
     return snode;
   }
-  // if (snode.type === sre.SemanticAttr.Role.OVERSCORE) {
-  //   var underscore = new sre.SemanticTree.Node(array[1][0]);
-  //   underscore.type = sre.SemanticAttr.Type.OVERSCORE;
-  //   subscript.role = sre.SemanticAttr.Role.SUBSUP;
-  //   snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
-  //   sre.RebuildStree.collapsedChildren_(snode, [subscript], array);
-  //   return snode;
-  // }
+  if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {
+    var underscore = new sre.SemanticTree.Node(array[1][0]);
+    underscore.type = sre.SemanticAttr.Type.UNDERSCORE;
+    underscore.role = sre.SemanticAttr.Role.UNDEROVER;
+    snode.type = sre.SemanticAttr.Type.OVERSCORE;
+    underscore.embellished = snode.embellished;
+    underscore.fencePointer = snode.fencePointer;
+    sre.RebuildStree.collapsedChildren_(snode, [underscore], array);
+    return snode;
+  }
+  
   return snode;
 };
 
