@@ -580,14 +580,17 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
 
 
 /**
- * Add Sets semantic attributes in a MathML node.
+ * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
  */
 sre.EnrichMathml.addSpeech = function(mml, semantic) {
   //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
-  var xml = sre.DomUtil.parseInput('<stree>' + semantic.toString() +
-                                   '</stree>', sre.EnrichMathml.Error);
+  //TODO: Constructor for semantic tree with predefined root or empty.
+  var empty = sre.DomUtil.parseInput('<math/>');
+  var dummy = new sre.SemanticTree(empty);
+  dummy.root = semantic;
+  var xml = sre.DomUtil.parseInput(dummy.toString(), sre.EnrichMathml.Error);
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   var speech = sre.AuditoryDescription.toSimpleString(descrs);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
