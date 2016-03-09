@@ -2941,7 +2941,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
       ' parent="10">' +
       '<mo type="fence" role="open" id="1" parent="8"' +
       ' operator="fenced">(</mo>' +
-      '<munderover type="latinletter" role="latinletter" id="6"' +
+      '<munderover type="underover" role="latinletter" id="6"' +
       ' children="2,3,4" parent="8" collapsed="(6 (5 2 3) 4)">' +
       '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
       '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
@@ -3993,7 +3993,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsSingle = function() {
       ' content="1,7" parent="10">' +
       '<mo type="fence" role="open" id="1" parent="8"' +
       ' operator="fenced">(</mo>' +
-      '<munderover type="latinletter" role="latinletter" id="6"' +
+      '<munderover type="underover" role="latinletter" id="6"' +
       ' children="2,3,4" parent="8" collapsed="(6 (5 2 3) 4)">' +
       '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
       '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
@@ -4788,7 +4788,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsUnfenced = function() {
       ' operator="appl">sin</mi>' +
       '<mo type="punctuation" role="application" id="6" parent="7"' +
       ' added="true" operator="appl">⁡</mo>' +
-      '<munderover type="latinletter" role="latinletter" id="5"' +
+      '<munderover type="underover" role="latinletter" id="5"' +
       ' children="1,2,3" parent="7" collapsed="(5 (4 1 2) 3)">' +
       '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
       '<mn type="number" role="integer" id="2" parent="5">2</mn>' +
@@ -9007,7 +9007,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMunderOver = function() {
       '<munderover><mo>&#x2192;</mo><mi>n</mi><mtext>above</mtext>' +
       '</munderover>',
       '<math>' +
-      '<munderover type="arrow" role="arrow" id="4" children="0,1,2"' +
+      '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
