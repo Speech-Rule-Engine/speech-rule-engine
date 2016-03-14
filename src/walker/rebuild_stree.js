@@ -198,13 +198,9 @@ sre.RebuildStree.experiment__ = function(expr) {
   var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
   console.log(mml.toString());
   var stree = new sre.SemanticTree(mml);
-  var emml = sre.EnrichMathml.enrich(mml, stree);
-  console.log(emml.toString());
-  var reass = new sre.RebuildStree(emml);
-
   var str1 = stree.toString();
+  var emml = sre.EnrichMathml.enrich(mml, stree);
+  var reass = new sre.RebuildStree(emml);
   var str2 = reass.toString();
-  console.log(str1);
-  console.log(str2);
   return str1 === str2;
 };
