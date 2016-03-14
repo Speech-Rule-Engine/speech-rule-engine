@@ -43,17 +43,18 @@ goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
+  var speech = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.SPEECH);
   if (speech) return speech;
   speech = sre.WalkerUtil.generateSpeech(node, xml);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
   sre.SpeechRuleEngine.getInstance().forCache(
-    function(key, value) {
-      var inner = sre.WalkerUtil.getBySemanticId(node, key);
-      if (!inner) return;
-      var speech = sre.AuditoryDescription.toSimpleString(value);
-      inner.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-    }
+      function(key, value) {
+        var inner = sre.WalkerUtil.getBySemanticId(node, key);
+        if (!inner) return;
+        var speech = sre.AuditoryDescription.toSimpleString(value);
+        inner.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+      }
   );
   return speech;
 };

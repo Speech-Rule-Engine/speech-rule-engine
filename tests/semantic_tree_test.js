@@ -9938,9 +9938,9 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
 sre.SemanticTreeTest.prototype.testStreeActions = function() {
   this.brief = true;
   this.executeTreeTest(
-    '<maction><mtext>something</mtext><mn>2</mn></maction>',
-    '<number>2</number>');
+      '<maction><mtext>something</mtext><mn>2</mn></maction>',
+      '<number>2</number>');
   this.executeTreeTest(
-    '<maction><mtext>something</mtext><mi>a</mi></maction>',
-    '<identifier>a</identifier>');
+      '<maction><mtext>something</mtext><mi>a</mi></maction>',
+      '<identifier>a</identifier>');
 };

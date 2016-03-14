@@ -42,7 +42,6 @@ sre.EnrichMathmlTest = function() {
 goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
 
-
 /**
  * @override
  */

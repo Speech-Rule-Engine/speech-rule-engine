@@ -124,9 +124,9 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
 sre.WalkerUtil.getBySemanticId = function(root, id) {
   return (root.querySelector ?
           root.querySelector(
-            '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
+      '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
           sre.XpathUtil.evalXPath(
-            './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
+      './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
 };
 
 
@@ -138,8 +138,8 @@ sre.WalkerUtil.getBySemanticId = function(root, id) {
  */
 sre.WalkerUtil.generateSpeech = function(node, xml) {
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
-  var doc = /** @type{!Element} */(xml.parentNode ? xml.parentNode : xml);  
-  var inner = /** @type{Element} */(sre.WalkerUtil.getBySemanticId(doc, id));
+  var doc = /** @type {!Element} */(xml.parentNode ? xml.parentNode : xml);
+  var inner = /** @type {Element} */(sre.WalkerUtil.getBySemanticId(doc, id));
   var innerXml = inner ? inner : xml;
   var stree = sre.System.getInstance().getSemanticTree(innerXml);
   return sre.System.getInstance().processXml(stree);

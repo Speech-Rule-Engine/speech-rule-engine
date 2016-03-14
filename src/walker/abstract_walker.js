@@ -144,7 +144,9 @@ sre.AbstractWalker.prototype.getFocus = function() {
  */
 sre.AbstractWalker.prototype.speech = function() {
   return this.focus_.getNodes().map(
-      goog.bind(function(x) {return this.generator.getSpeech(x, this.xml);}, this))
+      goog.bind(function(x) {
+        return this.generator.getSpeech(x, this.xml);
+      }, this))
       .join(' ');
 };
 
