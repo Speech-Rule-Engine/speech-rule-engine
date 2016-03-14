@@ -131,19 +131,6 @@ sre.WalkerUtil.getBySemanticId = function(root, id) {
 
 
 /**
- * Retrieves a node containing a given semantic id.
- * @param {!Node} node The base node to query.
- * @param {string} id The id of a semantic node.
- * @return {Element} The node for that id.
- */
-sre.WalkerUtil.getBySemanticId = function(node, id) {
-  if (typeof id === 'undefined') return null;
-  var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
-  return node.querySelector(query);
-};
-
-
-/**
  * Generates speech string for a sub tree of the xml element.
  * @param {!Node} node The target element of the event.
  * @param {!Element} xml The base xml element belonging to node.
@@ -152,7 +139,7 @@ sre.WalkerUtil.getBySemanticId = function(node, id) {
 sre.WalkerUtil.generateSpeech = function(node, xml) {
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
   var doc = /** @type{!Element} */(xml.parentNode ? xml.parentNode : xml);  
-  var inner = sre.WalkerUtil.getBySemanticId(doc, id);
+  var inner = /** @type{Element} */(sre.WalkerUtil.getBySemanticId(doc, id));
   var innerXml = inner ? inner : xml;
   var stree = sre.System.getInstance().getSemanticTree(innerXml);
   return sre.System.getInstance().processXml(stree);

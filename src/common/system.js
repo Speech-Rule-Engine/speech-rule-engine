@@ -29,12 +29,11 @@ goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
+goog.require('sre.RebuildStree');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
 
-goog.require('sre.RebuildStree');
-goog.require('sre.WalkerUtil');
 
 
 /**
