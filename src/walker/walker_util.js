@@ -121,6 +121,9 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
  * @return {Node} The node for that id.
  */
 sre.WalkerUtil.getBySemanticId = function(root, id) {
-  var query = '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]';
-  return root.querySelector(query);
+  return (root.querySelector ?
+          root.querySelector(
+            '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
+          sre.XpathUtil.evalXPath(
+            './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
 };
