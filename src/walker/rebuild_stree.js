@@ -41,16 +41,19 @@ sre.RebuildStree = function(mathml) {
   this.mmlRoot = sre.WalkerUtil.getSemanticRoot(mathml);
 
   this.streeRoot = this.assembleTree(this.mmlRoot);
-  
+
   this.stree = this.makeTree();
-  
+
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
   return this.stree;
 };
-//goog.addSingletonGetter(sre.RebuildStree);
 
 
+/**
+ * Makes a dummy semantic tree.
+ * @return {!sre.SemanticTree} The newly created semantic tree.
+ */
 sre.RebuildStree.prototype.makeTree = function() {
   var empty = sre.DomUtil.parseInput('<math/>');
   var dummy = new sre.SemanticTree(empty);
@@ -60,14 +63,17 @@ sre.RebuildStree.prototype.makeTree = function() {
 };
 
 
+/**
+ * Assembles the semantic tree from the data attributes of the MathML node.
+ * @param {!Node} node The MathML node.
+ * @return {!sre.SemanticTree.Node} The corresponding semantic tree node.
+ */
 sre.RebuildStree.prototype.assembleTree = function(node) {
-  // if (this.frontier.length === 0) return;
-  // var current = this.frontier.shift();
   var snode = sre.RebuildStree.makeNode(node);
   var children = sre.WalkerUtil.splitAttribute(
-    sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
+      sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
-    sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CONTENT));
+      sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CONTENT));
   if (content.length === 0 && children.length === 0) {
     snode.textContent = node.textContent;
     return snode;
@@ -76,8 +82,8 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
     var fcontent = sre.WalkerUtil.getBySemanticId(node, content[0]);
     if (fcontent) {
       var operator = sre.WalkerUtil.splitAttribute(
-        sre.WalkerUtil.getAttribute(
-          fcontent, sre.EnrichMathml.Attribute.OPERATOR));
+          sre.WalkerUtil.getAttribute(
+              fcontent, sre.EnrichMathml.Attribute.OPERATOR));
       if (operator.length > 1) {
         snode.textContent = operator[1];
       }
@@ -92,7 +98,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   snode.contentNodes = content.map(goog.bind(setParent, this));
   snode.childNodes = children.map(goog.bind(setParent, this));
   var collapsed = sre.WalkerUtil.getAttribute(
-    node, sre.EnrichMathml.Attribute.COLLAPSED);
+      node, sre.EnrichMathml.Attribute.COLLAPSED);
   if (collapsed) {
     return sre.RebuildStree.postProcess(snode, collapsed);
   }
@@ -100,6 +106,11 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
 };
 
 
+/**
+ * Creates a new semantic node from the data in the MathML node.
+ * @param {!Node} node The enriched MathML node.
+ * @return {!sre.SemanticTree.Node} The reconstructed semantic tree node.
+ */
 sre.RebuildStree.makeNode = function(node) {
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
@@ -113,7 +124,7 @@ sre.RebuildStree.makeNode = function(node) {
   snode.type = /** @type {sre.SemanticAttr.Type} */(type);
   snode.role = /** @type {sre.SemanticAttr.Role} */(role);
   snode.font = font ? /** @type {sre.SemanticAttr.Font} */(font) :
-    sre.SemanticAttr.Font.UNKNOWN;
+      sre.SemanticAttr.Font.UNKNOWN;
   if (fencepointer) {
     snode.fencePointer = fencepointer;
   }
@@ -124,9 +135,8 @@ sre.RebuildStree.makeNode = function(node) {
 };
 
 
-
 /**
- * Rearranges semantic node if there is a collapse structure. 
+ * Rearranges semantic node if there is a collapse structure.
  * @param {!sre.SemanticTree.Node} snode The semantic node.
  * @param {!string} collapsed The collapse structure.
  * @return {!sre.SemanticTree.Node} The semantic node.
@@ -153,11 +163,21 @@ sre.RebuildStree.postProcess = function(snode, collapsed) {
     sre.RebuildStree.collapsedChildren_(snode, [underscore], array);
     return snode;
   }
-  
+
   return snode;
 };
 
 
+/**
+ * Re-generates collapsed semantic nodes given a node and its already existing
+ * children.
+ * @param {!sre.SemanticTree.Node} oldNode The node containing the
+ *     collapsed element.
+ * @param {!Array.<sre.SemanticTree.Node>} newNodes The already existing child
+ *     nodes.
+ * @param {!Array} collapsed Array of integer arrays.
+ * @private
+ */
 sre.RebuildStree.collapsedChildren_ = function(oldNode, newNodes, collapsed) {
   newNodes.unshift(oldNode);
   newNodes = newNodes.concat(oldNode.childNodes);
@@ -185,6 +205,7 @@ sre.RebuildStree.collapsedChildren_ = function(oldNode, newNodes, collapsed) {
  * Parses the collapsed structure into an array of integer arrays.
  * @param {!string} collapsed String containing the collapsed structure.
  * @return {!Array} The array of integer arrays.
+ * @private
  */
 sre.RebuildStree.parseCollapsed_ = function(collapsed) {
   var str = collapsed.replace(/\(/g, '[');
@@ -194,6 +215,12 @@ sre.RebuildStree.parseCollapsed_ = function(collapsed) {
 };
 
 
+/**
+ * Internal method to experiment with semantic tree rebuilding.
+ * @param {string} expr The MathML expression.
+ * @return {boolean} True if the rebuilt semantic is the same as the one
+ *     originally constructed for the MathML expression.
+ */
 sre.RebuildStree.experiment__ = function(expr) {
   var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
   console.log(mml.toString());
