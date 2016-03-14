@@ -182,7 +182,7 @@ sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
   if (!node || !node.getAttribute) return null;
   var key = node.getAttribute('id');
   if (key === 'undefined' || key === '') return null;
-  return this.getCache_(key);
+  return this.getCache(key);
 };
 
 
@@ -190,9 +190,8 @@ sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
  * Retrieves a cached value by key.
  * @param {string} key The node id.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
- * @private
  */
-sre.SpeechRuleEngine.prototype.getCache_ = function(key) {
+sre.SpeechRuleEngine.prototype.getCache = function(key) {
   return this.cache_[key];
 };
 

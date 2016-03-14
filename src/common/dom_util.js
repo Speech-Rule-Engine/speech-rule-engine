@@ -148,3 +148,46 @@ sre.DomUtil.formatXml = function(xml) {
       });
   return formatted;
 };
+
+
+/**
+ * Transforms a data attribute name into its camel cased version.
+ * @param {!string} attr Micro data attributes.
+ * @return {!string} The camel cased attribute.
+ */
+sre.DomUtil.dataAttribute = function(attr) {
+  if (attr.match(/^data-/)) {
+    attr = attr.substr(5);
+  }
+  return attr.replace(/-([a-z])/g, function(letter, index) {
+    return index.toUpperCase();});
+};
+
+
+/**
+ * Retrieves a data attribute from a given node. Tries using microdata access if
+ * possible.
+ * @param {!Node} node A DOM node.
+ * @param {!string} attr The data attribute.
+ * @return {!string} The value for that attribute.
+ */
+sre.DomUtil.getDataAttribute = function(node, attr) {
+  if (node.dataset) {
+    return node.dataset[sre.DomUtil.dataAttribute(attr)];
+  }
+  return node.getAttribute(attr);
+};
+
+
+/**
+ * A wrapper function for query selector on a node wrt. to an attribute. If
+ * query selectors are not implemented on that node it reverts to Xpath.
+ * @param {!Node} node A DOM node.
+ * @param {!string} attr The data attribute.
+ * @return {!Array.<Node>} The list of result nodes.
+ */
+sre.DomUtil.querySelectorAllByAttr = function(node, attr) {
+  return (node.querySelectorAll ?
+          sre.DomUtil.toArray(node.querySelectorAll('[' + attr + ']')) :
+          sre.XpathUtil.evalXPath('.//*[@' + attr + ']', node));
+};

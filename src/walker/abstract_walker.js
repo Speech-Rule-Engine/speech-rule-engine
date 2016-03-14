@@ -78,7 +78,7 @@ sre.AbstractWalker = function(node, generator, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.dummy_, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.dummy_, this);
 
-  var rootNode = this.getRoot_(node);
+  var rootNode = sre.WalkerUtil.getSemanticRoot(node);
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
@@ -196,29 +196,6 @@ sre.AbstractWalker.prototype.left = goog.abstractMethod;
  * @protected
  */
 sre.AbstractWalker.prototype.right = goog.abstractMethod;
-
-
-/**
- * Retrieves the root node of the semantic tree.
- * @param {!Node} node The math node.
- * @return {!Node} The root node. If we cannot find one, the input node is
- *     returned.
- * @private
- */
-sre.AbstractWalker.prototype.getRoot_ = function(node) {
-  if (node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) &&
-      !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
-    return node;
-  }
-  var semanticNodes = node.querySelectorAll(
-      '[' + sre.EnrichMathml.Attribute.TYPE + ']');
-  for (var i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
-    if (!semanticNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
-      return semanticNode;
-    }
-  }
-  return node;
-};
 
 
 /**

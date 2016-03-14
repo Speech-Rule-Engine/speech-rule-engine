@@ -27,10 +27,12 @@ goog.provide('sre.EnrichMathml.Error');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
+goog.require('sre.Engine');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.MathmlStore');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
+goog.require('sre.SystemExternal');
 
 
 
@@ -87,6 +89,8 @@ sre.EnrichMathml.Attribute = {
   CHILDREN: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'children',
   COLLAPSED: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'collapsed',
   CONTENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'content',
+  EMBELLISHED: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'embellished',
+  FENCEPOINTER: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'fencepointer',
   FONT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'font',
   ID: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'id',
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
@@ -107,17 +111,9 @@ sre.EnrichMathml.Attribute = {
  * @return {!Element} The modified MathML element.
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
-  //TODO: (sorge) Move that elsewhere and use system function.
-  var engine = sre.Engine.getInstance();
-  engine.style = 'default';
-  engine.domain = 'mathspeak';
-  engine.semantics = true;
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  sre.SpeechRuleEngine.getInstance().
-      parameterize(sre.MathmlStore.getInstance());
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
-
+  if (sre.Engine.getInstance().speech) {
+    sre.EnrichMathml.computeSpeech(semantic);
+  }
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
@@ -561,6 +557,9 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
+  if (semantic.font != sre.SemanticAttr.Font.UNKNOWN) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
+  }
   mml.setAttribute(sre.EnrichMathml.Attribute.ID, semantic.id);
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
@@ -573,24 +572,17 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
+  if (semantic.embellished) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.EMBELLISHED,
+                     semantic.embellished);
+  }
+  if (semantic.fencePointer) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.FENCEPOINTER,
+                     semantic.fencePointer);
+  }
   if (sre.Engine.getInstance().speech) {
     sre.EnrichMathml.addSpeech(mml, semantic);
   }
-};
-
-
-/**
- * Add Sets semantic attributes in a MathML node.
- * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- */
-sre.EnrichMathml.addSpeech = function(mml, semantic) {
-  //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
-  var xml = sre.DomUtil.parseInput('<stree>' + semantic.toString() +
-                                   '</stree>', sre.EnrichMathml.Error);
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  var speech = sre.AuditoryDescription.toSimpleString(descrs);
-  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
 
@@ -800,3 +792,60 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
   sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
 };
+
+
+//TODO: This should be refactored with functionality in system.
+/**
+ * Compute speech string for the semantic tree.
+ * @param {!sre.SemanticTree} semantic The semantic tree.
+ */
+sre.EnrichMathml.computeSpeech = function(semantic) {
+  //TODO: (sorge) Move that elsewhere and use system function.
+  //TODO: Reset engine after computation.
+  var engine = sre.Engine.getInstance();
+  var sreng = sre.SpeechRuleEngine.getInstance();
+  engine.style = 'default';
+  engine.domain = 'mathspeak';
+  engine.semantics = true;
+  sreng.clearCache();
+  sreng.parameterize(sre.MathmlStore.getInstance());
+  sreng.dynamicCstr =
+      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  var xml = sre.DomUtil.parseInput(semantic.toString(), sre.EnrichMathml.Error);
+  sreng.evaluateNode(xml);
+};
+
+
+/**
+ * Computes speech descriptions for a single semantic node.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @return {!Array.<sre.AuditoryDescription>}
+ */
+sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
+  //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
+  //TODO: Constructor for semantic tree with predefined root or empty.
+  var empty = sre.DomUtil.parseInput('<math/>');
+  var dummy = new sre.SemanticTree(empty);
+  dummy.root = semantic;
+  var xml = sre.DomUtil.parseInput(dummy.toString(), sre.EnrichMathml.Error);
+  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+};
+
+
+/**
+ * Add speech as a semantic attributes in a MathML node.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ */
+sre.EnrichMathml.addSpeech = function(mml, semantic) {
+  var descrs = sre.SpeechRuleEngine.getInstance().
+      getCache(semantic.id.toString());
+  if (!descrs) {
+    descrs = sre.EnrichMathml.recomputeSpeech(mml, semantic);
+  }
+  var speech = sre.AuditoryDescription.toSimpleString(descrs);
+  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+};
+
+

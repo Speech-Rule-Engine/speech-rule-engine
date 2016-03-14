@@ -168,6 +168,7 @@ sre.AuditoryDescription.processCorrections_ = function(text, correction) {
 sre.AuditoryDescription.preprocessDescription_ = function(descr) {
   if (descr.annotation) {
     descr.text += ':' + descr.annotation;
+    descr.annotation = '';
   }
   if (descr.preprocess) {
     descr.text = sre.AuditoryDescription.processCorrections_(
