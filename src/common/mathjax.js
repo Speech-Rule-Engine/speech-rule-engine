@@ -27,6 +27,7 @@ goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.NodeSpeechGenerator');
+goog.require('sre.RebuildStree');
 goog.require('sre.SemanticWalker');
 goog.require('sre.SyntaxWalker');
 goog.require('sre.System');

@@ -23,6 +23,7 @@
 goog.provide('sre.RebuildStree');
 
 goog.require('sre.Semantic');
+goog.require('sre.WalkerUtil');
 
 
 
