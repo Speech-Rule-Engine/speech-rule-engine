@@ -51,3 +51,5 @@ MathJax.Callback.Signal = function(signal) { };
 
 var wgxpath;
 wgxpath.install = function() { };
+
+document.rootNode;

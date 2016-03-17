@@ -29,11 +29,10 @@ goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
+goog.require('sre.RebuildStree');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
-
-goog.require('sre.RebuildStree');
 goog.require('sre.WalkerUtil');
 
 
@@ -75,18 +74,49 @@ goog.inherits(sre.System.Error, Error);
  */
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
+  engine.mode = feature.mode || engine.mode;
+  sre.System.prototype.configBlocks_(feature);
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.semantics = !!feature.semantics;
   if (feature.cache !== undefined) {
     engine.withCache = !!feature.cache;
   }
-  engine.mode = feature.mode || engine.mode;
   engine.speech = !!feature.speech;
+  if (feature.json) {
+    sre.SystemExternal.jsonPath = feature.json;
+  }
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+};
+
+
+/**
+ * Reads configuration blocks and adds them to the feature vector.
+ * @param {Object.<string,? (string)>} feature An object describing some
+ *     setup features.
+ * @private
+ */
+sre.System.prototype.configBlocks_ = function(feature) {
+  if (sre.Engine.getInstance().mode !== sre.Engine.Mode.HTTP) {
+    return;
+  }
+  var scripts = document.rootNode.querySelectorAll(
+      'script[type="text/x-sre-config"]');
+  for (var i = 0, m = scripts.length; i < m; i++) {
+    try {
+      var inner = scripts[i].innerHTML;
+      var config = JSON.parse(inner);
+      for (var f in config) {
+        feature[f] = config[f];
+      }
+    }
+    catch (err) {
+      sre.Debugger.getInstance().output('Illegal configuration ', inner);
+    }
+  }
 };
 
 
