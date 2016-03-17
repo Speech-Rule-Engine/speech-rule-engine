@@ -52,7 +52,6 @@ sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
 
 /**
  * Path to JSON files.
- * @const
  * @type {string}
  */
 sre.SystemExternal.jsonPath = function() {

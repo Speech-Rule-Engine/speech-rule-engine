@@ -800,17 +800,8 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
  * @param {!sre.SemanticTree} semantic The semantic tree.
  */
 sre.EnrichMathml.computeSpeech = function(semantic) {
-  //TODO: (sorge) Move that elsewhere and use system function.
-  //TODO: Reset engine after computation.
-  var engine = sre.Engine.getInstance();
   var sreng = sre.SpeechRuleEngine.getInstance();
-  engine.style = 'default';
-  engine.domain = 'mathspeak';
-  engine.semantics = true;
   sreng.clearCache();
-  sreng.parameterize(sre.MathmlStore.getInstance());
-  sreng.dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
   var xml = sre.DomUtil.parseInput(semantic.toString(), sre.EnrichMathml.Error);
   sreng.evaluateNode(xml);
 };
@@ -820,15 +811,13 @@ sre.EnrichMathml.computeSpeech = function(semantic) {
  * Computes speech descriptions for a single semantic node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- * @return {!Array.<sre.AuditoryDescription>}
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the node.
  */
 sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
   //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
-  //TODO: Constructor for semantic tree with predefined root or empty.
-  var empty = sre.DomUtil.parseInput('<math/>');
-  var dummy = new sre.SemanticTree(empty);
-  dummy.root = semantic;
-  var xml = sre.DomUtil.parseInput(dummy.toString(), sre.EnrichMathml.Error);
+  var empty = sre.SemanticTree.fromNode(semantic);
+  var xml = sre.DomUtil.parseInput(empty.toString(), sre.EnrichMathml.Error);
   return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
 

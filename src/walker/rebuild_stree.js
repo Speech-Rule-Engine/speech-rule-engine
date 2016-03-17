@@ -31,7 +31,7 @@ goog.require('sre.Semantic');
 //TODO: This is probably not a class but just a utility procedure.
 /**
  * @constructor
- * @param {!Node} mathml The enriched MathML node.
+ * @param {!Element} mathml The enriched MathML node.
  * @return {sre.SemanticTree} The rebuilt semantic tree.
  */
 sre.RebuildStree = function(mathml) {
@@ -42,24 +42,11 @@ sre.RebuildStree = function(mathml) {
 
   this.streeRoot = this.assembleTree(this.mmlRoot);
 
-  this.stree = this.makeTree();
+  this.stree = sre.SemanticTree.fromNode(this.streeRoot, this.mathml);
 
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree></stree>', 'text/xml');
   return this.stree;
-};
-
-
-/**
- * Makes a dummy semantic tree.
- * @return {!sre.SemanticTree} The newly created semantic tree.
- */
-sre.RebuildStree.prototype.makeTree = function() {
-  var empty = sre.DomUtil.parseInput('<math/>');
-  var dummy = new sre.SemanticTree(empty);
-  dummy.root = this.streeRoot;
-  dummy.mathml = this.mathml;
-  return dummy;
 };
 
 
