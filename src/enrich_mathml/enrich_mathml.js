@@ -811,15 +811,13 @@ sre.EnrichMathml.computeSpeech = function(semantic) {
  * Computes speech descriptions for a single semantic node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- * @return {!Array.<sre.AuditoryDescription>}
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the node.
  */
 sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
   //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
-  //TODO: Constructor for semantic tree with predefined root or empty.
-  var empty = sre.DomUtil.parseInput('<math/>');
-  var dummy = new sre.SemanticTree(empty);
-  dummy.root = semantic;
-  var xml = sre.DomUtil.parseInput(dummy.toString(), sre.EnrichMathml.Error);
+  var empty = sre.SemanticTree.fromNode(semantic);
+  var xml = sre.DomUtil.parseInput(empty.toString(), sre.EnrichMathml.Error);
   return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
 
