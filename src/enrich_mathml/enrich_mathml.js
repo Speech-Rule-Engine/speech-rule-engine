@@ -800,17 +800,8 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
  * @param {!sre.SemanticTree} semantic The semantic tree.
  */
 sre.EnrichMathml.computeSpeech = function(semantic) {
-  //TODO: (sorge) Move that elsewhere and use system function.
-  //TODO: Reset engine after computation.
-  var engine = sre.Engine.getInstance();
   var sreng = sre.SpeechRuleEngine.getInstance();
-  engine.style = 'default';
-  engine.domain = 'mathspeak';
-  engine.semantics = true;
   sreng.clearCache();
-  sreng.parameterize(sre.MathmlStore.getInstance());
-  sreng.dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
   var xml = sre.DomUtil.parseInput(semantic.toString(), sre.EnrichMathml.Error);
   sreng.evaluateNode(xml);
 };
