@@ -108,6 +108,36 @@ sre.SemanticTree.Node = function(id) {
 
 
 /**
+ * Generate an empty semantic tree.
+ * @return {sre.SemanticTree} The empty semantic tree.
+ */
+sre.SemanticTree.empty = function() {
+  var empty = sre.DomUtil.parseInput('<math/>');
+  var stree = new sre.SemanticTree(empty);
+  stree.mathml = empty;
+  return stree;
+};
+
+
+/**
+ * Generate a semantic tree for a given node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
+ *     the root.
+ * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
+ *     semantic node.
+ * @return {sre.SemanticTree} The empty semantic tree.
+ */
+sre.SemanticTree.fromNode = function(semantic, opt_mathml) {
+  var stree = sre.SemanticTree.empty();
+  stree.root = semantic;
+  if (opt_mathml) {
+    stree.mathml = opt_mathml;
+  }
+  return stree;
+};
+
+
+/**
  * Retrieve all subnodes (including the node itself) that satisfy a given
  * predicate.
  * @param {function(sre.SemanticTree.Node): boolean} pred The predicate.
