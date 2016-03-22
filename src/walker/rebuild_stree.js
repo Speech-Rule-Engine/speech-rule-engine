@@ -23,7 +23,7 @@
 goog.provide('sre.RebuildStree');
 
 goog.require('sre.Semantic');
-goog.require('sre.WalkerUtil');
+//goog.require('sre.WalkerUtil');
 
 
 
@@ -33,7 +33,6 @@ goog.require('sre.WalkerUtil');
 /**
  * @constructor
  * @param {!Element} mathml The enriched MathML node.
- * @return {sre.SemanticTree} The rebuilt semantic tree.
  */
 sre.RebuildStree = function(mathml) {
 
@@ -45,8 +44,13 @@ sre.RebuildStree = function(mathml) {
 
   this.stree = sre.SemanticTree.fromNode(this.streeRoot, this.mathml);
 
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('<stree></stree>', 'text/xml');
+};
+
+
+/**
+ * @return {sre.SemanticTree} The rebuilt semantic tree.
+ */
+sre.RebuildStree.prototype.getTree = function() {
   return this.stree;
 };
 

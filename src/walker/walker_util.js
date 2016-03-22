@@ -23,6 +23,7 @@ goog.provide('sre.WalkerUtil');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.EnrichMathml');
+goog.require('sre.RebuildStree');
 goog.require('sre.SemanticAttr');
 goog.require('sre.System');
 
@@ -137,10 +138,7 @@ sre.WalkerUtil.getBySemanticId = function(root, id) {
  * @return {string} The generated speech string.
  */
 sre.WalkerUtil.generateSpeech = function(node, xml) {
-  var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
-  var doc = /** @type {!Element} */(xml.parentNode ? xml.parentNode : xml);
-  var inner = /** @type {Element} */(sre.WalkerUtil.getBySemanticId(doc, id));
-  var innerXml = inner ? inner : xml;
-  var stree = sre.System.getInstance().getSemanticTree(innerXml);
-  return sre.System.getInstance().processXml(stree);
+  var rebuilt = new sre.RebuildStree(xml);
+  var stree = rebuilt.getTree();
+  return sre.System.getInstance().processXml(stree.xml().childNodes[0]);
 };
