@@ -19,6 +19,7 @@
 
 goog.provide('sre.CombinedStore');
 
+goog.require('sre.ClearspeakRules');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
@@ -50,6 +51,7 @@ sre.CombinedStore.mathStore.initialize = function() {
   sre.MathmlStoreRules.getInstance();
   sre.SemanticTreeRules.getInstance();
   sre.MathspeakRules.getInstance();
+  sre.ClearspeakRules.getInstance();
   sre.CombinedStore.getInstance().updateEngine();
 };
 
