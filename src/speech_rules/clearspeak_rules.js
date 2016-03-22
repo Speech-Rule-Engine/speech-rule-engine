@@ -20,6 +20,7 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.MathStore');
+goog.require('sre.MathmlStore');
 goog.require('sre.StoreUtil');
 
 

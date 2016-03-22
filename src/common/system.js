@@ -35,6 +35,12 @@ goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
 goog.require('sre.WalkerUtil');
 
+goog.require('sre.DirectSpeechGenerator');
+goog.require('sre.DummyWalker');
+goog.require('sre.HighlighterFactory');
+goog.require('sre.SemanticWalker');
+goog.require('sre.SyntaxWalker');
+
 
 /**
  * @constructor
