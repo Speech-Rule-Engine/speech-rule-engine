@@ -53,6 +53,10 @@ sre.System = function() {
    */
   this.version = '0.8';
 
+  this.walker = null;
+
+  this.speechGenerator = null;
+
 };
 goog.addSingletonGetter(sre.System);
 
@@ -385,4 +389,22 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
   } catch (err) {
     throw new sre.System.Error('Can not write to file: ' + opt_output);
   }
+};
+
+
+sre.System.prototype.walk = function(expr) {
+  this.speechGenerator = new sre.DirectSpeechGenerator();
+  var mml = sre.System.getInstance().parseExpression_(expr, false);
+  sre.Engine.getInstance().speech = true;
+  var eml = sre.System.getInstance().toEnriched(expr);
+  var node = sre.DomUtil.parseInput(eml, sre.System.Error);
+  this.walker = new sre.SyntaxWalker(node, this.speechGenerator);
+  return this.walker.speech();
+};
+
+
+sre.System.prototype.move = function(key) {
+  var move = this.walker.move(key);
+  if (move === false) return null;
+  return this.walker.speech();
 };
