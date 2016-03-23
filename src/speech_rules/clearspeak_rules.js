@@ -57,12 +57,12 @@ var defineRule = sre.ClearspeakRules.defineRule_;
 sre.ClearspeakRules.initClearspeakRules_ = function() {
     defineRule(
       'fraction', 'mathspeak.clearspeak',
-      '[t] "the fraction with numerator"; [n] children/*[1];' +
-          ' [t] "and denominator"; [n] children/*[2]',
+      '[t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:300);' +
+          ' [t] "and denominator"; [n] children/*[2]; [p] (pause:500)',
       'self::fraction');
   defineRule(
       'sqrt', 'mathspeak.clearspeak',
-      '[t] "the square root of"; [n] children/*[1]; [p] (pause:100)',
+      '[t] "the square root of"; [n] children/*[1]; [p] (pause:500)',
       'self::sqrt');
 
 };

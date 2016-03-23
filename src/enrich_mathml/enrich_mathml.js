@@ -833,7 +833,8 @@ sre.EnrichMathml.addSpeech = function(mml, semantic) {
   if (!descrs) {
     descrs = sre.EnrichMathml.recomputeSpeech(mml, semantic);
   }
-  var speech = sre.AuditoryDescription.toSimpleString(descrs);
+  var speech = sre.AuditoryDescription.toNvdaString(descrs);
+  // var speech = sre.AuditoryDescription.toSimpleString(descrs);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 

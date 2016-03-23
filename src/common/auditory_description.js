@@ -113,6 +113,26 @@ sre.AuditoryDescription.prototype.equals = function(that) {
  * @param {string=} opt_separator The separator string.
  * @return {string} The generated string.
  */
+sre.AuditoryDescription.toNvdaString = function(descrs, opt_separator) {
+  var separator = opt_separator === '' ? '' : opt_separator || ' ';
+  sre.AuditoryDescription.preprocessDescriptionList(descrs);
+  return sre.BaseUtil.removeEmpty(
+      descrs.map(
+        function(x) {
+          if (x.personality && x.personality.PAUSE) {
+            return '<break time = "' + x.personality.PAUSE + 'ms"/>';
+          }
+          return x.descriptionString();})).
+      join(separator);
+};
+
+
+/**
+ * Translates a list of auditory descriptions into a simple string.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string=} opt_separator The separator string.
+ * @return {string} The generated string.
+ */
 sre.AuditoryDescription.toSimpleString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
