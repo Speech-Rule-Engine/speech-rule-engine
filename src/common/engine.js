@@ -101,6 +101,12 @@ sre.Engine = function() {
   this.withCache = true;
 
   /**
+   * Caching during speech generation.
+   * @type {boolean}
+   */
+  this.ssml = false;
+
+  /**
    * Current browser is MS Internet Explorer but not Edge.
    * @type {boolean}
    */

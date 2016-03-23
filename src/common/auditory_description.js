@@ -108,14 +108,39 @@ sre.AuditoryDescription.prototype.equals = function(that) {
 
 
 /**
- * Translates a list of auditory descriptions into a simple string.
+ * Translates a list of auditory descriptions into a string.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
  * @param {string=} opt_separator The separator string.
  * @return {string} The generated string.
  */
-sre.AuditoryDescription.toNvdaString = function(descrs, opt_separator) {
+sre.AuditoryDescription.toString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
+  return sre.AuditoryDescription.toString_(descrs, separator);
+};
+
+
+/**
+ * Translates a list of auditory descriptions into a string.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string.
+ * @private
+ */
+sre.AuditoryDescription.toString_ = function(descrs, separator) {
+  return sre.Engine.getInstance().ssml ?
+    sre.AuditoryDescription.toSsmlString(descrs, separator) :
+    sre.AuditoryDescription.toSimpleString(descrs, separator);
+};
+
+
+/**
+ * Translates a list of auditory descriptions into a simple string.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string.
+ */
+sre.AuditoryDescription.toSsmlString = function(descrs, separator) {
   return sre.BaseUtil.removeEmpty(
       descrs.map(
         function(x) {
@@ -130,12 +155,10 @@ sre.AuditoryDescription.toNvdaString = function(descrs, opt_separator) {
 /**
  * Translates a list of auditory descriptions into a simple string.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
- * @param {string=} opt_separator The separator string.
+ * @param {string} separator The separator string.
  * @return {string} The generated string.
  */
-sre.AuditoryDescription.toSimpleString = function(descrs, opt_separator) {
-  var separator = opt_separator === '' ? '' : opt_separator || ' ';
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
+sre.AuditoryDescription.toSimpleString = function(descrs, separator) {
   return sre.BaseUtil.removeEmpty(
       descrs.map(
       function(x) {return x.descriptionString();})).

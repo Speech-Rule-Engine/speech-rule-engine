@@ -88,6 +88,7 @@ sre.System.prototype.setupEngine = function(feature) {
   sre.System.prototype.configBlocks_(feature);
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
+  engine.ssml = !!feature.ssml;
   engine.semantics = !!feature.semantics;
   if (feature.cache !== undefined) {
     engine.withCache = !!feature.cache;
@@ -298,7 +299,7 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  */
 sre.System.prototype.processXml_ = function(xml) {
   var descrs = sre.System.getInstance().describeXml_(xml);
-  return sre.AuditoryDescription.toSimpleString(descrs);
+  return sre.AuditoryDescription.toString(descrs);
 };
 
 
