@@ -44,16 +44,15 @@ sre.EnrichSpeechTest = function() {
 goog.inherits(sre.EnrichSpeechTest, sre.AbstractTest);
 
 
-
 /**
  * @override
  */
 sre.EnrichSpeechTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
-    {domain: 'mathspeak',
-     style: 'default',
-     speech: true,
-     semantics: true});
+      {domain: 'mathspeak',
+        style: 'default',
+        speech: true,
+        semantics: true});
 };
 
 
@@ -62,10 +61,10 @@ sre.EnrichSpeechTest.prototype.setUpTest = function() {
  */
 sre.EnrichSpeechTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
-    {domain: 'default',
-     style: 'short',
-     speech: false,
-     semantics: false});
+      {domain: 'default',
+        style: 'short',
+        speech: false,
+        semantics: false});
 };
 
 
