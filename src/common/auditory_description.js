@@ -146,7 +146,7 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
       descrs.map(
       function(x) {
         if (x.personality && x.personality.PAUSE) {
-          return '<break time = "' + x.personality.PAUSE + 'ms"/>';
+          return '<break time="' + x.personality.PAUSE + 'ms"/>';
         }
         return x.descriptionString();})).
       join(separator);
