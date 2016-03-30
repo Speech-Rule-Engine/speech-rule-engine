@@ -299,7 +299,7 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  */
 sre.System.prototype.processXml_ = function(xml) {
   var descrs = sre.System.getInstance().describeXml_(xml);
-  return sre.AuditoryDescription.toString(descrs);
+  return sre.AuditoryDescription.speechString(descrs);
 };
 
 

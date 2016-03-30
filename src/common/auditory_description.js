@@ -113,7 +113,7 @@ sre.AuditoryDescription.prototype.equals = function(that) {
  * @param {string=} opt_separator The separator string.
  * @return {string} The generated string.
  */
-sre.AuditoryDescription.toString = function(descrs, opt_separator) {
+sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return sre.AuditoryDescription.toString_(descrs, separator);
@@ -129,18 +129,19 @@ sre.AuditoryDescription.toString = function(descrs, opt_separator) {
  */
 sre.AuditoryDescription.toString_ = function(descrs, separator) {
   return sre.Engine.getInstance().ssml ?
-    sre.AuditoryDescription.toSsmlString(descrs, separator) :
-    sre.AuditoryDescription.toSimpleString(descrs, separator);
+    sre.AuditoryDescription.toSsmlString_(descrs, separator) :
+    sre.AuditoryDescription.toSimpleString_(descrs, separator);
 };
 
 
 /**
- * Translates a list of auditory descriptions into a simple string.
+ * Translates a list of auditory descriptions into a string with SSML markup.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
  * @param {string} separator The separator string.
- * @return {string} The generated string.
+ * @return {string} The generated string with SSML markup.
+ * @private
  */
-sre.AuditoryDescription.toSsmlString = function(descrs, separator) {
+sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
   return sre.BaseUtil.removeEmpty(
       descrs.map(
         function(x) {
@@ -157,8 +158,9 @@ sre.AuditoryDescription.toSsmlString = function(descrs, separator) {
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
  * @param {string} separator The separator string.
  * @return {string} The generated string.
+ * @private
  */
-sre.AuditoryDescription.toSimpleString = function(descrs, separator) {
+sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
   return sre.BaseUtil.removeEmpty(
       descrs.map(
       function(x) {return x.descriptionString();})).
