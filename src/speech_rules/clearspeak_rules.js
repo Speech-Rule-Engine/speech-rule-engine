@@ -24,6 +24,7 @@ goog.require('sre.MathmlStore');
 goog.require('sre.StoreUtil');
 
 
+
 /**
  * Rule initialization.
  * @constructor
@@ -50,12 +51,14 @@ sre.ClearspeakRules.defineRule_ = goog.bind(
 
 goog.scope(function() {
 var defineRule = sre.ClearspeakRules.defineRule_;
+
+
 /**
  * Clearspeak rules.
  * @private
 */
 sre.ClearspeakRules.initClearspeakRules_ = function() {
-    defineRule(
+  defineRule(
       'fraction', 'mathspeak.clearspeak',
       '[t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:300);' +
           ' [t] "and denominator"; [n] children/*[2]; [p] (pause:500)',

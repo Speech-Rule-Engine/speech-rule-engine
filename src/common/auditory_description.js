@@ -129,8 +129,8 @@ sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
  */
 sre.AuditoryDescription.toString_ = function(descrs, separator) {
   return sre.Engine.getInstance().ssml ?
-    sre.AuditoryDescription.toSsmlString_(descrs, separator) :
-    sre.AuditoryDescription.toSimpleString_(descrs, separator);
+      sre.AuditoryDescription.toSsmlString_(descrs, separator) :
+      sre.AuditoryDescription.toSimpleString_(descrs, separator);
 };
 
 
@@ -144,11 +144,11 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
 sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
   return sre.BaseUtil.removeEmpty(
       descrs.map(
-        function(x) {
-          if (x.personality && x.personality.PAUSE) {
-            return '<break time = "' + x.personality.PAUSE + 'ms"/>';
-          }
-          return x.descriptionString();})).
+      function(x) {
+        if (x.personality && x.personality.PAUSE) {
+          return '<break time = "' + x.personality.PAUSE + 'ms"/>';
+        }
+        return x.descriptionString();})).
       join(separator);
 };
 
