@@ -102,7 +102,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
   if (sre.Engine.getInstance().mode !== sre.Engine.Mode.HTTP) {
     return;
   }
-  var scripts = document.rootNode.querySelectorAll(
+  var scripts = document.documentElement.querySelectorAll(
       'script[type="text/x-sre-config"]');
   for (var i = 0, m = scripts.length; i < m; i++) {
     try {
