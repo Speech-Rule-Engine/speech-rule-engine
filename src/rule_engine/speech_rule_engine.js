@@ -243,6 +243,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
+    if (sre.Engine.getInstance().strict) return [];
     result = this.activeStore_.evaluateDefault(node);
     this.pushCache_(node, result);
     return result;

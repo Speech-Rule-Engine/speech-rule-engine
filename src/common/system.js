@@ -88,6 +88,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.ssml = !!feature.ssml;
+  engine.strict = !!feature.strict;
   engine.semantics = !!feature.semantics;
   if (feature.cache !== undefined) {
     engine.withCache = !!feature.cache;

@@ -107,6 +107,12 @@ sre.Engine = function() {
   this.ssml = false;
 
   /**
+   * Strict interpretations of rules and constraints.
+   * @type {boolean}
+   */
+  this.strict = false;
+
+  /**
    * Current browser is MS Internet Explorer but not Edge.
    * @type {boolean}
    */
