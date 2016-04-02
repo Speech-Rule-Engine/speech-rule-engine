@@ -846,10 +846,39 @@ sre.EnrichMathml.addSpeech = function(mml, semantic) {
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
  */
 sre.EnrichMathml.addPrefix = function(mml, semantic) {
+  var descrs = sre.EnrichMathml.computePrefix_(semantic);
+  var speech = sre.AuditoryDescription.speechString(descrs);
+  if (speech) mml.setAttribute(sre.EnrichMathml.Attribute.PREFIX, speech);
+};
+
+
+/**
+ * Adds a speech prefix if necessary.
+ * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the prefix.
+ * @private
+ */
+sre.EnrichMathml.computePrefix_ = function(semantic) {
+  //TODO: Refactor to semantic tree from root.
   var root = semantic;
   while (root.parent) {
     root = root.parent;
   }
+  var empty = sre.SemanticTree.fromNode(root);
+  var xml = sre.DomUtil.parseInput(empty.toString(), sre.EnrichMathml.Error);
+  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]', xml)[0];
+  return node ? sre.EnrichMathml.computePrefix(node) : [];
+};
+
+
+/**
+ * Compute prefix for an XML node.
+ * @param {!Node} xml The XML element.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the prefix.
+ */
+sre.EnrichMathml.computePrefix = function(xml) {
   // Currently we restrict ourselves to a special set of prefix speech rules.
   var domain = sre.Engine.getInstance().domain;
   var style = sre.Engine.getInstance().style;
@@ -859,13 +888,9 @@ sre.EnrichMathml.addPrefix = function(mml, semantic) {
   sre.System.getInstance().setupEngine(
       {'domain': 'prefix', 'style': 'default',
        'strict': true, 'cache': false, 'speech': true});
-  var empty = sre.SemanticTree.fromNode(root);
-  var xml = sre.DomUtil.parseInput(empty.toString(), sre.EnrichMathml.Error);
-  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]', xml)[0];
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(node);
-  var speech = sre.AuditoryDescription.speechString(descrs);
-  if (speech) mml.setAttribute(sre.EnrichMathml.Attribute.PREFIX, speech);
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   sre.System.getInstance().setupEngine(
       {'domain': domain, 'style': style, 'semantics': semantics,
        'strict': strict, 'cache': withCache, 'speech': true});
+  return descrs;
 };
