@@ -52,7 +52,7 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
       function(key, value) {
         var inner = sre.WalkerUtil.getBySemanticId(node, key);
         if (!inner) return;
-        var speech = sre.AuditoryDescription.toSimpleString(value);
+        var speech = sre.AuditoryDescription.speechString(value);
         inner.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
       }
   );
