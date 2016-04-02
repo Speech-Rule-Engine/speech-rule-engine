@@ -45,7 +45,6 @@ sre.RebuildStreeTest = function() {
 goog.inherits(sre.RebuildStreeTest, sre.AbstractTest);
 
 
-
 /**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} expr MathML expression.
@@ -1620,7 +1619,7 @@ sre.RebuildStreeTest.prototype.testRebuildBaseTensors = function() {
 };
 
 
-// 
+//
 //TODO: Some tensors do not yet work due to collapsed content nodes that are not
 // being recorded
 //
@@ -1912,7 +1911,7 @@ sre.RebuildStreeTest.prototype.testRebuildEmbellishedLeftFence = function() {
   //     '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
   //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
   // this.executeRebuildTest(
-  //     '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+  //   '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
   //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
   // this.executeRebuildTest(
   //     '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +

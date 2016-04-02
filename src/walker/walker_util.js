@@ -123,7 +123,7 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
 sre.WalkerUtil.getBySemanticId = function(root, id) {
   return (root.querySelector ?
           root.querySelector(
-            '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
+      '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
           sre.XpathUtil.evalXPath(
-            './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
+      './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
 };
