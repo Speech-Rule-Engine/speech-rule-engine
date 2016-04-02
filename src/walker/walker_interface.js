@@ -54,7 +54,7 @@ sre.WalkerInterface.prototype.deactivate = function() {};
 
 /**
  * Computes the speech string of the currently examined node.
- * @return {?string} The current speech string.
+ * @return {string} The current speech string.
  */
 sre.WalkerInterface.prototype.speech = function() {};
 

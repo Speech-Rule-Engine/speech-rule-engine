@@ -1911,8 +1911,8 @@ sre.RebuildStreeTest.prototype.testRebuildEmbellishedLeftFence = function() {
   //     '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
   //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
   // this.executeRebuildTest(
-  //     '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn>' +
-  //     '<mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>');
+  //   '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+  //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
   // this.executeRebuildTest(
   //     '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
   //     '<mprescripts/><mn>4</mn><mn>3</mn>' +
