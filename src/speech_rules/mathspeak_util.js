@@ -135,11 +135,13 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
   opt_barrierTags = opt_barrierTags || sre.MathspeakUtil.nestingBarriers;
   opt_barrierAttrs = opt_barrierAttrs || {};
   opt_func = opt_func || function(node) { return false; };
+  var xmlText = new sre.SystemExternal.xmldom.XMLSerializer().
+          serializeToString(node);
   if (!sre.MathspeakUtil.nestingDepth[type]) {
     sre.MathspeakUtil.nestingDepth[type] = {};
   }
-  if (sre.MathspeakUtil.nestingDepth[type][node.toString()]) {
-    return sre.MathspeakUtil.nestingDepth[type][node.toString()];
+  if (sre.MathspeakUtil.nestingDepth[type][xmlText]) {
+    return sre.MathspeakUtil.nestingDepth[type][xmlText];
   }
   if (opt_func(node) || tags.indexOf(node.tagName) < 0) {
     return 0;
@@ -147,7 +149,7 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
   var depth = sre.MathspeakUtil.computeNestingDepth_(
       node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
       opt_barrierAttrs, opt_func, 0);
-  sre.MathspeakUtil.nestingDepth[type][node.toString()] = depth;
+  sre.MathspeakUtil.nestingDepth[type][xmlText] = depth;
   return depth;
 };
 
