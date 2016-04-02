@@ -401,7 +401,7 @@ sre.System.prototype.walk = function(expr) {
   sre.Engine.getInstance().speech = true;
   var eml = sre.System.getInstance().toEnriched(expr);
   var node = sre.DomUtil.parseInput(eml, sre.System.Error);
-  this.walker = new sre.SyntaxWalker(node, this.speechGenerator);
+  this.walker = new sre.SyntaxWalker(node, this.speechGenerator, eml);
   return this.walker.speech();
 };
 

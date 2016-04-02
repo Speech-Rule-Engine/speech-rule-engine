@@ -25,7 +25,6 @@ goog.require('sre.BaseUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.RebuildStree');
 goog.require('sre.SemanticAttr');
-goog.require('sre.System');
 
 
 /**
