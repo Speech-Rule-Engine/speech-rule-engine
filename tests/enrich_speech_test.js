@@ -164,6 +164,20 @@ sre.EnrichSpeechTest.prototype.testSpeechMixedNumbers = function() {
 };
 
 
+// Fractions.
+/**
+ * Test (nested) fraction representations.
+ */
+sre.EnrichSpeechTest.prototype.testSpeechFractions = function() {
+  this.executeSpeechTest(
+      '<mfrac><mi>a</mi><mi>b</mi></mfrac>');
+  this.executeSpeechTest(
+      '<mfrac><mi>a</mi><mfrac><mi>b</mi><mi>c</mi></mfrac></mfrac>');
+  this.executeSpeechTest(
+      '<mfrac><mfrac><mi>a</mi><mi>b</mi></mfrac><mi>c</mi></mfrac>');
+};
+
+
 // Relations.
 /**
  * Test relation trees.
