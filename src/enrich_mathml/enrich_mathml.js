@@ -815,8 +815,8 @@ sre.EnrichMathml.computeSpeech = function(semantic) {
  *     for the node.
  */
 sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
-  var empty = sre.SemanticTree.fromNode(semantic);
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(empty.xml());
+  var tree = sre.SemanticTree.fromNode(semantic);
+  return sre.SpeechRuleEngine.getInstance().evaluateNode(tree.xml());
 };
 
 
@@ -857,12 +857,7 @@ sre.EnrichMathml.addPrefix = function(mml, semantic) {
  * @private
  */
 sre.EnrichMathml.computePrefix_ = function(semantic) {
-  //TODO: Refactor to semantic tree from root.
-  var root = semantic;
-  while (root.parent) {
-    root = root.parent;
-  }
-  var tree = sre.SemanticTree.fromNode(root);
+  var tree = sre.SemanticTree.fromRoot(semantic);
   var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
                                      tree.xml())[0];
   return node ? sre.EnrichMathml.computePrefix(node) : [];
