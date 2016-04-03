@@ -22,6 +22,7 @@ goog.provide('sre.PrefixRules');
 
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
+goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
 
@@ -31,7 +32,7 @@ goog.require('sre.StoreUtil');
  * @constructor
  */
 sre.PrefixRules = function() {
-  // sre.PrefixRules.initCustomFunctions_();
+  sre.PrefixRules.initCustomFunctions_();
   sre.PrefixRules.initPrefixRules_();
 };
 goog.addSingletonGetter(sre.PrefixRules);
@@ -49,11 +50,40 @@ sre.PrefixRules.defineRule_ = goog.bind(
     sre.PrefixRules.mathStore);
 
 
+/** @private */
+sre.PrefixRules.addCustomString_ = goog.bind(
+    sre.PrefixRules.mathStore.customStrings.add,
+    sre.PrefixRules.mathStore.customStrings);
+
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param {!Node} node The node for the string function.
+ * @return {string} The ordinal string corresponding to the child position of
+ *     the node.
+ */
+sre.PrefixRules.ordinalPosition = function(node) {
+  var children = sre.DomUtil.toArray(node.parentNode.childNodes);
+  return sre.MathspeakUtil.simpleOrdinal(children.indexOf(node) + 1).toString();
+};
+
 
 goog.scope(function() {
 var defineRule = sre.PrefixRules.defineRule_;
+var addCSF = sre.PrefixRules.addCustomString_;
 
 
+/**
+ * Initialize the custom functions.
+ * @private
+ */
+sre.PrefixRules.initCustomFunctions_ = function() {
+
+  addCSF('CSFordinalPosition', sre.PrefixRules.ordinalPosition);
+  
+};
+
+  
 /**
  * Prefix rules.
  * @private
@@ -73,7 +103,8 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'base', 'prefix.default',
       '[t] "base"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript" or name(../..)="subscript"' +
-      ' or name(../..)="overscore" or name(../..)="underscore"',
+      ' or name(../..)="overscore" or name(../..)="underscore"' +
+      ' or name(../..)="tensor"',
       'count(preceding-sibling::*)=0');
   defineRule(
       'exponent', 'prefix.default',
@@ -109,6 +140,46 @@ sre.PrefixRules.initPrefixRules_ = function() {
       '[t] "index"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=0');
+  defineRule(
+      'leftsub', 'prefix.default',
+      '[t] "left subscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="tensor"',
+      'count(preceding-sibling::*)=1');
+  defineRule(
+      'leftsub', 'prefix.default',
+      '[t] CSFordinalPosition; [t] "left subscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
+      'count(../../preceding-sibling::*)=1');
+  defineRule(
+      'leftsuper', 'prefix.default',
+      '[t] "left superscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="tensor"',
+      'count(preceding-sibling::*)=2');
+  defineRule(
+      'leftsuper', 'prefix.default',
+      '[t] CSFordinalPosition; [t] "left superscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
+      'count(../../preceding-sibling::*)=2');
+  defineRule(
+      'rightsub', 'prefix.default',
+      '[t] "right subscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="tensor"',
+      'count(preceding-sibling::*)=3');
+  defineRule(
+      'rightsub', 'prefix.default',
+      '[t] CSFordinalPosition; [t] "right subscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
+      'count(../../preceding-sibling::*)=3');
+  defineRule(
+      'rightsuper', 'prefix.default',
+      '[t] "right superscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="tensor"',
+      'count(preceding-sibling::*)=4');
+  defineRule(
+      'rightsuper', 'prefix.default',
+      '[t] CSFordinalPosition; [t] "right superscript"; [p] (pause:200)',
+      'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
+      'count(../../preceding-sibling::*)=4');
 };
 
 });  // goog.scope
