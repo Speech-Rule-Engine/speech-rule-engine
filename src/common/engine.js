@@ -98,7 +98,7 @@ sre.Engine = function() {
    * Caching during speech generation.
    * @type {boolean}
    */
-  this.withCache = true;
+  this.cache = true;
 
   /**
    * Caching during speech generation.

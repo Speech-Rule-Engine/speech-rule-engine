@@ -235,7 +235,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  if (sre.Engine.getInstance().withCache) {
+  if (sre.Engine.getInstance().cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
       return result;

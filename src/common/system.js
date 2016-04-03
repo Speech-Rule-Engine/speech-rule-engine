@@ -91,7 +91,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.strict = !!feature.strict;
   engine.semantics = !!feature.semantics;
   if (feature.cache !== undefined) {
-    engine.withCache = !!feature.cache;
+    engine.cache = !!feature.cache;
   }
   engine.speech = !!feature.speech;
   if (feature.json) {

@@ -883,7 +883,7 @@ sre.EnrichMathml.computePrefix = function(xml) {
   var domain = sre.Engine.getInstance().domain;
   var style = sre.Engine.getInstance().style;
   var strict = sre.Engine.getInstance().strict;
-  var withCache = sre.Engine.getInstance().withCache;
+  var cache = sre.Engine.getInstance().cache;
   var semantics = sre.Engine.getInstance().semantics;
   sre.System.getInstance().setupEngine(
       {'domain': 'prefix', 'style': 'default',
@@ -891,6 +891,6 @@ sre.EnrichMathml.computePrefix = function(xml) {
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
   sre.System.getInstance().setupEngine(
       {'domain': domain, 'style': style, 'semantics': semantics,
-       'strict': strict, 'cache': withCache, 'speech': true});
+       'strict': strict, 'cache': cache, 'speech': true});
   return descrs;
 };
