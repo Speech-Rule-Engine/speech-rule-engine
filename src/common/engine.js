@@ -172,3 +172,23 @@ sre.Engine.isReady = function() {
       function(pred) { return pred(); }
   );
 };
+
+
+sre.Engine.prototype.runInSetting = function(settings, callback) {
+  var save = {};
+  for (var key in settings) {
+    save[key] = this[key];
+    this[key] = settings[key];
+  }
+  //TODO: This needs to be refactored as a message signal for the speech rule
+  //      engine to update itself.
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(this.domain, this.style);
+  var result = callback();
+  for (key in save) {
+    this[key] = save[key];
+  }
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(this.domain, this.style);
+  return result;
+};

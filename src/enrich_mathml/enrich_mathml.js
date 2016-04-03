@@ -113,7 +113,7 @@ sre.EnrichMathml.Attribute = {
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
   if (sre.Engine.getInstance().speech) {
-    sre.EnrichMathml.computeSpeech_(semantic);
+    sre.EnrichMathml.computeSpeech(semantic.xml());
   }
   // The first line is only to preserve output. This should eventually be
   // deleted.
@@ -809,15 +809,6 @@ sre.EnrichMathml.computeSpeech = function(xml) {
 
 
 /**
- * Compute speech string for the semantic tree.
- * @param {!sre.SemanticTree} semantic The semantic tree.
- */
-sre.EnrichMathml.computeSpeech_ = function(semantic) {
-  sre.EnrichMathml.computeSpeech(semantic.xml());
-};
-
-
-/**
  * Computes speech descriptions for a single semantic node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
@@ -870,29 +861,11 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
   var tree = sre.SemanticTree.fromRoot(semantic);
   var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
                                      tree.xml())[0];
-  return node ? sre.EnrichMathml.computePrefix(node) : [];
-};
-
-
-/**
- * Compute prefix for an XML node.
- * @param {!Node} xml The XML element.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
- *     for the prefix.
- */
-sre.EnrichMathml.computePrefix = function(xml) {
-  // Currently we restrict ourselves to a special set of prefix speech rules.
-  var domain = sre.Engine.getInstance().domain;
-  var style = sre.Engine.getInstance().style;
-  var strict = sre.Engine.getInstance().strict;
-  var cache = sre.Engine.getInstance().cache;
-  var semantics = sre.Engine.getInstance().semantics;
-  sre.System.getInstance().setupEngine(
+  return node ?
+    sre.Engine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true});
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
-  sre.System.getInstance().setupEngine(
-      {'domain': domain, 'style': style, 'semantics': semantics,
-       'strict': strict, 'cache': cache, 'speech': true});
-  return descrs;
+       'strict': true, 'cache': false, 'speech': true},
+      function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
+    )
+  : [];
 };
