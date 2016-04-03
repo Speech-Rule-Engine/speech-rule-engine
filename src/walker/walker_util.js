@@ -128,16 +128,3 @@ sre.WalkerUtil.getBySemanticId = function(root, id) {
           sre.XpathUtil.evalXPath(
       './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
 };
-
-
-/**
- * Generates speech string for a sub tree of the xml element.
- * @param {!Node} node The target element of the event.
- * @param {!Element} xml The base xml element belonging to node.
- * @return {string} The generated speech string.
- */
-sre.WalkerUtil.generateSpeech = function(node, xml) {
-  var rebuilt = new sre.RebuildStree(xml);
-  var stree = rebuilt.getTree();
-  return sre.System.getInstance().processXml(stree.xml().childNodes[0]);
-};

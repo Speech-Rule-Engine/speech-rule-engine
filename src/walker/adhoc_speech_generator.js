@@ -23,8 +23,6 @@
 goog.provide('sre.AdhocSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -42,5 +40,5 @@ goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  return sre.WalkerUtil.generateSpeech(node, xml);
+  return this.generateSpeech(node, xml);
 };

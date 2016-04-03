@@ -113,7 +113,7 @@ sre.EnrichMathml.Attribute = {
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
   if (sre.Engine.getInstance().speech) {
-    sre.EnrichMathml.computeSpeech(semantic);
+    sre.EnrichMathml.computeSpeech_(semantic);
   }
   // The first line is only to preserve output. This should eventually be
   // deleted.
@@ -795,15 +795,25 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
 };
 
 
-//TODO: This should be refactored with functionality in system.
+/**
+ * Compute speech string for the xml version of the semantic tree.
+ * @param {!Node} xml The xml element.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the node.
+ */
+sre.EnrichMathml.computeSpeech = function(xml) {
+  var sreng = sre.SpeechRuleEngine.getInstance();
+  sreng.clearCache();
+  return sreng.evaluateNode(xml);
+};
+
+
 /**
  * Compute speech string for the semantic tree.
  * @param {!sre.SemanticTree} semantic The semantic tree.
  */
-sre.EnrichMathml.computeSpeech = function(semantic) {
-  var sreng = sre.SpeechRuleEngine.getInstance();
-  sreng.clearCache();
-  sreng.evaluateNode(semantic.xml());
+sre.EnrichMathml.computeSpeech_ = function(semantic) {
+  sre.EnrichMathml.computeSpeech(semantic.xml());
 };
 
 

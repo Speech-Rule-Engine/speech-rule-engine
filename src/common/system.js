@@ -201,7 +201,7 @@ sre.System.prototype.toDescription = function(expr) {
   if (!xml) {
     return [];
   }
-  var descrs = sre.System.getInstance().describeXml_(xml);
+  var descrs = sre.EnrichMathml.computeSpeech(xml);
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
@@ -297,20 +297,8 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.processXml = function(xml) {
-  var descrs = sre.System.getInstance().describeXml_(xml);
+  var descrs = sre.EnrichMathml.computeSpeech(xml);
   return sre.AuditoryDescription.speechString(descrs);
-};
-
-
-/**
- * Computes auditory descriptions for a given Xml node.
- * @param {!Node} xml The Xml node to describe.
- * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
- * @private
- */
-sre.System.prototype.describeXml_ = function(xml) {
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
 
 

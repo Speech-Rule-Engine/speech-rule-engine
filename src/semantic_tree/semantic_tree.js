@@ -180,7 +180,7 @@ sre.SemanticTree.Node.prototype.querySelectorAll = function(pred) {
 /**
   * Returns an XML representation of the tree.
   * @param {boolean=} opt_brief If set attributes are omitted.
-  * @return {Node} The XML representation of the tree.
+  * @return {!Node} The XML representation of the tree.
   */
 sre.SemanticTree.prototype.xml = function(opt_brief) {
   var xml = sre.DomUtil.parseInput('<stree></stree>');
