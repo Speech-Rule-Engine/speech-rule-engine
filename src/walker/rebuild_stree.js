@@ -215,7 +215,6 @@ sre.RebuildStree.parseCollapsed_ = function(collapsed) {
  */
 sre.RebuildStree.experiment__ = function(expr) {
   var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
-  console.log(mml.toString());
   var stree = new sre.SemanticTree(mml);
   var str1 = stree.toString();
   var emml = sre.EnrichMathml.enrich(mml, stree);

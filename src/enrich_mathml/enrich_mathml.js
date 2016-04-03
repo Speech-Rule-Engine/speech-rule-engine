@@ -803,8 +803,7 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
 sre.EnrichMathml.computeSpeech = function(semantic) {
   var sreng = sre.SpeechRuleEngine.getInstance();
   sreng.clearCache();
-  var xml = sre.DomUtil.parseInput(semantic.toString(), sre.EnrichMathml.Error);
-  sreng.evaluateNode(xml);
+  sreng.evaluateNode(semantic.xml());
 };
 
 
@@ -816,10 +815,8 @@ sre.EnrichMathml.computeSpeech = function(semantic) {
  *     for the node.
  */
 sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
-  //TODO: (sorge) In Http mode it could possibly be avoided to parse again.
   var empty = sre.SemanticTree.fromNode(semantic);
-  var xml = sre.DomUtil.parseInput(empty.toString(), sre.EnrichMathml.Error);
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
+  return sre.SpeechRuleEngine.getInstance().evaluateNode(empty.xml());
 };
 
 
@@ -865,9 +862,9 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
   while (root.parent) {
     root = root.parent;
   }
-  var empty = sre.SemanticTree.fromNode(root);
-  var xml = sre.DomUtil.parseInput(empty.toString(), sre.EnrichMathml.Error);
-  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]', xml)[0];
+  var tree = sre.SemanticTree.fromNode(root);
+  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
+                                     tree.xml())[0];
   return node ? sre.EnrichMathml.computePrefix(node) : [];
 };
 

@@ -341,14 +341,10 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
 /**
  * Creates a clean Xml version of the semantic tree for a given MathML node.
  * @param {!Element} mml The MathML node.
- * @return {!Node} Semantic tree for input node as newly created Xml node.
+ * @return {Node} Semantic tree for input node as newly created Xml node.
  */
 sre.System.prototype.getSemanticTree = function(mml) {
-  var tree = sre.Semantic.getTree(mml);
-  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    return tree.childNodes[0];
-  }
-  return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
+  return sre.Semantic.getTree(mml);
 };
 
 
@@ -401,6 +397,7 @@ sre.System.prototype.walk = function(expr) {
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   sre.Engine.getInstance().speech = true;
   var eml = sre.System.getInstance().toEnriched(expr);
+  //TODO: See if this is still necessary.
   var node = sre.DomUtil.parseInput(eml, sre.System.Error);
   this.walker = new sre.SyntaxWalker(node, this.speechGenerator, eml);
   return this.walker.speech();
