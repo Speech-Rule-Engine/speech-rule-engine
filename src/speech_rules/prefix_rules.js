@@ -91,93 +91,93 @@ sre.PrefixRules.initCustomFunctions_ = function() {
 sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
       'numerator', 'prefix.default',
-      '[t] "numerator"; [p] (pause:200)',
+      '[t] "Numerator"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=0');
   defineRule(
       'denominator', 'prefix.default',
-      '[t] "denominator"; [p] (pause:200)',
+      '[t] "Denominator"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'base', 'prefix.default',
-      '[t] "base"; [p] (pause:200)',
+      '[t] "Base"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript" or name(../..)="subscript"' +
       ' or name(../..)="overscore" or name(../..)="underscore"' +
       ' or name(../..)="tensor"',
       'count(preceding-sibling::*)=0');
   defineRule(
       'exponent', 'prefix.default',
-      '[t] "exponent"; [p] (pause:200)',
+      '[t] "Exponent"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'subscript', 'prefix.default',
-      '[t] "subscript"; [p] (pause:200)',
+      '[t] "Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="subscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'overscript', 'prefix.default',
-      '[t] "overscript"; [p] (pause:200)',
+      '[t] "Overscript"; [p] (pause:200)',
       'self::*', 'name(../..)="overscore"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'underscript', 'prefix.default',
-      '[t] "underscript"; [p] (pause:200)',
+      '[t] "Underscript"; [p] (pause:200)',
       'self::*', 'name(../..)="underscore"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'radicand', 'prefix.default',
-      '[t] "radicand"; [p] (pause:200)',
+      '[t] "Radicand"; [p] (pause:200)',
       'self::*', 'name(../..)="sqrt"');
   defineRule(
       'radicand', 'prefix.default',
-      '[t] "radicand"; [p] (pause:200)',
+      '[t] "Radicand"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'index', 'prefix.default',
-      '[t] "index"; [p] (pause:200)',
+      '[t] "Index"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=0');
   defineRule(
       'leftsub', 'prefix.default',
-      '[t] "left subscript"; [p] (pause:200)',
+      '[t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       'count(preceding-sibling::*)=1');
   defineRule(
       'leftsub', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "left subscript"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       'count(../../preceding-sibling::*)=1');
   defineRule(
       'leftsuper', 'prefix.default',
-      '[t] "left superscript"; [p] (pause:200)',
+      '[t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       'count(preceding-sibling::*)=2');
   defineRule(
       'leftsuper', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "left superscript"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       'count(../../preceding-sibling::*)=2');
   defineRule(
       'rightsub', 'prefix.default',
-      '[t] "right subscript"; [p] (pause:200)',
+      '[t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       'count(preceding-sibling::*)=3');
   defineRule(
       'rightsub', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "right subscript"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       'count(../../preceding-sibling::*)=3');
   defineRule(
       'rightsuper', 'prefix.default',
-      '[t] "right superscript"; [p] (pause:200)',
+      '[t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       'count(preceding-sibling::*)=4');
   defineRule(
       'rightsuper', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "right superscript"; [p] (pause:200)',
+      '[t] CSFordinalPosition; [t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       'count(../../preceding-sibling::*)=4');
 };
