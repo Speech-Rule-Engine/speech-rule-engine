@@ -74,10 +74,10 @@ sre.AbstractWalker = function(node, generator, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.RIGHT] = goog.bind(this.right, this);
   this.keyMapping_[sre.EventUtil.KeyCode.LEFT] = goog.bind(this.left, this);
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.repeat, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
 
   this.dummy_ = function() {};
   this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.dummy_, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.dummy_, this);
 
   var rootNode = sre.WalkerUtil.getSemanticRoot(node);
   /**
@@ -90,9 +90,9 @@ sre.AbstractWalker = function(node, generator, xml) {
 
   /**
    * Flag indicating whether the last move actually moved focus.
-   * @type {boolean}
+   * @type {sre.AbstractWalker.move}
    */
-  this.moved = false;
+  this.moved = sre.AbstractWalker.move.ENTER;
 
 };
 
@@ -107,7 +107,8 @@ sre.AbstractWalker.move = {
   LEFT: 'left',
   RIGHT: 'right',
   REPEAT: 'repeat',
-  DEPTH: 'depth'
+  DEPTH: 'depth',
+  ENTER: 'enter'
 };
 
 
@@ -171,20 +172,19 @@ sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
  */
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getNodes();
+  var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
+    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
+  if (this.moved === sre.AbstractWalker.move.DEPTH) {
+    return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '');
+  }
   var speech = nodes.map(
     goog.bind(function(x) {
         return this.generator.getSpeech(x, this.xml);
     }, this));
-  if (!this.moved) {
+  if (this.moved === sre.AbstractWalker.move.REPEAT) {
     return speech.join(' ');
   }
-  var prefix = null;
-  if (nodes.length > 0) {
-    prefix = sre.WalkerUtil.getAttribute(
-      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX);
-  }
   if (prefix) speech.unshift(prefix);
-  this.moved = false;
   return speech.join(' ');
 };
 
@@ -212,7 +212,7 @@ sre.AbstractWalker.prototype.move = function(key) {
  * @protected
  */
 sre.AbstractWalker.prototype.up = function() {
-  this.moved = false;
+  this.moved = sre.AbstractWalker.move.UP;
   return this.focus_;
 };
 
@@ -223,7 +223,7 @@ sre.AbstractWalker.prototype.up = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.down = function() {
-  this.moved = true;
+  this.moved = sre.AbstractWalker.move.DOWN;
   return this.focus_;
 };
 
@@ -234,7 +234,7 @@ sre.AbstractWalker.prototype.down = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.left = function() {
-  this.moved = true;
+  this.moved = sre.AbstractWalker.move.LEFT;
   return this.focus_;
 };
 
@@ -245,7 +245,7 @@ sre.AbstractWalker.prototype.left = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.right = function() {
-  this.moved = true;
+  this.moved = sre.AbstractWalker.move.RIGHT;
   return this.focus_;
 };
 
@@ -256,7 +256,19 @@ sre.AbstractWalker.prototype.right = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.repeat = function() {
-  this.moved = false;
+  this.moved = sre.AbstractWalker.move.REPEAT;
+  return new sre.Focus({nodes: this.focus_.getNodes(),
+                        primary: this.focus_.getPrimary()});
+};
+
+
+/**
+ * Makes a depth announcement.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.depth = function() {
+  this.moved = sre.AbstractWalker.move.DEPTH;
   return new sre.Focus({nodes: this.focus_.getNodes(),
                         primary: this.focus_.getPrimary()});
 };
