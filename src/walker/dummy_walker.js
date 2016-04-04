@@ -61,3 +61,17 @@ sre.DummyWalker.prototype.left = function() { };
  * @override
  */
 sre.DummyWalker.prototype.right = function() { };
+
+
+/**
+ * @override
+ */
+sre.DummyWalker.prototype.repeat = function() { };
+
+
+/**
+ * @override
+ */
+sre.DummyWalker.prototype.getDepth = function() {
+  return 0;
+};

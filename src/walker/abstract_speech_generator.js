@@ -22,6 +22,8 @@
 
 goog.provide('sre.AbstractSpeechGenerator');
 
+goog.require('sre.AuditoryDescription');
+goog.require('sre.EnrichMathml');
 goog.require('sre.SpeechGeneratorInterface');
 
 
@@ -49,3 +51,17 @@ sre.AbstractSpeechGenerator.prototype.start = function() { };
  * @override
  */
 sre.AbstractSpeechGenerator.prototype.end = function() { };
+
+
+/**
+ * Generates speech string for a sub tree of the xml element.
+ * @param {!Node} node The target element of the event.
+ * @param {!Element} xml The base xml element belonging to node.
+ * @return {string} The generated speech string.
+ */
+sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
+  var rebuilt = new sre.RebuildStree(xml);
+  var stree = rebuilt.getTree();
+  var descrs = sre.EnrichMathml.computeSpeech(stree.xml());
+  return sre.AuditoryDescription.speechString(descrs);
+};

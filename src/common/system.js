@@ -88,9 +88,10 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.ssml = !!feature.ssml;
+  engine.strict = !!feature.strict;
   engine.semantics = !!feature.semantics;
   if (feature.cache !== undefined) {
-    engine.withCache = !!feature.cache;
+    engine.cache = !!feature.cache;
   }
   engine.speech = !!feature.speech;
   if (feature.json) {
@@ -200,7 +201,7 @@ sre.System.prototype.toDescription = function(expr) {
   if (!xml) {
     return [];
   }
-  var descrs = sre.System.getInstance().describeXml_(xml);
+  var descrs = sre.EnrichMathml.computeSpeech(xml);
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
@@ -296,20 +297,8 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.processXml = function(xml) {
-  var descrs = sre.System.getInstance().describeXml_(xml);
+  var descrs = sre.EnrichMathml.computeSpeech(xml);
   return sre.AuditoryDescription.speechString(descrs);
-};
-
-
-/**
- * Computes auditory descriptions for a given Xml node.
- * @param {!Node} xml The Xml node to describe.
- * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
- * @private
- */
-sre.System.prototype.describeXml_ = function(xml) {
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
 
 
@@ -340,14 +329,10 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
 /**
  * Creates a clean Xml version of the semantic tree for a given MathML node.
  * @param {!Element} mml The MathML node.
- * @return {!Node} Semantic tree for input node as newly created Xml node.
+ * @return {Node} Semantic tree for input node as newly created Xml node.
  */
 sre.System.prototype.getSemanticTree = function(mml) {
-  var tree = sre.Semantic.getTree(mml);
-  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    return tree.childNodes[0];
-  }
-  return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
+  return sre.Semantic.getTree(mml);
 };
 
 
@@ -400,6 +385,7 @@ sre.System.prototype.walk = function(expr) {
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   sre.Engine.getInstance().speech = true;
   var eml = sre.System.getInstance().toEnriched(expr);
+  //TODO: See if this is still necessary.
   var node = sre.DomUtil.parseInput(eml, sre.System.Error);
   this.walker = new sre.SyntaxWalker(node, this.speechGenerator, eml);
   return this.walker.speech();

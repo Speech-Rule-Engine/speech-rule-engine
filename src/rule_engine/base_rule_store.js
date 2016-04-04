@@ -25,6 +25,7 @@ goog.provide('sre.BaseRuleStore');
 
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
 goog.require('sre.MathUtil');
 goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
@@ -295,7 +296,9 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
       Object.keys(dynamic));
   return allKeys.every(
       function(key) {
-        return dynamic[key] == rule.dynamicCstr[key] ||
+        return sre.Engine.getInstance().strict ?
+            dynamic[key] == rule.dynamicCstr[key] :
+            dynamic[key] == rule.dynamicCstr[key] ||
             // TODO (sorge) Sort this out with a ordered list of constraints.
             rule.dynamicCstr[key] == 'short' ||
             rule.dynamicCstr[key] == 'default';
@@ -391,6 +394,7 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
  */
 sre.BaseRuleStore.prototype.testPrecondition_ = function(node, rule) {
   var prec = rule.precondition;
+  var result = this.applyQuery(node, prec.query);
   return this.applyQuery(node, prec.query) === node &&
       prec.constraints.every(
           goog.bind(function(cstr) {

@@ -235,7 +235,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  if (sre.Engine.getInstance().withCache) {
+  if (sre.Engine.getInstance().cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
       return result;
@@ -243,6 +243,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
+    if (sre.Engine.getInstance().strict) return [];
     result = this.activeStore_.evaluateDefault(node);
     this.pushCache_(node, result);
     return result;

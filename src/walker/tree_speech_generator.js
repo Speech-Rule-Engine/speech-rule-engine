@@ -46,7 +46,7 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
   var speech = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.SPEECH);
   if (speech) return speech;
-  speech = sre.WalkerUtil.generateSpeech(node, xml);
+  speech = this.generateSpeech(node, xml);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
   sre.SpeechRuleEngine.getInstance().forCache(
       function(key, value) {
