@@ -67,6 +67,13 @@ sre.WalkerInterface.prototype.getFocus = function() {};
 
 
 /**
+ * Returns the current depth of the walker, starting at 0.
+ * @return {!number} The current depth of the walker.
+ */
+sre.WalkerInterface.prototype.getDepth = function() {};
+
+
+/**
  * Performs the next move depending on the key event.
  * @param {!sre.EventUtil.KeyCode} key The input key code.
  * @return {?boolean} True if the move was successful, false, if it was not, and

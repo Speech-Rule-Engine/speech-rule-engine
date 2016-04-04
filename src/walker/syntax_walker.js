@@ -142,3 +142,11 @@ sre.SyntaxWalker.prototype.right = function() {
   var id = this.levels.get(index);
   return id ? this.focusFromId_(id) : null;
 };
+
+
+/**
+ * @override
+ */
+sre.SyntaxWalker.prototype.getDepth = function() {
+  return this.levels.depth() - 1;
+};

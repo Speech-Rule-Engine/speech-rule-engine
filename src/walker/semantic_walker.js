@@ -258,3 +258,11 @@ sre.SemanticWalker.prototype.right = function() {
   var ids = this.levels.get(index);
   return ids ? ids : null;
 };
+
+
+/**
+ * @override
+ */
+sre.SemanticWalker.prototype.getDepth = function() {
+  return this.levels.depth() - 1;
+};

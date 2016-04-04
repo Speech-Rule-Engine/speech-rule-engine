@@ -40,6 +40,7 @@ goog.require('sre.WalkerUtil');
  * @override
  */
 sre.AbstractWalker = function(node, generator, xml) {
+
   /**
    * The math expression on which the walker is called.
    * @type {!Node}
@@ -143,6 +144,12 @@ sre.AbstractWalker.prototype.deactivate = function() {
 sre.AbstractWalker.prototype.getFocus = function() {
   return this.focus_;
 };
+
+
+/**
+ * @override
+ */
+sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
 
 
 /**
