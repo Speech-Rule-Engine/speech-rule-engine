@@ -144,42 +144,42 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'leftsub', 'prefix.default',
       '[t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'count(preceding-sibling::*)=1');
+      'self::*[@role="leftsub"]');
   defineRule(
       'leftsub', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
-      'count(../../preceding-sibling::*)=1');
+      '../../@role="leftsub"');
   defineRule(
       'leftsuper', 'prefix.default',
       '[t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'count(preceding-sibling::*)=2');
+      'self::*[@role="leftsuper"]');
   defineRule(
       'leftsuper', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
-      'count(../../preceding-sibling::*)=2');
+      '../../@role="leftsuper"');
   defineRule(
       'rightsub', 'prefix.default',
       '[t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'count(preceding-sibling::*)=3');
+      'self::*[@role="rightsub"]');
   defineRule(
       'rightsub', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
-      'count(../../preceding-sibling::*)=3');
+      '../../@role="rightsub"');
   defineRule(
       'rightsuper', 'prefix.default',
       '[t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'count(preceding-sibling::*)=4');
+      'self::*[@role="rightsuper"]');
   defineRule(
       'rightsuper', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
-      'count(../../preceding-sibling::*)=4');
+      '../../@role="rightsuper"');
 };
-
+  
 });  // goog.scope
