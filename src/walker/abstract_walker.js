@@ -98,6 +98,20 @@ sre.AbstractWalker = function(node, generator, xml) {
 
 
 /**
+ * Enumerator for different types of moves.
+ * @enum {string}
+ */
+sre.AbstractWalker.move = {
+  UP: 'up',
+  DOWN: 'down',
+  LEFT: 'left',
+  RIGHT: 'right',
+  REPEAT: 'repeat',
+  DEPTH: 'depth'
+};
+
+
+/**
  * @override
  */
 sre.AbstractWalker.prototype.isActive = function() {
