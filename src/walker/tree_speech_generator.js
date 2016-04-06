@@ -35,6 +35,8 @@ goog.require('sre.WalkerUtil');
  */
 sre.TreeSpeechGenerator = function() {
   goog.base(this);
+
+  this.newMml = null;
 };
 goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
 
@@ -46,15 +48,26 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
   var speech = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.SPEECH);
   if (speech) return speech;
-  speech = this.generateSpeech(node, xml);
+  this.newMml = xml;
+  var rebuilt = new sre.RebuildStree(xml);
+  var stree = rebuilt.getTree();
+  var sxml = stree.xml();
+  sre.EnrichMathml.connectMactions(node, xml, sxml);
+  var descrs = sre.EnrichMathml.computeSpeech(sxml);
+  speech = sre.AuditoryDescription.speechString(descrs);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  sre.SpeechRuleEngine.getInstance().forCache(
-      function(key, value) {
-        var inner = sre.WalkerUtil.getBySemanticId(node, key);
-        if (!inner) return;
-        var speech = sre.AuditoryDescription.speechString(value);
-        inner.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-      }
-  );
+  var nodes = rebuilt.nodeDict;
+  for (var key in nodes) {
+    //TODO: Refactor with setting the base semantic tree in the enrich mathml
+    //      object.
+    var snode = nodes[key];
+    var innerMml = /** @type{Element} */(
+        sre.WalkerUtil.getBySemanticId(xml, key));
+    var innerNode = /** @type{Element} */(
+        sre.WalkerUtil.getBySemanticId(node, key));
+    if (!innerMml || !innerNode) continue;
+    sre.EnrichMathml.addSpeech(innerNode, snode);
+    sre.EnrichMathml.addPrefix(innerNode, snode);
+  }
   return speech;
 };
