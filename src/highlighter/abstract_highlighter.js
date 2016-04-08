@@ -160,3 +160,13 @@ sre.AbstractHighlighter.prototype.addEvents = function(node, events) {
 sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
   return node.getElementsByClassName(this.mactionName);
 };
+
+
+/**
+ * Predicate to check if a node is an maction node.
+ * @param {!Node} node A DOM node.
+ * @return {boolean} True if the node is an maction node.
+ */
+sre.AbstractHighlighter.prototype.isMactionNode = function(node) {
+  return node.className === this.mactionName;
+};
