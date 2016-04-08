@@ -904,7 +904,9 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
     } else {
       cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
     }
-    cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
+    if (pid) {
+      cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
+    }
     cspan.setAttribute(sre.EnrichMathml.Attribute.ID, altname);
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', altname);
