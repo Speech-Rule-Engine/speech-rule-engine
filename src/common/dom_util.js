@@ -191,3 +191,32 @@ sre.DomUtil.querySelectorAllByAttr = function(node, attr) {
           sre.DomUtil.toArray(node.querySelectorAll('[' + attr + ']')) :
           sre.XpathUtil.evalXPath('.//*[@' + attr + ']', node));
 };
+
+
+/**
+ * A wrapper function for query selector on a node wrt. to an attribute. If
+ * query selectors are not implemented on that node it reverts to Xpath.
+ * @param {!Node} node A DOM node.
+ * @param {!string} attr The data attribute.
+ * @param {!string} value The value of the data attribute.
+ * @return {!Array.<Node>} The list of result nodes.
+ */
+sre.DomUtil.querySelectorAllByAttrValue = function(node, attr, value) {
+  return (node.querySelectorAll ?
+          sre.DomUtil.toArray(node.querySelectorAll('[' + attr + '="'+ value +'"]')) :
+          sre.XpathUtil.evalXPath('.//*[@' + attr + '="'+ value +'"]', node));
+};
+
+
+/**
+ * A wrapper function for query selector on a node wrt. to a tag name. If
+ * query selectors are not implemented on that node it reverts to Xpath.
+ * @param {!Node} node A DOM node.
+ * @param {!string} tag The tag name.
+ * @return {!Array.<Node>} The list of result nodes.
+ */
+sre.DomUtil.querySelectorAll = function(node, tag) {
+  return (node.querySelectorAll ?
+          sre.DomUtil.toArray(node.querySelectorAll(tag)) :
+          sre.XpathUtil.evalXPath('.//' + tag, node));
+};
