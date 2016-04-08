@@ -33,8 +33,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.DummyWalker = function(node, generator, xml) {
-  goog.base(this, node, generator, xml);
+sre.DummyWalker = function(node, generator, highlighter, xml) {
+  goog.base(this, node, generator, highlighter, xml);
 };
 goog.inherits(sre.DummyWalker, sre.AbstractWalker);
 
