@@ -327,10 +327,11 @@ sre.AbstractWalker.prototype.primaryId = function() {
 sre.AbstractWalker.prototype.expand = function() {
   var primary = this.focus_.getPrimary();
   var expandable = this.actionable_(primary);
-  if (expandable) {
-    this.moved = sre.AbstractWalker.move.EXPAND;
-    expandable.onclick();
+  if (!expandable) {
+    return this.focus_;
   }
+  this.moved = sre.AbstractWalker.move.EXPAND;
+  expandable.onclick();
   return new sre.Focus({nodes: this.focus_.getNodes(),
                         primary: this.focus_.getPrimary()});
 };
