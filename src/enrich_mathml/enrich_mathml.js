@@ -892,7 +892,7 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
     cspan = span.childNodes[0];
     var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
     var pspan = sre.WalkerUtil.getBySemanticId(node, pid);
-    var altname = mid; // 'a' + altcount++;
+    var altname = mid;
     if (pspan) {
       var children = pspan.getAttribute(sre.EnrichMathml.Attribute.CHILDREN);
       if (children) {
@@ -901,10 +901,10 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
         items[index] = altname;
         pspan.setAttribute(sre.EnrichMathml.Attribute.CHILDREN, items.join(','));
       }
-      cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
     } else {
       cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
     }
+    cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
     cspan.setAttribute(sre.EnrichMathml.Attribute.ID, altname);
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', altname);
