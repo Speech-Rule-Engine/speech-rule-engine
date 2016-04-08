@@ -167,7 +167,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
   if (!this.isActive()) {
     return;
   }
-  this.highlighter.state[this.node.id] = this.primaryId();
+  this.highlighter.setState(this.node.id, this.primaryId());
   this.generator.end();
   this.toggleActive_();
 };
@@ -356,9 +356,9 @@ sre.AbstractWalker.prototype.collapsible = function(node) {
 
 
 sre.AbstractWalker.prototype.restoreState = function() {
-  //TODO: Have a function in highlighter for state saving.
-  if (!this.highlighter || !this.highlighter.state[this.node.id]) return;
-  var state = this.highlighter.state[this.node.id];
+  if (!this.highlighter) return;
+  var state = this.highlighter.getState(this.node.id);
+  if (!state) return;
   //TODO: Save this in the speech generator!
   var rebuilt = new sre.RebuildStree(this.xml);
   var stree = rebuilt.getTree();
