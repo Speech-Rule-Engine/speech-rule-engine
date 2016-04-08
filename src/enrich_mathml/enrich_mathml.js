@@ -909,5 +909,4 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', altname);
   }
-  console.log(stree);
 };
