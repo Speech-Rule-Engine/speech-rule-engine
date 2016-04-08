@@ -880,15 +880,16 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
  */
 sre.EnrichMathml.connectMactions = function(node, mml, stree) {
   var altcount = 0;
-  var mactions = sre.XpathUtil.evalXPath('//mathml:maction', mml);
+  var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
   for (var i = 0, maction; maction = mactions[i]; i++) {
-    var span = sre.XpathUtil.evalXPath('.//*[@id="' + maction.id + '"]', node)[0];
+    var aid = maction.getAttribute('id');
+    var span = sre.DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
     if (!span) continue;
     var lchild = maction.childNodes[1];
     var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
     var cspan = sre.WalkerUtil.getBySemanticId(node, mid);
     if (cspan) continue;
-    cspan = sre.XpathUtil.evalXPath('.//*[@class="mtext"]', span)[0];
+    cspan = span.childNodes[0];
     var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
     var pspan = sre.WalkerUtil.getBySemanticId(node, pid);
     var altname = mid; // 'a' + altcount++;
@@ -905,7 +906,7 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
       cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
     }
     cspan.setAttribute(sre.EnrichMathml.Attribute.ID, altname);
-    var cst = sre.XpathUtil.evalXPath('//*[@id="' + mid + '"]', stree)[0];
+    var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', altname);
   }
   console.log(stree);
