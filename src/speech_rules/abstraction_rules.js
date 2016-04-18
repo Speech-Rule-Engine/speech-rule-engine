@@ -260,6 +260,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
     'self::infixop[@alternative]', 'self::*'
   );
   defineRule(
+    'abstr-infixop', 'mathspeak.default',
+    '[t] "collapsed"; [t] @role; [t] "with variable number of elements"',
+    'self::infixop[@alternative]', 'count(./children/*)>2',
+    './children/punctuation[@role="ellipsis"]', 'self::*'
+  );
+  defineRule(
     'abstr-infixop', 'mathspeak.brief',
     '[t] "collapsed"; [t] @role',
     'self::infixop[@alternative]', 'self::*'
@@ -281,6 +287,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
     'abstr-addition', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+  defineRule(
+    'abstr-var-addition', 'mathspeak.default',
+    '[t] "collapsed sum with variable number of summands"',
+    'self::infixop[@alternative]', '@role="addition"',
+    'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
+  );
   
   defineRule(
     'abstr-multiplication', 'mathspeak.default',
@@ -298,6 +310,17 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineRuleAlias(
     'abstr-multiplication',
     'self::infixop[@alternative]', '@role="implicit"'
+  );
+  defineRule(
+    'abstr-var-multiplication', 'mathspeak.default',
+    '[t] "collapsed product with variable number of factors"',
+    'self::infixop[@alternative]', '@role="multiplication"',
+    'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
+  );
+  defineRuleAlias(
+    'abstr-var-multiplication',
+    'self::infixop[@alternative]', '@role="implicit"',
+    'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
