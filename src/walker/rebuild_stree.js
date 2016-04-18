@@ -48,6 +48,8 @@ sre.RebuildStree = function(mathml) {
 
   this.stree = sre.SemanticTree.fromNode(this.streeRoot, this.mathml);
 
+  this.xml = this.stree.xml();
+
 };
 
 

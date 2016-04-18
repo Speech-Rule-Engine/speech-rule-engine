@@ -22,6 +22,7 @@ goog.provide('sre.Mathjax');
 
 goog.require('sre.AdhocSpeechGenerator');
 goog.require('sre.DirectSpeechGenerator');
+goog.require('sre.DummySpeechGenerator');
 goog.require('sre.DummyWalker');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
@@ -64,7 +65,6 @@ goog.require('sre.TreeSpeechGenerator');
       {mode: sre.Engine.Mode.HTTP,
         domain: 'mathspeak',
         style: 'default',
-        speech: true,
         semantics: true}
   );
 

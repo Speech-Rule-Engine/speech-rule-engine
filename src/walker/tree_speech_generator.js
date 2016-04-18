@@ -33,11 +33,7 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.TreeSpeechGenerator = function() {
-  goog.base(this);
-
-  this.newMml = null;
-};
+sre.TreeSpeechGenerator = function() { };
 goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
 
 
@@ -45,18 +41,11 @@ goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = sre.WalkerUtil.getAttribute(
-      node, sre.EnrichMathml.Attribute.SPEECH);
+  var speech = goog.base(this, 'getSpeech', node, xml);
   if (speech) return speech;
-  this.newMml = xml;
-  var rebuilt = new sre.RebuildStree(xml);
-  var stree = rebuilt.getTree();
-  var sxml = stree.xml();
-  sre.EnrichMathml.connectMactions(node, xml, sxml);
-  var descrs = sre.EnrichMathml.computeSpeech(sxml);
-  speech = sre.AuditoryDescription.speechString(descrs);
+  speech = this.generateSpeech(node, xml);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  var nodes = rebuilt.nodeDict;
+  var nodes = this.rebuilt.nodeDict;
   for (var key in nodes) {
     //TODO: Refactor with setting the base semantic tree in the enrich mathml
     //      object.
