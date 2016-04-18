@@ -330,33 +330,86 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   //TODO: Add rules for elements containing ellipses.
   
-  // To here!
   defineRule(
     'abstr-cases', 'mathspeak.default',
-    '[t] "collapsed cases"',
+    '[t] "collapsed case statement";' +
+      '[t] "with"; [t] count(children/*); [t] "cases"',
+    'self::cases[@alternative]'
+  );
+  defineRule(
+    'abstr-cases', 'mathspeak.brief',
+    '[t] "collapsed case statement"',
     'self::cases[@alternative]'
   );
 
+  //TODO: Make this more fine grained based on different types of punctuations.
   defineRule(
     'abstr-punctuated', 'mathspeak.default',
-    '[t] "collapsed punctuated"',
+    '[t] "collapsed"; [n] content/*[1]; [t] "separated list";' +
+      '[t] "of length"; [t] count(children/*) - count(content/*)',
     'self::punctuated[@alternative]'
   );
+  defineRule(
+    'abstr-punctuated', 'mathspeak.brief',
+    '[t] "collapsed"; [n] content/*[1]; [t] "separated list"',
+    'self::punctuated[@alternative]'
+  );
+
+
   defineRule(
     'abstr-text', 'mathspeak.default',
     '[t] "collapsed text"',
     'self::text[@alternative]'
   );
-  defineRule(
-    'abstr-default', 'mathspeak.default',
-    '[t] "collapsed default"',
-    'self::default[@alternative]'
-  );
   
   defineRule(
-      'abstr-bigop', 'mathspeak.default',
-      '[t] "collapsed sigma sum"',
-      'self::bigop[@alternative]', 'self::*');
+    'abstr-bigop', 'mathspeak.default',
+    '[t] "collapsed"; [n] content/*[1]',
+    'self::relseq[@alternative]', 'self::*'
+  );
+
+  //TODO: What about embellished operators/relations?
+  defineRule(
+    'abstr-relation', 'mathspeak.brief',
+    '[t] "collapsed"; [n] text(); [t] "sequence"',
+    'self::relseq[@alternative]', 'count(./children/*)=2'
+  );
+  defineRule(
+    'abstr-relation', 'mathspeak.default',
+    '[t] "collapsed"; [n] text(); [t] "sequence";' +
+      ' [t] "with"; [t] count(./children/*); [t] "elements"',
+    'self::relseq[@alternative]', 'count(./children/*)>2'
+  );
+  defineRule(
+    'abstr-relation', 'mathspeak.brief',
+    '[t] "collapsed"; [n] text(); [t] "sequence"',
+    'self::relseq[@alternative]', 'count(./children/*)>2'
+  );
+  defineRule(
+    'abstr-equality', 'mathspeak.default',
+    '[t] "collapsed equation"',
+    'self::relseq[@alternative]',
+    'self::relseq[@role="equality"]', 'count(./children/*)=2'
+  );
+  defineRule(
+    'abstr-equality', 'mathspeak.default',
+    '[t] "collapsed equation sequence";' +
+      ' [t] "with"; [t] count(./children/*); [t] "elements"',
+    'self::relseq[@alternative]',
+    'self::relseq[@role="equality"]', 'count(./children/*)>2'
+  );
+  defineRule(
+    'abstr-equality', 'mathspeak.brief',
+    '[t] "collapsed equation sequence";',
+    'self::relseq[@alternative]',
+    'self::relseq[@role="equality"]', 'count(./children/*)>2'
+  );
+  defineRule(
+    'abstr-multirel', 'mathspeak.default',
+    '[t] "collapsed relation sequence"',
+    'self::multirel[@alternative]',  'count(./children/*)>2'
+  );
+
 };
   
 });  // goog.scope
