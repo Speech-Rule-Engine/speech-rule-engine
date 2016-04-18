@@ -353,6 +353,10 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
     'self::default[@alternative]'
   );
   
+  defineRule(
+      'abstr-bigop', 'mathspeak.default',
+      '[t] "collapsed sigma sum"',
+      'self::bigop[@alternative]', 'self::*');
 };
   
 });  // goog.scope
