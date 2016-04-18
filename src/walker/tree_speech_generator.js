@@ -15,8 +15,8 @@
 
 /**
  * @fileoverview Tree speech generator that computes speech strings a for
- *     elements of an entire expression tree if it does not yet have a speech
- *     string attached.
+ *     elements of an entire expression tree, even if it has already speech
+ *     strings attached.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -41,9 +41,7 @@ goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = goog.base(this, 'getSpeech', node, xml);
-  if (speech) return speech;
-  speech = this.generateSpeech(node, xml);
+  var speech = this.generateSpeech(node, xml);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
   var nodes = this.rebuilt.nodeDict;
   for (var key in nodes) {
