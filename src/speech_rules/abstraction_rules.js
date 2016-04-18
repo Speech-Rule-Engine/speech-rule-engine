@@ -336,6 +336,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
     'abstr-vector', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+  defineRule(
+    'abstr-var-vector', 'mathspeak.default',
+    '[t] "collapsed n dimensional vector"',
+    'self::vector[@alternative]',
+    './children/*/children/punctuation[@role="ellipsis"]'
+  );
   
   defineRule(
     'abstr-binomial', 'mathspeak.default',
@@ -344,19 +350,27 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   defineSpecialisedRule(
     'abstr-binomial', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+    'abstr-binomial', 'mathspeak.default', 'mathspeak.sbrief');
 
   defineRule(
     'abstr-determinant', 'mathspeak.default',
     '[t] "collapsed" ; [t] count(./children/*); [t] "dimensional determinant"',
-    'self::matrix[@alternative]', '@role="determinant"'
+    'self::matrix[@alternative]', '@role="determinant"', 'self::*'
   );
   defineRule(
     'abstr-determinant', 'mathspeak.brief',
     '[t] "collapsed determinant"',
-    'self::matrix[@alternative]', '@role="determinant"'
+    'self::matrix[@alternative]', '@role="determinant"', 'self::*'
   );
   defineSpecialisedRule(
     'abstr-determinant', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+  defineRule(
+    'abstr-var-determinant', 'mathspeak.default',
+    '[t] "collapsed n dimensional determinant"',
+    'self::matrix[@alternative]', '@role="determinant"',
+    './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
   
   defineRule(
@@ -376,7 +390,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   
   defineRule(
     'abstr-rowvector', 'mathspeak.default',
-    '[t] "collapsed" ; [t] count(./children/*); [t] "dimensional row vector"',
+    '[t] "collapsed" ; [t] count(./children/row/children/*); ' +
+      '[t] "dimensional row vector"',
     'self::matrix[@alternative]', '@role="rowvector"'
   );
   defineRule(
@@ -386,6 +401,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   defineSpecialisedRule(
     'abstr-rowvector', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+  defineRule(
+    'abstr-var-matrix', 'mathspeak.default',
+    '[t] "collapsed n dimensional row vector"',
+    'self::matrix[@alternative]', '@role="rowvector"',
+    './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
   
   defineRule(
@@ -402,8 +423,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
     'abstr-matrix', 'mathspeak.brief', 'mathspeak.sbrief'
   );
-  
-  //TODO: Add rules for elements containing ellipses.
+  defineRule(
+    'abstr-var-matrix', 'mathspeak.default',
+    '[t] "collapsed n by m dimensional matrix"',
+    'self::matrix[@alternative]',
+    './children/*/children/*/children/punctuation[@role="ellipsis"]'
+  );
   
   defineRule(
     'abstr-cases', 'mathspeak.default',
@@ -419,8 +444,14 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
     'abstr-cases', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+  defineRule(
+    'abstr-var-cases', 'mathspeak.default',
+    '[t] "collapsed case statement with variable number of cases"',
+    'self::cases[@alternative]',
+    './children/row/children/cell/children/punctuation[@role="ellipsis"] or ' +
+      './children/line/children/punctuation[@role="ellipsis"]'
+  );
   
-  //TODO: Make this more fine grained based on different types of punctuations.
   defineRule(
     'abstr-punctuated', 'mathspeak.default',
     '[t] "collapsed"; [n] content/*[1]; [t] "separated list";' +
@@ -434,6 +465,13 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   defineSpecialisedRule(
     'abstr-punctuated', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+  defineRule(
+    'abstr-var-punctuated', 'mathspeak.default',
+    '[t] "collapsed"; [n] content/*[1]; [t] "separated list";' +
+      '[t] "of variable length"',
+    'self::punctuated[@alternative]',
+    './children/punctuation[@role="ellipsis"]'
   );
   
 
@@ -473,6 +511,13 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
     'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+  defineRule(
+    'abstr-var-relation', 'mathspeak.default',
+    '[t] "collapsed"; [n] text(); [t] "sequence";' +
+      ' [t] "with variable number of elements"',
+    'self::relseq[@alternative]', 'count(./children/*)>2',
+    './children/punctuation[@role="ellipsis"]'
+  );
 
   defineRule(
     'abstr-equality', 'mathspeak.default',
@@ -496,11 +541,33 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
     'abstr-equality', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+  defineRule(
+    'abstr-var-equality', 'mathspeak.default',
+    '[t] "collapsed equation sequence with variable number of elements"',
+    'self::relseq[@alternative]',
+    'self::relseq[@role="equality"]', 'count(./children/*)>2',
+    './children/punctuation[@role="ellipsis"]'
+  );
     
   defineRule(
     'abstr-multirel', 'mathspeak.default',
+    '[t] "collapsed relation sequence";' +
+      ' [t] "with"; [t] count(./children/*); [t] "elements"',
+    'self::multirel[@alternative]',  'count(./children/*)>2'
+  );
+  defineRule(
+    'abstr-multirel', 'mathspeak.brief',
     '[t] "collapsed relation sequence"',
     'self::multirel[@alternative]',  'count(./children/*)>2'
+  );
+  defineSpecialisedRule(
+    'abstr-multirel', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+  defineRule(
+    'abstr-var-multirel', 'mathspeak.default',
+    '[t] "collapsed relation sequence with variable number of elements"',
+    'self::multirel[@alternative]',  'count(./children/*)>2',
+    './children/punctuation[@role="ellipsis"]'
   );
 
 };
