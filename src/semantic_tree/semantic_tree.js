@@ -138,7 +138,7 @@ sre.SemanticTree.fromNode = function(semantic, opt_mathml) {
 
 
 /**
- * Generate a semantic tree for a given node 
+ * Generate a semantic tree for a given node
  * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
  *     the root.
  * @param {Element=} opt_mathml Optionally a MathML node corresponding to the

@@ -40,7 +40,6 @@ goog.require('sre.SystemExternal');
 
 
 
-
 /**
  * @constructor
  */
@@ -382,12 +381,14 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  */
 sre.System.prototype.walk = function(expr) {
   this.speechGenerator = new sre.DirectSpeechGenerator();
+  var highlighter = new sre.MmlHighlighter();
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   sre.Engine.getInstance().speech = true;
   var eml = sre.System.getInstance().toEnriched(expr);
   //TODO: See if this is still necessary.
   var node = sre.DomUtil.parseInput(eml, sre.System.Error);
-  this.walker = new sre.SyntaxWalker(node, this.speechGenerator, eml);
+  this.walker = new sre.SyntaxWalker(
+      node, this.speechGenerator, highlighter, eml);
   return this.walker.speech();
 };
 

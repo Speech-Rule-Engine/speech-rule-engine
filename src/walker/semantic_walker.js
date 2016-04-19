@@ -32,8 +32,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.SemanticWalker = function(node, generator, xml) {
-  goog.base(this, node, generator, xml);
+sre.SemanticWalker = function(node, generator, highlighter, xml) {
+  goog.base(this, node, generator, highlighter, xml);
 
   /**
    * Caching of levels.
@@ -42,6 +42,8 @@ sre.SemanticWalker = function(node, generator, xml) {
   this.levels = new sre.Levels();
 
   this.levels.push([this.getFocus()]);
+
+  this.restoreState();
 };
 goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
 
@@ -265,4 +267,18 @@ sre.SemanticWalker.prototype.right = function() {
  */
 sre.SemanticWalker.prototype.getDepth = function() {
   return this.levels.depth() - 1;
+};
+
+
+/**
+ * @override
+ */
+sre.SemanticWalker.prototype.findFocusOnLevel = function(id) {
+  var focus = this.levels.find(
+      function(x) {
+        var primary = /** @type {!Node} */(x.getPrimary());
+        var pid = sre.WalkerUtil.getAttribute(
+            primary, sre.EnrichMathml.Attribute.ID);
+        return pid === id.toString();});
+  return focus;
 };

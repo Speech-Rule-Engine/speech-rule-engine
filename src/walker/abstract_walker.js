@@ -24,6 +24,8 @@ goog.provide('sre.AbstractWalker');
 goog.require('sre.EnrichMathml');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
+goog.require('sre.HighlighterInterface');
+goog.require('sre.SpeechGeneratorInterface');
 goog.require('sre.WalkerInterface');
 goog.require('sre.WalkerUtil');
 
@@ -35,11 +37,13 @@ goog.require('sre.WalkerUtil');
  * @param {!Node} node The (rendered) node on which the walker is called.
  * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
  *     this walker.
+ * @param {!sre.HighlighterInterface} highlighter The currently active
+ *     highlighter.
  * @param {!string} xml The original xml/mathml node on which the walker is
  *      called as a string.
  * @override
  */
-sre.AbstractWalker = function(node, generator, xml) {
+sre.AbstractWalker = function(node, generator, highlighter, xml) {
 
   /**
    * The math expression on which the walker is called.
@@ -58,6 +62,13 @@ sre.AbstractWalker = function(node, generator, xml) {
    */
   this.generator = generator;
 
+  //TODO: This is problematic as it will sometimes not be instantiated if called
+  //      from MathJax.
+  /**
+   * @type {!sre.HighlighterInterface}
+   */
+  this.highlighter = highlighter;
+
   /**
    * @type {boolean}
    * @private
@@ -73,11 +84,11 @@ sre.AbstractWalker = function(node, generator, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.DOWN] = goog.bind(this.down, this);
   this.keyMapping_[sre.EventUtil.KeyCode.RIGHT] = goog.bind(this.right, this);
   this.keyMapping_[sre.EventUtil.KeyCode.LEFT] = goog.bind(this.left, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.repeat, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
 
   this.dummy_ = function() {};
-  this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.dummy_, this);
 
   var rootNode = sre.WalkerUtil.getSemanticRoot(node);
   /**
@@ -94,6 +105,13 @@ sre.AbstractWalker = function(node, generator, xml) {
    */
   this.moved = sre.AbstractWalker.move.ENTER;
 
+  /**
+   * Shift pressed?
+   * @type {boolean}
+   * @private
+   */
+  this.shift_ = false;
+
 };
 
 
@@ -108,7 +126,8 @@ sre.AbstractWalker.move = {
   RIGHT: 'right',
   REPEAT: 'repeat',
   DEPTH: 'depth',
-  ENTER: 'enter'
+  ENTER: 'enter',
+  EXPAND: 'expand'
 };
 
 
@@ -148,6 +167,7 @@ sre.AbstractWalker.prototype.deactivate = function() {
   if (!this.isActive()) {
     return;
   }
+  this.highlighter.setState(this.node.id, this.primaryId());
   this.generator.end();
   this.toggleActive_();
 };
@@ -173,14 +193,14 @@ sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getNodes();
   var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
-    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
+      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '');
   }
   var speech = nodes.map(
-    goog.bind(function(x) {
+      goog.bind(function(x) {
         return this.generator.getSpeech(x, this.xml);
-    }, this));
+      }, this));
   if (this.moved === sre.AbstractWalker.move.REPEAT) {
     return speech.join(' ');
   }
@@ -258,7 +278,7 @@ sre.AbstractWalker.prototype.right = function() {
 sre.AbstractWalker.prototype.repeat = function() {
   this.moved = sre.AbstractWalker.move.REPEAT;
   return new sre.Focus({nodes: this.focus_.getNodes(),
-                        primary: this.focus_.getPrimary()});
+    primary: this.focus_.getPrimary()});
 };
 
 
@@ -270,7 +290,7 @@ sre.AbstractWalker.prototype.repeat = function() {
 sre.AbstractWalker.prototype.depth = function() {
   this.moved = sre.AbstractWalker.move.DEPTH;
   return new sre.Focus({nodes: this.focus_.getNodes(),
-                        primary: this.focus_.getPrimary()});
+    primary: this.focus_.getPrimary()});
 };
 
 
@@ -302,3 +322,88 @@ sre.AbstractWalker.prototype.primaryAttribute = function(attr) {
 sre.AbstractWalker.prototype.primaryId = function() {
   return this.primaryAttribute(sre.EnrichMathml.Attribute.ID);
 };
+
+
+/**
+ * Expands or collapses a node if it is actionable.
+ * @return {sre.Focus} New focus element if actionable. O/w old focus.
+ */
+sre.AbstractWalker.prototype.expand = function() {
+  var primary = this.focus_.getPrimary();
+  var expandable = this.actionable_(primary);
+  if (!expandable) {
+    return this.focus_;
+  }
+  this.moved = sre.AbstractWalker.move.EXPAND;
+  expandable.onclick();
+  return new sre.Focus({nodes: this.focus_.getNodes(),
+    primary: this.focus_.getPrimary()});
+};
+
+
+/**
+ * Checks if a node is actionable, i.e., corresponds to an maction.
+ * @param {Node} node The (rendered) node under consideration.
+ * @return {Node} The node corresponding to an maction element.
+ * @private
+ */
+sre.AbstractWalker.prototype.actionable_ = function(node) {
+  return node && node.parentNode &&
+      this.highlighter.isMactionNode(node.parentNode) ?
+      node.parentNode : null;
+};
+
+
+/**
+ * Checks if a node is expandable.
+ * @param {!Node} node The (rendered) node under consideration.
+ * @return {boolean} True if the node is expandable.
+ */
+sre.AbstractWalker.prototype.expandable = function(node) {
+  var parent = !!this.actionable_(node);
+  return parent && node.childNodes.length === 0;
+};
+
+
+/**
+ * Checks if a node can be collapsed.
+ * @param {!Node} node The (rendered) node under consideration.
+ * @return {boolean} True if the node is collapsible.
+ */
+sre.AbstractWalker.prototype.collapsible = function(node) {
+  var parent = !!this.actionable_(node);
+  return parent && node.childNodes.length > 0;
+};
+
+
+/**
+ * Restores the previous state for a node.
+ */
+sre.AbstractWalker.prototype.restoreState = function() {
+  if (!this.highlighter) return;
+  var state = this.highlighter.getState(this.node.id);
+  if (!state) return;
+  var node = this.generator.getRebuilt().nodeDict[state];
+  var path = [];
+  while (node) {
+    path.push(node.id);
+    node = node.parent;
+  }
+  path.pop();
+  while (path.length > 0) {
+    this.down();
+    var id = path.pop();
+    var focus = this.findFocusOnLevel(id);
+    if (!focus) break;
+    this.focus_ = focus;
+  }
+  this.moved = sre.AbstractWalker.move.ENTER;
+};
+
+
+/**
+ * Finds the focus on the current level for a given node id.
+ * @param {!number} id The id number.
+ * @return {sre.Focus} The focus on a particular level.
+ */
+sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;

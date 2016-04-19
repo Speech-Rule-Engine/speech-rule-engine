@@ -86,6 +86,7 @@ sre.EnrichMathml.ATTRIBUTE_PREFIX_ = 'data-semantic-';
  */
 sre.EnrichMathml.Attribute = {
   ADDED: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'added',
+  ALTERNATIVE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'alternative',
   CHILDREN: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'children',
   COLLAPSED: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'collapsed',
   CONTENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'content',
@@ -583,6 +584,7 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   }
   if (sre.Engine.getInstance().speech) {
     sre.EnrichMathml.addSpeech(mml, semantic);
+    sre.EnrichMathml.addPrefix(mml, semantic);
   }
 };
 
@@ -834,7 +836,6 @@ sre.EnrichMathml.addSpeech = function(mml, semantic) {
   }
   var speech = sre.AuditoryDescription.speechString(descrs);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  sre.EnrichMathml.addPrefix(mml, semantic);
 };
 
 
@@ -862,10 +863,53 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
   var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
                                      tree.xml())[0];
   return node ?
-    sre.Engine.getInstance().runInSetting(
+      sre.Engine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
-    )
-  : [];
+      ) :
+      [];
+};
+
+
+/**
+ * Connects maction nodes as alternatives.
+ * @param {!Node} node The actual DOM node.
+ * @param {!Element} mml The mathml element for the node.
+ * @param {!Node} stree The XML for the semantic tree.
+ */
+sre.EnrichMathml.connectMactions = function(node, mml, stree) {
+  var altcount = 0;
+  var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
+  for (var i = 0, maction; maction = mactions[i]; i++) {
+    var aid = maction.getAttribute('id');
+    var span = sre.DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
+    if (!span) continue;
+    var lchild = maction.childNodes[1];
+    var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
+    var cspan = sre.WalkerUtil.getBySemanticId(node, mid);
+    if (cspan) continue;
+    cspan = span.childNodes[0];
+    var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
+    var pspan = sre.WalkerUtil.getBySemanticId(node, pid);
+    var altname = mid;
+    if (pspan) {
+      var children = pspan.getAttribute(sre.EnrichMathml.Attribute.CHILDREN);
+      if (children) {
+        var items = sre.WalkerUtil.splitAttribute(children);
+        var index = items.indexOf(mid);
+        items[index] = altname;
+        pspan.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
+                           items.join(','));
+      }
+    } else {
+      cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
+    }
+    if (pid) {
+      cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
+    }
+    cspan.setAttribute(sre.EnrichMathml.Attribute.ID, altname);
+    var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    cst.setAttribute('alternative', altname);
+  }
 };

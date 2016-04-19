@@ -22,20 +22,35 @@
 
 goog.provide('sre.DirectSpeechGenerator');
 
-goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.EnrichMathml');
+goog.require('sre.SpeechGeneratorInterface');
 goog.require('sre.WalkerUtil');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractSpeechGenerator}
+ * @implements {sre.SpeechGeneratorInterface}
  */
-sre.DirectSpeechGenerator = function() {
-  goog.base(this);
-};
-goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
+sre.DirectSpeechGenerator = function() { };
+
+
+/**
+ * @override
+ */
+sre.DirectSpeechGenerator.prototype.getRebuilt = function() { };
+
+
+/**
+ * @override
+ */
+sre.DirectSpeechGenerator.prototype.start = function() { };
+
+
+/**
+ * @override
+ */
+sre.DirectSpeechGenerator.prototype.end = function() { };
 
 
 /**

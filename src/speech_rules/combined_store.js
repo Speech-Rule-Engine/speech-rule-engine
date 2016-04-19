@@ -19,6 +19,7 @@
 
 goog.provide('sre.CombinedStore');
 
+goog.require('sre.AbstractionRules');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
@@ -53,6 +54,7 @@ sre.CombinedStore.mathStore.initialize = function() {
   sre.SemanticTreeRules.getInstance();
   sre.MathspeakRules.getInstance();
   sre.ClearspeakRules.getInstance();
+  sre.AbstractionRules.getInstance();
   sre.PrefixRules.getInstance();
   sre.CombinedStore.getInstance().updateEngine();
 };

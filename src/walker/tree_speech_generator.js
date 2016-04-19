@@ -15,8 +15,8 @@
 
 /**
  * @fileoverview Tree speech generator that computes speech strings a for
- *     elements of an entire expression tree if it does not yet have a speech
- *     string attached.
+ *     elements of an entire expression tree, even if it has already speech
+ *     strings attached.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -33,9 +33,7 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.TreeSpeechGenerator = function() {
-  goog.base(this);
-};
+sre.TreeSpeechGenerator = function() { };
 goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
 
 
@@ -43,18 +41,20 @@ goog.inherits(sre.TreeSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = sre.WalkerUtil.getAttribute(
-      node, sre.EnrichMathml.Attribute.SPEECH);
-  if (speech) return speech;
-  speech = this.generateSpeech(node, xml);
+  var speech = this.generateSpeech(node, xml);
   node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  sre.SpeechRuleEngine.getInstance().forCache(
-      function(key, value) {
-        var inner = sre.WalkerUtil.getBySemanticId(node, key);
-        if (!inner) return;
-        var speech = sre.AuditoryDescription.speechString(value);
-        inner.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-      }
-  );
+  var nodes = this.rebuilt.nodeDict;
+  for (var key in nodes) {
+    //TODO: Refactor with setting the base semantic tree in the enrich mathml
+    //      object.
+    var snode = nodes[key];
+    var innerMml = /** @type {Element} */(
+        sre.WalkerUtil.getBySemanticId(xml, key));
+    var innerNode = /** @type {Element} */(
+        sre.WalkerUtil.getBySemanticId(node, key));
+    if (!innerMml || !innerNode) continue;
+    sre.EnrichMathml.addSpeech(innerNode, snode);
+    sre.EnrichMathml.addPrefix(innerNode, snode);
+  }
   return speech;
 };

@@ -174,6 +174,14 @@ sre.Engine.isReady = function() {
 };
 
 
+/**
+ * Runs a function in the temporary context of the speech rule engine.
+ * @param {Object} settings The temporary settings for the speech rule
+ *     engine. They can contain the usual features.
+ * @param {function():!Array.<sre.AuditoryDescription>} callback The runnable
+ *     function that computes speech results.
+ * @return {!Array.<sre.AuditoryDescription>} The result of the callback.
+ */
 sre.Engine.prototype.runInSetting = function(settings, callback) {
   var save = {};
   for (var key in settings) {

@@ -14,17 +14,16 @@
 
 
 /**
- * @fileoverview Node speech generator that computes a new speech string for
- *     a single node if it does not yet have a speech string attached.
+ * @fileoverview Dummy speech generator that rebuilds the semantic tree and
+ *     connects mactions, but always returns the empty speech string.
+ *
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.NodeSpeechGenerator');
+goog.provide('sre.DummySpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -32,19 +31,16 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.NodeSpeechGenerator = function() {
+sre.DummySpeechGenerator = function() {
   goog.base(this);
 };
-goog.inherits(sre.NodeSpeechGenerator, sre.AbstractSpeechGenerator);
+goog.inherits(sre.DummySpeechGenerator, sre.AbstractSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.NodeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  var speech = goog.base(this, 'getSpeech', node, xml);
-  if (speech) return speech;
-  speech = this.generateSpeech(node, xml);
-  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  return speech;
+sre.DummySpeechGenerator.prototype.getSpeech = function(node, xml) {
+  this.rebuildStree(node, xml);
+  return '';
 };

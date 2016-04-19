@@ -80,10 +80,10 @@ var addCSF = sre.PrefixRules.addCustomString_;
 sre.PrefixRules.initCustomFunctions_ = function() {
 
   addCSF('CSFordinalPosition', sre.PrefixRules.ordinalPosition);
-  
+
 };
 
-  
+
 /**
  * Prefix rules.
  * @private
@@ -181,5 +181,5 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
 };
-  
+
 });  // goog.scope

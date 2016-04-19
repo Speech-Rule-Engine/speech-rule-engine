@@ -14,8 +14,8 @@
 
 
 /**
- * @fileoverview Abstract speech generator that simply picks up the speech
- *     attribute.
+ * @fileoverview Abstract speech generator for classes that work on the rebuilt
+ *     semantic tree.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -23,34 +23,45 @@
 goog.provide('sre.AbstractSpeechGenerator');
 
 goog.require('sre.AuditoryDescription');
+goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.EnrichMathml');
-goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.RebuildStree');
 
 
 
 /**
  * @constructor
- * @implements {sre.SpeechGeneratorInterface}
+ * @extends {sre.DirectSpeechGenerator}
  */
-sre.AbstractSpeechGenerator = function() { };
+sre.AbstractSpeechGenerator = function() {
+  goog.base(this);
+
+  /**
+   * @type {sre.RebuildStree}
+   */
+  this.rebuilt = null;
+};
+goog.inherits(sre.AbstractSpeechGenerator, sre.DirectSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.AbstractSpeechGenerator.prototype.getSpeech = goog.abstractMethod;
+sre.AbstractSpeechGenerator.prototype.getRebuilt = function() {
+  return this.rebuilt;
+};
 
 
 /**
- * @override
+ * Rebuilds the semantic tree given in the input xml element fully connected
+ * with maction elements.
+ * @param {!Node} node The target element of the event.
+ * @param {!Element} xml The base xml element belonging to node.
  */
-sre.AbstractSpeechGenerator.prototype.start = function() { };
-
-
-/**
- * @override
- */
-sre.AbstractSpeechGenerator.prototype.end = function() { };
+sre.AbstractSpeechGenerator.prototype.rebuildStree = function(node, xml) {
+  this.rebuilt = new sre.RebuildStree(xml);
+  sre.EnrichMathml.connectMactions(node, xml, this.rebuilt.xml);
+};
 
 
 /**
@@ -60,8 +71,7 @@ sre.AbstractSpeechGenerator.prototype.end = function() { };
  * @return {string} The generated speech string.
  */
 sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
-  var rebuilt = new sre.RebuildStree(xml);
-  var stree = rebuilt.getTree();
-  var descrs = sre.EnrichMathml.computeSpeech(stree.xml());
+  this.rebuildStree(node, xml);
+  var descrs = sre.EnrichMathml.computeSpeech(this.rebuilt.xml);
   return sre.AuditoryDescription.speechString(descrs);
 };

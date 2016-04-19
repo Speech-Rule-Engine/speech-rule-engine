@@ -32,8 +32,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.SyntaxWalker = function(node, generator, xml) {
-  goog.base(this, node, generator, xml);
+sre.SyntaxWalker = function(node, generator, highlighter, xml) {
+  goog.base(this, node, generator, highlighter, xml);
 
   /**
    * Caching of levels.
@@ -42,11 +42,12 @@ sre.SyntaxWalker = function(node, generator, xml) {
   this.levels = new sre.Levels();
 
   this.levels.push([this.primaryId()]);
+
+  this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
 
 
-//TODO: Make proper copies of focus to retain all properties.
 /**
  * Creates a simple focus for a solitary node.
  * @param {!Node} node The node to focus.
@@ -149,4 +150,12 @@ sre.SyntaxWalker.prototype.right = function() {
  */
 sre.SyntaxWalker.prototype.getDepth = function() {
   return this.levels.depth() - 1;
+};
+
+
+/**
+ * @override
+ */
+sre.SyntaxWalker.prototype.findFocusOnLevel = function(id) {
+  return this.focusFromId_(id.toString());
 };
