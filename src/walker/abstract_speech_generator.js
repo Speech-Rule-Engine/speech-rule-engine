@@ -23,25 +23,23 @@
 goog.provide('sre.AbstractSpeechGenerator');
 
 goog.require('sre.AuditoryDescription');
-goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.EnrichMathml');
 goog.require('sre.RebuildStree');
+goog.require('sre.SpeechGeneratorInterface');
 
 
 
 /**
  * @constructor
- * @extends {sre.DirectSpeechGenerator}
+ * @implements {sre.SpeechGeneratorInterface}
  */
 sre.AbstractSpeechGenerator = function() {
-  goog.base(this);
 
   /**
    * @type {sre.RebuildStree}
    */
   this.rebuilt = null;
 };
-goog.inherits(sre.AbstractSpeechGenerator, sre.DirectSpeechGenerator);
 
 
 /**
@@ -50,6 +48,24 @@ goog.inherits(sre.AbstractSpeechGenerator, sre.DirectSpeechGenerator);
 sre.AbstractSpeechGenerator.prototype.getRebuilt = function() {
   return this.rebuilt;
 };
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.getSpeech = goog.abstractMethod;
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.start = function() { };
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.end = function() { };
 
 
 /**
