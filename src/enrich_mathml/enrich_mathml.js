@@ -863,12 +863,12 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
   var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
                                      tree.xml())[0];
   return node ?
-    sre.Engine.getInstance().runInSetting(
+      sre.Engine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
-    )
-  : [];
+      ) :
+      [];
 };
 
 
@@ -899,7 +899,8 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
         var items = sre.WalkerUtil.splitAttribute(children);
         var index = items.indexOf(mid);
         items[index] = altname;
-        pspan.setAttribute(sre.EnrichMathml.Attribute.CHILDREN, items.join(','));
+        pspan.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
+                           items.join(','));
       }
     } else {
       cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');

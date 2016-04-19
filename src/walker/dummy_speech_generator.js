@@ -16,7 +16,7 @@
 /**
  * @fileoverview Dummy speech generator that rebuilds the semantic tree and
  *     connects mactions, but always returns the empty speech string.
- * 
+ *
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */

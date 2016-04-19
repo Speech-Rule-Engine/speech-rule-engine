@@ -39,7 +39,7 @@ sre.RebuildStree = function(mathml) {
    * @type {!Object.<string, !sre.SemanticTree.Node>}
    */
   this.nodeDict = {};
-  
+
   this.mathml = mathml;
 
   this.mmlRoot = sre.WalkerUtil.getSemanticRoot(mathml);
@@ -177,7 +177,7 @@ sre.RebuildStree.prototype.createNode = function(id) {
   return node;
 };
 
-    
+
 /**
  * Re-generates collapsed semantic nodes given a node and its already existing
  * children.

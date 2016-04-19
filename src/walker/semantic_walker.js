@@ -275,10 +275,10 @@ sre.SemanticWalker.prototype.getDepth = function() {
  */
 sre.SemanticWalker.prototype.findFocusOnLevel = function(id) {
   var focus = this.levels.find(
-    function(x) {
-      var primary = /** @type {!Node} */(x.getPrimary());
-      var pid = sre.WalkerUtil.getAttribute(
-          primary, sre.EnrichMathml.Attribute.ID);
-      return pid === id.toString();});
+      function(x) {
+        var primary = /** @type {!Node} */(x.getPrimary());
+        var pid = sre.WalkerUtil.getAttribute(
+            primary, sre.EnrichMathml.Attribute.ID);
+        return pid === id.toString();});
   return focus;
 };

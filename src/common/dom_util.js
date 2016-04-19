@@ -203,8 +203,9 @@ sre.DomUtil.querySelectorAllByAttr = function(node, attr) {
  */
 sre.DomUtil.querySelectorAllByAttrValue = function(node, attr, value) {
   return (node.querySelectorAll ?
-          sre.DomUtil.toArray(node.querySelectorAll('[' + attr + '="'+ value +'"]')) :
-          sre.XpathUtil.evalXPath('.//*[@' + attr + '="'+ value +'"]', node));
+          sre.DomUtil.toArray(
+              node.querySelectorAll('[' + attr + '="' + value + '"]')) :
+          sre.XpathUtil.evalXPath('.//*[@' + attr + '="' + value + '"]', node));
 };
 
 

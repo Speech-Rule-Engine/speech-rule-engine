@@ -48,9 +48,9 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
     //TODO: Refactor with setting the base semantic tree in the enrich mathml
     //      object.
     var snode = nodes[key];
-    var innerMml = /** @type{Element} */(
+    var innerMml = /** @type {Element} */(
         sre.WalkerUtil.getBySemanticId(xml, key));
-    var innerNode = /** @type{Element} */(
+    var innerNode = /** @type {Element} */(
         sre.WalkerUtil.getBySemanticId(node, key));
     if (!innerMml || !innerNode) continue;
     sre.EnrichMathml.addSpeech(innerNode, snode);

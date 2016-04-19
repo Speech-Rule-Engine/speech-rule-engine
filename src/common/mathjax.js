@@ -63,7 +63,7 @@ goog.require('sre.TreeSpeechGenerator');
 
   (sre.System.getInstance()).setupEngine(
       {mode: sre.Engine.Mode.HTTP,
-       semantics: true}
+        semantics: true}
   );
 
   MathJax.Extension.Sre.ConfigSre();

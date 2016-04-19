@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview Testcases for prefix speech generation in MathML enrichment.
- * 
+ *
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
@@ -41,7 +41,6 @@ sre.PrefixRuleTest = function() {
 goog.inherits(sre.PrefixRuleTest, sre.AbstractTest);
 
 
-
 /**
  * Executes the prefix rule tests.
  * @param {string} expr The semantic tree as an XML string.
@@ -58,20 +57,26 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
   }
   var descrs = sre.Engine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true},
-    function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
-  );
+        'strict': true, 'cache': false, 'speech': true},
+      function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
+      );
   var speech = sre.AuditoryDescription.speechString(descrs);
   this.assert.equal(speech, result);
 };
 
 
+/**
+ * @override
+ */
 sre.PrefixRuleTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
       {speech: true});
 };
 
 
+/**
+ * @override
+ */
 sre.PrefixRuleTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
       {speech: false});
@@ -271,7 +276,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    0, 'Base');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -313,7 +318,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    1, '1st Left Subscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -355,7 +360,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    2, '2nd Left Subscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -397,7 +402,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    5, '1st Left Superscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -439,7 +444,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    6, '2nd Left Superscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -481,7 +486,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    9, '1st Right Subscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -523,7 +528,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    10, '2nd Right Subscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -565,7 +570,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    13, '1st Right Superscript');
   this.executeTest('<tensor role="latinletter" id="17">' +
       '<children>' +
@@ -607,6 +612,6 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-                         '</tensor>',
+      '</tensor>',
                    14, '2nd Right Superscript');
 };

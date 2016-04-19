@@ -68,7 +68,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!sre.HighlighterInterface}
    */
   this.highlighter = highlighter;
-  
+
   /**
    * @type {boolean}
    * @private
@@ -111,7 +111,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @private
    */
   this.shift_ = false;
-  
+
 };
 
 
@@ -193,14 +193,14 @@ sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getNodes();
   var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
-    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
+      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '');
   }
   var speech = nodes.map(
-    goog.bind(function(x) {
+      goog.bind(function(x) {
         return this.generator.getSpeech(x, this.xml);
-    }, this));
+      }, this));
   if (this.moved === sre.AbstractWalker.move.REPEAT) {
     return speech.join(' ');
   }
@@ -278,7 +278,7 @@ sre.AbstractWalker.prototype.right = function() {
 sre.AbstractWalker.prototype.repeat = function() {
   this.moved = sre.AbstractWalker.move.REPEAT;
   return new sre.Focus({nodes: this.focus_.getNodes(),
-                        primary: this.focus_.getPrimary()});
+    primary: this.focus_.getPrimary()});
 };
 
 
@@ -290,7 +290,7 @@ sre.AbstractWalker.prototype.repeat = function() {
 sre.AbstractWalker.prototype.depth = function() {
   this.moved = sre.AbstractWalker.move.DEPTH;
   return new sre.Focus({nodes: this.focus_.getNodes(),
-                        primary: this.focus_.getPrimary()});
+    primary: this.focus_.getPrimary()});
 };
 
 
@@ -324,6 +324,10 @@ sre.AbstractWalker.prototype.primaryId = function() {
 };
 
 
+/**
+ * Expands or collapses a node if it is actionable.
+ * @return {sre.Focus} New focus element if actionable. O/w old focus.
+ */
 sre.AbstractWalker.prototype.expand = function() {
   var primary = this.focus_.getPrimary();
   var expandable = this.actionable_(primary);
@@ -333,28 +337,48 @@ sre.AbstractWalker.prototype.expand = function() {
   this.moved = sre.AbstractWalker.move.EXPAND;
   expandable.onclick();
   return new sre.Focus({nodes: this.focus_.getNodes(),
-                        primary: this.focus_.getPrimary()});
+    primary: this.focus_.getPrimary()});
 };
 
 
+/**
+ * Checks if a node is actionable, i.e., corresponds to an maction.
+ * @param {Node} node The (rendered) node under consideration.
+ * @return {Node} The node corresponding to an maction element.
+ * @private
+ */
 sre.AbstractWalker.prototype.actionable_ = function(node) {
-  return node.parentNode && this.highlighter.isMactionNode(node.parentNode) ?
+  return node && node.parentNode &&
+      this.highlighter.isMactionNode(node.parentNode) ?
       node.parentNode : null;
 };
 
 
+/**
+ * Checks if a node is expandable.
+ * @param {!Node} node The (rendered) node under consideration.
+ * @return {boolean} True if the node is expandable.
+ */
 sre.AbstractWalker.prototype.expandable = function(node) {
-  var parent = this.actionable_(node);
+  var parent = !!this.actionable_(node);
   return parent && node.childNodes.length === 0;
 };
 
 
+/**
+ * Checks if a node can be collapsed.
+ * @param {!Node} node The (rendered) node under consideration.
+ * @return {boolean} True if the node is collapsible.
+ */
 sre.AbstractWalker.prototype.collapsible = function(node) {
-  var parent = this.actionable_(node);
+  var parent = !!this.actionable_(node);
   return parent && node.childNodes.length > 0;
 };
 
 
+/**
+ * Restores the previous state for a node.
+ */
 sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
   var state = this.highlighter.getState(this.node.id);

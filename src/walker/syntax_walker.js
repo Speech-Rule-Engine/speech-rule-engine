@@ -42,7 +42,7 @@ sre.SyntaxWalker = function(node, generator, highlighter, xml) {
   this.levels = new sre.Levels();
 
   this.levels.push([this.primaryId()]);
-  
+
   this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
