@@ -38,6 +38,12 @@ sre.DirectSpeechGenerator = function() { };
 /**
  * @override
  */
+sre.DirectSpeechGenerator.prototype.getRebuilt = function() { };
+
+
+/**
+ * @override
+ */
 sre.DirectSpeechGenerator.prototype.start = function() { };
 
 

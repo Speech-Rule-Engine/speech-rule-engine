@@ -39,6 +39,13 @@ sre.SpeechGeneratorInterface.prototype.getSpeech = function(node, xml) {};
 
 
 /**
+ * Returns the semantic tree rebuilt from the base xml element.
+ * @return {sre.RebuildStree} The reconstructed semantic tree.
+ */
+sre.SpeechGeneratorInterface.prototype.getRebuilt = function() {};
+
+
+/**
  * Sets up or resets the speech generator.
  */
 sre.SpeechGeneratorInterface.prototype.start = function() {};

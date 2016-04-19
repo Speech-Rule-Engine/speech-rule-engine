@@ -45,6 +45,14 @@ goog.inherits(sre.AbstractSpeechGenerator, sre.DirectSpeechGenerator);
 
 
 /**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.getRebuilt = function() {
+  return this.rebuilt;
+};
+
+
+/**
  * Rebuilds the semantic tree given in the input xml element fully connected
  * with maction elements.
  * @param {!Node} node The target element of the event.

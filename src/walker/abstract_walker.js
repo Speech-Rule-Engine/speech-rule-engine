@@ -383,10 +383,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
   var state = this.highlighter.getState(this.node.id);
   if (!state) return;
-  //TODO: Save this in the speech generator!
-  var rebuilt = new sre.RebuildStree(this.xml);
-  var stree = rebuilt.getTree();
-  var node = rebuilt.nodeDict[state];
+  var node = this.generator.getRebuilt().nodeDict[state];
   var path = [];
   while (node) {
     path.push(node.id);

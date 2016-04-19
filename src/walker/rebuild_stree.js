@@ -28,7 +28,6 @@ goog.require('sre.Semantic');
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
-//TODO: This is probably not a class but just a utility procedure.
 /**
  * @constructor
  * @param {!Element} mathml The enriched MathML node.
