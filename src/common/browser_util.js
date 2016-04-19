@@ -72,7 +72,6 @@ sre.BrowserUtil.loadWGXpath_ = function() {
 };
 
 
-//TODO: Insert counter here.
 /**
  * Loads all JSON mappings for IE using a script tag.
  * @param {number=} opt_count Optional counter argument for callback.

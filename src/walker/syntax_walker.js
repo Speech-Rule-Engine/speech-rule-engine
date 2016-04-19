@@ -48,7 +48,6 @@ sre.SyntaxWalker = function(node, generator, highlighter, xml) {
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
 
 
-//TODO: Make proper copies of focus to retain all properties.
 /**
  * Creates a simple focus for a solitary node.
  * @param {!Node} node The node to focus.
