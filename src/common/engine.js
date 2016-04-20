@@ -116,13 +116,13 @@ sre.Engine = function() {
    * Current browser is MS Internet Explorer but not Edge.
    * @type {boolean}
    */
-  this.isIE = sre.BrowserUtil.detectIE();
+  this.isIE = false;
 
   /**
    * Current browser is MS Edge.
    * @type {boolean}
    */
-  this.isEdge = sre.BrowserUtil.detectEdge();
+  this.isEdge = false;
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -199,4 +199,13 @@ sre.Engine.prototype.runInSetting = function(settings, callback) {
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(this.domain, this.style);
   return result;
+};
+
+
+/**
+ * Sets up browser specific functionality.
+ */
+sre.Engine.prototype.setupBrowsers = function() {
+  this.isIE = sre.BrowserUtil.detectIE();
+  this.isEdge = sre.BrowserUtil.detectEdge();
 };

@@ -46,8 +46,8 @@ sre.SystemExternal.locationSupported = function() {
  * @type {string}
  */
 sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
-    location.protocol + '//' + 'progressiveaccess.com/content' :
-    'https://progressiveaccess.com/content';
+    location.protocol + '//' + 'mathjax.github.io/MathJax-accessibility/dist' :
+    'https://mathjax.github.io/MathJax-accessibility/dist';
 
 
 /**
@@ -60,6 +60,13 @@ sre.SystemExternal.jsonPath = function() {
           sre.SystemExternal.url + '/mathmaps') +
       '/';
 }();
+
+
+/**
+ * Path to Xpath library file.
+ * @type {string}
+ */
+sre.SystemExternal.WGXpath = sre.SystemExternal.url + '/wgxpath.install.js';
 
 
 /**

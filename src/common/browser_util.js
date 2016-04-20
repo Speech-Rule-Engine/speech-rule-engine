@@ -67,7 +67,7 @@ sre.BrowserUtil.mapsForIE = null;
  * @private
  */
 sre.BrowserUtil.loadWGXpath_ = function() {
-  sre.BrowserUtil.loadScript(sre.SystemExternal.url + '/wgxpath.install.js');
+  sre.BrowserUtil.loadScript(sre.SystemExternal.WGXpath);
   sre.BrowserUtil.installWGXpath_();
 };
 
