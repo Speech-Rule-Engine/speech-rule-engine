@@ -99,11 +99,11 @@ sre.System.prototype.setupEngine = function(feature) {
   if (feature.xpath) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
+  engine.setupBrowsers();
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
-  engine.setupBrowsers();
 };
 
 
