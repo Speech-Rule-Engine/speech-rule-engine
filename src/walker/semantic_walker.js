@@ -32,8 +32,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.SemanticWalker = function(node, generator) {
-  goog.base(this, node, generator);
+sre.SemanticWalker = function(node, generator, highlighter, xml) {
+  goog.base(this, node, generator, highlighter, xml);
 
   /**
    * Caching of levels.
@@ -42,6 +42,8 @@ sre.SemanticWalker = function(node, generator) {
   this.levels = new sre.Levels();
 
   this.levels.push([this.getFocus()]);
+
+  this.restoreState();
 };
 goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
 
@@ -78,6 +80,7 @@ sre.SemanticWalker.prototype.focusFromId_ = function(id, ids) {
  * @override
  */
 sre.SemanticWalker.prototype.up = function() {
+  goog.base(this, 'up');
   var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
   if (!parent) return null;
   this.levels.pop();
@@ -99,6 +102,7 @@ sre.SemanticWalker.prototype.up = function() {
  * @override
  */
 sre.SemanticWalker.prototype.down = function() {
+  goog.base(this, 'down');
   var children = this.nextLevel_();
   if (children.length === 0) {
     return null;
@@ -240,6 +244,7 @@ sre.SemanticWalker.prototype.makePairList = function(children, content) {
  * @override
  */
 sre.SemanticWalker.prototype.left = function() {
+  goog.base(this, 'left');
   var index = this.levels.indexOf(this.getFocus()) - 1;
   var ids = this.levels.get(index);
   return ids ? ids : null;
@@ -250,7 +255,30 @@ sre.SemanticWalker.prototype.left = function() {
  * @override
  */
 sre.SemanticWalker.prototype.right = function() {
+  goog.base(this, 'right');
   var index = this.levels.indexOf(this.getFocus()) + 1;
   var ids = this.levels.get(index);
   return ids ? ids : null;
+};
+
+
+/**
+ * @override
+ */
+sre.SemanticWalker.prototype.getDepth = function() {
+  return this.levels.depth() - 1;
+};
+
+
+/**
+ * @override
+ */
+sre.SemanticWalker.prototype.findFocusOnLevel = function(id) {
+  var focus = this.levels.find(
+      function(x) {
+        var primary = /** @type {!Node} */(x.getPrimary());
+        var pid = sre.WalkerUtil.getAttribute(
+            primary, sre.EnrichMathml.Attribute.ID);
+        return pid === id.toString();});
+  return focus;
 };

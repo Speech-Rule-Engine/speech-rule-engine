@@ -14,14 +14,17 @@
 
 
 /**
- * @fileoverview Abstract speech generator that simply picks up the speech
- *     attribute.
+ * @fileoverview Abstract speech generator for classes that work on the rebuilt
+ *     semantic tree.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.AbstractSpeechGenerator');
 
+goog.require('sre.AuditoryDescription');
+goog.require('sre.EnrichMathml');
+goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGeneratorInterface');
 
 
@@ -30,7 +33,21 @@ goog.require('sre.SpeechGeneratorInterface');
  * @constructor
  * @implements {sre.SpeechGeneratorInterface}
  */
-sre.AbstractSpeechGenerator = function() { };
+sre.AbstractSpeechGenerator = function() {
+
+  /**
+   * @type {sre.RebuildStree}
+   */
+  this.rebuilt = null;
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractSpeechGenerator.prototype.getRebuilt = function() {
+  return this.rebuilt;
+};
 
 
 /**
@@ -49,3 +66,28 @@ sre.AbstractSpeechGenerator.prototype.start = function() { };
  * @override
  */
 sre.AbstractSpeechGenerator.prototype.end = function() { };
+
+
+/**
+ * Rebuilds the semantic tree given in the input xml element fully connected
+ * with maction elements.
+ * @param {!Node} node The target element of the event.
+ * @param {!Element} xml The base xml element belonging to node.
+ */
+sre.AbstractSpeechGenerator.prototype.rebuildStree = function(node, xml) {
+  this.rebuilt = new sre.RebuildStree(xml);
+  sre.EnrichMathml.connectMactions(node, xml, this.rebuilt.xml);
+};
+
+
+/**
+ * Generates speech string for a sub tree of the xml element.
+ * @param {!Node} node The target element of the event.
+ * @param {!Element} xml The base xml element belonging to node.
+ * @return {string} The generated speech string.
+ */
+sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
+  this.rebuildStree(node, xml);
+  var descrs = sre.EnrichMathml.computeSpeech(this.rebuilt.xml);
+  return sre.AuditoryDescription.speechString(descrs);
+};

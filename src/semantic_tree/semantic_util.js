@@ -141,8 +141,8 @@ sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS'];
  * @const
  */
 sre.SemanticUtil.IGNORETAGS = [
-  'MERROR', 'MPHANTOM', 'MSPACE', 'MACTION', 'MALIGNGROUP', 'MALIGNMARK',
-  'NONE', 'MPRESCRIPTS'
+  'MERROR', 'MPHANTOM', 'MSPACE', 'MALIGNGROUP', 'MALIGNMARK',
+  'MPRESCRIPTS'
 ];
 
 
@@ -151,7 +151,9 @@ sre.SemanticUtil.IGNORETAGS = [
  * @type {Array.<string>}
  * @const
  */
-sre.SemanticUtil.EMPTYTAGS = ['MATH', 'MROW', 'MPADDED', 'MSTYLE'];
+sre.SemanticUtil.EMPTYTAGS = [
+  'MATH', 'MROW', 'MPADDED', 'MACTION', 'NONE', 'MSTYLE'
+];
 
 
 /**

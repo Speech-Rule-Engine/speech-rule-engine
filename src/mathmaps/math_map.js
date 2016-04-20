@@ -31,11 +31,6 @@ goog.require('sre.SystemExternal');
 
 
 
-//TODO: (sorge)
-// Refactor code to have uniform retrieval methods for the three system modes.
-// Combine similar code for async and http.
-// Provide a generic restarts function.
-//
 /**
  *
  * @constructor

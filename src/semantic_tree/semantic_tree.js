@@ -138,6 +138,27 @@ sre.SemanticTree.fromNode = function(semantic, opt_mathml) {
 
 
 /**
+ * Generate a semantic tree for a given node
+ * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
+ *     the root.
+ * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
+ *     semantic node.
+ * @return {sre.SemanticTree} The empty semantic tree.
+ */
+sre.SemanticTree.fromRoot = function(semantic, opt_mathml) {
+  var root = semantic;
+  while (root.parent) {
+    root = root.parent;
+  }
+  var stree = sre.SemanticTree.fromNode(root);
+  if (opt_mathml) {
+    stree.mathml = opt_mathml;
+  }
+  return stree;
+};
+
+
+/**
  * Retrieve all subnodes (including the node itself) that satisfy a given
  * predicate.
  * @param {function(sre.SemanticTree.Node): boolean} pred The predicate.
@@ -159,13 +180,12 @@ sre.SemanticTree.Node.prototype.querySelectorAll = function(pred) {
 /**
   * Returns an XML representation of the tree.
   * @param {boolean=} opt_brief If set attributes are omitted.
-  * @return {Node} The XML representation of the tree.
+  * @return {!Node} The XML representation of the tree.
   */
 sre.SemanticTree.prototype.xml = function(opt_brief) {
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('<stree></stree>', 'text/xml');
-  var xmlRoot = this.root.xml(xml, opt_brief);
-  xml.childNodes[0].appendChild(xmlRoot);
+  var xml = sre.DomUtil.parseInput('<stree></stree>');
+  var xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
+  xml.appendChild(xmlRoot);
   return xml;
 };
 
@@ -575,6 +595,14 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       break;
     case 'NONE':
       newNode = this.makeEmptyNode_();
+      break;
+    case 'MACTION':
+      // This here is currently geared towards our collapse actions!
+      if (children.length > 1) {
+        newNode = this.parseMathml_(children[1]);
+      } else {
+        newNode = this.makeUnprocessed_(mml);
+      }
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:

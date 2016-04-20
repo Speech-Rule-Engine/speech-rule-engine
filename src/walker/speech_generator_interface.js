@@ -32,9 +32,17 @@ sre.SpeechGeneratorInterface = function() { };
 /**
  * Returns the speech string for math node.
  * @param {!Node} node The target element of the event.
+ * @param {!Element} xml The base xml element belonging to node.
  * @return {!string} The speech string computed for this element.
  */
-sre.SpeechGeneratorInterface.prototype.getSpeech = function(node) {};
+sre.SpeechGeneratorInterface.prototype.getSpeech = function(node, xml) {};
+
+
+/**
+ * Returns the semantic tree rebuilt from the base xml element.
+ * @return {sre.RebuildStree} The reconstructed semantic tree.
+ */
+sre.SpeechGeneratorInterface.prototype.getRebuilt = function() {};
 
 
 /**

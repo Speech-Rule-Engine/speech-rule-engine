@@ -32,8 +32,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.SyntaxWalker = function(node, generator) {
-  goog.base(this, node, generator);
+sre.SyntaxWalker = function(node, generator, highlighter, xml) {
+  goog.base(this, node, generator, highlighter, xml);
 
   /**
    * Caching of levels.
@@ -42,11 +42,12 @@ sre.SyntaxWalker = function(node, generator) {
   this.levels = new sre.Levels();
 
   this.levels.push([this.primaryId()]);
+
+  this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
 
 
-//TODO: Make proper copies of focus to retain all properties.
 /**
  * Creates a simple focus for a solitary node.
  * @param {!Node} node The node to focus.
@@ -75,6 +76,7 @@ sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
  * @override
  */
 sre.SyntaxWalker.prototype.up = function() {
+  goog.base(this, 'up');
   var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
   if (!parent) return null;
   this.levels.pop();
@@ -86,6 +88,7 @@ sre.SyntaxWalker.prototype.up = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.down = function() {
+  goog.base(this, 'down');
   var children = this.nextLevel_();
   if (children.length === 0) {
     return null;
@@ -124,6 +127,7 @@ sre.SyntaxWalker.prototype.nextLevel_ = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.left = function() {
+  goog.base(this, 'left');
   var index = this.levels.indexOf(this.primaryId()) - 1;
   var id = this.levels.get(index);
   return id ? this.focusFromId_(id) : null;
@@ -134,7 +138,24 @@ sre.SyntaxWalker.prototype.left = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.right = function() {
+  goog.base(this, 'right');
   var index = this.levels.indexOf(this.primaryId()) + 1;
   var id = this.levels.get(index);
   return id ? this.focusFromId_(id) : null;
+};
+
+
+/**
+ * @override
+ */
+sre.SyntaxWalker.prototype.getDepth = function() {
+  return this.levels.depth() - 1;
+};
+
+
+/**
+ * @override
+ */
+sre.SyntaxWalker.prototype.findFocusOnLevel = function(id) {
+  return this.focusFromId_(id.toString());
 };

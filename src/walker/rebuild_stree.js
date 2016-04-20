@@ -28,13 +28,16 @@ goog.require('sre.Semantic');
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
-//TODO: This is probably not a class but just a utility procedure.
 /**
  * @constructor
  * @param {!Element} mathml The enriched MathML node.
- * @return {sre.SemanticTree} The rebuilt semantic tree.
  */
 sre.RebuildStree = function(mathml) {
+
+  /**
+   * @type {!Object.<string, !sre.SemanticTree.Node>}
+   */
+  this.nodeDict = {};
 
   this.mathml = mathml;
 
@@ -44,8 +47,15 @@ sre.RebuildStree = function(mathml) {
 
   this.stree = sre.SemanticTree.fromNode(this.streeRoot, this.mathml);
 
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('<stree></stree>', 'text/xml');
+  this.xml = this.stree.xml();
+
+};
+
+
+/**
+ * @return {sre.SemanticTree} The rebuilt semantic tree.
+ */
+sre.RebuildStree.prototype.getTree = function() {
   return this.stree;
 };
 
@@ -56,7 +66,7 @@ sre.RebuildStree = function(mathml) {
  * @return {!sre.SemanticTree.Node} The corresponding semantic tree node.
  */
 sre.RebuildStree.prototype.assembleTree = function(node) {
-  var snode = sre.RebuildStree.makeNode(node);
+  var snode = this.makeNode(node);
   var children = sre.WalkerUtil.splitAttribute(
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
@@ -87,7 +97,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   var collapsed = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.COLLAPSED);
   if (collapsed) {
-    return sre.RebuildStree.postProcess(snode, collapsed);
+    return this.postProcess(snode, collapsed);
   }
   return snode;
 };
@@ -98,7 +108,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
  * @param {!Node} node The enriched MathML node.
  * @return {!sre.SemanticTree.Node} The reconstructed semantic tree node.
  */
-sre.RebuildStree.makeNode = function(node) {
+sre.RebuildStree.prototype.makeNode = function(node) {
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
@@ -107,7 +117,7 @@ sre.RebuildStree.makeNode = function(node) {
       node, sre.EnrichMathml.Attribute.EMBELLISHED);
   var fencepointer = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.FENCEPOINTER);
-  var snode = new sre.SemanticTree.Node(parseInt(id, 10));
+  var snode = this.createNode(parseInt(id, 10));
   snode.type = /** @type {sre.SemanticAttr.Type} */(type);
   snode.role = /** @type {sre.SemanticAttr.Role} */(role);
   snode.font = font ? /** @type {sre.SemanticAttr.Font} */(font) :
@@ -128,10 +138,10 @@ sre.RebuildStree.makeNode = function(node) {
  * @param {!string} collapsed The collapse structure.
  * @return {!sre.SemanticTree.Node} The semantic node.
  */
-sre.RebuildStree.postProcess = function(snode, collapsed) {
+sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
   var array = sre.RebuildStree.parseCollapsed_(collapsed);
   if (snode.type === sre.SemanticAttr.Role.SUBSUP) {
-    var subscript = new sre.SemanticTree.Node(array[1][0]);
+    var subscript = this.createNode(array[1][0]);
     subscript.type = sre.SemanticAttr.Type.SUBSCRIPT;
     subscript.role = sre.SemanticAttr.Role.SUBSUP;
     snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
@@ -141,7 +151,7 @@ sre.RebuildStree.postProcess = function(snode, collapsed) {
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {
-    var underscore = new sre.SemanticTree.Node(array[1][0]);
+    var underscore = this.createNode(array[1][0]);
     underscore.type = sre.SemanticAttr.Type.UNDERSCORE;
     underscore.role = sre.SemanticAttr.Role.UNDEROVER;
     snode.type = sre.SemanticAttr.Type.OVERSCORE;
@@ -152,6 +162,18 @@ sre.RebuildStree.postProcess = function(snode, collapsed) {
   }
 
   return snode;
+};
+
+
+/**
+ * Creates a new semantic tree node and stores it.
+ * @param {number} id The id for that node.
+ * @return {sre.SemanticTree.Node} The newly created node.
+ */
+sre.RebuildStree.prototype.createNode = function(id) {
+  var node = new sre.SemanticTree.Node(id);
+  this.nodeDict[id.toString()] = node;
+  return node;
 };
 
 
@@ -210,7 +232,6 @@ sre.RebuildStree.parseCollapsed_ = function(collapsed) {
  */
 sre.RebuildStree.experiment__ = function(expr) {
   var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
-  console.log(mml.toString());
   var stree = new sre.SemanticTree(mml);
   var str1 = stree.toString();
   var emml = sre.EnrichMathml.enrich(mml, stree);

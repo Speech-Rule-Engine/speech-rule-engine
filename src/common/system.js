@@ -32,13 +32,11 @@ goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.RebuildStree');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticWalker');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SyntaxWalker');
 goog.require('sre.SystemExternal');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -89,18 +87,23 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.ssml = !!feature.ssml;
+  engine.strict = !!feature.strict;
   engine.semantics = !!feature.semantics;
   if (feature.cache !== undefined) {
-    engine.withCache = !!feature.cache;
+    engine.cache = !!feature.cache;
   }
   engine.speech = !!feature.speech;
   if (feature.json) {
     sre.SystemExternal.jsonPath = feature.json;
   }
+  if (feature.xpath) {
+    sre.SystemExternal.WGXpath = feature.xpath;
+  }
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.MathmlStore.getInstance());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  engine.setupBrowsers();
 };
 
 
@@ -158,7 +161,7 @@ sre.System.prototype.toSpeech = function(expr) {
   if (!xml) {
     return '';
   }
-  return sre.System.getInstance().processXml_(xml);
+  return sre.System.getInstance().processXml(xml);
 };
 
 
@@ -201,7 +204,7 @@ sre.System.prototype.toDescription = function(expr) {
   if (!xml) {
     return [];
   }
-  var descrs = sre.System.getInstance().describeXml_(xml);
+  var descrs = sre.EnrichMathml.computeSpeech(xml);
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
@@ -295,23 +298,10 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  * as it might depend on a particular implementation of Xml Node API.
  * @param {!Node} xml The Xml node to describe.
  * @return {string} The aural rendering of the expression.
- * @private
  */
-sre.System.prototype.processXml_ = function(xml) {
-  var descrs = sre.System.getInstance().describeXml_(xml);
+sre.System.prototype.processXml = function(xml) {
+  var descrs = sre.EnrichMathml.computeSpeech(xml);
   return sre.AuditoryDescription.speechString(descrs);
-};
-
-
-/**
- * Computes auditory descriptions for a given Xml node.
- * @param {!Node} xml The Xml node to describe.
- * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
- * @private
- */
-sre.System.prototype.describeXml_ = function(xml) {
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
 
 
@@ -328,7 +318,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
   try {
     xml = sre.DomUtil.parseInput(expr, sre.System.Error);
     if (semantic) {
-      xml = sre.System.getInstance().getSemanticTree_(xml);
+      xml = sre.System.getInstance().getSemanticTree(xml);
     }
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));
@@ -342,15 +332,10 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
 /**
  * Creates a clean Xml version of the semantic tree for a given MathML node.
  * @param {!Element} mml The MathML node.
- * @return {!Node} Semantic tree for input node as newly created Xml node.
- * @private
+ * @return {Node} Semantic tree for input node as newly created Xml node.
  */
-sre.System.prototype.getSemanticTree_ = function(mml) {
-  var tree = sre.Semantic.getTree(mml);
-  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    return tree.childNodes[0];
-  }
-  return sre.DomUtil.parseInput(tree.toString(), sre.System.Error);
+sre.System.prototype.getSemanticTree = function(mml) {
+  return sre.Semantic.getTree(mml);
 };
 
 
@@ -400,11 +385,14 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  */
 sre.System.prototype.walk = function(expr) {
   this.speechGenerator = new sre.DirectSpeechGenerator();
+  var highlighter = new sre.MmlHighlighter();
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   sre.Engine.getInstance().speech = true;
   var eml = sre.System.getInstance().toEnriched(expr);
+  //TODO: See if this is still necessary.
   var node = sre.DomUtil.parseInput(eml, sre.System.Error);
-  this.walker = new sre.SyntaxWalker(node, this.speechGenerator);
+  this.walker = new sre.SyntaxWalker(
+      node, this.speechGenerator, highlighter, eml);
   return this.walker.speech();
 };
 

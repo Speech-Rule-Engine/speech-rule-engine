@@ -23,6 +23,7 @@ goog.provide('sre.WalkerUtil');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.EnrichMathml');
+goog.require('sre.RebuildStree');
 goog.require('sre.SemanticAttr');
 
 

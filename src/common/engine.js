@@ -98,7 +98,7 @@ sre.Engine = function() {
    * Caching during speech generation.
    * @type {boolean}
    */
-  this.withCache = true;
+  this.cache = true;
 
   /**
    * Caching during speech generation.
@@ -107,16 +107,22 @@ sre.Engine = function() {
   this.ssml = false;
 
   /**
+   * Strict interpretations of rules and constraints.
+   * @type {boolean}
+   */
+  this.strict = false;
+
+  /**
    * Current browser is MS Internet Explorer but not Edge.
    * @type {boolean}
    */
-  this.isIE = sre.BrowserUtil.detectIE();
+  this.isIE = false;
 
   /**
    * Current browser is MS Edge.
    * @type {boolean}
    */
-  this.isEdge = sre.BrowserUtil.detectEdge();
+  this.isEdge = false;
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -165,4 +171,41 @@ sre.Engine.isReady = function() {
   return sre.Engine.getInstance().setupTests_.every(
       function(pred) { return pred(); }
   );
+};
+
+
+/**
+ * Runs a function in the temporary context of the speech rule engine.
+ * @param {Object} settings The temporary settings for the speech rule
+ *     engine. They can contain the usual features.
+ * @param {function():!Array.<sre.AuditoryDescription>} callback The runnable
+ *     function that computes speech results.
+ * @return {!Array.<sre.AuditoryDescription>} The result of the callback.
+ */
+sre.Engine.prototype.runInSetting = function(settings, callback) {
+  var save = {};
+  for (var key in settings) {
+    save[key] = this[key];
+    this[key] = settings[key];
+  }
+  //TODO: This needs to be refactored as a message signal for the speech rule
+  //      engine to update itself.
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(this.domain, this.style);
+  var result = callback();
+  for (key in save) {
+    this[key] = save[key];
+  }
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(this.domain, this.style);
+  return result;
+};
+
+
+/**
+ * Sets up browser specific functionality.
+ */
+sre.Engine.prototype.setupBrowsers = function() {
+  this.isIE = sre.BrowserUtil.detectIE();
+  this.isEdge = sre.BrowserUtil.detectEdge();
 };

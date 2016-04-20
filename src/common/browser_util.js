@@ -67,12 +67,11 @@ sre.BrowserUtil.mapsForIE = null;
  * @private
  */
 sre.BrowserUtil.loadWGXpath_ = function() {
-  sre.BrowserUtil.loadScript(sre.SystemExternal.url + '/wgxpath.install.js');
+  sre.BrowserUtil.loadScript(sre.SystemExternal.WGXpath);
   sre.BrowserUtil.installWGXpath_();
 };
 
 
-//TODO: Insert counter here.
 /**
  * Loads all JSON mappings for IE using a script tag.
  * @param {number=} opt_count Optional counter argument for callback.

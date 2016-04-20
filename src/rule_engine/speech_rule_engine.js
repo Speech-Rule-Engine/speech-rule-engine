@@ -161,6 +161,18 @@ sre.SpeechRuleEngine.prototype.clearCache = function() {
 
 
 /**
+ * An iterator over the cache elements.
+ * @param {function(string, !Array.<sre.AuditoryDescription>)} iter
+ *     The iterator function.
+ */
+sre.SpeechRuleEngine.prototype.forCache = function(iter) {
+  for (var key in this.cache_) {
+    iter(key, this.cache_[key]);
+  }
+};
+
+
+/**
  * Retrieves a cached value for a particular element.
  * @param {Node} node The element to lookup.
  * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
@@ -223,7 +235,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  if (sre.Engine.getInstance().withCache) {
+  if (sre.Engine.getInstance().cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
       return result;
@@ -231,6 +243,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
   if (!rule) {
+    if (sre.Engine.getInstance().strict) return [];
     result = this.activeStore_.evaluateDefault(node);
     this.pushCache_(node, result);
     return result;

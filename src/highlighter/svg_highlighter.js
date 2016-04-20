@@ -96,3 +96,11 @@ sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
       info.node.nextSibling.removeAttribute('fill');
   info.node.parentNode.removeChild(info.node);
 };
+
+
+/**
+ * @override
+ */
+sre.SvgHighlighter.prototype.isMactionNode = function(node) {
+  return node.className.baseVal === this.mactionName;
+};

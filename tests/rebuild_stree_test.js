@@ -54,7 +54,7 @@ sre.RebuildStreeTest.prototype.executeRebuildTest = function(expr) {
   var mml = sre.DomUtil.parseInput(mathMl);
   var stree = new sre.SemanticTree(mml);
   var emml = sre.EnrichMathml.enrich(mml, stree);
-  var reass = new sre.RebuildStree(emml);
+  var reass = (new sre.RebuildStree(emml)).getTree();
 
   this.assert.equal(stree.toString(), reass.toString());
 };
