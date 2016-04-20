@@ -3,14 +3,19 @@
 # Copyright 2014, Volker Sorge <Volker.Sorge@gmail.com>
 #
 
-PREFIX = $(HOME)
+MODULE_NAME = node_modules
+ifneq ($(wildcard ./$(MODULE_NAME)/.*),)
+PREFIX = $(abspath .)
+else
+PREFIX =$(HOME)
+endif
 ifdef TRAVIS
 PREFIX = /home/travis/build/zorkow/speech-rule-engine
 endif
 
 # Nodejs location.
 NODEJS = node
-NODE_MODULES = $(PREFIX)/node_modules
+NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 
 # Ideally, no changes necessary beyond this point!
 SRC_DIR = $(abspath ./src)
@@ -283,3 +288,8 @@ enrich: $(SRC)
 
 clean_enrich:
 	rm -f $(ENRICH)
+
+clean_closure:
+	@sed -i s/\'-d32\'//g $(CLOSURE_ROOT)/jscompiler.py
+	@sed -i s/'goog.global.CLOSURE_IMPORT_SCRIPT\;'/'goog.global.CLOSURE_IMPORT_SCRIPT = null\;'/g $(CLOSURE_LIB)/closure/goog/base.js
+
