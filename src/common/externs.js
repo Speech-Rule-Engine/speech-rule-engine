@@ -50,4 +50,7 @@ MathJax.Callback.Signal = function(signal) { };
 
 
 var wgxpath;
-wgxpath.install = function() { };
+/**
+ * @type {function(Object=)}
+ */
+wgxpath.install = function(opt_feature) { };

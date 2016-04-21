@@ -50,7 +50,7 @@ sre.BrowserUtil.detectEdge = function() {
     return false;
   }
   document.evaluate = null;
-  sre.BrowserUtil.loadWGXpath_();
+  sre.BrowserUtil.loadWGXpath_(true);
   return true;
 };
 
@@ -64,29 +64,33 @@ sre.BrowserUtil.mapsForIE = null;
 
 /**
  * Loads all JSON mappings for IE using a script tag.
+ * @param {boolean=} opt_isEdge Optional boolean if browser is Edge.
  * @private
  */
-sre.BrowserUtil.loadWGXpath_ = function() {
+sre.BrowserUtil.loadWGXpath_ = function(opt_isEdge) {
   sre.BrowserUtil.loadScript(sre.SystemExternal.WGXpath);
-  sre.BrowserUtil.installWGXpath_();
+  sre.BrowserUtil.installWGXpath_(opt_isEdge);
 };
 
 
 /**
  * Loads all JSON mappings for IE using a script tag.
+ * @param {boolean=} opt_isEdge Optional boolean if browser is Edge.
  * @param {number=} opt_count Optional counter argument for callback.
  * @private
  */
-sre.BrowserUtil.installWGXpath_ = function(opt_count) {
+sre.BrowserUtil.installWGXpath_ = function(opt_isEdge, opt_count) {
   var count = opt_count || 1;
   if (typeof wgxpath === 'undefined' && count < 10) {
-    setTimeout(function() {sre.BrowserUtil.installWGXpath_(count++);}, 200);
+    setTimeout(function() {
+      sre.BrowserUtil.installWGXpath_(opt_isEdge, count++);
+    }, 200);
     return;
   }
   if (count >= 10) {
     return;
   }
-  wgxpath.install();
+  opt_isEdge ? wgxpath.install({'document': document}) : wgxpath.install();
   sre.XpathUtil.xpathEvaluate = document.evaluate;
   sre.XpathUtil.xpathResult = XPathResult;
   sre.XpathUtil.createNSResolver = document.createNSResolver;
