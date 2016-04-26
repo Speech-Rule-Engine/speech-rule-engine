@@ -873,50 +873,51 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
 
 
 /**
- * Connects maction nodes as alternatives.
+ * Connects maction nodes as alternatives if they are collapsed in the actual
+ * node.
  * @param {!Node} node The actual DOM node.
  * @param {!Element} mml The mathml element for the node.
  * @param {!Node} stree The XML for the semantic tree.
  */
 sre.EnrichMathml.connectMactions = function(node, mml, stree) {
-  var altcount = 0;
   var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
   for (var i = 0, maction; maction = mactions[i]; i++) {
+    // Get the span with the maction id in node.
     var aid = maction.getAttribute('id');
     var span = sre.DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
     if (!span) continue;
+    // Get id of uncollapse maction child.
     var lchild = maction.childNodes[1];
     var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
+    // Find the corresponding span in node.
     var cspan = sre.WalkerUtil.getBySemanticId(node, mid);
-    if (cspan) continue;
+    // If the span exists, the maction is not collapsed and does not need to be
+    // connected. Unless, it is collpased maction (dummy type) and has been
+    // previously linked into the span. Then we still want to mark it as
+    // alternative.
+    if (cspan &&
+        cspan.getAttribute(sre.EnrichMathml.Attribute.TYPE) !== 'dummy')
+      continue;
+    // Otherwise, we take the existing child, which is actually the collapsed
+    // maction that needs to be linked into the node.
     cspan = span.childNodes[0];
+    // Set parent pointer if necessary.
     var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
-    var pspan = sre.WalkerUtil.getBySemanticId(node, pid);
-    var altname = mid;
-    if (pspan) {
-      var children = pspan.getAttribute(sre.EnrichMathml.Attribute.CHILDREN);
-      if (children) {
-        var items = sre.WalkerUtil.splitAttribute(children);
-        var index = items.indexOf(mid);
-        items[index] = altname;
-        pspan.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
-                           items.join(','));
-      }
-    } else {
-      cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
-    }
     if (pid) {
       cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
     }
-    cspan.setAttribute(sre.EnrichMathml.Attribute.ID, altname);
+    // Set dummy type and id.
+    cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
+    cspan.setAttribute(sre.EnrichMathml.Attribute.ID, mid);
+    // Indicate the alternative in the semantic tree.
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
-    cst.setAttribute('alternative', altname);
+    cst.setAttribute('alternative', mid);
   }
 };
 
 
 /**
- * Connects maction nodes as alternatives.
+ * Connects all maction nodes as alternatives.
  * @param {!Element} mml The mathml element.
  * @param {!Node} stree The XML for the semantic tree.
  */
@@ -930,5 +931,3 @@ sre.EnrichMathml.connectAllMactions = function(mml, stree) {
     cst.setAttribute('alternative', mid);
   }
 };
-
-
