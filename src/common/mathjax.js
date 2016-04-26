@@ -30,6 +30,7 @@ goog.require('sre.HighlighterFactory');
 goog.require('sre.NodeSpeechGenerator');
 goog.require('sre.RebuildStree');
 goog.require('sre.SemanticWalker');
+goog.require('sre.SummarySpeechGenerator');
 goog.require('sre.SyntaxWalker');
 goog.require('sre.System');
 goog.require('sre.TreeSpeechGenerator');

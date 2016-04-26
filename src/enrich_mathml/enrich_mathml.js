@@ -913,3 +913,22 @@ sre.EnrichMathml.connectMactions = function(node, mml, stree) {
     cst.setAttribute('alternative', altname);
   }
 };
+
+
+/**
+ * Connects maction nodes as alternatives.
+ * @param {!Element} mml The mathml element.
+ * @param {!Node} stree The XML for the semantic tree.
+ */
+sre.EnrichMathml.connectAllMactions = function(mml, stree) {
+  var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
+  for (var i = 0, maction; maction = mactions[i]; i++) {
+    var aid = maction.getAttribute('id');
+    var lchild = maction.childNodes[1];
+    var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
+    var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    cst.setAttribute('alternative', mid);
+  }
+};
+
+
