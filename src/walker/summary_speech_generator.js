@@ -14,13 +14,14 @@
 
 
 /**
- * @fileoverview Node speech generator that computes a new speech string for
- *     a single node if it does not yet have a speech string attached.
+ * @fileoverview Summary speech generator that computes speech strings a for
+ *     elements in their maximally collapsed state, regardless of the actual
+ *     state of rendering.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.NodeSpeechGenerator');
+goog.provide('sre.SummarySpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.EnrichMathml');
@@ -32,20 +33,22 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.NodeSpeechGenerator = function() {
-  goog.base(this);
-};
-goog.inherits(sre.NodeSpeechGenerator, sre.AbstractSpeechGenerator);
+sre.SummarySpeechGenerator = function() { };
+goog.inherits(sre.SummarySpeechGenerator, sre.AbstractSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.NodeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  //TODO: This needs fixing!
-  var speech = goog.base(this, 'getSpeech', node, xml);
-  if (speech) return speech;
-  speech = this.generateSpeech(node, xml);
-  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  return speech;
+sre.SummarySpeechGenerator.prototype.rebuildStree = function(node, xml) {
+  this.rebuilt = new sre.RebuildStree(xml);
+  sre.EnrichMathml.connectAllMactions(xml, this.rebuilt.xml);
+};
+
+
+/**
+ * @override
+ */
+sre.SummarySpeechGenerator.prototype.getSpeech = function(node, xml) {
+  return this.generateSpeech(node, xml);
 };
