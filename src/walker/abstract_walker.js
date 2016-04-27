@@ -25,6 +25,7 @@ goog.require('sre.EnrichMathml');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
 goog.require('sre.HighlighterInterface');
+goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGeneratorInterface');
 goog.require('sre.WalkerInterface');
 goog.require('sre.WalkerUtil');
@@ -62,6 +63,12 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */
   this.generator = generator;
 
+  /**
+   * @type {!sre.RebuildStree}
+   */
+  this.rebuilt = this.rebuildStree_();
+  this.generator.setRebuilt(this.rebuilt);
+  
   //TODO: This is problematic as it will sometimes not be instantiated if called
   //      from MathJax.
   /**
@@ -90,14 +97,20 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 
   this.dummy_ = function() {};
 
-  var rootNode = sre.WalkerUtil.getSemanticRoot(node);
+  /**
+   * The span in the math expression that corresponds to the root of the
+   * semantic tree.
+   * @type {!Node}
+   */
+  this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
+  
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
    * @type {!sre.Focus}
    * @private
    */
-  this.focus_ = new sre.Focus({nodes: [rootNode], primary: rootNode});
+  this.focus_ = new sre.Focus({nodes: [this.rootNode], primary: this.rootNode});
 
   /**
    * Flag indicating whether the last move actually moved focus.
@@ -383,10 +396,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
   if (!this.highlighter) return;
   var state = this.highlighter.getState(this.node.id);
   if (!state) return;
-  //TODO: Combine this better with the speech generator!
-  var rebuilt = new sre.RebuildStree(this.xml);
-  var stree = rebuilt.getTree();
-  var node = rebuilt.nodeDict[state];
+  var node = this.rebuilt.nodeDict[state];
   var path = [];
   while (node) {
     path.push(node.id);
@@ -410,3 +420,16 @@ sre.AbstractWalker.prototype.restoreState = function() {
  * @return {sre.Focus} The focus on a particular level.
  */
 sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
+
+
+/**
+ * Rebuilds the semantic tree given in the input xml element fully connected
+ * with maction elements.
+ * @return {!sre.RebuildStree} The reconstructed semantic tree.
+ * @private
+ */
+sre.AbstractWalker.prototype.rebuildStree_ = function() {
+  var rebuilt = new sre.RebuildStree(this.xml);
+  sre.EnrichMathml.connectMactions(this.node, this.xml, rebuilt.xml);
+  return rebuilt;
+};
