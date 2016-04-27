@@ -21,6 +21,8 @@
 
 goog.provide('sre.SpeechGeneratorInterface');
 
+goog.require('sre.RebuildStree');
+
 
 
 /**
@@ -43,6 +45,13 @@ sre.SpeechGeneratorInterface.prototype.getSpeech = function(node, xml) {};
  * @return {sre.RebuildStree} The reconstructed semantic tree.
  */
 sre.SpeechGeneratorInterface.prototype.getRebuilt = function() {};
+
+
+/**
+ * Sets the rebuilt semantic tree object of the speech generator.
+ * @param {!sre.RebuildStree} rebuilt The reconstructed semantic tree.
+ */
+sre.SpeechGeneratorInterface.prototype.setRebuilt = function(rebuilt) {};
 
 
 /**

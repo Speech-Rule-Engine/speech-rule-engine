@@ -25,7 +25,6 @@ goog.provide('sre.SummarySpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.EnrichMathml');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -40,15 +39,7 @@ goog.inherits(sre.SummarySpeechGenerator, sre.AbstractSpeechGenerator);
 /**
  * @override
  */
-sre.SummarySpeechGenerator.prototype.rebuildStree = function(node, xml) {
-  this.rebuilt = new sre.RebuildStree(xml);
-  sre.EnrichMathml.connectAllMactions(xml, this.rebuilt.xml);
-};
-
-
-/**
- * @override
- */
 sre.SummarySpeechGenerator.prototype.getSpeech = function(node, xml) {
+  sre.EnrichMathml.connectAllMactions(xml, this.getRebuilt().xml);
   return this.generateSpeech(node, xml);
 };

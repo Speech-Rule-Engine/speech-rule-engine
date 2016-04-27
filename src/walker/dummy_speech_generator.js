@@ -41,6 +41,5 @@ goog.inherits(sre.DummySpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.DummySpeechGenerator.prototype.getSpeech = function(node, xml) {
-  this.rebuildStree(node, xml);
   return '';
 };
