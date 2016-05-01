@@ -95,22 +95,11 @@ sre.Engine = function() {
   this.setupTests_ = [];
 
   /**
-   * The default rule sets. Generally this are all rule sets that are available.
-   * @type {!Array.<string>}
-   * @private
-   */
-  this.defaultRuleSets_ = [
-    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
-    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
-  ];
-  
-  /**
    * List of rule sets given as the constructor functions.
-   * @type {!Array.<function()>}
+   * @type {!Array.<sre.BaseRuleStore>}
    * @private
    */
   this.ruleSets_ = [];
-  this.setRuleSets(this.defaultRuleSets_);
 
   /**
    * Caching during speech generation.
@@ -193,34 +182,6 @@ sre.Engine.isReady = function() {
 
 
 /**
- * Runs a function in the temporary context of the speech rule engine.
- * @param {Object} settings The temporary settings for the speech rule
- *     engine. They can contain the usual features.
- * @param {function():!Array.<sre.AuditoryDescription>} callback The runnable
- *     function that computes speech results.
- * @return {!Array.<sre.AuditoryDescription>} The result of the callback.
- */
-sre.Engine.prototype.runInSetting = function(settings, callback) {
-  var save = {};
-  for (var key in settings) {
-    save[key] = this[key];
-    this[key] = settings[key];
-  }
-  //TODO: This needs to be refactored as a message signal for the speech rule
-  //      engine to update itself.
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(this.domain, this.style);
-  var result = callback();
-  for (key in save) {
-    this[key] = save[key];
-  }
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(this.domain, this.style);
-  return result;
-};
-
-
-/**
  * Sets up browser specific functionality.
  */
 sre.Engine.prototype.setupBrowsers = function() {
@@ -237,15 +198,15 @@ sre.Engine.prototype.setRuleSets = function(ruleSets) {
   this.ruleSets_ = [];
   for (var i = 0; i < ruleSets.length; i++) {
     var set = sre[ruleSets[i]];
-    if (set) {
-      this.ruleSets_.push(set);
+    if (set && set.getInstance) {
+      this.ruleSets_.push(set.getInstance());
     }
   }
 };
 
 
 /**
- * @return {!Array.<function()>} The rule sets that are used.
+ * @return {!Array.<sre.BaseRuleStore>} The rule sets that are used.
  */
 sre.Engine.prototype.getRuleSets = function() {
   return this.ruleSets_;

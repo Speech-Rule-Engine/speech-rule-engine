@@ -22,7 +22,6 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
-goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');
 goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.DomUtil');
@@ -55,6 +54,16 @@ sre.System = function() {
 
   this.speechGenerator = null;
 
+  /**
+   * The default rule sets. Generally this are all rule sets that are available.
+   * @type {!Array.<string>}
+   * @private
+   */
+  this.defaultRuleSets_ = [
+    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
+    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
+  ];
+  
 };
 goog.addSingletonGetter(sre.System);
 
@@ -103,9 +112,11 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.setupBrowsers();
   if (feature.rules) {
     engine.setRuleSets(feature.rules);
+  } else {
+    engine.setRuleSets(this.defaultRuleSets_);
   }
   sre.SpeechRuleEngine.getInstance().
-      parameterize(engine.getRuleSets());
+    parameterize(engine.getRuleSets());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
 };
