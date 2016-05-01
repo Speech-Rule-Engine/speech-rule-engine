@@ -95,6 +95,24 @@ sre.Engine = function() {
   this.setupTests_ = [];
 
   /**
+   * The default rule sets. Generally this are all rule sets that are available.
+   * @type {!Array.<string>}
+   * @private
+   */
+  this.defaultRuleSets_ = [
+    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
+    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
+  ];
+  
+  /**
+   * List of rule sets given as the constructor functions.
+   * @type {!Array.<function()>}
+   * @private
+   */
+  this.ruleSets_ = [];
+  this.setRuleSets(this.defaultRuleSets_);
+
+  /**
    * Caching during speech generation.
    * @type {boolean}
    */
@@ -208,4 +226,27 @@ sre.Engine.prototype.runInSetting = function(settings, callback) {
 sre.Engine.prototype.setupBrowsers = function() {
   this.isIE = sre.BrowserUtil.detectIE();
   this.isEdge = sre.BrowserUtil.detectEdge();
+};
+
+
+/**
+ * Sets the rule sets to use.
+ * @param {!Array.<string>} ruleSets The name of rule sets to use.
+ */
+sre.Engine.prototype.setRuleSets = function(ruleSets) {
+  this.ruleSets_ = [];
+  for (var i = 0; i < ruleSets.length; i++) {
+    var set = sre[ruleSets[i]];
+    if (set) {
+      this.ruleSets_.push(set);
+    }
+  }
+};
+
+
+/**
+ * @return {!Array.<function()>} The rule sets that are used.
+ */
+sre.Engine.prototype.getRuleSets = function() {
+  return this.ruleSets_;
 };

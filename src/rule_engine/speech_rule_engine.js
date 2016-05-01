@@ -96,10 +96,12 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
 
 /**
  * Parameterizes the speech rule engine.
- * @param {sre.CombinedStore} store A speech rule store.
+ * @param {Array.<function()>} ruleSets A list of rule sets to use.
  */
-sre.SpeechRuleEngine.prototype.parameterize = function(store) {
+sre.SpeechRuleEngine.prototype.parameterize = function(ruleSets) {
+  var store = sre.CombinedStore.getInstance();
   try {
+    store.intializer = ruleSets;
     store.initialize();
   } catch (err) {
     if (err.name == 'StoreError') {
