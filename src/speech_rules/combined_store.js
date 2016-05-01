@@ -80,8 +80,8 @@ sre.CombinedStore.prototype.updateEngine = function() {
   }
   var engine = sre.Engine.getInstance();
   var dynamicCstr = sre.CombinedStore.getInstance().getDynamicConstraintValues();
-  engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);
-  engine.allStyles = sre.MathUtil.union(dynamicCstr.style, maps.allStyles);
+  engine.allDomains = sre.BaseUtil.union(dynamicCstr.domain, maps.allDomains);
+  engine.allStyles = sre.BaseUtil.union(dynamicCstr.style, maps.allStyles);
 };
 
 

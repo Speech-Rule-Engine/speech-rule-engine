@@ -317,7 +317,7 @@ sre.BaseRuleStore.prototype.getDynamicConstraintValues = function() {
     for (var key in rule.dynamicCstr) {
       var newKey = [rule.dynamicCstr[key]];
       if (result[key]) {
-        result[key] = sre.MathUtil.union(result[key], newKey);
+        result[key] = sre.BaseUtil.union(result[key], newKey);
       } else {
         result[key] = newKey;
       }
