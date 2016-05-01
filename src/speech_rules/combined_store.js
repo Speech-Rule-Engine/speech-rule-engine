@@ -35,29 +35,60 @@ goog.require('sre.SemanticTreeRules');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
-sre.CombinedStore = function() { };
+sre.CombinedStore = function() {
+  goog.base(this);
+
+  /**
+   * @override
+   */
+  this.initializer = [
+    sre.MathmlStoreRules, sre.SemanticTreeRules,
+    sre.MathspeakRules, sre.ClearspeakRules,
+    sre.AbstractionRules, sre.PrefixRules
+  ];
+};
+goog.inherits(sre.CombinedStore, sre.MathStore);
 goog.addSingletonGetter(sre.CombinedStore);
 
 
-/**
- * @type {sre.MathStore}
- */
-sre.CombinedStore.mathStore = sre.MathmlStore.getInstance();
+// /**
+//  * @type {sre.MathStore}
+//  */
+// sre.CombinedStore.mathStore = sre.CombinedStore.getInstance();
 
 
 /**
  * @override
  */
-sre.CombinedStore.mathStore.initialize = function() {
-  sre.MathmlStoreRules.getInstance();
-  sre.SemanticTreeRules.getInstance();
-  sre.MathspeakRules.getInstance();
-  sre.ClearspeakRules.getInstance();
-  sre.AbstractionRules.getInstance();
-  sre.PrefixRules.getInstance();
+sre.CombinedStore.prototype.init = function() {
+  for (var i = 0, func; func = this.initializer[i]; i++) {
+    var store = func.getInstance();
+    console.log(store);
+    store.init();
+    //TODO: This is dodgy as it is on private properties.x
+    this.setSpeechRules(this.getSpeechRules().concat(store.getSpeechRules()));
+    this.contextFunctions.addStore(store.contextFunctions);
+    this.customQueries.addStore(store.customQueries);
+    this.customStrings.addStore(store.customStrings);
+  }
   sre.CombinedStore.getInstance().updateEngine();
 };
+
+
+/**
+ * @override
+ */
+// sre.CombinedStore.mathStore.initialize = function() {
+//   sre.MathmlStoreRules.getInstance();
+//   sre.SemanticTreeRules.getInstance();
+//   sre.MathspeakRules.getInstance();
+//   sre.ClearspeakRules.getInstance();
+//   sre.AbstractionRules.getInstance();
+//   sre.PrefixRules.getInstance();
+//   sre.CombinedStore.getInstance().updateEngine();
+// };
 
 
 /**
@@ -70,7 +101,9 @@ sre.CombinedStore.prototype.updateEngine = function() {
     return;
   }
   var engine = sre.Engine.getInstance();
-  var dynamicCstr = sre.CombinedStore.mathStore.getDynamicConstraintValues();
+  var dynamicCstr = sre.CombinedStore.getInstance().getDynamicConstraintValues();
   engine.allDomains = sre.MathUtil.union(dynamicCstr.domain, maps.allDomains);
   engine.allStyles = sre.MathUtil.union(dynamicCstr.style, maps.allStyles);
 };
+
+

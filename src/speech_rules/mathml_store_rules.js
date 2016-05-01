@@ -30,22 +30,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathmlStore}
  */
 sre.MathmlStoreRules = function() {
-  // Custom functions used in the rules.
-  sre.MathmlStoreRules.initCustomFunctions_();
-  sre.MathmlStoreRules.initDefaultRules_(); // MathML rules.
-  sre.MathmlStoreRules.initMathjaxRules_(); // MathJax Rules
-  sre.MathmlStoreRules.initAliases_(); // MathJax Aliases for MathML rules.
-  sre.MathmlStoreRules.initSpecializationRules_(); // Square, cube, etc.
+  goog.base(this);
 };
+goog.inherits(sre.MathmlStoreRules, sre.MathmlStore);
 goog.addSingletonGetter(sre.MathmlStoreRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.MathmlStoreRules.mathStore = sre.MathmlStore.getInstance();
+sre.MathmlStoreRules.mathStore = sre.MathmlStoreRules.getInstance();
 
 
 // These are used to work around Closure's rules for aliasing.
@@ -566,3 +563,14 @@ sre.MathmlStoreRules.initSpecializationRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.MathmlStoreRules.getInstance().initializer = [
+    // Custom functions used in the rules.
+    sre.MathmlStoreRules.initCustomFunctions_,
+    sre.MathmlStoreRules.initDefaultRules_, // MathML rules.
+    sre.MathmlStoreRules.initMathjaxRules_, // MathJax Rules
+    sre.MathmlStoreRules.initAliases_, // MathJax Aliases for MathML rules.
+    sre.MathmlStoreRules.initSpecializationRules_, // Square, cube, etc.
+];
+

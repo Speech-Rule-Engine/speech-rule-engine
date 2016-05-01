@@ -464,3 +464,13 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
   return sre.BaseRuleStore.compareStaticConstraints_(
       prec1.constraints, prec2.constraints);
 };
+
+
+sre.BaseRuleStore.prototype.getSpeechRules = function() {
+  return this.speechRules_;
+};
+
+
+sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
+  this.speechRules_ = rules;
+};

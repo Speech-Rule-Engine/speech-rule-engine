@@ -20,7 +20,6 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.StoreUtil');
 
 
@@ -28,18 +27,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.ClearspeakRules = function() {
-  // sre.ClearspeakRules.initCustomFunctions_();
-  sre.ClearspeakRules.initClearspeakRules_();
+  goog.base(this);
 };
+goog.inherits(sre.ClearspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.ClearspeakRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.ClearspeakRules.mathStore = sre.MathmlStore.getInstance();
+sre.ClearspeakRules.mathStore = sre.ClearspeakRules.getInstance();
 
 
 /** @private */
@@ -71,3 +71,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.ClearspeakRules.getInstance().initializer = [
+  // sre.ClearspeakRules.initCustomFunctions_();
+  sre.ClearspeakRules.initClearspeakRules_()
+];

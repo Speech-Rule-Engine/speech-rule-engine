@@ -21,7 +21,6 @@
 goog.provide('sre.PrefixRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -30,18 +29,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.PrefixRules = function() {
-  sre.PrefixRules.initCustomFunctions_();
-  sre.PrefixRules.initPrefixRules_();
+  goog.base(this);
 };
+goog.inherits(sre.PrefixRules, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.PrefixRules.mathStore = sre.MathmlStore.getInstance();
+sre.PrefixRules.mathStore = sre.PrefixRules.getInstance();
 
 
 /** @private */
@@ -183,3 +183,9 @@ sre.PrefixRules.initPrefixRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.PrefixRules.getInstance().initializer = [
+  sre.PrefixRules.initCustomFunctions_(),
+  sre.PrefixRules.initPrefixRules_()
+];

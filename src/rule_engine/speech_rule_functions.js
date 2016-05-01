@@ -60,6 +60,14 @@ sre.SpeechRuleFunctions.Store_.prototype.add = function(name, func) {
 };
 
 
+sre.SpeechRuleFunctions.Store_.prototype.addStore = function(store) {
+  var keys = Object.keys(store.store_);
+  for (var i = 0, key; key = keys[i]; i++) {
+    this.add(key, store.store_[key]);
+  }
+};
+
+
 /**
  * Retrieves a function with the given name if one exists.
  * @param {string} name A name.

@@ -100,7 +100,7 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
  */
 sre.SpeechRuleEngine.prototype.parameterize = function(store) {
   try {
-    store.initialize();
+    sre.CombinedStore.getInstance().init();
   } catch (err) {
     if (err.name == 'StoreError') {
       console.log('Store Error:', err.message);
@@ -109,7 +109,7 @@ sre.SpeechRuleEngine.prototype.parameterize = function(store) {
       throw err;
     }
   }
-  this.activeStore_ = store;
+  this.activeStore_ = sre.CombinedStore.getInstance();
 };
 
 
