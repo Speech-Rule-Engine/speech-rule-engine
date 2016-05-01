@@ -35,13 +35,16 @@ goog.require('sre.SemanticTreeRules');
 /**
  * Rule initialization.
  * @constructor
- * @extends {sre.MathStore}
  */
 sre.CombinedStore = function() {
-  goog.base(this);
 
   /**
-   * @override
+   * @type {sre.MathStore}
+   */
+  this.store = new sre.MathStore();
+  
+  /**
+   * @type {Array.<function()>}
    */
   this.initializer = [
     sre.MathmlStoreRules, sre.SemanticTreeRules,
@@ -49,23 +52,28 @@ sre.CombinedStore = function() {
     sre.AbstractionRules, sre.PrefixRules
   ];
 };
-goog.inherits(sre.CombinedStore, sre.MathStore);
 goog.addSingletonGetter(sre.CombinedStore);
 
 
 /**
- * @override
+ * Initializes the combined rule store
  */
 sre.CombinedStore.prototype.initialize = function() {
+  var timeIn = (new Date()).getTime();
+  this.store = new sre.MathStore();
+  var combined = this.store;
   for (var i = 0, func; func = this.initializer[i]; i++) {
     var store = func.getInstance();
     store.initialize();
-    this.setSpeechRules(this.getSpeechRules().concat(store.getSpeechRules()));
-    this.contextFunctions.addStore(store.contextFunctions);
-    this.customQueries.addStore(store.customQueries);
-    this.customStrings.addStore(store.customStrings);
+    combined.setSpeechRules(
+      combined.getSpeechRules().concat(store.getSpeechRules()));
+    combined.contextFunctions.addStore(store.contextFunctions);
+    combined.customQueries.addStore(store.customQueries);
+    combined.customStrings.addStore(store.customStrings);
   }
-  sre.CombinedStore.getInstance().updateEngine();
+  this.updateEngine();
+  var timeOut = (new Date()).getTime();
+  console.log('Time: ' + (timeOut - timeIn));
 };
 
 
@@ -75,11 +83,11 @@ sre.CombinedStore.prototype.initialize = function() {
 sre.CombinedStore.prototype.updateEngine = function() {
   var maps = sre.MathMap.getInstance();
   if (!sre.Engine.isReady()) {
-    setTimeout(sre.CombinedStore.getInstance().updateEngine, 500);
+    setTimeout(goog.bind(this.updateEngine, this), 500);
     return;
   }
   var engine = sre.Engine.getInstance();
-  var dynamicCstr = sre.CombinedStore.getInstance().getDynamicConstraintValues();
+  var dynamicCstr = this.store.getDynamicConstraintValues();
   engine.allDomains = sre.BaseUtil.union(dynamicCstr.domain, maps.allDomains);
   engine.allStyles = sre.BaseUtil.union(dynamicCstr.style, maps.allStyles);
 };

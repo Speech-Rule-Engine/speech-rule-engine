@@ -96,7 +96,7 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
 
 /**
  * Parameterizes the speech rule engine.
- * @param {sre.BaseRuleStore} store A speech rule store.
+ * @param {sre.CombinedStore} store A speech rule store.
  */
 sre.SpeechRuleEngine.prototype.parameterize = function(store) {
   try {
@@ -109,7 +109,7 @@ sre.SpeechRuleEngine.prototype.parameterize = function(store) {
       throw err;
     }
   }
-  this.activeStore_ = store;
+  this.activeStore_ = store.store;
 };
 
 
