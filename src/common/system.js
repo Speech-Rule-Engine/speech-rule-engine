@@ -102,8 +102,8 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.setupBrowsers();
   sre.SpeechRuleEngine.getInstance().
       parameterize(sre.CombinedStore.getInstance());
-  // sre.SpeechRuleEngine.getInstance().dynamicCstr =
-  //     sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  sre.SpeechRuleEngine.getInstance().dynamicCstr =
+      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
 };
 
 

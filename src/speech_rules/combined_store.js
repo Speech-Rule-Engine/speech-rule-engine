@@ -53,21 +53,13 @@ goog.inherits(sre.CombinedStore, sre.MathStore);
 goog.addSingletonGetter(sre.CombinedStore);
 
 
-// /**
-//  * @type {sre.MathStore}
-//  */
-// sre.CombinedStore.mathStore = sre.CombinedStore.getInstance();
-
-
 /**
  * @override
  */
-sre.CombinedStore.prototype.init = function() {
+sre.CombinedStore.prototype.initialize = function() {
   for (var i = 0, func; func = this.initializer[i]; i++) {
     var store = func.getInstance();
-    console.log(store);
-    store.init();
-    //TODO: This is dodgy as it is on private properties.x
+    store.initialize();
     this.setSpeechRules(this.getSpeechRules().concat(store.getSpeechRules()));
     this.contextFunctions.addStore(store.contextFunctions);
     this.customQueries.addStore(store.customQueries);
@@ -75,20 +67,6 @@ sre.CombinedStore.prototype.init = function() {
   }
   sre.CombinedStore.getInstance().updateEngine();
 };
-
-
-/**
- * @override
- */
-// sre.CombinedStore.mathStore.initialize = function() {
-//   sre.MathmlStoreRules.getInstance();
-//   sre.SemanticTreeRules.getInstance();
-//   sre.MathspeakRules.getInstance();
-//   sre.ClearspeakRules.getInstance();
-//   sre.AbstractionRules.getInstance();
-//   sre.PrefixRules.getInstance();
-//   sre.CombinedStore.getInstance().updateEngine();
-// };
 
 
 /**

@@ -49,7 +49,7 @@ sre.MathStore = function() {
   this.defaultTtsProps = [sre.Engine.personalityProps.PITCH,
                           sre.Engine.personalityProps.RATE];
 
-  
+
   /**
    * @type {boolean}
    */
@@ -59,7 +59,7 @@ sre.MathStore = function() {
    * @type {Array.<function()>}
    */
   this.initializer = [];
-  
+
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
 
@@ -69,9 +69,9 @@ sre.SpeechRule.DynamicCstrAttrib.DOMAIN = 'domain';
 
 
 /**
- * Initializes the rule store.
+ * @override
  */
-sre.MathStore.prototype.init = function() {
+sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
   for (var i = 0, func; func = this.initializer[i]; i++) {
     func();
