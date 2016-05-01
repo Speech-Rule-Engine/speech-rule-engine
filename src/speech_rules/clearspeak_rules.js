@@ -75,5 +75,5 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
 sre.ClearspeakRules.getInstance().initializer = [
   // sre.ClearspeakRules.initCustomFunctions_();
-  sre.ClearspeakRules.initClearspeakRules_()
+  sre.ClearspeakRules.initClearspeakRules_
 ];

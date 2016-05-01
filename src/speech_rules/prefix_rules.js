@@ -186,6 +186,6 @@ sre.PrefixRules.initPrefixRules_ = function() {
 
 
 sre.PrefixRules.getInstance().initializer = [
-  sre.PrefixRules.initCustomFunctions_(),
-  sre.PrefixRules.initPrefixRules_()
+  sre.PrefixRules.initCustomFunctions_,
+  sre.PrefixRules.initPrefixRules_
 ];
