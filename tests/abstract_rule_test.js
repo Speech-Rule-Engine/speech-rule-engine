@@ -46,6 +46,14 @@ sre.AbstractRuleTest = function() {
    * @type {boolean}
    */
   this.semantics = false;
+
+  /**
+   * Specify particular rule sets for a test. By default all available rule sets
+   * are used.
+   * @type {Array.<string>}
+   */
+  this.rules = null;
+  
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
@@ -65,7 +73,8 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   this.appendExamples(mathMl);
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: opt_style});
+    {semantics: this.semantics, domain: this.domain, style: opt_style,
+     rules: this.rules});
   var result = sre.System.getInstance().toSpeech(mathMl);
   this.assert.equal(result, answer);
 };
