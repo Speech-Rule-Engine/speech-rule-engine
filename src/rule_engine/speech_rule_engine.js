@@ -110,7 +110,7 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
  */
 sre.SpeechRuleEngine.prototype.parameterize = function(ruleSets) {
   try {
-    var store = this.combineStores_(ruleSets);
+    this.activeStore_ = this.combineStores_(ruleSets);
   } catch (err) {
     if (err.name == 'StoreError') {
       console.log('Store Error:', err.message);
@@ -119,7 +119,7 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSets) {
       throw err;
     }
   }
-  this.activeStore_ = store;
+  this.updateEngine();
 };
 
 
@@ -516,7 +516,6 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
     combined.customQueries.addStore(store.customQueries);
     combined.customStrings.addStore(store.customStrings);
   }
-  this.updateEngine();
   return combined;
 };
 
