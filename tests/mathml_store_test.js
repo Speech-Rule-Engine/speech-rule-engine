@@ -46,7 +46,7 @@ goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
  */
 sre.MathmlStoreTest.prototype.setUpTest = function() {
   this.rules = sre.MathmlStore.getInstance();
-  sre.SpeechRuleEngine.getInstance().parameterize(this.rules);
+  sre.SpeechRuleEngine.getInstance().parameterize(['MathmlStoreRules']);
 };
 
 

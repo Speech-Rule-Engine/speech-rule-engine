@@ -55,7 +55,7 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
     this.assert.fail();
     return;
   }
-  var descrs = sre.Engine.getInstance().runInSetting(
+  var descrs = sre.SpeechRuleEngine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
         'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
