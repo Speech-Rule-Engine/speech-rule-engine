@@ -44,6 +44,11 @@ sre.MathspeakEmbellishTest = function() {
    * @override
    */
   this.semantics = true;
+
+  /**
+   * @override
+   */
+  this.rules = ['SemanticTreeRules', 'MathspeakRules'];
 };
 goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);
 
