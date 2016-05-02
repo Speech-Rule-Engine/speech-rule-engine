@@ -23,6 +23,7 @@ goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
+goog.require('sre.MathmlStoreRules');
 
 
 
@@ -45,8 +46,9 @@ goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
  * @override
  */
 sre.MathmlStoreTest.prototype.setUpTest = function() {
-  this.rules = sre.MathmlStore.getInstance();
-  sre.SpeechRuleEngine.getInstance().parameterize(['MathmlStoreRules']);
+  sre.SpeechRuleEngine.getInstance().parameterize(
+    [sre.MathmlStoreRules.getInstance()]);
+  this.rules = sre.MathmlStoreRules.getInstance();
 };
 
 
