@@ -68,7 +68,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */
   this.rebuilt = this.rebuildStree_();
   this.generator.setRebuilt(this.rebuilt);
-  
+
   //TODO: This is problematic as it will sometimes not be instantiated if called
   //      from MathJax.
   /**
@@ -103,7 +103,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!Node}
    */
   this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
-  
+
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
