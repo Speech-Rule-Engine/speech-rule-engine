@@ -66,15 +66,6 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));
-  //
-  // Code to replay the MathML enrichment on the enriched element.
-  // Currently this only works on relatively simple elements.
-  //
-  // if (cleaned.match(/role="implicit"|operator="fenced"/)) return;
-  // var node2 = sre.Semantic.enrichMathml(node.toString());
-  // var cleaned2 = sre.EnrichMathml.removeAttributePrefix(
-  //     xmls.serializeToString(node2));
-  // this.assert.equal(cleaned, cleaned2);
 };
 
 
@@ -10153,6 +10144,225 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellRight = function() {
       '</mrow>' +
       '<mn type="number" role="integer" id="5" parent="6">4</mn>' +
       '</msub>' +
+      '</math>'
+  );
+};
+
+
+// Actions.
+/**
+ * Currently foreign Mactions do not work with the enrichment.
+ */
+sre.EnrichMathmlTest.prototype.untestMathmlActions = function() {
+  this.executeMathmlTest(
+      '<maction><mtext>something</mtext><mn>2</mn></maction>',
+      '<math>' +
+      '<maction><mtext>something</mtext>' +
+      '<mn type="number" role="integer" font="normal" id="0">2</mn>' +
+      '</maction>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<maction><mtext>something</mtext><mi>a</mi></maction>',
+      '<math>' +
+      '<maction><mtext>something</mtext>' +
+      '<mn type="identifier" role="latinletter" font="normal" id="0">a</mn>' +
+      '</maction>' +
+      '</math>'
+  );
+};
+
+
+// Semantics, annotation, annotation-xml
+/**
+ * Expressions with semantic elements.
+ */
+sre.EnrichMathmlTest.prototype.testSemanticsElement = function() {
+  this.executeMathmlTest(
+      '<semantics></semantics>',
+      '<math type="empty" role="unknown" id="0">' +
+      '<semantics/>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mi>a</mi></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</semantics>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.EnrichMathmlTest.prototype.testSemanticsAnnotation = function() {
+  // This is not really legal markup.
+  this.executeMathmlTest(
+      '<semantics><annotation>something</annotation></semantics>',
+      '<math>' +
+      '<semantics type="empty" role="unknown" id="0">' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>',
+      '<math>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<semantics>' +
+      '<annotation>' +
+      '<content>something</content>' +
+      '</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mi>a</mi><annotation>something</annotation></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.EnrichMathmlTest.prototype.testSemanticsAnnotationXml = function() {
+  // This is not really legal markup.
+  this.executeMathmlTest(
+      '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math>' +
+      '<semantics type="text" role="unknown" id="0">' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<semantics type="text" role="unknown" id="1" parent="3">' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
       '</math>'
   );
 };

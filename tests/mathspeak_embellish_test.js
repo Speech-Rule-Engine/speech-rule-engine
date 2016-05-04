@@ -371,3 +371,91 @@ sre.MathspeakEmbellishTest.prototype.testEmbellMultPunctSubscript = function() {
   this.executeRuleTest(mml, 'a colon Sub 2 Base b colon c', 'brief');
   this.executeRuleTest(mml, 'a colon Sub 2 Base b colon c', 'sbrief');
 };
+
+
+/**
+ * Expressions with semantic elements.
+ */
+sre.MathspeakEmbellishTest.prototype.testSemanticsElement = function() {
+  var mml = '<semantics></semantics>';
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
+  mml = '<semantics><mi>a</mi></semantics>';
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
+  mml = '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>';
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
+  mml = '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>';
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.MathspeakEmbellishTest.prototype.testSemanticsAnnotation = function() {
+  // This is not really legal markup.
+  var mml = '<semantics><annotation>something</annotation></semantics>';
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
+  mml = '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>';
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
+  mml = '<semantics><mi>a</mi><annotation>something</annotation></semantics>';
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
+  mml = '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>';
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
+  mml = '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>';
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.MathspeakEmbellishTest.prototype.testSemanticsAnnotationXml = function() {
+  // This is not really legal markup.
+  var mml = '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>';
+  this.executeRuleTest(mml, 'something', 'default');
+  this.executeRuleTest(mml, 'something', 'brief');
+  this.executeRuleTest(mml, 'something', 'sbrief');
+  mml = '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>';
+  this.executeRuleTest(mml, 'a something', 'default');
+  this.executeRuleTest(mml, 'a something', 'brief');
+  this.executeRuleTest(mml, 'a something', 'sbrief');
+  mml = '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>';
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
+  mml = '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>';
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
+  mml = '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>';
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
+};
