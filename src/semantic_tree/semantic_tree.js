@@ -544,6 +544,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       break;
     case 'MS':
     case 'MTEXT':
+    case 'ANNOTATION-XML':
       newNode = this.makeLeafNode_(mml);
       newNode.type = sre.SemanticAttr.Type.TEXT;
       if (sre.SemanticUtil.tagName(mml) === 'MS') {
@@ -593,6 +594,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MMULTISCRIPTS':
       newNode = this.processMultiScript_(children);
       break;
+    case 'ANNOTATION':
     case 'NONE':
       newNode = this.makeEmptyNode_();
       break;
