@@ -9944,3 +9944,133 @@ sre.SemanticTreeTest.prototype.testStreeActions = function() {
       '<maction><mtext>something</mtext><mi>a</mi></maction>',
       '<identifier>a</identifier>');
 };
+
+
+// Semantics, annotation, annotation-xml
+/**
+ * Expressions with semantic elements.
+ */
+sre.SemanticTreeTest.prototype.testSemanticsElement = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<semantics></semantics>',
+      '<empty/>'
+  );
+  this.executeTreeTest(
+      '<semantics><mi>a</mi></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.SemanticTreeTest.prototype.testSemanticsAnnotation = function() {
+  this.brief = true;
+  // This is not really legal markup.
+  this.executeTreeTest(
+      '<semantics><annotation>something</annotation></semantics>',
+      '<empty/>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mi>a</mi><annotation>something</annotation></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.SemanticTreeTest.prototype.testSemanticsAnnotationXml = function() {
+  this.brief = true;
+  // This is not really legal markup.
+  this.executeTreeTest(
+      '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<text>something</text>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<punctuated><content><punctuation>⁣</punctuation>' +
+      '</content><children><identifier>a</identifier>' +
+      '<text>something</text></children></punctuated>'
+  );
+  this.executeTreeTest(
+      '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
