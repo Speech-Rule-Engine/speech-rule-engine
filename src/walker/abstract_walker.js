@@ -214,9 +214,6 @@ sre.AbstractWalker.prototype.speech = function() {
       goog.bind(function(x) {
         return this.generator.getSpeech(x, this.xml);
       }, this));
-  if (this.moved === sre.AbstractWalker.move.REPEAT) {
-    return speech.join(' ');
-  }
   if (prefix) speech.unshift(prefix);
   return speech.join(' ');
 };
