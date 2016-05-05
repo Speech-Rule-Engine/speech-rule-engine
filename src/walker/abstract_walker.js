@@ -208,17 +208,30 @@ sre.AbstractWalker.prototype.speech = function() {
   var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
-    return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '');
+    return this.levelAnnouncement_(prefix);
   }
   var speech = nodes.map(
       goog.bind(function(x) {
         return this.generator.getSpeech(x, this.xml);
       }, this));
-  if (this.moved === sre.AbstractWalker.move.REPEAT) {
-    return speech.join(' ');
-  }
   if (prefix) speech.unshift(prefix);
   return speech.join(' ');
+};
+
+
+/**
+ * Puts together an announcement string with level of the element, its meaning
+ * in the expression, as well as whether or not it is expandable or collapsible.
+ * @param {string} prefix The prefix of that element, representing its
+ *     positional meaning.
+ * @return {string} The announcement string.
+ * @private
+ */
+sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
+  var primary = this.focus_.getPrimary();
+  var expand = (this.expandable(primary) && ' expandable') ||
+        (this.collapsible(primary) && ' collapsible') || '';
+  return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '') + expand;
 };
 
 
@@ -369,7 +382,7 @@ sre.AbstractWalker.prototype.actionable_ = function(node) {
 
 /**
  * Checks if a node is expandable.
- * @param {!Node} node The (rendered) node under consideration.
+ * @param {Node} node The (rendered) node under consideration.
  * @return {boolean} True if the node is expandable.
  */
 sre.AbstractWalker.prototype.expandable = function(node) {
@@ -380,7 +393,7 @@ sre.AbstractWalker.prototype.expandable = function(node) {
 
 /**
  * Checks if a node can be collapsed.
- * @param {!Node} node The (rendered) node under consideration.
+ * @param {Node} node The (rendered) node under consideration.
  * @return {boolean} True if the node is collapsible.
  */
 sre.AbstractWalker.prototype.collapsible = function(node) {
