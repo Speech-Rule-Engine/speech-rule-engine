@@ -50,6 +50,8 @@ MathJax.Callback.Signal = function(signal) { };
 
 
 var wgxpath;
+
+
 /**
  * @type {function(Object=)}
  */
