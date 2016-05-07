@@ -161,6 +161,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'protected', 'mathspeak.default', '[t] text()',
       'self::*', '@role="protected"');
 
+  defineRule(
+      'omit-empty', 'mathspeak.default',
+      '',
+      'self::empty');
 
   // Font rules
   defineRule(
@@ -223,6 +227,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
 
+  // Maybe duplicate this rule for self::text
   defineRule(
       'number-as-upper-word', 'mathspeak.default',
       '[t] "UpperWord"; [t] CSFspaceoutText', 'self::number',
