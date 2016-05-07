@@ -48,7 +48,7 @@ sre.MathspeakRuleTest = function() {
   /**
    * @override
    */
-  this.rules = ['SemanticTreeRules', 'MathspeakRules'];
+  this.rules = ['MathspeakRules'];
 
   this.setActive('MathspeakExamples');
 };

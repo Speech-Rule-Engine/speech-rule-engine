@@ -49,7 +49,7 @@ sre.MathmlCloudTest = function() {
   /**
    * @override
    */
-  this.rules = ['SemanticTreeRules', 'MathspeakRules'];
+  this.rules = ['MathspeakRules'];
 };
 goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
