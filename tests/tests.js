@@ -26,6 +26,7 @@ goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakEmbellishTest');
 goog.require('sre.MathspeakRuleTest');
+goog.require('sre.NobleSamplesTest');
 goog.require('sre.PrefixRuleTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticRuleTest');
@@ -70,6 +71,7 @@ sre.Tests.testList = [
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
   sre.MathspeakRuleTest,
+  sre.NobleSamplesTest,
   sre.PrefixRuleTest,
   sre.RebuildStreeTest,
   sre.SemanticRuleTest,
