@@ -1403,7 +1403,9 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
   var firstFence = fences.shift();
   var split = sre.SemanticTree.sliceNodes_(
       // COMPARISON (neutral fences)
-      fences, function(x) {return x.textContent == firstFence.textContent;});
+      fences, function(x) {
+        return sre.SemanticTree.getEmbellishedInner_(x).textContent ==
+            sre.SemanticTree.getEmbellishedInner_(firstFence).textContent;});
   if (!split.div) {
     sre.SemanticTree.fenceToPunct_(firstFence);
     var restContent = content.shift();
@@ -1444,7 +1446,11 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
   if (midFences.length == 0) {
     var fenced = this.makeHorizontalFencedNode_(
         leftFence, rightFence, content.shift());
-    content.unshift(fenced);
+    if (content.length > 0) {
+      content[0].unshift(fenced);
+    } else {
+      content = [[fenced]];
+    }
     return content;
   }
 

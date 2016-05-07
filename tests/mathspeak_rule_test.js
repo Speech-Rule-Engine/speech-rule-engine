@@ -48,8 +48,8 @@ sre.MathspeakRuleTest = function() {
   /**
    * @override
    */
-  this.rules = ['SemanticTreeRules', 'MathspeakRules'];
-  
+  this.rules = ['MathspeakRules'];
+
   this.setActive('MathspeakExamples');
 };
 goog.inherits(sre.MathspeakRuleTest, sre.AbstractRuleTest);

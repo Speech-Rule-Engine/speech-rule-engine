@@ -53,7 +53,7 @@ sre.AbstractRuleTest = function() {
    * @type {Array.<string>}
    */
   this.rules = null;
-  
+
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
@@ -73,8 +73,8 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   this.appendExamples(mathMl);
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-    {semantics: this.semantics, domain: this.domain, style: opt_style,
-     rules: this.rules});
+      {semantics: this.semantics, domain: this.domain, style: opt_style,
+        rules: this.rules});
   var result = sre.System.getInstance().toSpeech(mathMl);
   this.assert.equal(result, answer);
 };

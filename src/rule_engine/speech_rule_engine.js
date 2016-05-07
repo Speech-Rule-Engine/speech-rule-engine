@@ -477,7 +477,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
       store = this.activeStore_;
       engine.setRuleSets(settings[key]);
       sre.SpeechRuleEngine.getInstance().
-        parameterize(engine.getRuleSets());
+          parameterize(engine.getRuleSets());
       continue;
     }
     save[key] = engine[key];
@@ -511,7 +511,7 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
   for (var i = 0, store; store = ruleSets[i]; i++) {
     store.initialize();
     combined.setSpeechRules(
-      combined.getSpeechRules().concat(store.getSpeechRules()));
+        combined.getSpeechRules().concat(store.getSpeechRules()));
     combined.contextFunctions.addStore(store.contextFunctions);
     combined.customQueries.addStore(store.customQueries);
     combined.customStrings.addStore(store.customStrings);
