@@ -230,7 +230,7 @@ sre.AbstractWalker.prototype.speech = function() {
 sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   var primary = this.focus_.getPrimary();
   var expand = (this.expandable(primary) && ' expandable') ||
-        (this.collapsible(primary) && ' collapsible') || '';
+      (this.collapsible(primary) && ' collapsible') || '';
   return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '') + expand;
 };
 

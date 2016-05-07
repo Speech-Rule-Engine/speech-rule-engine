@@ -63,7 +63,7 @@ sre.System = function() {
     'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
     'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
   ];
-  
+
 };
 goog.addSingletonGetter(sre.System);
 
@@ -116,7 +116,7 @@ sre.System.prototype.setupEngine = function(feature) {
     engine.setRuleSets(this.defaultRuleSets_);
   }
   sre.SpeechRuleEngine.getInstance().
-    parameterize(engine.getRuleSets());
+      parameterize(engine.getRuleSets());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
 };

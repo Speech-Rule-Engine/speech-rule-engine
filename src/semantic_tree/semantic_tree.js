@@ -1403,9 +1403,9 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
   var firstFence = fences.shift();
   var split = sre.SemanticTree.sliceNodes_(
       // COMPARISON (neutral fences)
-    fences, function(x) {
-      return sre.SemanticTree.getEmbellishedInner_(x).textContent == 
-        sre.SemanticTree.getEmbellishedInner_(firstFence).textContent;});
+      fences, function(x) {
+        return sre.SemanticTree.getEmbellishedInner_(x).textContent ==
+            sre.SemanticTree.getEmbellishedInner_(firstFence).textContent;});
   if (!split.div) {
     sre.SemanticTree.fenceToPunct_(firstFence);
     var restContent = content.shift();
