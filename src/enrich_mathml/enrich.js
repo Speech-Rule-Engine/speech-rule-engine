@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Enrich');
 
-goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichCases');

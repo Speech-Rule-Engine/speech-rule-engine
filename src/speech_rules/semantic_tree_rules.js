@@ -21,7 +21,6 @@
 goog.provide('sre.SemanticTreeRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.StoreUtil');
 
@@ -30,18 +29,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.SemanticTreeRules = function() {
-  sre.SemanticTreeRules.initCustomFunctions_();
-  sre.SemanticTreeRules.initSemanticRules_();
+  goog.base(this);
 };
+goog.inherits(sre.SemanticTreeRules, sre.MathStore);
 goog.addSingletonGetter(sre.SemanticTreeRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.SemanticTreeRules.mathStore = sre.MathmlStore.getInstance();
+sre.SemanticTreeRules.mathStore = sre.SemanticTreeRules.getInstance();
 
 
 /** @private */
@@ -514,3 +514,9 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.SemanticTreeRules.getInstance().initializer = [
+  sre.SemanticTreeRules.initCustomFunctions_,
+  sre.SemanticTreeRules.initSemanticRules_
+];

@@ -187,7 +187,7 @@ sre.MathCompoundStore.prototype.getDynamicConstraintValues = function() {
     for (var key in cstr) {
       var set = newCstr[key];
       if (set) {
-        newCstr[key] = sre.MathUtil.union(set, cstr[key]);
+        newCstr[key] = sre.BaseUtil.union(set, cstr[key]);
       } else {
         newCstr[key] = cstr[key];
       }

@@ -55,31 +55,14 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
     this.assert.fail();
     return;
   }
-  var descrs = sre.Engine.getInstance().runInSetting(
+  var descrs = sre.SpeechRuleEngine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'cache': false, 'speech': true,
+        'rules': ['PrefixRules']},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       );
   var speech = sre.AuditoryDescription.speechString(descrs);
   this.assert.equal(speech, result);
-};
-
-
-/**
- * @override
- */
-sre.PrefixRuleTest.prototype.setUpTest = function() {
-  sre.System.getInstance().setupEngine(
-      {speech: true});
-};
-
-
-/**
- * @override
- */
-sre.PrefixRuleTest.prototype.tearDownTest = function() {
-  sre.System.getInstance().setupEngine(
-      {speech: false});
 };
 
 

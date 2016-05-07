@@ -23,6 +23,7 @@ goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
+goog.require('sre.MathmlStoreRules');
 
 
 
@@ -37,6 +38,7 @@ sre.MathmlStoreTest = function() {
    * @override
    */
   this.information = 'Mathml rule tests.';
+
 };
 goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
 
@@ -45,8 +47,8 @@ goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
  * @override
  */
 sre.MathmlStoreTest.prototype.setUpTest = function() {
-  this.rules = sre.MathmlStore.getInstance();
-  sre.SpeechRuleEngine.getInstance().parameterize(this.rules);
+  this.store = sre.MathmlStoreRules.getInstance();
+  this.store.initialize();
 };
 
 
@@ -60,7 +62,7 @@ sre.MathmlStoreTest.prototype.executeRuleTest = function(mml, ruleName) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
-  var rule = this.rules.lookupRule(node.childNodes[0],
+  var rule = this.store.lookupRule(node.childNodes[0],
                                    {domain: 'default', style: 'default'});
   this.assert.equal(ruleName, rule.name);
 };

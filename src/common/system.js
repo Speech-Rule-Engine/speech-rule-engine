@@ -22,7 +22,6 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
-goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');
 goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.DomUtil');
@@ -55,6 +54,16 @@ sre.System = function() {
 
   this.speechGenerator = null;
 
+  /**
+   * The default rule sets. Generally this are all rule sets that are available.
+   * @type {!Array.<string>}
+   * @private
+   */
+  this.defaultRuleSets_ = [
+    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
+    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
+  ];
+
 };
 goog.addSingletonGetter(sre.System);
 
@@ -74,6 +83,7 @@ sre.System.Error = function(msg) {
 goog.inherits(sre.System.Error, Error);
 
 
+//TODO: Put in a full explanation of all the elements of the feature vector.
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
@@ -100,8 +110,13 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
+  if (feature.rules) {
+    engine.setRuleSets(feature.rules);
+  } else {
+    engine.setRuleSets(this.defaultRuleSets_);
+  }
   sre.SpeechRuleEngine.getInstance().
-      parameterize(sre.MathmlStore.getInstance());
+      parameterize(engine.getRuleSets());
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
 };

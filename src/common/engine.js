@@ -95,6 +95,13 @@ sre.Engine = function() {
   this.setupTests_ = [];
 
   /**
+   * List of rule sets given as the constructor functions.
+   * @type {!Array.<sre.BaseRuleStore>}
+   * @private
+   */
+  this.ruleSets_ = [];
+
+  /**
    * Caching during speech generation.
    * @type {boolean}
    */
@@ -175,37 +182,32 @@ sre.Engine.isReady = function() {
 
 
 /**
- * Runs a function in the temporary context of the speech rule engine.
- * @param {Object} settings The temporary settings for the speech rule
- *     engine. They can contain the usual features.
- * @param {function():!Array.<sre.AuditoryDescription>} callback The runnable
- *     function that computes speech results.
- * @return {!Array.<sre.AuditoryDescription>} The result of the callback.
- */
-sre.Engine.prototype.runInSetting = function(settings, callback) {
-  var save = {};
-  for (var key in settings) {
-    save[key] = this[key];
-    this[key] = settings[key];
-  }
-  //TODO: This needs to be refactored as a message signal for the speech rule
-  //      engine to update itself.
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(this.domain, this.style);
-  var result = callback();
-  for (key in save) {
-    this[key] = save[key];
-  }
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(this.domain, this.style);
-  return result;
-};
-
-
-/**
  * Sets up browser specific functionality.
  */
 sre.Engine.prototype.setupBrowsers = function() {
   this.isIE = sre.BrowserUtil.detectIE();
   this.isEdge = sre.BrowserUtil.detectEdge();
+};
+
+
+/**
+ * Sets the rule sets to use.
+ * @param {!Array.<string>} ruleSets The name of rule sets to use.
+ */
+sre.Engine.prototype.setRuleSets = function(ruleSets) {
+  this.ruleSets_ = [];
+  for (var i = 0; i < ruleSets.length; i++) {
+    var set = sre[ruleSets[i]];
+    if (set && set.getInstance) {
+      this.ruleSets_.push(set.getInstance());
+    }
+  }
+};
+
+
+/**
+ * @return {!Array.<sre.BaseRuleStore>} The rule sets that are used.
+ */
+sre.Engine.prototype.getRuleSets = function() {
+  return this.ruleSets_;
 };
