@@ -147,7 +147,7 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
     return 0;
   }
   var depth = sre.MathspeakUtil.computeNestingDepth_(
-      node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
+      node, tags, sre.BaseUtil.setdifference(opt_barrierTags, tags),
       opt_barrierAttrs, opt_func, 0);
   sre.MathspeakUtil.nestingDepth[type][xmlText] = depth;
   return depth;

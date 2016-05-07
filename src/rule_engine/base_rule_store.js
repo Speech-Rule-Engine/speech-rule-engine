@@ -26,7 +26,6 @@ goog.provide('sre.BaseRuleStore');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
-goog.require('sre.MathUtil');
 goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
 goog.require('sre.SpeechRuleFunctions');
@@ -317,7 +316,7 @@ sre.BaseRuleStore.prototype.getDynamicConstraintValues = function() {
     for (var key in rule.dynamicCstr) {
       var newKey = [rule.dynamicCstr[key]];
       if (result[key]) {
-        result[key] = sre.MathUtil.union(result[key], newKey);
+        result[key] = sre.BaseUtil.union(result[key], newKey);
       } else {
         result[key] = newKey;
       }
@@ -463,4 +462,14 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
   }
   return sre.BaseRuleStore.compareStaticConstraints_(
       prec1.constraints, prec2.constraints);
+};
+
+
+sre.BaseRuleStore.prototype.getSpeechRules = function() {
+  return this.speechRules_;
+};
+
+
+sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
+  this.speechRules_ = rules;
 };

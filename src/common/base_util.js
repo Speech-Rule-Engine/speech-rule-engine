@@ -46,3 +46,31 @@ sre.BaseUtil.interleaveLists = function(list1, list2) {
   }
   return result;
 };
+
+
+/**
+ * Computes the difference of two arrays.
+ * @param {Array} a An array.
+ * @param {Array} b Another array.
+ * @return {!Array} Difference of a and b, i.e. a-b.
+ */
+sre.BaseUtil.setdifference = function(a, b) {
+  if (!a) return [];
+  if (!b) return a;
+  return a.filter(function(x) {return b.indexOf(x) < 0;});
+};
+
+
+/**
+ * Computes the union of two arrays (not in a strictly set theoretical sense
+ * as all duplicate elements in either array still remain as duplicates!).
+ * @param {Array} a An array.
+ * @param {Array} b Another array.
+ * @return {!Array} Union of a and b.
+ */
+sre.BaseUtil.union = function(a, b) {
+  if (!a || !b) {
+    return a || b || [];
+  }
+  return a.concat(sre.BaseUtil.setdifference(b, a));
+};

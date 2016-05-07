@@ -20,7 +20,6 @@
 goog.provide('sre.MathspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
@@ -30,19 +29,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.MathspeakRules = function() {
-  sre.MathspeakRules.initCustomFunctions_();
-  sre.MathspeakRules.initMathspeakRules_();
-  sre.MathspeakRules.generateMathspeakTensorRules_();
+  goog.base(this);
 };
+goog.inherits(sre.MathspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.MathspeakRules.mathStore = sre.MathmlStore.getInstance();
+sre.MathspeakRules.mathStore = sre.MathspeakRules.getInstance();
 
 
 /** @private */
@@ -139,6 +138,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 
   addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
+  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
@@ -152,6 +152,11 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
+  // Initial rule
+  defineRule(
+      'stree', 'mathspeak.default',
+      '[n] ./*[1]', 'self::stree');
+
 
   // Dummy rules
   defineRule(
@@ -162,14 +167,41 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'protected', 'mathspeak.default', '[t] text()',
       'self::*', '@role="protected"');
 
+  defineRule(
+      'omit-empty', 'mathspeak.default',
+      '',
+      'self::empty');
 
   // Font rules
-  defineSpecialisedRule('font', 'default.default', 'mathspeak.default');
-  defineSpecialisedRule(
-      'font-identifier', 'default.default', 'mathspeak.default');
-  defineSpecialisedRule(
-      'font-identifier-short', 'default.default', 'mathspeak.default');
-  defineSpecialisedRule('omit-font', 'default.default', 'mathspeak.default');
+  defineRule(
+      'font', 'mathspeak.default',
+      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::*', '@font', '@font!="normal"');
+
+  defineRule(
+      'font-identifier-short', 'mathspeak.default',
+      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::identifier', 'string-length(text())=1',
+      '@font', '@font="normal"', '""=translate(text(), ' +
+      '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
+      '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
+      '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0391\u0392\u0393\u0394' +
+      '\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E\u039F' +
+      '\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9", "")',
+      '@role!="unit"');
+
+  defineRule(
+      'font-identifier', 'mathspeak.default',
+      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'self::identifier', 'string-length(text())=1',
+      '@font', '@font="normal"', '@role!="unit"');
+
+  defineRule(
+      'omit-font', 'mathspeak.default',
+      '[n] CQFhideFont; [t] CSFshowFont',
+      'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
+
   defineRule(
       'german-font', 'mathspeak.default',
       '[t] "German"; [n] CQFhideFont; [t] CSFshowFont',
@@ -201,6 +233,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
 
+  // Maybe duplicate this rule for self::text
   defineRule(
       'number-as-upper-word', 'mathspeak.default',
       '[t] "UpperWord"; [t] CSFspaceoutText', 'self::number',
@@ -526,6 +559,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'limupper-end', 'self::overscore');
 
+  // Integral rules
+  defineRule(
+      'integral', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]; [n] children/*[3];',
+      'self::integral');
   defineRule(
       'integral', 'mathspeak.default',
       '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
@@ -546,6 +584,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
 
   // Relations
+  defineRule(
+      'relseq', 'mathspeak.default',
+      '[m] children/* (sepFunc:CTXFcontentIterator)',
+      'self::relseq');
+
   defineRule(
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
@@ -1091,6 +1134,64 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
 
+  // Rules for punctuated expressions.
+  defineRule(
+      'end-punct', 'mathspeak.default',
+      '[m] children/*',
+      'self::punctuated', '@role="endpunct"');
+
+  defineRule(
+      'start-punct', 'mathspeak.default',
+      '[n] content/*[1]; [m] children/*[position()>1]',
+      'self::punctuated', '@role="startpunct"');
+
+  defineRule(
+      'integral-punct', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[3]',
+      'self::punctuated', '@role="integral"');
+
+  defineRule(
+      'punctuated', 'mathspeak.default',
+      '[m] children/*',
+      'self::punctuated');
+
+  // Unit rules.
+  defineRule(
+      'unit', 'mathspeak.default',
+      '[t] text() (annotation:unit, preprocess)',
+      'self::identifier', '@role="unit"');
+  defineRule(
+      'unit-square', 'mathspeak.default',
+      '[t] "square"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
+      'name(children/*[1])="identifier"');
+
+  defineRule(
+      'unit-cubic', 'mathspeak.default',
+      '[t] "cubic"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
+      'name(children/*[1])="identifier"');
+  defineRule(
+      'reciprocal', 'mathspeak.default',
+      '[t] "reciprocal"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
+  defineRule(
+      'reciprocal', 'mathspeak.default',
+      '[t] "per"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'preceding-sibling::*[@role="unit"]');
+  defineRule(
+      'unit-combine', 'mathspeak.default',
+      '[m] children/*', 'self::infixop', '@role="unit"');
+  defineRule(
+      'unit-divide', 'mathspeak.default',
+      '[n] children/*[1]; [t] "per"; [n] children/*[2]',
+      'self::fraction', '@role="unit"');
 };
 
 
@@ -1206,3 +1307,10 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
 
 });  // goog.scope
 
+
+
+sre.MathspeakRules.getInstance().initializer = [
+  sre.MathspeakRules.initCustomFunctions_,
+  sre.MathspeakRules.initMathspeakRules_,
+  sre.MathspeakRules.generateMathspeakTensorRules_
+];

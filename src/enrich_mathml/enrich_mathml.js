@@ -863,9 +863,10 @@ sre.EnrichMathml.computePrefix_ = function(semantic) {
   var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
                                      tree.xml())[0];
   return node ?
-      sre.Engine.getInstance().runInSetting(
+      sre.SpeechRuleEngine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'cache': false, 'speech': true,
+        'rules': ['PrefixRules']},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];

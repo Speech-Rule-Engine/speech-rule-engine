@@ -49,12 +49,35 @@ sre.MathStore = function() {
   this.defaultTtsProps = [sre.Engine.personalityProps.PITCH,
                           sre.Engine.personalityProps.RATE];
 
+
+  /**
+   * @type {boolean}
+   */
+  this.initialized = false;
+
+  /**
+   * @type {Array.<function()>}
+   */
+  this.initializer = [];
+
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
 
 
 /** This adds domain to dynamic constraint annotation. */
 sre.SpeechRule.DynamicCstrAttrib.DOMAIN = 'domain';
+
+
+/**
+ * @override
+ */
+sre.MathStore.prototype.initialize = function() {
+  if (this.initialized) return;
+  for (var i = 0, func; func = this.initializer[i]; i++) {
+    func();
+  }
+  this.initialized = true;
+};
 
 
 /**

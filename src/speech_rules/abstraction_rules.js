@@ -21,7 +21,6 @@
 goog.provide('sre.AbstractionRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -30,17 +29,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.AbstractionRules = function() {
-  sre.AbstractionRules.initAbstractionRules_();
+  goog.base(this);
 };
+goog.inherits(sre.AbstractionRules, sre.MathStore);
 goog.addSingletonGetter(sre.AbstractionRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.AbstractionRules.mathStore = sre.MathmlStore.getInstance();
+sre.AbstractionRules.mathStore = sre.AbstractionRules.getInstance();
 
 
 /** @private */
@@ -575,3 +576,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.AbstractionRules.getInstance().initializer = [
+  sre.AbstractionRules.initAbstractionRules_
+];
