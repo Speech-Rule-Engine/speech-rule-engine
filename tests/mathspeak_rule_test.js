@@ -49,7 +49,7 @@ sre.MathspeakRuleTest = function() {
    * @override
    */
   this.rules = ['SemanticTreeRules', 'MathspeakRules'];
-  
+
   this.setActive('MathspeakExamples');
 };
 goog.inherits(sre.MathspeakRuleTest, sre.AbstractRuleTest);

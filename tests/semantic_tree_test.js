@@ -9974,7 +9974,7 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
  * Expressions with embellished fences right.
  */
 sre.SemanticTreeTest.prototype.testStreeEmbellishedNeutralFences = function() {
-    this.executeTreeTest(
+  this.executeTreeTest(
       '<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup>',
       '<superscript role="neutral" fencepointer="2" id="4">' +
       '<children>' +
@@ -10125,7 +10125,7 @@ sre.SemanticTreeTest.prototype.testStreeEmbellishedNeutralFences = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<mo>|</mo><mi>x</mi><mo>\u00A6</mo><mi>y</mi><msup><mo>|</mo><mn>4</mn></msup>',
+      '<mo>|</mo><mi>x</mi><mo>\u00A6</mo><mi>y</mi><msup><mo>|</mo><mn>4</mn></msup>',
       '<superscript role="neutral" fencepointer="4" id="6">' +
       '<children>' +
       '<fenced role="neutral" id="8">' +
