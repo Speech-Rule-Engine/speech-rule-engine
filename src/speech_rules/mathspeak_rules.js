@@ -138,6 +138,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 
   addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
+  addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
@@ -151,6 +152,11 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
+  // Initial rule
+  defineRule(
+      'stree', 'mathspeak.default',
+      '[n] ./*[1]', 'self::stree');
+
 
   // Dummy rules
   defineRule(
@@ -553,6 +559,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'limupper-end', 'self::overscore');
 
+  // Integral rules
+  defineRule(
+      'integral', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[2]; [n] children/*[3];',
+      'self::integral');
   defineRule(
       'integral', 'mathspeak.default',
       '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
@@ -573,6 +584,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
 
   // Relations
+  defineRule(
+      'relseq', 'mathspeak.default',
+      '[m] children/* (sepFunc:CTXFcontentIterator)',
+      'self::relseq');
+
   defineRule(
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
@@ -1118,6 +1134,64 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');
 
+  // Rules for punctuated expressions.
+  defineRule(
+      'end-punct', 'mathspeak.default',
+      '[m] children/*',
+      'self::punctuated', '@role="endpunct"');
+
+  defineRule(
+      'start-punct', 'mathspeak.default',
+      '[n] content/*[1]; [m] children/*[position()>1]',
+      'self::punctuated', '@role="startpunct"');
+
+  defineRule(
+      'integral-punct', 'mathspeak.default',
+      '[n] children/*[1]; [n] children/*[3]',
+      'self::punctuated', '@role="integral"');
+
+  defineRule(
+      'punctuated', 'mathspeak.default',
+      '[m] children/*',
+      'self::punctuated');
+
+  // Unit rules.
+  defineRule(
+      'unit', 'mathspeak.default',
+      '[t] text() (annotation:unit, preprocess)',
+      'self::identifier', '@role="unit"');
+  defineRule(
+      'unit-square', 'mathspeak.default',
+      '[t] "square"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
+      'name(children/*[1])="identifier"');
+
+  defineRule(
+      'unit-cubic', 'mathspeak.default',
+      '[t] "cubic"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
+      'name(children/*[1])="identifier"');
+  defineRule(
+      'reciprocal', 'mathspeak.default',
+      '[t] "reciprocal"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
+  defineRule(
+      'reciprocal', 'mathspeak.default',
+      '[t] "per"; [n] children/*[1]',
+      'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
+      'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
+      'children/*[2]/children/*[1][text()=1]',
+      'preceding-sibling::*[@role="unit"]');
+  defineRule(
+      'unit-combine', 'mathspeak.default',
+      '[m] children/*', 'self::infixop', '@role="unit"');
+  defineRule(
+      'unit-divide', 'mathspeak.default',
+      '[n] children/*[1]; [t] "per"; [n] children/*[2]',
+      'self::fraction', '@role="unit"');
 };
 
 
