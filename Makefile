@@ -279,9 +279,9 @@ clean_semantic:
 	rm -f $(SEMANTIC)
 
 enrich: $(SRC)
-	@echo Compiling browser ready Tree API
+	@echo Compiling browser ready MathML Enrichment API
 	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(ENRICH)
+	@$(CLOSURE_COMPILER) --namespace="sre.Enrich" --output_file $(ENRICH)
 
 clean_enrich:
 	rm -f $(ENRICH)
