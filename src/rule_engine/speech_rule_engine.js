@@ -106,9 +106,26 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
 
 /**
  * Parameterizes the speech rule engine.
- * @param {!Array.<sre.BaseRuleStore>} ruleSets A list of rule sets to use.
+ * @param {!Array.<string>} ruleSetNames The name of rule sets to use.
  */
-sre.SpeechRuleEngine.prototype.parameterize = function(ruleSets) {
+sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
+  var ruleSets = [];
+  for (var i = 0; i < ruleSetNames.length; i++) {
+    var set = sre[ruleSetNames[i]];
+    if (set && set.getInstance) {
+      ruleSets.push(set.getInstance());
+    }
+  }
+  this.parameterize_(ruleSets);
+};
+
+
+/**
+ * Parameterizes the speech rule engine.
+ * @param {!Array.<sre.BaseRuleStore>} ruleSets A list of rule sets to use.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
   try {
     this.activeStore_ = this.combineStores_(ruleSets);
   } catch (err) {
@@ -475,9 +492,9 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   for (var key in settings) {
     if (key === 'rules') {
       store = this.activeStore_;
-      engine.setRuleSets(settings[key]);
+      engine.ruleSets = settings[key];
       sre.SpeechRuleEngine.getInstance().
-          parameterize(engine.getRuleSets());
+          parameterize(engine.ruleSets);
       continue;
     }
     save[key] = engine[key];

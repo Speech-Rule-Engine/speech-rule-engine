@@ -107,13 +107,8 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
-  if (feature.rules) {
-    engine.setRuleSets(feature.rules);
-  } else {
-    engine.setRuleSets(this.defaultRuleSets_);
-  }
-  sre.SpeechRuleEngine.getInstance().
-      parameterize(engine.getRuleSets());
+  engine.ruleSets = feature.rules ? feature.rules : this.defaultRuleSets_;
+  sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
 };
