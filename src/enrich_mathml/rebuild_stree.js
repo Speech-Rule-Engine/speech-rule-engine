@@ -22,7 +22,8 @@
 
 goog.provide('sre.RebuildStree');
 
-goog.require('sre.Semantic');
+goog.require('sre.SemanticTree');
+goog.require('sre.SemanticTree.Node');
 
 
 
