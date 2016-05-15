@@ -14,8 +14,7 @@
 
 
 /**
- * @fileoverview Basic command line interface functionality for the Speech Rule
- * Engine.
+ * @fileoverview Basic interface functionality for the Speech Rule Engine.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -23,19 +22,17 @@ goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
 goog.require('sre.Debugger');
-goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.DomUtil');
-goog.require('sre.DummyWalker');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
-goog.require('sre.SemanticWalker');
+goog.require('sre.SpeechGenerators');
 goog.require('sre.SpeechRuleEngine');
-goog.require('sre.SyntaxWalker');
 goog.require('sre.SystemExternal');
+goog.require('sre.Walkers');
 
 
 
