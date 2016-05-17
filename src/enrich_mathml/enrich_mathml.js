@@ -22,6 +22,7 @@
  */
 
 goog.provide('sre.EnrichMathml');
+goog.provide('sre.EnrichMathml.Attribute');
 goog.provide('sre.EnrichMathml.Error');
 
 goog.require('sre.AuditoryDescription');
@@ -797,6 +798,7 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
 };
 
 
+//TODO: Move to speech generators.
 /**
  * Compute speech string for the xml version of the semantic tree.
  * @param {!Node} xml The xml element.

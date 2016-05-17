@@ -22,8 +22,11 @@
 
 goog.provide('sre.RebuildStree');
 
+goog.require('sre.EnrichMathml.Attribute');
+goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticTree.Node');
+goog.require('sre.WalkerUtil');
 
 
 
@@ -237,21 +240,4 @@ sre.RebuildStree.parseCollapsed_ = function(collapsed) {
   str = str.replace(/\)/g, ']');
   str = str.replace(/ /g, ',');
   return /** @type {!Array} */(JSON.parse(str));
-};
-
-
-/**
- * Internal method to experiment with semantic tree rebuilding.
- * @param {string} expr The MathML expression.
- * @return {boolean} True if the rebuilt semantic is the same as the one
- *     originally constructed for the MathML expression.
- */
-sre.RebuildStree.experiment__ = function(expr) {
-  var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
-  var stree = new sre.SemanticTree(mml);
-  var str1 = stree.toString();
-  var emml = sre.EnrichMathml.enrich(mml, stree);
-  var reass = new sre.RebuildStree(emml);
-  var str2 = reass.toString();
-  return str1 === str2;
 };
