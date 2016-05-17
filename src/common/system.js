@@ -148,10 +148,12 @@ sre.System.prototype.configBlocks_ = function(feature) {
 //
 // Output:
 //  toSpeech: Aural rendering string.
-//  toSemantic: XML string of semantic tree.
+//  toSemantic: XML of semantic tree.
 //  toJson: Json version of the semantic tree.
-//  toEnriched: XML string of enriched MathML.
+//  toEnriched: Enriched MathML node.
 //  toDescription: List of preprocessed auditory descriptions.
+//
+// Output for the file version are strings.
 //
 // Deprecated:
 //  processExpression: same as toSpeech.
@@ -182,20 +184,24 @@ sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
 /**
  * Function to translate MathML string into Semantic Tree.
  * @param {string} expr Processes a given MathML expression for translation.
- * @return {string} The semantic tree as Xml.
+ * @return {Node} The semantic tree as Xml.
  */
 sre.System.prototype.toSemantic = function(expr) {
-  var stree = sre.System.getInstance().parseExpression_(expr, true);
-  return stree ? stree.toString() : '';
+  return sre.System.getInstance().parseExpression_(expr, true);
 };
 
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
+ *
+ * WARNING: API only works with Node!
  * @param {string} expr Processes a given MathML expression for translation.
  * @return {JSONType} The semantic tree as Json.
  */
 sre.System.prototype.toJson = function(expr) {
+  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
+    throw new sre.System.Error('JSON translation not possible in browser.');
+  }
   var stree = sre.System.getInstance().parseExpression_(expr, true);
   return stree ? sre.SystemExternal.xm.tojson(stree.toString()) : {};
 };
@@ -221,11 +227,10 @@ sre.System.prototype.toDescription = function(expr) {
 /**
  * Function to translate MathML string into semantically enriched MathML.
  * @param {string} expr Processes a given MathML expression for translation.
- * @return {string} The semantic tree as Xml.
+ * @return {!Element} The enriched MathML node.
  */
 sre.System.prototype.toEnriched = function(expr) {
-  var mml = sre.Enrich.semanticMathmlSync(expr);
-  return mml ? mml.toString() : '';
+  return sre.Enrich.semanticMathmlSync(expr);
 };
 
 
@@ -254,14 +259,19 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSemantic = function(input, opt_output) {
-  sre.System.getInstance().processFile_(sre.System.getInstance().toSemantic,
-                                        input, opt_output);
+  sre.System.getInstance().processFile_(
+    function(x) {
+      return (sre.System.getInstance().toSemantic(x)).toString();
+    },
+    input, opt_output);
 };
 
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree to
  * a file.
+ *
+ * WARNING: API only works with Node!
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  */
@@ -296,8 +306,11 @@ sre.System.prototype.fileToDescription = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToEnriched = function(input, opt_output) {
-  sre.System.getInstance().processFile_(sre.System.getInstance().toEnriched,
-                                        input, opt_output);
+  sre.System.getInstance().processFile_(
+    function(x) {
+      return (sre.System.getInstance().toEnriched(x)).toString();
+    },
+    input, opt_output);
 };
 
 
@@ -395,9 +408,9 @@ sre.System.prototype.walk = function(expr) {
   this.speechGenerator = new sre.NodeSpeechGenerator();
   var highlighter = new sre.MmlHighlighter();
   var mml = sre.System.getInstance().parseExpression_(expr, false);
-  var eml = sre.System.getInstance().toEnriched(expr);
-  //TODO: See if this is still necessary.
-  var node = sre.DomUtil.parseInput(eml, sre.System.Error);
+  var node = sre.System.getInstance().toEnriched(expr);
+  var eml = new sre.SystemExternal.xmldom.XMLSerializer().
+        serializeToString(node);
   this.walker = new sre.SyntaxWalker(
       node, this.speechGenerator, highlighter, eml);
   return this.walker.speech();
