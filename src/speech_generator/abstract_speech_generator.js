@@ -23,9 +23,9 @@
 goog.provide('sre.AbstractSpeechGenerator');
 
 goog.require('sre.AuditoryDescription');
-goog.require('sre.EnrichMathml');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.SpeechGeneratorUtil');
 
 
 
@@ -84,6 +84,6 @@ sre.AbstractSpeechGenerator.prototype.end = function() { };
  * @return {string} The generated speech string.
  */
 sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
-  var descrs = sre.EnrichMathml.computeSpeech(this.getRebuilt().xml);
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(this.getRebuilt().xml);
   return sre.AuditoryDescription.speechString(descrs);
 };

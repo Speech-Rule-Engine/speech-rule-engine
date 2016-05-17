@@ -25,14 +25,13 @@ goog.provide('sre.EnrichMathml');
 goog.provide('sre.EnrichMathml.Attribute');
 goog.provide('sre.EnrichMathml.Error');
 
-goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
+//TODO: To remove!
 goog.require('sre.Engine');
 goog.require('sre.EnrichCaseFactory');
-goog.require('sre.MathmlStore');
 goog.require('sre.Semantic');
-goog.require('sre.SpeechRuleEngine');
+//TODO: Move these calls to domutil.
 goog.require('sre.SystemExternal');
 
 
@@ -114,9 +113,9 @@ sre.EnrichMathml.Attribute = {
  * @return {!Element} The modified MathML element.
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
-  if (sre.Engine.getInstance().speech) {
-    sre.EnrichMathml.computeSpeech(semantic.xml());
-  }
+  // if (sre.Engine.getInstance().speech) {
+  //   sre.EnrichMathml.computeSpeech(semantic.xml());
+  // }
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
@@ -583,10 +582,10 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FENCEPOINTER,
                      semantic.fencePointer);
   }
-  if (sre.Engine.getInstance().speech) {
-    sre.EnrichMathml.addSpeech(mml, semantic);
-    sre.EnrichMathml.addPrefix(mml, semantic);
-  }
+  // if (sre.Engine.getInstance().speech) {
+  //   sre.EnrichMathml.addSpeech(mml, semantic);
+  //   sre.EnrichMathml.addPrefix(mml, semantic);
+  // }
 };
 
 
@@ -795,142 +794,4 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
   console.log(title);
   sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
-};
-
-
-//TODO: Move to speech generators.
-/**
- * Compute speech string for the xml version of the semantic tree.
- * @param {!Node} xml The xml element.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
- *     for the node.
- */
-sre.EnrichMathml.computeSpeech = function(xml) {
-  var sreng = sre.SpeechRuleEngine.getInstance();
-  sreng.clearCache();
-  return sreng.evaluateNode(xml);
-};
-
-
-/**
- * Computes speech descriptions for a single semantic node.
- * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
- *     for the node.
- */
-sre.EnrichMathml.recomputeSpeech = function(mml, semantic) {
-  var tree = sre.SemanticTree.fromNode(semantic);
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(tree.xml());
-};
-
-
-/**
- * Add speech as a semantic attributes in a MathML node.
- * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- */
-sre.EnrichMathml.addSpeech = function(mml, semantic) {
-  var descrs = sre.SpeechRuleEngine.getInstance().
-      getCache(semantic.id.toString());
-  if (!descrs) {
-    descrs = sre.EnrichMathml.recomputeSpeech(mml, semantic);
-  }
-  var speech = sre.AuditoryDescription.speechString(descrs);
-  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-};
-
-
-/**
- * Adds a speech prefix if necessary.
- * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- */
-sre.EnrichMathml.addPrefix = function(mml, semantic) {
-  var descrs = sre.EnrichMathml.computePrefix_(semantic);
-  var speech = sre.AuditoryDescription.speechString(descrs);
-  if (speech) mml.setAttribute(sre.EnrichMathml.Attribute.PREFIX, speech);
-};
-
-
-/**
- * Adds a speech prefix if necessary.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
- *     for the prefix.
- * @private
- */
-sre.EnrichMathml.computePrefix_ = function(semantic) {
-  var tree = sre.SemanticTree.fromRoot(semantic);
-  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
-                                     tree.xml())[0];
-  return node ?
-      sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true,
-        'rules': ['PrefixRules']},
-      function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
-      ) :
-      [];
-};
-
-
-/**
- * Connects maction nodes as alternatives if they are collapsed in the actual
- * node.
- * @param {!Node} node The actual DOM node.
- * @param {!Element} mml The mathml element for the node.
- * @param {!Node} stree The XML for the semantic tree.
- */
-sre.EnrichMathml.connectMactions = function(node, mml, stree) {
-  var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
-  for (var i = 0, maction; maction = mactions[i]; i++) {
-    // Get the span with the maction id in node.
-    var aid = maction.getAttribute('id');
-    var span = sre.DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
-    if (!span) continue;
-    // Get id of uncollapse maction child.
-    var lchild = maction.childNodes[1];
-    var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
-    // Find the corresponding span in node.
-    var cspan = sre.WalkerUtil.getBySemanticId(node, mid);
-    // If the span exists, the maction is not collapsed and does not need to be
-    // connected. Unless, it is collpased maction (dummy type) and has been
-    // previously linked into the span. Then we still want to mark it as
-    // alternative.
-    if (cspan &&
-        cspan.getAttribute(sre.EnrichMathml.Attribute.TYPE) !== 'dummy')
-      continue;
-    // Otherwise, we take the existing child, which is actually the collapsed
-    // maction that needs to be linked into the node.
-    cspan = span.childNodes[0];
-    // Set parent pointer if necessary.
-    var pid = lchild.getAttribute(sre.EnrichMathml.Attribute.PARENT);
-    if (pid) {
-      cspan.setAttribute(sre.EnrichMathml.Attribute.PARENT, pid);
-    }
-    // Set dummy type and id.
-    cspan.setAttribute(sre.EnrichMathml.Attribute.TYPE, 'dummy');
-    cspan.setAttribute(sre.EnrichMathml.Attribute.ID, mid);
-    // Indicate the alternative in the semantic tree.
-    var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
-    cst.setAttribute('alternative', mid);
-  }
-};
-
-
-/**
- * Connects all maction nodes as alternatives.
- * @param {!Element} mml The mathml element.
- * @param {!Node} stree The XML for the semantic tree.
- */
-sre.EnrichMathml.connectAllMactions = function(mml, stree) {
-  var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
-  for (var i = 0, maction; maction = mactions[i]; i++) {
-    var aid = maction.getAttribute('id');
-    var lchild = maction.childNodes[1];
-    var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
-    var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
-    cst.setAttribute('alternative', mid);
-  }
 };

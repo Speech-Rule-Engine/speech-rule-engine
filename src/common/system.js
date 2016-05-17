@@ -29,6 +29,7 @@ goog.require('sre.HighlighterFactory');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
+goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechGenerators');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
@@ -211,7 +212,7 @@ sre.System.prototype.toDescription = function(expr) {
   if (!xml) {
     return [];
   }
-  var descrs = sre.EnrichMathml.computeSpeech(xml);
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
   sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
@@ -307,7 +308,7 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.processXml = function(xml) {
-  var descrs = sre.EnrichMathml.computeSpeech(xml);
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
   return sre.AuditoryDescription.speechString(descrs);
 };
 
