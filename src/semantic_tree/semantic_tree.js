@@ -125,7 +125,7 @@ sre.SemanticTree.empty = function() {
  *     the root.
  * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
  *     semantic node.
- * @return {sre.SemanticTree} The empty semantic tree.
+ * @return {!sre.SemanticTree} The empty semantic tree.
  */
 sre.SemanticTree.fromNode = function(semantic, opt_mathml) {
   var stree = sre.SemanticTree.empty();

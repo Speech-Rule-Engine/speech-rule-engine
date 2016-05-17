@@ -40,14 +40,29 @@ sre.RebuildStree = function(mathml) {
    */
   this.nodeDict = {};
 
+  /**
+   * @type {!Element}
+   */
   this.mathml = mathml;
 
+  /**
+   * @type {!Node}
+   */
   this.mmlRoot = sre.WalkerUtil.getSemanticRoot(mathml);
 
+  /**
+   * @type {!sre.SemanticTree.Node}
+   */
   this.streeRoot = this.assembleTree(this.mmlRoot);
 
+  /**
+   * @type {!sre.SemanticTree}
+   */
   this.stree = sre.SemanticTree.fromNode(this.streeRoot, this.mathml);
 
+  /**
+   * @type {!Node}
+   */
   this.xml = this.stree.xml();
 
 };
