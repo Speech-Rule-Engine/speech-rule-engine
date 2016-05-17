@@ -27,22 +27,9 @@ goog.provide('sre.EnrichMathml.Error');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
-//TODO: To remove!
-goog.require('sre.Engine');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
-//TODO: Move these calls to domutil.
-goog.require('sre.SystemExternal');
-
-
-
-/**
- * Create the namespace
- * @constructor
- */
-sre.EnrichMathml = function() {
-};
-
 
 
 /**
@@ -113,9 +100,6 @@ sre.EnrichMathml.Attribute = {
  * @return {!Element} The modified MathML element.
  */
 sre.EnrichMathml.enrich = function(mml, semantic) {
-  // if (sre.Engine.getInstance().speech) {
-  //   sre.EnrichMathml.computeSpeech(semantic.xml());
-  // }
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
@@ -205,7 +189,7 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
   var newNode = newNodeInfo.node;
   if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
     sre.Debugger.getInstance().output('Walktree Case 1.1');
-    newNode = sre.SystemExternal.document.createElement('mrow');
+    newNode = sre.DomUtil.createElement('mrow');
     if (children[0]) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.1');
       var node = sre.EnrichMathml.attachedElement_(children);
@@ -533,7 +517,7 @@ sre.EnrichMathml.cloneContentNode = function(content) {
   }
   var clone = sre.EnrichMathml.SETTINGS.implicit ?
       sre.EnrichMathml.createInvisibleOperator_(content) :
-      sre.SystemExternal.document.createElement('mrow');
+      sre.DomUtil.createElement('mrow');
   content.mathml = [clone];
   return clone;
 };
@@ -582,10 +566,6 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FENCEPOINTER,
                      semantic.fencePointer);
   }
-  // if (sre.Engine.getInstance().speech) {
-  //   sre.EnrichMathml.addSpeech(mml, semantic);
-  //   sre.EnrichMathml.addPrefix(mml, semantic);
-  // }
 };
 
 
@@ -648,7 +628,7 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
   if (sre.SemanticUtil.tagName(mml) !== 'MFENCED') {
     return mml;
   }
-  var newNode = sre.SystemExternal.document.createElement('mrow');
+  var newNode = sre.DomUtil.createElement('mrow');
   for (var i = 0, attr; attr = mml.attributes[i]; i++) {
     if (['open', 'close', 'separators'].indexOf(attr.name) === -1) {
       newNode.setAttribute(attr.name, attr.value);
@@ -668,9 +648,8 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
  * @private
  */
 sre.EnrichMathml.createInvisibleOperator_ = function(operator) {
-  var moNode = sre.SystemExternal.document.createElement('mo');
-  var text = sre.SystemExternal.document.
-      createTextNode(operator.textContent);
+  var moNode = sre.DomUtil.createElement('mo');
+  var text = sre.DomUtil.createTextNode(operator.textContent);
   moNode.appendChild(text);
   sre.EnrichMathml.setAttributes(moNode, operator);
   moNode.setAttribute(sre.EnrichMathml.Attribute.ADDED, 'true');

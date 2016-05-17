@@ -21,6 +21,7 @@
 goog.provide('sre.CaseMultiindex');
 
 goog.require('sre.AbstractEnrichCase');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree.Node');
@@ -81,7 +82,7 @@ sre.CaseMultiindex.prototype.completeMultiscript = function(
       sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
     this.mml.insertBefore(
         children[childCounter],
-        sre.SystemExternal.document.createElement('mprescripts'));
+        sre.DomUtil.createElement('mprescripts'));
   } else {
     childCounter++;
   }
@@ -97,7 +98,7 @@ sre.CaseMultiindex.prototype.completeMultiscript = function(
  * @private
  */
 sre.CaseMultiindex.createNone_ = function(semantic) {
-  var newNode = sre.SystemExternal.document.createElement('none');
+  var newNode = sre.DomUtil.createElement('none');
   if (semantic) {
     sre.EnrichMathml.setAttributes(newNode, semantic);
   }
