@@ -90,17 +90,17 @@ goog.inherits(sre.System.Error, Error);
  */
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
+  var setIf = function(feat) {
+    if (feature[feat] !== undefined) {
+      engine[feat] = !!feature[feat];
+    }
+  };
+  var binaryFeatures = ['ssml', 'strict', 'cache', 'semantics'];
   engine.mode = feature.mode || engine.mode;
   sre.System.prototype.configBlocks_(feature);
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
-  engine.ssml = !!feature.ssml;
-  engine.strict = !!feature.strict;
-  engine.semantics = !!feature.semantics;
-  if (feature.cache !== undefined) {
-    engine.cache = !!feature.cache;
-  }
-  engine.speech = !!feature.speech;
+  binaryFeatures.forEach(setIf);
   if (feature.json) {
     sre.SystemExternal.jsonPath = feature.json;
   }
