@@ -6,7 +6,7 @@ Speech Rule Engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
-The speech rule engine can translate XML expression into speech strings according to rules that
+The speech rule engine can translate XML expressions into speech strings according to rules that
 can be specified in a syntax using Xpath expressions.  It was originally designed for translation
 of MathML and MathJax DOM elements for the ChromeVox screen reader. 
 Besides the rules originally designed for the use in ChromeVox, it also has an implemententation of the 
@@ -39,7 +39,7 @@ Current API functions are divided into three categories.
 | Method | Return Value |
 | ---- | ---- |
 | `toSpeech(mathml)` | Speech string for the MathML. |
-| `toSemantic(mathml)` | String with XML representation of the semantic tree of given MathML. |
+| `toSemantic(mathml)` | XML representation of the semantic tree for the MathML. |
 | `toJson(mathml)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
@@ -51,7 +51,7 @@ If the output filename is not provided, output will be written to stdout.
 | Method | Return Value |
 | ---- | ---- |
 | `file.toSpeech(input, output)` | Speech string for the MathML. |
-| `file.toSemantic(input, output)` | String with XML representation of the semantic tree of given MathML. |
+| `file.toSemantic(input, output)` | XML representation of the semantic tree for the MathML. |
 | `file.toJson(input, output)` | The semantic tree in JSON. This method only works in Node, not in browser mode. |
 | `file.toDescription(input, output)` | The array of auditory description objects of the MathML expression. |
 | `file.toEnriched(input, output)` | The semantically enriched MathML expression. |
@@ -73,6 +73,18 @@ Valid options are:
 Observe that some speech rule domains only make sense with semantics switched on
 or off and that not every domain implements every style. See also the
 description of the command line parameters in the next section for more details.
+
+
+#### Experimental methods for navigating math expressions:
+
+For the following methods sre maintains an internal state, hence they are only
+really useful when running in browser or in a Node REPL.Hence they are not
+exposed via the command line interface.
+
+| Method | Return Value |
+| ---- | ---- |
+| `walk(input)` | Speech string for the MathML. |
+| `move(keycode)` | Speech string after the move. Keycodes are numerical strings representing cursor keys, space, enter, etc. |
 
 
 #### The following are deprecated API functions #########
