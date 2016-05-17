@@ -88,12 +88,13 @@ sre.ApiTest.QUADRATIC =
  * Executes single API tests.
  * @param {string} func The API function to test.
  * @param {string} expr The input expression.
- * @param {string} result The expected result.
+ * @param {(string|null)} result The expected result.
  * @param {Function=} opt_post A post processor function for the result of func.
  */
 sre.ApiTest.prototype.executeTest = function(func, expr, result, opt_post) {
   var post = opt_post || function(x) {return x;};
-  this.assert.equal(post(this.system[func](expr)), result);
+  var output = post(this.system[func](expr));
+  this.assert.equal(output, result);
 };
 
 
@@ -315,4 +316,49 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-font="italic" data-semantic-id="20"' +
       ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
   );
+};
+
+
+/**
+ * Test for semantic tree API.
+ */
+sre.ApiTest.prototype.testWalker = function() {
+  var move = function(dir) {
+    return sre.EventUtil.KeyCode[dir].toString();
+  };
+  this.executeTest(
+    'walk',
+    sre.ApiTest.QUADRATIC,
+    'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+    'move', move('DOWN'),
+    'x');
+  this.executeTest(
+    'move', move('RIGHT'),
+    'equals');
+  this.executeTest(
+    'move', move('RIGHT'),
+    'StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+    'move', move('DOWN'),
+    'Numerator negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot');
+  this.executeTest(
+    'move', move('SPACE'),
+    'Level 2 Numerator');
+  this.executeTest(
+    'move', move('UP'),
+    'StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+    'move', move('LEFT'),
+    'equals');
+  this.executeTest(
+    'move', move('LEFT'),
+    'x');
+  this.executeTest(
+    'move', move('LEFT'),
+    null);
 };
