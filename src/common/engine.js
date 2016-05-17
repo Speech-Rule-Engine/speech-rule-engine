@@ -82,12 +82,6 @@ sre.Engine = function() {
   this.mode = sre.Engine.Mode.SYNC;
 
   /**
-   * Flag indicating whether or not speech should be added to enriched MathML.
-   * @type {boolean}
-   */
-  this.speech = false;
-
-  /**
    * List of rule sets given as the constructor functions.
    * @type {!Array.<string>}
    */
