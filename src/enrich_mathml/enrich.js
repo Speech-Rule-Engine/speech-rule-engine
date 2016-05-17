@@ -25,7 +25,6 @@ goog.require('sre.DomUtil');
 goog.require('sre.EnrichCases');
 goog.require('sre.EnrichMathml');
 goog.require('sre.Semantic');
-goog.require('sre.SpeechRuleEngine');
 
 
 /**
