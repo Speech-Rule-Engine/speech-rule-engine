@@ -139,8 +139,7 @@ module.exports.file.toEnriched = sre.System.getInstance().fileToEnriched;
 /**
  * Exporting method to set up and parameterise the Engine.
  */
-module.exports.setupEngine = goog.bind(sre.System.getInstance().setupEngine,
-                                       sre.System.getInstance());
+module.exports.setupEngine = sre.System.getInstance().setupEngine;
 
 
 /**

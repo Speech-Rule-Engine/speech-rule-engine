@@ -46,21 +46,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '0.8';
-
-  this.walker = null;
-
-  this.speechGenerator = null;
-
-  /**
-   * The default rule sets. Generally this are all rule sets that are available.
-   * @type {!Array.<string>}
-   * @private
-   */
-  this.defaultRuleSets_ = [
-    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
-    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
-  ];
+  this.version = '0.9.4';
 
 };
 goog.addSingletonGetter(sre.System);
@@ -81,6 +67,34 @@ sre.System.Error = function(msg) {
 goog.inherits(sre.System.Error, Error);
 
 
+/**
+ * A storage to hide members of the system class.
+ * @constructor
+ * @private
+ */
+sre.System.LocalStorage_ = function() {
+
+  this.walker = null;
+
+  this.speechGenerator = null;
+
+  /**
+   * The default rule sets. Generally this are all rule sets that are available.
+   * @type {!Array.<string>}
+   * @private
+   */
+  this.defaultRuleSets_ = [
+    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
+    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
+  ];
+
+};
+goog.addSingletonGetter(sre.System.LocalStorage_);
+
+
+// These are all API interface functions. Therefore, avoid any usage of "this"
+// in the code.
+//
 //TODO: Put in a full explanation of all the elements of the feature vector.
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
@@ -108,7 +122,8 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
-  engine.ruleSets = feature.rules ? feature.rules : this.defaultRuleSets_;
+  engine.ruleSets = feature.rules ? feature.rules :
+      sre.System.LocalStorage_.getInstance().defaultRuleSets_;
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
@@ -405,15 +420,17 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  * @return {string} The initial speech string for that expression.
  */
 sre.System.prototype.walk = function(expr) {
-  this.speechGenerator = new sre.NodeSpeechGenerator();
+  sre.System.LocalStorage_.getInstance().speechGenerator =
+    new sre.NodeSpeechGenerator();
   var highlighter = new sre.MmlHighlighter();
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
         serializeToString(node);
-  this.walker = new sre.SyntaxWalker(
-      node, this.speechGenerator, highlighter, eml);
-  return this.walker.speech();
+  sre.System.LocalStorage_.getInstance().walker = new sre.SyntaxWalker(
+      node, sre.System.LocalStorage_.getInstance().speechGenerator,
+      highlighter, eml);
+  return sre.System.LocalStorage_.getInstance().walker.speech();
 };
 
 
@@ -424,6 +441,10 @@ sre.System.prototype.walk = function(expr) {
  *     is hit.
  */
 sre.System.prototype.move = function(key) {
-  var move = this.walker.move(key);
-  return move === false ? null : this.walker.speech();
+  if (!sre.System.LocalStorage_.getInstance().walker) {
+    return null;
+  }
+  var move = sre.System.LocalStorage_.getInstance().walker.move(key);
+  return move === false ? null :
+    sre.System.LocalStorage_.getInstance().walker.speech();
 };
