@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview Ad hoc speech generator that computes a new speech string for
- *     an element every time.
+ *     an element, non-recursively, every time.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -23,6 +23,7 @@
 goog.provide('sre.AdhocSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
+goog.require('sre.EnrichMathml.Attribute');
 
 
 
@@ -40,5 +41,7 @@ goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  return this.generateSpeech(node, xml);
+  var speech = this.generateSpeech(node, xml);
+  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  return speech;
 };

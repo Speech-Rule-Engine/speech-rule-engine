@@ -15,7 +15,7 @@
 
 /**
  * @fileoverview Direct speech generator that simply picks up the speech
- *     attribute.
+ *     attribute if it exists.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
