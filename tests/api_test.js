@@ -23,6 +23,8 @@
 goog.provide('sre.ApiTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.Engine');
+goog.require('sre.System');
 
 
 
@@ -48,7 +50,18 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
  */
 sre.ApiTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-    {semantics: true, domain: 'mathspeak', style: 'default'});
+    {semantics: true, domain: 'mathspeak', style: 'default',
+     speech: sre.Engine.Speech.NONE});
+};
+
+
+/**
+ * @override
+ */
+sre.ApiTest.prototype.tearDownTest = function() {
+  this.system.setupEngine(
+    {semantics: false, domain: 'default', style: 'short',
+     speech: sre.Engine.Speech.NONE});
 };
 
 
@@ -335,6 +348,186 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-font="italic" data-semantic-id="20"' +
       ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
   );
+  this.system.setupEngine({speech: sre.Engine.Speech.SHALLOW});
+  this.executeTest(
+    'toEnriched',
+    sre.ApiTest.QUADRATIC,
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+      ' data-semantic-type="relseq" data-semantic-role="equality"' +
+      ' data-semantic-id="24" data-semantic-children="0,23"' +
+      ' data-semantic-content="1" data-semantic-speech="x equals' +
+      ' StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction"><mi' +
+      ' data-semantic-type="identifier"' +
+      ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+      ' data-semantic-id="0" data-semantic-parent="24">x</mi><mo' +
+      ' data-semantic-type="relation" data-semantic-role="equality"' +
+      ' data-semantic-id="1" data-semantic-parent="24"' +
+      ' data-semantic-operator="relseq,=">=</mo><mfrac' +
+      ' data-semantic-type="fraction" data-semantic-role="division"' +
+      ' data-semantic-id="23" data-semantic-children="18,22"' +
+      ' data-semantic-parent="24"><mrow data-semantic-type="infixop"' +
+      ' data-semantic-role="addition" data-semantic-id="18"' +
+      ' data-semantic-children="17,16" data-semantic-content="4"' +
+      ' data-semantic-parent="23"><mrow data-semantic-type="prefixop"' +
+      ' data-semantic-role="negative" data-semantic-id="17"' +
+      ' data-semantic-children="3" data-semantic-content="2"' +
+      ' data-semantic-parent="18"><mo data-semantic-type="operator"' +
+      ' data-semantic-role="subtraction" data-semantic-id="2"' +
+      ' data-semantic-parent="17" data-semantic-operator="prefixop,−">−<!--' +
+      ' − --></mo><mi data-semantic-type="identifier"' +
+      ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+      ' data-semantic-id="3" data-semantic-parent="17">b</mi></mrow><mo' +
+      ' data-semantic-type="operator" data-semantic-role="addition"' +
+      ' data-semantic-id="4" data-semantic-parent="18"' +
+      ' data-semantic-operator="infixop,±">±<!-- ± --></mo><msqrt' +
+      ' data-semantic-type="sqrt" data-semantic-role="unknown"' +
+      ' data-semantic-id="16" data-semantic-children="15"' +
+      ' data-semantic-parent="18"><mrow data-semantic-type="infixop"' +
+      ' data-semantic-role="subtraction" data-semantic-id="15"' +
+      ' data-semantic-children="7,14" data-semantic-content="8"' +
+      ' data-semantic-parent="16"><msup data-semantic-type="superscript"' +
+      ' data-semantic-role="latinletter" data-semantic-id="7"' +
+      ' data-semantic-children="5,6" data-semantic-parent="15"><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="5"' +
+      ' data-semantic-parent="7">b</mi><mn data-semantic-type="number"' +
+      ' data-semantic-role="integer" data-semantic-font="normal"' +
+      ' data-semantic-id="6" data-semantic-parent="7">2</mn></msup><mo' +
+      ' data-semantic-type="operator" data-semantic-role="subtraction"' +
+      ' data-semantic-id="8" data-semantic-parent="15"' +
+      ' data-semantic-operator="infixop,−">−<!-- − --></mo><mrow' +
+      ' data-semantic-type="infixop" data-semantic-role="implicit"' +
+      ' data-semantic-id="14" data-semantic-children="9,10,11"' +
+      ' data-semantic-content="12,13" data-semantic-parent="15"><mn' +
+      ' data-semantic-type="number" data-semantic-role="integer"' +
+      ' data-semantic-font="normal" data-semantic-id="9"' +
+      ' data-semantic-parent="14">4</mn><mo data-semantic-type="operator"' +
+      ' data-semantic-role="multiplication" data-semantic-id="12"' +
+      ' data-semantic-parent="14" data-semantic-added="true"' +
+      ' data-semantic-operator="infixop,⁢">⁢</mo><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="10"' +
+      ' data-semantic-parent="14">a</mi><mo data-semantic-type="operator"' +
+      ' data-semantic-role="multiplication" data-semantic-id="13"' +
+      ' data-semantic-parent="14" data-semantic-added="true"' +
+      ' data-semantic-operator="infixop,⁢">⁢</mo><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="11"' +
+      ' data-semantic-parent="14">c</mi></mrow></mrow></msqrt></mrow><mrow' +
+      ' data-semantic-type="infixop" data-semantic-role="implicit"' +
+      ' data-semantic-id="22" data-semantic-children="19,20"' +
+      ' data-semantic-content="21" data-semantic-parent="23"><mn' +
+      ' data-semantic-type="number" data-semantic-role="integer"' +
+      ' data-semantic-font="normal" data-semantic-id="19"' +
+      ' data-semantic-parent="22">2</mn><mo data-semantic-type="operator"' +
+      ' data-semantic-role="multiplication" data-semantic-id="21"' +
+      ' data-semantic-parent="22" data-semantic-added="true"' +
+      ' data-semantic-operator="infixop,⁢">⁢</mo><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="20"' +
+      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
+  );
+  this.system.setupEngine({speech: sre.Engine.Speech.DEEP});
+  this.executeTest(
+    'toEnriched',
+    sre.ApiTest.QUADRATIC,
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+      ' data-semantic-type="relseq" data-semantic-role="equality"' +
+      ' data-semantic-id="24" data-semantic-children="0,23"' +
+      ' data-semantic-content="1" data-semantic-speech="x equals' +
+      ' StartFraction negative b plus-or-minus StartRoot b squared minus 4' +
+      ' a c EndRoot Over 2 a EndFraction"><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="0"' +
+      ' data-semantic-parent="24" data-semantic-speech="x">x</mi><mo' +
+      ' data-semantic-type="relation" data-semantic-role="equality"' +
+      ' data-semantic-id="1" data-semantic-parent="24"' +
+      ' data-semantic-operator="relseq,=" data-semantic-speech="equals">=' +
+      '</mo><mfrac data-semantic-type="fraction"' +
+      ' data-semantic-role="division" data-semantic-id="23"' +
+      ' data-semantic-children="18,22" data-semantic-parent="24"' +
+      ' data-semantic-speech="StartFraction negative b plus-or-minus' +
+      ' StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"><mrow' +
+      ' data-semantic-type="infixop" data-semantic-role="addition"' +
+      ' data-semantic-id="18" data-semantic-children="17,16"' +
+      ' data-semantic-content="4" data-semantic-parent="23"' +
+      ' data-semantic-speech="negative b plus-or-minus StartRoot b squared' +
+      ' minus 4 a c EndRoot" data-semantic-prefix="Numerator"><mrow' +
+      ' data-semantic-type="prefixop" data-semantic-role="negative"' +
+      ' data-semantic-id="17" data-semantic-children="3"' +
+      ' data-semantic-content="2" data-semantic-parent="18"' +
+      ' data-semantic-speech="negative b"><mo data-semantic-type="operator"' +
+      ' data-semantic-role="subtraction" data-semantic-id="2"' +
+      ' data-semantic-parent="17" data-semantic-operator="prefixop,−"' +
+      ' data-semantic-speech="minus">−<!-- − --></mo><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="3"' +
+      ' data-semantic-parent="17" data-semantic-speech="b">b</mi></mrow><mo' +
+      ' data-semantic-type="operator" data-semantic-role="addition"' +
+      ' data-semantic-id="4" data-semantic-parent="18"' +
+      ' data-semantic-operator="infixop,±"' +
+      ' data-semantic-speech="plus-or-minus">±<!-- ± --></mo><msqrt' +
+      ' data-semantic-type="sqrt" data-semantic-role="unknown"' +
+      ' data-semantic-id="16" data-semantic-children="15"' +
+      ' data-semantic-parent="18" data-semantic-speech="StartRoot b squared' +
+      ' minus 4 a c EndRoot"><mrow data-semantic-type="infixop"' +
+      ' data-semantic-role="subtraction" data-semantic-id="15"' +
+      ' data-semantic-children="7,14" data-semantic-content="8"' +
+      ' data-semantic-parent="16" data-semantic-speech="b squared minus 4 a' +
+      ' c" data-semantic-prefix="Radicand"><msup' +
+      ' data-semantic-type="superscript" data-semantic-role="latinletter"' +
+      ' data-semantic-id="7" data-semantic-children="5,6"' +
+      ' data-semantic-parent="15" data-semantic-speech="b squared"><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="5"' +
+      ' data-semantic-parent="7" data-semantic-speech="b"' +
+      ' data-semantic-prefix="Base">b</mi><mn data-semantic-type="number"' +
+      ' data-semantic-role="integer" data-semantic-font="normal"' +
+      ' data-semantic-id="6" data-semantic-parent="7"' +
+      ' data-semantic-speech="2" data-semantic-prefix="Exponent">2</mn>' +
+      '</msup><mo data-semantic-type="operator"' +
+      ' data-semantic-role="subtraction" data-semantic-id="8"' +
+      ' data-semantic-parent="15" data-semantic-operator="infixop,−"' +
+      ' data-semantic-speech="minus">−<!-- − --></mo><mrow' +
+      ' data-semantic-type="infixop" data-semantic-role="implicit"' +
+      ' data-semantic-id="14" data-semantic-children="9,10,11"' +
+      ' data-semantic-content="12,13" data-semantic-parent="15"' +
+      ' data-semantic-speech="4 a c"><mn data-semantic-type="number"' +
+      ' data-semantic-role="integer" data-semantic-font="normal"' +
+      ' data-semantic-id="9" data-semantic-parent="14"' +
+      ' data-semantic-speech="4">4</mn><mo data-semantic-type="operator"' +
+      ' data-semantic-role="multiplication" data-semantic-id="12"' +
+      ' data-semantic-parent="14" data-semantic-added="true"' +
+      ' data-semantic-operator="infixop,⁢" data-semantic-speech="times">⁢' +
+      '</mo><mi data-semantic-type="identifier"' +
+      ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+      ' data-semantic-id="10" data-semantic-parent="14"' +
+      ' data-semantic-speech="a">a</mi><mo data-semantic-type="operator"' +
+      ' data-semantic-role="multiplication" data-semantic-id="13"' +
+      ' data-semantic-parent="14" data-semantic-added="true"' +
+      ' data-semantic-operator="infixop,⁢" data-semantic-speech="times">⁢' +
+      '</mo><mi data-semantic-type="identifier"' +
+      ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+      ' data-semantic-id="11" data-semantic-parent="14"' +
+      ' data-semantic-speech="c">c</mi></mrow></mrow></msqrt></mrow><mrow' +
+      ' data-semantic-type="infixop" data-semantic-role="implicit"' +
+      ' data-semantic-id="22" data-semantic-children="19,20"' +
+      ' data-semantic-content="21" data-semantic-parent="23"' +
+      ' data-semantic-speech="2 a" data-semantic-prefix="Denominator"><mn' +
+      ' data-semantic-type="number" data-semantic-role="integer"' +
+      ' data-semantic-font="normal" data-semantic-id="19"' +
+      ' data-semantic-parent="22" data-semantic-speech="2">2</mn><mo' +
+      ' data-semantic-type="operator" data-semantic-role="multiplication"' +
+      ' data-semantic-id="21" data-semantic-parent="22"' +
+      ' data-semantic-added="true" data-semantic-operator="infixop,⁢"' +
+      ' data-semantic-speech="times">⁢</mo><mi' +
+      ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+      ' data-semantic-font="italic" data-semantic-id="20"' +
+      ' data-semantic-parent="22" data-semantic-speech="a">a</mi></mrow>' +
+      '</mfrac></math>'
+  );
+  this.system.setupEngine({speech: sre.Engine.Speech.NONE});
 };
 
 
