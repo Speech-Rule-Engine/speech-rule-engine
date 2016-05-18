@@ -82,6 +82,13 @@ sre.Engine = function() {
   this.mode = sre.Engine.Mode.SYNC;
 
   /**
+   * The level to which speech attributes are added to enriched elements (none,
+   * shallow, deep).
+   * @type {sre.Engine.Speech}
+   */
+  this.speech = sre.Engine.Speech.NONE;
+
+  /**
    * List of rule sets given as the constructor functions.
    * @type {!Array.<string>}
    */
@@ -147,6 +154,18 @@ sre.Engine.Mode = {
   SYNC: 'sync',
   ASYNC: 'async',
   HTTP: 'http'
+};
+
+
+/**
+ * Defines to what level the engine enriches expressions with speech string
+ * attributes.
+ * @enum {string}
+ */
+sre.Engine.Speech = {
+  NONE: 'none',
+  SHALLOW: 'shallow',
+  DEEP: 'deep'
 };
 
 

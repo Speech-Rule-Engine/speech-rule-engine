@@ -84,8 +84,8 @@ sre.AbstractSpeechGenerator.prototype.end = function() { };
  * @return {string} The generated speech string.
  */
 sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
-  if (!this.rebuildStree_) {
-    this.rebuildStree_ = new sre.RebuildStree(xml);
+  if (!this.rebuilt_) {
+    this.rebuilt_ = new sre.RebuildStree(xml);
   }
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(this.getRebuilt().xml);
   return sre.AuditoryDescription.speechString(descrs);

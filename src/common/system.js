@@ -114,6 +114,7 @@ sre.System.prototype.setupEngine = function(feature) {
   sre.System.prototype.configBlocks_(feature);
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
+  engine.speech = feature.speech || engine.speech;
   binaryFeatures.forEach(setIf);
   if (feature.json) {
     sre.SystemExternal.jsonPath = feature.json;
@@ -245,7 +246,20 @@ sre.System.prototype.toDescription = function(expr) {
  * @return {!Element} The enriched MathML node.
  */
 sre.System.prototype.toEnriched = function(expr) {
-  return sre.Enrich.semanticMathmlSync(expr);
+  var enr = sre.Enrich.semanticMathmlSync(expr);
+  var root = sre.WalkerUtil.getSemanticRoot(enr);
+  switch (sre.Engine.getInstance().speech) {
+  case sre.Engine.Speech.SHALLOW:
+    (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
+    break;
+  case sre.Engine.Speech.DEEP:
+    (new sre.TreeSpeechGenerator()).getSpeech(root, enr);
+    break;
+  case sre.Engine.Speech.NONE:
+  default:
+    break;
+  }
+  return enr;
 };
 
 

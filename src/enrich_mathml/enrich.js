@@ -45,7 +45,6 @@ sre.Enrich.semanticMathmlNode = function(mml) {
  * @return {!Element} The modified MathML element.
  */
 sre.Enrich.semanticMathmlSync = function(expr) {
-  // TODO (sorge) Catch error case.
   var mml = sre.DomUtil.parseInput(expr);
   return sre.Enrich.semanticMathmlNode(mml);
 };
