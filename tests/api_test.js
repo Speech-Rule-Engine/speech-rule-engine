@@ -101,6 +101,25 @@ sre.ApiTest.prototype.executeTest = function(func, expr, result, opt_post) {
 /**
  * Test for speech translation API.
  */
+sre.ApiTest.prototype.testSetupEngine = function() {
+  this.executeTest(
+    'toSpeech',
+    sre.ApiTest.QUADRATIC,
+    'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.system.setupEngine({domain: 'default', style: 'short'});
+  this.executeTest(
+    'toSpeech',
+    sre.ApiTest.QUADRATIC,
+    'x equals negative b plus minus Square root of b squared minus four times' +
+      ' a times c divided by two times a');
+  this.system.setupEngine({domain: 'mathspeak', style: 'default'});
+};
+
+
+/**
+ * Test for speech translation API.
+ */
 sre.ApiTest.prototype.testToSpeech = function() {
   this.executeTest(
     'toSpeech',
