@@ -44,7 +44,7 @@ goog.inherits(sre.NodeSpeechGenerator, sre.TreeSpeechGenerator);
  */
 sre.NodeSpeechGenerator.prototype.getSpeech = function(node, xml) {
   var speech = sre.WalkerUtil.getAttribute(
-    node, sre.EnrichMathml.Attribute.SPEECH);
+      node, sre.EnrichMathml.Attribute.SPEECH);
   if (speech) return speech;
   return goog.base(this, 'getSpeech', node, xml);
 };

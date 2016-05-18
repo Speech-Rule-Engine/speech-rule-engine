@@ -67,6 +67,7 @@ sre.System.Error = function(msg) {
 goog.inherits(sre.System.Error, Error);
 
 
+
 /**
  * A storage to hide members of the system class.
  * @constructor
@@ -249,15 +250,15 @@ sre.System.prototype.toEnriched = function(expr) {
   var enr = sre.Enrich.semanticMathmlSync(expr);
   var root = sre.WalkerUtil.getSemanticRoot(enr);
   switch (sre.Engine.getInstance().speech) {
-  case sre.Engine.Speech.SHALLOW:
-    (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
-    break;
-  case sre.Engine.Speech.DEEP:
-    (new sre.TreeSpeechGenerator()).getSpeech(root, enr);
-    break;
-  case sre.Engine.Speech.NONE:
-  default:
-    break;
+    case sre.Engine.Speech.SHALLOW:
+      (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
+      break;
+    case sre.Engine.Speech.DEEP:
+      (new sre.TreeSpeechGenerator()).getSpeech(root, enr);
+      break;
+    case sre.Engine.Speech.NONE:
+    default:
+      break;
   }
   return enr;
 };
@@ -289,10 +290,10 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
  */
 sre.System.prototype.fileToSemantic = function(input, opt_output) {
   sre.System.getInstance().processFile_(
-    function(x) {
-      return (sre.System.getInstance().toSemantic(x)).toString();
-    },
-    input, opt_output);
+      function(x) {
+        return (sre.System.getInstance().toSemantic(x)).toString();
+      },
+      input, opt_output);
 };
 
 
@@ -336,10 +337,10 @@ sre.System.prototype.fileToDescription = function(input, opt_output) {
  */
 sre.System.prototype.fileToEnriched = function(input, opt_output) {
   sre.System.getInstance().processFile_(
-    function(x) {
-      return (sre.System.getInstance().toEnriched(x)).toString();
-    },
-    input, opt_output);
+      function(x) {
+        return (sre.System.getInstance().toEnriched(x)).toString();
+      },
+      input, opt_output);
 };
 
 
@@ -435,12 +436,12 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  */
 sre.System.prototype.walk = function(expr) {
   sre.System.LocalStorage_.getInstance().speechGenerator =
-    new sre.NodeSpeechGenerator();
+      new sre.NodeSpeechGenerator();
   var highlighter = new sre.MmlHighlighter();
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
-        serializeToString(node);
+      serializeToString(node);
   sre.System.LocalStorage_.getInstance().walker = new sre.SyntaxWalker(
       node, sre.System.LocalStorage_.getInstance().speechGenerator,
       highlighter, eml);
@@ -460,5 +461,5 @@ sre.System.prototype.move = function(key) {
   }
   var move = sre.System.LocalStorage_.getInstance().walker.move(key);
   return move === false ? null :
-    sre.System.LocalStorage_.getInstance().walker.speech();
+      sre.System.LocalStorage_.getInstance().walker.speech();
 };

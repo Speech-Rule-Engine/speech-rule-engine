@@ -50,8 +50,8 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
  */
 sre.ApiTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-    {semantics: true, domain: 'mathspeak', style: 'default',
-     speech: sre.Engine.Speech.NONE});
+      {semantics: true, domain: 'mathspeak', style: 'default',
+        speech: sre.Engine.Speech.NONE});
 };
 
 
@@ -60,8 +60,8 @@ sre.ApiTest.prototype.setUpTest = function() {
  */
 sre.ApiTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
-    {semantics: false, domain: 'default', style: 'short',
-     speech: sre.Engine.Speech.NONE});
+      {semantics: false, domain: 'default', style: 'short',
+        speech: sre.Engine.Speech.NONE});
 };
 
 
@@ -70,38 +70,38 @@ sre.ApiTest.prototype.tearDownTest = function() {
  * @type {string}
  */
 sre.ApiTest.QUADRATIC =
-  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mfrac>' +
-  '<mrow>' +
-  '<mo>&#x2212;<!-- − --></mo>' +
-  '<mi>b</mi>' +
-  '<mo>&#x00B1;<!-- ± --></mo>' +
-  '<msqrt>' +
-  '<msup>' +
-  '<mi>b</mi>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>&#x2212;<!-- − --></mo>' +
-  '<mn>4</mn>' +
-  '<mi>a</mi>' +
-  '<mi>c</mi>' +
-  '</msqrt>' +
-  '</mrow>' +
-  '<mrow>' +
-  '<mn>2</mn>' +
-  '<mi>a</mi>' +
-  '</mrow>' +
-  '</mfrac>' +
-  '</math>';
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<mi>x</mi>' +
+    '<mo>=</mo>' +
+    '<mfrac>' +
+    '<mrow>' +
+    '<mo>&#x2212;<!-- − --></mo>' +
+    '<mi>b</mi>' +
+    '<mo>&#x00B1;<!-- ± --></mo>' +
+    '<msqrt>' +
+    '<msup>' +
+    '<mi>b</mi>' +
+    '<mn>2</mn>' +
+    '</msup>' +
+    '<mo>&#x2212;<!-- − --></mo>' +
+    '<mn>4</mn>' +
+    '<mi>a</mi>' +
+    '<mi>c</mi>' +
+    '</msqrt>' +
+    '</mrow>' +
+    '<mrow>' +
+    '<mn>2</mn>' +
+    '<mi>a</mi>' +
+    '</mrow>' +
+    '</mfrac>' +
+    '</math>';
 
 
 /**
  * Executes single API tests.
  * @param {string} func The API function to test.
  * @param {string} expr The input expression.
- * @param {(string|null)} result The expected result.
+ * @param {?(string)} result The expected result.
  * @param {Function=} opt_post A post processor function for the result of func.
  */
 sre.ApiTest.prototype.executeTest = function(func, expr, result, opt_post) {
@@ -116,16 +116,16 @@ sre.ApiTest.prototype.executeTest = function(func, expr, result, opt_post) {
  */
 sre.ApiTest.prototype.testSetupEngine = function() {
   this.executeTest(
-    'toSpeech',
-    sre.ApiTest.QUADRATIC,
-    'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'toSpeech',
+      sre.ApiTest.QUADRATIC,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.system.setupEngine({domain: 'default', style: 'short'});
   this.executeTest(
-    'toSpeech',
-    sre.ApiTest.QUADRATIC,
-    'x equals negative b plus minus Square root of b squared minus four times' +
-      ' a times c divided by two times a');
+      'toSpeech',
+      sre.ApiTest.QUADRATIC,
+      'x equals negative b plus minus Square root of b squared minus four' +
+      ' times a times c divided by two times a');
   this.system.setupEngine({domain: 'mathspeak', style: 'default'});
 };
 
@@ -135,9 +135,9 @@ sre.ApiTest.prototype.testSetupEngine = function() {
  */
 sre.ApiTest.prototype.testToSpeech = function() {
   this.executeTest(
-    'toSpeech',
-    sre.ApiTest.QUADRATIC,
-    'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'toSpeech',
+      sre.ApiTest.QUADRATIC,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
 
@@ -147,9 +147,9 @@ sre.ApiTest.prototype.testToSpeech = function() {
  */
 sre.ApiTest.prototype.testToSemantic = function() {
   this.executeTest(
-    'toSemantic',
-    sre.ApiTest.QUADRATIC,
-    '<stree><relseq role="equality" id="24">=<content><relation' +
+      'toSemantic',
+      sre.ApiTest.QUADRATIC,
+      '<stree><relseq role="equality" id="24">=<content><relation' +
       ' role="equality" id="1">=</relation></content><children><identifier' +
       ' role="latinletter" font="italic" id="0">x</identifier><fraction' +
       ' role="division" id="23"><children><infixop role="addition"' +
@@ -184,9 +184,9 @@ sre.ApiTest.prototype.testToSemantic = function() {
  */
 sre.ApiTest.prototype.testToJson = function() {
   this.executeTest(
-    'toJson',
-    sre.ApiTest.QUADRATIC,
-    '{"stree":{"relseq":{"role":"equality","id":"24","$t":"=",' +
+      'toJson',
+      sre.ApiTest.QUADRATIC,
+      '{"stree":{"relseq":{"role":"equality","id":"24","$t":"=",' +
       '"content":{"relation":{"role":"equality","id":"1","$t":"="}},' +
       '"children":{"identifier":{"role":"latinletter","font":"italic",' +
       '"id":"0","$t":"x"},"fraction":{"role":"division","id":"23",' +
@@ -212,7 +212,7 @@ sre.ApiTest.prototype.testToJson = function() {
       '"children":{"number":{"role":"integer","font":"normal","id":"19",' +
       '"$t":"2"},"identifier":{"role":"latinletter","font":"italic",' +
       '"id":"20","$t":"a"}}}]}}}}}}',
-    JSON.stringify
+      JSON.stringify
   );
 };
 
@@ -222,9 +222,9 @@ sre.ApiTest.prototype.testToJson = function() {
  */
 sre.ApiTest.prototype.testToDescription = function() {
   this.executeTest(
-    'toDescription',
-    sre.ApiTest.QUADRATIC,
-    '[{"context":"","text":"x","userValue":"","annotation":"",' +
+      'toDescription',
+      sre.ApiTest.QUADRATIC,
+      '[{"context":"","text":"x","userValue":"","annotation":"",' +
       '"correction":"italic","personality":{},"preprocess":false},' +
       '{"context":"","text":"equals","userValue":"","annotation":"",' +
       '"correction":"","personality":{},"preprocess":false},' +
@@ -263,7 +263,7 @@ sre.ApiTest.prototype.testToDescription = function() {
       '"personality":{},"preprocess":false},{"context":"",' +
       '"text":"EndFraction","userValue":"","annotation":"","correction":"",' +
       '"personality":{},"preprocess":false}]',
-    JSON.stringify
+      JSON.stringify
   );
 };
 
@@ -273,9 +273,9 @@ sre.ApiTest.prototype.testToDescription = function() {
  */
 sre.ApiTest.prototype.testToEnriched = function() {
   this.executeTest(
-    'toEnriched',
-    sre.ApiTest.QUADRATIC,
-    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+      'toEnriched',
+      sre.ApiTest.QUADRATIC,
+      '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
       ' data-semantic-type="relseq" data-semantic-role="equality"' +
       ' data-semantic-id="24" data-semantic-children="0,23"' +
       ' data-semantic-content="1"><mi data-semantic-type="identifier"' +
@@ -350,9 +350,9 @@ sre.ApiTest.prototype.testToEnriched = function() {
   );
   this.system.setupEngine({speech: sre.Engine.Speech.SHALLOW});
   this.executeTest(
-    'toEnriched',
-    sre.ApiTest.QUADRATIC,
-    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+      'toEnriched',
+      sre.ApiTest.QUADRATIC,
+      '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
       ' data-semantic-type="relseq" data-semantic-role="equality"' +
       ' data-semantic-id="24" data-semantic-children="0,23"' +
       ' data-semantic-content="1" data-semantic-speech="x equals' +
@@ -430,9 +430,9 @@ sre.ApiTest.prototype.testToEnriched = function() {
   );
   this.system.setupEngine({speech: sre.Engine.Speech.DEEP});
   this.executeTest(
-    'toEnriched',
-    sre.ApiTest.QUADRATIC,
-    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+      'toEnriched',
+      sre.ApiTest.QUADRATIC,
+      '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
       ' data-semantic-type="relseq" data-semantic-role="equality"' +
       ' data-semantic-id="24" data-semantic-children="0,23"' +
       ' data-semantic-content="1" data-semantic-speech="x equals' +
@@ -539,38 +539,38 @@ sre.ApiTest.prototype.testWalker = function() {
     return sre.EventUtil.KeyCode[dir].toString();
   };
   this.executeTest(
-    'walk',
-    sre.ApiTest.QUADRATIC,
-    'x equals StartFraction negative b plus-or-minus StartRoot' +
+      'walk',
+      sre.ApiTest.QUADRATIC,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
-    'move', move('DOWN'),
-    'x');
+      'move', move('DOWN'),
+      'x');
   this.executeTest(
-    'move', move('RIGHT'),
-    'equals');
+      'move', move('RIGHT'),
+      'equals');
   this.executeTest(
-    'move', move('RIGHT'),
-    'StartFraction negative b plus-or-minus StartRoot' +
+      'move', move('RIGHT'),
+      'StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
-    'move', move('DOWN'),
-    'Numerator negative b plus-or-minus StartRoot' +
+      'move', move('DOWN'),
+      'Numerator negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
   this.executeTest(
-    'move', move('SPACE'),
-    'Level 2 Numerator');
+      'move', move('SPACE'),
+      'Level 2 Numerator');
   this.executeTest(
-    'move', move('UP'),
-    'StartFraction negative b plus-or-minus StartRoot' +
+      'move', move('UP'),
+      'StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest(
-    'move', move('LEFT'),
-    'equals');
+      'move', move('LEFT'),
+      'equals');
   this.executeTest(
-    'move', move('LEFT'),
-    'x');
+      'move', move('LEFT'),
+      'x');
   this.executeTest(
-    'move', move('LEFT'),
-    null);
+      'move', move('LEFT'),
+      null);
 };

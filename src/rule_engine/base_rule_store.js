@@ -465,11 +465,18 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
 };
 
 
+/**
+ * @return {!Array.<sre.SpeechRule>} Set of all speech rules in the store.
+ */
 sre.BaseRuleStore.prototype.getSpeechRules = function() {
   return this.speechRules_;
 };
 
 
+/**
+ * Sets the speech rule set of the store.
+ * @param {!Array.<sre.SpeechRule>} rules New rule set.
+ */
 sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
   this.speechRules_ = rules;
 };

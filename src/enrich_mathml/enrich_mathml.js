@@ -32,6 +32,7 @@ goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
 
 
+
 /**
  * Error object for signaling enirchment errors.
  * @param {string} msg The error message.
