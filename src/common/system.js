@@ -251,7 +251,13 @@ sre.System.prototype.toEnriched = function(expr) {
   var root = sre.WalkerUtil.getSemanticRoot(enr);
   switch (sre.Engine.getInstance().speech) {
     case sre.Engine.Speech.SHALLOW:
-      (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
+      var speech = sre.System.getInstance().toSpeech(expr);
+      root.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+      // The following is how it should be done. But there are still some
+      // problems with tables and embellished elements that make rebuilt
+      // difficult.
+      //
+      // (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
       break;
     case sre.Engine.Speech.DEEP:
       (new sre.TreeSpeechGenerator()).getSpeech(root, enr);
