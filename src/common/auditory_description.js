@@ -142,13 +142,24 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
  * @private
  */
 sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
+  // List of 
+  var result = [];
+  var lastPers = false;
+  for (var i = 0, descr; descr = descrs[i]; i++) {
+    var str = descr.descriptionString();
+    var pers = descr.ssml();
+    if 
+  }
   return sre.BaseUtil.removeEmpty(
       descrs.map(
       function(x) {
+        var str = x.descriptionString();
         if (x.personality && x.personality.PAUSE) {
-          return '<break time="' + x.personality.PAUSE + 'ms"/>';
+          var pers = '<break time="' + x.personality.PAUSE + 'ms"/>';
+          return str ? str + ' ' + pers : pers;
         }
-        return x.descriptionString();})).
+        return str;
+      })).
       join(separator);
 };
 
