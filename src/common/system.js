@@ -110,13 +110,15 @@ sre.System.prototype.setupEngine = function(feature) {
       engine[feat] = !!feature[feat];
     }
   };
+  var setMulti = function(feat) {
+    engine[feat] = feature[feat] || engine[feat];
+  };
   var binaryFeatures = ['ssml', 'strict', 'cache', 'semantics'];
-  engine.mode = feature.mode || engine.mode;
+  var stringFeatures = ['style', 'domain', 'speech'];
+  setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
-  engine.style = feature.style || engine.style;
-  engine.domain = feature.domain || engine.domain;
-  engine.speech = feature.speech || engine.speech;
   binaryFeatures.forEach(setIf);
+  stringFeatures.forEach(setMulti);
   if (feature.json) {
     sre.SystemExternal.jsonPath = feature.json;
   }
