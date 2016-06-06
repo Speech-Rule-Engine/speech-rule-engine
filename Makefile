@@ -22,7 +22,7 @@ SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
-MATHJAX = $(LIB_DIR)/sre_mathjax.js
+MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 ENRICH = $(LIB_DIR)/enrich.js
 
