@@ -9118,7 +9118,7 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
   this.executeTreeTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>4</mn></msub><mi>z</mi>',
-      '<multirel role="unknown" id="9">' +
+      '<multirel role="equality" id="9">' +
       '<content>' +
       '<subscript role="equality" embellished="relation" id="3">' +
       '<children>' +
@@ -9129,6 +9129,31 @@ sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
       '<subscript role="equality" embellished="relation" id="7">' +
       '<children>' +
       '<relation role="equality" id="5">=</relation>' +
+      '<number role="integer" font="normal" id="6">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</multirel>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub>' +
+      '<mo>\u2264</mo><mn>4</mn></msub><mi>z</mi>',
+      '<multirel role="unknown" id="9">' +
+      '<content>' +
+      '<subscript role="equality" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="inequality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="inequality" id="5">\u2264</relation>' +
       '<number role="integer" font="normal" id="6">4</number>' +
       '</children>' +
       '</subscript>' +
