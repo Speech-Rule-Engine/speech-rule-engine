@@ -289,6 +289,9 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
  */
 sre.BaseRuleStore.prototype.testDynamicConstraints = function(
     dynamic, rule) {
+  if (sre.Engine.getInstance().strict) {
+    return this.equalDynamicConstraints(dynamic, rule);
+  }
   // We allow a default value for each dynamic constraints attribute.
   // The idea is that when we can not find a speech rule matching the value for
   // a particular attribute in the dynamic constraint we choose the one that has
@@ -297,9 +300,7 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
       Object.keys(dynamic));
   return allKeys.every(
       function(key) {
-        return sre.Engine.getInstance().strict ?
-            dynamic[key] == rule.dynamicCstr[key] :
-            dynamic[key] == rule.dynamicCstr[key] ||
+        return dynamic[key] == rule.dynamicCstr[key] ||
             // TODO (sorge) Sort this out with a ordered list of constraints.
             rule.dynamicCstr[key] == 'short' ||
             rule.dynamicCstr[key] == 'default';
