@@ -62,10 +62,17 @@ sre.AbstractionRules.defineSpecialisedRule_ = goog.bind(
     sre.AbstractionRules.mathStore);
 
 
+/** @private */
+sre.AbstractionRules.defineUniqueRuleAlias_ = goog.bind(
+    sre.AbstractionRules.mathStore.defineUniqueRuleAlias,
+    sre.AbstractionRules.mathStore);
+
+
 goog.scope(function() {
 var defineRule = sre.AbstractionRules.defineRule_;
 var defineRuleAlias = sre.AbstractionRules.defineRuleAlias_;
 var defineSpecialisedRule = sre.AbstractionRules.defineSpecialisedRule_;
+var defineUniqueRuleAlias = sre.AbstractionRules.defineUniqueRuleAlias_;
 
 
 /**
@@ -581,10 +588,17 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       './children/punctuation[@role="ellipsis"]'
   );
 
-  defineRuleAlias(
-      'abstr-relation',
+  defineUniqueRuleAlias(
+      'abstr-relation', 'mathspeak.default',
       'self::multirel[@alternative]',
       '@role!="unknown"', 'count(./children/*)>2'
+  );
+  defineUniqueRuleAlias(
+    'abstr-relation', 'mathspeak.brief', 'self::multirel[@alternative]',
+      '@role!="unknown"', 'count(./children/*)>2'
+  );
+  defineSpecialisedRule(
+      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRuleAlias(
       'abstr-var-relation',
