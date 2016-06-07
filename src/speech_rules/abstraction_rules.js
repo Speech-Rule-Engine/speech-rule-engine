@@ -581,6 +581,17 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       './children/punctuation[@role="ellipsis"]'
   );
 
+  defineRuleAlias(
+      'abstr-relation',
+      'self::multirel[@alternative]',
+      '@role!="unknown"', 'count(./children/*)>2'
+  );
+  defineRuleAlias(
+      'abstr-var-relation',
+      'self::multirel[@alternative]', '@role!="unknown"',
+      'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
+  );
+
   defineRule(
       'abstr-multirel', 'mathspeak.default',
       '[t] "collapsed relation sequence";' +
