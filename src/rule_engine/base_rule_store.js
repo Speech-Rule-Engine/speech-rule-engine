@@ -279,7 +279,9 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
 
 
 /**
- * Tests whether a speech rule satisfies a set of dynamic constraints.
+ * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
+ * the engine is in strict mode, the dynamic constraints can be "relaxed", that
+ * is, a default value can also be choosen.
  * @param {!sre.SpeechRule.DynamicCstr} dynamic Dynamic constraints.
  * @param {sre.SpeechRule} rule The rule.
  * @return {boolean} True if the preconditions apply to the node.
@@ -301,6 +303,25 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
             // TODO (sorge) Sort this out with a ordered list of constraints.
             rule.dynamicCstr[key] == 'short' ||
             rule.dynamicCstr[key] == 'default';
+      });
+};
+
+
+/**
+ * Tests whether a speech rule's dynamic constraint is equal to the given one.
+ * This is the default behaviour if the engine is in strict mode.
+ * @param {!sre.SpeechRule.DynamicCstr} dynamic Dynamic constraints.
+ * @param {sre.SpeechRule} rule The rule.
+ * @return {boolean} True if the preconditions apply to the node.
+ * @protected
+ */
+sre.BaseRuleStore.prototype.equalDynamicConstraints = function(
+    dynamic, rule) {
+  var allKeys = /** @type {Array.<sre.SpeechRule.DynamicCstrAttrib>} */ (
+      Object.keys(dynamic));
+  return allKeys.every(
+      function(key) {
+        return dynamic[key] == rule.dynamicCstr[key];
       });
 };
 
