@@ -1029,10 +1029,15 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
       goog.bind(this.processOperationsInRow_, this));
   if (partition.rel.some(
       function(x) {return !x.equals(firstRel);})) {
-    return this.makeBranchNode_(
+    var node = this.makeBranchNode_(
         sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
+    if (partition.rel.every(
+        function(x) {return x.role === firstRel.role;})) {
+      node.role = firstRel.role;
+    }
+    return node;
   }
-  var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
+  node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
       children, partition.rel,
       sre.SemanticTree.getEmbellishedInner_(firstRel).textContent);
   node.role = firstRel.role;

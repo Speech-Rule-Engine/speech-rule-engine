@@ -9212,7 +9212,7 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
   this.executeMathmlTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>4</mn></msub><mi>z</mi>',
-      '<math type="multirel" role="unknown" id="9" children="0,4,8"' +
+      '<math type="multirel" role="equality" id="9" children="0,4,8"' +
       ' content="3,7">' +
       '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
       '<msub type="subscript" role="equality" id="3" children="1,2"' +
@@ -9224,6 +9224,26 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
       '<msub type="subscript" role="equality" id="7" children="5,6"' +
       ' parent="9" operator="multirel">' +
       '<mo type="relation" role="equality" id="5" parent="7">=</mo>' +
+      '<mn type="number" role="integer" id="6" parent="7">4</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub>' +
+      '<mo>\u2264</mo><mn>4</mn></msub><mi>z</mi>',
+      '<math type="multirel" role="unknown" id="9" children="0,4,8"' +
+      ' content="3,7">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<msub type="subscript" role="equality" id="3" children="1,2"' +
+      ' parent="9" operator="multirel">' +
+      '<mo type="relation" role="equality" id="1" parent="3">=</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '<msub type="subscript" role="inequality" id="7" children="5,6"' +
+      ' parent="9" operator="multirel">' +
+      '<mo type="relation" role="inequality" id="5" parent="7">\u2264</mo>' +
       '<mn type="number" role="integer" id="6" parent="7">4</mn>' +
       '</msub>' +
       '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
