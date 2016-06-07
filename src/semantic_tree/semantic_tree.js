@@ -1028,7 +1028,7 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
   var children = partition.comp.map(
       goog.bind(this.processOperationsInRow_, this));
   if (partition.rel.some(
-      function(x) {return !x.equals(firstRel);})) {
+    function(x) {return x.role !== firstRel.role;})) {
     return this.makeBranchNode_(
         sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
   }
