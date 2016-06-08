@@ -142,14 +142,8 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
  * @private
  */
 sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
-  // List of 
-  var result = [];
-  var lastPers = false;
-  for (var i = 0, descr; descr = descrs[i]; i++) {
-    var str = descr.descriptionString();
-    var pers = descr.ssml();
-    if 
-  }
+  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+  console.log(markup);
   return sre.BaseUtil.removeEmpty(
       descrs.map(
       function(x) {
@@ -161,6 +155,39 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
         return str;
       })).
       join(separator);
+};
+
+
+/**
+ * Computes a markup list.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @return {!Array.<string|Object>} Markup list.
+ * @private
+ */
+sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
+  var result = [];
+  var persChain = [];
+  var lastPause = false;
+  for (var i = 0, descr; descr = descrs[i]; i++) {
+    var str = descr.descriptionString();
+    var pers = descr.personality;
+    if (!pers) {
+      result.push(str);
+      continue;
+    }
+    var diff = sre.AuditoryDescription.personalityDiff_(pers, persChain[0]);
+    if (diff) {
+      result.push(diff);
+      result.push(str);
+    }
+  }
+  return result;
+};
+
+
+sre.AuditoryDescription.personalityDiff_ = function(current, old) {
+  
+  return current;
 };
 
 
