@@ -24,7 +24,7 @@
 goog.provide('sre.SummarySpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml');
+goog.require('sre.SpeechGeneratorUtil');
 
 
 
@@ -40,6 +40,6 @@ goog.inherits(sre.SummarySpeechGenerator, sre.AbstractSpeechGenerator);
  * @override
  */
 sre.SummarySpeechGenerator.prototype.getSpeech = function(node, xml) {
-  sre.EnrichMathml.connectAllMactions(xml, this.getRebuilt().xml);
+  sre.SpeechGeneratorUtil.connectAllMactions(xml, this.getRebuilt().xml);
   return this.generateSpeech(node, xml);
 };

@@ -20,20 +20,9 @@
  */
 goog.provide('sre.Mathjax');
 
-goog.require('sre.AdhocSpeechGenerator');
-goog.require('sre.DirectSpeechGenerator');
-goog.require('sre.DummySpeechGenerator');
-goog.require('sre.DummyWalker');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
-goog.require('sre.HighlighterFactory');
-goog.require('sre.NodeSpeechGenerator');
-goog.require('sre.RebuildStree');
-goog.require('sre.SemanticWalker');
-goog.require('sre.SummarySpeechGenerator');
-goog.require('sre.SyntaxWalker');
 goog.require('sre.System');
-goog.require('sre.TreeSpeechGenerator');
 
 
 /**
@@ -64,7 +53,9 @@ goog.require('sre.TreeSpeechGenerator');
 
   (sre.System.getInstance()).setupEngine(
       {mode: sre.Engine.Mode.HTTP,
-        semantics: true}
+       json: MathJax.Ajax.config.path['SRE'],
+       xpath: MathJax.Ajax.config.path['SRE'],
+       semantics: true}
   );
 
   MathJax.Extension.Sre.ConfigSre();

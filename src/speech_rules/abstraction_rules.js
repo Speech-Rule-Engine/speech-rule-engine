@@ -62,10 +62,17 @@ sre.AbstractionRules.defineSpecialisedRule_ = goog.bind(
     sre.AbstractionRules.mathStore);
 
 
+/** @private */
+sre.AbstractionRules.defineUniqueRuleAlias_ = goog.bind(
+    sre.AbstractionRules.mathStore.defineUniqueRuleAlias,
+    sre.AbstractionRules.mathStore);
+
+
 goog.scope(function() {
 var defineRule = sre.AbstractionRules.defineRule_;
 var defineRuleAlias = sre.AbstractionRules.defineRuleAlias_;
 var defineSpecialisedRule = sre.AbstractionRules.defineSpecialisedRule_;
+var defineUniqueRuleAlias = sre.AbstractionRules.defineUniqueRuleAlias_;
 
 
 /**
@@ -74,6 +81,7 @@ var defineSpecialisedRule = sre.AbstractionRules.defineSpecialisedRule_;
 */
 sre.AbstractionRules.initAbstractionRules_ = function() {
   //TODO: Need some means to prioritise these rules over other rules.
+  // Identifier
   defineRule(
       'abstr-identifier', 'mathspeak.default',
       '[t] "collapsed long identifier"',
@@ -90,6 +98,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-identifier', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
+  // Numbers
   defineRule(
       'abstr-number', 'mathspeak.default',
       '[t] "collapsed long number"',
@@ -103,6 +112,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
       'abstr-number', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+
   defineRule(
       'abstr-mixed-number', 'mathspeak.default',
       '[t] "collapsed long mixed number"',
@@ -117,12 +127,14 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-mixed-number', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
+  // Text
   defineRule(
       'abstr-text', 'mathspeak.default',
       '[t] "collapsed text"',
       'self::text[@alternative]'
   );
 
+  // Functions
   defineRule(
       'abstr-function', 'mathspeak.default',
       '[t] "collapsed functional expression"',
@@ -154,6 +166,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
 
 
+  // Fraction
   defineRule(
       'abstr-fraction', 'mathspeak.default',
       '[t] "collapsed fraction"',
@@ -167,7 +180,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
       'abstr-fraction', 'mathspeak.brief', 'mathspeak.sbrief'
   );
-
 
   defineRule(
       'abstr-continued-fraction', 'mathspeak.default',
@@ -187,17 +199,32 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-continued-fraction', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
+
+  // Roots
   defineRule(
       'abstr-sqrt', 'mathspeak.default',
       '[t] "collapsed square root"',
       'self::sqrt[@alternative]'
   );
+  defineSpecialisedRule(
+      'abstr-sqrt', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-sqrt', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
   defineRule(
-      'abstr-sqrt', 'mathspeak.default',
+      'abstr-sqrt-nested', 'mathspeak.default',
       '[t] "collapsed nested square root"',
       'self::sqrt[@alternative]',
       'children/*/descendant::sqrt or children/*/descendant::root'
   );
+  defineSpecialisedRule(
+      'abstr-sqrt-nested', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-sqrt-nested', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+
   defineRule(
       'abstr-root', 'mathspeak.default',
       '[t] "collapsed root of index"; [n] children/*[1]; [t] "endindex"',
@@ -235,18 +262,38 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
+
+  // Superscript
   defineRule(
       'abstr-superscript', 'mathspeak.default',
       '[t] "collapsed power"',
       'self::superscript[@alternative]',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
+  defineSpecialisedRule(
+      'abstr-superscript', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-superscript', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+
+
+  // Subscript
   defineRule(
       'abstr-subscript', 'mathspeak.default',
       '[t] "collapsed subscript"',
       'self::subscript[@alternative]',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
+  defineSpecialisedRule(
+      'abstr-subscript', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-subscript', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
+
+
+  // Subsuperscript
   defineRule(
       'abstr-subsup', 'mathspeak.default',
       '[t] "collapsed power with subscript"',
@@ -254,7 +301,15 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'name(children/*[1])="subscript"',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
+  defineSpecialisedRule(
+      'abstr-subsup', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-subsup', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
 
+
+  // Infixop
   defineRule(
       'abstr-infixop', 'mathspeak.default',
       '[t] "collapsed"; [t] @role; [t] "with"; [t] count(./children/*);' +
@@ -325,6 +380,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
+
+  // Vector
   defineRule(
       'abstr-vector', 'mathspeak.default',
       '[t] "collapsed"; [t] count(./children/*) ; [t] "dimensional vector"',
@@ -355,6 +412,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineSpecialisedRule(
       'abstr-binomial', 'mathspeak.default', 'mathspeak.sbrief');
 
+
+  // Matrix
   defineRule(
       'abstr-determinant', 'mathspeak.default',
       '[t] "collapsed" ; [t] count(./children/*);' +
@@ -433,6 +492,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
+
+  // Cases
   defineRule(
       'abstr-cases', 'mathspeak.default',
       '[t] "collapsed case statement";' +
@@ -455,6 +516,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'or ./children/line/children/punctuation[@role="ellipsis"]'
   );
 
+
+  // Punctuated
   defineRule(
       'abstr-punctuated', 'mathspeak.default',
       '[t] "collapsed"; [n] content/*[1]; [t] "separated list";' +
@@ -479,22 +542,25 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
 
 
   defineRule(
-      'abstr-text', 'mathspeak.default',
-      '[t] "collapsed text"',
-      'self::text[@alternative]'
+      'abstr-bigop', 'mathspeak.default',
+      '[t] "collapsed"; [n] content/*[1]',
+      'self::bigop[@alternative]', 'self::*'
   );
 
   defineRule(
-      'abstr-bigop', 'mathspeak.default',
-      '[t] "collapsed"; [n] content/*[1]',
-      'self::relseq[@alternative]', 'self::*'
+      'abstr-integral', 'mathspeak.default',
+      '[t] "collapsed integral"',
+      'self::*[@alternative]', '@role="integral"', 'self::*'
   );
 
   //TODO: What about embellished operators/relations?
   defineRule(
-      'abstr-relation', 'mathspeak.brief',
-      '[t] "collapsed"; [n] text(); [t] "sequence"',
+      'abstr-relation', 'mathspeak.default',
+      '[t] "collapsed"; [n] @role;',
       'self::relseq[@alternative]', 'count(./children/*)=2'
+  );
+  defineSpecialisedRule(
+      'abstr-relation', 'mathspeak.default', 'mathspeak.brief'
   );
   defineSpecialisedRule(
       'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -502,13 +568,13 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
 
   defineRule(
       'abstr-relation', 'mathspeak.default',
-      '[t] "collapsed"; [n] text(); [t] "sequence";' +
+      '[t] "collapsed"; [n] @role; [t] "sequence";' +
       ' [t] "with"; [t] count(./children/*); [t] "elements"',
       'self::relseq[@alternative]', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-relation', 'mathspeak.brief',
-      '[t] "collapsed"; [n] text(); [t] "sequence"',
+      '[t] "collapsed"; [n] @role; [t] "sequence"',
       'self::relseq[@alternative]', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
@@ -516,40 +582,28 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   defineRule(
       'abstr-var-relation', 'mathspeak.default',
-      '[t] "collapsed"; [n] text(); [t] "sequence";' +
+      '[t] "collapsed"; [n] @role; [t] "sequence";' +
       ' [t] "with variable number of elements"',
       'self::relseq[@alternative]', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
 
-  defineRule(
-      'abstr-equality', 'mathspeak.default',
-      '[t] "collapsed equation"',
-      'self::relseq[@alternative]',
-      'self::relseq[@role="equality"]', 'count(./children/*)=2'
+  defineUniqueRuleAlias(
+      'abstr-relation', 'mathspeak.default',
+      'self::multirel[@alternative]',
+      '@role!="unknown"', 'count(./children/*)>2'
   );
-  defineRule(
-      'abstr-equality', 'mathspeak.default',
-      '[t] "collapsed equation sequence";' +
-      ' [t] "with"; [t] count(./children/*); [t] "elements"',
-      'self::relseq[@alternative]',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2'
-  );
-  defineRule(
-      'abstr-equality', 'mathspeak.brief',
-      '[t] "collapsed equation sequence";',
-      'self::relseq[@alternative]',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2'
+  defineUniqueRuleAlias(
+    'abstr-relation', 'mathspeak.brief', 'self::multirel[@alternative]',
+      '@role!="unknown"', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
-      'abstr-equality', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
   );
-  defineRule(
-      'abstr-var-equality', 'mathspeak.default',
-      '[t] "collapsed equation sequence with variable number of elements"',
-      'self::relseq[@alternative]',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2',
-      './children/punctuation[@role="ellipsis"]'
+  defineRuleAlias(
+      'abstr-var-relation',
+      'self::multirel[@alternative]', '@role!="unknown"',
+      'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(

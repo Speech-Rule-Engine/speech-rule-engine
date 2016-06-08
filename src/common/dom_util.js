@@ -25,6 +25,7 @@
 goog.provide('sre.DomUtil');
 
 goog.require('sre.Engine');
+goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
 
@@ -111,6 +112,28 @@ sre.DomUtil.replaceNode = function(oldNode, newNode) {
   }
   oldNode.parentNode.insertBefore(newNode, oldNode);
   oldNode.parentNode.removeChild(oldNode);
+};
+
+
+/**
+ * Creates a node in the current document. This is a wrapper function that
+ * ensures that a node is created in the correct document tree.
+ * @param {!string} tag The tagname of the node.
+ * @return {!Element} The newly create node.
+ */
+sre.DomUtil.createElement = function(tag) {
+  return sre.SystemExternal.document.createElement(tag);
+};
+
+
+/**
+ * Creates a text node in the current document. This is a wrapper function that
+ * ensures that a node is created in the correct document tree.
+ * @param {!string} content The text content for the node.
+ * @return {!Element} The newly create node.
+ */
+sre.DomUtil.createTextNode = function(content) {
+  return sre.SystemExternal.document.createTextNode(content);
 };
 
 

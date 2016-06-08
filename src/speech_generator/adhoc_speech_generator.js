@@ -14,17 +14,16 @@
 
 
 /**
- * @fileoverview Direct speech generator that simply picks up the speech
- *     attribute.
+ * @fileoverview Ad hoc speech generator that computes a new speech string for
+ *     an element, non-recursively, every time.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.DirectSpeechGenerator');
+goog.provide('sre.AdhocSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml');
-goog.require('sre.WalkerUtil');
+goog.require('sre.EnrichMathml.Attribute');
 
 
 
@@ -32,15 +31,17 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.DirectSpeechGenerator = function() {
+sre.AdhocSpeechGenerator = function() {
   goog.base(this);
 };
-goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
+goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.DirectSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  return sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
+sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
+  var speech = this.generateSpeech(node, xml);
+  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  return speech;
 };

@@ -23,6 +23,7 @@ goog.provide('sre.EnrichSpeechTest');
 
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.System');
 goog.require('sre.WalkerUtil');
@@ -51,7 +52,7 @@ sre.EnrichSpeechTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
       {domain: 'mathspeak',
         style: 'default',
-        speech: true,
+        speech: sre.Engine.Speech.SHALLOW,
         semantics: true});
 };
 
@@ -63,19 +64,21 @@ sre.EnrichSpeechTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
       {domain: 'default',
         style: 'short',
-        speech: false,
+        speech: sre.Engine.Speech.NONE,
         semantics: false});
 };
 
 
 /**
- * Tests if for a given mathml snippet results in a particular semantic tree.
+ * Tests if speech strings computed directly for a MathML expression are
+ * equivalent to those computed for enriched expressions.
  * @param {string} expr MathML expression.
  */
 sre.EnrichSpeechTest.prototype.executeSpeechTest = function(expr) {
   var mml = sre.Enrich.prepareMmlString(expr);
   var sysSpeech = sre.System.getInstance().toSpeech(mml);
-  var enr = sre.WalkerUtil.getSemanticRoot(sre.Enrich.semanticMathmlSync(mml));
+  var enr = sre.WalkerUtil.getSemanticRoot(
+      sre.System.getInstance().toEnriched(mml));
   var enrSpeech = enr.getAttribute(sre.EnrichMathml.Attribute.SPEECH);
   this.assert.equal(sysSpeech, enrSpeech);
 };

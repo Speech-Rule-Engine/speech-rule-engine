@@ -22,7 +22,7 @@ SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
-MATHJAX = $(LIB_DIR)/sre_mathjax.js
+MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 ENRICH = $(LIB_DIR)/enrich.js
 
@@ -279,9 +279,9 @@ clean_semantic:
 	rm -f $(SEMANTIC)
 
 enrich: $(SRC)
-	@echo Compiling browser ready Tree API
+	@echo Compiling browser ready MathML Enrichment API
 	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(ENRICH)
+	@$(CLOSURE_COMPILER) --namespace="sre.Enrich" --output_file $(ENRICH)
 
 clean_enrich:
 	rm -f $(ENRICH)

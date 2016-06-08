@@ -47,13 +47,13 @@ sre.Engine = function() {
   // TODO (sorge) Refactor into a common dynamic constraints object.
   /**
    * List of domain names.
-   * @type {Array.<string>}
+   * @type {!Array.<string>}
    */
   this.allDomains = [];
 
   /**
    * List of style names.
-   * @type {Array.<string>}
+   * @type {!Array.<string>}
    */
   this.allStyles = [];
 
@@ -82,24 +82,17 @@ sre.Engine = function() {
   this.mode = sre.Engine.Mode.SYNC;
 
   /**
-   * Flag indicating whether or not speech should be added to enriched MathML.
-   * @type {boolean}
+   * The level to which speech attributes are added to enriched elements (none,
+   * shallow, deep).
+   * @type {sre.Engine.Speech}
    */
-  this.speech = false;
-
-  /**
-   * List of predicates for checking if the engine is set up.
-   * @type {!Array.<function():boolean>}
-   * @private
-   */
-  this.setupTests_ = [];
+  this.speech = sre.Engine.Speech.NONE;
 
   /**
    * List of rule sets given as the constructor functions.
-   * @type {!Array.<sre.BaseRuleStore>}
-   * @private
+   * @type {!Array.<string>}
    */
-  this.ruleSets_ = [];
+  this.ruleSets = [];
 
   /**
    * Caching during speech generation.
@@ -130,6 +123,13 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.isEdge = false;
+
+  /**
+   * List of predicates for checking if the engine is set up.
+   * @type {!Array.<function():boolean>}
+   * @private
+   */
+  this.setupTests_ = [];
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -154,6 +154,18 @@ sre.Engine.Mode = {
   SYNC: 'sync',
   ASYNC: 'async',
   HTTP: 'http'
+};
+
+
+/**
+ * Defines to what level the engine enriches expressions with speech string
+ * attributes.
+ * @enum {string}
+ */
+sre.Engine.Speech = {
+  NONE: 'none',
+  SHALLOW: 'shallow',
+  DEEP: 'deep'
 };
 
 
@@ -187,27 +199,4 @@ sre.Engine.isReady = function() {
 sre.Engine.prototype.setupBrowsers = function() {
   this.isIE = sre.BrowserUtil.detectIE();
   this.isEdge = sre.BrowserUtil.detectEdge();
-};
-
-
-/**
- * Sets the rule sets to use.
- * @param {!Array.<string>} ruleSets The name of rule sets to use.
- */
-sre.Engine.prototype.setRuleSets = function(ruleSets) {
-  this.ruleSets_ = [];
-  for (var i = 0; i < ruleSets.length; i++) {
-    var set = sre[ruleSets[i]];
-    if (set && set.getInstance) {
-      this.ruleSets_.push(set.getInstance());
-    }
-  }
-};
-
-
-/**
- * @return {!Array.<sre.BaseRuleStore>} The rule sets that are used.
- */
-sre.Engine.prototype.getRuleSets = function() {
-  return this.ruleSets_;
 };

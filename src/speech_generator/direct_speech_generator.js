@@ -14,15 +14,17 @@
 
 
 /**
- * @fileoverview Ad hoc speech generator that computes a new speech string for
- *     an element every time.
+ * @fileoverview Direct speech generator that simply picks up the speech
+ *     attribute if it exists.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AdhocSpeechGenerator');
+goog.provide('sre.DirectSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
+goog.require('sre.EnrichMathml');
+goog.require('sre.WalkerUtil');
 
 
 
@@ -30,15 +32,15 @@ goog.require('sre.AbstractSpeechGenerator');
  * @constructor
  * @extends {sre.AbstractSpeechGenerator}
  */
-sre.AdhocSpeechGenerator = function() {
+sre.DirectSpeechGenerator = function() {
   goog.base(this);
 };
-goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
+goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  return this.generateSpeech(node, xml);
+sre.DirectSpeechGenerator.prototype.getSpeech = function(node, xml) {
+  return sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
 };

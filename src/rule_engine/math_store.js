@@ -144,7 +144,8 @@ sre.MathStore.prototype.defineUniqueRuleAlias = function(
       goog.bind(
           function(rule) {
             return rule.name == name &&
-                this.testDynamicConstraints(dynamicCstr, rule);},
+                this.equalDynamicConstraints(dynamicCstr, rule);
+          },
           this));
   if (!rule) {
     throw new sre.SpeechRule.OutputError(
@@ -224,7 +225,7 @@ sre.MathStore.prototype.defineSpecialisedRule = function(
       goog.bind(
           function(rule) {
             return rule.name == name &&
-                this.testDynamicConstraints(dynamicCstr, rule);},
+                this.equalDynamicConstraints(dynamicCstr, rule);},
           this));
   if (!rule) {
     throw new sre.SpeechRule.OutputError(

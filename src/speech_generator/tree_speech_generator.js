@@ -14,7 +14,7 @@
 
 
 /**
- * @fileoverview Tree speech generator that computes speech strings a for
+ * @fileoverview Tree speech generator that computes speech strings for
  *     elements of an entire expression tree, even if it has already speech
  *     strings attached.
  *
@@ -24,7 +24,8 @@
 goog.provide('sre.TreeSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml');
+goog.require('sre.EnrichMathml.Attribute');
+goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.WalkerUtil');
 
 
@@ -53,8 +54,8 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
     var innerNode = /** @type {Element} */(
         sre.WalkerUtil.getBySemanticId(node, key));
     if (!innerMml || !innerNode) continue;
-    sre.EnrichMathml.addSpeech(innerNode, snode);
-    sre.EnrichMathml.addPrefix(innerNode, snode);
+    sre.SpeechGeneratorUtil.addSpeech(innerNode, snode);
+    sre.SpeechGeneratorUtil.addPrefix(innerNode, snode);
   }
   return speech;
 };

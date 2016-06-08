@@ -14,38 +14,37 @@
 
 
 /**
- * @fileoverview Node speech generator that computes a new speech string for
- *     a single node if it does not yet have a speech string attached.
+ * @fileoverview Node speech generator that computes a new speech string for a
+ *     single node and its subtree, if it does not yet have a speech string
+ *     attached.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.NodeSpeechGenerator');
 
-goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.EnrichMathml');
+goog.require('sre.TreeSpeechGenerator');
 goog.require('sre.WalkerUtil');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractSpeechGenerator}
+ * @extends {sre.TreeSpeechGenerator}
  */
 sre.NodeSpeechGenerator = function() {
   goog.base(this);
 };
-goog.inherits(sre.NodeSpeechGenerator, sre.AbstractSpeechGenerator);
+goog.inherits(sre.NodeSpeechGenerator, sre.TreeSpeechGenerator);
 
 
 /**
  * @override
  */
 sre.NodeSpeechGenerator.prototype.getSpeech = function(node, xml) {
-  //TODO: This needs fixing!
-  var speech = goog.base(this, 'getSpeech', node, xml);
+  var speech = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.SPEECH);
   if (speech) return speech;
-  speech = this.generateSpeech(node, xml);
-  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-  return speech;
+  return goog.base(this, 'getSpeech', node, xml);
 };

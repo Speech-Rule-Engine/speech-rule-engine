@@ -21,12 +21,13 @@
 
 goog.provide('sre.AbstractWalker');
 
-goog.require('sre.EnrichMathml');
+goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
 goog.require('sre.HighlighterInterface');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.WalkerInterface');
 goog.require('sre.WalkerUtil');
 
@@ -443,6 +444,6 @@ sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
  */
 sre.AbstractWalker.prototype.rebuildStree_ = function() {
   var rebuilt = new sre.RebuildStree(this.xml);
-  sre.EnrichMathml.connectMactions(this.node, this.xml, rebuilt.xml);
+  sre.SpeechGeneratorUtil.connectMactions(this.node, this.xml, rebuilt.xml);
   return rebuilt;
 };
