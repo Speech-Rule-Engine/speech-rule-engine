@@ -74,3 +74,13 @@ sre.BaseUtil.union = function(a, b) {
   }
   return a.concat(sre.BaseUtil.setdifference(b, a));
 };
+
+
+/**
+ * Corrects pathnames to have trailing slashes.
+ * @param {string} path The original path.
+ * @return {string} The path that has definitely a trailing slash.
+ */
+sre.BaseUtil.makePath = function(path) {
+  return path.match('/$') ? path : path + '/';
+}

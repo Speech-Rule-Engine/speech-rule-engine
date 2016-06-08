@@ -21,6 +21,7 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
@@ -118,7 +119,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.speech = feature.speech || engine.speech;
   binaryFeatures.forEach(setIf);
   if (feature.json) {
-    sre.SystemExternal.jsonPath = feature.json;
+    sre.SystemExternal.jsonPath = sre.BaseUtil.makePath(feature.json);
   }
   if (feature.xpath) {
     sre.SystemExternal.WGXpath = feature.xpath;

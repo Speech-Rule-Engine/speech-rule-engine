@@ -23,6 +23,7 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
@@ -88,7 +89,7 @@ sre.MathMap.prototype.stringify = function() {
  * @const
  * @private
  */
-sre.MathMap.SYMBOLS_PATH_ = 'symbols/';
+sre.MathMap.SYMBOLS_PATH_ = 'symbols';
 
 
 /**
@@ -97,7 +98,7 @@ sre.MathMap.SYMBOLS_PATH_ = 'symbols/';
  * @const
  * @private
  */
-sre.MathMap.FUNCTIONS_PATH_ = 'functions/';
+sre.MathMap.FUNCTIONS_PATH_ = 'functions';
 
 
 /**
@@ -106,7 +107,7 @@ sre.MathMap.FUNCTIONS_PATH_ = 'functions/';
  * @const
  * @private
  */
-sre.MathMap.UNITS_PATH_ = 'units/';
+sre.MathMap.UNITS_PATH_ = 'units';
 
 
 /**
@@ -169,7 +170,7 @@ sre.MathMap.UNITS_FILES_ = [
  * @param {function(JSONType)} func Method adding the rules.
  */
 sre.MathMap.retrieveFiles = function(files, path, func) {
-  path = sre.SystemExternal.jsonPath + '/' + path;
+  path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_ += files.length;
