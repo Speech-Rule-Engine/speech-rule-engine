@@ -46,8 +46,8 @@ sre.SystemExternal.locationSupported = function() {
  * @type {string}
  */
 sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
-    location.protocol + '//' + 'mathjax.github.io/MathJax-accessibility/dist' :
-    'https://mathjax.github.io/MathJax-accessibility/dist';
+    location.protocol + '//' + 'progressiveaccess.com/content' :
+    'https://progressiveaccess.com/content';
 
 
 /**

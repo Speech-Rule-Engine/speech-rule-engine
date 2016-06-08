@@ -53,7 +53,9 @@ goog.require('sre.System');
 
   (sre.System.getInstance()).setupEngine(
       {mode: sre.Engine.Mode.HTTP,
-        semantics: true}
+       json: MathJax.Ajax.config.path['SRE'],
+       xpath: MathJax.Ajax.config.path['SRE'],
+       semantics: true}
   );
 
   MathJax.Extension.Sre.ConfigSre();

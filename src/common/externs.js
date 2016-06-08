@@ -33,6 +33,8 @@ stream.on = function(msg, fnc) { };
 
 
 var MathJax;
+MathJax.Ajax = {};
+MathJax.Ajax.config = {};
 MathJax.Extension = {};
 MathJax.Hub = {};
 MathJax.Hub.Register = {};
@@ -40,7 +42,6 @@ MathJax.Hub.Register.StartupHook = function(signal, callback) { };
 MathJax.Hub.Startup = {};
 MathJax.Hub.Startup.signal;
 MathJax.Callback = {};
-
 
 /**
  * @type {function(...Object)}
