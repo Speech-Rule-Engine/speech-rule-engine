@@ -69,7 +69,7 @@ sre.CaseTable.prototype.getMathml = function() {
   this.semantic.childNodes.map(/**@type{Function}*/(sre.EnrichMathml.walkTree));
   if (sre.SemanticUtil.tagName(this.mml) === 'MFENCED') {
     var children = this.mml.childNodes;
-    this.mml.insertBefore(lfence, children[0]);
+    this.mml.insertBefore(lfence, children[0] || null);
     rfence && this.mml.appendChild(rfence);
     this.mml = sre.EnrichMathml.rewriteMfenced(this.mml);
   } else {

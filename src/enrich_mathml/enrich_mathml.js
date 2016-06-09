@@ -258,7 +258,7 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
       oldCounter++;
       continue;
     }
-    node.insertBefore(newChildren[0], oldChildren[oldCounter]);
+    node.insertBefore(newChildren[0], oldChildren[oldCounter] || null);
     newChildren.shift();
   }
 };
