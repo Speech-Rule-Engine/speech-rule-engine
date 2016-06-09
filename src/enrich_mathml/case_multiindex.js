@@ -67,7 +67,7 @@ sre.CaseMultiindex.prototype.completeMultiscript = function(
         var query = this.semantic.querySelectorAll(
             function(x) {return x.id === index;});
         this.mml.insertBefore(
-            sre.CaseMultiindex.createNone_(query[0]), child);
+            sre.CaseMultiindex.createNone_(query[0]), child || null);
       } else {
         sre.EnrichMathml.getInnerNode(child).
             setAttribute(sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
