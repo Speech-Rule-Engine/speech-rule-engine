@@ -394,7 +394,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
   for (var key in sre.Engine.personalityProps) {
     var value = parseFloat(props[sre.Engine.personalityProps[key]]);
     if (!isNaN(value)) {
-      personality[key] = value;
+      personality[sre.Engine.personalityProps[key]] = value;
     }
   }
   descrs.forEach(goog.bind(function(descr) {

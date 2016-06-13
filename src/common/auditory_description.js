@@ -148,14 +148,21 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
       descrs.map(
       function(x) {
         var str = x.descriptionString();
-        if (x.personality && x.personality.PAUSE) {
-          var pers = '<break time="' + x.personality.PAUSE + 'ms"/>';
+        if (x.personality && x.personality[sre.Engine.personalityProps.PAUSE]) {
+          var pers = '<break time="' +
+                x.personality[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
           return str ? str + ' ' + pers : pers;
         }
         return str;
       })).
       join(separator);
 };
+
+//
+// Factor out and optionally combine pauses.
+// Absolute markup: Whenever there is a change the absolute markup is used.
+// Relative markup: Whenever there is a change the relative markup is used.
+//
 
 
 /**
@@ -166,28 +173,92 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
   var result = [];
-  var persChain = [];
-  var lastPause = false;
+  var currentPers = {};
   for (var i = 0, descr; descr = descrs[i]; i++) {
+    var pause = null;
     var str = descr.descriptionString();
     var pers = descr.personality;
-    if (!pers) {
-      result.push(str);
-      continue;
+    if (pers[sre.Engine.personalityProps.PAUSE] !== 'undefined') {
+      pause = {};
+      pause[sre.Engine.personalityProps.PAUSE] =
+        /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
+      delete pers[sre.Engine.personalityProps.PAUSE];
     }
-    var diff = sre.AuditoryDescription.personalityDiff_(pers, persChain[0]);
-    if (diff) {
-      result.push(diff);
-      result.push(str);
-    }
+    var diff = sre.AuditoryDescription.personalityDiff_(pers, currentPers);
+    sre.AuditoryDescription.appendMarkup_(result, str, diff, pause, true);
   }
   return result;
 };
 
 
+/**
+ * Predicate to check if the markup element is a pause.
+ * @param {!(Object|string)} element An element of the markup list.
+ * @return {boolean} True if this is a pause element.
+ * @private
+ */
+sre.AuditoryDescription.isPauseElement_ = function(element) {
+  return typeof element === 'object' &&
+    Object.keys(element).length === 1 &&
+    Object.keys(element)[0] === sre.Engine.personalityProps.PAUSE;
+};
+
+
+/**
+ * Appends content to the current markup list.
+ * @param {!Array.<string|Object>} markup The markup list.
+ * @param {string} str A content string.
+ * @param {!Object.<sre.Engine.personalityProps, number>} pers A personality
+ *     annotation.
+ * @param {?{sre.Engine.personalityProps.PAUSE: (number|undefined)}} pause A
+ *     pause annotation.
+ * @param {boolean=} opt_merge Flag that specifies subsequent pauses are to be
+ *     merged.
+ * @private
+ */
+sre.AuditoryDescription.appendMarkup_ = function(
+    markup, str, pers, pause, opt_merge) {
+  if (opt_merge) {
+    var last = markup[markup.length - 1];
+    if (last && !str && pause &&
+        sre.AuditoryDescription.isPauseElement_(last)) {
+      var pauseProp = sre.Engine.personalityProps.PAUSE;
+      last[pauseProp] = last[pauseProp] + pause[pauseProp];
+      pause = null;
+    }
+  }
+  if (Object.keys(pers).length !== 0) markup.push(pers);
+  if (str) markup.push(str);
+  if (pause) markup.push(pause);
+};
+
+
+
+/**
+ * Compute the difference of two personality annotations.
+ * @param {!Object.<sre.Engine.personalityProps, number>} current The current
+ *     personality annotation.
+ * @param {Object.<sre.Engine.personalityProps, number>} old The previous
+ *     personality annotation.
+ * @return {!Object.<sre.Engine.personalityProps, number>} The difference
+ *     between the two annotations.
+ * @private
+ */
 sre.AuditoryDescription.personalityDiff_ = function(current, old) {
-  
-  return current;
+  if (!old) return current;
+  var result = {};
+  for (var key in sre.Engine.personalityProps) {
+    var prop = sre.Engine.personalityProps[key];
+    var currentValue = current[prop];
+    var oldValue = old[prop];
+    if ((!currentValue && !oldValue) ||
+        (currentValue && oldValue && currentValue === oldValue)) {
+      continue;
+    }
+    old[prop] = currentValue || 0;
+    result[prop] = currentValue || 0;
+  }
+  return result;
 };
 
 
