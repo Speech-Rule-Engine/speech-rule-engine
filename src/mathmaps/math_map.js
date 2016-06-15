@@ -23,6 +23,7 @@
 
 goog.provide('sre.MathMap');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
@@ -31,11 +32,6 @@ goog.require('sre.SystemExternal');
 
 
 
-//TODO: (sorge)
-// Refactor code to have uniform retrieval methods for the three system modes.
-// Combine similar code for async and http.
-// Provide a generic restarts function.
-//
 /**
  *
  * @constructor
@@ -88,21 +84,12 @@ sre.MathMap.prototype.stringify = function() {
 
 
 /**
- * Path to dir containing ChromeVox JSON definitions for math speak.
- * @type {string}
- * @const
- * @private
- */
-sre.MathMap.MATHMAP_PATH_ = sre.SystemExternal.jsonPath;
-
-
-/**
  * Subpath to dir containing ChromeVox JSON definitions for symbols.
  * @type {string}
  * @const
  * @private
  */
-sre.MathMap.SYMBOLS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'symbols/';
+sre.MathMap.SYMBOLS_PATH_ = 'symbols';
 
 
 /**
@@ -111,7 +98,7 @@ sre.MathMap.SYMBOLS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'symbols/';
  * @const
  * @private
  */
-sre.MathMap.FUNCTIONS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'functions/';
+sre.MathMap.FUNCTIONS_PATH_ = 'functions';
 
 
 /**
@@ -120,7 +107,7 @@ sre.MathMap.FUNCTIONS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'functions/';
  * @const
  * @private
  */
-sre.MathMap.UNITS_PATH_ = sre.MathMap.MATHMAP_PATH_ + 'units/';
+sre.MathMap.UNITS_PATH_ = 'units';
 
 
 /**
@@ -183,6 +170,7 @@ sre.MathMap.UNITS_FILES_ = [
  * @param {function(JSONType)} func Method adding the rules.
  */
 sre.MathMap.retrieveFiles = function(files, path, func) {
+  path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_ += files.length;

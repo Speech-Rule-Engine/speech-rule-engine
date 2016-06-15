@@ -127,7 +127,7 @@ sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
  * http://gmail-greasemonkey.googlecode.com/svn/trunk/scripts/gmail-new-macros.user.js
  * @param {string} expression The XPath expression to evaluate.
  * @param {Node} rootNode The HTML node to start evaluating the XPath from.
- * @return {Array} The array of children nodes that match.
+ * @return {!Array.<Node>} The array of children nodes that match.
  */
 sre.XpathUtil.evalXPath = function(expression, rootNode) {
   try {
@@ -151,7 +151,7 @@ sre.XpathUtil.evalXPath = function(expression, rootNode) {
 /**
  * Given a rootNode, it returns an array of all its leaf nodes.
  * @param {Node} rootNode The node to get the leaf nodes from.
- * @return {Array} The array of leaf nodes for the given rootNode.
+ * @return {!Array.<Node>} The array of leaf nodes for the given rootNode.
  */
 sre.XpathUtil.getLeafNodes = function(rootNode) {
   return sre.XpathUtil.evalXPath('.//*[count(*)=0]', rootNode);
@@ -181,7 +181,7 @@ sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
  * a string type and returns the result.
  * @param {string} expression The XPath expression to evaluate.
  * @param {Node} rootNode The HTML node to start evaluating the XPath from.
- * @return {string} The result of evaluating the Xpath expression.
+ * @return {!string} The result of evaluating the Xpath expression.
  */
 sre.XpathUtil.evaluateString = function(expression, rootNode) {
   try {

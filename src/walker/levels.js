@@ -103,3 +103,21 @@ sre.Levels.prototype.get = function(index) {
 };
 
 
+/**
+ * @return {number} The current depth of the levels.
+ */
+sre.Levels.prototype.depth = function() {
+  return this.level_.length;
+};
+
+
+/**
+ * @override
+ */
+sre.Levels.prototype.toString = function() {
+  var str = '';
+  for (var i = 0, level; level = this.level_[i]; i++) {
+    str += '\n' + level.map(function(x) {return x.toString();});
+  }
+  return str;
+};

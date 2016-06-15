@@ -20,14 +20,11 @@
  */
 goog.provide('sre.Enrich');
 
-goog.require('sre.CombinedStore');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichCases');
 goog.require('sre.EnrichMathml');
 goog.require('sre.Semantic');
-goog.require('sre.SpeechRuleEngine');
-goog.require('sre.SystemExternal');
 
 
 /**
@@ -48,7 +45,6 @@ sre.Enrich.semanticMathmlNode = function(mml) {
  * @return {!Element} The modified MathML element.
  */
 sre.Enrich.semanticMathmlSync = function(expr) {
-  // TODO (sorge) Catch error case.
   var mml = sre.DomUtil.parseInput(expr);
   return sre.Enrich.semanticMathmlNode(mml);
 };

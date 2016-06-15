@@ -47835,10 +47835,7 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "function application",
         "short": "of"
-      },
-     "mathspeak": {
-       "default": ""
-     }
+      }
     },
     "key": "2061"
   },

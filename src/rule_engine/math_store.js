@@ -49,12 +49,35 @@ sre.MathStore = function() {
   this.defaultTtsProps = [sre.Engine.personalityProps.PITCH,
                           sre.Engine.personalityProps.RATE];
 
+
+  /**
+   * @type {boolean}
+   */
+  this.initialized = false;
+
+  /**
+   * @type {Array.<function()>}
+   */
+  this.initializer = [];
+
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
 
 
 /** This adds domain to dynamic constraint annotation. */
 sre.SpeechRule.DynamicCstrAttrib.DOMAIN = 'domain';
+
+
+/**
+ * @override
+ */
+sre.MathStore.prototype.initialize = function() {
+  if (this.initialized) return;
+  for (var i = 0, func; func = this.initializer[i]; i++) {
+    func();
+  }
+  this.initialized = true;
+};
 
 
 /**
@@ -121,7 +144,8 @@ sre.MathStore.prototype.defineUniqueRuleAlias = function(
       goog.bind(
           function(rule) {
             return rule.name == name &&
-                this.testDynamicConstraints(dynamicCstr, rule);},
+                this.equalDynamicConstraints(dynamicCstr, rule);
+          },
           this));
   if (!rule) {
     throw new sre.SpeechRule.OutputError(
@@ -201,7 +225,7 @@ sre.MathStore.prototype.defineSpecialisedRule = function(
       goog.bind(
           function(rule) {
             return rule.name == name &&
-                this.testDynamicConstraints(dynamicCstr, rule);},
+                this.equalDynamicConstraints(dynamicCstr, rule);},
           this));
   if (!rule) {
     throw new sre.SpeechRule.OutputError(

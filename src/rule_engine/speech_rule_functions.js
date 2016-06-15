@@ -37,7 +37,7 @@ sre.SpeechRuleFunctions = function() { };
  * Private superclass of all the custom function stores.
  * @constructor
  * @param {string} prefix A prefix string for the function names.
- * @param {Object.<string, Function>} store Storage object.
+ * @param {!Object.<string, Function>} store Storage object.
  * @private
  */
 sre.SpeechRuleFunctions.Store_ = function(prefix, store) {
@@ -56,6 +56,18 @@ sre.SpeechRuleFunctions.Store_ = function(prefix, store) {
 sre.SpeechRuleFunctions.Store_.prototype.add = function(name, func) {
   if (this.checkCustomFunctionSyntax_(name)) {
     this.store_[name] = func;
+  }
+};
+
+
+/**
+ * Adds the functions of another store.
+ * @param {sre.SpeechRuleFunctions.Store_} store A speech rule store.
+ */
+sre.SpeechRuleFunctions.Store_.prototype.addStore = function(store) {
+  var keys = Object.keys(store.store_);
+  for (var i = 0, key; key = keys[i]; i++) {
+    this.add(key, /** @type {!Function} */(store.store_[key]));
   }
 };
 
@@ -84,7 +96,7 @@ sre.SpeechRuleFunctions.CustomQuery;
  */
 sre.SpeechRuleFunctions.CustomQueries = function() {
   var store =
-      /** @type {Object.<string, sre.SpeechRuleFunctions.CustomQuery>} */ ({});
+      /** @type {!Object.<string, sre.SpeechRuleFunctions.CustomQuery>} */ ({});
   goog.base(this, 'CQF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomQueries,
@@ -105,7 +117,7 @@ sre.SpeechRuleFunctions.CustomString;
  */
 sre.SpeechRuleFunctions.CustomStrings = function() {
   var store =
-      /** @type {Object.<string, sre.SpeechRuleFunctions.CustomString>} */
+      /** @type {!Object.<string, sre.SpeechRuleFunctions.CustomString>} */
       ({});
   goog.base(this, 'CSF', store);
 };
@@ -127,7 +139,7 @@ sre.SpeechRuleFunctions.ContextFunction;
  */
 sre.SpeechRuleFunctions.ContextFunctions = function() {
   var store =
-      /** @type {Object.<string, sre.SpeechRuleFunctions.ContextFunction>} */
+      /** @type {!Object.<string, sre.SpeechRuleFunctions.ContextFunction>} */
       ({});
   goog.base(this, 'CTXF', store);
 };

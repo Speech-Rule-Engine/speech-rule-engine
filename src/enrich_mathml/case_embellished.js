@@ -202,7 +202,7 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
     }
 
     // Reordering the nodes in the tree.
-    var dummy = sre.SystemExternal.document.createElement('dummy');
+    var dummy = sre.DomUtil.createElement('dummy');
     var saveParent = newNode.parentNode;
     var saveChild = mml.childNodes[0];
 
@@ -275,7 +275,7 @@ sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
  * @private
  */
 sre.CaseEmbellished.makeEmptyNode_ = function(id) {
-  var mrow = sre.SystemExternal.document.createElement('mrow');
+  var mrow = sre.DomUtil.createElement('mrow');
   var empty = new sre.SemanticTree.Node(id);
   empty.type = sre.SemanticAttr.Type.EMPTY;
   empty.mathmlTree = mrow;
@@ -292,14 +292,14 @@ sre.CaseEmbellished.prototype.introduceNewLayer_ = function() {
   var fullOfence = this.fullFence(this.ofenceMml);
   var fullCfence = this.fullFence(this.cfenceMml);
   // Introduce a definite new layer.
-  var newNode = sre.SystemExternal.document.createElement('mrow');
+  var newNode = sre.DomUtil.createElement('mrow');
   sre.DomUtil.replaceNode(/** @type {!Element} */(this.fencedMml), newNode);
   newNode.appendChild(this.fencedMml);
   newNode.insertBefore(fullOfence, this.fencedMml);
   newNode.appendChild(fullCfence);
   // The case of top element math.
   if (!newNode.parentNode) {
-    var mrow = sre.SystemExternal.document.createElement('mrow');
+    var mrow = sre.DomUtil.createElement('mrow');
     while (newNode.childNodes.length > 0) {
       mrow.appendChild(newNode.childNodes[0]);
     }

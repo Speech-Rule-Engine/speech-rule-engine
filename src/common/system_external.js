@@ -52,7 +52,6 @@ sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
 
 /**
  * Path to JSON files.
- * @const
  * @type {string}
  */
 sre.SystemExternal.jsonPath = function() {
@@ -61,6 +60,13 @@ sre.SystemExternal.jsonPath = function() {
           sre.SystemExternal.url + '/mathmaps') +
       '/';
 }();
+
+
+/**
+ * Path to Xpath library file.
+ * @type {string}
+ */
+sre.SystemExternal.WGXpath = sre.SystemExternal.url + '/wgxpath.install.js';
 
 
 /**

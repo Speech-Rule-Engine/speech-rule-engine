@@ -28,4 +28,9 @@ goog.require('sre.System');
 /**
  * Default setup of the Engine.
  */
-(sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.HTTP});
+(sre.System.getInstance()).setupEngine(
+    {mode: sre.Engine.Mode.HTTP,
+      domain: 'mathspeak',
+      style: 'default',
+      semantics: true}
+);

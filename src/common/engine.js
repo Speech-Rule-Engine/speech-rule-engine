@@ -47,13 +47,13 @@ sre.Engine = function() {
   // TODO (sorge) Refactor into a common dynamic constraints object.
   /**
    * List of domain names.
-   * @type {Array.<string>}
+   * @type {!Array.<string>}
    */
   this.allDomains = [];
 
   /**
    * List of style names.
-   * @type {Array.<string>}
+   * @type {!Array.<string>}
    */
   this.allStyles = [];
 
@@ -82,10 +82,47 @@ sre.Engine = function() {
   this.mode = sre.Engine.Mode.SYNC;
 
   /**
-   * Flag indicating whether or not speech should be added to enriched MathML.
+   * The level to which speech attributes are added to enriched elements (none,
+   * shallow, deep).
+   * @type {sre.Engine.Speech}
+   */
+  this.speech = sre.Engine.Speech.NONE;
+
+  /**
+   * List of rule sets given as the constructor functions.
+   * @type {!Array.<string>}
+   */
+  this.ruleSets = [];
+
+  /**
+   * Caching during speech generation.
    * @type {boolean}
    */
-  this.speech = false;
+  this.cache = true;
+
+  /**
+   * Caching during speech generation.
+   * @type {boolean}
+   */
+  this.ssml = false;
+
+  /**
+   * Strict interpretations of rules and constraints.
+   * @type {boolean}
+   */
+  this.strict = false;
+
+  /**
+   * Current browser is MS Internet Explorer but not Edge.
+   * @type {boolean}
+   */
+  this.isIE = false;
+
+  /**
+   * Current browser is MS Edge.
+   * @type {boolean}
+   */
+  this.isEdge = false;
 
   /**
    * List of predicates for checking if the engine is set up.
@@ -93,24 +130,6 @@ sre.Engine = function() {
    * @private
    */
   this.setupTests_ = [];
-
-  /**
-   * Caching during speech generation.
-   * @type {boolean}
-   */
-  this.withCache = true;
-
-  /**
-   * Current browser is MS Internet Explorer but not Edge.
-   * @type {boolean}
-   */
-  this.isIE = sre.BrowserUtil.detectIE();
-
-  /**
-   * Current browser is MS Edge.
-   * @type {boolean}
-   */
-  this.isEdge = sre.BrowserUtil.detectEdge();
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -139,6 +158,18 @@ sre.Engine.Mode = {
 
 
 /**
+ * Defines to what level the engine enriches expressions with speech string
+ * attributes.
+ * @enum {string}
+ */
+sre.Engine.Speech = {
+  NONE: 'none',
+  SHALLOW: 'shallow',
+  DEEP: 'deep'
+};
+
+
+/**
  * Registers a predicate to test whether the setup of the engine is complete.
  * The basic idea is that different parts of the system that run asynchronously
  * can register a test here and the engine can check if it is set up without the
@@ -159,4 +190,13 @@ sre.Engine.isReady = function() {
   return sre.Engine.getInstance().setupTests_.every(
       function(pred) { return pred(); }
   );
+};
+
+
+/**
+ * Sets up browser specific functionality.
+ */
+sre.Engine.prototype.setupBrowsers = function() {
+  this.isIE = sre.BrowserUtil.detectIE();
+  this.isEdge = sre.BrowserUtil.detectEdge();
 };

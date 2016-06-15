@@ -21,7 +21,6 @@
 goog.provide('sre.SemanticTreeRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.StoreUtil');
 
@@ -30,18 +29,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathStore}
  */
 sre.SemanticTreeRules = function() {
-  sre.SemanticTreeRules.initCustomFunctions_();
-  sre.SemanticTreeRules.initSemanticRules_();
+  goog.base(this);
 };
+goog.inherits(sre.SemanticTreeRules, sre.MathStore);
 goog.addSingletonGetter(sre.SemanticTreeRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.SemanticTreeRules.mathStore = sre.MathmlStore.getInstance();
+sre.SemanticTreeRules.mathStore = sre.SemanticTreeRules.getInstance();
 
 
 /** @private */
@@ -117,7 +117,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2',
-      './children/punct[@role="ellipsis"]');// Make that better!
+      './children/punctuation[@role="ellipsis"]');// Make that better!
 
   defineRule(
       'multi-equality', 'default.default',
@@ -168,7 +168,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       '[t] "sum with variable number of summands";' +
           '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(children/*)>2',
-      'children/punct[@role="ellipsis"]');// Make that better!
+      'children/punctuation[@role="ellipsis"]');// Make that better!
 
   defineRule(
       'multi-addition', 'default.default',
@@ -252,25 +252,19 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'ellipsis', 'default.default',
-      '[p] (pause:200); [t] "dot dot dot"; [p] (pause:300)',
-      'self::punct', 'self::punct[@role="ellipsis"]');
+      '[p] (pause:200); [t] "ellipsis"; [p] (pause:300)',
+      'self::punctuation', 'self::punctuation[@role="ellipsis"]');
 
   defineRule(
       'fence-single', 'default.default',
       '[n] text()',
-      'self::punct', 'self::punct[@role="openfence"]');
-  defineRuleAlias('fence-single', 'self::punct',
-                  'self::punct[@role="closefence"]');
-  defineRuleAlias('fence-single', 'self::punct',
-                  'self::punct[@role="vbar"]');
-  defineRuleAlias('fence-single', 'self::punct',
-                  'self::punct[@role="application"]');
-
-  // TODO (sorge) Refine punctuations further.
-  defineRule(
-      'omit-punct', 'default.default',
-      '[p] (pause:200);',
-      'self::punct');
+      'self::punctuation', 'self::punctuation[@role="openfence"]');
+  defineRuleAlias('fence-single', 'self::punctuation',
+                  'self::punctuation[@role="closefence"]');
+  defineRuleAlias('fence-single', 'self::punctuation',
+                  'self::punctuation[@role="vbar"]');
+  defineRuleAlias('fence-single', 'self::punctuation',
+                  'self::punctuation[@role="application"]');
 
   defineRule(
       'omit-empty', 'default.default',
@@ -520,3 +514,9 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.SemanticTreeRules.getInstance().initializer = [
+  sre.SemanticTreeRules.initCustomFunctions_,
+  sre.SemanticTreeRules.initSemanticRules_
+];

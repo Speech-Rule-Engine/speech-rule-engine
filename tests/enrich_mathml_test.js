@@ -20,6 +20,7 @@
 goog.provide('sre.EnrichMathmlTest');
 
 goog.require('sre.AbstractExamples');
+goog.require('sre.DomUtil');
 goog.require('sre.Enrich');
 
 
@@ -42,6 +43,15 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
 
 /**
+ * @override
+ */
+sre.EnrichMathmlTest.prototype.setUpTest = function() {
+  this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
+                        'data-semantic-fencepointer'];
+};
+
+
+/**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} mml MathML expression.
  * @param {string} smml MathML snippet for the semantic information.
@@ -52,18 +62,26 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+  this.customizeXml(node);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));
-  //
-  // Code to replay the MathML enrichment on the enriched element.
-  // Currently this only works on relatively simple elements.
-  //
-  // if (cleaned.match(/role="implicit"|operator="fenced"/)) return;
-  // var node2 = sre.Semantic.enrichMathml(node.toString());
-  // var cleaned2 = sre.EnrichMathml.removeAttributePrefix(
-  //     xmls.serializeToString(node2));
-  // this.assert.equal(cleaned, cleaned2);
+};
+
+
+/**
+ * Removes XML nodes according to the XPath elements in the blacklist.
+ * @param {!Node} xml Xml representation of the semantic node.
+ */
+sre.EnrichMathmlTest.prototype.customizeXml = function(xml) {
+  this.attrBlacklist.forEach(
+      function(attr) {
+        var removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
+        removes.forEach(
+            function(node) {
+              node.removeAttribute(attr);
+            });
+      });
 };
 
 
@@ -2912,7 +2930,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSimpleFuncsSingle = function() {
       ' parent="10">' +
       '<mo type="fence" role="open" id="1" parent="8"' +
       ' operator="fenced">(</mo>' +
-      '<munderover type="latinletter" role="latinletter" id="6"' +
+      '<munderover type="underover" role="latinletter" id="6"' +
       ' children="2,3,4" parent="8" collapsed="(6 (5 2 3) 4)">' +
       '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
       '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
@@ -3964,7 +3982,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsSingle = function() {
       ' content="1,7" parent="10">' +
       '<mo type="fence" role="open" id="1" parent="8"' +
       ' operator="fenced">(</mo>' +
-      '<munderover type="latinletter" role="latinletter" id="6"' +
+      '<munderover type="underover" role="latinletter" id="6"' +
       ' children="2,3,4" parent="8" collapsed="(6 (5 2 3) 4)">' +
       '<mi type="identifier" role="latinletter" id="2" parent="6">x</mi>' +
       '<mn type="number" role="integer" id="3" parent="6">2</mn>' +
@@ -4759,7 +4777,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrefixFuncsUnfenced = function() {
       ' operator="appl">sin</mi>' +
       '<mo type="punctuation" role="application" id="6" parent="7"' +
       ' added="true" operator="appl">⁡</mo>' +
-      '<munderover type="latinletter" role="latinletter" id="5"' +
+      '<munderover type="underover" role="latinletter" id="5"' +
       ' children="1,2,3" parent="7" collapsed="(5 (4 1 2) 3)">' +
       '<mi type="identifier" role="latinletter" id="1" parent="5">x</mi>' +
       '<mn type="number" role="integer" id="2" parent="5">2</mn>' +
@@ -8978,7 +8996,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMunderOver = function() {
       '<munderover><mo>&#x2192;</mo><mi>n</mi><mtext>above</mtext>' +
       '</munderover>',
       '<math>' +
-      '<munderover type="arrow" role="arrow" id="4" children="0,1,2"' +
+      '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="4">n</mi>' +
@@ -9194,7 +9212,7 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
   this.executeMathmlTest(
       '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
       '<mn>4</mn></msub><mi>z</mi>',
-      '<math type="multirel" role="unknown" id="9" children="0,4,8"' +
+      '<math type="multirel" role="equality" id="9" children="0,4,8"' +
       ' content="3,7">' +
       '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
       '<msub type="subscript" role="equality" id="3" children="1,2"' +
@@ -9206,6 +9224,26 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellishment = function() {
       '<msub type="subscript" role="equality" id="7" children="5,6"' +
       ' parent="9" operator="multirel">' +
       '<mo type="relation" role="equality" id="5" parent="7">=</mo>' +
+      '<mn type="number" role="integer" id="6" parent="7">4</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub>' +
+      '<mo>\u2264</mo><mn>4</mn></msub><mi>z</mi>',
+      '<math type="multirel" role="unknown" id="9" children="0,4,8"' +
+      ' content="3,7">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
+      '<msub type="subscript" role="equality" id="3" children="1,2"' +
+      ' parent="9" operator="multirel">' +
+      '<mo type="relation" role="equality" id="1" parent="3">=</mo>' +
+      '<mn type="number" role="integer" id="2" parent="3">2</mn>' +
+      '</msub>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="9">x</mi>' +
+      '<msub type="subscript" role="inequality" id="7" children="5,6"' +
+      ' parent="9" operator="multirel">' +
+      '<mo type="relation" role="inequality" id="5" parent="7">\u2264</mo>' +
       '<mn type="number" role="integer" id="6" parent="7">4</mn>' +
       '</msub>' +
       '<mi type="identifier" role="latinletter" id="8" parent="9">z</mi>' +
@@ -10126,6 +10164,225 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexEmbellRight = function() {
       '</mrow>' +
       '<mn type="number" role="integer" id="5" parent="6">4</mn>' +
       '</msub>' +
+      '</math>'
+  );
+};
+
+
+// Actions.
+/**
+ * Currently foreign Mactions do not work with the enrichment.
+ */
+sre.EnrichMathmlTest.prototype.untestMathmlActions = function() {
+  this.executeMathmlTest(
+      '<maction><mtext>something</mtext><mn>2</mn></maction>',
+      '<math>' +
+      '<maction><mtext>something</mtext>' +
+      '<mn type="number" role="integer" font="normal" id="0">2</mn>' +
+      '</maction>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<maction><mtext>something</mtext><mi>a</mi></maction>',
+      '<math>' +
+      '<maction><mtext>something</mtext>' +
+      '<mn type="identifier" role="latinletter" font="normal" id="0">a</mn>' +
+      '</maction>' +
+      '</math>'
+  );
+};
+
+
+// Semantics, annotation, annotation-xml
+/**
+ * Expressions with semantic elements.
+ */
+sre.EnrichMathmlTest.prototype.testSemanticsElement = function() {
+  this.executeMathmlTest(
+      '<semantics></semantics>',
+      '<math type="empty" role="unknown" id="0">' +
+      '<semantics/>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mi>a</mi></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</semantics>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.EnrichMathmlTest.prototype.testSemanticsAnnotation = function() {
+  // This is not really legal markup.
+  this.executeMathmlTest(
+      '<semantics><annotation>something</annotation></semantics>',
+      '<math>' +
+      '<semantics type="empty" role="unknown" id="0">' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>',
+      '<math>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<semantics>' +
+      '<annotation>' +
+      '<content>something</content>' +
+      '</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mi>a</mi><annotation>something</annotation></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '<annotation>something</annotation>' +
+      '</semantics>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.EnrichMathmlTest.prototype.testSemanticsAnnotationXml = function() {
+  // This is not really legal markup.
+  this.executeMathmlTest(
+      '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math>' +
+      '<semantics type="text" role="unknown" id="0">' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<semantics type="text" role="unknown" id="1" parent="3">' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="0">a</mi>' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<mrow type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mrow>' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>',
+      '<math type="infixop" role="addition" id="3" children="0,2"' +
+      ' content="1">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
+      '<mo type="operator" role="addition" id="1" parent="3"' +
+      ' operator="infixop,+">+</mo>' +
+      '<semantics>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '<annotation-xml>' +
+      '<content>something</content>' +
+      '</annotation-xml>' +
+      '</semantics>' +
       '</math>'
   );
 };

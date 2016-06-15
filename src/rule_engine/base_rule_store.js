@@ -25,7 +25,7 @@ goog.provide('sre.BaseRuleStore');
 
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
-goog.require('sre.MathUtil');
+goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
 goog.require('sre.SpeechRuleFunctions');
@@ -279,7 +279,9 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
 
 
 /**
- * Tests whether a speech rule satisfies a set of dynamic constraints.
+ * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
+ * the engine is in strict mode, the dynamic constraints can be "relaxed", that
+ * is, a default value can also be choosen.
  * @param {!sre.SpeechRule.DynamicCstr} dynamic Dynamic constraints.
  * @param {sre.SpeechRule} rule The rule.
  * @return {boolean} True if the preconditions apply to the node.
@@ -287,6 +289,9 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
  */
 sre.BaseRuleStore.prototype.testDynamicConstraints = function(
     dynamic, rule) {
+  if (sre.Engine.getInstance().strict) {
+    return this.equalDynamicConstraints(dynamic, rule);
+  }
   // We allow a default value for each dynamic constraints attribute.
   // The idea is that when we can not find a speech rule matching the value for
   // a particular attribute in the dynamic constraint we choose the one that has
@@ -304,6 +309,25 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
 
 
 /**
+ * Tests whether a speech rule's dynamic constraint is equal to the given one.
+ * This is the default behaviour if the engine is in strict mode.
+ * @param {!sre.SpeechRule.DynamicCstr} dynamic Dynamic constraints.
+ * @param {sre.SpeechRule} rule The rule.
+ * @return {boolean} True if the preconditions apply to the node.
+ * @protected
+ */
+sre.BaseRuleStore.prototype.equalDynamicConstraints = function(
+    dynamic, rule) {
+  var allKeys = /** @type {Array.<sre.SpeechRule.DynamicCstrAttrib>} */ (
+      Object.keys(dynamic));
+  return allKeys.every(
+      function(key) {
+        return dynamic[key] == rule.dynamicCstr[key];
+      });
+};
+
+
+/**
  * Get a set of all dynamic constraint values.
  * @return {!Object.<sre.SpeechRule.DynamicCstrAttrib, Array.<string>>} The
  *     object with all annotations.
@@ -314,7 +338,7 @@ sre.BaseRuleStore.prototype.getDynamicConstraintValues = function() {
     for (var key in rule.dynamicCstr) {
       var newKey = [rule.dynamicCstr[key]];
       if (result[key]) {
-        result[key] = sre.MathUtil.union(result[key], newKey);
+        result[key] = sre.BaseUtil.union(result[key], newKey);
       } else {
         result[key] = newKey;
       }
@@ -391,6 +415,7 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
  */
 sre.BaseRuleStore.prototype.testPrecondition_ = function(node, rule) {
   var prec = rule.precondition;
+  var result = this.applyQuery(node, prec.query);
   return this.applyQuery(node, prec.query) === node &&
       prec.constraints.every(
           goog.bind(function(cstr) {
@@ -459,4 +484,21 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
   }
   return sre.BaseRuleStore.compareStaticConstraints_(
       prec1.constraints, prec2.constraints);
+};
+
+
+/**
+ * @return {!Array.<sre.SpeechRule>} Set of all speech rules in the store.
+ */
+sre.BaseRuleStore.prototype.getSpeechRules = function() {
+  return this.speechRules_;
+};
+
+
+/**
+ * Sets the speech rule set of the store.
+ * @param {!Array.<sre.SpeechRule>} rules New rule set.
+ */
+sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
+  this.speechRules_ = rules;
 };

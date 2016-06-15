@@ -79,6 +79,18 @@ module.exports.toEnriched = sre.System.getInstance().toEnriched;
 
 
 /**
+ * Exporting method to walk an expression.
+ */
+module.exports.walk = sre.System.getInstance().walk;
+
+
+/**
+ * Exporting method to move on an expression.
+ */
+module.exports.move = sre.System.getInstance().move;
+
+
+/**
  * Object for file io.
  */
 module.exports.file = {};

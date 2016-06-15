@@ -147,7 +147,7 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
     return 0;
   }
   var depth = sre.MathspeakUtil.computeNestingDepth_(
-      node, tags, sre.MathUtil.setdifference(opt_barrierTags, tags),
+      node, tags, sre.BaseUtil.setdifference(opt_barrierTags, tags),
       opt_barrierAttrs, opt_func, 0);
   sre.MathspeakUtil.nestingDepth[type][xmlText] = depth;
   return depth;
@@ -460,9 +460,8 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
  * Creates a simple ordinal string from a number.
  * @param {number} number The number to be converted.
  * @return {string} The ordinal string.
- * @private
  */
-sre.MathspeakUtil.simpleOrdinal_ = function(number) {
+sre.MathspeakUtil.simpleOrdinal = function(number) {
   var tens = number % 100;
   var numStr = number.toString();
   if (tens > 10 && tens < 20) {
@@ -490,7 +489,7 @@ sre.MathspeakUtil.simpleOrdinal_ = function(number) {
 sre.MathspeakUtil.ordinalCounter = function(node, context) {
   var counter = 0;
   return function() {
-    return sre.MathspeakUtil.simpleOrdinal_(++counter) + ' ' + context;
+    return sre.MathspeakUtil.simpleOrdinal(++counter) + ' ' + context;
   };
 };
 

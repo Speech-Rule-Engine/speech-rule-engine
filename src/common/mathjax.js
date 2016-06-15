@@ -20,13 +20,8 @@
  */
 goog.provide('sre.Mathjax');
 
-goog.require('sre.DirectSpeechGenerator');
-goog.require('sre.DummyWalker');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
-goog.require('sre.HighlighterFactory');
-goog.require('sre.SemanticWalker');
-goog.require('sre.SyntaxWalker');
 goog.require('sre.System');
 
 
@@ -58,10 +53,9 @@ goog.require('sre.System');
 
   (sre.System.getInstance()).setupEngine(
       {mode: sre.Engine.Mode.HTTP,
-        domain: 'mathspeak',
-        style: 'default',
-        speech: true,
-        semantics: true}
+       json: MathJax.Ajax.config.path['SRE'] + '/mathmaps',
+       xpath: MathJax.Ajax.config.path['SRE'] + '/wgxpath.install.js',
+       semantics: true}
   );
 
   MathJax.Extension.Sre.ConfigSre();

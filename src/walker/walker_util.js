@@ -22,6 +22,7 @@
 goog.provide('sre.WalkerUtil');
 
 goog.require('sre.BaseUtil');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 
@@ -80,17 +81,6 @@ sre.WalkerUtil.combineContentChildren = function(
 
 
 /**
- * Transforms a data attribute name into its camel cased version.
- * @param {!sre.EnrichMathml.Attribute} attr Micro data attributes.
- * @return {!string} The camel cased attribute.
- */
-sre.WalkerUtil.dataAttribute = function(attr) {
-  return attr.substr(5).replace(/-([a-z])/g, function(letter, index) {
-    return index.toUpperCase();});
-};
-
-
-/**
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
  * @param {!Node} node A DOM node.
@@ -98,8 +88,43 @@ sre.WalkerUtil.dataAttribute = function(attr) {
  * @return {!string} The value for that attribute.
  */
 sre.WalkerUtil.getAttribute = function(node, attr) {
-  if (node.dataset) {
-    return node.dataset[sre.WalkerUtil.dataAttribute(attr)];
+  return sre.DomUtil.getDataAttribute(node, attr);
+};
+
+
+/**
+ * Retrieves the node containing the embedding of the root of a semantic tree.
+ * @param {!Node} node The math node.
+ * @return {!Node} The node with the embedded root. If we cannot find one, the
+ *     input node is returned.
+ */
+sre.WalkerUtil.getSemanticRoot = function(node) {
+  if (node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) &&
+      !node.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
+    return node;
   }
-  return node.getAttribute(attr);
+
+  var semanticNodes = sre.DomUtil.querySelectorAllByAttr(
+      node, sre.EnrichMathml.Attribute.TYPE);
+  for (var i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
+    if (!semanticNode.hasAttribute(sre.EnrichMathml.Attribute.PARENT)) {
+      return semanticNode;
+    }
+  }
+  return node;
+};
+
+
+/**
+ * Retrieves a node containing a given semantic id starting from the given root.
+ * @param {!Node} root Root node for the query.
+ * @param {string} id The id of a semantic node.
+ * @return {Node} The node for that id.
+ */
+sre.WalkerUtil.getBySemanticId = function(root, id) {
+  return (root.querySelector ?
+          root.querySelector(
+      '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
+          sre.XpathUtil.evalXPath(
+      './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
 };

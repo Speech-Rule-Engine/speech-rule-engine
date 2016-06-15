@@ -50,3 +50,11 @@ sre.Focus.prototype.getNodes = function() {
 sre.Focus.prototype.getPrimary = function() {
   return this.primary_;
 };
+
+
+/**
+ * @override
+ */
+sre.Focus.prototype.toString = function() {
+  return 'Primary:' + this.primary_ + ' Nodes:' + this.nodes_;
+};

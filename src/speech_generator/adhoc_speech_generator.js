@@ -14,38 +14,34 @@
 
 
 /**
- * @fileoverview Abstract speech generator that simply picks up the speech
- *     attribute.
+ * @fileoverview Ad hoc speech generator that computes a new speech string for
+ *     an element, non-recursively, every time.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractSpeechGenerator');
+goog.provide('sre.AdhocSpeechGenerator');
 
-goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.AbstractSpeechGenerator');
+goog.require('sre.EnrichMathml.Attribute');
 
 
 
 /**
  * @constructor
- * @implements {sre.SpeechGeneratorInterface}
+ * @extends {sre.AbstractSpeechGenerator}
  */
-sre.AbstractSpeechGenerator = function() { };
+sre.AdhocSpeechGenerator = function() {
+  goog.base(this);
+};
+goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.AbstractSpeechGenerator.prototype.getSpeech = goog.abstractMethod;
-
-
-/**
- * @override
- */
-sre.AbstractSpeechGenerator.prototype.start = function() { };
-
-
-/**
- * @override
- */
-sre.AbstractSpeechGenerator.prototype.end = function() { };
+sre.AdhocSpeechGenerator.prototype.getSpeech = function(node, xml) {
+  var speech = this.generateSpeech(node, xml);
+  node.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+  return speech;
+};

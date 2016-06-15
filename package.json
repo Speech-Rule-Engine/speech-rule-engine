@@ -1,14 +1,13 @@
 {
   "name": "speech-rule-engine",
-  "version": "0.5.1",
+  "version": "0.9.4",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "preinstall": "make clean_closure",
     "test": "make test",
-    "prepublish": "make clean; make publish"
+    "prepublish": "make clean_closure; make clean; make publish"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"

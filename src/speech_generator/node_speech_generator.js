@@ -14,33 +14,37 @@
 
 
 /**
- * @fileoverview Direct speech generator that simply picks up the speech
- *     attribute.
+ * @fileoverview Node speech generator that computes a new speech string for a
+ *     single node and its subtree, if it does not yet have a speech string
+ *     attached.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.DirectSpeechGenerator');
+goog.provide('sre.NodeSpeechGenerator');
 
-goog.require('sre.AbstractSpeechGenerator');
 goog.require('sre.EnrichMathml');
+goog.require('sre.TreeSpeechGenerator');
 goog.require('sre.WalkerUtil');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractSpeechGenerator}
+ * @extends {sre.TreeSpeechGenerator}
  */
-sre.DirectSpeechGenerator = function() {
+sre.NodeSpeechGenerator = function() {
   goog.base(this);
 };
-goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
+goog.inherits(sre.NodeSpeechGenerator, sre.TreeSpeechGenerator);
 
 
 /**
  * @override
  */
-sre.DirectSpeechGenerator.prototype.getSpeech = function(node) {
-  return sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.SPEECH);
+sre.NodeSpeechGenerator.prototype.getSpeech = function(node, xml) {
+  var speech = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.SPEECH);
+  if (speech) return speech;
+  return goog.base(this, 'getSpeech', node, xml);
 };

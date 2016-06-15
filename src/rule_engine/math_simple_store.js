@@ -27,6 +27,7 @@
 goog.provide('sre.MathCompoundStore');
 goog.provide('sre.MathSimpleStore');
 
+goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
 
@@ -163,7 +164,7 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var textNode = sre.XpathUtil.currentDocument ?
       sre.XpathUtil.currentDocument.createTextNode(text) :
-      sre.SystemExternal.document.createTextNode(text);
+      sre.DomUtil.createTextNode(text);
   var rule = this.lookupRule(textNode, dynamic);
   if (!rule) {
     return '';
@@ -187,7 +188,7 @@ sre.MathCompoundStore.prototype.getDynamicConstraintValues = function() {
     for (var key in cstr) {
       var set = newCstr[key];
       if (set) {
-        newCstr[key] = sre.MathUtil.union(set, cstr[key]);
+        newCstr[key] = sre.BaseUtil.union(set, cstr[key]);
       } else {
         newCstr[key] = cstr[key];
       }

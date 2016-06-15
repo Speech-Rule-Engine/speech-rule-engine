@@ -108,6 +108,57 @@ sre.SemanticTree.Node = function(id) {
 
 
 /**
+ * Generate an empty semantic tree.
+ * @return {sre.SemanticTree} The empty semantic tree.
+ */
+sre.SemanticTree.empty = function() {
+  var empty = sre.DomUtil.parseInput('<math/>');
+  var stree = new sre.SemanticTree(empty);
+  stree.mathml = empty;
+  return stree;
+};
+
+
+/**
+ * Generate a semantic tree for a given node.
+ * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
+ *     the root.
+ * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
+ *     semantic node.
+ * @return {!sre.SemanticTree} The empty semantic tree.
+ */
+sre.SemanticTree.fromNode = function(semantic, opt_mathml) {
+  var stree = sre.SemanticTree.empty();
+  stree.root = semantic;
+  if (opt_mathml) {
+    stree.mathml = opt_mathml;
+  }
+  return stree;
+};
+
+
+/**
+ * Generate a semantic tree for a given node
+ * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
+ *     the root.
+ * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
+ *     semantic node.
+ * @return {sre.SemanticTree} The empty semantic tree.
+ */
+sre.SemanticTree.fromRoot = function(semantic, opt_mathml) {
+  var root = semantic;
+  while (root.parent) {
+    root = root.parent;
+  }
+  var stree = sre.SemanticTree.fromNode(root);
+  if (opt_mathml) {
+    stree.mathml = opt_mathml;
+  }
+  return stree;
+};
+
+
+/**
  * Retrieve all subnodes (including the node itself) that satisfy a given
  * predicate.
  * @param {function(sre.SemanticTree.Node): boolean} pred The predicate.
@@ -129,13 +180,12 @@ sre.SemanticTree.Node.prototype.querySelectorAll = function(pred) {
 /**
   * Returns an XML representation of the tree.
   * @param {boolean=} opt_brief If set attributes are omitted.
-  * @return {Node} The XML representation of the tree.
+  * @return {!Node} The XML representation of the tree.
   */
 sre.SemanticTree.prototype.xml = function(opt_brief) {
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('<stree></stree>', 'text/xml');
-  var xmlRoot = this.root.xml(xml, opt_brief);
-  xml.childNodes[0].appendChild(xmlRoot);
+  var xml = sre.DomUtil.parseInput('<stree></stree>');
+  var xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
+  xml.appendChild(xmlRoot);
   return xml;
 };
 
@@ -494,6 +544,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
       break;
     case 'MS':
     case 'MTEXT':
+    case 'ANNOTATION-XML':
       newNode = this.makeLeafNode_(mml);
       newNode.type = sre.SemanticAttr.Type.TEXT;
       if (sre.SemanticUtil.tagName(mml) === 'MS') {
@@ -543,8 +594,17 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MMULTISCRIPTS':
       newNode = this.processMultiScript_(children);
       break;
+    case 'ANNOTATION':
     case 'NONE':
       newNode = this.makeEmptyNode_();
+      break;
+    case 'MACTION':
+      // This here is currently geared towards our collapse actions!
+      if (children.length > 1) {
+        newNode = this.parseMathml_(children[1]);
+      } else {
+        newNode = this.makeUnprocessed_(mml);
+      }
       break;
     // TODO (sorge) Do something useful with error and phantom symbols.
     default:
@@ -969,10 +1029,15 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
       goog.bind(this.processOperationsInRow_, this));
   if (partition.rel.some(
       function(x) {return !x.equals(firstRel);})) {
-    return this.makeBranchNode_(
+    var node = this.makeBranchNode_(
         sre.SemanticAttr.Type.MULTIREL, children, partition.rel);
+    if (partition.rel.every(
+        function(x) {return x.role === firstRel.role;})) {
+      node.role = firstRel.role;
+    }
+    return node;
   }
-  var node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
+  node = this.makeBranchNode_(sre.SemanticAttr.Type.RELSEQ,
       children, partition.rel,
       sre.SemanticTree.getEmbellishedInner_(firstRel).textContent);
   node.role = firstRel.role;
@@ -1343,7 +1408,9 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
   var firstFence = fences.shift();
   var split = sre.SemanticTree.sliceNodes_(
       // COMPARISON (neutral fences)
-      fences, function(x) {return x.textContent == firstFence.textContent;});
+      fences, function(x) {
+        return sre.SemanticTree.getEmbellishedInner_(x).textContent ==
+            sre.SemanticTree.getEmbellishedInner_(firstFence).textContent;});
   if (!split.div) {
     sre.SemanticTree.fenceToPunct_(firstFence);
     var restContent = content.shift();
@@ -1384,7 +1451,11 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
   if (midFences.length == 0) {
     var fenced = this.makeHorizontalFencedNode_(
         leftFence, rightFence, content.shift());
-    content.unshift(fenced);
+    if (content.length > 0) {
+      content[0].unshift(fenced);
+    } else {
+      content = [[fenced]];
+    }
     return content;
   }
 
@@ -1628,7 +1699,7 @@ sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
         } else {
           innerNode = this.makeBranchNode_(sre.SemanticAttr.Type.UNDERSCORE,
                                            [center, children[1]], []);
-          innerNode.role = center.role;
+          innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
           children = [innerNode, children[2]];
           type = sre.SemanticAttr.Type.OVERSCORE;
         }

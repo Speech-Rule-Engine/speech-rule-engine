@@ -19,12 +19,17 @@
 
 goog.provide('sre.Tests');
 
+goog.require('sre.ApiTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.EnrichMathmlTest');
+goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakEmbellishTest');
 goog.require('sre.MathspeakRuleTest');
+goog.require('sre.NobleSamplesTest');
+goog.require('sre.PrefixRuleTest');
+goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
@@ -60,12 +65,17 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [
+  sre.ApiTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
+  sre.EnrichSpeechTest,
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
   sre.MathspeakRuleTest,
+  sre.NobleSamplesTest,
+  sre.PrefixRuleTest,
+  sre.RebuildStreeTest,
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest

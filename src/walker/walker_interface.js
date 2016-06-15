@@ -54,7 +54,7 @@ sre.WalkerInterface.prototype.deactivate = function() {};
 
 /**
  * Computes the speech string of the currently examined node.
- * @return {?string} The current speech string.
+ * @return {string} The current speech string.
  */
 sre.WalkerInterface.prototype.speech = function() {};
 
@@ -64,6 +64,13 @@ sre.WalkerInterface.prototype.speech = function() {};
  * @return {!sre.Focus} The current focus.
  */
 sre.WalkerInterface.prototype.getFocus = function() {};
+
+
+/**
+ * Returns the current depth of the walker, starting at 0.
+ * @return {!number} The current depth of the walker.
+ */
+sre.WalkerInterface.prototype.getDepth = function() {};
 
 
 /**

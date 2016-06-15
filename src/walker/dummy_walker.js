@@ -33,8 +33,8 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractWalker}
  * @override
  */
-sre.DummyWalker = function(node, generator) {
-  goog.base(this, node, generator);
+sre.DummyWalker = function(node, generator, highlighter, xml) {
+  goog.base(this, node, generator, highlighter, xml);
 };
 goog.inherits(sre.DummyWalker, sre.AbstractWalker);
 
@@ -61,3 +61,17 @@ sre.DummyWalker.prototype.left = function() { };
  * @override
  */
 sre.DummyWalker.prototype.right = function() { };
+
+
+/**
+ * @override
+ */
+sre.DummyWalker.prototype.repeat = function() { };
+
+
+/**
+ * @override
+ */
+sre.DummyWalker.prototype.getDepth = function() {
+  return 0;
+};
