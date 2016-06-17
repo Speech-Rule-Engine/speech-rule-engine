@@ -68,8 +68,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.json = false;
   /** @type {!boolean} */
   commander.speech = false;
-  /** @type {!boolean} */
-  commander.ssml = false;
+  /** @type {!string} */
+  commander.markup = '';
   /** @type {!boolean} */
   commander.xml = false;
 
@@ -87,7 +87,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-j, --json', 'Generate JSON of semantic tree.').
       option('-m, --mathml', 'Generate enriched MathML.').
       option('-p, --speech', 'Generate speech output (default).').
-      option('-r, --ssml', 'Generate speech output with SSML tags.').
+      option('-k, --markup', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
       option('').
       option('-v, --verbose', 'Verbose mode.').
@@ -109,7 +109,7 @@ sre.Cli.prototype.commandLine = function() {
           'domain': commander.dom,
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,
-          'ssml': commander.ssml
+          'markup': commander.markup
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);
