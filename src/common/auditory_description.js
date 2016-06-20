@@ -186,6 +186,7 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
   // var combine = function() {
   // };
   var recurse = function(previous) {
+    console.log(markup);
     while (markup.length > 0 &&
            !sre.AuditoryDescription.isMarkupElement_(markup[0])) {
       current.push(markup.shift());
@@ -193,7 +194,43 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
     if (markup.length === 0) return;
     var first = markup[0];
     if (first.close && first.close.length > 0) {
+      // let ol = current[0].open
+      // let cl = first.close 
+      // if ol \ cl != {} then rewrite current.
+      // if cl \ ol != {} then add cl\ol to markup.
+      //
+      var ol = current[0].open;
+      var cl = first.close;
+
+      diff = sre.BaseUtil.setdifference(cl, ol);
+      if (diff.length > 0) {
+        current.push({close: ol});
+        first.close = diff;
+        return;
+      }
+
       current.push({close: first.close});
+
+      var diff = sre.BaseUtil.setdifference(ol, cl);
+      if (diff.length > 0) {
+        var newFirst = {open: diff};
+        for (var i = 0, key; key = diff[i]; i++) {
+          newFirst[key] = current[0][key];
+          delete current[0][key];
+        }
+        current[0].open = cl;
+        current = [newFirst, current];
+        previous.pop();
+        previous.push(current);
+        delete first.close;
+        if (first.open.length === 0) {
+          markup.shift();
+        }
+        recurse(previous);
+        return;
+      }
+
+      pprint.pp(current);
       delete first.close;
       if (first.open.length === 0) {
         markup.shift();
@@ -209,6 +246,9 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
       recurse(previous);
       current = previous;
     }
+    console.log('previous');
+    pprint.pp(previous);
+    pprint.pp(markup);
     recurse(previous);
   };
   recurse(current);
