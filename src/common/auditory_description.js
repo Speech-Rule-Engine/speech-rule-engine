@@ -128,9 +128,91 @@ sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
  * @private
  */
 sre.AuditoryDescription.toString_ = function(descrs, separator) {
-  return sre.Engine.getInstance().ssml ?
-      sre.AuditoryDescription.toSsmlString_(descrs, separator) :
-      sre.AuditoryDescription.toSimpleString_(descrs, separator);
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.SSML:
+    return sre.AuditoryDescription.toSsmlString_(descrs, separator);
+  case sre.Engine.Markup.SABLE:
+    return sre.AuditoryDescription.toSableString_(descrs, separator);
+  case sre.Engine.Markup.ACSS:
+    return sre.AuditoryDescription.toAcssString_(descrs, separator);
+  case sre.Engine.Markup.NONE:
+  default:
+    return sre.AuditoryDescription.toSimpleString_(descrs, separator);
+  }
+};
+
+
+
+/**
+ * The range of personality annotations.
+ * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @private
+ */
+sre.AuditoryDescription.PersonalityRanges_ = {};
+sre.AuditoryDescription.LastOpen = [];
+
+/**
+ * Translates a list of auditory descriptions into a string with SSML markup.
+ * Currently returns an sexp for emacs speak.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string with ACSS markup.
+ * @private
+ */
+sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
+  mmm = descrs;
+  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+  console.log(markup);
+  sre.AuditoryDescription.setScaleFunction(-2, 2, 1, 10);
+  var nested = sre.AuditoryDescription.nestedMarkup_(markup);
+  console.log('Nested');
+  sre.AuditoryDescription.toSexp(nested);
+  pprint.pp(nested);
+  return nested;
+  // kk = nested;
+  // pprint.pp(nested);
+};
+
+
+sre.AuditoryDescription.toSexp = function(markup) {
+  
+};
+
+
+// Nests expressions and combines strings as much as possible.
+sre.AuditoryDescription.nestedMarkup_ = function(markup) {
+  var result = [];
+  var current = result;
+  // var combine = function() {
+  // };
+  var recurse = function(previous) {
+    while (markup.length > 0 &&
+           !sre.AuditoryDescription.isMarkupElement_(markup[0])) {
+      current.push(markup.shift());
+    }
+    if (markup.length === 0) return;
+    var first = markup[0];
+    if (first.close && first.close.length > 0) {
+      current.push({close: first.close});
+      delete first.close;
+      if (first.open.length === 0) {
+        markup.shift();
+      }
+      current = previous;
+      return;
+    }
+    if (first.open.length > 0) {
+      var start = [markup.shift()];
+      current.push(start);
+      previous = current;
+      current = start;
+      recurse(previous);
+      current = previous;
+    }
+    recurse(previous);
+  };
+  recurse(current);
+  return result;
 };
 
 
@@ -145,17 +227,48 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   console.log(markup);
   return sre.BaseUtil.removeEmpty(
-      descrs.map(
+      markup.map(
       function(x) {
-        var str = x.descriptionString();
-        if (x.personality && x.personality[sre.Engine.personalityProps.PAUSE]) {
-          var pers = '<break time="' +
-                x.personality[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
-          return str ? str + ' ' + pers : pers;
+        if (x.string) {
+          return x.string;
         }
-        return str;
+        if (sre.AuditoryDescription.isPauseElement_(x)) {
+          return '<break time="' +
+                x[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
+        }
+        return '';
       })).
-      join(separator);
+    join(separator);
+};
+
+
+/**
+ * Translates a list of auditory descriptions into a string with SSML markup.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string with SSML markup.
+ * @private
+ */
+sre.AuditoryDescription.toSableString_ = function(descrs, separator) {
+  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+  return sre.BaseUtil.removeEmpty(
+      markup.map(
+      function(x) {
+        if (x.string) {
+          return x.string;
+        }
+        if (sre.AuditoryDescription.isPauseElement_(x)) {
+          return '<break time="' +
+                x[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
+        }
+        return '';
+      })).
+    join(separator);
+};
+
+
+sre.AuditoryDescription.convertValue = function(value) {
+  
 };
 
 //
@@ -172,22 +285,36 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
  * @private
  */
 sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
+  sre.AuditoryDescription.PersonalityRanges_ = {};
+  sre.AuditoryDescription.LastOpen = [];
   var result = [];
   var currentPers = {};
   for (var i = 0, descr; descr = descrs[i]; i++) {
     var pause = null;
     var str = descr.descriptionString();
     var pers = descr.personality;
-    if (pers[sre.Engine.personalityProps.PAUSE] !== 'undefined') {
+    if (pers[sre.Engine.personalityProps.PAUSE] !== undefined) {
       pause = {};
       pause[sre.Engine.personalityProps.PAUSE] =
         /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
       delete pers[sre.Engine.personalityProps.PAUSE];
     }
     var diff = sre.AuditoryDescription.personalityDiff_(pers, currentPers);
+    //TODO: Replace last parameter by global parameter, depending on format.
     sre.AuditoryDescription.appendMarkup_(result, str, diff, pause, true);
   }
   return result;
+};
+
+
+/**
+ * Predicate to check if the markup element is a pause.
+ * @param {!(Object|string)} element An element of the markup list.
+ * @return {boolean} True if this is a pause element.
+ * @private
+ */
+sre.AuditoryDescription.isMarkupElement_ = function(element) {
+  return typeof element === 'object' && element.open;
 };
 
 
@@ -201,6 +328,19 @@ sre.AuditoryDescription.isPauseElement_ = function(element) {
   return typeof element === 'object' &&
     Object.keys(element).length === 1 &&
     Object.keys(element)[0] === sre.Engine.personalityProps.PAUSE;
+};
+
+
+/**
+ * Predicate to check if the markup element is a string.
+ * @param {!(Object|string)} element An element of the markup list.
+ * @return {boolean} True if this is a string element.
+ * @private
+ */
+sre.AuditoryDescription.isStringElement_ = function(element) {
+  return typeof element === 'object' &&
+    Object.keys(element).length === 1 &&
+    Object.keys(element)[0] === 'string';
 };
 
 
@@ -226,9 +366,14 @@ sre.AuditoryDescription.appendMarkup_ = function(
       last[pauseProp] = last[pauseProp] + pause[pauseProp];
       pause = null;
     }
+    if (last && str && Object.keys(pers).length === 0 &&
+        sre.AuditoryDescription.isStringElement_(last)) {
+      last['string'] += ' ' + str;
+      str = '';
+    }
   }
   if (Object.keys(pers).length !== 0) markup.push(pers);
-  if (str) markup.push(str);
+  if (str) markup.push({string: str});
   if (pause) markup.push(pause);
 };
 
@@ -255,8 +400,66 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
         (currentValue && oldValue && currentValue === oldValue)) {
       continue;
     }
-    old[prop] = currentValue || 0;
-    result[prop] = currentValue || 0;
+    var value = currentValue || 0;
+    //TODO: Simplify
+    if (!sre.AuditoryDescription.isMarkupElement_(result)) {
+        result.open = [];
+        result.close = [];
+    }
+    if (!currentValue) {
+      result.close.push(prop);
+    }
+    if (!oldValue) {
+      result.open.push(prop);
+    }
+    if (oldValue && currentValue) {
+      result.close.push(prop);
+      result.open.push(prop);
+    }
+    old[prop] = value;
+    result[prop] = value;
+    sre.AuditoryDescription.PersonalityRanges_[prop] ?
+      sre.AuditoryDescription.PersonalityRanges_[prop].push(value) :
+      sre.AuditoryDescription.PersonalityRanges_[prop] = [value];
+  }
+  if (sre.AuditoryDescription.isMarkupElement_(result)) {
+    // Cases:
+    // Deal first with close:
+    // Let C = close set, LO = last open,
+    // LO' = LO \ C;
+    // C = C \ LO;
+    // LO = LO';
+    // if LO = {} remove LO;
+    // if C = {} done;
+    // LO = LO u LO-1;
+    // if LO != {}
+    // close elements in LO;
+    // open elements in LO with values from oldValue;
+    // remove LO;
+    // repeat;
+    //
+    var c = result.close.slice();
+    while (c.length > 0) {
+      var lo = sre.AuditoryDescription.LastOpen.pop();
+      var loNew = sre.BaseUtil.setdifference(lo, c);
+      c = sre.BaseUtil.setdifference(c, lo);
+      lo = loNew;
+      if (c.length === 0) {
+        if (lo.length !== 0) {
+          sre.AuditoryDescription.LastOpen.push(lo);
+        }
+        continue;
+      }
+      if (lo.length === 0) {
+        continue;
+      }
+      result.close = result.close.concat(lo);
+      result.open = result.open.concat(lo);
+      for (var i = 0, open; open = lo[i]; i++) {
+        result[open] = old[open];
+      }
+    }
+    sre.AuditoryDescription.LastOpen.push(result.open);
   }
   return result;
 };
@@ -342,4 +545,18 @@ sre.AuditoryDescription.preprocessDescriptionList = function(descrList) {
   for (var i = 0, descr; descr = descrList[i]; i++) {
     sre.AuditoryDescription.preprocessDescription_(descr);
   }
+};
+
+
+/**
+ * The scale function.
+ * @type {function(number): number}
+ */
+sre.AuditoryDescription.scaleFunction = function(x) {return x;};
+
+sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
+  sre.AuditoryDescription.scaleFunction = function(x) {
+    var delta = (x - a) / (b - a);
+    return c * (1 - delta) + d * delta;
+  };
 };
