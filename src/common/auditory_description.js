@@ -162,20 +162,68 @@ sre.AuditoryDescription.LastOpen = [];
 sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
   mmm = descrs;
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  console.log(markup);
   sre.AuditoryDescription.setScaleFunction(-2, 2, 1, 10);
   var nested = sre.AuditoryDescription.nestedMarkup_(markup);
-  console.log('Nested');
-  sre.AuditoryDescription.toSexp(nested);
   pprint.pp(nested);
-  return nested;
-  // kk = nested;
-  // pprint.pp(nested);
+  return sre.AuditoryDescription.toSexp(nested);
 };
 
 
 sre.AuditoryDescription.toSexp = function(markup) {
-  
+  var result = '(exp ((average-pich . "5") (pitch-range . "todo")) ';
+  result += sre.AuditoryDescription.sexpList(markup);
+  return result + ')';
+};
+
+
+sre.AuditoryDescription.sexpList = function(markup) {
+  var result = '(';
+  while (markup.length > 0) {
+    var first = markup.shift();
+    if (first instanceof Array) {
+      result += sre.AuditoryDescription.sexpList(first);
+      continue;
+    }
+    if (sre.AuditoryDescription.isCloseElement_(first)) {
+      continue;
+    }
+    if (sre.AuditoryDescription.isMarkupElement_(first)) {
+      result += sre.AuditoryDescription.sexpProsody_(first);
+      continue;
+    }
+    if (sre.AuditoryDescription.isPauseElement_(first)) {
+      result += sre.AuditoryDescription.sexpPause_(first);
+      continue;
+    }
+    result += ' "' + first.string + '" ';
+  }
+  return result + ')';
+};
+
+
+sre.AuditoryDescription.sexpProsody_ = function(pros) {
+  var keys = pros.open;
+  var result = '(';
+  for (var i = 0, key; key = keys[i]; i++) {
+    var value = sre.AuditoryDescription.scaleFunction(pros[key]);
+    switch (key) {
+    case sre.Engine.personalityProps.RATE:
+      result += '(stress . "' + value + '")';
+      break;
+    case sre.Engine.personalityProps.PITCH:
+      result += '(pitch-range . "' + value + '")';
+      break;
+    case sre.Engine.personalityProps.VOLUME:
+      result += '(richness . "' + value + '")';
+      break;
+    }
+  }
+  return result + ')';
+};
+
+
+sre.AuditoryDescription.sexpPause_ = function(pause) {
+  return '(pause . "' + pause[sre.Engine.personalityProps.PAUSE] + '")';
 };
 
 
@@ -183,10 +231,7 @@ sre.AuditoryDescription.toSexp = function(markup) {
 sre.AuditoryDescription.nestedMarkup_ = function(markup) {
   var result = [];
   var current = result;
-  // var combine = function() {
-  // };
   var recurse = function(previous) {
-    console.log(markup);
     while (markup.length > 0 &&
            !sre.AuditoryDescription.isMarkupElement_(markup[0])) {
       current.push(markup.shift());
@@ -230,7 +275,6 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
         return;
       }
 
-      pprint.pp(current);
       delete first.close;
       if (first.open.length === 0) {
         markup.shift();
@@ -246,9 +290,6 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
       recurse(previous);
       current = previous;
     }
-    console.log('previous');
-    pprint.pp(previous);
-    pprint.pp(markup);
     recurse(previous);
   };
   recurse(current);
@@ -265,7 +306,6 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
  */
 sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  console.log(markup);
   return sre.BaseUtil.removeEmpty(
       markup.map(
       function(x) {
@@ -355,6 +395,18 @@ sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
  */
 sre.AuditoryDescription.isMarkupElement_ = function(element) {
   return typeof element === 'object' && element.open;
+};
+
+
+/**
+ * Predicate to check if the markup element is a pause.
+ * @param {!(Object|string)} element An element of the markup list.
+ * @return {boolean} True if this is a pause element.
+ * @private
+ */
+sre.AuditoryDescription.isCloseElement_ = function(element) {
+  return typeof element === 'object' && Object.keys(element).length === 1 &&
+    Object.keys(element)[0] === 'close';
 };
 
 
