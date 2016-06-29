@@ -160,65 +160,68 @@ sre.AuditoryDescription.LastOpen = [];
  * @private
  */
 sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
-  mmm = descrs;
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   sre.AuditoryDescription.setScaleFunction(-2, 2, 1, 10);
   var nested = sre.AuditoryDescription.nestedMarkup_(markup);
-  pprint.pp(nested);
   return sre.AuditoryDescription.toSexp(nested);
 };
 
 
 sre.AuditoryDescription.toSexp = function(markup) {
-  var result = '(exp ((average-pich . "5") (pitch-range . "todo")) ';
+  var pitches = sre.AuditoryDescription.PersonalityRanges_[
+    sre.Engine.personalityProps.PITCH];
+  var range = !pitches ? 0 :
+        sre.AuditoryDescription.scaleFunction(Math.max.apply(null, pitches)) -
+        sre.AuditoryDescription.scaleFunction(Math.min.apply(null, pitches));
+  var result = '(exp ((average-pich . "5") (pitch-range . "' + range + '")) ';
   result += sre.AuditoryDescription.sexpList(markup);
   return result + ')';
 };
 
 
 sre.AuditoryDescription.sexpList = function(markup) {
-  var result = '(';
+  var result = [];
   while (markup.length > 0) {
     var first = markup.shift();
     if (first instanceof Array) {
-      result += sre.AuditoryDescription.sexpList(first);
+      result.push(sre.AuditoryDescription.sexpList(first));
       continue;
     }
     if (sre.AuditoryDescription.isCloseElement_(first)) {
       continue;
     }
     if (sre.AuditoryDescription.isMarkupElement_(first)) {
-      result += sre.AuditoryDescription.sexpProsody_(first);
+      result.push(sre.AuditoryDescription.sexpProsody_(first));
       continue;
     }
     if (sre.AuditoryDescription.isPauseElement_(first)) {
-      result += sre.AuditoryDescription.sexpPause_(first);
+      result.push(sre.AuditoryDescription.sexpPause_(first));
       continue;
     }
-    result += ' "' + first.string + '" ';
+    result.push('"' + first.string + '"');
   }
-  return result + ')';
+  return '(' + result.join(' ') + ')';
 };
 
 
 sre.AuditoryDescription.sexpProsody_ = function(pros) {
   var keys = pros.open;
-  var result = '(';
+  var result = [];
   for (var i = 0, key; key = keys[i]; i++) {
     var value = sre.AuditoryDescription.scaleFunction(pros[key]);
     switch (key) {
     case sre.Engine.personalityProps.RATE:
-      result += '(stress . "' + value + '")';
+      result.push('(stress . "' + value + '")');
       break;
     case sre.Engine.personalityProps.PITCH:
-      result += '(pitch-range . "' + value + '")';
+      result.push('(pitch-range . "' + value + '")');
       break;
     case sre.Engine.personalityProps.VOLUME:
-      result += '(richness . "' + value + '")';
+      result.push('(richness . "' + value + '")');
       break;
     }
   }
-  return result + ')';
+  return '(' + result.join(' ') + ')';
 };
 
 

@@ -294,3 +294,6 @@ clean_compiler:
 clean_import_script:
 	@sed -i s/'goog.global.CLOSURE_IMPORT_SCRIPT\;'/'goog.global.CLOSURE_IMPORT_SCRIPT = null\;'/g $(CLOSURE_LIB)/closure/goog/base.js
 
+
+emacs: publish
+	@cp $(TARGET) ../emacs-math-speak/
