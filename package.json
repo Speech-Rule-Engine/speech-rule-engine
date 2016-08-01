@@ -36,7 +36,7 @@
   "devDependencies": {
     "closure": ">=1.0.0",
     "closure-library": ">=1.43629075.2",
-    "google-closure-compiler": ">=1.5.0"
+    "google-closure-compiler": ">=20150901.0.0"
   },
   "files": [
       "index.js",
