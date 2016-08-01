@@ -89,7 +89,7 @@ CLOSURE_FLAGS = $(foreach flag, $(COMPILER_FLAGS), $(MAKE_FLAG))
 CLOSURE_LIB_NAME = closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
-COMPILER_JAR = $(NODE_MODULES)/closurecompiler/compiler/compiler.jar
+COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
 CLOSURE_COMPILER = python $(CLOSURE_ROOT)/closurebuilder.py --root=$(CLOSURE_LIB)/ --root=$(SRC_DIR) --output_mode=compiled --compiler_jar=$(COMPILER_JAR) $(CLOSURE_FLAGS)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
