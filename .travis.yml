@@ -7,5 +7,5 @@ branches:
   except:
     - fix_brackeing
 install:
-  - npm install closure closure-library closurecompiler commander xmldom xpath xml-mapping
+  - npm install closure closure-library google-closure-compiler commander xmldom xpath xml-mapping
   - make clean_closure
