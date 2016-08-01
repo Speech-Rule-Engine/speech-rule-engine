@@ -105,7 +105,7 @@ Standalone Engine
 Node dependencies you have to install:
 
      closure
-     closurecompiler
+     google-closure-compiler
      closure-library
      xmldom
      xpath
@@ -114,7 +114,7 @@ Node dependencies you have to install:
  
 Using npm run
 
-     npm install closure closurecompiler closure-library xmldom xpath commander xml-mapping
+     npm install closure google-closure-compiler closure-library xmldom xpath commander xml-mapping
 
 
 In version 1.43 of the closure library there is a mistake in the file 
