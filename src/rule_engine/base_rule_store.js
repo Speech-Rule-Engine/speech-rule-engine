@@ -58,6 +58,9 @@ sre.BaseRuleStore = function() {
    */
   this.contextFunctions = new sre.SpeechRuleFunctions.ContextFunctions();
 
+  //TODO: (MOSS) WP 1.3:
+  // Replace by dedicated trie data structure.
+  //
   /**
    * Set of speech rules in the store.
    * @type {!Array.<sre.SpeechRule>}
@@ -79,6 +82,9 @@ sre.BaseRuleStore = function() {
 };
 
 
+//TODO: (MOSS) WP 1.3:
+// Replace library methods by trie indexing.
+//
 /**
  * @override
  */
@@ -278,6 +284,9 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
 };
 
 
+//TODO: (MOSS) WP 1.2:
+// Replace by flexible and customisable rule ordering.
+//
 /**
  * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
  * the engine is in strict mode, the dynamic constraints can be "relaxed", that

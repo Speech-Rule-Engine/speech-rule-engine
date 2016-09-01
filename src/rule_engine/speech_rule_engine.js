@@ -94,6 +94,9 @@ sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
 };
 
 
+//TODO: (MOSS) WP 1.4
+// Extend to Context structure
+//
 /**
  * Returns the a global parameter if it exists.
  * @param {string} parameter The parameter name.

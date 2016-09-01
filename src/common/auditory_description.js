@@ -134,6 +134,10 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
 };
 
 
+//TODO: (MOSS) WP2.3
+// Implement translations into SSML and CSS.
+// Cleaner than the hack for the NVDA/EmacsSpeak bridge!
+//
 /**
  * Translates a list of auditory descriptions into a string with SSML markup.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.

@@ -359,6 +359,9 @@ sre.SpeechRule.splitString_ = function(str, sep) {
 };
 
 
+//TODO: (MOSS) WP 1.1
+// Revisit
+//
 /**
  * Attributes for dynamic constraints.
  * We define one default attribute as style. Speech rule stores can add other
