@@ -86,7 +86,7 @@ CLOSURE_FLAGS = $(foreach flag, $(COMPILER_FLAGS), $(MAKE_FLAG))
 ## Node JS modules
 # Closure compiler in nodejs.
 # Linter in nodejs. 
-CLOSURE_LIB_NAME = closure-library
+CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
@@ -136,7 +136,8 @@ deps: $(DEPS)
 
 $(DEPS):
 	@echo Building Javascript dependencies $(DEPS)
-	@$(DEPSWRITER) --root_with_prefix="$(SRC_DIR) ../../../" > $(DEPS)
+##	@$(DEPSWRITER) --root_with_prefix="$(SRC_DIR) ../../../" > $(DEPS)
+	@$(DEPSWRITER) --root="$(SRC_DIR)" > $(DEPS)
 
 
 start_files: directories $(START) $(INTERACTIVE)

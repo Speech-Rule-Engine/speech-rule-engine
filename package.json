@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "make test",
-    "prepublish": "make clean_closure; make clean; make publish"
+    "prepublish": "make clean; make publish"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
@@ -34,15 +34,14 @@
     "xpath": "*"
   },
   "devDependencies": {
-    "closure": ">=1.0.0",
-    "closure-library": ">=1.43629075.2",
-    "google-closure-compiler": ">=20150901.0.0"
+    "google-closure-compiler": ">=20150901.0.0",
+    "google-closure-library": "^20160822.0.0"
   },
   "files": [
-      "index.js",
-      "LICENSE",
-      "README.md",
-      "lib/"
+    "index.js",
+    "LICENSE",
+    "README.md",
+    "lib/"
   ],
   "main": "index.js"
 }
