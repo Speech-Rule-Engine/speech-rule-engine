@@ -141,7 +141,7 @@ $(DEPS):
 
 start_files: directories $(START) $(INTERACTIVE)
 
-start: link $(START)
+start: $(START)
 
 $(START): 
 	@echo "Making startup script."
@@ -152,7 +152,7 @@ $(START):
 	@chmod 755 $@
 
 
-interactive: directories link $(INTERACTIVE) deps
+interactive: directories $(INTERACTIVE) deps
 
 $(INTERACTIVE): 
 	@echo "Making interactive script."
@@ -172,20 +172,11 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
 
-CLOSURE_LIB_LINK = $(SRC_DIR)/$(CLOSURE_LIB_NAME)
-
-link: $(CLOSURE_LIB_LINK)
-
-$(CLOSURE_LIB_LINK): 
-	@echo "Making link..."
-	@ln -s $(CLOSURE_LIB) $(CLOSURE_LIB_LINK)
-
 clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(START)
 	rm -f $(INTERACTIVE)
-	rm -f $(CLOSURE_LIB_LINK)
 	$(foreach map, $(MAPS), rm -rf $(LIB_DIR)/$(map))
 
 
@@ -204,7 +195,7 @@ $(TEST_DEPS):
 	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
 	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) ../../../" > $(TEST_DEPS)
 
-test: directories link test_deps deps test_compile test_script run_test
+test: directories test_deps deps test_compile test_script run_test
 
 test_compile: $(TEST_TARGET)
 
