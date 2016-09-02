@@ -1,6 +1,6 @@
 #
 # Makefile for Speech Rule Engine
-# Copyright 2014, Volker Sorge <Volker.Sorge@gmail.com>
+# Copyright 2014-2016, Volker Sorge <Volker.Sorge@gmail.com>
 #
 
 MODULE_NAME = node_modules
@@ -37,25 +37,11 @@ TEST_TARGET = $(LIB_DIR)/test.js
 TEST_DEPS = $(TEST_DIR)/deps.js
 TEST = $(BIN_DIR)/test_sre
 TEST_SRC = $(TEST_DIR)/*.js
-# Use installed closure binary, NOT node.js closure.
-
-## Separate binary
-# Closure compiler as binary
-# Linter as binary. 
-
-# CLOSURE_ROOT = /opt/closure/bin
-# CLOSURE_COMPILER = java -jar $(CLOSURE_ROOT)/compiler.jar
-# DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
-
-# LINT_ROOT = $(CLOSURE_ROOT)
-# GJSLINT = $(LINT_ROOT)/gjslint --strict --jsdoc -r
-# FIXJSSTYLE = /usr/local/bin/fixjsstyle --strict --jsdoc -r
-#######################################################################3
-
 
 ##################################################################
 # Error flags.
 # Compiling as rigidly as possible.
+# (Currently we use automatically all)
 ##################################################################
 CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions newCheckTypes nonStandardJsDocs reportUnknownTypes suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
@@ -63,24 +49,13 @@ ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
 ##################################################################
 # Extern files.
+# (Currently not used as they seem to be included automatically now.)
 ##################################################################
 EXTERN_FILES = $(shell find $(SRC_DIR) -type f -name 'externs.js')
 MAKE_EXTERN_FLAG = --externs=$(extern)
 EXTERN_FLAGS = $(foreach extern, $(EXTERN_FILES), $(MAKE_EXTERN_FLAG))
 
-##################################################################
-# Assembling compiler flags.
-#
-# Note, that depending on how we compile, we need to wrap up the 
-# compiler flags to pass them through to the py script.
-#
-##################################################################
-# For use with python script
-#MAKE_FLAG = $(addprefix --compiler_flags=, "$(flag)")
-# For use with compiler directly:
-# MAKE_FLAG = $(flag)
-# COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
-# CLOSURE_FLAGS = $(foreach flag, $(COMPILER_FLAGS), $(MAKE_FLAG))
+COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
 
 
 ## Node JS modules
@@ -90,7 +65,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT --js $(CLOSURE_LIB)/closure/goog/base.js # --jscomp_error=* # $(ERROR_FLAGS)
+CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT --js $(CLOSURE_LIB)/closure/goog/base.js # --jscomp_error=* 
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
@@ -98,11 +73,6 @@ LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
 GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
 FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
-
-#######################################################################3
-# Probably don't need those!
-START_FILE := $(shell mktemp --dry-run --tmpdir=$(SRC_DIR) --suffix=.js)
-INTER_FILE := $(shell mktemp --dry-run --tmpdir=$(SRC_DIR) --suffix=.js)
 
 #######################################################################3
 
@@ -127,8 +97,6 @@ compile: $(TARGET)
 
 $(TARGET): $(SRC)
 	@echo Compiling Speech Rule Engine
-#	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
-# The following command has to become the final namespace that gets everything together.
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --js_output_file=$(TARGET) $^
 
 deps: $(DEPS)
@@ -221,7 +189,9 @@ clean_test:
 	rm -f $(TEST)
 
 
-## Publish the API via npm.
+##################################################################
+# Publish the API via npm.
+##################################################################
 
 publish: api maps
 
@@ -248,7 +218,9 @@ api: $(SRC)
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
 
-## Other useful targets.
+##################################################################
+# Other useful targets.
+##################################################################
 
 browser: $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
