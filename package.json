@@ -34,6 +34,7 @@
     "xpath": "*"
   },
   "devDependencies": {
+    "closure-linter-wrapper": "^1.1.0",
     "google-closure-compiler": ">=20150901.0.0",
     "google-closure-library": "^20160822.0.0"
   },
