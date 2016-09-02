@@ -57,7 +57,7 @@ TEST_SRC = $(TEST_DIR)/*.js
 # Error flags.
 # Compiling as rigidly as possible.
 ##################################################################
-CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkDebuggerStatement checkRegExp checkTypes checkVars const constantProperty deprecated duplicate externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts missingProperties nonStandardJsDocs strictModuleDepCheck suspiciousCode undefinedNames undefinedVars unknownDefines uselessCode visibility # es5Strict  ## This does not work with older version of the closure library!
+CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions newCheckTypes nonStandardJsDocs reportUnknownTypes suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
@@ -76,11 +76,11 @@ EXTERN_FLAGS = $(foreach extern, $(EXTERN_FILES), $(MAKE_EXTERN_FLAG))
 #
 ##################################################################
 # For use with python script
-MAKE_FLAG = $(addprefix --compiler_flags=, "$(flag)")
+#MAKE_FLAG = $(addprefix --compiler_flags=, "$(flag)")
 # For use with compiler directly:
 # MAKE_FLAG = $(flag)
-COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
-CLOSURE_FLAGS = $(foreach flag, $(COMPILER_FLAGS), $(MAKE_FLAG))
+# COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
+# CLOSURE_FLAGS = $(foreach flag, $(COMPILER_FLAGS), $(MAKE_FLAG))
 
 
 ## Node JS modules
@@ -90,7 +90,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = python $(CLOSURE_ROOT)/closurebuilder.py --root=$(CLOSURE_LIB)/ --root=$(SRC_DIR) --output_mode=compiled --compiler_jar=$(COMPILER_JAR) $(CLOSURE_FLAGS)
+CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT --js $(CLOSURE_LIB)/closure/goog/base.js # --jscomp_error=* # $(ERROR_FLAGS)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
@@ -127,10 +127,9 @@ compile: $(TARGET)
 
 $(TARGET): $(SRC)
 	@echo Compiling Speech Rule Engine
-	@echo $^
 #	@$(CLOSURE_COMPILER) --js $^ --js_output_file $(SRC_DIR)/sre.js
 # The following command has to become the final namespace that gets everything together.
-	@$(CLOSURE_COMPILER) --namespace="sre.Cli" --output_file $(TARGET)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --js_output_file=$(TARGET) $^
 
 deps: $(DEPS)
 
@@ -201,8 +200,7 @@ test_compile: $(TEST_TARGET)
 
 $(TEST_TARGET): $(TEST_SRC) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
-	@echo $^
-	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --root=$(TEST_DIR) --namespace="sre.Tests" --output_file $(TEST_TARGET)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
 
 test_script: $(TEST)
 
@@ -247,40 +245,35 @@ iemaps:
 
 api: $(SRC)
 	@echo Compiling Speech Rule Engine API
-	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Api" --output_file $(TARGET)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
 
 ## Other useful targets.
 
 browser: $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
-	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Browser" --output_file $(BROWSER)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Browser --js_output_file=$(BROWSER) $^
 
 clean_browser:
 	rm -f $(BROWSER)
 
 mathjax: $(SRC)
 	@echo Compiling MathJax ready Speech Rule Engine
-	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Mathjax" --output_file $(MATHJAX)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Mathjax --js_output_file=$(MATHJAX) $^
 
 clean_mathjax:
 	rm -f $(MATHJAX)
 
 semantic: $(SRC)
 	@echo Compiling browser ready Semantic Tree API
-	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Semantic" --output_file $(SEMANTIC)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Semantic --js_output_file=$(SEMANTIC) $^
 
 clean_semantic:
 	rm -f $(SEMANTIC)
 
 enrich: $(SRC)
 	@echo Compiling browser ready MathML Enrichment API
-	@echo $^
-	@$(CLOSURE_COMPILER) --namespace="sre.Enrich" --output_file $(ENRICH)
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Enrich --js_output_file=$(ENRICH) $^
 
 clean_enrich:
 	rm -f $(ENRICH)
