@@ -284,12 +284,3 @@ enrich: $(SRC)
 
 clean_enrich:
 	rm -f $(ENRICH)
-
-clean_closure: clean_compiler clean_import_script
-
-clean_compiler:
-	@sed -i s/\'-d32\'//g $(CLOSURE_ROOT)/jscompiler.py
-
-clean_import_script:
-	@sed -i s/'goog.global.CLOSURE_IMPORT_SCRIPT\;'/'goog.global.CLOSURE_IMPORT_SCRIPT = null\;'/g $(CLOSURE_LIB)/closure/goog/base.js
-
