@@ -272,6 +272,7 @@ sre.ApiTest.prototype.testToDescription = function() {
  * Test for semantic tree API.
  */
 sre.ApiTest.prototype.testToEnriched = function() {
+  var post = function(x) {return x.toString();};
   this.executeTest(
       'toEnriched',
       sre.ApiTest.QUADRATIC,
@@ -346,7 +347,8 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-operator="infixop,⁢">⁢</mo><mi' +
       ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
       ' data-semantic-font="italic" data-semantic-id="20"' +
-      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
+      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>',
+      post
   );
   this.system.setupEngine({speech: sre.Engine.Speech.SHALLOW});
   this.executeTest(
@@ -426,7 +428,8 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-operator="infixop,⁢">⁢</mo><mi' +
       ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
       ' data-semantic-font="italic" data-semantic-id="20"' +
-      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
+      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>',
+      post
   );
   this.system.setupEngine({speech: sre.Engine.Speech.DEEP});
   this.executeTest(
@@ -525,7 +528,8 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
       ' data-semantic-font="italic" data-semantic-id="20"' +
       ' data-semantic-parent="22" data-semantic-speech="a">a</mi></mrow>' +
-      '</mfrac></math>'
+      '</mfrac></math>',
+      post
   );
   this.system.setupEngine({speech: sre.Engine.Speech.NONE});
 };

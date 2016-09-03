@@ -52,7 +52,7 @@ goog.addSingletonGetter(sre.Tests);
  */
 sre.Tests.prototype.run = function() {
   for (var i = 0, test; test = sre.Tests.testList[i]; i++) {
-    this.runner.registerTest(new test);
+    this.runner.registerTest(new test());
   }
   this.runner.runTests();
   this.runner.summary();

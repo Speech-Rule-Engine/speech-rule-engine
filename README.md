@@ -104,9 +104,8 @@ Standalone Engine
 
 Node dependencies you have to install:
 
-     closure
      google-closure-compiler
-     closure-library
+     google-closure-library
      xmldom
      xpath
      commander
@@ -114,24 +113,8 @@ Node dependencies you have to install:
  
 Using npm run
 
-     npm install closure google-closure-compiler closure-library xmldom xpath commander xml-mapping
+     npm install google-closure-compiler google-closure-library xmldom xpath commander xml-mapping
 
-
-In version 1.43 of the closure library there is a mistake in the file 
-
-    closure-library/closure/bin/build/jscompiler.py 
-
-You might need to change
-
-    # Attempt 32-bit mode if we're <= Java 1.7
-    if java_version >= 1.7:
-      args += ['-d32']
-
-to 
-
-    # Attempt 32-bit mode if we're <= Java 1.7
-    if java_version <= 1.7:
-      args += ['-d32']
 
 ### Build #############
 
@@ -143,7 +126,6 @@ variable in the Makefile.  Then simply run
 This will make both the command line executable and the interactive load script.
 
 ### Run on command line ############
-
 
     bin/sre -i infile -o outfile
 
