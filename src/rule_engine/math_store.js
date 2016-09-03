@@ -35,6 +35,9 @@ goog.require('sre.SpeechRule');
 sre.MathStore = function() {
   goog.base(this);
 
+  //TODO: (MOSS) WP 1.1
+  // Revisit
+  //
   /**
    * @override
    */
@@ -304,6 +307,9 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
 };
 
 
+//TODO: (MOSS) WP 1.4
+// Integrate Context structure
+//
 /**
  * Creates a new Auditory Description for a math expression.
  * @param {string} text to be translated.

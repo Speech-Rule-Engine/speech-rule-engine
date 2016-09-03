@@ -2162,6 +2162,10 @@ sre.SemanticTree.generalFunctionBoundary_ = function(node) {
 };
 
 
+//TODO: (MOSS) WP 2.1
+// Improve table recognition, multiline alignments for pausing.
+// Maybe labels, interspersed text etc.
+//
 /**
  * Rewrites tables into matrices or case statements in a list of nodes.
  * @param {!Array.<!sre.SemanticTree.Node>} nodes List of nodes to rewrite.

@@ -24,6 +24,11 @@ goog.require('sre.StoreUtil');
 
 
 
+//TODO: (MOSS) WP 2.2
+// * Turn into a proper rule store rather than a mathspeak style
+// * Implement rules from http://www.dessci.com/en/reference/ies-ets/
+// * Implement preference settings
+//
 /**
  * Rule initialization.
  * @constructor
