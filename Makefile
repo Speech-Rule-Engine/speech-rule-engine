@@ -65,7 +65,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT --js $(CLOSURE_LIB)/closure/goog/base.js # --jscomp_error=* 
+CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT --js $(CLOSURE_LIB)/closure/goog/base.js # $(ERROR_FLAGS) # --jscomp_error=* 
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
