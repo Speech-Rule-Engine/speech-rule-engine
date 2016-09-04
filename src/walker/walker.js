@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.WalkerInterface');
+goog.provide('sre.Walker');
 
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
@@ -30,47 +30,47 @@ goog.require('sre.SpeechGeneratorInterface');
 /**
  * @interface
  */
-sre.WalkerInterface = function() {};
+sre.Walker = function() {};
 
 
 /**
  * Indicator if the walker is active.
  * @return {boolean} True if walker is active.
  */
-sre.WalkerInterface.prototype.isActive = function() {};
+sre.Walker.prototype.isActive = function() {};
 
 
 /**
  * Activates the walker.
  */
-sre.WalkerInterface.prototype.activate = function() {};
+sre.Walker.prototype.activate = function() {};
 
 
 /**
  * Deactivates the walker.
  */
-sre.WalkerInterface.prototype.deactivate = function() {};
+sre.Walker.prototype.deactivate = function() {};
 
 
 /**
  * Computes the speech string of the currently examined node.
  * @return {string} The current speech string.
  */
-sre.WalkerInterface.prototype.speech = function() {};
+sre.Walker.prototype.speech = function() {};
 
 
 /**
  * The node the walker currently sits on.
  * @return {!sre.Focus} The current focus.
  */
-sre.WalkerInterface.prototype.getFocus = function() {};
+sre.Walker.prototype.getFocus = function() {};
 
 
 /**
  * Returns the current depth of the walker, starting at 0.
  * @return {!number} The current depth of the walker.
  */
-sre.WalkerInterface.prototype.getDepth = function() {};
+sre.Walker.prototype.getDepth = function() {};
 
 
 /**
@@ -79,4 +79,4 @@ sre.WalkerInterface.prototype.getDepth = function() {};
  * @return {?boolean} True if the move was successful, false, if it was not, and
  *     null if there was no move of the key.
  */
-sre.WalkerInterface.prototype.move = function(key) {};
+sre.Walker.prototype.move = function(key) {};

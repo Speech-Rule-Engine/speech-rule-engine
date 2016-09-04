@@ -28,14 +28,14 @@ goog.require('sre.HighlighterInterface');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGeneratorInterface');
 goog.require('sre.SpeechGeneratorUtil');
-goog.require('sre.WalkerInterface');
+goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
 
 
 
 /**
  * @constructor
- * @implements {sre.WalkerInterface}
+ * @implements {sre.Walker}
  * @param {!Node} node The (rendered) node on which the walker is called.
  * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
  *     this walker.
