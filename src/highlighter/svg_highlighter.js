@@ -102,5 +102,7 @@ sre.SvgHighlighter.prototype.unhighlightNode = function(info) {
  * @override
  */
 sre.SvgHighlighter.prototype.isMactionNode = function(node) {
-  return node.className.baseVal === this.mactionName;
+  var className = node.className || node.getAttribute('class');
+  className = className.baseVal ? className.baseVal : className;
+  return className ? className.match(new RegExp(this.mactionName)) : false;
 };
