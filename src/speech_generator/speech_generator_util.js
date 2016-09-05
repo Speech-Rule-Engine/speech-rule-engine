@@ -47,7 +47,7 @@ sre.SpeechGeneratorUtil.computeSpeech = function(xml) {
 /**
  * Computes speech descriptions for a single semantic node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
  *     for the node.
  */
@@ -60,7 +60,7 @@ sre.SpeechGeneratorUtil.recomputeSpeech = function(mml, semantic) {
 /**
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
   var descrs = sre.SpeechRuleEngine.getInstance().
@@ -76,7 +76,7 @@ sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
 /**
  * Adds a speech prefix if necessary.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
   var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
@@ -87,7 +87,7 @@ sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
 
 /**
  * Adds a speech prefix if necessary.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
  *     for the prefix.
  * @private

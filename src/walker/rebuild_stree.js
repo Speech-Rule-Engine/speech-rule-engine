@@ -25,7 +25,7 @@ goog.provide('sre.RebuildStree');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticNode');
 goog.require('sre.WalkerUtil');
 
 
@@ -39,7 +39,7 @@ goog.require('sre.WalkerUtil');
 sre.RebuildStree = function(mathml) {
 
   /**
-   * @type {!Object.<string, !sre.SemanticTree.Node>}
+   * @type {!Object.<string, !sre.SemanticNode>}
    */
   this.nodeDict = {};
 
@@ -54,7 +54,7 @@ sre.RebuildStree = function(mathml) {
   this.mmlRoot = sre.WalkerUtil.getSemanticRoot(mathml);
 
   /**
-   * @type {!sre.SemanticTree.Node}
+   * @type {!sre.SemanticNode}
    */
   this.streeRoot = this.assembleTree(this.mmlRoot);
 
@@ -82,7 +82,7 @@ sre.RebuildStree.prototype.getTree = function() {
 /**
  * Assembles the semantic tree from the data attributes of the MathML node.
  * @param {!Node} node The MathML node.
- * @return {!sre.SemanticTree.Node} The corresponding semantic tree node.
+ * @return {!sre.SemanticNode} The corresponding semantic tree node.
  */
 sre.RebuildStree.prototype.assembleTree = function(node) {
   var snode = this.makeNode(node);
@@ -125,7 +125,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
 /**
  * Creates a new semantic node from the data in the MathML node.
  * @param {!Node} node The enriched MathML node.
- * @return {!sre.SemanticTree.Node} The reconstructed semantic tree node.
+ * @return {!sre.SemanticNode} The reconstructed semantic tree node.
  */
 sre.RebuildStree.prototype.makeNode = function(node) {
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
@@ -153,9 +153,9 @@ sre.RebuildStree.prototype.makeNode = function(node) {
 
 /**
  * Rearranges semantic node if there is a collapse structure.
- * @param {!sre.SemanticTree.Node} snode The semantic node.
+ * @param {!sre.SemanticNode} snode The semantic node.
  * @param {!string} collapsed The collapse structure.
- * @return {!sre.SemanticTree.Node} The semantic node.
+ * @return {!sre.SemanticNode} The semantic node.
  */
 sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
   var array = sre.RebuildStree.parseCollapsed_(collapsed);
@@ -187,10 +187,10 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
 /**
  * Creates a new semantic tree node and stores it.
  * @param {number} id The id for that node.
- * @return {sre.SemanticTree.Node} The newly created node.
+ * @return {sre.SemanticNode} The newly created node.
  */
 sre.RebuildStree.prototype.createNode = function(id) {
-  var node = new sre.SemanticTree.Node(id);
+  var node = new sre.SemanticNode(id);
   this.nodeDict[id.toString()] = node;
   return node;
 };
@@ -199,9 +199,9 @@ sre.RebuildStree.prototype.createNode = function(id) {
 /**
  * Re-generates collapsed semantic nodes given a node and its already existing
  * children.
- * @param {!sre.SemanticTree.Node} oldNode The node containing the
+ * @param {!sre.SemanticNode} oldNode The node containing the
  *     collapsed element.
- * @param {!Array.<sre.SemanticTree.Node>} newNodes The already existing child
+ * @param {!Array.<sre.SemanticNode>} newNodes The already existing child
  *     nodes.
  * @param {!Array} collapsed Array of integer arrays.
  * @private

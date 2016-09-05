@@ -121,7 +121,7 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
  * expression.
  *
  * Note that the original MathML nodes are cloned!
- * @param {!sre.SemanticTree.Node} semantic The semantic tree.
+ * @param {!sre.SemanticNode} semantic The semantic tree.
  * @return {!Element} The enriched MathML element.
  */
 sre.EnrichMathml.walkTree = function(semantic) {
@@ -511,7 +511,7 @@ sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
 
 /**
  * Clones a content node.
- * @param {!sre.SemanticTree.Node} content The content node.
+ * @param {!sre.SemanticNode} content The content node.
  * @return {!Element} The corresponding MathML node.
  */
 sre.EnrichMathml.cloneContentNode = function(content) {
@@ -528,7 +528,7 @@ sre.EnrichMathml.cloneContentNode = function(content) {
 
 /**
  * Concatenates node ids into a comma separated lists.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
  * @return {!string} The comma separated lists.
  */
 sre.EnrichMathml.makeIdList = function(nodes) {
@@ -541,7 +541,7 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 /**
  * Sets semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
@@ -575,7 +575,7 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
 /**
  * Combines content and children lists depending ont the type of the semantic
  * node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @param {!Array.<!Element>} content The list of content nodes.
  * @param {!Array.<!Element>} children The list of child nodes.
  * @return {!Array.<!Element>} The combined list.
@@ -646,7 +646,7 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
 
 /**
  * Makes a new MathML element for an invisible operator or one added by mfenced.
- * @param {!sre.SemanticTree.Node} operator The semantic node with the operator.
+ * @param {!sre.SemanticNode} operator The semantic node with the operator.
  * @return {!Element} The newly created MathML element.
  * @private
  */
@@ -662,7 +662,7 @@ sre.EnrichMathml.createInvisibleOperator_ = function(operator) {
 
 /**
  * Adds a relevant operator attribute to the a list of content nodes.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @param {!Array.<!Element>} content The list of content nodes.
  * @private
  */

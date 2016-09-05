@@ -25,11 +25,11 @@
  */
 
 goog.provide('sre.SemanticTree');
-goog.provide('sre.SemanticTree.Node');
 
 goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticNode');
 goog.require('sre.SemanticUtil');
 goog.require('sre.SystemExternal');
 
@@ -52,59 +52,8 @@ sre.SemanticTree = function(mml) {
    */
   this.mathml = mml;
 
-  /** @type {!sre.SemanticTree.Node} */
+  /** @type {!sre.SemanticNode} */
   this.root = this.parseMathml_(mml);
-};
-
-
-
-/**
- * @param {number} id Node id.
- * @constructor
- */
-sre.SemanticTree.Node = function(id) {
-  /** @type {number} */
-  this.id = id;
-
-  /** @type {Array.<Element>} */
-  this.mathml = [];
-
-  /** @type {sre.SemanticTree.Node} */
-  this.parent = null;
-
-  /** @type {sre.SemanticAttr.Type} */
-  this.type = sre.SemanticAttr.Type.UNKNOWN;
-
-  /** @type {sre.SemanticAttr.Role} */
-  this.role = sre.SemanticAttr.Role.UNKNOWN;
-
-  /** @type {sre.SemanticAttr.Font} */
-  this.font = sre.SemanticAttr.Font.UNKNOWN;
-
-  /** @type {?sre.SemanticAttr.Type} */
-  this.embellished = null;
-
-  /** @type {string} */
-  this.fencePointer = '';
-
-  /** @type {!Array.<sre.SemanticTree.Node>} */
-  this.childNodes = [];
-
-  /** @type {string} */
-  this.textContent = '';
-
-  /**
-   * The complete mml belonging to this node.
-   * @type {Element}
-   */
-  this.mathmlTree = null;
-
-  /**
-   * Branch nodes can store additional nodes that can be useful.
-   * E.g. a node of type FENCED can have the opening and closing fences here.
-   * @type {!Array.<sre.SemanticTree.Node>}
-   */
-  this.contentNodes = [];
 };
 
 
@@ -122,7 +71,7 @@ sre.SemanticTree.empty = function() {
 
 /**
  * Generate a semantic tree for a given node.
- * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
+ * @param {!sre.SemanticNode} semantic The semantic node that will become
  *     the root.
  * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
  *     semantic node.
@@ -140,7 +89,7 @@ sre.SemanticTree.fromNode = function(semantic, opt_mathml) {
 
 /**
  * Generate a semantic tree for a given node
- * @param {!sre.SemanticTree.Node} semantic The semantic node that will become
+ * @param {!sre.SemanticNode} semantic The semantic node that will become
  *     the root.
  * @param {Element=} opt_mathml Optionally a MathML node corresponding to the
  *     semantic node.
@@ -160,25 +109,6 @@ sre.SemanticTree.fromRoot = function(semantic, opt_mathml) {
 
 
 /**
- * Retrieve all subnodes (including the node itself) that satisfy a given
- * predicate.
- * @param {function(sre.SemanticTree.Node): boolean} pred The predicate.
- * @return {!Array.<sre.SemanticTree.Node>} The nodes in the tree for which the
- *     predicate holds.
- */
-sre.SemanticTree.Node.prototype.querySelectorAll = function(pred) {
-  var result = [];
-  for (var i = 0, child; child = this.childNodes[i]; i++) {
-    result = result.concat(child.querySelectorAll(pred));
-  }
-  if (pred(this)) {
-    result.unshift(this);
-  }
-  return result;
-};
-
-
-/**
   * Returns an XML representation of the tree.
   * @param {boolean=} opt_brief If set attributes are omitted.
   * @return {!Node} The XML representation of the tree.
@@ -188,42 +118,6 @@ sre.SemanticTree.prototype.xml = function(opt_brief) {
   var xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
   xml.appendChild(xmlRoot);
   return xml;
-};
-
-
-/**
-  * An XML tree representation of the current node.
-  * @param {Document} xml The XML document.
-  * @param {boolean=} opt_brief If set attributes are omitted.
-  * @return {Node} The XML representation of the node.
-  */
-sre.SemanticTree.Node.prototype.xml = function(xml, opt_brief) {
-  /**
-    * Translates a list of nodes into XML representation.
-    * @param {string} tag Name of the enclosing tag.
-    * @param {!Array.<!sre.SemanticTree.Node>} nodes A list of nodes.
-    * @return {Node} An XML representation of the node list.
-    */
-  var xmlNodeList = function(tag, nodes) {
-    var xmlNodes = nodes.map(function(x) {return x.xml(xml, opt_brief);});
-    var tagNode = xml.createElement(tag);
-    for (var i = 0, child; child = xmlNodes[i]; i++) {
-      tagNode.appendChild(child);
-    }
-    return tagNode;
-  };
-  var node = xml.createElement(this.type);
-  if (!opt_brief) {
-    this.xmlAttributes_(node);
-  }
-  node.textContent = this.textContent;
-  if (this.contentNodes.length > 0) {
-    node.appendChild(xmlNodeList('content', this.contentNodes));
-  }
-  if (this.childNodes.length > 0) {
-    node.appendChild(xmlNodeList('children', this.childNodes));
-  }
-  return node;
 };
 
 
@@ -249,210 +143,28 @@ sre.SemanticTree.prototype.formatXml = function(opt_brief) {
 };
 
 
-/**
- * Serializes the XML representation of a node.
- * @param {boolean=} opt_brief If attributes are to be omitted.
- * @return {string} Serialized string.
- */
-sre.SemanticTree.Node.prototype.toString = function(opt_brief) {
-  var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('', 'text/xml');
-  return xmls.serializeToString(this.xml(xml, opt_brief));
-};
-
-
-/**
- * Adds attributes to the XML representation of the current node.
- * @param {Node} node The XML node.
- * @private
- */
-sre.SemanticTree.Node.prototype.xmlAttributes_ = function(node) {
-  node.setAttribute('role', this.role);
-  if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
-    node.setAttribute('font', this.font);
-  }
-  if (this.embellished) {
-    node.setAttribute('embellished', this.embellished);
-  }
-  if (this.fencePointer) {
-    node.setAttribute('fencepointer', this.fencePointer);
-  }
-  node.setAttribute('id', this.id);
-};
-
-
 /** Creates a new node object.
- * @return {sre.SemanticTree.Node} The newly created node.
+ * @return {sre.SemanticNode} The newly created node.
  * @private
  */
 sre.SemanticTree.prototype.createNode_ = function() {
-  return new sre.SemanticTree.Node(this.idCounter_++);
+  return new sre.SemanticNode(this.idCounter_++);
 };
 
 
 /**
  * Replaces a node in the tree. Updates the root node if necessary.
- * @param {!sre.SemanticTree.Node} oldNode The node to be replaced.
- * @param {!sre.SemanticTree.Node} newNode The new node.
+ * @param {!sre.SemanticNode} oldNode The node to be replaced.
+ * @param {!sre.SemanticNode} newNode The new node.
+ * @private
  */
-sre.SemanticTree.prototype.replaceNode = function(oldNode, newNode) {
+sre.SemanticTree.prototype.replaceNode_ = function(oldNode, newNode) {
   var parent = oldNode.parent;
   if (!parent) {
     this.root = newNode;
     return;
   }
-  parent.replaceChild_(oldNode, newNode);
-};
-
-
-/**
- * Updates the content of the node thereby possibly changing type and role.
- * @param {string} content The new content string.
- * @private
- */
-sre.SemanticTree.Node.prototype.updateContent_ = function(content) {
-  // Remove superfluous whitespace!
-  content = content.trim();
-  if (this.textContent == content) {
-    return;
-  }
-  var meaning = sre.SemanticAttr.lookupMeaning(content);
-  this.textContent = content;
-  this.role = meaning.role;
-  this.type = meaning.type;
-  this.font = meaning.font;
-};
-
-
-/**
- * Adds MathML nodes to the node's store of MathML nodes if necessary only, as
- * we can not necessarily assume that the MathML of the content nodes and
- * children are all disjoint.
- * @param {Array.<Element>} mmlNodes List of MathML nodes.
- * @private
- */
-sre.SemanticTree.Node.prototype.addMathmlNodes_ = function(mmlNodes) {
-  for (var i = 0, mml; mml = mmlNodes[i]; i++) {
-    if (this.mathml.indexOf(mml) == -1) {
-      this.mathml.push(mml);
-    }
-  }
-};
-
-
-/**
- * Removes MathML nodes from the node's store of MathML nodes.
- * @param {Array.<Element>} mmlNodes List of MathML nodes.
- * @private
- */
-sre.SemanticTree.Node.prototype.removeMathmlNodes_ = function(mmlNodes) {
-  var mmlList = this.mathml;
-  for (var i = 0, mml; mml = mmlNodes[i]; i++) {
-    var index = mmlList.indexOf(mml);
-    if (index != -1) {
-      mmlList.splice(index, 1);
-    }
-  }
-  this.mathml = mmlList;
-};
-
-
-/**
- * Appends a child to the node.
- * @param {sre.SemanticTree.Node} child The new child.
- * @private
- */
-sre.SemanticTree.Node.prototype.appendChild_ = function(child) {
-  this.childNodes.push(child);
-  this.addMathmlNodes_(child.mathml);
-  child.parent = this;
-};
-
-
-/**
- * Replaces a child node of the node.
- * @param {!sre.SemanticTree.Node} oldNode The node to be replaced.
- * @param {!sre.SemanticTree.Node} newNode The new node.
- * @private
- */
-sre.SemanticTree.Node.prototype.replaceChild_ = function(oldNode, newNode) {
-  var index = this.childNodes.indexOf(oldNode);
-  if (index == -1) {
-    return;
-  }
-  oldNode.parent = null;
-  newNode.parent = this;
-  this.childNodes[index] = newNode;
-  // To not mess up the order of MathML elements more than necessary, we only
-  // remove and add difference lists. The hope is that we might end up with
-  // little change.
-  var removeMathml = oldNode.mathml.filter(
-      function(x) {return newNode.mathml.indexOf(x) == -1;});
-  var addMathml = newNode.mathml.filter(
-      function(x) {return oldNode.mathml.indexOf(x) == -1;});
-  this.removeMathmlNodes_(removeMathml);
-  this.addMathmlNodes_(addMathml);
-};
-
-
-/**
- * Appends a content node to the node.
- * @param {sre.SemanticTree.Node} node The new content node.
- * @private
- */
-sre.SemanticTree.Node.prototype.appendContentNode_ = function(node) {
-  if (node) {
-    this.contentNodes.push(node);
-    this.addMathmlNodes_(node.mathml);
-    node.parent = this;
-  }
-};
-
-
-/**
- * Removes a content node from the node.
- * @param {sre.SemanticTree.Node} node The content node to be removed.
- */
-sre.SemanticTree.Node.prototype.removeContentNode = function(node) {
-  if (node) {
-    var index = this.contentNodes.indexOf(node);
-    if (index != -1) {
-      this.contentNodes.slice(index, 1);
-    }
-  }
-};
-
-
-/**
- * Tests if node is equal to the given node. Two nodes are considered equal if
- * they have the same type, role, content and all its children are equal.
- * @param {sre.SemanticTree.Node} node The node to test against.
- * @return {boolean} True if nodes are equal wrt. structure and content.
- */
-sre.SemanticTree.Node.prototype.equals = function(node) {
-  if (!node) {
-    return false;
-  }
-  if (this.type !== node.type || this.role !== node.role ||
-      this.textContent !== node.textContent ||
-      this.childNodes.length !== node.childNodes.length ||
-      this.contentNodes.length !== node.contentNodes.length) {
-    return false;
-  }
-  for (var i = 0, node1, node2;
-       node1 = this.childNodes[i], node2 = node.childNodes[i]; i++) {
-    if (!node1.equals(node2)) {
-      return false;
-    }
-  }
-  for (i = 0;
-       node1 = this.contentNodes[i], node2 = node.contentNodes[i]; i++) {
-    if (!node1.equals(node2)) {
-      return false;
-    }
-  }
-  return true;
+  parent.replaceChild(oldNode, newNode);
 };
 
 
@@ -460,7 +172,7 @@ sre.SemanticTree.Node.prototype.equals = function(node) {
  * This is the main function that creates the semantic tree by recursively
  * parsing the initial MathML tree and bottom up assembling the tree.
  * @param {!Element} mml The MathML tree.
- * @return {!sre.SemanticTree.Node} The root of the new tree.
+ * @return {!sre.SemanticNode} The root of the new tree.
  * @private
  */
 sre.SemanticTree.prototype.parseMathml_ = function(mml) {
@@ -620,7 +332,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
 /**
  * Parse a list of MathML nodes into the semantic tree.
  * @param {Array.<Element>} mmls A list of MathML nodes.
- * @return {!Array.<sre.SemanticTree.Node>} The list of resulting semantic
+ * @return {!Array.<sre.SemanticNode>} The list of resulting semantic
  *     node.
  * @private
  */
@@ -636,7 +348,7 @@ sre.SemanticTree.prototype.parseMathmlChildren_ = function(mmls) {
 /**
  * Create a node that is to be processed at a later point in time.
  * @param {Node} mml The MathML tree.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeUnprocessed_ = function(mml) {
@@ -648,7 +360,7 @@ sre.SemanticTree.prototype.makeUnprocessed_ = function(mml) {
 
 /**
  * Create an empty leaf node.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeEmptyNode_ = function() {
@@ -662,12 +374,12 @@ sre.SemanticTree.prototype.makeEmptyNode_ = function() {
  * Create a node with the given text content. The content is semantically
  * interpreted.
  * @param {string} content The text content of the node.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeContentNode_ = function(content) {
   var node = this.createNode_();
-  node.updateContent_(content);
+  node.updateContent(content);
   return node;
 };
 
@@ -676,7 +388,7 @@ sre.SemanticTree.prototype.makeContentNode_ = function(content) {
  * Create a list of content nodes all with the same content.
  * @param {number} num The number of nodes to create.
  * @param {string} content The text content of the node.
- * @return {!Array.<sre.SemanticTree.Node>} The list of new nodes.
+ * @return {!Array.<sre.SemanticNode>} The list of new nodes.
  * @private
  */
 sre.SemanticTree.prototype.makeMultipleContentNodes_ = function(num, content) {
@@ -691,7 +403,7 @@ sre.SemanticTree.prototype.makeMultipleContentNodes_ = function(num, content) {
 /**
  * Create a leaf node.
  * @param {Node} mml The MathML tree.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
@@ -708,17 +420,17 @@ sre.SemanticTree.prototype.makeLeafNode_ = function(mml) {
 /**
  * Create a branching node.
  * @param {!sre.SemanticAttr.Type} type The type of the node.
- * @param {!Array.<sre.SemanticTree.Node>} children The child nodes.
- * @param {!Array.<sre.SemanticTree.Node>} contentNodes The content Nodes.
+ * @param {!Array.<sre.SemanticNode>} children The child nodes.
+ * @param {!Array.<sre.SemanticNode>} contentNodes The content Nodes.
  * @param {string=} opt_content Content string if there is any.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeBranchNode_ = function(
     type, children, contentNodes, opt_content) {
   var node = this.createNode_();
   if (opt_content) {
-    node.updateContent_(opt_content);
+    node.updateContent(opt_content);
   }
   node.type = type;
   node.childNodes = children;
@@ -726,7 +438,7 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
   children.concat(contentNodes).forEach(
       function(x) {
         x.parent = node;
-        node.addMathmlNodes_(x.mathml);
+        node.addMathmlNodes(x.mathml);
       });
   return node;
 };
@@ -735,7 +447,7 @@ sre.SemanticTree.prototype.makeBranchNode_ = function(
 /**
  * Create an identifier node, with particular emphasis on font disambiguation.
  * @param {Node} mml The MathML MI node.
- * @return {!sre.SemanticTree.Node} The new semantic identifier node.
+ * @return {!sre.SemanticNode} The new semantic identifier node.
  * @private
  */
 sre.SemanticTree.prototype.makeIdentifierNode_ = function(mml) {
@@ -765,8 +477,8 @@ sre.SemanticTree.prototype.makeIdentifierNode_ = function(mml) {
 /**
  * Create a branching node for an implicit operation, currently assumed to
  * be of multiplicative type.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The operands.
- * @return {!sre.SemanticTree.Node} The new branch node.
+ * @param {!Array.<!sre.SemanticNode>} nodes The operands.
+ * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
@@ -779,7 +491,7 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
       nodes.length - 1, sre.SemanticAttr.invisibleTimes());
   // For now we assume this is a multiplication using invisible times.
   var newNode = this.makeInfixNode_(
-      nodes, /**@type{!sre.SemanticTree.Node}*/(operators[0]));
+      nodes, /**@type{!sre.SemanticNode}*/(operators[0]));
   newNode.role = sre.SemanticAttr.Role.IMPLICIT;
   operators.forEach(function(op) {op.parent = newNode;});
   newNode.contentNodes = operators;
@@ -789,9 +501,9 @@ sre.SemanticTree.prototype.makeImplicitNode_ = function(nodes) {
 
 /**
  * Create a branching node for an infix operation.
- * @param {!Array.<sre.SemanticTree.Node>} children The operands.
- * @param {!sre.SemanticTree.Node} opNode The operator.
- * @return {!sre.SemanticTree.Node} The new branch node.
+ * @param {!Array.<sre.SemanticNode>} children The operands.
+ * @param {!sre.SemanticNode} opNode The operator.
+ * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticTree.prototype.makeInfixNode_ = function(children, opNode) {
@@ -807,10 +519,10 @@ sre.SemanticTree.prototype.makeInfixNode_ = function(children, opNode) {
  * Creates a node of the specified type by collapsing the given node list into
  * one content (thereby concatenating the content of each node into a single
  * content string) with the inner node as a child.
- * @param {!sre.SemanticTree.Node} inner The inner node.
- * @param {!Array.<sre.SemanticTree.Node>} nodeList List of nodes.
+ * @param {!sre.SemanticNode} inner The inner node.
+ * @param {!Array.<sre.SemanticNode>} nodeList List of nodes.
  * @param {!sre.SemanticAttr.Type} type The new type of the node.
- * @return {!sre.SemanticTree.Node} The new branch node.
+ * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticTree.prototype.makeConcatNode_ = function(inner, nodeList, type) {
@@ -832,10 +544,10 @@ sre.SemanticTree.prototype.makeConcatNode_ = function(inner, nodeList, type) {
  * Wraps a node into prefix operators.
  * Example: + - a becomes (+ (- (a)))
  * Input: a  [+, -] ->  Output: content: '+ -', child: a
- * @param {!sre.SemanticTree.Node} node The inner node.
- * @param {!Array.<sre.SemanticTree.Node>} prefixes Prefix operators
+ * @param {!sre.SemanticNode} node The inner node.
+ * @param {!Array.<sre.SemanticNode>} prefixes Prefix operators
  * from the outermost to the innermost.
- * @return {!sre.SemanticTree.Node} The new branch node.
+ * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticTree.prototype.makePrefixNode_ = function(node, prefixes) {
@@ -859,10 +571,10 @@ sre.SemanticTree.prototype.makePrefixNode_ = function(node, prefixes) {
  * Wraps a node into postfix operators.
  * Example: a - + becomes (((a) -) +)
  * Input: a  [-, +] ->  Output: content: '- +', child: a
- * @param {!sre.SemanticTree.Node} node The inner node.
- * @param {!Array.<sre.SemanticTree.Node>} postfixes Postfix operators from
+ * @param {!sre.SemanticNode} node The inner node.
+ * @param {!Array.<sre.SemanticNode>} postfixes Postfix operators from
  * innermost to outermost.
- * @return {!sre.SemanticTree.Node} The new branch node.
+ * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
 sre.SemanticTree.prototype.makePostfixNode_ = function(node, postfixes) {
@@ -881,8 +593,8 @@ sre.SemanticTree.prototype.makePostfixNode_ = function(node, postfixes) {
  *
  * This is the main heuristic to rewrite a flat row of terms into a meaningful
  * term tree.
- * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!sre.SemanticTree.Node} The root node of the syntax tree.
+ * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
+ * @return {!sre.SemanticNode} The root node of the syntax tree.
  * @private
  */
 sre.SemanticTree.prototype.processRow_ = function(nodes) {
@@ -903,8 +615,8 @@ sre.SemanticTree.prototype.processRow_ = function(nodes) {
 
 /**
  * Combines adjacent units in
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.combineUnits_ = function(nodes) {
@@ -941,8 +653,8 @@ sre.SemanticTree.prototype.combineUnits_ = function(nodes) {
 /**
  * Finds mixed numbers in a list of single nodes. A mixed number is an integer
  * followed by a vulgar fraction.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
@@ -977,8 +689,8 @@ sre.SemanticTree.prototype.getMixedNumbers_ = function(nodes) {
 /**
  * Seperates text from math content and combines them into a punctuated node,
  * with dummy punctuation invisible comma.
- * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!Array.<sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
+ * @return {!Array.<sre.SemanticNode>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
@@ -1009,8 +721,8 @@ sre.SemanticTree.prototype.getTextInRow_ = function(nodes) {
 /**
  * Constructs a syntax tree with relation and operator precedence from a list
  * of nodes.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!sre.SemanticTree.Node} The root node of the syntax tree.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ * @return {!sre.SemanticNode} The root node of the syntax tree.
  * @private
  */
 sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
@@ -1046,8 +758,8 @@ sre.SemanticTree.prototype.processRelationsInRow_ = function(nodes) {
 
 /**
  * Constructs a syntax tree with operator precedence from a list nodes.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!sre.SemanticTree.Node} The root node of the syntax tree.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ * @return {!sre.SemanticNode} The root node of the syntax tree.
  * @private
  */
 sre.SemanticTree.prototype.processOperationsInRow_ = function(nodes) {
@@ -1076,7 +788,7 @@ sre.SemanticTree.prototype.processOperationsInRow_ = function(nodes) {
   // At this point, we know that split.head is not empty!
   var node = this.makePrefixNode_(
       this.makeImplicitNode_(
-          /** @type {!Array.<!sre.SemanticTree.Node>} */ (split.head)),
+          /** @type {!Array.<!sre.SemanticNode>} */ (split.head)),
       prefix);
   if (!split.div) {
     return node;
@@ -1088,14 +800,14 @@ sre.SemanticTree.prototype.processOperationsInRow_ = function(nodes) {
 /**
  * Recursively constructs syntax tree with operator precedence from a list nodes
  * given a initial root node.
- * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
- * @param {!sre.SemanticTree.Node} root Initial tree.
- * @param {!sre.SemanticTree.Node} lastop Last operator that has not been
+ * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
+ * @param {!sre.SemanticNode} root Initial tree.
+ * @param {!sre.SemanticNode} lastop Last operator that has not been
  * processed yet.
- * @param {Array.<sre.SemanticTree.Node>=} opt_prefixes Operator nodes that
+ * @param {Array.<sre.SemanticNode>=} opt_prefixes Operator nodes that
  * will become prefix operation (or postfix in case they come after last
  * operand).
- * @return {!sre.SemanticTree.Node} The root node of the syntax tree.
+ * @return {!sre.SemanticNode} The root node of the syntax tree.
  * @private
  */
 sre.SemanticTree.prototype.makeOperationsTree_ = function(
@@ -1109,9 +821,9 @@ sre.SemanticTree.prototype.makeOperationsTree_ = function(
       // We assume prefixes bind stronger than postfixes.
       var node = this.makePostfixNode_(
           // Here we know that the childNodes are not empty!
-          /** @type {!sre.SemanticTree.Node} */ (root.childNodes.pop()),
+          /** @type {!sre.SemanticNode} */ (root.childNodes.pop()),
           prefixes);
-      root.appendChild_(node);
+      root.appendChild(node);
       return root;
     }
     return this.makePostfixNode_(root, prefixes);
@@ -1140,10 +852,10 @@ sre.SemanticTree.prototype.makeOperationsTree_ = function(
 // a single one. Currently it is clearer the way it is, though.
 /**
  * Appends an operand at the right place in an operator tree.
- * @param {!sre.SemanticTree.Node} root The operator tree.
- * @param {!sre.SemanticTree.Node} op The operator node.
- * @param {!sre.SemanticTree.Node} node The node to be added.
- * @return {!sre.SemanticTree.Node} The modified root node.
+ * @param {!sre.SemanticNode} root The operator tree.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The node to be added.
+ * @return {!sre.SemanticNode} The modified root node.
  * @private
  */
 sre.SemanticTree.prototype.appendOperand_ = function(root, op, node) {
@@ -1163,10 +875,10 @@ sre.SemanticTree.prototype.appendOperand_ = function(root, op, node) {
 
 /**
  * Appends a multiplicative operator and operand.
- * @param {!sre.SemanticTree.Node} root The root node.
- * @param {!sre.SemanticTree.Node} op The operator node.
- * @param {!sre.SemanticTree.Node} node The operand node to be added.
- * @return {!sre.SemanticTree.Node} The modified root node.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {!sre.SemanticNode} The modified root node.
  * @private
  */
 sre.SemanticTree.prototype.appendMultiplicativeOp_ = function(root, op, node) {
@@ -1182,17 +894,17 @@ sre.SemanticTree.prototype.appendMultiplicativeOp_ = function(root, op, node) {
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
   var newNode = this.makeInfixNode_([lastRoot.childNodes.pop(), node], op);
-  lastRoot.appendChild_(newNode);
+  lastRoot.appendChild(newNode);
   return root;
 };
 
 
 /**
  * Appends an additive/substractive operator and operand.
- * @param {!sre.SemanticTree.Node} root The old root node.
- * @param {!sre.SemanticTree.Node} op The operator node.
- * @param {!sre.SemanticTree.Node} node The operand node to be added.
- * @return {!sre.SemanticTree.Node} The new root node.
+ * @param {!sre.SemanticNode} root The old root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
+ * @return {!sre.SemanticNode} The new root node.
  * @private
  */
 sre.SemanticTree.prototype.appendAdditiveOp_ = function(root, op, node) {
@@ -1203,9 +915,9 @@ sre.SemanticTree.prototype.appendAdditiveOp_ = function(root, op, node) {
 /**
  * Adds an operand to an operator node if it is the continuation of an existing
  * operation.
- * @param {!sre.SemanticTree.Node} root The root node.
- * @param {!sre.SemanticTree.Node} op The operator node.
- * @param {!sre.SemanticTree.Node} node The operand node to be added.
+ * @param {!sre.SemanticNode} root The root node.
+ * @param {!sre.SemanticNode} op The operator node.
+ * @param {!sre.SemanticNode} node The operand node to be added.
  * @return {boolean} True if operator was successfully appended.
  * @private
  */
@@ -1217,13 +929,13 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
     return false;
   }
   if (root.contentNodes[0].equals(op)) {
-    root.appendContentNode_(op);
-    root.appendChild_(node);
+    root.appendContentNode(op);
+    root.appendChild(node);
     return true;
   }
   return this.appendExistingOperator_(
       // Again, if this is an INFIXOP node, we know it has a child!
-      /** @type {!sre.SemanticTree.Node} */
+      /** @type {!sre.SemanticNode} */
       (root.childNodes[root.childNodes.length - 1]),
       op, node);
 };
@@ -1242,8 +954,8 @@ sre.SemanticTree.prototype.appendExistingOperator_ = function(root, op, node) {
  *    number of matching fences. E.g. || a|b || would be turned into a fenced
  *    node with fences || and content a|b.
  * 4. Any remaining unmatched delimiters are turned into punctuation nodes.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.getFencesInRow_ = function(nodes) {
@@ -1260,13 +972,13 @@ sre.SemanticTree.prototype.getFencesInRow_ = function(nodes) {
  * Recursively processes a list of nodes and combines all the fenced expressions
  * into single nodes. It also processes singular fences, building expressions
  * that are only fenced left or right.
- * @param {!Array.<sre.SemanticTree.Node>} fences FIFO queue of fence nodes.
- * @param {!Array.<Array.<sre.SemanticTree.Node>>} content FIFO queue content
+ * @param {!Array.<sre.SemanticNode>} fences FIFO queue of fence nodes.
+ * @param {!Array.<Array.<sre.SemanticNode>>} content FIFO queue content
  *     between fences.
- * @param {!Array.<sre.SemanticTree.Node>} openStack LIFO stack of open fences.
- * @param {!Array.<!Array.<sre.SemanticTree.Node>>} contentStack LIFO stack of
+ * @param {!Array.<sre.SemanticNode>} openStack LIFO stack of open fences.
+ * @param {!Array.<!Array.<sre.SemanticNode>>} contentStack LIFO stack of
  *     content between fences yet to be processed.
- * @return {!Array.<sre.SemanticTree.Node>} A list of nodes with all fenced
+ * @return {!Array.<sre.SemanticNode>} A list of nodes with all fenced
  *     expressions processed.
  * @private
  */
@@ -1389,10 +1101,10 @@ sre.SemanticTree.prototype.processFences_ = function(
 // TODO (sorge) The following could be done with linear programming.
 /**
  * Trys to combine neutral fences as much as possible.
- * @param {!Array.<!sre.SemanticTree.Node>} fences A list of neutral fences.
- * @param {!Array.<!Array.<sre.SemanticTree.Node>>} content Intermediate
+ * @param {!Array.<!sre.SemanticNode>} fences A list of neutral fences.
+ * @param {!Array.<!Array.<sre.SemanticNode>>} content Intermediate
  *     content. Observe that |content| = |fences| - 1
- * @return {!Array.<sre.SemanticTree.Node>} List of node with fully fenced
+ * @return {!Array.<sre.SemanticNode>} List of node with fully fenced
  *     nodes.
  * @private
  */
@@ -1432,14 +1144,14 @@ sre.SemanticTree.prototype.processNeutralFences_ = function(fences, content) {
  * Example: leftFence: [, rightFence: ], midFences: |, |
  *          content: c1, c2, c3, c4, ... cn
  *          return: [c1 | c2 | c3 ], c4, ... cn
- * @param {!sre.SemanticTree.Node} leftFence The left fence.
- * @param {!sre.SemanticTree.Node} rightFence The right fence.
- * @param {!Array.<sre.SemanticTree.Node>} midFences A list of intermediate
+ * @param {!sre.SemanticNode} leftFence The left fence.
+ * @param {!sre.SemanticNode} rightFence The right fence.
+ * @param {!Array.<sre.SemanticNode>} midFences A list of intermediate
  *     fences.
- * @param {!Array.<!Array.<sre.SemanticTree.Node>>} content Intermediate
+ * @param {!Array.<!Array.<sre.SemanticNode>>} content Intermediate
  *     content. Observe that |content| = |fences| - 1 + k where k >= 0 is the
  *     remainder.
- * @return {!Array.<!Array.<sre.SemanticTree.Node>>} List of content nodes
+ * @return {!Array.<!Array.<sre.SemanticNode>>} List of content nodes
  *     where the first is the fully fenced node wrt. the given left and right
  *     fence.
  * @private
@@ -1479,7 +1191,7 @@ sre.SemanticTree.prototype.combineFencedContent_ = function(
 
 /**
  * Rewrite fences into punctuation. This is done with any "leftover" fence.
- * @param {sre.SemanticTree.Node} fence Fence.
+ * @param {sre.SemanticNode} fence Fence.
  * @private
  */
 sre.SemanticTree.fenceToPunct_ = function(fence) {
@@ -1509,11 +1221,11 @@ sre.SemanticTree.fenceToPunct_ = function(fence) {
 
 /**
  * Create a fenced node.
- * @param {sre.SemanticTree.Node} ofence Opening fence.
- * @param {sre.SemanticTree.Node} cfence Closing fence.
- * @param {!Array.<sre.SemanticTree.Node>} content The content
+ * @param {sre.SemanticNode} ofence Opening fence.
+ * @param {sre.SemanticNode} cfence Closing fence.
+ * @param {!Array.<sre.SemanticNode>} content The content
  *     between the fences.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeHorizontalFencedNode_ = function(
@@ -1532,8 +1244,8 @@ sre.SemanticTree.prototype.makeHorizontalFencedNode_ = function(
 
 /**
  * Combines sequences of punctuated expressions in a list of nodes.
- * @param {!Array.<sre.SemanticTree.Node>} nodes The list of nodes.
- * @return {!Array.<sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
+ * @return {!Array.<sre.SemanticNode>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.getPunctuationInRow_ = function(nodes) {
@@ -1567,11 +1279,11 @@ sre.SemanticTree.prototype.getPunctuationInRow_ = function(nodes) {
 
 /**
  * Create a punctuated node.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes List of all nodes separated
+ * @param {!Array.<!sre.SemanticNode>} nodes List of all nodes separated
  * by punctuations.
- * @param {!Array.<!sre.SemanticTree.Node>} punctuations List of all separating
+ * @param {!Array.<!sre.SemanticNode>} punctuations List of all separating
  * punctations. Observe that punctations is a subset of nodes.
- * @return {!sre.SemanticTree.Node}
+ * @return {!sre.SemanticNode}
  * @private
  */
 sre.SemanticTree.prototype.makePunctuatedNode_ = function(
@@ -1603,9 +1315,9 @@ sre.SemanticTree.prototype.makePunctuatedNode_ = function(
 
 /**
  * Create an dummy punctuated node.
- * @param {!Array.<!sre.SemanticTree.Node>} children The child nodes to be
+ * @param {!Array.<!sre.SemanticNode>} children The child nodes to be
  *     separated by invisible comma.
- * @return {!sre.SemanticTree.Node} The new node.
+ * @return {!sre.SemanticNode} The new node.
  * @private
  */
 sre.SemanticTree.prototype.makeDummyNode_ = function(children) {
@@ -1620,9 +1332,9 @@ sre.SemanticTree.prototype.makeDummyNode_ = function(children) {
  * Creates a limit node from a sub/superscript or over/under node if the central
  * element is a big operator. Otherwise it creates the standard elements.
  * @param {string} mmlTag The tag name of the original node.
- * @param {!Array.<!sre.SemanticTree.Node>} children The children of the
+ * @param {!Array.<!sre.SemanticNode>} children The children of the
  *     original node.
- * @return {!sre.SemanticTree.Node} The newly created limit node.
+ * @return {!sre.SemanticNode} The newly created limit node.
  * @private
  */
 sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
@@ -1718,7 +1430,7 @@ sre.SemanticTree.prototype.makeLimitNode_ = function(mmlTag, children) {
 
 /**
  * Checks whether a character can be considered as accent.
- * @param {!sre.SemanticTree.Node} node The node to be tested.
+ * @param {!sre.SemanticNode} node The node to be tested.
  * @return {boolean} True if the node is a punctuation, fence or operator.
  * @private
  */
@@ -1751,10 +1463,10 @@ sre.SemanticTree.isAccent_ = function(node) {
  *           symbol. If we have an explicit function application symbol
  *           following the expression we turn into a prefix function. Otherwise
  *           we decide heuristically if we could have a function application.
- * @param {!Array.<sre.SemanticTree.Node>} restNodes The remainder list of
+ * @param {!Array.<sre.SemanticNode>} restNodes The remainder list of
  *     nodes.
- * @param {!Array.<sre.SemanticTree.Node>=} opt_result The result node list.
- * @return {!Array.<!sre.SemanticTree.Node>} The fully processed list.
+ * @param {!Array.<sre.SemanticNode>=} opt_result The result node list.
+ * @return {!Array.<!sre.SemanticNode>} The fully processed list.
  * @private
  */
 sre.SemanticTree.prototype.getFunctionsInRow_ = function(
@@ -1764,7 +1476,7 @@ sre.SemanticTree.prototype.getFunctionsInRow_ = function(
   if (restNodes.length == 0) {
     return result;
   }
-  var firstNode = /** @type {!sre.SemanticTree.Node} */ (restNodes.shift());
+  var firstNode = /** @type {!sre.SemanticNode} */ (restNodes.shift());
   var heuristic = sre.SemanticTree.classifyFunction_(firstNode, restNodes);
   // First node is not a function node.
   if (!heuristic) {
@@ -1780,8 +1492,8 @@ sre.SemanticTree.prototype.getFunctionsInRow_ = function(
 
 /**
  * Classifies a function wrt. the heuristic that should be applied.
- * @param {!sre.SemanticTree.Node} funcNode The node to be classified.
- * @param {!Array.<sre.SemanticTree.Node>} restNodes The remainder list of
+ * @param {!sre.SemanticNode} funcNode The node to be classified.
+ * @param {!Array.<sre.SemanticNode>} restNodes The remainder list of
  *     nodes. They can be useful to look ahead if there is an explicit function
  *     application. If there is one, it will be destructively removed!
  * @return {!string} The string specifying the heuristic.
@@ -1836,7 +1548,7 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
 
 /**
  * Propagates a function role in a node.
- * @param {sre.SemanticTree.Node} funcNode The node whose role is to be
+ * @param {sre.SemanticNode} funcNode The node whose role is to be
  *     rewritten.
  * @param {sre.SemanticAttr.Role} tag The function role to be inserted.
  * @private
@@ -1854,11 +1566,11 @@ sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
 /**
  * Computes the arguments for a function from a list of nodes depending on the
  * given heuristic.
- * @param {!sre.SemanticTree.Node} func A function node.
- * @param {!Array.<sre.SemanticTree.Node>} rest List of nodes to choose
+ * @param {!sre.SemanticNode} func A function node.
+ * @param {!Array.<sre.SemanticNode>} rest List of nodes to choose
  *     arguments from.
  * @param {!string} heuristic The heuristic to follow.
- * @return {!Array.<!sre.SemanticTree.Node>} The function and the remainder of
+ * @return {!Array.<!sre.SemanticNode>} The function and the remainder of
  *     the rest list.
  * @private
  */
@@ -1874,7 +1586,7 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
     case 'prefix':
       if (rest[0] && rest[0].type == sre.SemanticAttr.Type.FENCED) {
         funcNode = this.makeFunctionNode_(
-            func, /** @type {!sre.SemanticTree.Node} */ (rest.shift()));
+            func, /** @type {!sre.SemanticNode} */ (rest.shift()));
         rest.unshift(funcNode);
         return rest;
       }
@@ -1909,7 +1621,7 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
         sre.SemanticTree.propagateFunctionRole_(
             func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = this.makeFunctionNode_(
-            func, /** @type {!sre.SemanticTree.Node} */ (rest.shift()));
+            func, /** @type {!sre.SemanticNode} */ (rest.shift()));
         rest.unshift(funcNode);
         return rest;
       }
@@ -1922,12 +1634,12 @@ sre.SemanticTree.prototype.getFunctionArgs_ = function(func, rest, heuristic) {
 
 /**
  * Tail recursive function to obtain integral arguments.
- * @param {!Array.<sre.SemanticTree.Node>} nodes List of nodes to take
+ * @param {!Array.<sre.SemanticNode>} nodes List of nodes to take
  * arguments from.
- * @param {Array.<sre.SemanticTree.Node>=} opt_args List of integral arguments.
- * @return {{integrand: !Array.<sre.SemanticTree.Node>,
- *     intvar: sre.SemanticTree.Node,
- *     rest: !Array.<sre.SemanticTree.Node>}}
+ * @param {Array.<sre.SemanticNode>=} opt_args List of integral arguments.
+ * @return {{integrand: !Array.<sre.SemanticNode>,
+ *     intvar: sre.SemanticNode,
+ *     rest: !Array.<sre.SemanticNode>}}
  *     Result split into integrand, integral variable and the remaining
  *     elements.
  * @private
@@ -1958,9 +1670,9 @@ sre.SemanticTree.prototype.getIntegralArgs_ = function(nodes, opt_args) {
 
 /**
  * Create a function node.
- * @param {!sre.SemanticTree.Node} func The function operator.
- * @param {!sre.SemanticTree.Node} arg The argument.
- * @return {!sre.SemanticTree.Node} The new function node.
+ * @param {!sre.SemanticNode} func The function operator.
+ * @param {!sre.SemanticNode} arg The argument.
+ * @return {!sre.SemanticNode} The new function node.
  * @private
  */
 sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
@@ -1981,9 +1693,9 @@ sre.SemanticTree.prototype.makeFunctionNode_ = function(func, arg) {
 
 /**
  * Create a big operator node.
- * @param {!sre.SemanticTree.Node} bigOp The big operator.
- * @param {!sre.SemanticTree.Node} arg The argument.
- * @return {!sre.SemanticTree.Node} The new big operator node.
+ * @param {!sre.SemanticNode} bigOp The big operator.
+ * @param {!sre.SemanticNode} arg The argument.
+ * @return {!sre.SemanticNode} The new big operator node.
  * @private
  */
 sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
@@ -1997,10 +1709,10 @@ sre.SemanticTree.prototype.makeBigOpNode_ = function(bigOp, arg) {
 /**
  * Create an integral node. It has three children: integral, integrand and
  * integration variable. The latter two can be omitted.
- * @param {!sre.SemanticTree.Node} integral The integral operator.
- * @param {sre.SemanticTree.Node} integrand The integrand.
- * @param {sre.SemanticTree.Node} intvar The integral variable.
- * @return {!sre.SemanticTree.Node} The new integral node.
+ * @param {!sre.SemanticNode} integral The integral operator.
+ * @param {sre.SemanticNode} integrand The integrand.
+ * @param {sre.SemanticNode} intvar The integral variable.
+ * @return {!sre.SemanticNode} The new integral node.
  * @private
  */
 sre.SemanticTree.prototype.makeIntegralNode_ = function(
@@ -2022,14 +1734,14 @@ sre.SemanticTree.prototype.makeIntegralNode_ = function(
  * Example: Function application sin^2(x). The pointer from sin should remain to
  *          the superscript node, although sin is given as a content node.
  * @param {!sre.SemanticAttr.Type} type The type of the node.
- * @param {!Array.<!sre.SemanticTree.Node>} children The children of the
+ * @param {!Array.<!sre.SemanticNode>} children The children of the
  *     functional node. The first child must be given is understood to be the
  *     functional operator.
- * @param {?sre.SemanticTree.Node} operator The innermost operator (e.g., in the
+ * @param {?sre.SemanticNode} operator The innermost operator (e.g., in the
  *     case of embellished functions or operators with limits).
- * @param {!Array.<sre.SemanticTree.Node>} content The list of additional
+ * @param {!Array.<sre.SemanticNode>} content The list of additional
  *     content nodes.
- * @return {!sre.SemanticTree.Node} The new functional node.
+ * @return {!sre.SemanticNode} The new functional node.
  * @private
  */
 sre.SemanticTree.prototype.makeFunctionalNode_ = function(
@@ -2050,10 +1762,10 @@ sre.SemanticTree.prototype.makeFunctionalNode_ = function(
 
 /**
  * Finds the function operator in a partial semantic tree if it exists.
- * @param {!sre.SemanticTree.Node} tree The partial tree.
- * @param {!function(sre.SemanticTree.Node): boolean} pred Predicate for the
+ * @param {!sre.SemanticNode} tree The partial tree.
+ * @param {!function(sre.SemanticNode): boolean} pred Predicate for the
  *    function operator.
- * @return {sre.SemanticTree.Node} The function operator.
+ * @return {sre.SemanticNode} The function operator.
  * @private
  */
 sre.SemanticTree.getFunctionOp_ = function(tree, pred) {
@@ -2073,7 +1785,7 @@ sre.SemanticTree.getFunctionOp_ = function(tree, pred) {
 /**
  * Predicate implementing the boundary criteria for simple functions:
  *
- * @param {!sre.SemanticTree.Node} node A semantic node of type fenced.
+ * @param {!sre.SemanticNode} node A semantic node of type fenced.
  * @return {boolean} True if the node meets the boundary criteria.
  * @private
  */
@@ -2104,7 +1816,7 @@ sre.SemanticTree.prototype.simpleFunctionHeuristic_ = function(node) {
  * 1. an explicit operator,
  * 2. a relation symbol, or
  * 3. some punctuation.
- * @param {sre.SemanticTree.Node} node A semantic node.
+ * @param {sre.SemanticNode} node A semantic node.
  * @return {boolean} True if the node meets the boundary criteria.
  * @private
  */
@@ -2116,8 +1828,8 @@ sre.SemanticTree.prefixFunctionBoundary_ = function(node) {
 
 /**
  * Predicate implementing the boundary criteria for integrals dx on two nodes.
- * @param {sre.SemanticTree.Node} firstNode A semantic node.
- * @param {sre.SemanticTree.Node} secondNode The direct neighbour of first
+ * @param {sre.SemanticNode} firstNode A semantic node.
+ * @param {sre.SemanticNode} secondNode The direct neighbour of first
  *     Node.
  * @return {boolean} True if the second node exists and the first node is a 'd'.
  * @private
@@ -2133,7 +1845,7 @@ sre.SemanticTree.integralDxBoundary_ = function(
 /**
  * Predicate implementing the boundary criteria for integrals dx on a single
  * node.
- * @param {sre.SemanticTree.Node} node A semantic node.
+ * @param {sre.SemanticNode} node A semantic node.
  * @return {boolean} True if the node meets the boundary criteria.
  * @private
  */
@@ -2151,7 +1863,7 @@ sre.SemanticTree.integralDxBoundarySingle_ = function(node) {
  * Predicate implementing the general boundary criteria for function operators:
  * 1. a relation symbol,
  * 2. some punctuation.
- * @param {sre.SemanticTree.Node} node A semantic node.
+ * @param {sre.SemanticNode} node A semantic node.
  * @return {boolean} True if the node meets the boundary criteria.
  * @private
  */
@@ -2167,8 +1879,8 @@ sre.SemanticTree.generalFunctionBoundary_ = function(node) {
 //
 /**
  * Rewrites tables into matrices or case statements in a list of nodes.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes List of nodes to rewrite.
- * @return {!Array.<!sre.SemanticTree.Node>} The new list of nodes.
+ * @param {!Array.<!sre.SemanticNode>} nodes List of nodes to rewrite.
+ * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  * @private
  */
 sre.SemanticTree.prototype.processTablesInRow_ = function(nodes) {
@@ -2189,7 +1901,7 @@ sre.SemanticTree.prototype.processTablesInRow_ = function(nodes) {
     var prevNodes = partition.comp.shift();
     if (sre.SemanticTree.tableIsCases_(table, prevNodes)) {
       this.tableToCases_(
-          table, /** @type {!sre.SemanticTree.Node} */ (prevNodes.pop()));
+          table, /** @type {!sre.SemanticNode} */ (prevNodes.pop()));
     }
     result = result.concat(prevNodes);
     result.push(table);
@@ -2200,7 +1912,7 @@ sre.SemanticTree.prototype.processTablesInRow_ = function(nodes) {
 
 /**
  * Decides if a node is a table or multiline element.
- * @param {sre.SemanticTree.Node} node A node.
+ * @param {sre.SemanticNode} node A node.
  * @return {boolean} True if node is either table or multiline.
  * @private
  */
@@ -2213,7 +1925,7 @@ sre.SemanticTree.isTableOrMultiline_ = function(node) {
 /**
  * Heuristic to decide if we have a matrix: An expression fenced on both sides
  * without any other content is considered a fenced node.
- * @param {sre.SemanticTree.Node} node A node.
+ * @param {sre.SemanticNode} node A node.
  * @return {boolean} True if we believe we have a matrix.
  * @private
  */
@@ -2229,15 +1941,15 @@ sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
 /**
  * Replaces a fenced node by a matrix or vector node and possibly specialises
  * it's role.
- * @param {!sre.SemanticTree.Node} node The fenced node to be rewritten.
- * @return {!sre.SemanticTree.Node} The matrix or vector node.
+ * @param {!sre.SemanticNode} node The fenced node to be rewritten.
+ * @return {!sre.SemanticNode} The matrix or vector node.
  * @private
  */
 sre.SemanticTree.prototype.tableToMatrixOrVector_ = function(node) {
   var matrix = node.childNodes[0];
   sre.SemanticTree.attrPred_('type', 'MULTILINE')(matrix) ?
       this.tableToVector_(node) : this.tableToMatrix_(node);
-  node.contentNodes.forEach(goog.bind(matrix.appendContentNode_, matrix));
+  node.contentNodes.forEach(goog.bind(matrix.appendContentNode, matrix));
   for (var i = 0, row; row = matrix.childNodes[i]; i++) {
     sre.SemanticTree.assignRoleToRow_(
         row, sre.SemanticTree.getComponentRoles_(matrix));
@@ -2249,7 +1961,7 @@ sre.SemanticTree.prototype.tableToMatrixOrVector_ = function(node) {
 
 /**
  * Assigns a specialised roles to a vector node inside the given fenced node.
- * @param {!sre.SemanticTree.Node} node The fenced node containing the vector.
+ * @param {!sre.SemanticNode} node The fenced node containing the vector.
  * @private
  */
 sre.SemanticTree.prototype.tableToVector_ = function(node) {
@@ -2267,7 +1979,7 @@ sre.SemanticTree.prototype.tableToVector_ = function(node) {
 
 /**
  * Assigns a specialised roles to a matrix node inside the given fenced node.
- * @param {!sre.SemanticTree.Node} node The fenced node containing the matrix.
+ * @param {!sre.SemanticNode} node The fenced node containing the matrix.
  * @private
  */
 sre.SemanticTree.prototype.tableToMatrix_ = function(node) {
@@ -2287,7 +1999,7 @@ sre.SemanticTree.prototype.tableToMatrix_ = function(node) {
 
 /**
  * Assigns a role to a square, fenced table.
- * @param {!sre.SemanticTree.Node} node The fenced node containing a square
+ * @param {!sre.SemanticNode} node The fenced node containing a square
  *     table.
  * @private
  */
@@ -2304,7 +2016,7 @@ sre.SemanticTree.prototype.tableToSquare_ = function(node) {
 /**
  * Cmoputes the role for the components of a matrix. It is either the role of
  * that matrix or its type.
- * @param {!sre.SemanticTree.Node} node The matrix or vector node.
+ * @param {!sre.SemanticNode} node The matrix or vector node.
  * @return {!sre.SemanticAttr.Role} The role to be assigned to the components.
  * @private
  */
@@ -2321,8 +2033,8 @@ sre.SemanticTree.getComponentRoles_ = function(node) {
 /**
  * Heuristic to decide if we have a case statement: An expression with a
  * singular open fence before it.
- * @param {!sre.SemanticTree.Node} table A table node.
- * @param {!Array.<sre.SemanticTree.Node>} prevNodes A list of previous nodes.
+ * @param {!sre.SemanticNode} table A table node.
+ * @param {!Array.<sre.SemanticNode>} prevNodes A list of previous nodes.
  * @return {boolean} True if we believe we have a case statement.
  * @private
  */
@@ -2335,10 +2047,10 @@ sre.SemanticTree.tableIsCases_ = function(table, prevNodes) {
 
 /**
  * Makes case node out of a table and a fence.
- * @param {!sre.SemanticTree.Node} table The table containing the cases.
- * @param {!sre.SemanticTree.Node} openFence The left delimiter of the case
+ * @param {!sre.SemanticNode} table The table containing the cases.
+ * @param {!sre.SemanticNode} openFence The left delimiter of the case
  *     statement.
- * @return {!sre.SemanticTree.Node} The cases node.
+ * @return {!sre.SemanticNode} The cases node.
  * @private
  */
 sre.SemanticTree.prototype.tableToCases_ = function(table, openFence) {
@@ -2346,7 +2058,7 @@ sre.SemanticTree.prototype.tableToCases_ = function(table, openFence) {
     sre.SemanticTree.assignRoleToRow_(row, sre.SemanticAttr.Role.CASES);
   }
   table.type = sre.SemanticAttr.Type.CASES;
-  table.appendContentNode_(openFence);
+  table.appendContentNode(openFence);
   return table;
 };
 
@@ -2359,7 +2071,7 @@ sre.SemanticTree.prototype.tableToCases_ = function(table, openFence) {
 /**
  * Heuristic to decide if we have a multiline formula. A table is considered a
  * multiline formula if it does not have any separate cells.
- * @param {!sre.SemanticTree.Node} table A table node.
+ * @param {!sre.SemanticNode} table A table node.
  * @return {boolean} True if we believe we have a mulitline formula.
  * @private
  */
@@ -2374,7 +2086,7 @@ sre.SemanticTree.tableIsMultiline_ = function(table) {
 /**
  * Rewrites a table to multiline structure, simplifying it by getting rid of the
  * cell hierarchy level.
- * @param {!sre.SemanticTree.Node} table The node to be rewritten a multiline.
+ * @param {!sre.SemanticNode} table The node to be rewritten a multiline.
  * @private
  */
 sre.SemanticTree.prototype.tableToMultiline_ = function(table) {
@@ -2387,7 +2099,7 @@ sre.SemanticTree.prototype.tableToMultiline_ = function(table) {
 
 /**
  * Converts a row that only contains one cell into a single line.
- * @param {!sre.SemanticTree.Node} row The row to convert.
+ * @param {!sre.SemanticNode} row The row to convert.
  * @param {sre.SemanticAttr.Role=} opt_role The new role for the line.
  * @private
  */
@@ -2405,7 +2117,7 @@ sre.SemanticTree.rowToLine_ = function(row, opt_role) {
 
 /**
  * Assign a row and its contained cells a new role value.
- * @param {!sre.SemanticTree.Node} row The row to be updated.
+ * @param {!sre.SemanticNode} row The row to be updated.
  * @param {!sre.SemanticAttr.Role} role The new role for the row and its cells.
  * @private
  */
@@ -2428,13 +2140,13 @@ sre.SemanticTree.assignRoleToRow_ = function(row, role) {
 
 /**
  * Splits a list of nodes wrt. to a given predicate.
- * @param {Array.<sre.SemanticTree.Node>} nodes A list of nodes.
- * @param {!function(sre.SemanticTree.Node): boolean} pred Predicate for the
+ * @param {Array.<sre.SemanticNode>} nodes A list of nodes.
+ * @param {!function(sre.SemanticNode): boolean} pred Predicate for the
  *    partitioning relation.
  * @param {boolean=} opt_reverse If true slicing is done from the end.
- * @return {{head: !Array.<sre.SemanticTree.Node>,
- *           div: sre.SemanticTree.Node,
- *           tail: !Array.<sre.SemanticTree.Node>}} The split list.
+ * @return {{head: !Array.<sre.SemanticNode>,
+ *           div: sre.SemanticNode,
+ *           tail: !Array.<sre.SemanticNode>}} The split list.
  * @private
  */
 sre.SemanticTree.sliceNodes_ = function(nodes, pred, opt_reverse) {
@@ -2465,11 +2177,11 @@ sre.SemanticTree.sliceNodes_ = function(nodes, pred, opt_reverse) {
 /**
  * Partitions a list of nodes wrt. to a given predicate. Effectively works like
  * a PER on the ordered set of nodes.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes A list of nodes.
- * @param {!function(sre.SemanticTree.Node): boolean} pred Predicate for the
+ * @param {!Array.<!sre.SemanticNode>} nodes A list of nodes.
+ * @param {!function(sre.SemanticNode): boolean} pred Predicate for the
  *    partitioning relation.
- * @return {{rel: !Array.<sre.SemanticTree.Node>,
- *           comp: !Array.<!Array.<sre.SemanticTree.Node>>}}
+ * @return {{rel: !Array.<sre.SemanticNode>,
+ *           comp: !Array.<!Array.<sre.SemanticNode>>}}
  *    The partitioning given in terms of a collection of elements satisfying
  *    the predicate and a collection of complementary sets lying inbetween the
  *    related elements. Observe that we always have |comp| = |rel| + 1.
@@ -2498,7 +2210,7 @@ sre.SemanticTree.partitionNodes_ = function(nodes, pred) {
  * Constructs a predicate to check the semantic attribute of a node.
  * @param {!string} prop The property of a node.
  * @param {!string} attr The attribute.
- * @return {function(sre.SemanticTree.Node): boolean} The predicate.
+ * @return {function(sre.SemanticNode): boolean} The predicate.
  * @private
  */
 
@@ -2520,9 +2232,9 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
 /**
  * Process an mfenced node.
  * @param {!Element} mfenced The Mfenced node.
- * @param {!Array.<sre.SemanticTree.Node>} children List of already translated
+ * @param {!Array.<sre.SemanticNode>} children List of already translated
  *     children.
- * @return {!sre.SemanticTree.Node} The semantic node.
+ * @return {!sre.SemanticNode} The semantic node.
  * @private
  */
 sre.SemanticTree.prototype.processMfenced_ = function(mfenced, children) {
@@ -2583,7 +2295,7 @@ sre.SemanticTree.getAttribute_ = function(node, attr, def) {
 // TODO (sorge) Clean those predicates up!
 /**
  * Compute the role of a number if it does not have one already.
- * @param {!sre.SemanticTree.Node} node The semantic tree node.
+ * @param {!sre.SemanticNode} node The semantic tree node.
  * @private
  */
 sre.SemanticTree.numberRole_ = function(node) {
@@ -2611,7 +2323,7 @@ sre.SemanticTree.numberRole_ = function(node) {
 
 /**
  * Updates the font of a node if a single font can be determined.
- * @param {!sre.SemanticTree.Node} node The semantic tree node.
+ * @param {!sre.SemanticNode} node The semantic tree node.
  * @private
  */
 sre.SemanticTree.exprFont_ = function(node) {
@@ -2640,9 +2352,9 @@ sre.SemanticTree.exprFont_ = function(node) {
 
 /**
  * Creates a fraction node with the appropriate role.
- * @param {!sre.SemanticTree.Node} denom The denominator node.
- * @param {!sre.SemanticTree.Node} enume The enumerator node.
- * @return {!sre.SemanticTree.Node} The new fraction node.
+ * @param {!sre.SemanticNode} denom The denominator node.
+ * @param {!sre.SemanticNode} enume The enumerator node.
+ * @return {!sre.SemanticNode} The new fraction node.
  * @private
  */
 sre.SemanticTree.prototype.makeFractionNode_ = function(denom, enume) {
@@ -2661,7 +2373,7 @@ sre.SemanticTree.prototype.makeFractionNode_ = function(denom, enume) {
 /**
  * Processes a mmultiscript node into a tensor representation.
  * @param {!Array.<Element>} children The nodes children.
- * @return {!sre.SemanticTree.Node} The semantic tensor node.
+ * @return {!sre.SemanticNode} The semantic tensor node.
  * @private
  */
 sre.SemanticTree.prototype.processMultiScript_ = function(children) {
@@ -2739,7 +2451,7 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
  * @param {sre.SemanticAttr.Role} role The role of the dummy node.
  * @param {boolean=} opt_noSingle Flag indicating whether role should be set
  *      for a single node.
- * @return {!sre.SemanticTree.Node} The semantic tensor node.
+ * @return {!sre.SemanticNode} The semantic tensor node.
  * @private
  */
 sre.SemanticTree.prototype.makeScriptNode_ = function(
@@ -2764,7 +2476,7 @@ sre.SemanticTree.prototype.makeScriptNode_ = function(
 
 /**
  * Determines if a node is embellished and returns its type in case it is.
- * @param {sre.SemanticTree.Node} node A node to test.
+ * @param {sre.SemanticNode} node A node to test.
  * @return {?sre.SemanticAttr.Type} The type of the node that is embellished.
  * @private
  */
@@ -2781,7 +2493,7 @@ sre.SemanticTree.isEmbellished_ = function(node) {
 
 /**
  * Determines if a node is an operator, regular or embellished.
- * @param {sre.SemanticTree.Node} node A node to test.
+ * @param {sre.SemanticNode} node A node to test.
  * @return {boolean} True if the node is considered as operator.
  * @private
  */
@@ -2793,7 +2505,7 @@ sre.SemanticTree.isOperator_ = function(node) {
 
 /**
  * Determines if a node is an relation, regular or embellished.
- * @param {sre.SemanticTree.Node} node A node to test.
+ * @param {sre.SemanticNode} node A node to test.
  * @return {boolean} True if the node is considered as relation.
  * @private
  */
@@ -2805,7 +2517,7 @@ sre.SemanticTree.isRelation_ = function(node) {
 
 /**
  * Determines if a node is an punctuation, regular or embellished.
- * @param {sre.SemanticTree.Node} node A node to test.
+ * @param {sre.SemanticNode} node A node to test.
  * @return {boolean} True if the node is considered as punctuation.
  * @private
  */
@@ -2817,7 +2529,7 @@ sre.SemanticTree.isPunctuation_ = function(node) {
 
 /**
  * Determines if a node is an fence, regular or embellished.
- * @param {sre.SemanticTree.Node} node A node to test.
+ * @param {sre.SemanticNode} node A node to test.
  * @return {boolean} True if the node is considered as fence.
  * @private
  */
@@ -2829,8 +2541,8 @@ sre.SemanticTree.isFence_ = function(node) {
 
 /**
  * Finds the innermost element of an embellished operator node.
- * @param {sre.SemanticTree.Node} node The embellished node.
- * @return {sre.SemanticTree.Node} The innermost node.
+ * @param {sre.SemanticNode} node The embellished node.
+ * @return {sre.SemanticNode} The innermost node.
  * @private
  */
 sre.SemanticTree.getEmbellishedInner_ = function(node) {
@@ -2845,11 +2557,11 @@ sre.SemanticTree.getEmbellishedInner_ = function(node) {
  * Rewrites a fences partition to remove non-eligible embellished fences.
  * It rewrites all other fences into punctuations.
  * For eligibility see sre.SemanticTree.isElligibleFence_
- * @param {{rel: !Array.<sre.SemanticTree.Node>,
- *          comp: !Array.<!Array.<sre.SemanticTree.Node>>}} partition
+ * @param {{rel: !Array.<sre.SemanticNode>,
+ *          comp: !Array.<!Array.<sre.SemanticNode>>}} partition
  *        A partition for fences.
- * @return {{rel: !Array.<sre.SemanticTree.Node>,
- *           comp: !Array.<!Array.<sre.SemanticTree.Node>>}}
+ * @return {{rel: !Array.<sre.SemanticNode>,
+ *           comp: !Array.<!Array.<sre.SemanticNode>>}}
  *    The cleansed partition.
  * @private
  */
@@ -2883,7 +2595,7 @@ sre.SemanticTree.purgeFences_ = function(partition) {
  * Currently fences are not eligible if they are opening fences with right
  * indices, closing fences with left indices or fences with both left and right
  * indices.
- * @param {sre.SemanticTree.Node} node A node to test.
+ * @param {sre.SemanticNode} node A node to test.
  * @return {boolean} True if the node is considered as fence.
  * @private
  */
@@ -2926,13 +2638,13 @@ sre.SemanticTree.isElligibleFence_ = function(node) {
 /**
  * Rewrites a fenced node by pulling some embellishments from fences to the
  * outside.
- * @param {!sre.SemanticTree.Node} fenced The fenced node.
- * @return {!sre.SemanticTree.Node} The rewritten node.
+ * @param {!sre.SemanticNode} fenced The fenced node.
+ * @return {!sre.SemanticNode} The rewritten node.
  * @private
  */
 sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
-  var ofence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[0]);
-  var cfence = /** @type {!sre.SemanticTree.Node} */ (fenced.contentNodes[1]);
+  var ofence = /** @type {!sre.SemanticNode} */ (fenced.contentNodes[0]);
+  var cfence = /** @type {!sre.SemanticNode} */ (fenced.contentNodes[1]);
   var rewritten = sre.SemanticTree.rewriteFence_(fenced, ofence);
   fenced.contentNodes[0] = rewritten.fence;
   rewritten = sre.SemanticTree.rewriteFence_(rewritten.node, cfence);
@@ -2948,10 +2660,10 @@ sre.SemanticTree.rewriteFencedNode_ = function(fenced) {
  * Rewrites a fence by removing embellishments and putting them around the
  * node. The only embellishments that are not pulled out are overscore and
            * underscore.
- * @param {!sre.SemanticTree.Node} node The original fenced node.
- * @param {!sre.SemanticTree.Node} fence The fence node.
- * @return {{node: !sre.SemanticTree.Node,
- *           fence: !sre.SemanticTree.Node}} The rewritten node and fence.
+ * @param {!sre.SemanticNode} node The original fenced node.
+ * @param {!sre.SemanticNode} fence The fence node.
+ * @return {{node: !sre.SemanticNode,
+ *           fence: !sre.SemanticNode}} The rewritten node and fence.
  * @private
  */
 // TODO (sorge) Maybe remove the superfluous MathML element.
@@ -2959,7 +2671,7 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
   if (!fence.embellished) {
     return {node: node, fence: fence};
   }
-  var newFence = /** @type {!sre.SemanticTree.Node} */(fence.childNodes[0]);
+  var newFence = /** @type {!sre.SemanticNode} */(fence.childNodes[0]);
   var rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
   if (sre.SemanticTree.attrPred_('type', 'SUPERSCRIPT')(fence) ||
       sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(fence) ||
@@ -2969,13 +2681,13 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
       fence.role = node.role;
     }
     if (newFence !== rewritten.node) {
-      fence.replaceChild_(newFence, rewritten.node);
+      fence.replaceChild(newFence, rewritten.node);
       newFence.parent = node;
     }
     sre.SemanticTree.propagateFencePointer_(fence, newFence);
     return {node: fence, fence: rewritten.fence};
   }
-  fence.replaceChild_(newFence, rewritten.fence);
+  fence.replaceChild(newFence, rewritten.fence);
   if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
     fence.mathml.push(fence.mathmlTree);
   }
@@ -2988,8 +2700,8 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
  * actual fence it embellishes. If the link is valid on the new node, the old
  * node will point to that link as well. Note, that this fence might still be
  * embellished itself, e.g. with under or overscore.
- * @param {!sre.SemanticTree.Node} oldNode The old embellished node.
- * @param {!sre.SemanticTree.Node} newNode The new embellished node.
+ * @param {!sre.SemanticNode} oldNode The old embellished node.
+ * @param {!sre.SemanticNode} newNode The new embellished node.
  * @private
  */
 sre.SemanticTree.propagateFencePointer_ = function(oldNode, newNode) {
@@ -3003,39 +2715,6 @@ sre.SemanticTree.propagateFencePointer_ = function(oldNode, newNode) {
  */
 sre.SemanticTree.prototype.displayTree = function() {
   this.root.displayTree(0);
-};
-
-
-/**
- * Convenience method to display the whole tree and its elements.
- * @param {!number} depth The depth of the tree.
- */
-sre.SemanticTree.Node.prototype.displayTree = function(depth) {
-  depth++;
-  var depthString = Array(depth).join('  ');
-  console.log(depthString + this.toString());
-  console.log(depthString + 'MathmlTree:');
-  console.log(depthString + this.mathmlTreeString_());
-  console.log(depthString + 'MathML:');
-  for (var i = 0, mml; mml = this.mathml[i]; i++) {
-    console.log(depthString + mml.toString());
-  }
-  console.log(depthString + 'Begin Content');
-  this.contentNodes.forEach(function(x) {x.displayTree(depth);});
-  console.log(depthString + 'End Content');
-  console.log(depthString + 'Begin Children');
-  this.childNodes.forEach(function(x) {x.displayTree(depth);});
-  console.log(depthString + 'End Children');
-};
-
-
-/**
- * Returns a display version of the node's associated MathML tree.
- * @return {!string} The MathML tree as string or EMPTY.
- * @private
- */
-sre.SemanticTree.Node.prototype.mathmlTreeString_ = function() {
-  return this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY';
 };
 
 

@@ -23,7 +23,7 @@ goog.provide('sre.CaseLine');
 goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticNode');
 
 
 
@@ -59,7 +59,7 @@ sre.CaseLine.test = function(semantic) {
 sre.CaseLine.prototype.getMathml = function() {
   if (this.semantic.childNodes.length) {
     sre.EnrichMathml.walkTree(
-        /**@type{!sre.SemanticTree.Node}*/(this.semantic.childNodes[0]));
+        /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[0]));
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   return this.mml;
