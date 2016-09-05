@@ -72,6 +72,12 @@ sre.DummyWalker.prototype.repeat = function() { };
 /**
  * @override
  */
+sre.DummyWalker.prototype.depth = function() { };
+
+
+/**
+ * @override
+ */
 sre.DummyWalker.prototype.getDepth = function() {
   return 0;
 };

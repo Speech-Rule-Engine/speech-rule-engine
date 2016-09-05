@@ -34,7 +34,7 @@ goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechGenerators');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
-goog.require('sre.Walkers');
+goog.require('sre.WalkerFactory');
 
 
 
@@ -449,8 +449,9 @@ sre.System.prototype.walk = function(expr) {
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);
-  sre.System.LocalStorage_.getInstance().walker = new sre.SyntaxWalker(
-      node, sre.System.LocalStorage_.getInstance().speechGenerator,
+  sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
+      'Syntax', node,
+      sre.System.LocalStorage_.getInstance().speechGenerator,
       highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };
