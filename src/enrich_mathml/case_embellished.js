@@ -238,7 +238,6 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
  * @private
  */
 sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
-  var id = semantic.id;
   var mmlTag = sre.DomUtil.tagName(mml);
   var parent = null;
   var caller;

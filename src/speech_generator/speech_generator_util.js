@@ -159,7 +159,6 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
 sre.SpeechGeneratorUtil.connectAllMactions = function(mml, stree) {
   var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
   for (var i = 0, maction; maction = mactions[i]; i++) {
-    var aid = maction.getAttribute('id');
     var lchild = maction.childNodes[1];
     var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];

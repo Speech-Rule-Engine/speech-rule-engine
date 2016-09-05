@@ -64,9 +64,8 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
       } else {
         cstr = 'self::text() = "' + str + '"';
       }
-      var rule = this.defineRule(
-          name, domain + '.' + style, '[t] "' + content + '"',
-          'self::text()', cstr);
+      this.defineRule(name, domain + '.' + style, '[t] "' + content + '"',
+                      'self::text()', cstr);
     }
   }
 };

@@ -105,7 +105,7 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
-  var newMml = sre.EnrichMathml.walkTree(semantic.root);
+  sre.EnrichMathml.walkTree(semantic.root);
   sre.Debugger.getInstance().generateOutput(
       function() {
         sre.EnrichMathml.formattedOutput(oldMml, mml, semantic, true);

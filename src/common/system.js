@@ -440,7 +440,6 @@ sre.System.prototype.walk = function(expr) {
       sre.SpeechGeneratorFactory.generator('Node');
   var highlighter = sre.HighlighterFactory.highlighter(
     'black', 'white', {renderer: 'NativeMML'});
-  var mml = sre.System.getInstance().parseExpression_(expr, false);
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);

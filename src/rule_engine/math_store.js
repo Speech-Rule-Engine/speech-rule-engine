@@ -276,7 +276,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     } else {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
-      var count = 0;
       while (rest) {
         var num = rest.match(
             /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);

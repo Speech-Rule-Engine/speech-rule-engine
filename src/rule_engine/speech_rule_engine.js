@@ -237,6 +237,7 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
 
 
 // Dispatch functionality.
+// The timing function is temporary until the MOSS deliverable is done.
 /**
  * Computes a speech object for a given node. Returns the empty list if
  * no node is given.
@@ -245,6 +246,23 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
+  var timeIn = (new Date()).getTime();
+  var result = this.evaluateNode_(node);
+  var timeOut = (new Date()).getTime();
+  sre.Debugger.getInstance().output('Time:', timeOut - timeIn);
+  return result;
+};
+
+
+/**
+ * Computes a speech object for a given node. Returns the empty list if
+ * no node is given.
+ * @param {Node} node The node to be evaluated.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *   for that node.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
   if (!node) {
     return [];
   }
