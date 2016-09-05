@@ -30,7 +30,6 @@ goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
-goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticUtil');
 
 
@@ -546,7 +545,7 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
-  if (semantic.font != sre.SemanticAttr.Font.UNKNOWN) {
+  if (semantic.font != sre.Semantic.Font.UNKNOWN) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
   }
   mml.setAttribute(sre.EnrichMathml.Attribute.ID, semantic.id);
@@ -585,20 +584,20 @@ sre.EnrichMathml.combineContentChildren_ = function(
     semantic, content, children) {
   sre.EnrichMathml.setOperatorAttribute_(semantic, content);
   switch (semantic.type) {
-    case sre.SemanticAttr.Type.RELSEQ:
-    case sre.SemanticAttr.Type.INFIXOP:
-    case sre.SemanticAttr.Type.MULTIREL:
+    case sre.Semantic.Type.RELSEQ:
+    case sre.Semantic.Type.INFIXOP:
+    case sre.Semantic.Type.MULTIREL:
       return sre.BaseUtil.interleaveLists(children, content);
-    case sre.SemanticAttr.Type.PREFIXOP:
+    case sre.Semantic.Type.PREFIXOP:
       return content.concat(children);
-    case sre.SemanticAttr.Type.POSTFIXOP:
+    case sre.Semantic.Type.POSTFIXOP:
       return children.concat(content);
-    case sre.SemanticAttr.Type.FENCED:
+    case sre.Semantic.Type.FENCED:
       children.unshift(content[0]);
       children.push(content[1]);
       return children;
-    case sre.SemanticAttr.Type.PUNCTUATED:
-      if (semantic.role === sre.SemanticAttr.Role.TEXT) {
+    case sre.Semantic.Type.PUNCTUATED:
+      if (semantic.role === sre.Semantic.Role.TEXT) {
         return sre.BaseUtil.interleaveLists(children, content);
       }
       var markupList = [];
@@ -612,9 +611,9 @@ sre.EnrichMathml.combineContentChildren_ = function(
       }
       sre.EnrichMathml.setOperatorAttribute_(semantic, markupList);
       return children;
-    case sre.SemanticAttr.Type.APPL:
+    case sre.Semantic.Type.APPL:
       return [children[0], content[0], children[1]];
-    case sre.SemanticAttr.Type.ROOT:
+    case sre.Semantic.Type.ROOT:
       return [children[1], children[0]];
     default:
       return children;

@@ -22,7 +22,7 @@
 goog.provide('sre.SemanticNode');
 
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticUtil');
+goog.require('sre.SystemExternal');
 
 
 
