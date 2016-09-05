@@ -22,6 +22,7 @@ goog.provide('sre.EnrichMathmlTest');
 goog.require('sre.AbstractExamples');
 goog.require('sre.DomUtil');
 goog.require('sre.Enrich');
+goog.require('sre.SystemExternal');
 
 
 

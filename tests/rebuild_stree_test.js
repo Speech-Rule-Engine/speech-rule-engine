@@ -25,6 +25,7 @@ goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
 goog.require('sre.Enrich');
 goog.require('sre.RebuildStree');
+goog.require('sre.SemanticTree');
 
 
 

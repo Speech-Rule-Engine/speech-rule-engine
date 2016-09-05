@@ -25,6 +25,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
+goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
 
