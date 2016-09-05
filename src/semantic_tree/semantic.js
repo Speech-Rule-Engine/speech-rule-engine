@@ -25,15 +25,24 @@ goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 
 
-/** Exports font attributes. */
+/**
+ * Exports font attributes.
+ * @typedef {sre.Semantic.Font}
+*/
 sre.Semantic.Font = sre.SemanticAttr.Font;
 
 
-/** Exports role attributes. */
+/**
+ * Exports role attributes.
+ * @typedef {sre.Semantic.Role}
+ */
 sre.Semantic.Role = sre.SemanticAttr.Role;
 
 
-/** Exports type attributes. */
+/**
+ * Exports type attributes.
+ * @typedef {sre.Semantic.Type}
+ */
 sre.Semantic.Type = sre.SemanticAttr.Type;
 
 
