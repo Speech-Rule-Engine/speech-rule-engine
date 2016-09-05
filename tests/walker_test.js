@@ -25,7 +25,7 @@ goog.provide('sre.WalkerTest');
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
-goog.require('sre.NodeSpeechGenerator');
+goog.require('sre.SpeechGeneratorFactory');
 goog.require('sre.System');
 goog.require('sre.WalkerFactory');
 
@@ -60,7 +60,8 @@ goog.inherits(sre.WalkerTest, sre.AbstractTest);
 sre.WalkerTest.prototype.setUpTest = function() {
   this.system.setupEngine(
       {semantics: true, domain: 'mathspeak', style: 'default',
-        speech: sre.Engine.Speech.NONE});
+       rules: ['AbstractionRules', 'MathspeakRules'],
+       speech: sre.Engine.Speech.NONE});
 };
 
 
@@ -71,6 +72,7 @@ sre.WalkerTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
       {semantics: false, domain: 'default', style: 'short',
         speech: sre.Engine.Speech.NONE});
+  // TODO: Reset the rule sets.
 };
 
 
@@ -79,7 +81,7 @@ sre.WalkerTest.prototype.tearDownTest = function() {
  * @type {string}
  */
 sre.WalkerTest.QUADRATIC_MML =
-  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+  '<math display="block"' +
   ' data-semantic-type="relseq" data-semantic-role="equality"' +
   ' data-semantic-id="24" data-semantic-children="0,23"' +
   ' data-semantic-content="1" data-semantic-complexity="7">' +
@@ -1091,14 +1093,15 @@ sre.WalkerTest.QUADRATIC_SVG =
   '</g>' +
   '</svg>';
 
-  
+
 /**
  * Executes single walker moves and tests the resulting speech.
  * @param {Walker} walker The walker.
  * @param {?string} move The move of the walker.
  * @param {?(string)} result The expected result.
+ * @private
  */
-sre.WalkerTest.prototype.executeTest = function(walker, move, result) {
+sre.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
   if (move) {
     walker.move(sre.EventUtil.KeyCode[move]);
   }
@@ -1106,10 +1109,21 @@ sre.WalkerTest.prototype.executeTest = function(walker, move, result) {
 };
 
 
+/**
+ * Creates a walker.
+ * @param {!string} type The type of the walker.
+ * @param {!Node} node The node on which to start the walker.
+ * @param {{renderer: string,
+ *          browser: (undefined|string)}} renderer
+ *     Information on renderer, browser. Has to at least contain the
+ *     renderer field.
+ * @return {sre.Walker} The newly created walker.
+ * @private
+ */
 sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer) {
   return sre.WalkerFactory.walker(
     type, node,
-    new sre.NodeSpeechGenerator(),
+    sre.SpeechGeneratorFactory.generator('Node'),
     sre.HighlighterFactory.highlighter(
       'black', 'white', renderer),
     sre.WalkerTest.QUADRATIC_MML
@@ -1123,25 +1137,25 @@ sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer) {
  * @private
  */
 sre.WalkerTest.prototype.runSyntaxMoveTests_ = function(walker) {
-  this.executeTest(walker, null,
+  this.executeTest_(walker, null,
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'DOWN', 'x');
-  this.executeTest(walker, 'RIGHT', 'equals');
-  this.executeTest(walker, 'RIGHT',
+  this.executeTest_(walker, 'DOWN', 'x');
+  this.executeTest_(walker, 'RIGHT', 'equals');
+  this.executeTest_(walker, 'RIGHT',
                    'StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'SPACE', 'Level 1 collapsible');
-  this.executeTest(walker, 'DOWN',
+  this.executeTest_(walker, 'SPACE', 'Level 1 collapsible');
+  this.executeTest_(walker, 'DOWN',
                    'Numerator negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot');
-  this.executeTest(walker, 'SPACE', 'Level 2 Numerator');
-  this.executeTest(walker, 'UP',
+  this.executeTest_(walker, 'SPACE', 'Level 2 Numerator');
+  this.executeTest_(walker, 'UP',
                    'StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'LEFT', 'equals');
-  this.executeTest(walker, 'LEFT', 'x');
-  this.executeTest(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'LEFT', 'equals');
+  this.executeTest_(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'LEFT', 'x');
 };
 
 
@@ -1204,26 +1218,26 @@ sre.WalkerTest.prototype.testSyntaxWalkerSvg = function() {
  * @private
  */
 sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
-  this.executeTest(walker, null,
+  this.executeTest_(walker, null,
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'DOWN', 'x');
-  this.executeTest(walker, 'RIGHT',
+  this.executeTest_(walker, 'DOWN', 'x');
+  this.executeTest_(walker, 'RIGHT',
                    'equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'RIGHT',
+  this.executeTest_(walker, 'RIGHT',
                    'equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'SPACE', 'Level 1 collapsible');
-  this.executeTest(walker, 'DOWN',
+  this.executeTest_(walker, 'SPACE', 'Level 1 collapsible');
+  this.executeTest_(walker, 'DOWN',
                    'Numerator negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot');
-  this.executeTest(walker, 'SPACE', 'Level 2 Numerator');
-  this.executeTest(walker, 'UP',
+  this.executeTest_(walker, 'SPACE', 'Level 2 Numerator');
+  this.executeTest_(walker, 'UP',
                    'equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'LEFT', 'x');
-  this.executeTest(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'LEFT', 'x');
 };
 
 
@@ -1286,19 +1300,19 @@ sre.WalkerTest.prototype.testSemanticWalkerSvg = function() {
  * @private
  */
 sre.WalkerTest.prototype.runDummyMoveTests_ = function(walker) {
-  this.executeTest(walker, null,
+  this.executeTest_(walker, null,
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'DOWN',
+  this.executeTest_(walker, 'DOWN',
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'RIGHT',
+  this.executeTest_(walker, 'RIGHT',
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'RIGHT',
+  this.executeTest_(walker, 'RIGHT',
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest(walker, 'SPACE',
+  this.executeTest_(walker, 'SPACE',
                    'x equals StartFraction negative b plus-or-minus StartRoot' +
                    ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
@@ -1354,4 +1368,31 @@ sre.WalkerTest.prototype.testDummyWalkerSvg = function() {
     'Dummy', this.svg,
     {renderer: 'SVG'});
   this.runDummyMoveTests_(walker);
+};
+
+
+/**
+ * Tests summary speech generation on quadratic formula representations.
+ * @param {Node} node The node on which to test the summary.
+ * @private
+ */
+sre.WalkerTest.prototype.executeSummaryTest_ = function(node) {
+  var dummy = sre.WalkerFactory.walker(
+    'Dummy', node,
+    sre.SpeechGeneratorFactory.generator('Summary'),
+    sre.HighlighterFactory.highlighter(
+      'black', 'white', {renderer: 'NativeMML'}),
+    sre.WalkerTest.QUADRATIC_MML
+  );
+  this.assert.equal(dummy.speech(), 'x equals collapsed fraction');
+};
+
+
+/**
+ * Tests summary speech generation for different representations of the
+ * quadratic formula.
+ */
+sre.WalkerTest.prototype.testSummary = function() {
+  [this.mml, this.htmlCss, this.chtml, this.svg].
+    forEach(goog.bind(this.executeSummaryTest_, this));
 };
