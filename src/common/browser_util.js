@@ -45,7 +45,8 @@ sre.BrowserUtil.detectIE = function() {
  */
 sre.BrowserUtil.detectEdge = function() {
   var isEdge = typeof window !== 'undefined' && 'MSGestureEvent' in window &&
-      'chrome' in window && window.chrome.loadTimes === null;
+      'chrome' in window &&
+      window.chrome.loadTimes == null; // This has to remain ==!
   if (!isEdge) {
     return false;
   }
