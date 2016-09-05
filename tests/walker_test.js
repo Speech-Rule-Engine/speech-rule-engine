@@ -36,7 +36,7 @@ goog.require('sre.WalkerFactory');
  * @extends {sre.AbstractTest}
  */
 sre.WalkerTest = function() {
-  goog.base(this);
+  sre.WalkerTest.base(this, 'constructor');
 
   this.information = 'Walker function test.';
 

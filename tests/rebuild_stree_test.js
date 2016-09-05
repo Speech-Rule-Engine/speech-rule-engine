@@ -34,7 +34,7 @@ goog.require('sre.SemanticTree');
  * @extends {sre.AbstractTest}
  */
 sre.RebuildStreeTest = function() {
-  goog.base(this);
+  sre.RebuildStreeTest.base(this, 'constructor');
 
   /**
    * @override

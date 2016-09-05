@@ -31,7 +31,7 @@ goog.require('sre.System');
  * @extends {sre.AbstractTest}
  */
 sre.AbstractExamples = function() {
-  goog.base(this);
+  sre.AbstractExamples.base(this, 'constructor');
 
   /**
    * @type {boolean}

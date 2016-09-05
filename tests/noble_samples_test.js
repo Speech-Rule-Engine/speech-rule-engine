@@ -29,7 +29,7 @@ goog.require('sre.AbstractRuleTest');
  * @extends {sre.AbstractRuleTest}
  */
 sre.NobleSamplesTest = function() {
-  goog.base(this);
+  sre.NobleSamplesTest.base(this, 'constructor');
 
   /**
    * @override
