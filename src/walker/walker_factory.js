@@ -40,7 +40,7 @@ goog.require('sre.Walker');
  *     highlighter.
  * @param {!string} xml The original xml/mathml node on which the walker is
  *      called as a string.
- * @return {sre.Walker} The newly generated walker.
+ * @return {!sre.Walker} The newly generated walker.
  */
 sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
   var constructor = sre.WalkerFactory.walkerMapping_[type] ||
@@ -50,7 +50,8 @@ sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
 
 
 /**
- * @type {Object.<string, sre.Walker>}
+ * @type {Object.<string, function(new:sre.Walker, Node,
+ *      sre.SpeechGenerator, sre.Highlighter, string)>}
  * @private
  */
 sre.WalkerFactory.walkerMapping_ = {

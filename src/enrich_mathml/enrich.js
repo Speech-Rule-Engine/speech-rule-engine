@@ -72,7 +72,7 @@ sre.Enrich.semanticMathml = function(expr, callback) {
  * @return {string} The enriched MathML expression.
  */
 sre.Enrich.testTranslation__ = function(expr) {
-  sre.EnrichCases(); // dummy call
+  new sre.EnrichCases(); // dummy call
   sre.Debugger.getInstance().init();
   var mml = sre.Enrich.semanticMathmlSync(
       sre.Enrich.prepareMmlString(expr)).toString();

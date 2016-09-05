@@ -109,7 +109,7 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = [];
   for (var i = 0; i < ruleSetNames.length; i++) {
     var set = sre.SpeechRuleStores.getConstructor(ruleSetNames[i]);
-    if (set) {
+    if (set && set.getInstance) {
       ruleSets.push(set.getInstance());
     }
   }

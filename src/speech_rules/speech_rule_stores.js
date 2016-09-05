@@ -30,7 +30,7 @@ goog.require('sre.SemanticTreeRules');
 
 
 /**
- * @type {Object.<string, sre.BaseRuleStore>}
+ * @type {!Object.<string, sre.BaseRuleStore>}
  * @private
  */
 sre.SpeechRuleStores.RULE_SETS_ = {
@@ -58,8 +58,5 @@ sre.SpeechRuleStores.availableSets = function() {
  */
 sre.SpeechRuleStores.getConstructor = function(name) {
   var set = sre.SpeechRuleStores.RULE_SETS_[name];
-  if (set && set.getInstance) {
-    return set;
-  }
-  return null;
+  return set ? set : null;
 };

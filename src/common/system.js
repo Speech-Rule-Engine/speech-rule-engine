@@ -436,17 +436,16 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  * @return {string} The initial speech string for that expression.
  */
 sre.System.prototype.walk = function(expr) {
-  sre.System.LocalStorage_.getInstance().speechGenerator =
-      sre.SpeechGeneratorFactory.generator('Node');
-  var highlighter = sre.HighlighterFactory.highlighter(
-    'black', 'white', {renderer: 'NativeMML'});
+  var generator = sre.SpeechGeneratorFactory.generator('Node');
+  sre.System.LocalStorage_.getInstance().speechGenerator = generator;
+  var highlighter = /** @type {!sre.Highlighter} */ (
+      sre.HighlighterFactory.highlighter(
+        {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);
   sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      'Syntax', node,
-      sre.System.LocalStorage_.getInstance().speechGenerator,
-      highlighter, eml);
+      'Syntax', node, generator, highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };
 
