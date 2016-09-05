@@ -23,7 +23,6 @@ goog.provide('sre.MathmlStoreUtil');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.Engine');
 goog.require('sre.MathUtil');
-goog.require('sre.SpeechRuleEngine');
 goog.require('sre.XpathUtil');
 
 

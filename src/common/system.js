@@ -396,7 +396,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
  * @return {Node} Semantic tree for input node as newly created Xml node.
  */
 sre.System.prototype.getSemanticTree = function(mml) {
-  return sre.Semantic.getTree(mml);
+  return sre.Semantic.xmlTree(mml);
 };
 
 

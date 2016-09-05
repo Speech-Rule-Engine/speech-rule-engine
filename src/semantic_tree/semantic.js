@@ -53,8 +53,18 @@ sre.Semantic.Attr;
  * @param {!Element} mml The MathML node.
  * @return {Node} Semantic tree for input node as XML node.
  */
-sre.Semantic.getTree = function(mml) {
+sre.Semantic.xmlTree = function(mml) {
   return (new sre.SemanticTree(mml)).xml();
+};
+
+
+/**
+ * Creates the semantic tree for a given MathML node.
+ * @param {!Element} mml The MathML node.
+ * @return {sre.SemanticTree} Semantic tree for input node.
+ */
+sre.Semantic.getTree = function(mml) {
+  return new sre.SemanticTree(mml);
 };
 
 
