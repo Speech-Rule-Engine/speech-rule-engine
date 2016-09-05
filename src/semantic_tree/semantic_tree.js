@@ -156,9 +156,8 @@ sre.SemanticTree.prototype.createNode_ = function() {
  * Replaces a node in the tree. Updates the root node if necessary.
  * @param {!sre.SemanticNode} oldNode The node to be replaced.
  * @param {!sre.SemanticNode} newNode The new node.
- * @private
  */
-sre.SemanticTree.prototype.replaceNode_ = function(oldNode, newNode) {
+sre.SemanticTree.prototype.replaceNode = function(oldNode, newNode) {
   var parent = oldNode.parent;
   if (!parent) {
     this.root = newNode;

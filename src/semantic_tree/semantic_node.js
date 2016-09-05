@@ -266,9 +266,8 @@ sre.SemanticNode.prototype.appendContentNode = function(node) {
 /**
  * Removes a content node from the node.
  * @param {sre.SemanticNode} node The content node to be removed.
- * @private
  */
-sre.SemanticNode.prototype.removeContentNode_ = function(node) {
+sre.SemanticNode.prototype.removeContentNode = function(node) {
   if (node) {
     var index = this.contentNodes.indexOf(node);
     if (index != -1) {
