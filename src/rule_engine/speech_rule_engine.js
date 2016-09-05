@@ -30,20 +30,14 @@
 
 goog.provide('sre.SpeechRuleEngine');
 
-goog.require('sre.AbstractionRules');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
-goog.require('sre.ClearspeakRules');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStoreRules');
-goog.require('sre.MathspeakRules');
-goog.require('sre.PrefixRules');
-goog.require('sre.SemanticTreeRules');
-goog.require('sre.SpeechRule');
+goog.require('sre.SpeechRuleStores');
 goog.require('sre.XpathUtil');
 
 
@@ -113,8 +107,8 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
 sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = [];
   for (var i = 0; i < ruleSetNames.length; i++) {
-    var set = sre[ruleSetNames[i]];
-    if (set && set.getInstance) {
+    var set = sre.SpeechRuleStores.getConstructor(ruleSetNames[i]);
+    if (set) {
       ruleSets.push(set.getInstance());
     }
   }
