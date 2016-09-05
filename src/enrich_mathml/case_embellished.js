@@ -27,7 +27,6 @@ goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticNode');
-goog.require('sre.SemanticUtil');
 
 
 
@@ -240,7 +239,7 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
  */
 sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
   var id = semantic.id;
-  var mmlTag = sre.SemanticUtil.tagName(mml);
+  var mmlTag = sre.DomUtil.tagName(mml);
   var parent = null;
   var caller;
   if (mmlTag === 'MSUBSUP') {

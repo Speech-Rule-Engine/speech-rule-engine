@@ -244,3 +244,13 @@ sre.DomUtil.querySelectorAll = function(node, tag) {
           sre.DomUtil.toArray(node.querySelectorAll(tag)) :
           sre.XpathUtil.evalXPath('.//' + tag, node));
 };
+
+
+/**
+ * Returns the tagname of an element node in upper case.
+ * @param {Element} node The node.
+ * @return {string} The node's tagname.
+ */
+sre.DomUtil.tagName = function(node) {
+  return node.tagName.toUpperCase();
+};

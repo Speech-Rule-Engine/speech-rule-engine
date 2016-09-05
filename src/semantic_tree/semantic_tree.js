@@ -177,7 +177,7 @@ sre.SemanticTree.prototype.replaceNode = function(oldNode, newNode) {
 sre.SemanticTree.prototype.parseMathml_ = function(mml) {
   var children = sre.DomUtil.toArray(mml.childNodes);
   var newNode;
-  switch (sre.SemanticUtil.tagName(mml)) {
+  switch (sre.DomUtil.tagName(mml)) {
     case 'SEMANTICS':
       if (children.length > 0) {
         newNode = this.parseMathml_(/** @type {!Element} */(children[0]));
@@ -216,7 +216,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'MOVER':
     case 'MUNDER':
     case 'MUNDEROVER':
-      newNode = this.makeLimitNode_(sre.SemanticUtil.tagName(mml),
+      newNode = this.makeLimitNode_(sre.DomUtil.tagName(mml),
                                     this.parseMathmlChildren_(children));
       break;
     case 'MROOT':
@@ -257,7 +257,7 @@ sre.SemanticTree.prototype.parseMathml_ = function(mml) {
     case 'ANNOTATION-XML':
       newNode = this.makeLeafNode_(mml);
       newNode.type = sre.SemanticAttr.Type.TEXT;
-      if (sre.SemanticUtil.tagName(mml) === 'MS') {
+      if (sre.DomUtil.tagName(mml) === 'MS') {
         newNode.role = sre.SemanticAttr.Role.STRING;
       }
       sre.SemanticTree.exprFont_(newNode);
@@ -2391,7 +2391,7 @@ sre.SemanticTree.prototype.processMultiScript_ = function(children) {
   var prescripts = false;
   var scriptcount = 0;
   for (var i = 0, child; child = children[i]; i++) {
-    if (sre.SemanticUtil.tagName(child) === 'MPRESCRIPTS') {
+    if (sre.DomUtil.tagName(child) === 'MPRESCRIPTS') {
       prescripts = true;
       scriptcount = 0;
       continue;

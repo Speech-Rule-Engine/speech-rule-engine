@@ -626,7 +626,7 @@ sre.EnrichMathml.combineContentChildren_ = function(
  * @return {!Element} The rewritten element.
  */
 sre.EnrichMathml.rewriteMfenced = function(mml) {
-  if (sre.SemanticUtil.tagName(mml) !== 'MFENCED') {
+  if (sre.DomUtil.tagName(mml) !== 'MFENCED') {
     return mml;
   }
   var newNode = sre.DomUtil.createElement('mrow');
