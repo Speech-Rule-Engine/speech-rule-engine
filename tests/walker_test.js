@@ -1096,7 +1096,7 @@ sre.WalkerTest.QUADRATIC_SVG =
 
 /**
  * Executes single walker moves and tests the resulting speech.
- * @param {Walker} walker The walker.
+ * @param {sre.Walker} walker The walker.
  * @param {?string} move The move of the walker.
  * @param {?(string)} result The expected result.
  * @private
@@ -1124,8 +1124,8 @@ sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer) {
   return sre.WalkerFactory.walker(
     type, node,
     sre.SpeechGeneratorFactory.generator('Node'),
-    sre.HighlighterFactory.highlighter(
-      'black', 'white', renderer),
+    /** @type {!sre.Highlighter} */(sre.HighlighterFactory.highlighter(
+      {color: 'black'}, {color: 'white'}, renderer)),
     sre.WalkerTest.QUADRATIC_MML
   );
 };
@@ -1133,7 +1133,7 @@ sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer) {
 
 /**
  * Runs a series of walker tests on a quadratic formula.
- * @param {Walker} walker The walker.
+ * @param {sre.Walker} walker The walker.
  * @private
  */
 sre.WalkerTest.prototype.runSyntaxMoveTests_ = function(walker) {
@@ -1214,7 +1214,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerSvg = function() {
 
 /**
  * Runs a series of walker tests on a quadratic formula.
- * @param {Walker} walker The walker.
+ * @param {sre.Walker} walker The walker.
  * @private
  */
 sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
@@ -1296,7 +1296,7 @@ sre.WalkerTest.prototype.testSemanticWalkerSvg = function() {
 
 /**
  * Runs a series of walker tests on a quadratic formula.
- * @param {Walker} walker The walker.
+ * @param {sre.Walker} walker The walker.
  * @private
  */
 sre.WalkerTest.prototype.runDummyMoveTests_ = function(walker) {
@@ -1373,15 +1373,15 @@ sre.WalkerTest.prototype.testDummyWalkerSvg = function() {
 
 /**
  * Tests summary speech generation on quadratic formula representations.
- * @param {Node} node The node on which to test the summary.
+ * @param {!Node} node The node on which to test the summary.
  * @private
  */
 sre.WalkerTest.prototype.executeSummaryTest_ = function(node) {
   var dummy = sre.WalkerFactory.walker(
     'Dummy', node,
     sre.SpeechGeneratorFactory.generator('Summary'),
-    sre.HighlighterFactory.highlighter(
-      'black', 'white', {renderer: 'NativeMML'}),
+    /** @type {!sre.Highlighter} */(sre.HighlighterFactory.highlighter(
+      {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'})),
     sre.WalkerTest.QUADRATIC_MML
   );
   this.assert.equal(dummy.speech(), 'x equals collapsed fraction');
