@@ -43,7 +43,7 @@ TEST_SRC = $(TEST_DIR)/*.js
 # Compiling as rigidly as possible.
 # (Currently we use automatically all)
 ##################################################################
-CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions newCheckTypes nonStandardJsDocs reportUnknownTypes suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility
+CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingReturn msgDescriptions newCheckTypes nonStandardJsDocs suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility # * missingRequire reportUnknownTypes
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
@@ -65,7 +65,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT --js $(CLOSURE_LIB)/closure/goog/base.js # $(ERROR_FLAGS) # --jscomp_error=* 
+CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js'
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
@@ -97,7 +97,7 @@ compile: $(TARGET)
 
 $(TARGET): $(SRC)
 	@echo Compiling Speech Rule Engine
-	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --js_output_file=$(TARGET) $^
+	$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --js_output_file=$(TARGET) $^
 
 deps: $(DEPS)
 
@@ -153,8 +153,7 @@ clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 # Extern files.
 ##################################################################
 TEST_EXTERN_FILES = $(shell find $(TEST_DIR) -type f -name 'externs.js')
-TEST_EXTERN_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
-TEST_FLAGS = $(foreach flag, $(TEST_EXTERN_FLAGS), $(MAKE_FLAG))
+TEST_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
 
 test_deps: $(TEST_DEPS)
 
@@ -168,7 +167,7 @@ test_compile: $(TEST_TARGET)
 
 $(TEST_TARGET): $(TEST_SRC) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
-	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
+	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
 
 test_script: $(TEST)
 
