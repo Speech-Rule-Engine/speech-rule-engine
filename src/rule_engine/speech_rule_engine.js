@@ -37,6 +37,7 @@ goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
+goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleStores');
 goog.require('sre.XpathUtil');
 

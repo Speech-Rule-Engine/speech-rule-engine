@@ -28,11 +28,6 @@
  */
 
 goog.provide('sre.SpeechRule');
-goog.provide('sre.SpeechRule.Action');
-goog.provide('sre.SpeechRule.Component');
-goog.provide('sre.SpeechRule.DynamicCstr');
-goog.provide('sre.SpeechRule.Precondition');
-goog.provide('sre.SpeechRule.Type');
 
 
 

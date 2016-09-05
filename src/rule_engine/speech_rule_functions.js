@@ -20,9 +20,6 @@
  */
 
 goog.provide('sre.SpeechRuleFunctions');
-goog.provide('sre.SpeechRuleFunctions.ContextFunctions');
-goog.provide('sre.SpeechRuleFunctions.CustomQueries');
-goog.provide('sre.SpeechRuleFunctions.CustomStrings');
 
 
 
