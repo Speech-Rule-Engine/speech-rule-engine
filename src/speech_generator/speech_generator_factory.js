@@ -39,7 +39,7 @@ goog.require('sre.TreeSpeechGenerator');
  */
 sre.SpeechGeneratorFactory.generator = function(type) {
   var constructor = sre.SpeechGeneratorFactory.generatorMapping_[type] ||
-        sre.SpeechGeneratorFactory.generatorMapping_['Direct'];
+        sre.SpeechGeneratorFactory.generatorMapping_.Direct;
   return new constructor();
 };
 
@@ -49,10 +49,10 @@ sre.SpeechGeneratorFactory.generator = function(type) {
  * @private
  */
 sre.SpeechGeneratorFactory.generatorMapping_ = {
-  'Adhoc': sre.AdhocSpeechGenerator,
-  'Direct': sre.DirectSpeechGenerator,
-  'Dummy': sre.DummySpeechGenerator,
-  'Node': sre.NodeSpeechGenerator,
-  'Summary': sre.SummarySpeechGenerator,
-  'Tree': sre.TreeSpeechGenerator
+  Adhoc: sre.AdhocSpeechGenerator,
+  Direct: sre.DirectSpeechGenerator,
+  Dummy: sre.DummySpeechGenerator,
+  Node: sre.NodeSpeechGenerator,
+  Summary: sre.SummarySpeechGenerator,
+  Tree: sre.TreeSpeechGenerator
 };
