@@ -23,7 +23,6 @@ goog.provide('sre.Walker');
 
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
-goog.require('sre.SpeechGeneratorInterface');
 
 
 

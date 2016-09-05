@@ -26,7 +26,7 @@ goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
 goog.require('sre.Highlighter');
 goog.require('sre.RebuildStree');
-goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
@@ -37,7 +37,7 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @implements {sre.Walker}
  * @param {!Node} node The (rendered) node on which the walker is called.
- * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
+ * @param {!sre.SpeechGenerator} generator The speech generator for
  *     this walker.
  * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
@@ -60,7 +60,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.xml = sre.DomUtil.parseInput(xml);
 
   /**
-   * @type {!sre.SpeechGeneratorInterface}
+   * @type {!sre.SpeechGenerator}
    */
   this.generator = generator;
 

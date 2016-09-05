@@ -24,7 +24,9 @@ goog.provide('sre.WalkerFactory');
 
 goog.require('sre.DummyWalker');
 goog.require('sre.SemanticWalker');
+goog.require('sre.SpeechGenerator');
 goog.require('sre.SyntaxWalker');
+goog.require('sre.Walker');
 
 
 
@@ -32,13 +34,13 @@ goog.require('sre.SyntaxWalker');
  * Produces a walker that corresponds to the given type.
  * @param {string} type The type of walker.
  * @param {!Node} node The (rendered) node on which the walker is called.
- * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
+ * @param {!sre.SpeechGenerator} generator The speech generator for
  *     this walker.
  * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
  * @param {!string} xml The original xml/mathml node on which the walker is
  *      called as a string.
- * @override
+ * @return {sre.Walker} The newly generated walker.
  */
 sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
   var constructor = sre.WalkerFactory.walkerMapping_[type] ||
@@ -56,4 +58,3 @@ sre.WalkerFactory.walkerMapping_ = {
   'Semantic': sre.SemanticWalker,
   'Syntax': sre.SyntaxWalker
 };
-

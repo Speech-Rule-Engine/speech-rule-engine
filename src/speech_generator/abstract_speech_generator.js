@@ -24,14 +24,14 @@ goog.provide('sre.AbstractSpeechGenerator');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.RebuildStree');
-goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
 
 
 
 /**
  * @constructor
- * @implements {sre.SpeechGeneratorInterface}
+ * @implements {sre.SpeechGenerator}
  */
 sre.AbstractSpeechGenerator = function() {
 
