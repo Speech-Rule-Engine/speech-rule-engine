@@ -21,8 +21,7 @@ goog.provide('sre.MathspeakUtil');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
-goog.require('sre.Semantic.Role');
-goog.require('sre.Semantic.Type');
+goog.require('sre.Semantic');
 goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 

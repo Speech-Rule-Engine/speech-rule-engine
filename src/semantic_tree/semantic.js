@@ -19,10 +19,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.Semantic');
-goog.provide('sre.Semantic.Attr');
-goog.provide('sre.Semantic.Font');
-goog.provide('sre.Semantic.Role');
-goog.provide('sre.Semantic.Type');
 
 goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
