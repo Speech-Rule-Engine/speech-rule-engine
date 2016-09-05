@@ -148,3 +148,10 @@ sre.SystemExternal.jsonPath = function() {
  * @type {string}
  */
 sre.SystemExternal.WGXpath = sre.SystemExternal.url + '/wgxpath.install.js';
+
+
+/**
+ * WGXpath library.
+ * @type {Object}
+ */
+sre.SystemExternal.wgxpath = null;
