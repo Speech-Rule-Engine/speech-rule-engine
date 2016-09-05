@@ -22,6 +22,7 @@ goog.provide('sre.Enrich');
 
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
 goog.require('sre.EnrichCases');
 goog.require('sre.EnrichMathml');
 goog.require('sre.Semantic');
@@ -71,6 +72,7 @@ sre.Enrich.semanticMathml = function(expr, callback) {
  * @return {string} The enriched MathML expression.
  */
 sre.Enrich.testTranslation__ = function(expr) {
+  sre.EnrichCases(); // dummy call
   sre.Debugger.getInstance().init();
   var mml = sre.Enrich.semanticMathmlSync(
       sre.Enrich.prepareMmlString(expr)).toString();
