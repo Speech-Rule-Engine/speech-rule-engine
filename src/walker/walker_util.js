@@ -25,6 +25,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
+goog.require('sre.XpathUtil');
 
 
 /**

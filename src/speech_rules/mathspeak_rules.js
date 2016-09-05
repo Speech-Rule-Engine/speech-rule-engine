@@ -22,7 +22,6 @@ goog.provide('sre.MathspeakRules');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 

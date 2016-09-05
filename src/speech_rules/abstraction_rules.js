@@ -21,8 +21,6 @@
 goog.provide('sre.AbstractionRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 

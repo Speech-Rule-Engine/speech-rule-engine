@@ -39,7 +39,6 @@ goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreRules');
 goog.require('sre.MathspeakRules');
 goog.require('sre.PrefixRules');

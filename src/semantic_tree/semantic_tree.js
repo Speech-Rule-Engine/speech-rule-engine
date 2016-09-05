@@ -31,6 +31,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticUtil');
+goog.require('sre.SystemExternal');
 
 
 
@@ -294,9 +295,8 @@ sre.SemanticTree.prototype.createNode_ = function() {
  * Replaces a node in the tree. Updates the root node if necessary.
  * @param {!sre.SemanticTree.Node} oldNode The node to be replaced.
  * @param {!sre.SemanticTree.Node} newNode The new node.
- * @private
  */
-sre.SemanticTree.prototype.replaceNode_ = function(oldNode, newNode) {
+sre.SemanticTree.prototype.replaceNode = function(oldNode, newNode) {
   var parent = oldNode.parent;
   if (!parent) {
     this.root = newNode;
@@ -413,9 +413,8 @@ sre.SemanticTree.Node.prototype.appendContentNode_ = function(node) {
 /**
  * Removes a content node from the node.
  * @param {sre.SemanticTree.Node} node The content node to be removed.
- * @private
  */
-sre.SemanticTree.Node.prototype.removeContentNode_ = function(node) {
+sre.SemanticTree.Node.prototype.removeContentNode = function(node) {
   if (node) {
     var index = this.contentNodes.indexOf(node);
     if (index != -1) {

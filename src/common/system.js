@@ -21,6 +21,7 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
@@ -35,6 +36,7 @@ goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
 goog.require('sre.WalkerFactory');
+goog.require('sre.WalkerUtil');
 
 
 

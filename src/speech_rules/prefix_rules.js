@@ -20,9 +20,9 @@
 
 goog.provide('sre.PrefixRules');
 
+goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 

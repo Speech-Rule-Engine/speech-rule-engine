@@ -24,6 +24,7 @@ goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticUtil');
 
 
 

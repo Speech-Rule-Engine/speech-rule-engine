@@ -21,6 +21,7 @@
 
 goog.provide('sre.AbstractWalker');
 
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
@@ -118,13 +119,6 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {sre.AbstractWalker.move}
    */
   this.moved = sre.AbstractWalker.move.ENTER;
-
-  /**
-   * Shift pressed?
-   * @type {boolean}
-   * @private
-   */
-  this.shift_ = false;
 
 };
 

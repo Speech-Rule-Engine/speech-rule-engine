@@ -23,9 +23,12 @@
 goog.provide('sre.SpeechGeneratorUtil');
 
 goog.require('sre.AuditoryDescription');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
+goog.require('sre.SemanticTree');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.WalkerUtil');
+goog.require('sre.XpathUtil');
 
 
 /**

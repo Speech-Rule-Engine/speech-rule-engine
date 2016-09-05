@@ -23,6 +23,7 @@
 
 goog.provide('sre.BaseRuleStore');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');

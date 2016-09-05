@@ -45,7 +45,7 @@ sre.SpeechGeneratorFactory.generator = function(type) {
 
 
 /**
- * @type {Object.<string, sre.Speech Generator>}
+ * @type {Object.<string, sre.SpeechGenerator>}
  * @private
  */
 sre.SpeechGeneratorFactory.generatorMapping_ = {

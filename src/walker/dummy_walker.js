@@ -23,8 +23,6 @@
 goog.provide('sre.DummyWalker');
 
 goog.require('sre.AbstractWalker');
-goog.require('sre.Levels');
-goog.require('sre.WalkerUtil');
 
 
 

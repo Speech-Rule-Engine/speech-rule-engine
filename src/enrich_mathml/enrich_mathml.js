@@ -30,6 +30,8 @@ goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
+goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticUtil');
 
 
 
