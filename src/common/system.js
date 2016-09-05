@@ -30,11 +30,11 @@ goog.require('sre.HighlighterFactory');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
+goog.require('sre.SpeechGeneratorFactory');
 goog.require('sre.SpeechGeneratorUtil');
-goog.require('sre.SpeechGenerators');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SystemExternal');
-goog.require('sre.Walkers');
+goog.require('sre.WalkerFactory');
 
 
 
@@ -261,7 +261,8 @@ sre.System.prototype.toEnriched = function(expr) {
       // (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
       break;
     case sre.Engine.Speech.DEEP:
-      (new sre.TreeSpeechGenerator()).getSpeech(root, enr);
+      var generator = sre.SpeechGeneratorFactory.generator('Tree');
+      generator.getSpeech(root, enr);
       break;
     case sre.Engine.Speech.NONE:
     default:
@@ -443,14 +444,16 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  */
 sre.System.prototype.walk = function(expr) {
   sre.System.LocalStorage_.getInstance().speechGenerator =
-      new sre.NodeSpeechGenerator();
-  var highlighter = new sre.MmlHighlighter();
+      sre.SpeechGeneratorFactory.generator('Node');
+  var highlighter = sre.HighlighterFactory.highlighter(
+    'black', 'white', {renderer: 'NativeMML'});
   var mml = sre.System.getInstance().parseExpression_(expr, false);
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);
-  sre.System.LocalStorage_.getInstance().walker = new sre.SyntaxWalker(
-      node, sre.System.LocalStorage_.getInstance().speechGenerator,
+  sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
+      'Syntax', node,
+      sre.System.LocalStorage_.getInstance().speechGenerator,
       highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };

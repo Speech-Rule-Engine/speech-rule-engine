@@ -35,6 +35,7 @@ goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
+goog.require('sre.WalkerTest');
 
 
 
@@ -78,7 +79,8 @@ sre.Tests.testList = [
   sre.RebuildStreeTest,
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
-  sre.SpeechRuleTest
+  sre.SpeechRuleTest,
+  sre.WalkerTest
 ];
 
 

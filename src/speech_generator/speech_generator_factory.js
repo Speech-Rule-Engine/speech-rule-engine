@@ -20,12 +20,39 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SpeechGenerators');
+goog.provide('sre.SpeechGeneratorFactory');
 
 goog.require('sre.AdhocSpeechGenerator');
 goog.require('sre.DirectSpeechGenerator');
 goog.require('sre.DummySpeechGenerator');
 goog.require('sre.NodeSpeechGenerator');
+goog.require('sre.SpeechGenerator');
 goog.require('sre.SummarySpeechGenerator');
 goog.require('sre.TreeSpeechGenerator');
 
+
+
+/**
+ * Produces a speech generator that corresponds to the given type.
+ * @param {string} type The type of speech generator.
+ * @return {sre.SpeechGenerator} The newly generated speech generator.
+ */
+sre.SpeechGeneratorFactory.generator = function(type) {
+  var constructor = sre.SpeechGeneratorFactory.generatorMapping_[type] ||
+        sre.SpeechGeneratorFactory.generatorMapping_.Direct;
+  return new constructor();
+};
+
+
+/**
+ * @type {Object.<string, sre.Speech Generator>}
+ * @private
+ */
+sre.SpeechGeneratorFactory.generatorMapping_ = {
+  Adhoc: sre.AdhocSpeechGenerator,
+  Direct: sre.DirectSpeechGenerator,
+  Dummy: sre.DummySpeechGenerator,
+  Node: sre.NodeSpeechGenerator,
+  Summary: sre.SummarySpeechGenerator,
+  Tree: sre.TreeSpeechGenerator
+};
