@@ -399,7 +399,7 @@ sre.SpeechRule.stringifyCstr = function(cstr) {
  * @extends {Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
-  goog.base(this);
+  sre.SpeechRule.OutputError.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'RuleError';
 };

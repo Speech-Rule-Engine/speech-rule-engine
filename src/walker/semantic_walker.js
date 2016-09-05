@@ -34,7 +34,7 @@ goog.require('sre.WalkerUtil');
  * @override
  */
 sre.SemanticWalker = function(node, generator, highlighter, xml) {
-  goog.base(this, node, generator, highlighter, xml);
+  sre.SemanticWalker.base(this, 'constructor', node, generator, highlighter, xml);
 
   /**
    * Caching of levels.
@@ -81,7 +81,7 @@ sre.SemanticWalker.prototype.focusFromId_ = function(id, ids) {
  * @override
  */
 sre.SemanticWalker.prototype.up = function() {
-  goog.base(this, 'up');
+  sre.SemanticWalker.base(this, 'up');
   var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
   if (!parent) return null;
   this.levels.pop();
@@ -103,7 +103,7 @@ sre.SemanticWalker.prototype.up = function() {
  * @override
  */
 sre.SemanticWalker.prototype.down = function() {
-  goog.base(this, 'down');
+  sre.SemanticWalker.base(this, 'down');
   var children = this.nextLevel_();
   if (children.length === 0) {
     return null;
@@ -245,7 +245,7 @@ sre.SemanticWalker.prototype.makePairList = function(children, content) {
  * @override
  */
 sre.SemanticWalker.prototype.left = function() {
-  goog.base(this, 'left');
+  sre.SemanticWalker.base(this, 'left');
   var index = this.levels.indexOf(this.getFocus()) - 1;
   var ids = this.levels.get(index);
   return ids ? ids : null;
@@ -256,7 +256,7 @@ sre.SemanticWalker.prototype.left = function() {
  * @override
  */
 sre.SemanticWalker.prototype.right = function() {
-  goog.base(this, 'right');
+  sre.SemanticWalker.base(this, 'right');
   var index = this.levels.indexOf(this.getFocus()) + 1;
   var ids = this.levels.get(index);
   return ids ? ids : null;

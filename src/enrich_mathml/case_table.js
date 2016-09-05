@@ -34,7 +34,7 @@ goog.require('sre.SemanticAttr');
  * @final
  */
 sre.CaseTable = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseTable.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}

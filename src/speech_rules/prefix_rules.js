@@ -32,7 +32,7 @@ goog.require('sre.MathspeakUtil');
  * @extends {sre.MathStore}
  */
 sre.PrefixRules = function() {
-  goog.base(this);
+  sre.PrefixRules.base(this, 'constructor');
 };
 goog.inherits(sre.PrefixRules, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixRules);

@@ -34,7 +34,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseTensor = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseTensor.base(this, 'constructor', semantic);
 };
 goog.inherits(sre.CaseTensor, sre.CaseMultiindex);
 

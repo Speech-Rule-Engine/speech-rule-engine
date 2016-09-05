@@ -35,7 +35,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseMultiscripts = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseMultiscripts.base(this, 'constructor', semantic);
 };
 goog.inherits(sre.CaseMultiscripts, sre.CaseMultiindex);
 

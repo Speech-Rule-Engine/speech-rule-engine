@@ -35,7 +35,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseDoubleScript = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseDoubleScript.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}

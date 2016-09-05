@@ -30,7 +30,7 @@ goog.require('sre.MathStore');
  * @extends {sre.MathStore}
  */
 sre.AbstractionRules = function() {
-  goog.base(this);
+  sre.AbstractionRules.base(this, 'constructor');
 };
 goog.inherits(sre.AbstractionRules, sre.MathStore);
 goog.addSingletonGetter(sre.AbstractionRules);

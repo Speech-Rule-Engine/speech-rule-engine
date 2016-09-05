@@ -34,7 +34,7 @@ goog.require('sre.SemanticNode');
  * @override
  */
 sre.CaseMultiindex = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseMultiindex.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}

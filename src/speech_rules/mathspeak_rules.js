@@ -31,7 +31,7 @@ goog.require('sre.MathspeakUtil');
  * @extends {sre.MathStore}
  */
 sre.MathspeakRules = function() {
-  goog.base(this);
+  sre.MathspeakRules.base(this, 'constructor');
 };
 goog.inherits(sre.MathspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakRules);

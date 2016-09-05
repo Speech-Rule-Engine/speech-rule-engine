@@ -64,7 +64,7 @@ goog.addSingletonGetter(sre.System);
  * @extends {Error}
  */
 sre.System.Error = function(msg) {
-  goog.base(this);
+  sre.System.Error.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'System Error';
 };

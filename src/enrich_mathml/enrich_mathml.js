@@ -41,7 +41,7 @@ goog.require('sre.SemanticUtil');
  * @extends {Error}
  */
 sre.EnrichMathml.Error = function(msg) {
-  goog.base(this);
+  sre.EnrichMathml.Error.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'MathML Enrichment Error';
 };

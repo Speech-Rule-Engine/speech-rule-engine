@@ -41,7 +41,7 @@ goog.require('sre.XpathUtil');
  * @extends {sre.MathStore}
  */
 sre.MathSimpleStore = function() {
-  goog.base(this);
+  sre.MathSimpleStore.base(this, 'constructor');
 };
 goog.inherits(sre.MathSimpleStore, sre.MathStore);
 

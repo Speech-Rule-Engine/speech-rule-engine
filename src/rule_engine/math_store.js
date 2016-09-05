@@ -33,7 +33,7 @@ goog.require('sre.SpeechRule');
  * @extends {sre.BaseRuleStore}
  */
 sre.MathStore = function() {
-  goog.base(this);
+  sre.MathStore.base(this, 'constructor');
 
   //TODO: (MOSS) WP 1.1
   // Revisit

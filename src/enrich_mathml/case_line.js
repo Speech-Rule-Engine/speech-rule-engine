@@ -34,7 +34,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseLine = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseLine.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}
