@@ -23,7 +23,6 @@
 
 goog.provide('sre.EnrichMathml');
 goog.provide('sre.EnrichMathml.Attribute');
-goog.provide('sre.EnrichMathml.Error');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
