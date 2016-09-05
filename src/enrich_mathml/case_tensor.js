@@ -23,7 +23,6 @@ goog.provide('sre.CaseTensor');
 goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 

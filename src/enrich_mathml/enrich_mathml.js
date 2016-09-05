@@ -125,9 +125,9 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
  */
 sre.EnrichMathml.walkTree = function(semantic) {
   var specialCase = sre.EnrichCaseFactory.getCase(semantic);
-
+  var newNode;
   if (specialCase) {
-    var newNode = specialCase.getMathml();
+    newNode = specialCase.getMathml();
     return sre.EnrichMathml.ascendNewNode(newNode);
   }
   if (semantic.mathml.length === 1) {

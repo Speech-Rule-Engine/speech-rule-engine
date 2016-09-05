@@ -23,7 +23,6 @@ goog.provide('sre.CaseLine');
 goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 
