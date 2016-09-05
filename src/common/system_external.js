@@ -136,7 +136,7 @@ sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
  */
 sre.SystemExternal.jsonPath = function() {
   return ((sre.SystemExternal.process && typeof global !== 'undefined') ?
-        (sre.SystemExternal.process.env.SRE_JSON_PATH || global.SRE_JSON_PATH ||
+      (sre.SystemExternal.process.env.SRE_JSON_PATH || global.SRE_JSON_PATH ||
          sre.SystemExternal.process.cwd()) :
           sre.SystemExternal.url + '/mathmaps') +
       '/';

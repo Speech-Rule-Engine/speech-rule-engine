@@ -592,7 +592,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '@role!="unknown"', 'count(./children/*)>2'
   );
   defineUniqueRuleAlias(
-    'abstr-relation', 'mathspeak.brief', 'self::multirel[@alternative]',
+      'abstr-relation', 'mathspeak.brief', 'self::multirel[@alternative]',
       '@role!="unknown"', 'count(./children/*)>2'
   );
   defineSpecialisedRule(

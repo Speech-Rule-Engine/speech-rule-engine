@@ -29,7 +29,6 @@ goog.require('sre.SyntaxWalker');
 goog.require('sre.Walker');
 
 
-
 /**
  * Produces a walker that corresponds to the given type.
  * @param {string} type The type of walker.
@@ -44,7 +43,7 @@ goog.require('sre.Walker');
  */
 sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
   var constructor = sre.WalkerFactory.walkerMapping_[type] ||
-        sre.WalkerFactory.walkerMapping_['Dummy'];
+      sre.WalkerFactory.walkerMapping_['Dummy'];
   return new constructor(node, generator, highlighter, xml);
 };
 

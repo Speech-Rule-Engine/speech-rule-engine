@@ -125,10 +125,10 @@ sre.Cli.prototype.commandLine = function() {
   } catch (err) {
     console.log(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit(
-      function() {sre.SystemExternal.process.exit(1);});
+        function() {sre.SystemExternal.process.exit(1);});
   }
   sre.Debugger.getInstance().exit(
-    function() {sre.SystemExternal.process.exit(0);});
+      function() {sre.SystemExternal.process.exit(0);});
 };
 
 

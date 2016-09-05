@@ -34,7 +34,8 @@ goog.require('sre.WalkerUtil');
  * @override
  */
 sre.SemanticWalker = function(node, generator, highlighter, xml) {
-  sre.SemanticWalker.base(this, 'constructor', node, generator, highlighter, xml);
+  sre.SemanticWalker.base(
+      this, 'constructor', node, generator, highlighter, xml);
 
   /**
    * Caching of levels.

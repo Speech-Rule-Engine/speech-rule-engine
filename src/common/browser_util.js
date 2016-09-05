@@ -93,7 +93,7 @@ sre.BrowserUtil.installWGXpath_ = function(opt_isEdge, opt_count) {
   }
   sre.SystemExternal.wgxpath = wgxpath;
   opt_isEdge ? sre.SystemExternal.wgxpath.install({'document': document}) :
-  sre.SystemExternal.wgxpath.install();
+      sre.SystemExternal.wgxpath.install();
   sre.XpathUtil.xpathEvaluate = document.evaluate;
   sre.XpathUtil.xpathResult = XPathResult;
   sre.XpathUtil.createNSResolver = document.createNSResolver;
