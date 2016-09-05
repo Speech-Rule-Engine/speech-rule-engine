@@ -34,7 +34,7 @@ goog.require('sre.SyntaxWalker');
  * @param {!Node} node The (rendered) node on which the walker is called.
  * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
  *     this walker.
- * @param {!sre.HighlighterInterface} highlighter The currently active
+ * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
  * @param {!string} xml The original xml/mathml node on which the walker is
  *      called as a string.

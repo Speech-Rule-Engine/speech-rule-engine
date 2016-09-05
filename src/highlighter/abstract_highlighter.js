@@ -22,13 +22,13 @@
 goog.provide('sre.AbstractHighlighter');
 
 goog.require('sre.ColorPicker');
-goog.require('sre.HighlighterInterface');
+goog.require('sre.Highlighter');
 
 
 
 /**
  * @constructor
- * @implements {sre.HighlighterInterface}
+ * @implements {sre.Highlighter}
  */
 sre.AbstractHighlighter = function() {
   /**

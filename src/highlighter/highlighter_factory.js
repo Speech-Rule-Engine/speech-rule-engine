@@ -38,7 +38,7 @@ goog.require('sre.SvgHighlighter');
  *          browser: (undefined|string)}} rendererInfo
  *     Information on renderer, browser. Has to at least contain the
  *     renderer field.
- * @return {?sre.HighlighterInterface} A new highlighter.
+ * @return {?sre.Highlighter} A new highlighter.
  */
 sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
   var colorPicker = new sre.ColorPicker(back, fore);
@@ -73,7 +73,7 @@ sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
 
 
 /**
- * @type {Object.<string, sre.HighlighterInterface>}
+ * @type {Object.<string, sre.Highlighter>}
  * @private
  */
 sre.HighlighterFactory.highlighterMapping_ = {
