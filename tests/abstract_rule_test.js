@@ -30,7 +30,7 @@ goog.require('sre.AbstractExamples');
  * @extends {sre.AbstractExamples}
  */
 sre.AbstractRuleTest = function() {
-  goog.base(this);
+  sre.AbstractRuleTest.base(this, 'constructor');
 
   /**
    * @type {string}

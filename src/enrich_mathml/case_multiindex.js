@@ -24,7 +24,6 @@ goog.require('sre.AbstractEnrichCase');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 
@@ -34,7 +33,7 @@ goog.require('sre.SemanticNode');
  * @override
  */
 sre.CaseMultiindex = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseMultiindex.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}
@@ -79,7 +78,7 @@ sre.CaseMultiindex.prototype.completeMultiscript = function(
   completeIndices(rightIndices);
   // mprescripts
   if (children[childCounter] &&
-      sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
+      sre.DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
     this.mml.insertBefore(
         children[childCounter],
         sre.DomUtil.createElement('mprescripts'));

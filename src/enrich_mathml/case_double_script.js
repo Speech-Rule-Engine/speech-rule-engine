@@ -21,10 +21,9 @@
 goog.provide('sre.CaseDoubleScript');
 
 goog.require('sre.AbstractEnrichCase');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
-goog.require('sre.SemanticUtil');
 
 
 
@@ -35,7 +34,7 @@ goog.require('sre.SemanticUtil');
  * @final
  */
 sre.CaseDoubleScript = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseDoubleScript.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}
@@ -53,7 +52,7 @@ sre.CaseDoubleScript.test = function(semantic) {
   if (!semantic.mathmlTree) {
     return false;
   }
-  var mmlTag = sre.SemanticUtil.tagName(semantic.mathmlTree);
+  var mmlTag = sre.DomUtil.tagName(semantic.mathmlTree);
   return (mmlTag === 'MSUBSUP' &&
           semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
       (mmlTag === 'MUNDEROVER' &&

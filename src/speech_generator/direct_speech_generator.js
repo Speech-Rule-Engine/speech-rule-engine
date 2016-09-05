@@ -33,7 +33,7 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractSpeechGenerator}
  */
 sre.DirectSpeechGenerator = function() {
-  goog.base(this);
+  sre.DirectSpeechGenerator.base(this, 'constructor');
 };
 goog.inherits(sre.DirectSpeechGenerator, sre.AbstractSpeechGenerator);
 

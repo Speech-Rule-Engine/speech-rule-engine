@@ -26,7 +26,6 @@ goog.require('sre.CaseMultiscripts');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 
@@ -37,7 +36,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseEmbellished = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseEmbellished.base(this, 'constructor', semantic);
 
   /**
    * @type {sre.SemanticNode}
@@ -238,12 +237,12 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
  * @private
  */
 sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
-  var id = semantic.id;
-  var mmlTag = sre.SemanticUtil.tagName(mml);
+  var mmlTag = sre.DomUtil.tagName(mml);
   var parent = null;
+  var caller;
   if (mmlTag === 'MSUBSUP') {
     parent = semantic.childNodes[0];
-    var caller = sre.CaseDoubleScript;
+    caller = sre.CaseDoubleScript;
   } else if (mmlTag === 'MMULTISCRIPTS' &&
              (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
               semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {

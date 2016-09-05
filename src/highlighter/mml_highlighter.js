@@ -32,7 +32,7 @@ goog.require('sre.AbstractHighlighter');
  * @extends {sre.AbstractHighlighter}
  */
 sre.MmlHighlighter = function() {
-  goog.base(this);
+  sre.MmlHighlighter.base(this, 'constructor');
 
   this.mactionName = 'maction';
 };

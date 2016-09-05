@@ -23,7 +23,6 @@ goog.provide('sre.CaseLine');
 goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 
@@ -34,7 +33,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseLine = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseLine.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}

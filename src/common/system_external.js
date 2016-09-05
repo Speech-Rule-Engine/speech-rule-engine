@@ -32,44 +32,6 @@ sre.SystemExternal = function() { };
 
 
 /**
- * Check if location is already supported in this JS.
- * @return {boolean} True if location is defined.
- */
-sre.SystemExternal.locationSupported = function() {
-  return !(typeof(location) == 'undefined');
-};
-
-
-/**
- * The URL for SRE resources.
- * @const
- * @type {string}
- */
-sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
-    location.protocol + '//' + 'progressiveaccess.com/content' :
-    'https://progressiveaccess.com/content';
-
-
-/**
- * Path to JSON files.
- * @type {string}
- */
-sre.SystemExternal.jsonPath = function() {
-  return ((typeof process !== 'undefined' && typeof global !== 'undefined') ?
-      (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH || process.cwd()) :
-          sre.SystemExternal.url + '/mathmaps') +
-      '/';
-}();
-
-
-/**
- * Path to Xpath library file.
- * @type {string}
- */
-sre.SystemExternal.WGXpath = sre.SystemExternal.url + '/wgxpath.install.js';
-
-
-/**
  * The local require function for NodeJS.
  * @param {string} library A library name.
  * @return {Object} The library object that has been loaded.
@@ -89,6 +51,13 @@ sre.SystemExternal.require = function(library) {
 sre.SystemExternal.documentSupported = function() {
   return !(typeof(document) == 'undefined');
 };
+
+
+/**
+ * Process library.
+ * @type {Object}
+ */
+sre.SystemExternal.process = sre.SystemExternal.require('process');
 
 
 /**
@@ -140,3 +109,49 @@ sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
  */
 sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
     null : sre.SystemExternal.require('xml-mapping');
+
+
+/**
+ * Check if location is already supported in this JS.
+ * @return {boolean} True if location is defined.
+ */
+sre.SystemExternal.locationSupported = function() {
+  return !(typeof(location) == 'undefined');
+};
+
+
+/**
+ * The URL for SRE resources.
+ * @const
+ * @type {string}
+ */
+sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
+    location.protocol + '//' + 'progressiveaccess.com/content' :
+    'https://progressiveaccess.com/content';
+
+
+/**
+ * Path to JSON files.
+ * @type {string}
+ */
+sre.SystemExternal.jsonPath = function() {
+  return ((sre.SystemExternal.process && typeof global !== 'undefined') ?
+      (sre.SystemExternal.process.env.SRE_JSON_PATH || global.SRE_JSON_PATH ||
+         sre.SystemExternal.process.cwd()) :
+          sre.SystemExternal.url + '/mathmaps') +
+      '/';
+}();
+
+
+/**
+ * Path to Xpath library file.
+ * @type {string}
+ */
+sre.SystemExternal.WGXpath = sre.SystemExternal.url + '/wgxpath.install.js';
+
+
+/**
+ * WGXpath library.
+ * @type {Object}
+ */
+sre.SystemExternal.wgxpath = null;

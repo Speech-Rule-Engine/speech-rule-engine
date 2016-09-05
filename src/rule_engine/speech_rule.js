@@ -28,11 +28,6 @@
  */
 
 goog.provide('sre.SpeechRule');
-goog.provide('sre.SpeechRule.Action');
-goog.provide('sre.SpeechRule.Component');
-goog.provide('sre.SpeechRule.DynamicCstr');
-goog.provide('sre.SpeechRule.Precondition');
-goog.provide('sre.SpeechRule.Type');
 
 
 
@@ -404,7 +399,7 @@ sre.SpeechRule.stringifyCstr = function(cstr) {
  * @extends {Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
-  goog.base(this);
+  sre.SpeechRule.OutputError.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'RuleError';
 };

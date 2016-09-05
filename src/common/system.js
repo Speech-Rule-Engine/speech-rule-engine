@@ -21,20 +21,23 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
-goog.require('sre.MathMap');
+//goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
 goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechRuleEngine');
+goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
 goog.require('sre.WalkerFactory');
+goog.require('sre.WalkerUtil');
 
 
 
@@ -61,7 +64,7 @@ goog.addSingletonGetter(sre.System);
  * @extends {Error}
  */
 sre.System.Error = function(msg) {
-  goog.base(this);
+  sre.System.Error.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'System Error';
 };
@@ -79,16 +82,6 @@ sre.System.LocalStorage_ = function() {
   this.walker = null;
 
   this.speechGenerator = null;
-
-  /**
-   * The default rule sets. Generally this are all rule sets that are available.
-   * @type {!Array.<string>}
-   * @private
-   */
-  this.defaultRuleSets_ = [
-    'MathmlStoreRules', 'SemanticTreeRules', 'MathspeakRules',
-    'ClearspeakRules', 'AbstractionRules', 'PrefixRules'
-  ];
 
 };
 goog.addSingletonGetter(sre.System.LocalStorage_);
@@ -126,7 +119,7 @@ sre.System.prototype.setupEngine = function(feature) {
   }
   engine.setupBrowsers();
   engine.ruleSets = feature.rules ? feature.rules :
-      sre.System.LocalStorage_.getInstance().defaultRuleSets_;
+      sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   sre.SpeechRuleEngine.getInstance().dynamicCstr =
       sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
@@ -394,7 +387,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
  * @return {Node} Semantic tree for input node as newly created Xml node.
  */
 sre.System.prototype.getSemanticTree = function(mml) {
-  return sre.Semantic.getTree(mml);
+  return sre.Semantic.xmlTree(mml);
 };
 
 
@@ -443,18 +436,16 @@ sre.System.prototype.processFile_ = function(processor, input, opt_output) {
  * @return {string} The initial speech string for that expression.
  */
 sre.System.prototype.walk = function(expr) {
-  sre.System.LocalStorage_.getInstance().speechGenerator =
-      sre.SpeechGeneratorFactory.generator('Node');
-  var highlighter = sre.HighlighterFactory.highlighter(
-    'black', 'white', {renderer: 'NativeMML'});
-  var mml = sre.System.getInstance().parseExpression_(expr, false);
+  var generator = sre.SpeechGeneratorFactory.generator('Node');
+  sre.System.LocalStorage_.getInstance().speechGenerator = generator;
+  var highlighter = /** @type {!sre.Highlighter} */ (
+      sre.HighlighterFactory.highlighter(
+      {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
   var node = sre.System.getInstance().toEnriched(expr);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);
   sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      'Syntax', node,
-      sre.System.LocalStorage_.getInstance().speechGenerator,
-      highlighter, eml);
+      'Syntax', node, generator, highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };
 

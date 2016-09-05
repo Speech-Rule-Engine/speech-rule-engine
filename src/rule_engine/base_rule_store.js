@@ -23,6 +23,7 @@
 
 goog.provide('sre.BaseRuleStore');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.Engine');
@@ -424,7 +425,6 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
  */
 sre.BaseRuleStore.prototype.testPrecondition_ = function(node, rule) {
   var prec = rule.precondition;
-  var result = this.applyQuery(node, prec.query);
   return this.applyQuery(node, prec.query) === node &&
       prec.constraints.every(
           goog.bind(function(cstr) {

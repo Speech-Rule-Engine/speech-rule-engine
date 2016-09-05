@@ -27,7 +27,6 @@ goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
-goog.require('sre.MathUtil');
 goog.require('sre.SystemExternal');
 
 

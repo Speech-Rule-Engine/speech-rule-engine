@@ -28,7 +28,7 @@ goog.require('sre.AbstractRuleTest');
  * @extends {sre.AbstractRuleTest}
  */
 sre.SemanticRuleTest = function() {
-  goog.base(this);
+  sre.SemanticRuleTest.base(this, 'constructor');
 
   /**
    * @override

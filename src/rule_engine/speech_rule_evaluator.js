@@ -23,8 +23,6 @@
 
 goog.provide('sre.SpeechRuleEvaluator');
 
-goog.require('sre.SpeechRule');
-
 
 
 /**

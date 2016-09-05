@@ -20,6 +20,8 @@
 
 goog.provide('sre.SemanticUtil');
 
+goog.require('sre.DomUtil');
+
 
 
 /**
@@ -118,16 +120,6 @@ sre.SemanticUtil.splitUnicode = function(str) {
 
 
 /**
- * Returns the tagname of an element node in upper case.
- * @param {Element} node The node.
- * @return {string} The node's tagname.
- */
-sre.SemanticUtil.tagName = function(node) {
-  return node.tagName.toUpperCase();
-};
-
-
-/**
  * List of MathML Tags that are considered to be leafs.
  * @type {Array.<string>}
  * @const
@@ -162,7 +154,7 @@ sre.SemanticUtil.EMPTYTAGS = [
  * @return {boolean} True if element is an math node.
  */
 sre.SemanticUtil.hasMathTag = function(node) {
-  return !!node && sre.SemanticUtil.tagName(node) === 'MATH';
+  return !!node && sre.DomUtil.tagName(node) === 'MATH';
 };
 
 
@@ -174,7 +166,7 @@ sre.SemanticUtil.hasMathTag = function(node) {
 sre.SemanticUtil.hasIgnoreTag = function(node) {
   return !!node &&
       sre.SemanticUtil.IGNORETAGS.indexOf(
-          sre.SemanticUtil.tagName(node)) !== -1;
+          sre.DomUtil.tagName(node)) !== -1;
 };
 
 
@@ -185,7 +177,7 @@ sre.SemanticUtil.hasIgnoreTag = function(node) {
  */
 sre.SemanticUtil.hasEmptyTag = function(node) {
   return !!node &&
-      sre.SemanticUtil.EMPTYTAGS.indexOf(sre.SemanticUtil.tagName(node)) !== -1;
+      sre.SemanticUtil.EMPTYTAGS.indexOf(sre.DomUtil.tagName(node)) !== -1;
 };
 
 
@@ -200,7 +192,7 @@ sre.SemanticUtil.hasEmptyTag = function(node) {
 sre.SemanticUtil.purgeNodes = function(nodes) {
   var nodeArray = [];
   for (var i = 0, node; node = nodes[i]; i++) {
-    var tagName = sre.SemanticUtil.tagName(node);
+    var tagName = sre.DomUtil.tagName(node);
     if (sre.SemanticUtil.IGNORETAGS.indexOf(tagName) != -1) continue;
     if (sre.SemanticUtil.EMPTYTAGS.indexOf(tagName) != -1 &&
         node.childNodes.length == 0)

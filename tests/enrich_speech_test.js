@@ -35,7 +35,7 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractTest}
  */
 sre.EnrichSpeechTest = function() {
-  goog.base(this);
+  sre.EnrichSpeechTest.base(this, 'constructor');
 
   /**
    * @override

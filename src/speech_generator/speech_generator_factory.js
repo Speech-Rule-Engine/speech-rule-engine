@@ -31,21 +31,20 @@ goog.require('sre.SummarySpeechGenerator');
 goog.require('sre.TreeSpeechGenerator');
 
 
-
 /**
  * Produces a speech generator that corresponds to the given type.
  * @param {string} type The type of speech generator.
- * @return {sre.SpeechGenerator} The newly generated speech generator.
+ * @return {!sre.SpeechGenerator} The newly generated speech generator.
  */
 sre.SpeechGeneratorFactory.generator = function(type) {
   var constructor = sre.SpeechGeneratorFactory.generatorMapping_[type] ||
-        sre.SpeechGeneratorFactory.generatorMapping_.Direct;
+      sre.SpeechGeneratorFactory.generatorMapping_.Direct;
   return new constructor();
 };
 
 
 /**
- * @type {Object.<string, sre.Speech Generator>}
+ * @type {Object.<string, function(new:sre.SpeechGenerator)>}
  * @private
  */
 sre.SpeechGeneratorFactory.generatorMapping_ = {

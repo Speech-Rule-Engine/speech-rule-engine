@@ -21,9 +21,9 @@
 goog.provide('sre.CaseMultiscripts');
 
 goog.require('sre.CaseMultiindex');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 
@@ -34,7 +34,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseMultiscripts = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseMultiscripts.base(this, 'constructor', semantic);
 };
 goog.inherits(sre.CaseMultiscripts, sre.CaseMultiindex);
 
@@ -46,7 +46,7 @@ sre.CaseMultiscripts.test = function(semantic) {
   if (!semantic.mathmlTree) {
     return false;
   }
-  var mmlTag = sre.SemanticUtil.tagName(semantic.mathmlTree);
+  var mmlTag = sre.DomUtil.tagName(semantic.mathmlTree);
   return mmlTag === 'MMULTISCRIPTS' &&
       (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
       semantic.type === sre.SemanticAttr.Type.SUBSCRIPT);

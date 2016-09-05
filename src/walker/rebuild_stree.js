@@ -24,8 +24,8 @@ goog.provide('sre.RebuildStree');
 
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticTree');
 goog.require('sre.WalkerUtil');
 
 

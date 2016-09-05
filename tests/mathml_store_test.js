@@ -32,7 +32,7 @@ goog.require('sre.MathmlStoreRules');
  * @extends {sre.AbstractTest}
  */
 sre.MathmlStoreTest = function() {
-  goog.base(this);
+  sre.MathmlStoreTest.base(this, 'constructor');
 
   /**
    * @override

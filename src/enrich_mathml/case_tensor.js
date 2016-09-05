@@ -23,7 +23,6 @@ goog.provide('sre.CaseTensor');
 goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
 
 
 
@@ -34,7 +33,7 @@ goog.require('sre.SemanticNode');
  * @final
  */
 sre.CaseTensor = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseTensor.base(this, 'constructor', semantic);
 };
 goog.inherits(sre.CaseTensor, sre.CaseMultiindex);
 

@@ -24,6 +24,7 @@
 
 goog.provide('sre.XpathUtil');
 
+goog.require('sre.Engine');
 goog.require('sre.SystemExternal');
 
 

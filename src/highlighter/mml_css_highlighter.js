@@ -31,7 +31,7 @@ goog.require('sre.CssHighlighter');
  * @extends {sre.CssHighlighter}
  */
 sre.MmlCssHighlighter = function() {
-  goog.base(this);
+  sre.MmlCssHighlighter.base(this, 'constructor');
 
   this.mactionName = 'maction';
 };

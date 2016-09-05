@@ -45,7 +45,8 @@ sre.BrowserUtil.detectIE = function() {
  */
 sre.BrowserUtil.detectEdge = function() {
   var isEdge = typeof window !== 'undefined' && 'MSGestureEvent' in window &&
-      'chrome' in window && window.chrome.loadTimes == null;
+      'chrome' in window &&
+      window.chrome.loadTimes == null; // This has to remain ==!
   if (!isEdge) {
     return false;
   }
@@ -90,7 +91,9 @@ sre.BrowserUtil.installWGXpath_ = function(opt_isEdge, opt_count) {
   if (count >= 10) {
     return;
   }
-  opt_isEdge ? wgxpath.install({'document': document}) : wgxpath.install();
+  sre.SystemExternal.wgxpath = wgxpath;
+  opt_isEdge ? sre.SystemExternal.wgxpath.install({'document': document}) :
+      sre.SystemExternal.wgxpath.install();
   sre.XpathUtil.xpathEvaluate = document.evaluate;
   sre.XpathUtil.xpathResult = XPathResult;
   sre.XpathUtil.createNSResolver = document.createNSResolver;
