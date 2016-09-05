@@ -23,7 +23,7 @@ goog.provide('sre.CaseTable');
 goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticNode');
 
 
 
@@ -61,10 +61,10 @@ sre.CaseTable.test = function(semantic) {
  */
 sre.CaseTable.prototype.getMathml = function() {
   var lfence = sre.EnrichMathml.cloneContentNode(
-      /**@type{!sre.SemanticTree.Node}*/(this.semantic.contentNodes[0]));
+      /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[0]));
   var rfence = this.semantic.contentNodes[1] ?
       sre.EnrichMathml.cloneContentNode(
-          /**@type{!sre.SemanticTree.Node}*/(this.semantic.contentNodes[1])) :
+          /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[1])) :
       null;
   this.semantic.childNodes.map(/**@type{Function}*/(sre.EnrichMathml.walkTree));
   if (sre.SemanticUtil.tagName(this.mml) === 'MFENCED') {

@@ -23,7 +23,7 @@ goog.provide('sre.CaseMultiscripts');
 goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticNode');
 
 
 
@@ -79,7 +79,7 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
   }
   var childIds = sre.EnrichMathml.collapsedLeafs(rsub || [], rsup);
   var base = sre.EnrichMathml.walkTree(
-      /**@type {!sre.SemanticTree.Node}*/(baseSem));
+      /**@type {!sre.SemanticNode}*/(baseSem));
   sre.EnrichMathml.getInnerNode(base).setAttribute(
       sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
   childIds.unshift(baseSem.id);

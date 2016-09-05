@@ -23,7 +23,7 @@ goog.provide('sre.CaseDoubleScript');
 goog.require('sre.AbstractEnrichCase');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticNode');
 goog.require('sre.SemanticUtil');
 
 
@@ -65,10 +65,10 @@ sre.CaseDoubleScript.test = function(semantic) {
  * @override
  */
 sre.CaseDoubleScript.prototype.getMathml = function() {
-  var supSem = /**@type{!sre.SemanticTree.Node}*/(this.semantic.childNodes[1]);
+  var supSem = /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[1]);
   var ignore = this.semantic.childNodes[0];
-  var baseSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[0]);
-  var subSem = /**@type {!sre.SemanticTree.Node}*/(ignore.childNodes[1]);
+  var baseSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[0]);
+  var subSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[1]);
   var supMml = sre.EnrichMathml.walkTree(supSem);
   var baseMml = sre.EnrichMathml.walkTree(baseSem);
   var subMml = sre.EnrichMathml.walkTree(subSem);
