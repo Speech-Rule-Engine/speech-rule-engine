@@ -92,7 +92,7 @@ sre.Cli.prototype.commandLine = function() {
       option('').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-      parse(process.argv);
+      parse(sre.SystemExternal.process.argv);
   try {
     if (commander.enumerate) {
       system.setupEngine({'mode': sre.Engine.Mode.SYNC});
@@ -101,7 +101,7 @@ sre.Cli.prototype.commandLine = function() {
           '\nStyle options:  ' +
           sre.Engine.getInstance().allStyles.sort().join(', ');
       console.log(output);
-      process.exit(0);
+      sre.SystemExternal.process.exit(0);
     }
     system.setupEngine(
         {
@@ -124,9 +124,11 @@ sre.Cli.prototype.commandLine = function() {
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);
-    sre.Debugger.getInstance().exit(function() {process.exit(1);});
+    sre.Debugger.getInstance().exit(
+      function() {sre.SystemExternal.process.exit(1);});
   }
-  sre.Debugger.getInstance().exit(function() {process.exit(0);});
+  sre.Debugger.getInstance().exit(
+    function() {sre.SystemExternal.process.exit(0);});
 };
 
 
