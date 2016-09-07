@@ -62,8 +62,9 @@ sre.MathmlStoreTest.prototype.executeRuleTest = function(mml, ruleName) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
-  var rule = this.store.lookupRule(node.childNodes[0],
-                                   {domain: 'default', style: 'default'});
+  var rule = this.store.lookupRule(
+      node.childNodes[0],
+      new sre.DynamicCstr({domain: 'default', style: 'default'}));
   this.assert.equal(ruleName, rule.name);
 };
 
