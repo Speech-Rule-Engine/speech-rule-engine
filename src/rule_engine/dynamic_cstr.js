@@ -292,6 +292,10 @@ sre.DynamicCstr.DefaultComparator.prototype.setReference = function(cstr) {
 };
 
 
+// We allow a default value for each dynamic constraints attribute.
+// The idea is that when we can not find a speech rule matching the value for
+// a particular attribute in the dynamic constraint we choose the one that has
+// the value 'default'.
 /**
  * @override
  */

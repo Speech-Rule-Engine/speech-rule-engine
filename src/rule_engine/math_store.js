@@ -84,24 +84,24 @@ sre.MathStore.prototype.initialize = function() {
 };
 
 
-/**
- * @override
- */
-sre.MathStore.prototype.defineRule = function(
-    name, dynamic, action, query, cstr) {
-  var dynamicCstr = this.parser.parse(dynamic);
-  var cstrList = Array.prototype.slice.call(arguments, 4);
-  // We can not use goog.base due to variable number of constraint arguments.
-  var rule = sre.MathStore.superClass_.defineRule.apply(
-      this, [name, dynamicCstr.getValue(sre.DynamicCstr.Attr.STYLE),
-             action, query].concat(cstrList));
-  // In the superclass the dynamic constraint only contains style annotations.
-  // We now set the proper dynamic constraint that contains in addition a
-  // a domain attribute/value pair.
-  rule.dynamicCstr = dynamicCstr;
-  this.removeDuplicates(rule);
-  return rule;
-};
+// /**
+//  * @override
+//  */
+// sre.MathStore.prototype.defineRule = function(
+//     name, dynamic, action, query, cstr) {
+//   var dynamicCstr = this.parser.parse(dynamic);
+//   var cstrList = Array.prototype.slice.call(arguments, 4);
+//   // We can not use goog.base due to variable number of constraint arguments.
+//   var rule = sre.MathStore.superClass_.defineRule.apply(
+//       this, [name, dynamicCstr.getValue(sre.DynamicCstr.Attr.STYLE),
+//              action, query].concat(cstrList));
+//   // In the superclass the dynamic constraint only contains style annotations.
+//   // We now set the proper dynamic constraint that contains in addition a
+//   // a domain attribute/value pair.
+//   rule.dynamicCstr = dynamicCstr;
+//   this.removeDuplicates(rule);
+//   return rule;
+// };
 
 
 /**
