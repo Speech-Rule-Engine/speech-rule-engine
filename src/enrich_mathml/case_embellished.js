@@ -26,6 +26,7 @@ goog.require('sre.CaseMultiscripts');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticNode');
 
 
 

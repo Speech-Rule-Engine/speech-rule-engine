@@ -142,7 +142,7 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
 /**
  * Retrieves a rule for the given node if one exists.
  * @param {Node} node A node.
- * @param {!sre.SpeechRule.DynamicCstr} dynamic Additional dynamic
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
  * @return {sre.SpeechRule} The speech rule if it exists.
  */
@@ -158,7 +158,7 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
 /**
  * Looks up a rule for a given string and executes its actions.
  * @param {string} text The text to be translated.
- * @param {!sre.SpeechRule.DynamicCstr} dynamic Additional dynamic
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
  * @return {!string} The string resulting from the action of speech rule.
  */
@@ -179,7 +179,7 @@ sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
 
 /**
  * Get a set of all dynamic constraint values.
- * @return {!Object.<sre.SpeechRule.DynamicCstrAttrib, Array.<string>>} The
+ * @return {!Object.<sre.DynamicCstr.Attr, Array.<string>>} The
  *     object with all annotations.
  */
 sre.MathCompoundStore.prototype.getDynamicConstraintValues = function() {

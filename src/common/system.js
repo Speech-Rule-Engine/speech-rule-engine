@@ -121,8 +121,8 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  sre.SpeechRuleEngine.getInstance().setDynamicConstraint(
+      sre.DynamicCstr.create(engine.domain, engine.style));
 };
 
 

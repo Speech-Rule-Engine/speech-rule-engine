@@ -25,7 +25,6 @@ goog.provide('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
-goog.require('sre.MathStore');
 
 
 
@@ -183,7 +182,7 @@ sre.AuditoryDescription.preprocessString_ = function(text) {
   if (sre.Engine.getInstance().domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
   }
-  var dynamicCstr = sre.MathStore.createDynamicConstraint(
+  var dynamicCstr = sre.DynamicCstr.create(
       sre.Engine.getInstance().domain,
       sre.Engine.getInstance().style);
   var result = sre.MathMap.getInstance().store.lookupString(text, dynamicCstr);

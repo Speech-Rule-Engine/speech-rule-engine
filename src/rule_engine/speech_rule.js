@@ -29,21 +29,22 @@
 
 goog.provide('sre.SpeechRule');
 
+goog.require('sre.DynamicCstr');
+
 
 
 /**
  * Creates a speech rule with precondition, actions and admin information.
  * @constructor
  * @param {string} name The name of the rule.
- * @param {sre.SpeechRule.DynamicCstr} dynamic Dynamic constraint annotations
- *     of the rule.
+ * @param {!sre.DynamicCstr} dynamic Dynamic constraint annotations of the rule.
  * @param {sre.SpeechRule.Precondition} prec Precondition of the rule.
  * @param {sre.SpeechRule.Action} action Action of the speech rule.
  */
 sre.SpeechRule = function(name, dynamic, prec, action) {
   /** @type {string} */
   this.name = name;
-  /** @type {sre.SpeechRule.DynamicCstr} */
+  /** @type {!sre.DynamicCstr} */
   this.dynamicCstr = dynamic;
   /** @type {sre.SpeechRule.Precondition} */
   this.precondition = prec;
@@ -58,7 +59,7 @@ sre.SpeechRule = function(name, dynamic, prec, action) {
  */
 sre.SpeechRule.prototype.toString = function() {
   return this.name + ' | ' +
-      sre.SpeechRule.stringifyCstr(this.dynamicCstr) + ' | ' +
+      this.dynamicCstr.toString() + ' | ' +
       this.precondition.toString() + ' ==> ' +
       this.action.toString();
 };
@@ -352,44 +353,6 @@ sre.SpeechRule.splitString_ = function(str, sep) {
   }
   return strList;
 };
-
-
-//TODO: (MOSS) WP 1.1
-// Revisit
-//
-/**
- * Attributes for dynamic constraints.
- * We define one default attribute as style. Speech rule stores can add other
- * attributes later.
- * @enum {string}
- */
-sre.SpeechRule.DynamicCstrAttrib =
-    {
-      STYLE: 'style'
-    };
-
-
-/**
- * Dynamic constraints are a means to specialize rules that can be changed
- * dynamically by the user, for example by choosing different styles, etc.
- * @typedef {!Object.<sre.SpeechRule.DynamicCstrAttrib, string>}
- */
-sre.SpeechRule.DynamicCstr;
-
-
-/**
- * Stringifies a dynamic constraint.
- * @param {sre.SpeechRule.DynamicCstr} cstr The constraint.
- * @return {string} The string version.
- */
-sre.SpeechRule.stringifyCstr = function(cstr) {
-  var cstrStrings = [];
-  for (var key in cstr) {
-    cstrStrings.push(cstr[key]);
-  }
-  return cstrStrings.join('.');
-};
-
 
 
 /**

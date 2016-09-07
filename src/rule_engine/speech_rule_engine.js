@@ -34,6 +34,7 @@ goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
+goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
@@ -54,12 +55,14 @@ sre.SpeechRuleEngine = function() {
    */
   this.activeStore_ = null;
 
+
+  var cstr = {};
+  cstr[sre.DynamicCstr.Attr.STYLE] = 'short';
   /**
    * Dynamic constraint annotation.
-   * @type {!sre.SpeechRule.DynamicCstr}
+   * @type {!sre.DynamicCstr}
    */
-  this.dynamicCstr = {};
-  this.dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.STYLE] = 'short';
+  this.dynamicCstr = new sre.DynamicCstr(cstr);
 
   /**
    * Object holding global parameters that can be set by the stores.
@@ -141,7 +144,7 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
  * Parameterizes the dynamic constraint annotation for the speech rule
  * engine. This is a separate function as this can be done interactively, while
  * a particular speech rule store is active.
- * @param {sre.SpeechRule.DynamicCstr} dynamic The new dynamic constraint.
+ * @param {sre.DynamicCstr} dynamic The new dynamic constraint.
  */
 sre.SpeechRuleEngine.prototype.setDynamicConstraint = function(dynamic) {
   if (dynamic) {
@@ -292,9 +295,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
-        return [rule.name,
-                sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
-                node.toString()];},
+        return [rule.name, rule.dynamicCstr.toString(), node.toString()];},
       this));
   var components = rule.action.components;
   result = [];
@@ -484,7 +485,7 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
     for (var i = 0, rule; rule = allRules[i]; i++) {
       sre.Debugger.getInstance().output(
           'Rule', name, 'DynamicCstr:',
-          sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
+          rule.dynamicCstr.toString(),
           'number', i);
       store.debugSpeechRule(rule, node);
     }
@@ -517,8 +518,8 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  sre.SpeechRuleEngine.getInstance().setDynamicConstraint(
+      sre.DynamicCstr.create(engine.domain, engine.style));
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -526,8 +527,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  this.dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  this.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   return result;
 };
 
