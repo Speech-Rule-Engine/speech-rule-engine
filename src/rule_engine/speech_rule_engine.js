@@ -58,11 +58,11 @@ sre.SpeechRuleEngine = function() {
 
   var cstr = {};
   cstr[sre.Engine.Axis.STYLE] = 'short';
-  /**
-   * Dynamic constraint annotation.
-   * @type {!sre.DynamicCstr}
-   */
-  this.dynamicCstr = new sre.DynamicCstr(cstr);
+  // /**
+  //  * Dynamic constraint annotation.
+  //  * @type {!sre.DynamicCstr}
+  //  */
+  // this.dynamicCstr = new sre.DynamicCstr(cstr);
 
   /**
    * Object holding global parameters that can be set by the stores.
@@ -280,15 +280,18 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  if (sre.Engine.getInstance().cache) {
+  var engine = sre.Engine.getInstance();
+  if (engine.cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
       return result;
     }
   }
-  var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
+  var dynamicCstr = engine.dynamicCstr ||
+        this.activeStore_.parser.parse('default.default');
+  var rule = this.activeStore_.lookupRule(node, dynamicCstr);
   if (!rule) {
-    if (sre.Engine.getInstance().strict) return [];
+    if (engine.strict) return [];
     result = this.activeStore_.evaluateDefault(node);
     this.pushCache_(node, result);
     return result;
@@ -517,8 +520,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  this.setDynamicConstraint(
-      sre.DynamicCstr.create(engine.domain, engine.style));
+  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -526,7 +528,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  this.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   return result;
 };
 

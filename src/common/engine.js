@@ -53,15 +53,15 @@ sre.Engine = function() {
 
 
   /**
-   * @type {function(string, !sre.DynamicCstr): string}
+   * @type {function(string, sre.DynamicCstr): string}
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 
   // TODO (sorge) Refactor into a common dynamic constraints object.
-  // /**
-  //  * @type {}
-  //  */
-  // this.dynamicCstr =
+  /**
+   * @type {sre.DynamicCstr}
+   */
+  this.dynamicCstr = null;
 
   /**
    * List of domain names.
@@ -266,7 +266,7 @@ sre.Engine.prototype.getAxisValues = function() {
 /**
  * A dummy string evaluator.
  * @param {string} str A string.
- * @param {!sre.DynamicCstr} cstr A dynamic constraint.
+ * @param {sre.DynamicCstr} cstr A dynamic constraint.
  * @return {string} The evaluated string.
  */
 sre.Engine.defaultEvaluator = function(str, cstr) {

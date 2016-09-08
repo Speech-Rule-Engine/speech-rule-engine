@@ -29,6 +29,7 @@ goog.provide('sre.MathSimpleStore');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
+goog.require('sre.DynamicCstr');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
 goog.require('sre.XpathUtil');
@@ -142,13 +143,14 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
 /**
  * Retrieves a rule for the given node if one exists.
  * @param {Node} node A node.
- * @param {!sre.DynamicCstr} dynamic Additional dynamic
+ * @param {sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
  * @return {sre.SpeechRule} The speech rule if it exists.
  */
 sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
   var store = this.subStores_[node.textContent];
   if (store) {
+    dynamic = dynamic || store.parser.parse('default.default');
     return store.lookupRule(node, dynamic);
   }
   return null;
@@ -158,14 +160,14 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
 /**
  * Looks up a rule for a given string and executes its actions.
  * @param {string} text The text to be translated.
- * @param {!sre.DynamicCstr} dynamic Additional dynamic
+ * @param {sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
  * @return {!string} The string resulting from the action of speech rule.
  */
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var textNode = sre.XpathUtil.currentDocument ?
       sre.XpathUtil.currentDocument.createTextNode(text) :
-      sre.DomUtil.createTextNode(text);
+        sre.DomUtil.createTextNode(text);
   var rule = this.lookupRule(textNode, dynamic);
   if (!rule) {
     return '';

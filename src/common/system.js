@@ -25,6 +25,7 @@ goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
+goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
@@ -121,8 +122,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  sre.SpeechRuleEngine.getInstance().setDynamicConstraint(
-      sre.DynamicCstr.create(engine.domain, engine.style));
+  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
 };
 
 

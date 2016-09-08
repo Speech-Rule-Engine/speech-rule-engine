@@ -22,6 +22,8 @@
 
 goog.provide('sre.DynamicCstr');
 
+goog.require('sre.Engine');
+
 
 
 /**

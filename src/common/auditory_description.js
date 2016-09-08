@@ -182,10 +182,7 @@ sre.AuditoryDescription.preprocessString_ = function(text) {
   if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
   }
-  var dynamicCstr = sre.DynamicCstr.create(
-      engine.domain,
-      engine.style);
-  var result = engine.evaluator(text, dynamicCstr);
+  var result = engine.evaluator(text, engine.dynamicCstr);
   return result || text;
 };
 
