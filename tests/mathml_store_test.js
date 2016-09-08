@@ -21,6 +21,7 @@ goog.provide('sre.MathmlStoreTest');
 
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
+goog.require('sre.DynamicCstr');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreRules');
