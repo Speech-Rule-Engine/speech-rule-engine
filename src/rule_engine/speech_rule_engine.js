@@ -509,8 +509,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
     if (key === 'rules') {
       store = this.activeStore_;
       engine.ruleSets = settings[key];
-      sre.SpeechRuleEngine.getInstance().
-          parameterize(engine.ruleSets);
+      this.parameterize(engine.ruleSets);
       continue;
     }
     save[key] = engine[key];
@@ -518,7 +517,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  sre.SpeechRuleEngine.getInstance().setDynamicConstraint(
+  this.setDynamicConstraint(
       sre.DynamicCstr.create(engine.domain, engine.style));
   var result = callback();
   for (key in save) {
