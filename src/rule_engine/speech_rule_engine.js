@@ -555,7 +555,7 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
  * Updates adminstrative info in the base Engine.
  */
 sre.SpeechRuleEngine.prototype.updateEngine = function() {
-  sre.MathMap.getInstance();
+  var maps = sre.MathMap.getInstance();
   if (!sre.Engine.isReady()) {
     setTimeout(goog.bind(this.updateEngine, this), 500);
     return;
@@ -563,4 +563,5 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
   var engine = sre.Engine.getInstance();
   engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
   engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
+  engine.evaluator = goog.bind(maps.store.lookupString, maps.store);
 };

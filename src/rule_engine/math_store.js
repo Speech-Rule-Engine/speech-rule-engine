@@ -20,6 +20,7 @@
 
 goog.provide('sre.MathStore');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');

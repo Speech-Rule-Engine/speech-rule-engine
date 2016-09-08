@@ -14,7 +14,8 @@
 
 
 /**
- * @fileoverview Basic functionality for the Speech Rule Engine
+ * @fileoverview Basic parameters and global machinery for the Speech Rule
+ *     Engine.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -44,7 +45,24 @@ sre.Engine = function() {
    */
   this.alternativeHost = null;
 
+  /**
+   * Collates all values of the dynamic constraints.
+   * @type {!Object.<sre.Engine.Axis, !Object.<string, boolean>>}
+   */
+  this.axisValues = sre.Engine.makeAxisValueObject_();
+
+
+  /**
+   * @type {function(string, !sre.DynamicCstr): string}
+   */
+  this.evaluator = sre.Engine.defaultEvaluator;
+
   // TODO (sorge) Refactor into a common dynamic constraints object.
+  // /**
+  //  * @type {}
+  //  */
+  // this.dynamicCstr =
+
   /**
    * List of domain names.
    * @type {!Array.<string>}
@@ -74,12 +92,6 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.semantics = false;
-
-  /**
-   * Collates all values of the dynamic constraints.
-   * @type {!Object.<sre.Engine.Axis, !Object.<string, boolean>>}
-   */
-  this.axisValues = sre.Engine.makeAxisValueObject_();
 
   /**
    * The mode in which the engine is running (sync, async, http).
@@ -235,4 +247,28 @@ sre.Engine.makeAxisValueObject_ = function() {
     result[sre.Engine.Axis[axis]] = {};
   }
   return result;
+};
+
+
+/**
+ * @return {!Object.<sre.Engine.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.Engine.prototype.getAxisValues = function() {
+  var result = {};
+  for (var key in this.axisValues) {
+    result[key] = Object.keys(this.axisValues[key]);
+  }
+  return result;
+};
+
+
+/**
+ * A dummy string evaluator.
+ * @param {string} str A string.
+ * @param {!sre.DynamicCstr} cstr A dynamic constraint.
+ * @return {string} The evaluated string.
+ */
+sre.Engine.defaultEvaluator = function(str, cstr) {
+  return str;
 };

@@ -24,7 +24,6 @@ goog.provide('sre.AuditoryDescription');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
-goog.require('sre.MathMap');
 
 
 
@@ -179,13 +178,14 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
-  if (sre.Engine.getInstance().domain == 'mathspeak' && text.match(/^\d{1}$/)) {
+  var engine = sre.Engine.getInstance();
+  if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
   }
   var dynamicCstr = sre.DynamicCstr.create(
-      sre.Engine.getInstance().domain,
-      sre.Engine.getInstance().style);
-  var result = sre.MathMap.getInstance().store.lookupString(text, dynamicCstr);
+      engine.domain,
+      engine.style);
+  var result = engine.evaluator(text, dynamicCstr);
   return result || text;
 };
 
