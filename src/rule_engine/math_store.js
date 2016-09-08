@@ -43,8 +43,8 @@ sre.MathStore = function() {
    * @override
    */
   this.dynamicCstrAttribs = [
-    sre.DynamicCstr.Attr.DOMAIN,
-    sre.DynamicCstr.Attr.STYLE
+    sre.Engine.Axis.DOMAIN,
+    sre.Engine.Axis.STYLE
   ];
 
   this.parser = new sre.DynamicCstr.Parser(this.dynamicCstrAttribs);
@@ -93,7 +93,7 @@ sre.MathStore.prototype.initialize = function() {
 //   var cstrList = Array.prototype.slice.call(arguments, 4);
 //   // We can not use goog.base due to variable number of constraint arguments.
 //   var rule = sre.MathStore.superClass_.defineRule.apply(
-//       this, [name, dynamicCstr.getValue(sre.DynamicCstr.Attr.STYLE),
+//       this, [name, dynamicCstr.getValue(sre.Engine.Axis.STYLE),
 //              action, query].concat(cstrList));
 //   // In the superclass the dynamic constraint only contains style annotations.
 //   // We now set the proper dynamic constraint that contains in addition a

@@ -178,28 +178,6 @@ sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
 
 
 /**
- * Get a set of all dynamic constraint values.
- * @return {!Object.<sre.DynamicCstr.Attr, Array.<string>>} The
- *     object with all annotations.
- */
-sre.MathCompoundStore.prototype.getDynamicConstraintValues = function() {
-  var newCstr = {};
-  for (var store in this.subStores_) {
-    var cstr = this.subStores_[store].getDynamicConstraintValues();
-    for (var key in cstr) {
-      var set = newCstr[key];
-      if (set) {
-        newCstr[key] = sre.BaseUtil.union(set, cstr[key]);
-      } else {
-        newCstr[key] = cstr[key];
-      }
-    }
-  }
-  return newCstr;
-};
-
-
-/**
  * Parses a string with a hex representatino of a unicode code point into the
  * corresponding unicode character.
  * @param {string} number The code point to be parsed.

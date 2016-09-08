@@ -74,7 +74,7 @@ sre.BaseRuleStore = function() {
    * A priority list of dynamic constraint attributes.
    * @type {!sre.DynamicCstr.Order}
    */
-  this.dynamicCstrAttribs = [sre.DynamicCstr.Attr.STYLE];
+  this.dynamicCstrAttribs = [sre.Engine.Axis.STYLE];
 
   /**
    * A dynamic constraint parser.
@@ -319,28 +319,6 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
   // TODO: (MOSS) We need to have a global comparator?
   this.comparator.setReference(dynamic);
   return this.comparator.match(rule.dynamicCstr);
-};
-
-
-// TODO (MOSS): Avoid union and rewrite with mock sets.
-/**
- * Get a set of all dynamic constraint values.
- * @return {!Object.<sre.DynamicCstr.Attr, Array.<string>>} The
- *     object with all annotations.
- */
-sre.BaseRuleStore.prototype.getDynamicConstraintValues = function() {
-  var result = {};
-  for (var i = 0, rule; rule = this.speechRules_[i]; i++) {
-    for (var key of rule.dynamicCstr.getKeys()) {
-      var newKey = [rule.dynamicCstr.getValue(key)];
-      if (result[key]) {
-        result[key] = sre.BaseUtil.union(result[key], newKey);
-      } else {
-        result[key] = newKey;
-      }
-    }
-  }
-  return result;
 };
 
 

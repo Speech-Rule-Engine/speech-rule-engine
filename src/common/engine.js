@@ -76,6 +76,12 @@ sre.Engine = function() {
   this.semantics = false;
 
   /**
+   * Collates all values of the dynamic constraints.
+   * @type {!Object.<sre.Engine.Axis, !Object.<string, boolean>>}
+   */
+  this.axisValues = sre.Engine.makeAxisValueObject_();
+
+  /**
    * The mode in which the engine is running (sync, async, http).
    * @type {sre.Engine.Mode}
    */
@@ -170,6 +176,21 @@ sre.Engine.Speech = {
 
 
 /**
+ * Attributes for dynamic constraints.
+ * We define one default attribute as style. Speech rule stores can add other
+ * attributes later.
+ * @enum {string}
+ */
+sre.Engine.Axis = {
+  DOMAIN: 'domain',
+  STYLE: 'style',
+  LANGUAGE: 'language',
+  TOPIC: 'topic',
+  MODALITY: 'modality'
+};
+
+
+/**
  * Registers a predicate to test whether the setup of the engine is complete.
  * The basic idea is that different parts of the system that run asynchronously
  * can register a test here and the engine can check if it is set up without the
@@ -199,4 +220,19 @@ sre.Engine.isReady = function() {
 sre.Engine.prototype.setupBrowsers = function() {
   this.isIE = sre.BrowserUtil.detectIE();
   this.isEdge = sre.BrowserUtil.detectEdge();
+};
+
+
+/**
+ * Initialises an object for collecting all values per axis.
+ * @return {!Object.<sre.Engine.Axis, !Object.<string, boolean>>} The
+ *     nested object structure.
+ * @private
+ */
+sre.Engine.makeAxisValueObject_ = function() {
+  var result = {};
+  for (var axis in sre.Engine.Axis) {
+    result[sre.Engine.Axis[axis]] = {};
+  }
+  return result;
 };

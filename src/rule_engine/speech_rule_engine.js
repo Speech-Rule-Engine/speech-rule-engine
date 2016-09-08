@@ -57,7 +57,7 @@ sre.SpeechRuleEngine = function() {
 
 
   var cstr = {};
-  cstr[sre.DynamicCstr.Attr.STYLE] = 'short';
+  cstr[sre.Engine.Axis.STYLE] = 'short';
   /**
    * Dynamic constraint annotation.
    * @type {!sre.DynamicCstr}
@@ -556,13 +556,12 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
  * Updates adminstrative info in the base Engine.
  */
 sre.SpeechRuleEngine.prototype.updateEngine = function() {
-  var maps = sre.MathMap.getInstance();
+  sre.MathMap.getInstance();
   if (!sre.Engine.isReady()) {
     setTimeout(goog.bind(this.updateEngine, this), 500);
     return;
   }
   var engine = sre.Engine.getInstance();
-  var dynamicCstr = this.activeStore_.getDynamicConstraintValues();
-  engine.allDomains = sre.BaseUtil.union(dynamicCstr.domain, maps.allDomains);
-  engine.allStyles = sre.BaseUtil.union(dynamicCstr.style, maps.allStyles);
+  engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
+  engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
 };

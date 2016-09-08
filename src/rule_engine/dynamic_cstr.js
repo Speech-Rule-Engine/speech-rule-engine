@@ -28,18 +28,18 @@ goog.provide('sre.DynamicCstr');
  * Dynamic constraints are a means to specialize rules that can be changed
  * dynamically by the user, for example by choosing different styles, etc.
  * @constructor
- * @param {!Object.<sre.DynamicCstr.Attr, string>} cstr The constraint mapping.
+ * @param {!Object.<sre.Engine.Axis, string>} cstr The constraint mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
  */
 sre.DynamicCstr = function(cstr, opt_order) {
 
   /**
-   * @type {!Object.<sre.DynamicCstr.Attr, string>}
+   * @type {!Object.<sre.Engine.Axis, string>}
    * @private
    */
   this.components_ = cstr;
 
-  // TODO: Make sure that the order is indeed similar to the keys. 
+  // TODO: Make sure that the order is indeed similar to the keys.
 
  /**
    * @type {!sre.DynamicCstr.Order}
@@ -51,7 +51,7 @@ sre.DynamicCstr = function(cstr, opt_order) {
 
 
 /**
- * @return {!Object.<sre.DynamicCstr.Attr, string>} The components of the
+ * @return {!Object.<sre.Engine.Axis, string>} The components of the
  *     constraint.
  */
 sre.DynamicCstr.prototype.getComponents = function() {
@@ -69,7 +69,7 @@ sre.DynamicCstr.prototype.getKeys = function() {
 
 /**
  * Returns the value of the constraint for a particular attribute key.
- * @param {!sre.DynamicCstr.Attr} key The attribute key.
+ * @param {!sre.Engine.Axis} key The attribute key.
  * @return {string} The component value of the constraint.
  */
 sre.DynamicCstr.prototype.getValue = function(key) {
@@ -120,8 +120,8 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
  */
 sre.DynamicCstr.create = function(domain, style) {
   var dynamicCstr = {};
-  dynamicCstr[sre.DynamicCstr.Attr.DOMAIN] = domain;
-  dynamicCstr[sre.DynamicCstr.Attr.STYLE] = style;
+  dynamicCstr[sre.Engine.Axis.DOMAIN] = domain;
+  dynamicCstr[sre.Engine.Axis.STYLE] = style;
   return new sre.DynamicCstr(dynamicCstr);
 };
 
@@ -130,20 +130,8 @@ sre.DynamicCstr.create = function(domain, style) {
 // Revisit
 //
 /**
- * Attributes for dynamic constraints.
- * We define one default attribute as style. Speech rule stores can add other
- * attributes later.
- * @enum {string}
- */
-sre.DynamicCstr.Attr = {
-  DOMAIN: 'domain',
-  STYLE: 'style'
-};
-
-
-/**
  * Ordering of dynamic constraint attributes.
- * @typedef {!Array.<sre.DynamicCstr.Attr>}
+ * @typedef {!Array.<sre.Engine.Axis>}
  */
 sre.DynamicCstr.Order;
 
@@ -176,7 +164,9 @@ sre.DynamicCstr.Parser.prototype.parse = function(str) {
   var order = str.split('.');
   var cstr = {};
   for (var i = 0, key; key = this.order_[i], order.length; i++) {
-    cstr[key] = order.shift();
+    var value = order.shift();
+    cstr[key] = value;
+    sre.Engine.getInstance().axisValues[key][value] = true;
   }
   if (i < this.order_.length - 1 || order.length) {
     // TODO: Make this a speech rule error, after moving error generation out of
