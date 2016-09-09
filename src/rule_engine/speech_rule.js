@@ -355,6 +355,7 @@ sre.SpeechRule.splitString_ = function(str, sep) {
 };
 
 
+
 /**
  * Error object for signaling parsing errors.
  * @param {string} msg The error message.

@@ -43,7 +43,7 @@ sre.DynamicCstr = function(cstr, opt_order) {
 
   // TODO: Make sure that the order is indeed similar to the keys.
 
- /**
+  /**
    * @type {!sre.DynamicCstr.Order}
    * @private
    */
@@ -287,7 +287,7 @@ sre.DynamicCstr.DefaultComparator.prototype.setReference = function(cstr) {
 sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
   var keys1 = cstr.getKeys();
   return keys1.length === this.reference_.getKeys().length &&
-    keys1.every(
+      keys1.every(
       goog.bind(function(key) {
         return cstr.getValue(key) == this.reference_.getValue(key) ||
             // TODO (sorge) Sort this out with an ordered list of constraints.
@@ -315,7 +315,7 @@ sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
  * @private
  */
 sre.DynamicCstr.DefaultComparator.prototype.countMatchingValues_ = function(
-  cstr) {
+    cstr) {
   var result = 0;
   for (var i = 0, key; key = this.order_[i]; i++) {
     if (this.reference_.getValue(key) === cstr.getValue(key)) {

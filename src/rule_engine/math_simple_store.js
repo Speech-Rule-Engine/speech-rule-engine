@@ -150,6 +150,7 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
 sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
   var store = this.subStores_[node.textContent];
   if (store) {
+    // TODO: (MOSS) Fix with order parsing.
     dynamic = dynamic || store.parser.parse('default.default');
     return store.lookupRule(node, dynamic);
   }
@@ -167,7 +168,7 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var textNode = sre.XpathUtil.currentDocument ?
       sre.XpathUtil.currentDocument.createTextNode(text) :
-        sre.DomUtil.createTextNode(text);
+      sre.DomUtil.createTextNode(text);
   var rule = this.lookupRule(textNode, dynamic);
   if (!rule) {
     return '';

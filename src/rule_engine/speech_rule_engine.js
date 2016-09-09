@@ -265,8 +265,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       return result;
     }
   }
+  // TODO: (MOSS) Fix with order parsing.
   var dynamicCstr = engine.dynamicCstr ||
-        this.activeStore_.parser.parse('default.default');
+      this.activeStore_.parser.parse('default.default');
   var rule = this.activeStore_.lookupRule(node, dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
