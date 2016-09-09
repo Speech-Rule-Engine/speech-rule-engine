@@ -55,15 +55,6 @@ sre.SpeechRuleEngine = function() {
    */
   this.activeStore_ = null;
 
-
-  var cstr = {};
-  cstr[sre.Engine.Axis.STYLE] = 'short';
-  // /**
-  //  * Dynamic constraint annotation.
-  //  * @type {!sre.DynamicCstr}
-  //  */
-  // this.dynamicCstr = new sre.DynamicCstr(cstr);
-
   /**
    * Object holding global parameters that can be set by the stores.
    * @type {Object.<string, string>}
@@ -137,19 +128,6 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
     }
   }
   this.updateEngine();
-};
-
-
-/**
- * Parameterizes the dynamic constraint annotation for the speech rule
- * engine. This is a separate function as this can be done interactively, while
- * a particular speech rule store is active.
- * @param {sre.DynamicCstr} dynamic The new dynamic constraint.
- */
-sre.SpeechRuleEngine.prototype.setDynamicConstraint = function(dynamic) {
-  if (dynamic) {
-    this.dynamicCstr = dynamic;
-  }
 };
 
 
