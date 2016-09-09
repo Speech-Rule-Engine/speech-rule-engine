@@ -101,7 +101,7 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
  */
 sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = [];
-  for (var i = 0; i < ruleSetNames.length; i++) {
+  for (var i = 0, m = ruleSetNames.length; i < m; i++) {
     var set = sre.SpeechRuleStores.getConstructor(ruleSetNames[i]);
     if (set && set.getInstance) {
       ruleSets.push(set.getInstance());

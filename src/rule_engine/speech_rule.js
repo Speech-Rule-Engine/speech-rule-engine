@@ -219,7 +219,7 @@ sre.SpeechRule.Component.prototype.addAttributes = function(attrs) {
         'Invalid attribute expression: ' + attrs);
   }
   var attribs = sre.SpeechRule.splitString_(attrs.slice(1, -1), ',');
-  for (var i = 0; i < attribs.length; i++) {
+  for (var i = 0, m = attribs.length; i < m; i++) {
     this.addAttribute(attribs[i]);
   }
 };
@@ -262,7 +262,7 @@ sre.SpeechRule.Action.fromString = function(input) {
       .filter(function(x) {return x.match(/\S/);})
       .map(function(x) {return x.trim();});
   var newComps = [];
-  for (var i = 0; i < comps.length; i++) {
+  for (var i = 0, m = comps.length; i < m; i++) {
     var comp = sre.SpeechRule.Component.fromString(comps[i]);
     if (comp) {
       newComps.push(comp);

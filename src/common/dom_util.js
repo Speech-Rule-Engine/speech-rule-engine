@@ -36,7 +36,7 @@ goog.require('sre.XpathUtil');
  */
 sre.DomUtil.toArray = function(nodeList) {
   var nodeArray = [];
-  for (var i = 0; i < nodeList.length; i++) {
+  for (var i = 0, m = nodeList.length; i < m; i++) {
     nodeArray.push(nodeList[i]);
   }
   return nodeArray;
