@@ -83,11 +83,6 @@ sre.BaseRuleStore = function() {
    */
   this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
 
-  /**
-   * List of TTS properties overridden by the store when it is active.
-   * @type {!Array.<string>}
-   */
-  this.defaultTtsProps = [];
 };
 
 

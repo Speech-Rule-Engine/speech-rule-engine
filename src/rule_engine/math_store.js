@@ -48,14 +48,10 @@ sre.MathStore = function() {
     sre.Engine.Axis.STYLE
   ];
 
-  this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
-
   /**
    * @override
    */
-  this.defaultTtsProps = [sre.Engine.personalityProps.PITCH,
-                          sre.Engine.personalityProps.RATE];
-
+  this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
 
   /**
    * @type {boolean}
