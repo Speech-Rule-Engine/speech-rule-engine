@@ -93,10 +93,9 @@ sre.DynamicCstr.prototype.getValue = function(key) {
  */
 sre.DynamicCstr.prototype.toString = function() {
   var cstrStrings = [];
-  // See if this works and is transpiled into ES5!
-  for (var key of this.order_) {
+  this.order_.forEach(goog.bind(function(key) {
     cstrStrings.push(this.getValue(key));
-  }
+  }, this));
   return cstrStrings.join('.');
 };
 
@@ -111,7 +110,7 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
   if (this.order_.length !== keys1.length) {
     return false;
   }
-  for (var key of keys1) {
+  for (var j = 0, key; key = keys1[j]; j++) {
     var comp2 = this.getValue(key);
     if (!comp2 || cstr.getValue(key) !== comp2) {
       return false;
