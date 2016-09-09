@@ -57,12 +57,17 @@ sre.Engine = function() {
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 
-  // TODO (sorge) Refactor into a common dynamic constraints object.
   /**
    * @type {sre.DynamicCstr}
    */
   this.dynamicCstr = null;
 
+  /**
+   * @type {sre.DynamicCstr.Comparator}
+   */
+  this.comparator = null;
+
+  // TODO (sorge) To remove.
   /**
    * List of domain names.
    * @type {!Array.<string>}

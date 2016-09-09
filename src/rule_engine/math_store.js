@@ -43,14 +43,12 @@ sre.MathStore = function() {
   /**
    * @override
    */
-  this.dynamicCstrAttribs = [
+  this.parseOrder = [
     sre.Engine.Axis.DOMAIN,
     sre.Engine.Axis.STYLE
   ];
 
-  this.parser = new sre.DynamicCstr.Parser(this.dynamicCstrAttribs);
-  this.comparator = new sre.DynamicCstr.DefaultComparator(
-    this.dynamicCstrAttribs);
+  this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
 
   /**
    * @override

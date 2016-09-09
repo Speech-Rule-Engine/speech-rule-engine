@@ -53,6 +53,15 @@ sre.DynamicCstr = function(cstr, opt_order) {
 
 
 /**
+ * @return {sre.DynamicCstr.Order} The priority order of constraint attributes
+ *     in the comparator.
+ */
+sre.DynamicCstr.prototype.getOrder = function() {
+  return this.order_;
+};
+
+
+/**
  * @return {!Object.<sre.Engine.Axis, string>} The components of the
  *     constraint.
  */
@@ -189,13 +198,6 @@ sre.DynamicCstr.Comparator = function() { };
 
 
 /**
- * @return {sre.DynamicCstr.Order} The priority order of constraint attributes
- *     in the comparator.
- */
-sre.DynamicCstr.Comparator.prototype.getOrder = function() { };
-
-
-/**
  * @return {sre.DynamicCstr} The current reference constraint in the comparator.
  */
 sre.DynamicCstr.Comparator.prototype.getReference = function() { };
@@ -237,32 +239,22 @@ sre.DynamicCstr.Comparator.prototype.compare = function(cstr1, cstr2) { };
  * constraint with default values only.
  * @constructor
  * @implements {sre.DynamicCstr.Comparator}
- * @param {!sre.DynamicCstr.Order} order The priority order of attributes for
- *     the dynamic constraint.
+ * @param {sre.DynamicCstr} cstr A reference constraint.
  */
-sre.DynamicCstr.DefaultComparator = function(order) {
-
-  /**
-   * @type {sre.DynamicCstr.Order}
-   * @private
-   */
-  this.order_ = order;
+sre.DynamicCstr.DefaultComparator = function(cstr) {
 
   /**
    * @type {sre.DynamicCstr}
    * @private
    */
-  this.reference_ = this.getDefaultCstr_();
+  this.reference_ = cstr;
 
-};
+  /**
+   * @type {sre.DynamicCstr.Order}
+   * @private
+   */
+  this.order_ = this.reference_.getOrder();
 
-
-/**
- * @override
- * @final
- */
-sre.DynamicCstr.DefaultComparator.prototype.getOrder = function() {
-  return this.order_;
 };
 
 
@@ -281,6 +273,7 @@ sre.DynamicCstr.DefaultComparator.prototype.getReference = function() {
  */
 sre.DynamicCstr.DefaultComparator.prototype.setReference = function(cstr) {
   this.reference_ = cstr;
+  this.order_ = this.reference_.getOrder();
 };
 
 
@@ -311,25 +304,6 @@ sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
   var count1 = this.countMatchingValues_(cstr1);
   var count2 = this.countMatchingValues_(cstr2);
   return (count1 > count2) ? -1 : ((count2 > count1) ? 1 : 0);
-};
-
-
-// TODO: Here's a problem: The constraint order can not really be determined
-// without the parse order. While this might be irrelevant in terms for
-// functionality, if we want to print the reference string, it might look odd.
-// Not if everything is default as value.
-//
-// In general, we can should not really generate a Dynamic Constraint without
-// using a parser. To prevent this we could make parser part of comparator, then
-// we could only allow to set the reference constraint as a string.
-/**
- * @return {sre.DynamicCstr} The default dynamic constraint.
- * @private
- */
-sre.DynamicCstr.DefaultComparator.prototype.getDefaultCstr_ = function() {
-  var cstr = {};
-  this.order_.forEach(function(x) { cstr[x] = 'default';});
-  return new sre.DynamicCstr(cstr);
 };
 
 

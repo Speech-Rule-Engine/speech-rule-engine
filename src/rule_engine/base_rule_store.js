@@ -75,20 +75,13 @@ sre.BaseRuleStore = function() {
    * A priority list of dynamic constraint attributes.
    * @type {!sre.DynamicCstr.Order}
    */
-  this.dynamicCstrAttribs = [sre.Engine.Axis.STYLE];
+  this.parseOrder = [sre.Engine.Axis.STYLE];
 
   /**
    * A dynamic constraint parser.
    * @type {!sre.DynamicCstr.Parser}
    */
-  this.parser = new sre.DynamicCstr.Parser(this.dynamicCstrAttribs);
-
-  /**
-   * A dynamic constraint comparator.
-   * @type {!sre.DynamicCstr.Comparator}
-   */
-  this.comparator = new sre.DynamicCstr.DefaultComparator(
-    this.dynamicCstrAttribs);
+  this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
 
   /**
    * List of TTS properties overridden by the store when it is active.
@@ -318,8 +311,7 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
   }
   //
   // TODO: (MOSS) We need to have a global comparator?
-  this.comparator.setReference(dynamic);
-  return this.comparator.match(rule.dynamicCstr);
+  return sre.Engine.getInstance().comparator.match(rule.dynamicCstr);
 };
 
 
@@ -333,14 +325,15 @@ sre.BaseRuleStore.prototype.testDynamicConstraints = function(
  * @private
  */
 sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
-  rules.sort(goog.bind(
+  var comparator = sre.Engine.getInstance().comparator;
+  rules.sort(
     function(r1, r2) {
-        return this.comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
+        return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
         // When same number of dynamic constraint attributes matches for
         // both rules, compare length of static constraints.
           (r2.precondition.constraints.length -
-             r1.precondition.constraints.length);},
-      this));
+             r1.precondition.constraints.length);}
+  );
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
         return rules.map(function(x) {
