@@ -382,8 +382,6 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  * @param {Array.<sre.AuditoryDescription>} descrs A list of Auditory
  *     descriptions.
  * @param {Object} props Property dictionary.
- * TODO (sorge) Fully specify, when we have finalised the speech rule
- * format.
  * @return {Array.<sre.AuditoryDescription>} The modified array.
  * @private
  */
@@ -395,9 +393,9 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
       personality[key] = value;
     }
   }
-  descrs.forEach(goog.bind(function(descr) {
+  for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
-  }, this));
+  }
   return descrs;
 };
 
