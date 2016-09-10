@@ -72,6 +72,29 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
 };
 
 
+/**
+ * @override
+ */
+sre.MathSimpleStore.prototype.lookupRule = function(node, dynamic) {
+  if (!node || node.nodeType != sre.DomUtil.NodeType.TEXT_NODE) {
+    return null;
+  }
+  var rules = this.getSpeechRules().filter(
+      goog.bind(
+          function(rule) {
+            return this.testDynamicConstraints(dynamic, rule);
+            // At this point we can be sure that the rule matches.
+            // TODO (MOSS): Remove after Trie introduction.
+            // rule.precondition.constraints[0].slice(0,-1).slice(16);
+          },
+        this));
+  return rules.length ?
+    rules.sort(function(r1, r2) {
+      return sre.Engine.getInstance().comparator.
+        compare(r1.dynamicCstr, r2.dynamicCstr);})[0] : null;
+};
+
+
 
 /**
  * A compound store for simple Math objects.
