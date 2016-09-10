@@ -72,7 +72,11 @@ sre.Tests.testList = [
   sre.ApiTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
+  //
+  // TODO: (MOSS) Taken out as API consistency will not be affected by this
+  //       project.
+  //
+  // sre.EnrichSpeechTest,
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
