@@ -37,8 +37,7 @@ goog.require('sre.SpeechRule');
 sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
-  //TODO: (MOSS) WP 1.1
-  // Revisit
+  //TODO: (MOSS) Revisit after Clearspeak implementation.
   //
   /**
    * @override
