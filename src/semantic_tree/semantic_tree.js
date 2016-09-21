@@ -68,6 +68,7 @@ sre.SemanticTree = function(mml) {
  */
 sre.SemanticTree.ID_COUNTER_ = 0;
 
+
 /**
  * Generate an empty semantic tree.
  * @return {sre.SemanticTree} The empty semantic tree.
@@ -199,7 +200,8 @@ sre.SemanticTree.parseMathml_ = function(mml) {
   switch (sre.DomUtil.tagName(mml)) {
     case 'SEMANTICS':
       if (children.length > 0) {
-        newNode = sre.SemanticTree.parseMathml_(/** @type {!Element} */(children[0]));
+        newNode = sre.SemanticTree.parseMathml_(
+            /** @type {!Element} */(children[0]));
         break;
       }
     case 'MATH':
@@ -209,24 +211,29 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       children = sre.SemanticUtil.purgeNodes(children);
       // Single child node, i.e. the row is meaningless.
       if (children.length == 1) {
-        newNode = sre.SemanticTree.parseMathml_(/** @type {!Element} */(children[0]));
+        newNode = sre.SemanticTree.parseMathml_(
+            /** @type {!Element} */(children[0]));
       } else {
         // Case of a 'meaningful' row, even if they are empty.
-        newNode = sre.SemanticTree.processRow_(sre.SemanticTree.parseMathmlChildren_(children));
+        newNode = sre.SemanticTree.processRow_(
+            sre.SemanticTree.parseMathmlChildren_(children));
       }
       newNode.mathml.unshift(mml);
       return newNode;
     case 'MFRAC':
       if (sre.SemanticUtil.isZeroLength(mml.getAttribute('linethickness'))) {
         var child0 = sre.SemanticTree.makeBranchNode_(
-            sre.SemanticAttr.Type.LINE, [sre.SemanticTree.parseMathml_(children[0])], []);
+            sre.SemanticAttr.Type.LINE,
+            [sre.SemanticTree.parseMathml_(children[0])], []);
         var child1 = sre.SemanticTree.makeBranchNode_(
-            sre.SemanticAttr.Type.LINE, [sre.SemanticTree.parseMathml_(children[1])], []);
+            sre.SemanticAttr.Type.LINE,
+            [sre.SemanticTree.parseMathml_(children[1])], []);
         newNode = sre.SemanticTree.makeBranchNode_(
             sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
       } else {
-        newNode = sre.SemanticTree.makeFractionNode_(sre.SemanticTree.parseMathml_(children[0]),
-                                         sre.SemanticTree.parseMathml_(children[1]));
+        newNode = sre.SemanticTree.makeFractionNode_(
+            sre.SemanticTree.parseMathml_(children[0]),
+            sre.SemanticTree.parseMathml_(children[1]));
       }
       break;
     case 'MSUB':
@@ -235,20 +242,23 @@ sre.SemanticTree.parseMathml_ = function(mml) {
     case 'MOVER':
     case 'MUNDER':
     case 'MUNDEROVER':
-      newNode = sre.SemanticTree.makeLimitNode_(sre.DomUtil.tagName(mml),
-                                    sre.SemanticTree.parseMathmlChildren_(children));
+      newNode = sre.SemanticTree.makeLimitNode_(
+          sre.DomUtil.tagName(mml),
+          sre.SemanticTree.parseMathmlChildren_(children));
       break;
     case 'MROOT':
       newNode = sre.SemanticTree.makeBranchNode_(
           sre.SemanticAttr.Type.ROOT,
-          [sre.SemanticTree.parseMathml_(children[1]), sre.SemanticTree.parseMathml_(children[0])],
+          [sre.SemanticTree.parseMathml_(children[1]),
+           sre.SemanticTree.parseMathml_(children[0])],
           []);
       break;
     case 'MSQRT':
       children = sre.SemanticTree.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children));
       newNode = sre.SemanticTree.makeBranchNode_(
-          sre.SemanticAttr.Type.SQRT, [sre.SemanticTree.processRow_(children)], []);
+          sre.SemanticAttr.Type.SQRT,
+          [sre.SemanticTree.processRow_(children)], []);
       break;
     case 'MTABLE':
       newNode = sre.SemanticTree.makeBranchNode_(
@@ -268,7 +278,8 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       children = sre.SemanticTree.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children));
       newNode = sre.SemanticTree.makeBranchNode_(
-          sre.SemanticAttr.Type.CELL, [sre.SemanticTree.processRow_(children)], []);
+          sre.SemanticAttr.Type.CELL,
+          [sre.SemanticTree.processRow_(children)], []);
       newNode.role = sre.SemanticAttr.Role.TABLE;
       break;
     case 'MS':
@@ -315,7 +326,8 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       children = sre.SemanticTree.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children));
       newNode = sre.SemanticTree.makeBranchNode_(
-          sre.SemanticAttr.Type.ENCLOSE, [sre.SemanticTree.processRow_(children)], []);
+          sre.SemanticAttr.Type.ENCLOSE,
+          [sre.SemanticTree.processRow_(children)], []);
       newNode.role =
           /** @type {!sre.SemanticAttr.Role} */(mml.getAttribute('notation')) ||
           sre.SemanticAttr.Role.UNKNOWN;
@@ -550,7 +562,8 @@ sre.SemanticTree.makeConcatNode_ = function(inner, nodeList, type) {
   var content = nodeList.map(function(x) {
     return sre.SemanticTree.getEmbellishedInner_(x).textContent;
   }).join(' ');
-  var newNode = sre.SemanticTree.makeBranchNode_(type, [inner], nodeList, content);
+  var newNode = sre.SemanticTree.makeBranchNode_(
+      type, [inner], nodeList, content);
   if (nodeList.length > 1) {
     newNode.role = sre.SemanticAttr.Role.MULTIOP;
   }
@@ -654,7 +667,8 @@ sre.SemanticTree.combineUnits_ = function(nodes) {
       result = result.concat(comp);
     }
     if (comp.length > 1) {
-      var operator = sre.SemanticTree.makeContentNode_(sre.SemanticAttr.invisibleTimes());
+      var operator = sre.SemanticTree.makeContentNode_(
+          sre.SemanticAttr.invisibleTimes());
       // For now we assume this is a multiplication using invisible times.
       var unitNode = sre.SemanticTree.makeInfixNode_(comp, operator);
       unitNode.role = sre.SemanticAttr.Role.UNIT;
@@ -852,7 +866,8 @@ sre.SemanticTree.makeOperationsTree_ = function(
 
   if (split.head.length == 0) {
     prefixes.push(split.div);
-    return sre.SemanticTree.makeOperationsTree_(split.tail, root, lastop, prefixes);
+    return sre.SemanticTree.makeOperationsTree_(
+        split.tail, root, lastop, prefixes);
   }
 
   var node = sre.SemanticTree.makePrefixNode_(
@@ -862,7 +877,8 @@ sre.SemanticTree.makeOperationsTree_ = function(
     return newNode;
   }
 
-  return sre.SemanticTree.makeOperationsTree_(split.tail, newNode, split.div, []);
+  return sre.SemanticTree.makeOperationsTree_(
+      split.tail, newNode, split.div, []);
 };
 
 
@@ -911,7 +927,8 @@ sre.SemanticTree.appendMultiplicativeOp_ = function(root, op, node) {
     lastRoot = lastChild;
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
-  var newNode = sre.SemanticTree.makeInfixNode_([lastRoot.childNodes.pop(), node], op);
+  var newNode = sre.SemanticTree.makeInfixNode_(
+      [lastRoot.childNodes.pop(), node], op);
   lastRoot.appendChild(newNode);
   return root;
 };
@@ -982,7 +999,8 @@ sre.SemanticTree.getFencesInRow_ = function(nodes) {
       sre.SemanticTree.isFence_);
   partition = sre.SemanticTree.purgeFences_(partition);
   var felem = partition.comp.shift();
-  return sre.SemanticTree.processFences_(partition.rel, partition.comp, [], [felem]);
+  return sre.SemanticTree.processFences_(
+      partition.rel, partition.comp, [], [felem]);
 };
 
 
@@ -1062,7 +1080,8 @@ sre.SemanticTree.processFences_ = function(
       contentStack.push(cont);
     }
     // contentStack.push(content.shift());
-    return sre.SemanticTree.processFences_(fences, content, openStack, contentStack);
+    return sre.SemanticTree.processFences_(
+        fences, content, openStack, contentStack);
   }
   // General closing case.
   if (lastOpen && (
@@ -1076,7 +1095,8 @@ sre.SemanticTree.processFences_ = function(
     var fenced = sre.SemanticTree.makeHorizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
-    return sre.SemanticTree.processFences_(fences, content, openStack, contentStack);
+    return sre.SemanticTree.processFences_(
+        fences, content, openStack, contentStack);
   }
   // Closing with a neutral fence on the stack.
   if (lastOpen && firstRole == sre.SemanticAttr.Role.CLOSE &&
@@ -1105,14 +1125,16 @@ sre.SemanticTree.processFences_ = function(
         split.div, fences.shift(),
         contentStack.pop().concat(innerNodes, rightContent));
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
-    return sre.SemanticTree.processFences_(fences, content, split.head, contentStack);
+    return sre.SemanticTree.processFences_(
+        fences, content, split.head, contentStack);
   }
   // Final Case: A singular closing fence.
   // We turn the fence into a punctuation.
   var fenced = fences.shift();
   sre.SemanticTree.fenceToPunct_(fenced);
   contentStack.push(contentStack.pop().concat([fenced], content.shift()));
-  return sre.SemanticTree.processFences_(fences, content, openStack, contentStack);
+  return sre.SemanticTree.processFences_(
+      fences, content, openStack, contentStack);
 };
 
 
@@ -1144,7 +1166,8 @@ sre.SemanticTree.processNeutralFences_ = function(fences, content) {
     sre.SemanticTree.fenceToPunct_(firstFence);
     var restContent = content.shift();
     restContent.unshift(firstFence);
-    return restContent.concat(sre.SemanticTree.processNeutralFences_(fences, content));
+    return restContent.concat(
+        sre.SemanticTree.processNeutralFences_(fences, content));
   }
   var newContent = sre.SemanticTree.combineFencedContent_(
       firstFence, split.div, split.head, content);
@@ -1193,7 +1216,8 @@ sre.SemanticTree.combineFencedContent_ = function(
   var midContent = content.slice(0, cutLength);
   content = content.slice(cutLength);
   var rightContent = content.shift();
-  var innerNodes = sre.SemanticTree.processNeutralFences_(midFences, midContent);
+  var innerNodes = sre.SemanticTree.processNeutralFences_(
+      midFences, midContent);
   leftContent.push.apply(leftContent, innerNodes);
   leftContent.push.apply(leftContent, rightContent);
   var fenced = sre.SemanticTree.makeHorizontalFencedNode_(
@@ -1390,8 +1414,8 @@ sre.SemanticTree.makeLimitNode_ = function(mmlTag, children) {
         type = sre.SemanticAttr.Type.SUPERSCRIPT;
         break;
       case 'MSUBSUP':
-        var innerNode = sre.SemanticTree.makeBranchNode_(sre.SemanticAttr.Type.SUBSCRIPT,
-            [center, children[1]], []);
+        var innerNode = sre.SemanticTree.makeBranchNode_(
+            sre.SemanticAttr.Type.SUBSCRIPT, [center, children[1]], []);
         innerNode.role = sre.SemanticAttr.Role.SUBSUP;
         children = [innerNode, children[2]];
         type = sre.SemanticAttr.Type.SUPERSCRIPT;
@@ -1420,14 +1444,14 @@ sre.SemanticTree.makeLimitNode_ = function(mmlTag, children) {
           children[2].role = sre.SemanticAttr.Role.OVERACCENT;
         }
         if (overAccent && !underAccent) {
-          innerNode = sre.SemanticTree.makeBranchNode_(sre.SemanticAttr.Type.OVERSCORE,
-                                           [center, children[2]], []);
+          innerNode = sre.SemanticTree.makeBranchNode_(
+              sre.SemanticAttr.Type.OVERSCORE, [center, children[2]], []);
           innerNode.role = center.role;
           children = [innerNode, children[1]];
           type = sre.SemanticAttr.Type.UNDERSCORE;
         } else {
-          innerNode = sre.SemanticTree.makeBranchNode_(sre.SemanticAttr.Type.UNDERSCORE,
-                                           [center, children[1]], []);
+          innerNode = sre.SemanticTree.makeBranchNode_(
+              sre.SemanticAttr.Type.UNDERSCORE, [center, children[1]], []);
           innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
           children = [innerNode, children[2]];
           type = sre.SemanticAttr.Type.OVERSCORE;
@@ -1503,7 +1527,8 @@ sre.SemanticTree.getFunctionsInRow_ = function(
   }
   // Combine functions in the rest of the row.
   var processedRest = sre.SemanticTree.getFunctionsInRow_(restNodes, []);
-  var newRest = sre.SemanticTree.getFunctionArgs_(firstNode, processedRest, heuristic);
+  var newRest = sre.SemanticTree.getFunctionArgs_(
+      firstNode, processedRest, heuristic);
   return result.concat(newRest);
 };
 
@@ -1597,7 +1622,8 @@ sre.SemanticTree.getFunctionArgs_ = function(func, rest, heuristic) {
     case 'integral':
       var components = sre.SemanticTree.getIntegralArgs_(rest);
       var integrand = sre.SemanticTree.processRow_(components.integrand);
-      var funcNode = sre.SemanticTree.makeIntegralNode_(func, integrand, components.intvar);
+      var funcNode = sre.SemanticTree.makeIntegralNode_(
+          func, integrand, components.intvar);
       components.rest.unshift(funcNode);
       return components.rest;
       break;
@@ -1675,7 +1701,8 @@ sre.SemanticTree.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticTree.integralDxBoundary_(firstNode, nodes[1])) {
-    var comma = sre.SemanticTree.makeContentNode_(sre.SemanticAttr.invisibleComma());
+    var comma = sre.SemanticTree.makeContentNode_(
+        sre.SemanticAttr.invisibleComma());
     var intvar = sre.SemanticTree.makePunctuatedNode_(
         [firstNode, comma, nodes[1]], [comma]);
     intvar.role = sre.SemanticAttr.Role.INTEGRAL;
@@ -1694,7 +1721,8 @@ sre.SemanticTree.getIntegralArgs_ = function(nodes, opt_args) {
  * @private
  */
 sre.SemanticTree.makeFunctionNode_ = function(func, arg) {
-  var applNode = sre.SemanticTree.makeContentNode_(sre.SemanticAttr.functionApplication());
+  var applNode = sre.SemanticTree.makeContentNode_(
+      sre.SemanticAttr.functionApplication());
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var funcop = sre.SemanticTree.getFunctionOp_(
@@ -1704,8 +1732,8 @@ sre.SemanticTree.makeFunctionNode_ = function(func, arg) {
              sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
       }
       );
-  return sre.SemanticTree.makeFunctionalNode_(sre.SemanticAttr.Type.APPL, [func, arg],
-                                  funcop, [applNode]);
+  return sre.SemanticTree.makeFunctionalNode_(
+      sre.SemanticAttr.Type.APPL, [func, arg], funcop, [applNode]);
 };
 
 
@@ -1719,8 +1747,8 @@ sre.SemanticTree.makeFunctionNode_ = function(func, arg) {
 sre.SemanticTree.makeBigOpNode_ = function(bigOp, arg) {
   var largeop = sre.SemanticTree.getFunctionOp_(
       bigOp, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
-  return sre.SemanticTree.makeFunctionalNode_(sre.SemanticAttr.Type.BIGOP,
-                                  [bigOp, arg], largeop, []);
+  return sre.SemanticTree.makeFunctionalNode_(
+      sre.SemanticAttr.Type.BIGOP, [bigOp, arg], largeop, []);
 };
 
 
@@ -1739,8 +1767,9 @@ sre.SemanticTree.makeIntegralNode_ = function(
   intvar = intvar || sre.SemanticTree.makeEmptyNode_();
   var largeop = sre.SemanticTree.getFunctionOp_(
       integral, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
-  return sre.SemanticTree.makeFunctionalNode_(sre.SemanticAttr.Type.INTEGRAL,
-                                  [integral, integrand, intvar], largeop, []);
+  return sre.SemanticTree.makeFunctionalNode_(
+      sre.SemanticAttr.Type.INTEGRAL,
+      [integral, integrand, intvar], largeop, []);
 };
 
 
@@ -1966,7 +1995,8 @@ sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
 sre.SemanticTree.tableToMatrixOrVector_ = function(node) {
   var matrix = node.childNodes[0];
   sre.SemanticTree.attrPred_('type', 'MULTILINE')(matrix) ?
-      sre.SemanticTree.tableToVector_(node) : sre.SemanticTree.tableToMatrix_(node);
+      sre.SemanticTree.tableToVector_(node) :
+      sre.SemanticTree.tableToMatrix_(node);
   node.contentNodes.forEach(goog.bind(matrix.appendContentNode, matrix));
   for (var i = 0, row; row = matrix.childNodes[i]; i++) {
     sre.SemanticTree.assignRoleToRow_(
@@ -2275,9 +2305,10 @@ sre.SemanticTree.processMfenced_ = function(mfenced, children) {
   // interpreted as usual. The only effect of the mfence node here is that the
   // content will be interpreted into a single node.
   if (open && close) {
-    return sre.SemanticTree.makeHorizontalFencedNode_(sre.SemanticTree.makeContentNode_(open),
-                                          sre.SemanticTree.makeContentNode_(close),
-                                          children);
+    return sre.SemanticTree.makeHorizontalFencedNode_(
+        sre.SemanticTree.makeContentNode_(open),
+        sre.SemanticTree.makeContentNode_(close),
+        children);
   }
   if (open) {
     children.unshift(sre.SemanticTree.makeContentNode_(open));
@@ -2399,7 +2430,8 @@ sre.SemanticTree.processMultiScript_ = function(children) {
   if (!children.length) {
     return sre.SemanticTree.makeEmptyNode_();
   }
-  var base = sre.SemanticTree.parseMathml_(/** @type {!Element} */(children.shift()));
+  var base = sre.SemanticTree.parseMathml_(
+      /** @type {!Element} */(children.shift()));
   if (!children.length) {
     return base;
   }
@@ -2479,13 +2511,15 @@ sre.SemanticTree.makeScriptNode_ = function(
       var newNode = sre.SemanticTree.makeEmptyNode_();
       break;
     case 1:
-      newNode = sre.SemanticTree.parseMathml_(/** @type {!Element} */(nodes[0]));
+      newNode = sre.SemanticTree.parseMathml_(
+          /** @type {!Element} */(nodes[0]));
       if (opt_noSingle) {
         return newNode;
       }
       break;
     default:
-      newNode = sre.SemanticTree.makeDummyNode_(sre.SemanticTree.parseMathmlChildren_(nodes));
+      newNode = sre.SemanticTree.makeDummyNode_(
+          sre.SemanticTree.parseMathmlChildren_(nodes));
   }
   newNode.role = role;
   return newNode;
