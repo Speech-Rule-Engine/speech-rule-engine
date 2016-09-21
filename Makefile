@@ -24,6 +24,7 @@ DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
 MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
+SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
 
 START = $(BIN_DIR)/sre
@@ -241,6 +242,13 @@ semantic: $(SRC)
 
 clean_semantic:
 	rm -f $(SEMANTIC)
+
+semantic_node: $(SRC)
+	@echo Compiling Semantic Tree API for Node
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.SemanticApi --js_output_file=$(SEMANTIC_NODE) $^
+
+clean_semantic_node:
+	rm -f $(SEMANTIC_NODE)
 
 enrich: $(SRC)
 	@echo Compiling browser ready MathML Enrichment API
