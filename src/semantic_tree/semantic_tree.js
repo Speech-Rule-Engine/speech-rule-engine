@@ -348,7 +348,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
 
 
 /**
- * Parse a list of MathML nodes into the semantic tree.
+ * Parse a list of MathML nodes into a list of semantic nodes.
  * @param {Array.<Element>} mmls A list of MathML nodes.
  * @return {!Array.<sre.SemanticNode>} The list of resulting semantic
  *     node.
