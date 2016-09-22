@@ -2468,16 +2468,22 @@ sre.SemanticTree.processMultiScript_ = function(children) {
     var mmlchild = [base];
     if (rsubPurged.length) {
       mmlchild.push(sre.SemanticTree.makeScriptNode_(
-          rsub, sre.SemanticAttr.Role.RIGHTSUB, true));
+          sre.SemanticTree.parseMathmlChildren_(rsub),
+          sre.SemanticAttr.Role.RIGHTSUB, true));
     }
     if (rsupPurged.length) {
       mmlchild.push(sre.SemanticTree.makeScriptNode_(
-          rsup, sre.SemanticAttr.Role.RIGHTSUPER, true));
+          sre.SemanticTree.parseMathmlChildren_(rsup),
+          sre.SemanticAttr.Role.RIGHTSUPER, true));
     }
     return sre.SemanticTree.makeLimitNode_(mmlTag, mmlchild);
   }
   // We really deal with a multiscript tensor.
   //
+  lsub = sre.SemanticTree.parseMathmlChildren_(lsub);
+  lsup = sre.SemanticTree.parseMathmlChildren_(lsup);
+  rsub = sre.SemanticTree.parseMathmlChildren_(rsub);
+  rsup = sre.SemanticTree.parseMathmlChildren_(rsup);
   var newNode = sre.SemanticTree.makeBranchNode_(
       sre.SemanticAttr.Type.TENSOR,
       [
@@ -2496,7 +2502,7 @@ sre.SemanticTree.processMultiScript_ = function(children) {
 
 /**
  * Creates a script node for a tensor, which is effectively a dummy punctuation.
- * @param {!Array.<Element>} nodes A list of unprocessed nodes for
+ * @param {!Array.<sre.SemanticNode>} nodes A list of unprocessed nodes for
  *      that script.
  * @param {sre.SemanticAttr.Role} role The role of the dummy node.
  * @param {boolean=} opt_noSingle Flag indicating whether role should be set
@@ -2511,15 +2517,13 @@ sre.SemanticTree.makeScriptNode_ = function(
       var newNode = sre.SemanticTree.makeEmptyNode_();
       break;
     case 1:
-      newNode = sre.SemanticTree.parseMathml_(
-          /** @type {!Element} */(nodes[0]));
+      newNode = /** @type {!sre.SemanticNode} */(nodes[0]);
       if (opt_noSingle) {
         return newNode;
       }
       break;
     default:
-      newNode = sre.SemanticTree.makeDummyNode_(
-          sre.SemanticTree.parseMathmlChildren_(nodes));
+      newNode = sre.SemanticTree.makeDummyNode_(nodes);
   }
   newNode.role = role;
   return newNode;
