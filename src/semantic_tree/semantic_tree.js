@@ -2458,25 +2458,12 @@ sre.SemanticTree.processMultiScript_ = function(children) {
   // superscript.
   if (!sre.SemanticUtil.purgeNodes(lsup).length &&
       !sre.SemanticUtil.purgeNodes(lsub).length) {
-    var rsupPurged = sre.SemanticUtil.purgeNodes(rsup);
-    var rsubPurged = sre.SemanticUtil.purgeNodes(rsub);
-    if (!rsupPurged.length && !rsubPurged.length) {
-      return base;
-    }
-    var mmlTag = rsubPurged.length ?
-        (rsupPurged.length ? 'MSUBSUP' : 'MSUB') : 'MSUP';
-    var mmlchild = [base];
-    if (rsubPurged.length) {
-      mmlchild.push(sre.SemanticTree.makeScriptNode_(
-          sre.SemanticTree.parseMathmlChildren_(rsub),
-          sre.SemanticAttr.Role.RIGHTSUB, true));
-    }
-    if (rsupPurged.length) {
-      mmlchild.push(sre.SemanticTree.makeScriptNode_(
-          sre.SemanticTree.parseMathmlChildren_(rsup),
-          sre.SemanticAttr.Role.RIGHTSUPER, true));
-    }
-    return sre.SemanticTree.makeLimitNode_(mmlTag, mmlchild);
+    return sre.SemanticTree.makePseudoTensor(
+      base,
+      sre.SemanticTree.parseMathmlChildren_(rsub),
+      sre.SemanticTree.parseMathmlChildren_(rsup),
+      sre.SemanticUtil.purgeNodes(rsub).length,
+      sre.SemanticUtil.purgeNodes(rsup).length);
   }
   // We really deal with a multiscript tensor.
   //
@@ -2497,6 +2484,37 @@ sre.SemanticTree.processMultiScript_ = function(children) {
   newNode.role = base.role;
   newNode.embellished = sre.SemanticTree.isEmbellished_(base);
   return newNode;
+};
+
+
+/**
+ * Creates a limit node from an original mmultiscript node, that only has
+ * non-empty right sub and superscript elements.
+ * @param {!sre.SemanticNode} base The base node.
+ * @param {!Array.<sre.SemanticNode>} sub The subscripts.
+ * @param {!Array.<sre.SemanticNode>} sup The superscripts.
+ * @param {number} nonEmptySub The number of non-empty elements in the
+ *     subscript.
+ * @param {number} nonEmptySup The number of non-empty elements in the
+ *     superscript.
+ * @return {!sre.SemanticNode} The semantic tensor node.
+ */
+sre.SemanticTree.makePseudoTensor = function(
+    base, sub, sup, nonEmptySub, nonEmptySup) {
+  if (!nonEmptySub && !nonEmptySup) {
+    return base;
+  }
+  var mmlTag = nonEmptySub ? (nonEmptySup ? 'MSUBSUP' : 'MSUB') : 'MSUP';
+  var mmlchild = [base];
+  if (nonEmptySub) {
+    mmlchild.push(sre.SemanticTree.makeScriptNode_(
+      sub, sre.SemanticAttr.Role.RIGHTSUB, true));
+  }
+  if (nonEmptySup) {
+    mmlchild.push(sre.SemanticTree.makeScriptNode_(
+      sup, sre.SemanticAttr.Role.RIGHTSUPER, true));
+  }
+  return sre.SemanticTree.makeLimitNode_(mmlTag, mmlchild);
 };
 
 

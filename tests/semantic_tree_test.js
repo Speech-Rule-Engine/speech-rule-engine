@@ -8581,7 +8581,7 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   );
   this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
-      '<subscript role="latinletter" id="2">' +
+      '<subscript role="latinletter" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
@@ -8590,10 +8590,10 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   );
   this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
-      '<superscript role="latinletter" id="2">' +
+      '<superscript role="latinletter" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
       '</children>' +
       '</superscript>'
   );
@@ -8634,9 +8634,9 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<subscript role="subsup" id="9">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<punctuated role="rightsub" id="4">' +
+      '<punctuated role="rightsub" id="6">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="5">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
@@ -8650,8 +8650,8 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<punctuation role="dummy" id="7">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<identifier role="latinletter" font="italic" id="5">j</identifier>' +
-      '<identifier role="latinletter" font="italic" id="6">l</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">j</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
