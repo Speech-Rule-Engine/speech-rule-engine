@@ -285,7 +285,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
     case 'MS':
     case 'MTEXT':
     case 'ANNOTATION-XML':
-      newNode = sre.SemanticTree.makeLeafNode_(mml);
+      newNode = sre.SemanticTree.processLeafNode_(mml);
       newNode.type = sre.SemanticAttr.Type.TEXT;
       if (sre.DomUtil.tagName(mml) === 'MS') {
         newNode.role = sre.SemanticAttr.Role.STRING;
@@ -300,7 +300,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       newNode = sre.SemanticTree.makeIdentifierNode_(mml);
       break;
     case 'MN':
-      newNode = sre.SemanticTree.makeLeafNode_(mml);
+      newNode = sre.SemanticTree.processLeafNode_(mml);
       if (newNode.type == sre.SemanticAttr.Type.UNKNOWN ||
           // In case of latin numbers etc.
           newNode.type == sre.SemanticAttr.Type.IDENTIFIER) {
@@ -310,7 +310,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       sre.SemanticTree.exprFont_(newNode);
       break;
     case 'MO':
-      newNode = sre.SemanticTree.makeLeafNode_(mml);
+      newNode = sre.SemanticTree.processLeafNode_(mml);
       if (newNode.type == sre.SemanticAttr.Type.UNKNOWN) {
         newNode.type = sre.SemanticAttr.Type.OPERATOR;
       }
@@ -431,18 +431,30 @@ sre.SemanticTree.makeMultipleContentNodes_ = function(num, content) {
 
 
 /**
- * Create a leaf node.
+ * Creates a leaf node fro MathML node.
  * @param {Node} mml The MathML tree.
  * @return {!sre.SemanticNode} The new node.
  * @private
  */
-sre.SemanticTree.makeLeafNode_ = function(mml) {
-  if (!mml.textContent) {
+sre.SemanticTree.processLeafNode_ = function(mml) {
+  return sre.SemanticTree.makeLeafNode_(mml.textContent,
+                                        mml.getAttribute('mathvariant'));
+};
+
+
+/**
+ * Create a leaf node.
+ * @param {string} content The MathML tree.
+ * @param {sre.SemanticAttr.Font} font The font name.
+ * @return {!sre.SemanticNode} The new node.
+ * @private
+ */
+sre.SemanticTree.makeLeafNode_ = function(content, font) {
+  if (!content) {
     return sre.SemanticTree.makeEmptyNode_();
   }
-  var node = sre.SemanticTree.makeContentNode_(mml.textContent);
-  //node.mathml = [mml];
-  node.font = mml.getAttribute('mathvariant') || node.font;
+  var node = sre.SemanticTree.makeContentNode_(content);
+  node.font = font || node.font;
   return node;
 };
 
@@ -481,12 +493,13 @@ sre.SemanticTree.makeBranchNode_ = function(
  * @private
  */
 sre.SemanticTree.makeIdentifierNode_ = function(mml) {
-  var leaf = sre.SemanticTree.makeLeafNode_(mml);
   var variant = mml.getAttribute('mathvariant');
+  var content = mml.textContent;
+  var leaf = sre.SemanticTree.makeLeafNode_(content, variant);
   if (mml.getAttribute('class') === 'MathML-Unit') {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
     leaf.role = sre.SemanticAttr.Role.UNIT;
-  } else if (!variant && leaf.textContent.length == 1 &&
+  } else if (!variant && content.length == 1 &&
              (leaf.role == sre.SemanticAttr.Role.INTEGER ||
               leaf.role == sre.SemanticAttr.Role.LATINLETTER ||
               leaf.role == sre.SemanticAttr.Role.GREEKLETTER) &&
