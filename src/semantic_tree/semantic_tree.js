@@ -489,7 +489,7 @@ sre.SemanticTree.makeIdentifierNode_ = function(mml) {
   if (mml.getAttribute('class') === 'MathML-Unit') {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
     leaf.role = sre.SemanticAttr.Role.UNIT;
-  } else if (!variant && content.length == 1 &&
+  } else if (!variant && leaf.textContent.length == 1 &&
              (leaf.role == sre.SemanticAttr.Role.INTEGER ||
               leaf.role == sre.SemanticAttr.Role.LATINLETTER ||
               leaf.role == sre.SemanticAttr.Role.GREEKLETTER) &&
