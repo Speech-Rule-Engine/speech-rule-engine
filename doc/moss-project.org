@@ -1,0 +1,168 @@
+# Musings/ideas/design decision on the MOSS project
+
+* Constraint redesign 
+
+
+** Purpose: to improve on the applicability tests
+
+** Three types of constraints: Dynamic, Query, Boolean
+
+** Changes for Dynamic Constraints:
+
+*** Remain basically as is. Make testing more efficient.
+
+*** Can have a flexible number of axis. 
+
+**** However that number is fixed by the rule store (via the parser).
+
+**** Otherwise similar to what we had
+
+*** Comparison of Dynamic Constraints
+
+**** DONE We need a parser to parse constraints from strings. This is specific to the rule store.
+
+**** TODO Value list for 
+
+**** DONE Equality of constraints. This is a method of constraints.
+     
+**** TODO Have a priority order to compare against. This can be done globally, i.e., each 
+
+***** Parser order can be different from priority order!
+
+***** Reference constraint is the global dynamic constraint
+
+      Example: mathspeak.brief  < mathspeak.default if
+
+***** Compare method for ordering with respect to the global constraint.
+      What flexibility do we allow for ordering? Is a simple order list of axis/attributes enough?
+      Or an order list per axis.
+
+***** Match method to determine if we have a rule that is to be considered.
+      Allow sets of axis. 
+      Example: mathspeak, [default, brief]
+
+***** DO WE STILL WANT THE DEFAULT AS BOTTOM LINE?
+
+
+** Changes for Static constraints:
+
+*** Query vs boolean constraints
+    
+*** Query should be simplified, when possible, i.e. self::NAME
+
+**** Markup as different forms
+
+***** If query is of the form self::TAGNAME 
+       Mark as 'tag' and test with node.tagname
+       Take care of self::*!
+       Take care of namespaces (e.g., self::mathml:math)
+
+***** If query is of the form @attr
+      Mark as 'attr' and test with hasAttribute.
+      
+***** If query is of the form @attr="something"
+      Mark as 'attrEQ' and test with hasAttribute & getAttribute= 
+
+***** If query is of the form @attr!="something"
+      Mark as 'attrNEQ' and test with !hasAttribute || getAttribute!=
+
+***** Test speed of the above against XPATH first!
+
+
+**** Other speedup potential
+
+***** count(children/*)=n
+
+***** Usage of Xpath in postconditions
+
+*** Inspect and mark constraints when sorting into Trie. Maybe annotate Trie node?
+
+
+*** Ordering
+
+**** Currently only by number. 
+
+**** Is there a better way? 
+     Priorities?
+     Explicit ordering by name? Can be problematic as there can be multiple
+     rules with the same name.
+     If done by name, we could have an explicit order definition statement in a
+     rule store that would need to be collected and applied by a comparator.
+
+**** Again ordering is independent of the Trie
+
+** Changes to constraints of simple store elements
+
+*** Special constraints: For single string elements
+
+*** They only work on text nodes. 
+
+*** Rewriting application tests:
+
+**** recognise the query self::text() and combine with boolean query.
+
+**** Immediately do this when sorting into Trie
+
+**** Stop building a "rule" query and instead have trie subtype that specialised on simple stores.
+
+*** Again test speed trade-off!
+
+
+* Trie design ideas:
+
+** Usage
+
+*** Have on trie per rule store or per domain?
+
+*** When combining rule sets, combine tries or rather search through list of tries?
+   The former is probably too expensive and also might not make sense when swapping rule sets regularly.
+   Is that a use case? How often would we swap rule sets?
+
+*** What about the simple rule stores? Should we simply go back to using the dictionary lookup?
+
+** Design
+
+*** Trie starting with dynamic constraint?
+
+*** Trie starting with query
+
+** DataStructure
+
+*** Node with
+
+**** Type (root, dynamic, query, boolean, rule = leaf?)
+
+***** We should probably have a class per node type.
+
+**** SubType (string)
+
+***** Dynamic: The axis name
+
+***** Static: the form or xpath
+
+***** Rule: name
+
+**** The actual content (string)
+
+***** Dynamic: value of axis
+
+***** Static: xpath expression
+
+***** Rule: postcondition or full rule object
+
+**** Auxiliary content (static only) (string)
+
+***** The comparison string or empty if none is necessary.
+
+*** Should every node bring their own test? Or select test according to type? 
+    Probably better the former, but has to be a static function! 
+    Should be assigned during sub-type computation.
+    For dynamic computation that will be a bit problematic!
+    Dynamic match needs to use the global comparator.
+
+*** Children implemented as Object.<string, node> where the string is the actual content.
+
+*** Retrieval gets all leave node under the last matching node.
+
+*** Depth and balancing might be interesting.
+    We could effectively invert order of dynamic and static constraints. Not sure if that makes any sense.
