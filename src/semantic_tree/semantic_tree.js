@@ -275,7 +275,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
     case 'MS':
     case 'MTEXT':
     case 'ANNOTATION-XML':
-      newNode = sre.SemanticTree.processLeafNode_(mml);
+      newNode = sre.SemanticTree.parseLeafNode_(mml);
       newNode.type = sre.SemanticAttr.Type.TEXT;
       if (sre.DomUtil.tagName(mml) === 'MS') {
         newNode.role = sre.SemanticAttr.Role.STRING;
@@ -287,10 +287,10 @@ sre.SemanticTree.parseMathml_ = function(mml) {
     //              systematically.
     // TODO (sorge) Put this all in a single clean reclassification method.
     case 'MI':
-      newNode = sre.SemanticTree.makeIdentifierNode_(mml);
+      newNode = sre.SemanticTree.parseIdentifierNode_(mml);
       break;
     case 'MN':
-      newNode = sre.SemanticTree.processLeafNode_(mml);
+      newNode = sre.SemanticTree.parseLeafNode_(mml);
       if (newNode.type == sre.SemanticAttr.Type.UNKNOWN ||
           // In case of latin numbers etc.
           newNode.type == sre.SemanticAttr.Type.IDENTIFIER) {
@@ -300,7 +300,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       sre.SemanticTree.exprFont_(newNode);
       break;
     case 'MO':
-      newNode = sre.SemanticTree.processLeafNode_(mml);
+      newNode = sre.SemanticTree.parseLeafNode_(mml);
       if (newNode.type == sre.SemanticAttr.Type.UNKNOWN) {
         newNode.type = sre.SemanticAttr.Type.OPERATOR;
       }
@@ -323,7 +323,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
           sre.SemanticAttr.Role.UNKNOWN;
       break;
     case 'MMULTISCRIPTS':
-      newNode = sre.SemanticTree.processMultiScript_(children);
+      newNode = sre.SemanticTree.parseMultiScript_(children);
       break;
     case 'ANNOTATION':
     case 'NONE':
@@ -426,7 +426,7 @@ sre.SemanticTree.makeMultipleContentNodes_ = function(num, content) {
  * @return {!sre.SemanticNode} The new node.
  * @private
  */
-sre.SemanticTree.processLeafNode_ = function(mml) {
+sre.SemanticTree.parseLeafNode_ = function(mml) {
   return sre.SemanticTree.makeLeafNode_(mml.textContent,
                                         mml.getAttribute('mathvariant'));
 };
@@ -482,14 +482,29 @@ sre.SemanticTree.makeBranchNode_ = function(
  * @return {!sre.SemanticNode} The new semantic identifier node.
  * @private
  */
-sre.SemanticTree.makeIdentifierNode_ = function(mml) {
-  var variant = mml.getAttribute('mathvariant');
-  var content = mml.textContent;
-  var leaf = sre.SemanticTree.makeLeafNode_(content, variant);
-  if (mml.getAttribute('class') === 'MathML-Unit') {
+sre.SemanticTree.parseIdentifierNode_ = function(mml) {
+  return sre.SemanticTree.makeIdentifierNode_(
+      mml.textContent,
+      mml.getAttribute('mathvariant'),
+      mml.getAttribute('class'));
+};
+
+
+/**
+ * Create an identifier node, with particular emphasis on font disambiguation.
+ * @param {string} content The content of the identifier.
+ * @param {sre.SemanticAttr.Font} font The font for the identifier.
+ * @param {string} unit The class of the identifier which is imporntnat if it is
+ *     a unit.
+ * @return {!sre.SemanticNode} The new semantic identifier node.
+ * @private
+ */
+sre.SemanticTree.makeIdentifierNode_ = function(content, font, unit) {
+  var leaf = sre.SemanticTree.makeLeafNode_(content, font);
+  if (unit === 'MathML-Unit') {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
     leaf.role = sre.SemanticAttr.Role.UNIT;
-  } else if (!variant && leaf.textContent.length == 1 &&
+  } else if (!font && leaf.textContent.length == 1 &&
              (leaf.role == sre.SemanticAttr.Role.INTEGER ||
               leaf.role == sre.SemanticAttr.Role.LATINLETTER ||
               leaf.role == sre.SemanticAttr.Role.GREEKLETTER) &&
@@ -2450,7 +2465,7 @@ sre.SemanticTree.makeFractionNode_ = function(denom, enume) {
  * @return {!sre.SemanticNode} The semantic tensor node.
  * @private
  */
-sre.SemanticTree.processMultiScript_ = function(children) {
+sre.SemanticTree.parseMultiScript_ = function(children) {
   // Empty node. Illegal MathML markup, but valid in MathJax.
   if (!children.length) {
     return sre.SemanticTree.makeEmptyNode_();
