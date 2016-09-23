@@ -221,20 +221,10 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       newNode.mathml.unshift(mml);
       return newNode;
     case 'MFRAC':
-      if (sre.SemanticUtil.isZeroLength(mml.getAttribute('linethickness'))) {
-        var child0 = sre.SemanticTree.makeBranchNode_(
-            sre.SemanticAttr.Type.LINE,
-            [sre.SemanticTree.parseMathml_(children[0])], []);
-        var child1 = sre.SemanticTree.makeBranchNode_(
-            sre.SemanticAttr.Type.LINE,
-            [sre.SemanticTree.parseMathml_(children[1])], []);
-        newNode = sre.SemanticTree.makeBranchNode_(
-            sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
-      } else {
-        newNode = sre.SemanticTree.makeFractionNode_(
-            sre.SemanticTree.parseMathml_(children[0]),
-            sre.SemanticTree.parseMathml_(children[1]));
-      }
+      newNode = sre.SemanticTree.makeFractionLikeNode_(
+          mml.getAttribute('linethickness'),
+          sre.SemanticTree.parseMathml_(children[0]),
+          sre.SemanticTree.parseMathml_(children[1]));
       break;
     case 'MSUB':
     case 'MSUP':
@@ -2408,6 +2398,28 @@ sre.SemanticTree.exprFont_ = function(node) {
       sre.SemanticAttr.Font.UNKNOWN);
   if (singleFont) {
     node.font = singleFont;
+  }
+};
+
+
+/**
+ * Creates a fraction node with the appropriate role.
+ * @param {string} linethickness The line thickness attribute value.
+ * @param {!sre.SemanticNode} denom The denominator node.
+ * @param {!sre.SemanticNode} enume The enumerator node.
+ * @return {!sre.SemanticNode} The new fraction node.
+ * @private
+ */
+sre.SemanticTree.makeFractionLikeNode_ = function(linethickness, denom, enume) {
+  if (sre.SemanticUtil.isZeroLength(linethickness)) {
+    var child0 = sre.SemanticTree.makeBranchNode_(
+      sre.SemanticAttr.Type.LINE, [denom], []);
+    var child1 = sre.SemanticTree.makeBranchNode_(
+      sre.SemanticAttr.Type.LINE, [enume], []);
+    return sre.SemanticTree.makeBranchNode_(
+      sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
+  } else {
+    return sre.SemanticTree.makeFractionNode_(denom, enume);
   }
 };
 
