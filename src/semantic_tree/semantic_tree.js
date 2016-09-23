@@ -2461,9 +2461,7 @@ sre.SemanticTree.processMultiScript_ = function(children) {
     return sre.SemanticTree.makePseudoTensor(
       base,
       sre.SemanticTree.parseMathmlChildren_(rsub),
-      sre.SemanticTree.parseMathmlChildren_(rsup),
-      sre.SemanticUtil.purgeNodes(rsub).length,
-      sre.SemanticUtil.purgeNodes(rsup).length);
+      sre.SemanticTree.parseMathmlChildren_(rsup));
   }
   // We really deal with a multiscript tensor.
   //
@@ -2493,14 +2491,14 @@ sre.SemanticTree.processMultiScript_ = function(children) {
  * @param {!sre.SemanticNode} base The base node.
  * @param {!Array.<sre.SemanticNode>} sub The subscripts.
  * @param {!Array.<sre.SemanticNode>} sup The superscripts.
- * @param {number} nonEmptySub The number of non-empty elements in the
- *     subscript.
- * @param {number} nonEmptySup The number of non-empty elements in the
- *     superscript.
  * @return {!sre.SemanticNode} The semantic tensor node.
  */
-sre.SemanticTree.makePseudoTensor = function(
-    base, sub, sup, nonEmptySub, nonEmptySup) {
+sre.SemanticTree.makePseudoTensor = function(base, sub, sup) {
+  var isEmpty = function(x) {
+    return !sre.SemanticTree.attrPred_('type', 'EMPTY')(x);
+  };
+  var nonEmptySub = sub.filter(isEmpty).length;
+  var nonEmptySup = sup.filter(isEmpty).length;
   if (!nonEmptySub && !nonEmptySup) {
     return base;
   }
