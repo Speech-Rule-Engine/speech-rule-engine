@@ -2465,20 +2465,35 @@ sre.SemanticTree.processMultiScript_ = function(children) {
   }
   // We really deal with a multiscript tensor.
   //
-  lsub = sre.SemanticTree.parseMathmlChildren_(lsub);
-  lsup = sre.SemanticTree.parseMathmlChildren_(lsup);
-  rsub = sre.SemanticTree.parseMathmlChildren_(rsub);
-  rsup = sre.SemanticTree.parseMathmlChildren_(rsup);
+  return sre.SemanticTree.makeTensor(
+    base,
+    sre.SemanticTree.parseMathmlChildren_(lsub),
+    sre.SemanticTree.parseMathmlChildren_(lsup),
+    sre.SemanticTree.parseMathmlChildren_(rsub),
+    sre.SemanticTree.parseMathmlChildren_(rsup));
+};
+
+
+/**
+ * Create a tensor node.
+ * @param {!sre.SemanticNode} base The base node.
+ * @param {!Array.<sre.SemanticNode>} lsub The left subscripts.
+ * @param {!Array.<sre.SemanticNode>} lsup The left superscripts.
+ * @param {!Array.<sre.SemanticNode>} rsub The right subscripts.
+ * @param {!Array.<sre.SemanticNode>} rsup The right superscripts.
+ * @return {!sre.SemanticNode} The semantic tensor node.
+ */
+sre.SemanticTree.makeTensor = function(base, lsub, lsup, rsub, rsup) {
   var newNode = sre.SemanticTree.makeBranchNode_(
-      sre.SemanticAttr.Type.TENSOR,
-      [
-       base,
-       sre.SemanticTree.makeScriptNode_(lsub, sre.SemanticAttr.Role.LEFTSUB),
-       sre.SemanticTree.makeScriptNode_(lsup, sre.SemanticAttr.Role.LEFTSUPER),
-       sre.SemanticTree.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
-       sre.SemanticTree.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
-      ],
-      []);
+    sre.SemanticAttr.Type.TENSOR,
+    [
+      base,
+      sre.SemanticTree.makeScriptNode_(lsub, sre.SemanticAttr.Role.LEFTSUB),
+      sre.SemanticTree.makeScriptNode_(lsup, sre.SemanticAttr.Role.LEFTSUPER),
+      sre.SemanticTree.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
+      sre.SemanticTree.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
+    ],
+    []);
   newNode.role = base.role;
   newNode.embellished = sre.SemanticTree.isEmbellished_(base);
   return newNode;
