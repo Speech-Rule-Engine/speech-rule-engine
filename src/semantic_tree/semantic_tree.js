@@ -306,7 +306,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       }
       break;
     case 'MFENCED':
-      newNode = sre.SemanticTree.processMfenced_(
+      newNode = sre.SemanticTree.parseMfenced_(
           mml, sre.SemanticTree.parseMathmlChildren_(
           sre.SemanticUtil.purgeNodes(children)));
       var nodes = sre.SemanticTree.processTablesInRow_([newNode]);
@@ -2304,10 +2304,25 @@ sre.SemanticTree.attrPred_ = function(prop, attr) {
  * @return {!sre.SemanticNode} The semantic node.
  * @private
  */
-sre.SemanticTree.processMfenced_ = function(mfenced, children) {
+sre.SemanticTree.parseMfenced_ = function(mfenced, children) {
   var sepValue = sre.SemanticTree.getAttribute_(mfenced, 'separators', ',');
   var open = sre.SemanticTree.getAttribute_(mfenced, 'open', '(');
   var close = sre.SemanticTree.getAttribute_(mfenced, 'close', ')');
+  return sre.SemanticTree.processMfenced_(open, close, sepValue, children);
+};
+
+
+/**
+ * Process an fenced node, effectively given in an mfenced style.
+ * @param {?string} open Textual representation of the opening fence.
+ * @param {?string} close Textual representation of the closing fence.
+ * @param {?string} sepValue Textual representation of separators.
+ * @param {!Array.<sre.SemanticNode>} children List of already translated
+ *     children.
+ * @return {!sre.SemanticNode} The semantic node.
+ * @private
+ */
+sre.SemanticTree.processMfenced_ = function(open, close, sepValue, children) {
   if (sepValue && children.length > 0) {
     var separators = sre.MathUtil.nextSeparatorFunction(sepValue);
     var newChildren = [children.shift()];
