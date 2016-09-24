@@ -1354,7 +1354,7 @@ sre.SemanticTree.makePunctuatedNode_ = function(
     var firstRole = punctuations[0].role;
     if (firstRole !== sre.SemanticAttr.Role.UNKNOWN &&
         punctuations.every(function(punct) {
-            return punct.role === firstRole;})) {
+          return punct.role === firstRole;})) {
       newNode.role = firstRole;
       return newNode;
     }
@@ -2430,11 +2430,11 @@ sre.SemanticTree.exprFont_ = function(node) {
 sre.SemanticTree.makeFractionLikeNode_ = function(linethickness, denom, enume) {
   if (sre.SemanticUtil.isZeroLength(linethickness)) {
     var child0 = sre.SemanticTree.makeBranchNode_(
-      sre.SemanticAttr.Type.LINE, [denom], []);
+        sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticTree.makeBranchNode_(
-      sre.SemanticAttr.Type.LINE, [enume], []);
+        sre.SemanticAttr.Type.LINE, [enume], []);
     return sre.SemanticTree.makeBranchNode_(
-      sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
+        sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
     return sre.SemanticTree.makeFractionNode_(denom, enume);
   }
@@ -2501,18 +2501,18 @@ sre.SemanticTree.parseMultiScript_ = function(children) {
   if (!sre.SemanticUtil.purgeNodes(lsup).length &&
       !sre.SemanticUtil.purgeNodes(lsub).length) {
     return sre.SemanticTree.makePseudoTensor(
-      base,
-      sre.SemanticTree.parseMathmlChildren_(rsub),
-      sre.SemanticTree.parseMathmlChildren_(rsup));
+        base,
+        sre.SemanticTree.parseMathmlChildren_(rsub),
+        sre.SemanticTree.parseMathmlChildren_(rsup));
   }
   // We really deal with a multiscript tensor.
   //
   return sre.SemanticTree.makeTensor(
-    base,
-    sre.SemanticTree.parseMathmlChildren_(lsub),
-    sre.SemanticTree.parseMathmlChildren_(lsup),
-    sre.SemanticTree.parseMathmlChildren_(rsub),
-    sre.SemanticTree.parseMathmlChildren_(rsup));
+      base,
+      sre.SemanticTree.parseMathmlChildren_(lsub),
+      sre.SemanticTree.parseMathmlChildren_(lsup),
+      sre.SemanticTree.parseMathmlChildren_(rsub),
+      sre.SemanticTree.parseMathmlChildren_(rsup));
 };
 
 
@@ -2527,15 +2527,15 @@ sre.SemanticTree.parseMultiScript_ = function(children) {
  */
 sre.SemanticTree.makeTensor = function(base, lsub, lsup, rsub, rsup) {
   var newNode = sre.SemanticTree.makeBranchNode_(
-    sre.SemanticAttr.Type.TENSOR,
-    [
-      base,
-      sre.SemanticTree.makeScriptNode_(lsub, sre.SemanticAttr.Role.LEFTSUB),
-      sre.SemanticTree.makeScriptNode_(lsup, sre.SemanticAttr.Role.LEFTSUPER),
-      sre.SemanticTree.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
-      sre.SemanticTree.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
-    ],
-    []);
+      sre.SemanticAttr.Type.TENSOR,
+      [
+       base,
+       sre.SemanticTree.makeScriptNode_(lsub, sre.SemanticAttr.Role.LEFTSUB),
+       sre.SemanticTree.makeScriptNode_(lsup, sre.SemanticAttr.Role.LEFTSUPER),
+       sre.SemanticTree.makeScriptNode_(rsub, sre.SemanticAttr.Role.RIGHTSUB),
+       sre.SemanticTree.makeScriptNode_(rsup, sre.SemanticAttr.Role.RIGHTSUPER)
+      ],
+      []);
   newNode.role = base.role;
   newNode.embellished = sre.SemanticTree.isEmbellished_(base);
   return newNode;
@@ -2563,11 +2563,11 @@ sre.SemanticTree.makePseudoTensor = function(base, sub, sup) {
   var mmlchild = [base];
   if (nonEmptySub) {
     mmlchild.push(sre.SemanticTree.makeScriptNode_(
-      sub, sre.SemanticAttr.Role.RIGHTSUB, true));
+        sub, sre.SemanticAttr.Role.RIGHTSUB, true));
   }
   if (nonEmptySup) {
     mmlchild.push(sre.SemanticTree.makeScriptNode_(
-      sup, sre.SemanticAttr.Role.RIGHTSUPER, true));
+        sup, sre.SemanticAttr.Role.RIGHTSUPER, true));
   }
   return sre.SemanticTree.makeLimitNode_(mmlTag, mmlchild);
 };
