@@ -1,0 +1,19 @@
+Notes from the Diagram project
+
+* Refactoring the tree generation.
+
+** Separate out into three types of methods:
+
+*** MathML parsing with parseXYZ
+*** Semantic Node processing with processXYZ
+*** Semantic Node building with makeXYZ
+
+** Factory, Parser and Processor
+
+*** Factory contains a counter a limited number of methods.
+
+*** Processor is a singleton with a factory
+
+*** Parser is a singleton with a factory
+
+*** Each tree contains its factory.
