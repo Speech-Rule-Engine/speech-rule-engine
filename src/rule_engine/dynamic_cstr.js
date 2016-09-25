@@ -21,6 +21,7 @@
  */
 
 goog.provide('sre.DynamicCstr');
+goog.provide('sre.DynamicCstr.Comparator');
 
 goog.require('sre.Engine');
 
