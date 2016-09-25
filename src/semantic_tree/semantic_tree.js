@@ -30,6 +30,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticPred');
 goog.require('sre.SemanticUtil');
 goog.require('sre.SystemExternal');
 
@@ -601,7 +602,7 @@ sre.SemanticTree.makeConcatNode_ = function(inner, nodeList, type) {
  */
 sre.SemanticTree.makePrefixNode_ = function(node, prefixes) {
   var negatives = sre.SemanticTree.partitionNodes_(
-      prefixes, sre.SemanticTree.attrPred_('role', 'SUBTRACTION'));
+      prefixes, sre.SemanticPred.isAttribute('role', 'SUBTRACTION'));
   var newNode = sre.SemanticTree.makeConcatNode_(
       node, negatives.comp.pop(), sre.SemanticAttr.Type.PREFIXOP);
 
@@ -648,7 +649,7 @@ sre.SemanticTree.makePostfixNode_ = function(node, postfixes) {
  */
 sre.SemanticTree.processRow_ = function(nodes) {
   nodes = nodes.filter(function(x) {
-    return !sre.SemanticTree.attrPred_('type', 'EMPTY')(x);
+    return !sre.SemanticPred.isAttribute('type', 'EMPTY')(x);
   });
   if (nodes.length === 0) {
     return sre.SemanticTree.makeEmptyNode_();
@@ -671,7 +672,7 @@ sre.SemanticTree.processRow_ = function(nodes) {
 sre.SemanticTree.combineUnits_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes, function(x) {
-        return !sre.SemanticTree.attrPred_('role', 'UNIT')(x);
+        return !sre.SemanticPred.isAttribute('role', 'UNIT')(x);
       }
       );
   if (nodes.length === partition.rel.length) {
@@ -710,8 +711,8 @@ sre.SemanticTree.combineUnits_ = function(nodes) {
 sre.SemanticTree.getMixedNumbers_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes, function(x) {
-        return sre.SemanticTree.attrPred_('type', 'FRACTION')(x) &&
-            sre.SemanticTree.attrPred_('role', 'VULGAR')(x);});
+        return sre.SemanticPred.isAttribute('type', 'FRACTION')(x) &&
+            sre.SemanticPred.isAttribute('role', 'VULGAR')(x);});
   if (!partition.rel.length) {
     return nodes;
   }
@@ -720,8 +721,8 @@ sre.SemanticTree.getMixedNumbers_ = function(nodes) {
     var comp = partition.comp[i];
     var last = comp.length - 1;
     if (comp[last] &&
-        sre.SemanticTree.attrPred_('type', 'NUMBER')(comp[last]) &&
-        sre.SemanticTree.attrPred_('role', 'INTEGER')(comp[last])) {
+        sre.SemanticPred.isAttribute('type', 'NUMBER')(comp[last]) &&
+        sre.SemanticPred.isAttribute('role', 'INTEGER')(comp[last])) {
       var newNode = sre.SemanticTree.makeBranchNode_(
           sre.SemanticAttr.Type.NUMBER, [comp[last], rel], []);
       newNode.role = sre.SemanticAttr.Role.MIXED;
@@ -748,7 +749,7 @@ sre.SemanticTree.getTextInRow_ = function(nodes) {
     return nodes;
   }
   var partition = sre.SemanticTree.partitionNodes_(
-      nodes, sre.SemanticTree.attrPred_('type', 'TEXT'));
+      nodes, sre.SemanticPred.isAttribute('type', 'TEXT'));
   if (partition.rel.length === 0) {
     return nodes;
   }
@@ -777,7 +778,7 @@ sre.SemanticTree.getTextInRow_ = function(nodes) {
  */
 sre.SemanticTree.processRelationsInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
-      nodes, sre.SemanticTree.isRelation_);
+      nodes, sre.SemanticPred.isRelation);
   var firstRel = partition.rel[0];
 
   if (!firstRel) {
@@ -822,7 +823,7 @@ sre.SemanticTree.processOperationsInRow_ = function(nodes) {
 
   var prefix = [];
   while (nodes.length > 0 &&
-         sre.SemanticTree.isOperator_(nodes[0])) {
+         sre.SemanticPred.isOperator(nodes[0])) {
     prefix.push(nodes.shift());
   }
   // Pathological case: only operators in row.
@@ -834,7 +835,7 @@ sre.SemanticTree.processOperationsInRow_ = function(nodes) {
   }
 
   var split = sre.SemanticTree.sliceNodes_(
-      nodes, sre.SemanticTree.isOperator_);
+      nodes, sre.SemanticPred.isOperator);
   // At this point, we know that split.head is not empty!
   var node = sre.SemanticTree.makePrefixNode_(
       sre.SemanticTree.makeImplicitNode_(
@@ -880,7 +881,7 @@ sre.SemanticTree.makeOperationsTree_ = function(
   }
 
   var split = sre.SemanticTree.sliceNodes_(
-      nodes, sre.SemanticTree.isOperator_);
+      nodes, sre.SemanticPred.isOperator);
 
   if (split.head.length === 0) {
     prefixes.push(split.div);
@@ -1014,7 +1015,7 @@ sre.SemanticTree.appendExistingOperator_ = function(root, op, node) {
 sre.SemanticTree.getFencesInRow_ = function(nodes) {
   var partition = sre.SemanticTree.partitionNodes_(
       nodes,
-      sre.SemanticTree.isFence_);
+      sre.SemanticPred.isFence);
   partition = sre.SemanticTree.purgeFences_(partition);
   var felem = partition.comp.shift();
   return sre.SemanticTree.processFences_(
@@ -1042,7 +1043,7 @@ sre.SemanticTree.processFences_ = function(
   if (fences.length === 0 && openStack.length === 0) {
     return contentStack[0];
   }
-  var openPred = sre.SemanticTree.attrPred_('role', 'OPEN');
+  var openPred = sre.SemanticPred.isAttribute('role', 'OPEN');
   // Base case 2: Only open and neutral fences are left on the stack.
   if (fences.length === 0) {
     // Basic idea:
@@ -1315,8 +1316,8 @@ sre.SemanticTree.getPunctuationInRow_ = function(nodes) {
   // In addition we keep the single punctuation nodes as content.
   var partition = sre.SemanticTree.partitionNodes_(
       nodes, function(x) {
-        return sre.SemanticTree.isPunctuation_(x) &&
-            !sre.SemanticTree.attrPred_('role', 'ELLIPSIS')(x);});
+        return sre.SemanticPred.isPunctuation(x) &&
+            !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x);});
   if (partition.rel.length === 0) {
     return nodes;
   }
@@ -1365,7 +1366,7 @@ sre.SemanticTree.makePunctuatedNode_ = function(
   } else if (punctuations.length === 1 &&
       nodes[nodes.length - 1].type === sre.SemanticAttr.Type.PUNCTUATION) {
     newNode.role = sre.SemanticAttr.Role.ENDPUNCT;
-  } else if (punctuations.every(sre.SemanticTree.attrPred_('role', 'DUMMY'))) {
+  } else if (punctuations.every(sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
     newNode.role = sre.SemanticAttr.Role.TEXT;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
@@ -1400,13 +1401,13 @@ sre.SemanticTree.makeDummyNode_ = function(children) {
  */
 sre.SemanticTree.makeLimitNode_ = function(mmlTag, children) {
   var center = children[0];
-  var isFunction = sre.SemanticTree.attrPred_('type', 'FUNCTION')(center);
+  var isFunction = sre.SemanticPred.isAttribute('type', 'FUNCTION')(center);
   // TODO (sorge) Put this into a single function.
-  var isLimit = sre.SemanticTree.attrPred_('type', 'LARGEOP')(center) ||
-      sre.SemanticTree.attrPred_('type', 'LIMBOTH')(center) ||
-      sre.SemanticTree.attrPred_('type', 'LIMLOWER')(center) ||
-      sre.SemanticTree.attrPred_('type', 'LIMUPPER')(center) ||
-      (isFunction && sre.SemanticTree.attrPred_('role', 'LIMFUNC')(center));
+  var isLimit = sre.SemanticPred.isAttribute('type', 'LARGEOP')(center) ||
+      sre.SemanticPred.isAttribute('type', 'LIMBOTH')(center) ||
+      sre.SemanticPred.isAttribute('type', 'LIMLOWER')(center) ||
+      sre.SemanticPred.isAttribute('type', 'LIMUPPER')(center) ||
+      (isFunction && sre.SemanticPred.isAttribute('role', 'LIMFUNC')(center));
   var type = sre.SemanticAttr.Type.UNKNOWN;
   // TODO (sorge) Make use of the difference in information on sub vs under etc.
   if (isLimit) {
@@ -1442,20 +1443,20 @@ sre.SemanticTree.makeLimitNode_ = function(mmlTag, children) {
       // TODO (sorge) Refactor the following.
       case 'MOVER':
         type = sre.SemanticAttr.Type.OVERSCORE;
-        if (sre.SemanticTree.isAccent_(children[1])) {
+        if (sre.SemanticPred.isAccent(children[1])) {
           children[1].role = sre.SemanticAttr.Role.OVERACCENT;
         }
         break;
       case 'MUNDER':
         type = sre.SemanticAttr.Type.UNDERSCORE;
-        if (sre.SemanticTree.isAccent_(children[1])) {
+        if (sre.SemanticPred.isAccent(children[1])) {
           children[1].role = sre.SemanticAttr.Role.UNDERACCENT;
         }
         break;
       case 'MUNDEROVER':
       default:
-        var underAccent = sre.SemanticTree.isAccent_(children[1]);
-        var overAccent = sre.SemanticTree.isAccent_(children[2]);
+        var underAccent = sre.SemanticPred.isAccent(children[1]);
+        var overAccent = sre.SemanticPred.isAccent(children[2]);
         if (underAccent) {
           children[1].role = sre.SemanticAttr.Role.UNDERACCENT;
         }
@@ -1479,33 +1480,13 @@ sre.SemanticTree.makeLimitNode_ = function(mmlTag, children) {
     }
   }
   var newNode = sre.SemanticTree.makeBranchNode_(type, children, []);
-  var embellished = sre.SemanticTree.isEmbellished_(center);
+  var embellished = sre.SemanticPred.isEmbellished(center);
   if (innerNode) {
     innerNode.embellished = embellished;
   }
   newNode.embellished = embellished;
   newNode.role = center.role;
   return newNode;
-};
-
-
-/**
- * Checks whether a character can be considered as accent.
- * @param {!sre.SemanticNode} node The node to be tested.
- * @return {boolean} True if the node is a punctuation, fence or operator.
- * @private
- */
-sre.SemanticTree.isAccent_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'FENCE')(node) ||
-      sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node) ||
-      sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
-      sre.SemanticTree.attrPred_('type', 'RELATION')(node) ||
-      // TODO (sorge) Simplify this once meaning of all characters is fully
-      // defined.
-      (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) &&
-      sre.SemanticTree.attrPred_('role', 'UNKNOWN')(node) &&
-      !node.textContent.match(new RegExp(
-         (sre.SemanticAttr.getInstance()).allLetters.join('|'))));
 };
 
 
@@ -1617,7 +1598,7 @@ sre.SemanticTree.classifyFunction_ = function(funcNode, restNodes) {
  */
 sre.SemanticTree.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
-    if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(funcNode)) {
+    if (!sre.SemanticPred.isAttribute('role', 'SUBSUP')(funcNode)) {
       funcNode.role = tag;
     }
     sre.SemanticTree.propagateFunctionRole_(funcNode.childNodes[0], tag);
@@ -1655,7 +1636,7 @@ sre.SemanticTree.getFunctionArgs_ = function(func, rest, heuristic) {
       }
     case 'bigop':
       var partition = sre.SemanticTree.sliceNodes_(
-          rest, sre.SemanticTree.prefixFunctionBoundary_);
+          rest, sre.SemanticPred.isPrefixFunctionBoundary);
       if (!partition.head.length) {
         rest.unshift(func);
         return rest;
@@ -1680,7 +1661,7 @@ sre.SemanticTree.getFunctionArgs_ = function(func, rest, heuristic) {
       var firstArg = rest[0];
       if (firstArg.type === sre.SemanticAttr.Type.FENCED &&
           firstArg.role !== sre.SemanticAttr.Role.NEUTRAL &&
-          sre.SemanticTree.simpleFunctionHeuristic_(firstArg)) {
+          sre.SemanticPred.isSimpleFunction(firstArg)) {
         sre.SemanticTree.propagateFunctionRole_(
             func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = sre.SemanticTree.makeFunctionNode_(
@@ -1713,13 +1694,13 @@ sre.SemanticTree.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: null, rest: nodes};
   }
   var firstNode = nodes[0];
-  if (sre.SemanticTree.generalFunctionBoundary_(firstNode)) {
+  if (sre.SemanticPred.isGeneralFunctionBoundary(firstNode)) {
     return {integrand: args, intvar: null, rest: nodes};
   }
-  if (sre.SemanticTree.integralDxBoundarySingle_(firstNode)) {
+  if (sre.SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
-  if (nodes[1] && sre.SemanticTree.integralDxBoundary_(firstNode, nodes[1])) {
+  if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
     var comma = sre.SemanticTree.makeContentNode_(
         sre.SemanticAttr.invisibleComma());
     var intvar = sre.SemanticTree.makePunctuatedNode_(
@@ -1746,9 +1727,9 @@ sre.SemanticTree.makeFunctionNode_ = function(func, arg) {
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var funcop = sre.SemanticTree.getFunctionOp_(
       func, function(node) {
-        return sre.SemanticTree.attrPred_('type', 'FUNCTION')(node) ||
-            (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node) &&
-             sre.SemanticTree.attrPred_('role', 'SIMPLEFUNC')(node));
+        return sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) ||
+            (sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
+             sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node));
       }
       );
   return sre.SemanticTree.makeFunctionalNode_(
@@ -1765,7 +1746,7 @@ sre.SemanticTree.makeFunctionNode_ = function(func, arg) {
  */
 sre.SemanticTree.makeBigOpNode_ = function(bigOp, arg) {
   var largeop = sre.SemanticTree.getFunctionOp_(
-      bigOp, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
+      bigOp, sre.SemanticPred.isAttribute('type', 'LARGEOP'));
   return sre.SemanticTree.makeFunctionalNode_(
       sre.SemanticAttr.Type.BIGOP, [bigOp, arg], largeop, []);
 };
@@ -1785,7 +1766,7 @@ sre.SemanticTree.makeIntegralNode_ = function(
   integrand = integrand || sre.SemanticTree.makeEmptyNode_();
   intvar = intvar || sre.SemanticTree.makeEmptyNode_();
   var largeop = sre.SemanticTree.getFunctionOp_(
-      integral, sre.SemanticTree.attrPred_('type', 'LARGEOP'));
+      integral, sre.SemanticPred.isAttribute('type', 'LARGEOP'));
   return sre.SemanticTree.makeFunctionalNode_(
       sre.SemanticAttr.Type.INTEGRAL,
       [integral, integrand, intvar], largeop, []);
@@ -1848,97 +1829,6 @@ sre.SemanticTree.getFunctionOp_ = function(tree, pred) {
 };
 
 
-/**
- * Predicate implementing the boundary criteria for simple functions:
- *
- * @param {!sre.SemanticNode} node A semantic node of type fenced.
- * @return {boolean} True if the node meets the boundary criteria.
- * @private
- */
-sre.SemanticTree.simpleFunctionHeuristic_ = function(node) {
-  var children = node.childNodes;
-  if (children.length === 0) {
-    return true;
-  }
-  if (children.length > 1) {
-    return false;
-  }
-  var child = children[0];
-  if (child.type === sre.SemanticAttr.Type.INFIXOP) {
-    if (child.role !== sre.SemanticAttr.Role.IMPLICIT) {
-      return false;
-    }
-    if (child.childNodes.some(sre.SemanticTree.attrPred_('type', 'INFIXOP'))) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-/**
- * Predicate implementing the boundary criteria for prefix functions and big
- * operators:
- * 1. an explicit operator,
- * 2. a relation symbol, or
- * 3. some punctuation.
- * @param {sre.SemanticNode} node A semantic node.
- * @return {boolean} True if the node meets the boundary criteria.
- * @private
- */
-sre.SemanticTree.prefixFunctionBoundary_ = function(node) {
-  return sre.SemanticTree.isOperator_(node) ||
-      sre.SemanticTree.generalFunctionBoundary_(node);
-};
-
-
-/**
- * Predicate implementing the boundary criteria for integrals dx on two nodes.
- * @param {sre.SemanticNode} firstNode A semantic node.
- * @param {sre.SemanticNode} secondNode The direct neighbour of first
- *     Node.
- * @return {boolean} True if the second node exists and the first node is a 'd'.
- * @private
- */
-sre.SemanticTree.integralDxBoundary_ = function(
-    firstNode, secondNode) {
-  return !!secondNode &&
-      sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(secondNode) &&
-          sre.SemanticAttr.isCharacterD(firstNode.textContent);
-};
-
-
-/**
- * Predicate implementing the boundary criteria for integrals dx on a single
- * node.
- * @param {sre.SemanticNode} node A semantic node.
- * @return {boolean} True if the node meets the boundary criteria.
- * @private
- */
-sre.SemanticTree.integralDxBoundarySingle_ = function(node) {
-  if (sre.SemanticTree.attrPred_('type', 'IDENTIFIER')(node)) {
-    var firstChar = node.textContent[0];
-    return firstChar && node.textContent[1] &&
-        sre.SemanticAttr.isCharacterD(firstChar);
-  }
-  return false;
-};
-
-
-/**
- * Predicate implementing the general boundary criteria for function operators:
- * 1. a relation symbol,
- * 2. some punctuation.
- * @param {sre.SemanticNode} node A semantic node.
- * @return {boolean} True if the node meets the boundary criteria.
- * @private
- */
-sre.SemanticTree.generalFunctionBoundary_ = function(node) {
-  return sre.SemanticTree.isRelation_(node) ||
-      sre.SemanticTree.isPunctuation_(node);
-};
-
-
 //TODO: (MOSS) WP 2.1
 // Improve table recognition, multiline alignments for pausing.
 // Maybe labels, interspersed text etc.
@@ -1961,7 +1851,7 @@ sre.SemanticTree.processTablesInRow_ = function(nodes) {
   result = result.concat(partition.comp.shift());
   // Process the remaining tables for cases.
   partition = sre.SemanticTree.partitionNodes_(
-      result, sre.SemanticTree.isTableOrMultiline_);
+      result, sre.SemanticPred.isTableOrMultiline);
   result = [];
   for (var i = 0, table; table = partition.rel[i]; i++) {
     var prevNodes = partition.comp.shift();
@@ -1982,9 +1872,9 @@ sre.SemanticTree.processTablesInRow_ = function(nodes) {
  * @return {boolean} True if node is either table or multiline.
  * @private
  */
-sre.SemanticTree.isTableOrMultiline_ = function(node) {
-  return !!node && (sre.SemanticTree.attrPred_('type', 'TABLE')(node) ||
-      sre.SemanticTree.attrPred_('type', 'MULTILINE')(node));
+sre.SemanticPred.isTableOrMultiline = function(node) {
+  return !!node && (sre.SemanticPred.isAttribute('type', 'TABLE')(node) ||
+      sre.SemanticPred.isAttribute('type', 'MULTILINE')(node));
 };
 
 
@@ -1996,11 +1886,11 @@ sre.SemanticTree.isTableOrMultiline_ = function(node) {
  * @private
  */
 sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
-  return !!node && sre.SemanticTree.attrPred_('type', 'FENCED')(node) &&
-      (sre.SemanticTree.attrPred_('role', 'LEFTRIGHT')(node) ||
-       sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node)) &&
+  return !!node && sre.SemanticPred.isAttribute('type', 'FENCED')(node) &&
+      (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
+       sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
           node.childNodes.length === 1 &&
-              sre.SemanticTree.isTableOrMultiline_(node.childNodes[0]);
+              sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
 };
 
 
@@ -2013,7 +1903,7 @@ sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
  */
 sre.SemanticTree.tableToMatrixOrVector_ = function(node) {
   var matrix = node.childNodes[0];
-  sre.SemanticTree.attrPred_('type', 'MULTILINE')(matrix) ?
+  sre.SemanticPred.isAttribute('type', 'MULTILINE')(matrix) ?
       sre.SemanticTree.tableToVector_(node) :
       sre.SemanticTree.tableToMatrix_(node);
   node.contentNodes.forEach(goog.bind(matrix.appendContentNode, matrix));
@@ -2072,7 +1962,7 @@ sre.SemanticTree.tableToMatrix_ = function(node) {
  */
 sre.SemanticTree.tableToSquare_ = function(node) {
   var matrix = node.childNodes[0];
-  if (sre.SemanticTree.attrPred_('role', 'NEUTRAL')(node)) {
+  if (sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) {
     matrix.role = sre.SemanticAttr.Role.DETERMINANT;
     return;
   }
@@ -2107,7 +1997,7 @@ sre.SemanticTree.getComponentRoles_ = function(node) {
  */
 sre.SemanticTree.tableIsCases_ = function(table, prevNodes) {
   return prevNodes.length > 0 &&
-      sre.SemanticTree.attrPred_('role', 'OPENFENCE')(
+      sre.SemanticPred.isAttribute('role', 'OPENFENCE')(
           prevNodes[prevNodes.length - 1]);
 };
 
@@ -2172,9 +2062,9 @@ sre.SemanticTree.tableToMultiline_ = function(table) {
  */
 sre.SemanticTree.rowToLine_ = function(row, opt_role) {
   var role = opt_role || sre.SemanticAttr.Role.UNKNOWN;
-  if (sre.SemanticTree.attrPred_('type', 'ROW')(row) &&
+  if (sre.SemanticPred.isAttribute('type', 'ROW')(row) &&
       row.childNodes.length === 1 &&
-          sre.SemanticTree.attrPred_('type', 'CELL')(row.childNodes[0])) {
+          sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
     row.type = sre.SemanticAttr.Type.LINE;
     row.role = role;
     row.childNodes = row.childNodes[0].childNodes;
@@ -2189,13 +2079,13 @@ sre.SemanticTree.rowToLine_ = function(row, opt_role) {
  * @private
  */
 sre.SemanticTree.assignRoleToRow_ = function(row, role) {
-  if (sre.SemanticTree.attrPred_('type', 'LINE')(row)) {
+  if (sre.SemanticPred.isAttribute('type', 'LINE')(row)) {
     row.role = role;
     return;
   }
-  if (sre.SemanticTree.attrPred_('type', 'ROW')(row)) {
+  if (sre.SemanticPred.isAttribute('type', 'ROW')(row)) {
     row.role = role;
-    var cellPred = sre.SemanticTree.attrPred_('type', 'CELL');
+    var cellPred = sre.SemanticPred.isAttribute('type', 'CELL');
     row.childNodes.forEach(function(cell) {
       if (cellPred(cell)) {
         cell.role = role;
@@ -2270,29 +2160,6 @@ sre.SemanticTree.partitionNodes_ = function(nodes, pred) {
   } while (result.div);
   rel.pop();
   return {rel: rel, comp: comp};
-};
-
-
-/**
- * Constructs a predicate to check the semantic attribute of a node.
- * @param {!string} prop The property of a node.
- * @param {!string} attr The attribute.
- * @return {function(sre.SemanticNode): boolean} The predicate.
- * @private
- */
-
-sre.SemanticTree.attrPred_ = function(prop, attr) {
-  var getAttr = function(prop) {
-    switch (prop) {
-      case 'role': return sre.SemanticAttr.Role[attr];
-      case 'font': return sre.SemanticAttr.Font[attr];
-      case 'embellished':
-      case 'type':
-      default: return sre.SemanticAttr.Type[attr];
-    }
-  };
-
-  return function(node) {return node[prop] === getAttr(prop);};
 };
 
 
@@ -2467,10 +2334,10 @@ sre.SemanticTree.makeFractionNode_ = function(denom, enume) {
   var newNode = sre.SemanticTree.makeBranchNode_(
       sre.SemanticAttr.Type.FRACTION, [denom, enume], []);
   newNode.role = newNode.childNodes.every(function(x) {
-    return sre.SemanticTree.attrPred_('role', 'INTEGER')(x);
+    return sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(function(x) {
-        return sre.SemanticTree.attrPred_('role', 'UNIT')(x);
+        return sre.SemanticPred.isAttribute('role', 'UNIT')(x);
       }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
   return newNode;
 };
@@ -2552,7 +2419,7 @@ sre.SemanticTree.makeTensor = function(base, lsub, lsup, rsub, rsup) {
       ],
       []);
   newNode.role = base.role;
-  newNode.embellished = sre.SemanticTree.isEmbellished_(base);
+  newNode.embellished = sre.SemanticPred.isEmbellished(base);
   return newNode;
 };
 
@@ -2567,7 +2434,7 @@ sre.SemanticTree.makeTensor = function(base, lsub, lsup, rsub, rsup) {
  */
 sre.SemanticTree.makePseudoTensor = function(base, sub, sup) {
   var isEmpty = function(x) {
-    return !sre.SemanticTree.attrPred_('type', 'EMPTY')(x);
+    return !sre.SemanticPred.isAttribute('type', 'EMPTY')(x);
   };
   var nonEmptySub = sub.filter(isEmpty).length;
   var nonEmptySup = sup.filter(isEmpty).length;
@@ -2619,71 +2486,6 @@ sre.SemanticTree.makeScriptNode_ = function(
 
 
 /**
- * Determines if a node is embellished and returns its type in case it is.
- * @param {sre.SemanticNode} node A node to test.
- * @return {?sre.SemanticAttr.Type} The type of the node that is embellished.
- * @private
- */
-sre.SemanticTree.isEmbellished_ = function(node) {
-  if (node.embellished) {
-    return node.embellished;
-  }
-  if (sre.SemanticAttr.isEmbellishedType(node.type)) {
-    return node.type;
-  }
-  return null;
-};
-
-
-/**
- * Determines if a node is an operator, regular or embellished.
- * @param {sre.SemanticNode} node A node to test.
- * @return {boolean} True if the node is considered as operator.
- * @private
- */
-sre.SemanticTree.isOperator_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'OPERATOR')(node) ||
-      sre.SemanticTree.attrPred_('embellished', 'OPERATOR')(node);
-};
-
-
-/**
- * Determines if a node is an relation, regular or embellished.
- * @param {sre.SemanticNode} node A node to test.
- * @return {boolean} True if the node is considered as relation.
- * @private
- */
-sre.SemanticTree.isRelation_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'RELATION')(node) ||
-      sre.SemanticTree.attrPred_('embellished', 'RELATION')(node);
-};
-
-
-/**
- * Determines if a node is an punctuation, regular or embellished.
- * @param {sre.SemanticNode} node A node to test.
- * @return {boolean} True if the node is considered as punctuation.
- * @private
- */
-sre.SemanticTree.isPunctuation_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'PUNCTUATION')(node) ||
-      sre.SemanticTree.attrPred_('embellished', 'PUNCTUATION')(node);
-};
-
-
-/**
- * Determines if a node is an fence, regular or embellished.
- * @param {sre.SemanticNode} node A node to test.
- * @return {boolean} True if the node is considered as fence.
- * @private
- */
-sre.SemanticTree.isFence_ = function(node) {
-  return sre.SemanticTree.attrPred_('type', 'FENCE')(node) ||
-      sre.SemanticTree.attrPred_('embellished', 'FENCE')(node);
-};
-
-
-/**
  * Finds the innermost element of an embellished operator node.
  * @param {sre.SemanticNode} node The embellished node.
  * @return {sre.SemanticNode} The innermost node.
@@ -2700,7 +2502,7 @@ sre.SemanticTree.getEmbellishedInner_ = function(node) {
 /**
  * Rewrites a fences partition to remove non-eligible embellished fences.
  * It rewrites all other fences into punctuations.
- * For eligibility see sre.SemanticTree.isElligibleFence_
+ * For eligibility see sre.SemanticPred.isElligibleEmbellishedFence
  * @param {{rel: !Array.<sre.SemanticNode>,
  *          comp: !Array.<!Array.<sre.SemanticNode>>}} partition
  *        A partition for fences.
@@ -2718,7 +2520,7 @@ sre.SemanticTree.purgeFences_ = function(partition) {
   while (rel.length > 0) {
     var currentRel = rel.shift();
     var currentComp = comp.shift();
-    if (sre.SemanticTree.isElligibleFence_(currentRel)) {
+    if (sre.SemanticPred.isElligibleEmbellishedFence(currentRel)) {
       newRel.push(currentRel);
       newComp.push(currentComp);
       continue;
@@ -2730,52 +2532,6 @@ sre.SemanticTree.purgeFences_ = function(partition) {
   }
   newComp.push(comp.shift());
   return {rel: newRel, comp: newComp};
-};
-
-
-/**
- * Determines if a fence is eligible.
- *
- * Currently fences are not eligible if they are opening fences with right
- * indices, closing fences with left indices or fences with both left and right
- * indices.
- * @param {sre.SemanticNode} node A node to test.
- * @return {boolean} True if the node is considered as fence.
- * @private
- */
-sre.SemanticTree.isElligibleFence_ = function(node) {
-  if (!node || !sre.SemanticTree.isFence_(node)) {
-    return false;
-  }
-  if (!node.embellished) {
-    return true;
-  }
-  var bothSide = function(node) {
-    return sre.SemanticTree.attrPred_('type', 'TENSOR')(node) &&
-        (!sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[1]) ||
-         !sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[2])) &&
-        (!sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[3]) ||
-         !sre.SemanticTree.attrPred_('type', 'EMPTY')(node.childNodes[4]));
-  };
-  var recurseBaseNode = function(node) {
-    if (!node.embellished) {
-      return true;
-    }
-    if (bothSide(node)) {
-      return false;
-    }
-    if (sre.SemanticTree.attrPred_('role', 'CLOSE')(node) &&
-        sre.SemanticTree.attrPred_('type', 'TENSOR')(node)) {
-      return false;
-    }
-    if (sre.SemanticTree.attrPred_('role', 'OPEN')(node) &&
-        (sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(node) ||
-         sre.SemanticTree.attrPred_('type', 'SUPERSCRIPT')(node))) {
-      return false;
-    }
-    return recurseBaseNode(node.childNodes[0]);
-  };
-  return recurseBaseNode(node);
 };
 
 
@@ -2817,11 +2573,11 @@ sre.SemanticTree.rewriteFence_ = function(node, fence) {
   }
   var newFence = /** @type {!sre.SemanticNode} */(fence.childNodes[0]);
   var rewritten = sre.SemanticTree.rewriteFence_(node, newFence);
-  if (sre.SemanticTree.attrPred_('type', 'SUPERSCRIPT')(fence) ||
-      sre.SemanticTree.attrPred_('type', 'SUBSCRIPT')(fence) ||
-      sre.SemanticTree.attrPred_('type', 'TENSOR')(fence)) {
+  if (sre.SemanticPred.isAttribute('type', 'SUPERSCRIPT')(fence) ||
+      sre.SemanticPred.isAttribute('type', 'SUBSCRIPT')(fence) ||
+      sre.SemanticPred.isAttribute('type', 'TENSOR')(fence)) {
     // Fence is embellished and needs to be rewritten.
-    if (!sre.SemanticTree.attrPred_('role', 'SUBSUP')(fence)) {
+    if (!sre.SemanticPred.isAttribute('role', 'SUBSUP')(fence)) {
       fence.role = node.role;
     }
     if (newFence !== rewritten.node) {
