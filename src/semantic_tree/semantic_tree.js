@@ -255,7 +255,7 @@ sre.SemanticTree.parseMathml_ = function(mml) {
       newNode = sre.SemanticTree.makeBranchNode_(
           sre.SemanticAttr.Type.TABLE,
           sre.SemanticTree.parseMathmlChildren_(children), []);
-      if (sre.SemanticTree.tableIsMultiline_(newNode)) {
+      if (sre.SemanticPred.tableIsMultiline(newNode)) {
         sre.SemanticTree.tableToMultiline_(newNode);
       }
       break;
@@ -1842,7 +1842,7 @@ sre.SemanticTree.getFunctionOp_ = function(tree, pred) {
 sre.SemanticTree.processTablesInRow_ = function(nodes) {
   // First we process all matrices:
   var partition = sre.SemanticTree.partitionNodes_(
-      nodes, sre.SemanticTree.tableIsMatrixOrVector_);
+      nodes, sre.SemanticPred.tableIsMatrixOrVector);
   var result = [];
   for (var i = 0, matrix; matrix = partition.rel[i]; i++) {
     result = result.concat(partition.comp.shift());
@@ -1855,7 +1855,7 @@ sre.SemanticTree.processTablesInRow_ = function(nodes) {
   result = [];
   for (var i = 0, table; table = partition.rel[i]; i++) {
     var prevNodes = partition.comp.shift();
-    if (sre.SemanticTree.tableIsCases_(table, prevNodes)) {
+    if (sre.SemanticPred.tableIsCases(table, prevNodes)) {
       sre.SemanticTree.tableToCases_(
           table, /** @type {!sre.SemanticNode} */ (prevNodes.pop()));
     }
@@ -1863,34 +1863,6 @@ sre.SemanticTree.processTablesInRow_ = function(nodes) {
     result.push(table);
   }
   return result.concat(partition.comp.shift());
-};
-
-
-/**
- * Decides if a node is a table or multiline element.
- * @param {sre.SemanticNode} node A node.
- * @return {boolean} True if node is either table or multiline.
- * @private
- */
-sre.SemanticPred.isTableOrMultiline = function(node) {
-  return !!node && (sre.SemanticPred.isAttribute('type', 'TABLE')(node) ||
-      sre.SemanticPred.isAttribute('type', 'MULTILINE')(node));
-};
-
-
-/**
- * Heuristic to decide if we have a matrix: An expression fenced on both sides
- * without any other content is considered a fenced node.
- * @param {sre.SemanticNode} node A node.
- * @return {boolean} True if we believe we have a matrix.
- * @private
- */
-sre.SemanticTree.tableIsMatrixOrVector_ = function(node) {
-  return !!node && sre.SemanticPred.isAttribute('type', 'FENCED')(node) &&
-      (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
-       sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
-          node.childNodes.length === 1 &&
-              sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
 };
 
 
@@ -1988,21 +1960,6 @@ sre.SemanticTree.getComponentRoles_ = function(node) {
 
 
 /**
- * Heuristic to decide if we have a case statement: An expression with a
- * singular open fence before it.
- * @param {!sre.SemanticNode} table A table node.
- * @param {!Array.<sre.SemanticNode>} prevNodes A list of previous nodes.
- * @return {boolean} True if we believe we have a case statement.
- * @private
- */
-sre.SemanticTree.tableIsCases_ = function(table, prevNodes) {
-  return prevNodes.length > 0 &&
-      sre.SemanticPred.isAttribute('role', 'OPENFENCE')(
-          prevNodes[prevNodes.length - 1]);
-};
-
-
-/**
  * Makes case node out of a table and a fence.
  * @param {!sre.SemanticNode} table The table containing the cases.
  * @param {!sre.SemanticNode} openFence The left delimiter of the case
@@ -2025,21 +1982,6 @@ sre.SemanticTree.tableToCases_ = function(table, openFence) {
 // and see if there are any similarities. Alternatively, we could look for
 // similarities in columns (e.g., single relation symbols, like equalities or
 // inequalities in the same column could indicate an equation array).
-/**
- * Heuristic to decide if we have a multiline formula. A table is considered a
- * multiline formula if it does not have any separate cells.
- * @param {!sre.SemanticNode} table A table node.
- * @return {boolean} True if we believe we have a mulitline formula.
- * @private
- */
-sre.SemanticTree.tableIsMultiline_ = function(table) {
-  return table.childNodes.every(
-      function(row) {
-        var length = row.childNodes.length;
-        return length <= 1;});
-};
-
-
 /**
  * Rewrites a table to multiline structure, simplifying it by getting rid of the
  * cell hierarchy level.

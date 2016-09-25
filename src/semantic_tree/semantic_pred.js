@@ -256,3 +256,59 @@ sre.SemanticPred.isElligibleEmbellishedFence = function(node) {
   };
   return recurseBaseNode(node);
 };
+
+
+/**
+ * Decides if a node is a table or multiline element.
+ * @param {sre.SemanticNode} node A node.
+ * @return {boolean} True if node is either table or multiline.
+ */
+sre.SemanticPred.isTableOrMultiline = function(node) {
+  return !!node && (sre.SemanticPred.isAttribute('type', 'TABLE')(node) ||
+      sre.SemanticPred.isAttribute('type', 'MULTILINE')(node));
+};
+
+
+/**
+ * Heuristic to decide if we have a matrix: An expression fenced on both sides
+ * without any other content is considered a fenced node.
+ * @param {sre.SemanticNode} node A node.
+ * @return {boolean} True if we believe we have a matrix.
+ */
+sre.SemanticPred.tableIsMatrixOrVector = function(node) {
+  return !!node && sre.SemanticPred.isAttribute('type', 'FENCED')(node) &&
+      (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
+       sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
+          node.childNodes.length === 1 &&
+              sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
+};
+
+
+/**
+ * Heuristic to decide if we have a case statement: An expression with a
+ * singular open fence before it.
+ * @param {!sre.SemanticNode} table A table node.
+ * @param {!Array.<sre.SemanticNode>} prevNodes A list of previous nodes.
+ * @return {boolean} True if we believe we have a case statement.
+ */
+sre.SemanticPred.tableIsCases = function(table, prevNodes) {
+  return prevNodes.length > 0 &&
+      sre.SemanticPred.isAttribute('role', 'OPENFENCE')(
+          prevNodes[prevNodes.length - 1]);
+};
+
+
+/**
+ * Heuristic to decide if we have a multiline formula. A table is considered a
+ * multiline formula if it does not have any separate cells.
+ * @param {!sre.SemanticNode} table A table node.
+ * @return {boolean} True if we believe we have a mulitline formula.
+ */
+sre.SemanticPred.tableIsMultiline = function(table) {
+  return table.childNodes.every(
+      function(row) {
+        var length = row.childNodes.length;
+        return length <= 1;});
+};
+
+
