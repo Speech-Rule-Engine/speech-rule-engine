@@ -553,7 +553,8 @@ sre.SemanticProcessor.prototype.appendAdditiveOp_ = function(root, op, node) {
  * @return {boolean} True if operator was successfully appended.
  * @private
  */
-sre.SemanticProcessor.prototype.appendExistingOperator_ = function(root, op, node) {
+sre.SemanticProcessor.prototype.appendExistingOperator_ = function(
+  root, op, node) {
   if (!root || root.type !== sre.SemanticAttr.Type.INFIXOP ||
       // This ensures that implicit nodes stay together, which is probably what
       // we want.
