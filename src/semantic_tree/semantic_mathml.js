@@ -39,14 +39,42 @@ sre.SemanticMathml = function() {
   /**
    * @type {Object.<string,
    *                function(Element, Array.<Element>): !sre.SemanticNode>}
+   * @private
    */
   this.parseMap_ = {
-    
+    'SEMANTICS': goog.bind(this.semantics_, this),
+    'MATH': goog.bind(this.rows_, this),
+    'MROW': goog.bind(this.rows_, this),
+    'MPADDED': goog.bind(this.rows_, this),
+    'MSTYLE': goog.bind(this.rows_, this),
+    'MFRAC': goog.bind(this.fraction_, this),
+    'MSUB': goog.bind(this.limits_, this),
+    'MSUP': goog.bind(this.limits_, this),
+    'MSUBSUP': goog.bind(this.limits_, this),
+    'MOVER': goog.bind(this.limits_, this),
+    'MUNDER': goog.bind(this.limits_, this),
+    'MUNDEROVER': goog.bind(this.limits_, this),
+    'MROOT': goog.bind(this.root_, this),
+    'MSQRT': goog.bind(this.sqrt_, this),
+    'MTABLE': goog.bind(this.table_, this),
+    'MTR': goog.bind(this.tableRow_, this),
+    'MTD': goog.bind(this.tableCell_, this),
+    'MS': goog.bind(this.text_, this),
+    'MTEXT': goog.bind(this.text_, this),
+    'ANNOTATION-XML': goog.bind(this.text_, this),
+    'MI': goog.bind(this.identifier_, this),
+    'MN': goog.bind(this.number_, this),
+    'MO': goog.bind(this.operator_, this),
+    'MFENCED': goog.bind(this.fenced_, this),
+    'MENCLOSE': goog.bind(this.enclosed_, this),
+    'MMULTISCRIPTS': goog.bind(this.multiscripts_, this),
+    'ANNOTATION': goog.bind(this.empty_, this),
+    'NONE': goog.bind(this.empty_, this),
+    'MACTION': goog.bind(this.action_, this)
   };
 
 };
 goog.inherits(sre.SemanticMathml, sre.SemanticAbstractParser);
-
 
 
 /**
@@ -55,82 +83,11 @@ goog.inherits(sre.SemanticMathml, sre.SemanticAbstractParser);
 sre.SemanticMathml.prototype.parse = function(mml) {
   sre.SemanticProcessor.getInstance().setNodeFactory(this.getFactory());
   var children = sre.DomUtil.toArray(mml.childNodes);
-  var newNode;
-  switch (sre.DomUtil.tagName(mml)) {
-    case 'SEMANTICS':
-      newNode = this.semantics_(mml, children);
-      break;
-    case 'MATH':
-    case 'MROW':
-    case 'MPADDED':
-    case 'MSTYLE':
-      newNode = this.rows_(mml, children);
-      return newNode;
-    case 'MFRAC':
-      newNode = this.fraction_(mml, children);
-      break;
-    case 'MSUB':
-    case 'MSUP':
-    case 'MSUBSUP':
-    case 'MOVER':
-    case 'MUNDER':
-    case 'MUNDEROVER':
-      newNode = this.limits_(mml, children);
-      break;
-    case 'MROOT':
-      newNode = this.root_(mml, children);
-      break;
-    case 'MSQRT':
-      newNode = this.sqrt_(mml, children);
-      break;
-    case 'MTABLE':
-      newNode = this.table_(mml, children);
-      break;
-    case 'MTR':
-      newNode = this.tableRow_(mml, children);
-      break;
-    case 'MTD':
-      newNode = this.tableCell_(mml, children);
-      break;
-    case 'MS':
-    case 'MTEXT':
-    case 'ANNOTATION-XML':
-      newNode = this.text_(mml, children);
-      break;
-    // TODO (sorge) Role and font of multi-character and digits unicode strings.
-    // TODO (sorge) Reclassify wrongly tagged numbers or identifiers more
-    //              systematically.
-    // TODO (sorge) Put this all in a single clean reclassification method.
-    case 'MI':
-      newNode = this.identifier_(mml, children);
-      break;
-    case 'MN':
-      newNode = this.number_(mml, children);
-      break;
-    case 'MO':
-      newNode = this.operator_(mml, children);
-      break;
-    case 'MFENCED':
-      newNode = this.fenced_(mml, children);
-      break;
-    case 'MENCLOSE':
-      newNode = this.enclosed_(mml, children);
-      break;
-    case 'MMULTISCRIPTS':
-      newNode = this.multiscripts_(mml, children);
-      break;
-    case 'ANNOTATION':
-    case 'NONE':
-      newNode = this.empty_(mml, children);
-      break;
-    case 'MACTION':
-      newNode = this.action_(mml, children);
-      break;
-    // TODO (sorge) Do something useful with error and phantom symbols.
-    default:
-      // Ordinarilly at this point we should not get any other tag.
-      newNode = this.dummy_(mml, children);
-      break;
+  var tag = sre.DomUtil.tagName(mml);
+  var func = this.parseMap_[tag];
+  var newNode = (func ? func : this.dummy_)(mml, children);
+  if (['MATH', 'MROW', 'MPADDED', 'MSTYLE'].indexOf(tag) !== -1) {
+    return newNode;
   }
   newNode.mathml.unshift(mml);
   newNode.mathmlTree = mml;
@@ -518,11 +475,8 @@ sre.SemanticMathml.getAttribute_ = function(node, attr, def) {
   return value;
 };
 
-
-// '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mn>4</mn></mover><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
-// '<math><mo>(</mo><mi>x</mi><msup><munder><msub><mo>)</mo><mn>2</mn></msub><mn>3</mn></munder><mn>1</mn></msup></math>'
-//  '<math><mo>(</mo><mi>x</mi><msub><munder><msup><mo>)</mo><mn>2</mn></msup><mn>3</mn></munder><mn>1</mn></msub></math>'
-//  '<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>'
-//  '<math><mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>2</mn></msup><mn>1</mn></msub></math>'
-
-
+// TODO (sorge) Role and font of multi-character and digits unicode strings.
+// TODO (sorge) Reclassify wrongly tagged numbers or identifiers more
+//              systematically.
+// TODO (sorge) Put this all in a single clean reclassification method.
+// TODO (sorge) Do something useful with error and phantom symbols.
