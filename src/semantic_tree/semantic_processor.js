@@ -1565,6 +1565,9 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
  * @param {!sre.SemanticNode} table The node to be rewritten a multiline.
  */
 sre.SemanticProcessor.tableToMultiline = function(table) {
+  if (!sre.SemanticPred.tableIsMultiline(table)) {
+    return table;
+  }
   table.type = sre.SemanticAttr.Type.MULTILINE;
   for (var i = 0, row; row = table.childNodes[i]; i++) {
     sre.SemanticProcessor.rowToLine_(row, sre.SemanticAttr.Role.MULTILINE);
