@@ -59,7 +59,7 @@ sre.Semantic.Attr;
  * @return {!Node} Semantic tree for input node as XML node.
  */
 sre.Semantic.xmlTree = function(mml) {
-  return (new sre.SemanticTree(mml)).xml();
+  return sre.Semantic.getTree(mml).xml();
 };
 
 
@@ -80,7 +80,7 @@ sre.Semantic.getTree = function(mml) {
  */
 sre.Semantic.getTreeFromString = function(expr) {
   var mml = sre.DomUtil.parseInput(expr);
-  return new sre.SemanticTree(mml);
+  return sre.Semantic.getTree(mml);
 };
 
 // console.log(sre.DomUtil.formatXml(sre.Semantic.getTreeFromString('<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>').toString()));

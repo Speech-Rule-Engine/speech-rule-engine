@@ -30,6 +30,7 @@ goog.require('sre.MathspeakRuleTest');
 goog.require('sre.NobleSamplesTest');
 goog.require('sre.PrefixRuleTest');
 goog.require('sre.RebuildStreeTest');
+goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
@@ -72,7 +73,7 @@ sre.Tests.testList = [
   sre.ApiTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
+  // sre.EnrichSpeechTest,
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
@@ -80,6 +81,7 @@ sre.Tests.testList = [
   sre.NobleSamplesTest,
   sre.PrefixRuleTest,
   sre.RebuildStreeTest,
+  sre.SemanticApiTest,
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest,

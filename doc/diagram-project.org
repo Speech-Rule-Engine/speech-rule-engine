@@ -1,0 +1,44 @@
+Notes from the Diagram project
+
+* Refactoring the tree generation.
+
+** Separate out into three types of methods:
+
+*** MathML parsing with parseXYZ
+*** Semantic Node processing with processXYZ
+*** Semantic Node building with makeXYZ
+
+** Factory, Parser and Processor
+
+*** Factory contains a counter a limited number of methods.
+    
+*** Processor is a singleton with a factory
+    
+*** Parser is a singleton with a factory
+    
+*** Each tree contains its factory.
+
+** Predicates
+
+*** Specialist predicates are in a separate utility class:
+    sre.SemanticPred
+    Basic idea is to keep all boolean methods separate for clean, smaller files.
+
+*** They are important for some of the heuristics. 
+    However, they are quite independent of the processing. Changes in predicates
+    can very much influence the result of the semantic interpretation,
+    processing should not so much.
+
+    Example: How we precisely define what the (dx) of an integral is, is
+    independent of finding it in a row.
+
+
+** TODO Include Bra-ket heuristic.
+   These are essentially the new methods in fix_bracketting branch:
+
+*** sre.SemanticTree.prototype.processFencesNew_
+*** sre.SemanticTree.prototype.processOpenNeutralFences_
+*** sre.SemanticTree.prototype.processNeutralFencesNew_
+*** sre.SemanticTree.prototype.combineFencesEagerly_
+*** sre.SemanticTree.prototype.combineFencedContentNew_
+

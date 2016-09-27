@@ -8581,7 +8581,7 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   );
   this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
-      '<subscript role="latinletter" id="2">' +
+      '<subscript role="latinletter" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
@@ -8590,10 +8590,10 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   );
   this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
-      '<superscript role="latinletter" id="2">' +
+      '<superscript role="latinletter" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
       '</children>' +
       '</superscript>'
   );
@@ -8627,6 +8627,37 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</superscript>'
   );
   this.executeTreeTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><none/><none/><mi>l</mi>' +
+      '</mmultiscripts>',
+      '<superscript role="latinletter" id="10">' +
+      '<children>' +
+      '<subscript role="subsup" id="9">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
+      '<punctuated role="rightsub" id="6">' +
+      '<content>' +
+      '<punctuation role="dummy" id="5">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
+      '<empty role="unknown" id="2"></empty>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</subscript>' +
+      '<punctuated role="rightsuper" id="8">' +
+      '<content>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="3"></empty>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
       '<superscript role="latinletter" id="10">' +
@@ -8634,9 +8665,9 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<subscript role="subsup" id="9">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<punctuated role="rightsub" id="4">' +
+      '<punctuated role="rightsub" id="6">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="5">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
@@ -8650,8 +8681,8 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<punctuation role="dummy" id="7">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<identifier role="latinletter" font="italic" id="5">j</identifier>' +
-      '<identifier role="latinletter" font="italic" id="6">l</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">j</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
@@ -8802,9 +8833,9 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
-      '<empty role="leftsuper" id="2"></empty>' +
-      '<empty role="rightsub" id="3"></empty>' +
-      '<number role="rightsuper" font="normal" id="4">2</number>' +
+      '<empty role="leftsuper" id="4"></empty>' +
+      '<empty role="rightsub" id="2"></empty>' +
+      '<number role="rightsuper" font="normal" id="3">2</number>' +
       '</children>' +
       '</tensor>'
   );
@@ -8821,31 +8852,31 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
       '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
+      '<punctuated role="leftsub" id="10">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="9">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="1">1</number>' +
       '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
       '</children>' +
       '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
+      '<punctuated role="leftsuper" id="12">' +
       '<content>' +
       '<punctuation role="dummy" id="11">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
+      '<number role="integer" font="normal" id="3">2</number>' +
+      '<identifier role="latinletter" font="italic" id="4">j</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="rightsub" id="14">' +
+      '<content>' +
+      '<punctuation role="dummy" id="13">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">3</number>' +
+      '<identifier role="latinletter" font="italic" id="6">k</identifier>' +
       '</children>' +
       '</punctuated>' +
       '<punctuated role="rightsuper" id="16">' +
@@ -8853,8 +8884,8 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
       '<punctuation role="dummy" id="15">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
+      '<number role="integer" font="normal" id="7">4</number>' +
+      '<identifier role="latinletter" font="italic" id="8">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
@@ -8866,31 +8897,31 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
       '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
+      '<punctuated role="leftsub" id="10">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="9">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="1">1</number>' +
       '<empty role="unknown" id="2"></empty>' +
       '</children>' +
       '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<empty role="unknown" id="5"></empty>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
+      '<punctuated role="leftsuper" id="12">' +
       '<content>' +
       '<punctuation role="dummy" id="11">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
+      '<empty role="unknown" id="3"></empty>' +
+      '<identifier role="latinletter" font="italic" id="4">j</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="rightsub" id="14">' +
+      '<content>' +
+      '<punctuation role="dummy" id="13">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">3</number>' +
+      '<identifier role="latinletter" font="italic" id="6">k</identifier>' +
       '</children>' +
       '</punctuated>' +
       '<punctuated role="rightsuper" id="16">' +
@@ -8898,8 +8929,8 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
       '<punctuation role="dummy" id="15">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<empty role="unknown" id="13"></empty>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
+      '<empty role="unknown" id="7"></empty>' +
+      '<identifier role="latinletter" font="italic" id="8">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
