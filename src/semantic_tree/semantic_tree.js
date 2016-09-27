@@ -28,13 +28,8 @@ goog.provide('sre.SemanticTree');
 
 goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
-goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticNode');
-goog.require('sre.SemanticNodeFactory');
-goog.require('sre.SemanticPred');
-goog.require('sre.SemanticProcessor');
-goog.require('sre.SemanticUtil');
 goog.require('sre.SystemExternal');
 
 
@@ -46,32 +41,20 @@ goog.require('sre.SystemExternal');
  */
 sre.SemanticTree = function(mml) {
 
-  // /** ID counter.
-  //  * @type {sre.SemanticNodeFactory}
-  //  * @private
-  //  */
-  // this.factory_ = new sre.SemanticNodeFactory();
-  // sre.SemanticTree.factory_ = this.factory_;
-  // sre.SemanticProcessor.getInstance().setNodeFactory(this.factory_);
-
   /** Original MathML tree.
    * @type {Node}
    */
   this.mathml = mml;
 
+  /**
+   * @type {sre.SemanticParser}
+   */
   this.parser = new sre.SemanticMathml();
 
   /** @type {!sre.SemanticNode} */
   this.root = this.parser.parse(mml);
 
 };
-
-
-// /**
-//  * @type {?sre.SemanticNodeFactory}
-//  * @private
-//  */
-// sre.SemanticTree.factory_ = null;
 
 
 /**
