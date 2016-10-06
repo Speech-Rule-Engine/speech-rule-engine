@@ -107,6 +107,29 @@
 
 *** Again test speed trade-off!
 
+** Dynamic Constraints vs Property Test Sets
+
+*** What do we mean by this: Dynamic constraints are "fixed" to a rule. 
+    They are the one that are tested against the properties chosen by the user.
+
+*** Property sets are values for dynamic constraints that can be selected by the user.
+    Dynamic constraints are then tested against that set.
+    
+*** Fallbacks are dynamic constraints that a rule set can use to control, if defaults
+
+**** This could get us tighter control, how we deal with fallbacks.
+
+**** We could completely get rid of the "default" fallback and always force explicit fallback definition.
+
+**** How does that work together with the strict setting?
+
+***** When do we use strict?
+
+***** If it is only used on particular sets, then they should not define fallbacks.
+
+***** Simply do not use fallbacks when in strict mode.
+
+** TODO Make rule definition robust against errors!
 
 * Trie design ideas:
 

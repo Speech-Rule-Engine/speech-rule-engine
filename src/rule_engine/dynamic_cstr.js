@@ -29,12 +29,87 @@ goog.require('sre.Engine');
 
 
 
+//TODO: (MOSS) Revisit after ClearSpeak preference introduction.
+//
+/**
+ * @constructor
+ * @param {!Object.<sre.Engine.Axis, !Array.<string>>} properties The property
+ *     mapping.
+ * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
+ */
+sre.DynamicProperties = function(properties, opt_order) {
+
+  /**
+   * @type {!Object.<sre.Engine.Axis, !Array.<string>>}
+   * @private
+   */
+  this.properties_ = properties;
+  
+  /**
+   * @type {!sre.DynamicCstr.Order}
+   * @private
+   */
+  this.order_ = opt_order || Object.keys(properties);
+
+};
+
+
+/**
+ * @return {!Object.<sre.Engine.Axis, Array.<string>>} The components of the
+ *     constraint.
+ */
+sre.DynamicProperties.prototype.getProperties = function() {
+  return this.properties_;
+};
+
+
+/**
+ * @return {sre.DynamicCstr.Order} The priority order of constraint attributes
+ *     in the comparator.
+ */
+sre.DynamicProperties.prototype.getOrder = function() {
+  return this.order_;
+};
+
+
+/**
+ * @return {!sre.DynamicCstr.Order} The components of the constraint.
+ */
+sre.DynamicProperties.prototype.getKeys = function() {
+  return this.order_;
+};
+
+
+/**
+ * Returns the value of the constraint for a particular attribute key.
+ * @param {!sre.Engine.Axis} key The attribute key.
+ * @return {Array.<string>} The component value of the constraint.
+ */
+sre.DynamicProperties.prototype.getProperty = function(key) {
+  return this.properties_[key];
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicProperties.prototype.toString = function() {
+  var cstrStrings = [];
+  this.order_.forEach(goog.bind(function(key) {
+    cstrStrings.push(key + ': ' + this.getProperty(key).toString());
+  }, this));
+  return cstrStrings.join('\n');
+};
+
+
+
 /**
  * Dynamic constraints are a means to specialize rules that can be changed
  * dynamically by the user, for example by choosing different styles, etc.
  * @constructor
  * @param {!Object.<sre.Engine.Axis, string>} cstr The constraint mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
+ * @extends {sre.DynamicProperties}
  */
 sre.DynamicCstr = function(cstr, opt_order) {
 
@@ -44,22 +119,13 @@ sre.DynamicCstr = function(cstr, opt_order) {
    */
   this.components_ = cstr;
 
-  /**
-   * @type {!sre.DynamicCstr.Order}
-   * @private
-   */
-  this.order_ = opt_order || Object.keys(cstr);
-
+  var properties = {};
+  for (var key in cstr) {
+    properties[key] = [cstr[key]];
+  }
+  sre.DynamicCstr.base(this, 'constructor', properties, opt_order);
 };
-
-
-/**
- * @return {sre.DynamicCstr.Order} The priority order of constraint attributes
- *     in the comparator.
- */
-sre.DynamicCstr.prototype.getOrder = function() {
-  return this.order_;
-};
+goog.inherits(sre.DynamicCstr, sre.DynamicProperties);
 
 
 /**
@@ -68,14 +134,6 @@ sre.DynamicCstr.prototype.getOrder = function() {
  */
 sre.DynamicCstr.prototype.getComponents = function() {
   return this.components_;
-};
-
-
-/**
- * @return {!sre.DynamicCstr.Order} The components of the constraint.
- */
-sre.DynamicCstr.prototype.getKeys = function() {
-  return this.order_;
 };
 
 
