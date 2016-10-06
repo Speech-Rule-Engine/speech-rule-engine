@@ -22,6 +22,8 @@
 
 goog.provide('sre.DynamicCstr');
 goog.provide('sre.DynamicCstr.Comparator');
+goog.provide('sre.DynamicCstr.Parser');
+goog.provide('sre.DynamicProperties');
 
 goog.require('sre.Engine');
 
@@ -41,8 +43,6 @@ sre.DynamicCstr = function(cstr, opt_order) {
    * @private
    */
   this.components_ = cstr;
-
-  // TODO: Make sure that the order is indeed similar to the keys.
 
   /**
    * @type {!sre.DynamicCstr.Order}
@@ -122,35 +122,22 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 
 
 /**
- * Convenience method to create a standard dynamic constraint, that follows a
- * pre-prescribed order of the axes.
- * @param {...string} cstrs Dynamic constraint values for the Axes.
- * @return {!sre.DynamicCstr}
- */
-sre.DynamicCstr.create = function(cstrs) {
-  var axes = [sre.Engine.Axis.DOMAIN,
-              sre.Engine.Axis.STYLE,
-              sre.Engine.Axis.LANGUAGE,
-              sre.Engine.Axis.TOPIC,
-              sre.Engine.Axis.MODALITY
-             ];
-  var dynamicCstr = {};
-  var cstrList = Array.prototype.slice.call(arguments, 0);
-  for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
-    dynamicCstr[axes[i]] = cstrList[i];
-  }
-  return new sre.DynamicCstr(dynamicCstr);
-};
-
-
-//TODO: (MOSS) Revisit after ClearSpeak preference introduction.
-//
-/**
  * Ordering of dynamic constraint attributes.
  * @typedef {!Array.<sre.Engine.Axis>}
  */
 sre.DynamicCstr.Order;
 
+
+/**
+ * @type {!sre.DynamicCstr.Order}
+ */
+sre.DynamicCstr.DEFAULT_ORDER = [
+  sre.Engine.Axis.DOMAIN,
+  sre.Engine.Axis.STYLE,
+  sre.Engine.Axis.LANGUAGE,
+  sre.Engine.Axis.TOPIC,
+  sre.Engine.Axis.MODALITY
+];
 
 
 /**
@@ -179,17 +166,13 @@ sre.DynamicCstr.Parser = function(order) {
 sre.DynamicCstr.Parser.prototype.parse = function(str) {
   var order = str.split('.');
   var cstr = {};
+  if (order.length > this.order_.length) {
+    throw new Error('Invalid dynamic constraint: ' + cstr);
+  }
   for (var i = 0, key; key = this.order_[i], order.length; i++) {
     var value = order.shift();
     cstr[key] = value;
     sre.Engine.getInstance().axisValues[key][value] = true;
-  }
-  if (i < this.order_.length - 1 || order.length) {
-    // TODO: Make this a speech rule error, after moving error generation out of
-    //       speech rule.
-    throw new Error('Invalid dynamic constraint: ' + cstr);
-    // throw new sre.SpeechRule.OutputError(
-    // 'Invalid dynamic constraint: ' + cstr);
   }
   return new sre.DynamicCstr(cstr, this.order_);
 };
@@ -328,4 +311,37 @@ sre.DynamicCstr.DefaultComparator.prototype.countMatchingValues_ = function(
     } else break;
   }
   return result;
+};
+
+
+/**
+ * Convenience method to create a standard dynamic constraint, that follows a
+ * pre-prescribed order of the axes.
+ * @param {...string} cstrs Dynamic constraint values for the Axes.
+ * @return {!sre.DynamicCstr}
+ */
+sre.DynamicCstr.create = function(cstrs) {
+  var axes = sre.DynamicCstr.DEFAULT_ORDER;
+  var dynamicCstr = {};
+  var cstrList = Array.prototype.slice.call(arguments, 0);
+  for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
+    dynamicCstr[axes[i]] = cstrList[i];
+  }
+  return new sre.DynamicCstr(dynamicCstr);
+};
+
+
+/**
+ * Checks explicitly if a dynamic constraint order is indeed valid.
+ * @param {sre.DynamicCstr.Order} order The order to check.
+ * @return {boolean} True if the order only contains valid axis descriptions.
+ */
+sre.DynamicCstr.validOrder = function(order) {
+  var axes = sre.DynamicCstr.DEFAULT_ORDER.slice();
+  return order.every(
+    function(x) {
+      var index = axes.indexOf(x);
+      return index !== -1 && axes.splice(index, 1);
+    }
+  );
 };
