@@ -75,14 +75,13 @@ sre.BaseRuleStore = function() {
    * A priority list of dynamic constraint attributes.
    * @type {!sre.DynamicCstr.Order}
    */
-  this.parseOrder = [sre.Engine.Axis.STYLE];
+  this.parseOrder = sre.DynamicCstr.DEFAULT_ORDER;
 
   /**
    * A dynamic constraint parser.
    * @type {!sre.DynamicCstr.Parser}
    */
   this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
-
 };
 
 

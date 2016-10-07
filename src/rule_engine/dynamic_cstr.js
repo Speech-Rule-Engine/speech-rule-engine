@@ -123,6 +123,7 @@ sre.DynamicCstr = function(cstr, opt_order) {
   for (var key in cstr) {
     properties[key] = [cstr[key]];
   }
+
   sre.DynamicCstr.base(this, 'constructor', properties, opt_order);
 };
 goog.inherits(sre.DynamicCstr, sre.DynamicProperties);
@@ -232,7 +233,7 @@ sre.DynamicCstr.Parser.prototype.parse = function(str) {
     cstr[key] = value;
     sre.Engine.getInstance().axisValues[key][value] = true;
   }
-  return new sre.DynamicCstr(cstr, this.order_);
+  return new sre.DynamicCstr(cstr, this.order_.slice(0, i));
 };
 
 
@@ -252,8 +253,10 @@ sre.DynamicCstr.Comparator.prototype.getReference = function() { };
 /**
  * Sets the reference constraint in the comparator.
  * @param {sre.DynamicCstr} cstr A new reference constraint.
+ * @param {sre.DynamicProperties=} opt_props An optional properties element
+ *    for matching.
  */
-sre.DynamicCstr.Comparator.prototype.setReference = function(cstr) { };
+sre.DynamicCstr.Comparator.prototype.setReference = function(cstr, opt_props) { };
 
 
 /**
@@ -277,17 +280,16 @@ sre.DynamicCstr.Comparator.prototype.compare = function(cstr1, cstr2) { };
 
 
 
-// TODO (MOSS): This still implements the old style comparator. Turn into
-// default comparator and implement more elaborate orderings on the rule stores.
-//
 /**
  * A default comparator for dynamic constraints. Has initially a reference
  * constraint with default values only.
  * @constructor
  * @implements {sre.DynamicCstr.Comparator}
  * @param {sre.DynamicCstr} cstr A reference constraint.
+ * @param {sre.DynamicProperties=} opt_props An optional properties element
+ *    for matching.
  */
-sre.DynamicCstr.DefaultComparator = function(cstr) {
+sre.DynamicCstr.DefaultComparator = function(cstr, opt_props) {
 
   /**
    * @type {sre.DynamicCstr}
@@ -295,6 +297,16 @@ sre.DynamicCstr.DefaultComparator = function(cstr) {
    */
   this.reference_ = cstr;
 
+  /**
+   * @type {sre.DynamicProperties}
+   * @private
+   */
+  this.fallback_ = opt_props ||
+    new sre.DynamicProperties(
+      cstr.getProperties(),
+      Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
+        map(function() { return ['default']; }));
+  
   /**
    * @type {sre.DynamicCstr.Order}
    * @private
@@ -317,28 +329,26 @@ sre.DynamicCstr.DefaultComparator.prototype.getReference = function() {
  * @override
  * @final
  */
-sre.DynamicCstr.DefaultComparator.prototype.setReference = function(cstr) {
+sre.DynamicCstr.DefaultComparator.prototype.setReference = function(
+    cstr, opt_props) {
   this.reference_ = cstr;
+  this.fallback_ = opt_props ||
+    new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
   this.order_ = this.reference_.getOrder();
 };
 
 
-// We allow a default value for each dynamic constraints attribute.
-// The idea is that when we can not find a speech rule matching the value for
-// a particular attribute in the dynamic constraint we choose the one that has
-// the value 'default'.
 /**
  * @override
  */
 sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
   var keys1 = cstr.getKeys();
-  return keys1.length === this.reference_.getKeys().length &&
+  return keys1.length === this.order_.length &&
       keys1.every(
-      goog.bind(function(key) {
-        return cstr.getValue(key) == this.reference_.getValue(key) ||
-            // TODO (MOSS) Sort this out with an ordered list of constraints.
-            cstr.getValue(key) == 'short' ||
-            cstr.getValue(key) == 'default';
+        goog.bind(function(key) {
+          var value = cstr.getValue(key);
+          return value === this.reference_.getValue(key) ||
+            this.fallback_.getProperty(key).indexOf(value) !== -1;
       }, this));
 };
 
@@ -369,6 +379,23 @@ sre.DynamicCstr.DefaultComparator.prototype.countMatchingValues_ = function(
     } else break;
   }
   return result;
+};
+
+
+/**
+ * Convenience method to create a standard dynamic constraint, that follows a
+ * pre-prescribed order of the axes.
+ * @param {...Array.<string>} props Dynamic property lists for the Axes.
+ * @return {!sre.DynamicProperties}
+ */
+sre.DynamicProperties.create = function(props) {
+  var axes = sre.DynamicCstr.DEFAULT_ORDER;
+  var dynamicCstr = {};
+  var cstrList = Array.prototype.slice.call(arguments, 0);
+  for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
+    dynamicCstr[axes[i]] = cstrList[i];
+  }
+  return new sre.DynamicProperties(dynamicCstr);
 };
 
 
