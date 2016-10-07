@@ -1,11 +1,9 @@
 language: node_js
 node_js:
   - "stable"
-  - "iojs"
 sudo: false
 branches:
   except:
     - fix_brackeing
 install:
-  - npm install closure closure-library closurecompiler commander xmldom xpath xml-mapping
-  - make clean_closure
+  - npm install

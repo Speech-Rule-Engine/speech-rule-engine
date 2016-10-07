@@ -571,6 +571,6 @@ sre.MathmlStoreRules.getInstance().initializer = [
   sre.MathmlStoreRules.initDefaultRules_, // MathML rules.
   sre.MathmlStoreRules.initMathjaxRules_, // MathJax Rules
   sre.MathmlStoreRules.initAliases_, // MathJax Aliases for MathML rules.
-  sre.MathmlStoreRules.initSpecializationRules_, // Square, cube, etc.
+  sre.MathmlStoreRules.initSpecializationRules_ // Square, cube, etc.
 ];
 
