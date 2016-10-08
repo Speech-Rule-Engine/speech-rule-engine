@@ -29,8 +29,6 @@ goog.require('sre.Engine');
 
 
 
-//TODO: (MOSS) Revisit after ClearSpeak preference introduction.
-//
 /**
  * @constructor
  * @param {!Object.<sre.Engine.Axis, !Array.<string>>} properties The property
@@ -298,6 +296,7 @@ sre.DynamicCstr.DefaultComparator = function(cstr, opt_props) {
   this.reference_ = cstr;
 
   /**
+   * This is a preference order, if more than one property value are given.
    * @type {sre.DynamicProperties}
    * @private
    */
@@ -357,28 +356,39 @@ sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
  * @override
  */
 sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
-  var count1 = this.countMatchingValues_(cstr1);
-  var count2 = this.countMatchingValues_(cstr2);
-  return (count1 > count2) ? -1 : ((count2 > count1) ? 1 : 0);
-};
-
-
-/**
- * Counts how many dynamic constraint values match exactly the reference
- * constraint in the order specified by the comparator.
- * @param {sre.DynamicCstr} cstr Dynamic constraints.
- * @return {number} The number of matching dynamic constraint values.
- * @private
- */
-sre.DynamicCstr.DefaultComparator.prototype.countMatchingValues_ = function(
-    cstr) {
-  var result = 0;
+  var ignore = false;
   for (var i = 0, key; key = this.order_[i]; i++) {
-    if (this.reference_.getValue(key) === cstr.getValue(key)) {
-      result++;
-    } else break;
+    var value1 = cstr1.getValue(key);
+    var value2 = cstr2.getValue(key);
+    // As long as the constraint values are the same as the reference value, we
+    // continue to compare them, otherwise we ignore them, to go for the best
+    // matching fallback rule, wrt. priority order.
+    if (!ignore) {
+      var ref = this.reference_.getValue(key);
+      if (ref === value1 && ref !== value2) {
+        return -1;
+      }
+      if (ref === value2 && ref !== value1) {
+        return 1;
+      }
+      if (ref === value1 && ref === value2) {
+        continue;
+      }
+      if (ref !== value1 && ref !== value2) {
+        ignore = true;
+      }
+    }
+    var prop = this.fallback_.getProperty(key);
+    var index1 = prop.indexOf(value1);
+    var index2 = prop.indexOf(value2);
+    if (index1 < index2) {
+      return -1;
+    }
+    if (index2 < index1) {
+      return 1;
+    }
   }
-  return result;
+  return 0;
 };
 
 
