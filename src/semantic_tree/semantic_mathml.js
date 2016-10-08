@@ -212,9 +212,7 @@ sre.SemanticMathml.prototype.sqrt_ = function(node, children) {
 sre.SemanticMathml.prototype.table_ = function(node, children) {
   var newNode = this.getFactory().makeBranchNode(
     sre.SemanticAttr.Type.TABLE, this.parseNodes_(children), []);
-  if (sre.SemanticPred.tableIsMultiline(newNode)) {
-    sre.SemanticProcessor.tableToMultiline(newNode);
-  }
+  sre.SemanticProcessor.tableToMultiline(newNode);
   return newNode;
 };
 
