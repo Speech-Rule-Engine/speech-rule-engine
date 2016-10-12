@@ -514,11 +514,14 @@ sre.EnrichMathml.collapsedString = function(struct) {
 
 /**
  * Compute a skeleton structure for a semantic tree.
- * @param {!sre.SemanticNode} node The root node of the tree.
+ * @param {sre.SemanticNode} node The root node of the tree.
  * @return {!sre.EnrichMathml.Collapsed_} The collapsed structure annotation
  *     representing the skeleton of the tree.
  */
 sre.EnrichMathml.collapsedTreeStructure = function(node) {
+  if (!node) {
+    return [];
+  }
   var children = node.childNodes;
   if (!children.length) {
     return node.id;
