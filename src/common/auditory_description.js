@@ -152,26 +152,55 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
   sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
-  // var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  // console.log(markup);
-  // var nested = sre.AuditoryDescription.nestedMarkup_(markup);
+  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   var result = [];
-  for (var i = 0, descr; descr = descrs[i]; i++) {
-    var pers = descr.personality;
-    if (sre.AuditoryDescription.isPauseElement_(pers)) {
-      result.push('(pause . "' + pers.pause + '")');
+  var currentPers = {open: []};
+  var pause = null;
+  var string = false;
+  for (var i = 0, descr; descr = markup[i]; i++) {
+    if (sre.AuditoryDescription.isMarkupElement_(descr)) {
+      sre.AuditoryDescription.mergeMarkup_(currentPers, descr);
       continue;
     }
-    var str = descr.descriptionString();
-    if (!str) {
+    if (sre.AuditoryDescription.isPauseElement_(descr)) {
+      if (string) {
+        pause = sre.AuditoryDescription.mergePause_(pause, descr, Math.max);
+      }
       continue;
     }
-    str = '"' + str + '"';
-    pers.open = Object.keys(pers);
-    var prosody = sre.AuditoryDescription.sexpProsody_(pers);
+    var str = '"' + descr.string + '"';
+    string = true;
+    if (pause) {
+      result.push(sre.AuditoryDescription.sexpPause_(pause));
+      pause = null;
+    }
+    var prosody = sre.AuditoryDescription.sexpProsody_(currentPers);
     result.push(prosody ? '(' + prosody + ' ' + str + ')' : str);
   }
-  return '(exp (' + result.join(separator) + ')';
+  return '(exp ' + result.join(separator) + ')';
+};
+
+
+sre.AuditoryDescription.mergePause_ = function(oldPause, newPause, opt_merge) {
+  if (!oldPause) {
+    return newPause;
+  }
+  var merge = opt_merge || function(x, y) {return x + y;};
+  return {pause: merge.call(null, oldPause.pause, newPause.pause)};
+}
+
+/**
+ * Merges new personality into the old personality markup.
+ * @param {Object} oldPers Old personality markup.
+ * @param {Object} newPers New personality markup.
+ * @private
+ */
+sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
+  delete oldPers.open;
+  newPers.close.forEach(function(x) {delete oldPers[x];});
+  newPers.open.forEach(function(x) {oldPers[x] = newPers[x];});
+  var keys = Object.keys(oldPers);
+  oldPers.open = keys;
 };
 
 

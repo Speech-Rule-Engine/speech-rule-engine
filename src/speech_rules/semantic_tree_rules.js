@@ -280,7 +280,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'fences-open-close', 'default.default',
-      '[p] (pause:200); [n] children/*[1]; [p] (pause:200)',
+      '[p] (pause:200); [n] children/*[1] (rate:0.35); [p] (pause:200)',
       'self::fenced', '@role="leftright"');
 
   defineRule(
@@ -446,7 +446,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'sqrt', 'default.default',
-      '[t] "Square root of"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+      '[t] "Square root of"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::sqrt');
 
   defineRule(
@@ -464,7 +464,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'root', 'default.default',
       '[t] "root of order"; [n] children/*[1];' +
-          '[t] "over"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+          '[t] "over"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::root');
 
   // TODO (sorge) This is probably unnecessary now!
