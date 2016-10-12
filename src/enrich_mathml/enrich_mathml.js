@@ -493,18 +493,39 @@ sre.EnrichMathml.collapsedLeafs = function(var_args) {
  *    annotations.
  */
 sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
-  /**
-   * @param {!sre.EnrichMathml.Collapsed_} struct Collapse structure.
-   * @return {!string} The structure as string.
-   */
-  var collapseString = function(struct) {
-    if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
-      return struct.toString();
-    }
-    return '(' + struct.map(collapseString).join(' ') + ')';
-  };
   node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED,
-                    collapseString(collapsed));
+                    sre.EnrichMathml.collapsedString(collapsed));
+};
+
+
+/**
+ * Turns collapsed element into an sexp like string.
+ * @param {!sre.EnrichMathml.Collapsed_} struct Collapse structure.
+ * @return {!string} The structure as string.
+ */
+sre.EnrichMathml.collapsedString = function(struct) {
+  if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
+    return struct.toString();
+  }
+  return '(' + struct.map(sre.EnrichMathml.collapsedString).join(' ') + ')';
+};
+
+
+
+/**
+ * Compute a skeleton structure for a semantic tree.
+ * @param {!sre.SemanticNode} node The root node of the tree.
+ * @return {!sre.EnrichMathml.Collapsed_} The collapsed structure annotation
+ *     representing the skeleton of the tree.
+ */
+sre.EnrichMathml.collapsedTreeStructure = function(node) {
+  var children = node.childNodes;
+  if (!children.length) {
+    return node.id;
+  }
+  var structure = children.map(sre.EnrichMathml.collapsedTreeStructure);
+  structure.unshift(node.id);
+  return structure;
 };
 
 
@@ -776,3 +797,8 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
   sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
 };
+
+
+// TEMP:
+// 
+// var quad = '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>&#x2212;</mo><mi>b</mi><mo>&#xB1;</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>'
