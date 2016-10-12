@@ -142,6 +142,38 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
 };
 
 
+/**
+ * Translates a list of auditory descriptions into a string with SSML markup.
+ * Currently returns an sexp for emacs speak.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string with ACSS markup.
+ * @private
+ */
+sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
+  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
+  // var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+  // console.log(markup);
+  // var nested = sre.AuditoryDescription.nestedMarkup_(markup);
+  var result = [];
+  for (var i = 0, descr; descr = descrs[i]; i++) {
+    var pers = descr.personality;
+    if (sre.AuditoryDescription.isPauseElement_(pers)) {
+      result.push('(pause . "' + pers.pause + '")');
+      continue;
+    }
+    var str = descr.descriptionString();
+    if (!str) {
+      continue;
+    }
+    str = '"' + str + '"';
+    pers.open = Object.keys(pers);
+    var prosody = sre.AuditoryDescription.sexpProsody_(pers);
+    result.push(prosody ? '(' + prosody + ' ' + str + ')' : str);
+  }
+  return '(exp (' + result.join(separator) + ')';
+};
+
 
 /**
  * The range of personality annotations.
@@ -152,16 +184,16 @@ sre.AuditoryDescription.PersonalityRanges_ = {};
 sre.AuditoryDescription.LastOpen = [];
 
 /**
- * Translates a list of auditory descriptions into a string with SSML markup.
- * Currently returns an sexp for emacs speak.
+ * Translates a list of auditory descriptions into a string with recursive ACSS
+ * markup. Currently returns an sexp for emacs speak.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
  * @param {string} separator The separator string.
  * @return {string} The generated string with ACSS markup.
  * @private
  */
-sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
+sre.AuditoryDescription.toRelativeAcssString_ = function(descrs, separator) {
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  sre.AuditoryDescription.setScaleFunction(-2, 2, 1, 10);
+  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
   var nested = sre.AuditoryDescription.nestedMarkup_(markup);
   return sre.AuditoryDescription.toSexp(nested);
 };
@@ -173,7 +205,9 @@ sre.AuditoryDescription.toSexp = function(markup) {
   var range = !pitches ? 0 :
         sre.AuditoryDescription.scaleFunction(Math.max.apply(null, pitches)) -
         sre.AuditoryDescription.scaleFunction(Math.min.apply(null, pitches));
-  var result = '(exp ((average-pich . "5") (pitch-range . "' + range + '")) ';
+  //var adjust = Math.round(range * 100) / 100;
+  var adjust = Math.round(range);
+  var result = '(exp ((average-pitch . "5") (pitch-range . "' + adjust + '")) ';
   result += sre.AuditoryDescription.sexpList(markup);
   return result + ')';
 };
@@ -191,7 +225,7 @@ sre.AuditoryDescription.sexpList = function(markup) {
       continue;
     }
     if (sre.AuditoryDescription.isMarkupElement_(first)) {
-      result.push(sre.AuditoryDescription.sexpProsody_(first));
+      result.push('(' + sre.AuditoryDescription.sexpProsody_(first) + ')');
       continue;
     }
     if (sre.AuditoryDescription.isPauseElement_(first)) {
@@ -208,20 +242,25 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
   var keys = pros.open;
   var result = [];
   for (var i = 0, key; key = keys[i]; i++) {
-    var value = sre.AuditoryDescription.scaleFunction(pros[key]);
-    switch (key) {
-    case sre.Engine.personalityProps.RATE:
-      result.push('(stress . "' + value + '")');
-      break;
-    case sre.Engine.personalityProps.PITCH:
-      result.push('(pitch-range . "' + value + '")');
-      break;
-    case sre.Engine.personalityProps.VOLUME:
-      result.push('(richness . "' + value + '")');
-      break;
-    }
+    result.push(sre.AuditoryDescription.sexpProsodyElement_(key, pros[key]));
   }
-  return '(' + result.join(' ') + ')';
+  return result.join(' ');
+};
+
+
+sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
+  value = sre.AuditoryDescription.scaleFunction(value);
+  value = Math.round(value);
+  switch (key) {
+  case sre.Engine.personalityProps.RATE:
+    return '(richness . "' + value + '")';
+  case sre.Engine.personalityProps.PITCH:
+    return '(average-pitch . "' + value + '")';
+    break;
+  case sre.Engine.personalityProps.VOLUME:
+    return '(stress . "' + value + '")';
+    break;
+  }
 };
 
 
@@ -362,7 +401,7 @@ sre.AuditoryDescription.convertValue = function(value) {
 
 
 /**
- * Computes a markup list.
+ * Computes a markup list. Careful this is destructive on the description list.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
  * @return {!Array.<string|Object>} Markup list.
  * @private
@@ -458,6 +497,7 @@ sre.AuditoryDescription.appendMarkup_ = function(
     if (last && !str && pause &&
         sre.AuditoryDescription.isPauseElement_(last)) {
       var pauseProp = sre.Engine.personalityProps.PAUSE;
+      // Merging could be done using max or min or plus.
       last[pauseProp] = last[pauseProp] + pause[pauseProp];
       pause = null;
     }

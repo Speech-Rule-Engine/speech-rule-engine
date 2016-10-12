@@ -235,8 +235,8 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Fraction
   defineRule(
       'fraction', 'default.default',
-      '[p] (pause:250); [n] children/*[1] (pitch:0.3); [p] (pause:250);' +
-          ' [t] "divided by"; [n] children/*[2] (pitch:-0.3); [p] (pause:400)',
+      '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
+          ' [t] "over"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
       'self::fraction');
 
   defineRule(
@@ -272,15 +272,20 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::empty');
 
   // Fences rules.
+  // defineRule(
+  //     'fences-open-close', 'default.default',
+  //     '[p] (pause:200); [t] "open"; [n] content/*[1]; [n] children/*[1]; [p] (pause:200);' +
+  //     '[t] "close"',
+  //     'self::fenced', '@role="leftright"');
+
   defineRule(
       'fences-open-close', 'default.default',
-      '[p] (pause:100); [t] "open"; [n] children/*[1]; [p] (pause:200);' +
-      '[t] "close"',
+      '[p] (pause:200); [n] children/*[1]; [p] (pause:200)',
       'self::fenced', '@role="leftright"');
 
   defineRule(
       'fences-open-close-in-appl', 'default.default',
-      '[p] (pause:100); [n] children/*[1]; [p] (pause:200);',
+      '[p] (pause:200); [n] children/*[1]; [p] (pause:200);',
       'self::fenced[@role="leftright"]', './parent::children/parent::appl');
 
   defineRule(
