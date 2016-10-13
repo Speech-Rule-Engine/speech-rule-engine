@@ -340,19 +340,10 @@ sre.EnrichMathml.attachedElement_ = function(nodes) {
 
 
 /**
- * Type annotation to get around Closure parsing problems for functions as
- * optional parameters.
- * @typedef {function(!Element): boolean}
- * @private
- */
-sre.EnrichMathml.ElementTest_;
-
-
-/**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
  * @param {!Element} node The tree node from where to start.
- * @param {sre.EnrichMathml.ElementTest_=} opt_test The optional test that
+ * @param {(function(!Element): boolean)=} opt_test The optional test that
  *     stops path computation if it fires.
  * @return {!Array.<!Element>} Path from root to node. That is, node is the last
  *     element in the array and array contains at least the original node.
