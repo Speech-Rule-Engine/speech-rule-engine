@@ -26,18 +26,20 @@ goog.provide('sre.SemanticSkeleton.Sexp');
 
 /**
  * @constructor
+ * @param {sre.SemanticSkeleton.Sexp} skeleton The skeleton array.
  */
-sre.SemanticSkeleton = function() {
+sre.SemanticSkeleton = function(skeleton) {
+
+  skeleton = skeleton || [];
 
   /**
-   * @type {sre.SemanticSkeleton.Sexp}
+   * @type {!sre.SemanticSkeleton.Sexp}
    */
-  this.array = null;
+  this.array = skeleton;
 
 };
 
 
-// TODO (sorge) Refactor collapsed structures into a dedicated class.
 /**
  * Type annotation for arrays representing collapsed node structures.
  * @typedef {number|Array.<sre.SemanticSkeleton.Sexp>}
@@ -46,3 +48,55 @@ sre.SemanticSkeleton = function() {
 sre.SemanticSkeleton.Sexp;
 
 
+/**
+ * @override
+ */
+sre.SemanticSkeleton.prototype.toString = function() {
+  return sre.SemanticSkeleton.makeSexp_(this.array);
+};
+
+
+/**
+ * Turns collapsed element into an sexp like string.
+ * @param {!sre.SemanticSkeleton.Sexp} struct Collapse structure.
+ * @return {!string} The structure as string.
+ * @private
+ */
+sre.SemanticSkeleton.makeSexp_ = function(struct) {
+  if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
+    return struct.toString();
+  }
+  return '(' + struct.map(sre.SemanticSkeleton.makeSexp_).join(' ') + ')';
+};
+
+
+
+/**
+ * Compute a skeleton structure for a semantic tree.
+ * @param {sre.SemanticNode} node The root node of the tree.
+ * @return {!sre.SemanticSkeleton} The new skeleton structure object.
+ */
+sre.SemanticSkeleton.fromTree = function(node) {
+  return new sre.SemanticSkeleton(sre.SemanticSkeleton.fromTree_(node));
+};
+
+
+/**
+ * Compute a skeleton structure for a semantic tree.
+ * @param {sre.SemanticNode} node The root node of the tree.
+ * @return {!sre.SemanticSkeleton.Sexp} The collapsed structure annotation
+ *     representing the skeleton of the tree.
+ * @private
+ */
+sre.SemanticSkeleton.fromTree_ = function(node) {
+  if (!node) {
+    return [];
+  }
+  var children = node.childNodes;
+  if (!children.length) {
+    return node.id;
+  }
+  var structure = children.map(sre.SemanticSkeleton.fromTree_);
+  structure.unshift(node.id);
+  return structure;
+};

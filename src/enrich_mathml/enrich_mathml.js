@@ -30,6 +30,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticSkeleton');
 goog.require('sre.SemanticSkeleton.Sexp');
 goog.require('sre.SemanticUtil');
 
@@ -476,42 +477,8 @@ sre.EnrichMathml.collapsedLeafs = function(var_args) {
  *    annotations.
  */
 sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
-  node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED,
-                    sre.EnrichMathml.collapsedString(collapsed));
-};
-
-
-/**
- * Turns collapsed element into an sexp like string.
- * @param {!sre.SemanticSkeleton.Sexp} struct Collapse structure.
- * @return {!string} The structure as string.
- */
-sre.EnrichMathml.collapsedString = function(struct) {
-  if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
-    return struct.toString();
-  }
-  return '(' + struct.map(sre.EnrichMathml.collapsedString).join(' ') + ')';
-};
-
-
-
-/**
- * Compute a skeleton structure for a semantic tree.
- * @param {sre.SemanticNode} node The root node of the tree.
- * @return {!sre.SemanticSkeleton.Sexp} The collapsed structure annotation
- *     representing the skeleton of the tree.
- */
-sre.EnrichMathml.collapsedTreeStructure = function(node) {
-  if (!node) {
-    return [];
-  }
-  var children = node.childNodes;
-  if (!children.length) {
-    return node.id;
-  }
-  var structure = children.map(sre.EnrichMathml.collapsedTreeStructure);
-  structure.unshift(node.id);
-  return structure;
+  var skeleton = new sre.SemanticSkeleton(collapsed);
+  node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED, skeleton.toString());
 };
 
 
