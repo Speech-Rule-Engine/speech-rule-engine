@@ -30,6 +30,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticSkeleton.Sexp');
 goog.require('sre.SemanticUtil');
 
 
@@ -422,18 +423,9 @@ sre.EnrichMathml.parentNode_ = function(element) {
 };
 
 
-// TODO (sorge) Refactor collapsed structures into a dedicated class.
-/**
- * Type annotation for arrays representing collapsed node structures.
- * @typedef {number|Array.<sre.EnrichMathml.Collapsed_>}
- * @private
- */
-sre.EnrichMathml.Collapsed_;
-
-
 /**
  * Checks if the structure is simple, i.e., a single id number.
- * @param {sre.EnrichMathml.Collapsed_} strct The structure.
+ * @param {sre.SemanticSkeleton.Sexp} strct The structure.
  * @return {boolean} True if a simple number.
  */
 sre.EnrichMathml.simpleCollapseStructure = function(strct) {
@@ -443,11 +435,11 @@ sre.EnrichMathml.simpleCollapseStructure = function(strct) {
 
 /**
  * Interleaves the ids of two index lists.
- * @param {!sre.EnrichMathml.Collapsed_} first A structured list of
+ * @param {!sre.SemanticSkeleton.Sexp} first A structured list of
  *     ids.
- * @param {!sre.EnrichMathml.Collapsed_} second A structured list of
+ * @param {!sre.SemanticSkeleton.Sexp} second A structured list of
  *     ids.
- * @return {!sre.EnrichMathml.Collapsed_} A simple list of ids.
+ * @return {!sre.SemanticSkeleton.Sexp} A simple list of ids.
  */
 sre.EnrichMathml.interleaveIds = function(first, second) {
   return sre.BaseUtil.interleaveLists(
@@ -458,7 +450,7 @@ sre.EnrichMathml.interleaveIds = function(first, second) {
 
 /**
  * Returns a list of the leaf ids for the given collapsed structures.
- * @param {...sre.EnrichMathml.Collapsed_} var_args The collapsed structure
+ * @param {...sre.SemanticSkeleton.Sexp} var_args The collapsed structure
  *     annotations.
  * @return {!Array.<number>} The leafs of the structure annotations.
  */
@@ -480,7 +472,7 @@ sre.EnrichMathml.collapsedLeafs = function(var_args) {
  * Adds a collapsed attribute to the given node, according to the collapsed
  * structure.
  * @param {!Element} node The MathML node.
- * @param {!sre.EnrichMathml.Collapsed_} collapsed The collapsed structure
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed The collapsed structure
  *    annotations.
  */
 sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
@@ -491,7 +483,7 @@ sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
 
 /**
  * Turns collapsed element into an sexp like string.
- * @param {!sre.EnrichMathml.Collapsed_} struct Collapse structure.
+ * @param {!sre.SemanticSkeleton.Sexp} struct Collapse structure.
  * @return {!string} The structure as string.
  */
 sre.EnrichMathml.collapsedString = function(struct) {
@@ -506,7 +498,7 @@ sre.EnrichMathml.collapsedString = function(struct) {
 /**
  * Compute a skeleton structure for a semantic tree.
  * @param {sre.SemanticNode} node The root node of the tree.
- * @return {!sre.EnrichMathml.Collapsed_} The collapsed structure annotation
+ * @return {!sre.SemanticSkeleton.Sexp} The collapsed structure annotation
  *     representing the skeleton of the tree.
  */
 sre.EnrichMathml.collapsedTreeStructure = function(node) {
