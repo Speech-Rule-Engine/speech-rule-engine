@@ -425,51 +425,6 @@ sre.EnrichMathml.parentNode_ = function(element) {
 
 
 /**
- * Checks if the structure is simple, i.e., a single id number.
- * @param {sre.SemanticSkeleton.Sexp} strct The structure.
- * @return {boolean} True if a simple number.
- */
-sre.EnrichMathml.simpleCollapseStructure = function(strct) {
-  return (typeof strct === 'number');
-};
-
-
-/**
- * Interleaves the ids of two index lists.
- * @param {!sre.SemanticSkeleton.Sexp} first A structured list of
- *     ids.
- * @param {!sre.SemanticSkeleton.Sexp} second A structured list of
- *     ids.
- * @return {!sre.SemanticSkeleton.Sexp} A simple list of ids.
- */
-sre.EnrichMathml.interleaveIds = function(first, second) {
-  return sre.BaseUtil.interleaveLists(
-      sre.EnrichMathml.collapsedLeafs(first),
-      sre.EnrichMathml.collapsedLeafs(second));
-};
-
-
-/**
- * Returns a list of the leaf ids for the given collapsed structures.
- * @param {...sre.SemanticSkeleton.Sexp} var_args The collapsed structure
- *     annotations.
- * @return {!Array.<number>} The leafs of the structure annotations.
- */
-sre.EnrichMathml.collapsedLeafs = function(var_args) {
-  var collapseStructure = function(coll) {
-    if (sre.EnrichMathml.simpleCollapseStructure(coll)) {
-      return [coll];
-    }
-    return coll.slice(1);
-  };
-  return Array.prototype.slice.call(arguments, 0).
-      reduce(function(x, y) {
-        return x.concat(collapseStructure(y));
-      }, []);
-};
-
-
-/**
  * Adds a collapsed attribute to the given node, according to the collapsed
  * structure.
  * @param {!Element} node The MathML node.

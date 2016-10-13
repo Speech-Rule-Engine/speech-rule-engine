@@ -22,6 +22,8 @@
 goog.provide('sre.SemanticSkeleton');
 goog.provide('sre.SemanticSkeleton.Sexp');
 
+goog.require('sre.BaseUtil');
+
 
 
 /**
@@ -41,14 +43,6 @@ sre.SemanticSkeleton = function(skeleton) {
 
 
 /**
- * Type annotation for arrays representing collapsed node structures.
- * @typedef {number|Array.<sre.SemanticSkeleton.Sexp>}
- * @private
- */
-sre.SemanticSkeleton.Sexp;
-
-
-/**
  * @override
  */
 sre.SemanticSkeleton.prototype.toString = function() {
@@ -63,12 +57,16 @@ sre.SemanticSkeleton.prototype.toString = function() {
  * @private
  */
 sre.SemanticSkeleton.makeSexp_ = function(struct) {
-  if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
+  console.log(struct);
+  if (sre.SemanticSkeleton.simpleCollapseStructure(struct)) {
     return struct.toString();
+  }
+  if (sre.SemanticSkeleton.contentCollapseStructure(struct)) {
+    return '(' + 'c ' +
+      struct.slice(1).map(sre.SemanticSkeleton.makeSexp_).join(' ') + ')';
   }
   return '(' + struct.map(sre.SemanticSkeleton.makeSexp_).join(' ') + ')';
 };
-
 
 
 /**
@@ -92,11 +90,84 @@ sre.SemanticSkeleton.fromTree_ = function(node) {
   if (!node) {
     return [];
   }
+  var content = node.contentNodes;
+  if (content.length) {
+    var contentStructure = content.map(sre.SemanticSkeleton.fromTree_);
+    contentStructure.unshift('c');
+  }
   var children = node.childNodes;
   if (!children.length) {
-    return node.id;
+    return content.length ? [node.id, contentStructure] : node.id;
   }
   var structure = children.map(sre.SemanticSkeleton.fromTree_);
+  if (content.length) {
+    structure.unshift(contentStructure);
+  }
   structure.unshift(node.id);
   return structure;
+};
+
+
+/**
+ * Type annotation for arrays representing collapsed node structures.
+ * @typedef {number|Array.<sre.SemanticSkeleton.Sexp>}
+ * @private
+ */
+sre.SemanticSkeleton.Sexp;
+
+
+/**
+ * Checks if the structure is simple, i.e., a single id number.
+ * @param {sre.SemanticSkeleton.Sexp} strct The structure.
+ * @return {boolean} True if a simple number.
+ */
+sre.SemanticSkeleton.simpleCollapseStructure = function(strct) {
+  return (typeof strct === 'number');
+};
+
+
+/**
+ * Checks if the structure is simple, i.e., a single id number.
+ * @param {sre.SemanticSkeleton.Sexp} strct The structure.
+ * @return {boolean} True if a simple number.
+ */
+sre.SemanticSkeleton.contentCollapseStructure = function(strct) {
+  console.log('here');
+  return !sre.SemanticSkeleton.simpleCollapseStructure(strct) &&
+    (strct[0] === 'c');
+};
+
+
+/**
+ * Interleaves the ids of two index lists.
+ * @param {!sre.SemanticSkeleton.Sexp} first A structured list of
+ *     ids.
+ * @param {!sre.SemanticSkeleton.Sexp} second A structured list of
+ *     ids.
+ * @return {!sre.SemanticSkeleton.Sexp} A simple list of ids.
+ */
+sre.SemanticSkeleton.interleaveIds = function(first, second) {
+  return sre.BaseUtil.interleaveLists(
+      sre.SemanticSkeleton.collapsedLeafs(first),
+      sre.SemanticSkeleton.collapsedLeafs(second));
+};
+
+
+/**
+ * Returns a list of the leaf ids for the given collapsed structures.
+ * @param {...sre.SemanticSkeleton.Sexp} var_args The collapsed structure
+ *     annotations.
+ * @return {!Array.<number>} The leafs of the structure annotations.
+ */
+sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
+  var collapseStructure = function(coll) {
+    if (sre.SemanticSkeleton.simpleCollapseStructure(coll)) {
+      return [coll];
+    }
+    return coll.slice(1);
+  };
+  return Array.prototype.slice.call(arguments, 0).
+      reduce(function(x, y) {
+        return x.concat(collapseStructure(y));
+      }, []);
 };
