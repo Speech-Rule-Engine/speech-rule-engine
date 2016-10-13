@@ -175,7 +175,7 @@ sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
       pause = null;
     }
     var prosody = sre.AuditoryDescription.sexpProsody_(currentPers);
-    result.push(prosody ? '(' + prosody + ' ' + str + ')' : str);
+    result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
   }
   return '(exp ' + result.join(separator) + ')';
 };
