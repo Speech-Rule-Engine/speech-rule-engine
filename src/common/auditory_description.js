@@ -236,7 +236,7 @@ sre.AuditoryDescription.toSexp = function(markup) {
         sre.AuditoryDescription.scaleFunction(Math.min.apply(null, pitches));
   //var adjust = Math.round(range * 100) / 100;
   var adjust = Math.round(range);
-  var result = '(exp ((average-pitch . "5") (pitch-range . "' + adjust + '")) ';
+  var result = '(exp ((average-pitch . 5) (pitch-range . ' + adjust + ')) ';
   result += sre.AuditoryDescription.sexpList(markup);
   return result + ')';
 };
@@ -282,19 +282,19 @@ sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
   value = Math.round(value);
   switch (key) {
   case sre.Engine.personalityProps.RATE:
-    return '(richness . "' + value + '")';
+    return '(richness . ' + value + ')';
   case sre.Engine.personalityProps.PITCH:
-    return '(average-pitch . "' + value + '")';
+    return '(average-pitch . ' + value + ')';
     break;
   case sre.Engine.personalityProps.VOLUME:
-    return '(stress . "' + value + '")';
+    return '(stress . ' + value + ')';
     break;
   }
 };
 
 
 sre.AuditoryDescription.sexpPause_ = function(pause) {
-  return '(pause . "' + pause[sre.Engine.personalityProps.PAUSE] + '")';
+  return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
 };
 
 
