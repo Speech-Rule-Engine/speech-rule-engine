@@ -143,6 +143,22 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
 
 
 /**
+ * Generates an error message depending on the output style.
+ * @param {sre.EventUtil.KeyCode|string} key The keycode or direction of the
+ *     move.
+ * @return {?string} The error message or null.
+ */
+sre.AuditoryDescription.error = function(key) {
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.ACSS:
+    return '(error "' + key + '")';
+  default:
+    return null;
+  }
+};
+
+
+/**
  * Translates a list of auditory descriptions into a string with SSML markup.
  * Currently returns an sexp for emacs speak.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
