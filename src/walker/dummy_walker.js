@@ -77,7 +77,7 @@ sre.DummyWalker.prototype.depth = function() { };
 /**
  * @override
  */
-sre.DummyWalker.prototype.root = function() { };
+sre.DummyWalker.prototype.home = function() { };
 
 
 /**
@@ -91,6 +91,6 @@ sre.DummyWalker.prototype.getDepth = function() {
 /**
  * @override
  */
-sre.DummyWalker.prototype.levelFactory = function() {
+sre.DummyWalker.prototype.initLevels = function() {
   return new sre.Levels();
 };

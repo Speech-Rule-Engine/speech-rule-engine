@@ -96,7 +96,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.root, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
 
   this.dummy_ = function() {};
 
@@ -108,18 +108,18 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
 
   /**
-   * Caching of levels.
-   * @type {!sre.Levels}
-   */
-  this.levels = this.levelFactory();
-
-  /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
    * @type {!sre.Focus}
    * @private
    */
   this.focus_ = new sre.Focus({nodes: [this.rootNode], primary: this.rootNode});
+
+  /**
+   * Caching of levels.
+   * @type {!sre.Levels}
+   */
+  this.levels = this.initLevels();
 
   /**
    * Flag indicating whether the last move actually moved focus.
@@ -143,7 +143,7 @@ sre.AbstractWalker.move = {
   DEPTH: 'depth',
   ENTER: 'enter',
   EXPAND: 'expand',
-  ROOT: 'root'
+  HOME: 'home'
 };
 
 
@@ -324,13 +324,13 @@ sre.AbstractWalker.prototype.depth = function() {
 
 
 /**
- * Makes a depth announcement.
+ * Moving to the home position.
  * @return {?sre.Focus}
  * @protected
  */
-sre.AbstractWalker.prototype.root = function() {
-  this.moved = sre.AbstractWalker.move.ROOT;
-  this.clearLevels();
+sre.AbstractWalker.prototype.home = function() {
+  this.moved = sre.AbstractWalker.move.HOME;
+  this.levels = this.initLevels();
   return new sre.Focus({nodes: [this.rootNode], primary: this.rootNode});
 };
 
@@ -451,18 +451,10 @@ sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
 
 
 /**
- * Returns a new level structure suitable for the walker.
- * @return {!sre.Levels} The new, empty level structure.
+ * Returns a new, initialised level structure suitable for the walker.
+ * @return {!sre.Levels} The new level structure initialised with root focus.
  */
-sre.AbstractWalker.prototype.levelFactory = goog.abstractMethod;
-
-
-/**
- * Finds the focus on the current level for a given node id.
- */
-sre.AbstractWalker.prototype.clearLevels = function() {
-  this.levels = this.levelFactory();
-};
+sre.AbstractWalker.prototype.initLevels = goog.abstractMethod;
 
 
 /**

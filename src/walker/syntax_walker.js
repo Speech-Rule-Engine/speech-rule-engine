@@ -36,18 +36,18 @@ goog.require('sre.WalkerUtil');
 sre.SyntaxWalker = function(node, generator, highlighter, xml) {
   sre.SyntaxWalker.base(this, 'constructor', node, generator, highlighter, xml);
 
-  this.levels.push([this.primaryId()]);
-
   this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
 
 
 /**
- * @return {!sre.Levels<string>} Levels of strings.
+ * @return {!sre.Levels<!string>} Levels of strings.
  */
-sre.SyntaxWalker.prototype.levelFactory = function() {
-  return new sre.Levels();
+sre.SyntaxWalker.prototype.initLevels = function() {
+  var levels = new sre.Levels();
+  levels.push([this.primaryId()]);
+  return levels;
 };
 
 
