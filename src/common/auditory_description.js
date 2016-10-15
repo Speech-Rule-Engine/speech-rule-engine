@@ -206,7 +206,7 @@ sre.AuditoryDescription.mergePause_ = function(oldPause, newPause, opt_merge) {
 /**
  * Merges new personality into the old personality markup.
  * @param {Object} oldPers Old personality markup.
- * @param {Object} newPers New personality markup.
+ * @param {Object|string} newPers New personality markup.
  * @private
  */
 sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
@@ -226,20 +226,20 @@ sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
 sre.AuditoryDescription.PersonalityRanges_ = {};
 sre.AuditoryDescription.LastOpen = [];
 
-/**
- * Translates a list of auditory descriptions into a string with recursive ACSS
- * markup. Currently returns an sexp for emacs speak.
- * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
- * @param {string} separator The separator string.
- * @return {string} The generated string with ACSS markup.
- * @private
- */
-sre.AuditoryDescription.toRelativeAcssString_ = function(descrs, separator) {
-  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
-  var nested = sre.AuditoryDescription.nestedMarkup_(markup);
-  return sre.AuditoryDescription.toSexp(nested);
-};
+// /**
+//  * Translates a list of auditory descriptions into a string with recursive ACSS
+//  * markup. Currently returns an sexp for emacs speak.
+//  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+//  * @param {string} separator The separator string.
+//  * @return {string} The generated string with ACSS markup.
+//  * @private
+//  */
+// sre.AuditoryDescription.toRelativeAcssString_ = function(descrs, separator) {
+//   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+//   sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
+//   var nested = sre.AuditoryDescription.nestedMarkup_(markup);
+//   return sre.AuditoryDescription.toSexp(nested);
+// };
 
 
 sre.AuditoryDescription.toSexp = function(markup) {
