@@ -30,7 +30,7 @@ goog.require('sre.MathStore');
  * @extends {sre.MathStore}
  */
 sre.MathmlStore = function() {
-  goog.base(this);
+  sre.MathmlStore.base(this, 'constructor');
 };
 goog.inherits(sre.MathmlStore, sre.MathStore);
 goog.addSingletonGetter(sre.MathmlStore);

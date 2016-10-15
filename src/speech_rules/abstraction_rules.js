@@ -21,8 +21,6 @@
 goog.provide('sre.AbstractionRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 
@@ -32,7 +30,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathStore}
  */
 sre.AbstractionRules = function() {
-  goog.base(this);
+  sre.AbstractionRules.base(this, 'constructor');
 };
 goog.inherits(sre.AbstractionRules, sre.MathStore);
 goog.addSingletonGetter(sre.AbstractionRules);
@@ -594,7 +592,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '@role!="unknown"', 'count(./children/*)>2'
   );
   defineUniqueRuleAlias(
-    'abstr-relation', 'mathspeak.brief', 'self::multirel[@alternative]',
+      'abstr-relation', 'mathspeak.brief', 'self::multirel[@alternative]',
       '@role!="unknown"', 'count(./children/*)>2'
   );
   defineSpecialisedRule(

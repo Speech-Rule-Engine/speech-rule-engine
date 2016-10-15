@@ -32,7 +32,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathStore}
  */
 sre.SemanticTreeRules = function() {
-  goog.base(this);
+  sre.SemanticTreeRules.base(this, 'constructor');
 };
 goog.inherits(sre.SemanticTreeRules, sre.MathStore);
 goog.addSingletonGetter(sre.SemanticTreeRules);

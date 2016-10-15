@@ -29,7 +29,7 @@ goog.require('sre.AbstractRuleTest');
  * @extends {sre.AbstractRuleTest}
  */
 sre.MathmlCloudTest = function() {
-  goog.base(this);
+  sre.MathmlCloudTest.base(this, 'constructor');
 
   /**
    * @override

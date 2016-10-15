@@ -33,15 +33,15 @@ sre.EnrichCaseFactory = function() {};
 /**
  * Type annotation to get around Closure parsing problems for functions as
  * optional parameters.
- * @typedef {{test: !function(!sre.SemanticTree.Node): boolean,
- *      constr: !function(new:sre.AbstractEnrichCase, sre.SemanticTree.Node)}}
+ * @typedef {{test: !function(!sre.SemanticNode): boolean,
+ *      constr: !function(new:sre.AbstractEnrichCase, sre.SemanticNode)}}
  */
 sre.EnrichCaseFactory.Case;
 
 
 /**
  * Returns the embellished case analysis.
- * @param {sre.SemanticTree.Node} node The semantic node.
+ * @param {sre.SemanticNode} node The semantic node.
  * @return {sre.EnrichCase} The case analysis.
  */
 sre.EnrichCaseFactory.getEmbellishedCase = function(node) {
@@ -50,7 +50,7 @@ sre.EnrichCaseFactory.getEmbellishedCase = function(node) {
 
 
 /**
- * @type {function(new:sre.AbstractEnrichCase, sre.SemanticTree.Node)}
+ * @type {function(new:sre.AbstractEnrichCase, sre.SemanticNode)}
  */
 sre.EnrichCaseFactory.embellishedCase;
 
@@ -64,7 +64,7 @@ sre.EnrichCaseFactory.cases = [];
 
 /**
  * Returns the embellished case analysis.
- * @param {!sre.SemanticTree.Node} node The semantic node.
+ * @param {!sre.SemanticNode} node The semantic node.
  * @return {sre.EnrichCase} The case analysis.
  */
 sre.EnrichCaseFactory.getCase = function(node) {

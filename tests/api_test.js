@@ -33,7 +33,7 @@ goog.require('sre.System');
  * @extends {sre.AbstractTest}
  */
 sre.ApiTest = function() {
-  goog.base(this);
+  sre.ApiTest.base(this, 'constructor');
 
   this.information = 'API function test.';
 

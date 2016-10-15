@@ -32,7 +32,7 @@ goog.require('sre.EnrichMathml.Attribute');
  * @extends {sre.AbstractSpeechGenerator}
  */
 sre.AdhocSpeechGenerator = function() {
-  goog.base(this);
+  sre.AdhocSpeechGenerator.base(this, 'constructor');
 };
 goog.inherits(sre.AdhocSpeechGenerator, sre.AbstractSpeechGenerator);
 

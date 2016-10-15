@@ -28,11 +28,8 @@
  */
 
 goog.provide('sre.SpeechRule');
-goog.provide('sre.SpeechRule.Action');
-goog.provide('sre.SpeechRule.Component');
-goog.provide('sre.SpeechRule.DynamicCstr');
-goog.provide('sre.SpeechRule.Precondition');
-goog.provide('sre.SpeechRule.Type');
+
+goog.require('sre.DynamicCstr');
 
 
 
@@ -40,15 +37,14 @@ goog.provide('sre.SpeechRule.Type');
  * Creates a speech rule with precondition, actions and admin information.
  * @constructor
  * @param {string} name The name of the rule.
- * @param {sre.SpeechRule.DynamicCstr} dynamic Dynamic constraint annotations
- *     of the rule.
+ * @param {!sre.DynamicCstr} dynamic Dynamic constraint annotations of the rule.
  * @param {sre.SpeechRule.Precondition} prec Precondition of the rule.
  * @param {sre.SpeechRule.Action} action Action of the speech rule.
  */
 sre.SpeechRule = function(name, dynamic, prec, action) {
   /** @type {string} */
   this.name = name;
-  /** @type {sre.SpeechRule.DynamicCstr} */
+  /** @type {!sre.DynamicCstr} */
   this.dynamicCstr = dynamic;
   /** @type {sre.SpeechRule.Precondition} */
   this.precondition = prec;
@@ -63,7 +59,7 @@ sre.SpeechRule = function(name, dynamic, prec, action) {
  */
 sre.SpeechRule.prototype.toString = function() {
   return this.name + ' | ' +
-      sre.SpeechRule.stringifyCstr(this.dynamicCstr) + ' | ' +
+      this.dynamicCstr.toString() + ' | ' +
       this.precondition.toString() + ' ==> ' +
       this.action.toString();
 };
@@ -223,7 +219,7 @@ sre.SpeechRule.Component.prototype.addAttributes = function(attrs) {
         'Invalid attribute expression: ' + attrs);
   }
   var attribs = sre.SpeechRule.splitString_(attrs.slice(1, -1), ',');
-  for (var i = 0; i < attribs.length; i++) {
+  for (var i = 0, m = attribs.length; i < m; i++) {
     this.addAttribute(attribs[i]);
   }
 };
@@ -266,7 +262,7 @@ sre.SpeechRule.Action.fromString = function(input) {
       .filter(function(x) {return x.match(/\S/);})
       .map(function(x) {return x.trim();});
   var newComps = [];
-  for (var i = 0; i < comps.length; i++) {
+  for (var i = 0, m = comps.length; i < m; i++) {
     var comp = sre.SpeechRule.Component.fromString(comps[i]);
     if (comp) {
       newComps.push(comp);
@@ -359,40 +355,6 @@ sre.SpeechRule.splitString_ = function(str, sep) {
 };
 
 
-/**
- * Attributes for dynamic constraints.
- * We define one default attribute as style. Speech rule stores can add other
- * attributes later.
- * @enum {string}
- */
-sre.SpeechRule.DynamicCstrAttrib =
-    {
-      STYLE: 'style'
-    };
-
-
-/**
- * Dynamic constraints are a means to specialize rules that can be changed
- * dynamically by the user, for example by choosing different styles, etc.
- * @typedef {!Object.<sre.SpeechRule.DynamicCstrAttrib, string>}
- */
-sre.SpeechRule.DynamicCstr;
-
-
-/**
- * Stringifies a dynamic constraint.
- * @param {sre.SpeechRule.DynamicCstr} cstr The constraint.
- * @return {string} The string version.
- */
-sre.SpeechRule.stringifyCstr = function(cstr) {
-  var cstrStrings = [];
-  for (var key in cstr) {
-    cstrStrings.push(cstr[key]);
-  }
-  return cstrStrings.join('.');
-};
-
-
 
 /**
  * Error object for signaling parsing errors.
@@ -401,7 +363,7 @@ sre.SpeechRule.stringifyCstr = function(cstr) {
  * @extends {Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
-  goog.base(this);
+  sre.SpeechRule.OutputError.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'RuleError';
 };

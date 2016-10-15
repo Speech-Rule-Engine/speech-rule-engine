@@ -14,12 +14,12 @@
 
 
 /**
- * @fileoverview Interface for Math SpeechGenerators.
+ * @fileoverview Interface for Math Speech Generators.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SpeechGeneratorInterface');
+goog.provide('sre.SpeechGenerator');
 
 goog.require('sre.RebuildStree');
 
@@ -28,7 +28,7 @@ goog.require('sre.RebuildStree');
 /**
  * @interface
  */
-sre.SpeechGeneratorInterface = function() { };
+sre.SpeechGenerator = function() { };
 
 
 /**
@@ -37,30 +37,30 @@ sre.SpeechGeneratorInterface = function() { };
  * @param {!Element} xml The base xml element belonging to node.
  * @return {!string} The speech string computed for this element.
  */
-sre.SpeechGeneratorInterface.prototype.getSpeech = function(node, xml) {};
+sre.SpeechGenerator.prototype.getSpeech = function(node, xml) {};
 
 
 /**
  * Returns the semantic tree rebuilt from the base xml element.
  * @return {sre.RebuildStree} The reconstructed semantic tree.
  */
-sre.SpeechGeneratorInterface.prototype.getRebuilt = function() {};
+sre.SpeechGenerator.prototype.getRebuilt = function() {};
 
 
 /**
  * Sets the rebuilt semantic tree object of the speech generator.
  * @param {!sre.RebuildStree} rebuilt The reconstructed semantic tree.
  */
-sre.SpeechGeneratorInterface.prototype.setRebuilt = function(rebuilt) {};
+sre.SpeechGenerator.prototype.setRebuilt = function(rebuilt) {};
 
 
 /**
  * Sets up or resets the speech generator.
  */
-sre.SpeechGeneratorInterface.prototype.start = function() {};
+sre.SpeechGenerator.prototype.start = function() {};
 
 
 /**
  * Cleans up after ending speech generation.
  */
-sre.SpeechGeneratorInterface.prototype.end = function() {};
+sre.SpeechGenerator.prototype.end = function() {};

@@ -29,7 +29,6 @@ goog.provide('sre.EventUtil.KeyCode');
  * @enum {number}
  */
 sre.EventUtil.KeyCode = {
-  RETURN: 13,
   ENTER: 13,
   ESC: 27,
   SPACE: 32,

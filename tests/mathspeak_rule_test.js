@@ -28,7 +28,7 @@ goog.require('sre.AbstractRuleTest');
  * @extends {sre.AbstractRuleTest}
  */
 sre.MathspeakRuleTest = function() {
-  goog.base(this);
+  sre.MathspeakRuleTest.base(this, 'constructor');
 
   /**
    * @override

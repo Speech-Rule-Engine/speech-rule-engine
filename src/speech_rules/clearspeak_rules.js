@@ -20,17 +20,21 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.MathStore');
-goog.require('sre.StoreUtil');
 
 
 
+//TODO: (MOSS) WP 2.2
+// * Turn into a proper rule store rather than a mathspeak style
+// * Implement rules from http://www.dessci.com/en/reference/ies-ets/
+// * Implement preference settings
+//
 /**
  * Rule initialization.
  * @constructor
  * @extends {sre.MathStore}
  */
 sre.ClearspeakRules = function() {
-  goog.base(this);
+  sre.ClearspeakRules.base(this, 'constructor');
 };
 goog.inherits(sre.ClearspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.ClearspeakRules);

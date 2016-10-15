@@ -24,7 +24,6 @@ goog.require('sre.AbstractEnrichCase');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
 
 
 
@@ -34,7 +33,7 @@ goog.require('sre.SemanticTree.Node');
  * @override
  */
 sre.CaseMultiindex = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseMultiindex.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}
@@ -79,7 +78,7 @@ sre.CaseMultiindex.prototype.completeMultiscript = function(
   completeIndices(rightIndices);
   // mprescripts
   if (children[childCounter] &&
-      sre.SemanticUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
+      sre.DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
     this.mml.insertBefore(
         children[childCounter],
         sre.DomUtil.createElement('mprescripts'));
@@ -93,7 +92,7 @@ sre.CaseMultiindex.prototype.completeMultiscript = function(
 
 /**
  * Creates a None node.
- * @param {sre.SemanticTree.Node} semantic An empty semantic node.
+ * @param {sre.SemanticNode} semantic An empty semantic node.
  * @return {!Element} The corresponding MathML <None/> node.
  * @private
  */
@@ -110,7 +109,7 @@ sre.CaseMultiindex.createNone_ = function(semantic) {
 /**
  * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
  * punctuations.
- * @param {sre.SemanticTree.Node} index The index node of a tensor.
+ * @param {sre.SemanticNode} index The index node of a tensor.
  * @return {!sre.EnrichMathml.Collapsed_} If the index node was a
  *     dummy punctuation, i.e. consisted of more than one index, a list of
  *     strings for the collapsed structure is returned, otherwise the node id.
