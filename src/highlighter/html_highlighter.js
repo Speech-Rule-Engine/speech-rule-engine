@@ -30,7 +30,7 @@ goog.require('sre.AbstractHighlighter');
  * @extends {sre.AbstractHighlighter}
  */
 sre.HtmlHighlighter = function() {
-  goog.base(this);
+  sre.HtmlHighlighter.base(this, 'constructor');
 
   this.mactionName = 'maction';
 

@@ -51,7 +51,6 @@
  */
 
 goog.provide('sre.SemanticAttr');
-goog.provide('sre.SemanticAttr.Role');
 
 goog.require('sre.SemanticUtil');
 

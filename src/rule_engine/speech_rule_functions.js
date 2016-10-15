@@ -20,9 +20,6 @@
  */
 
 goog.provide('sre.SpeechRuleFunctions');
-goog.provide('sre.SpeechRuleFunctions.ContextFunctions');
-goog.provide('sre.SpeechRuleFunctions.CustomQueries');
-goog.provide('sre.SpeechRuleFunctions.CustomStrings');
 
 
 
@@ -97,7 +94,7 @@ sre.SpeechRuleFunctions.CustomQuery;
 sre.SpeechRuleFunctions.CustomQueries = function() {
   var store =
       /** @type {!Object.<string, sre.SpeechRuleFunctions.CustomQuery>} */ ({});
-  goog.base(this, 'CQF', store);
+  sre.SpeechRuleFunctions.CustomQueries.base(this, 'constructor', 'CQF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomQueries,
               sre.SpeechRuleFunctions.Store_);
@@ -119,7 +116,7 @@ sre.SpeechRuleFunctions.CustomStrings = function() {
   var store =
       /** @type {!Object.<string, sre.SpeechRuleFunctions.CustomString>} */
       ({});
-  goog.base(this, 'CSF', store);
+  sre.SpeechRuleFunctions.CustomStrings.base(this, 'constructor', 'CSF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomStrings,
               sre.SpeechRuleFunctions.Store_);
@@ -141,7 +138,8 @@ sre.SpeechRuleFunctions.ContextFunctions = function() {
   var store =
       /** @type {!Object.<string, sre.SpeechRuleFunctions.ContextFunction>} */
       ({});
-  goog.base(this, 'CTXF', store);
+  sre.SpeechRuleFunctions.ContextFunctions.base(
+      this, 'constructor', 'CTXF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
               sre.SpeechRuleFunctions.Store_);

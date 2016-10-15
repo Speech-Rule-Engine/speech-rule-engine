@@ -20,9 +20,9 @@
 
 goog.provide('sre.PrefixRules');
 
+goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 
@@ -32,7 +32,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathStore}
  */
 sre.PrefixRules = function() {
-  goog.base(this);
+  sre.PrefixRules.base(this, 'constructor');
 };
 goog.inherits(sre.PrefixRules, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixRules);

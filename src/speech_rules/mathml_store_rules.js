@@ -33,7 +33,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathmlStore}
  */
 sre.MathmlStoreRules = function() {
-  goog.base(this);
+  sre.MathmlStoreRules.base(this, 'constructor');
 };
 goog.inherits(sre.MathmlStoreRules, sre.MathmlStore);
 goog.addSingletonGetter(sre.MathmlStoreRules);

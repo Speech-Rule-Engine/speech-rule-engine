@@ -23,9 +23,12 @@
 goog.provide('sre.SpeechGeneratorUtil');
 
 goog.require('sre.AuditoryDescription');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
+goog.require('sre.SemanticTree');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.WalkerUtil');
+goog.require('sre.XpathUtil');
 
 
 /**
@@ -44,7 +47,7 @@ sre.SpeechGeneratorUtil.computeSpeech = function(xml) {
 /**
  * Computes speech descriptions for a single semantic node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
  *     for the node.
  */
@@ -57,7 +60,7 @@ sre.SpeechGeneratorUtil.recomputeSpeech = function(mml, semantic) {
 /**
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
   var descrs = sre.SpeechRuleEngine.getInstance().
@@ -73,7 +76,7 @@ sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
 /**
  * Adds a speech prefix if necessary.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
   var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
@@ -84,7 +87,7 @@ sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
 
 /**
  * Adds a speech prefix if necessary.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
  *     for the prefix.
  * @private
@@ -156,7 +159,6 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
 sre.SpeechGeneratorUtil.connectAllMactions = function(mml, stree) {
   var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
   for (var i = 0, maction; maction = mactions[i]; i++) {
-    var aid = maction.getAttribute('id');
     var lchild = maction.childNodes[1];
     var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];

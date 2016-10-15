@@ -24,8 +24,6 @@ goog.provide('sre.AuditoryDescription');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
-goog.require('sre.MathMap');
-goog.require('sre.MathStore');
 
 
 
@@ -384,6 +382,10 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
 };
 
 
+//TODO: (MOSS) WP2.3
+// Implement translations into SSML and CSS.
+// Cleaner than the hack for the NVDA/EmacsSpeak bridge!
+//
 /**
  * Translates a list of auditory descriptions into a string with SSML markup.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
@@ -668,13 +670,11 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
-  if (sre.Engine.getInstance().domain == 'mathspeak' && text.match(/^\d{1}$/)) {
+  var engine = sre.Engine.getInstance();
+  if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
   }
-  var dynamicCstr = sre.MathStore.createDynamicConstraint(
-      sre.Engine.getInstance().domain,
-      sre.Engine.getInstance().style);
-  var result = sre.MathMap.getInstance().store.lookupString(text, dynamicCstr);
+  var result = engine.evaluator(text, engine.dynamicCstr);
   return result || text;
 };
 

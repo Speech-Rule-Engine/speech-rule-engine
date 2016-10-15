@@ -36,7 +36,7 @@ goog.require('sre.XpathUtil');
  */
 sre.DomUtil.toArray = function(nodeList) {
   var nodeArray = [];
-  for (var i = 0; i < nodeList.length; i++) {
+  for (var i = 0, m = nodeList.length; i < m; i++) {
     nodeArray.push(nodeList[i]);
   }
   return nodeArray;
@@ -243,4 +243,14 @@ sre.DomUtil.querySelectorAll = function(node, tag) {
   return (node.querySelectorAll ?
           sre.DomUtil.toArray(node.querySelectorAll(tag)) :
           sre.XpathUtil.evalXPath('.//' + tag, node));
+};
+
+
+/**
+ * Returns the tagname of an element node in upper case.
+ * @param {Element} node The node.
+ * @return {string} The node's tagname.
+ */
+sre.DomUtil.tagName = function(node) {
+  return node.tagName.toUpperCase();
 };

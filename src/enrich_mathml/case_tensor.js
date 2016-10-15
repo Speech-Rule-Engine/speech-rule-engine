@@ -23,7 +23,6 @@ goog.provide('sre.CaseTensor');
 goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
 
 
 
@@ -34,7 +33,7 @@ goog.require('sre.SemanticTree.Node');
  * @final
  */
 sre.CaseTensor = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseTensor.base(this, 'constructor', semantic);
 };
 goog.inherits(sre.CaseTensor, sre.CaseMultiindex);
 
@@ -52,7 +51,7 @@ sre.CaseTensor.test = function(semantic) {
  */
 sre.CaseTensor.prototype.getMathml = function() {
   sre.EnrichMathml.walkTree(
-      /**@type{!sre.SemanticTree.Node}*/(this.semantic.childNodes[0]));
+      /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[0]));
   var lsub = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
   var lsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
   var rsub = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);

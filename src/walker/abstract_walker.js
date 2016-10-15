@@ -21,25 +21,26 @@
 
 goog.provide('sre.AbstractWalker');
 
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
-goog.require('sre.HighlighterInterface');
+goog.require('sre.Highlighter');
 goog.require('sre.RebuildStree');
-goog.require('sre.SpeechGeneratorInterface');
+goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
-goog.require('sre.WalkerInterface');
+goog.require('sre.Walker');
 goog.require('sre.WalkerUtil');
 
 
 
 /**
  * @constructor
- * @implements {sre.WalkerInterface}
+ * @implements {sre.Walker}
  * @param {!Node} node The (rendered) node on which the walker is called.
- * @param {!sre.SpeechGeneratorInterface} generator The speech generator for
+ * @param {!sre.SpeechGenerator} generator The speech generator for
  *     this walker.
- * @param {!sre.HighlighterInterface} highlighter The currently active
+ * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
  * @param {!string} xml The original xml/mathml node on which the walker is
  *      called as a string.
@@ -60,7 +61,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.xml = sre.DomUtil.parseInput(xml);
 
   /**
-   * @type {!sre.SpeechGeneratorInterface}
+   * @type {!sre.SpeechGenerator}
    */
   this.generator = generator;
 
@@ -73,7 +74,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   //TODO: This is problematic as it will sometimes not be instantiated if called
   //      from MathJax.
   /**
-   * @type {!sre.HighlighterInterface}
+   * @type {!sre.Highlighter}
    */
   this.highlighter = highlighter;
 
@@ -118,13 +119,6 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {sre.AbstractWalker.move}
    */
   this.moved = sre.AbstractWalker.move.ENTER;
-
-  /**
-   * Shift pressed?
-   * @type {boolean}
-   * @private
-   */
-  this.shift_ = false;
 
 };
 

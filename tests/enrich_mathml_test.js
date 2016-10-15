@@ -22,6 +22,7 @@ goog.provide('sre.EnrichMathmlTest');
 goog.require('sre.AbstractExamples');
 goog.require('sre.DomUtil');
 goog.require('sre.Enrich');
+goog.require('sre.SystemExternal');
 
 
 
@@ -30,7 +31,7 @@ goog.require('sre.Enrich');
  * @extends {sre.AbstractExamples}
  */
 sre.EnrichMathmlTest = function() {
-  goog.base(this);
+  sre.EnrichMathmlTest.base(this, 'constructor');
 
   /**
    * @override

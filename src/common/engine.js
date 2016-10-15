@@ -14,7 +14,8 @@
 
 
 /**
- * @fileoverview Basic functionality for the Speech Rule Engine
+ * @fileoverview Basic parameters and global machinery for the Speech Rule
+ *     Engine.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -44,7 +45,29 @@ sre.Engine = function() {
    */
   this.alternativeHost = null;
 
-  // TODO (sorge) Refactor into a common dynamic constraints object.
+  /**
+   * Collates all values of the dynamic constraints.
+   * @type {!Object.<sre.Engine.Axis, !Object.<string, boolean>>}
+   */
+  this.axisValues = sre.Engine.makeAxisValueObject_();
+
+
+  /**
+   * @type {function(string, sre.DynamicCstr): string}
+   */
+  this.evaluator = sre.Engine.defaultEvaluator;
+
+  /**
+   * @type {sre.DynamicCstr}
+   */
+  this.dynamicCstr = null;
+
+  /**
+   * @type {sre.DynamicCstr.Comparator}
+   */
+  this.comparator = null;
+
+  // TODO (sorge) To remove.
   /**
    * List of domain names.
    * @type {!Array.<string>}
@@ -184,6 +207,21 @@ sre.Engine.Markup = {
 
 
 /**
+ * Attributes for dynamic constraints.
+ * We define one default attribute as style. Speech rule stores can add other
+ * attributes later.
+ * @enum {string}
+ */
+sre.Engine.Axis = {
+  DOMAIN: 'domain',
+  STYLE: 'style',
+  LANGUAGE: 'language',
+  TOPIC: 'topic',
+  MODALITY: 'modality'
+};
+
+
+/**
  * Registers a predicate to test whether the setup of the engine is complete.
  * The basic idea is that different parts of the system that run asynchronously
  * can register a test here and the engine can check if it is set up without the
@@ -213,4 +251,43 @@ sre.Engine.isReady = function() {
 sre.Engine.prototype.setupBrowsers = function() {
   this.isIE = sre.BrowserUtil.detectIE();
   this.isEdge = sre.BrowserUtil.detectEdge();
+};
+
+
+/**
+ * Initialises an object for collecting all values per axis.
+ * @return {!Object.<sre.Engine.Axis, !Object.<string, boolean>>} The
+ *     nested object structure.
+ * @private
+ */
+sre.Engine.makeAxisValueObject_ = function() {
+  var result = {};
+  for (var axis in sre.Engine.Axis) {
+    result[sre.Engine.Axis[axis]] = {};
+  }
+  return result;
+};
+
+
+/**
+ * @return {!Object.<sre.Engine.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.Engine.prototype.getAxisValues = function() {
+  var result = {};
+  for (var key in this.axisValues) {
+    result[key] = Object.keys(this.axisValues[key]);
+  }
+  return result;
+};
+
+
+/**
+ * A dummy string evaluator.
+ * @param {string} str A string.
+ * @param {sre.DynamicCstr} cstr A dynamic constraint.
+ * @return {string} The evaluated string.
+ */
+sre.Engine.defaultEvaluator = function(str, cstr) {
+  return str;
 };

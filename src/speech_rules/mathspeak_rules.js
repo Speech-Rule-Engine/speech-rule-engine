@@ -22,7 +22,6 @@ goog.provide('sre.MathspeakRules');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 
@@ -32,7 +31,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathStore}
  */
 sre.MathspeakRules = function() {
-  goog.base(this);
+  sre.MathspeakRules.base(this, 'constructor');
 };
 goog.inherits(sre.MathspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakRules);
