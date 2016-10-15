@@ -96,6 +96,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.root, this);
 
   this.dummy_ = function() {};
 
@@ -105,6 +106,12 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!Node}
    */
   this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
+
+  /**
+   * Caching of levels.
+   * @type {!sre.Levels}
+   */
+  this.levels = this.levelFactory();
 
   /**
    * The node that currently inspected. Initially this is the entire math
@@ -135,7 +142,8 @@ sre.AbstractWalker.move = {
   REPEAT: 'repeat',
   DEPTH: 'depth',
   ENTER: 'enter',
-  EXPAND: 'expand'
+  EXPAND: 'expand',
+  ROOT: 'root'
 };
 
 
@@ -316,6 +324,18 @@ sre.AbstractWalker.prototype.depth = function() {
 
 
 /**
+ * Makes a depth announcement.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.root = function() {
+  this.moved = sre.AbstractWalker.move.ROOT;
+  this.clearLevels();
+  return new sre.Focus({nodes: [this.rootNode], primary: this.rootNode});
+};
+
+
+/**
  * Retrieves a node containing a given semantic id.
  * @param {string} id The id of a semantic node.
  * @return {Node} The node for that id.
@@ -428,6 +448,21 @@ sre.AbstractWalker.prototype.restoreState = function() {
  * @return {sre.Focus} The focus on a particular level.
  */
 sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
+
+
+/**
+ * Returns a new level structure suitable for the walker.
+ * @return {!sre.Levels} The new, empty level structure.
+ */
+sre.AbstractWalker.prototype.levelFactory = goog.abstractMethod;
+
+
+/**
+ * Finds the focus on the current level for a given node id.
+ */
+sre.AbstractWalker.prototype.clearLevels = function() {
+  this.levels = this.levelFactory();
+};
 
 
 /**

@@ -37,17 +37,19 @@ sre.SemanticWalker = function(node, generator, highlighter, xml) {
   sre.SemanticWalker.base(
       this, 'constructor', node, generator, highlighter, xml);
 
-  /**
-   * Caching of levels.
-   * @type {!sre.Levels<sre.Focus>}
-   */
-  this.levels = new sre.Levels();
-
   this.levels.push([this.getFocus()]);
 
   this.restoreState();
 };
 goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
+
+
+/**
+ * @return {!sre.Levels<sre.Focus>} Levels of strings.
+ */
+sre.SemanticWalker.prototype.levelFactory = function() {
+  return new sre.Levels();
+};
 
 
 //TODO: Remove or refactor.

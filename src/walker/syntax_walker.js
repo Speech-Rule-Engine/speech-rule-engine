@@ -36,17 +36,19 @@ goog.require('sre.WalkerUtil');
 sre.SyntaxWalker = function(node, generator, highlighter, xml) {
   sre.SyntaxWalker.base(this, 'constructor', node, generator, highlighter, xml);
 
-  /**
-   * Caching of levels.
-   * @type {!sre.Levels<string>}
-   */
-  this.levels = new sre.Levels();
-
   this.levels.push([this.primaryId()]);
 
   this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
+
+
+/**
+ * @return {!sre.Levels<string>} Levels of strings.
+ */
+sre.SyntaxWalker.prototype.levelFactory = function() {
+  return new sre.Levels();
+};
 
 
 /**
