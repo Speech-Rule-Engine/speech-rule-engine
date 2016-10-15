@@ -236,7 +236,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'fraction', 'default.default',
       '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
-          ' [t] "over"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
+          ' [t] "divided by"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
       'self::fraction');
 
   defineRule(

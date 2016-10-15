@@ -540,7 +540,7 @@ sre.ApiTest.prototype.testToEnriched = function() {
  */
 sre.ApiTest.prototype.testWalker = function() {
   var move = function(dir) {
-    return sre.EventUtil.KeyCode[dir].toString();
+    return sre.EventUtil.KeyCode[dir];
   };
   this.executeTest(
       'walk',
