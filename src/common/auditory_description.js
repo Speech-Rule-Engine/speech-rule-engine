@@ -740,3 +740,22 @@ sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
     return c * (1 - delta) + d * delta;
   };
 };
+
+
+/**
+ * Merges description strings, depending on the current markup selection.
+ * @param {Array.<string>} strs The description strings.
+ * @return {string} A single string.
+ */
+
+sre.AuditoryDescription.mergeStrings = function(strs) {
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.ACSS:
+    return '(exp ' +
+      strs.map(function(str) {
+        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+      ')';
+  default:
+    return strs.join(' ');
+  }
+};
