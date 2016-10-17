@@ -21,6 +21,7 @@
 
 goog.provide('sre.AbstractWalker');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
@@ -218,7 +219,7 @@ sre.AbstractWalker.prototype.speech = function() {
         return this.generator.getSpeech(x, this.xml);
       }, this));
   if (prefix) speech.unshift(prefix);
-  return speech.join(' ');
+  return sre.AuditoryDescription.mergeStrings(speech);
 };
 
 
@@ -233,8 +234,17 @@ sre.AbstractWalker.prototype.speech = function() {
 sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   var primary = this.focus_.getPrimary();
   var expand = (this.expandable(primary) && ' expandable') ||
-      (this.collapsible(primary) && ' collapsible') || '';
-  return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '') + expand;
+        (this.collapsible(primary) && ' collapsible') || '';
+  var descr = [sre.AuditoryDescription.speechString(
+    [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
+                                  personality: {}})])];
+  if (prefix) {
+    descr.push(prefix);
+  }
+  if (expand) {
+    descr.push(expand);
+  }
+  return sre.AuditoryDescription.mergeStrings(descr);
 };
 
 
@@ -251,6 +261,9 @@ sre.AbstractWalker.prototype.move = function(key) {
     return false;
   }
   this.focus_ = focus;
+  if (this.moved === sre.AbstractWalker.move.HOME) {
+    this.levels = this.initLevels();
+  }
   return true;
 };
 
@@ -330,7 +343,6 @@ sre.AbstractWalker.prototype.depth = function() {
  */
 sre.AbstractWalker.prototype.home = function() {
   this.moved = sre.AbstractWalker.move.HOME;
-  this.levels = this.initLevels();
   return new sre.Focus({nodes: [this.rootNode], primary: this.rootNode});
 };
 
