@@ -398,7 +398,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
   defineRule(
       'sum-only', 'emacspeak.default',
       '[n] children/*[1]; [t] "from"; [n] children/*[2]; [t] "to";' +
-      '[n] children/*[3]', 'self::limboth', 'self::limboth[@role="sum"]');
+      '[n] children/*[3]', 'self::limboth', '@role="sum" or @role="integral"');
 
   defineRule(
       'limboth', 'emacspeak.default',
