@@ -445,12 +445,10 @@ sre.System.prototype.walk = function(expr) {
       sre.HighlighterFactory.highlighter(
       {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
   var node = sre.System.getInstance().toEnriched(expr);
-  var wrapper = /** @type {!Node} */ (sre.DomUtil.parseInput('<dummy/>'));
-  wrapper.appendChild(node);
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
-      serializeToString(wrapper);
+      serializeToString(node);
   sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      'Syntax', wrapper, generator, highlighter, eml);
+      'Syntax', node, generator, highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };
 

@@ -123,6 +123,9 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
  * @return {Node} The node for that id.
  */
 sre.WalkerUtil.getBySemanticId = function(root, id) {
+  if (root.getAttribute(sre.EnrichMathml.Attribute.ID) === id) {
+    return root;
+  }
   return sre.DomUtil.querySelectorAllByAttrValue(
-      root, sre.EnrichMathml.Attribute.ID, id)[0];
+    root, sre.EnrichMathml.Attribute.ID, id)[0];
 };
