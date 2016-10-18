@@ -22,6 +22,7 @@ goog.provide('sre.EmacspeakRules');
 
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
+goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
 
@@ -92,6 +93,9 @@ sre.EmacspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
+  addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
+
+  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
   addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
@@ -228,6 +232,17 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
 
   // Fraction
+  defineRule(
+      'simple-fraction', 'emacspeak.default',
+      '[p] (pause:100); [n] children/*[1] (rate:0.35); [t] "over"; ' +
+          ' [n] children/*[2] (rate:-0.35); [p] (pause:100)',
+      'self::fraction',
+      'name(children/*[1])="number" or name(children/*[1])="identifier"',
+      'name(children/*[2])="number" or name(children/*[2])="identifier"');
+  defineRule(
+      'vulgar-fraction', 'emacspeak.default',
+      '[t] CSFvulgarFraction',
+      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
   defineRule(
       'fraction', 'emacspeak.default',
       '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
