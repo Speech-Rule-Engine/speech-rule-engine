@@ -86,7 +86,7 @@ sre.SemanticPred.isSimpleFunction = function(node) {
       return false;
     }
     if (child.childNodes.some(
-      sre.SemanticPred.isAttribute('type', 'INFIXOP'))) {
+        sre.SemanticPred.isAttribute('type', 'INFIXOP'))) {
       return false;
     }
   }

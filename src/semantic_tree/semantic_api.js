@@ -51,27 +51,22 @@ module.exports.Type = sre.Semantic.Type;
 module.exports.NodeFactory = sre.SemanticNodeFactory;
 
 
-// /**
-//  * Exports semantic tree.
-//  */
-// module.exports.SemanticTree = sre.SemanticTree;
-
-
 /**
- * Exports semantic tree constructor.
+ * Exports constructor of empty semantic tree.
  */
 module.exports.emptyTree = sre.SemanticTree.empty;
 
 
+/**
+ * Exports constructor for semantic tree from string.
+ */
 module.exports.getTreeFromString = sre.Semantic.getTreeFromString;
 
-module.exports.getTree = sre.Semantic.getTree;
-
 
 /**
- * Exports semantic tree constructor.
+ * Exports constructor for semantic tree from MML expression.
  */
-module.exports.emptyTree = sre.SemanticTree.empty;
+module.exports.getTree = sre.Semantic.getTree;
 
 
 /**
@@ -84,39 +79,82 @@ module.exports.Processor = {};
  * Setting of node factory for processing.
  */
 module.exports.Processor.setFactory =
-  sre.SemanticProcessor.getInstance().setNodeFactory;
+    sre.SemanticProcessor.getInstance().setNodeFactory;
 
 
+/**
+ * Exports semantic row processing.
+ */
 module.exports.Processor.row =
-  sre.SemanticProcessor.getInstance().row;
+    sre.SemanticProcessor.getInstance().row;
 
+
+/**
+ * Exports semantic processing of identifier nodes.
+ */
 module.exports.Processor.identifierNode =
-  sre.SemanticProcessor.getInstance().identifierNode;
+    sre.SemanticProcessor.getInstance().identifierNode;
 
+
+/**
+ * Exports semantic processing of fraction nodes.
+ */
 module.exports.Processor.fractionLikeNode =
-  sre.SemanticProcessor.getInstance().fractionLikeNode;
+    sre.SemanticProcessor.getInstance().fractionLikeNode;
 
+
+/**
+ * Exports semantic processing of limit nodes.
+ */
 module.exports.Processor.limitNode =
-  sre.SemanticProcessor.getInstance().limitNode;
+    sre.SemanticProcessor.getInstance().limitNode;
 
+
+/**
+ * Exports semantic processing of text nodes.
+ */
 module.exports.Processor.text =
-  sre.SemanticProcessor.getInstance().text;
+    sre.SemanticProcessor.getInstance().text;
 
+
+/**
+ * Exports semantic processing of number nodes.
+ */
 module.exports.Processor.number =
-  sre.SemanticProcessor.number;
+    sre.SemanticProcessor.number;
 
+
+/**
+ * Exports semantic processing of mfenced nodes.
+ */
 module.exports.Processor.mfenced =
-  sre.SemanticProcessor.getInstance().mfenced;
+    sre.SemanticProcessor.getInstance().mfenced;
 
+
+/**
+ * Exports semantic processing of tables.
+ */
 module.exports.Processor.tablesInRow =
-  sre.SemanticProcessor.getInstance().tablesInRow;
+    sre.SemanticProcessor.getInstance().tablesInRow;
 
+
+/**
+ * Exports semantic conversion of tables to multiline expressions.
+ */
 module.exports.Processor.tableToMultiline =
-  sre.SemanticProcessor.tableToMultiline;
+    sre.SemanticProcessor.tableToMultiline;
 
+
+/**
+ * Exports semantic processing of tensor like expressions.
+ */
 module.exports.Processor.pseudoTensor =
-  sre.SemanticProcessor.getInstance().pseudoTensor;
+    sre.SemanticProcessor.getInstance().pseudoTensor;
 
+
+/**
+ * Exports semantic processing of tensor nodes.
+ */
 module.exports.Processor.tensor =
-  sre.SemanticProcessor.getInstance().tensor;
+    sre.SemanticProcessor.getInstance().tensor;
 
