@@ -163,6 +163,19 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       'self::relseq');
 
   defineRule(
+      'implicit', 'emacspeak.default',
+      '[m] children/*', 'self::infixop', '@role="implicit"',
+      'children/*[1][@role="latinletter"] or ' +
+      'children/*[1][@role="greekletter"] or ' +
+      'children/*[1][@role="otherletter"] or ' +
+      'name(children/*[1])="number"',
+      'children/*[2][@role="latinletter"] or ' +
+      'children/*[2][@role="greekletter"] or ' +
+      'children/*[2][@role="otherletter"] or ' +
+      'name(children/*[2])="number"'
+  );
+
+  defineRule(
       'binary-operation', 'emacspeak.default',
       '[p] (pause:100); [m] ./children/* (sepFunc:CTXFcontentIterator);' +
       ' [p] (pause:100);',
@@ -455,13 +468,13 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   defineRule(
       'square', 'emacspeak.default',
-      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:300)',
+      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:200)',
       'self::superscript', 'children/*[2][text()=2]',
       'name(./children/*[1])!="text"');
 
   defineRule(
       'cube', 'emacspeak.default',
-      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:300)',
+      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:200)',
       'self::superscript', 'children/*[2][text()=3]',
       'name(./children/*[1])!="text"');
 
