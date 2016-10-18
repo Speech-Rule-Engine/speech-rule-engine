@@ -51,55 +51,72 @@ module.exports.Type = sre.Semantic.Type;
 module.exports.NodeFactory = sre.SemanticNodeFactory;
 
 
+// /**
+//  * Exports semantic tree.
+//  */
+// module.exports.SemanticTree = sre.SemanticTree;
+
+
 /**
- * Exports semantic tree.
+ * Exports semantic tree constructor.
  */
-module.exports.SemanticTree = sre.SemanticTree;
+module.exports.emptyTree = sre.SemanticTree.empty;
+
+
+module.exports.getTreeFromString = sre.Semantic.getTreeFromString;
+
+module.exports.getTree = sre.Semantic.getTree;
+
+
+/**
+ * Exports semantic tree constructor.
+ */
+module.exports.emptyTree = sre.SemanticTree.empty;
 
 
 /**
  * Exports semantic processing.
  */
-module.exports.SemanticProcessor = {};
+module.exports.Processor = {};
 
 
 /**
  * Setting of node factory for processing.
  */
-module.exports.SemanticProcessor.setFactory =
+module.exports.Processor.setFactory =
   sre.SemanticProcessor.getInstance().setNodeFactory;
 
 
-module.exports.SemanticProcessor.row =
+module.exports.Processor.row =
   sre.SemanticProcessor.getInstance().row;
 
-module.exports.SemanticProcessor.identifierNode =
+module.exports.Processor.identifierNode =
   sre.SemanticProcessor.getInstance().identifierNode;
 
-module.exports.SemanticProcessor.fractionLikeNode =
+module.exports.Processor.fractionLikeNode =
   sre.SemanticProcessor.getInstance().fractionLikeNode;
 
-module.exports.SemanticProcessor.limitNode =
+module.exports.Processor.limitNode =
   sre.SemanticProcessor.getInstance().limitNode;
 
-module.exports.SemanticProcessor.text =
+module.exports.Processor.text =
   sre.SemanticProcessor.getInstance().text;
 
-module.exports.SemanticProcessor.number =
-  sre.SemanticProcessor.getInstance().number;
+module.exports.Processor.number =
+  sre.SemanticProcessor.number;
 
-module.exports.SemanticProcessor.mfenced =
+module.exports.Processor.mfenced =
   sre.SemanticProcessor.getInstance().mfenced;
 
-module.exports.SemanticProcessor.tablesInRow =
+module.exports.Processor.tablesInRow =
   sre.SemanticProcessor.getInstance().tablesInRow;
 
-module.exports.SemanticProcessor.tableToMultiline =
+module.exports.Processor.tableToMultiline =
   sre.SemanticProcessor.tableToMultiline;
 
-module.exports.SemanticProcessor.pseudoTensor =
+module.exports.Processor.pseudoTensor =
   sre.SemanticProcessor.getInstance().pseudoTensor;
 
-module.exports.SemanticProcessor.tensor =
+module.exports.Processor.tensor =
   sre.SemanticProcessor.getInstance().tensor;
 

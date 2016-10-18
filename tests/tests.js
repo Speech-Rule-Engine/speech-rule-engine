@@ -70,22 +70,22 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [
-  sre.ApiTest,
-  sre.ColorPickerTest,
+  // sre.ApiTest,
+  // sre.ColorPickerTest,
   sre.EnrichMathmlTest,
-  // sre.EnrichSpeechTest,
-  sre.MathmlCloudTest,
-  sre.MathmlStoreTest,
-  sre.MathspeakEmbellishTest,
-  sre.MathspeakRuleTest,
-  sre.NobleSamplesTest,
-  sre.PrefixRuleTest,
+  // // sre.EnrichSpeechTest,
+  // sre.MathmlCloudTest,
+  // sre.MathmlStoreTest,
+  // sre.MathspeakEmbellishTest,
+  // sre.MathspeakRuleTest,
+  // sre.NobleSamplesTest,
+  // sre.PrefixRuleTest,
   sre.RebuildStreeTest,
-  sre.SemanticApiTest,
-  sre.SemanticRuleTest,
+  // sre.SemanticApiTest,
+  // sre.SemanticRuleTest,
   sre.SemanticTreeTest,
-  sre.SpeechRuleTest,
-  sre.WalkerTest
+  // sre.SpeechRuleTest,
+  // sre.WalkerTest
 ];
 
 

@@ -20,6 +20,7 @@
 
 goog.provide('sre.SemanticMathml');
 
+goog.require('sre.DomUtil');
 goog.require('sre.SemanticAbstractParser');
 goog.require('sre.SemanticNode');
 goog.require('sre.SemanticNodeFactory');
