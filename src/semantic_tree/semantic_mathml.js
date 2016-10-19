@@ -20,6 +20,7 @@
 
 goog.provide('sre.SemanticMathml');
 
+goog.require('sre.DomUtil');
 goog.require('sre.SemanticAbstractParser');
 goog.require('sre.SemanticNode');
 goog.require('sre.SemanticNodeFactory');
@@ -120,7 +121,7 @@ sre.SemanticMathml.prototype.parseNodes_ = function(mmls) {
  */
 sre.SemanticMathml.prototype.semantics_ = function(node, children) {
   return children.length ? this.parse(/** @type {!Element} */(children[0])) :
-    this.getFactory().makeEmptyNode();
+      this.getFactory().makeEmptyNode();
 };
 
 
@@ -139,7 +140,7 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   } else {
     // Case of a 'meaningful' row, even if they are empty.
     newNode = sre.SemanticProcessor.getInstance().row(
-      this.parseNodes_(children));
+        this.parseNodes_(children));
   }
   newNode.mathml.unshift(node);
   return newNode;
@@ -182,8 +183,8 @@ sre.SemanticMathml.prototype.limits_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.root_ = function(node, children) {
   return this.getFactory().makeBranchNode(
-    sre.SemanticAttr.Type.ROOT,
-    [this.parse(children[1]), this.parse(children[0])], []);
+      sre.SemanticAttr.Type.ROOT,
+      [this.parse(children[1]), this.parse(children[0])], []);
 };
 
 
@@ -211,7 +212,7 @@ sre.SemanticMathml.prototype.sqrt_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.table_ = function(node, children) {
   var newNode = this.getFactory().makeBranchNode(
-    sre.SemanticAttr.Type.TABLE, this.parseNodes_(children), []);
+      sre.SemanticAttr.Type.TABLE, this.parseNodes_(children), []);
   sre.SemanticProcessor.tableToMultiline(newNode);
   return newNode;
 };
@@ -226,7 +227,7 @@ sre.SemanticMathml.prototype.table_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
   var newNode = this.getFactory().makeBranchNode(
-    sre.SemanticAttr.Type.ROW, this.parseNodes_(children), []);
+      sre.SemanticAttr.Type.ROW, this.parseNodes_(children), []);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };
@@ -242,8 +243,8 @@ sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
 sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
   var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
   var newNode = this.getFactory().makeBranchNode(
-    sre.SemanticAttr.Type.CELL,
-    [sre.SemanticProcessor.getInstance().row(semNodes)], []);
+      sre.SemanticAttr.Type.CELL,
+      [sre.SemanticProcessor.getInstance().row(semNodes)], []);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };
@@ -258,9 +259,9 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.text_ = function(node, children) {
   return sre.SemanticProcessor.getInstance().text(
-    node.textContent,
-    /** @type {sre.SemanticAttr.Font} */(node.getAttribute('mathvariant')),
-    sre.DomUtil.tagName(node));
+      node.textContent,
+      /** @type {sre.SemanticAttr.Font} */(node.getAttribute('mathvariant')),
+      sre.DomUtil.tagName(node));
 };
 
 
@@ -341,8 +342,8 @@ sre.SemanticMathml.prototype.enclosed_ = function(node, children) {
       sre.SemanticAttr.Type.ENCLOSE,
       [sre.SemanticProcessor.getInstance().row(semNodes)], []);
   newNode.role =
-    /** @type {!sre.SemanticAttr.Role} */(node.getAttribute('notation')) ||
-    sre.SemanticAttr.Role.UNKNOWN;
+      /** @type {!sre.SemanticAttr.Role} */(node.getAttribute('notation')) ||
+      sre.SemanticAttr.Role.UNKNOWN;
   return newNode;
 };
 
