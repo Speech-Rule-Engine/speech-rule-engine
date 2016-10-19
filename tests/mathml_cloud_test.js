@@ -472,3 +472,20 @@ sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
   this.executeRuleTest(mml, 'area of triangle Sup 2', 'brief');
   this.executeRuleTest(mml, 'area of triangle Sup 2', 'sbrief');
 };
+
+
+/**
+ * Tests multiline tables.
+ */
+sre.MathmlCloudTest.prototype.testMultiline = function() {
+  this.executeRuleTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '</mtr></mtable>',
+    'StartLayout 1st Row  a 2nd Row  b EndLayout');
+  this.executeRuleTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
+      '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>',
+    'StartLayout 1st Row 1st Column a 2nd Column c 2nd Row 1st Column b' +
+      ' 2nd Column d EndLayout');
+};
+

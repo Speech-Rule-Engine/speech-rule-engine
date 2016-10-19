@@ -998,7 +998,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'matrix', 'self::vector');
 
-
   defineRule(
       'matrix-row', 'mathspeak.default',
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
@@ -1079,6 +1078,21 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "Enlarged"; [n] content/*[1];' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::cases');
+
+  // Multiline rules.
+  defineRuleAlias(
+      'layout', 'self::multiline');
+  // For testing:
+  //
+  // defineRule(
+  //     'multiline', 'mathspeak.default',
+  //     '[t] "multiline equation";' +
+  //     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"line")',
+  //     'self::multiline');
+
+  defineRule(
+      'line', 'mathspeak.default',
+      '[m] children/*', 'self::line');
 
   // Enclose
   defineRule(
