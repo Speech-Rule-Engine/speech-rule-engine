@@ -94,7 +94,7 @@ sre.SemanticNodeFactory.prototype.makeContentNode = function(content) {
  * @return {!Array.<sre.SemanticNode>} The list of new nodes.
  */
 sre.SemanticNodeFactory.prototype.makeMultipleContentNodes = function(
-  num, content) {
+    num, content) {
   var nodes = [];
   for (var i = 0; i < num; i++) {
     nodes.push(this.makeContentNode(content));
