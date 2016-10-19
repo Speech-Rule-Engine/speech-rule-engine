@@ -57,7 +57,6 @@ sre.SemanticSkeleton.prototype.toString = function() {
  * @private
  */
 sre.SemanticSkeleton.makeSexp_ = function(struct) {
-  console.log(struct);
   if (sre.SemanticSkeleton.simpleCollapseStructure(struct)) {
     return struct.toString();
   }
@@ -76,6 +75,30 @@ sre.SemanticSkeleton.makeSexp_ = function(struct) {
  */
 sre.SemanticSkeleton.fromTree = function(node) {
   return new sre.SemanticSkeleton(sre.SemanticSkeleton.fromTree_(node));
+};
+
+
+/**
+ * Compute a skeleton structure from a string representation.
+ * @param {string} skel The skeleton string.
+ * @return {!sre.SemanticSkeleton} The new skeleton structure object.
+ */
+sre.SemanticSkeleton.fromString = function(skel) {
+  return new sre.SemanticSkeleton(sre.SemanticSkeleton.fromString_(skel));
+};
+
+
+/**
+ * Parses the skeleton structure into an array of integer arrays.
+ * @param {!string} skeleton String containing the skeleton structure.
+ * @return {!sre.SemanticSkeleton.Sexp} The array of integer arrays.
+ * @private
+ */
+sre.SemanticSkeleton.fromString_ = function(skeleton) {
+  var str = skeleton.replace(/\(/g, '[');
+  str = str.replace(/\)/g, ']');
+  str = str.replace(/ /g, ',');
+  return /** @type {!Array} */(JSON.parse(str));
 };
 
 
@@ -127,12 +150,12 @@ sre.SemanticSkeleton.simpleCollapseStructure = function(strct) {
 
 
 /**
- * Checks if the structure is simple, i.e., a single id number.
+ * Checks if the structure represents collapsed content nodes, i.e., it starts
+ * with a c.
  * @param {sre.SemanticSkeleton.Sexp} strct The structure.
- * @return {boolean} True if a simple number.
+ * @return {boolean} True if a content structure.
  */
 sre.SemanticSkeleton.contentCollapseStructure = function(strct) {
-  console.log('here');
   return !sre.SemanticSkeleton.simpleCollapseStructure(strct) &&
     (strct[0] === 'c');
 };
