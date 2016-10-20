@@ -41,6 +41,11 @@ sre.CaseTable = function(semantic) {
    */
   this.mml = semantic.mathmlTree;
 
+  /**
+   * @type {!Array.<Element>}
+   */
+  this.inner = [];
+
 };
 goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
 
@@ -66,7 +71,8 @@ sre.CaseTable.prototype.getMathml = function() {
       sre.EnrichMathml.cloneContentNode(
           /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[1])) :
       null;
-  this.semantic.childNodes.map(/**@type{Function}*/(sre.EnrichMathml.walkTree));
+  this.inner = this.semantic.childNodes.map(
+      /**@type{Function}*/(sre.EnrichMathml.walkTree));
   if (sre.DomUtil.tagName(this.mml) === 'MFENCED') {
     var children = this.mml.childNodes;
     this.mml.insertBefore(lfence, children[0] || null);
@@ -78,7 +84,34 @@ sre.CaseTable.prototype.getMathml = function() {
     this.mml = sre.EnrichMathml.introduceNewLayer(newChildren);
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
+  // Cleanup in the case some lines where collapsed.
+  this.cleanupCollapsedRows();
   return this.mml;
 };
 
 
+/**
+ * Cleanup in case there are collapsed row or line elements.
+ */
+sre.CaseTable.prototype.cleanupCollapsedRows = function() {
+  var children = [];
+  var collapse = [this.semantic.id];
+  var collapsed = false;
+  for (var i = 0, inner; inner = this.inner[i]; i++) {
+    var id = inner.getAttribute(sre.EnrichMathml.Attribute.ID);
+    children.push(id);
+    if (inner.hasAttribute(sre.EnrichMathml.Attribute.COLLAPSED)) {
+      collapse.push(sre.SemanticSkeleton.fromString(
+          inner.getAttribute(sre.EnrichMathml.Attribute.COLLAPSED)).array);
+      inner.removeAttribute(sre.EnrichMathml.Attribute.COLLAPSED);
+      collapsed = true;
+    } else {
+      collapse.push(id);
+    }
+  }
+  if (collapsed) {
+    this.mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
+                          children.join(','));
+    sre.EnrichMathml.addCollapsedAttribute(this.mml, collapse);
+  }
+};
