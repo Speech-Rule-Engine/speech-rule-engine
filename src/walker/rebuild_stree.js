@@ -116,10 +116,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   snode.childNodes = children.map(goog.bind(setParent, this));
   var collapsed = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.COLLAPSED);
-  if (collapsed) {
-    return this.postProcess(snode, collapsed);
-  }
-  return snode;
+  return collapsed ? this.postProcess(snode, collapsed) : snode;
 };
 
 
@@ -155,7 +152,7 @@ sre.RebuildStree.prototype.makeNode = function(node) {
 sre.RebuildStree.isPunctuated = function(collapsed) {
   return !sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
     collapsed[1] && sre.SemanticSkeleton.contentCollapseStructure(collapsed[1]);
-}
+};
 
 
 sre.RebuildStree.prototype.makePunctuation = function(id) {
@@ -179,6 +176,28 @@ sre.RebuildStree.prototype.makePunctuated = function(snode, collapsed, role) {
 };
 
 
+sre.RebuildStree.prototype.makeEmpty = function(snode, collapsed, role) {
+  var empty = this.createNode(collapsed);
+  empty.type = sre.SemanticAttr.Type.EMPTY;
+  empty.embellished = snode.embellished;
+  empty.fencePointer = snode.fencePointer;
+  empty.role = role;
+};
+
+
+sre.RebuildStree.prototype.makeIndex = function(snode, collapsed, role) {
+  if (sre.RebuildStree.isPunctuated(collapsed)) {
+    this.makePunctuated(snode, collapsed, role);
+    collapsed = collapsed[0];
+    return;
+  }
+  if (sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
+      !this.nodeDict[collapsed]) {
+    this.makeEmpty(snode, collapsed, role);
+  }
+};
+
+
 /**
  * Rearranges semantic node if there is a collapse structure.
  * @param {!sre.SemanticNode} snode The semantic node.
@@ -186,9 +205,6 @@ sre.RebuildStree.prototype.makePunctuated = function(snode, collapsed, role) {
  * @return {!sre.SemanticNode} The semantic node.
  */
 sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
-  console.log(snode.type);
-  console.log(snode.role);
-  console.log(collapsed);
   var array = sre.SemanticSkeleton.fromString(collapsed).array;
   if (snode.type === sre.SemanticAttr.Role.SUBSUP) {
     var subscript = this.createNode(array[1][0]);
@@ -197,50 +213,26 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
     subscript.embellished = snode.embellished;
     subscript.fencePointer = snode.fencePointer;
-    if (sre.RebuildStree.isPunctuated(array[1][2])) {
-      this.makePunctuated(snode, array[1][2], sre.SemanticAttr.Role.RIGHTSUB);
-      array[1][2] = array[1][2][0];
-    }
-    if (sre.RebuildStree.isPunctuated(array[2])) {
-      this.makePunctuated(snode, array[2], sre.SemanticAttr.Role.RIGHTSUPER);
-      array[2] = array[2][0];
-    }
+    this.makeIndex(snode, array[1][2], sre.SemanticAttr.Role.RIGHTSUB);
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.RIGHTSUPER);
     this.collapsedChildren_(array);
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Type.SUBSCRIPT) {
-    if (sre.RebuildStree.isPunctuated(array[2])) {
-      this.makePunctuated(snode, array[2], sre.SemanticAttr.Role.RIGHTSUB);
-      array[2] = array[2][0];
-    }
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.RIGHTSUB);
     this.collapsedChildren_(array);
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
-    if (sre.RebuildStree.isPunctuated(array[2])) {
-      this.makePunctuated(snode, array[2], sre.SemanticAttr.Role.RIGHTSUPER);
-      array[2] = array[2][0];
-    }
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.RIGHTSUPER);
     this.collapsedChildren_(array);
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Type.TENSOR) {
-    if (sre.RebuildStree.isPunctuated(array[2])) {
-      this.makePunctuated(snode, array[2], sre.SemanticAttr.Role.LEFTSUB);
-      array[2] = array[2][0];
-    }
-    if (sre.RebuildStree.isPunctuated(array[3])) {
-      this.makePunctuated(snode, array[3], sre.SemanticAttr.Role.LEFTSUPER);
-      array[3] = array[3][0];
-    }
-    if (sre.RebuildStree.isPunctuated(array[4])) {
-      this.makePunctuated(snode, array[4], sre.SemanticAttr.Role.RIGHTSUB);
-      array[4] = array[4][0];
-    }
-    if (sre.RebuildStree.isPunctuated(array[5])) {
-      this.makePunctuated(snode, array[5], sre.SemanticAttr.Role.RIGHTSUPER);
-      array[5] = array[5][0];
-    }
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.LEFTSUB);
+    this.makeIndex(snode, array[3], sre.SemanticAttr.Role.LEFTSUPER);
+    this.makeIndex(snode, array[4], sre.SemanticAttr.Role.RIGHTSUB);
+    this.makeIndex(snode, array[5], sre.SemanticAttr.Role.RIGHTSUPER);
     this.collapsedChildren_(array);
     return snode;
   }

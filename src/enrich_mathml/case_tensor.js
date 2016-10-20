@@ -60,9 +60,7 @@ sre.CaseTensor.prototype.getMathml = function() {
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   var collapsed = [this.semantic.id, this.semantic.childNodes[0].id,
                    lsub, lsup, rsub, rsup];
-  if (!collapsed.every(sre.SemanticSkeleton.simpleCollapseStructure)) {
-    sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-  }
+  sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
   var childIds = sre.SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
   childIds.unshift(this.semantic.childNodes[0].id);
   this.mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
