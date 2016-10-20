@@ -120,7 +120,9 @@ sre.CaseMultiindex.multiscriptIndex = function(index) {
       index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
     var role = index.role;
     var parentId = index.parent.id;
-    var childIds = [index.id];
+    var contentIds = index.contentNodes.map(function(x) {return x.id;});
+    contentIds.unshift('c');
+    var childIds = [index.id, contentIds];
     for (var i = 0, child; child = index.childNodes[i]; i++) {
       var mmlChild = sre.EnrichMathml.walkTree(child);
       var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
