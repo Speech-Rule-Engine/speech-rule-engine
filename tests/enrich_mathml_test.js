@@ -10387,3 +10387,87 @@ sre.EnrichMathmlTest.prototype.testSemanticsAnnotationXml = function() {
       '</math>'
   );
 };
+
+
+/**
+ * Binomial coefficients generated with fractions.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
+  this.executeMathmlTest(
+    '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac></mfenced>',
+    '<math><mrow type="vector" role="binomial" id="4" children="0,1"' +
+      ' content="5,6" collapsed="(4 (2 0) (3 1))"><mo type="fence"' +
+      ' role="open" id="5" parent="4" added="true">(</mo><mfrac' +
+      ' linethickness="0"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="2">n</mi><mi type="identifier" role="latinletter" id="1"' +
+      ' parent="3">k</mi></mfrac><mo type="fence" role="close" id="6"' +
+      ' parent="4" added="true">)</mo></mrow></math>'
+  );
+  this.executeMathmlTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>',
+    '<math><mrow type="vector" role="binomial" id="5" children="1,2"' +
+      ' content="0,6" collapsed="(5 (3 1) (4 2))"><mrow><mo type="fence"' +
+      ' role="open" id="0" parent="5">(</mo></mrow><mfrac' +
+      ' linethickness="0"><mi type="identifier" role="latinletter" id="1"' +
+      ' parent="3">n</mi><mi type="identifier" role="latinletter" id="2"' +
+      ' parent="4">k</mi></mfrac><mrow><mo type="fence" role="close" id="6"' +
+      ' parent="5">)</mo></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow>' +
+      '</mrow>',
+    '<math><mrow type="vector" role="binomial" id="8" children="1,5"' +
+      ' content="0,9" collapsed="(8 (6 1) (7 5))"><mrow><mo type="fence"' +
+      ' role="open" id="0" parent="8">(</mo></mrow><mfrac' +
+      ' linethickness="0"><mi type="identifier" role="latinletter" id="1"' +
+      ' parent="6">n</mi><mrow type="infixop" role="addition" id="5"' +
+      ' children="2,4" content="3" parent="7"><mi type="identifier"' +
+      ' role="latinletter" id="2" parent="5">k</mi><mo type="operator"' +
+      ' role="addition" id="3" parent="5" operator="infixop,+">+</mo><mi' +
+      ' type="identifier" role="latinletter" id="4" parent="5">l</mi>' +
+      '</mrow></mfrac><mrow><mo type="fence" role="close" id="9"' +
+      ' parent="8">)</mo></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
+      '<mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+' +
+      '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
+      '</mrow></mrow>',
+    '<math><mrow type="vector" role="binomial" id="16" children="6,13"' +
+      ' content="0,17" collapsed="(16 (14 6) (15 13))"><mrow><mo' +
+      ' type="fence" role="open" id="0" parent="16">(</mo></mrow><mfrac' +
+      ' linethickness="0"><mrow type="infixop" role="addition" id="6"' +
+      ' children="1,3,5" content="2,4" parent="14"><mi type="identifier"' +
+      ' role="latinletter" id="1" parent="6">n</mi><mo type="operator"' +
+      ' role="addition" id="2" parent="6" operator="infixop,+">+</mo><mi' +
+      ' type="identifier" role="latinletter" id="3" parent="6">k</mi><mo' +
+      ' type="operator" role="addition" id="4" parent="6"' +
+      ' operator="infixop,+">+</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">l</mi></mrow><mrow type="infixop"' +
+      ' role="subtraction" id="13" children="12,11" content="10"' +
+      ' parent="15"><mrow type="infixop" role="addition" id="12"' +
+      ' children="7,9" content="8" parent="13"><mi type="identifier"' +
+      ' role="latinletter" id="7" parent="12">k</mi><mo type="operator"' +
+      ' role="addition" id="8" parent="12" operator="infixop,+">+</mo><mi' +
+      ' type="identifier" role="latinletter" id="9" parent="12">l</mi>' +
+      '</mrow><mo type="operator" role="subtraction" id="10" parent="13"' +
+      ' operator="infixop,-">-</mo><mn type="number" role="integer" id="11"' +
+      ' parent="13">1</mn></mrow></mfrac><mrow><mo type="fence"' +
+      ' role="close" id="17" parent="16">)</mo></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+    '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>',
+    '<math><mrow type="vector" role="binomial" id="7" children="3,6"' +
+      ' content="0,8"><mo type="fence" role="open" id="0" parent="7">(</mo>' +
+      '<mtable><mtr type="line" role="binomial" id="3" children="1"' +
+      ' parent="7"><mtd><mi type="identifier" role="latinletter" id="1"' +
+      ' parent="2">a</mi></mtd></mtr><mtr type="line" role="binomial"' +
+      ' id="6" children="4" parent="7"><mtd><mi type="identifier"' +
+      ' role="latinletter" id="4" parent="5">b</mi></mtd></mtr></mtable><mo' +
+      ' type="fence" role="close" id="8" parent="7">)</mo></mrow></math>'
+  );
+};
