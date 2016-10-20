@@ -1643,15 +1643,15 @@ sre.RebuildStreeTest.prototype.testRebuildRightScriptTensors = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
-  //     '<mprescripts/><none/></mmultiscripts>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/>' +
-  //     '<mprescripts/><none/></mmultiscripts>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi>' +
-  //     '<mprescripts/><none/></mmultiscripts>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><none/></mmultiscripts>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/>' +
+      '<mprescripts/><none/></mmultiscripts>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi>' +
+      '<mprescripts/><none/></mmultiscripts>');
 };
 
 
@@ -1702,7 +1702,7 @@ sre.RebuildStreeTest.prototype.testRebuildSimpleTensors = function() {
 /**
  * Complex multiscript expressions with some scripts on the left.
  */
-sre.RebuildStreeTest.prototype.untestRebuildComplexTensors = function() {
+sre.RebuildStreeTest.prototype.testRebuildComplexTensors = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>');

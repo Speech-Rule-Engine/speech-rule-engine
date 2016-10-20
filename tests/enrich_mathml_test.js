@@ -8439,10 +8439,10 @@ sre.EnrichMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       ' children="0,1,2,3,4"' +
       ' collapsed="(10 (9 0 (6 (c 5) 1 2)) (8 (c 7) 3 4))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="10">X</mi>' +
-      '<mi type="identifier" role="rightsub" id="1" parent="10">i</mi>' +
-      '<mi type="identifier" role="rightsuper" id="3" parent="10">j</mi>' +
-      '<mi type="identifier" role="rightsub" id="2" parent="10">k</mi>' +
-      '<mi type="identifier" role="rightsuper" id="4" parent="10">l</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="10">i</mi>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="10">j</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="10">k</mi>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="10">l</mi>' +
       '<mprescripts/>' +
       '<none/>' +
       '</mmultiscripts>' +
@@ -8455,9 +8455,9 @@ sre.EnrichMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       '<mmultiscripts type="subscript" role="latinletter" id="7"' +
       ' children="0,1,2" collapsed="(7 0 (6 (c 5) 1 2))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="7">X</mi>' +
-      '<mi type="identifier" role="rightsub" id="1" parent="7">i</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="7">i</mi>' +
       '<none/>' +
-      '<mi type="identifier" role="rightsub" id="2" parent="7">j</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="7">j</mi>' +
       '<none/>' +
       '<mprescripts/>' +
       '<none/>' +
@@ -8472,9 +8472,9 @@ sre.EnrichMathmlTest.prototype.testMathmlRightScriptTensors = function() {
       ' children="0,3,4" collapsed="(7 0 (6 (c 5) 3 4))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="7">X</mi>' +
       '<none/>' +
-      '<mi type="identifier" role="rightsuper" id="3" parent="7">i</mi>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="7">i</mi>' +
       '<none/>' +
-      '<mi type="identifier" role="rightsuper" id="4" parent="7">j</mi>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="7">j</mi>' +
       '<mprescripts/>' +
       '<none/>' +
       '</mmultiscripts>' +
@@ -8685,18 +8685,18 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<math>' +
       '<mmultiscripts type="tensor" role="latinletter" id="17"' +
       ' children="0,1,2,3,4,5,6,7,8"' +
-      ' collapsed="(17 (10 (c 9) 1 2) (12 (c 11) 3 4) ' +
+      ' collapsed="(17 0 (10 (c 9) 1 2) (12 (c 11) 3 4) ' +
       '(14 (c 13) 5 6) (16 (c 15) 7 8))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="17">A</mi>' +
-      '<mn type="number" role="rightsub" id="5" parent="17">3</mn>' +
-      '<mn type="number" role="rightsuper" id="7" parent="17">4</mn>' +
-      '<mi type="identifier" role="rightsub" id="6" parent="17">k</mi>' +
-      '<mi type="identifier" role="rightsuper" id="8" parent="17">l</mi>' +
+      '<mn type="number" role="integer" id="5" parent="17">3</mn>' +
+      '<mn type="number" role="integer" id="7" parent="17">4</mn>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="17">k</mi>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="17">l</mi>' +
       '<mprescripts/>' +
-      '<mn type="number" role="leftsub" id="1" parent="17">1</mn>' +
-      '<mn type="number" role="leftsuper" id="3" parent="17">2</mn>' +
-      '<mi type="identifier" role="leftsub" id="2" parent="17">i</mi>' +
-      '<mi type="identifier" role="leftsuper" id="4" parent="17">j</mi>' +
+      '<mn type="number" role="integer" id="1" parent="17">1</mn>' +
+      '<mn type="number" role="integer" id="3" parent="17">2</mn>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="17">i</mi>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="17">j</mi>' +
       '</mmultiscripts>' +
       '</math>'
   );
@@ -8706,18 +8706,18 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<math>' +
       '<mmultiscripts type="tensor" role="latinletter" id="17"' +
       ' children="0,1,2,3,4,5,6,7,8" ' +
-      ' collapsed="(17 (10 (c 9) 1 2) (12 (c 11) 3 4) ' +
+      ' collapsed="(17 0 (10 (c 9) 1 2) (12 (c 11) 3 4) ' +
       '(14 (c 13) 5 6) (16 (c 15) 7 8))">' +
       '<mi type="identifier" role="latinletter" id="0" parent="17">A</mi>' +
-      '<mn type="number" role="rightsub" id="5" parent="17">3</mn>' +
-      '<none type="empty" role="rightsuper" id="7" parent="17"/>' +
-      '<mi type="identifier" role="rightsub" id="6" parent="17">k</mi>' +
-      '<mi type="identifier" role="rightsuper" id="8" parent="17">l</mi>' +
+      '<mn type="number" role="integer" id="5" parent="17">3</mn>' +
+      '<none type="empty" role="unknown" id="7" parent="17"/>' +
+      '<mi type="identifier" role="latinletter" id="6" parent="17">k</mi>' +
+      '<mi type="identifier" role="latinletter" id="8" parent="17">l</mi>' +
       '<mprescripts/>' +
-      '<mn type="number" role="leftsub" id="1" parent="17">1</mn>' +
-      '<none type="empty" role="leftsuper" id="3" parent="17"/>' +
-      '<none type="empty" role="leftsub" id="2" parent="17"/>' +
-      '<mi type="identifier" role="leftsuper" id="4" parent="17">j</mi>' +
+      '<mn type="number" role="integer" id="1" parent="17">1</mn>' +
+      '<none type="empty" role="unknown" id="3" parent="17"/>' +
+      '<none type="empty" role="unknown" id="2" parent="17"/>' +
+      '<mi type="identifier" role="latinletter" id="4" parent="17">j</mi>' +
       '</mmultiscripts>' +
       '</math>'
   );
@@ -8726,11 +8726,11 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<mn>4</mn></mmultiscripts>',
       '<math>' +
       '<mmultiscripts type="tensor" role="latinletter" id="8"' +
-      ' children="0,1,5,2,3,4" collapsed="(8 1 5 (7 (c 6) 2 3) 4)">' +
+      ' children="0,1,5,2,3,4" collapsed="(8 0 1 5 (7 (c 6) 2 3) 4)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="8">A</mi>' +
-      '<mn type="number" role="rightsub" id="2" parent="8">1</mn>' +
+      '<mn type="number" role="integer" id="2" parent="8">1</mn>' +
       '<mn type="number" role="rightsuper" id="4" parent="8">2</mn>' +
-      '<mn type="number" role="rightsub" id="3" parent="8">3</mn>' +
+      '<mn type="number" role="integer" id="3" parent="8">3</mn>' +
       '<mprescripts/>' +
       '<mn type="number" role="leftsub" id="1" parent="8">4</mn>' +
       '<none type="empty" role="leftsuper" id="5" parent="8" added="true"/>' +
@@ -8743,15 +8743,15 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<math>' +
       '<mmultiscripts type="tensor" role="latinletter" id="11"' +
       ' children="0,1,2,3,4,5,6"' +
-      ' collapsed="(11 (8 (c 7) 1 2) 3 (10 (c 9) 4 5) 6)">' +
+      ' collapsed="(11 0 (8 (c 7) 1 2) 3 (10 (c 9) 4 5) 6)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="11">A</mi>' +
-      '<mn type="number" role="rightsub" id="4" parent="11">1</mn>' +
+      '<mn type="number" role="integer" id="4" parent="11">1</mn>' +
       '<mn type="number" role="rightsuper" id="6" parent="11">2</mn>' +
-      '<mn type="number" role="rightsub" id="5" parent="11">3</mn>' +
+      '<mn type="number" role="integer" id="5" parent="11">3</mn>' +
       '<mprescripts/>' +
-      '<mn type="number" role="leftsub" id="1" parent="11">5</mn>' +
+      '<mn type="number" role="integer" id="1" parent="11">5</mn>' +
       '<mn type="number" role="leftsuper" id="3" parent="11">4</mn>' +
-      '<mn type="number" role="leftsub" id="2" parent="11">6</mn>' +
+      '<mn type="number" role="integer" id="2" parent="11">6</mn>' +
       '</mmultiscripts>' +
       '</math>'
   );
@@ -8764,23 +8764,23 @@ sre.EnrichMathmlTest.prototype.testMathmlComplexTensors = function() {
       '<math>' +
       '<mmultiscripts type="tensor" role="latinletter" id="11"' +
       ' children="0,1,2,3,4,5,6"' +
-      ' collapsed="(11 (8 (c 7) 1 2) 3 (10 (c 9) 4 5) 6)">' +
+      ' collapsed="(11 0 (8 (c 7) 1 2) 3 (10 (c 9) 4 5) 6)">' +
       '<mpadded>' +
       '<mi type="identifier" role="latinletter" id="0" parent="11">A</mi>' +
       '</mpadded><mpadded>' +
-      '<mn type="number" role="rightsub" id="4" parent="11">1</mn>' +
+      '<mn type="number" role="integer" id="4" parent="11">1</mn>' +
       '</mpadded><mpadded>' +
       '<mn type="number" role="rightsuper" id="6" parent="11">2</mn>' +
       '</mpadded><mpadded>' +
-      '<mn type="number" role="rightsub" id="5" parent="11">3</mn>' +
+      '<mn type="number" role="integer" id="5" parent="11">3</mn>' +
       '</mpadded>' +
       '<mprescripts/>' +
       '<mpadded>' +
-      '<mn type="number" role="leftsub" id="1" parent="11">5</mn>' +
+      '<mn type="number" role="integer" id="1" parent="11">5</mn>' +
       '</mpadded><mpadded>' +
       '<mn type="number" role="leftsuper" id="3" parent="11">4</mn>' +
       '</mpadded><mpadded>' +
-      '<mn type="number" role="leftsub" id="2" parent="11">6</mn>' +
+      '<mn type="number" role="integer" id="2" parent="11">6</mn>' +
       '</mpadded>' +
       '</mmultiscripts>' +
       '</math>'

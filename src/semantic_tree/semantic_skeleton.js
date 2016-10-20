@@ -98,6 +98,7 @@ sre.SemanticSkeleton.fromString_ = function(skeleton) {
   var str = skeleton.replace(/\(/g, '[');
   str = str.replace(/\)/g, ']');
   str = str.replace(/ /g, ',');
+  str = str.replace(/c/g, '"c"');
   return /** @type {!Array} */(JSON.parse(str));
 };
 
