@@ -2034,3 +2034,31 @@ sre.RebuildStreeTest.prototype.testRebuildComplexEmbellRight = function() {
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo>' +
       '<mn>4</mn></msub>');
 };
+
+
+// TODO: Semantics missing.
+
+
+/**
+ * Binomial coefficients generated with fractions.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
+  this.executeRebuildTest(
+    '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac></mfenced>');
+  this.executeRebuildTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
+      '<mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+' +
+      '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
+      '</mrow></mrow>');
+  this.executeRebuildTest(
+    '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>');
+};
+

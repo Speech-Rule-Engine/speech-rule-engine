@@ -180,7 +180,24 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     sre.RebuildStree.collapsedChildren_(snode, [underscore], array);
     return snode;
   }
-
+  if (snode.type === sre.SemanticAttr.Type.VECTOR &&
+      snode.role === sre.SemanticAttr.Role.BINOMIAL) {
+    var children = [];
+    for (var i = 1, l = array.length; i < l; i++) {
+      var id = array[i];
+      if (sre.SemanticSkeleton.simpleCollapseStructure(id)) {
+        continue;
+      }
+      var line = this.createNode(id[0]);
+      line.type = sre.SemanticAttr.Type.LINE;
+      line.role = sre.SemanticAttr.Role.BINOMIAL;
+      line.embellished = snode.embellished;
+      line.fencePointer = snode.fencePointer;
+      children.push(line);
+    }
+    sre.RebuildStree.collapsedChildren_(snode, children, array);
+    return snode;
+  }
   return snode;
 };
 
