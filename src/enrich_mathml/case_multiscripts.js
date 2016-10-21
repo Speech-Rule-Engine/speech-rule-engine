@@ -73,10 +73,8 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
   } else {
     var baseSem = this.semantic.childNodes[0];
     var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
-    if (!sre.SemanticSkeleton.simpleCollapseStructure(rsup)) {
-      var collapsed = [this.semantic.id, baseSem.id, rsup];
-      sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-    }
+    var collapsed = [this.semantic.id, baseSem.id, rsup];
+    sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
   }
   var childIds = sre.SemanticSkeleton.collapsedLeafs(rsub || [], rsup);
   var base = sre.EnrichMathml.walkTree(

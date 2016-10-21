@@ -116,10 +116,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   snode.childNodes = children.map(goog.bind(setParent, this));
   var collapsed = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.COLLAPSED);
-  if (collapsed) {
-    return this.postProcess(snode, collapsed);
-  }
-  return snode;
+  return collapsed ? this.postProcess(snode, collapsed) : snode;
 };
 
 
@@ -152,6 +149,55 @@ sre.RebuildStree.prototype.makeNode = function(node) {
 };
 
 
+sre.RebuildStree.isPunctuated = function(collapsed) {
+  return !sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
+    collapsed[1] && sre.SemanticSkeleton.contentCollapseStructure(collapsed[1]);
+};
+
+
+sre.RebuildStree.prototype.makePunctuation = function(id) {
+  var node = this.createNode(id);
+  node.updateContent(sre.SemanticAttr.invisibleComma());
+  node.role = sre.SemanticAttr.Role.DUMMY;
+  return node;
+};
+
+
+sre.RebuildStree.prototype.makePunctuated = function(snode, collapsed, role) {
+  var punctuated = this.createNode(collapsed[0]);
+  punctuated.type = sre.SemanticAttr.Type.PUNCTUATED;
+  punctuated.embellished = snode.embellished;
+  punctuated.fencePointer = snode.fencePointer;
+  punctuated.role = role;
+  var cont = collapsed.splice(1, 1)[0].slice(1);
+  punctuated.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
+  this.collapsedChildren_(collapsed);
+  return punctuated;
+};
+
+
+sre.RebuildStree.prototype.makeEmpty = function(snode, collapsed, role) {
+  var empty = this.createNode(collapsed);
+  empty.type = sre.SemanticAttr.Type.EMPTY;
+  empty.embellished = snode.embellished;
+  empty.fencePointer = snode.fencePointer;
+  empty.role = role;
+};
+
+
+sre.RebuildStree.prototype.makeIndex = function(snode, collapsed, role) {
+  if (sre.RebuildStree.isPunctuated(collapsed)) {
+    this.makePunctuated(snode, collapsed, role);
+    collapsed = collapsed[0];
+    return;
+  }
+  if (sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
+      !this.nodeDict[collapsed]) {
+    this.makeEmpty(snode, collapsed, role);
+  }
+};
+
+
 /**
  * Rearranges semantic node if there is a collapse structure.
  * @param {!sre.SemanticNode} snode The semantic node.
@@ -167,7 +213,27 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     snode.type = sre.SemanticAttr.Type.SUPERSCRIPT;
     subscript.embellished = snode.embellished;
     subscript.fencePointer = snode.fencePointer;
-    sre.RebuildStree.collapsedChildren_(snode, [subscript], array);
+    this.makeIndex(snode, array[1][2], sre.SemanticAttr.Role.RIGHTSUB);
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.RIGHTSUPER);
+    this.collapsedChildren_(array);
+    return snode;
+  }
+  if (snode.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.RIGHTSUB);
+    this.collapsedChildren_(array);
+    return snode;
+  }
+  if (snode.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.RIGHTSUPER);
+    this.collapsedChildren_(array);
+    return snode;
+  }
+  if (snode.type === sre.SemanticAttr.Type.TENSOR) {
+    this.makeIndex(snode, array[2], sre.SemanticAttr.Role.LEFTSUB);
+    this.makeIndex(snode, array[3], sre.SemanticAttr.Role.LEFTSUPER);
+    this.makeIndex(snode, array[4], sre.SemanticAttr.Role.RIGHTSUB);
+    this.makeIndex(snode, array[5], sre.SemanticAttr.Role.RIGHTSUPER);
+    this.collapsedChildren_(array);
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {
@@ -177,7 +243,7 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     snode.type = sre.SemanticAttr.Type.OVERSCORE;
     underscore.embellished = snode.embellished;
     underscore.fencePointer = snode.fencePointer;
-    sre.RebuildStree.collapsedChildren_(snode, [underscore], array);
+    this.collapsedChildren_(array);
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Type.VECTOR &&
@@ -195,7 +261,7 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
       line.fencePointer = snode.fencePointer;
       children.push(line);
     }
-    sre.RebuildStree.collapsedChildren_(snode, children, array);
+    this.collapsedChildren_(array);
     return snode;
   }
   return snode;
@@ -215,32 +281,22 @@ sre.RebuildStree.prototype.createNode = function(id) {
 
 
 /**
- * Re-generates collapsed semantic nodes given a node and its already existing
- * children.
- * @param {!sre.SemanticNode} oldNode The node containing the
- *     collapsed element.
- * @param {!Array.<sre.SemanticNode>} newNodes The already existing child
- *     nodes.
+ * Recombines semantic nodes and children according to a given skeleton
+ * structure.
  * @param {!sre.SemanticSkeleton.Sexp} collapsed Array of integer arrays.
  * @private
  */
-sre.RebuildStree.collapsedChildren_ = function(oldNode, newNodes, collapsed) {
-  newNodes.unshift(oldNode);
-  newNodes = newNodes.concat(oldNode.childNodes);
-  var nodeDict = {};
-  for (var i = 0, node; node = newNodes[i]; i++) {
-    nodeDict[node.id] = node;
-  }
-  var recurseCollapsed = function(coll) {
-    var parent = nodeDict[coll[0]];
+sre.RebuildStree.prototype.collapsedChildren_ = function(collapsed) {
+  var recurseCollapsed = goog.bind(function(coll) {
+    var parent = this.nodeDict[coll[0]];
     parent.childNodes = [];
     for (var j = 1, l = coll.length; j < l; j++) {
       var id = coll[j];
       parent.childNodes.push(
         sre.SemanticSkeleton.simpleCollapseStructure(id) ?
-          nodeDict[id] : recurseCollapsed(id));
+          this.nodeDict[id] : recurseCollapsed(id));
     }
     return parent;
-  };
+  }, this);
   recurseCollapsed(collapsed);
 };

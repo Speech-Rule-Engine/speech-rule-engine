@@ -23,6 +23,7 @@ goog.provide('sre.CaseTensor');
 goog.require('sre.CaseMultiindex');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticSkeleton');
 
 
 
@@ -57,10 +58,9 @@ sre.CaseTensor.prototype.getMathml = function() {
   var rsub = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
   var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
-  var collapsed = [this.semantic.id, lsub, lsup, rsub, rsup];
-  if (!collapsed.every(sre.SemanticSkeleton.simpleCollapseStructure)) {
-    sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-  }
+  var collapsed = [this.semantic.id, this.semantic.childNodes[0].id,
+                   lsub, lsup, rsub, rsup];
+  sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
   var childIds = sre.SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
   childIds.unshift(this.semantic.childNodes[0].id);
   this.mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,

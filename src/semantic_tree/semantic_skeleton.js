@@ -98,6 +98,7 @@ sre.SemanticSkeleton.fromString_ = function(skeleton) {
   var str = skeleton.replace(/\(/g, '[');
   str = str.replace(/\)/g, ']');
   str = str.replace(/ /g, ',');
+  str = str.replace(/c/g, '"c"');
   return /** @type {!Array} */(JSON.parse(str));
 };
 
@@ -156,7 +157,7 @@ sre.SemanticSkeleton.simpleCollapseStructure = function(strct) {
  * @return {boolean} True if a content structure.
  */
 sre.SemanticSkeleton.contentCollapseStructure = function(strct) {
-  return !sre.SemanticSkeleton.simpleCollapseStructure(strct) &&
+  return !!strct && !sre.SemanticSkeleton.simpleCollapseStructure(strct) &&
     (strct[0] === 'c');
 };
 
@@ -187,7 +188,8 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
     if (sre.SemanticSkeleton.simpleCollapseStructure(coll)) {
       return [coll];
     }
-    return coll.slice(1);
+    return sre.SemanticSkeleton.contentCollapseStructure(coll[1]) ?
+      coll.slice(2) : coll.slice(1);
   };
   return Array.prototype.slice.call(arguments, 0).
       reduce(function(x, y) {

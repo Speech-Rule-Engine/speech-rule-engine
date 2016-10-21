@@ -244,11 +244,14 @@ sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
   if (mmlTag === 'MSUBSUP') {
     parent = semantic.childNodes[0];
     caller = sre.CaseDoubleScript;
-  } else if (mmlTag === 'MMULTISCRIPTS' &&
-             (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-              semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    caller = sre.CaseMultiscripts;
-    if (semantic.childNodes[0] &&
+  } else if (mmlTag === 'MMULTISCRIPTS') {
+    if (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+      caller = sre.CaseMultiscripts;
+    } else if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
+      caller = sre.CaseTensor;
+    }
+    if (caller && semantic.childNodes[0] &&
         semantic.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
       parent = semantic.childNodes[0];
     } else {
