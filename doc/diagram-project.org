@@ -42,3 +42,19 @@ Notes from the Diagram project
 *** sre.SemanticTree.prototype.combineFencesEagerly_
 *** sre.SemanticTree.prototype.combineFencedContentNew_
 
+* Fixing up the enrichment and rebuild for tables and mulit-index structures
+
+** Intoduces explicit semantic skeleton structure
+** Handling explicit content nodes in skeleton with prefix c
+** Retains now role for indices in puncutation.
+
+
+* Testing ideas
+
+** multiline equations
+*** Current MathML cloud rendering 
+    multiline equation line 1 a line 2 b (this is effectively ChromeVox short)
+*** Partial MathSpeak rendering
+    multiline equation 1st line a 2nd line b
+*** Correct MathSpeak rendering
+    StartLayout 1st line a 2nd line b EndLayout
