@@ -25,6 +25,7 @@ goog.provide('sre.RebuildStree');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticSkeleton');
 goog.require('sre.SemanticTree');
 goog.require('sre.WalkerUtil');
 
@@ -158,7 +159,7 @@ sre.RebuildStree.prototype.makeNode = function(node) {
  * @return {!sre.SemanticNode} The semantic node.
  */
 sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
-  var array = sre.RebuildStree.parseCollapsed_(collapsed);
+  var array = sre.SemanticSkeleton.fromString(collapsed).array;
   if (snode.type === sre.SemanticAttr.Role.SUBSUP) {
     var subscript = this.createNode(array[1][0]);
     subscript.type = sre.SemanticAttr.Type.SUBSCRIPT;
@@ -179,7 +180,24 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     sre.RebuildStree.collapsedChildren_(snode, [underscore], array);
     return snode;
   }
-
+  if (snode.type === sre.SemanticAttr.Type.VECTOR &&
+      snode.role === sre.SemanticAttr.Role.BINOMIAL) {
+    var children = [];
+    for (var i = 1, l = array.length; i < l; i++) {
+      var id = array[i];
+      if (sre.SemanticSkeleton.simpleCollapseStructure(id)) {
+        continue;
+      }
+      var line = this.createNode(id[0]);
+      line.type = sre.SemanticAttr.Type.LINE;
+      line.role = sre.SemanticAttr.Role.BINOMIAL;
+      line.embellished = snode.embellished;
+      line.fencePointer = snode.fencePointer;
+      children.push(line);
+    }
+    sre.RebuildStree.collapsedChildren_(snode, children, array);
+    return snode;
+  }
   return snode;
 };
 
@@ -203,7 +221,7 @@ sre.RebuildStree.prototype.createNode = function(id) {
  *     collapsed element.
  * @param {!Array.<sre.SemanticNode>} newNodes The already existing child
  *     nodes.
- * @param {!Array} collapsed Array of integer arrays.
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed Array of integer arrays.
  * @private
  */
 sre.RebuildStree.collapsedChildren_ = function(oldNode, newNodes, collapsed) {
@@ -217,27 +235,12 @@ sre.RebuildStree.collapsedChildren_ = function(oldNode, newNodes, collapsed) {
     var parent = nodeDict[coll[0]];
     parent.childNodes = [];
     for (var j = 1, l = coll.length; j < l; j++) {
-      if (typeof coll[j] === 'number') {
-        parent.childNodes.push(nodeDict[coll[j]]);
-      } else {
-        parent.childNodes.push(recurseCollapsed(coll[j]));
-      }
+      var id = coll[j];
+      parent.childNodes.push(
+        sre.SemanticSkeleton.simpleCollapseStructure(id) ?
+          nodeDict[id] : recurseCollapsed(id));
     }
     return parent;
   };
   recurseCollapsed(collapsed);
-};
-
-
-/**
- * Parses the collapsed structure into an array of integer arrays.
- * @param {!string} collapsed String containing the collapsed structure.
- * @return {!Array} The array of integer arrays.
- * @private
- */
-sre.RebuildStree.parseCollapsed_ = function(collapsed) {
-  var str = collapsed.replace(/\(/g, '[');
-  str = str.replace(/\)/g, ']');
-  str = str.replace(/ /g, ',');
-  return /** @type {!Array} */(JSON.parse(str));
 };

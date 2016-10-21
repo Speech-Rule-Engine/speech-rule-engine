@@ -58,15 +58,15 @@ sre.CaseTensor.prototype.getMathml = function() {
   var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   var collapsed = [this.semantic.id, lsub, lsup, rsub, rsup];
-  if (!collapsed.every(sre.EnrichMathml.simpleCollapseStructure)) {
+  if (!collapsed.every(sre.SemanticSkeleton.simpleCollapseStructure)) {
     sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
   }
-  var childIds = sre.EnrichMathml.collapsedLeafs(lsub, lsup, rsub, rsup);
+  var childIds = sre.SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
   childIds.unshift(this.semantic.childNodes[0].id);
   this.mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
       childIds.join(','));
   this.completeMultiscript(
-      sre.EnrichMathml.interleaveIds(rsub, rsup),
-      sre.EnrichMathml.interleaveIds(lsub, lsup));
+      sre.SemanticSkeleton.interleaveIds(rsub, rsup),
+      sre.SemanticSkeleton.interleaveIds(lsub, lsup));
   return this.mml;
 };

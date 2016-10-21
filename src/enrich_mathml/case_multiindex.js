@@ -47,9 +47,9 @@ goog.inherits(sre.CaseMultiindex, sre.AbstractEnrichCase);
 /**
  * Completes the mmultiscript by adding missing None nodes and sorting out the
  * right order of children.
- * @param {!sre.EnrichMathml.Collapsed_} rightIndices The ids of the leaf
+ * @param {!sre.SemanticSkeleton.Sexp} rightIndices The ids of the leaf
  *     nodes of the right indices.
- * @param {!sre.EnrichMathml.Collapsed_} leftIndices The ids of the leaf
+ * @param {!sre.SemanticSkeleton.Sexp} leftIndices The ids of the leaf
  *     nodes of the left indices.
  * @protected
  */
@@ -110,7 +110,7 @@ sre.CaseMultiindex.createNone_ = function(semantic) {
  * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
  * punctuations.
  * @param {sre.SemanticNode} index The index node of a tensor.
- * @return {!sre.EnrichMathml.Collapsed_} If the index node was a
+ * @return {!sre.SemanticSkeleton.Sexp} If the index node was a
  *     dummy punctuation, i.e. consisted of more than one index, a list of
  *     strings for the collapsed structure is returned, otherwise the node id.
  * @protected

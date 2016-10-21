@@ -218,3 +218,19 @@ sre.SemanticRuleTest.prototype.testFonts = function() {
   this.executeRuleTest('<mi>3</mi>', 'italic three');
   this.executeRuleTest('<mi>30</mi>', '30');
 };
+
+
+/**
+ * Tests tables and layout structures.
+ */
+sre.SemanticRuleTest.prototype.testMultiline = function() {
+  this.executeRuleTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '</mtr></mtable>',
+    'multiline equation line 1 a line 2 b');
+  this.executeRuleTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
+      '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>',
+    'multiline equation row 1 a c row 2 b d');
+};
+

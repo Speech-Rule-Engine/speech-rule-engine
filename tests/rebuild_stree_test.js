@@ -2034,3 +2034,91 @@ sre.RebuildStreeTest.prototype.testRebuildComplexEmbellRight = function() {
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo>' +
       '<mn>4</mn></msub>');
 };
+
+
+// TODO: Actions.
+
+
+/**
+ * Expressions with semantic elements.
+ */
+sre.RebuildStreeTest.prototype.testSemanticsElement = function() {
+  this.executeRebuildTest(
+    '<semantics></semantics>');
+  this.executeRebuildTest(
+    '<semantics><mi>a</mi></semantics>');
+  this.executeRebuildTest(
+    '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>');
+  this.executeRebuildTest(
+    '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>');
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.RebuildStreeTest.prototype.testSemanticsAnnotation = function() {
+  // This is not really legal markup.
+  // this.executeRebuildTest(
+  //   '<semantics><annotation>something</annotation></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>');
+  this.executeRebuildTest(
+    '<semantics><mi>a</mi><annotation>something</annotation></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>');
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.RebuildStreeTest.prototype.testSemanticsAnnotationXml = function() {
+  // This is not really legal markup.
+  this.executeRebuildTest(
+      '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>');
+};
+
+
+/**
+ * Binomial coefficients generated with fractions.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
+  this.executeRebuildTest(
+    '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac></mfenced>');
+  this.executeRebuildTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
+      '<mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+' +
+      '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
+      '</mrow></mrow>');
+  this.executeRebuildTest(
+    '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>');
+};
+

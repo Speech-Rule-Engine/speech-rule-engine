@@ -82,5 +82,3 @@ sre.Semantic.getTreeFromString = function(expr) {
   var mml = sre.DomUtil.parseInput(expr);
   return sre.Semantic.getTree(mml);
 };
-
-// console.log(sre.DomUtil.formatXml(sre.Semantic.getTreeFromString('<math><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup></math>').toString()));
