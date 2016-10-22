@@ -233,8 +233,8 @@ sre.AbstractWalker.prototype.speech = function() {
  */
 sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   var primary = this.focus_.getPrimary();
-  var expand = (this.expandable(primary) && ' expandable') ||
-        (this.collapsible(primary) && ' collapsible') || '';
+  var expand = (this.expandable(primary) && 'expandable') ||
+        (this.collapsible(primary) && 'collapsible') || '';
   var descr = [sre.AuditoryDescription.speechString(
     [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
                                   personality: {}})])];
