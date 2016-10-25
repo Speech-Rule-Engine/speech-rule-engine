@@ -39,6 +39,55 @@ sre.SemanticSkeleton = function(skeleton) {
    */
   this.array = skeleton;
 
+  /**
+   * @type {Object.<number, !Array.<number>>}
+   */
+  this.parents = null;
+
+  /**
+   * @type {Object.<number, sre.SemanticSkeleton.Sexp>}
+   */
+  this.levelsMap = null;
+
+};
+
+
+/**
+ * Populates the mapping from id to parents and the mapping from id to levels in
+ * the skeleton.
+ */
+sre.SemanticSkeleton.prototype.populate = function() {
+  if (this.parents && this.levelsMap) {
+    return;
+  }
+  this.parents = {};
+  this.levelsMap = {};
+  this.populate_(this.array, this.array, []);
+};
+
+
+/**
+ * Traverses the skeleton tree and composes the parents and layer mappings.
+ * @param {!sre.SemanticSkeleton.Sexp} element The current element to traverse.
+ * @param {!sre.SemanticSkeleton.Sexp} layer The layer of which the element is a
+ *     member.
+ * @param {Array.<number>} parents The list of parents of that element.
+ * @private
+ */
+sre.SemanticSkeleton.prototype.populate_ = function(element, layer, parents) {
+  if (sre.SemanticSkeleton.simpleCollapseStructure(element)) {
+    element = /** @type {number} */(element);
+    this.levelsMap[element] = layer;
+    this.parents[element] = element === parents[0] ? parents.slice(1) : parents;
+    return;
+  }
+  var newElement = sre.SemanticSkeleton.contentCollapseStructure(element) ?
+      element.slice(1) : element;
+  var newParents = [newElement[0]].concat(parents);
+  for (var i = 0, l = newElement.length; i < l; i++) {
+    var current = newElement[i];
+    this.populate_(current, element, newParents);
+  }
 };
 
 
@@ -62,7 +111,7 @@ sre.SemanticSkeleton.makeSexp_ = function(struct) {
   }
   if (sre.SemanticSkeleton.contentCollapseStructure(struct)) {
     return '(' + 'c ' +
-      struct.slice(1).map(sre.SemanticSkeleton.makeSexp_).join(' ') + ')';
+        struct.slice(1).map(sre.SemanticSkeleton.makeSexp_).join(' ') + ')';
   }
   return '(' + struct.map(sre.SemanticSkeleton.makeSexp_).join(' ') + ')';
 };
@@ -158,7 +207,7 @@ sre.SemanticSkeleton.simpleCollapseStructure = function(strct) {
  */
 sre.SemanticSkeleton.contentCollapseStructure = function(strct) {
   return !!strct && !sre.SemanticSkeleton.simpleCollapseStructure(strct) &&
-    (strct[0] === 'c');
+      (strct[0] === 'c');
 };
 
 
@@ -189,7 +238,7 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
       return [coll];
     }
     return sre.SemanticSkeleton.contentCollapseStructure(coll[1]) ?
-      coll.slice(2) : coll.slice(1);
+        coll.slice(2) : coll.slice(1);
   };
   return Array.prototype.slice.call(arguments, 0).
       reduce(function(x, y) {
