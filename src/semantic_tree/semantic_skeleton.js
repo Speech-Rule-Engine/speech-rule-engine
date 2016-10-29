@@ -32,7 +32,7 @@ goog.require('sre.BaseUtil');
  */
 sre.SemanticSkeleton = function(skeleton) {
 
-  skeleton = skeleton || [];
+  skeleton = (skeleton === 0) ? skeleton : (skeleton || []);
 
   /**
    * @type {!sre.SemanticSkeleton.Sexp}
@@ -119,11 +119,21 @@ sre.SemanticSkeleton.makeSexp_ = function(struct) {
 
 /**
  * Compute a skeleton structure for a semantic tree.
+ * @param {sre.SemanticTree} tree The semantic tree.
+ * @return {!sre.SemanticSkeleton} The new skeleton structure object.
+ */
+sre.SemanticSkeleton.fromTree = function(tree) {
+  return sre.SemanticSkeleton.fromNode(tree.root);
+};
+
+
+/**
+ * Compute a skeleton structure for a semantic tree.
  * @param {sre.SemanticNode} node The root node of the tree.
  * @return {!sre.SemanticSkeleton} The new skeleton structure object.
  */
-sre.SemanticSkeleton.fromTree = function(node) {
-  return new sre.SemanticSkeleton(sre.SemanticSkeleton.fromTree_(node));
+sre.SemanticSkeleton.fromNode = function(node) {
+  return new sre.SemanticSkeleton(sre.SemanticSkeleton.fromNode_(node));
 };
 
 
@@ -159,20 +169,20 @@ sre.SemanticSkeleton.fromString_ = function(skeleton) {
  *     representing the skeleton of the tree.
  * @private
  */
-sre.SemanticSkeleton.fromTree_ = function(node) {
+sre.SemanticSkeleton.fromNode_ = function(node) {
   if (!node) {
     return [];
   }
   var content = node.contentNodes;
   if (content.length) {
-    var contentStructure = content.map(sre.SemanticSkeleton.fromTree_);
+    var contentStructure = content.map(sre.SemanticSkeleton.fromNode_);
     contentStructure.unshift('c');
   }
   var children = node.childNodes;
   if (!children.length) {
     return content.length ? [node.id, contentStructure] : node.id;
   }
-  var structure = children.map(sre.SemanticSkeleton.fromTree_);
+  var structure = children.map(sre.SemanticSkeleton.fromNode_);
   if (content.length) {
     structure.unshift(contentStructure);
   }
