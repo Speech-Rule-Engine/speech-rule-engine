@@ -46,8 +46,29 @@ Notes from the Diagram project
 
 ** Intoduces explicit semantic skeleton structure
 ** Handling explicit content nodes in skeleton with prefix c
-** Retains now role for indices in puncutation.
+** Retains now role for indices in punctuation.
 
+* Refactoring walking
+
+** focus are generated on semantic tree nodes
+
+** focus contains
+
+*** primary: semantic tree
+
+*** semantic-nodes: List of all nodes in the 
+
+*** nodes: existing DOM nodes. Can contain null.
+
+** Walking in general then happens on the semantic tree.
+
+** Speech generation: if null node, then
+
+*** try to get the node from semantic tree and
+
+*** the speech from the rebuilt tree.
+
+** Highlighting works on the existing nodes and potential children.
 
 * Testing ideas
 
