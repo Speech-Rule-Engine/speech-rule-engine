@@ -112,7 +112,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!sre.Focus}
    * @private
    */
-  this.focus_ = new sre.Focus({nodes: [this.rootNode], primary: this.rootNode});
+  this.focus_ = new sre.Focus([this.rootNode], this.rootNode);
 
   /**
    * Flag indicating whether the last move actually moved focus.
@@ -200,6 +200,7 @@ sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
  */
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getNodes();
+  console.log(nodes);
   var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
@@ -298,8 +299,7 @@ sre.AbstractWalker.prototype.right = function() {
  */
 sre.AbstractWalker.prototype.repeat = function() {
   this.moved = sre.AbstractWalker.move.REPEAT;
-  return new sre.Focus({nodes: this.focus_.getNodes(),
-    primary: this.focus_.getPrimary()});
+  return this.focus_.clone();
 };
 
 
@@ -310,8 +310,7 @@ sre.AbstractWalker.prototype.repeat = function() {
  */
 sre.AbstractWalker.prototype.depth = function() {
   this.moved = sre.AbstractWalker.move.DEPTH;
-  return new sre.Focus({nodes: this.focus_.getNodes(),
-    primary: this.focus_.getPrimary()});
+  return this.focus_.clone();
 };
 
 
@@ -357,8 +356,7 @@ sre.AbstractWalker.prototype.expand = function() {
   }
   this.moved = sre.AbstractWalker.move.EXPAND;
   expandable.onclick();
-  return new sre.Focus({nodes: this.focus_.getNodes(),
-    primary: this.focus_.getPrimary()});
+  return this.focus_.clone();
 };
 
 

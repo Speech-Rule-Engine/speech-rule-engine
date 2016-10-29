@@ -26,13 +26,12 @@ goog.provide('sre.Focus');
 
 /**
  * @constructor
- * @param {{nodes: (undefined|Array.<Node>),
- *          primary: (undefined|Node)}} kwargs The initial arguments for
- *     the description.
+ * @param {!Array.<Node>} nodes The DOM nodes of the focus.
+ * @param {Node} primary The primary component of the focus.
  */
-sre.Focus = function(kwargs) {
-  this.nodes_ = kwargs.nodes ? kwargs.nodes : [];
-  this.primary_ = kwargs.primary ? kwargs.primary : null;
+sre.Focus = function(nodes, primary) {
+  this.nodes_ = nodes;
+  this.primary_ = primary;
 };
 
 
@@ -58,3 +57,13 @@ sre.Focus.prototype.getPrimary = function() {
 sre.Focus.prototype.toString = function() {
   return 'Primary:' + this.primary_ + ' Nodes:' + this.nodes_;
 };
+
+
+/**
+ * Clones the focus.
+ * @return {!sre.Focus} The new focus, containing the same component as this.
+ */
+sre.Focus.prototype.clone = function() {
+  return new sre.Focus(this.getNodes(), this.getPrimary());
+};
+

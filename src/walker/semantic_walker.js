@@ -59,8 +59,9 @@ goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
  * @private
  */
 sre.SemanticWalker.prototype.singletonFocus_ = function(id) {
+  // HERE: Similar to what we have in Syntax walker?
   var node = this.getBySemanticId(id);
-  return new sre.Focus({nodes: [node], primary: node});
+  return new sre.Focus([node], node);
 };
 
 
@@ -68,13 +69,14 @@ sre.SemanticWalker.prototype.singletonFocus_ = function(id) {
  * Makes a focus for a primary node and a node list, all given by their ids.
  * @param {string} id The semantic id of the primary node.
  * @param {!Array.<string>} ids The semantic id of the node list.
- * @return {?sre.Focus} The new focus.
+ * @return {!sre.Focus} The new focus.
  * @private
  */
 sre.SemanticWalker.prototype.focusFromId_ = function(id, ids) {
   var node = this.getBySemanticId(id);
   var nodes = ids.map(goog.bind(this.getBySemanticId, this));
-  return new sre.Focus({nodes: nodes, primary: node});
+  // HERE: Similar to what we have in Syntax walker?
+  return new sre.Focus(nodes, node);
 };
 
 
@@ -125,11 +127,8 @@ sre.SemanticWalker.prototype.nextLevel_ = function() {
   var content = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
   if (children.length === 0) return [];
-  var primary = /** @type {!Node} */ (this.getFocus().getPrimary());
-  var type = sre.WalkerUtil.getAttribute(
-      primary, sre.EnrichMathml.Attribute.TYPE);
-  var role = sre.WalkerUtil.getAttribute(
-      primary, sre.EnrichMathml.Attribute.ROLE);
+  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
+  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
   return this.combineContentChildren(
       /** @type {!sre.SemanticAttr.Type} */ (type),
       /** @type {!sre.SemanticAttr.Role} */ (role),

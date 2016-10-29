@@ -57,7 +57,8 @@ goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
  * @private
  */
 sre.SyntaxWalker.prototype.singletonFocus_ = function(node) {
-  return new sre.Focus({nodes: [node], primary: node});
+  // HERE: Remains DOM Focus?
+  return new sre.Focus([node], node);
 };
 
 
@@ -68,8 +69,20 @@ sre.SyntaxWalker.prototype.singletonFocus_ = function(node) {
  * @private
  */
 sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
+  console.log(id);
   var node = this.getBySemanticId(id);
-  return node ? this.singletonFocus_(node) : null;
+  if (node) {
+    return this.singletonFocus_(node);
+  }
+  // var virtual = this.rebuilt.streeRoot.querySelectorAll(
+  //   function(x) {return x.id.toString() === id;})[0];
+  // if (!virtual) {
+  //   return null;
+  // }
+  // var children = virtual.childNodes.map(function(x) {return x.id;});
+  // var nodes = children.map(goog.bind(this.getBySemanticId, this));
+  // return new sre.VirtualFocus(nodes, virtual);
+  return null;
 };
 
 
@@ -112,11 +125,8 @@ sre.SyntaxWalker.prototype.nextLevel_ = function() {
       this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
       this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
-  var primary = /** @type {!Node} */ (this.getFocus().getPrimary());
-  var type = sre.WalkerUtil.getAttribute(
-      primary, sre.EnrichMathml.Attribute.TYPE);
-  var role = sre.WalkerUtil.getAttribute(
-      primary, sre.EnrichMathml.Attribute.ROLE);
+  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
+  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
   return sre.WalkerUtil.combineContentChildren(
       /** @type {!sre.SemanticAttr.Type} */ (type),
       /** @type {!sre.SemanticAttr.Role} */ (role),
