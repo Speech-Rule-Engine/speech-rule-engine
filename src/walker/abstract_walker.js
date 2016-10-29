@@ -444,6 +444,15 @@ sre.AbstractWalker.prototype.rebuildStree_ = function() {
 
 
 /**
+ * Computes the previous level by Returning the id of the parent.
+ * @return {string} The previous level.
+ */
+sre.AbstractWalker.prototype.previousLevel = function() {
+  return this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
+}
+
+
+/**
  * Computes the next lower level from children and content.
  * @return {!Array.<T>} The next lower level.
  */

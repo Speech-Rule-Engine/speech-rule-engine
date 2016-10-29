@@ -85,7 +85,7 @@ sre.SemanticWalker.prototype.focusFromId_ = function(id, ids) {
  */
 sre.SemanticWalker.prototype.up = function() {
   sre.SemanticWalker.base(this, 'up');
-  var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
+  var parent = this.previousLevel();
   if (!parent) return null;
   this.levels.pop();
   var found = this.levels.find(

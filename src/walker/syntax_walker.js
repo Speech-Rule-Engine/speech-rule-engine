@@ -90,7 +90,7 @@ sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
  */
 sre.SyntaxWalker.prototype.up = function() {
   sre.SyntaxWalker.base(this, 'up');
-  var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
+  var parent = this.previousLevel();
   if (!parent) return null;
   this.levels.pop();
   return this.focusFromId_(parent);
