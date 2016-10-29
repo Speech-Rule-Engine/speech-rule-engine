@@ -107,7 +107,7 @@ sre.SemanticWalker.prototype.up = function() {
  */
 sre.SemanticWalker.prototype.down = function() {
   sre.SemanticWalker.base(this, 'down');
-  var children = this.nextLevel_();
+  var children = this.nextLevel();
   if (children.length === 0) {
     return null;
   }
@@ -117,32 +117,7 @@ sre.SemanticWalker.prototype.down = function() {
 
 
 /**
- * Computes the next lower level from children and content.
- * @return {!Array.<sre.Focus>} The next lower level.
- * @private
- */
-sre.SemanticWalker.prototype.nextLevel_ = function() {
-  var children = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
-  var content = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
-  if (children.length === 0) return [];
-  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
-  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
-  return this.combineContentChildren(
-      /** @type {!sre.SemanticAttr.Type} */ (type),
-      /** @type {!sre.SemanticAttr.Role} */ (role),
-      content, children);
-};
-
-
-/**
- * Combines content and children lists depending on semantic type and role.
- * @param {!sre.SemanticAttr.Type} type The semantic type.
- * @param {!sre.SemanticAttr.Role} role The semantic role.
- * @param {!Array.<string>} content The list of content nodes.
- * @param {!Array.<string>} children The list of child nodes.
- * @return {!Array.<sre.Focus>} The list of focus elements.
+ * @override
  */
 sre.SemanticWalker.prototype.combineContentChildren = function(
     type, role, content, children) {

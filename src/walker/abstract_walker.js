@@ -37,6 +37,7 @@ goog.require('sre.WalkerUtil');
 /**
  * @constructor
  * @implements {sre.Walker}
+ * @template T
  * @param {!Node} node The (rendered) node on which the walker is called.
  * @param {!sre.SpeechGenerator} generator The speech generator for
  *     this walker.
@@ -440,3 +441,33 @@ sre.AbstractWalker.prototype.rebuildStree_ = function() {
   sre.SpeechGeneratorUtil.connectMactions(this.node, this.xml, rebuilt.xml);
   return rebuilt;
 };
+
+
+/**
+ * Computes the next lower level from children and content.
+ * @return {!Array.<T>} The next lower level.
+ */
+sre.AbstractWalker.prototype.nextLevel = function() {
+  var children = sre.WalkerUtil.splitAttribute(
+      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
+  var content = sre.WalkerUtil.splitAttribute(
+      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
+  if (children.length === 0) return [];
+  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
+  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
+  return this.combineContentChildren(
+      /** @type {!sre.SemanticAttr.Type} */ (type),
+      /** @type {!sre.SemanticAttr.Role} */ (role),
+      content, children);
+};
+
+
+/**
+ * Combines content and children lists depending on semantic type and role.
+ * @param {!sre.SemanticAttr.Type} type The semantic type.
+ * @param {!sre.SemanticAttr.Role} role The semantic role.
+ * @param {!Array.<string>} content The list of content nodes.
+ * @param {!Array.<string>} children The list of child nodes.
+ * @return {!Array.<T>} The list of focus elements.
+ */
+sre.AbstractWalker.prototype.combineContentChildren = goog.abstractMethod;

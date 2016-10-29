@@ -102,7 +102,7 @@ sre.SyntaxWalker.prototype.up = function() {
  */
 sre.SyntaxWalker.prototype.down = function() {
   sre.SyntaxWalker.base(this, 'down');
-  var children = this.nextLevel_();
+  var children = this.nextLevel();
   if (children.length === 0) {
     return null;
   }
@@ -115,21 +115,40 @@ sre.SyntaxWalker.prototype.down = function() {
 
 
 /**
- * Computes the next lower level from children and content.
- * @return {!Array.<string>} The next lower level.
- * @private
+ * @override
  */
-sre.SyntaxWalker.prototype.nextLevel_ = function() {
-  var children = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
-  var content = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
-  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
-  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
-  return sre.WalkerUtil.combineContentChildren(
-      /** @type {!sre.SemanticAttr.Type} */ (type),
-      /** @type {!sre.SemanticAttr.Role} */ (role),
-      content, children);
+sre.SyntaxWalker.prototype.combineContentChildren = function(
+    type, role, content, children) {
+  switch (type) {
+    case sre.SemanticAttr.Type.RELSEQ:
+    case sre.SemanticAttr.Type.INFIXOP:
+    case sre.SemanticAttr.Type.MULTIREL:
+      return sre.BaseUtil.interleaveLists(children, content);
+    case sre.SemanticAttr.Type.PREFIXOP:
+      return content.concat(children);
+    case sre.SemanticAttr.Type.POSTFIXOP:
+      return children.concat(content);
+    case sre.SemanticAttr.Type.MATRIX:
+    case sre.SemanticAttr.Type.VECTOR:
+    case sre.SemanticAttr.Type.FENCED:
+      children.unshift(content[0]);
+      children.push(content[1]);
+      return children;
+    case sre.SemanticAttr.Type.CASES:
+      children.unshift(content[0]);
+      return children;
+    case sre.SemanticAttr.Type.PUNCTUATED:
+      if (role === sre.SemanticAttr.Role.TEXT) {
+        return sre.BaseUtil.interleaveLists(children, content);
+      }
+      return children;
+    case sre.SemanticAttr.Type.APPL:
+      return [children[0], content[0], children[1]];
+    case sre.SemanticAttr.Type.ROOT:
+      return [children[1], children[0]];
+    default:
+      return children;
+  }
 };
 
 
