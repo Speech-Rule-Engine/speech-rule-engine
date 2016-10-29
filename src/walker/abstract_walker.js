@@ -210,6 +210,7 @@ sre.AbstractWalker.prototype.speech = function() {
   }
   var speech = nodes.map(
       goog.bind(function(x) {
+        // HERE: Change speech generation to semantic node!
         return this.generator.getSpeech(x, this.xml);
       }, this));
   if (prefix) speech.unshift(prefix);
@@ -246,6 +247,7 @@ sre.AbstractWalker.prototype.move = function(key) {
     return false;
   }
   this.focus_ = focus;
+  console.log(this.focus_);
   return true;
 };
 
@@ -480,3 +482,30 @@ sre.AbstractWalker.prototype.nextLevel = function() {
  * @return {!Array.<T>} The list of focus elements.
  */
 sre.AbstractWalker.prototype.combineContentChildren = goog.abstractMethod;
+
+
+/**
+ * Creates a simple focus for a solitary node.
+ * @param {string} id The semantic id of the focus node.
+ * @return {!sre.Focus} A focus containing only this node and the other
+ *     properties of the old focus.
+ */
+sre.AbstractWalker.prototype.singletonFocus = function(id) {
+  var node = this.getBySemanticId(id);
+  return new sre.Focus([node], node);
+};
+
+
+/**
+ * Makes a focus for a primary node and a node list, all given by their ids.
+ * @param {string} id The semantic id of the primary node.
+ * @param {!Array.<string>} ids The semantic id of the node list.
+ * @return {!sre.Focus} The new focus.
+ */
+sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
+  var node = this.getBySemanticId(id);
+  var nodes = ids.map(goog.bind(this.getBySemanticId, this));
+  return new sre.Focus(nodes, node);
+};
+
+

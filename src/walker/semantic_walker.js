@@ -50,36 +50,6 @@ sre.SemanticWalker = function(node, generator, highlighter, xml) {
 goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
 
 
-//TODO: Remove or refactor.
-/**
- * Creates a simple focus for a solitary node.
- * @param {!string} id The node id to focus.
- * @return {!sre.Focus} A focus containing only this node and the other
- *     properties of the old focus.
- * @private
- */
-sre.SemanticWalker.prototype.singletonFocus_ = function(id) {
-  // HERE: Similar to what we have in Syntax walker?
-  var node = this.getBySemanticId(id);
-  return new sre.Focus([node], node);
-};
-
-
-/**
- * Makes a focus for a primary node and a node list, all given by their ids.
- * @param {string} id The semantic id of the primary node.
- * @param {!Array.<string>} ids The semantic id of the node list.
- * @return {!sre.Focus} The new focus.
- * @private
- */
-sre.SemanticWalker.prototype.focusFromId_ = function(id, ids) {
-  var node = this.getBySemanticId(id);
-  var nodes = ids.map(goog.bind(this.getBySemanticId, this));
-  // HERE: Similar to what we have in Syntax walker?
-  return new sre.Focus(nodes, node);
-};
-
-
 /**
  * @override
  */
@@ -127,35 +97,35 @@ sre.SemanticWalker.prototype.combineContentChildren = function(
     case sre.SemanticAttr.Type.MULTIREL:
       return this.makePairList(children, content);
     case sre.SemanticAttr.Type.PREFIXOP:
-      return [this.focusFromId_(children[0], content.concat(children))];
+      return [this.focusFromId(children[0], content.concat(children))];
     case sre.SemanticAttr.Type.POSTFIXOP:
-      return [this.focusFromId_(children[0], children.concat(content))];
+      return [this.focusFromId(children[0], children.concat(content))];
     case sre.SemanticAttr.Type.MATRIX:
     case sre.SemanticAttr.Type.VECTOR:
     case sre.SemanticAttr.Type.FENCED:
-      return [this.focusFromId_(children[0],
+      return [this.focusFromId(children[0],
           [content[0], children[0], content[1]])];
     case sre.SemanticAttr.Type.CASES:
-      return [this.focusFromId_(children[0],
+      return [this.focusFromId(children[0],
           [content[0], children[0]])];
     case sre.SemanticAttr.Type.PUNCTUATED:
       if (role === sre.SemanticAttr.Role.TEXT) {
-        return children.map(goog.bind(this.singletonFocus_, this));
+        return children.map(goog.bind(this.singletonFocus, this));
       }
       //TODO: That needs to be fixed!
       if (children.length === content.length) {
-        return content.map(goog.bind(this.singletonFocus_, this));
+        return content.map(goog.bind(this.singletonFocus, this));
       }
       var focusList = this.combinePunctuations(children, content, [], []);
       return focusList;
     case sre.SemanticAttr.Type.APPL:
-      return [this.focusFromId_(children[0], [children[0], content[0]]),
-        this.singletonFocus_(children[1])];
+      return [this.focusFromId(children[0], [children[0], content[0]]),
+        this.singletonFocus(children[1])];
     case sre.SemanticAttr.Type.ROOT:
-      return [this.singletonFocus_(children[1]),
-              this.singletonFocus_(children[0])];
+      return [this.singletonFocus(children[1]),
+              this.singletonFocus(children[0])];
     default:
-      return children.map(goog.bind(this.singletonFocus_, this));
+      return children.map(goog.bind(this.singletonFocus, this));
   }
 };
 
@@ -186,11 +156,11 @@ sre.SemanticWalker.prototype.combinePunctuations = function(
     prepunct.push(child);
     // Remaining children are all punctuations.
     if (children.length === content.length) {
-      acc.push(this.focusFromId_(child, prepunct.concat(content)));
+      acc.push(this.focusFromId(child, prepunct.concat(content)));
       return acc;
     } else {
       // Recurse
-      acc.push(this.focusFromId_(child, prepunct));
+      acc.push(this.focusFromId(child, prepunct));
       return this.combinePunctuations(children, content, [], acc);
     }
   }
@@ -206,11 +176,11 @@ sre.SemanticWalker.prototype.combinePunctuations = function(
 sre.SemanticWalker.prototype.makePairList = function(children, content) {
   if (children.length === 0) return [];
   if (children.length === 1) {
-    return [this.singletonFocus_(children[0])];
+    return [this.singletonFocus(children[0])];
   }
-  var result = [this.singletonFocus_(children.shift())];
+  var result = [this.singletonFocus(children.shift())];
   for (var i = 0, l = children.length; i < l; i++) {
-    result.push(this.focusFromId_(children[i], [content[i], children[i]]));
+    result.push(this.focusFromId(children[i], [content[i], children[i]]));
   }
   return result;
 };
