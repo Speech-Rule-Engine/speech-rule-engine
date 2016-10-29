@@ -192,7 +192,9 @@ sre.AbstractWalker.prototype.getFocus = function() {
 /**
  * @override
  */
-sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
+sre.AbstractWalker.prototype.getDepth = function() {
+  return this.levels.depth() - 1;
+};
 
 
 /**

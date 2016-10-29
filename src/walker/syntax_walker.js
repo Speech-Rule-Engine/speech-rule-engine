@@ -158,14 +158,6 @@ sre.SyntaxWalker.prototype.right = function() {
 /**
  * @override
  */
-sre.SyntaxWalker.prototype.getDepth = function() {
-  return this.levels.depth() - 1;
-};
-
-
-/**
- * @override
- */
 sre.SyntaxWalker.prototype.findFocusOnLevel = function(id) {
   return this.focusFromId_(id.toString());
 };

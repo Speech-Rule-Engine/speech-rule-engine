@@ -266,14 +266,6 @@ sre.SemanticWalker.prototype.right = function() {
 /**
  * @override
  */
-sre.SemanticWalker.prototype.getDepth = function() {
-  return this.levels.depth() - 1;
-};
-
-
-/**
- * @override
- */
 sre.SemanticWalker.prototype.findFocusOnLevel = function(id) {
   var focus = this.levels.find(
       function(x) {
