@@ -200,7 +200,6 @@ sre.AbstractWalker.prototype.getDepth = goog.abstractMethod;
  */
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getNodes();
-  console.log(nodes);
   var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
   if (this.moved === sre.AbstractWalker.move.DEPTH) {

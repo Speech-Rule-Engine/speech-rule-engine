@@ -69,7 +69,6 @@ sre.SyntaxWalker.prototype.singletonFocus_ = function(node) {
  * @private
  */
 sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
-  console.log(id);
   var node = this.getBySemanticId(id);
   if (node) {
     return this.singletonFocus_(node);
