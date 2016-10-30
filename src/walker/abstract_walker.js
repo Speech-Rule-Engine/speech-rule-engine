@@ -247,7 +247,6 @@ sre.AbstractWalker.prototype.move = function(key) {
     return false;
   }
   this.focus_ = focus;
-  console.log(this.focus_);
   return true;
 };
 
@@ -344,7 +343,9 @@ sre.AbstractWalker.prototype.primaryAttribute = function(attr) {
  * @return {string} The id of the primary node of the current focus.
  */
 sre.AbstractWalker.prototype.primaryId = function() {
-  return this.primaryAttribute(sre.EnrichMathml.Attribute.ID);
+  var primary = this.focus_.getPrimary();
+  return primary ?
+      sre.WalkerUtil.getAttribute(primary, sre.EnrichMathml.Attribute.ID) : '';
 };
 
 
@@ -459,17 +460,13 @@ sre.AbstractWalker.prototype.previousLevel = function() {
  * @return {!Array.<T>} The next lower level.
  */
 sre.AbstractWalker.prototype.nextLevel = function() {
-  var children = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
-  var content = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
+  var toIds = function(x) { return x.id.toString(); };
+  var snode = this.rebuilt.nodeDict[this.primaryId()];
+  var children = snode.childNodes.map(toIds);
+  var content = snode.contentNodes.map(toIds);
   if (children.length === 0) return [];
-  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
-  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
   return this.combineContentChildren(
-      /** @type {!sre.SemanticAttr.Type} */ (type),
-      /** @type {!sre.SemanticAttr.Role} */ (role),
-      content, children);
+      snode.type, snode.role, content, children);
 };
 
 
@@ -491,8 +488,7 @@ sre.AbstractWalker.prototype.combineContentChildren = goog.abstractMethod;
  *     properties of the old focus.
  */
 sre.AbstractWalker.prototype.singletonFocus = function(id) {
-  var node = this.getBySemanticId(id);
-  return new sre.Focus([node], node);
+  return this.focusFromId(id, [id]);
 };
 
 
