@@ -59,14 +59,9 @@ sre.SemanticWalker.prototype.up = function() {
   if (!parent) return null;
   this.levels.pop();
   var found = this.levels.find(
-      function(x) {
-        for (var i = 0, node, nodes = x.getNodes(); node = nodes[i]; i++) {
-          if (sre.WalkerUtil.getAttribute(
-              node, sre.EnrichMathml.Attribute.ID) === parent) {
-            return true;
-          }
-        }
-        return false;
+      function(focus) {
+        return focus.getSemanticNodes().some(
+          function(node) {return node.id.toString() === parent;});
       });
   return found;
 };
