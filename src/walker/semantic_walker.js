@@ -214,7 +214,7 @@ sre.SemanticWalker.prototype.right = function() {
 sre.SemanticWalker.prototype.findFocusOnLevel = function(id) {
   var focus = this.levels.find(
       function(x) {
-        var primary = /** @type {!Node} */(x.getPrimary());
+        var primary = /** @type {!Node} */(x.getDomPrimary());
         var pid = sre.WalkerUtil.getAttribute(
             primary, sre.EnrichMathml.Attribute.ID);
         return pid === id.toString();});
