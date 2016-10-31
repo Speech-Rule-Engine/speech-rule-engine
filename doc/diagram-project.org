@@ -70,6 +70,11 @@ Notes from the Diagram project
 
 ** Highlighting works on the existing nodes and potential children.
 
+*** Recurse over children, if they do not have a DOM node until exhausted:
+
+*** Create focus from semantic nodes together with xml structure.
+
+
 * Testing ideas
 
 ** multiline equations
