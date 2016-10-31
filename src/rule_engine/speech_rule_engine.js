@@ -209,7 +209,7 @@ sre.SpeechRuleEngine.prototype.getCache = function(key) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
-  if (!node.getAttribute) return;
+  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
   var id = node.getAttribute('id');
   if (id) {
     this.cache_[id] = speech;
