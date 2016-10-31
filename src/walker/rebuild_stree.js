@@ -257,6 +257,7 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
       var line = this.createNode(id[0]);
       line.type = sre.SemanticAttr.Type.LINE;
       line.role = sre.SemanticAttr.Role.BINOMIAL;
+      line.parent = snode;
       line.embellished = snode.embellished;
       line.fencePointer = snode.fencePointer;
       children.push(line);
