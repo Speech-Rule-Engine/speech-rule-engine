@@ -74,6 +74,17 @@ Notes from the Diagram project
 
 *** Create focus from semantic nodes together with xml structure.
 
+* TODO
+
+** binomial coefficient bug
+** finish commenting rebuild stree
+** cleanup skeleton structure
+** refactor recompute speech
+** change semantic node id to string!
+** prefix for multi-index structures
+** cache problems with context
+** spaces (> normal)
+** labels
 
 * Testing ideas
 
