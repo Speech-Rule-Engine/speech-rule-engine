@@ -180,6 +180,16 @@ sre.PrefixRules.initPrefixRules_ = function() {
       '[t] CSFordinalPosition; [t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
+  defineRule(
+      'choice', 'prefix.default',
+      '[t] "Choice Quantity"; [p] (pause:200)',
+      'self::line', '@role="binomial"',
+      'count(preceding-sibling::*)=0');
+  defineRule(
+      'select', 'prefix.default',
+      '[t] "Selection Quantity"; [p] (pause:200)',
+      'self::line', '@role="binomial"',
+      'count(preceding-sibling::*)=1');
 };
 
 });  // goog.scope
