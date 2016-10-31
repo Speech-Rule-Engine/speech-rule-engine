@@ -107,13 +107,14 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */
   this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
 
+  var rootId = this.rebuilt.stree.root.id.toString();
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
    * @type {!sre.Focus}
    * @private
    */
-  this.focus_ = new sre.Focus([this.rootNode], this.rootNode);
+  this.focus_ = sre.Focus.factory(rootId, [rootId], this.rebuilt, this.node);
 
   /**
    * Flag indicating whether the last move actually moved focus.
@@ -202,18 +203,35 @@ sre.AbstractWalker.prototype.getDepth = function() {
  * @override
  */
 sre.AbstractWalker.prototype.speech = function() {
-  var nodes = this.focus_.getNodes();
-  var prefix = nodes.length > 0 ? sre.WalkerUtil.getAttribute(
+  var nodes = this.focus_.getDomNodes();
+  var snodes = this.focus_.getSemanticNodes();
+  var prefix = (nodes.length && nodes[0]) ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
   }
-  var speech = nodes.map(
-      goog.bind(function(x) {
-        return this.generator.getSpeech(x, this.xml);
-      }, this));
+  var speech = [];
+  for (var i = 0, l = nodes.length; i < l; i++) {
+    var node = nodes[i];
+    var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
+    speech.push(node ? this.generator.getSpeech(node, this.xml) :
+                this.recomputeSpeech(snode, this.xml));
+  }
   if (prefix) speech.unshift(prefix);
   return speech.join(' ');
+};
+
+
+sre.AbstractWalker.prototype.recomputeSpeech = function(semantic, mml) {
+  var descrs = null;
+  if (sre.Engine.getInstance().cache) {
+    descrs = sre.SpeechRuleEngine.getInstance().
+        getCache(semantic.id.toString());
+  }
+  if (!descrs) {
+    descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);
+  }
+  return sre.AuditoryDescription.speechString(descrs);
 };
 
 
@@ -226,7 +244,7 @@ sre.AbstractWalker.prototype.speech = function() {
  * @private
  */
 sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
-  var primary = this.focus_.getPrimary();
+  var primary = this.focus_.getDomPrimary();
   var expand = (this.expandable(primary) && ' expandable') ||
       (this.collapsible(primary) && ' collapsible') || '';
   return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '') + expand;
@@ -327,22 +345,10 @@ sre.AbstractWalker.prototype.getBySemanticId = function(id) {
 
 
 /**
- * Retrieves an attribute from the primary focused node if it exists.
- * @param {sre.EnrichMathml.Attribute} attr The attribute to retrieves.
- * @return {string} The value of the attribute for the primary node of the
- *     focus.
- */
-sre.AbstractWalker.prototype.primaryAttribute = function(attr) {
-  var primary = this.focus_.getPrimary();
-  return primary ? sre.WalkerUtil.getAttribute(primary, attr) : '';
-};
-
-
-/**
  * @return {string} The id of the primary node of the current focus.
  */
 sre.AbstractWalker.prototype.primaryId = function() {
-  return this.primaryAttribute(sre.EnrichMathml.Attribute.ID);
+  return this.focus_.getSemanticPrimary().id.toString();
 };
 
 
@@ -351,7 +357,7 @@ sre.AbstractWalker.prototype.primaryId = function() {
  * @return {sre.Focus} New focus element if actionable. O/w old focus.
  */
 sre.AbstractWalker.prototype.expand = function() {
-  var primary = this.focus_.getPrimary();
+  var primary = this.focus_.getDomPrimary();
   var expandable = this.actionable_(primary);
   if (!expandable) {
     return this.focus_;
@@ -445,11 +451,12 @@ sre.AbstractWalker.prototype.rebuildStree_ = function() {
 
 /**
  * Computes the previous level by Returning the id of the parent.
- * @return {string} The previous level.
+ * @return {?string} The previous level.
  */
 sre.AbstractWalker.prototype.previousLevel = function() {
-  return this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
-}
+  var parent = this.focus_.getSemanticPrimary().parent;
+  return parent ? parent.id.toString() : parent;
+};
 
 
 /**
@@ -457,17 +464,13 @@ sre.AbstractWalker.prototype.previousLevel = function() {
  * @return {!Array.<T>} The next lower level.
  */
 sre.AbstractWalker.prototype.nextLevel = function() {
-  var children = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
-  var content = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
+  var toIds = function(x) { return x.id.toString(); };
+  var snode = this.rebuilt.nodeDict[this.primaryId()];
+  var children = snode.childNodes.map(toIds);
+  var content = snode.contentNodes.map(toIds);
   if (children.length === 0) return [];
-  var type = this.primaryAttribute(sre.EnrichMathml.Attribute.TYPE);
-  var role = this.primaryAttribute(sre.EnrichMathml.Attribute.ROLE);
   return this.combineContentChildren(
-      /** @type {!sre.SemanticAttr.Type} */ (type),
-      /** @type {!sre.SemanticAttr.Role} */ (role),
-      content, children);
+      snode.type, snode.role, content, children);
 };
 
 
@@ -480,3 +483,27 @@ sre.AbstractWalker.prototype.nextLevel = function() {
  * @return {!Array.<T>} The list of focus elements.
  */
 sre.AbstractWalker.prototype.combineContentChildren = goog.abstractMethod;
+
+
+/**
+ * Creates a simple focus for a solitary node.
+ * @param {string} id The semantic id of the focus node.
+ * @return {!sre.Focus} A focus containing only this node and the other
+ *     properties of the old focus.
+ */
+sre.AbstractWalker.prototype.singletonFocus = function(id) {
+  return this.focusFromId(id, [id]);
+};
+
+
+/**
+ * Makes a focus for a primary node and a node list, all given by their ids.
+ * @param {string} id The semantic id of the primary node.
+ * @param {!Array.<string>} ids The semantic id of the node list.
+ * @return {!sre.Focus} The new focus.
+ */
+sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
+  return sre.Focus.factory(id, ids, this.rebuilt, this.node);
+};
+
+

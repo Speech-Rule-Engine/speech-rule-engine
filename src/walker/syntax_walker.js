@@ -50,42 +50,6 @@ goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
 
 
 /**
- * Creates a simple focus for a solitary node.
- * @param {!Node} node The node to focus.
- * @return {!sre.Focus} A focus containing only this node and the other
- *     properties of the old focus.
- * @private
- */
-sre.SyntaxWalker.prototype.singletonFocus_ = function(node) {
-  // HERE: Remains DOM Focus?
-  return new sre.Focus([node], node);
-};
-
-
-/**
- * Makes a singleton focus from an semantic id, if a corresponding node exits.
- * @param {string} id The semantic id.
- * @return {?sre.Focus} The singleton focus for the node.
- * @private
- */
-sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
-  var node = this.getBySemanticId(id);
-  if (node) {
-    return this.singletonFocus_(node);
-  }
-  // var virtual = this.rebuilt.streeRoot.querySelectorAll(
-  //   function(x) {return x.id.toString() === id;})[0];
-  // if (!virtual) {
-  //   return null;
-  // }
-  // var children = virtual.childNodes.map(function(x) {return x.id;});
-  // var nodes = children.map(goog.bind(this.getBySemanticId, this));
-  // return new sre.VirtualFocus(nodes, virtual);
-  return null;
-};
-
-
-/**
  * @override
  */
 sre.SyntaxWalker.prototype.up = function() {
@@ -93,7 +57,7 @@ sre.SyntaxWalker.prototype.up = function() {
   var parent = this.previousLevel();
   if (!parent) return null;
   this.levels.pop();
-  return this.focusFromId_(parent);
+  return this.singletonFocus(parent);
 };
 
 
@@ -106,7 +70,7 @@ sre.SyntaxWalker.prototype.down = function() {
   if (children.length === 0) {
     return null;
   }
-  var focus = this.focusFromId_(children[0]);
+  var focus = this.singletonFocus(children[0]);
   if (focus) {
     this.levels.push(children);
   }
@@ -159,7 +123,7 @@ sre.SyntaxWalker.prototype.left = function() {
   sre.SyntaxWalker.base(this, 'left');
   var index = this.levels.indexOf(this.primaryId()) - 1;
   var id = this.levels.get(index);
-  return id ? this.focusFromId_(id) : null;
+  return id ? this.singletonFocus(id) : null;
 };
 
 
@@ -170,7 +134,7 @@ sre.SyntaxWalker.prototype.right = function() {
   sre.SyntaxWalker.base(this, 'right');
   var index = this.levels.indexOf(this.primaryId()) + 1;
   var id = this.levels.get(index);
-  return id ? this.focusFromId_(id) : null;
+  return id ? this.singletonFocus(id) : null;
 };
 
 
@@ -178,5 +142,5 @@ sre.SyntaxWalker.prototype.right = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.findFocusOnLevel = function(id) {
-  return this.focusFromId_(id.toString());
+  return this.singletonFocus(id.toString());
 };
