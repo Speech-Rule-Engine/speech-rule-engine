@@ -205,8 +205,12 @@ sre.AbstractWalker.prototype.getDepth = function() {
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getDomNodes();
   var snodes = this.focus_.getSemanticNodes();
-  var prefix = (nodes.length && nodes[0]) ? sre.WalkerUtil.getAttribute(
-      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) : '';
+  if (!nodes.length) return '';
+  // TODO: This should be more efficient. Recompute only when walker is
+  // restarted.
+  var prefix = nodes[0] ? sre.WalkerUtil.getAttribute(
+    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
+      sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
   }
@@ -215,23 +219,10 @@ sre.AbstractWalker.prototype.speech = function() {
     var node = nodes[i];
     var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
     speech.push(node ? this.generator.getSpeech(node, this.xml) :
-                this.recomputeSpeech(snode, this.xml));
+                sre.SpeechGeneratorUtil.retrieveSpeech(this.xml, snode));
   }
   if (prefix) speech.unshift(prefix);
   return speech.join(' ');
-};
-
-
-sre.AbstractWalker.prototype.recomputeSpeech = function(semantic, mml) {
-  var descrs = null;
-  if (sre.Engine.getInstance().cache) {
-    descrs = sre.SpeechRuleEngine.getInstance().
-        getCache(semantic.id.toString());
-  }
-  if (!descrs) {
-    descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);
-  }
-  return sre.AuditoryDescription.speechString(descrs);
 };
 
 

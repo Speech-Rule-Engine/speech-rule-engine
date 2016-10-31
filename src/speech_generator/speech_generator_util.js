@@ -58,17 +58,32 @@ sre.SpeechGeneratorUtil.recomputeSpeech = function(mml, semantic) {
 
 
 /**
+ * Computes speech string for a single semantic node, either by retrieving it
+ * from the the cache or by recomputing it.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @return {!string} The speech string.
+ */
+sre.SpeechGeneratorUtil.retrieveSpeech = function(mml, semantic) {
+  var descrs = null;
+  if (sre.Engine.getInstance().cache) {
+    descrs = sre.SpeechRuleEngine.getInstance().
+      getCache(semantic.id.toString());
+  }
+  if (!descrs) {
+    descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);
+  }
+  return sre.AuditoryDescription.speechString(descrs);
+};
+
+
+/**
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
-  var descrs = sre.SpeechRuleEngine.getInstance().
-      getCache(semantic.id.toString());
-  if (!descrs) {
-    descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);
-  }
-  var speech = sre.AuditoryDescription.speechString(descrs);
+  var speech = sre.SpeechGeneratorUtil.retrieveSpeech(mml, semantic);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
@@ -79,9 +94,19 @@ sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
  * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
-  var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
-  var speech = sre.AuditoryDescription.speechString(descrs);
+  var speech = sre.SpeechGeneratorUtil.retrievePrefix(semantic);
   if (speech) mml.setAttribute(sre.EnrichMathml.Attribute.PREFIX, speech);
+};
+
+
+/**
+ * Computes a speech prefix if it exists.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @return {!string} The prefix speech string.
+ */
+sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
+  var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
+  return sre.AuditoryDescription.speechString(descrs);
 };
 
 
