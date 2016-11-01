@@ -445,8 +445,10 @@ sre.AbstractWalker.prototype.rebuildStree_ = function() {
  * @return {?string} The previous level.
  */
 sre.AbstractWalker.prototype.previousLevel = function() {
-  var parent = this.focus_.getSemanticPrimary().parent;
-  return parent ? parent.id.toString() : parent;
+  var dnode = this.focus_.getDomPrimary();
+  return dnode ?
+    sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.PARENT) :
+    this.focus_.getSemanticPrimary().parent.id.toString();
 };
 
 
@@ -455,10 +457,25 @@ sre.AbstractWalker.prototype.previousLevel = function() {
  * @return {!Array.<T>} The next lower level.
  */
 sre.AbstractWalker.prototype.nextLevel = function() {
+  var dnode = this.focus_.getDomPrimary();
+  if (dnode) {
+    var children = sre.WalkerUtil.splitAttribute(
+      sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.CHILDREN));
+    var content = sre.WalkerUtil.splitAttribute(
+      sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.CONTENT));
+    var type = sre.WalkerUtil.getAttribute(
+      dnode, sre.EnrichMathml.Attribute.TYPE);
+    var role = sre.WalkerUtil.getAttribute(
+      dnode, sre.EnrichMathml.Attribute.ROLE);
+    return this.combineContentChildren(
+      /** @type {!sre.SemanticAttr.Type} */ (type),
+      /** @type {!sre.SemanticAttr.Role} */ (role),
+      content, children);
+  }
   var toIds = function(x) { return x.id.toString(); };
   var snode = this.rebuilt.nodeDict[this.primaryId()];
-  var children = snode.childNodes.map(toIds);
-  var content = snode.contentNodes.map(toIds);
+  children = snode.childNodes.map(toIds);
+  content = snode.contentNodes.map(toIds);
   if (children.length === 0) return [];
   return this.combineContentChildren(
       snode.type, snode.role, content, children);
