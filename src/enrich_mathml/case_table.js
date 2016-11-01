@@ -94,6 +94,7 @@ sre.CaseTable.prototype.getMathml = function() {
  * Cleanup in case there are collapsed row or line elements.
  */
 sre.CaseTable.prototype.cleanupCollapsedRows = function() {
+  console.log('cleaning up.');
   var children = [];
   var collapse = [this.semantic.id];
   var collapsed = false;
@@ -104,6 +105,7 @@ sre.CaseTable.prototype.cleanupCollapsedRows = function() {
       collapse.push(sre.SemanticSkeleton.fromString(
           inner.getAttribute(sre.EnrichMathml.Attribute.COLLAPSED)).array);
       inner.removeAttribute(sre.EnrichMathml.Attribute.COLLAPSED);
+      inner.setAttribute(sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
       collapsed = true;
     } else {
       collapse.push(id);

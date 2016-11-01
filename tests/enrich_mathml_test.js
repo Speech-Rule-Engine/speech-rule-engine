@@ -10449,8 +10449,8 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       ' content="5,6" collapsed="(4 (2 0) (3 1))">' +
       '<mo type="fence" role="open" id="5" parent="4" added="true">(</mo>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">n</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="4">k</mi>' +
       '</mfrac>' +
       '<mo type="fence" role="close" id="6" parent="4" added="true">)</mo>' +
       '</mrow>' +
@@ -10466,8 +10466,8 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       '<mo type="fence" role="open" id="0" parent="5">(</mo>' +
       '</mrow>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
-      '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="5">n</mi>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="5">k</mi>' +
       '</mfrac>' +
       '<mrow>' +
       '<mo type="fence" role="close" id="6" parent="5">)</mo>' +
@@ -10485,9 +10485,9 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       '<mo type="fence" role="open" id="0" parent="8">(</mo>' +
       '</mrow>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="6">n</mi>' +
+      '<mi type="identifier" role="latinletter" id="1" parent="8">n</mi>' +
       '<mrow type="infixop" role="addition" id="5" children="2,4"' +
-      ' content="3" parent="7">' +
+      ' content="3" parent="8">' +
       '<mi type="identifier" role="latinletter" id="2" parent="5">k</mi>' +
       '<mo type="operator" role="addition" id="3" parent="5"' +
       ' operator="infixop,+">+</mo>' +
@@ -10513,7 +10513,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       '</mrow>' +
       '<mfrac linethickness="0">' +
       '<mrow type="infixop" role="addition" id="6" children="1,3,5"' +
-      ' content="2,4" parent="14">' +
+      ' content="2,4" parent="16">' +
       '<mi type="identifier" role="latinletter" id="1" parent="6">n</mi>' +
       '<mo type="operator" role="addition" id="2" parent="6"' +
       ' operator="infixop,+">+</mo>' +
@@ -10523,7 +10523,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       '<mi type="identifier" role="latinletter" id="5" parent="6">l</mi>' +
       '</mrow>' +
       '<mrow type="infixop" role="subtraction" id="13" children="12,11"' +
-      ' content="10" parent="15">' +
+      ' content="10" parent="16">' +
       '<mrow type="infixop" role="addition" id="12" children="7,9"' +
       ' content="8" parent="13">' +
       '<mi type="identifier" role="latinletter" id="7" parent="12">k</mi>' +
