@@ -1617,6 +1617,7 @@ sre.SemanticProcessor.rowToLine_ = function(row, opt_role) {
     row.type = sre.SemanticAttr.Type.LINE;
     row.role = role;
     row.childNodes = row.childNodes[0].childNodes;
+    row.childNodes.forEach(function(x) {x.parent = row;});
   }
 };
 
