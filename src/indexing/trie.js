@@ -44,36 +44,35 @@ sre.Trie = function(store) {
  * @param {sre.SpeechRule} rule The speech rule to add.
  */
 sre.Trie.prototype.addRule = function(rule) {
-  var runningNode = this.root;
+  var node = this.root;
   var dynamicCstr = rule.dynamicCstr.getValues();
   for (var i = 0, l = dynamicCstr.length; i < l; i++) {
-    var currentNode = runningNode.getChild(dynamicCstr[i]);
-    if (!currentNode) {
-      currentNode = sre.TrieNodeFactory.getNode(
-        sre.TrieNode.Kind.DYNAMIC, dynamicCstr[i], this.store);
-      runningNode.addChild(currentNode);
-    }
-    runningNode = currentNode;
+    node = this.addNode_(node, dynamicCstr[i], sre.TrieNode.Kind.DYNAMIC);
   }
-  var query = rule.precondition.query;
-  currentNode = runningNode.getChild(query);
-  if (!currentNode) {
-    currentNode = sre.TrieNodeFactory.getNode(
-      sre.TrieNode.Kind.QUERY, query, this.store);
-    runningNode.addChild(currentNode);
-  }
-  runningNode = currentNode;
+  node = this.addNode_(node, rule.precondition.query, sre.TrieNode.Kind.QUERY);
   var booleans = rule.precondition.constraints;
   for (i = 0, l = booleans.length; i < l; i++) {
-    currentNode = runningNode.getChild(booleans[i]);
-    if (!currentNode) {
-      currentNode = sre.TrieNodeFactory.getNode(
-        sre.TrieNode.Kind.BOOLEAN, booleans[i], this.store);
-      runningNode.addChild(currentNode);
-    }
-    runningNode = currentNode;
+    node = this.addNode_(node, booleans[i], sre.TrieNode.Kind.BOOLEAN);
   }
-  runningNode.setRule(rule);
+  node.setRule(rule);
+};
+
+
+/**
+ * Retrieves node for the given constraing. Adds a new node if necessary.
+ * @param {sre.TrieNode} node The current node in the trie.
+ * @param {string} constraint The constraint string.
+ * @param {sre.TrieNode.Kind} kind The kind of node.
+ * @return {sre.TrieNode} The next node in the trie.
+ * @private
+ */
+sre.Trie.prototype.addNode_ = function(node, constraint, kind) {
+  var nextNode = node.getChild(constraint);
+  if (!nextNode) {
+    nextNode = sre.TrieNodeFactory.getNode(kind, constraint, this.store);
+    node.addChild(nextNode);
+  }
+  return nextNode;
 };
 
 
