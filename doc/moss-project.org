@@ -112,7 +112,13 @@
 
 ** Usage
 
-*** Have on trie per rule store or per domain?
+*** Have one trie per rule store or per domain?
+
+**** One trie per rule store. They get the query and constraint function as static function.
+
+**** They get string matching with respect to axes for the dynamic constraints.
+
+**** add/delete/findRule are being run on the Trie.
 
 *** When combining rule sets, combine tries or rather search through list of tries?
    The former is probably too expensive and also might not make sense when swapping rule sets regularly.
@@ -122,9 +128,11 @@
 
 ** Design
 
-*** Trie starting with dynamic constraint?
+*** Trie starting with dynamic constraint? Yes
 
-*** Trie starting with query
+*** Trie starting with query? No
+
+*** Combine rule stores are to be replaced by a combined trie
 
 ** DataStructure
 
@@ -132,7 +140,11 @@
 
 **** Type (root, dynamic, query, boolean, rule = leaf?)
 
+
 ***** We should probably have a class per node type.
+      
+**** Leaf or Rule nodes are not necessary. Instead we have a abstract class of constraint nodes. 
+     They can have a single rule come off.
 
 **** SubType (string)
 
@@ -162,7 +174,30 @@
 
 *** Children implemented as Object.<string, node> where the string is the actual content.
 
-*** Retrieval gets all leave node under the last matching node.
+*** Lookup of rules
+
+**** Two types: Dynamic Constraint, Static Constraint
+
+**** For dynamic constraints: Use order, test each constraint against a list of constraints. 
+     E.g., [short, default].
+
+***** Child node is accepted, if it is a dynamic node and constraint is member of given constraint list
+
+***** or if it is a static node. 
+      This means we have a node that has a shorter dynamic constraint spec. 
+      These can be used as defaults.
+
+**** For static constraints: 
+
+***** Child nodes is accepted, if the test returns true.
+
+**** Collecting rules along the valid paths in the trie:
+
+***** If a matching (static) node contains a rule, it is collected.
 
 *** Depth and balancing might be interesting.
     We could effectively invert order of dynamic and static constraints. Not sure if that makes any sense.
+    
+    No, it does not. Better have some clever way of checking on the query
+    level. That is the bottle neck. E.g. try to only have tagname checks there (and *)
+    
