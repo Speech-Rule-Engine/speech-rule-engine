@@ -26,6 +26,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
+goog.require('sre.Trie');
 
 
 
@@ -72,6 +73,7 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
  */
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
+  this.trie = new sre.Trie(this);
   for (var i = 0, func; func = this.initializer[i]; i++) {
     func();
   }
@@ -104,6 +106,12 @@ sre.MathStore.prototype.defineUniqueRuleAlias = function(
 };
 
 
+// TODO: Possibly defines a number of duplicate rules.
+// (E.g., superscript-baseline in Mathspeak)
+//
+// After MOSS these will be automatically discarded in the Trie. Might still be
+// worthwhile looking into the definition methods.
+//
 /**
  * Adds an alias for an existing rule.
  * @param {string} name The name of the rule.

@@ -521,6 +521,8 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
 };
 
 
+// TODO (moss): This needs to be replaced by combined tries.
+//
 /**
  * Initializes the combined rule store
  * @param {!Array.<sre.BaseRuleStore>} ruleSets The rule sets to use.

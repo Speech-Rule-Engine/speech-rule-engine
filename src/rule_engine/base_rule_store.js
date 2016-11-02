@@ -33,6 +33,7 @@ goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
 goog.require('sre.SpeechRuleFunctions');
 goog.require('sre.SpeechRuleStore');
+goog.require('sre.Trie');
 goog.require('sre.XpathUtil');
 
 
@@ -70,6 +71,7 @@ sre.BaseRuleStore = function() {
    * @private
    */
   this.speechRules_ = [];
+  this.trie = null;
 
   /**
    * A priority list of dynamic constraint attributes.
