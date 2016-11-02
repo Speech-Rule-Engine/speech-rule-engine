@@ -108,3 +108,13 @@ sre.Trie.printWithDepth_ = function(node, depth, str) {
   }
   return str;
 };
+
+
+sre.Trie.maxOrder = function(node) {
+  var children = node.getChildren();
+  if (!children.length) {
+    return 0;
+  }
+  var max = Math.max.apply(null, children.map(sre.Trie.maxOrder));
+  return Math.max(children.length, max);
+};

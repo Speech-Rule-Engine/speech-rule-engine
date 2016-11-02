@@ -73,7 +73,6 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
  */
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
-  this.trie = new sre.Trie(this);
   for (var i = 0, func; func = this.initializer[i]; i++) {
     func();
   }

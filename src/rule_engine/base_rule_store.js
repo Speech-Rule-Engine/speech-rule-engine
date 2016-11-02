@@ -71,7 +71,7 @@ sre.BaseRuleStore = function() {
    * @private
    */
   this.speechRules_ = [];
-  this.trie = null;
+  this.trie = new sre.Trie(this);
 
   /**
    * A priority list of dynamic constraint attributes.
@@ -141,6 +141,7 @@ sre.BaseRuleStore.prototype.defineRule = function(
  * @override
  */
 sre.BaseRuleStore.prototype.addRule = function(rule) {
+  this.trie.addRule(rule);
   this.speechRules_.unshift(rule);
 };
 

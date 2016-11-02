@@ -90,7 +90,6 @@ sre.AbstractTrieNode.prototype.getTest = function() {
  */
 sre.AbstractTrieNode.prototype.addChild = function(node) {
   var constraint = node.getConstraint();
-  console.log(constraint);
   var child = this.children_[constraint];
   this.children_[constraint] = node;
   return child;
