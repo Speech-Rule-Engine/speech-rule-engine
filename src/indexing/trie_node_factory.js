@@ -27,7 +27,7 @@ goog.provide('sre.RootTrieNode');
 goog.provide('sre.TrieNodeFactory');
 
 goog.require('sre.AbstractTrieNode');
-goog.require('sre.ConstraintTrieNode');
+goog.require('sre.StaticTrieNode');
 
 // @param {sre.SpeechRule} rule The speech rule the trie node is associated
 //     with.
@@ -72,7 +72,7 @@ goog.inherits(sre.RootTrieNode, sre.AbstractTrieNode);
 
 /**
  * @constructor
- * @extends {sre.AbstractTrieNode<sre.Engine.Axis>}
+ * @extends {sre.AbstractTrieNode<string>}
  * @param {string} constraint The constraint the node represents.
  */
 sre.DynamicTrieNode = function(constraint) {
@@ -86,7 +86,7 @@ goog.inherits(sre.DynamicTrieNode, sre.AbstractTrieNode);
 // TODO: More refined tests depending on the type of query constraint.
 /**
  * @constructor
- * @extends {sre.ConstraintTrieNode}
+ * @extends {sre.StaticTrieNode}
  * @param {string} constraint The constraint the node represents.
  * @param {sre.SpeechRuleStore} store The rule store.
  */
@@ -98,12 +98,12 @@ sre.QueryTrieNode = function(constraint, store) {
       store));
   this.kind = sre.TrieNode.Kind.QUERY;
 };
-goog.inherits(sre.QueryTrieNode, sre.ConstraintTrieNode);
+goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
 
 
 /**
  * @constructor
- * @extends {sre.ConstraintTrieNode}
+ * @extends {sre.StaticTrieNode}
  * @param {string} constraint The constraint the node represents.
  * @param {sre.SpeechRuleStore} store The rule store.
  */
@@ -115,4 +115,4 @@ sre.BooleanTrieNode = function(constraint, store) {
       store));
   this.kind = sre.TrieNode.Kind.BOOLEAN;
 };
-goog.inherits(sre.BooleanTrieNode, sre.ConstraintTrieNode);
+goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);

@@ -21,7 +21,7 @@
  */
 
 goog.provide('sre.AbstractTrieNode');
-goog.provide('sre.ConstraintTrieNode');
+goog.provide('sre.StaticTrieNode');
 
 goog.require('sre.TrieNode');
 
@@ -145,9 +145,9 @@ sre.AbstractTrieNode.prototype.toString = function() {
  * @param {string} constraint The constraint the node represents.
  * @param {function(Node): boolean} test The constraint test of this node.
  */
-sre.ConstraintTrieNode = function(constraint, test) {
-  sre.ConstraintTrieNode.base(this, 'constructor', constraint, test);
-  this.kind = sre.TrieNode.Kind.CONSTRAINT;
+sre.StaticTrieNode = function(constraint, test) {
+  sre.StaticTrieNode.base(this, 'constructor', constraint, test);
+  this.kind = sre.TrieNode.Kind.STATIC;
 
   /**
    * @type {?sre.SpeechRule}
@@ -156,13 +156,13 @@ sre.ConstraintTrieNode = function(constraint, test) {
   this.rule_ = null;
 
 };
-goog.inherits(sre.ConstraintTrieNode, sre.AbstractTrieNode);
+goog.inherits(sre.StaticTrieNode, sre.AbstractTrieNode);
 
 
 /**
  * @return {?sre.SpeechRule} The speech rule of the node.
  */
-sre.ConstraintTrieNode.prototype.getRule = function() {
+sre.StaticTrieNode.prototype.getRule = function() {
   return this.rule_;
 };
 
@@ -170,7 +170,7 @@ sre.ConstraintTrieNode.prototype.getRule = function() {
 /**
  * @param {sre.SpeechRule} rule speech rule of the node.
  */
-sre.ConstraintTrieNode.prototype.setRule = function(rule) {
+sre.StaticTrieNode.prototype.setRule = function(rule) {
   if (this.rule_) {
     sre.Debugger.getInstance().output(
       'Replacing rule ' + this.rule_ + ' with ' + rule);
@@ -182,7 +182,7 @@ sre.ConstraintTrieNode.prototype.setRule = function(rule) {
 /**
  * @override
  */
-sre.ConstraintTrieNode.prototype.toString = function() {
+sre.StaticTrieNode.prototype.toString = function() {
   var rule = this.getRule();
   return rule ?
     this.constraint_ + '\n' + '==> ' + this.getRule().action : this.constraint_;

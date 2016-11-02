@@ -64,7 +64,7 @@ sre.Trie.prototype.addRule = function(rule) {
   }
   runningNode = currentNode;
   var booleans = rule.precondition.constraints;
-  for (var i = 0, l = booleans.length; i < l; i++) {
+  for (i = 0, l = booleans.length; i < l; i++) {
     currentNode = runningNode.getChild(booleans[i]);
     if (!currentNode) {
       currentNode = sre.TrieNodeFactory.getNode(

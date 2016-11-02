@@ -88,6 +88,6 @@ sre.TrieNode.Kind = {
   DYNAMIC: 'dynamic',
   QUERY: 'query',
   BOOLEAN: 'boolean',
-  CONSTRAINT: 'constraint',
+  STATIC: 'static'
   // RULE: 'rule'
 };
