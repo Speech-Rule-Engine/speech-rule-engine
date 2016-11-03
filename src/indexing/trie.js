@@ -82,6 +82,64 @@ sre.Trie.prototype.deleteRule = function(rule) {
 };
 
 
+// TODO: Extend the dynamic constraint to allow for multiple constraints and
+//       priority ordering.
+sre.Trie.prototype.lookupRules = function(element, dynamic) {
+  var nodes = [this.root];
+  var rules = [];
+  var dynamicSets = this.dynamicCstrSets(dynamic);
+  // We might need to take care of multiple layers of root nodes.
+  //
+  // Pop node, get children,
+  // add child if constraint is correct.
+  // add rule if child has a rule.
+  //
+  // First deal with dynamic constraints.
+  // var queryNodes = [];
+  while (dynamicSets.length) {
+    var dynamicSet = dynamicSets.shift();
+    var newNodes = [];
+    while (nodes.length) {
+      var node = nodes.shift();
+      var children = node.getChildren();
+      children.forEach(
+        function(child) {
+          if (child.getKind() !== sre.TrieNode.Kind.DYNAMIC ||
+              dynamicSet.indexOf(child.getConstraint()) !== -1) {
+            newNodes.push(child);
+          }
+        });
+    }
+    nodes = newNodes.slice();
+  }
+  // Then we deal with static constraints, while collecting rules.
+  while (nodes.length) {
+    node = nodes.shift();
+    if (node.getRule) {
+      var rule = node.getRule();
+      if (rule) {
+        rules.push(rule);
+      }
+    }
+    children = node.findChildren(element);
+    nodes = nodes.concat(children);
+  }
+  return rules;
+};
+
+
+// This is temporary:
+sre.Trie.prototype.dynamicCstrSets = function(dynamic) {
+  var values = dynamic.getValues();
+  if (sre.Engine.getInstance().strict) {
+    return values.map(function(value) {return [value];});
+  }
+  return values.map(function(value) {
+    return value === 'default' ? [value] : [value, 'default'];
+  });
+};
+
+
 /**
  * @override
  */
@@ -117,3 +175,7 @@ sre.Trie.maxOrder = function(node) {
   var max = Math.max.apply(null, children.map(sre.Trie.maxOrder));
   return Math.max(children.length, max);
 };
+
+
+// 566 test successful.
+// Time for tests: 173650ms
