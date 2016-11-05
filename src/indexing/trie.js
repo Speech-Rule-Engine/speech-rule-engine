@@ -148,6 +148,21 @@ sre.Trie.prototype.toString = function() {
 };
 
 
+sre.Trie.prototype.collectRules = function() {
+  var rules = [];
+  var collectRules = function(node) {
+    if (node.getKind() === sre.TrieNode.Kind.QUERY ||
+        node.getKind() === sre.TrieNode.Kind.BOOLEAN) {
+      var rule = node.getRule();
+      if (rule) rules.unshift(rule);
+    }
+    node.getChildren().forEach(collectRules);
+  };
+  collectRules(this.root);
+  return rules;
+};
+
+
 /**
  * Prints tree to a string.
  * @param {sre.TrieNode} node The current try node to print.
@@ -179,3 +194,6 @@ sre.Trie.maxOrder = function(node) {
 
 // 566 test successful.
 // Time for tests: 173650ms
+
+// 564 test successful.
+// Time for tests: 49412ms

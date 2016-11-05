@@ -76,6 +76,7 @@ sre.MathStore.prototype.initialize = function() {
   for (var i = 0, func; func = this.initializer[i]; i++) {
     func();
   }
+  this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
 };
 
