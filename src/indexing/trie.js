@@ -17,6 +17,11 @@
 /**
  * @fileoverview Generalised trie for indexing speech rule.
  *
+ * As trie is a pure indexing structure, we currently assume that we will not
+ * remove rules from the trie. I.e., if a rule is removed from a speech rule
+ * store, we have to rebuild the trie. This is the same worst case complexity as
+ * removing a single rule.
+ *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -59,11 +64,11 @@ sre.Trie.prototype.addRule = function(rule) {
 
 
 /**
- * Retrieves node for the given constraing. Adds a new node if necessary.
+ * Retrieves node for the given constraint. Adds a new node if necessary.
  * @param {sre.TrieNode} node The current node in the trie.
  * @param {string} constraint The constraint string.
  * @param {sre.TrieNode.Kind} kind The kind of node.
- * @return {sre.TrieNode} The next node in the trie.
+ * @return {sre.TrieNode} The trie node corresponding to the constraint.
  * @private
  */
 sre.Trie.prototype.addNode_ = function(node, constraint, kind) {
@@ -76,26 +81,24 @@ sre.Trie.prototype.addNode_ = function(node, constraint, kind) {
 };
 
 
-// TODO
-sre.Trie.prototype.deleteRule = function(rule) {
-  
-};
-
-
-// TODO: Extend the dynamic constraint to allow for multiple constraints and
-//       priority ordering.
-sre.Trie.prototype.lookupRules = function(element, dynamic) {
+/**
+ * Retrieves a set of speech rules that are applicable to a given XML node
+ * wrt. to a dynamic constraint.
+ * @param {!Node} xml An XML node.
+ * @param {sre.DynamicCstr} dynamic A dynamic constraint.
+ * @return {!Array.<sre.SpeechRule>} The speech rules that can be applied to the
+ *     given node.
+ */
+sre.Trie.prototype.lookupRules = function(xml, dynamic) {
   var nodes = [this.root];
   var rules = [];
-  var dynamicSets = this.dynamicCstrSets(dynamic);
-  // We might need to take care of multiple layers of root nodes.
-  //
+  var dynamicSets = this.dynamicCstrSets_(dynamic);
+  // Algorithm:
   // Pop node, get children,
   // add child if constraint is correct.
   // add rule if child has a rule.
   //
   // First deal with dynamic constraints.
-  // var queryNodes = [];
   while (dynamicSets.length) {
     var dynamicSet = dynamicSets.shift();
     var newNodes = [];
@@ -121,15 +124,22 @@ sre.Trie.prototype.lookupRules = function(element, dynamic) {
         rules.push(rule);
       }
     }
-    children = node.findChildren(element);
+    children = node.findChildren(xml);
     nodes = nodes.concat(children);
   }
   return rules;
 };
 
 
-// This is temporary:
-sre.Trie.prototype.dynamicCstrSets = function(dynamic) {
+// TODO: This is temporary until it is finalised how to deal with default
+// constraints.
+/**
+ * Enriches the dynamic constraint into sets containing default values.
+ * @param {sre.DynamicCstr} dynamic A dynamic constraint.
+ * @return {!Array.<Array<string>>} Sets of dynamic constraint values.
+ * @private
+ */
+sre.Trie.prototype.dynamicCstrSets_ = function(dynamic) {
   var values = dynamic.getValues();
   if (sre.Engine.getInstance().strict) {
     return values.map(function(value) {return [value];});
@@ -148,6 +158,9 @@ sre.Trie.prototype.toString = function() {
 };
 
 
+/**
+ * @return {!Array.<sre.SpeechRule>} Set of speech rules in the trie.
+ */
 sre.Trie.prototype.collectRules = function() {
   var rules = [];
   var collectRules = function(node) {
@@ -160,6 +173,14 @@ sre.Trie.prototype.collectRules = function() {
   };
   collectRules(this.root);
   return rules;
+};
+
+
+/**
+ * @return {number} The order of the trie.
+ */
+sre.Trie.prototype.order = function() {
+  return sre.Trie.order_(this.root);
 };
 
 
@@ -182,12 +203,18 @@ sre.Trie.printWithDepth_ = function(node, depth, str) {
 };
 
 
-sre.Trie.maxOrder = function(node) {
+/**
+ * Computes the maximal order of the trie beneath the given node.
+ * @param {sre.TrieNode} node The trie node considered as root.
+ * @return {number} The order of the trie.
+ * @private
+ */
+sre.Trie.order_ = function(node) {
   var children = node.getChildren();
   if (!children.length) {
     return 0;
   }
-  var max = Math.max.apply(null, children.map(sre.Trie.maxOrder));
+  var max = Math.max.apply(null, children.map(sre.Trie.order_));
   return Math.max(children.length, max);
 };
 
@@ -197,3 +224,6 @@ sre.Trie.maxOrder = function(node) {
 
 // 564 test successful.
 // Time for tests: 49412ms
+
+// 566 test successful.
+// Time for tests: 48076ms
