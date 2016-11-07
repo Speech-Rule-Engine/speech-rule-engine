@@ -132,7 +132,7 @@ sre.Trie.prototype.lookupRules = function(xml, dynamic) {
 
 
 // TODO: This is temporary until it is finalised how to deal with default
-// constraints.
+//       constraints.
 /**
  * Enriches the dynamic constraint into sets containing default values.
  * @param {sre.DynamicCstr} dynamic A dynamic constraint.
@@ -162,17 +162,7 @@ sre.Trie.prototype.toString = function() {
  * @return {!Array.<sre.SpeechRule>} Set of speech rules in the trie.
  */
 sre.Trie.prototype.collectRules = function() {
-  var rules = [];
-  var collectRules = function(node) {
-    if (node.getKind() === sre.TrieNode.Kind.QUERY ||
-        node.getKind() === sre.TrieNode.Kind.BOOLEAN) {
-      var rule = node.getRule();
-      if (rule) rules.unshift(rule);
-    }
-    node.getChildren().forEach(collectRules);
-  };
-  collectRules(this.root);
-  return rules;
+  return sre.Trie.collectRules_(this.root);
 };
 
 
@@ -216,6 +206,28 @@ sre.Trie.order_ = function(node) {
   }
   var max = Math.max.apply(null, children.map(sre.Trie.order_));
   return Math.max(children.length, max);
+};
+
+
+/**
+ * Compiles set of speech rules below a given node.
+ * @param {sre.TrieNode} root The node considered as root.
+ * @return {!Array.<sre.SpeechRule>} Set of speech rules in the trie.
+ * @private
+ */
+sre.Trie.collectRules_ = function(root) {
+  var rules = [];
+  var explore = [root];
+  while (explore.length) {
+    var node = explore.shift();
+    if (node.getKind() === sre.TrieNode.Kind.QUERY ||
+        node.getKind() === sre.TrieNode.Kind.BOOLEAN) {
+      var rule = node.getRule();
+      if (rule) rules.unshift(rule);
+    }
+    explore = explore.concat(node.getChildren());
+  }
+  return rules;
 };
 
 
