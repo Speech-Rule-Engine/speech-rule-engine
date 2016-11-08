@@ -80,7 +80,39 @@ sre.DynamicTrieNode = function(constraint) {
 goog.inherits(sre.DynamicTrieNode, sre.AbstractTrieNode);
 
 
-// TODO: More refined tests depending on the type of query constraint.
+/**
+ * Generates more refined tests depending on the type of static constraint.
+ * @param {string} constraint A static constraint.
+ * @return {?function(Node): boolean} An efficient test function in lieu of the
+ *    xpath expression.
+ * @private
+ */
+sre.TrieNodeFactory.constraintTest_ = function(constraint) {
+  if (constraint.match(/^self::\*$/)) {
+    return function(node) {return true;};
+  }
+  if (constraint.match(/^self::\w+$/)) {
+    var tag = constraint.slice(6).toUpperCase();
+    return function(node) {
+      return node.tagName && sre.DomUtil.tagName(node) === tag;};
+  }
+  if (constraint.match(/^@\w+$/)) {
+    var attr = constraint.slice(1);
+    return function(node) {
+      return node.hasAttribute && node.hasAttribute(attr);};
+  }
+  if (constraint.match(/^@\w+="[\w\d ]+"$/)) {
+    var split = constraint.split('=');
+    attr = split[0].slice(1);
+    var value = split[1].slice(1, -1);
+    return function(node) {
+      return node.hasAttribute && node.hasAttribute(attr) &&
+        node.getAttribute(attr) === value;};
+  }
+  return null;
+};
+
+
 /**
  * @constructor
  * @extends {sre.StaticTrieNode}
@@ -88,11 +120,11 @@ goog.inherits(sre.DynamicTrieNode, sre.AbstractTrieNode);
  * @param {sre.SpeechRuleStore} store The rule store.
  */
 sre.QueryTrieNode = function(constraint, store) {
-  sre.QueryTrieNode.base(
-    this, 'constructor', constraint,
-    goog.bind(
-      function(node) { return store.applyQuery(node, constraint) === node; },
-      store));
+  var test = sre.TrieNodeFactory.constraintTest_(constraint) ||
+      goog.bind(
+        function(node) { return store.applyQuery(node, constraint) === node; },
+        store);
+  sre.QueryTrieNode.base(this, 'constructor', constraint, test);
   this.kind = sre.TrieNode.Kind.QUERY;
 };
 goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
@@ -105,11 +137,12 @@ goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
  * @param {sre.SpeechRuleStore} store The rule store.
  */
 sre.BooleanTrieNode = function(constraint, store) {
+  var test = sre.TrieNodeFactory.constraintTest_(constraint) ||
+      goog.bind(
+        function(node) { return store.applyConstraint(node, constraint); },
+        store);
   sre.BooleanTrieNode.base(
-    this, 'constructor', constraint,
-    goog.bind(
-      function(node) { return store.applyConstraint(node, constraint); },
-      store));
+    this, 'constructor', constraint, test);
   this.kind = sre.TrieNode.Kind.BOOLEAN;
 };
 goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);
