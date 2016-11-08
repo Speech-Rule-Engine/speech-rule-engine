@@ -229,13 +229,3 @@ sre.Trie.collectRules_ = function(root) {
   }
   return rules;
 };
-
-
-// 566 test successful.
-// Time for tests: 173650ms
-
-// 564 test successful.
-// Time for tests: 49412ms
-
-// 566 test successful.
-// Time for tests: 48076ms

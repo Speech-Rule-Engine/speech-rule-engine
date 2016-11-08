@@ -29,9 +29,6 @@ goog.provide('sre.TrieNodeFactory');
 goog.require('sre.AbstractTrieNode');
 goog.require('sre.StaticTrieNode');
 
-// @param {sre.SpeechRule} rule The speech rule the trie node is associated
-//     with.
-
 
 /**
  * Generates a trie node of a given kind in the given rule store.

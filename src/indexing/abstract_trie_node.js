@@ -139,6 +139,7 @@ sre.AbstractTrieNode.prototype.toString = function() {
 };
 
 
+
 /**
  * @constructor
  * @extends {sre.AbstractTrieNode<Node>}

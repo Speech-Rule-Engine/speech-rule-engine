@@ -62,15 +62,17 @@ sre.BaseRuleStore = function() {
    */
   this.contextFunctions = new sre.SpeechRuleFunctions.ContextFunctions();
 
-  //TODO: (MOSS) WP 1.3:
-  // Replace by dedicated trie data structure.
-  //
   /**
    * Set of speech rules in the store.
    * @type {!Array.<sre.SpeechRule>}
    * @private
    */
   this.speechRules_ = [];
+
+  /**
+   * Trie for indexing speech rules in this store.
+   * @type {sre.Trie}
+   */
   this.trie = new sre.Trie(this);
 
   /**
@@ -100,13 +102,6 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  // var matchingRules = this.speechRules_.filter(
-  //     goog.bind(
-  //         function(rule) {
-  //           return this.testDynamicConstraints(dynamic, rule) &&
-  //               this.testPrecondition_(/** @type {!Node} */ (node), rule);},
-  //         this));
-  // console.log(this.trie);
   var matchingRules = this.trie.lookupRules(node, dynamic);
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
@@ -342,23 +337,6 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
   );
   return rules[0];
 };
-
-
-/**
- * Test the precondition of a speech rule.
- * @param {!Node} node on which to test applicability of the rule.
- * @param {sre.SpeechRule} rule The rule to be tested.
- * @return {boolean} True if the preconditions apply to the node.
- * @private
- */
-// sre.BaseRuleStore.prototype.testPrecondition_ = function(node, rule) {
-//   var prec = rule.precondition;
-//   return this.applyQuery(node, prec.query) === node &&
-//       prec.constraints.every(
-//           goog.bind(function(cstr) {
-//         return this.applyConstraint(node, cstr);},
-//       this));
-// };
 
 
 // TODO (sorge) Define the following methods directly on the precondition

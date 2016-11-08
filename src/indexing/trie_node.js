@@ -89,5 +89,4 @@ sre.TrieNode.Kind = {
   QUERY: 'query',
   BOOLEAN: 'boolean',
   STATIC: 'static'
-  // RULE: 'rule'
 };

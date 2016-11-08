@@ -108,9 +108,8 @@ sre.MathStore.prototype.defineUniqueRuleAlias = function(
 
 // TODO: Possibly defines a number of duplicate rules.
 // (E.g., superscript-baseline in Mathspeak)
-//
-// After MOSS these will be automatically discarded in the Trie. Might still be
-// worthwhile looking into the definition methods.
+// These are automatically discarded in the Trie, but might still be worthwhile
+// looking into the definition methods.
 //
 /**
  * Adds an alias for an existing rule.
