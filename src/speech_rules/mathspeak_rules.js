@@ -364,12 +364,11 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::fenced', '@role="neutral"');
 
 
-  // TODO (sorge) Maybe promote this to default.default?
-  // Maybe check for punctuated element and singleton?
+  // TODO (sorge) Maybe check for punctuated element and singleton?
   defineRule(
       'fences-set', 'mathspeak.default',
       '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
-      'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
+      'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
       'content/*[2][text()]="}"', 'count(children/*)=1',
       'not(name(../..)="appl")');
   defineSpecialisedRule(
@@ -391,20 +390,20 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'single-prime', 'mathspeak.default', '[t] "prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=1');
+      'self::punctuated', '@role="prime"', 'count(children/*)=1');
   defineRule(
       'double-prime', 'mathspeak.default', '[t] "double-prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=2');
+      'self::punctuated', '@role="prime"', 'count(children/*)=2');
   defineRule(
       'triple-prime', 'mathspeak.default', '[t] "triple-prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=3');
+      'self::punctuated', '@role="prime"', 'count(children/*)=3');
   defineRule(
       'quadruple-prime', 'mathspeak.default', '[t] "quadruple-prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=4');
+      'self::punctuated', '@role="prime"', 'count(children/*)=4');
   defineRule(
       'counted-prime', 'mathspeak.default',
       '[t] count(children/*); [t] "prime"',
-      'self::punctuated[@role="prime"]');
+      'self::punctuated', '@role="prime"');
 
   // Fraction rules
 
@@ -591,12 +590,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
-      'self::relseq[@role="equality"]', 'count(./children/*)=2');
+      'self::relseq', '@role="equality"', 'count(./children/*)=2');
 
   defineRule(
       'multi-equality', 'mathspeak.default',
       '[m] ./children/* (sepFunc:CTXFcontentIterator)',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2');
+      'self::relseq', '@role="equality"', 'count(./children/*)>2');
 
   defineRule(
       'multrel', 'mathspeak.default',
@@ -662,7 +661,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
-      'self::subscript[@embellished]');
+      '@embellished');
 
   defineRule(
       'subscript-empty-sup', 'mathspeak.default',
@@ -725,12 +724,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::relseq|ancestor::multirel',
-      'not(self::superscript[@embellished])',
+      'not(@embellished)',
       sre.MathspeakUtil.generateBaselineConstraint());
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'self::superscript[@embellished]', 'not(children/*[2][@role="prime"])');
+      '@embellished', 'not(children/*[2][@role="prime"])');
 
 
   defineRule(
@@ -767,7 +766,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
       'children/*[1]/children/*[2][@role!="othernumber"])',
-      'not(self::superscript[@embellished])');
+      'not(@embellished)');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -791,7 +790,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
       'children/*[1]/children/*[2][@role!="othernumber"])',
-      'not(self::superscript[@embellished])');
+      'not(@embellished)');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -839,7 +838,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'prime-subscript-baseline',
       'self::superscript', 'children/*[2][@role="prime"]',
       'name(children/*[1])="subscript"', 'not(following-sibling::*)',
-      'self::superscript[@embellished]');
+      '@embellished');
 
   defineRule(
       'prime-subscript-simple', 'mathspeak.default',
@@ -1312,7 +1311,7 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
                      'ancestor::fraction|ancestor::punctuated|' +
                      'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
                      'ancestor::relseq|ancestor::multirel|' +
-                     'self::tensor[@embellished]'].
+                     '@embellished'].
         concat(components);
     defineRuleAlias.apply(null, aliasList);
   }
