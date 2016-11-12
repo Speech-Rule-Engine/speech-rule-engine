@@ -40,7 +40,7 @@ goog.require('sre.TrieNodeFactory');
 sre.Trie = function(store) {
   this.store = store;
   this.root = sre.TrieNodeFactory.getNode(
-    sre.TrieNode.Kind.ROOT, '', this.store);
+      sre.TrieNode.Kind.ROOT, '', this.store);
 };
 
 
@@ -106,12 +106,12 @@ sre.Trie.prototype.lookupRules = function(xml, dynamic) {
       var node = nodes.shift();
       var children = node.getChildren();
       children.forEach(
-        function(child) {
-          if (child.getKind() !== sre.TrieNode.Kind.DYNAMIC ||
-              dynamicSet.indexOf(child.getConstraint()) !== -1) {
-            newNodes.push(child);
-          }
-        });
+          function(child) {
+            if (child.getKind() !== sre.TrieNode.Kind.DYNAMIC ||
+                dynamicSet.indexOf(child.getConstraint()) !== -1) {
+              newNodes.push(child);
+            }
+          });
     }
     nodes = newNodes.slice();
   }

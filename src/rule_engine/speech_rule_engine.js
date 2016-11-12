@@ -531,8 +531,7 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
   var combined = new sre.MathStore();
   for (var i = 0, store; store = ruleSets[i]; i++) {
     store.initialize();
-    store.getSpeechRules().forEach(
-      function(x) {combined.trie.addRule(x);});
+    store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
     combined.contextFunctions.addStore(store.contextFunctions);
     combined.customQueries.addStore(store.customQueries);
     combined.customStrings.addStore(store.customStrings);

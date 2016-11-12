@@ -53,7 +53,6 @@ sre.TrieNodeFactory.getNode = function(kind, constraint, store) {
 };
 
 
-// TODO (MOSS) Think about dispersing into multiple files.
 
 /**
  * @constructor
@@ -65,6 +64,7 @@ sre.RootTrieNode = function() {
   this.kind = sre.TrieNode.Kind.ROOT;
 };
 goog.inherits(sre.RootTrieNode, sre.AbstractTrieNode);
+
 
 
 /**
@@ -107,10 +107,11 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
     var value = split[1].slice(1, -1);
     return function(node) {
       return node.hasAttribute && node.hasAttribute(attr) &&
-        node.getAttribute(attr) === value;};
+          node.getAttribute(attr) === value;};
   }
   return null;
 };
+
 
 
 /**
@@ -122,12 +123,13 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
 sre.QueryTrieNode = function(constraint, store) {
   var test = sre.TrieNodeFactory.constraintTest_(constraint) ||
       goog.bind(
-        function(node) { return store.applyQuery(node, constraint) === node; },
-        store);
+          function(node) {return store.applyQuery(node, constraint) === node;},
+          store);
   sre.QueryTrieNode.base(this, 'constructor', constraint, test);
   this.kind = sre.TrieNode.Kind.QUERY;
 };
 goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
+
 
 
 /**
@@ -139,10 +141,10 @@ goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
 sre.BooleanTrieNode = function(constraint, store) {
   var test = sre.TrieNodeFactory.constraintTest_(constraint) ||
       goog.bind(
-        function(node) { return store.applyConstraint(node, constraint); },
-        store);
+          function(node) { return store.applyConstraint(node, constraint); },
+          store);
   sre.BooleanTrieNode.base(
-    this, 'constructor', constraint, test);
+      this, 'constructor', constraint, test);
   this.kind = sre.TrieNode.Kind.BOOLEAN;
 };
 goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);

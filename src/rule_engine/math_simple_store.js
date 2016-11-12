@@ -78,13 +78,13 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
 sre.MathSimpleStore.prototype.lookupRule = function(node, dynamic) {
   // node is actually null!
   var rules = this.getSpeechRules().filter(
-          function(rule) {
-            return sre.MathSimpleStore.testDynamicConstraints_(dynamic, rule);
-          });
+      function(rule) {
+        return sre.MathSimpleStore.testDynamicConstraints_(dynamic, rule);
+      });
   return rules.length ?
-    rules.sort(function(r1, r2) {
-      return sre.Engine.getInstance().comparator.
-        compare(r1.dynamicCstr, r2.dynamicCstr);})[0] : null;
+      rules.sort(function(r1, r2) {
+        return sre.Engine.getInstance().comparator.
+           compare(r1.dynamicCstr, r2.dynamicCstr);})[0] : null;
 };
 
 

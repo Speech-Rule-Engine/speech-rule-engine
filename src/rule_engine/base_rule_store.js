@@ -301,9 +301,9 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
   rules.sort(
       function(r1, r2) {
         return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
-        // When same number of dynamic constraint attributes matches for
-        // both rules, compare length of static constraints.
-        (r2.precondition.constraints.length -
+            // When same number of dynamic constraint attributes matches for
+            // both rules, compare length of static constraints.
+            (r2.precondition.constraints.length -
              r1.precondition.constraints.length);}
   );
   sre.Debugger.getInstance().generateOutput(

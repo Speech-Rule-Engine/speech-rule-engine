@@ -174,7 +174,7 @@ sre.StaticTrieNode.prototype.getRule = function() {
 sre.StaticTrieNode.prototype.setRule = function(rule) {
   if (this.rule_) {
     sre.Debugger.getInstance().output(
-      'Replacing rule ' + this.rule_ + ' with ' + rule);
+        'Replacing rule ' + this.rule_ + ' with ' + rule);
   }
   this.rule_ = rule;
 };
@@ -186,5 +186,6 @@ sre.StaticTrieNode.prototype.setRule = function(rule) {
 sre.StaticTrieNode.prototype.toString = function() {
   var rule = this.getRule();
   return rule ?
-    this.constraint_ + '\n' + '==> ' + this.getRule().action : this.constraint_;
+      this.constraint_ + '\n' + '==> ' + this.getRule().action :
+      this.constraint_;
 };
