@@ -287,29 +287,6 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
 };
 
 
-//TODO: (MOSS) WP 1.2:
-// Replace by flexible and customisable rule ordering using the comparator.
-//
-/**
- * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
- * the engine is in strict mode, the dynamic constraints can be "relaxed", that
- * is, a default value can also be choosen.
- * @param {!sre.DynamicCstr} dynamic Dynamic constraints.
- * @param {sre.SpeechRule} rule The rule.
- * @return {boolean} True if the preconditions apply to the node.
- * @protected
- */
-sre.BaseRuleStore.prototype.testDynamicConstraints = function(
-    dynamic, rule) {
-  if (sre.Engine.getInstance().strict) {
-    return rule.dynamicCstr.equal(dynamic);
-  }
-  //
-  // TODO: (MOSS) We need to have a global comparator?
-  return sre.Engine.getInstance().comparator.match(rule.dynamicCstr);
-};
-
-
 /**
  * Picks the result of the most constraint rule by prefering those:
  * 1) that best match the dynamic constraints.

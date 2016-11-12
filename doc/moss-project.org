@@ -201,3 +201,12 @@
     No, it does not. Better have some clever way of checking on the query
     level. That is the bottle neck. E.g. try to only have tagname checks there (and *)
     
+
+* Symbol mappings
+
+** Could be done with a trie. But at the moment it turns out to be more efficient to leave as is.
+   See the abandoned tweak_simple_stores branch for a failed attempt.
+
+** Maybe change mappings to contain entire dynamic constraints as they will get unwieldy with more axis.
+
+** Give them a standard order: i.e., keep default, style: short>default
