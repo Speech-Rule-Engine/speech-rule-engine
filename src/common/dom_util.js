@@ -195,6 +195,8 @@ sre.DomUtil.dataAttribute = function(attr) {
  * @return {!string} The value for that attribute.
  */
 sre.DomUtil.getDataAttribute = function(node, attr) {
+  console.log(node.toString());
+  
   if (node.dataset) {
     return node.dataset[sre.DomUtil.dataAttribute(attr)];
   }

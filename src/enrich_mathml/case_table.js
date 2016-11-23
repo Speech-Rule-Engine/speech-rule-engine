@@ -54,6 +54,7 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseTable.test = function(semantic) {
+  //DIAGRAM: Multiline here?
   return semantic.mathmlTree &&
       (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||

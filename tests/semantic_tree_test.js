@@ -6238,7 +6238,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<punctuation role="fullstop" id="18">.</punctuation>' +
       '</content>' +
       '<children>' +
-      '<cases role="unknown" id="13">' +
+      '<cases role="binomial" id="13">' +
       '<content>' +
       '<punctuation role="openfence" id="0">{</punctuation>' +
       '</content>' +

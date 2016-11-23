@@ -246,7 +246,8 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     this.collapsedChildren_(array);
     return snode;
   }
-  if (snode.type === sre.SemanticAttr.Type.VECTOR &&
+  // DIAGRAM: Needs changing for multiline!
+  if (snode.type === sre.SemanticAttr.Type.VECTOR ||
       snode.role === sre.SemanticAttr.Role.BINOMIAL) {
     var children = [];
     for (var i = 1, l = array.length; i < l; i++) {

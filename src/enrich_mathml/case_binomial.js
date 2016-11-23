@@ -48,6 +48,10 @@ goog.inherits(sre.CaseBinomial, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseBinomial.test = function(semantic) {
+  console.log(semantic);
+  console.log(!semantic.mathmlTree &&
+    semantic.type === sre.SemanticAttr.Type.LINE &&
+    semantic.role === sre.SemanticAttr.Role.BINOMIAL);
   return !semantic.mathmlTree &&
     semantic.type === sre.SemanticAttr.Type.LINE &&
     semantic.role === sre.SemanticAttr.Role.BINOMIAL;

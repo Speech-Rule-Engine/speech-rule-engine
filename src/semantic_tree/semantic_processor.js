@@ -229,6 +229,8 @@ sre.SemanticProcessor.prototype.text = function(content, font, type) {
  * @return {!sre.SemanticNode} The root node of the syntax tree.
  */
 sre.SemanticProcessor.prototype.row = function(nodes) {
+  console.log('going over row');
+
   nodes = nodes.filter(function(x) {
     return !sre.SemanticPred.isAttribute('type', 'EMPTY')(x);
   });
@@ -1445,6 +1447,7 @@ sre.SemanticProcessor.getFunctionOp_ = function(tree, pred) {
  * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  */
 sre.SemanticProcessor.prototype.tablesInRow = function(nodes) {
+  console.log('here be tables');
   // First we process all matrices:
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, sre.SemanticPred.tableIsMatrixOrVector);
@@ -1505,8 +1508,20 @@ sre.SemanticProcessor.tableToVector_ = function(node) {
     sre.SemanticProcessor.tableToSquare_(node);
     return;
   }
-  if (vector.childNodes.length === 2) {
-    vector.role = sre.SemanticAttr.Role.BINOMIAL;
+  sre.SemanticProcessor.binomialForm_(vector);
+};
+
+
+/**
+ * Assigns a binomial role if a table consists of two lines only.
+ * @param {!sre.SemanticNode} node The table node.
+ * @private
+ */
+sre.SemanticProcessor.binomialForm_ = function(node) {
+  if (sre.SemanticPred.isBinomial(node)) {
+    node.role = sre.SemanticAttr.Role.BINOMIAL;
+    node.childNodes[0].role = sre.SemanticAttr.Role.BINOMIAL;
+    node.childNodes[1].role = sre.SemanticAttr.Role.BINOMIAL;
   }
 };
 
@@ -1593,6 +1608,7 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
  * @param {!sre.SemanticNode} table The node to be rewritten a multiline.
  */
 sre.SemanticProcessor.tableToMultiline = function(table) {
+  console.log('here1');
   if (!sre.SemanticPred.tableIsMultiline(table)) {
     return;
   }
@@ -1600,6 +1616,7 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
   for (var i = 0, row; row = table.childNodes[i]; i++) {
     sre.SemanticProcessor.rowToLine_(row, sre.SemanticAttr.Role.MULTILINE);
   }
+  sre.SemanticProcessor.binomialForm_(table);
 };
 
 
@@ -1841,12 +1858,17 @@ sre.SemanticProcessor.exprFont_ = function(node) {
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
     linethickness, denom, enume) {
   if (sre.SemanticUtil.isZeroLength(linethickness)) {
+    console.log('binomial');
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [enume], []);
-    return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
+    var node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
+    sre.SemanticProcessor.binomialForm_(node);
+    return node;
+    // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
+    //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
     return sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
   }
