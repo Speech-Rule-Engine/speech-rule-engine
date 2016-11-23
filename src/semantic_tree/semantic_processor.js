@@ -229,8 +229,6 @@ sre.SemanticProcessor.prototype.text = function(content, font, type) {
  * @return {!sre.SemanticNode} The root node of the syntax tree.
  */
 sre.SemanticProcessor.prototype.row = function(nodes) {
-  console.log('going over row');
-
   nodes = nodes.filter(function(x) {
     return !sre.SemanticPred.isAttribute('type', 'EMPTY')(x);
   });
@@ -1447,7 +1445,6 @@ sre.SemanticProcessor.getFunctionOp_ = function(tree, pred) {
  * @return {!Array.<!sre.SemanticNode>} The new list of nodes.
  */
 sre.SemanticProcessor.prototype.tablesInRow = function(nodes) {
-  console.log('here be tables');
   // First we process all matrices:
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, sre.SemanticPred.tableIsMatrixOrVector);
