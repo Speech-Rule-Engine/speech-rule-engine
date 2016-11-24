@@ -31,7 +31,6 @@ goog.require('sre.SemanticAttr');
  * @constructor
  * @extends {sre.AbstractEnrichCase}
  * @override
- * @final
  */
 sre.CaseTable = function(semantic) {
   sre.CaseTable.base(this, 'constructor', semantic);
@@ -54,6 +53,7 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseTable.test = function(semantic) {
+  //DIAGRAM: Multiline here?
   return semantic.mathmlTree &&
       (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||

@@ -2116,5 +2116,11 @@ sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
   this.executeRebuildTest(
     '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
       '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>');
+  // Without fences
+  this.executeRebuildTest(
+    '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>');
+  this.executeRebuildTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable>');
 };
 

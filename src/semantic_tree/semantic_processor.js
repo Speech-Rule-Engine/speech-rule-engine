@@ -1505,8 +1505,20 @@ sre.SemanticProcessor.tableToVector_ = function(node) {
     sre.SemanticProcessor.tableToSquare_(node);
     return;
   }
-  if (vector.childNodes.length === 2) {
-    vector.role = sre.SemanticAttr.Role.BINOMIAL;
+  sre.SemanticProcessor.binomialForm_(vector);
+};
+
+
+/**
+ * Assigns a binomial role if a table consists of two lines only.
+ * @param {!sre.SemanticNode} node The table node.
+ * @private
+ */
+sre.SemanticProcessor.binomialForm_ = function(node) {
+  if (sre.SemanticPred.isBinomial(node)) {
+    node.role = sre.SemanticAttr.Role.BINOMIAL;
+    node.childNodes[0].role = sre.SemanticAttr.Role.BINOMIAL;
+    node.childNodes[1].role = sre.SemanticAttr.Role.BINOMIAL;
   }
 };
 
@@ -1578,6 +1590,9 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
   }
   table.type = sre.SemanticAttr.Type.CASES;
   table.appendContentNode(openFence);
+  if (sre.SemanticPred.tableIsMultiline(table)) {
+    sre.SemanticProcessor.binomialForm_(table);
+  }
   return table;
 };
 
@@ -1600,6 +1615,7 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
   for (var i = 0, row; row = table.childNodes[i]; i++) {
     sre.SemanticProcessor.rowToLine_(row, sre.SemanticAttr.Role.MULTILINE);
   }
+  sre.SemanticProcessor.binomialForm_(table);
 };
 
 
@@ -1845,8 +1861,12 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [enume], []);
-    return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
+    var node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
+    sre.SemanticProcessor.binomialForm_(node);
+    return node;
+    // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
+    //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
   } else {
     return sre.SemanticProcessor.getInstance().fractionNode_(denom, enume);
   }

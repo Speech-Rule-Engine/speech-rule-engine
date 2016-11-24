@@ -123,6 +123,7 @@ sre.Focus.prototype.clone = function() {
   var focus = new sre.Focus(this.semanticNodes_, this.semanticPrimary_);
   focus.domNodes_ = this.domNodes_;
   focus.domPrimary_ = this.domPrimary_;
+  focus.allNodes_ = this.allNodes_;
   return focus;
 };
 
