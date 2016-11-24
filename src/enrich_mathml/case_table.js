@@ -107,7 +107,7 @@ sre.CaseTable.prototype.cleanupCollapsedRows = function() {
       inner.setAttribute(sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
       collapsed = true;
     } else {
-      collapse.push(id);
+      collapse.push(parseInt(id, 10));
     }
   }
   if (collapsed) {

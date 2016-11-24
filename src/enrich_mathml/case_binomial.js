@@ -63,8 +63,12 @@ sre.CaseBinomial.prototype.getMathml = function() {
   if (this.semantic.childNodes.length) {
     var child = this.semantic.childNodes[0];
     this.mml = sre.EnrichMathml.walkTree(/**@type{!sre.SemanticNode}*/(child));
-    sre.EnrichMathml.addCollapsedAttribute(
+    if (this.mml.hasAttribute('data-semantic-type')) {
+      sre.EnrichMathml.addCollapsedAttribute(
         this.mml, [this.semantic.id, child.id]);
+    } else {
+      sre.EnrichMathml.setAttributes(this.mml, this.semantic);
+    }
   }
   return this.mml;
 };
