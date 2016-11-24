@@ -1590,6 +1590,9 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
   }
   table.type = sre.SemanticAttr.Type.CASES;
   table.appendContentNode(openFence);
+  if (sre.SemanticPred.tableIsMultiline(table)) {
+    sre.SemanticProcessor.binomialForm_(table);
+  }
   return table;
 };
 
@@ -1605,7 +1608,6 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
  * @param {!sre.SemanticNode} table The node to be rewritten a multiline.
  */
 sre.SemanticProcessor.tableToMultiline = function(table) {
-  console.log('here1');
   if (!sre.SemanticPred.tableIsMultiline(table)) {
     return;
   }
@@ -1855,7 +1857,6 @@ sre.SemanticProcessor.exprFont_ = function(node) {
 sre.SemanticProcessor.prototype.fractionLikeNode = function(
     linethickness, denom, enume) {
   if (sre.SemanticUtil.isZeroLength(linethickness)) {
-    console.log('binomial');
     var child0 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.LINE, [denom], []);
     var child1 = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(

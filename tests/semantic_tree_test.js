@@ -6243,7 +6243,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<punctuation role="openfence" id="0">{</punctuation>' +
       '</content>' +
       '<children>' +
-      '<line role="cases" id="6">' +
+      '<line role="binomial" id="6">' +
       '<children>' +
       '<punctuated role="sequence" id="4">' +
       '<content>' +
@@ -6257,7 +6257,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</punctuated>' +
       '</children>' +
       '</line>' +
-      '<line role="cases" id="12">' +
+      '<line role="binomial" id="12">' +
       '<children>' +
       '<punctuated role="sequence" id="10">' +
       '<content>' +
@@ -10498,5 +10498,41 @@ sre.SemanticTreeTest.prototype.testStreeBinomial = function() {
       '</line>' +
       '</children>' +
       '</vector>');
+  // Without fences
+  this.executeTreeTest(
+    '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable>',
+    '<multiline role="binomial" id="6">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="3">b</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
 };
 
