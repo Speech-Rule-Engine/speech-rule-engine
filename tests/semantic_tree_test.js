@@ -6414,6 +6414,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</table>');
 };
 
+// Missing: MatricesWithIgnores
 
 /**
  * Limit functions.
@@ -10498,9 +10499,205 @@ sre.SemanticTreeTest.prototype.testStreeBinomial = function() {
       '</line>' +
       '</children>' +
       '</vector>');
-  // Without fences
+};
+
+
+/**
+ * Binomial coefficients generated with fractions and redundant elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeBinomialWithIgnores = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+};
+
+
+/**
+ * Binomial coefficient like elements, without fences.
+ */
+sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
+  this.brief = false;
   this.executeTreeTest(
     '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+    '<mfrac linethickness="0"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>',
       '<multiline role="binomial" id="4">' +
       '<children>' +
       '<line role="binomial" id="2">' +
