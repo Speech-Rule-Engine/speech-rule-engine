@@ -604,9 +604,9 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
 
 
 /**
- * Testing tabular structures.
+ * Testing binomial coefficients.
  */
-sre.PrefixRuleTest.prototype.testTables = function() {
+sre.PrefixRuleTest.prototype.testBinomials = function() {
   var binomial = '<vector role="binomial" id="6">' +
       '<content>' +
       '<fence role="open" id="7">(</fence>' +
@@ -627,6 +627,16 @@ sre.PrefixRuleTest.prototype.testTables = function() {
       '</vector>';
   this.executeTest(binomial, 2, 'Choice Quantity');
   this.executeTest(binomial, 5, 'Selection Quantity');
+  this.executeTest(binomial, 6, '');
+  this.executeTest(binomial, 0, '');
+  this.executeTest(binomial, 3, '');
+};
+
+
+/**
+ * Testing vectors.
+ */
+sre.PrefixRuleTest.prototype.testVectors = function() {
   var vector = '<vector role="unknown" id="10">' +
       '<content>' +
       '<fence role="open" id="0">[</fence>' +
@@ -653,6 +663,16 @@ sre.PrefixRuleTest.prototype.testTables = function() {
   this.executeTest(vector, 3, '1st Row');
   this.executeTest(vector, 6, '2nd Row');
   this.executeTest(vector, 9, '3rd Row');
+  this.executeTest(vector, 0, '');
+  this.executeTest(vector, 7, '');
+  this.executeTest(vector, 10, '');
+};
+
+
+/**
+ * Testing matrices.
+ */
+sre.PrefixRuleTest.prototype.testMatrices = function() {
   var matrix = '<matrix role="squarematrix" id="13">' +
       '<content>' +
       '<fence role="open" id="2">[</fence>' +
@@ -695,4 +715,7 @@ sre.PrefixRuleTest.prototype.testTables = function() {
   this.executeTest(matrix, 12, '2nd Row');
   this.executeTest(matrix, 9, '1st Column');
   this.executeTest(matrix, 11, '2nd Column');
+  this.executeTest(matrix, 2, '');
+  this.executeTest(matrix, 8, '');
+  this.executeTest(matrix, 13, '');
 };
