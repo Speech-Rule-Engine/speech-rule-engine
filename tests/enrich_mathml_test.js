@@ -10445,12 +10445,18 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
     '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
       '</mi></mfrac></mfenced>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="4" children="0,1"' +
-      ' content="5,6" collapsed="(4 (2 0) (3 1))">' +
+      '<mrow type="vector" role="binomial" id="4" children="2,3"' +
+      ' content="5,6">' +
       '<mo type="fence" role="open" id="5" parent="4" added="true">(</mo>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="4">n</mi>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="4">k</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="2" children="0" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
+      '</mrow>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="3" children="1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
+      '</mrow>' +
       '</mfrac>' +
       '<mo type="fence" role="close" id="6" parent="4" added="true">)</mo>' +
       '</mrow>' +
@@ -10460,14 +10466,20 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
     '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
       '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="5" children="1,2"' +
-      ' content="0,6" collapsed="(5 (3 1) (4 2))">' +
+      '<mrow type="vector" role="binomial" id="5" children="3,4"' +
+      ' content="0,6">' +
       '<mrow>' +
       '<mo type="fence" role="open" id="0" parent="5">(</mo>' +
       '</mrow>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="5">n</mi>' +
-      '<mi type="identifier" role="latinletter" id="2" parent="5">k</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="3" children="1" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
+      '</mrow>' +
+      '<mrow added="true" ' +
+      'type="line" role="binomial" id="4" children="2" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
+      '</mrow>' +
       '</mfrac>' +
       '<mrow>' +
       '<mo type="fence" role="close" id="6" parent="5">)</mo>' +
@@ -10479,19 +10491,25 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
     '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
       '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="8" children="1,5"' +
-      ' content="0,9" collapsed="(8 (6 1) (7 5))">' +
+      '<mrow type="vector" role="binomial" id="8" children="6,7"' +
+      ' content="0,9">' +
       '<mrow>' +
       '<mo type="fence" role="open" id="0" parent="8">(</mo>' +
       '</mrow>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="8">n</mi>' +
+      '<mrow added="true" ' +
+      'type="line" role="binomial" id="6" children="1" parent="8">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="6">n</mi>' +
+      '</mrow>' +
+      '<mrow added="true" ' +
+      'type="line" role="binomial" id="7" children="5" parent="8">' +
       '<mrow type="infixop" role="addition" id="5" children="2,4"' +
-      ' content="3" parent="8">' +
+      ' content="3" parent="7">' +
       '<mi type="identifier" role="latinletter" id="2" parent="5">k</mi>' +
       '<mo type="operator" role="addition" id="3" parent="5"' +
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="4" parent="5">l</mi>' +
+      '</mrow>' +
       '</mrow>' +
       '</mfrac>' +
       '<mrow>' +
@@ -10506,14 +10524,16 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
       '</mrow></mrow>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="16" children="6,13"' +
-      ' content="0,17" collapsed="(16 (14 6) (15 13))">' +
+      '<mrow type="vector" role="binomial" id="16" children="14,15"' +
+      ' content="0,17">' +
       '<mrow>' +
       '<mo type="fence" role="open" id="0" parent="16">(</mo>' +
       '</mrow>' +
       '<mfrac linethickness="0">' +
+      '<mrow added="true" ' +
+      'type="line" role="binomial" id="14" children="6" parent="16">' +
       '<mrow type="infixop" role="addition" id="6" children="1,3,5"' +
-      ' content="2,4" parent="16">' +
+      ' content="2,4" parent="14">' +
       '<mi type="identifier" role="latinletter" id="1" parent="6">n</mi>' +
       '<mo type="operator" role="addition" id="2" parent="6"' +
       ' operator="infixop,+">+</mo>' +
@@ -10522,8 +10542,11 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="5" parent="6">l</mi>' +
       '</mrow>' +
+      '</mrow>' +
+      '<mrow added="true" ' +
+      'type="line" role="binomial" id="15" children="13" parent="16">' +
       '<mrow type="infixop" role="subtraction" id="13" children="12,11"' +
-      ' content="10" parent="16">' +
+      ' content="10" parent="15">' +
       '<mrow type="infixop" role="addition" id="12" children="7,9"' +
       ' content="8" parent="13">' +
       '<mi type="identifier" role="latinletter" id="7" parent="12">k</mi>' +
@@ -10534,6 +10557,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
       '<mo type="operator" role="subtraction" id="10" parent="13"' +
       ' operator="infixop,-">-</mo>' +
       '<mn type="number" role="integer" id="11" parent="13">1</mn>' +
+      '</mrow>' +
       '</mrow>' +
       '</mfrac>' +
       '<mrow>' +
@@ -10577,14 +10601,17 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
     '<mfenced open="(" close=")"><mfrac linethickness="0">' +
       '<mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="4" children="2,1"' +
-      ' content="5,6" collapsed="(4 2 (3 1))">' +
+      '<mrow type="vector" role="binomial" id="4" children="2,3"' +
+      ' content="5,6">' +
       '<mo type="fence" role="open" id="5" parent="4" added="true">(</mo>' +
       '<mfrac linethickness="0">' +
       '<mrow type="line" role="binomial" id="2" children="0" parent="4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
       '</mrow>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="4">k</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="3" children="1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
+      '</mrow>' +
       '</mfrac>' +
       '<mo type="fence" role="close" id="6" parent="4" added="true">)</mo>' +
       '</mrow>' +
@@ -10613,11 +10640,14 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
       '<mfenced open="(" close=")"><mfrac linethickness="0">' +
       '<mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="4" children="0,3"' +
-      ' content="5,6" collapsed="(4 (2 0) 3)">' +
+      '<mrow type="vector" role="binomial" id="4" children="2,3"' +
+      ' content="5,6">' +
       '<mo type="fence" role="open" id="5" parent="4" added="true">(</mo>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="4">n</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="2" children="0" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
+      '</mrow>' +
       '<mpadded type="line" role="binomial" id="3" children="1" parent="4">' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
       '</mpadded>' +
@@ -10631,8 +10661,8 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
       '<mrow><mi>n</mi></mrow><mi>k</mi>' +
       '</mfrac><mrow><mo>)</mo></mrow></mrow>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="5" children="3,2"' +
-      ' content="0,6" collapsed="(5 3 (4 2))">' +
+      '<mrow type="vector" role="binomial" id="5" children="3,4"' +
+      ' content="0,6">' +
       '<mrow>' +
       '<mo type="fence" role="open" id="0" parent="5">(</mo>' +
       '</mrow>' +
@@ -10640,7 +10670,10 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
       '<mrow type="line" role="binomial" id="3" children="1" parent="5">' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
       '</mrow>' +
-      '<mi type="identifier" role="latinletter" id="2" parent="5">k</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="4" children="2" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
+      '</mrow>' +
       '</mfrac>' +
       '<mrow>' +
       '<mo type="fence" role="close" id="6" parent="5">)</mo>' +
@@ -10677,13 +10710,16 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
       '<mi>n</mi><mpadded><mi>k</mi></mpadded>' +
       '</mfrac><mrow><mo>)</mo></mrow></mrow>',
     '<math>' +
-      '<mrow type="vector" role="binomial" id="5" children="1,4"' +
-      ' content="0,6" collapsed="(5 (3 1) 4)">' +
+      '<mrow type="vector" role="binomial" id="5" children="3,4"' +
+      ' content="0,6">' +
       '<mrow>' +
       '<mo type="fence" role="open" id="0" parent="5">(</mo>' +
       '</mrow>' +
       '<mfrac linethickness="0">' +
-      '<mi type="identifier" role="latinletter" id="1" parent="5">n</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="3" children="1" parent="5">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">n</mi>' +
+      '</mrow>' +
       '<mpadded type="line" role="binomial" id="4" children="2" parent="5">' +
       '<mi type="identifier" role="latinletter" id="2" parent="4">k</mi>' +
       '</mpadded>' +
@@ -10706,9 +10742,15 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialOther = function() {
     '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
     '<math>' +
       '<mfrac linethickness="0" type="multiline" role="binomial"' +
-      ' id="4" children="0,1" collapsed="(4 (2 0) (3 1))">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="4">n</mi>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="4">k</mi>' +
+      ' id="4" children="2,3">' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="2" children="0" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
+      '</mrow>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="3" children="1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
+      '</mrow>' +
       '</mfrac>' +
       '</math>'
   );
@@ -10716,11 +10758,14 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialOther = function() {
     '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>',
     '<math>' +
       '<mfrac linethickness="0" type="multiline" role="binomial"' +
-      ' id="4" children="2,1" collapsed="(4 2 (3 1))">' +
+      ' id="4" children="2,3">' +
       '<mrow type="line" role="binomial" id="2" children="0" parent="4">' +
       '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
       '</mrow>' +
-      '<mi type="identifier" role="latinletter" id="1" parent="4">k</mi>' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="3" children="1" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
+      '</mrow>' +
       '</mfrac>' +
       '</math>'
   );
@@ -10728,8 +10773,11 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialOther = function() {
     '<mfrac linethickness="0"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>',
     '<math>' +
       '<mfrac linethickness="0" type="multiline" role="binomial"' +
-      ' id="4" children="0,3" collapsed="(4 (2 0) 3)">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="4">n</mi>' +
+      ' id="4" children="2,3">' +
+      '<mrow added="true"' +
+      ' type="line" role="binomial" id="2" children="0" parent="4">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="2">n</mi>' +
+      '</mrow>' +
       '<mpadded type="line" role="binomial" id="3" children="1" parent="4">' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">k</mi>' +
       '</mpadded>' +
