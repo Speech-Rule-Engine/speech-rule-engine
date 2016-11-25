@@ -195,21 +195,14 @@ sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
     'row', 'prefix.default',
     '[t] CSFordinalPosition; [t] "Row"; [p] (pause:200)',
-    'self::row'
+    'self::row|self::line'
+    // TODO: (MOSS) See if that is more efficient as two rules in a trie.
   );
-
   defineRule(
     'cell', 'prefix.default',
     '[t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
     'self::cell'
   );
-
-  defineRule(
-    'line', 'prefix.default',
-    '[t] CSFordinalPosition; [t] "Line"; [p] (pause:200)',
-    'self::line'
-  );
-
 };
 
 });  // goog.scope

@@ -22,6 +22,7 @@
 goog.provide('sre.PrefixRuleTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.DynamicCstr');
 
 
 
@@ -57,8 +58,10 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
   }
   var descrs = sre.SpeechRuleEngine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true,
-        'rules': ['PrefixRules']},
+       'strict': true, 'cache': false, 'speech': true,
+       'comparator': new sre.DynamicCstr.DefaultComparator(
+         new sre.DynamicCstr({'domain': 'prefix', 'style': 'default'})),
+       'rules': ['PrefixRules']},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       );
   var speech = sre.AuditoryDescription.speechString(descrs);
@@ -597,4 +600,99 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</tensor>',
                    14, '2nd Right Superscript');
+};
+
+
+/**
+ * Testing tabular structures.
+ */
+sre.PrefixRuleTest.prototype.testTables = function() {
+  var binomial = '<vector role="binomial" id="6">' +
+      '<content>' +
+      '<fence role="open" id="7">(</fence>' +
+      '<fence role="close" id="8">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="3">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>';
+  this.executeTest(binomial, 2, 'Choice Quantity');
+  this.executeTest(binomial, 5, 'Selection Quantity');
+  var vector = '<vector role="unknown" id="10">' +
+      '<content>' +
+      '<fence role="open" id="0">[</fence>' +
+      '<fence role="close" id="11">]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="vector" id="3">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '</children>' +
+      '</line>' +
+      '<line role="vector" id="6">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</line>' +
+      '<line role="vector" id="9">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="7">3</number>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>';
+  this.executeTest(vector, 3, '1st Row');
+  this.executeTest(vector, 6, '2nd Row');
+  this.executeTest(vector, 9, '3rd Row');
+  var matrix = '<matrix role="squarematrix" id="13">' +
+      '<content>' +
+      '<fence role="open" id="2">[</fence>' +
+      '<fence role="close" id="14">]</fence>' +
+      '</content>' +
+      '<children>' +
+      '<row role="squarematrix" id="7">' +
+      '<children>' +
+      '<cell role="squarematrix" id="4">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="3">0</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="squarematrix" id="6">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">1</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="squarematrix" id="12">' +
+      '<children>' +
+      '<cell role="squarematrix" id="9">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="8">2</number>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="squarematrix" id="11">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="10">3</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</matrix>';
+  this.executeTest(matrix, 7, '1st Row');
+  this.executeTest(matrix, 4, '1st Column');
+  this.executeTest(matrix, 6, '2nd Column');
+  this.executeTest(matrix, 12, '2nd Row');
+  this.executeTest(matrix, 9, '1st Column');
+  this.executeTest(matrix, 11, '2nd Column');
 };
