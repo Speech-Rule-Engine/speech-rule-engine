@@ -183,12 +183,12 @@ sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
       'choice', 'prefix.default',
       '[t] "Choice Quantity"; [p] (pause:200)',
-      'self::line', '@role="binomial"',
+      'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=0');
   defineRule(
       'select', 'prefix.default',
       '[t] "Selection Quantity"; [p] (pause:200)',
-      'self::line', '@role="binomial"',
+      'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=1');
 };
 
