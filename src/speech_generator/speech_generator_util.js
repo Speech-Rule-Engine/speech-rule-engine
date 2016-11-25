@@ -68,7 +68,7 @@ sre.SpeechGeneratorUtil.retrieveSpeech = function(mml, semantic) {
   var descrs = null;
   if (sre.Engine.getInstance().cache) {
     descrs = sre.SpeechRuleEngine.getInstance().
-      getCache(semantic.id.toString());
+        getCache(semantic.id.toString());
   }
   if (!descrs) {
     descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);

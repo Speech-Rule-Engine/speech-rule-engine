@@ -84,5 +84,5 @@ sre.WalkerUtil.getBySemanticId = function(root, id) {
     return root;
   }
   return sre.DomUtil.querySelectorAllByAttrValue(
-    root, sre.EnrichMathml.Attribute.ID, id)[0];
+      root, sre.EnrichMathml.Attribute.ID, id)[0];
 };

@@ -58,10 +58,10 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
   }
   var descrs = sre.SpeechRuleEngine.getInstance().runInSetting(
       {'domain': 'prefix', 'style': 'default',
-       'strict': true, 'cache': false, 'speech': true,
-       'comparator': new sre.DynamicCstr.DefaultComparator(
-         new sre.DynamicCstr({'domain': 'prefix', 'style': 'default'})),
-       'rules': ['PrefixRules']},
+        'strict': true, 'cache': false, 'speech': true,
+        'comparator': new sre.DynamicCstr.DefaultComparator(
+            new sre.DynamicCstr({'domain': 'prefix', 'style': 'default'})),
+        'rules': ['PrefixRules']},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       );
   var speech = sre.AuditoryDescription.speechString(descrs);

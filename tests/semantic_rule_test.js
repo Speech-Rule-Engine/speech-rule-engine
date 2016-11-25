@@ -225,12 +225,12 @@ sre.SemanticRuleTest.prototype.testFonts = function() {
  */
 sre.SemanticRuleTest.prototype.testMultiline = function() {
   this.executeRuleTest(
-    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
       '</mtr></mtable>',
-    'multiline equation line 1 a line 2 b');
+      'multiline equation line 1 a line 2 b');
   this.executeRuleTest(
-    '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
+      '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
       '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>',
-    'multiline equation row 1 a c row 2 b d');
+      'multiline equation row 1 a c row 2 b d');
 };
 

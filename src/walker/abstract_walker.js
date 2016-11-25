@@ -209,7 +209,7 @@ sre.AbstractWalker.prototype.speech = function() {
   // TODO: This should be more efficient. Recompute only when walker is
   // restarted.
   var prefix = nodes[0] ? sre.WalkerUtil.getAttribute(
-    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
+      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
@@ -447,8 +447,8 @@ sre.AbstractWalker.prototype.rebuildStree_ = function() {
 sre.AbstractWalker.prototype.previousLevel = function() {
   var dnode = this.focus_.getDomPrimary();
   return dnode ?
-    sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.PARENT) :
-    this.focus_.getSemanticPrimary().parent.id.toString();
+      sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.PARENT) :
+      this.focus_.getSemanticPrimary().parent.id.toString();
 };
 
 
@@ -460,17 +460,18 @@ sre.AbstractWalker.prototype.nextLevel = function() {
   var dnode = this.focus_.getDomPrimary();
   if (dnode) {
     var children = sre.WalkerUtil.splitAttribute(
-      sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.CHILDREN));
+        sre.WalkerUtil.getAttribute(dnode,
+                                    sre.EnrichMathml.Attribute.CHILDREN));
     var content = sre.WalkerUtil.splitAttribute(
-      sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.CONTENT));
+        sre.WalkerUtil.getAttribute(dnode, sre.EnrichMathml.Attribute.CONTENT));
     var type = sre.WalkerUtil.getAttribute(
-      dnode, sre.EnrichMathml.Attribute.TYPE);
+        dnode, sre.EnrichMathml.Attribute.TYPE);
     var role = sre.WalkerUtil.getAttribute(
-      dnode, sre.EnrichMathml.Attribute.ROLE);
+        dnode, sre.EnrichMathml.Attribute.ROLE);
     return this.combineContentChildren(
-      /** @type {!sre.SemanticAttr.Type} */ (type),
-      /** @type {!sre.SemanticAttr.Role} */ (role),
-      content, children);
+        /** @type {!sre.SemanticAttr.Type} */ (type),
+        /** @type {!sre.SemanticAttr.Role} */ (role),
+        content, children);
   }
   var toIds = function(x) { return x.id.toString(); };
   var snode = this.rebuilt.nodeDict[this.primaryId()];

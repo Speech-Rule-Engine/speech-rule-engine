@@ -61,7 +61,7 @@ sre.SemanticWalker.prototype.up = function() {
   var found = this.levels.find(
       function(focus) {
         return focus.getSemanticNodes().some(
-          function(node) {return node.id.toString() === parent;});
+            function(node) {return node.id.toString() === parent;});
       });
   return found;
 };

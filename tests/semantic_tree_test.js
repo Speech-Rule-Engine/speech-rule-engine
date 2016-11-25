@@ -6416,6 +6416,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
 
 // Missing: MatricesWithIgnores
 
+
 /**
  * Limit functions.
  */
@@ -10645,7 +10646,7 @@ sre.SemanticTreeTest.prototype.testStreeBinomialWithIgnores = function() {
 sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
   this.brief = false;
   this.executeTreeTest(
-    '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
+      '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
       '<multiline role="binomial" id="4">' +
       '<children>' +
       '<line role="binomial" id="2">' +
@@ -10662,7 +10663,7 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
       '</multiline>'
   );
   this.executeTreeTest(
-    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>',
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>',
       '<multiline role="binomial" id="4">' +
       '<children>' +
       '<line role="binomial" id="2">' +
@@ -10679,24 +10680,7 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
       '</multiline>'
   );
   this.executeTreeTest(
-    '<mfrac linethickness="0"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>',
-      '<multiline role="binomial" id="4">' +
-      '<children>' +
-      '<line role="binomial" id="2">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
-      '</children>' +
-      '</line>' +
-      '<line role="binomial" id="3">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
-      '</children>' +
-      '</line>' +
-      '</children>' +
-      '</multiline>'
-  );
-  this.executeTreeTest(
-    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mfrac linethickness="0"><mi>n</mi>' +
       '<mpadded><mi>k</mi></mpadded></mfrac>',
       '<multiline role="binomial" id="4">' +
       '<children>' +
@@ -10714,9 +10698,27 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
       '</multiline>'
   );
   this.executeTreeTest(
-    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
       '<mi>b</mi></mtd></mtr></mtable>',
-    '<multiline role="binomial" id="6">' +
+      '<multiline role="binomial" id="6">' +
       '<children>' +
       '<line role="binomial" id="2">' +
       '<children>' +

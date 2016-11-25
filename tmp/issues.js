@@ -102,3 +102,16 @@ mml = '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><m
 
 
 mml = '<math><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac></math>';
+
+
+////////////
+
+var matrix =       '<math><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em">' +
+      '<mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></math>';
+
+sre.System.getInstance().setupEngine({semantics: true, domain: 'mathspeak', cache: true});
+var enr = sre.Enrich.semanticMathmlSync(matrix);
+console.log(enr.toString());
+var stree = sre.Semantic.getTreeFromString(matrix);
+console.log(sre.DomUtil.formatXml(enr.toString()));
+console.log(sre.DomUtil.formatXml(stree.toString()));

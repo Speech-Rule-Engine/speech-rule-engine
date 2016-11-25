@@ -1908,7 +1908,7 @@ sre.RebuildStreeTest.prototype.testRebuildEmbellishedLeftFence = function() {
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>');
   this.executeRebuildTest(
-    '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo>');
   this.executeRebuildTest(
       '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
@@ -2040,13 +2040,13 @@ sre.RebuildStreeTest.prototype.testRebuildComplexEmbellRight = function() {
  */
 sre.RebuildStreeTest.prototype.testSemanticsElement = function() {
   this.executeRebuildTest(
-    '<semantics></semantics>');
+      '<semantics></semantics>');
   this.executeRebuildTest(
-    '<semantics><mi>a</mi></semantics>');
+      '<semantics><mi>a</mi></semantics>');
   this.executeRebuildTest(
-    '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>');
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>');
   this.executeRebuildTest(
-    '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>');
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>');
 };
 
 
@@ -2061,7 +2061,7 @@ sre.RebuildStreeTest.prototype.testSemanticsAnnotation = function() {
       '<mi>a</mi><semantics><annotation><content>something</content>' +
       '</annotation></semantics>');
   this.executeRebuildTest(
-    '<semantics><mi>a</mi><annotation>something</annotation></semantics>');
+      '<semantics><mi>a</mi><annotation>something</annotation></semantics>');
   this.executeRebuildTest(
       '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
       '<annotation>something</annotation></semantics>');
@@ -2100,21 +2100,21 @@ sre.RebuildStreeTest.prototype.testSemanticsAnnotationXml = function() {
  */
 sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
   this.executeRebuildTest(
-    '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
       '</mi></mfrac></mfenced>');
   this.executeRebuildTest(
-    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
       '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>');
   this.executeRebuildTest(
-    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
       '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>');
   this.executeRebuildTest(
-    '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
       '<mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+' +
       '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
       '</mrow></mrow>');
   this.executeRebuildTest(
-    '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
       '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>');
 };
 
@@ -2124,10 +2124,10 @@ sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
  */
 sre.RebuildStreeTest.prototype.testRebuildBinomialWithIgnores = function() {
   this.executeRebuildTest(
-    '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
       '<mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>');
   this.executeRebuildTest(
-    '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
       '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>');
   this.executeRebuildTest(
       '<mfenced open="(" close=")"><mfrac linethickness="0">' +
@@ -2152,16 +2152,17 @@ sre.RebuildStreeTest.prototype.testRebuildBinomialWithIgnores = function() {
  */
 sre.RebuildStreeTest.prototype.testRebuildBinomialOther = function() {
   this.executeRebuildTest(
-    '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>');
+      '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>');
   this.executeRebuildTest(
-    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>');
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>');
   this.executeRebuildTest(
-    '<mfrac linethickness="0"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>');
-  this.executeRebuildTest(
-    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mfrac linethickness="0"><mi>n</mi>' +
       '<mpadded><mi>k</mi></mpadded></mfrac>');
   this.executeRebuildTest(
-    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>');
+  this.executeRebuildTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
       '<mi>b</mi></mtd></mtr></mtable>');
 };
 

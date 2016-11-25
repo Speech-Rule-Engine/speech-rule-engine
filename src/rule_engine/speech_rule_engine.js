@@ -376,7 +376,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
     if (descrs.length > 0) {
-        descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
+      descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();

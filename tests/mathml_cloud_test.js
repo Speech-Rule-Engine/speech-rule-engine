@@ -479,13 +479,13 @@ sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
  */
 sre.MathmlCloudTest.prototype.testMultiline = function() {
   this.executeRuleTest(
-    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
       '</mtr></mtable>',
-    'StartLayout 1st Row  a 2nd Row  b EndLayout');
+      'StartLayout 1st Row  a 2nd Row  b EndLayout');
   this.executeRuleTest(
-    '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
+      '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
       '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>',
-    'StartLayout 1st Row 1st Column a 2nd Column c 2nd Row 1st Column b' +
+      'StartLayout 1st Row 1st Column a 2nd Column c 2nd Row 1st Column b' +
       ' 2nd Column d EndLayout');
 };
 

@@ -157,7 +157,8 @@ sre.RebuildStree.prototype.makeNode = function(node) {
  */
 sre.RebuildStree.isPunctuated = function(collapsed) {
   return !sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
-    collapsed[1] && sre.SemanticSkeleton.contentCollapseStructure(collapsed[1]);
+      collapsed[1] &&
+      sre.SemanticSkeleton.contentCollapseStructure(collapsed[1]);
 };
 
 
@@ -303,7 +304,7 @@ sre.RebuildStree.prototype.collapsedChildren_ = function(collapsed) {
     for (var j = 1, l = coll.length; j < l; j++) {
       var id = coll[j];
       parent.childNodes.push(
-        sre.SemanticSkeleton.simpleCollapseStructure(id) ?
+          sre.SemanticSkeleton.simpleCollapseStructure(id) ?
           this.nodeDict[id] : recurseCollapsed(id));
     }
     return parent;

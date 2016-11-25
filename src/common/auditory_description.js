@@ -86,14 +86,14 @@ sre.AuditoryDescription.prototype.clone = function() {
     }
   }
   return new sre.AuditoryDescription(
-    {context: this.context,
-     text: this.text,
-     userValue: this.userValue,
-     annotation: this.annotation,
-     correction: this.correction,
-     personality: personality,
-     preprocess: this.preprocess
-    });
+      {context: this.context,
+        text: this.text,
+        userValue: this.userValue,
+        annotation: this.annotation,
+        correction: this.correction,
+        personality: personality,
+        preprocess: this.preprocess
+      });
 };
 
 

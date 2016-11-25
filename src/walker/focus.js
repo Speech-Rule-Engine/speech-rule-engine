@@ -165,7 +165,7 @@ sre.Focus.factory = function(primaryId, nodeIds, rebuilt, dom) {
  */
 sre.Focus.generateAllVisibleNodes_ = function(ids, nodes, dict, domNode) {
   var idFunc = function(id) {
-      return sre.WalkerUtil.getBySemanticId(domNode, id);
+    return sre.WalkerUtil.getBySemanticId(domNode, id);
   };
   var result = [];
   for (var i = 0, l = ids.length; i < l; i++) {
