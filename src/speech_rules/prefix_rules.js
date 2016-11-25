@@ -190,6 +190,26 @@ sre.PrefixRules.initPrefixRules_ = function() {
       '[t] "Selection Quantity"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=1');
+
+  // Positions in tables
+  defineRule(
+    'row', 'prefix.default',
+    '[t] "Row"; [t] count(preceding-sibling::*)+1',
+    'self::row'
+  );
+
+  defineRule(
+    'cell', 'prefix.default',
+    '[t] "Column"; [t] count(preceding-sibling::*)+1',
+    'self::cell'
+  );
+
+  defineRule(
+    'line', 'prefix.default',
+    '[t] "Line"; [t] count(preceding-sibling::*)+1',
+    'self::line'
+  );
+
 };
 
 });  // goog.scope
