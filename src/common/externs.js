@@ -43,6 +43,7 @@ MathJax.Hub.Startup = {};
 MathJax.Hub.Startup.signal;
 MathJax.Callback = {};
 
+
 /**
  * @type {function(...Object)}
  */

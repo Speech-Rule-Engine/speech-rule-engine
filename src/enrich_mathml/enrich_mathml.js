@@ -23,13 +23,16 @@
 
 goog.provide('sre.EnrichMathml');
 goog.provide('sre.EnrichMathml.Attribute');
-goog.provide('sre.EnrichMathml.Error');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
+goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticSkeleton');
+goog.require('sre.SemanticSkeleton.Sexp');
+goog.require('sre.SemanticUtil');
 
 
 
@@ -40,7 +43,7 @@ goog.require('sre.Semantic');
  * @extends {Error}
  */
 sre.EnrichMathml.Error = function(msg) {
-  goog.base(this);
+  sre.EnrichMathml.Error.base(this, 'constructor');
   this.message = msg || '';
   this.name = 'MathML Enrichment Error';
 };
@@ -104,7 +107,7 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
-  var newMml = sre.EnrichMathml.walkTree(semantic.root);
+  sre.EnrichMathml.walkTree(semantic.root);
   sre.Debugger.getInstance().generateOutput(
       function() {
         sre.EnrichMathml.formattedOutput(oldMml, mml, semantic, true);
@@ -119,14 +122,14 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
  * expression.
  *
  * Note that the original MathML nodes are cloned!
- * @param {!sre.SemanticTree.Node} semantic The semantic tree.
+ * @param {!sre.SemanticNode} semantic The semantic tree.
  * @return {!Element} The enriched MathML element.
  */
 sre.EnrichMathml.walkTree = function(semantic) {
   var specialCase = sre.EnrichCaseFactory.getCase(semantic);
-
+  var newNode;
   if (specialCase) {
-    var newNode = specialCase.getMathml();
+    newNode = specialCase.getMathml();
     return sre.EnrichMathml.ascendNewNode(newNode);
   }
   if (semantic.mathml.length === 1) {
@@ -339,19 +342,10 @@ sre.EnrichMathml.attachedElement_ = function(nodes) {
 
 
 /**
- * Type annotation to get around Closure parsing problems for functions as
- * optional parameters.
- * @typedef {function(!Element): boolean}
- * @private
- */
-sre.EnrichMathml.ElementTest_;
-
-
-/**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
  * @param {!Element} node The tree node from where to start.
- * @param {sre.EnrichMathml.ElementTest_=} opt_test The optional test that
+ * @param {(function(!Element): boolean)=} opt_test The optional test that
  *     stops path computation if it fires.
  * @return {!Array.<!Element>} Path from root to node. That is, node is the last
  *     element in the array and array contains at least the original node.
@@ -430,86 +424,22 @@ sre.EnrichMathml.parentNode_ = function(element) {
 };
 
 
-// TODO (sorge) Refactor collapsed structures into a dedicated class.
-/**
- * Type annotation for arrays representing collapsed node structures.
- * @typedef {number|Array.<sre.EnrichMathml.Collapsed_>}
- * @private
- */
-sre.EnrichMathml.Collapsed_;
-
-
-/**
- * Checks if the structure is simple, i.e., a single id number.
- * @param {sre.EnrichMathml.Collapsed_} strct The structure.
- * @return {boolean} True if a simple number.
- */
-sre.EnrichMathml.simpleCollapseStructure = function(strct) {
-  return (typeof strct === 'number');
-};
-
-
-/**
- * Interleaves the ids of two index lists.
- * @param {!sre.EnrichMathml.Collapsed_} first A structured list of
- *     ids.
- * @param {!sre.EnrichMathml.Collapsed_} second A structured list of
- *     ids.
- * @return {!sre.EnrichMathml.Collapsed_} A simple list of ids.
- */
-sre.EnrichMathml.interleaveIds = function(first, second) {
-  return sre.BaseUtil.interleaveLists(
-      sre.EnrichMathml.collapsedLeafs(first),
-      sre.EnrichMathml.collapsedLeafs(second));
-};
-
-
-/**
- * Returns a list of the leaf ids for the given collapsed structures.
- * @param {...sre.EnrichMathml.Collapsed_} var_args The collapsed structure
- *     annotations.
- * @return {!Array.<number>} The leafs of the structure annotations.
- */
-sre.EnrichMathml.collapsedLeafs = function(var_args) {
-  var collapseStructure = function(coll) {
-    if (sre.EnrichMathml.simpleCollapseStructure(coll)) {
-      return [coll];
-    }
-    return coll.slice(1);
-  };
-  return Array.prototype.slice.call(arguments, 0).
-      reduce(function(x, y) {
-        return x.concat(collapseStructure(y));
-      }, []);
-};
-
-
 /**
  * Adds a collapsed attribute to the given node, according to the collapsed
  * structure.
  * @param {!Element} node The MathML node.
- * @param {!sre.EnrichMathml.Collapsed_} collapsed The collapsed structure
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed The collapsed structure
  *    annotations.
  */
 sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
-  /**
-   * @param {!sre.EnrichMathml.Collapsed_} struct Collapse structure.
-   * @return {!string} The structure as string.
-   */
-  var collapseString = function(struct) {
-    if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
-      return struct.toString();
-    }
-    return '(' + struct.map(collapseString).join(' ') + ')';
-  };
-  node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED,
-                    collapseString(collapsed));
+  var skeleton = new sre.SemanticSkeleton(collapsed);
+  node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED, skeleton.toString());
 };
 
 
 /**
  * Clones a content node.
- * @param {!sre.SemanticTree.Node} content The content node.
+ * @param {!sre.SemanticNode} content The content node.
  * @return {!Element} The corresponding MathML node.
  */
 sre.EnrichMathml.cloneContentNode = function(content) {
@@ -526,7 +456,7 @@ sre.EnrichMathml.cloneContentNode = function(content) {
 
 /**
  * Concatenates node ids into a comma separated lists.
- * @param {!Array.<!sre.SemanticTree.Node>} nodes The list of nodes.
+ * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
  * @return {!string} The comma separated lists.
  */
 sre.EnrichMathml.makeIdList = function(nodes) {
@@ -539,12 +469,12 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 /**
  * Sets semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
-  if (semantic.font != sre.SemanticAttr.Font.UNKNOWN) {
+  if (semantic.font != sre.Semantic.Font.UNKNOWN) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
   }
   mml.setAttribute(sre.EnrichMathml.Attribute.ID, semantic.id);
@@ -573,7 +503,7 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
 /**
  * Combines content and children lists depending ont the type of the semantic
  * node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @param {!Array.<!Element>} content The list of content nodes.
  * @param {!Array.<!Element>} children The list of child nodes.
  * @return {!Array.<!Element>} The combined list.
@@ -583,20 +513,20 @@ sre.EnrichMathml.combineContentChildren_ = function(
     semantic, content, children) {
   sre.EnrichMathml.setOperatorAttribute_(semantic, content);
   switch (semantic.type) {
-    case sre.SemanticAttr.Type.RELSEQ:
-    case sre.SemanticAttr.Type.INFIXOP:
-    case sre.SemanticAttr.Type.MULTIREL:
+    case sre.Semantic.Type.RELSEQ:
+    case sre.Semantic.Type.INFIXOP:
+    case sre.Semantic.Type.MULTIREL:
       return sre.BaseUtil.interleaveLists(children, content);
-    case sre.SemanticAttr.Type.PREFIXOP:
+    case sre.Semantic.Type.PREFIXOP:
       return content.concat(children);
-    case sre.SemanticAttr.Type.POSTFIXOP:
+    case sre.Semantic.Type.POSTFIXOP:
       return children.concat(content);
-    case sre.SemanticAttr.Type.FENCED:
+    case sre.Semantic.Type.FENCED:
       children.unshift(content[0]);
       children.push(content[1]);
       return children;
-    case sre.SemanticAttr.Type.PUNCTUATED:
-      if (semantic.role === sre.SemanticAttr.Role.TEXT) {
+    case sre.Semantic.Type.PUNCTUATED:
+      if (semantic.role === sre.Semantic.Role.TEXT) {
         return sre.BaseUtil.interleaveLists(children, content);
       }
       var markupList = [];
@@ -610,9 +540,9 @@ sre.EnrichMathml.combineContentChildren_ = function(
       }
       sre.EnrichMathml.setOperatorAttribute_(semantic, markupList);
       return children;
-    case sre.SemanticAttr.Type.APPL:
+    case sre.Semantic.Type.APPL:
       return [children[0], content[0], children[1]];
-    case sre.SemanticAttr.Type.ROOT:
+    case sre.Semantic.Type.ROOT:
       return [children[1], children[0]];
     default:
       return children;
@@ -626,7 +556,7 @@ sre.EnrichMathml.combineContentChildren_ = function(
  * @return {!Element} The rewritten element.
  */
 sre.EnrichMathml.rewriteMfenced = function(mml) {
-  if (sre.SemanticUtil.tagName(mml) !== 'MFENCED') {
+  if (sre.DomUtil.tagName(mml) !== 'MFENCED') {
     return mml;
   }
   var newNode = sre.DomUtil.createElement('mrow');
@@ -644,7 +574,7 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
 
 /**
  * Makes a new MathML element for an invisible operator or one added by mfenced.
- * @param {!sre.SemanticTree.Node} operator The semantic node with the operator.
+ * @param {!sre.SemanticNode} operator The semantic node with the operator.
  * @return {!Element} The newly created MathML element.
  * @private
  */
@@ -660,7 +590,7 @@ sre.EnrichMathml.createInvisibleOperator_ = function(operator) {
 
 /**
  * Adds a relevant operator attribute to the a list of content nodes.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @param {!Array.<!Element>} content The list of content nodes.
  * @private
  */
@@ -775,3 +705,8 @@ sre.EnrichMathml.printNodeList__ = function(title, nodes) {
   sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
   console.log('<<<<<<<<<<<<<<<<<');
 };
+
+
+// TEMP:
+// 
+// var quad = '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>&#x2212;</mo><mi>b</mi><mo>&#xB1;</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>'

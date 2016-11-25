@@ -32,7 +32,7 @@ goog.require('sre.AbstractHighlighter');
  * @extends {sre.AbstractHighlighter}
  */
 sre.MmlHighlighter = function() {
-  goog.base(this);
+  sre.MmlHighlighter.base(this, 'constructor');
 
   this.mactionName = 'maction';
 };
@@ -76,4 +76,12 @@ sre.MmlHighlighter.prototype.colorString = function() {
  */
 sre.MmlHighlighter.prototype.getMactionNodes = function(node) {
   return node.getElementsByTagName(this.mactionName);
+};
+
+
+/**
+ * @override
+ */
+sre.MmlHighlighter.prototype.isMactionNode = function(node) {
+  return node.tagName === this.mactionName;
 };

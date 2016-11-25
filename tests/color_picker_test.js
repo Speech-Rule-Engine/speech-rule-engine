@@ -30,7 +30,7 @@ goog.require('sre.ColorPicker');
  * @extends {sre.AbstractTest}
  */
 sre.ColorPickerTest = function() {
-  goog.base(this);
+  sre.ColorPickerTest.base(this, 'constructor');
 
   /**
    * @override

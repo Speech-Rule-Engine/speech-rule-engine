@@ -20,9 +20,9 @@
 
 goog.provide('sre.PrefixRules');
 
+goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 
@@ -32,7 +32,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathStore}
  */
 sre.PrefixRules = function() {
-  goog.base(this);
+  sre.PrefixRules.base(this, 'constructor');
 };
 goog.inherits(sre.PrefixRules, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixRules);
@@ -180,6 +180,16 @@ sre.PrefixRules.initPrefixRules_ = function() {
       '[t] CSFordinalPosition; [t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
+  defineRule(
+      'choice', 'prefix.default',
+      '[t] "Choice Quantity"; [p] (pause:200)',
+      'self::line', '@role="binomial"', 'parent::*/parent::vector',
+      'count(preceding-sibling::*)=0');
+  defineRule(
+      'select', 'prefix.default',
+      '[t] "Selection Quantity"; [p] (pause:200)',
+      'self::line', '@role="binomial"', 'parent::*/parent::vector',
+      'count(preceding-sibling::*)=1');
 };
 
 });  // goog.scope

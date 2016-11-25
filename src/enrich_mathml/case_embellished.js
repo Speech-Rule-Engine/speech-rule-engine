@@ -26,7 +26,7 @@ goog.require('sre.CaseMultiscripts');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
+goog.require('sre.SemanticNode');
 
 
 
@@ -37,10 +37,10 @@ goog.require('sre.SemanticTree.Node');
  * @final
  */
 sre.CaseEmbellished = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseEmbellished.base(this, 'constructor', semantic);
 
   /**
-   * @type {sre.SemanticTree.Node}
+   * @type {sre.SemanticNode}
    */
   this.fenced = null;
 
@@ -50,7 +50,7 @@ sre.CaseEmbellished = function(semantic) {
   this.fencedMml = null;
 
   /**
-   * @type {sre.SemanticTree.Node}
+   * @type {sre.SemanticNode}
    */
   this.ofence = null;
 
@@ -65,7 +65,7 @@ sre.CaseEmbellished = function(semantic) {
   this.ofenceMap = {};
 
   /**
-   * @type {sre.SemanticTree.Node}
+   * @type {sre.SemanticNode}
    */
   this.cfence = null;
 
@@ -103,7 +103,7 @@ sre.CaseEmbellished.test = function(semantic) {
 sre.CaseEmbellished.prototype.getMathml = function() {
   this.getFenced_();
   this.fencedMml = sre.EnrichMathml.walkTree(
-      /** @type {!sre.SemanticTree.Node} */(this.fenced));
+      /** @type {!sre.SemanticNode} */(this.fenced));
   this.getFencesMml_();
   return this.rewrite_();
 };
@@ -128,7 +128,7 @@ sre.CaseEmbellished.prototype.getFenced_ = function() {
 
 /**
  * Collates the id numbers of the fenced node.
- * @param {sre.SemanticTree.Node} fence The fence expression.
+ * @param {sre.SemanticNode} fence The fence expression.
  * @param {!Object.<number, Element>} ids The list of id numbers.
  * @private
  */
@@ -185,7 +185,7 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
   var newNode = this.introduceNewLayer_();
   // Sets the basics composition.
   sre.EnrichMathml.setAttributes(
-      newNode, /** @type {!sre.SemanticTree.Node} */(this.fenced.parent));
+      newNode, /** @type {!sre.SemanticNode} */(this.fenced.parent));
 
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
     var mml = /** @type {!Element} */(currentNode.mathmlTree);
@@ -220,9 +220,9 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
 
   // Walk the actual fences.
   sre.EnrichMathml.walkTree(
-      /** @type {!sre.SemanticTree.Node} */(this.ofence));
+      /** @type {!sre.SemanticNode} */(this.ofence));
   sre.EnrichMathml.walkTree(
-      /** @type {!sre.SemanticTree.Node} */(this.cfence));
+      /** @type {!sre.SemanticNode} */(this.cfence));
 
   this.cleanupParents_();
   return result || newNode;
@@ -231,24 +231,27 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
 
 /**
  * Treatment of special cases like msubsup and rewritten mmultiscripts.
- * @param {!sre.SemanticTree.Node} semantic The current semantic node.
+ * @param {!sre.SemanticNode} semantic The current semantic node.
  * @param {!Element} mml The MathML node associated with the semantic node.
- * @return {sre.SemanticTree.Node} The next semantic node to be rewritten, if
+ * @return {sre.SemanticNode} The next semantic node to be rewritten, if
  *     the original semantic node was a special case.
  * @private
  */
 sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
-  var id = semantic.id;
-  var mmlTag = sre.SemanticUtil.tagName(mml);
+  var mmlTag = sre.DomUtil.tagName(mml);
   var parent = null;
+  var caller;
   if (mmlTag === 'MSUBSUP') {
     parent = semantic.childNodes[0];
-    var caller = sre.CaseDoubleScript;
-  } else if (mmlTag === 'MMULTISCRIPTS' &&
-             (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
-              semantic.type === sre.SemanticAttr.Type.SUBSCRIPT)) {
-    caller = sre.CaseMultiscripts;
-    if (semantic.childNodes[0] &&
+    caller = sre.CaseDoubleScript;
+  } else if (mmlTag === 'MMULTISCRIPTS') {
+    if (semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+        semantic.type === sre.SemanticAttr.Type.SUBSCRIPT) {
+      caller = sre.CaseMultiscripts;
+    } else if (semantic.type === sre.SemanticAttr.Type.TENSOR) {
+      caller = sre.CaseTensor;
+    }
+    if (caller && semantic.childNodes[0] &&
         semantic.childNodes[0].role === sre.SemanticAttr.Role.SUBSUP) {
       parent = semantic.childNodes[0];
     } else {
@@ -271,12 +274,12 @@ sre.CaseEmbellished.prototype.specialCase_ = function(semantic, mml) {
 /**
  * Creates an empty semantic node with an associated empty mrow MathML element.
  * @param {number} id The id number of the node.
- * @return {!sre.SemanticTree.Node} The new empty node.
+ * @return {!sre.SemanticNode} The new empty node.
  * @private
  */
 sre.CaseEmbellished.makeEmptyNode_ = function(id) {
   var mrow = sre.DomUtil.createElement('mrow');
-  var empty = new sre.SemanticTree.Node(id);
+  var empty = new sre.SemanticNode(id);
   empty.type = sre.SemanticAttr.Type.EMPTY;
   empty.mathmlTree = mrow;
   return empty;

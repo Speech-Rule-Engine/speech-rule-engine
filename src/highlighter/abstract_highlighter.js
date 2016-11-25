@@ -22,13 +22,13 @@
 goog.provide('sre.AbstractHighlighter');
 
 goog.require('sre.ColorPicker');
-goog.require('sre.HighlighterInterface');
+goog.require('sre.Highlighter');
 
 
 
 /**
  * @constructor
- * @implements {sre.HighlighterInterface}
+ * @implements {sre.Highlighter}
  */
 sre.AbstractHighlighter = function() {
   /**
@@ -174,7 +174,8 @@ sre.AbstractHighlighter.prototype.getMactionNodes = function(node) {
  * @return {boolean} True if the node is an maction node.
  */
 sre.AbstractHighlighter.prototype.isMactionNode = function(node) {
-  return node.className && node.className.match(new RegExp(this.mactionName));
+  var className = node.className || node.getAttribute('class');
+  return className ? className.match(new RegExp(this.mactionName)) : false;
 };
 
 

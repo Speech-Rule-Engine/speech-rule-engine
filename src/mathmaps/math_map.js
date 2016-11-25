@@ -27,7 +27,6 @@ goog.require('sre.BaseUtil');
 goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
-goog.require('sre.MathUtil');
 goog.require('sre.SystemExternal');
 
 
@@ -44,21 +43,8 @@ sre.MathMap = function() {
    */
   this.store = sre.MathCompoundStore.getInstance();
 
-  /**
-   * Array of domain names.
-   * @type {Array.<string>}
-   */
-  this.allDomains = [];
-
-  /**
-   * Array of style names.
-   * @type {Array.<string>}
-   */
-  this.allStyles = [];
-
   this.retrieveMaps();
 
-  this.getDynamicConstraintValues();
 };
 goog.addSingletonGetter(sre.MathMap);
 
@@ -328,18 +314,4 @@ sre.MathMap.getJsonAjax_ = function(file, func) {
   };
   httpRequest.open('GET', file, true);
   httpRequest.send();
-};
-
-
-/**
- * Sets the set of all possible dynamic constraint values.
- */
-sre.MathMap.prototype.getDynamicConstraintValues = function() {
-  if (sre.MathMap.toFetch_) {
-    setTimeout(goog.bind(this.getDynamicConstraintValues, this), 300);
-  } else {
-    var cstr = this.store.getDynamicConstraintValues();
-    this.allDomains = cstr.domain;
-    this.allStyles = cstr.style;
-  }
 };

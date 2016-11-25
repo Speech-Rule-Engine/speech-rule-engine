@@ -14,12 +14,12 @@
 
 
 /**
- * @fileoverview Interfacer for element highlighters.
+ * @fileoverview Interface for element highlighters.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.HighlighterInterface');
+goog.provide('sre.Highlighter');
 
 goog.require('sre.ColorPicker');
 
@@ -28,40 +28,40 @@ goog.require('sre.ColorPicker');
 /**
  * @interface
  */
-sre.HighlighterInterface = function() { };
+sre.Highlighter = function() { };
 
 
 /**
  * Sets highlighting on a node.
  * @param {!Array<Node>} nodes The node to highlight.
  */
-sre.HighlighterInterface.prototype.highlight = function(nodes) { };
+sre.Highlighter.prototype.highlight = function(nodes) { };
 
 
 /**
  * Unhighlights the last node that highlighted.
  */
-sre.HighlighterInterface.prototype.unhighlight = function() { };
+sre.Highlighter.prototype.unhighlight = function() { };
 
 
 /**
  * Sets highlighting on all maction-like sub nodes of the given node.
  * @param {!Node} node The node to highlight.
  */
-sre.HighlighterInterface.prototype.highlightAll = function(node) { };
+sre.Highlighter.prototype.highlightAll = function(node) { };
 
 
 /**
  * Unhighlights all currently highlighted nodes.
  */
-sre.HighlighterInterface.prototype.unhighlightAll = function() { };
+sre.Highlighter.prototype.unhighlightAll = function() { };
 
 
 /**
  * Sets of the color the highlighter is using.
  * @param {sre.ColorPicker} color The new color to use.
  */
-sre.HighlighterInterface.prototype.setColor = function(color) { };
+sre.Highlighter.prototype.setColor = function(color) { };
 
 
 /**
@@ -70,4 +70,4 @@ sre.HighlighterInterface.prototype.setColor = function(color) { };
  * @param {Object.<string, Function>} events The events to attach given as event
  *     type and function to execute
  */
-sre.HighlighterInterface.prototype.addEvents = function(node, events) { };
+sre.Highlighter.prototype.addEvents = function(node, events) { };

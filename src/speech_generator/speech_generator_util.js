@@ -23,9 +23,12 @@
 goog.provide('sre.SpeechGeneratorUtil');
 
 goog.require('sre.AuditoryDescription');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
+goog.require('sre.SemanticTree');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.WalkerUtil');
+goog.require('sre.XpathUtil');
 
 
 /**
@@ -44,7 +47,7 @@ sre.SpeechGeneratorUtil.computeSpeech = function(xml) {
 /**
  * Computes speech descriptions for a single semantic node.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
  *     for the node.
  */
@@ -55,17 +58,32 @@ sre.SpeechGeneratorUtil.recomputeSpeech = function(mml, semantic) {
 
 
 /**
- * Add speech as a semantic attributes in a MathML node.
+ * Computes speech string for a single semantic node, either by retrieving it
+ * from the the cache or by recomputing it.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @return {!string} The speech string.
  */
-sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
-  var descrs = sre.SpeechRuleEngine.getInstance().
+sre.SpeechGeneratorUtil.retrieveSpeech = function(mml, semantic) {
+  var descrs = null;
+  if (sre.Engine.getInstance().cache) {
+    descrs = sre.SpeechRuleEngine.getInstance().
       getCache(semantic.id.toString());
+  }
   if (!descrs) {
     descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);
   }
-  var speech = sre.AuditoryDescription.speechString(descrs);
+  return sre.AuditoryDescription.speechString(descrs);
+};
+
+
+/**
+ * Add speech as a semantic attributes in a MathML node.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ */
+sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
+  var speech = sre.SpeechGeneratorUtil.retrieveSpeech(mml, semantic);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
@@ -73,18 +91,28 @@ sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic) {
 /**
  * Adds a speech prefix if necessary.
  * @param {!Element} mml The MathML node.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  */
 sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
-  var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
-  var speech = sre.AuditoryDescription.speechString(descrs);
+  var speech = sre.SpeechGeneratorUtil.retrievePrefix(semantic);
   if (speech) mml.setAttribute(sre.EnrichMathml.Attribute.PREFIX, speech);
 };
 
 
 /**
+ * Computes a speech prefix if it exists.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @return {!string} The prefix speech string.
+ */
+sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
+  var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
+  return sre.AuditoryDescription.speechString(descrs);
+};
+
+
+/**
  * Adds a speech prefix if necessary.
- * @param {!sre.SemanticTree.Node} semantic The semantic tree node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
  *     for the prefix.
  * @private
@@ -156,7 +184,6 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
 sre.SpeechGeneratorUtil.connectAllMactions = function(mml, stree) {
   var mactions = sre.DomUtil.querySelectorAll(mml, 'maction');
   for (var i = 0, maction; maction = mactions[i]; i++) {
-    var aid = maction.getAttribute('id');
     var lchild = maction.childNodes[1];
     var mid = lchild.getAttribute(sre.EnrichMathml.Attribute.ID);
     var cst = sre.DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];

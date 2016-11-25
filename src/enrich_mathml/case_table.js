@@ -21,9 +21,9 @@
 goog.provide('sre.CaseTable');
 
 goog.require('sre.AbstractEnrichCase');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
 
 
 
@@ -31,15 +31,19 @@ goog.require('sre.SemanticTree.Node');
  * @constructor
  * @extends {sre.AbstractEnrichCase}
  * @override
- * @final
  */
 sre.CaseTable = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseTable.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}
    */
   this.mml = semantic.mathmlTree;
+
+  /**
+   * @type {!Array.<Element>}
+   */
+  this.inner = [];
 
 };
 goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
@@ -61,13 +65,14 @@ sre.CaseTable.test = function(semantic) {
  */
 sre.CaseTable.prototype.getMathml = function() {
   var lfence = sre.EnrichMathml.cloneContentNode(
-      /**@type{!sre.SemanticTree.Node}*/(this.semantic.contentNodes[0]));
+      /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[0]));
   var rfence = this.semantic.contentNodes[1] ?
       sre.EnrichMathml.cloneContentNode(
-          /**@type{!sre.SemanticTree.Node}*/(this.semantic.contentNodes[1])) :
+          /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[1])) :
       null;
-  this.semantic.childNodes.map(/**@type{Function}*/(sre.EnrichMathml.walkTree));
-  if (sre.SemanticUtil.tagName(this.mml) === 'MFENCED') {
+  this.inner = this.semantic.childNodes.map(
+      /**@type{Function}*/(sre.EnrichMathml.walkTree));
+  if (sre.DomUtil.tagName(this.mml) === 'MFENCED') {
     var children = this.mml.childNodes;
     this.mml.insertBefore(lfence, children[0] || null);
     rfence && this.mml.appendChild(rfence);
@@ -80,5 +85,3 @@ sre.CaseTable.prototype.getMathml = function() {
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   return this.mml;
 };
-
-
