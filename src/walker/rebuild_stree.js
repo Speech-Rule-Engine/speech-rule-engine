@@ -149,12 +149,23 @@ sre.RebuildStree.prototype.makeNode = function(node) {
 };
 
 
+/**
+ * Tests is a collapsed attribute belongs to a punctuated index.
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed A skeleton structure.
+ * @return {!boolean} True if the skeleton indicates a collapsed punctuated
+ *     element.
+ */
 sre.RebuildStree.isPunctuated = function(collapsed) {
   return !sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
     collapsed[1] && sre.SemanticSkeleton.contentCollapseStructure(collapsed[1]);
 };
 
 
+/**
+ * Creates a punctuation node containing an invisible comma.
+ * @param {!number} id The id of the new node.
+ * @return {!sre.SemanticNode} The newly created punctuation node.
+ */
 sre.RebuildStree.prototype.makePunctuation = function(id) {
   var node = this.createNode(id);
   node.updateContent(sre.SemanticAttr.invisibleComma());
@@ -163,6 +174,12 @@ sre.RebuildStree.prototype.makePunctuation = function(id) {
 };
 
 
+/**
+ * Creates a punctuated node that serves as an index.
+ * @param {!sre.SemanticNode} snode The semantic node that is being rebuilt.
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed A skeleton structure.
+ * @param {!sre.SemanticAttr.Role} role The role of the new index node.
+ */
 sre.RebuildStree.prototype.makePunctuated = function(snode, collapsed, role) {
   var punctuated = this.createNode(collapsed[0]);
   punctuated.type = sre.SemanticAttr.Type.PUNCTUATED;
@@ -172,10 +189,15 @@ sre.RebuildStree.prototype.makePunctuated = function(snode, collapsed, role) {
   var cont = collapsed.splice(1, 1)[0].slice(1);
   punctuated.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
   this.collapsedChildren_(collapsed);
-  return punctuated;
 };
 
 
+/**
+ * Creates an empty node that serves as an index.
+ * @param {!sre.SemanticNode} snode The semantic node that is being rebuilt.
+ * @param {!number} collapsed A skeleton structure.
+ * @param {!sre.SemanticAttr.Role} role The role of the new index node.
+ */
 sre.RebuildStree.prototype.makeEmpty = function(snode, collapsed, role) {
   var empty = this.createNode(collapsed);
   empty.type = sre.SemanticAttr.Type.EMPTY;
@@ -185,6 +207,12 @@ sre.RebuildStree.prototype.makeEmpty = function(snode, collapsed, role) {
 };
 
 
+/**
+ * Creates an index node.
+ * @param {!sre.SemanticNode} snode The semantic node that is being rebuilt.
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed A skeleton structure.
+ * @param {!sre.SemanticAttr.Role} role The role of the new index node.
+ */
 sre.RebuildStree.prototype.makeIndex = function(snode, collapsed, role) {
   if (sre.RebuildStree.isPunctuated(collapsed)) {
     this.makePunctuated(snode, collapsed, role);
@@ -192,8 +220,8 @@ sre.RebuildStree.prototype.makeIndex = function(snode, collapsed, role) {
     return;
   }
   if (sre.SemanticSkeleton.simpleCollapseStructure(collapsed) &&
-      !this.nodeDict[collapsed]) {
-    this.makeEmpty(snode, collapsed, role);
+      !this.nodeDict[collapsed.toString()]) {
+    this.makeEmpty(snode, /** @type {number} */ (collapsed), role);
   }
 };
 
