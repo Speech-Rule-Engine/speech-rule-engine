@@ -25,6 +25,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
+goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
 
@@ -34,7 +35,7 @@ goog.require('sre.XpathUtil');
  * @extends {sre.AbstractTest}
  */
 sre.SemanticTreeTest = function() {
-  goog.base(this);
+  sre.SemanticTreeTest.base(this, 'constructor');
 
   /**
    * @override

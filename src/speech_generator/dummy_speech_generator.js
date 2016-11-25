@@ -32,7 +32,7 @@ goog.require('sre.AbstractSpeechGenerator');
  * @extends {sre.AbstractSpeechGenerator}
  */
 sre.DummySpeechGenerator = function() {
-  goog.base(this);
+  sre.DummySpeechGenerator.base(this, 'constructor');
 };
 goog.inherits(sre.DummySpeechGenerator, sre.AbstractSpeechGenerator);
 

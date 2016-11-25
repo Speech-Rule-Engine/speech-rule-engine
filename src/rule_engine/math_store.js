@@ -33,8 +33,11 @@ goog.require('sre.SpeechRule');
  * @extends {sre.BaseRuleStore}
  */
 sre.MathStore = function() {
-  goog.base(this);
+  sre.MathStore.base(this, 'constructor');
 
+  //TODO: (MOSS) WP 1.1
+  // Revisit
+  //
   /**
    * @override
    */
@@ -273,7 +276,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     } else {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
-      var count = 0;
       while (rest) {
         var num = rest.match(
             /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
@@ -304,6 +306,9 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
 };
 
 
+//TODO: (MOSS) WP 1.4
+// Integrate Context structure
+//
 /**
  * Creates a new Auditory Description for a math expression.
  * @param {string} text to be translated.

@@ -23,8 +23,6 @@
 goog.provide('sre.DummyWalker');
 
 goog.require('sre.AbstractWalker');
-goog.require('sre.Levels');
-goog.require('sre.WalkerUtil');
 
 
 
@@ -34,7 +32,7 @@ goog.require('sre.WalkerUtil');
  * @override
  */
 sre.DummyWalker = function(node, generator, highlighter, xml) {
-  goog.base(this, node, generator, highlighter, xml);
+  sre.DummyWalker.base(this, 'constructor', node, generator, highlighter, xml);
 };
 goog.inherits(sre.DummyWalker, sre.AbstractWalker);
 
@@ -67,6 +65,12 @@ sre.DummyWalker.prototype.right = function() { };
  * @override
  */
 sre.DummyWalker.prototype.repeat = function() { };
+
+
+/**
+ * @override
+ */
+sre.DummyWalker.prototype.depth = function() { };
 
 
 /**

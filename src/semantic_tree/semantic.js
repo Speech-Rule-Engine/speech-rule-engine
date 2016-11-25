@@ -19,25 +19,30 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.Semantic');
-goog.provide('sre.Semantic.Attr');
-goog.provide('sre.Semantic.Font');
-goog.provide('sre.Semantic.Role');
-goog.provide('sre.Semantic.Type');
 
 goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 
 
-/** Exports font attributes. */
+/**
+ * Exports font attributes.
+ * @typedef {sre.Semantic.Font}
+*/
 sre.Semantic.Font = sre.SemanticAttr.Font;
 
 
-/** Exports role attributes. */
+/**
+ * Exports role attributes.
+ * @typedef {sre.Semantic.Role}
+ */
 sre.Semantic.Role = sre.SemanticAttr.Role;
 
 
-/** Exports type attributes. */
+/**
+ * Exports type attributes.
+ * @typedef {sre.Semantic.Type}
+ */
 sre.Semantic.Type = sre.SemanticAttr.Type;
 
 
@@ -51,10 +56,20 @@ sre.Semantic.Attr;
 /**
  * Creates the semantic tree for a given MathML node.
  * @param {!Element} mml The MathML node.
- * @return {Node} Semantic tree for input node as XML node.
+ * @return {!Node} Semantic tree for input node as XML node.
+ */
+sre.Semantic.xmlTree = function(mml) {
+  return (new sre.SemanticTree(mml)).xml();
+};
+
+
+/**
+ * Creates the semantic tree for a given MathML node.
+ * @param {!Element} mml The MathML node.
+ * @return {!sre.SemanticTree} Semantic tree for input node.
  */
 sre.Semantic.getTree = function(mml) {
-  return (new sre.SemanticTree(mml)).xml();
+  return new sre.SemanticTree(mml);
 };
 
 

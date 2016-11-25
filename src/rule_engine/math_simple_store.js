@@ -27,9 +27,11 @@
 goog.provide('sre.MathCompoundStore');
 goog.provide('sre.MathSimpleStore');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
+goog.require('sre.XpathUtil');
 
 
 
@@ -39,7 +41,7 @@ goog.require('sre.SpeechRule');
  * @extends {sre.MathStore}
  */
 sre.MathSimpleStore = function() {
-  goog.base(this);
+  sre.MathSimpleStore.base(this, 'constructor');
 };
 goog.inherits(sre.MathSimpleStore, sre.MathStore);
 
@@ -62,9 +64,8 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
       } else {
         cstr = 'self::text() = "' + str + '"';
       }
-      var rule = this.defineRule(
-          name, domain + '.' + style, '[t] "' + content + '"',
-          'self::text()', cstr);
+      this.defineRule(name, domain + '.' + style, '[t] "' + content + '"',
+                      'self::text()', cstr);
     }
   }
 };

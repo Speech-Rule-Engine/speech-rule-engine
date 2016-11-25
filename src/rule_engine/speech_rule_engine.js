@@ -30,21 +30,15 @@
 
 goog.provide('sre.SpeechRuleEngine');
 
-goog.require('sre.AbstractionRules');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
-goog.require('sre.ClearspeakRules');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
-goog.require('sre.MathmlStoreRules');
-goog.require('sre.MathspeakRules');
-goog.require('sre.PrefixRules');
-goog.require('sre.SemanticTreeRules');
 goog.require('sre.SpeechRule');
+goog.require('sre.SpeechRuleStores');
 goog.require('sre.XpathUtil');
 
 
@@ -94,6 +88,9 @@ sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
 };
 
 
+//TODO: (MOSS) WP 1.4
+// Extend to Context structure
+//
 /**
  * Returns the a global parameter if it exists.
  * @param {string} parameter The parameter name.
@@ -111,7 +108,7 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
 sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = [];
   for (var i = 0; i < ruleSetNames.length; i++) {
-    var set = sre[ruleSetNames[i]];
+    var set = sre.SpeechRuleStores.getConstructor(ruleSetNames[i]);
     if (set && set.getInstance) {
       ruleSets.push(set.getInstance());
     }
@@ -240,6 +237,7 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
 
 
 // Dispatch functionality.
+// The timing function is temporary until the MOSS deliverable is done.
 /**
  * Computes a speech object for a given node. Returns the empty list if
  * no node is given.
@@ -248,6 +246,23 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
+  var timeIn = (new Date()).getTime();
+  var result = this.evaluateNode_(node);
+  var timeOut = (new Date()).getTime();
+  sre.Debugger.getInstance().output('Time:', timeOut - timeIn);
+  return result;
+};
+
+
+/**
+ * Computes a speech object for a given node. Returns the empty list if
+ * no node is given.
+ * @param {Node} node The node to be evaluated.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *   for that node.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
   if (!node) {
     return [];
   }

@@ -30,7 +30,7 @@ goog.require('sre.AbstractTest');
  * @extends {sre.AbstractTest}
  */
 sre.PrefixRuleTest = function() {
-  goog.base(this);
+  sre.PrefixRuleTest.base(this, 'constructor');
 
   /**
    * @override

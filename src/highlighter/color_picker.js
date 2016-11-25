@@ -21,8 +21,6 @@
  */
 
 goog.provide('sre.ColorPicker');
-goog.provide('sre.ColorPicker.Color');
-goog.provide('sre.ColorPicker.String');
 
 
 

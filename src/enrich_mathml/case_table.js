@@ -21,9 +21,9 @@
 goog.provide('sre.CaseTable');
 
 goog.require('sre.AbstractEnrichCase');
+goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree.Node');
 
 
 
@@ -34,7 +34,7 @@ goog.require('sre.SemanticTree.Node');
  * @final
  */
 sre.CaseTable = function(semantic) {
-  goog.base(this, semantic);
+  sre.CaseTable.base(this, 'constructor', semantic);
 
   /**
    * @type {!Element}
@@ -61,13 +61,13 @@ sre.CaseTable.test = function(semantic) {
  */
 sre.CaseTable.prototype.getMathml = function() {
   var lfence = sre.EnrichMathml.cloneContentNode(
-      /**@type{!sre.SemanticTree.Node}*/(this.semantic.contentNodes[0]));
+      /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[0]));
   var rfence = this.semantic.contentNodes[1] ?
       sre.EnrichMathml.cloneContentNode(
-          /**@type{!sre.SemanticTree.Node}*/(this.semantic.contentNodes[1])) :
+          /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[1])) :
       null;
   this.semantic.childNodes.map(/**@type{Function}*/(sre.EnrichMathml.walkTree));
-  if (sre.SemanticUtil.tagName(this.mml) === 'MFENCED') {
+  if (sre.DomUtil.tagName(this.mml) === 'MFENCED') {
     var children = this.mml.childNodes;
     this.mml.insertBefore(lfence, children[0] || null);
     rfence && this.mml.appendChild(rfence);

@@ -22,6 +22,7 @@
 goog.provide('sre.SyntaxWalker');
 
 goog.require('sre.AbstractWalker');
+goog.require('sre.Focus');
 goog.require('sre.Levels');
 goog.require('sre.WalkerUtil');
 
@@ -33,7 +34,7 @@ goog.require('sre.WalkerUtil');
  * @override
  */
 sre.SyntaxWalker = function(node, generator, highlighter, xml) {
-  goog.base(this, node, generator, highlighter, xml);
+  sre.SyntaxWalker.base(this, 'constructor', node, generator, highlighter, xml);
 
   /**
    * Caching of levels.
@@ -76,7 +77,7 @@ sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
  * @override
  */
 sre.SyntaxWalker.prototype.up = function() {
-  goog.base(this, 'up');
+  sre.SyntaxWalker.base(this, 'up');
   var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
   if (!parent) return null;
   this.levels.pop();
@@ -88,7 +89,7 @@ sre.SyntaxWalker.prototype.up = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.down = function() {
-  goog.base(this, 'down');
+  sre.SyntaxWalker.base(this, 'down');
   var children = this.nextLevel_();
   if (children.length === 0) {
     return null;
@@ -127,7 +128,7 @@ sre.SyntaxWalker.prototype.nextLevel_ = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.left = function() {
-  goog.base(this, 'left');
+  sre.SyntaxWalker.base(this, 'left');
   var index = this.levels.indexOf(this.primaryId()) - 1;
   var id = this.levels.get(index);
   return id ? this.focusFromId_(id) : null;
@@ -138,7 +139,7 @@ sre.SyntaxWalker.prototype.left = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.right = function() {
-  goog.base(this, 'right');
+  sre.SyntaxWalker.base(this, 'right');
   var index = this.levels.indexOf(this.primaryId()) + 1;
   var id = this.levels.get(index);
   return id ? this.focusFromId_(id) : null;
