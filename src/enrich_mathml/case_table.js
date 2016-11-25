@@ -53,7 +53,6 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseTable.test = function(semantic) {
-  //DIAGRAM: Multiline here?
   return semantic.mathmlTree &&
       (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
@@ -84,35 +83,5 @@ sre.CaseTable.prototype.getMathml = function() {
     this.mml = sre.EnrichMathml.introduceNewLayer(newChildren);
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
-  // Cleanup in the case some lines where collapsed.
-  this.cleanupCollapsedRows();
   return this.mml;
-};
-
-
-/**
- * Cleanup in case there are collapsed row or line elements.
- */
-sre.CaseTable.prototype.cleanupCollapsedRows = function() {
-  var children = [];
-  var collapse = [this.semantic.id];
-  var collapsed = false;
-  for (var i = 0, inner; inner = this.inner[i]; i++) {
-    var id = inner.getAttribute(sre.EnrichMathml.Attribute.ID);
-    children.push(id);
-    if (inner.hasAttribute(sre.EnrichMathml.Attribute.COLLAPSED)) {
-      collapse.push(sre.SemanticSkeleton.fromString(
-          inner.getAttribute(sre.EnrichMathml.Attribute.COLLAPSED)).array);
-      inner.removeAttribute(sre.EnrichMathml.Attribute.COLLAPSED);
-      inner.setAttribute(sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
-      collapsed = true;
-    } else {
-      collapse.push(parseInt(id, 10));
-    }
-  }
-  if (collapsed) {
-    this.mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
-                          children.join(','));
-    sre.EnrichMathml.addCollapsedAttribute(this.mml, collapse);
-  }
 };
