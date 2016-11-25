@@ -246,26 +246,6 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     this.collapsedChildren_(array);
     return snode;
   }
-  // DIAGRAM: Needs changing for multiline!
-  if (snode.type === sre.SemanticAttr.Type.VECTOR ||
-      snode.role === sre.SemanticAttr.Role.BINOMIAL) {
-    var children = [];
-    for (var i = 1, l = array.length; i < l; i++) {
-      var id = array[i];
-      if (sre.SemanticSkeleton.simpleCollapseStructure(id)) {
-        continue;
-      }
-      var line = this.createNode(id[0]);
-      line.type = sre.SemanticAttr.Type.LINE;
-      line.role = sre.SemanticAttr.Role.BINOMIAL;
-      line.parent = snode;
-      line.embellished = snode.embellished;
-      line.fencePointer = snode.fencePointer;
-      children.push(line);
-    }
-    this.collapsedChildren_(array);
-    return snode;
-  }
   return snode;
 };
 

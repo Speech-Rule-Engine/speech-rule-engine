@@ -58,17 +58,19 @@ sre.CaseBinomial.test = function(semantic) {
  * @override
  */
 sre.CaseBinomial.prototype.getMathml = function() {
-  // We need to drop the line (have a collapse instead) as they are picked up in
-  // the case above.
-  if (this.semantic.childNodes.length) {
-    var child = this.semantic.childNodes[0];
-    this.mml = sre.EnrichMathml.walkTree(/**@type{!sre.SemanticNode}*/(child));
-    if (this.mml.hasAttribute('data-semantic-type')) {
-      sre.EnrichMathml.addCollapsedAttribute(
-        this.mml, [this.semantic.id, child.id]);
-    } else {
-      sre.EnrichMathml.setAttributes(this.mml, this.semantic);
-    }
+  if (!this.semantic.childNodes.length) {
+    return this.mml;
   }
+  var child = this.semantic.childNodes[0];
+  this.mml = sre.EnrichMathml.walkTree(/**@type{!sre.SemanticNode}*/(child));
+  // Adds a redundant mrow to include the line information.
+  if (this.mml.hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
+    var mrow = sre.DomUtil.createElement('mrow');
+    mrow.setAttribute(sre.EnrichMathml.Attribute.ADDED, 'true');
+    sre.DomUtil.replaceNode(this.mml, mrow);
+    mrow.appendChild(this.mml);
+    this.mml = mrow;
+  }
+  sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   return this.mml;
 };
