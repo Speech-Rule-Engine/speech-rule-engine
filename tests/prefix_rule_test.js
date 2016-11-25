@@ -73,26 +73,20 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
  * Testing sub/superscripts.
  */
 sre.PrefixRuleTest.prototype.testSubSuper = function() {
-  this.executeTest('<subscript id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></subscript>',
-                   1, 'Base');
-  this.executeTest('<subscript id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></subscript>',
-                   0, 'Subscript');
-  this.executeTest('<superscript id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></superscript>',
-                   1, 'Base');
-  this.executeTest('<superscript id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></superscript>',
-                   0, 'Exponent');
+  var subscript = '<subscript id="2"><children>' +
+      '<identifier id="1">a</identifier>' +
+      '<identifier id="0">b</identifier>' +
+      '</children></subscript>';
+  this.executeTest(subscript, 1, 'Base');
+  this.executeTest(subscript, 0, 'Subscript');
+  this.executeTest(subscript, 2, '');
+  var superscript = '<superscript id="2"><children>' +
+      '<identifier id="1">a</identifier>' +
+      '<identifier id="0">b</identifier>' +
+      '</children></superscript>';
+  this.executeTest(superscript, 1, 'Base');
+  this.executeTest(superscript, 0, 'Exponent');
+  this.executeTest(superscript, 2, '');
 };
 
 
@@ -100,26 +94,20 @@ sre.PrefixRuleTest.prototype.testSubSuper = function() {
  * Testing over/underscripts.
  */
 sre.PrefixRuleTest.prototype.testOverUnder = function() {
-  this.executeTest('<overscore id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></overscore>',
-                   1, 'Base');
-  this.executeTest('<overscore id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></overscore>',
-                   0, 'Overscript');
-  this.executeTest('<underscore id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></underscore>',
-                   1, 'Base');
-  this.executeTest('<underscore id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></underscore>',
-                   0, 'Underscript');
+  var overscore = '<overscore id="2"><children>' +
+      '<identifier id="1">a</identifier>' +
+      '<identifier id="0">b</identifier>' +
+      '</children></overscore>';
+  this.executeTest(overscore, 1, 'Base');
+  this.executeTest(overscore, 0, 'Overscript');
+  this.executeTest(overscore, 2, '');
+  var underscore = '<underscore id="2"><children>' +
+      '<identifier id="1">a</identifier>' +
+      '<identifier id="0">b</identifier>' +
+      '</children></underscore>';
+  this.executeTest(underscore, 1, 'Base');
+  this.executeTest(underscore, 0, 'Underscript');
+  this.executeTest(underscore, 2, '');
 };
 
 
@@ -127,16 +115,13 @@ sre.PrefixRuleTest.prototype.testOverUnder = function() {
  * Testing fractions.
  */
 sre.PrefixRuleTest.prototype.testFractions = function() {
-  this.executeTest('<fraction id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></fraction>',
-                   1, 'Numerator');
-  this.executeTest('<fraction id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></fraction>',
-                   0, 'Denominator');
+  var fraction = '<fraction id="2"><children>' +
+      '<identifier id="1">a</identifier>' +
+      '<identifier id="0">b</identifier>' +
+      '</children></fraction>';
+  this.executeTest(fraction, 1, 'Numerator');
+  this.executeTest(fraction, 0, 'Denominator');
+  this.executeTest(fraction, 2, '');
 };
 
 
@@ -144,20 +129,18 @@ sre.PrefixRuleTest.prototype.testFractions = function() {
  * Testing roots.
  */
 sre.PrefixRuleTest.prototype.testRoots = function() {
-  this.executeTest('<sqrt id="1"><children>' +
-                   '<identifier id="0">a</identifier>' +
-                   '</children></sqrt>',
-                   0, 'Radicand');
-  this.executeTest('<root id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></root>',
-                   0, 'Radicand');
-  this.executeTest('<root id="2"><children>' +
-                   '<identifier id="1">a</identifier>' +
-                   '<identifier id="0">b</identifier>' +
-                   '</children></root>',
-                   1, 'Index');
+  var sqrt = '<sqrt id="1"><children>' +
+      '<identifier id="0">a</identifier>' +
+      '</children></sqrt>';
+  this.executeTest(sqrt, 0, 'Radicand');
+  this.executeTest(sqrt, 1, '');
+  var root = '<root id="2"><children>' +
+      '<identifier id="1">a</identifier>' +
+      '<identifier id="0">b</identifier>' +
+      '</children></root>';
+  this.executeTest(root, 0, 'Radicand');
+  this.executeTest(root, 1, 'Index');
+  this.executeTest(root, 2, '');
 };
 
 
@@ -165,56 +148,20 @@ sre.PrefixRuleTest.prototype.testRoots = function() {
  * Testing simple tensors.
  */
 sre.PrefixRuleTest.prototype.testSimpleTensors = function() {
-  this.executeTest('<tensor role="latinletter" id="5">' +
-                   '<children>' +
-                   '<identifier id="0">A</identifier>' +
-                   '<number role="leftsub" id="1">3</number>' +
-                   '<number role="leftsuper" id="2">4</number>' +
-                   '<number role="rightsub" id="3">1</number>' +
-                   '<number role="rightsuper" id="4">2</number>' +
-                   '</children>' +
-                   '</tensor>',
-                   0, 'Base');
-  this.executeTest('<tensor role="latinletter" id="5">' +
-                   '<children>' +
-                   '<identifier id="0">A</identifier>' +
-                   '<number role="leftsub" id="1">3</number>' +
-                   '<number role="leftsuper" id="2">4</number>' +
-                   '<number role="rightsub" id="3">1</number>' +
-                   '<number role="rightsuper" id="4">2</number>' +
-                   '</children>' +
-                   '</tensor>',
-                   1, 'Left Subscript');
-  this.executeTest('<tensor role="latinletter" id="5">' +
-                   '<children>' +
-                   '<identifier id="0">A</identifier>' +
-                   '<number role="leftsub" id="1">3</number>' +
-                   '<number role="leftsuper" id="2">4</number>' +
-                   '<number role="rightsub" id="3">1</number>' +
-                   '<number role="rightsuper" id="4">2</number>' +
-                   '</children>' +
-                   '</tensor>',
-                   2, 'Left Superscript');
-  this.executeTest('<tensor role="latinletter" id="5">' +
-                   '<children>' +
-                   '<identifier id="0">A</identifier>' +
-                   '<number role="leftsub" id="1">3</number>' +
-                   '<number role="leftsuper" id="2">4</number>' +
-                   '<number role="rightsub" id="3">1</number>' +
-                   '<number role="rightsuper" id="4">2</number>' +
-                   '</children>' +
-                   '</tensor>',
-                   3, 'Right Subscript');
-  this.executeTest('<tensor role="latinletter" id="5">' +
-                   '<children>' +
-                   '<identifier id="0">A</identifier>' +
-                   '<number role="leftsub" id="1">3</number>' +
-                   '<number role="leftsuper" id="2">4</number>' +
-                   '<number role="rightsub" id="3">1</number>' +
-                   '<number role="rightsuper" id="4">2</number>' +
-                   '</children>' +
-                   '</tensor>',
-                   4, 'Right Superscript');
+  var tensor = '<tensor role="latinletter" id="5">' +
+      '<children>' +
+      '<identifier id="0">A</identifier>' +
+      '<number role="leftsub" id="1">3</number>' +
+      '<number role="leftsuper" id="2">4</number>' +
+      '<number role="rightsub" id="3">1</number>' +
+      '<number role="rightsuper" id="4">2</number>' +
+      '</children>' +
+      '</tensor>';
+  this.executeTest(tensor, 0, 'Base');
+  this.executeTest(tensor, 1, 'Left Subscript');
+  this.executeTest(tensor, 2, 'Left Superscript');
+  this.executeTest(tensor, 3, 'Right Subscript');
+  this.executeTest(tensor, 4, 'Right Superscript');
 };
 
 
@@ -222,7 +169,7 @@ sre.PrefixRuleTest.prototype.testSimpleTensors = function() {
  * Testing complex tensors.
  */
 sre.PrefixRuleTest.prototype.testComplexTensors = function() {
-  this.executeTest('<tensor role="latinletter" id="17">' +
+  var tensor = '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<punctuated role="leftsub" id="4">' +
@@ -262,344 +209,17 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
       '</children>' +
       '</punctuated>' +
       '</children>' +
-      '</tensor>',
-                   0, 'Base');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   1, '1st Left Subscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   2, '2nd Left Subscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   5, '1st Left Superscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   6, '2nd Left Superscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   9, '1st Right Subscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   10, '2nd Right Subscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   13, '1st Right Superscript');
-  this.executeTest('<tensor role="latinletter" id="17">' +
-      '<children>' +
-      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
-      '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="1">1</number>' +
-      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
-      '<content>' +
-      '<punctuation role="dummy" id="11">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsuper" id="16">' +
-      '<content>' +
-      '<punctuation role="dummy" id="15">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '</children>' +
-      '</tensor>',
-                   14, '2nd Right Superscript');
+      '</tensor>';
+  this.executeTest(tensor, 0, 'Base');
+  this.executeTest(tensor, 1, '1st Left Subscript');
+  this.executeTest(tensor, 2, '2nd Left Subscript');
+  this.executeTest(tensor, 5, '1st Left Superscript');
+  this.executeTest(tensor, 6, '2nd Left Superscript');
+  this.executeTest(tensor, 9, '1st Right Subscript');
+  this.executeTest(tensor, 10, '2nd Right Subscript');
+  this.executeTest(tensor, 13, '1st Right Superscript');
+  this.executeTest(tensor, 14, '2nd Right Superscript');
+  this.executeTest(tensor, 17, '');
 };
 
 
