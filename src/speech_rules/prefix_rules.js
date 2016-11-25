@@ -194,19 +194,19 @@ sre.PrefixRules.initPrefixRules_ = function() {
   // Positions in tables
   defineRule(
     'row', 'prefix.default',
-    '[t] "Row"; [t] count(preceding-sibling::*)+1',
+    '[t] CSFordinalPosition; [t] "Row"; [p] (pause:200)',
     'self::row'
   );
 
   defineRule(
     'cell', 'prefix.default',
-    '[t] "Column"; [t] count(preceding-sibling::*)+1',
+    '[t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
     'self::cell'
   );
 
   defineRule(
     'line', 'prefix.default',
-    '[t] "Line"; [t] count(preceding-sibling::*)+1',
+    '[t] CSFordinalPosition; [t] "Line"; [p] (pause:200)',
     'self::line'
   );
 
