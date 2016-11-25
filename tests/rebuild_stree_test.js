@@ -2118,3 +2118,50 @@ sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
       '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>');
 };
 
+
+/**
+ * Binomial coefficients generated with fractions and redundant elements.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomialWithIgnores = function() {
+  this.executeRebuildTest(
+    '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>');
+  this.executeRebuildTest(
+    '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>');
+  this.executeRebuildTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>');
+};
+
+
+/**
+ * Binomial coefficient like elements, without fences.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomialOther = function() {
+  this.executeRebuildTest(
+    '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>');
+  this.executeRebuildTest(
+    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>');
+  this.executeRebuildTest(
+    '<mfrac linethickness="0"><mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac>');
+  this.executeRebuildTest(
+    '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>');
+  this.executeRebuildTest(
+    '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable>');
+};
+

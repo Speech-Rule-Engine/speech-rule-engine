@@ -312,3 +312,13 @@ sre.SemanticPred.tableIsMultiline = function(table) {
 };
 
 
+/**
+ * Heuristic to decide if a table has a binomial form.
+ * @param {!sre.SemanticNode} table A table node.
+ * @return {boolean} True if it is a binomial form.
+ */
+sre.SemanticPred.isBinomial = function(table) {
+  return table.childNodes.length === 2;
+};
+
+

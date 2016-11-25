@@ -31,7 +31,6 @@ goog.require('sre.SemanticAttr');
  * @constructor
  * @extends {sre.AbstractEnrichCase}
  * @override
- * @final
  */
 sre.CaseTable = function(semantic) {
   sre.CaseTable.base(this, 'constructor', semantic);
@@ -54,6 +53,7 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseTable.test = function(semantic) {
+  //DIAGRAM: Multiline here?
   return semantic.mathmlTree &&
       (semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
@@ -94,7 +94,6 @@ sre.CaseTable.prototype.getMathml = function() {
  * Cleanup in case there are collapsed row or line elements.
  */
 sre.CaseTable.prototype.cleanupCollapsedRows = function() {
-  console.log('cleaning up.');
   var children = [];
   var collapse = [this.semantic.id];
   var collapsed = false;
@@ -108,7 +107,7 @@ sre.CaseTable.prototype.cleanupCollapsedRows = function() {
       inner.setAttribute(sre.EnrichMathml.Attribute.PARENT, this.semantic.id);
       collapsed = true;
     } else {
-      collapse.push(id);
+      collapse.push(parseInt(id, 10));
     }
   }
   if (collapsed) {
