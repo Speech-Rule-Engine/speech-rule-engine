@@ -197,7 +197,18 @@ sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
  */
 sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  return this.cache_[key];
+  var descr = this.cache_[key];
+  return descr ? this.cloneCache(descr) : descr;
+};
+
+
+/**
+ * Clones a list of auditory descriptions to insulate cache from changes.
+ * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The cloned list.
+ */
+sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
+  return descrs.map(function(x) {return x.clone();});
 };
 
 
@@ -212,7 +223,7 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
   if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
   var id = node.getAttribute('id');
   if (id) {
-    this.cache_[id] = speech;
+    this.cache_[id] = this.cloneCache(speech);
   }
 };
 
@@ -365,7 +376,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
     if (descrs.length > 0) {
-      descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
+        descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();
