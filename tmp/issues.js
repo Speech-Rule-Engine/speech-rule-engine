@@ -115,3 +115,14 @@ console.log(enr.toString());
 var stree = sre.Semantic.getTreeFromString(matrix);
 console.log(sre.DomUtil.formatXml(enr.toString()));
 console.log(sre.DomUtil.formatXml(stree.toString()));
+
+
+//// Mfenced problem with interpretation as infix operation!
+
+var mm = sre.DomUtil.parseInput('<math><mfenced open="55" close=" "><mi>a</mi><mn>1</mn></mfenced></math>');
+var stree = new sre.SemanticTree(mm);
+var en = sre.EnrichMathml.enrich(mm, stree);
+var rs = new sre.RebuildStree(en);
+rs.stree.toString() === stree.toString();
+console.log(sre.DomUtil.formatXml(stree.toString()));
+console.log(sre.DomUtil.formatXml(en.toString()));
