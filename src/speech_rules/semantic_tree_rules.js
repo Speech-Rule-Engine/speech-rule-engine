@@ -462,12 +462,6 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
           '[t] "over"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
       'self::root');
 
-  // TODO (sorge) This is probably unnecessary now!
-  defineRule(
-      'text-no-mult', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',
-      'self::infixop', 'children/text');
-
   defineRule(
       'text', 'default.default',
       '[n] text(); [p] (pause:200)',

@@ -29,7 +29,6 @@ goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
-//goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');

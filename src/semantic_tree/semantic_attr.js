@@ -44,9 +44,6 @@
  * This file is part of the content script as we do not want to call out to the
  * background page every time we need to look up the semantic of a symbol.
  *
- * TODO (sorge) Move semantic tree translation into the background page
- *    alongside MathJax.
- *
  * @author sorge@google.com (Volker Sorge)
  */
 
