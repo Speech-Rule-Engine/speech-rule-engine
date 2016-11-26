@@ -111,6 +111,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.style = feature.style || engine.style;
   engine.domain = feature.domain || engine.domain;
   engine.speech = feature.speech || engine.speech;
+  engine.walker = feature.walker || engine.walker;
   binaryFeatures.forEach(setIf);
   if (feature.json) {
     sre.SystemExternal.jsonPath = sre.BaseUtil.makePath(feature.json);
@@ -246,13 +247,8 @@ sre.System.prototype.toEnriched = function(expr) {
   var root = sre.WalkerUtil.getSemanticRoot(enr);
   switch (sre.Engine.getInstance().speech) {
     case sre.Engine.Speech.SHALLOW:
-      var speech = sre.System.getInstance().toSpeech(expr);
-      root.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-      // The following is how it should be done. But there are still some
-      // problems with tables and embellished elements that make rebuilt
-      // difficult.
-      //
-      // (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
+      var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
+      generator.getSpeech(root, enr);
       break;
     case sre.Engine.Speech.DEEP:
       var generator = sre.SpeechGeneratorFactory.generator('Tree');
@@ -446,7 +442,7 @@ sre.System.prototype.walk = function(expr) {
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);
   sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      'Syntax', node, generator, highlighter, eml);
+      sre.Engine.getInstance().walker, node, generator, highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };
 

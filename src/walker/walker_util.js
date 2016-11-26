@@ -39,49 +39,6 @@ sre.WalkerUtil.splitAttribute = function(attr) {
 
 
 /**
- * Combines content and children lists depending on semantic type and role.
- * @param {!sre.SemanticAttr.Type} type The semantic type.
- * @param {!sre.SemanticAttr.Role} role The semantic role.
- * @param {!Array.<string>} content The list of content nodes.
- * @param {!Array.<string>} children The list of child nodes.
- * @return {!Array.<string>} The combined list.
- */
-sre.WalkerUtil.combineContentChildren = function(
-    type, role, content, children) {
-  switch (type) {
-    case sre.SemanticAttr.Type.RELSEQ:
-    case sre.SemanticAttr.Type.INFIXOP:
-    case sre.SemanticAttr.Type.MULTIREL:
-      return sre.BaseUtil.interleaveLists(children, content);
-    case sre.SemanticAttr.Type.PREFIXOP:
-      return content.concat(children);
-    case sre.SemanticAttr.Type.POSTFIXOP:
-      return children.concat(content);
-    case sre.SemanticAttr.Type.MATRIX:
-    case sre.SemanticAttr.Type.VECTOR:
-    case sre.SemanticAttr.Type.FENCED:
-      children.unshift(content[0]);
-      children.push(content[1]);
-      return children;
-    case sre.SemanticAttr.Type.CASES:
-      children.unshift(content[0]);
-      return children;
-    case sre.SemanticAttr.Type.PUNCTUATED:
-      if (role === sre.SemanticAttr.Role.TEXT) {
-        return sre.BaseUtil.interleaveLists(children, content);
-      }
-      return children;
-    case sre.SemanticAttr.Type.APPL:
-      return [children[0], content[0], children[1]];
-    case sre.SemanticAttr.Type.ROOT:
-      return [children[1], children[0]];
-    default:
-      return children;
-  }
-};
-
-
-/**
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
  * @param {!Node} node A DOM node.
@@ -123,9 +80,9 @@ sre.WalkerUtil.getSemanticRoot = function(node) {
  * @return {Node} The node for that id.
  */
 sre.WalkerUtil.getBySemanticId = function(root, id) {
-  return (root.querySelector ?
-          root.querySelector(
-      '[' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]') :
-          sre.XpathUtil.evalXPath(
-      './/*[@' + sre.EnrichMathml.Attribute.ID + '="' + id + '"]', root)[0]);
+  if (root.getAttribute(sre.EnrichMathml.Attribute.ID) === id) {
+    return root;
+  }
+  return sre.DomUtil.querySelectorAllByAttrValue(
+      root, sre.EnrichMathml.Attribute.ID, id)[0];
 };

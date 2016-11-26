@@ -536,9 +536,10 @@ sre.ApiTest.prototype.testToEnriched = function() {
 
 
 /**
- * Test for semantic tree API.
+ * Test for syntax walker API.
  */
-sre.ApiTest.prototype.testWalker = function() {
+sre.ApiTest.prototype.testSyntaxWalker = function() {
+  this.system.setupEngine({walker: 'Syntax'});
   var move = function(dir) {
     return sre.EventUtil.KeyCode[dir].toString();
   };
@@ -577,4 +578,46 @@ sre.ApiTest.prototype.testWalker = function() {
   this.executeTest(
       'move', move('LEFT'),
       null);
+};
+
+
+/**
+ * Test for semantic walker API.
+ */
+sre.ApiTest.prototype.testSemanticWalker = function() {
+  var saveWalker = sre.Engine.getInstance().walker;
+  this.system.setupEngine({walker: 'Semantic'});
+  var move = function(dir) {
+    return sre.EventUtil.KeyCode[dir].toString();
+  };
+  this.executeTest(
+      'walk',
+      sre.ApiTest.QUADRATIC,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+      'move', move('DOWN'),
+      'x');
+  this.executeTest(
+      'move', move('RIGHT'),
+      'equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+      'move', move('DOWN'),
+      'Numerator negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot');
+  this.executeTest(
+      'move', move('SPACE'),
+      'Level 2 Numerator');
+  this.executeTest(
+      'move', move('UP'),
+      'equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+      'move', move('LEFT'),
+      'x');
+  this.executeTest(
+      'move', move('LEFT'),
+      null);
+  this.system.setupEngine({walker: saveWalker});
 };
