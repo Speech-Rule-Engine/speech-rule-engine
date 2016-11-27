@@ -1299,6 +1299,7 @@ sre.SemanticAttr.Type = {
  * Mapping for roles of nodes.
  * Roles are more specific than types.
  * @enum {string}
+ * @final
  */
 sre.SemanticAttr.Role = {
   // Punctuation.

@@ -57,7 +57,7 @@ sre.SemanticProcessor.prototype.setNodeFactory = function(factory) {
  * Create an identifier node, with particular emphasis on font disambiguation.
  * @param {string} content The content of the identifier.
  * @param {sre.SemanticAttr.Font} font The font for the identifier.
- * @param {string} unit The class of the identifier which is imporntnat if it is
+ * @param {string} unit The class of the identifier which is important if it is
  *     a unit.
  * @return {!sre.SemanticNode} The new semantic identifier node.
  */
@@ -842,25 +842,26 @@ sre.SemanticProcessor.prototype.combineFencedContent_ = function(
 
 
 /**
+ * @const {Object.<sre.SemanticAttr.Role, sre.SemanticAttr.Role>}
+ * @private
+ */
+sre.SemanticProcessor.FENCE_TO_PUNCT_ = {};
+sre.SemanticProcessor.FENCE_TO_PUNCT_[sre.SemanticAttr.Role.NEUTRAL] =
+  sre.SemanticAttr.Role.VBAR;
+sre.SemanticProcessor.FENCE_TO_PUNCT_[sre.SemanticAttr.Role.OPEN] =
+  sre.SemanticAttr.Role.OPENFENCE;
+sre.SemanticProcessor.FENCE_TO_PUNCT_[sre.SemanticAttr.Role.CLOSE] =
+  sre.SemanticAttr.Role.CLOSEFENCE;
+
+
+/**
  * Rewrite fences into punctuation. This is done with any "leftover" fence.
  * @param {sre.SemanticNode} fence Fence.
  * @private
  */
 sre.SemanticProcessor.fenceToPunct_ = function(fence) {
-  var newRole;
-  switch (fence.role) {
-    case sre.SemanticAttr.Role.NEUTRAL:
-      newRole = sre.SemanticAttr.Role.VBAR;
-      break;
-    case sre.SemanticAttr.Role.OPEN:
-      newRole = sre.SemanticAttr.Role.OPENFENCE;
-      break;
-    case sre.SemanticAttr.Role.CLOSE:
-      newRole = sre.SemanticAttr.Role.CLOSEFENCE;
-      break;
-    default:
-      return;
-  }
+  var newRole = sre.SemanticProcessor.FENCE_TO_PUNCT_[fence.role];
+  if (!newRole) return;
   while (fence.embellished) {
     fence.embellished = sre.SemanticAttr.Type.PUNCTUATION;
     fence.role = newRole;
@@ -986,6 +987,20 @@ sre.SemanticProcessor.prototype.dummyNode_ = function(children) {
 
 
 /**
+ * @const {Object.<string, sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticProcessor.MML_TO_LIMIT_ = {
+  'MSUB': sre.SemanticAttr.Type.LIMLOWER,
+  'MUNDER': sre.SemanticAttr.Type.LIMLOWER,
+  'MSUP': sre.SemanticAttr.Type.LIMUPPER,
+  'MOVER': sre.SemanticAttr.Type.LIMUPPER,
+  'MSUBSUP': sre.SemanticAttr.Type.LIMBOTH,
+  'MUNDEROVER': sre.SemanticAttr.Type.LIMBOTH
+};
+
+
+/**
  * Creates a limit node from a sub/superscript or over/under node if the central
  * element is a big operator. Otherwise it creates the standard elements.
  * @param {string} mmlTag The tag name of the original node.
@@ -995,30 +1010,9 @@ sre.SemanticProcessor.prototype.dummyNode_ = function(children) {
  */
 sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   var center = children[0];
-  var isFunction = sre.SemanticPred.isAttribute('type', 'FUNCTION')(center);
-  // TODO (sorge) Put this into a single function.
-  var isLimit = sre.SemanticPred.isAttribute('type', 'LARGEOP')(center) ||
-      sre.SemanticPred.isAttribute('type', 'LIMBOTH')(center) ||
-      sre.SemanticPred.isAttribute('type', 'LIMLOWER')(center) ||
-      sre.SemanticPred.isAttribute('type', 'LIMUPPER')(center) ||
-      (isFunction && sre.SemanticPred.isAttribute('role', 'LIMFUNC')(center));
   var type = sre.SemanticAttr.Type.UNKNOWN;
-  // TODO (sorge) Make use of the difference in information on sub vs under etc.
-  if (isLimit) {
-    switch (mmlTag) {
-      case 'MSUB':
-      case 'MUNDER':
-        type = sre.SemanticAttr.Type.LIMLOWER;
-        break;
-      case 'MSUP':
-      case 'MOVER':
-        type = sre.SemanticAttr.Type.LIMUPPER;
-        break;
-      case 'MSUBSUP':
-      case 'MUNDEROVER':
-        type = sre.SemanticAttr.Type.LIMBOTH;
-        break;
-    }
+  if (sre.SemanticPred.isLimitBase(center)) {
+    type = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
   } else {
     switch (mmlTag) {
       case 'MSUB':
@@ -1134,6 +1128,21 @@ sre.SemanticProcessor.prototype.getFunctionsInRow_ = function(
 
 
 /**
+ * @const {Object.<sre.SemanticAttr.Role, string>}
+ * @private
+ */
+sre.SemanticProcessor.CLASSIFY_FUNCTION_ = {};
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.INTEGRAL] =
+  'integral';
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.SUM] =
+  'bigop';
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.PREFIXFUNC] =
+  'prefix';
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
+  'prefix';
+
+
+/**
  * Classifies a function wrt. the heuristic that should be applied.
  * @param {!sre.SemanticNode} funcNode The node to be classified.
  * @param {!Array.<sre.SemanticNode>} restNodes The remainder list of
@@ -1166,26 +1175,10 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
     sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
     return 'prefix';
   }
-  switch (funcNode.role) {
-    case sre.SemanticAttr.Role.INTEGRAL:
-      return 'integral';
-      break;
-    case sre.SemanticAttr.Role.SUM:
-      return 'bigop';
-      break;
-    case sre.SemanticAttr.Role.PREFIXFUNC:
-    case sre.SemanticAttr.Role.LIMFUNC:
-      return 'prefix';
-      break;
-    default:
-      if (funcNode.type === sre.SemanticAttr.Type.IDENTIFIER ||
-          funcNode.role === sre.SemanticAttr.Role.LATINLETTER ||
-          funcNode.role === sre.SemanticAttr.Role.GREEKLETTER ||
-          funcNode.role === sre.SemanticAttr.Role.OTHERLETTER) {
-        return 'simple';
-      }
-  }
-  return '';
+  var kind = sre.SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
+  return kind ? kind : (
+    sre.SemanticPred.isSimpleFunctionHead(funcNode) ? 'simple' : ''
+  );
 };
 
 
@@ -2060,7 +2053,7 @@ sre.SemanticProcessor.rewriteFencedNode_ = function(fenced) {
 /**
  * Rewrites a fence by removing embellishments and putting them around the
  * node. The only embellishments that are not pulled out are overscore and
-           * underscore.
+ * underscore.
  * @param {!sre.SemanticNode} node The original fenced node.
  * @param {!sre.SemanticNode} fence The fence node.
  * @return {{node: !sre.SemanticNode,
