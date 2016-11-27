@@ -322,3 +322,30 @@ sre.SemanticPred.isBinomial = function(table) {
 };
 
 
+/**
+ * Heuristic to decide if a node is a suitable center of a limit node.
+ * @param {!sre.SemanticNode} node The center node.
+ * @return {boolean} True if node is a large operator, already a limit node or a
+ *    limit function.
+ */
+sre.SemanticPred.isLimitBase = function(node) {
+  return sre.SemanticPred.isAttribute('type', 'LARGEOP')(node) ||
+    sre.SemanticPred.isAttribute('type', 'LIMBOTH')(node) ||
+      sre.SemanticPred.isAttribute('type', 'LIMLOWER')(node) ||
+    sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
+    (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
+     sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
+};
+
+
+/**
+ * Predicate deciding whether a symbol is the head of a simple function.
+ * @param {!sre.SemanticNode} node A semantic node.
+ * @return {boolean} True if node is an identifier or a simple letter.
+ */
+sre.SemanticPred.isSimpleFunctionHead = function(node) {
+  return (node.type === sre.SemanticAttr.Type.IDENTIFIER ||
+          node.role === sre.SemanticAttr.Role.LATINLETTER ||
+          node.role === sre.SemanticAttr.Role.GREEKLETTER ||
+          node.role === sre.SemanticAttr.Role.OTHERLETTER);
+};
