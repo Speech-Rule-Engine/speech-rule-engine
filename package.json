@@ -29,7 +29,7 @@
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
     "commander": "*",
-    "xmldom": "*",
+    "xmldom": "@0.1.22",
     "xml-mapping": "*",
     "xpath": "*"
   },
