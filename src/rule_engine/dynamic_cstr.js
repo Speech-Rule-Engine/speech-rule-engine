@@ -290,7 +290,7 @@ sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
       keys1.every(
       goog.bind(function(key) {
         return cstr.getValue(key) == this.reference_.getValue(key) ||
-            // TODO (sorge) Sort this out with an ordered list of constraints.
+            // TODO (MOSS) Sort this out with an ordered list of constraints.
             cstr.getValue(key) == 'short' ||
             cstr.getValue(key) == 'default';
       }, this));

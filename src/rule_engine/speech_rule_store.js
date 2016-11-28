@@ -74,8 +74,6 @@ sre.SpeechRuleStore.prototype.findAllRules = goog.abstractMethod;
 sre.SpeechRuleStore.prototype.lookupRule = goog.abstractMethod;
 
 
-// TODO(sorge): Propagate this documentation *everywhere* once these
-//     args/descriptions are hardened/cleaned up.
 /**
  * Defines a new speech rule from given components.
  * @param {string} name Name of the rule. It does not have to be unique.

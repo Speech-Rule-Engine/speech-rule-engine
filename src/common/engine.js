@@ -93,6 +93,12 @@ sre.Engine = function() {
   this.style = 'short';
 
   /**
+   * Current walker mode.
+   * @type {string}
+   */
+  this.walker = 'Syntax';
+
+  /**
    * Semantics flag.
    * @type {boolean}
    */

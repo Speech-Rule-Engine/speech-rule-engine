@@ -1620,10 +1620,6 @@ sre.RebuildStreeTest.prototype.testRebuildBaseTensors = function() {
 };
 
 
-//
-//TODO: Some tensors do not yet work due to collapsed content nodes that are not
-// being recorded
-//
 /**
  * Pathological multiscript expressions that are actually on right
  * sub/superscripts.
@@ -1643,15 +1639,15 @@ sre.RebuildStreeTest.prototype.testRebuildRightScriptTensors = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi>' +
       '<mprescripts/><none/></mmultiscripts>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
-  //     '<mprescripts/><none/></mmultiscripts>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/>' +
-  //     '<mprescripts/><none/></mmultiscripts>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi>' +
-  //     '<mprescripts/><none/></mmultiscripts>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
+      '<mprescripts/><none/></mmultiscripts>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><none/><mi>j</mi><none/>' +
+      '<mprescripts/><none/></mmultiscripts>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mi>X</mi><none/><mi>i</mi><none/><mi>j</mi>' +
+      '<mprescripts/><none/></mmultiscripts>');
 };
 
 
@@ -1702,7 +1698,7 @@ sre.RebuildStreeTest.prototype.testRebuildSimpleTensors = function() {
 /**
  * Complex multiscript expressions with some scripts on the left.
  */
-sre.RebuildStreeTest.prototype.untestRebuildComplexTensors = function() {
+sre.RebuildStreeTest.prototype.testRebuildComplexTensors = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>');
@@ -1905,31 +1901,31 @@ sre.RebuildStreeTest.prototype.testRebuildEmbellishedLeftFence = function() {
       '<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>');
   this.executeRebuildTest(
       '<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
-  //     '<mi>x</mi><mo>)</mo>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
-  //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
-  // this.executeRebuildTest(
-  //   '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
-  //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
-  //     '<mprescripts/><mn>4</mn><mn>3</mn>' +
-  //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
-  // this.executeRebuildTest(
-  //     '<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo>' +
-  //     '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
-  //     '</mover><mprescripts/><mn>4</mn>' +
-  //     '</mmultiscripts><mi>x</mi><mo>)</mo>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><mo>)</mo>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>');
+  this.executeRebuildTest(
+      '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>');
+  this.executeRebuildTest(
+      '<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>');
 };
 
 
 /**
  * Expressions with embellished fences on both sides.
  */
-sre.RebuildStreeTest.prototype.untestRebuildEmbellishedBothFences = function() {
+sre.RebuildStreeTest.prototype.testRebuildEmbellishedBothFences = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
       '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>');
@@ -1955,18 +1951,18 @@ sre.RebuildStreeTest.prototype.testRebuildEmbellishedPaddedFences =
       '<msub><mover><mo>)</mo>' +
       '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
       '</msup></mpadded>');
-  // this.executeRebuildTest(
-  //     '<mpadded mathbackground="red"><mmultiscripts><mover><mmultiscripts>' +
-  //     '<munder><mo>(</mo><mo>~</mo>' +
-  //     '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
-  //     '</mover><mprescripts/><mn>4</mn>' +
-  //     '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>');
-  // this.executeRebuildTest(
-  //     '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
-  //     '<mprescripts/><mn>4</mn><mn>3</mn>' +
-  //     '</mmultiscripts><mo>~</mo></munder></mpadded>' +
-  //     '<mi>x</mi><mpadded mathbackground="red"><mover><msubsup><mo>)</mo>' +
-  //     '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>');
+  this.executeRebuildTest(
+      '<mpadded mathbackground="red"><mmultiscripts><mover><mmultiscripts>' +
+      '<munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>');
+  this.executeRebuildTest(
+      '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder></mpadded>' +
+      '<mi>x</mi><mpadded mathbackground="red"><mover><msubsup><mo>)</mo>' +
+      '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>');
 };
 
 
@@ -1991,7 +1987,7 @@ sre.RebuildStreeTest.prototype.testRebuildEmbellRightSubexpr = function() {
 /**
  * Expressions with embellished left fences as a sub-expression.
  */
-sre.RebuildStreeTest.prototype.untestRebuildEmbellLeftSubexpr = function() {
+sre.RebuildStreeTest.prototype.testRebuildEmbellLeftSubexpr = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>');
@@ -2007,7 +2003,7 @@ sre.RebuildStreeTest.prototype.untestRebuildEmbellLeftSubexpr = function() {
 /**
  * Expressions with embellished both fences as a sub-expression.
  */
-sre.RebuildStreeTest.prototype.untestRebuildEmbellBothSubexpr = function() {
+sre.RebuildStreeTest.prototype.testRebuildEmbellBothSubexpr = function() {
   this.executeRebuildTest(
       '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
       '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
@@ -2034,3 +2030,139 @@ sre.RebuildStreeTest.prototype.testRebuildComplexEmbellRight = function() {
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo>' +
       '<mn>4</mn></msub>');
 };
+
+
+// TODO: Actions.
+
+
+/**
+ * Expressions with semantic elements.
+ */
+sre.RebuildStreeTest.prototype.testSemanticsElement = function() {
+  this.executeRebuildTest(
+      '<semantics></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mi>a</mi></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>');
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.RebuildStreeTest.prototype.testSemanticsAnnotation = function() {
+  // This is not really legal markup.
+  // this.executeRebuildTest(
+  //   '<semantics><annotation>something</annotation></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mi>a</mi><annotation>something</annotation></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>');
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.RebuildStreeTest.prototype.testSemanticsAnnotationXml = function() {
+  // This is not really legal markup.
+  this.executeRebuildTest(
+      '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>');
+  this.executeRebuildTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>');
+};
+
+
+/**
+ * Binomial coefficients generated with fractions.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomial = function() {
+  this.executeRebuildTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac></mfenced>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
+      '<mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+' +
+      '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
+      '</mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>');
+};
+
+
+/**
+ * Binomial coefficients generated with fractions and redundant elements.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomialWithIgnores = function() {
+  this.executeRebuildTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>');
+  this.executeRebuildTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>');
+  this.executeRebuildTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>');
+  this.executeRebuildTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>');
+};
+
+
+/**
+ * Binomial coefficient like elements, without fences.
+ */
+sre.RebuildStreeTest.prototype.testRebuildBinomialOther = function() {
+  this.executeRebuildTest(
+      '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>');
+  this.executeRebuildTest(
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>');
+  this.executeRebuildTest(
+      '<mfrac linethickness="0"><mi>n</mi>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>');
+  this.executeRebuildTest(
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>');
+  this.executeRebuildTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable>');
+};
+

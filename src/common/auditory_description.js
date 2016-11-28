@@ -74,6 +74,30 @@ sre.AuditoryDescription.prototype.isEmpty = function() {
 
 
 /**
+ * Clones the Auditory description.
+ * @return {!sre.AuditoryDescription} The new description.
+ */
+sre.AuditoryDescription.prototype.clone = function() {
+  var personality;
+  if (this.personality) {
+    personality = {};
+    for (var key in this.personality) {
+      personality = this.personality[key];
+    }
+  }
+  return new sre.AuditoryDescription(
+      {context: this.context,
+        text: this.text,
+        userValue: this.userValue,
+        annotation: this.annotation,
+        correction: this.correction,
+        personality: personality,
+        preprocess: this.preprocess
+      });
+};
+
+
+/**
  * @return {string} A string representation of this object.
  */
 sre.AuditoryDescription.prototype.toString = function() {

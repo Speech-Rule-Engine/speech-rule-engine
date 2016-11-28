@@ -551,7 +551,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'self::*[@alternative]', '@role="integral"', 'self::*'
   );
 
-  //TODO: What about embellished operators/relations?
   defineRule(
       'abstr-relation', 'mathspeak.default',
       '[t] "collapsed"; [n] @role;',

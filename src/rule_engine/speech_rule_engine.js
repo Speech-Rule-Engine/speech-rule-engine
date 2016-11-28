@@ -197,7 +197,18 @@ sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
  */
 sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  return this.cache_[key];
+  var descr = this.cache_[key];
+  return descr ? this.cloneCache(descr) : descr;
+};
+
+
+/**
+ * Clones a list of auditory descriptions to insulate cache from changes.
+ * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The cloned list.
+ */
+sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
+  return descrs.map(function(x) {return x.clone();});
 };
 
 
@@ -209,10 +220,10 @@ sre.SpeechRuleEngine.prototype.getCache = function(key) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
-  if (!node.getAttribute) return;
+  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
   var id = node.getAttribute('id');
   if (id) {
-    this.cache_[id] = speech;
+    this.cache_[id] = this.cloneCache(speech);
   }
 };
 

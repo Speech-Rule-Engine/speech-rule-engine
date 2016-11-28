@@ -282,8 +282,6 @@ sre.SpeechRule.Action.prototype.toString = function() {
 
 
 
-// TODO (sorge) Separatation of xpath expressions and custom functions.
-// Also test validity of xpath expressions.
 /**
  * Constructs a valid precondition for a speech rule.
  * @param {string} query A node selector function or xpath expression.
