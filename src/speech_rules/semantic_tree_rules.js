@@ -32,7 +32,7 @@ goog.require('sre.StoreUtil');
  * @extends {sre.MathStore}
  */
 sre.SemanticTreeRules = function() {
-  goog.base(this);
+  sre.SemanticTreeRules.base(this, 'constructor');
 };
 goog.inherits(sre.SemanticTreeRules, sre.MathStore);
 goog.addSingletonGetter(sre.SemanticTreeRules);
@@ -461,12 +461,6 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       '[t] "root of order"; [n] children/*[1];' +
           '[t] "over"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
       'self::root');
-
-  // TODO (sorge) This is probably unnecessary now!
-  defineRule(
-      'text-no-mult', 'default.default',
-      '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',
-      'self::infixop', 'children/text');
 
   defineRule(
       'text', 'default.default',

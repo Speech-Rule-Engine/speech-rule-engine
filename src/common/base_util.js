@@ -83,4 +83,4 @@ sre.BaseUtil.union = function(a, b) {
  */
 sre.BaseUtil.makePath = function(path) {
   return path.match('/$') ? path : path + '/';
-}
+};

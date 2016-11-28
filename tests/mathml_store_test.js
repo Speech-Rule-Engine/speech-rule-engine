@@ -21,6 +21,7 @@ goog.provide('sre.MathmlStoreTest');
 
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
+goog.require('sre.DynamicCstr');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreRules');
@@ -32,7 +33,7 @@ goog.require('sre.MathmlStoreRules');
  * @extends {sre.AbstractTest}
  */
 sre.MathmlStoreTest = function() {
-  goog.base(this);
+  sre.MathmlStoreTest.base(this, 'constructor');
 
   /**
    * @override
@@ -62,8 +63,9 @@ sre.MathmlStoreTest.prototype.executeRuleTest = function(mml, ruleName) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
-  var rule = this.store.lookupRule(node.childNodes[0],
-                                   {domain: 'default', style: 'default'});
+  var rule = this.store.lookupRule(
+      node.childNodes[0],
+      new sre.DynamicCstr({domain: 'default', style: 'default'}));
   this.assert.equal(ruleName, rule.name);
 };
 

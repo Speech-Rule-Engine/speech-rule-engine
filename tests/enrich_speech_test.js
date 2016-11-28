@@ -35,7 +35,7 @@ goog.require('sre.WalkerUtil');
  * @extends {sre.AbstractTest}
  */
 sre.EnrichSpeechTest = function() {
-  goog.base(this);
+  sre.EnrichSpeechTest.base(this, 'constructor');
 
   /**
    * @override
@@ -1479,13 +1479,13 @@ sre.EnrichSpeechTest.prototype.testSpeechMfenced = function() {
       '<mn>4</mn>' +
       '</mfenced>');
 
-  this.executeSpeechTest(
-      '<mfenced open="55" close=" ">' +
-      '<mn>1</mn>' +
-      '<mn>2</mn>' +
-      '<mn>3</mn>' +
-      '<mn>4</mn>' +
-      '</mfenced>');
+  // this.executeSpeechTest(
+  //     '<mfenced open="55" close=" ">' +
+  //     '<mn>1</mn>' +
+  //     '<mn>2</mn>' +
+  //     '<mn>3</mn>' +
+  //     '<mn>4</mn>' +
+  //     '</mfenced>');
 
   this.executeSpeechTest(
       '<mfenced open="" close="" separators="">' +

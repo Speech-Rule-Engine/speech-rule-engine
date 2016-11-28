@@ -53,9 +53,9 @@ goog.require('sre.System');
 
   (sre.System.getInstance()).setupEngine(
       {mode: sre.Engine.Mode.HTTP,
-       json: MathJax.Ajax.config.path['SRE'] + '/mathmaps',
-       xpath: MathJax.Ajax.config.path['SRE'] + '/wgxpath.install.js',
-       semantics: true}
+        json: MathJax.Ajax.config.path['SRE'] + '/mathmaps',
+        xpath: MathJax.Ajax.config.path['SRE'] + '/wgxpath.install.js',
+        semantics: true}
   );
 
   MathJax.Extension.Sre.ConfigSre();

@@ -30,11 +30,13 @@ goog.require('sre.MathspeakRuleTest');
 goog.require('sre.NobleSamplesTest');
 goog.require('sre.PrefixRuleTest');
 goog.require('sre.RebuildStreeTest');
+goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
+goog.require('sre.WalkerTest');
 
 
 
@@ -51,11 +53,14 @@ goog.addSingletonGetter(sre.Tests);
  * Runs the set of tests.
  */
 sre.Tests.prototype.run = function() {
+  var timeIn = (new Date()).getTime();
   for (var i = 0, test; test = sre.Tests.testList[i]; i++) {
     this.runner.registerTest(new test());
   }
   this.runner.runTests();
   this.runner.summary();
+  var timeOut = (new Date()).getTime();
+  this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
   process.exit(this.runner.success() ? 0 : 1);
 };
 
@@ -76,9 +81,11 @@ sre.Tests.testList = [
   sre.NobleSamplesTest,
   sre.PrefixRuleTest,
   sre.RebuildStreeTest,
+  sre.SemanticApiTest,
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
-  sre.SpeechRuleTest
+  sre.SpeechRuleTest,
+  sre.WalkerTest
 ];
 
 

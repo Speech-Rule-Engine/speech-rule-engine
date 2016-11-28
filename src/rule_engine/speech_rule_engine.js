@@ -30,21 +30,16 @@
 
 goog.provide('sre.SpeechRuleEngine');
 
-goog.require('sre.AbstractionRules');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
-goog.require('sre.ClearspeakRules');
 goog.require('sre.Debugger');
+goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
-goog.require('sre.MathmlStore');
-goog.require('sre.MathmlStoreRules');
-goog.require('sre.MathspeakRules');
-goog.require('sre.PrefixRules');
-goog.require('sre.SemanticTreeRules');
 goog.require('sre.SpeechRule');
+goog.require('sre.SpeechRuleStores');
 goog.require('sre.XpathUtil');
 
 
@@ -59,13 +54,6 @@ sre.SpeechRuleEngine = function() {
    * @private
    */
   this.activeStore_ = null;
-
-  /**
-   * Dynamic constraint annotation.
-   * @type {!sre.SpeechRule.DynamicCstr}
-   */
-  this.dynamicCstr = {};
-  this.dynamicCstr[sre.SpeechRule.DynamicCstrAttrib.STYLE] = 'short';
 
   /**
    * Object holding global parameters that can be set by the stores.
@@ -94,6 +82,9 @@ sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
 };
 
 
+//TODO: (MOSS) WP 1.4
+// Extend to Context structure
+//
 /**
  * Returns the a global parameter if it exists.
  * @param {string} parameter The parameter name.
@@ -110,8 +101,8 @@ sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
  */
 sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = [];
-  for (var i = 0; i < ruleSetNames.length; i++) {
-    var set = sre[ruleSetNames[i]];
+  for (var i = 0, m = ruleSetNames.length; i < m; i++) {
+    var set = sre.SpeechRuleStores.getConstructor(ruleSetNames[i]);
     if (set && set.getInstance) {
       ruleSets.push(set.getInstance());
     }
@@ -137,19 +128,6 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
     }
   }
   this.updateEngine();
-};
-
-
-/**
- * Parameterizes the dynamic constraint annotation for the speech rule
- * engine. This is a separate function as this can be done interactively, while
- * a particular speech rule store is active.
- * @param {sre.SpeechRule.DynamicCstr} dynamic The new dynamic constraint.
- */
-sre.SpeechRuleEngine.prototype.setDynamicConstraint = function(dynamic) {
-  if (dynamic) {
-    this.dynamicCstr = dynamic;
-  }
 };
 
 
@@ -219,7 +197,18 @@ sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
  */
 sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  return this.cache_[key];
+  var descr = this.cache_[key];
+  return descr ? this.cloneCache(descr) : descr;
+};
+
+
+/**
+ * Clones a list of auditory descriptions to insulate cache from changes.
+ * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The cloned list.
+ */
+sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
+  return descrs.map(function(x) {return x.clone();});
 };
 
 
@@ -231,15 +220,16 @@ sre.SpeechRuleEngine.prototype.getCache = function(key) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
-  if (!node.getAttribute) return;
+  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
   var id = node.getAttribute('id');
   if (id) {
-    this.cache_[id] = speech;
+    this.cache_[id] = this.cloneCache(speech);
   }
 };
 
 
 // Dispatch functionality.
+// The timing function is temporary until the MOSS deliverable is done.
 /**
  * Computes a speech object for a given node. Returns the empty list if
  * no node is given.
@@ -248,6 +238,23 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
+  var timeIn = (new Date()).getTime();
+  var result = this.evaluateNode_(node);
+  var timeOut = (new Date()).getTime();
+  sre.Debugger.getInstance().output('Time:', timeOut - timeIn);
+  return result;
+};
+
+
+/**
+ * Computes a speech object for a given node. Returns the empty list if
+ * no node is given.
+ * @param {Node} node The node to be evaluated.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *   for that node.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
   if (!node) {
     return [];
   }
@@ -262,24 +269,26 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  if (sre.Engine.getInstance().cache) {
+  var engine = sre.Engine.getInstance();
+  if (engine.cache) {
     var result = this.getCacheForNode_(node);
     if (result) {
       return result;
     }
   }
-  var rule = this.activeStore_.lookupRule(node, this.dynamicCstr);
+  // TODO: (MOSS) Fix with order parsing.
+  var dynamicCstr = engine.dynamicCstr ||
+      this.activeStore_.parser.parse('default.default');
+  var rule = this.activeStore_.lookupRule(node, dynamicCstr);
   if (!rule) {
-    if (sre.Engine.getInstance().strict) return [];
+    if (engine.strict) return [];
     result = this.activeStore_.evaluateDefault(node);
     this.pushCache_(node, result);
     return result;
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
-        return [rule.name,
-                sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
-                node.toString()];},
+        return [rule.name, rule.dynamicCstr.toString(), node.toString()];},
       this));
   var components = rule.action.components;
   result = [];
@@ -384,8 +393,6 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  * @param {Array.<sre.AuditoryDescription>} descrs A list of Auditory
  *     descriptions.
  * @param {Object} props Property dictionary.
- * TODO (sorge) Fully specify, when we have finalised the speech rule
- * format.
  * @return {Array.<sre.AuditoryDescription>} The modified array.
  * @private
  */
@@ -397,9 +404,9 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
       personality[key] = value;
     }
   }
-  descrs.forEach(goog.bind(function(descr) {
+  for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
-  }, this));
+  }
   return descrs;
 };
 
@@ -469,7 +476,7 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
     for (var i = 0, rule; rule = allRules[i]; i++) {
       sre.Debugger.getInstance().output(
           'Rule', name, 'DynamicCstr:',
-          sre.SpeechRule.stringifyCstr(rule.dynamicCstr),
+          rule.dynamicCstr.toString(),
           'number', i);
       store.debugSpeechRule(rule, node);
     }
@@ -493,8 +500,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
     if (key === 'rules') {
       store = this.activeStore_;
       engine.ruleSets = settings[key];
-      sre.SpeechRuleEngine.getInstance().
-          parameterize(engine.ruleSets);
+      this.parameterize(engine.ruleSets);
       continue;
     }
     save[key] = engine[key];
@@ -502,8 +508,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  sre.SpeechRuleEngine.getInstance().dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -511,8 +516,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  this.dynamicCstr =
-      sre.MathStore.createDynamicConstraint(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   return result;
 };
 
@@ -547,7 +551,7 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     return;
   }
   var engine = sre.Engine.getInstance();
-  var dynamicCstr = this.activeStore_.getDynamicConstraintValues();
-  engine.allDomains = sre.BaseUtil.union(dynamicCstr.domain, maps.allDomains);
-  engine.allStyles = sre.BaseUtil.union(dynamicCstr.style, maps.allStyles);
+  engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
+  engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
+  engine.evaluator = goog.bind(maps.store.lookupString, maps.store);
 };
