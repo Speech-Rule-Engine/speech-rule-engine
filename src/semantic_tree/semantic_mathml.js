@@ -58,6 +58,7 @@ sre.SemanticMathml = function() {
     'MROOT': goog.bind(this.root_, this),
     'MSQRT': goog.bind(this.sqrt_, this),
     'MTABLE': goog.bind(this.table_, this),
+    'MLABELEDTR': goog.bind(this.tableLabeledRow_, this),
     'MTR': goog.bind(this.tableRow_, this),
     'MTD': goog.bind(this.tableCell_, this),
     'MS': goog.bind(this.text_, this),
@@ -229,6 +230,26 @@ sre.SemanticMathml.prototype.table_ = function(node, children) {
 sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
   var newNode = this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.ROW, this.parseNodes_(children), []);
+  newNode.role = sre.SemanticAttr.Role.TABLE;
+  return newNode;
+};
+
+
+/**
+ * Parses a row of a table.
+ * @param {Element} node A MathML node.
+ * @param {Array.<Element>} children The children of the node.
+ * @return {!sre.SemanticNode} The newly created semantic node.
+ * @private
+ */
+sre.SemanticMathml.prototype.tableLabeledRow_ = function(node, children) {
+  if (!children.length) {
+    return this.tableRow_(node, children);
+  }
+  var label = this.parse(children[0]);
+  label.role = sre.SemanticAttr.Role.LABEL;
+  var newNode = this.getFactory().makeBranchNode(
+      sre.SemanticAttr.Type.ROW, this.parseNodes_(children.slice(1)), [label]);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };

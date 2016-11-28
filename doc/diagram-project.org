@@ -84,7 +84,9 @@ Notes from the Diagram project
 ** prefix for multi-index structures
 ** cache problems with context
 ** spaces (> normal)
+*** Special punctuation element?
 ** labels
+*** Content element of rows or lines.
 
 * Testing ideas
 
@@ -95,3 +97,9 @@ Notes from the Diagram project
     multiline equation 1st line a 2nd line b
 *** Correct MathSpeak rendering
     StartLayout 1st line a 2nd line b EndLayout
+
+** Labels 
+
+*** with or without parenthesis.
+
+*** Label announcement with end label announcement.
