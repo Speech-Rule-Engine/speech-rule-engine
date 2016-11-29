@@ -170,6 +170,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'omit-empty', 'mathspeak.default',
       '',
       'self::empty');
+  defineRule(
+      'blank-empty', 'mathspeak.default',
+      '[t] "Blank"', 'self::empty', 'count(../*)=1',
+      'name(../..)="cell" or name(../..)="line"');
 
   // Font rules
   defineRule(
@@ -1007,14 +1011,20 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
+  defineRule(
+      'empty-row', 'mathspeak.default',
+      '[t] "Blank"', 'self::row', 'count(children/*)=0');
 
   defineRule(
       'matrix-cell', 'mathspeak.default',
       '[n] children/*[1]', 'self::cell');
 
+  // defineRule(
+  //     'empty-cell', 'mathspeak.default',
+  //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
   defineRule(
       'empty-cell', 'mathspeak.default',
-      '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
+      '[t] "Blank"', 'self::cell', 'count(children/*)=0');
 
 
   defineRule(
@@ -1103,6 +1113,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
+  defineRule(
+      'empty-line', 'mathspeak.default',
+      '[t] "Blank"', 'self::line', 'count(children/*)=0');
 
   // Enclose
   defineRule(

@@ -264,9 +264,20 @@ sre.SemanticMathml.prototype.tableLabeledRow_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
   var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
+  var childNodes;
+  if (!semNodes.length) {
+    childNodes = [];
+  } else if (semNodes.length === 1 &&
+             sre.SemanticPred.isAttribute('type', 'EMPTY')(semNodes[0])) {
+    // In case we have an explicit empty node, we do not want to process it
+    // again. However, we know there will be a mathml node to embed the semantic
+    // information into if necessary.
+    childNodes = semNodes;
+  } else {
+    childNodes = [sre.SemanticProcessor.getInstance().row(semNodes)];
+  }
   var newNode = this.getFactory().makeBranchNode(
-      sre.SemanticAttr.Type.CELL,
-      [sre.SemanticProcessor.getInstance().row(semNodes)], []);
+      sre.SemanticAttr.Type.CELL, childNodes, []);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };
