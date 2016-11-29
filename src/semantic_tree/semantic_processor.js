@@ -1591,8 +1591,12 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
 
 
 // TODO (sorge) This heuristic is very primitive. We could start reworking
-// multilines, by combining all cells, semantically rewriting the entire line
-// and see if there are any similarities. Alternatively, we could look for
+// multilines by
+//
+// 1. combining all cells, semantically rewriting the entire line
+// and see if there are any similarities.
+//
+// 2. Alternatively, we could look for
 // similarities in columns (e.g., single relation symbols, like equalities or
 // inequalities in the same column could indicate an equation array).
 /**
@@ -1857,6 +1861,7 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     var node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
     sre.SemanticProcessor.binomialForm_(node);
+    sre.SemanticProcessor.classifyTable(node);
     return node;
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
@@ -2101,4 +2106,89 @@ sre.SemanticProcessor.rewriteFence_ = function(node, fence) {
 sre.SemanticProcessor.propagateFencePointer_ = function(oldNode, newNode) {
   oldNode.fencePointer = newNode.fencePointer || newNode.id.toString();
   oldNode.embellished = null;
+};
+
+
+/**
+ * Semantically classifies a table in terms of equation system it might be.
+ * @param {!sre.SemanticNode} table The table, multiline or otherwise.
+ * @param {Element=} opt_element The MathML element for the table in case we
+ *     need to look up information on attributes.
+ */
+sre.SemanticProcessor.classifyTable = function(table, opt_element) {
+  // Eventually this should subsume the binomial classification as well!
+  // if (table.role !== sre.SemanticAttr.Role.UNKNOWN) {
+  //   return;
+  // }
+
+  // Classifies multiline.
+  if (table.type === sre.SemanticAttr.Type.MULTILINE) {
+    var firstRole = table.childNodes[0].childNodes[0].role;
+    if (firstRole !== sre.SemanticAttr.Role.UNKNOWN &&
+        table.childNodes.every(function(x) {
+          return x.childNodes[0].role === firstRole;})) {
+      table.role = firstRole;
+    }
+    return;
+  }
+  // Classifies real tables. Maybe keep the columns for later?
+  var columns = sre.SemanticProcessor.computeColumns_(table);
+  var isEquality = sre.SemanticPred.isAttribute('role', 'EQUALITY');
+  var equalityLeftEmpty = function(x) {
+    return sre.SemanticPred.isAttribute('type', 'RELSEQ')(x) &&
+      isEquality(x) &&
+      sre.SemanticPred.isAttribute('type', 'EMPTY')(x.childNodes[0]);
+  };
+  var equalityRightEmpty = function(x) {
+    return sre.SemanticPred.isAttribute('type', 'RELSEQ')(x) &&
+      isEquality(x) &&
+      sre.SemanticPred.isAttribute(
+        'type', 'EMPTY')(x.childNodes[x.childNodes.length - 1]);
+  };
+  // Simple equation tables for now.
+  // For the time being we have no treatment for endpunct!
+  // In many ways you would want to exclude full stops at the end of
+  // expressions.
+  if ((columns.length === 3 &&
+       sre.SemanticProcessor.testColumns_(columns, 1, isEquality)) ||
+      (columns.length === 2 &&
+       (sre.SemanticProcessor.testColumns_(columns, 1, equalityLeftEmpty) ||
+        sre.SemanticProcessor.testColumns_(columns, 0, equalityRightEmpty)))) {
+    table.role = sre.SemanticAttr.Role.EQUALITY;
+  }
+};
+
+
+/**
+ * Computes columns from a table.
+ * @param {!sre.SemanticNode} table The table node.
+ * @return {!Array.<Array.<sre.SemanticNode>>} The columns.
+ * @private
+ */
+sre.SemanticProcessor.computeColumns_ = function(table) {
+  var columns = Array.
+        apply(null, Array(table.childNodes[0].childNodes.length)).
+        map(function() {return [];});
+  for (var i = 0, row; row = table.childNodes[i]; i++) {
+    for (var j = 0, cell; cell = row.childNodes[j]; j++) {
+      columns[j].push(cell);
+    }
+  }
+  return columns;
+};
+
+
+/**
+ * Test if all elements in the i-th column have the same property.
+ * @param {!Array.<Array.<sre.SemanticNode>>} columns The columns.
+ * @param {number} index The column to be tested.
+ * @param {function(sre.SemanticNode): boolean} pred Predicate to test against.
+ * @return {boolean} True if all elements of the given column satisfy pred.
+ * @private
+ */
+sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
+  var column = columns[index];
+  return column ?
+    column.every(function(cell) {return pred(cell.childNodes[0]);}) :
+    false;
 };
