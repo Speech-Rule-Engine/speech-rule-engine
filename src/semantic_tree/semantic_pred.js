@@ -330,11 +330,11 @@ sre.SemanticPred.isBinomial = function(table) {
  */
 sre.SemanticPred.isLimitBase = function(node) {
   return sre.SemanticPred.isAttribute('type', 'LARGEOP')(node) ||
-    sre.SemanticPred.isAttribute('type', 'LIMBOTH')(node) ||
+      sre.SemanticPred.isAttribute('type', 'LIMBOTH')(node) ||
       sre.SemanticPred.isAttribute('type', 'LIMLOWER')(node) ||
-    sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
-    (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
-     sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
+      sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
+      (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
+      sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
 };
 
 
