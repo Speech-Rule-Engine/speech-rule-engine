@@ -216,7 +216,6 @@ sre.SemanticMathml.prototype.table_ = function(node, children) {
   var newNode = this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.TABLE, this.parseNodes_(children), []);
   sre.SemanticProcessor.tableToMultiline(newNode);
-  sre.SemanticProcessor.classifyTable(newNode, node);
   return newNode;
 };
 

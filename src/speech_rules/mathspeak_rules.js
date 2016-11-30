@@ -1228,6 +1228,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'unit-divide', 'mathspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
+
+
+  // DIAGRAM: For testing.
+  defineRule(
+    'repeat-initial', 'mathspeak.default',
+    '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
+    'self::cell', 'count(children/*)=0',
+    '../../../parent::table[@role="equality"]'
+  );
+
 };
 
 

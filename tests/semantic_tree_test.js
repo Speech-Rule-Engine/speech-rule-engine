@@ -10735,3 +10735,21 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
   );
 };
 
+
+/**
+ * Labels in tables and multiline expressions.
+ */
+sre.SemanticTreeTest.prototype.testStreeLabels = function() {
+  this.executeTreeTest(
+      '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mn>2</mn></mtd></mlabeledtr></mtable></math>',
+      ''
+  );
+  this.executeTreeTest(
+      '<math><mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable></math>',
+      '');
+};
+

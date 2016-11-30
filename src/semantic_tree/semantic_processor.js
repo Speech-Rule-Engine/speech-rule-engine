@@ -1606,6 +1606,7 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
  */
 sre.SemanticProcessor.tableToMultiline = function(table) {
   if (!sre.SemanticPred.tableIsMultiline(table)) {
+    sre.SemanticProcessor.classifyTable(table);
     return;
   }
   table.type = sre.SemanticAttr.Type.MULTILINE;
@@ -1613,6 +1614,7 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
     sre.SemanticProcessor.rowToLine_(row, sre.SemanticAttr.Role.MULTILINE);
   }
   sre.SemanticProcessor.binomialForm_(table);
+  sre.SemanticProcessor.classifyMultiline(table);
 };
 
 
@@ -1861,7 +1863,7 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     var node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
     sre.SemanticProcessor.binomialForm_(node);
-    sre.SemanticProcessor.classifyTable(node);
+    sre.SemanticProcessor.classifyMultiline(node);
     return node;
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
@@ -2109,28 +2111,33 @@ sre.SemanticProcessor.propagateFencePointer_ = function(oldNode, newNode) {
 };
 
 
+// TODO:
+// - Refactor heuristic predicates
+// - Write some tests and then refactor!
+
+// * @param {Element=} opt_element The MathML element for the table in case we
+// *     need to look up information on attributes.
+
+/**
+ * Semantically classifies a multiline table in terms of equation system it
+ * might be.
+ * @param {!sre.SemanticNode} multiline A multiline expression.
+ */
+sre.SemanticProcessor.classifyMultiline = function(multiline) {
+  var firstRole = multiline.childNodes[0].childNodes[0].role;
+  if (firstRole !== sre.SemanticAttr.Role.UNKNOWN &&
+      multiline.childNodes.every(function(x) {
+        return x.childNodes[0].role === firstRole;})) {
+    multiline.role = firstRole;
+  }
+};
+
+
 /**
  * Semantically classifies a table in terms of equation system it might be.
- * @param {!sre.SemanticNode} table The table, multiline or otherwise.
- * @param {Element=} opt_element The MathML element for the table in case we
- *     need to look up information on attributes.
+ * @param {!sre.SemanticNode} table The table node.
  */
-sre.SemanticProcessor.classifyTable = function(table, opt_element) {
-  // Eventually this should subsume the binomial classification as well!
-  // if (table.role !== sre.SemanticAttr.Role.UNKNOWN) {
-  //   return;
-  // }
-
-  // Classifies multiline.
-  if (table.type === sre.SemanticAttr.Type.MULTILINE) {
-    var firstRole = table.childNodes[0].childNodes[0].role;
-    if (firstRole !== sre.SemanticAttr.Role.UNKNOWN &&
-        table.childNodes.every(function(x) {
-          return x.childNodes[0].role === firstRole;})) {
-      table.role = firstRole;
-    }
-    return;
-  }
+sre.SemanticProcessor.classifyTable = function(table) {
   // Classifies real tables. Maybe keep the columns for later?
   var columns = sre.SemanticProcessor.computeColumns_(table);
   var isEquality = sre.SemanticPred.isAttribute('role', 'EQUALITY');
@@ -2145,17 +2152,49 @@ sre.SemanticProcessor.classifyTable = function(table, opt_element) {
       sre.SemanticPred.isAttribute(
         'type', 'EMPTY')(x.childNodes[x.childNodes.length - 1]);
   };
+  var equalityRelation = function(x) {
+    return isEquality(x) && sre.SemanticPred.isAttribute('type', 'RELATION')(x);
+  };
   // Simple equation tables for now.
   // For the time being we have no treatment for endpunct!
   // In many ways you would want to exclude full stops at the end of
   // expressions.
+  //
+  // TODO: Refactor!
   if ((columns.length === 3 &&
        sre.SemanticProcessor.testColumns_(columns, 1, isEquality)) ||
       (columns.length === 2 &&
-       (sre.SemanticProcessor.testColumns_(columns, 1, equalityLeftEmpty) ||
-        sre.SemanticProcessor.testColumns_(columns, 0, equalityRightEmpty)))) {
+       (sre.SemanticProcessor.testColumns_(
+         columns, 1,
+         function(x) {
+           return equalityLeftEmpty(x) || equalityRelation(x);
+         }) ||
+        sre.SemanticProcessor.testColumns_(
+          columns, 0,
+          function(x) {
+            console.log(equalityRelation(x));
+            console.log(equalityRightEmpty(x));
+            return equalityRelation(x) || equalityRightEmpty(x);
+          })))) {
     table.role = sre.SemanticAttr.Role.EQUALITY;
   }
+};
+
+
+/**
+ * Check for a particular end relations, i.e., either a sole relation symbols or
+ * the relation ends in an side.
+ * @param {!sre.SemanticNode} node The node.
+ * @param {!string} relation The relation to be tested.
+ * @param {boolean=} opt_right From the right side?
+ * @return {boolean} True if the node is an end relation.
+ * @private
+ */
+sre.SemanticProcessor.endRelation_ = function(node, relation, opt_right) {
+  var position = opt_right ? node.childNodes.length - 1 : 0;
+  return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
+    sre.SemanticPred.isAttribute('role', 'EQUALITY')(node) &&
+    sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
 };
 
 
