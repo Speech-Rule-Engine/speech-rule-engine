@@ -1116,6 +1116,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'empty-line', 'mathspeak.default',
       '[t] "Blank"', 'self::line', 'count(children/*)=0');
+  defineRule(
+      'empty-line-with-label', 'mathspeak.default',
+      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
+      '[t] "Blank"', 'self::line', 'count(children/*)=0');
 
   // Enclose
   defineRule(
