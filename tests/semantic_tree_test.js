@@ -10760,10 +10760,9 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
 
 
 /**
- * Labels in tables expressions.
+ * Labels in multiline expressions.
  */
 sre.SemanticTreeTest.prototype.testStreeLabelledLines = function() {
-  console.log('here we are!');
   this.brief = false;
   this.executeTreeTest(
       '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
@@ -11047,6 +11046,7 @@ sre.SemanticTreeTest.prototype.testStreeLabelledRows = function() {
 };
 
 
+// Classified tables
 /**
  * Multiline expressions with a single relation.
  */
