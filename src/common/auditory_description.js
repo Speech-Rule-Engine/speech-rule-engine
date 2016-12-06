@@ -202,29 +202,13 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
+  // (MOSS) Do with grammar annotation for numbers in mathspeak. 
   var engine = sre.Engine.getInstance();
   if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
   }
   var result = engine.evaluator(text, engine.dynamicCstr);
   return result || text;
-};
-
-
-/**
- * Applies a corrective string to the given description text.
- * @param {string} text The original description text.
- * @param {string} correction The correction string to be applied.
- * @return {string} The cleaned up string.
- * @private
- */
-sre.AuditoryDescription.processCorrections_ = function(text, correction) {
-  if (!correction || !text) {
-    return text;
-  }
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
 };
 
 
@@ -240,9 +224,10 @@ sre.AuditoryDescription.preprocessDescription_ = function(descr) {
     descr.annotation = '';
   }
   if (descr.preprocess) {
-    descr.text = sre.AuditoryDescription.processCorrections_(
-        sre.AuditoryDescription.preprocessString_(descr.text),
-        descr.correction);
+    descr.text = sre.Grammar.getInstance().processCorrections(
+      descr.correction,
+        sre.AuditoryDescription.preprocessString_(descr.text)
+    );
     descr.preprocess = false;
   }
 };

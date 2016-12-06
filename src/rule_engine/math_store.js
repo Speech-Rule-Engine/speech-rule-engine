@@ -266,8 +266,6 @@ sre.MathStore.prototype.evaluate_ = function(text) {
       {
         'text': text,
         'preprocess': true,
-        'correction':
-            sre.Grammar.getInstance().getParameter('remove') ||
-            ''
+        'correction': sre.Grammar.getInstance().getState()
       });
 };
