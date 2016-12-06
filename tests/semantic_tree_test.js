@@ -11705,6 +11705,98 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</row>' +
       '</children>' +
       '</table>');
+  // Center relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="13">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="2">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="7"/>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="equality" id="8">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Left relation.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="13">' +
+      '<children>' +
+      '<row role="table" id="7">' +
+      '<children>' +
+      '<cell role="table" id="4">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="equality" id="8">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
 };
 
 
@@ -11922,6 +12014,293 @@ sre.SemanticTreeTest.prototype.testStreeRelationMultilines = function() {
 /**
  * Table layout (non-equality) relation systems.
  */
-sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
-  
+sre.SemanticTreeTest.prototype.untestStreeRelationTables = function() {
+  // Right Relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>&#x2264;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="inequality" id="17">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="inequality" id="6">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="3">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="inequality" id="14">\u2264' +
+      '<content>' +
+      '<relation role="inequality" id="11">\u2264</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+      );
+  // Center relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mo>&#x2265;</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="inequality" id="13">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="inequality" id="2">\u2265</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="7"/>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="inequality" id="8">\u2264</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Left relation.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo></mtd>' +
+      '<mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="inequality" id="13">' +
+      '<children>' +
+      '<row role="table" id="7">' +
+      '<children>' +
+      '<cell role="table" id="4">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="inequality" id="8">\u2264</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Right Relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>&#x2192;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="arrow" id="17">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="arrow" id="6">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="3">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="arrow" id="14">\u2192' +
+      '<content>' +
+      '<relation role="arrow" id="11">\u2192</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+      );
+  // Center relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mo>&#x2190;</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="arrow" id="13">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="2">\u2190</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="7"/>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="arrow" id="8">\u2192</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Left relation.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo></mtd>' +
+      '<mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="arrow" id="13">' +
+      '<children>' +
+      '<row role="table" id="7">' +
+      '<children>' +
+      '<cell role="table" id="4">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="arrow" id="8">\u2192</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
 };
