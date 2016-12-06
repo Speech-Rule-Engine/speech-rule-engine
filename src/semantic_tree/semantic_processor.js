@@ -2216,12 +2216,11 @@ sre.SemanticProcessor.classifyTable = function(table) {
  * @private
  */
 sre.SemanticProcessor.computeColumns_ = function(table) {
-  var columns = Array.
-        apply(null, Array(table.childNodes[0].childNodes.length)).
-        map(function() {return [];});
+  var columns = [];
   for (var i = 0, row; row = table.childNodes[i]; i++) {
     for (var j = 0, cell; cell = row.childNodes[j]; j++) {
-      columns[j].push(cell);
+      var column = columns[j];
+      column ? columns[j].push(cell) : (columns[j] = [cell]);
     }
   }
   return columns;
