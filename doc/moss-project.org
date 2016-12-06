@@ -166,3 +166,34 @@
 
 *** Depth and balancing might be interesting.
     We could effectively invert order of dynamic and static constraints. Not sure if that makes any sense.
+
+* Grammar structure
+
+** General idea
+
+*** Grammar elements are added and removed via personality annotations.
+
+*** Keywords are mapped to either a string or a boolean.
+
+*** XML element gets special grammar attribute with space separated list of keywords and strings, or boolean.
+
+*** This way we can check in the rules if a grammatical case is applicable.
+
+**** This only works for the next level. Needs to be repeated, if necessary.
+
+**** Alternative, always propagate the grammar attribute.
+
+*** Should work both for [n] and [m] nodes.
+
+** To subsume preprocess, correction, remove, sre_flag, font/hiddenfont, annotation:unit
+
+** Singleton structure similar to global parameters
+
+*** Holds mappings of grammar keywords to either strings or booleans.
+
+*** Equipped with mappings to correction functions for certain grammar keywords.
+
+** Dispatch in extra grammar keyword in personality annotations.
+
+*** Test with determinant simple and hidden fonts.
+
