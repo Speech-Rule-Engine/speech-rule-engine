@@ -2128,6 +2128,7 @@ sre.SemanticProcessor.classifyMultiline = function(multiline) {
   var index = 0;
   var length = multiline.childNodes.length;
   var line;
+  // TODO: Maybe combine this with column computation.
   while (index < length &&
          (!(line = multiline.childNodes[index]) || !line.childNodes.length)) {
     index++;
@@ -2153,39 +2154,37 @@ sre.SemanticProcessor.classifyMultiline = function(multiline) {
 sre.SemanticProcessor.classifyTable = function(table) {
   // Classifies real tables. Maybe keep the columns for later?
   var columns = sre.SemanticProcessor.computeColumns_(table);
-  var isEquality = sre.SemanticPred.isAttribute('role', 'EQUALITY');
-  var equalityLeftEmpty = function(x) {
-    return sre.SemanticPred.isAttribute('type', 'RELSEQ')(x) &&
-      isEquality(x) && x.childNodes.length &&
-      sre.SemanticPred.isAttribute('type', 'EMPTY')(x.childNodes[0]);
-  };
-  var equalityRightEmpty = function(x) {
-    return sre.SemanticPred.isAttribute('type', 'RELSEQ')(x) &&
-      isEquality(x) && x.childNodes.length &&
-      sre.SemanticPred.isAttribute(
-        'type', 'EMPTY')(x.childNodes[x.childNodes.length - 1]);
-  };
-  var equalityRelation = function(x) {
-    return isEquality(x) && sre.SemanticPred.isAttribute('type', 'RELATION')(x);
-  };
+  // console.log(columns);
   // Simple equation tables for now.
   // For the time being we have no treatment for endpunct!
   // In many ways you would want to exclude full stops at the end of
   // expressions.
   //
   // TODO: Refactor!
+  //
+  // Look for first non-empty. Only then test!
+  //
+  // For more complex systems, work with permutations/alternations of column
+  // indices.
+  //
   if ((columns.length === 3 &&
-       sre.SemanticProcessor.testColumns_(columns, 1, isEquality)) ||
+       sre.SemanticProcessor.testColumns_(
+         columns, 1,
+         function(x) {
+           return sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
+         })) ||
       (columns.length === 2 &&
        (sre.SemanticProcessor.testColumns_(
          columns, 1,
          function(x) {
-           return equalityLeftEmpty(x) || equalityRelation(x);
+           return sre.SemanticProcessor.isEndRelation_(x, 'EQUALITY') ||
+             sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
          }) ||
         sre.SemanticProcessor.testColumns_(
           columns, 0,
           function(x) {
-            return equalityRelation(x) || equalityRightEmpty(x);
+            return sre.SemanticProcessor.isEndRelation_(x, 'EQUALITY', true) ||
+              sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
           })))) {
     table.role = sre.SemanticAttr.Role.EQUALITY;
   }
@@ -2201,18 +2200,34 @@ sre.SemanticProcessor.classifyTable = function(table) {
  * @return {boolean} True if the node is an end relation.
  * @private
  */
-// sre.SemanticProcessor.endRelation_ = function(node, relation, opt_right) {
-//   var position = opt_right ? node.childNodes.length - 1 : 0;
-//   return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
-//     sre.SemanticPred.isAttribute('role', 'EQUALITY')(node) &&
-//     sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
-// };
+sre.SemanticProcessor.isEndRelation_ = function(node, relation, opt_right) {
+  var position = opt_right ? node.childNodes.length - 1 : 0;
+  return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
+    sre.SemanticPred.isAttribute('role', relation)(node) &&
+    sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
+};
 
 
 /**
- * Computes columns from a table.
+ * Check for a particular relations.
+ * @param {!sre.SemanticNode} node The node.
+ * @param {!string} relation The relation to be tested.
+ * @return {boolean} True if the node is an end relation.
+ * @private
+ */
+sre.SemanticProcessor.isPureRelation_ = function(node, relation) {
+  return sre.SemanticPred.isAttribute('type', 'RELATION')(node) &&
+    sre.SemanticPred.isAttribute('role', relation)(node);
+};
+
+
+/**
+ * Computes columns from a table. Note that the columns are reduced, i.e., empty
+ * cells are simply omitted. Consequently, rows are not preserved, i.e.,
+ * elements at the same index in different columns are not necessarily in the
+ * same row in the original table!
  * @param {!sre.SemanticNode} table The table node.
- * @return {!Array.<Array.<sre.SemanticNode>>} The columns.
+ * @return {!Array.<!Array.<!sre.SemanticNode>>} The columns.
  * @private
  */
 sre.SemanticProcessor.computeColumns_ = function(table) {
@@ -2229,9 +2244,9 @@ sre.SemanticProcessor.computeColumns_ = function(table) {
 
 /**
  * Test if all elements in the i-th column have the same property.
- * @param {!Array.<Array.<sre.SemanticNode>>} columns The columns.
+ * @param {!Array.<!Array.<!sre.SemanticNode>>} columns The columns.
  * @param {number} index The column to be tested.
- * @param {function(sre.SemanticNode): boolean} pred Predicate to test against.
+ * @param {function(!sre.SemanticNode): boolean} pred Predicate to test against.
  * @return {boolean} True if all elements of the given column satisfy pred.
  * @private
  */
@@ -2239,6 +2254,7 @@ sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
   var column = columns[index];
   return column ?
     column.every(function(cell) {
-      return cell.childNodes.length && pred(cell.childNodes[0]);}) :
+      return !cell.childNodes.length ||
+        pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));}) :
     false;
 };
