@@ -1626,13 +1626,14 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
  */
 sre.SemanticProcessor.rowToLine_ = function(row, opt_role) {
   var role = opt_role || sre.SemanticAttr.Role.UNKNOWN;
-  if (sre.SemanticPred.isAttribute('type', 'ROW')(row) &&
-      row.childNodes.length === 1 &&
-          sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
+  if (sre.SemanticPred.isAttribute('type', 'ROW')(row)) {
     row.type = sre.SemanticAttr.Type.LINE;
     row.role = role;
-    row.childNodes = row.childNodes[0].childNodes;
-    row.childNodes.forEach(function(x) {x.parent = row;});
+    if (row.childNodes.length === 1 &&
+        sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
+      row.childNodes = row.childNodes[0].childNodes;
+      row.childNodes.forEach(function(x) {x.parent = row;});
+    }
   }
 };
 
@@ -2124,10 +2125,22 @@ sre.SemanticProcessor.propagateFencePointer_ = function(oldNode, newNode) {
  * @param {!sre.SemanticNode} multiline A multiline expression.
  */
 sre.SemanticProcessor.classifyMultiline = function(multiline) {
-  var firstRole = multiline.childNodes[0].childNodes[0].role;
+  var index = 0;
+  var length = multiline.childNodes.length;
+  var line;
+  while (index < length &&
+         (!(line = multiline.childNodes[index]) || !line.childNodes.length)) {
+    index++;
+  }
+  if (index >= length) return;
+  var firstRole = line.childNodes[0].role;
   if (firstRole !== sre.SemanticAttr.Role.UNKNOWN &&
       multiline.childNodes.every(function(x) {
-        return x.childNodes[0].role === firstRole;})) {
+        var cell = x.childNodes[0];
+        return !cell || (cell.role === firstRole &&
+          (sre.SemanticPred.isAttribute('type', 'RELATION')(cell) ||
+           sre.SemanticPred.isAttribute('type', 'RELSEQ')(cell)));
+      })) {
     multiline.role = firstRole;
   }
 };
@@ -2143,12 +2156,12 @@ sre.SemanticProcessor.classifyTable = function(table) {
   var isEquality = sre.SemanticPred.isAttribute('role', 'EQUALITY');
   var equalityLeftEmpty = function(x) {
     return sre.SemanticPred.isAttribute('type', 'RELSEQ')(x) &&
-      isEquality(x) &&
+      isEquality(x) && x.childNodes.length &&
       sre.SemanticPred.isAttribute('type', 'EMPTY')(x.childNodes[0]);
   };
   var equalityRightEmpty = function(x) {
     return sre.SemanticPred.isAttribute('type', 'RELSEQ')(x) &&
-      isEquality(x) &&
+      isEquality(x) && x.childNodes.length &&
       sre.SemanticPred.isAttribute(
         'type', 'EMPTY')(x.childNodes[x.childNodes.length - 1]);
   };
@@ -2172,8 +2185,6 @@ sre.SemanticProcessor.classifyTable = function(table) {
         sre.SemanticProcessor.testColumns_(
           columns, 0,
           function(x) {
-            console.log(equalityRelation(x));
-            console.log(equalityRightEmpty(x));
             return equalityRelation(x) || equalityRightEmpty(x);
           })))) {
     table.role = sre.SemanticAttr.Role.EQUALITY;
@@ -2190,12 +2201,12 @@ sre.SemanticProcessor.classifyTable = function(table) {
  * @return {boolean} True if the node is an end relation.
  * @private
  */
-sre.SemanticProcessor.endRelation_ = function(node, relation, opt_right) {
-  var position = opt_right ? node.childNodes.length - 1 : 0;
-  return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
-    sre.SemanticPred.isAttribute('role', 'EQUALITY')(node) &&
-    sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
-};
+// sre.SemanticProcessor.endRelation_ = function(node, relation, opt_right) {
+//   var position = opt_right ? node.childNodes.length - 1 : 0;
+//   return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
+//     sre.SemanticPred.isAttribute('role', 'EQUALITY')(node) &&
+//     sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
+// };
 
 
 /**
@@ -2228,6 +2239,7 @@ sre.SemanticProcessor.computeColumns_ = function(table) {
 sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
   var column = columns[index];
   return column ?
-    column.every(function(cell) {return pred(cell.childNodes[0]);}) :
+    column.every(function(cell) {
+      return cell.childNodes.length && pred(cell.childNodes[0]);}) :
     false;
 };
