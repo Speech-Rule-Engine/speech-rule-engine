@@ -56,13 +56,6 @@ sre.SpeechRuleEngine = function() {
   this.activeStore_ = null;
 
   /**
-   * Object holding global parameters that can be set by the stores.
-   * @type {Object.<string, string>}
-   * @private
-   */
-  this.globalParameters_ = {};
-
-  /**
    * Caches speech strings by node id.
    * @type {Object.<string, !Array.<sre.AuditoryDescription>>}
    * @private
@@ -70,29 +63,6 @@ sre.SpeechRuleEngine = function() {
   this.cache_ = {};
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
-
-
-/**
- * Sets a global parameter in the speech rule engine's store.
- * @param {string} parameter The parameter name.
- * @param {string} value The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
-  this.globalParameters_[parameter] = value;
-};
-
-
-//TODO: (MOSS) WP 1.4
-// Extend to Context structure
-//
-/**
- * Returns the a global parameter if it exists.
- * @param {string} parameter The parameter name.
- * @return {string} The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
-  return this.globalParameters_[parameter];
-};
 
 
 /**

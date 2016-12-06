@@ -22,6 +22,7 @@ goog.provide('sre.MathmlStoreUtil');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.Engine');
+goog.require('sre.Grammar');
 goog.require('sre.MathUtil');
 goog.require('sre.XpathUtil');
 
@@ -176,7 +177,7 @@ sre.MathmlStoreUtil.hideFont = function(node) {
   if (node.hasAttribute('font')) {
     var value = node.getAttribute('font');
     node.removeAttribute('font');
-    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', value);
+    sre.Grammar.getInstance().setParameter('remove', value);
     node.setAttribute('hiddenfont', value);
   }
   return [node];
@@ -193,7 +194,7 @@ sre.MathmlStoreUtil.showFont = function(node) {
   if (node.hasAttribute('hiddenfont')) {
     var value = node.getAttribute('hiddenfont');
     node.removeAttribute('hiddenfont');
-    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', '');
+    sre.Grammar.getInstance().setParameter('remove', '');
     node.setAttribute('font', value);
   }
   return '';

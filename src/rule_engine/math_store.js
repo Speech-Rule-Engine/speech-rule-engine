@@ -267,7 +267,7 @@ sre.MathStore.prototype.evaluate_ = function(text) {
         'text': text,
         'preprocess': true,
         'correction':
-            sre.SpeechRuleEngine.getInstance().getGlobalParameter('remove') ||
+            sre.Grammar.getInstance().getParameter('remove') ||
             ''
       });
 };
