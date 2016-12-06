@@ -1231,12 +1231,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
 
   // DIAGRAM: For testing.
-  defineRule(
-    'repeat-initial', 'mathspeak.default',
-    '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
-    'self::cell', 'count(children/*)=0',
-    '../../../parent::table[@role="equality"]'
-  );
+  // defineRule(
+  //   'repeat-initial', 'mathspeak.default',
+  //   '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
+  //   'self::cell', 'count(children/*)=0',
+  //   '../../../parent::table[@role="equality"]'
+  // );
 
 };
 
