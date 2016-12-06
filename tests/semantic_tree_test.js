@@ -11048,9 +11048,9 @@ sre.SemanticTreeTest.prototype.testStreeLabelledRows = function() {
 
 // Classified tables
 /**
- * Multiline expressions with a single relation.
+ * Multiline equality systems.
  */
-sre.SemanticTreeTest.prototype.testStreeRelationMultilines = function() {
+sre.SemanticTreeTest.prototype.testStreeMultilineEqualities = function() {
   this.executeTreeTest(
       '<mfrac linethickness="0">' +
       '<mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow>' +
@@ -11382,9 +11382,9 @@ sre.SemanticTreeTest.prototype.testStreeRelationMultilines = function() {
 
 
 /**
- * Tables with a single relation.
+ * Table layout equality systems.
  */
-sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
+sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
       '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
@@ -11705,4 +11705,223 @@ sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
       '</row>' +
       '</children>' +
       '</table>');
+};
+
+
+/**
+ * Multiline (non-equality) relation systems.
+ */
+sre.SemanticTreeTest.prototype.testStreeRelationMultilines = function() {
+  this.executeTreeTest(
+      '<mfrac linethickness="0">' +
+      '<mrow><mn>2</mn><mo>&#x2264;</mo><mi>n</mi></mrow>' +
+      '<mrow><mi>k</mi><mo>&#x2265;</mo><mn>3</mn></mrow>' +
+      '</mfrac>',
+      '<multiline role="inequality" id="10">' +
+      '<children>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2264' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2264</relation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<identifier role="latinletter" font="italic" id="2">n</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="9">' +
+      '<children>' +
+      '<relseq role="inequality" id="7">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="5">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">k</identifier>' +
+      '<number role="integer" font="normal" id="6">3</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr/>' +
+      '<mtr><mtd><mi></mi><mo>&#x2265;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="inequality" id="14">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="6"/>' +
+      '<line role="multiline" id="13">' +
+      '<children>' +
+      '<relseq role="inequality" id="11">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="8">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="10"/>' +
+      '<identifier role="latinletter" font="italic" id="9">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2264;</mo></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="inequality" id="9">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relation role="inequality" id="6">\u2264</relation>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mfrac linethickness="0">' +
+      '<mrow><mn>2</mn><mo>&#x2192;</mo><mi>n</mi></mrow>' +
+      '<mrow><mi>k</mi><mo>&#x2190;</mo><mn>3</mn></mrow>' +
+      '</mfrac>',
+      '<multiline role="arrow" id="10">' +
+      '<children>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2192' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2192</relation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<identifier role="latinletter" font="italic" id="2">n</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="9">' +
+      '<children>' +
+      '<relseq role="arrow" id="7">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="5">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">k</identifier>' +
+      '<number role="integer" font="normal" id="6">3</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr/>' +
+      '<mtr><mtd><mi></mi><mo>&#x2190;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="arrow" id="14">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="6"/>' +
+      '<line role="multiline" id="13">' +
+      '<children>' +
+      '<relseq role="arrow" id="11">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="8">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="10"/>' +
+      '<identifier role="latinletter" font="italic" id="9">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2192;</mo></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="arrow" id="9">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relation role="arrow" id="6">\u2192</relation>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+};
+
+
+/**
+ * Table layout (non-equality) relation systems.
+ */
+sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
+  
 };
