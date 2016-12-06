@@ -11385,6 +11385,7 @@ sre.SemanticTreeTest.prototype.testStreeMultilineEqualities = function() {
  * Table layout equality systems.
  */
 sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
+  // Right Relation.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
       '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
@@ -11435,6 +11436,66 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</children>' +
       '</table>'
       );
+  // Empty cells.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd /></mtr>' +
+      '</mtable>',
+      '<table role="unknown" id="20">' +
+      // '<table role="equality" id="20">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="equality" id="14">=' +
+      '<content>' +
+      '<relation role="equality" id="11">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="19">' +
+      '<children>' +
+      '<cell role="table" id="17"/>' +
+      '<cell role="table" id="18"/>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Empty row.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
       '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
@@ -11486,7 +11547,8 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</row>' +
       '</children>' +
       '</table>'
-     );
+  );
+  // Singleton equation.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
       '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
@@ -11572,6 +11634,7 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</children>' +
       '</table>'
   );
+  // Row with label.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
       '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
@@ -11631,6 +11694,7 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</children>' +
       '</table>'
   );
+  // Single relation column. 
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
