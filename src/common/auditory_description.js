@@ -202,7 +202,9 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
-  // (MOSS) Do with grammar annotation for numbers in mathspeak. 
+  // 
+  // (MOSS) Do with grammar annotation for numbers in mathspeak or possibly in
+  // the actual evaluation unit, when all WPs are combined.
   var engine = sre.Engine.getInstance();
   if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;

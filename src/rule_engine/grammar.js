@@ -41,6 +41,11 @@ sre.Grammar = function() {
    * @private
    */
   this.corrections_ = {};
+
+  /**
+   * @type {Array.<Object.<string, string|boolean>>}
+   */
+  this.stateStack_ = [];
   
 };
 goog.addSingletonGetter(sre.Grammar);
@@ -57,6 +62,7 @@ sre.Grammar.ATTRIBUTE = 'grammar';
  */
 sre.Grammar.prototype.clear = function() {
   this.parameters_ = {};
+  this.stateStack_ = [];
 };
 
 
@@ -64,10 +70,13 @@ sre.Grammar.prototype.clear = function() {
  * Sets a grammar parameter.
  * @param {string} parameter The parameter name.
  * @param {boolean|string} value The parameter's value.
+ * @return {boolean|string} The old value if it existed.
  */
 sre.Grammar.prototype.setParameter = function(parameter, value) {
+  var oldValue = this.parameters_[parameter];
   value ? this.parameters_[parameter] = value :
     delete this.parameters_[parameter];
+  return oldValue;
 };
 
 
@@ -115,6 +124,30 @@ sre.Grammar.prototype.getState = function() {
 
 
 /**
+ * Saves the current state of the grammar object.
+ * @param {Object.<string, string|boolean>} assignment A list of key value
+ *     pairs.
+ */
+sre.Grammar.prototype.pushState = function(assignment) {
+  for (var key in assignment) {
+    assignment[key] = this.setParameter(key, assignment[key]);
+  };
+  this.stateStack_.push(assignment);
+};
+
+
+/**
+ * Saves the current state of the grammar object.
+ */
+sre.Grammar.prototype.popState = function() {
+  var assignment = this.stateStack_.pop();
+  for (var key in assignment) {
+    this.setParameter(key, assignment[key]);
+  }
+};
+
+
+/**
  * Adds grammatical annotations to an XML node.
  * @param {Node} node Adds a grammar value to the node.
  * @param {string} annotation The grammatical annotation.
@@ -141,6 +174,15 @@ sre.Grammar.prototype.removeGrammar = function(node, annotation, value) {
   }
 };
 
+
+sre.Grammar.prototype.setAttribute = function(node) {
+  if (node && node.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
+    var state = this.getState();
+    if (state) {
+      node.setAttribute(sre.Grammar.ATTRIBUTE, state); 
+    }
+  }
+};
 
 
 /**
@@ -174,7 +216,7 @@ sre.Grammar.prototype.processCorrections = function(state, text) {
  * @return {string} The cleaned up string.
  * @private
  */
-sre.Grammar.processCorrections_ = function(text, correction) {
+sre.Grammar.correctFont_ = function(text, correction) {
   if (!correction || !text) {
     return text;
   }
@@ -183,7 +225,7 @@ sre.Grammar.processCorrections_ = function(text, correction) {
   return text.replace(regExp, '');
 };
 
-sre.Grammar.getInstance().setCorrection('remove', sre.Grammar.processCorrections_);
+sre.Grammar.getInstance().setCorrection('remove', sre.Grammar.correctFont_);
 
 
 

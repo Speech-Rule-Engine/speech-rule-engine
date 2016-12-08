@@ -246,6 +246,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       return result;
     }
   }
+  sre.Grammar.getInstance().setAttribute(node);
   // TODO: (MOSS) Fix with order parsing.
   var dynamicCstr = engine.dynamicCstr ||
       this.activeStore_.parser.parse('default.default');
@@ -265,6 +266,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
     var content = component['content'] || '';
+    if (component['grammar']) {
+      this.processGrammar(node, component['grammar']);
+    }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
         var selected = this.activeStore_.applyQuery(node, content);
@@ -306,6 +310,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       if (component['preprocess']) {
         descrs[0]['preprocess'] = true;
       }
+    }
+    if (component['grammar']) {
+      sre.Grammar.getInstance().popState();
     }
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
@@ -524,4 +531,26 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
   engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
   engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
   engine.evaluator = goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+/**
+ * 
+ * @param {!Node} node
+ * @param {string} grammar
+ */
+sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
+  var components = grammar.split(':');
+  var assignment = {};
+  for (var i = 0, l = components.length; i < l; i++) {
+    var comp = components[i].split('=');
+    var key = comp[0];
+    if (comp[1]) {
+      var value = this.constructString(node, comp[1]);
+    } else {
+      value = key.match(/^!/) ? false : true;
+    }
+    assignment[key] = value;
+  }
+  sre.Grammar.getInstance().pushState(assignment);
 };

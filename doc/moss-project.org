@@ -197,3 +197,21 @@
 
 *** Test with determinant simple and hidden fonts.
 
+*** New grammar syntax in personality annotations:
+
+**** grammar:aa:bb="something":cc=@font:dd=CSFsomething:!ee
+     Note the overall separator is : as not to conflict with separators between
+     personality annotations.
+
+***** Adds boolean aa
+
+***** Adds bb with value something
+
+***** Adds cc with font name of the current node
+
+***** Adds dd with string computed by CSFsomething
+
+***** Removes ee 
+
+*** We might want to have special function for grammar checking instead of the grammar attribute
+    Check after integration with the Trie (WP1.3)

@@ -141,8 +141,6 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
-  addCSF('CSFdetMarkSimple', sre.MathspeakUtil.determinantMarkSimple);
-  addCSF('CSFdetUnMarkSimple', sre.MathspeakUtil.determinantUnMarkSimple);
 };
 
 
@@ -1028,23 +1026,21 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'determinant-simple', 'mathspeak.default',
-      '[t] CSFdetMarkSimple;' +
       '[t] "Start"; [t] count(children/*);  [t] "By";' +
       '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row");' +
-      ' [t] "EndDeterminant"; [t] CSFdetUnMarkSimple',
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
+      'grammar:simpleDet); [t] "EndDeterminant"',
       'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
   defineSpecialisedRule(
       'determinant-simple', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] CSFdetMarkSimple;' +
       '[t] count(children/*);  [t] "By";' +
       '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row");' +
-      ' [t] "EndDeterminant"; [t] CSFdetUnMarkSimple');
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
+      'grammar:simpleDet); [t] "EndDeterminant"');
   defineRule(
       'row-simple', 'mathspeak.default',
       '[m] children/*;',
-      'self::row', '@role="determinant"', '@sre_flag="simple"');
+      'self::row', '@role="determinant"', 'contains(@grammar, "simpleDet")');
 
   defineRule(
       'layout', 'mathspeak.default', '[t] "StartLayout"; ' +
