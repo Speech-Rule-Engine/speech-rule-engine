@@ -147,7 +147,7 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
       '[t] "string" (pitch:0.5, rate:0.5); [t] text()');
 
   defineRule('unit', 'default.default',
-      '[t] text() (annotation:unit, preprocess)',
+      '[t] text() (grammar:annotation="unit", preprocess)',
       'self::mathml:mi', '@class="MathML-Unit"');
 
   // Script elements.

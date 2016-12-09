@@ -290,7 +290,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       case sre.SpeechRule.Type.TEXT:
         selected = this.constructString(node, content);
         if (selected) {
-          descrs = [new sre.AuditoryDescription({text: selected})];
+          descrs = [new sre.AuditoryDescription(
+            {text: selected,
+             correction: sre.Grammar.getInstance().getState()})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:

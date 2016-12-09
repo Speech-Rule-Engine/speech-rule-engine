@@ -221,17 +221,14 @@ sre.AuditoryDescription.preprocessString_ = function(text) {
  * @private
  */
 sre.AuditoryDescription.preprocessDescription_ = function(descr) {
-  if (descr.annotation) {
-    descr.text += ':' + descr.annotation;
-    descr.annotation = '';
-  }
+  descr.text = sre.Grammar.getInstance().runPreprocessors(
+    descr.correction, descr.text);
   if (descr.preprocess) {
-    descr.text = sre.Grammar.getInstance().processCorrections(
-      descr.correction,
-        sre.AuditoryDescription.preprocessString_(descr.text)
-    );
+    descr.text = sre.AuditoryDescription.preprocessString_(descr.text);
     descr.preprocess = false;
   }
+  descr.text = sre.Grammar.getInstance().runCorrections(
+    descr.correction, descr.text);
 };
 
 

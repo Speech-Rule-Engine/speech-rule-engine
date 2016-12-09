@@ -43,6 +43,13 @@ sre.Grammar = function() {
   this.corrections_ = {};
 
   /**
+   * Maps grammatical annotations to preprocessor functions.
+   * @type {Object.<string, Function>}
+   * @private
+   */
+  this.preprocessors_ = {};
+
+  /**
    * @type {Array.<Object.<string, string|boolean>>}
    */
   this.stateStack_ = [];
@@ -97,6 +104,16 @@ sre.Grammar.prototype.getParameter = function(parameter) {
  */
 sre.Grammar.prototype.setCorrection = function(correction, func) {
   this.corrections_[correction] = func;
+};
+
+
+/**
+ * Sets a grammar preprocessor.
+ * @param {string} preprocessor The preprocessor name.
+ * @param {Function} func The preprocessor function.
+ */
+sre.Grammar.prototype.setPreprocessor = function(preprocessor, func) {
+  this.preprocessors_[preprocessor] = func;
 };
 
 
@@ -191,12 +208,35 @@ sre.Grammar.prototype.setAttribute = function(node) {
  * @param {string} text The original description text.
  * @return {string} The grammatically corrected string.
  */
-sre.Grammar.prototype.processCorrections = function(state, text) {
+sre.Grammar.prototype.runCorrections = function(state, text) {
+  return this.runProcessors_(state, text, this.corrections_);
+};
+
+
+/**
+ * Applies a grammatical preprocessors to a given description text.
+ * @param {string} state The saved state of the grammar.
+ * @param {string} text The original description text.
+ * @return {string} The grammatically corrected string.
+ */
+sre.Grammar.prototype.runPreprocessors = function(state, text) {
+  return this.runProcessors_(state, text, this.preprocessors_);
+};
+
+
+/**
+ * Applies a grammatical processors to a given description text.
+ * @param {string} state The saved state of the grammar.
+ * @param {string} text The original description text.
+ * @param {Object.<string, Function>} funcs Dictionary of processor functions.
+ * @return {string} The grammatically corrected string.
+ */
+sre.Grammar.prototype.runProcessors_ = function(state, text, funcs) {
   var corrections = state.split(' ');
   for (var i = 0, l = corrections.length; i < l; i++) {
     var corr = corrections[i].split(':');
     var key = corr[0];
-    var func = this.getCorrection(key);
+    var func = funcs[key];
     if (!func) {
       continue;
     }
@@ -207,7 +247,7 @@ sre.Grammar.prototype.processCorrections = function(state, text) {
 };
 
 
-// The following is temporary!
+// TODO: The following is temporary and needs a better place.
 //
 /**
  * Applies a corrective string to the given description text.
@@ -225,4 +265,10 @@ sre.Grammar.correctFont_ = function(text, correction) {
   return text.replace(regExp, '');
 };
 
+sre.Grammar.addAnnotation_ = function(text, annotation) {
+  return text + ':' + annotation;
+};
+
+
 sre.Grammar.getInstance().setCorrection('ignoreFont', sre.Grammar.correctFont_);
+sre.Grammar.getInstance().setPreprocessor('annotation', sre.Grammar.addAnnotation_);
