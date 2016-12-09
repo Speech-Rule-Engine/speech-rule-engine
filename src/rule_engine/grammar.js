@@ -225,7 +225,4 @@ sre.Grammar.correctFont_ = function(text, correction) {
   return text.replace(regExp, '');
 };
 
-sre.Grammar.getInstance().setCorrection('remove', sre.Grammar.correctFont_);
-
-
-
+sre.Grammar.getInstance().setCorrection('ignoreFont', sre.Grammar.correctFont_);

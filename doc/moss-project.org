@@ -176,16 +176,17 @@
 *** Keywords are mapped to either a string or a boolean.
 
 *** XML element gets special grammar attribute with space separated list of keywords and strings, or boolean.
-
+    
 *** This way we can check in the rules if a grammatical case is applicable.
 
 **** This only works for the next level. Needs to be repeated, if necessary.
-
+     
 **** Alternative, always propagate the grammar attribute.
 
 *** Should work both for [n] and [m] nodes.
 
 ** To subsume preprocess, correction, remove, sre_flag, font/hiddenfont, annotation:unit
+   Got rid of font, sre_flag, remove.
 
 ** Singleton structure similar to global parameters
 
