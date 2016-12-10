@@ -78,22 +78,13 @@ sre.Grammar.prototype.clear = function() {
  * @param {string} parameter The parameter name.
  * @param {boolean|string} value The parameter's value.
  * @return {boolean|string} The old value if it existed.
+ * @private
  */
-sre.Grammar.prototype.setParameter = function(parameter, value) {
+sre.Grammar.prototype.setParameter_ = function(parameter, value) {
   var oldValue = this.parameters_[parameter];
   value ? this.parameters_[parameter] = value :
     delete this.parameters_[parameter];
   return oldValue;
-};
-
-
-/**
- * Returns a grammar parameter if it exists.
- * @param {string} parameter The parameter name.
- * @return {boolean|string} The parameter's value.
- */
-sre.Grammar.prototype.getParameter = function(parameter) {
-  return this.parameters_[parameter];
 };
 
 
@@ -147,7 +138,7 @@ sre.Grammar.prototype.getState = function() {
  */
 sre.Grammar.prototype.pushState = function(assignment) {
   for (var key in assignment) {
-    assignment[key] = this.setParameter(key, assignment[key]);
+    assignment[key] = this.setParameter_(key, assignment[key]);
   };
   this.stateStack_.push(assignment);
 };
@@ -159,39 +150,15 @@ sre.Grammar.prototype.pushState = function(assignment) {
 sre.Grammar.prototype.popState = function() {
   var assignment = this.stateStack_.pop();
   for (var key in assignment) {
-    this.setParameter(key, assignment[key]);
+    this.setParameter_(key, assignment[key]);
   }
 };
 
 
 /**
- * Adds grammatical annotations to an XML node.
+ * Adds the grammatical state as attributed to an XML node.
  * @param {Node} node Adds a grammar value to the node.
- * @param {string} annotation The grammatical annotation.
- * @param {string|boolean} value The annotation value.
  */
-sre.Grammar.prototype.addGrammar = function(node, annotation, value) {
-  var grammar = node.getAttribute(sre.Grammar.ATTRIBUTE) || '';
-  var attr = typeof value === 'string' ? annotation + ':' + value : annotation;
-  if (!grammar.match(RegExp(' ' + attr))) {
-    node.setAttribute(sre.Grammar.ATTRIBUTE, grammar + ' ' + attr);
-  }
-};
-
-
-sre.Grammar.prototype.removeGrammar = function(node, annotation, value) {
-  var grammar = node.getAttribute(sre.Grammar.ATTRIBUTE) || '';
-  var attr = typeof value === 'string' ? annotation + ':' + value : annotation;
-  var match = grammar.match(RegExp(' ' + attr));
-  if (match) {
-    grammar = grammar.slice(0, match.index) +
-      grammar.slice(match.index + attr.length + 1);
-    grammar ? node.setAttribute(sre.Grammar.ATTRIBUTE, grammar) :
-      node.removeAttribute(sre.Grammar.ATTRIBUTE);
-  }
-};
-
-
 sre.Grammar.prototype.setAttribute = function(node) {
   if (node && node.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
     var state = this.getState();
@@ -265,6 +232,14 @@ sre.Grammar.correctFont_ = function(text, correction) {
   return text.replace(regExp, '');
 };
 
+
+/**
+ * Attaches an annotation to a description.
+ * @param {string} text The original description text.
+ * @param {string} annotation The annotation string to be applied.
+ * @return {string} The cleaned up string.
+ * @private
+ */
 sre.Grammar.addAnnotation_ = function(text, annotation) {
   return text + ':' + annotation;
 };
