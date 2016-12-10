@@ -202,7 +202,7 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
-  // 
+  //
   // (MOSS) Do with grammar annotation for numbers in mathspeak or possibly in
   // the actual evaluation unit, when all WPs are combined.
   var engine = sre.Engine.getInstance();
@@ -222,13 +222,13 @@ sre.AuditoryDescription.preprocessString_ = function(text) {
  */
 sre.AuditoryDescription.preprocessDescription_ = function(descr) {
   descr.text = sre.Grammar.getInstance().runPreprocessors(
-    descr.correction, descr.text);
+      descr.correction, descr.text);
   if (descr.preprocess) {
     descr.text = sre.AuditoryDescription.preprocessString_(descr.text);
     descr.preprocess = false;
   }
   descr.text = sre.Grammar.getInstance().runCorrections(
-    descr.correction, descr.text);
+      descr.correction, descr.text);
 };
 
 

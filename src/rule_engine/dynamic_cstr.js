@@ -124,16 +124,17 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 /**
  * Convenience method to create a standard dynamic constraint, that follows a
  * pre-prescribed order of the axes.
- * @param {...string} cstrs Dynamic constraint values for the Axes.
+ * @param {...string} var_args Dynamic constraint values for the Axes.
  * @return {!sre.DynamicCstr}
  */
-sre.DynamicCstr.create = function(cstrs) {
-  var axes = [sre.Engine.Axis.DOMAIN,
-              sre.Engine.Axis.STYLE,
-              sre.Engine.Axis.LANGUAGE,
-              sre.Engine.Axis.TOPIC,
-              sre.Engine.Axis.MODALITY
-             ];
+sre.DynamicCstr.create = function(var_args) {
+  var axes = [
+    sre.Engine.Axis.DOMAIN,
+    sre.Engine.Axis.STYLE,
+    sre.Engine.Axis.LANGUAGE,
+    sre.Engine.Axis.TOPIC,
+    sre.Engine.Axis.MODALITY
+  ];
   var dynamicCstr = {};
   var cstrList = Array.prototype.slice.call(arguments, 0);
   for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {

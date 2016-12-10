@@ -51,9 +51,10 @@ sre.Grammar = function() {
 
   /**
    * @type {Array.<Object.<string, string|boolean>>}
+   * @private
    */
   this.stateStack_ = [];
-  
+
 };
 goog.addSingletonGetter(sre.Grammar);
 
@@ -83,7 +84,7 @@ sre.Grammar.prototype.clear = function() {
 sre.Grammar.prototype.setParameter_ = function(parameter, value) {
   var oldValue = this.parameters_[parameter];
   value ? this.parameters_[parameter] = value :
-    delete this.parameters_[parameter];
+      delete this.parameters_[parameter];
   return oldValue;
 };
 
@@ -139,7 +140,7 @@ sre.Grammar.prototype.getState = function() {
 sre.Grammar.prototype.pushState = function(assignment) {
   for (var key in assignment) {
     assignment[key] = this.setParameter_(key, assignment[key]);
-  };
+  }
   this.stateStack_.push(assignment);
 };
 
@@ -163,7 +164,7 @@ sre.Grammar.prototype.setAttribute = function(node) {
   if (node && node.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
     var state = this.getState();
     if (state) {
-      node.setAttribute(sre.Grammar.ATTRIBUTE, state); 
+      node.setAttribute(sre.Grammar.ATTRIBUTE, state);
     }
   }
 };
@@ -197,6 +198,7 @@ sre.Grammar.prototype.runPreprocessors = function(state, text) {
  * @param {string} text The original description text.
  * @param {Object.<string, Function>} funcs Dictionary of processor functions.
  * @return {string} The grammatically corrected string.
+ * @private
  */
 sre.Grammar.prototype.runProcessors_ = function(state, text, funcs) {
   var corrections = state.split(' ');
@@ -245,5 +247,7 @@ sre.Grammar.addAnnotation_ = function(text, annotation) {
 };
 
 
-sre.Grammar.getInstance().setCorrection('ignoreFont', sre.Grammar.correctFont_);
-sre.Grammar.getInstance().setPreprocessor('annotation', sre.Grammar.addAnnotation_);
+sre.Grammar.getInstance().setCorrection('ignoreFont',
+                                        sre.Grammar.correctFont_);
+sre.Grammar.getInstance().setPreprocessor('annotation',
+                                          sre.Grammar.addAnnotation_);

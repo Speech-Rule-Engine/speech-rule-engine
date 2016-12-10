@@ -291,8 +291,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         selected = this.constructString(node, content);
         if (selected) {
           descrs = [new sre.AuditoryDescription(
-            {text: selected,
-             correction: sre.Grammar.getInstance().getState()})];
+              {text: selected,
+                correction: sre.Grammar.getInstance().getState()})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
@@ -536,10 +536,12 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
 };
 
 
+//TODO: This string processing should be moved into a refactored rule components
+//      module.
 /**
- * 
- * @param {!Node} node
- * @param {string} grammar
+ * Processes the grammar annotations of a rule.
+ * @param {!Node} node The node to which the rule is applied.
+ * @param {string} grammar The grammar annotations.
  */
 sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
   var components = grammar.split(':');

@@ -87,11 +87,11 @@ sre.MathSimpleStore.prototype.lookupRule = function(node, dynamic) {
             // TODO (MOSS): Remove after Trie introduction.
             // rule.precondition.constraints[0].slice(0,-1).slice(16);
           },
-        this));
+          this));
   return rules.length ?
-    rules.sort(function(r1, r2) {
-      return sre.Engine.getInstance().comparator.
-        compare(r1.dynamicCstr, r2.dynamicCstr);})[0] : null;
+      rules.sort(function(r1, r2) {
+        return sre.Engine.getInstance().comparator.
+           compare(r1.dynamicCstr, r2.dynamicCstr);})[0] : null;
 };
 
 
