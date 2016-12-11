@@ -2187,6 +2187,17 @@ sre.SemanticProcessor.classifyTable = function(table) {
               sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
           })))) {
     table.role = sre.SemanticAttr.Role.EQUALITY;
+    return;
+  }
+  // DIAGRAM: Added for temporary testing.
+  if (columns.length === 3 &&
+       sre.SemanticProcessor.testColumns_(
+         columns, 1,
+         function(x) {
+           return sre.SemanticProcessor.isPureRelation_(x, 'INEQUALITY') ||
+             sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
+         })) {
+    table.role = sre.SemanticAttr.Role.INEQUALITY;
   }
 };
 
