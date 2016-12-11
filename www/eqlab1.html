@@ -1,3 +1,5 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
 <script type="text/x-sre-config">
 {
 "json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps",
@@ -33,3 +35,49 @@ if(window.location.href.indexOf("mathjax.github.io/MathJax-a11y") > -1) {
 }
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+  <title></title>
+  <style>
+  p { margin-bottom: 2cm;}
+</style>
+</head>
+
+<body>
+
+<h1>Multiline Equations with Brief Labels</h1>
+
+<h3>Simple equation</h3>
+<p>
+\begin{eqnarray}
+32 - 9 x^3 + 20 &=& 3 - 1 \\
+9 - 27 + 20 &=& 2 \\
+9 - 7 &=& 2 \\
+2 &=& 2
+\end{eqnarray}
+</p>
+
+<h3>Inequality simplification</h3>
+<p>
+\begin{align*}
+2k+1& \geq 2k+2 \tag{Step 1}\\
+& \geq 2k+2 \tag{Step 2}\\
+& =2(k+1) \tag{Step 3}
+\end{align*}
+</p>
+
+<h3>Quadratic simplification</h3>
+<p>
+\begin{align*}
+0.15x & = 2 + 0.12x - 0.002x^2 \\
+\tag*{Bring terms to left} 0.002x^2 + 0.15x - 0.12x - 2 & = 0\\
+\tag*{Simplify} 0.002x^2 + 0.03x - 2 &= 0\\
+\tag*{Multiply by 500} x^2 + 15x - 1000 & = 0\\
+\tag*{Split 15x} x^2 -25x + 40x - 1000 & = 0\\
+\tag*{} x(x-25) + 40(x-25) & = 0\\
+\tag*{} (x+40)(x-25) & = 0\\
+x & = -40 \mbox{ or } 25\\
+\end{align*}
+</p>
+
+<hr>
+<address></address>
+</body> </html>

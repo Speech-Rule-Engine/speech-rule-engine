@@ -44,7 +44,7 @@ MathJax.Hub.Register.StartupHook('Sre Ready', function() {
       foreground: 'black',
       speech: true,
       generation: 'lazy',
-      subtitle: true,
+      subtitle: false,
       ruleset: 'mathspeak-default'
     },
     eagerComplexity: 80,

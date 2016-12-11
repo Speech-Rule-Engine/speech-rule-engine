@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<script type="text/x-sre-config">
+{
+"json": "https://cdn.mathjax.org/mathjax/contrib/a11y/mathmaps",
+}
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[a11y]/explorer.js","[a11y]/auto-collapse.js", "[a11y]/accessibility-menu.js"],
+  MMLorHTML: {MSIE: "HTML"},
+AssistiveMML: {disabled: true},
+TeX: { equationNumbers: {autoNumber: "AMS"} },
+"fast-preview": {disabled: true},
+  tex2jax: {
+    inlineMath: [['$','$'],['\\(','\\)']]
+},
+'explorer': {
+speech: true,
+subtitle: true,
+generation: 'lazy',
+ruleset: 'chromevox-short',
+walker: 'syntactic'
+},
+menuSettings: {
+'renderer': "CommonHTML",
+    'explorer': true
+  }
+});
+MathJax.Ajax.config.path["a11y"] = "scripts0";
+MathJax.Ajax.config.path["SRE"] = "scripts0";
+if(window.location.href.indexOf("mathjax.github.io/MathJax-a11y") > -1) {
+ MathJax.Ajax.config.path["SRE"] = "scripts0";
+}
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+  <title></title>
+  <style>
+  p { margin-bottom: 2cm;}
+</style>
+</head>
+
+<body>
+
+<h1>Equation systems with simplified speech</h1>
+
+<h3>Simple equation</h3>
+<p>
+\[
+\begin{eqnarray*}
+\frac{x}{2} - 4 & = & 3 \\
+{x} - 8 & = & 3 \\
+{x} & = & 14 \\
+\end{eqnarray*}
+\]
+</p>
+
+
+<h3>Simple double sided inequalities</h3>
+<p>
+\begin{array}{rcccl}
+2 &< &3x + 5 &\leq& 17\\
+-3 &<& 3x &\leq& 12\\
+-1 &<& x &\leq& 4\\
+\end{array}
+</p>
+
+
+<h3>Quadratic simplification</h3>
+<p>
+\begin{aligned}
+y &= x^2 -9x + 20\\
+& = (x-4)(x-5)
+\end{aligned}
+</p>
+
+
+<h3>Binomial simplification</h3>
+<p>
+\begin{aligned}
+(x+y)^{3}&=(x+y)(x+y)(x+y)\\
+&=xxx+xxy+xyx+{ {xyy}}+yxx+{ {yxy}}+{ {yyx}}+yyy\\
+&=x^{3}+3x^{2}y+{ {3xy^{2}}}+y^{3}
+\end{aligned}
+</p>
+
+
+<h3>H&ouml;lder's inequality</h3>
+<p>
+\begin{aligned}\mathbb {P} \left(S_{n}-\mathrm {E} \left[S_{n}\right]\geq t\right)&=\mathbb {P} \left(e^{s(S_{n}-\mathrm {E} \left[S_{n}\right])}\geq e^{st}\right)\\&\leq e^{-st}\mathrm {E} \left[e^{s(S_{n}-\mathrm {E} \left[S_{n}\right])}\right]\\&=e^{-st}\prod _{i=1}^{n}\mathrm {E} \left[e^{s(X_{i}-\mathrm {E} \left[X_{i}\right])}\right]\\&\leq e^{-st}\prod _{i=1}^{n}e^{\frac {s^{2}(b_{i}-a_{i})^{2}}{8}}\\&=\exp \left(-st+{\tfrac {1}{8}}s^{2}\sum _{i=1}^{n}(b_{i}-a_{i})^{2}\right)\end{aligned}
+</p>
+
+
+<hr>
+<address></address>
+</body> </html>
