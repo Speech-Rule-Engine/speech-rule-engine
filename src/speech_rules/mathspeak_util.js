@@ -942,3 +942,16 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
   var postfix = notify(breakCstrs.join(' | '));
   return [prefix, middle, postfix].join(' and ');
 };
+
+
+// DIAGRAM: Temporary for testing: If we keep it make more robust!
+/**
+ * Removes parentheses around a label.
+ * @param {!Node} node The label to be processed.
+ * @return {string} The text of the label.
+ */
+sre.MathspeakUtil.removeParens = function(node) {
+  var content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
+  console.log(content);
+  return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
+};

@@ -143,6 +143,9 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
   addCSF('CSFdetMarkSimple', sre.MathspeakUtil.determinantMarkSimple);
   addCSF('CSFdetUnMarkSimple', sre.MathspeakUtil.determinantUnMarkSimple);
+
+  // DIAGRAM: Temporary for testing:
+  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
 
 
@@ -1011,6 +1014,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
+  // DIAGRAM: Next three rules are temporary for testing:
+  defineRule(
+      'row-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content');
+  defineSpecialisedRule(
+      'row-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'row-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'mathspeak.default',
       '[t] "Blank"', 'self::row', 'count(children/*)=0');
@@ -1113,6 +1129,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
+  // DIAGRAM: Next three rules are temporary for testing:
+  defineRule(
+      'line-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/*',
+      'self::line', 'content');
+  defineSpecialisedRule(
+      'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'line-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/*',
+      'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
       '[t] "Blank"', 'self::line', 'count(children/*)=0');
