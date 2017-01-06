@@ -130,24 +130,29 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 };
 
 
-// TODO: (MOSS) Replace this.
 /**
- * Convenience method to create a standard dynamic constraint. This should be
- * phased out.
- * @param {string} domain Domain annotation.
- * @param {string} style Style annotation.
+ * Convenience method to create a standard dynamic constraint, that follows a
+ * pre-prescribed order of the axes.
+ * @param {...string} cstrs Dynamic constraint values for the Axes.
  * @return {!sre.DynamicCstr}
  */
-sre.DynamicCstr.create = function(domain, style) {
+sre.DynamicCstr.create = function(cstrs) {
+  var axes = [sre.Engine.Axis.DOMAIN,
+              sre.Engine.Axis.STYLE,
+              sre.Engine.Axis.LANGUAGE,
+              sre.Engine.Axis.TOPIC,
+              sre.Engine.Axis.MODALITY
+             ];
   var dynamicCstr = {};
-  dynamicCstr[sre.Engine.Axis.DOMAIN] = domain;
-  dynamicCstr[sre.Engine.Axis.STYLE] = style;
+  var cstrList = Array.prototype.slice.call(arguments, 0);
+  for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
+    dynamicCstr[axes[i]] = cstrList[i];
+  }
   return new sre.DynamicCstr(dynamicCstr);
 };
 
 
-//TODO: (MOSS) WP 1.1
-// Revisit
+//TODO: (MOSS) Revisit after ClearSpeak preference introduction.
 //
 /**
  * Ordering of dynamic constraint attributes.
