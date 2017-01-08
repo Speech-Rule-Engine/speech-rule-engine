@@ -112,7 +112,7 @@ sre.SpeechRule.Type.toString = function(speechType) {
 
 /**
  * Defines a component within a speech rule.
- * @param {{type: sre.SpeechRule.Type, content: string}} kwargs The input
+ * @param {{type: sre.SpeechRule.Type, content: !string}} kwargs The input
  * component in JSON format.
  * @constructor
  */
@@ -122,6 +122,8 @@ sre.SpeechRule.Component = function(kwargs) {
 
   /** @type {string} */
   this.content = kwargs.content;
+
+  this.attributes = {};
 };
 
 
@@ -202,9 +204,9 @@ sre.SpeechRule.Component.prototype.toString = function() {
 sre.SpeechRule.Component.prototype.addAttribute = function(attr) {
   var colon = attr.indexOf(':');
   if (colon == -1) {
-    this[attr.trim()] = 'true';
+    this.attributes[attr.trim()] = 'true';
   } else {
-    this[attr.substring(0, colon).trim()] = attr.slice(colon + 1).trim();
+    this.attributes[attr.substring(0, colon).trim()] = attr.slice(colon + 1).trim();
     // TODO (MOSS) Here we need to handle grammar attributes.
   }
 };
@@ -232,10 +234,8 @@ sre.SpeechRule.Component.prototype.addAttributes = function(attrs) {
  */
 sre.SpeechRule.Component.prototype.getAttributes = function() {
   var attribs = [];
-  for (var key in this) {
-    if (key != 'content' && key != 'type' && typeof(this[key]) != 'function') {
-      attribs.push(key + ':' + this[key]);
-    }
+  for (var key in this.attributes) {
+      attribs.push(key + ':' + this.attributes[key]);
   }
   return attribs;
 };

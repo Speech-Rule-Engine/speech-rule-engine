@@ -262,9 +262,10 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   result = [];
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
-    var content = component['content'] || '';
-    if (component['grammar']) {
-      this.processGrammar(node, component['grammar']);
+    var content = component.content || '';
+    var attributes = component.attributes;
+    if (attributes['grammar']) {
+      this.processGrammar(node, attributes['grammar']);
     }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
@@ -278,10 +279,10 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         if (selected.length > 0) {
           descrs = this.evaluateNodeList_(
               selected,
-              component['sepFunc'],
-              this.constructString(node, component['separator']),
-              component['ctxtFunc'],
-              this.constructString(node, component['context']));
+              attributes['sepFunc'],
+              this.constructString(node, attributes['separator']),
+              attributes['ctxtFunc'],
+              this.constructString(node, attributes['context']));
         }
         break;
       case sre.SpeechRule.Type.TEXT:
@@ -298,23 +299,23 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     }
     // Adding overall context and annotation if they exist.
     if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
-      if (component['context']) {
+      if (attributes['context']) {
         descrs[0]['context'] =
-            this.constructString(node, component['context']) +
+            this.constructString(node, attributes['context']) +
             (descrs[0]['context'] || '');
       }
-      if (component['annotation']) {
-        descrs[0]['annotation'] = component['annotation'];
+      if (attributes['annotation']) {
+        descrs[0]['annotation'] = attributes['annotation'];
       }
-      if (component['preprocess']) {
+      if (attributes['preprocess']) {
         descrs[0]['preprocess'] = true;
       }
     }
-    if (component['grammar']) {
+    if (attributes['grammar']) {
       sre.Grammar.getInstance().popState();
     }
     // Adding personality to the auditory descriptions.
-    result = result.concat(this.addPersonality_(descrs, component));
+    result = result.concat(this.addPersonality_(descrs, attributes));
   }
   this.pushCache_(node, result);
   return result;
