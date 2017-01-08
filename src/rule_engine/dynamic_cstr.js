@@ -74,7 +74,7 @@ sre.DynamicCstr.prototype.getComponents = function() {
 /**
  * @return {!sre.DynamicCstr.Order} The components of the constraint.
  */
-sre.DynamicCstr.prototype.getKeys = function() {
+sre.DynamicCstr.prototype.getAxes = function() {
   return this.order_;
 };
 
@@ -90,14 +90,23 @@ sre.DynamicCstr.prototype.getValue = function(key) {
 
 
 /**
- * @override
+ * Convenience method to return the ordered list of constraint values.
+ * @return {Array.<string>} Ordered list of constraint values.
  */
-sre.DynamicCstr.prototype.toString = function() {
+sre.DynamicCstr.prototype.getValues = function() {
   var cstrStrings = [];
   this.order_.forEach(goog.bind(function(key) {
     cstrStrings.push(this.getValue(key));
   }, this));
-  return cstrStrings.join('.');
+  return cstrStrings;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.prototype.toString = function() {
+  return this.getValues().join('.');
 };
 
 
@@ -107,7 +116,7 @@ sre.DynamicCstr.prototype.toString = function() {
  * @return {boolean} True if the preconditions apply to the node.
  */
 sre.DynamicCstr.prototype.equal = function(cstr) {
-  var keys1 = cstr.getKeys();
+  var keys1 = cstr.getAxes();
   if (this.order_.length !== keys1.length) {
     return false;
   }
@@ -290,8 +299,8 @@ sre.DynamicCstr.DefaultComparator.prototype.setReference = function(cstr) {
  * @override
  */
 sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
-  var keys1 = cstr.getKeys();
-  return keys1.length === this.reference_.getKeys().length &&
+  var keys1 = cstr.getAxes();
+  return keys1.length === this.reference_.getAxes().length &&
       keys1.every(
       goog.bind(function(key) {
         return cstr.getValue(key) == this.reference_.getValue(key) ||
