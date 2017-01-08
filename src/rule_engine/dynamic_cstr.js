@@ -21,24 +21,23 @@
  */
 
 goog.provide('sre.DynamicCstr');
+goog.provide('sre.DynamicCstr.Axis');
 goog.provide('sre.DynamicCstr.Comparator');
 goog.provide('sre.DynamicCstr.Parser');
 goog.provide('sre.DynamicProperties');
-
-goog.require('sre.Engine');
 
 
 
 /**
  * @constructor
- * @param {!Object.<sre.Engine.Axis, !Array.<string>>} properties The property
+ * @param {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} properties The property
  *     mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
  */
 sre.DynamicProperties = function(properties, opt_order) {
 
   /**
-   * @type {!Object.<sre.Engine.Axis, !Array.<string>>}
+   * @type {!Object.<sre.DynamicCstr.Axis, !Array.<string>>}
    * @private
    */
   this.properties_ = properties;
@@ -53,7 +52,7 @@ sre.DynamicProperties = function(properties, opt_order) {
 
 
 /**
- * @return {!Object.<sre.Engine.Axis, Array.<string>>} The components of the
+ * @return {!Object.<sre.DynamicCstr.Axis, Array.<string>>} The components of the
  *     constraint.
  */
 sre.DynamicProperties.prototype.getProperties = function() {
@@ -80,7 +79,7 @@ sre.DynamicProperties.prototype.getKeys = function() {
 
 /**
  * Returns the value of the constraint for a particular attribute key.
- * @param {!sre.Engine.Axis} key The attribute key.
+ * @param {!sre.DynamicCstr.Axis} key The attribute key.
  * @return {Array.<string>} The component value of the constraint.
  */
 sre.DynamicProperties.prototype.getProperty = function(key) {
@@ -105,21 +104,23 @@ sre.DynamicProperties.prototype.toString = function() {
  * Dynamic constraints are a means to specialize rules that can be changed
  * dynamically by the user, for example by choosing different styles, etc.
  * @constructor
- * @param {!Object.<sre.Engine.Axis, string>} cstr The constraint mapping.
+ * @param {!Object.<sre.DynamicCstr.Axis, string>} cstr The constraint mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
  * @extends {sre.DynamicProperties}
  */
 sre.DynamicCstr = function(cstr, opt_order) {
 
   /**
-   * @type {!Object.<sre.Engine.Axis, string>}
+   * @type {!Object.<sre.DynamicCstr.Axis, string>}
    * @private
    */
   this.components_ = cstr;
 
   var properties = {};
   for (var key in cstr) {
-    properties[key] = [cstr[key]];
+    var value = cstr[key];
+    properties[key] = [value];
+    sre.DynamicCstr.Values_.getInstance().add(key, value);
   }
 
   sre.DynamicCstr.base(this, 'constructor', properties, opt_order);
@@ -128,7 +129,7 @@ goog.inherits(sre.DynamicCstr, sre.DynamicProperties);
 
 
 /**
- * @return {!Object.<sre.Engine.Axis, string>} The components of the
+ * @return {!Object.<sre.DynamicCstr.Axis, string>} The components of the
  *     constraint.
  */
 sre.DynamicCstr.prototype.getComponents = function() {
@@ -138,7 +139,7 @@ sre.DynamicCstr.prototype.getComponents = function() {
 
 /**
  * Returns the value of the constraint for a particular attribute key.
- * @param {!sre.Engine.Axis} key The attribute key.
+ * @param {!sre.DynamicCstr.Axis} key The attribute key.
  * @return {string} The component value of the constraint.
  */
 sre.DynamicCstr.prototype.getValue = function(key) {
@@ -179,8 +180,86 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 
 
 /**
+ * Attributes for dynamic constraints.
+ * We define one default attribute as style. Speech rule stores can add other
+ * attributes later.
+ * @enum {string}
+ */
+sre.DynamicCstr.Axis = {
+  DOMAIN: 'domain',
+  STYLE: 'style',
+  LANGUAGE: 'language',
+  TOPIC: 'topic',
+  MODALITY: 'modality'
+};
+
+
+
+/**
+ * @constructor
+ * @private
+ */
+sre.DynamicCstr.Values_ = function() {
+
+  /**
+   * @type {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>} 
+   */
+  this.axisToValues = sre.DynamicCstr.Values_.makeAxisValueObject_();
+  
+};
+goog.addSingletonGetter(sre.DynamicCstr.Values_);
+
+
+/**
+ * Registers a constraint value for a given axis
+ * @param {sre.DynamicCstr.Axis} axis The axis.
+ * @param {string} value The value for the axis.
+ */
+sre.DynamicCstr.Values_.prototype.add = function(axis, value) {
+  this.axisToValues[axis][value] = true;
+};
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.DynamicCstr.Values_.prototype.get = function() {
+  var result = {};
+  var axisToValues = sre.DynamicCstr.Values_.getInstance().axisToValues;
+  for (var key in axisToValues) {
+    result[key] = Object.keys(axisToValues[key]);
+  }
+  return result;
+};
+
+/**
+ * Initialises an object for collecting all values per axis.
+ * @return {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>} The
+ *     nested object structure.
+ * @private
+ */
+sre.DynamicCstr.Values_.makeAxisValueObject_ = function() {
+  var result = {};
+  for (var axis in sre.DynamicCstr.Axis) {
+    result[sre.DynamicCstr.Axis[axis]] = {};
+  }
+  return result;
+};
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.DynamicCstr.getAxisValues = function() {
+  return sre.DynamicCstr.Values_.getInstance().get();
+};
+
+
+/**
  * Ordering of dynamic constraint attributes.
- * @typedef {!Array.<sre.Engine.Axis>}
+ * @typedef {!Array.<sre.DynamicCstr.Axis>}
  */
 sre.DynamicCstr.Order;
 
@@ -189,11 +268,11 @@ sre.DynamicCstr.Order;
  * @type {!sre.DynamicCstr.Order}
  */
 sre.DynamicCstr.DEFAULT_ORDER = [
-  sre.Engine.Axis.DOMAIN,
-  sre.Engine.Axis.STYLE,
-  sre.Engine.Axis.LANGUAGE,
-  sre.Engine.Axis.TOPIC,
-  sre.Engine.Axis.MODALITY
+  sre.DynamicCstr.Axis.DOMAIN,
+  sre.DynamicCstr.Axis.STYLE,
+  sre.DynamicCstr.Axis.LANGUAGE,
+  sre.DynamicCstr.Axis.TOPIC,
+  sre.DynamicCstr.Axis.MODALITY
 ];
 
 
@@ -229,7 +308,6 @@ sre.DynamicCstr.Parser.prototype.parse = function(str) {
   for (var i = 0, key; key = this.order_[i], order.length; i++) {
     var value = order.shift();
     cstr[key] = value;
-    sre.Engine.getInstance().axisValues[key][value] = true;
   }
   return new sre.DynamicCstr(cstr, this.order_.slice(0, i));
 };

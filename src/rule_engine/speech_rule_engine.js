@@ -551,7 +551,5 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     return;
   }
   var engine = sre.Engine.getInstance();
-  engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
-  engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
   engine.evaluator = goog.bind(maps.store.lookupString, maps.store);
 };
