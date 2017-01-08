@@ -277,6 +277,12 @@ sre.DynamicCstr.DEFAULT_ORDER = [
 
 
 /**
+ * @type {string}
+ */
+sre.DynamicCstr.DEFAULT_VALUE = 'default';
+
+
+/**
  * A parser for dynamic constraint representations.
  * @constructor
  * @param {!sre.DynamicCstr.Order} order The order of attributes in the
@@ -378,11 +384,8 @@ sre.DynamicCstr.DefaultComparator = function(cstr, opt_props) {
    * @type {sre.DynamicProperties}
    * @private
    */
-  this.fallback_ = opt_props ||
-    new sre.DynamicProperties(
-      cstr.getProperties(),
-      Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
-        map(function() { return ['default']; }));
+  this.fallback_ = opt_props || 
+    new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
   
   /**
    * @type {sre.DynamicCstr.Order}
@@ -501,6 +504,24 @@ sre.DynamicCstr.create = function(cstrs) {
     dynamicCstr[axes[i]] = cstrList[i];
   }
   return new sre.DynamicCstr(dynamicCstr);
+};
+
+
+/**
+ * @return {!sre.DynamicCstr} A default constraint of maximal order.
+ */
+sre.DynamicCstr.defaultCstr = function() {
+  return sre.DynamicCstr.create.apply(null, sre.DynamicCstr.defaults_());
+};
+
+
+/**
+ * @return {!Array.<!string>} List of default value of maximal order.
+ * @private
+ */
+sre.DynamicCstr.defaults_ = function() {
+  return Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
+    map(function() { return sre.DynamicCstr.DEFAULT_VALUE; });
 };
 
 

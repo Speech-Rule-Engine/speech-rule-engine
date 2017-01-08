@@ -47,14 +47,14 @@ sre.Engine = function() {
   this.alternativeHost = null;
 
   /**
-   * @type {function(string, sre.DynamicCstr): string}
+   * @type {function(string, !sre.DynamicCstr): string}
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 
   /**
-   * @type {sre.DynamicCstr}
+   * @type {!sre.DynamicCstr}
    */
-  this.dynamicCstr = null;
+  this.dynamicCstr = sre.DynamicCstr.defaultCstr();
 
   /**
    * @type {sre.DynamicCstr.Comparator}
