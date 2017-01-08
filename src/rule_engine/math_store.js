@@ -38,21 +38,6 @@ goog.require('sre.Trie');
 sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
-  //TODO: (MOSS) Revisit after Clearspeak implementation.
-  //
-  /**
-   * @override
-   */
-  this.parseOrder = [
-    sre.Engine.Axis.DOMAIN,
-    sre.Engine.Axis.STYLE
-  ];
-
-  /**
-   * @override
-   */
-  this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
-
   /**
    * @type {boolean}
    */

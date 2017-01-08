@@ -276,10 +276,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       return result;
     }
   }
-  // TODO: (MOSS) Fix with order parsing.
-  var dynamicCstr = engine.dynamicCstr ||
-      this.activeStore_.parser.parse('default.default');
-  var rule = this.activeStore_.lookupRule(node, dynamicCstr);
+  var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
     result = this.activeStore_.evaluateDefault(node);
@@ -550,8 +547,6 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 500);
     return;
   }
-  var engine = sre.Engine.getInstance();
-  engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
-  engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
-  engine.evaluator = goog.bind(maps.store.lookupString, maps.store);
+  sre.Engine.getInstance().evaluator =
+    goog.bind(maps.store.lookupString, maps.store);
 };
