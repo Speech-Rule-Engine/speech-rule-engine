@@ -100,7 +100,7 @@ sre.Cli.prototype.commandLine = function() {
       var output = '';
       for (var axis in values) {
         output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
-          values[axis].slice().sort().join(', ') + '\n';
+            values[axis].slice().sort().join(', ') + '\n';
       }
       console.log(output);
       sre.SystemExternal.process.exit(0);

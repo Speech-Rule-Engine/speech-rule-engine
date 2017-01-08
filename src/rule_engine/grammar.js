@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Supported by MOSS grant.
+// Supported by the Mozilla Foundation.
 
 /**
  * @fileoverview A data structure to maintain grammatical context.

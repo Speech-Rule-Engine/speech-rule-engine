@@ -30,8 +30,8 @@ goog.provide('sre.DynamicProperties');
 
 /**
  * @constructor
- * @param {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} properties The property
- *     mapping.
+ * @param {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} properties The
+ *     property mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
  */
 sre.DynamicProperties = function(properties, opt_order) {
@@ -41,7 +41,7 @@ sre.DynamicProperties = function(properties, opt_order) {
    * @private
    */
   this.properties_ = properties;
-  
+
   /**
    * @type {!sre.DynamicCstr.Order}
    * @private
@@ -52,8 +52,8 @@ sre.DynamicProperties = function(properties, opt_order) {
 
 
 /**
- * @return {!Object.<sre.DynamicCstr.Axis, Array.<string>>} The components of the
- *     constraint.
+ * @return {!Object.<sre.DynamicCstr.Axis, Array.<string>>} The components of
+ *     the constraint.
  */
 sre.DynamicProperties.prototype.getProperties = function() {
   return this.properties_;
@@ -211,10 +211,10 @@ sre.DynamicCstr.Axis = {
 sre.DynamicCstr.Values_ = function() {
 
   /**
-   * @type {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>} 
+   * @type {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>}
    */
   this.axisToValues = sre.DynamicCstr.Values_.makeAxisValueObject_();
-  
+
 };
 goog.addSingletonGetter(sre.DynamicCstr.Values_);
 
@@ -241,6 +241,7 @@ sre.DynamicCstr.Values_.prototype.get = function() {
   }
   return result;
 };
+
 
 /**
  * Initialises an object for collecting all values per axis.
@@ -289,6 +290,7 @@ sre.DynamicCstr.DEFAULT_ORDER = [
  * @type {string}
  */
 sre.DynamicCstr.DEFAULT_VALUE = 'default';
+
 
 
 /**
@@ -347,7 +349,8 @@ sre.DynamicCstr.Comparator.prototype.getReference = function() { };
  * @param {sre.DynamicProperties=} opt_props An optional properties element
  *    for matching.
  */
-sre.DynamicCstr.Comparator.prototype.setReference = function(cstr, opt_props) { };
+sre.DynamicCstr.Comparator.prototype.setReference = function(
+    cstr, opt_props) { };
 
 
 /**
@@ -393,9 +396,9 @@ sre.DynamicCstr.DefaultComparator = function(cstr, opt_props) {
    * @type {sre.DynamicProperties}
    * @private
    */
-  this.fallback_ = opt_props || 
-    new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
-  
+  this.fallback_ = opt_props ||
+      new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
+
   /**
    * @type {sre.DynamicCstr.Order}
    * @private
@@ -422,7 +425,7 @@ sre.DynamicCstr.DefaultComparator.prototype.setReference = function(
     cstr, opt_props) {
   this.reference_ = cstr;
   this.fallback_ = opt_props ||
-    new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
+      new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
   this.order_ = this.reference_.getOrder();
 };
 
@@ -434,9 +437,9 @@ sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
   var keys1 = cstr.getAxes();
   return keys1.length === this.reference_.getAxes().length &&
       keys1.every(
-        goog.bind(function(key) {
-          var value = cstr.getValue(key);
-          return value === this.reference_.getValue(key) ||
+      goog.bind(function(key) {
+        var value = cstr.getValue(key);
+        return value === this.reference_.getValue(key) ||
             this.fallback_.getProperty(key).indexOf(value) !== -1;
       }, this));
 };
@@ -485,10 +488,10 @@ sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
 /**
  * Convenience method to create a standard dynamic constraint, that follows a
  * pre-prescribed order of the axes.
- * @param {...Array.<string>} props Dynamic property lists for the Axes.
+ * @param {...Array.<string>} var_args Dynamic property lists for the Axes.
  * @return {!sre.DynamicProperties}
  */
-sre.DynamicProperties.create = function(props) {
+sre.DynamicProperties.create = function(var_args) {
   var axes = sre.DynamicCstr.DEFAULT_ORDER;
   var dynamicCstr = {};
   var cstrList = Array.prototype.slice.call(arguments, 0);
@@ -502,10 +505,10 @@ sre.DynamicProperties.create = function(props) {
 /**
  * Convenience method to create a standard dynamic constraint, that follows a
  * pre-prescribed order of the axes.
- * @param {...string} cstrs Dynamic constraint values for the Axes.
+ * @param {...string} var_args Dynamic constraint values for the Axes.
  * @return {!sre.DynamicCstr}
  */
-sre.DynamicCstr.create = function(cstrs) {
+sre.DynamicCstr.create = function(var_args) {
   var axes = sre.DynamicCstr.DEFAULT_ORDER;
   var dynamicCstr = {};
   var cstrList = Array.prototype.slice.call(arguments, 0);
@@ -530,7 +533,7 @@ sre.DynamicCstr.defaultCstr = function() {
  */
 sre.DynamicCstr.defaults_ = function() {
   return Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
-    map(function() { return sre.DynamicCstr.DEFAULT_VALUE; });
+      map(function() { return sre.DynamicCstr.DEFAULT_VALUE; });
 };
 
 
@@ -542,9 +545,9 @@ sre.DynamicCstr.defaults_ = function() {
 sre.DynamicCstr.validOrder = function(order) {
   var axes = sre.DynamicCstr.DEFAULT_ORDER.slice();
   return order.every(
-    function(x) {
-      var index = axes.indexOf(x);
-      return index !== -1 && axes.splice(index, 1);
-    }
+      function(x) {
+        var index = axes.indexOf(x);
+        return index !== -1 && axes.splice(index, 1);
+      }
   );
 };

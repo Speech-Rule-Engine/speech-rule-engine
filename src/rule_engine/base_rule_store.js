@@ -89,9 +89,6 @@ sre.BaseRuleStore = function() {
 };
 
 
-//TODO: (MOSS) WP 1.3:
-// Replace library methods by trie indexing.
-//
 /**
  * @override
  */

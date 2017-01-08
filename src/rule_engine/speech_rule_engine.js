@@ -527,7 +527,7 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     return;
   }
   sre.Engine.getInstance().evaluator =
-    goog.bind(maps.store.lookupString, maps.store);
+      goog.bind(maps.store.lookupString, maps.store);
 };
 
 
