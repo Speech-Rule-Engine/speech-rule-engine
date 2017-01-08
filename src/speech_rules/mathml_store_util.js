@@ -22,6 +22,7 @@ goog.provide('sre.MathmlStoreUtil');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.Engine');
+goog.require('sre.Grammar');
 goog.require('sre.MathUtil');
 goog.require('sre.XpathUtil');
 
@@ -164,39 +165,3 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
     return contextDescr.concat(descrs);
   };
 };
-
-
-/**
- * Rewrites a font attribute in a node to hide it during application of
- *    subsequent rules.
- * @param {!Node} node The node to be modified.
- * @return {Array.<Node>} The node list containing the modified node only.
- */
-sre.MathmlStoreUtil.hideFont = function(node) {
-  if (node.hasAttribute('font')) {
-    var value = node.getAttribute('font');
-    node.removeAttribute('font');
-    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', value);
-    node.setAttribute('hiddenfont', value);
-  }
-  return [node];
-};
-
-
-/**
- * Rewrites a hidden font attribute in a node to be visible again as a regular
- *     font attribute. This is implemented as a custom string function.
- * @param {!Node} node The node to be modified.
- * @return {!string} The empty string.
- */
-sre.MathmlStoreUtil.showFont = function(node) {
-  if (node.hasAttribute('hiddenfont')) {
-    var value = node.getAttribute('hiddenfont');
-    node.removeAttribute('hiddenfont');
-    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', '');
-    node.setAttribute('font', value);
-  }
-  return '';
-};
-
-

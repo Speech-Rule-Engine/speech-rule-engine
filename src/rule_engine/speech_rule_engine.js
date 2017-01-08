@@ -56,13 +56,6 @@ sre.SpeechRuleEngine = function() {
   this.activeStore_ = null;
 
   /**
-   * Object holding global parameters that can be set by the stores.
-   * @type {Object.<string, string>}
-   * @private
-   */
-  this.globalParameters_ = {};
-
-  /**
    * Caches speech strings by node id.
    * @type {Object.<string, !Array.<sre.AuditoryDescription>>}
    * @private
@@ -70,29 +63,6 @@ sre.SpeechRuleEngine = function() {
   this.cache_ = {};
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
-
-
-/**
- * Sets a global parameter in the speech rule engine's store.
- * @param {string} parameter The parameter name.
- * @param {string} value The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
-  this.globalParameters_[parameter] = value;
-};
-
-
-//TODO: (MOSS) WP 1.4
-// Extend to Context structure
-//
-/**
- * Returns the a global parameter if it exists.
- * @param {string} parameter The parameter name.
- * @return {string} The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
-  return this.globalParameters_[parameter];
-};
 
 
 /**
@@ -276,6 +246,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       return result;
     }
   }
+  sre.Grammar.getInstance().setAttribute(node);
   var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
@@ -292,6 +263,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
     var content = component['content'] || '';
+    if (component['grammar']) {
+      this.processGrammar(node, component['grammar']);
+    }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
         var selected = this.activeStore_.applyQuery(node, content);
@@ -313,7 +287,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       case sre.SpeechRule.Type.TEXT:
         selected = this.constructString(node, content);
         if (selected) {
-          descrs = [new sre.AuditoryDescription({text: selected})];
+          descrs = [new sre.AuditoryDescription(
+              {text: selected,
+                correction: sre.Grammar.getInstance().getState()})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
@@ -333,6 +309,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       if (component['preprocess']) {
         descrs[0]['preprocess'] = true;
       }
+    }
+    if (component['grammar']) {
+      sre.Grammar.getInstance().popState();
     }
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, component));
@@ -549,4 +528,28 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
   }
   sre.Engine.getInstance().evaluator =
     goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+//TODO: This string processing should be moved into a refactored rule components
+//      module.
+/**
+ * Processes the grammar annotations of a rule.
+ * @param {!Node} node The node to which the rule is applied.
+ * @param {string} grammar The grammar annotations.
+ */
+sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
+  var components = grammar.split(':');
+  var assignment = {};
+  for (var i = 0, l = components.length; i < l; i++) {
+    var comp = components[i].split('=');
+    var key = comp[0];
+    if (comp[1]) {
+      var value = this.constructString(node, comp[1]);
+    } else {
+      value = key.match(/^!/) ? false : true;
+    }
+    assignment[key] = value;
+  }
+  sre.Grammar.getInstance().pushState(assignment);
 };

@@ -205,6 +205,7 @@ sre.SpeechRule.Component.prototype.addAttribute = function(attr) {
     this[attr.trim()] = 'true';
   } else {
     this[attr.substring(0, colon).trim()] = attr.slice(colon + 1).trim();
+    // TODO (MOSS) Here we need to handle grammar attributes.
   }
 };
 

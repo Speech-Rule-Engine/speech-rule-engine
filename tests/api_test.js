@@ -220,7 +220,7 @@ sre.ApiTest.prototype.testToJson = function() {
 /**
  * Test for semantic tree API.
  */
-sre.ApiTest.prototype.testToDescription = function() {
+sre.ApiTest.prototype.untestToDescription = function() {
   this.executeTest(
       'toDescription',
       sre.ApiTest.QUADRATIC,

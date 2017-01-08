@@ -202,6 +202,9 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessString_ = function(text) {
   // TODO (sorge) Find a proper treatment of single numbers.
+  //
+  // (MOSS) Do with grammar annotation for numbers in mathspeak or possibly in
+  // the actual evaluation unit, when all WPs are combined.
   var engine = sre.Engine.getInstance();
   if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
     return text;
@@ -212,39 +215,20 @@ sre.AuditoryDescription.preprocessString_ = function(text) {
 
 
 /**
- * Applies a corrective string to the given description text.
- * @param {string} text The original description text.
- * @param {string} correction The correction string to be applied.
- * @return {string} The cleaned up string.
- * @private
- */
-sre.AuditoryDescription.processCorrections_ = function(text, correction) {
-  if (!correction || !text) {
-    return text;
-  }
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
-};
-
-
-/**
  * Preprocess the text of an auditory description if necessary.
  * @param {sre.AuditoryDescription} descr Description representing a single
  *     math expression.
  * @private
  */
 sre.AuditoryDescription.preprocessDescription_ = function(descr) {
-  if (descr.annotation) {
-    descr.text += ':' + descr.annotation;
-    descr.annotation = '';
-  }
+  descr.text = sre.Grammar.getInstance().runPreprocessors(
+      descr.correction, descr.text);
   if (descr.preprocess) {
-    descr.text = sre.AuditoryDescription.processCorrections_(
-        sre.AuditoryDescription.preprocessString_(descr.text),
-        descr.correction);
+    descr.text = sre.AuditoryDescription.preprocessString_(descr.text);
     descr.preprocess = false;
   }
+  descr.text = sre.Grammar.getInstance().runCorrections(
+      descr.correction, descr.text);
 };
 
 

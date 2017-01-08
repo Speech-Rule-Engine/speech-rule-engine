@@ -62,24 +62,10 @@ sre.SemanticTreeRules.addContextFunction_ = goog.bind(
     sre.SemanticTreeRules.mathStore.contextFunctions);
 
 
-/** @private */
-sre.SemanticTreeRules.addCustomQuery_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.customQueries.add,
-    sre.SemanticTreeRules.mathStore.customQueries);
-
-
-/** @private */
-sre.SemanticTreeRules.addCustomString_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.customStrings.add,
-    sre.SemanticTreeRules.mathStore.customStrings);
-
-
 goog.scope(function() {
 var defineRule = sre.SemanticTreeRules.defineRule_;
 var defineRuleAlias = sre.SemanticTreeRules.defineRuleAlias_;
 
-var addCQF = sre.SemanticTreeRules.addCustomQuery_;
-var addCSF = sre.SemanticTreeRules.addCustomString_;
 var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 
 
@@ -90,9 +76,6 @@ var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 sre.SemanticTreeRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-
-  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
-  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -205,14 +188,16 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Font rules
   defineRule(
       'font', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font!="normal"');
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '""=translate(text(), ' +
+      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
+      '""=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
       '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
@@ -223,14 +208,16 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'font-identifier', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '@role!="unit"');
+      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
+      '@role!="unit"');
 
   defineRule(
       'omit-font', 'default.default',
-      '[n] CQFhideFont; [t] CSFshowFont',
-      'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
+      '[n] self::* (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   // Fraction
   defineRule(
@@ -469,7 +456,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'unit', 'default.default',
-      '[t] text() (annotation:unit, preprocess)',
+      '[t] text() (grammar:annotation="unit", preprocess)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'default.default',

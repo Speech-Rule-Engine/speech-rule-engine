@@ -111,7 +111,7 @@
 
 *** What do we mean by this: Dynamic constraints are "fixed" to a rule. 
     They are the one that are tested against the properties chosen by the user.
-
+    
 *** Property sets are values for dynamic constraints that can be selected by the user.
     Dynamic constraints are then tested against that set.
     
@@ -233,3 +233,53 @@
 ** Maybe change mappings to contain entire dynamic constraints as they will get unwieldy with more axis.
 
 ** Give them a standard order: i.e., keep default, style: short>default
+
+* Grammar structure
+
+** General idea
+
+*** Grammar elements are added and removed via personality annotations.
+
+*** Keywords are mapped to either a string or a boolean.
+
+*** XML element gets special grammar attribute with space separated list of keywords and strings, or boolean.
+    
+*** This way we can check in the rules if a grammatical case is applicable.
+
+**** This only works for the next level. Needs to be repeated, if necessary.
+     
+**** Alternative, always propagate the grammar attribute.
+
+*** Should work both for [n] and [m] nodes.
+
+** To subsume preprocess, correction, remove, sre_flag, font/hiddenfont, annotation:unit
+   Got rid of font, sre_flag, remove.
+
+** Singleton structure similar to global parameters
+
+*** Holds mappings of grammar keywords to either strings or booleans.
+
+*** Equipped with mappings to correction functions for certain grammar keywords.
+
+** Dispatch in extra grammar keyword in personality annotations.
+
+*** Test with determinant simple and hidden fonts.
+
+*** New grammar syntax in personality annotations:
+
+**** grammar:aa:bb="something":cc=@font:dd=CSFsomething:!ee
+     Note the overall separator is : as not to conflict with separators between
+     personality annotations.
+
+***** Adds boolean aa
+
+***** Adds bb with value something
+
+***** Adds cc with font name of the current node
+
+***** Adds dd with string computed by CSFsomething
+
+***** Removes ee 
+
+*** We might want to have special function for grammar checking instead of the grammar attribute
+    Check after integration with the Trie (WP1.3)
