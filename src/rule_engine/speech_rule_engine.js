@@ -264,8 +264,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     var descrs = [];
     var content = component.content || '';
     var attributes = component.attributes;
-    if (attributes['grammar']) {
-      this.processGrammar(node, attributes['grammar']);
+    if (component.grammar) {
+      this.processGrammar(node, component.grammar);
     }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
@@ -311,7 +311,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         descrs[0]['preprocess'] = true;
       }
     }
-    if (attributes['grammar']) {
+    if (component.grammar) {
       sre.Grammar.getInstance().popState();
     }
     // Adding personality to the auditory descriptions.
@@ -537,20 +537,14 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
 /**
  * Processes the grammar annotations of a rule.
  * @param {!Node} node The node to which the rule is applied.
- * @param {string} grammar The grammar annotations.
+ * @param {Object.<string, string|boolean>} grammar The grammar annotations.
  */
 sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
-  var components = grammar.split(':');
   var assignment = {};
-  for (var i = 0, l = components.length; i < l; i++) {
-    var comp = components[i].split('=');
-    var key = comp[0];
-    if (comp[1]) {
-      var value = this.constructString(node, comp[1]);
-    } else {
-      value = key.match(/^!/) ? false : true;
-    }
-    assignment[key] = value;
+  for (var key in grammar) {
+    var value = grammar[key];
+    assignment[key] = (typeof(value) === 'string') ?
+      this.constructString(node, value) : value;
   }
   sre.Grammar.getInstance().pushState(assignment);
 };

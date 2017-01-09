@@ -124,6 +124,8 @@ sre.SpeechRule.Component = function(kwargs) {
   this.content = kwargs.content;
 
   this.attributes = {};
+
+  this.grammar = null;
 };
 
 
@@ -174,6 +176,7 @@ sre.SpeechRule.Component.fromString = function(input) {
       rest = rest.slice(bracket).trim();
       break;
   }
+  console.log(output);
   output = new sre.SpeechRule.Component(output);
   if (rest) {
     output.addAttributes(rest);
@@ -206,8 +209,28 @@ sre.SpeechRule.Component.prototype.addAttribute = function(attr) {
   if (colon == -1) {
     this.attributes[attr.trim()] = 'true';
   } else {
-    this.attributes[attr.substring(0, colon).trim()] = attr.slice(colon + 1).trim();
-    // TODO (MOSS) Here we need to handle grammar attributes.
+    var key = attr.substring(0, colon).trim();
+    var value = attr.slice(colon + 1).trim();
+    if (key === 'grammar') {
+      this.addGrammar(value);
+    } else {
+      this.attributes[key] = value;
+    }
+  }
+};
+
+
+/**
+ * Processes the grammar annotations of a rule.
+ * @param {string} grammar The grammar annotations.
+ */
+sre.SpeechRule.Component.prototype.addGrammar = function(grammar) {
+  this.grammar = {};
+  var components = grammar.split(':');
+  for (var i = 0, l = components.length; i < l; i++) {
+    var comp = components[i].split('=');
+    var key = comp[0];
+    this.grammar[key] = comp[1] || (key.match(/^!/) ? false : true);
   }
 };
 
