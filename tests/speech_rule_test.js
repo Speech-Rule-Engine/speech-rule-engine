@@ -92,7 +92,7 @@ sre.SpeechRuleTest.prototype.testSimpleComponents = function() {
       sre.SpeechRule.Component.fromString('[n] ./*[1]'));
   this.assertStructEquals(
       {'type': sre.SpeechRule.Type.PERSONALITY,
-        'pause': '200'},
+        'attributes': {'pause': '200'}},
       sre.SpeechRule.Component.fromString('[p] (pause:200)'));
   this.assertStructEquals(
       {'type': sre.SpeechRule.Type.TEXT,

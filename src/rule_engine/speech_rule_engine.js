@@ -532,8 +532,6 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
 };
 
 
-//TODO: This string processing should be moved into a refactored rule components
-//      module.
 /**
  * Processes the grammar annotations of a rule.
  * @param {!Node} node The node to which the rule is applied.
