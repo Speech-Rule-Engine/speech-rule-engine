@@ -90,6 +90,14 @@ sre.Grammar.prototype.setParameter_ = function(parameter, value) {
 
 
 /**
+ * @return {boolean|string} Value of a parameter if it exists.
+ */
+sre.Grammar.prototype.getParameter = function(parameter) {
+  return this.parameters_[parameter];
+};
+
+
+/**
  * Sets a grammar correction.
  * @param {string} correction The correction name.
  * @param {Function} func The correction function.

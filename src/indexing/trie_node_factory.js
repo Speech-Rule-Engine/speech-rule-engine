@@ -88,19 +88,23 @@ goog.inherits(sre.DynamicTrieNode, sre.AbstractTrieNode);
  * @private
  */
 sre.TrieNodeFactory.constraintTest_ = function(constraint) {
+  // @self::*
   if (constraint.match(/^self::\*$/)) {
     return function(node) {return true;};
   }
+  // @self::tagname
   if (constraint.match(/^self::\w+$/)) {
     var tag = constraint.slice(6).toUpperCase();
     return function(node) {
       return node.tagName && sre.DomUtil.tagName(node) === tag;};
   }
+  // @attr
   if (constraint.match(/^@\w+$/)) {
     var attr = constraint.slice(1);
     return function(node) {
       return node.hasAttribute && node.hasAttribute(attr);};
   }
+  // @attr="value"
   if (constraint.match(/^@\w+="[\w\d ]+"$/)) {
     var split = constraint.split('=');
     attr = split[0].slice(1);
@@ -108,6 +112,32 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
     return function(node) {
       return node.hasAttribute && node.hasAttribute(attr) &&
           node.getAttribute(attr) === value;};
+  }
+  // @attr!="value"
+  if (constraint.match(/^@\w+!="[\w\d ]+"$/)) {
+    split = constraint.split('!=');
+    attr = split[0].slice(1);
+    value = split[1].slice(1, -1);
+    return function(node) {
+      return !node.hasAttribute || !node.hasAttribute(attr) ||
+          node.getAttribute(attr) !== value;};
+  }
+  // contains(@grammar, "something")
+  if (constraint.match(/^contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)$/)) {
+    split = constraint.split('"');
+    value = split[1];
+    return function(node) {
+      return sre.Grammar.getInstance().getParameter(value);
+    };
+  }
+  // not(contains(@grammar, "something"))
+  if (constraint.match(
+      /^not\(\s*contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)\s*\)$/)) {
+    split = constraint.split('"');
+    value = split[1];
+    return function(node) {
+      return !sre.Grammar.getInstance().getParameter(value);
+    };
   }
   return null;
 };
