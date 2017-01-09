@@ -112,8 +112,11 @@ sre.SpeechRule.Type.toString = function(speechType) {
 
 /**
  * Defines a component within a speech rule.
- * @param {{type: sre.SpeechRule.Type, content: !string}} kwargs The input
- * component in JSON format.
+ * @param {{type: sre.SpeechRule.Type,
+ *          content: !string,
+ *          attributes: sre.SpeechRule.Attributes,
+ *          grammar: sre.SpeechRule.Grammar}} kwargs The input component in JSON
+ *     format.
  * @constructor
  */
 sre.SpeechRule.Component = function(kwargs) {
@@ -123,11 +126,11 @@ sre.SpeechRule.Component = function(kwargs) {
   /** @type {string} */
   this.content = kwargs.content;
 
-  /** @type {Object.<string, string>} */
-  this.attributes = {};
+  /** @type {sre.SpeechRule.Attributes} */
+  this.attributes = kwargs.attributes;
 
-  /** @type {Object.<string, string|boolean>} */
-  this.grammar = null;
+  /** @type {sre.SpeechRule.Grammar} */
+  this.grammar = kwargs.grammar;
 };
 
 
@@ -178,10 +181,18 @@ sre.SpeechRule.Component.fromString = function(input) {
       rest = rest.slice(bracket).trim();
       break;
   }
-  output = new sre.SpeechRule.Component(output);
   if (rest) {
-    output.addAttributes(rest);
+    var attributes = sre.SpeechRule.Component.attributesFromString(rest);
+    if (attributes.grammar) {
+      output.grammar = /** @type {!sre.SpeechRule.Grammar} */
+      (attributes.grammar);
+      delete attributes.grammar;
+    }
+    if (Object.keys(attributes).length) {
+      output.attributes = /** @type {!sre.SpeechRule.Attributes} */(attributes);
+    }
   }
+  output = new sre.SpeechRule.Component(output);
   return output;
 };
 
@@ -206,53 +217,63 @@ sre.SpeechRule.Component.prototype.toString = function() {
 
 
 /**
- * Adds a single attribute to the component.
- * @param {string} attr String representation of an attribute.
+ * Defines grammar attribute for a component of a speech rule.
+ * @typedef {!Object.<string, string|boolean>}
  */
-sre.SpeechRule.Component.prototype.addAttribute = function(attr) {
-  var colon = attr.indexOf(':');
-  if (colon == -1) {
-    this.attributes[attr.trim()] = 'true';
-  } else {
-    var key = attr.substring(0, colon).trim();
-    var value = attr.slice(colon + 1).trim();
-    if (key === 'grammar') {
-      this.addGrammar(value);
-    } else {
-      this.attributes[key] = value;
-    }
-  }
-};
+sre.SpeechRule.Grammar;
 
 
 /**
  * Processes the grammar annotations of a rule.
  * @param {string} grammar The grammar annotations.
+ * @return {sre.SpeechRule.Grammar} The grammar structure.
  */
-sre.SpeechRule.Component.prototype.addGrammar = function(grammar) {
-  this.grammar = {};
+sre.SpeechRule.Component.grammarFromString = function(grammar) {
+  var attributes = {};
   var components = grammar.split(':');
   for (var i = 0, l = components.length; i < l; i++) {
     var comp = components[i].split('=');
     var key = comp[0];
-    this.grammar[key] = comp[1] || (key.match(/^!/) ? false : true);
+    attributes[key] = comp[1] || (key.match(/^!/) ? false : true);
   }
+  return attributes;
 };
 
 
 /**
- * Adds a list of attributes to the component.
- * @param {string} attrs String representation of attribute list.
+ * Defines attributes for a component of a speech rule.
+ * @typedef {!Object.<string, string>}
  */
-sre.SpeechRule.Component.prototype.addAttributes = function(attrs) {
+sre.SpeechRule.Attributes;
+
+
+/**
+ * Adds a single attribute to the component.
+ * @param {string} attrs String representation of an attribute.
+ * @return {Object.<string, string|sre.SpeechRule.Grammar>} The parsed
+ *     attributes, possibly containing the grammar.
+ */
+sre.SpeechRule.Component.attributesFromString = function(attrs) {
   if (attrs[0] != '(' || attrs.slice(-1) != ')') {
     throw new sre.SpeechRule.OutputError(
         'Invalid attribute expression: ' + attrs);
   }
+  var attributes = {};
   var attribs = sre.SpeechRule.splitString_(attrs.slice(1, -1), ',');
   for (var i = 0, m = attribs.length; i < m; i++) {
-    this.addAttribute(attribs[i]);
+    var attr = attribs[i];
+    var colon = attr.indexOf(':');
+    if (colon == -1) {
+      attributes[attr.trim()] = 'true';
+    } else {
+      var key = attr.substring(0, colon).trim();
+      var value = attr.slice(colon + 1).trim();
+      attributes[key] = (key === 'grammar') ?
+        sre.SpeechRule.Component.grammarFromString(value) :
+        attributes[key] = value;
+    }
   }
+  return attributes;
 };
 
 

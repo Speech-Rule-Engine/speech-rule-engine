@@ -263,7 +263,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
     var content = component.content || '';
-    var attributes = component.attributes;
+    var attributes = component.attributes || {};
     if (component.grammar) {
       this.processGrammar(node, component.grammar);
     }

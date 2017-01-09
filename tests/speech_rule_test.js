@@ -59,22 +59,27 @@ sre.SpeechRuleTest.prototype.assertStructEquals =
  * @export
  */
 sre.SpeechRuleTest.prototype.testAttributes = function() {
-  var comp = sre.SpeechRule.Component.fromString('[n] ./');
-  comp.addAttributes(
-      '(ctxtfunc:element,separator:"plus", volume:0.5)');
   this.assertStructEquals(
-      ['ctxtfunc:element',
-       'separator:"plus"',
-       'volume:0.5'],
-      comp.getAttributes());
-  comp = sre.SpeechRule.Component.fromString('[n] ./');
-  comp.addAttributes(
-      '(context:"node",pitch:0.5,difference)');
+       {'ctxtfunc': 'element',
+        'separator': '"plus"',
+        'volume': '0.5'},
+      sre.SpeechRule.Component.attributesFromString(
+        '(ctxtfunc:element,separator:"plus", volume:0.5)'));
   this.assertStructEquals(
-      ['context:"node"',
-       'pitch:0.5',
-       'difference:true'],
-      comp.getAttributes());
+      {'context': '"node"',
+       'pitch': '0.5',
+       'difference': 'true'},
+      sre.SpeechRule.Component.attributesFromString(
+        '(context:"node",pitch:0.5,difference)'));
+  this.assertStructEquals(
+      {'context': '"node"',
+       'grammar': {
+         'font': true,
+         'annotation': '"unit"'
+       }
+      },
+      sre.SpeechRule.Component.attributesFromString(
+        '(context:"node",grammar:font:annotation="unit")'));
 };
 
 
