@@ -30,7 +30,7 @@ sre.Grammar = function() {
 
   /**
    * Grammatical annotations that need to be propagated.
-   * @type {Object.<string, string|boolean>}
+   * @type {Object.<string, sre.Grammar.Value>}
    * @private
    */
   this.parameters_ = {};
@@ -50,13 +50,19 @@ sre.Grammar = function() {
   this.preprocessors_ = {};
 
   /**
-   * @type {Array.<Object.<string, string|boolean>>}
+   * @type {Array.<Object.<string, sre.Grammar.Value>>}
    * @private
    */
   this.stateStack_ = [];
 
 };
 goog.addSingletonGetter(sre.Grammar);
+
+
+/**
+ * @typedef {boolean|string}
+ */
+sre.Grammar.Value;
 
 
 /**
@@ -77,8 +83,8 @@ sre.Grammar.prototype.clear = function() {
 /**
  * Sets a grammar parameter.
  * @param {string} parameter The parameter name.
- * @param {boolean|string} value The parameter's value.
- * @return {boolean|string} The old value if it existed.
+ * @param {sre.Grammar.Value} value The parameter's value.
+ * @return {sre.Grammar.Value} The old value if it existed.
  * @private
  */
 sre.Grammar.prototype.setParameter_ = function(parameter, value) {
@@ -86,6 +92,14 @@ sre.Grammar.prototype.setParameter_ = function(parameter, value) {
   value ? this.parameters_[parameter] = value :
       delete this.parameters_[parameter];
   return oldValue;
+};
+
+
+/**
+ * @return {sre.Grammar.Value} Value of a parameter if it exists.
+ */
+sre.Grammar.prototype.getParameter = function(parameter) {
+  return this.parameters_[parameter];
 };
 
 
@@ -134,7 +148,7 @@ sre.Grammar.prototype.getState = function() {
 
 /**
  * Saves the current state of the grammar object.
- * @param {Object.<string, string|boolean>} assignment A list of key value
+ * @param {Object.<string, sre.Grammar.Value>} assignment A list of key value
  *     pairs.
  */
 sre.Grammar.prototype.pushState = function(assignment) {
