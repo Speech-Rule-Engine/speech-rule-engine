@@ -204,14 +204,8 @@ sre.SpeechRule.Component.prototype.toString = function() {
   var strs = '';
   strs += sre.SpeechRule.Type.toString(this.type);
   strs += this.content ? ' ' + this.content : '';
-  var attribs = this.getAttributes();
-  var grammar = this.getGrammar();
-  if (grammar.length > 0) {
-    attribs.push('grammar:' + grammar.join(':'));
-  }
-  if (attribs.length > 0) {
-    strs += ' (' + attribs.join(', ') + ')';
-  }
+  var attrs = this.attributesToString();
+  strs += attrs ? ' ' + attrs : '';
   return strs;
 };
 
@@ -234,10 +228,42 @@ sre.SpeechRule.Component.grammarFromString = function(grammar) {
   for (var i = 0, l = components.length; i < l; i++) {
     var comp = components[i].split('=');
     var key = comp[0];
-    attributes[key] = comp[1] || (key.match(/^!/) ? false : true);
+    if (comp[1]) {
+      attributes[key] = comp[1];
+      continue;
+    }
+    key.match(/^!/) ? attributes[key.slice(1)] = false : attributes[key] = true;
   }
   return attributes;
 };
+
+
+/**
+ * @return {string} String representation of the grammar.
+ */
+sre.SpeechRule.Component.prototype.grammarToString = function() {
+  return this.getGrammar().join(':');
+};
+
+
+/**
+ * Transforms the grammar of an object into a list of strings.
+ * @return {Array.<string>} List of translated attribute:value strings.
+ */
+sre.SpeechRule.Component.prototype.getGrammar = function() {
+  var attribs = [];
+  for (var key in this.grammar) {
+    if (this.grammar[key] === true) {
+      attribs.push(key);
+    } else if (this.grammar[key] === false) {
+      attribs.push('!' + key);
+    } else {
+      attribs.push(key + '=' + this.grammar[key]);
+    }
+  }
+  return attribs;
+};
+
 
 
 /**
@@ -278,36 +304,30 @@ sre.SpeechRule.Component.attributesFromString = function(attrs) {
 
 
 /**
+ * @return {string} String representation of the attributes.
+ */
+sre.SpeechRule.Component.prototype.attributesToString = function() {
+  var attribs = this.getAttributes();
+  var grammar = this.grammarToString();
+  if (grammar) {
+    attribs.push('grammar:' + grammar);
+  }
+  return attribs.length > 0 ? '(' + attribs.join(', ') + ')': '';
+};
+
+
+/**
  * Transforms the attributes of an object into a list of strings.
  * @return {Array.<string>} List of translated attribute:value strings.
  */
 sre.SpeechRule.Component.prototype.getAttributes = function() {
   var attribs = [];
   for (var key in this.attributes) {
-      attribs.push(key + ':' + this.attributes[key]);
+    var value = this.attributes[key];
+    value === 'true' ? attribs.push(key) : attribs.push(key + ':' + value);
   }
   return attribs;
 };
-
-
-/**
- * Transforms the grammar of an object into a list of strings.
- * @return {Array.<string>} List of translated attribute:value strings.
- */
-sre.SpeechRule.Component.prototype.getGrammar = function() {
-  var attribs = [];
-  for (var key in this.grammar) {
-    if (this.grammar[key] === true) {
-      attribs.push(key);
-    } else if (this.grammar[key] === false) {
-      attribs.push('!' + key);
-    } else {
-      attribs.push(key + '=' + this.grammar[key]);
-    }
-  }
-  return attribs;
-};
-
 
 
 /**
