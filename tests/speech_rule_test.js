@@ -71,6 +71,13 @@ sre.SpeechRuleTest.prototype.testGrammar = function() {
     },
     sre.SpeechRule.Component.grammarFromString(
       '!font:annotation=@unit'));
+  // Whitespace test.
+  this.assertStructEquals(
+    {'font': false,
+     'annotation': '@unit'
+    },
+    sre.SpeechRule.Component.grammarFromString(
+      ' !font : annotation = @unit '));
 };
   
 /** Test speech rule attributes.
@@ -106,6 +113,13 @@ sre.SpeechRuleTest.prototype.testAttributes = function() {
       },
       sre.SpeechRule.Component.attributesFromString(
         '(grammar:font:annotation="unit")'));
+  // Whitespace test.
+  this.assertStructEquals(
+      {'context': '"node"',
+       'pitch': '0.5',
+       'difference': 'true'},
+      sre.SpeechRule.Component.attributesFromString(
+        '( context : "node" , pitch : 0.5 , difference )'));
 };
 
 

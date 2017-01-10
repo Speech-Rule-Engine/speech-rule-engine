@@ -535,7 +535,7 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
 /**
  * Processes the grammar annotations of a rule.
  * @param {!Node} node The node to which the rule is applied.
- * @param {Object.<string, string|boolean>} grammar The grammar annotations.
+ * @param {sre.SpeechRule.Grammar} grammar The grammar annotations.
  */
 sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
   var assignment = {};

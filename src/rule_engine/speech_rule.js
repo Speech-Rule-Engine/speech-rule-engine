@@ -212,7 +212,7 @@ sre.SpeechRule.Component.prototype.toString = function() {
 
 /**
  * Defines grammar attribute for a component of a speech rule.
- * @typedef {!Object.<string, string|boolean>}
+ * @typedef {!Object.<string, sre.Grammar.Value>}
  */
 sre.SpeechRule.Grammar;
 
@@ -227,9 +227,9 @@ sre.SpeechRule.Component.grammarFromString = function(grammar) {
   var components = grammar.split(':');
   for (var i = 0, l = components.length; i < l; i++) {
     var comp = components[i].split('=');
-    var key = comp[0];
+    var key = comp[0].trim();
     if (comp[1]) {
-      attributes[key] = comp[1];
+      attributes[key] = comp[1].trim();
       continue;
     }
     key.match(/^!/) ? attributes[key.slice(1)] = false : attributes[key] = true;
