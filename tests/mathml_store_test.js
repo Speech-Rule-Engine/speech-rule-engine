@@ -22,7 +22,6 @@ goog.provide('sre.MathmlStoreTest');
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
-goog.require('sre.MathStore');
 goog.require('sre.MathmlStore');
 goog.require('sre.MathmlStoreRules');
 
@@ -38,7 +37,7 @@ sre.MathmlStoreTest = function() {
   /**
    * @override
    */
-  this.information = 'Mathml rule tests.';
+  this.information = 'Mathml store tests.';
 
 };
 goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
@@ -59,7 +58,7 @@ sre.MathmlStoreTest.prototype.setUpTest = function() {
  * @param {string} mml Snippet of a MathML expression.
  * @param {string} ruleName Key of the rule that is expected to be applied.
  */
-sre.MathmlStoreTest.prototype.executeRuleTest = function(mml, ruleName) {
+sre.MathmlStoreTest.prototype.executeStoreTest = function(mml, ruleName) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
@@ -74,14 +73,14 @@ sre.MathmlStoreTest.prototype.executeRuleTest = function(mml, ruleName) {
  * Test MathML rules for space elements.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlEmptyRules = function() {
-  this.executeRuleTest('<mspace depth="40px"/>', 'mspace');
-  this.executeRuleTest(
+sre.MathmlStoreTest.prototype.testMathmlEmpty = function() {
+  this.executeStoreTest('<mspace depth="40px"/>', 'mspace');
+  this.executeStoreTest(
       '<mstyle displaystyle="true"><mn>1</mn></mstyle>', 'mstyle');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mpadded height="+150px"><mn>1</mn></mpadded>', 'mpadded');
-  this.executeRuleTest('<merror><mn>1</mn></merror>', 'merror');
-  this.executeRuleTest('<mphantom><mn>1</mn></mphantom>', 'mphantom');
+  this.executeStoreTest('<merror><mn>1</mn></merror>', 'merror');
+  this.executeStoreTest('<mphantom><mn>1</mn></mphantom>', 'mphantom');
 };
 
 
@@ -89,14 +88,14 @@ sre.MathmlStoreTest.prototype.testMathmlEmptyRules = function() {
  * Test MathML rules for simple token elements.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlTokenRules = function() {
-  this.executeRuleTest('<mi>x</mi>', 'mi');
-  this.executeRuleTest('<mi mathvariant="normal" class="MathML-Unit">km</mi>',
+sre.MathmlStoreTest.prototype.testMathmlToken = function() {
+  this.executeStoreTest('<mi>x</mi>', 'mi');
+  this.executeStoreTest('<mi mathvariant="normal" class="MathML-Unit">km</mi>',
                        'unit');
-  this.executeRuleTest('<mn>1</mn>', 'mn');
-  this.executeRuleTest('<mo>+</mo>', 'mo');
-  this.executeRuleTest('<mtext>therefore we have</mtext>', 'mtext');
-  this.executeRuleTest('<ms>therefore we have</ms>', 'ms');
+  this.executeStoreTest('<mn>1</mn>', 'mn');
+  this.executeStoreTest('<mo>+</mo>', 'mo');
+  this.executeStoreTest('<mtext>therefore we have</mtext>', 'mtext');
+  this.executeStoreTest('<ms>therefore we have</ms>', 'ms');
 };
 
 
@@ -104,20 +103,20 @@ sre.MathmlStoreTest.prototype.testMathmlTokenRules = function() {
  * Test MathML rules for token elements involving font declarations.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlFontRules = function() {
+sre.MathmlStoreTest.prototype.testMathmlFont = function() {
 
-  this.executeRuleTest('<mi mathvariant="normal">N</mi>', 'mi');
-  this.executeRuleTest('<mi mathvariant="double-struck">N</mi>', 'mi-variant');
+  this.executeStoreTest('<mi mathvariant="normal">N</mi>', 'mi');
+  this.executeStoreTest('<mi mathvariant="double-struck">N</mi>', 'mi-variant');
 
-  this.executeRuleTest('<mn mathvariant="normal">1</mn>', 'mn');
-  this.executeRuleTest('<mn mathvariant="fraktur">1</mn>', 'mi-variant');
+  this.executeStoreTest('<mn mathvariant="normal">1</mn>', 'mn');
+  this.executeStoreTest('<mn mathvariant="fraktur">1</mn>', 'mi-variant');
 
-  this.executeRuleTest('<mo mathvariant="normal">+</mo>', 'mo');
-  this.executeRuleTest('<mo mathvariant="monospace">+</mo>', 'mo-variant');
+  this.executeStoreTest('<mo mathvariant="normal">+</mo>', 'mo');
+  this.executeStoreTest('<mo mathvariant="monospace">+</mo>', 'mo-variant');
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mtext mathvariant="normal">therefore we have</mtext>', 'mtext');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mtext mathvariant="bold">therefore we have</mtext>', 'mtext-variant');
 };
 
@@ -126,19 +125,19 @@ sre.MathmlStoreTest.prototype.testMathmlFontRules = function() {
  * Test MathML rules for script elements.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlScriptRules = function() {
+sre.MathmlStoreTest.prototype.testMathmlScript = function() {
 
-  this.executeRuleTest('<msup><mi>R</mi><mi>n</mi></msup>', 'msup');
-  this.executeRuleTest('<msub><mi>Z</mi><mi>n</mi></msub>', 'msub');
-  this.executeRuleTest(
+  this.executeStoreTest('<msup><mi>R</mi><mi>n</mi></msup>', 'msup');
+  this.executeStoreTest('<msub><mi>Z</mi><mi>n</mi></msub>', 'msub');
+  this.executeStoreTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mi>r</mi></msubsup>', 'msubsup');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>' +
           '<mo>&#x23DF;</mo></munder>', 'munder');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>' +
           '<mo>&#x23DE;</mo></mover>', 'mover');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<munderover><mo>&#x222B;</mo><mn>0</mn><mi>&#x221E;</mi></munderover>',
       'munderover');
 };
@@ -148,12 +147,12 @@ sre.MathmlStoreTest.prototype.testMathmlScriptRules = function() {
  * Test MathML rules for layout elements.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlLayoutRules = function() {
+sre.MathmlStoreTest.prototype.testMathmlLayout = function() {
 
-  this.executeRuleTest('<mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>', 'mrow');
-  this.executeRuleTest('<msqrt><mi>x</mi></msqrt>', 'msqrt');
-  this.executeRuleTest('<mroot><mi>x</mi><mn>3</mn></mroot>', 'mroot');
-  this.executeRuleTest('<mfrac><mn>1</mn><mi>n</mi></mfrac>', 'mfrac');
+  this.executeStoreTest('<mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>', 'mrow');
+  this.executeStoreTest('<msqrt><mi>x</mi></msqrt>', 'msqrt');
+  this.executeStoreTest('<mroot><mi>x</mi><mn>3</mn></mroot>', 'mroot');
+  this.executeStoreTest('<mfrac><mn>1</mn><mi>n</mi></mfrac>', 'mfrac');
 };
 
 
@@ -161,25 +160,25 @@ sre.MathmlStoreTest.prototype.testMathmlLayoutRules = function() {
  * Test MathML specialist rules for square, cube, etc.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlSpecializationRules = function() {
+sre.MathmlStoreTest.prototype.testMathmlSpecialization = function() {
 
-  this.executeRuleTest('<msup><mi>Z</mi><mn>2</mn></msup>', 'square');
-  this.executeRuleTest(
+  this.executeStoreTest('<msup><mi>Z</mi><mn>2</mn></msup>', 'square');
+  this.executeStoreTest(
       '<msup><mi>Z</mi><mrow><mn>2</mn></mrow></msup>', 'square');
 
-  this.executeRuleTest('<msup><mi>Z</mi><mn>3</mn></msup>', 'cube');
-  this.executeRuleTest(
+  this.executeStoreTest('<msup><mi>Z</mi><mn>3</mn></msup>', 'cube');
+  this.executeStoreTest(
       '<msup><mi>Z</mi><mrow><mn>3</mn></mrow></msup>', 'cube');
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mn>2</mn></msubsup>', 'square-sub');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mrow><mn>2</mn></mrow></msubsup>',
       'square-sub');
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mn>3</mn></msubsup>', 'cube-sub');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mrow><mn>3</mn></mrow></msubsup>',
       'cube-sub');
 
@@ -190,38 +189,111 @@ sre.MathmlStoreTest.prototype.testMathmlSpecializationRules = function() {
  * Test MathML rules involving mfenced expressions.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlMfencedRules = function() {
-
-  this.executeRuleTest(
+sre.MathmlStoreTest.prototype.testMathmlMfencedSingleSep = function() {
+  this.executeStoreTest(
       '<mfenced open="{" close="}" separators=";"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-single');
-  this.executeRuleTest(
+  this.executeStoreTest(
+      '<mfenced close="}" separators=";"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-single');
+  this.executeStoreTest(
+      '<mfenced open="{" close="}" separators=";"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-single');
+  this.executeStoreTest(
+      '<mfenced close="}" separators=";"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-single');
+};
+  
+
+/**
+ * Test MathML rules involving mfenced expressions.
+ * @export
+ */
+sre.MathmlStoreTest.prototype.testMathmlMfencedSpaceSep = function() {
+  this.executeStoreTest(
       '<mfenced open="{" close="}" separators=" "><mi>a</mi><mi>b</mi>' +
-      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-empty');
-  this.executeRuleTest(
-      '<mfenced open="{" close="}" separators=""><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
-  this.executeRuleTest('<mfenced open="{" close="}"><mi>a</mi><mi>b</mi>' +
-      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-comma');
-  this.executeRuleTest(
-      '<mfenced open="{" close="}" separators=";;,"><mi>a</mi><mi>b</mi>' +
-      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-multi');
+  this.executeStoreTest(
+      '<mfenced close="}" separators=" "><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
+  this.executeStoreTest(
+      '<mfenced open="{" separators=" "><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
+  this.executeStoreTest(
+      '<mfenced separators=" "><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
 };
 
+
+/**
+ * Test MathML rules involving mfenced expressions.
+ * @export
+ */
+sre.MathmlStoreTest.prototype.testMathmlMfencedEmptySep = function() {
+  this.executeStoreTest(
+      '<mfenced open="{" close="}" separators=""><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
+  this.executeStoreTest(
+      '<mfenced close="}" separators=""><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
+  this.executeStoreTest(
+      '<mfenced open="{" separators=""><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
+  this.executeStoreTest(
+      '<mfenced separators=""><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-omit');
+};
+
+
+/**
+ * Test MathML rules involving mfenced expressions.
+ * @export
+ */
+sre.MathmlStoreTest.prototype.testMathmlMfencedNoSep = function() {
+  this.executeStoreTest('<mfenced open="{" close="}"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-comma');
+  this.executeStoreTest('<mfenced close="}"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-comma');
+  this.executeStoreTest('<mfenced open="{"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-comma');
+  this.executeStoreTest('<mfenced><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-comma');
+};
+
+
+/**
+ * Test MathML rules involving mfenced expressions.
+ * @export
+ */
+sre.MathmlStoreTest.prototype.testMathmlMfencedMultipleSep = function() {
+  this.executeStoreTest(
+      '<mfenced open="{" close="}" separators=";;,"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-multi');
+  this.executeStoreTest(
+      '<mfenced close="}" separators=";;,"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-multi');
+  this.executeStoreTest(
+      '<mfenced open="{" separators=";;,"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-multi');
+  this.executeStoreTest(
+      '<mfenced separators=";;,"><mi>a</mi><mi>b</mi>' +
+      '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-multi');
+};
+  
 
 /**
  * Test MathML rules involving matrix expressions.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlMtableRules = function() {
+sre.MathmlStoreTest.prototype.testMathmlMtable = function() {
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mtable><mtr><mtd><mi>A</mi></mtd><mtd><mi>B</mi></mtd></mtr>' +
       '<mtr><mtd><mi>C</mi></mtd><mtd><mi>D</mi></mtd></mtr></mtable>',
       'mtable');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mtr><mtd><mi>A</mi></mtd><mtd><mi>B</mi></mtd></mtr>', 'mtr');
-  this.executeRuleTest('<mtd><mi>A</mi></mtd>', 'mtd');
+  this.executeStoreTest('<mtd><mi>A</mi></mtd>', 'mtd');
 };
 
 
@@ -229,40 +301,40 @@ sre.MathmlStoreTest.prototype.testMathmlMtableRules = function() {
  * Test MathML rules involving mmultiscripts expressions.
  * @export
  */
-sre.MathmlStoreTest.prototype.testMathmlMultiscriptRules = function() {
+sre.MathmlStoreTest.prototype.testMathmlMultiscript = function() {
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn>' +
           '<mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>',
       'mmultiscripts-4');
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn>' +
           '<mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>',
       'mmultiscripts-3-1');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><none/>' +
           '<mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>',
       'mmultiscripts-3-2');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn>' +
           '<mprescripts/><none/><mn>4</mn></mmultiscripts>',
       'mmultiscripts-3-3');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn>' +
           '<mprescripts/><mn>3</mn><none/></mmultiscripts>',
       'mmultiscripts-3-4');
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><none/><none/>' +
           '<mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>',
       'mmultiscripts-2-1');
 
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><none/><none/>' +
           '<mprescripts/><none/><mn>4</mn></mmultiscripts>',
       'mmultiscripts-1-1');
-  this.executeRuleTest(
+  this.executeStoreTest(
       '<mmultiscripts><mi>A</mi><none/><none/>' +
           '<mprescripts/><mn>3</mn><none/></mmultiscripts>',
       'mmultiscripts-1-2');
