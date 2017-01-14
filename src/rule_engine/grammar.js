@@ -21,6 +21,8 @@
 
 goog.provide('sre.Grammar');
 
+goog.require('sre.Engine');
+
 
 
 /**
@@ -63,6 +65,13 @@ goog.addSingletonGetter(sre.Grammar);
  * @typedef {boolean|string}
  */
 sre.Grammar.Value;
+
+
+/**
+ * Defines grammar attribute for a component of a speech rule.
+ * @typedef {!Object.<string, sre.Grammar.Value>}
+ */
+sre.Grammar.State;
 
 
 /**
@@ -186,7 +195,7 @@ sre.Grammar.prototype.setAttribute = function(node) {
 
 /**
  * Applies a grammatical corrections to a given description text.
- * @param {string} state The saved state of the grammar.
+ * @param {sre.Grammar.State} state The saved state of the grammar.
  * @param {string} text The original description text.
  * @return {string} The grammatically corrected string.
  */
@@ -197,7 +206,7 @@ sre.Grammar.prototype.runCorrections = function(state, text) {
 
 /**
  * Applies a grammatical preprocessors to a given description text.
- * @param {string} state The saved state of the grammar.
+ * @param {sre.Grammar.State} state The saved state of the grammar.
  * @param {string} text The original description text.
  * @return {string} The grammatically corrected string.
  */
@@ -208,25 +217,77 @@ sre.Grammar.prototype.runPreprocessors = function(state, text) {
 
 /**
  * Applies a grammatical processors to a given description text.
- * @param {string} state The saved state of the grammar.
+ * @param {sre.Grammar.State} state The saved state of the grammar.
  * @param {string} text The original description text.
  * @param {Object.<string, Function>} funcs Dictionary of processor functions.
  * @return {string} The grammatically corrected string.
  * @private
  */
 sre.Grammar.prototype.runProcessors_ = function(state, text, funcs) {
-  var corrections = state.split(' ');
-  for (var i = 0, l = corrections.length; i < l; i++) {
-    var corr = corrections[i].split(':');
-    var key = corr[0];
+  for (var key in state) {
     var func = funcs[key];
     if (!func) {
       continue;
     }
-    var value = corr[1];
-    text = value ? func(text, value) : func(text);
+    var value = state[key];
+    text = (value === true) ? func(text) : func(text, value);
   }
   return text;
+};
+
+
+/**
+ * Process a math expression into a string suitable for a speech engine.
+ * @param {string} text Text representing a math expression.
+ * @return {string} The string with a spoken version of the math expression.
+ * @private
+ */
+sre.Grammar.preprocessString_ = function(text) {
+  // TODO (sorge) Find a proper treatment of single numbers.
+  //
+  // (MOSS) Do with grammar annotation for numbers in mathspeak or possibly in
+  // the actual evaluation unit, when all WPs are combined.
+  var engine = sre.Engine.getInstance();
+  if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
+    return text;
+  }
+  var result = engine.evaluator(text, engine.dynamicCstr);
+  return result || text;
+};
+
+
+//TODO: This could become a prototype method if we directly process before
+//      saving the state!
+/**
+ * Preprocess the text of an auditory description if necessary.
+ * @param {string} text The text string to be processed.
+ * @param {string} stateStr The state of the grammar.
+ * @param {boolean=} opt_preprocess The preprocessing flag.
+ * @return {string} The transformed text.
+ */
+sre.Grammar.applyState = function(text, stateStr, opt_preprocess) {
+  var state = sre.Grammar.readStateStr_(stateStr);
+  text = sre.Grammar.getInstance().runPreprocessors(
+      state, text);
+  if (opt_preprocess) {
+    text = sre.Grammar.preprocessString_(text);
+  }
+  text = sre.Grammar.getInstance().runCorrections(
+     state, text);
+  return text;
+};
+
+
+sre.Grammar.readStateStr_ = function(stateStr) {
+  var state = {};
+  var corrections = stateStr.split(' ');
+  for (var i = 0, l = corrections.length; i < l; i++) {
+    var corr = corrections[i].split(':');
+    var key = corr[0];
+    var value = corr[1];
+    state[key] = value ? value : true;
+  }
+  return state;
 };
 
 

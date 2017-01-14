@@ -30,6 +30,7 @@
 goog.provide('sre.SpeechRule');
 
 goog.require('sre.DynamicCstr');
+goog.require('sre.Grammar');
 
 
 
@@ -115,7 +116,7 @@ sre.SpeechRule.Type.toString = function(speechType) {
  * @param {{type: sre.SpeechRule.Type,
  *          content: !string,
  *          attributes: sre.SpeechRule.Attributes,
- *          grammar: sre.SpeechRule.Grammar}} kwargs The input component in JSON
+ *          grammar: sre.Grammar.State}} kwargs The input component in JSON
  *     format.
  * @constructor
  */
@@ -129,7 +130,7 @@ sre.SpeechRule.Component = function(kwargs) {
   /** @type {sre.SpeechRule.Attributes} */
   this.attributes = kwargs.attributes;
 
-  /** @type {sre.SpeechRule.Grammar} */
+  /** @type {sre.Grammar.State} */
   this.grammar = kwargs.grammar;
 };
 
@@ -184,7 +185,7 @@ sre.SpeechRule.Component.fromString = function(input) {
   if (rest) {
     var attributes = sre.SpeechRule.Component.attributesFromString(rest);
     if (attributes.grammar) {
-      output.grammar = /** @type {!sre.SpeechRule.Grammar} */
+      output.grammar = /** @type {!sre.Grammar.State} */
       (attributes.grammar);
       delete attributes.grammar;
     }
@@ -211,16 +212,9 @@ sre.SpeechRule.Component.prototype.toString = function() {
 
 
 /**
- * Defines grammar attribute for a component of a speech rule.
- * @typedef {!Object.<string, sre.Grammar.Value>}
- */
-sre.SpeechRule.Grammar;
-
-
-/**
  * Processes the grammar annotations of a rule.
  * @param {string} grammar The grammar annotations.
- * @return {sre.SpeechRule.Grammar} The grammar structure.
+ * @return {sre.Grammar.State} The grammar structure.
  */
 sre.SpeechRule.Component.grammarFromString = function(grammar) {
   var attributes = {};
@@ -276,7 +270,7 @@ sre.SpeechRule.Attributes;
 /**
  * Adds a single attribute to the component.
  * @param {string} attrs String representation of an attribute.
- * @return {Object.<string, string|sre.SpeechRule.Grammar>} The parsed
+ * @return {Object.<string, string|sre.Grammar.State>} The parsed
  *     attributes, possibly containing the grammar.
  */
 sre.SpeechRule.Component.attributesFromString = function(attrs) {

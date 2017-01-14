@@ -195,50 +195,14 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
 
 
 /**
- * Process a math expression into a string suitable for a speech engine.
- * @param {string} text Text representing a math expression.
- * @return {string} The string with a spoken version of the math expression.
- * @private
- */
-sre.AuditoryDescription.preprocessString_ = function(text) {
-  // TODO (sorge) Find a proper treatment of single numbers.
-  //
-  // (MOSS) Do with grammar annotation for numbers in mathspeak or possibly in
-  // the actual evaluation unit, when all WPs are combined.
-  var engine = sre.Engine.getInstance();
-  if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
-    return text;
-  }
-  var result = engine.evaluator(text, engine.dynamicCstr);
-  return result || text;
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {sre.AuditoryDescription} descr Description representing a single
- *     math expression.
- * @private
- */
-sre.AuditoryDescription.preprocessDescription_ = function(descr) {
-  descr.text = sre.Grammar.getInstance().runPreprocessors(
-      descr.correction, descr.text);
-  if (descr.preprocess) {
-    descr.text = sre.AuditoryDescription.preprocessString_(descr.text);
-    descr.preprocess = false;
-  }
-  descr.text = sre.Grammar.getInstance().runCorrections(
-      descr.correction, descr.text);
-};
-
-
-/**
  * Preprocess the text of an auditory description if necessary.
  * @param {Array.<sre.AuditoryDescription>} descrList Description array
  *     representing a math expression.
  */
 sre.AuditoryDescription.preprocessDescriptionList = function(descrList) {
   for (var i = 0, descr; descr = descrList[i]; i++) {
-    sre.AuditoryDescription.preprocessDescription_(descr);
+    descr.text = sre.Grammar.applyState(descr.text,
+                                        descr.correction,
+                                        descr.preprocess);
   }
 };
