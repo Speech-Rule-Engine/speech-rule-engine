@@ -262,14 +262,13 @@ sre.Grammar.preprocessString_ = function(text) {
  * Preprocess the text of an auditory description if necessary.
  * @param {string} text The text string to be processed.
  * @param {string} stateStr The state of the grammar.
- * @param {boolean=} opt_preprocess The preprocessing flag.
  * @return {string} The transformed text.
  */
-sre.Grammar.applyState = function(text, stateStr, opt_preprocess) {
-  var state = sre.Grammar.readStateStr_(stateStr);
+sre.Grammar.applyState = function(text, stateStr) {
+  var state = sre.Grammar.parseState(stateStr);
   text = sre.Grammar.getInstance().runPreprocessors(
       state, text);
-  if (opt_preprocess) {
+  if (state['preprocess']) {
     text = sre.Grammar.preprocessString_(text);
   }
   text = sre.Grammar.getInstance().runCorrections(
@@ -278,7 +277,7 @@ sre.Grammar.applyState = function(text, stateStr, opt_preprocess) {
 };
 
 
-sre.Grammar.readStateStr_ = function(stateStr) {
+sre.Grammar.parseState = function(stateStr) {
   var state = {};
   var corrections = stateStr.split(' ');
   for (var i = 0, l = corrections.length; i < l; i++) {
@@ -288,6 +287,27 @@ sre.Grammar.readStateStr_ = function(stateStr) {
     state[key] = value ? value : true;
   }
   return state;
+};
+
+
+/**
+ * Processes the grammar annotations of a rule.
+ * @param {string} grammar The grammar annotations.
+ * @return {sre.Grammar.State} The grammar structure.
+ */
+sre.Grammar.parseInput = function(grammar) {
+  var attributes = {};
+  var components = grammar.split(':');
+  for (var i = 0, l = components.length; i < l; i++) {
+    var comp = components[i].split('=');
+    var key = comp[0].trim();
+    if (comp[1]) {
+      attributes[key] = comp[1].trim();
+      continue;
+    }
+    key.match(/^!/) ? attributes[key.slice(1)] = false : attributes[key] = true;
+  }
+  return attributes;
 };
 
 

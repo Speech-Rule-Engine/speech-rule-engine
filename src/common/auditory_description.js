@@ -201,8 +201,6 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.preprocessDescriptionList = function(descrList) {
   for (var i = 0, descr; descr = descrList[i]; i++) {
-    descr.text = sre.Grammar.applyState(descr.text,
-                                        descr.correction,
-                                        descr.preprocess);
+    descr.text = sre.Grammar.applyState(descr.text, descr.correction);
   }
 };

@@ -290,7 +290,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         if (selected) {
           descrs = [new sre.AuditoryDescription(
               {text: selected,
-                correction: sre.Grammar.getInstance().getState()})];
+               correction: sre.Grammar.getInstance().getState()})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
@@ -348,7 +348,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
   var sepClosure = sFunc ? sFunc(nodes, sep) :
       function() {return new sre.AuditoryDescription({text: sep,
-        preprocess: true});};
+                                                      correction: 'preprocess'});};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);

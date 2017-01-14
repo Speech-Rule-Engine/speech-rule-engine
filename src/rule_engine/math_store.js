@@ -254,7 +254,6 @@ sre.MathStore.prototype.evaluate_ = function(text) {
   return new sre.AuditoryDescription(
       {
         'text': text,
-        'preprocess': true,
-        'correction': sre.Grammar.getInstance().getState()
+        'correction': sre.Grammar.getInstance().getState() + ' preprocess'
       });
 };

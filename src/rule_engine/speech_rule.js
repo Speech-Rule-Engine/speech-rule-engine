@@ -211,24 +211,14 @@ sre.SpeechRule.Component.prototype.toString = function() {
 };
 
 
+//TODO (MOSS) remove!
 /**
  * Processes the grammar annotations of a rule.
  * @param {string} grammar The grammar annotations.
  * @return {sre.Grammar.State} The grammar structure.
  */
 sre.SpeechRule.Component.grammarFromString = function(grammar) {
-  var attributes = {};
-  var components = grammar.split(':');
-  for (var i = 0, l = components.length; i < l; i++) {
-    var comp = components[i].split('=');
-    var key = comp[0].trim();
-    if (comp[1]) {
-      attributes[key] = comp[1].trim();
-      continue;
-    }
-    key.match(/^!/) ? attributes[key.slice(1)] = false : attributes[key] = true;
-  }
-  return attributes;
+  return sre.Grammar.parseInput(grammar);
 };
 
 
