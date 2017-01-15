@@ -64,16 +64,16 @@ sre.AuditoryDescription = function(kwargs) {
  *          correction: (undefined|string),
  *          personality: (undefined|Object)}} kwargs The arguments for this
  *  description.
- * @param {boolean=} opt_force Flag to force preprocessing.
+ * @param {{adjust: (undefined|boolean),
+ *          preprocess: (undefined|boolean),
+ *          correct: (undefined|boolean),
+ *          translate: (undefined|boolean)}=} opt_flag Flag to force grammar
+ *      processing options.
  * @return {sre.AuditoryDescription} The newly created auditory description.
  * @constructor
  */
-sre.AuditoryDescription.create = function(kwargs, opt_force) {
-  var correction = (kwargs.correction || '') + (opt_force ? ' translate' : '');
-  if (correction) {
-    kwargs.text = sre.Grammar.applyState(kwargs.text, correction);
-    delete kwargs.correction;
-  }
+sre.AuditoryDescription.create = function(kwargs, opt_flag) {
+  kwargs.text = sre.Grammar.getInstance().apply(kwargs.text, opt_flag || {});
   return new sre.AuditoryDescription(kwargs);
 };
 

@@ -256,6 +256,13 @@ sre.Grammar.translateString_ = function(text) {
  *          correct: (undefined|boolean),
  *          translate: (undefined|boolean)}=} opt_flags Flags indicating
  *     what adjustments should be carried out.
+ *
+ * Description of flags:
+ * adjust: All grammar adjustments are performed.
+ * preprocess: Only grammar preprocessing is performed.
+ * correct: Only grammar corrections are performed.
+ * translate: Text element is translated with math mappings.
+ * 
  * @return {string} The transformed text.
  */
 sre.Grammar.prototype.apply = function(text, opt_flags) {
@@ -269,27 +276,6 @@ sre.Grammar.prototype.apply = function(text, opt_flags) {
   text = (flags.adjust || flags.correct) ?
     sre.Grammar.getInstance().runCorrections(this.parameters_, text) :
     text;
-  return text;
-};
-
-
-//TODO: This could become a prototype method if we directly process before
-//      saving the state!
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {string} text The text string to be processed.
- * @param {string} stateStr The state of the grammar.
- * @return {string} The transformed text.
- */
-sre.Grammar.applyState = function(text, stateStr) {
-  var state = sre.Grammar.parseState(stateStr);
-  text = sre.Grammar.getInstance().runPreprocessors(
-      state, text);
-  if (state['translate']) {
-    text = sre.Grammar.translateString_(text);
-  }
-  text = sre.Grammar.getInstance().runCorrections(
-     state, text);
   return text;
 };
 

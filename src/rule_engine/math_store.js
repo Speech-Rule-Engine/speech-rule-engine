@@ -252,7 +252,5 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  */
 sre.MathStore.prototype.evaluate_ = function(text) {
   return sre.AuditoryDescription.create(
-      {'text': text,
-       'correction': sre.Grammar.getInstance().getState()
-      }, true);
+      {text: text}, {adjust: true, translate: true});
 };

@@ -134,7 +134,9 @@ sre.MathmlStoreUtil.mfencedSeparators = function(nodes, context) {
   var nextSeparator = sre.MathUtil.nextSeparatorFunction(context);
   return function() {
     return nextSeparator ?
-      [sre.AuditoryDescription.create({text: nextSeparator()}, true)] : [];
+      [sre.AuditoryDescription.create(
+        {text: nextSeparator()}, {translate: true})] :
+    [];
   };
 };
 
@@ -156,7 +158,9 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
   return function() {
     var content = contentNodes.shift();
     var contextDescr = context ?
-          [sre.AuditoryDescription.create({text: context}, true)] : [];
+          [sre.AuditoryDescription.create(
+            {text: context}, {translate: true})] :
+        [];
     if (!content) {
       return contextDescr;
     }
