@@ -43,10 +43,7 @@ goog.require('sre.Engine');
  *     titles, labels, etc.
  *  userValue The text that the user has entered.
  *  annotation The role and state of the object.
- *  correction A string that can be exploited as correction of the text.
  *  personality Optional TTS personality to use for the text.
- *  preprocess Flag indicating if the text needs to be preprocessed for
- *     non-ASCII characters.
  * @constructor
  */
 sre.AuditoryDescription = function(kwargs) {
@@ -72,7 +69,7 @@ sre.AuditoryDescription = function(kwargs) {
  * @constructor
  */
 sre.AuditoryDescription.create = function(kwargs, opt_force) {
-  var correction = (kwargs.correction || '') + (opt_force ? ' preprocess' : '');
+  var correction = (kwargs.correction || '') + (opt_force ? ' translate' : '');
   if (correction) {
     kwargs.text = sre.Grammar.applyState(kwargs.text, correction);
     delete kwargs.correction;

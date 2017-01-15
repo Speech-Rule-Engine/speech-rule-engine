@@ -307,9 +307,6 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       if (attributes['annotation']) {
         descrs[0]['annotation'] = attributes['annotation'];
       }
-      if (attributes['preprocess']) {
-        descrs[0]['preprocess'] = true;
-      }
     }
     if (component.grammar) {
       sre.Grammar.getInstance().popState();

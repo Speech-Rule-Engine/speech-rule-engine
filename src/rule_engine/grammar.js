@@ -32,7 +32,7 @@ sre.Grammar = function() {
 
   /**
    * Grammatical annotations that need to be propagated.
-   * @type {Object.<string, sre.Grammar.Value>}
+   * @type {!sre.Grammar.State}
    * @private
    */
   this.parameters_ = {};
@@ -242,9 +242,34 @@ sre.Grammar.prototype.runProcessors_ = function(state, text, funcs) {
  * @return {string} The string with a spoken version of the math expression.
  * @private
  */
-sre.Grammar.preprocessString_ = function(text) {
+sre.Grammar.translateString_ = function(text) {
   var engine = sre.Engine.getInstance();
   return engine.evaluator(text, engine.dynamicCstr) || text;
+};
+
+
+/**
+ * Apply grammatical adjustments of the current state to a text string.
+ * @param {string} text The text string to be processed.
+ * @param {{adjust: (undefined|boolean),
+ *          preprocess: (undefined|boolean),
+ *          correct: (undefined|boolean),
+ *          translate: (undefined|boolean)}=} opt_flags Flags indicating
+ *     what adjustments should be carried out.
+ * @return {string} The transformed text.
+ */
+sre.Grammar.prototype.apply = function(text, opt_flags) {
+  var flags = opt_flags || {};
+  text = (flags.adjust || flags.preprocess) ?
+    sre.Grammar.getInstance().runPreprocessors(this.parameters_, text) :
+    text;
+  if (this.parameters_['translate'] || flags.translate) {
+    text = sre.Grammar.translateString_(text);
+  }
+  text = (flags.adjust || flags.correct) ?
+    sre.Grammar.getInstance().runCorrections(this.parameters_, text) :
+    text;
+  return text;
 };
 
 
@@ -260,8 +285,8 @@ sre.Grammar.applyState = function(text, stateStr) {
   var state = sre.Grammar.parseState(stateStr);
   text = sre.Grammar.getInstance().runPreprocessors(
       state, text);
-  if (state['preprocess']) {
-    text = sre.Grammar.preprocessString_(text);
+  if (state['translate']) {
+    text = sre.Grammar.translateString_(text);
   }
   text = sre.Grammar.getInstance().runCorrections(
      state, text);
