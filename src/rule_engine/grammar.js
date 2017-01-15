@@ -243,16 +243,8 @@ sre.Grammar.prototype.runProcessors_ = function(state, text, funcs) {
  * @private
  */
 sre.Grammar.preprocessString_ = function(text) {
-  // TODO (sorge) Find a proper treatment of single numbers.
-  //
-  // (MOSS) Do with grammar annotation for numbers in mathspeak or possibly in
-  // the actual evaluation unit, when all WPs are combined.
   var engine = sre.Engine.getInstance();
-  if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
-    return text;
-  }
-  var result = engine.evaluator(text, engine.dynamicCstr);
-  return result || text;
+  return engine.evaluator(text, engine.dynamicCstr) || text;
 };
 
 
