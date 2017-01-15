@@ -251,9 +251,8 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  * @private
  */
 sre.MathStore.prototype.evaluate_ = function(text) {
-  return new sre.AuditoryDescription(
-      {
-        'text': text,
-        'correction': sre.Grammar.getInstance().getState() + ' preprocess'
-      });
+  return sre.AuditoryDescription.create(
+      {'text': text,
+       'correction': sre.Grammar.getInstance().getState()
+      }, true);
 };

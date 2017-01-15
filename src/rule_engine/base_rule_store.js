@@ -175,7 +175,7 @@ sre.BaseRuleStore.prototype.findAllRules = function(pred) {
  * @override
  */
 sre.BaseRuleStore.prototype.evaluateDefault = function(node) {
-  return [new sre.AuditoryDescription({'text': node.textContent})];
+  return [sre.AuditoryDescription.create({'text': node.textContent})];
 };
 
 
@@ -224,7 +224,6 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
 };
 
 
-// TODO (sorge) These should move into the speech rule functions.
 /**
  * Checks if we have a custom query and applies it. Otherwise returns null.
  * @param {!Node} node The initial node.

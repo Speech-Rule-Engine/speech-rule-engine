@@ -34,9 +34,7 @@ goog.require('sre.Engine');
  *          text: (string),
  *          userValue: (undefined|string),
  *          annotation: (undefined|string),
- *          correction: (undefined|string),
- *          personality: (undefined|Object),
- *          preprocess: (undefined|boolean)}} kwargs The arguments for this
+ *          personality: (undefined|Object)}} kwargs The arguments for this
  *  description.
  *  context The context, for example descriptions of objects
  *     that were crossed into, like "Toolbar" or "Menu Bar" or "List with
@@ -56,9 +54,30 @@ sre.AuditoryDescription = function(kwargs) {
   this.text = kwargs.text ? kwargs.text : '';
   this.userValue = kwargs.userValue ? kwargs.userValue : '';
   this.annotation = kwargs.annotation ? kwargs.annotation : '';
-  this.correction = kwargs.correction ? kwargs.correction : '';
   this.personality = kwargs.personality;
-  this.preprocess = !!kwargs.preprocess;
+};
+
+
+/**
+ * Create an auditory description from given components.
+ * @param {{context: (undefined|string),
+ *          text: (string),
+ *          userValue: (undefined|string),
+ *          annotation: (undefined|string),
+ *          correction: (undefined|string),
+ *          personality: (undefined|Object)}} kwargs The arguments for this
+ *  description.
+ * @param {boolean=} opt_force Flag to force preprocessing.
+ * @return {sre.AuditoryDescription} The newly created auditory description.
+ * @constructor
+ */
+sre.AuditoryDescription.create = function(kwargs, opt_force) {
+  var correction = (kwargs.correction || '') + (opt_force ? ' preprocess' : '');
+  if (correction) {
+    kwargs.text = sre.Grammar.applyState(kwargs.text, correction);
+    delete kwargs.correction;
+  }
+  return new sre.AuditoryDescription(kwargs);
 };
 
 
@@ -90,9 +109,7 @@ sre.AuditoryDescription.prototype.clone = function() {
         text: this.text,
         userValue: this.userValue,
         annotation: this.annotation,
-        correction: this.correction,
-        personality: personality,
-        preprocess: this.preprocess
+        personality: personality
       });
 };
 
@@ -137,7 +154,6 @@ sre.AuditoryDescription.prototype.equals = function(that) {
  */
 sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return sre.AuditoryDescription.toString_(descrs, separator);
 };
 
@@ -191,16 +207,4 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
       descrs.map(
       function(x) {return x.descriptionString();})).
       join(separator);
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {Array.<sre.AuditoryDescription>} descrList Description array
- *     representing a math expression.
- */
-sre.AuditoryDescription.preprocessDescriptionList = function(descrList) {
-  for (var i = 0, descr; descr = descrList[i]; i++) {
-    descr.text = sre.Grammar.applyState(descr.text, descr.correction);
-  }
 };

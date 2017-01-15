@@ -288,14 +288,14 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       case sre.SpeechRule.Type.TEXT:
         selected = this.constructString(node, content);
         if (selected) {
-          descrs = [new sre.AuditoryDescription(
-              {text: selected,
-               correction: sre.Grammar.getInstance().getState()})];
+          descrs = [sre.AuditoryDescription.create(
+            {text: selected,
+             correction: sre.Grammar.getInstance().getState()})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
       default:
-        descrs = [new sre.AuditoryDescription({text: content})];
+        descrs = [sre.AuditoryDescription.create({text: content})];
     }
     // Adding overall context and annotation if they exist.
     if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
@@ -347,8 +347,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
   var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
   var sepClosure = sFunc ? sFunc(nodes, sep) :
-      function() {return new sre.AuditoryDescription({text: sep,
-                                                      correction: 'preprocess'});};
+        function() {return sre.AuditoryDescription.create({text: sep}, true);};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);

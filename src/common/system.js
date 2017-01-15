@@ -233,7 +233,6 @@ sre.System.prototype.toDescription = function(expr) {
     return [];
   }
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
 
