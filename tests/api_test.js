@@ -225,44 +225,44 @@ sre.ApiTest.prototype.testToDescription = function() {
       'toDescription',
       sre.ApiTest.QUADRATIC,
       '[{"context":"","text":"x","userValue":"","annotation":"",' +
-      '"correction":"italic","personality":{},"preprocess":false},' +
+      '"personality":{}},' +
       '{"context":"","text":"equals","userValue":"","annotation":"",' +
-      '"correction":"","personality":{},"preprocess":false},' +
+      '"personality":{}},' +
       '{"context":"","text":"StartFraction","userValue":"","annotation":"",' +
-      '"correction":"","personality":{},"preprocess":false},{"context":"",' +
-      '"text":"negative","userValue":"","annotation":"","correction":"",' +
-      '"personality":{},"preprocess":false},{"context":"","text":"b",' +
-      '"userValue":"","annotation":"","correction":"italic","personality":{},' +
-      '"preprocess":false},{"context":"","text":"plus-or-minus",' +
-      '"userValue":"","annotation":"","correction":"","personality":{},' +
-      '"preprocess":false},{"context":"","text":"StartRoot","userValue":"",' +
-      '"annotation":"","correction":"","personality":{},"preprocess":false},' +
+      '"personality":{}},{"context":"",' +
+      '"text":"negative","userValue":"","annotation":"",' +
+      '"personality":{}},{"context":"","text":"b",' +
+      '"userValue":"","annotation":"","personality":{}},' +
+      '{"context":"","text":"plus-or-minus",' +
+      '"userValue":"","annotation":"","personality":{}},' +
+      '{"context":"","text":"StartRoot","userValue":"",' +
+      '"annotation":"","personality":{}},' +
       '{"context":"","text":"b","userValue":"","annotation":"",' +
-      '"correction":"italic","personality":{},"preprocess":false},' +
+      '"personality":{}},' +
       '{"context":"","text":"squared","userValue":"","annotation":"",' +
-      '"correction":"","personality":{},"preprocess":false},{"context":"",' +
-      '"text":"minus","userValue":"","annotation":"","correction":"",' +
-      '"personality":{},"preprocess":false},{"context":"","text":"4",' +
-      '"userValue":"","annotation":"","correction":"","personality":{},' +
-      '"preprocess":false},{"context":"","text":"","userValue":"",' +
-      '"annotation":"","correction":"","personality":{},"preprocess":false},' +
+      '"personality":{}},{"context":"",' +
+      '"text":"minus","userValue":"","annotation":"",' +
+      '"personality":{}},{"context":"","text":"4",' +
+      '"userValue":"","annotation":"","personality":{}},' +
+      '{"context":"","text":"","userValue":"",' +
+      '"annotation":"","personality":{}},' +
       '{"context":"","text":"a","userValue":"","annotation":"",' +
-      '"correction":"italic","personality":{},"preprocess":false},' +
+      '"personality":{}},' +
       '{"context":"","text":"","userValue":"","annotation":"",' +
-      '"correction":"","personality":{},"preprocess":false},{"context":"",' +
-      '"text":"c","userValue":"","annotation":"","correction":"italic",' +
-      '"personality":{},"preprocess":false},{"context":"","text":"EndRoot",' +
-      '"userValue":"","annotation":"","correction":"","personality":{},' +
-      '"preprocess":false},{"context":"","text":"Over","userValue":"",' +
-      '"annotation":"","correction":"","personality":{},"preprocess":false},' +
+      '"personality":{}},{"context":"",' +
+      '"text":"c","userValue":"","annotation":"",' +
+      '"personality":{}},{"context":"","text":"EndRoot",' +
+      '"userValue":"","annotation":"","personality":{}},' +
+      '{"context":"","text":"Over","userValue":"",' +
+      '"annotation":"","personality":{}},' +
       '{"context":"","text":"2","userValue":"","annotation":"",' +
-      '"correction":"","personality":{},"preprocess":false},{"context":"",' +
-      '"text":"","userValue":"","annotation":"","correction":"",' +
-      '"personality":{},"preprocess":false},{"context":"","text":"a",' +
-      '"userValue":"","annotation":"","correction":"italic",' +
-      '"personality":{},"preprocess":false},{"context":"",' +
-      '"text":"EndFraction","userValue":"","annotation":"","correction":"",' +
-      '"personality":{},"preprocess":false}]',
+      '"personality":{}},{"context":"",' +
+      '"text":"","userValue":"","annotation":"",' +
+      '"personality":{}},{"context":"","text":"a",' +
+      '"userValue":"","annotation":"",' +
+      '"personality":{}},{"context":"",' +
+      '"text":"EndFraction","userValue":"","annotation":"",' +
+      '"personality":{}}]',
       JSON.stringify
   );
 };
@@ -536,9 +536,10 @@ sre.ApiTest.prototype.testToEnriched = function() {
 
 
 /**
- * Test for semantic tree API.
+ * Test for syntax walker API.
  */
-sre.ApiTest.prototype.testWalker = function() {
+sre.ApiTest.prototype.testSyntaxWalker = function() {
+  this.system.setupEngine({walker: 'Syntax'});
   var move = function(dir) {
     return sre.EventUtil.KeyCode[dir];
   };
@@ -577,4 +578,46 @@ sre.ApiTest.prototype.testWalker = function() {
   this.executeTest(
       'move', move('LEFT'),
       null);
+};
+
+
+/**
+ * Test for semantic walker API.
+ */
+sre.ApiTest.prototype.testSemanticWalker = function() {
+  var saveWalker = sre.Engine.getInstance().walker;
+  this.system.setupEngine({walker: 'Semantic'});
+  var move = function(dir) {
+    return sre.EventUtil.KeyCode[dir];
+  };
+  this.executeTest(
+      'walk',
+      sre.ApiTest.QUADRATIC,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+      'move', move('DOWN'),
+      'x');
+  this.executeTest(
+      'move', move('RIGHT'),
+      'equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+      'move', move('DOWN'),
+      'Numerator negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot');
+  this.executeTest(
+      'move', move('SPACE'),
+      'Level 2 Numerator');
+  this.executeTest(
+      'move', move('UP'),
+      'equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest(
+      'move', move('LEFT'),
+      'x');
+  this.executeTest(
+      'move', move('LEFT'),
+      null);
+  this.system.setupEngine({walker: saveWalker});
 };

@@ -29,7 +29,6 @@ goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
-//goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
@@ -51,7 +50,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '0.9.4';
+  this.version = '1.2.0';
 
 };
 goog.addSingletonGetter(sre.System);
@@ -109,7 +108,7 @@ sre.System.prototype.setupEngine = function(feature) {
     engine[feat] = feature[feat] || engine[feat];
   };
   var binaryFeatures = ['strict', 'cache', 'semantics'];
-  var stringFeatures = ['markup', 'style', 'domain', 'speech'];
+  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
   binaryFeatures.forEach(setIf);
@@ -125,7 +124,9 @@ sre.System.prototype.setupEngine = function(feature) {
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
-  engine.comparator = new sre.DynamicCstr.DefaultComparator(engine.dynamicCstr);
+  engine.comparator = new sre.DynamicCstr.DefaultComparator(
+      engine.dynamicCstr,
+      sre.DynamicProperties.create(['default'], ['short', 'default']));
 };
 
 
@@ -165,7 +166,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
 //  toSemantic: XML of semantic tree.
 //  toJson: Json version of the semantic tree.
 //  toEnriched: Enriched MathML node.
-//  toDescription: List of preprocessed auditory descriptions.
+//  toDescription: List of auditory descriptions.
 //
 // Output for the file version are strings.
 //
@@ -233,7 +234,6 @@ sre.System.prototype.toDescription = function(expr) {
     return [];
   }
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
 
@@ -248,13 +248,8 @@ sre.System.prototype.toEnriched = function(expr) {
   var root = sre.WalkerUtil.getSemanticRoot(enr);
   switch (sre.Engine.getInstance().speech) {
     case sre.Engine.Speech.SHALLOW:
-      var speech = sre.System.getInstance().toSpeech(expr);
-      root.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
-      // The following is how it should be done. But there are still some
-      // problems with tables and embellished elements that make rebuilt
-      // difficult.
-      //
-      // (new sre.AdhocSpeechGenerator()).getSpeech(root, enr);
+      var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
+      generator.getSpeech(root, enr);
       break;
     case sre.Engine.Speech.DEEP:
       var generator = sre.SpeechGeneratorFactory.generator('Tree');
@@ -448,7 +443,7 @@ sre.System.prototype.walk = function(expr) {
   var eml = new sre.SystemExternal.xmldom.XMLSerializer().
       serializeToString(node);
   sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      'Syntax', node, generator, highlighter, eml);
+      sre.Engine.getInstance().walker, node, generator, highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
 };
 

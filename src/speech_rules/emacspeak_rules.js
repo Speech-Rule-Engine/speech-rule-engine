@@ -92,11 +92,9 @@ sre.EmacspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
-  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
-  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -216,9 +214,10 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   // Font rules
   defineRule(
-      'font', 'emacspeak.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font!="normal"');
+      'font', 'mathspeak.default',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'emacspeak.default',
@@ -234,15 +233,17 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
       '@role!="unit"');
 
   defineRule(
-      'font-identifier', 'emacspeak.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      'font-identifier', 'mathspeak.default',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '@role!="unit"');
+      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
+      '@role!="unit"');
 
   defineRule(
-      'omit-font', 'emacspeak.default',
-      '[n] CQFhideFont; [t] CSFshowFont',
-      'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
+      'omit-font', 'mathspeak.default',
+      '[n] self::* (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   // Fraction
   defineRule(

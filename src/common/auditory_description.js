@@ -34,9 +34,7 @@ goog.require('sre.Engine');
  *          text: (string),
  *          userValue: (undefined|string),
  *          annotation: (undefined|string),
- *          correction: (undefined|string),
- *          personality: (undefined|Object),
- *          preprocess: (undefined|boolean)}} kwargs The arguments for this
+ *          personality: (undefined|Object)}} kwargs The arguments for this
  *  description.
  *  context The context, for example descriptions of objects
  *     that were crossed into, like "Toolbar" or "Menu Bar" or "List with
@@ -45,10 +43,7 @@ goog.require('sre.Engine');
  *     titles, labels, etc.
  *  userValue The text that the user has entered.
  *  annotation The role and state of the object.
- *  correction A string that can be exploited as correction of the text.
  *  personality Optional TTS personality to use for the text.
- *  preprocess Flag indicating if the text needs to be preprocessed for
- *     non-ASCII characters.
  * @constructor
  */
 sre.AuditoryDescription = function(kwargs) {
@@ -56,9 +51,31 @@ sre.AuditoryDescription = function(kwargs) {
   this.text = kwargs.text ? kwargs.text : '';
   this.userValue = kwargs.userValue ? kwargs.userValue : '';
   this.annotation = kwargs.annotation ? kwargs.annotation : '';
-  this.correction = kwargs.correction ? kwargs.correction : '';
   this.personality = kwargs.personality;
-  this.preprocess = !!kwargs.preprocess;
+};
+
+
+
+/**
+ * Create an auditory description from given components.
+ * @param {{context: (undefined|string),
+ *          text: (string),
+ *          userValue: (undefined|string),
+ *          annotation: (undefined|string),
+ *          correction: (undefined|string),
+ *          personality: (undefined|Object)}} kwargs The arguments for this
+ *  description.
+ * @param {{adjust: (undefined|boolean),
+ *          preprocess: (undefined|boolean),
+ *          correct: (undefined|boolean),
+ *          translate: (undefined|boolean)}=} opt_flag Flag to force grammar
+ *      processing options.
+ * @return {sre.AuditoryDescription} The newly created auditory description.
+ * @constructor
+ */
+sre.AuditoryDescription.create = function(kwargs, opt_flag) {
+  kwargs.text = sre.Grammar.getInstance().apply(kwargs.text, opt_flag || {});
+  return new sre.AuditoryDescription(kwargs);
 };
 
 
@@ -70,6 +87,28 @@ sre.AuditoryDescription.prototype.isEmpty = function() {
           this.text.length == 0 &&
           this.userValue.length == 0 &&
           this.annotation.length == 0);
+};
+
+
+/**
+ * Clones the Auditory description.
+ * @return {!sre.AuditoryDescription} The new description.
+ */
+sre.AuditoryDescription.prototype.clone = function() {
+  var personality;
+  if (this.personality) {
+    personality = {};
+    for (var key in this.personality) {
+      personality = this.personality[key];
+    }
+  }
+  return new sre.AuditoryDescription(
+      {context: this.context,
+        text: this.text,
+        userValue: this.userValue,
+        annotation: this.annotation,
+        personality: personality
+      });
 };
 
 
@@ -113,7 +152,6 @@ sre.AuditoryDescription.prototype.equals = function(that) {
  */
 sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
   var separator = opt_separator === '' ? '' : opt_separator || ' ';
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return sre.AuditoryDescription.toString_(descrs, separator);
 };
 
@@ -659,72 +697,6 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
       descrs.map(
       function(x) {return x.descriptionString();})).
       join(separator);
-};
-
-
-/**
- * Process a math expression into a string suitable for a speech engine.
- * @param {string} text Text representing a math expression.
- * @return {string} The string with a spoken version of the math expression.
- * @private
- */
-sre.AuditoryDescription.preprocessString_ = function(text) {
-  // TODO (sorge) Find a proper treatment of single numbers.
-  var engine = sre.Engine.getInstance();
-  if (engine.domain == 'mathspeak' && text.match(/^\d{1}$/)) {
-    return text;
-  }
-  var result = engine.evaluator(text, engine.dynamicCstr);
-  return result || text;
-};
-
-
-/**
- * Applies a corrective string to the given description text.
- * @param {string} text The original description text.
- * @param {string} correction The correction string to be applied.
- * @return {string} The cleaned up string.
- * @private
- */
-sre.AuditoryDescription.processCorrections_ = function(text, correction) {
-  if (!correction || !text) {
-    return text;
-  }
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {sre.AuditoryDescription} descr Description representing a single
- *     math expression.
- * @private
- */
-sre.AuditoryDescription.preprocessDescription_ = function(descr) {
-  if (descr.annotation) {
-    descr.text += ':' + descr.annotation;
-    descr.annotation = '';
-  }
-  if (descr.preprocess) {
-    descr.text = sre.AuditoryDescription.processCorrections_(
-        sre.AuditoryDescription.preprocessString_(descr.text),
-        descr.correction);
-    descr.preprocess = false;
-  }
-};
-
-
-/**
- * Preprocess the text of an auditory description if necessary.
- * @param {Array.<sre.AuditoryDescription>} descrList Description array
- *     representing a math expression.
- */
-sre.AuditoryDescription.preprocessDescriptionList = function(descrList) {
-  for (var i = 0, descr; descr = descrList[i]; i++) {
-    sre.AuditoryDescription.preprocessDescription_(descr);
-  }
 };
 
 

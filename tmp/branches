@@ -1,0 +1,21 @@
+master
+develop
+general_cleanup
+simplify_setup
+speech-css
+
+
+(exp ((average-pitch . "2") (pitch-range . "2"))
+     "StartFraction"
+     (((pitch-range . "3")) "x")
+     "Over"
+     (((pitch-range . "1")) "y")
+     "EndFraction"
+     )
+
+master
+develop
+diagram_project
+emacspeak_project
+moss_project
+

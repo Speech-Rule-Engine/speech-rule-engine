@@ -68,16 +68,15 @@ sre.CaseMultiscripts.prototype.getMathml = function() {
     sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
     this.mml.setAttribute(sre.EnrichMathml.Attribute.TYPE,
         ignore.role);
-    this.completeMultiscript(sre.EnrichMathml.interleaveIds(rsub, rsup), []);
+    this.completeMultiscript(
+        sre.SemanticSkeleton.interleaveIds(rsub, rsup), []);
   } else {
     var baseSem = this.semantic.childNodes[0];
     var rsup = sre.CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
-    if (!sre.EnrichMathml.simpleCollapseStructure(rsup)) {
-      var collapsed = [this.semantic.id, baseSem.id, rsup];
-      sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-    }
+    var collapsed = [this.semantic.id, baseSem.id, rsup];
+    sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
   }
-  var childIds = sre.EnrichMathml.collapsedLeafs(rsub || [], rsup);
+  var childIds = sre.SemanticSkeleton.collapsedLeafs(rsub || [], rsup);
   var base = sre.EnrichMathml.walkTree(
       /**@type {!sre.SemanticNode}*/(baseSem));
   sre.EnrichMathml.getInnerNode(base).setAttribute(

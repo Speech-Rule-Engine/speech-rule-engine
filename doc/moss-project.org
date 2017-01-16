@@ -107,12 +107,41 @@
 
 *** Again test speed trade-off!
 
+** Dynamic Constraints vs Property Test Sets
+
+*** What do we mean by this: Dynamic constraints are "fixed" to a rule. 
+    They are the one that are tested against the properties chosen by the user.
+    
+*** Property sets are values for dynamic constraints that can be selected by the user.
+    Dynamic constraints are then tested against that set.
+    
+*** Fallbacks are dynamic constraints that a rule set can use to control, if defaults
+
+**** This could get us tighter control, how we deal with fallbacks.
+
+**** We could completely get rid of the "default" fallback and always force explicit fallback definition.
+
+**** How does that work together with the strict setting?
+
+***** When do we use strict?
+
+***** If it is only used on particular sets, then they should not define fallbacks.
+
+***** Simply do not use fallbacks when in strict mode.
+
+** TODO Make rule definition robust against errors!
 
 * Trie design ideas:
 
 ** Usage
 
-*** Have on trie per rule store or per domain?
+*** Have one trie per rule store or per domain?
+
+**** One trie per rule store. They get the query and constraint function as static function.
+
+**** They get string matching with respect to axes for the dynamic constraints.
+
+**** add/delete/findRule are being run on the Trie.
 
 *** When combining rule sets, combine tries or rather search through list of tries?
    The former is probably too expensive and also might not make sense when swapping rule sets regularly.
@@ -122,9 +151,11 @@
 
 ** Design
 
-*** Trie starting with dynamic constraint?
+*** Trie starting with dynamic constraint? Yes
 
-*** Trie starting with query
+*** Trie starting with query? No
+
+*** Combine rule stores are to be replaced by a combined trie
 
 ** DataStructure
 
@@ -132,7 +163,11 @@
 
 **** Type (root, dynamic, query, boolean, rule = leaf?)
 
+
 ***** We should probably have a class per node type.
+      
+**** Leaf or Rule nodes are not necessary. Instead we have a abstract class of constraint nodes. 
+     They can have a single rule come off.
 
 **** SubType (string)
 
@@ -162,7 +197,89 @@
 
 *** Children implemented as Object.<string, node> where the string is the actual content.
 
-*** Retrieval gets all leave node under the last matching node.
+*** Lookup of rules
+
+**** Two types: Dynamic Constraint, Static Constraint
+
+**** For dynamic constraints: Use order, test each constraint against a list of constraints. 
+     E.g., [short, default].
+
+***** Child node is accepted, if it is a dynamic node and constraint is member of given constraint list
+
+***** or if it is a static node. 
+      This means we have a node that has a shorter dynamic constraint spec. 
+      These can be used as defaults.
+
+**** For static constraints: 
+
+***** Child nodes is accepted, if the test returns true.
+
+**** Collecting rules along the valid paths in the trie:
+
+***** If a matching (static) node contains a rule, it is collected.
 
 *** Depth and balancing might be interesting.
     We could effectively invert order of dynamic and static constraints. Not sure if that makes any sense.
+    
+    No, it does not. Better have some clever way of checking on the query
+    level. That is the bottle neck. E.g. try to only have tagname checks there (and *)
+    
+
+* Symbol mappings
+
+** Could be done with a trie. But at the moment it turns out to be more efficient to leave as is.
+   See the abandoned tweak_simple_stores branch for a failed attempt.
+
+** Maybe change mappings to contain entire dynamic constraints as they will get unwieldy with more axis.
+
+** Give them a standard order: i.e., keep default, style: short>default
+
+* Grammar structure
+
+** General idea
+
+*** Grammar elements are added and removed via personality annotations.
+
+*** Keywords are mapped to either a string or a boolean.
+
+*** XML element gets special grammar attribute with space separated list of keywords and strings, or boolean.
+    
+*** This way we can check in the rules if a grammatical case is applicable.
+
+**** This only works for the next level. Needs to be repeated, if necessary.
+     
+**** Alternative, always propagate the grammar attribute.
+
+*** Should work both for [n] and [m] nodes.
+
+** To subsume preprocess, correction, remove, sre_flag, font/hiddenfont, annotation:unit
+   Got rid of font, sre_flag, remove.
+
+** Singleton structure similar to global parameters
+
+*** Holds mappings of grammar keywords to either strings or booleans.
+
+*** Equipped with mappings to correction functions for certain grammar keywords.
+
+** Dispatch in extra grammar keyword in personality annotations.
+
+*** Test with determinant simple and hidden fonts.
+
+*** New grammar syntax in personality annotations:
+
+**** grammar:aa:bb="something":cc=@font:dd=CSFsomething:!ee
+     Note the overall separator is : as not to conflict with separators between
+     personality annotations.
+
+***** Adds boolean aa
+
+***** Adds bb with value something
+
+***** Adds cc with font name of the current node
+
+***** Adds dd with string computed by CSFsomething
+
+***** Removes ee 
+
+*** We might want to have special function for grammar checking instead of the grammar attribute
+    Check after integration with the Trie (WP1.3)

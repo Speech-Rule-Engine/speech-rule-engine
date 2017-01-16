@@ -30,6 +30,8 @@ goog.require('sre.DomUtil');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticSkeleton');
+goog.require('sre.SemanticSkeleton.Sexp');
 goog.require('sre.SemanticUtil');
 
 
@@ -340,19 +342,10 @@ sre.EnrichMathml.attachedElement_ = function(nodes) {
 
 
 /**
- * Type annotation to get around Closure parsing problems for functions as
- * optional parameters.
- * @typedef {function(!Element): boolean}
- * @private
- */
-sre.EnrichMathml.ElementTest_;
-
-
-/**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
  * @param {!Element} node The tree node from where to start.
- * @param {sre.EnrichMathml.ElementTest_=} opt_test The optional test that
+ * @param {(function(!Element): boolean)=} opt_test The optional test that
  *     stops path computation if it fires.
  * @return {!Array.<!Element>} Path from root to node. That is, node is the last
  *     element in the array and array contains at least the original node.
@@ -431,80 +424,16 @@ sre.EnrichMathml.parentNode_ = function(element) {
 };
 
 
-// TODO (sorge) Refactor collapsed structures into a dedicated class.
-/**
- * Type annotation for arrays representing collapsed node structures.
- * @typedef {number|Array.<sre.EnrichMathml.Collapsed_>}
- * @private
- */
-sre.EnrichMathml.Collapsed_;
-
-
-/**
- * Checks if the structure is simple, i.e., a single id number.
- * @param {sre.EnrichMathml.Collapsed_} strct The structure.
- * @return {boolean} True if a simple number.
- */
-sre.EnrichMathml.simpleCollapseStructure = function(strct) {
-  return (typeof strct === 'number');
-};
-
-
-/**
- * Interleaves the ids of two index lists.
- * @param {!sre.EnrichMathml.Collapsed_} first A structured list of
- *     ids.
- * @param {!sre.EnrichMathml.Collapsed_} second A structured list of
- *     ids.
- * @return {!sre.EnrichMathml.Collapsed_} A simple list of ids.
- */
-sre.EnrichMathml.interleaveIds = function(first, second) {
-  return sre.BaseUtil.interleaveLists(
-      sre.EnrichMathml.collapsedLeafs(first),
-      sre.EnrichMathml.collapsedLeafs(second));
-};
-
-
-/**
- * Returns a list of the leaf ids for the given collapsed structures.
- * @param {...sre.EnrichMathml.Collapsed_} var_args The collapsed structure
- *     annotations.
- * @return {!Array.<number>} The leafs of the structure annotations.
- */
-sre.EnrichMathml.collapsedLeafs = function(var_args) {
-  var collapseStructure = function(coll) {
-    if (sre.EnrichMathml.simpleCollapseStructure(coll)) {
-      return [coll];
-    }
-    return coll.slice(1);
-  };
-  return Array.prototype.slice.call(arguments, 0).
-      reduce(function(x, y) {
-        return x.concat(collapseStructure(y));
-      }, []);
-};
-
-
 /**
  * Adds a collapsed attribute to the given node, according to the collapsed
  * structure.
  * @param {!Element} node The MathML node.
- * @param {!sre.EnrichMathml.Collapsed_} collapsed The collapsed structure
+ * @param {!sre.SemanticSkeleton.Sexp} collapsed The collapsed structure
  *    annotations.
  */
 sre.EnrichMathml.addCollapsedAttribute = function(node, collapsed) {
-  /**
-   * @param {!sre.EnrichMathml.Collapsed_} struct Collapse structure.
-   * @return {!string} The structure as string.
-   */
-  var collapseString = function(struct) {
-    if (sre.EnrichMathml.simpleCollapseStructure(struct)) {
-      return struct.toString();
-    }
-    return '(' + struct.map(collapseString).join(' ') + ')';
-  };
-  node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED,
-                    collapseString(collapsed));
+  var skeleton = new sre.SemanticSkeleton(collapsed);
+  node.setAttribute(sre.EnrichMathml.Attribute.COLLAPSED, skeleton.toString());
 };
 
 

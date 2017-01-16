@@ -96,10 +96,12 @@ sre.Cli.prototype.commandLine = function() {
   try {
     if (commander.enumerate) {
       system.setupEngine({'mode': sre.Engine.Mode.SYNC});
-      var output = 'Domain options: ' +
-          sre.Engine.getInstance().allDomains.sort().join(', ') +
-          '\nStyle options:  ' +
-          sre.Engine.getInstance().allStyles.sort().join(', ');
+      var values = sre.Engine.getInstance().getAxisValues();
+      var output = '';
+      for (var axis in values) {
+        output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
+            values[axis].slice().sort().join(', ') + '\n';
+      }
       console.log(output);
       sre.SystemExternal.process.exit(0);
     }

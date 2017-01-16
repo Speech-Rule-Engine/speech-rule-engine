@@ -47,9 +47,9 @@ goog.inherits(sre.CaseMultiindex, sre.AbstractEnrichCase);
 /**
  * Completes the mmultiscript by adding missing None nodes and sorting out the
  * right order of children.
- * @param {!sre.EnrichMathml.Collapsed_} rightIndices The ids of the leaf
+ * @param {!sre.SemanticSkeleton.Sexp} rightIndices The ids of the leaf
  *     nodes of the right indices.
- * @param {!sre.EnrichMathml.Collapsed_} leftIndices The ids of the leaf
+ * @param {!sre.SemanticSkeleton.Sexp} leftIndices The ids of the leaf
  *     nodes of the left indices.
  * @protected
  */
@@ -110,7 +110,7 @@ sre.CaseMultiindex.createNone_ = function(semantic) {
  * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
  * punctuations.
  * @param {sre.SemanticNode} index The index node of a tensor.
- * @return {!sre.EnrichMathml.Collapsed_} If the index node was a
+ * @return {!sre.SemanticSkeleton.Sexp} If the index node was a
  *     dummy punctuation, i.e. consisted of more than one index, a list of
  *     strings for the collapsed structure is returned, otherwise the node id.
  * @protected
@@ -118,14 +118,14 @@ sre.CaseMultiindex.createNone_ = function(semantic) {
 sre.CaseMultiindex.multiscriptIndex = function(index) {
   if (index.type === sre.SemanticAttr.Type.PUNCTUATED &&
       index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
-    var role = index.role;
     var parentId = index.parent.id;
-    var childIds = [index.id];
+    var contentIds = index.contentNodes.map(function(x) {return x.id;});
+    contentIds.unshift('c');
+    var childIds = [index.id, contentIds];
     for (var i = 0, child; child = index.childNodes[i]; i++) {
       var mmlChild = sre.EnrichMathml.walkTree(child);
       var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
       innerNode.setAttribute(sre.EnrichMathml.Attribute.PARENT, parentId);
-      innerNode.setAttribute(sre.EnrichMathml.Attribute.ROLE, role);
       childIds.push(child.id);
     }
     return childIds;

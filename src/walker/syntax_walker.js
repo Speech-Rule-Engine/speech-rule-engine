@@ -36,43 +36,17 @@ goog.require('sre.WalkerUtil');
 sre.SyntaxWalker = function(node, generator, highlighter, xml) {
   sre.SyntaxWalker.base(this, 'constructor', node, generator, highlighter, xml);
 
+  /**
+   * Caching of levels.
+   * @type {!sre.Levels<string>}
+   */
+  this.levels = new sre.Levels();
+
+  this.levels.push([this.primaryId()]);
+
   this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
-
-
-/**
- * @return {!sre.Levels<!string>} Levels of strings.
- */
-sre.SyntaxWalker.prototype.initLevels = function() {
-  var levels = new sre.Levels();
-  levels.push([this.primaryId()]);
-  return levels;
-};
-
-
-/**
- * Creates a simple focus for a solitary node.
- * @param {!Node} node The node to focus.
- * @return {!sre.Focus} A focus containing only this node and the other
- *     properties of the old focus.
- * @private
- */
-sre.SyntaxWalker.prototype.singletonFocus_ = function(node) {
-  return new sre.Focus({nodes: [node], primary: node});
-};
-
-
-/**
- * Makes a singleton focus from an semantic id, if a corresponding node exits.
- * @param {string} id The semantic id.
- * @return {?sre.Focus} The singleton focus for the node.
- * @private
- */
-sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
-  var node = this.getBySemanticId(id);
-  return node ? this.singletonFocus_(node) : null;
-};
 
 
 /**
@@ -80,10 +54,10 @@ sre.SyntaxWalker.prototype.focusFromId_ = function(id) {
  */
 sre.SyntaxWalker.prototype.up = function() {
   sre.SyntaxWalker.base(this, 'up');
-  var parent = this.primaryAttribute(sre.EnrichMathml.Attribute.PARENT);
+  var parent = this.previousLevel();
   if (!parent) return null;
   this.levels.pop();
-  return this.focusFromId_(parent);
+  return this.singletonFocus(parent);
 };
 
 
@@ -92,11 +66,11 @@ sre.SyntaxWalker.prototype.up = function() {
  */
 sre.SyntaxWalker.prototype.down = function() {
   sre.SyntaxWalker.base(this, 'down');
-  var children = this.nextLevel_();
+  var children = this.nextLevel();
   if (children.length === 0) {
     return null;
   }
-  var focus = this.focusFromId_(children[0]);
+  var focus = this.singletonFocus(children[0]);
   if (focus) {
     this.levels.push(children);
   }
@@ -105,24 +79,40 @@ sre.SyntaxWalker.prototype.down = function() {
 
 
 /**
- * Computes the next lower level from children and content.
- * @return {!Array.<string>} The next lower level.
- * @private
+ * @override
  */
-sre.SyntaxWalker.prototype.nextLevel_ = function() {
-  var children = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CHILDREN));
-  var content = sre.WalkerUtil.splitAttribute(
-      this.primaryAttribute(sre.EnrichMathml.Attribute.CONTENT));
-  var primary = /** @type {!Node} */ (this.getFocus().getPrimary());
-  var type = sre.WalkerUtil.getAttribute(
-      primary, sre.EnrichMathml.Attribute.TYPE);
-  var role = sre.WalkerUtil.getAttribute(
-      primary, sre.EnrichMathml.Attribute.ROLE);
-  return sre.WalkerUtil.combineContentChildren(
-      /** @type {!sre.SemanticAttr.Type} */ (type),
-      /** @type {!sre.SemanticAttr.Role} */ (role),
-      content, children);
+sre.SyntaxWalker.prototype.combineContentChildren = function(
+    type, role, content, children) {
+  switch (type) {
+    case sre.SemanticAttr.Type.RELSEQ:
+    case sre.SemanticAttr.Type.INFIXOP:
+    case sre.SemanticAttr.Type.MULTIREL:
+      return sre.BaseUtil.interleaveLists(children, content);
+    case sre.SemanticAttr.Type.PREFIXOP:
+      return content.concat(children);
+    case sre.SemanticAttr.Type.POSTFIXOP:
+      return children.concat(content);
+    case sre.SemanticAttr.Type.MATRIX:
+    case sre.SemanticAttr.Type.VECTOR:
+    case sre.SemanticAttr.Type.FENCED:
+      children.unshift(content[0]);
+      children.push(content[1]);
+      return children;
+    case sre.SemanticAttr.Type.CASES:
+      children.unshift(content[0]);
+      return children;
+    case sre.SemanticAttr.Type.PUNCTUATED:
+      if (role === sre.SemanticAttr.Role.TEXT) {
+        return sre.BaseUtil.interleaveLists(children, content);
+      }
+      return children;
+    case sre.SemanticAttr.Type.APPL:
+      return [children[0], content[0], children[1]];
+    case sre.SemanticAttr.Type.ROOT:
+      return [children[1], children[0]];
+    default:
+      return children;
+  }
 };
 
 
@@ -133,7 +123,7 @@ sre.SyntaxWalker.prototype.left = function() {
   sre.SyntaxWalker.base(this, 'left');
   var index = this.levels.indexOf(this.primaryId()) - 1;
   var id = this.levels.get(index);
-  return id ? this.focusFromId_(id) : null;
+  return id ? this.singletonFocus(id) : null;
 };
 
 
@@ -144,15 +134,7 @@ sre.SyntaxWalker.prototype.right = function() {
   sre.SyntaxWalker.base(this, 'right');
   var index = this.levels.indexOf(this.primaryId()) + 1;
   var id = this.levels.get(index);
-  return id ? this.focusFromId_(id) : null;
-};
-
-
-/**
- * @override
- */
-sre.SyntaxWalker.prototype.getDepth = function() {
-  return this.levels.depth() - 1;
+  return id ? this.singletonFocus(id) : null;
 };
 
 
@@ -160,5 +142,5 @@ sre.SyntaxWalker.prototype.getDepth = function() {
  * @override
  */
 sre.SyntaxWalker.prototype.findFocusOnLevel = function(id) {
-  return this.focusFromId_(id.toString());
+  return this.singletonFocus(id.toString());
 };

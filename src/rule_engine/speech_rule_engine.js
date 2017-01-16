@@ -56,13 +56,6 @@ sre.SpeechRuleEngine = function() {
   this.activeStore_ = null;
 
   /**
-   * Object holding global parameters that can be set by the stores.
-   * @type {Object.<string, string>}
-   * @private
-   */
-  this.globalParameters_ = {};
-
-  /**
    * Caches speech strings by node id.
    * @type {Object.<string, !Array.<sre.AuditoryDescription>>}
    * @private
@@ -70,29 +63,6 @@ sre.SpeechRuleEngine = function() {
   this.cache_ = {};
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
-
-
-/**
- * Sets a global parameter in the speech rule engine's store.
- * @param {string} parameter The parameter name.
- * @param {string} value The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.setGlobalParameter = function(parameter, value) {
-  this.globalParameters_[parameter] = value;
-};
-
-
-//TODO: (MOSS) WP 1.4
-// Extend to Context structure
-//
-/**
- * Returns the a global parameter if it exists.
- * @param {string} parameter The parameter name.
- * @return {string} The parameter's value.
- */
-sre.SpeechRuleEngine.prototype.getGlobalParameter = function(parameter) {
-  return this.globalParameters_[parameter];
-};
 
 
 /**
@@ -197,7 +167,18 @@ sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
  * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
  */
 sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  return this.cache_[key];
+  var descr = this.cache_[key];
+  return descr ? this.cloneCache(descr) : descr;
+};
+
+
+/**
+ * Clones a list of auditory descriptions to insulate cache from changes.
+ * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The cloned list.
+ */
+sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
+  return descrs.map(function(x) {return x.clone();});
 };
 
 
@@ -209,10 +190,10 @@ sre.SpeechRuleEngine.prototype.getCache = function(key) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
-  if (!node.getAttribute) return;
+  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
   var id = node.getAttribute('id');
   if (id) {
-    this.cache_[id] = speech;
+    this.cache_[id] = this.cloneCache(speech);
   }
 };
 
@@ -265,10 +246,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       return result;
     }
   }
-  // TODO: (MOSS) Fix with order parsing.
-  var dynamicCstr = engine.dynamicCstr ||
-      this.activeStore_.parser.parse('default.default');
-  var rule = this.activeStore_.lookupRule(node, dynamicCstr);
+  sre.Grammar.getInstance().setAttribute(node);
+  var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
     result = this.activeStore_.evaluateDefault(node);
@@ -283,7 +262,11 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   result = [];
   for (var i = 0, component; component = components[i]; i++) {
     var descrs = [];
-    var content = component['content'] || '';
+    var content = component.content || '';
+    var attributes = component.attributes || {};
+    if (component.grammar) {
+      this.processGrammar(node, component.grammar);
+    }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
         var selected = this.activeStore_.applyQuery(node, content);
@@ -296,38 +279,39 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         if (selected.length > 0) {
           descrs = this.evaluateNodeList_(
               selected,
-              component['sepFunc'],
-              this.constructString(node, component['separator']),
-              component['ctxtFunc'],
-              this.constructString(node, component['context']));
+              attributes['sepFunc'],
+              this.constructString(node, attributes['separator']),
+              attributes['ctxtFunc'],
+              this.constructString(node, attributes['context']));
         }
         break;
       case sre.SpeechRule.Type.TEXT:
         selected = this.constructString(node, content);
         if (selected) {
-          descrs = [new sre.AuditoryDescription({text: selected})];
+          descrs = [sre.AuditoryDescription.create(
+              {text: selected}, {adjust: true})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
       default:
-        descrs = [new sre.AuditoryDescription({text: content})];
+        descrs = [sre.AuditoryDescription.create({text: content})];
     }
     // Adding overall context and annotation if they exist.
     if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
-      if (component['context']) {
+      if (attributes['context']) {
         descrs[0]['context'] =
-            this.constructString(node, component['context']) +
+            this.constructString(node, attributes['context']) +
             (descrs[0]['context'] || '');
       }
-      if (component['annotation']) {
-        descrs[0]['annotation'] = component['annotation'];
-      }
-      if (component['preprocess']) {
-        descrs[0]['preprocess'] = true;
+      if (attributes['annotation']) {
+        descrs[0]['annotation'] = attributes['annotation'];
       }
     }
+    if (component.grammar) {
+      sre.Grammar.getInstance().popState();
+    }
     // Adding personality to the auditory descriptions.
-    result = result.concat(this.addPersonality_(descrs, component));
+    result = result.concat(this.addPersonality_(descrs, attributes));
   }
   this.pushCache_(node, result);
   return result;
@@ -359,8 +343,8 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
   var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
   var sepClosure = sFunc ? sFunc(nodes, sep) :
-      function() {return new sre.AuditoryDescription({text: sep,
-        preprocess: true});};
+      function() {return sre.AuditoryDescription.create(
+      {text: sep}, {translate: true});};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
@@ -520,12 +504,12 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
   var combined = new sre.MathStore();
   for (var i = 0, store; store = ruleSets[i]; i++) {
     store.initialize();
-    combined.setSpeechRules(
-        combined.getSpeechRules().concat(store.getSpeechRules()));
+    store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
     combined.contextFunctions.addStore(store.contextFunctions);
     combined.customQueries.addStore(store.customQueries);
     combined.customStrings.addStore(store.customStrings);
   }
+  combined.setSpeechRules(combined.trie.collectRules());
   return combined;
 };
 
@@ -539,8 +523,22 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 500);
     return;
   }
-  var engine = sre.Engine.getInstance();
-  engine.allDomains = Object.keys(engine.axisValues[sre.Engine.Axis.DOMAIN]);
-  engine.allStyles = Object.keys(engine.axisValues[sre.Engine.Axis.STYLE]);
-  engine.evaluator = goog.bind(maps.store.lookupString, maps.store);
+  sre.Engine.getInstance().evaluator =
+      goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+/**
+ * Processes the grammar annotations of a rule.
+ * @param {!Node} node The node to which the rule is applied.
+ * @param {sre.Grammar.State} grammar The grammar annotations.
+ */
+sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
+  var assignment = {};
+  for (var key in grammar) {
+    var value = grammar[key];
+    assignment[key] = (typeof(value) === 'string') ?
+        this.constructString(node, value) : value;
+  }
+  sre.Grammar.getInstance().pushState(assignment);
 };
