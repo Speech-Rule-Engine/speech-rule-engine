@@ -186,7 +186,7 @@ sre.SpeechRule.Component.fromString = function(input) {
     var attributes = sre.SpeechRule.Component.attributesFromString(rest);
     if (attributes.grammar) {
       output.grammar = /** @type {!sre.Grammar.State} */
-      (attributes.grammar);
+          (attributes.grammar);
       delete attributes.grammar;
     }
     if (Object.keys(attributes).length) {
@@ -249,7 +249,6 @@ sre.SpeechRule.Component.prototype.getGrammar = function() {
 };
 
 
-
 /**
  * Defines attributes for a component of a speech rule.
  * @typedef {!Object.<string, string>}
@@ -279,8 +278,8 @@ sre.SpeechRule.Component.attributesFromString = function(attrs) {
       var key = attr.substring(0, colon).trim();
       var value = attr.slice(colon + 1).trim();
       attributes[key] = (key === 'grammar') ?
-        sre.SpeechRule.Component.grammarFromString(value) :
-        attributes[key] = value;
+          sre.SpeechRule.Component.grammarFromString(value) :
+          attributes[key] = value;
     }
   }
   return attributes;
@@ -296,7 +295,7 @@ sre.SpeechRule.Component.prototype.attributesToString = function() {
   if (grammar) {
     attribs.push('grammar:' + grammar);
   }
-  return attribs.length > 0 ? '(' + attribs.join(', ') + ')': '';
+  return attribs.length > 0 ? '(' + attribs.join(', ') + ')' : '';
 };
 
 
@@ -312,6 +311,7 @@ sre.SpeechRule.Component.prototype.getAttributes = function() {
   }
   return attribs;
 };
+
 
 
 /**

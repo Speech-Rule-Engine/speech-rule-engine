@@ -107,11 +107,11 @@ sre.MathmlRuleTest.prototype.testMathmlFont = function() {
                        'monospace plus sign');
 
   this.executeRuleTest(
-    '<mtext mathvariant="normal">therefore we have</mtext>',
-    'therefore we have');
+      '<mtext mathvariant="normal">therefore we have</mtext>',
+      'therefore we have');
   this.executeRuleTest(
-    '<mtext mathvariant="bold">therefore we have</mtext>',
-    'begin bold therefore we have end bold');
+      '<mtext mathvariant="bold">therefore we have</mtext>',
+      'begin bold therefore we have end bold');
 };
 
 
@@ -126,26 +126,23 @@ sre.MathmlRuleTest.prototype.testMathmlScript = function() {
   this.executeRuleTest('<msub><mi>Z</mi><mi>n</mi></msub>',
                        'latin capital letter z sub latin small letter n');
   this.executeRuleTest(
-    '<msubsup><mi>Z</mi><mi>n</mi><mi>r</mi></msubsup>',
-    'latin capital letter z sub latin small letter n super latin small' +
+      '<msubsup><mi>Z</mi><mi>n</mi><mi>r</mi></msubsup>',
+      'latin capital letter z sub latin small letter n super latin small' +
       ' letter r');
   this.executeRuleTest(
       '<munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>' +
       '<mo>&#x23DF;</mo></munder>',
-    'bottom curly bracket under latin small letter x plus sign latin small' +
+      'bottom curly bracket under latin small letter x plus sign latin small' +
       ' letter y');
   this.executeRuleTest(
       '<mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>' +
       '<mo>&#x23DE;</mo></mover>',
-    'top curly bracket over latin small letter x plus sign latin small' +
+      'top curly bracket over latin small letter x plus sign latin small' +
       ' letter y');
   this.executeRuleTest(
       '<munderover><mo>&#x222B;</mo><mn>0</mn><mi>&#x221E;</mi></munderover>',
-    'digit zero under and infinity over integral');
+      'digit zero under and infinity over integral');
 };
-
-
-
 
 
 /**
@@ -173,25 +170,25 @@ sre.MathmlRuleTest.prototype.testMathmlSpecialization = function() {
   this.executeRuleTest('<msup><mi>Z</mi><mn>2</mn></msup>',
                        'latin capital letter z square');
   this.executeRuleTest(
-    '<msup><mi>Z</mi><mrow><mn>2</mn></mrow></msup>',
-    'latin capital letter z square');
+      '<msup><mi>Z</mi><mrow><mn>2</mn></mrow></msup>',
+      'latin capital letter z square');
 
   this.executeRuleTest('<msup><mi>Z</mi><mn>3</mn></msup>',
                        'latin capital letter z cube');
   this.executeRuleTest(
-    '<msup><mi>Z</mi><mrow><mn>3</mn></mrow></msup>',
-    'latin capital letter z cube');
+      '<msup><mi>Z</mi><mrow><mn>3</mn></mrow></msup>',
+      'latin capital letter z cube');
 
   this.executeRuleTest(
-    '<msubsup><mi>Z</mi><mi>n</mi><mn>2</mn></msubsup>',
-    'latin capital letter z sub latin small letter n square');
+      '<msubsup><mi>Z</mi><mi>n</mi><mn>2</mn></msubsup>',
+      'latin capital letter z sub latin small letter n square');
   this.executeRuleTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mrow><mn>2</mn></mrow></msubsup>',
-    'latin capital letter z sub latin small letter n square');
+      'latin capital letter z sub latin small letter n square');
 
   this.executeRuleTest(
-    '<msubsup><mi>Z</mi><mi>n</mi><mn>3</mn></msubsup>',
-    'latin capital letter z sub latin small letter n cube');
+      '<msubsup><mi>Z</mi><mi>n</mi><mn>3</mn></msubsup>',
+      'latin capital letter z sub latin small letter n cube');
   this.executeRuleTest(
       '<msubsup><mi>Z</mi><mi>n</mi><mrow><mn>3</mn></mrow></msubsup>',
       'latin capital letter z sub latin small letter n cube');
@@ -207,29 +204,29 @@ sre.MathmlRuleTest.prototype.testMathmlMfencedSingleSep = function() {
   this.executeRuleTest(
       '<mfenced open="{" close="}" separators=";"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a semicolon latin small letter b' +
+      'left curly bracket latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c semicolon latin small letter d' +
       ' semicolon latin small letter e right curly bracket');
   this.executeRuleTest(
       '<mfenced close="}" separators=";"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a semicolon latin small letter b' +
+      'left parenthesis latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c semicolon latin small letter d' +
       ' semicolon latin small letter e right curly bracket');
   this.executeRuleTest(
       '<mfenced separators=";"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a semicolon latin small letter b' +
+      'left parenthesis latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c semicolon latin small letter d' +
       ' semicolon latin small letter e right parenthesis');
   this.executeRuleTest(
       '<mfenced open="{" separators=";"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a semicolon latin small letter b' +
+      'left curly bracket latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c semicolon latin small letter d' +
       ' semicolon latin small letter e right parenthesis');
 };
-  
+
 
 /**
  * Test MathML rules involving mfenced expressions.
@@ -239,25 +236,25 @@ sre.MathmlRuleTest.prototype.testMathmlMfencedSpaceSep = function() {
   this.executeRuleTest(
       '<mfenced open="{" close="}" separators=" "><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a latin small letter b latin' +
+      'left curly bracket latin small letter a latin small letter b latin' +
       ' small letter c latin small letter d latin small letter e right' +
       ' curly bracket');
   this.executeRuleTest(
       '<mfenced close="}" separators=" "><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a latin small letter b latin small' +
+      'left parenthesis latin small letter a latin small letter b latin small' +
       ' letter c latin small letter d latin small letter e right curly' +
       ' bracket');
   this.executeRuleTest(
       '<mfenced open="{" separators=" "><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a latin small letter b latin' +
+      'left curly bracket latin small letter a latin small letter b latin' +
       ' small letter c latin small letter d latin small letter e right' +
       ' parenthesis');
   this.executeRuleTest(
       '<mfenced separators=" "><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a latin small letter b latin small' +
+      'left parenthesis latin small letter a latin small letter b latin small' +
       ' letter c latin small letter d latin small letter e right parenthesis');
 };
 
@@ -270,25 +267,25 @@ sre.MathmlRuleTest.prototype.testMathmlMfencedEmptySep = function() {
   this.executeRuleTest(
       '<mfenced open="{" close="}" separators=""><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a latin small letter b latin' +
+      'left curly bracket latin small letter a latin small letter b latin' +
       ' small letter c latin small letter d latin small letter e right' +
       ' curly bracket');
   this.executeRuleTest(
       '<mfenced close="}" separators=""><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a latin small letter b latin small' +
+      'left parenthesis latin small letter a latin small letter b latin small' +
       ' letter c latin small letter d latin small letter e right curly' +
       ' bracket');
   this.executeRuleTest(
       '<mfenced open="{" separators=""><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a latin small letter b latin' +
+      'left curly bracket latin small letter a latin small letter b latin' +
       ' small letter c latin small letter d latin small letter e right' +
       ' parenthesis');
   this.executeRuleTest(
       '<mfenced separators=""><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a latin small letter b latin small' +
+      'left parenthesis latin small letter a latin small letter b latin small' +
       ' letter c latin small letter d latin small letter e right parenthesis');
 };
 
@@ -301,25 +298,25 @@ sre.MathmlRuleTest.prototype.testMathmlMfencedNoSep = function() {
   this.executeRuleTest(
       '<mfenced open="{" close="}"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a comma latin small letter b' +
+      'left curly bracket latin small letter a comma latin small letter b' +
       ' comma latin small letter c comma latin small letter d comma latin' +
       ' small letter e right curly bracket');
   this.executeRuleTest(
       '<mfenced close="}"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a comma latin small letter b comma' +
+      'left parenthesis latin small letter a comma latin small letter b comma' +
       ' latin small letter c comma latin small letter d comma latin small' +
       ' letter e right curly bracket');
   this.executeRuleTest(
       '<mfenced open="{"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a comma latin small letter b' +
+      'left curly bracket latin small letter a comma latin small letter b' +
       ' comma latin small letter c comma latin small letter d comma latin' +
       ' small letter e right parenthesis');
   this.executeRuleTest(
       '<mfenced><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a comma latin small letter b comma' +
+      'left parenthesis latin small letter a comma latin small letter b comma' +
       ' latin small letter c comma latin small letter d comma latin small' +
       ' letter e right parenthesis');
 };
@@ -333,25 +330,25 @@ sre.MathmlRuleTest.prototype.testMathmlMfencedMultipleSep = function() {
   this.executeRuleTest(
       '<mfenced open="{" close="}" separators=";;,"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a semicolon latin small letter b' +
+      'left curly bracket latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c comma latin small letter d comma' +
       ' latin small letter e right curly bracket');
   this.executeRuleTest(
       '<mfenced close="}" separators=";;,"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a semicolon latin small letter b' +
+      'left parenthesis latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c comma latin small letter d comma' +
       ' latin small letter e right curly bracket');
   this.executeRuleTest(
       '<mfenced open="{" separators=";;,"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left curly bracket latin small letter a semicolon latin small letter b' +
+      'left curly bracket latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c comma latin small letter d comma' +
       ' latin small letter e right parenthesis');
   this.executeRuleTest(
       '<mfenced separators=";;,"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>',
-    'left parenthesis latin small letter a semicolon latin small letter b' +
+      'left parenthesis latin small letter a semicolon latin small letter b' +
       ' semicolon latin small letter c comma latin small letter d comma' +
       ' latin small letter e right parenthesis');
 };
@@ -370,8 +367,8 @@ sre.MathmlRuleTest.prototype.testMathmlMtable = function() {
       ' letter b row 2column 1 latin capital letter c column 2 latin' +
       ' capital letter d');
   this.executeRuleTest(
-    '<mtr><mtd><mi>A</mi></mtd><mtd><mi>B</mi></mtd></mtr>',
-    'column 1 latin capital letter a column 2 latin capital letter b');
+      '<mtr><mtd><mi>A</mi></mtd><mtd><mi>B</mi></mtd></mtr>',
+      'column 1 latin capital letter a column 2 latin capital letter b');
   this.executeRuleTest('<mtd><mi>A</mi></mtd>',
                        'latin capital letter a');
 };

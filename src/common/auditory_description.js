@@ -55,6 +55,7 @@ sre.AuditoryDescription = function(kwargs) {
 };
 
 
+
 /**
  * Create an auditory description from given components.
  * @param {{context: (undefined|string),

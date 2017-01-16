@@ -105,6 +105,8 @@ sre.Grammar.prototype.setParameter_ = function(parameter, value) {
 
 
 /**
+ * Returns the value for a parameter.
+ * @param {string} parameter The parameter name.
  * @return {sre.Grammar.Value} Value of a parameter if it exists.
  */
 sre.Grammar.prototype.getParameter = function(parameter) {
@@ -259,20 +261,20 @@ sre.Grammar.translateString_ = function(text) {
  * preprocess: Only grammar preprocessing is performed.
  * correct: Only grammar corrections are performed.
  * translate: Text element is translated with math mappings.
- * 
+ *
  * @return {string} The transformed text.
  */
 sre.Grammar.prototype.apply = function(text, opt_flags) {
   var flags = opt_flags || {};
   text = (flags.adjust || flags.preprocess) ?
-    sre.Grammar.getInstance().preprocess(text) :
-    text;
+      sre.Grammar.getInstance().preprocess(text) :
+      text;
   if (this.parameters_['translate'] || flags.translate) {
     text = sre.Grammar.translateString_(text);
   }
   text = (flags.adjust || flags.correct) ?
-    sre.Grammar.getInstance().correct(text) :
-    text;
+      sre.Grammar.getInstance().correct(text) :
+      text;
   return text;
 };
 

@@ -108,7 +108,7 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
     tag = inter[3].toUpperCase();
     return function(node) {
       return node.localName && node.localName.toUpperCase() === tag &&
-        node.namespaceURI === namespace;};
+          node.namespaceURI === namespace;};
   }
   // @attr
   if (constraint.match(/^@\w+$/)) {

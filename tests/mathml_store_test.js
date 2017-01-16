@@ -91,7 +91,7 @@ sre.MathmlStoreTest.prototype.testMathmlEmpty = function() {
 sre.MathmlStoreTest.prototype.testMathmlToken = function() {
   this.executeStoreTest('<mi>x</mi>', 'mi');
   this.executeStoreTest('<mi mathvariant="normal" class="MathML-Unit">km</mi>',
-                       'unit');
+      'unit');
   this.executeStoreTest('<mn>1</mn>', 'mn');
   this.executeStoreTest('<mo>+</mo>', 'mo');
   this.executeStoreTest('<mtext>therefore we have</mtext>', 'mtext');
@@ -203,7 +203,7 @@ sre.MathmlStoreTest.prototype.testMathmlMfencedSingleSep = function() {
       '<mfenced close="}" separators=";"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-single');
 };
-  
+
 
 /**
  * Test MathML rules involving mfenced expressions.
@@ -279,7 +279,7 @@ sre.MathmlStoreTest.prototype.testMathmlMfencedMultipleSep = function() {
       '<mfenced separators=";;,"><mi>a</mi><mi>b</mi>' +
       '<mi>c</mi><mi>d</mi><mi>e</mi></mfenced>', 'mfenced-multi');
 };
-  
+
 
 /**
  * Test MathML rules involving matrix expressions.

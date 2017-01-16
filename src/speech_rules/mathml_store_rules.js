@@ -196,41 +196,42 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
       'string-length(string(@separators))=1');
   defineRule(
       'mfenced-single', 'default.default',
-      '[t] "(" (grammar:translate); [m] ./* (separator:@separators); [n] @close',
-    'self::mathml:mfenced', 'not(@open)', '@close',
-    'string-length(string(@separators))=1');
+      '[t] "(" (grammar:translate); [m] ./* (separator:@separators);' +
+      ' [n] @close',
+      'self::mathml:mfenced', 'not(@open)', '@close',
+      'string-length(string(@separators))=1');
   defineRule(
       'mfenced-single', 'default.default',
       '[t] "(" (grammar:translate); [m] ./* (separator:@separators);' +
       ' [t] ")" (grammar:translate)',
-    'self::mathml:mfenced', 'not(@open)', 'not(@close)',
-    'string-length(string(@separators))=1');
+      'self::mathml:mfenced', 'not(@open)', 'not(@close)',
+      'string-length(string(@separators))=1');
   defineRule(
       'mfenced-single', 'default.default',
       '[n] @open; [m] ./* (separator:@separators); [t] ")" (grammar:translate)',
-    'self::mathml:mfenced', '@open', 'not(@close)',
-    'string-length(string(@separators))=1');
+      'self::mathml:mfenced', '@open', 'not(@close)',
+      'string-length(string(@separators))=1');
 
   defineRule(
       'mfenced-omit', 'default.default',
       '[n] @open; [m] ./*; [n] @close',
-    'self::mathml:mfenced', '@separators', '@open', '@close',
-    'string(@separators)="" or string(@separators)=" "');
+      'self::mathml:mfenced', '@separators', '@open', '@close',
+      'string(@separators)="" or string(@separators)=" "');
   defineRule(
       'mfenced-omit', 'default.default',
       '[t] "(" (grammar:translate); [m] ./*; [n] @close',
-    'self::mathml:mfenced', '@separators', 'not(@open)', '@close',
-    'string(@separators)="" or string(@separators)=" "');
+      'self::mathml:mfenced', '@separators', 'not(@open)', '@close',
+      'string(@separators)="" or string(@separators)=" "');
   defineRule(
       'mfenced-omit', 'default.default',
       '[n] @open; [m] ./*; [t] ")" (grammar:translate)',
-    'self::mathml:mfenced', '@separators', '@open', 'not(@close)',
-    'string(@separators)="" or string(@separators)=" "');
+      'self::mathml:mfenced', '@separators', '@open', 'not(@close)',
+      'string(@separators)="" or string(@separators)=" "');
   defineRule(
       'mfenced-omit', 'default.default',
       '[t] "(" (grammar:translate); [m] ./*; [t] ")" (grammar:translate)',
-    'self::mathml:mfenced', '@separators', 'not(@open)', 'not(@close)',
-    'string(@separators)="" or string(@separators)=" "');
+      'self::mathml:mfenced', '@separators', 'not(@open)', 'not(@close)',
+      'string(@separators)="" or string(@separators)=" "');
 
   defineRule(
       'mfenced-comma', 'default.default',
@@ -246,14 +247,15 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
       'self::mathml:mfenced', '@open', 'not(@close)', 'not(@separators)');
   defineRule(
       'mfenced-comma', 'default.default',
-      '[t] "(" (grammar:translate); [m] ./* (separator:"comma"); [t] ")" (grammar:translate)',
+      '[t] "(" (grammar:translate); [m] ./* (separator:"comma");' +
+      ' [t] ")" (grammar:translate)',
       'self::mathml:mfenced', 'not(@open)', 'not(@close)', 'not(@separators)');
 
   defineRule(
       'mfenced-multi', 'default.default',
       '[n] @open;' +
       ' [m] ./* (sepFunc:CTXFmfSeparators, separator:@separators); [n] @close',
-      'self::mathml:mfenced', '@open', '@close', 
+      'self::mathml:mfenced', '@open', '@close',
       'string-length(string(@separators))>1');
   defineRule(
       'mfenced-multi', 'default.default',
