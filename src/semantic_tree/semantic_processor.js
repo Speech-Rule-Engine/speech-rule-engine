@@ -847,11 +847,11 @@ sre.SemanticProcessor.prototype.combineFencedContent_ = function(
  */
 sre.SemanticProcessor.FENCE_TO_PUNCT_ = {};
 sre.SemanticProcessor.FENCE_TO_PUNCT_[sre.SemanticAttr.Role.NEUTRAL] =
-  sre.SemanticAttr.Role.VBAR;
+    sre.SemanticAttr.Role.VBAR;
 sre.SemanticProcessor.FENCE_TO_PUNCT_[sre.SemanticAttr.Role.OPEN] =
-  sre.SemanticAttr.Role.OPENFENCE;
+    sre.SemanticAttr.Role.OPENFENCE;
 sre.SemanticProcessor.FENCE_TO_PUNCT_[sre.SemanticAttr.Role.CLOSE] =
-  sre.SemanticAttr.Role.CLOSEFENCE;
+    sre.SemanticAttr.Role.CLOSEFENCE;
 
 
 /**
@@ -1133,13 +1133,13 @@ sre.SemanticProcessor.prototype.getFunctionsInRow_ = function(
  */
 sre.SemanticProcessor.CLASSIFY_FUNCTION_ = {};
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.INTEGRAL] =
-  'integral';
+    'integral';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.SUM] =
-  'bigop';
+    'bigop';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.PREFIXFUNC] =
-  'prefix';
+    'prefix';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
-  'prefix';
+    'prefix';
 
 
 /**
@@ -1177,8 +1177,8 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
   }
   var kind = sre.SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
   return kind ? kind : (
-    sre.SemanticPred.isSimpleFunctionHead(funcNode) ? 'simple' : ''
-  );
+      sre.SemanticPred.isSimpleFunctionHead(funcNode) ? 'simple' : ''
+      );
 };
 
 
