@@ -23,6 +23,7 @@ goog.provide('sre.Engine');
 goog.provide('sre.Engine.Mode');
 
 goog.require('sre.BrowserUtil');
+goog.require('sre.DynamicCstr');
 
 
 
@@ -46,39 +47,19 @@ sre.Engine = function() {
   this.alternativeHost = null;
 
   /**
-   * Collates all values of the dynamic constraints.
-   * @type {!Object.<sre.Engine.Axis, !Object.<string, boolean>>}
-   */
-  this.axisValues = sre.Engine.makeAxisValueObject_();
-
-
-  /**
-   * @type {function(string, sre.DynamicCstr): string}
+   * @type {function(string, !sre.DynamicCstr): string}
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 
   /**
-   * @type {sre.DynamicCstr}
+   * @type {!sre.DynamicCstr}
    */
-  this.dynamicCstr = null;
+  this.dynamicCstr = sre.DynamicCstr.defaultCstr();
 
   /**
    * @type {sre.DynamicCstr.Comparator}
    */
   this.comparator = null;
-
-  // TODO (sorge) To remove.
-  /**
-   * List of domain names.
-   * @type {!Array.<string>}
-   */
-  this.allDomains = [];
-
-  /**
-   * List of style names.
-   * @type {!Array.<string>}
-   */
-  this.allStyles = [];
 
   /**
    * Current domain.
@@ -199,21 +180,6 @@ sre.Engine.Speech = {
 
 
 /**
- * Attributes for dynamic constraints.
- * We define one default attribute as style. Speech rule stores can add other
- * attributes later.
- * @enum {string}
- */
-sre.Engine.Axis = {
-  DOMAIN: 'domain',
-  STYLE: 'style',
-  LANGUAGE: 'language',
-  TOPIC: 'topic',
-  MODALITY: 'modality'
-};
-
-
-/**
  * Registers a predicate to test whether the setup of the engine is complete.
  * The basic idea is that different parts of the system that run asynchronously
  * can register a test here and the engine can check if it is set up without the
@@ -247,30 +213,11 @@ sre.Engine.prototype.setupBrowsers = function() {
 
 
 /**
- * Initialises an object for collecting all values per axis.
- * @return {!Object.<sre.Engine.Axis, !Object.<string, boolean>>} The
- *     nested object structure.
- * @private
- */
-sre.Engine.makeAxisValueObject_ = function() {
-  var result = {};
-  for (var axis in sre.Engine.Axis) {
-    result[sre.Engine.Axis[axis]] = {};
-  }
-  return result;
-};
-
-
-/**
- * @return {!Object.<sre.Engine.Axis, !Array.<string>>} The sets of values
+ * @return {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} The sets of values
  *     for all constraint attributes.
  */
 sre.Engine.prototype.getAxisValues = function() {
-  var result = {};
-  for (var key in this.axisValues) {
-    result[key] = Object.keys(this.axisValues[key]);
-  }
-  return result;
+  return sre.DynamicCstr.getAxisValues();
 };
 
 
