@@ -98,6 +98,18 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
     return function(node) {
       return node.tagName && sre.DomUtil.tagName(node) === tag;};
   }
+  // @self::namespace:tagname
+  if (constraint.match(/^self::\w+:\w+$/)) {
+    var inter = constraint.split(':');
+    var namespace = sre.XpathUtil.resolveNameSpace(inter[2]);
+    if (!namespace) {
+      return null;
+    }
+    tag = inter[3].toUpperCase();
+    return function(node) {
+      return node.localName && node.localName.toUpperCase() === tag &&
+          node.namespaceURI === namespace;};
+  }
   // @attr
   if (constraint.match(/^@\w+$/)) {
     var attr = constraint.slice(1);

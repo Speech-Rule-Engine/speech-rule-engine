@@ -288,14 +288,13 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       case sre.SpeechRule.Type.TEXT:
         selected = this.constructString(node, content);
         if (selected) {
-          descrs = [new sre.AuditoryDescription(
-              {text: selected,
-                correction: sre.Grammar.getInstance().getState()})];
+          descrs = [sre.AuditoryDescription.create(
+              {text: selected}, {adjust: true})];
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
       default:
-        descrs = [new sre.AuditoryDescription({text: content})];
+        descrs = [sre.AuditoryDescription.create({text: content})];
     }
     // Adding overall context and annotation if they exist.
     if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
@@ -306,9 +305,6 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       }
       if (attributes['annotation']) {
         descrs[0]['annotation'] = attributes['annotation'];
-      }
-      if (attributes['preprocess']) {
-        descrs[0]['preprocess'] = true;
       }
     }
     if (component.grammar) {
@@ -347,8 +343,8 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   var ctxtClosure = cFunc ? cFunc(nodes, cont) : function() {return cont;};
   var sFunc = this.activeStore_.contextFunctions.lookup(sepFunc);
   var sepClosure = sFunc ? sFunc(nodes, sep) :
-      function() {return new sre.AuditoryDescription({text: sep,
-        preprocess: true});};
+      function() {return sre.AuditoryDescription.create(
+      {text: sep}, {translate: true});};
   var result = [];
   for (var i = 0, node; node = nodes[i]; i++) {
     var descrs = this.evaluateTree_(node);
@@ -535,14 +531,14 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
 /**
  * Processes the grammar annotations of a rule.
  * @param {!Node} node The node to which the rule is applied.
- * @param {sre.SpeechRule.Grammar} grammar The grammar annotations.
+ * @param {sre.Grammar.State} grammar The grammar annotations.
  */
 sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
   var assignment = {};
   for (var key in grammar) {
     var value = grammar[key];
     assignment[key] = (typeof(value) === 'string') ?
-      this.constructString(node, value) : value;
+        this.constructString(node, value) : value;
   }
   sre.Grammar.getInstance().pushState(assignment);
 };

@@ -251,10 +251,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  * @private
  */
 sre.MathStore.prototype.evaluate_ = function(text) {
-  return new sre.AuditoryDescription(
-      {
-        'text': text,
-        'preprocess': true,
-        'correction': sre.Grammar.getInstance().getState()
-      });
+  return sre.AuditoryDescription.create(
+      {text: text}, {adjust: true, translate: true});
 };

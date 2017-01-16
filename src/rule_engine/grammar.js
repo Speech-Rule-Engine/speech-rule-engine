@@ -21,6 +21,8 @@
 
 goog.provide('sre.Grammar');
 
+goog.require('sre.Engine');
+
 
 
 /**
@@ -30,7 +32,7 @@ sre.Grammar = function() {
 
   /**
    * Grammatical annotations that need to be propagated.
-   * @type {Object.<string, sre.Grammar.Value>}
+   * @type {!sre.Grammar.State}
    * @private
    */
   this.parameters_ = {};
@@ -66,6 +68,13 @@ sre.Grammar.Value;
 
 
 /**
+ * Defines grammar attribute for a component of a speech rule.
+ * @typedef {!Object.<string, sre.Grammar.Value>}
+ */
+sre.Grammar.State;
+
+
+/**
  * @type {string}
  */
 sre.Grammar.ATTRIBUTE = 'grammar';
@@ -96,6 +105,8 @@ sre.Grammar.prototype.setParameter_ = function(parameter, value) {
 
 
 /**
+ * Returns the value for a parameter.
+ * @param {string} parameter The parameter name.
  * @return {sre.Grammar.Value} Value of a parameter if it exists.
  */
 sre.Grammar.prototype.getParameter = function(parameter) {
@@ -185,48 +196,125 @@ sre.Grammar.prototype.setAttribute = function(node) {
 
 
 /**
- * Applies a grammatical corrections to a given description text.
- * @param {string} state The saved state of the grammar.
+ * Applies a grammatical preprocessors to a given description text.
  * @param {string} text The original description text.
  * @return {string} The grammatically corrected string.
  */
-sre.Grammar.prototype.runCorrections = function(state, text) {
-  return this.runProcessors_(state, text, this.corrections_);
+sre.Grammar.prototype.preprocess = function(text) {
+  return this.runProcessors_(text, this.preprocessors_);
 };
 
 
 /**
- * Applies a grammatical preprocessors to a given description text.
- * @param {string} state The saved state of the grammar.
+ * Applies a grammatical corrections to a given description text.
  * @param {string} text The original description text.
  * @return {string} The grammatically corrected string.
  */
-sre.Grammar.prototype.runPreprocessors = function(state, text) {
-  return this.runProcessors_(state, text, this.preprocessors_);
+sre.Grammar.prototype.correct = function(text) {
+  return this.runProcessors_(text, this.corrections_);
 };
 
 
 /**
  * Applies a grammatical processors to a given description text.
- * @param {string} state The saved state of the grammar.
  * @param {string} text The original description text.
  * @param {Object.<string, Function>} funcs Dictionary of processor functions.
  * @return {string} The grammatically corrected string.
  * @private
  */
-sre.Grammar.prototype.runProcessors_ = function(state, text, funcs) {
-  var corrections = state.split(' ');
-  for (var i = 0, l = corrections.length; i < l; i++) {
-    var corr = corrections[i].split(':');
-    var key = corr[0];
+sre.Grammar.prototype.runProcessors_ = function(text, funcs) {
+  for (var key in this.parameters_) {
     var func = funcs[key];
     if (!func) {
       continue;
     }
-    var value = corr[1];
-    text = value ? func(text, value) : func(text);
+    var value = this.parameters_[key];
+    text = (value === true) ? func(text) : func(text, value);
   }
   return text;
+};
+
+
+/**
+ * Process a math expression into a string suitable for a speech engine.
+ * @param {string} text Text representing a math expression.
+ * @return {string} The string with a spoken version of the math expression.
+ * @private
+ */
+sre.Grammar.translateString_ = function(text) {
+  var engine = sre.Engine.getInstance();
+  return engine.evaluator(text, engine.dynamicCstr) || text;
+};
+
+
+/**
+ * Apply grammatical adjustments of the current state to a text string.
+ * @param {string} text The text string to be processed.
+ * @param {{adjust: (undefined|boolean),
+ *          preprocess: (undefined|boolean),
+ *          correct: (undefined|boolean),
+ *          translate: (undefined|boolean)}=} opt_flags Flags indicating
+ *     what adjustments should be carried out.
+ *
+ * Description of flags:
+ * adjust: All grammar adjustments are performed.
+ * preprocess: Only grammar preprocessing is performed.
+ * correct: Only grammar corrections are performed.
+ * translate: Text element is translated with math mappings.
+ *
+ * @return {string} The transformed text.
+ */
+sre.Grammar.prototype.apply = function(text, opt_flags) {
+  var flags = opt_flags || {};
+  text = (flags.adjust || flags.preprocess) ?
+      sre.Grammar.getInstance().preprocess(text) :
+      text;
+  if (this.parameters_['translate'] || flags.translate) {
+    text = sre.Grammar.translateString_(text);
+  }
+  text = (flags.adjust || flags.correct) ?
+      sre.Grammar.getInstance().correct(text) :
+      text;
+  return text;
+};
+
+
+/**
+ * Parses a state string that can be passed to the grammar.
+ * @param {string} stateStr The state string for the grammar.
+ * @return {sre.Grammar.State} The grammar structure.
+ */
+sre.Grammar.parseState = function(stateStr) {
+  var state = {};
+  var corrections = stateStr.split(' ');
+  for (var i = 0, l = corrections.length; i < l; i++) {
+    var corr = corrections[i].split(':');
+    var key = corr[0];
+    var value = corr[1];
+    state[key] = value ? value : true;
+  }
+  return state;
+};
+
+
+/**
+ * Processes the grammar annotations of a rule.
+ * @param {string} grammar The grammar annotations.
+ * @return {sre.Grammar.State} The grammar structure.
+ */
+sre.Grammar.parseInput = function(grammar) {
+  var attributes = {};
+  var components = grammar.split(':');
+  for (var i = 0, l = components.length; i < l; i++) {
+    var comp = components[i].split('=');
+    var key = comp[0].trim();
+    if (comp[1]) {
+      attributes[key] = comp[1].trim();
+      continue;
+    }
+    key.match(/^!/) ? attributes[key.slice(1)] = false : attributes[key] = true;
+  }
+  return attributes;
 };
 
 

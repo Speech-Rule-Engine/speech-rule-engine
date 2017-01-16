@@ -165,7 +165,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
 //  toSemantic: XML of semantic tree.
 //  toJson: Json version of the semantic tree.
 //  toEnriched: Enriched MathML node.
-//  toDescription: List of preprocessed auditory descriptions.
+//  toDescription: List of auditory descriptions.
 //
 // Output for the file version are strings.
 //
@@ -233,7 +233,6 @@ sre.System.prototype.toDescription = function(expr) {
     return [];
   }
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  sre.AuditoryDescription.preprocessDescriptionList(descrs);
   return descrs;
 };
 
