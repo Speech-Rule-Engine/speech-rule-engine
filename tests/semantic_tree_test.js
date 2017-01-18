@@ -10805,3 +10805,35 @@ sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
       '</fenced>'
   );
 };
+
+
+/**
+ * Trivially punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeFonts = function() {
+  this.executeTreeTest(
+    '<mi>A</mi>',
+    '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+    '<mi mathvariant="italic">A</mi>',
+    '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+    '<mi mathvariant="bold">A</mi>',
+    '<identifier role="latinletter" font="bold" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+    '<mi mathvariant="-tex-caligraphic">A</mi>',
+    '<identifier role="latinletter" font="caligraphic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+    '<mi mathvariant="-tex-oldstyle">A</mi>',
+    '<identifier role="latinletter" font="oldstyle" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+    '<mi>𝝖</mi>',
+    '<identifier role="greekletter" font="sans-serif-bold"' +
+      ' id="0">𝝖</identifier>'
+  );
+};

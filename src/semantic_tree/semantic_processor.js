@@ -2105,3 +2105,27 @@ sre.SemanticProcessor.propagateFencePointer_ = function(oldNode, newNode) {
   oldNode.fencePointer = newNode.fencePointer || newNode.id.toString();
   oldNode.embellished = null;
 };
+
+
+/**
+ * Maps mathjax font variants to semantic font names.
+ * @type {Object.<string, sre.SemanticAttr.Font>}
+ */
+sre.SemanticProcessor.MATHJAX_FONTS = {
+  '-tex-caligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
+  '-tex-caligraphic-bold': sre.SemanticAttr.Font.CALIGRAPHICBOLD,
+  '-tex-oldstyle': sre.SemanticAttr.Font.OLDSTYLE,
+  '-tex-oldstyle-bold': sre.SemanticAttr.Font.OLDSTYLEBOLD,
+  '-tex-mathit': sre.SemanticAttr.Font.ITALIC
+};
+
+
+/**
+ * Cleans font names of potential MathJax prefixes.
+ * @param {string} font The font name.
+ * @return {sre.SemanticAttr.Font} The clean name.
+ */
+sre.SemanticProcessor.prototype.font = function(font) {
+  var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
+  return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
+}
