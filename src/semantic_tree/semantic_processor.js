@@ -906,6 +906,9 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   // similar to an mrow. The only exception are ellipses, which we assume to be
   // in lieu of identifiers.
   // In addition we keep the single punctuation nodes as content.
+  if (nodes.length <= 1) {
+    return nodes;
+  }
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, function(x) {
         return sre.SemanticPred.isPunctuation(x) &&

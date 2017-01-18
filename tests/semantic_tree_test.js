@@ -10735,3 +10735,73 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
   );
 };
 
+
+/**
+ * Trivially punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
+  this.brief = false;
+  this.executeTreeTest(
+    '<mo>,</mo>',
+      '<punctuation role="comma" id="0">,</punctuation>'
+  );
+  this.executeTreeTest(
+    '<mo>,</mo><mo>,</mo>',
+    '<punctuated role="comma" id="2">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mo>,</mo><mo>;</mo>',
+      '<punctuated role="sequence" id="2">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="unknown" id="1">;</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="unknown" id="1">;</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mo>{</mo><mo>,</mo><mo>}</mo>',
+    '<fenced role="leftright" id="3">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="2">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</children>' +
+      '</fenced>'
+  );
+  this.executeTreeTest(
+      '<mo>{</mo><mo>,</mo><mo>,</mo><mo>}</mo>',
+    '<fenced role="leftright" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="3">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated role="comma" id="4">' +
+      '<content>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+};
