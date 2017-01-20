@@ -10246,7 +10246,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlActions = function() {
 /**
  * Expressions with semantic elements.
  */
-sre.EnrichMathmlTest.prototype.testSemanticsElement = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSemanticsElement = function() {
   this.executeMathmlTest(
       '<semantics></semantics>',
       '<math type="empty" role="unknown" id="0">' +
@@ -10293,7 +10293,7 @@ sre.EnrichMathmlTest.prototype.testSemanticsElement = function() {
 /**
  * Expressions with semantic elements and annotations.
  */
-sre.EnrichMathmlTest.prototype.testSemanticsAnnotation = function() {
+sre.EnrichMathmlTest.prototype.testMahtmlSemanticsAnnotation = function() {
   // This is not really legal markup.
   this.executeMathmlTest(
       '<semantics><annotation>something</annotation></semantics>',
@@ -10360,7 +10360,7 @@ sre.EnrichMathmlTest.prototype.testSemanticsAnnotation = function() {
 /**
  * Expressions with semantic elements and xml annotations.
  */
-sre.EnrichMathmlTest.prototype.testSemanticsAnnotationXml = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
   // This is not really legal markup.
   this.executeMathmlTest(
       '<semantics><annotation-xml><content>something</content>' +
@@ -10595,7 +10595,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
 /**
  * Binomial coefficients generated with fractions and redundant elements.
  */
-sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBinomialWithIgnores = function() {
   this.brief = false;
   this.executeMathmlTest(
       '<mfenced open="(" close=")"><mfrac linethickness="0">' +
@@ -10736,7 +10736,7 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
 /**
  * Binomial coefficient like elements, without fences.
  */
-sre.EnrichMathmlTest.prototype.testStreeBinomialOther = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBinomialOther = function() {
   this.brief = false;
   this.executeMathmlTest(
       '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',

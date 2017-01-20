@@ -293,7 +293,8 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
 sre.SemanticMathml.prototype.text_ = function(node, children) {
   return sre.SemanticProcessor.getInstance().text(
       node.textContent,
-      /** @type {sre.SemanticAttr.Font} */(node.getAttribute('mathvariant')),
+      sre.SemanticProcessor.getInstance().font(
+          node.getAttribute('mathvariant')),
       sre.DomUtil.tagName(node));
 };
 
@@ -308,7 +309,8 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
   return sre.SemanticProcessor.getInstance().identifierNode(
       node.textContent,
-      /** @type {sre.SemanticAttr.Font} */(node.getAttribute('mathvariant')),
+      sre.SemanticProcessor.getInstance().font(
+          node.getAttribute('mathvariant')),
       node.getAttribute('class'));
 };
 
@@ -482,8 +484,9 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.leaf_ = function(mml) {
-  return this.getFactory().makeLeafNode(mml.textContent,
-                                        mml.getAttribute('mathvariant'));
+  return this.getFactory().makeLeafNode(
+    mml.textContent,
+    sre.SemanticProcessor.getInstance().font(mml.getAttribute('mathvariant')));
 };
 
 
