@@ -47,11 +47,11 @@ goog.require('sre.Engine');
  * @constructor
  */
 sre.AuditoryDescription = function(kwargs) {
-  this.context = kwargs.context ? kwargs.context : '';
-  this.text = kwargs.text ? kwargs.text : '';
-  this.userValue = kwargs.userValue ? kwargs.userValue : '';
-  this.annotation = kwargs.annotation ? kwargs.annotation : '';
-  this.personality = kwargs.personality;
+  this.context = kwargs.context || '';
+  this.text = kwargs.text || '';
+  this.userValue = kwargs.userValue || '';
+  this.annotation = kwargs.annotation || '';
+  this.personality = kwargs.personality || {};
 };
 
 
@@ -449,6 +449,7 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
 };
 
 
+// TODO: Remove redundant markup and start/end pauses.
 /**
  * Translates a list of auditory descriptions into a string with SSML markup.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
@@ -457,32 +458,55 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
  * @private
  */
 sre.AuditoryDescription.toSableString_ = function(descrs, separator) {
+  sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100);
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  return sre.BaseUtil.removeEmpty(
-      markup.map(
-      function(x) {
-        if (x.string) {
-          return x.string;
+  var result = [];
+  var currentOpen = [];
+  for (var i = 0, descr; descr = markup[i]; i++) {
+    if (descr.string) {
+      result.push(descr.string);
+      continue;
+    }
+    if (sre.AuditoryDescription.isPauseElement_(descr)) {
+      result.push('<BREAK MSEC="' +
+                  descr[sre.Engine.personalityProps.PAUSE] + '"/>');
+      continue;
+    }
+    if (descr.close.length) {
+      for (var j = 0; j < descr.close.length; j++) {
+        var last = currentOpen.pop();
+        if (descr.close.indexOf(last) === -1) {
+          // TODO: Make this into a Engine error.
+          throw new Error('Unknown closing markup element: ' + last);
         }
-        if (sre.AuditoryDescription.isPauseElement_(x)) {
-          return '<break time="' +
-                x[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
-        }
-        return '';
-      })).
-    join(separator);
+        result.push('</' + last.toUpperCase() + '>');
+      }
+    }
+    if (descr.open.length) {
+      for (var k = 0, open; open = descr.open[k]; k++) {
+        result.push(sre.AuditoryDescription.translateSableTags(
+          open, descr[open]));
+        currentOpen.push(open);
+      }
+    }
+  }
+  return result.join(separator);
 };
 
 
-sre.AuditoryDescription.convertValue = function(value) {
-  
+sre.AuditoryDescription.translateSableTags = function(tag, value) {
+  value = sre.AuditoryDescription.scaleFunction(value);
+  switch (tag) {
+  case sre.Engine.personalityProps.PITCH:
+    return '<PITCH BASE="' + value + '%">';
+  case sre.Engine.personalityProps.RATE:
+    return '<RATE SPEED="' + value + '%">';
+  case sre.Engine.personalityProps.VOLUME:
+    return '<VOLUME LEVEL="' + value + '%">';
+  default:
+    return '<' + tag.toUpperCase() + ' VALUE="' + value + '">';
+  }
 };
-
-//
-// Factor out and optionally combine pauses.
-// Absolute markup: Whenever there is a change the absolute markup is used.
-// Relative markup: Whenever there is a change the relative markup is used.
-//
 
 
 /**

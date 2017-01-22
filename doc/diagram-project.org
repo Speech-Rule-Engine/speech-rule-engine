@@ -95,3 +95,13 @@ Notes from the Diagram project
     multiline equation 1st line a 2nd line b
 *** Correct MathSpeak rendering
     StartLayout 1st line a 2nd line b EndLayout
+
+* Speech Synthesis API:
+
+  synth = speechSynthesis;
+  ll = new SpeechSynthesisUtterance('hello');
+  ll.voice = synth.getVoices()[1];
+  synth.speak(ll);
+
+  ll.pitch = 2;
+  ll.rate = 3;
