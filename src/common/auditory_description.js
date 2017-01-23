@@ -165,10 +165,10 @@ sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
  */
 sre.AuditoryDescription.toString_ = function(descrs, separator) {
   switch (sre.Engine.getInstance().markup) {
-  case sre.Engine.Markup.SSML:
-    return sre.AuditoryDescription.toSsmlString_(descrs, separator);
   case sre.Engine.Markup.SABLE:
-    return sre.AuditoryDescription.toSableString_(descrs, separator);
+  case sre.Engine.Markup.SSML:
+  case sre.Engine.Markup.VOICEXML:
+    return sre.AuditoryDescription.toMarkupString_(descrs, separator);
   case sre.Engine.Markup.ACSS:
     return sre.AuditoryDescription.toAcssString_(descrs, separator);
   case sre.Engine.Markup.NONE:
@@ -179,18 +179,17 @@ sre.AuditoryDescription.toString_ = function(descrs, separator) {
 
 
 /**
- * Generates an error message depending on the output style.
- * @param {sre.EventUtil.KeyCode|string} key The keycode or direction of the
- *     move.
- * @return {?string} The error message or null.
+ * Translates a list of auditory descriptions into a simple string.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string.
+ * @private
  */
-sre.AuditoryDescription.error = function(key) {
-  switch (sre.Engine.getInstance().markup) {
-  case sre.Engine.Markup.ACSS:
-    return '(error "' + key + '")';
-  default:
-    return null;
-  }
+sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
+  return sre.BaseUtil.removeEmpty(
+      descrs.map(
+      function(x) {return x.descriptionString();})).
+      join(separator);
 };
 
 
@@ -216,7 +215,9 @@ sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
     }
     if (sre.AuditoryDescription.isPauseElement_(descr)) {
       if (string) {
-        pause = sre.AuditoryDescription.mergePause_(pause, descr, Math.max);
+        pause = sre.AuditoryDescription.mergePause_(
+          pause,
+          /** @type {{pause: number}} */(descr), Math.max);
       }
       continue;
     }
@@ -233,13 +234,24 @@ sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
 };
 
 
+/**
+ * Merges pause personality annotations.
+ * @param {?{pause: number}} oldPause Previous pause annotation.
+ * @param {{pause: number}} newPause New pause annotation.
+ * @param {(function(number, number): number)=} opt_merge Function to combine
+ *     pauses. By default we add them.
+ * @return {{pause: number}} A personality annotation with the merged pause
+ *     values.
+ * @private
+ */
 sre.AuditoryDescription.mergePause_ = function(oldPause, newPause, opt_merge) {
   if (!oldPause) {
     return newPause;
   }
   var merge = opt_merge || function(x, y) {return x + y;};
   return {pause: merge.call(null, oldPause.pause, newPause.pause)};
-}
+};
+
 
 /**
  * Merges new personality into the old personality markup.
@@ -262,22 +274,14 @@ sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
  * @private
  */
 sre.AuditoryDescription.PersonalityRanges_ = {};
-sre.AuditoryDescription.LastOpen = [];
 
-// /**
-//  * Translates a list of auditory descriptions into a string with recursive ACSS
-//  * markup. Currently returns an sexp for emacs speak.
-//  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
-//  * @param {string} separator The separator string.
-//  * @return {string} The generated string with ACSS markup.
-//  * @private
-//  */
-// sre.AuditoryDescription.toRelativeAcssString_ = function(descrs, separator) {
-//   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-//   sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
-//   var nested = sre.AuditoryDescription.nestedMarkup_(markup);
-//   return sre.AuditoryDescription.toSexp(nested);
-// };
+
+/**
+ * The range of personality annotations.
+ * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @private
+ */
+sre.AuditoryDescription.LastOpen_ = [];
 
 
 sre.AuditoryDescription.toSexp = function(markup) {
@@ -421,34 +425,7 @@ sre.AuditoryDescription.nestedMarkup_ = function(markup) {
 
 
 //TODO: (MOSS) WP2.3
-// Implement translations into SSML and CSS.
-// Cleaner than the hack for the NVDA/EmacsSpeak bridge!
-//
-/**
- * Translates a list of auditory descriptions into a string with SSML markup.
- * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
- * @param {string} separator The separator string.
- * @return {string} The generated string with SSML markup.
- * @private
- */
-sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
-  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
-  return sre.BaseUtil.removeEmpty(
-      markup.map(
-      function(x) {
-        if (x.string) {
-          return x.string;
-        }
-        if (sre.AuditoryDescription.isPauseElement_(x)) {
-          return '<break time="' +
-                x[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
-        }
-        return '';
-      })).
-    join(separator);
-};
-
-
+// Refactor into audio module.
 // TODO: Remove redundant markup and start/end pauses.
 /**
  * Translates a list of auditory descriptions into a string with SSML markup.
@@ -457,8 +434,12 @@ sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
  * @return {string} The generated string with SSML markup.
  * @private
  */
-sre.AuditoryDescription.toSableString_ = function(descrs, separator) {
+sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
   sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100);
+  var isSable = sre.Engine.getInstance().markup === sre.Engine.Markup.SABLE;
+  var tagFunction = isSable ?
+        sre.AuditoryDescription.translateSableTags :
+        sre.AuditoryDescription.translateSsmlTags;
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   var result = [];
   var currentOpen = [];
@@ -468,8 +449,12 @@ sre.AuditoryDescription.toSableString_ = function(descrs, separator) {
       continue;
     }
     if (sre.AuditoryDescription.isPauseElement_(descr)) {
-      result.push('<BREAK MSEC="' +
-                  descr[sre.Engine.personalityProps.PAUSE] + '"/>');
+      result.push(
+        '<BREAK ' +
+          (isSable ?
+           'MSEC="' + descr[sre.Engine.personalityProps.PAUSE] + '"/>' :
+           'TIME="' + descr[sre.Engine.personalityProps.PAUSE] + 'ms"/>')
+      );
       continue;
     }
     if (descr.close.length) {
@@ -479,13 +464,12 @@ sre.AuditoryDescription.toSableString_ = function(descrs, separator) {
           // TODO: Make this into a Engine error.
           throw new Error('Unknown closing markup element: ' + last);
         }
-        result.push('</' + last.toUpperCase() + '>');
+        result.push('</' + (isSable ? last.toUpperCase() : 'PROSODY') + '>');
       }
     }
     if (descr.open.length) {
       for (var k = 0, open; open = descr.open[k]; k++) {
-        result.push(sre.AuditoryDescription.translateSableTags(
-          open, descr[open]));
+        result.push(tagFunction(open, descr[open]));
         currentOpen.push(open);
       }
     }
@@ -494,6 +478,12 @@ sre.AuditoryDescription.toSableString_ = function(descrs, separator) {
 };
 
 
+/**
+ * Translates personality annotations into Sable tags.
+ * @param {sre.Engine.personalityProps} tag The personality for the tag name.
+ * @param {number} value The numeric value of the annotation.
+ * @return {string} The appropriate Sable tag.
+ */
 sre.AuditoryDescription.translateSableTags = function(tag, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
   switch (tag) {
@@ -510,6 +500,20 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
 
 
 /**
+ * Translates personality annotations into SSML prosody tags.
+ * @param {sre.Engine.personalityProps} attr The personality for the tag's
+ *    attribute.
+ * @param {number} value The numeric value of the annotation.
+ * @return {string} The SSML prosody tag.
+ */
+sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
+  value = sre.AuditoryDescription.scaleFunction(value);
+  var valueStr = value < 0 ? value.toString() : '+' + value;
+  return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr + '%">';
+};
+
+
+/**
  * Computes a markup list. Careful this is destructive on the description list.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
  * @return {!Array.<string|Object>} Markup list.
@@ -517,7 +521,7 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
  */
 sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
   sre.AuditoryDescription.PersonalityRanges_ = {};
-  sre.AuditoryDescription.LastOpen = [];
+  sre.AuditoryDescription.LastOpen_ = [];
   var result = [];
   var currentPers = {};
   for (var i = 0, descr; descr = descrs[i]; i++) {
@@ -684,13 +688,13 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
     //
     var c = result.close.slice();
     while (c.length > 0) {
-      var lo = sre.AuditoryDescription.LastOpen.pop();
+      var lo = sre.AuditoryDescription.LastOpen_.pop();
       var loNew = sre.BaseUtil.setdifference(lo, c);
       c = sre.BaseUtil.setdifference(c, lo);
       lo = loNew;
       if (c.length === 0) {
         if (lo.length !== 0) {
-          sre.AuditoryDescription.LastOpen.push(lo);
+          sre.AuditoryDescription.LastOpen_.push(lo);
         }
         continue;
       }
@@ -703,24 +707,9 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
         result[open] = old[open];
       }
     }
-    sre.AuditoryDescription.LastOpen.push(result.open);
+    sre.AuditoryDescription.LastOpen_.push(result.open);
   }
   return result;
-};
-
-
-/**
- * Translates a list of auditory descriptions into a simple string.
- * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
- * @param {string} separator The separator string.
- * @return {string} The generated string.
- * @private
- */
-sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
-  return sre.BaseUtil.removeEmpty(
-      descrs.map(
-      function(x) {return x.descriptionString();})).
-      join(separator);
 };
 
 
@@ -743,7 +732,6 @@ sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
  * @param {Array.<string>} strs The description strings.
  * @return {string} A single string.
  */
-
 sre.AuditoryDescription.mergeStrings = function(strs) {
   switch (sre.Engine.getInstance().markup) {
   case sre.Engine.Markup.ACSS:
@@ -755,3 +743,21 @@ sre.AuditoryDescription.mergeStrings = function(strs) {
     return strs.join(' ');
   }
 };
+
+
+/**
+ * Generates an error message depending on the output style.
+ * @param {sre.EventUtil.KeyCode|string} key The keycode or direction of the
+ *     move.
+ * @return {?string} The error message or null.
+ */
+sre.AuditoryDescription.error = function(key) {
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.ACSS:
+    return '(error "' + key + '")';
+  default:
+    return null;
+  }
+};
+
+
