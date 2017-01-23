@@ -269,28 +269,17 @@ sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
 
 
 /**
- * The range of personality annotations.
- * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
- * @private
+ * Transforms a markup list into an S-expression suitable for Emacspeak.
+ * @param {Array.<sre.AuditoryDescription>} markup The markup list.
+ * @return {string} The S-expression markup together with the appropriate ranges
+ *    and averages for pitch.
  */
-sre.AuditoryDescription.PersonalityRanges_ = {};
-
-
-/**
- * The range of personality annotations.
- * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
- * @private
- */
-sre.AuditoryDescription.LastOpen_ = [];
-
-
 sre.AuditoryDescription.toSexp = function(markup) {
   var pitches = sre.AuditoryDescription.PersonalityRanges_[
     sre.Engine.personalityProps.PITCH];
   var range = !pitches ? 0 :
         sre.AuditoryDescription.scaleFunction(Math.max.apply(null, pitches)) -
         sre.AuditoryDescription.scaleFunction(Math.min.apply(null, pitches));
-  //var adjust = Math.round(range * 100) / 100;
   var adjust = Math.round(range);
   var result = '(exp ((average-pitch . 5) (pitch-range . ' + adjust + ')) ';
   result += sre.AuditoryDescription.sexpList(markup);
@@ -302,6 +291,7 @@ sre.AuditoryDescription.sexpList = function(markup) {
   var result = [];
   while (markup.length > 0) {
     var first = markup.shift();
+    // Do we need this case?
     if (first instanceof Array) {
       result.push(sre.AuditoryDescription.sexpList(first));
       continue;
@@ -323,6 +313,12 @@ sre.AuditoryDescription.sexpList = function(markup) {
 };
 
 
+/**
+ * Transforms a prosody element into an S-expression.
+ * @param {Object.<string, number>} pros The prosody element.
+ * @return {string} The S-expression.
+ * @private
+ */
 sre.AuditoryDescription.sexpProsody_ = function(pros) {
   var keys = pros.open;
   var result = [];
@@ -333,6 +329,13 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
 };
 
 
+/**
+ * Transforms a prosody key value pair into an S-expression.
+ * @param {string} key The prosody name.
+ * @param {number} value The prosody value.
+ * @return {string} The S-expression.
+ * @private
+ */
 sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
   value = Math.round(value);
@@ -346,81 +349,19 @@ sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
     return '(stress . ' + value + ')';
     break;
   }
+  return '(value . ' + value + ')';
 };
 
 
+
+/**
+ * Translates a pause into its corresponding S-expression.
+ * @param {{pause: number}} pause A pause element.
+ * @return {string} The S-expression.
+ * @private
+ */
 sre.AuditoryDescription.sexpPause_ = function(pause) {
   return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
-};
-
-
-// Nests expressions and combines strings as much as possible.
-sre.AuditoryDescription.nestedMarkup_ = function(markup) {
-  var result = [];
-  var current = result;
-  var recurse = function(previous) {
-    while (markup.length > 0 &&
-           !sre.AuditoryDescription.isMarkupElement_(markup[0])) {
-      current.push(markup.shift());
-    }
-    if (markup.length === 0) return;
-    var first = markup[0];
-    if (first.close && first.close.length > 0) {
-      // let ol = current[0].open
-      // let cl = first.close 
-      // if ol \ cl != {} then rewrite current.
-      // if cl \ ol != {} then add cl\ol to markup.
-      //
-      var ol = current[0].open;
-      var cl = first.close;
-
-      diff = sre.BaseUtil.setdifference(cl, ol);
-      if (diff.length > 0) {
-        current.push({close: ol});
-        first.close = diff;
-        return;
-      }
-
-      current.push({close: first.close});
-
-      var diff = sre.BaseUtil.setdifference(ol, cl);
-      if (diff.length > 0) {
-        var newFirst = {open: diff};
-        for (var i = 0, key; key = diff[i]; i++) {
-          newFirst[key] = current[0][key];
-          delete current[0][key];
-        }
-        current[0].open = cl;
-        current = [newFirst, current];
-        previous.pop();
-        previous.push(current);
-        delete first.close;
-        if (first.open.length === 0) {
-          markup.shift();
-        }
-        recurse(previous);
-        return;
-      }
-
-      delete first.close;
-      if (first.open.length === 0) {
-        markup.shift();
-      }
-      current = previous;
-      return;
-    }
-    if (first.open.length > 0) {
-      var start = [markup.shift()];
-      current.push(start);
-      previous = current;
-      current = start;
-      recurse(previous);
-      current = previous;
-    }
-    recurse(previous);
-  };
-  recurse(current);
-  return result;
 };
 
 
@@ -478,6 +419,7 @@ sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
 };
 
 
+// TODO: Include personality range computations.
 /**
  * Translates personality annotations into Sable tags.
  * @param {sre.Engine.personalityProps} tag The personality for the tag name.
@@ -511,6 +453,49 @@ sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
   var valueStr = value < 0 ? value.toString() : '+' + value;
   return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr + '%">';
 };
+
+
+/**
+ * A scale function that can be set by the next method.
+ * @param {number} value The value to be scaled.
+ * @return {number} The scaled value.
+ */
+sre.AuditoryDescription.scaleFunction = function(value) {
+  return value;
+};
+
+
+/**
+ * Sets the scale function to scale from interval [a, b] to [c, d].
+ * @param {number} a Lower boundary of source interval.
+ * @param {number} b Upper boundary of source interval.
+ * @param {number} c Lower boundary of target interval.
+ * @param {number} d Upper boundary of target interval.
+ */
+sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
+  sre.AuditoryDescription.scaleFunction = function(x) {
+    var delta = (x - a) / (b - a);
+    return c * (1 - delta) + d * delta;
+  };
+};
+
+
+// The procedure transforms lists of descriptions into the internal format of
+// markup elements.
+/**
+ * The range of personality annotations in the current list of descriptions.
+ * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @private
+ */
+sre.AuditoryDescription.PersonalityRanges_ = {};
+
+
+/**
+ * The range of personality annotations.
+ * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @private
+ */
+sre.AuditoryDescription.LastOpen_ = [];
 
 
 /**
@@ -626,7 +611,6 @@ sre.AuditoryDescription.appendMarkup_ = function(
 };
 
 
-
 /**
  * Compute the difference of two personality annotations.
  * @param {!Object.<sre.Engine.personalityProps, number>} current The current
@@ -710,20 +694,6 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
     sre.AuditoryDescription.LastOpen_.push(result.open);
   }
   return result;
-};
-
-
-/**
- * The scale function.
- * @type {function(number): number}
- */
-sre.AuditoryDescription.scaleFunction = function(x) {return x;};
-
-sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
-  sre.AuditoryDescription.scaleFunction = function(x) {
-    var delta = (x - a) / (b - a);
-    return c * (1 - delta) + d * delta;
-  };
 };
 
 
