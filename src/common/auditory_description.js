@@ -451,7 +451,8 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
 sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
   var valueStr = value < 0 ? value.toString() : '+' + value;
-  return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr + '%">';
+  return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
+    (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
 };
 
 
