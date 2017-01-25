@@ -288,6 +288,8 @@ sre.AuditoryDescription.toSexp = function(markup) {
 
 
 sre.AuditoryDescription.sexpList = function(markup) {
+  console.log(markup);
+  
   var result = [];
   while (markup.length > 0) {
     var first = markup.shift();
@@ -331,7 +333,7 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
 
 /**
  * Transforms a prosody key value pair into an S-expression.
- * @param {string} key The prosody name.
+ * @param {sre.Engine.personalityProps} key The prosody name.
  * @param {number} value The prosody value.
  * @return {string} The S-expression.
  * @private
