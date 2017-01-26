@@ -288,8 +288,6 @@ sre.AuditoryDescription.toSexp = function(markup) {
 
 
 sre.AuditoryDescription.sexpList = function(markup) {
-  console.log(markup);
-  
   var result = [];
   while (markup.length > 0) {
     var first = markup.shift();
@@ -411,13 +409,42 @@ sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
       }
     }
     if (descr.open.length) {
-      for (var k = 0, open; open = descr.open[k]; k++) {
-        result.push(tagFunction(open, descr[open]));
-        currentOpen.push(open);
-      }
+      var open = sre.AuditoryDescription.sortClose(
+          descr.open.slice(), markup.slice(i + 1));
+      open.forEach(function(o) {
+        result.push(tagFunction(o, descr[o]));
+        currentOpen.push(o);
+      });
     }
   }
   return result.join(separator);
+};
+
+
+/**
+ * Sorts a list of opening tags by order of which is closed last.
+ * If more than two elements are opened at the same, we need to look ahead in
+ * which order they will be closed.
+ * @param {!Array.<sre.Engine.personalityProps>} open The list of opening tags.
+ * @param {Array.<sre.AuditoryDescription>} descrs The rest descriptions.
+ * @return {!Array.<sre.Engine.personalityProps>} The sorted array.
+ */
+sre.AuditoryDescription.sortClose = function(open, descrs) {
+  if (open.length <= 1) {
+    return open;
+  }
+  var result = [];
+  for (var i = 0, descr; descr = descrs[i], open.length; i++) {
+    if (!descr.close || !descr.close.length) continue;
+    descr.close.forEach(function(x) {
+      var index = open.indexOf(x);
+      if (index !== -1) {
+        result.unshift(x);
+        open.splice(index, 1);
+      }
+    });
+  }
+  return result;
 };
 
 
@@ -430,6 +457,7 @@ sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
  */
 sre.AuditoryDescription.translateSableTags = function(tag, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
+  value = Math.round(value);
   switch (tag) {
   case sre.Engine.personalityProps.PITCH:
     return '<PITCH BASE="' + value + '%">';
@@ -452,6 +480,7 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
  */
 sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
+  value = Math.round(value);
   var valueStr = value < 0 ? value.toString() : '+' + value;
   return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
     (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');

@@ -46,8 +46,7 @@ goog.inherits(sre.MarkupTest, sre.AbstractTest);
  * @override
  */
 sre.MarkupTest.prototype.setUpTest = function() {
-  sre.System.getInstance().setupEngine(
-      {semantics: true, domain: 'default', style: 'short'});
+  sre.System.getInstance().setupEngine({domain: 'default', style: 'short'});
 };
 
 
@@ -55,15 +54,16 @@ sre.MarkupTest.prototype.setUpTest = function() {
  * @override
  */
 sre.MarkupTest.prototype.tearDownTest = function() {
-  sre.Engine.getInstance().semantics = false;
+  sre.System.getInstance().setupEngine(
+    {semantics: false, markup: sre.Engine.Markup.NONE});
 };
 
 
 /**
  * The quadratic equation as a MathML string.
- * @type {!Node}
+ * @type {string}
  */
-sre.MarkupTest.QUADRATIC = sre.DomUtil.parseInput(
+sre.MarkupTest.QUADRATIC =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mi>x</mi>' +
     '<mo>=</mo>' +
@@ -88,21 +88,23 @@ sre.MarkupTest.QUADRATIC = sre.DomUtil.parseInput(
     '<mi>a</mi>' +
     '</mrow>' +
     '</mfrac>' +
-    '</math>');
+    '</math>';
 
 
 /**
  * Executes single markup tests.
- * @param {!Node} expr The input expression.
+ * @param {!string} expr The input expression.
  * @param {string} result The expected result.
  * @param {sre.Engine.Markup} markup The markup to test.
+ * @param {boolean} semantics As semantic markup or not.
  */
-sre.MarkupTest.prototype.executeTest = function(expr, result, markup) {
+sre.MarkupTest.prototype.executeTest = function(
+  expr, result, markup, semantics) {
   sre.Engine.getInstance().markup = markup;
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(expr);
+  sre.Engine.getInstance().semantics = semantics;
+  var descrs = sre.System.getInstance().toDescription(expr);
   var output = sre.AuditoryDescription.speechString(descrs);
   this.assert.equal(output, result);
-  sre.Engine.getInstance().markup = sre.Engine.Markup.NONE;
 };
 
 
@@ -114,7 +116,12 @@ sre.MarkupTest.prototype.testSimpleString = function() {
       sre.MarkupTest.QUADRATIC,
       'x equals start frac minus b plus minus Square root of b square minus' +
       ' four a c over two a end frac',
-      sre.Engine.Markup.NONE);
+      sre.Engine.Markup.NONE, false);
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC,
+      'x equals negative b plus minus Square root of b squared minus four' +
+      ' times a times c divided by two times a',
+      sre.Engine.Markup.NONE, true);
 };
 
 
@@ -124,8 +131,24 @@ sre.MarkupTest.prototype.testSimpleString = function() {
 sre.MarkupTest.prototype.testAcss = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
-      '(exp "x" (text ((richness . 5)) "equals") (pause . 200) "start frac" (text ((average-pitch . 6) (richness . 5)) "minus") (text ((average-pitch . 6)) "b") (text ((average-pitch . 6) (richness . 5)) "plus minus") (text ((average-pitch . 6)) "Square root of") (text ((average-pitch . 6) (richness . 6)) "b") (text ((average-pitch . 7) (richness . 6)) "square") (pause . 300) (text ((richness . 5) (average-pitch . 6)) "minus") (text ((average-pitch . 6) (richness . 6)) "four a c") (pause . 400) "over" (text ((average-pitch . 4)) "two a") (pause . 400) "end frac")',
-      sre.Engine.Markup.ACSS);
+      '(exp "x" (text ((richness . 5)) "equals") (pause . 200) "start frac"' +
+      ' (text ((average-pitch . 6) (richness . 5)) "minus") (text' +
+      ' ((average-pitch . 6)) "b") (text ((average-pitch . 6) (richness .' +
+      ' 5)) "plus minus") (text ((average-pitch . 6)) "Square root of")' +
+      ' (text ((average-pitch . 6) (richness . 6)) "b") (text' +
+      ' ((average-pitch . 7) (richness . 6)) "square") (pause . 300) (text' +
+      ' ((richness . 5) (average-pitch . 6)) "minus") (text ((average-pitch' +
+      ' . 6) (richness . 6)) "four a c") (pause . 400) "over" (text' +
+      ' ((average-pitch . 4)) "two a") (pause . 400) "end frac")',
+      sre.Engine.Markup.ACSS, false);
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC,
+      '(exp "x" (pause . 200) "equals" (pause . 450) (text ((richness . 6))' +
+      ' "negative b plus minus Square root of") (text ((richness . 7)) "b")' +
+      ' (text ((richness . 7) (average-pitch . 6)) "squared") (pause . 300)' +
+      ' (text ((richness . 7)) "minus four times a times c") (pause . 650)' +
+      ' "divided by" (text ((richness . 4)) "two times a"))',
+      sre.Engine.Markup.ACSS, true);
 };
 
 
@@ -135,9 +158,24 @@ sre.MarkupTest.prototype.testAcss = function() {
 sre.MarkupTest.prototype.testSable = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
-      'x equals start frac minus b plus minus Square root of b square minus' +
-      ' four a c over two a end frac',
-      sre.Engine.Markup.SABLE);
+      'x <RATE SPEED="-5%"> equals </RATE> <BREAK MSEC="200"/> start frac ' +
+      '<PITCH BASE="15%"> <RATE SPEED="-5%"> minus </RATE> b <RATE' +
+      ' SPEED="-5%"> plus minus </RATE> Square root of <RATE SPEED="10%"> b' +
+      ' </RATE> </PITCH> <RATE SPEED="10%"> <PITCH BASE="33%"> square ' +
+      '</PITCH> <PITCH BASE="15%"> <BREAK MSEC="300"/> </PITCH> </RATE> ' +
+      '<PITCH BASE="15%"> <RATE SPEED="5%"> minus </RATE> <RATE' +
+      ' SPEED="10%"> four a c </RATE> <BREAK MSEC="400"/> </PITCH> over ' +
+      '<PITCH BASE="-15%"> two a </PITCH> <BREAK MSEC="400"/> end frac',
+      sre.Engine.Markup.SABLE, false);
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC,
+      'x <BREAK MSEC="200"/> equals <BREAK MSEC="450"/> <RATE SPEED="18%">' +
+      ' negative b plus minus Square root of </RATE> <RATE SPEED="35%"> b ' +
+      '<PITCH BASE="18%"> squared </PITCH> <BREAK MSEC="300"/> minus four' +
+      ' times a times c </RATE> <RATE SPEED="18%"> <BREAK MSEC="650"/> ' +
+      '</RATE> divided by <RATE SPEED="-17%"> two times a </RATE> <BREAK' +
+      ' MSEC="400"/>',
+      sre.Engine.Markup.SABLE, true);
 };
 
 
@@ -147,9 +185,25 @@ sre.MarkupTest.prototype.testSable = function() {
 sre.MarkupTest.prototype.testSsml = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
-      'x equals start frac minus b plus minus Square root of b square minus' +
-      ' four a c over two a end frac',
-      sre.Engine.Markup.SSML);
+      'x <PROSODY RATE="-5%"> equals </PROSODY> <BREAK TIME="200ms"/> start' +
+      ' frac <PROSODY PITCH="+15%"> <PROSODY RATE="-5%"> minus </PROSODY> b' +
+      ' <PROSODY RATE="-5%"> plus minus </PROSODY> Square root of <PROSODY' +
+      ' RATE="+10%"> b </PROSODY> </PROSODY> <PROSODY RATE="+10%"> <PROSODY' +
+      ' PITCH="+33%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK' +
+      ' TIME="300ms"/> </PROSODY> </PROSODY> <PROSODY PITCH="+15%"> ' +
+      '<PROSODY RATE="+5%"> minus </PROSODY> <PROSODY RATE="+10%"> four a c' +
+      ' </PROSODY> <BREAK TIME="400ms"/> </PROSODY> over <PROSODY' +
+      ' PITCH="-15%"> two a </PROSODY> <BREAK TIME="400ms"/> end frac',
+      sre.Engine.Markup.SSML, false);
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC,
+      'x <BREAK TIME="200ms"/> equals <BREAK TIME="450ms"/> <PROSODY' +
+      ' RATE="+18%"> negative b plus minus Square root of </PROSODY> ' +
+      '<PROSODY RATE="+35%"> b <PROSODY PITCH="+18%"> squared </PROSODY> ' +
+      '<BREAK TIME="300ms"/> minus four times a times c </PROSODY> <PROSODY' +
+      ' RATE="+18%"> <BREAK TIME="650ms"/> </PROSODY> divided by <PROSODY' +
+      ' RATE="-17%"> two times a </PROSODY> <BREAK TIME="400ms"/>',
+      sre.Engine.Markup.SSML, true);
 };
 
 
@@ -160,7 +214,23 @@ sre.MarkupTest.prototype.testSsml = function() {
 sre.MarkupTest.prototype.testVoiceXml = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
-      'x equals start frac minus b plus minus Square root of b square minus' +
-      ' four a c over two a end frac',
-      sre.Engine.Markup.VOICEXML);
+      'x <PROSODY RATE="-5%"> equals </PROSODY> <BREAK TIME="200ms"/> start' +
+      ' frac <PROSODY PITCH="+15%"> <PROSODY RATE="-5%"> minus </PROSODY> b' +
+      ' <PROSODY RATE="-5%"> plus minus </PROSODY> Square root of <PROSODY' +
+      ' RATE="+10%"> b </PROSODY> </PROSODY> <PROSODY RATE="+10%"> <PROSODY' +
+      ' PITCH="+33%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK' +
+      ' TIME="300ms"/> </PROSODY> </PROSODY> <PROSODY PITCH="+15%"> ' +
+      '<PROSODY RATE="+5%"> minus </PROSODY> <PROSODY RATE="+10%"> four a c' +
+      ' </PROSODY> <BREAK TIME="400ms"/> </PROSODY> over <PROSODY' +
+      ' PITCH="-15%"> two a </PROSODY> <BREAK TIME="400ms"/> end frac',
+      sre.Engine.Markup.VOICEXML, false);
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC,
+      'x <BREAK TIME="200ms"/> equals <BREAK TIME="450ms"/> <PROSODY' +
+      ' RATE="+18%"> negative b plus minus Square root of </PROSODY> ' +
+      '<PROSODY RATE="+35%"> b <PROSODY PITCH="+18%"> squared </PROSODY> ' +
+      '<BREAK TIME="300ms"/> minus four times a times c </PROSODY> <PROSODY' +
+      ' RATE="+18%"> <BREAK TIME="650ms"/> </PROSODY> divided by <PROSODY' +
+      ' RATE="-17%"> two times a </PROSODY> <BREAK TIME="400ms"/>',
+      sre.Engine.Markup.VOICEXML, true);
 };
