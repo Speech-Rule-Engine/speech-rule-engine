@@ -280,7 +280,7 @@ sre.AuditoryDescription.toSexp = function(markup) {
   var range = !pitches ? 0 :
         sre.AuditoryDescription.scaleFunction(Math.max.apply(null, pitches)) -
         sre.AuditoryDescription.scaleFunction(Math.min.apply(null, pitches));
-  var adjust = Math.round(range);
+  var adjust = sre.AuditoryDescription.toFixed(range, 0);
   var result = '(exp ((average-pitch . 5) (pitch-range . ' + adjust + ')) ';
   result += sre.AuditoryDescription.sexpList(markup);
   return result + ')';
@@ -338,7 +338,7 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
  */
 sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
-  value = Math.round(value);
+  value = sre.AuditoryDescription.toFixed(value, 0);
   switch (key) {
   case sre.Engine.personalityProps.RATE:
     return '(richness . ' + value + ')';
@@ -457,7 +457,7 @@ sre.AuditoryDescription.sortClose = function(open, descrs) {
  */
 sre.AuditoryDescription.translateSableTags = function(tag, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
-  value = Math.round(value);
+  value = sre.AuditoryDescription.toFixed(value, 2);
   switch (tag) {
   case sre.Engine.personalityProps.PITCH:
     return '<PITCH BASE="' + value + '%">';
@@ -480,7 +480,7 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
  */
 sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
   value = sre.AuditoryDescription.scaleFunction(value);
-  value = Math.round(value);
+  value = sre.AuditoryDescription.toFixed(value, 2);
   var valueStr = value < 0 ? value.toString() : '+' + value;
   return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
     (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
@@ -726,6 +726,17 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
     sre.AuditoryDescription.LastOpen_.push(result.open);
   }
   return result;
+};
+
+
+/**
+ * Rounds a numerical value to a specified number of decimals.
+ * @param {number} number The value to round.
+ * @param {number} decimals Number of digits after the decimal point.
+ * @return {number} The result of rounding.
+ */
+sre.AuditoryDescription.toFixed = function(number, decimals) {
+  return +(Math.round(number + 'e+' + decimals) + 'e-' + decimals);
 };
 
 
