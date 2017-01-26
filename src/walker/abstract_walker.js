@@ -21,6 +21,7 @@
 
 goog.provide('sre.AbstractWalker');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
@@ -97,6 +98,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
 
   this.dummy_ = function() {};
 
@@ -107,15 +109,15 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */
   this.rootNode = sre.WalkerUtil.getSemanticRoot(node);
 
-  var rootId = this.rebuilt.stree.root.id.toString();
+  this.rootId = this.rebuilt.stree.root.id.toString();
   /**
    * The node that currently inspected. Initially this is the entire math
    * expression.
    * @type {!sre.Focus}
    * @private
    */
-  this.focus_ = sre.Focus.factory(rootId, [rootId], this.rebuilt, this.node);
-
+  this.focus_ = sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
+  
   /**
    * Flag indicating whether the last move actually moved focus.
    * @type {sre.AbstractWalker.move}
@@ -137,7 +139,8 @@ sre.AbstractWalker.move = {
   REPEAT: 'repeat',
   DEPTH: 'depth',
   ENTER: 'enter',
-  EXPAND: 'expand'
+  EXPAND: 'expand',
+  HOME: 'home'
 };
 
 
@@ -222,7 +225,7 @@ sre.AbstractWalker.prototype.speech = function() {
                 sre.SpeechGeneratorUtil.retrieveSpeech(this.xml, snode));
   }
   if (prefix) speech.unshift(prefix);
-  return speech.join(' ');
+  return sre.AuditoryDescription.mergeStrings(speech);
 };
 
 
@@ -236,9 +239,18 @@ sre.AbstractWalker.prototype.speech = function() {
  */
 sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   var primary = this.focus_.getDomPrimary();
-  var expand = (this.expandable(primary) && ' expandable') ||
-      (this.collapsible(primary) && ' collapsible') || '';
-  return 'Level ' + this.getDepth() + (prefix ? ' ' + prefix : '') + expand;
+  var expand = (this.expandable(primary) && 'expandable') ||
+        (this.collapsible(primary) && 'collapsible') || '';
+  var descr = [sre.AuditoryDescription.speechString(
+    [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
+                                  personality: {}})])];
+  if (prefix) {
+    descr.push(prefix);
+  }
+  if (expand) {
+    descr.push(expand);
+  }
+  return sre.AuditoryDescription.mergeStrings(descr);
 };
 
 
@@ -255,6 +267,9 @@ sre.AbstractWalker.prototype.move = function(key) {
     return false;
   }
   this.focus_ = focus;
+  if (this.moved === sre.AbstractWalker.move.HOME) {
+    this.levels = this.initLevels();
+  }
   return true;
 };
 
@@ -322,6 +337,17 @@ sre.AbstractWalker.prototype.repeat = function() {
 sre.AbstractWalker.prototype.depth = function() {
   this.moved = sre.AbstractWalker.move.DEPTH;
   return this.focus_.clone();
+};
+
+
+/**
+ * Moving to the home position.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.home = function() {
+  this.moved = sre.AbstractWalker.move.HOME;
+  return sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
 };
 
 
@@ -425,6 +451,13 @@ sre.AbstractWalker.prototype.restoreState = function() {
  * @return {sre.Focus} The focus on a particular level.
  */
 sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
+
+
+/**
+ * Returns a new, initialised level structure suitable for the walker.
+ * @return {!sre.Levels} The new level structure initialised with root focus.
+ */
+sre.AbstractWalker.prototype.initLevels = goog.abstractMethod;
 
 
 /**

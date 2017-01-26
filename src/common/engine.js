@@ -112,9 +112,9 @@ sre.Engine = function() {
 
   /**
    * Caching during speech generation.
-   * @type {boolean}
+   * @type {sre.Engine.Markup}
    */
-  this.ssml = false;
+  this.markup = sre.Engine.Markup.NONE;
 
   /**
    * Strict interpretations of rules and constraints.
@@ -176,6 +176,20 @@ sre.Engine.Speech = {
   NONE: 'none',
   SHALLOW: 'shallow',
   DEEP: 'deep'
+};
+
+
+/**
+ * Different markup formats for the speech output.
+ * Not all are supported yet.
+ * @enum {string}
+ */
+sre.Engine.Markup = {
+  NONE: 'none',
+  SSML: 'ssml',
+  ACSS: 'acss',
+  SABLE: 'sable',
+  VOICEXML: 'voicexml'
 };
 
 

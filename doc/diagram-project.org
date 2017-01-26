@@ -95,3 +95,16 @@ Notes from the Diagram project
     multiline equation 1st line a 2nd line b
 *** Correct MathSpeak rendering
     StartLayout 1st line a 2nd line b EndLayout
+
+* Speech Synthesis API:
+
+  synth = speechSynthesis;
+  ll = new SpeechSynthesisUtterance('hello');
+  ll.voice = synth.getVoices()[1];
+  synth.speak(ll);
+
+  ll.pitch = 2;
+  ll.rate = 3;
+
+
+  ll = new SpeechSynthesisUtterance('<speak>I have been assigned to handle your order status request.<express-as type="Apology"> I am sorry to inform you that the items you requested are back-ordered. We apologize for the inconvenience.</express-as><express-as type="Uncertainty"> We don\'t know when those items will become available. Maybe next week but we are not sure at this time.</express-as><express-as type="GoodNews">Because we want you to be a happy customer, management has decided to give you a 50% discount! </express-as></speak>');

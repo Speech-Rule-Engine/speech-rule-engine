@@ -541,7 +541,7 @@ sre.ApiTest.prototype.testToEnriched = function() {
 sre.ApiTest.prototype.testSyntaxWalker = function() {
   this.system.setupEngine({walker: 'Syntax'});
   var move = function(dir) {
-    return sre.EventUtil.KeyCode[dir].toString();
+    return sre.EventUtil.KeyCode[dir];
   };
   this.executeTest(
       'walk',
@@ -588,7 +588,7 @@ sre.ApiTest.prototype.testSemanticWalker = function() {
   var saveWalker = sre.Engine.getInstance().walker;
   this.system.setupEngine({walker: 'Semantic'});
   var move = function(dir) {
-    return sre.EventUtil.KeyCode[dir].toString();
+    return sre.EventUtil.KeyCode[dir];
   };
   this.executeTest(
       'walk',
