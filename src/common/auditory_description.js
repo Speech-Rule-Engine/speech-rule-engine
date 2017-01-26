@@ -202,7 +202,7 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  * @private
  */
 sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
-  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
+  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10, 0);
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   var result = [];
   var currentPers = {open: []};
@@ -256,7 +256,7 @@ sre.AuditoryDescription.mergePause_ = function(oldPause, newPause, opt_merge) {
 /**
  * Merges new personality into the old personality markup.
  * @param {Object} oldPers Old personality markup.
- * @param {Object|string} newPers New personality markup.
+ * @param {Object} newPers New personality markup.
  * @private
  */
 sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
@@ -265,51 +265,6 @@ sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
   newPers.open.forEach(function(x) {oldPers[x] = newPers[x];});
   var keys = Object.keys(oldPers);
   oldPers.open = keys;
-};
-
-
-/**
- * Transforms a markup list into an S-expression suitable for Emacspeak.
- * @param {Array.<sre.AuditoryDescription>} markup The markup list.
- * @return {string} The S-expression markup together with the appropriate ranges
- *    and averages for pitch.
- */
-sre.AuditoryDescription.toSexp = function(markup) {
-  var pitches = sre.AuditoryDescription.PersonalityRanges_[
-    sre.Engine.personalityProps.PITCH];
-  var range = !pitches ? 0 :
-        sre.AuditoryDescription.scaleFunction(Math.max.apply(null, pitches)) -
-        sre.AuditoryDescription.scaleFunction(Math.min.apply(null, pitches));
-  var adjust = Math.round(range);
-  var result = '(exp ((average-pitch . 5) (pitch-range . ' + adjust + ')) ';
-  result += sre.AuditoryDescription.sexpList(markup);
-  return result + ')';
-};
-
-
-sre.AuditoryDescription.sexpList = function(markup) {
-  var result = [];
-  while (markup.length > 0) {
-    var first = markup.shift();
-    // Do we need this case?
-    if (first instanceof Array) {
-      result.push(sre.AuditoryDescription.sexpList(first));
-      continue;
-    }
-    if (sre.AuditoryDescription.isCloseElement_(first)) {
-      continue;
-    }
-    if (sre.AuditoryDescription.isMarkupElement_(first)) {
-      result.push('(' + sre.AuditoryDescription.sexpProsody_(first) + ')');
-      continue;
-    }
-    if (sre.AuditoryDescription.isPauseElement_(first)) {
-      result.push(sre.AuditoryDescription.sexpPause_(first));
-      continue;
-    }
-    result.push('"' + first.string + '"');
-  }
-  return '(' + result.join(' ') + ')';
 };
 
 
@@ -337,8 +292,7 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
  * @private
  */
 sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
-  value = sre.AuditoryDescription.scaleFunction(value);
-  value = Math.round(value);
+  value = sre.AuditoryDescription.applyScaleFunction(value);
   switch (key) {
   case sre.Engine.personalityProps.RATE:
     return '(richness . ' + value + ')';
@@ -376,7 +330,7 @@ sre.AuditoryDescription.sexpPause_ = function(pause) {
  * @private
  */
 sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
-  sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100);
+  sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100, 2);
   var isSable = sre.Engine.getInstance().markup === sre.Engine.Markup.SABLE;
   var tagFunction = isSable ?
         sre.AuditoryDescription.translateSableTags :
@@ -456,8 +410,7 @@ sre.AuditoryDescription.sortClose = function(open, descrs) {
  * @return {string} The appropriate Sable tag.
  */
 sre.AuditoryDescription.translateSableTags = function(tag, value) {
-  value = sre.AuditoryDescription.scaleFunction(value);
-  value = Math.round(value);
+  value = sre.AuditoryDescription.applyScaleFunction(value);
   switch (tag) {
   case sre.Engine.personalityProps.PITCH:
     return '<PITCH BASE="' + value + '%">';
@@ -479,36 +432,49 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
  * @return {string} The SSML prosody tag.
  */
 sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
-  value = sre.AuditoryDescription.scaleFunction(value);
-  value = Math.round(value);
+  value = sre.AuditoryDescription.applyScaleFunction(value);
   var valueStr = value < 0 ? value.toString() : '+' + value;
   return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
     (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
 };
 
 
+
 /**
- * A scale function that can be set by the next method.
- * @param {number} value The value to be scaled.
- * @return {number} The scaled value.
+ * @type {function(number): number}
  */
-sre.AuditoryDescription.scaleFunction = function(value) {
-  return value;
-};
+sre.AuditoryDescription.SCALE;
 
 
 /**
- * Sets the scale function to scale from interval [a, b] to [c, d].
+ * Sets the scale function to scale from interval [a, b] to [c, d].  Rounds the
+ * resulting numerical value to a specified number of decimals if the optional
+ * decimals value is provided. Otherwise an integer value is returned.
+ *
  * @param {number} a Lower boundary of source interval.
  * @param {number} b Upper boundary of source interval.
  * @param {number} c Lower boundary of target interval.
  * @param {number} d Upper boundary of target interval.
+ * @param {number=} opt_decimals Number of digits after the decimal point.
  */
-sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
-  sre.AuditoryDescription.scaleFunction = function(x) {
+sre.AuditoryDescription.setScaleFunction = function(a, b, c, d, opt_decimals) {
+  var decimals = opt_decimals || 0;
+  sre.AuditoryDescription.SCALE = function(x) {
     var delta = (x - a) / (b - a);
-    return c * (1 - delta) + d * delta;
+    var number = c * (1 - delta) + d * delta;
+    return +(Math.round(number + 'e+' + decimals) + 'e-' + decimals);
   };
+};
+
+
+/**
+ * Applies the current scale function that can be set by the previous method.
+ * @param {number} value The value to be scaled.
+ * @return {number} The scaled value.
+ */
+sre.AuditoryDescription.applyScaleFunction = function(value) {
+  return sre.AuditoryDescription.SCALE ?
+      sre.AuditoryDescription.SCALE(value) : value;
 };
 
 
@@ -533,7 +499,7 @@ sre.AuditoryDescription.LastOpen_ = [];
 /**
  * Computes a markup list. Careful this is destructive on the description list.
  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
- * @return {!Array.<string|Object>} Markup list.
+ * @return {!Array.<Object>} Markup list.
  * @private
  */
 sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
@@ -561,7 +527,7 @@ sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
 
 /**
  * Predicate to check if the markup element is a pause.
- * @param {!(Object|string)} element An element of the markup list.
+ * @param {!Object} element An element of the markup list.
  * @return {boolean} True if this is a pause element.
  * @private
  */
@@ -572,19 +538,7 @@ sre.AuditoryDescription.isMarkupElement_ = function(element) {
 
 /**
  * Predicate to check if the markup element is a pause.
- * @param {!(Object|string)} element An element of the markup list.
- * @return {boolean} True if this is a pause element.
- * @private
- */
-sre.AuditoryDescription.isCloseElement_ = function(element) {
-  return typeof element === 'object' && Object.keys(element).length === 1 &&
-    Object.keys(element)[0] === 'close';
-};
-
-
-/**
- * Predicate to check if the markup element is a pause.
- * @param {!(Object|string)} element An element of the markup list.
+ * @param {!Object} element An element of the markup list.
  * @return {boolean} True if this is a pause element.
  * @private
  */
@@ -597,7 +551,7 @@ sre.AuditoryDescription.isPauseElement_ = function(element) {
 
 /**
  * Predicate to check if the markup element is a string.
- * @param {!(Object|string)} element An element of the markup list.
+ * @param {!Object} element An element of the markup list.
  * @return {boolean} True if this is a string element.
  * @private
  */
@@ -610,7 +564,7 @@ sre.AuditoryDescription.isStringElement_ = function(element) {
 
 /**
  * Appends content to the current markup list.
- * @param {!Array.<string|Object>} markup The markup list.
+ * @param {!Array.<Object>} markup The markup list.
  * @param {string} str A content string.
  * @param {!Object.<sre.Engine.personalityProps, number>} pers A personality
  *     annotation.

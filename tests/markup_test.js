@@ -161,7 +161,7 @@ sre.MarkupTest.prototype.testSable = function() {
       'x <RATE SPEED="-5%"> equals </RATE> <BREAK MSEC="200"/> start frac ' +
       '<PITCH BASE="15%"> <RATE SPEED="-5%"> minus </RATE> b <RATE' +
       ' SPEED="-5%"> plus minus </RATE> Square root of <RATE SPEED="10%"> b' +
-      ' </RATE> </PITCH> <RATE SPEED="10%"> <PITCH BASE="33%"> square ' +
+      ' </RATE> </PITCH> <RATE SPEED="10%"> <PITCH BASE="32.5%"> square ' +
       '</PITCH> <PITCH BASE="15%"> <BREAK MSEC="300"/> </PITCH> </RATE> ' +
       '<PITCH BASE="15%"> <RATE SPEED="5%"> minus </RATE> <RATE' +
       ' SPEED="10%"> four a c </RATE> <BREAK MSEC="400"/> </PITCH> over ' +
@@ -169,11 +169,11 @@ sre.MarkupTest.prototype.testSable = function() {
       sre.Engine.Markup.SABLE, false);
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
-      'x <BREAK MSEC="200"/> equals <BREAK MSEC="450"/> <RATE SPEED="18%">' +
+      'x <BREAK MSEC="200"/> equals <BREAK MSEC="450"/> <RATE SPEED="17.5%">' +
       ' negative b plus minus Square root of </RATE> <RATE SPEED="35%"> b ' +
-      '<PITCH BASE="18%"> squared </PITCH> <BREAK MSEC="300"/> minus four' +
-      ' times a times c </RATE> <RATE SPEED="18%"> <BREAK MSEC="650"/> ' +
-      '</RATE> divided by <RATE SPEED="-17%"> two times a </RATE> <BREAK' +
+      '<PITCH BASE="17.5%"> squared </PITCH> <BREAK MSEC="300"/> minus four' +
+      ' times a times c </RATE> <RATE SPEED="17.5%"> <BREAK MSEC="650"/> ' +
+      '</RATE> divided by <RATE SPEED="-17.5%"> two times a </RATE> <BREAK' +
       ' MSEC="400"/>',
       sre.Engine.Markup.SABLE, true);
 };
@@ -189,7 +189,7 @@ sre.MarkupTest.prototype.testSsml = function() {
       ' frac <PROSODY PITCH="+15%"> <PROSODY RATE="-5%"> minus </PROSODY> b' +
       ' <PROSODY RATE="-5%"> plus minus </PROSODY> Square root of <PROSODY' +
       ' RATE="+10%"> b </PROSODY> </PROSODY> <PROSODY RATE="+10%"> <PROSODY' +
-      ' PITCH="+33%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK' +
+      ' PITCH="+32.5%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK' +
       ' TIME="300ms"/> </PROSODY> </PROSODY> <PROSODY PITCH="+15%"> ' +
       '<PROSODY RATE="+5%"> minus </PROSODY> <PROSODY RATE="+10%"> four a c' +
       ' </PROSODY> <BREAK TIME="400ms"/> </PROSODY> over <PROSODY' +
@@ -198,11 +198,11 @@ sre.MarkupTest.prototype.testSsml = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
       'x <BREAK TIME="200ms"/> equals <BREAK TIME="450ms"/> <PROSODY' +
-      ' RATE="+18%"> negative b plus minus Square root of </PROSODY> ' +
-      '<PROSODY RATE="+35%"> b <PROSODY PITCH="+18%"> squared </PROSODY> ' +
+      ' RATE="+17.5%"> negative b plus minus Square root of </PROSODY> ' +
+      '<PROSODY RATE="+35%"> b <PROSODY PITCH="+17.5%"> squared </PROSODY> ' +
       '<BREAK TIME="300ms"/> minus four times a times c </PROSODY> <PROSODY' +
-      ' RATE="+18%"> <BREAK TIME="650ms"/> </PROSODY> divided by <PROSODY' +
-      ' RATE="-17%"> two times a </PROSODY> <BREAK TIME="400ms"/>',
+      ' RATE="+17.5%"> <BREAK TIME="650ms"/> </PROSODY> divided by <PROSODY' +
+      ' RATE="-17.5%"> two times a </PROSODY> <BREAK TIME="400ms"/>',
       sre.Engine.Markup.SSML, true);
 };
 
@@ -218,7 +218,7 @@ sre.MarkupTest.prototype.testVoiceXml = function() {
       ' frac <PROSODY PITCH="+15%"> <PROSODY RATE="-5%"> minus </PROSODY> b' +
       ' <PROSODY RATE="-5%"> plus minus </PROSODY> Square root of <PROSODY' +
       ' RATE="+10%"> b </PROSODY> </PROSODY> <PROSODY RATE="+10%"> <PROSODY' +
-      ' PITCH="+33%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK' +
+      ' PITCH="+32.5%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK' +
       ' TIME="300ms"/> </PROSODY> </PROSODY> <PROSODY PITCH="+15%"> ' +
       '<PROSODY RATE="+5%"> minus </PROSODY> <PROSODY RATE="+10%"> four a c' +
       ' </PROSODY> <BREAK TIME="400ms"/> </PROSODY> over <PROSODY' +
@@ -227,10 +227,10 @@ sre.MarkupTest.prototype.testVoiceXml = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
       'x <BREAK TIME="200ms"/> equals <BREAK TIME="450ms"/> <PROSODY' +
-      ' RATE="+18%"> negative b plus minus Square root of </PROSODY> ' +
-      '<PROSODY RATE="+35%"> b <PROSODY PITCH="+18%"> squared </PROSODY> ' +
+      ' RATE="+17.5%"> negative b plus minus Square root of </PROSODY> ' +
+      '<PROSODY RATE="+35%"> b <PROSODY PITCH="+17.5%"> squared </PROSODY> ' +
       '<BREAK TIME="300ms"/> minus four times a times c </PROSODY> <PROSODY' +
-      ' RATE="+18%"> <BREAK TIME="650ms"/> </PROSODY> divided by <PROSODY' +
-      ' RATE="-17%"> two times a </PROSODY> <BREAK TIME="400ms"/>',
+      ' RATE="+17.5%"> <BREAK TIME="650ms"/> </PROSODY> divided by <PROSODY' +
+      ' RATE="-17.5%"> two times a </PROSODY> <BREAK TIME="400ms"/>',
       sre.Engine.Markup.VOICEXML, true);
 };
