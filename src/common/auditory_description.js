@@ -202,7 +202,7 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
  * @private
  */
 sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
-  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10);
+  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10, 0);
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   var result = [];
   var currentPers = {open: []};
@@ -292,8 +292,7 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
  * @private
  */
 sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
-  value = sre.AuditoryDescription.scaleFunction(value);
-  value = sre.AuditoryDescription.toFixed(value, 0);
+  value = sre.AuditoryDescription.applyScaleFunction(value);
   switch (key) {
   case sre.Engine.personalityProps.RATE:
     return '(richness . ' + value + ')';
@@ -331,7 +330,7 @@ sre.AuditoryDescription.sexpPause_ = function(pause) {
  * @private
  */
 sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
-  sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100);
+  sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100, 2);
   var isSable = sre.Engine.getInstance().markup === sre.Engine.Markup.SABLE;
   var tagFunction = isSable ?
         sre.AuditoryDescription.translateSableTags :
@@ -411,8 +410,7 @@ sre.AuditoryDescription.sortClose = function(open, descrs) {
  * @return {string} The appropriate Sable tag.
  */
 sre.AuditoryDescription.translateSableTags = function(tag, value) {
-  value = sre.AuditoryDescription.scaleFunction(value);
-  value = sre.AuditoryDescription.toFixed(value, 2);
+  value = sre.AuditoryDescription.applyScaleFunction(value);
   switch (tag) {
   case sre.Engine.personalityProps.PITCH:
     return '<PITCH BASE="' + value + '%">';
@@ -434,36 +432,49 @@ sre.AuditoryDescription.translateSableTags = function(tag, value) {
  * @return {string} The SSML prosody tag.
  */
 sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
-  value = sre.AuditoryDescription.scaleFunction(value);
-  value = sre.AuditoryDescription.toFixed(value, 2);
+  value = sre.AuditoryDescription.applyScaleFunction(value);
   var valueStr = value < 0 ? value.toString() : '+' + value;
   return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
     (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
 };
 
 
+
 /**
- * A scale function that can be set by the next method.
- * @param {number} value The value to be scaled.
- * @return {number} The scaled value.
+ * @type {function(number): number}
  */
-sre.AuditoryDescription.scaleFunction = function(value) {
-  return value;
-};
+sre.AuditoryDescription.SCALE;
 
 
 /**
- * Sets the scale function to scale from interval [a, b] to [c, d].
+ * Sets the scale function to scale from interval [a, b] to [c, d].  Rounds the
+ * resulting numerical value to a specified number of decimals if the optional
+ * decimals value is provided. Otherwise an integer value is returned.
+ *
  * @param {number} a Lower boundary of source interval.
  * @param {number} b Upper boundary of source interval.
  * @param {number} c Lower boundary of target interval.
  * @param {number} d Upper boundary of target interval.
+ * @param {number=} opt_decimals Number of digits after the decimal point.
  */
-sre.AuditoryDescription.setScaleFunction = function(a, b, c, d) {
-  sre.AuditoryDescription.scaleFunction = function(x) {
+sre.AuditoryDescription.setScaleFunction = function(a, b, c, d, opt_decimals) {
+  var decimals = opt_decimals || 0;
+  sre.AuditoryDescription.SCALE = function(x) {
     var delta = (x - a) / (b - a);
-    return c * (1 - delta) + d * delta;
+    var number = c * (1 - delta) + d * delta;
+    return +(Math.round(number + 'e+' + decimals) + 'e-' + decimals);
   };
+};
+
+
+/**
+ * Applies the current scale function that can be set by the previous method.
+ * @param {number} value The value to be scaled.
+ * @return {number} The scaled value.
+ */
+sre.AuditoryDescription.applyScaleFunction = function(value) {
+  return sre.AuditoryDescription.SCALE ?
+      sre.AuditoryDescription.SCALE(value) : value;
 };
 
 
@@ -669,17 +680,6 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
     sre.AuditoryDescription.LastOpen_.push(result.open);
   }
   return result;
-};
-
-
-/**
- * Rounds a numerical value to a specified number of decimals.
- * @param {number} number The value to round.
- * @param {number} decimals Number of digits after the decimal point.
- * @return {number} The result of rounding.
- */
-sre.AuditoryDescription.toFixed = function(number, decimals) {
-  return +(Math.round(number + 'e+' + decimals) + 'e-' + decimals);
 };
 
 
