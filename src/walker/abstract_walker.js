@@ -197,6 +197,14 @@ sre.AbstractWalker.prototype.getFocus = function() {
 /**
  * @override
  */
+sre.AbstractWalker.prototype.setFocus = function(focus) {
+  this.focus_ = focus;
+};
+
+
+/**
+ * @override
+ */
 sre.AbstractWalker.prototype.getDepth = function() {
   return this.levels.depth() - 1;
 };

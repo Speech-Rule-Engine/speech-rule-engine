@@ -1317,6 +1317,9 @@ sre.SemanticAttr.Role = {
   // Identifier that describes a unit.
   UNIT: 'unit',
 
+  // Expression that is used as a label.
+  LABEL: 'label',
+
   // Fences.
   OPEN: 'open',
   CLOSE: 'close',
@@ -1425,12 +1428,16 @@ sre.SemanticAttr.Font = {
   BOLDFRAKTUR: 'bold-fraktur',
   BOLDITALIC: 'bold-italic',
   BOLDSCRIPT: 'bold-script',
+  CALIGRAPHIC: 'caligraphic',
+  CALIGRAPHICBOLD: 'caligraphic-bold',
   DOUBLESTRUCK: 'double-struck',
   DOUBLESTRUCKITALIC: 'double-struck-italic',
   FRAKTUR: 'fraktur',
   ITALIC: 'italic',
   MONOSPACE: 'monospace',
   NORMAL: 'normal',
+  OLDSTYLE: 'oldstyle',
+  OLDSTYLEBOLD: 'oldstyle-bold',
   SCRIPT: 'script',
   SANSSERIF: 'sans-serif',
   SANSSERIFITALIC: 'sans-serif-italic',
