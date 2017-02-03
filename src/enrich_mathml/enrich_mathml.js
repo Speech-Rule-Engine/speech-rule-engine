@@ -544,6 +544,12 @@ sre.EnrichMathml.combineContentChildren_ = function(
       return [children[0], content[0], children[1]];
     case sre.Semantic.Type.ROOT:
       return [children[1], children[0]];
+    case sre.Semantic.Type.ROW:
+    case sre.Semantic.Type.LINE:
+      if (content.length) {
+        children.unshift(content[0]);
+      }
+      return children;
     default:
       return children;
   }

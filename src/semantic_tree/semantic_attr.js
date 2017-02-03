@@ -1317,6 +1317,9 @@ sre.SemanticAttr.Role = {
   // Identifier that describes a unit.
   UNIT: 'unit',
 
+  // Expression that is used as a label.
+  LABEL: 'label',
+
   // Fences.
   OPEN: 'open',
   CLOSE: 'close',
