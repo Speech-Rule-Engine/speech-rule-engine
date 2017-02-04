@@ -10837,3 +10837,133 @@ sre.SemanticTreeTest.prototype.testStreeFonts = function() {
       ' id="0">𝝖</identifier>'
   );
 };
+
+
+sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
+  this.executeTreeTest(
+    '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+    '<overscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<underscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+    '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+    '<underscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<overscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</underscore>'
+  );
+  this.executeTreeTest(
+    '<munderover><mo>→</mo><mo>≅</mo><mo>≅</mo></munderover>',
+    '<overscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<underscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+    '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+    '<overscore role="latinletter" id="4">' +
+      '<children>' +
+      '<underscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+    '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+    '<underscore role="latinletter" id="4">' +
+      '<children>' +
+      '<overscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</underscore>'
+  );
+  this.executeTreeTest(
+    '<munderover><mi>A</mi><mo>≅</mo><mo>≅</mo></munderover>',
+    '<overscore role="latinletter" id="4">' +
+      '<children>' +
+      '<underscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+    '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+    '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<relation role="equality" id="1">≅</relation>' +
+      '</children>' +
+      '</subscript>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+    '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+    '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</subscript>' +
+      '<relation role="equality" id="2">≅</relation>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+    '<msubsup><mo>)</mo><mo>≅</mo><mo>≅</mo></msubsup>',
+    '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<relation role="equality" id="1">≅</relation>' +
+      '</children>' +
+      '</subscript>' +
+      '<relation role="equality" id="2">≅</relation>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
