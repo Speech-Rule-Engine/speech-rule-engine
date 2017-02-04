@@ -156,3 +156,17 @@ More points see in the semantics document.
   // 6. push children
   // 7. return singleton focus of child at position of old level
   //
+* Speech Synthesis API:
+
+  synth = speechSynthesis;
+  ll = new SpeechSynthesisUtterance('hello');
+  ll.voice = synth.getVoices()[1];
+  synth.speak(ll);
+
+  ll.pitch = 2;
+  ll.rate = 3;
+
+  From IBM Watson Demo https://text-to-speech-demo.mybluemix.net/
+  
+  ll = new SpeechSynthesisUtterance('<speak>I have been assigned to handle your order status request.<express-as type="Apology"> I am sorry to inform you that the items you requested are back-ordered. We apologize for the inconvenience.</express-as><express-as type="Uncertainty"> We don\'t know when those items will become available. Maybe next week but we are not sure at this time.</express-as><express-as type="GoodNews">Because we want you to be a happy customer, management has decided to give you a 50% discount! </express-as></speak>');
+

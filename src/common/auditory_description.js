@@ -47,11 +47,11 @@ goog.require('sre.Engine');
  * @constructor
  */
 sre.AuditoryDescription = function(kwargs) {
-  this.context = kwargs.context ? kwargs.context : '';
-  this.text = kwargs.text ? kwargs.text : '';
-  this.userValue = kwargs.userValue ? kwargs.userValue : '';
-  this.annotation = kwargs.annotation ? kwargs.annotation : '';
-  this.personality = kwargs.personality;
+  this.context = kwargs.context || '';
+  this.text = kwargs.text || '';
+  this.userValue = kwargs.userValue || '';
+  this.annotation = kwargs.annotation || '';
+  this.personality = kwargs.personality || {};
 };
 
 
@@ -164,32 +164,17 @@ sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
  * @private
  */
 sre.AuditoryDescription.toString_ = function(descrs, separator) {
-  return sre.Engine.getInstance().ssml ?
-      sre.AuditoryDescription.toSsmlString_(descrs, separator) :
-      sre.AuditoryDescription.toSimpleString_(descrs, separator);
-};
-
-
-//TODO: (MOSS) WP2.3
-// Implement translations into SSML and CSS.
-// Cleaner than the hack for the NVDA/EmacsSpeak bridge!
-//
-/**
- * Translates a list of auditory descriptions into a string with SSML markup.
- * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
- * @param {string} separator The separator string.
- * @return {string} The generated string with SSML markup.
- * @private
- */
-sre.AuditoryDescription.toSsmlString_ = function(descrs, separator) {
-  return sre.BaseUtil.removeEmpty(
-      descrs.map(
-      function(x) {
-        if (x.personality && x.personality.PAUSE) {
-          return '<break time="' + x.personality.PAUSE + 'ms"/>';
-        }
-        return x.descriptionString();})).
-      join(separator);
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.SABLE:
+  case sre.Engine.Markup.SSML:
+  case sre.Engine.Markup.VOICEXML:
+    return sre.AuditoryDescription.toMarkupString_(descrs, separator);
+  case sre.Engine.Markup.ACSS:
+    return sre.AuditoryDescription.toAcssString_(descrs, separator);
+  case sre.Engine.Markup.NONE:
+  default:
+    return sre.AuditoryDescription.toSimpleString_(descrs, separator);
+  }
 };
 
 
@@ -206,3 +191,529 @@ sre.AuditoryDescription.toSimpleString_ = function(descrs, separator) {
       function(x) {return x.descriptionString();})).
       join(separator);
 };
+
+
+/**
+ * Translates a list of auditory descriptions into a string with SSML markup.
+ * Currently returns an sexp for emacs speak.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string with ACSS markup.
+ * @private
+ */
+sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
+  sre.AuditoryDescription.setScaleFunction(-2, 2, 0, 10, 0);
+  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+  var result = [];
+  var currentPers = {open: []};
+  var pause = null;
+  var string = false;
+  for (var i = 0, descr; descr = markup[i]; i++) {
+    if (sre.AuditoryDescription.isMarkupElement_(descr)) {
+      sre.AuditoryDescription.mergeMarkup_(currentPers, descr);
+      continue;
+    }
+    if (sre.AuditoryDescription.isPauseElement_(descr)) {
+      if (string) {
+        pause = sre.AuditoryDescription.mergePause_(
+          pause,
+          /** @type {{pause: number}} */(descr), Math.max);
+      }
+      continue;
+    }
+    var str = '"' + descr.string + '"';
+    string = true;
+    if (pause) {
+      result.push(sre.AuditoryDescription.sexpPause_(pause));
+      pause = null;
+    }
+    var prosody = sre.AuditoryDescription.sexpProsody_(currentPers);
+    result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
+  }
+  return '(exp ' + result.join(separator) + ')';
+};
+
+
+/**
+ * Merges pause personality annotations.
+ * @param {?{pause: number}} oldPause Previous pause annotation.
+ * @param {{pause: number}} newPause New pause annotation.
+ * @param {(function(number, number): number)=} opt_merge Function to combine
+ *     pauses. By default we add them.
+ * @return {{pause: number}} A personality annotation with the merged pause
+ *     values.
+ * @private
+ */
+sre.AuditoryDescription.mergePause_ = function(oldPause, newPause, opt_merge) {
+  if (!oldPause) {
+    return newPause;
+  }
+  var merge = opt_merge || function(x, y) {return x + y;};
+  return {pause: merge.call(null, oldPause.pause, newPause.pause)};
+};
+
+
+/**
+ * Merges new personality into the old personality markup.
+ * @param {Object} oldPers Old personality markup.
+ * @param {Object} newPers New personality markup.
+ * @private
+ */
+sre.AuditoryDescription.mergeMarkup_ = function(oldPers, newPers) {
+  delete oldPers.open;
+  newPers.close.forEach(function(x) {delete oldPers[x];});
+  newPers.open.forEach(function(x) {oldPers[x] = newPers[x];});
+  var keys = Object.keys(oldPers);
+  oldPers.open = keys;
+};
+
+
+/**
+ * Transforms a prosody element into an S-expression.
+ * @param {Object.<string, number>} pros The prosody element.
+ * @return {string} The S-expression.
+ * @private
+ */
+sre.AuditoryDescription.sexpProsody_ = function(pros) {
+  var keys = pros.open;
+  var result = [];
+  for (var i = 0, key; key = keys[i]; i++) {
+    result.push(sre.AuditoryDescription.sexpProsodyElement_(key, pros[key]));
+  }
+  return result.join(' ');
+};
+
+
+/**
+ * Transforms a prosody key value pair into an S-expression.
+ * @param {sre.Engine.personalityProps} key The prosody name.
+ * @param {number} value The prosody value.
+ * @return {string} The S-expression.
+ * @private
+ */
+sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
+  value = sre.AuditoryDescription.applyScaleFunction(value);
+  switch (key) {
+  case sre.Engine.personalityProps.RATE:
+    return '(richness . ' + value + ')';
+  case sre.Engine.personalityProps.PITCH:
+    return '(average-pitch . ' + value + ')';
+    break;
+  case sre.Engine.personalityProps.VOLUME:
+    return '(stress . ' + value + ')';
+    break;
+  }
+  return '(value . ' + value + ')';
+};
+
+
+
+/**
+ * Translates a pause into its corresponding S-expression.
+ * @param {{pause: number}} pause A pause element.
+ * @return {string} The S-expression.
+ * @private
+ */
+sre.AuditoryDescription.sexpPause_ = function(pause) {
+  return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
+};
+
+
+//TODO: (MOSS) WP2.3
+// Refactor into audio module.
+// TODO: Remove redundant markup and start/end pauses.
+/**
+ * Translates a list of auditory descriptions into a string with SSML markup.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @param {string} separator The separator string.
+ * @return {string} The generated string with SSML markup.
+ * @private
+ */
+sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
+  sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100, 2);
+  var isSable = sre.Engine.getInstance().markup === sre.Engine.Markup.SABLE;
+  var tagFunction = isSable ?
+        sre.AuditoryDescription.translateSableTags :
+        sre.AuditoryDescription.translateSsmlTags;
+  var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
+  var result = [];
+  var currentOpen = [];
+  for (var i = 0, descr; descr = markup[i]; i++) {
+    if (descr.string) {
+      result.push(descr.string);
+      continue;
+    }
+    if (sre.AuditoryDescription.isPauseElement_(descr)) {
+      result.push(
+        '<BREAK ' +
+          (isSable ?
+           'MSEC="' + descr[sre.Engine.personalityProps.PAUSE] + '"/>' :
+           'TIME="' + descr[sre.Engine.personalityProps.PAUSE] + 'ms"/>')
+      );
+      continue;
+    }
+    if (descr.close.length) {
+      for (var j = 0; j < descr.close.length; j++) {
+        var last = currentOpen.pop();
+        if (descr.close.indexOf(last) === -1) {
+          // TODO: Make this into a Engine error.
+          throw new Error('Unknown closing markup element: ' + last);
+        }
+        result.push('</' + (isSable ? last.toUpperCase() : 'PROSODY') + '>');
+      }
+    }
+    if (descr.open.length) {
+      var open = sre.AuditoryDescription.sortClose(
+          descr.open.slice(), markup.slice(i + 1));
+      open.forEach(function(o) {
+        result.push(tagFunction(o, descr[o]));
+        currentOpen.push(o);
+      });
+    }
+  }
+  return result.join(separator);
+};
+
+
+/**
+ * Sorts a list of opening tags by order of which is closed last.
+ * If more than two elements are opened at the same, we need to look ahead in
+ * which order they will be closed.
+ * @param {!Array.<sre.Engine.personalityProps>} open The list of opening tags.
+ * @param {Array.<sre.AuditoryDescription>} descrs The rest descriptions.
+ * @return {!Array.<sre.Engine.personalityProps>} The sorted array.
+ */
+sre.AuditoryDescription.sortClose = function(open, descrs) {
+  if (open.length <= 1) {
+    return open;
+  }
+  var result = [];
+  for (var i = 0, descr; descr = descrs[i], open.length; i++) {
+    if (!descr.close || !descr.close.length) continue;
+    descr.close.forEach(function(x) {
+      var index = open.indexOf(x);
+      if (index !== -1) {
+        result.unshift(x);
+        open.splice(index, 1);
+      }
+    });
+  }
+  return result;
+};
+
+
+// TODO: Include personality range computations.
+/**
+ * Translates personality annotations into Sable tags.
+ * @param {sre.Engine.personalityProps} tag The personality for the tag name.
+ * @param {number} value The numeric value of the annotation.
+ * @return {string} The appropriate Sable tag.
+ */
+sre.AuditoryDescription.translateSableTags = function(tag, value) {
+  value = sre.AuditoryDescription.applyScaleFunction(value);
+  switch (tag) {
+  case sre.Engine.personalityProps.PITCH:
+    return '<PITCH BASE="' + value + '%">';
+  case sre.Engine.personalityProps.RATE:
+    return '<RATE SPEED="' + value + '%">';
+  case sre.Engine.personalityProps.VOLUME:
+    return '<VOLUME LEVEL="' + value + '%">';
+  default:
+    return '<' + tag.toUpperCase() + ' VALUE="' + value + '">';
+  }
+};
+
+
+/**
+ * Translates personality annotations into SSML prosody tags.
+ * @param {sre.Engine.personalityProps} attr The personality for the tag's
+ *    attribute.
+ * @param {number} value The numeric value of the annotation.
+ * @return {string} The SSML prosody tag.
+ */
+sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
+  value = sre.AuditoryDescription.applyScaleFunction(value);
+  var valueStr = value < 0 ? value.toString() : '+' + value;
+  return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
+    (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
+};
+
+
+
+/**
+ * @type {function(number): number}
+ */
+sre.AuditoryDescription.SCALE;
+
+
+/**
+ * Sets the scale function to scale from interval [a, b] to [c, d].  Rounds the
+ * resulting numerical value to a specified number of decimals if the optional
+ * decimals value is provided. Otherwise an integer value is returned.
+ *
+ * @param {number} a Lower boundary of source interval.
+ * @param {number} b Upper boundary of source interval.
+ * @param {number} c Lower boundary of target interval.
+ * @param {number} d Upper boundary of target interval.
+ * @param {number=} opt_decimals Number of digits after the decimal point.
+ */
+sre.AuditoryDescription.setScaleFunction = function(a, b, c, d, opt_decimals) {
+  var decimals = opt_decimals || 0;
+  sre.AuditoryDescription.SCALE = function(x) {
+    var delta = (x - a) / (b - a);
+    var number = c * (1 - delta) + d * delta;
+    return +(Math.round(number + 'e+' + decimals) + 'e-' + decimals);
+  };
+};
+
+
+/**
+ * Applies the current scale function that can be set by the previous method.
+ * @param {number} value The value to be scaled.
+ * @return {number} The scaled value.
+ */
+sre.AuditoryDescription.applyScaleFunction = function(value) {
+  return sre.AuditoryDescription.SCALE ?
+      sre.AuditoryDescription.SCALE(value) : value;
+};
+
+
+// The procedure transforms lists of descriptions into the internal format of
+// markup elements.
+/**
+ * The range of personality annotations in the current list of descriptions.
+ * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @private
+ */
+sre.AuditoryDescription.PersonalityRanges_ = {};
+
+
+/**
+ * The range of personality annotations.
+ * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @private
+ */
+sre.AuditoryDescription.LastOpen_ = [];
+
+
+/**
+ * Computes a markup list. Careful this is destructive on the description list.
+ * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
+ * @return {!Array.<Object>} Markup list.
+ * @private
+ */
+sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
+  sre.AuditoryDescription.PersonalityRanges_ = {};
+  sre.AuditoryDescription.LastOpen_ = [];
+  var result = [];
+  var currentPers = {};
+  for (var i = 0, descr; descr = descrs[i]; i++) {
+    var pause = null;
+    var str = descr.descriptionString();
+    var pers = descr.personality;
+    if (pers[sre.Engine.personalityProps.PAUSE] !== undefined) {
+      pause = {};
+      pause[sre.Engine.personalityProps.PAUSE] =
+        /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
+      delete pers[sre.Engine.personalityProps.PAUSE];
+    }
+    var diff = sre.AuditoryDescription.personalityDiff_(pers, currentPers);
+    //TODO: Replace last parameter by global parameter, depending on format.
+    sre.AuditoryDescription.appendMarkup_(result, str, diff, pause, true);
+  }
+  return result;
+};
+
+
+/**
+ * Predicate to check if the markup element is a pause.
+ * @param {!Object} element An element of the markup list.
+ * @return {boolean} True if this is a pause element.
+ * @private
+ */
+sre.AuditoryDescription.isMarkupElement_ = function(element) {
+  return typeof element === 'object' && element.open;
+};
+
+
+/**
+ * Predicate to check if the markup element is a pause.
+ * @param {!Object} element An element of the markup list.
+ * @return {boolean} True if this is a pause element.
+ * @private
+ */
+sre.AuditoryDescription.isPauseElement_ = function(element) {
+  return typeof element === 'object' &&
+    Object.keys(element).length === 1 &&
+    Object.keys(element)[0] === sre.Engine.personalityProps.PAUSE;
+};
+
+
+/**
+ * Predicate to check if the markup element is a string.
+ * @param {!Object} element An element of the markup list.
+ * @return {boolean} True if this is a string element.
+ * @private
+ */
+sre.AuditoryDescription.isStringElement_ = function(element) {
+  return typeof element === 'object' &&
+    Object.keys(element).length === 1 &&
+    Object.keys(element)[0] === 'string';
+};
+
+
+/**
+ * Appends content to the current markup list.
+ * @param {!Array.<Object>} markup The markup list.
+ * @param {string} str A content string.
+ * @param {!Object.<sre.Engine.personalityProps, number>} pers A personality
+ *     annotation.
+ * @param {?{sre.Engine.personalityProps.PAUSE: (number|undefined)}} pause A
+ *     pause annotation.
+ * @param {boolean=} opt_merge Flag that specifies subsequent pauses are to be
+ *     merged.
+ * @private
+ */
+sre.AuditoryDescription.appendMarkup_ = function(
+    markup, str, pers, pause, opt_merge) {
+  if (opt_merge) {
+    var last = markup[markup.length - 1];
+    if (last && !str && pause &&
+        sre.AuditoryDescription.isPauseElement_(last)) {
+      var pauseProp = sre.Engine.personalityProps.PAUSE;
+      // Merging could be done using max or min or plus.
+      last[pauseProp] = last[pauseProp] + pause[pauseProp];
+      pause = null;
+    }
+    if (last && str && Object.keys(pers).length === 0 &&
+        sre.AuditoryDescription.isStringElement_(last)) {
+      last['string'] += ' ' + str;
+      str = '';
+    }
+  }
+  if (Object.keys(pers).length !== 0) markup.push(pers);
+  if (str) markup.push({string: str});
+  if (pause) markup.push(pause);
+};
+
+
+/**
+ * Compute the difference of two personality annotations.
+ * @param {!Object.<sre.Engine.personalityProps, number>} current The current
+ *     personality annotation.
+ * @param {Object.<sre.Engine.personalityProps, number>} old The previous
+ *     personality annotation.
+ * @return {!Object.<sre.Engine.personalityProps, number>} The difference
+ *     between the two annotations.
+ * @private
+ */
+sre.AuditoryDescription.personalityDiff_ = function(current, old) {
+  if (!old) return current;
+  var result = {};
+  for (var key in sre.Engine.personalityProps) {
+    var prop = sre.Engine.personalityProps[key];
+    var currentValue = current[prop];
+    var oldValue = old[prop];
+    if ((!currentValue && !oldValue) ||
+        (currentValue && oldValue && currentValue === oldValue)) {
+      continue;
+    }
+    var value = currentValue || 0;
+    //TODO: Simplify
+    if (!sre.AuditoryDescription.isMarkupElement_(result)) {
+        result.open = [];
+        result.close = [];
+    }
+    if (!currentValue) {
+      result.close.push(prop);
+    }
+    if (!oldValue) {
+      result.open.push(prop);
+    }
+    if (oldValue && currentValue) {
+      result.close.push(prop);
+      result.open.push(prop);
+    }
+    old[prop] = value;
+    result[prop] = value;
+    sre.AuditoryDescription.PersonalityRanges_[prop] ?
+      sre.AuditoryDescription.PersonalityRanges_[prop].push(value) :
+      sre.AuditoryDescription.PersonalityRanges_[prop] = [value];
+  }
+  if (sre.AuditoryDescription.isMarkupElement_(result)) {
+    // Cases:
+    // Deal first with close:
+    // Let C = close set, LO = last open,
+    // LO' = LO \ C;
+    // C = C \ LO;
+    // LO = LO';
+    // if LO = {} remove LO;
+    // if C = {} done;
+    // LO = LO u LO-1;
+    // if LO != {}
+    // close elements in LO;
+    // open elements in LO with values from oldValue;
+    // remove LO;
+    // repeat;
+    //
+    var c = result.close.slice();
+    while (c.length > 0) {
+      var lo = sre.AuditoryDescription.LastOpen_.pop();
+      var loNew = sre.BaseUtil.setdifference(lo, c);
+      c = sre.BaseUtil.setdifference(c, lo);
+      lo = loNew;
+      if (c.length === 0) {
+        if (lo.length !== 0) {
+          sre.AuditoryDescription.LastOpen_.push(lo);
+        }
+        continue;
+      }
+      if (lo.length === 0) {
+        continue;
+      }
+      result.close = result.close.concat(lo);
+      result.open = result.open.concat(lo);
+      for (var i = 0, open; open = lo[i]; i++) {
+        result[open] = old[open];
+      }
+    }
+    sre.AuditoryDescription.LastOpen_.push(result.open);
+  }
+  return result;
+};
+
+
+/**
+ * Merges description strings, depending on the current markup selection.
+ * @param {Array.<string>} strs The description strings.
+ * @return {string} A single string.
+ */
+sre.AuditoryDescription.mergeStrings = function(strs) {
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.ACSS:
+    return '(exp ' +
+      strs.map(function(str) {
+        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+      ')';
+  default:
+    return strs.join(' ');
+  }
+};
+
+
+/**
+ * Generates an error message depending on the output style.
+ * @param {sre.EventUtil.KeyCode|string} key The keycode or direction of the
+ *     move.
+ * @return {?string} The error message or null.
+ */
+sre.AuditoryDescription.error = function(key) {
+  switch (sre.Engine.getInstance().markup) {
+  case sre.Engine.Markup.ACSS:
+    return '(error "' + key + '")';
+  default:
+    return null;
+  }
+};
+
+

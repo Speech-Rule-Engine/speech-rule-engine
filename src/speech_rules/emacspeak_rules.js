@@ -18,10 +18,11 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticTreeRules');
+goog.provide('sre.EmacspeakRules');
 
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
+goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
 
@@ -31,51 +32,69 @@ goog.require('sre.StoreUtil');
  * @constructor
  * @extends {sre.MathStore}
  */
-sre.SemanticTreeRules = function() {
-  sre.SemanticTreeRules.base(this, 'constructor');
+sre.EmacspeakRules = function() {
+  sre.EmacspeakRules.base(this, 'constructor');
 };
-goog.inherits(sre.SemanticTreeRules, sre.MathStore);
-goog.addSingletonGetter(sre.SemanticTreeRules);
+goog.inherits(sre.EmacspeakRules, sre.MathStore);
+goog.addSingletonGetter(sre.EmacspeakRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.SemanticTreeRules.mathStore = sre.SemanticTreeRules.getInstance();
+sre.EmacspeakRules.mathStore = sre.EmacspeakRules.getInstance();
 
 
 /** @private */
-sre.SemanticTreeRules.defineRule_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.defineRule,
-    sre.SemanticTreeRules.mathStore);
+sre.EmacspeakRules.defineRule_ = goog.bind(
+    sre.EmacspeakRules.mathStore.defineRule,
+    sre.EmacspeakRules.mathStore);
 
 
 /** @private */
-sre.SemanticTreeRules.defineRuleAlias_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.defineRuleAlias,
-    sre.SemanticTreeRules.mathStore);
+sre.EmacspeakRules.defineRuleAlias_ = goog.bind(
+    sre.EmacspeakRules.mathStore.defineRuleAlias,
+    sre.EmacspeakRules.mathStore);
 
 
 /** @private */
-sre.SemanticTreeRules.addContextFunction_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.contextFunctions.add,
-    sre.SemanticTreeRules.mathStore.contextFunctions);
+sre.EmacspeakRules.addContextFunction_ = goog.bind(
+    sre.EmacspeakRules.mathStore.contextFunctions.add,
+    sre.EmacspeakRules.mathStore.contextFunctions);
+
+
+/** @private */
+sre.EmacspeakRules.addCustomQuery_ = goog.bind(
+    sre.EmacspeakRules.mathStore.customQueries.add,
+    sre.EmacspeakRules.mathStore.customQueries);
+
+
+/** @private */
+sre.EmacspeakRules.addCustomString_ = goog.bind(
+    sre.EmacspeakRules.mathStore.customStrings.add,
+    sre.EmacspeakRules.mathStore.customStrings);
 
 
 goog.scope(function() {
-var defineRule = sre.SemanticTreeRules.defineRule_;
-var defineRuleAlias = sre.SemanticTreeRules.defineRuleAlias_;
+var defineRule = sre.EmacspeakRules.defineRule_;
+var defineRuleAlias = sre.EmacspeakRules.defineRuleAlias_;
 
-var addCTXF = sre.SemanticTreeRules.addContextFunction_;
+var addCQF = sre.EmacspeakRules.addCustomQuery_;
+var addCSF = sre.EmacspeakRules.addCustomString_;
+var addCTXF = sre.EmacspeakRules.addContextFunction_;
 
 
 /**
  * Initialize the custom functions.
  * @private
  */
-sre.SemanticTreeRules.initCustomFunctions_ = function() {
+sre.EmacspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+
+  addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
+
+  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
 };
 
 
@@ -83,19 +102,19 @@ sre.SemanticTreeRules.initCustomFunctions_ = function() {
  * Semantic rules.
  * @private
 */
-sre.SemanticTreeRules.initSemanticRules_ = function() {
+sre.EmacspeakRules.initSemanticRules_ = function() {
   // Initial rule
   defineRule(
-      'stree', 'default.default',
+      'stree', 'emacspeak.default',
       '[n] ./*[1]', 'self::stree');
 
   defineRule(
-      'multrel', 'default.default',
+      'multrel', 'emacspeak.default',
       '[t] "multirelation"; [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::multirel');
 
   defineRule(
-      'variable-equality', 'default.default',
+      'variable-equality', 'emacspeak.default',
       '[t] "equation sequence"; [m] ./children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
@@ -103,101 +122,108 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       './children/punctuation[@role="ellipsis"]');// Make that better!
 
   defineRule(
-      'multi-equality', 'default.default',
+      'multi-equality', 'emacspeak.default',
       '[t] "equation sequence"; [m] ./children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
-      'multi-equality', 'default.short',
+      'multi-equality', 'emacspeak.short',
       '[t] "equation sequence"; [m] ./children/* ' +
           '(sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
-      'equality', 'default.default',
+      'equality', 'emacspeak.default',
       '[t] "equation"; [t] "left hand side"; [n] children/*[1];' +
           '[p] (pause:200); [n] content/*[1] (pause:200);' +
           '[t] "right hand side"; [n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
 
   defineRule(
-      'simple-equality', 'default.default',
+      'simple-equality', 'emacspeak.default',
       '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/identifier or ./children/number');
 
   defineRule(
-      'simple-equality2', 'default.default',
+      'simple-equality2', 'emacspeak.default',
       '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
           '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2',
       './children/function or ./children/appl');
 
   defineRule(
-      'relseq', 'default.default',
+      'relseq', 'emacspeak.default',
       '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq');
 
   defineRule(
-      'binary-operation', 'default.default',
-      '[m] children/* (sepFunc:CTXFcontentIterator);',
+      'implicit', 'emacspeak.default',
+      '[m] children/*', 'self::infixop', '@role="implicit"',
+      'children/*[1][@role="latinletter"] or ' +
+      'children/*[1][@role="greekletter"] or ' +
+      'children/*[1][@role="otherletter"] or ' +
+      'name(children/*[1])="number"',
+      'children/*[2][@role="latinletter"] or ' +
+      'children/*[2][@role="greekletter"] or ' +
+      'children/*[2][@role="otherletter"] or ' +
+      'name(children/*[2])="number"'
+  );
+
+  defineRule(
+      'binary-operation', 'emacspeak.default',
+      '[p] (pause:100); [m] ./children/* (sepFunc:CTXFcontentIterator);' +
+      ' [p] (pause:100);',
       'self::infixop');
 
   defineRule(
-      'variable-addition', 'default.default',
+      'variable-addition', 'emacspeak.default',
       '[t] "sum with variable number of summands";' +
           '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(children/*)>2',
       'children/punctuation[@role="ellipsis"]');// Make that better!
 
-  defineRule(
-      'multi-addition', 'default.default',
-      '[t] "sum with"; [t] count(./children/*); [t] "summands";' +
-          '[p] (pause:400); [m] ./children/* (sepFunc:CTXFcontentIterator)',
-      'self::infixop[@role="addition"]', 'count(./children/*)>2');
-
   // Prefix Operator
   defineRule(
-      'prefix', 'default.default',
+      'prefix', 'emacspeak.default',
       '[t] "prefix"; [n] text(); [t] "of" (pause 150);' +
       '[n] children/*[1]',
       'self::prefixop');
 
   defineRule(
-      'negative', 'default.default',
+      'negative', 'emacspeak.default',
       '[t] "negative"; [n] children/*[1]',
       'self::prefixop', 'self::prefixop[@role="negative"]');
 
   // Postfix Operator
   defineRule(
-      'postfix', 'default.default',
+      'postfix', 'emacspeak.default',
       '[n] children/*[1]; [t] "postfix"; [n] text() (pause 300)',
       'self::postfixop');
 
   defineRule(
-      'identifier', 'default.default',
+      'identifier', 'emacspeak.default',
       '[n] text()', 'self::identifier');
 
   defineRule(
-      'number', 'default.default',
+      'number', 'emacspeak.default',
       '[n] text()', 'self::number');
 
   // Font rules
   defineRule(
-      'font', 'default.default',
+      'font', 'mathspeak.default',
       '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
-      'font-identifier-short', 'default.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'font-identifier-short', 'emacspeak.default',
+      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
       'self::identifier', 'string-length(text())=1',
-      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
-      '""=translate(text(), ' +
+      '@font', '@font="normal"', '""=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
       '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
@@ -207,43 +233,55 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       '@role!="unit"');
 
   defineRule(
-      'font-identifier', 'default.default',
+      'font-identifier', 'mathspeak.default',
       '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
 
   defineRule(
-      'omit-font', 'default.default',
+      'omit-font', 'mathspeak.default',
       '[n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   // Fraction
   defineRule(
-      'fraction', 'default.default',
+      'simple-fraction', 'emacspeak.default',
+      '[p] (pause:100); [n] children/*[1] (rate:0.35); [t] "over"; ' +
+          ' [n] children/*[2] (rate:-0.35); [p] (pause:100)',
+      'self::fraction',
+      'name(children/*[1])="number" or name(children/*[1])="identifier"',
+      'name(children/*[2])="number" or name(children/*[2])="identifier"');
+  defineRule(
+      'vulgar-fraction', 'emacspeak.default',
+      '[t] CSFvulgarFraction',
+      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
+  defineRule(
+      'fraction', 'emacspeak.default',
       '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
-          ' [t] "divided by"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
+          ' [t] "divided by"; [p] (pause:250); ' +
+          ' [n] children/*[2] (rate:-0.35); [p] (pause:250)',
       'self::fraction');
 
   defineRule(
-      'superscript', 'default.default',
+      'superscript', 'emacspeak.default',
       '[n] children/*[1]; [t] "super"; [n] children/*[2] (pitch:0.35);' +
       '[p] (pause:300)',
       'self::superscript');
   defineRule(
-      'subscript', 'default.default',
+      'subscript', 'emacspeak.default',
       '[n] children/*[1]; [t] "sub"; [n] children/*[2] (pitch:-0.35);' +
       '[p] (pause:300)',
       'self::subscript');
 
   defineRule(
-      'ellipsis', 'default.default',
+      'ellipsis', 'emacspeak.default',
       '[p] (pause:200); [t] "ellipsis"; [p] (pause:300)',
       'self::punctuation', 'self::punctuation[@role="ellipsis"]');
 
   defineRule(
-      'fence-single', 'default.default',
+      'fence-single', 'emacspeak.default',
       '[n] text()',
       'self::punctuation', 'self::punctuation[@role="openfence"]');
   defineRuleAlias('fence-single', 'self::punctuation',
@@ -254,78 +292,76 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
                   'self::punctuation[@role="application"]');
 
   defineRule(
-      'omit-empty', 'default.default',
+      'omit-empty', 'emacspeak.default',
       '[p] (pause:100)',
       'self::empty');
 
-  // Fences rules.
   defineRule(
-      'fences-open-close', 'default.default',
-      '[p] (pause:200); [t] "open"; [n] content/*[1]; [n] children/*[1];' +
-      ' [p] (pause:200); [t] "close"',
+      'fences-open-close', 'emacspeak.default',
+      '[p] (pause:200); [n] children/*[1] (rate:0.35); [p] (pause:200)',
       'self::fenced', '@role="leftright"');
 
   defineRule(
-      'fences-open-close-in-appl', 'default.default',
+      'fences-open-close-in-appl', 'emacspeak.default',
       '[p] (pause:200); [n] children/*[1]; [p] (pause:200);',
       'self::fenced[@role="leftright"]', './parent::children/parent::appl');
 
   defineRule(
-      'fences-neutral', 'default.default',
+      'fences-neutral', 'emacspeak.default',
       '[p] (pause:100); [t] "absolute value of"; [n] children/*[1];' +
       '[p] (pause:350);',
       'self::fenced', 'self::fenced[@role="neutral"]');
 
   defineRule(
-      'omit-fences', 'default.default',
+      'omit-fences', 'emacspeak.default',
       '[p] (pause:500); [n] children/*[1]; [p] (pause:200);',
       'self::fenced');
 
   // Matrix rules.
   defineRule(
-      'matrix', 'default.default',
+      'matrix', 'emacspeak.default',
       '[t] "matrix"; [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
       'self::matrix');
 
   defineRule(
-      'matrix-row', 'default.default',
+      'matrix-row', 'emacspeak.default',
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
       'self::row[@role="matrix"]');
 
   defineRule(
-      'matrix-cell', 'default.default',
+      'matrix-cell', 'emacspeak.default',
       '[n] children/*[1]', 'self::cell[@role="matrix"]');
 
   // Vector rules.
   defineRule(
-      'vector', 'default.default',
+      'vector', 'emacspeak.default',
       '[t] "vector"; [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"element",pause:100)',
       'self::vector');
 
   // Cases rules.
   defineRule(
-      'cases', 'default.default',
+      'cases', 'emacspeak.default',
       '[t] "case statement"; [m] children/* ' +
       '(ctxtFunc:CTXFnodeCounter,context:"case",pause:100)',
       'self::cases');
 
   defineRule(
-      'cases-row', 'default.default',
+      'cases-row', 'emacspeak.default',
       '[m] children/*', 'self::row[@role="cases"]');
 
   defineRule(
-      'cases-cell', 'default.default',
+      'cases-cell', 'emacspeak.default',
       '[n] children/*[1]', 'self::cell[@role="cases"]');
 
   defineRule(
-      'row', 'default.default',
+      'row', 'emacspeak.default',
       '[m] ./* (ctxtFunc:CTXFnodeCounter,context:"column",pause:100)',
       'self::row');
 
   defineRule(
-      'cases-end', 'default.default',
+      'cases-end', 'emacspeak.default',
       '[t] "case statement"; ' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"case",pause:100);' +
       '[t] "end cases"',
@@ -333,24 +369,24 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   // Multiline rules.
   defineRule(
-      'multiline', 'default.default',
+      'multiline', 'emacspeak.default',
       '[t] "multiline equation";' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"line",pause:100)',
       'self::multiline');
 
   defineRule(
-      'line', 'default.default',
+      'line', 'emacspeak.default',
       '[m] children/*', 'self::line');
 
   // Table rules.
   defineRule(
-      'table', 'default.default',
+      'table', 'emacspeak.default',
       '[t] "multiline equation";' +
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
       'self::table');
 
   defineRule(
-      'table-row', 'default.default',
+      'table-row', 'emacspeak.default',
       '[m] children/* (pause:100)', 'self::row[@role="table"]');
 
   defineRuleAlias(
@@ -359,61 +395,61 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   // Rules for punctuated expressions.
   defineRule(
-      'end-punct', 'default.default',
+      'end-punct', 'emacspeak.default',
       '[m] children/*; [p] (pause:300)',
       'self::punctuated', '@role="endpunct"');
 
   defineRule(
-      'start-punct', 'default.default',
+      'start-punct', 'emacspeak.default',
       '[n] content/*[1]; [p] (pause:200); [m] children/*[position()>1]',
       'self::punctuated', '@role="startpunct"');
 
   defineRule(
-      'integral-punct', 'default.default',
+      'integral-punct', 'emacspeak.default',
       '[n] children/*[1] (rate:0.2); [n] children/*[3] (rate:0.2)',
       'self::punctuated', '@role="integral"');
 
   defineRule(
-      'punctuated', 'default.default',
+      'punctuated', 'emacspeak.default',
       '[m] children/* (pause:100)',
       'self::punctuated');
 
   // Function rules
   defineRule(
-      'function', 'default.default',
+      'function', 'emacspeak.default',
       '[n] text()', 'self::function');
 
   defineRule(
-      'appl', 'default.default',
+      'appl', 'emacspeak.default',
       '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]', 'self::appl');
 
   // Limit operator rules
   defineRule(
-      'sum-only', 'default.default',
+      'sum-only', 'emacspeak.default',
       '[n] children/*[1]; [t] "from"; [n] children/*[2]; [t] "to";' +
-      '[n] children/*[3]', 'self::limboth', 'self::limboth[@role="sum"]');
+      '[n] children/*[3]', 'self::limboth', '@role="sum" or @role="integral"');
 
   defineRule(
-      'limboth', 'default.default',
+      'limboth', 'emacspeak.default',
       '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
       '[t] "under"; [n] children/*[3]; [p] (pause 250);',
       'self::limboth');
 
   defineRule(
-      'limlower', 'default.default',
+      'limlower', 'emacspeak.default',
       '[n] children/*[1]; [t] "over"; [n] children/*[2];', 'self::limlower');
 
   defineRule(
-      'limupper', 'default.default',
+      'limupper', 'emacspeak.default',
       '[n] children/*[1]; [t] "under"; [n] children/*[2];', 'self::limupper');
 
   // Bigoperator rules
   defineRule(
-      'largeop', 'default.default',
+      'largeop', 'emacspeak.default',
       '[n] text()', 'self::largeop');
 
   defineRule(
-      'bigop', 'default.default',
+      'bigop', 'emacspeak.default',
       '[n] children/*[1]; [p] (pause 100); [t] "over"; [n] children/*[2];' +
       '[p] (pause 250);',
       'self::bigop');
@@ -421,73 +457,79 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   // Integral rules
   defineRule(
-      'integral', 'default.default',
+      'integral', 'emacspeak.default',
       '[n] children/*[1]; [p] (pause 100); [n] children/*[2];' +
       '[p] (pause 200); [n] children/*[3] (rate:0.35);', 'self::integral');
 
 
   defineRule(
-      'sqrt', 'default.default',
+      'sqrt', 'emacspeak.default',
       '[t] "Square root of"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::sqrt');
 
   defineRule(
-      'square', 'default.default',
-      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:300)',
+      'square', 'emacspeak.default',
+      '[n] children/*[1]; [t] "squared" (pitch:0.35); [p] (pause:200)',
       'self::superscript', 'children/*[2][text()=2]',
       'name(./children/*[1])!="text"');
 
   defineRule(
-      'cube', 'default.default',
-      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:300)',
+      'cube', 'emacspeak.default',
+      '[n] children/*[1]; [t] "cubed" (pitch:0.35); [p] (pause:200)',
       'self::superscript', 'children/*[2][text()=3]',
       'name(./children/*[1])!="text"');
 
   defineRule(
-      'root', 'default.default',
+      'root', 'emacspeak.default',
       '[t] "root of order"; [n] children/*[1];' +
           '[t] "over"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::root');
 
+  // TODO (sorge) This is probably unnecessary now!
   defineRule(
-      'text', 'default.default',
+      'text-no-mult', 'emacspeak.default',
+      '[n] children/*[1]; [p] (pause:200); [n] children/*[2]',
+      'self::infixop', 'children/text');
+
+  defineRule(
+      'text', 'emacspeak.default',
       '[n] text(); [p] (pause:200)',
       'self::text');
 
   defineRule(
-      'unit', 'default.default',
-      '[t] text() (grammar:annotation="unit":translate)',
+      'unit', 'emacspeak.default',
+      '[t] text() (annotation:unit, preprocess)',
       'self::identifier', '@role="unit"');
   defineRule(
-      'unit-square', 'default.default',
+      'unit-square', 'emacspeak.default',
       '[t] "square"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=2]',
       'name(children/*[1])="identifier"');
 
   defineRule(
-      'unit-cubic', 'default.default',
+      'unit-cubic', 'emacspeak.default',
       '[t] "cubic"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'children/*[2][text()=3]',
       'name(children/*[1])="identifier"');
   defineRule(
-      'reciprocal', 'default.default',
+      'reciprocal', 'emacspeak.default',
       '[t] "reciprocal"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'count(preceding-sibling::*)=0 or preceding-sibling::*[@role!="unit"]');
   defineRule(
-      'reciprocal', 'default.default',
+      'reciprocal', 'emacspeak.default',
       '[t] "per"; [n] children/*[1]',
       'self::superscript', '@role="unit"', 'name(children/*[1])="identifier"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()=1]',
       'preceding-sibling::*[@role="unit"]');
   defineRule(
-      'unit-combine', 'default.default',
+      'unit-combine', 'emacspeak.default',
       '[m] children/*', 'self::infixop', '@role="unit"');
   defineRule(
-      'unit-divide', 'default.default',
+      'unit-divide', 'emacspeak.default',
       '[n] children/*[1] (pitch:0.3); [t] "per";' +
       ' [n] children/*[2] (pitch:-0.3)',
       'self::fraction', '@role="unit"');
@@ -497,7 +539,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 });  // goog.scope
 
 
-sre.SemanticTreeRules.getInstance().initializer = [
-  sre.SemanticTreeRules.initCustomFunctions_,
-  sre.SemanticTreeRules.initSemanticRules_
+sre.EmacspeakRules.getInstance().initializer = [
+  sre.EmacspeakRules.initCustomFunctions_,
+  sre.EmacspeakRules.initSemanticRules_
 ];
