@@ -1059,17 +1059,16 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
           innerNode = sre.SemanticProcessor.getInstance().factory_.
               makeBranchNode(
               sre.SemanticAttr.Type.OVERSCORE, [center, children[2]], []);
-          innerNode.role = center.role;
           children = [innerNode, children[1]];
           type = sre.SemanticAttr.Type.UNDERSCORE;
         } else {
           innerNode = sre.SemanticProcessor.getInstance().factory_.
               makeBranchNode(
               sre.SemanticAttr.Type.UNDERSCORE, [center, children[1]], []);
-          innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
           children = [innerNode, children[2]];
           type = sre.SemanticAttr.Type.OVERSCORE;
         }
+          innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
         break;
     }
   }
