@@ -10970,3 +10970,62 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</superscript>'
   );
 };
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
+  this.executeTreeTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+    '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"/>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+    '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"/>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+    '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"/>' +
+      '<punctuation role="ellipsis" id="2">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+    '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"/>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '<text role="unknown" id="2"/>' +
+      '</children>' +
+      '</punctuated>'
+  );
+};
