@@ -2166,3 +2166,27 @@ sre.RebuildStreeTest.prototype.testRebuildBinomialOther = function() {
       '<mi>b</mi></mtd></mtr></mtable>');
 };
 
+
+/**
+ * Tests for dealing with empty accents and embellishments.
+ */
+sre.RebuildStreeTest.prototype.testRebuildEmptyAccents = function() {
+  this.executeRebuildTest(
+    '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>');
+  this.executeRebuildTest(
+    '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>');
+  this.executeRebuildTest(
+    '<munderover><mo>→</mo><mo>≅</mo><mo>≅</mo></munderover>');
+  this.executeRebuildTest(
+    '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>');
+  this.executeRebuildTest(
+    '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>');
+  this.executeRebuildTest(
+    '<munderover><mi>A</mi><mo>≅</mo><mo>≅</mo></munderover>');
+  this.executeRebuildTest(
+    '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>');
+  this.executeRebuildTest(
+    '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>');
+  this.executeRebuildTest(
+    '<msubsup><mo>)</mo><mo>≅</mo><mo>≅</mo></msubsup>');
+};

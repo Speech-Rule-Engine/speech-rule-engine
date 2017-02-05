@@ -10839,6 +10839,9 @@ sre.SemanticTreeTest.prototype.testStreeFonts = function() {
 };
 
 
+/**
+ * Tests for dealing with empty accents and embellishments.
+ */
 sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
   this.executeTreeTest(
     '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',

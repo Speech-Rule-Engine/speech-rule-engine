@@ -67,14 +67,8 @@ sre.CaseDoubleScript.test = function(semantic) {
 sre.CaseDoubleScript.prototype.getMathml = function() {
   var ignore = this.semantic.childNodes[0];
   var baseSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[0]);
-  if (ignore.type === sre.SemanticAttr.Type.OVERSCORE ||
-      ignore.type === sre.SemanticAttr.Type.SUPERSCRIPT) {
-    var supSem = /**@type{!sre.SemanticNode}*/(ignore.childNodes[1]);
-    var subSem = /**@type {!sre.SemanticNode}*/(this.semantic.childNodes[1]);
-  } else {
-    supSem = /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[1]);
-    subSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[1]);
-  }
+  var supSem = /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[1]);
+  var subSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[1]);
   var supMml = sre.EnrichMathml.walkTree(supSem);
   var baseMml = sre.EnrichMathml.walkTree(baseSem);
   var subMml = sre.EnrichMathml.walkTree(subSem);
