@@ -2190,3 +2190,19 @@ sre.RebuildStreeTest.prototype.testRebuildEmptyAccents = function() {
   this.executeRebuildTest(
     '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>');
 };
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.RebuildStreeTest.prototype.testRebuildEllipsesExplicitSpacing = function() {
+  this.executeRebuildTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>');
+  this.executeRebuildTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
+  this.executeRebuildTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>');
+  this.executeRebuildTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
+};
+

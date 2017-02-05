@@ -107,8 +107,9 @@ sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
   var stree = new sre.SemanticTree(node);
-  var sxml = sre.DomUtil.parseInput(
-      stree.xml(this.brief).toString());
+  // var sxml = sre.DomUtil.parseInput(
+  //     stree.xml(this.brief).toString());
+  var sxml = stree.xml(this.brief);
   this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
@@ -10983,7 +10984,7 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '<punctuation role="dummy" id="2">⁣</punctuation>' +
       '</content>' +
       '<children>' +
-      '<text role="unknown" id="0"/>' +
+      '<text role="unknown" id="0"> </text>' +
       '<punctuation role="ellipsis" id="1">…</punctuation>' +
       '</children>' +
       '</punctuated>'
@@ -10996,7 +10997,7 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '</content>' +
       '<children>' +
       '<punctuation role="ellipsis" id="0">…</punctuation>' +
-      '<text role="unknown" id="1"/>' +
+      '<text role="unknown" id="1"> </text>' +
       '</children>' +
       '</punctuated>'
   );
@@ -11009,7 +11010,7 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '</content>' +
       '<children>' +
       '<punctuation role="ellipsis" id="0">…</punctuation>' +
-      '<text role="unknown" id="1"/>' +
+      '<text role="unknown" id="1"> </text>' +
       '<punctuation role="ellipsis" id="2">…</punctuation>' +
       '</children>' +
       '</punctuated>'
@@ -11022,9 +11023,9 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '<punctuation role="dummy" id="4">⁣</punctuation>' +
       '</content>' +
       '<children>' +
-      '<text role="unknown" id="0"/>' +
+      '<text role="unknown" id="0"> </text>' +
       '<punctuation role="ellipsis" id="1">…</punctuation>' +
-      '<text role="unknown" id="2"/>' +
+      '<text role="unknown" id="2"> </text>' +
       '</children>' +
       '</punctuated>'
   );
