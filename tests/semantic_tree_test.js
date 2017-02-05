@@ -10872,7 +10872,7 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</underscore>'
   );
   this.executeTreeTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mo>≅</mo></munderover>',
+    '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
     '<overscore role="arrow" embellished="relation" id="4">' +
       '<children>' +
       '<underscore role="underover" embellished="relation" id="3">' +
@@ -10881,7 +10881,7 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '<relation role="underaccent" id="1">≅</relation>' +
       '</children>' +
       '</underscore>' +
-      '<relation role="overaccent" id="2">≅</relation>' +
+      '<relation role="overaccent" id="2">=</relation>' +
       '</children>' +
       '</overscore>'
   );
@@ -10914,7 +10914,7 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</underscore>'
   );
   this.executeTreeTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mo>≅</mo></munderover>',
+    '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
     '<overscore role="latinletter" id="4">' +
       '<children>' +
       '<underscore role="underover" id="3">' +
@@ -10923,7 +10923,7 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '<relation role="underaccent" id="1">≅</relation>' +
       '</children>' +
       '</underscore>' +
-      '<relation role="overaccent" id="2">≅</relation>' +
+      '<relation role="overaccent" id="2">=</relation>' +
       '</children>' +
       '</overscore>'
   );
@@ -10956,7 +10956,7 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mo>≅</mo></msubsup>',
+    '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
     '<superscript role="close" embellished="fence" id="4">' +
       '<children>' +
       '<subscript role="subsup" embellished="fence" id="3">' +
@@ -10965,7 +10965,7 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '<relation role="equality" id="1">≅</relation>' +
       '</children>' +
       '</subscript>' +
-      '<relation role="equality" id="2">≅</relation>' +
+      '<relation role="equality" id="2">=</relation>' +
       '</children>' +
       '</superscript>'
   );

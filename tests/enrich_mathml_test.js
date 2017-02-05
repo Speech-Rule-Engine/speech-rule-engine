@@ -10820,3 +10820,99 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomialOther = function() {
   );
 };
 
+
+/**
+ * Tests for dealing with empty accents and embellishments.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
+  this.executeMathmlTest(
+    '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+    '<math>' +
+      '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="4"/>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+    '<math>' +
+      '<munderover type="underover" role="arrow" id="4" children="0,2,1"' +
+      ' collapsed="(4 (3 0 2) 1)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mrow type="empty" role="unknown" id="1" parent="4"/>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">≅</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
+    '<math>' +
+      '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">=</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+    '<math>' +
+      '<munderover type="underover" role="latinletter" id="4"' +
+      ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="4"/>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+    '<math>' +
+      '<munderover type="underover" role="latinletter" id="4"' +
+      ' children="0,2,1" collapsed="(4 (3 0 2) 1)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
+      '<mrow type="empty" role="unknown" id="1" parent="4"/>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">≅</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
+    '<math>' +
+      '<munderover type="underover" role="latinletter" id="4"' +
+      ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">=</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+    '<math>' +
+      '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="4">≅</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="4"/>' +
+      '</msubsup>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+    '<math>' +
+      '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
+      '<mrow type="empty" role="unknown" id="1" parent="4"/>' +
+      '<mo type="relation" role="equality" id="2" parent="4">≅</mo>' +
+      '</msubsup>' +
+      '</math>');
+  this.executeMathmlTest(
+    '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
+    '<math>' +
+      '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="4">≅</mo>' +
+      '<mo type="relation" role="equality" id="2" parent="4">=</mo>' +
+      '</msubsup>' +
+      '</math>');
+};
