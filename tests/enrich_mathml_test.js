@@ -10916,3 +10916,54 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</msubsup>' +
       '</math>');
 };
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
+  this.executeMathmlTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+    '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mtext type="text" role="unknown" id="0" parent="3"> </mtext>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mo type="punctuation" role="ellipsis" id="1" parent="3">…</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+    '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mo type="punctuation" role="ellipsis" id="0" parent="3">…</mo>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="3"> </mtext>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+    '<math type="punctuated" role="text" id="5" children="0,1,2"' +
+      ' content="3,4">' +
+      '<mo type="punctuation" role="ellipsis" id="0" parent="5">…</mo>' +
+      '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="5"> </mtext>' +
+      '<mo type="punctuation" role="dummy" id="4" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mo type="punctuation" role="ellipsis" id="2" parent="5">…</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+    '<math type="punctuated" role="text" id="5" children="0,1,2"' +
+      ' content="3,4">' +
+      '<mtext type="text" role="unknown" id="0" parent="5"> </mtext>' +
+      '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mo type="punctuation" role="ellipsis" id="1" parent="5">…</mo>' +
+      '<mo type="punctuation" role="dummy" id="4" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="2" parent="5"> </mtext>' +
+      '</math>'
+  );
+};

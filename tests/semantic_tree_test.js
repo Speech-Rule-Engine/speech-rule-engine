@@ -107,8 +107,9 @@ sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
   var stree = new sre.SemanticTree(node);
-  var sxml = sre.DomUtil.parseInput(
-      stree.xml(this.brief).toString());
+  // var sxml = sre.DomUtil.parseInput(
+  //     stree.xml(this.brief).toString());
+  var sxml = stree.xml(this.brief);
   this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
@@ -10968,5 +10969,64 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '<relation role="equality" id="2">=</relation>' +
       '</children>' +
       '</superscript>'
+  );
+};
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
+  this.executeTreeTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+    '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"> </text>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+    '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"> </text>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+    '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"> </text>' +
+      '<punctuation role="ellipsis" id="2">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+    '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"> </text>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '<text role="unknown" id="2"> </text>' +
+      '</children>' +
+      '</punctuated>'
   );
 };
