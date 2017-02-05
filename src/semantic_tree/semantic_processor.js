@@ -958,10 +958,12 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
     }
   }
   if (punctuations.length === 1 &&
-      nodes[0].type === sre.SemanticAttr.Type.PUNCTUATION) {
+      nodes[0].type === sre.SemanticAttr.Type.PUNCTUATION &&
+      nodes[0] === punctuations[0]) {
     newNode.role = sre.SemanticAttr.Role.STARTPUNCT;
   } else if (punctuations.length === 1 &&
-      nodes[nodes.length - 1].type === sre.SemanticAttr.Type.PUNCTUATION) {
+      nodes[nodes.length - 1].type === sre.SemanticAttr.Type.PUNCTUATION &&
+      nodes[nodes.length - 1] === punctuations[0]) {
     newNode.role = sre.SemanticAttr.Role.ENDPUNCT;
   } else if (punctuations.every(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
