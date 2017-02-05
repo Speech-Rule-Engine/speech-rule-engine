@@ -363,6 +363,6 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
  */
 sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
   return puncts.length === 1 &&
-    nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION &&
-    nodes[position] === puncts[0];
+      nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION &&
+      nodes[position] === puncts[0];
 };

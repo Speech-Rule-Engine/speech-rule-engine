@@ -2172,23 +2172,23 @@ sre.RebuildStreeTest.prototype.testRebuildBinomialOther = function() {
  */
 sre.RebuildStreeTest.prototype.testRebuildEmptyAccents = function() {
   this.executeRebuildTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>');
+      '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>');
   this.executeRebuildTest(
-    '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>');
+      '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>');
   this.executeRebuildTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>');
+      '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>');
   this.executeRebuildTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>');
+      '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>');
   this.executeRebuildTest(
-    '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>');
+      '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>');
   this.executeRebuildTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>');
+      '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>');
   this.executeRebuildTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>');
+      '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>');
   this.executeRebuildTest(
-    '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>');
+      '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>');
   this.executeRebuildTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>');
+      '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>');
 };
 
 
@@ -2197,12 +2197,12 @@ sre.RebuildStreeTest.prototype.testRebuildEmptyAccents = function() {
  */
 sre.RebuildStreeTest.prototype.testRebuildEllipsesExplicitSpacing = function() {
   this.executeRebuildTest(
-    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>');
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>');
   this.executeRebuildTest(
-    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
   this.executeRebuildTest(
-    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>');
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>');
   this.executeRebuildTest(
-    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
 };
 

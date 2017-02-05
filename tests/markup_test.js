@@ -55,7 +55,7 @@ sre.MarkupTest.prototype.setUpTest = function() {
  */
 sre.MarkupTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
-    {semantics: false, markup: sre.Engine.Markup.NONE});
+      {semantics: false, markup: sre.Engine.Markup.NONE});
 };
 
 
@@ -99,7 +99,7 @@ sre.MarkupTest.QUADRATIC =
  * @param {boolean} semantics As semantic markup or not.
  */
 sre.MarkupTest.prototype.executeTest = function(
-  expr, result, markup, semantics) {
+    expr, result, markup, semantics) {
   sre.Engine.getInstance().markup = markup;
   sre.Engine.getInstance().semantics = semantics;
   var descrs = sre.System.getInstance().toDescription(expr);

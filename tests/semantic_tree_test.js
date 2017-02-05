@@ -106,10 +106,7 @@ sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
-  var stree = new sre.SemanticTree(node);
-  // var sxml = sre.DomUtil.parseInput(
-  //     stree.xml(this.brief).toString());
-  var sxml = stree.xml(this.brief);
+  var sxml = new sre.SemanticTree(node).xml(this.brief);
   this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
@@ -10743,12 +10740,12 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
 sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
   this.brief = false;
   this.executeTreeTest(
-    '<mo>,</mo>',
+      '<mo>,</mo>',
       '<punctuation role="comma" id="0">,</punctuation>'
   );
   this.executeTreeTest(
-    '<mo>,</mo><mo>,</mo>',
-    '<punctuated role="comma" id="2">' +
+      '<mo>,</mo><mo>,</mo>',
+      '<punctuated role="comma" id="2">' +
       '<content>' +
       '<punctuation role="comma" id="0">,</punctuation>' +
       '<punctuation role="comma" id="1">,</punctuation>' +
@@ -10760,7 +10757,7 @@ sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
       '</punctuated>'
   );
   this.executeTreeTest(
-    '<mo>,</mo><mo>;</mo>',
+      '<mo>,</mo><mo>;</mo>',
       '<punctuated role="sequence" id="2">' +
       '<content>' +
       '<punctuation role="comma" id="0">,</punctuation>' +
@@ -10773,8 +10770,8 @@ sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
       '</punctuated>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mo>,</mo><mo>}</mo>',
-    '<fenced role="leftright" id="3">' +
+      '<mo>{</mo><mo>,</mo><mo>}</mo>',
+      '<fenced role="leftright" id="3">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="2">}</fence>' +
@@ -10786,7 +10783,7 @@ sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
   );
   this.executeTreeTest(
       '<mo>{</mo><mo>,</mo><mo>,</mo><mo>}</mo>',
-    '<fenced role="leftright" id="5">' +
+      '<fenced role="leftright" id="5">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="3">}</fence>' +
@@ -10813,28 +10810,28 @@ sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
  */
 sre.SemanticTreeTest.prototype.testStreeFonts = function() {
   this.executeTreeTest(
-    '<mi>A</mi>',
-    '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+      '<mi>A</mi>',
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>'
   );
   this.executeTreeTest(
-    '<mi mathvariant="italic">A</mi>',
-    '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+      '<mi mathvariant="italic">A</mi>',
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>'
   );
   this.executeTreeTest(
-    '<mi mathvariant="bold">A</mi>',
-    '<identifier role="latinletter" font="bold" id="0">A</identifier>'
+      '<mi mathvariant="bold">A</mi>',
+      '<identifier role="latinletter" font="bold" id="0">A</identifier>'
   );
   this.executeTreeTest(
-    '<mi mathvariant="-tex-caligraphic">A</mi>',
-    '<identifier role="latinletter" font="caligraphic" id="0">A</identifier>'
+      '<mi mathvariant="-tex-caligraphic">A</mi>',
+      '<identifier role="latinletter" font="caligraphic" id="0">A</identifier>'
   );
   this.executeTreeTest(
-    '<mi mathvariant="-tex-oldstyle">A</mi>',
-    '<identifier role="latinletter" font="oldstyle" id="0">A</identifier>'
+      '<mi mathvariant="-tex-oldstyle">A</mi>',
+      '<identifier role="latinletter" font="oldstyle" id="0">A</identifier>'
   );
   this.executeTreeTest(
-    '<mi>𝝖</mi>',
-    '<identifier role="greekletter" font="sans-serif-bold"' +
+      '<mi>𝝖</mi>',
+      '<identifier role="greekletter" font="sans-serif-bold"' +
       ' id="0">𝝖</identifier>'
   );
 };
@@ -10845,8 +10842,8 @@ sre.SemanticTreeTest.prototype.testStreeFonts = function() {
  */
 sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
   this.executeTreeTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
-    '<overscore role="arrow" embellished="relation" id="4">' +
+      '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+      '<overscore role="arrow" embellished="relation" id="4">' +
       '<children>' +
       '<underscore role="underover" embellished="relation" id="3">' +
       '<children>' +
@@ -10859,8 +10856,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</overscore>'
   );
   this.executeTreeTest(
-    '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
-    '<underscore role="arrow" embellished="relation" id="4">' +
+      '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+      '<underscore role="arrow" embellished="relation" id="4">' +
       '<children>' +
       '<overscore role="underover" embellished="relation" id="3">' +
       '<children>' +
@@ -10873,8 +10870,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</underscore>'
   );
   this.executeTreeTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
-    '<overscore role="arrow" embellished="relation" id="4">' +
+      '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
+      '<overscore role="arrow" embellished="relation" id="4">' +
       '<children>' +
       '<underscore role="underover" embellished="relation" id="3">' +
       '<children>' +
@@ -10887,8 +10884,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</overscore>'
   );
   this.executeTreeTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
-    '<overscore role="latinletter" id="4">' +
+      '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+      '<overscore role="latinletter" id="4">' +
       '<children>' +
       '<underscore role="underover" id="3">' +
       '<children>' +
@@ -10901,8 +10898,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</overscore>'
   );
   this.executeTreeTest(
-    '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
-    '<underscore role="latinletter" id="4">' +
+      '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+      '<underscore role="latinletter" id="4">' +
       '<children>' +
       '<overscore role="underover" id="3">' +
       '<children>' +
@@ -10915,8 +10912,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</underscore>'
   );
   this.executeTreeTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
-    '<overscore role="latinletter" id="4">' +
+      '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
+      '<overscore role="latinletter" id="4">' +
       '<children>' +
       '<underscore role="underover" id="3">' +
       '<children>' +
@@ -10929,8 +10926,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</overscore>'
   );
   this.executeTreeTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
-    '<superscript role="close" embellished="fence" id="4">' +
+      '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
       '<children>' +
       '<subscript role="subsup" embellished="fence" id="3">' +
       '<children>' +
@@ -10943,8 +10940,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
-    '<superscript role="close" embellished="fence" id="4">' +
+      '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
       '<children>' +
       '<subscript role="subsup" embellished="fence" id="3">' +
       '<children>' +
@@ -10957,8 +10954,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
       '</superscript>'
   );
   this.executeTreeTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
-    '<superscript role="close" embellished="fence" id="4">' +
+      '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
       '<children>' +
       '<subscript role="subsup" embellished="fence" id="3">' +
       '<children>' +
@@ -10978,8 +10975,8 @@ sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
  */
 sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
   this.executeTreeTest(
-    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
-    '<punctuated role="text" id="3">' +
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<punctuated role="text" id="3">' +
       '<content>' +
       '<punctuation role="dummy" id="2">⁣</punctuation>' +
       '</content>' +
@@ -10990,8 +10987,8 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '</punctuated>'
   );
   this.executeTreeTest(
-    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
-    '<punctuated role="text" id="3">' +
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<punctuated role="text" id="3">' +
       '<content>' +
       '<punctuation role="dummy" id="2">⁣</punctuation>' +
       '</content>' +
@@ -11002,8 +10999,8 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '</punctuated>'
   );
   this.executeTreeTest(
-    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
-    '<punctuated role="text" id="5">' +
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<punctuated role="text" id="5">' +
       '<content>' +
       '<punctuation role="dummy" id="3">⁣</punctuation>' +
       '<punctuation role="dummy" id="4">⁣</punctuation>' +
@@ -11016,8 +11013,8 @@ sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
       '</punctuated>'
   );
   this.executeTreeTest(
-    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
-    '<punctuated role="text" id="5">' +
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<punctuated role="text" id="5">' +
       '<content>' +
       '<punctuation role="dummy" id="3">⁣</punctuation>' +
       '<punctuation role="dummy" id="4">⁣</punctuation>' +

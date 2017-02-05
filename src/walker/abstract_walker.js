@@ -116,8 +116,9 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    * @type {!sre.Focus}
    * @private
    */
-  this.focus_ = sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
-  
+  this.focus_ = sre.Focus.factory(
+      this.rootId, [this.rootId], this.rebuilt, this.node);
+
   /**
    * Flag indicating whether the last move actually moved focus.
    * @type {sre.AbstractWalker.move}
@@ -248,10 +249,10 @@ sre.AbstractWalker.prototype.speech = function() {
 sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   var primary = this.focus_.getDomPrimary();
   var expand = (this.expandable(primary) && 'expandable') ||
-        (this.collapsible(primary) && 'collapsible') || '';
+      (this.collapsible(primary) && 'collapsible') || '';
   var descr = [sre.AuditoryDescription.speechString(
-    [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
-                                  personality: {}})])];
+      [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
+         personality: {}})])];
   if (prefix) {
     descr.push(prefix);
   }

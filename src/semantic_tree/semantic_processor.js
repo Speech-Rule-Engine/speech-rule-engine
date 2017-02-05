@@ -960,7 +960,7 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
   if (sre.SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
     newNode.role = sre.SemanticAttr.Role.STARTPUNCT;
   } else if (sre.SemanticPred.singlePunctAtPosition(
-    nodes, punctuations, nodes.length - 1)) {
+      nodes, punctuations, nodes.length - 1)) {
     newNode.role = sre.SemanticAttr.Role.ENDPUNCT;
   } else if (punctuations.every(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
@@ -1067,7 +1067,7 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
           children = [innerNode, children[2]];
           type = sre.SemanticAttr.Type.OVERSCORE;
         }
-          innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
+        innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
         break;
     }
   }
@@ -2126,4 +2126,5 @@ sre.SemanticProcessor.MATHJAX_FONTS = {
 sre.SemanticProcessor.prototype.font = function(font) {
   var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
-}
+};
+

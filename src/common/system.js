@@ -460,7 +460,7 @@ sre.System.prototype.move = function(direction) {
     return null;
   }
   var key = (typeof direction === 'string') ?
-        sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
+      sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
   var move = sre.System.LocalStorage_.getInstance().walker.move(key);
   return move === false ? sre.AuditoryDescription.error(direction) :
       sre.System.LocalStorage_.getInstance().walker.speech();

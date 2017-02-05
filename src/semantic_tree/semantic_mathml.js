@@ -485,8 +485,9 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.leaf_ = function(mml) {
   return this.getFactory().makeLeafNode(
-    mml.textContent,
-    sre.SemanticProcessor.getInstance().font(mml.getAttribute('mathvariant')));
+      mml.textContent,
+      sre.SemanticProcessor.getInstance().font(
+          mml.getAttribute('mathvariant')));
 };
 
 

@@ -165,15 +165,15 @@ sre.AuditoryDescription.speechString = function(descrs, opt_separator) {
  */
 sre.AuditoryDescription.toString_ = function(descrs, separator) {
   switch (sre.Engine.getInstance().markup) {
-  case sre.Engine.Markup.SABLE:
-  case sre.Engine.Markup.SSML:
-  case sre.Engine.Markup.VOICEXML:
-    return sre.AuditoryDescription.toMarkupString_(descrs, separator);
-  case sre.Engine.Markup.ACSS:
-    return sre.AuditoryDescription.toAcssString_(descrs, separator);
-  case sre.Engine.Markup.NONE:
-  default:
-    return sre.AuditoryDescription.toSimpleString_(descrs, separator);
+    case sre.Engine.Markup.SABLE:
+    case sre.Engine.Markup.SSML:
+    case sre.Engine.Markup.VOICEXML:
+      return sre.AuditoryDescription.toMarkupString_(descrs, separator);
+    case sre.Engine.Markup.ACSS:
+      return sre.AuditoryDescription.toAcssString_(descrs, separator);
+    case sre.Engine.Markup.NONE:
+    default:
+      return sre.AuditoryDescription.toSimpleString_(descrs, separator);
   }
 };
 
@@ -216,8 +216,8 @@ sre.AuditoryDescription.toAcssString_ = function(descrs, separator) {
     if (sre.AuditoryDescription.isPauseElement_(descr)) {
       if (string) {
         pause = sre.AuditoryDescription.mergePause_(
-          pause,
-          /** @type {{pause: number}} */(descr), Math.max);
+            pause,
+            /** @type {{pause: number}} */(descr), Math.max);
       }
       continue;
     }
@@ -294,18 +294,17 @@ sre.AuditoryDescription.sexpProsody_ = function(pros) {
 sre.AuditoryDescription.sexpProsodyElement_ = function(key, value) {
   value = sre.AuditoryDescription.applyScaleFunction(value);
   switch (key) {
-  case sre.Engine.personalityProps.RATE:
-    return '(richness . ' + value + ')';
-  case sre.Engine.personalityProps.PITCH:
-    return '(average-pitch . ' + value + ')';
-    break;
-  case sre.Engine.personalityProps.VOLUME:
-    return '(stress . ' + value + ')';
-    break;
+    case sre.Engine.personalityProps.RATE:
+      return '(richness . ' + value + ')';
+    case sre.Engine.personalityProps.PITCH:
+      return '(average-pitch . ' + value + ')';
+      break;
+    case sre.Engine.personalityProps.VOLUME:
+      return '(stress . ' + value + ')';
+      break;
   }
   return '(value . ' + value + ')';
 };
-
 
 
 /**
@@ -333,8 +332,8 @@ sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
   sre.AuditoryDescription.setScaleFunction(-2, 2, -100, 100, 2);
   var isSable = sre.Engine.getInstance().markup === sre.Engine.Markup.SABLE;
   var tagFunction = isSable ?
-        sre.AuditoryDescription.translateSableTags :
-        sre.AuditoryDescription.translateSsmlTags;
+      sre.AuditoryDescription.translateSableTags :
+      sre.AuditoryDescription.translateSsmlTags;
   var markup = sre.AuditoryDescription.personalityMarkup_(descrs);
   var result = [];
   var currentOpen = [];
@@ -345,7 +344,7 @@ sre.AuditoryDescription.toMarkupString_ = function(descrs, separator) {
     }
     if (sre.AuditoryDescription.isPauseElement_(descr)) {
       result.push(
-        '<BREAK ' +
+          '<BREAK ' +
           (isSable ?
            'MSEC="' + descr[sre.Engine.personalityProps.PAUSE] + '"/>' :
            'TIME="' + descr[sre.Engine.personalityProps.PAUSE] + 'ms"/>')
@@ -412,14 +411,14 @@ sre.AuditoryDescription.sortClose = function(open, descrs) {
 sre.AuditoryDescription.translateSableTags = function(tag, value) {
   value = sre.AuditoryDescription.applyScaleFunction(value);
   switch (tag) {
-  case sre.Engine.personalityProps.PITCH:
-    return '<PITCH BASE="' + value + '%">';
-  case sre.Engine.personalityProps.RATE:
-    return '<RATE SPEED="' + value + '%">';
-  case sre.Engine.personalityProps.VOLUME:
-    return '<VOLUME LEVEL="' + value + '%">';
-  default:
-    return '<' + tag.toUpperCase() + ' VALUE="' + value + '">';
+    case sre.Engine.personalityProps.PITCH:
+      return '<PITCH BASE="' + value + '%">';
+    case sre.Engine.personalityProps.RATE:
+      return '<RATE SPEED="' + value + '%">';
+    case sre.Engine.personalityProps.VOLUME:
+      return '<VOLUME LEVEL="' + value + '%">';
+    default:
+      return '<' + tag.toUpperCase() + ' VALUE="' + value + '">';
   }
 };
 
@@ -435,9 +434,8 @@ sre.AuditoryDescription.translateSsmlTags = function(attr, value) {
   value = sre.AuditoryDescription.applyScaleFunction(value);
   var valueStr = value < 0 ? value.toString() : '+' + value;
   return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
-    (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
+      (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
 };
-
 
 
 /**
@@ -514,7 +512,7 @@ sre.AuditoryDescription.personalityMarkup_ = function(descrs) {
     if (pers[sre.Engine.personalityProps.PAUSE] !== undefined) {
       pause = {};
       pause[sre.Engine.personalityProps.PAUSE] =
-        /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
+          /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
       delete pers[sre.Engine.personalityProps.PAUSE];
     }
     var diff = sre.AuditoryDescription.personalityDiff_(pers, currentPers);
@@ -544,8 +542,8 @@ sre.AuditoryDescription.isMarkupElement_ = function(element) {
  */
 sre.AuditoryDescription.isPauseElement_ = function(element) {
   return typeof element === 'object' &&
-    Object.keys(element).length === 1 &&
-    Object.keys(element)[0] === sre.Engine.personalityProps.PAUSE;
+      Object.keys(element).length === 1 &&
+      Object.keys(element)[0] === sre.Engine.personalityProps.PAUSE;
 };
 
 
@@ -557,8 +555,8 @@ sre.AuditoryDescription.isPauseElement_ = function(element) {
  */
 sre.AuditoryDescription.isStringElement_ = function(element) {
   return typeof element === 'object' &&
-    Object.keys(element).length === 1 &&
-    Object.keys(element)[0] === 'string';
+      Object.keys(element).length === 1 &&
+      Object.keys(element)[0] === 'string';
 };
 
 
@@ -621,8 +619,8 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
     var value = currentValue || 0;
     //TODO: Simplify
     if (!sre.AuditoryDescription.isMarkupElement_(result)) {
-        result.open = [];
-        result.close = [];
+      result.open = [];
+      result.close = [];
     }
     if (!currentValue) {
       result.close.push(prop);
@@ -637,8 +635,8 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
     old[prop] = value;
     result[prop] = value;
     sre.AuditoryDescription.PersonalityRanges_[prop] ?
-      sre.AuditoryDescription.PersonalityRanges_[prop].push(value) :
-      sre.AuditoryDescription.PersonalityRanges_[prop] = [value];
+        sre.AuditoryDescription.PersonalityRanges_[prop].push(value) :
+        sre.AuditoryDescription.PersonalityRanges_[prop] = [value];
   }
   if (sre.AuditoryDescription.isMarkupElement_(result)) {
     // Cases:
@@ -690,13 +688,13 @@ sre.AuditoryDescription.personalityDiff_ = function(current, old) {
  */
 sre.AuditoryDescription.mergeStrings = function(strs) {
   switch (sre.Engine.getInstance().markup) {
-  case sre.Engine.Markup.ACSS:
-    return '(exp ' +
-      strs.map(function(str) {
-        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
-      ')';
-  default:
-    return strs.join(' ');
+    case sre.Engine.Markup.ACSS:
+      return '(exp ' +
+          strs.map(function(str) {
+            return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+          ')';
+    default:
+      return strs.join(' ');
   }
 };
 
@@ -709,10 +707,10 @@ sre.AuditoryDescription.mergeStrings = function(strs) {
  */
 sre.AuditoryDescription.error = function(key) {
   switch (sre.Engine.getInstance().markup) {
-  case sre.Engine.Markup.ACSS:
-    return '(error "' + key + '")';
-  default:
-    return null;
+    case sre.Engine.Markup.ACSS:
+      return '(error "' + key + '")';
+    default:
+      return null;
   }
 };
 

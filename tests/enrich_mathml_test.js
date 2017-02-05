@@ -10826,8 +10826,8 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomialOther = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
   this.executeMathmlTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
-    '<math>' +
+      '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+      '<math>' +
       '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
@@ -10836,8 +10836,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</munderover>' +
       '</math>');
   this.executeMathmlTest(
-    '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
-    '<math>' +
+      '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+      '<math>' +
       '<munderover type="underover" role="arrow" id="4" children="0,2,1"' +
       ' collapsed="(4 (3 0 2) 1)">' +
       '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
@@ -10846,8 +10846,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</munderover>' +
       '</math>');
   this.executeMathmlTest(
-    '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
-    '<math>' +
+      '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
+      '<math>' +
       '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
@@ -10856,8 +10856,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</munderover>' +
       '</math>');
   this.executeMathmlTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
-    '<math>' +
+      '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+      '<math>' +
       '<munderover type="underover" role="latinletter" id="4"' +
       ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
@@ -10866,8 +10866,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</munderover>' +
       '</math>');
   this.executeMathmlTest(
-    '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
-    '<math>' +
+      '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+      '<math>' +
       '<munderover type="underover" role="latinletter" id="4"' +
       ' children="0,2,1" collapsed="(4 (3 0 2) 1)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
@@ -10876,8 +10876,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</munderover>' +
       '</math>');
   this.executeMathmlTest(
-    '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
-    '<math>' +
+      '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
+      '<math>' +
       '<munderover type="underover" role="latinletter" id="4"' +
       ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
@@ -10886,8 +10886,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</munderover>' +
       '</math>');
   this.executeMathmlTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
-    '<math>' +
+      '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+      '<math>' +
       '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
@@ -10896,8 +10896,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</msubsup>' +
       '</math>');
   this.executeMathmlTest(
-    '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
-    '<math>' +
+      '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+      '<math>' +
       '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
@@ -10906,8 +10906,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
       '</msubsup>' +
       '</math>');
   this.executeMathmlTest(
-    '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
-    '<math>' +
+      '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
+      '<math>' +
       '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
@@ -10923,8 +10923,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
   this.executeMathmlTest(
-    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
-    '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
       '<mtext type="text" role="unknown" id="0" parent="3"> </mtext>' +
       '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
       ' operator="punctuated">⁣</mo>' +
@@ -10932,8 +10932,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
-    '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
       '<mo type="punctuation" role="ellipsis" id="0" parent="3">…</mo>' +
       '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
       ' operator="punctuated">⁣</mo>' +
@@ -10941,8 +10941,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
-    '<math type="punctuated" role="text" id="5" children="0,1,2"' +
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<math type="punctuated" role="text" id="5" children="0,1,2"' +
       ' content="3,4">' +
       '<mo type="punctuation" role="ellipsis" id="0" parent="5">…</mo>' +
       '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
@@ -10954,8 +10954,8 @@ sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
-    '<math type="punctuated" role="text" id="5" children="0,1,2"' +
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<math type="punctuated" role="text" id="5" children="0,1,2"' +
       ' content="3,4">' +
       '<mtext type="text" role="unknown" id="0" parent="5"> </mtext>' +
       '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
