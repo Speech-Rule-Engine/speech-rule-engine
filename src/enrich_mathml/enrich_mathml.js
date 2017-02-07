@@ -141,8 +141,10 @@ sre.EnrichMathml.walkTree = function(semantic) {
 
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.cloneContentNode));
+  // sre.EnrichMathml.printNodeList__('New Content', newContent);
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
+  // sre.EnrichMathml.printNodeList__('New Children', newChildren);
   var childrenList = sre.EnrichMathml.combineContentChildren_(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
@@ -191,10 +193,28 @@ sre.EnrichMathml.walkTree = function(semantic) {
 sre.EnrichMathml.introduceNewLayer = function(children) {
   var newNodeInfo = sre.EnrichMathml.mathmlLca_(children);
   var newNode = newNodeInfo.node;
-  if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
+  var info = newNodeInfo.valid;
+  if (info !== 'valid' || !sre.SemanticUtil.hasEmptyTag(newNode)) {
+    // Change pruned node!
     sre.Debugger.getInstance().output('Walktree Case 1.1');
     newNode = sre.DomUtil.createElement('mrow');
-    if (children[0]) {
+    if (info === 'pruned') {
+      sre.Debugger.getInstance().output('Walktree Case 1.1.0');
+      var innerNode = sre.EnrichMathml.descendNode(newNodeInfo.node);
+      if (sre.SemanticUtil.hasMathTag(innerNode)) {
+        sre.EnrichMathml.moveSemanticAttributes_(innerNode, newNode);
+        sre.DomUtil.toArray(innerNode.childNodes).forEach(
+            function(x) {newNode.appendChild(x);});
+        var auxNode = newNode;
+        newNode = innerNode;
+        innerNode = auxNode;
+      }
+      var index = children.indexOf(newNodeInfo.node);
+      children[index] = innerNode;
+      sre.DomUtil.replaceNode(innerNode, newNode);
+      newNode.appendChild(innerNode);
+      children.forEach(function(x) {newNode.appendChild(x);});
+    } else if (children[0]) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.1');
       var node = sre.EnrichMathml.attachedElement_(children);
       var oldChildren = sre.EnrichMathml.childrenSubset_(
@@ -204,6 +224,23 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
     }
   }
   return /**@type{!Element}*/(newNode);
+};
+
+
+/**
+ * Moves semantic attributes from one node to another.
+ * @param {!Element} oldNode The node whose semantic attributes are removed.
+ * @param {!Element} newNode The node which receives the semantic attributes.
+ * @private
+ */
+sre.EnrichMathml.moveSemanticAttributes_ = function(oldNode, newNode) {
+  for (var key in sre.EnrichMathml.Attribute) {
+    var attr = sre.EnrichMathml.Attribute[key];
+    if (oldNode.hasAttribute(attr)) {
+      newNode.setAttribute(attr, oldNode.getAttribute(attr));
+      oldNode.removeAttribute(attr);
+    }
+  }
 };
 
 
@@ -292,7 +329,7 @@ sre.EnrichMathml.functionApplication_ = function(oldNode, newNode) {
  * Finds the least common ancestor for a list of MathML nodes in the MathML
  * expression.
  * @param {!Array.<Element>} children A list of MathML nodes.
- * @return {{valid: boolean, node: Element}} Structure indicating if the node
+ * @return {{valid: string, node: Element}} Structure indicating if the node
  *     representing the LCA is valid and the least common ancestor if it exits.
  * @private
  */
@@ -300,25 +337,68 @@ sre.EnrichMathml.mathmlLca_ = function(children) {
   // Need to avoid newly created children (invisible operators).
   var leftMost = sre.EnrichMathml.attachedElement_(children);
   if (!leftMost) {
-    return {valid: false, node: null};
+    return {valid: 'invalid', node: null};
   }
   var rightMost = /**@type{!Element}*/(sre.EnrichMathml.attachedElement_(
       children.slice().reverse()));
   if (leftMost === rightMost) {
-    return {valid: true,
+    return {valid: 'valid',
       node: leftMost};
   }
   var leftPath = sre.EnrichMathml.pathToRoot_(leftMost);
+  var newLeftPath = sre.EnrichMathml.prunePath_(leftPath, children);
   var rightPath = sre.EnrichMathml.pathToRoot_(
-      rightMost, function(x) {return leftPath.indexOf(x) !== -1;});
+      rightMost, function(x) {return newLeftPath.indexOf(x) !== -1;});
+  // sre.EnrichMathml.printNodeList__('Left Path', leftPath);
+  // sre.EnrichMathml.printNodeList__('Right Path', rightPath);
   var lca = rightPath[0];
-  var lIndex = leftPath.indexOf(lca);
+  var lIndex = newLeftPath.indexOf(lca);
   if (lIndex === -1) {
-    return {valid: false, node: null};
+    return {valid: 'invalid', node: null};
   }
   return {valid:
-        sre.EnrichMathml.validLca_(leftPath[lIndex + 1], rightPath[1]),
+          newLeftPath.length !== leftPath.length ? 'pruned' : (
+          sre.EnrichMathml.validLca_(newLeftPath[lIndex + 1], rightPath[1]) ?
+              'valid' : 'invalid'),
     node: lca};
+};
+
+
+
+/**
+ * Prunes a path from a child element to the root node (where the root node is
+ * first in the list), if the LCA is actually an member of the children list.
+ * It then returns the shortend path, from the root element to the potential
+ * LCA.
+ * @param {!Array<Element>} path
+ * @param {!Array<Element>} children
+ * @return {!Array<Element>} The pruned path.
+ * @private
+ */
+sre.EnrichMathml.prunePath_ = function(path, children) {
+  var i = 0;
+  while (path[i] && children.indexOf(path[i]) === -1) {
+    i++;
+  }
+  return path.slice(0, i + 1);
+};
+
+
+sre.EnrichMathml.descendNode = function(node) {
+  console.log('OuterNode: ' + node.toString());
+  var children = sre.DomUtil.toArray(node.childNodes);
+  if (!children) {
+    return node;
+  }
+  var remainder = children.filter(function(child) {
+    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
+        !sre.SemanticUtil.hasIgnoreTag(child);
+  });
+  if (remainder.length === 1 && sre.SemanticUtil.hasEmptyTag(remainder[0]) &&
+      !remainder[0].hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
+    return sre.EnrichMathml.descendNode(remainder[0]);
+  }
+  return node;
 };
 
 
@@ -332,6 +412,9 @@ sre.EnrichMathml.attachedElement_ = function(nodes) {
   var count = 0;
   var attached = null;
   while (!attached && count < nodes.length) {
+    // console.log('Testing Parent');
+    // console.log(nodes[count].toString());
+    // console.log(nodes[count].parentNode ? nodes[count].parentNode.toString() : nodes[count].parentNode);
     if (nodes[count].parentNode) {
       attached = nodes[count];
     }
@@ -655,6 +738,10 @@ sre.EnrichMathml.getInnerNode = function(node) {
  */
 sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
   var wiki = opt_wiki || false;
+  console.log(expr.tagName);
+  for (var i = 0; i < expr.childNodes[0].childNodes.length; i++) {
+    console.log(expr.childNodes[0].childNodes[i].tagName);
+  }
   sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
   sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
   sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',
