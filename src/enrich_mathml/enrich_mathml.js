@@ -141,10 +141,8 @@ sre.EnrichMathml.walkTree = function(semantic) {
 
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.cloneContentNode));
-  // sre.EnrichMathml.printNodeList__('New Content', newContent);
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
-  // sre.EnrichMathml.printNodeList__('New Children', newChildren);
   var childrenList = sre.EnrichMathml.combineContentChildren_(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
@@ -195,12 +193,13 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
   var newNode = newNodeInfo.node;
   var info = newNodeInfo.valid;
   if (info !== 'valid' || !sre.SemanticUtil.hasEmptyTag(newNode)) {
-    // Change pruned node!
     sre.Debugger.getInstance().output('Walktree Case 1.1');
     newNode = sre.DomUtil.createElement('mrow');
     if (info === 'pruned') {
       sre.Debugger.getInstance().output('Walktree Case 1.1.0');
-      var innerNode = sre.EnrichMathml.descendNode(newNodeInfo.node);
+      var lca = /**@type{!Element}*/(newNodeInfo.node);
+      var innerNode = sre.EnrichMathml.descendNode_(lca);
+      // Case if LCA is actually the MathML root node.
       if (sre.SemanticUtil.hasMathTag(innerNode)) {
         sre.EnrichMathml.moveSemanticAttributes_(innerNode, newNode);
         sre.DomUtil.toArray(innerNode.childNodes).forEach(
@@ -209,7 +208,7 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
         newNode = innerNode;
         innerNode = auxNode;
       }
-      var index = children.indexOf(newNodeInfo.node);
+      var index = children.indexOf(lca);
       children[index] = innerNode;
       sre.DomUtil.replaceNode(innerNode, newNode);
       newNode.appendChild(innerNode);
@@ -384,24 +383,6 @@ sre.EnrichMathml.prunePath_ = function(path, children) {
 };
 
 
-sre.EnrichMathml.descendNode = function(node) {
-  console.log('OuterNode: ' + node.toString());
-  var children = sre.DomUtil.toArray(node.childNodes);
-  if (!children) {
-    return node;
-  }
-  var remainder = children.filter(function(child) {
-    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.SemanticUtil.hasIgnoreTag(child);
-  });
-  if (remainder.length === 1 && sre.SemanticUtil.hasEmptyTag(remainder[0]) &&
-      !remainder[0].hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
-    return sre.EnrichMathml.descendNode(remainder[0]);
-  }
-  return node;
-};
-
-
 /**
  * Finds the first elements in a list of nodes that has a parent pointer.
  * @param {!Array.<Element>} nodes A list of elements.
@@ -474,6 +455,31 @@ sre.EnrichMathml.ascendNewNode = function(newNode) {
     newNode = sre.EnrichMathml.parentNode_(newNode);
   }
   return newNode;
+};
+
+
+/**
+ * Descends a node as long as it only contains single empty tags, that do not
+ * semantic annotations already, while ignoring tags like merror, etc.
+ * @param {!Element} node The node from which to descend.
+ * @return {!Element} The inner most node with empty tag without semantic
+ *    annotations.
+ * @private
+ */
+sre.EnrichMathml.descendNode_ = function(node) {
+  var children = sre.DomUtil.toArray(node.childNodes);
+  if (!children) {
+    return node;
+  }
+  var remainder = children.filter(function(child) {
+    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
+        !sre.SemanticUtil.hasIgnoreTag(child);
+  });
+  if (remainder.length === 1 && sre.SemanticUtil.hasEmptyTag(remainder[0]) &&
+      !remainder[0].hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
+    return sre.EnrichMathml.descendNode_(remainder[0]);
+  }
+  return node;
 };
 
 
