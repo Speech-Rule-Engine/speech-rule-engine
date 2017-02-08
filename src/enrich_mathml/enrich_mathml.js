@@ -199,7 +199,7 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
     if (info === sre.EnrichMathml.lcaType.PRUNED) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.0');
       newNode = sre.EnrichMathml.introduceLayerAboveLca(
-        newNode, /**@type{!Element}*/(lca.node), children);
+          newNode, /**@type{!Element}*/(lca.node), children);
     } else if (children[0]) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.1');
       var node = sre.EnrichMathml.attachedElement_(children);
@@ -229,7 +229,7 @@ sre.EnrichMathml.introduceLayerAboveLca = function(mrow, lca, children) {
     sre.Debugger.getInstance().output('Walktree Case 1.1.0.0');
     sre.EnrichMathml.moveSemanticAttributes_(innerNode, mrow);
     sre.DomUtil.toArray(innerNode.childNodes).forEach(
-      function(x) {mrow.appendChild(x);});
+        function(x) {mrow.appendChild(x);});
     var auxNode = mrow;
     mrow = innerNode;
     innerNode = auxNode;
@@ -382,11 +382,11 @@ sre.EnrichMathml.mathmlLca_ = function(children) {
     return {type: sre.EnrichMathml.lcaType.INVALID, node: null};
   }
   return {type:
-          newLeftPath.length !== leftPath.length ?
-          sre.EnrichMathml.lcaType.PRUNED : (
+        newLeftPath.length !== leftPath.length ?
+        sre.EnrichMathml.lcaType.PRUNED : (
             sre.EnrichMathml.validLca_(newLeftPath[lIndex + 1], rightPath[1]) ?
-              sre.EnrichMathml.lcaType.VALID :
-              sre.EnrichMathml.lcaType.INVALID),
+        sre.EnrichMathml.lcaType.VALID :
+        sre.EnrichMathml.lcaType.INVALID),
     node: lca};
 };
 
