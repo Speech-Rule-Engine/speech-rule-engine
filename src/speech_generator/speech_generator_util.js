@@ -22,7 +22,7 @@
 
 goog.provide('sre.SpeechGeneratorUtil');
 
-goog.require('sre.AuditoryDescription');
+goog.require('sre.AuralRendering');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SemanticTree');
@@ -73,7 +73,7 @@ sre.SpeechGeneratorUtil.retrieveSpeech = function(mml, semantic) {
   if (!descrs) {
     descrs = sre.SpeechGeneratorUtil.recomputeSpeech(mml, semantic);
   }
-  return sre.AuditoryDescription.speechString(descrs);
+  return sre.AuralRendering.getInstance().markup(descrs);
 };
 
 
@@ -106,7 +106,7 @@ sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
  */
 sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
   var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
-  return sre.AuditoryDescription.speechString(descrs);
+  return sre.AuralRendering.getInstance().markup(descrs);
 };
 
 

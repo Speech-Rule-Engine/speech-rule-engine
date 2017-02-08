@@ -21,7 +21,7 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
-goog.require('sre.AuditoryDescription');
+goog.require('sre.AuralRendering');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
@@ -351,7 +351,7 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  */
 sre.System.prototype.processXml = function(xml) {
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return sre.AuditoryDescription.speechString(descrs);
+  return sre.AuralRendering.getInstance().markup(descrs);
 };
 
 
@@ -462,6 +462,6 @@ sre.System.prototype.move = function(direction) {
   var key = (typeof direction === 'string') ?
       sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
   var move = sre.System.LocalStorage_.getInstance().walker.move(key);
-  return move === false ? sre.AuditoryDescription.error(direction) :
+  return move === false ? sre.AuralRendering.getInstance().error(direction) :
       sre.System.LocalStorage_.getInstance().walker.speech();
 };
