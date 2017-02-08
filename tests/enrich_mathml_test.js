@@ -10967,3 +10967,104 @@ sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
       '</math>'
   );
 };
+
+
+/**
+ * Tests originating from issue #134. Odd distribution of mrows etc.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
+  this.executeMathmlTest(
+      '<mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow><mo' +
+      ' mathvariant="italic">⁢</mo><mi>m</mi>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
+      ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
+      ' type="infixop"><mrow/><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="6">ϕ</mi><mo mathvariant="italic" type="operator"' +
+      ' role="multiplication" id="4" parent="6" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">m</mi>' +
+      '</mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mpadded><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
+      '</mpadded></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
+      ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
+      ' type="infixop"><mrow><mpadded/></mrow><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></math>'
+  );
+  // This one moves the error around!
+  this.executeMathmlTest(
+      '<mrow><merror><mi>a</mi></merror><mi>n</mi><mo mathvariant="normal">/' +
+      '</mo><mi>ϕ</mi></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
+      ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
+      ' type="infixop"><mrow><merror><mi>a</mi></merror></mrow><mi' +
+      ' type="identifier" role="greekletter" id="2" parent="6">ϕ</mi><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="5" parent="6">m</mi></mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow>' +
+      '<mo mathvariant="italic">⁢</mo><mi>m</mi></mrow>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
+      '<mrow type="infixop" role="multiplication" id="6" children="2,5"' +
+      ' content="4" parent="3"><mrow/><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
+      '</mrow><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow></mrow>',
+      '<math><mrow type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
+      '<mrow type="infixop" role="multiplication" id="6" children="2,5"' +
+      ' content="4" parent="3"><mrow/><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
+      '</mi></mrow><mo>*</mo><mi>b</mi></mrow><mo mathvariant="italic">⁢' +
+      '</mo><mi>m</mi>',
+      '<math type="infixop" role="multiplication" id="12" children="11,9"' +
+      ' content="8"><mrow type="infixop" role="implicit" id="11"' +
+      ' children="0,4" content="10" parent="12"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="11">a</mi><mo type="operator"' +
+      ' role="multiplication" id="10" parent="11" added="true"' +
+      ' operator="infixop,⁢">⁢</mo><mrow type="infixop" role="division"' +
+      ' id="4" children="1,7" content="2" parent="11"><mi type="identifier"' +
+      ' role="latinletter" id="1" parent="4">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="2" parent="4"' +
+      ' operator="infixop,/">/</mo><mrow type="infixop"' +
+      ' role="multiplication" id="7" children="3,6" content="5" parent="4">' +
+      '<mrow/><mi type="identifier" role="greekletter" id="3" parent="7">ϕ' +
+      '</mi><mo type="operator" role="multiplication" id="5" parent="7"' +
+      ' operator="infixop,*">*</mo><mi type="identifier" role="latinletter"' +
+      ' id="6" parent="7">b</mi></mrow></mrow></mrow><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="8"' +
+      ' parent="12" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="9" parent="12">m</mi></math>'
+  );
+};

@@ -2206,3 +2206,36 @@ sre.RebuildStreeTest.prototype.testRebuildEllipsesExplicitSpacing = function() {
       '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>');
 };
 
+
+/**
+ * Tests originating from issue #134. Odd distribution of mrows etc.
+ */
+sre.RebuildStreeTest.prototype.testRebuildSwapElementLayers = function() {
+  this.executeRebuildTest(
+      '<mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow><mo' +
+      ' mathvariant="italic">⁢</mo><mi>m</mi>'
+  );
+  this.executeRebuildTest(
+      '<mrow><mpadded><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
+      '</mpadded></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>'
+  );
+  // This one moves the error around!
+  this.executeRebuildTest(
+      '<mrow><merror><mi>a</mi></merror><mi>n</mi><mo' +
+      ' mathvariant="normal">/</mo><mi>ϕ</mi></mrow><mo' +
+      ' mathvariant="italic">⁢</mo><mi>m</mi>'
+  );
+  this.executeRebuildTest(
+      '<mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
+      '</mrow><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow>'
+  );
+  this.executeRebuildTest(
+      '<mrow><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
+      '</mi></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow></mrow>'
+  );
+  this.executeRebuildTest(
+      '<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
+      '</mi></mrow><mo>*</mo><mi>b</mi></mrow><mo mathvariant="italic">⁢' +
+      '</mo><mi>m</mi>'
+  );
+};

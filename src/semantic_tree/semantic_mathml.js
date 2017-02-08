@@ -138,7 +138,6 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
     var newNode = this.parse(/** @type {!Element} */(children[0]));
-    // newNode = sre.SemanticProcessor.getInstance().row([newNode]);
   } else {
     // Case of a 'meaningful' row, even if they are empty.
     newNode = sre.SemanticProcessor.getInstance().row(
