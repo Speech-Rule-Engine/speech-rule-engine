@@ -25,8 +25,9 @@ goog.provide('sre.AuralRendering');
 goog.require('sre.AcssRenderer');
 goog.require('sre.AudioRenderer');
 goog.require('sre.Engine');
+goog.require('sre.SableRenderer');
+goog.require('sre.SsmlRenderer');
 goog.require('sre.StringRenderer');
-goog.require('sre.XmlRenderer');
 
 
 
@@ -122,12 +123,12 @@ sre.AuralRendering.registerRenderer(
   sre.Engine.Markup.NONE, new sre.StringRenderer());
 sre.AuralRendering.registerRenderer(
   sre.Engine.Markup.ACSS, new sre.AcssRenderer());
+sre.AuralRendering.registerRenderer(
+  sre.Engine.Markup.SABLE, new sre.SableRenderer());
 /**
  * @type {sre.AudioRenderer}
  */
-sre.AuralRendering.xmlInstance = new sre.XmlRenderer();
-sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.SABLE, sre.AuralRendering.xmlInstance);
+sre.AuralRendering.xmlInstance = new sre.SsmlRenderer();
 sre.AuralRendering.registerRenderer(
   sre.Engine.Markup.VOICEXML, sre.AuralRendering.xmlInstance);
 sre.AuralRendering.registerRenderer(

@@ -68,10 +68,10 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
     var str = '"' + descr.string + '"';
     string = true;
     if (pause) {
-      result.push(this.sexpPause_(pause));
+      result.push(this.pause(pause));
       pause = null;
     }
-    var prosody = this.sexpProsody_(currentPers);
+    var prosody = this.prosody_(currentPers);
     result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
   }
   return '(exp ' + result.join(this.getSeparator()) + ')';
@@ -104,24 +104,20 @@ sre.AcssRenderer.prototype.error = function(key) {
  * @return {string} The S-expression.
  * @private
  */
-sre.AcssRenderer.prototype.sexpProsody_ = function(pros) {
+sre.AcssRenderer.prototype.prosody_ = function(pros) {
   var keys = pros.open;
   var result = [];
   for (var i = 0, key; key = keys[i]; i++) {
-    result.push(this.sexpProsodyElement_(key, pros[key]));
+    result.push(this.prosodyElement(key, pros[key]));
   }
   return result.join(' ');
 };
 
 
 /**
- * Transforms a prosody key value pair into an S-expression.
- * @param {sre.Engine.personalityProps} key The prosody name.
- * @param {number} value The prosody value.
- * @return {string} The S-expression.
- * @private
+ * @override
  */
-sre.AcssRenderer.prototype.sexpProsodyElement_ = function(key, value) {
+sre.AcssRenderer.prototype.prosodyElement = function(key, value) {
   value = this.applyScaleFunction(value);
   switch (key) {
     case sre.Engine.personalityProps.RATE:
@@ -138,11 +134,8 @@ sre.AcssRenderer.prototype.sexpProsodyElement_ = function(key, value) {
 
 
 /**
- * Translates a pause into its corresponding S-expression.
- * @param {{pause: number}} pause A pause element.
- * @return {string} The S-expression.
- * @private
+ * @override
  */
-sre.AcssRenderer.prototype.sexpPause_ = function(pause) {
+sre.AcssRenderer.prototype.pause = function(pause) {
   return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
 };

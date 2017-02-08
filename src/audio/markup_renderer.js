@@ -71,3 +71,20 @@ sre.MarkupRenderer.prototype.setScaleFunction = function(
 sre.MarkupRenderer.prototype.applyScaleFunction = function(value) {
   return this.scaleFunction_ ? this.scaleFunction_(value) : value;
 };
+
+
+/**
+ * Translates a pause into its corresponding markup.
+ * @param {{pause: number}} pause A pause element.
+ * @return {string} The markup for the pause.
+ */
+sre.MarkupRenderer.prototype.pause = goog.abstractMethod;
+
+
+/**
+ * Transforms a prosody key value pair into a markup element.
+ * @param {sre.Engine.personalityProps} key The prosody name.
+ * @param {number} value The prosody value.
+ * @return {string} The markup element.
+ */
+sre.MarkupRenderer.prototype.prosodyElement = goog.abstractMethod;
