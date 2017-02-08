@@ -189,30 +189,17 @@ sre.EnrichMathml.walkTree = function(semantic) {
  * @return {!Element} The node containing the children.
  */
 sre.EnrichMathml.introduceNewLayer = function(children) {
-  var newNodeInfo = sre.EnrichMathml.mathmlLca_(children);
-  var newNode = newNodeInfo.node;
-  var info = newNodeInfo.valid;
-  if (info !== 'valid' || !sre.SemanticUtil.hasEmptyTag(newNode)) {
+  var lca = sre.EnrichMathml.mathmlLca_(children);
+  var newNode = lca.node;
+  var info = lca.type;
+  if (info !== sre.EnrichMathml.lcaType.VALID ||
+      !sre.SemanticUtil.hasEmptyTag(newNode)) {
     sre.Debugger.getInstance().output('Walktree Case 1.1');
     newNode = sre.DomUtil.createElement('mrow');
-    if (info === 'pruned') {
+    if (info === sre.EnrichMathml.lcaType.PRUNED) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.0');
-      var lca = /**@type{!Element}*/(newNodeInfo.node);
-      var innerNode = sre.EnrichMathml.descendNode_(lca);
-      // Case if LCA is actually the MathML root node.
-      if (sre.SemanticUtil.hasMathTag(innerNode)) {
-        sre.EnrichMathml.moveSemanticAttributes_(innerNode, newNode);
-        sre.DomUtil.toArray(innerNode.childNodes).forEach(
-            function(x) {newNode.appendChild(x);});
-        var auxNode = newNode;
-        newNode = innerNode;
-        innerNode = auxNode;
-      }
-      var index = children.indexOf(lca);
-      children[index] = innerNode;
-      sre.DomUtil.replaceNode(innerNode, newNode);
-      newNode.appendChild(innerNode);
-      children.forEach(function(x) {newNode.appendChild(x);});
+      newNode = sre.EnrichMathml.introduceLayerAboveLca(
+        newNode, /**@type{!Element}*/(lca.node), children);
     } else if (children[0]) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.1');
       var node = sre.EnrichMathml.attachedElement_(children);
@@ -223,6 +210,36 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
     }
   }
   return /**@type{!Element}*/(newNode);
+};
+
+
+/**
+ * Introduces a new layer above an LCA, in case the path to root was pruned due
+ * to LCA being an actual inner child node.
+ * Possibly rewrites the root node (math tag) in case it is the lca.
+ * @param {!Element} mrow The empty mrow node for the new layer.
+ * @param {!Element} lca The actual lca.
+ * @param {!Array<Element>} children The children that contain the lca.
+ * @return {!Element} The new introduced mrow node, or possibly the math node.
+ */
+sre.EnrichMathml.introduceLayerAboveLca = function(mrow, lca, children) {
+  var innerNode = sre.EnrichMathml.descendNode_(lca);
+  // Case if lca is actually the MathML root node.
+  if (sre.SemanticUtil.hasMathTag(innerNode)) {
+    sre.Debugger.getInstance().output('Walktree Case 1.1.0.0');
+    sre.EnrichMathml.moveSemanticAttributes_(innerNode, mrow);
+    sre.DomUtil.toArray(innerNode.childNodes).forEach(
+      function(x) {mrow.appendChild(x);});
+    var auxNode = mrow;
+    mrow = innerNode;
+    innerNode = auxNode;
+  }
+  var index = children.indexOf(lca);
+  children[index] = innerNode;
+  sre.DomUtil.replaceNode(innerNode, mrow);
+  mrow.appendChild(innerNode);
+  children.forEach(function(x) {mrow.appendChild(x);});
+  return mrow;
 };
 
 
@@ -325,43 +342,53 @@ sre.EnrichMathml.functionApplication_ = function(oldNode, newNode) {
 
 
 /**
+ * @enum {string}
+ */
+sre.EnrichMathml.lcaType = {
+  VALID: 'valid',
+  INVALID: 'invalid',
+  PRUNED: 'pruned'
+};
+
+
+/**
  * Finds the least common ancestor for a list of MathML nodes in the MathML
  * expression.
  * @param {!Array.<Element>} children A list of MathML nodes.
- * @return {{valid: string, node: Element}} Structure indicating if the node
- *     representing the LCA is valid and the least common ancestor if it exits.
+ * @return {{type: sre.EnrichMathml.lcaType, node: Element}} Structure
+ *     indicating if the node representing the LCA is valid and the least common
+ *     ancestor if it exits.
  * @private
  */
 sre.EnrichMathml.mathmlLca_ = function(children) {
   // Need to avoid newly created children (invisible operators).
   var leftMost = sre.EnrichMathml.attachedElement_(children);
   if (!leftMost) {
-    return {valid: 'invalid', node: null};
+    return {type: sre.EnrichMathml.lcaType.INVALID, node: null};
   }
   var rightMost = /**@type{!Element}*/(sre.EnrichMathml.attachedElement_(
       children.slice().reverse()));
   if (leftMost === rightMost) {
-    return {valid: 'valid',
+    return {type: sre.EnrichMathml.lcaType.VALID,
       node: leftMost};
   }
   var leftPath = sre.EnrichMathml.pathToRoot_(leftMost);
   var newLeftPath = sre.EnrichMathml.prunePath_(leftPath, children);
   var rightPath = sre.EnrichMathml.pathToRoot_(
       rightMost, function(x) {return newLeftPath.indexOf(x) !== -1;});
-  // sre.EnrichMathml.printNodeList__('Left Path', leftPath);
-  // sre.EnrichMathml.printNodeList__('Right Path', rightPath);
   var lca = rightPath[0];
   var lIndex = newLeftPath.indexOf(lca);
   if (lIndex === -1) {
-    return {valid: 'invalid', node: null};
+    return {type: sre.EnrichMathml.lcaType.INVALID, node: null};
   }
-  return {valid:
-          newLeftPath.length !== leftPath.length ? 'pruned' : (
-          sre.EnrichMathml.validLca_(newLeftPath[lIndex + 1], rightPath[1]) ?
-              'valid' : 'invalid'),
+  return {type:
+          newLeftPath.length !== leftPath.length ?
+          sre.EnrichMathml.lcaType.PRUNED : (
+            sre.EnrichMathml.validLca_(newLeftPath[lIndex + 1], rightPath[1]) ?
+              sre.EnrichMathml.lcaType.VALID :
+              sre.EnrichMathml.lcaType.INVALID),
     node: lca};
 };
-
 
 
 /**
@@ -393,9 +420,6 @@ sre.EnrichMathml.attachedElement_ = function(nodes) {
   var count = 0;
   var attached = null;
   while (!attached && count < nodes.length) {
-    // console.log('Testing Parent');
-    // console.log(nodes[count].toString());
-    // console.log(nodes[count].parentNode ? nodes[count].parentNode.toString() : nodes[count].parentNode);
     if (nodes[count].parentNode) {
       attached = nodes[count];
     }
