@@ -25,7 +25,7 @@ goog.provide('sre.WalkerFactory');
 goog.require('sre.DummyWalker');
 goog.require('sre.SemanticWalker');
 goog.require('sre.SpeechGenerator');
-// goog.require('sre.SyntaxWalker');
+goog.require('sre.SyntaxWalker');
 goog.require('sre.TableWalker');
 goog.require('sre.Walker');
 

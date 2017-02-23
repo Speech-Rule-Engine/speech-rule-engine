@@ -24,6 +24,7 @@
 goog.provide('sre.MarkupTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.AuralRendering');
 goog.require('sre.Engine');
 goog.require('sre.System');
 
@@ -103,7 +104,7 @@ sre.MarkupTest.prototype.executeTest = function(
   sre.Engine.getInstance().markup = markup;
   sre.Engine.getInstance().semantics = semantics;
   var descrs = sre.System.getInstance().toDescription(expr);
-  var output = sre.AuditoryDescription.speechString(descrs);
+  var output = sre.AuralRendering.getInstance().markup(descrs);
   this.assert.equal(output, result);
 };
 

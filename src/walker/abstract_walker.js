@@ -22,6 +22,7 @@
 goog.provide('sre.AbstractWalker');
 
 goog.require('sre.AuditoryDescription');
+goog.require('sre.AuralRendering');
 goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
@@ -236,8 +237,9 @@ sre.AbstractWalker.prototype.speech = function() {
         sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
     snode.setAttribute('alternative', sid);
     var descrs = sre.SpeechGeneratorUtil.computeSpeech(snode);
-    // TODO: 
-    return sre.AuditoryDescription.speechString(descrs);
+    var speech = sre.AuralRendering.getInstance().markup(descrs);
+    return prefix ?
+      sre.AuralRendering.getInstance().merge([prefix, speech]) : speech;
   }
   var speech = [];
   for (var i = 0, l = nodes.length; i < l; i++) {
@@ -247,7 +249,7 @@ sre.AbstractWalker.prototype.speech = function() {
                 sre.SpeechGeneratorUtil.retrieveSpeech(this.xml, snode));
   }
   if (prefix) speech.unshift(prefix);
-  return sre.AuditoryDescription.mergeStrings(speech);
+  return sre.AuralRendering.getInstance().merge(speech);
 };
 
 
@@ -263,7 +265,7 @@ sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   var primary = this.focus_.getDomPrimary();
   var expand = (this.expandable(primary) && 'expandable') ||
       (this.collapsible(primary) && 'collapsible') || '';
-  var descr = [sre.AuditoryDescription.speechString(
+  var descr = [sre.AuralRendering.getInstance().markup(
       [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
          personality: {}})])];
   if (prefix) {
@@ -272,7 +274,7 @@ sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
   if (expand) {
     descr.push(expand);
   }
-  return sre.AuditoryDescription.mergeStrings(descr);
+  return sre.AuralRendering.getInstance().merge(descr);
 };
 
 
