@@ -99,6 +99,7 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
   this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
 
   this.dummy_ = function() {};
 
@@ -141,7 +142,8 @@ sre.AbstractWalker.move = {
   DEPTH: 'depth',
   ENTER: 'enter',
   EXPAND: 'expand',
-  HOME: 'home'
+  HOME: 'home',
+  SUMMARY: 'summary'
 };
 
 
@@ -215,6 +217,7 @@ sre.AbstractWalker.prototype.getDepth = function() {
  * @override
  */
 sre.AbstractWalker.prototype.speech = function() {
+  console.log(this.moved);
   var nodes = this.focus_.getDomNodes();
   var snodes = this.focus_.getSemanticNodes();
   if (!nodes.length) return '';
@@ -225,6 +228,16 @@ sre.AbstractWalker.prototype.speech = function() {
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
+  }
+  if (this.moved === sre.AbstractWalker.move.SUMMARY) {
+    var sprimary = this.focus_.getSemanticPrimary();
+    var sid = sprimary.id.toString();
+    var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
+        sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+    snode.setAttribute('alternative', sid);
+    var descrs = sre.SpeechGeneratorUtil.computeSpeech(snode);
+    // TODO: 
+    return sre.AuditoryDescription.speechString(descrs);
   }
   var speech = [];
   for (var i = 0, l = nodes.length; i < l; i++) {
@@ -267,6 +280,7 @@ sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
  * @override
  */
 sre.AbstractWalker.prototype.move = function(key) {
+  console.log(key);
   var direction = this.keyMapping_[key];
   if (!direction) {
     return null;
@@ -558,3 +572,12 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
 };
 
 
+sre.AbstractWalker.prototype.summary = function() {
+  var primary = this.focus_.getDomPrimary();
+  var parent = !!this.actionable_(primary);
+  if (parent && primary.childNodes.length > 0) {
+    this.moved = sre.AbstractWalker.move.SUMMARY;
+    return this.focus_.clone();
+  }
+  return this.focus_;
+};
