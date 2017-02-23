@@ -44,7 +44,6 @@ sre.SsmlRenderer.prototype.pause = function(pause) {
 };
 
 
-// TODO: Include personality range computations.
 /**
  * @override
  */
