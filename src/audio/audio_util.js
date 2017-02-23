@@ -21,7 +21,7 @@
 goog.provide('sre.AudioUtil');
 
 
-// TODO: Lots needs to be refactored!
+// TODO: Refactor into dedicated personality/markup data structure.
 /**
  * Merges pause personality annotations.
  * @param {?{pause: number}} oldPause Previous pause annotation.

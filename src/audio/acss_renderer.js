@@ -46,6 +46,7 @@ goog.inherits(sre.AcssRenderer, sre.MarkupRenderer);
  * @override
  */
 sre.AcssRenderer.prototype.markup = function(descrs) {
+  // TODO: Include personality range computations.
   this.setScaleFunction(-2, 2, 0, 10, 0);
   var markup = sre.AudioUtil.personalityMarkup(descrs);
   var result = [];
@@ -97,7 +98,6 @@ sre.AcssRenderer.prototype.error = function(key) {
 };
 
 
-// TODO: Refactor into methods on all markup renderers.
 /**
  * Transforms a prosody element into an S-expression.
  * @param {Object.<string, number>} pros The prosody element.
