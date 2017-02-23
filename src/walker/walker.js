@@ -66,6 +66,12 @@ sre.Walker.prototype.getFocus = function() {};
 
 
 /**
+ * @param {!sre.Focus} focus The new focus.
+ */
+sre.Walker.prototype.setFocus = function(focus) {};
+
+
+/**
  * Returns the current depth of the walker, starting at 0.
  * @return {!number} The current depth of the walker.
  */

@@ -330,11 +330,11 @@ sre.SemanticPred.isBinomial = function(table) {
  */
 sre.SemanticPred.isLimitBase = function(node) {
   return sre.SemanticPred.isAttribute('type', 'LARGEOP')(node) ||
-    sre.SemanticPred.isAttribute('type', 'LIMBOTH')(node) ||
+      sre.SemanticPred.isAttribute('type', 'LIMBOTH')(node) ||
       sre.SemanticPred.isAttribute('type', 'LIMLOWER')(node) ||
-    sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
-    (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
-     sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
+      sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
+      (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
+      sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
 };
 
 
@@ -348,4 +348,21 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
           node.role === sre.SemanticAttr.Role.LATINLETTER ||
           node.role === sre.SemanticAttr.Role.GREEKLETTER ||
           node.role === sre.SemanticAttr.Role.OTHERLETTER);
+};
+
+
+/**
+ * Given a list of punctuated node and their containint puncutations, decides if
+ * there is exactly one punctuation, which is at the given position. Will
+ * therefore return false if the puncutation is a dummy in a text sequence.
+ * @param {!Array.<sre.SemanticNode>} nodes A list of punctuated nodes.
+ * @param {!Array.<sre.SemanticNode>} puncts The associated punctuations.
+ * @param {number} position The position in nodes to test for puncutation.
+ * @return {boolean} True if puncts is a singleton and is the indeed the
+ *     punctuation at the given position.
+ */
+sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
+  return puncts.length === 1 &&
+      nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION &&
+      nodes[position] === puncts[0];
 };

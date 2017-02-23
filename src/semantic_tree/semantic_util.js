@@ -83,6 +83,7 @@ sre.SemanticUtil.unicodeToNumber = function(unicode) {
 };
 
 
+// TODO: Refactor with similar function in MathSimpleStore.
 /**
  * Transforms a numberic representation of a unicode character into its
  * corresponding string.
@@ -90,12 +91,12 @@ sre.SemanticUtil.unicodeToNumber = function(unicode) {
  * @return {string} The string representation.
  */
 sre.SemanticUtil.numberToUnicode = function(number) {
-  if (number >= 0x10000) {
-    var hi = (number - 0x10000) / 0x0400 + 0xD800;
-    var lo = (number - 0x10000) % 0x0400 + 0xDC00;
-    return String.fromCharCode(hi, lo);
+  if (number < 0x10000) {
+    return String.fromCharCode(number);
   }
-  return String.fromCharCode(number);
+  var hi = (number - 0x10000) / 0x0400 + 0xD800;
+  var lo = (number - 0x10000) % 0x0400 + 0xDC00;
+  return String.fromCharCode(hi, lo);
 };
 
 
