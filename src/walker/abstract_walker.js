@@ -218,7 +218,6 @@ sre.AbstractWalker.prototype.getDepth = function() {
  * @override
  */
 sre.AbstractWalker.prototype.speech = function() {
-  console.log(this.moved);
   var nodes = this.focus_.getDomNodes();
   var snodes = this.focus_.getSemanticNodes();
   if (!nodes.length) return '';
@@ -231,15 +230,9 @@ sre.AbstractWalker.prototype.speech = function() {
     return this.levelAnnouncement_(prefix);
   }
   if (this.moved === sre.AbstractWalker.move.SUMMARY) {
-    var sprimary = this.focus_.getSemanticPrimary();
-    var sid = sprimary.id.toString();
-    var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
-        sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-    snode.setAttribute('alternative', sid);
-    var descrs = sre.SpeechGeneratorUtil.computeSpeech(snode);
-    var speech = sre.AuralRendering.getInstance().markup(descrs);
+    var summary = this.summary_();
     return prefix ?
-      sre.AuralRendering.getInstance().merge([prefix, speech]) : speech;
+      sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
   }
   var speech = [];
   for (var i = 0, l = nodes.length; i < l; i++) {
@@ -282,7 +275,6 @@ sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
  * @override
  */
 sre.AbstractWalker.prototype.move = function(key) {
-  console.log(key);
   var direction = this.keyMapping_[key];
   if (!direction) {
     return null;
@@ -574,6 +566,11 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
 };
 
 
+/**
+ * Indicates if a virtual summary is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
 sre.AbstractWalker.prototype.summary = function() {
   var primary = this.focus_.getDomPrimary();
   var parent = !!this.actionable_(primary);
@@ -582,4 +579,19 @@ sre.AbstractWalker.prototype.summary = function() {
     return this.focus_.clone();
   }
   return this.focus_;
+};
+
+
+/**
+ * @return {string} The virtual summary of an element.
+ * @private
+ */
+sre.AbstractWalker.prototype.summary_ = function() {
+  var sprimary = this.focus_.getSemanticPrimary();
+  var sid = sprimary.id.toString();
+  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  snode.setAttribute('alternative', sid);
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(snode);
+  return sre.AuralRendering.getInstance().markup(descrs);
 };
