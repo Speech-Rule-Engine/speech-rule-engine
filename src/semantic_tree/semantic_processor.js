@@ -906,6 +906,9 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   // similar to an mrow. The only exception are ellipses, which we assume to be
   // in lieu of identifiers.
   // In addition we keep the single punctuation nodes as content.
+  if (nodes.length <= 1) {
+    return nodes;
+  }
   var partition = sre.SemanticProcessor.partitionNodes_(
       nodes, function(x) {
         return sre.SemanticPred.isPunctuation(x) &&
@@ -954,11 +957,10 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
       return newNode;
     }
   }
-  if (punctuations.length === 1 &&
-      nodes[0].type === sre.SemanticAttr.Type.PUNCTUATION) {
+  if (sre.SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
     newNode.role = sre.SemanticAttr.Role.STARTPUNCT;
-  } else if (punctuations.length === 1 &&
-      nodes[nodes.length - 1].type === sre.SemanticAttr.Type.PUNCTUATION) {
+  } else if (sre.SemanticPred.singlePunctAtPosition(
+      nodes, punctuations, nodes.length - 1)) {
     newNode.role = sre.SemanticAttr.Role.ENDPUNCT;
   } else if (punctuations.every(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
@@ -1056,17 +1058,16 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
           innerNode = sre.SemanticProcessor.getInstance().factory_.
               makeBranchNode(
               sre.SemanticAttr.Type.OVERSCORE, [center, children[2]], []);
-          innerNode.role = center.role;
           children = [innerNode, children[1]];
           type = sre.SemanticAttr.Type.UNDERSCORE;
         } else {
           innerNode = sre.SemanticProcessor.getInstance().factory_.
               makeBranchNode(
               sre.SemanticAttr.Type.UNDERSCORE, [center, children[1]], []);
-          innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
           children = [innerNode, children[2]];
           type = sre.SemanticAttr.Type.OVERSCORE;
         }
+        innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
         break;
     }
   }
@@ -2264,8 +2265,35 @@ sre.SemanticProcessor.computeColumns_ = function(table) {
 sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
   var column = columns[index];
   return column ?
-    column.every(function(cell) {
+    (column.some(function(cell) {
+      return cell.childNodes.length  &&
+        pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));}) &&
+     column.every(function(cell) {
       return !cell.childNodes.length ||
-        pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));}) :
+         pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));})) :
     false;
+};
+
+
+/**
+ * Maps mathjax font variants to semantic font names.
+ * @type {Object.<string, sre.SemanticAttr.Font>}
+ */
+sre.SemanticProcessor.MATHJAX_FONTS = {
+  '-tex-caligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
+  '-tex-caligraphic-bold': sre.SemanticAttr.Font.CALIGRAPHICBOLD,
+  '-tex-oldstyle': sre.SemanticAttr.Font.OLDSTYLE,
+  '-tex-oldstyle-bold': sre.SemanticAttr.Font.OLDSTYLEBOLD,
+  '-tex-mathit': sre.SemanticAttr.Font.ITALIC
+};
+
+
+/**
+ * Cleans font names of potential MathJax prefixes.
+ * @param {string} font The font name.
+ * @return {sre.SemanticAttr.Font} The clean name.
+ */
+sre.SemanticProcessor.prototype.font = function(font) {
+  var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
+  return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
 };

@@ -22,6 +22,7 @@
 goog.provide('sre.PrefixRuleTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.AuralRendering');
 goog.require('sre.DynamicCstr');
 
 
@@ -64,7 +65,7 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
         'rules': ['PrefixRules']},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       );
-  var speech = sre.AuditoryDescription.speechString(descrs);
+  var speech = sre.AuralRendering.getInstance().markup(descrs);
   this.assert.equal(speech, result);
 };
 

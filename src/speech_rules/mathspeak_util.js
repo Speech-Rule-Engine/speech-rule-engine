@@ -889,30 +889,6 @@ sre.MathspeakUtil.determinantIsSimple = function(node) {
 
 
 /**
- * String function to mark elements of a determinant as simple.
- * @param {!Node} node The determinant node.
- * @return {string} The empty string.
- */
-sre.MathspeakUtil.determinantMarkSimple = function(node) {
-  var rows = sre.XpathUtil.evalXPath('children/row', node);
-  rows.forEach(function(row) {row.setAttribute('sre_flag', 'simple');});
-  return '';
-};
-
-
-/**
- * String function to unmark elements of a determinant.
- * @param {!Node} node The determinant node.
- * @return {string} The empty string.
- */
-sre.MathspeakUtil.determinantUnMarkSimple = function(node) {
-  var rows = sre.XpathUtil.evalXPath('children/row', node);
-  rows.forEach(function(row) {row.removeAttribute('sre_flag');});
-  return '';
-};
-
-
-/**
  * Generate constraints for the specialised baseline rules of relation
  * sequences.
  * @return {!string} The constraint string.

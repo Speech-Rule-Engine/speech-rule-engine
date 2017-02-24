@@ -189,12 +189,18 @@ sre.EnrichMathml.walkTree = function(semantic) {
  * @return {!Element} The node containing the children.
  */
 sre.EnrichMathml.introduceNewLayer = function(children) {
-  var newNodeInfo = sre.EnrichMathml.mathmlLca_(children);
-  var newNode = newNodeInfo.node;
-  if (!newNodeInfo.valid || !sre.SemanticUtil.hasEmptyTag(newNode)) {
+  var lca = sre.EnrichMathml.mathmlLca_(children);
+  var newNode = lca.node;
+  var info = lca.type;
+  if (info !== sre.EnrichMathml.lcaType.VALID ||
+      !sre.SemanticUtil.hasEmptyTag(newNode)) {
     sre.Debugger.getInstance().output('Walktree Case 1.1');
     newNode = sre.DomUtil.createElement('mrow');
-    if (children[0]) {
+    if (info === sre.EnrichMathml.lcaType.PRUNED) {
+      sre.Debugger.getInstance().output('Walktree Case 1.1.0');
+      newNode = sre.EnrichMathml.introduceLayerAboveLca(
+          newNode, /**@type{!Element}*/(lca.node), children);
+    } else if (children[0]) {
       sre.Debugger.getInstance().output('Walktree Case 1.1.1');
       var node = sre.EnrichMathml.attachedElement_(children);
       var oldChildren = sre.EnrichMathml.childrenSubset_(
@@ -204,6 +210,53 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
     }
   }
   return /**@type{!Element}*/(newNode);
+};
+
+
+/**
+ * Introduces a new layer above an LCA, in case the path to root was pruned due
+ * to LCA being an actual inner child node.
+ * Possibly rewrites the root node (math tag) in case it is the lca.
+ * @param {!Element} mrow The empty mrow node for the new layer.
+ * @param {!Element} lca The actual lca.
+ * @param {!Array<Element>} children The children that contain the lca.
+ * @return {!Element} The new introduced mrow node, or possibly the math node.
+ */
+sre.EnrichMathml.introduceLayerAboveLca = function(mrow, lca, children) {
+  var innerNode = sre.EnrichMathml.descendNode_(lca);
+  // Case if lca is actually the MathML root node.
+  if (sre.SemanticUtil.hasMathTag(innerNode)) {
+    sre.Debugger.getInstance().output('Walktree Case 1.1.0.0');
+    sre.EnrichMathml.moveSemanticAttributes_(innerNode, mrow);
+    sre.DomUtil.toArray(innerNode.childNodes).forEach(
+        function(x) {mrow.appendChild(x);});
+    var auxNode = mrow;
+    mrow = innerNode;
+    innerNode = auxNode;
+  }
+  var index = children.indexOf(lca);
+  children[index] = innerNode;
+  sre.DomUtil.replaceNode(innerNode, mrow);
+  mrow.appendChild(innerNode);
+  children.forEach(function(x) {mrow.appendChild(x);});
+  return mrow;
+};
+
+
+/**
+ * Moves semantic attributes from one node to another.
+ * @param {!Element} oldNode The node whose semantic attributes are removed.
+ * @param {!Element} newNode The node which receives the semantic attributes.
+ * @private
+ */
+sre.EnrichMathml.moveSemanticAttributes_ = function(oldNode, newNode) {
+  for (var key in sre.EnrichMathml.Attribute) {
+    var attr = sre.EnrichMathml.Attribute[key];
+    if (oldNode.hasAttribute(attr)) {
+      newNode.setAttribute(attr, oldNode.getAttribute(attr));
+      oldNode.removeAttribute(attr);
+    }
+  }
 };
 
 
@@ -289,36 +342,71 @@ sre.EnrichMathml.functionApplication_ = function(oldNode, newNode) {
 
 
 /**
+ * @enum {string}
+ */
+sre.EnrichMathml.lcaType = {
+  VALID: 'valid',
+  INVALID: 'invalid',
+  PRUNED: 'pruned'
+};
+
+
+/**
  * Finds the least common ancestor for a list of MathML nodes in the MathML
  * expression.
  * @param {!Array.<Element>} children A list of MathML nodes.
- * @return {{valid: boolean, node: Element}} Structure indicating if the node
- *     representing the LCA is valid and the least common ancestor if it exits.
+ * @return {{type: sre.EnrichMathml.lcaType, node: Element}} Structure
+ *     indicating if the node representing the LCA is valid and the least common
+ *     ancestor if it exits.
  * @private
  */
 sre.EnrichMathml.mathmlLca_ = function(children) {
   // Need to avoid newly created children (invisible operators).
   var leftMost = sre.EnrichMathml.attachedElement_(children);
   if (!leftMost) {
-    return {valid: false, node: null};
+    return {type: sre.EnrichMathml.lcaType.INVALID, node: null};
   }
   var rightMost = /**@type{!Element}*/(sre.EnrichMathml.attachedElement_(
       children.slice().reverse()));
   if (leftMost === rightMost) {
-    return {valid: true,
+    return {type: sre.EnrichMathml.lcaType.VALID,
       node: leftMost};
   }
   var leftPath = sre.EnrichMathml.pathToRoot_(leftMost);
+  var newLeftPath = sre.EnrichMathml.prunePath_(leftPath, children);
   var rightPath = sre.EnrichMathml.pathToRoot_(
-      rightMost, function(x) {return leftPath.indexOf(x) !== -1;});
+      rightMost, function(x) {return newLeftPath.indexOf(x) !== -1;});
   var lca = rightPath[0];
-  var lIndex = leftPath.indexOf(lca);
+  var lIndex = newLeftPath.indexOf(lca);
   if (lIndex === -1) {
-    return {valid: false, node: null};
+    return {type: sre.EnrichMathml.lcaType.INVALID, node: null};
   }
-  return {valid:
-        sre.EnrichMathml.validLca_(leftPath[lIndex + 1], rightPath[1]),
+  return {type:
+        newLeftPath.length !== leftPath.length ?
+        sre.EnrichMathml.lcaType.PRUNED : (
+            sre.EnrichMathml.validLca_(newLeftPath[lIndex + 1], rightPath[1]) ?
+        sre.EnrichMathml.lcaType.VALID :
+        sre.EnrichMathml.lcaType.INVALID),
     node: lca};
+};
+
+
+/**
+ * Prunes a path from a child element to the root node (where the root node is
+ * first in the list), if the LCA is actually an member of the children list.
+ * It then returns the shortend path, from the root element to the potential
+ * LCA.
+ * @param {!Array<Element>} path
+ * @param {!Array<Element>} children
+ * @return {!Array<Element>} The pruned path.
+ * @private
+ */
+sre.EnrichMathml.prunePath_ = function(path, children) {
+  var i = 0;
+  while (path[i] && children.indexOf(path[i]) === -1) {
+    i++;
+  }
+  return path.slice(0, i + 1);
 };
 
 
@@ -391,6 +479,31 @@ sre.EnrichMathml.ascendNewNode = function(newNode) {
     newNode = sre.EnrichMathml.parentNode_(newNode);
   }
   return newNode;
+};
+
+
+/**
+ * Descends a node as long as it only contains single empty tags, that do not
+ * semantic annotations already, while ignoring tags like merror, etc.
+ * @param {!Element} node The node from which to descend.
+ * @return {!Element} The inner most node with empty tag without semantic
+ *    annotations.
+ * @private
+ */
+sre.EnrichMathml.descendNode_ = function(node) {
+  var children = sre.DomUtil.toArray(node.childNodes);
+  if (!children) {
+    return node;
+  }
+  var remainder = children.filter(function(child) {
+    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
+        !sre.SemanticUtil.hasIgnoreTag(child);
+  });
+  if (remainder.length === 1 && sre.SemanticUtil.hasEmptyTag(remainder[0]) &&
+      !remainder[0].hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
+    return sre.EnrichMathml.descendNode_(remainder[0]);
+  }
+  return node;
 };
 
 
@@ -655,6 +768,10 @@ sre.EnrichMathml.getInnerNode = function(node) {
  */
 sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
   var wiki = opt_wiki || false;
+  console.log(expr.tagName);
+  for (var i = 0; i < expr.childNodes[0].childNodes.length; i++) {
+    console.log(expr.childNodes[0].childNodes[i].tagName);
+  }
   sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
   sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
   sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',
