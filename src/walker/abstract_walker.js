@@ -100,6 +100,8 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
   this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.Z] = goog.bind(this.detail, this);
 
   this.dummy_ = function() {};
 
@@ -142,7 +144,9 @@ sre.AbstractWalker.move = {
   DEPTH: 'depth',
   ENTER: 'enter',
   EXPAND: 'expand',
-  HOME: 'home'
+  HOME: 'home',
+  SUMMARY: 'summary',
+  DETAIL: 'detail'
 };
 
 
@@ -226,6 +230,12 @@ sre.AbstractWalker.prototype.speech = function() {
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
+  }
+  if (this.moved === sre.AbstractWalker.move.SUMMARY ||
+      this.moved === sre.AbstractWalker.move.DETAIL) {
+    var summary = this.summary_();
+    return prefix ?
+      sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
   }
   var speech = [];
   for (var i = 0, l = nodes.length; i < l; i++) {
@@ -556,4 +566,53 @@ sre.AbstractWalker.prototype.singletonFocus = function(id) {
  */
 sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
   return sre.Focus.factory(id, ids, this.rebuilt, this.node);
+};
+
+
+// TODO: Refactor similar code.
+/**
+ * Indicates if a virtual summary is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.summary = function() {
+  var primary = this.focus_.getDomPrimary();
+  if (this.collapsible(primary)) {
+    this.moved = sre.AbstractWalker.move.SUMMARY;
+    return this.focus_.clone();
+  }
+  return this.focus_;
+};
+
+
+/**
+ * @return {string} The virtual summary of an element.
+ * @private
+ */
+sre.AbstractWalker.prototype.summary_ = function() {
+  var sprimary = this.focus_.getSemanticPrimary();
+  var sid = sprimary.id.toString();
+  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  this.moved === sre.AbstractWalker.move.SUMMARY ?
+    snode.setAttribute('alternative', sid) : 
+    snode.removeAttribute('alternative');
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(
+    /** @type{!Node} */(snode));
+  return sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * Indicates if a virtual detail is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.detail = function() {
+  var primary = this.focus_.getDomPrimary();
+  if (this.expandable(primary)) {
+    this.moved = sre.AbstractWalker.move.DETAIL;
+    return this.focus_.clone();
+  }
+  return this.focus_;
 };
