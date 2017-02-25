@@ -231,15 +231,11 @@ sre.AbstractWalker.prototype.speech = function() {
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
   }
-  if (this.moved === sre.AbstractWalker.move.SUMMARY) {
+  if (this.moved === sre.AbstractWalker.move.SUMMARY ||
+      this.moved === sre.AbstractWalker.move.DETAIL) {
     var summary = this.summary_();
     return prefix ?
       sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
-  }
-  if (this.moved === sre.AbstractWalker.move.DETAIL) {
-    var detail = this.detail_();
-    return prefix ?
-      sre.AuralRendering.getInstance().merge([prefix, detail]) : detail;
   }
   var speech = [];
   for (var i = 0, l = nodes.length; i < l; i++) {
@@ -581,8 +577,7 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  */
 sre.AbstractWalker.prototype.summary = function() {
   var primary = this.focus_.getDomPrimary();
-  var parent = !!this.actionable_(primary);
-  if (parent && primary.childNodes.length > 0) {
+  if (this.collapsible(primary)) {
     this.moved = sre.AbstractWalker.move.SUMMARY;
     return this.focus_.clone();
   }
@@ -599,8 +594,11 @@ sre.AbstractWalker.prototype.summary_ = function() {
   var sid = sprimary.id.toString();
   var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-  snode.setAttribute('alternative', sid);
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(snode);
+  this.moved === sre.AbstractWalker.move.SUMMARY ?
+    snode.setAttribute('alternative', sid) : 
+    snode.removeAttribute('alternative');
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(
+    /** @type{!Node} */(snode));
   return sre.AuralRendering.getInstance().markup(descrs);
 };
 
@@ -612,25 +610,9 @@ sre.AbstractWalker.prototype.summary_ = function() {
  */
 sre.AbstractWalker.prototype.detail = function() {
   var primary = this.focus_.getDomPrimary();
-  var parent = !!this.actionable_(primary);
-  if (parent && primary.childNodes.length === 0) {
+  if (this.expandable(primary)) {
     this.moved = sre.AbstractWalker.move.DETAIL;
     return this.focus_.clone();
   }
   return this.focus_;
-};
-
-
-/**
- * @return {string} The virtual detail of an element.
- * @private
- */
-sre.AbstractWalker.prototype.detail_ = function() {
-  var sprimary = this.focus_.getSemanticPrimary();
-  var sid = sprimary.id.toString();
-  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
-      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-  snode.removeAttribute('alternative');
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(snode);
-  return sre.AuralRendering.getInstance().markup(descrs);
 };
