@@ -1591,15 +1591,6 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
 };
 
 
-// TODO (sorge) This heuristic is very primitive. We could start reworking
-// multilines by
-//
-// 1. combining all cells, semantically rewriting the entire line
-// and see if there are any similarities.
-//
-// 2. Alternatively, we could look for
-// similarities in columns (e.g., single relation symbols, like equalities or
-// inequalities in the same column could indicate an equation array).
 /**
  * Rewrites a table to multiline structure, simplifying it by getting rid of the
  * cell hierarchy level.
@@ -2113,13 +2104,6 @@ sre.SemanticProcessor.propagateFencePointer_ = function(oldNode, newNode) {
 };
 
 
-// TODO:
-// - Refactor heuristic predicates
-// - Write some tests and then refactor!
-
-// * @param {Element=} opt_element The MathML element for the table in case we
-// *     need to look up information on attributes.
-
 /**
  * Semantically classifies a multiline table in terms of equation system it
  * might be.
@@ -2129,7 +2113,6 @@ sre.SemanticProcessor.classifyMultiline = function(multiline) {
   var index = 0;
   var length = multiline.childNodes.length;
   var line;
-  // TODO: Maybe combine this with column computation.
   while (index < length &&
          (!(line = multiline.childNodes[index]) || !line.childNodes.length)) {
     index++;
@@ -2153,53 +2136,49 @@ sre.SemanticProcessor.classifyMultiline = function(multiline) {
  * @param {!sre.SemanticNode} table The table node.
  */
 sre.SemanticProcessor.classifyTable = function(table) {
-  // Classifies real tables. Maybe keep the columns for later?
   var columns = sre.SemanticProcessor.computeColumns_(table);
-  // console.log(columns);
-  // Simple equation tables for now.
-  // For the time being we have no treatment for endpunct!
-  // In many ways you would want to exclude full stops at the end of
-  // expressions.
-  //
-  // TODO: Refactor!
-  //
-  // Look for first non-empty. Only then test!
-  //
-  // For more complex systems, work with permutations/alternations of column
-  // indices.
-  //
+  sre.SemanticProcessor.classifyByColumns_(table, columns, 'EQUALITY') ||
+    sre.SemanticProcessor.classifyByColumns_(
+      table, columns, 'INEQUALITY', ['EQUALITY']) ||
+    sre.SemanticProcessor.classifyByColumns_(table, columns, 'ARROW');
+};
+
+
+/**
+ * Classifies table by columns and a given relation. 
+ * @param {!sre.SemanticNode} table The table node.
+ * @param {!Array.<!Array.<!sre.SemanticNode>>} columns The columns.
+ * @param {string} relation The main relation to classify.
+ * @param {Array.<string>=} opt_alternatives Alternative relations that are
+ *     permitted in addition to the main relation.
+ * @return {boolean} True if classification was successful.
+ * @private
+ */
+sre.SemanticProcessor.classifyByColumns_ = function(
+  table, columns, relation, opt_alternatives) {
+  // TODO: For more complex systems, work with permutations/alternations of
+  // column indices.
+  var test1 = function(x) {
+    return sre.SemanticProcessor.isPureRelation_(x, relation);
+  };
+  var test2 = function(x) {
+    return sre.SemanticProcessor.isEndRelation_(x, relation) ||
+      sre.SemanticProcessor.isPureRelation_(x, relation);
+  };
+  var test3 = function(x) {
+    return sre.SemanticProcessor.isEndRelation_(x, relation, true) ||
+      sre.SemanticProcessor.isPureRelation_(x, relation);
+  };
+
   if ((columns.length === 3 &&
-       sre.SemanticProcessor.testColumns_(
-         columns, 1,
-         function(x) {
-           return sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
-         })) ||
+       sre.SemanticProcessor.testColumns_(columns, 1, test1)) ||
       (columns.length === 2 &&
-       (sre.SemanticProcessor.testColumns_(
-         columns, 1,
-         function(x) {
-           return sre.SemanticProcessor.isEndRelation_(x, 'EQUALITY') ||
-             sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
-         }) ||
-        sre.SemanticProcessor.testColumns_(
-          columns, 0,
-          function(x) {
-            return sre.SemanticProcessor.isEndRelation_(x, 'EQUALITY', true) ||
-              sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
-          })))) {
-    table.role = sre.SemanticAttr.Role.EQUALITY;
-    return;
+       (sre.SemanticProcessor.testColumns_(columns, 1, test2) ||
+        sre.SemanticProcessor.testColumns_(columns, 0, test3)))) {
+    table.role = sre.SemanticAttr.Role[relation];
+    return true;
   }
-  // DIAGRAM: Added for temporary testing.
-  if (columns.length === 3 &&
-       sre.SemanticProcessor.testColumns_(
-         columns, 1,
-         function(x) {
-           return sre.SemanticProcessor.isPureRelation_(x, 'INEQUALITY') ||
-             sre.SemanticProcessor.isPureRelation_(x, 'EQUALITY');
-         })) {
-    table.role = sre.SemanticAttr.Role.INEQUALITY;
-  }
+  return false;
 };
 
 

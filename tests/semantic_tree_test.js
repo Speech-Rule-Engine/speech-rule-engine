@@ -12370,7 +12370,7 @@ sre.SemanticTreeTest.prototype.testStreeRelationMultilines = function() {
 /**
  * Table layout (non-equality) relation systems.
  */
-sre.SemanticTreeTest.prototype.untestStreeRelationTables = function() {
+sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
   // Right Relation.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
