@@ -1491,6 +1491,10 @@ sre.SemanticAttr.Role = {
   CASES: 'cases',
   TABLE: 'table',
 
+  // Roles for special multline types.
+  MULTIEQU: 'multiequ',   // Multline equation system
+  MULTIREL: 'multirel',   // Multiline relation system
+
   // General
   UNKNOWN: 'unknown',
   PROTECTED: 'protected'
