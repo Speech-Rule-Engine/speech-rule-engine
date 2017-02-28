@@ -225,6 +225,7 @@ sre.AbstractWalker.prototype.speech = function() {
   if (!nodes.length) return '';
   // TODO: This should be more efficient. Recompute only when walker is
   // restarted.
+  // Prefix needs to be computed after potential changes in attributes.
   var prefix = nodes[0] ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
@@ -596,7 +597,7 @@ sre.AbstractWalker.prototype.summary_ = function(prefix) {
   var sid = sprimary.id.toString();
   var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-  snode.setAttribute('alternative', sid);
+  snode.setAttribute('alternative', 'summary');
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(
     /** @type{!Node} */(snode));
   descrs = sre.AbstractWalker.removeCollapsed(descrs);

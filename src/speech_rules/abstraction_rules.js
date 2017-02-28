@@ -625,6 +625,21 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       './children/punctuation[@role="ellipsis"]'
   );
 
+  defineRule(
+    'abstr-table', 'mathspeak.default',
+    '[t] "collapsed"; [t] "table with"; ' +
+      '[t] count(children/*); [t] "rows and";' +
+      '[t] count(children/*[1]/children/*); [t] "columns"',
+    'self::table', '@alternative'
+  );
+  defineRule(
+    'abstr-row', 'mathspeak.default',
+    '[t] "collapsed"; [t] "row in"; [t] @role;' +
+      '[t] count(preceding-sibling::..); [t] "with";' +
+      '[t] count(children/*); [t] "columns"',
+    'self::row', '@alternative'
+  );
+  
 };
 
 });  // goog.scope
