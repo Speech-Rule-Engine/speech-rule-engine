@@ -599,6 +599,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
     snode.removeAttribute('alternative');
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(
     /** @type{!Node} */(snode));
+  descrs = sre.AbstractWalker.removeCollapsed(descrs);
   return sre.AuralRendering.getInstance().markup(descrs);
 };
 
@@ -615,4 +616,16 @@ sre.AbstractWalker.prototype.detail = function() {
     return this.focus_.clone();
   }
   return this.focus_;
+};
+
+
+// TODO: Fit this into the grammar structure.
+/**
+ * Removes a leading collapsed text from a list of descriptions.
+ * @param {!Array.<sre.AuditoryDescription>} descrs A list of descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The reduced list.
+ */
+sre.AbstractWalker.removeCollapsed = function(descrs) {
+  return (descrs.length && descrs[0].text === 'collapsed') ?
+    descrs.slice(1) : descrs;
 };
