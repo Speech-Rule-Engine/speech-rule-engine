@@ -231,11 +231,11 @@ sre.AbstractWalker.prototype.speech = function() {
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
     return this.levelAnnouncement_(prefix);
   }
-  if (this.moved === sre.AbstractWalker.move.SUMMARY ||
-      this.moved === sre.AbstractWalker.move.DETAIL) {
-    var summary = this.summary_();
-    return prefix ?
-      sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
+  if (this.moved === sre.AbstractWalker.move.SUMMARY) {
+    return this.summary_(prefix);
+  }
+  if (this.moved === sre.AbstractWalker.move.DETAIL) {
+    return this.detail_(prefix);
   }
   var speech = [];
   for (var i = 0, l = nodes.length; i < l; i++) {
@@ -577,30 +577,56 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  */
 sre.AbstractWalker.prototype.summary = function() {
   var primary = this.focus_.getDomPrimary();
-  if (this.collapsible(primary)) {
-    this.moved = sre.AbstractWalker.move.SUMMARY;
-    return this.focus_.clone();
+  if (primary && this.noSummary(primary)) {
+    return this.focus_;
   }
-  return this.focus_;
+  this.moved = sre.AbstractWalker.move.SUMMARY;
+  return this.focus_.clone();
 };
 
 
 /**
+ * @param {string} prefix The prefix of that element, representing its
+ *     positional meaning.
  * @return {string} The virtual summary of an element.
  * @private
  */
-sre.AbstractWalker.prototype.summary_ = function() {
+sre.AbstractWalker.prototype.summary_ = function(prefix) {
   var sprimary = this.focus_.getSemanticPrimary();
   var sid = sprimary.id.toString();
   var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-  this.moved === sre.AbstractWalker.move.SUMMARY ?
-    snode.setAttribute('alternative', sid) : 
-    snode.removeAttribute('alternative');
+  snode.setAttribute('alternative', sid);
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(
     /** @type{!Node} */(snode));
   descrs = sre.AbstractWalker.removeCollapsed(descrs);
-  return sre.AuralRendering.getInstance().markup(descrs);
+  snode.removeAttribute('alternative');
+  var summary = sre.AuralRendering.getInstance().markup(descrs);
+  return prefix ? 
+      sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
+};
+
+
+/**
+ * @param {string} prefix The prefix of that element, representing its
+ *     positional meaning.
+ * @return {string} The virtual detail of a collapsed element.
+ * @private
+ */
+sre.AbstractWalker.prototype.detail_ = function(prefix) {
+  var sprimary = this.focus_.getSemanticPrimary();
+  var sid = sprimary.id.toString();
+  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  var oldAlt = snode.getAttribute('alternative');
+  snode.removeAttribute('alternative');
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(
+    /** @type{!Node} */(snode));
+  descrs = sre.AbstractWalker.removeCollapsed(descrs);
+  snode.setAttribute('alternative', oldAlt);
+  var detail = sre.AuralRendering.getInstance().markup(descrs);
+  return prefix ? 
+      sre.AuralRendering.getInstance().merge([prefix, detail]) : detail;
 };
 
 
@@ -628,4 +654,15 @@ sre.AbstractWalker.prototype.detail = function() {
 sre.AbstractWalker.removeCollapsed = function(descrs) {
   return (descrs.length && descrs[0].text === 'collapsed') ?
     descrs.slice(1) : descrs;
+};
+
+
+/**
+ * Checks if a node should not be summarised.
+ * @param {!Node} node The (rendered) node under consideration.
+ * @return {boolean} True if node should not be summarised.
+ */
+sre.AbstractWalker.prototype.noSummary = function(node) {
+  var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
+  return ['identifier', 'number'].indexOf(type) !== -1;
 };
