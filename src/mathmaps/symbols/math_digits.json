@@ -7,7 +7,8 @@
         "short": "zero"
       },
       "mathspeak": {
-        "default": "0"
+        "default": "0",
+        "nemeth": "⠼⠚"
       }
     },
     "key": "0030"
@@ -20,7 +21,8 @@
         "short": "one"
       },
       "mathspeak": {
-        "default": "1"
+        "default": "1",
+        "nemeth": "⠼⠁"
       }
     },
     "key": "0031"
@@ -33,7 +35,8 @@
         "short": "two"
       },
       "mathspeak": {
-        "default": "2"
+        "default": "2",
+        "nemeth": "⠼⠃"
       }
     },
     "key": "0032"
@@ -46,7 +49,8 @@
         "short": "three"
       },
       "mathspeak": {
-        "default": "3"
+        "default": "3",
+        "nemeth": "⠼⠉"
       }
     },
     "key": "0033"
@@ -59,7 +63,8 @@
         "short": "four"
       },
       "mathspeak": {
-        "default": "4"
+        "default": "4",
+        "nemeth": "⠼⠙"
       }
     },
     "key": "0034"
@@ -72,7 +77,8 @@
         "short": "five"
       },
       "mathspeak": {
-        "default": "5"
+        "default": "5",
+        "nemeth": "⠼⠑"
       }
     },
     "key": "0035"
@@ -85,7 +91,8 @@
         "short": "six"
       },
       "mathspeak": {
-        "default": "6"
+        "default": "6",
+        "nemeth": "⠼⠋"
       }
     },
     "key": "0036"
@@ -98,7 +105,8 @@
         "short": "seven"
       },
       "mathspeak": {
-        "default": "7"
+        "default": "7",
+        "nemeth": "⠼⠛"
       }
     },
     "key": "0037"
@@ -111,7 +119,8 @@
         "short": "eight"
       },
       "mathspeak": {
-        "default": "8"
+        "default": "8",
+        "nemeth": "⠼⠓"
       }
     },
     "key": "0038"
@@ -124,7 +133,8 @@
         "short": "nine"
       },
       "mathspeak": {
-        "default": "9"
+        "default": "9",
+        "nemeth": "⠼⠊"
       }
     },
     "key": "0039"
