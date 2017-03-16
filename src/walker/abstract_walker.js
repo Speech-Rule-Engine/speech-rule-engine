@@ -577,10 +577,6 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
  * @protected
  */
 sre.AbstractWalker.prototype.summary = function() {
-  var primary = this.focus_.getDomPrimary();
-  if (primary && this.noSummary(primary)) {
-    return this.focus_;
-  }
   this.moved = sre.AbstractWalker.move.SUMMARY;
   return this.focus_.clone();
 };
@@ -655,15 +651,4 @@ sre.AbstractWalker.prototype.detail = function() {
 sre.AbstractWalker.removeCollapsed = function(descrs) {
   return (descrs.length && descrs[0].text === 'collapsed') ?
     descrs.slice(1) : descrs;
-};
-
-
-/**
- * Checks if a node should not be summarised.
- * @param {!Node} node The (rendered) node under consideration.
- * @return {boolean} True if node should not be summarised.
- */
-sre.AbstractWalker.prototype.noSummary = function(node) {
-  var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
-  return ['identifier', 'number'].indexOf(type) !== -1;
 };

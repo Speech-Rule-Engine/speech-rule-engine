@@ -87,6 +87,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'self::*', 'self::*', 'self::*', 'self::*'
   );
   defineRule(
+      'abstr-identifier', 'mathspeak.default',
+      '[t] "collapsed"; [t] "identifier"',
+      'self::identifier', '@alternative="summary"', '@alternative', 
+      'self::*', 'self::*', 'self::*', 'self::*'
+  );
+  defineRule(
       'abstr-identifier', 'mathspeak.brief',
       '[t] "collapsed"; [t] "identifier"',
       'self::identifier', '@alternative',
@@ -101,6 +107,11 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-number', 'mathspeak.default',
       '[t] "collapsed"; [t] "long number"',
       'self::number', '@alternative'
+  );
+  defineRule(
+      'abstr-number', 'mathspeak.default',
+      '[t] "collapsed"; [t] "number"',
+      'self::number', '@alternative', '@alternative="summary"'
   );
   defineRule(
       'abstr-number', 'mathspeak.brief',
