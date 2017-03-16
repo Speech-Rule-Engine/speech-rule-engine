@@ -209,6 +209,11 @@ sre.PrefixRules.initPrefixRules_ = function() {
   );
   defineRule(
       'cell', 'prefix.default',
+      '[n] ../..; [t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
+      'self::cell', 'contains(@grammar,"depth")'
+  );
+  defineRule(
+      'cell', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
       'self::cell'
   );

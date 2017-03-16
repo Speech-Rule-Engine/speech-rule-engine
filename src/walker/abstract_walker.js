@@ -230,6 +230,11 @@ sre.AbstractWalker.prototype.speech = function() {
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (this.moved === sre.AbstractWalker.move.DEPTH) {
+    // TODO: Clean this up. See above. Avoid double computation!
+    var oldDepth = sre.Grammar.getInstance().getParameter('depth');
+    sre.Grammar.getInstance().setParameter('depth', true);
+    prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+    sre.Grammar.getInstance().setParameter('depth', oldDepth);
     return this.levelAnnouncement_(prefix);
   }
   if (this.moved === sre.AbstractWalker.move.SUMMARY) {
