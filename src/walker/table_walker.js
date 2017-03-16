@@ -76,14 +76,30 @@ sre.TableWalker.prototype.down = function() {
 
 
 /**
+ * @type {Array.<sre.SemanticAttr.Role>}
+ */
+sre.TableWalker.ELIGIBLE_CELL_ROLES = [
+  sre.SemanticAttr.Role.DETERMINANT,
+  sre.SemanticAttr.Role.ROWVECTOR,
+  sre.SemanticAttr.Role.BINOMIAL,
+  sre.SemanticAttr.Role.SQUAREMATRIX,
+  sre.SemanticAttr.Role.MULTILINE,
+  sre.SemanticAttr.Role.MATRIX,
+  sre.SemanticAttr.Role.VECTOR,
+  sre.SemanticAttr.Role.CASES,
+  sre.SemanticAttr.Role.TABLE
+];
+
+
+/**
  * @return {boolean} True if the focused is an eligible table cell.
  * @private
  */
 sre.TableWalker.prototype.eligibleCell_ = function() {
   var primary = this.getFocus().getSemanticPrimary();
   return this.modifier &&
-      primary.type === sre.SemanticAttr.Type.CELL &&
-      primary.role === sre.SemanticAttr.Role.TABLE;
+        primary.type === sre.SemanticAttr.Type.CELL &&
+    sre.TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1;
 };
 
 
