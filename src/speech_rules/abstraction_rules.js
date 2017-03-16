@@ -652,7 +652,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   defineRule(
     'abstr-row', 'mathspeak.default',
-    '[t] "row in"; [t] @role;' +
+    '[t] "in"; [t] @role;' +
       '[t] count(preceding-sibling::..); [t] "with";' +
       '[t] count(children/*); [t] "columns"',
     'self::row', '@alternative'
