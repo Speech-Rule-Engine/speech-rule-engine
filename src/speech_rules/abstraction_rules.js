@@ -651,11 +651,21 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
     'self::table', '@alternative'
   );
   defineRule(
+    'abstr-line', 'mathspeak.default',
+    '[t] "in"; [t] @role;',
+    'self::line', '@alternative'
+  );
+  defineRule(
     'abstr-row', 'mathspeak.default',
     '[t] "in"; [t] @role;' +
       '[t] count(preceding-sibling::..); [t] "with";' +
       '[t] count(children/*); [t] "columns"',
     'self::row', '@alternative'
+  );
+  defineRule(
+    'abstr-cell', 'mathspeak.default',
+    '[t] "in"; [t] @role;',
+    'self::cell', '@alternative'
   );
   
 };
