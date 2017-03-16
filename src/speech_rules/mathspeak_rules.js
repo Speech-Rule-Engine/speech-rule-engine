@@ -137,6 +137,9 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
+
+  // DIAGRAM: Temporary for testing:
+  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
 
 
@@ -1011,6 +1014,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
+  // DIAGRAM: Next three rules are temporary for testing:
+  defineRule(
+      'row-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content');
+  defineSpecialisedRule(
+      'row-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'row-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'mathspeak.default',
       '[t] "Blank"', 'self::row', 'count(children/*)=0');
@@ -1111,6 +1127,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
+  // DIAGRAM: Next three rules are temporary for testing:
+  defineRule(
+      'line-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/*',
+      'self::line', 'content');
+  defineSpecialisedRule(
+      'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'line-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/*',
+      'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
       '[t] "Blank"', 'self::line', 'count(children/*)=0');
@@ -1230,6 +1259,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'unit-divide', 'mathspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
+
+
+  // DIAGRAM: For testing.
+  // defineRule(
+  //   'repeat-initial', 'mathspeak.default',
+  //   '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
+  //   'self::cell', 'count(children/*)=0',
+  //   '../../../parent::table[@role="equality"]'
+  // );
+
 };
 
 

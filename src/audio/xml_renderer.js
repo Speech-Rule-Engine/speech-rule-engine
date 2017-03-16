@@ -40,6 +40,7 @@ goog.inherits(sre.XmlRenderer, sre.MarkupRenderer);
  * @override
  */
 sre.XmlRenderer.prototype.markup = function(descrs) {
+  // TODO: Include personality range computations.
   this.setScaleFunction(-2, 2, -100, 100, 2);
   var markup = sre.AudioUtil.personalityMarkup(descrs);
   var result = [];

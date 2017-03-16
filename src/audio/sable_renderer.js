@@ -44,7 +44,6 @@ sre.SableRenderer.prototype.pause = function(pause) {
 };
 
 
-// TODO: Include personality range computations.
 /**
  * @override
  */

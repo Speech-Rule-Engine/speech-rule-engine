@@ -6020,7 +6020,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
   this.executeMathmlTest(
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
-      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>+</mo>' +
       '<mn>6</mn></mtd></mtr></mtable>',
       '<math>' +
       '<mtable type="multiline" role="unknown" id="21" children="5,11,20">' +
@@ -6050,7 +6050,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '</mtr>' +
       '<mtr type="line" role="multiline" id="20" children="18" parent="21">' +
       '<mtd>' +
-      '<mrow type="relseq" role="equality" id="18" children="17,15"' +
+      '<mrow type="infixop" role="addition" id="18" children="17,15"' +
       ' content="14" parent="20">' +
       '<mrow type="infixop" role="implicit" id="17" children="12,13"' +
       ' content="16" parent="18">' +
@@ -6060,8 +6060,8 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '<mi type="identifier" role="latinletter" id="13" parent="17">y</mi>' +
       '</mrow>' +
       '<maligngroup/>' +
-      '<mo type="relation" role="equality" id="14" parent="18"' +
-      ' operator="relseq,=">=</mo>' +
+      '<mo type="operator" role="addition" id="14" parent="18"' +
+      ' operator="infixop,+">+</mo>' +
       '<mn type="number" role="integer" id="15" parent="18">6</mn>' +
       '</mrow>' +
       '</mtd>' +
@@ -6074,7 +6074,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
       '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
-      '<mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
+      '<mo>+</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
       '<math>' +
       '<mtable type="table" role="unknown" id="24" children="6,13,23">' +
       '<mtr type="row" role="table" id="6" children="1,3,5" parent="24">' +
@@ -6110,7 +6110,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '</mrow>' +
       '</mtd>' +
       '<mtd type="cell" role="table" id="20" children="19" parent="23">' +
-      '<mo type="relation" role="equality" id="19" parent="20">=</mo>' +
+      '<mo type="operator" role="addition" id="19" parent="20">+</mo>' +
       '</mtd>' +
       '<mtd type="cell" role="table" id="22" children="21" parent="23">' +
       '<mn type="number" role="integer" id="21" parent="22">6</mn>' +
@@ -6263,7 +6263,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mi type="identifier" role="latinletter" id="0" parent="25">f</mi>' +
       '<mo type="relation" role="equality" id="1" parent="25"' +
       ' operator="relseq,=">=</mo>' +
-      '<mrow type="cases" role="unknown" id="24" children="8,14,23"' +
+      '<mrow type="cases" role="equality" id="24" children="8,14,23"' +
       ' content="2" parent="25">' +
       '<mpadded>' +
       '<mo type="punctuation" role="openfence" id="2" parent="24">{</mo>' +
