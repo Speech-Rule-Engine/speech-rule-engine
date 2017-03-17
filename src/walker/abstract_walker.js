@@ -28,6 +28,7 @@ goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
 goog.require('sre.Highlighter');
+goog.require('sre.Levels');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
@@ -373,7 +374,8 @@ sre.AbstractWalker.prototype.depth = function() {
  */
 sre.AbstractWalker.prototype.home = function() {
   this.moved = sre.AbstractWalker.move.HOME;
-  return sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
+  var focus = sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
+  return focus;
 };
 
 
@@ -483,7 +485,9 @@ sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
  * Returns a new, initialised level structure suitable for the walker.
  * @return {!sre.Levels} The new level structure initialised with root focus.
  */
-sre.AbstractWalker.prototype.initLevels = goog.abstractMethod;
+sre.AbstractWalker.prototype.initLevels = function() {
+  return new sre.Levels();
+};
 
 
 /**
