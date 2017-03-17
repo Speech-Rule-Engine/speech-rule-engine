@@ -1148,12 +1148,14 @@ sre.WalkerTest.prototype.runSyntaxMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'X', 'equality');
   this.executeTest_(walker, 'DOWN', 'x');
   this.executeTest_(walker, 'RIGHT', 'equals');
   this.executeTest_(walker, 'RIGHT',
       'StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'SPACE', 'Level 1 collapsible');
+  this.executeTest_(walker, 'X', 'fraction');
   this.executeTest_(walker, 'DOWN',
       'Numerator negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
@@ -1164,6 +1166,11 @@ sre.WalkerTest.prototype.runSyntaxMoveTests_ = function(walker) {
   this.executeTest_(walker, 'LEFT', 'equals');
   this.executeTest_(walker, 'LEFT', 'x');
   this.executeTest_(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'HOME',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'DOWN', 'x');
+  this.executeTest_(walker, 'X', 'identifier');
 };
 
 
@@ -1229,6 +1236,7 @@ sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'X', 'equality');
   this.executeTest_(walker, 'DOWN', 'x');
   this.executeTest_(walker, 'RIGHT',
       'equals StartFraction negative b plus-or-minus StartRoot' +
@@ -1237,6 +1245,7 @@ sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
       'equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'SPACE', 'Level 1 collapsible');
+  this.executeTest_(walker, 'X', 'fraction');
   this.executeTest_(walker, 'DOWN',
       'Numerator negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
@@ -1246,6 +1255,11 @@ sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'LEFT', 'x');
   this.executeTest_(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'HOME',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'DOWN', 'x');
+  this.executeTest_(walker, 'X', 'identifier');
 };
 
 
@@ -1321,6 +1335,9 @@ sre.WalkerTest.prototype.runDummyMoveTests_ = function(walker) {
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'SPACE',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'HOME',
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
