@@ -57,6 +57,21 @@ sre.SpeechGeneratorUtil.recomputeSpeech = function(semantic) {
 
 
 /**
+ * Computes speech descriptions for a single semantic node without cache.
+ * @param {!Node} tree The semantic node as XML.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the node.
+ */
+sre.SpeechGeneratorUtil.computeSpeechWithoutCache = function(tree) {
+  var oldCache = sre.Engine.getInstance().cache;
+  sre.Engine.getInstance().cache = false;
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(tree);
+  sre.Engine.getInstance().cache = oldCache;
+  return descrs;
+};
+
+
+/**
  * Computes speech string for a single semantic node, either by retrieving it
  * from the the cache or by recomputing it.
  * @param {!sre.SemanticNode} semantic The semantic tree node.

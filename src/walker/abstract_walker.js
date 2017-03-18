@@ -249,7 +249,7 @@ sre.AbstractWalker.prototype.speech = function() {
     var node = nodes[i];
     var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
     speech.push(node ? this.generator.getSpeech(node, this.xml) :
-                sre.SpeechGeneratorUtil.retrieveSpeech(this.xml, snode));
+                sre.SpeechGeneratorUtil.retrieveSpeech(snode));
   }
   if (prefix) speech.unshift(prefix);
   return sre.AuralRendering.getInstance().merge(speech);
@@ -602,13 +602,26 @@ sre.AbstractWalker.prototype.summary_ = function(prefix) {
   var sid = sprimary.id.toString();
   var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  var oldAlt = snode.getAttribute('alternative');
   snode.setAttribute('alternative', 'summary');
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(
-    /** @type{!Node} */(snode));
-  snode.removeAttribute('alternative');
+  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+      /** @type{!Node} */(snode));
+  oldAlt ? snode.setAttribute('alternative', oldAlt) :
+    snode.removeAttribute('alternative');
   var summary = sre.AuralRendering.getInstance().markup(descrs);
   return prefix ? 
       sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
+};
+
+
+/**
+ * Indicates if a virtual detail is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.detail = function() {
+  this.moved = sre.AbstractWalker.move.DETAIL;
+  return this.focus_.clone();
 };
 
 
@@ -625,25 +638,10 @@ sre.AbstractWalker.prototype.detail_ = function(prefix) {
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(
-    /** @type{!Node} */(snode));
+  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+      /** @type{!Node} */(snode));
   snode.setAttribute('alternative', oldAlt);
   var detail = sre.AuralRendering.getInstance().markup(descrs);
   return prefix ? 
       sre.AuralRendering.getInstance().merge([prefix, detail]) : detail;
-};
-
-
-/**
- * Indicates if a virtual detail is possible.
- * @return {?sre.Focus}
- * @protected
- */
-sre.AbstractWalker.prototype.detail = function() {
-  var primary = this.focus_.getDomPrimary();
-  if (this.expandable(primary)) {
-    this.moved = sre.AbstractWalker.move.DETAIL;
-    return this.focus_.clone();
-  }
-  return this.focus_;
 };
