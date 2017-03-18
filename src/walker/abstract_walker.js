@@ -230,7 +230,7 @@ sre.AbstractWalker.prototype.speech = function() {
     return this.summary_();
   case sre.AbstractWalker.move.DETAIL:
     return this.detail_();
-  default: 
+  default:
     var speech = [];
     var snodes = this.focus_.getSemanticNodes();
     for (var i = 0, l = nodes.length; i < l; i++) {
@@ -239,14 +239,27 @@ sre.AbstractWalker.prototype.speech = function() {
       speech.push(node ? this.generator.getSpeech(node, this.xml) :
                   sre.SpeechGeneratorUtil.retrieveSpeech(snode));
     }
-    var prefix = this.prefix_();
-    if (prefix) speech.unshift(prefix);
-    return sre.AuralRendering.getInstance().merge(speech);
+    return this.mergePrefix_(speech);
   }
 };
 
 
-// TODO: Write a prettier merge prefix method.
+/**
+ * Merges a prefix into a list of speech strings.
+ * @param {Array.<string>} speech The speech strings.
+ * @param {Array.<string>=} opt_pre A list of strings that should precede the
+ *     prefix.
+ * @return {string} The merged speech string.
+ * @private
+ */
+sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
+  var pre = opt_pre || [];
+  var prefix = this.prefix_();
+  if (prefix) speech.unshift(prefix);
+  return sre.AuralRendering.getInstance().merge(pre.concat(speech));
+};
+
+
 /**
  * @return {string} The prefix of the currently focused element.
  * @private
@@ -257,31 +270,6 @@ sre.AbstractWalker.prototype.prefix_ = function() {
   return nodes[0] ? sre.WalkerUtil.getAttribute(
     /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
     sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
-};
-
-
-/**
- * Puts together an announcement string with level of the element, its meaning
- * in the expression, as well as whether or not it is expandable or collapsible.
- * @param {string} prefix The prefix of that element, representing its
- *     positional meaning.
- * @return {string} The announcement string.
- * @private
- */
-sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
-  var primary = this.focus_.getDomPrimary();
-  var expand = (this.expandable(primary) && 'expandable') ||
-      (this.collapsible(primary) && 'collapsible') || '';
-  var descr = [sre.AuralRendering.getInstance().markup(
-      [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
-         personality: {}})])];
-  if (prefix) {
-    descr.push(prefix);
-  }
-  if (expand) {
-    descr.push(expand);
-  }
-  return sre.AuralRendering.getInstance().merge(descr);
 };
 
 
@@ -378,10 +366,19 @@ sre.AbstractWalker.prototype.depth = function() {
 sre.AbstractWalker.prototype.depth_ = function() {
   var oldDepth = sre.Grammar.getInstance().getParameter('depth');
   sre.Grammar.getInstance().setParameter('depth', true);
+  var primary = this.focus_.getDomPrimary();
+  var expand = (this.expandable(primary) && ['expandable']) ||
+      (this.collapsible(primary) && ['collapsible']) || [];
+  var level = [sre.AuralRendering.getInstance().markup(
+      [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
+         personality: {}})])];
   var snodes = this.focus_.getSemanticNodes();
   var prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+  if (prefix) {
+    level.push(prefix);
+  }
   sre.Grammar.getInstance().setParameter('depth', oldDepth);
-  return this.levelAnnouncement_(prefix);
+  return sre.AuralRendering.getInstance().merge(level.concat(expand));
 };
 
 
@@ -392,7 +389,8 @@ sre.AbstractWalker.prototype.depth_ = function() {
  */
 sre.AbstractWalker.prototype.home = function() {
   this.moved = sre.AbstractWalker.move.HOME;
-  var focus = sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
+  var focus = sre.Focus.factory(
+      this.rootId, [this.rootId], this.rebuilt, this.node);
   return focus;
 };
 
@@ -621,13 +619,12 @@ sre.AbstractWalker.prototype.summary_ = function() {
   var oldAlt = snode.getAttribute('alternative');
   snode.setAttribute('alternative', 'summary');
   var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
-      /** @type{!Node} */(snode));
-  var prefix = this.prefix_();
+      /** @type {!Node} */(snode));
+  var summary = sre.AuralRendering.getInstance().markup(descrs);
+  var speech = this.mergePrefix_([summary]);
   oldAlt ? snode.setAttribute('alternative', oldAlt) :
     snode.removeAttribute('alternative');
-  var summary = sre.AuralRendering.getInstance().markup(descrs);
-  return prefix ? 
-      sre.AuralRendering.getInstance().merge([prefix, summary]) : summary;
+  return speech;
 };
 
 
@@ -654,10 +651,9 @@ sre.AbstractWalker.prototype.detail_ = function() {
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
   var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
-      /** @type{!Node} */(snode));
-  var prefix = this.prefix_();
-  snode.setAttribute('alternative', oldAlt);
+      /** @type {!Node} */(snode));
   var detail = sre.AuralRendering.getInstance().markup(descrs);
-  return prefix ? 
-      sre.AuralRendering.getInstance().merge([prefix, detail]) : detail;
+  var speech = this.mergePrefix_([detail]);
+  snode.setAttribute('alternative', oldAlt);
+  return speech;
 };
