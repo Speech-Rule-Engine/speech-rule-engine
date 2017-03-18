@@ -2087,3 +2087,107 @@ sre.WalkerTest.prototype.testDummyWalkerEquationSvg = function() {
       sre.WalkerTest.EQUATION_MML);
   this.runDummyEquationMoveTests_(walker);
 };
+
+
+/**
+ * Runs a series of walker tests on a equation formula.
+ * @param {sre.Walker} walker The walker.
+ * @private
+ */
+sre.WalkerTest.prototype.runTableEquationMoveTests_ = function(walker) {
+  this.executeTest_(walker, null,
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'X', 'table with 2 rows and 3 columns');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'SPACE', 'Level 1 2nd Row');
+  this.executeTest_(walker, 'X', '2nd Row in table with 3 columns');
+  this.executeTest_(walker, 'DOWN', '1st Column c');
+  walker.modifier = true;
+  this.executeTest_(walker, 'UP', '1st Column a');
+  this.executeTest_(walker, 'SPACE', 'Level 2 1st Row 1st Column');
+  walker.modifier = true;
+  this.executeTest_(walker, 'DOWN', '1st Column c');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 1st Column');
+  this.executeTest_(walker, 'X', '1st Column in table');
+  this.executeTest_(walker, 'DOWN', 'c');
+  this.executeTest_(walker, 'UP', '1st Column c');
+  this.executeTest_(walker, 'RIGHT', '2nd Column equals');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 2nd Column');
+  this.executeTest_(walker, 'X', '2nd Column in table');
+  this.executeTest_(walker, 'UP',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'LEFT',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'HOME',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'X', '1st Row in table with 3 columns');
+};
+
+
+/**
+ * Test for table walker on MML elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationMml = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on MML elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationMmlCss = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on HTML CSS elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationHtmlCss = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on Common HTML elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationCommonHtml = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on SVG elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationSvg = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};

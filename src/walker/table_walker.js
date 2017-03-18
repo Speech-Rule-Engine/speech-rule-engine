@@ -59,6 +59,7 @@ sre.TableWalker.prototype.move = function(key) {
  * @override
  */
 sre.TableWalker.prototype.up = function() {
+  this.moved = sre.AbstractWalker.move.UP;
   return this.eligibleCell_() ?
       this.verticalMove_(false) :
       sre.TableWalker.base(this, 'up');
@@ -69,6 +70,7 @@ sre.TableWalker.prototype.up = function() {
  * @override
  */
 sre.TableWalker.prototype.down = function() {
+  this.moved = sre.AbstractWalker.move.DOWN;
   return this.eligibleCell_() ?
       this.verticalMove_(true) :
       sre.TableWalker.base(this, 'down');
