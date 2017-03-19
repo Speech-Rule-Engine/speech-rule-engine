@@ -59,6 +59,7 @@ sre.TableWalker.prototype.move = function(key) {
  * @override
  */
 sre.TableWalker.prototype.up = function() {
+  this.moved = sre.AbstractWalker.move.UP;
   return this.eligibleCell_() ?
       this.verticalMove_(false) :
       sre.TableWalker.base(this, 'up');
@@ -69,10 +70,27 @@ sre.TableWalker.prototype.up = function() {
  * @override
  */
 sre.TableWalker.prototype.down = function() {
+  this.moved = sre.AbstractWalker.move.DOWN;
   return this.eligibleCell_() ?
       this.verticalMove_(true) :
       sre.TableWalker.base(this, 'down');
 };
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Role>}
+ */
+sre.TableWalker.ELIGIBLE_CELL_ROLES = [
+  sre.SemanticAttr.Role.DETERMINANT,
+  sre.SemanticAttr.Role.ROWVECTOR,
+  sre.SemanticAttr.Role.BINOMIAL,
+  sre.SemanticAttr.Role.SQUAREMATRIX,
+  sre.SemanticAttr.Role.MULTILINE,
+  sre.SemanticAttr.Role.MATRIX,
+  sre.SemanticAttr.Role.VECTOR,
+  sre.SemanticAttr.Role.CASES,
+  sre.SemanticAttr.Role.TABLE
+];
 
 
 /**
@@ -82,8 +100,8 @@ sre.TableWalker.prototype.down = function() {
 sre.TableWalker.prototype.eligibleCell_ = function() {
   var primary = this.getFocus().getSemanticPrimary();
   return this.modifier &&
-      primary.type === sre.SemanticAttr.Type.CELL &&
-      primary.role === sre.SemanticAttr.Role.TABLE;
+        primary.type === sre.SemanticAttr.Type.CELL &&
+    sre.TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1;
 };
 
 

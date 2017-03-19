@@ -202,10 +202,15 @@ sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
       'row', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Row"; [p] (pause:200)',
-      'self::row'
+    'self::row'
   );
   defineRuleAlias(
       'row', 'self::line'
+  );
+  defineRule(
+      'cell', 'prefix.default',
+      '[n] ../..; [t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
+      'self::cell', 'contains(@grammar,"depth")'
   );
   defineRule(
       'cell', 'prefix.default',

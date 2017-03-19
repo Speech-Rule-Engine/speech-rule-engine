@@ -28,6 +28,7 @@ goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
 goog.require('sre.Highlighter');
+goog.require('sre.Levels');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
@@ -100,6 +101,8 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
   this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
   this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
+  this.keyMapping_[sre.EventUtil.KeyCode.Z] = goog.bind(this.detail, this);
 
   this.dummy_ = function() {};
 
@@ -142,7 +145,9 @@ sre.AbstractWalker.move = {
   DEPTH: 'depth',
   ENTER: 'enter',
   EXPAND: 'expand',
-  HOME: 'home'
+  HOME: 'home',
+  SUMMARY: 'summary',
+  DETAIL: 'detail'
 };
 
 
@@ -217,50 +222,54 @@ sre.AbstractWalker.prototype.getDepth = function() {
  */
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getDomNodes();
-  var snodes = this.focus_.getSemanticNodes();
   if (!nodes.length) return '';
-  // TODO: This should be more efficient. Recompute only when walker is
-  // restarted.
-  var prefix = nodes[0] ? sre.WalkerUtil.getAttribute(
-      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
-      sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
-  if (this.moved === sre.AbstractWalker.move.DEPTH) {
-    return this.levelAnnouncement_(prefix);
+  switch (this.moved) {
+  case sre.AbstractWalker.move.DEPTH:
+    return this.depth_();
+  case sre.AbstractWalker.move.SUMMARY:
+    return this.summary_();
+  case sre.AbstractWalker.move.DETAIL:
+    return this.detail_();
+  default:
+    var speech = [];
+    var snodes = this.focus_.getSemanticNodes();
+    for (var i = 0, l = nodes.length; i < l; i++) {
+      var node = nodes[i];
+      var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
+      speech.push(node ? this.generator.getSpeech(node, this.xml) :
+                  sre.SpeechGeneratorUtil.retrieveSpeech(snode));
+    }
+    return this.mergePrefix_(speech);
   }
-  var speech = [];
-  for (var i = 0, l = nodes.length; i < l; i++) {
-    var node = nodes[i];
-    var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
-    speech.push(node ? this.generator.getSpeech(node, this.xml) :
-                sre.SpeechGeneratorUtil.retrieveSpeech(this.xml, snode));
-  }
-  if (prefix) speech.unshift(prefix);
-  return sre.AuralRendering.getInstance().merge(speech);
 };
 
 
 /**
- * Puts together an announcement string with level of the element, its meaning
- * in the expression, as well as whether or not it is expandable or collapsible.
- * @param {string} prefix The prefix of that element, representing its
- *     positional meaning.
- * @return {string} The announcement string.
+ * Merges a prefix into a list of speech strings.
+ * @param {Array.<string>} speech The speech strings.
+ * @param {Array.<string>=} opt_pre A list of strings that should precede the
+ *     prefix.
+ * @return {string} The merged speech string.
  * @private
  */
-sre.AbstractWalker.prototype.levelAnnouncement_ = function(prefix) {
-  var primary = this.focus_.getDomPrimary();
-  var expand = (this.expandable(primary) && 'expandable') ||
-      (this.collapsible(primary) && 'collapsible') || '';
-  var descr = [sre.AuralRendering.getInstance().markup(
-      [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
-         personality: {}})])];
-  if (prefix) {
-    descr.push(prefix);
-  }
-  if (expand) {
-    descr.push(expand);
-  }
-  return sre.AuralRendering.getInstance().merge(descr);
+sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
+  var pre = opt_pre || [];
+  var prefix = this.prefix_();
+  if (prefix) speech.unshift(prefix);
+  return sre.AuralRendering.getInstance().merge(pre.concat(speech));
+};
+
+
+/**
+ * @return {string} The prefix of the currently focused element.
+ * @private
+ */
+sre.AbstractWalker.prototype.prefix_ = function() {
+  var nodes = this.focus_.getDomNodes();
+  var snodes = this.focus_.getSemanticNodes();
+  return nodes[0] ? sre.WalkerUtil.getAttribute(
+    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
+    sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
 };
 
 
@@ -351,13 +360,38 @@ sre.AbstractWalker.prototype.depth = function() {
 
 
 /**
+ * @return {string} The depth announcement for the currently focused element.
+ * @private
+ */
+sre.AbstractWalker.prototype.depth_ = function() {
+  var oldDepth = sre.Grammar.getInstance().getParameter('depth');
+  sre.Grammar.getInstance().setParameter('depth', true);
+  var primary = this.focus_.getDomPrimary();
+  var expand = (this.expandable(primary) && ['expandable']) ||
+      (this.collapsible(primary) && ['collapsible']) || [];
+  var level = [sre.AuralRendering.getInstance().markup(
+      [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
+         personality: {}})])];
+  var snodes = this.focus_.getSemanticNodes();
+  var prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+  if (prefix) {
+    level.push(prefix);
+  }
+  sre.Grammar.getInstance().setParameter('depth', oldDepth);
+  return sre.AuralRendering.getInstance().merge(level.concat(expand));
+};
+
+
+/**
  * Moving to the home position.
  * @return {?sre.Focus}
  * @protected
  */
 sre.AbstractWalker.prototype.home = function() {
   this.moved = sre.AbstractWalker.move.HOME;
-  return sre.Focus.factory(this.rootId, [this.rootId], this.rebuilt, this.node);
+  var focus = sre.Focus.factory(
+      this.rootId, [this.rootId], this.rebuilt, this.node);
+  return focus;
 };
 
 
@@ -467,7 +501,9 @@ sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
  * Returns a new, initialised level structure suitable for the walker.
  * @return {!sre.Levels} The new level structure initialised with root focus.
  */
-sre.AbstractWalker.prototype.initLevels = goog.abstractMethod;
+sre.AbstractWalker.prototype.initLevels = function() {
+  return new sre.Levels();
+};
 
 
 /**
@@ -556,4 +592,68 @@ sre.AbstractWalker.prototype.singletonFocus = function(id) {
  */
 sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
   return sre.Focus.factory(id, ids, this.rebuilt, this.node);
+};
+
+
+// TODO: Refactor similar code.
+/**
+ * Indicates if a virtual summary is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.summary = function() {
+  this.moved = sre.AbstractWalker.move.SUMMARY;
+  return this.focus_.clone();
+};
+
+
+/**
+ * @return {string} The virtual summary of an element.
+ * @private
+ */
+sre.AbstractWalker.prototype.summary_ = function() {
+  var sprimary = this.focus_.getSemanticPrimary();
+  var sid = sprimary.id.toString();
+  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  var oldAlt = snode.getAttribute('alternative');
+  snode.setAttribute('alternative', 'summary');
+  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+      /** @type {!Node} */(snode));
+  var summary = sre.AuralRendering.getInstance().markup(descrs);
+  var speech = this.mergePrefix_([summary]);
+  oldAlt ? snode.setAttribute('alternative', oldAlt) :
+    snode.removeAttribute('alternative');
+  return speech;
+};
+
+
+/**
+ * Indicates if a virtual detail is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.AbstractWalker.prototype.detail = function() {
+  this.moved = sre.AbstractWalker.move.DETAIL;
+  return this.focus_.clone();
+};
+
+
+/**
+ * @return {string} The virtual detail of a collapsed element.
+ * @private
+ */
+sre.AbstractWalker.prototype.detail_ = function() {
+  var sprimary = this.focus_.getSemanticPrimary();
+  var sid = sprimary.id.toString();
+  var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
+      sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
+  var oldAlt = snode.getAttribute('alternative');
+  snode.removeAttribute('alternative');
+  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+      /** @type {!Node} */(snode));
+  var detail = sre.AuralRendering.getInstance().markup(descrs);
+  var speech = this.mergePrefix_([detail]);
+  snode.setAttribute('alternative', oldAlt);
+  return speech;
 };
