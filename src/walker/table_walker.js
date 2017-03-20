@@ -240,8 +240,18 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
  * @private
  */
 sre.TableWalker.prototype.isLegalJump_ = function(row, column) {
-  var child = this.currentTable_.childNodes[row - 1];
-  return !!(child && child.childNodes[column - 1]);
+  var xmlTable = sre.DomUtil.querySelectorAllByAttrValue(
+    this.rebuilt.xml, 'id', this.currentTable_.id.toString())[0];
+  if (!xmlTable || xmlTable.hasAttribute('alternative')) {
+    return false;
+  }
+  var rowNode = this.currentTable_.childNodes[row - 1];
+  var xmlRow = sre.DomUtil.querySelectorAllByAttrValue(
+    xmlTable, 'id', rowNode.id.toString())[0];
+  if (!xmlRow || xmlRow.hasAttribute('alternative')) {
+    return false;
+  }
+  return !!(rowNode && rowNode.childNodes[column - 1]);
 };
 
 
