@@ -73,6 +73,8 @@ sre.TableWalker = function(node, generator, highlighter, xml) {
    */
   this.undoStack = new sre.Levels();
 
+  this.undoFocus = null;
+  
   this.currentTable = null;
   
 };
@@ -208,7 +210,7 @@ sre.TableWalker.prototype.jumpCell = function() {
       return this.getFocus();
     }
     this.cell = [this.row, column];
-    return this.getFocus().clone();
+    return this.jumpCell_(this.row, column);
   }
   this.row = (this.key - sre.EventUtil.KeyCode['0']);
   this.moved = sre.Walker.move.ROW;
@@ -216,35 +218,36 @@ sre.TableWalker.prototype.jumpCell = function() {
 };
 
 
-/**
- * @override
- */
-sre.TableWalker.prototype.specialMove = function() {
-  if (this.moved === sre.Walker.move.CELL) {
-    return this.jumpCell_();
-  }
-  return null;
-};
-
-
 // Basic idea:
-// -- Check if the cell position exists! (when?)
+// -- We know the cell position exists!
 // -- Re-init the undo stack.
 // -- Go up to the elibigle Table type.
 // -- Pop foci off the levels.
 // -- Push onto the undo stack.
 // -- Go to cell position by pushing onto the levels.
-sre.TableWalker.prototype.jumpCell_ = function() {
-  console.log(this.currentTable);
-  return 'Cell ' + this.row + ' ' + this.column; // this.getFocus();
+sre.TableWalker.prototype.jumpCell_ = function(row, column) {
+  this.undoStack = new sre.Levels();
+  this.undoFocus = this.getFocus();
+  var id = this.currentTable.id.toString();
+  do {
+    var level = this.levels.pop();
+    this.undoStack.push(level);
+  } while (level.indexOf(id) === -1)
+  this.levels.push(level);
+  this.setFocus(this.singletonFocus(id));
+  this.levels.push(this.nextLevel());
+  var semRow = this.currentTable.childNodes[row - 1];
+  this.setFocus(this.singletonFocus(semRow.id.toString()));
+  this.levels.push(this.nextLevel());
+  return this.singletonFocus(semRow.childNodes[column - 1].id.toString());
 };
 
 
 sre.TableWalker.prototype.isLegalJump = function(row, column) {
-  console.log(this.currentTable);
-  var child = this.currentTable.childNodes[row];
-  return child && child.childNodes[column];
+  var child = this.currentTable.childNodes[row - 1];
+  return child && child.childNodes[column - 1];
 };
+
 
 /**
  * @return {boolean} True if we are inside a table.
@@ -254,7 +257,6 @@ sre.TableWalker.prototype.isInTable = function() {
   while (snode) {
     if (sre.TableWalker.ELIGIBLE_TABLE_TYPES.indexOf(snode.type) !== -1) {
       this.currentTable = snode;
-      console.log(snode);
       return true;
     }
     snode = snode.parent;
