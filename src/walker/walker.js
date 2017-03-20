@@ -85,3 +85,24 @@ sre.Walker.prototype.getDepth = function() {};
  *     null if there was no move of the key.
  */
 sre.Walker.prototype.move = function(key) {};
+
+
+/**
+ * Enumerator for different types of moves.
+ * @enum {string}
+ */
+sre.Walker.move = {
+  UP: 'up',
+  DOWN: 'down',
+  LEFT: 'left',
+  RIGHT: 'right',
+  REPEAT: 'repeat',
+  DEPTH: 'depth',
+  ENTER: 'enter',
+  EXPAND: 'expand',
+  HOME: 'home',
+  SUMMARY: 'summary',
+  DETAIL: 'detail',
+  ROW: 'row',
+  CELL: 'cell'
+};

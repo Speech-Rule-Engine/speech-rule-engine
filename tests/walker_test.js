@@ -2132,6 +2132,15 @@ sre.WalkerTest.prototype.runTableEquationMoveTests_ = function(walker) {
   this.executeTest_(walker, 'DOWN',
       '1st Row 1st Column a 2nd Column equals 3rd Column b');
   this.executeTest_(walker, 'X', '1st Row in table with 3 columns');
+  this.executeTest_(walker, '2',
+                    '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, '2', '2nd Column equals');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 2nd Column');
+  this.executeTest_(walker, '2', '2nd Column equals');
+  this.executeTest_(walker, '3', '3rd Column d');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 3rd Column');
+  this.executeTest_(walker, 'UP',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
 };
 
 
