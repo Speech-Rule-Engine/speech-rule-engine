@@ -51,12 +51,12 @@ sre.TableWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode['7']] = goog.bind(this.jumpCell, this);
   this.keyMapping[sre.EventUtil.KeyCode['8']] = goog.bind(this.jumpCell, this);
   this.keyMapping[sre.EventUtil.KeyCode['9']] = goog.bind(this.jumpCell, this);
-  // this.keyMapping[sre.EventUtil.KeyCode['U']] = goog.bind(this.backJump, this);
 
   /**
    * @type {?sre.EventUtil.KeyCode}
+   * @private
    */
-  this.key = null;
+  this.key_ = null;
 
   /**
    * @type {number}
@@ -64,20 +64,12 @@ sre.TableWalker = function(node, generator, highlighter, xml) {
    */
   this.row_ = 0;
 
-  // /**
-  //  * @type {Array.<number>}
-  //  */
-  // this.cell = null;
+  /**
+   * @type {?sre.SemanticNode}
+   * @private
+   */
+  this.currentTable_ = null;
 
-  // /**
-  //  * @type {!sre.Levels<string>}
-  //  */
-  // this.undoStack = new sre.Levels();
-
-  // this.undoFocus = null;
-  
-  this.currentTable = null;
-  
 };
 goog.inherits(sre.TableWalker, sre.SyntaxWalker);
 
@@ -86,7 +78,7 @@ goog.inherits(sre.TableWalker, sre.SyntaxWalker);
  * @override
  */
 sre.TableWalker.prototype.move = function(key) {
-  this.key = key;
+  this.key_ = key;
   var result = sre.TableWalker.base(this, 'move', key);
   this.modifier = false;
   return result;
@@ -140,12 +132,6 @@ sre.TableWalker.ELIGIBLE_TABLE_TYPES = [
   sre.SemanticAttr.Type.VECTOR,
   sre.SemanticAttr.Type.CASES,
   sre.SemanticAttr.Type.TABLE
-  //
-  // TODO: These two could be useful for the general check!
-  // For now omitted.
-  //
-  // sre.SemanticAttr.Type.ROW,
-  // sre.SemanticAttr.Type.CELL
 ];
 
 
@@ -206,26 +192,19 @@ sre.TableWalker.prototype.jumpCell = function() {
   }
   if (this.moved === sre.Walker.move.ROW) {
     this.moved = sre.Walker.move.CELL;
-    var column = this.key - sre.EventUtil.KeyCode['0'];
+    var column = this.key_ - sre.EventUtil.KeyCode['0'];
     if (!this.isLegalJump_(this.row_, column)) {
       return this.getFocus();
     }
     // this.cell = [this.row, column];
     return this.jumpCell_(this.row_, column);
   }
-  this.row_ = (this.key - sre.EventUtil.KeyCode['0']);
+  this.row_ = (this.key_ - sre.EventUtil.KeyCode['0']);
   this.moved = sre.Walker.move.ROW;
   return this.getFocus().clone();
 };
 
 
-// Basic idea:
-// -- We know the cell position exists!
-// -- Re-init the undo stack.
-// -- Go up to the elibigle Table type.
-// -- Pop foci off the levels.
-// -- Push onto the undo stack.
-// -- Go to cell position by pushing onto the levels.
 /**
  * Jumps to the cell at the given row column position.
  * @param {number} row The row coordinate.
@@ -234,17 +213,17 @@ sre.TableWalker.prototype.jumpCell = function() {
  * @private
  */
 sre.TableWalker.prototype.jumpCell_ = function(row, column) {
-  // this.undoStack = new sre.Levels();
-  // this.undoFocus = this.getFocus();
-  var id = this.currentTable.id.toString();
+  // We know the cell position exists!
+  var id = this.currentTable_.id.toString();
+  // Pop foci until we have reached the table.
   do {
     var level = this.levels.pop();
-    // this.undoStack.push(level);
   } while (level.indexOf(id) === -1)
+  // Go to cell position by pushing row and cell onto levels.
   this.levels.push(level);
   this.setFocus(this.singletonFocus(id));
   this.levels.push(this.nextLevel());
-  var semRow = this.currentTable.childNodes[row - 1];
+  var semRow = this.currentTable_.childNodes[row - 1];
   this.setFocus(this.singletonFocus(semRow.id.toString()));
   this.levels.push(this.nextLevel());
   return this.singletonFocus(semRow.childNodes[column - 1].id.toString());
@@ -261,8 +240,8 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
  * @private
  */
 sre.TableWalker.prototype.isLegalJump_ = function(row, column) {
-  var child = this.currentTable.childNodes[row - 1];
-  return child && child.childNodes[column - 1];
+  var child = this.currentTable_.childNodes[row - 1];
+  return !!(child && child.childNodes[column - 1]);
 };
 
 
@@ -274,7 +253,7 @@ sre.TableWalker.prototype.isInTable_ = function() {
   var snode = this.getFocus().getSemanticPrimary();
   while (snode) {
     if (sre.TableWalker.ELIGIBLE_TABLE_TYPES.indexOf(snode.type) !== -1) {
-      this.currentTable = snode;
+      this.currentTable_ = snode;
       return true;
     }
     snode = snode.parent;
