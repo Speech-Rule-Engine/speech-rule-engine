@@ -59,21 +59,22 @@ sre.TableWalker = function(node, generator, highlighter, xml) {
   this.key = null;
 
   /**
-   * @type {?number}
+   * @type {number}
+   * @private
    */
-  this.row = null;
+  this.row_ = 0;
 
-  /**
-   * @type {Array.<number>}
-   */
-  this.cell = null;
+  // /**
+  //  * @type {Array.<number>}
+  //  */
+  // this.cell = null;
 
-  /**
-   * @type {!sre.Levels<string>}
-   */
-  this.undoStack = new sre.Levels();
+  // /**
+  //  * @type {!sre.Levels<string>}
+  //  */
+  // this.undoStack = new sre.Levels();
 
-  this.undoFocus = null;
+  // this.undoFocus = null;
   
   this.currentTable = null;
   
@@ -200,19 +201,19 @@ sre.TableWalker.prototype.verticalMove_ = function(direction) {
  * @protected
  */
 sre.TableWalker.prototype.jumpCell = function() {
-  if (!this.isInTable()) {
+  if (!this.isInTable_()) {
     return this.getFocus();
   }
   if (this.moved === sre.Walker.move.ROW) {
     this.moved = sre.Walker.move.CELL;
     var column = this.key - sre.EventUtil.KeyCode['0'];
-    if (!this.isLegalJump(this.row, column)) {
+    if (!this.isLegalJump_(this.row_, column)) {
       return this.getFocus();
     }
-    this.cell = [this.row, column];
-    return this.jumpCell_(this.row, column);
+    // this.cell = [this.row, column];
+    return this.jumpCell_(this.row_, column);
   }
-  this.row = (this.key - sre.EventUtil.KeyCode['0']);
+  this.row_ = (this.key - sre.EventUtil.KeyCode['0']);
   this.moved = sre.Walker.move.ROW;
   return this.getFocus().clone();
 };
@@ -225,13 +226,20 @@ sre.TableWalker.prototype.jumpCell = function() {
 // -- Pop foci off the levels.
 // -- Push onto the undo stack.
 // -- Go to cell position by pushing onto the levels.
+/**
+ * Jumps to the cell at the given row column position.
+ * @param {number} row The row coordinate.
+ * @param {number} column The column coordinate.
+ * @return {sre.Focus} The newly focused cell.
+ * @private
+ */
 sre.TableWalker.prototype.jumpCell_ = function(row, column) {
-  this.undoStack = new sre.Levels();
-  this.undoFocus = this.getFocus();
+  // this.undoStack = new sre.Levels();
+  // this.undoFocus = this.getFocus();
   var id = this.currentTable.id.toString();
   do {
     var level = this.levels.pop();
-    this.undoStack.push(level);
+    // this.undoStack.push(level);
   } while (level.indexOf(id) === -1)
   this.levels.push(level);
   this.setFocus(this.singletonFocus(id));
@@ -243,7 +251,16 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
 };
 
 
-sre.TableWalker.prototype.isLegalJump = function(row, column) {
+
+/**
+ * Checks if a jump to a given row column position is possible in the current
+ * table.
+ * @param {number} row The row coordinate.
+ * @param {number} column The column coordinate.
+ * @return {boolean} True if the cell exists.
+ * @private
+ */
+sre.TableWalker.prototype.isLegalJump_ = function(row, column) {
   var child = this.currentTable.childNodes[row - 1];
   return child && child.childNodes[column - 1];
 };
@@ -251,8 +268,9 @@ sre.TableWalker.prototype.isLegalJump = function(row, column) {
 
 /**
  * @return {boolean} True if we are inside a table.
+ * @private
  */
-sre.TableWalker.prototype.isInTable = function() {
+sre.TableWalker.prototype.isInTable_ = function() {
   var snode = this.getFocus().getSemanticPrimary();
   while (snode) {
     if (sre.TableWalker.ELIGIBLE_TABLE_TYPES.indexOf(snode.type) !== -1) {
