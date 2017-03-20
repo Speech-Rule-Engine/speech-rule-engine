@@ -112,6 +112,16 @@ sre.Levels.prototype.depth = function() {
 
 
 /**
+ * @return {sre.Levels} The clone of this object.
+ */
+sre.Levels.prototype.clone = function() {
+  var levels = new sre.Levels();
+  levels.level_ = this.level_.slice(0);
+  return levels;
+};
+
+
+/**
  * @override
  */
 sre.Levels.prototype.toString = function() {

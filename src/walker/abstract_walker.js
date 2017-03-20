@@ -102,6 +102,9 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
   this.keyMapping[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
   this.keyMapping[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
   this.keyMapping[sre.EventUtil.KeyCode.Z] = goog.bind(this.detail, this);
+  this.keyMapping[sre.EventUtil.KeyCode.V] = goog.bind(this.virtualize, this);
+  this.keyMapping[sre.EventUtil.KeyCode.P] = goog.bind(this.previous, this);
+  this.keyMapping[sre.EventUtil.KeyCode.U] = goog.bind(this.undo, this);
 
   this.dummy_ = function() {};
 
@@ -128,6 +131,11 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
    */
   this.moved = sre.Walker.move.ENTER;
 
+  /**
+   * Stack of virtual cursors.
+   * @type {Array.<sre.Walker.Cursor>}
+   */
+  this.cursors = [];
 };
 
 
@@ -647,4 +655,35 @@ sre.AbstractWalker.prototype.detail_ = function() {
  */
 sre.AbstractWalker.prototype.specialMove = function() {
   return null;
+};
+
+
+// Virtual Cursors:
+sre.AbstractWalker.prototype.virtualize = function(opt_undo) {
+  this.cursors.push({focus: this.focus_, levels: this.levels,
+                     undo: opt_undo || !this.cursors.length});
+  this.levels = this.levels.clone();
+  return this.focus_.clone();
+};
+
+
+sre.AbstractWalker.prototype.previous = function() {
+  var previous = this.cursors.pop();
+  if (!previous) {
+    return this.focus_;
+  }
+  this.levels = previous.levels;
+  return previous.focus;
+};
+
+
+sre.AbstractWalker.prototype.undo = function() {
+  do {
+    var previous = this.cursors.pop();
+  } while (previous && !previous.undo);
+  if (!previous) {
+    return this.focus_;
+  }
+  this.levels = previous.levels;
+  return previous.focus;
 };

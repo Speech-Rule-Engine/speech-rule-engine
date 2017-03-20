@@ -70,6 +70,10 @@ sre.TableWalker = function(node, generator, highlighter, xml) {
    */
   this.currentTable_ = null;
 
+  /**
+   * @type {sre.Focus}
+   */
+  this.firstJump = null;
 };
 goog.inherits(sre.TableWalker, sre.SyntaxWalker);
 
@@ -196,7 +200,6 @@ sre.TableWalker.prototype.jumpCell = function() {
     if (!this.isLegalJump_(this.row_, column)) {
       return this.getFocus();
     }
-    // this.cell = [this.row, column];
     return this.jumpCell_(this.row_, column);
   }
   this.row_ = (this.key_ - sre.EventUtil.KeyCode['0']);
@@ -213,6 +216,12 @@ sre.TableWalker.prototype.jumpCell = function() {
  * @private
  */
 sre.TableWalker.prototype.jumpCell_ = function(row, column) {
+  if (!this.firstJump) {
+    this.firstJump = this.getFocus();
+    this.virtualize(true);
+  } else {
+    this.virtualize(false);
+  }
   // We know the cell position exists!
   var id = this.currentTable_.id.toString();
   // Pop foci until we have reached the table.
@@ -259,4 +268,13 @@ sre.TableWalker.prototype.isInTable_ = function() {
     snode = snode.parent;
   }
   return false;
+};
+
+
+sre.TableWalker.prototype.undo = function() {
+  var focus = sre.TableWalker.base(this, 'undo');
+  if (focus === this.firstJump) {
+    this.firstJump = null;
+  }
+  return focus;
 };
