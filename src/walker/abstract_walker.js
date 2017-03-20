@@ -90,19 +90,18 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 
   /**
    * @type {Object.<sre.EventUtil.KeyCode, function()>}
-   * @private
    */
-  this.keyMapping_ = {};
-  this.keyMapping_[sre.EventUtil.KeyCode.UP] = goog.bind(this.up, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.DOWN] = goog.bind(this.down, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.RIGHT] = goog.bind(this.right, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.LEFT] = goog.bind(this.left, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
-  this.keyMapping_[sre.EventUtil.KeyCode.Z] = goog.bind(this.detail, this);
+  this.keyMapping = {};
+  this.keyMapping[sre.EventUtil.KeyCode.UP] = goog.bind(this.up, this);
+  this.keyMapping[sre.EventUtil.KeyCode.DOWN] = goog.bind(this.down, this);
+  this.keyMapping[sre.EventUtil.KeyCode.RIGHT] = goog.bind(this.right, this);
+  this.keyMapping[sre.EventUtil.KeyCode.LEFT] = goog.bind(this.left, this);
+  this.keyMapping[sre.EventUtil.KeyCode.TAB] = goog.bind(this.repeat, this);
+  this.keyMapping[sre.EventUtil.KeyCode.ENTER] = goog.bind(this.expand, this);
+  this.keyMapping[sre.EventUtil.KeyCode.SPACE] = goog.bind(this.depth, this);
+  this.keyMapping[sre.EventUtil.KeyCode.HOME] = goog.bind(this.home, this);
+  this.keyMapping[sre.EventUtil.KeyCode.X] = goog.bind(this.summary, this);
+  this.keyMapping[sre.EventUtil.KeyCode.Z] = goog.bind(this.detail, this);
 
   this.dummy_ = function() {};
 
@@ -125,29 +124,10 @@ sre.AbstractWalker = function(node, generator, highlighter, xml) {
 
   /**
    * Flag indicating whether the last move actually moved focus.
-   * @type {sre.AbstractWalker.move}
+   * @type {sre.Walker.move}
    */
-  this.moved = sre.AbstractWalker.move.ENTER;
+  this.moved = sre.Walker.move.ENTER;
 
-};
-
-
-/**
- * Enumerator for different types of moves.
- * @enum {string}
- */
-sre.AbstractWalker.move = {
-  UP: 'up',
-  DOWN: 'down',
-  LEFT: 'left',
-  RIGHT: 'right',
-  REPEAT: 'repeat',
-  DEPTH: 'depth',
-  ENTER: 'enter',
-  EXPAND: 'expand',
-  HOME: 'home',
-  SUMMARY: 'summary',
-  DETAIL: 'detail'
 };
 
 
@@ -223,12 +203,16 @@ sre.AbstractWalker.prototype.getDepth = function() {
 sre.AbstractWalker.prototype.speech = function() {
   var nodes = this.focus_.getDomNodes();
   if (!nodes.length) return '';
+  var special = this.specialMove();
+  if (special !== null) {
+    return special;
+  }
   switch (this.moved) {
-  case sre.AbstractWalker.move.DEPTH:
+  case sre.Walker.move.DEPTH:
     return this.depth_();
-  case sre.AbstractWalker.move.SUMMARY:
+  case sre.Walker.move.SUMMARY:
     return this.summary_();
-  case sre.AbstractWalker.move.DETAIL:
+  case sre.Walker.move.DETAIL:
     return this.detail_();
   default:
     var speech = [];
@@ -277,7 +261,7 @@ sre.AbstractWalker.prototype.prefix_ = function() {
  * @override
  */
 sre.AbstractWalker.prototype.move = function(key) {
-  var direction = this.keyMapping_[key];
+  var direction = this.keyMapping[key];
   if (!direction) {
     return null;
   }
@@ -286,7 +270,7 @@ sre.AbstractWalker.prototype.move = function(key) {
     return false;
   }
   this.focus_ = focus;
-  if (this.moved === sre.AbstractWalker.move.HOME) {
+  if (this.moved === sre.Walker.move.HOME) {
     this.levels = this.initLevels();
   }
   return true;
@@ -299,7 +283,7 @@ sre.AbstractWalker.prototype.move = function(key) {
  * @protected
  */
 sre.AbstractWalker.prototype.up = function() {
-  this.moved = sre.AbstractWalker.move.UP;
+  this.moved = sre.Walker.move.UP;
   return this.focus_;
 };
 
@@ -310,7 +294,7 @@ sre.AbstractWalker.prototype.up = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.down = function() {
-  this.moved = sre.AbstractWalker.move.DOWN;
+  this.moved = sre.Walker.move.DOWN;
   return this.focus_;
 };
 
@@ -321,7 +305,7 @@ sre.AbstractWalker.prototype.down = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.left = function() {
-  this.moved = sre.AbstractWalker.move.LEFT;
+  this.moved = sre.Walker.move.LEFT;
   return this.focus_;
 };
 
@@ -332,7 +316,7 @@ sre.AbstractWalker.prototype.left = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.right = function() {
-  this.moved = sre.AbstractWalker.move.RIGHT;
+  this.moved = sre.Walker.move.RIGHT;
   return this.focus_;
 };
 
@@ -343,7 +327,7 @@ sre.AbstractWalker.prototype.right = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.repeat = function() {
-  this.moved = sre.AbstractWalker.move.REPEAT;
+  this.moved = sre.Walker.move.REPEAT;
   return this.focus_.clone();
 };
 
@@ -354,7 +338,7 @@ sre.AbstractWalker.prototype.repeat = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.depth = function() {
-  this.moved = sre.AbstractWalker.move.DEPTH;
+  this.moved = sre.Walker.move.DEPTH;
   return this.focus_.clone();
 };
 
@@ -388,7 +372,7 @@ sre.AbstractWalker.prototype.depth_ = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.home = function() {
-  this.moved = sre.AbstractWalker.move.HOME;
+  this.moved = sre.Walker.move.HOME;
   var focus = sre.Focus.factory(
       this.rootId, [this.rootId], this.rebuilt, this.node);
   return focus;
@@ -423,7 +407,7 @@ sre.AbstractWalker.prototype.expand = function() {
   if (!expandable) {
     return this.focus_;
   }
-  this.moved = sre.AbstractWalker.move.EXPAND;
+  this.moved = sre.Walker.move.EXPAND;
   expandable.onclick();
   return this.focus_.clone();
 };
@@ -485,7 +469,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
     if (!focus) break;
     this.focus_ = focus;
   }
-  this.moved = sre.AbstractWalker.move.ENTER;
+  this.moved = sre.Walker.move.ENTER;
 };
 
 
@@ -595,14 +579,13 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
 };
 
 
-// TODO: Refactor similar code.
 /**
  * Indicates if a virtual summary is possible.
  * @return {?sre.Focus}
  * @protected
  */
 sre.AbstractWalker.prototype.summary = function() {
-  this.moved = sre.AbstractWalker.move.SUMMARY;
+  this.moved = sre.Walker.move.SUMMARY;
   return this.focus_.clone();
 };
 
@@ -634,7 +617,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
  * @protected
  */
 sre.AbstractWalker.prototype.detail = function() {
-  this.moved = sre.AbstractWalker.move.DETAIL;
+  this.moved = sre.Walker.move.DETAIL;
   return this.focus_.clone();
 };
 
@@ -656,4 +639,14 @@ sre.AbstractWalker.prototype.detail_ = function() {
   var speech = this.mergePrefix_([detail]);
   snode.setAttribute('alternative', oldAlt);
   return speech;
+};
+
+
+/**
+ * This methods can contain special moves for specialised walkers.
+ * @return {?string} The result of the special move.
+ * @protected
+ */
+sre.AbstractWalker.prototype.specialMove = function() {
+  return null;
 };

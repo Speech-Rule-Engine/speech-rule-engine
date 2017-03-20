@@ -41,6 +41,40 @@ sre.TableWalker = function(node, generator, highlighter, xml) {
    */
   this.modifier = false;
 
+  this.keyMapping[sre.EventUtil.KeyCode['0']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['1']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['2']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['3']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['4']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['5']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['6']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['7']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['8']] = goog.bind(this.jumpCell, this);
+  this.keyMapping[sre.EventUtil.KeyCode['9']] = goog.bind(this.jumpCell, this);
+  // this.keyMapping[sre.EventUtil.KeyCode['U']] = goog.bind(this.backJump, this);
+
+  /**
+   * @type {?sre.EventUtil.KeyCode}
+   */
+  this.key = null;
+
+  /**
+   * @type {?number}
+   */
+  this.row = null;
+
+  /**
+   * @type {Array.<number>}
+   */
+  this.cell = null;
+
+  /**
+   * @type {!sre.Levels<string>}
+   */
+  this.undoStack = new sre.Levels();
+
+  this.currentTable = null;
+  
 };
 goog.inherits(sre.TableWalker, sre.SyntaxWalker);
 
@@ -49,6 +83,7 @@ goog.inherits(sre.TableWalker, sre.SyntaxWalker);
  * @override
  */
 sre.TableWalker.prototype.move = function(key) {
+  this.key = key;
   var result = sre.TableWalker.base(this, 'move', key);
   this.modifier = false;
   return result;
@@ -59,7 +94,7 @@ sre.TableWalker.prototype.move = function(key) {
  * @override
  */
 sre.TableWalker.prototype.up = function() {
-  this.moved = sre.AbstractWalker.move.UP;
+  this.moved = sre.Walker.move.UP;
   return this.eligibleCell_() ?
       this.verticalMove_(false) :
       sre.TableWalker.base(this, 'up');
@@ -70,7 +105,7 @@ sre.TableWalker.prototype.up = function() {
  * @override
  */
 sre.TableWalker.prototype.down = function() {
-  this.moved = sre.AbstractWalker.move.DOWN;
+  this.moved = sre.Walker.move.DOWN;
   return this.eligibleCell_() ?
       this.verticalMove_(true) :
       sre.TableWalker.base(this, 'down');
@@ -90,6 +125,24 @@ sre.TableWalker.ELIGIBLE_CELL_ROLES = [
   sre.SemanticAttr.Role.VECTOR,
   sre.SemanticAttr.Role.CASES,
   sre.SemanticAttr.Role.TABLE
+];
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ */
+sre.TableWalker.ELIGIBLE_TABLE_TYPES = [
+  sre.SemanticAttr.Type.MULTILINE,
+  sre.SemanticAttr.Type.MATRIX,
+  sre.SemanticAttr.Type.VECTOR,
+  sre.SemanticAttr.Type.CASES,
+  sre.SemanticAttr.Type.TABLE
+  //
+  // TODO: These two could be useful for the general check!
+  // For now omitted.
+  //
+  // sre.SemanticAttr.Type.ROW,
+  // sre.SemanticAttr.Type.CELL
 ];
 
 
@@ -136,4 +189,75 @@ sre.TableWalker.prototype.verticalMove_ = function(direction) {
   }
   this.levels.push(children);
   return this.singletonFocus(children[origIndex]);
+};
+
+
+/**
+ * Indicates if a virtual summary is possible.
+ * @return {?sre.Focus}
+ * @protected
+ */
+sre.TableWalker.prototype.jumpCell = function() {
+  if (!this.isInTable()) {
+    return this.getFocus();
+  }
+  if (this.moved === sre.Walker.move.ROW) {
+    this.moved = sre.Walker.move.CELL;
+    var column = this.key - sre.EventUtil.KeyCode['0'];
+    if (!this.isLegalJump(this.row, column)) {
+      return this.getFocus();
+    }
+    this.cell = [this.row, column];
+    return this.getFocus().clone();
+  }
+  this.row = (this.key - sre.EventUtil.KeyCode['0']);
+  this.moved = sre.Walker.move.ROW;
+  return this.getFocus().clone();
+};
+
+
+/**
+ * @override
+ */
+sre.TableWalker.prototype.specialMove = function() {
+  if (this.moved === sre.Walker.move.CELL) {
+    return this.jumpCell_();
+  }
+  return null;
+};
+
+
+// Basic idea:
+// -- Check if the cell position exists! (when?)
+// -- Re-init the undo stack.
+// -- Go up to the elibigle Table type.
+// -- Pop foci off the levels.
+// -- Push onto the undo stack.
+// -- Go to cell position by pushing onto the levels.
+sre.TableWalker.prototype.jumpCell_ = function() {
+  console.log(this.currentTable);
+  return 'Cell ' + this.row + ' ' + this.column; // this.getFocus();
+};
+
+
+sre.TableWalker.prototype.isLegalJump = function(row, column) {
+  console.log(this.currentTable);
+  var child = this.currentTable.childNodes[row];
+  return child && child.childNodes[column];
+};
+
+/**
+ * @return {boolean} True if we are inside a table.
+ */
+sre.TableWalker.prototype.isInTable = function() {
+  var snode = this.getFocus().getSemanticPrimary();
+  while (snode) {
+    if (sre.TableWalker.ELIGIBLE_TABLE_TYPES.indexOf(snode.type) !== -1) {
+      this.currentTable = snode;
+      console.log(snode);
+      return true;
+    }
+    snode = snode.parent;
+  }
+  return false;
 };
