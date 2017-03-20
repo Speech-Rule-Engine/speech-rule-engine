@@ -485,9 +485,7 @@ sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
  * Returns a new, initialised level structure suitable for the walker.
  * @return {!sre.Levels} The new level structure initialised with root focus.
  */
-sre.AbstractWalker.prototype.initLevels = function() {
-  return new sre.Levels();
-};
+sre.AbstractWalker.prototype.initLevels = goog.abstractMethod;
 
 
 /**

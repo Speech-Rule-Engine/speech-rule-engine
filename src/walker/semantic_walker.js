@@ -42,12 +42,20 @@ sre.SemanticWalker = function(node, generator, highlighter, xml) {
    * @type {!sre.Levels<sre.Focus>}
    */
   this.levels = this.initLevels();
-  
-  this.levels.push([this.getFocus()]);
 
   this.restoreState();
 };
 goog.inherits(sre.SemanticWalker, sre.AbstractWalker);
+
+
+/**
+ * @override
+ */
+sre.SemanticWalker.prototype.initLevels = function() {
+  var levels = new sre.Levels();
+  levels.push([this.getFocus()]);
+  return levels;
+};
 
 
 /**
