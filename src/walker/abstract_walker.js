@@ -659,6 +659,11 @@ sre.AbstractWalker.prototype.specialMove = function() {
 
 
 // Virtual Cursors:
+/**
+ * Initialises a new virtual cursor.
+ * @param {boolean=} opt_undo Flag specifying if this is an undo jump point.
+ * @return {sre.Focus} The new focus.
+ */
 sre.AbstractWalker.prototype.virtualize = function(opt_undo) {
   this.cursors.push({focus: this.focus_, levels: this.levels,
                      undo: opt_undo || !this.cursors.length});
@@ -667,6 +672,10 @@ sre.AbstractWalker.prototype.virtualize = function(opt_undo) {
 };
 
 
+/**
+ * Returns to previous cursor setting.
+ * @return {sre.Focus} The previous focus.
+ */
 sre.AbstractWalker.prototype.previous = function() {
   var previous = this.cursors.pop();
   if (!previous) {
@@ -677,6 +686,10 @@ sre.AbstractWalker.prototype.previous = function() {
 };
 
 
+/**
+ * Undoes a series of virtual cursor generations.
+ * @return {sre.Focus} A previous focus.
+ */
 sre.AbstractWalker.prototype.undo = function() {
   do {
     var previous = this.cursors.pop();

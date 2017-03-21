@@ -271,6 +271,9 @@ sre.TableWalker.prototype.isInTable_ = function() {
 };
 
 
+/**
+ * @override
+ */
 sre.TableWalker.prototype.undo = function() {
   var focus = sre.TableWalker.base(this, 'undo');
   if (focus === this.firstJump) {
