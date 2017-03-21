@@ -216,22 +216,22 @@ sre.AbstractWalker.prototype.speech = function() {
     return special;
   }
   switch (this.moved) {
-  case sre.Walker.move.DEPTH:
-    return this.depth_();
-  case sre.Walker.move.SUMMARY:
-    return this.summary_();
-  case sre.Walker.move.DETAIL:
-    return this.detail_();
-  default:
-    var speech = [];
-    var snodes = this.focus_.getSemanticNodes();
-    for (var i = 0, l = nodes.length; i < l; i++) {
-      var node = nodes[i];
-      var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
-      speech.push(node ? this.generator.getSpeech(node, this.xml) :
-                  sre.SpeechGeneratorUtil.retrieveSpeech(snode));
-    }
-    return this.mergePrefix_(speech);
+    case sre.Walker.move.DEPTH:
+      return this.depth_();
+    case sre.Walker.move.SUMMARY:
+      return this.summary_();
+    case sre.Walker.move.DETAIL:
+      return this.detail_();
+    default:
+      var speech = [];
+      var snodes = this.focus_.getSemanticNodes();
+      for (var i = 0, l = nodes.length; i < l; i++) {
+        var node = nodes[i];
+        var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
+        speech.push(node ? this.generator.getSpeech(node, this.xml) :
+                    sre.SpeechGeneratorUtil.retrieveSpeech(snode));
+      }
+      return this.mergePrefix_(speech);
   }
 };
 
@@ -260,8 +260,8 @@ sre.AbstractWalker.prototype.prefix_ = function() {
   var nodes = this.focus_.getDomNodes();
   var snodes = this.focus_.getSemanticNodes();
   return nodes[0] ? sre.WalkerUtil.getAttribute(
-    /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
-    sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
+      sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
 };
 
 
@@ -612,7 +612,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
   var summary = sre.AuralRendering.getInstance().markup(descrs);
   var speech = this.mergePrefix_([summary]);
   oldAlt ? snode.setAttribute('alternative', oldAlt) :
-    snode.removeAttribute('alternative');
+      snode.removeAttribute('alternative');
   return speech;
 };
 
@@ -666,7 +666,7 @@ sre.AbstractWalker.prototype.specialMove = function() {
  */
 sre.AbstractWalker.prototype.virtualize = function(opt_undo) {
   this.cursors.push({focus: this.focus_, levels: this.levels,
-                     undo: opt_undo || !this.cursors.length});
+    undo: opt_undo || !this.cursors.length});
   this.levels = this.levels.clone();
   return this.focus_.clone();
 };

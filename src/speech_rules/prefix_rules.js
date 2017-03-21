@@ -202,7 +202,7 @@ sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
       'row', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Row"; [p] (pause:200)',
-    'self::row'
+      'self::row'
   );
   defineRuleAlias(
       'row', 'self::line'

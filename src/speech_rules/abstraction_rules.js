@@ -97,7 +97,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineRule(
       'abstr-identifier', 'mathspeak.default',
       '[t] "identifier"',
-      'self::identifier', '@alternative="summary"', '@alternative', 
+      'self::identifier', '@alternative="summary"', '@alternative',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
   defineRule(
@@ -644,30 +644,30 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
 
   defineRule(
-    'abstr-table', 'mathspeak.default',
-    '[t] "table with"; ' +
+      'abstr-table', 'mathspeak.default',
+      '[t] "table with"; ' +
       '[t] count(children/*); [t] "rows and";' +
       '[t] count(children/*[1]/children/*); [t] "columns"',
-    'self::table', '@alternative'
+      'self::table', '@alternative'
   );
   defineRule(
-    'abstr-line', 'mathspeak.default',
-    '[t] "in"; [t] @role;',
-    'self::line', '@alternative'
+      'abstr-line', 'mathspeak.default',
+      '[t] "in"; [t] @role;',
+      'self::line', '@alternative'
   );
   defineRule(
-    'abstr-row', 'mathspeak.default',
-    '[t] "in"; [t] @role;' +
+      'abstr-row', 'mathspeak.default',
+      '[t] "in"; [t] @role;' +
       '[t] count(preceding-sibling::..); [t] "with";' +
       '[t] count(children/*); [t] "columns"',
-    'self::row', '@alternative'
+      'self::row', '@alternative'
   );
   defineRule(
-    'abstr-cell', 'mathspeak.default',
-    '[t] "in"; [t] @role;',
-    'self::cell', '@alternative'
+      'abstr-cell', 'mathspeak.default',
+      '[t] "in"; [t] @role;',
+      'self::cell', '@alternative'
   );
-  
+
 };
 
 });  // goog.scope

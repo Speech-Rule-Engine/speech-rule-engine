@@ -146,8 +146,8 @@ sre.TableWalker.ELIGIBLE_TABLE_TYPES = [
 sre.TableWalker.prototype.eligibleCell_ = function() {
   var primary = this.getFocus().getSemanticPrimary();
   return this.modifier &&
-        primary.type === sre.SemanticAttr.Type.CELL &&
-    sre.TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1;
+      primary.type === sre.SemanticAttr.Type.CELL &&
+      sre.TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1;
 };
 
 
@@ -227,7 +227,7 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
   // Pop foci until we have reached the table.
   do {
     var level = this.levels.pop();
-  } while (level.indexOf(id) === -1)
+  } while (level.indexOf(id) === -1);
   // Go to cell position by pushing row and cell onto levels.
   this.levels.push(level);
   this.setFocus(this.singletonFocus(id));
@@ -237,7 +237,6 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
   this.levels.push(this.nextLevel());
   return this.singletonFocus(semRow.childNodes[column - 1].id.toString());
 };
-
 
 
 /**
@@ -250,13 +249,13 @@ sre.TableWalker.prototype.jumpCell_ = function(row, column) {
  */
 sre.TableWalker.prototype.isLegalJump_ = function(row, column) {
   var xmlTable = sre.DomUtil.querySelectorAllByAttrValue(
-    this.rebuilt.xml, 'id', this.currentTable_.id.toString())[0];
+      this.rebuilt.xml, 'id', this.currentTable_.id.toString())[0];
   if (!xmlTable || xmlTable.hasAttribute('alternative')) {
     return false;
   }
   var rowNode = this.currentTable_.childNodes[row - 1];
   var xmlRow = sre.DomUtil.querySelectorAllByAttrValue(
-    xmlTable, 'id', rowNode.id.toString())[0];
+      xmlTable, 'id', rowNode.id.toString())[0];
   if (!xmlRow || xmlRow.hasAttribute('alternative')) {
     return false;
   }

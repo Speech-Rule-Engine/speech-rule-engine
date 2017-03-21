@@ -1443,7 +1443,8 @@ sre.WalkerTest.prototype.executeSummaryQuadraticTest_ = function(node) {
  * quadratic formula.
  */
 sre.WalkerTest.prototype.testSummary = function() {
-  [this.quadratic.mml, this.quadratic.htmlCss, this.quadratic.chtml, this.quadratic.svg].
+  [this.quadratic.mml, this.quadratic.htmlCss,
+   this.quadratic.chtml, this.quadratic.svg].
       forEach(goog.bind(this.executeSummaryQuadraticTest_, this));
 };
 
@@ -1453,66 +1454,67 @@ sre.WalkerTest.prototype.testSummary = function() {
  * @type {string}
  */
 sre.WalkerTest.EQUATION_MML =
-  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" data-semantic-complexity="19">' +
-  '<mtable columnalign="right center left" rowspacing="3pt"' +
-  ' columnspacing="0 thickmathspace" displaystyle="true"' +
-  ' data-semantic-type="table" data-semantic-role="equality"' +
-  ' data-semantic-id="16" data-semantic-children="7,15"' +
-  ' data-semantic-complexity="19">' +
-  '<mtr data-semantic-type="row" data-semantic-role="table"' +
-  ' data-semantic-id="7" data-semantic-children="1,4,6"' +
-  ' data-semantic-parent="16" data-semantic-complexity="8.5">' +
-  '<mtd data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="1" data-semantic-children="0"' +
-  ' data-semantic-parent="7" data-semantic-complexity="1">' +
-  '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="0"' +
-  ' data-semantic-parent="1" data-semantic-complexity="1">a</mi>' +
-  '</mtd>' +
-  '<mtd data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="4" data-semantic-children="3"' +
-  ' data-semantic-parent="7" data-semantic-complexity="3.5">' +
-  '<mi data-semantic-complexity="0.5"></mi>' +
-  '<mo data-semantic-type="relation" data-semantic-role="equality"' +
-  ' data-semantic-id="3" data-semantic-parent="4"' +
-  ' data-semantic-complexity="1">=</mo>' +
-  '</mtd>' +
-  '<mtd data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="6" data-semantic-children="5"' +
-  ' data-semantic-parent="7" data-semantic-complexity="1">' +
-  '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="5"' +
-  ' data-semantic-parent="6" data-semantic-complexity="1">b</mi>' +
-  '</mtd>' +
-  '</mtr>' +
-  '<mtr data-semantic-type="row" data-semantic-role="table"' +
-  ' data-semantic-id="15" data-semantic-children="9,12,14"' +
-  ' data-semantic-parent="16" data-semantic-complexity="8.5">' +
-  '<mtd data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="9" data-semantic-children="8"' +
-  ' data-semantic-parent="15" data-semantic-complexity="1">' +
-  '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="8"' +
-  ' data-semantic-parent="9" data-semantic-complexity="1">c</mi>' +
-  '</mtd>' +
-  '<mtd data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="12" data-semantic-children="11"' +
-  ' data-semantic-parent="15" data-semantic-complexity="3.5">' +
-  '<mi data-semantic-complexity="0.5"></mi>' +
-  '<mo data-semantic-type="relation" data-semantic-role="equality"' +
-  ' data-semantic-id="11" data-semantic-parent="12"' +
-  ' data-semantic-complexity="1">=</mo>' +
-  '</mtd>' +
-  '<mtd data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="14" data-semantic-children="13"' +
-  ' data-semantic-parent="15" data-semantic-complexity="1">' +
-  '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="13"' +
-  ' data-semantic-parent="14" data-semantic-complexity="1">d</mi>' +
-  '</mtd>' +
-  '</mtr>' +
-  '</mtable>' +
-  '</math>';
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+    ' data-semantic-complexity="19">' +
+    '<mtable columnalign="right center left" rowspacing="3pt"' +
+    ' columnspacing="0 thickmathspace" displaystyle="true"' +
+    ' data-semantic-type="table" data-semantic-role="equality"' +
+    ' data-semantic-id="16" data-semantic-children="7,15"' +
+    ' data-semantic-complexity="19">' +
+    '<mtr data-semantic-type="row" data-semantic-role="table"' +
+    ' data-semantic-id="7" data-semantic-children="1,4,6"' +
+    ' data-semantic-parent="16" data-semantic-complexity="8.5">' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="1" data-semantic-children="0"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="0"' +
+    ' data-semantic-parent="1" data-semantic-complexity="1">a</mi>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="4" data-semantic-children="3"' +
+    ' data-semantic-parent="7" data-semantic-complexity="3.5">' +
+    '<mi data-semantic-complexity="0.5"></mi>' +
+    '<mo data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="3" data-semantic-parent="4"' +
+    ' data-semantic-complexity="1">=</mo>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="6" data-semantic-children="5"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="5"' +
+    ' data-semantic-parent="6" data-semantic-complexity="1">b</mi>' +
+    '</mtd>' +
+    '</mtr>' +
+    '<mtr data-semantic-type="row" data-semantic-role="table"' +
+    ' data-semantic-id="15" data-semantic-children="9,12,14"' +
+    ' data-semantic-parent="16" data-semantic-complexity="8.5">' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="9" data-semantic-children="8"' +
+    ' data-semantic-parent="15" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1">c</mi>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="12" data-semantic-children="11"' +
+    ' data-semantic-parent="15" data-semantic-complexity="3.5">' +
+    '<mi data-semantic-complexity="0.5"></mi>' +
+    '<mo data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="11" data-semantic-parent="12"' +
+    ' data-semantic-complexity="1">=</mo>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="14" data-semantic-children="13"' +
+    ' data-semantic-parent="15" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="13"' +
+    ' data-semantic-parent="14" data-semantic-complexity="1">d</mi>' +
+    '</mtd>' +
+    '</mtr>' +
+    '</mtable>' +
+    '</math>';
 
 
 /**
@@ -1520,122 +1522,122 @@ sre.WalkerTest.EQUATION_MML =
  * @type {string}
  */
 sre.WalkerTest.EQUATION_HTML_CSS =
-  '<span class="math" id="MathJax-Span-28" data-semantic-complexity="19"' +
-  ' style="width: 2.927em; display: inline-block;"><span style="display:' +
-  ' inline-block; position: relative; width: 2.738em; height: 0px;' +
-  ' font-size: 106%;"><span style="position: absolute; clip: rect(0.568em' +
-  ' 1002.55em 3.163em -999.998em); top: -2.12em; left: 0em;"><span' +
-  ' class="mrow" id="MathJax-Span-29"><span class="mtable"' +
-  ' id="MathJax-Span-30" data-semantic-type="table"' +
-  ' data-semantic-role="equality" data-semantic-id="16"' +
-  ' data-semantic-children="7,15" data-semantic-complexity="19"' +
-  ' style="padding-right: 0.191em; padding-left: 0.191em;"' +
-  '><span style="display: inline-block; position: relative;' +
-  ' width: 2.408em; height: 0px;"><span style="position: absolute; clip:' +
-  ' rect(2.833em 1000.52em 4.861em -999.998em); top: -4.007em; left: 0em;">' +
-  '<span style="display: inline-block; position: relative; width: 0.521em;' +
-  ' height: 0px;"><span style="position: absolute; clip: rect(3.446em' +
-  ' 1000.52em 4.153em -999.998em); top: -4.62em; right: 0em;"><span' +
-  ' class="mtd" id="MathJax-Span-31" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="1"' +
-  ' data-semantic-children="0" data-semantic-parent="7"' +
-  ' data-semantic-complexity="1" ' +
-  ' ><span class="mrow"' +
-  ' id="MathJax-Span-32"><span class="mi" id="MathJax-Span-33"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="0"' +
-  ' data-semantic-parent="1" data-semantic-complexity="1"' +
-  ' style="font-family: MathJax_Math; font-style: italic;"' +
-  ' >a</span></span></span><span style="display:' +
-  ' inline-block; width: 0px; height: 4.012em;"></span></span><span' +
-  ' style="position: absolute; clip: rect(3.446em 1000.43em 4.153em' +
-  ' -999.998em); top: -3.3em; right: 0em;"><span class="mtd"' +
-  ' id="MathJax-Span-41" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="9"' +
-  ' data-semantic-children="8" data-semantic-parent="15"' +
-  ' data-semantic-complexity="1" ' +
-  ' ><span class="mrow"' +
-  ' id="MathJax-Span-42"><span class="mi" id="MathJax-Span-43"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="8"' +
-  ' data-semantic-parent="9" data-semantic-complexity="1"' +
-  ' style="font-family: MathJax_Math; font-style: italic;"' +
-  ' >c</span></span></span><span style="display:' +
-  ' inline-block; width: 0px; height: 4.012em;"></span></span></span><span' +
-  ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
-  '</span><span style="position: absolute; clip: rect(2.88em 1000.99em' +
-  ' 4.861em -999.998em); top: -4.007em; left: 0.521em;"><span' +
-  ' style="display: inline-block; position: relative; width: 1.087em;' +
-  ' height: 0px;"><span style="position: absolute; clip: rect(3.493em' +
-  ' 1000.99em 4.153em -999.998em); top: -4.62em; left: 50%; margin-left:' +
-  ' -0.517em;"><span class="mtd" id="MathJax-Span-34"' +
-  ' data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="4" data-semantic-children="3"' +
-  ' data-semantic-parent="7" data-semantic-complexity="3.5"' +
-  '  ><span' +
-  ' class="mrow" id="MathJax-Span-35"><span class="mi" id="MathJax-Span-36"' +
-  ' data-semantic-complexity="0.5"></span><span class="mo"' +
-  ' id="MathJax-Span-37" data-semantic-type="relation"' +
-  ' data-semantic-role="equality" data-semantic-id="3"' +
-  ' data-semantic-parent="4" data-semantic-complexity="1"' +
-  ' style="font-family: MathJax_Main; padding-left: 0.285em;"' +
-  ' >=</span></span></span><span' +
-  ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
-  '</span><span style="position: absolute; clip: rect(3.493em 1000.99em' +
-  ' 4.153em -999.998em); top: -3.3em; left: 50%; margin-left: -0.517em;">' +
-  '<span class="mtd" id="MathJax-Span-44" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="12"' +
-  ' data-semantic-children="11" data-semantic-parent="15"' +
-  ' data-semantic-complexity="3.5" ' +
-  ' ><span class="mrow"' +
-  ' id="MathJax-Span-45"><span class="mi" id="MathJax-Span-46"' +
-  ' data-semantic-complexity="0.5"></span><span class="mo"' +
-  ' id="MathJax-Span-47" data-semantic-type="relation"' +
-  ' data-semantic-role="equality" data-semantic-id="11"' +
-  ' data-semantic-parent="12" data-semantic-complexity="1"' +
-  ' style="font-family: MathJax_Main; padding-left: 0.285em;"' +
-  ' >=</span></span></span><span' +
-  ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
-  '</span></span><span style="display: inline-block; width: 0px; height:' +
-  ' 4.012em;"></span></span><span style="position: absolute; clip:' +
-  ' rect(2.597em 1000.52em 4.861em -999.998em); top: -4.007em; left:' +
-  ' 1.889em;"><span style="display: inline-block; position: relative;' +
-  ' width: 0.521em; height: 0px;"><span style="position: absolute; clip:' +
-  ' rect(3.163em 1000.43em 4.153em -999.998em); top: -4.62em; left: 0em;">' +
-  '<span class="mtd" id="MathJax-Span-38" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="6"' +
-  ' data-semantic-children="5" data-semantic-parent="7"' +
-  ' data-semantic-complexity="1" ' +
-  ' ><span class="mrow"' +
-  ' id="MathJax-Span-39"><span class="mi" id="MathJax-Span-40"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="5"' +
-  ' data-semantic-parent="6" data-semantic-complexity="1"' +
-  ' style="font-family: MathJax_Math; font-style: italic;"' +
-  ' >b</span></span></span><span style="display:' +
-  ' inline-block; width: 0px; height: 4.012em;"></span></span><span' +
-  ' style="position: absolute; clip: rect(3.163em 1000.52em 4.153em' +
-  ' -999.998em); top: -3.3em; left: 0em;"><span class="mtd"' +
-  ' id="MathJax-Span-48" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="14"' +
-  ' data-semantic-children="13" data-semantic-parent="15"' +
-  ' data-semantic-complexity="1" ' +
-  ' ><span class="mrow"' +
-  ' id="MathJax-Span-49"><span class="mi" id="MathJax-Span-50"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="13"' +
-  ' data-semantic-parent="14" data-semantic-complexity="1"' +
-  ' style="font-family: MathJax_Math; font-style: italic;"' +
-  ' >d<span style="display: inline-block; overflow:' +
-  ' hidden; height: 1px; width: 0.002em;"></span></span></span></span><span' +
-  ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
-  '</span></span><span style="display: inline-block; width: 0px; height:' +
-  ' 4.012em;"></span></span></span></span></span><span style="display:' +
-  ' inline-block; width: 0px; height: 2.125em;"></span></span></span><span' +
-  ' style="display: inline-block; overflow: hidden; vertical-align:' +
-  ' -0.997em; border-left: 0px solid; width: 0px; height: 2.552em;">' +
-  '</span>' +
-  '</span>';
+    '<span class="math" id="MathJax-Span-28" data-semantic-complexity="19"' +
+    ' style="width: 2.927em; display: inline-block;"><span style="display:' +
+    ' inline-block; position: relative; width: 2.738em; height: 0px;' +
+    ' font-size: 106%;"><span style="position: absolute; clip: rect(0.568em' +
+    ' 1002.55em 3.163em -999.998em); top: -2.12em; left: 0em;"><span' +
+    ' class="mrow" id="MathJax-Span-29"><span class="mtable"' +
+    ' id="MathJax-Span-30" data-semantic-type="table"' +
+    ' data-semantic-role="equality" data-semantic-id="16"' +
+    ' data-semantic-children="7,15" data-semantic-complexity="19"' +
+    ' style="padding-right: 0.191em; padding-left: 0.191em;"' +
+    '><span style="display: inline-block; position: relative;' +
+    ' width: 2.408em; height: 0px;"><span style="position: absolute; clip:' +
+    ' rect(2.833em 1000.52em 4.861em -999.998em); top: -4.007em; left: 0em;">' +
+    '<span style="display: inline-block; position: relative; width: 0.521em;' +
+    ' height: 0px;"><span style="position: absolute; clip: rect(3.446em' +
+    ' 1000.52em 4.153em -999.998em); top: -4.62em; right: 0em;"><span' +
+    ' class="mtd" id="MathJax-Span-31" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="1"' +
+    ' data-semantic-children="0" data-semantic-parent="7"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-32"><span class="mi" id="MathJax-Span-33"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="0"' +
+    ' data-semantic-parent="1" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >a</span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 4.012em;"></span></span><span' +
+    ' style="position: absolute; clip: rect(3.446em 1000.43em 4.153em' +
+    ' -999.998em); top: -3.3em; right: 0em;"><span class="mtd"' +
+    ' id="MathJax-Span-41" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="9"' +
+    ' data-semantic-children="8" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-42"><span class="mi" id="MathJax-Span-43"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >c</span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 4.012em;"></span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span><span style="position: absolute; clip: rect(2.88em 1000.99em' +
+    ' 4.861em -999.998em); top: -4.007em; left: 0.521em;"><span' +
+    ' style="display: inline-block; position: relative; width: 1.087em;' +
+    ' height: 0px;"><span style="position: absolute; clip: rect(3.493em' +
+    ' 1000.99em 4.153em -999.998em); top: -4.62em; left: 50%; margin-left:' +
+    ' -0.517em;"><span class="mtd" id="MathJax-Span-34"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="4" data-semantic-children="3"' +
+    ' data-semantic-parent="7" data-semantic-complexity="3.5"' +
+    '  ><span' +
+    ' class="mrow" id="MathJax-Span-35"><span class="mi" id="MathJax-Span-36"' +
+    ' data-semantic-complexity="0.5"></span><span class="mo"' +
+    ' id="MathJax-Span-37" data-semantic-type="relation"' +
+    ' data-semantic-role="equality" data-semantic-id="3"' +
+    ' data-semantic-parent="4" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Main; padding-left: 0.285em;"' +
+    ' >=</span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span><span style="position: absolute; clip: rect(3.493em 1000.99em' +
+    ' 4.153em -999.998em); top: -3.3em; left: 50%; margin-left: -0.517em;">' +
+    '<span class="mtd" id="MathJax-Span-44" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="12"' +
+    ' data-semantic-children="11" data-semantic-parent="15"' +
+    ' data-semantic-complexity="3.5" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-45"><span class="mi" id="MathJax-Span-46"' +
+    ' data-semantic-complexity="0.5"></span><span class="mo"' +
+    ' id="MathJax-Span-47" data-semantic-type="relation"' +
+    ' data-semantic-role="equality" data-semantic-id="11"' +
+    ' data-semantic-parent="12" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Main; padding-left: 0.285em;"' +
+    ' >=</span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span></span><span style="display: inline-block; width: 0px; height:' +
+    ' 4.012em;"></span></span><span style="position: absolute; clip:' +
+    ' rect(2.597em 1000.52em 4.861em -999.998em); top: -4.007em; left:' +
+    ' 1.889em;"><span style="display: inline-block; position: relative;' +
+    ' width: 0.521em; height: 0px;"><span style="position: absolute; clip:' +
+    ' rect(3.163em 1000.43em 4.153em -999.998em); top: -4.62em; left: 0em;">' +
+    '<span class="mtd" id="MathJax-Span-38" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="6"' +
+    ' data-semantic-children="5" data-semantic-parent="7"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-39"><span class="mi" id="MathJax-Span-40"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="5"' +
+    ' data-semantic-parent="6" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >b</span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 4.012em;"></span></span><span' +
+    ' style="position: absolute; clip: rect(3.163em 1000.52em 4.153em' +
+    ' -999.998em); top: -3.3em; left: 0em;"><span class="mtd"' +
+    ' id="MathJax-Span-48" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="14"' +
+    ' data-semantic-children="13" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-49"><span class="mi" id="MathJax-Span-50"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="13"' +
+    ' data-semantic-parent="14" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >d<span style="display: inline-block; overflow:' +
+    ' hidden; height: 1px; width: 0.002em;"></span></span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span></span><span style="display: inline-block; width: 0px; height:' +
+    ' 4.012em;"></span></span></span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 2.125em;"></span></span></span><span' +
+    ' style="display: inline-block; overflow: hidden; vertical-align:' +
+    ' -0.997em; border-left: 0px solid; width: 0px; height: 2.552em;">' +
+    '</span>' +
+    '</span>';
 
 
 /**
@@ -1643,91 +1645,91 @@ sre.WalkerTest.EQUATION_HTML_CSS =
  * @type {string}
  */
 sre.WalkerTest.EQUATION_COMMON_HTML =
-  '<span id="MJXc-Node-26" class="mjx-math" data-semantic-complexity="19">' +
-  '<span id="MJXc-Node-27" class="mjx-mrow"><span id="MJXc-Node-28"' +
-  ' class="mjx-mtable" data-semantic-type="table"' +
-  ' data-semantic-role="equality" data-semantic-id="16"' +
-  ' data-semantic-children="7,15" data-semantic-complexity="19"' +
-  ' style="vertical-align: -0.9em; padding: 0px 0.167em;"><span' +
-  ' class="mjx-table"><span id="MJXc-Node-29" class="mjx-mtr"' +
-  ' data-semantic-type="row" data-semantic-role="table"' +
-  ' data-semantic-id="7" data-semantic-children="1,4,6"' +
-  ' data-semantic-parent="16" data-semantic-complexity="8.5" style="height:' +
-  ' 1.15em;"><span id="MJXc-Node-30" class="mjx-mtd"' +
-  ' data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="1" data-semantic-children="0"' +
-  ' data-semantic-parent="7" data-semantic-complexity="1" style="padding:' +
-  ' 0px; text-align: right; width: 0.529em;"><span id="MJXc-Node-31"' +
-  ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-32"' +
-  ' class="mjx-mi" data-semantic-type="identifier"' +
-  ' data-semantic-role="latinletter" data-semantic-font="italic"' +
-  ' data-semantic-id="0" data-semantic-parent="1"' +
-  ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
-  ' style="padding-top: 0.197em; padding-bottom: 0.294em;">a</span></span>' +
-  '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-33"' +
-  ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="4" data-semantic-children="3"' +
-  ' data-semantic-parent="7" data-semantic-complexity="3.5" style="padding:' +
-  ' 0px 0.139em 0px 0px; width: 1.056em;"><span id="MJXc-Node-34"' +
-  ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-35"' +
-  ' class="mjx-mi" data-semantic-complexity="0.5"></span><span' +
-  ' id="MJXc-Node-36" class="mjx-mo MJXc-space3"' +
-  ' data-semantic-type="relation" data-semantic-role="equality"' +
-  ' data-semantic-id="3" data-semantic-parent="4"' +
-  ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-main-R"' +
-  ' style="padding-top: 0.1em; padding-bottom: 0.294em;">=</span></span>' +
-  '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-37"' +
-  ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="6" data-semantic-children="5"' +
-  ' data-semantic-parent="7" data-semantic-complexity="1" style="padding:' +
-  ' 0px 0px 0px 0.139em; text-align: left; width: 0.523em;"><span' +
-  ' id="MJXc-Node-38" class="mjx-mrow" style="margin-top: -0.2em;"><span' +
-  ' id="MJXc-Node-39" class="mjx-mi" data-semantic-type="identifier"' +
-  ' data-semantic-role="latinletter" data-semantic-font="italic"' +
-  ' data-semantic-id="5" data-semantic-parent="6"' +
-  ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
-  ' style="padding-top: 0.488em; padding-bottom: 0.294em;">b</span></span>' +
-  '<span class="mjx-strut"></span></span></span></span><span' +
-  ' id="MJXc-Node-40" class="mjx-mtr" data-semantic-type="row"' +
-  ' data-semantic-role="table" data-semantic-id="15"' +
-  ' data-semantic-children="9,12,14" data-semantic-parent="16"' +
-  ' data-semantic-complexity="8.5" style="height: 1.15em;"><span' +
-  ' id="MJXc-Node-41" class="mjx-mtd" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="9"' +
-  ' data-semantic-children="8" data-semantic-parent="15"' +
-  ' data-semantic-complexity="1" style="padding: 0.15em 0px 0px;' +
-  ' text-align: right;"><span id="MJXc-Node-42" class="mjx-mrow"' +
-  ' style="margin-top: -0.2em;"><span id="MJXc-Node-43" class="mjx-mi"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="8"' +
-  ' data-semantic-parent="9" data-semantic-complexity="1"><span' +
-  ' class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.197em;' +
-  ' padding-bottom: 0.294em;">c</span></span><span class="mjx-strut">' +
-  '</span></span></span><span id="MJXc-Node-44" class="mjx-mtd"' +
-  ' data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="12" data-semantic-children="11"' +
-  ' data-semantic-parent="15" data-semantic-complexity="3.5"' +
-  ' style="padding: 0.15em 0.139em 0px 0px;"><span id="MJXc-Node-45"' +
-  ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-46"' +
-  ' class="mjx-mi" data-semantic-complexity="0.5"></span><span' +
-  ' id="MJXc-Node-47" class="mjx-mo MJXc-space3"' +
-  ' data-semantic-type="relation" data-semantic-role="equality"' +
-  ' data-semantic-id="11" data-semantic-parent="12"' +
-  ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-main-R"' +
-  ' style="padding-top: 0.1em; padding-bottom: 0.294em;">=</span></span>' +
-  '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-48"' +
-  ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="14" data-semantic-children="13"' +
-  ' data-semantic-parent="15" data-semantic-complexity="1" style="padding:' +
-  ' 0.15em 0px 0px 0.139em; text-align: left;"><span id="MJXc-Node-49"' +
-  ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-50"' +
-  ' class="mjx-mi" data-semantic-type="identifier"' +
-  ' data-semantic-role="latinletter" data-semantic-font="italic"' +
-  ' data-semantic-id="13" data-semantic-parent="14"' +
-  ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
-  ' style="padding-top: 0.488em; padding-bottom: 0.294em; padding-right:' +
-  ' 0.003em;">d</span></span><span class="mjx-strut"></span></span></span>' +
-  '</span></span></span></span></span>';
+    '<span id="MJXc-Node-26" class="mjx-math" data-semantic-complexity="19">' +
+    '<span id="MJXc-Node-27" class="mjx-mrow"><span id="MJXc-Node-28"' +
+    ' class="mjx-mtable" data-semantic-type="table"' +
+    ' data-semantic-role="equality" data-semantic-id="16"' +
+    ' data-semantic-children="7,15" data-semantic-complexity="19"' +
+    ' style="vertical-align: -0.9em; padding: 0px 0.167em;"><span' +
+    ' class="mjx-table"><span id="MJXc-Node-29" class="mjx-mtr"' +
+    ' data-semantic-type="row" data-semantic-role="table"' +
+    ' data-semantic-id="7" data-semantic-children="1,4,6"' +
+    ' data-semantic-parent="16" data-semantic-complexity="8.5" style="height:' +
+    ' 1.15em;"><span id="MJXc-Node-30" class="mjx-mtd"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="1" data-semantic-children="0"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1" style="padding:' +
+    ' 0px; text-align: right; width: 0.529em;"><span id="MJXc-Node-31"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-32"' +
+    ' class="mjx-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="0" data-semantic-parent="1"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
+    ' style="padding-top: 0.197em; padding-bottom: 0.294em;">a</span></span>' +
+    '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-33"' +
+    ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="4" data-semantic-children="3"' +
+    ' data-semantic-parent="7" data-semantic-complexity="3.5" style="padding:' +
+    ' 0px 0.139em 0px 0px; width: 1.056em;"><span id="MJXc-Node-34"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-35"' +
+    ' class="mjx-mi" data-semantic-complexity="0.5"></span><span' +
+    ' id="MJXc-Node-36" class="mjx-mo MJXc-space3"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="3" data-semantic-parent="4"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-main-R"' +
+    ' style="padding-top: 0.1em; padding-bottom: 0.294em;">=</span></span>' +
+    '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-37"' +
+    ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="6" data-semantic-children="5"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1" style="padding:' +
+    ' 0px 0px 0px 0.139em; text-align: left; width: 0.523em;"><span' +
+    ' id="MJXc-Node-38" class="mjx-mrow" style="margin-top: -0.2em;"><span' +
+    ' id="MJXc-Node-39" class="mjx-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="5" data-semantic-parent="6"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
+    ' style="padding-top: 0.488em; padding-bottom: 0.294em;">b</span></span>' +
+    '<span class="mjx-strut"></span></span></span></span><span' +
+    ' id="MJXc-Node-40" class="mjx-mtr" data-semantic-type="row"' +
+    ' data-semantic-role="table" data-semantic-id="15"' +
+    ' data-semantic-children="9,12,14" data-semantic-parent="16"' +
+    ' data-semantic-complexity="8.5" style="height: 1.15em;"><span' +
+    ' id="MJXc-Node-41" class="mjx-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="9"' +
+    ' data-semantic-children="8" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" style="padding: 0.15em 0px 0px;' +
+    ' text-align: right;"><span id="MJXc-Node-42" class="mjx-mrow"' +
+    ' style="margin-top: -0.2em;"><span id="MJXc-Node-43" class="mjx-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1"><span' +
+    ' class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.197em;' +
+    ' padding-bottom: 0.294em;">c</span></span><span class="mjx-strut">' +
+    '</span></span></span><span id="MJXc-Node-44" class="mjx-mtd"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="12" data-semantic-children="11"' +
+    ' data-semantic-parent="15" data-semantic-complexity="3.5"' +
+    ' style="padding: 0.15em 0.139em 0px 0px;"><span id="MJXc-Node-45"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-46"' +
+    ' class="mjx-mi" data-semantic-complexity="0.5"></span><span' +
+    ' id="MJXc-Node-47" class="mjx-mo MJXc-space3"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="11" data-semantic-parent="12"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-main-R"' +
+    ' style="padding-top: 0.1em; padding-bottom: 0.294em;">=</span></span>' +
+    '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-48"' +
+    ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="14" data-semantic-children="13"' +
+    ' data-semantic-parent="15" data-semantic-complexity="1" style="padding:' +
+    ' 0.15em 0px 0px 0.139em; text-align: left;"><span id="MJXc-Node-49"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-50"' +
+    ' class="mjx-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="13" data-semantic-parent="14"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
+    ' style="padding-top: 0.488em; padding-bottom: 0.294em; padding-right:' +
+    ' 0.003em;">d</span></span><span class="mjx-strut"></span></span></span>' +
+    '</span></span></span></span></span>';
 
 
 /**
@@ -1735,75 +1737,75 @@ sre.WalkerTest.EQUATION_COMMON_HTML =
  * @type {string}
  */
 sre.WalkerTest.EQUATION_SVG =
-  '<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="mjx-svg-math"' +
-  ' data-semantic-complexity="19" width="6.283ex" height="5.682ex"' +
-  ' viewBox="0 -1458.1 2705.1 2446.4" role="img" focusable="false"' +
-  ' style="vertical-align: -2.296ex;"><g stroke="currentColor"' +
-  ' fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">' +
-  '<g class="mjx-svg-mrow"><g class="mjx-svg-mtable"' +
-  ' data-semantic-type="table" data-semantic-role="equality"' +
-  ' data-semantic-id="16" data-semantic-children="7,15"' +
-  ' data-semantic-complexity="19" transform="translate(167,0)"><g' +
-  ' transform="translate(-16,0)"><g class="mjx-svg-mtd"' +
-  ' data-semantic-type="cell" data-semantic-role="table"' +
-  ' data-semantic-id="1" data-semantic-children="0"' +
-  ' data-semantic-parent="7" data-semantic-complexity="1"' +
-  ' transform="translate(0,600)"><g class="mjx-svg-mrow"><g' +
-  ' class="mjx-svg-mi" data-semantic-type="identifier"' +
-  ' data-semantic-role="latinletter" data-semantic-font="italic"' +
-  ' data-semantic-id="0" data-semantic-parent="1"' +
-  ' data-semantic-complexity="1"><use' +
-  ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-61">' +
-  '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="9"' +
-  ' data-semantic-children="8" data-semantic-parent="15"' +
-  ' data-semantic-complexity="1" transform="translate(96,-700)"><g' +
-  ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="8"' +
-  ' data-semantic-parent="9" data-semantic-complexity="1"><use' +
-  ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-63">' +
-  '</use></g></g></g></g><g transform="translate(513,0)"><g' +
-  ' class="mjx-svg-mtd" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="4"' +
-  ' data-semantic-children="3" data-semantic-parent="7"' +
-  ' data-semantic-complexity="3.5" transform="translate(0,600)"><g' +
-  ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
-  ' data-semantic-complexity="0.5"></g><g class="mjx-svg-mo"' +
-  ' data-semantic-type="relation" data-semantic-role="equality"' +
-  ' data-semantic-id="3" data-semantic-parent="4"' +
-  ' data-semantic-complexity="1" transform="translate(277,0)"><use' +
-  ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D">' +
-  '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="12"' +
-  ' data-semantic-children="11" data-semantic-parent="15"' +
-  ' data-semantic-complexity="3.5" transform="translate(0,-700)"><g' +
-  ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
-  ' data-semantic-complexity="0.5"></g><g class="mjx-svg-mo"' +
-  ' data-semantic-type="relation" data-semantic-role="equality"' +
-  ' data-semantic-id="11" data-semantic-parent="12"' +
-  ' data-semantic-complexity="1" transform="translate(277,0)"><use' +
-  ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D">' +
-  '</use></g></g></g></g><g transform="translate(1847,0)"><g' +
-  ' class="mjx-svg-mtd" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="6"' +
-  ' data-semantic-children="5" data-semantic-parent="7"' +
-  ' data-semantic-complexity="1" transform="translate(0,600)"><g' +
-  ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="5"' +
-  ' data-semantic-parent="6" data-semantic-complexity="1"><use' +
-  ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-62">' +
-  '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
-  ' data-semantic-role="table" data-semantic-id="14"' +
-  ' data-semantic-children="13" data-semantic-parent="15"' +
-  ' data-semantic-complexity="1" transform="translate(0,-700)"><g' +
-  ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
-  ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="13"' +
-  ' data-semantic-parent="14" data-semantic-complexity="1"><use' +
-  ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-64">' +
-  '</use></g></g></g></g></g></g></g></svg>';
+    '<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="mjx-svg-math"' +
+    ' data-semantic-complexity="19" width="6.283ex" height="5.682ex"' +
+    ' viewBox="0 -1458.1 2705.1 2446.4" role="img" focusable="false"' +
+    ' style="vertical-align: -2.296ex;"><g stroke="currentColor"' +
+    ' fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">' +
+    '<g class="mjx-svg-mrow"><g class="mjx-svg-mtable"' +
+    ' data-semantic-type="table" data-semantic-role="equality"' +
+    ' data-semantic-id="16" data-semantic-children="7,15"' +
+    ' data-semantic-complexity="19" transform="translate(167,0)"><g' +
+    ' transform="translate(-16,0)"><g class="mjx-svg-mtd"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="1" data-semantic-children="0"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1"' +
+    ' transform="translate(0,600)"><g class="mjx-svg-mrow"><g' +
+    ' class="mjx-svg-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="0" data-semantic-parent="1"' +
+    ' data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-61">' +
+    '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="9"' +
+    ' data-semantic-children="8" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" transform="translate(96,-700)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-63">' +
+    '</use></g></g></g></g><g transform="translate(513,0)"><g' +
+    ' class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="4"' +
+    ' data-semantic-children="3" data-semantic-parent="7"' +
+    ' data-semantic-complexity="3.5" transform="translate(0,600)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-complexity="0.5"></g><g class="mjx-svg-mo"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="3" data-semantic-parent="4"' +
+    ' data-semantic-complexity="1" transform="translate(277,0)"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D">' +
+    '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="12"' +
+    ' data-semantic-children="11" data-semantic-parent="15"' +
+    ' data-semantic-complexity="3.5" transform="translate(0,-700)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-complexity="0.5"></g><g class="mjx-svg-mo"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="11" data-semantic-parent="12"' +
+    ' data-semantic-complexity="1" transform="translate(277,0)"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D">' +
+    '</use></g></g></g></g><g transform="translate(1847,0)"><g' +
+    ' class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="6"' +
+    ' data-semantic-children="5" data-semantic-parent="7"' +
+    ' data-semantic-complexity="1" transform="translate(0,600)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="5"' +
+    ' data-semantic-parent="6" data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-62">' +
+    '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="14"' +
+    ' data-semantic-children="13" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" transform="translate(0,-700)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="13"' +
+    ' data-semantic-parent="14" data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-64">' +
+    '</use></g></g></g></g></g></g></g></svg>';
 
 
 /**

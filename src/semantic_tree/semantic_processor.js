@@ -2123,8 +2123,8 @@ sre.SemanticProcessor.classifyMultiline = function(multiline) {
       multiline.childNodes.every(function(x) {
         var cell = x.childNodes[0];
         return !cell || (cell.role === firstRole &&
-          (sre.SemanticPred.isAttribute('type', 'RELATION')(cell) ||
-           sre.SemanticPred.isAttribute('type', 'RELSEQ')(cell)));
+        (sre.SemanticPred.isAttribute('type', 'RELATION')(cell) ||
+        sre.SemanticPred.isAttribute('type', 'RELSEQ')(cell)));
       })) {
     multiline.role = firstRole;
   }
@@ -2138,14 +2138,14 @@ sre.SemanticProcessor.classifyMultiline = function(multiline) {
 sre.SemanticProcessor.classifyTable = function(table) {
   var columns = sre.SemanticProcessor.computeColumns_(table);
   sre.SemanticProcessor.classifyByColumns_(table, columns, 'EQUALITY') ||
-    sre.SemanticProcessor.classifyByColumns_(
+      sre.SemanticProcessor.classifyByColumns_(
       table, columns, 'INEQUALITY', ['EQUALITY']) ||
-    sre.SemanticProcessor.classifyByColumns_(table, columns, 'ARROW');
+      sre.SemanticProcessor.classifyByColumns_(table, columns, 'ARROW');
 };
 
 
 /**
- * Classifies table by columns and a given relation. 
+ * Classifies table by columns and a given relation.
  * @param {!sre.SemanticNode} table The table node.
  * @param {!Array.<!Array.<!sre.SemanticNode>>} columns The columns.
  * @param {string} relation The main relation to classify.
@@ -2155,7 +2155,7 @@ sre.SemanticProcessor.classifyTable = function(table) {
  * @private
  */
 sre.SemanticProcessor.classifyByColumns_ = function(
-  table, columns, relation, opt_alternatives) {
+    table, columns, relation, opt_alternatives) {
   // TODO: For more complex systems, work with permutations/alternations of
   // column indices.
   var test1 = function(x) {
@@ -2163,11 +2163,11 @@ sre.SemanticProcessor.classifyByColumns_ = function(
   };
   var test2 = function(x) {
     return sre.SemanticProcessor.isEndRelation_(x, relation) ||
-      sre.SemanticProcessor.isPureRelation_(x, relation);
+        sre.SemanticProcessor.isPureRelation_(x, relation);
   };
   var test3 = function(x) {
     return sre.SemanticProcessor.isEndRelation_(x, relation, true) ||
-      sre.SemanticProcessor.isPureRelation_(x, relation);
+        sre.SemanticProcessor.isPureRelation_(x, relation);
   };
 
   if ((columns.length === 3 &&
@@ -2194,8 +2194,8 @@ sre.SemanticProcessor.classifyByColumns_ = function(
 sre.SemanticProcessor.isEndRelation_ = function(node, relation, opt_right) {
   var position = opt_right ? node.childNodes.length - 1 : 0;
   return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
-    sre.SemanticPred.isAttribute('role', relation)(node) &&
-    sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
+      sre.SemanticPred.isAttribute('role', relation)(node) &&
+      sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
 };
 
 
@@ -2208,7 +2208,7 @@ sre.SemanticProcessor.isEndRelation_ = function(node, relation, opt_right) {
  */
 sre.SemanticProcessor.isPureRelation_ = function(node, relation) {
   return sre.SemanticPred.isAttribute('type', 'RELATION')(node) &&
-    sre.SemanticPred.isAttribute('role', relation)(node);
+      sre.SemanticPred.isAttribute('role', relation)(node);
 };
 
 
@@ -2244,13 +2244,13 @@ sre.SemanticProcessor.computeColumns_ = function(table) {
 sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
   var column = columns[index];
   return column ?
-    (column.some(function(cell) {
-      return cell.childNodes.length  &&
-        pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));}) &&
-     column.every(function(cell) {
-      return !cell.childNodes.length ||
-         pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));})) :
-    false;
+      (column.some(function(cell) {
+        return cell.childNodes.length &&
+           pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));}) &&
+      column.every(function(cell) {
+        return !cell.childNodes.length ||
+           pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));})) :
+      false;
 };
 
 

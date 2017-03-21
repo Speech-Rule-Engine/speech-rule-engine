@@ -11613,7 +11613,7 @@ sre.SemanticTreeTest.prototype.testStreeMultilineEqualities = function() {
       '</line>' +
       '</children>' +
       '</multiline>'
-    );
+  );
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
@@ -11727,7 +11727,7 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</row>' +
       '</children>' +
       '</table>'
-      );
+  );
   // Empty cells.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
@@ -11986,7 +11986,7 @@ sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
       '</children>' +
       '</table>'
   );
-  // Single relation column. 
+  // Single relation column.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
@@ -12421,7 +12421,7 @@ sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
       '</row>' +
       '</children>' +
       '</table>'
-      );
+  );
   // Center relation.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
@@ -12565,7 +12565,7 @@ sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
       '</row>' +
       '</children>' +
       '</table>'
-      );
+  );
   // Center relation.
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
