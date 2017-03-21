@@ -106,3 +106,9 @@ sre.Walker.move = {
   ROW: 'row',
   CELL: 'cell'
 };
+
+
+/**
+ * @typedef {{focus: !sre.Focus, levels: !sre.Levels, undo: !boolean}}
+ */
+sre.Walker.Cursor;
