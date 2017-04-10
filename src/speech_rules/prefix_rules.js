@@ -51,6 +51,12 @@ sre.PrefixRules.defineRule_ = goog.bind(
 
 
 /** @private */
+sre.PrefixRules.defineRuleAlias_ = goog.bind(
+    sre.PrefixRules.mathStore.defineRulesAlias,
+    sre.PrefixRules.mathStore);
+
+
+/** @private */
 sre.PrefixRules.addCustomString_ = goog.bind(
     sre.PrefixRules.mathStore.customStrings.add,
     sre.PrefixRules.mathStore.customStrings);
@@ -70,6 +76,7 @@ sre.PrefixRules.ordinalPosition = function(node) {
 
 goog.scope(function() {
 var defineRule = sre.PrefixRules.defineRule_;
+var defineRuleAlias = sre.PrefixRules.defineRuleAlias_;
 var addCSF = sre.PrefixRules.addCustomString_;
 
 
@@ -144,7 +151,7 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'leftsub', 'prefix.default',
       '[t] "Left Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'self::*[@role="leftsub"]');
+      '@role="leftsub"');
   defineRule(
       'leftsub', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Left Subscript"; [p] (pause:200)',
@@ -154,7 +161,7 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'leftsuper', 'prefix.default',
       '[t] "Left Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'self::*[@role="leftsuper"]');
+      '@role="leftsuper"');
   defineRule(
       'leftsuper', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Left Superscript"; [p] (pause:200)',
@@ -164,7 +171,7 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'rightsub', 'prefix.default',
       '[t] "Right Subscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'self::*[@role="rightsub"]');
+      '@role="rightsub"');
   defineRule(
       'rightsub', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Right Subscript"; [p] (pause:200)',
@@ -174,7 +181,7 @@ sre.PrefixRules.initPrefixRules_ = function() {
       'rightsuper', 'prefix.default',
       '[t] "Right Superscript"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
-      'self::*[@role="rightsuper"]');
+      '@role="rightsuper"');
   defineRule(
       'rightsuper', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Right Superscript"; [p] (pause:200)',
@@ -195,8 +202,15 @@ sre.PrefixRules.initPrefixRules_ = function() {
   defineRule(
       'row', 'prefix.default',
       '[t] CSFordinalPosition; [t] "Row"; [p] (pause:200)',
-      'self::row|self::line'
-      // TODO: (MOSS) See if that is more efficient as two rules in a trie.
+      'self::row'
+  );
+  defineRuleAlias(
+      'row', 'self::line'
+  );
+  defineRule(
+      'cell', 'prefix.default',
+      '[n] ../..; [t] CSFordinalPosition; [t] "Column"; [p] (pause:200)',
+      'self::cell', 'contains(@grammar,"depth")'
   );
   defineRule(
       'cell', 'prefix.default',

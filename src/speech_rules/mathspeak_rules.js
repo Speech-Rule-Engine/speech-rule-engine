@@ -132,17 +132,14 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
-  // Font related.
-  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
-  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
-
   addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
-  addCSF('CSFdetMarkSimple', sre.MathspeakUtil.determinantMarkSimple);
-  addCSF('CSFdetUnMarkSimple', sre.MathspeakUtil.determinantUnMarkSimple);
+
+  // DIAGRAM: Temporary for testing:
+  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
 
 
@@ -178,14 +175,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font!="normal"');
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '""=translate(text(), ' +
+      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
+      '""=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
       '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
@@ -196,24 +195,28 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '@role!="unit"');
+      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
+      '@role!="unit"');
 
   defineRule(
       'omit-font', 'mathspeak.default',
-      '[n] CQFhideFont; [t] CSFshowFont',
-      'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
+      '[n] self::* (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   defineRule(
       'german-font', 'mathspeak.default',
-      '[t] "German"; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font="fraktur"');
+      '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font="fraktur"');
 
   defineRule(
       'german-font', 'mathspeak.default',
-      '[t] "bold German"; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font="bold-fraktur"');
+      '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font="bold-fraktur"');
 
   // Number rules
   defineRule(
@@ -255,7 +258,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'number-baseline', 'mathspeak.default',
       '[t] "Baseline"; [n] text()',
-      'self::number', 'not(@hiddenfont)',
+      'self::number', 'not(contains(@grammar, "ignoreFont"))',
       'preceding-sibling::identifier',
       'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
@@ -269,9 +272,9 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "Baseline"; [t] @font; [n] CQFhideFont; [t] CSFshowFont',
-      'self::number', '@font', '@font!="normal"',
-      'preceding-sibling::identifier',
+      '[t] "Baseline"; [t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
@@ -285,7 +288,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
       'self::identifier', 'string-length(text())>1', '@role!="unit"',
-      '@role!="protected"', 'not(@font) or @font="normal" or @hiddenfont');
+      '@role!="protected"',
+      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
 
   defineRule(
       'identifier', 'mathspeak.default', '[n] text()',
@@ -356,7 +360,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'fences-neutral', 'mathspeak.default',
       '[t] "StartAbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
-      'self::fenced', 'self::fenced[@role="neutral"]',
+      'self::fenced', '@role="neutral"',
       'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
       ' content/*[1][text()]="｜"');
   defineSpecialisedRule(
@@ -365,15 +369,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'fences-neutral', 'mathspeak.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
-      'self::fenced', 'self::fenced[@role="neutral"]');
+      'self::fenced', '@role="neutral"');
 
 
-  // TODO (sorge) Maybe promote this to default.default?
-  // Maybe check for punctuated element and singleton?
+  // TODO (sorge) Maybe check for punctuated element and singleton?
   defineRule(
       'fences-set', 'mathspeak.default',
       '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
-      'self::fenced[@role="leftright"]', 'content/*[1][text()]="{"',
+      'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
       'content/*[2][text()]="}"', 'count(children/*)=1',
       'not(name(../..)="appl")');
   defineSpecialisedRule(
@@ -395,20 +398,20 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'single-prime', 'mathspeak.default', '[t] "prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=1');
+      'self::punctuated', '@role="prime"', 'count(children/*)=1');
   defineRule(
       'double-prime', 'mathspeak.default', '[t] "double-prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=2');
+      'self::punctuated', '@role="prime"', 'count(children/*)=2');
   defineRule(
       'triple-prime', 'mathspeak.default', '[t] "triple-prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=3');
+      'self::punctuated', '@role="prime"', 'count(children/*)=3');
   defineRule(
       'quadruple-prime', 'mathspeak.default', '[t] "quadruple-prime"',
-      'self::punctuated[@role="prime"]', 'count(children/*)=4');
+      'self::punctuated', '@role="prime"', 'count(children/*)=4');
   defineRule(
       'counted-prime', 'mathspeak.default',
       '[t] count(children/*); [t] "prime"',
-      'self::punctuated[@role="prime"]');
+      'self::punctuated', '@role="prime"');
 
   // Fraction rules
 
@@ -595,12 +598,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'equality', 'mathspeak.default',
       '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
-      'self::relseq[@role="equality"]', 'count(./children/*)=2');
+      'self::relseq', '@role="equality"', 'count(./children/*)=2');
 
   defineRule(
       'multi-equality', 'mathspeak.default',
       '[m] ./children/* (sepFunc:CTXFcontentIterator)',
-      'self::relseq[@role="equality"]', 'count(./children/*)>2');
+      'self::relseq', '@role="equality"', 'count(./children/*)>2');
 
   defineRule(
       'multrel', 'mathspeak.default',
@@ -666,7 +669,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRuleAlias(
       'subscript-baseline',
       'self::subscript', 'not(following-sibling::*)',
-      'self::subscript[@embellished]');
+      '@embellished');
 
   defineRule(
       'subscript-empty-sup', 'mathspeak.default',
@@ -729,12 +732,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
       'ancestor::relseq|ancestor::multirel',
-      'not(self::superscript[@embellished])',
+      'not(@embellished)',
       sre.MathspeakUtil.generateBaselineConstraint());
   defineRuleAlias(
       'superscript-baseline',
       'self::superscript', 'not(following-sibling::*)',
-      'self::superscript[@embellished]', 'not(children/*[2][@role="prime"])');
+      '@embellished', 'not(children/*[2][@role="prime"])');
 
 
   defineRule(
@@ -771,7 +774,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
       'children/*[1]/children/*[2][@role!="othernumber"])',
-      'not(self::superscript[@embellished])');
+      'not(@embellished)');
   defineSpecialisedRule(
       'square', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -795,7 +798,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'name(children/*[1]/children/*[2])="number" and ' +
       'children/*[1]/children/*[2][@role!="mixed"] and ' +
       'children/*[1]/children/*[2][@role!="othernumber"])',
-      'not(self::superscript[@embellished])');
+      'not(@embellished)');
   defineSpecialisedRule(
       'cube', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -843,7 +846,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'prime-subscript-baseline',
       'self::superscript', 'children/*[2][@role="prime"]',
       'name(children/*[1])="subscript"', 'not(following-sibling::*)',
-      'self::superscript[@embellished]');
+      '@embellished');
 
   defineRule(
       'prime-subscript-simple', 'mathspeak.default',
@@ -1011,6 +1014,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
+  // DIAGRAM: Next three rules are temporary for testing:
+  defineRule(
+      'row-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content');
+  defineSpecialisedRule(
+      'row-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'row-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'mathspeak.default',
       '[t] "Blank"', 'self::row', 'count(children/*)=0');
@@ -1043,23 +1059,21 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'determinant-simple', 'mathspeak.default',
-      '[t] CSFdetMarkSimple;' +
       '[t] "Start"; [t] count(children/*);  [t] "By";' +
       '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row");' +
-      ' [t] "EndDeterminant"; [t] CSFdetUnMarkSimple',
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
+      'grammar:simpleDet); [t] "EndDeterminant"',
       'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
   defineSpecialisedRule(
       'determinant-simple', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] CSFdetMarkSimple;' +
       '[t] count(children/*);  [t] "By";' +
       '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row");' +
-      ' [t] "EndDeterminant"; [t] CSFdetUnMarkSimple');
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
+      'grammar:simpleDet); [t] "EndDeterminant"');
   defineRule(
       'row-simple', 'mathspeak.default',
       '[m] children/*;',
-      'self::row', '@role="determinant"', '@sre_flag="simple"');
+      'self::row', '@role="determinant"', 'contains(@grammar, "simpleDet")');
 
   defineRule(
       'layout', 'mathspeak.default', '[t] "StartLayout"; ' +
@@ -1113,6 +1127,19 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
+  // DIAGRAM: Next three rules are temporary for testing:
+  defineRule(
+      'line-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/*',
+      'self::line', 'content');
+  defineSpecialisedRule(
+      'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'line-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/*',
+      'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
       '[t] "Blank"', 'self::line', 'count(children/*)=0');
@@ -1198,7 +1225,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Unit rules.
   defineRule(
       'unit', 'mathspeak.default',
-      '[t] text() (annotation:unit, preprocess)',
+      '[t] text() (grammar:annotation="unit":translate)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'mathspeak.default',
@@ -1232,6 +1259,16 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'unit-divide', 'mathspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
+
+
+  // DIAGRAM: For testing.
+  // defineRule(
+  //   'repeat-initial', 'mathspeak.default',
+  //   '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
+  //   'self::cell', 'count(children/*)=0',
+  //   '../../../parent::table[@role="equality"]'
+  // );
+
 };
 
 
@@ -1339,7 +1376,7 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
                      'ancestor::fraction|ancestor::punctuated|' +
                      'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
                      'ancestor::relseq|ancestor::multirel|' +
-                     'self::tensor[@embellished]'].
+                     '@embellished'].
         concat(components);
     defineRuleAlias.apply(null, aliasList);
   }

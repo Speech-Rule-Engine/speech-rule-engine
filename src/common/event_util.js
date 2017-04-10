@@ -32,11 +32,26 @@ sre.EventUtil.KeyCode = {
   ENTER: 13,
   ESC: 27,
   SPACE: 32,
+  PAGE_UP: 33,    // also NUM_NORTH_EAST
+  PAGE_DOWN: 34,  // also NUM_SOUTH_EAST
+  END: 35,        // also NUM_SOUTH_WEST
+  HOME: 36,       // also NUM_NORTH_WEST
   LEFT: 37,
   UP: 38,
   RIGHT: 39,
   DOWN: 40,
   TAB: 9,
+  // Numeric
+  0: 48,
+  1: 49,
+  2: 50,
+  3: 51,
+  4: 52,
+  5: 53,
+  6: 54,
+  7: 55,
+  8: 56,
+  9: 57,
   // Alpha
   A: 65,
   B: 66,

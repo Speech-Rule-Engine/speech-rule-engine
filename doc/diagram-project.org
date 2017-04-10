@@ -108,6 +108,26 @@ Notes from the Diagram project
 
 *** Line number ...
 
+** Examples:
+
+*** Binomial equation
+ (e.g., cubic)
+
+*** Longer equation 
+(e.g., http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/equationshirev1.shtml
+or http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/quadequationshirev4.shtml)
+
+*** Simple inequality
+ (e.g., http://www.bbc.co.uk/schools/gcsebitesize/maths/algebra/inequalitiesrev4.shtml)
+
+*** Complex inequality
+ (e.g., http://math.stackexchange.com/questions/170173/proving-inequalities-using-induction)
+
+*** Really complex inequality
+    (e.g., https://en.wikipedia.org/wiki/Hoeffding%27s_inequality)
+
+
+
 * Reworking Multiline Tables:
 
 ** This is from the current TODO statement.
@@ -156,3 +176,20 @@ More points see in the semantics document.
   // 6. push children
   // 7. return singleton focus of child at position of old level
   //
+* Speech Synthesis API:
+** SSML test with quadratic:
+
+   synth = speechSynthesis;
+   quad = new SpeechSynthesisUtterance('x <PROSODY RATE="-5%"> equals </PROSODY> <BREAK TIME="200ms"/> start frac <PROSODY PITCH="+15%"> <PROSODY RATE="-5%"> minus </PROSODY> b <PROSODY RATE="-5%"> plus minus </PROSODY> Square root of <PROSODY RATE="+10%"> b </PROSODY> </PROSODY> <PROSODY RATE="+10%"> <PROSODY PITCH="+32.5%"> square </PROSODY> <PROSODY PITCH="+15%"> <BREAK TIME="300ms"/> </PROSODY> </PROSODY> <PROSODY PITCH="+15%"> <PROSODY RATE="+5%"> minus </PROSODY> <PROSODY RATE="+10%"> four a c </PROSODY> <BREAK TIME="400ms"/> </PROSODY> over <PROSODY PITCH="-15%"> two a </PROSODY> <BREAK TIME="400ms"/> end frac');
+   quad.voice = synth.getVoices()[1];
+   synth.speak(quad);
+
+   quad.pitch = 2;
+   quad.rate = 3;
+
+** IBM Watson
+   
+   From IBM Watson Demo https://text-to-speech-demo.mybluemix.net/
+
+   ll = new SpeechSynthesisUtterance('<speak>I have been assigned to handle your order status request.<express-as type="Apology"> I am sorry to inform you that the items you requested are back-ordered. We apologize for the inconvenience.</express-as><express-as type="Uncertainty"> We don\'t know when those items will become available. Maybe next week but we are not sure at this time.</express-as><express-as type="GoodNews">Because we want you to be a happy customer, management has decided to give you a 50% discount! </express-as></speak>');
+

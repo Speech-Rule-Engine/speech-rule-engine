@@ -6020,7 +6020,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
   this.executeMathmlTest(
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
-      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>+</mo>' +
       '<mn>6</mn></mtd></mtr></mtable>',
       '<math>' +
       '<mtable type="multiline" role="unknown" id="21" children="5,11,20">' +
@@ -6050,7 +6050,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '</mtr>' +
       '<mtr type="line" role="multiline" id="20" children="18" parent="21">' +
       '<mtd>' +
-      '<mrow type="relseq" role="equality" id="18" children="17,15"' +
+      '<mrow type="infixop" role="addition" id="18" children="17,15"' +
       ' content="14" parent="20">' +
       '<mrow type="infixop" role="implicit" id="17" children="12,13"' +
       ' content="16" parent="18">' +
@@ -6060,8 +6060,8 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '<mi type="identifier" role="latinletter" id="13" parent="17">y</mi>' +
       '</mrow>' +
       '<maligngroup/>' +
-      '<mo type="relation" role="equality" id="14" parent="18"' +
-      ' operator="relseq,=">=</mo>' +
+      '<mo type="operator" role="addition" id="14" parent="18"' +
+      ' operator="infixop,+">+</mo>' +
       '<mn type="number" role="integer" id="15" parent="18">6</mn>' +
       '</mrow>' +
       '</mtd>' +
@@ -6074,7 +6074,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
       '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
-      '<mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
+      '<mo>+</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
       '<math>' +
       '<mtable type="table" role="unknown" id="24" children="6,13,23">' +
       '<mtr type="row" role="table" id="6" children="1,3,5" parent="24">' +
@@ -6110,7 +6110,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '</mrow>' +
       '</mtd>' +
       '<mtd type="cell" role="table" id="20" children="19" parent="23">' +
-      '<mo type="relation" role="equality" id="19" parent="20">=</mo>' +
+      '<mo type="operator" role="addition" id="19" parent="20">+</mo>' +
       '</mtd>' +
       '<mtd type="cell" role="table" id="22" children="21" parent="23">' +
       '<mn type="number" role="integer" id="21" parent="22">6</mn>' +
@@ -6263,7 +6263,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mi type="identifier" role="latinletter" id="0" parent="25">f</mi>' +
       '<mo type="relation" role="equality" id="1" parent="25"' +
       ' operator="relseq,=">=</mo>' +
-      '<mrow type="cases" role="unknown" id="24" children="8,14,23"' +
+      '<mrow type="cases" role="equality" id="24" children="8,14,23"' +
       ' content="2" parent="25">' +
       '<mpadded>' +
       '<mo type="punctuation" role="openfence" id="2" parent="24">{</mo>' +
@@ -10246,7 +10246,7 @@ sre.EnrichMathmlTest.prototype.untestMathmlActions = function() {
 /**
  * Expressions with semantic elements.
  */
-sre.EnrichMathmlTest.prototype.testSemanticsElement = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSemanticsElement = function() {
   this.executeMathmlTest(
       '<semantics></semantics>',
       '<math type="empty" role="unknown" id="0">' +
@@ -10293,7 +10293,7 @@ sre.EnrichMathmlTest.prototype.testSemanticsElement = function() {
 /**
  * Expressions with semantic elements and annotations.
  */
-sre.EnrichMathmlTest.prototype.testSemanticsAnnotation = function() {
+sre.EnrichMathmlTest.prototype.testMahtmlSemanticsAnnotation = function() {
   // This is not really legal markup.
   this.executeMathmlTest(
       '<semantics><annotation>something</annotation></semantics>',
@@ -10360,7 +10360,7 @@ sre.EnrichMathmlTest.prototype.testSemanticsAnnotation = function() {
 /**
  * Expressions with semantic elements and xml annotations.
  */
-sre.EnrichMathmlTest.prototype.testSemanticsAnnotationXml = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
   // This is not really legal markup.
   this.executeMathmlTest(
       '<semantics><annotation-xml><content>something</content>' +
@@ -10595,7 +10595,7 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
 /**
  * Binomial coefficients generated with fractions and redundant elements.
  */
-sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBinomialWithIgnores = function() {
   this.brief = false;
   this.executeMathmlTest(
       '<mfenced open="(" close=")"><mfrac linethickness="0">' +
@@ -10736,7 +10736,7 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialWithIgnores = function() {
 /**
  * Binomial coefficient like elements, without fences.
  */
-sre.EnrichMathmlTest.prototype.testStreeBinomialOther = function() {
+sre.EnrichMathmlTest.prototype.testMathmlBinomialOther = function() {
   this.brief = false;
   this.executeMathmlTest(
       '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
@@ -10820,3 +10820,251 @@ sre.EnrichMathmlTest.prototype.testStreeBinomialOther = function() {
   );
 };
 
+
+/**
+ * Tests for dealing with empty accents and embellishments.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
+  this.executeMathmlTest(
+      '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+      '<math>' +
+      '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="4"/>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+      '<math>' +
+      '<munderover type="underover" role="arrow" id="4" children="0,2,1"' +
+      ' collapsed="(4 (3 0 2) 1)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mrow type="empty" role="unknown" id="1" parent="4"/>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">≅</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
+      '<math>' +
+      '<munderover type="underover" role="arrow" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="relation" role="arrow" id="0" parent="4">→</mo>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">=</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+      '<math>' +
+      '<munderover type="underover" role="latinletter" id="4"' +
+      ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="4"/>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+      '<math>' +
+      '<munderover type="underover" role="latinletter" id="4"' +
+      ' children="0,2,1" collapsed="(4 (3 0 2) 1)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
+      '<mrow type="empty" role="unknown" id="1" parent="4"/>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">≅</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
+      '<math>' +
+      '<munderover type="underover" role="latinletter" id="4"' +
+      ' children="0,1,2" collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">A</mi>' +
+      '<mo type="relation" role="underaccent" id="1" parent="4">≅</mo>' +
+      '<mo type="relation" role="overaccent" id="2" parent="4">=</mo>' +
+      '</munderover>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+      '<math>' +
+      '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="4">≅</mo>' +
+      '<mrow type="empty" role="unknown" id="2" parent="4"/>' +
+      '</msubsup>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+      '<math>' +
+      '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
+      '<mrow type="empty" role="unknown" id="1" parent="4"/>' +
+      '<mo type="relation" role="equality" id="2" parent="4">≅</mo>' +
+      '</msubsup>' +
+      '</math>');
+  this.executeMathmlTest(
+      '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
+      '<math>' +
+      '<msubsup type="subsup" role="close" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mo type="fence" role="close" id="0" parent="4">)</mo>' +
+      '<mo type="relation" role="equality" id="1" parent="4">≅</mo>' +
+      '<mo type="relation" role="equality" id="2" parent="4">=</mo>' +
+      '</msubsup>' +
+      '</math>');
+};
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
+  this.executeMathmlTest(
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mtext type="text" role="unknown" id="0" parent="3"> </mtext>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mo type="punctuation" role="ellipsis" id="1" parent="3">…</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<mo type="punctuation" role="ellipsis" id="0" parent="3">…</mo>' +
+      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="3"> </mtext>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<math type="punctuated" role="text" id="5" children="0,1,2"' +
+      ' content="3,4">' +
+      '<mo type="punctuation" role="ellipsis" id="0" parent="5">…</mo>' +
+      '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="1" parent="5"> </mtext>' +
+      '<mo type="punctuation" role="dummy" id="4" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mo type="punctuation" role="ellipsis" id="2" parent="5">…</mo>' +
+      '</math>'
+  );
+  this.executeMathmlTest(
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<math type="punctuated" role="text" id="5" children="0,1,2"' +
+      ' content="3,4">' +
+      '<mtext type="text" role="unknown" id="0" parent="5"> </mtext>' +
+      '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mo type="punctuation" role="ellipsis" id="1" parent="5">…</mo>' +
+      '<mo type="punctuation" role="dummy" id="4" parent="5" added="true"' +
+      ' operator="punctuated">⁣</mo>' +
+      '<mtext type="text" role="unknown" id="2" parent="5"> </mtext>' +
+      '</math>'
+  );
+};
+
+
+/**
+ * Tests originating from issue #134. Odd distribution of mrows etc.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
+  this.executeMathmlTest(
+      '<mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow><mo' +
+      ' mathvariant="italic">⁢</mo><mi>m</mi>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
+      ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
+      ' type="infixop"><mrow/><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="6">ϕ</mi><mo mathvariant="italic" type="operator"' +
+      ' role="multiplication" id="4" parent="6" operator="infixop,⁢">⁢</mo>' +
+      '<mi type="identifier" role="latinletter" id="5" parent="6">m</mi>' +
+      '</mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mpadded><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
+      '</mpadded></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
+      ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
+      ' type="infixop"><mrow><mpadded/></mrow><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></math>'
+  );
+  // This one moves the error around!
+  this.executeMathmlTest(
+      '<mrow><merror><mi>a</mi></merror><mi>n</mi><mo mathvariant="normal">/' +
+      '</mo><mi>ϕ</mi></mrow><mo mathvariant="italic">⁢</mo><mi>m</mi>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
+      ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
+      ' type="infixop"><mrow><merror><mi>a</mi></merror></mrow><mi' +
+      ' type="identifier" role="greekletter" id="2" parent="6">ϕ</mi><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="5" parent="6">m</mi></mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi></mrow>' +
+      '<mo mathvariant="italic">⁢</mo><mi>m</mi></mrow>',
+      '<math type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
+      '<mrow type="infixop" role="multiplication" id="6" children="2,5"' +
+      ' content="4" parent="3"><mrow/><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mrow><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
+      '</mrow><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow></mrow>',
+      '<math><mrow type="infixop" role="division" id="3" children="0,6"' +
+      ' content="1"><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
+      ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
+      '<mrow type="infixop" role="multiplication" id="6" children="2,5"' +
+      ' content="4" parent="3"><mrow/><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></mrow></mrow></math>'
+  );
+  this.executeMathmlTest(
+      '<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
+      '</mi></mrow><mo>*</mo><mi>b</mi></mrow><mo mathvariant="italic">⁢' +
+      '</mo><mi>m</mi>',
+      '<math type="infixop" role="multiplication" id="12" children="11,9"' +
+      ' content="8"><mrow type="infixop" role="implicit" id="11"' +
+      ' children="0,4" content="10" parent="12"><mi type="identifier"' +
+      ' role="latinletter" id="0" parent="11">a</mi><mo type="operator"' +
+      ' role="multiplication" id="10" parent="11" added="true"' +
+      ' operator="infixop,⁢">⁢</mo><mrow type="infixop" role="division"' +
+      ' id="4" children="1,7" content="2" parent="11"><mi type="identifier"' +
+      ' role="latinletter" id="1" parent="4">n</mi><mo mathvariant="normal"' +
+      ' type="operator" role="division" id="2" parent="4"' +
+      ' operator="infixop,/">/</mo><mrow type="infixop"' +
+      ' role="multiplication" id="7" children="3,6" content="5" parent="4">' +
+      '<mrow/><mi type="identifier" role="greekletter" id="3" parent="7">ϕ' +
+      '</mi><mo type="operator" role="multiplication" id="5" parent="7"' +
+      ' operator="infixop,*">*</mo><mi type="identifier" role="latinletter"' +
+      ' id="6" parent="7">b</mi></mrow></mrow></mrow><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="8"' +
+      ' parent="12" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="9" parent="12">m</mi></math>'
+  );
+};

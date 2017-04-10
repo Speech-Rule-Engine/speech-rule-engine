@@ -889,30 +889,6 @@ sre.MathspeakUtil.determinantIsSimple = function(node) {
 
 
 /**
- * String function to mark elements of a determinant as simple.
- * @param {!Node} node The determinant node.
- * @return {string} The empty string.
- */
-sre.MathspeakUtil.determinantMarkSimple = function(node) {
-  var rows = sre.XpathUtil.evalXPath('children/row', node);
-  rows.forEach(function(row) {row.setAttribute('sre_flag', 'simple');});
-  return '';
-};
-
-
-/**
- * String function to unmark elements of a determinant.
- * @param {!Node} node The determinant node.
- * @return {string} The empty string.
- */
-sre.MathspeakUtil.determinantUnMarkSimple = function(node) {
-  var rows = sre.XpathUtil.evalXPath('children/row', node);
-  rows.forEach(function(row) {row.removeAttribute('sre_flag');});
-  return '';
-};
-
-
-/**
  * Generate constraints for the specialised baseline rules of relation
  * sequences.
  * @return {!string} The constraint string.
@@ -941,4 +917,17 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
   }
   var postfix = notify(breakCstrs.join(' | '));
   return [prefix, middle, postfix].join(' and ');
+};
+
+
+// DIAGRAM: Temporary for testing: If we keep it make more robust!
+/**
+ * Removes parentheses around a label.
+ * @param {!Node} node The label to be processed.
+ * @return {string} The text of the label.
+ */
+sre.MathspeakUtil.removeParens = function(node) {
+  var content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
+  console.log(content);
+  return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };

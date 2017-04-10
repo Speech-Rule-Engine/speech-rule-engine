@@ -193,7 +193,7 @@ sre.MathmlCloudTest.prototype.testGermanFonts = function() {
 
 
 /**
- * Testing German fonts.
+ * Testing other fonts.
  */
 sre.MathmlCloudTest.prototype.testOtherFonts = function() {
   this.executeRuleTest('<mi>m</mi>', 'm');

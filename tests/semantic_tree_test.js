@@ -106,9 +106,7 @@ sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
-  var stree = new sre.SemanticTree(node);
-  var sxml = sre.DomUtil.parseInput(
-      stree.xml(this.brief).toString());
+  var sxml = new sre.SemanticTree(node).xml(this.brief);
   this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
@@ -6034,6 +6032,7 @@ sre.SemanticTreeTest.prototype.testStreeVectors = function() {
  * multiline equations and regular tables.
  */
 sre.SemanticTreeTest.prototype.testStreeTables = function() {
+  this.brief = false;
   this.executeTreeTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd>' +
       '<mtext>often</mtext></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
@@ -6284,7 +6283,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
-      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>+</mo>' +
       '<mn>6</mn></mtd></mtr></mtable>',
       '<multiline role="unknown" id="21">' +
       '<children>' +
@@ -6316,9 +6315,9 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</line>' +
       '<line role="multiline" id="20">' +
       '<children>' +
-      '<relseq role="equality" id="18">=' +
+      '<infixop role="addition" id="18">+' +
       '<content>' +
-      '<relation role="equality" id="14">=</relation>' +
+      '<operator role="addition" id="14">+</operator>' +
       '</content>' +
       '<children>' +
       '<infixop role="implicit" id="17">\u2062' +
@@ -6332,17 +6331,39 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</infixop>' +
       '<number role="integer" font="normal" id="15">6</number>' +
       '</children>' +
-      '</relseq>' +
+      '</infixop>' +
       '</children>' +
       '</line>' +
       '</children>' +
       '</multiline>');
 
+  // Multline with empty row!
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr/>' +
+      '<mtr><mtd><mi>b</mi></mtd></mtr></mtable>',
+      '<multiline role="unknown" id="7">' +
+      '<children>' +
+      '<line role="multiline" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="3"/>' +
+      // '<row role="table" id="3"/>' +
+      '<line role="multiline" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+
   this.executeTreeTest(
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
       '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
-      '<mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
+      '<mo>+</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
       '<table role="unknown" id="24">' +
       '<children>' +
       '<row role="table" id="6">' +
@@ -6400,7 +6421,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</cell>' +
       '<cell role="table" id="20">' +
       '<children>' +
-      '<relation role="equality" id="19">=</relation>' +
+      '<operator role="addition" id="19">+</operator>' +
       '</children>' +
       '</cell>' +
       '<cell role="table" id="22">' +
@@ -10735,3 +10756,1907 @@ sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
   );
 };
 
+
+/**
+ * Trivially punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mo>,</mo>',
+      '<punctuation role="comma" id="0">,</punctuation>'
+  );
+  this.executeTreeTest(
+      '<mo>,</mo><mo>,</mo>',
+      '<punctuated role="comma" id="2">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>,</mo><mo>;</mo>',
+      '<punctuated role="sequence" id="2">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="unknown" id="1">;</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="unknown" id="1">;</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>{</mo><mo>,</mo><mo>}</mo>',
+      '<fenced role="leftright" id="3">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="2">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</children>' +
+      '</fenced>'
+  );
+  this.executeTreeTest(
+      '<mo>{</mo><mo>,</mo><mo>,</mo><mo>}</mo>',
+      '<fenced role="leftright" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="3">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated role="comma" id="4">' +
+      '<content>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+};
+
+
+/**
+ * Trivially punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeFonts = function() {
+  this.executeTreeTest(
+      '<mi>A</mi>',
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="italic">A</mi>',
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="bold">A</mi>',
+      '<identifier role="latinletter" font="bold" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="-tex-caligraphic">A</mi>',
+      '<identifier role="latinletter" font="caligraphic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="-tex-oldstyle">A</mi>',
+      '<identifier role="latinletter" font="oldstyle" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi>𝝖</mi>',
+      '<identifier role="greekletter" font="sans-serif-bold"' +
+      ' id="0">𝝖</identifier>'
+  );
+};
+
+
+/**
+ * Tests for dealing with empty accents and embellishments.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
+  this.executeTreeTest(
+      '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+      '<overscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<underscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+      '<underscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<overscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</underscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
+      '<overscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<underscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<relation role="overaccent" id="2">=</relation>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+      '<overscore role="latinletter" id="4">' +
+      '<children>' +
+      '<underscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+      '<underscore role="latinletter" id="4">' +
+      '<children>' +
+      '<overscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</underscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
+      '<overscore role="latinletter" id="4">' +
+      '<children>' +
+      '<underscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<relation role="overaccent" id="2">=</relation>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<relation role="equality" id="1">≅</relation>' +
+      '</children>' +
+      '</subscript>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</subscript>' +
+      '<relation role="equality" id="2">≅</relation>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<relation role="equality" id="1">≅</relation>' +
+      '</children>' +
+      '</subscript>' +
+      '<relation role="equality" id="2">=</relation>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
+  this.executeTreeTest(
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"> </text>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"> </text>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"> </text>' +
+      '<punctuation role="ellipsis" id="2">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"> </text>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '<text role="unknown" id="2"> </text>' +
+      '</children>' +
+      '</punctuated>'
+  );
+};
+
+
+/**
+ * Labels in multiline expressions.
+ */
+sre.SemanticTreeTest.prototype.testStreeLabelledLines = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '</mlabeledtr></mtable>',
+      '<multiline role="unknown" id="3">' +
+      '<children>' +
+      '<line role="multiline" id="2">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>',
+      '<multiline role="unknown" id="5">' +
+      '<children>' +
+      '<line role="multiline" id="4">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd></mlabeledtr>' +
+      '<mlabeledtr><mtd><mtext>(2)</mtext></mtd></mlabeledtr>' +
+      '<mlabeledtr><mtd><mtext>(3)</mtext></mtd>' +
+      '<mtd><mi>b</mi></mtd></mlabeledtr>' +
+      '</mtable>',
+      '<multiline role="unknown" id="13">' +
+      '<children>' +
+      '<line role="multiline" id="4">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="7">' +
+      '<content>' +
+      '<cell role="label" id="6">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="5">(2)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '</line>' +
+      '<line role="multiline" id="12">' +
+      '<content>' +
+      '<cell role="label" id="9">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="8">(3)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd></mlabeledtr>' +
+      '<mtr><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="binomial" id="8">' +
+      '<children>' +
+      '<line role="binomial" id="4">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="7">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">b</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+};
+
+
+/**
+ * Labels in tables expressions.
+ */
+sre.SemanticTreeTest.prototype.testStreeLabelledRows = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd/><mtd/>' +
+      '</mlabeledtr></mtable>',
+      '<table role="unknown" id="5">' +
+      '<children>' +
+      '<row role="table" id="4">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<cell role="table" id="2"/>' +
+      '<cell role="table" id="3"/>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  this.executeTreeTest(
+      '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>',
+      '<table role="unknown" id="7">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mlabeledtr>' +
+      '<mlabeledtr><mtd><mtext>(2)</mtext></mtd></mlabeledtr>' +
+      '<mlabeledtr><mtd><mtext>(3)</mtext></mtd>' +
+      '<mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mlabeledtr>' +
+      '</mtable>',
+      '<table role="unknown" id="17">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">c</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="9">' +
+      '<content>' +
+      '<cell role="label" id="8">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="7">(2)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<content>' +
+      '<cell role="label" id="11">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="10">(3)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<cell role="table" id="13">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="14">d</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mlabeledtr>' +
+      '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="unknown" id="12">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<content>' +
+      '<cell role="label" id="1">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="0">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">c</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="11">' +
+      '<children>' +
+      '<cell role="table" id="8">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="7">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="10">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="9">d</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+};
+
+
+// Classified tables
+/**
+ * Multiline equality systems.
+ */
+sre.SemanticTreeTest.prototype.testStreeMultilineEqualities = function() {
+  this.executeTreeTest(
+      '<mfrac linethickness="0">' +
+      '<mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow>' +
+      '<mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow>' +
+      '</mfrac>',
+      '<multiline role="equality" id="10">' +
+      '<children>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<identifier role="latinletter" font="italic" id="2">n</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="9">' +
+      '<children>' +
+      '<relseq role="equality" id="7">=' +
+      '<content>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">k</identifier>' +
+      '<number role="integer" font="normal" id="6">3</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mfrac linethickness="0">' +
+      '<mrow><mn>2</mn><mo>=</mo><mi>n</mi></mrow>' +
+      '<mrow><mo>=</mo></mrow>' +
+      '</mfrac>',
+      '<multiline role="equality" id="7">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<identifier role="latinletter" font="italic" id="2">n</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="6">' +
+      '<children>' +
+      '<relation role="equality" id="4">=</relation>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="equality" id="13">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="12">' +
+      '<children>' +
+      '<relseq role="equality" id="10">=' +
+      '<content>' +
+      '<relation role="equality" id="7">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="9"/>' +
+      '<identifier role="latinletter" font="italic" id="8">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr/>' +
+      '<mtr><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="equality" id="14">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="6"/>' +
+      '<line role="multiline" id="13">' +
+      '<children>' +
+      '<relseq role="equality" id="11">=' +
+      '<content>' +
+      '<relation role="equality" id="8">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="10"/>' +
+      '<identifier role="latinletter" font="italic" id="9">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>=</mo></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="equality" id="9">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relation role="equality" id="6">=</relation>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  // The next table has role binomial.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>+</mo></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="binomial" id="9">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<operator role="addition" id="6">+</operator>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  // The next table has role unknown.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>+</mo></mtd></mtr>' +
+      '<mtr/></mtable>',
+      '<multiline role="unknown" id="10">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="8">' +
+      '<children>' +
+      '<operator role="addition" id="6">+</operator>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="9"/>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>b</mi></mtd>' +
+      '</mlabeledtr>' +
+      '</mtable>',
+      '<multiline role="equality" id="15">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="14">' +
+      '<content>' +
+      '<cell role="label" id="7">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="6">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<relseq role="equality" id="12">=' +
+      '<content>' +
+      '<relation role="equality" id="9">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="11"/>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '<mn>6</mn></mtd></mtr></mtable>',
+      '<multiline role="equality" id="21">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '<number role="integer" font="normal" id="2">4</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="11">' +
+      '<children>' +
+      '<relseq role="equality" id="9">=' +
+      '<content>' +
+      '<relation role="equality" id="7">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">y</identifier>' +
+      '<number role="integer" font="normal" id="8">2</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="20">' +
+      '<children>' +
+      '<relseq role="equality" id="18">=' +
+      '<content>' +
+      '<relation role="equality" id="14">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="implicit" id="17">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="16">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="12">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="13">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<number role="integer" font="normal" id="15">6</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>');
+};
+
+
+/**
+ * Table layout equality systems.
+ */
+sre.SemanticTreeTest.prototype.testStreeTableEqualities = function() {
+  // Right Relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="17">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="equality" id="14">=' +
+      '<content>' +
+      '<relation role="equality" id="11">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Empty cells.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd /></mtr>' +
+      '</mtable>',
+      // '<table role="unknown" id="20">' +
+      '<table role="equality" id="20">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="equality" id="14">=' +
+      '<content>' +
+      '<relation role="equality" id="11">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="19">' +
+      '<children>' +
+      '<cell role="table" id="17"/>' +
+      '<cell role="table" id="18"/>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Empty row.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr/>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="18">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="9"/>' +
+      '<row role="table" id="17">' +
+      '<children>' +
+      '<cell role="table" id="10"/>' +
+      '<cell role="table" id="16">' +
+      '<children>' +
+      '<relseq role="equality" id="15">=' +
+      '<content>' +
+      '<relation role="equality" id="12">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="14"/>' +
+      '<identifier role="latinletter" font="italic" id="13">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Singleton equation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>=</mo></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="13">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<relation role="equality" id="10">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // The next table has role unknown.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>=</mo></mtd><mtd /></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="13">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="10">' +
+      '<children>' +
+      '<relation role="equality" id="9">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11"/>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Row with label.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>=</mo><mi>a</mi></mtd></mtr>' +
+      '<mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd /><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd>' +
+      '</mlabeledtr>' +
+      '</mtable>',
+      '<table role="equality" id="19">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="equality" id="6">=' +
+      '<content>' +
+      '<relation role="equality" id="3">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="18">' +
+      '<content>' +
+      '<cell role="label" id="10">' +
+      '<children>' +
+      '<text role="unknown" font="normal" id="9">(1)</text>' +
+      '</children>' +
+      '</cell>' +
+      '</content>' +
+      '<children>' +
+      '<cell role="table" id="11"/>' +
+      '<cell role="table" id="17">' +
+      '<children>' +
+      '<relseq role="equality" id="16">=' +
+      '<content>' +
+      '<relation role="equality" id="13">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="15"/>' +
+      '<identifier role="latinletter" font="italic" id="14">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Single relation column.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
+      '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
+      '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
+      '<mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
+      '<table role="equality" id="24">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="2">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="4">4</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="13">' +
+      '<children>' +
+      '<cell role="table" id="8">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="7">y</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="10">' +
+      '<children>' +
+      '<relation role="equality" id="9">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="12">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="11">2</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="23">' +
+      '<children>' +
+      '<cell role="table" id="18">' +
+      '<children>' +
+      '<infixop role="implicit" id="17">\u2062' +
+      '<content>' +
+      '<operator role="multiplication" id="16">\u2062</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="14">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="15">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="20">' +
+      '<children>' +
+      '<relation role="equality" id="19">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="22">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="21">6</number>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>');
+  // Center relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="13">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="2">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="7"/>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="equality" id="8">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Left relation.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>=</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="equality" id="13">' +
+      '<children>' +
+      '<row role="table" id="7">' +
+      '<children>' +
+      '<cell role="table" id="4">' +
+      '<children>' +
+      '<relseq role="equality" id="3">=' +
+      '<content>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="equality" id="8">=</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+};
+
+
+/**
+ * Multiline (non-equality) relation systems.
+ */
+sre.SemanticTreeTest.prototype.testStreeRelationMultilines = function() {
+  this.executeTreeTest(
+      '<mfrac linethickness="0">' +
+      '<mrow><mn>2</mn><mo>&#x2264;</mo><mi>n</mi></mrow>' +
+      '<mrow><mi>k</mi><mo>&#x2265;</mo><mn>3</mn></mrow>' +
+      '</mfrac>',
+      '<multiline role="inequality" id="10">' +
+      '<children>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2264' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2264</relation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<identifier role="latinletter" font="italic" id="2">n</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="9">' +
+      '<children>' +
+      '<relseq role="inequality" id="7">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="5">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">k</identifier>' +
+      '<number role="integer" font="normal" id="6">3</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr/>' +
+      '<mtr><mtd><mi></mi><mo>&#x2265;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="inequality" id="14">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="6"/>' +
+      '<line role="multiline" id="13">' +
+      '<children>' +
+      '<relseq role="inequality" id="11">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="8">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="10"/>' +
+      '<identifier role="latinletter" font="italic" id="9">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2264;</mo></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="inequality" id="9">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relation role="inequality" id="6">\u2264</relation>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mfrac linethickness="0">' +
+      '<mrow><mn>2</mn><mo>&#x2192;</mo><mi>n</mi></mrow>' +
+      '<mrow><mi>k</mi><mo>&#x2190;</mo><mn>3</mn></mrow>' +
+      '</mfrac>',
+      '<multiline role="arrow" id="10">' +
+      '<children>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2192' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2192</relation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">2</number>' +
+      '<identifier role="latinletter" font="italic" id="2">n</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="9">' +
+      '<children>' +
+      '<relseq role="arrow" id="7">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="5">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">k</identifier>' +
+      '<number role="integer" font="normal" id="6">3</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr/>' +
+      '<mtr><mtd><mi></mi><mo>&#x2190;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="arrow" id="14">' +
+      '<children>' +
+      '<line role="multiline" id="5">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="multiline" id="6"/>' +
+      '<line role="multiline" id="13">' +
+      '<children>' +
+      '<relseq role="arrow" id="11">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="8">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="10"/>' +
+      '<identifier role="latinletter" font="italic" id="9">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2192;</mo></mtd></mtr>' +
+      '</mtable>',
+      '<multiline role="arrow" id="9">' +
+      '<children>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="8">' +
+      '<children>' +
+      '<relation role="arrow" id="6">\u2192</relation>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+};
+
+
+/**
+ * Table layout (non-equality) relation systems.
+ */
+sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
+  // Right Relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>&#x2265;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>&#x2264;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="inequality" id="17">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="inequality" id="6">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="3">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="inequality" id="14">\u2264' +
+      '<content>' +
+      '<relation role="inequality" id="11">\u2264</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Center relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mo>&#x2265;</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="inequality" id="13">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="inequality" id="2">\u2265</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="7"/>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="inequality" id="8">\u2264</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Left relation.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2265;</mo></mtd>' +
+      '<mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2264;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="inequality" id="13">' +
+      '<children>' +
+      '<row role="table" id="7">' +
+      '<children>' +
+      '<cell role="table" id="4">' +
+      '<children>' +
+      '<relseq role="inequality" id="3">\u2265' +
+      '<content>' +
+      '<relation role="inequality" id="1">\u2265</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="inequality" id="8">\u2264</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Right Relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mi></mi><mo>&#x2190;</mo><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mi></mi><mo>&#x2192;</mo><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="arrow" id="17">' +
+      '<children>' +
+      '<row role="table" id="8">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="7">' +
+      '<children>' +
+      '<relseq role="arrow" id="6">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="3">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="5"/>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="16">' +
+      '<children>' +
+      '<cell role="table" id="9"/>' +
+      '<cell role="table" id="15">' +
+      '<children>' +
+      '<relseq role="arrow" id="14">\u2192' +
+      '<content>' +
+      '<relation role="arrow" id="11">\u2192</relation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="13"/>' +
+      '<identifier role="latinletter" font="italic" id="12">b</identifier>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Center relation.
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>&#x03BB;</mi></mtd>' +
+      '<mtd><mo>&#x2190;</mo></mtd><mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd /><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="arrow" id="13">' +
+      '<children>' +
+      '<row role="table" id="6">' +
+      '<children>' +
+      '<cell role="table" id="1">' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="2">\u2190</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="7"/>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="arrow" id="8">\u2192</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+  // Left relation.
+  this.executeTreeTest(
+      '<mtable>' +
+      '<mtr><mtd><mi>&#x03BB;</mi><mo>&#x2190;</mo></mtd>' +
+      '<mtd><mi>a</mi></mtd></mtr>' +
+      '<mtr><mtd><mo>&#x2192;</mo></mtd><mtd><mi>b</mi></mtd></mtr>' +
+      '</mtable>',
+      '<table role="arrow" id="13">' +
+      '<children>' +
+      '<row role="table" id="7">' +
+      '<children>' +
+      '<cell role="table" id="4">' +
+      '<children>' +
+      '<relseq role="arrow" id="3">\u2190' +
+      '<content>' +
+      '<relation role="arrow" id="1">\u2190</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="greekletter" font="italic" id="0">λ</identifier>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="5">a</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '<row role="table" id="12">' +
+      '<children>' +
+      '<cell role="table" id="9">' +
+      '<children>' +
+      '<relation role="arrow" id="8">\u2192</relation>' +
+      '</children>' +
+      '</cell>' +
+      '<cell role="table" id="11">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="10">b</identifier>' +
+      '</children>' +
+      '</cell>' +
+      '</children>' +
+      '</row>' +
+      '</children>' +
+      '</table>'
+  );
+};

@@ -21,35 +21,42 @@
  */
 
 goog.provide('sre.DynamicCstr');
+goog.provide('sre.DynamicCstr.Axis');
 goog.provide('sre.DynamicCstr.Comparator');
-
-goog.require('sre.Engine');
+goog.provide('sre.DynamicCstr.Parser');
+goog.provide('sre.DynamicProperties');
 
 
 
 /**
- * Dynamic constraints are a means to specialize rules that can be changed
- * dynamically by the user, for example by choosing different styles, etc.
  * @constructor
- * @param {!Object.<sre.Engine.Axis, string>} cstr The constraint mapping.
+ * @param {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} properties The
+ *     property mapping.
  * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
  */
-sre.DynamicCstr = function(cstr, opt_order) {
+sre.DynamicProperties = function(properties, opt_order) {
 
   /**
-   * @type {!Object.<sre.Engine.Axis, string>}
+   * @type {!Object.<sre.DynamicCstr.Axis, !Array.<string>>}
    * @private
    */
-  this.components_ = cstr;
-
-  // TODO: Make sure that the order is indeed similar to the keys.
+  this.properties_ = properties;
 
   /**
    * @type {!sre.DynamicCstr.Order}
    * @private
    */
-  this.order_ = opt_order || Object.keys(cstr);
+  this.order_ = opt_order || Object.keys(properties);
 
+};
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, Array.<string>>} The components of
+ *     the constraint.
+ */
+sre.DynamicProperties.prototype.getProperties = function() {
+  return this.properties_;
 };
 
 
@@ -57,13 +64,72 @@ sre.DynamicCstr = function(cstr, opt_order) {
  * @return {sre.DynamicCstr.Order} The priority order of constraint attributes
  *     in the comparator.
  */
-sre.DynamicCstr.prototype.getOrder = function() {
+sre.DynamicProperties.prototype.getOrder = function() {
   return this.order_;
 };
 
 
 /**
- * @return {!Object.<sre.Engine.Axis, string>} The components of the
+ * @return {!sre.DynamicCstr.Order} The components of the constraint.
+ */
+sre.DynamicProperties.prototype.getAxes = function() {
+  return this.order_;
+};
+
+
+/**
+ * Returns the value of the constraint for a particular attribute key.
+ * @param {!sre.DynamicCstr.Axis} key The attribute key.
+ * @return {Array.<string>} The component value of the constraint.
+ */
+sre.DynamicProperties.prototype.getProperty = function(key) {
+  return this.properties_[key];
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicProperties.prototype.toString = function() {
+  var cstrStrings = [];
+  this.order_.forEach(goog.bind(function(key) {
+    cstrStrings.push(key + ': ' + this.getProperty(key).toString());
+  }, this));
+  return cstrStrings.join('\n');
+};
+
+
+
+/**
+ * Dynamic constraints are a means to specialize rules that can be changed
+ * dynamically by the user, for example by choosing different styles, etc.
+ * @constructor
+ * @param {!Object.<sre.DynamicCstr.Axis, string>} cstr The constraint mapping.
+ * @param {sre.DynamicCstr.Order=} opt_order A parse order of the keys.
+ * @extends {sre.DynamicProperties}
+ */
+sre.DynamicCstr = function(cstr, opt_order) {
+
+  /**
+   * @type {!Object.<sre.DynamicCstr.Axis, string>}
+   * @private
+   */
+  this.components_ = cstr;
+
+  var properties = {};
+  for (var key in cstr) {
+    var value = cstr[key];
+    properties[key] = [value];
+    sre.DynamicCstr.Values_.getInstance().add(key, value);
+  }
+
+  sre.DynamicCstr.base(this, 'constructor', properties, opt_order);
+};
+goog.inherits(sre.DynamicCstr, sre.DynamicProperties);
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, string>} The components of the
  *     constraint.
  */
 sre.DynamicCstr.prototype.getComponents = function() {
@@ -72,16 +138,8 @@ sre.DynamicCstr.prototype.getComponents = function() {
 
 
 /**
- * @return {!sre.DynamicCstr.Order} The components of the constraint.
- */
-sre.DynamicCstr.prototype.getKeys = function() {
-  return this.order_;
-};
-
-
-/**
  * Returns the value of the constraint for a particular attribute key.
- * @param {!sre.Engine.Axis} key The attribute key.
+ * @param {!sre.DynamicCstr.Axis} key The attribute key.
  * @return {string} The component value of the constraint.
  */
 sre.DynamicCstr.prototype.getValue = function(key) {
@@ -90,14 +148,23 @@ sre.DynamicCstr.prototype.getValue = function(key) {
 
 
 /**
- * @override
+ * Convenience method to return the ordered list of constraint values.
+ * @return {Array.<string>} Ordered list of constraint values.
  */
-sre.DynamicCstr.prototype.toString = function() {
+sre.DynamicCstr.prototype.getValues = function() {
   var cstrStrings = [];
   this.order_.forEach(goog.bind(function(key) {
     cstrStrings.push(this.getValue(key));
   }, this));
-  return cstrStrings.join('.');
+  return cstrStrings;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.prototype.toString = function() {
+  return this.getValues().join('.');
 };
 
 
@@ -107,7 +174,7 @@ sre.DynamicCstr.prototype.toString = function() {
  * @return {boolean} True if the preconditions apply to the node.
  */
 sre.DynamicCstr.prototype.equal = function(cstr) {
-  var keys1 = cstr.getKeys();
+  var keys1 = cstr.getAxes();
   if (this.order_.length !== keys1.length) {
     return false;
   }
@@ -121,30 +188,108 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 };
 
 
-// TODO: (MOSS) Replace this.
 /**
- * Convenience method to create a standard dynamic constraint. This should be
- * phased out.
- * @param {string} domain Domain annotation.
- * @param {string} style Style annotation.
- * @return {!sre.DynamicCstr}
+ * Attributes for dynamic constraints.
+ * We define one default attribute as style. Speech rule stores can add other
+ * attributes later.
+ * @enum {string}
  */
-sre.DynamicCstr.create = function(domain, style) {
-  var dynamicCstr = {};
-  dynamicCstr[sre.Engine.Axis.DOMAIN] = domain;
-  dynamicCstr[sre.Engine.Axis.STYLE] = style;
-  return new sre.DynamicCstr(dynamicCstr);
+sre.DynamicCstr.Axis = {
+  DOMAIN: 'domain',
+  STYLE: 'style',
+  LANGUAGE: 'language',
+  TOPIC: 'topic',
+  MODALITY: 'modality'
 };
 
 
-//TODO: (MOSS) WP 1.1
-// Revisit
-//
+
+/**
+ * @constructor
+ * @private
+ */
+sre.DynamicCstr.Values_ = function() {
+
+  /**
+   * @type {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>}
+   */
+  this.axisToValues = sre.DynamicCstr.Values_.makeAxisValueObject_();
+
+};
+goog.addSingletonGetter(sre.DynamicCstr.Values_);
+
+
+/**
+ * Registers a constraint value for a given axis
+ * @param {sre.DynamicCstr.Axis} axis The axis.
+ * @param {string} value The value for the axis.
+ */
+sre.DynamicCstr.Values_.prototype.add = function(axis, value) {
+  this.axisToValues[axis][value] = true;
+};
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.DynamicCstr.Values_.prototype.get = function() {
+  var result = {};
+  var axisToValues = sre.DynamicCstr.Values_.getInstance().axisToValues;
+  for (var key in axisToValues) {
+    result[key] = Object.keys(axisToValues[key]);
+  }
+  return result;
+};
+
+
+/**
+ * Initialises an object for collecting all values per axis.
+ * @return {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>} The
+ *     nested object structure.
+ * @private
+ */
+sre.DynamicCstr.Values_.makeAxisValueObject_ = function() {
+  var result = {};
+  for (var axis in sre.DynamicCstr.Axis) {
+    result[sre.DynamicCstr.Axis[axis]] = {};
+  }
+  return result;
+};
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.DynamicCstr.getAxisValues = function() {
+  return sre.DynamicCstr.Values_.getInstance().get();
+};
+
+
 /**
  * Ordering of dynamic constraint attributes.
- * @typedef {!Array.<sre.Engine.Axis>}
+ * @typedef {!Array.<sre.DynamicCstr.Axis>}
  */
 sre.DynamicCstr.Order;
+
+
+/**
+ * @type {!sre.DynamicCstr.Order}
+ */
+sre.DynamicCstr.DEFAULT_ORDER = [
+  sre.DynamicCstr.Axis.DOMAIN,
+  sre.DynamicCstr.Axis.STYLE,
+  sre.DynamicCstr.Axis.LANGUAGE,
+  sre.DynamicCstr.Axis.TOPIC,
+  sre.DynamicCstr.Axis.MODALITY
+];
+
+
+/**
+ * @type {string}
+ */
+sre.DynamicCstr.DEFAULT_VALUE = 'default';
 
 
 
@@ -174,19 +319,14 @@ sre.DynamicCstr.Parser = function(order) {
 sre.DynamicCstr.Parser.prototype.parse = function(str) {
   var order = str.split('.');
   var cstr = {};
+  if (order.length > this.order_.length) {
+    throw new Error('Invalid dynamic constraint: ' + cstr);
+  }
   for (var i = 0, key; key = this.order_[i], order.length; i++) {
     var value = order.shift();
     cstr[key] = value;
-    sre.Engine.getInstance().axisValues[key][value] = true;
   }
-  if (i < this.order_.length - 1 || order.length) {
-    // TODO: Make this a speech rule error, after moving error generation out of
-    //       speech rule.
-    throw new Error('Invalid dynamic constraint: ' + cstr);
-    // throw new sre.SpeechRule.OutputError(
-    // 'Invalid dynamic constraint: ' + cstr);
-  }
-  return new sre.DynamicCstr(cstr, this.order_);
+  return new sre.DynamicCstr(cstr, this.order_.slice(0, i));
 };
 
 
@@ -206,8 +346,11 @@ sre.DynamicCstr.Comparator.prototype.getReference = function() { };
 /**
  * Sets the reference constraint in the comparator.
  * @param {sre.DynamicCstr} cstr A new reference constraint.
+ * @param {sre.DynamicProperties=} opt_props An optional properties element
+ *    for matching.
  */
-sre.DynamicCstr.Comparator.prototype.setReference = function(cstr) { };
+sre.DynamicCstr.Comparator.prototype.setReference = function(
+    cstr, opt_props) { };
 
 
 /**
@@ -231,23 +374,30 @@ sre.DynamicCstr.Comparator.prototype.compare = function(cstr1, cstr2) { };
 
 
 
-// TODO (MOSS): This still implements the old style comparator. Turn into
-// default comparator and implement more elaborate orderings on the rule stores.
-//
 /**
  * A default comparator for dynamic constraints. Has initially a reference
  * constraint with default values only.
  * @constructor
  * @implements {sre.DynamicCstr.Comparator}
  * @param {sre.DynamicCstr} cstr A reference constraint.
+ * @param {sre.DynamicProperties=} opt_props An optional properties element
+ *    for matching.
  */
-sre.DynamicCstr.DefaultComparator = function(cstr) {
+sre.DynamicCstr.DefaultComparator = function(cstr, opt_props) {
 
   /**
    * @type {sre.DynamicCstr}
    * @private
    */
   this.reference_ = cstr;
+
+  /**
+   * This is a preference order, if more than one property value are given.
+   * @type {sre.DynamicProperties}
+   * @private
+   */
+  this.fallback_ = opt_props ||
+      new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
 
   /**
    * @type {sre.DynamicCstr.Order}
@@ -271,28 +421,26 @@ sre.DynamicCstr.DefaultComparator.prototype.getReference = function() {
  * @override
  * @final
  */
-sre.DynamicCstr.DefaultComparator.prototype.setReference = function(cstr) {
+sre.DynamicCstr.DefaultComparator.prototype.setReference = function(
+    cstr, opt_props) {
   this.reference_ = cstr;
+  this.fallback_ = opt_props ||
+      new sre.DynamicProperties(cstr.getProperties(), cstr.getOrder());
   this.order_ = this.reference_.getOrder();
 };
 
 
-// We allow a default value for each dynamic constraints attribute.
-// The idea is that when we can not find a speech rule matching the value for
-// a particular attribute in the dynamic constraint we choose the one that has
-// the value 'default'.
 /**
  * @override
  */
 sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
-  var keys1 = cstr.getKeys();
-  return keys1.length === this.reference_.getKeys().length &&
+  var keys1 = cstr.getAxes();
+  return keys1.length === this.reference_.getAxes().length &&
       keys1.every(
       goog.bind(function(key) {
-        return cstr.getValue(key) == this.reference_.getValue(key) ||
-            // TODO (MOSS) Sort this out with an ordered list of constraints.
-            cstr.getValue(key) == 'short' ||
-            cstr.getValue(key) == 'default';
+        var value = cstr.getValue(key);
+        return value === this.reference_.getValue(key) ||
+            this.fallback_.getProperty(key).indexOf(value) !== -1;
       }, this));
 };
 
@@ -301,26 +449,105 @@ sre.DynamicCstr.DefaultComparator.prototype.match = function(cstr) {
  * @override
  */
 sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
-  var count1 = this.countMatchingValues_(cstr1);
-  var count2 = this.countMatchingValues_(cstr2);
-  return (count1 > count2) ? -1 : ((count2 > count1) ? 1 : 0);
+  var ignore = false;
+  for (var i = 0, key; key = this.order_[i]; i++) {
+    var value1 = cstr1.getValue(key);
+    var value2 = cstr2.getValue(key);
+    // As long as the constraint values are the same as the reference value, we
+    // continue to compare them, otherwise we ignore them, to go for the best
+    // matching fallback rule, wrt. priority order.
+    if (!ignore) {
+      var ref = this.reference_.getValue(key);
+      if (ref === value1 && ref !== value2) {
+        return -1;
+      }
+      if (ref === value2 && ref !== value1) {
+        return 1;
+      }
+      if (ref === value1 && ref === value2) {
+        continue;
+      }
+      if (ref !== value1 && ref !== value2) {
+        ignore = true;
+      }
+    }
+    var prop = this.fallback_.getProperty(key);
+    var index1 = prop.indexOf(value1);
+    var index2 = prop.indexOf(value2);
+    if (index1 < index2) {
+      return -1;
+    }
+    if (index2 < index1) {
+      return 1;
+    }
+  }
+  return 0;
 };
 
 
 /**
- * Counts how many dynamic constraint values match exactly the reference
- * constraint in the order specified by the comparator.
- * @param {sre.DynamicCstr} cstr Dynamic constraints.
- * @return {number} The number of matching dynamic constraint values.
+ * Convenience method to create a standard dynamic constraint, that follows a
+ * pre-prescribed order of the axes.
+ * @param {...Array.<string>} var_args Dynamic property lists for the Axes.
+ * @return {!sre.DynamicProperties}
+ */
+sre.DynamicProperties.create = function(var_args) {
+  var axes = sre.DynamicCstr.DEFAULT_ORDER;
+  var dynamicCstr = {};
+  var cstrList = Array.prototype.slice.call(arguments, 0);
+  for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
+    dynamicCstr[axes[i]] = cstrList[i];
+  }
+  return new sre.DynamicProperties(dynamicCstr);
+};
+
+
+/**
+ * Convenience method to create a standard dynamic constraint, that follows a
+ * pre-prescribed order of the axes.
+ * @param {...string} var_args Dynamic constraint values for the Axes.
+ * @return {!sre.DynamicCstr}
+ */
+sre.DynamicCstr.create = function(var_args) {
+  var axes = sre.DynamicCstr.DEFAULT_ORDER;
+  var dynamicCstr = {};
+  var cstrList = Array.prototype.slice.call(arguments, 0);
+  for (var i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
+    dynamicCstr[axes[i]] = cstrList[i];
+  }
+  return new sre.DynamicCstr(dynamicCstr);
+};
+
+
+/**
+ * @return {!sre.DynamicCstr} A default constraint of maximal order.
+ */
+sre.DynamicCstr.defaultCstr = function() {
+  return sre.DynamicCstr.create.apply(null, sre.DynamicCstr.defaults_());
+};
+
+
+/**
+ * @return {!Array.<!string>} List of default value of maximal order.
  * @private
  */
-sre.DynamicCstr.DefaultComparator.prototype.countMatchingValues_ = function(
-    cstr) {
-  var result = 0;
-  for (var i = 0, key; key = this.order_[i]; i++) {
-    if (this.reference_.getValue(key) === cstr.getValue(key)) {
-      result++;
-    } else break;
-  }
-  return result;
+sre.DynamicCstr.defaults_ = function() {
+  return Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
+      map(function() { return sre.DynamicCstr.DEFAULT_VALUE; });
+};
+
+
+/**
+ * Checks explicitly if a dynamic constraint order is indeed valid.
+ * @param {sre.DynamicCstr.Order} order The order to check.
+ * @return {boolean} True if the order only contains valid axis descriptions.
+ */
+sre.DynamicCstr.validOrder = function(order) {
+  var axes = sre.DynamicCstr.DEFAULT_ORDER.slice();
+  return order.every(
+      function(x) {
+        var index = axes.indexOf(x);
+        return index !== -1 && axes.splice(index, 1);
+      }
+  );
 };

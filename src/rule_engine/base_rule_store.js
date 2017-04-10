@@ -33,6 +33,7 @@ goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleEvaluator');
 goog.require('sre.SpeechRuleFunctions');
 goog.require('sre.SpeechRuleStore');
+goog.require('sre.Trie');
 goog.require('sre.XpathUtil');
 
 
@@ -61,9 +62,6 @@ sre.BaseRuleStore = function() {
    */
   this.contextFunctions = new sre.SpeechRuleFunctions.ContextFunctions();
 
-  //TODO: (MOSS) WP 1.3:
-  // Replace by dedicated trie data structure.
-  //
   /**
    * Set of speech rules in the store.
    * @type {!Array.<sre.SpeechRule>}
@@ -72,23 +70,25 @@ sre.BaseRuleStore = function() {
   this.speechRules_ = [];
 
   /**
+   * Trie for indexing speech rules in this store.
+   * @type {sre.Trie}
+   */
+  this.trie = new sre.Trie(this);
+
+  /**
    * A priority list of dynamic constraint attributes.
    * @type {!sre.DynamicCstr.Order}
    */
-  this.parseOrder = [sre.Engine.Axis.STYLE];
+  this.parseOrder = sre.DynamicCstr.DEFAULT_ORDER;
 
   /**
    * A dynamic constraint parser.
    * @type {!sre.DynamicCstr.Parser}
    */
   this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
-
 };
 
 
-//TODO: (MOSS) WP 1.3:
-// Replace library methods by trie indexing.
-//
 /**
  * @override
  */
@@ -98,12 +98,7 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.speechRules_.filter(
-      goog.bind(
-          function(rule) {
-            return this.testDynamicConstraints(dynamic, rule) &&
-                this.testPrecondition_(/** @type {!Node} */ (node), rule);},
-          this));
+  var matchingRules = this.trie.lookupRules(node, dynamic);
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
 };
@@ -139,6 +134,7 @@ sre.BaseRuleStore.prototype.defineRule = function(
  * @override
  */
 sre.BaseRuleStore.prototype.addRule = function(rule) {
+  this.trie.addRule(rule);
   this.speechRules_.unshift(rule);
 };
 
@@ -179,7 +175,7 @@ sre.BaseRuleStore.prototype.findAllRules = function(pred) {
  * @override
  */
 sre.BaseRuleStore.prototype.evaluateDefault = function(node) {
-  return [new sre.AuditoryDescription({'text': node.textContent})];
+  return [sre.AuditoryDescription.create({'text': node.textContent})];
 };
 
 
@@ -228,7 +224,6 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
 };
 
 
-// TODO (sorge) These should move into the speech rule functions.
 /**
  * Checks if we have a custom query and applies it. Otherwise returns null.
  * @param {!Node} node The initial node.
@@ -287,29 +282,6 @@ sre.BaseRuleStore.prototype.applyConstraint = function(node, expr) {
 };
 
 
-//TODO: (MOSS) WP 1.2:
-// Replace by flexible and customisable rule ordering using the comparator.
-//
-/**
- * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
- * the engine is in strict mode, the dynamic constraints can be "relaxed", that
- * is, a default value can also be choosen.
- * @param {!sre.DynamicCstr} dynamic Dynamic constraints.
- * @param {sre.SpeechRule} rule The rule.
- * @return {boolean} True if the preconditions apply to the node.
- * @protected
- */
-sre.BaseRuleStore.prototype.testDynamicConstraints = function(
-    dynamic, rule) {
-  if (sre.Engine.getInstance().strict) {
-    return rule.dynamicCstr.equal(dynamic);
-  }
-  //
-  // TODO: (MOSS) We need to have a global comparator?
-  return sre.Engine.getInstance().comparator.match(rule.dynamicCstr);
-};
-
-
 /**
  * Picks the result of the most constraint rule by prefering those:
  * 1) that best match the dynamic constraints.
@@ -324,9 +296,9 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
   rules.sort(
       function(r1, r2) {
         return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
-        // When same number of dynamic constraint attributes matches for
-        // both rules, compare length of static constraints.
-        (r2.precondition.constraints.length -
+            // When same number of dynamic constraint attributes matches for
+            // both rules, compare length of static constraints.
+            (r2.precondition.constraints.length -
              r1.precondition.constraints.length);}
   );
   sre.Debugger.getInstance().generateOutput(
@@ -336,23 +308,6 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
       }, this)
   );
   return rules[0];
-};
-
-
-/**
- * Test the precondition of a speech rule.
- * @param {!Node} node on which to test applicability of the rule.
- * @param {sre.SpeechRule} rule The rule to be tested.
- * @return {boolean} True if the preconditions apply to the node.
- * @private
- */
-sre.BaseRuleStore.prototype.testPrecondition_ = function(node, rule) {
-  var prec = rule.precondition;
-  return this.applyQuery(node, prec.query) === node &&
-      prec.constraints.every(
-          goog.bind(function(cstr) {
-        return this.applyConstraint(node, cstr);},
-      this));
 };
 
 

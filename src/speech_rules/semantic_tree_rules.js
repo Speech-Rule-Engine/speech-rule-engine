@@ -62,24 +62,10 @@ sre.SemanticTreeRules.addContextFunction_ = goog.bind(
     sre.SemanticTreeRules.mathStore.contextFunctions);
 
 
-/** @private */
-sre.SemanticTreeRules.addCustomQuery_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.customQueries.add,
-    sre.SemanticTreeRules.mathStore.customQueries);
-
-
-/** @private */
-sre.SemanticTreeRules.addCustomString_ = goog.bind(
-    sre.SemanticTreeRules.mathStore.customStrings.add,
-    sre.SemanticTreeRules.mathStore.customStrings);
-
-
 goog.scope(function() {
 var defineRule = sre.SemanticTreeRules.defineRule_;
 var defineRuleAlias = sre.SemanticTreeRules.defineRuleAlias_;
 
-var addCQF = sre.SemanticTreeRules.addCustomQuery_;
-var addCSF = sre.SemanticTreeRules.addCustomString_;
 var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 
 
@@ -90,9 +76,6 @@ var addCTXF = sre.SemanticTreeRules.addContextFunction_;
 sre.SemanticTreeRules.initCustomFunctions_ = function() {
   addCTXF('CTXFnodeCounter', sre.StoreUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-
-  addCQF('CQFhideFont', sre.MathmlStoreUtil.hideFont);
-  addCSF('CSFshowFont', sre.MathmlStoreUtil.showFont);
 };
 
 
@@ -172,7 +155,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'multi-addition', 'default.default',
-      '[t] "sum with,"; [t] count(./children/*); [t] ", summands";' +
+      '[t] "sum with"; [t] count(./children/*); [t] "summands";' +
           '[p] (pause:400); [m] ./children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(./children/*)>2');
 
@@ -205,14 +188,16 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Font rules
   defineRule(
       'font', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
-      'self::*', '@font', '@font!="normal"');
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '""=translate(text(), ' +
+      '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
+      '""=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
       '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
@@ -223,20 +208,22 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'font-identifier', 'default.default',
-      '[t] @font; [n] CQFhideFont; [t] CSFshowFont',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
-      '@font', '@font="normal"', '@role!="unit"');
+      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
+      '@role!="unit"');
 
   defineRule(
       'omit-font', 'default.default',
-      '[n] CQFhideFont; [t] CSFshowFont',
-      'self::identifier', 'string-length(text())=1', '@font', '@font="italic"');
+      '[n] self::* (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
   // Fraction
   defineRule(
       'fraction', 'default.default',
-      '[p] (pause:250); [n] children/*[1] (pitch:0.3); [p] (pause:250);' +
-          ' [t] "divided by"; [n] children/*[2] (pitch:-0.3); [p] (pause:400)',
+      '[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250);' +
+          ' [t] "divided by"; [n] children/*[2] (rate:-0.35); [p] (pause:400)',
       'self::fraction');
 
   defineRule(
@@ -274,13 +261,13 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Fences rules.
   defineRule(
       'fences-open-close', 'default.default',
-      '[p] (pause:100); [t] "open"; [n] children/*[1]; [p] (pause:200);' +
-      '[t] "close"',
+      '[p] (pause:200); [t] "open"; [n] content/*[1]; [n] children/*[1];' +
+      ' [p] (pause:200); [t] "close"',
       'self::fenced', '@role="leftright"');
 
   defineRule(
       'fences-open-close-in-appl', 'default.default',
-      '[p] (pause:100); [n] children/*[1]; [p] (pause:200);',
+      '[p] (pause:200); [n] children/*[1]; [p] (pause:200);',
       'self::fenced[@role="leftright"]', './parent::children/parent::appl');
 
   defineRule(
@@ -441,7 +428,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'sqrt', 'default.default',
-      '[t] "Square root of"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+      '[t] "Square root of"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::sqrt');
 
   defineRule(
@@ -459,7 +446,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'root', 'default.default',
       '[t] "root of order"; [n] children/*[1];' +
-          '[t] "over"; [n] children/*[1] (rate:0.2); [p] (pause:400)',
+          '[t] "over"; [n] children/*[1] (rate:0.35); [p] (pause:400)',
       'self::root');
 
   defineRule(
@@ -469,7 +456,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'unit', 'default.default',
-      '[t] text() (annotation:unit, preprocess)',
+      '[t] text() (grammar:annotation="unit":translate)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'default.default',

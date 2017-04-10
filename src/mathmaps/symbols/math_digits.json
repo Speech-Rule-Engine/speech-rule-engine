@@ -5,6 +5,9 @@
       "default": {
         "default": "digit zero",
         "short": "zero"
+      },
+      "mathspeak": {
+        "default": "0"
       }
     },
     "key": "0030"
@@ -15,6 +18,9 @@
       "default": {
         "default": "digit one",
         "short": "one"
+      },
+      "mathspeak": {
+        "default": "1"
       }
     },
     "key": "0031"
@@ -25,6 +31,9 @@
       "default": {
         "default": "digit two",
         "short": "two"
+      },
+      "mathspeak": {
+        "default": "2"
       }
     },
     "key": "0032"
@@ -35,6 +44,9 @@
       "default": {
         "default": "digit three",
         "short": "three"
+      },
+      "mathspeak": {
+        "default": "3"
       }
     },
     "key": "0033"
@@ -45,6 +57,9 @@
       "default": {
         "default": "digit four",
         "short": "four"
+      },
+      "mathspeak": {
+        "default": "4"
       }
     },
     "key": "0034"
@@ -55,6 +70,9 @@
       "default": {
         "default": "digit five",
         "short": "five"
+      },
+      "mathspeak": {
+        "default": "5"
       }
     },
     "key": "0035"
@@ -65,6 +83,9 @@
       "default": {
         "default": "digit six",
         "short": "six"
+      },
+      "mathspeak": {
+        "default": "6"
       }
     },
     "key": "0036"
@@ -75,6 +96,9 @@
       "default": {
         "default": "digit seven",
         "short": "seven"
+      },
+      "mathspeak": {
+        "default": "7"
       }
     },
     "key": "0037"
@@ -85,6 +109,9 @@
       "default": {
         "default": "digit eight",
         "short": "eight"
+      },
+      "mathspeak": {
+        "default": "8"
       }
     },
     "key": "0038"
@@ -95,6 +122,9 @@
       "default": {
         "default": "digit nine",
         "short": "nine"
+      },
+      "mathspeak": {
+        "default": "9"
       }
     },
     "key": "0039"
@@ -106,6 +136,9 @@
         "default": "superscript digit two",
         "alternative": "superscript two",
         "short": "square"
+      },
+      "mathspeak": {
+        "default": "9"
       }
     },
     "key": "00B2"
@@ -539,6 +572,9 @@
       "default": {
         "default": "circled digit one",
         "short": "circled one"
+      },
+      "mathspeak": {
+        "default": "circled 1"
       }
     },
     "key": "2460"
@@ -549,6 +585,9 @@
       "default": {
         "default": "circled digit two",
         "short": "circled two"
+      },
+      "mathspeak": {
+        "default": "circled 2"
       }
     },
     "key": "2461"
@@ -559,6 +598,9 @@
       "default": {
         "default": "circled digit three",
         "short": "circled three"
+      },
+      "mathspeak": {
+        "default": "circled 3"
       }
     },
     "key": "2462"
@@ -569,6 +611,9 @@
       "default": {
         "default": "circled digit four",
         "short": "circled four"
+      },
+      "mathspeak": {
+        "default": "circled 4"
       }
     },
     "key": "2463"
@@ -579,6 +624,9 @@
       "default": {
         "default": "circled digit five",
         "short": "circled five"
+      },
+      "mathspeak": {
+        "default": "circled 5"
       }
     },
     "key": "2464"
@@ -589,6 +637,9 @@
       "default": {
         "default": "circled digit six",
         "short": "circled six"
+      },
+      "mathspeak": {
+        "default": "circled 6"
       }
     },
     "key": "2465"
@@ -599,6 +650,9 @@
       "default": {
         "default": "circled digit seven",
         "short": "circled seven"
+      },
+      "mathspeak": {
+        "default": "circled 7"
       }
     },
     "key": "2466"
@@ -609,6 +663,9 @@
       "default": {
         "default": "circled digit eight",
         "short": "circled eight"
+      },
+      "mathspeak": {
+        "default": "circled 8"
       }
     },
     "key": "2467"
@@ -619,6 +676,9 @@
       "default": {
         "default": "circled digit nine",
         "short": "circled nine"
+      },
+      "mathspeak": {
+        "default": "circled 9"
       }
     },
     "key": "2468"
@@ -629,6 +689,9 @@
       "default": {
         "default": "circled number ten",
         "short": "circled ten"
+      },
+      "mathspeak": {
+        "default": "circled 10"
       }
     },
     "key": "2469"
@@ -639,6 +702,9 @@
       "default": {
         "default": "circled number eleven",
         "short": "circled eleven"
+      },
+      "mathspeak": {
+        "default": "circled 11"
       }
     },
     "key": "246A"
@@ -649,6 +715,9 @@
       "default": {
         "default": "circled number twelve",
         "short": "circled twelve"
+      },
+      "mathspeak": {
+        "default": "circled 12"
       }
     },
     "key": "246B"
@@ -659,6 +728,9 @@
       "default": {
         "default": "circled number thirteen",
         "short": "circled thirteen"
+      },
+      "mathspeak": {
+        "default": "circled 13"
       }
     },
     "key": "246C"
@@ -669,6 +741,9 @@
       "default": {
         "default": "circled number fourteen",
         "short": "circled fourteen"
+      },
+      "mathspeak": {
+        "default": "circled 14"
       }
     },
     "key": "246D"
@@ -679,6 +754,9 @@
       "default": {
         "default": "circled number fifteen",
         "short": "circled fifteen"
+      },
+      "mathspeak": {
+        "default": "circled 15"
       }
     },
     "key": "246E"
@@ -689,6 +767,9 @@
       "default": {
         "default": "circled number sixteen",
         "short": "circled sixteen"
+      },
+      "mathspeak": {
+        "default": "circled 16"
       }
     },
     "key": "246F"
@@ -699,6 +780,9 @@
       "default": {
         "default": "circled number seventeen",
         "short": "circled seventeen"
+      },
+      "mathspeak": {
+        "default": "circled 17"
       }
     },
     "key": "2470"
@@ -709,6 +793,9 @@
       "default": {
         "default": "circled number eighteen",
         "short": "circled eighteen"
+      },
+      "mathspeak": {
+        "default": "circled 18"
       }
     },
     "key": "2471"
@@ -719,6 +806,9 @@
       "default": {
         "default": "circled number nineteen",
         "short": "circled nineteen"
+      },
+      "mathspeak": {
+        "default": "circled 19"
       }
     },
     "key": "2472"
@@ -729,6 +819,9 @@
       "default": {
         "default": "circled number twenty",
         "short": "circled twenty"
+      },
+      "mathspeak": {
+        "default": "circled 20"
       }
     },
     "key": "2473"
@@ -739,6 +832,9 @@
       "default": {
         "default": "parenthesized digit one",
         "short": "parenthesized one"
+      },
+      "mathspeak": {
+        "default": "parenthesized 1"
       }
     },
     "key": "2474"
@@ -749,6 +845,9 @@
       "default": {
         "default": "parenthesized digit two",
         "short": "parenthesized two"
+      },
+      "mathspeak": {
+        "default": "parenthesized 2"
       }
     },
     "key": "2475"
@@ -759,6 +858,9 @@
       "default": {
         "default": "parenthesized digit three",
         "short": "parenthesized three"
+      },
+      "mathspeak": {
+        "default": "parenthesized 3"
       }
     },
     "key": "2476"
@@ -769,6 +871,9 @@
       "default": {
         "default": "parenthesized digit four",
         "short": "parenthesized four"
+      },
+      "mathspeak": {
+        "default": "parenthesized 4"
       }
     },
     "key": "2477"
@@ -779,6 +884,9 @@
       "default": {
         "default": "parenthesized digit five",
         "short": "parenthesized five"
+      },
+      "mathspeak": {
+        "default": "parenthesized 5"
       }
     },
     "key": "2478"
@@ -789,6 +897,9 @@
       "default": {
         "default": "parenthesized digit six",
         "short": "parenthesized six"
+      },
+      "mathspeak": {
+        "default": "parenthesized 6"
       }
     },
     "key": "2479"
@@ -799,6 +910,9 @@
       "default": {
         "default": "parenthesized digit seven",
         "short": "parenthesized seven"
+      },
+      "mathspeak": {
+        "default": "parenthesized 7"
       }
     },
     "key": "247A"
@@ -809,6 +923,9 @@
       "default": {
         "default": "parenthesized digit eight",
         "short": "parenthesized eight"
+      },
+      "mathspeak": {
+        "default": "parenthesized 8"
       }
     },
     "key": "247B"
@@ -819,6 +936,9 @@
       "default": {
         "default": "parenthesized digit nine",
         "short": "parenthesized nine"
+      },
+      "mathspeak": {
+        "default": "parenthesized 9"
       }
     },
     "key": "247C"
@@ -829,6 +949,9 @@
       "default": {
         "default": "parenthesized number ten",
         "short": "parenthesized ten"
+      },
+      "mathspeak": {
+        "default": "parenthesized 10"
       }
     },
     "key": "247D"
@@ -839,6 +962,9 @@
       "default": {
         "default": "parenthesized number eleven",
         "short": "parenthesized eleven"
+      },
+      "mathspeak": {
+        "default": "parenthesized 11"
       }
     },
     "key": "247E"
@@ -849,6 +975,9 @@
       "default": {
         "default": "parenthesized number twelve",
         "short": "parenthesized twelve"
+      },
+      "mathspeak": {
+        "default": "parenthesized 12"
       }
     },
     "key": "247F"
@@ -859,6 +988,9 @@
       "default": {
         "default": "parenthesized number thirteen",
         "short": "parenthesized thirteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 13"
       }
     },
     "key": "2480"
@@ -869,6 +1001,9 @@
       "default": {
         "default": "parenthesized number fourteen",
         "short": "parenthesized fourteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 14"
       }
     },
     "key": "2481"
@@ -879,6 +1014,9 @@
       "default": {
         "default": "parenthesized number fifteen",
         "short": "parenthesized fifteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 15"
       }
     },
     "key": "2482"
@@ -889,6 +1027,9 @@
       "default": {
         "default": "parenthesized number sixteen",
         "short": "parenthesized sixteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 16"
       }
     },
     "key": "2483"
@@ -899,6 +1040,9 @@
       "default": {
         "default": "parenthesized number seventeen",
         "short": "parenthesized seventeen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 17"
       }
     },
     "key": "2484"
@@ -909,6 +1053,9 @@
       "default": {
         "default": "parenthesized number eighteen",
         "short": "parenthesized eighteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 18"
       }
     },
     "key": "2485"
@@ -919,6 +1066,9 @@
       "default": {
         "default": "parenthesized number nineteen",
         "short": "parenthesized nineteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 19"
       }
     },
     "key": "2486"
@@ -929,6 +1079,9 @@
       "default": {
         "default": "parenthesized number twenty",
         "short": "parenthesized twenty"
+      },
+      "mathspeak": {
+        "default": "parenthesized 20"
       }
     },
     "key": "2487"
@@ -940,6 +1093,9 @@
         "default": "digit one full stop",
         "alternative": "digit one period",
         "short": "one period"
+      },
+      "mathspeak": {
+        "default": "1 period"
       }
     },
     "key": "2488"
@@ -951,6 +1107,9 @@
         "default": "digit two full stop",
         "alternative": "digit two period",
         "short": "two period"
+      },
+      "mathspeak": {
+        "default": "2 period"
       }
     },
     "key": "2489"
@@ -962,6 +1121,9 @@
         "default": "digit three full stop",
         "alternative": "digit three period",
         "short": "three period"
+      },
+      "mathspeak": {
+        "default": "3 period"
       }
     },
     "key": "248A"
@@ -973,6 +1135,9 @@
         "default": "digit four full stop",
         "alternative": "digit four period",
         "short": "four period"
+      },
+      "mathspeak": {
+        "default": "4 period"
       }
     },
     "key": "248B"
@@ -984,6 +1149,9 @@
         "default": "digit five full stop",
         "alternative": "digit five period",
         "short": "five period"
+      },
+      "mathspeak": {
+        "default": "5 period"
       }
     },
     "key": "248C"
@@ -995,6 +1163,9 @@
         "default": "digit six full stop",
         "alternative": "digit six period",
         "short": "six period"
+      },
+      "mathspeak": {
+        "default": "6 period"
       }
     },
     "key": "248D"
@@ -1006,6 +1177,9 @@
         "default": "digit seven full stop",
         "alternative": "digit seven period",
         "short": "seven period"
+      },
+      "mathspeak": {
+        "default": "7 period"
       }
     },
     "key": "248E"
@@ -1017,6 +1191,9 @@
         "default": "digit eight full stop",
         "alternative": "digit eight period",
         "short": "eight period"
+      },
+      "mathspeak": {
+        "default": "8 period"
       }
     },
     "key": "248F"
@@ -1028,6 +1205,9 @@
         "default": "digit nine full stop",
         "alternative": "digit nine period",
         "short": "nine period"
+      },
+      "mathspeak": {
+        "default": "9 period"
       }
     },
     "key": "2490"
@@ -1039,6 +1219,9 @@
         "default": "number ten full stop",
         "alternative": "number ten period",
         "short": "ten period"
+      },
+      "mathspeak": {
+        "default": "10 period"
       }
     },
     "key": "2491"
@@ -1050,6 +1233,9 @@
         "default": "number eleven full stop",
         "alternative": "number eleven period",
         "short": "eleven period"
+      },
+      "mathspeak": {
+        "default": "11 period"
       }
     },
     "key": "2492"
@@ -1061,6 +1247,9 @@
         "default": "number twelve full stop",
         "alternative": "number twelve period",
         "short": "twelve period"
+      },
+      "mathspeak": {
+        "default": "12 period"
       }
     },
     "key": "2493"
@@ -1072,6 +1261,9 @@
         "default": "number thirteen full stop",
         "alternative": "number thirteen period",
         "short": "thirteen period"
+      },
+      "mathspeak": {
+        "default": "13 period"
       }
     },
     "key": "2494"
@@ -1083,6 +1275,9 @@
         "default": "number fourteen full stop",
         "alternative": "number fourteen period",
         "short": "fourteen period"
+      },
+      "mathspeak": {
+        "default": "14 period"
       }
     },
     "key": "2495"
@@ -1094,6 +1289,9 @@
         "default": "number fifteen full stop",
         "alternative": "number fifteen period",
         "short": "fifteen period"
+      },
+      "mathspeak": {
+        "default": "15 period"
       }
     },
     "key": "2496"
@@ -1105,6 +1303,9 @@
         "default": "number sixteen full stop",
         "alternative": "number sixteen period",
         "short": "sixteen period"
+      },
+      "mathspeak": {
+        "default": "16 period"
       }
     },
     "key": "2497"
@@ -1116,6 +1317,9 @@
         "default": "number seventeen full stop",
         "alternative": "number seventeen period",
         "short": "seventeen period"
+      },
+      "mathspeak": {
+        "default": "17 period"
       }
     },
     "key": "2498"
@@ -1127,6 +1331,9 @@
         "default": "number eighteen full stop",
         "alternative": "number eighteen period",
         "short": "eighteen period"
+      },
+      "mathspeak": {
+        "default": "18 period"
       }
     },
     "key": "2499"
@@ -1138,6 +1345,9 @@
         "default": "number nineteen full stop",
         "alternative": "number nineteen period",
         "short": "nineteen period"
+      },
+      "mathspeak": {
+        "default": "19 period"
       }
     },
     "key": "249A"
@@ -1149,6 +1359,9 @@
         "default": "number twenty full stop",
         "alternative": "number twenty period",
         "short": "twenty period"
+      },
+      "mathspeak": {
+        "default": "20 period"
       }
     },
     "key": "249B"
@@ -1159,6 +1372,9 @@
       "default": {
         "default": "circled digit zero",
         "short": "circled zero"
+      },
+      "mathspeak": {
+        "default": "circled 0"
       }
     },
     "key": "24EA"
@@ -1169,6 +1385,9 @@
       "default": {
         "default": "negative circled number eleven",
         "short": "negative circled eleven"
+      },
+      "mathspeak": {
+        "default": "negative circled 11"
       }
     },
     "key": "24EB"
@@ -1179,6 +1398,9 @@
       "default": {
         "default": "negative circled number twelve",
         "short": "negative circled twelve"
+      },
+      "mathspeak": {
+        "default": "negative circled 12"
       }
     },
     "key": "24EC"
@@ -1189,6 +1411,9 @@
       "default": {
         "default": "negative circled number thirteen",
         "short": "negative circled thirteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 13"
       }
     },
     "key": "24ED"
@@ -1199,6 +1424,9 @@
       "default": {
         "default": "negative circled number fourteen",
         "short": "negative circled fourteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 14"
       }
     },
     "key": "24EE"
@@ -1209,6 +1437,9 @@
       "default": {
         "default": "negative circled number fifteen",
         "short": "negative circled fifteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 15"
       }
     },
     "key": "24EF"
@@ -1219,6 +1450,9 @@
       "default": {
         "default": "negative circled number sixteen",
         "short": "negative circled sixteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 16"
       }
     },
     "key": "24F0"
@@ -1229,6 +1463,9 @@
       "default": {
         "default": "negative circled number seventeen",
         "short": "negative circled seventeen"
+      },
+      "mathspeak": {
+        "default": "negative circled 17"
       }
     },
     "key": "24F1"
@@ -1239,6 +1476,9 @@
       "default": {
         "default": "negative circled number eighteen",
         "short": "negative circled eighteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 18"
       }
     },
     "key": "24F2"
@@ -1249,6 +1489,9 @@
       "default": {
         "default": "negative circled number nineteen",
         "short": "negative circled nineteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 19"
       }
     },
     "key": "24F3"
@@ -1259,6 +1502,9 @@
       "default": {
         "default": "negative circled number twenty",
         "short": "negative circled twenty"
+      },
+      "mathspeak": {
+        "default": "negative circled 20"
       }
     },
     "key": "24F4"
@@ -1269,6 +1515,9 @@
       "default": {
         "default": "double circled digit one",
         "short": "double circled one"
+      },
+      "mathspeak": {
+        "default": "double circled 1"
       }
     },
     "key": "24F5"
@@ -1279,6 +1528,9 @@
       "default": {
         "default": "double circled digit two",
         "short": "double circled two"
+      },
+      "mathspeak": {
+        "default": "double circled 2"
       }
     },
     "key": "24F6"
@@ -1289,6 +1541,9 @@
       "default": {
         "default": "double circled digit three",
         "short": "double circled three"
+      },
+      "mathspeak": {
+        "default": "double circled 3"
       }
     },
     "key": "24F7"
@@ -1299,6 +1554,9 @@
       "default": {
         "default": "double circled digit four",
         "short": "double circled four"
+      },
+      "mathspeak": {
+        "default": "double circled 4"
       }
     },
     "key": "24F8"
@@ -1309,6 +1567,9 @@
       "default": {
         "default": "double circled digit five",
         "short": "double circled five"
+      },
+      "mathspeak": {
+        "default": "double circled 5"
       }
     },
     "key": "24F9"
@@ -1319,6 +1580,9 @@
       "default": {
         "default": "double circled digit six",
         "short": "double circled six"
+      },
+      "mathspeak": {
+        "default": "double circled 6"
       }
     },
     "key": "24FA"
@@ -1329,6 +1593,9 @@
       "default": {
         "default": "double circled digit seven",
         "short": "double circled seven"
+      },
+      "mathspeak": {
+        "default": "double circled 7"
       }
     },
     "key": "24FB"
@@ -1339,6 +1606,9 @@
       "default": {
         "default": "double circled digit eight",
         "short": "double circled eight"
+      },
+      "mathspeak": {
+        "default": "double circled 8"
       }
     },
     "key": "24FC"
@@ -1349,6 +1619,9 @@
       "default": {
         "default": "double circled digit nine",
         "short": "double circled nine"
+      },
+      "mathspeak": {
+        "default": "double circled 9"
       }
     },
     "key": "24FD"
@@ -1359,6 +1632,9 @@
       "default": {
         "default": "double circled number ten",
         "short": "double circled ten"
+      },
+      "mathspeak": {
+        "default": "double circled 10"
       }
     },
     "key": "24FE"
@@ -1369,6 +1645,9 @@
       "default": {
         "default": "negative circled digit zero",
         "short": "negative circled zero"
+      },
+      "mathspeak": {
+        "default": "negative circled 0"
       }
     },
     "key": "24FF"
@@ -1380,6 +1659,9 @@
         "default": "dingbat negative circled digit one",
         "alternative": "inverse circled digit one",
         "short": "inverse circled one"
+      },
+      "mathspeak": {
+        "default": "inverse circled 1"
       }
     },
     "key": "2776"
@@ -1391,6 +1673,9 @@
         "default": "dingbat negative circled digit two",
         "alternative": "inverse circled digit two",
         "short": "inverse circled two"
+      },
+      "mathspeak": {
+        "default": "inverse circled 2"
       }
     },
     "key": "2777"
@@ -1402,6 +1687,9 @@
         "default": "dingbat negative circled digit three",
         "alternative": "inverse circled digit three",
         "short": "inverse circled three"
+      },
+      "mathspeak": {
+        "default": "inverse circled 3"
       }
     },
     "key": "2778"
@@ -1413,6 +1701,9 @@
         "default": "dingbat negative circled digit four",
         "alternative": "inverse circled digit four",
         "short": "inverse circled four"
+      },
+      "mathspeak": {
+        "default": "inverse circled 4"
       }
     },
     "key": "2779"
@@ -1424,6 +1715,9 @@
         "default": "dingbat negative circled digit five",
         "alternative": "inverse circled digit five",
         "short": "inverse circled five"
+      },
+      "mathspeak": {
+        "default": "inverse circled 5"
       }
     },
     "key": "277A"
@@ -1435,6 +1729,9 @@
         "default": "dingbat negative circled digit six",
         "alternative": "inverse circled digit six",
         "short": "inverse circled six"
+      },
+      "mathspeak": {
+        "default": "inverse circled 6"
       }
     },
     "key": "277B"
@@ -1446,6 +1743,9 @@
         "default": "dingbat negative circled digit seven",
         "alternative": "inverse circled digit seven",
         "short": "inverse circled seven"
+      },
+      "mathspeak": {
+        "default": "inverse circled 7"
       }
     },
     "key": "277C"
@@ -1457,6 +1757,9 @@
         "default": "dingbat negative circled digit eight",
         "alternative": "inverse circled digit eight",
         "short": "inverse circled eight"
+      },
+      "mathspeak": {
+        "default": "inverse circled 8"
       }
     },
     "key": "277D"
@@ -1468,6 +1771,9 @@
         "default": "dingbat negative circled digit nine",
         "alternative": "inverse circled digit nine",
         "short": "inverse circled nine"
+      },
+      "mathspeak": {
+        "default": "inverse circled 9"
       }
     },
     "key": "277E"
@@ -1479,6 +1785,9 @@
         "default": "dingbat negative circled number ten",
         "alternative": "inverse circled number ten",
         "short": "inverse circled ten"
+      },
+      "mathspeak": {
+        "default": "inverse circled 10"
       }
     },
     "key": "277F"
@@ -1600,6 +1909,9 @@
         "default": "dingbat negative circled sans serif digit one",
         "alternative": "inverse circled sans serif digit one",
         "short": "inverse circled one"
+      },
+      "mathspeak": {
+        "default": "inverse circled 1"
       }
     },
     "key": "278A"
@@ -1611,6 +1923,9 @@
         "default": "dingbat negative circled sans serif digit two",
         "alternative": "inverse circled sans serif digit two",
         "short": "inverse circled two"
+      },
+      "mathspeak": {
+        "default": "inverse circled 2"
       }
     },
     "key": "278B"
@@ -1622,6 +1937,9 @@
         "default": "dingbat negative circled sans serif digit three",
         "alternative": "inverse circled sans serif digit three",
         "short": "inverse circled three"
+      },
+      "mathspeak": {
+        "default": "inverse circled 3"
       }
     },
     "key": "278C"
@@ -1633,6 +1951,9 @@
         "default": "dingbat negative circled sans serif digit four",
         "alternative": "inverse circled sans serif digit four",
         "short": "inverse circled four"
+      },
+      "mathspeak": {
+        "default": "inverse circled 4"
       }
     },
     "key": "278D"
@@ -1644,6 +1965,9 @@
         "default": "dingbat negative circled sans serif digit five",
         "alternative": "inverse circled sans serif digit five",
         "short": "inverse circled five"
+      },
+      "mathspeak": {
+        "default": "inverse circled 5"
       }
     },
     "key": "278E"
@@ -1655,6 +1979,9 @@
         "default": "dingbat negative circled sans serif digit six",
         "alternative": "inverse circled sans serif digit six",
         "short": "inverse circled six"
+      },
+      "mathspeak": {
+        "default": "inverse circled 6"
       }
     },
     "key": "278F"
@@ -1666,6 +1993,9 @@
         "default": "dingbat negative circled sans serif digit seven",
         "alternative": "inverse circled sans serif digit seven",
         "short": "inverse circled seven"
+      },
+      "mathspeak": {
+        "default": "inverse circled 7"
       }
     },
     "key": "2790"
@@ -1677,6 +2007,9 @@
         "default": "dingbat negative circled sans serif digit eight",
         "alternative": "inverse circled sans serif digit eight",
         "short": "inverse circled eight"
+      },
+      "mathspeak": {
+        "default": "inverse circled 8"
       }
     },
     "key": "2791"
@@ -1688,6 +2021,9 @@
         "default": "dingbat negative circled sans serif digit nine",
         "alternative": "inverse circled sans serif digit nine",
         "short": "inverse circled nine"
+      },
+      "mathspeak": {
+        "default": "inverse circled 9"
       }
     },
     "key": "2792"
@@ -1699,6 +2035,9 @@
         "default": "dingbat negative circled sans serif number ten",
         "alternative": "inverse circled sans serif number ten",
         "short": "inverse circled ten"
+      },
+      "mathspeak": {
+        "default": "inverse circled 10"
       }
     },
     "key": "2793"
@@ -2089,6 +2428,9 @@
       "default": {
         "default": "fullwidth digit zero",
         "short": "zero"
+      },
+      "mathspeak": {
+        "default": "0"
       }
     },
     "key": "FF10"
@@ -2099,6 +2441,9 @@
       "default": {
         "default": "fullwidth digit one",
         "short": "one"
+      },
+      "mathspeak": {
+        "default": "1"
       }
     },
     "key": "FF11"
@@ -2109,6 +2454,9 @@
       "default": {
         "default": "fullwidth digit two",
         "short": "two"
+      },
+      "mathspeak": {
+        "default": "2"
       }
     },
     "key": "FF12"
@@ -2119,6 +2467,9 @@
       "default": {
         "default": "fullwidth digit three",
         "short": "three"
+      },
+      "mathspeak": {
+        "default": "3"
       }
     },
     "key": "FF13"
@@ -2129,6 +2480,9 @@
       "default": {
         "default": "fullwidth digit four",
         "short": "four"
+      },
+      "mathspeak": {
+        "default": "4"
       }
     },
     "key": "FF14"
@@ -2139,6 +2493,9 @@
       "default": {
         "default": "fullwidth digit five",
         "short": "five"
+      },
+      "mathspeak": {
+        "default": "5"
       }
     },
     "key": "FF15"
@@ -2149,6 +2506,9 @@
       "default": {
         "default": "fullwidth digit six",
         "short": "six"
+      },
+      "mathspeak": {
+        "default": "6"
       }
     },
     "key": "FF16"
@@ -2159,6 +2519,9 @@
       "default": {
         "default": "fullwidth digit seven",
         "short": "seven"
+      },
+      "mathspeak": {
+        "default": "7"
       }
     },
     "key": "FF17"
@@ -2169,6 +2532,9 @@
       "default": {
         "default": "fullwidth digit eight",
         "short": "eight"
+      },
+      "mathspeak": {
+        "default": "8"
       }
     },
     "key": "FF18"
@@ -2179,6 +2545,9 @@
       "default": {
         "default": "fullwidth digit nine",
         "short": "nine"
+      },
+      "mathspeak": {
+        "default": "9"
       }
     },
     "key": "FF19"
@@ -2190,6 +2559,9 @@
         "default": "mathematical bold digit zero",
         "alternative": "bold digit zero",
         "short": "bold zero"
+      },
+      "mathspeak": {
+        "default": "bold 0"
       }
     },
     "key": "1D7CE"
@@ -2201,6 +2573,9 @@
         "default": "mathematical bold digit one",
         "alternative": "bold digit one",
         "short": "bold one"
+      },
+      "mathspeak": {
+        "default": "bold 1"
       }
     },
     "key": "1D7CF"
@@ -2212,6 +2587,9 @@
         "default": "mathematical bold digit two",
         "alternative": "bold digit two",
         "short": "bold two"
+      },
+      "mathspeak": {
+        "default": "bold 2"
       }
     },
     "key": "1D7D0"
@@ -2223,6 +2601,9 @@
         "default": "mathematical bold digit three",
         "alternative": "bold digit three",
         "short": "bold three"
+      },
+      "mathspeak": {
+        "default": "bold 3"
       }
     },
     "key": "1D7D1"
@@ -2234,6 +2615,9 @@
         "default": "mathematical bold digit four",
         "alternative": "bold digit four",
         "short": "bold four"
+      },
+      "mathspeak": {
+        "default": "bold 4"
       }
     },
     "key": "1D7D2"
@@ -2245,6 +2629,9 @@
         "default": "mathematical bold digit five",
         "alternative": "bold digit five",
         "short": "bold five"
+      },
+      "mathspeak": {
+        "default": "bold 5"
       }
     },
     "key": "1D7D3"
@@ -2256,6 +2643,9 @@
         "default": "mathematical bold digit six",
         "alternative": "bold digit six",
         "short": "bold six"
+      },
+      "mathspeak": {
+        "default": "bold 6"
       }
     },
     "key": "1D7D4"
@@ -2267,6 +2657,9 @@
         "default": "mathematical bold digit seven",
         "alternative": "bold digit seven",
         "short": "bold seven"
+      },
+      "mathspeak": {
+        "default": "bold 7"
       }
     },
     "key": "1D7D5"
@@ -2278,6 +2671,9 @@
         "default": "mathematical bold digit eight",
         "alternative": "bold digit eight",
         "short": "bold eight"
+      },
+      "mathspeak": {
+        "default": "bold 8"
       }
     },
     "key": "1D7D6"
@@ -2289,6 +2685,9 @@
         "default": "mathematical bold digit nine",
         "alternative": "bold digit nine",
         "short": "bold nine"
+      },
+      "mathspeak": {
+        "default": "bold 9"
       }
     },
     "key": "1D7D7"
@@ -2300,6 +2699,9 @@
         "default": "mathematical double struck digit zero",
         "alternative": "double struck zero",
         "short": "blackboard zero"
+      },
+      "mathspeak": {
+        "default": "blackboard 0"
       }
     },
     "key": "1D7D8"
@@ -2311,6 +2713,9 @@
         "default": "mathematical double struck digit one",
         "alternative": "double struck one",
         "short": "blackboard one"
+      },
+      "mathspeak": {
+        "default": "blackboard 1"
       }
     },
     "key": "1D7D9"
@@ -2322,6 +2727,9 @@
         "default": "mathematical double struck digit two",
         "alternative": "double struck two",
         "short": "blackboard two"
+      },
+      "mathspeak": {
+        "default": "blackboard 2"
       }
     },
     "key": "1D7DA"
@@ -2333,6 +2741,9 @@
         "default": "mathematical double struck digit three",
         "alternative": "double struck three",
         "short": "blackboard three"
+      },
+      "mathspeak": {
+        "default": "blackboard 3"
       }
     },
     "key": "1D7DB"
@@ -2344,6 +2755,9 @@
         "default": "mathematical double struck digit four",
         "alternative": "double struck four",
         "short": "blackboard four"
+      },
+      "mathspeak": {
+        "default": "blackboard 4"
       }
     },
     "key": "1D7DC"
@@ -2355,6 +2769,9 @@
         "default": "mathematical double struck digit five",
         "alternative": "double struck five",
         "short": "blackboard five"
+      },
+      "mathspeak": {
+        "default": "blackboard 5"
       }
     },
     "key": "1D7DD"
@@ -2366,6 +2783,9 @@
         "default": "mathematical double struck digit six",
         "alternative": "double struck six",
         "short": "blackboard six"
+      },
+      "mathspeak": {
+        "default": "blackboard 6"
       }
     },
     "key": "1D7DE"
@@ -2377,6 +2797,9 @@
         "default": "mathematical double struck digit seven",
         "alternative": "double struck seven",
         "short": "blackboard seven"
+      },
+      "mathspeak": {
+        "default": "blackboard 7"
       }
     },
     "key": "1D7DF"
@@ -2388,6 +2811,9 @@
         "default": "mathematical double struck digit eight",
         "alternative": "double struck eight",
         "short": "blackboard eight"
+      },
+      "mathspeak": {
+        "default": "blackboard 8"
       }
     },
     "key": "1D7E0"
@@ -2399,6 +2825,9 @@
         "default": "mathematical double struck digit nine",
         "alternative": "double struck nine",
         "short": "blackboard nine"
+      },
+      "mathspeak": {
+        "default": "blackboard 9"
       }
     },
     "key": "1D7E1"
@@ -2410,6 +2839,9 @@
         "default": "mathematical sans serif digit zero",
         "alternative": "sans serif digit zero",
         "short": "sans serif zero"
+      },
+      "mathspeak": {
+        "default": "sans serif 0"
       }
     },
     "key": "1D7E2"
@@ -2421,6 +2853,9 @@
         "default": "mathematical sans serif digit one",
         "alternative": "sans serif digit one",
         "short": "sans serif one"
+      },
+      "mathspeak": {
+        "default": "sans serif 1"
       }
     },
     "key": "1D7E3"
@@ -2432,6 +2867,9 @@
         "default": "mathematical sans serif digit two",
         "alternative": "sans serif digit two",
         "short": "sans serif two"
+      },
+      "mathspeak": {
+        "default": "sans serif 2"
       }
     },
     "key": "1D7E4"
@@ -2443,6 +2881,9 @@
         "default": "mathematical sans serif digit three",
         "alternative": "sans serif digit three",
         "short": "sans serif three"
+      },
+      "mathspeak": {
+        "default": "sans serif 3"
       }
     },
     "key": "1D7E5"
@@ -2454,6 +2895,9 @@
         "default": "mathematical sans serif digit four",
         "alternative": "sans serif digit four",
         "short": "sans serif four"
+      },
+      "mathspeak": {
+        "default": "sans serif 4"
       }
     },
     "key": "1D7E6"
@@ -2465,6 +2909,9 @@
         "default": "mathematical sans serif digit five",
         "alternative": "sans serif digit five",
         "short": "sans serif five"
+      },
+      "mathspeak": {
+        "default": "sans serif 5"
       }
     },
     "key": "1D7E7"
@@ -2476,6 +2923,9 @@
         "default": "mathematical sans serif digit six",
         "alternative": "sans serif digit six",
         "short": "sans serif six"
+      },
+      "mathspeak": {
+        "default": "sans serif 6"
       }
     },
     "key": "1D7E8"
@@ -2487,6 +2937,9 @@
         "default": "mathematical sans serif digit seven",
         "alternative": "sans serif digit seven",
         "short": "sans serif seven"
+      },
+      "mathspeak": {
+        "default": "sans serif 7"
       }
     },
     "key": "1D7E9"
@@ -2498,6 +2951,9 @@
         "default": "mathematical sans serif digit eight",
         "alternative": "sans serif digit eight",
         "short": "sans serif eight"
+      },
+      "mathspeak": {
+        "default": "sans serif 8"
       }
     },
     "key": "1D7EA"
@@ -2509,6 +2965,9 @@
         "default": "mathematical sans serif digit nine",
         "alternative": "sans serif digit nine",
         "short": "sans serif nine"
+      },
+      "mathspeak": {
+        "default": "sans serif 9"
       }
     },
     "key": "1D7EB"
@@ -2520,6 +2979,9 @@
         "default": "mathematical sans serif bold digit zero",
         "alternative": "sans serif bold digit zero",
         "short": "sans serif bold zero"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 0"
       }
     },
     "key": "1D7EC"
@@ -2531,6 +2993,9 @@
         "default": "mathematical sans serif bold digit one",
         "alternative": "sans serif bold digit one",
         "short": "sans serif bold one"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 1"
       }
     },
     "key": "1D7ED"
@@ -2542,6 +3007,9 @@
         "default": "mathematical sans serif bold digit two",
         "alternative": "sans serif bold digit two",
         "short": "sans serif bold two"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 2"
       }
     },
     "key": "1D7EE"
@@ -2553,6 +3021,9 @@
         "default": "mathematical sans serif bold digit three",
         "alternative": "sans serif bold digit three",
         "short": "sans serif bold three"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 3"
       }
     },
     "key": "1D7EF"
@@ -2564,6 +3035,9 @@
         "default": "mathematical sans serif bold digit four",
         "alternative": "sans serif bold digit four",
         "short": "sans serif bold four"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 4"
       }
     },
     "key": "1D7F0"
@@ -2575,6 +3049,9 @@
         "default": "mathematical sans serif bold digit five",
         "alternative": "sans serif bold digit five",
         "short": "sans serif bold five"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 5"
       }
     },
     "key": "1D7F1"
@@ -2586,6 +3063,9 @@
         "default": "mathematical sans serif bold digit six",
         "alternative": "sans serif bold digit six",
         "short": "sans serif bold six"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 6"
       }
     },
     "key": "1D7F2"
@@ -2597,6 +3077,9 @@
         "default": "mathematical sans serif bold digit seven",
         "alternative": "sans serif bold digit seven",
         "short": "sans serif bold seven"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 7"
       }
     },
     "key": "1D7F3"
@@ -2608,6 +3091,9 @@
         "default": "mathematical sans serif bold digit eight",
         "alternative": "sans serif bold digit eight",
         "short": "sans serif bold eight"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 8"
       }
     },
     "key": "1D7F4"
@@ -2619,6 +3105,9 @@
         "default": "mathematical sans serif bold digit nine",
         "alternative": "sans serif bold digit nine",
         "short": "sans serif bold nine"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 9"
       }
     },
     "key": "1D7F5"
@@ -2630,6 +3119,9 @@
         "default": "mathematical monospace digit zero",
         "alternative": "monospace zero",
         "short": "thin zero"
+      },
+      "mathspeak": {
+        "default": "monospace 0"
       }
     },
     "key": "1D7F6"
@@ -2641,6 +3133,9 @@
         "default": "mathematical monospace digit one",
         "alternative": "monospace one",
         "short": "thin one"
+      },
+      "mathspeak": {
+        "default": "monospace 1"
       }
     },
     "key": "1D7F7"
@@ -2652,6 +3147,9 @@
         "default": "mathematical monospace digit two",
         "alternative": "monospace two",
         "short": "thin two"
+      },
+      "mathspeak": {
+        "default": "monospace 2"
       }
     },
     "key": "1D7F8"
@@ -2663,6 +3161,9 @@
         "default": "mathematical monospace digit three",
         "alternative": "monospace three",
         "short": "thin three"
+      },
+      "mathspeak": {
+        "default": "monospace 3"
       }
     },
     "key": "1D7F9"
@@ -2674,6 +3175,9 @@
         "default": "mathematical monospace digit four",
         "alternative": "monospace four",
         "short": "thin four"
+      },
+      "mathspeak": {
+        "default": "monospace 4"
       }
     },
     "key": "1D7FA"
@@ -2685,6 +3189,9 @@
         "default": "mathematical monospace digit five",
         "alternative": "monospace five",
         "short": "thin five"
+      },
+      "mathspeak": {
+        "default": "monospace 5"
       }
     },
     "key": "1D7FB"
@@ -2696,6 +3203,9 @@
         "default": "mathematical monospace digit six",
         "alternative": "monospace six",
         "short": "thin six"
+      },
+      "mathspeak": {
+        "default": "monospace 6"
       }
     },
     "key": "1D7FC"
@@ -2707,6 +3217,9 @@
         "default": "mathematical monospace digit seven",
         "alternative": "monospace seven",
         "short": "thin seven"
+      },
+      "mathspeak": {
+        "default": "monospace 7"
       }
     },
     "key": "1D7FD"
@@ -2718,6 +3231,9 @@
         "default": "mathematical monospace digit eight",
         "alternative": "monospace eight",
         "short": "thin eight"
+      },
+      "mathspeak": {
+        "default": "monospace 8"
       }
     },
     "key": "1D7FE"
@@ -2729,6 +3245,9 @@
         "default": "mathematical monospace digit nine",
         "alternative": "monospace nine",
         "short": "thin nine"
+      },
+      "mathspeak": {
+        "default": "monospace 9"
       }
     },
     "key": "1D7FF"
@@ -2738,7 +3257,10 @@
     "mappings": {
       "default": {
         "default": "digit zero full stop",
-        "short": "zero full stop"
+        "short": "zero period"
+      },
+      "mathspeak": {
+        "default": "0 period"
       }
     },
     "key": "1F100"
@@ -2749,6 +3271,9 @@
       "default": {
         "default": "digit zero comma",
         "short": "zero comma"
+      },
+      "mathspeak": {
+        "default": "0 comma"
       }
     },
     "key": "1F101"
@@ -2759,6 +3284,9 @@
       "default": {
         "default": "digit one comma",
         "short": "one comma"
+      },
+      "mathspeak": {
+        "default": "1 comma"
       }
     },
     "key": "1F102"
@@ -2769,6 +3297,9 @@
       "default": {
         "default": "digit two comma",
         "short": "two comma"
+      },
+      "mathspeak": {
+        "default": "2 comma"
       }
     },
     "key": "1F103"
@@ -2779,6 +3310,9 @@
       "default": {
         "default": "digit three comma",
         "short": "three comma"
+      },
+      "mathspeak": {
+        "default": "3 comma"
       }
     },
     "key": "1F104"
@@ -2789,6 +3323,9 @@
       "default": {
         "default": "digit four comma",
         "short": "four comma"
+      },
+      "mathspeak": {
+        "default": "4 comma"
       }
     },
     "key": "1F105"
@@ -2799,6 +3336,9 @@
       "default": {
         "default": "digit five comma",
         "short": "five comma"
+      },
+      "mathspeak": {
+        "default": "5 comma"
       }
     },
     "key": "1F106"
@@ -2809,6 +3349,9 @@
       "default": {
         "default": "digit six comma",
         "short": "six comma"
+      },
+      "mathspeak": {
+        "default": "6 comma"
       }
     },
     "key": "1F107"
@@ -2819,6 +3362,9 @@
       "default": {
         "default": "digit seven comma",
         "short": "seven comma"
+      },
+      "mathspeak": {
+        "default": "7 comma"
       }
     },
     "key": "1F108"
@@ -2829,6 +3375,9 @@
       "default": {
         "default": "digit eight comma",
         "short": "eight comma"
+      },
+      "mathspeak": {
+        "default": "8 comma"
       }
     },
     "key": "1F109"
@@ -2839,6 +3388,9 @@
       "default": {
         "default": "digit nine comma",
         "short": "nine comma"
+      },
+      "mathspeak": {
+        "default": "9 comma"
       }
     },
     "key": "1F10A"

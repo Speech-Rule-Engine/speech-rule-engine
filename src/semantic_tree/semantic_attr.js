@@ -188,7 +188,7 @@ sre.SemanticAttr = function() {
   /** Array of all fences.
    * @type {Array.<string>}
    */
-  this.fences = this.neutralFences.concat(
+  this.allFences = this.neutralFences.concat(
       this.leftFences, this.rightFences, this.topFences, this.bottomFences);
 
   // Identifiers.
@@ -489,6 +489,34 @@ sre.SemanticAttr = function() {
       [
         'ℼ', 'ℽ', 'ℾ', 'ℿ'
       ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecial =
+      [
+        'ϐ', 'ϑ', 'ϕ', 'ϖ', 'ϗ', 'ϰ', 'ϱ', 'ϵ', '϶', 'ϴ'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecialBold =
+      [
+        '𝛜', '𝛝', '𝛞', '𝛟', '𝛠', '𝛡'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecialItalic =
+      [
+        '𝜖', '𝜗', '𝜘', '𝜙', '𝜚', '𝜛'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.greekSpecialSansSerifBold =
+      [
+        '𝞊', '𝞋', '𝞌', '𝞍', '𝞎', '𝞏'
+      ];
 
   // Other alphabets.
   /**
@@ -514,7 +542,10 @@ sre.SemanticAttr = function() {
       this.latinDoubleStruckItalic, this.capitalGreek, this.smallGreek,
       this.capitalGreekBold, this.smallGreekBold, this.capitalGreekItalic,
       this.smallGreekItalic, this.capitalGreekSansSerifBold,
-      this.smallGreekSansSerifBold, this.greekDoubleStruck, this.hebrewLetters);
+      this.smallGreekSansSerifBold, this.greekDoubleStruck, this.greekSpecial,
+      this.greekSpecialBold, this.greekSpecialItalic,
+      this.greekSpecialSansSerifBold,
+      this.hebrewLetters);
 
   //Operator symbols
   /**
@@ -668,8 +699,21 @@ sre.SemanticAttr = function() {
   this.prefixOps =
       // TODO (sorge) Insert nabla, differential operators etc.
       [
-        '∀', '∃'
+        '∀', '∃', '∆', '∇', '∂', '∁', '∄'
       ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.prefixOpsBold = ['𝛁', '𝛛', '𝟊', '𝟋'];
+  /**
+   * @type {Array.<string>}
+   */
+  this.prefixOpsItalic = ['𝛻', '𝜕'];
+  /**
+   * @type {Array.<string>}
+   */
+  this.prefixOpsSansSerifBold = ['𝝯', '𝞉'];
+
   /**
    * @type {Array.<string>}
    */
@@ -1099,6 +1143,26 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.GREEKLETTER,
       font: sre.SemanticAttr.Font.DOUBLESTRUCK
     },
+    {set: this.greekSpecial,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.NORMAL
+    },
+    {set: this.greekSpecialBold,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.BOLD
+    },
+    {set: this.greekSpecialItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.ITALIC
+    },
+    {set: this.greekSpecialSansSerifBold,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLD
+    },
     // Other alphabets.
     {set: this.hebrewLetters,
       type: sre.SemanticAttr.Type.IDENTIFIER,
@@ -1165,6 +1229,21 @@ sre.SemanticAttr = function() {
     {set: this.prefixOps,
       type: sre.SemanticAttr.Type.PREFIXOP,
       role: sre.SemanticAttr.Role.PREFIXFUNC
+    },
+    {set: this.prefixOpsBold,
+      type: sre.SemanticAttr.Type.PREFIXOP,
+      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      font: sre.SemanticAttr.Font.BOLD
+    },
+    {set: this.prefixOpsItalic,
+      type: sre.SemanticAttr.Type.PREFIXOP,
+      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      font: sre.SemanticAttr.Font.ITALIC
+    },
+    {set: this.prefixOpsSansSerifBold,
+      type: sre.SemanticAttr.Type.PREFIXOP,
+      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLD
     },
     // Relations
     {set: this.equalities,
@@ -1412,6 +1491,10 @@ sre.SemanticAttr.Role = {
   CASES: 'cases',
   TABLE: 'table',
 
+  // Roles for special multline types.
+  MULTIEQU: 'multiequ',   // Multline equation system
+  MULTIREL: 'multirel',   // Multiline relation system
+
   // General
   UNKNOWN: 'unknown',
   PROTECTED: 'protected'
@@ -1428,12 +1511,16 @@ sre.SemanticAttr.Font = {
   BOLDFRAKTUR: 'bold-fraktur',
   BOLDITALIC: 'bold-italic',
   BOLDSCRIPT: 'bold-script',
+  CALIGRAPHIC: 'caligraphic',
+  CALIGRAPHICBOLD: 'caligraphic-bold',
   DOUBLESTRUCK: 'double-struck',
   DOUBLESTRUCKITALIC: 'double-struck-italic',
   FRAKTUR: 'fraktur',
   ITALIC: 'italic',
   MONOSPACE: 'monospace',
   NORMAL: 'normal',
+  OLDSTYLE: 'oldstyle',
+  OLDSTYLEBOLD: 'oldstyle-bold',
   SCRIPT: 'script',
   SANSSERIF: 'sans-serif',
   SANSSERIFITALIC: 'sans-serif-italic',

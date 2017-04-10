@@ -45,10 +45,19 @@ sre.WalkerTest = function() {
    */
   this.system = sre.System.getInstance();
 
-  this.mml = sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_MML);
-  this.htmlCss = sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_HTML_CSS);
-  this.chtml = sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_COMMON_HTML);
-  this.svg = sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_SVG);
+  this.quadratic = {
+    mml: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_MML),
+    htmlCss: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_HTML_CSS),
+    chtml: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_COMMON_HTML),
+    svg: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_SVG)
+  };
+
+  this.equation = {
+    mml: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_MML),
+    htmlCss: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_HTML_CSS),
+    chtml: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_COMMON_HTML),
+    svg: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_SVG)
+  };
 
 };
 goog.inherits(sre.WalkerTest, sre.AbstractTest);
@@ -1125,16 +1134,17 @@ sre.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
  *          browser: (undefined|string)}} renderer
  *     Information on renderer, browser. Has to at least contain the
  *     renderer field.
+ * @param {string} mml The MathML string for the node.
  * @return {sre.Walker} The newly created walker.
  * @private
  */
-sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer) {
+sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer, mml) {
   return sre.WalkerFactory.walker(
       type, node,
       sre.SpeechGeneratorFactory.generator('Node'),
       /** @type {!sre.Highlighter} */(sre.HighlighterFactory.highlighter(
       {color: 'black'}, {color: 'white'}, renderer)),
-      sre.WalkerTest.QUADRATIC_MML
+      mml
   );
 };
 
@@ -1144,16 +1154,18 @@ sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer) {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSyntaxMoveTests_ = function(walker) {
+sre.WalkerTest.prototype.runSyntaxQuadraticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'X', 'equality');
   this.executeTest_(walker, 'DOWN', 'x');
   this.executeTest_(walker, 'RIGHT', 'equals');
   this.executeTest_(walker, 'RIGHT',
       'StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'SPACE', 'Level 1 collapsible');
+  this.executeTest_(walker, 'X', 'fraction');
   this.executeTest_(walker, 'DOWN',
       'Numerator negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
@@ -1164,59 +1176,69 @@ sre.WalkerTest.prototype.runSyntaxMoveTests_ = function(walker) {
   this.executeTest_(walker, 'LEFT', 'equals');
   this.executeTest_(walker, 'LEFT', 'x');
   this.executeTest_(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'HOME',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'DOWN', 'x');
+  this.executeTest_(walker, 'X', 'identifier');
 };
 
 
 /**
  * Test for syntax walker on MML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerMml = function() {
+sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMml = function() {
   var walker = this.createWalker_(
-      'Syntax', this.mml, {renderer: 'NativeMML'});
-  this.runSyntaxMoveTests_(walker);
+      'Syntax', this.quadratic.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSyntaxQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for syntax walker on MML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerMmlCss = function() {
+sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMmlCss = function() {
   var walker = this.createWalker_(
-      'Syntax', this.mml,
-      {renderer: 'NativeMML', browser: 'Safari'});
-  this.runSyntaxMoveTests_(walker);
+      'Syntax', this.quadratic.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSyntaxQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for syntax walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerHtmlCss = function() {
+sre.WalkerTest.prototype.testSyntaxWalkerQuadraticHtmlCss = function() {
   var walker = this.createWalker_(
-      'Syntax', this.htmlCss, {renderer: 'HTML-CSS'});
-  this.runSyntaxMoveTests_(walker);
+      'Syntax', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSyntaxQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for syntax walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerCommonHtml = function() {
+sre.WalkerTest.prototype.testSyntaxWalkerQuadraticCommonHtml = function() {
   var walker = this.createWalker_(
-      'Syntax', this.chtml,
-      {renderer: 'CommonHTML'});
-  this.runSyntaxMoveTests_(walker);
+      'Syntax', this.quadratic.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSyntaxQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for syntax walker on SVG elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerSvg = function() {
+sre.WalkerTest.prototype.testSyntaxWalkerQuadraticSvg = function() {
   var walker = this.createWalker_(
-      'Syntax', this.svg,
-      {renderer: 'SVG'});
-  this.runSyntaxMoveTests_(walker);
+      'Syntax', this.quadratic.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSyntaxQuadraticMoveTests_(walker);
 };
 
 
@@ -1225,10 +1247,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
+sre.WalkerTest.prototype.runSemanticQuadraticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'X', 'equality');
   this.executeTest_(walker, 'DOWN', 'x');
   this.executeTest_(walker, 'RIGHT',
       'equals StartFraction negative b plus-or-minus StartRoot' +
@@ -1237,6 +1260,7 @@ sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
       'equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'SPACE', 'Level 1 collapsible');
+  this.executeTest_(walker, 'X', 'fraction');
   this.executeTest_(walker, 'DOWN',
       'Numerator negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
@@ -1246,59 +1270,69 @@ sre.WalkerTest.prototype.runSemanticMoveTests_ = function(walker) {
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'LEFT', 'x');
   this.executeTest_(walker, 'LEFT', 'x');
+  this.executeTest_(walker, 'HOME',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'DOWN', 'x');
+  this.executeTest_(walker, 'X', 'identifier');
 };
 
 
 /**
  * Test for semantic walker on MML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerMml = function() {
+sre.WalkerTest.prototype.testSemanticWalkerQuadraticMml = function() {
   var walker = this.createWalker_(
-      'Semantic', this.mml, {renderer: 'NativeMML'});
-  this.runSemanticMoveTests_(walker);
+      'Semantic', this.quadratic.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSemanticQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for semantic walker on MML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerMmlCss = function() {
+sre.WalkerTest.prototype.testSemanticWalkerQuadraticMmlCss = function() {
   var walker = this.createWalker_(
-      'Semantic', this.mml,
-      {renderer: 'NativeMML', browser: 'Safari'});
-  this.runSemanticMoveTests_(walker);
+      'Semantic', this.quadratic.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSemanticQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for semantic walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerHtmlCss = function() {
+sre.WalkerTest.prototype.testSemanticWalkerQuadraticHtmlCss = function() {
   var walker = this.createWalker_(
-      'Semantic', this.htmlCss, {renderer: 'HTML-CSS'});
-  this.runSemanticMoveTests_(walker);
+      'Semantic', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSemanticQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for semantic walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerCommonHtml = function() {
+sre.WalkerTest.prototype.testSemanticWalkerQuadraticCommonHtml = function() {
   var walker = this.createWalker_(
-      'Semantic', this.chtml,
-      {renderer: 'CommonHTML'});
-  this.runSemanticMoveTests_(walker);
+      'Semantic', this.quadratic.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSemanticQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for semantic walker on SVG elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerSvg = function() {
+sre.WalkerTest.prototype.testSemanticWalkerQuadraticSvg = function() {
   var walker = this.createWalker_(
-      'Semantic', this.svg,
-      {renderer: 'SVG'});
-  this.runSemanticMoveTests_(walker);
+      'Semantic', this.quadratic.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runSemanticQuadraticMoveTests_(walker);
 };
 
 
@@ -1307,7 +1341,7 @@ sre.WalkerTest.prototype.testSemanticWalkerSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runDummyMoveTests_ = function(walker) {
+sre.WalkerTest.prototype.runDummyQuadraticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -1323,59 +1357,67 @@ sre.WalkerTest.prototype.runDummyMoveTests_ = function(walker) {
   this.executeTest_(walker, 'SPACE',
       'x equals StartFraction negative b plus-or-minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, 'HOME',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
 
 
 /**
  * Test for dummy walker on MML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerMml = function() {
+sre.WalkerTest.prototype.testDummyWalkerQuadraticMml = function() {
   var walker = this.createWalker_(
-      'Dummy', this.mml, {renderer: 'NativeMML'});
-  this.runDummyMoveTests_(walker);
+      'Dummy', this.quadratic.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runDummyQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for dummy walker on MML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerMmlCss = function() {
+sre.WalkerTest.prototype.testDummyWalkerQuadraticMmlCss = function() {
   var walker = this.createWalker_(
-      'Dummy', this.mml,
-      {renderer: 'NativeMML', browser: 'Safari'});
-  this.runDummyMoveTests_(walker);
+      'Dummy', this.quadratic.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runDummyQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for dummy walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerHtmlCss = function() {
+sre.WalkerTest.prototype.testDummyWalkerQuadraticHtmlCss = function() {
   var walker = this.createWalker_(
-      'Dummy', this.htmlCss, {renderer: 'HTML-CSS'});
-  this.runDummyMoveTests_(walker);
+      'Dummy', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runDummyQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for dummy walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerCommonHtml = function() {
+sre.WalkerTest.prototype.testDummyWalkerQuadraticCommonHtml = function() {
   var walker = this.createWalker_(
-      'Dummy', this.chtml,
-      {renderer: 'CommonHTML'});
-  this.runDummyMoveTests_(walker);
+      'Dummy', this.quadratic.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runDummyQuadraticMoveTests_(walker);
 };
 
 
 /**
  * Test for dummy walker on SVG elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerSvg = function() {
+sre.WalkerTest.prototype.testDummyWalkerQuadraticSvg = function() {
   var walker = this.createWalker_(
-      'Dummy', this.svg,
-      {renderer: 'SVG'});
-  this.runDummyMoveTests_(walker);
+      'Dummy', this.quadratic.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.QUADRATIC_MML);
+  this.runDummyQuadraticMoveTests_(walker);
 };
 
 
@@ -1384,7 +1426,7 @@ sre.WalkerTest.prototype.testDummyWalkerSvg = function() {
  * @param {!Node} node The node on which to test the summary.
  * @private
  */
-sre.WalkerTest.prototype.executeSummaryTest_ = function(node) {
+sre.WalkerTest.prototype.executeSummaryQuadraticTest_ = function(node) {
   var dummy = sre.WalkerFactory.walker(
       'Dummy', node,
       sre.SpeechGeneratorFactory.generator('Summary'),
@@ -1401,6 +1443,762 @@ sre.WalkerTest.prototype.executeSummaryTest_ = function(node) {
  * quadratic formula.
  */
 sre.WalkerTest.prototype.testSummary = function() {
-  [this.mml, this.htmlCss, this.chtml, this.svg].
-      forEach(goog.bind(this.executeSummaryTest_, this));
+  [this.quadratic.mml, this.quadratic.htmlCss,
+   this.quadratic.chtml, this.quadratic.svg].
+      forEach(goog.bind(this.executeSummaryQuadraticTest_, this));
+};
+
+
+/**
+ * A simple equation system in enriched MML form.
+ * @type {string}
+ */
+sre.WalkerTest.EQUATION_MML =
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
+    ' data-semantic-complexity="19">' +
+    '<mtable columnalign="right center left" rowspacing="3pt"' +
+    ' columnspacing="0 thickmathspace" displaystyle="true"' +
+    ' data-semantic-type="table" data-semantic-role="equality"' +
+    ' data-semantic-id="16" data-semantic-children="7,15"' +
+    ' data-semantic-complexity="19">' +
+    '<mtr data-semantic-type="row" data-semantic-role="table"' +
+    ' data-semantic-id="7" data-semantic-children="1,4,6"' +
+    ' data-semantic-parent="16" data-semantic-complexity="8.5">' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="1" data-semantic-children="0"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="0"' +
+    ' data-semantic-parent="1" data-semantic-complexity="1">a</mi>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="4" data-semantic-children="3"' +
+    ' data-semantic-parent="7" data-semantic-complexity="3.5">' +
+    '<mi data-semantic-complexity="0.5"></mi>' +
+    '<mo data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="3" data-semantic-parent="4"' +
+    ' data-semantic-complexity="1">=</mo>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="6" data-semantic-children="5"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="5"' +
+    ' data-semantic-parent="6" data-semantic-complexity="1">b</mi>' +
+    '</mtd>' +
+    '</mtr>' +
+    '<mtr data-semantic-type="row" data-semantic-role="table"' +
+    ' data-semantic-id="15" data-semantic-children="9,12,14"' +
+    ' data-semantic-parent="16" data-semantic-complexity="8.5">' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="9" data-semantic-children="8"' +
+    ' data-semantic-parent="15" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1">c</mi>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="12" data-semantic-children="11"' +
+    ' data-semantic-parent="15" data-semantic-complexity="3.5">' +
+    '<mi data-semantic-complexity="0.5"></mi>' +
+    '<mo data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="11" data-semantic-parent="12"' +
+    ' data-semantic-complexity="1">=</mo>' +
+    '</mtd>' +
+    '<mtd data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="14" data-semantic-children="13"' +
+    ' data-semantic-parent="15" data-semantic-complexity="1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="13"' +
+    ' data-semantic-parent="14" data-semantic-complexity="1">d</mi>' +
+    '</mtd>' +
+    '</mtr>' +
+    '</mtable>' +
+    '</math>';
+
+
+/**
+ * A simple equation system in HTML CSS format.
+ * @type {string}
+ */
+sre.WalkerTest.EQUATION_HTML_CSS =
+    '<span class="math" id="MathJax-Span-28" data-semantic-complexity="19"' +
+    ' style="width: 2.927em; display: inline-block;"><span style="display:' +
+    ' inline-block; position: relative; width: 2.738em; height: 0px;' +
+    ' font-size: 106%;"><span style="position: absolute; clip: rect(0.568em' +
+    ' 1002.55em 3.163em -999.998em); top: -2.12em; left: 0em;"><span' +
+    ' class="mrow" id="MathJax-Span-29"><span class="mtable"' +
+    ' id="MathJax-Span-30" data-semantic-type="table"' +
+    ' data-semantic-role="equality" data-semantic-id="16"' +
+    ' data-semantic-children="7,15" data-semantic-complexity="19"' +
+    ' style="padding-right: 0.191em; padding-left: 0.191em;"' +
+    '><span style="display: inline-block; position: relative;' +
+    ' width: 2.408em; height: 0px;"><span style="position: absolute; clip:' +
+    ' rect(2.833em 1000.52em 4.861em -999.998em); top: -4.007em; left: 0em;">' +
+    '<span style="display: inline-block; position: relative; width: 0.521em;' +
+    ' height: 0px;"><span style="position: absolute; clip: rect(3.446em' +
+    ' 1000.52em 4.153em -999.998em); top: -4.62em; right: 0em;"><span' +
+    ' class="mtd" id="MathJax-Span-31" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="1"' +
+    ' data-semantic-children="0" data-semantic-parent="7"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-32"><span class="mi" id="MathJax-Span-33"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="0"' +
+    ' data-semantic-parent="1" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >a</span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 4.012em;"></span></span><span' +
+    ' style="position: absolute; clip: rect(3.446em 1000.43em 4.153em' +
+    ' -999.998em); top: -3.3em; right: 0em;"><span class="mtd"' +
+    ' id="MathJax-Span-41" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="9"' +
+    ' data-semantic-children="8" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-42"><span class="mi" id="MathJax-Span-43"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >c</span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 4.012em;"></span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span><span style="position: absolute; clip: rect(2.88em 1000.99em' +
+    ' 4.861em -999.998em); top: -4.007em; left: 0.521em;"><span' +
+    ' style="display: inline-block; position: relative; width: 1.087em;' +
+    ' height: 0px;"><span style="position: absolute; clip: rect(3.493em' +
+    ' 1000.99em 4.153em -999.998em); top: -4.62em; left: 50%; margin-left:' +
+    ' -0.517em;"><span class="mtd" id="MathJax-Span-34"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="4" data-semantic-children="3"' +
+    ' data-semantic-parent="7" data-semantic-complexity="3.5"' +
+    '  ><span' +
+    ' class="mrow" id="MathJax-Span-35"><span class="mi" id="MathJax-Span-36"' +
+    ' data-semantic-complexity="0.5"></span><span class="mo"' +
+    ' id="MathJax-Span-37" data-semantic-type="relation"' +
+    ' data-semantic-role="equality" data-semantic-id="3"' +
+    ' data-semantic-parent="4" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Main; padding-left: 0.285em;"' +
+    ' >=</span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span><span style="position: absolute; clip: rect(3.493em 1000.99em' +
+    ' 4.153em -999.998em); top: -3.3em; left: 50%; margin-left: -0.517em;">' +
+    '<span class="mtd" id="MathJax-Span-44" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="12"' +
+    ' data-semantic-children="11" data-semantic-parent="15"' +
+    ' data-semantic-complexity="3.5" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-45"><span class="mi" id="MathJax-Span-46"' +
+    ' data-semantic-complexity="0.5"></span><span class="mo"' +
+    ' id="MathJax-Span-47" data-semantic-type="relation"' +
+    ' data-semantic-role="equality" data-semantic-id="11"' +
+    ' data-semantic-parent="12" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Main; padding-left: 0.285em;"' +
+    ' >=</span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span></span><span style="display: inline-block; width: 0px; height:' +
+    ' 4.012em;"></span></span><span style="position: absolute; clip:' +
+    ' rect(2.597em 1000.52em 4.861em -999.998em); top: -4.007em; left:' +
+    ' 1.889em;"><span style="display: inline-block; position: relative;' +
+    ' width: 0.521em; height: 0px;"><span style="position: absolute; clip:' +
+    ' rect(3.163em 1000.43em 4.153em -999.998em); top: -4.62em; left: 0em;">' +
+    '<span class="mtd" id="MathJax-Span-38" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="6"' +
+    ' data-semantic-children="5" data-semantic-parent="7"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-39"><span class="mi" id="MathJax-Span-40"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="5"' +
+    ' data-semantic-parent="6" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >b</span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 4.012em;"></span></span><span' +
+    ' style="position: absolute; clip: rect(3.163em 1000.52em 4.153em' +
+    ' -999.998em); top: -3.3em; left: 0em;"><span class="mtd"' +
+    ' id="MathJax-Span-48" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="14"' +
+    ' data-semantic-children="13" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" ' +
+    ' ><span class="mrow"' +
+    ' id="MathJax-Span-49"><span class="mi" id="MathJax-Span-50"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="13"' +
+    ' data-semantic-parent="14" data-semantic-complexity="1"' +
+    ' style="font-family: MathJax_Math; font-style: italic;"' +
+    ' >d<span style="display: inline-block; overflow:' +
+    ' hidden; height: 1px; width: 0.002em;"></span></span></span></span><span' +
+    ' style="display: inline-block; width: 0px; height: 4.012em;"></span>' +
+    '</span></span><span style="display: inline-block; width: 0px; height:' +
+    ' 4.012em;"></span></span></span></span></span><span style="display:' +
+    ' inline-block; width: 0px; height: 2.125em;"></span></span></span><span' +
+    ' style="display: inline-block; overflow: hidden; vertical-align:' +
+    ' -0.997em; border-left: 0px solid; width: 0px; height: 2.552em;">' +
+    '</span>' +
+    '</span>';
+
+
+/**
+ * A simple equation system in COMMON HTML form.
+ * @type {string}
+ */
+sre.WalkerTest.EQUATION_COMMON_HTML =
+    '<span id="MJXc-Node-26" class="mjx-math" data-semantic-complexity="19">' +
+    '<span id="MJXc-Node-27" class="mjx-mrow"><span id="MJXc-Node-28"' +
+    ' class="mjx-mtable" data-semantic-type="table"' +
+    ' data-semantic-role="equality" data-semantic-id="16"' +
+    ' data-semantic-children="7,15" data-semantic-complexity="19"' +
+    ' style="vertical-align: -0.9em; padding: 0px 0.167em;"><span' +
+    ' class="mjx-table"><span id="MJXc-Node-29" class="mjx-mtr"' +
+    ' data-semantic-type="row" data-semantic-role="table"' +
+    ' data-semantic-id="7" data-semantic-children="1,4,6"' +
+    ' data-semantic-parent="16" data-semantic-complexity="8.5" style="height:' +
+    ' 1.15em;"><span id="MJXc-Node-30" class="mjx-mtd"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="1" data-semantic-children="0"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1" style="padding:' +
+    ' 0px; text-align: right; width: 0.529em;"><span id="MJXc-Node-31"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-32"' +
+    ' class="mjx-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="0" data-semantic-parent="1"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
+    ' style="padding-top: 0.197em; padding-bottom: 0.294em;">a</span></span>' +
+    '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-33"' +
+    ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="4" data-semantic-children="3"' +
+    ' data-semantic-parent="7" data-semantic-complexity="3.5" style="padding:' +
+    ' 0px 0.139em 0px 0px; width: 1.056em;"><span id="MJXc-Node-34"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-35"' +
+    ' class="mjx-mi" data-semantic-complexity="0.5"></span><span' +
+    ' id="MJXc-Node-36" class="mjx-mo MJXc-space3"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="3" data-semantic-parent="4"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-main-R"' +
+    ' style="padding-top: 0.1em; padding-bottom: 0.294em;">=</span></span>' +
+    '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-37"' +
+    ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="6" data-semantic-children="5"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1" style="padding:' +
+    ' 0px 0px 0px 0.139em; text-align: left; width: 0.523em;"><span' +
+    ' id="MJXc-Node-38" class="mjx-mrow" style="margin-top: -0.2em;"><span' +
+    ' id="MJXc-Node-39" class="mjx-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="5" data-semantic-parent="6"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
+    ' style="padding-top: 0.488em; padding-bottom: 0.294em;">b</span></span>' +
+    '<span class="mjx-strut"></span></span></span></span><span' +
+    ' id="MJXc-Node-40" class="mjx-mtr" data-semantic-type="row"' +
+    ' data-semantic-role="table" data-semantic-id="15"' +
+    ' data-semantic-children="9,12,14" data-semantic-parent="16"' +
+    ' data-semantic-complexity="8.5" style="height: 1.15em;"><span' +
+    ' id="MJXc-Node-41" class="mjx-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="9"' +
+    ' data-semantic-children="8" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" style="padding: 0.15em 0px 0px;' +
+    ' text-align: right;"><span id="MJXc-Node-42" class="mjx-mrow"' +
+    ' style="margin-top: -0.2em;"><span id="MJXc-Node-43" class="mjx-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1"><span' +
+    ' class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.197em;' +
+    ' padding-bottom: 0.294em;">c</span></span><span class="mjx-strut">' +
+    '</span></span></span><span id="MJXc-Node-44" class="mjx-mtd"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="12" data-semantic-children="11"' +
+    ' data-semantic-parent="15" data-semantic-complexity="3.5"' +
+    ' style="padding: 0.15em 0.139em 0px 0px;"><span id="MJXc-Node-45"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-46"' +
+    ' class="mjx-mi" data-semantic-complexity="0.5"></span><span' +
+    ' id="MJXc-Node-47" class="mjx-mo MJXc-space3"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="11" data-semantic-parent="12"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-main-R"' +
+    ' style="padding-top: 0.1em; padding-bottom: 0.294em;">=</span></span>' +
+    '<span class="mjx-strut"></span></span></span><span id="MJXc-Node-48"' +
+    ' class="mjx-mtd" data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="14" data-semantic-children="13"' +
+    ' data-semantic-parent="15" data-semantic-complexity="1" style="padding:' +
+    ' 0.15em 0px 0px 0.139em; text-align: left;"><span id="MJXc-Node-49"' +
+    ' class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-50"' +
+    ' class="mjx-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="13" data-semantic-parent="14"' +
+    ' data-semantic-complexity="1"><span class="mjx-char MJXc-TeX-math-I"' +
+    ' style="padding-top: 0.488em; padding-bottom: 0.294em; padding-right:' +
+    ' 0.003em;">d</span></span><span class="mjx-strut"></span></span></span>' +
+    '</span></span></span></span></span>';
+
+
+/**
+ * A simple equation system as SVG.
+ * @type {string}
+ */
+sre.WalkerTest.EQUATION_SVG =
+    '<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="mjx-svg-math"' +
+    ' data-semantic-complexity="19" width="6.283ex" height="5.682ex"' +
+    ' viewBox="0 -1458.1 2705.1 2446.4" role="img" focusable="false"' +
+    ' style="vertical-align: -2.296ex;"><g stroke="currentColor"' +
+    ' fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">' +
+    '<g class="mjx-svg-mrow"><g class="mjx-svg-mtable"' +
+    ' data-semantic-type="table" data-semantic-role="equality"' +
+    ' data-semantic-id="16" data-semantic-children="7,15"' +
+    ' data-semantic-complexity="19" transform="translate(167,0)"><g' +
+    ' transform="translate(-16,0)"><g class="mjx-svg-mtd"' +
+    ' data-semantic-type="cell" data-semantic-role="table"' +
+    ' data-semantic-id="1" data-semantic-children="0"' +
+    ' data-semantic-parent="7" data-semantic-complexity="1"' +
+    ' transform="translate(0,600)"><g class="mjx-svg-mrow"><g' +
+    ' class="mjx-svg-mi" data-semantic-type="identifier"' +
+    ' data-semantic-role="latinletter" data-semantic-font="italic"' +
+    ' data-semantic-id="0" data-semantic-parent="1"' +
+    ' data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-61">' +
+    '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="9"' +
+    ' data-semantic-children="8" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" transform="translate(96,-700)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="8"' +
+    ' data-semantic-parent="9" data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-63">' +
+    '</use></g></g></g></g><g transform="translate(513,0)"><g' +
+    ' class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="4"' +
+    ' data-semantic-children="3" data-semantic-parent="7"' +
+    ' data-semantic-complexity="3.5" transform="translate(0,600)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-complexity="0.5"></g><g class="mjx-svg-mo"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="3" data-semantic-parent="4"' +
+    ' data-semantic-complexity="1" transform="translate(277,0)"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D">' +
+    '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="12"' +
+    ' data-semantic-children="11" data-semantic-parent="15"' +
+    ' data-semantic-complexity="3.5" transform="translate(0,-700)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-complexity="0.5"></g><g class="mjx-svg-mo"' +
+    ' data-semantic-type="relation" data-semantic-role="equality"' +
+    ' data-semantic-id="11" data-semantic-parent="12"' +
+    ' data-semantic-complexity="1" transform="translate(277,0)"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D">' +
+    '</use></g></g></g></g><g transform="translate(1847,0)"><g' +
+    ' class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="6"' +
+    ' data-semantic-children="5" data-semantic-parent="7"' +
+    ' data-semantic-complexity="1" transform="translate(0,600)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="5"' +
+    ' data-semantic-parent="6" data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-62">' +
+    '</use></g></g></g><g class="mjx-svg-mtd" data-semantic-type="cell"' +
+    ' data-semantic-role="table" data-semantic-id="14"' +
+    ' data-semantic-children="13" data-semantic-parent="15"' +
+    ' data-semantic-complexity="1" transform="translate(0,-700)"><g' +
+    ' class="mjx-svg-mrow"><g class="mjx-svg-mi"' +
+    ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="13"' +
+    ' data-semantic-parent="14" data-semantic-complexity="1"><use' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-64">' +
+    '</use></g></g></g></g></g></g></g></svg>';
+
+
+/**
+ * Runs a series of walker tests on a equation formula.
+ * @param {sre.Walker} walker The walker.
+ * @private
+ */
+sre.WalkerTest.prototype.runSyntaxEquationMoveTests_ = function(walker) {
+  this.executeTest_(walker, null,
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'X', 'table with 2 rows and 3 columns');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'SPACE', 'Level 1 2nd Row');
+  this.executeTest_(walker, 'X', '2nd Row in table with 3 columns');
+  this.executeTest_(walker, 'DOWN', '1st Column c');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 1st Column');
+  this.executeTest_(walker, 'X', '1st Column in table');
+  this.executeTest_(walker, 'DOWN', 'c');
+  this.executeTest_(walker, 'UP', '1st Column c');
+  this.executeTest_(walker, 'RIGHT', '2nd Column equals');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 2nd Column');
+  this.executeTest_(walker, 'X', '2nd Column in table');
+  this.executeTest_(walker, 'UP',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'LEFT',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'HOME',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'X', '1st Row in table with 3 columns');
+};
+
+
+/**
+ * Test for syntax walker on MML elements.
+ */
+sre.WalkerTest.prototype.testSyntaxWalkerEquationMml = function() {
+  var walker = this.createWalker_(
+      'Syntax', this.equation.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSyntaxEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for syntax walker on MML elements.
+ */
+sre.WalkerTest.prototype.testSyntaxWalkerEquationMmlCss = function() {
+  var walker = this.createWalker_(
+      'Syntax', this.equation.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSyntaxEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for syntax walker on HTML CSS elements.
+ */
+sre.WalkerTest.prototype.testSyntaxWalkerEquationHtmlCss = function() {
+  var walker = this.createWalker_(
+      'Syntax', this.equation.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSyntaxEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for syntax walker on Common HTML elements.
+ */
+sre.WalkerTest.prototype.testSyntaxWalkerEquationCommonHtml = function() {
+  var walker = this.createWalker_(
+      'Syntax', this.equation.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSyntaxEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for syntax walker on SVG elements.
+ */
+sre.WalkerTest.prototype.testSyntaxWalkerEquationSvg = function() {
+  var walker = this.createWalker_(
+      'Syntax', this.equation.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSyntaxEquationMoveTests_(walker);
+};
+
+
+/**
+ * Runs a series of walker tests on a equation formula.
+ * @param {sre.Walker} walker The walker.
+ * @private
+ */
+sre.WalkerTest.prototype.runSemanticEquationMoveTests_ = function(walker) {
+  this.executeTest_(walker, null,
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'X', 'table with 2 rows and 3 columns');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'SPACE', 'Level 1 2nd Row');
+  this.executeTest_(walker, 'X', '2nd Row in table with 3 columns');
+  this.executeTest_(walker, 'DOWN', '1st Column c');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 1st Column');
+  this.executeTest_(walker, 'X', '1st Column in table');
+  this.executeTest_(walker, 'DOWN', 'c');
+  this.executeTest_(walker, 'UP', '1st Column c');
+  this.executeTest_(walker, 'RIGHT', '2nd Column equals');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 2nd Column');
+  this.executeTest_(walker, 'X', '2nd Column in table');
+  this.executeTest_(walker, 'UP',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'LEFT',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'HOME',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'X', '1st Row in table with 3 columns');
+};
+
+
+/**
+ * Test for semantic walker on MML elements.
+ */
+sre.WalkerTest.prototype.testSemanticWalkerEquationMml = function() {
+  var walker = this.createWalker_(
+      'Semantic', this.equation.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSemanticEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for semantic walker on MML elements.
+ */
+sre.WalkerTest.prototype.testSemanticWalkerEquationMmlCss = function() {
+  var walker = this.createWalker_(
+      'Semantic', this.equation.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSemanticEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for semantic walker on HTML CSS elements.
+ */
+sre.WalkerTest.prototype.testSemanticWalkerEquationHtmlCss = function() {
+  var walker = this.createWalker_(
+      'Semantic', this.equation.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSemanticEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for semantic walker on Common HTML elements.
+ */
+sre.WalkerTest.prototype.testSemanticWalkerEquationCommonHtml = function() {
+  var walker = this.createWalker_(
+      'Semantic', this.equation.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSemanticEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for semantic walker on SVG elements.
+ */
+sre.WalkerTest.prototype.testSemanticWalkerEquationSvg = function() {
+  var walker = this.createWalker_(
+      'Semantic', this.equation.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runSemanticEquationMoveTests_(walker);
+};
+
+
+/**
+ * Runs a series of walker tests on a equation formula.
+ * @param {sre.Walker} walker The walker.
+ * @private
+ */
+sre.WalkerTest.prototype.runDummyEquationMoveTests_ = function(walker) {
+  this.executeTest_(walker, null,
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'X', 'table with 2 rows and 3 columns');
+  this.executeTest_(walker, 'DOWN', 'table with 2 rows and 3 columns');
+  this.executeTest_(walker, 'Z',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'HOME',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'UP',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+};
+
+
+/**
+ * Test for dummy walker on MML elements.
+ */
+sre.WalkerTest.prototype.testDummyWalkerEquationMml = function() {
+  var walker = this.createWalker_(
+      'Dummy', this.equation.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runDummyEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for dummy walker on MML elements.
+ */
+sre.WalkerTest.prototype.testDummyWalkerEquationMmlCss = function() {
+  var walker = this.createWalker_(
+      'Dummy', this.equation.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runDummyEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for dummy walker on HTML CSS elements.
+ */
+sre.WalkerTest.prototype.testDummyWalkerEquationHtmlCss = function() {
+  var walker = this.createWalker_(
+      'Dummy', this.equation.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runDummyEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for dummy walker on Common HTML elements.
+ */
+sre.WalkerTest.prototype.testDummyWalkerEquationCommonHtml = function() {
+  var walker = this.createWalker_(
+      'Dummy', this.equation.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runDummyEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for dummy walker on SVG elements.
+ */
+sre.WalkerTest.prototype.testDummyWalkerEquationSvg = function() {
+  var walker = this.createWalker_(
+      'Dummy', this.equation.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runDummyEquationMoveTests_(walker);
+};
+
+
+/**
+ * Runs a series of walker tests on a equation formula.
+ * @param {sre.Walker} walker The walker.
+ * @private
+ */
+sre.WalkerTest.prototype.runTableEquationMoveTests_ = function(walker) {
+  this.executeTest_(walker, null,
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'X', 'table with 2 rows and 3 columns');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'RIGHT',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'SPACE', 'Level 1 2nd Row');
+  this.executeTest_(walker, 'X', '2nd Row in table with 3 columns');
+  this.executeTest_(walker, 'DOWN', '1st Column c');
+  walker.modifier = true;
+  this.executeTest_(walker, 'UP', '1st Column a');
+  this.executeTest_(walker, 'SPACE', 'Level 2 1st Row 1st Column');
+  walker.modifier = true;
+  this.executeTest_(walker, 'DOWN', '1st Column c');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 1st Column');
+  this.executeTest_(walker, 'X', '1st Column in table');
+  this.executeTest_(walker, 'DOWN', 'c');
+  this.executeTest_(walker, 'UP', '1st Column c');
+  this.executeTest_(walker, 'RIGHT', '2nd Column equals');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 2nd Column');
+  this.executeTest_(walker, 'X', '2nd Column in table');
+  this.executeTest_(walker, 'UP',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+  this.executeTest_(walker, 'LEFT',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'HOME',
+      'StartLayout 1st Row 1st Column a 2nd Column' +
+      ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
+      ' Column d EndLayout');
+  this.executeTest_(walker, 'DOWN',
+      '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, 'X', '1st Row in table with 3 columns');
+  this.executeTest_(walker, '2',
+                    '1st Row 1st Column a 2nd Column equals 3rd Column b');
+  this.executeTest_(walker, '2', '2nd Column equals');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 2nd Column');
+  this.executeTest_(walker, '2', '2nd Column equals');
+  this.executeTest_(walker, '3', '3rd Column d');
+  this.executeTest_(walker, 'SPACE', 'Level 2 2nd Row 3rd Column');
+  this.executeTest_(walker, 'UP',
+      '2nd Row 1st Column c 2nd Column equals 3rd Column d');
+};
+
+
+/**
+ * Test for table walker on MML elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationMml = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.mml, {renderer: 'NativeMML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on MML elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationMmlCss = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.mml,
+      {renderer: 'NativeMML', browser: 'Safari'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on HTML CSS elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationHtmlCss = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.htmlCss, {renderer: 'HTML-CSS'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on Common HTML elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationCommonHtml = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.chtml,
+      {renderer: 'CommonHTML'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
+};
+
+
+/**
+ * Test for table walker on SVG elements.
+ */
+sre.WalkerTest.prototype.testTableWalkerEquationSvg = function() {
+  var walker = this.createWalker_(
+      'Table', this.equation.svg,
+      {renderer: 'SVG'},
+      sre.WalkerTest.EQUATION_MML);
+  this.runTableEquationMoveTests_(walker);
 };
