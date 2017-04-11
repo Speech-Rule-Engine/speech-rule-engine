@@ -87,7 +87,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-j, --json', 'Generate JSON of semantic tree.').
       option('-m, --mathml', 'Generate enriched MathML.').
       option('-p, --speech', 'Generate speech output (default).').
-      option('-k, --markup', 'Generate speech output with markup tags.').
+      option('-k, --markup [name]', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
       option('').
       option('-v, --verbose', 'Verbose mode.').
