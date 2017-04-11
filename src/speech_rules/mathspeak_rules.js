@@ -1007,7 +1007,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'matrix-row', 'mathspeak.default',
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column");' +
+      '[p] (pause: 200)',
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
@@ -1033,14 +1034,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'matrix-cell', 'mathspeak.default',
-      '[n] children/*[1]', 'self::cell');
+      '[n] children/*[1]; [p] (pause: 300)', 'self::cell');
 
   // defineRule(
   //     'empty-cell', 'mathspeak.default',
   //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
   defineRule(
       'empty-cell', 'mathspeak.default',
-      '[t] "Blank"', 'self::cell', 'count(children/*)=0');
+      '[t] "Blank"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
 
 
   defineRule(
