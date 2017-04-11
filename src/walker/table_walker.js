@@ -202,7 +202,11 @@ sre.TableWalker.prototype.jumpCell = function() {
     }
     return this.jumpCell_(this.row_, column);
   }
-  this.row_ = (this.key_ - sre.EventUtil.KeyCode['0']);
+  var row = (this.key_ - sre.EventUtil.KeyCode['0']);
+  if (row > this.currentTable_.childNodes.length) {
+    return this.getFocus();
+  }
+  this.row_ = row;
   this.moved = sre.Walker.move.ROW;
   return this.getFocus().clone();
 };
@@ -254,6 +258,9 @@ sre.TableWalker.prototype.isLegalJump_ = function(row, column) {
     return false;
   }
   var rowNode = this.currentTable_.childNodes[row - 1];
+  if (!rowNode) {
+    return false;
+  }
   var xmlRow = sre.DomUtil.querySelectorAllByAttrValue(
       xmlTable, 'id', rowNode.id.toString())[0];
   if (!xmlRow || xmlRow.hasAttribute('alternative')) {
