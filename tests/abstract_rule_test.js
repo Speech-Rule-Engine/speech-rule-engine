@@ -70,7 +70,14 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   opt_style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  this.appendExamples(mathMl);
+  // this.appendExamples(mathMl);
+  this.appendExamples('<tr>' +
+                      sre.AbstractRuleTest.htmlCell_('English') + 
+                      sre.AbstractRuleTest.htmlCell_(this.domain) + 
+                      sre.AbstractRuleTest.htmlCell_(opt_style) + 
+                      sre.AbstractRuleTest.htmlCell_(mathMl) + 
+                      sre.AbstractRuleTest.htmlCell_(answer)
+                      + '</tr>');
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: opt_style,
@@ -80,3 +87,27 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
 };
 
 
+sre.AbstractRuleTest.htmlCell_ = function(entry) {
+  return '<td>' + entry + '</td>';
+};
+
+
+sre.AbstractRuleTest.prototype.cleanup = function(example) {
+  return example;
+};
+
+
+sre.AbstractRuleTest.prototype.join = function(examples) {
+  var mathjax = '<script type="text/javascript" async ' +
+      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/' +
+      'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
+      '</script>';
+  var head = '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
+      '<html> <head>\n' +
+      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n' +
+      mathjax +
+      '\n<title>' + this.information + '</title>\n' + 
+      '\n</head>\n<body>\n<table>\n';
+  var end = '\n</table>\n</body>\n</html>';
+  return head + examples.join('\n') + end;
+};

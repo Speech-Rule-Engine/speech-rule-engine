@@ -54,11 +54,18 @@ sre.AbstractExamples = function() {
   this.examplesName_ = 'Examples';
 
   /**
+   * File extension. Default html.
+   * @type {!string}
+   * @private
+   */
+  this.fileExtension_ = 'html';
+  
+  /**
    * Sets example output file for tests.
    * @type {!string}
    * @private
    */
-  this.examplesFile_ = 'tests.js';
+  this.examplesFile_ = 'tests.' + this.fileExtension_;
 
   /**
    * The output values.
@@ -74,8 +81,7 @@ goog.inherits(sre.AbstractExamples, sre.AbstractTest);
  * @override
  */
 sre.AbstractExamples.prototype.setActive = function(file) {
-  //TODO: (sorge) Make lab examples into a dictionary and handle multiple files.
-  // this.examplesFile_ = file;
+  this.examplesFile_ = file + '.' + this.fileExtension_;
   this.active_ = true;
 };
 
@@ -84,6 +90,7 @@ sre.AbstractExamples.prototype.setActive = function(file) {
  * @override
  */
 sre.AbstractExamples.prototype.startExamples = function() {
+  console.log(this.active_);
   if (!this.active_) return;
   try {
     sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
@@ -99,7 +106,7 @@ sre.AbstractExamples.prototype.startExamples = function() {
 sre.AbstractExamples.prototype.appendExamples = function(example) {
   // TODO (sorge) Rewrite this to append asynchronously to file.
   if (this.active_ && !this.fileError_) {
-    this.examples_.push(example.replace(/(['"])/g, '\\\''));
+    this.examples_.push(this.cleanup(example));
   }
 };
 
@@ -112,9 +119,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
   if (!this.fileError_) {
     try {
       sre.SystemExternal.fs.appendFileSync(
-          this.examplesFile_,
-          'Lab.' + this.examplesName_ +
-          ' = [\'' + this.examples_.join('\',\n\'') + '\']');
+          this.examplesFile_, this.join(this.examples_));
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
     }
@@ -140,4 +145,25 @@ sre.AbstractExamples.prototype.setUpTest = function() {
  */
 sre.AbstractExamples.prototype.tearDownTest = function() {
   this.endExamples();
+};
+
+
+/**
+ * Cleans up an example string.
+ * @param {string} example The example string.
+ * @return {string} The cleaned version of the string.
+ */
+sre.AbstractExamples.prototype.cleanup = function(example) {
+  return example.replace(/(['"])/g, '\\\'');
+};
+
+
+/**
+ * Joins the accumulated list of examples into a single output string.
+ * @param {Array.<string>} examples The list of examples.
+ * @return {string} The joined string.
+ */
+sre.AbstractExamples.prototype.join = function(examples) {
+  return 'Lab.' + this.examplesName_ +
+    ' = [\'' + examples.join('\',\n\'') + '\']';
 };
