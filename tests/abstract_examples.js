@@ -51,7 +51,7 @@ sre.AbstractExamples = function() {
    * @type {!string}
    * @private
    */
-  this.examplesName_ = 'Examples';
+  this.fileName_ = 'Examples';
 
   /**
    * File extension. Default html.
@@ -61,11 +61,18 @@ sre.AbstractExamples = function() {
   this.fileExtension_ = 'html';
   
   /**
+   * Base directory for the output file.
+   * @type {!string}
+   * @private
+   */
+  this.fileDirectory_ = 'www/localisation';
+  
+  /**
    * Sets example output file for tests.
    * @type {!string}
    * @private
    */
-  this.examplesFile_ = 'tests.' + this.fileExtension_;
+  this.examplesFile_ = this.fileDirectory_ + '/tests.' + this.fileExtension_;
 
   /**
    * The output values.
@@ -81,7 +88,8 @@ goog.inherits(sre.AbstractExamples, sre.AbstractTest);
  * @override
  */
 sre.AbstractExamples.prototype.setActive = function(file) {
-  this.examplesFile_ = file + '.' + this.fileExtension_;
+  this.examplesFile_ = this.fileDirectory_ + '/' + file +
+      '.' + this.fileExtension_;
   this.active_ = true;
 };
 
@@ -164,6 +172,6 @@ sre.AbstractExamples.prototype.cleanup = function(example) {
  * @return {string} The joined string.
  */
 sre.AbstractExamples.prototype.join = function(examples) {
-  return 'Lab.' + this.examplesName_ +
+  return 'Lab.' + this.fileName_ +
     ' = [\'' + examples.join('\',\n\'') + '\']';
 };
