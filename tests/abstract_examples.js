@@ -76,7 +76,7 @@ sre.AbstractExamples = function() {
 
   /**
    * The output values.
-   * @type {Array.<string>}
+   * @type {Object.<string, Array.<string>>}
    * @private
    */
   this.examples_ = [];
@@ -111,10 +111,16 @@ sre.AbstractExamples.prototype.startExamples = function() {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.appendExamples = function(example) {
+sre.AbstractExamples.prototype.appendExamples = function(type, example) {
   // TODO (sorge) Rewrite this to append asynchronously to file.
   if (this.active_ && !this.fileError_) {
-    this.examples_.push(this.cleanup(example));
+    var examples = this.examples_[type];
+    var cleaned = this.cleanup(example);
+    if (examples) {
+      examples.push(cleaned); 
+    } else {
+      this.examples_[type] = [cleaned];
+    }
   }
 };
 
@@ -126,8 +132,12 @@ sre.AbstractExamples.prototype.endExamples = function() {
   if (!this.active_) return;
   if (!this.fileError_) {
     try {
-      sre.SystemExternal.fs.appendFileSync(
-          this.examplesFile_, this.join(this.examples_));
+      for (var key in this.examples_) {
+        sre.SystemExternal.fs.appendFileSync(
+          this.examplesFile_, key);
+        sre.SystemExternal.fs.appendFileSync(
+          this.examplesFile_, this.join(this.examples_[key]));
+      }
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
     }
