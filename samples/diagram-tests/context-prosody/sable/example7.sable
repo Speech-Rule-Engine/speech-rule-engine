@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN" 
+      "Sable.v0_2.dtd"
+[]>
+<SABLE>
+<SPEAKER NAME="female1">
+StartLayout <RATE SPEED="+50%"><PITCH BASE="-75%">1st Row 1st Column</PITCH></RATE> left-p'ren a plus 2 b right-p'ren left-p'ren 4 a minus b minus c right-p'ren <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> Blank <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Row 1st Column</PITCH></RATE> a left-p'ren 4 a minus b minus c right-p'ren plus 2 b left-p'ren 4 a minus b minus c right-p'ren <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> Use the distributive property period <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Row 1st Column</PITCH></RATE> 4 a squared minus a b minus a c plus 8 a b minus 2 b squared minus 2 b c <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> Multiply period <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">4th Row 1st Column</PITCH></RATE> 4 a squared plus left-p'ren minus a b plus 8 a b right-p'ren minus a c minus 2 b squared minus 2 b c <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> Combine like terms period <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">5th Row 1st Column</PITCH></RATE> 4 a squared plus 7 a b minus a c minus 2 b c minus 2 b squared <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> Simplify period <BREAK MSEC="500"/> EndLayout
+</SPEAKER>
+</SABLE>
