@@ -21,7 +21,7 @@ var files = [
 
 
 const dp = new xmldom.DOMParser();
-const path = '/home/sorge/git/speech-rule-engine/tests/clearspeak_tests/';
+const path = '/home/sorge/git/speech-rule-engine/samples/clearspeak/html/';
 
 loadFiles = function() {
   for (var i = 0, file; file = files[i]; i++) {
