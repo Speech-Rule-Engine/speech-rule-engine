@@ -20,6 +20,7 @@
 goog.provide('sre.Tests');
 
 goog.require('sre.ApiTest');
+goog.require('sre.ClearspeakTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.EnrichMathmlTest');
 goog.require('sre.EnrichSpeechTest');
@@ -72,6 +73,7 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.ApiTest,
+  sre.ClearspeakTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
   sre.EnrichSpeechTest,
