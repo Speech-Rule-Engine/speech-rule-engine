@@ -22,7 +22,8 @@ var files = [
 
 const dp = new xmldom.DOMParser();
 const path = '/home/sorge/git/speech-rule-engine/samples/clearspeak/html/';
-const dest = '/home/sorge/git/speech-rule-engine/tests/clearspeak_tests/';
+const dest = '/home/sorge/git/speech-rule-engine/tests/';
+const master = '/home/sorge/git/speech-rule-engine/tests/clearspeak_test.js';
 
 let allFiles = {};
 
@@ -46,15 +47,37 @@ saveFiles = function() {
 };
 
 
+saveMaster = function() {
+  var str = fileCopyright();
+  str += '\n';
+  str += '\ngoog.provide(\'sre.ClearspeakTest\');';
+  str += '\n';
+  for (var key in allFiles) {
+    var file = allFiles[key];
+    str += '\ngoog.require(\'' + file.sre + '\');';
+  }
+  str += '\n';
+  str += '\n';
+  str += '\n';
+  str += '\n/**';
+  str += '\n* @constructor';
+  str += '\n*/';
+  str += '\nsre.ClearspeakTest = function() { };';
+  str += '\n';
+  fs.writeFileSync(master, str);
+}
+
 theFile = function(name) {
   this.name = name;
   this.shortName = name.replace(/ClearSpeakExamples_/, 'Clearspeak')
     .replace(/_and/, 'And')
     .replace(/_/g, '')
-    .replace(/-/g, '');
+    .replace(/-/g, '')
+    .replace(/\s+/g, '');
   this.fileName = this.shortName
     .replace('Clearspeak', 'clearspeak')
-    .replace(/([A-Z]{1})/, '_$1');
+    .replace(/([A-Z]{1})/g, '_$1')
+    .toLowerCase();
   this.sre = 'sre.' + this.shortName;
   this.elements = [];
 };
@@ -79,7 +102,7 @@ theHeader.prototype.toString = function() {
 
 theElement = function(preference, identifier, example, speech, file) {
   this.preference = preference;
-  this.identifier = identifier;
+  this.identifier = identifier.replace(/\s+/g, '');
   this.example = example;
   this.speech = speech;
   this.file = file;
@@ -91,7 +114,7 @@ theElement.prototype.toString = function() {
   str += '/**\n * Testing ' + this.file.shortName.replace('/ClearSpeak/', '') +
     ' Example ' + this.identifier + '\n */\n';
   str += '' + this.file.sre + '.prototype.untest' + this.identifier + ' = function() {';
-  str += '\n  var preference = \'' + this.preference + '\';';
+  str += preferenceToVar(this.preference);
   str += '\n  var mathml = \'' + this.example.childNodes[0].toString()
     .replace(/<\/?semantics>/g, '')
     .replace(' style="background-color:#"', '')
@@ -99,7 +122,8 @@ theElement.prototype.toString = function() {
     '\';';
   str += '\n  var speech = \'' + this.speech.toString()
     .replace(/^<td>/, '')
-    .replace(/<\/td>$/, '') +
+    .replace(/<\/td>$/, '')
+    .replace(/\n/g, '') +
     '\';';
   str += '\n  this.executeRuleTest(mathml, speech, preference);';
   str += '\n};';
@@ -178,28 +202,7 @@ toArray = function(nodeList) {
 };
 
 theFile.prototype.fileStart = function() {
-  var str = '// Copyright 2017 Volker Sorge';
-  str += '\n//';
-  str += '\n// Licensed under the Apache License, Version 2.0 (the "License");';
-  str += '\n// you may not use this file except in compliance with the License.';
-  str += '\n// You may obtain a copy of the License at';
-  str += '\n//';
-  str += '\n//      http://www.apache.org/licenses/LICENSE-2.0';
-  str += '\n//';
-  str += '\n// Unless required by applicable law or agreed to in writing, software';
-  str += '\n// distributed under the License is distributed on an "AS IS" BASIS,';
-  str += '\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.';
-  str += '\n// See the License for the specific language governing permissions and';
-  str += '\n// limitations under the License.';
-  str += '\n';
-  str += '\n//';
-  str += '\n// With support from the Mozilla Foundation under a MOSS grant.';
-  str += '\n//';
-  str += '\n';
-  str += '\n/**';
-  str += '\n* @fileoverview Testcases for clearspeak speech rules.';
-  str += '\n* @author Volker.Sorge@gmail.com (Volker Sorge)';
-  str += '\n*/';
+  var str = fileCopyright();
   str += '\n';
   str += '\ngoog.provide(\'' + this.sre + '\');';
   str += '\n';
@@ -225,8 +228,39 @@ theFile.prototype.fileStart = function() {
   return str;
 };
 
+fileCopyright = function() {
+    var str = '// Copyright 2017 Volker Sorge';
+  str += '\n//';
+  str += '\n// Licensed under the Apache License, Version 2.0 (the "License");';
+  str += '\n// you may not use this file except in compliance with the License.';
+  str += '\n// You may obtain a copy of the License at';
+  str += '\n//';
+  str += '\n//      http://www.apache.org/licenses/LICENSE-2.0';
+  str += '\n//';
+  str += '\n// Unless required by applicable law or agreed to in writing, software';
+  str += '\n// distributed under the License is distributed on an "AS IS" BASIS,';
+  str += '\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.';
+  str += '\n// See the License for the specific language governing permissions and';
+  str += '\n// limitations under the License.';
+  str += '\n';
+  str += '\n//';
+  str += '\n// With support from the Mozilla Foundation under a MOSS grant.';
+  str += '\n//';
+  str += '\n';
+  return str;
+};
+
+preferenceToVar = function(preference) {
+  return (preference.match(/\s|\(|\)/)) ?
+        '\n  var preference = \'' + preference.replace(/\n/g, '') + '\';' +
+    '  // TODO (sorge): Sort out preferences!' :
+    '\n  var preference = \'' + preference + '\';';
+};
+
 
 convertFiles = function() {
   loadFiles();
   saveFiles();
+  saveMaster();
 };
+
