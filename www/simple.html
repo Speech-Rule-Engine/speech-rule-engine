@@ -45,7 +45,11 @@ if(window.location.href.indexOf("mathjax.github.io/MathJax-a11y") > -1) {
 
 <h1>Examples with Mathspeak</h1>
 
+<h2>Multiline Equations in pure Table Format</h2>
+
 <h3>Compute Area of House </h3>
+
+<hr>
 
 <p>
 First find the area of the square in square feet.
@@ -394,8 +398,11 @@ Next find the area of the rectangular door in square feet.
 
 </p>
 
+<hr>
 
 <h3>Perfect Square Trinomials</h3>
+
+<hr>
 
 <p>
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -591,9 +598,11 @@ Next find the area of the rectangular door in square feet.
 </math>
 </p>
 
+<hr>
 
 <h3>Difference of Squares</h3>
 
+<hr>
 
 <p> 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -867,8 +876,54 @@ The middle term drops out, resulting in a difference of squares.
 
 </p>
 
+<hr>
+
+<hr>
+
+<h2>Multiline Equations with Explicit Labels</h2>
+
+<h3>Simple equation</h3>
+
+<hr>
+
+<p>
+\begin{eqnarray}
+32 - 9 x^3 + 20 &=& 3 - 1 \\
+9 - 27 + 20 &=& 2 \\
+9 - 7 &=& 2 \\
+2 &=& 2
+\end{eqnarray}
+</p>
+
+<hr>
+
+<h3>Inequality simplification</h3>
+
+<hr>
+
+<p>
+\begin{align*}
+2k+1& \geq 2k+2 \tag{Step 1}\\
+& \geq 2k+2 \tag{Step 2}\\
+& =2(k+1) \tag{Step 3}
+\end{align*}
+</p>
+
+<hr>
+
+
+<h2>Equations with Interspersed Explanations</h2>
+
+<p>Note, the first equation is built with a simple MathML table, forcing speech
+to use the row layout, i.e., speaking the text after the formula in the line.
+On the other hand, the second equation uses labels for the interspersed text,
+resulting in it being spoken before the actual line element (also marked as
+label).</p>
+
 
 <h3>Performing Operations with Polynomials of Several Variables</h3>
+
+<hr>
 
 <p>
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -1139,9 +1194,25 @@ The middle term drops out, resulting in a difference of squares.
 </p>
 
 
+<hr>
 
+<h3>Quadratic simplification</h3>
+<hr>
 
+<p>
+\begin{align*}
+0.15x & = 2 + 0.12x - 0.002x^2 \\
+\tag*{Bring terms to left} 0.002x^2 + 0.15x - 0.12x - 2 & = 0\\
+\tag*{Simplify} 0.002x^2 + 0.03x - 2 &= 0\\
+\tag*{Multiply by 500} x^2 + 15x - 1000 & = 0\\
+\tag*{Split 15x} x^2 -25x + 40x - 1000 & = 0\\
+\tag*{} x(x-25) + 40(x-25) & = 0\\
+\tag*{} (x+40)(x-25) & = 0\\
+x & = -40 \mbox{ or } 25\\
+\end{align*}
+</p>
 
 <hr>
+<footer><p style="text-align: center; font-size: 10px;">&copy; Volker Sorge 2017</p></footer>
 <address></address>
 </body> </html>
