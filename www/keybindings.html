@@ -11,6 +11,9 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+      td {  vertical-align: top }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -22,35 +25,74 @@
         <h1>Key bindings for the Math Explorer</h1>
         <table>
         <tr><th>Key:</th><th></th></tr>
-        <tr><td>Shift Space</td><td>Activate explorer when on maths expression</td></tr>
-        <tr><td>Escape</td><td>Leave exploration mode</td></tr>
+        <tr><td><kbd>Shift</kbd>+<kbd>Space</kbd></td><td>Activate explorer. Requires focus on maths expression.
+            <br><b>NOTE:</b>
+            Depending on the implementation quality of the particular
+            browser/screenreader/OS combination (especially Chrome and IE),
+            users might have to disable screenreader reading modes (e.g.,
+            "browse mode" in NVDA, "virtual cursor" in JAWS) before being able
+            to launch the application.
+        </td></tr>
+        <tr><td><kbd>Escape</kbd></td><td>Leave exploration mode.
+        <br><b>NOTE:</b>
+            When restarted, the application will continue where the user left off.
+        </td></tr>
         <tr><td>&emsp;</td></tr>
-        <tr><td>Down Arrow</td><td>Explore next lower level</td></tr>
-        <tr><td>Up Arrow</td><td>Explore next upper level</td></tr>
-        <tr><td>Right Arrow</td><td>Explore next element on level</td></tr>
-        <tr><td>Left Arrow</td><td>Explore previous element on level</td></tr>
+        
+        <tr><td><kbd>Down</kbd></td><td>Explore next lower level of the formula
+        by moving down in the sub-expression tree. Exploration will start at the
+        left-most sub-expression on the level.</td></tr>
+        
+        <tr><td><kbd>Up</kbd></td><td>Move up the sub-expression tree.</td></tr>
+        <tr><td><kbd>Right</kbd></td><td>Navigate the expression horizontally by moving to the next sub-expression on the current level.</td></tr>
+        <tr><td><kbd>Left</kbd></td><td>Navigate the expression horizontally by moving to the previous sub-expression on the current level.</td></tr>
+        <tr><td>&emsp;</td><td>An earcon is played as indicator that the boundary of
+        an expression has been reached in either direction.</td></tr>
         <tr><td>&emsp;</td></tr>
-        <tr><td>Tab</td><td>Repeat previous announcement</td></tr>
-        <tr><td>Space</td><td>Get position information</td></tr>
-        <tr><td>Enter</td><td>Collapse or expand expression under cursor, if possible</td></tr>
-        <tr><td>Home</td><td>Go to top level of expression</td></tr>
-        <tr><td>X</td><td>Summary of expression under cursor</td></tr>
-        <tr><td>Z</td><td>Detailed description of expression under cursor</td></tr>
-        <tr><td>V</td><td>Start new virtual cursor</td></tr>
-        <tr><td>P</td><td>Go to previous virtual cursor</td></tr>
-        <tr><td>U</td><td>Undo all virtual cursors</td></tr>
+        <tr><td><kbd>Tab</kbd></td><td>Repeat previous speech-text or announcement.</td></tr>
+        <tr><td><kbd>Space</kbd></td><td>Get positional information, i.e., the current level in the sub-expression tree as well as collapsibility/expandability of the current subexpression.</td></tr>
+        <tr><td><kbd>Enter</kbd></td><td>Collapse or expand expression under cursor, if possible.
+        Speech-text is regenerated to match.</td></tr>
+        <tr><td><kbd>Home</kbd></td><td>Navigate directly to top-most level of expression.</td></tr>
+        <tr><td><kbd>X</kbd></td><td>Summarise the expression under cursor, without collapsing it.</td></tr>
+        <tr><td><kbd>Z</kbd></td><td>Give detailed description of expression under cursor, without expanding it.</td></tr>
+        <tr><td><kbd>V</kbd></td><td>Start new virtual cursor from the current position.</td></tr>
+        <tr><td><kbd>P</kbd></td><td>Go to last position or previous virtual cursor</td></tr>
+        <tr><td><kbd>U</kbd></td><td>Undo all virtual cursors, i.e. go to position where first virtual cursor was started.</td></tr>
         <tr><td>&emsp;</td></tr>
         <tr><th>Keys in Table:</th><th></th></tr>
         <tr><td>&emsp;</td></tr>
-        <tr><td>Shift Down Arrow</td><td>Move one cell down</td></tr>
-        <tr><td>Shift Up Arrow</td><td>Move one cell up</td></tr>
-        <tr><td>Shift Right Arrow</td><td>Move one cell right</td></tr>
-        <tr><td>Shift Left Arrow</td><td>Move one cell left</td></tr>
-        <tr><td>&emsp;</td></tr>
-        <tr><td>0-9 0-9</td><td>Move directly to cell (n,m) if it exists. (0,0) is cell (10,10).</td></tr>
+        <tr><td><kbd>Shift</kbd>+<kbd> Down</kbd></td><td>Move one cell vertically down in the table.</td></tr>
+        <tr><td><kbd>Shift</kbd>+<kbd> Up</kbd></td><td>Move one cell vertically up in the table.</td></tr>
+        <tr><td><kbd>Shift</kbd>+<kbd> Right</kbd></td><td>Move one cell horizontally right in the table.</td></tr>
+        <tr><td><kbd>Shift</kbd>+<kbd> Left</kbd></td><td>Move one cell horizontally left in the table.</td></tr>
+        <tr><td><kbd>&emsp;</td></tr>
+        <tr><td><kbd>0-9</kbd>+<kbd>0-9</kbd></td><td>Move directly to cell (n,m) if it exists.
+            (0,0) is cell (10,10).</td></tr>
         </table>
       </section>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+        </div>
+        <p>
+        For additional information and details see also:
+        <ul>
+          <li>
+              The release notes for the <a
+          href="https://www.mathjax.org">MathJax</a> <a
+          href="https://www.mathjax.org/mathjax-accessibility-extensions-v1-now-available/">Accessibility
+              Extension</a>.
+          </li>
+          <li>
+              The <a
+              href="https://github.com/mathjax/MathJax-a11y/blob/master/docs/README.md">README
+              at github</a> which contains more details on how to run the explorer
+              and in particular provides a <a
+              href="https://github.com/mathjax/MathJax-a11y/blob/master/docs/README.md#support">support
+              matrix</a> by operating system, browser and screen reader.
+          </li>
+        </ul>
+        </p>
+        
+        <script src="javascripts/scale.fix.js"></script>
+        
   </body>
 </html>
