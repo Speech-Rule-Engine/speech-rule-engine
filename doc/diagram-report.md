@@ -137,12 +137,20 @@ Other noteworthy observations were:
 
 Tests for prosody were carried out by presenting readers with Audio files
 generated via Festival and Watson (due to the problems with the SpeechSynthesis
-API mentioned above).
+API mentioned above). The results of the tests can be summarised as follows:
 
-* Audio files (via Festival and Watson)
-	* What worked and what didn’t?
-	* Prosody tweaks (e.g., speed, pitch, pauses) are arbitrary and hard to test; it’s critical for supporting additional rule sets, but difficult to apply without more research about efficacy
-	* Preliminary interviews with math teachers: providing supplemental audio files will likely be helpful for certain student demographics (i.e. ESL, cognitive disability, learning disability)
+   * Although prosody is critical for supporting additional rule sets that
+     require tweaks to rate, pitch or pausing (e.g., ClearSpeak) it is not clear
+     that this does indeed help understanding without more research about
+     efficacy. Prosody tweaks can appear arbitrary and are therefore hard to
+     test. Also depending on the TTS engine used the impact of prosody chnage
+     can vary significantly, which makes it difficult to generate reproducible
+     results.
+
+    * Preliminary interviews with math teachers yielded, that providing
+      supplemental audio files will likely be helpful for certain student
+      demographics (i.e., non-native speakers, students with cognitive
+      disabilities or learning disabilities).
 
 
 ## Next Steps and Future Work
