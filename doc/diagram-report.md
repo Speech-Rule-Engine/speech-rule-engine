@@ -44,21 +44,21 @@ mathematics:
        classes that provide translation of rendered text into a number of speech
        prosody languages. In particular we have implemented the following output
        formats:
-   
-           * [Sable](http://clas.mq.edu.au/speech/synthesis/sable/sabpap.html): An
+
+       [Sable](http://clas.mq.edu.au/speech/synthesis/sable/sabpap.html): An
              XML markup language implemented by TTS systems like
              [Festival](https://en.wikipedia.org/wiki/Festival_Speech_Synthesis_System).
        
-           * [SSML](https://www.w3.org/TR/speech-synthesis/): A W3C
+       [SSML](https://www.w3.org/TR/speech-synthesis/): A W3C
          recommentation for a speech synthesis markup language that is
          understood by screen readers like NVDA but also personal assistant
          systems like Amazon Echo or IBM's Watson.
        
-           * [VoiceXML](https://www.w3.org/TR/voicexml20/): Another W3C
+       [VoiceXML](https://www.w3.org/TR/voicexml20/): Another W3C
          recommendation for a extensible voice markup languages that is closely
          related to SSML.
          
-           * [Aural CSS](https://www.w3.org/TR/CSS21/aural.html) A W3C extension
+       [Aural CSS](https://www.w3.org/TR/CSS21/aural.html) A W3C extension
          for Cascading Style Sheets that allow the annotation of web content
          with speech rendering information. A system that actual implements a
          versin of ACSS is [Emacspeak](https://en.wikipedia.org/wiki/Emacspeak).
