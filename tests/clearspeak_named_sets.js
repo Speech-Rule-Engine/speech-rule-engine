@@ -53,9 +53,20 @@ goog.inherits(sre.ClearspeakNamedSets, sre.ClearspeakRuleTest);
 /**
  * Testing ClearspeakNamedSets Example NumSys001
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys001 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys001 = function() {
   var preference = 'default';
-  var mathml = '<math><mi>ℝ</mi></math>';
+  var mathml = '<mi>ℝ</mi>';
+  var speech = 'the real numbers';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakNamedSets Example NumSys001 (variant)
+ */
+sre.ClearspeakNamedSets.prototype.testNumSys001a = function() {
+  var preference = 'default';
+  var mathml = '<mi mathvariant="double-struck">R</mi>';
   var speech = 'the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -64,7 +75,7 @@ sre.ClearspeakNamedSets.prototype.untestNumSys001 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys002
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys002 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys002 = function() {
   var preference = 'default';
   var mathml = '<math><mi>ℂ</mi></math>';
   var speech = 'the complex numbers';

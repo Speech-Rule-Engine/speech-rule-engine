@@ -50,7 +50,7 @@ goog.inherits(sre.ClearspeakRoots, sre.ClearspeakRuleTest);
  */
 sre.ClearspeakRoots.prototype.untestRoot001 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<mrow><msqrt><mn>2</mn></msqrt></mrow>';
   var speech = 'The square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };

@@ -62,16 +62,38 @@ var defineRule = sre.ClearspeakRules.defineRule_;
  * @private
 */
 sre.ClearspeakRules.initClearspeakRules_ = function() {
+
+  // Initial rule
   defineRule(
-      'fraction', 'mathspeak.clearspeak',
+      'stree', 'clearspeak.default',
+      '[n] ./*[1]', 'self::stree');
+
+  defineRule(
+      'fraction', 'clearspeak.default',
       '[t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:300);' +
           ' [t] "and denominator"; [n] children/*[2]; [p] (pause:500)',
       'self::fraction');
   defineRule(
-      'sqrt', 'mathspeak.clearspeak',
+      'sqrt', 'clearspeak.default',
       '[t] "the square root of"; [n] children/*[1]; [p] (pause:500)',
-      'self::sqrt');
+    'self::sqrt');
 
+  // Named sets
+  defineRule(
+    'real-number', 'clearspeak.default',
+    '[t] "the real numbers"', 'self::identifier',
+    'text()="\u211D" or (text()="R" and @font="double-struck")');
+  defineRule(
+    'complex-number', 'clearspeak.default',
+    '[t] "the complex numbers"', 'self::identifier',
+    'text()="\u2102" or (text()="C" and @font="double-struck")');
+
+
+  defineRule(
+    'real-number-super', 'clearspeak.default',
+    '[t] "r-"; [n] children/*[2]',
+    'self::superscript', 'children/*[1]/text()="\u211D"' +
+      ' or (children/*[1]/text()="R" and @font="double-struck")');
 };
 
 });  // goog.scope

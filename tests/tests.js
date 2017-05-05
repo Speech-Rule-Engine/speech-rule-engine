@@ -72,25 +72,26 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [
-  sre.ApiTest,
-  sre.ColorPickerTest,
-  sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
-  sre.MarkupTest,
-  sre.MathmlCloudTest,
-  sre.MathmlStoreTest,
-  sre.MathspeakEmbellishTest,
+  // sre.ApiTest,
+  // sre.ColorPickerTest,
+  // sre.EnrichMathmlTest,
+  // sre.EnrichSpeechTest,
+  // sre.MarkupTest,
+  // sre.MathmlCloudTest,
+  // sre.MathmlStoreTest,
+  // sre.MathspeakEmbellishTest,
   sre.MathspeakRuleTest,
-  sre.NobleSamplesTest,
-  sre.PrefixRuleTest,
-  sre.RebuildStreeTest,
-  sre.SemanticApiTest,
-  sre.SemanticRuleTest,
-  sre.SemanticTreeTest,
-  sre.SpeechRuleTest,
-  sre.WalkerTest
+  // sre.NobleSamplesTest,
+  // sre.PrefixRuleTest,
+  // sre.RebuildStreeTest,
+  // sre.SemanticApiTest,
+  // sre.SemanticRuleTest,
+  // sre.SemanticTreeTest,
+  // sre.SpeechRuleTest,
+  // sre.WalkerTest
 ];
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+sre.Tests.testList = sre.ClearspeakTest.testList,
 
 
 /**

@@ -48,5 +48,20 @@ sre.ClearspeakTest = function() { };
  * @type {Array}
  */
 sre.ClearspeakTest.testList = [
-  sre.ClearspeakAbsoluteValue
+  sre.ClearspeakAbsoluteValue,
+  sre.ClearspeakCapitalLetters,
+  sre.ClearspeakExponents,
+  sre.ClearspeakFractions,
+  sre.ClearspeakFunctions,
+  sre.ClearspeakImpliedTimes,
+  sre.ClearspeakLogarithms,
+  sre.ClearspeakMatricesVectorsAndCombinatorics,
+  sre.ClearspeakMultiLineEntries,
+  sre.ClearspeakNamedSets,
+  sre.ClearspeakParentheses,
+  sre.ClearspeakPart2Symbols,
+  sre.ClearspeakPart3Adornments,
+  sre.ClearspeakRoots,
+  sre.ClearspeakSetsEnclosedInSetBrackets,
+  sre.ClearspeakTrigometry
 ];

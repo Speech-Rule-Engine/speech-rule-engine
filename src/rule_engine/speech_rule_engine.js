@@ -239,6 +239,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
+  sre.Debugger.getInstance().output(node.toString());
   var engine = sre.Engine.getInstance();
   if (engine.cache) {
     var result = this.getCacheForNode_(node);
