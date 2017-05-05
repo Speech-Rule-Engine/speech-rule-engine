@@ -11,49 +11,42 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
-// Funded by the Mozilla Foundation.
 
-/**
- * @fileoverview Testcases for mathspeak speech rules.
- * @author Volker.Sorge@gmail.com (Volker Sorge)
- */
+//
+// With support from the Mozilla Foundation under a MOSS grant.
+//
+
 
 goog.provide('sre.ClearspeakTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.ClearspeakAbsoluteValue');
+goog.require('sre.ClearspeakCapitalLetters');
+goog.require('sre.ClearspeakExponents');
+goog.require('sre.ClearspeakFractions');
+goog.require('sre.ClearspeakFunctions');
+goog.require('sre.ClearspeakImpliedTimes');
+goog.require('sre.ClearspeakLogarithms');
+goog.require('sre.ClearspeakMatricesVectorsAndCombinatorics');
+goog.require('sre.ClearspeakMultiLineEntries');
+goog.require('sre.ClearspeakNamedSets');
+goog.require('sre.ClearspeakParentheses');
+goog.require('sre.ClearspeakPart2Symbols');
+goog.require('sre.ClearspeakPart3Adornments');
+goog.require('sre.ClearspeakRoots');
+goog.require('sre.ClearspeakSetsEnclosedInSetBrackets');
+goog.require('sre.ClearspeakTrigometry');
 
 
 
 /**
- * @constructor
- * @extends {sre.AbstractRuleTest}
+* @constructor
+*/
+sre.ClearspeakTest = function() { };
+
+/**
+ * List of clearspeak tests to run.
+ * @type {Array}
  */
-sre.ClearspeakTest = function() {
-  sre.ClearspeakTest.base(this, 'constructor');
-
-  /**
-   * @override
-   */
-  this.information = 'Clearspeak rule tests.';
-
-  /**
-   * @override
-   */
-  this.domain = 'clearspeak';
-
-  /**
-   * @override
-   */
-  this.semantics = true;
-
-  /**
-   * @override
-   */
-  this.rules = ['ClearspeakRules'];
-
-  this.setActive('ClearspeakExamples');
-};
-goog.inherits(sre.ClearspeakTest, sre.AbstractRuleTest);
-
-
+sre.ClearspeakTest.testList = [
+  sre.ClearspeakAbsoluteValue
+];

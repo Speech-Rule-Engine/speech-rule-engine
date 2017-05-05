@@ -73,7 +73,6 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.ApiTest,
-  sre.ClearspeakTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
   sre.EnrichSpeechTest,
@@ -91,6 +90,7 @@ sre.Tests.testList = [
   sre.SpeechRuleTest,
   sre.WalkerTest
 ];
+sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
 
 
 /**
