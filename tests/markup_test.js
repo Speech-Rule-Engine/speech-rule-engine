@@ -160,19 +160,19 @@ sre.MarkupTest.prototype.testSable = function() {
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
       'x <RATE SPEED="-5%"> equals </RATE> <BREAK MSEC="200"/> start frac ' +
-      '<PITCH BASE="15%"> <RATE SPEED="-5%"> minus </RATE> b <RATE' +
+      '<PITCH RANGE="15%"> <RATE SPEED="-5%"> minus </RATE> b <RATE' +
       ' SPEED="-5%"> plus minus </RATE> Square root of <RATE SPEED="10%"> b' +
-      ' </RATE> </PITCH> <RATE SPEED="10%"> <PITCH BASE="32.5%"> square ' +
-      '</PITCH> <PITCH BASE="15%"> <BREAK MSEC="300"/> </PITCH> </RATE> ' +
-      '<PITCH BASE="15%"> <RATE SPEED="5%"> minus </RATE> <RATE' +
+      ' </RATE> </PITCH> <RATE SPEED="10%"> <PITCH RANGE="32.5%"> square ' +
+      '</PITCH> <PITCH RANGE="15%"> <BREAK MSEC="300"/> </PITCH> </RATE> ' +
+      '<PITCH RANGE="15%"> <RATE SPEED="5%"> minus </RATE> <RATE' +
       ' SPEED="10%"> four a c </RATE> <BREAK MSEC="400"/> </PITCH> over ' +
-      '<PITCH BASE="-15%"> two a </PITCH> <BREAK MSEC="400"/> end frac',
+      '<PITCH RANGE="-15%"> two a </PITCH> <BREAK MSEC="400"/> end frac',
       sre.Engine.Markup.SABLE, false);
   this.executeTest(
       sre.MarkupTest.QUADRATIC,
       'x <BREAK MSEC="200"/> equals <BREAK MSEC="450"/> <RATE SPEED="17.5%">' +
       ' negative b plus minus Square root of </RATE> <RATE SPEED="35%"> b ' +
-      '<PITCH BASE="17.5%"> squared </PITCH> <BREAK MSEC="300"/> minus four' +
+      '<PITCH RANGE="17.5%"> squared </PITCH> <BREAK MSEC="300"/> minus four' +
       ' times a times c </RATE> <RATE SPEED="17.5%"> <BREAK MSEC="650"/> ' +
       '</RATE> divided by <RATE SPEED="-17.5%"> two times a </RATE> <BREAK' +
       ' MSEC="400"/>',
