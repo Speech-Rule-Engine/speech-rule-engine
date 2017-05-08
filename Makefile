@@ -160,7 +160,7 @@ test_deps: $(TEST_DEPS)
 
 $(TEST_DEPS):
 	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
-	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) ../../../" > $(TEST_DEPS)
+	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
 test: directories test_deps deps test_compile test_script run_test
 
