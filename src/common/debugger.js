@@ -34,7 +34,7 @@ sre.Debugger = function() {
    * @type {boolean}
    * @private
    */
-  this.isActive_ = false;
+  this.isActive_ = true;
   /**
    * @type {function(string)} Output function.
    * @private
