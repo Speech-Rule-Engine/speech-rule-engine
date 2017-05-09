@@ -373,11 +373,21 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
 sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
   var personality = {};
   for (var key in sre.Engine.personalityProps) {
-    var value = parseFloat(props[sre.Engine.personalityProps[key]]);
-    if (!isNaN(value)) {
-      personality[sre.Engine.personalityProps[key]] = value;
+    var value = props[sre.Engine.personalityProps[key]];
+    if (typeof value === 'undefined') {
+      continue;
     }
+    var numeral = parseFloat(value);
+    // if (!isNaN(numeral)) {
+    //   personality[sre.Engine.personalityProps[key]] = numeral;
+    // }
+    personality[sre.Engine.personalityProps[key]] =
+      isNaN(numeral) ?
+      ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
+    numeral;
   }
+  // TODO: Deal with non-numeric values for personalities here.
+  //       Possibly use simply an overwrite mechanism without adding.
   for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
   }
@@ -402,7 +412,8 @@ sre.SpeechRuleEngine.prototype.addRelativePersonality_ = function(
   var descrPersonality = descr['personality'];
   for (var p in personality) {
     // This could be capped by some upper and lower bound.
-    if (descrPersonality[p] && typeof(descrPersonality[p]) == 'number') {
+    if (descrPersonality[p] && typeof(descrPersonality[p]) == 'number' &&
+        typeof(personality[p]) == 'number') {
       descrPersonality[p] = descrPersonality[p] + personality[p];
     } else {
       descrPersonality[p] = personality[p];

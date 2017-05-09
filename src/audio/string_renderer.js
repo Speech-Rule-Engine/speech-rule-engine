@@ -39,8 +39,17 @@ goog.inherits(sre.StringRenderer, sre.AbstractAudioRenderer);
  * @override
  */
 sre.StringRenderer.prototype.markup = function(descrs) {
-  return sre.BaseUtil.removeEmpty(
-    descrs.map(
-      function(x) {return x.descriptionString();})).
-    join(this.getSeparator());
+  var str = '';
+  var clean = descrs.filter(function(x) {return x.descriptionString();});
+  if (!clean.length) {
+    return str;
+  }
+  for (var i = 0; i < clean.length - 1; i++) {
+    var descr = clean[i];
+    var join = descr.personality[sre.Engine.personalityProps.JOIN];
+    join = (typeof join === 'undefined') ? this.getSeparator() : join;
+    str += descr.descriptionString() + join;
+  }
+  str += clean[i].descriptionString();
+  return str;
 };

@@ -77,7 +77,7 @@ sre.ClearspeakNamedSets.prototype.testNumSys001a = function() {
  */
 sre.ClearspeakNamedSets.prototype.testNumSys002 = function() {
   var preference = 'default';
-  var mathml = '<math><mi>ℂ</mi></math>';
+  var mathml = '<mi>ℂ</mi>';
   var speech = 'the complex numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -86,9 +86,9 @@ sre.ClearspeakNamedSets.prototype.testNumSys002 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys003
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys003 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys003 = function() {
   var preference = 'default';
-  var mathml = '<math><mi>ℤ</mi></math>';
+  var mathml = '<mi>ℤ</mi>';
   var speech = 'the integers';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -97,9 +97,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys003 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys004
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys004 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys004 = function() {
   var preference = 'default';
-  var mathml = '<math><mi>ℚ</mi></math>';
+  var mathml = '<mi>ℚ</mi>';
   var speech = 'the rational numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -108,9 +108,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys004 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys005
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys005 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys005 = function() {
   var preference = 'default';
-  var mathml = '<math><mi>ℕ</mi></math>';
+  var mathml = '<mi>ℕ</mi>';
   var speech = 'the natural numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -119,9 +119,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys005 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys006
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys006 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys006 = function() {
   var preference = 'default';
-  var mathml = '<math><mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></math>';
+  var mathml = '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>';
   var speech = 'the positive integers';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -130,9 +130,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys006 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys007
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys007 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys007 = function() {
   var preference = 'default';
-  var mathml = '<math><mrow><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>';
+  var mathml = '<mrow><msup><mi>ℝ</mi><mn>2</mn></msup></mrow>';
   var speech = 'r-two';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -141,9 +141,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys007 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys008
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys008 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys008 = function() {
   var preference = 'default';
-  var mathml = '<math><mrow><msup><mi>ℤ</mi><mn>3</mn></msup></mrow></math>';
+  var mathml = '<mrow><msup><mi>ℤ</mi><mn>3</mn></msup></mrow>';
   var speech = 'z-three';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -152,9 +152,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys008 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys009
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys009 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys009 = function() {
   var preference = 'default';
-  var mathml = '<math><mrow><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></math>';
+  var mathml = '<mrow><msup><mi>ℂ</mi><mi>n</mi></msup></mrow>';
   var speech = 'c-n';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -163,9 +163,9 @@ sre.ClearspeakNamedSets.prototype.untestNumSys009 = function() {
 /**
  * Testing ClearspeakNamedSets Example NumSys010
  */
-sre.ClearspeakNamedSets.prototype.untestNumSys010 = function() {
+sre.ClearspeakNamedSets.prototype.testNumSys010 = function() {
   var preference = 'default';
-  var mathml = '<math><mrow><msup><mi>ℝ</mi><mi>∞</mi></msup></mrow></math>';
+  var mathml = '<mrow><msup><mi>ℝ</mi><mi>∞</mi></msup></mrow>';
   var speech = 'r-infinity';
   this.executeRuleTest(mathml, speech, preference);
 };

@@ -152,7 +152,8 @@ sre.Engine.personalityProps = {
   PITCH: 'pitch',
   RATE: 'rate',
   VOLUME: 'volume',
-  PAUSE: 'pause'
+  PAUSE: 'pause',
+  JOIN: 'join'
 };
 
 

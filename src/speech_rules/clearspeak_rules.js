@@ -91,7 +91,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
     'real-number-super', 'clearspeak.default',
-    '[t] "r-"; [n] children/*[2]',
+    // '[t] "r" (join:0); [n] children/*[2]',
+    '[t] "r" (join:"-"); [n] children/*[2]',
     'self::superscript', 'children/*[1]/text()="\u211D"' +
       ' or (children/*[1]/text()="R" and @font="double-struck")');
 };
