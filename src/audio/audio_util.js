@@ -113,7 +113,10 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     var pause = null;
     var str = descr.descriptionString();
     var pers = descr.personality;
-    if (pers[sre.Engine.personalityProps.PAUSE] !== undefined) {
+    var join = pers[sre.Engine.personalityProps.JOIN];
+    delete pers[sre.Engine.personalityProps.JOIN];
+    // console.log(join);
+    if (typeof pers[sre.Engine.personalityProps.PAUSE] !== 'undefined') {
       pause = {};
       pause[sre.Engine.personalityProps.PAUSE] =
           /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
@@ -121,7 +124,7 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     }
     var diff = sre.AudioUtil.personalityDiff_(pers, currentPers);
     //TODO: Replace last parameter by global parameter, depending on format.
-    sre.AudioUtil.appendMarkup_(result, str, diff, pause, true);
+    sre.AudioUtil.appendMarkup_(result, str, diff, join, pause, true);
   }
   return result;
 };
@@ -155,9 +158,12 @@ sre.AudioUtil.isPauseElement = function(element) {
  * @return {boolean} True if this is a string element.
  */
 sre.AudioUtil.isStringElement = function(element) {
+  var keys = Object.keys(element);
   return typeof element === 'object' &&
-      Object.keys(element).length === 1 &&
-      Object.keys(element)[0] === 'string';
+    ((keys.length === 1 && keys[0] === 'string') ||
+     (keys.length === 2 &&
+      ((keys[0] === 'string' && keys[1] === 'join') ||
+       (keys[1] === 'string' && keys[0] === 'join'))));
 };
 
 
@@ -167,6 +173,8 @@ sre.AudioUtil.isStringElement = function(element) {
  * @param {string} str A content string.
  * @param {!Object.<sre.Engine.personalityProps, number>} pers A personality
  *     annotation.
+ * @param {?{sre.Engine.personalityProps.JOIN: (string|undefined)}} join An
+ *     optional joiner string.
  * @param {?{sre.Engine.personalityProps.PAUSE: (number|undefined)}} pause A
  *     pause annotation.
  * @param {boolean=} opt_merge Flag that specifies subsequent pauses are to be
@@ -174,9 +182,12 @@ sre.AudioUtil.isStringElement = function(element) {
  * @private
  */
 sre.AudioUtil.appendMarkup_ = function(
-    markup, str, pers, pause, opt_merge) {
+    markup, str, pers, join, pause, opt_merge) {
   if (opt_merge) {
     var last = markup[markup.length - 1];
+    if (last) {
+      var oldJoin = last[sre.Engine.personalityProps.JOIN];
+    }
     if (last && !str && pause &&
         sre.AudioUtil.isPauseElement(last)) {
       var pauseProp = sre.Engine.personalityProps.PAUSE;
@@ -186,12 +197,16 @@ sre.AudioUtil.appendMarkup_ = function(
     }
     if (last && str && Object.keys(pers).length === 0 &&
         sre.AudioUtil.isStringElement(last)) {
-      last['string'] += ' ' + str;
+      if (typeof oldJoin !== 'undefined') {
+        str = last['string'].pop() + oldJoin + str;
+      }
+      last['string'].push(str);
       str = '';
+      last[sre.Engine.personalityProps.JOIN] = join;
     }
   }
   if (Object.keys(pers).length !== 0) markup.push(pers);
-  if (str) markup.push({string: str});
+  if (str) markup.push({string: [str], join: join});
   if (pause) markup.push(pause);
 };
 

@@ -66,7 +66,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
       }
       continue;
     }
-    var str = '"' + descr.string + '"';
+    var str = '"' + descr.string.join(this.getSeparator()) + '"';
     string = true;
     if (pause) {
       result.push(this.pause(pause));
@@ -75,7 +75,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
     var prosody = this.prosody_(currentPers);
     result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
   }
-  return '(exp ' + result.join(this.getSeparator()) + ')';
+  return '(exp ' + result.join(' ') + ')';
 };
 
 
