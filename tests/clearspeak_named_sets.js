@@ -117,12 +117,34 @@ sre.ClearspeakNamedSets.prototype.testNumSys005 = function() {
 
 
 /**
+ * Testing ClearspeakNamedSets Example NumSys005
+ */
+sre.ClearspeakNamedSets.prototype.testNumSys005a = function() {
+  var preference = 'default';
+  var mathml = '<msub><mi>ℕ</mi><mn>0</mn></msub>';
+  var speech = 'the natural numbers with zero';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
  * Testing ClearspeakNamedSets Example NumSys006
  */
 sre.ClearspeakNamedSets.prototype.testNumSys006 = function() {
   var preference = 'default';
   var mathml = '<mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow>';
   var speech = 'the positive integers';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakNamedSets Example NumSys006
+ */
+sre.ClearspeakNamedSets.prototype.testNumSys006a = function() {
+  var preference = 'default';
+  var mathml = '<mrow><msup><mi>ℤ</mi><mo>-</mo></msup></mrow>';
+  var speech = 'the negative integers';
   this.executeRuleTest(mathml, speech, preference);
 };
 

@@ -52,3 +52,10 @@ sre.ClearspeakRuleTest = function() {
 goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 
 
+/**
+ * @override
+ */
+sre.ClearspeakRuleTest.prototype.setUpTest = function() {
+  sre.System.getInstance().setupEngine(
+    {markup: sre.Engine.Markup.PUNCTUATION});
+};
