@@ -100,7 +100,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
   var setIf = function(feat) {
-    if (feature[feat] !== undefined) {
+    if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
     }
   };
@@ -126,7 +126,10 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   engine.comparator = new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
-      sre.DynamicProperties.create(['default'], ['short', 'default']));
+      // TODO: (MOSS) This is temporary for clearspeak!
+      // The mathspeak dependency should be set somewhere in clearspeak.
+      sre.DynamicProperties.create(['mathspeak', 'default'],
+                                   ['short', 'default']));
 };
 
 

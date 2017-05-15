@@ -43,3 +43,20 @@ sre.StoreUtil.nodeCounter = function(nodes, context) {
     return localContext + ' ' + localCounter;
   };
 };
+
+
+/**
+ * Returns a separating pause element.
+ * @param {Array.<Node>} nodes A node array.
+ * @param {string} context A pause value string.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that
+ *     returns a personality description of a single pause.
+ */
+sre.StoreUtil.pauseSeparator = function(nodes, context) {
+  var numeral = parseFloat(context);
+  var value = isNaN(numeral) ? context : numeral;
+  return function() {
+    return [sre.AuditoryDescription.create(
+        {text: '', personality: {pause: value}})];
+  };
+};
