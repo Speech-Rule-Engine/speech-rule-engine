@@ -22,6 +22,7 @@ goog.provide('sre.ClearspeakUtil');
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.MathspeakUtil');
+goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
 
 
@@ -51,4 +52,11 @@ sre.ClearspeakUtil.nodeCounter = function(nodes, context) {
     var result = func();
     return result + ':';
   };
+};
+
+
+sre.ClearspeakUtil.simpleExpression = function() {
+  return new sre.SemanticAnnotator(
+    'clearspeak',
+    function(node) {return 'simple'; });
 };

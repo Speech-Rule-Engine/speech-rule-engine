@@ -73,6 +73,12 @@ sre.SemanticNode = function(id) {
    * @type {!Array.<sre.SemanticNode>}
    */
   this.contentNodes = [];
+
+  /**
+   * @type {!Object.<string>}
+   */
+  this.meaning = {};
+
 };
 
 
@@ -154,6 +160,9 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
   if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
     node.setAttribute('font', this.font);
   }
+  if (Object.keys(this.meaning).length) {
+    node.setAttribute('meaning', this.xmlMeaning_());
+  }
   if (this.embellished) {
     node.setAttribute('embellished', this.embellished);
   }
@@ -161,6 +170,20 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
     node.setAttribute('fencepointer', this.fencePointer);
   }
   node.setAttribute('id', this.id);
+};
+
+
+/**
+ * Turns meaning structure into an attribute.
+ * @return {string} XML string for meaning.
+ * @private
+ */
+sre.SemanticNode.prototype.xmlMeaning_ = function() {
+  var result = [];
+  for (var key in this.meaning) {
+    result.push(key + ':' + this.meaning[key]);
+  }
+  return result.join(';');
 };
 
 
@@ -343,3 +366,11 @@ sre.SemanticNode.prototype.mathmlTreeString_ = function() {
 };
 
 
+/**
+ * Adds a new meaning annotation.
+ * @param {string} domain The domain.
+ * @param {string} meaning The meaning.
+ */
+sre.SemanticNode.prototype.addMeaning = function(domain, meaning) {
+  this.meaning[domain] = meaning;
+};

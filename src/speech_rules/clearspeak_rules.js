@@ -65,6 +65,10 @@ var defineRule = sre.ClearspeakRules.defineRule_;
 
 var addCTXF = sre.ClearspeakRules.addContextFunction_;
 
+sre.ClearspeakRules.addAnnotators_ = function() {
+  sre.SemanticAnnotations.getInstance().register(sre.ClearspeakUtil.simpleExpression());
+};
+
 /**
  * Initialize the custom functions.
  * @private
@@ -257,7 +261,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
 sre.ClearspeakRules.getInstance().initializer = [
   sre.ClearspeakRules.initCustomFunctions_,
-  sre.ClearspeakRules.initClearspeakRules_
+  sre.ClearspeakRules.initClearspeakRules_,
+  sre.ClearspeakRules.addAnnotators_
 ];
 
 
