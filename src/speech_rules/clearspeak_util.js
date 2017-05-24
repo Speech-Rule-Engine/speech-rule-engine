@@ -61,13 +61,13 @@ sre.ClearspeakUtil.nodeCounter = function(nodes, context) {
  * 
  * 1. A number that is an integer, a decimal, or a fraction that is spoken as an
  * ordinal
+ *
+ * 2. A letter, two juxtaposed letters (e.g., x, y, z, xy, yz, etc.), the
+ * negative of a letter, or the negative of two juxtaposed letters (e.g., -x ,
+ * -y , -z , -xy , -yz , etc.)
  * 
- * 2. An integer, decimal, letter, or the negative of a letter that is followed by
+ * 3. An integer, decimal, letter, or the negative of a letter that is followed by
  * the degree sign (e.g., 45° , -32.5° , x° , - x° )
- * 
- * 3. A number that is an integer, a decimal, or a fraction that is spoken as an
- * ordinal and is followed by a letter or pair of juxtaposed letters (e.g., 2x,
- * -3y , 4.1z, 2xy, -4 yz )
  * 
  * 4. A number that is an integer, a decimal, or a fraction that is spoken as an
  * ordinal and is followed by a letter or pair of juxtaposed letters (e.g., 2x,
@@ -80,52 +80,97 @@ sre.ClearspeakUtil.nodeCounter = function(nodes, context) {
  * @return {boolean} True if the node is a simple expression.
  */
 sre.ClearspeakUtil.isSimpleExpression = function(node) {
-  var type = node.type;
-  var role = node.role;
-  return (
-    // 1. A number that is an integer, a decimal,
-    // or a fraction that is spoken as an ordinal
-    sre.ClearspeakUtil.isSimpleNumber_(node) ||
-      // 2. A letter, two juxtaposed letters (e.g., x, y, z, xy, yz, etc.),
-    (sre.ClearspeakUtil.isLetter_(node) ||
-     (type === sre.SemanticAttr.Type.INFIXOP &&
-      role === sre.SemanticAttr.Role.IMPLICIT &&
-      ((node.childNodes.length === 2 &&
-        (sre.ClearspeakUtil.isLetter_(node.childNodes[0]) ||
-         sre.ClearspeakUtil.isSimpleNumber_(node.childNodes[0])) &&
-        sre.ClearspeakUtil.isLetter_(node.childNodes[1])) ||
-       (node.childNodes.length === 3 &&
-        sre.ClearspeakUtil.isSimpleNumber_(node.childNodes[0]) &&
-        sre.ClearspeakUtil.isLetter_(node.childNodes[1]) &&
-        sre.ClearspeakUtil.isLetter_(node.childNodes[2]))))) ||
-    (type === sre.SemanticAttr.Type.PUNCTUATED &&
-     role === sre.SemanticAttr.Role.ENDPUNCT &&
-     (node.childNodes.length === 2 &&
-      (node.childNodes[1].role === sre.SemanticAttr.Role.DEGREE && 
+  return sre.ClearspeakUtil.isSimpleNumber_(node) ||
+    sre.ClearspeakUtil.isSimpleLetters_(node) ||
+    sre.ClearspeakUtil.isSimpleDegree_(node) ||
+    sre.ClearspeakUtil.isSimpleNegative_(node) ||
+    sre.ClearspeakUtil.isSimpleFunction_(node);
+};
+
+
+/**
+ * A function (including trigonometric and logarithmic functions) with an
+ * argument that is a simple expression.
+ * 
+ * (5, including nested functions but not embellished function symbols).
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is a simple function.
+ * @private
+ */
+sre.ClearspeakUtil.isSimpleFunction_ = function(node) {
+  return node.type === sre.SemanticAttr.Type.APPL &&
+    ((node.childNodes[0].type === sre.SemanticAttr.Type.FUNCTION &&
+      node.childNodes[0].role === sre.SemanticAttr.Role.PREFIXFUNC) ||
+     (node.childNodes[0].type === sre.SemanticAttr.Type.IDENTIFIER &&
+      node.childNodes[0].role === sre.SemanticAttr.Role.SIMPLEFUNC)) &&
+    (sre.ClearspeakUtil.isSimple_(node.childNodes[1])
+     || (node.childNodes[1].type === sre.SemanticAttr.Type.FENCED &&
+         sre.ClearspeakUtil.isSimple_(node.childNodes[1].childNodes[0])));
+};
+
+
+/**
+ * The negation of simple expression defined in item 1, 2, 4.
+ * 
+ * (1 + 2 + 4, including negation).
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is negated simple expression.
+ * @private
+ */
+sre.ClearspeakUtil.isSimpleNegative_ = function(node) {
+  return node.type === sre.SemanticAttr.Type.PREFIXOP &&
+    node.role === sre.SemanticAttr.Role.NEGATIVE &&
+    sre.ClearspeakUtil.isSimple_(node.childNodes[0]) &&
+    node.childNodes[0].type !== sre.SemanticAttr.Type.PREFIXOP &&
+    node.childNodes[0].type !== sre.SemanticAttr.Type.APPL &&
+    node.childNodes[0].type !== sre.SemanticAttr.Type.PUNCTUATED;
+};
+
+  
+/**
+ * An integer, decimal, letter, or the negative of a letter that is followed by
+ * the degree sign.
+ *
+ * (3, including negation).
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is simple degree expression.
+ * @private
+ */
+sre.ClearspeakUtil.isSimpleDegree_ = function(node) {
+  return node.type === sre.SemanticAttr.Type.PUNCTUATED &&
+    node.role === sre.SemanticAttr.Role.ENDPUNCT &&
+    (node.childNodes.length === 2 &&
+     (node.childNodes[1].role === sre.SemanticAttr.Role.DEGREE && 
+      (sre.ClearspeakUtil.isLetter_(node.childNodes[0]) ||
+       sre.ClearspeakUtil.isNumber_(node.childNodes[0]) ||
+       (node.childNodes[0].type === sre.SemanticAttr.Type.PREFIXOP &&
+        node.childNodes[0].role === sre.SemanticAttr.Role.NEGATIVE &&
+        (sre.ClearspeakUtil.isLetter_(node.childNodes[0].childNodes[0]) ||
+         sre.ClearspeakUtil.isNumber_(node.childNodes[0].childNodes[0]))))));
+};
+
+/**
+ * A letter, two juxtaposed letters (e.g., x, y, z, xy, yz, etc.), or a number
+ * that is an integer, a decimal, or a fraction that is spoken as an ordinal and
+ * is followed by a letter or pair of juxtaposed letters.
+ *
+ * (2 + 4 without negation).
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is simple non-negative letter expression.
+ * @private
+ */
+sre.ClearspeakUtil.isSimpleLetters_ = function(node) {
+  return sre.ClearspeakUtil.isLetter_(node) ||
+    (node.type === sre.SemanticAttr.Type.INFIXOP &&
+     node.role === sre.SemanticAttr.Role.IMPLICIT &&
+     ((node.childNodes.length === 2 &&
        (sre.ClearspeakUtil.isLetter_(node.childNodes[0]) ||
-        sre.ClearspeakUtil.isNumber_(node.childNodes[0]) ||
-        (node.childNodes[0].type === sre.SemanticAttr.Type.PREFIXOP &&
-         node.childNodes[0].role === sre.SemanticAttr.Role.NEGATIVE &&
-         (sre.ClearspeakUtil.isLetter_(node.childNodes[0].childNodes[0]) ||
-          sre.ClearspeakUtil.isNumber_(node.childNodes[0].childNodes[0]))))))
-    ) ||
-      (type === sre.SemanticAttr.Type.PREFIXOP &&
-       role === sre.SemanticAttr.Role.NEGATIVE &&
-       sre.ClearspeakUtil.isSimple_(node.childNodes[0]) &&
-       node.childNodes[0].type !== sre.SemanticAttr.Type.PREFIXOP &&
-       node.childNodes[0].type !== sre.SemanticAttr.Type.APPL &&
-       node.childNodes[0].type !== sre.SemanticAttr.Type.PUNCTUATED
-      ) ||
-      (type === sre.SemanticAttr.Type.APPL &&
-       ((node.childNodes[0].type === sre.SemanticAttr.Type.FUNCTION &&
-         node.childNodes[0].role === sre.SemanticAttr.Role.PREFIXFUNC) ||
-        (node.childNodes[0].type === sre.SemanticAttr.Type.IDENTIFIER &&
-         node.childNodes[0].role === sre.SemanticAttr.Role.SIMPLEFUNC)) &&
-       (sre.ClearspeakUtil.isSimple_(node.childNodes[1])
-        || (node.childNodes[1].type === sre.SemanticAttr.Type.FENCED &&
-            sre.ClearspeakUtil.isSimple_(node.childNodes[1].childNodes[0])))
-      )
-  );
+        sre.ClearspeakUtil.isSimpleNumber_(node.childNodes[0])) &&
+       sre.ClearspeakUtil.isLetter_(node.childNodes[1])) ||
+      (node.childNodes.length === 3 &&
+       sre.ClearspeakUtil.isSimpleNumber_(node.childNodes[0]) &&
+       sre.ClearspeakUtil.isLetter_(node.childNodes[1]) &&
+       sre.ClearspeakUtil.isLetter_(node.childNodes[2]))));
 };
 
 
@@ -143,6 +188,7 @@ sre.ClearspeakUtil.isSimple_ = function(node) {
  * Test for single letter.
  * @param {sre.SemanticNode} node The semantic node.
  * @return {boolean} True if the node is a single letter from any alphabet.
+ * @private
  */
 sre.ClearspeakUtil.isLetter_ = function(node) {
   return node.type === sre.SemanticAttr.Type.IDENTIFIER && 
@@ -154,8 +200,11 @@ sre.ClearspeakUtil.isLetter_ = function(node) {
 
 /**
  * Tests if a number an integer or a decimal?
+ *
+ * (1 without negation).
  * @param {sre.SemanticNode} node The semantic node.
  * @return {boolean} True if the number is an integer or a decimal.
+ * @private
  */
 sre.ClearspeakUtil.isNumber_ = function(node) {
   return node.type === sre.SemanticAttr.Type.NUMBER &&
@@ -166,9 +215,10 @@ sre.ClearspeakUtil.isNumber_ = function(node) {
 
 /**
  * A number that is an integer, a decimal, or a fraction that is spoken as an
- * ordinal.
+ * ordinal, but not negative.
  * @param {sre.SemanticNode} node The semantic node.
  * @return {boolean} True if node is number or a vulgar fraction.
+ * @private
  */
 sre.ClearspeakUtil.isSimpleNumber_ = function(node) {
   return sre.ClearspeakUtil.isNumber_(node) ||
