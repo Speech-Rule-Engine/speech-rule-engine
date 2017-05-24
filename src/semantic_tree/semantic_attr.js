@@ -118,6 +118,13 @@ sre.SemanticAttr = function() {
       [
         '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗'
       ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.degrees =
+      [
+        '°'
+      ];
 
   // Fences.
   // Fences are treated slightly differently from other symbols as we want to
@@ -939,6 +946,10 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.PRIME
     },
+    {set: this.degrees,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.DEGREE
+    },
     // Fences
     {set: this.leftFences,
       type: sre.SemanticAttr.Type.FENCE,
@@ -1387,6 +1398,7 @@ sre.SemanticAttr.Role = {
   FULLSTOP: 'fullstop',
   DASH: 'dash',
   PRIME: 'prime',   // Superscript.
+  DEGREE: 'degree',   // Superscript.
   VBAR: 'vbar',  // A vertical bar.
   OPENFENCE: 'openfence',
   CLOSEFENCE: 'closefence',

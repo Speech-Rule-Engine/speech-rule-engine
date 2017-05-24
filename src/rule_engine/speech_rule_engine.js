@@ -513,6 +513,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
+  console.log(ruleSets);
   var combined = new sre.MathStore();
   for (var i = 0, store; store = ruleSets[i]; i++) {
     store.initialize();

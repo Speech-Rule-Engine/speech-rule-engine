@@ -283,3 +283,27 @@
 
 *** We might want to have special function for grammar checking instead of the grammar attribute
     Check after integration with the Trie (WP1.3)
+
+* Clearspeak
+
+** Semantic treatment of prime, degree etc. regardless whether or not they are superscripts or just punctuations.
+
+```
+else if (sre.SemanticPred.endpunctIsSuper(nodes, punctuations)) {
+      sre.SemanticProcessor.endpunctToSuper(newNode, nodes[0]);
+}
+
+sre.SemanticProcessor.endpunctToSuper = function(node, base) {
+  node.type = sre.SemanticAttr.Type.SUPERSCRIPT;
+  node.role = base.role;
+};
+
+sre.SemanticPred.endpunctIsSuper = function(nodes, punctuations) {
+  var superPunct = [sre.SemanticAttr.Role.PRIME, sre.SemanticAttr.Role.DEGREE];
+  return nodes.length === 2 && punctuations.length === 1 &&
+    nodes[1] === punctuations[0] &&
+    superPunct.indexOf(punctuations[0].role) !== -1;
+};
+
+```
+

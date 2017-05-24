@@ -372,5 +372,18 @@ sre.SemanticNode.prototype.mathmlTreeString_ = function() {
  * @param {string} meaning The meaning.
  */
 sre.SemanticNode.prototype.addMeaning = function(domain, meaning) {
-  this.meaning[domain] = meaning;
+  if (meaning) {
+    this.meaning[domain] = meaning;
+  }
+};
+
+
+/**
+ * Checks if a node has a particular meaning.
+ * @param {string} domain The domain.
+ * @param {string} meaning The meaning.
+ * @return{boolean} True if the meaning is contained.
+ */
+sre.SemanticNode.prototype.hasMeaning = function(domain, meaning) {
+  return this.meaning[domain] === meaning;
 };
