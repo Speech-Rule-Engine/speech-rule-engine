@@ -75,7 +75,7 @@ sre.SemanticNode = function(id) {
   this.contentNodes = [];
 
   /**
-   * @type {!Object.<string>}
+   * @type {!Object.<Array.<string>>}
    */
   this.meaning = {};
 
@@ -145,7 +145,7 @@ sre.SemanticNode.prototype.xml = function(xml, opt_brief) {
 sre.SemanticNode.prototype.toString = function(opt_brief) {
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('', 'text/xml');
+  var xml = dp.parseFromString('<snode/>', 'text/xml');
   return xmls.serializeToString(this.xml(xml, opt_brief));
 };
 
@@ -181,7 +181,9 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
 sre.SemanticNode.prototype.xmlMeaning_ = function() {
   var result = [];
   for (var key in this.meaning) {
-    result.push(key + ':' + this.meaning[key]);
+    this.meaning[key].forEach(function(mean) {
+      result.push(key + ':' + mean);
+    });
   }
   return result.join(';');
 };
@@ -367,13 +369,29 @@ sre.SemanticNode.prototype.mathmlTreeString_ = function() {
 
 
 /**
- * Adds a new meaning annotation.
+ * Adds a new meaning annotation if meaning is not empty.
  * @param {string} domain The domain.
  * @param {string} meaning The meaning.
  */
 sre.SemanticNode.prototype.addMeaning = function(domain, meaning) {
   if (meaning) {
-    this.meaning[domain] = meaning;
+    this.addMeaning_(domain, meaning);
+  }
+};
+
+
+/**
+ * Adds a new meaning annotation.
+ * @param {string} domain The domain.
+ * @param {string} meaning The meaning.
+ * @private
+ */
+sre.SemanticNode.prototype.addMeaning_ = function(domain, meaning) {
+  var content = this.meaning[domain];
+  if (content) {
+    content.push(meaning);
+  } else {
+    this.meaning[domain] = [meaning];
   }
 };
 
@@ -385,5 +403,9 @@ sre.SemanticNode.prototype.addMeaning = function(domain, meaning) {
  * @return{boolean} True if the meaning is contained.
  */
 sre.SemanticNode.prototype.hasMeaning = function(domain, meaning) {
-  return this.meaning[domain] === meaning;
+  var content = this.meaning[domain];
+  if (!content) {
+    return false;
+  }
+  return content.indexOf(meaning) !== -1;
 };

@@ -35,6 +35,11 @@ sre.SemanticAnnotations = function() {
    */
   this.annotators = {};
   
+  /**
+   * @type {number}
+   */
+  this.counter = 0;
+  
 };
 goog.addSingletonGetter(sre.SemanticAnnotations);
 
@@ -45,16 +50,17 @@ goog.addSingletonGetter(sre.SemanticAnnotations);
  * @param {sre.SemanticAnnotator} annotator The annotator.
  */
 sre.SemanticAnnotations.prototype.register = function(annotator) {
-  this.annotators[annotator.domain] = annotator;
+  annotator.name = annotator.domain + this.counter++;
+  this.annotators[annotator.name] = annotator;
 };
 
 
 /**
- * Unregisters an annotator by its domain name.
- * @param {string} domain The domain name.
+ * Unregisters an annotator by its name.
+ * @param {string} name The annotator name.
  */
-sre.SemanticAnnotations.prototype.unregister = function(domain) {
-  delete this.annotators[domain];
+sre.SemanticAnnotations.prototype.unregister = function(name) {
+  delete this.annotators[name];
 };
 
 
