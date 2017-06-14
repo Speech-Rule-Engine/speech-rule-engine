@@ -24,19 +24,46 @@ goog.provide('sre.AudioUtil');
 // TODO: Refactor into dedicated personality/markup data structure.
 /**
  * Merges pause personality annotations.
- * @param {?{pause: number}} oldPause Previous pause annotation.
- * @param {{pause: number}} newPause New pause annotation.
- * @param {(function(number, number): number)=} opt_merge Function to combine
- *     pauses. By default we add them.
- * @return {{pause: number}} A personality annotation with the merged pause
+ * @param {?{pause: (number|string)}} oldPause Previous pause annotation.
+ * @param {{pause: (number|string)}} newPause New pause annotation.
+ * @param {(function((number|string), (number|string)): (number|string))=}
+ *     opt_merge Function to combine pauses. By default we add them.
+ * @return {{pause: (number|string)}} A personality annotation with the merged pause
  *     values.
  */
 sre.AudioUtil.mergePause = function(oldPause, newPause, opt_merge) {
   if (!oldPause) {
     return newPause;
   }
-  var merge = opt_merge || function(x, y) {return x + y;};
-  return {pause: merge.call(null, oldPause.pause, newPause.pause)};
+  return {pause: sre.AudioUtil.mergePause_(
+    oldPause.pause, newPause.pause, opt_merge)};
+};
+
+
+/**
+ * Merges pause personality annotations.
+ * @param {number|string} oldPause Previous pause annotation.
+ * @param {number|string} newPause New pause annotation.
+ * @param {(function((number|string), (number|string)): (number|string))=}
+ *     opt_merge Function to combine pauses. By default we add them.
+ * @return {number|string} A personality annotation with the merged pause
+ *     values.
+ * @private
+ */
+sre.AudioUtil.mergePause_ = function(oldPause, newPause, opt_merge) {
+  var merge = opt_merge || function(x, y) {
+    if (typeof x === 'number' || typeof y === 'number') {
+      return x + y;
+    }
+    if (typeof x === 'number') {
+      return y;
+    }
+    if (typeof y === 'number') {
+      return x;
+    }
+    return [oldPause, newPause].sort()[0];
+  };
+  return merge.call(null, oldPause, newPause);
 };
 
 
@@ -192,7 +219,7 @@ sre.AudioUtil.appendMarkup_ = function(
         sre.AudioUtil.isPauseElement(last)) {
       var pauseProp = sre.Engine.personalityProps.PAUSE;
       // Merging could be done using max or min or plus.
-      last[pauseProp] = last[pauseProp] + pause[pauseProp];
+      last[pauseProp] = sre.AudioUtil.mergePause_(last[pauseProp], pause[pauseProp]);
       pause = null;
     }
     if (last && str && Object.keys(pers).length === 0 &&

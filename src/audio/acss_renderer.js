@@ -60,9 +60,10 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
     }
     if (sre.AudioUtil.isPauseElement(descr)) {
       if (string) {
-        pause = sre.AudioUtil.mergePause(
+        // TODO: (MS 2.3) Sort out this type and the merge function!
+        pause = /** @type {{pause: number}} */(sre.AudioUtil.mergePause(
             pause,
-            /** @type {{pause: number}} */(descr), Math.max);
+          /** @type {{pause: number}} */(descr), Math.max));
       }
       continue;
     }
