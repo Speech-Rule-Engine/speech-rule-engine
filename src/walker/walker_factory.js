@@ -26,6 +26,7 @@ goog.require('sre.DummyWalker');
 goog.require('sre.SemanticWalker');
 goog.require('sre.SpeechGenerator');
 goog.require('sre.SyntaxWalker');
+goog.require('sre.TableWalker');
 goog.require('sre.Walker');
 
 
@@ -56,5 +57,6 @@ sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
 sre.WalkerFactory.walkerMapping_ = {
   'Dummy': sre.DummyWalker,
   'Semantic': sre.SemanticWalker,
-  'Syntax': sre.SyntaxWalker
+  'Syntax': sre.SyntaxWalker,
+  'Table': sre.TableWalker   // This is temporary.
 };

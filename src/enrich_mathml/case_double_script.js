@@ -49,14 +49,15 @@ goog.inherits(sre.CaseDoubleScript, sre.AbstractEnrichCase);
  * @override
  */
 sre.CaseDoubleScript.test = function(semantic) {
-  if (!semantic.mathmlTree) {
+  if (!semantic.mathmlTree || !semantic.childNodes.length) {
     return false;
   }
   var mmlTag = sre.DomUtil.tagName(semantic.mathmlTree);
+  var role = semantic.childNodes[0].role;
   return (mmlTag === 'MSUBSUP' &&
-          semantic.type === sre.SemanticAttr.Type.SUPERSCRIPT) ||
+          role === sre.SemanticAttr.Role.SUBSUP) ||
       (mmlTag === 'MUNDEROVER' &&
-      semantic.type === sre.SemanticAttr.Type.OVERSCORE);
+       role === sre.SemanticAttr.Role.UNDEROVER);
 };
 
 
@@ -64,9 +65,9 @@ sre.CaseDoubleScript.test = function(semantic) {
  * @override
  */
 sre.CaseDoubleScript.prototype.getMathml = function() {
-  var supSem = /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[1]);
   var ignore = this.semantic.childNodes[0];
   var baseSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[0]);
+  var supSem = /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[1]);
   var subSem = /**@type {!sre.SemanticNode}*/(ignore.childNodes[1]);
   var supMml = sre.EnrichMathml.walkTree(supSem);
   var baseMml = sre.EnrichMathml.walkTree(baseSem);

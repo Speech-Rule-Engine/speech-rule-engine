@@ -26,6 +26,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.SpeechRule');
+goog.require('sre.Trie');
 
 
 
@@ -36,22 +37,6 @@ goog.require('sre.SpeechRule');
  */
 sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
-
-  //TODO: (MOSS) WP 1.1
-  // Revisit
-  //
-  /**
-   * @override
-   */
-  this.parseOrder = [
-    sre.Engine.Axis.DOMAIN,
-    sre.Engine.Axis.STYLE
-  ];
-
-  /**
-   * @override
-   */
-  this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
 
   /**
    * @type {boolean}
@@ -75,6 +60,7 @@ sre.MathStore.prototype.initialize = function() {
   for (var i = 0, func; func = this.initializer[i]; i++) {
     func();
   }
+  this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
 };
 
@@ -104,6 +90,11 @@ sre.MathStore.prototype.defineUniqueRuleAlias = function(
 };
 
 
+// TODO: Possibly defines a number of duplicate rules.
+// (E.g., superscript-baseline in Mathspeak)
+// These are automatically discarded in the Trie, but might still be worthwhile
+// looking into the definition methods.
+//
 /**
  * Adds an alias for an existing rule.
  * @param {string} name The name of the rule.
@@ -252,9 +243,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
 };
 
 
-//TODO: (MOSS) WP 1.4
-// Integrate Context structure
-//
 /**
  * Creates a new Auditory Description for a math expression.
  * @param {string} text to be translated.
@@ -263,12 +251,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  * @private
  */
 sre.MathStore.prototype.evaluate_ = function(text) {
-  return new sre.AuditoryDescription(
-      {
-        'text': text,
-        'preprocess': true,
-        'correction':
-            sre.SpeechRuleEngine.getInstance().getGlobalParameter('remove') ||
-            ''
-      });
+  return sre.AuditoryDescription.create(
+      {text: text}, {adjust: true, translate: true});
 };

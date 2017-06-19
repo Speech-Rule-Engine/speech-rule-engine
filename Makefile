@@ -256,3 +256,6 @@ enrich: $(SRC)
 
 clean_enrich:
 	rm -f $(ENRICH)
+
+emacs: publish
+	@cp $(TARGET) ../emacs-math-speak/
