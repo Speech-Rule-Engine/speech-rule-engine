@@ -48,7 +48,7 @@ goog.inherits(sre.ClearspeakFunctions, sre.ClearspeakRuleTest);
 /**
  * Testing ClearspeakFunctions Example Function001
  */
-sre.ClearspeakFunctions.prototype.untestFunction001 = function() {
+sre.ClearspeakFunctions.prototype.testFunction001 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'f of x';
@@ -59,7 +59,7 @@ sre.ClearspeakFunctions.prototype.untestFunction001 = function() {
 /**
  * Testing ClearspeakFunctions Example Function002
  */
-sre.ClearspeakFunctions.prototype.untestFunction002 = function() {
+sre.ClearspeakFunctions.prototype.testFunction002 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'g of x';
@@ -70,7 +70,7 @@ sre.ClearspeakFunctions.prototype.untestFunction002 = function() {
 /**
  * Testing ClearspeakFunctions Example Function003
  */
-sre.ClearspeakFunctions.prototype.untestFunction003 = function() {
+sre.ClearspeakFunctions.prototype.testFunction003 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of x';
@@ -81,7 +81,7 @@ sre.ClearspeakFunctions.prototype.untestFunction003 = function() {
 /**
  * Testing ClearspeakFunctions Example Function004
  */
-sre.ClearspeakFunctions.prototype.untestFunction004 = function() {
+sre.ClearspeakFunctions.prototype.testFunction004 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f of 2x';
@@ -92,10 +92,10 @@ sre.ClearspeakFunctions.prototype.untestFunction004 = function() {
 /**
  * Testing ClearspeakFunctions Example Function005
  */
-sre.ClearspeakFunctions.prototype.untestFunction005 = function() {
+sre.ClearspeakFunctions.prototype.testFunction005 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g of negative 2 x';
+  var speech = 'g of negative 2x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -103,7 +103,7 @@ sre.ClearspeakFunctions.prototype.untestFunction005 = function() {
 /**
  * Testing ClearspeakFunctions Example Function006
  */
-sre.ClearspeakFunctions.prototype.untestFunction006 = function() {
+sre.ClearspeakFunctions.prototype.testFunction006 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of one half';
@@ -114,14 +114,16 @@ sre.ClearspeakFunctions.prototype.untestFunction006 = function() {
 /**
  * Testing ClearspeakFunctions Example Function007
  */
-sre.ClearspeakFunctions.prototype.untestFunction007 = function() {
-  var preference = 'Functions_Auto(Fraction Preference Over is also set)';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakFunctions.prototype.testFunction007 = function() {
+  // var preference = 'Functions_Auto(Fraction Preference Over is also set)';  // TODO (sorge): Sort out preferences!
+  var preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h of, open paren, one over 2, close paren';
+  var speech = 'h of, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function008
  */
@@ -133,6 +135,7 @@ sre.ClearspeakFunctions.prototype.untestFunction008 = function() {
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function009
  */
@@ -147,7 +150,7 @@ sre.ClearspeakFunctions.prototype.untestFunction009 = function() {
 /**
  * Testing ClearspeakFunctions Example Function010
  */
-sre.ClearspeakFunctions.prototype.untestFunction010 = function() {
+sre.ClearspeakFunctions.prototype.testFunction010 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g of, open paren, x squared, close paren';
@@ -158,7 +161,7 @@ sre.ClearspeakFunctions.prototype.untestFunction010 = function() {
 /**
  * Testing ClearspeakFunctions Example Function011
  */
-sre.ClearspeakFunctions.prototype.untestFunction011 = function() {
+sre.ClearspeakFunctions.prototype.testFunction011 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'f inverse of x';
@@ -169,7 +172,7 @@ sre.ClearspeakFunctions.prototype.untestFunction011 = function() {
 /**
  * Testing ClearspeakFunctions Example Function012
  */
-sre.ClearspeakFunctions.prototype.untestFunction012 = function() {
+sre.ClearspeakFunctions.prototype.testFunction012 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'g inverse of x';
@@ -180,7 +183,7 @@ sre.ClearspeakFunctions.prototype.untestFunction012 = function() {
 /**
  * Testing ClearspeakFunctions Example Function013
  */
-sre.ClearspeakFunctions.prototype.untestFunction013 = function() {
+sre.ClearspeakFunctions.prototype.testFunction013 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of x';
@@ -191,7 +194,7 @@ sre.ClearspeakFunctions.prototype.untestFunction013 = function() {
 /**
  * Testing ClearspeakFunctions Example Function014
  */
-sre.ClearspeakFunctions.prototype.untestFunction014 = function() {
+sre.ClearspeakFunctions.prototype.testFunction014 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f inverse of 2x';
@@ -202,7 +205,7 @@ sre.ClearspeakFunctions.prototype.untestFunction014 = function() {
 /**
  * Testing ClearspeakFunctions Example Function015
  */
-sre.ClearspeakFunctions.prototype.untestFunction015 = function() {
+sre.ClearspeakFunctions.prototype.testFunction015 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g inverse of negative 2x';
@@ -210,6 +213,7 @@ sre.ClearspeakFunctions.prototype.untestFunction015 = function() {
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function016
  */
@@ -224,7 +228,7 @@ sre.ClearspeakFunctions.prototype.untestFunction016 = function() {
 /**
  * Testing ClearspeakFunctions Example Function017
  */
-sre.ClearspeakFunctions.prototype.untestFunction017 = function() {
+sre.ClearspeakFunctions.prototype.testFunction017 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g inverse of, open paren, x squared, close paren';
@@ -235,7 +239,7 @@ sre.ClearspeakFunctions.prototype.untestFunction017 = function() {
 /**
  * Testing ClearspeakFunctions Example Function018
  */
-sre.ClearspeakFunctions.prototype.untestFunction018 = function() {
+sre.ClearspeakFunctions.prototype.testFunction018 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of one half';
@@ -246,8 +250,9 @@ sre.ClearspeakFunctions.prototype.untestFunction018 = function() {
 /**
  * Testing ClearspeakFunctions Example Function019
  */
-sre.ClearspeakFunctions.prototype.untestFunction019 = function() {
-  var preference = 'Functions_Auto(Fraction Preference Over is also set)';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakFunctions.prototype.testFunction019 = function() {
+  var preference = 'Functions_Auto';
+  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -257,7 +262,7 @@ sre.ClearspeakFunctions.prototype.untestFunction019 = function() {
 /**
  * Testing ClearspeakFunctions Example Function020
  */
-sre.ClearspeakFunctions.prototype.untestFunction020 = function() {
+sre.ClearspeakFunctions.prototype.testFunction020 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f inverse of, f of x';
@@ -268,7 +273,7 @@ sre.ClearspeakFunctions.prototype.untestFunction020 = function() {
 /**
  * Testing ClearspeakFunctions Example Function021
  */
-sre.ClearspeakFunctions.prototype.untestFunction021 = function() {
+sre.ClearspeakFunctions.prototype.testFunction021 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g inverse of, g of x';
@@ -279,7 +284,7 @@ sre.ClearspeakFunctions.prototype.untestFunction021 = function() {
 /**
  * Testing ClearspeakFunctions Example Function022
  */
-sre.ClearspeakFunctions.prototype.untestFunction022 = function() {
+sre.ClearspeakFunctions.prototype.testFunction022 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of, h of x';
@@ -290,7 +295,7 @@ sre.ClearspeakFunctions.prototype.untestFunction022 = function() {
 /**
  * Testing ClearspeakFunctions Example Function023
  */
-sre.ClearspeakFunctions.prototype.untestFunction023 = function() {
+sre.ClearspeakFunctions.prototype.testFunction023 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f inverse of, f of 2x';
@@ -301,7 +306,7 @@ sre.ClearspeakFunctions.prototype.untestFunction023 = function() {
 /**
  * Testing ClearspeakFunctions Example Function024
  */
-sre.ClearspeakFunctions.prototype.untestFunction024 = function() {
+sre.ClearspeakFunctions.prototype.testFunction024 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g inverse of, g of negative 2x';
@@ -312,7 +317,7 @@ sre.ClearspeakFunctions.prototype.untestFunction024 = function() {
 /**
  * Testing ClearspeakFunctions Example Function025
  */
-sre.ClearspeakFunctions.prototype.untestFunction025 = function() {
+sre.ClearspeakFunctions.prototype.testFunction025 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of, h of one half';
@@ -324,13 +329,15 @@ sre.ClearspeakFunctions.prototype.untestFunction025 = function() {
  * Testing ClearspeakFunctions Example Function026
  */
 sre.ClearspeakFunctions.prototype.untestFunction026 = function() {
-  var preference = 'Functions_Auto(Fraction Preference Over is also set)';  // TODO (sorge): Sort out preferences!
+  var preference = 'Functions_Auto';
+  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of, open paren, h of, open paren, one over 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function027
  */
@@ -342,6 +349,7 @@ sre.ClearspeakFunctions.prototype.untestFunction027 = function() {
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function028
  */
@@ -356,7 +364,7 @@ sre.ClearspeakFunctions.prototype.untestFunction028 = function() {
 /**
  * Testing ClearspeakFunctions Example Function029
  */
-sre.ClearspeakFunctions.prototype.untestFunction029 = function() {
+sre.ClearspeakFunctions.prototype.testFunction029 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g inverse of, open paren, g of, open paren, x squared, close paren, close paren';
@@ -367,7 +375,7 @@ sre.ClearspeakFunctions.prototype.untestFunction029 = function() {
 /**
  * Testing ClearspeakFunctions Example Function030
  */
-sre.ClearspeakFunctions.prototype.untestFunction030 = function() {
+sre.ClearspeakFunctions.prototype.testFunction030 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f of, f inverse of x';
@@ -378,7 +386,7 @@ sre.ClearspeakFunctions.prototype.untestFunction030 = function() {
 /**
  * Testing ClearspeakFunctions Example Function031
  */
-sre.ClearspeakFunctions.prototype.untestFunction031 = function() {
+sre.ClearspeakFunctions.prototype.testFunction031 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g of, g inverse of x';
@@ -389,7 +397,7 @@ sre.ClearspeakFunctions.prototype.untestFunction031 = function() {
 /**
  * Testing ClearspeakFunctions Example Function032
  */
-sre.ClearspeakFunctions.prototype.untestFunction032 = function() {
+sre.ClearspeakFunctions.prototype.testFunction032 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of, h inverse of x';
@@ -400,10 +408,10 @@ sre.ClearspeakFunctions.prototype.untestFunction032 = function() {
 /**
  * Testing ClearspeakFunctions Example Function033
  */
-sre.ClearspeakFunctions.prototype.untestFunction033 = function() {
+sre.ClearspeakFunctions.prototype.testFunction033 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h of, h inverse of 2x';
+  var speech = 'f of, f inverse of 2x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -411,14 +419,15 @@ sre.ClearspeakFunctions.prototype.untestFunction033 = function() {
 /**
  * Testing ClearspeakFunctions Example Function034
  */
-sre.ClearspeakFunctions.prototype.untestFunction034 = function() {
+sre.ClearspeakFunctions.prototype.testFunction034 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h of, h inverse of negative 2x';
+  var speech = 'g of, g inverse of negative 2x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function035
  */
@@ -433,7 +442,7 @@ sre.ClearspeakFunctions.prototype.untestFunction035 = function() {
 /**
  * Testing ClearspeakFunctions Example Function036
  */
-sre.ClearspeakFunctions.prototype.untestFunction036 = function() {
+sre.ClearspeakFunctions.prototype.testFunction036 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g of, g inverse of, open paren, x squared, close paren';
@@ -444,7 +453,7 @@ sre.ClearspeakFunctions.prototype.untestFunction036 = function() {
 /**
  * Testing ClearspeakFunctions Example Function037
  */
-sre.ClearspeakFunctions.prototype.untestFunction037 = function() {
+sre.ClearspeakFunctions.prototype.testFunction037 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of, h inverse of one half';
@@ -455,8 +464,9 @@ sre.ClearspeakFunctions.prototype.untestFunction037 = function() {
 /**
  * Testing ClearspeakFunctions Example Function038
  */
-sre.ClearspeakFunctions.prototype.untestFunction038 = function() {
-  var preference = 'Functions_Auto(Fraction Preference FracOver is also set)';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakFunctions.prototype.testFunction038 = function() {
+  var preference = 'Functions_Auto';
+  preference = 'Fraction_FracOver';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of, h inverse of, open paren, the fraction 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -466,7 +476,7 @@ sre.ClearspeakFunctions.prototype.untestFunction038 = function() {
 /**
  * Testing ClearspeakFunctions Example Function039
  */
-sre.ClearspeakFunctions.prototype.untestFunction039 = function() {
+sre.ClearspeakFunctions.prototype.testFunction039 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f of, g of x';
@@ -474,6 +484,7 @@ sre.ClearspeakFunctions.prototype.untestFunction039 = function() {
 };
 
 
+// TODO (simons): Semantic propagation of properties.
 /**
  * Testing ClearspeakFunctions Example Function040
  */
@@ -488,7 +499,7 @@ sre.ClearspeakFunctions.prototype.untestFunction040 = function() {
 /**
  * Testing ClearspeakFunctions Example Function041
  */
-sre.ClearspeakFunctions.prototype.untestFunction041 = function() {
+sre.ClearspeakFunctions.prototype.testFunction041 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of, g of x';
@@ -499,21 +510,22 @@ sre.ClearspeakFunctions.prototype.untestFunction041 = function() {
 /**
  * Testing ClearspeakFunctions Example Function042
  */
-sre.ClearspeakFunctions.prototype.untestFunction042 = function() {
+sre.ClearspeakFunctions.prototype.testFunction042 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h of, open paren, g of the fraction with numerator x, and denominator x plus 1, close paren, close paren';
+  var speech = 'h of, open paren, g of, open paren, the fraction with numerator x, and denominator x plus 1, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
 
+// TODO (simons): Semantic propagation of function properties.
 /**
  * Testing ClearspeakFunctions Example Function043
  */
 sre.ClearspeakFunctions.prototype.untestFunction043 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'Open paren, f plus g, close, paren, of x, equals f of x, plus, g of x';
+  var speech = 'open paren, f plus g, close paren, of x, equals f of x, plus, g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -524,7 +536,7 @@ sre.ClearspeakFunctions.prototype.untestFunction043 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction044 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f plus g, close paren, of, open paren, x plus 1, close paren equals f of, open paren, x plus 1, close paren, plus, g of, open paren, x plus 1, close paren';
+  var speech = 'open paren, f plus g, close paren, of, open paren, x plus 1, close paren equals f of, open paren, x plus 1, close paren, plus, g of, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -535,7 +547,7 @@ sre.ClearspeakFunctions.prototype.untestFunction044 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction045 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f times g, close paren, of x';
+  var speech = 'open paren, f times g, close paren, of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -546,7 +558,7 @@ sre.ClearspeakFunctions.prototype.untestFunction045 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction046 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f times g, close paren, of, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f times g, close paren, of, open paren, 2x plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -557,7 +569,7 @@ sre.ClearspeakFunctions.prototype.untestFunction046 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction047 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'Open paren, f over g, close paren, of x, equals f of x over g of x';
+  var speech = 'open paren, f over g, close paren, of x, equals f of x over g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -568,7 +580,7 @@ sre.ClearspeakFunctions.prototype.untestFunction047 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction048 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'Open paren, f over g, close paren, of, open paren, 2x plus 5, close paren equals the fraction with numerator f of, open paren, 2x plus 5, close paren, and denominator, g of, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f over g, close paren, of, open paren, 2x plus 5, close paren equals the fraction with numerator f of, open paren, 2x plus 5, close paren, and denominator, g of, open paren, 2x plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -579,7 +591,7 @@ sre.ClearspeakFunctions.prototype.untestFunction048 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction049 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f composed with g, close paren, of x, equals, f of g of x';
+  var speech = 'open paren, f composed with g, close paren, of x, equals, f of g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -961,7 +973,7 @@ sre.ClearspeakFunctions.prototype.untestFunction083 = function() {
 /**
  * Testing ClearspeakFunctions Example Function084
  */
-sre.ClearspeakFunctions.prototype.untestFunction084 = function() {
+sre.ClearspeakFunctions.prototype.testFunction084 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'f times x';
@@ -972,7 +984,7 @@ sre.ClearspeakFunctions.prototype.untestFunction084 = function() {
 /**
  * Testing ClearspeakFunctions Example Function085
  */
-sre.ClearspeakFunctions.prototype.untestFunction085 = function() {
+sre.ClearspeakFunctions.prototype.testFunction085 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'g times x';
@@ -983,7 +995,7 @@ sre.ClearspeakFunctions.prototype.untestFunction085 = function() {
 /**
  * Testing ClearspeakFunctions Example Function086
  */
-sre.ClearspeakFunctions.prototype.untestFunction086 = function() {
+sre.ClearspeakFunctions.prototype.testFunction086 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'h times x';
@@ -994,7 +1006,7 @@ sre.ClearspeakFunctions.prototype.untestFunction086 = function() {
 /**
  * Testing ClearspeakFunctions Example Function087
  */
-sre.ClearspeakFunctions.prototype.untestFunction087 = function() {
+sre.ClearspeakFunctions.prototype.testFunction087 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f times 2x';
@@ -1005,10 +1017,10 @@ sre.ClearspeakFunctions.prototype.untestFunction087 = function() {
 /**
  * Testing ClearspeakFunctions Example Function088
  */
-sre.ClearspeakFunctions.prototype.untestFunction088 = function() {
+sre.ClearspeakFunctions.prototype.testFunction088 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g times negative 2 x';
+  var speech = 'g times negative 2x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1016,7 +1028,7 @@ sre.ClearspeakFunctions.prototype.untestFunction088 = function() {
 /**
  * Testing ClearspeakFunctions Example Function089
  */
-sre.ClearspeakFunctions.prototype.untestFunction089 = function() {
+sre.ClearspeakFunctions.prototype.testFunction089 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h times one half';
@@ -1028,9 +1040,9 @@ sre.ClearspeakFunctions.prototype.untestFunction089 = function() {
  * Testing ClearspeakFunctions Example Function090
  */
 sre.ClearspeakFunctions.prototype.untestFunction090 = function() {
-  var preference = 'Functions_None';
+  var preference = 'Functions_None(Fraction Preference Over is also set)';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h times, open paren, one over 2, close paren';
+  var speech = 'h times, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1060,7 +1072,7 @@ sre.ClearspeakFunctions.prototype.untestFunction092 = function() {
 /**
  * Testing ClearspeakFunctions Example Function093
  */
-sre.ClearspeakFunctions.prototype.untestFunction093 = function() {
+sre.ClearspeakFunctions.prototype.testFunction093 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'g times, open paren, x squared, close paren';
@@ -1426,7 +1438,7 @@ sre.ClearspeakFunctions.prototype.untestFunction125 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction126 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'Open paren, f plus g, close, paren, times x equals f times x, plus, g times x';
+  var speech = 'open paren, f plus g, close, paren, times x equals f times x, plus, g times x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1437,7 +1449,7 @@ sre.ClearspeakFunctions.prototype.untestFunction126 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction127 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f plus g, close paren, times, open paren, x plus 1, close paren equals f times, open paren, x plus 1, close paren, plus, g times, open paren, x plus 1, close paren';
+  var speech = 'open paren, f plus g, close paren, times, open paren, x plus 1, close paren equals f times, open paren, x plus 1, close paren, plus, g times, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1448,7 +1460,7 @@ sre.ClearspeakFunctions.prototype.untestFunction127 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction128 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f times g, close paren, times x';
+  var speech = 'open paren, f times g, close paren, times x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1459,7 +1471,7 @@ sre.ClearspeakFunctions.prototype.untestFunction128 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction129 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, f times g, close paren, times, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f times g, close paren, times, open paren, 2x plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1470,7 +1482,7 @@ sre.ClearspeakFunctions.prototype.untestFunction129 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction130 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'Open paren, f over g, close paren, times x equals the fraction with numerator f times x, and denominator g times x';
+  var speech = 'open paren, f over g, close paren, times x equals the fraction with numerator f times x, and denominator g times x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1481,7 +1493,7 @@ sre.ClearspeakFunctions.prototype.untestFunction130 = function() {
 sre.ClearspeakFunctions.prototype.untestFunction131 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'Open paren, f over g, close paren, times, open paren, 2x plus 5, close paren equals the fraction with numerator f times, open paren, 2x plus 5, close paren, and denominator, g times, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f over g, close paren, times, open paren, 2x plus 5, close paren equals the fraction with numerator f times, open paren, 2x plus 5, close paren, and denominator, g times, open paren, 2x plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 

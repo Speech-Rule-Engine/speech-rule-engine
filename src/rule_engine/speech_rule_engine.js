@@ -265,6 +265,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     var descrs = [];
     var content = component.content || '';
     var attributes = component.attributes || {};
+    var multi = false;
     if (component.grammar) {
       this.processGrammar(node, component.grammar);
     }
@@ -276,6 +277,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         }
         break;
       case sre.SpeechRule.Type.MULTI:
+        multi = true;
         selected = this.activeStore_.applySelector(node, content);
         if (selected.length > 0) {
           descrs = this.evaluateNodeList_(
@@ -298,7 +300,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         descrs = [sre.AuditoryDescription.create({text: content})];
     }
     // Adding overall context and annotation if they exist.
-    if (descrs[0] && component.type != sre.SpeechRule.Type.MULTI) {
+    if (descrs[0] && !multi) {
       if (attributes['context']) {
         descrs[0]['context'] =
             this.constructString(node, attributes['context']) +
@@ -312,7 +314,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       sre.Grammar.getInstance().popState();
     }
     // Adding personality to the auditory descriptions.
-    result = result.concat(this.addPersonality_(descrs, attributes));
+    result = result.concat(this.addPersonality_(descrs, attributes, multi));
   }
   this.pushCache_(node, result);
   return result;
@@ -367,10 +369,12 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  * @param {Array.<sre.AuditoryDescription>} descrs A list of Auditory
  *     descriptions.
  * @param {Object} props Property dictionary.
+ * @param {boolean} multi Multinode flag.
  * @return {Array.<sre.AuditoryDescription>} The modified array.
  * @private
  */
-sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
+sre.SpeechRuleEngine.prototype.addPersonality_ = function(
+  descrs, props, multi) {
   var personality = {};
   for (var key in sre.Engine.personalityProps) {
     var value = props[sre.Engine.personalityProps[key]];
@@ -390,6 +394,10 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(descrs, props) {
   //       Possibly use simply an overwrite mechanism without adding.
   for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
+  }
+  // MOSS: Removes the last joiner in a multi node element. This should be reviewed.
+  if (multi) {
+    delete descrs[descrs.length - 1].personality[sre.Engine.personalityProps.JOIN];
   }
   return descrs;
 };
@@ -513,7 +521,6 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
-  console.log(ruleSets);
   var combined = new sre.MathStore();
   for (var i = 0, store; store = ruleSets[i]; i++) {
     store.initialize();

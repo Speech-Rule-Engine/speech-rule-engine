@@ -48,7 +48,7 @@ goog.inherits(sre.ClearspeakParentheses, sre.ClearspeakRuleTest);
 /**
  * Testing ClearspeakParentheses Example Paren001
  */
-sre.ClearspeakParentheses.prototype.untestParen001 = function() {
+sre.ClearspeakParentheses.prototype.testParen001 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '25';
@@ -59,7 +59,7 @@ sre.ClearspeakParentheses.prototype.untestParen001 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren002
  */
-sre.ClearspeakParentheses.prototype.untestParen002 = function() {
+sre.ClearspeakParentheses.prototype.testParen002 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2x';
@@ -70,7 +70,7 @@ sre.ClearspeakParentheses.prototype.untestParen002 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren003
  */
-sre.ClearspeakParentheses.prototype.untestParen003 = function() {
+sre.ClearspeakParentheses.prototype.testParen003 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2 plus negative 2';
@@ -81,7 +81,7 @@ sre.ClearspeakParentheses.prototype.untestParen003 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren004
  */
-sre.ClearspeakParentheses.prototype.untestParen004 = function() {
+sre.ClearspeakParentheses.prototype.testParen004 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2 minus negative 2';

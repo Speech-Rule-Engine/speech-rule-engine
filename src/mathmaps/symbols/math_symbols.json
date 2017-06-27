@@ -4636,6 +4636,9 @@
       },
       "mathspeak": {
         "default": "midline-horizontal-ellipsis"
+      },
+      "clearspeak": {
+        "default": "dot dot dot"
       }
     },
     "key": "22EF"
