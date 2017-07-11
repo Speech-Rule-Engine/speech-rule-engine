@@ -266,7 +266,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-superscript', 'mathspeak.default',
       '[t] "collapsed power"',
       'self::superscript', '@alternative',
-      'self::*', 'self::*', 'self::*'
+      'self::*', 'self::*', 'self::*', 'self::*'
   );
   defineSpecialisedRule(
       'abstr-superscript', 'mathspeak.default', 'mathspeak.brief'
