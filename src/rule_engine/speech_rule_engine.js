@@ -57,7 +57,7 @@ sre.SpeechRuleEngine = function() {
 
   /**
    * Caches speech strings by node id.
-   * @type {Object.<string, !Array.<sre.AuditoryDescription>>}
+   * @type {Object.<!Array.<sre.AuditoryDescription>>}
    * @private
    */
   this.cache_ = {};

@@ -158,7 +158,7 @@ sre.Focus.factory = function(primaryId, nodeIds, rebuilt, dom) {
  * @param {!Array.<string>} ids The semantic ids.
  * @param {!Array.<?Node>} nodes The DOM nodes corresponding to the ids, some of
  *      which might not exist.
- * @param {!Object.<string, !sre.SemanticNode>} dict A semantic node dictionary.
+ * @param {!Object.<!sre.SemanticNode>} dict A semantic node dictionary.
  * @param {!Node} domNode The original DOM node.
  * @return {!Array.<Node>} The list of existing nodes in the DOM tree.
  * @private

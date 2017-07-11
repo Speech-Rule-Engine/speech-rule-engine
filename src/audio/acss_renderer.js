@@ -100,7 +100,7 @@ sre.AcssRenderer.prototype.error = function(key) {
 
 /**
  * Transforms a prosody element into an S-expression.
- * @param {Object.<string, number>} pros The prosody element.
+ * @param {Object.<number>} pros The prosody element.
  * @return {string} The S-expression.
  * @private
  */
