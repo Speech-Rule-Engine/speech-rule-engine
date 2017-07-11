@@ -39,20 +39,20 @@ sre.Grammar = function() {
 
   /**
    * Maps grammatical annotations to correction functions.
-   * @type {Object.<string, Function>}
+   * @type {Object.<Function>}
    * @private
    */
   this.corrections_ = {};
 
   /**
    * Maps grammatical annotations to preprocessor functions.
-   * @type {Object.<string, Function>}
+   * @type {Object.<Function>}
    * @private
    */
   this.preprocessors_ = {};
 
   /**
-   * @type {Array.<Object.<string, sre.Grammar.Value>>}
+   * @type {Array.<Object.<sre.Grammar.Value>>}
    * @private
    */
   this.stateStack_ = [];
@@ -69,7 +69,7 @@ sre.Grammar.Value;
 
 /**
  * Defines grammar attribute for a component of a speech rule.
- * @typedef {!Object.<string, sre.Grammar.Value>}
+ * @typedef {!Object.<sre.Grammar.Value>}
  */
 sre.Grammar.State;
 
@@ -159,7 +159,7 @@ sre.Grammar.prototype.getState = function() {
 
 /**
  * Saves the current state of the grammar object.
- * @param {Object.<string, sre.Grammar.Value>} assignment A list of key value
+ * @param {Object.<sre.Grammar.Value>} assignment A list of key value
  *     pairs.
  */
 sre.Grammar.prototype.pushState = function(assignment) {
@@ -218,7 +218,7 @@ sre.Grammar.prototype.correct = function(text) {
 /**
  * Applies a grammatical processors to a given description text.
  * @param {string} text The original description text.
- * @param {Object.<string, Function>} funcs Dictionary of processor functions.
+ * @param {Object.<Function>} funcs Dictionary of processor functions.
  * @return {string} The grammatically corrected string.
  * @private
  */

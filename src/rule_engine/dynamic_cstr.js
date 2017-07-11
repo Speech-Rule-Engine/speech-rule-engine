@@ -211,7 +211,7 @@ sre.DynamicCstr.Axis = {
 sre.DynamicCstr.Values_ = function() {
 
   /**
-   * @type {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>}
+   * @type {!Object.<sre.DynamicCstr.Axis, !Object.<boolean>>}
    */
   this.axisToValues = sre.DynamicCstr.Values_.makeAxisValueObject_();
 
@@ -245,7 +245,7 @@ sre.DynamicCstr.Values_.prototype.get = function() {
 
 /**
  * Initialises an object for collecting all values per axis.
- * @return {!Object.<sre.DynamicCstr.Axis, !Object.<string, boolean>>} The
+ * @return {!Object.<sre.DynamicCstr.Axis, !Object.<boolean>>} The
  *     nested object structure.
  * @private
  */

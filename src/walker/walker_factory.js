@@ -50,7 +50,7 @@ sre.WalkerFactory.walker = function(type, node, generator, highlighter, xml) {
 
 
 /**
- * @type {Object.<string, function(new:sre.Walker, Node,
+ * @type {Object.<function(new:sre.Walker, Node,
  *      sre.SpeechGenerator, sre.Highlighter, string)>}
  * @private
  */
