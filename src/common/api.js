@@ -42,6 +42,12 @@ sre.Api.toSpeech = function(expr) {
 
 
 /**
+ * Exports the version number of SRE.
+ */
+module.exports.version = sre.System.getInstance().version;
+
+
+/**
  * Exporting method to return an aural rendered speech string.
  * @deprecated Use toSpeech().
  */
