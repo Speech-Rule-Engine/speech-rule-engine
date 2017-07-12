@@ -87,7 +87,7 @@ sre.SemanticMathml.prototype.parse = function(mml) {
   var children = sre.DomUtil.toArray(mml.childNodes);
   var tag = sre.DomUtil.tagName(mml);
   var func = this.parseMap_[tag];
-  var newNode = (func ? func : this.dummy_)(mml, children);
+  var newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
   if (['MATH', 'MROW', 'MPADDED', 'MSTYLE'].indexOf(tag) !== -1) {
     return newNode;
   }
