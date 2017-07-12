@@ -155,12 +155,6 @@ module.exports.pprintXML = sre.DomUtil.formatXml;
 
 
 /**
- * Exporting XML pretty printer.
- */
-module.exports.pprintXML = sre.DomUtil.formatXml;
-
-
-/**
  * Exporting readiness flag.
  */
 module.exports.engineReady = sre.Engine.isReady;
