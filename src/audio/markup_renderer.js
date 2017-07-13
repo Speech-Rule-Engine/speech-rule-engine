@@ -53,7 +53,7 @@ goog.inherits(sre.MarkupRenderer, sre.AbstractAudioRenderer);
  * @param {number=} opt_decimals Number of digits after the decimal point.
  */
 sre.MarkupRenderer.prototype.setScaleFunction = function(
-  a, b, c, d, opt_decimals) {
+    a, b, c, d, opt_decimals) {
   var decimals = opt_decimals || 0;
   this.scaleFunction_ = function(x) {
     var delta = (x - a) / (b - a);

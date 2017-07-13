@@ -40,7 +40,7 @@ goog.inherits(sre.SsmlRenderer, sre.XmlRenderer);
  */
 sre.SsmlRenderer.prototype.pause = function(pause) {
   return '<BREAK ' + 'TIME="' +
-    pause[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
+      pause[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
 };
 
 

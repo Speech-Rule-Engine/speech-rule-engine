@@ -40,7 +40,7 @@ goog.inherits(sre.StringRenderer, sre.AbstractAudioRenderer);
  */
 sre.StringRenderer.prototype.markup = function(descrs) {
   return sre.BaseUtil.removeEmpty(
-    descrs.map(
+      descrs.map(
       function(x) {return x.descriptionString();})).
-    join(this.getSeparator());
+      join(this.getSeparator());
 };
