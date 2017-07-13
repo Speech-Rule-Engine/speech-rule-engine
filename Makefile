@@ -207,7 +207,7 @@ $(MAPS):
 iemaps:
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for dir in $(MAPS); do\
-		for i in $(JSON_DIR)/$$dir/*.json; do\
+		for i in $(JSON_DIR)/$$dir/*.js; do\
 			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 			cat $$i >> $(IEMAPS_FILE); \
 			echo ','  >> $(IEMAPS_FILE); \
