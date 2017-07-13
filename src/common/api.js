@@ -32,16 +32,6 @@ sre.Api = { };
 
 
 /**
- * Main function to translate expressions into auditory descriptions.
- * @param {string} expr Processes a given XML expression for translation.
- * @return {string} The auditory description.
- */
-sre.Api.toSpeech = function(expr) {
-  return sre.System.getInstance().toSpeech(expr);
-};
-
-
-/**
  * Exports the version number of SRE.
  */
 module.exports.version = sre.System.getInstance().version;
@@ -50,7 +40,7 @@ module.exports.version = sre.System.getInstance().version;
 /**
  * Exporting method to return an aural rendered speech string.
  */
-module.exports.toSpeech = sre.Api.toSpeech;
+module.exports.toSpeech = sre.System.getInstance().toSpeech;
 
 
 /**
