@@ -58,6 +58,7 @@ sre.SemanticMathml = function() {
     'MROOT': goog.bind(this.root_, this),
     'MSQRT': goog.bind(this.sqrt_, this),
     'MTABLE': goog.bind(this.table_, this),
+    'MLABELEDTR': goog.bind(this.tableLabeledRow_, this),
     'MTR': goog.bind(this.tableRow_, this),
     'MTD': goog.bind(this.tableCell_, this),
     'MS': goog.bind(this.text_, this),
@@ -86,7 +87,7 @@ sre.SemanticMathml.prototype.parse = function(mml) {
   var children = sre.DomUtil.toArray(mml.childNodes);
   var tag = sre.DomUtil.tagName(mml);
   var func = this.parseMap_[tag];
-  var newNode = (func ? func : this.dummy_)(mml, children);
+  var newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
   if (['MATH', 'MROW', 'MPADDED', 'MSTYLE'].indexOf(tag) !== -1) {
     return newNode;
   }
@@ -137,7 +138,6 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
     var newNode = this.parse(/** @type {!Element} */(children[0]));
-    // newNode = sre.SemanticProcessor.getInstance().row([newNode]);
   } else {
     // Case of a 'meaningful' row, even if they are empty.
     newNode = sre.SemanticProcessor.getInstance().row(
@@ -235,6 +235,26 @@ sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
 
 
 /**
+ * Parses a row of a table.
+ * @param {Element} node A MathML node.
+ * @param {Array.<Element>} children The children of the node.
+ * @return {!sre.SemanticNode} The newly created semantic node.
+ * @private
+ */
+sre.SemanticMathml.prototype.tableLabeledRow_ = function(node, children) {
+  if (!children.length) {
+    return this.tableRow_(node, children);
+  }
+  var label = this.parse(children[0]);
+  label.role = sre.SemanticAttr.Role.LABEL;
+  var newNode = this.getFactory().makeBranchNode(
+      sre.SemanticAttr.Type.ROW, this.parseNodes_(children.slice(1)), [label]);
+  newNode.role = sre.SemanticAttr.Role.TABLE;
+  return newNode;
+};
+
+
+/**
  * Parses a table cell.
  * @param {Element} node A MathML node.
  * @param {Array.<Element>} children The children of the node.
@@ -243,9 +263,20 @@ sre.SemanticMathml.prototype.tableRow_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
   var semNodes = this.parseNodes_(sre.SemanticUtil.purgeNodes(children));
+  var childNodes;
+  if (!semNodes.length) {
+    childNodes = [];
+  } else if (semNodes.length === 1 &&
+             sre.SemanticPred.isAttribute('type', 'EMPTY')(semNodes[0])) {
+    // In case we have an explicit empty node, we do not want to process it
+    // again. However, we know there will be a mathml node to embed the semantic
+    // information into if necessary.
+    childNodes = semNodes;
+  } else {
+    childNodes = [sre.SemanticProcessor.getInstance().row(semNodes)];
+  }
   var newNode = this.getFactory().makeBranchNode(
-      sre.SemanticAttr.Type.CELL,
-      [sre.SemanticProcessor.getInstance().row(semNodes)], []);
+      sre.SemanticAttr.Type.CELL, childNodes, []);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
 };
@@ -261,7 +292,8 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
 sre.SemanticMathml.prototype.text_ = function(node, children) {
   return sre.SemanticProcessor.getInstance().text(
       node.textContent,
-      /** @type {sre.SemanticAttr.Font} */(node.getAttribute('mathvariant')),
+      sre.SemanticProcessor.getInstance().font(
+          node.getAttribute('mathvariant')),
       sre.DomUtil.tagName(node));
 };
 
@@ -276,7 +308,8 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
   return sre.SemanticProcessor.getInstance().identifierNode(
       node.textContent,
-      /** @type {sre.SemanticAttr.Font} */(node.getAttribute('mathvariant')),
+      sre.SemanticProcessor.getInstance().font(
+          node.getAttribute('mathvariant')),
       node.getAttribute('class'));
 };
 
@@ -450,8 +483,10 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.leaf_ = function(mml) {
-  return this.getFactory().makeLeafNode(mml.textContent,
-                                        mml.getAttribute('mathvariant'));
+  return this.getFactory().makeLeafNode(
+      mml.textContent,
+      sre.SemanticProcessor.getInstance().font(
+          mml.getAttribute('mathvariant')));
 };
 
 

@@ -169,8 +169,9 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
  * @param {string} content The new content string.
  */
 sre.SemanticNode.prototype.updateContent = function(content) {
-  // Remove superfluous whitespace!
-  content = content.trim();
+  // Remove superfluous whitespace only if it is not the only content!
+  var newContent = content.trim();
+  content = (content && !newContent) ? content : newContent;
   if (this.textContent == content) {
     return;
   }

@@ -56,6 +56,10 @@ sre.CaseLine.test = function(semantic) {
  * @override
  */
 sre.CaseLine.prototype.getMathml = function() {
+  if (this.semantic.contentNodes.length) {
+    sre.EnrichMathml.walkTree(
+        /**@type{!sre.SemanticNode}*/(this.semantic.contentNodes[0]));
+  }
   if (this.semantic.childNodes.length) {
     sre.EnrichMathml.walkTree(
         /**@type{!sre.SemanticNode}*/(this.semantic.childNodes[0]));

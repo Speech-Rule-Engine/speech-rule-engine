@@ -104,24 +104,24 @@ sre.MathMap.UNITS_PATH_ = 'units';
  */
 sre.MathMap.SYMBOLS_FILES_ = [
   // Greek
-  'greek-capital.json', 'greek-small.json', 'greek-scripts.json',
-  'greek-mathfonts.json', 'greek-symbols.json',
+  'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
+  'greek-mathfonts.js', 'greek-symbols.js',
 
   // Hebrew
-  'hebrew_letters.json',
+  'hebrew_letters.js',
 
   // Latin
-  'latin-lower-double-accent.json', 'latin-lower-normal.json',
-  'latin-lower-phonetic.json', 'latin-lower-single-accent.json',
-  'latin-rest.json', 'latin-upper-double-accent.json',
-  'latin-upper-normal.json', 'latin-upper-single-accent.json',
-  'latin-mathfonts.json',
+  'latin-lower-double-accent.js', 'latin-lower-normal.js',
+  'latin-lower-phonetic.js', 'latin-lower-single-accent.js',
+  'latin-rest.js', 'latin-upper-double-accent.js',
+  'latin-upper-normal.js', 'latin-upper-single-accent.js',
+  'latin-mathfonts.js',
 
   // Math Symbols
-  'math_angles.json', 'math_arrows.json', 'math_characters.json',
-  'math_delimiters.json', 'math_digits.json', 'math_geometry.json',
-  'math_harpoons.json', 'math_non_characters.json', 'math_symbols.json',
-  'math_whitespace.json', 'other_stars.json'
+  'math_angles.js', 'math_arrows.js', 'math_characters.js',
+  'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
+  'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
+  'math_whitespace.js', 'other_stars.js'
 ];
 
 
@@ -132,7 +132,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
  * @private
  */
 sre.MathMap.FUNCTIONS_FILES_ = [
-  'algebra.json', 'elementary.json', 'hyperbolic.json', 'trigonometry.json'
+  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
 ];
 
 
@@ -143,8 +143,8 @@ sre.MathMap.FUNCTIONS_FILES_ = [
  * @private
  */
 sre.MathMap.UNITS_FILES_ = [
-  'energy.json', 'length.json', 'memory.json', 'other.json', 'speed.json',
-  'temperature.json', 'time.json', 'volume.json', 'weight.json'
+  'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
+  'temperature.js', 'time.js', 'volume.js', 'weight.js'
 ];
 
 

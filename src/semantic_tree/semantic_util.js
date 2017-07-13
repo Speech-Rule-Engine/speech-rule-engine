@@ -32,7 +32,7 @@ sre.SemanticUtil = function() { };
 
 /**
  * Merges keys of objects into an array.
- * @param {...Object.<string, string>} var_args Optional objects.
+ * @param {...Object.<string>} var_args Optional objects.
  * @return {Array.<string>} Array of all keys of the objects.
  */
 sre.SemanticUtil.objectsToKeys = function(var_args) {
@@ -44,7 +44,7 @@ sre.SemanticUtil.objectsToKeys = function(var_args) {
 
 /**
  * Merges values of objects into an array.
- * @param {...Object.<string, string>} var_args Optional objects.
+ * @param {...Object.<string>} var_args Optional objects.
  * @return {Array.<string>} Array of all values of the objects.
  */
 sre.SemanticUtil.objectsToValues = function(var_args) {
@@ -83,6 +83,7 @@ sre.SemanticUtil.unicodeToNumber = function(unicode) {
 };
 
 
+// TODO: Refactor with similar function in MathSimpleStore.
 /**
  * Transforms a numberic representation of a unicode character into its
  * corresponding string.
@@ -90,12 +91,12 @@ sre.SemanticUtil.unicodeToNumber = function(unicode) {
  * @return {string} The string representation.
  */
 sre.SemanticUtil.numberToUnicode = function(number) {
-  if (number >= 0x10000) {
-    var hi = (number - 0x10000) / 0x0400 + 0xD800;
-    var lo = (number - 0x10000) % 0x0400 + 0xDC00;
-    return String.fromCharCode(hi, lo);
+  if (number < 0x10000) {
+    return String.fromCharCode(number);
   }
-  return String.fromCharCode(number);
+  var hi = (number - 0x10000) / 0x0400 + 0xD800;
+  var lo = (number - 0x10000) % 0x0400 + 0xDC00;
+  return String.fromCharCode(hi, lo);
 };
 
 

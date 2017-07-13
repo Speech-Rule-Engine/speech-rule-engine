@@ -52,7 +52,7 @@ goog.inherits(sre.MathSimpleStore, sre.MathStore);
  * only into a list of speech rules.
  * @param {string} name Name for the rules.
  * @param {string} str String for precondition and constraints.
- * @param {Object.<string, Object.<string, string>>} mapping Simple string
+ * @param {Object.<Object.<string>>} mapping Simple string
  *     mapping.
  */
 sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
@@ -72,6 +72,40 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
 };
 
 
+/**
+ * @override
+ */
+sre.MathSimpleStore.prototype.lookupRule = function(node, dynamic) {
+  // node is actually null!
+  var rules = this.getSpeechRules().filter(
+      function(rule) {
+        return sre.MathSimpleStore.testDynamicConstraints_(dynamic, rule);
+      });
+  return rules.length ?
+      rules.sort(function(r1, r2) {
+        return sre.Engine.getInstance().comparator.
+           compare(r1.dynamicCstr, r2.dynamicCstr);})[0] : null;
+};
+
+
+/**
+ * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
+ * the engine is in strict mode, the dynamic constraints can be "relaxed", that
+ * is, a default value can also be choosen.
+ * @param {!sre.DynamicCstr} dynamic Dynamic constraints.
+ * @param {sre.SpeechRule} rule The rule.
+ * @return {boolean} True if the preconditions apply to the node.
+ * @private
+ */
+sre.MathSimpleStore.testDynamicConstraints_ = function(
+    dynamic, rule) {
+  if (sre.Engine.getInstance().strict) {
+    return rule.dynamicCstr.equal(dynamic);
+  }
+  return sre.Engine.getInstance().comparator.match(rule.dynamicCstr);
+};
+
+
 
 /**
  * A compound store for simple Math objects.
@@ -80,7 +114,7 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
 sre.MathCompoundStore = function() {
   /**
    * A set of efficient substores.
-   * @type {Object.<string, sre.MathStore>}
+   * @type {Object.<sre.MathStore>}
    * @private
    */
   this.subStores_ = {};
@@ -142,17 +176,15 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
 
 /**
  * Retrieves a rule for the given node if one exists.
- * @param {Node} node A node.
- * @param {sre.DynamicCstr} dynamic Additional dynamic
+ * @param {string} node A node.
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
  * @return {sre.SpeechRule} The speech rule if it exists.
  */
 sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
-  var store = this.subStores_[node.textContent];
+  var store = this.subStores_[node];
   if (store) {
-    // TODO: (MOSS) Fix with order parsing.
-    dynamic = dynamic || store.parser.parse('default.default');
-    return store.lookupRule(node, dynamic);
+    return store.lookupRule(null, dynamic);
   }
   return null;
 };
@@ -161,15 +193,12 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
 /**
  * Looks up a rule for a given string and executes its actions.
  * @param {string} text The text to be translated.
- * @param {sre.DynamicCstr} dynamic Additional dynamic
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
  * @return {!string} The string resulting from the action of speech rule.
  */
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
-  var textNode = sre.XpathUtil.currentDocument ?
-      sre.XpathUtil.currentDocument.createTextNode(text) :
-      sre.DomUtil.createTextNode(text);
-  var rule = this.lookupRule(textNode, dynamic);
+  var rule = this.lookupRule(text, dynamic);
   if (!rule) {
     return '';
   }

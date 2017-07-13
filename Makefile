@@ -44,7 +44,7 @@ TEST_SRC = $(TEST_DIR)/*.js
 # Compiling as rigidly as possible.
 # (Currently we use automatically all)
 ##################################################################
-CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions newCheckTypes nonStandardJsDocs suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility # * reportUnknownTypes
+CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions nonStandardJsDocs suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility # * reportUnknownTypes newCheckTypes
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
@@ -203,7 +203,7 @@ $(MAPS):
 iemaps:
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for dir in $(MAPS); do\
-		for i in $(JSON_DIR)/$$dir/*.json; do\
+		for i in $(JSON_DIR)/$$dir/*.js; do\
 			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 			cat $$i >> $(IEMAPS_FILE); \
 			echo ','  >> $(IEMAPS_FILE); \
@@ -256,3 +256,6 @@ enrich: $(SRC)
 
 clean_enrich:
 	rm -f $(ENRICH)
+
+emacs: publish
+	@cp $(TARGET) ../emacs-math-speak/

@@ -40,7 +40,7 @@ goog.require('sre.WalkerUtil');
 sre.RebuildStree = function(mathml) {
 
   /**
-   * @type {!Object.<string, !sre.SemanticNode>}
+   * @type {!Object.<!sre.SemanticNode>}
    */
   this.nodeDict = {};
 
@@ -266,12 +266,17 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {
-    var underscore = this.createNode(array[1][0]);
-    underscore.type = sre.SemanticAttr.Type.UNDERSCORE;
-    underscore.role = sre.SemanticAttr.Role.UNDEROVER;
-    snode.type = sre.SemanticAttr.Type.OVERSCORE;
-    underscore.embellished = snode.embellished;
-    underscore.fencePointer = snode.fencePointer;
+    var score = this.createNode(array[1][0]);
+    if (snode.childNodes[1].role === sre.SemanticAttr.Role.OVERACCENT) {
+      score.type = sre.SemanticAttr.Type.OVERSCORE;
+      snode.type = sre.SemanticAttr.Type.UNDERSCORE;
+    } else {
+      score.type = sre.SemanticAttr.Type.UNDERSCORE;
+      snode.type = sre.SemanticAttr.Type.OVERSCORE;
+    }
+    score.role = sre.SemanticAttr.Role.UNDEROVER;
+    score.embellished = snode.embellished;
+    score.fencePointer = snode.fencePointer;
     this.collapsedChildren_(array);
     return snode;
   }

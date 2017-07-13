@@ -1,5 +1,5 @@
 sre.BrowserUtil.mapsForIE = {
-"algebra.json": 
+"algebra.js":
 [
   {"category": "Algebra",
    "mappings": {
@@ -59,7 +59,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"elementary.json": 
+"elementary.js":
 [
   {"category": "Elementary",
    "mappings": {
@@ -285,7 +285,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"hyperbolic.json": 
+"hyperbolic.js":
 [
   {"category": "Hyperbolic",
    "mappings": {
@@ -396,7 +396,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"trigonometry.json": 
+"trigonometry.js":
 [
   {"category": "Trigonometric",
    "mappings": {
@@ -508,7 +508,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"greek-capital.json": 
+"greek-capital.js":
 [
   {
     "category": "Lu",
@@ -825,7 +825,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"greek-mathfonts.json": 
+"greek-mathfonts.js":
 [
   {
     "category": "Lu",
@@ -2704,7 +2704,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"greek-scripts.json": 
+"greek-scripts.js":
 [
   {
     "category": "Ll",
@@ -2854,7 +2854,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"greek-small.json": 
+"greek-small.js":
 [
   {
     "category": "Ll",
@@ -3108,7 +3108,7 @@ sre.BrowserUtil.mapsForIE = {
     }
   }
 ],
-"greek-symbols.json": 
+"greek-symbols.js":
 [
   {
     "category": "Ll",
@@ -3509,7 +3509,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"hebrew_letters.json": 
+"hebrew_letters.js":
 [
   {
     "category": "Lo",
@@ -3556,7 +3556,7 @@ sre.BrowserUtil.mapsForIE = {
     "key": "2138"
   }
 ],
-"latin-lower-double-accent.json": 
+"latin-lower-double-accent.js":
 [
   {
     "category": "Ll",
@@ -4186,7 +4186,7 @@ sre.BrowserUtil.mapsForIE = {
     }
   }
 ],
-"latin-lower-normal.json": 
+"latin-lower-normal.js":
 [
   {
     "category": "Ll",
@@ -4709,7 +4709,7 @@ sre.BrowserUtil.mapsForIE = {
     }
   }
 ],
-"latin-lower-phonetic.json": 
+"latin-lower-phonetic.js":
 [
   {
     "category": "Ll",
@@ -6946,7 +6946,7 @@ sre.BrowserUtil.mapsForIE = {
     }
   }
 ],
-"latin-lower-single-accent.json": 
+"latin-lower-single-accent.js":
 [
   {
     "category": "Ll",
@@ -10005,7 +10005,7 @@ sre.BrowserUtil.mapsForIE = {
     }
   }
 ],
-"latin-mathfonts.json": 
+"latin-mathfonts.js":
 [
   {
     "category": "Lu",
@@ -16857,7 +16857,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"latin-rest.json": 
+"latin-rest.js":
 [
   {
     "category": "Mn",
@@ -19678,7 +19678,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"latin-upper-double-accent.json": 
+"latin-upper-double-accent.js":
 [
   {
     "category": "Lu",
@@ -20480,7 +20480,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"latin-upper-normal.json": 
+"latin-upper-normal.js":
 [
   {
     "category": "Lu",
@@ -21186,7 +21186,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"latin-upper-single-accent.json": 
+"latin-upper-single-accent.js":
 [
   {
     "category": "Lu",
@@ -24133,7 +24133,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"math_angles.json": 
+"math_angles.js":
 [
   {
     "category": "Sm",
@@ -24352,7 +24352,7 @@ sre.BrowserUtil.mapsForIE = {
     "key": "29AF"
   }
 ],
-"math_arrows.json": 
+"math_arrows.js":
 [
   {
     "category": "Sm",
@@ -28292,7 +28292,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"math_characters.json": 
+"math_characters.js":
 [
   {
     "category": "Lu",
@@ -28752,7 +28752,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"math_delimiters.json": 
+"math_delimiters.js":
 [
   {
     "category": "Ps",
@@ -30908,7 +30908,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"math_digits.json": 
+"math_digits.js":
 [
   {
     "category": "Nd",
@@ -30916,6 +30916,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit zero",
         "short": "zero"
+      },
+      "mathspeak": {
+        "default": "0"
       }
     },
     "key": "0030"
@@ -30926,6 +30929,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit one",
         "short": "one"
+      },
+      "mathspeak": {
+        "default": "1"
       }
     },
     "key": "0031"
@@ -30936,6 +30942,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit two",
         "short": "two"
+      },
+      "mathspeak": {
+        "default": "2"
       }
     },
     "key": "0032"
@@ -30946,6 +30955,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit three",
         "short": "three"
+      },
+      "mathspeak": {
+        "default": "3"
       }
     },
     "key": "0033"
@@ -30956,6 +30968,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit four",
         "short": "four"
+      },
+      "mathspeak": {
+        "default": "4"
       }
     },
     "key": "0034"
@@ -30966,6 +30981,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit five",
         "short": "five"
+      },
+      "mathspeak": {
+        "default": "5"
       }
     },
     "key": "0035"
@@ -30976,6 +30994,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit six",
         "short": "six"
+      },
+      "mathspeak": {
+        "default": "6"
       }
     },
     "key": "0036"
@@ -30986,6 +31007,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit seven",
         "short": "seven"
+      },
+      "mathspeak": {
+        "default": "7"
       }
     },
     "key": "0037"
@@ -30996,6 +31020,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit eight",
         "short": "eight"
+      },
+      "mathspeak": {
+        "default": "8"
       }
     },
     "key": "0038"
@@ -31006,6 +31033,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit nine",
         "short": "nine"
+      },
+      "mathspeak": {
+        "default": "9"
       }
     },
     "key": "0039"
@@ -31017,6 +31047,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "superscript digit two",
         "alternative": "superscript two",
         "short": "square"
+      },
+      "mathspeak": {
+        "default": "9"
       }
     },
     "key": "00B2"
@@ -31450,6 +31483,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit one",
         "short": "circled one"
+      },
+      "mathspeak": {
+        "default": "circled 1"
       }
     },
     "key": "2460"
@@ -31460,6 +31496,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit two",
         "short": "circled two"
+      },
+      "mathspeak": {
+        "default": "circled 2"
       }
     },
     "key": "2461"
@@ -31470,6 +31509,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit three",
         "short": "circled three"
+      },
+      "mathspeak": {
+        "default": "circled 3"
       }
     },
     "key": "2462"
@@ -31480,6 +31522,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit four",
         "short": "circled four"
+      },
+      "mathspeak": {
+        "default": "circled 4"
       }
     },
     "key": "2463"
@@ -31490,6 +31535,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit five",
         "short": "circled five"
+      },
+      "mathspeak": {
+        "default": "circled 5"
       }
     },
     "key": "2464"
@@ -31500,6 +31548,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit six",
         "short": "circled six"
+      },
+      "mathspeak": {
+        "default": "circled 6"
       }
     },
     "key": "2465"
@@ -31510,6 +31561,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit seven",
         "short": "circled seven"
+      },
+      "mathspeak": {
+        "default": "circled 7"
       }
     },
     "key": "2466"
@@ -31520,6 +31574,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit eight",
         "short": "circled eight"
+      },
+      "mathspeak": {
+        "default": "circled 8"
       }
     },
     "key": "2467"
@@ -31530,6 +31587,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit nine",
         "short": "circled nine"
+      },
+      "mathspeak": {
+        "default": "circled 9"
       }
     },
     "key": "2468"
@@ -31540,6 +31600,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number ten",
         "short": "circled ten"
+      },
+      "mathspeak": {
+        "default": "circled 10"
       }
     },
     "key": "2469"
@@ -31550,6 +31613,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number eleven",
         "short": "circled eleven"
+      },
+      "mathspeak": {
+        "default": "circled 11"
       }
     },
     "key": "246A"
@@ -31560,6 +31626,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number twelve",
         "short": "circled twelve"
+      },
+      "mathspeak": {
+        "default": "circled 12"
       }
     },
     "key": "246B"
@@ -31570,6 +31639,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number thirteen",
         "short": "circled thirteen"
+      },
+      "mathspeak": {
+        "default": "circled 13"
       }
     },
     "key": "246C"
@@ -31580,6 +31652,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number fourteen",
         "short": "circled fourteen"
+      },
+      "mathspeak": {
+        "default": "circled 14"
       }
     },
     "key": "246D"
@@ -31590,6 +31665,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number fifteen",
         "short": "circled fifteen"
+      },
+      "mathspeak": {
+        "default": "circled 15"
       }
     },
     "key": "246E"
@@ -31600,6 +31678,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number sixteen",
         "short": "circled sixteen"
+      },
+      "mathspeak": {
+        "default": "circled 16"
       }
     },
     "key": "246F"
@@ -31610,6 +31691,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number seventeen",
         "short": "circled seventeen"
+      },
+      "mathspeak": {
+        "default": "circled 17"
       }
     },
     "key": "2470"
@@ -31620,6 +31704,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number eighteen",
         "short": "circled eighteen"
+      },
+      "mathspeak": {
+        "default": "circled 18"
       }
     },
     "key": "2471"
@@ -31630,6 +31717,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number nineteen",
         "short": "circled nineteen"
+      },
+      "mathspeak": {
+        "default": "circled 19"
       }
     },
     "key": "2472"
@@ -31640,6 +31730,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled number twenty",
         "short": "circled twenty"
+      },
+      "mathspeak": {
+        "default": "circled 20"
       }
     },
     "key": "2473"
@@ -31650,6 +31743,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit one",
         "short": "parenthesized one"
+      },
+      "mathspeak": {
+        "default": "parenthesized 1"
       }
     },
     "key": "2474"
@@ -31660,6 +31756,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit two",
         "short": "parenthesized two"
+      },
+      "mathspeak": {
+        "default": "parenthesized 2"
       }
     },
     "key": "2475"
@@ -31670,6 +31769,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit three",
         "short": "parenthesized three"
+      },
+      "mathspeak": {
+        "default": "parenthesized 3"
       }
     },
     "key": "2476"
@@ -31680,6 +31782,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit four",
         "short": "parenthesized four"
+      },
+      "mathspeak": {
+        "default": "parenthesized 4"
       }
     },
     "key": "2477"
@@ -31690,6 +31795,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit five",
         "short": "parenthesized five"
+      },
+      "mathspeak": {
+        "default": "parenthesized 5"
       }
     },
     "key": "2478"
@@ -31700,6 +31808,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit six",
         "short": "parenthesized six"
+      },
+      "mathspeak": {
+        "default": "parenthesized 6"
       }
     },
     "key": "2479"
@@ -31710,6 +31821,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit seven",
         "short": "parenthesized seven"
+      },
+      "mathspeak": {
+        "default": "parenthesized 7"
       }
     },
     "key": "247A"
@@ -31720,6 +31834,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit eight",
         "short": "parenthesized eight"
+      },
+      "mathspeak": {
+        "default": "parenthesized 8"
       }
     },
     "key": "247B"
@@ -31730,6 +31847,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized digit nine",
         "short": "parenthesized nine"
+      },
+      "mathspeak": {
+        "default": "parenthesized 9"
       }
     },
     "key": "247C"
@@ -31740,6 +31860,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number ten",
         "short": "parenthesized ten"
+      },
+      "mathspeak": {
+        "default": "parenthesized 10"
       }
     },
     "key": "247D"
@@ -31750,6 +31873,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number eleven",
         "short": "parenthesized eleven"
+      },
+      "mathspeak": {
+        "default": "parenthesized 11"
       }
     },
     "key": "247E"
@@ -31760,6 +31886,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number twelve",
         "short": "parenthesized twelve"
+      },
+      "mathspeak": {
+        "default": "parenthesized 12"
       }
     },
     "key": "247F"
@@ -31770,6 +31899,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number thirteen",
         "short": "parenthesized thirteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 13"
       }
     },
     "key": "2480"
@@ -31780,6 +31912,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number fourteen",
         "short": "parenthesized fourteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 14"
       }
     },
     "key": "2481"
@@ -31790,6 +31925,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number fifteen",
         "short": "parenthesized fifteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 15"
       }
     },
     "key": "2482"
@@ -31800,6 +31938,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number sixteen",
         "short": "parenthesized sixteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 16"
       }
     },
     "key": "2483"
@@ -31810,6 +31951,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number seventeen",
         "short": "parenthesized seventeen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 17"
       }
     },
     "key": "2484"
@@ -31820,6 +31964,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number eighteen",
         "short": "parenthesized eighteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 18"
       }
     },
     "key": "2485"
@@ -31830,6 +31977,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number nineteen",
         "short": "parenthesized nineteen"
+      },
+      "mathspeak": {
+        "default": "parenthesized 19"
       }
     },
     "key": "2486"
@@ -31840,6 +31990,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "parenthesized number twenty",
         "short": "parenthesized twenty"
+      },
+      "mathspeak": {
+        "default": "parenthesized 20"
       }
     },
     "key": "2487"
@@ -31851,6 +32004,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit one full stop",
         "alternative": "digit one period",
         "short": "one period"
+      },
+      "mathspeak": {
+        "default": "1 period"
       }
     },
     "key": "2488"
@@ -31862,6 +32018,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit two full stop",
         "alternative": "digit two period",
         "short": "two period"
+      },
+      "mathspeak": {
+        "default": "2 period"
       }
     },
     "key": "2489"
@@ -31873,6 +32032,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit three full stop",
         "alternative": "digit three period",
         "short": "three period"
+      },
+      "mathspeak": {
+        "default": "3 period"
       }
     },
     "key": "248A"
@@ -31884,6 +32046,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit four full stop",
         "alternative": "digit four period",
         "short": "four period"
+      },
+      "mathspeak": {
+        "default": "4 period"
       }
     },
     "key": "248B"
@@ -31895,6 +32060,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit five full stop",
         "alternative": "digit five period",
         "short": "five period"
+      },
+      "mathspeak": {
+        "default": "5 period"
       }
     },
     "key": "248C"
@@ -31906,6 +32074,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit six full stop",
         "alternative": "digit six period",
         "short": "six period"
+      },
+      "mathspeak": {
+        "default": "6 period"
       }
     },
     "key": "248D"
@@ -31917,6 +32088,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit seven full stop",
         "alternative": "digit seven period",
         "short": "seven period"
+      },
+      "mathspeak": {
+        "default": "7 period"
       }
     },
     "key": "248E"
@@ -31928,6 +32102,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit eight full stop",
         "alternative": "digit eight period",
         "short": "eight period"
+      },
+      "mathspeak": {
+        "default": "8 period"
       }
     },
     "key": "248F"
@@ -31939,6 +32116,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "digit nine full stop",
         "alternative": "digit nine period",
         "short": "nine period"
+      },
+      "mathspeak": {
+        "default": "9 period"
       }
     },
     "key": "2490"
@@ -31950,6 +32130,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number ten full stop",
         "alternative": "number ten period",
         "short": "ten period"
+      },
+      "mathspeak": {
+        "default": "10 period"
       }
     },
     "key": "2491"
@@ -31961,6 +32144,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number eleven full stop",
         "alternative": "number eleven period",
         "short": "eleven period"
+      },
+      "mathspeak": {
+        "default": "11 period"
       }
     },
     "key": "2492"
@@ -31972,6 +32158,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number twelve full stop",
         "alternative": "number twelve period",
         "short": "twelve period"
+      },
+      "mathspeak": {
+        "default": "12 period"
       }
     },
     "key": "2493"
@@ -31983,6 +32172,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number thirteen full stop",
         "alternative": "number thirteen period",
         "short": "thirteen period"
+      },
+      "mathspeak": {
+        "default": "13 period"
       }
     },
     "key": "2494"
@@ -31994,6 +32186,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number fourteen full stop",
         "alternative": "number fourteen period",
         "short": "fourteen period"
+      },
+      "mathspeak": {
+        "default": "14 period"
       }
     },
     "key": "2495"
@@ -32005,6 +32200,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number fifteen full stop",
         "alternative": "number fifteen period",
         "short": "fifteen period"
+      },
+      "mathspeak": {
+        "default": "15 period"
       }
     },
     "key": "2496"
@@ -32016,6 +32214,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number sixteen full stop",
         "alternative": "number sixteen period",
         "short": "sixteen period"
+      },
+      "mathspeak": {
+        "default": "16 period"
       }
     },
     "key": "2497"
@@ -32027,6 +32228,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number seventeen full stop",
         "alternative": "number seventeen period",
         "short": "seventeen period"
+      },
+      "mathspeak": {
+        "default": "17 period"
       }
     },
     "key": "2498"
@@ -32038,6 +32242,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number eighteen full stop",
         "alternative": "number eighteen period",
         "short": "eighteen period"
+      },
+      "mathspeak": {
+        "default": "18 period"
       }
     },
     "key": "2499"
@@ -32049,6 +32256,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number nineteen full stop",
         "alternative": "number nineteen period",
         "short": "nineteen period"
+      },
+      "mathspeak": {
+        "default": "19 period"
       }
     },
     "key": "249A"
@@ -32060,6 +32270,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "number twenty full stop",
         "alternative": "number twenty period",
         "short": "twenty period"
+      },
+      "mathspeak": {
+        "default": "20 period"
       }
     },
     "key": "249B"
@@ -32070,6 +32283,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "circled digit zero",
         "short": "circled zero"
+      },
+      "mathspeak": {
+        "default": "circled 0"
       }
     },
     "key": "24EA"
@@ -32080,6 +32296,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number eleven",
         "short": "negative circled eleven"
+      },
+      "mathspeak": {
+        "default": "negative circled 11"
       }
     },
     "key": "24EB"
@@ -32090,6 +32309,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number twelve",
         "short": "negative circled twelve"
+      },
+      "mathspeak": {
+        "default": "negative circled 12"
       }
     },
     "key": "24EC"
@@ -32100,6 +32322,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number thirteen",
         "short": "negative circled thirteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 13"
       }
     },
     "key": "24ED"
@@ -32110,6 +32335,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number fourteen",
         "short": "negative circled fourteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 14"
       }
     },
     "key": "24EE"
@@ -32120,6 +32348,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number fifteen",
         "short": "negative circled fifteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 15"
       }
     },
     "key": "24EF"
@@ -32130,6 +32361,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number sixteen",
         "short": "negative circled sixteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 16"
       }
     },
     "key": "24F0"
@@ -32140,6 +32374,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number seventeen",
         "short": "negative circled seventeen"
+      },
+      "mathspeak": {
+        "default": "negative circled 17"
       }
     },
     "key": "24F1"
@@ -32150,6 +32387,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number eighteen",
         "short": "negative circled eighteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 18"
       }
     },
     "key": "24F2"
@@ -32160,6 +32400,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number nineteen",
         "short": "negative circled nineteen"
+      },
+      "mathspeak": {
+        "default": "negative circled 19"
       }
     },
     "key": "24F3"
@@ -32170,6 +32413,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled number twenty",
         "short": "negative circled twenty"
+      },
+      "mathspeak": {
+        "default": "negative circled 20"
       }
     },
     "key": "24F4"
@@ -32180,6 +32426,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit one",
         "short": "double circled one"
+      },
+      "mathspeak": {
+        "default": "double circled 1"
       }
     },
     "key": "24F5"
@@ -32190,6 +32439,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit two",
         "short": "double circled two"
+      },
+      "mathspeak": {
+        "default": "double circled 2"
       }
     },
     "key": "24F6"
@@ -32200,6 +32452,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit three",
         "short": "double circled three"
+      },
+      "mathspeak": {
+        "default": "double circled 3"
       }
     },
     "key": "24F7"
@@ -32210,6 +32465,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit four",
         "short": "double circled four"
+      },
+      "mathspeak": {
+        "default": "double circled 4"
       }
     },
     "key": "24F8"
@@ -32220,6 +32478,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit five",
         "short": "double circled five"
+      },
+      "mathspeak": {
+        "default": "double circled 5"
       }
     },
     "key": "24F9"
@@ -32230,6 +32491,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit six",
         "short": "double circled six"
+      },
+      "mathspeak": {
+        "default": "double circled 6"
       }
     },
     "key": "24FA"
@@ -32240,6 +32504,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit seven",
         "short": "double circled seven"
+      },
+      "mathspeak": {
+        "default": "double circled 7"
       }
     },
     "key": "24FB"
@@ -32250,6 +32517,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit eight",
         "short": "double circled eight"
+      },
+      "mathspeak": {
+        "default": "double circled 8"
       }
     },
     "key": "24FC"
@@ -32260,6 +32530,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled digit nine",
         "short": "double circled nine"
+      },
+      "mathspeak": {
+        "default": "double circled 9"
       }
     },
     "key": "24FD"
@@ -32270,6 +32543,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "double circled number ten",
         "short": "double circled ten"
+      },
+      "mathspeak": {
+        "default": "double circled 10"
       }
     },
     "key": "24FE"
@@ -32280,6 +32556,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "negative circled digit zero",
         "short": "negative circled zero"
+      },
+      "mathspeak": {
+        "default": "negative circled 0"
       }
     },
     "key": "24FF"
@@ -32291,6 +32570,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit one",
         "alternative": "inverse circled digit one",
         "short": "inverse circled one"
+      },
+      "mathspeak": {
+        "default": "inverse circled 1"
       }
     },
     "key": "2776"
@@ -32302,6 +32584,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit two",
         "alternative": "inverse circled digit two",
         "short": "inverse circled two"
+      },
+      "mathspeak": {
+        "default": "inverse circled 2"
       }
     },
     "key": "2777"
@@ -32313,6 +32598,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit three",
         "alternative": "inverse circled digit three",
         "short": "inverse circled three"
+      },
+      "mathspeak": {
+        "default": "inverse circled 3"
       }
     },
     "key": "2778"
@@ -32324,6 +32612,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit four",
         "alternative": "inverse circled digit four",
         "short": "inverse circled four"
+      },
+      "mathspeak": {
+        "default": "inverse circled 4"
       }
     },
     "key": "2779"
@@ -32335,6 +32626,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit five",
         "alternative": "inverse circled digit five",
         "short": "inverse circled five"
+      },
+      "mathspeak": {
+        "default": "inverse circled 5"
       }
     },
     "key": "277A"
@@ -32346,6 +32640,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit six",
         "alternative": "inverse circled digit six",
         "short": "inverse circled six"
+      },
+      "mathspeak": {
+        "default": "inverse circled 6"
       }
     },
     "key": "277B"
@@ -32357,6 +32654,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit seven",
         "alternative": "inverse circled digit seven",
         "short": "inverse circled seven"
+      },
+      "mathspeak": {
+        "default": "inverse circled 7"
       }
     },
     "key": "277C"
@@ -32368,6 +32668,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit eight",
         "alternative": "inverse circled digit eight",
         "short": "inverse circled eight"
+      },
+      "mathspeak": {
+        "default": "inverse circled 8"
       }
     },
     "key": "277D"
@@ -32379,6 +32682,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled digit nine",
         "alternative": "inverse circled digit nine",
         "short": "inverse circled nine"
+      },
+      "mathspeak": {
+        "default": "inverse circled 9"
       }
     },
     "key": "277E"
@@ -32390,6 +32696,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled number ten",
         "alternative": "inverse circled number ten",
         "short": "inverse circled ten"
+      },
+      "mathspeak": {
+        "default": "inverse circled 10"
       }
     },
     "key": "277F"
@@ -32511,6 +32820,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit one",
         "alternative": "inverse circled sans serif digit one",
         "short": "inverse circled one"
+      },
+      "mathspeak": {
+        "default": "inverse circled 1"
       }
     },
     "key": "278A"
@@ -32522,6 +32834,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit two",
         "alternative": "inverse circled sans serif digit two",
         "short": "inverse circled two"
+      },
+      "mathspeak": {
+        "default": "inverse circled 2"
       }
     },
     "key": "278B"
@@ -32533,6 +32848,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit three",
         "alternative": "inverse circled sans serif digit three",
         "short": "inverse circled three"
+      },
+      "mathspeak": {
+        "default": "inverse circled 3"
       }
     },
     "key": "278C"
@@ -32544,6 +32862,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit four",
         "alternative": "inverse circled sans serif digit four",
         "short": "inverse circled four"
+      },
+      "mathspeak": {
+        "default": "inverse circled 4"
       }
     },
     "key": "278D"
@@ -32555,6 +32876,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit five",
         "alternative": "inverse circled sans serif digit five",
         "short": "inverse circled five"
+      },
+      "mathspeak": {
+        "default": "inverse circled 5"
       }
     },
     "key": "278E"
@@ -32566,6 +32890,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit six",
         "alternative": "inverse circled sans serif digit six",
         "short": "inverse circled six"
+      },
+      "mathspeak": {
+        "default": "inverse circled 6"
       }
     },
     "key": "278F"
@@ -32577,6 +32904,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit seven",
         "alternative": "inverse circled sans serif digit seven",
         "short": "inverse circled seven"
+      },
+      "mathspeak": {
+        "default": "inverse circled 7"
       }
     },
     "key": "2790"
@@ -32588,6 +32918,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit eight",
         "alternative": "inverse circled sans serif digit eight",
         "short": "inverse circled eight"
+      },
+      "mathspeak": {
+        "default": "inverse circled 8"
       }
     },
     "key": "2791"
@@ -32599,6 +32932,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif digit nine",
         "alternative": "inverse circled sans serif digit nine",
         "short": "inverse circled nine"
+      },
+      "mathspeak": {
+        "default": "inverse circled 9"
       }
     },
     "key": "2792"
@@ -32610,6 +32946,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "dingbat negative circled sans serif number ten",
         "alternative": "inverse circled sans serif number ten",
         "short": "inverse circled ten"
+      },
+      "mathspeak": {
+        "default": "inverse circled 10"
       }
     },
     "key": "2793"
@@ -33000,6 +33339,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit zero",
         "short": "zero"
+      },
+      "mathspeak": {
+        "default": "0"
       }
     },
     "key": "FF10"
@@ -33010,6 +33352,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit one",
         "short": "one"
+      },
+      "mathspeak": {
+        "default": "1"
       }
     },
     "key": "FF11"
@@ -33020,6 +33365,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit two",
         "short": "two"
+      },
+      "mathspeak": {
+        "default": "2"
       }
     },
     "key": "FF12"
@@ -33030,6 +33378,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit three",
         "short": "three"
+      },
+      "mathspeak": {
+        "default": "3"
       }
     },
     "key": "FF13"
@@ -33040,6 +33391,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit four",
         "short": "four"
+      },
+      "mathspeak": {
+        "default": "4"
       }
     },
     "key": "FF14"
@@ -33050,6 +33404,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit five",
         "short": "five"
+      },
+      "mathspeak": {
+        "default": "5"
       }
     },
     "key": "FF15"
@@ -33060,6 +33417,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit six",
         "short": "six"
+      },
+      "mathspeak": {
+        "default": "6"
       }
     },
     "key": "FF16"
@@ -33070,6 +33430,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit seven",
         "short": "seven"
+      },
+      "mathspeak": {
+        "default": "7"
       }
     },
     "key": "FF17"
@@ -33080,6 +33443,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit eight",
         "short": "eight"
+      },
+      "mathspeak": {
+        "default": "8"
       }
     },
     "key": "FF18"
@@ -33090,6 +33456,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "fullwidth digit nine",
         "short": "nine"
+      },
+      "mathspeak": {
+        "default": "9"
       }
     },
     "key": "FF19"
@@ -33101,6 +33470,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit zero",
         "alternative": "bold digit zero",
         "short": "bold zero"
+      },
+      "mathspeak": {
+        "default": "bold 0"
       }
     },
     "key": "1D7CE"
@@ -33112,6 +33484,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit one",
         "alternative": "bold digit one",
         "short": "bold one"
+      },
+      "mathspeak": {
+        "default": "bold 1"
       }
     },
     "key": "1D7CF"
@@ -33123,6 +33498,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit two",
         "alternative": "bold digit two",
         "short": "bold two"
+      },
+      "mathspeak": {
+        "default": "bold 2"
       }
     },
     "key": "1D7D0"
@@ -33134,6 +33512,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit three",
         "alternative": "bold digit three",
         "short": "bold three"
+      },
+      "mathspeak": {
+        "default": "bold 3"
       }
     },
     "key": "1D7D1"
@@ -33145,6 +33526,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit four",
         "alternative": "bold digit four",
         "short": "bold four"
+      },
+      "mathspeak": {
+        "default": "bold 4"
       }
     },
     "key": "1D7D2"
@@ -33156,6 +33540,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit five",
         "alternative": "bold digit five",
         "short": "bold five"
+      },
+      "mathspeak": {
+        "default": "bold 5"
       }
     },
     "key": "1D7D3"
@@ -33167,6 +33554,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit six",
         "alternative": "bold digit six",
         "short": "bold six"
+      },
+      "mathspeak": {
+        "default": "bold 6"
       }
     },
     "key": "1D7D4"
@@ -33178,6 +33568,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit seven",
         "alternative": "bold digit seven",
         "short": "bold seven"
+      },
+      "mathspeak": {
+        "default": "bold 7"
       }
     },
     "key": "1D7D5"
@@ -33189,6 +33582,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit eight",
         "alternative": "bold digit eight",
         "short": "bold eight"
+      },
+      "mathspeak": {
+        "default": "bold 8"
       }
     },
     "key": "1D7D6"
@@ -33200,6 +33596,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical bold digit nine",
         "alternative": "bold digit nine",
         "short": "bold nine"
+      },
+      "mathspeak": {
+        "default": "bold 9"
       }
     },
     "key": "1D7D7"
@@ -33211,6 +33610,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit zero",
         "alternative": "double struck zero",
         "short": "blackboard zero"
+      },
+      "mathspeak": {
+        "default": "blackboard 0"
       }
     },
     "key": "1D7D8"
@@ -33222,6 +33624,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit one",
         "alternative": "double struck one",
         "short": "blackboard one"
+      },
+      "mathspeak": {
+        "default": "blackboard 1"
       }
     },
     "key": "1D7D9"
@@ -33233,6 +33638,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit two",
         "alternative": "double struck two",
         "short": "blackboard two"
+      },
+      "mathspeak": {
+        "default": "blackboard 2"
       }
     },
     "key": "1D7DA"
@@ -33244,6 +33652,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit three",
         "alternative": "double struck three",
         "short": "blackboard three"
+      },
+      "mathspeak": {
+        "default": "blackboard 3"
       }
     },
     "key": "1D7DB"
@@ -33255,6 +33666,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit four",
         "alternative": "double struck four",
         "short": "blackboard four"
+      },
+      "mathspeak": {
+        "default": "blackboard 4"
       }
     },
     "key": "1D7DC"
@@ -33266,6 +33680,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit five",
         "alternative": "double struck five",
         "short": "blackboard five"
+      },
+      "mathspeak": {
+        "default": "blackboard 5"
       }
     },
     "key": "1D7DD"
@@ -33277,6 +33694,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit six",
         "alternative": "double struck six",
         "short": "blackboard six"
+      },
+      "mathspeak": {
+        "default": "blackboard 6"
       }
     },
     "key": "1D7DE"
@@ -33288,6 +33708,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit seven",
         "alternative": "double struck seven",
         "short": "blackboard seven"
+      },
+      "mathspeak": {
+        "default": "blackboard 7"
       }
     },
     "key": "1D7DF"
@@ -33299,6 +33722,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit eight",
         "alternative": "double struck eight",
         "short": "blackboard eight"
+      },
+      "mathspeak": {
+        "default": "blackboard 8"
       }
     },
     "key": "1D7E0"
@@ -33310,6 +33736,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical double struck digit nine",
         "alternative": "double struck nine",
         "short": "blackboard nine"
+      },
+      "mathspeak": {
+        "default": "blackboard 9"
       }
     },
     "key": "1D7E1"
@@ -33321,6 +33750,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit zero",
         "alternative": "sans serif digit zero",
         "short": "sans serif zero"
+      },
+      "mathspeak": {
+        "default": "sans serif 0"
       }
     },
     "key": "1D7E2"
@@ -33332,6 +33764,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit one",
         "alternative": "sans serif digit one",
         "short": "sans serif one"
+      },
+      "mathspeak": {
+        "default": "sans serif 1"
       }
     },
     "key": "1D7E3"
@@ -33343,6 +33778,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit two",
         "alternative": "sans serif digit two",
         "short": "sans serif two"
+      },
+      "mathspeak": {
+        "default": "sans serif 2"
       }
     },
     "key": "1D7E4"
@@ -33354,6 +33792,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit three",
         "alternative": "sans serif digit three",
         "short": "sans serif three"
+      },
+      "mathspeak": {
+        "default": "sans serif 3"
       }
     },
     "key": "1D7E5"
@@ -33365,6 +33806,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit four",
         "alternative": "sans serif digit four",
         "short": "sans serif four"
+      },
+      "mathspeak": {
+        "default": "sans serif 4"
       }
     },
     "key": "1D7E6"
@@ -33376,6 +33820,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit five",
         "alternative": "sans serif digit five",
         "short": "sans serif five"
+      },
+      "mathspeak": {
+        "default": "sans serif 5"
       }
     },
     "key": "1D7E7"
@@ -33387,6 +33834,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit six",
         "alternative": "sans serif digit six",
         "short": "sans serif six"
+      },
+      "mathspeak": {
+        "default": "sans serif 6"
       }
     },
     "key": "1D7E8"
@@ -33398,6 +33848,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit seven",
         "alternative": "sans serif digit seven",
         "short": "sans serif seven"
+      },
+      "mathspeak": {
+        "default": "sans serif 7"
       }
     },
     "key": "1D7E9"
@@ -33409,6 +33862,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit eight",
         "alternative": "sans serif digit eight",
         "short": "sans serif eight"
+      },
+      "mathspeak": {
+        "default": "sans serif 8"
       }
     },
     "key": "1D7EA"
@@ -33420,6 +33876,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif digit nine",
         "alternative": "sans serif digit nine",
         "short": "sans serif nine"
+      },
+      "mathspeak": {
+        "default": "sans serif 9"
       }
     },
     "key": "1D7EB"
@@ -33431,6 +33890,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit zero",
         "alternative": "sans serif bold digit zero",
         "short": "sans serif bold zero"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 0"
       }
     },
     "key": "1D7EC"
@@ -33442,6 +33904,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit one",
         "alternative": "sans serif bold digit one",
         "short": "sans serif bold one"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 1"
       }
     },
     "key": "1D7ED"
@@ -33453,6 +33918,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit two",
         "alternative": "sans serif bold digit two",
         "short": "sans serif bold two"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 2"
       }
     },
     "key": "1D7EE"
@@ -33464,6 +33932,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit three",
         "alternative": "sans serif bold digit three",
         "short": "sans serif bold three"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 3"
       }
     },
     "key": "1D7EF"
@@ -33475,6 +33946,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit four",
         "alternative": "sans serif bold digit four",
         "short": "sans serif bold four"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 4"
       }
     },
     "key": "1D7F0"
@@ -33486,6 +33960,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit five",
         "alternative": "sans serif bold digit five",
         "short": "sans serif bold five"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 5"
       }
     },
     "key": "1D7F1"
@@ -33497,6 +33974,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit six",
         "alternative": "sans serif bold digit six",
         "short": "sans serif bold six"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 6"
       }
     },
     "key": "1D7F2"
@@ -33508,6 +33988,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit seven",
         "alternative": "sans serif bold digit seven",
         "short": "sans serif bold seven"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 7"
       }
     },
     "key": "1D7F3"
@@ -33519,6 +34002,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit eight",
         "alternative": "sans serif bold digit eight",
         "short": "sans serif bold eight"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 8"
       }
     },
     "key": "1D7F4"
@@ -33530,6 +34016,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical sans serif bold digit nine",
         "alternative": "sans serif bold digit nine",
         "short": "sans serif bold nine"
+      },
+      "mathspeak": {
+        "default": "sans serif bold 9"
       }
     },
     "key": "1D7F5"
@@ -33541,6 +34030,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit zero",
         "alternative": "monospace zero",
         "short": "thin zero"
+      },
+      "mathspeak": {
+        "default": "monospace 0"
       }
     },
     "key": "1D7F6"
@@ -33552,6 +34044,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit one",
         "alternative": "monospace one",
         "short": "thin one"
+      },
+      "mathspeak": {
+        "default": "monospace 1"
       }
     },
     "key": "1D7F7"
@@ -33563,6 +34058,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit two",
         "alternative": "monospace two",
         "short": "thin two"
+      },
+      "mathspeak": {
+        "default": "monospace 2"
       }
     },
     "key": "1D7F8"
@@ -33574,6 +34072,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit three",
         "alternative": "monospace three",
         "short": "thin three"
+      },
+      "mathspeak": {
+        "default": "monospace 3"
       }
     },
     "key": "1D7F9"
@@ -33585,6 +34086,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit four",
         "alternative": "monospace four",
         "short": "thin four"
+      },
+      "mathspeak": {
+        "default": "monospace 4"
       }
     },
     "key": "1D7FA"
@@ -33596,6 +34100,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit five",
         "alternative": "monospace five",
         "short": "thin five"
+      },
+      "mathspeak": {
+        "default": "monospace 5"
       }
     },
     "key": "1D7FB"
@@ -33607,6 +34114,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit six",
         "alternative": "monospace six",
         "short": "thin six"
+      },
+      "mathspeak": {
+        "default": "monospace 6"
       }
     },
     "key": "1D7FC"
@@ -33618,6 +34128,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit seven",
         "alternative": "monospace seven",
         "short": "thin seven"
+      },
+      "mathspeak": {
+        "default": "monospace 7"
       }
     },
     "key": "1D7FD"
@@ -33629,6 +34142,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit eight",
         "alternative": "monospace eight",
         "short": "thin eight"
+      },
+      "mathspeak": {
+        "default": "monospace 8"
       }
     },
     "key": "1D7FE"
@@ -33640,6 +34156,9 @@ sre.BrowserUtil.mapsForIE = {
         "default": "mathematical monospace digit nine",
         "alternative": "monospace nine",
         "short": "thin nine"
+      },
+      "mathspeak": {
+        "default": "monospace 9"
       }
     },
     "key": "1D7FF"
@@ -33649,7 +34168,10 @@ sre.BrowserUtil.mapsForIE = {
     "mappings": {
       "default": {
         "default": "digit zero full stop",
-        "short": "zero full stop"
+        "short": "zero period"
+      },
+      "mathspeak": {
+        "default": "0 period"
       }
     },
     "key": "1F100"
@@ -33660,6 +34182,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit zero comma",
         "short": "zero comma"
+      },
+      "mathspeak": {
+        "default": "0 comma"
       }
     },
     "key": "1F101"
@@ -33670,6 +34195,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit one comma",
         "short": "one comma"
+      },
+      "mathspeak": {
+        "default": "1 comma"
       }
     },
     "key": "1F102"
@@ -33680,6 +34208,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit two comma",
         "short": "two comma"
+      },
+      "mathspeak": {
+        "default": "2 comma"
       }
     },
     "key": "1F103"
@@ -33690,6 +34221,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit three comma",
         "short": "three comma"
+      },
+      "mathspeak": {
+        "default": "3 comma"
       }
     },
     "key": "1F104"
@@ -33700,6 +34234,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit four comma",
         "short": "four comma"
+      },
+      "mathspeak": {
+        "default": "4 comma"
       }
     },
     "key": "1F105"
@@ -33710,6 +34247,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit five comma",
         "short": "five comma"
+      },
+      "mathspeak": {
+        "default": "5 comma"
       }
     },
     "key": "1F106"
@@ -33720,6 +34260,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit six comma",
         "short": "six comma"
+      },
+      "mathspeak": {
+        "default": "6 comma"
       }
     },
     "key": "1F107"
@@ -33730,6 +34273,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit seven comma",
         "short": "seven comma"
+      },
+      "mathspeak": {
+        "default": "7 comma"
       }
     },
     "key": "1F108"
@@ -33740,6 +34286,9 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit eight comma",
         "short": "eight comma"
+      },
+      "mathspeak": {
+        "default": "8 comma"
       }
     },
     "key": "1F109"
@@ -33750,12 +34299,16 @@ sre.BrowserUtil.mapsForIE = {
       "default": {
         "default": "digit nine comma",
         "short": "nine comma"
+      },
+      "mathspeak": {
+        "default": "9 comma"
       }
     },
     "key": "1F10A"
   }
-],
-"math_geometry.json": 
+]
+,
+"math_geometry.js":
 [
   {
     "category": "So",
@@ -36575,7 +37128,7 @@ sre.BrowserUtil.mapsForIE = {
     "key": "2B59"
   }
 ],
-"math_harpoons.json": 
+"math_harpoons.js":
 [
   {
     "category": "So",
@@ -37086,7 +37639,7 @@ sre.BrowserUtil.mapsForIE = {
     "key": "297F"
   }
 ],
-"math_non_characters.json": 
+"math_non_characters.js":
 [
   {
     "category": "Ll",
@@ -37354,7 +37907,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"math_symbols.json": 
+"math_symbols.js":
 [
   {
     "category": "Po",
@@ -37508,6 +38061,9 @@ sre.BrowserUtil.mapsForIE = {
         "alternative": "slash"
       },
       "mathspeak": {
+        "default": "slash"
+      },
+      "emacspeak": {
         "default": "slash"
       }
     },
@@ -47565,7 +48121,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"math_whitespace.json": 
+"math_whitespace.js":
 [
   {
     "category": "Zs",
@@ -47944,7 +48500,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"other_stars.json": 
+"other_stars.js":
 [
   {
     "category": "So",
@@ -48474,7 +49030,7 @@ sre.BrowserUtil.mapsForIE = {
     "key": "274D"
   }
 ],
-"energy.json": 
+"energy.js":
 [
   {"category": "energy",
    "mappings": {
@@ -48613,7 +49169,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"length.json": 
+"length.js":
 [
   {"category": "Length",
    "mappings": {
@@ -48698,7 +49254,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"memory.json": 
+"memory.js":
 [
   {"category": "",
    "mappings": {
@@ -48756,7 +49312,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"other.json": 
+"other.js":
 [
   {"category": "",
   "mappings": {
@@ -48787,7 +49343,7 @@ sre.BrowserUtil.mapsForIE = {
  }
 ]
 ,
-"speed.json": 
+"speed.js":
 [
 {"category": "",
  "mappings": {
@@ -48827,7 +49383,7 @@ sre.BrowserUtil.mapsForIE = {
 }
 ]
 ,
-"temperature.json": 
+"temperature.js":
 [
 {"category": "",
  "mappings": {
@@ -48857,10 +49413,10 @@ sre.BrowserUtil.mapsForIE = {
  "key": "K",
  "names": ["K", "\u00B0K"]
 }
-  
+
 ]
 ,
-"time.json": 
+"time.js":
 [
   {"category": "time",
    "mappings": {
@@ -48918,7 +49474,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"volume.json": 
+"volume.js":
 [
   {"category": "volume",
    "mappings": {
@@ -49030,7 +49586,7 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 ,
-"weight.json": 
+"weight.js":
 [
   {"category": "",
    "mappings": {
@@ -49106,4 +49662,3 @@ sre.BrowserUtil.mapsForIE = {
   }
 ]
 }
-
