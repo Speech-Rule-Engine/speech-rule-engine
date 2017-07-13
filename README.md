@@ -6,6 +6,7 @@ Speech Rule Engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
+Speech rule engine (SRE) is 
 The speech rule engine can translate XML expressions into speech strings according to rules that
 can be specified in a syntax using Xpath expressions.  It was originally designed for translation
 of MathML and MathJax DOM elements for the ChromeVox screen reader. 
@@ -13,11 +14,19 @@ Besides the rules originally designed for the use in ChromeVox, it also has an i
 full set of Mathspeak rules. In addition it contains a library for semantic interpretation and enrichment
 of MathML expressions.
 
-There are two ways of using this engine. Either as a package via npm or by
-building it as a standalone tool.  The former is the easiest way to use the
-speech rule engine via its Api and is the preferred option if you just want to
-include it in your project. The latter is useful if you want to use the speech
-rule engine in batch mode or interactivley to add your own code.
+There are three ways of using this engine:
+
+1. **Node Module:** Download via npm. This is the easiest way to use the speech
+rule engine via its Api and is the preferred option if you just want to include
+it in your project.
+
+2. **Standalone Tool:** Download via github and build with make. This is useful
+if you want to use the speech rule engine in batch mode or interactivley to add
+your own code.
+
+3. **Browser Library:** This gives you the option of loading SRE in a browser and
+   use its full functionality on your webesites.
+
 
 Node Module
 -----------
@@ -58,7 +67,8 @@ If the output filename is not provided, output will be written to stdout.
 
 #### A method for setting up and controlling the behaviour of the Speech Rule Engine:
 
-It takes an object of option/value pairs to parameterise the Speech Rule Engine.
+It takes a feature vector (an object of option/value pairs) to parameterise the
+Speech Rule Engine.
 
     setupEngine(options);
 
@@ -109,8 +119,8 @@ exposed via the command line interface.
 | `version` | Returns SRE's version number. |
 | `isReady` | Flag indicating that all necessary rule files have been loaded. This is necessary in asynchronous settings. |
 
-Standalone Engine
------------------
+Standalone Tool
+---------------
 
 Node dependencies you have to install:
 
@@ -196,6 +206,59 @@ The following is a list of command line options for the speech rule engine.
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
 
+
+Browser Library
+---------------
+
+SRE can be used as a browser ready library giving you the option of loading it
+in a browser and use its full functionality on your webesites.
+
+### Usage #############
+
+Build SRE with
+
+    make browser
+    
+Then include the resulting file ``sre_browser.js`` in your website in a script tag
+    
+``` html
+<script src="[URL]/sre_browser.js"></script>
+```
+
+The full functionality is now available in the ``sre`` namespace.  The most
+important API functions are also available in ``SRE``.
+
+### Configuration ####
+
+In addition to programmatically configuring SRE using the ``setupEngine``
+method, you can also include a configuration element in a website, that can take
+
+For example the configuration element
+``` html
+<script type="text/x-sre-config">
+{
+"json": "https://rawgit.com/zorkow/speech-rule-engine/develop/src/mathmaps",
+"xpath": "https://rawgit.com/google/wicked-good-xpath/master/dist/wgxpath.install.js",
+"domain": "mathspeak",
+"style": "sbrief"
+}
+</script>
+```
+will cause SRE to load JSON files from rawgit and for IE or Edge it will also load Google's
+[wicked good xpath library](https://github.com/google/wicked-good-xpath). In addition the speech rules are set to ``mathspeak`` in ``super brief`` style.
+
+**Make sure the configuration element comes before the script tag loading SRE in you website!**
+
+
+
+MathJax Library
+---------------
+
+
+    make mathjax
+
+generates a build specifi for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
+SRE can then be configured locally on webpages as described above.
 
 
 
