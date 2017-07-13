@@ -65,9 +65,7 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
-  console.log(node.toString());
   this.customizeXml(node);
-  console.log(node.toString());
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));

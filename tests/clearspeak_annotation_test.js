@@ -59,7 +59,7 @@ sre.ClearspeakAnnotationTest.prototype.testNumbers = function() {
   this.executeTest('<mn>1.5e+10</mn>', false);
   this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac>', true);
   this.executeTest('<mfrac><mn>5</mn><mn>3</mn></mfrac>', true);
-  this.executeTest('<mfrac><mi>a</mi><mn>2</mn></mfrac>', false) ;
+  this.executeTest('<mfrac><mi>a</mi><mn>2</mn></mfrac>', false);
   this.executeTest('<mfrac><mi>5</mi><mn>3.5</mn></mfrac>', false);
 };
 
@@ -144,10 +144,10 @@ sre.ClearspeakAnnotationTest.prototype.testFunctions = function() {
   this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>', true);
   this.executeTest('<mi>sin</mi><mi>x</mi>', true);
   this.executeTest('<mi>sin</mi><mo>(</mo><mn>45</mn><mo>°</mo><mo>)</mo>', true);
-  this.executeTest('<msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi>', false);
+  this.executeTest('<msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi>', true);
 
   this.executeTest('<mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>', true);
-  this.executeTest('<msup><mi>f</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo>', false);
+  this.executeTest('<msup><mi>f</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo>', true);
   this.executeTest('<mo>-</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>', false);
 
   this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo>', true);
