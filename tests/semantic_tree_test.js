@@ -41,6 +41,11 @@ sre.SemanticTreeTest = function() {
    * @override
    */
   this.information = 'Semantic tree tests.';
+
+  /**
+   * @type {Object.<sre.SemanticAnnotator>}
+   */
+  this.annotations = null;
 };
 goog.inherits(sre.SemanticTreeTest, sre.AbstractTest);
 
@@ -51,7 +56,17 @@ goog.inherits(sre.SemanticTreeTest, sre.AbstractTest);
 sre.SemanticTreeTest.prototype.setUpTest = function() {
   this.xpathBlacklist = [];
   this.brief = true;
+  this.annotations = sre.SemanticAnnotations.getInstance().annotators;
+  sre.SemanticAnnotations.getInstance().annotators = {};
   sre.SemanticTreeTest.setupAttributes();
+};
+
+
+/**
+ * @override
+ */
+sre.SemanticTreeTest.prototype.tearDownTest = function() {
+  sre.SemanticAnnotations.getInstance().annotators = this.annotations;
 };
 
 
