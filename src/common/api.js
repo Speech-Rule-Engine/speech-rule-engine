@@ -49,13 +49,6 @@ module.exports.version = sre.System.getInstance().version;
 
 /**
  * Exporting method to return an aural rendered speech string.
- * @deprecated Use toSpeech().
- */
-module.exports.processExpression = sre.Api.toSpeech;
-
-
-/**
- * Exporting method to return an aural rendered speech string.
  */
 module.exports.toSpeech = sre.Api.toSpeech;
 
@@ -106,13 +99,6 @@ module.exports.file = {};
  * Exporting method to aural render an expression from a file.
  */
 module.exports.file.toSpeech = sre.System.getInstance().fileToSpeech;
-
-
-/**
- * Exporting method to aural render an expression from a file.
- * @deprecated Use file.toSpeech()
- */
-module.exports.processFile = sre.System.getInstance().fileToSpeech;
 
 
 /**
