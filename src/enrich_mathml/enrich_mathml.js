@@ -85,6 +85,7 @@ sre.EnrichMathml.Attribute = {
   FENCEPOINTER: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'fencepointer',
   FONT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'font',
   ID: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'id',
+  MEANING: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'meaning',
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
@@ -587,6 +588,10 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
+  if (Object.keys(semantic.meaning).length) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.MEANING,
+                     semantic.xmlMeaning());
+  }
   if (semantic.font != sre.Semantic.Font.UNKNOWN) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
   }

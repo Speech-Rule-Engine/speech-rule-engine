@@ -161,7 +161,7 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
     node.setAttribute('font', this.font);
   }
   if (Object.keys(this.meaning).length) {
-    node.setAttribute('meaning', this.xmlMeaning_());
+    node.setAttribute('meaning', this.xmlMeaning());
   }
   if (this.embellished) {
     node.setAttribute('embellished', this.embellished);
@@ -176,9 +176,8 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
 /**
  * Turns meaning structure into an attribute.
  * @return {string} XML string for meaning.
- * @private
  */
-sre.SemanticNode.prototype.xmlMeaning_ = function() {
+sre.SemanticNode.prototype.xmlMeaning = function() {
   var result = [];
   for (var key in this.meaning) {
     this.meaning[key].forEach(function(mean) {
@@ -400,7 +399,7 @@ sre.SemanticNode.prototype.addMeaning_ = function(domain, meaning) {
  * Checks if a node has a particular meaning.
  * @param {string} domain The domain.
  * @param {string} meaning The meaning.
- * @return{boolean} True if the meaning is contained.
+ * @return {boolean} True if the meaning is contained.
  */
 sre.SemanticNode.prototype.hasMeaning = function(domain, meaning) {
   var content = this.meaning[domain];
@@ -409,3 +408,18 @@ sre.SemanticNode.prototype.hasMeaning = function(domain, meaning) {
   }
   return content.indexOf(meaning) !== -1;
 };
+
+
+/**
+ * Parses a meaning string as given, for example, in an attribute.
+ * @param {string} stateStr The state string for the meaning.
+ */
+sre.SemanticNode.prototype.parseMeaning = function(stateStr) {
+  var meanings = stateStr.split(';');
+  for (var i = 0, l = meanings.length; i < l; i++) {
+    var meaning = meanings[i].split(':');
+    this.addMeaning(meaning[0], meaning[1]);
+  }
+};
+
+
