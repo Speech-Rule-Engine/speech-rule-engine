@@ -32,6 +32,7 @@ INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
 IEMAPS_FILE = $(JSON_DIR)/mathmaps_ie.js
+MAPS_DIRS = $(foreach dir, $(MAPS), $(JSON_DIR)/$(dir))
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -69,11 +70,14 @@ COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
 CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js'
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
+space = $(null) #
+comma = ,
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
+LINT_EXCLUDE_DIRS = $(subst $(space),$(comma),$(strip $(MAPS_DIRS)))
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
-GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
-FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -r
+GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
+FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
 
 #######################################################################3
 
