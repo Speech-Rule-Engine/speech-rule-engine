@@ -62,23 +62,37 @@ It takes an object of option/value pairs to parameterise the Speech Rule Engine.
 
     setupEngine(options);
 
-Valid options are:
+Most common options are:
 
 | Option | Value |
 | ---- | ---- |
-| *domain* | Domain or subject area of speech rules (e.g., mathspeak, physics).|
+| *domain* | Domain or subject area of speech rules (e.g., mathspeak, emacspeak).|
 | *style* | Style of speech rules (e.g., brief).|
-| *semantics* | Boolean flag to swich on semantic interpretation.|
+| *markup*| Set the markup: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss``` |
+| *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation. Non-semantic rule sets are deprecated. |
 
 Observe that some speech rule domains only make sense with semantics switched on
 or off and that not every domain implements every style. See also the
 description of the command line parameters in the next section for more details.
 
+Other options to give more fine grained control of the SRE that are useful during development are:
+
+| Option | Value |
+| ---- | ---- |
+| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. |
+| *strict* | Boolean flag indicating if only a directly matching rule should be used. I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. Default is ```false```. |
+| *speech* | Depth to which speech attributes to store generated speech on nodes during semantic enrichment. Values are ```none```, ```shallow```, ```deep```. Default is ```none```. |
+| *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
+| *json* | URL where to pull the json speech rule files from. |
+| *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or Edge. |
+| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. |
+
 
 #### Experimental methods for navigating math expressions:
 
 For the following methods sre maintains an internal state, hence they are only
-really useful when running in browser or in a Node REPL.Hence they are not
+really useful when running in browser or in a Node REPL. Hence they are not
 exposed via the command line interface.
 
 | Method | Return Value |
@@ -87,17 +101,13 @@ exposed via the command line interface.
 | `move(keycode)` | Speech string after the move. Keycodes are numerical strings representing cursor keys, space, enter, etc. |
 
 
-#### The following are deprecated API functions #########
+#### Other API functions and flags #########
 
-     processExpression(mathml); 
-
-Takes a string containing a MathML expression and returns the corresponding
-speech string. Same as `toSpeech(mathml)`.
-
-     processFile(input, output);
-
-Takes an input file containing a MathML expression and writes the corresponding
-speech string to the output file. Same as `file.toSpeech(mathml)`.
+| Method | Return Value |
+| ---- | ---- |
+| `pprintXML(string)` | Returns pretty printed version of a serialised XML string. |
+| `version` | Returns SRE's version number. |
+| `isReady` | Flag indicating that all necessary rule files have been loaded. This is necessary in asynchronous settings. |
 
 Standalone Engine
 -----------------
@@ -172,6 +182,7 @@ The following is a list of command line options for the speech rule engine.
 | -j | --json  | Generate JSON of semantic tree. |
 | -m | --mathml  | Generate enriched MathML. |
 | -p | --speech  | Generate speech output (default). |
+| -k | --markup [name] | Generate speech output with markup tags. Currently supported SSML, VoiceXML, Sable, ACSS (as sexpressions for Emacsspeak) |
 | -x | --xml  | Generate XML of semantic tree. |
 | | |
 | | |
