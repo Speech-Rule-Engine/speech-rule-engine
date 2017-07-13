@@ -67,12 +67,15 @@ sre.SemanticPred.isAccent = function(node) {
 
 
 /**
- * Predicate implementing the boundary criteria for simple functions:
+ * Predicate implementing the boundary criteria for detecting simple functions:
+ * 1. No arguments, e.g., f()
+ * 2. Any arguments with the exception of:
+ *  - Infix operations other than implicit multiplication.
  *
  * @param {!sre.SemanticNode} node A semantic node of type fenced.
  * @return {boolean} True if the node meets the boundary criteria.
  */
-sre.SemanticPred.isSimpleFunction = function(node) {
+sre.SemanticPred.isSimpleFunctionScope = function(node) {
   var children = node.childNodes;
   if (children.length === 0) {
     return true;

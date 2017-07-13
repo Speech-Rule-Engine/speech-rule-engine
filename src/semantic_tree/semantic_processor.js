@@ -1141,6 +1141,9 @@ sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.PREFIXFUNC] =
     'prefix';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
     'prefix';
+// TODO (WS2.3): Should go into clearspeak specific parser/processor?
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.SIMPLEFUNC] =
+    'prefix';
 
 
 /**
@@ -1258,7 +1261,7 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       var firstArg = rest[0];
       if (firstArg.type === sre.SemanticAttr.Type.FENCED &&
           firstArg.role !== sre.SemanticAttr.Role.NEUTRAL &&
-          sre.SemanticPred.isSimpleFunction(firstArg)) {
+          sre.SemanticPred.isSimpleFunctionScope(firstArg)) {
         sre.SemanticProcessor.propagateFunctionRole_(
             func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = sre.SemanticProcessor.getInstance().functionNode_(
