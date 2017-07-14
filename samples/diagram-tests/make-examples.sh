@@ -39,4 +39,3 @@ text2wave context-prosody/sable/example4.sable -o context-prosody/sable/example4
 text2wave context-prosody/sable/example5.sable -o context-prosody/sable/example5.wav
 text2wave context-prosody/sable/example6.sable -o context-prosody/sable/example6.wav
 text2wave context-prosody/sable/example7.sable -o context-prosody/sable/example7.wav
-
