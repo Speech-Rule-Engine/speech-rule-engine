@@ -34,7 +34,7 @@ sre.SpeechRuleFunctions = function() { };
  * Private superclass of all the custom function stores.
  * @constructor
  * @param {string} prefix A prefix string for the function names.
- * @param {!Object.<string, Function>} store Storage object.
+ * @param {!Object.<Function>} store Storage object.
  * @private
  */
 sre.SpeechRuleFunctions.Store_ = function(prefix, store) {
@@ -93,7 +93,7 @@ sre.SpeechRuleFunctions.CustomQuery;
  */
 sre.SpeechRuleFunctions.CustomQueries = function() {
   var store =
-      /** @type {!Object.<string, sre.SpeechRuleFunctions.CustomQuery>} */ ({});
+      /** @type {!Object.<sre.SpeechRuleFunctions.CustomQuery>} */ ({});
   sre.SpeechRuleFunctions.CustomQueries.base(this, 'constructor', 'CQF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomQueries,
@@ -114,7 +114,7 @@ sre.SpeechRuleFunctions.CustomString;
  */
 sre.SpeechRuleFunctions.CustomStrings = function() {
   var store =
-      /** @type {!Object.<string, sre.SpeechRuleFunctions.CustomString>} */
+      /** @type {!Object.<sre.SpeechRuleFunctions.CustomString>} */
       ({});
   sre.SpeechRuleFunctions.CustomStrings.base(this, 'constructor', 'CSF', store);
 };
@@ -136,7 +136,7 @@ sre.SpeechRuleFunctions.ContextFunction;
  */
 sre.SpeechRuleFunctions.ContextFunctions = function() {
   var store =
-      /** @type {!Object.<string, sre.SpeechRuleFunctions.ContextFunction>} */
+      /** @type {!Object.<sre.SpeechRuleFunctions.ContextFunction>} */
       ({});
   sre.SpeechRuleFunctions.ContextFunctions.base(
       this, 'constructor', 'CTXF', store);

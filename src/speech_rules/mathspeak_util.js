@@ -111,7 +111,7 @@ sre.MathspeakUtil.nestingBarriers = [
 
 /**
  * Dictionary to store the nesting depth of each node.
- * @type {Object.<string, Object.<string, number>>}
+ * @type {Object.<Object.<number>>}
  */
 sre.MathspeakUtil.nestingDepth = {};
 
@@ -124,7 +124,7 @@ sre.MathspeakUtil.nestingDepth = {};
  * @param {Array.<string>} tags The tags to be considered for the nesting depth.
  * @param {Array.<sre.Semantic.Attr>=} opt_barrierTags Optional list of tags
  *     that serve as barrier.
- * @param {Object.<string, string>=} opt_barrierAttrs Attribute value pairs that
+ * @param {Object.<string>=} opt_barrierAttrs Attribute value pairs that
  *     serve as barrier.
  * @param {function(!Node): boolean=} opt_func A function that overrides both
  *     tags and attribute barriers, i.e., if function returns true it will be
@@ -158,7 +158,7 @@ sre.MathspeakUtil.getNestingDepth = function(type, node, tags, opt_barrierTags,
 /**
  * Checks if a node contains given attribute value pairs.
  * @param {!Node} node The XML node to check.
- * @param {Object.<string, string>} attrs Attribute value pairs.
+ * @param {Object.<string>} attrs Attribute value pairs.
  * @return {boolean} True if all attributes are contained and have the given
  *     values.
  */
@@ -182,7 +182,7 @@ sre.MathspeakUtil.containsAttr = function(node, attrs) {
  * @param {!Node} node The XML node to process.
  * @param {Array.<string>} tags The tags to be considered for the nesting depth.
  * @param {Array.<string>} barriers List of tags that serve as barrier.
- * @param {Object.<string, string>} attrs Attribute value pairs that serve as
+ * @param {Object.<string>} attrs Attribute value pairs that serve as
  *     barrier.
  * @param {function(!Node): boolean} func A function that overrides both tags
  *     and attribute barriers, i.e., if function returns true it will be

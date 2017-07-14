@@ -251,7 +251,7 @@ sre.SpeechRule.Component.prototype.getGrammar = function() {
 
 /**
  * Defines attributes for a component of a speech rule.
- * @typedef {!Object.<string, string>}
+ * @typedef {!Object.<string>}
  */
 sre.SpeechRule.Attributes;
 
@@ -259,7 +259,7 @@ sre.SpeechRule.Attributes;
 /**
  * Adds a single attribute to the component.
  * @param {string} attrs String representation of an attribute.
- * @return {Object.<string, string|sre.Grammar.State>} The parsed
+ * @return {Object.<string|sre.Grammar.State>} The parsed
  *     attributes, possibly containing the grammar.
  */
 sre.SpeechRule.Component.attributesFromString = function(attrs) {
