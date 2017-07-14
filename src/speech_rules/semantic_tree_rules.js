@@ -117,9 +117,8 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'equality', 'default.default',
-      '[t] "equation"; [t] "left hand side"; [n] children/*[1];' +
-          '[p] (pause:200); [n] content/*[1] (pause:200);' +
-          '[t] "right hand side"; [n] children/*[2]',
+      '[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);' +
+          '[n] children/*[2]',
       'self::relseq[@role="equality"]', 'count(./children/*)=2');
 
   defineRule(
@@ -261,8 +260,8 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Fences rules.
   defineRule(
       'fences-open-close', 'default.default',
-      '[p] (pause:200); [t] "open"; [n] content/*[1]; [n] children/*[1];' +
-      ' [p] (pause:200); [t] "close"',
+      '[p] (pause:100); [n] content/*[1]; ' +
+      '[n] children/*[1]; [n] content/*[2]; [p] (pause:100)',
       'self::fenced', '@role="leftright"');
 
   defineRule(
@@ -339,6 +338,12 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::multiline');
 
   defineRule(
+      'multiline-ineq', 'default.default',
+      '[t] "multiline inequality";' +
+      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:100)',
+      'self::multiline', '@role="inequality"');
+
+  defineRule(
       'line', 'default.default',
       '[m] children/*', 'self::line');
 
@@ -350,12 +355,21 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'self::table');
 
   defineRule(
+      'table-ineq', 'default.default',
+      '[t] "multiline inequality";' +
+      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"row",pause:200)',
+      'self::table', '@role="inequality"');
+
+  defineRule(
       'table-row', 'default.default',
       '[m] children/* (pause:100)', 'self::row[@role="table"]');
 
   defineRuleAlias(
       'cases-cell', 'self::cell[@role="table"]');
 
+  defineRule(
+      'empty-cell', 'mathspeak.default',
+      '[t] "Blank"', 'self::cell', 'count(children/*)=0');
 
   // Rules for punctuated expressions.
   defineRule(
