@@ -77,7 +77,7 @@ sre.Tests.testList = [
   sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
+  // sre.EnrichSpeechTest,
   sre.MarkupTest,
   sre.MathmlCloudTest,
   sre.MathmlStoreTest,
@@ -92,8 +92,8 @@ sre.Tests.testList = [
   sre.SpeechRuleTest,
   sre.WalkerTest
 ];
-// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
-sre.Tests.testList = sre.ClearspeakTest.testList;
+sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+// sre.Tests.testList = sre.ClearspeakTest.testList;
 
 
 /**

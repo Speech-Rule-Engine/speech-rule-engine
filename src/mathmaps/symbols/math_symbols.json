@@ -307,6 +307,10 @@
       },
       "mathspeak": {
         "default": "vertical-bar"
+      },
+      "clearspeak": {
+        "default": "divides",
+        "VerticalLine_SuchThat": "such that"
       }
     },
     "key": "007C"
@@ -647,6 +651,11 @@
       },
       "mathspeak": {
         "default": "times"
+      },
+      "clearspeak": {
+        "default": "times",
+        "MultsymbolX_By": "by",
+        "MultsymbolX_Cross": "cross"
       }
     },
     "key": "00D7"
@@ -1016,6 +1025,9 @@
       },
       "mathspeak": {
         "default": "ellipsis"
+      },
+      "clearspeak": {
+        "default": "dot dot dot"
       }
     },
     "key": "2026"
@@ -4134,7 +4146,8 @@
         "default": "dot"
       },
       "clearspeak": {
-        "default": "times"
+        "default": "times",
+        "MultsymbolDot_Dot": "dot"
       }
     },
     "key": "22C5"

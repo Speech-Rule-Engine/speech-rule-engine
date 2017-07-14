@@ -53,7 +53,7 @@ goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 /**
  * Testing ClearspeakPart2Symbols Example X001
  */
-sre.ClearspeakPart2Symbols.prototype.untestX001 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX001 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>';
   var speech = '6 times 8';
@@ -64,10 +64,10 @@ sre.ClearspeakPart2Symbols.prototype.untestX001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example X002
  */
-sre.ClearspeakPart2Symbols.prototype.untestX002 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX002 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>';
-  var speech = 'M times n';
+  var speech = 'm times n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -75,7 +75,7 @@ sre.ClearspeakPart2Symbols.prototype.untestX002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example X003
  */
-sre.ClearspeakPart2Symbols.prototype.untestX003 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX003 = function() {
   var preference = 'MultsymbolX_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>';
   var speech = '3 times 3';
@@ -86,7 +86,7 @@ sre.ClearspeakPart2Symbols.prototype.untestX003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example X004
  */
-sre.ClearspeakPart2Symbols.prototype.untestX004 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX004 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow></math>';
   var speech = '6 by 8';
@@ -97,10 +97,10 @@ sre.ClearspeakPart2Symbols.prototype.untestX004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example X005
  */
-sre.ClearspeakPart2Symbols.prototype.untestX005 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX005 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>';
-  var speech = 'M by n';
+  var speech = 'm by n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -108,7 +108,7 @@ sre.ClearspeakPart2Symbols.prototype.untestX005 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example X006
  */
-sre.ClearspeakPart2Symbols.prototype.untestX006 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX006 = function() {
   var preference = 'MultsymbolX_By';
   var mathml = '<math><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>';
   var speech = '3 by 3';
@@ -119,7 +119,7 @@ sre.ClearspeakPart2Symbols.prototype.untestX006 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example X007
  */
-sre.ClearspeakPart2Symbols.prototype.untestX007 = function() {
+sre.ClearspeakPart2Symbols.prototype.testX007 = function() {
   var preference = 'MultsymbolX_Cross';
   var mathml = '<math><mrow><mstyle mathvariant="bold" mathsize="normal"><mi>u</mi></mstyle><mo>×</mo><mstyle mathvariant="bold" mathsize="normal"><mi>v</mi></mstyle></mrow></math>';
   var speech = 'u cross v';
@@ -135,7 +135,7 @@ sre.ClearspeakPart2Symbols.prototype.untestX007 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Dot001
  */
-sre.ClearspeakPart2Symbols.prototype.untestDot001 = function() {
+sre.ClearspeakPart2Symbols.prototype.testDot001 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>';
   var speech = '6 times 8';
@@ -146,10 +146,10 @@ sre.ClearspeakPart2Symbols.prototype.untestDot001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Dot002
  */
-sre.ClearspeakPart2Symbols.prototype.untestDot002 = function() {
+sre.ClearspeakPart2Symbols.prototype.testDot002 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>';
-  var speech = 'M times n';
+  var speech = 'm times n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -157,7 +157,7 @@ sre.ClearspeakPart2Symbols.prototype.untestDot002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Dot003
  */
-sre.ClearspeakPart2Symbols.prototype.untestDot003 = function() {
+sre.ClearspeakPart2Symbols.prototype.testDot003 = function() {
   var preference = 'MultsymbolDot_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>';
   var speech = '3 times 3';
@@ -168,7 +168,7 @@ sre.ClearspeakPart2Symbols.prototype.untestDot003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Dot004
  */
-sre.ClearspeakPart2Symbols.prototype.untestDot004 = function() {
+sre.ClearspeakPart2Symbols.prototype.testDot004 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow></math>';
   var speech = '6 dot 8';
@@ -179,10 +179,10 @@ sre.ClearspeakPart2Symbols.prototype.untestDot004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Dot005
  */
-sre.ClearspeakPart2Symbols.prototype.untestDot005 = function() {
+sre.ClearspeakPart2Symbols.prototype.testDot005 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></math>';
-  var speech = 'M dot n';
+  var speech = 'm dot n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -190,7 +190,7 @@ sre.ClearspeakPart2Symbols.prototype.untestDot005 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Dot006
  */
-sre.ClearspeakPart2Symbols.prototype.untestDot006 = function() {
+sre.ClearspeakPart2Symbols.prototype.testDot006 = function() {
   var preference = 'MultsymbolDot_Dot';
   var mathml = '<math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow></math>';
   var speech = '3 dot 3';
@@ -255,7 +255,7 @@ sre.ClearspeakPart2Symbols.prototype.untestTriangle004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Ellipses001
  */
-sre.ClearspeakPart2Symbols.prototype.untestEllipses001 = function() {
+sre.ClearspeakPart2Symbols.prototype.testEllipses001 = function() {
   var preference = 'Ellipses_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>';
   var speech = '1 comma 2 comma 3 comma dot dot dot';
@@ -266,10 +266,10 @@ sre.ClearspeakPart2Symbols.prototype.untestEllipses001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Ellipses002
  */
-sre.ClearspeakPart2Symbols.prototype.untestEllipses002 = function() {
+sre.ClearspeakPart2Symbols.prototype.testEllipses002 = function() {
   var preference = 'Ellipses_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>';
-  var speech = '1 comma 2 comma, 3,comma dot dot dot comma 20';
+  var speech = '1 comma 2 comma 3 comma dot dot dot comma 20';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -277,10 +277,10 @@ sre.ClearspeakPart2Symbols.prototype.untestEllipses002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Ellipses003
  */
-sre.ClearspeakPart2Symbols.prototype.untestEllipses003 = function() {
+sre.ClearspeakPart2Symbols.prototype.testEllipses003 = function() {
   var preference = 'Ellipses_Auto';
   var mathml = '<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo><mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo><mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>';
-  var speech = 'Dot dot dot comma negative 2,comma negative 1 comma 0 comma 1 comma 2 comma dot dot dot';
+  var speech = 'dot dot dot comma, negative 2, comma, negative 1, comma 0 comma 1 comma 2 comma dot dot dot';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -288,10 +288,10 @@ sre.ClearspeakPart2Symbols.prototype.untestEllipses003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Ellipses004
  */
-sre.ClearspeakPart2Symbols.prototype.untestEllipses004 = function() {
+sre.ClearspeakPart2Symbols.prototype.testEllipses004 = function() {
   var preference = 'Ellipses_AndSoOn';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>';
-  var speech = '1 comma 2 comma 3 , and so on';
+  var speech = '1 comma 2 comma 3 comma and so on';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -299,10 +299,10 @@ sre.ClearspeakPart2Symbols.prototype.untestEllipses004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Ellipses005
  */
-sre.ClearspeakPart2Symbols.prototype.untestEllipses005 = function() {
+sre.ClearspeakPart2Symbols.prototype.testEllipses005 = function() {
   var preference = 'Ellipses_AndSoOn';
   var mathml = '<math><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo><mtext></mtext><mo>,</mo><mn>20</mn></mrow></math>';
-  var speech = '1 comma 2 comma 3 comma and so on up to 20';
+  var speech = '1 comma 2 comma 3 comma and so on up to comma 20';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -310,10 +310,10 @@ sre.ClearspeakPart2Symbols.prototype.untestEllipses005 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Ellipses006
  */
-sre.ClearspeakPart2Symbols.prototype.untestEllipses006 = function() {
+sre.ClearspeakPart2Symbols.prototype.testEllipses006 = function() {
   var preference = 'Ellipses_AndSoOn';
   var mathml = '<math><mrow><mo>…</mo><mtext></mtext><mo>,</mo><mo>−</mo><mn>2</mn><mo>,</mo><mtext></mtext><mo>−</mo><mn>1</mn><mo>,</mo><mtext></mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow></math>';
-  var speech = 'Dot dot dot negative 2,comma negative 1 comma 0 comma 1 comma 2 comma dot dot dot';
+  var speech = 'dot dot dot comma, negative 2, comma, negative 1, comma 0 comma 1 comma 2 comma dot dot dot';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -326,7 +326,7 @@ sre.ClearspeakPart2Symbols.prototype.untestEllipses006 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine001
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine001 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine001 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
   var speech = '3 divides 6';
@@ -340,7 +340,7 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine001 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestVertLine002 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'The set of all x such that x is greater than 0';
+  var speech = 'the set of all x such that x is greater than 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -351,7 +351,7 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine002 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestVertLine003 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'The set of x such that the absolute value of x is greater than 2';
+  var speech = 'the set of x such that the absolute value of x is greater than 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -395,7 +395,7 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine006 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestVertLine007 = function() {
   var preference = 'VerticalLine_SuchThat';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'The set of all x such that x is greater than 0';
+  var speech = 'the set of all x such that x is greater than 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -444,7 +444,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym001 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym002 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of all x in the integers such that x is greater than 5';
+  var speech = 'the set of all x in the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -477,7 +477,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym004 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym005 = function() {
   var preference = 'VerticalLine_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of all x member of the integers such that x is greater than 5';
+  var speech = 'the set of all x member of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -510,7 +510,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym007 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym008 = function() {
   var preference = 'VerticalLine_Element';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of all x element of the integers such that x is greater than 5';
+  var speech = 'the set of all x element of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -543,7 +543,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym010 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym011 = function() {
   var preference = 'VerticalLine_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of all x belonging to the integers such that x is greater than 5';
+  var speech = 'the set of all x belonging to the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -576,7 +576,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym013 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym014 = function() {
   var preference = 'VerticalLine_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of all x belonging to the integers such that x is greater than 5';
+  var speech = 'the set of all x belonging to the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -603,7 +603,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym015 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSetMemb001 = function() {
   var preference = 'VerticalLine_Sets "woall" and SetMemberSymbol "belongs"';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of x belonging to the integers such that 2 is less than x is less than 7.';
+  var speech = 'the set of x belonging to the integers such that 2 is less than x is less than 7.';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -614,7 +614,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSetMemb001 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSetMemb002 = function() {
   var preference = 'VerticalLine_Sets "woall" and SetMemberSymbol "member"';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
-  var speech = 'The set of x member of the integers such that x is greater than 5';
+  var speech = 'the set of x member of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -630,7 +630,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSetMemb002 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum001 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>n</mi></mstyle></mrow></math>';
-  var speech = 'The sum from n = 1 to 10 of n';
+  var speech = 'the sum from n = 1 to 10 of n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -641,7 +641,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum001 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum002 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><mi>n</mi></mstyle></mrow></math>';
-  var speech = 'The sum from n=1 to infinity of n';
+  var speech = 'the sum from n=1 to infinity of n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -652,7 +652,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum002 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum003 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'The sum over I is a member of the positive integers, of i';
+  var speech = 'the sum over I is a member of the positive integers, of i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -663,7 +663,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum003 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum004 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>S</mi></munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'The sum over S, of I';
+  var speech = 'the sum over S, of I';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -674,7 +674,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum004 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum005 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∑</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The sum of, a sub I';
+  var speech = 'the sum of, a sub I';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -685,7 +685,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum005 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum006 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'The product from i=1 to 10 of i';
+  var speech = 'the product from i=1 to 10 of i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -696,7 +696,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum006 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum007 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'The product over I is a member of the positive integers of the fraction with numerator 1 and denominator i+1';
+  var speech = 'the product over I is a member of the positive integers of the fraction with numerator 1 and denominator i+1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -707,7 +707,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum007 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum008 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'The product over the positive integers of the fraction with numerator 1 and denominator i+1';
+  var speech = 'the product over the positive integers of the fraction with numerator 1 and denominator i+1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -718,7 +718,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum008 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum009 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∏</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The product of, a sub i';
+  var speech = 'the product of, a sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -729,7 +729,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum009 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum010 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The intersection from i=1 to 10 of S sub i';
+  var speech = 'the intersection from i=1 to 10 of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -740,7 +740,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum010 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum011 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∪</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The union from i=1 to 10 of S sub i';
+  var speech = 'the union from i=1 to 10 of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -751,7 +751,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum011 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum012 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∩</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The intersection of S sub i';
+  var speech = 'the intersection of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -762,7 +762,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum012 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum013 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∪</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The union of. S sub i';
+  var speech = 'the union of. S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -773,7 +773,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum013 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum014 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∩</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The intersection over C of S sub i';
+  var speech = 'the intersection over C of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -784,7 +784,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum014 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum015 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∪</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'The union over C of S sub i';
+  var speech = 'the union over C of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -795,7 +795,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum015 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum016 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext></mtext></mrow></mrow></mstyle><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'The integral of f of x dx';
+  var speech = 'the integral of f of x dx';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -806,7 +806,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum016 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum017 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'The integral from 0 to 1 of f of x dx';
+  var speech = 'the integral from 0 to 1 of f of x dx';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -817,6 +817,6 @@ sre.ClearspeakPart2Symbols.prototype.untestSum017 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum018 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><munder><mo>∫</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'The integral over the real numbers of f of x dx';
+  var speech = 'the integral over the real numbers of f of x dx';
   this.executeRuleTest(mathml, speech, preference);
 };

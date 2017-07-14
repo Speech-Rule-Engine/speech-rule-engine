@@ -121,10 +121,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'text', 'clearspeak.default', '[n] text()', 'self::text');
 
-  defineRule(
-      'punctuated', 'clearspeak.default',
-      '[m] children/*',
-      'self::punctuated');
+  // Symbols
+  // Comma
   defineRule(
       'punctuation-lr', 'clearspeak.default',
       '[p] (pause:"short"); [n] text() (pause:"short")',
@@ -145,6 +143,26 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] text() (pause:"short")',
       'self::punctuation', '@role="comma"',
       'not(preceding-sibling::*[1]/children)');
+
+  // Ellipses
+  defineRule(
+    'ellipsis', 'clearspeak.Ellipses_AndSoOn',
+    '[t] "and so on"',
+    'self::punctuation', '@role="ellipsis"', 'not(following-sibling::*[1])',
+    'not(preceding-sibling::*[last()][@role="ellipsis"])'
+  );
+  defineRule(
+    'ellipsis', 'clearspeak.Ellipses_AndSoOn',
+    '[t] "and so on up to"',
+    'self::punctuation', '@role="ellipsis"',
+    'preceding-sibling::*[1]', 'following-sibling::*[1]'
+  );
+
+
+  defineRule(
+      'punctuated', 'clearspeak.default',
+      '[m] children/*',
+      'self::punctuated');
 
   // Function rules
   defineRule(
@@ -368,6 +386,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //     '[n] children/*[1]',
   //     'self::fenced', '@role="leftright"', 'contains(children/*[1]/@meaning, "clearspeak:simple")', 'parent::*/parent::appl');
 
+  // Set braces
+  defineRule(
+      'fences-set', 'clearspeak.default',
+      '[t] "the set of all"; [n] children/*[1]',
+      'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
+      'content/*[2][text()]="}"', 'count(children/*)=1',
+      'not(name(../..)="appl")');
 
   // Subscript
   defineRule(
