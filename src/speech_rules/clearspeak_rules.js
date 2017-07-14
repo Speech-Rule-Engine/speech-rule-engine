@@ -182,7 +182,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
     'children/*[2]/children/*[1][text()="1"]',
     'not(contains(@grammar, "functions_none"))');
-  
+
   // Superscript rules
   defineRule(
       'superscript', 'clearspeak.default',
@@ -269,7 +269,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       // 'children/*[1]/children/*[2][@role!="mixed"] and ' +
       // 'children/*[1]/children/*[2][@role!="othernumber"])',
     // 'not(@embellished)'
-    
+
   );
 
   // Cube
@@ -293,8 +293,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       // 'not(@embellished)'
   );
 
-  
-  
+
+
   // Parentheses rules
   defineRule(
     'paren-simple', 'clearspeak.default',
@@ -314,7 +314,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
       'children/*[1]/children/*[2]/children/*[1][@role="vulgar"] '
   );
-  
+
   defineRule(
     'paren-simple-nested-func', 'clearspeak.Functions_None',
       '[p] (pause:"short"); [n] content/*[1]; [p] (pause:"short"); [n] children/*[1];' +
@@ -348,6 +348,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRuleAlias(
     'fences-open-close', 'self::fenced', '@role="composed function"');
 
+  defineRule(
+    'paren-nested-embellished-funcs', 'clearspeak.Functions_None',
+    '[p] (pause:"short"); [n] content/*[1];' +
+      ' [p] (pause:"short"); [n] children/*[1];' +
+      ' [p] (pause:"short"); [n] content/*[2]; [p] (pause:"short")',
+    'self::fenced', '@role="leftright"',
+    'name(../..)="appl"', 'name(children/*[1]) = "appl"',
+    'preceding-sibling::*/descendant-or-self::*[@role="subsup"] or ' +
+      'children/*[1]/descendant-or-self::*[@role="subsup"]'
+  );
   // defineRule(
   //     'fences-open-close', 'clearspeak.default',
   //     '[t] (pause:"short"); [n] content/*[1]; [t] (pause:"short"); [n] children/*[1];' +
@@ -358,7 +368,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //     '[n] children/*[1]',
   //     'self::fenced', '@role="leftright"', 'contains(children/*[1]/@meaning, "clearspeak:simple")', 'parent::*/parent::appl');
 
-  
+
   // Subscript
   defineRule(
       'subscript', 'clearspeak.default',
@@ -372,6 +382,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
           ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction');
+  defineRule(
+      'fraction', 'clearspeak.Functions_None',
+      '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
+          ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
+      'self::fraction',
+      'name(children/*[1])="appl" or name(children/*[2])="appl"'
+  );
   // defineRuleAlias(
   //     'fraction', 'self::fraction',
   //   'contains(children/*[1]/@meaning, "clearspeak:simple")',
@@ -435,7 +452,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'simple-vulgar-fraction', 'clearspeak.Fraction_Ordinal',
       '[t] CSFvulgarFraction', 'self::fraction', '@role="vulgar"');
-  
+
   defineRule(
       'fraction', 'clearspeak.Fraction_EndFrac',
       '[p] (pause:short); [n] . (grammar:endfrac); [t] "end fraction"; [p] (pause:short)',
@@ -465,7 +482,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'simple-vulgar-fraction', 'clearspeak.Fraction_EndFrac',
       '[t] CSFvulgarFraction', 'self::fraction', '@role="vulgar"',
     'contains(@meaning, "clearspeak:simple")', 'self::*');
-  
+
 
   // Roots
   defineRule(
@@ -563,31 +580,31 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'natural-numbers-super', 'clearspeak.default',
     '[t] "n" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u2115"' +
-      ' or (children/*[1]/text()="N" and @font="double-struck")', 
+      ' or (children/*[1]/text()="N" and @font="double-struck")',
     'self::*', 'self::*');
   defineRule(
     'integers-super', 'clearspeak.default',
     '[t] "z" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u2124"' +
-      ' or (children/*[1]/text()="Z" and @font="double-struck")', 
+      ' or (children/*[1]/text()="Z" and @font="double-struck")',
     'self::*', 'self::*');
   defineRule(
     'rational-numbers-super', 'clearspeak.default',
     '[t] "q" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u211A"' +
-      ' or (children/*[1]/text()="Q" and @font="double-struck")', 
+      ' or (children/*[1]/text()="Q" and @font="double-struck")',
     'self::*', 'self::*');
   defineRule(
     'real-numbers-super', 'clearspeak.default',
     '[t] "r" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u211D"' +
-      ' or (children/*[1]/text()="R" and @font="double-struck")', 
+      ' or (children/*[1]/text()="R" and @font="double-struck")',
     'self::*', 'self::*');
   defineRule(
     'complex-numbers-super', 'clearspeak.default',
     '[t] "c" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u2102"' +
-      ' or (children/*[1]/text()="C" and @font="double-struck")', 
+      ' or (children/*[1]/text()="C" and @font="double-struck")',
     'self::*', 'self::*');
 
   // Partial named sets.
@@ -602,28 +619,28 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     '[t] "the positive integers"',
     'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
-    'children/*[2]/text()="+"', 
+    'children/*[2]/text()="+"',
     'self::*', 'self::*');
   defineRule(
     'positive-integers', 'clearspeak.default',
     '[t] "the negative integers"',
     'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
-    'children/*[2]/text()="-"', 
+    'children/*[2]/text()="-"',
     'self::*', 'self::*');
   defineRule(
     'positive-rational-numbers', 'clearspeak.default',
     '[t] "the positive rational numbers"',
     'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
-    'children/*[2]/text()="+"', 
+    'children/*[2]/text()="+"',
     'self::*', 'self::*');
   defineRule(
     'negative-rational-numbers', 'clearspeak.default',
     '[t] "the negative rational numbers"',
     'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
-    'children/*[2]/text()="-"', 
+    'children/*[2]/text()="-"',
     'self::*', 'self::*');
   // TODO: Do we need positive and negative real numbers. Usually they are more
   //       complex notation!

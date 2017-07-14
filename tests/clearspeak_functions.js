@@ -1474,7 +1474,7 @@ sre.ClearspeakFunctions.prototype.testFunction129 = function() {
 sre.ClearspeakFunctions.prototype.testFunction130 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'open paren, f over g, close paren, times x equals, the fraction with numerator f times x, and denominator g times x';
+  var speech = 'open paren, f over g, close paren, times x, equals, the fraction with numerator, f times x, and denominator, g times x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
