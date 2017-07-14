@@ -380,3 +380,21 @@ sre.SemanticPred.isSimpleFunction = function(node) {
   return sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
     sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node);
 };
+
+
+sre.SemanticPred.isLeftBrace = function(node) {
+  var leftBrace = [ '{', '﹛', '｛' ]; // ['0x007B', '0xFE5B', '0xFF5B'];
+  return leftBrace.indexOf(node.textContent) !== -1;
+};
+
+
+sre.SemanticPred.isRightBrace = function(node) {
+  var rightBrace = [ '}', '﹜', '｝' ]; // ['0x007D', '0xFE5C', '0xFF5D'];
+  return rightBrace.indexOf(node.textContent) !== -1;
+};
+
+
+sre.SemanticPred.isSetNode = function(node) {
+  return sre.SemanticPred.isLeftBrace(node.contentNodes[0]) &&
+    sre.SemanticPred.isRightBrace(node.contentNodes[1]);
+};

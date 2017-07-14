@@ -79,6 +79,13 @@ sre.SemanticAttr = function() {
         '；', '？', '＠', '＼'
       ];
   /**
+   * @type {Array.<string>}
+   */
+  this.colons =
+      [
+        ':', '：', '﹕'
+      ];
+  /**
    * @type {string}
    * @private
    */
@@ -926,6 +933,10 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.UNKNOWN
     },
+    {set: this.colons,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.COLON
+    },
     {set: this.commas,
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.COMMA
@@ -1400,6 +1411,7 @@ sre.SemanticAttr.Role = {
   PRIME: 'prime',   // Superscript.
   DEGREE: 'degree',   // Superscript.
   VBAR: 'vbar',  // A vertical bar.
+  COLON: 'colon',  // A vertical bar.
   OPENFENCE: 'openfence',
   CLOSEFENCE: 'closefence',
   APPLICATION: 'application', // Function Application.
@@ -1445,6 +1457,12 @@ sre.SemanticAttr.Role = {
   // Fenced.
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',
+
+  // Sets.
+  SETEMPTY: 'set empty',
+  SETEXT: 'set extended',
+  SETSINGLE: 'set singleton',
+  SETCOLLECT: 'set collection',
 
   // Text.
   STRING: 'string',

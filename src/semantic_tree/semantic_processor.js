@@ -891,13 +891,58 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       sre.SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
   if (ofence.role === sre.SemanticAttr.Role.OPEN) {
-    newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
+    // newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
+    this.classifyHorizontalFence_(newNode);
     this.propagateComposedFunction(newNode);
   } else {
     newNode.role = ofence.role;
   }
   return sre.SemanticProcessor.rewriteFencedNode_(newNode);
 };
+
+
+/**
+ * Classifies a horizontally fenced semantic node, using heuristics to determine
+ * certain set types, intervals etc.
+ * @param {sre.SemanticNode} node A fenced semantic node.
+ * @private
+ */
+sre.SemanticProcessor.prototype.classifyHorizontalFence_ = function(node) {
+  node.role = sre.SemanticAttr.Role.LEFTRIGHT;
+  var children = node.childNodes;
+  if (!sre.SemanticPred.isSetNode(node) || children.length > 1) {
+    return;
+  }
+  var type = children[0].type;
+  if (children.length === 0 ||
+      children[0].type === sre.SemanticAttr.Type.EMPTY) {
+    node.role = sre.SemanticAttr.Role.SETEMPTY;
+    return;
+  }
+  if (type === sre.SemanticAttr.Type.IDENTIFIER ||
+      type === sre.SemanticAttr.Type.NUMBER) {
+    node.role = sre.SemanticAttr.Role.SETSINGLE;
+    return;
+  }
+  var role = children[0].role;
+  if (type !== sre.SemanticAttr.Type.PUNCTUATED ||
+      role !== sre.SemanticAttr.Role.SEQUENCE) {
+    return;
+  }
+  if (children[0].contentNodes[0].role === sre.SemanticAttr.Role.COMMA) {
+    node.role = sre.SemanticAttr.Role.SETCOLLECT;
+    return;
+  }
+  if (children[0].contentNodes.length === 1 &&
+      (children[0].contentNodes[0].role === sre.SemanticAttr.Role.VBAR ||
+       children[0].contentNodes[0].role === sre.SemanticAttr.Role.COLON)) {
+    node.role = sre.SemanticAttr.Role.SETEXT;
+    return;
+  }
+  // TODO (sorge): Intervals after the Bra-Ket heuristic.
+};
+
+
 
 
 /**
@@ -1269,6 +1314,11 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       if (firstArg.type === sre.SemanticAttr.Type.FENCED &&
           firstArg.role !== sre.SemanticAttr.Role.NEUTRAL &&
           sre.SemanticPred.isSimpleFunctionScope(firstArg)) {
+        // TODO: (MS2.3|simons) This needs to be made more robust!  Currently we
+        //       reset to eliminate sets. Once we include bra-ket heuristics,
+        //       this might be incorrect.
+        //
+        firstArg.role = sre.SemanticAttr.Role.LEFTRIGHT;
         sre.SemanticProcessor.propagateFunctionRole_(
             func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = sre.SemanticProcessor.getInstance().functionNode_(
