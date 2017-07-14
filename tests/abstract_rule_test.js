@@ -73,11 +73,11 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   // this.appendExamples(mathMl);
   this.appendExamples('<h2>MathSpeak English ' +
                       sre.AbstractRuleTest.htmlCell_(
-                        sre.AbstractRuleTest.styleMap_(opt_style)) +
+      sre.AbstractRuleTest.styleMap_(opt_style)) +
                       ' Style </h2>',
                       sre.AbstractRuleTest.htmlCell_(mathMl) +
                       sre.AbstractRuleTest.htmlCell_(answer)
-                      );
+  );
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: opt_style,
@@ -95,7 +95,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
  */
 sre.AbstractRuleTest.styleMap_ = function(style) {
   var map = {'default': 'verbose',
-             'sbrief': 'superbrief'};
+    'sbrief': 'superbrief'};
   var newStyle = map[style] || style;
   return newStyle.charAt(0).toUpperCase() + newStyle.slice(1);
 };
@@ -145,8 +145,8 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
   var end = '\n</table>\n</body>\n</html>';
   for (var i = 0, l = examples.length; i < l; i++) {
     examples[i] = '<tr>' +
-      sre.AbstractRuleTest.htmlCell_(i) + examples[i] +
-      '</tr>';
+        sre.AbstractRuleTest.htmlCell_(i) + examples[i] +
+        '</tr>';
   }
   return head + style + examples.join('\n') + end;
 };

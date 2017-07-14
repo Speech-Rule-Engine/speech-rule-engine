@@ -133,9 +133,9 @@ sre.AbstractExamples.prototype.endExamples = function() {
     try {
       for (var key in this.examples_) {
         sre.SystemExternal.fs.appendFileSync(
-          this.examplesFile_, key);
+            this.examplesFile_, key);
         sre.SystemExternal.fs.appendFileSync(
-          this.examplesFile_, this.join(this.examples_[key]));
+            this.examplesFile_, this.join(this.examples_[key]));
       }
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
@@ -182,5 +182,5 @@ sre.AbstractExamples.prototype.cleanup = function(example) {
  */
 sre.AbstractExamples.prototype.join = function(examples) {
   return 'Lab.' + this.fileName_ +
-    ' = [\'' + examples.join('\',\n\'') + '\']';
+      ' = [\'' + examples.join('\',\n\'') + '\']';
 };
