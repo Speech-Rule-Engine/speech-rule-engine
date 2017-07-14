@@ -123,6 +123,7 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
       sre.SemanticAttr.Type.INFIXOP, children, [opNode],
       sre.SemanticProcessor.getEmbellishedInner_(opNode).textContent);
   node.role = opNode.role;
+  this.propagateSimpleFunction(node);
   return node;
 };
 
@@ -888,6 +889,7 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
       sre.SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
   if (ofence.role === sre.SemanticAttr.Role.OPEN) {
     newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
+    this.propagateComposedFunction(newNode);
   } else {
     newNode.role = ofence.role;
   }
@@ -1143,6 +1145,8 @@ sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
     'prefix';
 // TODO (WS2.3): Should go into clearspeak specific parser/processor?
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.SIMPLEFUNC] =
+    'prefix';
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.COMPFUNC] =
     'prefix';
 
 
@@ -1886,6 +1890,7 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
       newNode.childNodes.every(function(x) {
         return sre.SemanticPred.isAttribute('role', 'UNIT')(x);
       }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
+  this.propagateSimpleFunction(newNode);
   return newNode;
 };
 
@@ -2131,3 +2136,26 @@ sre.SemanticProcessor.prototype.font = function(font) {
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
 };
 
+// TODO: (MS2.3|simons): This needs to be a special annotator!
+sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
+  if (sre.Engine.getInstance().domain !== 'clearspeak') {
+    return node;
+  }
+  if ((node.type === sre.SemanticAttr.Type.INFIXOP ||
+       node.type === sre.SemanticAttr.Type.FRACTION) &&
+      node.childNodes.every(sre.SemanticPred.isSimpleFunction)) {
+    node.role = sre.SemanticAttr.Role.COMPFUNC;
+  }
+};
+
+
+// TODO: (MS2.3|simons): This needs to be a special annotator!
+sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
+  if (sre.Engine.getInstance().domain !== 'clearspeak') {
+    return node;
+  }
+  if (node.type === sre.SemanticAttr.Type.FENCED &&
+      node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {
+    node.role = sre.SemanticAttr.Role.COMPFUNC;
+  }
+};

@@ -581,6 +581,9 @@
       },
       "mathspeak": {
         "default": "dot"
+      },
+      "clearspeak": {
+        "default": "times"
       }
     },
     "key": "00B7"
@@ -2020,6 +2023,9 @@
       },
       "mathspeak": {
         "default": "ring"
+      },
+      "clearspeak": {
+        "default": "composed with"
       }
     },
     "key": "2218"
@@ -4126,6 +4132,9 @@
       },
       "mathspeak": {
         "default": "dot"
+      },
+      "clearspeak": {
+        "default": "times"
       }
     },
     "key": "22C5"

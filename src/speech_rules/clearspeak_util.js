@@ -203,10 +203,11 @@ sre.ClearspeakUtil.isSimple_ = function(node) {
  * @private
  */
 sre.ClearspeakUtil.isLetter_ = function(node) {
-  return node.type === sre.SemanticAttr.Type.IDENTIFIER && 
+  return node.type === sre.SemanticAttr.Type.IDENTIFIER &&
     (node.role === sre.SemanticAttr.Role.LATINLETTER ||
      node.role === sre.SemanticAttr.Role.GREEKLETTER ||
-     node.role === sre.SemanticAttr.Role.OTHERLETTER);
+     node.role === sre.SemanticAttr.Role.OTHERLETTER ||
+     node.role === sre.SemanticAttr.Role.SIMPLEFUNC);
 };
 
 

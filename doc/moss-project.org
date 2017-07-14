@@ -308,6 +308,7 @@ sre.SemanticPred.endpunctIsSuper = function(nodes, punctuations) {
 ```
 
 ** Add spaces between 2x 3y etc?
+Currently NO.
 
 ** frtxt004: changes six to 6
 

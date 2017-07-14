@@ -1466,6 +1466,7 @@ sre.SemanticAttr.Role = {
   PREFIXFUNC: 'prefix function',
   POSTFIXFUNC: 'postfix function',
   SIMPLEFUNC: 'simple function',
+  COMPFUNC: 'composed function',
 
   // Large operators.
   SUM: 'sum',

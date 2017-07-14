@@ -369,3 +369,14 @@ sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
       nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION &&
       nodes[position] === puncts[0];
 };
+
+
+/**
+ * Is the node a simple function?
+ * @param {!sre.SemanticNode} node The node.
+ * @return {boolean} True if node is an identifier with role simple function.
+ */
+sre.SemanticPred.isSimpleFunction = function(node) {
+  return sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
+    sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node);
+};
