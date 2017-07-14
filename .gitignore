@@ -9,3 +9,5 @@ samples/mathspeak/
 samples/mathml/
 src/closure-library
 *.html
+*.aux
+*.log
