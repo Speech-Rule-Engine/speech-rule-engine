@@ -34,3 +34,5 @@ goog.require('sre.System');
       style: 'default',
       semantics: true}
 );
+
+var SRE = sre.System.getInstance();

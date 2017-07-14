@@ -989,7 +989,7 @@ sre.SemanticProcessor.prototype.dummyNode_ = function(children) {
 
 
 /**
- * @const {Object.<string, sre.SemanticAttr.Type>}
+ * @const {Object.<sre.SemanticAttr.Type>}
  * @private
  */
 sre.SemanticProcessor.MML_TO_LIMIT_ = {
@@ -2256,7 +2256,7 @@ sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
 
 /**
  * Maps mathjax font variants to semantic font names.
- * @type {Object.<string, sre.SemanticAttr.Font>}
+ * @type {Object.<sre.SemanticAttr.Font>}
  */
 sre.SemanticProcessor.MATHJAX_FONTS = {
   '-tex-caligraphic': sre.SemanticAttr.Font.CALIGRAPHIC,
