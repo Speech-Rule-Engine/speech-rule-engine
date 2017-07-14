@@ -1,0 +1,71 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true">
+    <mlabeledtr>
+      <mtd id="mjx-eqn-1">
+        <mtext>(1)</mtext>
+      </mtd>
+      <mtd>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi class="MJX-tex-caligraphic" mathvariant="-tex-caligraphic">J</mi>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>I</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BB;<!-- λ --></mi>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munder>
+          <mo>&#x22C2;<!-- ⋂ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </munder>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>f</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>R</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>&#x03BD;<!-- ν --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>f</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <mo fence="false" stretchy="false">&#x230A;<!-- ⌊ --></mo>
+        <mi>&#x03BD;<!-- ν --></mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="fraktur">a</mi>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mi>&#x03BB;<!-- λ --></mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03BD;<!-- ν --></mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>J</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>R</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>&#x03BD;<!-- ν --></mi>
+              </mrow>
+            </msub>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo>/</mo>
+            </mrow>
+            <mi>R</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">&#x230B;<!-- ⌋ --></mo>
+        <mo fence="false" stretchy="false">}</mo>
+        <mo>,</mo>
+        <mrow id="Lipman" />
+      </mtd>
+    </mlabeledtr>
+  </mtable>
+</math>
+
