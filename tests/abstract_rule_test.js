@@ -103,7 +103,7 @@ sre.AbstractRuleTest.styleMap_ = function(style) {
 
 /**
  * Wraps an entry into an HTML cell.
- * @param {string} entry A single entry.
+ * @param {number|string} entry A single entry.
  * @return {string} The HTML cell.
  * @private
  */
