@@ -13,7 +13,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Testcases resulting from Mathml Cloud project.
+ * @fileoverview Testcases resulting from Mathml Cloud project, often inspired
+ *     by bugs.
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
@@ -28,7 +29,7 @@ goog.require('sre.AbstractRuleTest');
  * @extends {sre.AbstractRuleTest}
  */
 sre.MathmlCloudTest = function() {
-  goog.base(this);
+  sre.MathmlCloudTest.base(this, 'constructor');
 
   /**
    * @override
@@ -44,12 +45,121 @@ sre.MathmlCloudTest = function() {
    * @override
    */
   this.semantics = true;
+
+  /**
+   * @override
+   */
+  this.rules = ['MathspeakRules'];
 };
 goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
 
 /**
- * Testing trivial things, often inspired by bugs.
+ * Testing for correct treatment of special HTML entities: non-breaking spaces,
+ * left and right angle bracket.
+ */
+sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
+  var mml = '<mo>&lt;</mo>';
+  this.executeRuleTest(mml, 'less-than', 'default');
+  mml = '<mo>&gt;</mo>';
+  this.executeRuleTest(mml, 'greater-than', 'default');
+  mml = '<mi>n&nbsp;</mi>';
+  this.executeRuleTest(mml, 'n', 'default');
+  mml = '<mi>&nbsp;m</mi>';
+  this.executeRuleTest(mml, 'm', 'default');
+  mml = '<mi>n&nbsp;m</mi>';
+  this.executeRuleTest(mml, 'n m', 'default');
+  mml = '<mi>&nbsp;&nbsp;n&nbsp;&nbsp;m&nbsp;&nbsp;</mi>';
+  this.executeRuleTest(mml, 'n m', 'default');
+};
+
+
+/**
+ * Testing binomial coefficients made from fractions.
+ */
+sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
+  var mml = '<mfenced><mfrac linethickness="0pt"><mi>n</mi>' +
+      '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
+                       ' EndBinomialOrMatrix', 'default');
+  mml = '<mfenced><mfrac linethickness="0.0em"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
+                       ' EndBinomialOrMatrix', 'default');
+  mml = '<mfenced><mfrac linethickness="negativeverythinmathspace"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
+                       ' EndBinomialOrMatrix', 'default');
+  mml = '<mfenced><mfrac linethickness="verythinmathspace"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
+                       'EndFraction right-parenthesis', 'default');
+  mml = '<mfenced><mfrac linethickness="1pt"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
+                       'EndFraction right-parenthesis', 'default');
+  mml = '<mfenced><mfrac linethickness="0.5pt"><mi>n</mi>' +
+        '<mi>k</mi></mfrac></mfenced>';
+  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
+                       'EndFraction right-parenthesis', 'default');
+};
+
+
+/**
+ * Test unnecessary spaces.
+ */
+sre.MathmlCloudTest.prototype.testUnnecessarySpaces = function() {
+  var mml = '<mn> 5 </mn>';
+  this.executeRuleTest(mml, '5', 'default');
+  mml = '<mn> &nbsp; 5 &nbsp; </mn>';
+  this.executeRuleTest(mml, '5', 'default');
+};
+
+
+/**
+ * Absolute values versus other netural fences.
+ */
+sre.MathmlCloudTest.prototype.testAbsValueVsNeutral = function() {
+  var mml = '<mo>|</mo><mi>a</mi><mo>|</mo>';
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'brief');
+  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  mml = '<mo>｜</mo><mi>a</mi><mo>｜</mo>';
+  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
+  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  mml = '<mo>｜</mo><mi>a</mi><mo>‖</mo>';
+  this.executeRuleTest(mml, 'vertical-bar a double-vertical-bar', 'default');
+  mml = '<mo>‖</mo><mi>a</mi><mo>‖</mo>';
+  this.executeRuleTest(mml, 'double-vertical-bar a double-vertical-bar',
+                       'default');
+  mml = '<mo>¦</mo><mi>a</mi><mo>¦</mo>';
+  this.executeRuleTest(mml, 'broken-vertical-bar a broken-vertical-bar',
+                       'default');
+};
+
+
+/**
+ * Negative vulgar fraction.
+ */
+sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
+  var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'default');
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
+  this.executeRuleTest(mml, 'negative five-eighteenths', 'sbrief');
+  mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
+      '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'one-half minus five-eighteenths', 'default');
+  mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
+  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over a EndFraction',
+                       'default');
+  mml = '<mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac>';
+  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over 18 EndFraction',
+                       'default');
+};
+
+
+/**
+ * Testing trivial things.
  */
 sre.MathmlCloudTest.prototype.testTrivialStuff = function() {
   var mml = '<mtext>a</mtext><mo>=</mo><mi>b</mi>';
@@ -83,7 +193,7 @@ sre.MathmlCloudTest.prototype.testGermanFonts = function() {
 
 
 /**
- * Testing German fonts.
+ * Testing other fonts.
  */
 sre.MathmlCloudTest.prototype.testOtherFonts = function() {
   this.executeRuleTest('<mi>m</mi>', 'm');
@@ -135,6 +245,9 @@ sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
 };
 
 
+// TODO (sorge) Test currently fails as the parenthesis is seen to be
+//     embellished! Should work again once embellished parenthesis are fully
+//     rewritten.
 /**
  * Testing Parenthesis with Superscript.
  * Simplified test case for expression 95.
@@ -359,3 +472,20 @@ sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
   this.executeRuleTest(mml, 'area of triangle Sup 2', 'brief');
   this.executeRuleTest(mml, 'area of triangle Sup 2', 'sbrief');
 };
+
+
+/**
+ * Tests multiline tables.
+ */
+sre.MathmlCloudTest.prototype.testMultiline = function() {
+  this.executeRuleTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
+      '</mtr></mtable>',
+      'StartLayout 1st Row  a 2nd Row  b EndLayout');
+  this.executeRuleTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
+      '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>',
+      'StartLayout 1st Row 1st Column a 2nd Column c 2nd Row 1st Column b' +
+      ' 2nd Column d EndLayout');
+};
+

@@ -81,7 +81,7 @@ sre.Debugger.prototype.startDebugFile_ = function(filename) {
         this.outputFunction_ = console.log;
       },
       this));
-  this.stream_.on('finish', function(error) {
+  this.stream_.on('finish', function() {
     console.log('Finalizing debug file.');
   });
 };
@@ -94,7 +94,7 @@ sre.Debugger.prototype.startDebugFile_ = function(filename) {
  */
 sre.Debugger.prototype.output_ = function(outputList) {
   this.outputFunction_.apply(
-      this.outputFunction_,
+      console.log === this.outputFunction_ ? console : this.outputFunction_,
       ['Speech Rule Engine Debugger:'].concat(outputList));
 };
 
@@ -125,9 +125,13 @@ sre.Debugger.prototype.generateOutput = function(func) {
 
 /**
  * Gracefully exits the debugger.
+ * @param {function()=} opt_callback Function to be executed after exiting the
+ *     debugger.
  */
-sre.Debugger.prototype.exit = function() {
+sre.Debugger.prototype.exit = function(opt_callback) {
+  var callback = opt_callback || function() {};
   if (this.isActive_ && this.stream_) {
-    this.stream_.end();
+    this.stream_.end('', '', callback);
   }
+  this.isActive_ = false;
 };

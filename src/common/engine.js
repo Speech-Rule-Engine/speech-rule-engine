@@ -14,11 +14,16 @@
 
 
 /**
- * @fileoverview Basic functionality for the Speech Rule Engine
+ * @fileoverview Basic parameters and global machinery for the Speech Rule
+ *     Engine.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.Engine');
+goog.provide('sre.Engine.Mode');
+
+goog.require('sre.BrowserUtil');
+goog.require('sre.DynamicCstr');
 
 
 
@@ -41,18 +46,20 @@ sre.Engine = function() {
    */
   this.alternativeHost = null;
 
-  // TODO (sorge) Refactor into a common dynamic constraints object.
   /**
-   * List of domain names.
-   * @type {Array.<string>}
+   * @type {function(string, !sre.DynamicCstr): string}
    */
-  this.allDomains = [];
+  this.evaluator = sre.Engine.defaultEvaluator;
 
   /**
-   * List of style names.
-   * @type {Array.<string>}
+   * @type {!sre.DynamicCstr}
    */
-  this.allStyles = [];
+  this.dynamicCstr = sre.DynamicCstr.defaultCstr();
+
+  /**
+   * @type {sre.DynamicCstr.Comparator}
+   */
+  this.comparator = null;
 
   /**
    * Current domain.
@@ -67,10 +74,72 @@ sre.Engine = function() {
   this.style = 'short';
 
   /**
+   * Current walker mode.
+   * @type {string}
+   */
+  this.walker = 'Syntax';
+
+  /**
    * Semantics flag.
    * @type {boolean}
    */
-  this.semantics = false;
+  this.semantics = true;
+
+  /**
+   * The mode in which the engine is running (sync, async, http).
+   * @type {sre.Engine.Mode}
+   */
+  this.mode = sre.Engine.Mode.SYNC;
+
+  /**
+   * The level to which speech attributes are added to enriched elements (none,
+   * shallow, deep).
+   * @type {sre.Engine.Speech}
+   */
+  this.speech = sre.Engine.Speech.NONE;
+
+  /**
+   * List of rule sets given as the constructor functions.
+   * @type {!Array.<string>}
+   */
+  this.ruleSets = [];
+
+  /**
+   * Caching during speech generation.
+   * @type {boolean}
+   */
+  this.cache = true;
+
+  /**
+   * Caching during speech generation.
+   * @type {sre.Engine.Markup}
+   */
+  this.markup = sre.Engine.Markup.NONE;
+
+  /**
+   * Strict interpretations of rules and constraints.
+   * @type {boolean}
+   */
+  this.strict = false;
+
+  /**
+   * Current browser is MS Internet Explorer but not Edge.
+   * @type {boolean}
+   */
+  this.isIE = false;
+
+  /**
+   * Current browser is MS Edge.
+   * @type {boolean}
+   */
+  this.isEdge = false;
+
+  /**
+   * List of predicates for checking if the engine is set up.
+   * @type {!Array.<function():boolean>}
+   * @private
+   */
+  this.setupTests_ = [];
 };
 goog.addSingletonGetter(sre.Engine);
 
@@ -88,20 +157,90 @@ sre.Engine.personalityProps = {
 
 
 /**
- * Missing Node interface.
- * @enum {number}
+ * Defines the modes in which the engine can run.
+ * @enum {string}
  */
-sre.Engine.NodeType = {
-  ELEMENT_NODE: 1,
-  ATTRIBUTE_NODE: 2,
-  TEXT_NODE: 3,
-  CDATA_SECTION_NODE: 4,
-  ENTITY_REFERENCE_NODE: 5,
-  ENTITY_NODE: 6,
-  PROCESSING_INSTRUCTION_NODE: 7,
-  COMMENT_NODE: 8,
-  DOCUMENT_NODE: 9,
-  DOCUMENT_TYPE_NODE: 10,
-  DOCUMENT_FRAGMENT_NODE: 11,
-  NOTATION_NODE: 12
+sre.Engine.Mode = {
+  SYNC: 'sync',
+  ASYNC: 'async',
+  HTTP: 'http'
+};
+
+
+/**
+ * Defines to what level the engine enriches expressions with speech string
+ * attributes.
+ * @enum {string}
+ */
+sre.Engine.Speech = {
+  NONE: 'none',
+  SHALLOW: 'shallow',
+  DEEP: 'deep'
+};
+
+
+/**
+ * Different markup formats for the speech output.
+ * Not all are supported yet.
+ * @enum {string}
+ */
+sre.Engine.Markup = {
+  NONE: 'none',
+  SSML: 'ssml',
+  ACSS: 'acss',
+  SABLE: 'sable',
+  VOICEXML: 'voicexml'
+};
+
+
+/**
+ * Registers a predicate to test whether the setup of the engine is complete.
+ * The basic idea is that different parts of the system that run asynchronously
+ * can register a test here and the engine can check if it is set up without the
+ * need to know which bits actually run asynchronously.
+ * @param {function():boolean} pred A predicate that takes no input and returns
+ *     a boolean value.
+ */
+sre.Engine.registerTest = function(pred) {
+  sre.Engine.getInstance().setupTests_.push(pred);
+};
+
+
+/**
+ * Test to see if the engine is fully setup. Important for async and http mode.
+ * @return {boolean} True if the engine has completed its setup.
+ */
+sre.Engine.isReady = function() {
+  return sre.Engine.getInstance().setupTests_.every(
+      function(pred) { return pred(); }
+  );
+};
+
+
+/**
+ * Sets up browser specific functionality.
+ */
+sre.Engine.prototype.setupBrowsers = function() {
+  this.isIE = sre.BrowserUtil.detectIE();
+  this.isEdge = sre.BrowserUtil.detectEdge();
+};
+
+
+/**
+ * @return {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} The sets of values
+ *     for all constraint attributes.
+ */
+sre.Engine.prototype.getAxisValues = function() {
+  return sre.DynamicCstr.getAxisValues();
+};
+
+
+/**
+ * A dummy string evaluator.
+ * @param {string} str A string.
+ * @param {sre.DynamicCstr} cstr A dynamic constraint.
+ * @return {string} The evaluated string.
+ */
+sre.Engine.defaultEvaluator = function(str, cstr) {
+  return str;
 };

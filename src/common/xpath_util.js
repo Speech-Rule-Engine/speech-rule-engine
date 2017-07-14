@@ -24,16 +24,8 @@
 
 goog.provide('sre.XpathUtil');
 
+goog.require('sre.Engine');
 goog.require('sre.SystemExternal');
-
-
-
-/**
- * Utilities for simplifying working with xpaths
- * @constructor
- */
-sre.XpathUtil = function() {
-};
 
 
 /**
@@ -46,6 +38,13 @@ sre.XpathUtil.xpathSupported = function() {
   }
   return true;
 };
+
+
+/**
+ * Current XML Document inside a browser.
+ * @type {Document}
+ */
+sre.XpathUtil.currentDocument = null;
 
 
 /**
@@ -82,22 +81,60 @@ sre.XpathUtil.nameSpaces_ = {
 
 
 /**
+ * Resolve some default name spaces.
+ * @param {string} prefix Namespace prefix.
+ * @return {string} The corresponding namespace URI.
+ */
+sre.XpathUtil.resolveNameSpace = function(prefix) {
+  return sre.XpathUtil.nameSpaces_[prefix] || null;
+};
+
+
+
+/**
+ * Resolver to work with xpath in node and wgxpath in IE/Edge.
+ * @constructor
+ * @private
+ */
+sre.XpathUtil.resolver_ = function() {
+  this.lookupNamespaceURI =
+      sre.XpathUtil.resolveNameSpace;
+};
+
+
+/**
+ * Executes an xpath evaluation.
+ * @param {string} expression The XPath expression to evaluate.
+ * @param {Node} rootNode The HTML node to start evaluating the XPath from.
+ * @param {number} type The xpath result type.
+ * @return {XPathResult} The result of the xpath computation.
+ * @private
+ */
+sre.XpathUtil.evaluateXpath_ = function(expression, rootNode, type) {
+  var engine = sre.Engine.getInstance();
+  return (engine.mode === sre.Engine.Mode.HTTP &&
+          !engine.isIE && !engine.isEdge) ?
+      sre.XpathUtil.currentDocument.evaluate(
+      expression, rootNode, sre.XpathUtil.resolveNameSpace, type, null) :
+      sre.XpathUtil.xpathEvaluate(
+          expression, rootNode, new sre.XpathUtil.resolver_(), type, null);
+};
+
+
+/**
  * Given an XPath expression and rootNode, it returns an array of children nodes
  * that match. The code for this function was taken from Mihai Parparita's GMail
  * Macros Greasemonkey Script.
  * http://gmail-greasemonkey.googlecode.com/svn/trunk/scripts/gmail-new-macros.user.js
  * @param {string} expression The XPath expression to evaluate.
  * @param {Node} rootNode The HTML node to start evaluating the XPath from.
- * @return {Array} The array of children nodes that match.
+ * @return {!Array.<Node>} The array of children nodes that match.
  */
 sre.XpathUtil.evalXPath = function(expression, rootNode) {
   try {
-    var xpathIterator = sre.XpathUtil.xpathEvaluate(
-        expression,
-        rootNode,
-        sre.XpathUtil.createNSResolver(rootNode),
-        sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE,
-        null); // no existing results
+    var xpathIterator = sre.XpathUtil.evaluateXpath_(
+        expression, rootNode,
+        sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE);
   } catch (err) {
     return [];
   }
@@ -115,27 +152,10 @@ sre.XpathUtil.evalXPath = function(expression, rootNode) {
 /**
  * Given a rootNode, it returns an array of all its leaf nodes.
  * @param {Node} rootNode The node to get the leaf nodes from.
- * @return {Array} The array of leaf nodes for the given rootNode.
+ * @return {!Array.<Node>} The array of leaf nodes for the given rootNode.
  */
 sre.XpathUtil.getLeafNodes = function(rootNode) {
-  try {
-    var xpathIterator = sre.XpathUtil.xpathEvaluate(
-        './/*[count(*)=0]',
-        rootNode,
-        null, // no namespace resolver
-        sre.XpathUtil.xpathResult.ORDERED_NODE_ITERATOR_TYPE,
-        null); // no existing results
-  } catch (err) {
-    return [];
-  }
-  var results = [];
-  // Convert result to JS array
-  for (var xpathNode = xpathIterator.iterateNext();
-       xpathNode;
-       xpathNode = xpathIterator.iterateNext()) {
-    results.push(xpathNode);
-  }
-  return results;
+  return sre.XpathUtil.evalXPath('.//*[count(*)=0]', rootNode);
 };
 
 
@@ -148,12 +168,8 @@ sre.XpathUtil.getLeafNodes = function(rootNode) {
  */
 sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
   try {
-    var xpathResult = sre.XpathUtil.xpathEvaluate(
-        expression,
-        rootNode,
-        sre.XpathUtil.createNSResolver(rootNode),
-        sre.XpathUtil.xpathResult.BOOLEAN_TYPE,
-        null); // no existing results
+    var xpathResult = sre.XpathUtil.evaluateXpath_(
+        expression, rootNode, sre.XpathUtil.xpathResult.BOOLEAN_TYPE);
   } catch (err) {
     return false;
   }
@@ -166,78 +182,14 @@ sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
  * a string type and returns the result.
  * @param {string} expression The XPath expression to evaluate.
  * @param {Node} rootNode The HTML node to start evaluating the XPath from.
- * @return {string} The result of evaluating the Xpath expression.
+ * @return {!string} The result of evaluating the Xpath expression.
  */
 sre.XpathUtil.evaluateString = function(expression, rootNode) {
   try {
-    var xpathResult = sre.XpathUtil.xpathEvaluate(
-        expression,
-        rootNode,
-        sre.XpathUtil.createNSResolver(rootNode),
-        sre.XpathUtil.xpathResult.STRING_TYPE,
-        null); // no existing results
+    var xpathResult = sre.XpathUtil.evaluateXpath_(
+        expression, rootNode, sre.XpathUtil.xpathResult.STRING_TYPE);
   } catch (err) {
     return '';
   }
   return xpathResult.stringValue;
-};
-
-
-/**
- * Mapping of namespaces to prefixes.
- * @type {Object.<string, string>}
- * @private
- */
-sre.XpathUtil.prefixes_ = function() {
-  var result = {};
-  Object.keys(sre.XpathUtil.nameSpaces_).map(function(value) {
-    result[sre.XpathUtil.nameSpaces_[value]] = value;
-  });
-  return result;
-}();
-
-
-/**
- * Adds the default namespace recursively in a node as prefix.
- * @param {Node} node The node that is rewritten.
- * @private
- */
-sre.XpathUtil.defaultNamespace_ = function(node) {
-  if (!node || node.nodeType !== 1) {
-    return;
-  }
-  if (!node.prefix && node.namespaceURI) {
-    node.prefix = sre.XpathUtil.prefixes_[node.namespaceURI];
-    node.nodeName = node.prefix + ':' + node.nodeName;
-  }
-  var children = node.childNodes;
-  for (var i = 0, child; child = children[i]; i++) {
-    sre.XpathUtil.defaultNamespace_(child);
-  }
-};
-
-
-/**
- * Adds the default namespace as a proper prefix in a node.
- * @param {Node} node The node that is rewritten.
- */
-sre.XpathUtil.prefixNamespace = function(node) {
-  var attributes = node.attributes;
-  for (var i = 0, attr; attr = attributes[i]; i++) {
-    if (attr.name != 'xmlns' || attr.prefix) {
-      continue;
-    }
-    var prefix = sre.XpathUtil.prefixes_[node.namespaceURI];
-    if (!prefix) {
-      continue;
-    }
-    attr.prefix = attr.name;
-    attr.localName = prefix;
-    attr.nodeName = attr.nodeName + ':' + prefix;
-  }
-  if (node.namespaceURI) {
-    node._nsMap[prefix] = node.namespaceURI;
-    delete node._nsMap[''];
-    sre.XpathUtil.defaultNamespace_(node);
-  }
 };

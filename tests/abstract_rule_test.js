@@ -21,16 +21,16 @@
 
 goog.provide('sre.AbstractRuleTest');
 
-goog.require('sre.AbstractTest');
+goog.require('sre.AbstractExamples');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sre.AbstractExamples}
  */
 sre.AbstractRuleTest = function() {
-  goog.base(this);
+  sre.AbstractRuleTest.base(this, 'constructor');
 
   /**
    * @type {string}
@@ -46,8 +46,16 @@ sre.AbstractRuleTest = function() {
    * @type {boolean}
    */
   this.semantics = false;
+
+  /**
+   * Specify particular rule sets for a test. By default all available rule sets
+   * are used.
+   * @type {Array.<string>}
+   */
+  this.rules = null;
+
 };
-goog.inherits(sre.AbstractRuleTest, sre.AbstractTest);
+goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
 
 /**
@@ -62,9 +70,12 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   opt_style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
+  this.appendExamples(mathMl);
+  sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: opt_style});
-  var result = sre.System.getInstance().processExpression(mathMl);
+      {semantics: this.semantics, domain: this.domain, style: opt_style,
+        rules: this.rules});
+  var result = sre.System.getInstance().toSpeech(mathMl);
   this.assert.equal(result, answer);
 };
 

@@ -28,11 +28,9 @@
  */
 
 goog.provide('sre.SpeechRule');
-goog.provide('sre.SpeechRule.Action');
-goog.provide('sre.SpeechRule.Component');
-goog.provide('sre.SpeechRule.DynamicCstr');
-goog.provide('sre.SpeechRule.Precondition');
-goog.provide('sre.SpeechRule.Type');
+
+goog.require('sre.DynamicCstr');
+goog.require('sre.Grammar');
 
 
 
@@ -40,15 +38,14 @@ goog.provide('sre.SpeechRule.Type');
  * Creates a speech rule with precondition, actions and admin information.
  * @constructor
  * @param {string} name The name of the rule.
- * @param {sre.SpeechRule.DynamicCstr} dynamic Dynamic constraint annotations
- *     of the rule.
+ * @param {!sre.DynamicCstr} dynamic Dynamic constraint annotations of the rule.
  * @param {sre.SpeechRule.Precondition} prec Precondition of the rule.
  * @param {sre.SpeechRule.Action} action Action of the speech rule.
  */
 sre.SpeechRule = function(name, dynamic, prec, action) {
   /** @type {string} */
   this.name = name;
-  /** @type {sre.SpeechRule.DynamicCstr} */
+  /** @type {!sre.DynamicCstr} */
   this.dynamicCstr = dynamic;
   /** @type {sre.SpeechRule.Precondition} */
   this.precondition = prec;
@@ -63,7 +60,7 @@ sre.SpeechRule = function(name, dynamic, prec, action) {
  */
 sre.SpeechRule.prototype.toString = function() {
   return this.name + ' | ' +
-      sre.SpeechRule.stringifyCstr(this.dynamicCstr) + ' | ' +
+      this.dynamicCstr.toString() + ' | ' +
       this.precondition.toString() + ' ==> ' +
       this.action.toString();
 };
@@ -116,8 +113,11 @@ sre.SpeechRule.Type.toString = function(speechType) {
 
 /**
  * Defines a component within a speech rule.
- * @param {{type: sre.SpeechRule.Type, content: string}} kwargs The input
- * component in JSON format.
+ * @param {{type: sre.SpeechRule.Type,
+ *          content: !string,
+ *          attributes: sre.SpeechRule.Attributes,
+ *          grammar: sre.Grammar.State}} kwargs The input component in JSON
+ *     format.
  * @constructor
  */
 sre.SpeechRule.Component = function(kwargs) {
@@ -126,6 +126,12 @@ sre.SpeechRule.Component = function(kwargs) {
 
   /** @type {string} */
   this.content = kwargs.content;
+
+  /** @type {sre.SpeechRule.Attributes} */
+  this.attributes = kwargs.attributes;
+
+  /** @type {sre.Grammar.State} */
+  this.grammar = kwargs.grammar;
 };
 
 
@@ -143,7 +149,7 @@ sre.SpeechRule.Component.fromString = function(input) {
   output.type = sre.SpeechRule.Type.fromString(input.substring(0, 3));
 
   // Prep the rest of the parsing.
-  var rest = input.slice(3).trimLeft();
+  var rest = input.slice(3).trim();
   if (!rest) {
     throw new sre.SpeechRule.OutputError('Missing content.');
   }
@@ -173,13 +179,21 @@ sre.SpeechRule.Component.fromString = function(input) {
         break;
       }
       output.content = rest.substring(0, bracket).trim();
-      rest = rest.slice(bracket).trimLeft();
+      rest = rest.slice(bracket).trim();
       break;
   }
-  output = new sre.SpeechRule.Component(output);
   if (rest) {
-    output.addAttributes(rest);
+    var attributes = sre.SpeechRule.Component.attributesFromString(rest);
+    if (attributes.grammar) {
+      output.grammar = /** @type {!sre.Grammar.State} */
+          (attributes.grammar);
+      delete attributes.grammar;
+    }
+    if (Object.keys(attributes).length) {
+      output.attributes = /** @type {!sre.SpeechRule.Attributes} */(attributes);
+    }
   }
+  output = new sre.SpeechRule.Component(output);
   return output;
 };
 
@@ -191,41 +205,97 @@ sre.SpeechRule.Component.prototype.toString = function() {
   var strs = '';
   strs += sre.SpeechRule.Type.toString(this.type);
   strs += this.content ? ' ' + this.content : '';
-  var attribs = this.getAttributes();
-  if (attribs.length > 0) {
-    strs += ' (' + attribs.join(', ') + ')';
-  }
+  var attrs = this.attributesToString();
+  strs += attrs ? ' ' + attrs : '';
   return strs;
 };
 
 
+//TODO (MOSS) remove!
 /**
- * Adds a single attribute to the component.
- * @param {string} attr String representation of an attribute.
+ * Processes the grammar annotations of a rule.
+ * @param {string} grammar The grammar annotations.
+ * @return {sre.Grammar.State} The grammar structure.
  */
-sre.SpeechRule.Component.prototype.addAttribute = function(attr) {
-  var colon = attr.indexOf(':');
-  if (colon == -1) {
-    this[attr.trim()] = 'true';
-  } else {
-    this[attr.substring(0, colon).trim()] = attr.slice(colon + 1).trim();
-  }
+sre.SpeechRule.Component.grammarFromString = function(grammar) {
+  return sre.Grammar.parseInput(grammar);
 };
 
 
 /**
- * Adds a list of attributes to the component.
- * @param {string} attrs String representation of attribute list.
+ * @return {string} String representation of the grammar.
  */
-sre.SpeechRule.Component.prototype.addAttributes = function(attrs) {
+sre.SpeechRule.Component.prototype.grammarToString = function() {
+  return this.getGrammar().join(':');
+};
+
+
+/**
+ * Transforms the grammar of an object into a list of strings.
+ * @return {Array.<string>} List of translated attribute:value strings.
+ */
+sre.SpeechRule.Component.prototype.getGrammar = function() {
+  var attribs = [];
+  for (var key in this.grammar) {
+    if (this.grammar[key] === true) {
+      attribs.push(key);
+    } else if (this.grammar[key] === false) {
+      attribs.push('!' + key);
+    } else {
+      attribs.push(key + '=' + this.grammar[key]);
+    }
+  }
+  return attribs;
+};
+
+
+/**
+ * Defines attributes for a component of a speech rule.
+ * @typedef {!Object.<string>}
+ */
+sre.SpeechRule.Attributes;
+
+
+/**
+ * Adds a single attribute to the component.
+ * @param {string} attrs String representation of an attribute.
+ * @return {Object.<string|sre.Grammar.State>} The parsed
+ *     attributes, possibly containing the grammar.
+ */
+sre.SpeechRule.Component.attributesFromString = function(attrs) {
   if (attrs[0] != '(' || attrs.slice(-1) != ')') {
     throw new sre.SpeechRule.OutputError(
         'Invalid attribute expression: ' + attrs);
   }
+  var attributes = {};
   var attribs = sre.SpeechRule.splitString_(attrs.slice(1, -1), ',');
-  for (var i = 0; i < attribs.length; i++) {
-    this.addAttribute(attribs[i]);
+  for (var i = 0, m = attribs.length; i < m; i++) {
+    var attr = attribs[i];
+    var colon = attr.indexOf(':');
+    if (colon == -1) {
+      attributes[attr.trim()] = 'true';
+    } else {
+      var key = attr.substring(0, colon).trim();
+      var value = attr.slice(colon + 1).trim();
+      attributes[key] = (key === 'grammar') ?
+          sre.SpeechRule.Component.grammarFromString(value) :
+          attributes[key] = value;
+    }
   }
+  return attributes;
+};
+
+
+/**
+ * @return {string} String representation of the attributes.
+ */
+sre.SpeechRule.Component.prototype.attributesToString = function() {
+  var attribs = this.getAttributes();
+  var grammar = this.grammarToString();
+  if (grammar) {
+    attribs.push('grammar:' + grammar);
+  }
+  return attribs.length > 0 ? '(' + attribs.join(', ') + ')' : '';
 };
 
 
@@ -235,10 +305,9 @@ sre.SpeechRule.Component.prototype.addAttributes = function(attrs) {
  */
 sre.SpeechRule.Component.prototype.getAttributes = function() {
   var attribs = [];
-  for (var key in this) {
-    if (key != 'content' && key != 'type' && typeof(this[key]) != 'function') {
-      attribs.push(key + ':' + this[key]);
-    }
+  for (var key in this.attributes) {
+    var value = this.attributes[key];
+    value === 'true' ? attribs.push(key) : attribs.push(key + ':' + value);
   }
   return attribs;
 };
@@ -266,7 +335,7 @@ sre.SpeechRule.Action.fromString = function(input) {
       .filter(function(x) {return x.match(/\S/);})
       .map(function(x) {return x.trim();});
   var newComps = [];
-  for (var i = 0; i < comps.length; i++) {
+  for (var i = 0, m = comps.length; i < m; i++) {
     var comp = sre.SpeechRule.Component.fromString(comps[i]);
     if (comp) {
       newComps.push(comp);
@@ -286,8 +355,6 @@ sre.SpeechRule.Action.prototype.toString = function() {
 
 
 
-// TODO (sorge) Separatation of xpath expressions and custom functions.
-// Also test validity of xpath expressions.
 /**
  * Constructs a valid precondition for a speech rule.
  * @param {string} query A node selector function or xpath expression.
@@ -359,40 +426,6 @@ sre.SpeechRule.splitString_ = function(str, sep) {
 };
 
 
-/**
- * Attributes for dynamic constraints.
- * We define one default attribute as style. Speech rule stores can add other
- * attributes later.
- * @enum {string}
- */
-sre.SpeechRule.DynamicCstrAttrib =
-    {
-      STYLE: 'style'
-    };
-
-
-/**
- * Dynamic constraints are a means to specialize rules that can be changed
- * dynamically by the user, for example by choosing different styles, etc.
- * @typedef {!Object.<sre.SpeechRule.DynamicCstrAttrib, string>}
- */
-sre.SpeechRule.DynamicCstr;
-
-
-/**
- * Stringifies a dynamic constraint.
- * @param {sre.SpeechRule.DynamicCstr} cstr The constraint.
- * @return {string} The string version.
- */
-sre.SpeechRule.stringifyCstr = function(cstr) {
-  var cstrStrings = [];
-  for (var key in cstr) {
-    cstrStrings.push(cstr[key]);
-  }
-  return cstrStrings.join('.');
-};
-
-
 
 /**
  * Error object for signaling parsing errors.
@@ -401,7 +434,8 @@ sre.SpeechRule.stringifyCstr = function(cstr) {
  * @extends {Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
-  this.name = 'RuleError';
+  sre.SpeechRule.OutputError.base(this, 'constructor');
   this.message = msg || '';
+  this.name = 'RuleError';
 };
 goog.inherits(sre.SpeechRule.OutputError, Error);

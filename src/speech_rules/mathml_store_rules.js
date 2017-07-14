@@ -30,22 +30,19 @@ goog.require('sre.StoreUtil');
 /**
  * Rule initialization.
  * @constructor
+ * @extends {sre.MathmlStore}
  */
 sre.MathmlStoreRules = function() {
-  // Custom functions used in the rules.
-  sre.MathmlStoreRules.initCustomFunctions_();
-  sre.MathmlStoreRules.initDefaultRules_(); // MathML rules.
-  sre.MathmlStoreRules.initMathjaxRules_(); // MathJax Rules
-  sre.MathmlStoreRules.initAliases_(); // MathJax Aliases for MathML rules.
-  sre.MathmlStoreRules.initSpecializationRules_(); // Square, cube, etc.
+  sre.MathmlStoreRules.base(this, 'constructor');
 };
+goog.inherits(sre.MathmlStoreRules, sre.MathmlStore);
 goog.addSingletonGetter(sre.MathmlStoreRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.MathmlStoreRules.mathStore = sre.MathmlStore.getInstance();
+sre.MathmlStoreRules.mathStore = sre.MathmlStoreRules.getInstance();
 
 
 // These are used to work around Closure's rules for aliasing.
@@ -150,7 +147,7 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
       '[t] "string" (pitch:0.5, rate:0.5); [t] text()');
 
   defineRule('unit', 'default.default',
-      '[t] text() (annotation:unit, preprocess)',
+      '[t] text() (grammar:annotation="unit":translate)',
       'self::mathml:mi', '@class="MathML-Unit"');
 
   // Script elements.
@@ -192,54 +189,94 @@ sre.MathmlStoreRules.initDefaultRules_ = function() {
           '[n] ./*[2] (pitch:-0.3); [p] (pause:400); [t] "end frac"',
       'self::mathml:mfrac');
 
-  // TODO (sorge) Consider problem with open and close spaces. Maybe use Xpath
-  //     translate transform spaces into empty.
   defineRule(
       'mfenced-single', 'default.default',
-      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
-          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
-          '[m] ./* (separator:@separators); ' +
-          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
-          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
-      'self::mathml:mfenced', 'string-length(string(@separators))=1');
+      '[n] @open; [m] ./* (separator:@separators); [n] @close',
+      'self::mathml:mfenced', '@open', '@close',
+      'string-length(string(@separators))=1');
+  defineRule(
+      'mfenced-single', 'default.default',
+      '[t] "(" (grammar:translate); [m] ./* (separator:@separators);' +
+      ' [n] @close',
+      'self::mathml:mfenced', 'not(@open)', '@close',
+      'string-length(string(@separators))=1');
+  defineRule(
+      'mfenced-single', 'default.default',
+      '[t] "(" (grammar:translate); [m] ./* (separator:@separators);' +
+      ' [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', 'not(@open)', 'not(@close)',
+      'string-length(string(@separators))=1');
+  defineRule(
+      'mfenced-single', 'default.default',
+      '[n] @open; [m] ./* (separator:@separators); [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', '@open', 'not(@close)',
+      'string-length(string(@separators))=1');
 
   defineRule(
       'mfenced-omit', 'default.default',
-      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
-          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
-          '[m] ./*; ' +
-          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
-          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
-      'self::mathml:mfenced', '@separators',
-      'string-length(string(@separators))=0', 'string(@separators)=""');
-
+      '[n] @open; [m] ./*; [n] @close',
+      'self::mathml:mfenced', '@separators', '@open', '@close',
+      'string(@separators)="" or string(@separators)=" "');
   defineRule(
-      'mfenced-empty', 'default.default',
-      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
-          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
-          '[m] ./*;' +
-          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
-          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
-      'self::mathml:mfenced', 'string-length(string(@separators))=1',
-      'string(@separators)=" "');
+      'mfenced-omit', 'default.default',
+      '[t] "(" (grammar:translate); [m] ./*; [n] @close',
+      'self::mathml:mfenced', '@separators', 'not(@open)', '@close',
+      'string(@separators)="" or string(@separators)=" "');
+  defineRule(
+      'mfenced-omit', 'default.default',
+      '[n] @open; [m] ./*; [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', '@separators', '@open', 'not(@close)',
+      'string(@separators)="" or string(@separators)=" "');
+  defineRule(
+      'mfenced-omit', 'default.default',
+      '[t] "(" (grammar:translate); [m] ./*; [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', '@separators', 'not(@open)', 'not(@close)',
+      'string(@separators)="" or string(@separators)=" "');
 
   defineRule(
       'mfenced-comma', 'default.default',
-      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
-          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
-          '[m] ./* (separator:"comma");' +
-          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
-          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
-      'self::mathml:mfenced');
+      '[n] @open; [m] ./* (separator:"comma"); [n] @close',
+      'self::mathml:mfenced', '@open', '@close', 'not(@separators)');
+  defineRule(
+      'mfenced-comma', 'default.default',
+      '[t] "(" (grammar:translate); [m] ./* (separator:"comma"); [n] @close',
+      'self::mathml:mfenced', 'not(@open)', '@close', 'not(@separators)');
+  defineRule(
+      'mfenced-comma', 'default.default',
+      '[n] @open; [m] ./* (separator:"comma"); [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', '@open', 'not(@close)', 'not(@separators)');
+  defineRule(
+      'mfenced-comma', 'default.default',
+      '[t] "(" (grammar:translate); [m] ./* (separator:"comma");' +
+      ' [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', 'not(@open)', 'not(@close)', 'not(@separators)');
 
   defineRule(
       'mfenced-multi', 'default.default',
-      '[t] concat(substring(@open, 0 div boolean(@open)), ' +
-          'substring("(", 0 div not(boolean(@open)))) (context:"opening"); ' +
-          '[m] ./* (sepFunc:CTXFmfSeparators, separator:@separators); ' +
-          '[t] concat(substring(@close, 0 div boolean(@close)), ' +
-          'substring(")", 0 div not(boolean(@close)))) (context:"closing")',
-      'self::mathml:mfenced', 'string-length(string(@separators))>1');
+      '[n] @open;' +
+      ' [m] ./* (sepFunc:CTXFmfSeparators, separator:@separators); [n] @close',
+      'self::mathml:mfenced', '@open', '@close',
+      'string-length(string(@separators))>1');
+  defineRule(
+      'mfenced-multi', 'default.default',
+      '[t] "(" (grammar:translate);' +
+      ' [m] ./* (sepFunc:CTXFmfSeparators, separator:@separators); [n] @close',
+      'self::mathml:mfenced', 'not(@open)', '@close',
+      'string-length(string(@separators))>1');
+  defineRule(
+      'mfenced-multi', 'default.default',
+      '[n] @open;' +
+      ' [m] ./* (sepFunc:CTXFmfSeparators, separator:@separators);' +
+      ' [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', '@open', 'not(@close)',
+      'string-length(string(@separators))>1');
+  defineRule(
+      'mfenced-multi', 'default.default',
+      '[t] "(" (grammar:translate);' +
+      ' [m] ./* (sepFunc:CTXFmfSeparators, separator:@separators);' +
+      ' [t] ")" (grammar:translate)',
+      'self::mathml:mfenced', 'not(@open)', 'not(@close)',
+      'string-length(string(@separators))>1');
 
   // Mtable rules.
   defineRule(
@@ -566,3 +603,14 @@ sre.MathmlStoreRules.initSpecializationRules_ = function() {
 };
 
 });  // goog.scope
+
+
+sre.MathmlStoreRules.getInstance().initializer = [
+  // Custom functions used in the rules.
+  sre.MathmlStoreRules.initCustomFunctions_,
+  sre.MathmlStoreRules.initDefaultRules_, // MathML rules.
+  sre.MathmlStoreRules.initMathjaxRules_, // MathJax Rules
+  sre.MathmlStoreRules.initAliases_, // MathJax Aliases for MathML rules.
+  sre.MathmlStoreRules.initSpecializationRules_ // Square, cube, etc.
+];
+

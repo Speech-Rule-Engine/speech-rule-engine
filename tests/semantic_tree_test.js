@@ -21,9 +21,11 @@
 goog.provide('sre.SemanticTreeTest');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.DomUtil');
 goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
+goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
 
@@ -33,7 +35,7 @@ goog.require('sre.XpathUtil');
  * @extends {sre.AbstractTest}
  */
 sre.SemanticTreeTest = function() {
-  goog.base(this);
+  sre.SemanticTreeTest.base(this, 'constructor');
 
   /**
    * @override
@@ -103,10 +105,8 @@ sre.SemanticTreeTest.prototype.customizeXml = function(xml) {
 sre.SemanticTreeTest.prototype.executeTreeTest = function(mml, sml) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  var node = sre.System.getInstance().parseInput(mathMl);
-  var stree = new sre.SemanticTree(node);
-  var sxml = sre.System.getInstance().parseInput(
-      stree.xml(this.brief).toString());
+  var node = sre.DomUtil.parseInput(mathMl);
+  var sxml = new sre.SemanticTree(node).xml(this.brief);
   this.customizeXml(sxml);
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
@@ -237,7 +237,8 @@ sre.SemanticTreeTest.prototype.testStreeMixedNumbers = function() {
   this.executeTreeTest(
       '<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>',
       '<infixop>\u2062' +
-          '<content><operator>\u2062</operator></content>' +
+          '<content><operator>\u2062</operator>' +
+      '<operator>\u2062</operator></content>' +
       '<children>' +
       '<identifier>b</identifier>' +
       '<number>' +
@@ -475,7 +476,8 @@ sre.SemanticTreeTest.prototype.testStreeSingleOperators = function() {
   this.executeTreeTest(
       '<mi>a</mi><mi>b</mi><mi>c</mi>',
       '<infixop>\u2062' +
-          '<content><operator>\u2062</operator></content>' +
+          '<content><operator>\u2062</operator>' +
+          '<operator>\u2062</operator></content>' +
           '<children>' +
           '<identifier>a</identifier>' +
           '<identifier>b</identifier>' +
@@ -571,7 +573,8 @@ sre.SemanticTreeTest.prototype.testStreeMultipleOperators = function() {
           '</infixop>');
   // Addition and explicit multiplication.
   this.executeTreeTest(
-      '<mi>a</mi><mo>+</mo><mi>b</mi><mo>\u2218</mo><mi>c</mi><mo>+</mo><mi>d</mi>',
+      '<mi>a</mi><mo>+</mo><mi>b</mi><mo>\u2218</mo><mi>c</mi><mo>+</mo>' +
+      '<mi>d</mi>',
       '<infixop>+' +
           '<content><operator>+</operator><operator>+</operator></content>' +
           '<children>' +
@@ -1359,6 +1362,8 @@ sre.SemanticTreeTest.prototype.testStreeMixedFences = function() {
       '<infixop>\u2062' +
       '<content>' +
       '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<fenced>' +
@@ -1397,6 +1402,7 @@ sre.SemanticTreeTest.prototype.testStreeMixedFences = function() {
       '<children>' +
       '<infixop>\u2062' +
       '<content>' +
+      '<operator>\u2062</operator>' +
       '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
@@ -2298,6 +2304,229 @@ sre.SemanticTreeTest.prototype.testStreeMixedUnmatchedFences = function() {
 
 
 /**
+ * Square roots
+ */
+sre.SemanticTreeTest.prototype.testStreeSquareRoots = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<msqrt></msqrt>',
+      '<sqrt role="unknown" id="1">' +
+      '<children>' +
+      '<empty role="unknown" id="0"/>' +
+      '</children>' +
+      '</sqrt>'
+  );
+  this.executeTreeTest(
+      '<msqrt><mi>x</mi></msqrt>',
+      '<sqrt role="unknown" id="1">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '</children>' +
+      '</sqrt>'
+  );
+  this.executeTreeTest(
+      '<msqrt><msqrt><mi>x</mi></msqrt></msqrt>',
+      '<sqrt role="unknown" id="2">' +
+      '<children>' +
+      '<sqrt role="unknown" id="1">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '</children>' +
+      '</sqrt>' +
+      '</children>' +
+      '</sqrt>'
+  );
+  this.executeTreeTest(
+      '<msqrt><mi>x</mi><mi>n</mi></msqrt>',
+      '<sqrt role="unknown" id="4">' +
+      '<children>' +
+      '<infixop role="implicit" id="3">' +
+      '⁢' +
+      '<content>' +
+      '<operator role="multiplication" id="2">⁢</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</sqrt>'
+  );
+  this.executeTreeTest(
+      '<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>',
+      '<sqrt role="unknown" id="6">' +
+      '<children>' +
+      '<infixop role="implicit" id="5">' +
+      '⁢' +
+      '<content>' +
+      '<operator role="multiplication" id="4">⁢</operator>' +
+      '</content>' +
+      '<children>' +
+      '<sqrt role="unknown" id="2">' +
+      '<children>' +
+      '<sqrt role="unknown" id="1">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '</children>' +
+      '</sqrt>' +
+      '</children>' +
+      '</sqrt>' +
+      '<identifier role="latinletter" font="italic" id="3">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</sqrt>'
+  );
+};
+
+
+/**
+ * Regular roots
+ */
+sre.SemanticTreeTest.prototype.testStreeRegularRoots = function() {
+  this.brief = false;
+  // Not sure if that makes even sense.
+  // this.executeTreeTest('<mroot></mroot>');
+  this.executeTreeTest(
+      '<mroot><mi>x</mi><mi>n</mi></mroot>',
+      '<root role="unknown" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</root>'
+  );
+  this.executeTreeTest(
+      '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi>' +
+      '<mo>+</mo><mn>1</mn></mrow></mroot>',
+      '<root role="unknown" id="8">' +
+      '<children>' +
+      '<infixop role="addition" id="3">' +
+      '+' +
+      '<content>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '<number role="integer" font="normal" id="2">1</number>' +
+      '</children>' +
+      '</infixop>' +
+      '<infixop role="addition" id="7">' +
+      '+' +
+      '<content>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="6">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</root>'
+  );
+  this.executeTreeTest(
+      '<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>',
+      '<root role="unknown" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">m</identifier>' +
+      '<root role="unknown" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">x</identifier>' +
+      '</children>' +
+      '</root>' +
+      '</children>' +
+      '</root>'
+  );
+  this.executeTreeTest(
+      '<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi>' +
+      '<mi>l</mi></mroot></mrow><mi>m</mi></mroot>',
+      '<root role="unknown" id="9">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">m</identifier>' +
+      '<infixop role="implicit" id="8">' +
+      '⁢' +
+      '<content>' +
+      '<operator role="multiplication" id="7">⁢</operator>' +
+      '</content>' +
+      '<children>' +
+      '<root role="unknown" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">x</identifier>' +
+      '</children>' +
+      '</root>' +
+      '<root role="unknown" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
+      '<identifier role="latinletter" font="italic" id="5">y</identifier>' +
+      '</children>' +
+      '</root>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</root>'
+  );
+};
+
+
+/**
+ * Mixed roots
+ */
+sre.SemanticTreeTest.prototype.testStreeMixedRoots = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>',
+      '<sqrt role="unknown" id="3">' +
+      '<children>' +
+      '<root role="unknown" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</root>' +
+      '</children>' +
+      '</sqrt>'
+  );
+  this.executeTreeTest(
+      '<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>',
+      '<root role="unknown" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '<sqrt role="unknown" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</sqrt>' +
+      '</children>' +
+      '</root>'
+  );
+  this.executeTreeTest(
+      '<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>',
+      '<root role="unknown" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '<sqrt role="unknown" id="5">' +
+      '<children>' +
+      '<infixop role="implicit" id="4">⁢' +
+      '<content>' +
+      '<operator role="multiplication" id="3">⁢</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">y</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</sqrt>' +
+      '</children>' +
+      '</root>'
+  );
+};
+
+
+/**
  * Simple function applications
  */
 sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
@@ -2311,6 +2540,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2331,6 +2561,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2360,6 +2591,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2393,6 +2625,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2419,6 +2652,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2445,6 +2679,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2476,6 +2711,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2502,6 +2738,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2528,6 +2765,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2559,6 +2797,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2627,6 +2866,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2655,6 +2895,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2686,6 +2927,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2716,6 +2958,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2744,6 +2987,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2775,6 +3019,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2805,6 +3050,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2833,6 +3079,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2864,6 +3111,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2900,6 +3148,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2917,6 +3166,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -2951,6 +3201,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -2968,6 +3219,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -2987,6 +3239,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>h</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>h</identifier>' +
@@ -3021,6 +3274,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3038,6 +3292,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3057,6 +3312,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>h</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>h</identifier>' +
@@ -3095,6 +3351,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3107,6 +3364,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3132,6 +3390,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>h</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>h</identifier>' +
@@ -3149,6 +3408,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3166,6 +3426,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3210,6 +3471,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3227,6 +3489,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>g</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>g</identifier>' +
@@ -3253,6 +3516,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>P</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>P</identifier>' +
@@ -3289,6 +3553,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3324,6 +3589,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<identifier>f</identifier>' +
@@ -3380,6 +3646,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<subscript>' +
@@ -3421,6 +3688,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleFuncsExplicitApp = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<identifier>f</identifier>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -3503,6 +3771,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3523,6 +3792,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3552,6 +3822,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3578,6 +3849,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3604,6 +3876,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3635,6 +3908,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3661,6 +3935,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3687,6 +3962,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3718,6 +3994,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3744,6 +4021,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsSingle = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3786,6 +4064,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3814,6 +4093,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3845,6 +4125,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3875,6 +4156,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3903,6 +4185,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3934,6 +4217,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3964,6 +4248,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -3992,6 +4277,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4023,6 +4309,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsWithOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4059,6 +4346,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4076,6 +4364,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4110,6 +4399,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4127,6 +4417,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4146,6 +4437,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4180,6 +4472,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4197,6 +4490,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4216,6 +4510,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMulti = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4254,6 +4549,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4280,6 +4576,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<subscript>' +
@@ -4306,6 +4603,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4348,6 +4646,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4370,6 +4669,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScripts = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4407,6 +4707,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4419,6 +4720,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4439,6 +4741,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4456,6 +4759,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4474,6 +4778,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4496,6 +4801,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4513,6 +4819,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4531,6 +4838,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4553,6 +4861,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4584,6 +4893,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4603,6 +4913,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4626,6 +4937,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4647,6 +4959,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4666,6 +4979,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4689,6 +5003,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4710,6 +5025,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4729,6 +5045,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4752,6 +5069,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsUnfencedOps = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4779,6 +5097,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4788,6 +5107,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4813,6 +5133,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4822,6 +5143,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4833,6 +5155,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4858,6 +5181,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -4867,6 +5191,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -4878,6 +5203,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsMultiUnfenced = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>tan</function>' +
       '</content>' +
       '<children>' +
       '<function>tan</function>' +
@@ -4909,6 +5235,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4926,6 +5253,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<subscript>' +
@@ -4944,6 +5272,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4977,6 +5306,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -4991,6 +5321,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5013,6 +5344,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsScriptUnfenced =
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<superscript>' +
@@ -5068,34 +5400,18 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<operator>+</operator>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>sin</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>cos</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</infixop>');
 
@@ -5112,34 +5428,18 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<operator>+</operator>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>sin</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<superscript>' +
       '<children>' +
       '<function>cos</function>' +
       '<number>2</number>' +
       '</children>' +
       '</superscript>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</infixop>' +
       '<number>1</number>' +
@@ -5154,15 +5454,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNoArgs = function() {
       '<relation>=</relation>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<function>sin</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '<fraction>' +
       '<children>' +
       '<number>1</number>' +
@@ -5184,12 +5476,14 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>log</function>' +
       '</content>' +
       '<children>' +
       '<function>log</function>' +
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -5205,6 +5499,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>ln</function>' +
       '</content>' +
       '<children>' +
       '<function>ln</function>' +
@@ -5217,6 +5512,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -5247,12 +5543,14 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>log</function>' +
       '</content>' +
       '<children>' +
       '<function>log</function>' +
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>cos</function>' +
       '</content>' +
       '<children>' +
       '<function>cos</function>' +
@@ -5264,6 +5562,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>ln</function>' +
       '</content>' +
       '<children>' +
       '<function>ln</function>' +
@@ -5276,6 +5575,7 @@ sre.SemanticTreeTest.prototype.testStreePrefixFuncsNested = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>sin</function>' +
       '</content>' +
       '<children>' +
       '<function>sin</function>' +
@@ -5936,12 +6236,12 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '<punctuation role="fullstop" id="18">.</punctuation>' +
       '</content>' +
       '<children>' +
-      '<cases role="unknown" id="13">' +
+      '<cases role="binomial" id="13">' +
       '<content>' +
       '<punctuation role="openfence" id="0">{</punctuation>' +
       '</content>' +
       '<children>' +
-      '<line role="cases" id="6">' +
+      '<line role="binomial" id="6">' +
       '<children>' +
       '<punctuated role="sequence" id="4">' +
       '<content>' +
@@ -5955,7 +6255,7 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</punctuated>' +
       '</children>' +
       '</line>' +
-      '<line role="cases" id="12">' +
+      '<line role="binomial" id="12">' +
       '<children>' +
       '<punctuated role="sequence" id="10">' +
       '<content>' +
@@ -6112,6 +6412,8 @@ sre.SemanticTreeTest.prototype.testStreeTables = function() {
       '</table>');
 };
 
+// Missing: MatricesWithIgnores
+
 
 /**
  * Limit functions.
@@ -6124,6 +6426,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6166,6 +6469,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6204,6 +6508,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limupper>' +
@@ -6244,6 +6549,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limboth>' +
@@ -6286,6 +6592,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>liminf</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6316,6 +6623,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>limsup</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6360,6 +6668,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6391,6 +6700,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6410,6 +6720,7 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<appl>' +
       '<content>' +
       '<punctuation>\u2061</punctuation>' +
+      '<function>lim</function>' +
       '</content>' +
       '<children>' +
       '<limlower>' +
@@ -6439,11 +6750,17 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '</appl>' +
       '</children>' +
       '</appl>');
+};
 
+
+/**
+ * Limit functions without arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeLimitFunctionsNoArgs = function() {
+  this.brief = true;
   this.executeTreeTest(
       '<mi>liminf</mi>',
       '<function>liminf</function>');
-
   this.executeTreeTest(
       '<munder><mi>lim</mi><mrow><mi>x</mi><mo>\u2192</mo><mi>\u221E</mi>' +
       '</mrow></munder>',
@@ -6461,7 +6778,6 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '</relseq>' +
       '</children>' +
       '</limlower>');
-
   this.executeTreeTest(
       '<mi>liminf</mi><mo>+</mo><mi>limsup</mi><mo>=</mo><mi>lim</mi>',
       '<relseq>=' +
@@ -6474,35 +6790,11 @@ sre.SemanticTreeTest.prototype.testStreeLimitFunctions = function() {
       '<operator>+</operator>' +
       '</content>' +
       '<children>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<function>liminf</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<function>limsup</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</infixop>' +
-      '<appl>' +
-      '<content>' +
-      '<punctuation>\u2061</punctuation>' +
-      '</content>' +
-      '<children>' +
       '<function>lim</function>' +
-      '<empty/>' +
-      '</children>' +
-      '</appl>' +
       '</children>' +
       '</relseq>');
 };
@@ -6518,6 +6810,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '</mrow><mi>\u221E</mi></munderover><msup><mi>n</mi><mn>2</mn>' +
       '</msup></mrow>',
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6549,6 +6842,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '<mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi>\u221E</mi></munderover>' +
       '<msup><mi>n</mi><mi>m</mi></msup></mrow>',
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6566,6 +6860,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '</children>' +
       '</limboth>' +
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6597,6 +6892,7 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
       '<mrow><munder><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>0</mn></mrow></munder><msup><mi>n</mi><mn>2</mn></msup></mrow>',
       '<bigop>' +
+      '<content><largeop>\u2211</largeop></content>' +
       '<children>' +
       '<limlower>' +
       '<children>' +
@@ -6624,6 +6920,189 @@ sre.SemanticTreeTest.prototype.testStreeBigOps = function() {
 
 
 /**
+ * Big operators without Arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeBigOpsNoArgs = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<mi>\u2211</mi>',
+      '<largeop>\u2211</largeop>'
+  );
+  this.executeTreeTest(
+      '<munder><mi>\u220F</mi><mi>n</mi></munder>',
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<identifier>n</identifier>' +
+      '</children>' +
+      '</limlower>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover>',
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>'
+  );
+  this.executeTreeTest(
+      '<mi>\u2211</mi><mo>+</mo><mi>\u2211</mi><mo>=</mo><mi>\u2211</mi>',
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<largeop>\u2211</largeop>' +
+      '</children>' +
+      '</infixop>' +
+      '<largeop>\u2211</largeop>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<munder><mi>\u220F</mi><mi>n</mi></munder><mo>+</mo>' +
+      '<munder><mi>\u220F</mi><mi>m</mi></munder><mo>=</mo>' +
+      '<munder><mi>\u220F</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
+      '</mrow></munder>',
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<identifier>n</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<identifier>m</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '</children>' +
+      '</infixop>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u220F</largeop>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<punctuation>,</punctuation>' +
+      '<identifier>m</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</limlower>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<mrow><munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><mo>+</mo>' +
+      '<munderover><mi>\u2211</mi><mrow><mi>m</mi><mo>=</mo><mn>0</mn>' +
+      '</mrow><mi>\u221E</mi></munderover><mo>=</mo>' +
+      '<munderover><mi>\u2211</mi><mrow><mi>n</mi><mo>,</mo><mi>m</mi>' +
+      '<mo>=</mo><mn>0</mn></mrow><mi>\u221E</mi></munderover></mrow>',
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<infixop>+' +
+      '<content>' +
+      '<operator>+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>' +
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>m</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>' +
+      '</children>' +
+      '</infixop>' +
+      '<limboth>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<punctuated>' +
+      '<content>' +
+      '<punctuation>,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>n</identifier>' +
+      '<punctuation>,</punctuation>' +
+      '<relseq>=' +
+      '<content>' +
+      '<relation>=</relation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier>m</identifier>' +
+      '<number>0</number>' +
+      '</children>' +
+      '</relseq>' +
+      '</children>' +
+      '</punctuated>' +
+      '<identifier>\u221E</identifier>' +
+      '</children>' +
+      '</limboth>' +
+      '</children>' +
+      '</relseq>'
+  );
+};
+
+
+/**
  * Variations of integrals.
  */
 sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
@@ -6635,6 +7114,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mi>\u222B</mi><mi>dx</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<empty/>' +
@@ -6645,6 +7125,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mrow><mi>\u222B</mi><mi>x</mi><mi>dx</mi></mrow>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<identifier>x</identifier>' +
@@ -6655,6 +7136,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<mrow><mi>\u222B</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<identifier>x</identifier>' +
@@ -6672,8 +7154,10 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</integral>');
 
   this.executeTreeTest(
-      '<mrow><mi>\u222B</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi><mi>x</mi></mrow>',
+      '<mrow><mi>\u222B</mi><mi>x</mi><mo>+</mo><mi>y</mi><mi>d</mi>' +
+      '<mi>x</mi></mrow>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<infixop>+' +
@@ -6722,6 +7206,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<mn>10</mn></munderover><mi>x</mi>' +
       '<mi>d</mi><mi>x</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6747,6 +7232,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
   this.executeTreeTest(
       '<munder><mi>\u222B</mi><mi>X</mi></munder><mi>x</mi><mi>dx</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limlower>' +
       '<children>' +
@@ -6775,6 +7261,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</content>' +
       '<children>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6788,6 +7275,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</integral>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6803,6 +7291,7 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</children>' +
       '</infixop>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<limboth>' +
       '<children>' +
@@ -6819,14 +7308,18 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '</relseq>');
 
   this.executeTreeTest(
-      '<mi>\u222B</mi><mi>\u222B</mi><mi>\u222B</mi><mi>dx</mi><mi>dy</mi><mi>dz</mi>',
+      '<mi>\u222B</mi><mi>\u222B</mi><mi>\u222B</mi>' +
+      '<mi>dx</mi><mi>dy</mi><mi>dz</mi>',
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<integral>' +
+      '<content><largeop>\u222B</largeop></content>' +
       '<children>' +
       '<largeop>\u222B</largeop>' +
       '<empty/>' +
@@ -6839,6 +7332,39 @@ sre.SemanticTreeTest.prototype.testStreeIntegrals = function() {
       '<identifier>dz</identifier>' +
       '</children>' +
       '</integral>');
+
+  this.executeTreeTest(
+      '<msub><mo>\u222B</mo><mi>X</mi></msub><mrow><msub><mo>\u2211</mo>' +
+      '<mi>Y</mi></msub><mi>a</mi></mrow><mi>dx</mi>',
+      '<integral>' +
+      '<content>' +
+      '<largeop>\u222B</largeop>' +
+      '</content>' +
+      '<children>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u222B</largeop>' +
+      '<identifier>X</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '<bigop>' +
+      '<content>' +
+      '<largeop>\u2211</largeop>' +
+      '</content>' +
+      '<children>' +
+      '<limlower>' +
+      '<children>' +
+      '<largeop>\u2211</largeop>' +
+      '<identifier>Y</identifier>' +
+      '</children>' +
+      '</limlower>' +
+      '<identifier>a</identifier>' +
+      '</children>' +
+      '</bigop>' +
+      '<identifier>dx</identifier>' +
+      '</children>' +
+      '</integral>'
+  );
 };
 
 
@@ -6880,9 +7406,12 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
 
   this.executeTreeTest(
       '<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>',
-      '<punctuated role="text" id="6">' +
+      '<punctuated role="text" id="9">' +
       '<content>' +
       '<punctuation role="dummy" id="5">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="6">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="8">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
@@ -6906,6 +7435,7 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '<children>' +
       '<punctuated>' +
       '<content>' +
+      '<punctuation>\u2063</punctuation>' +
       '<punctuation>\u2063</punctuation>' +
       '</content>' +
       '<children>' +
@@ -6941,6 +7471,8 @@ sre.SemanticTreeTest.prototype.testStreeText = function() {
       '<mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>',
       '<punctuated>' +
       '<content>' +
+      '<punctuation>\u2063</punctuation>' +
+      '<punctuation>\u2063</punctuation>' +
       '<punctuation>\u2063</punctuation>' +
       '</content>' +
       '<children>' +
@@ -7185,6 +7717,10 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
       '<infixop>\u2062' +
       '<content>' +
       '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<identifier>x</identifier>' +
@@ -7367,6 +7903,8 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
       '<infixop>\u2062' +
       '<content>' +
       '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number>1</number>' +
@@ -7419,6 +7957,8 @@ sre.SemanticTreeTest.prototype.testStreeMfenced = function() {
       '</mfenced>',
       '<infixop>\u2062' +
       '<content>' +
+      '<operator>\u2062</operator>' +
+      '<operator>\u2062</operator>' +
       '<operator>\u2062</operator>' +
       '</content>' +
       '<children>' +
@@ -7717,6 +8257,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleUnits = function() {
       '<appl role="limit function" id="3">' +
       '<content>' +
       '<punctuation role="application" id="2">⁡</punctuation>' +
+      '<function role="limit function" font="normal" id="0">min</function>' +
       '</content>' +
       '<children>' +
       '<function role="limit function" font="normal" id="0">min</function>' +
@@ -7797,9 +8338,11 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      '<infixop role="implicit" id="8">\u2062' +
+      '<infixop role="implicit" id="10">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="7">\u2062</operator>' +
+      '<operator role="multiplication" id="8">\u2062</operator>' +
+      '<operator role="multiplication" id="9">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<identifier role="unit" font="normal" id="0">s</identifier>' +
@@ -7825,9 +8368,11 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<mn>3</mn><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi>',
-      '<infixop role="implicit" id="13">\u2062' +
+      '<infixop role="implicit" id="15">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="12">\u2062</operator>' +
+      '<operator role="multiplication" id="13">\u2062</operator>' +
+      '<operator role="multiplication" id="14">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<infixop role="unit" id="9">\u2062' +
@@ -7866,9 +8411,11 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      '<infixop role="implicit" id="12">\u2062' +
+      '<infixop role="implicit" id="14">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="11">\u2062</operator>' +
+      '<operator role="multiplication" id="12">\u2062</operator>' +
+      '<operator role="multiplication" id="13">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="0">3</number>' +
@@ -7904,9 +8451,10 @@ sre.SemanticTreeTest.prototype.testStreeComplexUnits = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      '<infixop role="implicit" id="12">\u2062' +
+      '<infixop role="implicit" id="13">\u2062' +
       '<content>' +
       '<operator role="multiplication" id="11">\u2062</operator>' +
+      '<operator role="multiplication" id="12">\u2062</operator>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="0">3</number>' +
@@ -8033,7 +8581,7 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   );
   this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><none/></mmultiscripts>',
-      '<subscript role="latinletter" id="2">' +
+      '<subscript role="latinletter" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
@@ -8042,10 +8590,10 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
   );
   this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><none/><mi>i</mi></mmultiscripts>',
-      '<superscript role="latinletter" id="2">' +
+      '<superscript role="latinletter" id="3">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
+      '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
       '</children>' +
       '</superscript>'
   );
@@ -8079,6 +8627,37 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '</superscript>'
   );
   this.executeTreeTest(
+      '<mmultiscripts><mi>X</mi><mi>i</mi><none/><none/><mi>l</mi>' +
+      '</mmultiscripts>',
+      '<superscript role="latinletter" id="10">' +
+      '<children>' +
+      '<subscript role="subsup" id="9">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
+      '<punctuated role="rightsub" id="6">' +
+      '<content>' +
+      '<punctuation role="dummy" id="5">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
+      '<empty role="unknown" id="2"></empty>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</subscript>' +
+      '<punctuated role="rightsuper" id="8">' +
+      '<content>' +
+      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<empty role="unknown" id="3"></empty>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
       '<mmultiscripts><mi>X</mi><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><none/></mmultiscripts>',
       '<superscript role="latinletter" id="10">' +
@@ -8086,9 +8665,9 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<subscript role="subsup" id="9">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">X</identifier>' +
-      '<punctuated role="rightsub" id="4">' +
+      '<punctuated role="rightsub" id="6">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="5">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="1">i</identifier>' +
@@ -8102,8 +8681,8 @@ sre.SemanticTreeTest.prototype.testStreeRightScriptTensors = function() {
       '<punctuation role="dummy" id="7">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<identifier role="latinletter" font="italic" id="5">j</identifier>' +
-      '<identifier role="latinletter" font="italic" id="6">l</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">j</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
@@ -8120,7 +8699,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8133,7 +8712,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8146,7 +8725,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8159,7 +8738,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8172,7 +8751,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><none/><none/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8185,7 +8764,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mpadded/><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8198,7 +8777,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8211,7 +8790,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
@@ -8224,7 +8803,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<empty role="leftsub" id="1"></empty>' +
@@ -8237,7 +8816,7 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>1</mn><mprescripts/>' +
       '<none/><mn>4</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<empty role="leftsub" id="1"></empty>' +
@@ -8250,13 +8829,13 @@ sre.SemanticTreeTest.prototype.testStreeSimpleTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><none/><mn>2</mn><mprescripts/>' +
       '<mn>3</mn></mmultiscripts>',
-      '<tensor role="unknown" id="5">' +
+      '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
       '<number role="leftsub" font="normal" id="1">3</number>' +
-      '<empty role="leftsuper" id="2"></empty>' +
-      '<empty role="rightsub" id="3"></empty>' +
-      '<number role="rightsuper" font="normal" id="4">2</number>' +
+      '<empty role="leftsuper" id="4"></empty>' +
+      '<empty role="rightsub" id="2"></empty>' +
+      '<number role="rightsuper" font="normal" id="3">2</number>' +
       '</children>' +
       '</tensor>'
   );
@@ -8270,34 +8849,34 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>',
-      '<tensor role="unknown" id="17">' +
+      '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
+      '<punctuated role="leftsub" id="10">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="9">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="1">1</number>' +
       '<identifier role="latinletter" font="italic" id="2">i</identifier>' +
       '</children>' +
       '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<number role="integer" font="normal" id="5">2</number>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
+      '<punctuated role="leftsuper" id="12">' +
       '<content>' +
       '<punctuation role="dummy" id="11">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
+      '<number role="integer" font="normal" id="3">2</number>' +
+      '<identifier role="latinletter" font="italic" id="4">j</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="rightsub" id="14">' +
+      '<content>' +
+      '<punctuation role="dummy" id="13">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">3</number>' +
+      '<identifier role="latinletter" font="italic" id="6">k</identifier>' +
       '</children>' +
       '</punctuated>' +
       '<punctuated role="rightsuper" id="16">' +
@@ -8305,8 +8884,8 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
       '<punctuation role="dummy" id="15">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<number role="integer" font="normal" id="13">4</number>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
+      '<number role="integer" font="normal" id="7">4</number>' +
+      '<identifier role="latinletter" font="italic" id="8">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
@@ -8315,34 +8894,34 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
   this.executeTreeTest(
       '<mmultiscripts><mi>A</mi><mn>3</mn><none/><mi>k</mi><mi>l</mi>' +
       '<mprescripts/><mn>1</mn><none/><none/><mi>j</mi></mmultiscripts>',
-      '<tensor role="unknown" id="17">' +
+      '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
-      '<punctuated role="leftsub" id="4">' +
+      '<punctuated role="leftsub" id="10">' +
       '<content>' +
-      '<punctuation role="dummy" id="3">\u2063</punctuation>' +
+      '<punctuation role="dummy" id="9">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
       '<number role="integer" font="normal" id="1">1</number>' +
       '<empty role="unknown" id="2"></empty>' +
       '</children>' +
       '</punctuated>' +
-      '<punctuated role="leftsuper" id="8">' +
-      '<content>' +
-      '<punctuation role="dummy" id="7">\u2063</punctuation>' +
-      '</content>' +
-      '<children>' +
-      '<empty role="unknown" id="5"></empty>' +
-      '<identifier role="latinletter" font="italic" id="6">j</identifier>' +
-      '</children>' +
-      '</punctuated>' +
-      '<punctuated role="rightsub" id="12">' +
+      '<punctuated role="leftsuper" id="12">' +
       '<content>' +
       '<punctuation role="dummy" id="11">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<number role="integer" font="normal" id="9">3</number>' +
-      '<identifier role="latinletter" font="italic" id="10">k</identifier>' +
+      '<empty role="unknown" id="3"></empty>' +
+      '<identifier role="latinletter" font="italic" id="4">j</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '<punctuated role="rightsub" id="14">' +
+      '<content>' +
+      '<punctuation role="dummy" id="13">\u2063</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<number role="integer" font="normal" id="5">3</number>' +
+      '<identifier role="latinletter" font="italic" id="6">k</identifier>' +
       '</children>' +
       '</punctuated>' +
       '<punctuated role="rightsuper" id="16">' +
@@ -8350,12 +8929,2101 @@ sre.SemanticTreeTest.prototype.testStreeComplexTensors = function() {
       '<punctuation role="dummy" id="15">\u2063</punctuation>' +
       '</content>' +
       '<children>' +
-      '<empty role="unknown" id="13"></empty>' +
-      '<identifier role="latinletter" font="italic" id="14">l</identifier>' +
+      '<empty role="unknown" id="7"></empty>' +
+      '<identifier role="latinletter" font="italic" id="8">l</identifier>' +
       '</children>' +
       '</punctuated>' +
       '</children>' +
       '</tensor>'
   );
 
+};
+
+
+/**
+ * Simple embellished arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeSimpleEmbellishment = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<msup><mi>\u222B</mi><mn>2</mn></msup>',
+      '<limupper role="integral" id="2">' +
+      '<children>' +
+      '<largeop role="integral" id="0">∫</largeop>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</limupper>'
+  );
+  this.executeTreeTest(
+      '<msup><mi>f</mi><mn>2</mn></msup>',
+      '<superscript role="latinletter" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">f</identifier>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>(</mo><mn>2</mn></msup>',
+      '<superscript role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>=</mo><mn>2</mn></msup>',
+      '<superscript role="equality" embellished="relation" id="2">' +
+      '<children>' +
+      '<relation role="equality" id="0">=</relation>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>+</mo><mn>2</mn></msup>',
+      '<superscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msup><mo>,</mo><mn>2</mn></msup>',
+      '<superscript role="comma" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Multi embellished arguments.
+ */
+sre.SemanticTreeTest.prototype.testStreeMultiEmbellishment = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>',
+      '<subscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<superscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '</children>' +
+      '</subscript>');
+  this.executeTreeTest(
+      '<mmultiscripts><mo>+</mo><mn>2</mn><mi>x</mi></mmultiscripts>',
+      '<superscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="2">x</identifier>' +
+      '</children>' +
+      '</superscript>');
+  this.executeTreeTest(
+      '<mover><msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi>' +
+      '</msub><mo>-</mo></mover>',
+      '<overscore role="addition" embellished="operator" id="6">' +
+      '<children>' +
+      '<subscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<superscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '</children>' +
+      '</subscript>' +
+      '<operator role="overaccent" id="5">-</operator>' +
+      '</children>' +
+      '</overscore>');
+  this.executeTreeTest(
+      '<msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></msup>',
+      '<superscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<subscript role="latinletter" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</children>' +
+      '</superscript>');
+  this.executeTreeTest(
+      '<msub><munder><mo>+</mo><mn>2</mn></munder><mi>x</mi></msub>',
+      '<subscript role="addition" embellished="operator" id="4">' +
+      '<children>' +
+      '<underscore role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</underscore>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '</children>' +
+      '</subscript>');
+  this.executeTreeTest(
+      '<mmultiscripts><mi>(</mi><none/><none/>' +
+      '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<tensor role="open" embellished="fence" id="5">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="leftsub" font="normal" id="1">1</number>' +
+      '<identifier role="leftsuper" font="italic" id="2">j</identifier>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>');
+  this.executeTreeTest(
+      '<mmultiscripts><mi>(</mi><none/><mi>K</mi>' +
+      '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<tensor role="open" embellished="fence" id="5">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="leftsub" font="normal" id="1">1</number>' +
+      '<identifier role="leftsuper" font="italic" id="2">j</identifier>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<identifier role="rightsuper" font="italic" id="4">K</identifier>' +
+      '</children>' +
+      '</tensor>');
+  this.executeTreeTest(
+      '<mmultiscripts><mi>(</mi><mn>1</mn><mi>j</mi></mmultiscripts>',
+      '<superscript role="open" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<number role="integer" font="normal" id="1">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="2">j</identifier>' +
+      '</children>' +
+      '</superscript>');
+};
+
+
+/**
+ * Expressions with embellished operators and relations.
+ */
+sre.SemanticTreeTest.prototype.testStreeComplexEmbellishment = function() {
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
+      '<mn>2</mn></msub><mi>z</mi>',
+      '<relseq role="equality" id="9">=' +
+      '<content>' +
+      '<subscript role="equality" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="equality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub><mo>=</mo>' +
+      '<mn>4</mn></msub><mi>z</mi>',
+      '<multirel role="equality" id="9">' +
+      '<content>' +
+      '<subscript role="equality" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="equality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '<number role="integer" font="normal" id="6">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</multirel>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>x</mi><msub>' +
+      '<mo>\u2264</mo><mn>4</mn></msub><mi>z</mi>',
+      '<multirel role="unknown" id="9">' +
+      '<content>' +
+      '<subscript role="equality" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="equality" id="1">=</relation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="inequality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="inequality" id="5">\u2264</relation>' +
+      '<number role="integer" font="normal" id="6">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</multirel>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
+      '<mn>2</mn></msub><mi>z</mi>',
+      '<infixop role="addition" id="9">+' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="addition" embellished="operator" id="7">' +
+      '<children>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '<number role="integer" font="normal" id="6">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>x</mi><msub><mo>+</mo>' +
+      '<mn>4</mn></msub><mi>z</mi>',
+      '<infixop role="addition" id="10">+' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="7">' +
+      '<children>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '<number role="integer" font="normal" id="6">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="addition" id="9">+' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">x</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<identifier role="latinletter" font="italic" id="8">z</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi><msup><mo>=</mo>' +
+      '<mo>\'</mo></msup><mi>x</mi><msub><mo>+</mo><mn>4</mn></msub><mi>z</mi>',
+      '<relseq role="equality" id="15">=' +
+      '<content>' +
+      '<superscript role="equality" embellished="relation" id="7">' +
+      '<children>' +
+      '<relation role="equality" id="5">=</relation>' +
+      '<punctuation role="prime" id="6">\'</punctuation>' +
+      '</children>' +
+      '</superscript>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="addition" id="13">+' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<infixop role="addition" id="14">+' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="11">' +
+      '<children>' +
+      '<operator role="addition" id="9">+</operator>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '<identifier role="latinletter" font="italic" id="12">z</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</relseq>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi><msup><mo>,</mo>' +
+      '<mo>\'</mo></msup><mi>x</mi><msub><mo>:</mo><mn>4</mn></msub><mi>z</mi>',
+      '<punctuated role="sequence" id="13">' +
+      '<content>' +
+      '<subscript role="unknown" embellished="punctuation" id="3">' +
+      '<children>' +
+      '<punctuation role="unknown" id="1">:</punctuation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<superscript role="comma" embellished="punctuation" id="7">' +
+      '<children>' +
+      '<punctuation role="comma" id="5">,</punctuation>' +
+      '<punctuation role="prime" id="6">\'</punctuation>' +
+      '</children>' +
+      '</superscript>' +
+      '<subscript role="unknown" embellished="punctuation" id="11">' +
+      '<children>' +
+      '<punctuation role="unknown" id="9">:</punctuation>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '<subscript role="unknown" embellished="punctuation" id="3">' +
+      '<children>' +
+      '<punctuation role="unknown" id="1">:</punctuation>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '<superscript role="comma" embellished="punctuation" id="7">' +
+      '<children>' +
+      '<punctuation role="comma" id="5">,</punctuation>' +
+      '<punctuation role="prime" id="6">\'</punctuation>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '<subscript role="unknown" embellished="punctuation" id="11">' +
+      '<children>' +
+      '<punctuation role="unknown" id="9">:</punctuation>' +
+      '<number role="integer" font="normal" id="10">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="12">z</identifier>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
+      '<mn>3</mn></msub><mi>x</mi>',
+      '<prefixop role="multiop" id="7">+ +' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="2">' +
+      '<children>' +
+      '<operator role="addition" id="0">+</operator>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="addition" embellished="operator" id="5">' +
+      '<children>' +
+      '<operator role="addition" id="3">+</operator>' +
+      '<number role="integer" font="normal" id="4">3</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</prefixop>'
+  );
+  this.executeTreeTest(
+      '<mi>x</mi><msub><mo>+</mo><mn>2</mn></msub><msub><mo>+</mo>' +
+      '<mn>3</mn></msub>',
+      '<postfixop role="multiop" id="7">+ +' +
+      '<content>' +
+      '<subscript role="addition" embellished="operator" id="3">' +
+      '<children>' +
+      '<operator role="addition" id="1">+</operator>' +
+      '<number role="integer" font="normal" id="2">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<subscript role="addition" embellished="operator" id="6">' +
+      '<children>' +
+      '<operator role="addition" id="4">+</operator>' +
+      '<number role="integer" font="normal" id="5">3</number>' +
+      '</children>' +
+      '</subscript>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">x</identifier>' +
+      '</children>' +
+      '</postfixop>'
+  );
+};
+
+
+// Embellished Fences
+/**
+ * Expressions with embellished fences right.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedRightFence = function() {
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>',
+      '<superscript role="leftright" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="leftright" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo>' +
+      '<mo>(</mo><mi>y</mi><msup><mo>)</mo><mn>3</mn></msup>',
+      '<infixop role="addition" id="13">+' +
+      '<content>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<superscript role="leftright" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<superscript role="leftright" fencepointer="8" id="10">' +
+      '<children>' +
+      '<fenced role="leftright" id="12">' +
+      '<content>' +
+      '<fence role="open" id="6">(</fence>' +
+      '<fence role="close" id="8">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="7">y</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '</children>' +
+      '</superscript>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup>' +
+      '<mn>2</mn></msub>',
+      '<subscript role="leftright" fencepointer="2" id="6">' +
+      '<children>' +
+      '<superscript role="leftright" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="leftright" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>',
+      '<superscript role="leftright" fencepointer="2" id="6">' +
+      '<children>' +
+      '<subscript role="subsup" fencepointer="2" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn>' +
+      '</mmultiscripts>',
+      '<superscript role="leftright" fencepointer="2" id="6">' +
+      '<children>' +
+      '<subscript role="subsup" fencepointer="2" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="2">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="4">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo>' +
+      '</mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>',
+      '<superscript role="leftright" fencepointer="8" id="10">' +
+      '<children>' +
+      '<subscript role="leftright" fencepointer="4" id="6">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<underscore role="close" embellished="fence" id="8">' +
+      '<children>' +
+      '<overscore role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<fence role="close" id="2">)</fence>' +
+      '<operator role="overaccent" id="3">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<relation role="underaccent" id="7">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">1</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo>' +
+      '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
+      '</msup></mpadded>',
+      '<superscript role="leftright" fencepointer="8" id="10">' +
+      '<children>' +
+      '<subscript role="leftright" fencepointer="4" id="6">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<underscore role="close" embellished="fence" id="8">' +
+      '<children>' +
+      '<overscore role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<fence role="close" id="2">)</fence>' +
+      '<operator role="overaccent" id="3">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<relation role="underaccent" id="7">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences left.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedLeftFence = function() {
+  this.executeTreeTest(
+      '<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>',
+      '<punctuated role="sequence" id="5">' +
+      '<content>' +
+      '<superscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<superscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<punctuated role="sequence" id="5">' +
+      '<content>' +
+      '<subscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<subscript role="openfence" embellished="punctuation" id="2">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<identifier role="latinletter" font="italic" id="3">x</identifier>' +
+      '<punctuation role="closefence" id="4">)</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="8">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<empty role="leftsuper" id="2"/>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="8">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<punctuated role="sequence" id="8">' +
+      '<content>' +
+      '<tensor role="openfence" embellished="punctuation" id="5">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<number role="rightsub" font="normal" id="3">2</number>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<punctuation role="closefence" id="7">)</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<tensor role="openfence" embellished="punctuation" id="5">' +
+      '<children>' +
+      '<punctuation role="openfence" id="0">(</punctuation>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<number role="rightsub" font="normal" id="3">2</number>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '<punctuation role="closefence" id="7">)</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" fencepointer="2" id="7">' +
+      '<children>' +
+      '<fenced role="leftright" id="10">' +
+      '<content>' +
+      '<underscore role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="1">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<fence role="close" id="9">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="3">4</number>' +
+      '<number role="leftsuper" font="normal" id="4">3</number>' +
+      '<empty role="rightsub" id="5"/>' +
+      '<empty role="rightsuper" id="6"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" fencepointer="9" id="14">' +
+      '<children>' +
+      '<tensor role="leftright" fencepointer="2" id="7">' +
+      '<children>' +
+      '<fenced role="leftright" id="17">' +
+      '<content>' +
+      '<overscore role="open" embellished="fence" id="9">' +
+      '<children>' +
+      '<underscore role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="1">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<operator role="overaccent" id="8">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<fence role="close" id="16">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="15">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<empty role="leftsub" id="3"/>' +
+      '<number role="leftsuper" font="normal" id="4">3</number>' +
+      '<empty role="rightsub" id="5"/>' +
+      '<empty role="rightsuper" id="6"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="leftsub" font="normal" id="10">4</number>' +
+      '<empty role="leftsuper" id="11"/>' +
+      '<empty role="rightsub" id="12"/>' +
+      '<empty role="rightsuper" id="13"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences on both sides.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedBothFences = function() {
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts>' +
+      '<mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>',
+      '<superscript role="leftright" fencepointer="7" id="9">' +
+      '<children>' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="10">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<empty role="leftsuper" id="2"/>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="8">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn>' +
+      '<mn>2</mn></msubsup>',
+      '<superscript role="leftright" fencepointer="7" id="11">' +
+      '<children>' +
+      '<subscript role="subsup" fencepointer="7" id="10">' +
+      '<children>' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="12">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="7">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="8">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder>' +
+      '<mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn>' +
+      '</msubsup><mo>^</mo></mover>',
+      '<superscript role="leftright" fencepointer="9" id="13">' +
+      '<children>' +
+      '<subscript role="subsup" fencepointer="9" id="12">' +
+      '<children>' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="16">' +
+      '<content>' +
+      '<underscore role="open" embellished="fence" id="7">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="6">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<overscore role="close" embellished="fence" id="15">' +
+      '<children>' +
+      '<fence role="close" id="9">)</fence>' +
+      '<operator role="overaccent" id="14">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="10">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="11">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Expressions with padded background.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedPaddedFences = function() {
+  this.executeTreeTest(
+      '<mo>(</mo><mi>x</mi><mpadded mathbackground="red"><msup><munder>' +
+      '<msub><mover><mo>)</mo>' +
+      '<mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn>' +
+      '</msup></mpadded>',
+      '<superscript role="leftright" fencepointer="8" id="10">' +
+      '<children>' +
+      '<subscript role="leftright" fencepointer="4" id="6">' +
+      '<children>' +
+      '<fenced role="leftright" id="11">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<underscore role="close" embellished="fence" id="8">' +
+      '<children>' +
+      '<overscore role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<fence role="close" id="2">)</fence>' +
+      '<operator role="overaccent" id="3">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<relation role="underaccent" id="7">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mpadded mathbackground="red"><mmultiscripts><mover><mmultiscripts>' +
+      '<munder><mo>(</mo><mo>~</mo>' +
+      '</munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo>' +
+      '</mover><mprescripts/><mn>4</mn>' +
+      '</mmultiscripts></mpadded><mi>x</mi><mo>)</mo>',
+      '<tensor role="leftright" fencepointer="9" id="14">' +
+      '<children>' +
+      '<tensor role="leftright" fencepointer="2" id="7">' +
+      '<children>' +
+      '<fenced role="leftright" id="17">' +
+      '<content>' +
+      '<overscore role="open" embellished="fence" id="9">' +
+      '<children>' +
+      '<underscore role="open" embellished="fence" id="2">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="1">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<operator role="overaccent" id="8">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '<fence role="close" id="16">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="15">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<empty role="leftsub" id="3"/>' +
+      '<number role="leftsuper" font="normal" id="4">3</number>' +
+      '<empty role="rightsub" id="5"/>' +
+      '<empty role="rightsuper" id="6"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="leftsub" font="normal" id="10">4</number>' +
+      '<empty role="leftsuper" id="11"/>' +
+      '<empty role="rightsub" id="12"/>' +
+      '<empty role="rightsuper" id="13"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mpadded mathbackground="blue"><munder><mmultiscripts><mo>(</mo>' +
+      '<mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mo>~</mo></munder></mpadded>' +
+      '<mi>x</mi><mpadded mathbrackground="red"><mover><msubsup><mo>)</mo>' +
+      '<mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>',
+      '<superscript role="leftright" fencepointer="9" id="13">' +
+      '<children>' +
+      '<subscript role="subsup" fencepointer="9" id="12">' +
+      '<children>' +
+      '<tensor role="leftright" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="leftright" id="16">' +
+      '<content>' +
+      '<underscore role="open" embellished="fence" id="7">' +
+      '<children>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<relation role="underaccent" id="6">~</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<overscore role="close" embellished="fence" id="15">' +
+      '<children>' +
+      '<fence role="close" id="9">)</fence>' +
+      '<operator role="overaccent" id="14">^</operator>' +
+      '</children>' +
+      '</overscore>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="8">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="10">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="11">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Expressions with embellished fences right.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmbellishedNeutralFences = function() {
+  this.executeTreeTest(
+      '<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup>',
+      '<superscript role="neutral" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="neutral" id="5">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="2">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup><mo>+</mo>' +
+      '<mo>|</mo><mi>y</mi><msup><mo>|</mo><mn>3</mn></msup>',
+      '<infixop role="addition" id="13">+' +
+      '<content>' +
+      '<operator role="addition" id="5">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<superscript role="neutral" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="neutral" id="11">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="2">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<superscript role="neutral" fencepointer="8" id="10">' +
+      '<children>' +
+      '<fenced role="neutral" id="12">' +
+      '<content>' +
+      '<fence role="neutral" id="6">|</fence>' +
+      '<fence role="neutral" id="8">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="7">y</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="9">3</number>' +
+      '</children>' +
+      '</superscript>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mo>|</mo><mi>x</mi><msub><msup><mo>|</mo><mn>4</mn></msup>' +
+      '<mn>2</mn></msub>',
+      '<subscript role="neutral" fencepointer="2" id="6">' +
+      '<children>' +
+      '<superscript role="neutral" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="neutral" id="7">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="2">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<number role="integer" font="normal" id="5">2</number>' +
+      '</children>' +
+      '</subscript>'
+  );
+  this.executeTreeTest(
+      '<mo>|</mo><mi>x</mi><mpadded mathbackground="blue"><msup><mo>|</mo>' +
+      '<mn>4</mn></msup></mpadded>',
+      '<superscript role="neutral" fencepointer="2" id="4">' +
+      '<children>' +
+      '<fenced role="neutral" id="5">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="2">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="3">4</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><mo>|</mo>',
+      '<tensor role="neutral" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="neutral" id="8">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="7">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>'
+  );
+  this.executeTreeTest(
+      '<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn>' +
+      '</mmultiscripts><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn>' +
+      '</msubsup>',
+      '<superscript role="neutral" fencepointer="7" id="11">' +
+      '<children>' +
+      '<subscript role="subsup" fencepointer="7" id="10">' +
+      '<children>' +
+      '<tensor role="neutral" fencepointer="0" id="5">' +
+      '<children>' +
+      '<fenced role="neutral" id="12">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="7">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="6">x</identifier>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="leftsub" font="normal" id="1">4</number>' +
+      '<number role="leftsuper" font="normal" id="2">3</number>' +
+      '<empty role="rightsub" id="3"/>' +
+      '<empty role="rightsuper" id="4"/>' +
+      '</children>' +
+      '</tensor>' +
+      '<number role="integer" font="normal" id="8">1</number>' +
+      '</children>' +
+      '</subscript>' +
+      '<number role="integer" font="normal" id="9">2</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<mo>|</mo><mi>x</mi><mo>\u00A6</mo><mi>y</mi><msup><mo>|</mo><mn>4</mn></msup>',
+      '<superscript role="neutral" fencepointer="4" id="6">' +
+      '<children>' +
+      '<fenced role="neutral" id="8">' +
+      '<content>' +
+      '<fence role="neutral" id="0">|</fence>' +
+      '<fence role="neutral" id="4">|</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated role="sequence" id="7">' +
+      '<content>' +
+      '<punctuation role="vbar" id="2">¦</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">x</identifier>' +
+      '<punctuation role="vbar" id="2">¦</punctuation>' +
+      '<identifier role="latinletter" font="italic" id="3">y</identifier>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>' +
+      '<number role="integer" font="normal" id="5">4</number>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+// Actions.
+/**
+ * Ignore Mactions!
+ */
+sre.SemanticTreeTest.prototype.testStreeActions = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<maction><mtext>something</mtext><mn>2</mn></maction>',
+      '<number>2</number>');
+  this.executeTreeTest(
+      '<maction><mtext>something</mtext><mi>a</mi></maction>',
+      '<identifier>a</identifier>');
+};
+
+
+// Semantics, annotation, annotation-xml
+/**
+ * Expressions with semantic elements.
+ */
+sre.SemanticTreeTest.prototype.testSemanticsElement = function() {
+  this.brief = true;
+  this.executeTreeTest(
+      '<semantics></semantics>',
+      '<empty/>'
+  );
+  this.executeTreeTest(
+      '<semantics><mi>a</mi></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and annotations.
+ */
+sre.SemanticTreeTest.prototype.testSemanticsAnnotation = function() {
+  this.brief = true;
+  // This is not really legal markup.
+  this.executeTreeTest(
+      '<semantics><annotation>something</annotation></semantics>',
+      '<empty/>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><semantics><annotation><content>something</content>' +
+      '</annotation></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mi>a</mi><annotation>something</annotation></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation>something</annotation></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
+      '<annotation>something</annotation></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+
+/**
+ * Expressions with semantic elements and xml annotations.
+ */
+sre.SemanticTreeTest.prototype.testSemanticsAnnotationXml = function() {
+  this.brief = true;
+  // This is not really legal markup.
+  this.executeTreeTest(
+      '<semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<text>something</text>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<punctuated><content><punctuation>⁣</punctuation>' +
+      '</content><children><identifier>a</identifier>' +
+      '<text>something</text></children></punctuated>'
+  );
+  this.executeTreeTest(
+      '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<identifier>a</identifier>'
+  );
+  this.executeTreeTest(
+      '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
+      '<annotation-xml><content>something</content>' +
+      '</annotation-xml></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+  this.executeTreeTest(
+      '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
+      '<content>something</content></annotation-xml></semantics>',
+      '<infixop>+' +
+      '<content><operator>+</operator></content>' +
+      '<children>' +
+      '<identifier>a</identifier>' +
+      '<identifier>b</identifier>' +
+      '</children>' +
+      '</infixop>'
+  );
+};
+
+
+/**
+ * Binomial coefficients generated with fractions.
+ */
+sre.SemanticTreeTest.prototype.testStreeBinomial = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mi>k' +
+      '</mi></mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="8">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="9">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="7">' +
+      '<children>' +
+      '<infixop role="addition" id="5">+' +
+      '<content>' +
+      '<operator role="addition" id="3">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '<identifier role="latinletter" font="italic" id="4">l</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mrow><mi>n</mi>' +
+      '<mo>+</mo><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mrow><mi>k</mi><mo>+' +
+      '</mo><mi>l</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mrow><mo>)</mo>' +
+      '</mrow></mrow>',
+      '<vector role="binomial" id="16">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="17">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="14">' +
+      '<children>' +
+      '<infixop role="addition" id="6">+<content>' +
+      '<operator role="addition" id="2">+</operator>' +
+      '<operator role="addition" id="4">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '<identifier role="latinletter" font="italic" id="3">k</identifier>' +
+      '<identifier role="latinletter" font="italic" id="5">l</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="15">' +
+      '<children>' +
+      '<infixop role="subtraction" id="13">-<content>' +
+      '<operator role="subtraction" id="10">-</operator>' +
+      '</content>' +
+      '<children>' +
+      '<infixop role="addition" id="12">+<content>' +
+      '<operator role="addition" id="8">+</operator>' +
+      '</content>' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="7">k</identifier>' +
+      '<identifier role="latinletter" font="italic" id="9">l</identifier>' +
+      '</children>' +
+      '</infixop>' +
+      '<number role="integer" font="normal" id="11">1</number>' +
+      '</children>' +
+      '</infixop>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow>',
+      '<vector role="binomial" id="7">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="8">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="6">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="4">b</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+};
+
+
+/**
+ * Binomial coefficients generated with fractions and redundant elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeBinomialWithIgnores = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mfenced open="(" close=")"><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded></mfrac></mfenced>',
+      '<vector role="binomial" id="4">' +
+      '<content>' +
+      '<fence role="open" id="5">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mi>k</mi>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mrow><mi>n</mi></mrow><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+  this.executeTreeTest(
+      '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0">' +
+      '<mi>n</mi><mpadded><mi>k</mi></mpadded>' +
+      '</mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<vector role="binomial" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">(</fence>' +
+      '<fence role="close" id="6">)</fence>' +
+      '</content>' +
+      '<children>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="4">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="2">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</vector>');
+};
+
+
+/**
+ * Binomial coefficient like elements, without fences.
+ */
+sre.SemanticTreeTest.prototype.testStreeBinomialOther = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow><mi>k</mi></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mfrac linethickness="0"><mi>n</mi>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mfrac linethickness="0"><mrow><mi>n</mi></mrow>' +
+      '<mpadded><mi>k</mi></mpadded></mfrac>',
+      '<multiline role="binomial" id="4">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">n</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="1">k</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+  this.executeTreeTest(
+      '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mi>b</mi></mtd></mtr></mtable>',
+      '<multiline role="binomial" id="6">' +
+      '<children>' +
+      '<line role="binomial" id="2">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">a</identifier>' +
+      '</children>' +
+      '</line>' +
+      '<line role="binomial" id="5">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="3">b</identifier>' +
+      '</children>' +
+      '</line>' +
+      '</children>' +
+      '</multiline>'
+  );
+};
+
+
+/**
+ * Trivially punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeTrivialPunctuated = function() {
+  this.brief = false;
+  this.executeTreeTest(
+      '<mo>,</mo>',
+      '<punctuation role="comma" id="0">,</punctuation>'
+  );
+  this.executeTreeTest(
+      '<mo>,</mo><mo>,</mo>',
+      '<punctuated role="comma" id="2">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>,</mo><mo>;</mo>',
+      '<punctuated role="sequence" id="2">' +
+      '<content>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="unknown" id="1">;</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="0">,</punctuation>' +
+      '<punctuation role="unknown" id="1">;</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>{</mo><mo>,</mo><mo>}</mo>',
+      '<fenced role="leftright" id="3">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="2">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '</children>' +
+      '</fenced>'
+  );
+  this.executeTreeTest(
+      '<mo>{</mo><mo>,</mo><mo>,</mo><mo>}</mo>',
+      '<fenced role="leftright" id="5">' +
+      '<content>' +
+      '<fence role="open" id="0">{</fence>' +
+      '<fence role="close" id="3">}</fence>' +
+      '</content>' +
+      '<children>' +
+      '<punctuated role="comma" id="4">' +
+      '<content>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="comma" id="1">,</punctuation>' +
+      '<punctuation role="comma" id="2">,</punctuation>' +
+      '</children>' +
+      '</punctuated>' +
+      '</children>' +
+      '</fenced>'
+  );
+};
+
+
+/**
+ * Trivially punctuated elements.
+ */
+sre.SemanticTreeTest.prototype.testStreeFonts = function() {
+  this.executeTreeTest(
+      '<mi>A</mi>',
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="italic">A</mi>',
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="bold">A</mi>',
+      '<identifier role="latinletter" font="bold" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="-tex-caligraphic">A</mi>',
+      '<identifier role="latinletter" font="caligraphic" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi mathvariant="-tex-oldstyle">A</mi>',
+      '<identifier role="latinletter" font="oldstyle" id="0">A</identifier>'
+  );
+  this.executeTreeTest(
+      '<mi>𝝖</mi>',
+      '<identifier role="greekletter" font="sans-serif-bold"' +
+      ' id="0">𝝖</identifier>'
+  );
+};
+
+
+/**
+ * Tests for dealing with empty accents and embellishments.
+ */
+sre.SemanticTreeTest.prototype.testStreeEmptyAccents = function() {
+  this.executeTreeTest(
+      '<munderover><mo>→</mo><mo>≅</mo><mrow/></munderover>',
+      '<overscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<underscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mo>→</mo><mrow/><mo>≅</mo></munderover>',
+      '<underscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<overscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</underscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mo>→</mo><mo>≅</mo><mo>=</mo></munderover>',
+      '<overscore role="arrow" embellished="relation" id="4">' +
+      '<children>' +
+      '<underscore role="underover" embellished="relation" id="3">' +
+      '<children>' +
+      '<relation role="arrow" id="0">→</relation>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<relation role="overaccent" id="2">=</relation>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>A</mi><mo>≅</mo><mrow/></munderover>',
+      '<overscore role="latinletter" id="4">' +
+      '<children>' +
+      '<underscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>A</mi><mrow/><mo>≅</mo></munderover>',
+      '<underscore role="latinletter" id="4">' +
+      '<children>' +
+      '<overscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="overaccent" id="2">≅</relation>' +
+      '</children>' +
+      '</overscore>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</underscore>'
+  );
+  this.executeTreeTest(
+      '<munderover><mi>A</mi><mo>≅</mo><mo>=</mo></munderover>',
+      '<overscore role="latinletter" id="4">' +
+      '<children>' +
+      '<underscore role="underover" id="3">' +
+      '<children>' +
+      '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
+      '<relation role="underaccent" id="1">≅</relation>' +
+      '</children>' +
+      '</underscore>' +
+      '<relation role="overaccent" id="2">=</relation>' +
+      '</children>' +
+      '</overscore>'
+  );
+  this.executeTreeTest(
+      '<msubsup><mo>)</mo><mo>≅</mo><mrow/></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<relation role="equality" id="1">≅</relation>' +
+      '</children>' +
+      '</subscript>' +
+      '<empty role="unknown" id="2"/>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msubsup><mo>)</mo><mrow/><mo>≅</mo></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<empty role="unknown" id="1"/>' +
+      '</children>' +
+      '</subscript>' +
+      '<relation role="equality" id="2">≅</relation>' +
+      '</children>' +
+      '</superscript>'
+  );
+  this.executeTreeTest(
+      '<msubsup><mo>)</mo><mo>≅</mo><mo>=</mo></msubsup>',
+      '<superscript role="close" embellished="fence" id="4">' +
+      '<children>' +
+      '<subscript role="subsup" embellished="fence" id="3">' +
+      '<children>' +
+      '<fence role="close" id="0">)</fence>' +
+      '<relation role="equality" id="1">≅</relation>' +
+      '</children>' +
+      '</subscript>' +
+      '<relation role="equality" id="2">=</relation>' +
+      '</children>' +
+      '</superscript>'
+  );
+};
+
+
+/**
+ * Ellipses and explicit spacing.
+ */
+sre.SemanticTreeTest.prototype.testStreeEllipsesExplicitSpacing = function() {
+  this.executeTreeTest(
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"> </text>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<punctuated role="text" id="3">' +
+      '<content>' +
+      '<punctuation role="dummy" id="2">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"> </text>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
+      '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<punctuation role="ellipsis" id="0">…</punctuation>' +
+      '<text role="unknown" id="1"> </text>' +
+      '<punctuation role="ellipsis" id="2">…</punctuation>' +
+      '</children>' +
+      '</punctuated>'
+  );
+  this.executeTreeTest(
+      '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
+      '<punctuated role="text" id="5">' +
+      '<content>' +
+      '<punctuation role="dummy" id="3">⁣</punctuation>' +
+      '<punctuation role="dummy" id="4">⁣</punctuation>' +
+      '</content>' +
+      '<children>' +
+      '<text role="unknown" id="0"> </text>' +
+      '<punctuation role="ellipsis" id="1">…</punctuation>' +
+      '<text role="unknown" id="2"> </text>' +
+      '</children>' +
+      '</punctuated>'
+  );
 };

@@ -22,6 +22,7 @@
  */
 goog.provide('sre.AuditoryDescription');
 
+goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
 
 
@@ -33,9 +34,7 @@ goog.require('sre.Engine');
  *          text: (string),
  *          userValue: (undefined|string),
  *          annotation: (undefined|string),
- *          correction: (undefined|string),
- *          personality: (undefined|Object),
- *          preprocess: (undefined|boolean)}} kwargs The arguments for this
+ *          personality: (undefined|Object)}} kwargs The arguments for this
  *  description.
  *  context The context, for example descriptions of objects
  *     that were crossed into, like "Toolbar" or "Menu Bar" or "List with
@@ -44,20 +43,39 @@ goog.require('sre.Engine');
  *     titles, labels, etc.
  *  userValue The text that the user has entered.
  *  annotation The role and state of the object.
- *  correction A string that can be exploited as correction of the text.
  *  personality Optional TTS personality to use for the text.
- *  preprocess Flag indicating if the text needs to be preprocessed for
- *     non-ASCII characters.
  * @constructor
  */
 sre.AuditoryDescription = function(kwargs) {
-  this.context = kwargs.context ? kwargs.context : '';
-  this.text = kwargs.text ? kwargs.text : '';
-  this.userValue = kwargs.userValue ? kwargs.userValue : '';
-  this.annotation = kwargs.annotation ? kwargs.annotation : '';
-  this.correction = kwargs.correction ? kwargs.correction : '';
-  this.personality = kwargs.personality;
-  this.preprocess = !!kwargs.preprocess;
+  this.context = kwargs.context || '';
+  this.text = kwargs.text || '';
+  this.userValue = kwargs.userValue || '';
+  this.annotation = kwargs.annotation || '';
+  this.personality = kwargs.personality || {};
+};
+
+
+
+/**
+ * Create an auditory description from given components.
+ * @param {{context: (undefined|string),
+ *          text: (string),
+ *          userValue: (undefined|string),
+ *          annotation: (undefined|string),
+ *          correction: (undefined|string),
+ *          personality: (undefined|Object)}} kwargs The arguments for this
+ *  description.
+ * @param {{adjust: (undefined|boolean),
+ *          preprocess: (undefined|boolean),
+ *          correct: (undefined|boolean),
+ *          translate: (undefined|boolean)}=} opt_flag Flag to force grammar
+ *      processing options.
+ * @return {sre.AuditoryDescription} The newly created auditory description.
+ * @constructor
+ */
+sre.AuditoryDescription.create = function(kwargs, opt_flag) {
+  kwargs.text = sre.Grammar.getInstance().apply(kwargs.text, opt_flag || {});
+  return new sre.AuditoryDescription(kwargs);
 };
 
 
@@ -69,6 +87,28 @@ sre.AuditoryDescription.prototype.isEmpty = function() {
           this.text.length == 0 &&
           this.userValue.length == 0 &&
           this.annotation.length == 0);
+};
+
+
+/**
+ * Clones the Auditory description.
+ * @return {!sre.AuditoryDescription} The new description.
+ */
+sre.AuditoryDescription.prototype.clone = function() {
+  var personality;
+  if (this.personality) {
+    personality = {};
+    for (var key in this.personality) {
+      personality = this.personality[key];
+    }
+  }
+  return new sre.AuditoryDescription(
+      {context: this.context,
+        text: this.text,
+        userValue: this.userValue,
+        annotation: this.annotation,
+        personality: personality
+      });
 };
 
 
@@ -93,7 +133,7 @@ sre.AuditoryDescription.prototype.descriptionString = function() {
 
 /**
  * Compares two AuditoryDescriptions.
- * @param {sre.AuditoryDescription} that A AuditoryDescription.
+ * @param {sre.AuditoryDescription} that An auditory description.
  * @return {boolean} True if equal.
  */
 sre.AuditoryDescription.prototype.equals = function(that) {

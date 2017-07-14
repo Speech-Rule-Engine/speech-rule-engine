@@ -20,7 +20,9 @@
 
 goog.provide('sre.MathmlStoreUtil');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.Engine');
+goog.require('sre.Grammar');
 goog.require('sre.MathUtil');
 goog.require('sre.XpathUtil');
 
@@ -124,13 +126,17 @@ sre.MathmlStoreUtil.checkMathjaxMsup = function(jax) {
  * Computes the correct separators for each node.
  * @param {Array.<Node>} nodes A node array.
  * @param {string} context A context string.
- * @return {function(): string} A closure that returns the next separator for an
- * mfenced expression starting with the first node in nodes.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the next separator for an mfenced expression starting with the first node
+ *     in nodes.
  */
 sre.MathmlStoreUtil.mfencedSeparators = function(nodes, context) {
   var nextSeparator = sre.MathUtil.nextSeparatorFunction(context);
   return function() {
-    return nextSeparator ? nextSeparator() : '';
+    return nextSeparator ?
+        [sre.AuditoryDescription.create(
+        {text: nextSeparator()}, {translate: true})] :
+        [];
   };
 };
 
@@ -139,8 +145,9 @@ sre.MathmlStoreUtil.mfencedSeparators = function(nodes, context) {
  * Iterates over the list of content nodes of the parent of the given nodes.
  * @param {Array.<Node>} nodes A node array.
  * @param {string} context A context string.
- * @return {function(): string} A closure that returns the content of the next
- *     content node. Returns only context string if list is exhausted.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
  */
 sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
   if (nodes.length > 0) {
@@ -150,42 +157,14 @@ sre.MathmlStoreUtil.contentIterator = function(nodes, context) {
   }
   return function() {
     var content = contentNodes.shift();
-    return context + (content ? content.textContent : '');
+    var contextDescr = context ?
+        [sre.AuditoryDescription.create(
+            {text: context}, {translate: true})] :
+        [];
+    if (!content) {
+      return contextDescr;
+    }
+    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    return contextDescr.concat(descrs);
   };
 };
-
-
-/**
- * Rewrites a font attribute in a node to hide it during application of
- *    subsequent rules.
- * @param {!Node} node The node to be modified.
- * @return {Array.<Node>} The node list containing the modified node only.
- */
-sre.MathmlStoreUtil.hideFont = function(node) {
-  if (node.hasAttribute('font')) {
-    var value = node.getAttribute('font');
-    node.removeAttribute('font');
-    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', value);
-    node.setAttribute('hiddenfont', value);
-  }
-  return [node];
-};
-
-
-/**
- * Rewrites a hidden font attribute in a node to be visible again as a regular
- *     font attribute. This is implemented as a custom string function.
- * @param {!Node} node The node to be modified.
- * @return {!string} The empty string.
- */
-sre.MathmlStoreUtil.showFont = function(node) {
-  if (node.hasAttribute('hiddenfont')) {
-    var value = node.getAttribute('hiddenfont');
-    node.removeAttribute('hiddenfont');
-    sre.SpeechRuleEngine.getInstance().setGlobalParameter('remove', '');
-    node.setAttribute('font', value);
-  }
-  return '';
-};
-
-
