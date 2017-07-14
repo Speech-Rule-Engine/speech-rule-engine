@@ -208,6 +208,9 @@ sre.SemanticProcessor.prototype.postfixNode_ = function(node, postfixes) {
  * @return {!sre.SemanticNode} The new semantic text node.
  */
 sre.SemanticProcessor.prototype.text = function(content, font, type) {
+  if (!content) {
+    return sre.SemanticProcessor.getInstance().factory_.makeEmptyNode();
+  }
   var leaf = sre.SemanticProcessor.getInstance().factory_.
       makeLeafNode(content, font);
   leaf.type = sre.SemanticAttr.Type.TEXT;
