@@ -59,14 +59,14 @@ sre.AbstractExamples = function() {
    * @private
    */
   this.fileExtension_ = 'html';
-  
+
   /**
    * Base directory for the output file.
    * @type {!string}
    * @private
    */
   this.fileDirectory_ = 'www/localisation';
-  
+
   /**
    * Sets example output file for tests.
    * @type {!string}
@@ -117,7 +117,7 @@ sre.AbstractExamples.prototype.appendExamples = function(type, example) {
     var examples = this.examples_[type];
     var cleaned = this.cleanup(example);
     if (examples) {
-      examples.push(cleaned); 
+      examples.push(cleaned);
     } else {
       this.examples_[type] = [cleaned];
     }

@@ -75,7 +75,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
                       sre.AbstractRuleTest.htmlCell_(
                         sre.AbstractRuleTest.styleMap_(opt_style)) +
                       ' Style </h2>',
-                      sre.AbstractRuleTest.htmlCell_(mathMl) + 
+                      sre.AbstractRuleTest.htmlCell_(mathMl) +
                       sre.AbstractRuleTest.htmlCell_(answer)
                       );
   sre.SpeechRuleEngine.getInstance().clearCache();
@@ -118,7 +118,7 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
       '<html> <head>\n' +
       '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n' +
       mathjax +
-      '\n<title>' + this.information + '</title>\n' + 
+      '\n<title>' + this.information + '</title>\n' +
       '\n</head>\n<body>\n<table>\n';
   var end = '\n</table>\n</body>\n</html>';
   for (var i = 0, l = examples.length; i < l; i++) {
