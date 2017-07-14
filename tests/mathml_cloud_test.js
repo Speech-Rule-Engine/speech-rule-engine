@@ -50,6 +50,8 @@ sre.MathmlCloudTest = function() {
    * @override
    */
   this.rules = ['MathspeakRules'];
+
+  this.setActive('MathmlCloud');
 };
 goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 

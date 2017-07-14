@@ -38,7 +38,7 @@ sre.EnrichMathmlTest = function() {
    */
   this.information = 'Semantic enrichment tests.';
 
-  this.setActive('EnrichExamples');
+  this.setActive('EnrichExamples', 'js');
 };
 goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
@@ -49,6 +49,7 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 sre.EnrichMathmlTest.prototype.setUpTest = function() {
   this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
                         'data-semantic-fencepointer'];
+  sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
 
@@ -64,6 +65,7 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   this.customizeXml(node);
+  this.appendExamples('', mml);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));

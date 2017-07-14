@@ -51,7 +51,7 @@ sre.NobleSamplesTest = function() {
    */
   this.rules = ['MathspeakRules'];
 
-  this.setActive('MathspeakExamples');
+  this.setActive('NobleSamples');
 };
 goog.inherits(sre.NobleSamplesTest, sre.AbstractRuleTest);
 
