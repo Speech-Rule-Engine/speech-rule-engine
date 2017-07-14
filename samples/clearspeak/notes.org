@@ -1,0 +1,316 @@
+* Notes on Preferences:
+
+** Part_3
+
+*** Bar preference missing
+    Added in html file.
+    [DONE] 
+
+*** Equals sign with adornment has not preference
+    make default?
+
+
+** Part2
+
+*** Two preferences set...
+
+*** No preference for sums, etc.
+
+** Multi-Line Entries
+
+*** ImpliedTimes
+*** No implied time and silent parens
+
+
+* Pausing
+
+** Remarks
+   Don't forget to add if necessary
+   Generate two samples, one with ssml and one without.
+
+** Positions
+*** Around  parenthesis
+*** After (or before?) of
+*** Multiline expressions
+
+* Prosody
+
+** Remarks 
+   Generate two samples each.
+
+** Positions
+*** Only for caps!
+
+** What do the commata mean in CapitalLetters?
+   Likely pausing!
+
+
+* Mistakes in the original examples:
+
+** Missing Bar_ preference in part_3
+
+** Starting letters should not be capitalised! This seems to be a word artefact!
+   It is particularly confusing for distinguishing capital letters and non-caps!
+
+** ImpliedTimes Extra017 should be 'a squared'
+
+** All the exact speech stuff in ImpliedTimes?
+
+** Fractions Fracfunct014: Why emphasise?
+
+** Enumeration problems
+
+*** multiline
+    missing between Multiline019 and Multiline020
+
+    SOLVED: renamed to Multiline019a
+
+*** Exponent
+    Exp002a + Exp10a. Why?
+    Then repetition of Exp010 to Exp019?
+
+    SOLVED: Renamed second set of Exp010-Exp019 to Exp010b-Exp019b
+
+*** Exponent
+    Exp124 twice. Second should be Exp134.
+    
+    SOLVED: Corrected to Exp134
+
+*** Fractions
+    Frac027 twice. Second should be Frac029.
+
+    SOLVED: Corrected to Frac029
+
+*** Fractions
+    Frac067 twice. Second should be Frac069.
+
+    SOLVED: Corrected to Frac069
+
+*** ImpliedTimes
+    ImpTimes070 twice.
+
+    SOLVED: renamed second to ImpTimes070a
+
+*** Matrices
+    Matrix027 twice. Second should be Matrix029.
+
+    SOLVED: Corrected to Matrix029
+
+*** Matrices
+    Missing identifier between Matrix057 and Matrix058.
+
+    SOLVED: Renamed to Matrix057a
+    
+
+** Other errors or corrections
+
+*** Absolute Value
+    Pausing/punctuation problems. The following is not consistent:
+    , sometimes before end absolute value
+    , sometimes before "the absolute value of"
+    Changes to:
+**** remove cap: Abs04, AbsEnd01 - AbsEnd04
+**** Abs04: Added ,
+**** AbsEnd02: , before end absolute value
+**** AbsEnd04: 
+***** , in x end absolute value
+***** rewrite "equal, to the absolute value" to "equal to, the absolute value"
+**** AbsDet02: last comma is wrong: "4 ,7"
+
+* Sentence markup
+
+** Capitalise start and end with period?
+
+** Matrix columns etc, with ; . : , . What is all that about?
+
+*** Currently we do these as short (,), medium (;), long (.) pauses.
+
+* Additions to tests:
+
+** Named sets
+   
+*** NumSys001a
+    mathvariant
+*** NumSys005a
+    Natural numbers with zero.
+*** NumSys006a
+    positive vs negative integers.
+
+
+* Additions to JSON files.
+
+** General rule: we've only added what was necessary for the tests at the moment.
+** Might need to resolve conflicts once merged with the version for MathJax 2.7.2.
+
+** Math-Symbols:
+*** plus minus symbol
+*** all less than and greater than variants
+**** default: with preceding is
+**** 003B, 003B, 003E, 225A - 2279
+Helper function for Emacs:
+
+(defun add-is ()
+  (interactive)
+  (beginning-of-line)
+  (search-forward ": \"")
+  (insert-char 105)
+  (insert-char 115)
+  (insert-char 32)
+  )
+
+* Errors in example documents
+  Correspond to corrections to single tests (the list is not necessarily exhaustive!)
+
+** frtxt004: changes six to 6
+
+** testNestFrac002: added pausing commas
+
+** Check all the unit examples with fractions!
+
+** Decapitalise most of them.
+
+** testFrac012-015: X -> x
+
+** testFrac015,testFrac046,testFrac062: gallons -> gallon
+
+** testFrac022, testFrac053: missing pause comma
+
+** testFrac057: numbers to alpha
+
+** testFrac059: Decap X
+
+
+** testFrac061: Missing pause comma
+
+
+** testFrac062,testFrac070: Decap Miles
+
+
+** testFrac064: Decap One
+
+** testFrac069: Missing pause comma
+
+
+** testNestFrac007: And -> and, 
+   
+** Problems with pausing commas: 
+   testNestFrac00, testNestFrac005, testNestFrac006, testNestFrac007, testNestFrac008,
+   testNestFrac018 (around sub),
+
+   testNestFrac023, testNestFrac024, testNestFrac025 (incorrect, goes after 1 plus), testNestFrac026,
+   testNestFrac027, testNestFrac028, testNestFrac029, testNestFrac030,
+   testNestFrac031, testNestFrac032, testNestFrac033, testNestFrac034,
+   testNestFrac035, testNestFrac036
+
+   testFracfunct003, testFracfunct006
+
+** testNestFrac013: 1 16th to 1 over 16
+
+** testNestFrac014, testNestFrac016, testNestFrac017: one to 1
+
+** testNestFrac023 ending .
+** testNestFrac029 "the x" should be "x"
+** testNestFrac032/33/34 one -> 1
+** testFracfunct caps: 001, 007, 008
+ 010, 011, 012, 013, 014
+** testFracfunct pause comma: 001, 002, 006, 012, 018 (around functions)
+** emphasis removed 014
+
+** testFracfunct spelling:
+
+*** 008 slose -> close
+*** 009 sin -> sine
+
+
+** Functions:
+
+*** Corrections:
+
+**** 005 2 x -> 2x
+
+**** 007,026,109 one -> 1
+
+**** 033 f instead of h
+
+**** 034 g instead of h
+
+**** 042: Missing open paren inserted.
+
+**** 053, 061, 063, 071, 076, 088, 107, 135, 143, 145, 153: 2 x -> 2x
+
+**** 090: Missing mentioning of fraction preference, one -> 1
+
+**** 081: close -> close paren
+
+**** 113: mssing close paren
+
+**** 120, 121: H -> h
+
+**** removed <mtext></mtext> 
+
+**** 144: timesx -> times x
+
+*** Pausing commas: 
+    043, 008, 027, 044, 047, 048, 049, 061, 066, 072-080, 091, 099, 100, 118,
+    124, 125, 126, 127, 131, 145, 149, 154, 156, 157
+
+*** Pausing comma questionable:
+    050, 051, 132, 133
+
+*** Capitalisation removed:
+    Function044, Function045, Function046, Function047, Function048,
+    Function049, Function126, Function127, Function128, Function129,
+    Function130, Function131, Function056, Function057, Function058,
+    Function059, Function060, Function061, Function066, Function067,
+    Function068, Function069, Function070
+
+** Exponents:
+
+*** Emphasis removed:
+    Exp012, Exp013, Exp018, Exp019, Exp010b, Exp011b, Exp012b, Exp013b, Exp013b,
+    Exp015b, Exp017b, Exp020, Exp020, Exp024, Exp025, Exp029, Exp030, Exp031,
+    Exp031, Exp032, Exp033, Exp034, Exp035, Exp051, Exp052, Exp057, Exp058,
+    Exp059, Exp060, Exp061, Exp062, Exp062, Exp064, Exp066, Exp069, Exp069,
+    Exp073, Exp074, Exp078, Exp079, Exp080, Exp080, Exp081, Exp082, Exp083,
+    Exp083, Exp084, Exp084, Exp095, Exp096, Exp101, Exp102, Exp103, Exp104,
+    Exp105, Exp106, Exp106, Exp108, Exp110, Exp113, Exp113, Exp117, Exp118,
+    Exp122, Exp123, Exp124, Exp124, Exp125, Exp126, Exp127, Exp128, Exp138,
+    Exp139, Exp140, Exp145, Exp146, Exp147, Exp148, Exp149, Exp150, Exp150,
+    Exp152, Exp154, Exp156, Exp159, Exp159, Exp161, Exp163, Exp164, Exp168,
+    Exp169, Exp170, Exp170, Exp171, Exp171, Exp172, Exp172, Exp173, Exp174,
+
+*** Corrections: 
+**** Exp012: + -> plus
+
+
+**** Exp013: + -> plus and added spaces
+
+*** Decap: 013
+
+*** Rewritten ordinals: 016, 017
+
+*** Added spacing: 
+    017b: 2x -> 2 x
+
+
+
+
+
+
+** Par2_Symbols
+
+*** Decap: 
+    X002, X005, Dot002, Dot005, Ellipses003, Ellipses006, VertLine002,
+    VertLine003, VertLine007, MembSym002, MembSym005, MembSym008, MembSym011,
+    MembSym014, SetMemb001, SetMemb002, Sum001, Sum002, Sum003, Sum004, Sum005,
+    Sum006, Sum007, Sum008, Sum009, Sum010, Sum011, Sum012, Sum013, Sum014,
+    Sum015, Sum016, Sum017, Sum018,
+
+*** Pausing commata: 
+    Ellipses002, Ellipses003, Ellipses004, Ellipses006, 
+    
+*** Empty <mtext/> elements.
+
+*** Missing "comma": 
+    Ellipses006, Ellipses004, Ellipses005, 
+    Check with Neil on those!
