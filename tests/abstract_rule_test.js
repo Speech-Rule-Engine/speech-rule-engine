@@ -87,6 +87,12 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
 };
 
 
+/**
+ * Maps a style name to its English equivalent and does some pretty printing.
+ * @param {string} style The style name.
+ * @return {string} The prettier name.
+ * @private
+ */
 sre.AbstractRuleTest.styleMap_ = function(style) {
   var map = {'default': 'verbose',
              'sbrief': 'superbrief'};
@@ -95,16 +101,32 @@ sre.AbstractRuleTest.styleMap_ = function(style) {
 };
 
 
+/**
+ * Wraps an entry into an HTML cell.
+ * @param {string} entry A single entry.
+ * @return {string} The HTML cell.
+ * @private
+ */
 sre.AbstractRuleTest.htmlCell_ = function(entry) {
   return '<td>' + entry + '</td>';
 };
 
 
+/**
+ * Cleans the output example depending on the test requirements.
+ * @param {string} example The example string.
+ * @return {string} The cleaned string.
+ */
 sre.AbstractRuleTest.prototype.cleanup = function(example) {
   return example;
 };
 
 
+/**
+ * Joins the formatted examples. Can be specialised depending on the test suite.
+ * @param {Array.<string>} examples List of formatted examples.
+ * @return {string} The final, joined HTML page.
+ */
 sre.AbstractRuleTest.prototype.join = function(examples) {
   var mathjax = '<script type="text/javascript" async ' +
       'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/' +
@@ -116,7 +138,7 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
       '}\n</style>\n';
   var head = '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
       '<html> <head>\n' +
-      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n' +
+      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
       mathjax +
       '\n<title>' + this.information + '</title>\n' +
       '\n</head>\n<body>\n<table>\n';

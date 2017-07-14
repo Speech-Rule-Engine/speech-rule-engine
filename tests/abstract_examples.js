@@ -37,7 +37,7 @@ sre.AbstractExamples = function() {
    * @type {boolean}
    * @private
    */
-  this.active_ = false;
+  this.active_ = true;
 
   /**
    * Possible file error.
@@ -90,7 +90,6 @@ goog.inherits(sre.AbstractExamples, sre.AbstractTest);
 sre.AbstractExamples.prototype.setActive = function(file) {
   this.examplesFile_ = this.fileDirectory_ + '/' + file +
       '.' + this.fileExtension_;
-  this.active_ = false;
 };
 
 
