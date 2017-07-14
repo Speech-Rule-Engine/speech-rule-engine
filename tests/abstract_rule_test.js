@@ -70,7 +70,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   opt_style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  // this.appendExamples(mathMl);
+  // TODO: Sort out the title properly!
   this.appendExamples('<h2>MathSpeak English ' +
                       sre.AbstractRuleTest.htmlCell_(
       sre.AbstractRuleTest.styleMap_(opt_style)) +
@@ -113,9 +113,7 @@ sre.AbstractRuleTest.htmlCell_ = function(entry) {
 
 
 /**
- * Cleans the output example depending on the test requirements.
- * @param {string} example The example string.
- * @return {string} The cleaned string.
+ * @override
  */
 sre.AbstractRuleTest.prototype.cleanup = function(example) {
   return example;
@@ -123,9 +121,7 @@ sre.AbstractRuleTest.prototype.cleanup = function(example) {
 
 
 /**
- * Joins the formatted examples. Can be specialised depending on the test suite.
- * @param {Array.<string>} examples List of formatted examples.
- * @return {string} The final, joined HTML page.
+ * @override
  */
 sre.AbstractRuleTest.prototype.join = function(examples) {
   var mathjax = '<script type="text/javascript" async ' +

@@ -87,9 +87,9 @@ goog.inherits(sre.AbstractExamples, sre.AbstractTest);
 /**
  * @override
  */
-sre.AbstractExamples.prototype.setActive = function(file) {
-  this.examplesFile_ = this.fileDirectory_ + '/' + file +
-      '.' + this.fileExtension_;
+sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
+  var ext = opt_ext || this.fileExtension_;
+  this.examplesFile_ = this.fileDirectory_ + '/' + file + '.' + ext;
 };
 
 
@@ -97,7 +97,6 @@ sre.AbstractExamples.prototype.setActive = function(file) {
  * @override
  */
 sre.AbstractExamples.prototype.startExamples = function() {
-  console.log(this.active_);
   if (!this.active_) return;
   try {
     sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
@@ -111,7 +110,6 @@ sre.AbstractExamples.prototype.startExamples = function() {
  * @override
  */
 sre.AbstractExamples.prototype.appendExamples = function(type, example) {
-  // TODO (sorge) Rewrite this to append asynchronously to file.
   if (this.active_ && !this.fileError_) {
     var examples = this.examples_[type];
     var cleaned = this.cleanup(example);

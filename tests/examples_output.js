@@ -30,8 +30,9 @@ sre.ExamplesOutput = function() { };
 /**
  * Activates the example output.
  * @param {string} file The output file.
+ * @param {string=} opt_ext A file extension.
  */
-sre.ExamplesOutput.prototype.setActive = function(file) { };
+sre.ExamplesOutput.prototype.setActive = function(file, opt_ext) { };
 
 
 /**
