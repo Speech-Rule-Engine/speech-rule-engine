@@ -122,6 +122,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'text', 'clearspeak.default', '[n] text()', 'self::text');
 
   // Symbols
+  // Capital letters
+  // defineRule(
+  //   'capital', 'clearspeak.default', '[t] text() (grammar:ignoreFont="cap")',
+  //   'self::identifier',
+  //   '@role="latinletter" or @role="greekletter" or @role="otherletter"');
+
   // Comma
   defineRule(
       'punctuation-lr', 'clearspeak.default',
