@@ -297,20 +297,47 @@ Helper function for Emacs:
 
 
 
-** Par2_Symbols
+** Part2_Symbols
 
 *** Decap: 
     X002, X005, Dot002, Dot005, Ellipses003, Ellipses006, VertLine002,
     VertLine003, VertLine007, MembSym002, MembSym005, MembSym008, MembSym011,
     MembSym014, SetMemb001, SetMemb002, Sum001, Sum002, Sum003, Sum004, Sum005,
     Sum006, Sum007, Sum008, Sum009, Sum010, Sum011, Sum012, Sum013, Sum014,
-    Sum015, Sum016, Sum017, Sum018,
+    Sum015, Sum016, Sum017, Sum018, VertLine005
 
 *** Pausing commata: 
-    Ellipses002, Ellipses003, Ellipses004, Ellipses006, 
+    Ellipses002, Ellipses003, Ellipses004, Ellipses006, VertLine004, VertLine005, VertLine006
     
 *** Empty <mtext/> elements.
-
+    
 *** Missing "comma": 
     Ellipses006, Ellipses004, Ellipses005, 
     Check with Neil on those!
+
+*** Corrections
+
+**** VertLine003: 
+     added "all", 
+     added commas around absolute value
+
+**** VertLine004, VertLine005:
+     = to equals
+     Caps + commas
+
+** Sets enclosed in brackets
+
+*** Removes <em>:
+    Set001, Set001, Set002, Set002, Set003, Set003, Set004, Set004, Set007,
+    Set007, Set008, Set008, Set009, Set009, Set012, Set012, Set013, Set013,
+    Set014, Set014, Set015, Set015,
+
+*** Decap:
+    Set001, Set002, Set003, Set004, Set005, Set006, Set007, Set008, Set009,
+    Set010, Set011, Set012, Set013, Set014, Set015,
+
+*** Trailing period removed:
+    Set001, Set003, Set007, Set009, Set012, Set014
+
+*** Pausing commata:
+    Set002, Set008, Set013

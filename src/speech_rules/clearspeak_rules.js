@@ -435,6 +435,19 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'set-collection', 'clearspeak.default',
       '[t] "the set"; [n] children/*[1]',
       'self::fenced', '@role="set collection"');
+  defineRuleAlias(
+      'set-collection', 'self::fenced', '@role="set singleton"');
+
+  defineRule(
+    'set-extended', 'clearspeak.Sets_woAll',
+    '[t] "the set of"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "such that"; [n] children/*[1]/children/*[3]',
+    'self::fenced', '@role="set extended"');
+  defineRule(
+      'set-collection', 'clearspeak.Sets_SilentBracket',
+      '[n] children/*[1]',
+      'self::fenced', '@role="set collection"');
+
 
   // Subscript
   defineRule(

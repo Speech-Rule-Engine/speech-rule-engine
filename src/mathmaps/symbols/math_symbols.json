@@ -1844,6 +1844,9 @@
       },
       "mathspeak": {
         "default": "element-of"
+      },
+      "clearspeak": {
+        "default": "in"
       }
     },
     "key": "2208"
@@ -1856,6 +1859,9 @@
       },
       "mathspeak": {
         "default": "not-an-element-of"
+      },
+      "clearspeak": {
+        "default": "not in"
       }
     },
     "key": "2209"
