@@ -121,7 +121,12 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
   'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js'
+  'math_whitespace.js', 'other_stars.js',
+
+  // TODO: Sort this similar to the above.
+  // Localisation
+  'spanish.js'
+
 ];
 
 
@@ -161,6 +166,8 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_ += files.length;
       for (var i = 0, file; file = files[i]; i++) {
+        console.log('loading file');
+        console.log(file);
         sre.MathMap.fromFile_(path + file,
             function(err, json) {
               sre.MathMap.toFetch_--;

@@ -132,9 +132,14 @@ goog.addSingletonGetter(sre.MathCompoundStore);
  *     domains to strings, from which the speech rules will be computed.
  */
 sre.MathCompoundStore.prototype.defineRules = function(name, str, mappings) {
-  var store = new sre.MathSimpleStore();
+  var store = this.subStores_[str];
+  if (store) {
+    sre.Debugger.getInstance().output('Store exists! ' + str);
+  } else {
+    store = new sre.MathSimpleStore();
+    this.subStores_[str] = store;
+  }
   store.defineRulesFromMappings(name, str, mappings);
-  this.subStores_[str] = store;
 };
 
 

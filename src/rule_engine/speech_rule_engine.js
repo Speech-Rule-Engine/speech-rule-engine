@@ -208,6 +208,7 @@ sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
+  console.log(sre.Engine.getInstance().dynamicCstr);
   var timeIn = (new Date()).getTime();
   var result = this.evaluateNode_(node);
   var timeOut = (new Date()).getTime();
