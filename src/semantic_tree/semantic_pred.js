@@ -355,7 +355,7 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
 
 
 /**
- * Given a list of punctuated node and their containint puncutations, decides if
+ * Given a list of punctuated node and their containing puncutations, decides if
  * there is exactly one punctuation, which is at the given position. Will
  * therefore return false if the puncutation is a dummy in a text sequence.
  * @param {!Array.<sre.SemanticNode>} nodes A list of punctuated nodes.
@@ -366,8 +366,9 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
  */
 sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
   return puncts.length === 1 &&
-      nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION &&
-      nodes[position] === puncts[0];
+    (nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION ||
+     nodes[position].embellished === sre.SemanticAttr.Type.PUNCTUATION) &&
+    nodes[position] === puncts[0];
 };
 
 

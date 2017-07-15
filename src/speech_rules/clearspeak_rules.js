@@ -158,6 +158,41 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'preceding-sibling::*[1]', 'following-sibling::*[1]'
   );
 
+  // Vertical bar
+  defineRule(
+    'vbar-evaluated', 'clearspeak.default',
+    '[n] children/*[1]; [p] (pause:"short"); [t] "evaluated at";' +
+      ' [n] content/*[1]/children/*[2]; [p] (pause:"short")',
+    'self::punctuated', '@role="endpunct"', 'content/*[1][@role="vbar"]',
+    'content/*[1][@embellished]', 'name(content/*[1])="subscript"'
+  );
+  defineRule(
+    'vbar-evaluated', 'clearspeak.default',
+    '[n] children/*[1]; [p] (pause:"short"); [t] "evaluated at";' +
+      ' [n] content/*[1]/children/*[2]; [p] (pause:"short"); ' +
+      '[t] "minus the same expression evaluated at";' +
+      ' [n] content/*[1]/children/*[1]/children/*[2]; [p] (pause:"short")',
+    'self::punctuated', '@role="endpunct"', 'content/*[1][@role="vbar"]',
+    'content/*[1][@embellished]', 'name(content/*[1])="superscript"',
+    'name(content/*[1]/children/*[1])="subscript"'
+  );
+
+  defineRule(
+    'vbar-such-that', 'clearspeak.VerticalLine_SuchThat',
+    '[t] "such that"', 'self::punctuation', '@role="vbar"',
+    'parent::*/parent::*[@embellished!="punctuation"]'
+  );
+  defineRule(
+    'vbar-such-that', 'clearspeak.VerticalLine_Divides',
+    '[t] "divides"', 'self::punctuation', '@role="vbar"',
+    'parent::*/parent::*[@embellished!="punctuation"]'
+  );
+  defineRule(
+    'vbar-such-that', 'clearspeak.VerticalLine_Given',
+    '[t] "given"', 'self::punctuation', '@role="vbar"',
+    'parent::*/parent::*[@embellished!="punctuation"]'
+  );
+
 
   defineRule(
       'punctuated', 'clearspeak.default',
@@ -205,7 +240,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'superscript', 'clearspeak.default',
       '[n] children/*[1]; [t] "raised to exponent" (pause:"short"); ' +
-      '[n] children/*[2] (pause:"short"); [t] "end exponent"',
+      '[n] children/*[2]; [p] (pause:"short"); [t] "end exponent"',
       'self::superscript');
   defineRule(
       'superscript-simple-exponent', 'clearspeak.default',
@@ -388,11 +423,18 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   // Set braces
   defineRule(
-      'fences-set', 'clearspeak.default',
-      '[t] "the set of all"; [n] children/*[1]',
-      'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-      'content/*[2][text()]="}"', 'count(children/*)=1',
-      'not(name(../..)="appl")');
+      'set-empty', 'clearspeak.default',
+      '[t] "the empty set"',
+      'self::fenced', '@role="set empty"');
+  defineRule(
+      'set-extended', 'clearspeak.default',
+      '[t] "the set of all"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "such that"; [n] children/*[1]/children/*[3]',
+      'self::fenced', '@role="set extended"');
+  defineRule(
+      'set-collection', 'clearspeak.default',
+      '[t] "the set"; [n] children/*[1]',
+      'self::fenced', '@role="set collection"');
 
   // Subscript
   defineRule(

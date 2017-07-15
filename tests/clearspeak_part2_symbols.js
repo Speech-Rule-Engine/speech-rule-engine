@@ -337,7 +337,7 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine002
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine002 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine002 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = 'the set of all x such that x is greater than 0';
@@ -348,10 +348,10 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine003
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine003 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine003 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn></mrow><mo>}</mo></mrow></mrow></math>';
-  var speech = 'the set of x such that the absolute value of x is greater than 2';
+  var speech = 'the set of all x such that, the absolute value of x, is greater than 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -359,10 +359,10 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine004
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine004 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine004 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></msub></mrow></math>';
-  var speech = 'f of x evaluated at x = 5';
+  var speech = 'f of x, evaluated at x equals 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -370,10 +370,10 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine005
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine005 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine005 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></msub></mrow></math>';
-  var speech = 'X squared plus 2x, evaluated at x = 2';
+  var speech = 'x squared plus 2x, evaluated at x equals 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -381,10 +381,10 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine005 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine006
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine006 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine006 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><msubsup><mstyle mathsize="140%" displaystyle="true"><mo>|</mo></mstyle><mn>0</mn><mn>1</mn></msubsup></mrow></math>';
-  var speech = 'x squared plus x evaluated at 1 minus the same expression evaluated at 0';
+  var speech = 'x squared plus x, evaluated at 1, minus the same expression evaluated at 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -392,7 +392,7 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine006 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine007
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine007 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine007 = function() {
   var preference = 'VerticalLine_SuchThat';
   var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mi>x</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = 'the set of all x such that x is greater than 0';
@@ -403,7 +403,7 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine007 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example VertLine008
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine008 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine008 = function() {
   var preference = 'VerticalLine_Divides';
   var mathml = '<math><mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow></math>';
   var speech = '3 divides 6';
@@ -411,13 +411,14 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine008 = function() {
 };
 
 
+// TODO: (MOSS) Sort out with uppercases!
 /**
  * Testing ClearspeakPart2Symbols Example VertLine009
  */
 sre.ClearspeakPart2Symbols.prototype.untestVertLine009 = function() {
   var preference = 'VerticalLine_Given';
   var mathml = '<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow><mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '<p>P of, open paren, A given B, close paren</p><p>(To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
+  var speech = 'P of, open paren, A given B, close paren'; // (To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
