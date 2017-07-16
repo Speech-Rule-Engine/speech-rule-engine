@@ -363,3 +363,9 @@ Helper function for Emacs:
 
 *** Measure of angle:
     Cap009, Cap010, Cap019, Cap020
+
+
+** Trigonometry
+
+*** Decap:
+    Trig001, Trig002, Trig003, Trig004, Trig005, Trig006, Trig007, Trig008, Trig009, Trig010, Trig011, Trig012, Trig013, Trig014, Trig015, Trig016, Trig019, Trig021, Trig022, Trig023, Trig024, Trig025, Trig026, Trig027, Trig028, Trig029, Trig030, Trig031, Trig032, Trig033, Trig034, Trig035, Trig036, Trig037, Trig038, Trig039, Trig040, Trig041, Trig042, Trig043, Trig044, Trig045, TrigInvAuto001, TrigInvAuto002, TrigInvAuto003, TrigInvAuto004, TrigInvAuto005, TrigInvAuto006, TrigInvAuto007, TrigInvAuto008, TrigInvAuto009, TrigInvAuto010, TrigInvAuto011, TrigInvAuto012, TrigInvAuto013, TrigInvAuto014, TrigInvAuto015, TrigInvAuto016, TrigInvAuto017, TrigInvAuto018, TrigInvAuto019, TrigInvAuto020, TrigInvAuto021, TrigInvAuto022, TrigInvAuto023, TrigInvAuto024, TrigInvAuto025, TrigInvAuto026, TrigInverse001, TrigInverse002, TrigInverse003, TrigInverse004, TrigInverse005, TrigInverse006, TrigInverse007, TrigInverse008, TrigInverse009, TrigInverse010, TrigInverse011, TrigInverse012, TrigInverse013, TrigInverse014, TrigInverse015, TrigInverse016, TrigInverse017, TrigInverse018, TrigInverse019, TrigInverse020, TrigInverse021, TrigInverse022, TrigInverse023, TrigInverse024, TrigInverse025, TrigInverse026, ArcTrig001, ArcTrig002, ArcTrig003, ArcTrig004, ArcTrig005, ArcTrig006, ArcTrig007, ArcTrig008, ArcTrig009, ArcTrig010, ArcTrig011, ArcTrig012, ArcTrig013, ArcTrig014, ArcTrig015, ArcTrig016, ArcTrig017, ArcTrig018, ArcTrig019, ArcTrig020, ArcTrig021, ArcTrig022, ArcTrig023, ArcTrig024, ArcTrig025, ArcTrig026, AllTrig01, AllTrig02, AllTrig03, HypTrig007, HypTrig008, HypTrig009, HypTrig010, HypTrig011, HypTrig012, HypTrig017, HypTrig018, HypTrig019, HypTrig020, 
