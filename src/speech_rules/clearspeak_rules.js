@@ -103,6 +103,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
+  addCQF('CQFisCapital', sre.ClearspeakUtil.isCapitalLetter);
 };
 
 
@@ -123,10 +124,36 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   // Symbols
   // Capital letters
-  // defineRule(
-  //   'capital', 'clearspeak.default', '[t] text() (grammar:ignoreFont="cap")',
-  //   'self::identifier',
-  //   '@role="latinletter" or @role="greekletter" or @role="otherletter"');
+  defineRule(
+    'capital', 'clearspeak.default',
+    '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
+    'self::identifier',
+    '@role="latinletter" or @role="greekletter"',
+    'CQFisCapital');
+  defineRule(
+    'capital', 'clearspeak.Caps_SayCaps',
+    '[n] text()',
+    'self::identifier', '@role="latinletter" or @role="greekletter"',
+    'CQFisCapital');
+  defineRule(
+    'capital', 'clearspeak.Caps_SayCaps',
+    '[p] (pause:"short"); [n] text()',
+    'self::identifier', '@role="latinletter" or @role="greekletter"',
+    'CQFisCapital', 'preceding-sibling::*[1]',
+    'not(name(preceding-sibling::*[1])="function")',
+    'not(contains(@grammar, "angle"))');
+  defineRule(
+    'capital', 'clearspeak.Caps_SayCaps',
+    '[n] text() (pause:"short")',
+    'self::identifier', '@role="latinletter" or @role="greekletter"',
+    'CQFisCapital', 'following-sibling::*[1]');
+  defineRule(
+    'capital', 'clearspeak.Caps_SayCaps',
+    '[p] (pause:"short"); [n] text() (pause:"short")',
+    'self::identifier', '@role="latinletter" or @role="greekletter"',
+    'CQFisCapital', 'preceding-sibling::*[1]', 'following-sibling::*[1]',
+    'not(name(preceding-sibling::*[1])="function")',
+    'not(contains(@grammar, "angle"))');
 
   // Comma
   defineRule(
@@ -581,7 +608,33 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'negative', 'clearspeak.default',
       '[t] "negative"; [n] children/*[1]',
       'self::prefixop', '@role="negative"', 'contains(@meaning, "clearspeak:simple")');
+  // Angle
+  defineRule(
+    'angle-prefix', 'clearspeak.default',
+    '[n] content/*[1]; [n] children/*[1] (grammar:angle)',
+    'self::prefixop', 'content/*[1]/text()="∠"');
+  defineRule(
+    'angle-infix', 'clearspeak.default',
+    '[n] content/*[1]; [n] children/*[1]; ' +
+      '[n] children/*[2] (grammar:angle)',
+    'self::infixop', 'content/*[1]/text()="∠"');
+  defineRule(
+    'angle-measure', 'clearspeak.default',
+    '[t] "the measure of"; [n] content/*[1]; ' +
+      '[n] children/*[2] (grammar:angle)',
+    'self::infixop', 'content/*[1]/text()="∠"', 'children/*[1][text()="m"]');
+  defineRule(
+      'binary-operation', 'clearspeak.default',
+      '[m] children/* (join:"",grammar:angle=false)',
+    'self::infixop', '@role="implicit"', 'contains(@grammar, "angle")',
+    'not(children/*/children)');
+  defineRule(
+      'binary-operation', 'clearspeak.Caps_SayCaps',
+      '[m] children/* (grammar:angle=false)',
+    'self::infixop', '@role="implicit"', 'contains(@grammar, "angle")',
+    'not(children/*/children)');
 
+  
   // defineRuleAlias(
   //     'negative',
   //     'self::prefixop', '@role="negative"', 'children/number');
@@ -614,8 +667,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[m] children/*', 'self::infixop', '@role="implicit"');
 
   defineRule(
-      'binary-operation', 'clearspeak.default',
-      '[m] children/* (join:"")', 'self::infixop', '@role="implicit"',
+      'binary-operation-simple', 'clearspeak.default',
+      '[m] children/* (join:"",rate:0.5)', 'self::infixop', '@role="implicit"',
       'contains(@meaning, "clearspeak:simple")');
 
   // Relations
@@ -643,23 +696,28 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
     'natural-numbers', 'clearspeak.default',
     '[t] "the natural numbers"', 'self::identifier',
-    'text()="\u2115" or (text()="N" and @font="double-struck")');
+    'text()="\u2115" or (text()="N" and @font="double-struck")',
+    'self::*');
   defineRule(
     'integers', 'clearspeak.default',
     '[t] "the integers"', 'self::identifier',
-    'text()="\u2124" or (text()="Z" and @font="double-struck")');
+    'text()="\u2124" or (text()="Z" and @font="double-struck")',
+    'self::*');
   defineRule(
     'rational-numbers', 'clearspeak.default',
     '[t] "the rational numbers"', 'self::identifier',
-    'text()="\u211A" or (text()="Q" and @font="double-struck")');
+    'text()="\u211A" or (text()="Q" and @font="double-struck")',
+    'self::*');
   defineRule(
     'real-numbers', 'clearspeak.default',
     '[t] "the real numbers"', 'self::identifier',
-    'text()="\u211D" or (text()="R" and @font="double-struck")');
+    'text()="\u211D" or (text()="R" and @font="double-struck")',
+    'self::*');
   defineRule(
     'complex-numbers', 'clearspeak.default',
     '[t] "the complex numbers"', 'self::identifier',
-    'text()="\u2102" or (text()="C" and @font="double-struck")');
+    'text()="\u2102" or (text()="C" and @font="double-struck")',
+    'self::*');
 
   // Named sets with superscripts
   defineRule(

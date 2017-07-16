@@ -341,3 +341,25 @@ Helper function for Emacs:
 
 *** Pausing commata:
     Set002, Set008, Set013
+
+
+** Captital Letters
+
+*** Decap:
+    Cap001, Cap002, Cap003, Cap005, Cap006, Cap007 (the a), Cap009, Cap010,
+    Cap011, Cap012, Cap013, Cap014, Cap015, Cap016, Cap019, Cap020
+
+    Cap017: second a!
+
+*** Pausing commata:
+
+**** Cap005,Cap006 Why are there commata?
+     removed
+     
+**** Cap007 Why is there no comma?
+
+**** added:
+     Cap013
+
+*** Measure of angle:
+    Cap009, Cap010, Cap019, Cap020
