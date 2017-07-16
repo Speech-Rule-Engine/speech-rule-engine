@@ -120,7 +120,7 @@ sre.AudioUtil.PersonalityRanges_ = {};
 
 /**
  * The range of personality annotations.
- * @type {Object.<sre.Engine.personalityProps, Array.<number>>}
+ * @type {Array.<Array.<sre.Engine.personalityProps>>}
  * @private
  */
 sre.AudioUtil.LastOpen_ = [];
@@ -153,7 +153,121 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     //TODO: Replace last parameter by global parameter, depending on format.
     sre.AudioUtil.appendMarkup_(result, str, diff, join, pause, true);
   }
+  result = result.concat(sre.AudioUtil.finaliseMarkup_());
+  result = sre.AudioUtil.simplifyMarkup_(result);
   return result;
+};
+
+
+sre.AudioUtil.appendElement_ = function(markup, element) {
+  var last = markup[markup.length - 1];
+  if (!last) {
+    markup.push(element);
+    return;
+  }
+  if (sre.AudioUtil.isStringElement(element) &&
+      sre.AudioUtil.isStringElement(last)) {
+    if (typeof last.join === 'undefined') {
+      last.string = last.string.concat(element.string);
+      return;
+    }
+    var lstr = last['string'].pop();
+    var fstr = element['string'].shift();
+    last['string'].push(lstr + last.join + fstr);
+    last['string'] = last['string'].concat(element.string);
+    last.join = element.join;
+    return;
+  }
+  if (sre.AudioUtil.isPauseElement(element) &&
+      sre.AudioUtil.isPauseElement(last)) {
+    last.pause = sre.AudioUtil.mergePause_(last.pause, element.pause);
+    return;
+  }
+  markup.push(element);
+};
+
+
+/**
+ * Simplification of markup sequence. Currently uses one technique only.
+ * @param {!Array.<Object>} markup Markup list.
+ * @return {!Array.<Object>} Simplified markup list.
+ * @private
+ */
+sre.AudioUtil.simplifyMarkup_ = function(markup) {
+  var lastPers = {};
+  var result = [];
+  for (var i = 0, element; element = markup[i]; i++) {
+    if (!sre.AudioUtil.isMarkupElement(element)) {
+      sre.AudioUtil.appendElement_(result, element);
+      continue;
+    }
+    if (!element.close || element.close.length !== 1 || element.open.length) {
+      sre.AudioUtil.copyValues_(element, lastPers);
+      result.push(element);
+      continue;
+    }
+    var nextElement = markup[i + 1];
+    if (!nextElement || sre.AudioUtil.isStringElement(nextElement)) {
+      sre.AudioUtil.copyValues_(element, lastPers);
+      result.push(element);
+      continue;
+    }
+    var pauseElement = sre.AudioUtil.isPauseElement(nextElement) ?
+          nextElement : null;
+    if (pauseElement) {
+      nextElement = markup[i + 2];
+    }
+    if (nextElement && sre.AudioUtil.isMarkupElement(nextElement) &&
+        nextElement.open[0] === element.close[0] && !nextElement.close.length &&
+        nextElement[nextElement.open[0]] === lastPers[nextElement.open[0]]) {
+      if (pauseElement) {
+        sre.AudioUtil.appendElement_(result, pauseElement);
+        i = i + 2;
+      } else {
+        i = i + 1;
+      }
+    } else {
+      sre.AudioUtil.copyValues_(element, lastPers);
+      result.push(element);
+    }
+  }
+  return result;
+};
+
+// TODO: Make that generic!
+sre.AudioUtil.copyValues_ = function(from, to) {
+  if (from['rate']) {
+    to['rate'] = from['rate'];
+  }
+  if (from['pitch']) {
+    to['pitch'] = from['pitch'];
+  }
+  if (from['volume']) {
+    to['volume'] = from['volume'];
+  }
+};
+
+
+/**
+ * Computes the final markup elements, if necessary.
+ * @return {!Array.<Object>} Markup list.
+ * @private
+ */
+sre.AudioUtil.finaliseMarkup_ = function() {
+  var final = [];
+  for (var i = sre.AudioUtil.LastOpen_.length - 1; i >= 0; i--) {
+    var pers = sre.AudioUtil.LastOpen_[i];
+    if (pers.length) {
+      var markup = {open: [], close: []};
+      for (var j = 0; j < pers.length; j++) {
+        var per = pers[j];
+        markup.close.push(per);
+        markup[per] = 0;
+      }
+      final.push(markup);
+    }
+  }
+  return final;
 };
 
 
