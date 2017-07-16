@@ -376,3 +376,10 @@ sre.ClearspeakUtil.ordinalExponent = function(node) {
   return number > 10 ? sre.MathspeakUtil.simpleOrdinal(number) :
     sre.MathspeakUtil.numberToOrdinal(number, false);
 };
+
+
+sre.ClearspeakUtil.isCapitalLetter = function(node) {
+  var result = sre.MathCompoundStore.getInstance().
+        lookupCategory(node.textContent) === 'Lu';
+  return result ? [node] : [];
+};
