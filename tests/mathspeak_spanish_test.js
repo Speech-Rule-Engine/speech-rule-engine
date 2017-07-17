@@ -33,12 +33,17 @@ sre.MathspeakSpanishTest = function() {
   /**
    * @override
    */
-  this.information = 'Mathspeak rule tests.';
+  this.information = 'Mathspeak Spanish tests.';
 
   /**
    * @override
    */
   this.domain = 'mathspeak';
+
+  /**
+   * @override
+   */
+  this.locale = 'es';
 
   /**
    * @override
@@ -50,7 +55,7 @@ sre.MathspeakSpanishTest = function() {
    */
   this.rules = ['MathspeakSpanish'];
 
-  this.setActive('MathspeakExamples');
+  this.setActive('MathspeakSpanish');
 };
 goog.inherits(sre.MathspeakSpanishTest, sre.AbstractRuleTest);
 

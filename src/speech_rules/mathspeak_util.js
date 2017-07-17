@@ -21,10 +21,13 @@ goog.provide('sre.MathspeakUtil');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
+goog.require('sre.Messages');
 goog.require('sre.Semantic');
 goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
+
+var msg = sre.Messages;
 
 /**
  * String function to separate text into single characters by adding
@@ -222,11 +225,8 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
  */
 sre.MathspeakUtil.fractionNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-      'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
-      function(node) {
-        return sre.MathspeakUtil.vulgarFractionSmall(node);
-      }
-  );
+    'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
+    msg.MS_FUNC.FRAC_NEST_DEPTH);
 };
 
 
@@ -237,7 +237,7 @@ sre.MathspeakUtil.fractionNestingDepth = function(node) {
  */
 sre.MathspeakUtil.openingFractionVerbose = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join('Start') + 'Fraction';
+  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_V;
 };
 
 
@@ -248,7 +248,7 @@ sre.MathspeakUtil.openingFractionVerbose = function(node) {
  */
 sre.MathspeakUtil.closingFractionVerbose = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join('End') + 'Fraction';
+  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_V;
 };
 
 
@@ -259,7 +259,7 @@ sre.MathspeakUtil.closingFractionVerbose = function(node) {
  */
 sre.MathspeakUtil.overFractionVerbose = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join('Over');
+  return new Array(depth + 1).join(msg.MS.FRAC_OVER);
 };
 
 
@@ -270,7 +270,7 @@ sre.MathspeakUtil.overFractionVerbose = function(node) {
  */
 sre.MathspeakUtil.openingFractionBrief = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join('Start') + 'Frac';
+  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_B;
 };
 
 
@@ -281,7 +281,7 @@ sre.MathspeakUtil.openingFractionBrief = function(node) {
  */
 sre.MathspeakUtil.closingFractionBrief = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join('End') + 'Frac';
+  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_B;
 };
 
 
@@ -295,7 +295,7 @@ sre.MathspeakUtil.nestingToString = function(count) {
     case 1:
       return '';
     case 2:
-      return 'Twice';
+      return msg.MS.TWICE;
     default:
       return count.toString();
   }
@@ -310,9 +310,9 @@ sre.MathspeakUtil.nestingToString = function(count) {
 sre.MathspeakUtil.openingFractionSbrief = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
-    return 'Frac';
+    return msg.MS.FRAC_S;
   }
-  return 'Nest' + sre.MathspeakUtil.nestingToString(depth - 1) + 'Frac';
+  return msg.MS.NEST_FRAC + sre.MathspeakUtil.nestingToString(depth - 1) + msg.MS.FRAC_S;
 };
 
 
@@ -324,9 +324,9 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
 sre.MathspeakUtil.closingFractionSbrief = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
-    return 'EndFrac';
+    return msg.MS.ENDFRAC;
   }
-  return 'Nest' + sre.MathspeakUtil.nestingToString(depth - 1) + 'EndFrac';
+  return msg.MS.NEST_FRAC + sre.MathspeakUtil.nestingToString(depth - 1) + msg.MS.ENDFRAC;
 };
 
 
@@ -338,9 +338,9 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
 sre.MathspeakUtil.overFractionSbrief = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
-    return 'Over';
+    return msg.MS.FRAC_OVER;
   }
-  return 'Nest' + sre.MathspeakUtil.nestingToString(depth - 1) + 'Over';
+  return msg.MS.NEST_FRAC + sre.MathspeakUtil.nestingToString(depth - 1) + msg.MS.OVER;
 };
 
 
@@ -528,7 +528,7 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
   var enumerator = Number(enumStr);
   if (isNaN(denominator) || isNaN(enumerator)) {
     return {convertible: false,
-      content: enumStr + ' Over ' + denStr};
+      content: enumStr + ' ' + msg.MS.FRAC_OVER + ' ' + denStr};
   }
   return {convertible: true,
     enumerator: enumerator,
@@ -625,7 +625,7 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
  */
 sre.MathspeakUtil.subscriptVerbose = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-      node, 'Subscript', {sup: 'Super', sub: 'Sub'});
+      node, msg.MS.SUBSCRIPT, {sup: msg.MS.SUPER, sub: msg.MS.SUB});
 };
 
 
@@ -636,7 +636,7 @@ sre.MathspeakUtil.subscriptVerbose = function(node) {
  */
 sre.MathspeakUtil.subscriptBrief = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-      node, 'Sub', {sup: 'Sup', sub: 'Sub'});
+      node, msg.MS.SUB, {sup: msg.MS.SUP, sub: msg.MS.SUB});
 };
 
 
@@ -647,7 +647,7 @@ sre.MathspeakUtil.subscriptBrief = function(node) {
  */
 sre.MathspeakUtil.superscriptVerbose = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-      node, 'Superscript', {sup: 'Super', sub: 'Sub'});
+      node, msg.MS.SUPERSCRIPT, {sup: msg.MS.SUPER, sub: msg.MS.SUB});
 };
 
 
@@ -658,7 +658,7 @@ sre.MathspeakUtil.superscriptVerbose = function(node) {
  */
 sre.MathspeakUtil.superscriptBrief = function(node) {
   return sre.MathspeakUtil.nestedSubSuper(
-      node, 'Sup', {sup: 'Sup', sub: 'Sub'});
+      node, msg.MS.SUP, {sup: msg.MS.SUP, sub: msg.MS.SUB});
 };
 
 
@@ -669,12 +669,12 @@ sre.MathspeakUtil.superscriptBrief = function(node) {
  */
 sre.MathspeakUtil.baselineVerbose = function(node) {
   var baseline = sre.MathspeakUtil.nestedSubSuper(
-      node, '', {sup: 'Super', sub: 'Sub'});
+      node, '', {sup: msg.MS.SUPER, sub: msg.MS.SUB});
   if (!baseline) {
-    return 'Baseline';
+    return msg.MS.BASELINE;
   }
-  return baseline.replace(/Sub$/, 'Subscript').
-      replace(/Super$/, 'Superscript');
+  return baseline.replace(/Sub$/, msg.MS.SUBSCRIPT).   // Still TODO (SPANISH)
+      replace(/Super$/, msg.MS.SUPERSCRIPT);
 };
 
 
@@ -685,8 +685,8 @@ sre.MathspeakUtil.baselineVerbose = function(node) {
  */
 sre.MathspeakUtil.baselineBrief = function(node) {
   var baseline = sre.MathspeakUtil.nestedSubSuper(
-      node, '', {sup: 'Sup', sub: 'Sub'});
-  return baseline || 'Base';
+      node, '', {sup: msg.MS.SUP, sub: msg.MS.SUB});
+  return baseline || msg.MS.BASE;
 };
 
 
@@ -712,10 +712,25 @@ sre.MathspeakUtil.radicalNestingDepth = function(node) {
  */
 sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
   var depth = sre.MathspeakUtil.radicalNestingDepth(node);
+  var index = sre.MathspeakUtil.getRootIndex(node);
+  postfix = index ? msg.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
   if (depth === 1) {
     return postfix;
   }
   return prefix + sre.MathspeakUtil.nestingToString(depth - 1) + postfix;
+};
+
+
+/**
+ * A string indexing the root.
+ * @param {!Node} node The radical node.
+ * @return {!string} The localised indexing string if it exists.
+ */
+sre.MathspeakUtil.getRootIndex = function(node) {
+  var content = node.tagName === 'sqrt' ? '2' :
+      // TODO (sorge): Make that safer?
+      sre.XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
+  return msg.MS_ROOT_INDEX[content] || '';
 };
 
 
@@ -725,7 +740,7 @@ sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
  * @return {!string} The opening string.
  */
 sre.MathspeakUtil.openingRadicalVerbose = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nested', 'StartRoot');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.STARTROOT);
 };
 
 
@@ -735,7 +750,7 @@ sre.MathspeakUtil.openingRadicalVerbose = function(node) {
  * @return {!string} The closing string.
  */
 sre.MathspeakUtil.closingRadicalVerbose = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nested', 'EndRoot');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.ENDROOT);
 };
 
 
@@ -745,7 +760,8 @@ sre.MathspeakUtil.closingRadicalVerbose = function(node) {
  * @return {!string} The middle string.
  */
 sre.MathspeakUtil.indexRadicalVerbose = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nested', 'RootIndex');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NESTED,
+                                         msg.MS.ROOTINDEX);
 };
 
 
@@ -755,7 +771,8 @@ sre.MathspeakUtil.indexRadicalVerbose = function(node) {
  * @return {!string} The opening string.
  */
 sre.MathspeakUtil.openingRadicalBrief = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'StartRoot');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NEST_ROOT,
+                                         msg.MS.STARTROOT);
 };
 
 
@@ -765,7 +782,8 @@ sre.MathspeakUtil.openingRadicalBrief = function(node) {
  * @return {!string} The closing string.
  */
 sre.MathspeakUtil.closingRadicalBrief = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'EndRoot');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NEST_ROOT,
+                                         msg.MS.ENDROOT);
 };
 
 
@@ -775,7 +793,8 @@ sre.MathspeakUtil.closingRadicalBrief = function(node) {
  * @return {!string} The middle string.
  */
 sre.MathspeakUtil.indexRadicalBrief = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'RootIndex');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NEST_ROOT,
+                                         msg.MS.ROOTINDEX);
 };
 
 
@@ -785,7 +804,7 @@ sre.MathspeakUtil.indexRadicalBrief = function(node) {
  * @return {!string} The opening string.
  */
 sre.MathspeakUtil.openingRadicalSbrief = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'Root');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.ROOT);
 };
 
 
@@ -795,7 +814,7 @@ sre.MathspeakUtil.openingRadicalSbrief = function(node) {
  * @return {!string} The middle string.
  */
 sre.MathspeakUtil.indexRadicalSbrief = function(node) {
-  return sre.MathspeakUtil.nestedRadical(node, 'Nest', 'Index');
+  return sre.MathspeakUtil.nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.INDEX);
 };
 
 
@@ -824,7 +843,7 @@ sre.MathspeakUtil.underscoreNestingDepth = function(node) {
  */
 sre.MathspeakUtil.nestedUnderscore = function(node) {
   var depth = sre.MathspeakUtil.underscoreNestingDepth(node);
-  return Array(depth).join('Under') + 'Underscript';
+  return Array(depth).join(msg.MS.UNDER) + msg.MS.UNDERSCRIPT;
 };
 
 
@@ -853,7 +872,7 @@ sre.MathspeakUtil.overscoreNestingDepth = function(node) {
  */
 sre.MathspeakUtil.nestedOverscore = function(node) {
   var depth = sre.MathspeakUtil.overscoreNestingDepth(node);
-  return Array(depth).join('Over') + 'Overscript';
+  return Array(depth).join(msg.MS.OVER) + msg.MS.OVERSCRIPT;
 };
 
 

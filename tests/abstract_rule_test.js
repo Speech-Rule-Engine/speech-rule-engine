@@ -43,6 +43,11 @@ sre.AbstractRuleTest = function() {
   this.domain = 'default';
 
   /**
+   * @type {string}
+   */
+  this.locale = 'en';
+
+  /**
    * @type {boolean}
    */
   this.semantics = false;
@@ -81,7 +86,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: opt_style,
-        rules: this.rules});
+         rules: this.rules, locale: this.locale});
   var result = sre.System.getInstance().toSpeech(mathMl);
   this.assert.equal(result, answer);
 };
