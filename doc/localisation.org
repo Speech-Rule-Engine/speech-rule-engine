@@ -1,0 +1,56 @@
+* Numbers
+** Number to words
+Functionality in mathspeak_util
+*** Ordinals 
+*** vulgar fractions
+
+** Decimal points
+
+Make this a grammar postprocessor
+
+** Large number seperators
+
+Same grammar postprocessor as above
+
+* Fractions
+Functionality in mathspeak_util
+
+
+* Sub and superscript nesting
+Functionality in mathspeak_util
+
+* Font names
+
+Semantic post-processor
+
+* Abstraction and Prefix rules!
+
+* Language specific:
+
+** Spanish:
+
+*** Replaces mas by más in tests (meaning plus)
+
+**** TODO Ask Oscar if that is correct!
+
+*** mayúscula 
+
+**** Is it after a letter or before?
+
+     Currently I have rewritten A -> mayúscula A in MP.
+     Check all the rules.
+
+*** Ye vs Y
+
+**** What is correct?
+
+**** They have not yet been capitalised!
+
+
+*** TODO 
+
+**** Cleanup spanish.js symbols
+
+***** spanishMP are names extracted from MathPlayer unicode rules that have been overwritten with Oscar's alternatives.
+
+**** Create units and functions
