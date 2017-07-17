@@ -202,9 +202,9 @@ sre.MathspeakSpanishTest.prototype.testNegativeVsMinus = function() {
   var mml = '<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, '', 'spanish');
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'minus StartFraction a Over b EndFraction', 'spanish');
+  this.executeRuleTest(mml, '', 'spanish');
   mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mi>1</mi><mi>2</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'negative 3 and one-half', 'spanish');
+  this.executeRuleTest(mml, '', 'spanish');
 };
 
 

@@ -48,7 +48,7 @@ sre.MathspeakSpanishTest = function() {
   /**
    * @override
    */
-  this.rules = ['MathspeakRules', 'MathspeakSpanish'];
+  this.rules = ['MathspeakSpanish'];
 
   this.setActive('MathspeakExamples');
 };
@@ -148,75 +148,64 @@ sre.MathspeakSpanishTest.prototype.testSample_1_5_1 = function() {
 };
 
 
-// Not yet possible, as we do not yet handle mstack.
-/**
- * Testing Rule 1.6, Example 1.
- */
-sre.MathspeakSpanishTest.prototype.untestSample_1_6_1 = function() {
-  var mml = '<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo>' +
-      '<mstack stackalign="right"><msline length="6"/><mn>3.142857</mn>' +
-      '</mstack></mrow>';
-  this.executeRuleTest(mml, 'd igual empezar raiz cuadrada paréntesis izquierdo mayúscula X menos x paréntesis derecho al cuadrado menos paréntesis izquierdo mayúscula Y menos y paréntesis derecho al cuadrado finalizar raiz cuadrada', 'spanish');
-};
-
-
 /**
  * Testing Rule 2.1, Example 1.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_2_1_1 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_2_1_1 = function() {
   var mml = '<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo>' +
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
       '<mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>';
-  this.executeRuleTest(mml, 'si mayúscula A flecha derecha mayúscula B y mayúscula B flecha derecha mayúscula C entonces mayúscula A flecha derecha mayúscula C punto', 'spanish');
+  this.executeRuleTest(mml, 'd igual empezar raíz cuadrada paréntesis izquierdo mayúscula X menos x paréntesis derecho al cuadrado menos paréntesis izquierdo mayúscula Y menos y paréntesis derecho al cuadrado finalizar raíz cuadrada', 'spanish');
 };
 
 
 /**
  * Testing Rule 2.3, Example 1.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_2_3_1 = function() {
-  var mml = '<mrow><mtext>If</mtext><mspace width="4.pt"/><mi>A</mi>' +
-      '<mo>→</mo><mi>B</mi><mspace width="4.pt"/><mtext>and</mtext>' +
+sre.MathspeakSpanishTest.prototype.testSample_2_3_1 = function() {
+  var mml = '<mrow><mtext>Si</mtext><mspace width="4.pt"/><mi>A</mi>' +
+      '<mo>→</mo><mi>B</mi><mspace width="4.pt"/><mtext>y</mtext>' +
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
-      '<mspace width="4.pt"/><mtext>then</mtext><mspace width="4.pt"/>' +
+      '<mspace width="4.pt"/><mtext>entonces</mtext><mspace width="4.pt"/>' +
       '<mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'corchete izquierdo x corchete derecho', 'spanish');
+  this.executeRuleTest(mml, 'Si mayúscula A flecha derecha mayúscula B y mayúscula B flecha derecha mayúscula C entonces mayúscula A flecha derecha mayúscula C punto', 'spanish');
 };
 
 
 /**
  * Testing Rule 2.6, Example 1.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_2_6_1 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_2_6_1 = function() {
   var mml = '<mrow><mo mathvariant="bold">[</mo><mi>x</mi>' +
       '<mo mathvariant="bold">]</mo></mrow>';
-  this.executeRuleTest(mml, 'Integral de contorno mayúscula E punto d de negrita l igual menos empezar fracción d mayúscula Phi mayúscula B entre d t Finalizar Fracción', 'spanish');
+  this.executeRuleTest(mml, 'negrita corchete izquierdo x negrita corchete derecho', 'spanish');
 };
 
 
 /**
  * Testing Rule 2.6, Example 2.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_2_6_2 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_2_6_2 = function() {
   var mml = '<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi>' +
       '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
       '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'menos Empezar Fracción 1 entre b Finalizar Fracción', 'spanish');
+  this.executeRuleTest(mml, 'integral de contorno mayúscula E punto medio d negrita l igual menos empezar fracción d mayúscula Phi mayúscula B entre d t finalizar fracción', 'spanish');
 };
 
 
+// TODO: Check for the numbers.
 /**
  * Testing prefix operation as negative or minus.
  */
-sre.MathspeakSpanishTest.prototype.untestNegativeVsMinus = function() {
+sre.MathspeakSpanishTest.prototype.testNegativeVsMinus = function() {
   var mml = '<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'menos Empezar Fracción a entre b Finalizar Fracción', 'spanish');
+  this.executeRuleTest(mml, 'menos empezar fracción 1 entre b finalizar fracción', 'spanish');
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'minus StartFraction a Over b EndFraction', 'spanish');
+  this.executeRuleTest(mml, 'menos empezar fracción a entre b finalizar fracción', 'spanish');
   mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mi>1</mi><mi>2</mi></mfrac></mrow>';
-  this.executeRuleTest(mml, 'negative 3 and one-half', 'spanish');
+  this.executeRuleTest(mml, 'menos 3 más empezar fracción 1 entre 2 finalizar fracción', 'spanish');
 };
 
 
@@ -230,16 +219,16 @@ sre.MathspeakSpanishTest.prototype.untestSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'menos 3 por un medio', 'spanish');
+  this.executeRuleTest(mml, 'mayúscula paréntesis izquierdo empezar llave alfa coma beta coma gamma coma delta coma epsilon coma phi finalizar llave paréntesis izquierdo igual empezar llave mayúscula Alfa coma mayúscula Beta coma mayúscula Gamma coma mayúscula Delta coma mayúscula Epsilon coma mayúscula phi finalizar llave', 'spanish');
 };
 
 
 /**
  * Testing Rule 5.1, Example 1.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_5_1_1 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_5_1_1 = function() {
   var mml = '<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, 'Mayúscula paréntesis izquierdo abrir llave alfa coma beta coma gamma coma delta coma epsilon coma phi cerrar llave paréntesis izquierdo igual abrir llave mayúscula Alfa coma mayúscula Beta coma mayúscula Gamma coma mayúscula Delta coma mayúscula Epsilon coma mayúscula phi cerrar llave', 'spanish');
+  this.executeRuleTest(mml, 'y menos 1', 'spanish');
 };
 
 
@@ -249,16 +238,16 @@ sre.MathspeakSpanishTest.prototype.untestSample_5_1_1 = function() {
 sre.MathspeakSpanishTest.prototype.untestSample_5_1_2 = function() {
   var mml = '<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext>' +
       '<mn>1</mn><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, 'y menos 1', 'spanish');
+  this.executeRuleTest(mml, 'paréntesis izquierdo 1 a 1 paréntesis derecho', 'spanish');
 };
 
 
 /**
  * Testing Rule 5.1, Example 3.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_5_1_3 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_5_1_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, 'paréntesis izquierdo 1 guión to guión 1 paréntesis derecho', 'spanish');
+  this.executeRuleTest(mml, 'menos 1', 'spanish');
 };
 
 
@@ -266,36 +255,21 @@ sre.MathspeakSpanishTest.prototype.untestSample_5_1_3 = function() {
  * Testing Rule 6.1, Example 1.
  */
 sre.MathspeakSpanishTest.prototype.untestSample_6_1_1 = function() {
-  var mml = '<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo>' +
+  var mml = '<mtext>Los números de Fibonacci son: </mtext><mrow><mo>{</mo>' +
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
       '<mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'menos 1', 'spanish');
+  this.executeRuleTest(mml, 'Los números de Fibonacci son dos puntos empezar llave 0 coma 1 coma 1 coma 2 coma 3 coma 5 coma 8 coma puntos suspensivos finalizar llave', 'spanish');
 };
 
 
 /**
  * Testing Rule 6.2, Example 1.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_6_2_1 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_6_2_1 = function() {
   var mml = '<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo>' +
       '<mo>=</mo><mn>3</mn></mrow>';
-  this.executeRuleTest(mml, 'Los números de Fibonacci son dos puntos inicio de llave 0 coma 1 coma 1 coma 2 coma 3 coma 5 coma 8 coma puntos suspensivos fin llave', 'spanish');
-};
-
-
-// This equation does not make sense! We could do it purely syntactically!
-/**
- * Testing Rule 6.2, Example 2.
- */
-sre.MathspeakSpanishTest.prototype.untestSample_6_2_2_old = function() {
-  var mml = '<mrow><mfenced separators="" open="|" close="|"><mi>a</mi>' +
-      '<mfenced separators="" open="|" close="|"><mo>±</mo><mi>b</mi>' +
-      '</mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo>' +
-      '<mfenced open="|" close="|"><mi>a</mi></mfenced><mo>±</mo>' +
-      '<mi>b</mi><mfenced separators="" open="|" close="|"><mo>-</mo>' +
-      '<mn>15</mn></mfenced></mrow>';
-  this.executeRuleTest(mml, 'Abrir Valor Absoluto 4 menos 7 Cerrar Valor Absoluto igual 3', 'spanish');
+  this.executeRuleTest(mml, 'empezar valor absoluto 4 menos 7 finalizar valor absoluto igual 3', 'spanish');
 };
 
 
@@ -303,23 +277,23 @@ sre.MathspeakSpanishTest.prototype.untestSample_6_2_2_old = function() {
  * Testing Rule 6.2, Example 2.
  * This equation does not make sense! We can do it purely syntactically!
  */
-sre.MathspeakSpanishTest.prototype.untestSample_6_2_2 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_6_2_2 = function() {
   var mml = '<mrow><mfenced separators="" open="|" close="|"><mi>a</mi>' +
       '<mo>&#xb1;</mo><mfenced separators="" open="|" close="|"><mi>b</mi>' +
       '<mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo>' +
       '<mfenced open="|" close="|"><mi>a</mi></mfenced><mo>&#xb1;</mo>' +
       '<mfenced separators="" open="|" close="|"><mi>b</mi><mo>-</mo>' +
       '<mi>c</mi></mfenced></mrow>';
-  this.executeRuleTest(mml, 'abrir valor absoluto a más menos abrir valor absoluto b menos c cerrar valor absoluto cerrar valor absoluto no es igual a abrir valor absoluto a cerrar valor absoluto más menos abrir valor absoluto b menos c cerrar valor absoluto', 'spanish');
+  this.executeRuleTest(mml, 'empezar valor absoluto a más menos empezar valor absoluto b menos c finalizar valor absoluto finalizar valor absoluto no es igual a empezar valor absoluto a finalizar valor absoluto más menos empezar valor absoluto b menos c finalizar valor absoluto', 'spanish');
 };
 
 
 /**
  * Testing Rule 7.1, Example 1.
  */
-sre.MathspeakSpanishTest.prototype.untestSample_7_1_1 = function() {
+sre.MathspeakSpanishTest.prototype.testSample_7_1_1 = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
-  this.executeRuleTest(mml, 'Empezar Fracción 1 entre x Finalizar Fracción', 'spanish');
+  this.executeRuleTest(mml, 'empezar fracción 1 entre x finalizar fracción', 'spanish');
 };
 
 
@@ -330,7 +304,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_7_1_2 = function() {
   var mml = '<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo>' +
       '<mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow>' +
       '</mfrac><mo>×</mo><mi>f</mi></mrow>';
-  this.executeRuleTest(mml, 'a menos Empezar Fracción b más c entre d menos 3 Finalizar Fracción por f', 'spanish');
+  this.executeRuleTest(mml, 'a menos empezar fracción b más c entre d menos 3 finalizar fracción por f', 'spanish');
 };
 
 
@@ -341,7 +315,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_7_2_1 = function() {
   var mml = '<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi>' +
       '</mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi>' +
       '</mfrac></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Empezar empezar fracción Empezar fracción x entre y finalizar fracción EntreEntre z Finalizar finalizar fracción no es igual Empezar empezar fracción x EntreEntre Empezar fracción y entre z Finalizar fracción finalizar finalizar fracción', 'spanish');
+  this.executeRuleTest(mml, 'empezar empezar fracción empezar fracción x entre y finalizar fracción entre entre z finalizar finalizar fracción no es igual empezar empezar fracción x entre entre empezar fracción y entre z finalizar fracción finalizar finalizar fracción', 'spanish');
 };
 
 
@@ -391,7 +365,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_7_4_1 = function() {
       '<mo>=</mo><mn>1</mn></mrow>' +
       '<mo movablelimits="true" form="prefix">∞</mo></munderover><mfrac>' +
       '<mi>n</mi><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'un medio más dos medios más tres medios más cuatro medios más puntos suspensivos igual sumatorio subíndice n igual 1 superíndice infinitio finalizar índices Empezar fracción n entre dos Finalizar fracción', 'spanish');
+  this.executeRuleTest(mml, 'un medio más dos medios más tres medios más cuatro medios más puntos suspensivos igual sumatorio subíndice n igual 1 superíndice infinitio finalizar índices empezar fracción n entre dos finalizar fracción', 'spanish');
 };
 
 
@@ -402,7 +376,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_7_4_2 = function() {
   var mml = '<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac>' +
       '<mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn>' +
       '<mn>25</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Empezar fracción 20 entre 5 Finalizar fracción por Empezar fracción 1 entre 100 Finalizar fracción igual un veinticincoavo', 'spanish');
+  this.executeRuleTest(mml, 'empezar fracción 20 entre 5 finalizar fracción por empezar fracción 1 entre 100 finalizar fracción igual 1 entre 25', 'spanish');
 };
 
 
@@ -413,7 +387,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'Empezar fracción tres quintos entre 8 Finalizar fracción igual tres quintos por un octavo', 'spanish');
+  this.executeRuleTest(mml, 'empezar empezar fracción empezar fracción 3 entre 5 finalizar fracción entre entre 8 finalizar finalizar fracción igual empezar fracción 3 entre 5 finalizar fracción por empezar fracción 1 entre 8 finalizar fracción', 'spanish');
 };
 
 
@@ -423,7 +397,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_7_4_3 = function() {
 sre.MathspeakSpanishTest.prototype.untestSample_7_5_1 = function() {
   var mml = '<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo>' +
       '<mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, '3 y cinco octavos igual Empezar fracción 29 entre 8 Finalizar fracción', 'spanish');
+  this.executeRuleTest(mml, '3 más empezar fracción 5 entre 8 finalizar fracción igual empezar fracción 29 entre 8 finalizar fracción', 'spanish');
 };
 
 
@@ -466,7 +440,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_8_1_2 = function() {
       '<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi>' +
       '<mi>x</mi><mo>+</mo><mi>c</mi></mfenced><mi>y</mi><mo>=</mo>' +
       '<mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 'Empezar fracción d al cuadrado y entre d x al cuadrado Finalizar fracción más paréntesis izquierdo a x al cuadrado más b x más c paréntesis derecho y igual cero', 'spanish');
+  this.executeRuleTest(mml, 'empezar fracción d al cuadrado y entre d x al cuadrado finalizar fracción más paréntesis izquierdo a x al cuadrado más b x más c paréntesis derecho y igual cero', 'spanish');
 };
 
 
@@ -475,7 +449,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_8_1_2 = function() {
  */
 sre.MathspeakSpanishTest.prototype.untestSample_8_2_1 = function() {
   var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
-  this.executeRuleTest(mml, 'x exponente un medio', 'spanish');
+  this.executeRuleTest(mml, 'x exponente 1 entre 2', 'spanish');
 };
 
 
@@ -671,12 +645,12 @@ sre.MathspeakSpanishTest.prototype.untestSample_8_5_3 = function() {
 sre.MathspeakSpanishTest.prototype.untestSample_8_5_4 = function() {
   var mml = '<msub><mi>x</mi><mrow><mn>1.3</mn></mrow>' +
       '</msub>';
-  this.executeRuleTest(mml, '"x subíndice 1', 'spanish');
+  this.executeRuleTest(mml, 'x subíndice 1,3', 'spanish');
 };
 
 
 /**
- * Testing Rule 8.5, Example 5.
+ * Testing Rule 8.5, Example 5. (WORKS!)
  */
 sre.MathspeakSpanishTest.prototype.untestSample_8_5_5 = function() {
   var mml = '<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub>' +
@@ -993,7 +967,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_8_9_2 = function() {
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow>' +
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'f triple prima paréntesis izquierdo y paréntesis derecho igual empezar fracción d f doble prima paréntesis izquierdo y paréntesis derecho entre d y Finalizar fracción', 'spanish');
+  this.executeRuleTest(mml, 'f triple prima paréntesis izquierdo y paréntesis derecho igual empezar fracción d f doble prima paréntesis izquierdo y paréntesis derecho entre d y finalizar fracción', 'spanish');
 };
 
 
@@ -1363,20 +1337,6 @@ sre.MathspeakSpanishTest.prototype.untestSample_11_8_2 = function() {
 };
 
 
-// This rule is currently not possible. It needs an enhanced processing in the
-// semantic tree maybe together with a simultaneous treatment of mstacks.
-/**
- * Testing Rule 11.9, Example 1.
- */
-sre.MathspeakSpanishTest.prototype.untestSample_11_9_1 = function() {
-  var mml = '<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo>' +
-      '<mn>.58</mn><mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
-      '<mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
-      '<mover accent="true"><mn>3</mn><mo>˙</mo></mover></mrow>';
-  this.executeRuleTest(mml, '', 'spanish');
-};
-
-
 /**
  * Testing Rule 12.1, Example 1.
  */
@@ -1456,7 +1416,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_13_1_3 = function() {
       '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
       '<mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
-  this.executeRuleTest(mml, 'm metros igual 100 m centímetros igual Empezar Fracción m entre 1000 Finalizar Fracción kilómetros', 'spanish');
+  this.executeRuleTest(mml, 'm metros igual 100 m centímetros igual empezar fracción m entre 1000 finalizar fracción kilómetros', 'spanish');
 };
 
 
@@ -1508,7 +1468,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_14_3_1 = function() {
       '</mtr><mtr><mtd><mrow><mi>y</mi><mo>≥</mo><mn>0</mn></mrow></mtd>' +
       '<mtd><mrow><mn>2</mn><mi>y</mi></mrow></mtd></mtr></mtable>' +
       '</mfenced></mrow>';
-  this.executeRuleTest(mml, '', 'spanish');
+  this.executeRuleTest(mml, 'x igual empezar esquema llave izquierda alargada primera fila primera columna y menor que 0 segunda columna 0 segunda fila primera columna y mayor o igual que 0 segunda columna 2 y finalizar esquema', 'spanish');
 };
 
 
@@ -1525,7 +1485,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_15_1_1 = function() {
       '<mtd><mrow><mi>z</mi><mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow>' +
       '<mi>z</mi><mo>+</mo><mi>b</mi></mrow></mtd><mtd><mrow><mi>z</mi>' +
       '<mo>+</mo><mi>c</mi></mrow></mtd></mtr></mtable></mfenced>';
-  this.executeRuleTest(mml, '', 'spanish');
+  this.executeRuleTest(mml, 'empezar matriz 3 por 3 primera fila primera columna x más a segunda columna x más b tercerca columna x más c segunda fila primera columna y más a segunda columna y más b tercera columna y más c tercera fila primera columna z más a segunda columna z más b tercera columna z más c finalizar matriz', 'spanish');
 };
 
 
@@ -1539,7 +1499,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_15_2_1 = function() {
       '</mtable></mfenced><mo>=</mo><mrow><mo>(</mo><mi>a</mi><mo>+</mo>' +
       '<mn>1</mn><mo>)</mo></mrow><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'Empezar Determinante 2 por 2 primera fila primera columna a más 1 segunda columna b segunda fila primera columna c segunda columna d finalizar determinante igual paréntesis izquierdo a más 1 paréntesis derecho d menos bc', 'spanish');
+  this.executeRuleTest(mml, 'empezar Determinante 2 por 2 primera fila primera columna a más 1 segunda columna b segunda fila primera columna c segunda columna d finalizar determinante igual paréntesis izquierdo a más 1 paréntesis derecho d menos bc', 'spanish');
 };
 
 
@@ -1551,7 +1511,7 @@ sre.MathspeakSpanishTest.prototype.untestSample_15_4_1 = function() {
       '</mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd>' +
       '<mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi>' +
       '<mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi></mrow>';
-  this.executeRuleTest(mml, 'Empezar Determinante 2 por 2 primera fila a b segunda fila c d finalizar determinante igual ad menos bc', 'spanish');
+  this.executeRuleTest(mml, 'empezar Determinante 2 por 2 primera fila a b segunda fila c d finalizar determinante igual ad menos bc', 'spanish');
 };
 
 

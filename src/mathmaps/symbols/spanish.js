@@ -60,7 +60,8 @@
   "key" : "0028",
   "mappings": {
     "mathspeak" : {
-     "spanish": "paréntesis"
+      "spanish": "paréntesis izquierdo",
+      "spanishMP": "paréntesis"
    }
   }
  },
@@ -68,7 +69,8 @@
   "key" : "0029",
   "mappings": {
     "mathspeak" : {
-     "spanish": "cierra paréntesis"
+      "spanish": "paréntesis derecho",
+      "spanishMP": "cierra paréntesis"
    }
   }
  },
@@ -397,7 +399,8 @@
   "key" : "005B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "abre corchetes"
+      "spanish": "corchete izquierdo",
+     "spanishMP": "abre corchetes"
    }
   }
  },
@@ -413,7 +416,8 @@
   "key" : "005D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "cierra corchetes"
+      "spanish": "corchete derecho",
+      "spanishMP": "cierra corchetes"
    }
   }
  },
@@ -3510,7 +3514,7 @@
   "key" : "0391",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula"
+     "spanish": "mayúscula Alfa"
    }
   }
  },
@@ -3518,7 +3522,7 @@
   "key" : "0392",
   "mappings": {
     "mathspeak" : {
-     "spanish": "beta mayúscula"
+     "spanish": "mayúscula Beta"
    }
   }
  },
@@ -3526,7 +3530,7 @@
   "key" : "0393",
   "mappings": {
     "mathspeak" : {
-     "spanish": "gamma mayúscula"
+     "spanish": "mayúscula Gamma"
    }
   }
  },
@@ -3534,7 +3538,7 @@
   "key" : "0394",
   "mappings": {
     "mathspeak" : {
-     "spanish": "delta mayúscula"
+     "spanish": "mayúscula Delta"
    }
   }
  },
@@ -3542,7 +3546,7 @@
   "key" : "0395",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula"
+     "spanish": "mayúscula Épsilon"
    }
   }
  },
@@ -3550,7 +3554,7 @@
   "key" : "0396",
   "mappings": {
     "mathspeak" : {
-     "spanish": "zeta mayúscula"
+     "spanish": "mayúscula Zeta"
    }
   }
  },
@@ -3558,7 +3562,7 @@
   "key" : "0397",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula"
+     "spanish": "mayúscula Eta"
    }
   }
  },
@@ -3566,7 +3570,7 @@
   "key" : "0398",
   "mappings": {
     "mathspeak" : {
-     "spanish": "theta mayúscula"
+     "spanish": "mayúscula Theta"
    }
   }
  },
@@ -3574,7 +3578,7 @@
   "key" : "0399",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula"
+     "spanish": "mayúscula Iota"
    }
   }
  },
@@ -3582,7 +3586,7 @@
   "key" : "039A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "kappa mayúscula"
+     "spanish": "mayúscula Kappa"
    }
   }
  },
@@ -3590,7 +3594,7 @@
   "key" : "039B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "lambda mayúscula"
+     "spanish": "mayúscula Lambda"
    }
   }
  },
@@ -3598,7 +3602,7 @@
   "key" : "039C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "my mayúscula"
+     "spanish": "mayúscula My"
    }
   }
  },
@@ -3606,7 +3610,7 @@
   "key" : "039D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ny mayúscula"
+     "spanish": "mayúscula Ny"
    }
   }
  },
@@ -3614,7 +3618,7 @@
   "key" : "039E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "xi mayúscula"
+     "spanish": "mayúscula Xi"
    }
   }
  },
@@ -3622,7 +3626,7 @@
   "key" : "039F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula"
+     "spanish": "mayúscula Ómicron"
    }
   }
  },
@@ -3630,7 +3634,7 @@
   "key" : "03A0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "pi mayúscula"
+     "spanish": "mayúscula Pi"
    }
   }
  },
@@ -3638,7 +3642,7 @@
   "key" : "03A1",
   "mappings": {
     "mathspeak" : {
-     "spanish": "rho mayúscula"
+     "spanish": "mayúscula Rho"
    }
   }
  },
@@ -3646,7 +3650,7 @@
   "key" : "03A3",
   "mappings": {
     "mathspeak" : {
-     "spanish": "sigma mayúscula"
+     "spanish": "mayúscula Sigma"
    }
   }
  },
@@ -3654,7 +3658,7 @@
   "key" : "03A4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "tau mayúscula"
+     "spanish": "mayúscula Tau"
    }
   }
  },
@@ -3662,7 +3666,7 @@
   "key" : "03A5",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula"
+     "spanish": "mayúscula Ípsilon"
    }
   }
  },
@@ -3670,7 +3674,7 @@
   "key" : "03A6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "phi mayúscula"
+     "spanish": "mayúscula Phi"
    }
   }
  },
@@ -3678,7 +3682,7 @@
   "key" : "03A7",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ji mayúscula"
+     "spanish": "mayúscula Ji"
    }
   }
  },
@@ -3686,7 +3690,7 @@
   "key" : "03A8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "psi mayúscula"
+     "spanish": "mayúscula Psi"
    }
   }
  },
@@ -3694,7 +3698,7 @@
   "key" : "03A9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula"
+     "spanish": "mayúscula Omega"
    }
   }
  },
@@ -10830,7 +10834,8 @@
   "key" : "2192",
   "mappings": {
     "mathspeak" : {
-     "spanish": "flecha"
+      "spanish": "flecha derecha",
+     "spanishMP": "flecha"
    }
   }
  },
@@ -12335,7 +12340,8 @@
   "key" : "2260",
   "mappings": {
     "mathspeak" : {
-     "spanish": "distinto de"
+      "spanish": "no es igual a",
+     "spanishMP": "distinto de"
    }
   }
  },

@@ -928,6 +928,5 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
  */
 sre.MathspeakUtil.removeParens = function(node) {
   var content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
-  console.log(content);
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };

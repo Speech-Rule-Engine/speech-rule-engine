@@ -3,6 +3,12 @@
 Functionality in mathspeak_util
 *** Ordinals 
 *** vulgar fractions
+**** Spanish: Above 10 denominator no longer ordinals.
+**** Maybe just have X entre Y
+**** 
+
+*** Mixed numbers 
+    Maybe a shorter version in brief/sbrief
 
 ** Decimal points
 
@@ -11,6 +17,14 @@ Make this a grammar postprocessor
 ** Large number seperators
 
 Same grammar postprocessor as above
+
+** TODO Parentheses
+
+Change everywhere (  cierra ) to left and right: izquierdo, derecho
+
+** Begin and End of font styles? 
+
+*** There are no tests. Do they work?
 
 * Fractions
 Functionality in mathspeak_util
@@ -31,7 +45,10 @@ Semantic post-processor
 
 *** Replaces mas by más in tests (meaning plus)
 
-**** TODO Ask Oscar if that is correct!
+**** DONE Ask Oscar if that is correct! 
+
+**** Correct
+
 
 *** mayúscula 
 
@@ -46,11 +63,20 @@ Semantic post-processor
 
 **** They have not yet been capitalised!
 
+**** Let's stay with Y
 
-*** TODO 
+**** TODO Change in symbols file.
 
 **** Cleanup spanish.js symbols
 
 ***** spanishMP are names extracted from MathPlayer unicode rules that have been overwritten with Oscar's alternatives.
 
+      "spanish": "aproximado",   <<<< 
+      "spanishMP": "casi igual a"
+
+      "spanish": "almuhadilla",
+      "spanishMP": "signo de número"
+
+
 **** Create units and functions
+
