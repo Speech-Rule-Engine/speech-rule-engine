@@ -52,7 +52,8 @@
   "key" : "0027",
   "mappings": {
     "mathspeak" : {
-     "spanish": "apóstrofo"
+      "spanish": "prima",
+      "spanishMP": "apóstrofo"
    }
   }
  },
@@ -9970,7 +9971,7 @@
   "key" : "2026",
   "mappings": {
     "mathspeak" : {
-     "spanish": "punto punteado punteado"
+     "spanish": "puntos suspensivos"
    }
   }
  },
@@ -11707,7 +11708,7 @@
   "key" : "2211",
   "mappings": {
     "mathspeak" : {
-     "spanish": "suma"
+     "spanish": "sumatorio"
    }
   }
  },

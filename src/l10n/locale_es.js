@@ -31,17 +31,17 @@ sre.Locale.es.MS = {
   FRAC_B: '',
   FRAC_S: '',
   END: 'finalizar ',
-  FRAC_OVER: 'entre', // Could be problematic with space separators. Might need
+  FRAC_OVER: 'entre ', // Could be problematic with space separators. Might need
                       // to trim.
   TWICE: '',
   NEST_FRAC: '',
   ENDFRAC: '',
-  SUPER: '',
-  SUB: '',
-  SUP: '',
-  SUPERSCRIPT: '',
-  SUBSCRIPT: '',
-  BASELINE: '',
+  SUPER: 'super',
+  SUB: 'sub',
+  SUP: 'sup',
+  SUPERSCRIPT: 'superíndice',
+  SUBSCRIPT: 'subíndice',
+  BASELINE: 'línea base',
   BASE: '',
   NESTED: '',
   NEST_ROOT: '',
@@ -51,9 +51,9 @@ sre.Locale.es.MS = {
   ROOT: 'raíz',
   INDEX: '',
   UNDER: '',
-  UNDERSCRIPT: '',
+  UNDERSCRIPT: 'bajoíndice',
   OVER: '',
-  OVERSCRIPT: ''
+  OVERSCRIPT: 'sobreíndice'
 };
 
 

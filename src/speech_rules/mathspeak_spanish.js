@@ -139,6 +139,9 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
 
+  // Dummy.
+  addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
+
   // DIAGRAM: Temporary for testing:
   addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
@@ -152,7 +155,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Initial rule
   defineRule(
       'stree', 'mathspeak.spanish',
-      '[n] ./*[1]', 'self::stree');
+      '[n] ./*[1]', 'self::stree', 'CQFresetNesting');
 
 
   // Dummy rules
@@ -248,7 +251,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-baseline', 'mathspeak.spanish',
-      '[t] "Baseline"; [n] text()',
+      '[t] "línea base"; [n] text()',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
       'preceding-sibling::identifier',
       'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
@@ -263,7 +266,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.spanish',
-      '[t] "Baseline"; [t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] "línea base"; [t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
@@ -388,16 +391,16 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'self::operator', 'text()="\u002D"');
 
   defineRule(
-      'single-prime', 'mathspeak.spanish', '[t] "prime"',
+      'single-prime', 'mathspeak.spanish', '[t] "prima"',
       'self::punctuated', '@role="prime"', 'count(children/*)=1');
   defineRule(
-      'double-prime', 'mathspeak.spanish', '[t] "double-prime"',
+      'double-prime', 'mathspeak.spanish', '[t] "doble prima"',
       'self::punctuated', '@role="prime"', 'count(children/*)=2');
   defineRule(
-      'triple-prime', 'mathspeak.spanish', '[t] "triple-prime"',
+      'triple-prime', 'mathspeak.spanish', '[t] "triple prima"',
       'self::punctuated', '@role="prime"', 'count(children/*)=3');
   defineRule(
-      'quadruple-prime', 'mathspeak.spanish', '[t] "quadruple-prime"',
+      'quadruple-prime', 'mathspeak.spanish', '[t] "cuadruplicar prima"',
       'self::punctuated', '@role="prime"', 'count(children/*)=4');
   defineRule(
       'counted-prime', 'mathspeak.spanish',
@@ -539,17 +542,17 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'limboth-end', 'mathspeak.spanish',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      '[t] CSFoverscript; [n] children/*[3]; [t] "Endscripts"',
+      '[t] CSFoverscript; [n] children/*[3]; [t] "finalizar índices"',
       'self::limboth');
   defineRule(
       'limlower-end', 'mathspeak.spanish',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      ' [t] "Endscripts"',
+      ' [t] "finalizar índices"',
       'self::limlower');
   defineRule(
       'limupper-end', 'mathspeak.spanish',
       '[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];' +
-      ' [t] "Endscripts"',
+      ' [t] "finalizar índices"',
       'self::limupper');
   defineRuleAlias(
       'limlower-end', 'self::underscore', '@role="limit function"');
@@ -565,8 +568,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'self::integral');
   defineRule(
       'integral', 'mathspeak.spanish',
-      '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
-      '[t] "Superscript"; [n] children/*[3]; [t] "Baseline";',
+      '[n] children/*[1]; [t] "definida"; [t] "subíndice"; [n] children/*[2];' +
+      '[t] "superíndice"; [n] children/*[3]; [t] "línea base";',
       'self::limboth', '@role="integral"');
   defineSpecialisedRule(
       'integral', 'mathspeak.spanish', 'mathspeak.brief',
@@ -615,19 +618,19 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineSpecialisedRule(
       'subscript', 'mathspeak.brief', 'mathspeak.sbrief');
 
-  defineRule(
-      'subscript-simple', 'mathspeak.spanish',
-      '[n] children/*[1]; [n] children/*[2]',
-      'self::subscript',
-      'name(./children/*[1])="identifier"',
-      // Second child is a number but not mixed or other.
-      'name(./children/*[2])="number"',
-      './children/*[2][@role!="mixed"]',
-      './children/*[2][@role!="othernumber"]');
-  defineSpecialisedRule(
-      'subscript-simple', 'mathspeak.spanish', 'mathspeak.brief');
-  defineSpecialisedRule(
-      'subscript-simple', 'mathspeak.spanish', 'mathspeak.sbrief');
+  // defineRule(
+  //     'subscript-simple', 'mathspeak.spanish',
+  //     '[n] children/*[1]; [n] children/*[2]',
+  //     'self::subscript',
+  //     'name(./children/*[1])="identifier"',
+  //     // Second child is a number but not mixed or other.
+  //     'name(./children/*[2])="number"',
+  //     './children/*[2][@role!="mixed"]',
+  //     './children/*[2][@role!="othernumber"]');
+  // defineSpecialisedRule(
+  //     'subscript-simple', 'mathspeak.spanish', 'mathspeak.brief');
+  // defineSpecialisedRule(
+  //     'subscript-simple', 'mathspeak.spanish', 'mathspeak.sbrief');
 
   defineRule(
       'subscript-baseline', 'mathspeak.spanish',

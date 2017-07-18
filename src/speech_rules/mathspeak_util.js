@@ -118,6 +118,10 @@ sre.MathspeakUtil.nestingBarriers = [
  */
 sre.MathspeakUtil.nestingDepth = {};
 
+sre.MathspeakUtil.resetNestingDepth = function(node) {
+  sre.MathspeakUtil.nestingDepth = {};
+  return [node];
+};
 
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
@@ -259,7 +263,7 @@ sre.MathspeakUtil.closingFractionVerbose = function(node) {
  */
 sre.MathspeakUtil.overFractionVerbose = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.FRAC_OVER);
+  return new Array(depth + 1).join(msg.MS.FRAC_OVER).trim();
 };
 
 
@@ -673,8 +677,8 @@ sre.MathspeakUtil.baselineVerbose = function(node) {
   if (!baseline) {
     return msg.MS.BASELINE;
   }
-  return baseline.replace(/Sub$/, msg.MS.SUBSCRIPT).   // Still TODO (SPANISH)
-      replace(/Super$/, msg.MS.SUPERSCRIPT);
+  return baseline.replace(new RegExp(msg.MS.SUB + '$'), msg.MS.SUBSCRIPT).
+    replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
 };
 
 
