@@ -64,3 +64,27 @@ sre.Messages.MS_FUNC = {
 
 
 sre.Messages.MS_ROOT_INDEX = { };
+
+
+sre.Messages.FONT = {
+  'bold': '',
+  'bold-fraktur': '',
+  'bold-italic': '',
+  'bold-script': '',
+  'caligraphic': '',
+  'caligraphic-bold': '',
+  'double-struck': '',
+  'double-struck-italic': '',
+  'fraktur': '',
+  'italic': '',
+  'monospace': '',
+  'normal': '',
+  'oldstyle': '',
+  'oldstyle-bold': '',
+  'script': '',
+  'sans-serif': '',
+  'sans-serif-italic': '',
+  'sans-serif-bold': '',
+  'sans-serif-bold-italic': '',
+  'unknown': ''
+};

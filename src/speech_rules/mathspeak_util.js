@@ -949,3 +949,13 @@ sre.MathspeakUtil.removeParens = function(node) {
   var content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };
+
+
+sre.MathspeakUtil.localFont = function(font) {
+  return msg.FONT[font] || font;
+};
+
+
+sre.Grammar.getInstance().setCorrection(
+  'localFont', sre.MathspeakUtil.localFont
+);

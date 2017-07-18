@@ -79,3 +79,27 @@ sre.Locale.es.MS_ROOT_INDEX = {
   '9': 'a la novena',
   '10': 'a la décima'
 };
+
+
+sre.Locale.es.FONT = {
+  'bold': 'negrita',
+  'bold-fraktur': 'negrita Fraktur',
+  'bold-italic': 'negrita cursiva',
+  'bold-script': 'negrita script',
+  'caligraphic': 'caligráfica',
+  'caligraphic-bold': 'caligráfica negrita',
+  'double-struck': 'negrita de pizarra',
+  'double-struck-italic': 'negrita de pizarra cursiva',
+  'fraktur': 'Fraktur',
+  'italic': 'cursiva',
+  'monospace': 'monoespacio',
+  'normal': 'normal',
+  'oldstyle': 'estilo antiguo',
+  'oldstyle-bold': 'estilo antiguo negrita',
+  'script': 'script',
+  'sans-serif': 'sans-serif',
+  'sans-serif-italic': 'sans-serif cursiva',
+  'sans-serif-bold': 'sans-serif negrita',
+  'sans-serif-bold-italic': 'sans-serif negrita cursiva',
+  'unknown': 'desconocida'
+};

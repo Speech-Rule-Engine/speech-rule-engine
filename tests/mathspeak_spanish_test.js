@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2017 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -209,7 +209,7 @@ sre.MathspeakSpanishTest.prototype.testNegativeVsMinus = function() {
   this.executeRuleTest(mml, 'menos empezar fracción 1 entre b finalizar fracción', 'spanish');
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'menos empezar fracción a entre b finalizar fracción', 'spanish');
-  mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mi>1</mi><mi>2</mi></mfrac></mrow>';
+  mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'menos 3 más empezar fracción 1 entre 2 finalizar fracción', 'spanish');
 };
 
@@ -218,13 +218,13 @@ sre.MathspeakSpanishTest.prototype.testNegativeVsMinus = function() {
  * Testing Rule 4.2, Example 1.
  */
 sre.MathspeakSpanishTest.prototype.untestSample_4_2_1 = function() {
-  var mml = '<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi>' +
+  var mml = '<mrow><mtext>Mayúscula</mtext><mo>(</mo><mo>{</mo><mi>α</mi>' +
       '<mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi>' +
       '<mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo>' +
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'mayúscula paréntesis izquierdo empezar llave alfa coma beta coma gamma coma delta coma epsilon coma phi finalizar llave paréntesis izquierdo igual empezar llave mayúscula Alfa coma mayúscula Beta coma mayúscula Gamma coma mayúscula Delta coma mayúscula Epsilon coma mayúscula phi finalizar llave', 'spanish');
+  this.executeRuleTest(mml, 'Mayúscula paréntesis izquierdo empezar llave alfa coma beta coma gamma coma delta coma epsilon coma phi finalizar llave paréntesis izquierdo igual empezar llave mayúscula Alfa coma mayúscula Beta coma mayúscula Gamma coma mayúscula Delta coma mayúscula Epsilon coma mayúscula Phi finalizar llave', 'spanish');
 };
 
 

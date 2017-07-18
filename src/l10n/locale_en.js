@@ -65,3 +65,9 @@ sre.Locale.en.MS_FUNC = {
 
 
 sre.Locale.en.MS_ROOT_INDEX = { };
+
+
+sre.Locale.en.FONT = {
+  'bold-fraktur': 'bold German',
+  'fraktur': 'German'
+};
