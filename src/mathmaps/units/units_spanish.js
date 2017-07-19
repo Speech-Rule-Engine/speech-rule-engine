@@ -4,7 +4,7 @@
     "names": ["W"],
     "mappings": {
       "mathspeak": {
-        "spanish": "watts"
+        "spanish": "watt"
       }
     }
   },
@@ -13,7 +13,7 @@
     "names": ["w"],
     "mappings": {
       "mathspeak": {
-        "spanish": "watts"
+        "spanish": "watt"
       }
     }
   },
@@ -22,7 +22,7 @@
     "names": ["kw"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kilowatts"
+        "spanish": "kilowatt"
       }
     }
   },
@@ -31,7 +31,7 @@
     "names": ["kW"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kilowatts"
+        "spanish": "kilowatt"
       }
     }
   },
@@ -40,7 +40,7 @@
     "names": ["mw"],
     "mappings": {
       "mathspeak": {
-        "spanish": "miliwatts"
+        "spanish": "miliwatt"
       }
     }
   },
@@ -49,7 +49,7 @@
     "names": ["mW"],
     "mappings": {
       "mathspeak": {
-        "spanish": "miliwatts"
+        "spanish": "miliwatt"
       }
     }
   },
@@ -94,7 +94,7 @@
     "names": ["A"],
     "mappings": {
       "mathspeak": {
-        "spanish": "Amperes"
+        "spanish": "Ampere"
       }
     }
   },
@@ -103,7 +103,7 @@
     "names": ["V"],
     "mappings": {
       "mathspeak": {
-        "spanish": "Voltios"
+        "spanish": "Voltio"
       }
     }
   },
@@ -112,7 +112,7 @@
     "names": ["µΩ"],
     "mappings": {
       "mathspeak": {
-        "spanish": "microohmios"
+        "spanish": "microohmio"
       }
     }
   },
@@ -121,7 +121,7 @@
     "names": ["mΩ"],
     "mappings": {
       "mathspeak": {
-        "spanish": "miliohmios"
+        "spanish": "miliohmio"
       }
     }
   },
@@ -130,7 +130,7 @@
     "names": ["Ω"],
     "mappings": {
       "mathspeak": {
-        "spanish": "ohmios"
+        "spanish": "ohmio"
       }
     }
   },
@@ -139,7 +139,7 @@
     "names": ["Ohm"],
     "mappings": {
       "mathspeak": {
-        "spanish": "ohmios"
+        "spanish": "ohmio"
       }
     }
   },
@@ -148,7 +148,7 @@
     "names": ["kΩ"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kiloohmios"
+        "spanish": "kiloohmio"
       }
     }
   },
@@ -157,7 +157,7 @@
     "names": ["KΩ"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kiloohmios"
+        "spanish": "kiloohmio"
       }
     }
   },
@@ -166,7 +166,7 @@
     "names": ["MΩ"],
     "mappings": {
       "mathspeak": {
-        "spanish": "megaohmios"
+        "spanish": "megaohmio"
       }
     }
   },
@@ -175,7 +175,7 @@
     "names": ["GΩ"],
     "mappings": {
       "mathspeak": {
-        "spanish": "gigaohmios"
+        "spanish": "gigaohmio"
       }
     }
   },
@@ -184,7 +184,7 @@
     "names": ["mm"],
     "mappings": {
       "mathspeak": {
-        "spanish": "milímetros"
+        "spanish": "milímetro"
       }
     }
   },
@@ -193,7 +193,7 @@
     "names": ["cm"],
     "mappings": {
       "mathspeak": {
-        "spanish": "centímetros"
+        "spanish": "centímetro"
       }
     }
   },
@@ -202,7 +202,7 @@
     "names": ["m"],
     "mappings": {
       "mathspeak": {
-        "spanish": "metros"
+        "spanish": "metro"
       }
     }
   },
@@ -211,7 +211,7 @@
     "names": ["km"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kilómetros"
+        "spanish": "kilómetro"
       }
     }
   },
@@ -238,7 +238,7 @@
     "names": ["in"],
     "mappings": {
       "mathspeak": {
-        "spanish": "pulgadas"
+        "spanish": "pulgada"
       }
     }
   },
@@ -247,7 +247,7 @@
     "names": ["in."],
     "mappings": {
       "mathspeak": {
-        "spanish": "pulgadas"
+        "spanish": "pulgada"
       }
     }
   },
@@ -256,7 +256,7 @@
     "names": ["mi"],
     "mappings": {
       "mathspeak": {
-        "spanish": "millas"
+        "spanish": "milla"
       }
     }
   },
@@ -265,7 +265,7 @@
     "names": ["mi."],
     "mappings": {
       "mathspeak": {
-        "spanish": "millas"
+        "spanish": "milla"
       }
     }
   },
@@ -274,7 +274,7 @@
     "names": ["yd"],
     "mappings": {
       "mathspeak": {
-        "spanish": "yardas"
+        "spanish": "yarda"
       }
     }
   },
@@ -283,7 +283,7 @@
     "names": ["yd."],
     "mappings": {
       "mathspeak": {
-        "spanish": "yardas"
+        "spanish": "yarda"
       }
     }
   },
@@ -301,7 +301,7 @@
     "names": ["b"],
     "mappings": {
       "mathspeak": {
-        "spanish": "bits"
+        "spanish": "bit"
       }
     }
   },
@@ -310,7 +310,7 @@
     "names": ["B"],
     "mappings": {
       "mathspeak": {
-        "spanish": "bytes"
+        "spanish": "byte"
       }
     }
   },
@@ -319,7 +319,7 @@
     "names": ["KB"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kilobytes"
+        "spanish": "kilobyte"
       }
     }
   },
@@ -328,7 +328,7 @@
     "names": ["MB"],
     "mappings": {
       "mathspeak": {
-        "spanish": "megabytes"
+        "spanish": "megabyte"
       }
     }
   },
@@ -337,7 +337,7 @@
     "names": ["GB"],
     "mappings": {
       "mathspeak": {
-        "spanish": "gigabytes"
+        "spanish": "gigabyte"
       }
     }
   },
@@ -346,7 +346,7 @@
     "names": ["TB"],
     "mappings": {
       "mathspeak": {
-        "spanish": "terabytes"
+        "spanish": "terabyte"
       }
     }
   },
@@ -445,7 +445,7 @@
     "names": ["h"],
     "mappings": {
       "mathspeak": {
-        "spanish": "horas"
+        "spanish": "hora"
       }
     }
   },
@@ -454,7 +454,7 @@
     "names": ["hr"],
     "mappings": {
       "mathspeak": {
-        "spanish": "horas"
+        "spanish": "hora"
       }
     }
   },
@@ -463,7 +463,7 @@
     "names": ["kt"],
     "mappings": {
       "mathspeak": {
-        "spanish": "nudos"
+        "spanish": "nudo"
       }
     }
   },
@@ -472,7 +472,7 @@
     "names": ["kt."],
     "mappings": {
       "mathspeak": {
-        "spanish": "nudos"
+        "spanish": "nudo"
       }
     }
   },
@@ -571,7 +571,7 @@
     "names": ["bbl."],
     "mappings": {
       "mathspeak": {
-        "spanish": "barriles"
+        "spanish": "barrile"
       }
     }
   },
@@ -580,7 +580,7 @@
     "names": ["bbl"],
     "mappings": {
       "mathspeak": {
-        "spanish": "barriles"
+        "spanish": "barrile"
       }
     }
   },
@@ -589,7 +589,7 @@
     "names": ["cu"],
     "mappings": {
       "mathspeak": {
-        "spanish": "cúbicos"
+        "spanish": "cúbico"
       }
     }
   },
@@ -598,7 +598,7 @@
     "names": ["cu."],
     "mappings": {
       "mathspeak": {
-        "spanish": "cúbicos"
+        "spanish": "cúbico"
       }
     }
   },
@@ -616,7 +616,7 @@
     "names": ["gal"],
     "mappings": {
       "mathspeak": {
-        "spanish": "galones"
+        "spanish": "galone"
       }
     }
   },
@@ -625,7 +625,7 @@
     "names": ["gal."],
     "mappings": {
       "mathspeak": {
-        "spanish": "galones"
+        "spanish": "galone"
       }
     }
   },
@@ -634,7 +634,7 @@
     "names": ["pt"],
     "mappings": {
       "mathspeak": {
-        "spanish": "pintas"
+        "spanish": "pinta"
       }
     }
   },
@@ -652,7 +652,7 @@
     "names": ["qt"],
     "mappings": {
       "mathspeak": {
-        "spanish": "quarts"
+        "spanish": "quart"
       }
     }
   },
@@ -661,7 +661,7 @@
     "names": ["qt."],
     "mappings": {
       "mathspeak": {
-        "spanish": "quarts"
+        "spanish": "quart"
       }
     }
   },
@@ -715,7 +715,7 @@
     "names": ["kl"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kilolitros"
+        "spanish": "kilolitro"
       }
     }
   },
@@ -724,7 +724,7 @@
     "names": ["l"],
     "mappings": {
       "mathspeak": {
-        "spanish": "litros"
+        "spanish": "litro"
       }
     }
   },
@@ -733,7 +733,7 @@
     "names": ["ml"],
     "mappings": {
       "mathspeak": {
-        "spanish": "mililitros"
+        "spanish": "mililitro"
       }
     }
   },
@@ -742,7 +742,7 @@
     "names": ["lb"],
     "mappings": {
       "mathspeak": {
-        "spanish": "libras"
+        "spanish": "libra"
       }
     }
   },
@@ -751,7 +751,7 @@
     "names": ["lb."],
     "mappings": {
       "mathspeak": {
-        "spanish": "libras"
+        "spanish": "libra"
       }
     }
   },
@@ -778,7 +778,7 @@
     "names": ["oz"],
     "mappings": {
       "mathspeak": {
-        "spanish": "onzas  "
+        "spanish": "onza"
       }
     }
   },
@@ -787,7 +787,7 @@
     "names": ["oz."],
     "mappings": {
       "mathspeak": {
-        "spanish": "onzas  "
+        "spanish": "onza"
       }
     }
   },
@@ -796,7 +796,7 @@
     "names": ["g"],
     "mappings": {
       "mathspeak": {
-        "spanish": "gramos"
+        "spanish": "gramo"
       }
     }
   },
@@ -805,7 +805,7 @@
     "names": ["gr"],
     "mappings": {
       "mathspeak": {
-        "spanish": "gramos"
+        "spanish": "gramo"
       }
     }
   },
@@ -814,7 +814,7 @@
     "names": ["kg"],
     "mappings": {
       "mathspeak": {
-        "spanish": "kilogramos"
+        "spanish": "kilogramo"
       }
     }
   },
@@ -823,7 +823,7 @@
     "names": ["mg"],
     "mappings": {
       "mathspeak": {
-        "spanish": "miligramos"
+        "spanish": "miligramo"
       }
     }
   },
@@ -832,7 +832,7 @@
     "names": ["µg"],
     "mappings": {
       "mathspeak": {
-        "spanish": "microgramos"
+        "spanish": "microgramo"
       }
     }
   },
@@ -841,7 +841,7 @@
     "names": ["t"],
     "mappings": {
       "mathspeak": {
-        "spanish": "toneladas"
+        "spanish": "tonelada"
       }
     }
   },
@@ -850,7 +850,7 @@
     "names": ["T"],
     "mappings": {
       "mathspeak": {
-        "spanish": "toneladas"
+        "spanish": "tonelada"
       }
     }
   }

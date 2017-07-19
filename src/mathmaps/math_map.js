@@ -168,8 +168,6 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
     case sre.Engine.Mode.ASYNC:
       sre.MathMap.toFetch_ += files.length;
       for (var i = 0, file; file = files[i]; i++) {
-        console.log('loading file');
-        console.log(file);
         sre.MathMap.fromFile_(path + file,
             function(err, json) {
               sre.MathMap.toFetch_--;

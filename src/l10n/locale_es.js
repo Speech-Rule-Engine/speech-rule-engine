@@ -47,7 +47,7 @@ sre.Locale.es.MS = {
   NEST_ROOT: '',
   STARTROOT: 'empezar raíz',
   ENDROOT: 'finalizar raíz',
-  ROOTINDEX: '',
+  ROOTINDEX: 'índice de raíz',
   ROOT: 'raíz',
   INDEX: '',
   UNDER: '',
@@ -59,6 +59,7 @@ sre.Locale.es.MS = {
 
 sre.Locale.es.MS_FUNC = {
   FRAC_NEST_DEPTH: function(node) { return false; },
+  RADICAL_NEST_DEPTH: function(count) { return ''; },
   COMBINE_ROOT_INDEX: function(postfix, index) {
     return (postfix === sre.Locale.es.MS.ROOTINDEX ||
             postfix === sre.Locale.es.MS.INDEX) ?

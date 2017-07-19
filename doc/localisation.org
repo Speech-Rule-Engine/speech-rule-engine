@@ -82,9 +82,6 @@ Semantic post-processor
 
 *** Test:
 
-**** 7_4_2 (Added start and end fraction)?
-**** Corrections to 7_1_2, 7_2_1
+**** Nested roots all seem to be 
 
-**** 7-4-1 ? Why not numbers?
 
-**** 8_1_2 cero -> 0

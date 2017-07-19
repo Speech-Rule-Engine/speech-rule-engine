@@ -56,10 +56,28 @@ sre.Locale.en.MS = {
 };
 
 
+/**
+ * Translation for count word in superbrief nesting description.
+ * @param {!number} count The counting parameter.
+ * @return {!string} The corresponding string.
+ */
+sre.Locale.en.nestingToString = function(count) {
+  switch (count) {
+    case 1:
+      return '';
+    case 2:
+      return msg.MS.TWICE;
+    default:
+      return count.toString();
+  }
+};
+
+
 sre.Locale.en.MS_FUNC = {
   FRAC_NEST_DEPTH: function(node) {
     return sre.MathspeakUtil.vulgarFractionSmall(node);
   },
+  RADICAL_NEST_DEPTH: sre.Locale.en.nestingToString,
   COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
 };
 
@@ -71,3 +89,4 @@ sre.Locale.en.FONT = {
   'bold-fraktur': 'bold German',
   'fraktur': 'German'
 };
+
