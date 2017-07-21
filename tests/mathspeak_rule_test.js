@@ -278,7 +278,7 @@ sre.MathspeakRuleTest.prototype.testNegativeVsMinus = function() {
   mml = '<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'minus StartFraction a Over b EndFraction',
                        'default');
-  mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mi>1</mi><mi>2</mi></mfrac></mrow>';
+  mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'negative 3 and one-half', 'default');
 };
 

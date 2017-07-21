@@ -175,13 +175,13 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -195,7 +195,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -205,18 +205,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
-
-  defineRule(
-      'german-font', 'mathspeak.default',
-      '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font="fraktur"');
-
-  defineRule(
-      'german-font', 'mathspeak.default',
-      '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font="bold-fraktur"');
 
   // Number rules
   defineRule(

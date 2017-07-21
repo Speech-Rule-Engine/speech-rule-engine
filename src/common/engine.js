@@ -73,6 +73,14 @@ sre.Engine = function() {
    */
   this.style = 'short';
 
+
+  /**
+   * Current locale.
+   * @type {string}
+   */
+  this.locale = 'en';
+
+
   /**
    * Current walker mode.
    * @type {string}

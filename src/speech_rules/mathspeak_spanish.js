@@ -100,38 +100,38 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
 
   addCSF('CSFspaceoutText', sre.MathspeakUtil.spaceoutText);
   // Fraction function.
-  addCSF('CSFopenFracVerbose', sre.MathspeakSpanishUtil.openingFractionVerbose);
-  addCSF('CSFcloseFracVerbose', sre.MathspeakSpanishUtil.closingFractionVerbose);
-  addCSF('CSFoverFracVerbose', sre.MathspeakSpanishUtil.overFractionVerbose);
-  addCSF('CSFopenFracBrief', sre.MathspeakSpanishUtil.openingFractionBrief);
-  addCSF('CSFcloseFracBrief', sre.MathspeakSpanishUtil.closingFractionBrief);
-  addCSF('CSFopenFracSbrief', sre.MathspeakSpanishUtil.openingFractionSbrief);
-  addCSF('CSFcloseFracSbrief', sre.MathspeakSpanishUtil.closingFractionSbrief);
-  addCSF('CSFoverFracSbrief', sre.MathspeakSpanishUtil.overFractionSbrief);
-  addCSF('CSFvulgarFraction', sre.MathspeakSpanishUtil.vulgarFraction);
-  addCQF('CQFvulgarFractionSmall', sre.MathspeakSpanishUtil.isSmallVulgarFraction);
+  addCSF('CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose);
+  addCSF('CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose);
+  addCSF('CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose);
+  addCSF('CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief);
+  addCSF('CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief);
+  addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
+  addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
+  addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
+  // addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  // addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
-  addCSF('CSFopenRadicalVerbose', sre.MathspeakSpanishUtil.openingRadicalVerbose);
-  addCSF('CSFcloseRadicalVerbose', sre.MathspeakSpanishUtil.closingRadicalVerbose);
-  addCSF('CSFindexRadicalVerbose', sre.MathspeakSpanishUtil.indexRadicalVerbose);
-  addCSF('CSFopenRadicalBrief', sre.MathspeakSpanishUtil.openingRadicalBrief);
-  addCSF('CSFcloseRadicalBrief', sre.MathspeakSpanishUtil.closingRadicalBrief);
-  addCSF('CSFindexRadicalBrief', sre.MathspeakSpanishUtil.indexRadicalBrief);
-  addCSF('CSFopenRadicalSbrief', sre.MathspeakSpanishUtil.openingRadicalSbrief);
-  addCSF('CSFindexRadicalSbrief', sre.MathspeakSpanishUtil.indexRadicalSbrief);
+  addCSF('CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose);
+  addCSF('CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose);
+  addCSF('CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose);
+  addCSF('CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief);
+  addCSF('CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief);
+  addCSF('CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief);
+  addCSF('CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief);
+  addCSF('CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief);
 
   // Sub- Superscript.
-  addCSF('CSFsuperscriptVerbose', sre.MathspeakSpanishUtil.superscriptVerbose);
-  addCSF('CSFsuperscriptBrief', sre.MathspeakSpanishUtil.superscriptBrief);
-  addCSF('CSFsubscriptVerbose', sre.MathspeakSpanishUtil.subscriptVerbose);
-  addCSF('CSFsubscriptBrief', sre.MathspeakSpanishUtil.subscriptBrief);
-  addCSF('CSFbaselineVerbose', sre.MathspeakSpanishUtil.baselineVerbose);
-  addCSF('CSFbaselineBrief', sre.MathspeakSpanishUtil.baselineBrief);
+  addCSF('CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
+  addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
+  addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
+  addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
 
   // Over- Underscore.
-  addCSF('CSFunderscript', sre.MathspeakSpanishUtil.nestedUnderscore);
-  addCSF('CSFoverscript', sre.MathspeakSpanishUtil.nestedOverscore);
+  addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
+  addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
   addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
@@ -176,13 +176,13 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.spanish',
-      '[t] @font (grammar:localFont="spanish"); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.spanish',
-      '[t] @font (grammar:localFont="spanish"); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -196,7 +196,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.spanish',
-      '[t] @font (grammar:localFont="spanish"); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -206,18 +206,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
-
-  defineRule(
-      'german-font', 'mathspeak.spanish',
-      '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font="fraktur"');
-
-  defineRule(
-      'german-font', 'mathspeak.spanish',
-      '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font="bold-fraktur"');
 
   // Number rules
   defineRule(
@@ -275,7 +263,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.spanish',
-      '[t] "Baseline"; [t] @font (grammar:localFont="spanish"); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] "Baseline"; [t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
@@ -656,7 +644,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineSpecialisedRule(
       'subscript-baseline', 'mathspeak.spanish', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2];' +
-      ' [t] CSFbaselineBrief');
+      ' [t] CSFbaselineBriefS');
   defineSpecialisedRule(
       'subscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRuleAlias(
@@ -719,7 +707,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineSpecialisedRule(
       'superscript-baseline', 'mathspeak.spanish', 'mathspeak.brief',
       '[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];' +
-      '[t] CSFbaselineBrief');
+      '[t] CSFbaselineBriefS');
   defineSpecialisedRule(
       'superscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRuleAlias(
@@ -844,7 +832,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'prime-subscript-baseline', 'mathspeak.spanish', 'mathspeak.brief',
       '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
       ' [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2];' +
-      ' [t] CSFbaselineBrief');
+      ' [t] CSFbaselineBriefS');
   defineSpecialisedRule(
       'prime-subscript-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRuleAlias(
@@ -1366,8 +1354,8 @@ sre.MathspeakSpanish.generateMathspeakTensorRules_ = function() {
     defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
     // Rules with baseline.
     var baselineStr = sre.MathspeakSpanish.componentString_[2];
-    verbStr += '; [t]' + baselineStr + 'Verbose';
-    briefStr += '; [t]' + baselineStr + 'Brief';
+    verbStr += '; [t]' + baselineStr + 'VerboseS';
+    briefStr += '; [t]' + baselineStr + 'BriefS';
     name = name + '-baseline';
     verbList = [name, 'mathspeak.spanish', verbStr, 'self::tensor',
                 'following-sibling::*'].

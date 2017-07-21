@@ -29,6 +29,7 @@ goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
+goog.require('sre.L10n');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
@@ -108,7 +109,8 @@ sre.System.prototype.setupEngine = function(feature) {
     engine[feat] = feature[feat] || engine[feat];
   };
   var binaryFeatures = ['strict', 'cache', 'semantics'];
-  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker'];
+  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
+                        'locale'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
   binaryFeatures.forEach(setIf);
@@ -126,7 +128,8 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   engine.comparator = new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
-      sre.DynamicProperties.create(['default'], ['short', 'default']));
+    sre.DynamicProperties.create(['default'], ['short', 'default']));
+  sre.L10n.setLocale();
 };
 
 

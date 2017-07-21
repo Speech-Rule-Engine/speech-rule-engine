@@ -197,7 +197,7 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 sre.DynamicCstr.Axis = {
   DOMAIN: 'domain',
   STYLE: 'style',
-  LANGUAGE: 'language',
+  LOCALE: 'locale',
   TOPIC: 'topic',
   MODALITY: 'modality'
 };
@@ -280,7 +280,7 @@ sre.DynamicCstr.Order;
 sre.DynamicCstr.DEFAULT_ORDER = [
   sre.DynamicCstr.Axis.DOMAIN,
   sre.DynamicCstr.Axis.STYLE,
-  sre.DynamicCstr.Axis.LANGUAGE,
+  sre.DynamicCstr.Axis.LOCALE,
   sre.DynamicCstr.Axis.TOPIC,
   sre.DynamicCstr.Axis.MODALITY
 ];
