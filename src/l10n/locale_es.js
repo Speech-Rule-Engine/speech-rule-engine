@@ -31,34 +31,35 @@ sre.Locale.es.MS = {
   FRAC_B: '',
   FRAC_S: '',
   END: 'finalizar ',
-  FRAC_OVER: 'entre', // Could be problematic with space separators. Might need
+  FRAC_OVER: 'entre ', // Could be problematic with space separators. Might need
                       // to trim.
   TWICE: '',
   NEST_FRAC: '',
   ENDFRAC: '',
-  SUPER: '',
-  SUB: '',
-  SUP: '',
-  SUPERSCRIPT: '',
-  SUBSCRIPT: '',
-  BASELINE: '',
+  SUPER: 'super',
+  SUB: 'sub',
+  SUP: 'sup',
+  SUPERSCRIPT: 'superíndice',
+  SUBSCRIPT: 'subíndice',
+  BASELINE: 'línea base',
   BASE: '',
   NESTED: '',
   NEST_ROOT: '',
   STARTROOT: 'empezar raíz',
   ENDROOT: 'finalizar raíz',
-  ROOTINDEX: '',
+  ROOTINDEX: 'índice de raíz',
   ROOT: 'raíz',
   INDEX: '',
   UNDER: '',
-  UNDERSCRIPT: '',
+  UNDERSCRIPT: 'bajoíndice',
   OVER: '',
-  OVERSCRIPT: ''
+  OVERSCRIPT: 'sobreíndice'
 };
 
 
 sre.Locale.es.MS_FUNC = {
   FRAC_NEST_DEPTH: function(node) { return false; },
+  RADICAL_NEST_DEPTH: function(count) { return ''; },
   COMBINE_ROOT_INDEX: function(postfix, index) {
     return (postfix === sre.Locale.es.MS.ROOTINDEX ||
             postfix === sre.Locale.es.MS.INDEX) ?

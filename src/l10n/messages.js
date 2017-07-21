@@ -57,9 +57,8 @@ sre.Messages.MS = {
 
 
 sre.Messages.MS_FUNC = {
-  FRAC_NEST_DEPTH: goog.abstractMethod,
-  // function(node) { return false; }
-  COMBINE_ROOT_INDEX: function(root, index) { return '';}
+  FRAC_NEST_DEPTH: function(node) { return false; },
+  COMBINE_ROOT_INDEX: function(root, index) { return ''; }
 };
 
 

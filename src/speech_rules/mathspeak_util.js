@@ -118,6 +118,10 @@ sre.MathspeakUtil.nestingBarriers = [
  */
 sre.MathspeakUtil.nestingDepth = {};
 
+sre.MathspeakUtil.resetNestingDepth = function(node) {
+  sre.MathspeakUtil.nestingDepth = {};
+  return [node];
+};
 
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
@@ -259,7 +263,7 @@ sre.MathspeakUtil.closingFractionVerbose = function(node) {
  */
 sre.MathspeakUtil.overFractionVerbose = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.FRAC_OVER);
+  return new Array(depth + 1).join(msg.MS.FRAC_OVER).trim();
 };
 
 
@@ -286,23 +290,6 @@ sre.MathspeakUtil.closingFractionBrief = function(node) {
 
 
 /**
- * Translation for count word in superbrief nesting description.
- * @param {!number} count The counting parameter.
- * @return {!string} The corresponding string.
- */
-sre.MathspeakUtil.nestingToString = function(count) {
-  switch (count) {
-    case 1:
-      return '';
-    case 2:
-      return msg.MS.TWICE;
-    default:
-      return count.toString();
-  }
-};
-
-
-/**
  * Opening string for fractions in Mathspeak superbrief mode.
  * @param {!Node} node The fraction node.
  * @return {!string} The opening string.
@@ -312,7 +299,7 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_S;
   }
-  return msg.MS.NEST_FRAC + sre.MathspeakUtil.nestingToString(depth - 1) + msg.MS.FRAC_S;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.FRAC_S;
 };
 
 
@@ -326,7 +313,7 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.ENDFRAC;
   }
-  return msg.MS.NEST_FRAC + sre.MathspeakUtil.nestingToString(depth - 1) + msg.MS.ENDFRAC;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.ENDFRAC;
 };
 
 
@@ -340,7 +327,7 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_OVER;
   }
-  return msg.MS.NEST_FRAC + sre.MathspeakUtil.nestingToString(depth - 1) + msg.MS.OVER;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.OVER;
 };
 
 
@@ -673,8 +660,8 @@ sre.MathspeakUtil.baselineVerbose = function(node) {
   if (!baseline) {
     return msg.MS.BASELINE;
   }
-  return baseline.replace(/Sub$/, msg.MS.SUBSCRIPT).   // Still TODO (SPANISH)
-      replace(/Super$/, msg.MS.SUPERSCRIPT);
+  return baseline.replace(new RegExp(msg.MS.SUB + '$'), msg.MS.SUBSCRIPT).
+    replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
 };
 
 
@@ -717,7 +704,7 @@ sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
   if (depth === 1) {
     return postfix;
   }
-  return prefix + sre.MathspeakUtil.nestingToString(depth - 1) + postfix;
+  return prefix + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + postfix;
 };
 
 
