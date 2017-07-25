@@ -582,7 +582,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       ' operator="infixop,∓">∓</mo>' +
       '<mrow type="postfixop" role="addition" id="10" children="8"' +
       ' content="6" parent="9">' +
-      '<mrow type="prefixop" role="addition" id="8" children="5" content="4"' +
+      '<mrow type="prefixop" role="positive" id="8" children="5" content="4"' +
       ' parent="10">' +
       '<mo type="operator" role="addition" id="4" parent="8"' +
       ' operator="prefixop,+">+</mo>' +
@@ -610,7 +610,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="3" parent="12"' +
       ' operator="infixop,∓">∓</mo>' +
-      '<mrow type="prefixop" role="addition" id="11" children="5"' +
+      '<mrow type="prefixop" role="positive" id="11" children="5"' +
       ' content="4" parent="12">' +
       '<mo type="operator" role="addition" id="4" parent="11"' +
       ' operator="prefixop,+">+</mo>' +
@@ -621,7 +621,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       ' operator="infixop,+">+</mo>' +
       '<mrow type="postfixop" role="addition" id="15" children="13"' +
       ' content="9" parent="14">' +
-      '<mrow type="prefixop" role="addition" id="13" children="8"' +
+      '<mrow type="prefixop" role="positive" id="13" children="8"' +
       ' content="7" parent="15">' +
       '<mo type="operator" role="addition" id="7" parent="13"' +
       ' operator="prefixop,∓">∓</mo>' +
@@ -868,7 +868,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMultipleOperators = function() {
       '</mrow>' +
       '<mo type="operator" role="addition" id="12" parent="27"' +
       ' operator="infixop,+">+</mo>' +
-      '<mrow type="prefixop" role="addition" id="26" children="14"' +
+      '<mrow type="prefixop" role="positive" id="26" children="14"' +
       ' content="13" parent="27">' +
       '<mo type="operator" role="addition" id="13" parent="26"' +
       ' operator="prefixop,+">+</mo>' +
@@ -2462,7 +2462,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
       ' operator="punctuated">[</mo>' +
       '<mrow type="postfixop" role="addition" id="27" children="26"' +
       ' content="12" parent="30">' +
-      '<mrow type="prefixop" role="addition" id="26" children="25"' +
+      '<mrow type="prefixop" role="positive" id="26" children="25"' +
       ' content="6" parent="27">' +
       '<mo type="operator" role="addition" id="6" parent="26"' +
       ' operator="prefixop,+">+</mo>' +
@@ -2502,7 +2502,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMixedUnmatchedFences = function() {
       '<mi type="identifier" role="latinletter" id="20" parent="30">y</mi>' +
       '<mo type="punctuation" role="vbar" id="21" parent="30"' +
       ' operator="punctuated">¦</mo>' +
-      '<mrow type="prefixop" role="addition" id="29" children="23"' +
+      '<mrow type="prefixop" role="positive" id="29" children="23"' +
       ' content="22" parent="30">' +
       '<mo type="operator" role="addition" id="22" parent="29"' +
       ' operator="prefixop,+">+</mo>' +

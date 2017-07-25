@@ -154,6 +154,10 @@ sre.SemanticProcessor.prototype.concatNode_ = function(inner, nodeList, type) {
 };
 
 
+// TODO: (Simons) Rewrite to group same operators.
+//
+//       Currently the positive role is only given to the innermost single +
+//       prefix operator.
 /**
  * Wraps a node into prefix operators.
  * Example: + - a becomes (+ (- (a)))
@@ -169,7 +173,10 @@ sre.SemanticProcessor.prototype.prefixNode_ = function(node, prefixes) {
       prefixes, sre.SemanticPred.isAttribute('role', 'SUBTRACTION'));
   var newNode = sre.SemanticProcessor.getInstance().concatNode_(
       node, negatives.comp.pop(), sre.SemanticAttr.Type.PREFIXOP);
-
+  if (newNode.contentNodes.length === 1 &&
+      newNode.contentNodes[0].role === sre.SemanticAttr.Role.ADDITION) {
+    newNode.role = sre.SemanticAttr.Role.POSITIVE;
+  }
   while (negatives.rel.length > 0) {
     newNode = sre.SemanticProcessor.getInstance().concatNode_(
         newNode, [negatives.rel.pop()], sre.SemanticAttr.Type.PREFIXOP);

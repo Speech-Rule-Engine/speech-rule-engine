@@ -1475,6 +1475,7 @@ sre.SemanticAttr.Role = {
 
   // Operators.
   NEGATIVE: 'negative',
+  POSITIVE: 'positive',
   NEGATION: 'negation',
   MULTIOP: 'multiop',
 
