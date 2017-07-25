@@ -172,7 +172,7 @@ sre.ClearspeakParentheses.prototype.testParen011 = function() {
 sre.ClearspeakParentheses.prototype.testParen012 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  // This is against the Paren_Auto rules! (page 31)!
+  // TODO (QUESTION): This is against the Paren_Auto rules! (page 31)!
   // var speech = 'open paren, three fourths, x, close paren';
   var speech = 'three fourths x';
   this.executeRuleTest(mathml, speech, preference);
@@ -538,7 +538,7 @@ sre.ClearspeakParentheses.prototype.testParen044 = function() {
 sre.ClearspeakParentheses.prototype.testParen045 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the interval from negative to 1, not including 1';
+  var speech = 'the interval from negative infinity to 1, not including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -648,7 +648,7 @@ sre.ClearspeakParentheses.prototype.testNest001 = function() {
 sre.ClearspeakParentheses.prototype.testNest002 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of, open paren, g of open paren, x plus 1, close paren, close paren';
+  var speech = 'f of, open paren, g of, open paren, x plus 1, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -681,7 +681,7 @@ sre.ClearspeakParentheses.prototype.testNest004 = function() {
 sre.ClearspeakParentheses.prototype.testNest005 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>4</mn><mrow><mo>[</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '4 times open bracket x plus 3 times, open paren, 2 x plus 1, close paren, close bracket';
+  var speech = '4 times, open bracket, x plus 3 times, open paren, 2 x, plus 1, close paren, close bracket';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -692,7 +692,7 @@ sre.ClearspeakParentheses.prototype.testNest005 = function() {
 sre.ClearspeakParentheses.prototype.testNest006 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '4 times open paren, x plus 3 times, open second paren, 2 x plus 1, close second paren, close paren';
+  var speech = '4 times, open paren, x plus 3 times, open second paren, 2 x, plus 1, close second paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -725,7 +725,7 @@ sre.ClearspeakParentheses.prototype.testNest008 = function() {
 sre.ClearspeakParentheses.prototype.testNest009 = function() {
   var preference = 'Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>7</mn><mo>+</mo><mrow><mo>(</mo><mrow><mn>8</mn><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, open second paren, 2 plus, open third paren, 3 plus 4, close third paren, plus 5, close second paren, plus 6, plus open second paren, open third paren, 7 plus, open fourth paren, 8 plus 1, close fourth paren, close third paren, plus 2, close second paren, close paren';
+  var speech = 'open paren, open second paren, 2 plus, open third paren, 3 plus 4, close third paren, plus 5, close second paren, plus 6 plus, open second paren, open third paren, 7 plus, open fourth paren, 8 plus 1, close fourth paren, close third paren, plus 2, close second paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -758,7 +758,7 @@ sre.ClearspeakParentheses.prototype.testSilParen002 = function() {
 sre.ClearspeakParentheses.prototype.testSilParen003 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 plus negative 2';
+  var speech = '2 plus, negative 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -769,7 +769,7 @@ sre.ClearspeakParentheses.prototype.testSilParen003 = function() {
 sre.ClearspeakParentheses.prototype.testSilParen004 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 minus negative 2';
+  var speech = '2 minus, negative 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -802,7 +802,7 @@ sre.ClearspeakParentheses.prototype.testSilParen006 = function() {
 sre.ClearspeakParentheses.prototype.testSilParen007 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '2 x, raised to the y plus1 power';
+  var speech = '2 x, raised to the y plus 1 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -857,7 +857,7 @@ sre.ClearspeakParentheses.prototype.testSilParen011 = function() {
 sre.ClearspeakParentheses.prototype.testSilParen012 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'three fourths, x';
+  var speech = 'three fourths x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -879,7 +879,7 @@ sre.ClearspeakParentheses.prototype.testSilParen013 = function() {
 sre.ClearspeakParentheses.prototype.testSilParen014 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>';
-  var speech = 'one half to the fourth power';
+  var speech = 'one half, to the fourth power';
   this.executeRuleTest(mathml, speech, preference);
 };
 

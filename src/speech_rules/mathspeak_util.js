@@ -433,7 +433,18 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
   if (num === 2) {
     return plural ? 'halves' : 'half';
   }
-  var ordinal = sre.MathspeakUtil.numberToWords(num);
+  var ordinal = sre.MathspeakUtil.wordOrdinal(num);
+  return plural ? ordinal + 's' : ordinal;
+};
+
+
+/**
+ * Creates a word ordinal string from a number.
+ * @param {number} number The number to be converted.
+ * @return {string} The ordinal string.
+ */
+sre.MathspeakUtil.wordOrdinal = function(number) {
+  var ordinal = sre.MathspeakUtil.numberToWords(number);
   if (ordinal.match(/one$/)) {
     ordinal = ordinal.slice(0, -3) + 'first';
   } else if (ordinal.match(/two$/)) {
@@ -453,7 +464,7 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
   } else {
     ordinal = ordinal + 'th';
   }
-  return plural ? ordinal + 's' : ordinal;
+  return ordinal;
 };
 
 

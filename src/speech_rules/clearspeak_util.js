@@ -378,8 +378,127 @@ sre.ClearspeakUtil.ordinalExponent = function(node) {
 };
 
 
+/**
+ * Tests for capital letters wrt. Unicode categories.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a capital letter.
+ */
 sre.ClearspeakUtil.isCapitalLetter = function(node) {
   var result = sre.MathCompoundStore.getInstance().
         lookupCategory(node.textContent) === 'Lu';
   return result ? [node] : [];
+};
+
+
+/**
+ * @type {?string}
+ */
+sre.ClearspeakUtil.NESTING_DEPTH = null;
+
+/**
+ * Computes the nesting depth of a fenced expressions.
+ * @param {!Node} node The fenced node.
+ * @return {?string} The nesting depth as an ordinal number.
+ */
+sre.ClearspeakUtil.nestingDepth = function(node) {
+  console.log('HERE2');
+  // if (sre.ClearspeakUtil.NESTING_DEPTH !== null) {
+  //   return sre.ClearspeakUtil.NESTING_DEPTH;
+  // }
+
+  // var content = sre.XpathUtil.evalXPath('content/*[1]', node);
+  // if (!content) {
+  //   return '';
+  // }
+
+  var count = 0;
+  var fence = /** @type {Element} */(node).textContent;
+  var index = node.getAttribute('role') === 'open' ? 0 : 1;
+  console.log('index: ' + index);
+  var parent = node.parentNode;
+  while (parent) {
+    console.log(parent.toString());
+    if (parent.tagName === sre.SemanticAttr.Type.FENCED &&
+        parent.childNodes[0].childNodes[index].textContent === fence) {
+      count++;
+    }
+    parent = parent.parentNode;
+  }
+  console.log(count);
+  sre.ClearspeakUtil.NESTING_DEPTH = count > 1 ?
+    sre.MathspeakUtil.wordOrdinal(count) : '';
+  return sre.ClearspeakUtil.NESTING_DEPTH;
+};
+
+
+sre.ClearspeakUtil.matchingFences = function(node) {
+  console.log('HERE WE ARE');
+  console.log(node.toString());
+  var sibling = node.previousSibling;
+  if (sibling) {
+    var left = sibling;
+    var right = node;
+  } else {
+    left = node;
+    right = node.nextSibling;
+  }
+  if (!right) { // this case should not happen!
+    return [];
+  }
+  console.log("HHHHH");
+  console.log(left.toString());
+  console.log(right.toString());
+  return sre.SemanticAttr.isMatchingFence(left.textContent, right.textContent) ?
+    [node] : [];
+};
+
+
+sre.ClearspeakUtil.insertNesting = function(text, correction) {
+  console.log('INSERTING');
+  if (!correction || !text) {
+    return text;
+  }
+  var start = text.match(/^(open|close) /);
+  if (!start) {
+    return correction + ' ' + text;
+  }
+  return start[0] + correction + ' ' + text.substring(start[0].length);
+};
+
+
+sre.Grammar.getInstance().setCorrection('insertNesting',
+                                        sre.ClearspeakUtil.insertNesting);
+
+
+sre.ClearspeakUtil.fencedArguments = function(node) {
+  var content = sre.DomUtil.toArray(node.parentNode.childNodes);
+  var children = sre.XpathUtil.evalXPath('../../children/*', node);
+  var index = content.indexOf(node);
+  return (sre.ClearspeakUtil.fencedFactor_(children[index]) ||
+          sre.ClearspeakUtil.fencedFactor_(children[index + 1])) ?
+    [node] : [];
+};
+
+
+sre.ClearspeakUtil.simpleArguments = function(node) {
+  var content = sre.DomUtil.toArray(node.parentNode.childNodes);
+  var children = sre.XpathUtil.evalXPath('../../children/*', node);
+  var index = content.indexOf(node);
+  return (sre.ClearspeakUtil.simpleFactor_(children[index]) &&
+          sre.ClearspeakUtil.simpleFactor_(children[index + 1])) ?
+    [node] : [];
+};
+
+sre.ClearspeakUtil.simpleFactor_ = function(node) {
+  return node.tagName === sre.SemanticAttr.Type.NUMBER ||
+    node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
+    node.tagName === sre.SemanticAttr.Type.FUNCTION ||
+    node.tagName === sre.SemanticAttr.Type.APPL;
+}
+
+
+sre.ClearspeakUtil.fencedFactor_ = function(node) {
+  return node.tagName === sre.SemanticAttr.Type.FENCED ||
+    (node.hasAttribute('role') &&
+     node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT);
 };

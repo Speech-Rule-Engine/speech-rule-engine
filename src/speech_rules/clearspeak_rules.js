@@ -111,6 +111,10 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
   addCQF('CQFisCapital', sre.ClearspeakUtil.isCapitalLetter);
+  addCQF('CQFmatchingFences', sre.ClearspeakUtil.matchingFences);
+  addCSF('CSFnestingDepth', sre.ClearspeakUtil.nestingDepth);
+  addCQF('CQFfencedArguments', sre.ClearspeakUtil.fencedArguments);
+  addCQF('CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments);
 };
 
 
@@ -125,11 +129,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'stree', 'clearspeak.default',
       '[n] ./*[1]', 'self::stree');
 
+  //
   // Text rules
+  // 
   defineRule(
       'text', 'clearspeak.default', '[n] text()', 'self::text');
 
+  //
   // Symbols
+  //
+
   // Capital letters
   // defineRule(
   //   'non-latin', 'clearspeak.default',
@@ -246,7 +255,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[m] children/*',
       'self::punctuated');
 
+  //
   // Function rules
+  // 
   defineRule(
       'function', 'clearspeak.default',
       '[n] text()', 'self::function');
@@ -260,6 +271,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'function-prefix', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
       'self::appl', 'children/*[1][@role="prefix function"]');
+
+  defineRule(
+      'function-prefix', 'clearspeak.default',
+      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[2])="fenced" or name(children/*[2])="fraction"');
 
   defineRule(
       'function-inverse', 'clearspeak.default',
@@ -283,7 +300,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'children/*[2]/children/*[1][text()="1"]',
     'not(contains(@grammar, "functions_none"))');
 
+  //
   // Superscript rules
+  //
   defineRule(
       'superscript', 'clearspeak.default',
       '[n] children/*[1]; [t] "raised to exponent" (pause:"short"); ' +
@@ -314,7 +333,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [t] "power" (pause:"short")',
       'self::superscript', 'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
   defineRuleAlias(
-    'superscript-ordinal', 'self::superscript',
+    'superscript-ordinal', 'self::superscript', 'name(children/*[2])="identifier"',
     'children/*[2][@role="latinletter" or @role="greekletter" or @role="otherletter"]');
   defineRule(
       'superscript-non-ordinal', 'clearspeak.default',
@@ -394,8 +413,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
 
 
-
+  //
   // Parentheses rules
+  // 
   defineRule(
     'paren-simple', 'clearspeak.default',
     '[n] children/*[1]',
@@ -425,20 +445,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
       'children/*[1]/children/*[2]/children/*[1][@role="vulgar"] '
   );
-
-  defineRule(
-    'paren-simple-nested-func', 'clearspeak.Functions_None',
-      '[p] (pause:"short"); [n] content/*[1]; [p] (pause:"short"); [n] children/*[1];' +
-      ' [p] (pause:"short"); [n] content/*[2]; [p] (pause:"short")',
-    'self::fenced', '@role="leftright"',
-    'name(../*[1])="identifier" or name(../*[1])="function"',
-    'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
-    'children/*[1][@role="simple function" or @role="prefix function"]',
-    'contains(children/*[1]/children/*[2]/children/*[1]/@meaning, "clearspeak:simple") or ' +
-      'name(children/*[1]/children/*[2]/children/*[1])="subscript" or ' +
-      'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
-      'children/*[1]/children/*[2]/children/*[1][@role="vulgar"] '
-  );
   defineRule(
     'paren-simple-nested-func-no-bracket', 'clearspeak.Functions_None',
     '[n] children/*[1];',
@@ -451,78 +457,172 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'name(children/*[1]/children/*[2]/children/*[1])="identifier" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="number"'
   );
+  // Parens spoken
   defineRule(
       'fences-open-close', 'clearspeak.default',
-      '[p] (pause:"short"); [n] content/*[1]; [p] (pause:"short"); [n] children/*[1];' +
-      ' [p] (pause:"short"); [n] content/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [n] content/*[1] (grammar:spokenFence);' +
+      ' [p] (pause:"short"); [n] children/*[1];' +
+      ' [p] (pause:"short"); [n] content/*[2] (grammar:spokenFence);' +
+      ' [p] (pause:"short")',
     'self::fenced', '@role="leftright"');
+  defineRule(
+    'paren-simple-nested-func', 'clearspeak.default',
+      '[p] (pause:"short"); [n] content/*[1];' +
+      ' [p] (pause:"short"); [n] children/*[1];' +
+      ' [p] (pause:"short"); [n] content/*[2];' +
+      ' [p] (pause:"short")',
+    'self::fenced', '@role="leftright"',
+    'name(../*[1])="identifier" or name(../*[1])="function"',
+    'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
+    'not(contains(children/*[1]/@meaning, "clearspeak:simple"))');
+  defineRule(
+    'paren-simple-nested-func', 'clearspeak.Functions_None',
+      '[p] (pause:"short"); [n] content/*[1] (grammar:spokenFence);' +
+      ' [p] (pause:"short"); [n] children/*[1];' +
+      ' [p] (pause:"short"); [n] content/*[2] (grammar:spokenFence);' +
+      ' [p] (pause:"short")',
+    'self::fenced', '@role="leftright"',
+    'name(../*[1])="identifier" or name(../*[1])="function"',
+    'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
+    'children/*[1][@role="simple function" or @role="prefix function"]',
+    'contains(children/*[1]/children/*[2]/children/*[1]/@meaning, "clearspeak:simple") or ' +
+      'name(children/*[1]/children/*[2]/children/*[1])="subscript" or ' +
+      'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
+      'children/*[1]/children/*[2]/children/*[1][@role="vulgar"] '
+  );
+  // Order important!
+  defineSpecialisedRule(
+    'fences-open-close', 'clearspeak.default', 'clearspeak.Paren_Speak');
+  defineRuleAlias(
+    'fences-open-close', 'self::fenced', '@role="composed function"');
+  defineRule(
+    'fence-silent', 'clearspeak.Paren_Silent',
+    '[p] (pause:"short"); [n] children/*[1]; [p] (pause:"short")',
+    'self::fenced'
+  );
 
+  // TODO: brackets should be excluded. What about other fences?
+  defineRule(
+    'fence-nesting', 'clearspeak.Paren_SpeakNestingLevel',
+    '[n] text() (grammar:insertNesting=CSFnestingDepth)',
+    'self::fence', 'contains(@grammar, "spokenFence")', 'CQFmatchingFences'
+  );
+  defineRule(
+    'fence-no-nesting', 'clearspeak.Paren_SpeakNestingLevel',
+    '[n] text()', 'self::fence'
+  );
+  
+  // defineRule(
+  //     'fences-open-close-nest', 'clearspeak.Paren_SpeakNestingLevel',
+  //     '[p] (pause:"short"); [n] content/*[1] (grammar:nesting=CSFnestingDepth); ' +
+  //     '[p] (pause:"short"); [n] children/*[1];' +
+  //     ' [p] (pause:"short"); [n] content/*[2] (grammar:nesting=CSFnestingDepth);' +
+  //     ' [p] (pause:"short")',
+  //   'self::fenced', '@role="leftright"', );
+
+  // Coordinates
   defineRule(
     'fences-points', 'clearspeak.Paren_CoordPoint',
     '[t] "the point with coordinates"; [n] children/*[1]',
     'self::fenced', 'name(children/*[1])="punctuated"',
     'children/*[1][@role="sequence"]');
 
+  // Intervals
   defineRule(
     'fences-interval', 'clearspeak.Paren_Interval',
     '[t] "the interval from"; ' +
       '[n] children/*[1]/children/*[1]; [t] "to"; ' +
       '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
-      '[t] "not including"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "or"; [n] children/*[1]/children/*[3]',
-    'self::fenced',
-    'content/*[1]/text()="("',
-    'content/*[2]/text()=")"',
+      '[n] . (grammar:interval)',
+    'self::fenced', 'not(contains(@grammar, "interval"))',
     'name(children/*[1])="punctuated"',
     'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
-    'children/*[1]/content/*[1][@role="comma"]');
+    'children/*[1]/content/*[1][@role="comma"]'
+  );
+
   defineRule(
-    'fences-interval', 'clearspeak.Paren_Interval',
-    '[t] "the interval from"; ' +
-      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
-      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
+    'interval-open', 'clearspeak.Paren_Interval',
+    '[t] "not including"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "or"; [n] children/*[1]/children/*[3]',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()=")"'
+  );
+  defineRule(
+    'interval-closed-open', 'clearspeak.Paren_Interval',
       '[t] "including"; [n] children/*[1]/children/*[1];' +
       ' [p] (pause:"short"); ' +
       '[t] "but not including"; [n] children/*[1]/children/*[3]',
-    'self::fenced',
+    'self::fenced', 'contains(@grammar, "interval")',
     'content/*[1]/text()="["',
-    'content/*[2]/text()=")"',
-    'name(children/*[1])="punctuated"',
-    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
-    'children/*[1]/content/*[1][@role="comma"]');
+    'content/*[2]/text()=")"'
+  );
   defineRule(
-    'fences-interval', 'clearspeak.Paren_Interval',
-    '[t] "the interval from"; ' +
-      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
-      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
+    'interval-open-closed', 'clearspeak.Paren_Interval',
       '[t] "not including"; [n] children/*[1]/children/*[1];' +
       ' [p] (pause:"short"); ' +
       '[t] "but including"; [n] children/*[1]/children/*[3]',
-    'self::fenced',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()="]"'
+  );
+  defineRule(
+    'interval-closed', 'clearspeak.Paren_Interval',
+    '[t] "including"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "and"; [n] children/*[1]/children/*[3]',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="["',
+    'content/*[2]/text()="]"'
+  );
+  // Infinity cases.
+  defineRule(
+    'interval-open-inf-r', 'clearspeak.Paren_Interval',
+    '[t] "not including"; [n] children/*[1]/children/*[1]',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()=")"',
+    'children/*[1]/children/*[3]/text()="∞" or' +
+      ' (name(children/*[1]/children/*[3])="prefixop" and ' +
+      'children/*[1]/children/*[3]/children/*[1]/text()="∞")');
+  defineRule(
+    'interval-open-inf-l', 'clearspeak.Paren_Interval',
+    '[t] "not including"; [n] children/*[1]/children/*[3]',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()=")"',
+    'children/*[1]/children/*[1]/text()="∞" or' +
+      ' (name(children/*[1]/children/*[1])="prefixop" and ' +
+      'children/*[1]/children/*[1]/children/*[1]/text()="∞")');
+  defineRule(
+    'interval-open-inf-lr', 'clearspeak.Paren_Interval',
+    '',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()=")"',
+    'children/*[1]/children/*[3]/text()="∞" or' +
+      ' (name(children/*[1]/children/*[3])="prefixop" and ' +
+      'children/*[1]/children/*[3]/children/*[1]/text()="∞")',
+    'children/*[1]/children/*[1]/text()="∞" or' +
+      ' (name(children/*[1]/children/*[1])="prefixop" and ' +
+      'children/*[1]/children/*[1]/children/*[1]/text()="∞")');
+  defineRule(
+    'interval-closed-open-inf', 'clearspeak.Paren_Interval',
+      '[t] "including"; [n] children/*[1]/children/*[1]',
+    'self::fenced', 'contains(@grammar, "interval")',
+    'content/*[1]/text()="["',
+    'content/*[2]/text()=")"',
+    'children/*[1]/children/*[3]/text()="∞" or' +
+      ' (name(children/*[1]/children/*[3])="prefixop" and ' +
+      'children/*[1]/children/*[3]/children/*[1]/text()="∞")');
+  defineRule(
+    'interval-open-closed-inf', 'clearspeak.Paren_Interval',
+    '[t] "including"; [n] children/*[1]/children/*[3]',
+    'self::fenced', 'contains(@grammar, "interval")',
     'content/*[1]/text()="("',
     'content/*[2]/text()="]"',
-    'name(children/*[1])="punctuated"',
-    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
-    'children/*[1]/content/*[1][@role="comma"]');
-  defineRule(
-    'fences-interval', 'clearspeak.Paren_Interval',
-    '[t] "the interval from"; ' +
-      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
-      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
-      '[t] "including"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "and"; [n] children/*[1]/children/*[3]',
-    'self::fenced',
-    'content/*[1]/text()="["',
-    'content/*[2]/text()="]"',
-    'name(children/*[1])="punctuated"',
-    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
-    'children/*[1]/content/*[1][@role="comma"]');
-
-  // Order important!
-  defineSpecialisedRule(
-    'fences-open-close', 'clearspeak.default', 'clearspeak.Paren_Speak');
-  defineRuleAlias(
-    'fences-open-close', 'self::fenced', '@role="composed function"');
+    'children/*[1]/children/*[1]/text()="∞" or' +
+      ' (name(children/*[1]/children/*[1])="prefixop" and ' +
+      'children/*[1]/children/*[1]/children/*[1]/text()="∞")');
 
   defineRule(
     'paren-nested-embellished-funcs', 'clearspeak.Functions_None',
@@ -690,14 +790,20 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Roots
   defineRule(
       'sqrt', 'clearspeak.default',
-      '[t] "the square root of"; [n] children/*[1]; [p] (pause:500)',
+      '[p] (pause:"short"); [t] "the square root of"; [n] children/*[1]; [p] (pause:"short")',
     'self::sqrt');
 
   // minus sign
   defineRule(
       'negative', 'clearspeak.default',
       '[t] "negative"; [n] children/*[1]',
-      'self::prefixop', '@role="negative"'); //, 'contains(@meaning, "clearspeak:simple")');
+      'self::prefixop', '@role="negative"');
+  //, 'contains(@meaning, "clearspeak:simple")');
+  defineRule(
+      'positive', 'clearspeak.default',
+      '[t] "positive"; [n] children/*[1]',
+      'self::prefixop', '@role="positive"'); 
+  //, 'contains(@meaning, "clearspeak:simple")');
   
   // Angle
   // defineRule(
@@ -743,9 +849,21 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'binary-operation', 'clearspeak.default',
       '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop');
 
+  // defineRule(
+  //     'binary-operation', 'clearspeak.default',
+  //     '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:"short")', 'self::infixop', '@role="implicit"');
   defineRule(
-      'binary-operation', 'clearspeak.default',
-      '[m] children/*', 'self::infixop', '@role="implicit"');
+      'implicit-times', 'clearspeak.default',
+      '[p] (pause:"short")', 'self::operator', '@role="multiplication"', 'text()="⁢"');
+  defineRule(
+      'implicit-times', 'clearspeak.default',
+      '', 'self::operator', '@role="multiplication"', 'text()="⁢"',
+      'CQFsimpleArguments');
+  defineRule(
+      'implicit-times', 'clearspeak.default',
+      '[n] text()', 'self::operator', '@role="multiplication"', 'text()="⁢"',
+      'CQFfencedArguments'); 
+  // TODO: XPath 2.0 would help here!
 
   defineRule(
       'binary-operation-simple', 'clearspeak.default',
