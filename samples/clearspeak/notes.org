@@ -424,7 +424,7 @@ Helper function for Emacs:
 ** Parentheses
 
 *** Pausing commmata:
-    Paren009, Paren024
+    Paren009, Paren024, Paren036-Paren050
 
 *** Simple expression: 
     Paren002, Paren006, Paren007, Paren008, Paren009, Paren010, Paren017,
@@ -462,3 +462,10 @@ Helper function for Emacs:
 
 **** Paren029: Decap One
 
+**** Paren045: missing infinity
+
+*** Remove emphasis:
+    Paren036, Paren036, Paren036, Paren036, Paren038, Paren038, Paren038,
+    Paren040, Paren040, Paren040, Paren042, Paren042, Paren042, Paren042,
+    Paren044, Paren044, Paren046, Paren046, Paren048, Paren048, Paren050,
+    Paren050,

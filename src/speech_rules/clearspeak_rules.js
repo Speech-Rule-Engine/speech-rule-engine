@@ -456,6 +456,68 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[p] (pause:"short"); [n] content/*[1]; [p] (pause:"short"); [n] children/*[1];' +
       ' [p] (pause:"short"); [n] content/*[2]; [p] (pause:"short")',
     'self::fenced', '@role="leftright"');
+
+  defineRule(
+    'fences-points', 'clearspeak.Paren_CoordPoint',
+    '[t] "the point with coordinates"; [n] children/*[1]',
+    'self::fenced', 'name(children/*[1])="punctuated"',
+    'children/*[1][@role="sequence"]');
+
+  defineRule(
+    'fences-interval', 'clearspeak.Paren_Interval',
+    '[t] "the interval from"; ' +
+      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
+      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
+      '[t] "not including"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "or"; [n] children/*[1]/children/*[3]',
+    'self::fenced',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()=")"',
+    'name(children/*[1])="punctuated"',
+    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
+    'children/*[1]/content/*[1][@role="comma"]');
+  defineRule(
+    'fences-interval', 'clearspeak.Paren_Interval',
+    '[t] "the interval from"; ' +
+      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
+      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
+      '[t] "including"; [n] children/*[1]/children/*[1];' +
+      ' [p] (pause:"short"); ' +
+      '[t] "but not including"; [n] children/*[1]/children/*[3]',
+    'self::fenced',
+    'content/*[1]/text()="["',
+    'content/*[2]/text()=")"',
+    'name(children/*[1])="punctuated"',
+    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
+    'children/*[1]/content/*[1][@role="comma"]');
+  defineRule(
+    'fences-interval', 'clearspeak.Paren_Interval',
+    '[t] "the interval from"; ' +
+      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
+      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
+      '[t] "not including"; [n] children/*[1]/children/*[1];' +
+      ' [p] (pause:"short"); ' +
+      '[t] "but including"; [n] children/*[1]/children/*[3]',
+    'self::fenced',
+    'content/*[1]/text()="("',
+    'content/*[2]/text()="]"',
+    'name(children/*[1])="punctuated"',
+    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
+    'children/*[1]/content/*[1][@role="comma"]');
+  defineRule(
+    'fences-interval', 'clearspeak.Paren_Interval',
+    '[t] "the interval from"; ' +
+      '[n] children/*[1]/children/*[1]; [t] "to"; ' +
+      '[n] children/*[1]/children/*[3]; [p] (pause:"short"); ' +
+      '[t] "including"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "and"; [n] children/*[1]/children/*[3]',
+    'self::fenced',
+    'content/*[1]/text()="["',
+    'content/*[2]/text()="]"',
+    'name(children/*[1])="punctuated"',
+    'children/*[1][@role="sequence"]', 'count(./children/*[1]/content/*)=1',
+    'children/*[1]/content/*[1][@role="comma"]');
+
   // Order important!
   defineSpecialisedRule(
     'fences-open-close', 'clearspeak.default', 'clearspeak.Paren_Speak');
