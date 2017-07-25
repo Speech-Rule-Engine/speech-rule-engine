@@ -62,7 +62,7 @@ sre.ClearspeakParentheses.prototype.testParen001 = function() {
 sre.ClearspeakParentheses.prototype.testParen002 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2x';
+  var speech = '2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -92,7 +92,7 @@ sre.ClearspeakParentheses.prototype.testParen004 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren005
  */
-sre.ClearspeakParentheses.prototype.untestParen005 = function() {
+sre.ClearspeakParentheses.prototype.testParen005 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3</mn></msup></mrow></math>';
   var speech = '2 minus, open paren, negative 2, close paren, cubed';
@@ -103,10 +103,10 @@ sre.ClearspeakParentheses.prototype.untestParen005 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren006
  */
-sre.ClearspeakParentheses.prototype.untestParen006 = function() {
+sre.ClearspeakParentheses.prototype.testParen006 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Open paren, 2x, close paren, squared';
+  var speech = 'open paren, 2 x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -114,10 +114,10 @@ sre.ClearspeakParentheses.prototype.untestParen006 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren007
  */
-sre.ClearspeakParentheses.prototype.untestParen007 = function() {
+sre.ClearspeakParentheses.prototype.testParen007 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = 'Open paren, 2x, close paren, raised to the y plus1 power';
+  var speech = 'open paren, 2 x, close paren, raised to the y plus 1 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -125,10 +125,10 @@ sre.ClearspeakParentheses.prototype.untestParen007 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren008
  */
-sre.ClearspeakParentheses.prototype.untestParen008 = function() {
+sre.ClearspeakParentheses.prototype.testParen008 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Negative 2x';
+  var speech = 'negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -136,10 +136,10 @@ sre.ClearspeakParentheses.prototype.untestParen008 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren009
  */
-sre.ClearspeakParentheses.prototype.untestParen009 = function() {
+sre.ClearspeakParentheses.prototype.testParen009 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Open paren negative 2x, close paren, squared';
+  var speech = 'open paren, negative 2 x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -147,10 +147,10 @@ sre.ClearspeakParentheses.prototype.untestParen009 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren010
  */
-sre.ClearspeakParentheses.prototype.untestParen010 = function() {
+sre.ClearspeakParentheses.prototype.testParen010 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Negative, open paren, 2x, close paren, squared';
+  var speech = 'negative, open paren, 2 x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -158,10 +158,10 @@ sre.ClearspeakParentheses.prototype.untestParen010 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren011
  */
-sre.ClearspeakParentheses.prototype.untestParen011 = function() {
+sre.ClearspeakParentheses.prototype.testParen011 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'One half';
+  var speech = 'one half';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -169,10 +169,12 @@ sre.ClearspeakParentheses.prototype.untestParen011 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren012
  */
-sre.ClearspeakParentheses.prototype.untestParen012 = function() {
+sre.ClearspeakParentheses.prototype.testParen012 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, Three fourths, x, close paren';
+  // This is against the Paren_Auto rules! (page 31)!
+  // var speech = 'open paren, three fourths, x, close paren';
+  var speech = 'three fourths x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -180,10 +182,10 @@ sre.ClearspeakParentheses.prototype.untestParen012 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren013
  */
-sre.ClearspeakParentheses.prototype.untestParen013 = function() {
+sre.ClearspeakParentheses.prototype.testParen013 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, 11 over 22, close paren';
+  var speech = 'open paren, 11 over 22, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -191,10 +193,10 @@ sre.ClearspeakParentheses.prototype.untestParen013 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren014
  */
-sre.ClearspeakParentheses.prototype.untestParen014 = function() {
+sre.ClearspeakParentheses.prototype.testParen014 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>';
-  var speech = 'One half to the fourth power';
+  var speech = 'one half to the fourth power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -202,10 +204,10 @@ sre.ClearspeakParentheses.prototype.untestParen014 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren015
  */
-sre.ClearspeakParentheses.prototype.untestParen015 = function() {
+sre.ClearspeakParentheses.prototype.testParen015 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Open paren, 11 over 15, close paren, squared';
+  var speech = 'open paren, 11 over 15, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -213,10 +215,10 @@ sre.ClearspeakParentheses.prototype.untestParen015 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren016
  */
-sre.ClearspeakParentheses.prototype.untestParen016 = function() {
+sre.ClearspeakParentheses.prototype.testParen016 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, 25, close paren';
+  var speech = 'open paren, 25, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -224,10 +226,10 @@ sre.ClearspeakParentheses.prototype.untestParen016 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren017
  */
-sre.ClearspeakParentheses.prototype.untestParen017 = function() {
+sre.ClearspeakParentheses.prototype.testParen017 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, 2x, close paren';
+  var speech = 'open paren, 2 x, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -235,7 +237,7 @@ sre.ClearspeakParentheses.prototype.untestParen017 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren018
  */
-sre.ClearspeakParentheses.prototype.untestParen018 = function() {
+sre.ClearspeakParentheses.prototype.testParen018 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2 plus, open paren, negative 2, close paren';
@@ -246,10 +248,10 @@ sre.ClearspeakParentheses.prototype.untestParen018 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren019
  */
-sre.ClearspeakParentheses.prototype.untestParen019 = function() {
+sre.ClearspeakParentheses.prototype.testParen019 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 minus, open paren, negative 2,close paren';
+  var speech = '2 minus, open paren, negative 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -257,7 +259,7 @@ sre.ClearspeakParentheses.prototype.untestParen019 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren020
  */
-sre.ClearspeakParentheses.prototype.untestParen020 = function() {
+sre.ClearspeakParentheses.prototype.testParen020 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mn>2</mn><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mn>3</mn></msup></mrow></math>';
   var speech = '2 minus, open paren, negative 2, close paren, cubed';
@@ -268,10 +270,10 @@ sre.ClearspeakParentheses.prototype.untestParen020 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren021
  */
-sre.ClearspeakParentheses.prototype.untestParen021 = function() {
+sre.ClearspeakParentheses.prototype.testParen021 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Open paren, 2x, close paren, squared';
+  var speech = 'open paren, 2 x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -279,10 +281,10 @@ sre.ClearspeakParentheses.prototype.untestParen021 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren022
  */
-sre.ClearspeakParentheses.prototype.untestParen022 = function() {
+sre.ClearspeakParentheses.prototype.testParen022 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = 'Open paren, 2x, close paren, raised to the y plus1 power';
+  var speech = 'open paren, 2 x, close paren, raised to the y plus 1 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -290,10 +292,10 @@ sre.ClearspeakParentheses.prototype.untestParen022 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren023
  */
-sre.ClearspeakParentheses.prototype.untestParen023 = function() {
+sre.ClearspeakParentheses.prototype.testParen023 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, Negative 2x, close paren';
+  var speech = 'open paren, negative 2 x, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -301,10 +303,10 @@ sre.ClearspeakParentheses.prototype.untestParen023 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren024
  */
-sre.ClearspeakParentheses.prototype.untestParen024 = function() {
+sre.ClearspeakParentheses.prototype.testParen024 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Open paren negative 2x, close paren, squared';
+  var speech = 'open paren, negative 2 x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -312,10 +314,10 @@ sre.ClearspeakParentheses.prototype.untestParen024 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren025
  */
-sre.ClearspeakParentheses.prototype.untestParen025 = function() {
+sre.ClearspeakParentheses.prototype.testParen025 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Negative, open paren, 2x, close paren, squared';
+  var speech = 'negative, open paren, 2 x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -323,10 +325,10 @@ sre.ClearspeakParentheses.prototype.untestParen025 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren026
  */
-sre.ClearspeakParentheses.prototype.untestParen026 = function() {
+sre.ClearspeakParentheses.prototype.testParen026 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, One half, close paren';
+  var speech = 'open paren, one half, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -334,10 +336,10 @@ sre.ClearspeakParentheses.prototype.untestParen026 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren027
  */
-sre.ClearspeakParentheses.prototype.untestParen027 = function() {
+sre.ClearspeakParentheses.prototype.testParen027 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, three fourths, x, close paren';
+  var speech = 'open paren, three fourths x, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -345,10 +347,10 @@ sre.ClearspeakParentheses.prototype.untestParen027 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren028
  */
-sre.ClearspeakParentheses.prototype.untestParen028 = function() {
+sre.ClearspeakParentheses.prototype.testParen028 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>22</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Open paren, 11 over 22, close paren';
+  var speech = 'open paren, 11 over 22, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -356,10 +358,10 @@ sre.ClearspeakParentheses.prototype.untestParen028 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren029
  */
-sre.ClearspeakParentheses.prototype.untestParen029 = function() {
+sre.ClearspeakParentheses.prototype.testParen029 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>';
-  var speech = 'Open paren, One half to the fourth power, close paren';
+  var speech = 'open paren, one half, close paren, to the fourth power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -367,10 +369,10 @@ sre.ClearspeakParentheses.prototype.untestParen029 = function() {
 /**
  * Testing ClearspeakParentheses Example Paren030
  */
-sre.ClearspeakParentheses.prototype.untestParen030 = function() {
+sre.ClearspeakParentheses.prototype.testParen030 = function() {
   var preference = 'Paren_Speak';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>11</mn></mrow><mrow><mn>15</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Open paren, 11 over 15, close paren, squared';
+  var speech = 'open paren, 11 over 15, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -381,7 +383,7 @@ sre.ClearspeakParentheses.prototype.untestParen030 = function() {
 sre.ClearspeakParentheses.prototype.untestParen031 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The point with coordinates 1 comma 2';
+  var speech = 'the point with coordinates 1 comma 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -392,7 +394,7 @@ sre.ClearspeakParentheses.prototype.untestParen031 = function() {
 sre.ClearspeakParentheses.prototype.untestParen032 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The point with coordinates x comma y';
+  var speech = 'the point with coordinates x comma y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -403,7 +405,7 @@ sre.ClearspeakParentheses.prototype.untestParen032 = function() {
 sre.ClearspeakParentheses.prototype.untestParen033 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The point with coordinates 1 comma 2 comma 3';
+  var speech = 'the point with coordinates 1 comma 2 comma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -414,7 +416,7 @@ sre.ClearspeakParentheses.prototype.untestParen033 = function() {
 sre.ClearspeakParentheses.prototype.untestParen034 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The point with coordinates x comma y comma z';
+  var speech = 'the point with coordinates x comma y comma z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -425,7 +427,7 @@ sre.ClearspeakParentheses.prototype.untestParen034 = function() {
 sre.ClearspeakParentheses.prototype.untestParen035 = function() {
   var preference = 'Paren_CoordPoint';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>386</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The point with coordinates 1 comma 2 comma three hundred eighty six';
+  var speech = 'the point with coordinates 1 comma 2 comma three hundred eighty six';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -436,7 +438,7 @@ sre.ClearspeakParentheses.prototype.untestParen035 = function() {
 sre.ClearspeakParentheses.prototype.untestParen036 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from <em>a</em> to <em>b</em>, not including <em>a</em> or <em>b</em>';
+  var speech = 'the interval from <em>a</em> to <em>b</em>, not including <em>a</em> or <em>b</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -447,7 +449,7 @@ sre.ClearspeakParentheses.prototype.untestParen036 = function() {
 sre.ClearspeakParentheses.prototype.untestParen037 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from 0 to 1, not including 0 or 1';
+  var speech = 'the interval from 0 to 1, not including 0 or 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -458,7 +460,7 @@ sre.ClearspeakParentheses.prototype.untestParen037 = function() {
 sre.ClearspeakParentheses.prototype.untestParen038 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from <em>a</em> to <em>b</em>, including a, but not including <em>b</em>';
+  var speech = 'the interval from <em>a</em> to <em>b</em>, including a, but not including <em>b</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -469,7 +471,7 @@ sre.ClearspeakParentheses.prototype.untestParen038 = function() {
 sre.ClearspeakParentheses.prototype.untestParen039 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from 0 to 1, including 0, but not including 1';
+  var speech = 'the interval from 0 to 1, including 0, but not including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -480,7 +482,7 @@ sre.ClearspeakParentheses.prototype.untestParen039 = function() {
 sre.ClearspeakParentheses.prototype.untestParen040 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'The interval from <em>a</em> to <em>b</em>, not including a, but including <em>b</em>';
+  var speech = 'the interval from <em>a</em> to <em>b</em>, not including a, but including <em>b</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -491,7 +493,7 @@ sre.ClearspeakParentheses.prototype.untestParen040 = function() {
 sre.ClearspeakParentheses.prototype.untestParen041 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'The interval from 0 to 1, not including 0, but including 1';
+  var speech = 'the interval from 0 to 1, not including 0, but including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -502,7 +504,7 @@ sre.ClearspeakParentheses.prototype.untestParen041 = function() {
 sre.ClearspeakParentheses.prototype.untestParen042 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'The interval from <em>a</em> to <em>b</em>, including <em>a</em> and <em>b</em>';
+  var speech = 'the interval from <em>a</em> to <em>b</em>, including <em>a</em> and <em>b</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -513,7 +515,7 @@ sre.ClearspeakParentheses.prototype.untestParen042 = function() {
 sre.ClearspeakParentheses.prototype.untestParen043 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'The interval from 0 to 1, including 0 and 1';
+  var speech = 'the interval from 0 to 1, including 0 and 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -524,7 +526,7 @@ sre.ClearspeakParentheses.prototype.untestParen043 = function() {
 sre.ClearspeakParentheses.prototype.untestParen044 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mi>b</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from negative infinity to <em>b</em>, not including <em>b</em>';
+  var speech = 'the interval from negative infinity to <em>b</em>, not including <em>b</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -535,7 +537,7 @@ sre.ClearspeakParentheses.prototype.untestParen044 = function() {
 sre.ClearspeakParentheses.prototype.untestParen045 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from negative to 1, not including 1';
+  var speech = 'the interval from negative to 1, not including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -546,7 +548,7 @@ sre.ClearspeakParentheses.prototype.untestParen045 = function() {
 sre.ClearspeakParentheses.prototype.untestParen046 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>';
-  var speech = 'The interval from negative infinity to <em>b</em>, including <em>b</em>';
+  var speech = 'the interval from negative infinity to <em>b</em>, including <em>b</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -557,7 +559,7 @@ sre.ClearspeakParentheses.prototype.untestParen046 = function() {
 sre.ClearspeakParentheses.prototype.untestParen047 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>';
-  var speech = 'The interval from negative infinity to 1, including 1';
+  var speech = 'the interval from negative infinity to 1, including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -568,7 +570,7 @@ sre.ClearspeakParentheses.prototype.untestParen047 = function() {
 sre.ClearspeakParentheses.prototype.untestParen048 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from <em>a</em> to infinity, not including <em>a</em>';
+  var speech = 'the interval from <em>a</em> to infinity, not including <em>a</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -579,7 +581,7 @@ sre.ClearspeakParentheses.prototype.untestParen048 = function() {
 sre.ClearspeakParentheses.prototype.untestParen049 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from 1 to infinity, not including 1';
+  var speech = 'the interval from 1 to infinity, not including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -590,7 +592,7 @@ sre.ClearspeakParentheses.prototype.untestParen049 = function() {
 sre.ClearspeakParentheses.prototype.untestParen050 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>∞</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'The interval from <em>a</em> to infinity, including <em>a</em>';
+  var speech = 'the interval from <em>a</em> to infinity, including <em>a</em>';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -601,7 +603,7 @@ sre.ClearspeakParentheses.prototype.untestParen050 = function() {
 sre.ClearspeakParentheses.prototype.untestParen051 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'The interval from 1 to infinity, including 1';
+  var speech = 'the interval from 1 to infinity, including 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -612,7 +614,7 @@ sre.ClearspeakParentheses.prototype.untestParen051 = function() {
 sre.ClearspeakParentheses.prototype.untestParen052 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from negative infinity to infinity';
+  var speech = 'the interval from negative infinity to infinity';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -623,7 +625,7 @@ sre.ClearspeakParentheses.prototype.untestParen052 = function() {
 sre.ClearspeakParentheses.prototype.untestParen053 = function() {
   var preference = 'Paren_Interval';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mi>∞</mi><mo>,</mo><mtext></mtext><mo>+</mo><mi>∞</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'The interval from negative infinity to positive infinity';
+  var speech = 'the interval from negative infinity to positive infinity';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -744,7 +746,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen001 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen002 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2x';
+  var speech = '2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -788,7 +790,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen005 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen006 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = '2x, squared';
+  var speech = '2 x, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -799,7 +801,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen006 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen007 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '2x, raised to the y plus1 power';
+  var speech = '2 x, raised to the y plus1 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -810,7 +812,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen007 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen008 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Negative 2x';
+  var speech = 'negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -821,7 +823,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen008 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen009 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'negative 2x, squared';
+  var speech = 'negative 2 x, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -832,7 +834,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen009 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen010 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'Negative, 2x, squared';
+  var speech = 'negative, 2 x, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -843,7 +845,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen010 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen011 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'One half';
+  var speech = 'one half';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -854,7 +856,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen011 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen012 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'Three fourths, x';
+  var speech = 'three fourths, x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -876,7 +878,7 @@ sre.ClearspeakParentheses.prototype.untestSilParen013 = function() {
 sre.ClearspeakParentheses.prototype.untestSilParen014 = function() {
   var preference = 'Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow></math>';
-  var speech = 'One half to the fourth power';
+  var speech = 'one half to the fourth power';
   this.executeRuleTest(mathml, speech, preference);
 };
 

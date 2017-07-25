@@ -84,7 +84,7 @@ sre.ClearspeakFunctions.prototype.testFunction003 = function() {
 sre.ClearspeakFunctions.prototype.testFunction004 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of 2x';
+  var speech = 'f of 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -95,7 +95,7 @@ sre.ClearspeakFunctions.prototype.testFunction004 = function() {
 sre.ClearspeakFunctions.prototype.testFunction005 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g of negative 2x';
+  var speech = 'g of negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -140,7 +140,7 @@ sre.ClearspeakFunctions.prototype.testFunction008 = function() {
 sre.ClearspeakFunctions.prototype.testFunction009 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g of, open paren, 2x plus 1, close paren';
+  var speech = 'g of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -195,7 +195,7 @@ sre.ClearspeakFunctions.prototype.testFunction013 = function() {
 sre.ClearspeakFunctions.prototype.testFunction014 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse of 2x';
+  var speech = 'f inverse of 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -206,7 +206,7 @@ sre.ClearspeakFunctions.prototype.testFunction014 = function() {
 sre.ClearspeakFunctions.prototype.testFunction015 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse of negative 2x';
+  var speech = 'g inverse of negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -217,7 +217,7 @@ sre.ClearspeakFunctions.prototype.testFunction015 = function() {
 sre.ClearspeakFunctions.prototype.testFunction016 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse of, open paren, 3x minus 1, close paren';
+  var speech = 'f inverse of, open paren, 3 x, minus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -295,7 +295,7 @@ sre.ClearspeakFunctions.prototype.testFunction022 = function() {
 sre.ClearspeakFunctions.prototype.testFunction023 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f inverse of, f of 2x';
+  var speech = 'f inverse of, f of 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -306,7 +306,7 @@ sre.ClearspeakFunctions.prototype.testFunction023 = function() {
 sre.ClearspeakFunctions.prototype.testFunction024 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse of, g of negative 2x';
+  var speech = 'g inverse of, g of negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -351,7 +351,7 @@ sre.ClearspeakFunctions.prototype.testFunction027 = function() {
 sre.ClearspeakFunctions.prototype.testFunction028 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g inverse of, open paren, g of, open paren, 2x plus 1, close paren, close paren';
+  var speech = 'g inverse of, open paren, g of, open paren, 2 x, plus 1, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -406,7 +406,7 @@ sre.ClearspeakFunctions.prototype.testFunction032 = function() {
 sre.ClearspeakFunctions.prototype.testFunction033 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of, f inverse of 2x';
+  var speech = 'f of, f inverse of 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -417,7 +417,7 @@ sre.ClearspeakFunctions.prototype.testFunction033 = function() {
 sre.ClearspeakFunctions.prototype.testFunction034 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g of, g inverse of negative 2x';
+  var speech = 'g of, g inverse of negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -428,7 +428,7 @@ sre.ClearspeakFunctions.prototype.testFunction034 = function() {
 sre.ClearspeakFunctions.prototype.testFunction035 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of, open paren, f inverse of, open paren, 3x minus 1, close paren, close paren';
+  var speech = 'f of, open paren, f inverse of, open paren, 3 x, minus 1, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -550,7 +550,7 @@ sre.ClearspeakFunctions.prototype.testFunction045 = function() {
 sre.ClearspeakFunctions.prototype.testFunction046 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, f times g, close paren, of, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f times g, close paren, of, open paren, 2 x, plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -572,7 +572,7 @@ sre.ClearspeakFunctions.prototype.testFunction047 = function() {
 sre.ClearspeakFunctions.prototype.testFunction048 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'open paren, f over g, close paren, of, open paren, 2x plus 5, close paren, equals, the fraction with numerator, f of, open paren, 2x plus 5, close paren, and denominator, g of, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f over g, close paren, of, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator, f of, open paren, 2 x, plus 5, close paren, and denominator, g of, open paren, 2 x, plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -627,7 +627,7 @@ sre.ClearspeakFunctions.prototype.testFunction052 = function() {
 sre.ClearspeakFunctions.prototype.testFunction053 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f squared of, open paren, 2x plus 1, close paren';
+  var speech = 'f squared of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -649,7 +649,7 @@ sre.ClearspeakFunctions.prototype.testFunction054 = function() {
 sre.ClearspeakFunctions.prototype.testFunction055 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f cubed of, open paren, 2x plus 1, close paren';
+  var speech = 'f cubed of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -671,7 +671,7 @@ sre.ClearspeakFunctions.prototype.testFunction056 = function() {
 sre.ClearspeakFunctions.prototype.testFunction057 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the fourth power of, f of, open paren, 2x plus 1, close paren';
+  var speech = 'the fourth power of, f of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -693,7 +693,7 @@ sre.ClearspeakFunctions.prototype.testFunction058 = function() {
 sre.ClearspeakFunctions.prototype.testFunction059 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the fifth power of, f of, open paren, 2x plus 1, close paren';
+  var speech = 'the fifth power of, f of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -715,7 +715,7 @@ sre.ClearspeakFunctions.prototype.testFunction060 = function() {
 sre.ClearspeakFunctions.prototype.testFunction061 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the nth power of, f of, open paren, 2x plus 1, close paren';
+  var speech = 'the nth power of, f of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -737,7 +737,7 @@ sre.ClearspeakFunctions.prototype.testFunction062 = function() {
 sre.ClearspeakFunctions.prototype.testFunction063 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g squared of, open paren, 2x plus 1, close paren';
+  var speech = 'g squared of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -759,7 +759,7 @@ sre.ClearspeakFunctions.prototype.testFunction064 = function() {
 sre.ClearspeakFunctions.prototype.testFunction065 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h cubed of, open paren, 2x plus 1, close paren';
+  var speech = 'h cubed of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -781,7 +781,7 @@ sre.ClearspeakFunctions.prototype.testFunction066 = function() {
 sre.ClearspeakFunctions.prototype.testFunction067 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the fourth power of, g of, open paren, 2x plus 1, close paren';
+  var speech = 'the fourth power of, g of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -803,7 +803,7 @@ sre.ClearspeakFunctions.prototype.testFunction068 = function() {
 sre.ClearspeakFunctions.prototype.testFunction069 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the fifth power of, h of, open paren, 2x plus 1, close paren';
+  var speech = 'the fifth power of, h of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -825,7 +825,7 @@ sre.ClearspeakFunctions.prototype.testFunction070 = function() {
 sre.ClearspeakFunctions.prototype.testFunction071 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the nth power of, g of, open paren, 2x plus 1, close paren';
+  var speech = 'the nth power of, g of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -858,7 +858,7 @@ sre.ClearspeakFunctions.prototype.testFunction073 = function() {
 sre.ClearspeakFunctions.prototype.testFunction074 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h sub n, of, open paren, 3x minus 2, close paren';
+  var speech = 'h sub n, of, open paren, 3 x, minus 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -880,7 +880,7 @@ sre.ClearspeakFunctions.prototype.testFunction075 = function() {
 sre.ClearspeakFunctions.prototype.testFunction076 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 2, inverse of, open paren, 2x plus 1, close paren';
+  var speech = 'g sub 2, inverse of, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -946,7 +946,7 @@ sre.ClearspeakFunctions.prototype.testFunction081 = function() {
 sre.ClearspeakFunctions.prototype.testFunction082 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of, open paren, x plus 1, comma, 2y, close paren';
+  var speech = 'f of, open paren, x plus 1, comma, 2 y, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -957,7 +957,7 @@ sre.ClearspeakFunctions.prototype.testFunction082 = function() {
 sre.ClearspeakFunctions.prototype.testFunction083 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>,</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of, open paren, 2x, comma, x plus 1, comma, x squared, close paren';
+  var speech = 'f of, open paren, 2 x, comma, x plus 1, comma, x squared, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1001,7 +1001,7 @@ sre.ClearspeakFunctions.prototype.testFunction086 = function() {
 sre.ClearspeakFunctions.prototype.testFunction087 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times 2x';
+  var speech = 'f times 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1012,7 +1012,7 @@ sre.ClearspeakFunctions.prototype.testFunction087 = function() {
 sre.ClearspeakFunctions.prototype.testFunction088 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g times negative 2x';
+  var speech = 'g times negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1056,7 +1056,7 @@ sre.ClearspeakFunctions.prototype.testFunction091 = function() {
 sre.ClearspeakFunctions.prototype.testFunction092 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g times, open paren, 2x plus 1, close paren';
+  var speech = 'g times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1111,7 +1111,7 @@ sre.ClearspeakFunctions.prototype.testFunction096 = function() {
 sre.ClearspeakFunctions.prototype.testFunction097 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the negative 1 power, times 2x';
+  var speech = 'f to the negative 1 power, times 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1122,7 +1122,7 @@ sre.ClearspeakFunctions.prototype.testFunction097 = function() {
 sre.ClearspeakFunctions.prototype.testFunction098 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g to the negative 1 power, times negative 2x';
+  var speech = 'g to the negative 1 power, times negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1133,7 +1133,7 @@ sre.ClearspeakFunctions.prototype.testFunction098 = function() {
 sre.ClearspeakFunctions.prototype.testFunction099 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the negative 1 power, times, open paren, 3x minus 1, close paren';
+  var speech = 'f to the negative 1 power, times, open paren, 3 x, minus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1210,7 +1210,7 @@ sre.ClearspeakFunctions.prototype.testFunction105 = function() {
 sre.ClearspeakFunctions.prototype.testFunction106 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the negative 1 power, times, f times 2x';
+  var speech = 'f to the negative 1 power, times, f times 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1221,7 +1221,7 @@ sre.ClearspeakFunctions.prototype.testFunction106 = function() {
 sre.ClearspeakFunctions.prototype.testFunction107 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g to the negative 1 power, times, g times negative 2x';
+  var speech = 'g to the negative 1 power, times, g times negative 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1265,7 +1265,7 @@ sre.ClearspeakFunctions.prototype.testFunction110 = function() {
 sre.ClearspeakFunctions.prototype.testFunction111 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g to the negative 1 power, times, open paren, g times, open paren, 2x plus 1, close paren, close paren';
+  var speech = 'g to the negative 1 power, times, open paren, g times, open paren, 2 x, plus 1, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1320,7 +1320,7 @@ sre.ClearspeakFunctions.prototype.testFunction115 = function() {
 sre.ClearspeakFunctions.prototype.testFunction116 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times, open paren, f to the negative 1 power, times 2x, close paren';
+  var speech = 'f times, open paren, f to the negative 1 power, times 2 x, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1331,7 +1331,7 @@ sre.ClearspeakFunctions.prototype.testFunction116 = function() {
 sre.ClearspeakFunctions.prototype.testFunction117 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>g</mi><mrow><mo>(</mo><mrow><msup><mi>g</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g times, open paren, g to the negative 1 power, times negative 2x, close paren';
+  var speech = 'g times, open paren, g to the negative 1 power, times negative 2 x, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1342,7 +1342,7 @@ sre.ClearspeakFunctions.prototype.testFunction117 = function() {
 sre.ClearspeakFunctions.prototype.testFunction118 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times, open paren, f to the negative 1 power, times, open paren, 3x minus 1, close paren, close paren';
+  var speech = 'f times, open paren, f to the negative 1 power, times, open paren, 3 x, minus 1, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1463,7 +1463,7 @@ sre.ClearspeakFunctions.prototype.testFunction128 = function() {
 sre.ClearspeakFunctions.prototype.testFunction129 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, f times g, close paren, times, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f times g, close paren, times, open paren, 2 x, plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1485,7 +1485,7 @@ sre.ClearspeakFunctions.prototype.testFunction130 = function() {
 sre.ClearspeakFunctions.prototype.testFunction131 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'open paren, f over g, close paren, times, open paren, 2x plus 5, close paren, equals, the fraction with numerator, f times, open paren, 2x plus 5, close paren, and denominator, g times, open paren, 2x plus 5, close paren';
+  var speech = 'open paren, f over g, close paren, times, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator, f times, open paren, 2 x, plus 5, close paren, and denominator, g times, open paren, 2 x, plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1529,7 +1529,7 @@ sre.ClearspeakFunctions.prototype.testFunction134 = function() {
 sre.ClearspeakFunctions.prototype.testFunction135 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f squared times, open paren, 2x plus 1, close paren';
+  var speech = 'f squared times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1551,7 +1551,7 @@ sre.ClearspeakFunctions.prototype.testFunction136 = function() {
 sre.ClearspeakFunctions.prototype.testFunction137 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f cubed times, open paren, 2x plus 1, close paren';
+  var speech = 'f cubed times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1573,7 +1573,7 @@ sre.ClearspeakFunctions.prototype.testFunction138 = function() {
 sre.ClearspeakFunctions.prototype.testFunction139 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the fourth power, times, open paren, 2x plus 1, close paren';
+  var speech = 'f to the fourth power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1595,7 +1595,7 @@ sre.ClearspeakFunctions.prototype.testFunction140 = function() {
 sre.ClearspeakFunctions.prototype.testFunction141 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the fifth power, times, open paren, 2x plus 1, close paren';
+  var speech = 'f to the fifth power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1617,7 +1617,7 @@ sre.ClearspeakFunctions.prototype.testFunction142 = function() {
 sre.ClearspeakFunctions.prototype.testFunction143 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>f</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f to the nth power, times, open paren, 2x plus 1, close paren';
+  var speech = 'f to the nth power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1639,7 +1639,7 @@ sre.ClearspeakFunctions.prototype.testFunction144 = function() {
 sre.ClearspeakFunctions.prototype.testFunction145 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g squared times, open paren, 2x plus 1, close paren';
+  var speech = 'g squared times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1661,7 +1661,7 @@ sre.ClearspeakFunctions.prototype.testFunction146 = function() {
 sre.ClearspeakFunctions.prototype.testFunction147 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>3</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h cubed times, open paren, 2x plus 1, close paren';
+  var speech = 'h cubed times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1683,7 +1683,7 @@ sre.ClearspeakFunctions.prototype.testFunction148 = function() {
 sre.ClearspeakFunctions.prototype.testFunction149 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mn>4</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g to the fourth power, times, open paren, 2x plus 1, close paren';
+  var speech = 'g to the fourth power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1705,7 +1705,7 @@ sre.ClearspeakFunctions.prototype.testFunction150 = function() {
 sre.ClearspeakFunctions.prototype.testFunction151 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>h</mi><mn>5</mn></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h to the fifth power, times, open paren, 2x plus 1, close paren';
+  var speech = 'h to the fifth power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1727,7 +1727,7 @@ sre.ClearspeakFunctions.prototype.testFunction152 = function() {
 sre.ClearspeakFunctions.prototype.testFunction153 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msup><mi>g</mi><mi>n</mi></msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g to the nth power, times, open paren, 2x plus 1, close paren';
+  var speech = 'g to the nth power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1760,7 +1760,7 @@ sre.ClearspeakFunctions.prototype.testFunction156 = function() {
 sre.ClearspeakFunctions.prototype.testFunction157 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msub><mi>h</mi><mi>n</mi></msub><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'h sub n, times, open paren, 3x minus 2, close paren';
+  var speech = 'h sub n, times, open paren, 3 x, minus 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1782,7 +1782,7 @@ sre.ClearspeakFunctions.prototype.testFunction158 = function() {
 sre.ClearspeakFunctions.prototype.testFunction159 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><msubsup><mi>g</mi><mn>2</mn><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'g sub 2, to the negative 1 power, times, open paren, 2x plus 1, close paren';
+  var speech = 'g sub 2, to the negative 1 power, times, open paren, 2 x, plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1848,7 +1848,7 @@ sre.ClearspeakFunctions.prototype.testFunction164 = function() {
 sre.ClearspeakFunctions.prototype.testFunction165 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>y</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times, open paren, x plus 1, comma, 2y, close paren';
+  var speech = 'f times, open paren, x plus 1, comma, 2 y, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1859,6 +1859,6 @@ sre.ClearspeakFunctions.prototype.testFunction165 = function() {
 sre.ClearspeakFunctions.prototype.testFunction166 = function() {
   var preference = 'Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>,</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times, open paren, 2x, comma, x plus 1, comma, x squared, close paren';
+  var speech = 'f times, open paren, 2 x, comma, x plus 1, comma, x squared, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };

@@ -373,7 +373,7 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine004 = function() {
 sre.ClearspeakPart2Symbols.prototype.testVertLine005 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><msub><mo>|</mo><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></msub></mrow></math>';
-  var speech = 'x squared plus 2x, evaluated at x equals 2';
+  var speech = 'x squared plus 2 x, evaluated at x equals 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -434,7 +434,7 @@ sre.ClearspeakPart2Symbols.prototype.untestVertLine009 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym001 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x is a member of the integers then 2x is an even number.';
+  var speech = 'If x is a member of the integers then 2 x, is an even number.';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -456,7 +456,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym002 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym003 = function() {
   var preference = 'VerticalLine_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2i is not a member of the real numbers';
+  var speech = '3 plus 2 i, is not a member of the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -467,7 +467,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym003 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym004 = function() {
   var preference = 'VerticalLine_Member';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x is a member of the integers then 2x is an even number.';
+  var speech = 'If x is a member of the integers then 2 x, is an even number.';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -489,7 +489,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym005 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym006 = function() {
   var preference = 'VerticalLine_Member';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2i is not a member of the real numbers';
+  var speech = '3 plus 2 i, is not a member of the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -500,7 +500,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym006 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym007 = function() {
   var preference = 'VerticalLine_Element';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x is an element of the integers then 2x is an even number';
+  var speech = 'If x is an element of the integers then 2 x, is an even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -522,7 +522,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym008 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym009 = function() {
   var preference = 'VerticalLine_Element';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2i is not an element of the real numbers';
+  var speech = '3 plus 2 i, is not an element of the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -533,7 +533,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym009 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym010 = function() {
   var preference = 'VerticalLine_Belongs';
   var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';
-  var speech = 'If x belongs to the integers then 2x is an even number';
+  var speech = 'If x belongs to the integers then 2 x, is an even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -555,7 +555,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym011 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym012 = function() {
   var preference = 'VerticalLine_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2i does not belong to the real numbers';
+  var speech = '3 plus 2 i, does not belong to the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -566,7 +566,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym012 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym013 = function() {
   var preference = 'VerticalLine_Belongs';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x belongs to the integers then 2x is an even number';
+  var speech = 'If x belongs to the integers then 2 x, is an even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -588,7 +588,7 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym014 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestMembSym015 = function() {
   var preference = 'VerticalLine_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
-  var speech = '3 plus 2i does not belong to the real numbers';
+  var speech = '3 plus 2 i, does not belong to the real numbers';
   this.executeRuleTest(mathml, speech, preference);
 };
 

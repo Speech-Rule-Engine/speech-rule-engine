@@ -83,7 +83,7 @@ sre.ClearspeakCapitalLetters.prototype.testCap003 = function() {
 sre.ClearspeakCapitalLetters.prototype.testCap004 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
-  var speech = 'AB';
+  var speech = 'A B';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -127,7 +127,7 @@ sre.ClearspeakCapitalLetters.prototype.testCap007 = function() {
 sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
-  var speech = 'angle ABC';
+  var speech = 'angle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -139,7 +139,7 @@ sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
 sre.ClearspeakCapitalLetters.prototype.testCap009 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
-  var speech = 'the measure of angle ABC';
+  var speech = 'the measure of angle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -263,3 +263,25 @@ sre.ClearspeakCapitalLetters.prototype.testCap020 = function() {
   var speech = 'the measure of angle cap A';
   this.executeRuleTest(mathml, speech, preference);
 };
+
+
+/**
+ * Testing ClearspeakCapitalLetters Example Cap020 (extra)
+ */
+sre.ClearspeakCapitalLetters.prototype.testCap020a = function() {
+  var preference = 'Caps_SayCaps';
+  var mathml = '<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>';
+  var speech = 'angle cap A';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+// /**
+//  * Testing ClearspeakCapitalLetters Example Cap020 (extra)
+//  */
+// sre.ClearspeakCapitalLetters.prototype.testCap020b = function() {
+//   var preference = 'Caps_SayCaps';
+//   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';
+//   var speech = 'angle cap A';
+//   this.executeRuleTest(mathml, speech, preference);
+// };

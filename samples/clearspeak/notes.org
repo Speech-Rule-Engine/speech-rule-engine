@@ -117,6 +117,9 @@
 ***** rewrite "equal, to the absolute value" to "equal to, the absolute value"
 **** AbsDet02: last comma is wrong: "4 ,7"
 
+**** simple expression rewritten: 2x -> 2 x
+     AbsDet05, AbsDet06, AbsDet12, AbsDet13
+
 * Sentence markup
 
 ** Capitalise start and end with period?
@@ -222,8 +225,22 @@ Helper function for Emacs:
 *** 009 sin -> sine
 
 
+** Frac simple exrepssion rewritten:
+
+*** xy -> x y
+
+*** cd -> c d
+
+** Fracfunct simple expressions rewritten:
+
+**** 2x -> 2 x
+
+**** 3y -> 3 y
+
+
 ** Functions:
 
+*** Simple: 2x and 3x and 2y  to   2 x, and 3 x, and 2 y,
 *** Corrections:
 
 **** 005 2 x -> 2x
@@ -264,6 +281,7 @@ Helper function for Emacs:
     Function059, Function060, Function061, Function066, Function067,
     Function068, Function069, Function070
 
+
 ** Exponents:
 
 *** Emphasis removed:
@@ -290,7 +308,8 @@ Helper function for Emacs:
 *** Rewritten ordinals: 016, 017
 
 *** Added spacing: 
-    017b: 2x -> 2 x
+    Exp017b: 2x -> 2 x
+    Exp013: 2y -> 2 y, 3z -> 3 z
 
 
 
@@ -324,6 +343,10 @@ Helper function for Emacs:
 **** VertLine004, VertLine005:
      = to equals
      Caps + commas
+
+*** Simple spaced out:
+    VertLine005, MembSym001, MembSym004, MembSym007, MembSym010, MembSym013,
+    MembSym003, MembSym006, MembSym009, MembSym012, MembSym015
 
 ** Sets enclosed in brackets
 
@@ -364,8 +387,78 @@ Helper function for Emacs:
 *** Measure of angle:
     Cap009, Cap010, Cap019, Cap020
 
+*** Simple spaced out:
+    Cap004, Cap008, Cap009
+
 
 ** Trigonometry
 
 *** Decap:
-    Trig001, Trig002, Trig003, Trig004, Trig005, Trig006, Trig007, Trig008, Trig009, Trig010, Trig011, Trig012, Trig013, Trig014, Trig015, Trig016, Trig019, Trig021, Trig022, Trig023, Trig024, Trig025, Trig026, Trig027, Trig028, Trig029, Trig030, Trig031, Trig032, Trig033, Trig034, Trig035, Trig036, Trig037, Trig038, Trig039, Trig040, Trig041, Trig042, Trig043, Trig044, Trig045, TrigInvAuto001, TrigInvAuto002, TrigInvAuto003, TrigInvAuto004, TrigInvAuto005, TrigInvAuto006, TrigInvAuto007, TrigInvAuto008, TrigInvAuto009, TrigInvAuto010, TrigInvAuto011, TrigInvAuto012, TrigInvAuto013, TrigInvAuto014, TrigInvAuto015, TrigInvAuto016, TrigInvAuto017, TrigInvAuto018, TrigInvAuto019, TrigInvAuto020, TrigInvAuto021, TrigInvAuto022, TrigInvAuto023, TrigInvAuto024, TrigInvAuto025, TrigInvAuto026, TrigInverse001, TrigInverse002, TrigInverse003, TrigInverse004, TrigInverse005, TrigInverse006, TrigInverse007, TrigInverse008, TrigInverse009, TrigInverse010, TrigInverse011, TrigInverse012, TrigInverse013, TrigInverse014, TrigInverse015, TrigInverse016, TrigInverse017, TrigInverse018, TrigInverse019, TrigInverse020, TrigInverse021, TrigInverse022, TrigInverse023, TrigInverse024, TrigInverse025, TrigInverse026, ArcTrig001, ArcTrig002, ArcTrig003, ArcTrig004, ArcTrig005, ArcTrig006, ArcTrig007, ArcTrig008, ArcTrig009, ArcTrig010, ArcTrig011, ArcTrig012, ArcTrig013, ArcTrig014, ArcTrig015, ArcTrig016, ArcTrig017, ArcTrig018, ArcTrig019, ArcTrig020, ArcTrig021, ArcTrig022, ArcTrig023, ArcTrig024, ArcTrig025, ArcTrig026, AllTrig01, AllTrig02, AllTrig03, HypTrig007, HypTrig008, HypTrig009, HypTrig010, HypTrig011, HypTrig012, HypTrig017, HypTrig018, HypTrig019, HypTrig020, 
+    Trig001, Trig002, Trig003, Trig004, Trig005, Trig006, Trig007, Trig008,
+    Trig009, Trig010, Trig011, Trig012, Trig013, Trig014, Trig015, Trig016,
+    Trig019, Trig021, Trig022, Trig023, Trig024, Trig025, Trig026, Trig027,
+    Trig028, Trig029, Trig030, Trig031, Trig032, Trig033, Trig034, Trig035,
+    Trig036, Trig037, Trig038, Trig039, Trig040, Trig041, Trig042, Trig043,
+    Trig044, Trig045, TrigInvAuto001, TrigInvAuto002, TrigInvAuto003,
+    TrigInvAuto004, TrigInvAuto005, TrigInvAuto006, TrigInvAuto007,
+    TrigInvAuto008, TrigInvAuto009, TrigInvAuto010, TrigInvAuto011,
+    TrigInvAuto012, TrigInvAuto013, TrigInvAuto014, TrigInvAuto015,
+    TrigInvAuto016, TrigInvAuto017, TrigInvAuto018, TrigInvAuto019,
+    TrigInvAuto020, TrigInvAuto021, TrigInvAuto022, TrigInvAuto023,
+    TrigInvAuto024, TrigInvAuto025, TrigInvAuto026, TrigInverse001,
+    TrigInverse002, TrigInverse003, TrigInverse004, TrigInverse005,
+    TrigInverse006, TrigInverse007, TrigInverse008, TrigInverse009,
+    TrigInverse010, TrigInverse011, TrigInverse012, TrigInverse013,
+    TrigInverse014, TrigInverse015, TrigInverse016, TrigInverse017,
+    TrigInverse018, TrigInverse019, TrigInverse020, TrigInverse021,
+    TrigInverse022, TrigInverse023, TrigInverse024, TrigInverse025,
+    TrigInverse026, ArcTrig001, ArcTrig002, ArcTrig003, ArcTrig004, ArcTrig005,
+    ArcTrig006, ArcTrig007, ArcTrig008, ArcTrig009, ArcTrig010, ArcTrig011,
+    ArcTrig012, ArcTrig013, ArcTrig014, ArcTrig015, ArcTrig016, ArcTrig017,
+    ArcTrig018, ArcTrig019, ArcTrig020, ArcTrig021, ArcTrig022, ArcTrig023,
+    ArcTrig024, ArcTrig025, ArcTrig026, AllTrig01, AllTrig02, AllTrig03,
+    HypTrig007, HypTrig008, HypTrig009, HypTrig010, HypTrig011, HypTrig012,
+    HypTrig017, HypTrig018, HypTrig019, HypTrig020,
+
+
+** Parentheses
+
+*** Pausing commmata:
+    Paren009, Paren024
+
+*** Simple expression: 
+    Paren002, Paren006, Paren007, Paren008, Paren009, Paren010, Paren017,
+    Paren021, Paren022, Paren023, Paren024, Paren025, SilParen002, SilParen006,
+    SilParen007, SilParen008, SilParen009, SilParen010,
+
+*** Decap:
+    Paren006, Paren007, Paren008, Paren009, Paren010, Paren011, Paren012,
+    Paren013, Paren014, Paren015, Paren016, Paren017, Paren021, Paren022,
+    Paren023, Paren024, Paren025, Paren026, Paren027, Paren028, Paren029,
+    Paren030, Paren031, Paren032, Paren033, Paren034, Paren035, Paren036,
+    Paren037, Paren038, Paren039, Paren040, Paren041, Paren042, Paren043,
+    Paren044, Paren045, Paren046, Paren047, Paren048, Paren049, Paren050,
+    Paren051, Paren052, Paren053, SilParen008, SilParen010, SilParen011,
+    SilParen012, SilParen014,
+
+*** Corrections:
+
+**** Paren007: plus1 -> plus 1
+
+**** Paren012: 
+  // This is against the Paren_Auto rules! (page 31)!
+  // var speech = 'open paren, three fourths, x, close paren';
+  var speech = 'three fourths x';
+
+**** Paren019: missing space
+
+**** Paren022: missing space
+
+**** Paren023: Decap Negative
+
+**** Paren026: Decap One
+
+**** Paren027: Remove , before x
+
+**** Paren029: Decap One
+

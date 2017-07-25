@@ -183,7 +183,7 @@ sre.ClearspeakExponents.prototype.testExp012 = function() {
 sre.ClearspeakExponents.prototype.testExp013 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
-  var speech = 'open paren, 2y minus 3, close paren, raised to the 3z plus 8 power';
+  var speech = 'open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 

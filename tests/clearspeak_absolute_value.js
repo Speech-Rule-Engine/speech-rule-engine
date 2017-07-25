@@ -228,7 +228,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet04 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsDet05 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2x, 1 Row 2: 7, 5';
+  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -239,7 +239,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet05 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsDet06 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2x, y Row 2: one half, two thirds';
+  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -305,7 +305,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet11 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsDet12 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2x, 1 Row 2: 7, 5';
+  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -316,7 +316,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet12 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsDet13 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2x, y Row 2: one half, two thirds';
+  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds';
   this.executeRuleTest(mathml, speech, preference);
 };
 

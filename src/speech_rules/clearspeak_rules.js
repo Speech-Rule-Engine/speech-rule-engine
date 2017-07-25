@@ -61,6 +61,12 @@ sre.ClearspeakRules.defineRuleAlias_ = goog.bind(
 
 
 /** @private */
+sre.ClearspeakRules.defineSpecialisedRule_ = goog.bind(
+    sre.ClearspeakRules.mathStore.defineSpecialisedRule,
+    sre.ClearspeakRules.mathStore);
+
+
+/** @private */
 sre.ClearspeakRules.addContextFunction_ = goog.bind(
     sre.ClearspeakRules.mathStore.contextFunctions.add,
     sre.ClearspeakRules.mathStore.contextFunctions);
@@ -81,6 +87,7 @@ sre.ClearspeakRules.addCustomString_ = goog.bind(
 goog.scope(function() {
 var defineRule = sre.ClearspeakRules.defineRule_;
 var defineRuleAlias = sre.ClearspeakRules.defineRuleAlias_;
+var defineSpecialisedRule = sre.ClearspeakRules.defineSpecialisedRule_;
 
 var addCQF = sre.ClearspeakRules.addCustomQuery_;
 var addCSF = sre.ClearspeakRules.addCustomString_;
@@ -124,6 +131,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   // Symbols
   // Capital letters
+  // defineRule(
+  //   'non-latin', 'clearspeak.default',
+  //   '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
+  //   'self::identifier',
+  //   '@role="latinletter" or @role="greekletter"',
+  //   'CQFisCapital');
+
   defineRule(
     'capital', 'clearspeak.default',
     '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
@@ -385,8 +399,19 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
     'paren-simple', 'clearspeak.default',
     '[n] children/*[1]',
-    'self::fenced', '@role="leftright"', 'contains(children/*[1]/@meaning, "clearspeak:simple")',
-    'not(name(../..)="superscript") or not(name(../..)="subscript")'
+    'self::fenced', '@role="leftright"',
+    'contains(children/*[1]/@meaning, "clearspeak:simple")',
+    'name(../..)!="superscript" and name(../..)!="subscript"'
+  );
+  defineRule(
+    'paren-simple-exp', 'clearspeak.default',
+    '[n] children/*[1]',
+    'self::fenced', '@role="leftright"',
+    'name(../..)="superscript"',
+    'children/*[1][@role="integer"] or children/*[1][@role="float"] or ' +
+      '(children/*[1][@role="vulgar"] and contains(children/*[1]/@meaning,' +
+      ' "clearspeak:simple")) or children/*[1][@role="latinletter"] or ' +
+      'children/*[1][@role="greekletter"] or children/*[1][@role="otherletter"]'
   );
   defineRule(
     'paren-simple-nested-func', 'clearspeak.default',
@@ -431,6 +456,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[p] (pause:"short"); [n] content/*[1]; [p] (pause:"short"); [n] children/*[1];' +
       ' [p] (pause:"short"); [n] content/*[2]; [p] (pause:"short")',
     'self::fenced', '@role="leftright"');
+  // Order important!
+  defineSpecialisedRule(
+    'fences-open-close', 'clearspeak.default', 'clearspeak.Paren_Speak');
   defineRuleAlias(
     'fences-open-close', 'self::fenced', '@role="composed function"');
 
@@ -607,34 +635,25 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'negative', 'clearspeak.default',
       '[t] "negative"; [n] children/*[1]',
-      'self::prefixop', '@role="negative"', 'contains(@meaning, "clearspeak:simple")');
+      'self::prefixop', '@role="negative"'); //, 'contains(@meaning, "clearspeak:simple")');
+  
   // Angle
-  defineRule(
-    'angle-prefix', 'clearspeak.default',
-    '[n] content/*[1]; [n] children/*[1] (grammar:angle)',
-    'self::prefixop', 'content/*[1]/text()="∠"');
-  defineRule(
-    'angle-infix', 'clearspeak.default',
-    '[n] content/*[1]; [n] children/*[1]; ' +
-      '[n] children/*[2] (grammar:angle)',
-    'self::infixop', 'content/*[1]/text()="∠"');
+  // defineRule(
+  //   'angle-prefix', 'clearspeak.default',
+  //   '[n] content/*[1]; [n] children/*[1] (grammar:angle)',
+  //   'self::prefixop', 'content/*[1]/text()="∠"');
+  // defineRule(
+  //   'angle-infix', 'clearspeak.default',
+  //   '[n] content/*[1]; [n] children/*[1]; ' +
+  //     '[n] children/*[2] (grammar:angle)',
+  //   'self::infixop', 'content/*[1]/text()="∠"');
   defineRule(
     'angle-measure', 'clearspeak.default',
     '[t] "the measure of"; [n] content/*[1]; ' +
       '[n] children/*[2] (grammar:angle)',
     'self::infixop', 'content/*[1]/text()="∠"', 'children/*[1][text()="m"]');
-  defineRule(
-      'binary-operation', 'clearspeak.default',
-      '[m] children/* (join:"",grammar:angle=false)',
-    'self::infixop', '@role="implicit"', 'contains(@grammar, "angle")',
-    'not(children/*/children)');
-  defineRule(
-      'binary-operation', 'clearspeak.Caps_SayCaps',
-      '[m] children/* (grammar:angle=false)',
-    'self::infixop', '@role="implicit"', 'contains(@grammar, "angle")',
-    'not(children/*/children)');
 
-  
+ 
   // defineRuleAlias(
   //     'negative',
   //     'self::prefixop', '@role="negative"', 'children/number');
@@ -668,7 +687,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'binary-operation-simple', 'clearspeak.default',
-      '[m] children/* (join:"",rate:0.5)', 'self::infixop', '@role="implicit"',
+      '[m] children/* (rate:"0.5"); [p] (pause:"short")',
+      'self::infixop', '@role="implicit"',
       'contains(@meaning, "clearspeak:simple")');
 
   // Relations

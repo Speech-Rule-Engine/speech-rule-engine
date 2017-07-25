@@ -84,7 +84,7 @@ sre.ClearspeakFractions.prototype.testFrac002a = function() {
 sre.ClearspeakFractions.prototype.testFrac002b = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = '2x over 3y';
+  var speech = '2 x, over 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -95,7 +95,7 @@ sre.ClearspeakFractions.prototype.testFrac002b = function() {
 sre.ClearspeakFractions.prototype.testFrac002c = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>';
-  var speech = 'xy over cd';
+  var speech = 'x y, over c d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -128,7 +128,7 @@ sre.ClearspeakFractions.prototype.testFrac002e = function() {
 sre.ClearspeakFractions.prototype.testFrac002f = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mn>2</mn><mi>x</mi></mrow><mrow><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'negative 2x over 3y';
+  var speech = 'negative 2 x, over 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -139,7 +139,7 @@ sre.ClearspeakFractions.prototype.testFrac002f = function() {
 sre.ClearspeakFractions.prototype.testFrac002g = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><mo>−</mo><mi>c</mi><mi>d</mi></mrow></mfrac></mrow></math>';
-  var speech = 'xy over negative cd';
+  var speech = 'x y, over negative c d';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1477,7 +1477,7 @@ sre.ClearspeakFractions.prototype.testFracfunct009 = function() {
 sre.ClearspeakFractions.prototype.untestFracfunct010 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow></mfrac></mrow></math>';
-  var speech = 'sine 2x, over, cosine 3x';
+  var speech = 'sine 2 x, over, cosine 3 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1499,7 +1499,7 @@ sre.ClearspeakFractions.prototype.untestFracfunct011 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct012 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'f of 2x, over, g of 3x';
+  var speech = 'f of 2 x, over, g of 3 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1521,7 +1521,7 @@ sre.ClearspeakFractions.prototype.untestFracfunct013 = function() {
 sre.ClearspeakFractions.prototype.untestFracfunct014 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>log</mi><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'log 2x over log 3y';
+  var speech = 'log 2 x, over log 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1543,7 +1543,7 @@ sre.ClearspeakFractions.prototype.untestFracfunct015 = function() {
 sre.ClearspeakFractions.prototype.untestFracfunct016 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>2</mn><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the log base 10 of 2x over the log base 5 of 3y';
+  var speech = 'the log base 10 of 2 x, over the log base 5 of 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
