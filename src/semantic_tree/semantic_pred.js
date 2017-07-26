@@ -98,15 +98,30 @@ sre.SemanticPred.isSimpleFunctionScope = function(node) {
 
 
 /**
- * Predicate implementing the boundary criteria for prefix functions and big
- * operators:
+ * Predicate implementing the boundary criteria for prefix functions.
+ * 1. an explicit operator,
+ * 2. another function application,
+ * 3. a relation symbol, or
+ * 4. some punctuation.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {boolean} True if the node meets the boundary criteria.
+ */
+sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
+  return sre.SemanticPred.isOperator(node) ||
+    sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
+    sre.SemanticPred.isGeneralFunctionBoundary(node);
+};
+
+
+/**
+ * Predicate implementing the boundary criteria for big operators:
  * 1. an explicit operator,
  * 2. a relation symbol, or
  * 3. some punctuation.
  * @param {sre.SemanticNode} node A semantic node.
  * @return {boolean} True if the node meets the boundary criteria.
  */
-sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
+sre.SemanticPred.isBigOpBoundary = function(node) {
   return sre.SemanticPred.isOperator(node) ||
       sre.SemanticPred.isGeneralFunctionBoundary(node);
 };

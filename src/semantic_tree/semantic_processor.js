@@ -1294,19 +1294,34 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
         rest.unshift(funcNode);
         return rest;
       }
-    case 'bigop':
       var partition = sre.SemanticProcessor.sliceNodes_(
           rest, sre.SemanticPred.isPrefixFunctionBoundary);
+      if (!partition.head.length) {
+        if (!partition.div ||
+            !sre.SemanticPred.isAttribute('type', 'APPL')(partition.div)) {
+          rest.unshift(func);
+          return rest;
+        }
+        var arg = partition.div;
+      } else {
+        arg = sre.SemanticProcessor.getInstance().row(partition.head);
+        if (partition.div) {
+          partition.tail.unshift(partition.div);
+        }
+      }
+      funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
+      partition.tail.unshift(funcNode);
+      return partition.tail;
+      break;
+    case 'bigop':
+      var partition = sre.SemanticProcessor.sliceNodes_(
+          rest, sre.SemanticPred.isBigOpBoundary);
       if (!partition.head.length) {
         rest.unshift(func);
         return rest;
       }
       var arg = sre.SemanticProcessor.getInstance().row(partition.head);
-      if (heuristic === 'prefix') {
-        funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
-      } else {
-        funcNode = sre.SemanticProcessor.getInstance().bigOpNode_(func, arg);
-      }
+      funcNode = sre.SemanticProcessor.getInstance().bigOpNode_(func, arg);
       if (partition.div) {
         partition.tail.unshift(partition.div);
       }
