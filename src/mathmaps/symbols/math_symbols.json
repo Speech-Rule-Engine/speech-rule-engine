@@ -515,6 +515,9 @@
       },
       "mathspeak": {
         "default": "degree"
+      },
+      "clearspeak": {
+        "default": "degrees"
       }
     },
     "key": "00B0"

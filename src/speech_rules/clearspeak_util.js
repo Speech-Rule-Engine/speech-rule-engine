@@ -19,6 +19,7 @@
 
 goog.provide('sre.ClearspeakUtil');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.MathspeakUtil');
@@ -490,15 +491,54 @@ sre.ClearspeakUtil.simpleArguments = function(node) {
 };
 
 sre.ClearspeakUtil.simpleFactor_ = function(node) {
-  return node.tagName === sre.SemanticAttr.Type.NUMBER ||
-    node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
-    node.tagName === sre.SemanticAttr.Type.FUNCTION ||
-    node.tagName === sre.SemanticAttr.Type.APPL;
+  return node && (node.tagName === sre.SemanticAttr.Type.NUMBER ||
+                  node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
+                  node.tagName === sre.SemanticAttr.Type.FUNCTION ||
+                  node.tagName === sre.SemanticAttr.Type.APPL);
 }
 
 
 sre.ClearspeakUtil.fencedFactor_ = function(node) {
-  return node.tagName === sre.SemanticAttr.Type.FENCED ||
-    (node.hasAttribute('role') &&
-     node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT);
+  return node && (node.tagName === sre.SemanticAttr.Type.FENCED ||
+                  (node.hasAttribute('role') &&
+                   node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT));
+};
+
+
+/// TODO: This one did not work as expected. Remove!
+sre.ClearspeakUtil.contentIterator = function(nodes, context) {
+  console.log('Clearspeak Iterator');
+  if (nodes.length > 0) {
+    var contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+    var childNodes = sre.XpathUtil.evalXPath('../../children/*', nodes[0]);
+  } else {
+    contentNodes = [];
+    childNodes = [];
+  }
+  return function() {
+    var content = contentNodes.shift();
+    var contextDescr = context ?
+        [sre.AuditoryDescription.create(
+            {text: context}, {translate: true})] :
+        [];
+    var child = childNodes.shift();
+    if (!content) {
+      return contextDescr;
+    }
+    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    if (!(sre.ClearspeakUtil.simpleNode(child) ||
+          child.tagName === sre.SemanticAttr.Type.SUBSCRIPT ||
+          child.tagName === sre.SemanticAttr.Type.SUPERSCRIPT)) {
+      descrs.unshift(new sre.AuditoryDescription(
+          {text: '', personality: {pause: 'short'}}));
+    }
+    if (childNodes[0] && !(sre.ClearspeakUtil.simpleNode(childNodes[0]) ||
+                      childNodes[0].tagName === sre.SemanticAttr.Type.SUBSCRIPT ||
+                      childNodes[0].tagName === sre.SemanticAttr.Type.SUPERSCRIPT)) {
+      descrs.push(new sre.AuditoryDescription(
+          {text: '', personality: {pause: 'short'}}));
+    }
+    console.log(descrs);
+    return contextDescr.concat(descrs);
+  };
 };

@@ -106,6 +106,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
+  addCTXF('CTXFcontentPauseIterator', sre.ClearspeakUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.ClearspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
@@ -151,7 +152,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'capital', 'clearspeak.default',
     '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
     'self::identifier',
-    '@role="latinletter" or @role="greekletter"',
+    '@role="latinletter" or @role="greekletter" or @role="simple function"',
     'CQFisCapital');
   defineRule(
     'capital', 'clearspeak.Caps_SayCaps',
@@ -271,6 +272,11 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'function-prefix', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
       'self::appl', 'children/*[1][@role="prefix function"]');
+  defineRule(
+      'function-prefix', 'clearspeak.default',
+      '[p] (pause:"short"); [n] children/*[1]; [n] children/*[2]; [p] (pause:"short"); ',
+    'self::appl', 'children/*[1][@role="prefix function"]',
+    'name(children/*[1])!="function"');
 
   defineRule(
       'function-prefix', 'clearspeak.default',
@@ -285,6 +291,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
     'children/*[2]/children/*[1][text()="1"]',
     'not(contains(@grammar, "functions_none"))');
+
+  defineRule(
+      'superscript-prefix-function', 'clearspeak.default',
+      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of"; [n] children/*[1]',
+    'self::superscript', '@role="prefix function"', 'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
+  defineRule(
+      'superscript-prefix-function', 'clearspeak.default',
+      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of"; [n] children/*[1]',
+    'self::superscript', '@role="prefix function"', 'name(children/*[2])="identifier"');
+
 
   defineRule(
     'appl', 'clearspeak.Functions_None',
@@ -802,9 +818,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'positive', 'clearspeak.default',
       '[t] "positive"; [n] children/*[1]',
-      'self::prefixop', '@role="positive"'); 
-  //, 'contains(@meaning, "clearspeak:simple")');
-  
+      'self::prefixop', '@role="positive"');
+
   // Angle
   // defineRule(
   //   'angle-prefix', 'clearspeak.default',
@@ -848,6 +863,18 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'binary-operation', 'clearspeak.default',
       '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop');
+  defineRule(
+      'binary-operation-pause', 'clearspeak.default',
+    '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator);',
+    'self::infixop', '@role="implicit"', 'name(children/*[1])="function"');
+  defineRule(
+      'binary-operation-pause', 'clearspeak.default',
+    '[m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:"short")',
+    'self::infixop', '@role="implicit"', 'name(children/*[last()])="function"');
+  defineRule(
+      'binary-operation-pause', 'clearspeak.default',
+    '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:"short")',
+    'self::infixop', '@role="implicit"', 'name(children/*[1])="function"', 'name(children/*[last()])="function"');
 
   // defineRule(
   //     'binary-operation', 'clearspeak.default',
@@ -877,15 +904,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq');
 
-  defineRule(
-      'equality', 'clearspeak.default',
-      '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
-      'self::relseq', '@role="equality"', 'count(./children/*)=2');
+  // defineRule(
+  //     'equality', 'clearspeak.default',
+  //     '[n] children/*[1]; [n] content/*[1]; [n] children/*[2]',
+  //     'self::relseq', '@role="equality"', 'count(./children/*)=2');
 
-  defineRule(
-      'multi-equality', 'clearspeak.default',
-      '[m] ./children/* (sepFunc:CTXFcontentIterator)',
-      'self::relseq', '@role="equality"', 'count(./children/*)>2');
+  // defineRule(
+  //     'multi-equality', 'clearspeak.default',
+  //     '[m] ./children/* (sepFunc:CTXFcontentIterator)',
+  //     'self::relseq', '@role="equality"', 'count(./children/*)>2');
 
   defineRule(
       'multrel', 'clearspeak.default',

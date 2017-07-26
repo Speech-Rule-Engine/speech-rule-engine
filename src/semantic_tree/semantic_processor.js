@@ -173,8 +173,9 @@ sre.SemanticProcessor.prototype.prefixNode_ = function(node, prefixes) {
       prefixes, sre.SemanticPred.isAttribute('role', 'SUBTRACTION'));
   var newNode = sre.SemanticProcessor.getInstance().concatNode_(
       node, negatives.comp.pop(), sre.SemanticAttr.Type.PREFIXOP);
-  if (newNode.contentNodes.length === 1 &&
-      newNode.contentNodes[0].role === sre.SemanticAttr.Role.ADDITION) {
+  if (newNode.contentNodes.length === 1 && 
+      newNode.contentNodes[0].role === sre.SemanticAttr.Role.ADDITION &&
+      newNode.contentNodes[0].textContent === '+') {
     newNode.role = sre.SemanticAttr.Role.POSITIVE;
   }
   while (negatives.rel.length > 0) {
