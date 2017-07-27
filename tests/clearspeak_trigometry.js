@@ -1456,7 +1456,7 @@ sre.ClearspeakTrigometry.prototype.testAllTrig03 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig001
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig001 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig001 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic sine of x';
@@ -1467,7 +1467,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig001 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig002
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig002 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig002 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic cosine of x';
@@ -1478,7 +1478,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig002 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig003
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig003 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig003 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic tangent of x';
@@ -1489,7 +1489,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig003 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig004
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig004 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig004 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic cotangent of x';
@@ -1500,7 +1500,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig004 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig005
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig005 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig005 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic secant of x';
@@ -1511,7 +1511,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig005 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig006
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig006 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig006 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>';
   var speech = 'hyperbolic cosecant of x';
@@ -1522,7 +1522,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig006 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig007
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig007 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse hyperbolic sine of x';
@@ -1533,7 +1533,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig007 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig008
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig008 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig008 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse hyperbolic cosine of x';
@@ -1544,7 +1544,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig008 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig009
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig009 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse hyperbolic tangent of x';
@@ -1555,7 +1555,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig009 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig010
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig010 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse hyperbolic cotangent of x';
@@ -1566,7 +1566,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig010 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig011
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig011 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse hyperbolic secant of x';
@@ -1577,7 +1577,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig011 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig012
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig012 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse hyperbolic cosecant of x';
@@ -1588,7 +1588,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig012 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig013
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig013 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig013 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'hyperbolic sine of, the inverse hyperbolic sine of x';
@@ -1599,7 +1599,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig013 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig014
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig014 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig014 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'hyperbolic cosine of, the inverse hyperbolic cosine of x';
@@ -1610,7 +1610,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig014 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig015
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig015 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig015 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'hyperbolic tangent of, the inverse hyperbolic tangent of x';
@@ -1621,10 +1621,10 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig015 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig016
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig016 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig016 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'hyperbolic cotangent, of the inverse hyperbolic cotangent of x';
+  var speech = 'hyperbolic cotangent of, the inverse hyperbolic cotangent of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1632,7 +1632,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig016 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig017
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig017 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig017 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse hyperbolic sine of, hyperbolic sine of x';
@@ -1643,7 +1643,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig017 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig018
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig018 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig018 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse hyperbolic cosine of, hyperbolic cosine of x';
@@ -1654,7 +1654,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig018 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig019
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig019 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig019 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse hyperbolic tangent of, hyperbolic tangent of x';
@@ -1665,7 +1665,7 @@ sre.ClearspeakTrigometry.prototype.untestHypTrig019 = function() {
 /**
  * Testing ClearspeakTrigometry Example HypTrig020
  */
-sre.ClearspeakTrigometry.prototype.untestHypTrig020 = function() {
+sre.ClearspeakTrigometry.prototype.testHypTrig020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse hyperbolic cotangent of, hyperbolic cotangent of x';

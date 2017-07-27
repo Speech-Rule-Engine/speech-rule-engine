@@ -550,13 +550,8 @@ sre.ClearspeakUtil.contentIterator = function(nodes, context) {
  * @return {Array.<Node>} True if application of a hyperbolic function.
  */
 sre.ClearspeakUtil.isHyperbolic = function(node) {
-  console.log('IS HYPER');
   if (node.tagName === sre.SemanticAttr.Type.APPL) {
     var func = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
-    if (func) {
-      console.log(sre.MathCompoundStore.getInstance().
-                  lookupCategory(func.textContent));
-    }
     if (func && func.tagName === sre.SemanticAttr.Type.FUNCTION &&
         sre.MathCompoundStore.getInstance().
         lookupCategory(func.textContent) === 'Hyperbolic') {
@@ -567,3 +562,20 @@ sre.ClearspeakUtil.isHyperbolic = function(node) {
 };
 
 
+/**
+ * Tests for logarithm in subscript.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if logrithm with a basis in subscript.
+ */
+sre.ClearspeakUtil.isLogarithmWithBase = function(node) {
+  if (node.tagName === sre.SemanticAttr.Type.SUBSCRIPT) {
+    var func = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+    if (func && func.tagName === sre.SemanticAttr.Type.FUNCTION &&
+        sre.MathCompoundStore.getInstance().
+        lookupCategory(func.textContent) === 'Logarithm') {
+      return [node];
+    }
+  }
+  return [];
+};
+// TODO: (Simons) Add these into a category test constraint with xpath argument.

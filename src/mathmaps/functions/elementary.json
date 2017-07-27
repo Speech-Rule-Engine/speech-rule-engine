@@ -1,5 +1,5 @@
 [
-  {"category": "Elementary",
+  {"category": "Logarithm",
    "mappings": {
      "default": {
        "default": "logarithm",
@@ -10,7 +10,7 @@
    "key": "log",
    "names": ["log"]
   },
-  {"category": "Elementary",
+  {"category": "Logarithm",
    "mappings": {
      "default": {
        "default": "natural logarithm",
@@ -19,13 +19,17 @@
      },
      "mathspeak": {
        "default": "ln"
+     },
+     "clearspeak": {
+       "default": "l n",
+       "Log_LnAsNaturalLog": "natural log"
      }
 
    },
    "key": "ln",
    "names": ["ln"]
   },
-  {"category": "Elementary",
+  {"category": "Logarithm",
    "mappings": {
      "default": {
        "default": "logarithm base 10",

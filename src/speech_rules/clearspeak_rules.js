@@ -117,6 +117,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFfencedArguments', sre.ClearspeakUtil.fencedArguments);
   addCQF('CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments);
   addCQF('CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic);
+  addCQF('CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase);
 };
 
 
@@ -272,38 +273,111 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'function-prefix', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', 'children/*[1][@role="prefix function"]');
+      'self::appl', '@role="prefix function"');
   defineRule(
-      'function-prefix', 'clearspeak.default',
+      'function-prefix-simple-arg', 'clearspeak.default',
+      '[n] children/*[1]; [p] (pause:"short"); [n] children/*[2]',
+    'self::appl', '@role="prefix function"',
+    'name(children/*[2])="fenced"',
+    'contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")',
+    'name(children/*[2]/children/*[1])!="number"',
+    'name(children/*[2]/children/*[1])!="identifier"',
+    'name(children/*[2]/children/*[1])!="appl"'
+  );
+  defineRule(
+      'function-prefix-embell', 'clearspeak.default',
       '[p] (pause:"short"); [n] children/*[1]; [n] children/*[2]; [p] (pause:"short"); ',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       'name(children/*[1])!="function"');
 
+  // REMEMBER: When testing for function we can use the one in content!
   defineRule(
-      'function-prefix', 'clearspeak.default',
+      'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
       '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
-      ' or name(children/*[2])="fraction"');
+      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning, "clearspeak:simple")))');
+  defineRule(
+      'function-prefix-subscript', 'clearspeak.default',
+      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
+      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'name(children/*[1])="subscript"');
+
+
+  // ln rules!
+    defineRule(
+      'function-ln', 'clearspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+      'self::appl', '@role="prefix function"',
+      'content/*[2][text()="ln"]', 'not(following-sibling::*)',
+      'not(contains(@grammar, "NatLog"))');
+    defineRule(
+      'function-ln', 'clearspeak.default',
+      '[n] children/*[1]; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'content/*[2][text()="ln"]',
+      'not(contains(@grammar, "NatLog"))');
+    defineRule(
+      'function-ln', 'clearspeak.default',
+      '[n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'content/*[2][text()="ln"]', 'name(children/*[2])="fenced"',
+      'not(contains(@grammar, "NatLog"))');
+  // TODO: (MS2.3) This grammar rule can be ditched with a better treatment of
+  //               the preferences.
+  defineRule(
+      'function-ln', 'clearspeak.Log_LnAsNaturalLog',
+      '[n] . (grammar:NatLog)',
+      'self::appl', '@role="prefix function"',
+      'content/*[2][text()="ln"]', 'not(following-sibling::*)',
+      'not(contains(@grammar, "NatLog"))');
+  defineRule(
+      'function-ln', 'clearspeak.Log_LnAsNaturalLog',
+      '[n] . (grammar:NatLog); [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'content/*[2][text()="ln"]',
+      'not(contains(@grammar, "NatLog"))');
+
+
+  // Pauses?
+  defineRule(
+      'function-prefix-as-exp', 'clearspeak.default',
+      '[n] children/*[1]; [t] "of";' +
+      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'name(parent::*/parent::*)="superscript"', 'not(following-sibling::*)',
+      '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning, "clearspeak:simple")))');
+  defineRule(
+      'function-prefix-subscript-as-exp', 'clearspeak.default',
+      '[n] children/*[1]; [t] "of";' +
+      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', '@role="prefix function"',
+      'name(parent::*/parent::*)="superscript"', 'not(following-sibling::*)',
+      'name(children/*[1])="subscript"');
+
+
   defineRule(
       'function-prefix-hyper', 'clearspeak.default',
       '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]', 'CQFisHyperbolic');
+      'self::appl', '@role="prefix function"', 'CQFisHyperbolic');
 
   defineRule(
       'function-prefix-inverse', 'clearspeak.default',
       '[p] (pause:"short"); [t] "the inverse"; [n] children/*[1]/children/*[1];' +
       ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
 
+
   defineRule(
       'appl-triginverse', 'clearspeak.Trig_TrigInverse',
       '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]');
@@ -312,7 +386,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
       '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
       ' [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
@@ -321,8 +395,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
       '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
@@ -336,7 +409,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'function-prefix-arc', 'clearspeak.Trig_ArcTrig',
       '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
       ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
-      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
       'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
@@ -753,6 +826,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'subscript', 'clearspeak.default',
       '[p] (pause:short); [n] children/*[1]; [t] "sub"; [n] children/*[2]; [p] (pause:short)',
       'self::subscript');
+  defineRule(
+      'subscript-base', 'clearspeak.default',
+      '[n] children/*[1]; [t] "base"; [n] children/*[2]',
+      'self::subscript', 'CQFisLogarithm');
 
 
   // Fraction rules
