@@ -1961,7 +1961,8 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
   var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       sre.SemanticAttr.Type.FRACTION, [denom, enume], []);
   newNode.role = newNode.childNodes.every(function(x) {
-    return sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
+    return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
+      sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(function(x) {
         return sre.SemanticPred.isAttribute('role', 'UNIT')(x);

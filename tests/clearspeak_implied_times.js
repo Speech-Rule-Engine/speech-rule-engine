@@ -358,10 +358,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes027a = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes028
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes028 = function() {
+sre.ClearspeakImpliedTimes.prototype.testImpTimes028 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log base 10 of xy';
+  var speech = 'the log base 10 of, x y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -369,7 +369,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes028 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes029
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes029 = function() {
+sre.ClearspeakImpliedTimes.prototype.testImpTimes029 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi><mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
   var speech = 'the log of, open paren, x plus y, close paren, equals, log x log y';

@@ -280,10 +280,10 @@ sre.ClearspeakLogarithms.prototype.testLog021 = function() {
  * Testing ClearspeakLogarithms Example Log022
  */
 // TODO: Fix the vulgar fraction predicate!
-sre.ClearspeakLogarithms.prototype.untestLog022 = function() {
+sre.ClearspeakLogarithms.prototype.testLog022 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow><mrow><msup><mn>8</mn><mrow><mn>10</mn></mrow></msup></mrow></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>4</mn><mi>log</mi><mn>3</mn><mo>−</mo><mn>10</mn><mi>log</mi><mn>8</mn></mrow></math>';
-  var speech = 'the log of, open paren, the fraction with numerator 3 to the fourth power, and denominator 8 to the 10th power, close paren, equals, 4 log 3 minus 10 log 8';
+  var speech = 'the log of, open paren, the fraction with numerator 3 to the fourth power, and denominator 8 to the tenth power, close paren, equals 4 log 3, minus 10 log 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 

@@ -11214,3 +11214,53 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</appl>'
   );
 };
+
+
+sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
+  this.executeTreeTest(
+    '<mfrac><mn>1</mn><mn>2</mn></mfrac>',
+    '<fraction role="vulgar" id="2">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">1</number>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</fraction>'
+  );
+  this.executeTreeTest(
+    '<mfrac><mn>1.5</mn><mn>2</mn></mfrac>',
+    '<fraction role="division" id="2">' +
+      '<children>' +
+      '<number role="float" font="normal" id="0">1.5</number>' +
+      '<number role="integer" font="normal" id="1">2</number>' +
+      '</children>' +
+      '</fraction>'
+  );
+  this.executeTreeTest(
+    '<mfrac><mn>1</mn><mn>2.5</mn></mfrac>',
+    '<fraction role="division" id="2">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">1</number>' +
+      '<number role="float" font="normal" id="1">2.5</number>' +
+      '</children>' +
+      '</fraction>');
+  this.executeTreeTest(
+    '<mfrac><msup><mn>3</mn><mn>4</mn></msup>' +
+      '<msup><mn>8</mn><mn>10</mn></msup></mfrac>',
+    '<fraction role="division" id="6">' +
+      '<children>' +
+      '<superscript role="integer" id="2">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="0">3</number>' +
+      '<number role="integer" font="normal" id="1">4</number>' +
+      '</children>' +
+      '</superscript>' +
+      '<superscript role="integer" id="5">' +
+      '<children>' +
+      '<number role="integer" font="normal" id="3">8</number>' +
+      '<number role="integer" font="normal" id="4">10</number>' +
+      '</children>' +
+      '</superscript>' +
+      '</children>' +
+      '</fraction>'
+  );
+};

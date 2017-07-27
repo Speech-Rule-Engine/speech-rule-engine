@@ -306,6 +306,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
 
   // ln rules!
+  // QUESTION: These pauses are not consistent!
     defineRule(
       'function-ln', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
