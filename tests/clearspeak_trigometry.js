@@ -371,10 +371,11 @@ sre.ClearspeakTrigometry.prototype.testTrig029 = function() {
 };
 
 
+// TODO: (Simons) Handles degrees as a postfix function.
 /**
  * Testing ClearspeakTrigometry Example Trig030
  */
-sre.ClearspeakTrigometry.prototype.testTrig030 = function() {
+sre.ClearspeakTrigometry.prototype.untestTrig030 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mn>45</mn><mo>°</mo><mo>+</mo><mn>30</mn><mo>°</mo></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the sine of, open paren, 45 degrees plus 30 degrees, close paren';
@@ -385,10 +386,10 @@ sre.ClearspeakTrigometry.prototype.testTrig030 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig031
  */
-sre.ClearspeakTrigometry.prototype.untestTrig031 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig031 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo><mi>D</mi><mi>E</mi><mi>F</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the tangent of, open paren, angle DEF, close paren';
+  var speech = 'the tangent of, open paren, angle D E F, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -396,7 +397,7 @@ sre.ClearspeakTrigometry.prototype.untestTrig031 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig032
  */
-sre.ClearspeakTrigometry.prototype.untestTrig032 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig032 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo><mi>D</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the tangent of, open paren, angle D, close paren';
@@ -407,10 +408,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig032 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig033
  */
-sre.ClearspeakTrigometry.prototype.untestTrig033 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig033 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'the Sine of, open paren, x plus y, close paren, equals, sine x cosine y, plus, cosine x sine y';
+  var speech = 'the sine of, open paren, x plus y, close paren, equals, sine x cosine y, plus, cosine x sine y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -418,10 +419,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig033 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig034
  */
-sre.ClearspeakTrigometry.prototype.untestTrig034 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig034 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>cos</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>−</mo><mi>sin</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'the Cosine of, open paren, x plus y,close paren, equals cosine x cosine y, minus, sine x sine y';
+  var speech = 'the cosine of, open paren, x plus y, close paren, equals, cosine x cosine y, minus, sine x sine y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -429,14 +430,15 @@ sre.ClearspeakTrigometry.prototype.untestTrig034 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig035
  */
-sre.ClearspeakTrigometry.prototype.untestTrig035 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig035 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>tan</mi><mi>x</mi><mo>−</mo><mi>tan</mi><mi>y</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>tan</mi><mi>x</mi><mi>tan</mi><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the tangent of, open paren, x plus y, close paren, equals, the fraction with numerator tangent x minus tangent y, and denominator 1 minus tangent x tangent y';
+  var speech = 'the tangent of, open paren, x plus y, close paren, equals, the fraction with numerator tangent x minus tangent y, and denominator 1 minus, tangent x tangent y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
 
+// TODO: (Simons) Handle degrees as a postfix function.
 /**
  * Testing ClearspeakTrigometry Example Trig036
  */
@@ -451,10 +453,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig036 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig037
  */
-sre.ClearspeakTrigometry.prototype.untestTrig037 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig037 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>tan</mi><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>−</mo><mi>tan</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mi>tan</mi><mfrac><mi>π</mi><mn>6</mn></mfrac><mi>tan</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow></mfrac></mrow></math>';
-  var speech = '<p>The tangent of, open paren, pi over 6, plus, 2 pi over 3, close paren</p><p>equals</p><p>the fraction with numerator, the tangent of, pi over 6, minus, the tangent of 2 pi over 3,</p><p>and denominator, 1 minus, the tangent of pi over 6 the tangent of 2 pi over 3</p>';
+  var speech = 'the tangent of, open paren, pi over 6, plus, 2 pi over 3, close paren, equals, the fraction with numerator, the tangent of, pi over 6, minus, the tangent of, 2 pi over 3, and denominator 1 minus, the tangent of, pi over 6, the tangent of, 2 pi over 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -462,10 +464,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig037 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig038
  */
-sre.ClearspeakTrigometry.prototype.untestTrig038 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig038 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mn>2</mn><mi>x</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>tan</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac></mrow></math>';
-  var speech = 'tangent 2x, equals, the fraction with numerator 2 tangent x, and denominator 1 minus tangent squared x';
+  var speech = 'tangent 2 x, equals, the fraction with numerator 2 tangent x, and denominator 1 minus, tangent squared x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -473,10 +475,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig038 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig039
  */
-sre.ClearspeakTrigometry.prototype.untestTrig039 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig039 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mn>2</mn><mi>x</mi><mo>=</mo><mn>2</mn><msup><mrow><mi>cos</mi></mrow><mn>2</mn></msup><mi>x</mi><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'cosine 2x, equals, 2 cosine squared x, minus 1';
+  var speech = 'cosine 2 x, equals 2, cosine squared x, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -484,10 +486,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig039 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig040
  */
-sre.ClearspeakTrigometry.prototype.untestTrig040 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig040 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mi>x</mi></mrow><mn>2</mn></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the sine of x over 2 equals plus or minus the square root of the fraction with numerator 1 minus cosine x, and denominator 2';
+  var speech = 'the sine of, x over 2, equals plus or minus, the square root of, the fraction with numerator 1 minus cosine x, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -495,10 +497,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig040 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig041
  */
-sre.ClearspeakTrigometry.prototype.untestTrig041 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig041 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the tangent of x over 2 equals plus or minus the square root of the fraction with numerator 1 minus cosine x, and denominator 1 plus cosine x';
+  var speech = 'the tangent of, x over 2, equals plus or minus, the square root of, the fraction with numerator 1 minus cosine x, and denominator 1 plus cosine x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -506,10 +508,10 @@ sre.ClearspeakTrigometry.prototype.untestTrig041 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig042
  */
-sre.ClearspeakTrigometry.prototype.untestTrig042 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig042 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>=</mo><mn>2</mn><mi>cos</mi><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mi>cos</mi><mfrac><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'cosine x cosine y equals 2 the cosine of the fraction with numerator x plus y, and denominator 2, the cosine of the fraction with numerator x minus y, and denominator 2';
+  var speech = 'cosine x cosine y, equals 2, the cosine of, the fraction with numerator x plus y, and denominator 2, the cosine of, the fraction with numerator x minus y, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -517,10 +519,11 @@ sre.ClearspeakTrigometry.prototype.untestTrig042 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig043
  */
-sre.ClearspeakTrigometry.prototype.untestTrig043 = function() {
-  var preference = 'Trig_Auto(The Root Preference RootEnd is also set)';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakTrigometry.prototype.testTrig043 = function() {
+  var preference = 'Trig_Auto';
+  preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>8</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></math>';
-  var speech = 'the sine of, open paren, negative pi over 8, close paren, equals, negative one half times the square root of 2 minus the square root of 2, end root, end root';
+  var speech = 'the sine of, open paren, negative, pi over 8, close paren, equals negative one half, the square root of 2 minus, the square root of 2, end root, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -528,10 +531,11 @@ sre.ClearspeakTrigometry.prototype.untestTrig043 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig044
  */
-sre.ClearspeakTrigometry.prototype.untestTrig044 = function() {
-  var preference = 'Trig_Auto(The Root Preference RootEnd is also set)';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakTrigometry.prototype.testTrig044 = function() {
+  var preference = 'Trig_Auto';
+  preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></math>';
-  var speech = '<p>The tangent of, 3 pi over 8, equals,</p><p>the fraction with numerator, the square root of, the square root of 2, end root, plus 1, end root,</p><p>and denominator,</p><p>the square root of, the square root of, 2, end root, minus 1, end root</p>';
+  var speech = 'the tangent of, 3 pi over 8, equals, the fraction with numerator, the square root of, the square root of 2, end root, plus 1, end root, and denominator, the square root of, the square root of 2, end root, minus 1, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -539,10 +543,11 @@ sre.ClearspeakTrigometry.prototype.untestTrig044 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig045
  */
-sre.ClearspeakTrigometry.prototype.untestTrig045 = function() {
-  var preference = 'Trig_Auto(The Root Preference RootEnd is also set)';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakTrigometry.prototype.testTrig045 = function() {
+  var preference = 'Trig_Auto';
+  preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>π</mi><mrow><mn>12</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow></msqrt></mrow></math>';
-  var speech = 'the tangent of, pi over 12, equals, one half times the square root of 2 minus the square root of 3, end root, end root';
+  var speech = 'the tangent of, pi over 12, equals one half, the square root of 2 minus, the square root of 3, end root, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -555,7 +560,7 @@ sre.ClearspeakTrigometry.prototype.untestTrig045 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto001
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto001 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto001 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse sine of x';
@@ -566,7 +571,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto001 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto002
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto002 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto002 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse cosine of x';
@@ -577,7 +582,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto002 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto003
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto003 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto003 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse tangent of x';
@@ -588,7 +593,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto003 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto004
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto004 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto004 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse cotangent of x';
@@ -599,7 +604,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto004 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto005
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto005 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto005 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse secant of x';
@@ -610,7 +615,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto005 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto006
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto006 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto006 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'the inverse cosecant of x';
@@ -621,10 +626,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto006 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto007
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto007 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'the inverse sine of the fraction with numerator the square root of 2, and denominator 2';
+  var speech = 'the inverse sine of, the fraction with numerator, the square root of 2, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -632,7 +637,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto007 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto008
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto008 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto008 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'the inverse cosine of one half';
@@ -643,7 +648,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto008 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto009
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto009 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto009 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
   var speech = 'the inverse tangent of 17';
@@ -654,7 +659,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto009 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto010
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto010 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto010 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
   var speech = 'the inverse cotangent of 32';
@@ -665,7 +670,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto010 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto011
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto011 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto011 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
   var speech = 'the inverse secant of 100';
@@ -676,7 +681,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto011 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto012
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto012 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto012 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
   var speech = 'the inverse cosecant of 85';
@@ -687,7 +692,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto012 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto013
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto013 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto013 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse sine of negative x';
@@ -698,7 +703,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto013 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto014
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto014 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto014 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse cosine of negative x';
@@ -709,7 +714,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto014 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto015
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto015 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto015 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse tangent of, open paren, negative x plus 12, close paren';
@@ -720,7 +725,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto015 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto016
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto016 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto016 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse cotangent of, open paren, negative x minus 1, close paren';
@@ -731,10 +736,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto016 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto017
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto017 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto017 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the inverse sine of sine zero';
+  var speech = 'the inverse sine of sine 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -742,7 +747,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto017 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto018
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto018 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto018 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse cosecant of cosecant x';
@@ -753,10 +758,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto018 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto019
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto019 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto019 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, the inverse cosine of, open paren, negative, the fraction with numerator, the square root of 2 and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, the inverse cosine of, open paren, negative, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -764,10 +769,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto019 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto020
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto020 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, negative the inverse cosine of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, negative, the inverse cosine of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -775,10 +780,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto020 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto021
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto021 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto021 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the inverse sine of, open paren the cosine of pi over 4, close paren';
+  var speech = 'the inverse sine of, open paren, the cosine of, pi over 4, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -786,7 +791,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto021 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto022
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto022 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto022 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine, the inverse cosine of one half';
@@ -797,7 +802,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto022 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto023
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto023 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto023 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine, the inverse tangent of 1';
@@ -808,10 +813,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto023 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto024
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto024 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto024 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the sine of, open paren, negative the inverse tangent of 1, close paren';
+  var speech = 'the sine of, open paren, negative, the inverse tangent of 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -819,7 +824,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto024 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto025
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto025 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto025 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the sine of, open paren, negative, the inverse tangent of negative 1, close paren';
@@ -830,7 +835,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto025 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInvAuto026
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInvAuto026 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInvAuto026 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the inverse secant of secant x';
@@ -841,7 +846,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInvAuto026 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse001
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse001 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse001 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'sine inverse of x';
@@ -852,7 +857,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse001 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse002
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse002 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse002 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'cosine inverse of x';
@@ -863,7 +868,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse002 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse003
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse003 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse003 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'tangent inverse of x';
@@ -874,7 +879,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse003 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse004
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse004 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse004 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'cotangent inverse of x';
@@ -885,7 +890,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse004 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse005
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse005 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse005 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'secant inverse of x';
@@ -896,7 +901,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse005 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse006
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse006 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse006 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
   var speech = 'cosecant inverse of x';
@@ -907,10 +912,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse006 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse007
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse007 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse007 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'sine inverse of, the fraction with numerator square root of 2, and denominator 2';
+  var speech = 'sine inverse of, the fraction with numerator, the square root of 2, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -918,7 +923,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse007 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse008
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse008 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse008 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
   var speech = 'cosine inverse of one half';
@@ -929,7 +934,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse008 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse009
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse009 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse009 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
   var speech = 'tangent inverse of 17';
@@ -940,7 +945,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse009 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse010
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse010 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse010 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
   var speech = 'cotangent inverse of 32';
@@ -951,7 +956,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse010 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse011
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse011 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse011 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
   var speech = 'secant inverse of 100';
@@ -962,7 +967,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse011 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse012
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse012 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse012 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
   var speech = 'cosecant inverse of 85';
@@ -973,7 +978,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse012 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse013
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse013 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse013 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine inverse of negative x';
@@ -984,7 +989,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse013 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse014
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse014 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse014 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'cosine inverse of negative x';
@@ -995,7 +1000,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse014 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse015
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse015 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse015 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'tangent inverse of, open paren, negative x plus 12, close paren';
@@ -1006,10 +1011,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse015 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse016
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse016 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse016 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'cotangent inverse of, open paren, negative x minus x, close paren';
+  var speech = 'cotangent inverse of, open paren, negative x minus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1017,10 +1022,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse016 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse017
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse017 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse017 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sin inverse of sine 0';
+  var speech = 'sine inverse of sine 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1028,7 +1033,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse017 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse018
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse018 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse018 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'cosecant inverse of cosecant x';
@@ -1039,10 +1044,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse018 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse019
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse019 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse019 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, cosine inverse of, open paren, negative the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, cosine inverse of, open paren, negative, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1050,10 +1055,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse019 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse020
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse020 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse020 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, negative, cosine inverse of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, negative, cosine inverse of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1061,10 +1066,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse020 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse021
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse021 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse021 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'sine inverse of, open paren, the cosine of pi over 4, close paren';
+  var speech = 'sine inverse of, open paren, the cosine of, pi over 4, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1072,7 +1077,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse021 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse022
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse022 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse022 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine, cosine inverse of one half';
@@ -1083,7 +1088,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse022 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse023
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse023 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse023 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine, tangent inverse of 1';
@@ -1094,7 +1099,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse023 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse024
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse024 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse024 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the sine of, open paren, negative, tangent inverse of 1, close paren';
@@ -1105,7 +1110,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse024 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse025
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse025 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse025 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the sine of, open paren, negative, tangent inverse of negative 1, close paren';
@@ -1116,7 +1121,7 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse025 = function() {
 /**
  * Testing ClearspeakTrigometry Example TrigInverse026
  */
-sre.ClearspeakTrigometry.prototype.untestTrigInverse026 = function() {
+sre.ClearspeakTrigometry.prototype.testTrigInverse026 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'secant inverse of secant x';
@@ -1127,10 +1132,10 @@ sre.ClearspeakTrigometry.prototype.untestTrigInverse026 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig001
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig001 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig001 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'arc Sine x';
+  var speech = 'arc sine x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1138,10 +1143,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig001 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig002
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig002 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig002 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'arc Cosine x';
+  var speech = 'arc cosine x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1149,10 +1154,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig002 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig003
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig003 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig003 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'arc Tangent x';
+  var speech = 'arc tangent x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1160,10 +1165,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig003 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig004
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig004 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig004 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'arc Cotangent x';
+  var speech = 'arc cotangent x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1171,10 +1176,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig004 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig005
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig005 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig005 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'arc Secant x';
+  var speech = 'arc secant x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1182,10 +1187,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig005 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig006
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig006 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig006 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>';
-  var speech = 'arc Cosecant x';
+  var speech = 'arc cosecant x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1193,10 +1198,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig006 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig007
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig007 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig007 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'arc Sine of the fraction with numerator the square root of 2, and denominator 2';
+  var speech = 'arc sine of, the fraction with numerator, the square root of 2, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1204,10 +1209,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig007 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig008
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig008 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig008 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'arc Cosine one half';
+  var speech = 'arc cosine one half';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1215,10 +1220,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig008 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig009
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig009 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig009 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>';
-  var speech = 'arc Tangent 17';
+  var speech = 'arc tangent 17';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1226,10 +1231,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig009 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig010
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig010 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig010 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>';
-  var speech = 'arc Cotangent 32';
+  var speech = 'arc cotangent 32';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1237,10 +1242,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig010 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig011
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig011 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig011 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>';
-  var speech = 'arc Secant of 100';
+  var speech = 'arc secant 100';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1248,10 +1253,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig011 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig012
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig012 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig012 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>';
-  var speech = 'arc Cosecant 85';
+  var speech = 'arc cosecant 85';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1259,7 +1264,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig012 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig013
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig013 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig013 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'arc sine negative x';
@@ -1270,7 +1275,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig013 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig014
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig014 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig014 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'arc cosine negative x';
@@ -1281,7 +1286,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig014 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig015
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig015 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig015 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'arc tangent of, open paren, negative x plus 12, close paren';
@@ -1292,10 +1297,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig015 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig016
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig016 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig016 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'arc cotangent of, open paren, negative x minus x, close paren';
+  var speech = 'arc cotangent of, open paren, negative x minus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1303,10 +1308,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig016 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig017
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig017 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig017 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'arc sin, sine 0';
+  var speech = 'arc sine, sine 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1314,7 +1319,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig017 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig018
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig018 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig018 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'arc cosecant, cosecant x';
@@ -1325,10 +1330,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig018 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig019
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig019 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig019 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, arc cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, arc cosine of, open paren, negative, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1336,10 +1341,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig019 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig020
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig020 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig020 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, negative, arc cosine of, open paren, the fraction with numerator the square root of 2 and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, negative, arc cosine of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1347,10 +1352,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig020 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig021
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig021 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig021 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'arc Sine of, open paren, the cosine of pi over 4, close paren';
+  var speech = 'arc sine of, open paren, the cosine of, pi over 4, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1358,7 +1363,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig021 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig022
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig022 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig022 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine, arc cosine one half';
@@ -1369,7 +1374,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig022 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig023
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig023 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig023 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'sine, arc tangent 1';
@@ -1380,7 +1385,7 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig023 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig024
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig024 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig024 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the sine of, open paren, negative, arc tangent 1, close paren';
@@ -1391,10 +1396,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig024 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig025
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig025 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig025 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the sine of, open paren, negative, arc tangent, negative 1, close paren';
+  var speech = 'the sine of, open paren, negative, arc tangent negative 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1402,10 +1407,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig025 = function() {
 /**
  * Testing ClearspeakTrigometry Example ArcTrig026
  */
-sre.ClearspeakTrigometry.prototype.untestArcTrig026 = function() {
+sre.ClearspeakTrigometry.prototype.testArcTrig026 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'arc Secant, secant x';
+  var speech = 'arc secant, secant x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1413,10 +1418,10 @@ sre.ClearspeakTrigometry.prototype.untestArcTrig026 = function() {
 /**
  * Testing ClearspeakTrigometry Example AllTrig01
  */
-sre.ClearspeakTrigometry.prototype.untestAllTrig01 = function() {
+sre.ClearspeakTrigometry.prototype.testAllTrig01 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arcsin</mi><mi>x</mi></mrow></math>';
-  var speech = 'arc sin x';
+  var speech = 'arc sine x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1424,7 +1429,7 @@ sre.ClearspeakTrigometry.prototype.untestAllTrig01 = function() {
 /**
  * Testing ClearspeakTrigometry Example AllTrig02
  */
-sre.ClearspeakTrigometry.prototype.untestAllTrig02 = function() {
+sre.ClearspeakTrigometry.prototype.testAllTrig02 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arccos</mi><mi>x</mi></mrow></math>';
   var speech = 'arc cosine x';
@@ -1435,10 +1440,10 @@ sre.ClearspeakTrigometry.prototype.untestAllTrig02 = function() {
 /**
  * Testing ClearspeakTrigometry Example AllTrig03
  */
-sre.ClearspeakTrigometry.prototype.untestAllTrig03 = function() {
+sre.ClearspeakTrigometry.prototype.testAllTrig03 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>arctan</mi><mi>x</mi></mrow></math>';
-  var speech = 'arc tan x';
+  var speech = 'arc tangent x';
   this.executeRuleTest(mathml, speech, preference);
 };
 

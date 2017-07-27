@@ -282,8 +282,63 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'function-prefix', 'clearspeak.default',
       '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', 'children/*[1][@role="prefix function"]',
-      'name(children/*[2])="fenced" or name(children/*[2])="fraction"');
+      '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      ' or name(children/*[2])="fraction"');
 
+  defineRule(
+      'function-prefix-inverse', 'clearspeak.default',
+      '[p] (pause:"short"); [t] "the inverse"; [n] children/*[1]/children/*[1];' +
+      ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[1])="superscript"',
+      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'children/*[1]/children/*[2]/children/*[1][text()="1"]',
+      'not(contains(@grammar, "functions_none"))');
+
+  defineRule(
+      'appl-triginverse', 'clearspeak.Trig_TrigInverse',
+      '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[1])="superscript"',
+      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'children/*[1]/children/*[2]/children/*[1][text()="1"]');
+
+  defineRule(
+      'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
+      '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
+      ' [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[1])="superscript"',
+      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'children/*[1]/children/*[2]/children/*[1][text()="1"]',
+      'not(contains(@grammar, "functions_none"))');
+  defineRule(
+      'function-prefix-arc-simple', 'clearspeak.Trig_ArcTrig',
+      '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
+      ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[1])="superscript"',
+      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'children/*[1]/children/*[2]/children/*[1][text()="1"]',
+      'name(children/*[2])="fenced"',
+    'children/*[2]/children/*[1][@role="prefix function"]',
+    'contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")',
+      'not(contains(@grammar, "functions_none"))');
+
+    
+  defineRule(
+      'function-prefix-arc', 'clearspeak.Trig_ArcTrig',
+      '[p] (pause:"short"); [t] "arc"; [n] children/*[1]/children/*[1];' +
+      ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[1])="superscript"',
+      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'children/*[1]/children/*[2]/children/*[1][text()="1"]',
+      'not(contains(@grammar, "functions_none"))',
+      '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      ' or (name(children/*[2])="fraction" and children/*[2][@role!="vulgar"])');
+  
   defineRule(
       'function-inverse', 'clearspeak.default',
       '[n] children/*[1]; [t] "inverse"',
@@ -808,6 +863,11 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'sqrt', 'clearspeak.default',
       '[p] (pause:"short"); [t] "the square root of"; [n] children/*[1]; [p] (pause:"short")',
     'self::sqrt');
+  defineRule(
+      'sqrt', 'clearspeak.Roots_RootEnd',
+      '[p] (pause:"short"); [t] "the square root of"; [n] children/*[1];' +
+      ' [p] (pause:"short"); [t] "end root"; [p] (pause:"short")',
+    'self::sqrt');
 
   // minus sign
   defineRule(
@@ -866,19 +926,17 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'binary-operation-pause', 'clearspeak.default',
     '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator);',
-    'self::infixop', '@role="implicit"', 'name(children/*[1])="function"');
+    'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"');
   defineRule(
       'binary-operation-pause', 'clearspeak.default',
     '[m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:"short")',
-    'self::infixop', '@role="implicit"', 'name(children/*[last()])="function"');
+    'self::infixop', '@role="implicit"', 'name(children/*[last()])="appl"');
   defineRule(
       'binary-operation-pause', 'clearspeak.default',
     '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:"short")',
-    'self::infixop', '@role="implicit"', 'name(children/*[1])="function"', 'name(children/*[last()])="function"');
+    'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"', 'name(children/*[last()])="appl"');
+  // Maybe restrict those to prefix function role only!
 
-  // defineRule(
-  //     'binary-operation', 'clearspeak.default',
-  //     '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:"short")', 'self::infixop', '@role="implicit"');
   defineRule(
       'implicit-times', 'clearspeak.default',
       '[p] (pause:"short")', 'self::operator', '@role="multiplication"', 'text()="⁢"');
@@ -892,11 +950,25 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'CQFfencedArguments'); 
   // TODO: XPath 2.0 would help here!
 
+  // REMARK: Currently we have accelerated rate only with multi-character simple
+  // expressions or if they are the enumerator of a fraction.
+  // 
   defineRule(
       'binary-operation-simple', 'clearspeak.default',
       '[m] children/* (rate:"0.5"); [p] (pause:"short")',
       'self::infixop', '@role="implicit"',
-      'contains(@meaning, "clearspeak:simple")');
+      'contains(@meaning, "clearspeak:simple")',
+      'not(contains(@grammar, "inFrac"))');
+
+  defineRule(
+      'simple-in-fraction', 'clearspeak.default',
+      '[n] . (rate:"0.5",grammar:inFrac)',
+      'self::*', 'contains(@meaning, "clearspeak:simple")',
+      'not(contains(@grammar, "inFrac"))',
+      'name(.)!="identifier"', 'name(.)!="function"', 'name(.)!="number"',
+      'name(parent::*/parent::*)="fraction"',
+      'not(preceding-sibling::*)');
+  
 
   // Relations
   defineRule(

@@ -621,7 +621,7 @@ sre.EnrichMathmlTest.prototype.testMathmlPrePostfixOperators = function() {
       ' operator="infixop,+">+</mo>' +
       '<mrow type="postfixop" role="addition" id="15" children="13"' +
       ' content="9" parent="14">' +
-      '<mrow type="prefixop" role="positive" id="13" children="8"' +
+      '<mrow type="prefixop" role="addition" id="13" children="8"' +
       ' content="7" parent="15">' +
       '<mo type="operator" role="addition" id="7" parent="13"' +
       ' operator="prefixop,∓">∓</mo>' +
