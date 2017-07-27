@@ -383,7 +383,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes029 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestImpTimes030 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '<p>The 2 by 2 matrix, row 1, 1, 3. Row 2, 5, 2.</p><p>times</p><p>The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1.</p>';
+  var speech = 'the 2 by 2 matrix, row 1, 1, 3. Row 2, 5, 2. times The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1.';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -837,7 +837,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes067 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestImpTimes068 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '<p>The 2 by 2 matrix, row 1, 1, 3, row 2, 5, 2,</p><p>times,</p><p>The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1</p>';
+  var speech = 'The 2 by 2 matrix, row 1, 1, 3, row 2, 5, 2, times, The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1277,7 +1277,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimes105 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestImpTimes106 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '<p>The 2 by 2 matrix, row 1, 1, 3, row 2 5, 2.</p><p>The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1</p>';
+  var speech = 'The 2 by 2 matrix, row 1, 1, 3, row 2 5, 2. The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1590,7 +1590,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar019 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar020 = function() {
   var preference = 'ImpliedTimes_ImpliedTimes_None and Paren_Silent';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '<p>The 2 by 2 matrix, row 1, 1, 3, row 2, 5, 2.</p><p>The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1</p>';
+  var speech = 'The 2 by 2 matrix, row 1, 1, 3, row 2, 5, 2. The 2 by 2 matrix, row 1, 7, 4, row 2, 0, 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1650,7 +1650,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar024 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra001 = function() {
   var preference = 'ImpliedTimes_Rules (All Preferences have been cleared)';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'a , equals, h <strong><em>of</em></strong>, open paren, b sub 1 + b sub 2, close paren';
+  var speech = 'a , equals, h of, open paren, b sub 1 + b sub 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1661,7 +1661,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra001 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra002 = function() {
   var preference = 'ImpliedTimes_Functions Preference None has been set';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'a , equals, h <strong><em>times</em></strong>, open paren, b sub 1 + b sub 2, close paren';
+  var speech = 'a , equals, h times, open paren, b sub 1 + b sub 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1672,7 +1672,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra002 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra003 = function() {
   var preference = 'ImpliedTimes_Rules (All Preferences have been cleared)';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>';
-  var speech = '<p>A <strong><em>of</em></strong> z, equals,</p><p>0 <strong><em>times</em></strong> a</p><p>equals 0</p>';
+  var speech = 'A of z, equals, 0 times a equals 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1683,7 +1683,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra003 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra004 = function() {
   var preference = 'ImpliedTimes_Functions Preference None is set';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>';
-  var speech = '<p>A <strong><em>times</em></strong> 0</p><p>equals</p><p>0 <strong><em>times</em></strong> a</p><p>equals 0</p>';
+  var speech = 'A times 0 equals 0 times a equals 0';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1694,7 +1694,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra004 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra005 = function() {
   var preference = 'ImpliedTimes_Rules (All Preferences have been cleared)';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>';
-  var speech = 'a <strong><em>times</em></strong> negative 1 , equals, negative a';
+  var speech = 'a times negative 1 , equals, negative a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1705,7 +1705,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra005 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra006 = function() {
   var preference = 'ImpliedTimes_Rules (All Preferences have been cleared)withExact Speech (space inserted between a and and exact speech “of” inserted there)';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>';
-  var speech = 'a <strong><em>of</em></strong> negative 1, equals, negative a';
+  var speech = 'a of negative 1, equals, negative a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1737,8 +1737,8 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.untestExtra009 = function() {
   var preference = 'ImpliedTimes_Rules (All Preferences have been cleared)';  // TODO (sorge): Sort out preferences!
-  var mathml = 'Negative u times v , equals, u times negative v, equals, negative uv';
-  var speech = '<math style="background-color:#"> <semantics>  <mrow>   <mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo></mrow><mo>=</mo><mi>u</mi><mrow><mo>(</mo>    <mrow>     <mo>−</mo><mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow></mrow>   </semantics></math>';
+  var mathml = '<math style="background-color:#"> <semantics>  <mrow>   <mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo></mrow><mo>=</mo><mi>u</mi><mrow><mo>(</mo>    <mrow>     <mo>−</mo><mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow></mrow>   </semantics></math>';
+  var speech = 'Negative u times v , equals, u times negative v, equals, negative uv';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1749,7 +1749,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra009 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra010 = function() {
   var preference = 'ImpliedTimes_Rules (All Preferences have been cleared)';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'b <strong><em>of</em></strong>, open paren 2 comma 6, close paren';
+  var speech = 'b of, open paren 2 comma 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1760,7 +1760,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra010 = function() {
 sre.ClearspeakImpliedTimes.prototype.untestExtra012 = function() {
   var preference = 'ImpliedTimes_Functions Preference None is set';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'b, <strong><em>times</em></strong>, open paren 2 comma 6, close paren';
+  var speech = 'b, times, open paren 2 comma 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
