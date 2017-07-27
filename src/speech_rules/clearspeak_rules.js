@@ -116,6 +116,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCSF('CSFnestingDepth', sre.ClearspeakUtil.nestingDepth);
   addCQF('CQFfencedArguments', sre.ClearspeakUtil.fencedArguments);
   addCQF('CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments);
+  addCQF('CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic);
 };
 
 
@@ -275,8 +276,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'function-prefix', 'clearspeak.default',
       '[p] (pause:"short"); [n] children/*[1]; [n] children/*[2]; [p] (pause:"short"); ',
-    'self::appl', 'children/*[1][@role="prefix function"]',
-    'name(children/*[1])!="function"');
+      'self::appl', 'children/*[1][@role="prefix function"]',
+      'name(children/*[1])!="function"');
 
   defineRule(
       'function-prefix', 'clearspeak.default',
@@ -284,6 +285,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::appl', 'children/*[1][@role="prefix function"]',
       '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
       ' or name(children/*[2])="fraction"');
+  defineRule(
+      'function-prefix-hyper', 'clearspeak.default',
+      '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      'self::appl', 'children/*[1][@role="prefix function"]', 'CQFisHyperbolic');
 
   defineRule(
       'function-prefix-inverse', 'clearspeak.default',
