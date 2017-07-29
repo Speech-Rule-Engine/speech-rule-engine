@@ -23,6 +23,7 @@ goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakSpanishUtil');
 goog.require('sre.MathspeakUtil');
+goog.require('sre.SystemExternal');
 
 
 
@@ -33,15 +34,61 @@ goog.require('sre.MathspeakUtil');
  */
 sre.MathspeakSpanish = function() {
   sre.MathspeakSpanish.base(this, 'constructor');
+  sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.MathspeakSpanish, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakSpanish);
 
 
 /**
+ * @override
+ */
+sre.MathspeakSpanish.prototype.evaluateDefault = function(node) {
+  return [sre.AuditoryDescription.create({'text': node.textContent})];
+};
+
+
+sre.MathspeakSpanish.SPANISH_REGEXP = 'a-zA-ZáéíóúñÁÉÍÓÚÑ';
+
+/**
  * @type {sre.MathStore}
  */
 sre.MathspeakSpanish.mathStore = sre.MathspeakSpanish.getInstance();
+
+// TODO: This is a general function which has to be adapted with respect to
+//       accented characters existing in individual languages.
+sre.MathspeakSpanish.evaluateDefault = function(node) {
+  console.log('Spanish evaluator');
+  console.log(node.toString());
+  var text = node.textContent;
+  console.log(text);
+  var result = [];
+  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var inc = new RegExp('^[' + sre.MathspeakSpanish.SPANISH_REGEXP + ']+');
+  var exc = new RegExp('^[^' + sre.MathspeakSpanish.SPANISH_REGEXP + ']+');
+  while (text) {
+    var word = inc.exec(text);
+    if (word) {
+      var type = sre.Semantic.Type.TEXT;
+      var role = sre.Semantic.Role.PROTECTED;
+    } else {
+      word = exc.exec(text);
+      var type = sre.Semantic.Type.UNKNOWN;
+      role = sre.Semantic.Role.TEXT;
+    }
+    console.log(word[0]);
+    var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
+                                 word[0] + '</' + type + '>', 'text/xml');
+    result.push(doc.documentElement);
+    text = text.slice(word[0].length).trimLeft();
+  }
+  return result;
+};
+
+
+// sre.MathspeakSpanish.evaluateDefault = goog.bind(
+//     sre.MathspeakSpanish.mathStore.evaluateDefault,
+//     sre.MathspeakSpanish.mathStore);
 
 
 /** @private */
@@ -148,6 +195,8 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
 
   // DIAGRAM: Temporary for testing:
   addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
+
+  addCQF('CQFtextEvaluator', sre.MathspeakSpanish.evaluateDefault);
 };
 
 
@@ -384,7 +433,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   // Text rules
   defineRule(
-      'text', 'mathspeak.spanish', '[n] text()', 'self::text');
+      'text', 'mathspeak.spanish', '[m] CQFtextEvaluator', 'self::text');
 
   // Special symbols
   defineRule(
@@ -1420,7 +1469,6 @@ sre.MathspeakSpanish.generateMathspeakTensorRules_ = function() {
 };
 
 });  // goog.scope
-
 
 
 sre.MathspeakSpanish.getInstance().initializer = [

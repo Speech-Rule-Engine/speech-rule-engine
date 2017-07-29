@@ -224,7 +224,7 @@ sre.MathspeakSpanishTest.prototype.testSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Mayúscula paréntesis izquierdo empezar llave alfa coma beta coma gamma coma delta coma epsilon coma phi finalizar llave paréntesis izquierdo igual empezar llave mayúscula Alfa coma mayúscula Beta coma mayúscula Gamma coma mayúscula Delta coma mayúscula Epsilon coma mayúscula Phi finalizar llave', 'spanish');
+  this.executeRuleTest(mml, 'Mayúscula paréntesis izquierdo empezar llave alfa coma beta coma gamma coma delta coma épsilon coma phi finalizar llave paréntesis derecho igual empezar llave mayúscula Alfa coma mayúscula Beta coma mayúscula Gamma coma mayúscula Delta coma mayúscula Épsilon coma mayúscula Phi finalizar llave', 'spanish');
 };
 
 
