@@ -962,7 +962,7 @@
   "key" : "00C0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula grave"
+     "spanish": "mayúscula A grave"
    }
   }
  },
@@ -970,7 +970,7 @@
   "key" : "00C1",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula aguda"
+     "spanish": "mayúscula A aguda"
    }
   }
  },
@@ -978,7 +978,7 @@
   "key" : "00C2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula acento circunflejo"
+     "spanish": "mayúscula A acento circunflejo"
    }
   }
  },
@@ -986,7 +986,7 @@
   "key" : "00C3",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con tilde"
+     "spanish": "mayúscula A con tilde"
    }
   }
  },
@@ -994,7 +994,7 @@
   "key" : "00C4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula diéresis"
+     "spanish": "mayúscula A diéresis"
    }
   }
  },
@@ -1002,7 +1002,7 @@
   "key" : "00C5",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con anillo"
+     "spanish": "mayúscula A con anillo"
    }
   }
  },
@@ -1010,7 +1010,7 @@
   "key" : "00C6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "a E mayúscula"
+     "spanish": "mayúscula AE"
    }
   }
  },
@@ -1018,7 +1018,7 @@
   "key" : "00C7",
   "mappings": {
     "mathspeak" : {
-     "spanish": "cedillA mayúscula"
+     "spanish": "mayúscula C cedilla"
    }
   }
  },
@@ -1026,7 +1026,7 @@
   "key" : "00C8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula grave"
+     "spanish": "mayúscula E grave"
    }
   }
  },
@@ -1034,7 +1034,7 @@
   "key" : "00C9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula aguda"
+     "spanish": "mayúscula E aguda"
    }
   }
  },
@@ -1042,7 +1042,7 @@
   "key" : "00CA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula acento circunflejo"
+     "spanish": "mayúscula E acento circunflejo"
    }
   }
  },
@@ -1050,7 +1050,7 @@
   "key" : "00CB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula diéresis"
+     "spanish": "mayúscula E diéresis"
    }
   }
  },
@@ -1058,7 +1058,7 @@
   "key" : "00CC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula grave"
+     "spanish": "mayúscula I grave"
    }
   }
  },
@@ -1066,7 +1066,7 @@
   "key" : "00CD",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula aguda"
+     "spanish": "mayúscula I aguda"
    }
   }
  },
@@ -1074,7 +1074,7 @@
   "key" : "00CE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula acento circumflejo"
+     "spanish": "mayúscula I acento circumflejo"
    }
   }
  },
@@ -1082,7 +1082,7 @@
   "key" : "00CF",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula diéresis"
+     "spanish": "mayúscula I diéresis"
    }
   }
  },
@@ -1090,7 +1090,7 @@
   "key" : "00D0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "etH mayúscula"
+     "spanish": "mayúscula Eth"
    }
   }
  },
@@ -1098,7 +1098,7 @@
   "key" : "00D1",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Ñ"
+     "spanish": "mayúscula Ñ"
    }
   }
  },
@@ -1106,7 +1106,7 @@
   "key" : "00D2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula grave"
+     "spanish": "mayúscula O grave"
    }
   }
  },
@@ -1114,7 +1114,7 @@
   "key" : "00D3",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula aguda"
+     "spanish": "mayúscula O aguda"
    }
   }
  },
@@ -1122,7 +1122,7 @@
   "key" : "00D4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula acento circunflejo"
+     "spanish": "mayúscula O acento circunflejo"
    }
   }
  },
@@ -1130,7 +1130,7 @@
   "key" : "00D5",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con tilde"
+     "spanish": "mayúscula O con tilde"
    }
   }
  },
@@ -1138,7 +1138,7 @@
   "key" : "00D6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula diéresis"
+     "spanish": "mayúscula O diéresis"
    }
   }
  },
@@ -1154,7 +1154,7 @@
   "key" : "00D8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con barra"
+     "spanish": "mayúscula O con barra"
    }
   }
  },
@@ -1162,7 +1162,7 @@
   "key" : "00D9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula grave"
+     "spanish": "mayúscula U grave"
    }
   }
  },
@@ -1170,7 +1170,7 @@
   "key" : "00DA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula aguda"
+     "spanish": "mayúscula U aguda"
    }
   }
  },
@@ -1178,7 +1178,7 @@
   "key" : "00DB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula acento circunflejo"
+     "spanish": "mayúscula U acento circunflejo"
    }
   }
  },
@@ -1186,7 +1186,7 @@
   "key" : "00DC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula diéresis"
+     "spanish": "mayúscula U diéresis"
    }
   }
  },
@@ -1194,7 +1194,7 @@
   "key" : "00DD",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula aguda"
+     "spanish": "mayúscula Y aguda"
    }
   }
  },
@@ -1202,7 +1202,7 @@
   "key" : "00DE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "thorn mayúscula"
+     "spanish": "mayúscula Thorn"
    }
   }
  },
@@ -1266,7 +1266,7 @@
   "key" : "00E6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "a e"
+     "spanish": "ae"
    }
   }
  },
@@ -1274,7 +1274,7 @@
   "key" : "00E7",
   "mappings": {
     "mathspeak" : {
-     "spanish": "cedilla"
+     "spanish": "c cedilla"
    }
   }
  },
@@ -1450,7 +1450,8 @@
   "key" : "00FD",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye aguda"
+      "spanish": "Y aguda",
+      "spanishMP": "ye aguda"
    }
   }
  },
@@ -1466,7 +1467,8 @@
   "key" : "00FF",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye diéresis"
+      "spanish": "y diéresis",
+      "spanishMP": "ye diéresis"
    }
   }
  },
@@ -1474,7 +1476,7 @@
   "key" : "0100",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula barra"
+     "spanish": "mayúscula A barra"
    }
   }
  },
@@ -1490,7 +1492,7 @@
   "key" : "0102",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con breve"
+     "spanish": "mayúscula A con breve"
    }
   }
  },
@@ -1506,7 +1508,7 @@
   "key" : "0104",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con ogonek"
+     "spanish": "mayúscula A con ogonek"
    }
   }
  },
@@ -1522,7 +1524,7 @@
   "key" : "0106",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula con agudo"
+     "spanish": "mayúscula C con agudo"
    }
   }
  },
@@ -1538,7 +1540,7 @@
   "key" : "0108",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula con acento circunflejo"
+     "spanish": "mayúscula C con acento circunflejo"
    }
   }
  },
@@ -1554,7 +1556,7 @@
   "key" : "010A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula con punto arriba"
+     "spanish": "mayúscula C con punto arriba"
    }
   }
  },
@@ -1570,7 +1572,7 @@
   "key" : "010C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula con carón"
+     "spanish": "mayúscula C con carón"
    }
   }
  },
@@ -1586,7 +1588,7 @@
   "key" : "010E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con carón"
+     "spanish": "mayúscula D con carón"
    }
   }
  },
@@ -1602,7 +1604,7 @@
   "key" : "0110",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con barra"
+     "spanish": "mayúscula D con barra"
    }
   }
  },
@@ -1618,7 +1620,7 @@
   "key" : "0112",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula barra"
+     "spanish": "mayúscula E barra"
    }
   }
  },
@@ -1634,7 +1636,7 @@
   "key" : "0116",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con punto arriba"
+     "spanish": "mayúscula E con punto arriba"
    }
   }
  },
@@ -1650,7 +1652,7 @@
   "key" : "0118",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con ogonek"
+     "spanish": "mayúscula E con ogonek"
    }
   }
  },
@@ -1666,7 +1668,7 @@
   "key" : "011A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con carón"
+     "spanish": "mayúscula E con carón"
    }
   }
  },
@@ -1682,7 +1684,7 @@
   "key" : "011C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula con acento circunflejo"
+     "spanish": "mayúscula G con acento circunflejo"
    }
   }
  },
@@ -1698,7 +1700,7 @@
   "key" : "011E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula con breve"
+     "spanish": "mayúscula G con breve"
    }
   }
  },
@@ -1714,7 +1716,7 @@
   "key" : "0120",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula con punto arriba"
+     "spanish": "mayúscula G con punto arriba"
    }
   }
  },
@@ -1730,7 +1732,7 @@
   "key" : "0122",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula con cedilla"
+     "spanish": "mayúscula G con cedilla"
    }
   }
  },
@@ -1738,7 +1740,7 @@
   "key" : "0124",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con acento circunflejo"
+     "spanish": "mayúscula H con acento circunflejo"
    }
   }
  },
@@ -1754,7 +1756,7 @@
   "key" : "0126",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con guión"
+     "spanish": "mayúscula H con guión"
    }
   }
  },
@@ -1770,7 +1772,7 @@
   "key" : "0128",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con tilde"
+     "spanish": "mayúscula I con tilde"
    }
   }
  },
@@ -1786,7 +1788,7 @@
   "key" : "012A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula barra"
+     "spanish": "mayúscula I barra"
    }
   }
  },
@@ -1802,7 +1804,7 @@
   "key" : "012E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con ogonek"
+     "spanish": "mayúscula I con ogonek"
    }
   }
  },
@@ -1818,7 +1820,7 @@
   "key" : "0130",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con punto arriba"
+     "spanish": "mayúscula I con punto arriba"
    }
   }
  },
@@ -1834,7 +1836,7 @@
   "key" : "0132",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ligadura ij mayúscula"
+     "spanish": "mayúscula ligadura IJ"
    }
   }
  },
@@ -1850,7 +1852,7 @@
   "key" : "0134",
   "mappings": {
     "mathspeak" : {
-     "spanish": "J mayúscula con acento circunflejo"
+     "spanish": "mayúscula J con acento circunflejo"
    }
   }
  },
@@ -1866,7 +1868,7 @@
   "key" : "0136",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula con cedilla"
+     "spanish": "mayúscula K con cedilla"
    }
   }
  },
@@ -1890,7 +1892,7 @@
   "key" : "0139",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con agudo"
+     "spanish": "mayúscula L con agudo"
    }
   }
  },
@@ -1906,7 +1908,7 @@
   "key" : "013B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con cedilla"
+     "spanish": "mayúscula L con cedilla"
    }
   }
  },
@@ -1922,7 +1924,7 @@
   "key" : "013D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con carón"
+     "spanish": "mayúscula L con carón"
    }
   }
  },
@@ -1938,7 +1940,7 @@
   "key" : "013F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con punto mediano"
+     "spanish": "mayúscula L con punto mediano"
    }
   }
  },
@@ -1954,7 +1956,7 @@
   "key" : "0141",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con guión"
+     "spanish": "mayúscula L con guión"
    }
   }
  },
@@ -1970,7 +1972,7 @@
   "key" : "0143",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula con agudo"
+     "spanish": "mayúscula N con agudo"
    }
   }
  },
@@ -1986,7 +1988,7 @@
   "key" : "0145",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula con cedilla"
+     "spanish": "mayúscula N con cedilla"
    }
   }
  },
@@ -2026,7 +2028,7 @@
   "key" : "014A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eng mayúscula"
+     "spanish": "mayúscula Eng"
    }
   }
  },
@@ -2042,7 +2044,7 @@
   "key" : "014C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula barra"
+     "spanish": "mayúscula O barra"
    }
   }
  },
@@ -2058,7 +2060,7 @@
   "key" : "0150",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con doble acento agudo "
+     "spanish": "mayúscula O con doble acento agudo "
    }
   }
  },
@@ -2074,7 +2076,7 @@
   "key" : "0152",
   "mappings": {
     "mathspeak" : {
-     "spanish": "oe mayúscula"
+     "spanish": "mayúscula OE"
    }
   }
  },
@@ -2090,7 +2092,7 @@
   "key" : "0154",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con agudo"
+     "spanish": "mayúscula R con agudo"
    }
   }
  },
@@ -2106,7 +2108,7 @@
   "key" : "0156",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con cedilla"
+     "spanish": "mayúscula R con cedilla"
    }
   }
  },
@@ -2122,7 +2124,7 @@
   "key" : "0158",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con carón"
+     "spanish": "mayúscula R con carón"
    }
   }
  },
@@ -2138,7 +2140,7 @@
   "key" : "015A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con agudo"
+     "spanish": "mayúscula S con agudo"
    }
   }
  },
@@ -2154,7 +2156,7 @@
   "key" : "015C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con acento circunflejo"
+     "spanish": "mayúscula S con acento circunflejo"
    }
   }
  },
@@ -2170,7 +2172,7 @@
   "key" : "015E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con cedilla"
+     "spanish": "mayúscula S con cedilla"
    }
   }
  },
@@ -2186,7 +2188,7 @@
   "key" : "0160",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con carón"
+     "spanish": "mayúscula S con carón"
    }
   }
  },
@@ -2202,7 +2204,7 @@
   "key" : "0162",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con cedilla"
+     "spanish": "mayúscula T con cedilla"
    }
   }
  },
@@ -2218,7 +2220,7 @@
   "key" : "0164",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con carón"
+     "spanish": "mayúscula T con carón"
    }
   }
  },
@@ -2234,7 +2236,7 @@
   "key" : "0166",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con guión"
+     "spanish": "mayúscula T con guión"
    }
   }
  },
@@ -2250,7 +2252,7 @@
   "key" : "0168",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con tilde"
+     "spanish": "mayúscula U con tilde"
    }
   }
  },
@@ -2266,7 +2268,7 @@
   "key" : "016A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula barra"
+     "spanish": "mayúscula U barra"
    }
   }
  },
@@ -2282,7 +2284,7 @@
   "key" : "016C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con breve"
+     "spanish": "mayúscula U con breve"
    }
   }
  },
@@ -2298,7 +2300,7 @@
   "key" : "016E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con anillo arriba"
+     "spanish": "mayúscula U con anillo arriba"
    }
   }
  },
@@ -2314,7 +2316,7 @@
   "key" : "0170",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con doble acento agudo"
+     "spanish": "mayúscula U con doble acento agudo"
    }
   }
  },
@@ -2330,7 +2332,7 @@
   "key" : "0172",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con ogonek"
+     "spanish": "mayúscula U con ogonek"
    }
   }
  },
@@ -2346,7 +2348,7 @@
   "key" : "0174",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula con acento circunflejo"
+     "spanish": "mayúscula W con acento circunflejo"
    }
   }
  },
@@ -2362,7 +2364,7 @@
   "key" : "0176",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula con circunflejo"
+     "spanish": "mayúscula Y con circunflejo"
    }
   }
  },
@@ -2378,7 +2380,7 @@
   "key" : "0178",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula diéresis"
+     "spanish": "mayúscula Y diéresis"
    }
   }
  },
@@ -2386,7 +2388,7 @@
   "key" : "0179",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula con agudo"
+     "spanish": "mayúscula Z con agudo"
    }
   }
  },
@@ -2402,7 +2404,7 @@
   "key" : "017B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula con punto"
+     "spanish": "mayúscula Z con punto"
    }
   }
  },
@@ -2418,7 +2420,7 @@
   "key" : "017D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula con carón"
+     "spanish": "mayúscula Z con carón"
    }
   }
  },
@@ -2434,7 +2436,7 @@
   "key" : "0190",
   "mappings": {
     "mathspeak" : {
-     "spanish": "e abierta mayúscula"
+     "spanish": "mayúscula e abierta"
    }
   }
  },
@@ -2522,7 +2524,7 @@
   "key" : "02145",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula"
+     "spanish": "mayúscula D"
    }
   }
  },
@@ -2602,7 +2604,7 @@
   "key" : "0262",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula pequeña"
+     "spanish": "mayúscula G pequeña"
    }
   }
  },
@@ -2610,7 +2612,7 @@
   "key" : "026A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula pequeña"
+     "spanish": "mayúscula I pequeña"
    }
   }
  },
@@ -2618,7 +2620,7 @@
   "key" : "0274",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula pequeña"
+     "spanish": "mayúscula N pequeña"
    }
   }
  },
@@ -2626,7 +2628,7 @@
   "key" : "0276",
   "mappings": {
     "mathspeak" : {
-     "spanish": "oe mayúscula pequeña"
+     "spanish": "mayúscula OE pequeña"
    }
   }
  },
@@ -2634,7 +2636,7 @@
   "key" : "0280",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula pequeña"
+     "spanish": "mayúscula R pequeña"
    }
   }
  },
@@ -2642,7 +2644,8 @@
   "key" : "028F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye mayúscula pequeña"
+      "spanish": "mayúscula Y pequeña",
+     "spanishMP": "ye mayúscula pequeña"
    }
   }
  },
@@ -2938,7 +2941,7 @@
   "key" : "0299",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula pequeña"
+     "spanish": "mayúscula B pequeña"
    }
   }
  },
@@ -2962,7 +2965,7 @@
   "key" : "029C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula pequeña"
+     "spanish": "mayúscula H pequeña"
    }
   }
  },
@@ -2994,7 +2997,7 @@
   "key" : "029F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula pequeña"
+     "spanish": "mayúscula L pequeña"
    }
   }
  },
@@ -3964,7 +3967,7 @@
   "key" : "03D8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "koppa arcaica mayúscula"
+     "spanish": "mayúscula Koppa arcaica"
    }
   }
  },
@@ -3980,7 +3983,7 @@
   "key" : "03DA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "stigma mayúscula"
+     "spanish": "mayúscula Stigma"
    }
   }
  },
@@ -4004,7 +4007,7 @@
   "key" : "03DE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "koppa mayúscula"
+     "spanish": "mayúscula Koppa"
    }
   }
  },
@@ -4020,7 +4023,7 @@
   "key" : "03E0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "sampi mayúscula"
+     "spanish": "mayúscula Sampi"
    }
   }
  },
@@ -4054,7 +4057,7 @@
   "key" : "03F4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "theta mayúscula"
+     "spanish": "mayúscula Theta"
    }
   }
  },
@@ -4079,7 +4082,7 @@
   "key" : "0401",
   "mappings": {
     "mathspeak" : {
-     "spanish": "io mayúscula"
+     "spanish": "mayúscula Io"
    }
   }
  },
@@ -4087,7 +4090,7 @@
   "key" : "0402",
   "mappings": {
     "mathspeak" : {
-     "spanish": "dje mayúscula"
+     "spanish": "mayúscula Dje"
    }
   }
  },
@@ -4095,7 +4098,7 @@
   "key" : "0403",
   "mappings": {
     "mathspeak" : {
-     "spanish": "gje mayúscula"
+     "spanish": "mayúscula Gje"
    }
   }
  },
@@ -4103,7 +4106,7 @@
   "key" : "0404",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ie ucraniana mayúscula"
+     "spanish": "mayúscula Ie ucraniana"
    }
   }
  },
@@ -4111,7 +4114,7 @@
   "key" : "0405",
   "mappings": {
     "mathspeak" : {
-     "spanish": "dze mayúscula"
+     "spanish": "mayúscula Dze"
    }
   }
  },
@@ -4119,7 +4122,7 @@
   "key" : "0406",
   "mappings": {
     "mathspeak" : {
-     "spanish": "i bielorrusa-ucraniana mayúscula"
+     "spanish": "mayúscula I bielorrusa-ucraniana"
    }
   }
  },
@@ -4127,7 +4130,7 @@
   "key" : "0407",
   "mappings": {
     "mathspeak" : {
-     "spanish": "yi mayúscula"
+     "spanish": "mayúscula Yi"
    }
   }
  },
@@ -4135,7 +4138,7 @@
   "key" : "0408",
   "mappings": {
     "mathspeak" : {
-     "spanish": "je mayúscula"
+     "spanish": "mayúscula Je"
    }
   }
  },
@@ -4143,7 +4146,7 @@
   "key" : "0409",
   "mappings": {
     "mathspeak" : {
-     "spanish": "lje mayúscula"
+     "spanish": "mayúscula Lje"
    }
   }
  },
@@ -4151,7 +4154,7 @@
   "key" : "040A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "nje mayúscula"
+     "spanish": "mayúscula Nje"
    }
   }
  },
@@ -4159,7 +4162,7 @@
   "key" : "040B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "tshe mayúscula"
+     "spanish": "mayúscula Tshe"
    }
   }
  },
@@ -4167,7 +4170,7 @@
   "key" : "040C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "kje mayúscula"
+     "spanish": "mayúscula Kje"
    }
   }
  },
@@ -4175,7 +4178,7 @@
   "key" : "040E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "u corta mayúscula"
+     "spanish": "mayúscula U corta"
    }
   }
  },
@@ -4183,7 +4186,7 @@
   "key" : "040F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "dzhe mayúscula"
+     "spanish": "mayúscula Dzhe"
    }
   }
  },
@@ -4191,7 +4194,7 @@
   "key" : "0410",
   "mappings": {
     "mathspeak" : {
-     "spanish": "a cirílica mayúscula"
+     "spanish": "mayúscula A cirílica"
    }
   }
  },
@@ -4199,7 +4202,7 @@
   "key" : "0411",
   "mappings": {
     "mathspeak" : {
-     "spanish": "be mayúscula"
+     "spanish": "mayúscula Be"
    }
   }
  },
@@ -4207,7 +4210,7 @@
   "key" : "0412",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ve mayúscula"
+     "spanish": "mayúscula Ve"
    }
   }
  },
@@ -4215,7 +4218,7 @@
   "key" : "0413",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ghe mayúscula"
+     "spanish": "mayúscula Ghe"
    }
   }
  },
@@ -4223,7 +4226,7 @@
   "key" : "0414",
   "mappings": {
     "mathspeak" : {
-     "spanish": "de mayúscula"
+     "spanish": "mayúscula De"
    }
   }
  },
@@ -4231,7 +4234,7 @@
   "key" : "0415",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ie mayúscula"
+     "spanish": "mayúscula Ie"
    }
   }
  },
@@ -4239,7 +4242,7 @@
   "key" : "0416",
   "mappings": {
     "mathspeak" : {
-     "spanish": "zhe mayúscula"
+     "spanish": "mayúscula Zhe"
    }
   }
  },
@@ -4247,7 +4250,7 @@
   "key" : "0417",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ze mayúscula"
+     "spanish": "mayúscula Ze"
    }
   }
  },
@@ -4255,7 +4258,7 @@
   "key" : "0418",
   "mappings": {
     "mathspeak" : {
-     "spanish": "i cirílica mayúscula"
+     "spanish": "mayúscula I cirílica"
    }
   }
  },
@@ -4263,7 +4266,7 @@
   "key" : "0419",
   "mappings": {
     "mathspeak" : {
-     "spanish": "i corta cirílica mayúscula"
+     "spanish": "mayúscula I corta cirílica"
    }
   }
  },
@@ -4271,7 +4274,7 @@
   "key" : "041A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ka mayúscula"
+     "spanish": "mayúscula Ka"
    }
   }
  },
@@ -4279,7 +4282,7 @@
   "key" : "041B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "el mayúscula"
+     "spanish": "mayúscula El"
    }
   }
  },
@@ -4287,7 +4290,7 @@
   "key" : "041C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "em mayúscula"
+     "spanish": "mayúscula Em"
    }
   }
  },
@@ -4295,7 +4298,7 @@
   "key" : "041D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "en mayúscula"
+     "spanish": "mayúscula En"
    }
   }
  },
@@ -4303,7 +4306,7 @@
   "key" : "041E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "o mayúscula"
+     "spanish": "mayúscula O"
    }
   }
  },
@@ -4311,7 +4314,7 @@
   "key" : "041F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "pe mayúscula"
+     "spanish": "mayúscula Pe"
    }
   }
  },
@@ -4319,7 +4322,7 @@
   "key" : "0420",
   "mappings": {
     "mathspeak" : {
-     "spanish": "er mayúscula"
+     "spanish": "mayúscula Er"
    }
   }
  },
@@ -4327,7 +4330,7 @@
   "key" : "0421",
   "mappings": {
     "mathspeak" : {
-     "spanish": "es mayúscula"
+     "spanish": "mayúscula Es"
    }
   }
  },
@@ -4335,7 +4338,7 @@
   "key" : "0422",
   "mappings": {
     "mathspeak" : {
-     "spanish": "te mayúscula"
+     "spanish": "mayúscula Te"
    }
   }
  },
@@ -4343,7 +4346,7 @@
   "key" : "0423",
   "mappings": {
     "mathspeak" : {
-     "spanish": "u cirílica mayúscula"
+     "spanish": "mayúscula U cirílica"
    }
   }
  },
@@ -4351,7 +4354,7 @@
   "key" : "0424",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ef mayúscula"
+     "spanish": "mayúscula Ef"
    }
   }
  },
@@ -4359,7 +4362,7 @@
   "key" : "0425",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ha mayúscula"
+     "spanish": "mayúscula Ha"
    }
   }
  },
@@ -4367,7 +4370,7 @@
   "key" : "0426",
   "mappings": {
     "mathspeak" : {
-     "spanish": "tse mayúscula"
+     "spanish": "mayúscula Tse"
    }
   }
  },
@@ -4375,7 +4378,7 @@
   "key" : "0427",
   "mappings": {
     "mathspeak" : {
-     "spanish": "che mayúscula"
+     "spanish": "mayúscula Che"
    }
   }
  },
@@ -4383,7 +4386,7 @@
   "key" : "0428",
   "mappings": {
     "mathspeak" : {
-     "spanish": "sha mayúscula"
+     "spanish": "mayúscula Sha"
    }
   }
  },
@@ -4391,7 +4394,7 @@
   "key" : "0429",
   "mappings": {
     "mathspeak" : {
-     "spanish": "shcha mayúscula"
+     "spanish": "mayúscula Shcha"
    }
   }
  },
@@ -4407,7 +4410,7 @@
   "key" : "042B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "yeru mayúscula"
+     "spanish": "mayúscula Yeru"
    }
   }
  },
@@ -4415,7 +4418,7 @@
   "key" : "042C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "signo suave cirílico mayúsculo"
+     "spanish": "mayúsculo signo suave cirílico"
    }
   }
  },
@@ -4423,7 +4426,7 @@
   "key" : "042D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "e cirílica mayúscula"
+     "spanish": "mayúscula E cirílica"
    }
   }
  },
@@ -4431,7 +4434,7 @@
   "key" : "042E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "yu mayúscula"
+     "spanish": "mayúscula Yu"
    }
   }
  },
@@ -4439,7 +4442,7 @@
   "key" : "042F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ya mayúscula"
+     "spanish": "mayúscula Ya"
    }
   }
  },
@@ -4812,1142 +4815,14 @@
   }
  },
  {
-  "key" : "1D49C",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "A mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D49E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "C mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D49F",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "D mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4A2",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "G mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4A5",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "J mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4A6",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "K mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4A9",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "N mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4AA",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "O mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4AB",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "P mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4AC",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "Q mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4AE",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "S mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4AF",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "T mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B0",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "U mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B1",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "V mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B2",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "W mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B3",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "X mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B4",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ye mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B5",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "Z mayúscula cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B6",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "a cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B7",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "b cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B8",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "c cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4B9",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "d cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4BB",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "f cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4BD",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "h cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4BE",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "i cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4BF",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "j cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C0",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "k cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C2",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "m cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C3",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "n cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C5",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "p cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C6",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "q cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C7",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "r cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C8",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "s cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4C9",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "t cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4CA",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "u cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4CB",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "v cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4CC",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "w cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4CD",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "x cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4CE",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ye cursiva"
-   }
-  }
- },
- {
-  "key" : "1D4CF",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "z cursiva"
-   }
-  }
- },
- {
-  "key" : "1D504",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "A mayúscula  partida"
-   }
-  }
- },
- {
-  "key" : "1D505",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "B mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D507",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "D mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D508",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "E mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D509",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "F mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D50A",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "G mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D50D",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "J mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D50E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "K mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D50F",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "L mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D510",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "M mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D511",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "N mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D512",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "O mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D513",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "P mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D514",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "Q mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D516",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "S mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D517",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "T mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D518",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "U mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D519",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "V mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D51A",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "W mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D51B",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "X mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D51C",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ye mayúscula partida"
-   }
-  }
- },
- {
-  "key" : "1D51E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "a partida"
-   }
-  }
- },
- {
-  "key" : "1D51F",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "b partida"
-   }
-  }
- },
- {
-  "key" : "1D520",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "c partida"
-   }
-  }
- },
- {
-  "key" : "1D521",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "d partida"
-   }
-  }
- },
- {
-  "key" : "1D522",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "e partida"
-   }
-  }
- },
- {
-  "key" : "1D523",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "f partida"
-   }
-  }
- },
- {
-  "key" : "1D524",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "g partida"
-   }
-  }
- },
- {
-  "key" : "1D525",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "h partida"
-   }
-  }
- },
- {
-  "key" : "1D526",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "i partida"
-   }
-  }
- },
- {
-  "key" : "1D527",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "j partida"
-   }
-  }
- },
- {
-  "key" : "1D528",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "k partida"
-   }
-  }
- },
- {
-  "key" : "1D529",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "l partida"
-   }
-  }
- },
- {
-  "key" : "1D52A",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "m partida"
-   }
-  }
- },
- {
-  "key" : "1D52B",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "n partida"
-   }
-  }
- },
- {
-  "key" : "1D52C",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "o partida"
-   }
-  }
- },
- {
-  "key" : "1D52D",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "p partida"
-   }
-  }
- },
- {
-  "key" : "1D52E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "q partida"
-   }
-  }
- },
- {
-  "key" : "1D52F",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "r partida"
-   }
-  }
- },
- {
-  "key" : "1D530",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "s partida"
-   }
-  }
- },
- {
-  "key" : "1D531",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "t partida"
-   }
-  }
- },
- {
-  "key" : "1D532",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "u partida"
-   }
-  }
- },
- {
-  "key" : "1D533",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "v partida"
-   }
-  }
- },
- {
-  "key" : "1D534",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "w partida"
-   }
-  }
- },
- {
-  "key" : "1D535",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "x partida"
-   }
-  }
- },
- {
-  "key" : "1D536",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ye partida"
-   }
-  }
- },
- {
-  "key" : "1D537",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "z partida"
-   }
-  }
- },
- {
-  "key" : "1D539",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "B mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D53B",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "D mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D53C",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "E mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D53D",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "F mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D53E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "G mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D540",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "I mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D541",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "J mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D542",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "K mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D543",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "L mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D544",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "M mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D546",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "O mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D54A",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "S mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D54B",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "T mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D54C",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "U mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D54D",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "V mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D54E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "W mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D54F",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "X mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D550",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ye mayúscula negrita"
-   }
-  }
- },
- {
-  "key" : "1D552",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "a negrita"
-   }
-  }
- },
- {
-  "key" : "1D553",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "b negrita"
-   }
-  }
- },
- {
-  "key" : "1D554",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "c negrita"
-   }
-  }
- },
- {
-  "key" : "1D555",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "d negrita"
-   }
-  }
- },
- {
-  "key" : "1D556",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "e negrita"
-   }
-  }
- },
- {
-  "key" : "1D557",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "f negrita"
-   }
-  }
- },
- {
-  "key" : "1D558",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "g negrita"
-   }
-  }
- },
- {
-  "key" : "1D559",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "h negrita"
-   }
-  }
- },
- {
-  "key" : "1D55A",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "i negrita"
-   }
-  }
- },
- {
-  "key" : "1D55B",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "j negrita"
-   }
-  }
- },
- {
-  "key" : "1D55C",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "k negrita"
-   }
-  }
- },
- {
-  "key" : "1D55D",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "l negrita"
-   }
-  }
- },
- {
-  "key" : "1D55E",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "m negrita"
-   }
-  }
- },
- {
-  "key" : "1D55F",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "n negrita"
-   }
-  }
- },
- {
-  "key" : "1D560",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "o negrita"
-   }
-  }
- },
- {
-  "key" : "1D561",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "p negrita"
-   }
-  }
- },
- {
-  "key" : "1D562",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "q negrita"
-   }
-  }
- },
- {
-  "key" : "1D563",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "r negrita"
-   }
-  }
- },
- {
-  "key" : "1D564",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "s negrita"
-   }
-  }
- },
- {
-  "key" : "1D565",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "t negrita"
-   }
-  }
- },
- {
-  "key" : "1D566",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "u negrita"
-   }
-  }
- },
- {
-  "key" : "1D567",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "v negrita"
-   }
-  }
- },
- {
-  "key" : "1D568",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "w negrita"
-   }
-  }
- },
- {
-  "key" : "1D569",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "x negrita"
-   }
-  }
- },
- {
-  "key" : "1D56A",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ye negrita"
-   }
-  }
- },
- {
-  "key" : "1D56B",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "z negrita"
-   }
-  }
- },
- {
-  "key" : "1D7D8",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "cero en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7D9",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "uno en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7DA",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "dos en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7DB",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "tres en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7DC",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "cuatro en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7DD",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "cinco en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7DE",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "seis en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7DF",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "siete en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7E0",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "ocho en negrita"
-   }
-  }
- },
- {
-  "key" : "1D7E1",
-  "mappings": {
-    "mathspeak" : {
-     "spanish": "nueve en negrita"
-   }
-  }
- },
- {
   "key" : "1E00",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con anillo debajo" 
+     "spanish": "mayúscula A con anillo debajo" 
    }
   }
  },
- {
+  {
   "key" : "1E01",
   "mappings": {
     "mathspeak" : {
@@ -5959,7 +4834,7 @@
   "key" : "1E02",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula con punto arriba" 
+     "spanish": "mayúscula B con punto arriba" 
    }
   }
  },
@@ -5975,7 +4850,7 @@
   "key" : "1E04",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula con punto debajo" 
+     "spanish": "mayúscula B con punto debajo" 
    }
   }
  },
@@ -5991,7 +4866,7 @@
   "key" : "1E06",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula con línea debajo" 
+     "spanish": "mayúscula B con línea debajo" 
    }
   }
  },
@@ -6007,7 +4882,7 @@
   "key" : "1E08",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula con cedilla y agudo" 
+     "spanish": "mayúscula C con cedilla y agudo" 
    }
   }
  },
@@ -6023,7 +4898,7 @@
   "key" : "1E0A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con punto arriba" 
+     "spanish": "mayúscula D con punto arriba" 
    }
   }
  },
@@ -6039,7 +4914,7 @@
   "key" : "1E0C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con punto debajo" 
+     "spanish": "mayúscula D con punto debajo" 
    }
   }
  },
@@ -6055,7 +4930,7 @@
   "key" : "1E0E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con línea debajo" 
+     "spanish": "mayúscula D con línea debajo" 
    }
   }
  },
@@ -6071,7 +4946,7 @@
   "key" : "1E10",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con cedilla" 
+     "spanish": "mayúscula D con cedilla" 
    }
   }
  },
@@ -6087,7 +4962,7 @@
   "key" : "1E12",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula con acento circunflejo debajo" 
+     "spanish": "mayúscula D con acento circunflejo debajo" 
    }
   }
  },
@@ -6103,7 +4978,7 @@
   "key" : "1E14",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con macrón y grave" 
+     "spanish": "mayúscula E con macrón y grave" 
    }
   }
  },
@@ -6119,7 +4994,7 @@
   "key" : "1E16",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con macrón y agudo" 
+     "spanish": "mayúscula E con macrón y agudo" 
    }
   }
  },
@@ -6135,7 +5010,7 @@
   "key" : "1E18",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con acento circunflejo debajo" 
+     "spanish": "mayúscula E con acento circunflejo debajo" 
    }
   }
  },
@@ -6151,7 +5026,7 @@
   "key" : "1E1A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con tilde debajo" 
+     "spanish": "mayúscula E con tilde debajo" 
    }
   }
  },
@@ -6167,7 +5042,7 @@
   "key" : "1E1C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula with cedilla and breve" 
+     "spanish": "mayúscula E with cedilla and breve" 
    }
   }
  },
@@ -6183,7 +5058,7 @@
   "key" : "1E1E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "F mayúscula con punto arriba" 
+     "spanish": "mayúscula F con punto arriba" 
    }
   }
  },
@@ -6199,7 +5074,7 @@
   "key" : "1E20",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula con macrón" 
+     "spanish": "mayúscula G con macrón" 
    }
   }
  },
@@ -6215,7 +5090,7 @@
   "key" : "1E22",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con punto arriba" 
+     "spanish": "mayúscula H con punto arriba" 
    }
   }
  },
@@ -6231,7 +5106,7 @@
   "key" : "1E24",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con punto debajo" 
+     "spanish": "mayúscula H con punto debajo" 
    }
   }
  },
@@ -6247,7 +5122,7 @@
   "key" : "1E26",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con diéresis" 
+     "spanish": "mayúscula H con diéresis" 
    }
   }
  },
@@ -6263,7 +5138,7 @@
   "key" : "1E28",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con cedilla" 
+     "spanish": "mayúscula H con cedilla" 
    }
   }
  },
@@ -6279,7 +5154,7 @@
   "key" : "1E2A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula con breve debajo" 
+     "spanish": "mayúscula H con breve debajo" 
    }
   }
  },
@@ -6295,7 +5170,7 @@
   "key" : "1E2C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con tilde debajo" 
+     "spanish": "mayúscula I con tilde debajo" 
    }
   }
  },
@@ -6311,7 +5186,7 @@
   "key" : "1E2E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con diéresis y agudo" 
+     "spanish": "mayúscula I con diéresis y agudo" 
    }
   }
  },
@@ -6327,7 +5202,7 @@
   "key" : "1E30",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula con agudo" 
+     "spanish": "mayúscula K con agudo" 
    }
   }
  },
@@ -6343,7 +5218,7 @@
   "key" : "1E32",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula con punto debajo" 
+     "spanish": "mayúscula K con punto debajo" 
    }
   }
  },
@@ -6359,7 +5234,7 @@
   "key" : "1E34",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula con línea debajo" 
+     "spanish": "mayúscula K con línea debajo" 
    }
   }
  },
@@ -6375,7 +5250,7 @@
   "key" : "1E36",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con punto debajo" 
+     "spanish": "mayúscula L con punto debajo" 
    }
   }
  },
@@ -6391,7 +5266,7 @@
   "key" : "1E38",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con punto debajo y macrón" 
+     "spanish": "mayúscula L con punto debajo y macrón" 
    }
   }
  },
@@ -6407,7 +5282,7 @@
   "key" : "1E3A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con línea debajo" 
+     "spanish": "mayúscula L con línea debajo" 
    }
   }
  },
@@ -6423,7 +5298,7 @@
   "key" : "1E3C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula con acento circunflejo debajo" 
+     "spanish": "mayúscula L con acento circunflejo debajo" 
    }
   }
  },
@@ -6439,7 +5314,7 @@
   "key" : "1E3E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula con agudo" 
+     "spanish": "mayúscula M con agudo" 
    }
   }
  },
@@ -6455,7 +5330,7 @@
   "key" : "1E40",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula con punto arriba" 
+     "spanish": "mayúscula M con punto arriba" 
    }
   }
  },
@@ -6471,7 +5346,7 @@
   "key" : "1E42",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula con punto debajo" 
+     "spanish": "mayúscula M con punto debajo" 
    }
   }
  },
@@ -6487,7 +5362,7 @@
   "key" : "1E44",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula con punto arriba" 
+     "spanish": "mayúscula N con punto arriba" 
    }
   }
  },
@@ -6503,7 +5378,7 @@
   "key" : "1E46",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula con punto debajo" 
+     "spanish": "mayúscula N con punto debajo" 
    }
   }
  },
@@ -6519,7 +5394,7 @@
   "key" : "1E48",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula con línea debajo" 
+     "spanish": "mayúscula N con línea debajo" 
    }
   }
  },
@@ -6535,7 +5410,7 @@
   "key" : "1E4A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula con acento circunflejo debajo" 
+     "spanish": "mayúscula N con acento circunflejo debajo" 
    }
   }
  },
@@ -6551,7 +5426,7 @@
   "key" : "1E4C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con tilde y acute" 
+     "spanish": "mayúscula O con tilde y acute" 
    }
   }
  },
@@ -6567,7 +5442,7 @@
   "key" : "1E4E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con tilde y diéresis" 
+     "spanish": "mayúscula O con tilde y diéresis" 
    }
   }
  },
@@ -6583,7 +5458,7 @@
   "key" : "1E50",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con macrón y grave" 
+     "spanish": "mayúscula O con macrón y grave" 
    }
   }
  },
@@ -6599,7 +5474,7 @@
   "key" : "1E52",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con macrón y agudo" 
+     "spanish": "mayúscula O con macrón y agudo" 
    }
   }
  },
@@ -6615,7 +5490,7 @@
   "key" : "1E54",
   "mappings": {
     "mathspeak" : {
-     "spanish": "P mayúscula con agudo" 
+     "spanish": "mayúscula P con agudo" 
    }
   }
  },
@@ -6631,7 +5506,7 @@
   "key" : "1E56",
   "mappings": {
     "mathspeak" : {
-     "spanish": "P mayúscula con punto arriba" 
+     "spanish": "mayúscula P con punto arriba" 
    }
   }
  },
@@ -6647,7 +5522,7 @@
   "key" : "1E58",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con punto arriba" 
+     "spanish": "mayúscula R con punto arriba" 
    }
   }
  },
@@ -6663,7 +5538,7 @@
   "key" : "1E5A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con punto debajo" 
+     "spanish": "mayúscula R con punto debajo" 
    }
   }
  },
@@ -6679,7 +5554,7 @@
   "key" : "1E5C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con punto debajo y macrón" 
+     "spanish": "mayúscula R con punto debajo y macrón" 
    }
   }
  },
@@ -6695,7 +5570,7 @@
   "key" : "1E5E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula con línea debajo" 
+     "spanish": "mayúscula R con línea debajo" 
    }
   }
  },
@@ -6711,7 +5586,7 @@
   "key" : "1E60",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con punto arriba" 
+     "spanish": "mayúscula S con punto arriba" 
    }
   }
  },
@@ -6727,7 +5602,7 @@
   "key" : "1E62",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con punto debajo" 
+     "spanish": "mayúscula S con punto debajo" 
    }
   }
  },
@@ -6743,7 +5618,7 @@
   "key" : "1E64",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con agudo y punto arriba" 
+     "spanish": "mayúscula S con agudo y punto arriba" 
    }
   }
  },
@@ -6759,7 +5634,7 @@
   "key" : "1E66",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con carón y punto arriba" 
+     "spanish": "mayúscula S con carón y punto arriba" 
    }
   }
  },
@@ -6775,7 +5650,7 @@
   "key" : "1E68",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula con punto debajo y punto arriba" 
+     "spanish": "mayúscula S con punto debajo y punto arriba" 
    }
   }
  },
@@ -6791,7 +5666,7 @@
   "key" : "1E6A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con punto arriba" 
+     "spanish": "mayúscula T con punto arriba" 
    }
   }
  },
@@ -6807,7 +5682,7 @@
   "key" : "1E6C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con punto debajo" 
+     "spanish": "mayúscula T con punto debajo" 
    }
   }
  },
@@ -6823,7 +5698,7 @@
   "key" : "1E6E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con línea debajo" 
+     "spanish": "mayúscula T con línea debajo" 
    }
   }
  },
@@ -6839,7 +5714,7 @@
   "key" : "1E70",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula con acento circunflejo debajo" 
+     "spanish": "mayúscula T con acento circunflejo debajo" 
    }
   }
  },
@@ -6855,7 +5730,7 @@
   "key" : "1E72",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con diéresis debajo" 
+     "spanish": "mayúscula U con diéresis debajo" 
    }
   }
  },
@@ -6871,7 +5746,7 @@
   "key" : "1E74",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con tilde debajo" 
+     "spanish": "mayúscula U con tilde debajo" 
    }
   }
  },
@@ -6887,7 +5762,7 @@
   "key" : "1E76",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con acento circunflejo debajo" 
+     "spanish": "mayúscula U con acento circunflejo debajo" 
    }
   }
  },
@@ -6903,7 +5778,7 @@
   "key" : "1E78",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con tilde y agudo" 
+     "spanish": "mayúscula U con tilde y agudo" 
    }
   }
  },
@@ -6919,7 +5794,7 @@
   "key" : "1E7A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con macrón y diéresis" 
+     "spanish": "mayúscula U con macrón y diéresis" 
    }
   }
  },
@@ -6935,7 +5810,7 @@
   "key" : "1E7C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "V mayúscula con tilde" 
+     "spanish": "mayúscula V con tilde" 
    }
   }
  },
@@ -6951,7 +5826,7 @@
   "key" : "1E7E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "V mayúscula con punto debajo" 
+     "spanish": "mayúscula V con punto debajo" 
    }
   }
  },
@@ -6967,7 +5842,7 @@
   "key" : "1E80",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula con grave" 
+     "spanish": "mayúscula W con grave" 
    }
   }
  },
@@ -6983,7 +5858,7 @@
   "key" : "1E82",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula con agudo" 
+     "spanish": "mayúscula W con agudo" 
    }
   }
  },
@@ -6999,7 +5874,7 @@
   "key" : "1E84",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula con diéresis" 
+     "spanish": "mayúscula W con diéresis" 
    }
   }
  },
@@ -7015,7 +5890,7 @@
   "key" : "1E86",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula con punto arriba" 
+     "spanish": "mayúscula W con punto arriba" 
    }
   }
  },
@@ -7031,7 +5906,7 @@
   "key" : "1E88",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula con punto debajo" 
+     "spanish": "mayúscula W con punto debajo" 
    }
   }
  },
@@ -7047,7 +5922,7 @@
   "key" : "1E8A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "X mayúscula con punto arriba" 
+     "spanish": "mayúscula X con punto arriba" 
    }
   }
  },
@@ -7063,7 +5938,7 @@
   "key" : "1E8C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "X mayúscula con diéresis" 
+     "spanish": "mayúscula X con diéresis" 
    }
   }
  },
@@ -7079,7 +5954,7 @@
   "key" : "1E8E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula con punto arriba" 
+     "spanish": "mayúscula Y con punto arriba" 
    }
   }
  },
@@ -7095,7 +5970,7 @@
   "key" : "1E90",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula con acento circunflejo" 
+     "spanish": "mayúscula Z con acento circunflejo" 
    }
   }
  },
@@ -7111,7 +5986,7 @@
   "key" : "1E92",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula con punto debajo" 
+     "spanish": "mayúscula Z con punto debajo" 
    }
   }
  },
@@ -7127,7 +6002,7 @@
   "key" : "1E94",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula with line below" 
+     "spanish": "mayúscula Z with line below" 
    }
   }
  },
@@ -7191,7 +6066,7 @@
   "key" : "1EA0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con punto debajo" 
+     "spanish": "mayúscula A con punto debajo" 
    }
   }
  },
@@ -7207,7 +6082,7 @@
   "key" : "1EA2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con gancho arriba" 
+     "spanish": "mayúscula A con gancho arriba" 
    }
   }
  },
@@ -7223,7 +6098,7 @@
   "key" : "1EA4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con acento circunflejo y agudo" 
+     "spanish": "mayúscula A con acento circunflejo y agudo" 
    }
   }
  },
@@ -7239,7 +6114,7 @@
   "key" : "1EA6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con acento circunflejo y grave" 
+     "spanish": "mayúscula A con acento circunflejo y grave" 
    }
   }
  },
@@ -7255,7 +6130,7 @@
   "key" : "1EA8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con acento circunflejo y gancho arriba" 
+     "spanish": "mayúscula A con acento circunflejo y gancho arriba" 
    }
   }
  },
@@ -7271,7 +6146,7 @@
   "key" : "1EAA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con acento circunflejo y tilde" 
+     "spanish": "mayúscula A con acento circunflejo y tilde" 
    }
   }
  },
@@ -7287,7 +6162,7 @@
   "key" : "1EAC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con acento circunflejo y punto debajo" 
+     "spanish": "mayúscula A con acento circunflejo y punto debajo" 
    }
   }
  },
@@ -7303,7 +6178,7 @@
   "key" : "1EAE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con breve y agudo" 
+     "spanish": "mayúscula A con breve y agudo" 
    }
   }
  },
@@ -7319,7 +6194,7 @@
   "key" : "1EB0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con breve y grave" 
+     "spanish": "mayúscula A con breve y grave" 
    }
   }
  },
@@ -7335,7 +6210,7 @@
   "key" : "1EB2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con breve y gancho arriba" 
+     "spanish": "mayúscula A con breve y gancho arriba" 
    }
   }
  },
@@ -7351,7 +6226,7 @@
   "key" : "1EB4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con breve y tilde" 
+     "spanish": "mayúscula A con breve y tilde" 
    }
   }
  },
@@ -7367,7 +6242,7 @@
   "key" : "1EB6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula con breve y punto debajo" 
+     "spanish": "mayúscula A con breve y punto debajo" 
    }
   }
  },
@@ -7383,7 +6258,7 @@
   "key" : "1EB8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con punto debajo" 
+     "spanish": "mayúscula E con punto debajo" 
    }
   }
  },
@@ -7399,7 +6274,7 @@
   "key" : "1EBA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con gancho arriba" 
+     "spanish": "mayúscula E con gancho arriba" 
    }
   }
  },
@@ -7415,7 +6290,7 @@
   "key" : "1EBC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con tilde" 
+     "spanish": "mayúscula E con tilde" 
    }
   }
  },
@@ -7431,7 +6306,7 @@
   "key" : "1EBE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con acento circunflejo y agudo" 
+     "spanish": "mayúscula E con acento circunflejo y agudo" 
    }
   }
  },
@@ -7447,7 +6322,7 @@
   "key" : "1EC0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con acento circunflejo y grave" 
+     "spanish": "mayúscula E con acento circunflejo y grave" 
    }
   }
  },
@@ -7463,7 +6338,7 @@
   "key" : "1EC2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con acento circunflejo y gancho arriba" 
+     "spanish": "mayúscula E con acento circunflejo y gancho arriba" 
    }
   }
  },
@@ -7479,7 +6354,7 @@
   "key" : "1EC4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con acento circunflejo y tilde" 
+     "spanish": "mayúscula E con acento circunflejo y tilde" 
    }
   }
  },
@@ -7495,7 +6370,7 @@
   "key" : "1EC6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula con acento circunflejo y punto debajo" 
+     "spanish": "mayúscula E con acento circunflejo y punto debajo" 
    }
   }
  },
@@ -7511,7 +6386,7 @@
   "key" : "1EC8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con gancho arriba" 
+     "spanish": "mayúscula I con gancho arriba" 
    }
   }
  },
@@ -7527,7 +6402,7 @@
   "key" : "1ECA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula con punto debajo" 
+     "spanish": "mayúscula I con punto debajo" 
    }
   }
  },
@@ -7543,7 +6418,7 @@
   "key" : "1ECC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con punto debajo" 
+     "spanish": "mayúscula O con punto debajo" 
    }
   }
  },
@@ -7559,7 +6434,7 @@
   "key" : "1ECE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con gancho arriba" 
+     "spanish": "mayúscula O con gancho arriba" 
    }
   }
  },
@@ -7575,7 +6450,7 @@
   "key" : "1ED0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con acento circunflejo y agudo" 
+     "spanish": "mayúscula O con acento circunflejo y agudo" 
    }
   }
  },
@@ -7591,7 +6466,7 @@
   "key" : "1ED2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con acento circunflejo y grave" 
+     "spanish": "mayúscula O con acento circunflejo y grave" 
    }
   }
  },
@@ -7607,7 +6482,7 @@
   "key" : "1ED4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con acento circunflejo y gancho arriba" 
+     "spanish": "mayúscula O con acento circunflejo y gancho arriba" 
    }
   }
  },
@@ -7623,7 +6498,7 @@
   "key" : "1ED6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con acento circunflejo y tilde" 
+     "spanish": "mayúscula O con acento circunflejo y tilde" 
    }
   }
  },
@@ -7639,7 +6514,7 @@
   "key" : "1ED8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con acento circunflejo y punto debajo" 
+     "spanish": "mayúscula O con acento circunflejo y punto debajo" 
    }
   }
  },
@@ -7655,7 +6530,7 @@
   "key" : "1EDA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula with horn and acute" 
+     "spanish": "mayúscula O with horn and acute" 
    }
   }
  },
@@ -7671,7 +6546,7 @@
   "key" : "1EDC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula with horn and grave" 
+     "spanish": "mayúscula O with horn and grave" 
    }
   }
  },
@@ -7687,7 +6562,7 @@
   "key" : "1EDE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula with horn and hook above" 
+     "spanish": "mayúscula O with horn and hook above" 
    }
   }
  },
@@ -7703,7 +6578,7 @@
   "key" : "1EE0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula with horn and tilde" 
+     "spanish": "mayúscula O with horn and tilde" 
    }
   }
  },
@@ -7719,7 +6594,7 @@
   "key" : "1EE2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con cuerno y punto debajo" 
+     "spanish": "mayúscula O con cuerno y punto debajo" 
    }
   }
  },
@@ -7735,7 +6610,7 @@
   "key" : "1EE4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con punto debajo" 
+     "spanish": "mayúscula U con punto debajo" 
    }
   }
  },
@@ -7751,7 +6626,7 @@
   "key" : "1EE6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con gancho arriba" 
+     "spanish": "mayúscula U con gancho arriba" 
    }
   }
  },
@@ -7767,7 +6642,7 @@
   "key" : "1EE8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con cuerno y agudo" 
+     "spanish": "mayúscula U con cuerno y agudo" 
    }
   }
  },
@@ -7783,7 +6658,7 @@
   "key" : "1EEA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con cuerno y grave" 
+     "spanish": "mayúscula U con cuerno y grave" 
    }
   }
  },
@@ -7799,7 +6674,7 @@
   "key" : "1EEC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con cuerno y gancho arriba" 
+     "spanish": "mayúscula U con cuerno y gancho arriba" 
    }
   }
  },
@@ -7815,7 +6690,7 @@
   "key" : "1EEE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con cuerno y tilde" 
+     "spanish": "mayúscula U con cuerno y tilde" 
    }
   }
  },
@@ -7831,7 +6706,7 @@
   "key" : "1EF0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula con cuerno y punto debajo" 
+     "spanish": "mayúscula U con cuerno y punto debajo" 
    }
   }
  },
@@ -7847,7 +6722,7 @@
   "key" : "1EF2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula con grave" 
+     "spanish": "mayúscula Y con grave" 
    }
   }
  },
@@ -7863,7 +6738,7 @@
   "key" : "1EF4",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula con punto debajo" 
+     "spanish": "mayúscula Y con punto debajo" 
    }
   }
  },
@@ -7879,7 +6754,7 @@
   "key" : "1EF6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula con gancho arriba" 
+     "spanish": "mayúscula Y con gancho arriba" 
    }
   }
  },
@@ -7895,7 +6770,7 @@
   "key" : "1EF8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Y mayúscula con tilde" 
+     "spanish": "mayúscula Y con tilde" 
    }
   }
  },
@@ -7975,7 +6850,7 @@
   "key" : "1F08",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alpha mayúscula con psili" 
+     "spanish": "mayúscula Alfa con psili" 
    }
   }
  },
@@ -7983,7 +6858,7 @@
   "key" : "1F09",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia" 
+     "spanish": "mayúscula Alfa con dasia" 
    }
   }
  },
@@ -7991,7 +6866,7 @@
   "key" : "1F0A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y varia" 
+     "spanish": "mayúscula Alfa con psili y varia" 
    }
   }
  },
@@ -7999,7 +6874,7 @@
   "key" : "1F0B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y varia" 
+     "spanish": "mayúscula Alfa con dasia y varia" 
    }
   }
  },
@@ -8007,7 +6882,7 @@
   "key" : "1F0C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y oxia" 
+     "spanish": "mayúscula Alfa con psili y oxia" 
    }
   }
  },
@@ -8015,7 +6890,7 @@
   "key" : "1F0D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Alfa con dasia y oxia" 
    }
   }
  },
@@ -8023,7 +6898,7 @@
   "key" : "1F0E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y perispomeni" 
+     "spanish": "mayúscula Alfa con psili y perispomeni" 
    }
   }
  },
@@ -8031,7 +6906,7 @@
   "key" : "1F0F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y perispomeni" 
+     "spanish": "mayúscula Alfa con dasia y perispomeni" 
    }
   }
  },
@@ -8087,7 +6962,7 @@
   "key" : "1F18",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con psili" 
+     "spanish": "mayúscula Épsilon con psili" 
    }
   }
  },
@@ -8095,7 +6970,7 @@
   "key" : "1F19",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con dasia" 
+     "spanish": "mayúscula Épsilon con dasia" 
    }
   }
  },
@@ -8103,7 +6978,7 @@
   "key" : "1F1A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con psili y varia" 
+     "spanish": "mayúscula Épsilon con psili y varia" 
    }
   }
  },
@@ -8111,7 +6986,7 @@
   "key" : "1F1B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con dasia y varia" 
+     "spanish": "mayúscula Épsilon con dasia y varia" 
    }
   }
  },
@@ -8119,7 +6994,7 @@
   "key" : "1F1C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con psili y oxia" 
+     "spanish": "mayúscula Épsilon con psili y oxia" 
    }
   }
  },
@@ -8127,7 +7002,7 @@
   "key" : "1F1D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Épsilon con dasia y oxia" 
    }
   }
  },
@@ -8199,7 +7074,7 @@
   "key" : "1F28",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili" 
+     "spanish": "mayúscula Eta con psili" 
    }
   }
  },
@@ -8207,7 +7082,7 @@
   "key" : "1F29",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia" 
+     "spanish": "mayúscula Eta con dasia" 
    }
   }
  },
@@ -8215,7 +7090,7 @@
   "key" : "1F2A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y varia" 
+     "spanish": "mayúscula Eta con psili y varia" 
    }
   }
  },
@@ -8223,7 +7098,7 @@
   "key" : "1F2B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y varia" 
+     "spanish": "mayúscula Eta con dasia y varia" 
    }
   }
  },
@@ -8231,7 +7106,7 @@
   "key" : "1F2C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y oxia" 
+     "spanish": "mayúscula Eta con psili y oxia" 
    }
   }
  },
@@ -8239,7 +7114,7 @@
   "key" : "1F2D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Eta con dasia y oxia" 
    }
   }
  },
@@ -8247,7 +7122,7 @@
   "key" : "1F2E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y perispomeni" 
+     "spanish": "mayúscula Eta con psili y perispomeni" 
    }
   }
  },
@@ -8255,7 +7130,7 @@
   "key" : "1F2F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y perispomeni" 
+     "spanish": "mayúscula Eta con dasia y perispomeni" 
    }
   }
  },
@@ -8327,7 +7202,7 @@
   "key" : "1F38",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con psili" 
+     "spanish": "mayúscula Iota con psili" 
    }
   }
  },
@@ -8335,7 +7210,7 @@
   "key" : "1F39",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con dasia" 
+     "spanish": "mayúscula Iota con dasia" 
    }
   }
  },
@@ -8343,7 +7218,7 @@
   "key" : "1F3A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con psili y varia" 
+     "spanish": "mayúscula Iota con psili y varia" 
    }
   }
  },
@@ -8351,7 +7226,7 @@
   "key" : "1F3B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con dasia y varia" 
+     "spanish": "mayúscula Iota con dasia y varia" 
    }
   }
  },
@@ -8359,7 +7234,7 @@
   "key" : "1F3C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con psili y oxia" 
+     "spanish": "mayúscula Iota con psili y oxia" 
    }
   }
  },
@@ -8367,7 +7242,7 @@
   "key" : "1F3D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Iota con dasia y oxia" 
    }
   }
  },
@@ -8375,7 +7250,7 @@
   "key" : "1F3E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con psili y perispomeni" 
+     "spanish": "mayúscula Iota con psili y perispomeni" 
    }
   }
  },
@@ -8383,7 +7258,7 @@
   "key" : "1F3F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con dasia y perispomeni" 
+     "spanish": "mayúscula Iota con dasia y perispomeni" 
    }
   }
  },
@@ -8439,7 +7314,7 @@
   "key" : "1F48",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con psili" 
+     "spanish": "mayúscula Ómicron con psili" 
    }
   }
  },
@@ -8447,7 +7322,7 @@
   "key" : "1F49",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con dasia" 
+     "spanish": "mayúscula Ómicron con dasia" 
    }
   }
  },
@@ -8455,7 +7330,7 @@
   "key" : "1F4A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con psili y varia" 
+     "spanish": "mayúscula Ómicron con psili y varia" 
    }
   }
  },
@@ -8463,7 +7338,7 @@
   "key" : "1F4B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con dasia y varia" 
+     "spanish": "mayúscula Ómicron con dasia y varia" 
    }
   }
  },
@@ -8471,7 +7346,7 @@
   "key" : "1F4C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con psili y oxia" 
+     "spanish": "mayúscula Ómicron con psili y oxia" 
    }
   }
  },
@@ -8479,7 +7354,7 @@
   "key" : "1F4D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Ómicron con dasia y oxia" 
    }
   }
  },
@@ -8551,7 +7426,7 @@
   "key" : "1F59",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con dasia" 
+     "spanish": "mayúscula Ípsilon con dasia" 
    }
   }
  },
@@ -8559,7 +7434,7 @@
   "key" : "1F5B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con dasia y varia" 
+     "spanish": "mayúscula Ípsilon con dasia y varia" 
    }
   }
  },
@@ -8567,7 +7442,7 @@
   "key" : "1F5D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Ípsilon con dasia y oxia" 
    }
   }
  },
@@ -8575,7 +7450,7 @@
   "key" : "1F5F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con dasia y perispomeni" 
+     "spanish": "mayúscula Ípsilon con dasia y perispomeni" 
    }
   }
  },
@@ -8647,7 +7522,7 @@
   "key" : "1F68",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili" 
+     "spanish": "mayúscula Omega con psili" 
    }
   }
  },
@@ -8655,7 +7530,7 @@
   "key" : "1F69",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia" 
+     "spanish": "mayúscula Omega con dasia" 
    }
   }
  },
@@ -8663,7 +7538,7 @@
   "key" : "1F6A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y varia" 
+     "spanish": "mayúscula Omega con psili y varia" 
    }
   }
  },
@@ -8671,7 +7546,7 @@
   "key" : "1F6B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y varia" 
+     "spanish": "mayúscula Omega con dasia y varia" 
    }
   }
  },
@@ -8679,7 +7554,7 @@
   "key" : "1F6C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y oxia" 
+     "spanish": "mayúscula Omega con psili y oxia" 
    }
   }
  },
@@ -8687,7 +7562,7 @@
   "key" : "1F6D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y oxia" 
+     "spanish": "mayúscula Omega con dasia y oxia" 
    }
   }
  },
@@ -8695,7 +7570,7 @@
   "key" : "1F6E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y perispomeni" 
+     "spanish": "mayúscula Omega con psili y perispomeni" 
    }
   }
  },
@@ -8703,7 +7578,7 @@
   "key" : "1F6F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y perispomeni" 
+     "spanish": "mayúscula Omega con dasia y perispomeni" 
    }
   }
  },
@@ -8887,7 +7762,7 @@
   "key" : "1F88",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con psili y prosgegrammeni" 
    }
   }
  },
@@ -8895,7 +7770,7 @@
   "key" : "1F89",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con dasia y prosgegrammeni" 
    }
   }
  },
@@ -8903,7 +7778,7 @@
   "key" : "1F8A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y varia y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con psili y varia y prosgegrammeni" 
    }
   }
  },
@@ -8911,7 +7786,7 @@
   "key" : "1F8B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y varia y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con dasia y varia y prosgegrammeni" 
    }
   }
  },
@@ -8919,7 +7794,7 @@
   "key" : "1F8C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y oxia y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con psili y oxia y prosgegrammeni" 
    }
   }
  },
@@ -8927,7 +7802,7 @@
   "key" : "1F8D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y oxia y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con dasia y oxia y prosgegrammeni" 
    }
   }
  },
@@ -8935,7 +7810,7 @@
   "key" : "1F8E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con psili y perispomeni y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con psili y perispomeni y prosgegrammeni" 
    }
   }
  },
@@ -8943,7 +7818,7 @@
   "key" : "1F8F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con dasia y perispomeni y prosgegrammeni" 
+     "spanish": "mayúscula Alfa con dasia y perispomeni y prosgegrammeni" 
    }
   }
  },
@@ -9015,7 +7890,7 @@
   "key" : "1F98",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y prosgegrammeni" 
+     "spanish": "mayúscula Eta con psili y prosgegrammeni" 
    }
   }
  },
@@ -9023,7 +7898,7 @@
   "key" : "1F99",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y prosgegrammeni" 
+     "spanish": "mayúscula Eta con dasia y prosgegrammeni" 
    }
   }
  },
@@ -9031,7 +7906,7 @@
   "key" : "1F9A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y varia y prosgegrammeni" 
+     "spanish": "mayúscula Eta con psili y varia y prosgegrammeni" 
    }
   }
  },
@@ -9039,7 +7914,7 @@
   "key" : "1F9B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y varia y prosgegrammeni" 
+     "spanish": "mayúscula Eta con dasia y varia y prosgegrammeni" 
    }
   }
  },
@@ -9047,7 +7922,7 @@
   "key" : "1F9C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y oxia y prosgegrammeni" 
+     "spanish": "mayúscula Eta con psili y oxia y prosgegrammeni" 
    }
   }
  },
@@ -9055,7 +7930,7 @@
   "key" : "1F9D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y oxia y prosgegrammeni" 
+     "spanish": "mayúscula Eta con dasia y oxia y prosgegrammeni" 
    }
   }
  },
@@ -9063,7 +7938,7 @@
   "key" : "1F9E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con psili y perispomeni y prosgegrammeni" 
+     "spanish": "mayúscula Eta con psili y perispomeni y prosgegrammeni" 
    }
   }
  },
@@ -9071,7 +7946,7 @@
   "key" : "1F9F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con dasia y perispomeni y prosgegrammeni" 
+     "spanish": "mayúscula Eta con dasia y perispomeni y prosgegrammeni" 
    }
   }
  },
@@ -9143,7 +8018,7 @@
   "key" : "1FA8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y prosgegrammeni" 
+     "spanish": "mayúscula Omega con psili y prosgegrammeni" 
    }
   }
  },
@@ -9151,7 +8026,7 @@
   "key" : "1FA9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y prosgegrammeni" 
+     "spanish": "mayúscula Omega con dasia y prosgegrammeni" 
    }
   }
  },
@@ -9159,7 +8034,7 @@
   "key" : "1FAA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y varia y prosgegrammeni" 
+     "spanish": "mayúscula Omega con psili y varia y prosgegrammeni" 
    }
   }
  },
@@ -9167,7 +8042,7 @@
   "key" : "1FAB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y varia y prosgegrammeni" 
+     "spanish": "mayúscula Omega con dasia y varia y prosgegrammeni" 
    }
   }
  },
@@ -9175,7 +8050,7 @@
   "key" : "1FAC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y oxia y prosgegrammeni" 
+     "spanish": "mayúscula Omega con psili y oxia y prosgegrammeni" 
    }
   }
  },
@@ -9183,7 +8058,7 @@
   "key" : "1FAD",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y oxia y prosgegrammeni" 
+     "spanish": "mayúscula Omega con dasia y oxia y prosgegrammeni" 
    }
   }
  },
@@ -9191,7 +8066,7 @@
   "key" : "1FAE",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con psili y perispomeni y prosgegrammeni" 
+     "spanish": "mayúscula Omega con psili y perispomeni y prosgegrammeni" 
    }
   }
  },
@@ -9199,7 +8074,7 @@
   "key" : "1FAF",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con dasia y perispomeni y prosgegrammeni" 
+     "spanish": "mayúscula Omega con dasia y perispomeni y prosgegrammeni" 
    }
   }
  },
@@ -9263,7 +8138,7 @@
   "key" : "1FB8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con vrachy" 
+     "spanish": "mayúscula Alfa con vrachy" 
    }
   }
  },
@@ -9271,7 +8146,7 @@
   "key" : "1FB9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con macrón" 
+     "spanish": "mayúscula Alfa con macrón" 
    }
   }
  },
@@ -9279,7 +8154,7 @@
   "key" : "1FBA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con varia" 
+     "spanish": "mayúscula Alfa con varia" 
    }
   }
  },
@@ -9287,7 +8162,7 @@
   "key" : "1FBB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con oxia" 
+     "spanish": "mayúscula Alfa con oxia" 
    }
   }
  },
@@ -9295,7 +8170,7 @@
   "key" : "1FBC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "alfa mayúscula con prosgegrammeni" 
+     "spanish": "mayúscula Alfa con prosgegrammeni" 
    }
   }
  },
@@ -9383,7 +8258,7 @@
   "key" : "1FC8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con varia" 
+     "spanish": "mayúscula Épsilon con varia" 
    }
   }
  },
@@ -9391,7 +8266,7 @@
   "key" : "1FC9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "épsilon mayúscula con oxia" 
+     "spanish": "mayúscula Épsilon con oxia" 
    }
   }
  },
@@ -9399,7 +8274,7 @@
   "key" : "1FCA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con varia" 
+     "spanish": "mayúscula Eta con varia" 
    }
   }
  },
@@ -9407,7 +8282,7 @@
   "key" : "1FCB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con oxia" 
+     "spanish": "mayúscula Eta con oxia" 
    }
   }
  },
@@ -9415,7 +8290,7 @@
   "key" : "1FCC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "eta mayúscula con prosgegrammeni" 
+     "spanish": "mayúscula Eta con prosgegrammeni" 
    }
   }
  },
@@ -9495,7 +8370,7 @@
   "key" : "1FD8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con vrachy" 
+     "spanish": "mayúscula Iota con vrachy" 
    }
   }
  },
@@ -9503,7 +8378,7 @@
   "key" : "1FD9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con macron" 
+     "spanish": "mayúscula Iota con macron" 
    }
   }
  },
@@ -9511,7 +8386,7 @@
   "key" : "1FDA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con varia" 
+     "spanish": "mayúscula Iota con varia" 
    }
   }
  },
@@ -9519,7 +8394,7 @@
   "key" : "1FDB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "iota mayúscula con oxia" 
+     "spanish": "mayúscula Iota con oxia" 
    }
   }
  },
@@ -9615,7 +8490,7 @@
   "key" : "1FE8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con vrachy" 
+     "spanish": "mayúscula Ípsilon con vrachy" 
    }
   }
  },
@@ -9623,7 +8498,7 @@
   "key" : "1FE9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con macron" 
+     "spanish": "mayúscula Ípsilon con macron" 
    }
   }
  },
@@ -9631,7 +8506,7 @@
   "key" : "1FEA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con varia" 
+     "spanish": "mayúscula Ípsilon con varia" 
    }
   }
  },
@@ -9639,7 +8514,7 @@
   "key" : "1FEB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula con oxia" 
+     "spanish": "mayúscula Ípsilon con oxia" 
    }
   }
  },
@@ -9647,7 +8522,7 @@
   "key" : "1FEC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "rho mayúscula con dasia" 
+     "spanish": "mayúscula Rho con dasia" 
    }
   }
  },
@@ -9719,7 +8594,7 @@
   "key" : "1FF8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con varia" 
+     "spanish": "mayúscula Ómicron con varia" 
    }
   }
  },
@@ -9727,7 +8602,7 @@
   "key" : "1FF9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ómicron mayúscula con oxia" 
+     "spanish": "mayúscula Ómicron con oxia" 
    }
   }
  },
@@ -9735,7 +8610,7 @@
   "key" : "1FFA",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con varia" 
+     "spanish": "mayúscula Omega con varia" 
    }
   }
  },
@@ -9743,7 +8618,7 @@
   "key" : "1FFB",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con oxia" 
+     "spanish": "mayúscula Omega con oxia" 
    }
   }
  },
@@ -9751,7 +8626,7 @@
   "key" : "1FFC",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula con prosgegrammeni"
+     "spanish": "mayúscula Omega con prosgegrammeni"
    }
   }
  },
@@ -10361,7 +9236,7 @@
   "key" : "2102",
   "mappings": {
     "mathspeak" : {
-     "spanish": "c mayúscula negrita"
+     "spanish": "mayúscula C negrita"
    }
   }
  },
@@ -10417,7 +9292,7 @@
   "key" : "210B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula cursiva"
+     "spanish": "mayúscula H cursiva"
    }
   }
  },
@@ -10425,7 +9300,7 @@
   "key" : "210C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula partida"
+     "spanish": "mayúscula H partida"
    }
   }
  },
@@ -10433,7 +9308,7 @@
   "key" : "210D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "H mayúscula negrita"
+     "spanish": "mayúscula H negrita"
    }
   }
  },
@@ -10457,7 +9332,7 @@
   "key" : "2110",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula cursiva"
+     "spanish": "mayúscula I cursiva"
    }
   }
  },
@@ -10465,7 +9340,7 @@
   "key" : "2111",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula partida"
+     "spanish": "mayúscula I partida"
    }
   }
  },
@@ -10473,7 +9348,7 @@
   "key" : "2112",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula cursiva"
+     "spanish": "mayúscula L cursiva"
    }
   }
  },
@@ -10489,7 +9364,7 @@
   "key" : "2115",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula negrita"
+     "spanish": "mayúscula N negrita"
    }
   }
  },
@@ -10521,7 +9396,7 @@
   "key" : "2119",
   "mappings": {
     "mathspeak" : {
-     "spanish": "P mayúscula negrita"
+     "spanish": "mayúscula P negrita"
    }
   }
  },
@@ -10529,7 +9404,7 @@
   "key" : "211A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Q mayúscula negrita"
+     "spanish": "mayúscula Q negrita"
    }
   }
  },
@@ -10537,7 +9412,7 @@
   "key" : "211B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula cursiva"
+     "spanish": "mayúscula R cursiva"
    }
   }
  },
@@ -10545,7 +9420,7 @@
   "key" : "211C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "R mayúscula partida"
+     "spanish": "mayúscula R partida"
    }
   }
  },
@@ -10554,7 +9429,7 @@
   "mappings": {
     "mathspeak" : {
       "spanish": "negrita mayúscula R",
-      "spanishMP": "R mayúscula negrita"
+      "spanishMP": "mayúscula R negrita"
    }
   }
  },
@@ -10578,7 +9453,7 @@
   "key" : "2124",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula negrita"
+     "spanish": "mayúscula Z negrita"
    }
   }
  },
@@ -10610,7 +9485,7 @@
   "key" : "2128",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula partida"
+     "spanish": "mayúscula Z partida"
    }
   }
  },
@@ -10642,7 +9517,7 @@
   "key" : "212C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula cursiva"
+     "spanish": "mayúscula B cursiva"
    }
   }
  },
@@ -10650,7 +9525,7 @@
   "key" : "212D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula negrita"
+     "spanish": "mayúscula C negrita"
    }
   }
  },
@@ -10666,7 +9541,7 @@
   "key" : "2130",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula cursiva"
+     "spanish": "mayúscula E cursiva"
    }
   }
  },
@@ -10674,7 +9549,7 @@
   "key" : "2131",
   "mappings": {
     "mathspeak" : {
-     "spanish": "F mayúscula cursiva"
+     "spanish": "mayúscula F cursiva"
    }
   }
  },
@@ -10682,7 +9557,7 @@
   "key" : "2132",
   "mappings": {
     "mathspeak" : {
-     "spanish": "F mayúscula invertida"
+     "spanish": "mayúscula F invertida"
    }
   }
  },
@@ -10690,7 +9565,7 @@
   "key" : "2133",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula cursiva"
+     "spanish": "mayúscula M cursiva"
    }
   }
  },
@@ -21199,7 +20074,7 @@
   "key" : "ED16",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula"
+     "spanish": "mayúscula D"
    }
   }
  },
@@ -21655,7 +20530,7 @@
   "key" : "F000",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula partida"
+     "spanish": "mayúscula A partida"
    }
   }
  },
@@ -21663,7 +20538,7 @@
   "key" : "F001",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula partida"
+     "spanish": "mayúscula B partida"
    }
   }
  },
@@ -21671,7 +20546,7 @@
   "key" : "F003",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula partida"
+     "spanish": "mayúscula D partida"
    }
   }
  },
@@ -21679,7 +20554,7 @@
   "key" : "F004",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula partida"
+     "spanish": "mayúscula E partida"
    }
   }
  },
@@ -21687,7 +20562,7 @@
   "key" : "F005",
   "mappings": {
     "mathspeak" : {
-     "spanish": "F mayúscula partida"
+     "spanish": "mayúscula F partida"
    }
   }
  },
@@ -21695,7 +20570,7 @@
   "key" : "F006",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula partida"
+     "spanish": "mayúscula G partida"
    }
   }
  },
@@ -21703,7 +20578,7 @@
   "key" : "F009",
   "mappings": {
     "mathspeak" : {
-     "spanish": "J mayúscula partida"
+     "spanish": "mayúscula J partida"
    }
   }
  },
@@ -21711,7 +20586,7 @@
   "key" : "F00A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula partida"
+     "spanish": "mayúscula K partida"
    }
   }
  },
@@ -21719,7 +20594,7 @@
   "key" : "F00B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula partida"
+     "spanish": "mayúscula L partida"
    }
   }
  },
@@ -21727,7 +20602,7 @@
   "key" : "F00C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula partida"
+     "spanish": "mayúscula M partida"
    }
   }
  },
@@ -21735,7 +20610,7 @@
   "key" : "F00D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "n  mayúscula partida"
+     "spanish": "n mayúscula partida"
    }
   }
  },
@@ -21743,7 +20618,7 @@
   "key" : "F00E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula partida"
+     "spanish": "mayúscula O partida"
    }
   }
  },
@@ -21751,7 +20626,7 @@
   "key" : "F00F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "P mayúscula partida"
+     "spanish": "mayúscula P partida"
    }
   }
  },
@@ -21759,7 +20634,7 @@
   "key" : "F010",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Q mayúscula partida"
+     "spanish": "mayúscula Q partida"
    }
   }
  },
@@ -21767,7 +20642,7 @@
   "key" : "F012",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula partida"
+     "spanish": "mayúscula S partida"
    }
   }
  },
@@ -21775,7 +20650,7 @@
   "key" : "F013",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula partida"
+     "spanish": "mayúscula T partida"
    }
   }
  },
@@ -21783,7 +20658,7 @@
   "key" : "F014",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula partida"
+     "spanish": "mayúscula U partida"
    }
   }
  },
@@ -21791,7 +20666,7 @@
   "key" : "F015",
   "mappings": {
     "mathspeak" : {
-     "spanish": "V mayúscula partida"
+     "spanish": "mayúscula V partida"
    }
   }
  },
@@ -21799,7 +20674,7 @@
   "key" : "F016",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula partida"
+     "spanish": "mayúscula W partida"
    }
   }
  },
@@ -21807,7 +20682,7 @@
   "key" : "F017",
   "mappings": {
     "mathspeak" : {
-     "spanish": "X mayúscula partida"
+     "spanish": "mayúscula X partida"
    }
   }
  },
@@ -21815,7 +20690,8 @@
   "key" : "F018",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye mayúscula partida"
+      "spanish": "mayúscula Y partida",
+     "spanishMP": "ye mayúscula partida"
    }
   }
  },
@@ -22015,7 +20891,8 @@
   "key" : "F032",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye partida"
+      "spanish": "Y partida",
+      "spanishMP": "ye partida"
    }
   }
  },
@@ -22031,7 +20908,7 @@
   "key" : "F080",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula negrita"
+     "spanish": "mayúscula A negrita"
    }
   }
  },
@@ -22039,7 +20916,7 @@
   "key" : "F081",
   "mappings": {
     "mathspeak" : {
-     "spanish": "B mayúscula negrita"
+     "spanish": "mayúscula B negrita"
    }
   }
  },
@@ -22047,7 +20924,7 @@
   "key" : "F083",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula negrita"
+     "spanish": "mayúscula D negrita"
    }
   }
  },
@@ -22055,7 +20932,7 @@
   "key" : "F084",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula negrita"
+     "spanish": "mayúscula E negrita"
    }
   }
  },
@@ -22063,7 +20940,7 @@
   "key" : "F085",
   "mappings": {
     "mathspeak" : {
-     "spanish": "F mayúscula negrita"
+     "spanish": "mayúscula F negrita"
    }
   }
  },
@@ -22071,7 +20948,7 @@
   "key" : "F086",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula negrita"
+     "spanish": "mayúscula G negrita"
    }
   }
  },
@@ -22079,7 +20956,7 @@
   "key" : "F088",
   "mappings": {
     "mathspeak" : {
-     "spanish": "I mayúscula negrita"
+     "spanish": "mayúscula I negrita"
    }
   }
  },
@@ -22087,7 +20964,7 @@
   "key" : "F089",
   "mappings": {
     "mathspeak" : {
-     "spanish": "J mayúscula negrita"
+     "spanish": "mayúscula J negrita"
    }
   }
  },
@@ -22095,7 +20972,7 @@
   "key" : "F08A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula negrita"
+     "spanish": "mayúscula K negrita"
    }
   }
  },
@@ -22103,7 +20980,7 @@
   "key" : "F08B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "L mayúscula negrita"
+     "spanish": "mayúscula L negrita"
    }
   }
  },
@@ -22111,7 +20988,7 @@
   "key" : "F08C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula negrita"
+     "spanish": "mayúscula M negrita"
    }
   }
  },
@@ -22119,7 +20996,7 @@
   "key" : "F08E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula negrita"
+     "spanish": "mayúscula O negrita"
    }
   }
  },
@@ -22127,7 +21004,7 @@
   "key" : "F092",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula negrita"
+     "spanish": "mayúscula S negrita"
    }
   }
  },
@@ -22135,7 +21012,7 @@
   "key" : "F093",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula negrita"
+     "spanish": "mayúscula T negrita"
    }
   }
  },
@@ -22143,7 +21020,7 @@
   "key" : "F094",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula negrita"
+     "spanish": "mayúscula U negrita"
    }
   }
  },
@@ -22151,7 +21028,7 @@
   "key" : "F095",
   "mappings": {
     "mathspeak" : {
-     "spanish": "V mayúscula negrita"
+     "spanish": "mayúscula V negrita"
    }
   }
  },
@@ -22159,7 +21036,7 @@
   "key" : "F096",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula negrita"
+     "spanish": "mayúscula W negrita"
    }
   }
  },
@@ -22167,7 +21044,7 @@
   "key" : "F097",
   "mappings": {
     "mathspeak" : {
-     "spanish": "X mayúscula negrita"
+     "spanish": "mayúscula X negrita"
    }
   }
  },
@@ -22175,7 +21052,8 @@
   "key" : "F098",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye mayúscula negrita"
+      "spanish": "mayúscula Y negrita",
+      "spanishMP": "ye mayúscula negrita"
    }
   }
  },
@@ -22375,7 +21253,8 @@
   "key" : "F0B2",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye negrita"
+      "spanish": "y negrita",
+     "spanishMP": "ye negrita"
    }
   }
  },
@@ -22487,7 +21366,7 @@
   "key" : "F100",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula cursiva"
+     "spanish": "mayúscula A cursiva"
    }
   }
  },
@@ -22495,7 +21374,7 @@
   "key" : "F102",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula cursiva"
+     "spanish": "mayúscula C cursiva"
    }
   }
  },
@@ -22503,7 +21382,7 @@
   "key" : "F103",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula cursiva"
+     "spanish": "mayúscula D cursiva"
    }
   }
  },
@@ -22511,7 +21390,7 @@
   "key" : "F106",
   "mappings": {
     "mathspeak" : {
-     "spanish": "G mayúscula cursiva"
+     "spanish": "mayúscula G cursiva"
    }
   }
  },
@@ -22519,7 +21398,7 @@
   "key" : "F109",
   "mappings": {
     "mathspeak" : {
-     "spanish": "J mayúscula cursiva"
+     "spanish": "mayúscula J cursiva"
    }
   }
  },
@@ -22527,7 +21406,7 @@
   "key" : "F10A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula cursiva"
+     "spanish": "mayúscula K cursiva"
    }
   }
  },
@@ -22535,7 +21414,7 @@
   "key" : "F10D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "N mayúscula cursiva"
+     "spanish": "mayúscula N cursiva"
    }
   }
  },
@@ -22543,7 +21422,7 @@
   "key" : "F10E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula cursiva"
+     "spanish": "mayúscula O cursiva"
    }
   }
  },
@@ -22551,7 +21430,7 @@
   "key" : "F10F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "P mayúscula cursiva"
+     "spanish": "mayúscula P cursiva"
    }
   }
  },
@@ -22559,7 +21438,7 @@
   "key" : "F110",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Q mayúscula cursiva"
+     "spanish": "mayúscula Q cursiva"
    }
   }
  },
@@ -22567,7 +21446,7 @@
   "key" : "F112",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula cursiva"
+     "spanish": "mayúscula S cursiva"
    }
   }
  },
@@ -22575,7 +21454,7 @@
   "key" : "F113",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula cursiva"
+     "spanish": "mayúscula T cursiva"
    }
   }
  },
@@ -22583,7 +21462,7 @@
   "key" : "F114",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula cursiva"
+     "spanish": "mayúscula U cursiva"
    }
   }
  },
@@ -22591,7 +21470,7 @@
   "key" : "F115",
   "mappings": {
     "mathspeak" : {
-     "spanish": "V mayúscula cursiva"
+     "spanish": "mayúscula V cursiva"
    }
   }
  },
@@ -22599,7 +21478,7 @@
   "key" : "F116",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula cursiva"
+     "spanish": "mayúscula W cursiva"
    }
   }
  },
@@ -22607,7 +21486,7 @@
   "key" : "F117",
   "mappings": {
     "mathspeak" : {
-     "spanish": "X mayúscula cursiva"
+     "spanish": "mayúscula X cursiva"
    }
   }
  },
@@ -22615,7 +21494,7 @@
   "key" : "F118",
   "mappings": {
     "mathspeak" : {
-     "spanish": "yE mayúscula cursiva"
+     "spanish": "ymayúscula E cursiva"
    }
   }
  },
@@ -22623,7 +21502,7 @@
   "key" : "F119",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula cursiva"
+     "spanish": "mayúscula Z cursiva"
    }
   }
  },
@@ -22791,7 +21670,8 @@
   "key" : "F132",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ye cursiva"
+      "spanish": "y cursiva",
+      "spanishMP": "ye cursiva"
    }
   }
  },
@@ -22807,7 +21687,7 @@
   "key" : "F180",
   "mappings": {
     "mathspeak" : {
-     "spanish": "A mayúscula"
+     "spanish": "mayúscula A"
    }
   }
  },
@@ -22815,7 +21695,7 @@
   "key" : "F182",
   "mappings": {
     "mathspeak" : {
-     "spanish": "C mayúscula"
+     "spanish": "mayúscula C"
    }
   }
  },
@@ -22823,7 +21703,7 @@
   "key" : "F183",
   "mappings": {
     "mathspeak" : {
-     "spanish": "D mayúscula"
+     "spanish": "mayúscula D"
    }
   }
  },
@@ -22831,7 +21711,7 @@
   "key" : "F184",
   "mappings": {
     "mathspeak" : {
-     "spanish": "E mayúscula"
+     "spanish": "mayúscula E"
    }
   }
  },
@@ -22839,7 +21719,7 @@
   "key" : "F185",
   "mappings": {
     "mathspeak" : {
-     "spanish": "F mayúscula"
+     "spanish": "mayúscula F"
    }
   }
  },
@@ -22847,7 +21727,7 @@
   "key" : "F189",
   "mappings": {
     "mathspeak" : {
-     "spanish": "J mayúscula"
+     "spanish": "mayúscula J"
    }
   }
  },
@@ -22855,7 +21735,7 @@
   "key" : "F18A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "K mayúscula"
+     "spanish": "mayúscula K"
    }
   }
  },
@@ -22863,7 +21743,7 @@
   "key" : "F18C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "M mayúscula"
+     "spanish": "mayúscula M"
    }
   }
  },
@@ -22871,7 +21751,7 @@
   "key" : "F18E",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula"
+     "spanish": "mayúscula O"
    }
   }
  },
@@ -22879,7 +21759,7 @@
   "key" : "F18F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "P mayúscula"
+     "spanish": "mayúscula P"
    }
   }
  },
@@ -22887,7 +21767,7 @@
   "key" : "F190",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Q mayúscula"
+     "spanish": "mayúscula Q"
    }
   }
  },
@@ -22895,7 +21775,7 @@
   "key" : "F192",
   "mappings": {
     "mathspeak" : {
-     "spanish": "S mayúscula"
+     "spanish": "mayúscula S"
    }
   }
  },
@@ -22903,7 +21783,7 @@
   "key" : "F193",
   "mappings": {
     "mathspeak" : {
-     "spanish": "T mayúscula"
+     "spanish": "mayúscula T"
    }
   }
  },
@@ -22911,7 +21791,7 @@
   "key" : "F194",
   "mappings": {
     "mathspeak" : {
-     "spanish": "U mayúscula"
+     "spanish": "mayúscula U"
    }
   }
  },
@@ -22919,7 +21799,7 @@
   "key" : "F195",
   "mappings": {
     "mathspeak" : {
-     "spanish": "V mayúscula"
+     "spanish": "mayúscula V"
    }
   }
  },
@@ -22927,7 +21807,7 @@
   "key" : "F196",
   "mappings": {
     "mathspeak" : {
-     "spanish": "W mayúscula"
+     "spanish": "mayúscula W"
    }
   }
  },
@@ -22935,7 +21815,7 @@
   "key" : "F197",
   "mappings": {
     "mathspeak" : {
-     "spanish": "X mayúscula"
+     "spanish": "mayúscula X"
    }
   }
  },
@@ -22943,7 +21823,7 @@
   "key" : "F199",
   "mappings": {
     "mathspeak" : {
-     "spanish": "Z mayúscula"
+     "spanish": "mayúscula Z"
    }
   }
  },
@@ -22951,7 +21831,7 @@
   "key" : "F19A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ae mayúscula"
+     "spanish": "mayúscula AE"
    }
   }
  },
@@ -22959,7 +21839,7 @@
   "key" : "F19B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "s aguda mayúscula"
+     "spanish": "mayúscula S aguda"
    }
   }
  },
@@ -22967,7 +21847,7 @@
   "key" : "F19C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "O mayúscula con barra"
+     "spanish": "mayúscula O con barra"
    }
   }
  },
@@ -22975,7 +21855,7 @@
   "key" : "F201",
   "mappings": {
     "mathspeak" : {
-     "spanish": "delta mayúscula negrita"
+     "spanish": "mayúscula Delta negrita"
    }
   }
  },
@@ -22983,7 +21863,7 @@
   "key" : "F202",
   "mappings": {
     "mathspeak" : {
-     "spanish": "xi mayúscula negrita"
+     "spanish": "mayúscula Xi negrita"
    }
   }
  },
@@ -22991,7 +21871,7 @@
   "key" : "F203",
   "mappings": {
     "mathspeak" : {
-     "spanish": "lambda mayúscula negrita"
+     "spanish": "mayúscula Lambda negrita"
    }
   }
  },
@@ -22999,7 +21879,7 @@
   "key" : "F204",
   "mappings": {
     "mathspeak" : {
-     "spanish": "pi mayúscula negrita"
+     "spanish": "mayúscula Pi negrita"
    }
   }
  },
@@ -23007,7 +21887,7 @@
   "key" : "F205",
   "mappings": {
     "mathspeak" : {
-     "spanish": "sigma mayúscula negrita"
+     "spanish": "mayúscula Sigma negrita"
    }
   }
  },
@@ -23015,7 +21895,7 @@
   "key" : "F206",
   "mappings": {
     "mathspeak" : {
-     "spanish": "theta mayúscula negrita"
+     "spanish": "mayúscula Theta negrita"
    }
   }
  },
@@ -23023,7 +21903,7 @@
   "key" : "F207",
   "mappings": {
     "mathspeak" : {
-     "spanish": "gamma mayúscula negrita"
+     "spanish": "mayúscula Gamma negrita"
    }
   }
  },
@@ -23031,7 +21911,7 @@
   "key" : "F208",
   "mappings": {
     "mathspeak" : {
-     "spanish": "omega mayúscula negrita"
+     "spanish": "mayúscula Omega negrita"
    }
   }
  },
@@ -23039,7 +21919,7 @@
   "key" : "F209",
   "mappings": {
     "mathspeak" : {
-     "spanish": "ípsilon mayúscula negrita"
+     "spanish": "mayúscula Ípsilon negrita"
    }
   }
  },
