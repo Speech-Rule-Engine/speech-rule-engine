@@ -3922,7 +3922,8 @@
   "key" : "03D1",
   "mappings": {
     "mathspeak" : {
-     "spanish": "variante de theta"
+      "spanish": "theta",
+      "spanishMP": "variante de theta"
    }
   }
  },
@@ -3946,7 +3947,8 @@
   "key" : "03D6",
   "mappings": {
     "mathspeak" : {
-     "spanish": "variante de pi"
+      "spanish": "pi",
+      "spanishMP": "variante de pi"
    }
   }
  },
@@ -4034,7 +4036,8 @@
   "key" : "03F0",
   "mappings": {
     "mathspeak" : {
-     "spanish": "variante de kappa"
+      "spanish": "kappa",
+      "spanishMP": "variante de kappa"
    }
   }
  },
@@ -4042,7 +4045,8 @@
   "key" : "03F1",
   "mappings": {
     "mathspeak" : {
-     "spanish": "variante de rho"
+      "spanish": "rho",
+      "spanishMP": "variante de rho"
    }
   }
  },
@@ -4058,7 +4062,8 @@
   "key" : "03F5",
   "mappings": {
     "mathspeak" : {
-     "spanish": "variante de épsilon"
+      "spanish": "épsilon",
+      "spanishMP": "variante de épsilon"
    }
   }
  },
@@ -8034,7 +8039,7 @@
   "key" : "1F10",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con psili" 
+     "spanish": "épsilon con psili" 
    }
   }
  },
@@ -8042,7 +8047,7 @@
   "key" : "1F11",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con dasia" 
+     "spanish": "épsilon con dasia" 
    }
   }
  },
@@ -8050,7 +8055,7 @@
   "key" : "1F12",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con psili y varia" 
+     "spanish": "épsilon con psili y varia" 
    }
   }
  },
@@ -8058,7 +8063,7 @@
   "key" : "1F13",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con dasia y varia" 
+     "spanish": "épsilon con dasia y varia" 
    }
   }
  },
@@ -8066,7 +8071,7 @@
   "key" : "1F14",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con psili y oxia" 
+     "spanish": "épsilon con psili y oxia" 
    }
   }
  },
@@ -8074,7 +8079,7 @@
   "key" : "1F15",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con dasia y oxia" 
+     "spanish": "épsilon con dasia y oxia" 
    }
   }
  },
@@ -8082,7 +8087,7 @@
   "key" : "1F18",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con psili" 
+     "spanish": "épsilon mayúscula con psili" 
    }
   }
  },
@@ -8090,7 +8095,7 @@
   "key" : "1F19",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con dasia" 
+     "spanish": "épsilon mayúscula con dasia" 
    }
   }
  },
@@ -8098,7 +8103,7 @@
   "key" : "1F1A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con psili y varia" 
+     "spanish": "épsilon mayúscula con psili y varia" 
    }
   }
  },
@@ -8106,7 +8111,7 @@
   "key" : "1F1B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con dasia y varia" 
+     "spanish": "épsilon mayúscula con dasia y varia" 
    }
   }
  },
@@ -8114,7 +8119,7 @@
   "key" : "1F1C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con psili y oxia" 
+     "spanish": "épsilon mayúscula con psili y oxia" 
    }
   }
  },
@@ -8122,7 +8127,7 @@
   "key" : "1F1D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con dasia y oxia" 
+     "spanish": "épsilon mayúscula con dasia y oxia" 
    }
   }
  },
@@ -8722,7 +8727,7 @@
   "key" : "1F72",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con varia" 
+     "spanish": "épsilon con varia" 
    }
   }
  },
@@ -8730,7 +8735,7 @@
   "key" : "1F73",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon con oxia" 
+     "spanish": "épsilon con oxia" 
    }
   }
  },
@@ -9378,7 +9383,7 @@
   "key" : "1FC8",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con varia" 
+     "spanish": "épsilon mayúscula con varia" 
    }
   }
  },
@@ -9386,7 +9391,7 @@
   "key" : "1FC9",
   "mappings": {
     "mathspeak" : {
-     "spanish": "epsilon mayúscula con oxia" 
+     "spanish": "épsilon mayúscula con oxia" 
    }
   }
  },
