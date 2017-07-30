@@ -209,6 +209,18 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
+  defineRule(
+      'german-font', 'mathspeak.default',
+      '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font="fraktur"');
+
+  defineRule(
+      'german-font', 'mathspeak.default',
+      '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font="bold-fraktur"');
+
   // Number rules
   defineRule(
       'number', 'mathspeak.default', '[n] text()', 'self::number');
