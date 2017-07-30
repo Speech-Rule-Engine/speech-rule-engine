@@ -9236,7 +9236,7 @@
   "key" : "2102",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula C negrita"
+     "spanish": "negrita de pizarra mayúscula C"
    }
   }
  },
@@ -9284,7 +9284,7 @@
   "key" : "210A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "g cursiva"
+     "spanish": "script g"
    }
   }
  },
@@ -9292,7 +9292,7 @@
   "key" : "210B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula H cursiva"
+     "spanish": "script mayúscula H"
    }
   }
  },
@@ -9300,7 +9300,7 @@
   "key" : "210C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula H partida"
+     "spanish": "Fraktur mayúscula H"
    }
   }
  },
@@ -9308,7 +9308,7 @@
   "key" : "210D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula H negrita"
+     "spanish": "negrita de pizarra mayúscula H"
    }
   }
  },
@@ -9332,7 +9332,7 @@
   "key" : "2110",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula I cursiva"
+     "spanish": "script mayúscula I"
    }
   }
  },
@@ -9340,7 +9340,7 @@
   "key" : "2111",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula I partida"
+     "spanish": "Fraktur mayúscula I"
    }
   }
  },
@@ -9348,7 +9348,7 @@
   "key" : "2112",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula L cursiva"
+     "spanish": "script mayúscula L"
    }
   }
  },
@@ -9356,7 +9356,7 @@
   "key" : "2113",
   "mappings": {
     "mathspeak" : {
-     "spanish": "l cursiva"
+     "spanish": "script l"
    }
   }
  },
@@ -9364,7 +9364,7 @@
   "key" : "2115",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula N negrita"
+     "spanish": "negrita de pizarra mayúscula N"
    }
   }
  },
@@ -9396,7 +9396,7 @@
   "key" : "2119",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula P negrita"
+     "spanish": "negrita de pizarra mayúscula P"
    }
   }
  },
@@ -9404,7 +9404,7 @@
   "key" : "211A",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula Q negrita"
+     "spanish": "negrita de pizarra mayúscula Q"
    }
   }
  },
@@ -9412,7 +9412,7 @@
   "key" : "211B",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula R cursiva"
+     "spanish": "script mayúscula R"
    }
   }
  },
@@ -9420,7 +9420,7 @@
   "key" : "211C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula R partida"
+     "spanish": "Fraktur mayúscula R"
    }
   }
  },
@@ -9428,8 +9428,8 @@
   "key" : "211D",
   "mappings": {
     "mathspeak" : {
-      "spanish": "negrita mayúscula R",
-      "spanishMP": "mayúscula R negrita"
+      "spanish": "negrita de pizarra mayúscula R",
+      "spanishMP": "R mayúscula negrita"
    }
   }
  },
@@ -9453,7 +9453,7 @@
   "key" : "2124",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula Z negrita"
+     "spanish": "negrita de pizarra mayúscula Z"
    }
   }
  },
@@ -9485,7 +9485,7 @@
   "key" : "2128",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula Z partida"
+     "spanish": "Fraktur mayúscula Z"
    }
   }
  },
@@ -9517,7 +9517,7 @@
   "key" : "212C",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula B cursiva"
+     "spanish": "script mayúscula B"
    }
   }
  },
@@ -9525,7 +9525,7 @@
   "key" : "212D",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula C negrita"
+     "spanish": "Fraktur mayúscula C"
    }
   }
  },
@@ -9533,7 +9533,7 @@
   "key" : "212F",
   "mappings": {
     "mathspeak" : {
-     "spanish": "e cursiva"
+     "spanish": "script e"
    }
   }
  },
@@ -9541,7 +9541,7 @@
   "key" : "2130",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula E cursiva"
+     "spanish": "script mayúscula E"
    }
   }
  },
@@ -9549,7 +9549,7 @@
   "key" : "2131",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula F cursiva"
+     "spanish": "script mayúscula F"
    }
   }
  },
@@ -9565,7 +9565,7 @@
   "key" : "2133",
   "mappings": {
     "mathspeak" : {
-     "spanish": "mayúscula M cursiva"
+     "spanish": "script mayúscula M"
    }
   }
  },
@@ -9573,7 +9573,7 @@
   "key" : "2134",
   "mappings": {
     "mathspeak" : {
-     "spanish": "o cursiva"
+     "spanish": "script o"
    }
   }
  },
