@@ -34,7 +34,6 @@ goog.require('sre.SystemExternal');
  */
 sre.MathspeakSpanish = function() {
   sre.MathspeakSpanish.base(this, 'constructor');
-  sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.MathspeakSpanish, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakSpanish);
@@ -58,8 +57,6 @@ sre.MathspeakSpanish.mathStore = sre.MathspeakSpanish.getInstance();
 // TODO: This is a general function which has to be adapted with respect to
 //       accented characters existing in individual languages.
 sre.MathspeakSpanish.evaluateDefault = function(node) {
-  console.log('Spanish evaluator');
-  console.log(node.toString());
   var text = node.textContent;
   console.log(text);
   var result = [];
@@ -914,23 +911,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'self::superscript', 'children/*[2][@role="prime"]',
       'name(children/*[1])="subscript"', 'not(following-sibling::*)',
       '@embellished');
-
-  defineRule(
-      'prime-subscript-simple', 'mathspeak.spanish',
-      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
-      '[n] children/*[1]/children/*[2]',
-      'self::superscript', 'children/*[2][@role="prime"]',
-      'name(children/*[1])="subscript"',
-      'name(children/*[1]/children/*[1])="identifier"',
-      // Second child is a number but not mixed or other.
-      'name(children/*[1]/children/*[2])="number"',
-      'children/*[1]/children/*[2][@role!="mixed"]',
-      'children/*[1]/children/*[2][@role!="othernumber"]'
-  );
-  defineSpecialisedRule(
-      'prime-subscript-simple', 'mathspeak.spanish', 'mathspeak.brief');
-  defineSpecialisedRule(
-      'prime-subscript-simple', 'mathspeak.spanish', 'mathspeak.sbrief');
 
   // Modifiers
   defineRule(

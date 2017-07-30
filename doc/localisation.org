@@ -18,12 +18,12 @@ Make this a grammar postprocessor
 
 Same grammar postprocessor as above
 
-** TODO Parentheses
+** Parentheses
 
-Change everywhere (  cierra ) to left and right: izquierdo, derecho
+Changed everywhere (  cierra ) to left and right: izquierdo, derecho
 
 ** Begin and End of font styles? 
-
+   
 *** There are no tests. Do they work?
 
 * Fractions
