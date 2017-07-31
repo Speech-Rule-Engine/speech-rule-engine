@@ -58,7 +58,6 @@ sre.MathspeakSpanish.mathStore = sre.MathspeakSpanish.getInstance();
 //       accented characters existing in individual languages.
 sre.MathspeakSpanish.evaluateDefault = function(node) {
   var text = node.textContent;
-  console.log(text);
   var result = [];
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var inc = new RegExp('^[' + sre.MathspeakSpanish.SPANISH_REGEXP + ']+');
@@ -73,7 +72,6 @@ sre.MathspeakSpanish.evaluateDefault = function(node) {
       var type = sre.Semantic.Type.UNKNOWN;
       role = sre.Semantic.Role.TEXT;
     }
-    console.log(word[0]);
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
                                  word[0] + '</' + type + '>', 'text/xml');
     result.push(doc.documentElement);
