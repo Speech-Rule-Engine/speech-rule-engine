@@ -67,7 +67,6 @@ sre.Locale.es.MS_FUNC = {
 };
 
 
-// TODO: Include this in the rules? Maybe do with ordinals.
 //  That is female ending!
 sre.Locale.es.MS_ROOT_INDEX = {
   '2': 'cuadrada',

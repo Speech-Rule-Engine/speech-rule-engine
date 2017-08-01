@@ -22,6 +22,7 @@
 goog.provide('sre.AbstractRuleTest');
 
 goog.require('sre.AbstractExamples');
+goog.require('sre.DynamicCstr');
 
 
 
@@ -35,17 +36,17 @@ sre.AbstractRuleTest = function() {
   /**
    * @type {string}
    */
-  this.style = 'default';
+  this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
 
   /**
    * @type {string}
    */
-  this.domain = 'default';
+  this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
 
   /**
    * @type {string}
    */
-  this.locale = 'en';
+  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
   /**
    * @type {boolean}

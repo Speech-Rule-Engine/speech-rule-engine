@@ -34,6 +34,8 @@ goog.require('sre.SystemExternal');
  */
 sre.MathspeakSpanish = function() {
   sre.MathspeakSpanish.base(this, 'constructor');
+
+  this.locale = 'es';
 };
 goog.inherits(sre.MathspeakSpanish, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakSpanish);

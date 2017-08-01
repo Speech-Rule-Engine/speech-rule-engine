@@ -278,9 +278,9 @@ sre.DynamicCstr.Order;
  * @type {!sre.DynamicCstr.Order}
  */
 sre.DynamicCstr.DEFAULT_ORDER = [
+  sre.DynamicCstr.Axis.LOCALE,
   sre.DynamicCstr.Axis.DOMAIN,
   sre.DynamicCstr.Axis.STYLE,
-  sre.DynamicCstr.Axis.LOCALE,
   sre.DynamicCstr.Axis.TOPIC,
   sre.DynamicCstr.Axis.MODALITY
 ];
@@ -290,6 +290,22 @@ sre.DynamicCstr.DEFAULT_ORDER = [
  * @type {string}
  */
 sre.DynamicCstr.DEFAULT_VALUE = 'default';
+
+
+/**
+ * @type {Object.<sre.DynamicCstr.Axis, string>}
+ */
+sre.DynamicCstr.DEFAULT_VALUES = {};
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE] = 'en';
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] =
+  sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
+  sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
+  sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
+  sre.DynamicCstr.DEFAULT_VALUE;
+
 
 
 
