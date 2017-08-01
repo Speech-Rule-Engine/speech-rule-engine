@@ -152,6 +152,9 @@
       },
       "mathspeak": {
         "default": "slash"
+      },
+      "emacspeak": {
+        "default": "slash"
       }
     },
     "key": "002F"

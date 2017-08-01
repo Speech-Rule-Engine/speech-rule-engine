@@ -84,7 +84,9 @@ Notes from the Diagram project
 ** prefix for multi-index structures
 ** cache problems with context
 ** spaces (> normal)
+*** Special punctuation element?
 ** labels
+*** Content element of rows or lines.
 
 * Testing ideas
 
@@ -95,3 +97,76 @@ Notes from the Diagram project
     multiline equation 1st line a 2nd line b
 *** Correct MathSpeak rendering
     StartLayout 1st line a 2nd line b EndLayout
+
+** Labels 
+
+*** with or without parenthesis.
+
+*** Label announcement with end label announcement.
+
+*** Equation number ...
+
+*** Line number ...
+
+* Reworking Multiline Tables:
+
+** This is from the current TODO statement.
+// TODO (sorge) This heuristic is very primitive. We could start reworking
+// multilines by
+// 
+// 1. combining all cells, semantically rewriting the entire line
+// and see if there are any similarities.
+// 
+// 2. Alternatively, we could look for
+// similarities in columns (e.g., single relation symbols, like equalities or
+// inequalities in the same column could indicate an equation array).
+
+*** We have decided on going with 2.
+
+Reasons: The author might have had an intention of structuring a particular equation system.
+So we want to exploit the existing structure as much as possible.
+More points see in the semantics document.
+
+* Table walkers:
+
+** Extension of syntax walker
+
+** Allow walking in the table with shift-up and shift-down
+
+*** Need to remember that we are in an eligible table, that is no multiline.
+
+**** Matrix 
+
+***** (not rowvector?)
+
+**** Table 
+
+***** (what about single rows prettending to be a table?) 
+
+***** We might want to rewrite those into spaced out elements. Enrichment problems?
+
+*** Both give you the next row plus columns
+
+  // Here's roughly the algorithm is it is currently implemented.
+  // 1. remember the current position in this level
+  // 2. get parent via previous level, pop level
+  // 3. get position of parent in current level
+  // 4. if position is 0 undo
+  // 5. else push singleton focus with parent-pos -/+1
+  // 6. push children
+  // 7. return singleton focus of child at position of old level
+  //
+* Speech Synthesis API:
+
+  synth = speechSynthesis;
+  ll = new SpeechSynthesisUtterance('hello');
+  ll.voice = synth.getVoices()[1];
+  synth.speak(ll);
+
+  ll.pitch = 2;
+  ll.rate = 3;
+
+  From IBM Watson Demo https://text-to-speech-demo.mybluemix.net/
+  
+  ll = new SpeechSynthesisUtterance('<speak>I have been assigned to handle your order status request.<express-as type="Apology"> I am sorry to inform you that the items you requested are back-ordered. We apologize for the inconvenience.</express-as><express-as type="Uncertainty"> We don\'t know when those items will become available. Maybe next week but we are not sure at this time.</express-as><express-as type="GoodNews">Because we want you to be a happy customer, management has decided to give you a 50% discount! </express-as></speak>');
+

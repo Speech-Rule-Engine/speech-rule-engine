@@ -68,8 +68,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.json = false;
   /** @type {!boolean} */
   commander.speech = false;
-  /** @type {!boolean} */
-  commander.ssml = false;
+  /** @type {!string} */
+  commander.markup = '';
   /** @type {!boolean} */
   commander.xml = false;
 
@@ -80,14 +80,14 @@ sre.Cli.prototype.commandLine = function() {
       option('').
       option('-d, --dom [name]', 'Domain or subject area [name].').
       option('-t, --style [name]', 'Speech style [name].').
-      option('-s, --semantics', 'Switch on semantics interpretation.').
+      option('-s, --semantics', 'Switch OFF semantics interpretation.').
       option('-e, --enumerate', 'Enumerates available domains and styles.').
       option('').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).').
       option('-j, --json', 'Generate JSON of semantic tree.').
       option('-m, --mathml', 'Generate enriched MathML.').
       option('-p, --speech', 'Generate speech output (default).').
-      option('-r, --ssml', 'Generate speech output with SSML tags.').
+      option('-k, --markup [name]', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
       option('').
       option('-v, --verbose', 'Verbose mode.').
@@ -96,20 +96,22 @@ sre.Cli.prototype.commandLine = function() {
   try {
     if (commander.enumerate) {
       system.setupEngine({'mode': sre.Engine.Mode.SYNC});
-      var output = 'Domain options: ' +
-          sre.Engine.getInstance().allDomains.sort().join(', ') +
-          '\nStyle options:  ' +
-          sre.Engine.getInstance().allStyles.sort().join(', ');
+      var values = sre.Engine.getInstance().getAxisValues();
+      var output = '';
+      for (var axis in values) {
+        output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
+            values[axis].slice().sort().join(', ') + '\n';
+      }
       console.log(output);
       sre.SystemExternal.process.exit(0);
     }
     system.setupEngine(
         {
-          'semantics': commander.semantics,
+          'semantics': !commander.semantics,
           'domain': commander.dom,
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,
-          'ssml': commander.ssml
+          'markup': commander.markup
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);
