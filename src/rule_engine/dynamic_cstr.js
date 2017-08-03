@@ -539,17 +539,10 @@ sre.DynamicCstr.create = function(var_args) {
  * @return {!sre.DynamicCstr} A default constraint of maximal order.
  */
 sre.DynamicCstr.defaultCstr = function() {
-  return sre.DynamicCstr.create.apply(null, sre.DynamicCstr.defaults_());
-};
-
-
-/**
- * @return {!Array.<!string>} List of default value of maximal order.
- * @private
- */
-sre.DynamicCstr.defaults_ = function() {
-  return Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
-      map(function() { return sre.DynamicCstr.DEFAULT_VALUE; });
+  return sre.DynamicCstr.create.apply(
+    null,
+    sre.DynamicCstr.DEFAULT_ORDER.map(
+      function(x) {return sre.DynamicCstr.DEFAULT_VALUES[x];}));
 };
 
 
