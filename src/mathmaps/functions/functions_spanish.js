@@ -1,9 +1,10 @@
-[{
+[{"locale": "es"},
+ {
   "key": "deg",
   "names": ["deg"],
   "mappings": {
     "mathspeak": {
-      "spanish": "grados"
+      "default": "grados"
     }
   }
 },
@@ -12,7 +13,7 @@
    "names": ["det"],
    "mappings": {
      "mathspeak": {
-       "spanish": "determinante"
+       "default": "determinante"
      }
    }
  },
@@ -21,7 +22,7 @@
    "names": ["dim"],
    "mappings": {
      "mathspeak": {
-       "spanish": "dimensión"
+       "default": "dimensión"
      }
    }
  },
@@ -30,7 +31,7 @@
    "names": ["hom"],
    "mappings": {
      "mathspeak": {
-       "spanish": "homomorfismo"
+       "default": "homomorfismo"
      }
    }
  },
@@ -39,7 +40,7 @@
    "names": ["Hom"],
    "mappings": {
      "mathspeak": {
-       "spanish": "homomorfismo"
+       "default": "homomorfismo"
      }
    }
  },
@@ -48,7 +49,7 @@
    "names": ["ker"],
    "mappings": {
      "mathspeak": {
-       "spanish": "kernel"
+       "default": "kernel"
      }
    }
  },
@@ -57,7 +58,7 @@
    "names": ["Tr"],
    "mappings": {
      "mathspeak": {
-       "spanish": "traza"
+       "default": "traza"
      }
    }
  },
@@ -66,7 +67,7 @@
    "names": ["tr"],
    "mappings": {
      "mathspeak": {
-       "spanish": "traza"
+       "default": "traza"
      }
    }
  },
@@ -75,7 +76,7 @@
    "names": ["log"],
    "mappings": {
      "mathspeak": {
-       "spanish": "logaritmo"
+       "default": "logaritmo"
      }
    }
  },
@@ -84,7 +85,7 @@
    "names": ["ln"],
    "mappings": {
      "mathspeak": {
-       "spanish": "logaritmo neperiano"
+       "default": "logaritmo neperiano"
      }
    }
  },
@@ -93,7 +94,7 @@
    "names": ["lg"],
    "mappings": {
      "mathspeak": {
-       "spanish": "logaritmo base 10"
+       "default": "logaritmo base 10"
      }
    }
  },
@@ -102,7 +103,7 @@
    "names": ["exp"],
    "mappings": {
      "mathspeak": {
-       "spanish": "exponente"
+       "default": "exponente"
      }
    }
  },
@@ -111,7 +112,7 @@
    "names": ["expt"],
    "mappings": {
      "mathspeak": {
-       "spanish": "exponente"
+       "default": "exponente"
      }
    }
  },
@@ -120,7 +121,7 @@
    "names": ["gcd"],
    "mappings": {
      "mathspeak": {
-       "spanish": "MCD"
+       "default": "MCD"
      }
    }
  },
@@ -129,7 +130,7 @@
    "names": ["lcm"],
    "mappings": {
      "mathspeak": {
-       "spanish": "mcm"
+       "default": "mcm"
      }
    }
  },
@@ -138,7 +139,7 @@
    "names": ["arg"],
    "mappings": {
      "mathspeak": {
-       "spanish": "argumento"
+       "default": "argumento"
      }
    }
  },
@@ -147,7 +148,7 @@
    "names": ["im"],
    "mappings": {
      "mathspeak": {
-       "spanish": "parte imaginaria"
+       "default": "parte imaginaria"
      }
    }
  },
@@ -156,7 +157,7 @@
    "names": ["re"],
    "mappings": {
      "mathspeak": {
-       "spanish": "residuo"
+       "default": "residuo"
      }
    }
  },
@@ -165,7 +166,7 @@
    "names": ["inf"],
    "mappings": {
      "mathspeak": {
-       "spanish": "extremo inferior"
+       "default": "extremo inferior"
      }
    }
  },
@@ -174,7 +175,7 @@
    "names": ["lim"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite"
+       "default": "límite"
      }
    }
  },
@@ -183,7 +184,7 @@
    "names": ["lim inf"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite inferior"
+       "default": "límite inferior"
      }
    }
  },
@@ -192,7 +193,7 @@
    "names": ["lim sup"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite superior"
+       "default": "límite superior"
      }
    }
  },
@@ -201,7 +202,7 @@
    "names": ["max"],
    "mappings": {
      "mathspeak": {
-       "spanish": "máximo"
+       "default": "máximo"
      }
    }
  },
@@ -210,7 +211,7 @@
    "names": ["min"],
    "mappings": {
      "mathspeak": {
-       "spanish": "mínimo"
+       "default": "mínimo"
      }
    }
  },
@@ -219,7 +220,7 @@
    "names": ["sup"],
    "mappings": {
      "mathspeak": {
-       "spanish": "superior"
+       "default": "superior"
      }
    }
  },
@@ -228,7 +229,7 @@
    "names": ["injlim"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite directo"
+       "default": "límite directo"
      }
    }
  },
@@ -237,7 +238,7 @@
    "names": ["inj lim"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite directo"
+       "default": "límite directo"
      }
    }
  },
@@ -246,7 +247,7 @@
    "names": ["projlim"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite inverso"
+       "default": "límite inverso"
      }
    }
  },
@@ -255,7 +256,7 @@
    "names": ["proj lim"],
    "mappings": {
      "mathspeak": {
-       "spanish": "límite inverso"
+       "default": "límite inverso"
      }
    }
  },
@@ -264,7 +265,7 @@
    "names": ["mod"],
    "mappings": {
      "mathspeak": {
-       "spanish": "módulo"
+       "default": "módulo"
      }
    }
  },
@@ -273,7 +274,7 @@
    "names": ["Pr"],
    "mappings": {
      "mathspeak": {
-       "spanish": "probabilidad"
+       "default": "probabilidad"
      }
    }
  },
@@ -282,7 +283,7 @@
    "names": ["cosh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "coseno hiperbólico"
+       "default": "coseno hiperbólico"
      }
    }
  },
@@ -291,7 +292,7 @@
    "names": ["coth"],
    "mappings": {
      "mathspeak": {
-       "spanish": "cotangente hiperbólica"
+       "default": "cotangente hiperbólica"
      }
    }
  },
@@ -300,7 +301,7 @@
    "names": ["csch"],
    "mappings": {
      "mathspeak": {
-       "spanish": "cosecante hiperbólica"
+       "default": "cosecante hiperbólica"
      }
    }
  },
@@ -309,7 +310,7 @@
    "names": ["sech"],
    "mappings": {
      "mathspeak": {
-       "spanish": "secante hiperbólica"
+       "default": "secante hiperbólica"
      }
    }
  },
@@ -318,7 +319,7 @@
    "names": ["sinh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "seno hiperbólico"
+       "default": "seno hiperbólico"
      }
    }
  },
@@ -327,7 +328,7 @@
    "names": ["tanh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "tangente hiperbólica"
+       "default": "tangente hiperbólica"
      }
    }
  },
@@ -336,7 +337,7 @@
    "names": ["arcosh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area coseno hiperbólico"
+       "default": "area coseno hiperbólico"
      }
    }
  },
@@ -345,7 +346,7 @@
    "names": ["arccosh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area coseno hiperbólico"
+       "default": "area coseno hiperbólico"
      }
    }
  },
@@ -354,7 +355,7 @@
    "names": ["arcoth"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area cotangente hiperbólica"
+       "default": "area cotangente hiperbólica"
      }
    }
  },
@@ -363,7 +364,7 @@
    "names": ["arccoth"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area cotangente hiperbólica"
+       "default": "area cotangente hiperbólica"
      }
    }
  },
@@ -372,7 +373,7 @@
    "names": ["arcsch"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area cosecante hiperbólica"
+       "default": "area cosecante hiperbólica"
      }
    }
  },
@@ -381,7 +382,7 @@
    "names": ["arccsch"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area cosecante hiperbólica"
+       "default": "area cosecante hiperbólica"
      }
    }
  },
@@ -390,7 +391,7 @@
    "names": ["arsech"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area secante hiperbólica"
+       "default": "area secante hiperbólica"
      }
    }
  },
@@ -399,7 +400,7 @@
    "names": ["arcsech"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area secante hiperbólica"
+       "default": "area secante hiperbólica"
      }
    }
  },
@@ -408,7 +409,7 @@
    "names": ["arsinh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area seno hiperbólico"
+       "default": "area seno hiperbólico"
      }
    }
  },
@@ -417,7 +418,7 @@
    "names": ["arcsinh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area seno hiperbólico"
+       "default": "area seno hiperbólico"
      }
    }
  },
@@ -426,7 +427,7 @@
    "names": ["artanh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area tangente hiperbólica"
+       "default": "area tangente hiperbólica"
      }
    }
  },
@@ -435,7 +436,7 @@
    "names": ["arctanh"],
    "mappings": {
      "mathspeak": {
-       "spanish": "area tangente hiperbólica"
+       "default": "area tangente hiperbólica"
      }
    }
  },
@@ -444,7 +445,7 @@
    "names": ["cos"],
    "mappings": {
      "mathspeak": {
-       "spanish": "coseno"
+       "default": "coseno"
      }
    }
  },
@@ -453,7 +454,7 @@
    "names": ["cosine"],
    "mappings": {
      "mathspeak": {
-       "spanish": "coseno"
+       "default": "coseno"
      }
    }
  },
@@ -462,7 +463,7 @@
    "names": ["cot"],
    "mappings": {
      "mathspeak": {
-       "spanish": "cotangente"
+       "default": "cotangente"
      }
    }
  },
@@ -471,7 +472,7 @@
    "names": ["csc"],
    "mappings": {
      "mathspeak": {
-       "spanish": "cosecante"
+       "default": "cosecante"
      }
    }
  },
@@ -480,7 +481,7 @@
    "names": ["sec"],
    "mappings": {
      "mathspeak": {
-       "spanish": "secant"
+       "default": "secant"
      }
    }
  },
@@ -489,7 +490,7 @@
    "names": ["sin"],
    "mappings": {
      "mathspeak": {
-       "spanish": "seno"
+       "default": "seno"
      }
    }
  },
@@ -498,7 +499,7 @@
    "names": ["sine"],
    "mappings": {
      "mathspeak": {
-       "spanish": "seno"
+       "default": "seno"
      }
    }
  },
@@ -507,7 +508,7 @@
    "names": ["tan"],
    "mappings": {
      "mathspeak": {
-       "spanish": "tangente"
+       "default": "tangente"
      }
    }
  },
@@ -516,7 +517,7 @@
    "names": ["arccos"],
    "mappings": {
      "mathspeak": {
-       "spanish": "arco coseno"
+       "default": "arco coseno"
      }
    }
  },
@@ -525,7 +526,7 @@
    "names": ["arccot"],
    "mappings": {
      "mathspeak": {
-       "spanish": "arco cotangente"
+       "default": "arco cotangente"
      }
    }
  },
@@ -534,7 +535,7 @@
    "names": ["arccsc"],
    "mappings": {
      "mathspeak": {
-       "spanish": "arco cosecante"
+       "default": "arco cosecante"
      }
    }
  },
@@ -543,7 +544,7 @@
    "names": ["arcsec"],
    "mappings": {
      "mathspeak": {
-       "spanish": "arco secante"
+       "default": "arco secante"
      }
    }
  },
@@ -552,7 +553,7 @@
    "names": ["arcsin"],
    "mappings": {
      "mathspeak": {
-       "spanish": "arco seno"
+       "default": "arco seno"
      }
    }
  },
@@ -561,7 +562,7 @@
    "names": ["arctan"],
    "mappings": {
      "mathspeak": {
-       "spanish": "arco tangente"
+       "default": "arco tangente"
      }
    }
  }
