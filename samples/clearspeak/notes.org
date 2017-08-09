@@ -526,10 +526,20 @@ Helper function for Emacs:
 ** Implied Times
 
 *** Corrections:
-    ImpTimes003, 
+    ImpTimes003,
+
+**** ImpTimes040: 4th -> fourth
+
+**** ImpTimes066, missing times
 
 *** Pausing commata:
-    ImpTimes007, ImpTimes015, ImpTimes024, ImpTimes025, ImpTimes026, ImpTimes027, ImpTimes035, 
+    ImpTimes007, ImpTimes015, ImpTimes024, ImpTimes025, ImpTimes026,
+    ImpTimes027, ImpTimes035, testImpTimes041, testImpTimes042, testImpTimes043,
+    testImpTimes045, testImpTimes046, testImpTimes051,
+    testImpTimes053, testImpTimes056, testImpTimes057, testImpTimes058,
+    testImpTimes059, testImpTimes060, testImpTimes061, testImpTimes062,
+    testImpTimes063, testImpTimes065, testImpTimes065a, testImpTimes067,
+    testImpTimes068, testImpTimes069, testImpTimes072, testImpTimes075
 
 **** Remove commata around times! It appears there are pauses wrt. identifiers but not numbers.
      We get rid of the former! x plus y is the same as x times y.

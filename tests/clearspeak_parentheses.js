@@ -172,7 +172,7 @@ sre.ClearspeakParentheses.prototype.testParen011 = function() {
 sre.ClearspeakParentheses.prototype.testParen012 = function() {
   var preference = 'Paren_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  // TODO (QUESTION): This is against the Paren_Auto rules! (page 31)!
+  // TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!
   // var speech = 'open paren, three fourths, x, close paren';
   var speech = 'three fourths x';
   this.executeRuleTest(mathml, speech, preference);

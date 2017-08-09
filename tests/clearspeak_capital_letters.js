@@ -44,13 +44,14 @@ goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);
 //
 
 
+// TODO: (QUESTION) This is does not seem to follow the fraction rules.
 /**
  * Testing ClearspeakCapitalLetters Example Cap001
  */
 sre.ClearspeakCapitalLetters.prototype.untestCap001 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator sine A, and denominator a = the fraction with numerator sine B, and denominator b';
+  var speech = 'the fraction with numerator sine A, and denominator a, equals, the fraction with numerator sine B, and denominator b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,6 +156,7 @@ sre.ClearspeakCapitalLetters.prototype.testCap010 = function() {
 };
 
 
+// TODO: (QUESTION) This is does not seem to follow the fraction rules.
 /**
  * Testing ClearspeakCapitalLetters Example Cap011
  */

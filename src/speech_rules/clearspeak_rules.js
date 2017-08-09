@@ -272,7 +272,28 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'function-prefix', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
-      'self::appl', '@role="prefix function"');
+    'self::appl', '@role="prefix function"');
+  
+  // TODO: This could be problematic. Decide at end if it is worth keeping.
+  // Does not fully work with ImpTimes065 for example.
+  //
+  // (changes: testCap003, testCap013, testFracfunct009, testLog018,
+  // testTrig035)
+  //
+  // defineRule(
+  //     'function-prefix', 'clearspeak.default',
+  //     '[n] children/*[1]; [n] children/*[2]; [p] (pause:"short")',
+  //   'self::appl', '@role="prefix function"',
+  //   'parent::*/parent::infixop[@role!="implicit"]|parent::*/parent::relseq|parent::*/parent::multrel',
+  //   'following-sibling::*');
+
+  defineRule(
+      'binary-operation', 'clearspeak.ImpliedTimes_MoreImpliedTimes',
+    '[n] . (grammar:impliedTimes); [p] (pause:"short")',
+    'self::appl', '@role="prefix function"', 'parent::*/parent::infixop[@role="implicit"]',
+    'following-sibling::*',
+    'not(contains(@grammar, "impliedTimes"))');
+  
   defineRule(
       'function-prefix-simple-arg', 'clearspeak.default',
       '[n] children/*[1]; [p] (pause:"short"); [n] children/*[2]',
@@ -295,17 +316,18 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
-      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning, "clearspeak:simple")))');
+      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning, "clearspeak:simple")))',
+    'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
       '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
-      'name(children/*[1])="subscript"');
+    'name(children/*[1])="subscript"', 'self::*');
 
 
   // ln rules!
-  // QUESTION: These pauses are not consistent!
+  // TODO: (QUESTION) These pauses are not consistent!
     defineRule(
       'function-ln', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
