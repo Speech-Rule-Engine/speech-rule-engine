@@ -518,7 +518,9 @@ sre.ClearspeakUtil.simpleArguments = function(node) {
   var children = sre.XpathUtil.evalXPath('../../children/*', node);
   var index = content.indexOf(node);
   return (sre.ClearspeakUtil.simpleFactor_(children[index]) &&
-          sre.ClearspeakUtil.simpleFactor_(children[index + 1])) ?
+          (sre.ClearspeakUtil.simpleFactor_(children[index + 1]) ||
+           children[index + 1].tagName === sre.SemanticAttr.Type.ROOT ||
+           children[index + 1].tagName === sre.SemanticAttr.Type.SQRT)) ?
     [node] : [];
 };
 
@@ -526,7 +528,11 @@ sre.ClearspeakUtil.simpleFactor_ = function(node) {
   return node && (node.tagName === sre.SemanticAttr.Type.NUMBER ||
                   node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
                   node.tagName === sre.SemanticAttr.Type.FUNCTION ||
-                  node.tagName === sre.SemanticAttr.Type.APPL);
+                  node.tagName === sre.SemanticAttr.Type.APPL ||
+                  // This works as fractions take care of their own surrounding
+                  // pauses!
+                  node.tagName === sre.SemanticAttr.Type.FRACTION
+                 );
 }
 
 

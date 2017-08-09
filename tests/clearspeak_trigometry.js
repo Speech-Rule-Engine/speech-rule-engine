@@ -489,7 +489,7 @@ sre.ClearspeakTrigometry.prototype.testTrig039 = function() {
 sre.ClearspeakTrigometry.prototype.testTrig040 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mi>x</mi></mrow><mn>2</mn></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the sine of, x over 2, equals plus or minus, the square root of, the fraction with numerator 1 minus cosine x, and denominator 2';
+  var speech = 'the sine of, x over 2, equals plus or minus the square root of, the fraction with numerator 1 minus cosine x, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -500,7 +500,7 @@ sre.ClearspeakTrigometry.prototype.testTrig040 = function() {
 sre.ClearspeakTrigometry.prototype.testTrig041 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the tangent of, x over 2, equals plus or minus, the square root of, the fraction with numerator 1 minus cosine x, and denominator 1 plus cosine x';
+  var speech = 'the tangent of, x over 2, equals plus or minus the square root of, the fraction with numerator 1 minus cosine x, and denominator 1 plus cosine x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -523,7 +523,7 @@ sre.ClearspeakTrigometry.prototype.testTrig043 = function() {
   var preference = 'Trig_Auto';
   preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>8</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></math>';
-  var speech = 'the sine of, open paren, negative, pi over 8, close paren, equals negative one half, the square root of 2 minus, the square root of 2, end root, end root';
+  var speech = 'the sine of, open paren, negative, pi over 8, close paren, equals negative one half the square root of 2 minus the square root of 2, end root, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -535,7 +535,7 @@ sre.ClearspeakTrigometry.prototype.testTrig044 = function() {
   var preference = 'Trig_Auto';
   preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></math>';
-  var speech = 'the tangent of, 3 pi over 8, equals, the fraction with numerator, the square root of, the square root of 2, end root, plus 1, end root, and denominator, the square root of, the square root of 2, end root, minus 1, end root';
+  var speech = 'the tangent of, 3 pi over 8, equals, the fraction with numerator the square root of, the square root of 2, end root, plus 1, end root, and denominator the square root of, the square root of 2, end root, minus 1, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -547,7 +547,7 @@ sre.ClearspeakTrigometry.prototype.testTrig045 = function() {
   var preference = 'Trig_Auto';
   preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>π</mi><mrow><mn>12</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow></msqrt></mrow></math>';
-  var speech = 'the tangent of, pi over 12, equals one half, the square root of 2 minus, the square root of 3, end root, end root';
+  var speech = 'the tangent of, pi over 12, equals one half the square root of 2 minus the square root of 3, end root, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -629,7 +629,7 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto006 = function() {
 sre.ClearspeakTrigometry.prototype.testTrigInvAuto007 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'the inverse sine of, the fraction with numerator, the square root of 2, and denominator 2';
+  var speech = 'the inverse sine of, the fraction with numerator the square root of 2, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -761,7 +761,7 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto018 = function() {
 sre.ClearspeakTrigometry.prototype.testTrigInvAuto019 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, the inverse cosine of, open paren, negative, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, the inverse cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -772,7 +772,7 @@ sre.ClearspeakTrigometry.prototype.testTrigInvAuto019 = function() {
 sre.ClearspeakTrigometry.prototype.testTrigInvAuto020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, negative, the inverse cosine of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, negative, the inverse cosine of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -915,7 +915,7 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse006 = function() {
 sre.ClearspeakTrigometry.prototype.testTrigInverse007 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'sine inverse of, the fraction with numerator, the square root of 2, and denominator 2';
+  var speech = 'sine inverse of, the fraction with numerator the square root of 2, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1047,7 +1047,7 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse018 = function() {
 sre.ClearspeakTrigometry.prototype.testTrigInverse019 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, cosine inverse of, open paren, negative, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, cosine inverse of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1058,7 +1058,7 @@ sre.ClearspeakTrigometry.prototype.testTrigInverse019 = function() {
 sre.ClearspeakTrigometry.prototype.testTrigInverse020 = function() {
   var preference = 'Trig_TrigInverse';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, negative, cosine inverse of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, negative, cosine inverse of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1201,7 +1201,7 @@ sre.ClearspeakTrigometry.prototype.testArcTrig006 = function() {
 sre.ClearspeakTrigometry.prototype.testArcTrig007 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>';
-  var speech = 'arc sine of, the fraction with numerator, the square root of 2, and denominator 2';
+  var speech = 'arc sine of, the fraction with numerator the square root of 2, and denominator 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1333,7 +1333,7 @@ sre.ClearspeakTrigometry.prototype.testArcTrig018 = function() {
 sre.ClearspeakTrigometry.prototype.testArcTrig019 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, arc cosine of, open paren, negative, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, arc cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1344,7 +1344,7 @@ sre.ClearspeakTrigometry.prototype.testArcTrig019 = function() {
 sre.ClearspeakTrigometry.prototype.testArcTrig020 = function() {
   var preference = 'Trig_ArcTrig';
   var mathml = '<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the cosine of, open paren, negative, arc cosine of, open paren, the fraction with numerator, the square root of 2, and denominator 2, close paren, close paren';
+  var speech = 'the cosine of, open paren, negative, arc cosine of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 

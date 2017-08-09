@@ -106,7 +106,6 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-  addCTXF('CTXFcontentPauseIterator', sre.ClearspeakUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.ClearspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
@@ -947,15 +946,26 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
 
   // Roots
+  // TODO: Make end root recursiv similar to end matrix.
   defineRule(
       'sqrt', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the square root of"; [n] children/*[1]; [p] (pause:"short")',
+      '[t] "the square root of"; [n] children/*[1]; [p] (pause:"short")',
+    'self::sqrt');
+  defineRule(
+      'sqrt', 'clearspeak.default',
+      '[p] (pause: "short"); [t] "the square root of";' +
+      ' [n] children/*[1]; [p] (pause:"short")',
+    'self::sqrt', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root');
+  defineRule(
+      'sqrt', 'clearspeak.Roots_RootEnd',
+      '[t] "the square root of"; [n] children/*[1];' +
+      ' [p] (pause:"short"); [t] "end root"; [p] (pause:"short")',
     'self::sqrt');
   defineRule(
       'sqrt', 'clearspeak.Roots_RootEnd',
-      '[p] (pause:"short"); [t] "the square root of"; [n] children/*[1];' +
+      '[p] (pause: "short"); [t] "the square root of"; [n] children/*[1];' +
       ' [p] (pause:"short"); [t] "end root"; [p] (pause:"short")',
-    'self::sqrt');
+    'self::sqrt', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root');
 
   // minus sign
   defineRule(
@@ -1012,6 +1022,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'binary-operation', 'clearspeak.default',
       '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop');
   defineRule(
+      'binary-operation', 'clearspeak.ImpliedTimes_MoreImpliedTimes',
+      '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop',
+      '@role="implicit"');
+  defineRule(
       'binary-operation-pause', 'clearspeak.default',
     '[p] (pause:"short"); [m] children/* (sepFunc:CTXFcontentIterator);',
     'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"');
@@ -1036,6 +1050,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'implicit-times', 'clearspeak.default',
       '[n] text()', 'self::operator', '@role="multiplication"', 'text()="⁢"',
       'CQFfencedArguments'); 
+  defineRule(
+      'implicit-times', 'clearspeak.ImpliedTimes_MoreImpliedTimes',
+      '[n] text()', 'self::operator', '@role="multiplication"', 'text()="⁢"'); 
   // TODO: XPath 2.0 would help here!
 
   // REMARK: Currently we have accelerated rate only with multi-character simple
