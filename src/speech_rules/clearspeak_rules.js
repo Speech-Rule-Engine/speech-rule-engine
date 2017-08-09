@@ -830,7 +830,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'subscript-base', 'clearspeak.default',
       '[n] children/*[1]; [t] "base"; [n] children/*[2]',
-      'self::subscript', 'CQFisLogarithm');
+    'self::subscript', 'CQFisLogarithm');
+  // TODO: (Simons) This should be removed once we have index structures.
+  defineRule(
+      'subscript-index', 'clearspeak.default',
+      '[n] children/*[1]; [t] "sub"; [n] children/*[2]',
+      'self::subscript', 'contains(@grammar, "simpleDet")');
 
 
   // Fraction rules
@@ -1188,6 +1193,25 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
       ' content/*[1][text()]="｜"');
 
+  // Layout elements: Matrix like structures
+  // Order of rules is important!
+  // 
+  // Matrix
+  defineRule(
+      'matrix', 'clearspeak.default',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
+      ' [p] (pause:long)',
+      'self::matrix');
+  defineRule(
+      'matrix-simple', 'clearspeak.default',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::matrix', 'count(children/*)<4',
+      'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
   // Determinant
   defineRule(
       'determinant', 'clearspeak.default',
@@ -1197,7 +1221,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"', 'count(children/*)<4', 'CQFcellsSimple');
   defineRule(
-      'determinant', 'clearspeak.default',
+      'determinant-simple', 'clearspeak.default',
       '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
       ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
@@ -1206,7 +1230,41 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'matrix-row', 'clearspeak.default',
       '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
-      'self::row', '@role="determinant"', 'contains(@grammar, "simpleDet")');
+      'self::row', 'contains(@grammar, "simpleDet")');
+  // Vector
+    defineRule(
+      'vector', 'clearspeak.default',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::vector');
+    defineRule(
+      'vector-simple', 'clearspeak.default',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
+      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::vector', 'count(children/*)<4', 'CQFcellsSimple');
+    defineRule(
+      'row-vector', 'clearspeak.default',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
+      ' [m] children/*[1]/children/* (ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::matrix', '@role="rowvector"');
+    defineRule(
+      'row-vector-simple', 'clearspeak.default',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
+      ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+
+  defineRule(
+      'line-simple', 'clearspeak.default',
+      '[n] children/*[1]',
+      'self::line', 'contains(@grammar, "simpleDet")');
   defineRule(
       'matrix-row-column', 'clearspeak.default',
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"Column-,- ",' +
@@ -1217,6 +1275,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] children/*[1]', 'self::cell');
 
 
+  // defineRule(
+  //     'line-vector-row', 'clearspeak.default',
+  //     '[n] text(); [p] (pause:long)',
+  //     'self::line');
 
 };
 

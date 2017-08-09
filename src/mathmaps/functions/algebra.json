@@ -13,6 +13,9 @@
      "default": {
        "default": "determinant",
        "short": "det"
+     },
+     "clearspeak": {
+       "default": "determinant"
      }
    },
    "key": "det",

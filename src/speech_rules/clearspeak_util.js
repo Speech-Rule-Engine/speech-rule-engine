@@ -296,17 +296,49 @@ sre.ClearspeakUtil.simpleNode = function(node) {
 };
 
 
-sre.ClearspeakUtil.simpleNodes = function(node, xpath) {
-  var nodes = sre.XpathUtil.evalXPath(xpath, node);
-  return nodes.every(sre.ClearspeakUtil.simpleNode);
+sre.ClearspeakUtil.simpleCell_ = function(node) {
+  if (sre.ClearspeakUtil.simpleNode(node)) {
+    return true;
+  }
+  // TODO: (Simons) This is a special case that has to be removed by rewriting
+  // certain indices from implicit multiplication to punctuation. For clearspeak
+  // this should yield a simple expression then. And have a subscript with index
+  // role.
+  if (node.tagName !== sre.SemanticAttr.Type.SUBSCRIPT) {
+    return false;
+  }
+  var children = node.childNodes[0].childNodes;
+  var index = children[1];
+  return children[0].tagName === sre.SemanticAttr.Type.IDENTIFIER &&
+    (sre.ClearspeakUtil.isInteger_(index) ||
+     (index.tagName === sre.SemanticAttr.Type.INFIXOP &&
+      index.hasAttribute('role') &&
+      index.getAttribute('role') === sre.SemanticAttr.Role.IMPLICIT &&
+      sre.ClearspeakUtil.allIndices_(index)));
+};
+
+sre.ClearspeakUtil.isInteger_ = function(node) {
+  return node.tagName === sre.SemanticAttr.Type.NUMBER &&
+    node.hasAttribute('role') &&
+    node.getAttribute('role') === sre.SemanticAttr.Role.INTEGER;
+};
+
+sre.ClearspeakUtil.allIndices_ = function(node) {
+  var nodes = sre.XpathUtil.evalXPath('children/*', node);
+  return nodes.every(function(x) {
+    return sre.ClearspeakUtil.isInteger_(x) ||
+      x.tagName === sre.SemanticAttr.Type.IDENTIFIER;
+  });
 };
 
 
 sre.ClearspeakUtil.allCellsSimple = function(node) {
-  var result = sre.ClearspeakUtil.simpleNodes(
-    node, 'children/row/children/cell/children/*');
+  var xpath = node.tagName === sre.SemanticAttr.Type.MATRIX ?
+        'children/row/children/cell/children/*' :
+        'children/line/children/*';
+  var nodes = sre.XpathUtil.evalXPath(xpath, node);
+  var result = nodes.every(sre.ClearspeakUtil.simpleCell_);
   return result ? [node] : [];
-  
 };
 
 
@@ -326,7 +358,6 @@ sre.ClearspeakUtil.isSmallVulgarFraction = function(node) {
   return sre.MathspeakUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
 };
 
-
 sre.ClearspeakUtil.isUnitExpression = function(node) {
   return node.type === sre.SemanticAttr.Type.TEXT ||
     (node.type === sre.SemanticAttr.Type.PUNCTUATED &&
@@ -336,6 +367,7 @@ sre.ClearspeakUtil.isUnitExpression = function(node) {
     (node.type === sre.SemanticAttr.Type.IDENTIFIER &&
      node.role === sre.SemanticAttr.Role.UNIT) ||
     (node.type === sre.SemanticAttr.Type.INFIXOP &&
+     // TODO: Fix: Only integers are considered to be units.
      (node.role === sre.SemanticAttr.Role.IMPLICIT ||
       node.role === sre.SemanticAttr.Role.UNIT));
 };
@@ -499,9 +531,15 @@ sre.ClearspeakUtil.simpleFactor_ = function(node) {
 
 
 sre.ClearspeakUtil.fencedFactor_ = function(node) {
-  return node && (node.tagName === sre.SemanticAttr.Type.FENCED ||
-                  (node.hasAttribute('role') &&
-                   node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT));
+  return node && ((node.tagName === sre.SemanticAttr.Type.FENCED ||
+                   (node.hasAttribute('role') &&
+                    node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT)) ||
+                  sre.ClearspeakUtil.layoutFactor_(node));
+};
+
+sre.ClearspeakUtil.layoutFactor_ = function(node) {
+  return node && (node.tagName === sre.SemanticAttr.Type.MATRIX ||
+                  node.tagName === sre.SemanticAttr.Type.VECTOR);
 };
 
 

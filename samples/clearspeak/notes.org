@@ -22,6 +22,55 @@
 *** No implied time and silent parens
 
 
+* Emacs helper
+
+
+(defun js2-compare-actual-expected ()
+  (interactive)
+  (search-forward "actual: ")
+  (forward-char 1)
+  (delete-backward-char 10)
+  (end-of-line)
+  (delete-backward-char 2)
+  (search-forward "expected: ")
+  (forward-char 1)
+  (delete-backward-char 12)
+  (end-of-line)
+  (delete-backward-char 2)
+  )
+
+
+(defun js2-copy-name () 
+  (interactive)
+  (search-backward "test")
+  (forward-char 4)
+  (set-mark (point))
+  (search-forward " ")
+  (backward-char 1)
+  (copy-region-as-kill (region-beginning) (region-end))
+  (other-window 1)
+  (yank)
+  (insert ", ")
+  (other-window 1)
+  )
+
+(defun js2-decap ()
+  (interactive)
+  (setq case-fold-search nil)
+  (search-forward-regexp "var speech = '[A-Z]")
+  (backward-char 1)
+  (downcase-word 1)
+  )
+
+
+(add-hook 'js2-mode-hook
+          '(lambda ()
+             (local-set-key "\C-cn" 'js2-copy-name)
+             (local-set-key "\C-cm" 'js2-decap)
+             (local-set-key "\C-ch" 'js2-compare-actual-expected)
+             ))
+
+
 * Pausing
 
 ** Remarks
@@ -90,6 +139,9 @@
     ImpTimes070 twice.
 
     SOLVED: renamed second to ImpTimes070a
+
+**** Simple spaceout:
+     ImpTimes028, 
 
 *** Matrices
     Matrix027 twice. Second should be Matrix029.
@@ -424,7 +476,8 @@ Helper function for Emacs:
 ** Parentheses
 
 *** Pausing commmata:
-    Paren009, Paren024, Paren036-Paren050
+    Paren009, Paren024, Paren036-Paren050, Nest002, Nest009, SilParen003,
+    SilParen004, SilParen009, SilParen012, SilParen014, Nest005, Nest006, 
 
 *** Simple expression: 
     Paren002, Paren006, Paren007, Paren008, Paren009, Paren010, Paren017,
@@ -469,3 +522,191 @@ Helper function for Emacs:
     Paren040, Paren040, Paren040, Paren042, Paren042, Paren042, Paren042,
     Paren044, Paren044, Paren046, Paren046, Paren048, Paren048, Paren050,
     Paren050,
+
+** Implied Times
+
+*** Corrections:
+    ImpTimes003, 
+
+*** Pausing commata:
+    ImpTimes007, ImpTimes015, ImpTimes024, ImpTimes025, ImpTimes026, ImpTimes027, ImpTimes035, 
+
+**** Remove commata around times! It appears there are pauses wrt. identifiers but not numbers.
+     We get rid of the former! x plus y is the same as x times y.
+     ImpTimes010, ImpTimes011, ImpTimes013, ImpTimes014, 
+
+*** Decap:
+    ImpTimes008, ImpTimes009, ImpTimes013, ImpTimes014, ImpTimes015,
+    ImpTimes016, ImpTimes021, ImpTimes022, ImpTimes027, ImpTimes027a,
+    ImpTimes028, ImpTimes029, ImpTimes036, ImpTimes037, ImpTimes037a,
+    ImpTimes038, ImpTimes0381, ImpTimes046, ImpTimes047, ImpTimes051,
+    ImpTimes052, ImpTimes053, ImpTimes054, ImpTimes059, ImpTimes060,
+    ImpTimes065, ImpTimes065a, ImpTimes066, ImpTimes067, ImpTimes073,
+    ImpTimes074, ImpTimes074a, ImpTimes075, ImpTimes076, ImpTimes082,
+    ImpTimes084, ImpTimes085, ImpTimes089, ImpTimes090, ImpTimes091,
+    ImpTimes092, ImpTimes097, ImpTimes098, ImpTimes102, ImpTimes103,
+    ImpTimes104, ImpTimes105, ImpTimes112, ImpTimes113, ImpTimes114,
+    ImpTimesSilPar006, ImpTimesSilPar008, ImpTimesSilPar009, ImpTimesSilPar013,
+    ImpTimesSilPar014, ImpTimesSilPar015, ImpTimesSilPar019, Extra001, Extra002,
+    Extra005, Extra006, Extra007, Extra008, Extra010, Extra012, Extra013,
+    Extra014, Extra016, Extra018, Extra019, Extra020,
+
+*** Simple: yz
+    ImpTimes010, ImpTimes086, ImpTimesSilPar010, 
+
+
+** Trigonometry
+
+Table1
+
+*** Pause commmata:
+    Trig014, Trig015, Trig016, Trig019, Trig021, Trig024, Trig034, Trig035, 
+    Trig037, Trig040, Trig041, Trig042, Trig045, Trig044, Trig043, 
+
+*** Simple spacing: 
+    Trig031, Trig038, Trig039, 
+
+*** Decap (most of the 'The ... ')
+    Trig037, Trig044, 
+
+*** Corrections
+
+**** Trig034: missing space, decap cosine
+
+**** Trig043: Removed times before square root following roots/implied times rules.
+
+**** Trig045: Removed times before square root following roots/implied times rules.
+
+Table2
+
+*** Pause commata:
+    TrigInvAuto007, TrigInvAuto019, TrigInvAuto020, TrigInvAuto021,
+    TrigInvAuto024, TrigInverse019, TrigInverse020, TrigInverse021, ArcTrig007, ArcTrig019, ArcTrig020, 
+
+*** Corections:
+**** TrigInvAuto017: zero to 0
+**** TrigInverse007: missing "the" in square root
+**** TrigInverse016, x -> 1
+**** TrigInverse017, sin -> sine
+**** AllTrig03, tan -> tangent
+**** ArcTrig011, Removed of (QUESTION: is that because arg > 100)?
+**** ArcTrig017, sin -> sine
+**** TrigTrig016, x -> 1
+**** AllTrig01,  sin -> sine
+
+*** Decap
+    Most arc Sine etc.
+
+*** QUESTION on preference Trig_ArcTrig: 
+    arc sine or arcsine? In rules there is no space!
+
+Table 3
+
+*** Pause commata:
+    
+
+*** Corrections:
+
+**** HypTrig016, change comma position
+
+** Logarithm
+
+*** Decap
+    Log001, Log002, Log003, Log004, Log005, Log007, Log009, Log010, Log012,
+    Log013, Log014, Log016, Log017, Log018, Log019, Log020, Log021, Log022,
+    NatLog002, NatLog008, NatLog011, NatLog013, NatLog015, NatLog016,
+
+*** Pause commata:
+    Log003, Log004, Log005, Log008, Log009, Log017, Log019, Log020, Log018,
+    NatLog007, Log008, NatLog005, NatLog007, NatLog008, NatLog010, NatLog012,
+    NatLog010, NatLog015, NatLog016,
+
+
+*** Corrections:
+
+**** Log020, = to equals
+
+**** NatLog004, ln -> l n
+
+**** NatLog007, ln -> l n
+
+**** NatLog003, missing close paren
+
+**** Log022, 10th -> tenth
+
+** Matrices
+
+*** Decap:
+    Matrix001, Matrix002, Matrix003, Matrix004, Matrix005, Matrix006, Matrix007,
+    Matrix008, Matrix008a, Matrix009, Matrix010, Matrix011, Matrix012,
+    Matrix013, Matrix014, Matrix015, Matrix016, Matrix017, Matrix018, Matrix019,
+    , Matrix020, Matrix021, Matrix023, Matrix024, Matrix025, Matrix026,
+    Matrix027, Matrix028, Matrix029, Matrix030, Matrix031, Matrix032, Matrix033,
+    Matrix034, Matrix035, Matrix036, Matrix037, Matrix038, Matrix039, Matrix040,
+    Matrix041, Matrix042, Matrix043, Matrix044, Matrix045, Matrix046, Matrix047,
+    Matrix048, Matrix049, Matrix050, Matrix051, Matrix052, Matrix053, Matrix054,
+    Matrix055, Matrix056, Matrix057, Matrix057a, Matrix058, Matrix059,
+    Matrix060, Matrix061, Matrix062, Matrix063, Matrix065, Matrix066, Matrix067,
+    Matrix068, Matrix069, Matrix070, Matrix071, Matrix072, Matrix073, Matrix074,
+    Matrix075, Matrix076, Matrix077, Matrix078, Matrix079, Matrix080, Matrix081,
+    Matrix082, Matrix083, Matrix084, Matrix085, Matrix086, Matrix087, Matrix088,
+    Matrix089, Matrix090, Matrix091, Matrix092, Matrix092a, Matrix093,
+    Matrix094, Matrix095, Matrix096, Matrix097, Matrix098, Matrix099, Matrix100,
+    Matrix101, Matrix103, Matrix104, Matrix105, Matrix106, Matrix107, Matrix108,
+    Matrix109, Matrix110, Matrix111, Matrix112, Matrix113, Matrix114, Matrix115,
+    Matrix116, Matrix117, Matrix118, Matrix119, Matrix120, Matrix121, Matrix122,
+    Matrix123, Matrix124, Matrix125, Matrix126, Matrix127, Matrix128, Matrix129,
+    Matrix130, Matrix131, Matrix132, Matrix133, Matrix134, Matrix135, Matrix136,
+    Matrix137, Matrix138, Matrix139, Matrix140, Matrix142, Matrix143, Matrix144,
+    Matrix145, Matrix146, Matrix147, Matrix148, Matrix149, Matrix150, Matrix151,
+    Matrix152, Matrix153, Matrix154, Matrix155, Matrix156, Matrix157, Matrix158,
+    Matrix159, Matrix160, Matrix161, Matrix162, Matrix163, Matrix164, Matrix165,
+    Matrix166, Matrix167, Matrix168, Matrix169, Matrix170, Matrix171, Matrix172,
+    Matrix173, Matrix174, Matrix175, Matrix176, Matrix177, Matrix178, Matrix179,
+    Matrix180,
+
+
+*** Pausing Commata, semi-colons, periods:
+    Matrix009, Matrix010, Matrix015, Matrix016, Matrix134, Matrix015, Matrix023, Matrix018, Matrix019b, Matrix023, 
+
+**** ; Row to . Row
+     Matrix040, Matrix055, Matrix056, Matrix067, Matrix070, Matrix071,
+     Matrix071, Matrix095,
+
+*** Spreadout simple:
+    Matrix011, Matrix019, Matrix019b, Matrix033, Matrix034, Matrix035,
+    Matrix036, Matrix053, Matrix060, Matrix061, Matrix075, Matrix076, Matrix077,
+    Matrix078, Matrix091, Matrix098, Matrix099, Matrix113, Matrix114, Matrix115,
+    Matrix116, Matrix129, Matrix137, Matrix138, Matrix152, Matrix153, Matrix154,
+    Matrix155, Matrix164, Matrix175,
+
+*** Corrections: 
+**** Missing space:
+    Matrix013, Matrix108, Matrix107, Matrix131, Matrix146, Matrix108, Matrix131,
+    Matrix013, Matrix087, Matrix088, Matrix013, Matrix027,
+
+**** Superfluous spaces around ,:
+    Matrix013, Matrix013, Matrix013, Matrix013, Matrix014, Matrix019, ,
+    Matrix024, Matrix027, Matrix087, Matrix088, Matrix101, Matrix107, Matrix107,
+    Matrix108, Matrix108, Matrix108, Matrix131, Matrix131, Matrix131, Matrix131,
+    Matrix132, Matrix137, Matrix138, Matrix143, Matrix146,
+
+**** Remove trailing period:
+    Matrix014, Matrix016, Matrix017, Matrix018, Matrix022, Matrix023,
+    Matrix024, Matrix029, Matrix030, Matrix031, Matrix032, Matrix041,
+
+**** Colon after matrix: to matrix.
+     Matrix012, Matrix054, Matrix130, Matrix165, Matrix166, Matrix167,
+     Matrix168, Matrix176, Matrix177, Matrix178, Matrix179,
+
+**** (pause) to .
+     Matrix133, Matrix015,
+
+**** QUESTION: MathML for Matrix021, Matrix063, Matrix101, Matrix140, is incorrect.
+     b_11 where 11 is a single number, can't be split!
+     All these are corrected to single indices.
+
+**** Matrix022, QUESTION
+     Why is that not a simple matrix without columns?
+
+**** Matrix030, Last column 3 should be column 4
