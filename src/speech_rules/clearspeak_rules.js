@@ -1229,47 +1229,47 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::matrix', '@role="determinant"');
   // Vector
     defineRule(
-      'vector', 'clearspeak.default',
+      'matrix-vector', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
       ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
     defineSpecialisedRule(
-      'vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
+      'matrix-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
     defineRule(
-      'vector-simple', 'clearspeak.default',
+      'matrix-vector-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
       ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector', 'count(children/*)<4', 'CQFcellsSimple');
     defineRule(
-      'vector-simple', 'clearspeak.Matrix_SilentColNum',
+      'matrix-vector-simple', 'clearspeak.Matrix_SilentColNum',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
       ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
 
-  defineRule(
-      'row-vector', 'clearspeak.default',
+    defineRule(
+      'matrix-row-vector', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
       ' [m] children/*[1]/children/* (ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
     defineSpecialisedRule(
-      'row-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
+      'matrix-row-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
     defineRule(
-      'row-vector-simple', 'clearspeak.default',
+      'matrix-row-vector-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
       ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
     defineRule(
-      'row-vector-simple', 'clearspeak.Matrix_SilentColNum',
+      'matrix-row-vector-simple', 'clearspeak.Matrix_SilentColNum',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
       ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
@@ -1301,24 +1301,85 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] children/*[1]', 'self::cell');
 
   defineRule(
-      'end-matrix', 'clearspeak.Matrix_EndMatrix',
+      'matrix-end-matrix', 'clearspeak.Matrix_EndMatrix',
       '[n] . (grammar:EndMatrix); [t] "end matrix"',
       'self::matrix', 'not(contains(@grammar, "EndMatrix"))');
   defineRule(
-      'end-vector', 'clearspeak.Matrix_EndMatrix',
+      'matrix-end-vector', 'clearspeak.Matrix_EndMatrix',
       '[n] . (grammar:EndMatrix); [t] "end matrix"',
       'self::vector', 'not(contains(@grammar, "EndMatrix"))');
   defineRule(
-      'end-determinant', 'clearspeak.Matrix_EndMatrix',
+      'matrix-end-determinant', 'clearspeak.Matrix_EndMatrix',
       '[n] . (grammar:EndMatrix); [t] "end determinant"',
       'self::matrix', '@role="determinant"',
       'not(contains(@grammar, "EndMatrix"))');
 
-  // defineRule(
-  //     'line-vector-row', 'clearspeak.default',
-  //     '[n] text(); [p] (pause:long)',
-  //     'self::line');
+    defineRule(
+      'vector', 'clearspeak.Matrix_Vector',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "column vector"; [p] (pause:long);' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::vector');
+    defineSpecialisedRule(
+      'vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
+    defineRule(
+      'vector-simple', 'clearspeak.Matrix_Vector',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "column vector"; [p] (pause:long);' +
+      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::vector', 'count(children/*)<4', 'CQFcellsSimple');
+    defineSpecialisedRule(
+      'vector-simple', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
 
+  defineRule(
+      'row-vector', 'clearspeak.Matrix_Vector',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "row vector"; [p] (pause:long);' +
+      ' [m] children/*[1]/children/* (ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::matrix', '@role="rowvector"');
+    defineSpecialisedRule(
+      'row-vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
+    defineRule(
+      'row-vector-simple', 'clearspeak.Matrix_Vector',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "row vector"; [p] (pause:long);' +
+      ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+    defineSpecialisedRule(
+      'row-vector-simple', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
+
+    defineRule(
+      'vector-end-matrix', 'clearspeak.Matrix_EndVector',
+      '[n] . (grammar:EndMatrix); [t] "end matrix"',
+      'self::matrix', 'not(contains(@grammar, "EndMatrix"))',
+      'self::*');
+    defineRule(
+      'vector-end-vector', 'clearspeak.Matrix_EndVector',
+      '[n] . (grammar:EndMatrix); [t] "end vector"',
+      'self::vector', 'not(contains(@grammar, "EndMatrix"))',
+      'self::*');
+    defineRule(
+      'vector-end-vector', 'clearspeak.Matrix_EndVector',
+      '[n] . (grammar:EndMatrix); [t] "end vector"',
+      'self::matrix', '@role="rowvector"',
+      'not(contains(@grammar, "EndMatrix"))',
+      'self::*');
+    defineRule(
+      'vector-end-determinant', 'clearspeak.Matrix_EndVector',
+      '[n] . (grammar:EndMatrix); [t] "end determinant"',
+      'self::matrix', '@role="determinant"',
+      'not(contains(@grammar, "EndMatrix"))',
+      'self::*');
+
+  defineRule(
+      'binomial', 'clearspeak.Matrix_Combinatoric',
+      '[n] children/*[1]/children/*[1]; ' +
+      '[t] "choose"; [n] children/*[2]/children/*[1]; ',
+      'self::vector', '@role="binomial"');
 };
 
 });  // goog.scope

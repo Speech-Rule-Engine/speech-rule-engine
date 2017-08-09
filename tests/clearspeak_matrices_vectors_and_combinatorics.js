@@ -1828,10 +1828,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix157 = function
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix158
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix158 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix158 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 Column vector: 1, 2, 3';
+  var speech = 'the 3 by 1 column vector. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1839,10 +1839,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix158 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix159
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix159 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix159 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 Column vector: 1, 2, 3';
+  var speech = 'the 3 by 1 column vector. 1, 2, 3';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1850,10 +1850,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix159 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix160
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix160 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix160 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: 3, 5';
+  var speech = 'the 1 by 2 row vector. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1861,10 +1861,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix160 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix161
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix161 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix161 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: 3, 5';
+  var speech = 'the 1 by 2 row vector. 3, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1872,10 +1872,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix161 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix162
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix162 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix162 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 Column vector Row 1: x plus 1 Row 2: x minus 1';
+  var speech = 'the 2 by 1 column vector. Row 1: x plus 1 Row 2: x minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1883,10 +1883,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix162 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix163
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix163 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix163 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 Column vector: Row 1: 3, Row 2: 6, Row 3: 1, Row 4: 2';
+  var speech = 'the 4 by 1 column vector. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1894,10 +1894,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix163 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix164
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix164 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix164 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: Column 1: x plus 1 Column 2: 2 x';
+  var speech = 'the 1 by 2 row vector. Column 1: x plus 1 Column 2: 2 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1905,10 +1905,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix164 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix165
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix165 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix165 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: 3, 2 times the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4';
+  var speech = 'the 1 by 2 row vector. 3, 2. times the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1916,10 +1916,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix165 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix166
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix166 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix166 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 3 Row vector: 1, 2, 7 times the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2';
+  var speech = 'the 1 by 3 row vector. 1, 2, 7. times the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1927,10 +1927,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix166 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix167
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix167 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix167 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4 times the 2 by 1 Column vector: 3, 2';
+  var speech = 'the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. times the 2 by 1 column vector. 3, 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1938,10 +1938,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix167 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix168
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix168 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix168 = function() {
   var preference = 'Matrix_Vector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2 times the 1 by 3 Column vector: 1, 2, 7';
+  var speech = 'the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. times the 3 by 1 column vector. 1, 2, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1949,10 +1949,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix168 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix169
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix169 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix169 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 Column vector: 1, 2, 3, end vector';
+  var speech = 'the 3 by 1 column vector. 1, 2, 3. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1960,10 +1960,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix169 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix170
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix170 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix170 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 Column vector: 1, 2, 3 end vector';
+  var speech = 'the 3 by 1 column vector. 1, 2, 3. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1971,10 +1971,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix170 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix171
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix171 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix171 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: 3, 5, end vector';
+  var speech = 'the 1 by 2 row vector. 3, 5. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1982,10 +1982,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix171 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix172
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix172 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix172 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: 3, 5, end vector';
+  var speech = 'the 1 by 2 row vector. 3, 5. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1993,10 +1993,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix172 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix173
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix173 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix173 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 Column vector Row 1: x plus 1 Row 2: x minus 1, end vector';
+  var speech = 'the 2 by 1 column vector. Row 1: x plus 1 Row 2: x minus 1. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2004,10 +2004,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix173 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix174
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix174 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix174 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 Column vector: Row 1: 3, Row 2: 6, Row 3: 1, Row 4: 2, end vector';
+  var speech = 'the 4 by 1 column vector. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2015,10 +2015,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix174 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix175
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix175 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix175 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: Column 1: x plus 1 Column 2: 2 x, end vector';
+  var speech = 'the 1 by 2 row vector. Column 1: x plus 1 Column 2: 2 x. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2026,10 +2026,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix175 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix176
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix176 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix176 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 Row vector: 3, 2, end vector times the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4, end matrix';
+  var speech = 'the 1 by 2 row vector. 3, 2. end vector times the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. end matrix';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2037,10 +2037,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix176 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix177
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix177 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix177 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 3 Row vector: 1, 2, 7, end vector times the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2, end matrix';
+  var speech = 'the 1 by 3 row vector. 1, 2, 7. end vector times the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. end matrix';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2048,10 +2048,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix177 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix178
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix178 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix178 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4, end matrix times the 2 by 1 Column vector: 3, 2, end vector';
+  var speech = 'the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. end matrix times the 2 by 1 column vector. 3, 2. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2059,10 +2059,10 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix178 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix179
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix179 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix179 = function() {
   var preference = 'Matrix_EndVector';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2, end matrix times the 3 by 1 column vector: 1, 2, 7, end vector';
+  var speech = 'the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. end matrix times the 3 by 1 column vector. 1, 2, 7. end vector';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2070,7 +2070,7 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix179 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix180
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix180 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix180 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>n</mi></mtd></mtr><mtr><mtd><mi>r</mi></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'n choose r';
@@ -2081,7 +2081,7 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix180 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix181
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix181 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix181 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>10</mn></mrow></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '10 choose 7';
@@ -2092,7 +2092,7 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix181 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix182
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix182 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix182 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow><mn>15</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '15 choose 0';
@@ -2103,7 +2103,7 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix182 = functi
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix183
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix183 = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix183 = function() {
   var preference = 'Matrix_Combinatoric';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '8 choose 3';

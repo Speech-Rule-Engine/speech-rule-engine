@@ -683,7 +683,10 @@ Table 3
     testMatrix138, testMatrix139, testMatrix140, testMatrix141, testMatrix142,
     testMatrix143, testMatrix144, testMatrix145, testMatrix146, testMatrix147,
     testMatrix148, testMatrix149, testMatrix150, testMatrix151, testMatrix152,
-    testMatrix153, testMatrix154, testMatrix155, testMatrix156, testMatrix157
+    testMatrix153, testMatrix154, testMatrix155, testMatrix156, testMatrix157,
+    ...(all inbetween), testMatrix169, testMatrix170, testMatrix171,
+    testMatrix172, testMatrix173, testMatrix174, testMatrix175, testMatrix176,
+    testMatrix177, testMatrix178, testMatrix179
 
 **** ; row to . Row
      Matrix040, Matrix055, Matrix056, Matrix067, Matrix070, Matrix071,
@@ -734,3 +737,5 @@ Table 3
 
 **** Column matrix -> column matrix:
      Matrix123, Matrix124, Matrix127, Matrix128, testMatrix085, testMatrix086, testMatrix089, testMatrix090
+
+**** QUESTION: Is it also a long pause '.' after row/column vector?
