@@ -1227,10 +1227,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"');
-  defineRule(
-      'matrix-row', 'clearspeak.default',
-      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
-      'self::row', 'contains(@grammar, "simpleDet")');
   // Vector
     defineRule(
       'vector', 'clearspeak.default',
@@ -1239,6 +1235,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
+    defineSpecialisedRule(
+      'vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
     defineRule(
       'vector-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
@@ -1247,12 +1245,22 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [p] (pause:long)',
       'self::vector', 'count(children/*)<4', 'CQFcellsSimple');
     defineRule(
+      'vector-simple', 'clearspeak.Matrix_SilentColNum',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
+      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::vector');
+
+  defineRule(
       'row-vector', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
       ' [m] children/*[1]/children/* (ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
+    defineSpecialisedRule(
+      'row-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
     defineRule(
       'row-vector-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
@@ -1260,20 +1268,51 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+    defineRule(
+      'row-vector-simple', 'clearspeak.Matrix_SilentColNum',
+      '[t] "the"; [t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
+      ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      ' [p] (pause:long)',
+      'self::matrix', '@role="rowvector"');
 
+
+  defineRule(
+      'matrix-row-simple', 'clearspeak.default',
+      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+      'self::row', 'contains(@grammar, "simpleDet")');
+  defineRule(
+      'matrix-row-simple', 'clearspeak.Matrix_SilentColNum',
+      '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+      'self::row');
   defineRule(
       'line-simple', 'clearspeak.default',
       '[n] children/*[1]',
       'self::line', 'contains(@grammar, "simpleDet")');
   defineRule(
-      'matrix-row-column', 'clearspeak.default',
+      'matrix-row', 'clearspeak.default',
       '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"Column-,- ",' +
       'sepFunc:CTXFpauseSeparator,separator:"medium"); [p] (pause:long)',
       'self::row');
+  defineSpecialisedRule(
+      'matrix-row', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
   defineRule(
       'matrix-cell', 'clearspeak.default',
       '[n] children/*[1]', 'self::cell');
 
+  defineRule(
+      'end-matrix', 'clearspeak.Matrix_EndMatrix',
+      '[n] . (grammar:EndMatrix); [t] "end matrix"',
+      'self::matrix', 'not(contains(@grammar, "EndMatrix"))');
+  defineRule(
+      'end-vector', 'clearspeak.Matrix_EndMatrix',
+      '[n] . (grammar:EndMatrix); [t] "end matrix"',
+      'self::vector', 'not(contains(@grammar, "EndMatrix"))');
+  defineRule(
+      'end-determinant', 'clearspeak.Matrix_EndMatrix',
+      '[n] . (grammar:EndMatrix); [t] "end determinant"',
+      'self::matrix', '@role="determinant"',
+      'not(contains(@grammar, "EndMatrix"))');
 
   // defineRule(
   //     'line-vector-row', 'clearspeak.default',

@@ -67,8 +67,8 @@
           '(lambda ()
              (local-set-key "\C-cn" 'js2-copy-name)
              (local-set-key "\C-cm" 'js2-decap)
-             (local-set-key "\C-ch" 'js2-compare-actual-expected)
              ))
+(global-set-key "\C-ch" 'js2-compare-actual-expected)
 
 
 * Pausing
@@ -667,9 +667,25 @@ Table 3
 
 
 *** Pausing Commata, semi-colons, periods:
-    Matrix009, Matrix010, Matrix015, Matrix016, Matrix134, Matrix015, Matrix023, Matrix018, Matrix019b, Matrix023, 
+    Matrix009, Matrix010, Matrix015, Matrix016, Matrix134, Matrix015, Matrix023,
+    Matrix018, Matrix019b, Matrix023, Matrix039, Matrix049, Matrix050,
+    Matrix051, Matrix052, Matrix089, Matrix090, Matrix127, Matrix128, Matrix055,
+    Matrix056, testMatrix057, testMatrix057a, testMatrix058, testMatrix059,
+    testMatrix060, testMatrix061, testMatrix062, testMatrix063, testMatrix064,
+    testMatrix065, testMatrix066, testMatrix068, testMatrix069, testMatrix070,
+    testMatrix071, testMatrix072, testMatrix073, testMatrix074, testMatrix075,
+    testMatrix076, testMatrix077, testMatrix078, testMatrix079, testMatrix080,
+    testMatrix095, testMatrix097, testMatrix102, testMatrix103, testMatrix104,
+    testMatrix110, testMatrix119, testMatrix120, testMatrix121, testMatrix122,
+    testMatrix123, testMatrix124, testMatrix125, testMatrix126, testMatrix127,
+    testMatrix128, testMatrix129, testMatrix130, testMatrix131, testMatrix132,
+    testMatrix133, testMatrix134, testMatrix135, testMatrix136, testMatrix137,
+    testMatrix138, testMatrix139, testMatrix140, testMatrix141, testMatrix142,
+    testMatrix143, testMatrix144, testMatrix145, testMatrix146, testMatrix147,
+    testMatrix148, testMatrix149, testMatrix150, testMatrix151, testMatrix152,
+    testMatrix153, testMatrix154, testMatrix155, testMatrix156, testMatrix157
 
-**** ; Row to . Row
+**** ; row to . Row
      Matrix040, Matrix055, Matrix056, Matrix067, Matrix070, Matrix071,
      Matrix071, Matrix095,
 
@@ -710,3 +726,11 @@ Table 3
      Why is that not a simple matrix without columns?
 
 **** Matrix030, Last column 3 should be column 4
+
+**** Matrix051, column. matrix -> column matrix.
+
+**** QUESTION: Is it End Matrix, EndMatrix or end matrix
+     Choice: end matrix as this is given in the rules.
+
+**** Column matrix -> column matrix:
+     Matrix123, Matrix124, Matrix127, Matrix128, testMatrix085, testMatrix086, testMatrix089, testMatrix090
