@@ -24,12 +24,12 @@ goog.require('sre.ColorPickerTest');
 goog.require('sre.EnrichMathmlTest');
 goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MarkupTest');
-goog.require('sre.MathmlCloudTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakEmbellishTest');
-goog.require('sre.MathspeakRuleTest');
+goog.require('sre.MathspeakEnglishTest');
 goog.require('sre.MathspeakSpanishTest');
-goog.require('sre.NobleSamplesTest');
+goog.require('sre.MmlcloudEnglishTest');
+goog.require('sre.NobleEnglishTest');
 goog.require('sre.PrefixRuleTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticApiTest');
@@ -77,12 +77,12 @@ sre.Tests.testList = [
   sre.EnrichMathmlTest,
   sre.EnrichSpeechTest,
   sre.MarkupTest,
-  sre.MathmlCloudTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
-  sre.MathspeakRuleTest,
+  sre.MathspeakEnglishTest,
   sre.MathspeakSpanishTest,
-  sre.NobleSamplesTest,
+  sre.MmlcloudEnglishTest,
+  sre.NobleEnglishTest,
   sre.PrefixRuleTest,
   sre.RebuildStreeTest,
   sre.SemanticApiTest,
