@@ -73,20 +73,20 @@ goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
  */
 sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
                                                           opt_style) {
-  opt_style = opt_style || this.style;
+  var style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  // TODO: Sort out the title properly!
-  this.appendExamples('<h2>MathSpeak English ' +
+  this.appendExamples('<h2>' + this.information + ' Locale: ' + this.locale +
+                      ', Style: ' +
                       sre.AbstractRuleTest.htmlCell_(
-      sre.AbstractRuleTest.styleMap_(opt_style)) +
-                      ' Style </h2>',
+                        sre.AbstractRuleTest.styleMap_(style)) +
+                      '.</h2>',
                       sre.AbstractRuleTest.htmlCell_(mathMl) +
                       sre.AbstractRuleTest.htmlCell_(answer)
-  );
+                     );
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: opt_style,
+      {semantics: this.semantics, domain: this.domain, style: style,
          rules: this.rules, locale: this.locale});
   var result = sre.System.getInstance().toSpeech(mathMl);
   this.assert.equal(result, answer);
