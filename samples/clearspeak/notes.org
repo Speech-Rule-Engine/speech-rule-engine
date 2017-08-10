@@ -538,6 +538,18 @@ Helper function for Emacs:
 
 **** ImpTimes100: missing "3"
 
+**** Reverse columns: Extra009
+
+**** Extra001, Extra002: Content of parentheses is wrong!
+
+**** Extra003: z should be 0.
+
+
+**** Extra017: s should be a
+
+
+**** Extra019/20: script L -> script l
+
 *** Pausing commata:
     ImpTimes007, ImpTimes015, ImpTimes024, ImpTimes025, ImpTimes026,
     ImpTimes027, ImpTimes035, testImpTimes041, testImpTimes042, testImpTimes043,
@@ -567,15 +579,23 @@ Helper function for Emacs:
     ImpTimes092, ImpTimes097, ImpTimes098, ImpTimes102, ImpTimes103,
     ImpTimes104, ImpTimes105, ImpTimes112, ImpTimes113, ImpTimes114,
     ImpTimesSilPar006, ImpTimesSilPar008, ImpTimesSilPar009, ImpTimesSilPar013,
-    ImpTimesSilPar014, ImpTimesSilPar015, ImpTimesSilPar019, Extra001, Extra002,
-    Extra005, Extra006, Extra007, Extra008, Extra010, Extra012, Extra013,
-    Extra014, Extra016, Extra018, Extra019, Extra020,
-    ImpTimesSilPar020, ImpTimes106, 
+    ImpTimesSilPar014, ImpTimesSilPar015, ImpTimesSilPar019, Extra003, Extra004,
+    Extra005, Extra006, Extra007, Extra008, Extra009, Extra013, Extra014,
+    ImpTimesSilPar020, ImpTimes106,
+
 *** Simple:
 **** yz
      ImpTimes010, ImpTimes086, ImpTimesSilPar010, 
 **** xy
      ImpTimes104,
+**** bc
+     Extra007,
+**** ab
+     Extra007,
+**** 2t
+     Extra015,
+**** 3a
+     Extra017, 
 
 ** Trigonometry
 

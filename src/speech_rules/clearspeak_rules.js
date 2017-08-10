@@ -131,6 +131,38 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'stree', 'clearspeak.default',
       '[n] ./*[1]', 'self::stree');
 
+  // Font rules
+  defineRule(
+      'font', 'clearspeak.default',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font!="normal"');
+
+  defineRule(
+      'font-identifier', 'clearspeak.default',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1',
+      '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
+      '@role!="unit"');
+
+  defineRule(
+      'omit-font', 'clearspeak.default',
+      '[n] self::* (grammar:ignoreFont=@font)',
+      'self::identifier', 'string-length(text())=1', '@font',
+      'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
+
+  defineRule(
+      'german-font', 'clearspeak.default',
+      '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font="fraktur"');
+
+  defineRule(
+      'german-font', 'clearspeak.default',
+      '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
+      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
+      '@font="bold-fraktur"');
+
   //
   // Text rules
   // 
@@ -1131,32 +1163,33 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::multirel');
 
-  // Named sets
+  // Named sets (They need additional dummy constraints for ordering!)
+  // 
   defineRule(
     'natural-numbers', 'clearspeak.default',
     '[t] "the natural numbers"', 'self::identifier',
     'text()="\u2115" or (text()="N" and @font="double-struck")',
-    'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'integers', 'clearspeak.default',
     '[t] "the integers"', 'self::identifier',
     'text()="\u2124" or (text()="Z" and @font="double-struck")',
-    'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'rational-numbers', 'clearspeak.default',
     '[t] "the rational numbers"', 'self::identifier',
     'text()="\u211A" or (text()="Q" and @font="double-struck")',
-    'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'real-numbers', 'clearspeak.default',
     '[t] "the real numbers"', 'self::identifier',
     'text()="\u211D" or (text()="R" and @font="double-struck")',
-    'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'complex-numbers', 'clearspeak.default',
     '[t] "the complex numbers"', 'self::identifier',
     'text()="\u2102" or (text()="C" and @font="double-struck")',
-    'self::*');
+    'self::*', 'self::*', 'self::*');
 
   // Named sets with superscripts
   defineRule(
@@ -1164,31 +1197,31 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     '[t] "n" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u2115"' +
       ' or (children/*[1]/text()="N" and @font="double-struck")',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'integers-super', 'clearspeak.default',
     '[t] "z" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'rational-numbers-super', 'clearspeak.default',
     '[t] "q" (join: "-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'real-numbers-super', 'clearspeak.default',
     '[t] "r" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u211D"' +
       ' or (children/*[1]/text()="R" and @font="double-struck")',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'complex-numbers-super', 'clearspeak.default',
     '[t] "c" (join:"-"); [n] children/*[2] (grammar:numbers2alpha)',
     'self::superscript', 'children/*[1]/text()="\u2102"' +
       ' or (children/*[1]/text()="C" and @font="double-struck")',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
 
   // Partial named sets.
   defineRule(
@@ -1203,28 +1236,28 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
     'children/*[2]/text()="+"',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'positive-integers', 'clearspeak.default',
     '[t] "the negative integers"',
     'self::superscript', 'children/*[1]/text()="\u2124"' +
       ' or (children/*[1]/text()="Z" and @font="double-struck")',
     'children/*[2]/text()="-"',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'positive-rational-numbers', 'clearspeak.default',
     '[t] "the positive rational numbers"',
     'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
     'children/*[2]/text()="+"',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   defineRule(
     'negative-rational-numbers', 'clearspeak.default',
     '[t] "the negative rational numbers"',
     'self::superscript', 'children/*[1]/text()="\u211A"' +
       ' or (children/*[1]/text()="Q" and @font="double-struck")',
     'children/*[2]/text()="-"',
-    'self::*', 'self::*');
+    'self::*', 'self::*', 'self::*');
   // TODO: Do we need positive and negative real numbers. Usually they are more
   //       complex notation!
 
