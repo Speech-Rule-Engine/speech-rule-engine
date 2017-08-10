@@ -791,3 +791,47 @@ Table 3
 
 *** QUESTION: Some of the pausing commas are inconsistent! 
     (e.g testFracfunct010 vs testFracfunct014)
+
+** Roots
+
+*** Decap:
+    Root001, Root011, Root011a, Root013, Root014, Root015, Root016, Root017,
+    Root018, Root019, Root020, Root021, Root022, Root023, Root024, Root028,
+    Root034, Root034a, Root035, Root036, Root037, Root038, Root039, Root040,
+    Root041, Root042, Root043, Root044, Root045, Root046, Root047, Root048,
+    Root058, Root058a, Root060, Root061, Root064, Root065, Root066, Root067,
+    Root068, Root069, Root070, Root071, Root081, Root081a, Root083, Root085,
+    Root086, Root087, Root088, Root089, Root090, Root091, Root092, Root093,
+    HighRoot001, HighRoot002, HighRoot003, HighRoot004, HighRoot005,
+    HighRoot006, HighRoot007, HighRoot008, HighRoot009, HighRoot010,
+    HighRoot011, HighRoot012, HighRoot013, HighRoot014, HighRoot015,
+    HighRoot016, HighRoot017, HighRoot018, HighRoot019, HighRoot020,
+    HighRoot021, HighRoot022, HighRoot023, HighRoot024, HighRoot025,
+    HighRoot026, HighRoot027, HighRoot028, HighRoot029, HighRoot030,
+    HighRoot031, HighRoot032, HighRoot033, HighRoot034, HighRoot035,
+    HighRoot036, HighRoot037, HighRoot038, HighRoot039, HighRoot040,
+
+*** Trailing period:
+    Root005, Root079, Root080,
+
+*** Pausing commata:
+    testRoot016, testRoot018, testRoot019, testRoot021, testRoot022, testRoot023
+    testRoot031, testRoot040, testRoot042, testRoot043, testRoot045,
+    testRoot046, testRoot047, testRoot052, testRoot054, testRoot055,
+    testRoot056, testRoot057, testRoot059, testRoot061, testRoot063,
+    testRoot065, testRoot066, testRoot068, testRoot069, testRoot070
+
+*** Simple spaceout:
+    testRoot093
+
+*** Corrections:
+
+**** Root011, Root011a,
+
+**** Root032: 2->3
+
+**** testRoot033, testRoot034, Missing parentheses.
+
+**** testRoot079, testRoot080, testRoot083 Missing close paren
+
+**** Root079, Root080, Root084, Root084, parenthesis -> paren

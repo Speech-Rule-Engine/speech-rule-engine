@@ -1984,6 +1984,9 @@
       },
       "mathspeak": {
         "default": "minus-or-plus"
+      },
+      "clearspeak": {
+        "default": "minus or plus"
       }
     },
     "key": "2213"
