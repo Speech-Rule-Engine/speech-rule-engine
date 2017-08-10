@@ -497,7 +497,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'not(following-sibling::*)]');
   defineSpecialisedRule(
       'continued-fraction-outer', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ContinuedFrac"; [n] children/*[1];' +
+      '[t] "frac continua"; [n] children/*[1];' +
       '[t] "entre"; [n] children/*[2]');
   defineSpecialisedRule(
       'continued-fraction-outer', 'mathspeak.brief', 'mathspeak.sbrief');
@@ -511,11 +511,11 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'not(following-sibling::*)]');
   defineSpecialisedRule(
       'continued-fraction-inner', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "StartFrac"; [n] children/*[1];' +
+      '[t] "empezar frac"; [n] children/*[1];' +
       '[t] "entre"; [n] children/*[2]');
   defineSpecialisedRule(
       'continued-fraction-inner', 'mathspeak.brief', 'mathspeak.sbrief',
-      '[t] "Frac"; [n] children/*[1];' +
+      '[t] "frac"; [n] children/*[1];' +
       '[t] "entre"; [n] children/*[2]');
 
   // Radical rules
@@ -920,7 +920,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   );
   defineSpecialisedRule(
       'overscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModAbove"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
+      '[t] "mod superior"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
   );
   defineSpecialisedRule(
       'overscore', 'mathspeak.brief', 'mathspeak.sbrief');
@@ -935,7 +935,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   );
   defineSpecialisedRule(
       'double-overscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModAbove Above"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
+      '[t] "mod superior superior"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
   );
   defineSpecialisedRule(
       'double-overscore', 'mathspeak.brief', 'mathspeak.sbrief');
@@ -947,7 +947,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   );
   defineSpecialisedRule(
       'underscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModBelow"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
+      '[t] "mod inferior"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
   );
   defineSpecialisedRule(
       'underscore', 'mathspeak.brief', 'mathspeak.sbrief');
@@ -961,7 +961,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'children/*[1]/children/*[2][@role="underaccent"]');
   defineSpecialisedRule(
       'double-underscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModBelow Below"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
+      '[t] "mod inferior inferior"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
   );
   defineSpecialisedRule(
       'double-underscore', 'mathspeak.brief', 'mathspeak.sbrief');
