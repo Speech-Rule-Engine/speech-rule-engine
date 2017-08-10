@@ -947,7 +947,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes075 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes076
  */
 sre.ClearspeakImpliedTimes.prototype.untestImpTimes076 = function() {
-  var preference = 'ImpliedTimes_ImpliedTimes_MoreImpliedTimes(AbsoluteValue Preference EndAbs also set)';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_MoreImpliedTimes';
+  preference = 'AbsoluteValue EndAbs';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>';
   var speech = 'the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absoluete value, minus 1';
   this.executeRuleTest(mathml, speech, preference);

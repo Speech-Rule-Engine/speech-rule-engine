@@ -1474,10 +1474,10 @@ sre.ClearspeakFractions.prototype.testFracfunct009 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct010
  */
-sre.ClearspeakFractions.prototype.untestFracfunct010 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct010 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>cos</mi><mn>3</mn><mi>x</mi></mrow></mfrac></mrow></math>';
-  var speech = 'sine 2 x, over, cosine 3 x';
+  var speech = 'sine 2 x over cosine 3 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1485,7 +1485,7 @@ sre.ClearspeakFractions.prototype.untestFracfunct010 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct011
  */
-sre.ClearspeakFractions.prototype.untestFracfunct011 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct011 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
   var speech = 'the fraction with numerator, the sine of, open paren, x plus y, close paren, and denominator, the cosine of, open paren, x plus y, close paren';
@@ -1507,7 +1507,7 @@ sre.ClearspeakFractions.prototype.testFracfunct012 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct013
  */
-sre.ClearspeakFractions.prototype.untestFracfunct013 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct013 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mi>x</mi></mrow><mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>';
   var speech = 'log x over log y';
@@ -1518,10 +1518,10 @@ sre.ClearspeakFractions.prototype.untestFracfunct013 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct014
  */
-sre.ClearspeakFractions.prototype.untestFracfunct014 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct014 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mn>2</mn><mi>x</mi></mrow><mrow><mi>log</mi><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'log 2 x, over log 3 y';
+  var speech = 'log 2 x over log 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1529,10 +1529,10 @@ sre.ClearspeakFractions.prototype.untestFracfunct014 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct015
  */
-sre.ClearspeakFractions.prototype.untestFracfunct015 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct015 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the log base 10 of x over the log base 10 of y';
+  var speech = 'the log base 10 of, x, over, the log base 5 of, y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1540,10 +1540,10 @@ sre.ClearspeakFractions.prototype.untestFracfunct015 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct016
  */
-sre.ClearspeakFractions.prototype.untestFracfunct016 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct016 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mn>2</mn><mi>x</mi></mrow><mrow><msub><mrow><mi>log</mi></mrow><mn>5</mn></msub><mn>3</mn><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the log base 10 of 2 x, over the log base 5 of 3 y';
+  var speech = 'the log base 10 of, 2 x, over, the log base 5 of, 3 y';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1551,10 +1551,10 @@ sre.ClearspeakFractions.prototype.untestFracfunct016 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct017
  */
-sre.ClearspeakFractions.prototype.untestFracfunct017 = function() {
+sre.ClearspeakFractions.prototype.testFracfunct017 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>log</mi><mi>y</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator, the log of, open paren x plus 1, close paren, and denominator log y';
+  var speech = 'the fraction with numerator, the log of, open paren, x plus 1, close paren, and denominator log y';
   this.executeRuleTest(mathml, speech, preference);
 };
 

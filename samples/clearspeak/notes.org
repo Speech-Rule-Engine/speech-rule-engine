@@ -126,12 +126,11 @@
     SOLVED: Corrected to Exp134
 
 *** Fractions
-    Frac027 twice. Second should be Frac029.
 
+****    Frac027 twice. Second should be Frac029.
     SOLVED: Corrected to Frac029
 
-*** Fractions
-    Frac067 twice. Second should be Frac069.
+**** Frac067 twice. Second should be Frac069.
 
     SOLVED: Corrected to Frac069
 
@@ -749,3 +748,13 @@ Table 3
      Matrix123, Matrix124, Matrix127, Matrix128, testMatrix085, testMatrix086, testMatrix089, testMatrix090
 
 **** QUESTION: Is it also a long pause '.' after row/column vector?
+
+
+** Fractions
+
+*** Pausing commata:
+    testFracfunct010, testFracfunct014, testFracfunct015, testFracfunct016,
+    testFracfunct017
+
+*** QUESTION: Some of the pausing commas are inconsistent! 
+    (e.g testFracfunct010 vs testFracfunct014)
