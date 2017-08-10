@@ -68,17 +68,17 @@ goog.inherits(sre.MmlcloudSpanishTest, sre.AbstractRuleTest);
  */
 sre.MmlcloudSpanishTest.prototype.testHtmlEntities = function() {
   var mml = '<mo>&lt;</mo>';
-  this.executeRuleTest(mml, 'less-than', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>&gt;</mo>';
-  this.executeRuleTest(mml, 'greater-than', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mi>n&nbsp;</mi>';
-  this.executeRuleTest(mml, 'n', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mi>&nbsp;m</mi>';
-  this.executeRuleTest(mml, 'm', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mi>n&nbsp;m</mi>';
-  this.executeRuleTest(mml, 'n m', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mi>&nbsp;&nbsp;n&nbsp;&nbsp;m&nbsp;&nbsp;</mi>';
-  this.executeRuleTest(mml, 'n m', 'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -88,28 +88,22 @@ sre.MmlcloudSpanishTest.prototype.testHtmlEntities = function() {
 sre.MmlcloudSpanishTest.prototype.testBinomialFromFrac = function() {
   var mml = '<mfenced><mfrac linethickness="0pt"><mi>n</mi>' +
       '<mi>k</mi></mfrac></mfenced>';
-  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
-                       ' EndBinomialOrMatrix', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mfenced><mfrac linethickness="0.0em"><mi>n</mi>' +
         '<mi>k</mi></mfrac></mfenced>';
-  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
-                       ' EndBinomialOrMatrix', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mfenced><mfrac linethickness="negativeverythinmathspace"><mi>n</mi>' +
         '<mi>k</mi></mfrac></mfenced>';
-  this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
-                       ' EndBinomialOrMatrix', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mfenced><mfrac linethickness="verythinmathspace"><mi>n</mi>' +
         '<mi>k</mi></mfrac></mfenced>';
-  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
-                       'EndFraction right-parenthesis', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mfenced><mfrac linethickness="1pt"><mi>n</mi>' +
         '<mi>k</mi></mfrac></mfenced>';
-  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
-                       'EndFraction right-parenthesis', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mfenced><mfrac linethickness="0.5pt"><mi>n</mi>' +
         '<mi>k</mi></mfrac></mfenced>';
-  this.executeRuleTest(mml, 'left-parenthesis StartFraction n Over k ' +
-                       'EndFraction right-parenthesis', 'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -118,9 +112,9 @@ sre.MmlcloudSpanishTest.prototype.testBinomialFromFrac = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testUnnecessarySpaces = function() {
   var mml = '<mn> 5 </mn>';
-  this.executeRuleTest(mml, '5', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mn> &nbsp; 5 &nbsp; </mn>';
-  this.executeRuleTest(mml, '5', 'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -129,20 +123,18 @@ sre.MmlcloudSpanishTest.prototype.testUnnecessarySpaces = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testAbsValueVsNeutral = function() {
   var mml = '<mo>|</mo><mi>a</mi><mo>|</mo>';
-  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
-  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'brief');
-  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
   mml = '<mo>｜</mo><mi>a</mi><mo>｜</mo>';
-  this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
-  this.executeRuleTest(mml, 'AbsoluteValue a EndAbsoluteValue', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'sbrief');
   mml = '<mo>｜</mo><mi>a</mi><mo>‖</mo>';
-  this.executeRuleTest(mml, 'vertical-bar a double-vertical-bar', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>‖</mo><mi>a</mi><mo>‖</mo>';
-  this.executeRuleTest(mml, 'double-vertical-bar a double-vertical-bar',
-                       'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>¦</mo><mi>a</mi><mo>¦</mo>';
-  this.executeRuleTest(mml, 'broken-vertical-bar a broken-vertical-bar',
-                       'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -151,18 +143,16 @@ sre.MmlcloudSpanishTest.prototype.testAbsValueVsNeutral = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testNegativeVulgarFraction = function() {
   var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'negative five-eighteenths', 'default');
-  this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
-  this.executeRuleTest(mml, 'negative five-eighteenths', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
   mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
       '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'one-half minus five-eighteenths', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
-  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over a EndFraction',
-                       'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'minus StartFraction 5.2 Over 18 EndFraction',
-                       'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -171,13 +161,13 @@ sre.MmlcloudSpanishTest.prototype.testNegativeVulgarFraction = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testTrivialStuff = function() {
   var mml = '<mtext>a</mtext><mo>=</mo><mi>b</mi>';
-  this.executeRuleTest(mml, 'a equals b', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>"</mo>';
-  this.executeRuleTest(mml, 'quotation-mark', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>"</mo><mi>x</mi><mo>"</mo>';
-  this.executeRuleTest(mml, 'quotation-mark x quotation-mark', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mo>\'</mo>';
-  this.executeRuleTest(mml, 'prime', 'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -186,17 +176,17 @@ sre.MmlcloudSpanishTest.prototype.testTrivialStuff = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testGermanFonts = function() {
   var mml = '<mi mathvariant="fraktur">A</mi>';
-  this.executeRuleTest(mml, 'German upper A', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mi mathvariant="bold-fraktur">A</mi>';
-  this.executeRuleTest(mml, 'bold German upper A', 'default');
-  this.executeRuleTest('<mi>&#x1D504;</mi>', 'German upper A', 'default');
-  this.executeRuleTest('<mi>&#x1D56C;</mi>', 'bold German upper A', 'default');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest('<mi>&#x1D504;</mi>', '', 'default');
+  this.executeRuleTest('<mi>&#x1D56C;</mi>', '', 'default');
   mml = '<mtext mathvariant="bold-fraktur">abc</mtext>';
-  this.executeRuleTest(mml, 'bold German abc', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mtext mathvariant="bold-fraktur">ABC</mtext>';
-  this.executeRuleTest(mml, 'bold German ABC', 'default');
+  this.executeRuleTest(mml, '', 'default');
   mml = '<mi mathvariant="bold-fraktur">ABC</mi>';
-  this.executeRuleTest(mml, 'bold German upper A upper B upper C', 'default');
+  this.executeRuleTest(mml, '', 'default');
 };
 
 
@@ -220,9 +210,9 @@ sre.MmlcloudSpanishTest.prototype.testOtherFonts = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testNonalphaIdentifier = function() {
   var mml = '<mi>30°</mi>';
-  this.executeRuleTest(mml, '30 degree', 'default');
-  this.executeRuleTest(mml, '30 degree', 'brief');
-  this.executeRuleTest(mml, '30 degree', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -238,18 +228,9 @@ sre.MmlcloudSpanishTest.prototype.testMixedIdentifier = function() {
       '<mi mathvariant="normal">F</mi><mn>6</mn></msub><mo>+</mo><mn>2</mn>' +
       '<msub><mi mathvariant="normal">H</mi><mn>2</mn></msub>' +
       '<mi mathvariant="normal">O</mi></mrow>';
-  this.executeRuleTest(mml, 'upper S i normal upper O 2 plus 6 normal upper' +
-                       ' H normal upper F right-arrow normal upper H 2 upper' +
-                       ' S i normal upper F 6 plus 2 normal upper H 2 normal' +
-                       ' upper O', 'default');
-  this.executeRuleTest(mml, 'upper S i normal upper O 2 plus 6 normal upper' +
-                       ' H normal upper F right-arrow normal upper H 2 upper' +
-                       ' S i normal upper F 6 plus 2 normal upper H 2 normal' +
-                       ' upper O', 'brief');
-  this.executeRuleTest(mml, 'upper S i normal upper O 2 plus 6 normal upper' +
-                       ' H normal upper F R arrow normal upper H 2 upper' +
-                       ' S i normal upper F 6 plus 2 normal upper H 2 normal' +
-                       ' upper O', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -262,10 +243,9 @@ sre.MmlcloudSpanishTest.prototype.testMixedIdentifier = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testParenSuper = function() {
   var mml = '<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>';
-  this.executeRuleTest(mml, 'left-parenthesis a right-parenthesis squared',
-                       'default');
-  this.executeRuleTest(mml, 'left-p\'ren a right-p\'ren squared', 'brief');
-  this.executeRuleTest(mml, 'L p\'ren a R p\'ren squared', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -276,12 +256,9 @@ sre.MmlcloudSpanishTest.prototype.testParenSuper = function() {
 sre.MmlcloudSpanishTest.prototype.testParenConvoluted = function() {
   var mml = '<mo>(</mo><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup>' +
           '<mo>/2)</mo>';
-  this.executeRuleTest(mml, 'left-parenthesis minus x squared slash' +
-                       ' 2 right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'left-p\'ren minus x squared slash 2 right-p\'ren',
-                       'brief');
-  this.executeRuleTest(mml, 'L p\'ren minus x squared slash 2 R p\'ren',
-                       'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -297,17 +274,9 @@ sre.MmlcloudSpanishTest.prototype.testSupBaseRelseq = function() {
       '<mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn>' +
       '</mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn>' +
       '<mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'c 1 h Superscript 4 minus 2 s Baseline' +
-                       ' less-than-or-equal-to StartFraction 1 Over 2' +
-                       ' upper T EndFraction less-than-or-equal-to c 2 h' +
-                       ' Superscript 4 minus 2 s', 'default');
-  this.executeRuleTest(mml, 'c 1 h Sup 4 minus 2 s Base' +
-                       ' less-than-or-equal-to StartFrac 1 Over 2 upper T' +
-                       ' EndFrac less-than-or-equal-to c 2 h Sup 4 minus 2 s',
-                       'brief');
-  this.executeRuleTest(mml, 'c 1 h Sup 4 minus 2 s Base less-than-or-equal-to' +
-                       ' Frac 1 Over 2 upper T EndFrac less-than-or-equal-to' +
-                       ' c 2 h Sup 4 minus 2 s', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -323,17 +292,9 @@ sre.MmlcloudSpanishTest.prototype.testSupBaseMultirel = function() {
       '<msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup>' +
       '<mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn>' +
       '<mi>s</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'c 1 h Superscript 4 minus 2 s Baseline' +
-                       ' less-than-or-equal-to StartFraction 1 Over 2 upper T' +
-                       ' EndFraction equals c 2 h Superscript 4 minus 2 s',
-                       'default');
-  this.executeRuleTest(mml, 'c 1 h Sup 4 minus 2 s Base less-than-or-equal-to' +
-                       ' StartFrac 1 Over 2 upper T EndFrac equals c 2 h Sup' +
-                       ' 4 minus 2 s', 'brief');
-  this.executeRuleTest(mml, 'c 1 h Sup 4 minus 2 s Base' +
-                       ' less-than-or-equal-to Frac 1 Over 2 upper T EndFrac' +
-                       ' equals c 2 h Sup 4 minus 2 s', 'sbrief');
-
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -345,15 +306,9 @@ sre.MmlcloudSpanishTest.prototype.testSubBaseRelseq = function() {
   var mml = '<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo>' +
       '<mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac>' +
       '<mo>&#x2264;</mo><msub><mi>h</mi><mi>s</mi></msub>';
-  this.executeRuleTest(mml, 'h Subscript s Baseline less-than-or-equal-to' +
-                       ' StartFraction 1 Over 2 upper T EndFraction' +
-                       ' less-than-or-equal-to h Subscript s', 'default');
-  this.executeRuleTest(mml, 'h Sub s Base less-than-or-equal-to StartFrac' +
-                       ' 1 Over 2 upper T EndFrac less-than-or-equal-to h' +
-                       ' Sub s', 'brief');
-  this.executeRuleTest(mml, 'h Sub s Base less-than-or-equal-to Frac 1 Over' +
-                       ' 2 upper T EndFrac less-than-or-equal-to h Sub s',
-                       'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -365,15 +320,9 @@ sre.MmlcloudSpanishTest.prototype.testSubBaseMultirel = function() {
   var mml = '<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo>' +
       '<mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac>' +
       '<mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>';
-  this.executeRuleTest(mml, 'h Subscript s Baseline less-than-or-equal-to' +
-                       ' StartFraction 1 Over 2 upper T EndFraction' +
-                       ' equals h Subscript s', 'default');
-  this.executeRuleTest(mml, 'h Sub s Base less-than-or-equal-to StartFrac' +
-                       ' 1 Over 2 upper T EndFrac equals h' +
-                       ' Sub s', 'brief');
-  this.executeRuleTest(mml, 'h Sub s Base less-than-or-equal-to Frac 1 Over' +
-                       ' 2 upper T EndFrac equals h Sub s',
-                       'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -386,16 +335,9 @@ sre.MmlcloudSpanishTest.prototype.testSubSuperBaseRelseq = function() {
       '<mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi>' +
       '</mrow></mfrac><mo>&#x2264;</mo><msubsup><mi>h</mi><mi>s</mi>' +
       '<mi>t</mi></msubsup>';
-  this.executeRuleTest(mml, 'h Subscript s Superscript t Baseline' +
-                       ' less-than-or-equal-to StartFraction 1 Over 2 upper' +
-                       ' T EndFraction less-than-or-equal-to h Subscript' +
-                       ' s Superscript t', 'default');
-  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to' +
-                       ' StartFrac 1 Over 2 upper T EndFrac' +
-                       ' less-than-or-equal-to h Sub s Sup t', 'brief');
-  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to Frac' +
-                       ' 1 Over 2 upper T EndFrac less-than-or-equal-to' +
-                       ' h Sub s Sup t', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -408,16 +350,9 @@ sre.MmlcloudSpanishTest.prototype.testSubSuperBaseMultirel = function() {
       '<mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi>' +
       '</mrow></mfrac><mo>=</mo><msubsup><mi>h</mi><mi>s</mi>' +
       '<mi>t</mi></msubsup>';
-  this.executeRuleTest(mml, 'h Subscript s Superscript t Baseline' +
-                       ' less-than-or-equal-to StartFraction 1 Over 2 upper' +
-                       ' T EndFraction equals h Subscript s Superscript t',
-                       'default');
-  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to' +
-                       ' StartFrac 1 Over 2 upper T EndFrac' +
-                       ' equals h Sub s Sup t', 'brief');
-  this.executeRuleTest(mml, 'h Sub s Sup t Base less-than-or-equal-to Frac' +
-                       ' 1 Over 2 upper T EndFrac equals h Sub s Sup t',
-                       'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -432,15 +367,9 @@ sre.MmlcloudSpanishTest.prototype.testSquareWithText = function() {
       '<mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup></mrow><mrow>' +
       '<msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'StartFraction area of triangle Over area of' +
-                       ' square EndFraction equals StartFraction 1 unit' +
-                       ' squared Over 16 units cubed EndFraction', 'default');
-  this.executeRuleTest(mml, 'StartFrac area of triangle Over area of square' +
-                       ' EndFrac equals StartFrac 1 unit squared Over 16' +
-                       ' units cubed EndFrac', 'brief');
-  this.executeRuleTest(mml, 'Frac area of triangle Over area of square' +
-                       ' EndFrac equals Frac 1 unit squared Over 16 units' +
-                       ' cubed EndFrac', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -457,15 +386,9 @@ sre.MmlcloudSpanishTest.prototype.testFootnoteWithText = function() {
       '<mtext>&#x00A0;</mtext>' +
       '<msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'area of triangle area of square' +
-                       ' Superscript 1 Baseline 1 unit Superscript 2' +
-                       ' Baseline 16 units Superscript 3', 'default');
-  this.executeRuleTest(mml, 'area of triangle area of' +
-                       ' square Sup 1 Base 1 unit' +
-                       ' Sup 2 Base 16 units Sup 3', 'brief');
-  this.executeRuleTest(mml, 'area of triangle area of' +
-                       ' square Sup 1 Base 1 unit' +
-                       ' Sup 2 Base 16 units Sup 3', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -476,9 +399,9 @@ sre.MmlcloudSpanishTest.prototype.testFootnoteWithText = function() {
 sre.MmlcloudSpanishTest.prototype.testFootnoteWithSimpleText = function() {
   var mml = '<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
       '<mn>2</mn></msup>';
-  this.executeRuleTest(mml, 'area of triangle Superscript 2', 'default');
-  this.executeRuleTest(mml, 'area of triangle Sup 2', 'brief');
-  this.executeRuleTest(mml, 'area of triangle Sup 2', 'sbrief');
+  this.executeRuleTest(mml, '', 'default');
+  this.executeRuleTest(mml, '', 'brief');
+  this.executeRuleTest(mml, '', 'sbrief');
 };
 
 
@@ -489,11 +412,10 @@ sre.MmlcloudSpanishTest.prototype.testMultiline = function() {
   this.executeRuleTest(
       '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
       '</mtr></mtable>',
-      'StartLayout 1st Row  a 2nd Row  b EndLayout');
+      '');
   this.executeRuleTest(
       '<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr>' +
       '<mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>',
-      'StartLayout 1st Row 1st Column a 2nd Column c 2nd Row 1st Column b' +
-      ' 2nd Column d EndLayout');
+      '');
 };
 
