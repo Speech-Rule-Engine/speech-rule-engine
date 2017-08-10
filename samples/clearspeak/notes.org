@@ -531,14 +531,25 @@ Helper function for Emacs:
 
 **** ImpTimes066, missing times
 
+**** ImpTimesSilPar003, ImpTimes079: change 4th and three
+
+**** ImpTimes097: missing "equals the square root of a b"
+
+
+**** ImpTimes100: missing "3"
+
 *** Pausing commata:
     ImpTimes007, ImpTimes015, ImpTimes024, ImpTimes025, ImpTimes026,
     ImpTimes027, ImpTimes035, testImpTimes041, testImpTimes042, testImpTimes043,
-    testImpTimes045, testImpTimes046, testImpTimes051,
-    testImpTimes053, testImpTimes056, testImpTimes057, testImpTimes058,
-    testImpTimes059, testImpTimes060, testImpTimes061, testImpTimes062,
-    testImpTimes063, testImpTimes065, testImpTimes065a, testImpTimes067,
-    testImpTimes068, testImpTimes069, testImpTimes072, testImpTimes075
+    testImpTimes045, testImpTimes046, testImpTimes051, testImpTimes053,
+    testImpTimes056, testImpTimes057, testImpTimes058, testImpTimes059,
+    testImpTimes060, testImpTimes061, testImpTimes062, testImpTimes063,
+    testImpTimes065, testImpTimes065a, testImpTimes067, testImpTimes068,
+    testImpTimes069, testImpTimes072, testImpTimes075, testImpTimes101,
+    testImpTimes103, testImpTimes104, testImpTimes105, testImpTimes106,
+    testImpTimes111, testImpTimesSilPar003, testImpTimesSilPar006,
+    testImpTimesSilPar007, testImpTimesSilPar015, testImpTimesSilPar017,
+    testImpTimesSilPar020
 
 **** Remove commata around times! It appears there are pauses wrt. identifiers but not numbers.
      We get rid of the former! x plus y is the same as x times y.
@@ -559,10 +570,12 @@ Helper function for Emacs:
     ImpTimesSilPar014, ImpTimesSilPar015, ImpTimesSilPar019, Extra001, Extra002,
     Extra005, Extra006, Extra007, Extra008, Extra010, Extra012, Extra013,
     Extra014, Extra016, Extra018, Extra019, Extra020,
-
-*** Simple: yz
-    ImpTimes010, ImpTimes086, ImpTimesSilPar010, 
-
+    ImpTimesSilPar020, ImpTimes106, 
+*** Simple:
+**** yz
+     ImpTimes010, ImpTimes086, ImpTimesSilPar010, 
+**** xy
+     ImpTimes104,
 
 ** Trigonometry
 
