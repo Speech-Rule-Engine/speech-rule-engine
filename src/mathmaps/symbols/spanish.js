@@ -20885,5 +20885,13 @@
      "default": "caracter desconocido o faltante"
    }
   }
+ },
+ {
+   "key": "FF5C",
+   "mappings": {
+     "mathspeak": {
+       "default": "barra vertical"
+     }
+   }
  }
 ]

@@ -58,7 +58,7 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
     return;
   }
   var descrs = sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'domain': 'prefix', 'style': 'default',
+      {'domain': 'prefix', 'style': 'default', locale: 'en',
         'strict': true, 'cache': false, 'speech': true,
         'comparator': new sre.DynamicCstr.DefaultComparator(
             new sre.DynamicCstr({'locale': 'en', 'domain': 'prefix', 'style': 'default'})),

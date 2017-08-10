@@ -55,9 +55,8 @@ sre.MathspeakSpanishTest = function() {
    */
   this.rules = ['MathspeakRules', 'MathspeakSpanish'];
 
-  this.actual = true;
-  
   this.setActive('MathspeakSpanish');
+  this.actual = true;
 };
 goog.inherits(sre.MathspeakSpanishTest, sre.AbstractRuleTest);
 

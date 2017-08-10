@@ -85,3 +85,15 @@ Semantic post-processor
 **** Nested roots all seem to be 
 
 
+*** Finalise:
+    Questions for Oscar.
+
+**** Check 121 with bajobajo vs single bajo
+
+**** Check 104-117 in brief and superbrief with mod inferior/mod superior.
+
+**** Box around an expression is: StartEnclose EndEnclose. What is the Spanish equivalent.
+
+**** Label for multi line equations: etiqueta
+
+
