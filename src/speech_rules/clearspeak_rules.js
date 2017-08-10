@@ -672,6 +672,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'self::fenced'
   );
 
+  defineRule(
+      'fences-open-close', 'clearspeak.ImpliedTimes_None',
+      '[p] (pause:"short"); [n] content/*[1] (grammar:spokenFence);' +
+      ' [p] (pause:"short"); [n] children/*[1];' +
+      ' [p] (pause:"short"); [n] content/*[2] (grammar:spokenFence);' +
+      ' [p] (pause:"short")',
+    'self::fenced', '@role="leftright"',
+    'parent::*/parent::*[@role!="simple function"]',
+    'parent::*/parent::*[@role!="prefix function"]');
+
   // TODO: brackets should be excluded. What about other fences?
   defineRule(
     'fence-nesting', 'clearspeak.Paren_SpeakNestingLevel',
@@ -1075,6 +1085,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'implicit-times', 'clearspeak.ImpliedTimes_MoreImpliedTimes',
       '[n] text()', 'self::operator', '@role="multiplication"', 'text()="⁢"'); 
+  defineRule(
+      'implicit-times', 'clearspeak.ImpliedTimes_None',
+      '', 'self::operator', '@role="multiplication"', 'text()="⁢"');
   // TODO: XPath 2.0 would help here!
 
   // REMARK: Currently we have accelerated rate only with multi-character simple
