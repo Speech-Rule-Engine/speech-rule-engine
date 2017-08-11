@@ -1010,6 +1010,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
 
   // Roots
+  //
+  // Square root
+  // 
+  // TODO: Deal with the extra pause recursively and reduce number of rules!
   defineRule(
       'sqrt', 'clearspeak.default',
       '[t] "the square root of"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:"short")',
@@ -1074,6 +1078,40 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:"short")',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"',
       'not(contains(@grammar, "EndRoot"))');
+
+  // Cube roots
+  defineRule(
+      'cube', 'clearspeak.default',
+      '[t] "the cube root of"; [n] children/*[2] (grammar:EndRoot=false);' +
+      ' [p] (pause:"short")',
+    'self::root', 'children/*[1][text()=3]');
+  defineRule(
+      'cube-nested', 'clearspeak.default',
+      '[p] (pause:"short"); [t] "the cube root of"; ' +
+      '[n] children/*[2] (grammar:EndRoot=false); [p] (pause:"short")',
+      'self::root', 'children/*[1][text()=3]', 'not(preceding-sibling::*)',
+      'ancestor::sqrt|ancestor::root');
+  // Higher roots
+  defineRule(
+      'root', 'clearspeak.default',
+      '[t] "the"; [n] children/*[1] (grammar:ordinal); '
+      + '[t] "root of"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:"short")',
+    'self::root');
+  defineRule(
+      'root-nested', 'clearspeak.default',
+      '[p] (pause:"short"); [t] "the"; [n] children/*[1] (grammar:ordinal); '
+      + '[t] "root of"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:"short")',
+    'self::root', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root');
+
+  defineRule(
+      'root-endroot', 'clearspeak.Roots_RootEnd',
+      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:"short")',
+    'self::root', 'not(contains(@grammar, "EndRoot"))');
+  defineRule(
+      'root-endroot', 'clearspeak.Roots_PosNegSqRootEnd',
+      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:"short")',
+    'self::root', 'not(contains(@grammar, "EndRoot"))');
+
 
   // minus sign
   defineRule(

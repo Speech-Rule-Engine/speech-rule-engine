@@ -312,7 +312,7 @@ sre.ClearspeakRoots.prototype.testRoot023 = function() {
 /**
  * Testing ClearspeakRoots Example Root024
  */
-sre.ClearspeakRoots.prototype.untestRoot024 = function() {
+sre.ClearspeakRoots.prototype.testRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><msqrt><mn>2</mn></msqrt></mrow></math>';
   var speech = 'the positive square root of 2';
@@ -1120,7 +1120,7 @@ sre.ClearspeakRoots.prototype.testRoot093 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot001
  */
-sre.ClearspeakRoots.prototype.untestHighRoot001 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot001 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y';
@@ -1131,7 +1131,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot001 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot002
  */
-sre.ClearspeakRoots.prototype.untestHighRoot002 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot002 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n';
@@ -1142,7 +1142,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot002 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot003
  */
-sre.ClearspeakRoots.prototype.untestHighRoot003 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot003 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
   var speech = 'the fifth root of 35';
@@ -1153,7 +1153,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot003 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot004
  */
-sre.ClearspeakRoots.prototype.untestHighRoot004 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot004 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
   var speech = 'the ninth root of 146';
@@ -1164,7 +1164,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot004 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot005
  */
-sre.ClearspeakRoots.prototype.untestHighRoot005 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot005 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d';
@@ -1175,7 +1175,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot005 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot006
  */
-sre.ClearspeakRoots.prototype.untestHighRoot006 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot006 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
   var speech = 'the mth root of 243';
@@ -1186,10 +1186,10 @@ sre.ClearspeakRoots.prototype.untestHighRoot006 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot007
  */
-sre.ClearspeakRoots.prototype.untestHighRoot007 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot007 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 raised to the power i';
+  var speech = 'the ith root of 2 to the ith power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1197,7 +1197,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot007 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot008
  */
-sre.ClearspeakRoots.prototype.untestHighRoot008 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot008 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
   var speech = 'the jth root of 125';
@@ -1208,7 +1208,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot008 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot009
  */
-sre.ClearspeakRoots.prototype.untestHighRoot009 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot009 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'negative the cube root of y';
@@ -1219,7 +1219,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot009 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot010
  */
-sre.ClearspeakRoots.prototype.untestHighRoot010 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot010 = function() {
   var preference = 'Roots_Auto';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'negative the fourth root of n';
@@ -1230,7 +1230,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot010 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot011
  */
-sre.ClearspeakRoots.prototype.untestHighRoot011 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot011 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y, end root';
@@ -1241,7 +1241,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot011 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot012
  */
-sre.ClearspeakRoots.prototype.untestHighRoot012 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot012 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n, end root';
@@ -1252,7 +1252,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot012 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot013
  */
-sre.ClearspeakRoots.prototype.untestHighRoot013 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot013 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
   var speech = 'the fifth root of 35, end root';
@@ -1263,7 +1263,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot013 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot014
  */
-sre.ClearspeakRoots.prototype.untestHighRoot014 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot014 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
   var speech = 'the ninth root of 146, end root';
@@ -1274,7 +1274,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot014 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot015
  */
-sre.ClearspeakRoots.prototype.untestHighRoot015 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot015 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d, end root';
@@ -1285,7 +1285,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot015 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot016
  */
-sre.ClearspeakRoots.prototype.untestHighRoot016 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot016 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
   var speech = 'the mth root of 243, end root';
@@ -1296,10 +1296,10 @@ sre.ClearspeakRoots.prototype.untestHighRoot016 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot017
  */
-sre.ClearspeakRoots.prototype.untestHighRoot017 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot017 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 raised to the power i, end root';
+  var speech = 'the ith root of 2 to the ith power, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1307,7 +1307,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot017 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot018
  */
-sre.ClearspeakRoots.prototype.untestHighRoot018 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot018 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
   var speech = 'the jth root of 125, end root';
@@ -1318,7 +1318,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot018 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot019
  */
-sre.ClearspeakRoots.prototype.untestHighRoot019 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot019 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'negative the cube root of y, end root';
@@ -1329,7 +1329,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot019 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot020
  */
-sre.ClearspeakRoots.prototype.untestHighRoot020 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot020 = function() {
   var preference = 'Roots_RootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'negative the fourth root of n, end root';
@@ -1340,7 +1340,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot020 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot021
  */
-sre.ClearspeakRoots.prototype.untestHighRoot021 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot021 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y';
@@ -1351,7 +1351,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot021 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot022
  */
-sre.ClearspeakRoots.prototype.untestHighRoot022 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot022 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n';
@@ -1362,7 +1362,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot022 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot023
  */
-sre.ClearspeakRoots.prototype.untestHighRoot023 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot023 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
   var speech = 'the fifth root of 35';
@@ -1373,7 +1373,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot023 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot024
  */
-sre.ClearspeakRoots.prototype.untestHighRoot024 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
   var speech = 'the ninth root of 146';
@@ -1384,7 +1384,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot024 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot025
  */
-sre.ClearspeakRoots.prototype.untestHighRoot025 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot025 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
   var speech = 'the nth root of d';
@@ -1395,7 +1395,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot025 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot026
  */
-sre.ClearspeakRoots.prototype.untestHighRoot026 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
   var speech = 'the mth root of 243';
@@ -1406,10 +1406,10 @@ sre.ClearspeakRoots.prototype.untestHighRoot026 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot027
  */
-sre.ClearspeakRoots.prototype.untestHighRoot027 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 raised to the power i';
+  var speech = 'the ith root of 2 to the ith power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1417,7 +1417,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot027 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot028
  */
-sre.ClearspeakRoots.prototype.untestHighRoot028 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot028 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
   var speech = 'the jth root of 125';
@@ -1428,7 +1428,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot028 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot029
  */
-sre.ClearspeakRoots.prototype.untestHighRoot029 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot029 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'negative the cube root of y';
@@ -1439,7 +1439,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot029 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot030
  */
-sre.ClearspeakRoots.prototype.untestHighRoot030 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'negative the fourth root of n';
@@ -1450,7 +1450,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot030 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot031
  */
-sre.ClearspeakRoots.prototype.untestHighRoot031 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot031 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'the cube root of y, end root';
@@ -1461,7 +1461,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot031 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot032
  */
-sre.ClearspeakRoots.prototype.untestHighRoot032 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot032 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'the fourth root of n, end root';
@@ -1472,7 +1472,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot032 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot033
  */
-sre.ClearspeakRoots.prototype.untestHighRoot033 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot033 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
   var speech = 'the fifth root of 35, end root';
@@ -1483,7 +1483,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot033 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot034
  */
-sre.ClearspeakRoots.prototype.untestHighRoot034 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot034 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
   var speech = 'the ninth root of 146, end root';
@@ -1494,10 +1494,10 @@ sre.ClearspeakRoots.prototype.untestHighRoot034 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot035
  */
-sre.ClearspeakRoots.prototype.untestHighRoot035 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot035 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mi>d</mi><mi>n</mi></mroot></mrow></math>';
-  var speech = 'the nth root of d , end root';
+  var speech = 'the nth root of d, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1505,7 +1505,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot035 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot036
  */
-sre.ClearspeakRoots.prototype.untestHighRoot036 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot036 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
   var speech = 'the mth root of 243, end root';
@@ -1516,10 +1516,10 @@ sre.ClearspeakRoots.prototype.untestHighRoot036 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot037
  */
-sre.ClearspeakRoots.prototype.untestHighRoot037 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot037 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
-  var speech = 'the ith root of 2 raised to the power i, end root';
+  var speech = 'the ith root of 2 to the ith power, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1527,7 +1527,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot037 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot038
  */
-sre.ClearspeakRoots.prototype.untestHighRoot038 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot038 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
   var speech = 'the jth root of 125, end root';
@@ -1538,7 +1538,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot038 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot039
  */
-sre.ClearspeakRoots.prototype.untestHighRoot039 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot039 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
   var speech = 'negative the cube root of y, end root';
@@ -1549,7 +1549,7 @@ sre.ClearspeakRoots.prototype.untestHighRoot039 = function() {
 /**
  * Testing ClearspeakRoots Example HighRoot040
  */
-sre.ClearspeakRoots.prototype.untestHighRoot040 = function() {
+sre.ClearspeakRoots.prototype.testHighRoot040 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
   var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
   var speech = 'negative the fourth root of n, end root';

@@ -835,3 +835,9 @@ Table 3
 **** testRoot079, testRoot080, testRoot083 Missing close paren
 
 **** Root079, Root080, Root084, Root084, parenthesis -> paren
+
+**** HighRoot007, HighRoot017, HighRoot027, HighRoot037, 
+     Replace raised to the power i by to the ith power as this follows the
+     exponent rules!
+
+**** HighRoot035, superfluous comma
