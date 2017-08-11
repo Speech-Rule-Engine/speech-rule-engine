@@ -604,6 +604,43 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'self::superscript', 'children//superscript');
 
   defineRule(
+      'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [t] "power"; [p] (pause:"short")',
+      'self::superscript', 'name(children/*[2])="number"',
+      'children/*[2][@role="integer"]');
+  defineRule(
+      'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [t] "power"; [p] (pause:"short")',
+      'self::superscript', 'name(children/*[2])="prefixop"',
+    'children/*[2][@role="negative"]',
+    'name(children/*[2]/children/*[1])="number"', 'children/*[2]/children/*[1][@role="integer"]');
+  defineRule(
+      'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
+    '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [t] "power"; [p] (pause:"short")',
+     'self::superscript', 'name(children/*[2])="identifier"',
+    'children/*[2][@role="latinletter" or @role="greekletter" or @role="otherletter"]');
+  defineRule(
+      'superscript-ordinal-default', 'clearspeak.Exponent_OrdinalPower',
+      '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
+      '[n] children/*[2]; [p] (pause:"short");' +
+      ' [t] "end exponent" (pause:"short")',
+    'self::superscript', 'children//superscript');
+
+  // TODO: QUESTION: Rules say there should be a power in the default case, but
+  //       it is neither in the examples, nor does it make sense.
+  //
+  defineRule(
+      'superscript-power', 'clearspeak.Exponent_AfterPower',
+      '[n] children/*[1]; [t] "raised to the power"; [n] children/*[2] (grammar:afterPower); [p] (pause:"short")',
+      'self::superscript');
+  defineRule(
+      'superscript-power-default', 'clearspeak.Exponent_AfterPower',
+      '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
+      '[n] children/*[2]; [p] (pause:"short");' +
+      ' [t] "end exponent" (pause:"short")',
+    'self::superscript', 'children//superscript');
+
+  defineRule(
     'exponent', 'clearspeak.default',
     '[n] text() (join:""); [t] "th"', 'self::identifier',
     'contains(@grammar, "ordinal")');
@@ -617,6 +654,14 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'contains(@grammar, "ordinal")', 'text()!="0"');
   defineRule(
     'exponent', 'clearspeak.Exponent_Ordinal',
+    '[t] "zero"', 'self::number', '@role="integer"',
+    'contains(@grammar, "ordinal")', 'text()="0"');
+  defineRule(
+    'exponent', 'clearspeak.Exponent_OrdinalPower',
+    '[t] CSFwordOrdinal', 'self::number', '@role="integer"',
+    'contains(@grammar, "ordinal")', 'text()!="0"');
+  defineRule(
+    'exponent', 'clearspeak.Exponent_OrdinalPower',
     '[t] "zero"', 'self::number', '@role="integer"',
     'contains(@grammar, "ordinal")', 'text()="0"');
 
@@ -1271,7 +1316,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(.)!="identifier"', 'name(.)!="function"', 'name(.)!="number"',
       'name(parent::*/parent::*)="fraction"',
       'not(preceding-sibling::*)');
-  
+
+  defineRule(
+    'operators-after-power', 'clearspeak.Exponent_AfterPower',
+    '[m] children/* (rate:"0.5")', 'self::infixop',
+    '@role="implicit"', 'contains(@grammar, "afterPower")'
+  );
+
 
   // Relations
   defineRule(

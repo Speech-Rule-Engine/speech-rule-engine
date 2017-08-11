@@ -842,7 +842,7 @@ Table 3
 
 **** HighRoot035, superfluous comma
 
-** Expontents
+** Exponents
 
 *** Corrections
 
@@ -852,14 +852,30 @@ Table 3
 
 **** Exp035, rewrite Greek letters.
 
-**** Exp128, Exp084, rewrite Greek letters. parenthesis -> paren
+**** Exp128, Exp084, Exp128, Exp174, rewrite Greek letters. parenthesis -> paren
 
 **** Exp052, simple expression, + -> plus, decap
 
 **** Exp062, decap
 
-**** Exp067, missing the
+**** Exp067,Exp113,  missing the
 
 **** Exp069, 3->2
 
 **** Exp080, Exp079, remove , after the
+
+**** Exp096, Exp140, decap, split 3z
+
+**** Exp112, msssing power
+
+**** Exp127, Exp154, missing end exponent
+
+**** Exp161, 2->3, x -> 3
+
+**** Exp158, 3->2
+
+**** Exp162, 2->3
+
+*** Pausing commata:
+    Exp108, Exp109, Exp110, Exp127, Exp173, Exp125, Exp113, Exp157, Exp158, Exp159, Exp170, Exp172, Exp173, 
+
