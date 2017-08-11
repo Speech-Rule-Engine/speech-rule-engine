@@ -312,7 +312,7 @@ sre.ClearspeakExponents.prototype.testExp014b = function() {
 /**
  * Testing ClearspeakExponents Example Exp015b
  */
-sre.ClearspeakExponents.prototype.untestExp015b = function() {
+sre.ClearspeakExponents.prototype.testExp015b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the 2 x squared power';
@@ -334,7 +334,7 @@ sre.ClearspeakExponents.prototype.testExp016b = function() {
 /**
  * Testing ClearspeakExponents Example Exp017b
  */
-sre.ClearspeakExponents.prototype.untestExp017b = function() {
+sre.ClearspeakExponents.prototype.testExp017b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
   var speech = '5 raised to the 2 x cubed power';
@@ -345,10 +345,10 @@ sre.ClearspeakExponents.prototype.untestExp017b = function() {
 /**
  * Testing ClearspeakExponents Example Exp018b
  */
-sre.ClearspeakExponents.prototype.untestExp018b = function() {
+sre.ClearspeakExponents.prototype.testExp018b = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '3 raised to exponent, 2 squared plus 1, end exponent';
+  var speech = '3 raised to the exponent, 2 squared plus 1, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -367,7 +367,7 @@ sre.ClearspeakExponents.prototype.testExp019b = function() {
 /**
  * Testing ClearspeakExponents Example Exp020
  */
-sre.ClearspeakExponents.prototype.untestExp020 = function() {
+sre.ClearspeakExponents.prototype.testExp020 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
   var speech = '2 raised to the exponent, x squared plus 3 x cubed, end exponent';
@@ -378,7 +378,7 @@ sre.ClearspeakExponents.prototype.untestExp020 = function() {
 /**
  * Testing ClearspeakExponents Example Exp021
  */
-sre.ClearspeakExponents.prototype.untestExp021 = function() {
+sre.ClearspeakExponents.prototype.testExp021 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth power, end exponent';
@@ -389,7 +389,7 @@ sre.ClearspeakExponents.prototype.untestExp021 = function() {
 /**
  * Testing ClearspeakExponents Example Exp022
  */
-sre.ClearspeakExponents.prototype.untestExp022 = function() {
+sre.ClearspeakExponents.prototype.testExp022 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth power, plus 2, end exponent';
@@ -400,7 +400,7 @@ sre.ClearspeakExponents.prototype.untestExp022 = function() {
 /**
  * Testing ClearspeakExponents Example Exp023
  */
-sre.ClearspeakExponents.prototype.untestExp023 = function() {
+sre.ClearspeakExponents.prototype.testExp023 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth power, end exponent, plus 2';
@@ -411,7 +411,7 @@ sre.ClearspeakExponents.prototype.untestExp023 = function() {
 /**
  * Testing ClearspeakExponents Example Exp024
  */
-sre.ClearspeakExponents.prototype.untestExp024 = function() {
+sre.ClearspeakExponents.prototype.testExp024 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>';
   var speech = '2 raised to the exponent, x to the fourth power, end exponent';
@@ -422,7 +422,7 @@ sre.ClearspeakExponents.prototype.untestExp024 = function() {
 /**
  * Testing ClearspeakExponents Example Exp025
  */
-sre.ClearspeakExponents.prototype.untestExp025 = function() {
+sre.ClearspeakExponents.prototype.testExp025 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>';
   var speech = '2 raised to the exponent, 10 raised to the x plus 3 power, end exponent';
@@ -433,10 +433,10 @@ sre.ClearspeakExponents.prototype.untestExp025 = function() {
 /**
  * Testing ClearspeakExponents Example Exp026
  */
-sre.ClearspeakExponents.prototype.untestExp026 = function() {
+sre.ClearspeakExponents.prototype.testExp026 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '3 raised to the exponent, 3 to the 10th power, end exponent';
+  var speech = '3 raised to the exponent, 3 to the tenth power, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -444,10 +444,10 @@ sre.ClearspeakExponents.prototype.untestExp026 = function() {
 /**
  * Testing ClearspeakExponents Example Exp027
  */
-sre.ClearspeakExponents.prototype.untestExp027 = function() {
+sre.ClearspeakExponents.prototype.testExp027 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '3 raised to the exponent, 3 to the 10th power plus 1, end exponent';
+  var speech = '3 raised to the exponent, 3 to the tenth power, plus 1, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -455,10 +455,10 @@ sre.ClearspeakExponents.prototype.untestExp027 = function() {
 /**
  * Testing ClearspeakExponents Example Exp028
  */
-sre.ClearspeakExponents.prototype.untestExp028 = function() {
+sre.ClearspeakExponents.prototype.testExp028 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = '3 raised to the exponent, 3 to the 10th power, end exponent, plus 1';
+  var speech = '3 raised to the exponent, 3 to the tenth power, end exponent, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -466,7 +466,7 @@ sre.ClearspeakExponents.prototype.untestExp028 = function() {
 /**
  * Testing ClearspeakExponents Example Exp029
  */
-sre.ClearspeakExponents.prototype.untestExp029 = function() {
+sre.ClearspeakExponents.prototype.testExp029 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close paren, squared, end exponent';
@@ -477,10 +477,10 @@ sre.ClearspeakExponents.prototype.untestExp029 = function() {
 /**
  * Testing ClearspeakExponents Example Exp030
  */
-sre.ClearspeakExponents.prototype.untestExp030 = function() {
+sre.ClearspeakExponents.prototype.testExp030 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the 10th power, end exponent';
+  var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the tenth power, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -488,7 +488,7 @@ sre.ClearspeakExponents.prototype.untestExp030 = function() {
 /**
  * Testing ClearspeakExponents Example Exp031
  */
-sre.ClearspeakExponents.prototype.untestExp031 = function() {
+sre.ClearspeakExponents.prototype.testExp031 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent';
@@ -499,7 +499,7 @@ sre.ClearspeakExponents.prototype.untestExp031 = function() {
 /**
  * Testing ClearspeakExponents Example Exp032
  */
-sre.ClearspeakExponents.prototype.untestExp032 = function() {
+sre.ClearspeakExponents.prototype.testExp032 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the yth power, plus 2, end exponent';
@@ -510,7 +510,7 @@ sre.ClearspeakExponents.prototype.untestExp032 = function() {
 /**
  * Testing ClearspeakExponents Example Exp033
  */
-sre.ClearspeakExponents.prototype.untestExp033 = function() {
+sre.ClearspeakExponents.prototype.testExp033 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the yth power, end exponent, plus 2';
@@ -518,6 +518,8 @@ sre.ClearspeakExponents.prototype.untestExp033 = function() {
 };
 
 
+// TODO: (Simons) This does not work as semantically we have a -(xy) rather than
+//       (-x)(y).
 /**
  * Testing ClearspeakExponents Example Exp034
  */
@@ -532,10 +534,10 @@ sre.ClearspeakExponents.prototype.untestExp034 = function() {
 /**
  * Testing ClearspeakExponents Example Exp035
  */
-sre.ClearspeakExponents.prototype.untestExp035 = function() {
+sre.ClearspeakExponents.prototype.testExp035 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = 'e raised to the exponent, negative one half, times, open paren, the fraction with numerator x minus µ, and denominator σ, close paren, squared, end exponent';
+  var speech = 'e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, squared, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -543,7 +545,7 @@ sre.ClearspeakExponents.prototype.untestExp035 = function() {
 /**
  * Testing ClearspeakExponents Example Exp036
  */
-sre.ClearspeakExponents.prototype.untestExp036 = function() {
+sre.ClearspeakExponents.prototype.testExp036 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>';
   var speech = '2 to the nth power';
@@ -554,7 +556,7 @@ sre.ClearspeakExponents.prototype.untestExp036 = function() {
 /**
  * Testing ClearspeakExponents Example Exp037
  */
-sre.ClearspeakExponents.prototype.untestExp037 = function() {
+sre.ClearspeakExponents.prototype.testExp037 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>';
   var speech = '2 to the mth power';
@@ -565,7 +567,7 @@ sre.ClearspeakExponents.prototype.untestExp037 = function() {
 /**
  * Testing ClearspeakExponents Example Exp038
  */
-sre.ClearspeakExponents.prototype.untestExp038 = function() {
+sre.ClearspeakExponents.prototype.testExp038 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>';
   var speech = '2 to the ith power';
@@ -576,7 +578,7 @@ sre.ClearspeakExponents.prototype.untestExp038 = function() {
 /**
  * Testing ClearspeakExponents Example Exp039
  */
-sre.ClearspeakExponents.prototype.untestExp039 = function() {
+sre.ClearspeakExponents.prototype.testExp039 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>';
   var speech = '2 to the jth power';
@@ -587,7 +589,7 @@ sre.ClearspeakExponents.prototype.untestExp039 = function() {
 /**
  * Testing ClearspeakExponents Example Exp40
  */
-sre.ClearspeakExponents.prototype.untestExp40 = function() {
+sre.ClearspeakExponents.prototype.testExp40 = function() {
   var preference = 'Exponent_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>';
   var speech = '2 to the ath power';
@@ -598,7 +600,7 @@ sre.ClearspeakExponents.prototype.untestExp40 = function() {
 /**
  * Testing ClearspeakExponents Example Exp041
  */
-sre.ClearspeakExponents.prototype.untestExp041 = function() {
+sre.ClearspeakExponents.prototype.testExp041 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>2</mn></msup></mrow></math>';
   var speech = '3 to the second';
@@ -609,7 +611,7 @@ sre.ClearspeakExponents.prototype.untestExp041 = function() {
 /**
  * Testing ClearspeakExponents Example Exp042
  */
-sre.ClearspeakExponents.prototype.untestExp042 = function() {
+sre.ClearspeakExponents.prototype.testExp042 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>3</mn></msup></mrow></math>';
   var speech = '3 to the third';
@@ -620,7 +622,7 @@ sre.ClearspeakExponents.prototype.untestExp042 = function() {
 /**
  * Testing ClearspeakExponents Example Exp043
  */
-sre.ClearspeakExponents.prototype.untestExp043 = function() {
+sre.ClearspeakExponents.prototype.testExp043 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>0</mn></msup></mrow></math>';
   var speech = '3 to the zero';
@@ -631,7 +633,7 @@ sre.ClearspeakExponents.prototype.untestExp043 = function() {
 /**
  * Testing ClearspeakExponents Example Exp044
  */
-sre.ClearspeakExponents.prototype.untestExp044 = function() {
+sre.ClearspeakExponents.prototype.testExp044 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>1</mn></msup></mrow></math>';
   var speech = '3 to the first';
@@ -642,7 +644,7 @@ sre.ClearspeakExponents.prototype.untestExp044 = function() {
 /**
  * Testing ClearspeakExponents Example Exp045
  */
-sre.ClearspeakExponents.prototype.untestExp045 = function() {
+sre.ClearspeakExponents.prototype.testExp045 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mn>5</mn></msup></mrow></math>';
   var speech = '3 to the fifth';
@@ -653,7 +655,7 @@ sre.ClearspeakExponents.prototype.untestExp045 = function() {
 /**
  * Testing ClearspeakExponents Example Exp046
  */
-sre.ClearspeakExponents.prototype.untestExp046 = function() {
+sre.ClearspeakExponents.prototype.testExp046 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>3.0</mn></mrow></msup></mrow></math>';
   var speech = '4 raised to the 3.0 power';
@@ -664,7 +666,7 @@ sre.ClearspeakExponents.prototype.untestExp046 = function() {
 /**
  * Testing ClearspeakExponents Example Exp047
  */
-sre.ClearspeakExponents.prototype.untestExp047 = function() {
+sre.ClearspeakExponents.prototype.testExp047 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mrow><mn>11</mn></mrow></msup></mrow></math>';
   var speech = '4 to the eleventh';
@@ -675,7 +677,7 @@ sre.ClearspeakExponents.prototype.untestExp047 = function() {
 /**
  * Testing ClearspeakExponents Example Exp048
  */
-sre.ClearspeakExponents.prototype.untestExp048 = function() {
+sre.ClearspeakExponents.prototype.testExp048 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>';
   var speech = '3 to the negative 2';
@@ -686,7 +688,7 @@ sre.ClearspeakExponents.prototype.untestExp048 = function() {
 /**
  * Testing ClearspeakExponents Example Exp049
  */
-sre.ClearspeakExponents.prototype.untestExp049 = function() {
+sre.ClearspeakExponents.prototype.testExp049 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mo>−</mo><mn>2.0</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the negative 2.0 power';
@@ -697,7 +699,7 @@ sre.ClearspeakExponents.prototype.untestExp049 = function() {
 /**
  * Testing ClearspeakExponents Example Exp050
  */
-sre.ClearspeakExponents.prototype.untestExp050 = function() {
+sre.ClearspeakExponents.prototype.testExp050 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>4</mn><mi>x</mi></msup></mrow></math>';
   var speech = '4 to the xth';
@@ -708,7 +710,7 @@ sre.ClearspeakExponents.prototype.untestExp050 = function() {
 /**
  * Testing ClearspeakExponents Example Exp051
  */
-sre.ClearspeakExponents.prototype.untestExp051 = function() {
+sre.ClearspeakExponents.prototype.testExp051 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the y plus 2 power';
@@ -719,10 +721,10 @@ sre.ClearspeakExponents.prototype.untestExp051 = function() {
 /**
  * Testing ClearspeakExponents Example Exp052
  */
-sre.ClearspeakExponents.prototype.untestExp052 = function() {
+sre.ClearspeakExponents.prototype.testExp052 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
-  var speech = 'Open paren, 2y minus 3, close paren, raised to the 3z +8 power';
+  var speech = 'open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -730,7 +732,7 @@ sre.ClearspeakExponents.prototype.untestExp052 = function() {
 /**
  * Testing ClearspeakExponents Example Exp053
  */
-sre.ClearspeakExponents.prototype.untestExp053 = function() {
+sre.ClearspeakExponents.prototype.testExp053 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
   var speech = 'p sub 1, to the second';
@@ -741,7 +743,7 @@ sre.ClearspeakExponents.prototype.untestExp053 = function() {
 /**
  * Testing ClearspeakExponents Example Exp054
  */
-sre.ClearspeakExponents.prototype.untestExp054 = function() {
+sre.ClearspeakExponents.prototype.testExp054 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
   var speech = 'p sub 1, to the third';
@@ -752,7 +754,7 @@ sre.ClearspeakExponents.prototype.untestExp054 = function() {
 /**
  * Testing ClearspeakExponents Example Exp055
  */
-sre.ClearspeakExponents.prototype.untestExp055 = function() {
+sre.ClearspeakExponents.prototype.testExp055 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
   var speech = 'p sub 1, to the fourth';
@@ -763,7 +765,7 @@ sre.ClearspeakExponents.prototype.untestExp055 = function() {
 /**
  * Testing ClearspeakExponents Example Exp056
  */
-sre.ClearspeakExponents.prototype.untestExp056 = function() {
+sre.ClearspeakExponents.prototype.testExp056 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>';
   var speech = 'p sub 1, to the tenth';
@@ -774,7 +776,7 @@ sre.ClearspeakExponents.prototype.untestExp056 = function() {
 /**
  * Testing ClearspeakExponents Example Exp057
  */
-sre.ClearspeakExponents.prototype.untestExp057 = function() {
+sre.ClearspeakExponents.prototype.testExp057 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><msup><mrow/><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
   var speech = 'p sub 1, raised to the x plus 1 power';
@@ -785,7 +787,7 @@ sre.ClearspeakExponents.prototype.untestExp057 = function() {
 /**
  * Testing ClearspeakExponents Example Exp058
  */
-sre.ClearspeakExponents.prototype.untestExp058 = function() {
+sre.ClearspeakExponents.prototype.testExp058 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>2</mn></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the second';
@@ -796,7 +798,7 @@ sre.ClearspeakExponents.prototype.untestExp058 = function() {
 /**
  * Testing ClearspeakExponents Example Exp059
  */
-sre.ClearspeakExponents.prototype.untestExp059 = function() {
+sre.ClearspeakExponents.prototype.testExp059 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>3</mn></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the third';
@@ -807,7 +809,7 @@ sre.ClearspeakExponents.prototype.untestExp059 = function() {
 /**
  * Testing ClearspeakExponents Example Exp060
  */
-sre.ClearspeakExponents.prototype.untestExp060 = function() {
+sre.ClearspeakExponents.prototype.testExp060 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mn>4</mn></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the fourth';
@@ -818,7 +820,7 @@ sre.ClearspeakExponents.prototype.untestExp060 = function() {
 /**
  * Testing ClearspeakExponents Example Exp061
  */
-sre.ClearspeakExponents.prototype.untestExp061 = function() {
+sre.ClearspeakExponents.prototype.testExp061 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mn>10</mn></mrow></msup></mrow></math>';
   var speech = 'p sub, x sub 1, to the tenth';
@@ -829,10 +831,10 @@ sre.ClearspeakExponents.prototype.untestExp061 = function() {
 /**
  * Testing ClearspeakExponents Example Exp062
  */
-sre.ClearspeakExponents.prototype.untestExp062 = function() {
+sre.ClearspeakExponents.prototype.testExp062 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msub><mi>p</mi><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></msub><msup><mrow/><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = 'P sub, x sub 1, raised to the y plus 1 power';
+  var speech = 'p sub, x sub 1, raised to the y plus 1 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -840,7 +842,7 @@ sre.ClearspeakExponents.prototype.untestExp062 = function() {
 /**
  * Testing ClearspeakExponents Example Exp063
  */
-sre.ClearspeakExponents.prototype.untestExp063 = function() {
+sre.ClearspeakExponents.prototype.testExp063 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 2 to the second, end exponent';
@@ -851,10 +853,10 @@ sre.ClearspeakExponents.prototype.untestExp063 = function() {
 /**
  * Testing ClearspeakExponents Example Exp064
  */
-sre.ClearspeakExponents.prototype.untestExp064 = function() {
+sre.ClearspeakExponents.prototype.testExp064 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = '3 raised to the exponent, 2, x to the second, end exponent';
+  var speech = '3 raised to the exponent, 2 x to the second, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -862,7 +864,7 @@ sre.ClearspeakExponents.prototype.untestExp064 = function() {
 /**
  * Testing ClearspeakExponents Example Exp065
  */
-sre.ClearspeakExponents.prototype.untestExp065 = function() {
+sre.ClearspeakExponents.prototype.testExp065 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>';
   var speech = '5 raised to the exponent, 2 to the third, end exponent';
@@ -873,10 +875,10 @@ sre.ClearspeakExponents.prototype.untestExp065 = function() {
 /**
  * Testing ClearspeakExponents Example Exp066
  */
-sre.ClearspeakExponents.prototype.untestExp066 = function() {
+sre.ClearspeakExponents.prototype.testExp066 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
-  var speech = '5 raised to the exponent 2, x to the third, end exponent';
+  var speech = '5 raised to the exponent, 2 x to the third, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -884,10 +886,10 @@ sre.ClearspeakExponents.prototype.untestExp066 = function() {
 /**
  * Testing ClearspeakExponents Example Exp067
  */
-sre.ClearspeakExponents.prototype.untestExp067 = function() {
+sre.ClearspeakExponents.prototype.testExp067 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '3 raised to exponent, 2 to the second, plus 1, end exponent';
+  var speech = '3 raised to the exponent, 2 to the second, plus 1, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -895,7 +897,7 @@ sre.ClearspeakExponents.prototype.untestExp067 = function() {
 /**
  * Testing ClearspeakExponents Example Exp068
  */
-sre.ClearspeakExponents.prototype.untestExp068 = function() {
+sre.ClearspeakExponents.prototype.testExp068 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
   var speech = '3 raised to the exponent, 2 to the second, end exponent, plus 1';
@@ -906,10 +908,10 @@ sre.ClearspeakExponents.prototype.untestExp068 = function() {
 /**
  * Testing ClearspeakExponents Example Exp069
  */
-sre.ClearspeakExponents.prototype.untestExp069 = function() {
+sre.ClearspeakExponents.prototype.testExp069 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup></mrow></msup></mrow></math>';
-  var speech = '3 raised to the exponent, x to the second plus 3 x to the third, end exponent';
+  var speech = '2 raised to the exponent, x to the second, plus 3 x to the third, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -917,7 +919,7 @@ sre.ClearspeakExponents.prototype.untestExp069 = function() {
 /**
  * Testing ClearspeakExponents Example Exp070
  */
-sre.ClearspeakExponents.prototype.untestExp070 = function() {
+sre.ClearspeakExponents.prototype.testExp070 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth, end exponent';
@@ -928,7 +930,7 @@ sre.ClearspeakExponents.prototype.untestExp070 = function() {
 /**
  * Testing ClearspeakExponents Example Exp071
  */
-sre.ClearspeakExponents.prototype.untestExp071 = function() {
+sre.ClearspeakExponents.prototype.testExp071 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth, plus 2, end exponent';
@@ -939,7 +941,7 @@ sre.ClearspeakExponents.prototype.untestExp071 = function() {
 /**
  * Testing ClearspeakExponents Example Exp072
  */
-sre.ClearspeakExponents.prototype.untestExp072 = function() {
+sre.ClearspeakExponents.prototype.testExp072 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mn>4</mn></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the fourth, end exponent, plus 2';
@@ -950,7 +952,7 @@ sre.ClearspeakExponents.prototype.untestExp072 = function() {
 /**
  * Testing ClearspeakExponents Example Exp073
  */
-sre.ClearspeakExponents.prototype.untestExp073 = function() {
+sre.ClearspeakExponents.prototype.testExp073 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mi>x</mi><mn>4</mn></msup></mrow></msup></mrow></math>';
   var speech = '2 raised to the exponent, x to the fourth, end exponent';
@@ -961,7 +963,7 @@ sre.ClearspeakExponents.prototype.untestExp073 = function() {
 /**
  * Testing ClearspeakExponents Example Exp074
  */
-sre.ClearspeakExponents.prototype.untestExp074 = function() {
+sre.ClearspeakExponents.prototype.testExp074 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><msup><mrow><mn>10</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow></msup></mrow></msup></mrow></math>';
   var speech = '2 raised to the exponent, 10 raised to the x plus 3 power, end exponent';
@@ -972,7 +974,7 @@ sre.ClearspeakExponents.prototype.untestExp074 = function() {
 /**
  * Testing ClearspeakExponents Example Exp075
  */
-sre.ClearspeakExponents.prototype.untestExp075 = function() {
+sre.ClearspeakExponents.prototype.testExp075 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the tenth, end exponent';
@@ -983,7 +985,7 @@ sre.ClearspeakExponents.prototype.untestExp075 = function() {
 /**
  * Testing ClearspeakExponents Example Exp076
  */
-sre.ClearspeakExponents.prototype.untestExp076 = function() {
+sre.ClearspeakExponents.prototype.testExp076 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the tenth, plus 1, end exponent';
@@ -994,7 +996,7 @@ sre.ClearspeakExponents.prototype.untestExp076 = function() {
 /**
  * Testing ClearspeakExponents Example Exp077
  */
-sre.ClearspeakExponents.prototype.untestExp077 = function() {
+sre.ClearspeakExponents.prototype.testExp077 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>3</mn><mrow><mn>10</mn></mrow></msup></mrow></msup><mo>+</mo><mn>1</mn></mrow></math>';
   var speech = '3 raised to the exponent, 3 to the tenth, end exponent, plus 1';
@@ -1005,7 +1007,7 @@ sre.ClearspeakExponents.prototype.untestExp077 = function() {
 /**
  * Testing ClearspeakExponents Example Exp078
  */
-sre.ClearspeakExponents.prototype.untestExp078 = function() {
+sre.ClearspeakExponents.prototype.testExp078 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the second, end exponent';
@@ -1016,10 +1018,10 @@ sre.ClearspeakExponents.prototype.untestExp078 = function() {
 /**
  * Testing ClearspeakExponents Example Exp079
  */
-sre.ClearspeakExponents.prototype.untestExp079 = function() {
+sre.ClearspeakExponents.prototype.testExp079 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>10</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '3 raised to the, exponent, open paren, x plus 1, close paren, to the tenth, end exponent';
+  var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the tenth, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1027,10 +1029,10 @@ sre.ClearspeakExponents.prototype.untestExp079 = function() {
 /**
  * Testing ClearspeakExponents Example Exp080
  */
-sre.ClearspeakExponents.prototype.untestExp080 = function() {
+sre.ClearspeakExponents.prototype.testExp080 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>y</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></msup></mrow></math>';
-  var speech = '3 raised to the, exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent';
+  var speech = '3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1038,10 +1040,10 @@ sre.ClearspeakExponents.prototype.untestExp080 = function() {
 /**
  * Testing ClearspeakExponents Example Exp081
  */
-sre.ClearspeakExponents.prototype.untestExp081 = function() {
+sre.ClearspeakExponents.prototype.testExp081 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup><mo>+</mo><mn>2</mn></mrow></msup></mrow></math>';
-  var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the yth, plus 2 end exponent';
+  var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the yth, plus 2, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1049,7 +1051,7 @@ sre.ClearspeakExponents.prototype.untestExp081 = function() {
 /**
  * Testing ClearspeakExponents Example Exp082
  */
-sre.ClearspeakExponents.prototype.untestExp082 = function() {
+sre.ClearspeakExponents.prototype.testExp082 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>y</mi></msup></mrow></msup><mo>+</mo><mn>2</mn></mrow></math>';
   var speech = '3 raised to the exponent, open paren, x plus 1, close paren, to the yth, end exponent, plus 2';
@@ -1060,10 +1062,10 @@ sre.ClearspeakExponents.prototype.untestExp082 = function() {
 /**
  * Testing ClearspeakExponents Example Exp083
  */
-sre.ClearspeakExponents.prototype.untestExp083 = function() {
+sre.ClearspeakExponents.prototype.testExp083 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = 'e raised to exponent, negative one half x to the second, end exponent';
+  var speech = 'e raised to the exponent, negative one half x to the second, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1071,10 +1073,10 @@ sre.ClearspeakExponents.prototype.untestExp083 = function() {
 /**
  * Testing ClearspeakExponents Example Exp084
  */
-sre.ClearspeakExponents.prototype.untestExp084 = function() {
+sre.ClearspeakExponents.prototype.testExp084 = function() {
   var preference = 'Exponent_Ordinal';
   var mathml = '<math><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msup></mrow></math>';
-  var speech = 'e raised to the exponent, negative one half times, open parenthesis, the fraction with numerator x minus µ, and denominator σ, close parenthesis, to the second, end exponent';
+  var speech = 'e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, to the second, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1206,7 +1208,7 @@ sre.ClearspeakExponents.prototype.untestExp095 = function() {
 sre.ClearspeakExponents.prototype.untestExp096 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
-  var speech = 'Open paren, 2y minus 3, close paren, raised to the 3z plus 8 power';
+  var speech = 'Open paren, 2 y minus 3, close paren, raised to the 3z plus 8 power';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1371,7 +1373,7 @@ sre.ClearspeakExponents.prototype.untestExp110 = function() {
 sre.ClearspeakExponents.prototype.untestExp111 = function() {
   var preference = 'Exponent_OrdinalPower';
   var mathml = '<math><mrow><msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>';
-  var speech = '3 raised to exponent, 2 to the second power, plus 1, end exponent';
+  var speech = '3 raised to the exponent, 2 to the second power, plus 1, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1690,7 +1692,7 @@ sre.ClearspeakExponents.prototype.untestExp139 = function() {
 sre.ClearspeakExponents.prototype.untestExp140 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>3</mn><mi>z</mi><mo>+</mo><mn>8</mn></mrow></msup></mrow></math>';
-  var speech = 'Open paren, 2y minus 3, close paren, raised to the power 3z plus 8';
+  var speech = 'Open paren, 2 y minus 3, close paren, raised to the power 3z plus 8';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1855,7 +1857,7 @@ sre.ClearspeakExponents.prototype.untestExp154 = function() {
 sre.ClearspeakExponents.prototype.untestExp155 = function() {
   var preference = 'Exponent_AfterPower';
   var mathml = '<math><mrow><msup><mn>5</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup></mrow></math>';
-  var speech = '5 raised to exponent, 2 raised to the power 3, end exponent';
+  var speech = '5 raised to the exponent, 2 raised to the power 3, end exponent';
   this.executeRuleTest(mathml, speech, preference);
 };
 

@@ -110,6 +110,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
+  addCSF('CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal);
   addCQF('CQFisCapital', sre.ClearspeakUtil.isCapitalLetter);
   addCQF('CQFmatchingFences', sre.ClearspeakUtil.matchingFences);
   addCSF('CSFnestingDepth', sre.ClearspeakUtil.nestingDepth);
@@ -508,28 +509,49 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //
   defineRule(
       'superscript', 'clearspeak.default',
-      '[n] children/*[1]; [t] "raised to exponent" (pause:"short"); ' +
-      '[n] children/*[2]; [p] (pause:"short"); [t] "end exponent"',
+      '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
+      '[n] children/*[2]; [p] (pause:"short");' +
+      ' [t] "end exponent" (pause:"short")',
       'self::superscript');
   defineRule(
       'superscript-simple-exponent', 'clearspeak.default',
-      '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; [t] "power" (pause:"short")',
+      '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; ' +
+      '[t] "power" (pause:"short")',
       'self::superscript', 'not(descendant::superscript)');
+  defineRule(
+      'superscript-simple-exponent', 'clearspeak.default',
+      '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; ' +
+      '[t] "power"',
+    'self::superscript', 'not(descendant::superscript)', 'not(following-sibling::*)');
 
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
-    'children/superscript/children/*[2][text()=2] or children/superscript/children/*[2][text()=3]',
+    'children/superscript/children/*[2][text()="2"] or children/superscript/children/*[2][text()="3"]',
     'name(children/superscript/children/*[1])="number"',
     'contains(children/superscript/children/*[1]/@meaning, "clearspeak:simple")');
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
-    'children/superscript/children/*[2][text()=2] or children/superscript/children/*[2][text()=3]',
+    'children/superscript/children/*[2][text()="2"] or children/superscript/children/*[2][text()="3"]',
     'name(children/superscript/children/*[1])="fraction"',
     'contains(children/superscript/children/*[1]/@meaning, "clearspeak:simple")');
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
-    'children/superscript/children/*[2][text()=2] or children/superscript/children/*[2][text()=3]',
+    'children/superscript/children/*[2][text()="2"] or children/superscript/children/*[2][text()="3"]',
     'name(children/superscript/children/*[1])="identifier"');
+
+  defineRuleAlias(
+      'superscript-simple-exponent', 'self::superscript',
+    'children/*[2][@role="implicit"]', 'count(children/*[2]/children/*)=2',
+    'contains(children/*[2]/children/*[1]/@meaning, "simple")',
+    // 'name(children/*[2]/children/*[1])="number" or ' +
+    //   'name(children/*[2]/children/*[1])="identifier"',
+    'name(children/*[2]/children/*[2])="superscript"',
+    '(name(children/*[2]/children/*[2]/children/*[1])="number" and ' +
+      'contains(children/*[2]/children/*[2]/children/*[1]/@meaning,' +
+      ' "clearspeak:simple")) or ' +
+      'name(children/*[2]/children/*[2]/children/*[1])="identifier"',
+    'children/*[2]/children/*[2]/children/*[2][text()="2"] or ' +
+      'children/*[2]/children/*[2]/children/*[2][text()="3"]');
 
   defineRule(
       'superscript-ordinal', 'clearspeak.default',
@@ -558,10 +580,29 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'children/*[1][@role="simple function"]',
       'not(contains(@grammar, "functions_none"))');
 
-  // defineRule(
-  //   'exponent', 'clearspeak.default',
-  //   '[t] "0"', 'self::number', '@role="integer"',
-  //   'contains(@grammar, "ordinal")', 'text()="0"');
+  defineRule(
+      'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [p] (pause:"short")',
+      'self::superscript', 'name(children/*[2])="number"',
+      'children/*[2][@role="integer"]');
+  defineRule(
+      'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [p] (pause:"short")',
+      'self::superscript', 'name(children/*[2])="prefixop"',
+    'children/*[2][@role="negative"]',
+    'name(children/*[2]/children/*[1])="number"', 'children/*[2]/children/*[1][@role="integer"]');
+  defineRule(
+      'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
+    '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [p] (pause:"short")',
+     'self::superscript', 'name(children/*[2])="identifier"',
+    'children/*[2][@role="latinletter" or @role="greekletter" or @role="otherletter"]');
+  defineRule(
+      'superscript-ordinal-default', 'clearspeak.Exponent_Ordinal',
+      '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
+      '[n] children/*[2]; [p] (pause:"short");' +
+      ' [t] "end exponent" (pause:"short")',
+    'self::superscript', 'children//superscript');
+
   defineRule(
     'exponent', 'clearspeak.default',
     '[n] text() (join:""); [t] "th"', 'self::identifier',
@@ -570,12 +611,20 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'exponent', 'clearspeak.default',
     '[t] CSFordinalExponent', 'self::number', '@role="integer"',
     'contains(@grammar, "ordinal")', 'text()!="0"');
+  defineRule(
+    'exponent', 'clearspeak.Exponent_Ordinal',
+    '[t] CSFwordOrdinal', 'self::number', '@role="integer"',
+    'contains(@grammar, "ordinal")', 'text()!="0"');
+  defineRule(
+    'exponent', 'clearspeak.Exponent_Ordinal',
+    '[t] "zero"', 'self::number', '@role="integer"',
+    'contains(@grammar, "ordinal")', 'text()="0"');
 
   // Square
   defineRule(
       'square', 'clearspeak.default',
       '[n] children/*[1]; [t] "squared"',
-      'self::superscript', 'children/*[2][text()=2]',
+      'self::superscript', 'children/*[2][text()="2"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
@@ -598,7 +647,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'cube', 'clearspeak.default',
       '[n] children/*[1]; [t] "cubed"',
-      'self::superscript', 'children/*[2][text()=3]',
+      'self::superscript', 'children/*[2][text()="3"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
@@ -1084,12 +1133,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'cube', 'clearspeak.default',
       '[t] "the cube root of"; [n] children/*[2] (grammar:EndRoot=false);' +
       ' [p] (pause:"short")',
-    'self::root', 'children/*[1][text()=3]');
+    'self::root', 'children/*[1][text()="3"]');
   defineRule(
       'cube-nested', 'clearspeak.default',
       '[p] (pause:"short"); [t] "the cube root of"; ' +
       '[n] children/*[2] (grammar:EndRoot=false); [p] (pause:"short")',
-      'self::root', 'children/*[1][text()=3]', 'not(preceding-sibling::*)',
+      'self::root', 'children/*[1][text()="3"]', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root');
   // Higher roots
   defineRule(

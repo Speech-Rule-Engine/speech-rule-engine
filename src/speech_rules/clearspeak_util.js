@@ -434,16 +434,6 @@ sre.ClearspeakUtil.NESTING_DEPTH = null;
  * @return {?string} The nesting depth as an ordinal number.
  */
 sre.ClearspeakUtil.nestingDepth = function(node) {
-  console.log('HERE2');
-  // if (sre.ClearspeakUtil.NESTING_DEPTH !== null) {
-  //   return sre.ClearspeakUtil.NESTING_DEPTH;
-  // }
-
-  // var content = sre.XpathUtil.evalXPath('content/*[1]', node);
-  // if (!content) {
-  //   return '';
-  // }
-
   var count = 0;
   var fence = /** @type {Element} */(node).textContent;
   var index = node.getAttribute('role') === 'open' ? 0 : 1;
@@ -465,8 +455,6 @@ sre.ClearspeakUtil.nestingDepth = function(node) {
 
 
 sre.ClearspeakUtil.matchingFences = function(node) {
-  console.log('HERE WE ARE');
-  console.log(node.toString());
   var sibling = node.previousSibling;
   if (sibling) {
     var left = sibling;
@@ -478,16 +466,12 @@ sre.ClearspeakUtil.matchingFences = function(node) {
   if (!right) { // this case should not happen!
     return [];
   }
-  console.log("HHHHH");
-  console.log(left.toString());
-  console.log(right.toString());
   return sre.SemanticAttr.isMatchingFence(left.textContent, right.textContent) ?
     [node] : [];
 };
 
 
 sre.ClearspeakUtil.insertNesting = function(text, correction) {
-  console.log('INSERTING');
   if (!correction || !text) {
     return text;
   }
@@ -520,7 +504,12 @@ sre.ClearspeakUtil.simpleArguments = function(node) {
   return (sre.ClearspeakUtil.simpleFactor_(children[index]) &&
           (sre.ClearspeakUtil.simpleFactor_(children[index + 1]) ||
            children[index + 1].tagName === sre.SemanticAttr.Type.ROOT ||
-           children[index + 1].tagName === sre.SemanticAttr.Type.SQRT)) ?
+           children[index + 1].tagName === sre.SemanticAttr.Type.SQRT ||
+          (children[index + 1].tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+           (children[index + 1].childNodes[0].childNodes[0].tagName === sre.SemanticAttr.Type.NUMBER ||
+            children[index + 1].childNodes[0].childNodes[0].tagName === sre.SemanticAttr.Type.IDENTIFIER) &&
+           (children[index + 1].childNodes[0].childNodes[1].textContent === "2" ||
+            children[index + 1].childNodes[0].childNodes[1].textContent === "3")))) ?
     [node] : [];
 };
 
@@ -623,3 +612,8 @@ sre.ClearspeakUtil.isLogarithmWithBase = function(node) {
   return [];
 };
 // TODO: (Simons) Add these into a category test constraint with xpath argument.
+
+
+sre.ClearspeakUtil.wordOrdinal = function(node) {
+  return sre.MathspeakUtil.wordOrdinal(parseInt(node.textContent, 10));
+};

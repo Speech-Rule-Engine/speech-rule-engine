@@ -841,3 +841,25 @@ Table 3
      exponent rules!
 
 **** HighRoot035, superfluous comma
+
+** Expontents
+
+*** Corrections
+
+**** Exp018b, missing the
+
+**** Exp026, Exp027, Exp028, Exp030,  10th -> tenth
+
+**** Exp035, rewrite Greek letters.
+
+**** Exp128, Exp084, rewrite Greek letters. parenthesis -> paren
+
+**** Exp052, simple expression, + -> plus, decap
+
+**** Exp062, decap
+
+**** Exp067, missing the
+
+**** Exp069, 3->2
+
+**** Exp080, Exp079, remove , after the
