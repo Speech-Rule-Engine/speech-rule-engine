@@ -879,3 +879,9 @@ Table 3
 *** Pausing commata:
     Exp108, Exp109, Exp110, Exp127, Exp173, Exp125, Exp113, Exp157, Exp158, Exp159, Exp170, Exp172, Exp173, 
 
+
+** Adornments
+
+*** Corrections
+
+**** Prime011, Prime012, Prime011, Numbers combined in MathML!

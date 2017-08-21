@@ -284,7 +284,38 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'parent::*/parent::*[@embellished!="punctuation"]'
   );
 
+  // Adornments
+  // 
+  // Primes
+  // This rule uses some redundancy for ordering!
+  defineRule(
+      'prime', 'clearspeak.default',
+      '[n] children/*[1]; [n] children/*[2]',
+    'self::superscript', 'children/*[2]',
+    'children/*[2][@role="prime"]', 'self::*');
+  defineRule(
+      'feet', 'clearspeak.default',
+      '[n] children/*[1]; [t] "feet"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
+    'children/*[2][text()="′"]');
+  defineRule(
+      'foot', 'clearspeak.default',
+      '[n] children/*[1]; [t] "foot"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
+    'children/*[2][text()="′"]', 'children/*[1][text()="1"]');
+  defineRule(
+      'inches', 'clearspeak.default',
+      '[n] children/*[1]; [t] "inches"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
+    'children/*[2][text()="″"]');
+  defineRule(
+      'inch', 'clearspeak.default',
+      '[n] children/*[1]; [t] "inch"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
+    'children/*[2][text()="″"]', 'children/*[1][text()="1"]');
 
+
+  // Punctuated
   defineRule(
       'punctuated', 'clearspeak.default',
       '[m] children/*',
@@ -571,6 +602,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'superscript-simple-function', 'clearspeak.default',
       '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of" (pause:"short"); [n] children/*[1]',
     'self::superscript', 'name(children/*[1])="identifier"', 'children/*[1][@role="simple function"]',
+    'children/*[2][@role!="prime"]',
     'not(contains(@grammar, "functions_none"))');
 
   defineRule(

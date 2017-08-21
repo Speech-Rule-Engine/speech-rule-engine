@@ -1090,6 +1090,9 @@
       },
       "mathspeak": {
         "default": "double-prime"
+      },
+      "clearspeak": {
+        "default": "double prime"
       }
     },
     "key": "2033"
@@ -1102,6 +1105,9 @@
       },
       "mathspeak": {
         "default": "triple-prime"
+      },
+      "clearspeak": {
+        "default": "triple prime"
       }
     },
     "key": "2034"
@@ -1479,6 +1485,9 @@
       },
       "mathspeak": {
         "default": "quadruple-prime"
+      },
+      "clearspeak": {
+        "default": "quadruple prime"
       }
     },
     "key": "2057"
