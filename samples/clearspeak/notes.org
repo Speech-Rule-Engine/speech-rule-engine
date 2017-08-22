@@ -395,9 +395,17 @@ Helper function for Emacs:
      = to equals
      Caps + commas
 
+**** Sum001, Sum002, Sum006, Sum010, = -> equals
+
+**** Sum003, Sum004, Sum005, Sum007, decap I
+
+**** Sum007, Sum008, + -> plus
+**** Sum016, Sum017, Sum018,  spaceout dx
+
 *** Simple spaced out:
     VertLine005, MembSym001, MembSym004, MembSym007, MembSym010, MembSym013,
     MembSym003, MembSym006, MembSym009, MembSym012, MembSym015
+
 
 ** Sets enclosed in brackets
 

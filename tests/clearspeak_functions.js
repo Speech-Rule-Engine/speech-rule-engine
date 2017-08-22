@@ -129,7 +129,7 @@ sre.ClearspeakFunctions.prototype.testFunction007 = function() {
 sre.ClearspeakFunctions.prototype.testFunction008 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>1</mn></mrow></math>';
-  var speech = 'f of, open paren, x plus 1, close paren, equals, f of x, plus 1';
+  var speech = 'f of, open paren, x plus 1, close paren, equals f of x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -517,7 +517,7 @@ sre.ClearspeakFunctions.prototype.testFunction042 = function() {
 sre.ClearspeakFunctions.prototype.testFunction043 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'open paren, f plus g, close paren, of x, equals, f of x, plus, g of x';
+  var speech = 'open paren, f plus g, close paren, of x, equals f of x, plus g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -528,7 +528,7 @@ sre.ClearspeakFunctions.prototype.testFunction043 = function() {
 sre.ClearspeakFunctions.prototype.testFunction044 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, f plus g, close paren, of, open paren, x plus 1, close paren, equals, f of, open paren, x plus 1, close paren, plus, g of, open paren, x plus 1, close paren';
+  var speech = 'open paren, f plus g, close paren, of, open paren, x plus 1, close paren, equals f of, open paren, x plus 1, close paren, plus g of, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -561,7 +561,7 @@ sre.ClearspeakFunctions.prototype.testFunction046 = function() {
 sre.ClearspeakFunctions.prototype.testFunction047 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'open paren, f over g, close paren, of x, equals, f of x, over, g of x';
+  var speech = 'open paren, f over g, close paren, of x, equals, f of x, over g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -572,7 +572,7 @@ sre.ClearspeakFunctions.prototype.testFunction047 = function() {
 sre.ClearspeakFunctions.prototype.testFunction048 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mfrac><mi>f</mi><mi>g</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'open paren, f over g, close paren, of, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator, f of, open paren, 2 x, plus 5, close paren, and denominator, g of, open paren, 2 x, plus 5, close paren';
+  var speech = 'open paren, f over g, close paren, of, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator f of, open paren, 2 x, plus 5, close paren, and denominator g of, open paren, 2 x, plus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -583,7 +583,7 @@ sre.ClearspeakFunctions.prototype.testFunction048 = function() {
 sre.ClearspeakFunctions.prototype.testFunction049 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, f composed with g, close paren, of x, equals, f of, g of x';
+  var speech = 'open paren, f composed with g, close paren, of x, equals f of, g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -594,7 +594,7 @@ sre.ClearspeakFunctions.prototype.testFunction049 = function() {
 sre.ClearspeakFunctions.prototype.testFunction050 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mn>2</mn><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, f of x';
+  var speech = '2 f of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -605,7 +605,7 @@ sre.ClearspeakFunctions.prototype.testFunction050 = function() {
 sre.ClearspeakFunctions.prototype.testFunction051 = function() {
   var preference = 'Functions_Auto';
   var mathml = '<math><mrow><mi>c</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'c, f of x';
+  var speech = 'c f of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 

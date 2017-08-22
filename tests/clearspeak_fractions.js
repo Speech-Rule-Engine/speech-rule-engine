@@ -1375,7 +1375,7 @@ sre.ClearspeakFractions.prototype.testNestFrac036 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct001 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'f of x, over, g of x';
+  var speech = 'f of x, over g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1386,7 +1386,7 @@ sre.ClearspeakFractions.prototype.testFracfunct001 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct002 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator, f of x, plus, g of x, and denominator, g of x';
+  var speech = 'the fraction with numerator f of x, plus g of x, and denominator g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1397,7 +1397,7 @@ sre.ClearspeakFractions.prototype.testFracfunct002 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct003 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator, f of, open paren, x plus 1, close paren, and denominator, g of x';
+  var speech = 'the fraction with numerator f of, open paren, x plus 1, close paren, and denominator g of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1419,7 +1419,7 @@ sre.ClearspeakFractions.prototype.testFracfunct004 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct005 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>2</mn><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = '2 over, f of x';
+  var speech = '2 over f of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1430,7 +1430,7 @@ sre.ClearspeakFractions.prototype.testFracfunct005 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct006 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mn>2</mn><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator 2, and denominator, g of x, plus, g of, open paren, x plus 1, close paren';
+  var speech = 'the fraction with numerator 2, and denominator g of x, plus g of, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1499,7 +1499,7 @@ sre.ClearspeakFractions.prototype.testFracfunct011 = function() {
 sre.ClearspeakFractions.prototype.testFracfunct012 = function() {
   var preference = 'Fraction_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>g</mi><mrow><mo>(</mo><mrow><mn>3</mn><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>';
-  var speech = 'f of 2 x, over, g of 3 x';
+  var speech = 'f of 2 x, over g of 3 x';
   this.executeRuleTest(mathml, speech, preference);
 };
 

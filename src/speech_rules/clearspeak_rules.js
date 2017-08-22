@@ -330,14 +330,28 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'appl', 'clearspeak.default',
-      '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl');
+  defineRule(
+      'appl-simple', 'clearspeak.default',
+      '[n] children/*[1]; [t] "of"; [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+    'self::appl', '@role="simple function"', 'name(children/*[2])="appl"');
+  defineRule(
+      'appl-simple', 'clearspeak.default',
+      '[n] children/*[1]; [t] "of"; [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+    'self::appl', '@role="simple function"', 'name(children/*[2])="fenced"',
+    'name(children/*[2]/children/*[1])="appl"');
+
+  defineRule(
+    'appl', 'clearspeak.Functions_None',
+    '[p] (pause:"short"); [n] children/*[1]; [t] "times"; [n] children/*[2]; [p] (pause:"short")',
+    'self::appl');
 
   defineRule(
       'function-prefix', 'clearspeak.default',
       '[n] children/*[1]; [n] children/*[2]',
     'self::appl', '@role="prefix function"');
-  
+
   // TODO: This could be problematic. Decide at end if it is worth keeping.
   // Does not fully work with ImpTimes065 for example.
   //
@@ -521,11 +535,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'self::superscript', '@role="prefix function"', 'name(children/*[2])="identifier"');
 
 
-  defineRule(
-    'appl', 'clearspeak.Functions_None',
-    '[p] (pause:"short"); [n] children/*[1]; [t] "times"; [n] children/*[2]; [p] (pause:"short")',
-    'self::appl');
-
   // TODO: (MS2.3) Better handling of preferences.
   defineRule(
       'function-inverse', 'clearspeak.Functions_None',
@@ -706,7 +715,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-      'or name(..)="stree"))', 'self::*'
+      'or name(..)="stree"))', 'self::*', 'self::*'
 
     // ,
       // 'name(children/*[1])!="subscript" or (' +
@@ -729,7 +738,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       // Special exception dealing with footnotes.
       'not(name(children/*[1])="text" and ' +
       '(name(../../../punctuated[@role="text"]/..)="stree" ' +
-      'or name(..)="stree"))', 'self::*'
+      'or name(..)="stree"))', 'self::*', 'self::*'
     // ,
       // 'name(children/*[1])!="subscript" or (' +
       // // Keep cubed if we have a simple subscript.
@@ -1680,6 +1689,32 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] children/*[1]/children/*[1]; ' +
       '[t] "choose"; [n] children/*[2]/children/*[1]; ',
       'self::vector', '@role="binomial"');
+
+  // Big operators
+  defineRule(
+      'bigop', 'clearspeak.default',
+      '[t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2];' +
+      ' [p] (pause:"short")',
+      'self::bigop');
+  defineRule(
+    'limboth', 'clearspeak.default',
+    '[n] children/*[1]; [t] "from"; [n] children/*[2];' +
+      '[t] "to"; [n] children/*[3];',
+    'self::limboth');
+  defineRule(
+    'limlower', 'clearspeak.default',
+    '[n] children/*[1]; [t] "over"; [n] children/*[2]; [p] (pause:"short")',
+    'self::limlower');
+  defineRule(
+    'limupper', 'clearspeak.default',
+    '[n] children/*[1]; [t] "under"; [n] children/*[2]; [p] (pause:"short")',
+    'self::limupper');
+  defineRule(
+      'integral', 'clearspeak.default',
+      '[t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2];' +
+      ' [p] (pause:"short")',
+      'self::integral');
+
 };
 
 });  // goog.scope
