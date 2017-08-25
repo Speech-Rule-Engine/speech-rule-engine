@@ -135,13 +135,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'clearspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] self::* (grammar:ignoreFont=@font,pause:"short")',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');

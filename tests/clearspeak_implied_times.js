@@ -1683,7 +1683,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra001 = function() {
   // (All Preferences have been cleared)';
   // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'A equals, h of, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren';
+  var speech = 'A equals h of, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1788,7 +1788,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
   // (All Preferences have been cleared)';
   // TODO (sorge): Sort out preferences!
   var mathml = '<math style="background-color:#"> <semantics>  <mrow>   <mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo></mrow><mo>=</mo><mi>u</mi><mrow><mo>(</mo>    <mrow>     <mo>−</mo><mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow></mrow>   </semantics></math>';
-  var speech = 'negative, u of v, equals, u of negative v, equals negative u v';
+  var speech = 'negative u of v, equals u of negative v, equals negative u v';
   this.executeRuleTest(mathml, speech, preference);
 };
 

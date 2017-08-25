@@ -628,10 +628,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSetMemb002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum001
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum001 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum001 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>n</mi></mstyle></mrow></math>';
-  var speech = 'the sum from n = 1 to 10 of n';
+  var speech = 'the sum from n equals 1 to 10 of n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -639,10 +639,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum002
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum002 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum002 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><mi>n</mi></mstyle></mrow></math>';
-  var speech = 'the sum from n=1 to infinity of n';
+  var speech = 'the sum from n equals 1 to infinity of n';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -653,7 +653,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum002 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum003 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'the sum over I is a member of the positive integers, of i';
+  var speech = 'the sum over i is a member of the positive integers, of i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -661,10 +661,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum004
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum004 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum004 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>S</mi></munder><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'the sum over S, of I';
+  var speech = 'the sum over S, of i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -672,10 +672,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum005
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum005 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum005 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∑</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the sum of, a sub I';
+  var speech = 'the sum of, a sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -683,10 +683,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum005 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum006
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum006 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum006 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>i</mi></mstyle></mrow></math>';
-  var speech = 'the product from i=1 to 10 of i';
+  var speech = 'the product from i equals 1 to 10 of i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -697,7 +697,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum006 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum007 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'the product over I is a member of the positive integers of the fraction with numerator 1 and denominator i+1';
+  var speech = 'the product over i is a member of the positive integers of the fraction with numerator 1 and denominator i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -708,7 +708,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum007 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum008 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'the product over the positive integers of the fraction with numerator 1 and denominator i+1';
+  var speech = 'the product over the positive integers of the fraction with numerator 1 and denominator i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -716,7 +716,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum008 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum009
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum009 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum009 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∏</mo><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
   var speech = 'the product of, a sub i';
@@ -730,7 +730,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum009 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum010 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the intersection from i=1 to 10 of S sub i';
+  var speech = 'the intersection from i equals 1 to 10 of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -741,7 +741,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum010 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum011 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∪</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the union from i=1 to 10 of S sub i';
+  var speech = 'the union from i equals 1 to 10 of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -763,7 +763,7 @@ sre.ClearspeakPart2Symbols.prototype.untestSum012 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum013 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∪</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the union of. S sub i';
+  var speech = 'the union of S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -793,10 +793,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum015 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum016
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum016 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum016 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext></mtext></mrow></mrow></mstyle><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'the integral of f of x dx';
+  var speech = 'the integral of f of x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -804,10 +804,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum016 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum017
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum017 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum017 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'the integral from 0 to 1 of f of x dx';
+  var speech = 'the integral from 0 to 1 of f of x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -818,6 +818,6 @@ sre.ClearspeakPart2Symbols.prototype.untestSum017 = function() {
 sre.ClearspeakPart2Symbols.prototype.untestSum018 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><munder><mo>∫</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'the integral over the real numbers of f of x dx';
+  var speech = 'the integral over the real numbers of f of x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };

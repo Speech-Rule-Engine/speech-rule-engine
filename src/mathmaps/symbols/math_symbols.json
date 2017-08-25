@@ -1970,6 +1970,9 @@
       },
       "mathspeak": {
         "default": "sigma-summation"
+      },
+      "clearspeak": {
+        "default": "sum"
       }
     },
     "key": "2211"
