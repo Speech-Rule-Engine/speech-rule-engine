@@ -118,6 +118,13 @@ sre.MathCompoundStore = function() {
    * @private
    */
   this.subStores_ = {};
+
+
+  /**
+   * @type {string}
+   */
+  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+  
 };
 goog.addSingletonGetter(sre.MathCompoundStore);
 
@@ -132,9 +139,31 @@ goog.addSingletonGetter(sre.MathCompoundStore);
  *     domains to strings, from which the speech rules will be computed.
  */
 sre.MathCompoundStore.prototype.defineRules = function(name, str, mappings) {
-  var store = new sre.MathSimpleStore();
+  var store = this.subStores_[str];
+  if (store) {
+    sre.Debugger.getInstance().output('Store exists! ' + str);
+  } else {
+    store = new sre.MathSimpleStore();
+    this.subStores_[str] = store;
+  }
+  store.locale = this.locale;
   store.defineRulesFromMappings(name, str, mappings);
-  this.subStores_[str] = store;
+};
+
+
+/**
+ * Changes the internal locale for the rule definitions if the given JSON
+ * element is a locale instruction.
+ * @param {Object} json JSON object of a speech rules.
+ * @return {boolean} True if the locale was changed.
+ * @private
+ */
+sre.MathCompoundStore.prototype.changeLocale_ = function(json) {
+  if (!json['locale']) {
+    return false;
+  }
+  this.locale = json['locale'];
+  return true;
 };
 
 
@@ -143,6 +172,9 @@ sre.MathCompoundStore.prototype.defineRules = function(name, str, mappings) {
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addSymbolRules = function(json) {
+  if (this.changeLocale_(json)) {
+    return;
+  }
   var key = sre.MathSimpleStore.parseUnicode_(json['key']);
   this.defineRules(json['key'], key, json['mappings']);
 };
@@ -153,6 +185,9 @@ sre.MathCompoundStore.prototype.addSymbolRules = function(json) {
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
+  if (this.changeLocale_(json)) {
+    return;
+  }
   var names = json['names'];
   var mappings = json['mappings'];
   for (var j = 0, name; name = names[j]; j++) {
@@ -166,6 +201,9 @@ sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addUnitRules = function(json) {
+  if (this.changeLocale_(json)) {
+    return;
+  }
   var names = json['names'];
   if (names) {
     json['names'] = names.map(function(name) {return name + ':' + 'unit';});

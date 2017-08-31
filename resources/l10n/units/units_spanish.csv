@@ -1,0 +1,95 @@
+W,watts,watts
+w,watts,watts
+kw,kilowatts,kilowatts
+kW,kilowatts,kilowatts
+mw,milliwatts,miliwatts
+mW,milliwatts,miliwatts
+kwh,kilowatt hours,kilowatt hora
+kWh,kilowatt hours,kilowatt hora
+J,joules,Joules
+N,Newton,Newton
+A,amperes,Amperes
+V,volts,Voltios
+µΩ,microohm,microohmios
+mΩ,milliohm,miliohmios
+Ω,ohm,ohmios
+Ohm,ohm,ohmios
+kΩ,kilohm,kiloohmios
+KΩ,kilohm,kiloohmios
+MΩ,megaohm,megaohmios
+GΩ,gigaohm,gigaohmios
+mm,millimeters,milímetros
+cm,centimeters,centímetros
+m,meters,metros
+km,kilometers,kilómetros
+ft,feet,pies
+ft.,feet,pies
+in,inches,pulgadas
+in.,inches,pulgadas
+mi,miles,millas
+mi.,miles,millas
+yd,yards,yardas
+yd.,yards,yardas
+n.m.,nautical miles,millas náuticas
+b,bits,bits
+B,bytes,bytes
+KB,kilobytes,kilobytes
+MB,megabytes,megabytes
+GB,gigabytes,gigabytes
+TB,terabytes,terabytes
+doz,dozen,docena
+doz.,dozen,docena
+sq,square,al cuadrado
+sq.,square,al cuadrado
+ha,hectare,hectarea
+ns,nanoseconds,nanosegundos
+µs,microseconds,microsegundos
+ms,milliseconds,milisegundos
+s,seconds,segundos
+min,minutes,minutos
+h,hours,horas
+hr,hours,horas
+kt,knot,nudos
+kt.,knot,nudos
+mph,miles per hour,millas por hora
+rpm,revolutions per minute,revoluciones por minuto
+kmh,kilometers per hour,kilómetros por hora
+F,Fahrenheit,Fahrenheit
+F.,Fahrenheit,Fahrenheit
+°F,Fahrenheit,Fahrenheit
+C,Centigrade,centígrados
+°C,Centigrade,centígrados
+K,Kelvin,Kelvin
+°K,Kelvin,Kelvin
+bbl.,barrels,barriles
+bbl,barrels,barriles
+cu,cubics,cúbicos
+cu.,cubics,cúbicos
+fl. oz.,fluid ounces,onzas líquidas
+gal,gallons,galones
+gal.,gallons,galones
+pt,pints,pintas
+pt.,pints,pintas
+qt,quarts,quarts
+qt.,quarts,quarts
+tbsp,tablespoons,cuchara
+tbsp.,tablespoons,cuchara
+tsp,teaspoons,cucharilla
+tsp.,teaspoons,cucharilla
+cc,cubic centimeters,centímetros cúbicos
+kl,kiloliters,kilolitros
+l,liters,litros
+ml,milliliters,mililitros
+lb,pounds,libras
+lb.,pounds,libras
+LT,long tons,libras imperiales
+L.T.,long tons,libras imperiales
+oz,ounces,onzas  
+oz.,ounces,onzas  
+g,grams,gramos
+gr,grams,gramos
+kg,kilograms,kilogramos
+mg,milligrams,miligramos
+µg,micrograms,microgramos
+t,tons,toneladas
+T,tons,toneladas

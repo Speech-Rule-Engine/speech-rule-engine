@@ -121,7 +121,12 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
   'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js'
+  'math_whitespace.js', 'other_stars.js',
+
+  // TODO: Sort this similar to the above.
+  // Localisation
+  'spanish.js', 'spanish_mathfonts.js'
+
 ];
 
 
@@ -132,7 +137,8 @@ sre.MathMap.SYMBOLS_FILES_ = [
  * @private
  */
 sre.MathMap.FUNCTIONS_FILES_ = [
-  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
+  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js',
+  'functions_spanish.js'
 ];
 
 
@@ -144,7 +150,8 @@ sre.MathMap.FUNCTIONS_FILES_ = [
  */
 sre.MathMap.UNITS_FILES_ = [
   'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
-  'temperature.js', 'time.js', 'volume.js', 'weight.js'
+  'temperature.js', 'time.js', 'volume.js', 'weight.js',
+  'units_spanish.js'
 ];
 
 

@@ -138,6 +138,9 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
 
+  // Dummy.
+  addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
+
   // DIAGRAM: Temporary for testing:
   addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
@@ -151,7 +154,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Initial rule
   defineRule(
       'stree', 'mathspeak.default',
-      '[n] ./*[1]', 'self::stree');
+      '[n] ./*[1]', 'self::stree', 'CQFresetNesting');
 
 
   // Dummy rules
@@ -175,13 +178,13 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -195,7 +198,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
