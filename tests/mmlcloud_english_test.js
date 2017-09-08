@@ -34,7 +34,7 @@ sre.MmlcloudEnglishTest = function() {
   /**
    * @override
    */
-  this.information = 'Mathml Cloud tests.';
+  this.information = 'Mathml Cloud English tests.';
 
   /**
    * @override
