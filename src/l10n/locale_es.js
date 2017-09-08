@@ -28,8 +28,8 @@ sre.Locale.es = {};
 sre.Locale.es.MS = {
   START: 'empezar ',
   FRAC_V: 'fracción',
-  FRAC_B: '',
-  FRAC_S: '',
+  FRAC_B: 'frac',
+  FRAC_S: 'frac',
   END: 'finalizar ',
   FRAC_OVER: 'entre ', // Could be problematic with space separators. Might need
                       // to trim.
@@ -50,9 +50,9 @@ sre.Locale.es.MS = {
   ROOTINDEX: 'índice de raíz',
   ROOT: 'raíz',
   INDEX: '',
-  UNDER: '',
+  UNDER: 'bajo',
   UNDERSCRIPT: 'bajoíndice',
-  OVER: '',
+  OVER: 'sobre',
   OVERSCRIPT: 'sobreíndice'
 };
 
@@ -67,7 +67,6 @@ sre.Locale.es.MS_FUNC = {
 };
 
 
-// TODO: Include this in the rules? Maybe do with ordinals.
 //  That is female ending!
 sre.Locale.es.MS_ROOT_INDEX = {
   '2': 'cuadrada',

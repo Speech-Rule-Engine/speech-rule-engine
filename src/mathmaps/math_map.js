@@ -125,7 +125,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
 
   // TODO: Sort this similar to the above.
   // Localisation
-  'spanish.js'
+  'spanish.js', 'spanish_mathfonts.js'
 
 ];
 

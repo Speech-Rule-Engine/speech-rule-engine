@@ -17,7 +17,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.MathspeakRuleTest');
+goog.provide('sre.MathspeakEnglishTest');
 
 goog.require('sre.AbstractRuleTest');
 
@@ -27,13 +27,13 @@ goog.require('sre.AbstractRuleTest');
  * @constructor
  * @extends {sre.AbstractRuleTest}
  */
-sre.MathspeakRuleTest = function() {
-  sre.MathspeakRuleTest.base(this, 'constructor');
+sre.MathspeakEnglishTest = function() {
+  sre.MathspeakEnglishTest.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'Mathspeak rule tests.';
+  this.information = 'Mathspeak English tests.';
 
   /**
    * @override
@@ -50,15 +50,15 @@ sre.MathspeakRuleTest = function() {
    */
   this.rules = ['MathspeakRules'];
 
-  this.setActive('MathspeakExamples');
+  this.setActive('MathspeakEnglish');
 };
-goog.inherits(sre.MathspeakRuleTest, sre.AbstractRuleTest);
+goog.inherits(sre.MathspeakEnglishTest, sre.AbstractRuleTest);
 
 
 /**
  * Testing Rule 1.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_1_1 = function() {
   var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>';
   this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'default');
   this.executeRuleTest(mml, 'pi almost-equals 3.14159', 'brief');
@@ -69,7 +69,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_1_1 = function() {
 /**
  * Testing Rule 1.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_1_2 = function() {
   var mml = '<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn>' +
       '<mo>=</mo><mn>2,331</mn></mrow>';
   this.executeRuleTest(mml, '102 plus 2,214 plus 15 equals 2,331', 'default');
@@ -81,7 +81,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_1_2 = function() {
 /**
  * Testing Rule 1.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_1_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_1_3 = function() {
   var mml = '<mrow><mn>59</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow>';
   this.executeRuleTest(mml, '59 times 0 equals 0', 'default');
   this.executeRuleTest(mml, '59 times 0 equals 0', 'brief');
@@ -92,7 +92,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_1_3 = function() {
 /**
  * Testing Rule 1.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_2_1 = function() {
   var mml = '<mrow><mn>3</mn><mo>-</mo><mo>-</mo><mn>2</mn></mrow>';
   this.executeRuleTest(mml, '3 minus negative 2', 'default');
   this.executeRuleTest(mml, '3 minus negative 2', 'brief');
@@ -103,7 +103,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_2_1 = function() {
 /**
  * Testing Rule 1.2, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_2_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_2_2 = function() {
   var mml = '<mrow><mo>-</mo><mi>y</mi></mrow>';
   this.executeRuleTest(mml, 'negative y', 'default');
   this.executeRuleTest(mml, 'negative y', 'brief');
@@ -114,7 +114,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_2_2 = function() {
 /**
  * Testing Rule 1.2, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_2_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_2_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>32</mn></mrow>';
   this.executeRuleTest(mml, 'negative 32', 'default');
   this.executeRuleTest(mml, 'negative 32', 'brief');
@@ -125,7 +125,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_2_3 = function() {
 /**
  * Testing Rule 1.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_4_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_4_1 = function() {
   var mml = '<mrow><mn>t2e4</mn></mrow>';
   this.executeRuleTest(mml, 'Number t 2 e 4', 'default');
   this.executeRuleTest(mml, 'Num t 2 e 4', 'brief');
@@ -136,7 +136,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_4_1 = function() {
 /**
  * Testing Rule 1.4, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_4_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_4_2 = function() {
   var mml = '<mrow><mn>#FF0000</mn></mrow>';
   this.executeRuleTest(mml, 'Number number-sign F F 0 0 0 0', 'default');
   this.executeRuleTest(mml, 'Num num-sign F F 0 0 0 0', 'brief');
@@ -147,7 +147,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_4_2 = function() {
 /**
  * Testing Rule 1.4, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_4_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_4_3 = function() {
   var mml = '<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo>' +
       '<mn>0x4100</mn></mrow>';
   this.executeRuleTest(mml, 'Number 0 x 1 5 F F plus Number 0 x 2 B 0 1' +
@@ -162,7 +162,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_4_3 = function() {
 /**
  * Testing Rule 1.5, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_1_5_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_1_5_1 = function() {
   var mml = '<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn>' +
       '<mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>';
   this.executeRuleTest(mml, 'upper I comma UpperWord I I comma UpperWord I I' +
@@ -179,7 +179,7 @@ sre.MathspeakRuleTest.prototype.testSample_1_5_1 = function() {
 /**
  * Testing Rule 1.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_1_6_1 = function() {
+sre.MathspeakEnglishTest.prototype.untestSample_1_6_1 = function() {
   var mml = '<mrow><mfrac><mn>22</mn><mn>7</mn></mfrac><mo>=</mo>' +
       '<mstack stackalign="right"><msline length="6"/><mn>3.142857</mn>' +
       '</mstack></mrow>';
@@ -196,7 +196,7 @@ sre.MathspeakRuleTest.prototype.untestSample_1_6_1 = function() {
 /**
  * Testing Rule 2.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_2_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_2_1_1 = function() {
   var mml = '<mrow><mi>d</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo>' +
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
@@ -217,7 +217,7 @@ sre.MathspeakRuleTest.prototype.testSample_2_1_1 = function() {
 /**
  * Testing Rule 2.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_2_3_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_2_3_1 = function() {
   var mml = '<mrow><mtext>If</mtext><mspace width="4.pt"/><mi>A</mi>' +
       '<mo>→</mo><mi>B</mi><mspace width="4.pt"/><mtext>and</mtext>' +
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
@@ -238,7 +238,7 @@ sre.MathspeakRuleTest.prototype.testSample_2_3_1 = function() {
 /**
  * Testing Rule 2.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_2_6_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_2_6_1 = function() {
   var mml = '<mrow><mo mathvariant="bold">[</mo><mi>x</mi>' +
       '<mo mathvariant="bold">]</mo></mrow>';
   this.executeRuleTest(mml, 'bold left-bracket x bold right-bracket',
@@ -251,7 +251,7 @@ sre.MathspeakRuleTest.prototype.testSample_2_6_1 = function() {
 /**
  * Testing Rule 2.6, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_2_6_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_2_6_2 = function() {
   var mml = '<mrow><mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi>' +
       '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
       '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
@@ -271,7 +271,7 @@ sre.MathspeakRuleTest.prototype.testSample_2_6_2 = function() {
 /**
  * Testing prefix operation as negative or minus.
  */
-sre.MathspeakRuleTest.prototype.testNegativeVsMinus = function() {
+sre.MathspeakEnglishTest.prototype.testNegativeVsMinus = function() {
   var mml = '<mrow><mo>-</mo><mfrac><mn>1</mn><mi>b</mi></mfrac></mrow>';
   this.executeRuleTest(mml, 'minus StartFraction 1 Over b EndFraction',
                        'default');
@@ -286,7 +286,7 @@ sre.MathspeakRuleTest.prototype.testNegativeVsMinus = function() {
 /**
  * Testing Rule 4.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_4_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_4_2_1 = function() {
   var mml = '<mrow><mtext>Uppercase</mtext><mo>(</mo><mo>{</mo><mi>α</mi>' +
       '<mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi>' +
       '<mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo>' +
@@ -315,7 +315,7 @@ sre.MathspeakRuleTest.prototype.testSample_4_2_1 = function() {
 /**
  * Testing Rule 5.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_5_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_5_1_1 = function() {
   var mml = '<mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow>';
   this.executeRuleTest(mml, 'y minus 1', 'default');
   this.executeRuleTest(mml, 'y minus 1', 'brief');
@@ -326,7 +326,7 @@ sre.MathspeakRuleTest.prototype.testSample_5_1_1 = function() {
 /**
  * Testing Rule 5.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_5_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_5_1_2 = function() {
   var mml = '<mrow><mo>(</mo><mn>1</mn><mtext>-to-</mtext>' +
       '<mn>1</mn><mo>)</mo></mrow>';
   this.executeRuleTest(mml, 'left-parenthesis 1 hyphen to hyphen 1' +
@@ -340,7 +340,7 @@ sre.MathspeakRuleTest.prototype.testSample_5_1_2 = function() {
 /**
  * Testing Rule 5.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_5_1_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_5_1_3 = function() {
   var mml = '<mrow><mo>-</mo><mn>1</mn></mrow>';
   this.executeRuleTest(mml, 'negative 1', 'default');
   this.executeRuleTest(mml, 'negative 1', 'brief');
@@ -351,7 +351,7 @@ sre.MathspeakRuleTest.prototype.testSample_5_1_3 = function() {
 /**
  * Testing Rule 6.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_6_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_6_1_1 = function() {
   var mml = '<mtext>The Fibonacci numbers are: </mtext><mrow><mo>{</mo>' +
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
@@ -371,7 +371,7 @@ sre.MathspeakRuleTest.prototype.testSample_6_1_1 = function() {
 /**
  * Testing Rule 6.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_6_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_6_2_1 = function() {
   var mml = '<mrow><mo>|</mo><mn>4</mn><mo>-</mo><mn>7</mn><mo>|</mo>' +
       '<mo>=</mo><mn>3</mn></mrow>';
   this.executeRuleTest(mml, 'StartAbsoluteValue 4 minus 7 EndAbsoluteValue' +
@@ -387,7 +387,7 @@ sre.MathspeakRuleTest.prototype.testSample_6_2_1 = function() {
 /**
  * Testing Rule 6.2, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_6_2_2_old = function() {
+sre.MathspeakEnglishTest.prototype.untestSample_6_2_2_old = function() {
   var mml = '<mrow><mfenced separators="" open="|" close="|"><mi>a</mi>' +
       '<mfenced separators="" open="|" close="|"><mo>±</mo><mi>b</mi>' +
       '</mfenced><mo>-</mo><mn>15</mn></mfenced><mo>≠</mo>' +
@@ -416,7 +416,7 @@ sre.MathspeakRuleTest.prototype.untestSample_6_2_2_old = function() {
  * Testing Rule 6.2, Example 2.
  * This equation does not make sense! We can do it purely syntactically!
  */
-sre.MathspeakRuleTest.prototype.testSample_6_2_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_6_2_2 = function() {
   var mml = '<mrow><mfenced separators="" open="|" close="|"><mi>a</mi>' +
       '<mo>&#xb1;</mo><mfenced separators="" open="|" close="|"><mi>b</mi>' +
       '<mo>-</mo><mi>c</mi></mfenced></mfenced><mo>&#x2260;</mo>' +
@@ -444,7 +444,7 @@ sre.MathspeakRuleTest.prototype.testSample_6_2_2 = function() {
 /**
  * Testing Rule 7.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_1_1 = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
   this.executeRuleTest(mml, 'StartFraction 1 Over x EndFraction', 'default');
   this.executeRuleTest(mml, 'StartFrac 1 Over x EndFrac', 'brief');
@@ -455,7 +455,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_1_1 = function() {
 /**
  * Testing Rule 7.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_1_2 = function() {
   var mml = '<mrow><mi>a</mi><mo>-</mo><mfrac><mrow><mi>b</mi><mo>+</mo>' +
       '<mi>c</mi></mrow><mrow><mi>d</mi><mo>-</mo><mi>e</mi></mrow>' +
       '</mfrac><mo>×</mo><mi>f</mi></mrow>';
@@ -471,7 +471,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_1_2 = function() {
 /**
  * Testing Rule 7.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_2_1 = function() {
   var mml = '<mrow><mfrac><mfrac><mi>x</mi><mi>y</mi></mfrac><mi>z</mi>' +
       '</mfrac><mo>≠</mo><mfrac><mi>x</mi><mfrac><mi>y</mi><mi>z</mi>' +
       '</mfrac></mfrac></mrow>';
@@ -492,7 +492,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_2_1 = function() {
 /**
  * Testing Rule 7.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_3_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_3_1 = function() {
   var mml = '<mfrac><mfrac><mrow><mfenced separators="" open="(" close=")">' +
       '<mn>1</mn><mo>-</mo><mi>x</mi></mfenced><mfrac><mi>d</mi><mrow>' +
       '<mi>d</mi><mi>x</mi></mrow></mfrac>' +
@@ -538,7 +538,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_3_1 = function() {
 /**
  * Testing Rule 7.3, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_3_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_3_2 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac>' +
       '<mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac>' +
       '<mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac>' +
@@ -567,7 +567,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_3_2 = function() {
 /**
  * Testing Rule 7.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_4_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_4_1 = function() {
   var mml = '<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac>' +
       '<mn>2</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>3</mn><mn>2</mn>' +
       '</mfrac><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>+</mo>' +
@@ -594,7 +594,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_4_1 = function() {
 /**
  * Testing Rule 7.4, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_4_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_4_2 = function() {
   var mml = '<mrow><mfrac><mn>20</mn><mn>5</mn></mfrac><mo>×</mo><mfrac>' +
       '<mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>1</mn>' +
       '<mn>25</mn></mfrac></mrow>';
@@ -611,7 +611,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_4_2 = function() {
 /**
  * Testing Rule 7.4, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_4_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
@@ -627,7 +627,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_4_3 = function() {
 /**
  * Testing Rule 7.5, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_5_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_5_1 = function() {
   var mml = '<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo>' +
       '<mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>';
   this.executeRuleTest(mml, '3 and five-eighths equals StartFraction 29 Over' +
@@ -642,7 +642,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_5_1 = function() {
 /**
  * Testing Rule 7.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_7_6_1 = function() {
   var mml = '<mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><msub>' +
       '<mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub>' +
       '<mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub>' +
@@ -674,7 +674,7 @@ sre.MathspeakRuleTest.prototype.testSample_7_6_1 = function() {
 /**
  * Testing Rule 8.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_1_1 = function() {
   var mml = '<mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>6</mn>' +
       '<msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mi>x</mi><mo>=</mo>' +
       '<mn>30</mn></mrow>';
@@ -690,7 +690,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_1_1 = function() {
 /**
  * Testing Rule 8.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_1_2 = function() {
   var mml = '<mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi>' +
       '</mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>' +
       '</mfrac><mo>+</mo><mfenced separators="" open="(" close=")">' +
@@ -712,7 +712,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_1_2 = function() {
 /**
  * Testing Rule 8.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_2_1 = function() {
   var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
   this.executeRuleTest(mml, 'x Superscript one-half', 'default');
   this.executeRuleTest(mml, 'x Sup one-half', 'brief');
@@ -723,7 +723,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_2_1 = function() {
 /**
  * Testing Rule 8.2, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_2_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_2_2 = function() {
   var mml = '<msub><mi>x</mi><mi>n</mi></msub>';
   this.executeRuleTest(mml, 'x Subscript n', 'default');
   this.executeRuleTest(mml, 'x Sub n', 'brief');
@@ -734,7 +734,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_2_2 = function() {
 /**
  * Testing Rule 8.2, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_2_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_2_3 = function() {
   var mml = '<msup><mi>x</mi><mi>a</mi></msup>';
   this.executeRuleTest(mml, 'x Superscript a', 'default');
   this.executeRuleTest(mml, 'x Sup a', 'brief');
@@ -745,7 +745,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_2_3 = function() {
 /**
  * Testing Rule 8.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_3_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_3_1 = function() {
   var mml = '<msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow>' +
       '</msup>';
   this.executeRuleTest(mml, 'x Superscript m plus n', 'default');
@@ -757,7 +757,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_3_1 = function() {
 /**
  * Testing Rule 8.3, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_3_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_3_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
       '</mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>';
   this.executeRuleTest(mml, 'upper T Subscript n minus 1 Baseline plus 5' +
@@ -772,7 +772,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_3_2 = function() {
 /**
  * Testing Rule 8.3, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_3_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_3_3 = function() {
   var mml = '<mrow><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi>' +
       '</mrow></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup><msup>' +
       '<mi>x</mi><mi>n</mi></msup></mrow>';
@@ -788,7 +788,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_3_3 = function() {
 /**
  * Testing Rule 8.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_1 = function() {
   var mml = '<msup><mi>x</mi><mrow><msub><mi>a</mi><mi>n</mi></msub>' +
       '<mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
       '</mrow></msub></mrow></msup>';
@@ -804,7 +804,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_1 = function() {
 /**
  * Testing Rule 8.4, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_2 = function() {
   var mml = '<msup><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msup>';
   this.executeRuleTest(mml, 'x Superscript a Super Subscript b', 'default');
   this.executeRuleTest(mml, 'x Sup a Sup Sub b', 'brief');
@@ -815,7 +815,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_2 = function() {
 /**
  * Testing Rule 8.4, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_3 = function() {
   var mml = '<msub><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msub>';
   this.executeRuleTest(mml, 'x Subscript a Sub Superscript b', 'default');
   this.executeRuleTest(mml, 'x Sub a Sub Sup b', 'brief');
@@ -826,7 +826,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_3 = function() {
 /**
  * Testing Rule 8.4, Example 4.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_4 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_4 = function() {
   var mml = '<mrow><msup><mi>y</mi><msup><mi>a</mi><msub><mi>b</mi>' +
       '<mi>c</mi></msub></msup></msup><mo>≠</mo><msup><mi>y</mi><mrow>' +
       '<msup><mi>a</mi><mi>b</mi></msup><mi>c</mi></mrow></msup></mrow>';
@@ -843,7 +843,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_4 = function() {
 /**
  * Testing Rule 8.4, Example 5.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_5 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_5 = function() {
   var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
       '</msub><mi>b</mi></mrow></msup></msup>';
   this.executeRuleTest(mml, 'y Superscript a Super Super Subscript c Super' +
@@ -856,7 +856,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_5 = function() {
 /**
  * Testing Rule 8.4, Example 5, short.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_5Short = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_5Short = function() {
   var mml = '<msup><mi>y</mi><msup><mi>a</mi><mrow><msub><mrow/><mi>c</mi>' +
       '</msub></mrow></msup></msup>';
   this.executeRuleTest(mml, 'y Superscript a Super Super Subscript c',
@@ -869,7 +869,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_5Short = function() {
 /**
  * Testing Rule 8.4, Example 5, Sup/Sub inversed.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_5Inv = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_5Inv = function() {
   var mml = '<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi>' +
       '</msup></mrow></msub></msub>';
   this.executeRuleTest(mml, 'y Subscript a Sub Sub Superscript c',
@@ -882,7 +882,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_5Inv = function() {
 /**
  * Testing Rule 8.4, Example 5, Sup/Sub inversed, short.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_5InvShort = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_5InvShort = function() {
   var mml = '<msub><mi>y</mi><msub><mi>a</mi><mrow><msup><mrow/><mi>c</mi>' +
       '</msup><mi>b</mi></mrow></msub></msub>';
   this.executeRuleTest(mml, 'y Subscript a Sub Sub Superscript c' +
@@ -895,7 +895,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_5InvShort = function() {
 /**
  * Testing Rule 8.4, Example 6.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_6 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_6 = function() {
   var mml = '<msup><mi>x</mi><msup><mi>a</mi><mi>b</mi></msup></msup>';
   this.executeRuleTest(mml, 'x Superscript a Super Superscript b', 'default');
   this.executeRuleTest(mml, 'x Sup a Sup Sup b', 'brief');
@@ -906,7 +906,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_6 = function() {
 /**
  * Testing Rule 8.4, Example 7.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_7 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_7 = function() {
   var mml = '<msub><mi>x</mi><msub><mi>a</mi><mi>b</mi></msub></msub>';
   this.executeRuleTest(mml, 'x Subscript a Sub Subscript b', 'default');
   this.executeRuleTest(mml, 'x Sub a Sub Sub b', 'brief');
@@ -917,7 +917,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_7 = function() {
 /**
  * Testing Rule 8.4, Example 8.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_4_8 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_4_8 = function() {
   var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
       '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
       '<mi>b</mi></msup></mfenced></msup>';
@@ -934,7 +934,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_4_8 = function() {
 /**
  * Testing Rule 8.5, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_1 = function() {
   var mml = '<msub><mi>x</mi><mn>1</mn></msub>';
   this.executeRuleTest(mml, 'x 1', 'default');
   this.executeRuleTest(mml, 'x 1', 'brief');
@@ -945,7 +945,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_1 = function() {
 /**
  * Testing Rule 8.5, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_2 = function() {
   var mml = '<msub><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub>';
   this.executeRuleTest(mml, 'x Subscript negative 1', 'default');
   this.executeRuleTest(mml, 'x Sub negative 1', 'brief');
@@ -956,7 +956,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_2 = function() {
 /**
  * Testing Rule 8.5, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_3 = function() {
   var mml = '<msub><mi>x</mi><mrow><mn>10,000</mn></mrow>' +
       '</msub>';
   this.executeRuleTest(mml, 'x 10,000', 'default');
@@ -968,7 +968,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_3 = function() {
 /**
  * Testing Rule 8.5, Example 4.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_4 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_4 = function() {
   var mml = '<msub><mi>x</mi><mrow><mn>1.3</mn></mrow>' +
       '</msub>';
   this.executeRuleTest(mml, 'x 1.3', 'default');
@@ -980,7 +980,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_4 = function() {
 /**
  * Testing Rule 8.5, Example 5.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_5 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_5 = function() {
   var mml = '<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub>' +
       '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi>' +
       '<mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
@@ -996,7 +996,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_5 = function() {
 /**
  * Testing Rule 8.5, Example 6.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_6 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_6 = function() {
   var mml = '<msub><mi>a</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow>' +
       '</msub>';
   this.executeRuleTest(mml, 'a Subscript 2 comma 3', 'default');
@@ -1008,7 +1008,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_6 = function() {
 /**
  * Testing Rule 8.5, Example 7.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_7 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_7 = function() {
   var mml = '<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub>' +
       '<mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>';
   this.executeRuleTest(mml, 'upper T Subscript n 1 plus n 0', 'default');
@@ -1020,7 +1020,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_7 = function() {
 /**
  * Testing Rule 8.5, Example 8.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_8 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_8 = function() {
   var mml = '<mrow><msub><mo form="prefix">log</mo><mn>2</mn></msub>' +
       '<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow>' +
       '<msub><mo form="prefix">log</mo><mn>10</mn></msub><mrow><mo>(</mo>' +
@@ -1046,7 +1046,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_8 = function() {
 /**
  * Testing Rule 8.5, Example 9.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_9 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_9 = function() {
   var mml = '<msub><mi>Φ</mi><mn>5</mn></msub>';
   this.executeRuleTest(mml, 'upper Phi 5', 'default');
   this.executeRuleTest(mml, 'upper Phi 5', 'brief');
@@ -1057,7 +1057,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_9 = function() {
 /**
  * Testing Rule 8.5, Example 10.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_5_10 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_5_10 = function() {
   var mml = '<mrow><mo form="prefix">ln</mo><mi>x</mi><mo>=</mo><msubsup>' +
       '<mo>∫</mo><mn>1</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi>' +
       '<mi>t</mi></mrow><mi>t</mi></mfrac></mrow>';
@@ -1074,7 +1074,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_5_10 = function() {
 /**
  * Testing Rule 8.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_6_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_6_1 = function() {
   var mml = '<mrow><mi>$</mi><mi>n</mi><mn>2</mn><mo>=</mo><mn>2</mn>' +
       '<mo>*</mo><mi>$</mi><mi>n</mi><mo>+</mo><mn>1</mn><mo>;</mo></mrow>';
   this.executeRuleTest(mml, 'dollar-sign n Baseline 2 equals 2 asterisk' +
@@ -1089,7 +1089,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_6_1 = function() {
 /**
  * Testing Rule 8.8, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_8_1_naive = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_8_1_naive = function() {
   var mml = '<mmultiscripts><mi>x</mi><mrow><mi>e</mi><mi>f</mi></mrow>' +
       '<mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi>' +
       '<mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>';
@@ -1103,7 +1103,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_8_1_naive = function() {
 /**
  * Testing Rule 8.8, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_8_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_8_1 = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>e</mi>' +
       '<mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi>' +
       '<mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>';
@@ -1117,7 +1117,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_8_1 = function() {
 /**
  * Testing tensors Multi scripts.
  */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimpleABC = function() {
+sre.MathspeakEnglishTest.prototype.testSampleTensorMultiSimpleABC = function() {
   var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1130,7 +1130,7 @@ sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimpleABC = function() {
 /**
  * Testing tensors Multi scripts.
  */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiSub = function() {
+sre.MathspeakEnglishTest.prototype.testSampleTensorMultiSub = function() {
   var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub>' +
       '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1145,7 +1145,7 @@ sre.MathspeakRuleTest.prototype.testSampleTensorMultiSub = function() {
 /**
  * Testing tensors Multi scripts.
  */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiSubSup = function() {
+sre.MathspeakEnglishTest.prototype.testSampleTensorMultiSubSup = function() {
   var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi>' +
       '<mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
@@ -1162,7 +1162,7 @@ sre.MathspeakRuleTest.prototype.testSampleTensorMultiSubSup = function() {
 /**
  * Testing tensors Multi scripts.
  */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimple = function() {
+sre.MathspeakEnglishTest.prototype.testSampleTensorMultiSimple = function() {
   var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
       '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1178,7 +1178,7 @@ sre.MathspeakRuleTest.prototype.testSampleTensorMultiSimple = function() {
 /**
  * Testing tensors Multi scripts.
  */
-sre.MathspeakRuleTest.prototype.testSampleTensorMultiComplex = function() {
+sre.MathspeakEnglishTest.prototype.testSampleTensorMultiComplex = function() {
   var mml = '<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi>' +
       '<mi>l</mi></msup></mrow><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
@@ -1195,7 +1195,7 @@ sre.MathspeakRuleTest.prototype.testSampleTensorMultiComplex = function() {
 /**
  * Testing tensors ABCD.
  */
-sre.MathspeakRuleTest.prototype.testSampleTwoTensors = function() {
+sre.MathspeakEnglishTest.prototype.testSampleTwoTensors = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>' +
       '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
@@ -1221,7 +1221,7 @@ sre.MathspeakRuleTest.prototype.testSampleTwoTensors = function() {
 /**
  * Testing tensors ABCD.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCD = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCD = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1234,7 +1234,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCD = function() {
 /**
  * Testing tensors ABC.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABC = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABC = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1247,7 +1247,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABC = function() {
 /**
  * Testing tensors ABD.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABD = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABD = function() {
   var mml = '<mmultiscripts><mi>x</mi><none/><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1260,7 +1260,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABD = function() {
 /**
  * Testing tensors AB.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorAB = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorAB = function() {
   var mml = '<mmultiscripts><mi>x</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x', 'default');
@@ -1272,7 +1272,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorAB = function() {
 /**
  * Testing tensors ABCR.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCR = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCR = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1285,7 +1285,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCR = function() {
 /**
  * Testing tensors ABCDR.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDR = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDR = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
   this.executeRuleTest(mml, 'Subscript a Superscript b Baseline x' +
@@ -1298,7 +1298,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDR = function() {
 /**
  * Testing tensors Root of ABCD.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRoot = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRoot = function() {
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>';
   this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
@@ -1314,7 +1314,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRoot = function() {
 /**
  * Testing tensors Root ABCD . R.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRootR = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRootR = function() {
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>';
   this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
@@ -1330,7 +1330,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDRootR = function() {
 /**
  * Testing tensors Frac of ABCD.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFrac = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFrac = function() {
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
   this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b' +
@@ -1346,7 +1346,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFrac = function() {
 /**
  * Testing tensors Frac ABCD . R.
  */
-sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFracR = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFracR = function() {
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
   this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b' +
@@ -1362,7 +1362,7 @@ sre.MathspeakRuleTest.prototype.testSamplePartialTensorABCDFracR = function() {
 /**
  * Testing Rule additional examples for simple subscripts with square.
  */
-sre.MathspeakRuleTest.prototype.testSampleSimpleSquare = function() {
+sre.MathspeakEnglishTest.prototype.testSampleSimpleSquare = function() {
   var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>';
   this.executeRuleTest(mml, 'upper T 0 squared', 'default');
   this.executeRuleTest(mml, 'upper T 0 squared', 'brief');
@@ -1377,7 +1377,7 @@ sre.MathspeakRuleTest.prototype.testSampleSimpleSquare = function() {
 /**
  * Testing Rule additional examples for simple subscripts with cube.
  */
-sre.MathspeakRuleTest.prototype.testSampleSimpleCube = function() {
+sre.MathspeakEnglishTest.prototype.testSampleSimpleCube = function() {
   var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>';
   this.executeRuleTest(mml, 'upper T 0 cubed', 'default');
   this.executeRuleTest(mml, 'upper T 0 cubed', 'brief');
@@ -1392,7 +1392,7 @@ sre.MathspeakRuleTest.prototype.testSampleSimpleCube = function() {
 /**
  * Testing Rule 8.8, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_8_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_8_2 = function() {
   var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
       '<mn>2</mn></msubsup>';
   this.executeRuleTest(mml, 'upper T Subscript n minus 1 Superscript 2',
@@ -1405,7 +1405,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_8_2 = function() {
 /**
  * Testing Rule 8.9, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_9_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_9_1 = function() {
   var mml = '<msup><mi>x</mi><mo>\'</mo></msup>';
   this.executeRuleTest(mml, 'x prime', 'default');
   this.executeRuleTest(mml, 'x prime', 'brief');
@@ -1416,7 +1416,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_9_1 = function() {
 /**
  * Testing Rule 8.9, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_9_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_9_2 = function() {
   var mml = '<mrow><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo><mo>\'</mo>' +
       '</mrow></msup><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo>' +
       '<mfrac><mrow><mi>d</mi><msup><mi>f</mi><mrow><mo>\'</mo><mo>\'</mo>' +
@@ -1438,7 +1438,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_9_2 = function() {
 /**
  * Testing Rule 8.10, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_10_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_10_1 = function() {
   var mml = '<mrow><msup><mi>ρ</mi><mo>\'</mo></msup><mo>=</mo><msubsup>' +
       '<mi>ρ</mi><mo>+</mo><mo>\'</mo></msubsup><mo>+</mo><msubsup>' +
       '<mi>ρ</mi><mo>-</mo><mo>\'</mo></msubsup></mrow>';
@@ -1454,7 +1454,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_10_1 = function() {
 /**
  * Testing Rule 8.10, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_10_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_10_2 = function() {
   var mml = '<msubsup><mi>x</mi><mn>10</mn><mo>\'</mo></msubsup>';
   this.executeRuleTest(mml, 'x prime 10', 'default');
   this.executeRuleTest(mml, 'x prime 10', 'brief');
@@ -1465,7 +1465,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_10_2 = function() {
 /**
  * Testing Rule 8.10, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_10_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_10_3 = function() {
   var mml = '<msubsup><mi>T</mi><mi>n</mi><mo>\'</mo></msubsup>';
   this.executeRuleTest(mml, 'upper T prime Subscript n', 'default');
   this.executeRuleTest(mml, 'upper T prime Sub n', 'brief');
@@ -1476,7 +1476,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_10_3 = function() {
 /**
  * Testing Rule 8.11, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_11_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_11_1 = function() {
   var mml = '<mfenced open="[" close="]"><mtable><mtr><mtd><msup><mi>x</mi>' +
       '<mi>n</mi></msup></mtd><mtd><msup><mi>y</mi><mi>n</mi></msup></mtd>' +
       '<mtd><msup><mi>z</mi><mi>n</mi></msup></mtd></mtr><mtr><mtd><msup>' +
@@ -1503,7 +1503,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_11_1 = function() {
 /**
  * Testing Rule 8.12, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_12_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_12_1 = function() {
   var mml = '<msup><mrow><msub><mi>x</mi><mi>a</mi></msub></mrow><mi>b</mi>' +
       '</msup>';
   this.executeRuleTest(mml, 'x Subscript a Baseline Superscript b', 'default');
@@ -1515,7 +1515,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_12_1 = function() {
 /**
  * Testing Rule 8.12, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_12_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_12_2 = function() {
   var mml = '<msub><mrow><msup><mi>x</mi><mi>b</mi></msup></mrow><mi>a</mi>' +
       '</msub>';
   this.executeRuleTest(mml, 'x Superscript b Baseline Subscript a', 'default');
@@ -1527,7 +1527,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_12_2 = function() {
 /**
  * Testing Rule 8.13, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_13_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><msup>' +
       '<mrow/><mi>b</mi></msup><mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'log Superscript 4 Superscript b Baseline x',
@@ -1540,7 +1540,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_13_1 = function() {
 /**
  * Testing Rule 8.13, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_8_13_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_8_13_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi>' +
       '</msub><mi>y</mi></mrow>';
   this.executeRuleTest(mml, 'upper T Subscript n Subscript a Baseline y',
@@ -1553,7 +1553,7 @@ sre.MathspeakRuleTest.prototype.testSample_8_13_2 = function() {
 /**
  * Testing Rule 9.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_1_1 = function() {
   var mml = '<msqrt><mn>2</mn></msqrt>';
   this.executeRuleTest(mml, 'StartRoot 2 EndRoot', 'default');
   this.executeRuleTest(mml, 'StartRoot 2 EndRoot', 'brief');
@@ -1564,7 +1564,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_1_1 = function() {
 /**
  * Testing Rule 9.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_1_2 = function() {
   var mml = '<msqrt><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msqrt>';
   this.executeRuleTest(mml, 'StartRoot m plus n EndRoot', 'default');
   this.executeRuleTest(mml, 'StartRoot m plus n EndRoot', 'brief');
@@ -1575,7 +1575,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_1_2 = function() {
 /**
  * Testing Rule 9.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_2_1 = function() {
   var mml = '<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow>' +
       '<mi>m</mi><mo>+</mo><mi>n</mi></mrow></mroot>';
   this.executeRuleTest(mml, 'RootIndex m plus n StartRoot x plus y EndRoot',
@@ -1589,7 +1589,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_2_1 = function() {
 /**
  * Testing Rule 9.2, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_2_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_2_2 = function() {
   var mml = '<mrow><mroot><msup><mi>x</mi><mi>m</mi></msup><mi>n</mi>' +
       '</mroot><mo>=</mo><msup><mfenced separators="" open="(" close=")">' +
       '<mroot><mi>x</mi><mi>n</mi></mroot></mfenced><mi>m</mi></msup>' +
@@ -1615,7 +1615,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_2_2 = function() {
 /**
  * Testing Rule 9.2, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_2_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_2_3 = function() {
   var mml = '<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup>' +
       '<mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>';
   this.executeRuleTest(mml, 'RootIndex 3 StartRoot x EndRoot equals x' +
@@ -1630,7 +1630,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_2_3 = function() {
 /**
  * Testing Rule 9.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_3_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_3_1 = function() {
   var mml = '<msqrt><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '</msqrt><mo>+</mo><msqrt><mrow><mi>y</mi><mo>+</mo><mn>1</mn>' +
       '</mrow></msqrt></mrow></msqrt>';
@@ -1646,7 +1646,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_3_1 = function() {
 /**
  * Testing Rule 9.3, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_3_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_3_2 = function() {
   var mml = '<mrow><mroot><mroot><mi>x</mi><mi>m</mi></mroot><mi>n</mi>' +
       '</mroot><mo>=</mo><mroot><mroot><mi>x</mi><mi>n</mi></mroot>' +
       '<mi>m</mi></mroot></mrow>';
@@ -1667,7 +1667,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_3_2 = function() {
 /**
  * Testing Rule 9.3, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_3_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_3_3 = function() {
   var mml = '<mrow><msup><mi>x</mi><mrow><mi>e</mi><mo>-</mo><mn>2</mn>' +
       '</mrow></msup><mo>=</mo><msqrt><mrow><mi>x</mi><mroot><mrow>' +
       '<mi>x</mi><mroot><mrow><mi>x</mi><mroot><mrow><mi>x</mi>' +
@@ -1698,7 +1698,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_3_3 = function() {
 /**
  * Testing Rule 9.3, Example 4.
  */
-sre.MathspeakRuleTest.prototype.testSample_9_3_4 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_9_3_4 = function() {
   var mml = '<mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>=</mo>' +
       '<mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac>' +
       '<mfrac><msqrt><mrow><mn>2</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
@@ -1733,7 +1733,7 @@ sre.MathspeakRuleTest.prototype.testSample_9_3_4 = function() {
 /**
  * Testing Rule 10.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_10_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_10_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>5</mn><mi>x</mi>' +
       '<menclose notation="updiagonalstrike"><mi>y</mi></menclose></mrow>' +
       '<mrow><mn>2</mn><menclose notation="updiagonalstrike"><mi>y</mi>' +
@@ -1753,7 +1753,7 @@ sre.MathspeakRuleTest.prototype.testSample_10_1_1 = function() {
 /**
  * Testing Rule 10.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_10_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_10_2_1 = function() {
   var mml = '<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac>' +
       '<mover><menclose notation="updiagonalstrike"><mn>12</mn></menclose>' +
       '<mn>2</mn></mover><munder><menclose notation="updiagonalstrike">' +
@@ -1777,7 +1777,7 @@ sre.MathspeakRuleTest.prototype.testSample_10_2_1 = function() {
  * Reversed version of the above example.
  * Testing Rule 10.2, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_10_2_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_10_2_2 = function() {
   var mml = '<mrow><mfrac><mn>12</mn><mn>18</mn></mfrac><mo>=</mo><mfrac>' +
       '<munder><mn>2</mn><menclose notation="updiagonalstrike"><mn>12</mn>' +
       '</menclose></munder><mover><mn>3</mn>' +
@@ -1801,7 +1801,7 @@ sre.MathspeakRuleTest.prototype.testSample_10_2_2 = function() {
 /**
  * Testing Rule 11.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_1_1 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>¨</mo></mover>';
   this.executeRuleTest(mml, 'ModifyingAbove x With two-dots', 'default');
   this.executeRuleTest(mml, 'ModAbove x With two-dots', 'brief');
@@ -1812,7 +1812,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_1_1 = function() {
 /**
  * Testing Rule 11.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_1_2 = function() {
   var mml = '<mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>→</mo></mover>';
   this.executeRuleTest(mml, 'ModifyingAbove x plus y With right-arrow',
@@ -1825,7 +1825,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_1_2 = function() {
 /**
  * Testing Rule 11.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_1_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_1_3 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>^</mo></mover>';
   this.executeRuleTest(mml, 'ModifyingAbove x With caret', 'default');
   this.executeRuleTest(mml, 'ModAbove x With caret', 'brief');
@@ -1836,7 +1836,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_1_3 = function() {
 /**
  * Testing Rule 11.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_2_1 = function() {
   var mml = '<munder accent="true"><mi>x</mi><mi>˙</mi></munder>';
   this.executeRuleTest(mml, 'ModifyingBelow x With dot', 'default');
   this.executeRuleTest(mml, 'ModBelow x With dot', 'brief');
@@ -1847,7 +1847,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_2_1 = function() {
 /**
  * Testing Rule 11.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_3_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_3_1 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>˜</mo></mover>';
   this.executeRuleTest(mml, 'x overTilde', 'default');
   this.executeRuleTest(mml, 'x overtilde', 'brief');
@@ -1858,7 +1858,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_3_1 = function() {
 /**
  * Testing Rule 11.3, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_3_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_3_2 = function() {
   var mml = '<mover accent="true"><mi>x</mi><mo>¯</mo></mover>';
   this.executeRuleTest(mml, 'x overbar', 'default');
   this.executeRuleTest(mml, 'x overBar', 'brief');
@@ -1869,7 +1869,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_3_2 = function() {
 /**
  * Testing Rule 11.3, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_3_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_3_3 = function() {
   var mml = '<munder accentunder="true"><mi>y</mi><mo>˜</mo></munder>';
   this.executeRuleTest(mml, 'y underTilde', 'default');
   this.executeRuleTest(mml, 'y undertilde', 'brief');
@@ -1880,7 +1880,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_3_3 = function() {
 /**
  * Testing Rule 11.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_4_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_4_1 = function() {
   var mml = '<mover accent="true"><mover accent="true"><mi>x</mi><mo>¯</mo>' +
       '</mover><mo>¯</mo></mover>';
   this.executeRuleTest(mml, 'x overbar overbar', 'default');
@@ -1892,7 +1892,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_4_1 = function() {
 /**
  * Testing Rule 11.4, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_4_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_4_2 = function() {
   var mml = '<munder><munder><mover accent="true"><mover accent="true">' +
       '<mi>y</mi><mo>¯</mo></mover><mo>¯</mo></mover>' +
       '<mo>\u005F</mo></munder><mo>\u005F</mo></munder>';
@@ -1905,7 +1905,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_4_2 = function() {
 /**
  * Testing Rule 11.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_6_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_6_1 = function() {
   var mml = '<munder accentunder="true"><munder><mrow><mi>a</mi><mo>+</mo>' +
       '<mi>b</mi></mrow><mo>\u005F</mo></munder><mo>*</mo></munder>';
   this.executeRuleTest(mml, 'ModifyingBelow Below ModifyingBelow a plus b' +
@@ -1923,7 +1923,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_6_1 = function() {
 /**
  * Testing Rule 11.6, Example 2.
  */
-sre.MathspeakRuleTest.prototype.untestSample_11_6_2 = function() {
+sre.MathspeakEnglishTest.prototype.untestSample_11_6_2 = function() {
   var mml = '<munder accentunder="true"><munder accentunder="true">' +
       '<mover accent="true"><mover accent="true"><mrow><mi>a</mi>' +
       '<mo>+</mo><mi>b</mi></mrow><mo>→</mo></mover><mo>˙</mo></mover>' +
@@ -1943,7 +1943,7 @@ sre.MathspeakRuleTest.prototype.untestSample_11_6_2 = function() {
 /**
  * Testing Rule 11.6, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_6_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_6_3 = function() {
   var mml = '<mover><mover accent="true"><mrow><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi></mrow><mo>˜</mo></mover><mo>¯</mo></mover>';
   this.executeRuleTest(mml, 'ModifyingAbove Above ModifyingAbove x plus y' +
@@ -1958,7 +1958,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_6_3 = function() {
 /**
  * Testing Rule 11.7, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_7_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_7_1 = function() {
   var mml = '<mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo>' +
       '<mn>1</mn></mrow><mi>∞</mi></munderover><msub><mi>a</mi><mi>n</mi>' +
       '</msub></mrow>';
@@ -1975,7 +1975,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_7_1 = function() {
 /**
  * Testing Rule 11.8, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_8_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_8_1 = function() {
   var mml = '<mrow><munder><munder><munder><mrow><mi>x</mi><mo>+</mo>' +
       '<mi>y</mi></mrow> <mo>\u005F</mo></munder><mrow><mi>a</mi>' +
       '<mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo>' +
@@ -1993,7 +1993,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_8_1 = function() {
 /**
  * Testing Rule 11.8, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_11_8_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_11_8_2 = function() {
   var mml = '<mrow><mover><mover><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi>' +
       '</mrow><mo>¯</mo></mover><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow>' +
       '</mover><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mover></mrow>';
@@ -2012,7 +2012,7 @@ sre.MathspeakRuleTest.prototype.testSample_11_8_2 = function() {
 /**
  * Testing Rule 11.9, Example 1.
  */
-sre.MathspeakRuleTest.prototype.untestSample_11_9_1 = function() {
+sre.MathspeakEnglishTest.prototype.untestSample_11_9_1 = function() {
   var mml = '<mrow><mfrac><mn>7</mn><mn>12</mn></mfrac><mo>=</mo>' +
       '<mn>.58</mn><mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
@@ -2029,7 +2029,7 @@ sre.MathspeakRuleTest.prototype.untestSample_11_9_1 = function() {
 /**
  * Testing Rule 12.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_12_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_12_1_1 = function() {
   var mml = '<mrow><msub><mo form="prefix">log</mo><mi>b</mi></msub>' +
       '<mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'log Subscript b Baseline x', 'default');
@@ -2041,7 +2041,7 @@ sre.MathspeakRuleTest.prototype.testSample_12_1_1 = function() {
 /**
  * Testing Rule 12.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_12_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_12_1_2 = function() {
   var mml = '<mrow><mo form="prefix">cos</mo><mi>y</mi></mrow>';
   this.executeRuleTest(mml, 'cosine y', 'default');
   this.executeRuleTest(mml, 'cosine y', 'brief');
@@ -2052,7 +2052,7 @@ sre.MathspeakRuleTest.prototype.testSample_12_1_2 = function() {
 /**
  * Testing Rule 12.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_12_1_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_12_1_3 = function() {
   var mml = '<mrow><mo form="prefix">sin</mo><mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'sine x', 'default');
   this.executeRuleTest(mml, 'sine x', 'brief');
@@ -2063,7 +2063,7 @@ sre.MathspeakRuleTest.prototype.testSample_12_1_3 = function() {
 /**
  * Testing Rule 13.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_13_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_13_1_1 = function() {
   var mml = '<mrow><mfrac><mrow><mn>60</mn>' +
       '<menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
       ' class="MathML-Unit">mi</mi></menclose>' +
@@ -2108,7 +2108,7 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_1 = function() {
 /**
  * Testing Rule 13.1, Example 2.
  */
-sre.MathspeakRuleTest.prototype.testSample_13_1_2 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_13_1_2 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">J</mi><mo>=</mo><mn>1</mn>' +
       '<mi mathvariant="normal" class="MathML-Unit">kg</mi><mo>·</mo><msup>' +
@@ -2128,7 +2128,7 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_2 = function() {
 /**
  * Testing Rule 13.1, Example 3.
  */
-sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_13_1_3 = function() {
   var mml = '<mrow><mi>m</mi><mi mathvariant="normal"' +
       ' class="MathML-Unit">m</mi></mrow><mo>=</mo><mn>100</mn>' +
       '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
@@ -2147,7 +2147,7 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_3 = function() {
 /**
  * Testing Rule 13.1, Example 4.
  */
-sre.MathspeakRuleTest.prototype.testSample_13_1_4 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_13_1_4 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">mi</mi></mrow><mo>≈</mo>' +
       '<mrow><mn>1.6</mn><mi mathvariant="normal"' +
@@ -2161,7 +2161,7 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_4 = function() {
 /**
  * Testing Rule 13.1, Example 5.
  */
-sre.MathspeakRuleTest.prototype.testSample_13_1_5 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_13_1_5 = function() {
   var mml = '<mrow><mn>1</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">in</mi><mo>=</mo><mn>2.54</mn>' +
       '<mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow>';
@@ -2174,7 +2174,7 @@ sre.MathspeakRuleTest.prototype.testSample_13_1_5 = function() {
 /**
  * Testing Rule 14.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_14_1_1 = function() {
   var mml = '<mtable><mtr><mtd><msub><mi>H</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>+</mo></mtd><mtd><msub><mi>F</mi><mn>2</mn></msub></mtd><mtd>' +
       '<mo>→</mo></mtd><mtd><mrow><mn>2</mn><mi>H</mi><mi>F</mi></mrow>' +
@@ -2206,7 +2206,7 @@ sre.MathspeakRuleTest.prototype.testSample_14_1_1 = function() {
 /**
  * Testing Rule 14.3, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_14_3_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_14_3_1 = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo>' +
       '<mfenced separators="" open="{" close=""><mtable><mtr><mtd><mrow>' +
       '<mi>y</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd><mtd><mn>0</mn></mtd>' +
@@ -2231,7 +2231,7 @@ sre.MathspeakRuleTest.prototype.testSample_14_3_1 = function() {
 /**
  * Testing Rule 15.1, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_15_1_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_15_1_1 = function() {
   var mml = '<mfenced open="[" close="]"><mtable><mtr><mtd><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>a</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo>' +
       '<mi>b</mi></mrow></mtd><mtd><mrow><mi>x</mi><mo>+</mo><mi>c</mi>' +
@@ -2262,7 +2262,7 @@ sre.MathspeakRuleTest.prototype.testSample_15_1_1 = function() {
 /**
  * Testing Rule 15.2, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_15_2_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_15_2_1 = function() {
   var mml = '<mrow><mfenced open="|" close="|"><mtable><mtr><mtd><mrow>' +
       '<mi>a</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mi>b</mi></mtd>' +
       '</mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>' +
@@ -2287,7 +2287,7 @@ sre.MathspeakRuleTest.prototype.testSample_15_2_1 = function() {
 /**
  * Testing Rule 15.4, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_15_4_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_15_4_1 = function() {
   var mml = '<mrow><mfenced open="|" close="|"><mtable><mtr><mtd><mi>a</mi>' +
       '</mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd>' +
       '<mi>d</mi></mtd></mtr></mtable></mfenced><mo>=</mo><mi>a</mi>' +
@@ -2304,7 +2304,7 @@ sre.MathspeakRuleTest.prototype.testSample_15_4_1 = function() {
 /**
  * Testing Rule 15.6, Example 1.
  */
-sre.MathspeakRuleTest.prototype.testSample_15_6_1 = function() {
+sre.MathspeakEnglishTest.prototype.testSample_15_6_1 = function() {
   var mml = '<mfenced open="(" close=")"><mtable><mtr><mtd><mi>x</mi></mtd>' +
       '</mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>';
   this.executeRuleTest(mml, 'StartBinomialOrMatrix x Choose y' +

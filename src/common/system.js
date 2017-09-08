@@ -125,10 +125,13 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(engine.locale, engine.domain, engine.style);
   engine.comparator = new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
-    sre.DynamicProperties.create(['default'], ['short', 'default']));
+    sre.DynamicProperties.create(
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
+      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
   sre.L10n.setLocale();
 };
 

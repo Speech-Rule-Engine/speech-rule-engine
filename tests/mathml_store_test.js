@@ -39,6 +39,16 @@ sre.MathmlStoreTest = function() {
    */
   this.information = 'Mathml store tests.';
 
+  this.cstr =
+    new sre.DynamicCstr({locale: 'en', domain: 'default', style: 'default'});
+
+  sre.Engine.getInstance().comparator = 
+    new sre.DynamicCstr.DefaultComparator(
+      this.cstr,
+      sre.DynamicProperties.create(
+        [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+        [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
+        [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
 };
 goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
 
@@ -62,9 +72,7 @@ sre.MathmlStoreTest.prototype.executeStoreTest = function(mml, ruleName) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
-  var rule = this.store.lookupRule(
-      node.childNodes[0],
-      new sre.DynamicCstr({domain: 'default', style: 'default'}));
+  var rule = this.store.lookupRule(node.childNodes[0], this.cstr);
   this.assert.equal(ruleName, rule.name);
 };
 
