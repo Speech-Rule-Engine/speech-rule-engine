@@ -43,6 +43,11 @@ goog.require('sre.XpathUtil');
  */
 sre.MathSimpleStore = function() {
   sre.MathSimpleStore.base(this, 'constructor');
+
+  /**
+   * @type {string}
+   */
+  this.category = '';
 };
 goog.inherits(sre.MathSimpleStore, sre.MathStore);
 
@@ -128,11 +133,16 @@ goog.addSingletonGetter(sre.MathCompoundStore);
  * @param {string} name Name of the rule.
  * @param {string} str String used as key to refer to the rule store
  * precondition and constr
+ * @param {string} cat The category if it exists.
  * @param {Object} mappings JSON representation of mappings from styles and
  *     domains to strings, from which the speech rules will be computed.
  */
-sre.MathCompoundStore.prototype.defineRules = function(name, str, mappings) {
+sre.MathCompoundStore.prototype.defineRules = function(
+  name, str, cat, mappings) {
   var store = new sre.MathSimpleStore();
+  if (cat) {
+    store.category = cat;
+  }
   store.defineRulesFromMappings(name, str, mappings);
   this.subStores_[str] = store;
 };
@@ -144,7 +154,7 @@ sre.MathCompoundStore.prototype.defineRules = function(name, str, mappings) {
  */
 sre.MathCompoundStore.prototype.addSymbolRules = function(json) {
   var key = sre.MathSimpleStore.parseUnicode_(json['key']);
-  this.defineRules(json['key'], key, json['mappings']);
+  this.defineRules(json['key'], key, json['category'], json['mappings']);
 };
 
 
@@ -155,8 +165,9 @@ sre.MathCompoundStore.prototype.addSymbolRules = function(json) {
 sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
   var names = json['names'];
   var mappings = json['mappings'];
+  var category = json['category'];
   for (var j = 0, name; name = names[j]; j++) {
-    this.defineRules(name, name, mappings);
+    this.defineRules(name, name, category, mappings);
   }
 };
 
@@ -183,10 +194,18 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
  */
 sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
   var store = this.subStores_[node];
-  if (store) {
-    return store.lookupRule(null, dynamic);
-  }
-  return null;
+  return store ? store.lookupRule(null, dynamic) : null;
+};
+
+
+/**
+ * Retrieves the category of a character or string if it has one.
+ * @param {string} character The character or string.
+ * @return {string} The category if it exists.
+ */
+sre.MathCompoundStore.prototype.lookupCategory = function(character) {
+  var store = this.subStores_[character];
+  return store ? store.category : '';
 };
 
 

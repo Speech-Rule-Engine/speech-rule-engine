@@ -47,6 +47,15 @@ goog.inherits(sre.RebuildStreeTest, sre.AbstractTest);
 
 
 /**
+ * @override
+ */
+sre.RebuildStreeTest.prototype.setUpTest = function() {
+  // Make sure the engine is in a default mode.
+  sre.System.getInstance().setupEngine({semantics: true});
+};
+
+
+/**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} expr MathML expression.
  */
@@ -2238,4 +2247,20 @@ sre.RebuildStreeTest.prototype.testRebuildSwapElementLayers = function() {
       '</mi></mrow><mo>*</mo><mi>b</mi></mrow><mo mathvariant="italic">⁢' +
       '</mo><mi>m</mi>'
   );
+};
+
+
+/**
+ * Set expressions.
+ */
+sre.RebuildStreeTest.prototype.testRebuildSets = function() {
+  this.executeRebuildTest('<mo>{</mo><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac>' +
+                         '<mo>}</mo>');
+  this.executeRebuildTest('<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>');
 };

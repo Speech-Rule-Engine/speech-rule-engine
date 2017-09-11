@@ -21,7 +21,7 @@
 goog.provide('sre.System');
 goog.provide('sre.System.Error');
 
-goog.require('sre.AuditoryDescription');
+goog.require('sre.AuralRendering');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
@@ -50,7 +50,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '2.0.0-beta.1';
+  this.version = '2.0.0-beta.2';
 
 };
 goog.addSingletonGetter(sre.System);
@@ -100,7 +100,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
   var setIf = function(feat) {
-    if (feature[feat] !== undefined) {
+    if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
     }
   };
@@ -126,7 +126,10 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
   engine.comparator = new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
-      sre.DynamicProperties.create(['default'], ['short', 'default']));
+      // TODO: (MOSS) This is temporary for clearspeak!
+      // The mathspeak dependency should be set somewhere in clearspeak.
+      sre.DynamicProperties.create(['mathspeak', 'default'],
+                                   ['short', 'default']));
 };
 
 
@@ -351,7 +354,7 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  */
 sre.System.prototype.processXml = function(xml) {
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return sre.AuditoryDescription.speechString(descrs);
+  return sre.AuralRendering.getInstance().markup(descrs);
 };
 
 
@@ -462,6 +465,6 @@ sre.System.prototype.move = function(direction) {
   var key = (typeof direction === 'string') ?
       sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
   var move = sre.System.LocalStorage_.getInstance().walker.move(key);
-  return move === false ? sre.AuditoryDescription.error(direction) :
+  return move === false ? sre.AuralRendering.getInstance().error(direction) :
       sre.System.LocalStorage_.getInstance().walker.speech();
 };

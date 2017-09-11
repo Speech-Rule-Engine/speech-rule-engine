@@ -152,7 +152,8 @@ sre.Engine.personalityProps = {
   PITCH: 'pitch',
   RATE: 'rate',
   VOLUME: 'volume',
-  PAUSE: 'pause'
+  PAUSE: 'pause',
+  JOIN: 'join'
 };
 
 
@@ -186,6 +187,7 @@ sre.Engine.Speech = {
  */
 sre.Engine.Markup = {
   NONE: 'none',
+  PUNCTUATION: 'punctuation',
   SSML: 'ssml',
   ACSS: 'acss',
   SABLE: 'sable',

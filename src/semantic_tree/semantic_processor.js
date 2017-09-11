@@ -123,6 +123,7 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
       sre.SemanticAttr.Type.INFIXOP, children, [opNode],
       sre.SemanticProcessor.getEmbellishedInner_(opNode).textContent);
   node.role = opNode.role;
+  this.propagateSimpleFunction(node);
   return node;
 };
 
@@ -153,6 +154,10 @@ sre.SemanticProcessor.prototype.concatNode_ = function(inner, nodeList, type) {
 };
 
 
+// TODO: (Simons) Rewrite to group same operators.
+//
+//       Currently the positive role is only given to the innermost single +
+//       prefix operator.
 /**
  * Wraps a node into prefix operators.
  * Example: + - a becomes (+ (- (a)))
@@ -168,7 +173,11 @@ sre.SemanticProcessor.prototype.prefixNode_ = function(node, prefixes) {
       prefixes, sre.SemanticPred.isAttribute('role', 'SUBTRACTION'));
   var newNode = sre.SemanticProcessor.getInstance().concatNode_(
       node, negatives.comp.pop(), sre.SemanticAttr.Type.PREFIXOP);
-
+  if (newNode.contentNodes.length === 1 && 
+      newNode.contentNodes[0].role === sre.SemanticAttr.Role.ADDITION &&
+      newNode.contentNodes[0].textContent === '+') {
+    newNode.role = sre.SemanticAttr.Role.POSITIVE;
+  }
   while (negatives.rel.length > 0) {
     newNode = sre.SemanticProcessor.getInstance().concatNode_(
         newNode, [negatives.rel.pop()], sre.SemanticAttr.Type.PREFIXOP);
@@ -207,6 +216,9 @@ sre.SemanticProcessor.prototype.postfixNode_ = function(node, postfixes) {
  * @return {!sre.SemanticNode} The new semantic text node.
  */
 sre.SemanticProcessor.prototype.text = function(content, font, type) {
+  if (!content) {
+    return sre.SemanticProcessor.getInstance().factory_.makeEmptyNode();
+  }
   var leaf = sre.SemanticProcessor.getInstance().factory_.
       makeLeafNode(content, font);
   leaf.type = sre.SemanticAttr.Type.TEXT;
@@ -887,12 +899,58 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       sre.SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
   if (ofence.role === sre.SemanticAttr.Role.OPEN) {
-    newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
+    // newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
+    this.classifyHorizontalFence_(newNode);
+    this.propagateComposedFunction(newNode);
   } else {
     newNode.role = ofence.role;
   }
   return sre.SemanticProcessor.rewriteFencedNode_(newNode);
 };
+
+
+/**
+ * Classifies a horizontally fenced semantic node, using heuristics to determine
+ * certain set types, intervals etc.
+ * @param {sre.SemanticNode} node A fenced semantic node.
+ * @private
+ */
+sre.SemanticProcessor.prototype.classifyHorizontalFence_ = function(node) {
+  node.role = sre.SemanticAttr.Role.LEFTRIGHT;
+  var children = node.childNodes;
+  if (!sre.SemanticPred.isSetNode(node) || children.length > 1) {
+    return;
+  }
+  var type = children[0].type;
+  if (children.length === 0 ||
+      children[0].type === sre.SemanticAttr.Type.EMPTY) {
+    node.role = sre.SemanticAttr.Role.SETEMPTY;
+    return;
+  }
+  if (type === sre.SemanticAttr.Type.IDENTIFIER ||
+      type === sre.SemanticAttr.Type.NUMBER) {
+    node.role = sre.SemanticAttr.Role.SETSINGLE;
+    return;
+  }
+  var role = children[0].role;
+  if (type !== sre.SemanticAttr.Type.PUNCTUATED ||
+      role !== sre.SemanticAttr.Role.SEQUENCE) {
+    return;
+  }
+  if (children[0].contentNodes[0].role === sre.SemanticAttr.Role.COMMA) {
+    node.role = sre.SemanticAttr.Role.SETCOLLECT;
+    return;
+  }
+  if (children[0].contentNodes.length === 1 &&
+      (children[0].contentNodes[0].role === sre.SemanticAttr.Role.VBAR ||
+       children[0].contentNodes[0].role === sre.SemanticAttr.Role.COLON)) {
+    node.role = sre.SemanticAttr.Role.SETEXT;
+    return;
+  }
+  // TODO (sorge): Intervals after the Bra-Ket heuristic.
+};
+
+
 
 
 /**
@@ -1141,6 +1199,11 @@ sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.PREFIXFUNC] =
     'prefix';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
     'prefix';
+// TODO (WS2.3): Should go into clearspeak specific parser/processor?
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.SIMPLEFUNC] =
+    'prefix';
+sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.COMPFUNC] =
+    'prefix';
 
 
 /**
@@ -1231,19 +1294,34 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
         rest.unshift(funcNode);
         return rest;
       }
-    case 'bigop':
       var partition = sre.SemanticProcessor.sliceNodes_(
           rest, sre.SemanticPred.isPrefixFunctionBoundary);
+      if (!partition.head.length) {
+        if (!partition.div ||
+            !sre.SemanticPred.isAttribute('type', 'APPL')(partition.div)) {
+          rest.unshift(func);
+          return rest;
+        }
+        var arg = partition.div;
+      } else {
+        arg = sre.SemanticProcessor.getInstance().row(partition.head);
+        if (partition.div) {
+          partition.tail.unshift(partition.div);
+        }
+      }
+      funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
+      partition.tail.unshift(funcNode);
+      return partition.tail;
+      break;
+    case 'bigop':
+      var partition = sre.SemanticProcessor.sliceNodes_(
+          rest, sre.SemanticPred.isBigOpBoundary);
       if (!partition.head.length) {
         rest.unshift(func);
         return rest;
       }
       var arg = sre.SemanticProcessor.getInstance().row(partition.head);
-      if (heuristic === 'prefix') {
-        funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
-      } else {
-        funcNode = sre.SemanticProcessor.getInstance().bigOpNode_(func, arg);
-      }
+      funcNode = sre.SemanticProcessor.getInstance().bigOpNode_(func, arg);
       if (partition.div) {
         partition.tail.unshift(partition.div);
       }
@@ -1258,7 +1336,12 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       var firstArg = rest[0];
       if (firstArg.type === sre.SemanticAttr.Type.FENCED &&
           firstArg.role !== sre.SemanticAttr.Role.NEUTRAL &&
-          sre.SemanticPred.isSimpleFunction(firstArg)) {
+          sre.SemanticPred.isSimpleFunctionScope(firstArg)) {
+        // TODO: (MS2.3|simons) This needs to be made more robust!  Currently we
+        //       reset to eliminate sets. Once we include bra-ket heuristics,
+        //       this might be incorrect.
+        //
+        firstArg.role = sre.SemanticAttr.Role.LEFTRIGHT;
         sre.SemanticProcessor.propagateFunctionRole_(
             func, sre.SemanticAttr.Role.SIMPLEFUNC);
         funcNode = sre.SemanticProcessor.getInstance().functionNode_(
@@ -1878,11 +1961,13 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
   var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       sre.SemanticAttr.Type.FRACTION, [denom, enume], []);
   newNode.role = newNode.childNodes.every(function(x) {
-    return sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
+    return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
+      sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(function(x) {
         return sre.SemanticPred.isAttribute('role', 'UNIT')(x);
       }) ? sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
+  this.propagateSimpleFunction(newNode);
   return newNode;
 };
 
@@ -2128,3 +2213,26 @@ sre.SemanticProcessor.prototype.font = function(font) {
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
 };
 
+// TODO: (MS2.3|simons): This needs to be a special annotator!
+sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
+  if (sre.Engine.getInstance().domain !== 'clearspeak') {
+    return node;
+  }
+  if ((node.type === sre.SemanticAttr.Type.INFIXOP ||
+       node.type === sre.SemanticAttr.Type.FRACTION) &&
+      node.childNodes.every(sre.SemanticPred.isSimpleFunction)) {
+    node.role = sre.SemanticAttr.Role.COMPFUNC;
+  }
+};
+
+
+// TODO: (MS2.3|simons): This needs to be a special annotator!
+sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
+  if (sre.Engine.getInstance().domain !== 'clearspeak') {
+    return node;
+  }
+  if (node.type === sre.SemanticAttr.Type.FENCED &&
+      node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {
+    node.role = sre.SemanticAttr.Role.COMPFUNC;
+  }
+};
