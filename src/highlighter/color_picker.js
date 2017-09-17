@@ -89,7 +89,7 @@ sre.ColorPicker.DEFAULT_FOREGROUND_ = 'black';
 
 
 /**
- * @type {Object.<string, sre.ColorPicker.ChannelColor_>}
+ * @type {Object.<sre.ColorPicker.ChannelColor_>}
  * @private
  */
 sre.ColorPicker.namedColors_ = {

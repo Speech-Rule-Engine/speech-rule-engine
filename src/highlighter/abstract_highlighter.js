@@ -53,7 +53,7 @@ sre.AbstractHighlighter = function() {
   this.mactionName = '';
 
   /**
-   * @type {!Object.<string, string>}
+   * @type {!Object.<string>}
    * @private
    */
   this.state_ = {};

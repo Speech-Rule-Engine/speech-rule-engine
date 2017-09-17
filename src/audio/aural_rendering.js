@@ -45,7 +45,7 @@ goog.addSingletonGetter(sre.AuralRendering);
  */
 sre.AuralRendering.prototype.setSeparator = function(sep) {
   var renderer = sre.AuralRendering.rendererMapping_[
-    sre.Engine.getInstance().markup];
+      sre.Engine.getInstance().markup];
   if (renderer) {
     renderer.setSeparator(sep);
   }
@@ -57,7 +57,7 @@ sre.AuralRendering.prototype.setSeparator = function(sep) {
  */
 sre.AuralRendering.prototype.getSeparator = function() {
   var renderer = sre.AuralRendering.rendererMapping_[
-    sre.Engine.getInstance().markup];
+      sre.Engine.getInstance().markup];
   return renderer ? renderer.getSeparator() : '';
 };
 
@@ -67,7 +67,7 @@ sre.AuralRendering.prototype.getSeparator = function() {
  */
 sre.AuralRendering.prototype.markup = function(descrs) {
   var renderer = sre.AuralRendering.rendererMapping_[
-    sre.Engine.getInstance().markup];
+      sre.Engine.getInstance().markup];
   if (!renderer) {
     return '';
   }
@@ -80,7 +80,7 @@ sre.AuralRendering.prototype.markup = function(descrs) {
  */
 sre.AuralRendering.prototype.merge = function(strs) {
   var renderer = sre.AuralRendering.rendererMapping_[
-    sre.Engine.getInstance().markup];
+      sre.Engine.getInstance().markup];
   if (!renderer) {
     return strs.join();
   }
@@ -93,7 +93,7 @@ sre.AuralRendering.prototype.merge = function(strs) {
  */
 sre.AuralRendering.prototype.error = function(key) {
   var renderer = sre.AuralRendering.rendererMapping_[
-    sre.Engine.getInstance().markup];
+      sre.Engine.getInstance().markup];
   if (!renderer) {
     return '';
   }
@@ -121,18 +121,20 @@ sre.AuralRendering.rendererMapping_ = {};
 
 
 sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.NONE, new sre.StringRenderer());
+    sre.Engine.Markup.NONE, new sre.StringRenderer());
 sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.PUNCTUATION, new sre.PunctuationRenderer());
+    sre.Engine.Markup.PUNCTUATION, new sre.PunctuationRenderer());
 sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.ACSS, new sre.AcssRenderer());
+    sre.Engine.Markup.ACSS, new sre.AcssRenderer());
 sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.SABLE, new sre.SableRenderer());
+    sre.Engine.Markup.SABLE, new sre.SableRenderer());
+
+
 /**
  * @type {sre.AudioRenderer}
  */
 sre.AuralRendering.xmlInstance = new sre.SsmlRenderer();
 sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.VOICEXML, sre.AuralRendering.xmlInstance);
+    sre.Engine.Markup.VOICEXML, sre.AuralRendering.xmlInstance);
 sre.AuralRendering.registerRenderer(
-  sre.Engine.Markup.SSML, sre.AuralRendering.xmlInstance);
+    sre.Engine.Markup.SSML, sre.AuralRendering.xmlInstance);

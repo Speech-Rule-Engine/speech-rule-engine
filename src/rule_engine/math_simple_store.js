@@ -57,7 +57,7 @@ goog.inherits(sre.MathSimpleStore, sre.MathStore);
  * only into a list of speech rules.
  * @param {string} name Name for the rules.
  * @param {string} str String for precondition and constraints.
- * @param {Object.<string, Object.<string, string>>} mapping Simple string
+ * @param {Object.<Object.<string>>} mapping Simple string
  *     mapping.
  */
 sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
@@ -119,7 +119,7 @@ sre.MathSimpleStore.testDynamicConstraints_ = function(
 sre.MathCompoundStore = function() {
   /**
    * A set of efficient substores.
-   * @type {Object.<string, sre.MathStore>}
+   * @type {Object.<sre.MathStore>}
    * @private
    */
   this.subStores_ = {};

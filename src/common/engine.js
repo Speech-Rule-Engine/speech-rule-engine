@@ -83,7 +83,7 @@ sre.Engine = function() {
    * Semantics flag.
    * @type {boolean}
    */
-  this.semantics = false;
+  this.semantics = true;
 
   /**
    * The mode in which the engine is running (sync, async, http).

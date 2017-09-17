@@ -32,6 +32,8 @@ goog.require('sre.MarkupRenderer');
 //  * @return {string} The generated string with ACSS markup.
 //  */
 
+
+
 /**
  * @constructor
  * @extends {sre.MarkupRenderer}
@@ -85,9 +87,9 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
  */
 sre.AcssRenderer.prototype.merge = function(strs) {
   return '(exp ' +
-    strs.map(function(str) {
-      return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
-    ')';
+      strs.map(function(str) {
+        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+      ')';
 };
 
 
@@ -101,7 +103,7 @@ sre.AcssRenderer.prototype.error = function(key) {
 
 /**
  * Transforms a prosody element into an S-expression.
- * @param {Object.<string, number>} pros The prosody element.
+ * @param {Object.<number>} pros The prosody element.
  * @return {string} The S-expression.
  * @private
  */

@@ -48,7 +48,7 @@ sre.AbstractTrieNode = function(constraint, test) {
   this.test_ = test;
 
   /**
-   * @type {!Object.<string, sre.TrieNode>}
+   * @type {!Object.<sre.TrieNode>}
    * @private
    */
   this.children_ = {};
