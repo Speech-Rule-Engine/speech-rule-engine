@@ -1512,7 +1512,6 @@ sre.SemanticProcessor.getFunctionOp_ = function(tree, pred) {
 };
 
 
-//TODO: (MOSS) WP 2.1
 // Improve table recognition, multiline alignments for pausing.
 // Maybe labels, interspersed text etc.
 //
@@ -1692,7 +1691,32 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
   for (var i = 0, row; row = table.childNodes[i]; i++) {
     sre.SemanticProcessor.rowToLine_(row, sre.SemanticAttr.Role.MULTILINE);
   }
+  if (table.childNodes.length === 1 &&
+      sre.SemanticPred.isFencedElement(table.childNodes[0].childNodes[0])) {
+    sre.SemanticProcessor.tableToMatrixOrVector_(
+      sre.SemanticProcessor.rewriteFencedLine_(table));
+  }
   sre.SemanticProcessor.binomialForm_(table);
+};
+
+
+// TODO: (Simons) Is this heuristic really what we want? Make it selectable?
+/**
+ * Heuristic to rewrite a single fenced line in a table into a square matrix.
+ * @param {!sre.SemanticNode} table The node to be rewritten.
+ * @return {!sre.SemanticNode} The rewritten node.
+ * @private
+ */
+sre.SemanticProcessor.rewriteFencedLine_ = function(table) {
+  var line = table.childNodes[0];
+  var fenced = table.childNodes[0].childNodes[0];
+  var element = table.childNodes[0].childNodes[0].childNodes[0];
+  fenced.parent = table.parent;
+  table.parent = fenced;
+  element.parent = line;
+  fenced.childNodes = [table];
+  line.childNodes = [element];
+  return fenced;
 };
 
 
@@ -1704,9 +1728,7 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
  */
 sre.SemanticProcessor.rowToLine_ = function(row, opt_role) {
   var role = opt_role || sre.SemanticAttr.Role.UNKNOWN;
-  if (sre.SemanticPred.isAttribute('type', 'ROW')(row) &&
-      row.childNodes.length === 1 &&
-          sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
+  if (sre.SemanticPred.rowIsLine(row)) {
     row.type = sre.SemanticAttr.Type.LINE;
     row.role = role;
     row.childNodes = row.childNodes[0].childNodes;

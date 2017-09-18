@@ -294,11 +294,22 @@ sre.SemanticPred.isTableOrMultiline = function(node) {
  * @return {boolean} True if we believe we have a matrix.
  */
 sre.SemanticPred.tableIsMatrixOrVector = function(node) {
+  return !!node && sre.SemanticPred.isFencedElement(node) &&
+    sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
+};
+
+
+/**
+ * Decides if a node is a single, simply fenced element.
+ * @param {sre.SemanticNode} node A node.
+ * @return {boolean} True if the node is fence left right or neutral with a
+ *     single contained element.
+ */
+sre.SemanticPred.isFencedElement = function(node) {
   return !!node && sre.SemanticPred.isAttribute('type', 'FENCED')(node) &&
-      (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
-       sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
-          node.childNodes.length === 1 &&
-              sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
+    (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
+     sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
+    node.childNodes.length === 1;
 };
 
 
@@ -327,6 +338,19 @@ sre.SemanticPred.tableIsMultiline = function(table) {
       function(row) {
         var length = row.childNodes.length;
         return length <= 1;});
+};
+
+
+/**
+ * Heuristic to decide if we have a row is actually a line, i.e., if it only has
+ * a single cell.
+ * @param {!sre.SemanticNode} row A row node.
+ * @return {boolean} True if we believe it is a line.
+ */
+sre.SemanticPred.rowIsLine = function(row) {
+  return sre.SemanticPred.isAttribute('type', 'ROW')(row) &&
+    row.childNodes.length === 1 &&
+    sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0]);
 };
 
 

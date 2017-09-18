@@ -1520,7 +1520,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', 'count(children/*)<4',
-      'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+    'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+  defineRule(
+    'matrix-trivial', 'clearspeak.default',
+    '[t] "the 1 by 1 matrix with entry";' +
+      ' [n] children/*[1]; [p] (pause:long)',
+    'self::vector', '@role="squarematrix"');
   // Determinant
   defineRule(
       'determinant', 'clearspeak.default',
@@ -1552,7 +1557,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
       ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
-      'self::vector', 'count(children/*)<4', 'CQFcellsSimple');
+      'self::vector', 'count(children/*)<4', 'CQFcellsSimple', '@role!="squarematrix"');
     defineRule(
       'matrix-vector-simple', 'clearspeak.Matrix_SilentColNum',
       '[t] "the"; [t] count(children/*);  [t] "by";' +

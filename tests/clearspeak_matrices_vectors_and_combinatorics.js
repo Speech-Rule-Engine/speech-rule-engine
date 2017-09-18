@@ -30,10 +30,12 @@ goog.require('sre.ClearspeakRuleTest');
 sre.ClearspeakMatricesVectorsAndCombinatorics = function() {
 sre.ClearspeakMatricesVectorsAndCombinatorics.base(this, 'constructor');
 
-/**
-* @override
-*/
-this.information = 'ClearspeakMatricesVectorsAndCombinatorics rule tests.';
+  /**
+   * @override
+   */
+  this.information = 'ClearspeakMatricesVectorsAndCombinatorics rule tests.';
+
+  // sre.Debugger.getInstance().init();
 
 };
 goog.inherits(sre.ClearspeakMatricesVectorsAndCombinatorics, sre.ClearspeakRuleTest);
@@ -138,13 +140,24 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix008 = function
 };
 
 
-// TODO: (simons) Sort out 1x1 multiline elements semantically.
 /**
  * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix008a
  */
-sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.untestMatrix008a = function() {
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix008a = function() {
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>';
+  var speech = 'the 1 by 1 matrix with entry 3';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakMatricesVectorsAndCombinatorics Example Matrix008b
+ * (Added!)
+ */
+sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix008b = function() {
+  var preference = 'Matrix_Auto';
+  var mathml = '<math><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>';
   var speech = 'the 1 by 1 matrix with entry 3';
   this.executeRuleTest(mathml, speech, preference);
 };
