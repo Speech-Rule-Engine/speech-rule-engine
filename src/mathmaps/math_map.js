@@ -163,9 +163,9 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
       for (var i = 0, file; file = files[i]; i++) {
         sre.MathMap.fromFile_(path + file,
             function(err, json) {
+              sre.MathMap.toFetch_--;
               if (err) return;
               JSON.parse(json).forEach(function(x) {func(x);});
-              sre.MathMap.toFetch_--;
             });
       }
       break;
@@ -306,10 +306,10 @@ sre.MathMap.getJsonAjax_ = function(file, func) {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
+      sre.MathMap.toFetch_--;
       if (httpRequest.status === 200) {
         JSON.parse(httpRequest.responseText).forEach(function(x) {func(x);});
       }
-      sre.MathMap.toFetch_--;
     }
   };
   httpRequest.open('GET', file, true);
