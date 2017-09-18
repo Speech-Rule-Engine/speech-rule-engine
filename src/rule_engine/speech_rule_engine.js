@@ -70,7 +70,7 @@ sre.SpeechRuleEngine = function() {
   this.ready_ = true;
 
   sre.Engine.registerTest(
-    goog.bind(function(x) {return this.ready_;}, this));
+      goog.bind(function(x) {return this.ready_;}, this));
 
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);

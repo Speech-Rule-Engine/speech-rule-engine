@@ -428,6 +428,14 @@ sre.System.prototype.inputFileSync_ = function(file) {
 };
 
 
+/**
+ * Reads an xml expression from a file, processes with the given function and
+ * returns the result either to a file or to stdout in synchronous mode.
+ * @param {function(string): *} processor The input filename.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ * @private
+ */
 sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
   var result = processor(expr);
@@ -451,32 +459,41 @@ sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
  */
 sre.System.prototype.inputFileAsync_ = function(file, callback) {
   sre.SystemExternal.fs.readFile(
-    file, {encoding: 'utf8'},
-    goog.bind(function(err, data) {
-      if (err) {
-        throw new sre.System.Error('Can not open file: ' + file);
-      }
-      callback(data);
-    }, this)
+      file, {encoding: 'utf8'},
+      goog.bind(function(err, data) {
+        if (err) {
+          throw new sre.System.Error('Can not open file: ' + file);
+        }
+        callback(data);
+      }, this)
   );
 };
 
 
-sre.System.prototype.processFileAsync_ = function(processor, input, opt_output) {
+/**
+ * Reads an xml expression from a file, processes with the given function and
+ * returns the result either to a file or to stdout in asynchronous mode.
+ * @param {function(string): *} processor The input filename.
+ * @param {string} input The input filename.
+ * @param {string=} opt_output The output filename if one is given.
+ * @private
+ */
+sre.System.prototype.processFileAsync_ = function(
+    processor, input, opt_output) {
   sre.System.getInstance().inputFileAsync_(
-    input,
-    goog.bind(function(expr) {
-      var result = processor(expr);
-      if (!opt_output) {
-        console.log(result);
-        return;
-      }
-      sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {
-        if (err) {
-          throw new sre.System.Error('Can not write to file: ' + opt_output);
+      input,
+      goog.bind(function(expr) {
+        var result = processor(expr);
+        if (!opt_output) {
+          console.log(result);
+          return;
         }
-      });
-    }, this));
+        sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {
+          if (err) {
+            throw new sre.System.Error('Can not write to file: ' + opt_output);
+          }
+        });
+      }, this));
 };
 
 
