@@ -9,6 +9,9 @@
       },
       "mathspeak": {
         "default": "exclamation-mark"
+      },
+      "clearspeak": {
+        "default": "exclamation mark"
       }
     },
     "key": "0021"
@@ -21,6 +24,9 @@
       },
       "mathspeak": {
         "default": "quotation-mark"
+      },
+      "clearspeak": {
+        "default": "quotation mark"
       }
     },
     "key": "0022"
@@ -37,6 +43,9 @@
         "default": "number-sign",
         "brief": "num-sign",
         "sbrief": "num-sign"
+      },
+      "clearspeak": {
+        "default": "number sign"
       }
     },
     "key": "0023"
@@ -50,6 +59,9 @@
       },
       "mathspeak": {
         "default": "dollar-sign"
+      },
+      "clearspeak": {
+        "default": "dollar sign"
       }
     },
     "key": "0024"
@@ -63,6 +75,9 @@
       },
       "mathspeak": {
         "default": "percent-sign"
+      },
+      "clearspeak": {
+        "default": "percent sign"
       }
     },
     "key": "0025"
@@ -227,6 +242,9 @@
       },
       "mathspeak": {
         "default": "question-mark"
+      },
+      "clearspeak": {
+        "default": "question mark"
       }
     },
     "key": "003F"
@@ -332,6 +350,9 @@
       },
       "mathspeak": {
         "default": "inverted-exclamation-mark"
+      },
+      "clearspeak": {
+        "default": "inverted exclamation mark"
       }
     },
     "key": "00A1"
@@ -345,6 +366,9 @@
       },
       "mathspeak": {
         "default": "cent-sign"
+      },
+      "clearspeak": {
+        "default": "cent sign"
       }
     },
     "key": "00A2"
@@ -358,6 +382,9 @@
       },
       "mathspeak": {
         "default": "pound-sign"
+      },
+      "clearspeak": {
+        "default": "pound sign"
       }
     },
     "key": "00A3"
@@ -371,6 +398,9 @@
       },
       "mathspeak": {
         "default": "currency-sign"
+      },
+      "clearspeak": {
+        "default": "currency sign"
       }
     },
     "key": "00A4"
@@ -410,6 +440,9 @@
       },
       "mathspeak": {
         "default": "section-sign"
+      },
+      "clearspeak": {
+        "default": "section sign"
       }
     },
     "key": "00A7"
@@ -437,6 +470,9 @@
       },
       "mathspeak": {
         "default": "copyright-sign"
+      },
+      "clearspeak": {
+        "default": "copyright sign"
       }
     },
     "key": "00A9"
@@ -475,6 +511,9 @@
       },
       "mathspeak": {
         "default": "not-sign"
+      },
+      "clearspeak": {
+        "default": "not sign"
       }
     },
     "key": "00AC"
@@ -489,6 +528,9 @@
       },
       "mathspeak": {
         "default": "registered-trade-mark-sign"
+      },
+      "clearspeak": {
+        "default": "trade mark sign"
       }
     },
     "key": "00AE"
@@ -562,6 +604,9 @@
       },
       "mathspeak": {
         "default": "micro-sign"
+      },
+      "clearspeak": {
+        "default": "micro sign"
       }
     },
     "key": "00B5"
@@ -576,6 +621,9 @@
       },
       "mathspeak": {
         "default": "paragraph-sign"
+      },
+      "clearspeak": {
+        "default": "paragraph sign"
       }
     },
     "key": "00B6"
@@ -641,6 +689,9 @@
       },
       "mathspeak": {
         "default": "inverted-question-mark"
+      },
+      "clearspeak": {
+        "default": "inverted question mark"
       }
     },
     "key": "00BF"
@@ -672,6 +723,9 @@
       },
       "mathspeak": {
         "default": "division-sign"
+      },
+      "clearspeak": {
+        "default": "division sign"
       }
     },
     "key": "00F7"
@@ -10270,6 +10324,9 @@
       },
       "mathspeak": {
         "default": "not-sign"
+      },
+      "clearspeak": {
+        "default": "not sign"
       }
     },
     "key": "FFE2"
@@ -10308,6 +10365,9 @@
       },
       "mathspeak": {
         "default": "yen-sign"
+      },
+      "clearspeak": {
+        "default": "yen sign"
       }
     },
     "key": "FFE5"
@@ -10320,6 +10380,9 @@
       },
       "mathspeak": {
         "default": "won-sign"
+      },
+      "clearspeak": {
+        "default": "won sign"
       }
     },
     "key": "FFE6"

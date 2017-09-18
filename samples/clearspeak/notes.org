@@ -893,3 +893,25 @@ Table 3
 *** Corrections
 
 **** Prime011, Prime012, Prime011, Numbers combined in MathML!
+
+**** Equal004: + -> plus
+
+**** Bar006: zero -> 0, removes period at end.
+
+**** Bar007: one two -> 1 2
+
+**** Bar009: removes ,
+
+**** Bar015: transpose triple/C
+
+*** Decap
+    Bar006, Bar007, Bar008, Bar009, Bar010, Bar012, Bar013, Bar014, Bar015,
+    Bar016, Bar018,
+
+*** Pausing commata:
+    Prime042, Prime044, Prime043, Prime028, Prime027, Prime026, Bar018, 
+
+*** QUESTION: period or point?
+
+*** Simple spaceout: 
+    Bar012, Bar018, 

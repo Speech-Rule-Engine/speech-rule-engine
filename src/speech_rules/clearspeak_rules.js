@@ -118,6 +118,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCQF('CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments);
   addCQF('CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic);
   addCQF('CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase);
+  addCQF('CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber);
 };
 
 
@@ -1715,6 +1716,126 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [p] (pause:"short")',
       'self::integral');
 
+  // Over/under rules.
+  // Default rules:
+  defineRule(
+    'overscript', 'clearspeak.default',
+    '[n] children/*[1]; [t] "with"; [n] children/*[2]; [t] "above" (pause:"short")',
+    'self::overscore'
+  );
+  defineRule(
+    'overscript', 'clearspeak.default',
+    '[n] children/*[1]; [n] children/*[2];',
+    'self::overscore', 'children/*[2][@role="overaccent"]'
+  );
+  defineRule(
+    'underscript', 'clearspeak.default',
+    '[n] children/*[1]; [t] "with"; [n] children/*[2]; [t] "below" (pause:"short")',
+    'self::underscore'
+  );
+  
+  // Decimal periods:
+  defineRule(
+    'decimal-period', 'clearspeak.default',
+    '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "point followed by repeating digits"; ' +
+      ' [n] children/*[3]/children/*[1] (grammar:spaceout)',
+    'self::punctuated', '@role="sequence"', 'count(./content/*)=1',
+    './content/*[1][@role="fullstop"]',
+    'name(children/*[1])="number"', 'children/*[1][@role="integer"]',
+    'name(children/*[3])="overscore"', 'children/*[3][@role="integer"]',
+    'children/*[3]/children/*[2][@role="overaccent"]',
+    'children/*[3]/children/*[2][text()="\u00AF" or text()="\uFFE3"' +
+      ' or text()="\uFF3F" or text()="\u005F" or text()="\u203E"]'
+  );
+  defineRule(
+    'decimal-period', 'clearspeak.default',
+    '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "followed by repeating digits"; ' +
+      ' [n] children/*[2]/children/*[1] (grammar:spaceout);',
+    'self::infixop', '@role="implicit"', 'count(./children/*)=2',
+    'name(children/*[1])="number"', 'children/*[1][@role="float"]',
+    'name(children/*[2])="overscore"', 'children/*[2][@role="integer"]',
+    'children/*[2]/children/*[2][@role="overaccent"]',
+    'children/*[2]/children/*[2][text()="\u00AF" or text()="\uFFE3"' +
+      ' or text()="\uFF3F" or text()="\u005F" or text()="\u203E"]'
+  );
+  defineRule(
+    'decimal-period-singular', 'clearspeak.default',
+    '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "point followed by repeating digit"; ' +
+      ' [n] children/*[3]/children/*[1] (grammar:spaceout)',
+    'self::punctuated', '@role="sequence"', 'count(./content/*)=1',
+    './content/*[1][@role="fullstop"]',
+    'name(children/*[1])="number"', 'children/*[1][@role="integer"]',
+    'name(children/*[3])="overscore"', 'children/*[3][@role="integer"]',
+    'children/*[3]/children/*[2][@role="overaccent"]',
+    'children/*[3]/children/*[2][text()="\u00AF" or text()="\uFFE3"' +
+      ' or text()="\uFF3F" or text()="\u005F" or text()="\u203E"]',
+    'string-length(./children/*[3]/children/*[1]/text())=1'
+  );
+  defineRule(
+    'decimal-period-singular', 'clearspeak.default',
+    '[t] "the repeating decimal"; [n] children/*[1] (grammar:spaceout); ' +
+      '[t] "followed by repeating digit"; ' +
+      ' [n] children/*[2]/children/*[1] (grammar:spaceout);',
+    'self::infixop', '@role="implicit"', 'count(./children/*)=2',
+    'name(children/*[1])="number"', 'children/*[1][@role="float"]',
+    'name(children/*[2])="overscore"', 'children/*[2][@role="integer"]',
+    'children/*[2]/children/*[2][@role="overaccent"]',
+    'children/*[2]/children/*[2][text()="\u00AF" or text()="\uFFE3"' +
+      ' or text()="\uFF3F" or text()="\u005F" or text()="\u203E"]',
+    'string-length(./children/*[2]/children/*[1]/text())=1'
+  );
+  defineRule(
+    'number-with-spaces', 'clearspeak.default',
+    '[m] CQFspaceoutNumber (grammar:!spaceout)', 'self::number',
+    'contains(@grammar, "spaceout")');
+  defineRule(
+    'decimal-point', 'clearspeak.default',
+    '[t] "point"', 'self::number', '@role="fullstop"'
+  );
+
+  // Line segments:
+  defineRule(
+    'line-segment', 'clearspeak.default',
+    '[t] "the line segment"; [n] children/*[1]/children/*[1]; ' +
+      '[n] children/*[1]/children/*[2]; [p] (pause:"short")',
+    'self::overscore', '@role="implicit"',
+    'children/*[2][@role="overaccent"]',
+    'children/*[2][text()="\u00AF" or text()="\uFFE3"' +
+      ' or text()="\uFF3F" or text()="\u005F" or text()="\u203E"]',
+    'name(children/*[1])="infixop"', 'count(./children/*[1]/children/*)=2'
+  );
+
+  // Congutates:
+  defineRule(
+    'conjugate', 'clearspeak.Bar_Conjugate',
+    '[t] "the complex conjugate of"; [n] children/*[1]',
+    'self::overscore',
+    'children/*[2][@role="overaccent"]',
+    'children/*[2][text()="\u00AF" or text()="\uFFE3"' +
+      ' or text()="\uFF3F" or text()="\u005F" or text()="\u203E"]'
+  );
+  
+  // Special rules:
+  defineRule(
+    'defined-by', 'clearspeak.default',
+    '[t] "is defined to be" (pause:"short")',
+    'self::overscore', '@role="equality"', '@embellished="relation"',
+    'name(children/*[2])="text"', 'children/*[2][text()]="def"'
+  );
+  defineRule(
+    'adorned-sign', 'clearspeak.default',
+    '[n] children/*[1] ; [t] "sign with"; [n] children/*[2]; [t] "over it"',
+    'self::overscore', '@embellished',
+    'name(children/*[1])="operator" or name(children/*[1])="relation"'
+  );
+  defineRule(
+      'factorial', 'clearspeak.default', '[t] "factorial"', 'self::punctuation',
+      'text()="!"', 'name(preceding-sibling::*[1])!="text"');
+
+  
 };
 
 });  // goog.scope

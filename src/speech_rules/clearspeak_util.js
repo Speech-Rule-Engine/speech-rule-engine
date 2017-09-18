@@ -437,17 +437,14 @@ sre.ClearspeakUtil.nestingDepth = function(node) {
   var count = 0;
   var fence = /** @type {Element} */(node).textContent;
   var index = node.getAttribute('role') === 'open' ? 0 : 1;
-  console.log('index: ' + index);
   var parent = node.parentNode;
   while (parent) {
-    console.log(parent.toString());
     if (parent.tagName === sre.SemanticAttr.Type.FENCED &&
         parent.childNodes[0].childNodes[index].textContent === fence) {
       count++;
     }
     parent = parent.parentNode;
   }
-  console.log(count);
   sre.ClearspeakUtil.NESTING_DEPTH = count > 1 ?
     sre.MathspeakUtil.wordOrdinal(count) : '';
   return sre.ClearspeakUtil.NESTING_DEPTH;
