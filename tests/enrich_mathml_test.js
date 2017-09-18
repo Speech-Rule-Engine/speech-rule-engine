@@ -10287,19 +10287,32 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsElement = function() {
       '</semantics>' +
       '</math>'
   );
+  this.executeMathmlTest(
+    '<semantics><msubsup><mi>p</mi><mn>1</mn><mi>x</mi></msubsup></semantics>',
+    '<math>' +
+      '<semantics>' +
+      '<msubsup type="subsup" role="latinletter" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">p</mi>' +
+      '<mn type="number" role="integer" id="1" parent="4">1</mn>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+    '</msubsup>' +
+    '</semantics>' +
+    '</math>'
+  )
 };
 
 
 /**
  * Expressions with semantic elements and annotations.
  */
-sre.EnrichMathmlTest.prototype.testMahtmlSemanticsAnnotation = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotation = function() {
   // This is not really legal markup.
   this.executeMathmlTest(
       '<semantics><annotation>something</annotation></semantics>',
       '<math>' +
-      '<semantics type="empty" role="unknown" id="0">' +
-      '<annotation>something</annotation>' +
+      '<semantics>' +
+      '<annotation type="empty" role="unknown" id="0">something</annotation>' +
       '</semantics>' +
       '</math>'
   );
@@ -10366,9 +10379,9 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '<semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
       '<math>' +
-      '<semantics type="text" role="unknown" id="0">' +
+      '<semantics>' +
       '<annotation-xml>' +
-      '<content>something</content>' +
+      '<content type="text" role="unknown" id="0">something</content>' +
       '</annotation-xml>' +
       '</semantics>' +
       '</math>'
@@ -10380,9 +10393,10 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
       '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
       ' operator="punctuated">⁣</mo>' +
-      '<semantics type="text" role="unknown" id="1" parent="3">' +
-      '<annotation-xml>' +
-      '<content>something</content>' +
+      '<semantics>' +
+      '<annotation-xml type="text" role="unknown" id="1" parent="3">' +
+      '<content>something' +
+      '</content>' +
       '</annotation-xml>' +
       '</semantics>' +
       '</math>'
@@ -10489,7 +10503,8 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
   );
   this.executeMathmlTest(
       '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
-      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow>' +
+      '</mrow>',
       '<math>' +
       '<mrow type="vector" role="binomial" id="8" children="6,7"' +
       ' content="0,9">' +
