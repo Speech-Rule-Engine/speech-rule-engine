@@ -61,6 +61,17 @@ sre.SpeechRuleEngine = function() {
    * @private
    */
   this.cache_ = {};
+
+  /**
+   * Flag indicating if the engine is ready. Not ready while it is updating!
+   * @type {boolean}
+   * @private
+   */
+  this.ready_ = true;
+
+  sre.Engine.registerTest(
+      goog.bind(function(x) {return this.ready_;}, this));
+
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
 
@@ -516,11 +527,14 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
 
 /**
  * Updates adminstrative info in the base Engine.
+ * During update the engine is not ready!
  */
 sre.SpeechRuleEngine.prototype.updateEngine = function() {
+  this.ready_ = true;
   var maps = sre.MathMap.getInstance();
   if (!sre.Engine.isReady()) {
-    setTimeout(goog.bind(this.updateEngine, this), 500);
+    this.ready_ = false;
+    setTimeout(goog.bind(this.updateEngine, this), 250);
     return;
   }
   sre.Engine.getInstance().evaluator =
