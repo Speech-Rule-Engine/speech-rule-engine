@@ -37,7 +37,7 @@ sre.SystemExternal = function() { };
  * @return {Object} The library object that has been loaded.
  */
 sre.SystemExternal.require = function(library) {
-  if (typeof require !== 'undefined') {
+  if (typeof process !== 'undefined' && typeof require !== 'undefined') {
     return require(library);
   }
   return null;
