@@ -186,7 +186,7 @@ sre.TableWalker.prototype.verticalMove_ = function(direction) {
 
 
 /**
- * Indicates if a virtual summary is possible.
+ * Jumps directly to a table cell if possible.
  * @return {?sre.Focus}
  * @protected
  */
