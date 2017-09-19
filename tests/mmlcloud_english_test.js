@@ -496,7 +496,7 @@ sre.MmlcloudEnglishTest.prototype.testMultiline = function() {
 /**
  * Tests relation sequences with empty starts.
  */
-sre.MathmlCloudTest.prototype.testRelationsWithEmpty = function() {
+sre.MmlcloudEnglishTest.prototype.testRelationsWithEmpty = function() {
   this.executeRuleTest(
       '<mo>&#x2264;</mo><mn>2</mn>',
       'less-than-or-equal-to 2');
