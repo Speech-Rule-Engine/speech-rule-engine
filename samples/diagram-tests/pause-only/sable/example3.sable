@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN" 
+      "Sable.v0_2.dtd"
+[]>
+<SABLE>
+<SPEAKER NAME="female1">
+StartLayout 1st Row 1st Column upper A <BREAK MSEC="300"/> 2nd Column equals <BREAK MSEC="300"/> 3rd Column l w <BREAK MSEC="500"/> 2nd Row 1st Column Blank <BREAK MSEC="300"/> 2nd Column equals <BREAK MSEC="300"/> 3rd Column x dot 1 <BREAK MSEC="500"/> 3rd Row 1st Column Blank <BREAK MSEC="300"/> 2nd Column equals <BREAK MSEC="300"/> 3rd Column x <BREAK MSEC="500"/> EndLayout
+</SPEAKER>
+</SABLE>

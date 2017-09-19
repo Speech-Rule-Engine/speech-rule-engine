@@ -128,8 +128,8 @@ sre.AuditoryDescription.prototype.toString = function() {
  */
 sre.AuditoryDescription.prototype.descriptionString = function() {
   return this.context && this.text ?
-    this.context + ' ' + this.text :
-    this.context || this.text;
+      this.context + ' ' + this.text :
+      this.context || this.text;
 };
 
 

@@ -86,11 +86,3 @@ sre.DummyWalker.prototype.home = function() { };
 sre.DummyWalker.prototype.getDepth = function() {
   return 0;
 };
-
-
-/**
- * @override
- */
-sre.DummyWalker.prototype.initLevels = function() {
-  return new sre.Levels();
-};

@@ -1,0 +1,144 @@
+* XML schema for semantic tree:
+
+** XSD/XML schema generator:
+   http://www.freeformatter.com/xsd-generator.html
+
+** Site for xsd vs xml validation:
+  http://www.utilities-online.info/xsdvalidation
+  
+** Potential xsd validators:
+*** https://github.com/amouat/xsd-validator
+    In Java
+*** https://gist.github.com/iiska/215879
+    In Python, seems to use etree library.
+*** https://github.com/kripken/xml.js
+    Javascript. See also here: https://syssgx.github.io/xml.js/
+
+** maction
+   http://codepen.io/pkra/pen/jEodYw
+   http://codepen.io/mathjax/pen/dgJHx
+
+* TODO List for mathml integration
+
+** [DONE] Parent attribute in outermost wrapped node should go to inner node.
+
+** [DONE] Invisible operators.
+
+*** Add them as a node. 
+**** What about punctuation? Text punctuation?
+
+*** Expose by specialised flag.
+
+*** Add a specialised attribute.
+
+** [DONE] Add collapsed attribute.
+
+** Check what happens to explicit function applications.
+   
+** Look into prime inside a msubsup.
+
+*** Currently this is not treated special.
+*** However it is punctuation and role prime.
+*** Should that be changed in semantic tree.
+*** Is it "a one prime" or "a prime one"? According to mathspeak the latter.
+
+** Add more tests!
+
+** [DONE] Cleanup functions for walktree and special cases.
+
+** [DONE] Add more tests!
+
+** [DONE] Special case for MMultiscript
+   
+** [DONE] Build Semantic Tree unit separately.
+
+** [DONE] Sort out ignored elements.
+
+*** Should be retained in the tree.
+    
+*** Maybe clone all nodes deep and make replacement better (that can be expensive!).
+    
+*** Alternatively retain them somehow in the semantic tree.
+
+
+* TODO In semantic tree: 
+** Deal with pathological mrow cases. E.g.:
+    '<math><mrow><mi>a</mi><mi>b</mi></mrow><mrow><mi>c</mi></mrow></math>'
+    should be as single infix operation.
+** in "int sum a dx" the dx is going to be put into the sum.
+    '<math><msup><mo>\u222B</mo><mi>X</mi></msup><msub><mo>\u2211</mo><mi>Y</mi></msub><mi>a</mi><mrow><mi>d</mi><mi>x</mi></mrow></math>'
+** Proper handling of role of inner function if propagated as explicit function.
+**** currently it propagates simple function only.
+**** overwrites the given role
+** Fences are not properly matched sometimes. 
+   In particular double close etc. are converted to punctuated.
+   Reimplementation:
+*** When only open and neutral left:
+**** Split wrt. open
+**** Try to combine neutral in the inbetween.
+**** Leftover neutral (at beginning or end) are NOT transformed into punctuation.
+**** Try to combine open and neutral afterwards. 
+**** There might be a need to consider what is better to leave depending on outside open fence.
+***** ( || | || |  etc.
+**** Only what is then left is turned into punctuations.
+*** When leading close
+**** Try to combine as much as possible to the right.
+**** Come back to open fence.
+*** Generally consider leaving fences until processed and only then convert them to punctuation.
+** Fences over relations and vice versa
+** Test pages:
+https://en.wikipedia.org/wiki/Interval_(mathematics)
+https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
+** Make use of MathJax's TEXCLASSes? NO
+*** class="MJX-TeXAtom-CLOSE"
+*** class="MJX-TeXAtom-OPEN"
+
+
+* TODO For role computation: 
+** DONE Tensor role.
+** Punctuated with same punctuation does not seem to work.
+** DONE Multiop for operations > 1
+
+* TODO Embellished operators:
+** DONE Full treatment of embellished operators.
+** DONE Possibly introduce an embellished attribute.
+*** DONE Set to give direction of embellishment.
+*** DONE Inherit upwards for sub super tensor nodes.
+** TODO Check for equality of multiple operators.
+
+
+* DONE Embellished fences:
+** DONE Simple treatment of some open, closed and neutral fences.
+*** Use predicates to allow for treatment.
+*** We allow for opening left and closing right embellishments.
+*** Neutral fences can be matched only if left/right embellishment makes sense.
+*** In case of multiply embellished fence, we make it into a punctuation.
+*** That should be done in the tensor case!
+** DONE Advanced treatment via extra attribute
+*** Similar to embellished operators.
+
+// embellished fence expressions:
+// '<math><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><msup><mo>)</mo><mi>2</mi></msup></math>'
+// '<math><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><msub><mo>)</mo><mi>2</mi></msub></math>'
+// '<math><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><msup><mo>)</mo><mi>2</mi></msup><mi>c</mi></math>'
+//
+// '<math><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><msup><mo>)</mo><mi>2</mi></msup><mo>)</mo></math>';
+// '<math><mo>(</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><msup><mo>)</mo><mi>2</mi></msup><mo>)</mo></math>';
+// 
+// '<mmultiscripts><mo>(</mo><none/><none/>' +
+// '<mprescripts/><mn>1</mn><mi>j</mi></mmultiscripts>' +
+// '<mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>'
+
+
+* TODO Add characters in region of 274E to 2760
+
+* Stuff of entity problems:
+
+** Could add this when creating DOMParser:
+   {locator: { }, errorHandler: {warning: function(w) {},
+   error: function(l, m) {console.log('non fatal');},
+   fatalError: function(l, m) {console.log('fatal');}
+   }});
+
+
+
