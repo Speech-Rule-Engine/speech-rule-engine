@@ -314,9 +314,37 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
       oldCounter++;
       continue;
     }
+    // Here we need a case that the newChild is actually an existing descendant
+    // of the node, i.e., somewhere beneath but not contained in oldChildren.
+    if (sre.EnrichMathml.isDescendant_(
+        /**@type{!Element}*/ (newChildren[0]), node)) {
+      newChildren.shift();
+      continue;
+    }
     node.insertBefore(newChildren[0], oldChildren[oldCounter] || null);
     newChildren.shift();
   }
+};
+
+
+/**
+ * Checks if one node is a proper descendant of another.
+ * @param {Node} child The potential descendant node.
+ * @param {!Node} node The potential ancestor node.
+ * @return {boolean} True if child is a descendant of node.
+ * @private
+ */
+sre.EnrichMathml.isDescendant_ = function(child, node) {
+  if (!child) {
+    return false;
+  }
+  do {
+    child = child.parentNode;
+    if (child === node) {
+      return true;
+    }
+  } while (child);
+  return false;
 };
 
 
@@ -768,10 +796,10 @@ sre.EnrichMathml.getInnerNode = function(node) {
  */
 sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
   var wiki = opt_wiki || false;
-  console.log(expr.tagName);
-  for (var i = 0; i < expr.childNodes[0].childNodes.length; i++) {
-    console.log(expr.childNodes[0].childNodes[i].tagName);
-  }
+  // console.log(expr.tagName);
+  // for (var i = 0; i < expr.childNodes[0].childNodes.length; i++) {
+  //   console.log(expr.childNodes[0].childNodes[i].tagName);
+  // }
   sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
   sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
   sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',
