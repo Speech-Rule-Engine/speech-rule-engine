@@ -2246,22 +2246,22 @@ sre.RebuildStreeTest.prototype.testRebuildSwapElementLayers = function() {
  */
 sre.RebuildStreeTest.prototype.testRebuildSpacesAndEmptyFences = function() {
   this.executeRebuildTest(
-    '<mrow><mo fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>');
+      '<mrow><mo fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>');
 
   this.executeRebuildTest(
-    '<mrow><mo>{</mo><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mrow><mo>{</mo><mo fence="true"></mo></mrow><mspace width="2em"/>' +
       '<mi>v</mi>');
 
   this.executeRebuildTest(
-    '<mrow><mi>a</mi><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mrow><mi>a</mi><mo fence="true"></mo></mrow><mspace width="2em"/>' +
       '<mi>v</mi>');
 
   this.executeRebuildTest(
-    '<mrow><mo>{</mo><mi>a</mi><mo fence="true"></mo></mrow><mspace' +
+      '<mrow><mo>{</mo><mi>a</mi><mo fence="true"></mo></mrow><mspace' +
       ' width="2em"/><mi>v</mi>');
 
   this.executeRebuildTest(
-    '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
       ' fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>');
 
 };

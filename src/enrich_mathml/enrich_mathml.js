@@ -796,10 +796,6 @@ sre.EnrichMathml.getInnerNode = function(node) {
  */
 sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
   var wiki = opt_wiki || false;
-  // console.log(expr.tagName);
-  // for (var i = 0; i < expr.childNodes[0].childNodes.length; i++) {
-  //   console.log(expr.childNodes[0].childNodes[i].tagName);
-  // }
   sre.EnrichMathml.formattedOutput_(mml, 'Original MathML', wiki);
   sre.EnrichMathml.formattedOutput_(tree, 'Semantic Tree', wiki);
   sre.EnrichMathml.formattedOutput_(expr, 'Semantically enriched MathML',

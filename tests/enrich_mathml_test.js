@@ -10288,18 +10288,19 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsElement = function() {
       '</math>'
   );
   this.executeMathmlTest(
-    '<semantics><msubsup><mi>p</mi><mn>1</mn><mi>x</mi></msubsup></semantics>',
-    '<math>' +
+      '<semantics><msubsup><mi>p</mi><mn>1</mn><mi>x</mi></msubsup>' +
+      '</semantics>',
+      '<math>' +
       '<semantics>' +
       '<msubsup type="subsup" role="latinletter" id="4" children="0,1,2"' +
       ' collapsed="(4 (3 0 1) 2)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="4">p</mi>' +
       '<mn type="number" role="integer" id="1" parent="4">1</mn>' +
       '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
-    '</msubsup>' +
-    '</semantics>' +
-    '</math>'
-  )
+      '</msubsup>' +
+      '</semantics>' +
+      '</math>'
+  );
 };
 
 
@@ -11091,23 +11092,23 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
   this.executeMathmlTest(
-    '<mrow><mo fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>',
-    '<math><mrow><mo fence="true"/></mrow><mspace width="2em"/><mi' +
+      '<mrow><mo fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>',
+      '<math><mrow><mo fence="true"/></mrow><mspace width="2em"/><mi' +
       ' type="identifier" role="latinletter" id="1">v</mi></math>');
 
   this.executeMathmlTest(
-    '<mrow><mo>{</mo><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mrow><mo>{</mo><mo fence="true"></mo></mrow><mspace width="2em"/>' +
       '<mi>v</mi>',
-    '<math type="punctuated" role="startpunct" id="3" children="0,2"' +
+      '<math type="punctuated" role="startpunct" id="3" children="0,2"' +
       ' content="0"><mrow><mo type="punctuation" role="openfence" id="0"' +
       ' parent="3" operator="punctuated">{</mo><mo fence="true"/></mrow>' +
       '<mspace width="2em"/><mi type="identifier" role="latinletter" id="2"' +
       ' parent="3">v</mi></math>');
 
   this.executeMathmlTest(
-    '<mrow><mi>a</mi><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mrow><mi>a</mi><mo fence="true"></mo></mrow><mspace width="2em"/>' +
       '<mi>v</mi>',
-    '<math type="infixop" role="implicit" id="4" children="0,2"' +
+      '<math type="infixop" role="implicit" id="4" children="0,2"' +
       ' content="3"><mrow><mi type="identifier" role="latinletter" id="0"' +
       ' parent="4">a</mi><mo fence="true"/></mrow><mspace width="2em"/><mo' +
       ' type="operator" role="multiplication" id="3" parent="4"' +
@@ -11115,9 +11116,9 @@ sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
       ' role="latinletter" id="2" parent="4">v</mi></math>');
 
   this.executeMathmlTest(
-    '<mrow><mo>{</mo><mi>a</mi><mo fence="true"></mo></mrow><mspace' +
+      '<mrow><mo>{</mo><mi>a</mi><mo fence="true"></mo></mrow><mspace' +
       ' width="2em"/><mi>v</mi>',
-    '<math type="infixop" role="implicit" id="6" children="3,4"' +
+      '<math type="infixop" role="implicit" id="6" children="3,4"' +
       ' content="5"><mrow><mrow type="punctuated" role="startpunct" id="3"' +
       ' children="0,1" content="0" parent="6"><mo type="punctuation"' +
       ' role="openfence" id="0" parent="3" operator="punctuated">{</mo><mi' +
@@ -11128,9 +11129,9 @@ sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
       ' role="latinletter" id="4" parent="6">v</mi></math>');
 
   this.executeMathmlTest(
-    '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
       ' fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>',
-    '<math type="infixop" role="implicit" id="8" children="4,6"' +
+      '<math type="infixop" role="implicit" id="8" children="4,6"' +
       ' content="7"><mrow><mrow type="cases" role="unknown" id="4"' +
       ' children="3" content="0" parent="8"><mo type="punctuation"' +
       ' role="openfence" id="0" parent="4">{</mo><mtable><mtr type="line"' +
