@@ -127,7 +127,9 @@ sre.AuditoryDescription.prototype.toString = function() {
  * @return {string} A string representation of this object.
  */
 sre.AuditoryDescription.prototype.descriptionString = function() {
-  return this.context ? this.context + ' ' + this.text : this.text;
+  return this.context && this.text ?
+    this.context + ' ' + this.text :
+    this.context || this.text;
 };
 
 
