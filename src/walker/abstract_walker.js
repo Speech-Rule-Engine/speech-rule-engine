@@ -586,7 +586,7 @@ sre.AbstractWalker.prototype.focusFromId = function(id, ids) {
 
 
 /**
- * Indicates if a virtual summary is possible.
+ * Voicing a virtual summary.
  * @return {?sre.Focus}
  * @protected
  */
@@ -618,7 +618,7 @@ sre.AbstractWalker.prototype.summary_ = function() {
 
 
 /**
- * Indicates if a virtual detail is possible.
+ * Voices details of a collapsed element without expansion.
  * @return {?sre.Focus}
  * @protected
  */
