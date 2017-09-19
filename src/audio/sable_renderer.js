@@ -40,7 +40,7 @@ goog.inherits(sre.SableRenderer, sre.XmlRenderer);
  */
 sre.SableRenderer.prototype.pause = function(pause) {
   return '<BREAK ' + 'MSEC="' +
-    pause[sre.Engine.personalityProps.PAUSE] + '"/>';
+      pause[sre.Engine.personalityProps.PAUSE] + '"/>';
 };
 
 

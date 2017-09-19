@@ -6,6 +6,7 @@ Speech Rule Engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
+Speech rule engine (SRE) is 
 The speech rule engine can translate XML expressions into speech strings according to rules that
 can be specified in a syntax using Xpath expressions.  It was originally designed for translation
 of MathML and MathJax DOM elements for the ChromeVox screen reader. 
@@ -13,11 +14,19 @@ Besides the rules originally designed for the use in ChromeVox, it also has an i
 full set of Mathspeak rules. In addition it contains a library for semantic interpretation and enrichment
 of MathML expressions.
 
-There are two ways of using this engine. Either as a package via npm or by
-building it as a standalone tool.  The former is the easiest way to use the
-speech rule engine via its Api and is the preferred option if you just want to
-include it in your project. The latter is useful if you want to use the speech
-rule engine in batch mode or interactivley to add your own code.
+There are three ways of using this engine:
+
+1. **Node Module:** Download via npm. This is the easiest way to use the speech
+rule engine via its Api and is the preferred option if you just want to include
+it in your project.
+
+2. **Standalone Tool:** Download via github and build with make. This is useful
+if you want to use the speech rule engine in batch mode or interactivley to add
+your own code.
+
+3. **Browser Library:** This gives you the option of loading SRE in a browser and
+   use its full functionality on your webesites.
+
 
 Node Module
 -----------
@@ -44,6 +53,10 @@ Current API functions are divided into three categories.
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
+**Note that in asynchronous operation mode for these methods to work correctly,
+it is necessary to ensure that the Engine is ready for processing. See the
+isReady flag below.**
+
 #### Methods that take an input filename and optionally an output filename: 
 
 If the output filename is not provided, output will be written to stdout.
@@ -58,27 +71,42 @@ If the output filename is not provided, output will be written to stdout.
 
 #### A method for setting up and controlling the behaviour of the Speech Rule Engine:
 
-It takes an object of option/value pairs to parameterise the Speech Rule Engine.
+It takes a feature vector (an object of option/value pairs) to parameterise the
+Speech Rule Engine.
 
     setupEngine(options);
 
-Valid options are:
+Most common options are:
 
 | Option | Value |
 | ---- | ---- |
-| *domain* | Domain or subject area of speech rules (e.g., mathspeak, physics).|
+| *domain* | Domain or subject area of speech rules (e.g., mathspeak, emacspeak).|
 | *style* | Style of speech rules (e.g., brief).|
-| *semantics* | Boolean flag to swich on semantic interpretation.|
+| *markup*| Set the markup: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss``` |
+| *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation. Non-semantic rule sets are deprecated. |
 
 Observe that some speech rule domains only make sense with semantics switched on
 or off and that not every domain implements every style. See also the
 description of the command line parameters in the next section for more details.
 
+Other options to give more fine grained control of the SRE that are useful during development are:
+
+| Option | Value |
+| ---- | ---- |
+| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. |
+| *strict* | Boolean flag indicating if only a directly matching rule should be used. I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. Default is ```false```. |
+| *speech* | Depth to which speech attributes to store generated speech on nodes during semantic enrichment. Values are ```none```, ```shallow```, ```deep```. Default is ```none```. |
+| *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
+| *json* | URL where to pull the json speech rule files from. |
+| *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or Edge. |
+| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. **Always expects a list, even if only one rule set is supplied!** |
+
 
 #### Experimental methods for navigating math expressions:
 
 For the following methods sre maintains an internal state, hence they are only
-really useful when running in browser or in a Node REPL.Hence they are not
+really useful when running in browser or in a Node REPL. Hence they are not
 exposed via the command line interface.
 
 | Method | Return Value |
@@ -87,20 +115,16 @@ exposed via the command line interface.
 | `move(keycode)` | Speech string after the move. Keycodes are numerical strings representing cursor keys, space, enter, etc. |
 
 
-#### The following are deprecated API functions #########
+#### Other API functions and flags #########
 
-     processExpression(mathml); 
+| Method | Return Value |
+| ---- | ---- |
+| `pprintXML(string)` | Returns pretty printed version of a serialised XML string. |
+| `version` | Returns SRE's version number. |
+| `isReady()` | Returns flag indicating that the engine is ready for procssing (i.e., all necessary rule files have been loaded, the engine is done updating, etc.). **This is important in asynchronous settings.** |
 
-Takes a string containing a MathML expression and returns the corresponding
-speech string. Same as `toSpeech(mathml)`.
-
-     processFile(input, output);
-
-Takes an input file containing a MathML expression and writes the corresponding
-speech string to the output file. Same as `file.toSpeech(mathml)`.
-
-Standalone Engine
------------------
+Standalone Tool
+---------------
 
 Node dependencies you have to install:
 
@@ -172,6 +196,7 @@ The following is a list of command line options for the speech rule engine.
 | -j | --json  | Generate JSON of semantic tree. |
 | -m | --mathml  | Generate enriched MathML. |
 | -p | --speech  | Generate speech output (default). |
+| -k | --markup [name] | Generate speech output with markup tags. Currently supported SSML, VoiceXML, Sable, ACSS (as sexpressions for Emacsspeak) |
 | -x | --xml  | Generate XML of semantic tree. |
 | | |
 | | |
@@ -185,6 +210,59 @@ The following is a list of command line options for the speech rule engine.
 | -h | --help   | output usage information |
 | -V | --version  |      output the version number |
 
+
+Browser Library
+---------------
+
+SRE can be used as a browser ready library giving you the option of loading it
+in a browser and use its full functionality on your webesites.
+
+### Usage #############
+
+Build SRE with
+
+    make browser
+    
+Then include the resulting file ``sre_browser.js`` in your website in a script tag
+    
+``` html
+<script src="[URL]/sre_browser.js"></script>
+```
+
+The full functionality is now available in the ``sre`` namespace.  The most
+important API functions are also available in ``SRE``.
+
+### Configuration ####
+
+In addition to programmatically configuring SRE using the ``setupEngine``
+method, you can also include a configuration element in a website, that can take
+
+For example the configuration element
+``` html
+<script type="text/x-sre-config">
+{
+"json": "https://rawgit.com/zorkow/speech-rule-engine/develop/src/mathmaps",
+"xpath": "https://rawgit.com/google/wicked-good-xpath/master/dist/wgxpath.install.js",
+"domain": "mathspeak",
+"style": "sbrief"
+}
+</script>
+```
+will cause SRE to load JSON files from rawgit and for IE or Edge it will also load Google's
+[wicked good xpath library](https://github.com/google/wicked-good-xpath). In addition the speech rules are set to ``mathspeak`` in ``super brief`` style.
+
+**Make sure the configuration element comes before the script tag loading SRE in you website!**
+
+
+
+MathJax Library
+---------------
+
+
+    make mathjax
+
+generates a build specifi for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
+SRE can then be configured locally on webpages as described above.
 
 
 

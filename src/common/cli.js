@@ -80,14 +80,14 @@ sre.Cli.prototype.commandLine = function() {
       option('').
       option('-d, --dom [name]', 'Domain or subject area [name].').
       option('-t, --style [name]', 'Speech style [name].').
-      option('-s, --semantics', 'Switch on semantics interpretation.').
+      option('-s, --semantics', 'Switch OFF semantics interpretation.').
       option('-e, --enumerate', 'Enumerates available domains and styles.').
       option('').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).').
       option('-j, --json', 'Generate JSON of semantic tree.').
       option('-m, --mathml', 'Generate enriched MathML.').
       option('-p, --speech', 'Generate speech output (default).').
-      option('-k, --markup', 'Generate speech output with markup tags.').
+      option('-k, --markup [name]', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
       option('').
       option('-v, --verbose', 'Verbose mode.').
@@ -107,7 +107,7 @@ sre.Cli.prototype.commandLine = function() {
     }
     system.setupEngine(
         {
-          'semantics': commander.semantics,
+          'semantics': !commander.semantics,
           'domain': commander.dom,
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,

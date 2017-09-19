@@ -56,7 +56,7 @@ sre.HighlighterFactory.highlighter = function(back, fore, rendererInfo) {
 /**
  * Adds highlighter specific events depending on the current Mathjax renderer.
  * @param {!Node} node  The base node for highlighting.
- * @param {Object.<string, Function>} events The events to attach given as event
+ * @param {Object.<Function>} events The events to attach given as event
  *     type and function to execute
  * @param {{renderer: string,
  *          browser: (undefined|string)}} rendererInfo
@@ -73,7 +73,7 @@ sre.HighlighterFactory.addEvents = function(node, events, rendererInfo) {
 
 
 /**
- * @type {Object.<string, sre.Highlighter>}
+ * @type {Object.<sre.Highlighter>}
  * @private
  */
 sre.HighlighterFactory.highlighterMapping_ = {

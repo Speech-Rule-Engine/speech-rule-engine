@@ -67,7 +67,7 @@ sre.Highlighter.prototype.setColor = function(color) { };
 /**
  * Adds events to the nodes that can by highlighted.
  * @param {!Node} node The base node for highlighting.
- * @param {Object.<string, Function>} events The events to attach given as event
+ * @param {Object.<Function>} events The events to attach given as event
  *     type and function to execute
  */
 sre.Highlighter.prototype.addEvents = function(node, events) { };

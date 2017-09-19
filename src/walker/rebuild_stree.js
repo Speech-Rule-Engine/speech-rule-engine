@@ -40,7 +40,7 @@ goog.require('sre.WalkerUtil');
 sre.RebuildStree = function(mathml) {
 
   /**
-   * @type {!Object.<string, !sre.SemanticNode>}
+   * @type {!Object.<!sre.SemanticNode>}
    */
   this.nodeDict = {};
 

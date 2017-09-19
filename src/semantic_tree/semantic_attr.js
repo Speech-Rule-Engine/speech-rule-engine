@@ -124,7 +124,7 @@ sre.SemanticAttr = function() {
   // record pairs of opening/closing and top/bottom fences.
   /**
    * Mapping opening to closing fences.
-   * @type {Object.<string, string>}
+   * @type {Object.<string>}
    */
   this.openClosePairs =
       {
@@ -153,7 +153,7 @@ sre.SemanticAttr = function() {
       };
   /**
    * Mapping top to bottom fences.
-   * @type {Object.<string, string>}
+   * @type {Object.<string>}
    */
   this.topBottomPairs =
       {
@@ -1285,7 +1285,7 @@ sre.SemanticAttr = function() {
 
   /**
    * Dictionary mapping symbols to meanings.
-   * @type {Object.<string, {role: sre.SemanticAttr.Role,
+   * @type {Object.<{role: sre.SemanticAttr.Role,
    *           type: sre.SemanticAttr.Type,
    *           font: sre.SemanticAttr.Font}>}
    * @private
@@ -1491,6 +1491,10 @@ sre.SemanticAttr.Role = {
   CASES: 'cases',
   TABLE: 'table',
 
+  // Roles for special multline types.
+  MULTIEQU: 'multiequ',   // Multline equation system
+  MULTIREL: 'multirel',   // Multiline relation system
+
   // General
   UNKNOWN: 'unknown',
   PROTECTED: 'protected'
@@ -1681,7 +1685,7 @@ sre.SemanticAttr.prototype.isMatchingFence_ = function(open, close) {
 
 /**
  * Initializes the dictionary mapping strings to meaning.
- * @return {Object.<string, {role: sre.SemanticAttr.Role,
+ * @return {Object.<{role: sre.SemanticAttr.Role,
  *           type: sre.SemanticAttr.Type,
  *           font: sre.SemanticAttr.Font}>} The dictionary mapping strings to
  * semantic attributes.
