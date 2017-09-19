@@ -165,7 +165,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'omit-empty', 'mathspeak.default',
-      '',
+      '[p] (pause:100)', // Pause necessary to voice separators between empty.
       'self::empty');
   defineRule(
       'blank-empty', 'mathspeak.default',
