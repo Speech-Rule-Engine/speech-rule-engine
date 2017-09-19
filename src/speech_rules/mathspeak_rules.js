@@ -137,12 +137,11 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
+  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 
   // Dummy.
   addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
 
-  // DIAGRAM: Temporary for testing:
-  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
 
 
@@ -168,7 +167,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'omit-empty', 'mathspeak.default',
-      '',
+      '[p] (pause:100)', // Pause necessary to voice separators between empty.
       'self::empty');
   defineRule(
       'blank-empty', 'mathspeak.default',
@@ -1018,7 +1017,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
-  // DIAGRAM: Next three rules are temporary for testing:
   defineRule(
       'row-with-label', 'mathspeak.brief',
       '[t] "Label"; [n] content/*[1]; ' +
@@ -1115,13 +1113,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Multiline rules.
   defineRuleAlias(
       'layout', 'self::multiline');
-  // For testing:
-  //
-  // defineRule(
-  //     'multiline', 'mathspeak.default',
-  //     '[t] "multiline equation";' +
-  //     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"line")',
-  //     'self::multiline');
 
   defineRule(
       'line', 'mathspeak.default',
@@ -1131,7 +1122,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
-  // DIAGRAM: Next three rules are temporary for testing:
   defineRule(
       'line-with-label', 'mathspeak.brief',
       '[t] "Label"; [n] content/*[1]; ' +
@@ -1263,15 +1253,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'unit-divide', 'mathspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
-
-
-  // DIAGRAM: For testing.
-  // defineRule(
-  //   'repeat-initial', 'mathspeak.default',
-  //   '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
-  //   'self::cell', 'count(children/*)=0',
-  //   '../../../parent::table[@role="equality"]'
-  // );
 
 };
 

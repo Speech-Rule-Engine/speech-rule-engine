@@ -926,13 +926,17 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
 };
 
 
-// DIAGRAM: Temporary for testing: If we keep it make more robust!
 /**
  * Removes parentheses around a label.
  * @param {!Node} node The label to be processed.
  * @return {string} The text of the label.
  */
 sre.MathspeakUtil.removeParens = function(node) {
+  if (!node.childNodes.length ||
+      !node.childNodes[0].childNodes.length ||
+      !node.childNodes[0].childNodes[0].childNodes.length) {
+    return '';
+  }
   var content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };
