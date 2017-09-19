@@ -13,8 +13,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Testcases resulting from Mathml Cloud project, often inspired
- *     by bugs.
+ * @fileoverview Testcases resulting from Mathml Cloud and Mathjax project,
+ *     often inspired by bugs.
+ *
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
@@ -50,6 +51,8 @@ sre.MathmlCloudTest = function() {
    * @override
    */
   this.rules = ['MathspeakRules'];
+
+  this.setActive('MathmlCloud');
 };
 goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
 
@@ -489,3 +492,23 @@ sre.MathmlCloudTest.prototype.testMultiline = function() {
       ' 2nd Column d EndLayout');
 };
 
+
+/**
+ * Tests relation sequences with empty starts.
+ */
+sre.MathmlCloudTest.prototype.testRelationsWithEmpty = function() {
+  this.executeRuleTest(
+      '<mo>&#x2264;</mo><mn>2</mn>',
+      'less-than-or-equal-to 2');
+  this.executeRuleTest(
+      '<mo>=</mo><mn>2</mn><mo>=</mo>',
+      'equals 2 equals');
+  this.executeRuleTest(
+      '<mo>&#x2264;</mo><mn>2</mn><mo>=</mo>',
+      'less-than-or-equal-to 2 equals');
+  this.executeRuleTest(
+      '<mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi></mi><mo>&#x2264;</mo><mn>2' +
+      '</mn></mtd></mtr></mtable>',
+      'StartLayout 1st Row 1st Column 1 2nd Column less-than-or-equal-to 2' +
+      ' EndLayout');
+};

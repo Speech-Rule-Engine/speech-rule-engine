@@ -1,0 +1,9 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mi>x</mi>
+    <mfrac>
+      <mi>y</mi>
+      <mi>z</mi>
+    </mfrac>
+  </mfrac>
+</math>

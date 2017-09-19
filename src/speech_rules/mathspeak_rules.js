@@ -137,6 +137,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
+  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 };
 
 
@@ -162,7 +163,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'omit-empty', 'mathspeak.default',
-      '',
+      '[p] (pause:100)', // Pause necessary to voice separators between empty.
       'self::empty');
   defineRule(
       'blank-empty', 'mathspeak.default',
@@ -1006,7 +1007,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'matrix-row', 'mathspeak.default',
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column");' +
+      '[p] (pause: 200)',
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
@@ -1014,19 +1016,31 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
       'self::row', 'content');
   defineRule(
+      'row-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content');
+  defineSpecialisedRule(
+      'row-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'row-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      'self::row', 'content', 'name(content/cell/children/*[1])="text"');
+  defineRule(
       'empty-row', 'mathspeak.default',
       '[t] "Blank"', 'self::row', 'count(children/*)=0');
 
   defineRule(
       'matrix-cell', 'mathspeak.default',
-      '[n] children/*[1]', 'self::cell');
+      '[n] children/*[1]; [p] (pause: 300)', 'self::cell');
 
   // defineRule(
   //     'empty-cell', 'mathspeak.default',
   //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
   defineRule(
       'empty-cell', 'mathspeak.default',
-      '[t] "Blank"', 'self::cell', 'count(children/*)=0');
+      '[t] "Blank"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
 
 
   defineRule(
@@ -1097,13 +1111,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Multiline rules.
   defineRuleAlias(
       'layout', 'self::multiline');
-  // For testing:
-  //
-  // defineRule(
-  //     'multiline', 'mathspeak.default',
-  //     '[t] "multiline equation";' +
-  //     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"line")',
-  //     'self::multiline');
 
   defineRule(
       'line', 'mathspeak.default',
@@ -1113,6 +1120,18 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
+  defineRule(
+      'line-with-label', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1]; ' +
+      '[m] children/*',
+      'self::line', 'content');
+  defineSpecialisedRule(
+      'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
+  defineRule(
+      'line-with-text-label', 'mathspeak.sbrief',
+      '[t] "Label"; [t] CSFRemoveParens;' +
+      '[m] children/*',
+      'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
       '[t] "Blank"', 'self::line', 'count(children/*)=0');
@@ -1232,6 +1251,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'unit-divide', 'mathspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
+
 };
 
 

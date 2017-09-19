@@ -53,6 +53,10 @@ Current API functions are divided into three categories.
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
+**Note that in asynchronous operation mode for these methods to work correctly,
+it is necessary to ensure that the Engine is ready for processing. See the
+isReady flag below.**
+
 #### Methods that take an input filename and optionally an output filename: 
 
 If the output filename is not provided, output will be written to stdout.
@@ -96,7 +100,7 @@ Other options to give more fine grained control of the SRE that are useful durin
 | *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
 | *json* | URL where to pull the json speech rule files from. |
 | *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or Edge. |
-| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. |
+| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. **Always expects a list, even if only one rule set is supplied!** |
 
 
 #### Experimental methods for navigating math expressions:
@@ -117,7 +121,7 @@ exposed via the command line interface.
 | ---- | ---- |
 | `pprintXML(string)` | Returns pretty printed version of a serialised XML string. |
 | `version` | Returns SRE's version number. |
-| `isReady` | Flag indicating that all necessary rule files have been loaded. This is necessary in asynchronous settings. |
+| `isReady()` | Returns flag indicating that the engine is ready for procssing (i.e., all necessary rule files have been loaded, the engine is done updating, etc.). **This is important in asynchronous settings.** |
 
 Standalone Tool
 ---------------

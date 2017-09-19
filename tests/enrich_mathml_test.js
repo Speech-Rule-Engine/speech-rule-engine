@@ -38,7 +38,7 @@ sre.EnrichMathmlTest = function() {
    */
   this.information = 'Semantic enrichment tests.';
 
-  this.setActive('EnrichExamples');
+  this.setActive('EnrichExamples', 'js');
 };
 goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
 
@@ -51,6 +51,7 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine({semantics: true});
   this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
                         'data-semantic-fencepointer', 'data-semantic-meaning'];
+  sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
 
@@ -66,6 +67,7 @@ sre.EnrichMathmlTest.prototype.executeMathmlTest = function(mml, smml) {
   var xml = dp.parseFromString(smml);
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   this.customizeXml(node);
+  this.appendExamples('', mml);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));
@@ -6023,7 +6025,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
   this.executeMathmlTest(
       '<mtable><mtr><mtd><mi>x</mi><maligngroup/><mo>=</mo><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi><maligngroup/><mo>=</mo><mn>2</mn>' +
-      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>=</mo>' +
+      '</mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi><maligngroup/><mo>+</mo>' +
       '<mn>6</mn></mtd></mtr></mtable>',
       '<math>' +
       '<mtable type="multiline" role="unknown" id="21" children="5,11,20">' +
@@ -6053,7 +6055,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '</mtr>' +
       '<mtr type="line" role="multiline" id="20" children="18" parent="21">' +
       '<mtd>' +
-      '<mrow type="relseq" role="equality" id="18" children="17,15"' +
+      '<mrow type="infixop" role="addition" id="18" children="17,15"' +
       ' content="14" parent="20">' +
       '<mrow type="infixop" role="implicit" id="17" children="12,13"' +
       ' content="16" parent="18">' +
@@ -6063,8 +6065,8 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '<mi type="identifier" role="latinletter" id="13" parent="17">y</mi>' +
       '</mrow>' +
       '<maligngroup/>' +
-      '<mo type="relation" role="equality" id="14" parent="18"' +
-      ' operator="relseq,=">=</mo>' +
+      '<mo type="operator" role="addition" id="14" parent="18"' +
+      ' operator="infixop,+">+</mo>' +
       '<mn type="number" role="integer" id="15" parent="18">6</mn>' +
       '</mrow>' +
       '</mtd>' +
@@ -6077,7 +6079,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '<mtable><mtr><mtd><mi>x</mi></mtd><mtd><mo>=</mo></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mo>=</mo></mtd><mtd>' +
       '<mn>2</mn></mtd></mtr><mtr><mtd><mi>x</mi><mi>y</mi></mtd><mtd>' +
-      '<mo>=</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
+      '<mo>+</mo></mtd><mtd><mn>6</mn></mtd></mtr></mtable>',
       '<math>' +
       '<mtable type="table" role="unknown" id="24" children="6,13,23">' +
       '<mtr type="row" role="table" id="6" children="1,3,5" parent="24">' +
@@ -6113,7 +6115,7 @@ sre.EnrichMathmlTest.prototype.testMathmlTables = function() {
       '</mrow>' +
       '</mtd>' +
       '<mtd type="cell" role="table" id="20" children="19" parent="23">' +
-      '<mo type="relation" role="equality" id="19" parent="20">=</mo>' +
+      '<mo type="operator" role="addition" id="19" parent="20">+</mo>' +
       '</mtd>' +
       '<mtd type="cell" role="table" id="22" children="21" parent="23">' +
       '<mn type="number" role="integer" id="21" parent="22">6</mn>' +
@@ -6266,7 +6268,7 @@ sre.EnrichMathmlTest.prototype.testMathmlMatricesWithIgnores = function() {
       '<mi type="identifier" role="latinletter" id="0" parent="25">f</mi>' +
       '<mo type="relation" role="equality" id="1" parent="25"' +
       ' operator="relseq,=">=</mo>' +
-      '<mrow type="cases" role="unknown" id="24" children="8,14,23"' +
+      '<mrow type="cases" role="equality" id="24" children="8,14,23"' +
       ' content="2" parent="25">' +
       '<mpadded>' +
       '<mo type="punctuation" role="openfence" id="2" parent="24">{</mo>' +
@@ -10290,19 +10292,33 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsElement = function() {
       '</semantics>' +
       '</math>'
   );
+  this.executeMathmlTest(
+      '<semantics><msubsup><mi>p</mi><mn>1</mn><mi>x</mi></msubsup>' +
+      '</semantics>',
+      '<math>' +
+      '<semantics>' +
+      '<msubsup type="subsup" role="latinletter" id="4" children="0,1,2"' +
+      ' collapsed="(4 (3 0 1) 2)">' +
+      '<mi type="identifier" role="latinletter" id="0" parent="4">p</mi>' +
+      '<mn type="number" role="integer" id="1" parent="4">1</mn>' +
+      '<mi type="identifier" role="latinletter" id="2" parent="4">x</mi>' +
+      '</msubsup>' +
+      '</semantics>' +
+      '</math>'
+  );
 };
 
 
 /**
  * Expressions with semantic elements and annotations.
  */
-sre.EnrichMathmlTest.prototype.testMahtmlSemanticsAnnotation = function() {
+sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotation = function() {
   // This is not really legal markup.
   this.executeMathmlTest(
       '<semantics><annotation>something</annotation></semantics>',
       '<math>' +
-      '<semantics type="empty" role="unknown" id="0">' +
-      '<annotation>something</annotation>' +
+      '<semantics>' +
+      '<annotation type="empty" role="unknown" id="0">something</annotation>' +
       '</semantics>' +
       '</math>'
   );
@@ -10369,9 +10385,9 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '<semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
       '<math>' +
-      '<semantics type="text" role="unknown" id="0">' +
+      '<semantics>' +
       '<annotation-xml>' +
-      '<content>something</content>' +
+      '<content type="text" role="unknown" id="0">something</content>' +
       '</annotation-xml>' +
       '</semantics>' +
       '</math>'
@@ -10383,9 +10399,10 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
       '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
       ' operator="punctuated">⁣</mo>' +
-      '<semantics type="text" role="unknown" id="1" parent="3">' +
-      '<annotation-xml>' +
-      '<content>something</content>' +
+      '<semantics>' +
+      '<annotation-xml type="text" role="unknown" id="1" parent="3">' +
+      '<content>something' +
+      '</content>' +
       '</annotation-xml>' +
       '</semantics>' +
       '</math>'
@@ -10492,7 +10509,8 @@ sre.EnrichMathmlTest.prototype.testMathmlBinomial = function() {
   );
   this.executeMathmlTest(
       '<mrow><mrow><mo>(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mrow>' +
-      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow></mrow>',
+      '<mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfrac><mrow><mo>)</mo></mrow>' +
+      '</mrow>',
       '<math>' +
       '<mrow type="vector" role="binomial" id="8" children="6,7"' +
       ' content="0,9">' +
@@ -10984,11 +11002,11 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
       ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
       ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
-      ' type="infixop"><mrow/><mi type="identifier" role="greekletter"' +
-      ' id="2" parent="6">ϕ</mi><mo mathvariant="italic" type="operator"' +
-      ' role="multiplication" id="4" parent="6" operator="infixop,⁢">⁢</mo>' +
-      '<mi type="identifier" role="latinletter" id="5" parent="6">m</mi>' +
-      '</mrow></math>'
+      ' type="infixop"><mrow><mi type="identifier" role="greekletter"' +
+      ' id="2" parent="6">ϕ</mi></mrow><mo mathvariant="italic"' +
+      ' type="operator" role="multiplication" id="4" parent="6"' +
+      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
+      ' id="5" parent="6">m</mi></mrow></math>'
   );
   this.executeMathmlTest(
       '<mrow><mpadded><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
@@ -10998,8 +11016,9 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
       ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
       ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
-      ' type="infixop"><mrow><mpadded/></mrow><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
+      ' type="infixop"><mrow><mpadded><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi>' +
+      '</mpadded></mrow><mo mathvariant="italic"' +
       ' type="operator" role="multiplication" id="4" parent="6"' +
       ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
       ' id="5" parent="6">m</mi></mrow></math>'
@@ -11013,9 +11032,9 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
       ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow' +
       ' children="2,5" content="4" id="6" parent="3" role="multiplication"' +
-      ' type="infixop"><mrow><merror><mi>a</mi></merror></mrow><mi' +
-      ' type="identifier" role="greekletter" id="2" parent="6">ϕ</mi><mo' +
-      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      ' type="infixop"><mrow><merror><mi>a</mi></merror><mi' +
+      ' type="identifier" role="greekletter" id="2" parent="6">ϕ</mi></mrow>' +
+      '<mo mathvariant="italic" type="operator" role="multiplication" id="4"' +
       ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
       ' role="latinletter" id="5" parent="6">m</mi></mrow></math>'
   );
@@ -11027,11 +11046,11 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
       ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
       '<mrow type="infixop" role="multiplication" id="6" children="2,5"' +
-      ' content="4" parent="3"><mrow/><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
-      ' type="operator" role="multiplication" id="4" parent="6"' +
-      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
-      ' id="5" parent="6">m</mi></mrow></mrow></math>'
+      ' content="4" parent="3"><mrow><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi></mrow><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="5" parent="6">m</mi></mrow></mrow></math>'
   );
   this.executeMathmlTest(
       '<mrow><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ</mi>' +
@@ -11041,11 +11060,11 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       ' parent="3">n</mi><mo mathvariant="normal" type="operator"' +
       ' role="division" id="1" parent="3" operator="infixop,/">/</mo><mrow>' +
       '<mrow type="infixop" role="multiplication" id="6" children="2,5"' +
-      ' content="4" parent="3"><mrow/><mi type="identifier"' +
-      ' role="greekletter" id="2" parent="6">ϕ</mi><mo mathvariant="italic"' +
-      ' type="operator" role="multiplication" id="4" parent="6"' +
-      ' operator="infixop,⁢">⁢</mo><mi type="identifier" role="latinletter"' +
-      ' id="5" parent="6">m</mi></mrow></mrow></mrow></math>'
+      ' content="4" parent="3"><mrow><mi type="identifier"' +
+      ' role="greekletter" id="2" parent="6">ϕ</mi></mrow><mo' +
+      ' mathvariant="italic" type="operator" role="multiplication" id="4"' +
+      ' parent="6" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="5" parent="6">m</mi></mrow></mrow></mrow></math>'
   );
   this.executeMathmlTest(
       '<mi>a</mi><mrow><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>ϕ' +
@@ -11062,14 +11081,71 @@ sre.EnrichMathmlTest.prototype.testMathmlSwapElementLayers = function() {
       ' type="operator" role="division" id="2" parent="4"' +
       ' operator="infixop,/">/</mo><mrow type="infixop"' +
       ' role="multiplication" id="7" children="3,6" content="5" parent="4">' +
-      '<mrow/><mi type="identifier" role="greekletter" id="3" parent="7">ϕ' +
-      '</mi><mo type="operator" role="multiplication" id="5" parent="7"' +
-      ' operator="infixop,*">*</mo><mi type="identifier" role="latinletter"' +
-      ' id="6" parent="7">b</mi></mrow></mrow></mrow><mo' +
+      '<mrow><mi type="identifier" role="greekletter" id="3" parent="7">ϕ' +
+      '</mi></mrow><mo type="operator" role="multiplication" id="5"' +
+      ' parent="7" operator="infixop,*">*</mo><mi type="identifier"' +
+      ' role="latinletter" id="6" parent="7">b</mi></mrow></mrow></mrow><mo' +
       ' mathvariant="italic" type="operator" role="multiplication" id="8"' +
       ' parent="12" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
       ' role="latinletter" id="9" parent="12">m</mi></math>'
   );
+};
+
+
+/**
+ * Tests originating from issue #186. Incorrectly reordering elements.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
+  this.executeMathmlTest(
+      '<mrow><mo fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>',
+      '<math><mrow><mo fence="true"/></mrow><mspace width="2em"/><mi' +
+      ' type="identifier" role="latinletter" id="1">v</mi></math>');
+
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mi>v</mi>',
+      '<math type="punctuated" role="startpunct" id="3" children="0,2"' +
+      ' content="0"><mrow><mo type="punctuation" role="openfence" id="0"' +
+      ' parent="3" operator="punctuated">{</mo><mo fence="true"/></mrow>' +
+      '<mspace width="2em"/><mi type="identifier" role="latinletter" id="2"' +
+      ' parent="3">v</mi></math>');
+
+  this.executeMathmlTest(
+      '<mrow><mi>a</mi><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mi>v</mi>',
+      '<math type="infixop" role="implicit" id="4" children="0,2"' +
+      ' content="3"><mrow><mi type="identifier" role="latinletter" id="0"' +
+      ' parent="4">a</mi><mo fence="true"/></mrow><mspace width="2em"/><mo' +
+      ' type="operator" role="multiplication" id="3" parent="4"' +
+      ' added="true" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="2" parent="4">v</mi></math>');
+
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mi>a</mi><mo fence="true"></mo></mrow><mspace' +
+      ' width="2em"/><mi>v</mi>',
+      '<math type="infixop" role="implicit" id="6" children="3,4"' +
+      ' content="5"><mrow><mrow type="punctuated" role="startpunct" id="3"' +
+      ' children="0,1" content="0" parent="6"><mo type="punctuation"' +
+      ' role="openfence" id="0" parent="3" operator="punctuated">{</mo><mi' +
+      ' type="identifier" role="latinletter" id="1" parent="3">a</mi>' +
+      '</mrow><mo fence="true"/></mrow><mspace width="2em"/><mo' +
+      ' type="operator" role="multiplication" id="5" parent="6"' +
+      ' added="true" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="4" parent="6">v</mi></math>');
+
+  this.executeMathmlTest(
+      '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
+      ' fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>',
+      '<math type="infixop" role="implicit" id="8" children="4,6"' +
+      ' content="7"><mrow><mrow type="cases" role="unknown" id="4"' +
+      ' children="3" content="0" parent="8"><mo type="punctuation"' +
+      ' role="openfence" id="0" parent="4">{</mo><mtable><mtr type="line"' +
+      ' role="cases" id="3" children="1" parent="4"><mtd><mi' +
+      ' type="identifier" role="latinletter" id="1" parent="3">u</mi></mtd>' +
+      '</mtr></mtable></mrow><mo fence="true"/></mrow><mspace width="2em"/>' +
+      '<mo type="operator" role="multiplication" id="7" parent="8"' +
+      ' added="true" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
+      ' role="latinletter" id="6" parent="8">v</mi></math>');
 };
 
 
