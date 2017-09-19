@@ -1725,7 +1725,7 @@ sre.SemanticProcessor.rewriteFencedLine_ = function(table) {
  */
 sre.SemanticProcessor.rowToLine_ = function(row, opt_role) {
   var role = opt_role || sre.SemanticAttr.Role.UNKNOWN;
-  if (sre.SemanticPred.rowIsLine(row)) {
+  if (sre.SemanticPred.isAttribute('type', 'ROW')(row)) {
     row.type = sre.SemanticAttr.Type.LINE;
     row.role = role;
     if (row.childNodes.length === 1 &&
