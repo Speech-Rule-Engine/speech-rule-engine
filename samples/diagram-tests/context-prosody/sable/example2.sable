@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN" 
+      "Sable.v0_2.dtd"
+[]>
+<SABLE>
+<SPEAKER NAME="female1">
+StartLayout <RATE SPEED="+50%"><PITCH BASE="-75%">1st Row 1st Column</PITCH></RATE> upper A <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> equals <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Column</PITCH></RATE> one-half b h <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Row 1st Column</PITCH></RATE> Blank <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> equals <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Column</PITCH></RATE> one-half left-p'ren 2 x right-p'ren left-p'ren three-halves right-p'ren <BREAK MSEC="500"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Row 1st Column</PITCH></RATE> Blank <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">2nd Column</PITCH></RATE> equals <BREAK MSEC="300"/> <RATE SPEED="+50%"><PITCH BASE="-75%">3rd Column</PITCH></RATE> three-halves x <BREAK MSEC="500"/> EndLayout
+</SPEAKER>
+</SABLE>

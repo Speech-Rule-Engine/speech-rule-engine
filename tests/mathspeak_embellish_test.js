@@ -49,6 +49,8 @@ sre.MathspeakEmbellishTest = function() {
    * @override
    */
   this.rules = ['MathspeakRules'];
+
+  this.setActive('EmbellishedSymbols');
 };
 goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);
 

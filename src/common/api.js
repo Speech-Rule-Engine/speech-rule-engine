@@ -32,26 +32,15 @@ sre.Api = { };
 
 
 /**
- * Main function to translate expressions into auditory descriptions.
- * @param {string} expr Processes a given XML expression for translation.
- * @return {string} The auditory description.
+ * Exports the version number of SRE.
  */
-sre.Api.toSpeech = function(expr) {
-  return sre.System.getInstance().toSpeech(expr);
-};
-
-
-/**
- * Exporting method to return an aural rendered speech string.
- * @deprecated Use toSpeech().
- */
-module.exports.processExpression = sre.Api.toSpeech;
+module.exports.version = sre.System.getInstance().version;
 
 
 /**
  * Exporting method to return an aural rendered speech string.
  */
-module.exports.toSpeech = sre.Api.toSpeech;
+module.exports.toSpeech = sre.System.getInstance().toSpeech;
 
 
 /**
@@ -103,13 +92,6 @@ module.exports.file.toSpeech = sre.System.getInstance().fileToSpeech;
 
 
 /**
- * Exporting method to aural render an expression from a file.
- * @deprecated Use file.toSpeech()
- */
-module.exports.processFile = sre.System.getInstance().fileToSpeech;
-
-
-/**
  * Exporting method to compute the semantic tree for an expression from a file.
  */
 module.exports.file.toSemantic = sre.System.getInstance().fileToSemantic;
@@ -140,12 +122,6 @@ module.exports.file.toEnriched = sre.System.getInstance().fileToEnriched;
  * Exporting method to set up and parameterise the Engine.
  */
 module.exports.setupEngine = sre.System.getInstance().setupEngine;
-
-
-/**
- * Exporting XML pretty printer.
- */
-module.exports.pprintXML = sre.DomUtil.formatXml;
 
 
 /**

@@ -49,6 +49,8 @@ sre.SemanticRuleTest = function() {
    * @override
    */
   this.rules = ['SemanticTreeRules'];
+
+  this.setActive('SemanticTreeRules');
 };
 goog.inherits(sre.SemanticRuleTest, sre.AbstractRuleTest);
 

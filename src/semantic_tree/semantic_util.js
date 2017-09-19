@@ -32,7 +32,7 @@ sre.SemanticUtil = function() { };
 
 /**
  * Merges keys of objects into an array.
- * @param {...Object.<string, string>} var_args Optional objects.
+ * @param {...Object.<string>} var_args Optional objects.
  * @return {Array.<string>} Array of all keys of the objects.
  */
 sre.SemanticUtil.objectsToKeys = function(var_args) {
@@ -44,7 +44,7 @@ sre.SemanticUtil.objectsToKeys = function(var_args) {
 
 /**
  * Merges values of objects into an array.
- * @param {...Object.<string, string>} var_args Optional objects.
+ * @param {...Object.<string>} var_args Optional objects.
  * @return {Array.<string>} Array of all values of the objects.
  */
 sre.SemanticUtil.objectsToValues = function(var_args) {

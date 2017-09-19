@@ -31,7 +31,7 @@ goog.require('sre.SemanticTreeRules');
 
 
 /**
- * @type {!Object.<string, sre.BaseRuleStore>}
+ * @type {!Object.<sre.BaseRuleStore>}
  * @private
  */
 sre.SpeechRuleStores.RULE_SETS_ = {
