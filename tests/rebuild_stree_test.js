@@ -2239,3 +2239,29 @@ sre.RebuildStreeTest.prototype.testRebuildSwapElementLayers = function() {
       '</mo><mi>m</mi>'
   );
 };
+
+
+/**
+ * Tests originating from issue #186. Incorrectly reordering elements.
+ */
+sre.RebuildStreeTest.prototype.testRebuildSpacesAndEmptyFences = function() {
+  this.executeRebuildTest(
+    '<mrow><mo fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>');
+
+  this.executeRebuildTest(
+    '<mrow><mo>{</mo><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mi>v</mi>');
+
+  this.executeRebuildTest(
+    '<mrow><mi>a</mi><mo fence="true"></mo></mrow><mspace width="2em"/>' +
+      '<mi>v</mi>');
+
+  this.executeRebuildTest(
+    '<mrow><mo>{</mo><mi>a</mi><mo fence="true"></mo></mrow><mspace' +
+      ' width="2em"/><mi>v</mi>');
+
+  this.executeRebuildTest(
+    '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
+      ' fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>');
+
+};
