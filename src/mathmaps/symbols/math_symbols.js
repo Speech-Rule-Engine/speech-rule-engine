@@ -327,8 +327,7 @@
         "default": "vertical-bar"
       },
       "clearspeak": {
-        "default": "divides",
-        "VerticalLine_SuchThat": "such that"
+        "default": "divides"
       }
     },
     "key": "007C"

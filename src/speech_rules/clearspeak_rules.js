@@ -272,17 +272,17 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
     'vbar-such-that', 'clearspeak.VerticalLine_SuchThat',
     '[t] "such that"', 'self::punctuation', '@role="vbar"',
-    'parent::*/parent::*[@embellished!="punctuation"]'
+    'not(parent::*/parent::*[@embellished="punctuation"])'
   );
   defineRule(
     'vbar-such-that', 'clearspeak.VerticalLine_Divides',
     '[t] "divides"', 'self::punctuation', '@role="vbar"',
-    'parent::*/parent::*[@embellished!="punctuation"]'
+    'not(parent::*/parent::*[@embellished="punctuation"])'
   );
   defineRule(
     'vbar-such-that', 'clearspeak.VerticalLine_Given',
     '[t] "given"', 'self::punctuation', '@role="vbar"',
-    'parent::*/parent::*[@embellished!="punctuation"]'
+    'not(parent::*/parent::*[@embellished="punctuation"])'
   );
 
   // Adornments

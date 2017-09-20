@@ -406,6 +406,11 @@ Helper function for Emacs:
     VertLine005, MembSym001, MembSym004, MembSym007, MembSym010, MembSym013,
     MembSym003, MembSym006, MembSym009, MembSym012, MembSym015
 
+*** QUESTIONS:
+
+****  VertLine009: 
+      why // (To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
+
 
 ** Sets enclosed in brackets
 
@@ -918,18 +923,21 @@ Table 3
 
 ** Multiline
 
-*** QUESTION: What about empty cells?
+*** QUESTIONS:
+
+**** What about empty cells?
     Currently decided on blank.
 
-*** QUESTION: Equation: examples?
+**** Equation: examples?
 
-*** QUESTION: Pause after summary? How long?
+**** Pause after summary? How long?
 
-*** QUESTION: What about cases in other preferences (constraints, etc.)
+**** What about cases in other preferences (constraints, etc.)
 
-*** QUESTION: What about constraints in equality mode etc.
+**** What about constraints in equality mode etc.
     Would it not make more sense to actually distinguish equalities vs inequalities.
 
-*** QUESTION: Why is there a separate _Line preference for multiline labels?
+**** Why is there a separate _Line preference for multiline labels?
 
-*** Examples for label_none are missing! 
+*** Examples for label_none are missing!
+

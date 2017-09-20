@@ -34,7 +34,7 @@ sre.ClearspeakPart2Symbols.base(this, 'constructor');
 * @override
 */
 this.information = 'ClearspeakPart2Symbols rule tests.';
-
+  sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 
@@ -411,14 +411,13 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine008 = function() {
 };
 
 
-// TODO: (MOSS) Sort out with uppercases!
 /**
  * Testing ClearspeakPart2Symbols Example VertLine009
  */
-sre.ClearspeakPart2Symbols.prototype.untestVertLine009 = function() {
+sre.ClearspeakPart2Symbols.prototype.testVertLine009 = function() {
   var preference = 'VerticalLine_Given';
   var mathml = '<math><mrow><mi>P</mi><mtext></mtext><mrow><mo>(</mo><mrow><mi>A</mi><mo>|</mo><mi>B</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'P of, open paren, A given B, close paren'; // (To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
+  var speech = 'P of, open paren, A given B, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
