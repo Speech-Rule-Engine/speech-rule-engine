@@ -1911,7 +1911,11 @@
         "default": "element-of"
       },
       "clearspeak": {
-        "default": "in"
+        "default": "is a member of",
+        "SetMemberSymbol_Member": "is a member of",
+        "SetMemberSymbol_Element": "is an element of",
+        "SetMemberSymbol_In": "is in",
+        "SetMemberSymbol_Belongs": "belongs to"
       }
     },
     "key": "2208"
@@ -1926,7 +1930,11 @@
         "default": "not-an-element-of"
       },
       "clearspeak": {
-        "default": "not in"
+        "default": "is not a member of",
+        "SetMemberSymbol_Member": "is not a member of",
+        "SetMemberSymbol_Element": "is not an element of",
+        "SetMemberSymbol_In": "is not in",
+        "SetMemberSymbol_Belongs": "does not belong to"
       }
     },
     "key": "2209"
@@ -1939,6 +1947,13 @@
       },
       "mathspeak": {
         "default": "small-element-of"
+      },
+      "clearspeak": {
+        "default": "is a member of",
+        "SetMemberSymbol_Member": "is a member of",
+        "SetMemberSymbol_Element": "is an element of",
+        "SetMemberSymbol_In": "is in",
+        "SetMemberSymbol_Belongs": "belongs to"
       }
     },
     "key": "220A"

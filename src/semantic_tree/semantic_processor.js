@@ -945,12 +945,31 @@ sre.SemanticProcessor.prototype.classifyHorizontalFence_ = function(node) {
       (children[0].contentNodes[0].role === sre.SemanticAttr.Role.VBAR ||
        children[0].contentNodes[0].role === sre.SemanticAttr.Role.COLON)) {
     node.role = sre.SemanticAttr.Role.SETEXT;
+    this.setExtension_(node);
     return;
   }
   // TODO (sorge): Intervals after the Bra-Ket heuristic.
 };
 
 
+// TODO: (MS2.3|simons) This is a rather crude heuristic. Should be improved
+//       once we have improved triaging of symbols.
+//       Also needs unit tests!
+/**
+ * Classifies content in the extension part of a set. Only works if we have
+ * assured that a set is indeed and exteded set.
+ * @param {sre.SemanticNode} set A semantic node representing an extended set.
+ * @private
+ */
+sre.SemanticProcessor.prototype.setExtension_ = function(set) {
+  var extender = set.childNodes[0].childNodes[0];
+  if (extender && extender.type === sre.SemanticAttr.Type.INFIXOP &&
+      extender.contentNodes.length === 1 &&
+      extender.contentNodes[0].role === sre.SemanticAttr.Role.UNKNOWN
+     ) {
+       extender.contentNodes[0].role = sre.SemanticAttr.Role.SETEXT;
+     }
+};
 
 
 /**

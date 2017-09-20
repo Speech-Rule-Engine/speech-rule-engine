@@ -430,10 +430,10 @@ sre.ClearspeakPart2Symbols.prototype.testVertLine009 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym001
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym001 = function() {
-  var preference = 'VerticalLine_Auto';
+sre.ClearspeakPart2Symbols.prototype.testMembSym001 = function() {
+  var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x is a member of the integers then 2 x, is an even number.';
+  var speech = 'If x is a member of the integers then 2 x, is an even number period';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -441,8 +441,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym002
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym002 = function() {
-  var preference = 'VerticalLine_Auto';
+sre.ClearspeakPart2Symbols.prototype.testMembSym002 = function() {
+  var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of all x in the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
@@ -452,8 +452,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym003
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym003 = function() {
-  var preference = 'VerticalLine_Auto';
+sre.ClearspeakPart2Symbols.prototype.testMembSym003 = function() {
+  var preference = 'SetMemberSymbol_Auto';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
   var speech = '3 plus 2 i, is not a member of the real numbers';
   this.executeRuleTest(mathml, speech, preference);
@@ -463,10 +463,10 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym004
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym004 = function() {
-  var preference = 'VerticalLine_Member';
+sre.ClearspeakPart2Symbols.prototype.testMembSym004 = function() {
+  var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x is a member of the integers then 2 x, is an even number.';
+  var speech = 'If x is a member of the integers then 2 x, is an even number period';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -474,8 +474,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym004 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym005
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym005 = function() {
-  var preference = 'VerticalLine_Member';
+sre.ClearspeakPart2Symbols.prototype.testMembSym005 = function() {
+  var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of all x member of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
@@ -485,8 +485,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym005 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym006
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym006 = function() {
-  var preference = 'VerticalLine_Member';
+sre.ClearspeakPart2Symbols.prototype.testMembSym006 = function() {
+  var preference = 'SetMemberSymbol_Member';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
   var speech = '3 plus 2 i, is not a member of the real numbers';
   this.executeRuleTest(mathml, speech, preference);
@@ -496,10 +496,10 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym006 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym007
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym007 = function() {
-  var preference = 'VerticalLine_Element';
+sre.ClearspeakPart2Symbols.prototype.testMembSym007 = function() {
+  var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x is an element of the integers then 2 x, is an even number';
+  var speech = 'If x is an element of the integers then 2 x, is an even number period';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -507,8 +507,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym007 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym008
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym008 = function() {
-  var preference = 'VerticalLine_Element';
+sre.ClearspeakPart2Symbols.prototype.testMembSym008 = function() {
+  var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of all x element of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
@@ -518,8 +518,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym008 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym009
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym009 = function() {
-  var preference = 'VerticalLine_Element';
+sre.ClearspeakPart2Symbols.prototype.testMembSym009 = function() {
+  var preference = 'SetMemberSymbol_Element';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
   var speech = '3 plus 2 i, is not an element of the real numbers';
   this.executeRuleTest(mathml, speech, preference);
@@ -529,10 +529,11 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym009 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym010
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym010 = function() {
-  var preference = 'VerticalLine_Belongs';
-  var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';
-  var speech = 'If x belongs to the integers then 2 x, is an even number';
+sre.ClearspeakPart2Symbols.prototype.testMembSym010 = function() {
+  var preference = 'SetMemberSymbol_Belongs';
+  var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
+  // var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';
+  var speech = 'If x belongs to the integers then 2 x, is an even number period';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -540,8 +541,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym010 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym011
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym011 = function() {
-  var preference = 'VerticalLine_Belongs';
+sre.ClearspeakPart2Symbols.prototype.testMembSym011 = function() {
+  var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of all x belonging to the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
@@ -551,8 +552,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym011 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym012
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym012 = function() {
-  var preference = 'VerticalLine_Belongs';
+sre.ClearspeakPart2Symbols.prototype.testMembSym012 = function() {
+  var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
   var speech = '3 plus 2 i, does not belong to the real numbers';
   this.executeRuleTest(mathml, speech, preference);
@@ -562,10 +563,10 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym012 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym013
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym013 = function() {
-  var preference = 'VerticalLine_Belongs';
+sre.ClearspeakPart2Symbols.prototype.testMembSym013 = function() {
+  var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext></math>';
-  var speech = 'If x belongs to the integers then 2 x, is an even number';
+  var speech = 'If x belongs to the integers then 2 x, is an even number period';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -573,8 +574,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym013 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym014
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym014 = function() {
-  var preference = 'VerticalLine_Belongs';
+sre.ClearspeakPart2Symbols.prototype.testMembSym014 = function() {
+  var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of all x belonging to the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);
@@ -584,8 +585,8 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym014 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example MembSym015
  */
-sre.ClearspeakPart2Symbols.prototype.untestMembSym015 = function() {
-  var preference = 'VerticalLine_Belongs';
+sre.ClearspeakPart2Symbols.prototype.testMembSym015 = function() {
+  var preference = 'SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi><mo>∉</mo><mi>ℝ</mi></mrow></math>';
   var speech = '3 plus 2 i, does not belong to the real numbers';
   this.executeRuleTest(mathml, speech, preference);
@@ -601,9 +602,10 @@ sre.ClearspeakPart2Symbols.prototype.untestMembSym015 = function() {
  * Testing ClearspeakPart2Symbols Example SetMemb001
  */
 sre.ClearspeakPart2Symbols.prototype.untestSetMemb001 = function() {
-  var preference = 'VerticalLine_Sets "woall" and SetMemberSymbol "belongs"';  // TODO (sorge): Sort out preferences!
+  var preference = 'Sets_woall';
+  preference = 'SetMemberSymbol_Belongs';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of x belonging to the integers such that 2 is less than x is less than 7.';
+  var speech = 'the set of x belonging to the integers such that 2 is less than x is less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -612,7 +614,8 @@ sre.ClearspeakPart2Symbols.prototype.untestSetMemb001 = function() {
  * Testing ClearspeakPart2Symbols Example SetMemb002
  */
 sre.ClearspeakPart2Symbols.prototype.untestSetMemb002 = function() {
-  var preference = 'VerticalLine_Sets "woall" and SetMemberSymbol "member"';  // TODO (sorge): Sort out preferences!
+  var preference = 'Sets_woall';
+  preference = 'SetMemberSymbol_Member';  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of x member of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);

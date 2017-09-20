@@ -401,6 +401,7 @@ Helper function for Emacs:
 
 **** Sum007, Sum008, + -> plus
 **** Sum016, Sum017, Sum018,  spaceout dx
+**** SetMemb001, remove period.
 
 *** Simple spaced out:
     VertLine005, MembSym001, MembSym004, MembSym007, MembSym010, MembSym013,
@@ -410,6 +411,14 @@ Helper function for Emacs:
 
 ****  VertLine009: 
       why // (To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
+
+**** How about element inside of Set but not bound in set extension?
+     Currently we treat this similar to outside.
+
+*** Replaced ending . with period in speech:
+    MembSym001, MembSym004, MembSym007, MembSym010, MembSym013
+
+*** Somethings wrong with the MathType in MembSym010
 
 
 ** Sets enclosed in brackets

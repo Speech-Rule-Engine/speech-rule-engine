@@ -285,6 +285,36 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'not(parent::*/parent::*[@embellished="punctuation"])'
   );
 
+  // Element/Member
+  defineRule(
+    'set-member', 'clearspeak.default',
+    '[t] "in"', 'self::operator', '@role="set extended"',
+    'text()="\u2208" or text()="\u220A"');
+  defineSpecialisedRule(
+    'set-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Member',
+    '[t] "member of"');
+  defineSpecialisedRule(
+    'set-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Element',
+    '[t] "element of"');
+  defineSpecialisedRule(
+    'set-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Belongs',
+    '[t] "belonging to"');
+  defineRule(
+    'set-not-member', 'clearspeak.default',
+    '[t] "not in"', 'self::operator', '@role="set extended"',
+    'text()="\u2209"'
+  );
+  defineSpecialisedRule(
+    'set-not-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Member',
+    '[t] "not member of"');
+  defineSpecialisedRule(
+    'set-not-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Element',
+    '[t] "not element of"');
+  defineSpecialisedRule(
+    'set-not-member', 'clearspeak.default', 'clearspeak.SetMemberSymbol_Belongs',
+    '[t] "not belonging to"');
+  
+
   // Adornments
   // 
   // Primes
