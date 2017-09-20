@@ -914,4 +914,22 @@ Table 3
 *** QUESTION: period or point?
 
 *** Simple spaceout: 
-    Bar012, Bar018, 
+    Bar012, Bar018,
+
+** Multiline
+
+*** QUESTION: What about empty cells?
+    Currently decided on blank.
+
+*** QUESTION: Equation: examples?
+
+*** QUESTION: Pause after summary? How long?
+
+*** QUESTION: What about cases in other preferences (constraints, etc.)
+
+*** QUESTION: What about constraints in equality mode etc.
+    Would it not make more sense to actually distinguish equalities vs inequalities.
+
+*** QUESTION: Why is there a separate _Line preference for multiline labels?
+
+*** Examples for label_none are missing! 
