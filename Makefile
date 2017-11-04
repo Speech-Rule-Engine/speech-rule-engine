@@ -27,7 +27,6 @@ SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
 
-START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
@@ -112,17 +111,6 @@ $(DEPS):
 
 
 start_files: directories $(INTERACTIVE)
-
-start: $(START)
-
-$(START): 
-	@echo "Making startup script."
-	@echo "#!/bin/bash" > $@
-	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_DIR)\n" >> $@
-	@echo $(NODEJS) $(TARGET) "\$$@" >> $@
-	@chmod 755 $@
-
 
 interactive: directories $(INTERACTIVE) deps
 
