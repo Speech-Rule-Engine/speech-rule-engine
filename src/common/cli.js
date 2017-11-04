@@ -134,4 +134,6 @@ sre.Cli.prototype.commandLine = function() {
 };
 
 
-(new sre.Cli()).commandLine();
+if (process.env.SRE_TOP_PATH) {
+  (new sre.Cli()).commandLine();
+};
