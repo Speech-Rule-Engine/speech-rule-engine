@@ -37,7 +37,7 @@ sre.AbstractExamples = function() {
    * @type {boolean}
    * @private
    */
-  this.active_ = false;
+  this.active_ = true;
 
   /**
    * Possible file error.
@@ -51,18 +51,32 @@ sre.AbstractExamples = function() {
    * @type {!string}
    * @private
    */
-  this.examplesName_ = 'Examples';
+  this.fileName_ = 'Examples';
+
+  /**
+   * File extension. Default html.
+   * @type {!string}
+   * @private
+   */
+  this.fileExtension_ = 'html';
+
+  /**
+   * Base directory for the output file.
+   * @type {!string}
+   * @private
+   */
+  this.fileDirectory_ = 'www/localisation';
 
   /**
    * Sets example output file for tests.
    * @type {!string}
    * @private
    */
-  this.examplesFile_ = 'tests.js';
+  this.examplesFile_ = this.fileDirectory_ + '/tests.' + this.fileExtension_;
 
   /**
    * The output values.
-   * @type {Array.<string>}
+   * @type {Object.<string, Array.<string>>}
    * @private
    */
   this.examples_ = [];
@@ -73,10 +87,9 @@ goog.inherits(sre.AbstractExamples, sre.AbstractTest);
 /**
  * @override
  */
-sre.AbstractExamples.prototype.setActive = function(file) {
-  //TODO: (sorge) Make lab examples into a dictionary and handle multiple files.
-  // this.examplesFile_ = file;
-  this.active_ = true;
+sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
+  var ext = opt_ext || this.fileExtension_;
+  this.examplesFile_ = this.fileDirectory_ + '/' + file + '.' + ext;
 };
 
 
@@ -96,10 +109,15 @@ sre.AbstractExamples.prototype.startExamples = function() {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.appendExamples = function(example) {
-  // TODO (sorge) Rewrite this to append asynchronously to file.
+sre.AbstractExamples.prototype.appendExamples = function(type, example) {
   if (this.active_ && !this.fileError_) {
-    this.examples_.push(example.replace(/(['"])/g, '\\\''));
+    var examples = this.examples_[type];
+    var cleaned = this.cleanup(example);
+    if (examples) {
+      examples.push(cleaned);
+    } else {
+      this.examples_[type] = [cleaned];
+    }
   }
 };
 
@@ -111,10 +129,12 @@ sre.AbstractExamples.prototype.endExamples = function() {
   if (!this.active_) return;
   if (!this.fileError_) {
     try {
-      sre.SystemExternal.fs.appendFileSync(
-          this.examplesFile_,
-          'Lab.' + this.examplesName_ +
-          ' = [\'' + this.examples_.join('\',\n\'') + '\']');
+      for (var key in this.examples_) {
+        sre.SystemExternal.fs.appendFileSync(
+            this.examplesFile_, key);
+        sre.SystemExternal.fs.appendFileSync(
+            this.examplesFile_, this.join(this.examples_[key]));
+      }
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
     }
@@ -140,4 +160,25 @@ sre.AbstractExamples.prototype.setUpTest = function() {
  */
 sre.AbstractExamples.prototype.tearDownTest = function() {
   this.endExamples();
+};
+
+
+/**
+ * Cleans up an example string.
+ * @param {string} example The example string.
+ * @return {string} The cleaned version of the string.
+ */
+sre.AbstractExamples.prototype.cleanup = function(example) {
+  return example.replace(/(['"])/g, '\\\'');
+};
+
+
+/**
+ * Joins the accumulated list of examples into a single output string.
+ * @param {Array.<string>} examples The list of examples.
+ * @return {string} The joined string.
+ */
+sre.AbstractExamples.prototype.join = function(examples) {
+  return 'Lab.' + this.fileName_ +
+      ' = [\'' + examples.join('\',\n\'') + '\']';
 };

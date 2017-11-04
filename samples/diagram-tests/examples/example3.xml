@@ -1,0 +1,86 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <semantics>
+    <mrow>
+      <mrow>
+        <mtable>
+          <mtr rowalign="center">
+            <mtd columnalign="right" rowalign="center">
+              <mi>A</mi>
+            </mtd>
+            <mtd rowalign="center">
+              <mo>=</mo>
+            </mtd>
+            <mtd columnalign="left" rowalign="center">
+              <mrow>
+                <mi>l</mi>
+                <mi>w</mi>
+              </mrow>
+            </mtd>
+          </mtr>
+          <mtr rowalign="center">
+            <mtd rowalign="center" />
+            <mtd rowalign="center">
+              <mo>=</mo>
+            </mtd>
+            <mtd columnalign="left" rowalign="center">
+              <mrow>
+                <mi>x</mi>
+                <mo>&#x22C5;</mo>
+                <mn>1</mn>
+              </mrow>
+            </mtd>
+          </mtr>
+          <mtr rowalign="center">
+            <mtd columnalign="left" rowalign="center" />
+            <mtd rowalign="center">
+              <mo>=</mo>
+            </mtd>
+            <mtd columnalign="left" rowalign="center">
+              <mi>x</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+      </mrow>
+    </mrow>
+    <annotation-xml encoding="MathML-Content">
+      <mrow>
+  <mtable>
+   <mtr rowalign="center">
+    <mtd columnalign="right" rowalign="center">
+     <mi>A</mi>
+    </mtd>
+    <mtd rowalign="center">
+     <mo>=</mo>
+    </mtd>
+    <mtd columnalign="left" rowalign="center">
+     <mrow>
+      <mi>l</mi><mi>w</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr rowalign="center">
+    <mtd rowalign="center"></mtd>
+    <mtd rowalign="center">
+     <mo>=</mo>
+    </mtd>
+    <mtd columnalign="left" rowalign="center">
+     <mrow>
+      <mi>x</mi><mo>⋅</mo><mn>1</mn>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr rowalign="center">
+    <mtd columnalign="left" rowalign="center"></mtd>
+    <mtd rowalign="center">
+     <mo>=</mo>
+    </mtd>
+    <mtd columnalign="left" rowalign="center">
+     <mi>x</mi>
+    </mtd>
+   </mtr>
+   
+  </mtable>
+ </mrow>
+    </annotation-xml>
+  </semantics>
+</math>

@@ -1591,11 +1591,6 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
 };
 
 
-// TODO (sorge) This heuristic is very primitive. We could start reworking
-// multilines, by combining all cells, semantically rewriting the entire line
-// and see if there are any similarities. Alternatively, we could look for
-// similarities in columns (e.g., single relation symbols, like equalities or
-// inequalities in the same column could indicate an equation array).
 /**
  * Rewrites a table to multiline structure, simplifying it by getting rid of the
  * cell hierarchy level.
@@ -1603,6 +1598,7 @@ sre.SemanticProcessor.tableToCases_ = function(table, openFence) {
  */
 sre.SemanticProcessor.tableToMultiline = function(table) {
   if (!sre.SemanticPred.tableIsMultiline(table)) {
+    sre.SemanticProcessor.classifyTable(table);
     return;
   }
   table.type = sre.SemanticAttr.Type.MULTILINE;
@@ -1610,6 +1606,7 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
     sre.SemanticProcessor.rowToLine_(row, sre.SemanticAttr.Role.MULTILINE);
   }
   sre.SemanticProcessor.binomialForm_(table);
+  sre.SemanticProcessor.classifyMultiline(table);
 };
 
 
@@ -1621,13 +1618,14 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
  */
 sre.SemanticProcessor.rowToLine_ = function(row, opt_role) {
   var role = opt_role || sre.SemanticAttr.Role.UNKNOWN;
-  if (sre.SemanticPred.isAttribute('type', 'ROW')(row) &&
-      row.childNodes.length === 1 &&
-          sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
+  if (sre.SemanticPred.isAttribute('type', 'ROW')(row)) {
     row.type = sre.SemanticAttr.Type.LINE;
     row.role = role;
-    row.childNodes = row.childNodes[0].childNodes;
-    row.childNodes.forEach(function(x) {x.parent = row;});
+    if (row.childNodes.length === 1 &&
+        sre.SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
+      row.childNodes = row.childNodes[0].childNodes;
+      row.childNodes.forEach(function(x) {x.parent = row;});
+    }
   }
 };
 
@@ -1858,6 +1856,7 @@ sre.SemanticProcessor.prototype.fractionLikeNode = function(
     var node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
         sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
     sre.SemanticProcessor.binomialForm_(node);
+    sre.SemanticProcessor.classifyMultiline(node);
     return node;
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
@@ -2106,6 +2105,156 @@ sre.SemanticProcessor.propagateFencePointer_ = function(oldNode, newNode) {
 
 
 /**
+ * Semantically classifies a multiline table in terms of equation system it
+ * might be.
+ * @param {!sre.SemanticNode} multiline A multiline expression.
+ */
+sre.SemanticProcessor.classifyMultiline = function(multiline) {
+  var index = 0;
+  var length = multiline.childNodes.length;
+  var line;
+  while (index < length &&
+         (!(line = multiline.childNodes[index]) || !line.childNodes.length)) {
+    index++;
+  }
+  if (index >= length) return;
+  var firstRole = line.childNodes[0].role;
+  if (firstRole !== sre.SemanticAttr.Role.UNKNOWN &&
+      multiline.childNodes.every(function(x) {
+        var cell = x.childNodes[0];
+        return !cell || (cell.role === firstRole &&
+        (sre.SemanticPred.isAttribute('type', 'RELATION')(cell) ||
+        sre.SemanticPred.isAttribute('type', 'RELSEQ')(cell)));
+      })) {
+    multiline.role = firstRole;
+  }
+};
+
+
+/**
+ * Semantically classifies a table in terms of equation system it might be.
+ * @param {!sre.SemanticNode} table The table node.
+ */
+sre.SemanticProcessor.classifyTable = function(table) {
+  var columns = sre.SemanticProcessor.computeColumns_(table);
+  sre.SemanticProcessor.classifyByColumns_(table, columns, 'EQUALITY') ||
+      sre.SemanticProcessor.classifyByColumns_(
+      table, columns, 'INEQUALITY', ['EQUALITY']) ||
+      sre.SemanticProcessor.classifyByColumns_(table, columns, 'ARROW');
+};
+
+
+/**
+ * Classifies table by columns and a given relation.
+ * @param {!sre.SemanticNode} table The table node.
+ * @param {!Array.<!Array.<!sre.SemanticNode>>} columns The columns.
+ * @param {string} relation The main relation to classify.
+ * @param {Array.<string>=} opt_alternatives Alternative relations that are
+ *     permitted in addition to the main relation.
+ * @return {boolean} True if classification was successful.
+ * @private
+ */
+sre.SemanticProcessor.classifyByColumns_ = function(
+    table, columns, relation, opt_alternatives) {
+  // TODO: For more complex systems, work with permutations/alternations of
+  // column indices.
+  var test1 = function(x) {
+    return sre.SemanticProcessor.isPureRelation_(x, relation);
+  };
+  var test2 = function(x) {
+    return sre.SemanticProcessor.isEndRelation_(x, relation) ||
+        sre.SemanticProcessor.isPureRelation_(x, relation);
+  };
+  var test3 = function(x) {
+    return sre.SemanticProcessor.isEndRelation_(x, relation, true) ||
+        sre.SemanticProcessor.isPureRelation_(x, relation);
+  };
+
+  if ((columns.length === 3 &&
+       sre.SemanticProcessor.testColumns_(columns, 1, test1)) ||
+      (columns.length === 2 &&
+       (sre.SemanticProcessor.testColumns_(columns, 1, test2) ||
+        sre.SemanticProcessor.testColumns_(columns, 0, test3)))) {
+    table.role = sre.SemanticAttr.Role[relation];
+    return true;
+  }
+  return false;
+};
+
+
+/**
+ * Check for a particular end relations, i.e., either a sole relation symbols or
+ * the relation ends in an side.
+ * @param {!sre.SemanticNode} node The node.
+ * @param {!string} relation The relation to be tested.
+ * @param {boolean=} opt_right From the right side?
+ * @return {boolean} True if the node is an end relation.
+ * @private
+ */
+sre.SemanticProcessor.isEndRelation_ = function(node, relation, opt_right) {
+  var position = opt_right ? node.childNodes.length - 1 : 0;
+  return sre.SemanticPred.isAttribute('type', 'RELSEQ')(node) &&
+      sre.SemanticPred.isAttribute('role', relation)(node) &&
+      sre.SemanticPred.isAttribute('type', 'EMPTY')(node.childNodes[position]);
+};
+
+
+/**
+ * Check for a particular relations.
+ * @param {!sre.SemanticNode} node The node.
+ * @param {!string} relation The relation to be tested.
+ * @return {boolean} True if the node is an end relation.
+ * @private
+ */
+sre.SemanticProcessor.isPureRelation_ = function(node, relation) {
+  return sre.SemanticPred.isAttribute('type', 'RELATION')(node) &&
+      sre.SemanticPred.isAttribute('role', relation)(node);
+};
+
+
+/**
+ * Computes columns from a table. Note that the columns are reduced, i.e., empty
+ * cells are simply omitted. Consequently, rows are not preserved, i.e.,
+ * elements at the same index in different columns are not necessarily in the
+ * same row in the original table!
+ * @param {!sre.SemanticNode} table The table node.
+ * @return {!Array.<!Array.<!sre.SemanticNode>>} The columns.
+ * @private
+ */
+sre.SemanticProcessor.computeColumns_ = function(table) {
+  var columns = [];
+  for (var i = 0, row; row = table.childNodes[i]; i++) {
+    for (var j = 0, cell; cell = row.childNodes[j]; j++) {
+      var column = columns[j];
+      column ? columns[j].push(cell) : (columns[j] = [cell]);
+    }
+  }
+  return columns;
+};
+
+
+/**
+ * Test if all elements in the i-th column have the same property.
+ * @param {!Array.<!Array.<!sre.SemanticNode>>} columns The columns.
+ * @param {number} index The column to be tested.
+ * @param {function(!sre.SemanticNode): boolean} pred Predicate to test against.
+ * @return {boolean} True if all elements of the given column satisfy pred.
+ * @private
+ */
+sre.SemanticProcessor.testColumns_ = function(columns, index, pred) {
+  var column = columns[index];
+  return column ?
+      (column.some(function(cell) {
+        return cell.childNodes.length &&
+           pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));}) &&
+      column.every(function(cell) {
+        return !cell.childNodes.length ||
+           pred(/** @type {!sre.SemanticNode} */ (cell.childNodes[0]));})) :
+      false;
+};
+
+
+/**
  * Maps mathjax font variants to semantic font names.
  * @type {Object.<sre.SemanticAttr.Font>}
  */
@@ -2127,4 +2276,3 @@ sre.SemanticProcessor.prototype.font = function(font) {
   var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
 };
-

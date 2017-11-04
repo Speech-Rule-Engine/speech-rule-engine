@@ -94,9 +94,8 @@ sre.Grammar.prototype.clear = function() {
  * @param {string} parameter The parameter name.
  * @param {sre.Grammar.Value} value The parameter's value.
  * @return {sre.Grammar.Value} The old value if it existed.
- * @private
  */
-sre.Grammar.prototype.setParameter_ = function(parameter, value) {
+sre.Grammar.prototype.setParameter = function(parameter, value) {
   var oldValue = this.parameters_[parameter];
   value ? this.parameters_[parameter] = value :
       delete this.parameters_[parameter];
@@ -164,7 +163,7 @@ sre.Grammar.prototype.getState = function() {
  */
 sre.Grammar.prototype.pushState = function(assignment) {
   for (var key in assignment) {
-    assignment[key] = this.setParameter_(key, assignment[key]);
+    assignment[key] = this.setParameter(key, assignment[key]);
   }
   this.stateStack_.push(assignment);
 };
@@ -176,7 +175,7 @@ sre.Grammar.prototype.pushState = function(assignment) {
 sre.Grammar.prototype.popState = function() {
   var assignment = this.stateStack_.pop();
   for (var key in assignment) {
-    this.setParameter_(key, assignment[key]);
+    this.setParameter(key, assignment[key]);
   }
 };
 

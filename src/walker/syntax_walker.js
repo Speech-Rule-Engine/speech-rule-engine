@@ -40,13 +40,22 @@ sre.SyntaxWalker = function(node, generator, highlighter, xml) {
    * Caching of levels.
    * @type {!sre.Levels<string>}
    */
-  this.levels = new sre.Levels();
+  this.levels = this.initLevels();
 
-  this.levels.push([this.primaryId()]);
 
   this.restoreState();
 };
 goog.inherits(sre.SyntaxWalker, sre.AbstractWalker);
+
+
+/**
+ * @override
+ */
+sre.SyntaxWalker.prototype.initLevels = function() {
+  var levels = new sre.Levels();
+  levels.push([this.primaryId()]);
+  return levels;
+};
 
 
 /**
