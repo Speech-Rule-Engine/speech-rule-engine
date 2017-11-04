@@ -22,7 +22,9 @@ it in your project.
 
 2. **Standalone Tool:** Download via github and build with make. This is useful
 if you want to use the speech rule engine in batch mode or interactivley to add
-your own code.
+your own code. Or simply run it with ```npx```, for example to get all SRE options anywhere without local installation run:
+
+    ```npx -p speech-rule-engine sre -h```
 
 3. **Browser Library:** This gives you the option of loading SRE in a browser and
    use its full functionality on your webesites.
