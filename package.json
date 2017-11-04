@@ -7,7 +7,7 @@
   },
   "bin": {
     "sre": "./bin/sre"
-  }
+  },
   "scripts": {
     "test": "make test",
     "prepublish": "make clean; make publish"
