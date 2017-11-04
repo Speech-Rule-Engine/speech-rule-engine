@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 let fs = require('fs');
 process.env.SRE_TOP_PATH = __dirname + '/..';
-if (fs.existsSync(process.env.SRE_TOP_PATH + '/lib/mathmaps')) {
-  process.env.SRE_JSON_PATH = process.env.SRE_TOP_PATH + '/lib/mathmaps';
+if (fs.existsSync(process.env.SRE_TOP_PATH + '/lib/symbols')) {
+  process.env.SRE_JSON_PATH = process.env.SRE_TOP_PATH + '/lib';
 } else {
   process.env.SRE_JSON_PATH = process.env.SRE_TOP_PATH + '/src/mathmaps';
 }
