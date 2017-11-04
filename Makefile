@@ -111,7 +111,7 @@ $(DEPS):
 	@$(DEPSWRITER) --root_with_prefix="$(SRC_DIR) $(SRC_DIR)" > $(DEPS)
 
 
-start_files: directories $(START) $(INTERACTIVE)
+start_files: directories $(INTERACTIVE)
 
 start: $(START)
 
@@ -197,7 +197,7 @@ clean_test:
 # Publish the API via npm.
 ##################################################################
 
-publish: api maps
+publish: cli maps
 
 maps: $(MAPS)
 

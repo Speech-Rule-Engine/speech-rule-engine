@@ -50,7 +50,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '2.1.0-beta.0';
+  this.version = '2.1.0-beta.1';
 
 };
 goog.addSingletonGetter(sre.System);
