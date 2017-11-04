@@ -147,7 +147,6 @@ $(INTERACTIVE):
 clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 	rm -f $(TARGET)
 	rm -f $(DEPS)
-	rm -f $(START)
 	rm -f $(INTERACTIVE)
 	$(foreach map, $(MAPS), rm -rf $(LIB_DIR)/$(map))
 
