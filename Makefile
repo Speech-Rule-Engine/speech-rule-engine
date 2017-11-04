@@ -197,7 +197,7 @@ clean_test:
 # Publish the API via npm.
 ##################################################################
 
-publish: cli maps
+publish: compile maps
 
 maps: $(MAPS)
 
