@@ -252,6 +252,11 @@ I have done it.
 
     SOLVED: Corrected to Frac069
 
+**** FracFunct008:
+     QUESTION: This is incorrect: This is the same expression as Fracfunct011, which has a
+     different speech string. Probably wrong!
+
+
 *** ImpliedTimes
     ImpTimes070 twice.
 
@@ -582,6 +587,7 @@ Helper function for Emacs:
 *** Simple spaced out:
     Cap004, Cap008, Cap009
 
+*** Cap011: = -> equals
 
 ** Trigonometry
 

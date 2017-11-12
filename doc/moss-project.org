@@ -321,3 +321,5 @@ sre.SemanticPred.endpunctIsSuper = function(nodes, punctuations) {
    They have mainly to do with necessary improvements and restructuring of
    semantic heuristics.
 *** Trig030, Trig036: Needs better handling of degrees as postfix function.
+*** Exp034: Needs a heuristic to pull the negation sign into the (mixed) number.
+

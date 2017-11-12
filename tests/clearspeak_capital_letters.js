@@ -48,10 +48,11 @@ goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);
 /**
  * Testing ClearspeakCapitalLetters Example Cap001
  */
-sre.ClearspeakCapitalLetters.prototype.untestCap001 = function() {
+sre.ClearspeakCapitalLetters.prototype.testCap001 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator sine A, and denominator a, equals, the fraction with numerator sine B, and denominator b';
+  // var speech = 'the fraction with numerator sine A, and denominator a, equals, the fraction with numerator sine B, and denominator b';
+  var speech = 'sine A over a, equals, sine B over b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -133,7 +134,6 @@ sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
 };
 
 
-// The measure is not defined yet! Have a special rule for that?
 /**
  * Testing ClearspeakCapitalLetters Example Cap009
  */
@@ -160,10 +160,11 @@ sre.ClearspeakCapitalLetters.prototype.testCap010 = function() {
 /**
  * Testing ClearspeakCapitalLetters Example Cap011
  */
-sre.ClearspeakCapitalLetters.prototype.untestCap011 = function() {
+sre.ClearspeakCapitalLetters.prototype.testCap011 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator sine cap A, and denominator a = the fraction with numerator sine cap B, and denominator b';
+  // var speech = 'the fraction with numerator sine cap A, and denominator a, equals, the fraction with numerator sine cap B, and denominator b';
+  var speech = 'sine cap A over a, equals, sine cap B over b';
   this.executeRuleTest(mathml, speech, preference);
 };
 
