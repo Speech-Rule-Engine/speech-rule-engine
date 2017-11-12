@@ -522,7 +522,7 @@ Helper function for Emacs:
 
 **** Sum003, Sum004, Sum005, Sum007, decap I
 
-**** Sum007, Sum008, + -> plus
+**** Sum007, Sum008, + -> plus,  1 -> i
 **** Sum016, Sum017, Sum018,  spaceout dx
 **** SetMemb001, remove period.
 

@@ -652,7 +652,7 @@ sre.ClearspeakPart2Symbols.prototype.testSum002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum003
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum003 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum003 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mi>i</mi></mstyle></mrow></math>';
   var speech = 'the sum over i is a member of the positive integers, of i';
@@ -696,10 +696,10 @@ sre.ClearspeakPart2Symbols.prototype.testSum006 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum007
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum007 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum007 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>i</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'the product over i is a member of the positive integers of the fraction with numerator 1 and denominator i plus 1';
+  var speech = 'the product over i is a member of the positive integers, of, the fraction with numerator i, and denominator i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -707,10 +707,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum007 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum008
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum008 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum008 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><msup><mi>ℤ</mi><mo>+</mo></msup></mrow></munder><mrow><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mstyle></mrow></math>';
-  var speech = 'the product over the positive integers of the fraction with numerator 1 and denominator i plus 1';
+  var speech = 'the product over the positive integers, of, the fraction with numerator i, and denominator i plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
