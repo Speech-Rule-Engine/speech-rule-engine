@@ -817,9 +817,9 @@ sre.ClearspeakPart2Symbols.prototype.testSum017 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum018
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum018 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum018 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mrow><munder><mo>∫</mo><mi>ℝ</mi></munder><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow></mstyle><mtext></mtext><mi>d</mi><mi>x</mi></mrow></math>';
-  var speech = 'the integral over the real numbers of f of x, d x';
+  var speech = 'the integral over the real numbers, of f of x, d x';
   this.executeRuleTest(mathml, speech, preference);
 };
