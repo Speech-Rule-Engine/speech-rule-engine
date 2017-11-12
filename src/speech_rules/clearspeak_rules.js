@@ -20,6 +20,7 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.ClearspeakUtil');
+goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
 goog.require('sre.StoreUtil');
@@ -83,6 +84,36 @@ sre.ClearspeakRules.addCustomString_ = goog.bind(
     sre.ClearspeakRules.mathStore.customStrings.add,
     sre.ClearspeakRules.mathStore.customStrings);
 
+/**
+ * @type {Object.<Array.<string>>}
+ */
+sre.ClearspeakRules.PREFERENCES = {
+  AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
+  Bar: ['Auto', 'Conjugate'],
+  Caps: ['Auto', 'SayCaps'],
+  CombinationPermutation: ['Auto', 'ChoosePermute'],
+  Ellipses: ['Auto', 'AndSoOn'],
+  Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
+  Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac', 'Ordinal', 'Over', 'OverEndFrac', 'Per'],
+  Functions: ['Auto', 'None'],
+  ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
+  Log: ['Auto', 'LnAsNaturalLog'],
+  Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum', 'SpeakColNum', 'Vector'],
+  MultiLineLabel: ['Auto', 'Case', 'Constraint', 'Equation', 'Line', 'Row', 'Step'],
+  MultiLineOverview: ['Auto', 'None'],
+  MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
+  MultsymbolDot: ['Auto', 'Dot'],
+  MultsymbolX: ['Auto', 'By', 'Cross'],
+  Paren: ['Auto', 'CoordPoint', 'Interval', 'Silent', 'Speak', 'SpeakNestingLevel'],
+  Prime: ['Auto', 'Angle', 'Length'],
+  Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
+  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
+  Sets: ['Auto', 'SilentBracket', 'woall', 'woAll'],
+  TriangleSymbol: ['Auto', 'Delta'],
+  Trig: ['Auto', 'ArcTrig', 'TrigInverse'],
+  VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
+};
+  
 
 goog.scope(function() {
 var defineRule = sre.ClearspeakRules.defineRule_;
@@ -96,6 +127,8 @@ var addCTXF = sre.ClearspeakRules.addContextFunction_;
 sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(sre.ClearspeakUtil.unitExpression());
+  sre.Engine.getInstance().allPreferences = sre.ClearspeakRules.PREFERENCES;
+  sre.Engine.getInstance().style = 'preferences';
 };
 
 /**
@@ -700,6 +733,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   // TODO: QUESTION: Rules say there should be a power in the default case, but
   //       it is neither in the examples, nor does it make sense.
+  //
+  // First exponent end exponent, second internally use power.
   //
   defineRule(
       'superscript-power', 'clearspeak.Exponent_AfterPower',

@@ -73,6 +73,19 @@ sre.Engine = function() {
    */
   this.style = 'short';
 
+  
+  /**
+   * Preference settings for certain rule sets like ClearSpeak.
+   * @type {Object}
+   */
+  this.preferences = {};
+
+  /**
+   * All preferences that can be set.
+   * @type {Object.<Array.<string>>}
+   */
+  this.allPreferences = {};
+
   /**
    * Current walker mode.
    * @type {string}
