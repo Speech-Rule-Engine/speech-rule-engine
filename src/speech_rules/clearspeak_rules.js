@@ -1566,6 +1566,20 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'self::fenced', '@role="neutral"',
     'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
       ' content/*[1][text()]="｜"');
+  defineRule(
+    'fences-neutral', 'clearspeak.AbsoluteValue_Cardinality',
+    '[p] (pause:short); [t] "the cardinality of"; ' +
+      '[n] children/*[1]; [p] (pause: short)',
+    'self::fenced', '@role="neutral"',
+    'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
+      ' content/*[1][text()]="｜"');
+  defineRule(
+    'fences-neutral', 'clearspeak.AbsoluteValue_Determinant',
+    '[p] (pause:short); [t] "the determinant of"; ' +
+      '[n] children/*[1]; [p] (pause: short)',
+    'self::fenced', '@role="neutral"',
+    'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
+      ' content/*[1][text()]="｜"');
 
   // Layout elements: Matrix like structures
   // Order of rules is important!

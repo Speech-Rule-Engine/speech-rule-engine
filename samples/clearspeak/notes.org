@@ -278,7 +278,7 @@ I have done it.
     , sometimes before end absolute value
     , sometimes before "the absolute value of"
     Changes to:
-**** remove cap: Abs04, AbsEnd01 - AbsEnd04
+**** remove cap: Abs04, AbsEnd01 - AbsEnd04, Card01, Determinant01
 **** Abs04: Added ,
 **** AbsEnd02: , before end absolute value
 **** AbsEnd04: 

@@ -316,3 +316,8 @@ sre.SemanticPred.endpunctIsSuper = function(nodes, punctuations) {
 *** Equate Auto to default in the comparator.
 
 ** MathJax integration: Use submenus and radio buttons.
+
+** Tests and things that can only be handled after the Simons project:
+   They have mainly to do with necessary improvements and restructuring of
+   semantic heuristics.
+*** Trig030, Trig036: Needs better handling of degrees as postfix function.

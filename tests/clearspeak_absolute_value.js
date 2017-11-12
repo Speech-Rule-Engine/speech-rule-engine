@@ -147,10 +147,10 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd04 = function() {
 /**
  * Testing ClearspeakAbsoluteValue Example Card01
  */
-sre.ClearspeakAbsoluteValue.prototype.untestCard01 = function() {
+sre.ClearspeakAbsoluteValue.prototype.testCard01 = function() {
   var preference = 'AbsoluteValue_Cardinality';
   var mathml = '<mrow><mrow><mo>|</mo><mi>S</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'The cardinality of S';
+  var speech = 'the cardinality of S';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -158,10 +158,10 @@ sre.ClearspeakAbsoluteValue.prototype.untestCard01 = function() {
 /**
  * Testing ClearspeakAbsoluteValue Example Determinant01
  */
-sre.ClearspeakAbsoluteValue.prototype.untestDeterminant01 = function() {
+sre.ClearspeakAbsoluteValue.prototype.testDeterminant01 = function() {
   var preference = 'AbsoluteValue_Determinant';
   var mathml = '<mrow><mrow><mo>|</mo><mi>M</mi><mo>|</mo></mrow></mrow>';
-  var speech = 'The determinant of M';
+  var speech = 'the determinant of M';
   this.executeRuleTest(mathml, speech, preference);
 };
 

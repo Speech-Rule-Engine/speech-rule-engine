@@ -268,9 +268,6 @@ sre.ClearspeakTrigometry.prototype.testTrig020 = function() {
   var speech = 'tangent negative pi';
   this.executeRuleTest(mathml, speech, preference);
 };
-// TODO: (QUESTION) This is against the rules for brackets unless there is
-// something about non-spoken parentheses.
-// ANSWER should be recognised as a simple element!
 
 
 /**
