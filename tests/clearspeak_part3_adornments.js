@@ -34,7 +34,7 @@ sre.ClearspeakPart3Adornments.base(this, 'constructor');
 * @override
 */
 this.information = 'ClearspeakPart3Adornments rule tests.';
-
+  sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.ClearspeakPart3Adornments, sre.ClearspeakRuleTest);
 
@@ -572,7 +572,12 @@ sre.ClearspeakPart3Adornments.prototype.testPrime047 = function() {
 // Combinations and Permutations
 //
 
-
+// These 8 tests come out of the clearspeak documents from MathType.  The MathML
+// has a redundant use of subscripts leaving the actual correct placing of the
+// right index in the multiscript empty.
+// 
+// TODO: (Simons) Have a cleanup heuristic to combine multiscripts with
+//                sub/superscripts.
 /**
  * Testing ClearspeakPart3Adornments Example CombPerm001
  */
@@ -634,7 +639,7 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm005 = function() {
 sre.ClearspeakPart3Adornments.prototype.untestCombPerm006 = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow></math>';
-  var speech = 'N permute r';
+  var speech = 'n permute r';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -656,6 +661,95 @@ sre.ClearspeakPart3Adornments.prototype.untestCombPerm007 = function() {
 sre.ClearspeakPart3Adornments.prototype.untestCombPerm008 = function() {
   var preference = 'CombinationPermutation_ChoosePermute';
   var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn></msub></mrow></math>';
+  var speech = '10 permute 3';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+// Cleaned up tests with the correct usage of multiscript elements.
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm001
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm001a = function() {
+  var preference = 'CombinationPermutation_Auto';
+  var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
+  var speech = 'n C r';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm002
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm002a = function() {
+  var preference = 'CombinationPermutation_Auto';
+  var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
+  var speech = 'n P r';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm003
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm003a = function() {
+  var preference = 'CombinationPermutation_Auto';
+  var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>';
+  var speech = '10 C 3';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm004
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm004a = function() {
+  var preference = 'CombinationPermutation_Auto';
+  var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>';
+  var speech = '10 P 3';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm005
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm005a = function() {
+  var preference = 'CombinationPermutation_ChoosePermute';
+  var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
+  var speech = 'n choose r';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm006
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm006a = function() {
+  var preference = 'CombinationPermutation_ChoosePermute';
+  var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>';
+  var speech = 'n permute r';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm007
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm007a = function() {
+  var preference = 'CombinationPermutation_ChoosePermute';
+  var mathml = '<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>';
+  var speech = '10 choose 3';
+  this.executeRuleTest(mathml, speech, preference);
+};
+
+
+/**
+ * Testing ClearspeakPart3Adornments Example CombPerm008
+ */
+sre.ClearspeakPart3Adornments.prototype.testCombPerm008a = function() {
+  var preference = 'CombinationPermutation_ChoosePermute';
+  var mathml = '<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>';
   var speech = '10 permute 3';
   this.executeRuleTest(mathml, speech, preference);
 };

@@ -216,6 +216,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //   '@role="latinletter" or @role="greekletter"',
   //   'CQFisCapital');
 
+  // TODO: Make that work on tensor elements?
   defineRule(
     'capital', 'clearspeak.default',
     '[n] text() (pitch:0.6,grammar:ignoreFont="cap")',
@@ -1851,6 +1852,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
       'self::row', '@role="table"');
   defineRuleAlias('row-short', 'self::row', '@role="cases"');
+  // TODO: Get rid of blank!
   defineRule(
       'blank-cell', 'clearspeak.default',
       '[t] "blank"', 'self::cell', 'count(children/*)=0');
@@ -2164,6 +2166,88 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'factorial', 'clearspeak.default', '[t] "factorial"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
 
+  // Tensors:
+  defineRule(
+    'tensor-base', 'clearspeak.default',
+    '[n] children/*[2]; [n] children/*[3]; [n] children/*[1];' +
+      ' [n] children/*[4]; [n] children/*[5]',
+    'self::tensor'
+  );
+  defineRule(
+    'left-super', 'clearspeak.default',
+    '[t] "left super"; [n] text()', 'self::*[@role="leftsuper"]',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'left-super', 'clearspeak.default',
+    '[t] "left super"; [m] children/*',
+    'self::punctuated', '@role="leftsuper"',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'left-sub', 'clearspeak.default',
+    '[t] "left sub"; [n] text()', 'self::*[@role="leftsub"]',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'left-sub', 'clearspeak.default',
+    '[t] "left sub"; [m] children/*',
+    'self::punctuated', '@role="leftsub"',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'right-super', 'clearspeak.default',
+    '[t] "right super"; [n] text()', 'self::*[@role="rightsuper"]',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'right-super', 'clearspeak.default',
+    '[t] "right super"; [m] children/*',
+    'self::punctuated', '@role="rightsuper"',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'right-sub', 'clearspeak.default',
+    '[t] "right sub"; [n] text()', 'self::*[@role="rightsub"]',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'right-sub', 'clearspeak.default',
+    '[t] "right sub"; [m] children/*',
+    'self::punctuated', '@role="rightsub"',
+    'not(contains(@grammar,"combinatorics"))'
+  );
+  defineRule(
+    'empty-index', 'clearspeak.default',
+    '[p] (pause:medium)', 'self::empty',
+    '@role="rightsub" or @role="rightsuper" or' +
+      ' @role="leftsub" or @role="leftsuper"'
+  );
+
+  // Special rules for combinatorics.
+  defineRule(
+    'combinatorics', 'clearspeak.default',
+    '[n] children/*[2] (grammar:combinatorics); [n] children/*[1]; ' +
+      '[n] children/*[4] (grammar:combinatorics)',
+    'self::tensor', 'name(children/*[3])="empty"', 'name(children/*[5])="empty"',
+    'children/*[1][text()="P" or text()="C"]'
+  );
+  defineRule(
+    'choose', 'clearspeak.CombinationPermutation_ChoosePermute',
+    '[n] children/*[2] (grammar:combinatorics); [t] "choose"; ' +
+      '[n] children/*[4] (grammar:combinatorics)',
+    'self::tensor', 'name(children/*[3])="empty"', 'name(children/*[5])="empty"',
+    'children/*[1][text()="C"]'
+  );
+  defineRule(
+    'permute', 'clearspeak.CombinationPermutation_ChoosePermute',
+    '[n] children/*[2] (grammar:combinatorics); [t] "permute"; ' +
+      '[n] children/*[4] (grammar:combinatorics)',
+    'self::tensor', 'name(children/*[3])="empty"', 'name(children/*[5])="empty"',
+    'children/*[1][text()="P"]'
+  );
+
+  
   
 };
 

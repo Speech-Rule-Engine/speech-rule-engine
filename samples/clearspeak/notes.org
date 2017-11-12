@@ -1049,9 +1049,12 @@ Table 3
 
 **** Bar015: transpose triple/C
 
+*** MathML: 
+    Corrected MathML for CombPerm001-004, by pulling subscript into Multiscript???
+
 *** Decap
     Bar006, Bar007, Bar008, Bar009, Bar010, Bar012, Bar013, Bar014, Bar015,
-    Bar016, Bar018,
+    Bar016, Bar018, CombPerm006
 
 *** Pausing commata:
     Prime042, Prime044, Prime043, Prime028, Prime027, Prime026, Bar018, 
