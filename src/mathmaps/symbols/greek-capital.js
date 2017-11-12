@@ -59,7 +59,8 @@
         "default": "upper Delta"
       },
       "clearspeak": {
-        "default": "cap Delta"
+        "default": "triangle",
+        "TriangleSymbol_Delta": "cap Delta"
       }
     }
   },

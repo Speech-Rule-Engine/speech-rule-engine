@@ -497,7 +497,7 @@ Helper function for Emacs:
     VertLine003, VertLine007, MembSym002, MembSym005, MembSym008, MembSym011,
     MembSym014, SetMemb001, SetMemb002, Sum001, Sum002, Sum003, Sum004, Sum005,
     Sum006, Sum007, Sum008, Sum009, Sum010, Sum011, Sum012, Sum013, Sum014,
-    Sum015, Sum016, Sum017, Sum018, VertLine005
+    Sum015, Sum016, Sum017, Sum018, VertLine005, Triangle004
 
 *** Pausing commata: 
     Ellipses002, Ellipses003, Ellipses004, Ellipses006, VertLine004, VertLine005, VertLine006
@@ -525,6 +525,8 @@ Helper function for Emacs:
 **** Sum007, Sum008, + -> plus,  1 -> i
 **** Sum016, Sum017, Sum018,  spaceout dx
 **** SetMemb001, remove period.
+
+*** Space out: Triangle001, Triangle002, Triangle003, Triangle004
 
 *** Simple spaced out:
     VertLine005, MembSym001, MembSym004, MembSym007, MembSym010, MembSym013,

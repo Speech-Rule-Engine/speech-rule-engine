@@ -1358,12 +1358,21 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Operator rules
   defineRule(
       'prefix', 'clearspeak.default',
-      '[n] text(); [n] children/*[1]',
+      '[m] content/* (grammar:prefix); [n] children/*[1]',
       'self::prefixop');
   defineRule(
       'postfix', 'clearspeak.default',
-      '[n] children/*[1]; [n] text()',
+      '[n] children/*[1]; [m] content/* (grammar:postfix)',
       'self::postfixop');
+
+  // TODO: (Simons) A very special case that could be made more general with
+  //                additional semantic annotation.
+  defineRule(
+      'set-prefix-operators', 'clearspeak.default',
+      '[t] "the"; [n] self::* (grammar:!prefix); [t] "of"',
+      'self::*', 'contains(@grammar,"prefix")',
+      'descendant-or-self::*/text()="\u2229" or descendant-or-self::*/text()="\u222A"',
+      'self::*', 'self::*', 'self::*');
 
   defineRule(
       'binary-operation', 'clearspeak.default',
@@ -2022,7 +2031,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Default rules:
   defineRule(
     'overscript', 'clearspeak.default',
-    '[n] children/*[1]; [t] "with"; [n] children/*[2]; [t] "above" (pause:short)',
+    '[n] children/*[1]; [t] "under"; [n] children/*[2]; [p] (pause:short)',
     'self::overscore'
   );
   defineRule(
@@ -2031,10 +2040,28 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'self::overscore', 'children/*[2][@role="overaccent"]'
   );
   defineRule(
+    'overscript-limits', 'clearspeak.default',
+    '[n] children/*[1]; [t] "to"; [n] children/*[2]',
+    'self::overscore', 'children/*[2][@role!="overaccent"]',
+    'name(children/*[1])="underscore"',
+    'children/*[1]/children/*[2][@role!="underaccent"]'
+  );
+  defineRule(
     'underscript', 'clearspeak.default',
-    '[n] children/*[1]; [t] "with"; [n] children/*[2]; [t] "below" (pause:short)',
+    '[n] children/*[1]; [t] "over"; [n] children/*[2]; [p] (pause:short)',
     'self::underscore'
   );
+  defineRule(
+    'underscript-limits', 'clearspeak.default',
+    '[n] children/*[1]; [t] "from"; [n] children/*[2]',
+    'self::underscore', '@role="underover"',
+    'children/*[2][@role!="underaccent"]'
+  );
+  // defineRule(
+  //   'underscript', 'clearspeak.default',
+  //   '[n] children/*[1]; [t] "with"; [n] children/*[2]; [t] "below" (pause:short)',
+  //   'self::underscore', ''
+  // );
   
   // Decimal periods:
   defineRule(

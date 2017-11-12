@@ -34,7 +34,6 @@ sre.ClearspeakPart2Symbols.base(this, 'constructor');
 * @override
 */
 this.information = 'ClearspeakPart2Symbols rule tests.';
-  // sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 
@@ -206,10 +205,10 @@ sre.ClearspeakPart2Symbols.prototype.testDot006 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Triangle001
  */
-sre.ClearspeakPart2Symbols.prototype.untestTriangle001 = function() {
+sre.ClearspeakPart2Symbols.prototype.testTriangle001 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
-  var speech = 'triangle ABC';
+  var speech = 'triangle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -217,10 +216,10 @@ sre.ClearspeakPart2Symbols.prototype.untestTriangle001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Triangle002
  */
-sre.ClearspeakPart2Symbols.prototype.untestTriangle002 = function() {
+sre.ClearspeakPart2Symbols.prototype.testTriangle002 = function() {
   var preference = 'TriangleSymbol_Auto';
   var mathml = '<math><mrow><mi>Δ</mi><mi>D</mi><mi>E</mi><mi>F</mi></mrow></math>';
-  var speech = 'triangle DEF';
+  var speech = 'triangle D E F';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -228,10 +227,10 @@ sre.ClearspeakPart2Symbols.prototype.untestTriangle002 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Triangle003
  */
-sre.ClearspeakPart2Symbols.prototype.untestTriangle003 = function() {
+sre.ClearspeakPart2Symbols.prototype.testTriangle003 = function() {
   var preference = 'TriangleSymbol_Delta';
   var mathml = '<math><mrow><mi>Δ</mi><mi>x</mi></mrow></math>';
-  var speech = 'delta x';
+  var speech = 'Delta x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -239,10 +238,10 @@ sre.ClearspeakPart2Symbols.prototype.untestTriangle003 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Triangle004
  */
-sre.ClearspeakPart2Symbols.prototype.untestTriangle004 = function() {
+sre.ClearspeakPart2Symbols.prototype.testTriangle004 = function() {
   var preference = 'TriangleSymbol_Delta';
   var mathml = '<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>Δ</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'F of, open paren, x plus delta x, close paren';
+  var speech = 'f of, open paren, x plus Delta x, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -729,10 +728,10 @@ sre.ClearspeakPart2Symbols.prototype.testSum009 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum010
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum010 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum010 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the intersection from i equals 1 to 10 of S sub i';
+  var speech = 'the intersection from i equals 1 to 10 of, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -740,10 +739,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum010 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum011
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum011 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum011 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munderover><mo>∪</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the union from i equals 1 to 10 of S sub i';
+  var speech = 'the union from i equals 1 to 10 of, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -751,10 +750,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum011 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum012
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum012 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum012 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∩</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the intersection of S sub i';
+  var speech = 'the intersection of, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -762,10 +761,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum012 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum013
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum013 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum013 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><mo>∪</mo><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the union of S sub i';
+  var speech = 'the union of, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -773,10 +772,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum013 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum014
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum014 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum014 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∩</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the intersection over C of S sub i';
+  var speech = 'the intersection over C, of, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -784,10 +783,10 @@ sre.ClearspeakPart2Symbols.prototype.untestSum014 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example Sum015
  */
-sre.ClearspeakPart2Symbols.prototype.untestSum015 = function() {
+sre.ClearspeakPart2Symbols.prototype.testSum015 = function() {
   var preference = 'default';
   var mathml = '<math><mrow><mstyle displaystyle="true"><munder><mo>∪</mo><mi>C</mi></munder><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow></mstyle></mrow></math>';
-  var speech = 'the union over C of S sub i';
+  var speech = 'the union over C, of, S sub i';
   this.executeRuleTest(mathml, speech, preference);
 };
 
