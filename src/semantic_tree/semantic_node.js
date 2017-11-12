@@ -412,7 +412,7 @@ sre.SemanticNode.prototype.hasMeaning = function(domain, meaning) {
 
 /**
  * Parses a meaning string as given, for example, in an attribute.
- * @param {string} stateStr The state string for the meaning.
+ * @param {!string} stateStr The state string for the meaning.
  */
 sre.SemanticNode.prototype.parseMeaning = function(stateStr) {
   var meanings = stateStr.split(';');

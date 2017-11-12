@@ -130,7 +130,7 @@ sre.RebuildStree.prototype.makeNode = function(node) {
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
   var meaning = sre.WalkerUtil.getAttribute(
-      node, sre.EnrichMathml.Attribute.MEANING);
+      node, sre.EnrichMathml.Attribute.MEANING) || '';
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
   var embellished = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.EMBELLISHED);
