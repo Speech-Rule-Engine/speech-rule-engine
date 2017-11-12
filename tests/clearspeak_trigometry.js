@@ -270,6 +270,7 @@ sre.ClearspeakTrigometry.prototype.untestTrig020 = function() {
 };
 // TODO: (QUESTION) This is against the rules for brackets unless there is
 // something about non-spoken parentheses.
+// ANSWER should be recognised as a simple element!
 
 
 /**

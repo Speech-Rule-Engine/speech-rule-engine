@@ -34,7 +34,7 @@ sre.ClearspeakPart2Symbols.base(this, 'constructor');
 * @override
 */
 this.information = 'ClearspeakPart2Symbols rule tests.';
-  sre.Debugger.getInstance().init();
+  // sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 

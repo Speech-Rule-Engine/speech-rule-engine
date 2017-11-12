@@ -307,117 +307,12 @@ sre.SemanticPred.endpunctIsSuper = function(nodes, punctuations) {
 
 ```
 
-** Add spaces between 2x 3y etc?
-Currently NO.
+** Preferences are effectively a set of dynamic constraints on their own.
 
-** frtxt004: changes six to 6
+*** Each preference is an axis
 
-** testNestFrac002: added pausing commas
+*** Each axis has a number of values to choose from
 
-** Check all the unit examples with fractions!
+*** Equate Auto to default in the comparator.
 
-** Decapitalise most of them.
-
-** testFrac012-015: X -> x
-
-** testFrac015,testFrac046,testFrac062: gallons -> gallon
-
-** testFrac022, testFrac053: missing pause comma
-
-** testFrac057: numbers to alpha
-
-** testFrac059: Decap X
-
-
-** testFrac061: Missing pause comma
-
-
-** testFrac062,testFrac070: Decap Miles
-
-
-** testFrac064: Decap One
-
-** testFrac069: Missing pause comma
-
-
-** testNestFrac007: And -> and, 
-
-** Problems with pausing commas: 
-   testNestFrac005, testNestFrac006, testNestFrac007, testNestFrac008,
-   testNestFrac018 (around sub),
-
-   testNestFrac023, testNestFrac024, testNestFrac025 (incorrect, goes after 1 plus), testNestFrac026,
-   testNestFrac027, testNestFrac028, testNestFrac029, testNestFrac030,
-   testNestFrac031, testNestFrac032, testNestFrac033, testNestFrac034,
-   testNestFrac035, testNestFrac036
-
-** testNestFrac013: 1 16th to 1 over 16
-
-** testNestFrac014, testNestFrac016, testNestFrac017: one to 1
-
-** testNestFrac023 ending .
-** testNestFrac029 "the x" should be "x"
-** testNestFrac032/33/34 one -> 1
-** testFracfunct caps: 001, 007, 008
- 010, 011, 012, 013, 014
-** testFracfunct pause comma: 001, 002, 006, 012, 018 (around functions)
-** emphasis removed 014
-
-** testFracfunct spelling:
-
-*** 008 slose -> close
-*** 009 sin -> sine
-
-
-** Functions:
-
-*** Corrections:
-
-**** 005 2 x -> 2x
-
-**** 007 one -> 1
-
-**** 033 f instead of h
-
-**** 034 g instead of h
-
-**** 042: Missing open paren inserted.
-
-**** 088: 2 x -> 2x
-
-**** 090: Missing mentioning of fraction preference, one -> 1
-
-*** Pausing commas: 043
-
-*** Capitalisation removed:
-    Function044, Function045, Function046, Function047, Function048,
-    Function049, Function126, Function127, Function128, Function129,
-    Function130, Function131,
-
-** Exponents:
-
-*** Emphasis removed:
-    Exp012, Exp013, Exp018, Exp019, Exp010b, Exp011b, Exp012b, Exp013b, Exp013b,
-    Exp015b, Exp017b, Exp020, Exp020, Exp024, Exp025, Exp029, Exp030, Exp031,
-    Exp031, Exp032, Exp033, Exp034, Exp035, Exp051, Exp052, Exp057, Exp058,
-    Exp059, Exp060, Exp061, Exp062, Exp062, Exp064, Exp066, Exp069, Exp069,
-    Exp073, Exp074, Exp078, Exp079, Exp080, Exp080, Exp081, Exp082, Exp083,
-    Exp083, Exp084, Exp084, Exp095, Exp096, Exp101, Exp102, Exp103, Exp104,
-    Exp105, Exp106, Exp106, Exp108, Exp110, Exp113, Exp113, Exp117, Exp118,
-    Exp122, Exp123, Exp124, Exp124, Exp125, Exp126, Exp127, Exp128, Exp138,
-    Exp139, Exp140, Exp145, Exp146, Exp147, Exp148, Exp149, Exp150, Exp150,
-    Exp152, Exp154, Exp156, Exp159, Exp159, Exp161, Exp163, Exp164, Exp168,
-    Exp169, Exp170, Exp170, Exp171, Exp171, Exp172, Exp172, Exp173, Exp174,
-
-*** Corrections: 
-**** Exp012: + -> plus
-
-
-**** Exp013: + -> plus and added spaces
-
-*** Decap: 013
-
-*** Rewritten ordinals: 016, 017
-
-*** Added spacing: 
-    017b: 2x -> 2 x
+** MathJax integration: Use submenus and radio buttons.

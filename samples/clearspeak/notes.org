@@ -21,6 +21,9 @@
 *** ImpliedTimes
 *** No implied time and silent parens
 
+** QUESTION What does preferences cleared really mean:
+   All preferences are set to Auto or Auto has to be set explicitly?
+   ANSWER: Everything reset to Auto.
 
 * Emacs helper
 
@@ -96,6 +99,121 @@
 
 * Mistakes in the original examples:
 
+** Add spaces between 2x 3y etc?
+I have done it.
+
+** frtxt004: changes six to 6
+
+** testNestFrac002: added pausing commas
+
+** Check all the unit examples with fractions!
+
+** Decapitalise most of them.
+
+** testFrac012-015: X -> x
+
+** testFrac015,testFrac046,testFrac062: gallons -> gallon
+
+** testFrac022, testFrac053: missing pause comma
+
+** testFrac057: numbers to alpha
+
+** testFrac059: Decap X
+
+
+** testFrac061: Missing pause comma
+
+
+** testFrac062,testFrac070: Decap Miles
+
+
+** testFrac064: Decap One
+
+** testFrac069: Missing pause comma
+
+
+** testNestFrac007: And -> and, 
+
+** Problems with pausing commas: 
+   testNestFrac005, testNestFrac006, testNestFrac007, testNestFrac008,
+   testNestFrac018 (around sub),
+
+   testNestFrac023, testNestFrac024, testNestFrac025 (incorrect, goes after 1 plus), testNestFrac026,
+   testNestFrac027, testNestFrac028, testNestFrac029, testNestFrac030,
+   testNestFrac031, testNestFrac032, testNestFrac033, testNestFrac034,
+   testNestFrac035, testNestFrac036
+
+** testNestFrac013: 1 16th to 1 over 16
+
+** testNestFrac014, testNestFrac016, testNestFrac017: one to 1
+
+** testNestFrac023 ending .
+** testNestFrac029 "the x" should be "x"
+** testNestFrac032/33/34 one -> 1
+** testFracfunct caps: 001, 007, 008
+ 010, 011, 012, 013, 014
+** testFracfunct pause comma: 001, 002, 006, 012, 018 (around functions)
+** emphasis removed 014
+
+** testFracfunct spelling:
+
+*** 008 slose -> close
+*** 009 sin -> sine
+
+
+** Functions:
+
+*** Corrections:
+
+**** 005 2 x -> 2x
+
+**** 007 one -> 1
+
+**** 033 f instead of h
+
+**** 034 g instead of h
+
+**** 042: Missing open paren inserted.
+
+**** 088: 2 x -> 2x
+
+**** 090: Missing mentioning of fraction preference, one -> 1
+
+*** Pausing commas: 043
+
+*** Capitalisation removed:
+    Function044, Function045, Function046, Function047, Function048,
+    Function049, Function126, Function127, Function128, Function129,
+    Function130, Function131,
+
+** Exponents:
+
+*** Emphasis removed:
+    Exp012, Exp013, Exp018, Exp019, Exp010b, Exp011b, Exp012b, Exp013b, Exp013b,
+    Exp015b, Exp017b, Exp020, Exp020, Exp024, Exp025, Exp029, Exp030, Exp031,
+    Exp031, Exp032, Exp033, Exp034, Exp035, Exp051, Exp052, Exp057, Exp058,
+    Exp059, Exp060, Exp061, Exp062, Exp062, Exp064, Exp066, Exp069, Exp069,
+    Exp073, Exp074, Exp078, Exp079, Exp080, Exp080, Exp081, Exp082, Exp083,
+    Exp083, Exp084, Exp084, Exp095, Exp096, Exp101, Exp102, Exp103, Exp104,
+    Exp105, Exp106, Exp106, Exp108, Exp110, Exp113, Exp113, Exp117, Exp118,
+    Exp122, Exp123, Exp124, Exp124, Exp125, Exp126, Exp127, Exp128, Exp138,
+    Exp139, Exp140, Exp145, Exp146, Exp147, Exp148, Exp149, Exp150, Exp150,
+    Exp152, Exp154, Exp156, Exp159, Exp159, Exp161, Exp163, Exp164, Exp168,
+    Exp169, Exp170, Exp170, Exp171, Exp171, Exp172, Exp172, Exp173, Exp174,
+
+*** Corrections: 
+**** Exp012: + -> plus
+
+
+**** Exp013: + -> plus and added spaces
+
+*** Decap: 013
+
+*** Rewritten ordinals: 016, 017
+
+*** Added spacing: 
+    017b: 2x -> 2 x
+
 ** Missing Bar_ preference in part_3
 
 ** Starting letters should not be capitalised! This seems to be a word artefact!
@@ -127,7 +245,7 @@
 
 *** Fractions
 
-****    Frac027 twice. Second should be Frac029.
+**** Frac027 twice. Second should be Frac029.
     SOLVED: Corrected to Frac029
 
 **** Frac067 twice. Second should be Frac069.
@@ -411,6 +529,7 @@ Helper function for Emacs:
 
 ****  VertLine009: 
       why // (To get this speech a space was inserted after P and exact speech “of” was entered there.)</p>';
+      ANSWER: Should not be necessary.
 
 **** How about element inside of Set but not bound in set extension?
      Currently we treat this similar to outside.
@@ -653,7 +772,7 @@ Table2
 **** TrigInverse016, x -> 1
 **** TrigInverse017, sin -> sine
 **** AllTrig03, tan -> tangent
-**** ArcTrig011, Removed of (QUESTION: is that because arg > 100)?
+**** ArcTrig011, Removed of (QUESTION: is that because arg > 100)? ANSWER: No it's a mistake.
 **** ArcTrig017, sin -> sine
 **** TrigTrig016, x -> 1
 **** AllTrig01,  sin -> sine
@@ -663,6 +782,7 @@ Table2
 
 *** QUESTION on preference Trig_ArcTrig: 
     arc sine or arcsine? In rules there is no space!
+    ANSWER: Have with space. Better for TTS. So correct in rules.
 
 Table 3
 
@@ -788,9 +908,11 @@ Table 3
 **** QUESTION: MathML for Matrix021, Matrix063, Matrix101, Matrix140, is incorrect.
      b_11 where 11 is a single number, can't be split!
      All these are corrected to single indices.
+     ANSWER: MathML error.
 
 **** Matrix022, QUESTION
      Why is that not a simple matrix without columns?
+     ANSWER: Should be simple!
 
 **** Matrix030, Last column 3 should be column 4
 
@@ -798,12 +920,13 @@ Table 3
 
 **** QUESTION: Is it End Matrix, EndMatrix or end matrix
      Choice: end matrix as this is given in the rules.
+     ANSWER: end matrix (end other)
 
 **** Column matrix -> column matrix:
      Matrix123, Matrix124, Matrix127, Matrix128, testMatrix085, testMatrix086, testMatrix089, testMatrix090
 
 **** QUESTION: Is it also a long pause '.' after row/column vector?
-
+     ANSWER: Yes.
 
 ** Fractions
 
@@ -926,6 +1049,7 @@ Table 3
     Prime042, Prime044, Prime043, Prime028, Prime027, Prime026, Bar018, 
 
 *** QUESTION: period or point?
+    ANSWER: period
 
 *** Simple spaceout: 
     Bar012, Bar018,
@@ -936,17 +1060,24 @@ Table 3
 
 **** What about empty cells?
     Currently decided on blank.
+    ANSWER: Ignore empty cells. Pauses might become longer or shrink by combining them.
 
 **** Equation: examples?
 
 **** Pause after summary? How long?
+     If I want to.
 
 **** What about cases in other preferences (constraints, etc.)
 
+     ANSWER: In cases preference cases will be spoken even without constraints.
+     In other preferences cases will be overwritten by preference!
+
 **** What about constraints in equality mode etc.
-    Would it not make more sense to actually distinguish equalities vs inequalities.
+     Would it not make more sense to actually distinguish equalities vs inequalities.
 
 **** Why is there a separate _Line preference for multiline labels?
+     ANSER: No, labels have not been considered.
 
 *** Examples for label_none are missing!
 
+    Just say nothing for the labels and that's it.

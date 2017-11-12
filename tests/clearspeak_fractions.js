@@ -1449,8 +1449,9 @@ sre.ClearspeakFractions.prototype.testFracfunct007 = function() {
 /**
  * Testing ClearspeakFractions Example Fracfunct008
  * 
- * This is incorrect: This is the same expression as Fracfunct011, which has a
- * different speech string.
+ * QUESTION: This is incorrect: This is the same expression as Fracfunct011, which has a
+ * different speech string. Probably wrong!
+ * 
  */
 sre.ClearspeakFractions.prototype.untestFracfunct008 = function() {
   var preference = 'Fraction_Auto';
