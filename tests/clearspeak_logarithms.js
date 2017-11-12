@@ -205,7 +205,7 @@ sre.ClearspeakLogarithms.prototype.testLog014 = function() {
 sre.ClearspeakLogarithms.prototype.testLog015 = function() {
   var preference = 'Log_Auto';
   var mathml = '<math><mrow><mi>log</mi><mo stretchy="false">(</mo><mi>x</mi><mi>y</mi><mo stretchy="false">)</mo></mrow></math>';
-  var speech = 'log, x y';
+  var speech = 'log x y';
   this.executeRuleTest(mathml, speech, preference);
 };
 

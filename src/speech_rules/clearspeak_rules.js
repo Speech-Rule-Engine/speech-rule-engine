@@ -438,7 +438,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   
   defineRule(
       'function-prefix-simple-arg', 'clearspeak.default',
-      '[n] children/*[1]; [p] (pause:"short"); [n] children/*[2]',
+      '[n] children/*[1]; [n] children/*[2]',
     'self::appl', '@role="prefix function"',
     'name(children/*[2])="fenced"',
     'contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")',

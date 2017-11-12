@@ -262,7 +262,7 @@ sre.ClearspeakTrigometry.prototype.testTrig019 = function() {
 /**
  * Testing ClearspeakTrigometry Example Trig020
  */
-sre.ClearspeakTrigometry.prototype.untestTrig020 = function() {
+sre.ClearspeakTrigometry.prototype.testTrig020 = function() {
   var preference = 'Trig_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>π</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'tangent negative pi';
