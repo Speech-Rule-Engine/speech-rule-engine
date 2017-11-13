@@ -124,12 +124,11 @@ sre.System.prototype.setupEngine = function(feature) {
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
-  engine.comparator = new sre.DynamicCstr.DefaultComparator(
+  var comparator = engine.comparators[engine.domain];
+  engine.comparator = comparator ? comparator() :
+    new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
-      // TODO: (MOSS) This is temporary for clearspeak!
-      // The mathspeak dependency should be set somewhere in clearspeak.
-      sre.DynamicProperties.create(['mathspeak', 'default'],
-                                   ['short', 'default']));
+      sre.DynamicProperties.create(['default'], ['short', 'default']));
 };
 
 

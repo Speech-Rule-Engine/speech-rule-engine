@@ -62,6 +62,12 @@ sre.Engine = function() {
   this.comparator = null;
 
   /**
+   * All preferences that can be set.
+   * @type {Object.<string, function():sre.DynamicCstr.Comparator>}
+   */
+  this.comparators = {};
+
+  /**
    * Current domain.
    * @type {string}
    */
@@ -74,18 +80,6 @@ sre.Engine = function() {
   this.style = 'short';
 
   
-  /**
-   * Preference settings for certain rule sets like ClearSpeak.
-   * @type {Object}
-   */
-  this.preferences = {};
-
-  /**
-   * All preferences that can be set.
-   * @type {Object.<Array.<string>>}
-   */
-  this.allPreferences = {};
-
   /**
    * Current walker mode.
    * @type {string}

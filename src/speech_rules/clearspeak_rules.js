@@ -20,6 +20,8 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.ClearspeakUtil');
+goog.require('sre.DynamicCstr');
+goog.require('sre.DynamicProperties');
 goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
@@ -85,9 +87,9 @@ sre.ClearspeakRules.addCustomString_ = goog.bind(
     sre.ClearspeakRules.mathStore.customStrings);
 
 /**
- * @type {Object.<Array.<string>>}
+ * @type {sre.DynamicProperties}
  */
-sre.ClearspeakRules.PREFERENCES = {
+sre.ClearspeakRules.PREFERENCES = new sre.DynamicProperties({
   AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
   Bar: ['Auto', 'Conjugate'],
   Caps: ['Auto', 'SayCaps'],
@@ -112,7 +114,7 @@ sre.ClearspeakRules.PREFERENCES = {
   TriangleSymbol: ['Auto', 'Delta'],
   Trig: ['Auto', 'ArcTrig', 'TrigInverse'],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
-};
+});
   
 
 goog.scope(function() {
@@ -130,6 +132,18 @@ sre.ClearspeakRules.addAnnotators_ = function() {
   sre.Engine.getInstance().allPreferences = sre.ClearspeakRules.PREFERENCES;
   sre.Engine.getInstance().style = 'preferences';
 };
+
+
+sre.ClearspeakRules.addComparator_ = function() {
+  sre.Engine.getInstance().comparators['clearspeak'] =
+    function() {
+      return new sre.DynamicCstr.DefaultComparator(
+        sre.Engine.getInstance().dynamicCstr,
+        sre.DynamicProperties.create(['mathspeak', 'default'],
+                                     ['short', 'default']));
+    };
+};
+           
 
 /**
  * Initialize the custom functions.
@@ -2340,7 +2354,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 sre.ClearspeakRules.getInstance().initializer = [
   sre.ClearspeakRules.initCustomFunctions_,
   sre.ClearspeakRules.initClearspeakRules_,
-  sre.ClearspeakRules.addAnnotators_
+  sre.ClearspeakRules.addAnnotators_,
+  sre.ClearspeakRules.addComparator_
 ];
 
 
