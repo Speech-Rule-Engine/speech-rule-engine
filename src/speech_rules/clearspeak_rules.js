@@ -362,23 +362,106 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'feet', 'clearspeak.default',
       '[n] children/*[1]; [t] "feet"',
     'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
-    'children/*[2][text()="′"]');
+    'children/*[2][text()="′"]', 'not(preceding-sibling::*[@role="degree"])');
   defineRule(
       'foot', 'clearspeak.default',
       '[n] children/*[1]; [t] "foot"',
     'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
-    'children/*[2][text()="′"]', 'children/*[1][text()="1"]');
+    'children/*[2][text()="′"]', 'children/*[1][text()="1"]',
+    'not(preceding-sibling::*[@role="degree"])');
   defineRule(
       'inches', 'clearspeak.default',
       '[n] children/*[1]; [t] "inches"',
     'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
-    'children/*[2][text()="″"]');
+    'children/*[2][text()="″"]', 'not(preceding-sibling::*[@role="degree"])');
   defineRule(
       'inch', 'clearspeak.default',
       '[n] children/*[1]; [t] "inch"',
     'self::superscript', 'children/*[2][@role="prime"]', 'name(children/*[1])="number"',
+    'children/*[2][text()="″"]', 'children/*[1][text()="1"]',
+    'not(preceding-sibling::*[@role="degree"])');
+  // Degrees, minutes, and seconds
+  defineRule(
+      'minutes', 'clearspeak.default',
+      '[p] (pause:short); [n] children/*[1]; [t] "minutes"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'preceding-sibling::*[@role="degree"]',
+    'children/*[2][text()="′"]');
+  defineRule(
+      'minute', 'clearspeak.default',
+      '[p] (pause:short); [n] children/*[1]; [t] "minute"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'preceding-sibling::*[@role="degree"]',
+    'children/*[2][text()="′"]', 'children/*[1][text()="1"]');
+  // TODO: (Simons) Sort these out properly.
+  defineRule(
+      'seconds', 'clearspeak.default',
+      '[p] (pause:short); [n] children/*[1]; [t] "seconds"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'preceding-sibling::*[@role="degree"]',
+    'children/*[2][text()="″"]');
+  defineRule(
+      'second', 'clearspeak.default',
+      '[p] (pause:short); [n] children/*[1]; [t] "second"',
+    'self::superscript', 'children/*[2][@role="prime"]', 'preceding-sibling::*[@role="degree"]',
+    'children/*[2][text()="″"]', 'children/*[1][text()="1"]');
+  // Angle preference
+  defineRule(
+      'degrees-angle', 'clearspeak.Prime_Angle',
+      '[n] children/*[1]; [t] "degrees"; [p] (pause:short)',
+      'self::punctuation', '@role="degree"');
+  defineRule(
+      'degree-angle', 'clearspeak.Prime_Angle',
+      '[n] children/*[1]; [t] "degree"; [p] (pause:short)',
+    'self::punctuation', '@role="degree"', 'children/*[1][text()="1"]');
+    defineRule(
+      'minutes-angle', 'clearspeak.Prime_Angle',
+      '[n] children/*[1]; [t] "minutes"; [p] (pause:short)',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] and ' +
+        '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
+      'children/*[2][text()="′"]');
+  defineRule(
+      'minute-angle', 'clearspeak.Prime_Angle',
+      '[n] children/*[1]; [t] "minute"; [p] (pause:short)',
+    'self::superscript', 'children/*[2][@role="prime"]', 
+    'children/*[2][text()="′"]', 'children/*[1][text()="1"]');
+  defineRule(
+      'seconds-angle', 'clearspeak.Prime_Angle',
+      '[n] children/*[1]; [t] "seconds"; [p] (pause:short)',
+      'self::superscript', 'children/*[2][@role="prime"]', 
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] and ' +
+        '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
+    'children/*[2][text()="″"]');
+  defineRule(
+      'second-angle', 'clearspeak.Prime_Angle',
+      '[n] children/*[1]; [t] "second"; [p] (pause:short)',
+    'self::superscript', 'children/*[2][@role="prime"]', 
+    'children/*[2][text()="″"]', 'children/*[1][text()="1"]');
+  // Length preference
+  defineRule(
+      'feet-length', 'clearspeak.Prime_Length',
+      '[n] children/*[1]; [t] "feet"; [p] (pause:short)',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] and ' +
+        '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
+      'children/*[2][text()="′"]');
+  defineRule(
+      'foot-length', 'clearspeak.Prime_Length',
+      '[n] children/*[1]; [t] "foot"; [p] (pause:short)',
+    'self::superscript', 'children/*[2][@role="prime"]', 
+    'children/*[2][text()="′"]', 'children/*[1][text()="1"]');
+  defineRule(
+      'inches-length', 'clearspeak.Prime_Length',
+      '[n] children/*[1]; [t] "inches"; [p] (pause:short)',
+      'self::superscript', 'children/*[2][@role="prime"]', 
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] and ' +
+        '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
+    'children/*[2][text()="″"]');
+  defineRule(
+      'inch-length', 'clearspeak.Prime_Length',
+      '[n] children/*[1]; [t] "inch"; [p] (pause:short)',
+    'self::superscript', 'children/*[2][@role="prime"]', 
     'children/*[2][text()="″"]', 'children/*[1][text()="1"]');
 
+  
 
   // Punctuated
   defineRule(

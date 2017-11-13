@@ -34,7 +34,6 @@ sre.ClearspeakPart3Adornments.base(this, 'constructor');
 * @override
 */
 this.information = 'ClearspeakPart3Adornments rule tests.';
-  sre.Debugger.getInstance().init();
 };
 goog.inherits(sre.ClearspeakPart3Adornments, sre.ClearspeakRuleTest);
 
@@ -163,10 +162,10 @@ sre.ClearspeakPart3Adornments.prototype.testPrime010 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime011
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime011 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime011 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '16 feet 10 inches';
+  var speech = '16 feet, 10 inches';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -175,10 +174,10 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime011 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime012
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime012 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime012 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup></mrow></math>';
-  var speech = '45 degrees 10 minutes';
+  var speech = '45 degrees, 10 minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -186,7 +185,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime012 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime013
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime013 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime013 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo></msup></mrow></math>';
   var speech = 'x degrees, y minutes';
@@ -200,7 +199,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime013 = function() {
 sre.ClearspeakPart3Adornments.prototype.untestPrime014 = function() {
   var preference = 'Prime_Auto';
   var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '45 degrees 10 minutes 25 seconds';
+  var speech = '45 degrees, 10 minutes, 25 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -219,7 +218,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime015 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime016
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime016 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime016 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
   var speech = '1 minute';
@@ -230,7 +229,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime016 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime017
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime017 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime017 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mi>x</mi><mo>′</mo></msup></math>';
   var speech = 'x minutes';
@@ -241,7 +240,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime017 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime018
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime018 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime018 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
   var speech = '2 minutes';
@@ -252,7 +251,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime018 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime019
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime019 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime019 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
   var speech = '1 second';
@@ -263,7 +262,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime019 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime020
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime020 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime020 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mi>x</mi><mo>″</mo></msup></math>';
   var speech = 'x seconds';
@@ -274,7 +273,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime020 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime021
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime021 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime021 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
   var speech = '2 seconds';
@@ -285,10 +284,10 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime021 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime022
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime022 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime022 = function() {
   var preference = 'Prime_Angle';
-  var mathml = '<math><mrow><mn>1</mn><msup><mn>6</mn><mo>′</mo></msup><mn>1</mn><msup><mn>0</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '16 minutes 10 seconds';
+  var mathml = '<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10</mn><mo>″</mo></msup></mrow></math>';
+  var speech = '16 minutes, 10 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -296,7 +295,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime022 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime023
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime023 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime023 = function() {
   var preference = 'Prime_Angle';
   var mathml = '<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y</mi><mo>″</mo></msup></mrow></math>';
   var speech = 'x minutes, y seconds';
@@ -307,10 +306,10 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime023 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime024
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime024 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime024 = function() {
   var preference = 'Prime_Angle';
-  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>1</mn><msup><mn>0</mn><mo>′</mo></msup></mrow></math>';
-  var speech = '45 degrees 10 minutes';
+  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup></mrow></math>';
+  var speech = '45 degrees, 10 minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -318,10 +317,10 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime024 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime025
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime025 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime025 = function() {
   var preference = 'Prime_Angle';
-  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>1</mn><msup><mn>0</mn><mo>′</mo></msup><mn>2</mn><msup><mn>5</mn><mo>″</mo></msup></mrow></math>';
-  var speech = '45 degrees 10 minutes 25 seconds';
+  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
+  var speech = '45 degrees, 10 minutes, 25 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -395,7 +394,7 @@ sre.ClearspeakPart3Adornments.prototype.testPrime031 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime032
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime032 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime032 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>1</mn><mo>′</mo></msup></math>';
   var speech = '1 foot';
@@ -406,7 +405,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime032 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime033
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime033 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime033 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mi>x</mi><mo>′</mo></msup></math>';
   var speech = 'x feet';
@@ -417,7 +416,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime033 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime034
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime034 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime034 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>2</mn><mo>′</mo></msup></math>';
   var speech = '2 feet';
@@ -428,7 +427,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime034 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime035
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime035 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime035 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>1</mn><mo>″</mo></msup></math>';
   var speech = '1 inch';
@@ -439,7 +438,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime035 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime036
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime036 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime036 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mi>x</mi><mo>″</mo></msup></math>';
   var speech = 'x inches';
@@ -450,7 +449,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime036 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Prime037
  */
-sre.ClearspeakPart3Adornments.prototype.untestPrime037 = function() {
+sre.ClearspeakPart3Adornments.prototype.testPrime037 = function() {
   var preference = 'Prime_Length';
   var mathml = '<math><msup><mn>2</mn><mo>″</mo></msup></math>';
   var speech = '2 inches';
@@ -458,12 +457,13 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime037 = function() {
 };
 
 
+// TODO: (Simons) Rewrite prime etc into superscript.
 /**
  * Testing ClearspeakPart3Adornments Example Prime038
  */
 sre.ClearspeakPart3Adornments.prototype.untestPrime038 = function() {
   var preference = 'Prime_Length';
-  var mathml = '<math><mrow><mn>1</mn><msup><mn>6</mn><mo>′</mo></msup><mn>1</mn><msup><mn>0</mn><mo>″</mo></msup></mrow></math>';
+  var mathml = '<math><mrow><mn>16</mn><mo>′</mo></msup><mn>10</mn><mo>″</mo></msup></mrow></math>';
   var speech = '16 feet 10 inches';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -485,7 +485,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime039 = function() {
  */
 sre.ClearspeakPart3Adornments.prototype.untestPrime040 = function() {
   var preference = 'Prime_Length';
-  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>1</mn><msup><mn>0</mn><mo>′</mo></msup></mrow></math>';
+  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo></msup></mrow></math>';
   var speech = '45 degrees 10 minutes';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -496,7 +496,7 @@ sre.ClearspeakPart3Adornments.prototype.untestPrime040 = function() {
  */
 sre.ClearspeakPart3Adornments.prototype.untestPrime041 = function() {
   var preference = 'Prime_Length';
-  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>1</mn><msup><mn>0</mn><mo>′</mo></msup><mn>2</mn><msup><mn>5</mn><mo>″</mo></msup></mrow></math>';
+  var mathml = '<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo></msup><mn>25</mn><mo>″</mo></msup></mrow></math>';
   var speech = '45 degrees 10 minutes 25 seconds';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -785,10 +785,10 @@ sre.ClearspeakPart3Adornments.prototype.testBar002 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Bar003
  */
-sre.ClearspeakPart3Adornments.prototype.untestBar003 = function() {
+sre.ClearspeakPart3Adornments.prototype.testBar003 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><mo stretchy="true">¯</mo></mover></mrow></math>';
-  var speech = 'f sub 1 bar';
+  var speech = 'f sub 1, bar';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -796,10 +796,10 @@ sre.ClearspeakPart3Adornments.prototype.untestBar003 = function() {
 /**
  * Testing ClearspeakPart3Adornments Example Bar004
  */
-sre.ClearspeakPart3Adornments.prototype.untestBar004 = function() {
+sre.ClearspeakPart3Adornments.prototype.testBar004 = function() {
   var preference = 'Bar_Auto';
   var mathml = '<math><mrow><mover accent="true"><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><mo stretchy="true">¯</mo></mover><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f sub 1 bar of x';
+  var speech = 'f sub 1, bar of x';
   this.executeRuleTest(mathml, speech, preference);
 };
 
