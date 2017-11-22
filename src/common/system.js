@@ -101,7 +101,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
   var setIf = function(feat) {
-    if (feature[feat] !== undefined) {
+    if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
     }
   };
@@ -125,8 +125,11 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.locale, engine.domain, engine.style);
-  engine.comparator = new sre.DynamicCstr.DefaultComparator(
+  engine.dynamicCstr = engine.parser.parse(engine.locale + '.' +
+                                           engine.domain + '.' + engine.style);
+  var comparator = engine.comparators[engine.domain];
+  engine.comparator = comparator ? comparator() :
+    new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
     sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],

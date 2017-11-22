@@ -28,6 +28,7 @@ goog.provide('sre.SemanticTree');
 
 goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
+goog.require('sre.SemanticAnnotations');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticNode');
 goog.require('sre.SystemExternal');
@@ -54,6 +55,8 @@ sre.SemanticTree = function(mml) {
   /** @type {!sre.SemanticNode} */
   this.root = this.parser.parse(mml);
 
+  sre.SemanticAnnotations.getInstance().annotate(this.root);
+  
 };
 
 

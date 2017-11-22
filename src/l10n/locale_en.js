@@ -75,7 +75,7 @@ sre.Locale.en.nestingToString = function(count) {
 
 sre.Locale.en.MS_FUNC = {
   FRAC_NEST_DEPTH: function(node) {
-    return sre.MathspeakUtil.vulgarFractionSmall(node);
+    return sre.MathspeakUtil.vulgarFractionSmall(node, 10, 100);
   },
   RADICAL_NEST_DEPTH: sre.Locale.en.nestingToString,
   COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}

@@ -142,11 +142,25 @@ sre.Trie.prototype.lookupRules = function(xml, dynamic) {
 sre.Trie.prototype.dynamicCstrSets_ = function(dynamic) {
   var values = dynamic.getValues();
   if (sre.Engine.getInstance().strict) {
-    return values.map(function(value) {return [value];});
+    return values.map(goog.bind(function(value) {
+      var set = this.makeSet_(value, /** @type{sre.ClearspeakPreferences} */(dynamic).preference);
+      return set;}, this));
   }
-  return values.map(function(value) {
-    return value === 'default' ? [value] : [value, 'default'];
-  });
+  return values.map(goog.bind(function(value) {
+    var set = this.makeSet_(value, /** @type{sre.ClearspeakPreferences} */(dynamic).preference);
+    if (value !== 'default') {
+      set.push('default');
+    }
+    return set;
+  }, this));
+};
+
+
+sre.Trie.prototype.makeSet_ = function(value, preferences) {
+  if (!preferences || !Object.keys(preferences).length) {
+    return [value];
+  }
+  return value.split(':');
 };
 
 

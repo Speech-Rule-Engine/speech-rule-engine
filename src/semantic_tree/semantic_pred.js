@@ -67,12 +67,15 @@ sre.SemanticPred.isAccent = function(node) {
 
 
 /**
- * Predicate implementing the boundary criteria for simple functions:
+ * Predicate implementing the boundary criteria for detecting simple functions:
+ * 1. No arguments, e.g., f()
+ * 2. Any arguments with the exception of:
+ *  - Infix operations other than implicit multiplication.
  *
  * @param {!sre.SemanticNode} node A semantic node of type fenced.
  * @return {boolean} True if the node meets the boundary criteria.
  */
-sre.SemanticPred.isSimpleFunction = function(node) {
+sre.SemanticPred.isSimpleFunctionScope = function(node) {
   var children = node.childNodes;
   if (children.length === 0) {
     return true;
@@ -95,15 +98,30 @@ sre.SemanticPred.isSimpleFunction = function(node) {
 
 
 /**
- * Predicate implementing the boundary criteria for prefix functions and big
- * operators:
+ * Predicate implementing the boundary criteria for prefix functions.
+ * 1. an explicit operator,
+ * 2. another function application,
+ * 3. a relation symbol, or
+ * 4. some punctuation.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {boolean} True if the node meets the boundary criteria.
+ */
+sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
+  return sre.SemanticPred.isOperator(node) ||
+    sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
+    sre.SemanticPred.isGeneralFunctionBoundary(node);
+};
+
+
+/**
+ * Predicate implementing the boundary criteria for big operators:
  * 1. an explicit operator,
  * 2. a relation symbol, or
  * 3. some punctuation.
  * @param {sre.SemanticNode} node A semantic node.
  * @return {boolean} True if the node meets the boundary criteria.
  */
-sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
+sre.SemanticPred.isBigOpBoundary = function(node) {
   return sre.SemanticPred.isOperator(node) ||
       sre.SemanticPred.isGeneralFunctionBoundary(node);
 };
@@ -276,11 +294,22 @@ sre.SemanticPred.isTableOrMultiline = function(node) {
  * @return {boolean} True if we believe we have a matrix.
  */
 sre.SemanticPred.tableIsMatrixOrVector = function(node) {
+  return !!node && sre.SemanticPred.isFencedElement(node) &&
+    sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
+};
+
+
+/**
+ * Decides if a node is a single, simply fenced element.
+ * @param {sre.SemanticNode} node A node.
+ * @return {boolean} True if the node is fence left right or neutral with a
+ *     single contained element.
+ */
+sre.SemanticPred.isFencedElement = function(node) {
   return !!node && sre.SemanticPred.isAttribute('type', 'FENCED')(node) &&
-      (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
-       sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
-          node.childNodes.length === 1 &&
-              sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
+    (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
+     sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
+    node.childNodes.length === 1;
 };
 
 
@@ -352,7 +381,7 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
 
 
 /**
- * Given a list of punctuated node and their containint puncutations, decides if
+ * Given a list of punctuated node and their containing puncutations, decides if
  * there is exactly one punctuation, which is at the given position. Will
  * therefore return false if the puncutation is a dummy in a text sequence.
  * @param {!Array.<sre.SemanticNode>} nodes A list of punctuated nodes.
@@ -363,6 +392,36 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
  */
 sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
   return puncts.length === 1 &&
-      nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION &&
-      nodes[position] === puncts[0];
+    (nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION ||
+     nodes[position].embellished === sre.SemanticAttr.Type.PUNCTUATION) &&
+    nodes[position] === puncts[0];
+};
+
+
+/**
+ * Is the node a simple function?
+ * @param {!sre.SemanticNode} node The node.
+ * @return {boolean} True if node is an identifier with role simple function.
+ */
+sre.SemanticPred.isSimpleFunction = function(node) {
+  return sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
+    sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node);
+};
+
+
+sre.SemanticPred.isLeftBrace = function(node) {
+  var leftBrace = [ '{', '﹛', '｛' ]; // ['0x007B', '0xFE5B', '0xFF5B'];
+  return leftBrace.indexOf(node.textContent) !== -1;
+};
+
+
+sre.SemanticPred.isRightBrace = function(node) {
+  var rightBrace = [ '}', '﹜', '｝' ]; // ['0x007D', '0xFE5C', '0xFF5D'];
+  return rightBrace.indexOf(node.textContent) !== -1;
+};
+
+
+sre.SemanticPred.isSetNode = function(node) {
+  return sre.SemanticPred.isLeftBrace(node.contentNodes[0]) &&
+    sre.SemanticPred.isRightBrace(node.contentNodes[1]);
 };

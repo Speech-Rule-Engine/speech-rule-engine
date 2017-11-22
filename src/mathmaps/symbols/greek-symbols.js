@@ -104,6 +104,9 @@
       },
       "mathspeak": {
         "default": "upper Theta"
+      },
+      "clearspeak": {
+        "default": "cap Theta"
       }
     },
     "key": "03F4"
@@ -381,6 +384,9 @@
       },
       "mathspeak": {
         "default": "bold upper Digamma"
+      },
+      "clearspeak": {
+        "default": "bold cap Digamma"
       }
     },
     "key": "1D7CA"

@@ -9,6 +9,9 @@
       },
       "mathspeak": {
         "default": "upper A"
+      },
+      "clearspeak": {
+        "default": "cap A"
       }
     }
   },
@@ -22,6 +25,9 @@
       },
       "mathspeak": {
         "default": "upper B"
+      },
+      "clearspeak": {
+        "default": "cap B"
       }
     }
   },
@@ -35,6 +41,9 @@
       },
       "mathspeak": {
         "default": "upper C"
+      },
+      "clearspeak": {
+        "default": "cap C"
       }
     }
   },
@@ -48,6 +57,9 @@
       },
       "mathspeak": {
         "default": "upper D"
+      },
+      "clearspeak": {
+        "default": "cap D"
       }
     }
   },
@@ -61,6 +73,9 @@
       },
       "mathspeak": {
         "default": "upper E"
+      },
+      "clearspeak": {
+        "default": "cap E"
       }
     }
   },
@@ -74,6 +89,9 @@
       },
       "mathspeak": {
         "default": "upper F"
+      },
+      "clearspeak": {
+        "default": "cap F"
       }
     }
   },
@@ -87,6 +105,9 @@
       },
       "mathspeak": {
         "default": "upper G"
+      },
+      "clearspeak": {
+        "default": "cap G"
       }
     }
   },
@@ -100,6 +121,9 @@
       },
       "mathspeak": {
         "default": "upper H"
+      },
+      "clearspeak": {
+        "default": "cap H"
       }
     }
   },
@@ -113,6 +137,9 @@
       },
       "mathspeak": {
         "default": "upper I"
+      },
+      "clearspeak": {
+        "default": "cap I"
       }
     }
   },
@@ -126,6 +153,9 @@
       },
       "mathspeak": {
         "default": "upper J"
+      },
+      "clearspeak": {
+        "default": "cap J"
       }
     }
   },
@@ -139,6 +169,9 @@
       },
       "mathspeak": {
         "default": "upper K"
+      },
+      "clearspeak": {
+        "default": "cap K"
       }
     }
   },
@@ -152,6 +185,9 @@
       },
       "mathspeak": {
         "default": "upper L"
+      },
+      "clearspeak": {
+        "default": "cap L"
       }
     }
   },
@@ -165,6 +201,9 @@
       },
       "mathspeak": {
         "default": "upper M"
+      },
+      "clearspeak": {
+        "default": "cap M"
       }
     }
   },
@@ -178,6 +217,9 @@
       },
       "mathspeak": {
         "default": "upper N"
+      },
+      "clearspeak": {
+        "default": "cap N"
       }
     }
   },
@@ -191,6 +233,9 @@
       },
       "mathspeak": {
         "default": "upper O"
+      },
+      "clearspeak": {
+        "default": "cap O"
       }
     }
   },
@@ -204,6 +249,9 @@
       },
       "mathspeak": {
         "default": "upper P"
+      },
+      "clearspeak": {
+        "default": "cap P"
       }
     }
   },
@@ -217,6 +265,9 @@
       },
       "mathspeak": {
         "default": "upper Q"
+      },
+      "clearspeak": {
+        "default": "cap Q"
       }
     }
   },
@@ -230,6 +281,9 @@
       },
       "mathspeak": {
         "default": "upper R"
+      },
+      "clearspeak": {
+        "default": "cap R"
       }
     }
   },
@@ -243,6 +297,9 @@
       },
       "mathspeak": {
         "default": "upper S"
+      },
+      "clearspeak": {
+        "default": "cap S"
       }
     }
   },
@@ -256,6 +313,9 @@
       },
       "mathspeak": {
         "default": "upper T"
+      },
+      "clearspeak": {
+        "default": "cap T"
       }
     }
   },
@@ -269,6 +329,9 @@
       },
       "mathspeak": {
         "default": "upper U"
+      },
+      "clearspeak": {
+        "default": "cap U"
       }
     }
   },
@@ -282,6 +345,9 @@
       },
       "mathspeak": {
         "default": "upper V"
+      },
+      "clearspeak": {
+        "default": "cap V"
       }
     }
   },
@@ -295,6 +361,9 @@
       },
       "mathspeak": {
         "default": "upper W"
+      },
+      "clearspeak": {
+        "default": "cap W"
       }
     }
   },
@@ -308,6 +377,9 @@
       },
       "mathspeak": {
         "default": "upper X"
+      },
+      "clearspeak": {
+        "default": "cap X"
       }
     }
   },
@@ -321,6 +393,9 @@
       },
       "mathspeak": {
         "default": "upper Y"
+      },
+      "clearspeak": {
+        "default": "cap Y"
       }
     }
   },
@@ -334,6 +409,9 @@
       },
       "mathspeak": {
         "default": "upper Z"
+      },
+      "clearspeak": {
+        "default": "cap Z"
       }
     }
   },
@@ -348,6 +426,9 @@
       },
       "mathspeak": {
         "default": "upper A"
+      },
+      "clearspeak": {
+        "default": "cap A"
       }
     }
   },
@@ -362,6 +443,9 @@
       },
       "mathspeak": {
         "default": "upper B"
+      },
+      "clearspeak": {
+        "default": "cap B"
       }
     }
   },
@@ -376,6 +460,9 @@
       },
       "mathspeak": {
         "default": "upper C"
+      },
+      "clearspeak": {
+        "default": "cap C"
       }
     }
   },
@@ -390,6 +477,9 @@
       },
       "mathspeak": {
         "default": "upper D"
+      },
+      "clearspeak": {
+        "default": "cap D"
       }
     }
   },
@@ -404,6 +494,9 @@
       },
       "mathspeak": {
         "default": "upper E"
+      },
+      "clearspeak": {
+        "default": "cap E"
       }
     }
   },
@@ -418,6 +511,9 @@
       },
       "mathspeak": {
         "default": "upper F"
+      },
+      "clearspeak": {
+        "default": "cap F"
       }
     }
   },
@@ -432,6 +528,9 @@
       },
       "mathspeak": {
         "default": "upper G"
+      },
+      "clearspeak": {
+        "default": "cap G"
       }
     }
   },
@@ -446,6 +545,9 @@
       },
       "mathspeak": {
         "default": "upper H"
+      },
+      "clearspeak": {
+        "default": "cap H"
       }
     }
   },
@@ -460,6 +562,9 @@
       },
       "mathspeak": {
         "default": "upper I"
+      },
+      "clearspeak": {
+        "default": "cap I"
       }
     }
   },
@@ -474,6 +579,9 @@
       },
       "mathspeak": {
         "default": "upper J"
+      },
+      "clearspeak": {
+        "default": "cap J"
       }
     }
   },
@@ -488,6 +596,9 @@
       },
       "mathspeak": {
         "default": "upper K"
+      },
+      "clearspeak": {
+        "default": "cap K"
       }
     }
   },
@@ -502,6 +613,9 @@
       },
       "mathspeak": {
         "default": "upper L"
+      },
+      "clearspeak": {
+        "default": "cap L"
       }
     }
   },
@@ -516,6 +630,9 @@
       },
       "mathspeak": {
         "default": "upper M"
+      },
+      "clearspeak": {
+        "default": "cap M"
       }
     }
   },
@@ -530,6 +647,9 @@
       },
       "mathspeak": {
         "default": "upper N"
+      },
+      "clearspeak": {
+        "default": "cap N"
       }
     }
   },
@@ -544,6 +664,9 @@
       },
       "mathspeak": {
         "default": "upper O"
+      },
+      "clearspeak": {
+        "default": "cap O"
       }
     }
   },
@@ -558,6 +681,9 @@
       },
       "mathspeak": {
         "default": "upper P"
+      },
+      "clearspeak": {
+        "default": "cap P"
       }
     }
   },
@@ -572,6 +698,9 @@
       },
       "mathspeak": {
         "default": "upper Q"
+      },
+      "clearspeak": {
+        "default": "cap Q"
       }
     }
   },
@@ -586,6 +715,9 @@
       },
       "mathspeak": {
         "default": "upper R"
+      },
+      "clearspeak": {
+        "default": "cap R"
       }
     }
   },
@@ -600,6 +732,9 @@
       },
       "mathspeak": {
         "default": "upper S"
+      },
+      "clearspeak": {
+        "default": "cap S"
       }
     }
   },
@@ -614,6 +749,9 @@
       },
       "mathspeak": {
         "default": "upper T"
+      },
+      "clearspeak": {
+        "default": "cap T"
       }
     }
   },
@@ -628,6 +766,9 @@
       },
       "mathspeak": {
         "default": "upper U"
+      },
+      "clearspeak": {
+        "default": "cap U"
       }
     }
   },
@@ -642,6 +783,9 @@
       },
       "mathspeak": {
         "default": "upper V"
+      },
+      "clearspeak": {
+        "default": "cap V"
       }
     }
   },
@@ -656,6 +800,9 @@
       },
       "mathspeak": {
         "default": "upper W"
+      },
+      "clearspeak": {
+        "default": "cap W"
       }
     }
   },
@@ -670,6 +817,9 @@
       },
       "mathspeak": {
         "default": "upper X"
+      },
+      "clearspeak": {
+        "default": "cap X"
       }
     }
   },
@@ -684,6 +834,9 @@
       },
       "mathspeak": {
         "default": "upper Y"
+      },
+      "clearspeak": {
+        "default": "cap Y"
       }
     }
   },
@@ -698,6 +851,9 @@
       },
       "mathspeak": {
         "default": "upper Z"
+      },
+      "clearspeak": {
+        "default": "cap Z"
       }
     }
   }

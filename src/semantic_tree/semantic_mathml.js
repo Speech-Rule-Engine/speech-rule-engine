@@ -306,11 +306,20 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
-  return sre.SemanticProcessor.getInstance().identifierNode(
-      node.textContent,
-      sre.SemanticProcessor.getInstance().font(
-          node.getAttribute('mathvariant')),
-      node.getAttribute('class'));
+  var sem = sre.SemanticProcessor.getInstance().identifierNode(
+    node.textContent,
+    sre.SemanticProcessor.getInstance().font(
+      node.getAttribute('mathvariant')),
+    node.getAttribute('class'));
+  // TODO: MS2.3 Handle this separately in an additional parser:
+  if (sre.Engine.getInstance().domain !== 'clearspeak') {
+    return sem;
+  }
+  var specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
+  if (specialFunctions.indexOf(sem.textContent) !== -1) {
+    sem.role = sre.SemanticAttr.Role.SIMPLEFUNC;
+  }
+  return sem;
 };
 
 

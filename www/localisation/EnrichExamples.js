@@ -455,4 +455,12 @@ Lab.Examples = ['<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>',
 '<mrow><mo>{</mo><mo fence=\'true\'></mo></mrow><mspace width=\'2em\'/><mi>v</mi>',
 '<mrow><mi>a</mi><mo fence=\'true\'></mo></mrow><mspace width=\'2em\'/><mi>v</mi>',
 '<mrow><mo>{</mo><mi>a</mi><mo fence=\'true\'></mo></mrow><mspace width=\'2em\'/><mi>v</mi>',
-'<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo fence=\'true\'></mo></mrow><mspace width=\'2em\'/><mi>v</mi>']
+'<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo fence=\'true\'></mo></mrow><mspace width=\'2em\'/><mi>v</mi>',
+'<mo>{</mo><mo>}</mo>',
+'<mo>{</mo><mi>x</mi><mo>}</mo>',
+'<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>',
+'<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>',
+'<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>',
+'<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
+'<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
+'<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>']

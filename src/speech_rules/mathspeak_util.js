@@ -53,7 +53,7 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
     // We ignore Greek characters for now!
     var type = sre.Semantic.Type.NUMBER;
     var role = chr.match(/\W/) ?
-        sre.Semantic.Role.UNKNOWN :
+          sre.SemanticAttr.lookupMeaning(chr).role :
         sre.Semantic.Role.PROTECTED;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
                                  chr + '</' + type + '>', 'text/xml');
@@ -420,7 +420,18 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
   if (num === 2) {
     return plural ? 'halves' : 'half';
   }
-  var ordinal = sre.MathspeakUtil.numberToWords(num);
+  var ordinal = sre.MathspeakUtil.wordOrdinal(num);
+  return plural ? ordinal + 's' : ordinal;
+};
+
+
+/**
+ * Creates a word ordinal string from a number.
+ * @param {number} number The number to be converted.
+ * @return {string} The ordinal string.
+ */
+sre.MathspeakUtil.wordOrdinal = function(number) {
+  var ordinal = sre.MathspeakUtil.numberToWords(number);
   if (ordinal.match(/one$/)) {
     ordinal = ordinal.slice(0, -3) + 'first';
   } else if (ordinal.match(/two$/)) {
@@ -440,7 +451,7 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
   } else {
     ordinal = ordinal + 'th';
   }
-  return plural ? ordinal + 's' : ordinal;
+  return ordinal;
 };
 
 
@@ -527,14 +538,16 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
  * @param {!Node} node Fraction node to be translated.
+ * @param {string=} opt_sep Separator string.
  * @return {!string} The string representation if it is a valid vulgar fraction.
  */
-sre.MathspeakUtil.vulgarFraction = function(node) {
+sre.MathspeakUtil.vulgarFraction = function(node, opt_sep) {
+  var sep = (typeof opt_sep === 'undefined') ? '-' : opt_sep;
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible &&
       conversion.enumerator &&
       conversion.denominator) {
-    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + '-' +
+    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + sep +
         sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
         conversion.enumerator !== 1);
   }
@@ -546,15 +559,17 @@ sre.MathspeakUtil.vulgarFraction = function(node) {
  * Checks if a vulgar fraction is small enough to be convertible to string in
  * MathSpeak, i.e. enumerator in [1..9] and denominator in [1..99].
  * @param {!Node} node Fraction node to be tested.
+ * @param {number} enumer Enumerator maximum.
+ * @param {number} denom Denominator maximum.
  * @return {boolean} True if it is a valid, small enough fraction.
  */
-sre.MathspeakUtil.vulgarFractionSmall = function(node) {
+sre.MathspeakUtil.vulgarFractionSmall = function(node, enumer, denom) {
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible) {
     var enumerator = conversion.enumerator;
     var denominator = conversion.denominator;
-    return enumerator > 0 && enumerator < 10 &&
-        denominator > 0 && denominator < 100;
+    return enumerator > 0 && enumerator < enumer &&
+        denominator > 0 && denominator < denom;
   }
   return false;
 };
@@ -568,7 +583,7 @@ sre.MathspeakUtil.vulgarFractionSmall = function(node) {
  *     empty.
  */
 sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
-  return sre.MathspeakUtil.vulgarFractionSmall(node) ? [node] : [];
+  return sre.MathspeakUtil.vulgarFractionSmall(node, 10, 100) ? [node] : [];
 };
 
 
