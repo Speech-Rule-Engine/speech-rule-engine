@@ -22,6 +22,7 @@
 goog.provide('sre.AbstractRuleTest');
 
 goog.require('sre.AbstractExamples');
+goog.require('sre.DynamicCstr');
 
 
 
@@ -35,12 +36,17 @@ sre.AbstractRuleTest = function() {
   /**
    * @type {string}
    */
-  this.style = 'default';
+  this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
 
   /**
    * @type {string}
    */
-  this.domain = 'default';
+  this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+
+  /**
+   * @type {string}
+   */
+  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
   /**
    * @type {boolean}
@@ -53,6 +59,13 @@ sre.AbstractRuleTest = function() {
    * @type {Array.<string>}
    */
   this.rules = null;
+
+  /**
+   * Flag indicating if the actual output should be written to the HTML example
+   * file, rather than the expected output.
+   * @type {boolean}
+   */
+  this.actual = false;
 
 };
 goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
@@ -67,23 +80,37 @@ goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
  */
 sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
                                                           opt_style) {
-  opt_style = opt_style || this.style;
+  var style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  // TODO: Sort out the title properly!
-  this.appendExamples('<h2>MathSpeak English ' +
-                      sre.AbstractRuleTest.htmlCell_(
-      sre.AbstractRuleTest.styleMap_(opt_style)) +
-                      ' Style </h2>',
-                      sre.AbstractRuleTest.htmlCell_(mathMl) +
-                      sre.AbstractRuleTest.htmlCell_(answer)
-  );
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: opt_style,
-        rules: this.rules});
+      {semantics: this.semantics, domain: this.domain, style: style,
+         rules: this.rules, locale: this.locale});
   var result = sre.System.getInstance().toSpeech(mathMl);
-  this.assert.equal(result, answer);
+  this.appendExample_(mathMl, this.actual ? result : answer, style);
+  if (!this.actual) {
+    this.assert.equal(result, answer); 
+  }
+};
+
+
+/**
+ * Appends a single example to the HTML example output.
+ * @param {string} input The input expression.
+ * @param {string} output The expected output.
+ * @param {string} style The speech style.
+ * @private
+ */
+sre.AbstractRuleTest.prototype.appendExample_ = function(input, output, style) {
+  this.appendExamples('<h2>' + this.information + ' Locale: ' + this.locale +
+                      ', Style: ' +
+                      sre.AbstractRuleTest.htmlCell_(
+                        sre.AbstractRuleTest.styleMap_(style)) +
+                      '.</h2>',
+                      sre.AbstractRuleTest.htmlCell_(input) +
+                      sre.AbstractRuleTest.htmlCell_(output)
+                     );
 };
 
 

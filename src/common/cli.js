@@ -20,12 +20,12 @@
  */
 goog.provide('sre.Cli');
 
+goog.require('sre.Api');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
-
 
 
 /**
@@ -134,4 +134,6 @@ sre.Cli.prototype.commandLine = function() {
 };
 
 
-(new sre.Cli()).commandLine();
+if (process.env.SRE_TOP_PATH) {
+  (new sre.Cli()).commandLine();
+};

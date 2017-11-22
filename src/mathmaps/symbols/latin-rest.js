@@ -1,4 +1,4 @@
-[
+[{"locale": "en"},
   {
     "category": "Mn",
     "key": "0363",

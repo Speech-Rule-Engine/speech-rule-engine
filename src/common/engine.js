@@ -76,7 +76,7 @@ sre.Engine = function() {
    * Current domain.
    * @type {string}
    */
-  this.domain = 'default';
+  this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
 
   /**
    * Current style.
@@ -84,7 +84,12 @@ sre.Engine = function() {
    */
   this.style = 'short';
 
-  
+  /**
+   * Current locale.
+   * @type {string}
+   */
+  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+
   /**
    * Current walker mode.
    * @type {string}

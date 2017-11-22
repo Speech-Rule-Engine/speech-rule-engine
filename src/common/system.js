@@ -29,6 +29,7 @@ goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
+goog.require('sre.L10n');
 goog.require('sre.MathStore');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
@@ -50,7 +51,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '2.0.1';
+  this.version = '2.3.0-beta.0';
 
 };
 goog.addSingletonGetter(sre.System);
@@ -108,7 +109,8 @@ sre.System.prototype.setupEngine = function(feature) {
     engine[feat] = feature[feat] || engine[feat];
   };
   var binaryFeatures = ['strict', 'cache', 'semantics'];
-  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker'];
+  var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
+                        'locale'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
   binaryFeatures.forEach(setIf);
@@ -123,12 +125,17 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = engine.parser.parse(engine.domain + '.' + engine.style);
+  engine.dynamicCstr = engine.parser.parse(engine.locale + '.' +
+                                           engine.domain + '.' + engine.style);
   var comparator = engine.comparators[engine.domain];
   engine.comparator = comparator ? comparator() :
     new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
-      sre.DynamicProperties.create(['default'], ['short', 'default']));
+    sre.DynamicProperties.create(
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
+      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
+  sre.L10n.setLocale();
 };
 
 

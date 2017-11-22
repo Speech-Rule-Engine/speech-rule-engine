@@ -18,7 +18,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.NobleSamplesTest');
+goog.provide('sre.NobleEnglishTest');
 
 goog.require('sre.AbstractRuleTest');
 
@@ -28,13 +28,13 @@ goog.require('sre.AbstractRuleTest');
  * @constructor
  * @extends {sre.AbstractRuleTest}
  */
-sre.NobleSamplesTest = function() {
-  sre.NobleSamplesTest.base(this, 'constructor');
+sre.NobleEnglishTest = function() {
+  sre.NobleEnglishTest.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'Steve Noble\'s samples tests.';
+  this.information = 'Steve Noble\'s samples English tests.';
 
   /**
    * @override
@@ -51,15 +51,15 @@ sre.NobleSamplesTest = function() {
    */
   this.rules = ['MathspeakRules'];
 
-  this.setActive('NobleSamples');
+  this.setActive('NobleSamplesEnglish');
 };
-goog.inherits(sre.NobleSamplesTest, sre.AbstractRuleTest);
+goog.inherits(sre.NobleEnglishTest, sre.AbstractRuleTest);
 
 
 /**
  * Testing Sample 1
  */
-sre.NobleSamplesTest.prototype.testSample_1 = function() {
+sre.NobleEnglishTest.prototype.testSample_1 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>5</mn><mfrac>' +
       '<mn>1</mn>' +
@@ -83,7 +83,7 @@ sre.NobleSamplesTest.prototype.testSample_1 = function() {
 /**
  * Testing Sample 2
  */
-sre.NobleSamplesTest.prototype.testSample_2 = function() {
+sre.NobleEnglishTest.prototype.testSample_2 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>7</mn><mfrac>' +
       '<mn>3</mn>' +
@@ -113,7 +113,7 @@ sre.NobleSamplesTest.prototype.testSample_2 = function() {
 /**
  * Testing Sample 3
  */
-sre.NobleSamplesTest.prototype.testSample_3 = function() {
+sre.NobleEnglishTest.prototype.testSample_3 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>24.15</mn><mo>&#x2212;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -133,7 +133,7 @@ sre.NobleSamplesTest.prototype.testSample_3 = function() {
 /**
  * Testing Sample 4
  */
-sre.NobleSamplesTest.prototype.testSample_4 = function() {
+sre.NobleEnglishTest.prototype.testSample_4 = function() {
   var mml = '<mrow>' +
       '<mrow><mo>(</mo>' +
       '<mrow>' +
@@ -154,7 +154,7 @@ sre.NobleSamplesTest.prototype.testSample_4 = function() {
 /**
  * Testing Sample 5
  */
-sre.NobleSamplesTest.prototype.testSample_5 = function() {
+sre.NobleEnglishTest.prototype.testSample_5 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>12</mn><mo>&#x00F7;</mo><mn>3</mn><mo>=</mo>' +
       '<mo>&#x2212;</mo><mn>4</mn>' +
@@ -171,7 +171,7 @@ sre.NobleSamplesTest.prototype.testSample_5 = function() {
 /**
  * Testing Sample 6
  */
-sre.NobleSamplesTest.prototype.testSample_6 = function() {
+sre.NobleEnglishTest.prototype.testSample_6 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>12</mn><mo>&#x00F7;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -191,7 +191,7 @@ sre.NobleSamplesTest.prototype.testSample_6 = function() {
 /**
  * Testing Sample 7
  */
-sre.NobleSamplesTest.prototype.testSample_7 = function() {
+sre.NobleEnglishTest.prototype.testSample_7 = function() {
   var mml = '<mrow>' +
       '<mn>6</mn><mo>&#x00D7;</mo><mn>5</mn>' +
       '</mrow>';
@@ -204,7 +204,7 @@ sre.NobleSamplesTest.prototype.testSample_7 = function() {
 /**
  * Testing Sample 8
  */
-sre.NobleSamplesTest.prototype.testSample_8 = function() {
+sre.NobleEnglishTest.prototype.testSample_8 = function() {
   var mml = '<mrow>' +
       '<mn>6</mn><mo>&#x00D7;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -223,7 +223,7 @@ sre.NobleSamplesTest.prototype.testSample_8 = function() {
 /**
  * Testing Sample 9
  */
-sre.NobleSamplesTest.prototype.testSample_9 = function() {
+sre.NobleEnglishTest.prototype.testSample_9 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>6</mn><mo>&#x00D7;</mo><mn>5</mn>' +
       '</mrow>';
@@ -236,7 +236,7 @@ sre.NobleSamplesTest.prototype.testSample_9 = function() {
 /**
  * Testing Sample 10
  */
-sre.NobleSamplesTest.prototype.testSample_10 = function() {
+sre.NobleEnglishTest.prototype.testSample_10 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>6</mn><mo>&#x00D7;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -256,7 +256,7 @@ sre.NobleSamplesTest.prototype.testSample_10 = function() {
 /**
  * Testing Sample 11
  */
-sre.NobleSamplesTest.prototype.testSample_11 = function() {
+sre.NobleEnglishTest.prototype.testSample_11 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>8</mn><mo>&#x00D7;</mo><mn>7</mn>' +
       '</mrow>';
@@ -269,7 +269,7 @@ sre.NobleSamplesTest.prototype.testSample_11 = function() {
 /**
  * Testing Sample 12
  */
-sre.NobleSamplesTest.prototype.testSample_12 = function() {
+sre.NobleEnglishTest.prototype.testSample_12 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>8</mn><mo>&#x00D7;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -289,7 +289,7 @@ sre.NobleSamplesTest.prototype.testSample_12 = function() {
 /**
  * Testing Sample 13
  */
-sre.NobleSamplesTest.prototype.testSample_13 = function() {
+sre.NobleEnglishTest.prototype.testSample_13 = function() {
   var mml = '<mrow>' +
       '<mn>8</mn><mo>&#x00D7;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -308,7 +308,7 @@ sre.NobleSamplesTest.prototype.testSample_13 = function() {
 /**
  * Testing Sample 14
  */
-sre.NobleSamplesTest.prototype.testSample_14 = function() {
+sre.NobleEnglishTest.prototype.testSample_14 = function() {
   var mml = '<mrow><mn>8</mn><mo>&#x00D7;</mo><mn>7</mn>' +
       '</mrow>';
   this.executeRuleTest(mml, '8 times 7', 'default');
@@ -320,7 +320,7 @@ sre.NobleSamplesTest.prototype.testSample_14 = function() {
 /**
  * Testing Sample 15
  */
-sre.NobleSamplesTest.prototype.testSample_15 = function() {
+sre.NobleEnglishTest.prototype.testSample_15 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>1</mn><mo>=</mo><mi>30°</mi>' +
       '</mrow>';
@@ -333,7 +333,7 @@ sre.NobleSamplesTest.prototype.testSample_15 = function() {
 /**
  * Testing Sample 16
  */
-sre.NobleSamplesTest.prototype.testSample_16 = function() {
+sre.NobleEnglishTest.prototype.testSample_16 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>2</mn><mo>=</mo>' +
       '<mi>60°</mi>  </mrow>';
@@ -346,7 +346,7 @@ sre.NobleSamplesTest.prototype.testSample_16 = function() {
 /**
  * Testing Sample 17
  */
-sre.NobleSamplesTest.prototype.testSample_17 = function() {
+sre.NobleEnglishTest.prototype.testSample_17 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>1</mn><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mn>2</mn><mo>=</mo>' +
@@ -363,7 +363,7 @@ sre.NobleSamplesTest.prototype.testSample_17 = function() {
 /**
  * Testing Sample 18
  */
-sre.NobleSamplesTest.prototype.testSample_18 = function() {
+sre.NobleEnglishTest.prototype.testSample_18 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mi>M</mi><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mi>N</mi><mo>=</mo>' +
@@ -380,7 +380,7 @@ sre.NobleSamplesTest.prototype.testSample_18 = function() {
 /**
  * Testing Sample 19
  */
-sre.NobleSamplesTest.prototype.testSample_19 = function() {
+sre.NobleEnglishTest.prototype.testSample_19 = function() {
   var mml = '<mrow>' +
       '<mi>A</mi><mo>=</mo><mfrac>' +
       '<mn>1</mn>' +
@@ -397,7 +397,7 @@ sre.NobleSamplesTest.prototype.testSample_19 = function() {
 /**
  * Testing Sample 20
  */
-sre.NobleSamplesTest.prototype.testSample_20 = function() {
+sre.NobleEnglishTest.prototype.testSample_20 = function() {
   var mml = '<mrow>' +
       '<mfrac>' +
       '<mrow>' +
@@ -441,7 +441,7 @@ sre.NobleSamplesTest.prototype.testSample_20 = function() {
 /**
  * Testing Sample 21
  */
-sre.NobleSamplesTest.prototype.testSample_21 = function() {
+sre.NobleEnglishTest.prototype.testSample_21 = function() {
   var mml = '<mrow>' +
       '<msup>' +
       '<mrow>' +
@@ -459,7 +459,7 @@ sre.NobleSamplesTest.prototype.testSample_21 = function() {
 /**
  * Testing Sample 22
  */
-sre.NobleSamplesTest.prototype.testSample_22 = function() {
+sre.NobleEnglishTest.prototype.testSample_22 = function() {
   var mml = '<mrow>' +
       '<msup>' +
       '<mrow>' +
@@ -477,7 +477,7 @@ sre.NobleSamplesTest.prototype.testSample_22 = function() {
 /**
  * Testing Sample 23
  */
-sre.NobleSamplesTest.prototype.testSample_23 = function() {
+sre.NobleEnglishTest.prototype.testSample_23 = function() {
   var mml = '<mrow>' +
       '<mn>4</mn><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -495,7 +495,7 @@ sre.NobleSamplesTest.prototype.testSample_23 = function() {
 /**
  * Testing Sample 24
  */
-sre.NobleSamplesTest.prototype.testSample_24 = function() {
+sre.NobleEnglishTest.prototype.testSample_24 = function() {
   var mml = '<mrow>' +
       '<mn>36</mn><mo>+</mo><mn>4</mn><mi>y</mi><mo>&#x2212;</mo><mn>1</mn>' +
       '<msup>' +
@@ -520,7 +520,7 @@ sre.NobleSamplesTest.prototype.testSample_24 = function() {
 /**
  * Testing Sample 25
  */
-sre.NobleSamplesTest.prototype.testSample_25 = function() {
+sre.NobleEnglishTest.prototype.testSample_25 = function() {
   var mml = '<mrow>' +
       '<mrow><mo>(</mo>' +
       '<mrow>' +
@@ -541,7 +541,7 @@ sre.NobleSamplesTest.prototype.testSample_25 = function() {
 /**
  * Testing Sample 26
  */
-sre.NobleSamplesTest.prototype.testSample_26 = function() {
+sre.NobleEnglishTest.prototype.testSample_26 = function() {
   var mml = '<mrow>' +
       '<mover accent="true">' +
       '<mrow>' +
@@ -562,7 +562,7 @@ sre.NobleSamplesTest.prototype.testSample_26 = function() {
 /**
  * Testing Sample 27
  */
-sre.NobleSamplesTest.prototype.testSample_27 = function() {
+sre.NobleEnglishTest.prototype.testSample_27 = function() {
   var mml = '<mrow>' +
       '<mover accent="true">' +
       '<mrow>' +
@@ -582,7 +582,7 @@ sre.NobleSamplesTest.prototype.testSample_27 = function() {
 /**
  * Testing Sample 28
  */
-sre.NobleSamplesTest.prototype.testSample_28 = function() {
+sre.NobleEnglishTest.prototype.testSample_28 = function() {
   var mml = '<mrow>' +
       '<mover accent="true">' +
       '<mrow>' +
@@ -601,7 +601,7 @@ sre.NobleSamplesTest.prototype.testSample_28 = function() {
 /**
  * Testing Sample 29
  */
-sre.NobleSamplesTest.prototype.testSample_29 = function() {
+sre.NobleEnglishTest.prototype.testSample_29 = function() {
   var mml = '<mrow>' +
       '<mover accent="true">' +
       '<mrow>' +
@@ -631,7 +631,7 @@ sre.NobleSamplesTest.prototype.testSample_29 = function() {
 /**
  * Testing Sample 30
  */
-sre.NobleSamplesTest.prototype.testSample_30 = function() {
+sre.NobleEnglishTest.prototype.testSample_30 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
@@ -644,7 +644,7 @@ sre.NobleSamplesTest.prototype.testSample_30 = function() {
 /**
  * Testing Sample 31
  */
-sre.NobleSamplesTest.prototype.testSample_31 = function() {
+sre.NobleEnglishTest.prototype.testSample_31 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>D</mi>' +
       '</mrow>';
@@ -657,7 +657,7 @@ sre.NobleSamplesTest.prototype.testSample_31 = function() {
 /**
  * Testing Sample 32
  */
-sre.NobleSamplesTest.prototype.testSample_32 = function() {
+sre.NobleEnglishTest.prototype.testSample_32 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>D</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
@@ -670,7 +670,7 @@ sre.NobleSamplesTest.prototype.testSample_32 = function() {
 /**
  * Testing Sample 33
  */
-sre.NobleSamplesTest.prototype.testSample_33 = function() {
+sre.NobleEnglishTest.prototype.testSample_33 = function() {
   var mml = '<mrow>' +
       '<mi>x</mi>' +
       '<mo>=</mo>' +
@@ -717,7 +717,7 @@ sre.NobleSamplesTest.prototype.testSample_33 = function() {
 /**
  * Testing Sample 34
  */
-sre.NobleSamplesTest.prototype.testSample_34 = function() {
+sre.NobleEnglishTest.prototype.testSample_34 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow>' +
       '<mn>2</mn></mrow></msup><mo>+</mo><mn>8</mn><mi>x</mi><mo>+</mo>' +
       '<mn>16</mn></mrow>';
@@ -730,7 +730,7 @@ sre.NobleSamplesTest.prototype.testSample_34 = function() {
 /**
  * Testing Sample 35
  */
-sre.NobleSamplesTest.prototype.testSample_35 = function() {
+sre.NobleEnglishTest.prototype.testSample_35 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow>' +
       '<mn>3</mn></mrow></mfrac><mrow><mo>(</mo><msup><mrow><mn>3</mn>' +
       '</mrow><mrow><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow>';
@@ -746,7 +746,7 @@ sre.NobleSamplesTest.prototype.testSample_35 = function() {
 /**
  * Testing Sample 36
  */
-sre.NobleSamplesTest.prototype.testSample_36 = function() {
+sre.NobleEnglishTest.prototype.testSample_36 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>10</mn><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow>';
   this.executeRuleTest(mml, 'y equals 10 minus 2 x', 'default');
@@ -758,7 +758,7 @@ sre.NobleSamplesTest.prototype.testSample_36 = function() {
 /**
  * Testing Sample 37
  */
-sre.NobleSamplesTest.prototype.testSample_37 = function() {
+sre.NobleEnglishTest.prototype.testSample_37 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>2</mn><msup><mrow><mi>x</mi>' +
       '</mrow><mrow><mn>3</mn></mrow></msup><mo>+</mo><mn>5</mn></mrow>';
   this.executeRuleTest(mml, 'y equals 2 x cubed plus 5', 'default');
@@ -770,7 +770,7 @@ sre.NobleSamplesTest.prototype.testSample_37 = function() {
 /**
  * Testing Sample 38
  */
-sre.NobleSamplesTest.prototype.testSample_38 = function() {
+sre.NobleEnglishTest.prototype.testSample_38 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mo>(</mo><msup><mrow><mo/><mi>x' +
       '</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn>' +
       '<mrow><mo>)</mo><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2' +
@@ -789,7 +789,7 @@ sre.NobleSamplesTest.prototype.testSample_38 = function() {
 /**
  * Testing Sample 39
  */
-sre.NobleSamplesTest.prototype.testSample_39 = function() {
+sre.NobleEnglishTest.prototype.testSample_39 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mn>0.5</mn></mrow>' +
       '<mrow><mi>x</mi></mrow></msup></mrow>';
   this.executeRuleTest(mml, 'y equals 0.5 Superscript x', 'default');
@@ -801,7 +801,7 @@ sre.NobleSamplesTest.prototype.testSample_39 = function() {
 /**
  * Testing Sample 40
  */
-sre.NobleSamplesTest.prototype.testSample_40 = function() {
+sre.NobleEnglishTest.prototype.testSample_40 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>22</mn><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow>';
   this.executeRuleTest(mml, 'y equals 22 minus 2 x', 'default');
@@ -813,7 +813,7 @@ sre.NobleSamplesTest.prototype.testSample_40 = function() {
 /**
  * Testing Sample 41
  */
-sre.NobleSamplesTest.prototype.testSample_41 = function() {
+sre.NobleEnglishTest.prototype.testSample_41 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow>' +
       '<mi>x</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'y equals StartFraction 3 Over x EndFraction',
@@ -826,7 +826,7 @@ sre.NobleSamplesTest.prototype.testSample_41 = function() {
 /**
  * Testing Sample 42
  */
-sre.NobleSamplesTest.prototype.testSample_42 = function() {
+sre.NobleEnglishTest.prototype.testSample_42 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>4' +
       '</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo>)</mo>' +
       '</mrow>';
@@ -843,7 +843,7 @@ sre.NobleSamplesTest.prototype.testSample_42 = function() {
 /**
  * Testing Sample 43
  */
-sre.NobleSamplesTest.prototype.testSample_43 = function() {
+sre.NobleEnglishTest.prototype.testSample_43 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mo>(</mo><mn>4</mn><mi>x</mi><mo>−' +
       '</mo><mn>3</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '<mo>)</mo></mrow>';
@@ -860,7 +860,7 @@ sre.NobleSamplesTest.prototype.testSample_43 = function() {
 /**
  * Testing Sample 44
  */
-sre.NobleSamplesTest.prototype.testSample_44 = function() {
+sre.NobleEnglishTest.prototype.testSample_44 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>20</mn><mi>x</mi><mo>−</mo><mn>4' +
       '</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup>' +
       '</mrow>';
@@ -873,7 +873,7 @@ sre.NobleSamplesTest.prototype.testSample_44 = function() {
 /**
  * Testing Sample 45
  */
-sre.NobleSamplesTest.prototype.testSample_45 = function() {
+sre.NobleEnglishTest.prototype.testSample_45 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow>' +
       '<mn>2</mn></mrow></msup></mrow>';
   this.executeRuleTest(mml, 'y equals x squared', 'default');
@@ -885,7 +885,7 @@ sre.NobleSamplesTest.prototype.testSample_45 = function() {
 /**
  * Testing Sample 46
  */
-sre.NobleSamplesTest.prototype.testSample_46 = function() {
+sre.NobleEnglishTest.prototype.testSample_46 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mn>3</mn></mrow><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow>';
   this.executeRuleTest(mml, 'y equals 3 Superscript x minus 1', 'default');
@@ -897,7 +897,7 @@ sre.NobleSamplesTest.prototype.testSample_46 = function() {
 /**
  * Testing Sample 47
  */
-sre.NobleSamplesTest.prototype.testSample_47 = function() {
+sre.NobleEnglishTest.prototype.testSample_47 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>16</mn><mo>−</mo><mn>2</mn><mo>(' +
       '</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>)</mo></mrow>';
   this.executeRuleTest(mml, 'y equals 16 minus 2 left-parenthesis x plus 3' +
@@ -912,7 +912,7 @@ sre.NobleSamplesTest.prototype.testSample_47 = function() {
 /**
  * Testing Sample 48
  */
-sre.NobleSamplesTest.prototype.testSample_48 = function() {
+sre.NobleEnglishTest.prototype.testSample_48 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>4</mn><msup><mrow><mi>x</mi>' +
       '</mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mi>x</mi><mo>−' +
       '</mo><mn>3</mn></mrow>';
@@ -925,7 +925,7 @@ sre.NobleSamplesTest.prototype.testSample_48 = function() {
 /**
  * Testing Sample 49
  */
-sre.NobleSamplesTest.prototype.testSample_49 = function() {
+sre.NobleEnglishTest.prototype.testSample_49 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mfrac><mrow>' +
       '<mn>1</mn></mrow><mrow><mi>x</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'y equals x plus StartFraction 1 Over x' +
@@ -939,7 +939,7 @@ sre.NobleSamplesTest.prototype.testSample_49 = function() {
 /**
  * Testing Sample 50
  */
-sre.NobleSamplesTest.prototype.testSample_50 = function() {
+sre.NobleEnglishTest.prototype.testSample_50 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>4</mn><mi>x</mi><mo>(</mo><mn>5' +
       '</mn><mo>−</mo><mi>x</mi><mo>)</mo></mrow>';
   this.executeRuleTest(mml, 'y equals 4 x left-parenthesis 5 minus x' +
@@ -954,7 +954,7 @@ sre.NobleSamplesTest.prototype.testSample_50 = function() {
 /**
  * Testing Sample 51
  */
-sre.NobleSamplesTest.prototype.testSample_51 = function() {
+sre.NobleEnglishTest.prototype.testSample_51 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>2</mn><mo>(</mo><mi>x</mi><mo>−' +
       '</mo><mn>3</mn><mo>)</mo><mo>+</mo><mn>6</mn><mo>(</mo><mn>1</mn>' +
       '<mo>−</mo><mi>x</mi><mo>)</mo></mrow>';
@@ -971,7 +971,7 @@ sre.NobleSamplesTest.prototype.testSample_51 = function() {
 /**
  * Testing Sample 52
  */
-sre.NobleSamplesTest.prototype.testSample_52 = function() {
+sre.NobleEnglishTest.prototype.testSample_52 = function() {
   var mml = '<mrow>' +
       '<mn>0.25</mn><mo>&#x003E;</mo><mfrac>' +
       '<mn>5</mn>' +
@@ -989,7 +989,7 @@ sre.NobleSamplesTest.prototype.testSample_52 = function() {
 /**
  * Testing Sample 53
  */
-sre.NobleSamplesTest.prototype.testSample_53 = function() {
+sre.NobleEnglishTest.prototype.testSample_53 = function() {
   var mml = '<mrow>' +
       '<mn>32</mn><mo>&#x22C5;</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -1007,7 +1007,7 @@ sre.NobleSamplesTest.prototype.testSample_53 = function() {
 /**
  * Testing Sample 54
  */
-sre.NobleSamplesTest.prototype.testSample_54 = function() {
+sre.NobleEnglishTest.prototype.testSample_54 = function() {
   var mml = '<mrow><mrow><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow>' +
       '<mn>2</mn></mrow></mfrac><mo>×</mo><mfrac><mrow><mn>1</mn></mrow>' +
       '<mrow><mn>2</mn></mrow></mfrac><mo>×</mo><mi>π</mi><mo>×</mo><mn>2' +
@@ -1030,7 +1030,7 @@ sre.NobleSamplesTest.prototype.testSample_54 = function() {
 /**
  * Testing Sample 55
  */
-sre.NobleSamplesTest.prototype.testSample_55 = function() {
+sre.NobleEnglishTest.prototype.testSample_55 = function() {
   var mml = '<mrow><munder><mtext>liminf</mtext><mrow><mi>n</mi>' +
       '<mo>&#x2192;</mo><mi>&#x221E;</mi></mrow></munder><msub><mi>E</mi>' +
       '<mrow><mi>n</mi></mrow></msub><mo>=</mo><munder><mo>&#x22C3;</mo>' +
@@ -1084,7 +1084,7 @@ sre.NobleSamplesTest.prototype.testSample_55 = function() {
 /**
  * Testing Sample 56
  */
-sre.NobleSamplesTest.prototype.testSample_56 = function() {
+sre.NobleEnglishTest.prototype.testSample_56 = function() {
   var mml = '<mrow><mtable columnalign="left"><mtr><mtd columnalign="left">' +
       '<mrow><mtext>(i)</mtext></mrow></mtd><mtd columnalign="left">' +
       '<mrow><mspace width="0.2em" /><mi>&#x1D4AE;</mi><mo>&#x2208;</mo>' +
@@ -1141,7 +1141,7 @@ sre.NobleSamplesTest.prototype.testSample_56 = function() {
 /**
  * Testing Sample 57
  */
-sre.NobleSamplesTest.prototype.testSample_57 = function() {
+sre.NobleEnglishTest.prototype.testSample_57 = function() {
   var mml = '<mrow><mtable columnalign="left"><mtr><mtd columnalign="left">' +
       '<mrow /></mtd><mtd columnalign="left"><mrow /></mtd><mtd' +
       ' columnalign="left"><mrow><mo stretchy="false">(</mo><mi' +
@@ -1235,7 +1235,7 @@ sre.NobleSamplesTest.prototype.testSample_57 = function() {
 /**
  * Testing Sample 58
  */
-sre.NobleSamplesTest.prototype.testSample_58 = function() {
+sre.NobleEnglishTest.prototype.testSample_58 = function() {
   var mml = '<mrow><mi>P</mi><mo stretchy="false">{</mo><msub><mi>B</mi>' +
       '<mrow><mi>j</mi></mrow></msub><mi>|</mi><mi>A</mi><mo' +
       ' stretchy="false">}</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo' +
@@ -1286,7 +1286,7 @@ sre.NobleSamplesTest.prototype.testSample_58 = function() {
 /**
  * Testing Sample 59
  */
-sre.NobleSamplesTest.prototype.testSample_59 = function() {
+sre.NobleEnglishTest.prototype.testSample_59 = function() {
   var mml = '<mrow><msub><mi>&#x03BC;</mi><mrow><mn>1</mn></mrow></msub><mo' +
       ' stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=' +
       '</mo><msub><mo>&#x222B;</mo><mrow><mi>B</mi></mrow></msub><mi>f' +
@@ -1312,7 +1312,7 @@ sre.NobleSamplesTest.prototype.testSample_59 = function() {
 /**
  * Testing Sample 60
  */
-sre.NobleSamplesTest.prototype.testSample_60 = function() {
+sre.NobleEnglishTest.prototype.testSample_60 = function() {
   var mml = '<mrow><munder><mtext>lim</mtext><mrow><mi>n</mi><mo>&#x2192;' +
       '</mo><mi>&#x221E;</mi></mrow></munder><mi>E</mi><mo' +
       ' stretchy="false">{</mo><mo>&#x007C;</mo><msub><mi>X</mi><mrow>' +
@@ -1353,7 +1353,7 @@ sre.NobleSamplesTest.prototype.testSample_60 = function() {
 /**
  * Testing Sample 61
  */
-sre.NobleSamplesTest.prototype.testSample_61 = function() {
+sre.NobleEnglishTest.prototype.testSample_61 = function() {
   var mml = '<mrow><mtable columnalign="left"><mtr><mtd' +
       ' columnalign="left"><mrow><msub><mi>P</mi><mrow><mi>&#x03BC;' +
       '</mi><mo>,</mo>' +
@@ -1430,7 +1430,7 @@ sre.NobleSamplesTest.prototype.testSample_61 = function() {
 /**
  * Testing Sample 62
  */
-sre.NobleSamplesTest.prototype.testSample_62 = function() {
+sre.NobleEnglishTest.prototype.testSample_62 = function() {
   var mml = '<mrow><mi>L</mi><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd' +
       ' columnalign="center"><mrow><mn>1</mn></mrow></mtd><mtd' +
       ' columnalign="center"><mrow><mspace width="0.2em" /><mo>&#x2212;' +
@@ -1513,7 +1513,7 @@ sre.NobleSamplesTest.prototype.testSample_62 = function() {
 /**
  * Testing Sample 63
  */
-sre.NobleSamplesTest.prototype.testSample_63 = function() {
+sre.NobleEnglishTest.prototype.testSample_63 = function() {
   var mml = '<mrow><msqrt><mrow><mi>n</mi></mrow></msqrt><mo' +
       ' stretchy="false">[</mo><msub><mover><mrow><mi>Y</mi></mrow><mrow>' +
       '<mrow /><mo>&#x203E;</mo></mrow></mover><mrow><mi>n</mi></mrow>' +
@@ -1573,7 +1573,7 @@ sre.NobleSamplesTest.prototype.testSample_63 = function() {
 /**
  * Testing Sample 64
  */
-sre.NobleSamplesTest.prototype.testSample_64 = function() {
+sre.NobleEnglishTest.prototype.testSample_64 = function() {
   var mml = '<mrow><mtable columnalign="left"><mtr><mtd columnalign="left">' +
       '<mrow><mi>&#x03B3;</mi></mrow></mtd><mtd columnalign="left"><mrow>' +
       '<mo>=</mo><mi>P</mi><mo stretchy="false">{</mo><msub><mi>E</mi>' +
@@ -1654,7 +1654,7 @@ sre.NobleSamplesTest.prototype.testSample_64 = function() {
 /**
  * Testing Sample 65
  */
-sre.NobleSamplesTest.prototype.testSample_65 = function() {
+sre.NobleEnglishTest.prototype.testSample_65 = function() {
   var mml = '<mrow><msub><mrow><mi>S</mi></mrow><mrow><mi>i</mi></mrow>' +
       '</msub><mfenced open="[" close="]"><mrow><mtable><mtr><mtd><mi>t' +
       '</mi></mtd></mtr><mtr><mtd><mi>x</mi></mtd></mtr></mtable></mrow>' +
@@ -1704,7 +1704,7 @@ sre.NobleSamplesTest.prototype.testSample_65 = function() {
 /**
  * Testing Sample 66
  */
-sre.NobleSamplesTest.prototype.testSample_66 = function() {
+sre.NobleEnglishTest.prototype.testSample_66 = function() {
   var mml = '<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow>' +
       '</msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>&#x2212;' +
       '</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac>' +
@@ -1748,7 +1748,7 @@ sre.NobleSamplesTest.prototype.testSample_66 = function() {
 /**
  * Testing Sample 67
  */
-sre.NobleSamplesTest.prototype.testSample_67 = function() {
+sre.NobleEnglishTest.prototype.testSample_67 = function() {
   var mml = '<mrow><mi>C</mi><mo stretchy="false">(</mo><mn>0</mn><mo' +
       ' stretchy="false">)</mo><mo>&#x2212;</mo><mi>C</mi><mo' +
       ' stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo>' +
@@ -1770,7 +1770,7 @@ sre.NobleSamplesTest.prototype.testSample_67 = function() {
 /**
  * Testing Sample 68
  */
-sre.NobleSamplesTest.prototype.testSample_68 = function() {
+sre.NobleEnglishTest.prototype.testSample_68 = function() {
   var mml = '<mrow><mi>S</mi><mo stretchy="false">(</mo><mi>&#x03C9;</mi>' +
       '<mo stretchy="false">)</mo><mo>=</mo><munder><mrow><mi>lim</mi>' +
       '</mrow><mrow><mi>T</mi><mo>&#x2192;</mo><mi>&#x221E;</mi></mrow>' +
@@ -1814,7 +1814,7 @@ sre.NobleSamplesTest.prototype.testSample_68 = function() {
 /**
  * Testing Sample 69
  */
-sre.NobleSamplesTest.prototype.testSample_69 = function() {
+sre.NobleEnglishTest.prototype.testSample_69 = function() {
   var mml = '<mrow><msubsup><mrow><mo>&#x222B;</mo></mrow><mrow><mn>0</mn>' +
       '</mrow><mrow><mn>1</mn></mrow></msubsup><mspace width="-0.2em" />' +
       '<msubsup><mrow><mo>&#x222B;</mo></mrow><mrow><mn>0</mn></mrow>' +
@@ -1859,7 +1859,7 @@ sre.NobleSamplesTest.prototype.testSample_69 = function() {
 /**
  * Testing Sample 70
  */
-sre.NobleSamplesTest.prototype.testSample_70 = function() {
+sre.NobleEnglishTest.prototype.testSample_70 = function() {
   var mml = '<mrow><mi mathvariant="sans-serif">E</mi><mfenced open="("' +
       ' close=")"><mrow><munder><mrow><mo stretchy="true">&#x2211;</mo>' +
       '</mrow><mrow><mi>I</mi><mo>&#x2208;</mo><msub><mrow><mi>E</mi>' +
@@ -1916,7 +1916,7 @@ sre.NobleSamplesTest.prototype.testSample_70 = function() {
 /**
  * Testing Sample 71
  */
-sre.NobleSamplesTest.prototype.testSample_71 = function() {
+sre.NobleEnglishTest.prototype.testSample_71 = function() {
   var mml = '<mrow>' +
       '<mo stretchy="false">(</mo><msub>' +
       '<mi>x</mi>' +
@@ -1937,7 +1937,7 @@ sre.NobleSamplesTest.prototype.testSample_71 = function() {
 /**
  * Testing Sample 72
  */
-sre.NobleSamplesTest.prototype.testSample_72 = function() {
+sre.NobleEnglishTest.prototype.testSample_72 = function() {
   var mml = '<mrow>' +
       '<mo stretchy="false">(</mo><msub>' +
       '<mi>x</mi>' +
@@ -1958,7 +1958,7 @@ sre.NobleSamplesTest.prototype.testSample_72 = function() {
 /**
  * Testing Sample 73
  */
-sre.NobleSamplesTest.prototype.testSample_73 = function() {
+sre.NobleEnglishTest.prototype.testSample_73 = function() {
   var mml = '<mrow>' +
       '<mi>d</mi><mo>=</mo><msqrt>' +
       '<mrow>' +
@@ -2007,7 +2007,7 @@ sre.NobleSamplesTest.prototype.testSample_73 = function() {
 /**
  * Testing Sample 74
  */
-sre.NobleSamplesTest.prototype.testSample_74 = function() {
+sre.NobleEnglishTest.prototype.testSample_74 = function() {
   var mml = '<mi>&#x211D;</mi>';
   this.executeRuleTest(mml, 'double-struck upper R', 'default');
   this.executeRuleTest(mml, 'double-struck upper R', 'brief');
@@ -2018,7 +2018,7 @@ sre.NobleSamplesTest.prototype.testSample_74 = function() {
 /**
  * Testing Sample 75
  */
-sre.NobleSamplesTest.prototype.testSample_75 = function() {
+sre.NobleEnglishTest.prototype.testSample_75 = function() {
   var mml = '<mrow>' +
       '<mi>&#x211D;</mi><mo>=</mo><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -2038,7 +2038,7 @@ sre.NobleSamplesTest.prototype.testSample_75 = function() {
 /**
  * Testing Sample 76
  */
-sre.NobleSamplesTest.prototype.testSample_76 = function() {
+sre.NobleEnglishTest.prototype.testSample_76 = function() {
   var mml = '<mrow><mrow><mo>{</mo> <mrow>' +
       '<mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow> <mo>}</mo>' +
       '</mrow></mrow>';
@@ -2051,7 +2051,7 @@ sre.NobleSamplesTest.prototype.testSample_76 = function() {
 /**
  * Testing Sample 77
  */
-sre.NobleSamplesTest.prototype.testSample_77 = function() {
+sre.NobleEnglishTest.prototype.testSample_77 = function() {
   var mml = '<mrow>' +
       '<mn>1</mn><mo>&#x2208;</mo><mi>S</mi></mrow>';
   this.executeRuleTest(mml, '1 element-of upper S', 'default');
@@ -2063,7 +2063,7 @@ sre.NobleSamplesTest.prototype.testSample_77 = function() {
 /**
  * Testing Sample 78
  */
-sre.NobleSamplesTest.prototype.testSample_78 = function() {
+sre.NobleEnglishTest.prototype.testSample_78 = function() {
   var mml = '<mrow>' +
       '<mn>3</mn><mo>&#x2208;</mo><mi>S</mi></mrow>';
   this.executeRuleTest(mml, '3 element-of upper S', 'default');
@@ -2075,7 +2075,7 @@ sre.NobleSamplesTest.prototype.testSample_78 = function() {
 /**
  * Testing Sample 79
  */
-sre.NobleSamplesTest.prototype.testSample_79 = function() {
+sre.NobleEnglishTest.prototype.testSample_79 = function() {
   var mml = '<mrow>' +
       '<mn>4</mn><mo>&#x2209;</mo><mi>S</mi></mrow>';
   this.executeRuleTest(mml, '4 not-an-element-of upper S', 'default');
@@ -2087,7 +2087,7 @@ sre.NobleSamplesTest.prototype.testSample_79 = function() {
 /**
  * Testing Sample 80
  */
-sre.NobleSamplesTest.prototype.testSample_80 = function() {
+sre.NobleEnglishTest.prototype.testSample_80 = function() {
   var mml = '<mrow>' +
       '<mi>a</mi><mo>=</mo><msqrt>' +
       '<mrow>' +
@@ -2113,7 +2113,7 @@ sre.NobleSamplesTest.prototype.testSample_80 = function() {
 /**
  * Testing Sample 81
  */
-sre.NobleSamplesTest.prototype.testSample_81 = function() {
+sre.NobleEnglishTest.prototype.testSample_81 = function() {
   var mml = '<mrow>' +
       '<mi>a</mi><mo>=</mo><mfrac>' +
       '<mrow>' +
@@ -2160,7 +2160,7 @@ sre.NobleSamplesTest.prototype.testSample_81 = function() {
 /**
  * Testing Sample 82
  */
-sre.NobleSamplesTest.prototype.testSample_82 = function() {
+sre.NobleEnglishTest.prototype.testSample_82 = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo><mrow><mo>[</mo> <mrow>' +
       '<msup>' +
       '<mrow>' +
@@ -2219,7 +2219,7 @@ sre.NobleSamplesTest.prototype.testSample_82 = function() {
 /**
  * Testing Sample 83
  */
-sre.NobleSamplesTest.prototype.testSample_83 = function() {
+sre.NobleEnglishTest.prototype.testSample_83 = function() {
   var mml = '<mrow>' +
       '<mi>x</mi><mo>=</mo><mrow><mo>[</mo> <mrow>' +
       '<msup>' +
@@ -2257,7 +2257,7 @@ sre.NobleSamplesTest.prototype.testSample_83 = function() {
 /**
  * Testing Sample 84
  */
-sre.NobleSamplesTest.prototype.testSample_84 = function() {
+sre.NobleEnglishTest.prototype.testSample_84 = function() {
   var mml = '<mrow>' +
       '<mi>x</mi><mo>=</mo><mrow><mo>[</mo> <mrow>' +
       '<msup>' +
@@ -2281,7 +2281,7 @@ sre.NobleSamplesTest.prototype.testSample_84 = function() {
 /**
  * Testing Sample 85
  */
-sre.NobleSamplesTest.prototype.testSample_85 = function() {
+sre.NobleEnglishTest.prototype.testSample_85 = function() {
   var mml = '<mrow>' +
       '<mi>x</mi><mo>=</mo><msup>' +
       '<mrow>' +
@@ -2304,7 +2304,7 @@ sre.NobleSamplesTest.prototype.testSample_85 = function() {
 /**
  * Testing Sample 86
  */
-sre.NobleSamplesTest.prototype.testSample_86 = function() {
+sre.NobleEnglishTest.prototype.testSample_86 = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo><mi>a</mi><mo>+</mo><msup>' +
       '<mi>b</mi>' +
       '<mn>2</mn>' +
@@ -2319,7 +2319,7 @@ sre.NobleSamplesTest.prototype.testSample_86 = function() {
 /**
  * Testing Sample 87
  */
-sre.NobleSamplesTest.prototype.testSample_87 = function() {
+sre.NobleEnglishTest.prototype.testSample_87 = function() {
   var mml = '<mrow>' +
       '<mfrac>' +
       '<mrow>' +
@@ -2352,7 +2352,7 @@ sre.NobleSamplesTest.prototype.testSample_87 = function() {
 /**
  * Testing Sample 88
  */
-sre.NobleSamplesTest.prototype.testSample_88 = function() {
+sre.NobleEnglishTest.prototype.testSample_88 = function() {
   var mml = '<mrow>' +
       '<mn>2</mn><mrow><mo>(</mo>' +
       '<mrow>' +
@@ -2395,7 +2395,7 @@ sre.NobleSamplesTest.prototype.testSample_88 = function() {
 /**
  * Testing Sample 89
  */
-sre.NobleSamplesTest.prototype.testSample_89 = function() {
+sre.NobleEnglishTest.prototype.testSample_89 = function() {
   var mml = '<mrow><mi>cos</mi><mi>x</mi><mo>=</mo><mn>1</mn>' +
       '<mo>&#x2212;</mo><mfrac>' +
       '<mrow>' +
@@ -2435,7 +2435,7 @@ sre.NobleSamplesTest.prototype.testSample_89 = function() {
 /**
  * Testing Sample 90
  */
-sre.NobleSamplesTest.prototype.testSample_90 = function() {
+sre.NobleEnglishTest.prototype.testSample_90 = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo><mfrac>' +
       '<mrow>' +
       '<mo>&#x2212;</mo><mi>b</mi><mo>&#x00B1;</mo><msqrt>' +
@@ -2466,7 +2466,7 @@ sre.NobleSamplesTest.prototype.testSample_90 = function() {
 /**
  * Testing Sample 91
  */
-sre.NobleSamplesTest.prototype.testSample_91 = function() {
+sre.NobleEnglishTest.prototype.testSample_91 = function() {
   var mml = '<mrow><mi>x</mi><mo>+</mo><msup>' +
       '<mi>y</mi>' +
       '<mrow>' +
@@ -2490,7 +2490,7 @@ sre.NobleSamplesTest.prototype.testSample_91 = function() {
 /**
  * Testing Sample 92
  */
-sre.NobleSamplesTest.prototype.testSample_92 = function() {
+sre.NobleEnglishTest.prototype.testSample_92 = function() {
   var mml = '<mrow><munder>' +
       '<mrow>' +
       '<mi>lim</mi></mrow>' +
@@ -2516,7 +2516,7 @@ sre.NobleSamplesTest.prototype.testSample_92 = function() {
 /**
  * Testing Sample 93
  */
-sre.NobleSamplesTest.prototype.testSample_93 = function() {
+sre.NobleEnglishTest.prototype.testSample_93 = function() {
   var mml = '<mrow><mi>d</mi><mo>=</mo><msqrt>' +
       '<mrow>' +
       '<msup>' +
@@ -2564,7 +2564,7 @@ sre.NobleSamplesTest.prototype.testSample_93 = function() {
 /**
  * Testing Sample 94
  */
-sre.NobleSamplesTest.prototype.testSample_94 = function() {
+sre.NobleEnglishTest.prototype.testSample_94 = function() {
   var mml = '<mrow>' +
       '<msub>' +
       '<mi>F</mi>' +
@@ -2594,7 +2594,7 @@ sre.NobleSamplesTest.prototype.testSample_94 = function() {
 /**
  * Testing Sample 95
  */
-sre.NobleSamplesTest.prototype.testSample_95 = function() {
+sre.NobleEnglishTest.prototype.testSample_95 = function() {
   var mml = '<mrow>' +
       '<mi mathvariant="bold">Π</mi>' +
       '<mo>=</mo>' +
@@ -2804,7 +2804,7 @@ sre.NobleSamplesTest.prototype.testSample_95 = function() {
 /**
  * Testing Sample 96
  */
-sre.NobleSamplesTest.prototype.testSample_96 = function() {
+sre.NobleEnglishTest.prototype.testSample_96 = function() {
   var mml = '<mrow>' +
       '<msub>' +
       '<mi>s</mi>' +
@@ -2873,7 +2873,7 @@ sre.NobleSamplesTest.prototype.testSample_96 = function() {
 /**
  * Testing Sample 97
  */
-sre.NobleSamplesTest.prototype.testSample_97 = function() {
+sre.NobleEnglishTest.prototype.testSample_97 = function() {
   var mml = '<mrow>' +
       '<mi mathvariant="normal">Si</mi>' +
       '<msub><mi mathvariant="normal">O</mi>' +
@@ -2918,7 +2918,7 @@ sre.NobleSamplesTest.prototype.testSample_97 = function() {
 /**
  * Testing Sample 98
  */
-sre.NobleSamplesTest.prototype.testSample_98 = function() {
+sre.NobleEnglishTest.prototype.testSample_98 = function() {
   var mml = '<mrow>' +
       '<mfrac>' +
       '<mtext>d</mtext>' +
@@ -2985,7 +2985,7 @@ sre.NobleSamplesTest.prototype.testSample_98 = function() {
 /**
  * Testing Sample 99
  */
-sre.NobleSamplesTest.prototype.testSample_99 = function() {
+sre.NobleEnglishTest.prototype.testSample_99 = function() {
   var mml = '<mrow><msub>' +
       '<mtext>TCS</mtext>' +
       '<mtext>gas</mtext>' +
@@ -3044,7 +3044,7 @@ sre.NobleSamplesTest.prototype.testSample_99 = function() {
 /**
  * Testing Sample 100
  */
-sre.NobleSamplesTest.prototype.testSample_100 = function() {
+sre.NobleEnglishTest.prototype.testSample_100 = function() {
   var mml = '<mrow>' +
       '<msub>' +
       '<mi>B</mi>' +
@@ -3214,7 +3214,7 @@ sre.NobleSamplesTest.prototype.testSample_100 = function() {
 /**
  * Testing Sample 101
  */
-sre.NobleSamplesTest.prototype.testSample_101 = function() {
+sre.NobleEnglishTest.prototype.testSample_101 = function() {
   var mml = '<mrow>' +
       '<msubsup>' +
       '<mi>Q</mi>' +
@@ -3264,7 +3264,7 @@ sre.NobleSamplesTest.prototype.testSample_101 = function() {
 /**
  * Testing Sample 102
  */
-sre.NobleSamplesTest.prototype.testSample_102 = function() {
+sre.NobleEnglishTest.prototype.testSample_102 = function() {
   var mml = '<mrow><mtext>Δ</mtext>' +
       '<msub>' +
       '<mi>ϕ</mi>' +
@@ -3307,7 +3307,7 @@ sre.NobleSamplesTest.prototype.testSample_102 = function() {
 /**
  * Testing Sample 103
  */
-sre.NobleSamplesTest.prototype.testSample_103 = function() {
+sre.NobleEnglishTest.prototype.testSample_103 = function() {
   var mml = '<mrow><mi>f</mi>' +
       '<mo>=</mo>' +
       '<mn>1.013</mn>' +
@@ -3368,7 +3368,7 @@ sre.NobleSamplesTest.prototype.testSample_103 = function() {
 /**
  * Testing Sample 104
  */
-sre.NobleSamplesTest.prototype.testSample_104 = function() {
+sre.NobleEnglishTest.prototype.testSample_104 = function() {
   var mml = '<mrow><mrow>' +
       '<msub>' +
       '<mi>u</mi>' +
@@ -3456,7 +3456,7 @@ sre.NobleSamplesTest.prototype.testSample_104 = function() {
 /**
  * Testing Sample 105
  */
-sre.NobleSamplesTest.prototype.testSample_105 = function() {
+sre.NobleEnglishTest.prototype.testSample_105 = function() {
   var mml = '<mtable><mtr>' +
       '<mtd columnalign="left">' +
       '<mi>B</mi>' +
@@ -3614,7 +3614,7 @@ sre.NobleSamplesTest.prototype.testSample_105 = function() {
 /**
  * Testing Sample 106
  */
-sre.NobleSamplesTest.prototype.testSample_106 = function() {
+sre.NobleEnglishTest.prototype.testSample_106 = function() {
   var mml = '<mrow>' +
       '<mi mathvariant="normal">p</mi>' +
       '<mo>(</mo>' +
@@ -3656,7 +3656,7 @@ sre.NobleSamplesTest.prototype.testSample_106 = function() {
 /**
  * Testing Sample 107
  */
-sre.NobleSamplesTest.prototype.testSample_107 = function() {
+sre.NobleEnglishTest.prototype.testSample_107 = function() {
   var mml = '<mrow>' +
       '<mi>PMF</mi>' +
       '<mrow>' +
@@ -3691,7 +3691,7 @@ sre.NobleSamplesTest.prototype.testSample_107 = function() {
 /**
  * Testing Sample 108
  */
-sre.NobleSamplesTest.prototype.testSample_108 = function() {
+sre.NobleEnglishTest.prototype.testSample_108 = function() {
   var mml = '<mrow>' +
       '<mi>f</mi>' +
       '<mrow>' +
@@ -3737,7 +3737,7 @@ sre.NobleSamplesTest.prototype.testSample_108 = function() {
 /**
  * Testing Sample 109
  */
-sre.NobleSamplesTest.prototype.testSample_109 = function() {
+sre.NobleEnglishTest.prototype.testSample_109 = function() {
   var mml = '<mrow><mfrac>' +
       '<mrow>' +
       '<mi>d</mi>' +
@@ -3774,7 +3774,7 @@ sre.NobleSamplesTest.prototype.testSample_109 = function() {
 /**
  * Testing Sample 110
  */
-sre.NobleSamplesTest.prototype.testSample_110 = function() {
+sre.NobleEnglishTest.prototype.testSample_110 = function() {
   var mml = '<mrow><mi>s</mi>' +
       '<mo>/</mo>' +
       '<msqrt>' +

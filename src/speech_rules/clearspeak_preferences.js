@@ -111,8 +111,10 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
 sre.ClearspeakPreferences.comparator = function() {
   return new sre.ClearspeakPreferences.Comparator(
     sre.Engine.getInstance().dynamicCstr,
-    sre.DynamicProperties.create(['mathspeak', 'default'],
-                                 ['short', 'default']));
+    sre.DynamicProperties.create(
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+      ['mathspeak', 'default'],
+      ['short', 'default']));
 };
 
 
@@ -184,7 +186,8 @@ sre.ClearspeakPreferences.Comparator.prototype.compare = function(cstr1, cstr2) 
 sre.ClearspeakPreferences.Parser = function() {
   sre.ClearspeakPreferences.Parser.base(
     this, 'constructor',
-    [sre.DynamicCstr.Axis.DOMAIN, sre.DynamicCstr.Axis.STYLE]);
+    [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.DOMAIN,
+     sre.DynamicCstr.Axis.STYLE]);
 };
 goog.inherits(sre.ClearspeakPreferences.Parser, sre.DynamicCstr.Parser);
 
@@ -197,7 +200,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var style = initial.getValue(sre.DynamicCstr.Axis.STYLE);
   if (style === sre.DynamicCstr.DEFAULT_VALUE) {
     return new sre.ClearspeakPreferences(
-      {'domain': 'clearspeak', 'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+      {'locale': sre.Engine.getInstance().locale,
+       'domain': 'clearspeak', 'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
   var pairs = style.split(':');
   var preferences = {};
@@ -215,7 +219,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
     }
   }
   return new sre.ClearspeakPreferences(
-    {'domain': 'clearspeak', 'style': this.combine_(preferences)}, preferences);
+    {'locale': sre.Engine.getInstance().locale,
+     'domain': 'clearspeak', 'style': this.combine_(preferences)}, preferences);
 };
 
 
