@@ -52,6 +52,11 @@ sre.Engine = function() {
   this.evaluator = sre.Engine.defaultEvaluator;
 
   /**
+   * @type {!sre.DynamicCstr.Parser}
+   */
+  this.parser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+
+  /**
    * @type {!sre.DynamicCstr}
    */
   this.dynamicCstr = sre.DynamicCstr.defaultCstr();
@@ -62,7 +67,7 @@ sre.Engine = function() {
   this.comparator = null;
 
   /**
-   * All preferences that can be set.
+   * Maps domains to comparators.
    * @type {Object.<string, function():sre.DynamicCstr.Comparator>}
    */
   this.comparators = {};

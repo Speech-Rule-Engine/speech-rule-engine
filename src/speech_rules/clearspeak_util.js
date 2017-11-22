@@ -568,7 +568,6 @@ sre.ClearspeakUtil.contentIterator = function(nodes, context) {
       descrs.push(new sre.AuditoryDescription(
           {text: '', personality: {pause: 'short'}}));
     }
-    console.log(descrs);
     return contextDescr.concat(descrs);
   };
 };

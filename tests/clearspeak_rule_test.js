@@ -22,6 +22,7 @@
 goog.provide('sre.ClearspeakRuleTest');
 
 goog.require('sre.AbstractRuleTest');
+goog.require('sre.ClearspeakPreferences');
 
 
 
@@ -58,4 +59,5 @@ goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 sre.ClearspeakRuleTest.prototype.setUpTest = function() {
   sre.System.getInstance().setupEngine(
     {markup: sre.Engine.Markup.PUNCTUATION});
+  sre.Engine.getInstance().parser = new sre.ClearspeakPreferences.Parser();
 };

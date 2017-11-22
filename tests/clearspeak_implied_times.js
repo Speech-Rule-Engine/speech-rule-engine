@@ -325,8 +325,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes025 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes026
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimes026 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f times x, equals x squared times, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -403,8 +402,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes031 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes032
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimes032 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'Paren_SpeakNestingLevel';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2 times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -426,8 +424,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes033 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes034
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimes034 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'Paren_SpeakNestingLevel'; // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = '2 times, open bracket, 3 times, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -471,8 +468,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes037 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes037a
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimes037a = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'AbsoluteValue_AbsEnd';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
   var speech = 'the absolute value of x plus 1, end absolute value, times, the absolute value of y minus 1, end absolute value';
   this.executeRuleTest(mathml, speech, preference);
@@ -494,8 +490,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes038 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes0381
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimes0381 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'AbsoluteValue_AbsEnd';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>';
   var speech = 'the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absolute value, minus 1';
   this.executeRuleTest(mathml, speech, preference);
@@ -781,11 +776,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes063 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes064
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes064 = function() {
-  var preference = 'ImpliedTimes_ImpliedTimes_MoreImpliedTimesAnd';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes064 = function() {
+  var preference = 'ImpliedTimes_MoreImpliedTimesAnd:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times x, equals, x squared, times, open paren x plus 1, close paren';
+  var speech = 'f times x, equals x squared times, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -859,11 +853,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes069 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes070
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes070 = function() {
-  var preference = 'ImpliedTimes_MoreImpliedTimes';
-  preference = 'Paren_SpeakNestingLevel';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes070 = function() {
+  var preference = 'ImpliedTimes_MoreImpliedTimes:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren';
+  var speech = '2 times, open paren, 3 times, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -882,9 +875,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes070a = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes071
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes071 = function() {
-  var preference = 'ImpliedTimes_MoreImpliedTimes';
-  preference = 'Paren_SpeakNestingLevel';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes071 = function() {
+  var preference = 'ImpliedTimes_MoreImpliedTimes:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = '2 times, open bracket, 3 times, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -927,9 +919,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes074 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes074a
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes074a = function() {
-  var preference = 'ImpliedTimes_MoreImpliedTimes';
-  preference = 'AbsoluteValue_AbsEnd';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes074a = function() {
+  var preference = 'ImpliedTimes_MoreImpliedTimes:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
   var speech = 'the absolute value of x plus 1, end absolute value, times, the absolute value of y minus 1, end absolute value';
   this.executeRuleTest(mathml, speech, preference);
@@ -950,11 +941,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes075 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes076
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes076 = function() {
-  var preference = 'ImpliedTimes_MoreImpliedTimes';
-  preference = 'AbsoluteValue_AbsEnd';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes076 = function() {
+  var preference = 'ImpliedTimes_MoreImpliedTimes:AbsoluteValue_AbsEnd';
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absoluete value, minus 1';
+  var speech = 'the absolute value of x plus 1, end absolute value, times, the absolute value of y, end absolute value, minus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1228,22 +1218,21 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes100 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimes101
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimes101 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Functions_Auto';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Functions_Auto';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f of x, equals x squared, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
 
+// TODO: (Simons) Need to be able to specify excluded preferences.
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes102
  */
 sre.ClearspeakImpliedTimes.prototype.untestImpTimes102 = function() {
-  var preference = 'ImpliedTimes_ImpliedTimes_None';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'f, open paren, x, close paren, x, close paren equals x squared, open paren, x plus 1';
+  var speech = 'f, open paren, x, close paren, equals x squared, open paren, x plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1306,9 +1295,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes107 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes108
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes108 = function() {
-  var preference = 'ImpliedTimes_None';
-  preference = 'Paren_SpeakNestingLevel';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes108 = function() {
+  var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2, open paren, 3, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1329,9 +1317,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes109 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimes110
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimes110 = function() {
-  var preference = 'ImpliedTimes_ImpliedTimes_None';
-  preference = 'Paren_SpeakNestingLevel';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimes110 = function() {
+  var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = '2, open bracket, 3, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -1391,8 +1378,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimes114 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar001
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar001 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
   var speech = '2, open paren, 3, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1403,8 +1389,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar001 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar002
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar002 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo></mrow></mrow></math>';
   var speech = '2, open bracket, 3, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -1415,8 +1400,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar002 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar003
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar003 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
   var speech = '2 to the fourth power, open paren, 3, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1427,8 +1411,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar003 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar004
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar004 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2, open paren, 3 plus 4, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1439,8 +1422,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar004 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar005
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar005 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = '2, open bracket, 3 plus 4, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -1451,8 +1433,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar005 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar006
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar006 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
   var speech = 'open paren, 3, close paren, open paren, 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1463,8 +1444,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar006 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar007
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar007 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
   var speech = '2, open paren, 3 plus 4, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
@@ -1475,8 +1455,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar007 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar008
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar008 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'open paren, 2 plus 7, close paren, open paren, 3 minus 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1487,8 +1466,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar008 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar009
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar009 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = 'open bracket, 2 plus 7, close bracket, open bracket, 3 minus 6, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -1500,8 +1478,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar009 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar010
  */
 sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar010 = function() {
-  var preference = 'ImpliedTimes_None';
-  preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'x, open paren, y z, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1512,8 +1489,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar010 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar011
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar011 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'x, open paren, y plus z, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1524,8 +1500,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar011 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar012
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar012 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2, open paren, y plus 1, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1536,8 +1511,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar012 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar013
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar013 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
   var speech = 'open paren, 2 minus 1, close paren, x';
   this.executeRuleTest(mathml, speech, preference);
@@ -1548,8 +1522,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar013 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar014
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar014 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'p sub 1, open paren, 3 plus 7, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1560,8 +1533,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar014 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar015
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar015 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>';
   var speech = 'open paren, x plus y, close paren, to the negative 4 power, open paren, x minus y, close paren, to the negative 4 power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1572,8 +1544,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar015 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar016
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar016 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></msup></mrow></math>';
   var speech = '2 raised to the 4, open paren, x plus y, close paren, power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1592,13 +1563,12 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar017 = function() {
 };
 
 
+// TODO: (Simons) Need to be able to specify excluded preferences.
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar018
  */
 sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar018 = function() {
-  var preference = 'ImpliedTimes_None';
-  preference = 'Paren_Silent';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent:Functions_None';
   var mathml = '<math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'f, open paren, x, close paren, equals, x squared, open paren, x plus 1';
   this.executeRuleTest(mathml, speech, preference);
@@ -1621,8 +1591,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar019 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar020
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar020 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2 matrix. Row 1: 7, 4 Row 2: 0, 1';
   this.executeRuleTest(mathml, speech, preference);
@@ -1633,8 +1602,7 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar020 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar021
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar021 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2, open paren, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1644,9 +1612,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar021 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar022
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar022 = function() {
-  var preference = 'ImpliedTimes_None';
-  preference = 'Paren_SpeakNesstingLevel';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar022 = function() {
+  var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '2, open paren, 3, open second paren, open third paren, 4 plus 5, close third paren, plus 6, close second paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1657,8 +1624,7 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar022 = function() {
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar023
  */
 sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar023 = function() {
-  var preference = 'ImpliedTimes_None';
-  // preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = '2, open bracket, 3, open paren, open paren, 4 plus 5, close paren, plus 6, close paren, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -1668,9 +1634,8 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar023 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example ImpTimesSilPar024
  */
-sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar024 = function() {
-  var preference = 'ImpliedTimes_None';
-  preference = 'Paren_SpeakNestingLevel';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar024 = function() {
+  var preference = 'ImpliedTimes_None:Paren_SpeakNestingLevel';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
   var speech = '2, open bracket, 3, open paren, open second paren, 4 plus 5, close second paren, plus 6, close paren, close bracket';
   this.executeRuleTest(mathml, speech, preference);
@@ -1691,8 +1656,6 @@ sre.ClearspeakImpliedTimes.prototype.untestImpTimesSilPar024 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra001 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'A equals h of, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1703,8 +1666,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra001 = function() {
  * Testing ClearspeakImpliedTimes Example Extra002
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra002 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>A</mi><mo>=</mo><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'A equals, h times, open paren, the fraction with numerator, b sub 1, plus, b sub 2, and denominator 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1716,8 +1678,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra002 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra003 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>';
   var speech = 'a of 0, equals 0 times a equals 0';
   this.executeRuleTest(mathml, speech, preference);
@@ -1728,8 +1688,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra003 = function() {
  * Testing ClearspeakImpliedTimes Example Extra004
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra004 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>';
   var speech = 'a times 0, equals 0 times a equals 0';
   this.executeRuleTest(mathml, speech, preference);
@@ -1741,8 +1700,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra004 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra005 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   preference = 'Functions_None'; 
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>';
   var speech = 'a times negative 1, equals negative a';
@@ -1755,8 +1712,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra005 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra006 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)withExact Speech (space inserted between a and and exact speech “of” inserted there)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>';
   var speech = 'a of negative 1, equals negative a';
   this.executeRuleTest(mathml, speech, preference);
@@ -1769,8 +1724,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra006 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.untestExtra007 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>b</mi><mi>c</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>a</mi><mi>b</mi></mrow><mo>)</mo></mrow><mi>c</mi></mrow></math>';
   var speech = 'a times b c, equals, a b times c';
   this.executeRuleTest(mathml, speech, preference);
@@ -1783,8 +1736,6 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra007 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>';
   var speech = 'a times, open paren, 1 over a, close paren, equals, 1';
   this.executeRuleTest(mathml, speech, preference);
@@ -1796,8 +1747,6 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math style="background-color:#"> <semantics>  <mrow>   <mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo></mrow><mo>=</mo><mi>u</mi><mrow><mo>(</mo>    <mrow>     <mo>−</mo><mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow></mrow>   </semantics></math>';
   var speech = 'negative u of v, equals u of negative v, equals negative u v';
   this.executeRuleTest(mathml, speech, preference);
@@ -1809,8 +1758,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra010 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'B of, open paren, 2 comma 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1821,8 +1768,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra010 = function() {
  * Testing ClearspeakImpliedTimes Example Extra012
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra012 = function() {
-  var preference = 'ImpliedTimes_Auto';
-  preference = 'Functions_None';  // TODO (sorge): Sort out preferences!
+  var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'B times, open paren, 2 comma 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1835,8 +1781,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra012 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.untestExtra013 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared) withExact Speech(exact speech “point B” has been inserted for B)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'point B, open paren, 2 comma 6, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1848,8 +1792,6 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra013 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra014 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>p</mi><mrow><mo>(</mo><mi>w</mi><mo>)</mo></mrow></mrow></math>';
   var speech = 'p of w';
   this.executeRuleTest(mathml, speech, preference);
@@ -1861,8 +1803,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra014 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra015 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>4</mn></mrow></math>';
   var speech = 'x of t, equals 2 t, plus 4';
   this.executeRuleTest(mathml, speech, preference);
@@ -1874,8 +1814,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra015 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra016 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'k of x, equals, open paren, x plus 3, close paren, times, open paren, x minus 5, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1888,8 +1826,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra016 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.untestExtra017 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mn>3</mn><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mn>12</mn><mi>a</mi><mo>=</mo><mn>3</mn><mi>a</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>−</mo><mn>3</mn><mi>a</mi><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow></math>';
   var speech = '3 a squared minus 12 a, equals, 3 a, times a, minus 3 a, times 4';
   this.executeRuleTest(mathml, speech, preference);
@@ -1901,8 +1837,6 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra017 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra018 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>T</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>T</mi><mi>s</mi></msub><mo>+</mo><mrow><mo>(</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>−</mo><msub><mi>T</mi><mi>s</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>k</mi><mi>t</mi></mrow></msup></mrow></math>';
   var speech = 'T of t, equals, T sub s, plus, open paren, T sub 0, minus, T sub s, close paren, times e raised to the negative k t, power';
   this.executeRuleTest(mathml, speech, preference);
@@ -1914,8 +1848,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra018 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra019 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared)';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow></math>';
   var speech = 'V equals script l, w of 8';
   // w is considered a simple function.
@@ -1930,8 +1862,6 @@ sre.ClearspeakImpliedTimes.prototype.testExtra019 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.untestExtra020 = function() {
   var preference = 'ImpliedTimes_Auto';
-  // (All Preferences have been cleared) withExact Speech(exact speech “el” has been inserted for )';
-  // TODO (sorge): Sort out preferences!
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow></math>';
   var speech = 'V, equals, l w, times 8';
   this.executeRuleTest(mathml, speech, preference);

@@ -123,7 +123,7 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = engine.parser.parse(engine.domain + '.' + engine.style);
   var comparator = engine.comparators[engine.domain];
   engine.comparator = comparator ? comparator() :
     new sre.DynamicCstr.DefaultComparator(

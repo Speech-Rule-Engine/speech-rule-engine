@@ -115,8 +115,9 @@ sre.ClearspeakFunctions.prototype.testFunction006 = function() {
  * Testing ClearspeakFunctions Example Function007
  */
 sre.ClearspeakFunctions.prototype.testFunction007 = function() {
-  // var preference = 'Functions_Auto(Fraction Preference Over is also set)';  // TODO (sorge): Sort out preferences!
-  var preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  // TODO: This throws a test exception.
+  // var preference = 'Functions_Auto:Fraction_Over';
+  var preference = 'Fraction_Over';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -248,8 +249,9 @@ sre.ClearspeakFunctions.prototype.testFunction018 = function() {
  * Testing ClearspeakFunctions Example Function019
  */
 sre.ClearspeakFunctions.prototype.testFunction019 = function() {
-  var preference = 'Functions_Auto';
-  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  // TODO: This throws a test exception.
+  // var preference = 'Functions_Auto:Fraction_Over';
+  var preference = 'Fraction_Over';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -326,8 +328,9 @@ sre.ClearspeakFunctions.prototype.testFunction025 = function() {
  * Testing ClearspeakFunctions Example Function026
  */
 sre.ClearspeakFunctions.prototype.testFunction026 = function() {
-  var preference = 'Functions_Auto';
-  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  // TODO: This throws a test exception.
+  // var preference = 'Functions_Auto:Fraction_Over';
+  var preference = 'Fraction_Over';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h inverse of, open paren, h of, open paren, 1 over 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -459,8 +462,9 @@ sre.ClearspeakFunctions.prototype.testFunction037 = function() {
  * Testing ClearspeakFunctions Example Function038
  */
 sre.ClearspeakFunctions.prototype.testFunction038 = function() {
-  var preference = 'Functions_Auto';
-  preference = 'Fraction_FracOver';  // TODO (sorge): Sort out preferences!
+  // TODO: This throws a test exception.
+  // var preference = 'Functions_Auto:Fraction_FracOver';
+  var preference = 'Fraction_FracOver';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h of, h inverse of, open paren, the fraction 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1032,8 +1036,7 @@ sre.ClearspeakFunctions.prototype.testFunction089 = function() {
  * Testing ClearspeakFunctions Example Function090
  */
 sre.ClearspeakFunctions.prototype.untestFunction090 = function() {
-  var preference = 'Functions_None';
-  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  var preference = 'Functions_None:Fraction_Over';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h times, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1165,8 +1168,7 @@ sre.ClearspeakFunctions.prototype.testFunction101 = function() {
  * Testing ClearspeakFunctions Example Function102
  */
 sre.ClearspeakFunctions.prototype.untestFunction102 = function() {
-  var preference = 'Functions_None';
-  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  var preference = 'Functions_None:Fraction_Over';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h to the negative 1 power, times, open paren, 1 over 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1243,8 +1245,7 @@ sre.ClearspeakFunctions.prototype.testFunction108 = function() {
  * Testing ClearspeakFunctions Example Function109
  */
 sre.ClearspeakFunctions.prototype.untestFunction109 = function() {
-  var preference = 'Functions_None';
-  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  var preference = 'Functions_None:Fraction_Over';
   var mathml = '<math><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h to the negative 1 power, times, open paren, h times, open paren, 1 over 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);
@@ -1376,8 +1377,7 @@ sre.ClearspeakFunctions.prototype.testFunction120 = function() {
  * Testing ClearspeakFunctions Example Function121
  */
 sre.ClearspeakFunctions.prototype.untestFunction121 = function() {
-  var preference = 'Functions_None';
-  preference = 'Fraction_Over';  // TODO (sorge): Sort out preferences!
+  var preference = 'Functions_None:Fraction_Over';
   var mathml = '<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = 'h times, open paren, h to the negative 1 power, times, open paren, 1 over 2, close paren, close paren';
   this.executeRuleTest(mathml, speech, preference);

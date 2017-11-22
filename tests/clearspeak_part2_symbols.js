@@ -600,9 +600,8 @@ sre.ClearspeakPart2Symbols.prototype.testMembSym015 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example SetMemb001
  */
-sre.ClearspeakPart2Symbols.prototype.untestSetMemb001 = function() {
-  var preference = 'Sets_woall';
-  preference = 'SetMemberSymbol_Belongs';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakPart2Symbols.prototype.testSetMemb001 = function() {
+  var preference = 'Sets_woAll:SetMemberSymbol_Belongs';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of x belonging to the integers such that 2 is less than x is less than 7';
   this.executeRuleTest(mathml, speech, preference);
@@ -612,9 +611,8 @@ sre.ClearspeakPart2Symbols.prototype.untestSetMemb001 = function() {
 /**
  * Testing ClearspeakPart2Symbols Example SetMemb002
  */
-sre.ClearspeakPart2Symbols.prototype.untestSetMemb002 = function() {
-  var preference = 'Sets_woall';
-  preference = 'SetMemberSymbol_Member';  // TODO (sorge): Sort out preferences!
+sre.ClearspeakPart2Symbols.prototype.testSetMemb002 = function() {
+  var preference = 'Sets_woAll:SetMemberSymbol_Member';
   var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mi>x</mi><mo>></mo><mn>5</mn><mo>}</mo></mrow></math>';
   var speech = 'the set of x member of the integers such that x is greater than 5';
   this.executeRuleTest(mathml, speech, preference);

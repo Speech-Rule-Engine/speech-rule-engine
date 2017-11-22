@@ -518,8 +518,7 @@ sre.ClearspeakTrigometry.prototype.testTrig042 = function() {
  * Testing ClearspeakTrigometry Example Trig043
  */
 sre.ClearspeakTrigometry.prototype.testTrig043 = function() {
-  var preference = 'Trig_Auto';
-  preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
+  var preference = 'Trig_Auto:Roots_RootEnd';
   var mathml = '<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>8</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></math>';
   var speech = 'the sine of, open paren, negative, pi over 8, close paren, equals negative one half the square root of 2 minus the square root of 2, end root, end root';
   this.executeRuleTest(mathml, speech, preference);
@@ -530,8 +529,7 @@ sre.ClearspeakTrigometry.prototype.testTrig043 = function() {
  * Testing ClearspeakTrigometry Example Trig044
  */
 sre.ClearspeakTrigometry.prototype.testTrig044 = function() {
-  var preference = 'Trig_Auto';
-  preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
+  var preference = 'Trig_Auto:Roots_RootEnd';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></math>';
   var speech = 'the tangent of, 3 pi over 8, equals, the fraction with numerator the square root of, the square root of 2, end root, plus 1, end root, and denominator the square root of, the square root of 2, end root, minus 1, end root';
   this.executeRuleTest(mathml, speech, preference);
@@ -542,8 +540,7 @@ sre.ClearspeakTrigometry.prototype.testTrig044 = function() {
  * Testing ClearspeakTrigometry Example Trig045
  */
 sre.ClearspeakTrigometry.prototype.testTrig045 = function() {
-  var preference = 'Trig_Auto';
-  preference='Roots_RootEnd';  // TODO (sorge): Sort out preferences!
+  var preference = 'Trig_Auto:Roots_RootEnd';
   var mathml = '<math><mrow><mi>tan</mi><mfrac><mi>π</mi><mrow><mn>12</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow></msqrt></mrow></math>';
   var speech = 'the tangent of, pi over 12, equals one half the square root of 2 minus the square root of 3, end root, end root';
   this.executeRuleTest(mathml, speech, preference);

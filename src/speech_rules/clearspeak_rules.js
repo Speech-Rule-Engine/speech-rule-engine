@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2017 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,9 +19,8 @@
 
 goog.provide('sre.ClearspeakRules');
 
+goog.require('sre.ClearspeakPreferences');
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.DynamicCstr');
-goog.require('sre.DynamicProperties');
 goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
@@ -40,6 +39,9 @@ goog.require('sre.StoreUtil');
  */
 sre.ClearspeakRules = function() {
   sre.ClearspeakRules.base(this, 'constructor');
+
+  this.parser = new sre.ClearspeakPreferences.Parser();
+
 };
 goog.inherits(sre.ClearspeakRules, sre.MathStore);
 goog.addSingletonGetter(sre.ClearspeakRules);
@@ -86,36 +88,6 @@ sre.ClearspeakRules.addCustomString_ = goog.bind(
     sre.ClearspeakRules.mathStore.customStrings.add,
     sre.ClearspeakRules.mathStore.customStrings);
 
-/**
- * @type {sre.DynamicProperties}
- */
-sre.ClearspeakRules.PREFERENCES = new sre.DynamicProperties({
-  AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
-  Bar: ['Auto', 'Conjugate'],
-  Caps: ['Auto', 'SayCaps'],
-  CombinationPermutation: ['Auto', 'ChoosePermute'],
-  Ellipses: ['Auto', 'AndSoOn'],
-  Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
-  Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac', 'Ordinal', 'Over', 'OverEndFrac', 'Per'],
-  Functions: ['Auto', 'None'],
-  ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
-  Log: ['Auto', 'LnAsNaturalLog'],
-  Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum', 'SpeakColNum', 'Vector'],
-  MultiLineLabel: ['Auto', 'Case', 'Constraint', 'Equation', 'Line', 'Row', 'Step'],
-  MultiLineOverview: ['Auto', 'None'],
-  MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
-  MultsymbolDot: ['Auto', 'Dot'],
-  MultsymbolX: ['Auto', 'By', 'Cross'],
-  Paren: ['Auto', 'CoordPoint', 'Interval', 'Silent', 'Speak', 'SpeakNestingLevel'],
-  Prime: ['Auto', 'Angle', 'Length'],
-  Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
-  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
-  Sets: ['Auto', 'SilentBracket', 'woall', 'woAll'],
-  TriangleSymbol: ['Auto', 'Delta'],
-  Trig: ['Auto', 'ArcTrig', 'TrigInverse'],
-  VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
-});
-  
 
 goog.scope(function() {
 var defineRule = sre.ClearspeakRules.defineRule_;
@@ -129,19 +101,13 @@ var addCTXF = sre.ClearspeakRules.addContextFunction_;
 sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(sre.ClearspeakUtil.unitExpression());
-  sre.Engine.getInstance().allPreferences = sre.ClearspeakRules.PREFERENCES;
-  sre.Engine.getInstance().style = 'preferences';
+  // sre.Engine.getInstance().style = 'preferences';
 };
 
 
 sre.ClearspeakRules.addComparator_ = function() {
   sre.Engine.getInstance().comparators['clearspeak'] =
-    function() {
-      return new sre.DynamicCstr.DefaultComparator(
-        sre.Engine.getInstance().dynamicCstr,
-        sre.DynamicProperties.create(['mathspeak', 'default'],
-                                     ['short', 'default']));
-    };
+    sre.ClearspeakPreferences.comparator;
 };
            
 
@@ -1887,12 +1853,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
     'lines-summary', 'clearspeak.default',
     '[p] (pause:short); [t] count(children/*); [t] "lines";' +
       '  [n] . (grammar:layoutSummary)',
-    'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
+    'self::multiline', 'not(contains(@grammar, "layoutSummary"))', 'self::*'
   );
   defineRule(
     'lines-summary', 'clearspeak.MultiLineOverview_None',
     '[n] . (grammar:layoutSummary)',
-    'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
+    'self::multiline', 'not(contains(@grammar, "layoutSummary"))', 'self::*'
   );
   defineRuleAlias(
     'lines-summary', 'self::table', 'not(contains(@grammar, "layoutSummary"))'
@@ -1907,7 +1873,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
     'cases-summary', 'clearspeak.MultiLineOverview_None',
     '[n] . (grammar:layoutSummary)',
-    'self::cases', 'not(contains(@grammar, "layoutSummary"))'
+    'self::cases', 'not(contains(@grammar, "layoutSummary"))', 'self::*'
   );
 
   // defineRule(

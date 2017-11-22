@@ -525,6 +525,7 @@ Helper function for Emacs:
 **** Sum007, Sum008, + -> plus,  1 -> i
 **** Sum016, Sum017, Sum018,  spaceout dx
 **** SetMemb001, remove period.
+**** testSetMemb001, testSetMemb002: woall -> woAll
 
 *** Space out: Triangle001, Triangle002, Triangle003, Triangle004
 
@@ -680,6 +681,7 @@ Helper function for Emacs:
 
 **** ImpTimes066, missing times
 
+**** ImpTimes076: absoluete -> absolute
 **** ImpTimesSilPar003, ImpTimes079: change 4th and three
 
 **** ImpTimes097: missing "equals the square root of a b"
@@ -687,6 +689,10 @@ Helper function for Emacs:
 
 **** ImpTimes100: missing "3"
 
+
+**** ImpTimes102: paren in the test are incorrect. Duplication of x, close paren
+
+**** ImpTimesSilPar022: Nessting -> Nesting
 **** Reverse columns: Extra009
 
 **** Extra001, Extra002: Content of parentheses is wrong!
