@@ -101,7 +101,7 @@ sre.Tests.testList = [
   sre.WalkerTest
 ];
 sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
-sre.Tests.testList = sre.ClearspeakTest.testList;
+// sre.Tests.testList = sre.ClearspeakTest.testList;
 
 
 /**
