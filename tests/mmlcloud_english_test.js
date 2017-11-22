@@ -19,7 +19,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.MathmlCloudTest');
+goog.provide('sre.MmlcloudEnglishTest');
 
 goog.require('sre.AbstractRuleTest');
 
@@ -29,13 +29,13 @@ goog.require('sre.AbstractRuleTest');
  * @constructor
  * @extends {sre.AbstractRuleTest}
  */
-sre.MathmlCloudTest = function() {
-  sre.MathmlCloudTest.base(this, 'constructor');
+sre.MmlcloudEnglishTest = function() {
+  sre.MmlcloudEnglishTest.base(this, 'constructor');
 
   /**
    * @override
    */
-  this.information = 'Mathml Cloud tests.';
+  this.information = 'Mathml Cloud English tests.';
 
   /**
    * @override
@@ -52,16 +52,16 @@ sre.MathmlCloudTest = function() {
    */
   this.rules = ['MathspeakRules'];
 
-  this.setActive('MathmlCloud');
+  this.setActive('MathmlCloudEnglish');
 };
-goog.inherits(sre.MathmlCloudTest, sre.AbstractRuleTest);
+goog.inherits(sre.MmlcloudEnglishTest, sre.AbstractRuleTest);
 
 
 /**
  * Testing for correct treatment of special HTML entities: non-breaking spaces,
  * left and right angle bracket.
  */
-sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
+sre.MmlcloudEnglishTest.prototype.testHtmlEntities = function() {
   var mml = '<mo>&lt;</mo>';
   this.executeRuleTest(mml, 'less-than', 'default');
   mml = '<mo>&gt;</mo>';
@@ -80,7 +80,7 @@ sre.MathmlCloudTest.prototype.testHtmlEntities = function() {
 /**
  * Testing binomial coefficients made from fractions.
  */
-sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
+sre.MmlcloudEnglishTest.prototype.testBinomialFromFrac = function() {
   var mml = '<mfenced><mfrac linethickness="0pt"><mi>n</mi>' +
       '<mi>k</mi></mfrac></mfenced>';
   this.executeRuleTest(mml, 'StartBinomialOrMatrix n Choose k' +
@@ -111,7 +111,7 @@ sre.MathmlCloudTest.prototype.testBinomialFromFrac = function() {
 /**
  * Test unnecessary spaces.
  */
-sre.MathmlCloudTest.prototype.testUnnecessarySpaces = function() {
+sre.MmlcloudEnglishTest.prototype.testUnnecessarySpaces = function() {
   var mml = '<mn> 5 </mn>';
   this.executeRuleTest(mml, '5', 'default');
   mml = '<mn> &nbsp; 5 &nbsp; </mn>';
@@ -122,7 +122,7 @@ sre.MathmlCloudTest.prototype.testUnnecessarySpaces = function() {
 /**
  * Absolute values versus other netural fences.
  */
-sre.MathmlCloudTest.prototype.testAbsValueVsNeutral = function() {
+sre.MmlcloudEnglishTest.prototype.testAbsValueVsNeutral = function() {
   var mml = '<mo>|</mo><mi>a</mi><mo>|</mo>';
   this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'default');
   this.executeRuleTest(mml, 'StartAbsoluteValue a EndAbsoluteValue', 'brief');
@@ -144,7 +144,7 @@ sre.MathmlCloudTest.prototype.testAbsValueVsNeutral = function() {
 /**
  * Negative vulgar fraction.
  */
-sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
+sre.MmlcloudEnglishTest.prototype.testNegativeVulgarFraction = function() {
   var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
   this.executeRuleTest(mml, 'negative five-eighteenths', 'default');
   this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
@@ -164,7 +164,7 @@ sre.MathmlCloudTest.prototype.testNegativeVulgarFraction = function() {
 /**
  * Testing trivial things.
  */
-sre.MathmlCloudTest.prototype.testTrivialStuff = function() {
+sre.MmlcloudEnglishTest.prototype.testTrivialStuff = function() {
   var mml = '<mtext>a</mtext><mo>=</mo><mi>b</mi>';
   this.executeRuleTest(mml, 'a equals b', 'default');
   mml = '<mo>"</mo>';
@@ -179,7 +179,7 @@ sre.MathmlCloudTest.prototype.testTrivialStuff = function() {
 /**
  * Testing German fonts.
  */
-sre.MathmlCloudTest.prototype.testGermanFonts = function() {
+sre.MmlcloudEnglishTest.prototype.testGermanFonts = function() {
   var mml = '<mi mathvariant="fraktur">A</mi>';
   this.executeRuleTest(mml, 'German upper A', 'default');
   mml = '<mi mathvariant="bold-fraktur">A</mi>';
@@ -198,7 +198,7 @@ sre.MathmlCloudTest.prototype.testGermanFonts = function() {
 /**
  * Testing other fonts.
  */
-sre.MathmlCloudTest.prototype.testOtherFonts = function() {
+sre.MmlcloudEnglishTest.prototype.testOtherFonts = function() {
   this.executeRuleTest('<mi>m</mi>', 'm');
   this.executeRuleTest('<mi mathvariant="normal">m</mi>', 'normal m');
   this.executeRuleTest('<mi>mi</mi>', 'm i');
@@ -213,7 +213,7 @@ sre.MathmlCloudTest.prototype.testOtherFonts = function() {
 /**
  * Testing non-alpha identifier.
  */
-sre.MathmlCloudTest.prototype.testNonalphaIdentifier = function() {
+sre.MmlcloudEnglishTest.prototype.testNonalphaIdentifier = function() {
   var mml = '<mi>30°</mi>';
   this.executeRuleTest(mml, '30 degree', 'default');
   this.executeRuleTest(mml, '30 degree', 'brief');
@@ -224,7 +224,7 @@ sre.MathmlCloudTest.prototype.testNonalphaIdentifier = function() {
 /**
  * Testing Chemistry Upper.
  */
-sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
+sre.MmlcloudEnglishTest.prototype.testMixedIdentifier = function() {
   var mml = '<mrow><mi mathvariant="normal">Si</mi><msub>' +
       '<mi mathvariant="normal">O</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn>' +
       '<mi mathvariant="normal">H</mi><mi mathvariant="normal">F</mi>' +
@@ -255,7 +255,7 @@ sre.MathmlCloudTest.prototype.testMixedIdentifier = function() {
  * Testing Parenthesis with Superscript.
  * Simplified test case for expression 95.
  */
-sre.MathmlCloudTest.prototype.testParenSuper = function() {
+sre.MmlcloudEnglishTest.prototype.testParenSuper = function() {
   var mml = '<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>';
   this.executeRuleTest(mml, 'left-parenthesis a right-parenthesis squared',
                        'default');
@@ -268,7 +268,7 @@ sre.MathmlCloudTest.prototype.testParenSuper = function() {
  * Testing Parenthesis with convoluted operator.
  * Simplified test case for expression 98.
  */
-sre.MathmlCloudTest.prototype.testParenConvoluted = function() {
+sre.MmlcloudEnglishTest.prototype.testParenConvoluted = function() {
   var mml = '<mo>(</mo><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup>' +
           '<mo>/2)</mo>';
   this.executeRuleTest(mml, 'left-parenthesis minus x squared slash' +
@@ -284,7 +284,7 @@ sre.MathmlCloudTest.prototype.testParenConvoluted = function() {
  * Testing Superscript Baseline expression in relation-sequence
  * Simplified test case for expression 62.
  */
-sre.MathmlCloudTest.prototype.testSupBaseRelseq = function() {
+sre.MmlcloudEnglishTest.prototype.testSupBaseRelseq = function() {
   var mml = '<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow>' +
       '</msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo>' +
       '<mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac>' +
@@ -310,7 +310,7 @@ sre.MathmlCloudTest.prototype.testSupBaseRelseq = function() {
  * Testing Superscript Baseline expression in multi-relation.
  * Simplified test case similar to expression 62.
  */
-sre.MathmlCloudTest.prototype.testSupBaseMultirel = function() {
+sre.MmlcloudEnglishTest.prototype.testSupBaseMultirel = function() {
   var mml = '<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow>' +
       '</msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo>' +
       '<mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow>' +
@@ -336,7 +336,7 @@ sre.MathmlCloudTest.prototype.testSupBaseMultirel = function() {
  * Testing Subscript Baseline expression in relation-sequence
  * Simplified test case for expressions similar to 62.
  */
-sre.MathmlCloudTest.prototype.testSubBaseRelseq = function() {
+sre.MmlcloudEnglishTest.prototype.testSubBaseRelseq = function() {
   var mml = '<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo>' +
       '<mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac>' +
       '<mo>&#x2264;</mo><msub><mi>h</mi><mi>s</mi></msub>';
@@ -356,7 +356,7 @@ sre.MathmlCloudTest.prototype.testSubBaseRelseq = function() {
  * Testing Subscript Baseline expression in multi-relation
  * Simplified test case for expressions similar to 62.
  */
-sre.MathmlCloudTest.prototype.testSubBaseMultirel = function() {
+sre.MmlcloudEnglishTest.prototype.testSubBaseMultirel = function() {
   var mml = '<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo>' +
       '<mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac>' +
       '<mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>';
@@ -376,7 +376,7 @@ sre.MathmlCloudTest.prototype.testSubBaseMultirel = function() {
  * Testing SubSuperscript Baseline expression in relation-sequence
  * Simplified test case for expressions similar to 62.
  */
-sre.MathmlCloudTest.prototype.testSubSuperBaseRelseq = function() {
+sre.MmlcloudEnglishTest.prototype.testSubSuperBaseRelseq = function() {
   var mml = '<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>' +
       '<mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi>' +
       '</mrow></mfrac><mo>&#x2264;</mo><msubsup><mi>h</mi><mi>s</mi>' +
@@ -398,7 +398,7 @@ sre.MathmlCloudTest.prototype.testSubSuperBaseRelseq = function() {
  * Testing SubSuperscript Baseline expression in multi-relation
  * Simplified test case for expressions similar to 62.
  */
-sre.MathmlCloudTest.prototype.testSubSuperBaseMultirel = function() {
+sre.MmlcloudEnglishTest.prototype.testSubSuperBaseMultirel = function() {
   var mml = '<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>' +
       '<mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi>' +
       '</mrow></mfrac><mo>=</mo><msubsup><mi>h</mi><mi>s</mi>' +
@@ -420,7 +420,7 @@ sre.MathmlCloudTest.prototype.testSubSuperBaseMultirel = function() {
  * Testing Square and Cubes with text children.
  * Test case for expression 18 (adapted to include cubed).
  */
-sre.MathmlCloudTest.prototype.testSquareWithText = function() {
+sre.MmlcloudEnglishTest.prototype.testSquareWithText = function() {
   var mml = '<mrow><mfrac><mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
       '</mrow><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow>' +
       '</mfrac><mo>=</mo><mfrac><mrow><msup><mrow>' +
@@ -443,7 +443,7 @@ sre.MathmlCloudTest.prototype.testSquareWithText = function() {
  * Testing SubSuperscript Baseline expression in multi-relation
  * Simplified test case for expressions similar to 18.
  */
-sre.MathmlCloudTest.prototype.testFootnoteWithText = function() {
+sre.MmlcloudEnglishTest.prototype.testFootnoteWithText = function() {
   var mml = '<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
       '<mtext>&#x00A0;</mtext>' +
       '<msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext>' +
@@ -468,7 +468,7 @@ sre.MathmlCloudTest.prototype.testFootnoteWithText = function() {
  * Testing SubSuperscript Baseline expression in multi-relation
  * Simplified test case for expressions similar to 18.
  */
-sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
+sre.MmlcloudEnglishTest.prototype.testFootnoteWithSimpleText = function() {
   var mml = '<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext>' +
       '<mn>2</mn></msup>';
   this.executeRuleTest(mml, 'area of triangle Superscript 2', 'default');
@@ -480,7 +480,7 @@ sre.MathmlCloudTest.prototype.testFootnoteWithSimpleText = function() {
 /**
  * Tests multiline tables.
  */
-sre.MathmlCloudTest.prototype.testMultiline = function() {
+sre.MmlcloudEnglishTest.prototype.testMultiline = function() {
   this.executeRuleTest(
       '<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd>' +
       '</mtr></mtable>',
@@ -496,7 +496,7 @@ sre.MathmlCloudTest.prototype.testMultiline = function() {
 /**
  * Tests relation sequences with empty starts.
  */
-sre.MathmlCloudTest.prototype.testRelationsWithEmpty = function() {
+sre.MmlcloudEnglishTest.prototype.testRelationsWithEmpty = function() {
   this.executeRuleTest(
       '<mo>&#x2264;</mo><mn>2</mn>',
       'less-than-or-equal-to 2');
