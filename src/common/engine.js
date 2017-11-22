@@ -84,14 +84,6 @@ sre.Engine = function() {
    */
   this.style = 'short';
 
-
-  /**
-   * Current locale.
-   * @type {string}
-   */
-  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-
-
   /**
    * Current locale.
    * @type {string}
