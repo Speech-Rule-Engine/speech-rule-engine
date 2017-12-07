@@ -396,6 +396,17 @@ sre.SemanticNode.prototype.addMeaning_ = function(domain, meaning) {
 
 
 /**
+ * Retrieves the meaning annotations for a particular domain.
+ * @param {string} domain The domain.
+ * @return {Array.<string>} The meaning annotations.
+ */
+sre.SemanticNode.prototype.getMeaning = function(domain) {
+  var content = this.meaning[domain];
+  return content ? content : [];
+};
+
+
+/**
  * Checks if a node has a particular meaning.
  * @param {string} domain The domain.
  * @param {string} meaning The meaning.
