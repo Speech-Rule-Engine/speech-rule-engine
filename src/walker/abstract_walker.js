@@ -360,10 +360,11 @@ sre.AbstractWalker.prototype.depth_ = function() {
   var oldDepth = sre.Grammar.getInstance().getParameter('depth');
   sre.Grammar.getInstance().setParameter('depth', true);
   var primary = this.focus_.getDomPrimary();
-  var expand = (this.expandable(primary) && [sre.Messages.NAVIGATE.expandable]) ||
-      (this.collapsible(primary) && [sre.Messages.NAVIGATE.collapsible]) || [];
+  var expand = (this.expandable(primary) &&
+                [sre.Messages.NAVIGATE.EXPANDABLE]) ||
+      (this.collapsible(primary) && [sre.Messages.NAVIGATE.COLLAPSIBLE]) || [];
   var level = [sre.AuralRendering.getInstance().markup(
-      [new sre.AuditoryDescription({text: sre.Messages.NAVIGATE.Level +
+      [new sre.AuditoryDescription({text: sre.Messages.NAVIGATE.LEVEL +
                                     ' ' + this.getDepth(),
                                     personality: {}})])];
   var snodes = this.focus_.getSemanticNodes();

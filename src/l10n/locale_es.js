@@ -105,8 +105,8 @@ sre.Locale.es.FONT = {
 };
 
 
-sre.Locale.en.NAVIGATE = {
-  'collapsible': 'plegable',
-  'expandable': 'ampliable',
-  'Level': 'nivel'
+sre.Locale.es.NAVIGATE = {
+  COLLAPSIBLE: 'plegable',
+  EXPANDABLE: 'ampliable',
+  LEVEL: 'nivel'
 };

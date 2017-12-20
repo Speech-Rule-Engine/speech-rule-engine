@@ -90,7 +90,7 @@ sre.Messages.FONT = {
 
 
 sre.Messages.NAVIGATE = {
-  'collapsible': '',
-  'expandable': '',
-  'Level': ''
+  COLLAPSIBLE: '',
+  EXPANDABLE: '',
+  LEVEL: ''
 };
