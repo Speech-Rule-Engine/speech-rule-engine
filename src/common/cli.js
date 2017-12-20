@@ -51,6 +51,8 @@ sre.Cli.prototype.commandLine = function() {
   /** @type {!string} */
   commander.input = '';
   /** @type {!string} */
+  commander.locale = '';
+  /** @type {!string} */
   commander.log = '';
   /** @type {!string} */
   commander.output = '';
@@ -80,6 +82,7 @@ sre.Cli.prototype.commandLine = function() {
       option('').
       option('-d, --dom [name]', 'Domain or subject area [name].').
       option('-t, --style [name]', 'Speech style [name].').
+      option('-c, --locale [code]', 'Locale [code].').
       option('-s, --semantics', 'Switch OFF semantics interpretation.').
       option('-e, --enumerate', 'Enumerates available domains and styles.').
       option('').
@@ -109,6 +112,7 @@ sre.Cli.prototype.commandLine = function() {
         {
           'semantics': !commander.semantics,
           'domain': commander.dom,
+          'locale': commander.locale,
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,
           'markup': commander.markup
