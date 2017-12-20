@@ -21,6 +21,7 @@
 goog.provide('sre.SpeechRuleStores');
 
 goog.require('sre.AbstractionRules');
+goog.require('sre.AbstractionSpanish');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.EmacspeakRules');
@@ -44,6 +45,7 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'ClearspeakRules': sre.ClearspeakRules,
   'EmacspeakRules': sre.EmacspeakRules,
   'AbstractionRules': sre.AbstractionRules,
+  'AbstractionSpanish': sre.AbstractionSpanish,
   'PrefixRules': sre.PrefixRules,
   'PrefixSpanish': sre.PrefixSpanish
 };
