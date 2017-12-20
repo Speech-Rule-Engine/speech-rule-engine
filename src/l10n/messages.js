@@ -87,3 +87,10 @@ sre.Messages.FONT = {
   'sans-serif-bold-italic': '',
   'unknown': ''
 };
+
+
+sre.Messages.NAVIGATE = {
+  COLLAPSIBLE: '',
+  EXPANDABLE: '',
+  LEVEL: ''
+};

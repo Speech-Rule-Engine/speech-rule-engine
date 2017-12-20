@@ -9012,7 +9012,7 @@
   "key" : "2062",
   "mappings": {
     "mathspeak" : {
-     "default": " "
+     "default": "por"
    }
   }
  },
@@ -9020,7 +9020,7 @@
   "key" : "2063",
   "mappings": {
     "mathspeak" : {
-     "default": ""
+     "default": "coma"
    }
   }
  },
@@ -9028,7 +9028,7 @@
   "key" : "2064",
   "mappings": {
     "mathspeak" : {
-     "default": ""
+     "default": "más"
    }
   }
  },

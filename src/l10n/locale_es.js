@@ -103,3 +103,10 @@ sre.Locale.es.FONT = {
   'sans-serif-bold-italic': 'sans-serif negrita cursiva',
   'unknown': 'desconocida'
 };
+
+
+sre.Locale.es.NAVIGATE = {
+  COLLAPSIBLE: 'plegable',
+  EXPANDABLE: 'ampliable',
+  LEVEL: 'nivel'
+};

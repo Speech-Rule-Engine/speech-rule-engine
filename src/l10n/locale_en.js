@@ -87,3 +87,8 @@ sre.Locale.en.MS_ROOT_INDEX = { };
 
 sre.Locale.en.FONT = { };
 
+sre.Locale.en.NAVIGATE = {
+  COLLAPSIBLE: 'collapsible',
+  EXPANDABLE: 'expandable',
+  LEVEL: 'Level'
+};
