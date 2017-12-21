@@ -32,7 +32,7 @@ sre.Locale.es.MS = {
   FRAC_S: 'frac',
   END: 'finalizar ',
   FRAC_OVER: 'entre ', // Could be problematic with space separators. Might need
-                      // to trim.
+  // to trim.
   TWICE: '',
   NEST_FRAC: '',
   ENDFRAC: '',
@@ -63,7 +63,7 @@ sre.Locale.es.MS_FUNC = {
   COMBINE_ROOT_INDEX: function(postfix, index) {
     return (postfix === sre.Locale.es.MS.ROOTINDEX ||
             postfix === sre.Locale.es.MS.INDEX) ?
-      postfix : postfix + ' ' + index;}
+        postfix : postfix + ' ' + index;}
 };
 
 

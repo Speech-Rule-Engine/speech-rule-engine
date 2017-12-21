@@ -49,7 +49,7 @@ sre.MathspeakEmbellishSpanishTest = function() {
    * @override
    */
   this.locale = 'es';
-  
+
   /**
    * @override
    */

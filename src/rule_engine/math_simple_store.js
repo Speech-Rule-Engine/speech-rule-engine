@@ -124,7 +124,7 @@ sre.MathCompoundStore = function() {
    * @type {string}
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-  
+
 };
 goog.addSingletonGetter(sre.MathCompoundStore);
 

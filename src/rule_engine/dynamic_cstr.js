@@ -298,14 +298,13 @@ sre.DynamicCstr.DEFAULT_VALUE = 'default';
 sre.DynamicCstr.DEFAULT_VALUES = {};
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE] = 'en';
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] =
-  sre.DynamicCstr.DEFAULT_VALUE;
+    sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
-  sre.DynamicCstr.DEFAULT_VALUE;
+    sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
-  sre.DynamicCstr.DEFAULT_VALUE;
+    sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
-  sre.DynamicCstr.DEFAULT_VALUE;
-
+    sre.DynamicCstr.DEFAULT_VALUE;
 
 
 
@@ -540,8 +539,8 @@ sre.DynamicCstr.create = function(var_args) {
  */
 sre.DynamicCstr.defaultCstr = function() {
   return sre.DynamicCstr.create.apply(
-    null,
-    sre.DynamicCstr.DEFAULT_ORDER.map(
+      null,
+      sre.DynamicCstr.DEFAULT_ORDER.map(
       function(x) {return sre.DynamicCstr.DEFAULT_VALUES[x];}));
 };
 

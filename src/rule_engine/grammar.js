@@ -331,8 +331,8 @@ sre.Grammar.correctFont_ = function(text, correction) {
     return text;
   }
   // TODO: Combine with localFont.
-  correction = sre.Locale[sre.Engine.getInstance().locale].FONT[correction]
-    || correction;
+  correction = sre.Locale[sre.Engine.getInstance().locale].FONT[correction] ||
+      correction;
   var correctionComp = correction.split(/ |-/);
   var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
   return text.replace(regExp, '');

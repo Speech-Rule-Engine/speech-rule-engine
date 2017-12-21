@@ -154,14 +154,14 @@ sre.MathspeakSpanishUtil.unitMultipliers = function(nodes, context) {
     var descr = sre.AuditoryDescription.create({
       text: (sre.MathspeakSpanishUtil.rightMostUnit(children[counter]) &&
              sre.MathspeakSpanishUtil.leftMostUnit(children[counter + 1])) ?
-        'por' : ''}, {});
+          'por' : ''}, {});
     counter++;
     return [descr];
   };
 };
 
 sre.MathspeakSpanishUtil.isUnit = function(node) {
-  return ;
+  return;
 };
 
 
@@ -178,7 +178,7 @@ sre.MathspeakSpanishUtil.rightMostUnit = function(node) {
     var tag = node.tagName;
     var children = sre.XpathUtil.evalXPath('children/*', node);
     node = (sre.MathspeakSpanishUtil.SCRIPT_ELEMENTS.indexOf(tag) !== -1) ?
-      children[0] : children[children.length - 1];
+        children[0] : children[children.length - 1];
   }
   return false;
 };

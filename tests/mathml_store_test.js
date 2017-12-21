@@ -40,15 +40,15 @@ sre.MathmlStoreTest = function() {
   this.information = 'Mathml store tests.';
 
   this.cstr =
-    new sre.DynamicCstr({locale: 'en', domain: 'default', style: 'default'});
+      new sre.DynamicCstr({locale: 'en', domain: 'default', style: 'default'});
 
-  sre.Engine.getInstance().comparator = 
-    new sre.DynamicCstr.DefaultComparator(
+  sre.Engine.getInstance().comparator =
+      new sre.DynamicCstr.DefaultComparator(
       this.cstr,
       sre.DynamicProperties.create(
-        [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
-        [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
-        [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
 };
 goog.inherits(sre.MathmlStoreTest, sre.AbstractTest);
 

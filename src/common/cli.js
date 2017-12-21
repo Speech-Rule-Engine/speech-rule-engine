@@ -28,6 +28,7 @@ goog.require('sre.System');
 goog.require('sre.SystemExternal');
 
 
+
 /**
  * @constructor
  */
@@ -140,4 +141,4 @@ sre.Cli.prototype.commandLine = function() {
 
 if (process.env.SRE_TOP_PATH) {
   (new sre.Cli()).commandLine();
-};
+}

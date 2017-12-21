@@ -365,8 +365,8 @@ sre.AbstractWalker.prototype.depth_ = function() {
       (this.collapsible(primary) && [sre.Messages.NAVIGATE.COLLAPSIBLE]) || [];
   var level = [sre.AuralRendering.getInstance().markup(
       [new sre.AuditoryDescription({text: sre.Messages.NAVIGATE.LEVEL +
-                                    ' ' + this.getDepth(),
-                                    personality: {}})])];
+         ' ' + this.getDepth(),
+        personality: {}})])];
   var snodes = this.focus_.getSemanticNodes();
   var prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (prefix) {

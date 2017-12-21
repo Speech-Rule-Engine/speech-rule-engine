@@ -29,6 +29,7 @@ goog.require('sre.XpathUtil');
 
 var msg = sre.Messages;
 
+
 /**
  * String function to separate text into single characters by adding
  * intermittent spaces.
@@ -122,6 +123,7 @@ sre.MathspeakUtil.resetNestingDepth = function(node) {
   sre.MathspeakUtil.nestingDepth = {};
   return [node];
 };
+
 
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
@@ -229,8 +231,8 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
  */
 sre.MathspeakUtil.fractionNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-    'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
-    msg.MS_FUNC.FRAC_NEST_DEPTH);
+      'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
+      msg.MS_FUNC.FRAC_NEST_DEPTH);
 };
 
 
@@ -661,7 +663,7 @@ sre.MathspeakUtil.baselineVerbose = function(node) {
     return msg.MS.BASELINE;
   }
   return baseline.replace(new RegExp(msg.MS.SUB + '$'), msg.MS.SUBSCRIPT).
-    replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
+      replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
 };
 
 
@@ -948,5 +950,5 @@ sre.MathspeakUtil.localFont = function(font) {
 
 
 sre.Grammar.getInstance().setCorrection(
-  'localFont', sre.MathspeakUtil.localFont
+    'localFont', sre.MathspeakUtil.localFont
 );

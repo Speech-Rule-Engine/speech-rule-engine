@@ -51,7 +51,7 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
 sre.ApiTest.prototype.setUpTest = function() {
   this.system.setupEngine(
       {semantics: true, locale: 'en', domain: 'mathspeak', style: 'default',
-       speech: sre.Engine.Speech.NONE});
+        speech: sre.Engine.Speech.NONE});
 };
 
 

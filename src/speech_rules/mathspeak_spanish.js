@@ -51,6 +51,7 @@ sre.MathspeakSpanish.prototype.evaluateDefault = function(node) {
 
 sre.MathspeakSpanish.SPANISH_REGEXP = 'a-zA-ZáéíóúñÁÉÍÓÚÑ';
 
+
 /**
  * @type {sre.MathStore}
  */
@@ -1325,7 +1326,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
 
-  
+
   // DIAGRAM: For testing.
   // defineRule(
   //   'repeat-initial', 'mathspeak.default',
@@ -1336,8 +1337,10 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
 };
 
-  // TODO (sorge): Adapt by language. Get this from MathspeakRules or a general
-  // utility file. (TextHelp)
+// TODO (sorge): Adapt by language. Get this from MathspeakRules or a general
+
+
+// utility file. (TextHelp)
 /**
  * Component strings for tensor speech rules.
  * @enum {string}

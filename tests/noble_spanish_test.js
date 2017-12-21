@@ -50,7 +50,7 @@ sre.NobleSpanishTest = function() {
    * @override
    */
   this.locale = 'es';
-  
+
   /**
    * @override
    */
@@ -107,7 +107,6 @@ sre.NobleSpanishTest.prototype.testSample_2 = function() {
 };
 
 
-
 /**
  * Testing Sample 3
  */
@@ -123,7 +122,6 @@ sre.NobleSpanishTest.prototype.testSample_3 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -144,7 +142,6 @@ sre.NobleSpanishTest.prototype.testSample_4 = function() {
 };
 
 
-
 /**
  * Testing Sample 5
  */
@@ -157,7 +154,6 @@ sre.NobleSpanishTest.prototype.testSample_5 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -177,7 +173,6 @@ sre.NobleSpanishTest.prototype.testSample_6 = function() {
 };
 
 
-
 /**
  * Testing Sample 7
  */
@@ -189,7 +184,6 @@ sre.NobleSpanishTest.prototype.testSample_7 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -209,7 +203,6 @@ sre.NobleSpanishTest.prototype.testSample_8 = function() {
 };
 
 
-
 /**
  * Testing Sample 9
  */
@@ -221,7 +214,6 @@ sre.NobleSpanishTest.prototype.testSample_9 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -241,7 +233,6 @@ sre.NobleSpanishTest.prototype.testSample_10 = function() {
 };
 
 
-
 /**
  * Testing Sample 11
  */
@@ -253,7 +244,6 @@ sre.NobleSpanishTest.prototype.testSample_11 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -273,7 +263,6 @@ sre.NobleSpanishTest.prototype.testSample_12 = function() {
 };
 
 
-
 /**
  * Testing Sample 13
  */
@@ -291,7 +280,6 @@ sre.NobleSpanishTest.prototype.testSample_13 = function() {
 };
 
 
-
 /**
  * Testing Sample 14
  */
@@ -302,7 +290,6 @@ sre.NobleSpanishTest.prototype.testSample_14 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -318,7 +305,6 @@ sre.NobleSpanishTest.prototype.testSample_15 = function() {
 };
 
 
-
 /**
  * Testing Sample 16
  */
@@ -330,7 +316,6 @@ sre.NobleSpanishTest.prototype.testSample_16 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -347,7 +332,6 @@ sre.NobleSpanishTest.prototype.testSample_17 = function() {
 };
 
 
-
 /**
  * Testing Sample 18
  */
@@ -360,7 +344,6 @@ sre.NobleSpanishTest.prototype.testSample_18 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -378,7 +361,6 @@ sre.NobleSpanishTest.prototype.testSample_19 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -419,7 +401,6 @@ sre.NobleSpanishTest.prototype.testSample_20 = function() {
 };
 
 
-
 /**
  * Testing Sample 21
  */
@@ -436,7 +417,6 @@ sre.NobleSpanishTest.prototype.testSample_21 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -457,7 +437,6 @@ sre.NobleSpanishTest.prototype.testSample_22 = function() {
 };
 
 
-
 /**
  * Testing Sample 23
  */
@@ -473,7 +452,6 @@ sre.NobleSpanishTest.prototype.testSample_23 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -498,7 +476,6 @@ sre.NobleSpanishTest.prototype.testSample_24 = function() {
 };
 
 
-
 /**
  * Testing Sample 25
  */
@@ -515,7 +492,6 @@ sre.NobleSpanishTest.prototype.testSample_25 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -536,7 +512,6 @@ sre.NobleSpanishTest.prototype.testSample_26 = function() {
 };
 
 
-
 /**
  * Testing Sample 27
  */
@@ -555,7 +530,6 @@ sre.NobleSpanishTest.prototype.testSample_27 = function() {
 };
 
 
-
 /**
  * Testing Sample 28
  */
@@ -572,7 +546,6 @@ sre.NobleSpanishTest.prototype.testSample_28 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -599,7 +572,6 @@ sre.NobleSpanishTest.prototype.testSample_29 = function() {
 };
 
 
-
 /**
  * Testing Sample 30
  */
@@ -611,7 +583,6 @@ sre.NobleSpanishTest.prototype.testSample_30 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -627,7 +598,6 @@ sre.NobleSpanishTest.prototype.testSample_31 = function() {
 };
 
 
-
 /**
  * Testing Sample 32
  */
@@ -639,7 +609,6 @@ sre.NobleSpanishTest.prototype.testSample_32 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -683,7 +652,6 @@ sre.NobleSpanishTest.prototype.testSample_33 = function() {
 };
 
 
-
 /**
  * Testing Sample 34
  */
@@ -695,7 +663,6 @@ sre.NobleSpanishTest.prototype.testSample_34 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -711,7 +678,6 @@ sre.NobleSpanishTest.prototype.testSample_35 = function() {
 };
 
 
-
 /**
  * Testing Sample 36
  */
@@ -724,7 +690,6 @@ sre.NobleSpanishTest.prototype.testSample_36 = function() {
 };
 
 
-
 /**
  * Testing Sample 37
  */
@@ -735,7 +700,6 @@ sre.NobleSpanishTest.prototype.testSample_37 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -752,7 +716,6 @@ sre.NobleSpanishTest.prototype.testSample_38 = function() {
 };
 
 
-
 /**
  * Testing Sample 39
  */
@@ -763,7 +726,6 @@ sre.NobleSpanishTest.prototype.testSample_39 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -778,7 +740,6 @@ sre.NobleSpanishTest.prototype.testSample_40 = function() {
 };
 
 
-
 /**
  * Testing Sample 41
  */
@@ -789,7 +750,6 @@ sre.NobleSpanishTest.prototype.testSample_41 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -805,7 +765,6 @@ sre.NobleSpanishTest.prototype.testSample_42 = function() {
 };
 
 
-
 /**
  * Testing Sample 43
  */
@@ -817,7 +776,6 @@ sre.NobleSpanishTest.prototype.testSample_43 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -833,7 +791,6 @@ sre.NobleSpanishTest.prototype.testSample_44 = function() {
 };
 
 
-
 /**
  * Testing Sample 45
  */
@@ -844,7 +801,6 @@ sre.NobleSpanishTest.prototype.testSample_45 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -859,7 +815,6 @@ sre.NobleSpanishTest.prototype.testSample_46 = function() {
 };
 
 
-
 /**
  * Testing Sample 47
  */
@@ -870,7 +825,6 @@ sre.NobleSpanishTest.prototype.testSample_47 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -886,7 +840,6 @@ sre.NobleSpanishTest.prototype.testSample_48 = function() {
 };
 
 
-
 /**
  * Testing Sample 49
  */
@@ -897,7 +850,6 @@ sre.NobleSpanishTest.prototype.testSample_49 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -912,7 +864,6 @@ sre.NobleSpanishTest.prototype.testSample_50 = function() {
 };
 
 
-
 /**
  * Testing Sample 51
  */
@@ -924,7 +875,6 @@ sre.NobleSpanishTest.prototype.testSample_51 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -945,7 +895,6 @@ sre.NobleSpanishTest.prototype.testSample_52 = function() {
 };
 
 
-
 /**
  * Testing Sample 53
  */
@@ -963,7 +912,6 @@ sre.NobleSpanishTest.prototype.testSample_53 = function() {
 };
 
 
-
 /**
  * Testing Sample 54
  */
@@ -978,7 +926,6 @@ sre.NobleSpanishTest.prototype.testSample_54 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1002,7 +949,6 @@ sre.NobleSpanishTest.prototype.testSample_55 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1032,7 +978,6 @@ sre.NobleSpanishTest.prototype.testSample_56 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1079,7 +1024,6 @@ sre.NobleSpanishTest.prototype.testSample_57 = function() {
 };
 
 
-
 /**
  * Testing Sample 58
  */
@@ -1104,7 +1048,6 @@ sre.NobleSpanishTest.prototype.testSample_58 = function() {
 };
 
 
-
 /**
  * Testing Sample 59
  */
@@ -1120,7 +1063,6 @@ sre.NobleSpanishTest.prototype.testSample_59 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1141,7 +1083,6 @@ sre.NobleSpanishTest.prototype.testSample_60 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1177,7 +1118,6 @@ sre.NobleSpanishTest.prototype.testSample_61 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1227,7 +1167,6 @@ sre.NobleSpanishTest.prototype.testSample_62 = function() {
 };
 
 
-
 /**
  * Testing Sample 63
  */
@@ -1257,7 +1196,6 @@ sre.NobleSpanishTest.prototype.testSample_63 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1297,7 +1235,6 @@ sre.NobleSpanishTest.prototype.testSample_64 = function() {
 };
 
 
-
 /**
  * Testing Sample 65
  */
@@ -1324,7 +1261,6 @@ sre.NobleSpanishTest.prototype.testSample_65 = function() {
 };
 
 
-
 /**
  * Testing Sample 66
  */
@@ -1349,7 +1285,6 @@ sre.NobleSpanishTest.prototype.testSample_66 = function() {
 };
 
 
-
 /**
  * Testing Sample 67
  */
@@ -1363,7 +1298,6 @@ sre.NobleSpanishTest.prototype.testSample_67 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1386,7 +1320,6 @@ sre.NobleSpanishTest.prototype.testSample_68 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1412,7 +1345,6 @@ sre.NobleSpanishTest.prototype.testSample_69 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1441,7 +1373,6 @@ sre.NobleSpanishTest.prototype.testSample_70 = function() {
 };
 
 
-
 /**
  * Testing Sample 71
  */
@@ -1462,7 +1393,6 @@ sre.NobleSpanishTest.prototype.testSample_71 = function() {
 };
 
 
-
 /**
  * Testing Sample 72
  */
@@ -1481,7 +1411,6 @@ sre.NobleSpanishTest.prototype.testSample_72 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1526,7 +1455,6 @@ sre.NobleSpanishTest.prototype.testSample_73 = function() {
 };
 
 
-
 /**
  * Testing Sample 74
  */
@@ -1536,7 +1464,6 @@ sre.NobleSpanishTest.prototype.testSample_74 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1554,7 +1481,6 @@ sre.NobleSpanishTest.prototype.testSample_75 = function() {
 };
 
 
-
 /**
  * Testing Sample 76
  */
@@ -1566,7 +1492,6 @@ sre.NobleSpanishTest.prototype.testSample_76 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1581,7 +1506,6 @@ sre.NobleSpanishTest.prototype.testSample_77 = function() {
 };
 
 
-
 /**
  * Testing Sample 78
  */
@@ -1594,7 +1518,6 @@ sre.NobleSpanishTest.prototype.testSample_78 = function() {
 };
 
 
-
 /**
  * Testing Sample 79
  */
@@ -1605,7 +1528,6 @@ sre.NobleSpanishTest.prototype.testSample_79 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1628,7 +1550,6 @@ sre.NobleSpanishTest.prototype.testSample_80 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1667,7 +1588,6 @@ sre.NobleSpanishTest.prototype.testSample_81 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1715,7 +1635,6 @@ sre.NobleSpanishTest.prototype.testSample_82 = function() {
 };
 
 
-
 /**
  * Testing Sample 83
  */
@@ -1746,7 +1665,6 @@ sre.NobleSpanishTest.prototype.testSample_83 = function() {
 };
 
 
-
 /**
  * Testing Sample 84
  */
@@ -1766,7 +1684,6 @@ sre.NobleSpanishTest.prototype.testSample_84 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1789,7 +1706,6 @@ sre.NobleSpanishTest.prototype.testSample_85 = function() {
 };
 
 
-
 /**
  * Testing Sample 86
  */
@@ -1803,7 +1719,6 @@ sre.NobleSpanishTest.prototype.testSample_86 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1836,7 +1751,6 @@ sre.NobleSpanishTest.prototype.testSample_87 = function() {
 };
 
 
-
 /**
  * Testing Sample 88
  */
@@ -1865,7 +1779,6 @@ sre.NobleSpanishTest.prototype.testSample_88 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1900,7 +1813,6 @@ sre.NobleSpanishTest.prototype.testSample_89 = function() {
 };
 
 
-
 /**
  * Testing Sample 90
  */
@@ -1926,7 +1838,6 @@ sre.NobleSpanishTest.prototype.testSample_90 = function() {
 };
 
 
-
 /**
  * Testing Sample 91
  */
@@ -1946,7 +1857,6 @@ sre.NobleSpanishTest.prototype.testSample_91 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -1969,7 +1879,6 @@ sre.NobleSpanishTest.prototype.testSample_92 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2013,7 +1922,6 @@ sre.NobleSpanishTest.prototype.testSample_93 = function() {
 };
 
 
-
 /**
  * Testing Sample 94
  */
@@ -2038,7 +1946,6 @@ sre.NobleSpanishTest.prototype.testSample_94 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2215,7 +2122,6 @@ sre.NobleSpanishTest.prototype.testSample_95 = function() {
 };
 
 
-
 /**
  * Testing Sample 96
  */
@@ -2277,7 +2183,6 @@ sre.NobleSpanishTest.prototype.testSample_96 = function() {
 };
 
 
-
 /**
  * Testing Sample 97
  */
@@ -2312,7 +2217,6 @@ sre.NobleSpanishTest.prototype.testSample_97 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2368,7 +2272,6 @@ sre.NobleSpanishTest.prototype.testSample_98 = function() {
 };
 
 
-
 /**
  * Testing Sample 99
  */
@@ -2413,7 +2316,6 @@ sre.NobleSpanishTest.prototype.testSample_99 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2550,7 +2452,6 @@ sre.NobleSpanishTest.prototype.testSample_100 = function() {
 };
 
 
-
 /**
  * Testing Sample 101
  */
@@ -2590,7 +2491,6 @@ sre.NobleSpanishTest.prototype.testSample_101 = function() {
 };
 
 
-
 /**
  * Testing Sample 102
  */
@@ -2624,7 +2524,6 @@ sre.NobleSpanishTest.prototype.testSample_102 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2672,7 +2571,6 @@ sre.NobleSpanishTest.prototype.testSample_103 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2745,7 +2643,6 @@ sre.NobleSpanishTest.prototype.testSample_104 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2869,7 +2766,6 @@ sre.NobleSpanishTest.prototype.testSample_105 = function() {
 };
 
 
-
 /**
  * Testing Sample 106
  */
@@ -2902,7 +2798,6 @@ sre.NobleSpanishTest.prototype.testSample_106 = function() {
 };
 
 
-
 /**
  * Testing Sample 107
  */
@@ -2929,7 +2824,6 @@ sre.NobleSpanishTest.prototype.testSample_107 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**
@@ -2970,7 +2864,6 @@ sre.NobleSpanishTest.prototype.testSample_108 = function() {
 };
 
 
-
 /**
  * Testing Sample 109
  */
@@ -3001,7 +2894,6 @@ sre.NobleSpanishTest.prototype.testSample_109 = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
 };
-
 
 
 /**

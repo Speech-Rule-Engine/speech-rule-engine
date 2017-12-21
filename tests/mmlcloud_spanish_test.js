@@ -50,7 +50,7 @@ sre.MmlcloudSpanishTest = function() {
    * @override
    */
   this.locale = 'es';
-  
+
   /**
    * @override
    */
