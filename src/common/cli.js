@@ -67,6 +67,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.audit = false;
   /** @type {!boolean} */
   commander.mathml = false;
+  /** @type {!string} */
+  commander.generate = sre.Engine.Speech.NONE;
   /** @type {!boolean} */
   commander.json = false;
   /** @type {!boolean} */
@@ -90,6 +92,8 @@ sre.Cli.prototype.commandLine = function() {
       option('-a, --audit', 'Generate auditory descriptions (JSON format).').
       option('-j, --json', 'Generate JSON of semantic tree.').
       option('-m, --mathml', 'Generate enriched MathML.').
+      option('-g, --generate [depth]', 'Include generated speech in enriched' +
+             ' MathML (currently only makes sense with -m option).').
       option('-p, --speech', 'Generate speech output (default).').
       option('-k, --markup [name]', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
@@ -116,6 +120,7 @@ sre.Cli.prototype.commandLine = function() {
           'locale': commander.locale,
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,
+          'speech': commander.generate,
           'markup': commander.markup
         });
     if (commander.verbose) {
