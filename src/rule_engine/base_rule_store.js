@@ -86,6 +86,13 @@ sre.BaseRuleStore = function() {
    * @type {!sre.DynamicCstr.Parser}
    */
   this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
+
+  /**
+   * Default locale.
+   * @type {string}
+   */
+  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+
 };
 
 
@@ -114,7 +121,7 @@ sre.BaseRuleStore.prototype.defineRule = function(
     var postc = sre.SpeechRule.Action.fromString(action);
     var cstrList = Array.prototype.slice.call(arguments, 4);
     var fullPrec = new sre.SpeechRule.Precondition(prec, cstrList);
-    var dynamicCstr = this.parser.parse(dynamic);
+    var dynamicCstr = this.parseCstr(dynamic);
     rule = new sre.SpeechRule(name, dynamicCstr, fullPrec, postc);
   } catch (err) {
     if (err.name == 'RuleError') {
@@ -367,4 +374,9 @@ sre.BaseRuleStore.prototype.getSpeechRules = function() {
  */
 sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
   this.speechRules_ = rules;
+};
+
+
+sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
+  return this.parser.parse(this.locale + '.' + cstr);
 };

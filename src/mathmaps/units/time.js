@@ -1,4 +1,4 @@
-[
+[{"locale": "en"},
   {"category": "time",
    "mappings": {
      "default": {

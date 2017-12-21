@@ -1,4 +1,4 @@
-[
+[{"locale": "en"},
   {
     "category": "Ll",
     "key": "00E0",

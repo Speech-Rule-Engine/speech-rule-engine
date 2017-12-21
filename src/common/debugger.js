@@ -133,5 +133,5 @@ sre.Debugger.prototype.exit = function(opt_callback) {
   if (this.isActive_ && this.stream_) {
     this.stream_.end('', '', callback);
   }
-  this.isActive_ = false;
+  // this.isActive_ = false;
 };
