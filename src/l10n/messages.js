@@ -58,6 +58,7 @@ sre.Messages.MS = {
 
 sre.Messages.MS_FUNC = {
   FRAC_NEST_DEPTH: function(node) { return false; },
+  RADICAL_NEST_DEPTH: function(count) { return ''; },
   COMBINE_ROOT_INDEX: function(root, index) { return ''; }
 };
 

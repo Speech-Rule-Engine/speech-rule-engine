@@ -27,6 +27,7 @@ goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
 
+goog.scope(function() {
 var msg = sre.Messages;
 
 
@@ -948,6 +949,7 @@ sre.MathspeakUtil.localFont = function(font) {
   return msg.FONT[font] || font;
 };
 
+});  // goog.scope
 
 sre.Grammar.getInstance().setCorrection(
     'localFont', sre.MathspeakUtil.localFont

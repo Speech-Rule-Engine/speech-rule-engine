@@ -21,6 +21,7 @@
 goog.provide('sre.Locale.en');
 
 goog.require('sre.Locale');
+goog.require('sre.Messages');
 
 
 sre.Locale.en = {};
@@ -66,7 +67,7 @@ sre.Locale.en.nestingToString = function(count) {
     case 1:
       return '';
     case 2:
-      return msg.MS.TWICE;
+      return sre.Messages.MS.TWICE;
     default:
       return count.toString();
   }
