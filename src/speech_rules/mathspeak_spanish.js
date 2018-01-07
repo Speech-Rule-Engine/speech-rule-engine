@@ -49,16 +49,24 @@ sre.MathspeakSpanish.prototype.evaluateDefault = function(node) {
 };
 
 
+// TODO (localize): Default evaluation needs to be refactored, so it actually
+//       uses the default evaluator for the active store instead of a special
+//       text evaluator rule. The regular expression should then simply be a
+//       feature of the locale, so the evaluation is adapted with respect to
+//       accented characters existing in individual languages.
+/**
+ * @type {string}
+ */
 sre.MathspeakSpanish.SPANISH_REGEXP = 'a-zA-ZáéíóúñÁÉÍÓÚÑ';
 
 
 /**
- * @type {sre.MathStore}
+ * Default evaluation methods for strings that partititions a string into text
+ * and non-text.
+ * @param {Node} node A node with text content.
+ * @return {Array.<Node>} A list of nodes partitioned into stuff text and
+ *      non-text nodes according to the regexp for Spanish.
  */
-sre.MathspeakSpanish.mathStore = sre.MathspeakSpanish.getInstance();
-
-// TODO: This is a general function which has to be adapted with respect to
-//       accented characters existing in individual languages.
 sre.MathspeakSpanish.evaluateDefault = function(node) {
   var text = node.textContent;
   var result = [];
@@ -84,9 +92,10 @@ sre.MathspeakSpanish.evaluateDefault = function(node) {
 };
 
 
-// sre.MathspeakSpanish.evaluateDefault = goog.bind(
-//     sre.MathspeakSpanish.mathStore.evaluateDefault,
-//     sre.MathspeakSpanish.mathStore);
+/**
+ * @type {sre.MathStore}
+ */
+sre.MathspeakSpanish.mathStore = sre.MathspeakSpanish.getInstance();
 
 
 /** @private */
@@ -185,15 +194,14 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
 
   // Layout related.
   addCQF('CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple);
+  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
 
   addCQF('CQFoneLeft', sre.MathspeakSpanishUtil.oneLeft);
 
   // Dummy.
   addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
 
-  // DIAGRAM: Temporary for testing:
-  addCSF('CSFRemoveParens', sre.MathspeakUtil.removeParens);
-
+  // TODO (localize): Text evaluator should eventually be default by locale.
   addCQF('CQFtextEvaluator', sre.MathspeakSpanish.evaluateDefault);
 };
 
@@ -317,7 +325,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "línea base"; [t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] "línea base"; [t] @font (grammar:localFont); [n] self::*' +
+      ' (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
@@ -404,13 +413,15 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'fences-neutral', 'mathspeak.default',
-      '[t] "empezar valor absoluto"; [n] children/*[1]; [t] "finalizar valor absoluto"',
+      '[t] "empezar valor absoluto"; [n] children/*[1]; [t] "finalizar' +
+      ' valor absoluto"',
       'self::fenced', '@role="neutral"',
       'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
       ' content/*[1][text()]="｜"');
   defineSpecialisedRule(
       'fences-neutral', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] "valor absoluto"; [n] children/*[1]; [t] "finalizar valor absoluto"');
+      '[t] "valor absoluto"; [n] children/*[1]; [t] "finalizar valor' +
+      ' absoluto"');
   defineRule(
       'fences-neutral', 'mathspeak.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
@@ -916,7 +927,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Modifiers
   defineRule(
       'overscore', 'mathspeak.default',
-      '[t] "modificando superior"; [n] children/*[1]; [t] "con"; [n] children/*[2]',
+      '[t] "modificando superior"; [n] children/*[1]; [t] "con"; [n]' +
+      ' children/*[2]',
       'self::overscore', 'children/*[2][@role="overaccent"]'
   );
   defineSpecialisedRule(
@@ -936,14 +948,16 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   );
   defineSpecialisedRule(
       'double-overscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "mod superior superior"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
+      '[t] "mod superior superior"; [n] children/*[1]; [t] "con"; [n]' +
+      ' children/*[2]'
   );
   defineSpecialisedRule(
       'double-overscore', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'underscore', 'mathspeak.default',
-      '[t] "modificando inferior"; [n] children/*[1]; [t] "con"; [n] children/*[2]',
+      '[t] "modificando inferior"; [n] children/*[1]; [t] "con"; [n]' +
+      ' children/*[2]',
       'self::underscore', 'children/*[2][@role="underaccent"]'
   );
   defineSpecialisedRule(
@@ -962,7 +976,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'children/*[1]/children/*[2][@role="underaccent"]');
   defineSpecialisedRule(
       'double-underscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "mod inferior inferior"; [n] children/*[1]; [t] "con"; [n] children/*[2]'
+      '[t] "mod inferior inferior"; [n] children/*[1]; [t] "con"; [n]' +
+      ' children/*[2]'
   );
   defineSpecialisedRule(
       'double-underscore', 'mathspeak.brief', 'mathspeak.sbrief');
@@ -1320,20 +1335,11 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[n] self::* (grammar:singularUnit);',
       'self::infixop', '@role="multiplication" or @role="implicit"',
       'children/*[@role="unit"]',
-      'not(contains(@grammar, "singularUnit"))', 'CQFoneLeft'); // 'children/*[1][text()=1]');
+      'not(contains(@grammar, "singularUnit"))', 'CQFoneLeft');
   defineRule(
       'unit-divide', 'mathspeak.default',
       '[n] children/*[1]; [t] "per"; [n] children/*[2]',
       'self::fraction', '@role="unit"');
-
-
-  // DIAGRAM: For testing.
-  // defineRule(
-  //   'repeat-initial', 'mathspeak.default',
-  //   '[t] "Thus"; [n] ../../../../children/*[1]/children/*[1]',
-  //   'self::cell', 'count(children/*)=0',
-  //   '../../../parent::table[@role="equality"]'
-  // );
 
 };
 

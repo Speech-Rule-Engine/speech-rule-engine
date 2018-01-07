@@ -126,6 +126,12 @@ sre.MathspeakSpanishUtil.ordinalCounter = function(node, context) {
 };
 
 
+/**
+ * Predicate to decide if a root has a small index, i.e., between 1 and 10.
+ * @param {Node} node The root node.
+ * @return {Array.<Node>} The list with the given node, if it is a root with a
+ *     small index.
+ */
 sre.MathspeakSpanishUtil.smallRoot = function(node) {
   if (!node.childNodes || node.childNodes.length === 0 ||
       !node.childNodes[0].childNodes) {
@@ -160,9 +166,9 @@ sre.MathspeakSpanishUtil.unitMultipliers = function(nodes, context) {
   };
 };
 
-sre.MathspeakSpanishUtil.isUnit = function(node) {
-  return;
-};
+// sre.MathspeakSpanishUtil.isUnit = function(node) {
+//   return;
+// };
 
 
 // TODO: Put this into the right enum element.
@@ -170,6 +176,11 @@ sre.MathspeakSpanishUtil.SCRIPT_ELEMENTS = [
   'superscript', 'subscript', 'overscript', 'underscript'];
 
 
+/**
+ * Tests if node is a right most unit element in a sub-expression.
+ * @param {Node} node The node to test.
+ * @return {boolean} True if it is the right most unit in that subtree.
+ */
 sre.MathspeakSpanishUtil.rightMostUnit = function(node) {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
@@ -183,6 +194,12 @@ sre.MathspeakSpanishUtil.rightMostUnit = function(node) {
   return false;
 };
 
+
+/**
+ * Tests if node is a left most unit element in a sub-expression.
+ * @param {Node} node The node to test.
+ * @return {boolean} True if it is the left most unit in that subtree.
+ */
 sre.MathspeakSpanishUtil.leftMostUnit = function(node) {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
@@ -195,6 +212,11 @@ sre.MathspeakSpanishUtil.leftMostUnit = function(node) {
 };
 
 
+/**
+ * Makes a plural out of a unit denomination.
+ * @param {string} unit The unit name.
+ * @return {string} The unit set into plural (i.e., append an s if necessary).
+ */
 sre.MathspeakSpanishUtil.makePlural = function(unit) {
   return (/.*s$/.test(unit)) ? unit : unit + 's';
 };
@@ -204,6 +226,14 @@ sre.Grammar.getInstance().setCorrection(
     'plural', sre.MathspeakSpanishUtil.makePlural);
 
 
+/**
+ * Checks if a given node is preceded by a 1. This is useful to decide if the
+ * next text element is singular or plural.
+ * @param {Node} node The base node.
+ * @return {Array.<Node>} List with the base node if the preceding node (the
+ *     next left in the subexpression containing node) is 1. Otherwise empty
+ *     list.
+ */
 sre.MathspeakSpanishUtil.oneLeft = function(node) {
   while (node) {
     if (node.tagName === 'number' && node.textContent === '1') {

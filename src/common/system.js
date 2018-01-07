@@ -125,7 +125,8 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.locale, engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(
+      engine.locale, engine.domain, engine.style);
   engine.comparator = new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
       sre.DynamicProperties.create(

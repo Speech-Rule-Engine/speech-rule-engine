@@ -120,6 +120,13 @@ sre.MathspeakUtil.nestingBarriers = [
  */
 sre.MathspeakUtil.nestingDepth = {};
 
+
+/**
+ * Resets the nesting depth parameters. Method should be used on every new
+ * expression.
+ * @param {Node} node The node to translate.
+ * @return {Array.<Node>} Array containing the original node only.
+ */
 sre.MathspeakUtil.resetNestingDepth = function(node) {
   sre.MathspeakUtil.nestingDepth = {};
   return [node];

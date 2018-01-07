@@ -26,6 +26,9 @@ goog.require('sre.Locale.es');
 goog.require('sre.Messages');
 
 
+/**
+ * The basic method for setting the localized messages.
+ */
 sre.L10n.setLocale = function() {
   var msgs = sre.Locale[sre.Engine.getInstance().locale];
   if (msgs) {

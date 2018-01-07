@@ -377,6 +377,12 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
 };
 
 
+/**
+ * Default constraint parser that adds the locale to the rest constraint
+ * (generally, domain.style).
+ * @param {string} cstr The constraint string.
+ * @return {!sre.DynamicCstr} The parsed constraint including locale.
+ */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
   return this.parser.parse(this.locale + '.' + cstr);
 };
