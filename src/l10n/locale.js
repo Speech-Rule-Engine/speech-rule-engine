@@ -75,7 +75,7 @@ sre.Locale.vulgarNestingDepth = function(node) {
 sre.Locale.combinePostfixIndex = function(postfix, index) {
   return (postfix === sre.Messages.MS.ROOTINDEX ||
           postfix === sre.Messages.MS.INDEX) ?
-    postfix : postfix + ' ' + index;
+      postfix : postfix + ' ' + index;
 };
 
 

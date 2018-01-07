@@ -33,9 +33,10 @@ sre.Locale.es = {
     FRAC_V: 'fracción',
     FRAC_B: 'frac',
     FRAC_S: 'frac',
+    // TODO (localize): Could be problematic with space separators. Might need
+    // to trim.
     END: 'finalizar ',
-    FRAC_OVER: 'entre ', // Could be problematic with space separators. Might
-                         // need to trim.
+    FRAC_OVER: 'entre ',
     TWICE: '',
     NEST_FRAC: '',
     ENDFRAC: '',

@@ -1283,7 +1283,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'preceding-sibling::*[@role="unit"]');
   defineRule(
       'unit-combine', 'mathspeak.default',
-      '[m] children/*', 'self::infixop', '@role="unit"');
+      '[m] children/* (sepFunc:CTXFunitMultipliers)',
+      'self::infixop', '@role="unit"');
   defineRule(
       'unit-combine', 'mathspeak.default',
       '[m] children/* (sepFunc:CTXFunitMultipliers);',
@@ -1347,7 +1348,8 @@ sre.MathspeakSpanish.generateTensorRuleStrings_ = function(constellation) {
   var constel = parseInt(constellation, 2);
 
   for (var i = 0; i < 5; i++) {
-    var childString = 'children/*[' + sre.MathspeakSpanish.childNumber_[i] + ']';
+    var childString = 'children/*[' +
+        sre.MathspeakSpanish.childNumber_[i] + ']';
     if (constel & 1) {
       var compString = sre.MathspeakSpanish.componentString_[i % 3];
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +

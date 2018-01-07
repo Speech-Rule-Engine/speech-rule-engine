@@ -166,14 +166,16 @@ sre.MathspeakSpanishUtil.unitMultipliers = function(nodes, context) {
   };
 };
 
-// sre.MathspeakSpanishUtil.isUnit = function(node) {
-//   return;
-// };
 
-
-// TODO: Put this into the right enum element.
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ */
 sre.MathspeakSpanishUtil.SCRIPT_ELEMENTS = [
-  'superscript', 'subscript', 'overscript', 'underscript'];
+  sre.SemanticAttr.Type.SUPERSCRIPT,
+  sre.SemanticAttr.Type.SUBSCRIPT,
+  sre.SemanticAttr.Type.OVERSCORE,
+  sre.SemanticAttr.Type.UNDERSCORE
+];
 
 
 /**
