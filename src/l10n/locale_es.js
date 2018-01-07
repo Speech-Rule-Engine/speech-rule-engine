@@ -23,90 +23,88 @@ goog.provide('sre.Locale.es');
 goog.require('sre.Locale');
 
 
-sre.Locale.es = {};
+/**
+ * @type {sre.Locale.Messages}
+ */
+sre.Locale.es = {
 
-sre.Locale.es.MS = {
-  START: 'empezar ',
-  FRAC_V: 'fracción',
-  FRAC_B: 'frac',
-  FRAC_S: 'frac',
-  END: 'finalizar ',
-  FRAC_OVER: 'entre ', // Could be problematic with space separators. Might need
-  // to trim.
-  TWICE: '',
-  NEST_FRAC: '',
-  ENDFRAC: '',
-  SUPER: 'super',
-  SUB: 'sub',
-  SUP: 'sup',
-  SUPERSCRIPT: 'superíndice',
-  SUBSCRIPT: 'subíndice',
-  BASELINE: 'línea base',
-  BASE: '',
-  NESTED: '',
-  NEST_ROOT: '',
-  STARTROOT: 'empezar raíz',
-  ENDROOT: 'finalizar raíz',
-  ROOTINDEX: 'índice de raíz',
-  ROOT: 'raíz',
-  INDEX: '',
-  UNDER: 'bajo',
-  UNDERSCRIPT: 'bajoíndice',
-  OVER: 'sobre',
-  OVERSCRIPT: 'sobreíndice'
-};
+  MS: {
+    START: 'empezar ',
+    FRAC_V: 'fracción',
+    FRAC_B: 'frac',
+    FRAC_S: 'frac',
+    END: 'finalizar ',
+    FRAC_OVER: 'entre ', // Could be problematic with space separators. Might
+                         // need to trim.
+    TWICE: '',
+    NEST_FRAC: '',
+    ENDFRAC: '',
+    SUPER: 'super',
+    SUB: 'sub',
+    SUP: 'sup',
+    SUPERSCRIPT: 'superíndice',
+    SUBSCRIPT: 'subíndice',
+    BASELINE: 'línea base',
+    BASE: '',
+    NESTED: '',
+    NEST_ROOT: '',
+    STARTROOT: 'empezar raíz',
+    ENDROOT: 'finalizar raíz',
+    ROOTINDEX: 'índice de raíz',
+    ROOT: 'raíz',
+    INDEX: '',
+    UNDER: 'bajo',
+    UNDERSCRIPT: 'bajoíndice',
+    OVER: 'sobre',
+    OVERSCRIPT: 'sobreíndice'
+  },
 
+  MS_FUNC: {
+    FRAC_NEST_DEPTH: function(node) { return false; },
+    RADICAL_NEST_DEPTH: function(count) { return ''; },
+    COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex
+  },
 
-sre.Locale.es.MS_FUNC = {
-  FRAC_NEST_DEPTH: function(node) { return false; },
-  RADICAL_NEST_DEPTH: function(count) { return ''; },
-  COMBINE_ROOT_INDEX: function(postfix, index) {
-    return (postfix === sre.Locale.es.MS.ROOTINDEX ||
-            postfix === sre.Locale.es.MS.INDEX) ?
-        postfix : postfix + ' ' + index;}
-};
+  //  That is female ending!
+  MS_ROOT_INDEX: {
+    '2': 'cuadrada',
+    '3': 'cúbica',
+    '4': 'a la cuarta',
+    '5': 'a la quinta',
+    '6': 'a la sexta',
+    '7': 'a la séptima',
+    '8': 'a la octava',
+    '9': 'a la novena',
+    '10': 'a la décima'
+  },
 
+  FONT: {
+    'bold': 'negrita',
+    'bold-fraktur': 'negrita Fraktur',
+    'bold-italic': 'negrita cursiva',
+    'bold-script': 'negrita script',
+    'caligraphic': 'caligráfica',
+    'caligraphic-bold': 'caligráfica negrita',
+    'double-struck': 'negrita de pizarra',
+    'double-struck-italic': 'negrita de pizarra cursiva',
+    'fraktur': 'Fraktur',
+    'italic': 'cursiva',
+    'monospace': 'monoespacio',
+    'normal': 'normal',
+    'oldstyle': 'estilo antiguo',
+    'oldstyle-bold': 'estilo antiguo negrita',
+    'script': 'script',
+    'sans-serif': 'sans-serif',
+    'sans-serif-italic': 'sans-serif cursiva',
+    'sans-serif-bold': 'sans-serif negrita',
+    'sans-serif-bold-italic': 'sans-serif negrita cursiva',
+    'unknown': 'desconocida'
+  },
 
-//  That is female ending!
-sre.Locale.es.MS_ROOT_INDEX = {
-  '2': 'cuadrada',
-  '3': 'cúbica',
-  '4': 'a la cuarta',
-  '5': 'a la quinta',
-  '6': 'a la sexta',
-  '7': 'a la séptima',
-  '8': 'a la octava',
-  '9': 'a la novena',
-  '10': 'a la décima'
-};
+  NAVIGATE: {
+    COLLAPSIBLE: 'plegable',
+    EXPANDABLE: 'ampliable',
+    LEVEL: 'nivel'
+  }
 
-
-sre.Locale.es.FONT = {
-  'bold': 'negrita',
-  'bold-fraktur': 'negrita Fraktur',
-  'bold-italic': 'negrita cursiva',
-  'bold-script': 'negrita script',
-  'caligraphic': 'caligráfica',
-  'caligraphic-bold': 'caligráfica negrita',
-  'double-struck': 'negrita de pizarra',
-  'double-struck-italic': 'negrita de pizarra cursiva',
-  'fraktur': 'Fraktur',
-  'italic': 'cursiva',
-  'monospace': 'monoespacio',
-  'normal': 'normal',
-  'oldstyle': 'estilo antiguo',
-  'oldstyle-bold': 'estilo antiguo negrita',
-  'script': 'script',
-  'sans-serif': 'sans-serif',
-  'sans-serif-italic': 'sans-serif cursiva',
-  'sans-serif-bold': 'sans-serif negrita',
-  'sans-serif-bold-italic': 'sans-serif negrita cursiva',
-  'unknown': 'desconocida'
-};
-
-
-sre.Locale.es.NAVIGATE = {
-  COLLAPSIBLE: 'plegable',
-  EXPANDABLE: 'ampliable',
-  LEVEL: 'nivel'
 };

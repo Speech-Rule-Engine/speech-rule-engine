@@ -24,72 +24,57 @@ goog.require('sre.Locale');
 goog.require('sre.Messages');
 
 
-sre.Locale.en = {};
-
-sre.Locale.en.MS = {
-  START: 'Start',
-  FRAC_V: 'Fraction',
-  FRAC_B: 'Frac',
-  FRAC_S: 'Frac',
-  END: 'End',
-  FRAC_OVER: 'Over',
-  TWICE: 'Twice',
-  NEST_FRAC: 'Nest',
-  ENDFRAC: 'EndFrac',
-  SUPER: 'Super',
-  SUB: 'Sub',
-  SUP: 'Sup',
-  SUPERSCRIPT: 'Superscript',
-  SUBSCRIPT: 'Subscript',
-  BASELINE: 'Baseline',
-  BASE: 'Base',
-  NESTED: 'Nested',
-  NEST_ROOT: 'Nest',
-  STARTROOT: 'StartRoot',
-  ENDROOT: 'EndRoot',
-  ROOTINDEX: 'RootIndex',
-  ROOT: 'Root',
-  INDEX: 'Index',
-  UNDER: 'Under',
-  UNDERSCRIPT: 'Underscript',
-  OVER: 'Over',
-  OVERSCRIPT: 'Overscript'
-};
-
-
 /**
- * Translation for count word in superbrief nesting description.
- * @param {!number} count The counting parameter.
- * @return {!string} The corresponding string.
+ * @type {sre.Locale.Messages}
  */
-sre.Locale.en.nestingToString = function(count) {
-  switch (count) {
-    case 1:
-      return '';
-    case 2:
-      return sre.Messages.MS.TWICE;
-    default:
-      return count.toString();
-  }
-};
+sre.Locale.en = {
 
-
-sre.Locale.en.MS_FUNC = {
-  FRAC_NEST_DEPTH: function(node) {
-    return sre.MathspeakUtil.vulgarFractionSmall(node);
+  MS: {
+    START: 'Start',
+    FRAC_V: 'Fraction',
+    FRAC_B: 'Frac',
+    FRAC_S: 'Frac',
+    END: 'End',
+    FRAC_OVER: 'Over',
+    TWICE: 'Twice',
+    NEST_FRAC: 'Nest',
+    ENDFRAC: 'EndFrac',
+    SUPER: 'Super',
+    SUB: 'Sub',
+    SUP: 'Sup',
+    SUPERSCRIPT: 'Superscript',
+    SUBSCRIPT: 'Subscript',
+    BASELINE: 'Baseline',
+    BASE: 'Base',
+    NESTED: 'Nested',
+    NEST_ROOT: 'Nest',
+    STARTROOT: 'StartRoot',
+    ENDROOT: 'EndRoot',
+    ROOTINDEX: 'RootIndex',
+    ROOT: 'Root',
+    INDEX: 'Index',
+    UNDER: 'Under',
+    UNDERSCRIPT: 'Underscript',
+    OVER: 'Over',
+    OVERSCRIPT: 'Overscript'
   },
-  RADICAL_NEST_DEPTH: sre.Locale.en.nestingToString,
-  COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
-};
+
+  MS_FUNC: {
+    FRAC_NEST_DEPTH: sre.Locale.vulgarNestingDepth,
+    RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
+    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
+  },
 
 
-sre.Locale.en.MS_ROOT_INDEX = { };
+  MS_ROOT_INDEX: { },
 
 
-sre.Locale.en.FONT = { };
+  FONT: { },
 
-sre.Locale.en.NAVIGATE = {
-  COLLAPSIBLE: 'collapsible',
-  EXPANDABLE: 'expandable',
-  LEVEL: 'Level'
+  NAVIGATE: {
+    COLLAPSIBLE: 'collapsible',
+    EXPANDABLE: 'expandable',
+    LEVEL: 'Level'
+  }
+
 };

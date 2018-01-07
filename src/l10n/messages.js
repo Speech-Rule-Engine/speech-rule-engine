@@ -23,7 +23,7 @@ goog.provide('sre.Messages');
 
 // One (or more) flat message object per rule set.
 /**
- * @type {Object}
+ * @type {Object.<string>}
  */
 sre.Messages.MS = {
   START: '',
@@ -56,16 +56,50 @@ sre.Messages.MS = {
 };
 
 
+/**
+ * Parsing functions.
+ * @type {Object.<function(*): *>}
+ */
 sre.Messages.MS_FUNC = {
+
+  /**
+   * Method to determine end of nesting depth for nested fraction.
+   * @param {!Node} node A node.
+   * @return {!boolean} True if current element should not be considered for
+   *     nesting depth.
+   */
   FRAC_NEST_DEPTH: function(node) { return false; },
+
+  /**
+   * Translation for count word nesting description of radicals.
+   * @param {!number} count The counting parameter.
+   * @return {!string} The corresponding string.
+   */
   RADICAL_NEST_DEPTH: function(count) { return ''; },
-  COMBINE_ROOT_INDEX: function(root, index) { return ''; }
+
+  /**
+   * Generates a root ending message by combining the end message (postfix) with
+   * the index. Example: Start Root Cubic ... End Root Cubic.
+   * @param {string} postfix The postfix.
+   * @param {string} index The index.
+   * @return {string} The combined string, postfix plus index.
+   */
+  COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
+
 };
 
 
+/**
+ * Named root indices. E.g., square, cubic, etc.
+ * @type {Object.<string>}
+ */
 sre.Messages.MS_ROOT_INDEX = { };
 
 
+/**
+ * Localised font names.
+ * @type {Object.<string>}
+ */
 sre.Messages.FONT = {
   'bold': '',
   'bold-fraktur': '',
@@ -90,6 +124,10 @@ sre.Messages.FONT = {
 };
 
 
+/**
+ * Navigation messages.
+ * @type {Object.<string>}
+ */
 sre.Messages.NAVIGATE = {
   COLLAPSIBLE: '',
   EXPANDABLE: '',

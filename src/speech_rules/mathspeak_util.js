@@ -302,7 +302,8 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_S;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.FRAC_S;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
+      msg.MS.FRAC_S;
 };
 
 
@@ -316,7 +317,8 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.ENDFRAC;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.ENDFRAC;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
+      msg.MS.ENDFRAC;
 };
 
 
@@ -330,7 +332,8 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_OVER;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.OVER;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
+      msg.MS.OVER;
 };
 
 
@@ -944,13 +947,4 @@ sre.MathspeakUtil.removeParens = function(node) {
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };
 
-
-sre.MathspeakUtil.localFont = function(font) {
-  return msg.FONT[font] || font;
-};
-
 });  // goog.scope
-
-sre.Grammar.getInstance().setCorrection(
-    'localFont', sre.MathspeakUtil.localFont
-);
