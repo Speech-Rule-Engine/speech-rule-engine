@@ -1298,7 +1298,8 @@ sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDR = function() {
 /**
  * Testing tensors Root of ABCD.
  */
-sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRoot = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRoot = function()
+    {
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>';
   this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
@@ -1314,7 +1315,8 @@ sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRoot = function() 
 /**
  * Testing tensors Root ABCD . R.
  */
-sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRootR = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRootR = function()
+    {
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>';
   this.executeRuleTest(mml, 'StartRoot Subscript a Superscript b Baseline x' +
@@ -1330,7 +1332,8 @@ sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDRootR = function()
 /**
  * Testing tensors Frac of ABCD.
  */
-sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFrac = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFrac = function()
+    {
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
   this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b' +
@@ -1346,7 +1349,8 @@ sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFrac = function() 
 /**
  * Testing tensors Frac ABCD . R.
  */
-sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFracR = function() {
+sre.MathspeakEnglishTest.prototype.testSamplePartialTensorABCDFracR = function()
+    {
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
   this.executeRuleTest(mml, 'StartFraction 1 Over Subscript a Superscript b' +
