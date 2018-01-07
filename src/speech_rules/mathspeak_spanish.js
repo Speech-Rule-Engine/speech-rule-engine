@@ -162,8 +162,6 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
   addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
-  // addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
-  // addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
   addCSF('CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose);
@@ -215,7 +213,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'stree', 'mathspeak.default',
       '[n] ./*[1]', 'self::stree', 'CQFresetNesting');
-
 
   // Dummy rules
   defineRule(
@@ -470,7 +467,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'self::punctuated', '@role="prime"');
 
   // Fraction rules
-
   defineRule(
       'fraction', 'mathspeak.default',
       '[t] CSFopenFracVerbose; [n] children/*[1];' +
@@ -488,17 +484,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[t] CSFopenFracSbrief; [n] children/*[1];' +
           ' [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief',
       'self::fraction');
-
-  // defineRule(
-  //     'vulgar-fraction', 'mathspeak.default',
-  //     '[t] CSFvulgarFraction',
-  //     '[t] "empezar fracción"; [n] children/*[1];' +
-  //     '[t] "entre"; [n] children/*[2]; [t] "finalizar fracción"',
-  //     'self::fraction', '@role="vulgar"');
-  // defineSpecialisedRule(
-  //     'vulgar-fraction', 'mathspeak.default', 'mathspeak.brief');
-  // defineSpecialisedRule(
-  //     'vulgar-fraction', 'mathspeak.default', 'mathspeak.sbrief');
 
   defineRule(
       'continued-fraction-outer', 'mathspeak.default',
@@ -697,20 +682,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'self::subscript');
   defineSpecialisedRule(
       'subscript', 'mathspeak.brief', 'mathspeak.sbrief');
-
-  // defineRule(
-  //     'subscript-simple', 'mathspeak.default',
-  //     '[n] children/*[1]; [n] children/*[2]',
-  //     'self::subscript',
-  //     'name(./children/*[1])="identifier"',
-  //     // Second child is a number but not mixed or other.
-  //     'name(./children/*[2])="number"',
-  //     './children/*[2][@role!="mixed"]',
-  //     './children/*[2][@role!="othernumber"]');
-  // defineSpecialisedRule(
-  //     'subscript-simple', 'mathspeak.default', 'mathspeak.brief');
-  // defineSpecialisedRule(
-  //     'subscript-simple', 'mathspeak.default', 'mathspeak.sbrief');
 
   defineRule(
       'subscript-baseline', 'mathspeak.default',
@@ -1079,7 +1050,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[t] "finalizar etiqueta" (pause: 200); ' +
       '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"columna")',
       'self::row', 'content');
-  // DIAGRAM: Next three rules are temporary for testing:
   defineRule(
       'row-with-label', 'mathspeak.brief',
       '[t] "etiqueta"; [n] content/*[1]; ' +
@@ -1100,9 +1070,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'matrix-cell', 'mathspeak.default',
       '[n] children/*[1]; [p] (pause: 300)', 'self::cell');
 
-  // defineRule(
-  //     'empty-cell', 'mathspeak.default',
-  //     '[t] "espacio"', 'self::cell', 'count(children/*)=1', 'children/empty');
   defineRule(
       'empty-cell', 'mathspeak.default',
       '[t] "espacio"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
@@ -1176,13 +1143,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Multiline rules.
   defineRuleAlias(
       'layout', 'self::multiline');
-  // For testing:
-  //
-  // defineRule(
-  //     'multiline', 'mathspeak.default',
-  //     '[t] "multiline equation";' +
-  //     '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"line")',
-  //     'self::multiline');
 
   defineRule(
       'line', 'mathspeak.default',
@@ -1192,7 +1152,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
-  // DIAGRAM: Next three rules are temporary for testing:
   defineRule(
       'line-with-label', 'mathspeak.brief',
       '[t] "Label"; [n] content/*[1]; ' +
@@ -1343,10 +1302,9 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
 };
 
-// TODO (sorge): Adapt by language. Get this from MathspeakRules or a general
 
-
-// utility file. (TextHelp)
+// TODO (localise): Adapt by language. Get this from MathspeakRules or a general
+// utility function.
 /**
  * Component strings for tensor speech rules.
  * @enum {string}
