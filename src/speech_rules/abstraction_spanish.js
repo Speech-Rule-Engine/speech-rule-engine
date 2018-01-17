@@ -235,7 +235,8 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
       'abstr-sqrt-nested', 'mathspeak.default',
       '[t] "raíz cuadrada anidada"',
       'self::sqrt', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root'
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root'
   );
   defineSpecialisedRule(
       'abstr-sqrt-nested', 'mathspeak.default', 'mathspeak.brief'
@@ -259,27 +260,31 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-root', 'mathspeak.default',
+      'abstr-root-nested', 'mathspeak.default',
       '[t] "raíz anidada del índice"; [n] children/*[1]',
       'self::root', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root'
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root'
   );
+  // Content following the root expression.
   defineRule(
-      'abstr-root', 'mathspeak.default',
+      'abstr-root-nested', 'mathspeak.default',
       '[t] "raíz anidada del índice"; [n] children/*[1];' +
       ' [t] "finalizar de índice"',
       'self::root', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root',
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
-      'abstr-root', 'mathspeak.brief',
+      'abstr-root-nested', 'mathspeak.brief',
       '[t] "raíz anidada"',
       'self::root', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root'
+      'children/*/descendant-or-self::sqrt or ' +
+      'children/*/descendant-or-self::root'
   );
   defineSpecialisedRule(
-      'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-root-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
 

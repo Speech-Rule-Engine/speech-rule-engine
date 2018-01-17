@@ -233,7 +233,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-sqrt-nested', 'mathspeak.default',
       '[t] "nested square root"',
       'self::sqrt', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root'
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root'
   );
   defineSpecialisedRule(
       'abstr-sqrt-nested', 'mathspeak.default', 'mathspeak.brief'
@@ -242,6 +243,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-sqrt-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
+  // Content following the root expression.
   defineRule(
       'abstr-root', 'mathspeak.default',
       '[t] "root of index"; [n] children/*[1]; [t] "endindex"',
@@ -257,26 +259,30 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
-      'abstr-root', 'mathspeak.default',
+      'abstr-root-nested', 'mathspeak.default',
       '[t] "nested root of index"; [n] children/*[1]',
       'self::root', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root'
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root'
   );
+  // Content following the root expression.
   defineRule(
-      'abstr-root', 'mathspeak.default',
+      'abstr-root-nested', 'mathspeak.default',
       '[t] "nested root of index"; [n] children/*[1]; [t] "endindex"',
       'self::root', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root',
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
-      'abstr-root', 'mathspeak.brief',
+      'abstr-root-nested', 'mathspeak.brief',
       '[t] "nested root"',
       'self::root', '@alternative',
-      'children/*/descendant::sqrt or children/*/descendant::root'
+      'children/*/descendant-or-self::sqrt or ' +
+      'children/*/descendant-or-self::root'
   );
   defineSpecialisedRule(
-      'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-root-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
 
