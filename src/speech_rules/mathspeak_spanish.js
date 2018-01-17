@@ -1181,7 +1181,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Enclose
   defineRule(
       'enclose', 'mathspeak.default',
-      '[t] "StartEnclose"; [t] @role; [n] children/*[1]; [t] "EndEnclose"',
+      '[t] "empezar rodear"; [t] @role; [n] children/*[1]; ' +
+      '[t] "finalizar rodear"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');
@@ -1189,11 +1190,11 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'underbar', 'self::enclose', '@role="bottom"');
   defineRule(
       'leftbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[t] "barra vertical"; [n] children/*[1]',
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "barra vertical"',
       'self::enclose', '@role="right"');
 
   // Crossout

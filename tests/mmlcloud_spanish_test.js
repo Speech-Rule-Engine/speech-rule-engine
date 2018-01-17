@@ -624,3 +624,56 @@ sre.MmlcloudSpanishTest.prototype.testTextLabelledLine = function() {
   this.executeRuleTest(mml, 'esquema primera fila  etiqueta 1 a finalizar' +
                        ' esquema', 'sbrief');
 };
+
+
+/**
+ * Test for general enclose.
+ */
+sre.MmlcloudSpanishTest.prototype.untestEncloseGeneral = function() {
+  this.executeRuleTest('<menclose notation="circle"><mi>a</mi></menclose>',
+                       'StartEnclose circle a EndEnclose', 'default');
+};
+
+
+/**
+ * Test for general enclose overbar
+ */
+sre.MmlcloudSpanishTest.prototype.testEncloseOverbar = function() {
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a barra', 'default');
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a barra', 'brief');
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a barra', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose underbar
+ */
+sre.MmlcloudSpanishTest.prototype.testEncloseUnderbar = function() {
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a subbarra', 'default');
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a subbarra', 'brief');
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a subbarra', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose leftbar
+ */
+sre.MmlcloudSpanishTest.prototype.testEncloseLeftbar = function() {
+  this.executeRuleTest('<menclose notation="left"><mi>a</mi></menclose>',
+                       'barra vertical a', 'default');
+};
+
+
+/**
+ * Test for general enclose rightbar
+ */
+sre.MmlcloudSpanishTest.prototype.testEncloseRightbar = function() {
+  this.executeRuleTest('<menclose notation="right"><mi>a</mi></menclose>',
+                       'a barra vertical', 'default');
+};
