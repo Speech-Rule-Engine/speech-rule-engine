@@ -514,3 +514,59 @@ sre.MmlcloudEnglishTest.prototype.testRelationsWithEmpty = function() {
 };
 
 
+/**
+ * Tests for lines with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testLabelledLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+        '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel 1st' +
+                       ' Column a 2nd Column b EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren 1st Column a 2nd Column b EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label L p\'ren 1 R p\'ren 1st' +
+                       ' Column a 2nd Column b EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testLabelledEmptyLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+        '<mtd></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel' +
+                       ' Blank EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren Blank EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label L p\'ren 1 R p\'ren' +
+                       ' Blank EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines.
+ */
+sre.MmlcloudEnglishTest.prototype.testEmptyLine = function() {
+  var mml = '<mtable><mtr><mtd></mtd></mtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Blank EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Blank EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Blank EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testTextLabelledLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel a' +
+                       ' EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren a EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label 1 a EndLayout', 'sbrief');
+};
