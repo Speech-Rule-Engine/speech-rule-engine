@@ -514,3 +514,113 @@ sre.MmlcloudSpanishTest.prototype.testMultiline = function() {
       ' segunda fila primera columna b segunda columna d finalizar' +
       ' esquema', 'default');
 };
+
+
+/**
+ * Tests relation sequences with empty starts.
+ */
+sre.MmlcloudSpanishTest.prototype.testRelationsWithEmpty = function() {
+  this.executeRuleTest(
+      '<mo>&#x2264;</mo><mn>2</mn>',
+      'menor o igual que 2');
+  this.executeRuleTest(
+      '<mo>=</mo><mn>2</mn><mo>=</mo>',
+      'igual 2 igual');
+  this.executeRuleTest(
+      '<mo>&#x2264;</mo><mn>2</mn><mo>=</mo>',
+      'menor o igual que 2 igual');
+  this.executeRuleTest(
+      '<mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi></mi><mo>&#x2264;</mo><mn>2' +
+      '</mn></mtd></mtr></mtable>',
+      'empezar esquema primera fila primera columna 1 segunda columna menor' +
+      ' o igual que 2 finalizar esquema');
+};
+
+
+/**
+ * Tests for rows with labels.
+ */
+sre.MmlcloudSpanishTest.prototype.testLabelledRow = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+        '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho' +
+                       ' finalizar etiqueta primera columna a segunda' +
+                       ' columna b finalizar esquema', 'default');
+  this.executeRuleTest(mml, 'empezar esquema primera fila  etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho primera' +
+                       ' columna a segunda columna b finalizar esquema',
+                       'brief');
+  this.executeRuleTest(mml, 'esquema primera fila  etiqueta paréntesis' +
+                       ' izquierdo 1 paréntesis derecho primera columna a' +
+                       ' segunda columna b finalizar esquema', 'sbrief');
+};
+
+
+/**
+ * Tests for lines with labels.
+ */
+sre.MmlcloudSpanishTest.prototype.testLabelledLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho' +
+                       ' finalizar etiqueta a finalizar esquema', 'default');
+  this.executeRuleTest(mml, 'empezar esquema primera fila  etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho a' +
+                       ' finalizar esquema',
+                       'brief');
+  this.executeRuleTest(mml, 'esquema primera fila  etiqueta paréntesis' +
+                       ' izquierdo 1 paréntesis derecho a finalizar' +
+                       ' esquema', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines with labels.
+ */
+sre.MmlcloudSpanishTest.prototype.testLabelledEmptyLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+        '<mtd></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho' +
+                       ' finalizar etiqueta espacio finalizar esquema',
+                       'default');
+  this.executeRuleTest(mml, 'empezar esquema primera fila  etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho espacio' +
+                       ' finalizar esquema', 'brief');
+  this.executeRuleTest(mml, 'esquema primera fila  etiqueta paréntesis' +
+                       ' izquierdo 1 paréntesis derecho espacio finalizar' +
+                       ' esquema', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines.
+ */
+sre.MmlcloudSpanishTest.prototype.testEmptyLine = function() {
+  var mml = '<mtable><mtr><mtd></mtd></mtr></mtable>';
+  this.executeRuleTest(mml, 'empezar esquema primera fila  espacio' +
+                       ' finalizar esquema', 'default');
+  this.executeRuleTest(mml, 'empezar esquema primera fila  espacio' +
+                       ' finalizar esquema', 'brief');
+  this.executeRuleTest(mml, 'esquema primera fila  espacio finalizar' +
+                       ' esquema', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines with labels.
+ */
+sre.MmlcloudSpanishTest.prototype.testTextLabelledLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho' +
+                       ' finalizar etiqueta a finalizar esquema', 'default');
+  this.executeRuleTest(mml, 'empezar esquema primera fila  etiqueta' +
+                       ' paréntesis izquierdo 1 paréntesis derecho a' +
+                       ' finalizar esquema', 'brief');
+  this.executeRuleTest(mml, 'esquema primera fila  etiqueta 1 a finalizar' +
+                       ' esquema', 'sbrief');
+};
