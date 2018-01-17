@@ -588,3 +588,56 @@ sre.MmlcloudEnglishTest.prototype.testTextLabelledLine = function() {
                        ' right-p\'ren a EndLayout', 'brief');
   this.executeRuleTest(mml, 'Layout 1st Row  Label 1 a EndLayout', 'sbrief');
 };
+
+
+/**
+ * Test for general enclose.
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseGeneral = function() {
+  this.executeRuleTest('<menclose notation="circle"><mi>a</mi></menclose>',
+                       'StartEnclose circle a EndEnclose', 'default');
+};
+
+
+/**
+ * Test for general enclose overbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseOverbar = function() {
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a overbar', 'default');
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a overBar', 'brief');
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a overBar', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose underbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseUnderbar = function() {
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a underbar', 'default');
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a underBar', 'brief');
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a underBar', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose leftbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseLeftbar = function() {
+  this.executeRuleTest('<menclose notation="left"><mi>a</mi></menclose>',
+                       'vertical-bar a', 'default');
+};
+
+
+/**
+ * Test for general enclose rightbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseRightbar = function() {
+  this.executeRuleTest('<menclose notation="right"><mi>a</mi></menclose>',
+                       'a vertical-bar', 'default');
+};

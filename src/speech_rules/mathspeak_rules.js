@@ -1161,7 +1161,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "vertical-bar"',
       'self::enclose', '@role="right"');
 
   // Crossout
