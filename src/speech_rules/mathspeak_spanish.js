@@ -225,7 +225,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'omit-empty', 'mathspeak.default',
-      '',
+      '[p] (pause:100)', // Pause necessary to voice separators between empty.
       'self::empty');
   defineRule(
       'blank-empty', 'mathspeak.default',
@@ -1149,33 +1149,40 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '[m] children/*', 'self::line');
   defineRule(
       'line-with-label', 'mathspeak.default',
-      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
+      '[t] "con etiqueta"; [n] content/*[1]; ' +
+      '[t] "finalizar etiqueta" (pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
-  defineRule(
-      'line-with-label', 'mathspeak.brief',
-      '[t] "Label"; [n] content/*[1]; ' +
-      '[m] children/*',
-      'self::line', 'content');
+  defineSpecialisedRule(
+      'line-with-label', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "etiqueta"; [n] content/*[1] (pause: 200); [m] children/*');
   defineSpecialisedRule(
       'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'line-with-text-label', 'mathspeak.sbrief',
-      '[t] "Label"; [t] CSFRemoveParens;' +
-      '[m] children/*',
+      '[t] "etiqueta"; [t] CSFRemoveParens; [m] children/*',
       'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
-      '[t] "espacio"', 'self::line', 'count(children/*)=0');
+      '[t] "espacio"', 'self::line', 'count(children/*)=0', 'not(content)');
+  defineSpecialisedRule('empty-line', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule('empty-line', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'empty-line-with-label', 'mathspeak.default',
-      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
-      '[t] "espacio"', 'self::line', 'count(children/*)=0');
+      '[t] "con etiqueta"; [n] content/*[1]; ' +
+      '[t] "finalizar etiqueta" (pause: 200); ' +
+      '[t] "espacio"', 'self::line', 'count(children/*)=0', 'content');
+  defineSpecialisedRule(
+      'empty-line-with-label', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "etiqueta"; [n] content/*[1] (pause: 200); [t] "espacio"');
+  defineSpecialisedRule(
+      'empty-line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Enclose
   defineRule(
       'enclose', 'mathspeak.default',
-      '[t] "StartEnclose"; [t] @role; [n] children/*[1]; [t] "EndEnclose"',
+      '[t] "empezar rodear"; [t] @role; [n] children/*[1]; ' +
+      '[t] "finalizar rodear"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');
@@ -1183,11 +1190,11 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'underbar', 'self::enclose', '@role="bottom"');
   defineRule(
       'leftbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[t] "barra vertical"; [n] children/*[1]',
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "barra vertical"',
       'self::enclose', '@role="right"');
 
   // Crossout
