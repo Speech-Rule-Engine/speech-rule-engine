@@ -656,6 +656,12 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] count(children/*[1]/children/*); [t] "columns"',
       'self::table', '@alternative'
   );
+  defineSpecialisedRule(
+      'abstr-table', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-table', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
   defineRule(
       'abstr-line', 'mathspeak.default',
       '[t] "in"; [t] @role;',
@@ -666,7 +672,13 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] "in"; [t] @role;' +
       '[t] count(preceding-sibling::..); [t] "with";' +
       '[t] count(children/*); [t] "columns"',
-      'self::row', '@alternative'
+      'self::row', '@alternative', '*'
+  );
+  defineSpecialisedRule(
+    'abstr-row', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+    'abstr-row', 'mathspeak.default', 'mathspeak.sbrief'
   );
   defineRule(
       'abstr-cell', 'mathspeak.default',
