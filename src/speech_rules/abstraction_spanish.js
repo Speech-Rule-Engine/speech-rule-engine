@@ -337,19 +337,20 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Infixop
   defineRule(
       'abstr-infixop', 'mathspeak.default',
-      '[t] @role; [t] "con"; [t] count(./children/*);' +
+      '[t] @role (grammar:localRole); [t] "con"; [t] count(./children/*);' +
       ' [t] "elementos"',
       'self::infixop', '@alternative'
   );
   defineRule(
       'abstr-infixop', 'mathspeak.default',
-      '[t] @role; [t] "con una cantidad variable de elementos"',
+      '[t] @role (grammar:localRole); [t] "con una cantidad variable de' +
+      ' elementos"',
       'self::infixop', '@alternative', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
   defineRule(
       'abstr-infixop', 'mathspeak.brief',
-      '[t] @role',
+      '[t] @role (grammar:localRole)',
       'self::infixop', '@alternative'
   );
   defineSpecialisedRule(
@@ -577,7 +578,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-relation', 'mathspeak.default',
-      '[n] @role;',
+      '[n] @role (grammar:localRole);',
       'self::relseq', '@alternative', 'count(./children/*)=2'
   );
   defineSpecialisedRule(
@@ -589,13 +590,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-relation', 'mathspeak.default',
-      '[n] @role; [t] "secuencia";' +
+      '[t] "secuencia de"; [n] @role (grammar:localRole);' +
       ' [t] "con"; [t] count(./children/*); [t] "elementos"',
       'self::relseq', '@alternative', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-relation', 'mathspeak.brief',
-      '[n] @role; [t] "secuencia"',
+      '[t] "secuencia de"; [n] @role (grammar:localRole)',
       'self::relseq', '@alternative', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
@@ -603,7 +604,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-relation', 'mathspeak.default',
-      '[n] @role; [t] "secuencia";' +
+      '[t] "secuencia de"; [n] @role (grammar:localRole);' +
       ' [t] "con una cantidad variable de elementos"',
       'self::relseq', '@alternative', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
@@ -655,21 +656,33 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
       '[t] count(children/*[1]/children/*); [t] "columnas"',
       'self::table', '@alternative'
   );
+  defineSpecialisedRule(
+      'abstr-table', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+      'abstr-table', 'mathspeak.brief', 'mathspeak.sbrief'
+  );
   defineRule(
       'abstr-line', 'mathspeak.default',
-      '[t] "en"; [t] @role;',
+      '[t] "en"; [t] @role (grammar:localRole);',
       'self::line', '@alternative'
   );
   defineRule(
       'abstr-row', 'mathspeak.default',
-      '[t] "en"; [t] @role;' +
+      '[t] "en"; [t] @role (grammar:localRole);' +
       '[t] count(preceding-sibling::..); [t] "con";' +
       '[t] count(children/*); [t] "columnas"',
-      'self::row', '@alternative'
+      'self::row', '@alternative', '*'
+  );
+  defineSpecialisedRule(
+    'abstr-row', 'mathspeak.default', 'mathspeak.brief'
+  );
+  defineSpecialisedRule(
+    'abstr-row', 'mathspeak.default', 'mathspeak.sbrief'
   );
   defineRule(
       'abstr-cell', 'mathspeak.default',
-      '[t] "en"; [t] @role;',
+      '[t] "en"; [t] @role (grammar:localRole);',
       'self::cell', '@alternative'
   );
 

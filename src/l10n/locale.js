@@ -31,7 +31,9 @@ goog.require('sre.Messages');
  *   MS: Object.<string>,
  *   MS_FUNC: Object.<Function>,
  *   MS_ROOT_INDEX: Object.<string>,
- *   FONT: Object.<string>,
+ *   FONT: Object.<sre.SemanticAttr.Font>,
+ *   ROLE: Object.<sre.SemanticAttr.Role>,
+ *   ENCLOSE: Object.<sre.SemanticAttr.Role>,
  *   NAVIGATE: Object.<string>
  * }}
  */
@@ -91,4 +93,34 @@ sre.Locale.localFont = function(font) {
 
 sre.Grammar.getInstance().setCorrection(
     'localFont', sre.Locale.localFont
+);
+
+
+/**
+ * Localizes the role name.
+ * @param {string} role The role name.
+ * @return {string} The localized role name.
+ */
+sre.Locale.localRole = function(role) {
+  return sre.Messages.ROLE[role] || role;
+};
+
+
+sre.Grammar.getInstance().setCorrection(
+    'localRole', sre.Locale.localRole
+);
+
+
+/**
+ * Localizes the enclose name.
+ * @param {string} enclose The enclose name.
+ * @return {string} The localized enclose name.
+ */
+sre.Locale.localEnclose = function(enclose) {
+  return sre.Messages.ENCLOSE[enclose] || enclose;
+};
+
+
+sre.Grammar.getInstance().setCorrection(
+    'localEnclose', sre.Locale.localEnclose
 );

@@ -68,8 +68,56 @@ sre.Locale.en = {
 
   MS_ROOT_INDEX: { },
 
-
   FONT: { },
+
+  ROLE: {
+    // Infixoperators
+    'addition': 'addition',
+    'multiplication': 'multiplication',
+    'subtraction': 'subtraction',
+    'division': 'division',
+    // Relations.
+    'equality': 'equality',
+    'inequality': 'inequality',
+    'element': 'element',
+    'arrow': 'arrow',
+    // Roles of matrices or vectors.
+    'determinant': 'determinant',
+    'rowvector': 'row vector',
+    'binomial': 'binomial',
+    'squarematrix': 'square matrix',
+    // Roles of rows, lines, cells.
+    'multiline': 'multiple lines',
+    'matrix': 'matrix',
+    'vector': 'vector',
+    'cases': 'case statement',
+    'table': 'table',
+    // Unknown
+    'unknown': 'unknown'
+  },
+
+
+  ENCLOSE: {
+    'longdiv': 'long division',
+    'actuarial': 'actuarial symbol',
+    'radical': 'square root',
+    'box': 'box',
+    'roundedbox': 'rounded box',
+    'circle': 'circle',
+    'left': 'left vertical-line',
+    'right': 'right vertical-line',
+    'top': 'overbar',
+    'bottom': 'underbar',
+    'updiagonalstrike': 'crossout',
+    'downdiagonalstrike': 'crossout',
+    'verticalstrike': 'vertical strikeout',
+    'horizontalstrike': 'crossout',
+    'madruwb': 'Arabic factorial symbol',
+    'updiagonalarrow': 'diagonal arrow',
+    'phasorangle': 'phasor angle',
+    // Unknown
+    'unknown': 'long division'
+  },
 
   NAVIGATE: {
     COLLAPSIBLE: 'collapsible',
