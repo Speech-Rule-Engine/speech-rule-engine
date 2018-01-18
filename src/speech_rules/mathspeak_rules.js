@@ -1149,7 +1149,8 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Enclose
   defineRule(
       'enclose', 'mathspeak.default',
-      '[t] "StartEnclose"; [t] @role; [n] children/*[1]; [t] "EndEnclose"',
+      '[t] "StartEnclose"; [t] @role (grammar:localEnclose);' +
+      ' [n] children/*[1]; [t] "EndEnclose"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');

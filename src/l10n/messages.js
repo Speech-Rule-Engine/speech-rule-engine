@@ -98,7 +98,7 @@ sre.Messages.MS_ROOT_INDEX = { };
 
 /**
  * Localised font names.
- * @type {Object.<string>}
+ * @type {Object.<sre.SemanticAttr.Font>}
  */
 sre.Messages.FONT = {
   'bold': '',
@@ -120,6 +120,64 @@ sre.Messages.FONT = {
   'sans-serif-italic': '',
   'sans-serif-bold': '',
   'sans-serif-bold-italic': '',
+  'unknown': ''
+};
+
+
+/**
+ * Localised role names.
+ * @type {Object.<sre.SemanticAttr.Role>}
+ */
+sre.Messages.ROLE = {
+  // Infixoperators
+  'addition': '',
+  'multiplication': '',
+  'subtraction': '',
+  'division': '',
+  // Relations.
+  'equality': '',
+  'inequality': '',
+  'element': '',
+  'arrow': '',
+  // Roles of matrices or vectors.
+  'determinant': '',
+  'rowvector': '',
+  'binomial': '',
+  'squarematrix': '',
+  // Roles of rows, lines, cells.
+  'multiline': '',
+  'matrix': '',
+  'vector': '',
+  'cases': '',
+  'table': '',
+  // Unknown
+  'unknown': ''
+};
+
+
+/**
+ * Localised enclose roles.
+ * @type {Object.<sre.SemanticAttr.Role>}
+ */
+sre.Messages.ENCLOSE = {
+  'longdiv': '',
+  'actuarial': '',
+  'radical': '',
+  'box': '',
+  'roundedbox': '',
+  'circle': '',
+  'left': '',
+  'right': '',
+  'top': '',
+  'bottom': '',
+  'updiagonalstrike': '',
+  'downdiagonalstrike': '',
+  'verticalstrike': '',
+  'horizontalstrike': '',
+  'madruwb': '',
+  'updiagonalarrow': '',
+  'phasorangle': '',
+  // Unknown
   'unknown': ''
 };
 

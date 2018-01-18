@@ -1181,8 +1181,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Enclose
   defineRule(
       'enclose', 'mathspeak.default',
-      '[t] "empezar rodear"; [t] @role; [n] children/*[1]; ' +
-      '[t] "finalizar rodear"',
+      '[t] "empezar rodear"; [t] @role (grammar:localEnclose); ' +
+      '[n] children/*[1]; [t] "finalizar rodear"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');

@@ -102,6 +102,55 @@ sre.Locale.es = {
     'unknown': 'desconocida'
   },
 
+  ROLE: {
+    // Infixoperators
+    'addition': 'adición',
+    'multiplication': 'multiplicación',
+    'subtraction': 'resta',
+    'division': 'división',
+    // Relations.
+    'equality': 'igualdad',
+    'inequality': 'desigualdad',
+    'element': 'elemento',
+    'arrow': 'flecha',
+    // Roles of matrices or vectors.
+    'determinant': 'determinante',
+    'rowvector': 'fila vector',
+    'binomial': 'binomial',
+    'squarematrix': 'matriz cuadrada',
+    // Roles of rows, lines, cells.
+    'multiline': 'líneas múltiples',
+    'matrix': 'matriz',
+    'vector': 'vector',
+    'cases': 'declaración de caso',
+    'table': 'mesa',
+    // Unknown
+    'unknown': 'desconocida'
+  },
+
+
+  ENCLOSE: {
+    'longdiv': 'división larga',
+    'actuarial': 'símbolo actuarial',
+    'radical': 'raíz cuadrada',
+    'box': 'caja',
+    'roundedbox': 'caja redondeada',
+    'circle': 'círculo',
+    'left': 'barra vertical izquierda',
+    'right': 'barra vertical derecha',
+    'top': 'barra',
+    'bottom': 'subbarra',
+    'updiagonalstrike': 'tachadura',
+    'downdiagonalstrike': 'tachadura',
+    'verticalstrike': 'ponchado vertical',
+    'horizontalstrike': 'cruce',
+    'madruwb': 'símbolo factorial árabe',
+    'updiagonalarrow': 'flecha diagonal',
+    'phasorangle': 'ángulo de fasores',
+    // Unknown
+    'unknown': 'división larga'
+  },
+
   NAVIGATE: {
     COLLAPSIBLE: 'plegable',
     EXPANDABLE: 'ampliable',
