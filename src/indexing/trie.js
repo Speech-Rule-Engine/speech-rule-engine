@@ -131,8 +131,6 @@ sre.Trie.prototype.lookupRules = function(xml, dynamic) {
 };
 
 
-// TODO: This is temporary until it is finalised how to deal with default
-//       constraints.
 /**
  * Enriches the dynamic constraint into sets containing default values.
  * @param {sre.DynamicCstr} dynamic A dynamic constraint.
@@ -144,8 +142,11 @@ sre.Trie.prototype.dynamicCstrSets_ = function(dynamic) {
   if (sre.Engine.getInstance().strict) {
     return values.map(function(value) {return [value];});
   }
-  return values.map(function(value) {
-    return value === 'default' ? [value] : [value, 'default'];
+  var order = dynamic.getOrder();
+  return order.map(function(order) {
+    var def = sre.DynamicCstr.DEFAULT_VALUES[order];
+    var value = dynamic.getValue(order);
+    return value === def ? [value] : [value, def];
   });
 };
 
