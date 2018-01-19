@@ -27,7 +27,6 @@
 
 goog.provide('sre.Trie');
 
-goog.require('sre.Engine');
 goog.require('sre.TrieNode');
 goog.require('sre.TrieNodeFactory');
 
@@ -85,22 +84,21 @@ sre.Trie.prototype.addNode_ = function(node, constraint, kind) {
  * Retrieves a set of speech rules that are applicable to a given XML node
  * wrt. to a dynamic constraint.
  * @param {!Node} xml An XML node.
- * @param {sre.DynamicCstr} dynamic A dynamic constraint.
+ * @param {Array.<Array.<string>>} dynamic A dynamic properties list.
  * @return {!Array.<sre.SpeechRule>} The speech rules that can be applied to the
  *     given node.
  */
 sre.Trie.prototype.lookupRules = function(xml, dynamic) {
   var nodes = [this.root];
   var rules = [];
-  var dynamicSets = this.dynamicCstrSets_(dynamic);
   // Algorithm:
   // Pop node, get children,
   // add child if constraint is correct.
   // add rule if child has a rule.
   //
   // First deal with dynamic constraints.
-  while (dynamicSets.length) {
-    var dynamicSet = dynamicSets.shift();
+  while (dynamic.length) {
+    var dynamicSet = dynamic.shift();
     var newNodes = [];
     while (nodes.length) {
       var node = nodes.shift();
@@ -132,22 +130,20 @@ sre.Trie.prototype.lookupRules = function(xml, dynamic) {
 
 
 /**
- * Enriches the dynamic constraint into sets containing default values.
- * @param {sre.DynamicCstr} dynamic A dynamic constraint.
- * @return {!Array.<Array<string>>} Sets of dynamic constraint values.
- * @private
+ * Checks if the trie contains sub-trie for the given constraint list.
+ * @param {Array.<string>} cstrs The list of constraints.
+ * @return {boolean} True if the trie contains elements for cstrs.
  */
-sre.Trie.prototype.dynamicCstrSets_ = function(dynamic) {
-  var values = dynamic.getValues();
-  if (sre.Engine.getInstance().strict) {
-    return values.map(function(value) {return [value];});
+sre.Trie.prototype.hasSubtrie = function(cstrs) {
+  var subtrie = this.root;
+  for (var i = 0, l = cstrs.length; i < l; i++) {
+    var cstr = cstrs[i];
+    subtrie = subtrie.getChild(cstr);
+    if (!subtrie) {
+      return false;
+    }
   }
-  var order = dynamic.getOrder();
-  return order.map(function(order) {
-    var def = sre.DynamicCstr.DEFAULT_VALUES[order];
-    var value = dynamic.getValue(order);
-    return value === def ? [value] : [value, def];
-  });
+  return true;
 };
 
 

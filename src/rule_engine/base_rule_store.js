@@ -105,7 +105,7 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.trie.lookupRules(node, dynamic);
+  var matchingRules = this.trie.lookupRules(node, dynamic.allProperties());
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
 };
