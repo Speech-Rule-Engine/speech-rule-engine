@@ -68,9 +68,9 @@ goog.inherits(sre.WalkerTest, sre.AbstractTest);
  */
 sre.WalkerTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-      {semantics: true, domain: 'mathspeak', style: 'default',
-        rules: ['AbstractionRules', 'MathspeakRules'],
-        speech: sre.Engine.Speech.NONE});
+      {semantics: true, locale: 'en', domain: 'mathspeak', style: 'default',
+       rules: ['AbstractionRules', 'MathspeakRules'],
+       speech: sre.Engine.Speech.NONE});
 };
 
 

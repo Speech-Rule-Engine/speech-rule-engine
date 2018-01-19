@@ -88,6 +88,29 @@ sre.DynamicProperties.prototype.getProperty = function(key) {
 
 
 /**
+ * Updates the dynamic properties from another one.
+ * @param {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} props A second
+ *     properties element.
+ */
+sre.DynamicProperties.prototype.updateProperties = function(props) {
+  this.properties_ = props;
+};
+
+
+/**
+ * Convenience method to return the ordered list of properties.
+ * @return {Array.<Array.<string>>} Ordered list of lists of constraint values.
+ */
+sre.DynamicProperties.prototype.allProperties = function() {
+  var propLists = [];
+  this.order_.forEach(goog.bind(function(key) {
+    propLists.push(this.getProperty(key));
+  }, this));
+  return propLists;
+};
+
+
+/**
  * @override
  */
 sre.DynamicProperties.prototype.toString = function() {
