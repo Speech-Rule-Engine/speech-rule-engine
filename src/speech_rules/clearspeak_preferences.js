@@ -198,10 +198,11 @@ goog.inherits(sre.ClearspeakPreferences.Parser, sre.DynamicCstr.Parser);
 sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var initial = sre.ClearspeakPreferences.Parser.base(this, 'parse', str);
   var style = initial.getValue(sre.DynamicCstr.Axis.STYLE);
+  var locale = initial.getValue(sre.DynamicCstr.Axis.LOCALE);
   if (style === sre.DynamicCstr.DEFAULT_VALUE) {
     return new sre.ClearspeakPreferences(
-      {'locale': sre.Engine.getInstance().locale,
-       'domain': 'clearspeak', 'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+      {'locale': locale, 'domain': 'clearspeak',
+       'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
   var pairs = style.split(':');
   var preferences = {};
@@ -219,8 +220,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
     }
   }
   return new sre.ClearspeakPreferences(
-    {'locale': sre.Engine.getInstance().locale,
-     'domain': 'clearspeak', 'style': this.combine_(preferences)}, preferences);
+    {'locale': locale, 'domain': 'clearspeak',
+     'style': this.combine_(preferences)}, preferences);
 };
 
 
