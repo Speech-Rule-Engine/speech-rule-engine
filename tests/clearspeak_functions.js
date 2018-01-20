@@ -41,7 +41,7 @@ goog.inherits(sre.ClearspeakFunctions, sre.ClearspeakRuleTest);
 
 
 //
-// Functions 
+// Functions
 //
 
 

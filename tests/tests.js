@@ -81,7 +81,7 @@ sre.Tests.testList = [
   sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.EnrichMathmlTest,
-  // sre.EnrichSpeechTest,
+  sre.EnrichSpeechTest,
   sre.MarkupTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
