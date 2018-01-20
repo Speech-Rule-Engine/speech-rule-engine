@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+console.log('====== This is a BETA! ======');
 let fs = require('fs');
 process.env.SRE_TOP_PATH = __dirname + '/..';
 if (fs.existsSync(process.env.SRE_TOP_PATH + '/lib/symbols')) {
