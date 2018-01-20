@@ -187,7 +187,7 @@ The following is a list of command line options for the speech rule engine.
 | -t | --style [name]  | Speech style [name]. |
 ||| Selects a particular speech style (e.g., brief). |
 ||| If no style parameter is provided, style default is used. |
-| -o | --locale | Language locale in ISO 639-1. |
+| -c | --locale | Language locale in ISO 639-1. |
 | -s | --semantics     | Switch on semantics interpretation. |
 ||| Note, that some speech rule domains only make sense with semantics switched on or off. |
 | -e | --enumerate     | Enumerates all available domains and styles. |
@@ -254,7 +254,7 @@ For example the configuration element
 will cause SRE to load JSON files from rawgit and for IE or Edge it will also load Google's
 [wicked good xpath library](https://github.com/google/wicked-good-xpath). In addition the speech rules are set to ``mathspeak`` in ``super brief`` style.
 
-**Make sure the configuration element comes before the script tag loading SRE in you website!**
+**Make sure the configuration element comes before the script tag loading SRE in your website!**
 
 
 
@@ -264,7 +264,7 @@ MathJax Library
 
     make mathjax
 
-generates a build specifi for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
+generates a build specific for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
 SRE can then be configured locally on webpages as described above.
 
 
