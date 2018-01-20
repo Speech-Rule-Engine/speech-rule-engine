@@ -519,7 +519,7 @@ sre.MmlcloudEnglishTest.prototype.testRelationsWithEmpty = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testLabelledRow = function() {
   var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
-        '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
+      '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
                        ' left-parenthesis 1 right-parenthesis EndLabel 1st' +
                        ' Column a 2nd Column b EndLayout', 'default');
@@ -536,7 +536,7 @@ sre.MmlcloudEnglishTest.prototype.testLabelledRow = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testLabelledLine = function() {
   var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
-        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
                        ' left-parenthesis 1 right-parenthesis EndLabel' +
                        ' a EndLayout', 'default');
@@ -553,7 +553,7 @@ sre.MmlcloudEnglishTest.prototype.testLabelledLine = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testLabelledEmptyLine = function() {
   var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
-        '<mtd></mtd></mlabeledtr></mtable>';
+      '<mtd></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
                        ' left-parenthesis 1 right-parenthesis EndLabel' +
                        ' Blank EndLayout', 'default');
@@ -580,7 +580,7 @@ sre.MmlcloudEnglishTest.prototype.testEmptyLine = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testTextLabelledLine = function() {
   var mml = '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
-        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
                        ' left-parenthesis 1 right-parenthesis EndLabel a' +
                        ' EndLayout', 'default');

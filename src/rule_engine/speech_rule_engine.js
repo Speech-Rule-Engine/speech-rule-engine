@@ -578,7 +578,7 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   // Get the trie exceptions
   props[sre.DynamicCstr.Axis.LOCALE] = [exists ? values[0] : defLocale];
   exists = exists ? exists :
-    this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
+      this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
   props[sre.DynamicCstr.Axis.DOMAIN] = [exists ? values[1] : defDomain];
   var order = dynamic.getOrder();
   order.forEach(function(axis) {

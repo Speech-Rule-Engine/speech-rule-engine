@@ -244,16 +244,16 @@ sre.SemanticRuleTest.prototype.testQuadratic = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>&#x2212;</mo>' +
       '<mi>b</mi><mo>&#xB1;</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn>' +
       '</msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt>' +
-        '</mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow>';
+      '</mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(
-    mml,
-    'x equals negative b plus minus Square root of b squared minus four' +
+      mml,
+      'x equals negative b plus minus Square root of b squared minus four' +
       ' times a times c divided by two times a'
   );
   this.locale = 'es';
   this.executeRuleTest(
-    mml,
-    'x equals negative b plus minus Square root of b squared minus four' +
+      mml,
+      'x equals negative b plus minus Square root of b squared minus four' +
       ' times a times c divided by two times a'
   );
 };

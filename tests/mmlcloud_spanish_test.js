@@ -542,7 +542,7 @@ sre.MmlcloudSpanishTest.prototype.testRelationsWithEmpty = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testLabelledRow = function() {
   var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
-        '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
+      '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
                        ' paréntesis izquierdo 1 paréntesis derecho' +
                        ' finalizar etiqueta primera columna a segunda' +
@@ -562,7 +562,7 @@ sre.MmlcloudSpanishTest.prototype.testLabelledRow = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testLabelledLine = function() {
   var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
-        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
                        ' paréntesis izquierdo 1 paréntesis derecho' +
                        ' finalizar etiqueta a finalizar esquema', 'default');
@@ -581,7 +581,7 @@ sre.MmlcloudSpanishTest.prototype.testLabelledLine = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testLabelledEmptyLine = function() {
   var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
-        '<mtd></mtd></mlabeledtr></mtable>';
+      '<mtd></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
                        ' paréntesis izquierdo 1 paréntesis derecho' +
                        ' finalizar etiqueta espacio finalizar esquema',
@@ -614,7 +614,7 @@ sre.MmlcloudSpanishTest.prototype.testEmptyLine = function() {
  */
 sre.MmlcloudSpanishTest.prototype.testTextLabelledLine = function() {
   var mml = '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
-        '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
   this.executeRuleTest(mml, 'empezar esquema primera fila  con etiqueta' +
                        ' paréntesis izquierdo 1 paréntesis derecho' +
                        ' finalizar etiqueta a finalizar esquema', 'default');

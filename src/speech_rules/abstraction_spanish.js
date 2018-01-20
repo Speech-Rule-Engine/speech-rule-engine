@@ -675,10 +675,10 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
       'self::row', '@alternative', '*'
   );
   defineSpecialisedRule(
-    'abstr-row', 'mathspeak.default', 'mathspeak.brief'
+      'abstr-row', 'mathspeak.default', 'mathspeak.brief'
   );
   defineSpecialisedRule(
-    'abstr-row', 'mathspeak.default', 'mathspeak.sbrief'
+      'abstr-row', 'mathspeak.default', 'mathspeak.sbrief'
   );
   defineRule(
       'abstr-cell', 'mathspeak.default',
