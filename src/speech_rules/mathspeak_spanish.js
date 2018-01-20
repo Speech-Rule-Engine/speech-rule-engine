@@ -429,8 +429,10 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'fences-set', 'mathspeak.default',
       '[t] "empezar llave"; [n] children/*[1]; [t] "finalizar llave"',
-      'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-      'content/*[2][text()]="}"', 'count(children/*)=1',
+      'self::fenced', '@role="set empty" or @role="set extended"' +
+      ' or @role="set singleton" or @role="set collection"',
+      // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
+      // 'content/*[2][text()]="}"', 'count(children/*)=1',
       'not(name(../..)="appl")');
   defineSpecialisedRule(
       'fences-set', 'mathspeak.default', 'mathspeak.sbrief',
