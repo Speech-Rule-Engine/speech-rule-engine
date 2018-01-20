@@ -239,6 +239,8 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
   if (!node) {
     return [];
   }
+  // Update the preferences of the dynamic constraint.
+  this.updateConstraint_();
   return this.evaluateTree_(node);
 };
 
@@ -492,7 +494,8 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(
+      engine.locale, engine.domain, engine.style);
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -500,7 +503,8 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(
+      engine.locale, engine.domain, engine.style);
   return result;
 };
 
@@ -556,3 +560,34 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
   }
   sre.Grammar.getInstance().pushState(assignment);
 };
+
+
+/**
+ * Enriches the dynamic constraint with default properties.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
+  var dynamic = sre.Engine.getInstance().dynamicCstr;
+  var strict = sre.Engine.getInstance().strict;
+  var props = {};
+  var values = [dynamic.getValue(sre.DynamicCstr.Axis.LOCALE),
+                dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN)];
+  var defLocale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+  var defDomain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+  var exists = this.activeStore_.trie.hasSubtrie(values);
+  // Get the trie exceptions
+  props[sre.DynamicCstr.Axis.LOCALE] = [exists ? values[0] : defLocale];
+  exists = exists ? exists :
+    this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
+  props[sre.DynamicCstr.Axis.DOMAIN] = [exists ? values[1] : defDomain];
+  var order = dynamic.getOrder();
+  order.forEach(function(axis) {
+    if (!props[axis]) {
+      var value = dynamic.getValue(axis);
+      var def = sre.DynamicCstr.DEFAULT_VALUES[axis];
+      props[axis] = (strict || value === def) ? [value] : [value, def];
+    }});
+  dynamic.updateProperties(props);
+};
+
+

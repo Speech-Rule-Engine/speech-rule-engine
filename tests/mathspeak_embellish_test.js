@@ -50,7 +50,7 @@ sre.MathspeakEmbellishTest = function() {
    */
   this.rules = ['MathspeakRules'];
 
-  this.setActive('EmbellishedSymbols');
+  this.setActive('EmbellishedSymbolsEnglish');
 };
 goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);
 

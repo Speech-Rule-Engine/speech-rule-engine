@@ -29,6 +29,7 @@ goog.require('sre.EventUtil.KeyCode');
 goog.require('sre.Focus');
 goog.require('sre.Highlighter');
 goog.require('sre.Levels');
+goog.require('sre.Messages');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
@@ -359,11 +360,13 @@ sre.AbstractWalker.prototype.depth_ = function() {
   var oldDepth = sre.Grammar.getInstance().getParameter('depth');
   sre.Grammar.getInstance().setParameter('depth', true);
   var primary = this.focus_.getDomPrimary();
-  var expand = (this.expandable(primary) && ['expandable']) ||
-      (this.collapsible(primary) && ['collapsible']) || [];
+  var expand = (this.expandable(primary) &&
+                [sre.Messages.NAVIGATE.EXPANDABLE]) ||
+      (this.collapsible(primary) && [sre.Messages.NAVIGATE.COLLAPSIBLE]) || [];
   var level = [sre.AuralRendering.getInstance().markup(
-      [new sre.AuditoryDescription({text: 'Level ' + this.getDepth(),
-         personality: {}})])];
+      [new sre.AuditoryDescription({text: sre.Messages.NAVIGATE.LEVEL +
+         ' ' + this.getDepth(),
+        personality: {}})])];
   var snodes = this.focus_.getSemanticNodes();
   var prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   if (prefix) {

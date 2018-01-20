@@ -88,6 +88,29 @@ sre.DynamicProperties.prototype.getProperty = function(key) {
 
 
 /**
+ * Updates the dynamic properties from another one.
+ * @param {!Object.<sre.DynamicCstr.Axis, !Array.<string>>} props A second
+ *     properties element.
+ */
+sre.DynamicProperties.prototype.updateProperties = function(props) {
+  this.properties_ = props;
+};
+
+
+/**
+ * Convenience method to return the ordered list of properties.
+ * @return {Array.<Array.<string>>} Ordered list of lists of constraint values.
+ */
+sre.DynamicProperties.prototype.allProperties = function() {
+  var propLists = [];
+  this.order_.forEach(goog.bind(function(key) {
+    propLists.push(this.getProperty(key));
+  }, this));
+  return propLists;
+};
+
+
+/**
  * @override
  */
 sre.DynamicProperties.prototype.toString = function() {
@@ -197,7 +220,7 @@ sre.DynamicCstr.prototype.equal = function(cstr) {
 sre.DynamicCstr.Axis = {
   DOMAIN: 'domain',
   STYLE: 'style',
-  LANGUAGE: 'language',
+  LOCALE: 'locale',
   TOPIC: 'topic',
   MODALITY: 'modality'
 };
@@ -278,9 +301,9 @@ sre.DynamicCstr.Order;
  * @type {!sre.DynamicCstr.Order}
  */
 sre.DynamicCstr.DEFAULT_ORDER = [
+  sre.DynamicCstr.Axis.LOCALE,
   sre.DynamicCstr.Axis.DOMAIN,
   sre.DynamicCstr.Axis.STYLE,
-  sre.DynamicCstr.Axis.LANGUAGE,
   sre.DynamicCstr.Axis.TOPIC,
   sre.DynamicCstr.Axis.MODALITY
 ];
@@ -290,6 +313,21 @@ sre.DynamicCstr.DEFAULT_ORDER = [
  * @type {string}
  */
 sre.DynamicCstr.DEFAULT_VALUE = 'default';
+
+
+/**
+ * @type {Object.<sre.DynamicCstr.Axis, string>}
+ */
+sre.DynamicCstr.DEFAULT_VALUES = {};
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE] = 'en';
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] =
+    sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
+    sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
+    sre.DynamicCstr.DEFAULT_VALUE;
+sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
+    sre.DynamicCstr.DEFAULT_VALUE;
 
 
 
@@ -523,17 +561,10 @@ sre.DynamicCstr.create = function(var_args) {
  * @return {!sre.DynamicCstr} A default constraint of maximal order.
  */
 sre.DynamicCstr.defaultCstr = function() {
-  return sre.DynamicCstr.create.apply(null, sre.DynamicCstr.defaults_());
-};
-
-
-/**
- * @return {!Array.<!string>} List of default value of maximal order.
- * @private
- */
-sre.DynamicCstr.defaults_ = function() {
-  return Array.apply(null, Array(sre.DynamicCstr.DEFAULT_ORDER.length + 1)).
-      map(function() { return sre.DynamicCstr.DEFAULT_VALUE; });
+  return sre.DynamicCstr.create.apply(
+      null,
+      sre.DynamicCstr.DEFAULT_ORDER.map(
+      function(x) {return sre.DynamicCstr.DEFAULT_VALUES[x];}));
 };
 
 

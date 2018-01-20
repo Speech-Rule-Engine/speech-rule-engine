@@ -50,7 +50,7 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
  */
 sre.ApiTest.prototype.setUpTest = function() {
   this.system.setupEngine(
-      {semantics: true, domain: 'mathspeak', style: 'default',
+      {semantics: true, locale: 'en', domain: 'mathspeak', style: 'default',
         speech: sre.Engine.Speech.NONE});
 };
 

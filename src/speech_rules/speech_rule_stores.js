@@ -21,12 +21,15 @@
 goog.provide('sre.SpeechRuleStores');
 
 goog.require('sre.AbstractionRules');
+goog.require('sre.AbstractionSpanish');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.EmacspeakRules');
 goog.require('sre.MathmlStoreRules');
 goog.require('sre.MathspeakRules');
+goog.require('sre.MathspeakSpanish');
 goog.require('sre.PrefixRules');
+goog.require('sre.PrefixSpanish');
 goog.require('sre.SemanticTreeRules');
 
 
@@ -38,10 +41,13 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'MathmlStoreRules': sre.MathmlStoreRules,
   'SemanticTreeRules': sre.SemanticTreeRules,
   'MathspeakRules': sre.MathspeakRules,
+  'MathspeakSpanish': sre.MathspeakSpanish,
   'ClearspeakRules': sre.ClearspeakRules,
   'EmacspeakRules': sre.EmacspeakRules,
   'AbstractionRules': sre.AbstractionRules,
-  'PrefixRules': sre.PrefixRules
+  'AbstractionSpanish': sre.AbstractionSpanish,
+  'PrefixRules': sre.PrefixRules,
+  'PrefixSpanish': sre.PrefixSpanish
 };
 
 

@@ -187,6 +187,7 @@ The following is a list of command line options for the speech rule engine.
 | -t | --style [name]  | Speech style [name]. |
 ||| Selects a particular speech style (e.g., brief). |
 ||| If no style parameter is provided, style default is used. |
+| -o | --locale | Language locale in ISO 639-1. |
 | -s | --semantics     | Switch on semantics interpretation. |
 ||| Note, that some speech rule domains only make sense with semantics switched on or off. |
 | -e | --enumerate     | Enumerates all available domains and styles. |

@@ -1,5 +1,5 @@
-[
-  {
+[{"locale": "en"},
+ {
     "category": "Ll",
     "key": "1D26",
     "mappings": {
