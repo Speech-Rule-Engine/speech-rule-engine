@@ -572,14 +572,14 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   var props = {};
   var values = [dynamic.getValue(sre.DynamicCstr.Axis.LOCALE),
                 dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN)];
+  var defLocale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+  var defDomain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
   var exists = this.activeStore_.trie.hasSubtrie(values);
   // Get the trie exceptions
-  props[sre.DynamicCstr.Axis.LOCALE] =
-    [exists ? values[0] :
-     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]];
-  props[sre.DynamicCstr.Axis.DOMAIN] =
-    [exists ? values[1] :
-     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]];
+  props[sre.DynamicCstr.Axis.LOCALE] = [exists ? values[0] : defLocale];
+  exists = exists ? exists :
+    this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
+  props[sre.DynamicCstr.Axis.DOMAIN] = [exists ? values[1] : defDomain];
   var order = dynamic.getOrder();
   order.forEach(function(axis) {
     if (!props[axis]) {
