@@ -512,3 +512,132 @@ sre.MmlcloudEnglishTest.prototype.testRelationsWithEmpty = function() {
       'StartLayout 1st Row 1st Column 1 2nd Column less-than-or-equal-to 2' +
       ' EndLayout');
 };
+
+
+/**
+ * Tests for rows with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testLabelledRow = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+      '<mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel 1st' +
+                       ' Column a 2nd Column b EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren 1st Column a 2nd Column b EndLayout',
+                       'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label L p\'ren 1 R p\'ren 1st' +
+                       ' Column a 2nd Column b EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for lines with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testLabelledLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel' +
+                       ' a EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren a EndLayout',
+                       'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label L p\'ren 1 R p\'ren' +
+                       ' a EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testLabelledEmptyLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd>' +
+      '<mtd></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel' +
+                       ' Blank EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren Blank EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label L p\'ren 1 R p\'ren' +
+                       ' Blank EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines.
+ */
+sre.MmlcloudEnglishTest.prototype.testEmptyLine = function() {
+  var mml = '<mtable><mtr><mtd></mtd></mtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Blank EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Blank EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Blank EndLayout', 'sbrief');
+};
+
+
+/**
+ * Tests for empty lines with labels.
+ */
+sre.MmlcloudEnglishTest.prototype.testTextLabelledLine = function() {
+  var mml = '<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd>' +
+      '<mtd><mi>a</mi></mtd></mlabeledtr></mtable>';
+  this.executeRuleTest(mml, 'StartLayout 1st Row  with Label' +
+                       ' left-parenthesis 1 right-parenthesis EndLabel a' +
+                       ' EndLayout', 'default');
+  this.executeRuleTest(mml, 'StartLayout 1st Row  Label left-p\'ren 1' +
+                       ' right-p\'ren a EndLayout', 'brief');
+  this.executeRuleTest(mml, 'Layout 1st Row  Label 1 a EndLayout', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose.
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseGeneral = function() {
+  this.executeRuleTest('<menclose notation="circle"><mi>a</mi></menclose>',
+                       'StartEnclose circle a EndEnclose', 'default');
+};
+
+
+/**
+ * Test for general enclose overbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseOverbar = function() {
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a overbar', 'default');
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a overBar', 'brief');
+  this.executeRuleTest('<menclose notation="top"><mi>a</mi></menclose>',
+                       'a overBar', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose underbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseUnderbar = function() {
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a underbar', 'default');
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a underBar', 'brief');
+  this.executeRuleTest('<menclose notation="bottom"><mi>a</mi></menclose>',
+                       'a underBar', 'sbrief');
+};
+
+
+/**
+ * Test for general enclose leftbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseLeftbar = function() {
+  this.executeRuleTest('<menclose notation="left"><mi>a</mi></menclose>',
+                       'vertical-bar a', 'default');
+};
+
+
+/**
+ * Test for general enclose rightbar
+ */
+sre.MmlcloudEnglishTest.prototype.testEncloseRightbar = function() {
+  this.executeRuleTest('<menclose notation="right"><mi>a</mi></menclose>',
+                       'a vertical-bar', 'default');
+};

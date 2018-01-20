@@ -92,7 +92,7 @@ sre.BaseRuleStore = function() {
    * @type {string}
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-  
+
 };
 
 
@@ -105,7 +105,7 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.trie.lookupRules(node, dynamic);
+  var matchingRules = this.trie.lookupRules(node, dynamic.allProperties());
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
 };
@@ -377,6 +377,12 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
 };
 
 
+/**
+ * Default constraint parser that adds the locale to the rest constraint
+ * (generally, domain.style).
+ * @param {string} cstr The constraint string.
+ * @return {!sre.DynamicCstr} The parsed constraint including locale.
+ */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
   return this.parser.parse(this.locale + '.' + cstr);
 };

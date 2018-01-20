@@ -86,11 +86,11 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: style,
-         rules: this.rules, locale: this.locale});
+        rules: this.rules, locale: this.locale});
   var result = sre.System.getInstance().toSpeech(mathMl);
   this.appendExample_(mathMl, this.actual ? result : answer, style);
   if (!this.actual) {
-    this.assert.equal(result, answer); 
+    this.assert.equal(result, answer);
   }
 };
 
@@ -106,11 +106,11 @@ sre.AbstractRuleTest.prototype.appendExample_ = function(input, output, style) {
   this.appendExamples('<h2>' + this.information + ' Locale: ' + this.locale +
                       ', Style: ' +
                       sre.AbstractRuleTest.htmlCell_(
-                        sre.AbstractRuleTest.styleMap_(style)) +
+      sre.AbstractRuleTest.styleMap_(style)) +
                       '.</h2>',
                       sre.AbstractRuleTest.htmlCell_(input) +
                       sre.AbstractRuleTest.htmlCell_(output)
-                     );
+  );
 };
 
 

@@ -21,17 +21,29 @@
 goog.provide('sre.L10n');
 
 goog.require('sre.Engine');
-goog.require('sre.Locale');
 goog.require('sre.Locale.en');
 goog.require('sre.Locale.es');
 goog.require('sre.Messages');
 
 
+/**
+ * The basic method for setting the localized messages.
+ */
 sre.L10n.setLocale = function() {
-  var msgs = sre.Locale[sre.Engine.getInstance().locale];
+  var msgs = sre.L10n.getLocale();
   if (msgs) {
     for (var key in msgs) {
       sre.Messages[key] = msgs[key];
     }
   }
+};
+
+
+/**
+ * Gets locale message object. If the currently set locale does not exist, it
+ * defaults to English.
+ * @return {sre.Locale.Messages} A message object.
+ */
+sre.L10n.getLocale = function() {
+  return sre.Locale[sre.Engine.getInstance().locale] || sre.Locale['en'];
 };

@@ -113,7 +113,7 @@ sre.Engine = function() {
    * shallow, deep).
    * @type {sre.Engine.Speech}
    */
-  this.speech = sre.Engine.Speech.NONE;
+  this.speech = sre.Engine.Speech.SHALLOW;
 
   /**
    * List of rule sets given as the constructor functions.

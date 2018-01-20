@@ -27,7 +27,9 @@ goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
 
+goog.scope(function() {
 var msg = sre.Messages;
+
 
 /**
  * String function to separate text into single characters by adding
@@ -118,10 +120,18 @@ sre.MathspeakUtil.nestingBarriers = [
  */
 sre.MathspeakUtil.nestingDepth = {};
 
+
+/**
+ * Resets the nesting depth parameters. Method should be used on every new
+ * expression.
+ * @param {Node} node The node to translate.
+ * @return {Array.<Node>} Array containing the original node only.
+ */
 sre.MathspeakUtil.resetNestingDepth = function(node) {
   sre.MathspeakUtil.nestingDepth = {};
   return [node];
 };
+
 
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
@@ -229,8 +239,8 @@ sre.MathspeakUtil.computeNestingDepth_ = function(
  */
 sre.MathspeakUtil.fractionNestingDepth = function(node) {
   return sre.MathspeakUtil.getNestingDepth(
-    'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
-    msg.MS_FUNC.FRAC_NEST_DEPTH);
+      'fraction', node, ['fraction'], sre.MathspeakUtil.nestingBarriers, {},
+      msg.MS_FUNC.FRAC_NEST_DEPTH);
 };
 
 
@@ -299,7 +309,8 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_S;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.FRAC_S;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
+      msg.MS.FRAC_S;
 };
 
 
@@ -313,7 +324,8 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.ENDFRAC;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.ENDFRAC;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
+      msg.MS.ENDFRAC;
 };
 
 
@@ -327,7 +339,8 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_OVER;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + msg.MS.OVER;
+  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
+      msg.MS.OVER;
 };
 
 
@@ -676,7 +689,7 @@ sre.MathspeakUtil.baselineVerbose = function(node) {
     return msg.MS.BASELINE;
   }
   return baseline.replace(new RegExp(msg.MS.SUB + '$'), msg.MS.SUBSCRIPT).
-    replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
+      replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
 };
 
 
@@ -956,12 +969,4 @@ sre.MathspeakUtil.removeParens = function(node) {
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };
 
-
-sre.MathspeakUtil.localFont = function(font) {
-  return msg.FONT[font] || font;
-};
-
-
-sre.Grammar.getInstance().setCorrection(
-  'localFont', sre.MathspeakUtil.localFont
-);
+});  // goog.scope

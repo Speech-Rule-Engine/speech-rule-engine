@@ -1121,33 +1121,38 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[m] children/*', 'self::line');
   defineRule(
       'line-with-label', 'mathspeak.default',
-      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
+      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel" (pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
-  defineRule(
-      'line-with-label', 'mathspeak.brief',
-      '[t] "Label"; [n] content/*[1]; ' +
-      '[m] children/*',
-      'self::line', 'content');
+  defineSpecialisedRule(
+      'line-with-label', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1] (pause: 200); [m] children/*');
   defineSpecialisedRule(
       'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'line-with-text-label', 'mathspeak.sbrief',
-      '[t] "Label"; [t] CSFRemoveParens;' +
-      '[m] children/*',
+      '[t] "Label"; [t] CSFRemoveParens; [m] children/*',
       'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
-      '[t] "Blank"', 'self::line', 'count(children/*)=0');
+      '[t] "Blank"', 'self::line', 'count(children/*)=0', 'not(content)');
+  defineSpecialisedRule('empty-line', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule('empty-line', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'empty-line-with-label', 'mathspeak.default',
       '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
-      '[t] "Blank"', 'self::line', 'count(children/*)=0');
+      '[t] "Blank"', 'self::line', 'count(children/*)=0', 'content');
+  defineSpecialisedRule(
+      'empty-line-with-label', 'mathspeak.default', 'mathspeak.brief',
+      '[t] "Label"; [n] content/*[1] (pause: 200); [t] "Blank"');
+  defineSpecialisedRule(
+      'empty-line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Enclose
   defineRule(
       'enclose', 'mathspeak.default',
-      '[t] "StartEnclose"; [t] @role; [n] children/*[1]; [t] "EndEnclose"',
+      '[t] "StartEnclose"; [t] @role (grammar:localEnclose);' +
+      ' [n] children/*[1]; [t] "EndEnclose"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');
@@ -1159,7 +1164,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'self::enclose', '@role="left"');
   defineRule(
       'rightbar', 'mathspeak.default',
-      '[t] "vertical-bar"; [n] children/*[1]',
+      '[n] children/*[1]; [t] "vertical-bar"',
       'self::enclose', '@role="right"');
 
   // Crossout
