@@ -10378,6 +10378,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotation = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
   // This is not really legal markup.
+  console.log(1);
   this.executeMathmlTest(
       '<semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
@@ -10389,6 +10390,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
+  console.log(2);
   this.executeMathmlTest(
       '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
@@ -10404,6 +10406,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
+  console.log(3);
   this.executeMathmlTest(
       '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
@@ -10416,6 +10419,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
+  console.log(4);
   this.executeMathmlTest(
       '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
       '<annotation-xml><content>something</content>' +
@@ -10435,6 +10439,7 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
+  console.log(5);
   this.executeMathmlTest(
       '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
       '<content>something</content></annotation-xml></semantics>',
@@ -11144,4 +11149,43 @@ sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
       ' added="true" operator="infixop,⁢">⁢</mo><mi type="identifier"' +
       ' role="latinletter" id="6" parent="8">v</mi></math>');
 
+};
+
+
+/**
+ * Tests originating from issue #219. Incorrectly reordering elements.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlHiddenIgnoreElements = function() {
+  this.executeMathmlTest(
+    '<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
+      '</mrow><mi>b</mi></mfrac>',
+    '<math><mfrac type="fraction" role="division" id="3" children="0,2">' +
+      '<mrow><mi type="identifier" role="latinletter" id="0" parent="3">a' +
+      '</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi' +
+      ' type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mfrac></math>'
+  );
+  this.executeMathmlTest(
+    '<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom>' +
+      '</mrow></mrow><mi>b</mi></mfrac>',
+    '<math><mfrac type="fraction" role="division" id="5" children="3,4">' +
+      '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2" parent="5"><mi type="identifier" role="latinletter"' +
+      ' id="0" parent="3">a</mi><mo type="operator" role="multiplication"' +
+      ' id="2" parent="3" added="true" operator="infixop,⁢">⁢</mo><mrow><mi' +
+      ' type="identifier" role="latinletter" id="1" parent="3">d</mi>' +
+      '<mphantom><mi>c</mi></mphantom></mrow></mrow><mi type="identifier"' +
+      ' role="latinletter" id="4" parent="5">b</mi></mfrac></math>'
+  );
+  this.executeMathmlTest(
+    '<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi>' +
+      '</mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi>' +
+      '</merror></mstyle></mrow><mi>b</mi></mfrac>',
+    '<math><mfrac type="fraction" role="division" id="4" children="0,3">' +
+      '<mrow><mi type="identifier" role="latinletter" id="0" parent="4">a' +
+      '</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
+      '</mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">b</mi>' +
+      '</mfrac></math>'
+  );
 };

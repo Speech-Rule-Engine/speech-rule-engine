@@ -502,8 +502,10 @@ sre.EnrichMathml.validLca_ = function(left, right) {
  * @return {!Element} The parent node.
  */
 sre.EnrichMathml.ascendNewNode = function(newNode) {
+  // console.log('Trying Ascending!');
   while (!sre.SemanticUtil.hasMathTag(newNode) &&
          sre.EnrichMathml.unitChild_(newNode)) {
+  // console.log('Ascending!');
     newNode = sre.EnrichMathml.parentNode_(newNode);
   }
   return newNode;
@@ -512,7 +514,7 @@ sre.EnrichMathml.ascendNewNode = function(newNode) {
 
 /**
  * Descends a node as long as it only contains single empty tags, that do not
- * semantic annotations already, while ignoring tags like merror, etc.
+ * have semantic annotations already, while ignoring tags like merror, etc.
  * @param {!Element} node The node from which to descend.
  * @return {!Element} The inner most node with empty tag without semantic
  *    annotations.
@@ -549,8 +551,27 @@ sre.EnrichMathml.unitChild_ = function(node) {
   }
   return sre.DomUtil.toArray(parent.childNodes).every(
       function(child) {
-        return child === node || sre.SemanticUtil.hasIgnoreTag(child);
+        // console.log('here1?');
+        // console.log(child.toString());
+        // console.log(child === node || sre.SemanticUtil.hasIgnoreTag(child));
+        // console.log(child === node || sre.EnrichMathml.isIgnorable_(child));
+        return child === node || (sre.SemanticUtil.hasIgnoreTag(child) &&
+                                  sre.EnrichMathml.isIgnorable_(child));
+        // return child === node || sre.EnrichMathml.isIgnorable_(child);
       });
+};
+
+
+
+sre.EnrichMathml.isIgnorable_ = function(node) {
+  if (!node || sre.SemanticUtil.hasIgnoreTag(node)) {
+    return true;
+  }
+  if (!sre.SemanticUtil.hasEmptyTag(node)) {
+    return false;
+  }
+  return sre.DomUtil.toArray(node.childNodes)
+      .every(sre.EnrichMathml.isIgnorable_);
 };
 
 
