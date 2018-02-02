@@ -96,7 +96,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'variable-equality', 'default.default',
-      '[t] "equation sequence"; [m] ./children/* ' +
+      '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2',
@@ -104,14 +104,14 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'multi-equality', 'default.default',
-      '[t] "equation sequence"; [m] ./children/* ' +
+      '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
       'multi-equality', 'default.short',
-      '[t] "equation sequence"; [m] ./children/* ' +
+      '[t] "equation sequence"; [m] children/* ' +
           '(sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
@@ -155,7 +155,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'multi-addition', 'default.default',
       '[t] "sum with"; [t] count(./children/*); [t] "summands";' +
-          '[p] (pause:400); [m] ./children/* (sepFunc:CTXFcontentIterator)',
+          '[p] (pause:400); [m] children/* (sepFunc:CTXFcontentIterator)',
       'self::infixop[@role="addition"]', 'count(./children/*)>2');
 
   // Prefix Operator
@@ -187,13 +187,13 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
   // Font rules
   defineRule(
       'font', 'default.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'default.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -207,14 +207,14 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'font-identifier', 'default.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
 
   defineRule(
       'omit-font', 'default.default',
-      '[n] self::* (grammar:ignoreFont=@font)',
+      '[n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 

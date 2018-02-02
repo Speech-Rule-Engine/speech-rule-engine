@@ -115,7 +115,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   defineRule(
       'variable-equality', 'emacspeak.default',
-      '[t] "equation sequence"; [m] ./children/* ' +
+      '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2',
@@ -123,14 +123,14 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   defineRule(
       'multi-equality', 'emacspeak.default',
-      '[t] "equation sequence"; [m] ./children/* ' +
+      '[t] "equation sequence"; [m] children/* ' +
           '(context:"part",ctxtFunc:CTXFnodeCounter,' +
           'sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
   defineRule(
       'multi-equality', 'emacspeak.short',
-      '[t] "equation sequence"; [m] ./children/* ' +
+      '[t] "equation sequence"; [m] children/* ' +
           '(sepFunc:CTXFcontentIterator)',
       'self::relseq[@role="equality"]', 'count(./children/*)>2');
 
@@ -175,7 +175,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   defineRule(
       'binary-operation', 'emacspeak.default',
-      '[p] (pause:100); [m] ./children/* (sepFunc:CTXFcontentIterator);' +
+      '[p] (pause:100); [m] children/* (sepFunc:CTXFcontentIterator);' +
       ' [p] (pause:100);',
       'self::infixop');
 
@@ -215,7 +215,7 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
@@ -234,14 +234,14 @@ sre.EmacspeakRules.initSemanticRules_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font; [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
 
   defineRule(
       'omit-font', 'mathspeak.default',
-      '[n] self::* (grammar:ignoreFont=@font)',
+      '[n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 

@@ -235,13 +235,13 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -255,14 +255,14 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font)',
+      '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
 
   defineRule(
       'omit-font', 'mathspeak.default',
-      '[n] self::* (grammar:ignoreFont=@font)',
+      '[n] . (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
@@ -322,7 +322,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "línea base"; [t] @font (grammar:localFont); [n] self::*' +
+      '[t] "línea base"; [t] @font (grammar:localFont); [n] .' +
       ' (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
@@ -663,7 +663,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'multi-equality', 'mathspeak.default',
-      '[m] ./children/* (sepFunc:CTXFcontentIterator)',
+      '[m] children/* (sepFunc:CTXFcontentIterator)',
       'self::relseq', '@role="equality"', 'count(./children/*)>2');
 
   defineRule(
@@ -1299,7 +1299,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'children/*[@role="unit"]');
   defineRule(
       'unit-combine', 'mathspeak.default',
-      '[n] self::* (grammar:singularUnit);',
+      '[n] . (grammar:singularUnit);',
       'self::infixop', '@role="multiplication" or @role="implicit"',
       'children/*[@role="unit"]',
       'not(contains(@grammar, "singularUnit"))', 'CQFoneLeft');
