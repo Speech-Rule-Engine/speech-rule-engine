@@ -57,7 +57,7 @@ Current API functions are divided into three categories.
 
 **Note that in asynchronous operation mode for these methods to work correctly,
 it is necessary to ensure that the Engine is ready for processing. See the
-isReady flag below.**
+engineReady flag below.**
 
 #### Methods that take an input filename and optionally an output filename: 
 
@@ -124,7 +124,7 @@ exposed via the command line interface.
 | ---- | ---- |
 | `pprintXML(string)` | Returns pretty printed version of a serialised XML string. |
 | `version` | Returns SRE's version number. |
-| `isReady()` | Returns flag indicating that the engine is ready for procssing (i.e., all necessary rule files have been loaded, the engine is done updating, etc.). **This is important in asynchronous settings.** |
+| `engineReady()` | Returns flag indicating that the engine is ready for procssing (i.e., all necessary rule files have been loaded, the engine is done updating, etc.). **This is important in asynchronous settings.** |
 
 Standalone Tool
 ---------------
