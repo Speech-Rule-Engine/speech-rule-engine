@@ -121,7 +121,7 @@ sre.SemanticMathml.prototype.parseNodes_ = function(mmls) {
  * @private
  */
 sre.SemanticMathml.prototype.semantics_ = function(node, children) {
-  return children.length ? this.parse(/** @type {!Element} */(children[0])) :
+  return children.length ? this.parse(children[0]) :
       this.getFactory().makeEmptyNode();
 };
 
@@ -137,7 +137,7 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   children = sre.SemanticUtil.purgeNodes(children);
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
-    var newNode = this.parse(/** @type {!Element} */(children[0]));
+    var newNode = this.parse(children[0]);
   } else {
     // Case of a 'meaningful' row, even if they are empty.
     newNode = sre.SemanticProcessor.getInstance().row(

@@ -39,6 +39,12 @@ TEST_DEPS = $(TEST_DIR)/deps.js
 TEST = $(BIN_DIR)/test_sre
 TEST_SRC = $(TEST_DIR)/*.js
 
+JSDOC = $(NODE_MODULES)/.bin/jsdoc
+JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
+DOCS = $(PREFIX)/docs
+DOCS_SRC = $(DOCS)/src
+DOCS_TESTS = $(DOCS)/tests
+
 ##################################################################
 # Error flags.
 # Compiling as rigidly as possible.
@@ -250,3 +256,10 @@ clean_enrich:
 
 emacs: publish
 	@cp $(TARGET) ../emacs-math-speak/
+
+docs: $(JSDOC)
+	@$(JSDOC) $(JSDOC_FLAGS) $(SRC) -r -d $(DOCS_SRC)
+	@$(JSDOC) $(JSDOC_FLAGS) $(TEST_DIR) -r -d $(DOCS_TESTS)
+
+clean_docs:
+	rm -rf $(DOCS)

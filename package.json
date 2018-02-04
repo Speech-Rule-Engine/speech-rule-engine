@@ -32,14 +32,15 @@
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
     "commander": "*",
-    "xmldom": ">=0.1.25",
+    "wicked-good-xpath": "*",
     "xml-mapping": "*",
-    "xpath": "*"
+    "xmldom-sre": "*"
   },
   "devDependencies": {
     "closure-linter-wrapper": ">=1.1.0",
     "google-closure-compiler": ">=20160911.0.0",
-    "google-closure-library": ">=20160822.0.0"
+    "google-closure-library": ">=20160822.0.0",
+    "jsdoc": ">=3.5.5"
   },
   "files": [
     "index.js",

@@ -65,7 +65,7 @@ sre.AbstractExamples = function() {
    * @type {!string}
    * @private
    */
-  this.fileDirectory_ = 'www/localisation';
+  this.fileDirectory_ = 'resources/www/localisation';
 
   /**
    * Sets example output file for tests.

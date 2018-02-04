@@ -32,20 +32,18 @@ goog.require('sre.TrieNode');
  * @implements {sre.TrieNode}
  * @template T
  * @param {string} constraint The constraint the node represents.
- * @param {function(T): boolean} test The constraint test of this node.
+ * @param {?function(T): boolean} test The constraint test of this node.
  */
 sre.AbstractTrieNode = function(constraint, test) {
   /**
    * @type {string}
-   * @private
    */
-  this.constraint_ = constraint;
+  this.constraint = constraint;
 
   /**
-   * @type {function(T): boolean}
-   * @private
+   * @type {?function(T): boolean}
    */
-  this.test_ = test;
+  this.test = test;
 
   /**
    * @type {!Object.<sre.TrieNode>}
@@ -65,7 +63,7 @@ sre.AbstractTrieNode = function(constraint, test) {
  * @override
  */
 sre.AbstractTrieNode.prototype.getConstraint = function() {
-  return this.constraint_;
+  return this.constraint;
 };
 
 
@@ -80,8 +78,8 @@ sre.AbstractTrieNode.prototype.getKind = function() {
 /**
  * @override
  */
-sre.AbstractTrieNode.prototype.getTest = function() {
-  return this.test_;
+sre.AbstractTrieNode.prototype.applyTest = function(object) {
+  return this.test(object);
 };
 
 
@@ -123,7 +121,7 @@ sre.AbstractTrieNode.prototype.findChildren = function(object) {
   var children = [];
   for (var key in this.children_) {
     var child = this.children_[key];
-    if (child.getTest()(object)) {
+    if (child.applyTest(object)) {
       children.push(child);
     }
   }
@@ -135,7 +133,7 @@ sre.AbstractTrieNode.prototype.findChildren = function(object) {
  * @override
  */
 sre.AbstractTrieNode.prototype.toString = function() {
-  return this.constraint_;
+  return this.constraint;
 };
 
 
@@ -144,7 +142,7 @@ sre.AbstractTrieNode.prototype.toString = function() {
  * @constructor
  * @extends {sre.AbstractTrieNode<Node>}
  * @param {string} constraint The constraint the node represents.
- * @param {function(Node): boolean} test The constraint test of this node.
+ * @param {?function(Node): boolean} test The constraint test of this node.
  */
 sre.StaticTrieNode = function(constraint, test) {
   sre.StaticTrieNode.base(this, 'constructor', constraint, test);
@@ -186,6 +184,6 @@ sre.StaticTrieNode.prototype.setRule = function(rule) {
 sre.StaticTrieNode.prototype.toString = function() {
   var rule = this.getRule();
   return rule ?
-      this.constraint_ + '\n' + '==> ' + this.getRule().action :
-      this.constraint_;
+      this.constraint + '\n' + '==> ' + this.getRule().action :
+      this.constraint;
 };

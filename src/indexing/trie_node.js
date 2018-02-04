@@ -44,9 +44,10 @@ sre.TrieNode.prototype.getKind = function() { };
 
 
 /**
- * @return {function(T): boolean} The static method which tests the constraint.
+ * @param {T} object The object.
+ * @return {boolean} The static method which tests the constraint.
  */
-sre.TrieNode.prototype.getTest = function() { };
+sre.TrieNode.prototype.applyTest = function(object) { };
 
 
 /**

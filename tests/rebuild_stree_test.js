@@ -2089,9 +2089,6 @@ sre.RebuildStreeTest.prototype.testSemanticsAnnotationXml = function() {
       '<semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>');
   this.executeRebuildTest(
-      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
-      '</annotation-xml></semantics>');
-  this.executeRebuildTest(
       '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>');
   this.executeRebuildTest(

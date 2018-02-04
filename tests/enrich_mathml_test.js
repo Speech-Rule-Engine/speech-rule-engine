@@ -10393,21 +10393,6 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</math>'
   );
   this.executeMathmlTest(
-      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
-      '</annotation-xml></semantics>',
-      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
-      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
-      '<semantics>' +
-      '<annotation-xml type="text" role="unknown" id="1" parent="3">' +
-      '<content>something' +
-      '</content>' +
-      '</annotation-xml>' +
-      '</semantics>' +
-      '</math>'
-  );
-  this.executeMathmlTest(
       '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
       '<math>' +
@@ -11238,5 +11223,44 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' parent="4" operator="fenced">{</mo><mi type="identifier"' +
       ' role="latinletter" id="2" parent="4">x</mi><mo type="fence"' +
       ' role="close" id="3" parent="4" operator="fenced">}</mo></mrow></math>'
+  );
+};
+
+
+/**
+ * Tests originating from issue #219. Incorrectly reordering elements.
+ */
+sre.EnrichMathmlTest.prototype.testMathmlHiddenIgnoreElements = function() {
+  this.executeMathmlTest(
+      '<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
+      '</mrow><mi>b</mi></mfrac>',
+      '<math><mfrac type="fraction" role="division" id="3" children="0,2">' +
+      '<mrow><mi type="identifier" role="latinletter" id="0" parent="3">a' +
+      '</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi' +
+      ' type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
+      '</mfrac></math>'
+  );
+  this.executeMathmlTest(
+      '<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom>' +
+      '</mrow></mrow><mi>b</mi></mfrac>',
+      '<math><mfrac type="fraction" role="division" id="5" children="3,4">' +
+      '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
+      ' content="2" parent="5"><mi type="identifier" role="latinletter"' +
+      ' id="0" parent="3">a</mi><mo type="operator" role="multiplication"' +
+      ' id="2" parent="3" added="true" operator="infixop,⁢">⁢</mo><mrow><mi' +
+      ' type="identifier" role="latinletter" id="1" parent="3">d</mi>' +
+      '<mphantom><mi>c</mi></mphantom></mrow></mrow><mi type="identifier"' +
+      ' role="latinletter" id="4" parent="5">b</mi></mfrac></math>'
+  );
+  this.executeMathmlTest(
+      '<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi>' +
+      '</mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi>' +
+      '</merror></mstyle></mrow><mi>b</mi></mfrac>',
+      '<math><mfrac type="fraction" role="division" id="4" children="0,3">' +
+      '<mrow><mi type="identifier" role="latinletter" id="0" parent="4">a' +
+      '</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
+      '</mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow>' +
+      '<mi type="identifier" role="latinletter" id="3" parent="4">b</mi>' +
+      '</mfrac></math>'
   );
 };

@@ -39,11 +39,6 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {boolean}
-   */
-  this.initialized = false;
-
-  /**
    * @type {Array.<function()>}
    */
   this.initializer = [];
