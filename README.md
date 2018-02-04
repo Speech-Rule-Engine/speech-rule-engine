@@ -157,7 +157,7 @@ This will make both the command line executable and the interactive load script.
 
 As an example run
 
-    bin/sre -i samples/sample1.xml -o sample1.txt
+    bin/sre -i resources/samples/sample1.xml -o sample1.txt
     
 ### Run interactively ############
 

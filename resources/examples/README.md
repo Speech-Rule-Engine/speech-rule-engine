@@ -7,6 +7,6 @@ Go to the
 [web front end](http://zorkow.github.io/semantic-tree-visualiser/visualise.html)
 and enter for example
 ```
-http://rawgit.com/zorkow/speech-rule-engine/master/examples/quadratic.json
+http://rawgit.com/zorkow/speech-rule-engine/gh-pages/resouces/examples/quadratic.json
 ```
 and browse the semantic tree for the quadratic equation.
