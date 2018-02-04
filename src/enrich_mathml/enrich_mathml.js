@@ -502,10 +502,8 @@ sre.EnrichMathml.validLca_ = function(left, right) {
  * @return {!Element} The parent node.
  */
 sre.EnrichMathml.ascendNewNode = function(newNode) {
-  // console.log('Trying Ascending!');
   while (!sre.SemanticUtil.hasMathTag(newNode) &&
          sre.EnrichMathml.unitChild_(newNode)) {
-  // console.log('Ascending!');
     newNode = sre.EnrichMathml.parentNode_(newNode);
   }
   return newNode;
@@ -556,7 +554,13 @@ sre.EnrichMathml.unitChild_ = function(node) {
 };
 
 
-
+/**
+ * Checks recursively if the node is an element that can be ignored, i.e., only
+ * has empty and ignored tags.
+ * @param {!Element} node The node to be tested.
+ * @return {boolean} True if the node is ignorable.
+ * @private
+ */
 sre.EnrichMathml.isIgnorable_ = function(node) {
   if (!node || sre.SemanticUtil.hasIgnoreTag(node)) {
     return true;

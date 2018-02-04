@@ -11137,18 +11137,18 @@ sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlHiddenIgnoreElements = function() {
   this.executeMathmlTest(
-    '<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
+      '<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
       '</mrow><mi>b</mi></mfrac>',
-    '<math><mfrac type="fraction" role="division" id="3" children="0,2">' +
+      '<math><mfrac type="fraction" role="division" id="3" children="0,2">' +
       '<mrow><mi type="identifier" role="latinletter" id="0" parent="3">a' +
       '</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi' +
       ' type="identifier" role="latinletter" id="2" parent="3">b</mi>' +
       '</mfrac></math>'
   );
   this.executeMathmlTest(
-    '<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom>' +
+      '<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom>' +
       '</mrow></mrow><mi>b</mi></mfrac>',
-    '<math><mfrac type="fraction" role="division" id="5" children="3,4">' +
+      '<math><mfrac type="fraction" role="division" id="5" children="3,4">' +
       '<mrow type="infixop" role="implicit" id="3" children="0,1"' +
       ' content="2" parent="5"><mi type="identifier" role="latinletter"' +
       ' id="0" parent="3">a</mi><mo type="operator" role="multiplication"' +
@@ -11158,10 +11158,10 @@ sre.EnrichMathmlTest.prototype.testMathmlHiddenIgnoreElements = function() {
       ' role="latinletter" id="4" parent="5">b</mi></mfrac></math>'
   );
   this.executeMathmlTest(
-    '<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi>' +
+      '<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi>' +
       '</mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi>' +
       '</merror></mstyle></mrow><mi>b</mi></mfrac>',
-    '<math><mfrac type="fraction" role="division" id="4" children="0,3">' +
+      '<math><mfrac type="fraction" role="division" id="4" children="0,3">' +
       '<mrow><mi type="identifier" role="latinletter" id="0" parent="4">a' +
       '</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow>' +
       '</mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow>' +
