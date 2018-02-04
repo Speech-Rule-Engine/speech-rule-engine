@@ -316,8 +316,7 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
     }
     // Here we need a case that the newChild is actually an existing descendant
     // of the node, i.e., somewhere beneath but not contained in oldChildren.
-    if (sre.EnrichMathml.isDescendant_(
-        /**@type{!Element}*/ (newChildren[0]), node)) {
+    if (sre.EnrichMathml.isDescendant_(newChildren[0], node)) {
       newChildren.shift();
       continue;
     }
