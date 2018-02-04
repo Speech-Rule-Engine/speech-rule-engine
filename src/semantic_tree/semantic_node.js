@@ -110,13 +110,13 @@ sre.SemanticNode.prototype.xml = function(xml, opt_brief) {
     */
   var xmlNodeList = function(tag, nodes) {
     var xmlNodes = nodes.map(function(x) {return x.xml(xml, opt_brief);});
-    var tagNode = xml.createElement(tag);
+    var tagNode = xml.createElementNS('', tag);
     for (var i = 0, child; child = xmlNodes[i]; i++) {
       tagNode.appendChild(child);
     }
     return tagNode;
   };
-  var node = xml.createElement(this.type);
+  var node = xml.createElementNS('', this.type);
   if (!opt_brief) {
     this.xmlAttributes_(node);
   }

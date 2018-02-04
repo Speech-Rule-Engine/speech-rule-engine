@@ -93,6 +93,11 @@ sre.BaseRuleStore = function() {
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
+  /**
+   * @type {boolean}
+   */
+  this.initialized = false;
+
 };
 
 

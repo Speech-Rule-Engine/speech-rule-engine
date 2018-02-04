@@ -163,15 +163,21 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
  * @param {sre.SpeechRuleStore} store The rule store.
  */
 sre.QueryTrieNode = function(constraint, store) {
-  var test = sre.TrieNodeFactory.constraintTest_(constraint) ||
-      goog.bind(
-          function(node) {return store.applyQuery(node, constraint) === node;},
-          store);
-  sre.QueryTrieNode.base(this, 'constructor', constraint, test);
+  this.store_ = store;
+  sre.QueryTrieNode.base(this, 'constructor', constraint,
+                         sre.TrieNodeFactory.constraintTest_(constraint));
   this.kind = sre.TrieNode.Kind.QUERY;
 };
 goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
 
+
+/**
+ * @override
+ */
+sre.QueryTrieNode.prototype.applyTest = function(object) {
+  return this.test ? this.test(object) :
+    this.store_.applyQuery(object, this.constraint) === object;
+};
 
 
 /**
@@ -181,12 +187,19 @@ goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
  * @param {sre.SpeechRuleStore} store The rule store.
  */
 sre.BooleanTrieNode = function(constraint, store) {
-  var test = sre.TrieNodeFactory.constraintTest_(constraint) ||
-      goog.bind(
-          function(node) { return store.applyConstraint(node, constraint); },
-          store);
+  this.store_ = store;
   sre.BooleanTrieNode.base(
-      this, 'constructor', constraint, test);
+    this, 'constructor', constraint,
+    sre.TrieNodeFactory.constraintTest_(constraint));
   this.kind = sre.TrieNode.Kind.BOOLEAN;
 };
 goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);
+
+
+/**
+ * @override
+ */
+sre.BooleanTrieNode.prototype.applyTest = function(object) {
+  return this.test ? this.test(object) :
+    this.store_.applyConstraint(object, this.constraint);
+};
