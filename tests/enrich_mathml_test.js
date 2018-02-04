@@ -10378,7 +10378,6 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotation = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
   // This is not really legal markup.
-  console.log(1);
   this.executeMathmlTest(
       '<semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
@@ -10390,23 +10389,6 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
-  console.log(2);
-  this.executeMathmlTest(
-      '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
-      '</annotation-xml></semantics>',
-      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
-      '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
-      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
-      '<semantics>' +
-      '<annotation-xml type="text" role="unknown" id="1" parent="3">' +
-      '<content>something' +
-      '</content>' +
-      '</annotation-xml>' +
-      '</semantics>' +
-      '</math>'
-  );
-  console.log(3);
   this.executeMathmlTest(
       '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>',
@@ -10419,7 +10401,6 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
-  console.log(4);
   this.executeMathmlTest(
       '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
       '<annotation-xml><content>something</content>' +
@@ -10439,7 +10420,6 @@ sre.EnrichMathmlTest.prototype.testMathmlSemanticsAnnotationXml = function() {
       '</semantics>' +
       '</math>'
   );
-  console.log(5);
   this.executeMathmlTest(
       '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
       '<content>something</content></annotation-xml></semantics>',
