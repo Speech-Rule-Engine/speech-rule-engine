@@ -1950,7 +1950,7 @@ sre.SemanticProcessor.prototype.pseudoTensor = function(base, sub, sup) {
 
 /**
  * Creates a script node for a tensor, which is effectively a dummy punctuation.
- * @param {!Array.<sre.SemanticNode>} nodes A list of unprocessed nodes for
+ * @param {!Array.<!sre.SemanticNode>} nodes A list of unprocessed nodes for
  *      that script.
  * @param {sre.SemanticAttr.Role} role The role of the dummy node.
  * @param {boolean=} opt_noSingle Flag indicating whether role should be set
@@ -1966,7 +1966,7 @@ sre.SemanticProcessor.prototype.scriptNode_ = function(
           makeEmptyNode();
       break;
     case 1:
-      newNode = /** @type {!sre.SemanticNode} */(nodes[0]);
+      newNode = nodes[0];
       if (opt_noSingle) {
         return newNode;
       }
