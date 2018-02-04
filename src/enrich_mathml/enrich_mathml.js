@@ -512,7 +512,7 @@ sre.EnrichMathml.ascendNewNode = function(newNode) {
 
 /**
  * Descends a node as long as it only contains single empty tags, that do not
- * semantic annotations already, while ignoring tags like merror, etc.
+ * have semantic annotations already, while ignoring tags like merror, etc.
  * @param {!Element} node The node from which to descend.
  * @return {!Element} The inner most node with empty tag without semantic
  *    annotations.
@@ -549,8 +549,27 @@ sre.EnrichMathml.unitChild_ = function(node) {
   }
   return sre.DomUtil.toArray(parent.childNodes).every(
       function(child) {
-        return child === node || sre.SemanticUtil.hasIgnoreTag(child);
+        return child === node || sre.EnrichMathml.isIgnorable_(child);
       });
+};
+
+
+/**
+ * Checks recursively if the node is an element that can be ignored, i.e., only
+ * has empty and ignored tags.
+ * @param {!Element} node The node to be tested.
+ * @return {boolean} True if the node is ignorable.
+ * @private
+ */
+sre.EnrichMathml.isIgnorable_ = function(node) {
+  if (!node || sre.SemanticUtil.hasIgnoreTag(node)) {
+    return true;
+  }
+  if (!sre.SemanticUtil.hasEmptyTag(node)) {
+    return false;
+  }
+  return sre.DomUtil.toArray(node.childNodes)
+      .every(sre.EnrichMathml.isIgnorable_);
 };
 
 
