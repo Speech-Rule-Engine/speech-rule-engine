@@ -6,8 +6,7 @@ Speech Rule Engine
 NodeJS version of the ChromeVox speech rule engine.
 Forked from ChromeVox release 1.31.0
 
-Speech rule engine (SRE) is 
-The speech rule engine can translate XML expressions into speech strings according to rules that
+Speech rule engine (SRE) can translate XML expressions into speech strings according to rules that
 can be specified in a syntax using Xpath expressions.  It was originally designed for translation
 of MathML and MathJax DOM elements for the ChromeVox screen reader. 
 Besides the rules originally designed for the use in ChromeVox, it also has an implemententation of the 
