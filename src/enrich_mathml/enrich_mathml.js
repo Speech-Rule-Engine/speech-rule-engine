@@ -551,13 +551,7 @@ sre.EnrichMathml.unitChild_ = function(node) {
   }
   return sre.DomUtil.toArray(parent.childNodes).every(
       function(child) {
-        // console.log('here1?');
-        // console.log(child.toString());
-        // console.log(child === node || sre.SemanticUtil.hasIgnoreTag(child));
-        // console.log(child === node || sre.EnrichMathml.isIgnorable_(child));
-        return child === node || (sre.SemanticUtil.hasIgnoreTag(child) &&
-                                  sre.EnrichMathml.isIgnorable_(child));
-        // return child === node || sre.EnrichMathml.isIgnorable_(child);
+        return child === node || sre.EnrichMathml.isIgnorable_(child);
       });
 };
 
