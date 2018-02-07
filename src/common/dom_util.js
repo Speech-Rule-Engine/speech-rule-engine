@@ -60,7 +60,7 @@ sre.DomUtil.trimInput_ = function(input) {
  * @type {Object.<boolean>}
  */
 sre.DomUtil.XML_ENTITIES =
-  {'&lt;': true, '&gt;': true, '&amp;': true, '&quot;': true, '&apos;': true};
+    {'&lt;': true, '&gt;': true, '&amp;': true, '&quot;': true, '&apos;': true};
 
 
 /**

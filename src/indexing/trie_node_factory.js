@@ -176,8 +176,9 @@ goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
  */
 sre.QueryTrieNode.prototype.applyTest = function(object) {
   return this.test ? this.test(object) :
-    this.store_.applyQuery(object, this.constraint) === object;
+      this.store_.applyQuery(object, this.constraint) === object;
 };
+
 
 
 /**
@@ -189,8 +190,8 @@ sre.QueryTrieNode.prototype.applyTest = function(object) {
 sre.BooleanTrieNode = function(constraint, store) {
   this.store_ = store;
   sre.BooleanTrieNode.base(
-    this, 'constructor', constraint,
-    sre.TrieNodeFactory.constraintTest_(constraint));
+      this, 'constructor', constraint,
+      sre.TrieNodeFactory.constraintTest_(constraint));
   this.kind = sre.TrieNode.Kind.BOOLEAN;
 };
 goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);
@@ -201,5 +202,5 @@ goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);
  */
 sre.BooleanTrieNode.prototype.applyTest = function(object) {
   return this.test ? this.test(object) :
-    this.store_.applyConstraint(object, this.constraint);
+      this.store_.applyConstraint(object, this.constraint);
 };
