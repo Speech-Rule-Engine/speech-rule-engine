@@ -85,7 +85,6 @@ sre.SystemExternal.document = sre.SystemExternal.documentSupported() ?
  */
 sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
     document :
-    // sre.SystemExternal.require('xpath');
     function() {
       var window = {document: {}};
       var wgx = sre.SystemExternal.require('wicked-good-xpath');

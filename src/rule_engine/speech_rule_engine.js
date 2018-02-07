@@ -70,7 +70,7 @@ sre.SpeechRuleEngine = function() {
   this.ready_ = true;
 
   /**
-   * Caches constructed combined stores.
+   * Caches combined stores that have already been constructed.
    * @type {Object.<sre.BaseRuleStore>}
    * @private
    */
@@ -232,7 +232,6 @@ sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
   var result = this.evaluateNode_(node);
   var timeOut = (new Date()).getTime();
   sre.Debugger.getInstance().output('Time:', timeOut - timeIn);
-  // console.log('Eval Time:', timeOut - timeIn);
   return result;
 };
 
