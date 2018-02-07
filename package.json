@@ -34,7 +34,7 @@
     "commander": "*",
     "wicked-good-xpath": "*",
     "xml-mapping": "*",
-    "xmldom-sre": "*"
+    "xmldom-sre": ">=0.1.31"
   },
   "devDependencies": {
     "closure-linter-wrapper": ">=1.1.0",

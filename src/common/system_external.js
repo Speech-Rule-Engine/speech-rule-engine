@@ -84,15 +84,14 @@ sre.SystemExternal.document = sre.SystemExternal.documentSupported() ?
  * @type {Object}
  */
 sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
-  document :
-  // sre.SystemExternal.require('xpath');
-  function() {
-    var window = {document: {}};
-    var wgx = sre.SystemExternal.require('wicked-good-xpath');
-    wgx.install(window);
-    window.document.XPathResult = window.XPathResult;
-    return window.document;
-  }();
+    document :
+    function() {
+      var window = {document: {}};
+      var wgx = sre.SystemExternal.require('wicked-good-xpath');
+      wgx.install(window);
+      window.document.XPathResult = window.XPathResult;
+      return window.document;
+    }();
 
 
 /**
