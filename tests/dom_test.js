@@ -92,8 +92,8 @@ sre.DomTest.prototype.testXpathEvaluate = function() {
   this.assert.equal(sre.XpathUtil.evalXPath('//b', xml).toString(), '<b>c</b>');
   this.assert.equal(sre.XpathUtil.evalXPath('//b/text()', xml).toString(), 'c');
   this.assert.equal(
-    sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(),
-    '<d>e</d>');
+      sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(),
+      '<d>e</d>');
 };
 
 
