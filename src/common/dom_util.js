@@ -56,6 +56,14 @@ sre.DomUtil.trimInput_ = function(input) {
 
 
 /**
+ * Set of XML entities.
+ * @type {Object.<boolean>}
+ */
+sre.DomUtil.XML_ENTITIES =
+    {'&lt;': true, '&gt;': true, '&amp;': true, '&quot;': true, '&apos;': true};
+
+
+/**
  * Parses the XML input string into an XML structure.
  * @param {string} input The XML input string.
  * @param {function (new:Error, string)=} opt_error Optional error function.
@@ -65,14 +73,17 @@ sre.DomUtil.parseInput = function(input, opt_error) {
   var error = opt_error || Error;
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var clean_input = sre.DomUtil.trimInput_(input);
+  var allValues = clean_input.match(/\&(?!lt|gt|amp|quot|apos)\w+;/g);
+  var html = !!allValues;
   if (!clean_input) {
     var newError = new error('Empty input!');
     throw newError;
   }
   try {
-    var doc = dp.parseFromString(clean_input, 'text/xml');
+    var doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
     if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
       sre.XpathUtil.currentDocument = doc;
+      return html ? doc.body.childNodes[0] : doc.documentElement;
     }
     return doc.documentElement;
   } catch (err) {

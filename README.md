@@ -23,7 +23,7 @@ it in your project.
 if you want to use the speech rule engine in batch mode or interactivley to add
 your own code. Or simply run it with ```npx```, for example to get all SRE options anywhere without local installation run:
 
-    ```npx -p speech-rule-engine sre -h```
+    ```npx speech-rule-engine -h```
 
 3. **Browser Library:** This gives you the option of loading SRE in a browser and
    use its full functionality on your webesites.
@@ -83,6 +83,7 @@ Most common options are:
 | ---- | ---- |
 | *domain* | Domain or subject area of speech rules (e.g., mathspeak, emacspeak).|
 | *style* | Style of speech rules (e.g., brief).|
+| *locale* | Language locale in 639-1. Currently available: en, es |
 | *markup*| Set the markup: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss``` |
 | *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
 | *semantics* | Boolean flag to switch **OFF** semantic interpretation. Non-semantic rule sets are deprecated. |
@@ -127,18 +128,18 @@ exposed via the command line interface.
 Standalone Tool
 ---------------
 
-Node dependencies you have to install:
+Install dependencies either by running:
+
+     npm install
+     
+Or install them manually. SRE depends on the following libraries:
 
      google-closure-compiler
      google-closure-library
-     xmldom
-     xpath
+     xmldom-sre
+     wicked-good-xpath
      commander
      xml-mapping
- 
-Using npm run
-
-     npm install google-closure-compiler google-closure-library xmldom xpath commander xml-mapping
 
 
 ### Build #############
@@ -156,7 +157,7 @@ This will make both the command line executable and the interactive load script.
 
 As an example run
 
-    bin/sre -i samples/sample1.xml -o sample1.txt
+    bin/sre -i resources/samples/sample1.xml -o sample1.txt
     
 ### Run interactively ############
 
@@ -237,7 +238,7 @@ important API functions are also available in ``SRE``.
 ### Configuration ####
 
 In addition to programmatically configuring SRE using the ``setupEngine``
-method, you can also include a configuration element in a website, that can take
+method, you can also include a configuration element in a website, that can take the same options as ``setupEngine``.
 
 For example the configuration element
 ``` html
@@ -277,11 +278,11 @@ Other make targets useful during development are:
 
     make test
     
-Runs all the tests using the Node's assert module. Output is pretty printed to stdout.
+Runs all the tests using Node's assert module. Output is pretty printed to stdout.
 
     make lint
     
-Runs the closure linter tool. To use this option, you need to install the appropriate node package with
+Runs the closure linter tool. To use this option, you need to install the node package
 
     npm install closure-linter-wrapper
 
@@ -289,7 +290,7 @@ To automatically fix some of linting errors run:
     
     make fixjsstyle
 
-Note, that all JavaScript code in this repository is fully linted and compiles error free with respect to the strictest possible closure compiler settings.
+Note, that all JavaScript code in this repository is fully linted and compiles error free with respect to the strictest possible closure compiler settings, however, not using the ``newCheckTypes`` option.
 
 When creating a pull request, please make sure that your code compiles and is fully linted.
 
@@ -307,3 +308,11 @@ This first builds the package by executing
     make publish
     
 This make command is also useful for local testing of the package.
+
+### Documentation
+
+To generate documentation from the [JSDOC](http://usejsdoc.org/), simply run 
+
+    make docs
+
+This will generate documentation for the source coude and test code in the directories ``docs/src`` and ``docs/tests``, respectively.
