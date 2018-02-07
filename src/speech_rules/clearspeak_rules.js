@@ -145,6 +145,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'stree', 'clearspeak.default',
       '[n] ./*[1]', 'self::stree');
+  defineRule(
+      'omit-empty', 'clearspeak.default',
+      '[p] (pause:"short")', 'self::empty');
 
   // Font rules
   defineRule(
