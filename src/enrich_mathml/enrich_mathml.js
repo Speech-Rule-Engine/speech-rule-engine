@@ -564,7 +564,8 @@ sre.EnrichMathml.isIgnorable_ = function(node) {
   if (!node || sre.SemanticUtil.hasIgnoreTag(node)) {
     return true;
   }
-  if (!sre.SemanticUtil.hasEmptyTag(node)) {
+  var children = sre.DomUtil.toArray(node.childNodes);
+  if (!sre.SemanticUtil.hasEmptyTag(node) && children.length) {
     return false;
   }
   return sre.DomUtil.toArray(node.childNodes)
@@ -784,7 +785,7 @@ sre.EnrichMathml.getInnerNode = function(node) {
   }
   var remainder = children.filter(function(child) {
     return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.SemanticUtil.hasIgnoreTag(child);
+        !sre.EnrichMathml.isIgnorable_(child);
   });
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
