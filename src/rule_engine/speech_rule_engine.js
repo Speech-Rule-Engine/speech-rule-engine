@@ -417,9 +417,11 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
   for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
   }
-  // MOSS: Removes the last joiner in a multi node element. This should be reviewed.
+  // MOSS: Removes the last joiner in a multi node element. This should be
+  //       reviewed.
   if (multi) {
-    delete descrs[descrs.length - 1].personality[sre.Engine.personalityProps.JOIN];
+    delete descrs[descrs.length - 1].
+        personality[sre.Engine.personalityProps.JOIN];
   }
   return descrs;
 };
@@ -662,6 +664,14 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
 };
 
 
+/**
+ * Splits preference form style names into set of preference settings.
+ * @param {string} value The value of the style setting.
+ * @param {?Object.<string>} preferences Set of Clearspeak preferences or null.
+ * @return {Array.<string>} The style settings. Either a single element or a
+ *      pair associating a Clearspeak preference with a value.
+ * @private
+ */
 sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
   if (!preferences || !Object.keys(preferences).length) {
     return [value];

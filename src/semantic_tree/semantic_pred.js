@@ -400,7 +400,7 @@ sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
 
 /**
  * Is the node a simple function?
- * @param {!sre.SemanticNode} node The node.
+ * @param {sre.SemanticNode} node The node.
  * @return {boolean} True if node is an identifier with role simple function.
  */
 sre.SemanticPred.isSimpleFunction = function(node) {
@@ -409,18 +409,33 @@ sre.SemanticPred.isSimpleFunction = function(node) {
 };
 
 
+/**
+ * Is the node a left brace?
+ * @param {sre.SemanticNode} node The node.
+ * @return {boolean} True if the node is a left brace.
+ */
 sre.SemanticPred.isLeftBrace = function(node) {
   var leftBrace = ['{', '﹛', '｛']; // ['0x007B', '0xFE5B', '0xFF5B'];
-  return leftBrace.indexOf(node.textContent) !== -1;
+  return !!node && leftBrace.indexOf(node.textContent) !== -1;
 };
 
 
+/**
+ * Is the node a right brace?
+ * @param {sre.SemanticNode} node The node.
+ * @return {boolean} True if the node is a right brace.
+ */
 sre.SemanticPred.isRightBrace = function(node) {
   var rightBrace = ['}', '﹜', '｝']; // ['0x007D', '0xFE5C', '0xFF5D'];
-  return rightBrace.indexOf(node.textContent) !== -1;
+  return !!node && rightBrace.indexOf(node.textContent) !== -1;
 };
 
 
+/**
+ * Is the node a set like node, i.e., a fenced node with braces.
+ * @param {!sre.SemanticNode} node The node.
+ * @return {boolean} True if the node is a set.
+ */
 sre.SemanticPred.isSetNode = function(node) {
   return sre.SemanticPred.isLeftBrace(node.contentNodes[0]) &&
       sre.SemanticPred.isRightBrace(node.contentNodes[1]);

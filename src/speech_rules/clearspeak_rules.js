@@ -101,18 +101,20 @@ var addCTXF = sre.ClearspeakRules.addContextFunction_;
 
 /**
  * Adds the annotators.
+ * @private
  */
 sre.ClearspeakRules.addAnnotators_ = function() {
   sre.SemanticAnnotations.getInstance().register(
-    sre.ClearspeakUtil.simpleExpression());
+      sre.ClearspeakUtil.simpleExpression());
   sre.SemanticAnnotations.getInstance().register(
-    sre.ClearspeakUtil.unitExpression());
+      sre.ClearspeakUtil.unitExpression());
   // sre.Engine.getInstance().style = 'preferences';
 };
 
 
 /**
  * Changes the comparators.
+ * @private
  */
 sre.ClearspeakRules.addComparator_ = function() {
   sre.Engine.getInstance().comparators['clearspeak'] =
@@ -331,16 +333,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'text()="\u2209"'
   );
   defineSpecialisedRule(
-    'set-not-member', 'clearspeak.default',
-    'clearspeak.SetMemberSymbol_Member',
+      'set-not-member', 'clearspeak.default',
+      'clearspeak.SetMemberSymbol_Member',
       '[t] "not member of"');
   defineSpecialisedRule(
-    'set-not-member', 'clearspeak.default',
-    'clearspeak.SetMemberSymbol_Element',
+      'set-not-member', 'clearspeak.default',
+      'clearspeak.SetMemberSymbol_Element',
       '[t] "not element of"');
   defineSpecialisedRule(
-    'set-not-member', 'clearspeak.default',
-    'clearspeak.SetMemberSymbol_Belongs',
+      'set-not-member', 'clearspeak.default',
+      'clearspeak.SetMemberSymbol_Belongs',
       '[t] "not belonging to"');
 
 
@@ -356,54 +358,54 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'feet', 'clearspeak.default',
       '[n] children/*[1]; [t] "feet"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'name(children/*[1])="number"',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="number"',
       'children/*[2][text()="′"]', 'not(preceding-sibling::*[@role="degree"])');
   defineRule(
       'foot', 'clearspeak.default',
       '[n] children/*[1]; [t] "foot"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'name(children/*[1])="number"',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="number"',
       'children/*[2][text()="′"]', 'children/*[1][text()="1"]',
       'not(preceding-sibling::*[@role="degree"])');
   defineRule(
       'inches', 'clearspeak.default',
       '[n] children/*[1]; [t] "inches"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'name(children/*[1])="number"',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="number"',
       'children/*[2][text()="″"]', 'not(preceding-sibling::*[@role="degree"])');
   defineRule(
       'inch', 'clearspeak.default',
       '[n] children/*[1]; [t] "inch"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'name(children/*[1])="number"',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'name(children/*[1])="number"',
       'children/*[2][text()="″"]', 'children/*[1][text()="1"]',
       'not(preceding-sibling::*[@role="degree"])');
   // Degrees, minutes, and seconds
   defineRule(
       'minutes', 'clearspeak.default',
       '[p] (pause:short); [n] children/*[1]; [t] "minutes"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'preceding-sibling::*[@role="degree"]',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'preceding-sibling::*[@role="degree"]',
       'children/*[2][text()="′"]');
   defineRule(
       'minute', 'clearspeak.default',
       '[p] (pause:short); [n] children/*[1]; [t] "minute"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'preceding-sibling::*[@role="degree"]',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'preceding-sibling::*[@role="degree"]',
       'children/*[2][text()="′"]', 'children/*[1][text()="1"]');
   // TODO: (Simons) Sort these out properly.
   defineRule(
       'seconds', 'clearspeak.default',
       '[p] (pause:short); [n] children/*[1]; [t] "seconds"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'preceding-sibling::*[@role="degree"]',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'preceding-sibling::*[@role="degree"]',
       'children/*[2][text()="″"]');
   defineRule(
       'second', 'clearspeak.default',
       '[p] (pause:short); [n] children/*[1]; [t] "second"',
-    'self::superscript', 'children/*[2][@role="prime"]',
-    'preceding-sibling::*[@role="degree"]',
+      'self::superscript', 'children/*[2][@role="prime"]',
+      'preceding-sibling::*[@role="degree"]',
       'children/*[2][text()="″"]', 'children/*[1][text()="1"]');
   // Angle preference
   defineRule(
@@ -417,11 +419,11 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'minutes-angle', 'clearspeak.Prime_Angle',
       '[n] children/*[1]; [t] "minutes"; [p] (pause:short)',
-    'self::superscript',
-    'children/*[2][@role="prime"]',
-      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] ' +
-        'and ""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz",' +
-      ' ""))',
+      'self::superscript',
+      'children/*[2][@role="prime"]',
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"]' +
+      ' and ' +
+      '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
       'children/*[2][text()="′"]');
   defineRule(
       'minute-angle', 'clearspeak.Prime_Angle',
@@ -432,9 +434,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'seconds-angle', 'clearspeak.Prime_Angle',
       '[n] children/*[1]; [t] "seconds"; [p] (pause:short)',
       'self::superscript', 'children/*[2][@role="prime"]',
-      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] ' +
-        'and ""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz",' +
-      ' ""))',
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"]' +
+      ' and ' +
+      '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
       'children/*[2][text()="″"]');
   defineRule(
       'second-angle', 'clearspeak.Prime_Angle',
@@ -446,7 +448,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'feet-length', 'clearspeak.Prime_Length',
       '[n] children/*[1]; [t] "feet"; [p] (pause:short)',
       'self::superscript', 'children/*[2][@role="prime"]',
-      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] and ' +
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"]' +
+      ' and ' +
       '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
       'children/*[2][text()="′"]');
   defineRule(
@@ -458,7 +461,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'inches-length', 'clearspeak.Prime_Length',
       '[n] children/*[1]; [t] "inches"; [p] (pause:short)',
       'self::superscript', 'children/*[2][@role="prime"]',
-      'name(children/*[1])="number" or (children/*[1][@role="latinletter"] and ' +
+      'name(children/*[1])="number" or (children/*[1][@role="latinletter"]' +
+      ' and ' +
       '""=translate(children/*[1]/text(),"abcdefghijklmnopqrstuvwxyz", ""))',
       'children/*[2][text()="″"]');
   defineRule(
@@ -488,17 +492,20 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::appl');
   defineRule(
       'appl-simple', 'clearspeak.default',
-      '[n] children/*[1]; [t] "of"; [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "of"; [p] (pause:"short"); [n] children/*[2];' +
+      ' [p] (pause:"short")',
       'self::appl', '@role="simple function"', 'name(children/*[2])="appl"');
   defineRule(
       'appl-simple', 'clearspeak.default',
-      '[n] children/*[1]; [t] "of"; [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "of"; [p] (pause:"short"); [n] children/*[2];' +
+      ' [p] (pause:"short")',
       'self::appl', '@role="simple function"', 'name(children/*[2])="fenced"',
       'name(children/*[2]/children/*[1])="appl"');
 
   defineRule(
       'appl', 'clearspeak.Functions_None',
-      '[p] (pause:"short"); [n] children/*[1]; [t] "times"; [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [n] children/*[1]; [t] "times"; ' +
+      '[n] children/*[2]; [p] (pause:"short")',
       'self::appl');
 
   defineRule(
@@ -516,14 +523,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //     'function-prefix', 'clearspeak.default',
   //     '[n] children/*[1]; [n] children/*[2]; [p] (pause:"short")',
   //   'self::appl', '@role="prefix function"',
-  //   'parent::*/parent::infixop[@role!="implicit"]|parent::*/parent::relseq|parent::*/parent::multrel',
+  //   'parent::*/parent::infixop[@role!="implicit"]|
+  //    parent::*/parent::relseq|parent::*/parent::multrel',
   //   'following-sibling::*');
 
   defineRule(
       'binary-operation', 'clearspeak.ImpliedTimes_MoreImpliedTimes',
       '[n] . (grammar:impliedTimes); [p] (pause:"short")',
-      'self::appl', '@role="prefix function"', 'parent::*/parent::infixop[@role="implicit"]',
-      'following-sibling::*',
+      'self::appl', '@role="prefix function"',
+      'parent::*/parent::infixop[@role="implicit"]', 'following-sibling::*',
       'not(contains(@grammar, "impliedTimes"))');
 
   defineRule(
@@ -538,17 +546,22 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
   defineRule(
       'function-prefix-embell', 'clearspeak.default',
-      '[p] (pause:"short"); [n] children/*[1]; [n] children/*[2]; [p] (pause:"short"); ',
+      '[p] (pause:"short"); [n] children/*[1]; [n] children/*[2];' +
+      ' [p] (pause:"short"); ',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])!="function"');
 
   // REMEMBER: When testing for function we can use the one in content!
   defineRule(
       'function-prefix-fenced-or-frac-arg', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [t] "the"; [n] children/*[1]; [t] "of";' +
+      ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
-      '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
-      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning, "clearspeak:simple")))',
+      '(name(children/*[2])="fenced" and not(contains(' +
+      'children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      ' or name(children/*[2])="fraction" or ' +
+      '(name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning' +
+      ', "clearspeak:simple")))',
       'self::*');
   defineRule(
       'function-prefix-subscript', 'clearspeak.default',
@@ -601,8 +614,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(parent::*/parent::*)="superscript"', 'not(following-sibling::*)',
-      '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
-      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning, "clearspeak:simple")))');
+      '(name(children/*[2])="fenced" and not(contains(' +
+      'children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced"' +
+      ' and not(contains(children/*[2]/@meaning, "clearspeak:simple")))');
   defineRule(
       'function-prefix-subscript-as-exp', 'clearspeak.default',
       '[n] children/*[1]; [t] "of";' +
@@ -614,26 +629,31 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'function-prefix-hyper', 'clearspeak.default',
-      '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2];' +
+      ' [p] (pause:"short")',
       'self::appl', '@role="prefix function"', 'CQFisHyperbolic');
 
   defineRule(
       'function-prefix-inverse', 'clearspeak.default',
-      '[p] (pause:"short"); [t] "the inverse"; [n] children/*[1]/children/*[1];' +
+      '[p] (pause:"short"); [t] "the inverse";' +
+      ' [n] children/*[1]/children/*[1];' +
       ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
-      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'name(children/*[1]/children/*[2])="prefixop"',
+      'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
 
 
   defineRule(
       'appl-triginverse', 'clearspeak.Trig_TrigInverse',
-      '[p] (pause:"short"); [n] children/*[1]; [t] "of"; [n] children/*[2]; [p] (pause:"short")',
+      '[p] (pause:"short"); [n] children/*[1]; [t] "of";' +
+      ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
-      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'name(children/*[1]/children/*[2])="prefixop"',
+      'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]');
 
   defineRule(
@@ -642,7 +662,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
-      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'name(children/*[1]/children/*[2])="prefixop"',
+      'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
   defineRule(
@@ -651,7 +672,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [p] (pause:"short"); [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
-      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'name(children/*[1]/children/*[2])="prefixop"',
+      'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'name(children/*[2])="fenced"',
       'children/*[2]/children/*[1][@role="prefix function"]',
@@ -665,11 +687,14 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [t] "of"; [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       'name(children/*[1])="superscript"',
-      'name(children/*[1]/children/*[2])="prefixop"', 'children/*[1]/children/*[2][@role="negative"]',
+      'name(children/*[1]/children/*[2])="prefixop"',
+      'children/*[1]/children/*[2][@role="negative"]',
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))',
-      '(name(children/*[2])="fenced" and not(contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
-      ' or (name(children/*[2])="fraction" and children/*[2][@role!="vulgar"])');
+      '(name(children/*[2])="fenced" and not(contains(' +
+      'children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      ' or (name(children/*[2])="fraction" and ' +
+      'children/*[2][@role!="vulgar"])');
 
   defineRule(
       'function-inverse', 'clearspeak.default',
@@ -681,19 +706,24 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of"; [n] children/*[1]',
-      'self::superscript', '@role="prefix function"', 'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
+      '[t] "the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "power of"; [n] children/*[1]',
+      'self::superscript', '@role="prefix function"',
+      'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
   defineRule(
       'superscript-prefix-function', 'clearspeak.default',
-      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of"; [n] children/*[1]',
-      'self::superscript', '@role="prefix function"', 'name(children/*[2])="identifier"');
+      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of";' +
+      ' [n] children/*[1]',
+      'self::superscript', '@role="prefix function"',
+      'name(children/*[2])="identifier"');
 
 
   // TODO: (MS2.3) Better handling of preferences.
   defineRule(
       'function-inverse', 'clearspeak.Functions_None',
       '[n] . (grammar:functions_none)',
-      'self::superscript', '@role="prefix function" or @role="simple function"',
+      'self::superscript',
+      '@role="prefix function" or @role="simple function"',
       'name(children/*[2])="prefixop"', 'children/*[2][@role="negative"]',
       'children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))');
@@ -716,21 +746,27 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'superscript-simple-exponent', 'clearspeak.default',
       '[n] children/*[1]; [t] "raised to the"; [n] children/*[2]; ' +
       '[t] "power"',
-      'self::superscript', 'not(descendant::superscript)', 'not(following-sibling::*)');
+      'self::superscript', 'not(descendant::superscript)',
+      'not(following-sibling::*)');
 
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
-      'children/superscript/children/*[2][text()="2"] or children/superscript/children/*[2][text()="3"]',
+      'children/superscript/children/*[2][text()="2"] or ' +
+      'children/superscript/children/*[2][text()="3"]',
       'name(children/superscript/children/*[1])="number"',
-      'contains(children/superscript/children/*[1]/@meaning, "clearspeak:simple")');
+      'contains(children/superscript/children/*[1]/@meaning, ' +
+      '"clearspeak:simple")');
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
-      'children/superscript/children/*[2][text()="2"] or children/superscript/children/*[2][text()="3"]',
+      'children/superscript/children/*[2][text()="2"] or ' +
+      'children/superscript/children/*[2][text()="3"]',
       'name(children/superscript/children/*[1])="fraction"',
-      'contains(children/superscript/children/*[1]/@meaning, "clearspeak:simple")');
+      'contains(children/superscript/children/*[1]/@meaning,' +
+      ' "clearspeak:simple")');
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
-      'children/superscript/children/*[2][text()="2"] or children/superscript/children/*[2][text()="3"]',
+      'children/superscript/children/*[2][text()="2"] or' +
+      ' children/superscript/children/*[2][text()="3"]',
       'name(children/superscript/children/*[1])="identifier"');
 
   defineRuleAlias(
@@ -749,22 +785,29 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'superscript-ordinal', 'clearspeak.default',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [t] "power" (pause:"short")',
-      'self::superscript', 'name(children/*[2])="number"', 'children/*[2][@role="integer"]');
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "power" (pause:"short")',
+      'self::superscript', 'name(children/*[2])="number"',
+      'children/*[2][@role="integer"]');
   defineRuleAlias(
-      'superscript-ordinal', 'self::superscript', 'name(children/*[2])="identifier"',
-      'children/*[2][@role="latinletter" or @role="greekletter" or @role="otherletter"]');
+      'superscript-ordinal', 'self::superscript',
+      'name(children/*[2])="identifier"',
+      'children/*[2][@role="latinletter" or @role="greekletter" or' +
+      ' @role="otherletter"]');
   defineRule(
       'superscript-non-ordinal', 'clearspeak.default',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [t] "power" (pause:"short")',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2];' +
+      ' [t] "power" (pause:"short")',
       'self::superscript', 'children/*[2][@role="negative"]',
       'name(children/*[2]/children/*[1])="number"',
       'children/*[2]/children/*[1][@role="integer"]');
 
   defineRule(
       'superscript-simple-function', 'clearspeak.default',
-      '[t] "the"; [n] children/*[2] (grammar:ordinal); [t] "power of" (pause:"short"); [n] children/*[1]',
-      'self::superscript', 'name(children/*[1])="identifier"', 'children/*[1][@role="simple function"]',
+      '[t] "the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "power of" (pause:"short"); [n] children/*[1]',
+      'self::superscript', 'name(children/*[1])="identifier"',
+      'children/*[1][@role="simple function"]',
       'children/*[2][@role!="prime"]',
       'not(contains(@grammar, "functions_none"))');
 
@@ -777,7 +820,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [p] (pause:"short")',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="number"',
       'children/*[2][@role="integer"]');
   defineRule(
@@ -785,12 +829,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="prefixop"',
       'children/*[2][@role="negative"]',
-      'name(children/*[2]/children/*[1])="number"', 'children/*[2]/children/*[1][@role="integer"]');
+      'name(children/*[2]/children/*[1])="number"',
+      'children/*[2]/children/*[1][@role="integer"]');
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_Ordinal',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [p] (pause:"short")',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="identifier"',
-      'children/*[2][@role="latinletter" or @role="greekletter" or @role="otherletter"]');
+      'children/*[2][@role="latinletter" or @role="greekletter" or ' +
+      '@role="otherletter"]');
   defineRule(
       'superscript-ordinal-default', 'clearspeak.Exponent_Ordinal',
       '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
@@ -800,20 +847,25 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [t] "power"; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "power"; [p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="number"',
       'children/*[2][@role="integer"]');
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [t] "power"; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2]; [t] "power"; ' +
+      '[p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="prefixop"',
       'children/*[2][@role="negative"]',
-      'name(children/*[2]/children/*[1])="number"', 'children/*[2]/children/*[1][@role="integer"]');
+      'name(children/*[2]/children/*[1])="number"',
+      'children/*[2]/children/*[1][@role="integer"]');
   defineRule(
       'superscript-ordinal', 'clearspeak.Exponent_OrdinalPower',
-      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal); [t] "power"; [p] (pause:"short")',
+      '[n] children/*[1]; [t] "to the"; [n] children/*[2] (grammar:ordinal);' +
+      ' [t] "power"; [p] (pause:"short")',
       'self::superscript', 'name(children/*[2])="identifier"',
-      'children/*[2][@role="latinletter" or @role="greekletter" or @role="otherletter"]');
+      'children/*[2][@role="latinletter" or @role="greekletter" or ' +
+      '@role="otherletter"]');
   defineRule(
       'superscript-ordinal-default', 'clearspeak.Exponent_OrdinalPower',
       '[n] children/*[1]; [t] "raised to the exponent" (pause:"short"); ' +
@@ -828,7 +880,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //
   defineRule(
       'superscript-power', 'clearspeak.Exponent_AfterPower',
-      '[n] children/*[1]; [t] "raised to the power"; [n] children/*[2] (grammar:afterPower); [p] (pause:"short")',
+      '[n] children/*[1]; [t] "raised to the power";' +
+      ' [n] children/*[2] (grammar:afterPower); [p] (pause:"short")',
       'self::superscript');
   defineRule(
       'superscript-power-default', 'clearspeak.Exponent_AfterPower',
@@ -934,7 +987,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(../*[1])="identifier" or name(../*[1])="function"',
       'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
       'children/*[1][@role="simple function" or @role="prefix function"]',
-      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning, "clearspeak:simple") or ' +
+      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning,' +
+      ' "clearspeak:simple") or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="subscript" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
       'children/*[1]/children/*[2]/children/*[1][@role="vulgar"] '
@@ -946,8 +1000,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(../*[1])="identifier" or name(../*[1])="function"',
       'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
       'children/*[1][@role="simple function" or @role="prefix function"]',
-      'name(children/*[1]/children/*[1])="identifier" or name(children/*[1]/children/*[1])="function"',
-      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning, "clearspeak:simple")',
+      'name(children/*[1]/children/*[1])="identifier" or' +
+      ' name(children/*[1]/children/*[1])="function"',
+      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning,' +
+      ' "clearspeak:simple")',
       'name(children/*[1]/children/*[2]/children/*[1])="identifier" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="number"'
   );
@@ -979,7 +1035,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(../*[1])="identifier" or name(../*[1])="function"',
       'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
       'children/*[1][@role="simple function" or @role="prefix function"]',
-      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning, "clearspeak:simple") or ' +
+      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning,' +
+      ' "clearspeak:simple") or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="subscript" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
       'children/*[1]/children/*[2]/children/*[1][@role="vulgar"] '
@@ -1005,7 +1062,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'parent::*/parent::*[@role!="simple function"]',
       'parent::*/parent::*[@role!="prefix function"]');
 
-  // TODO: brackets should be excluded. What about other fences?
   defineRule(
       'fence-nesting', 'clearspeak.Paren_SpeakNestingLevel',
       '[n] text() (grammar:insertNesting=CSFnestingDepth)',
@@ -1015,14 +1071,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'fence-no-nesting', 'clearspeak.Paren_SpeakNestingLevel',
       '[n] text()', 'self::fence'
   );
-
-  // defineRule(
-  //     'fences-open-close-nest', 'clearspeak.Paren_SpeakNestingLevel',
-  //     '[p] (pause:"short"); [n] content/*[1] (grammar:nesting=CSFnestingDepth); ' +
-  //     '[p] (pause:"short"); [n] children/*[1];' +
-  //     ' [p] (pause:"short"); [n] content/*[2] (grammar:nesting=CSFnestingDepth);' +
-  //     ' [p] (pause:"short")',
-  //   'self::fenced', '@role="leftright"', );
 
   // Coordinates
   defineRule(
@@ -1138,15 +1186,6 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'preceding-sibling::*/descendant-or-self::*[@role="subsup"] or ' +
       'children/*[1]/descendant-or-self::*[@role="subsup"]'
   );
-  // defineRule(
-  //     'fences-open-close', 'clearspeak.default',
-  //     '[t] (pause:"short"); [n] content/*[1]; [t] (pause:"short"); [n] children/*[1];' +
-  //     ' [t] (pause:"short"); [n] content/*[2]; [t] (pause:"short")',
-  //     'self::fenced', '@role="leftright"');
-  // defineRule(
-  //     'function-fences', 'clearspeak.default',
-  //     '[n] children/*[1]',
-  //     'self::fenced', '@role="leftright"', 'contains(children/*[1]/@meaning, "clearspeak:simple")', 'parent::*/parent::appl');
 
   // Set braces
   defineRule(
@@ -1179,7 +1218,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Subscript
   defineRule(
       'subscript', 'clearspeak.default',
-      '[p] (pause:short); [n] children/*[1]; [t] "sub"; [n] children/*[2]; [p] (pause:short)',
+      '[p] (pause:short); [n] children/*[1]; [t] "sub";' +
+      ' [n] children/*[2]; [p] (pause:short)',
       'self::subscript');
   defineRule(
       'subscript-base', 'clearspeak.default',
@@ -1195,44 +1235,49 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Fraction rules
   defineRule(
       'fraction', 'clearspeak.default',
-      '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
-          ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
+      '[p] (pause:short); [t] "the fraction with numerator";' +
+      ' [n] children/*[1]; [p] (pause:short);' +
+      ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Functions_None',
-      '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
-          ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
+      '[p] (pause:short); [t] "the fraction with numerator";' +
+      ' [n] children/*[1]; [p] (pause:short);' +
+      ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction',
       'name(children/*[1])="appl" or name(children/*[2])="appl"'
   );
-  // defineRuleAlias(
-  //     'fraction', 'self::fraction',
-  //   'contains(children/*[1]/@meaning, "clearspeak:simple")',
-  //   'contains(children/*[2]/@meaning, "clearspeak:simple")',
-  //   'name(children/*[1])="fraction" or name(children/*[1])="fraction"');
   defineRule(
       'simple-fraction', 'clearspeak.default',
-      '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2]; [p] (pause:short)',
+      '[p] (pause:short); [n] children/*[1]; [t] "over";' +
+      ' [n] children/*[2]; [p] (pause:short)',
       'self::fraction',
-      'contains(children/*[1]/@meaning, "clearspeak:simple") or contains(children/*[1]/@meaning, "clearspeak:unit")',
-      'contains(children/*[2]/@meaning, "clearspeak:simple") or contains(children/*[2]/@meaning, "clearspeak:unit")');
+      'contains(children/*[1]/@meaning, "clearspeak:simple")' +
+      ' or contains(children/*[1]/@meaning, "clearspeak:unit")',
+      'contains(children/*[2]/@meaning, "clearspeak:simple")' +
+      ' or contains(children/*[2]/@meaning, "clearspeak:unit")');
   defineRule(
       'simple-vulgar-fraction', 'clearspeak.default',
-      '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2]; [p] (pause:short)',
+      '[p] (pause:short); [n] children/*[1]; [t] "over";' +
+      ' [n] children/*[2]; [p] (pause:short)',
       'self::fraction', '@role="vulgar"');
   defineRule(
       'simple-text-fraction', 'clearspeak.default',
-      '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2]; [p] (pause:short)',
-      'self::fraction', 'name(children/*[1])="text"', 'name(children/*[2])="text"');
+      '[p] (pause:short); [n] children/*[1]; [t] "over";' +
+      ' [n] children/*[2]; [p] (pause:short)',
+      'self::fraction', 'name(children/*[1])="text"',
+      'name(children/*[2])="text"');
   defineRule(
       'simple-text-fraction', 'clearspeak.default',
-      '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2]; [p] (pause:short)',
+      '[p] (pause:short); [n] children/*[1]; [t] "over";' +
+      ' [n] children/*[2]; [p] (pause:short)',
       'self::fraction',
       'name(children/*[1])="infixop"', 'children/*[1][@role="unit"]',
       'name(children/*[2])="text"');
   defineRule(
       'vulgar-fraction', 'clearspeak.default',
-      '[t] CSFvulgarFraction', 'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
+      '[t] CSFvulgarFraction', 'self::fraction', '@role="vulgar"',
+      'CQFvulgarFractionSmall');
   // Preferences
   defineRule(
       'fraction', 'clearspeak.Fraction_Over',
@@ -1256,12 +1301,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Fraction_GeneralEndFrac',
-      '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
-          ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short); [t] "end fraction"; [p] (pause:short)',
+      '[p] (pause:short); [t] "the fraction with numerator";' +
+      ' [n] children/*[1]; [p] (pause:short);' +
+          ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short);' +
+      ' [t] "end fraction"; [p] (pause:short)',
       'self::fraction');
   defineRule(
       'fraction', 'clearspeak.Fraction_General',
-      '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
+      '[p] (pause:short); [t] "the fraction with numerator";' +
+      ' [n] children/*[1]; [p] (pause:short);' +
           ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short)',
       'self::fraction');
 
@@ -1271,27 +1319,17 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
 
   defineRule(
       'fraction', 'clearspeak.Fraction_EndFrac',
-      '[p] (pause:short); [n] . (grammar:endfrac); [t] "end fraction"; [p] (pause:short)',
+      '[p] (pause:short); [n] . (grammar:endfrac); [t] "end fraction";' +
+      ' [p] (pause:short)',
       'self::fraction', 'not(contains(@grammar, "endfrac"))',
       'not(contains(children/*[1]/@meaning, "clearspeak:unit"))',
       'not(contains(children/*[2]/@meaning, "clearspeak:unit"))');
-  // defineRule(
-  //     'fraction', 'clearspeak.Fraction_EndFrac',
-  //     '[p] (pause:short); [t] "the fraction with numerator"; [n] children/*[1]; [p] (pause:short);' +
-  //         ' [t] "and denominator"; [n] children/*[2]; [p] (pause:short); [t] "end fraction"; [p] (pause:short)',
-  //   'self::fraction', 'not(@role="vulgar")',
-  //   'not(contains(children/*[1]/@meaning, "clearspeak:unit"))',
-  //   'not(contains(children/*[2]/@meaning, "clearspeak:unit"))');
-  // defineRule(
-  //     'vulgar-fraction', 'clearspeak.Fraction_EndFrac',
-  //     '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2];' +
-  //     ' [p] (pause:short); [t] "end fraction"; [p] (pause:short)',
-  //     'self::fraction', '@role="vulgar"');
   defineRule(
       'vulgar-fraction', 'clearspeak.Fraction_EndFrac',
       '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2];' +
       ' [p] (pause:short)',
-      'self::fraction', 'name(children/*[1])="fraction"', 'name(children/*[2])="fraction"',
+      'self::fraction', 'name(children/*[1])="fraction"',
+      'name(children/*[2])="fraction"',
       'contains(children/*[1]/@meaning, "clearspeak:simple")',
       'contains(children/*[2]/@meaning, "clearspeak:simple")');
   defineRule(
@@ -1307,49 +1345,64 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // TODO: Deal with the extra pause recursively and reduce number of rules!
   defineRule(
       'sqrt', 'clearspeak.default',
-      '[t] "the square root of"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
+      '[t] "the square root of"; [n] children/*[1] (grammar:EndRoot=false);' +
+      ' [p] (pause:short)',
       'self::sqrt');
   defineRule(
       'sqrt-nested', 'clearspeak.default',
       '[p] (pause: "short"); [t] "the square root of";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
-      'self::sqrt', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root');
+      'self::sqrt', 'not(preceding-sibling::*)',
+      'ancestor::sqrt|ancestor::root');
   defineRule(
       'negative-sqrt', 'clearspeak.default',
       '[t] "the negative square root of";' +
-      ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
+      ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false);' +
+      ' [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"');
   defineRule(
       'negative-sqrt', 'clearspeak.default',
       '[p] (pause: "short"); [t] "the negative square root of";' +
-      ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
+      ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false);' +
+      ' [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"',
       'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root');
 
   defineRule(
       'sqrt-plus-minus', 'clearspeak.Roots_PosNegSqRoot',
-      '[t] "the positive square root of"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
-      'self::sqrt', 'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
-      ' (parent::*/parent::*[1]/text()!="±" and parent::*/parent::*/text()!="∓")');
+      '[t] "the positive square root of";' +
+      ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
+      'self::sqrt',
+      'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
+      ' (parent::*/parent::*[1]/text()!="±"' +
+      ' and parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-nested-plus-minus', 'clearspeak.Roots_PosNegSqRoot',
       '[p] (pause: "short"); [t] "the positive square root of";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
-      'self::sqrt', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root',
+      'self::sqrt', 'not(preceding-sibling::*)',
+      'ancestor::sqrt|ancestor::root',
       'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
-      ' (parent::*/parent::*[1]/text()!="±" and parent::*/parent::*/text()!="∓")');
+      ' (parent::*/parent::*[1]/text()!="±"' +
+      ' and parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-plus-minus', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[t] "the positive square root of"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
-      'self::sqrt', 'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
-      ' (parent::*/parent::*[1]/text()!="±" and parent::*/parent::*/text()!="∓")');
+      '[t] "the positive square root of";' +
+      ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
+      'self::sqrt', 'parent::stree or' +
+      ' not(parent::*/parent::infixop[@role="addition"]) or' +
+      ' (parent::*/parent::*[1]/text()!="±" and' +
+      ' parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-nested-plus-minus', 'clearspeak.Roots_PosNegSqRootEnd',
       '[p] (pause: "short"); [t] "the positive square root of";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
-      'self::sqrt', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root',
-      'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
-      ' (parent::*/parent::*[1]/text()!="±" and parent::*/parent::*/text()!="∓")');
+      'self::sqrt', 'not(preceding-sibling::*)',
+      'ancestor::sqrt|ancestor::root',
+      'parent::stree or' +
+      ' not(parent::*/parent::infixop[@role="addition"]) or' +
+      ' (parent::*/parent::*[1]/text()!="±"' +
+      ' and parent::*/parent::*/text()!="∓")');
 
   defineRule(
       'sqrt-endroot', 'clearspeak.Roots_RootEnd',
@@ -1385,14 +1438,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Higher roots
   defineRule(
       'root', 'clearspeak.default',
-      '[t] "the"; [n] children/*[1] (grammar:ordinal); ' +
-      '[t] "root of"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
+      '[t] "the"; [n] children/*[1] (grammar:ordinal); [t] "root of";' +
+      ' [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
       'self::root');
   defineRule(
       'root-nested', 'clearspeak.default',
       '[p] (pause:short); [t] "the"; [n] children/*[1] (grammar:ordinal); ' +
-      '[t] "root of"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
-      'self::root', 'not(preceding-sibling::*)', 'ancestor::sqrt|ancestor::root');
+      '[t] "root of"; [n] children/*[2] (grammar:EndRoot=false);' +
+      ' [p] (pause:short)',
+      'self::root', 'not(preceding-sibling::*)',
+      'ancestor::sqrt|ancestor::root');
 
   defineRule(
       'root-endroot', 'clearspeak.Roots_RootEnd',
@@ -1461,7 +1516,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'set-prefix-operators', 'clearspeak.default',
       '[t] "the"; [n] self::* (grammar:!prefix); [t] "of"',
       'self::*', 'contains(@grammar,"prefix")',
-      'descendant-or-self::*/text()="\u2229" or descendant-or-self::*/text()="\u222A"',
+      'descendant-or-self::*/text()="\u2229" or' +
+      ' descendant-or-self::*/text()="\u222A"',
       'self::*', 'self::*', 'self::*');
 
   defineRule(
@@ -1481,13 +1537,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::infixop', '@role="implicit"', 'name(children/*[last()])="appl"');
   defineRule(
       'binary-operation-pause', 'clearspeak.default',
-      '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:short)',
-      'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"', 'name(children/*[last()])="appl"');
+      '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);' +
+      ' [p] (pause:short)',
+      'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"',
+      'name(children/*[last()])="appl"');
   // Maybe restrict those to prefix function role only!
 
   defineRule(
       'implicit-times', 'clearspeak.default',
-      '[p] (pause:short)', 'self::operator', '@role="multiplication"', 'text()="⁢"');
+      '[p] (pause:short)', 'self::operator', '@role="multiplication"',
+      'text()="⁢"');
   defineRule(
       'implicit-times', 'clearspeak.default',
       '', 'self::operator', '@role="multiplication"', 'text()="⁢"',
@@ -1694,8 +1753,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'matrix-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "matrix";' +
+      ' [p] (pause:long); [m] children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', 'count(children/*)<4',
       'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
@@ -1708,23 +1768,27 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'determinant', 'clearspeak.default',
       '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "matrix"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
-      'self::matrix', '@role="determinant"', 'count(children/*)<4', 'CQFcellsSimple');
+      'self::matrix', '@role="determinant"', 'count(children/*)<4',
+      'CQFcellsSimple');
   defineRule(
       'determinant-simple', 'clearspeak.default',
       '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
+      '[t] count(children/*[1]/children/*); [t] "matrix"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"');
   // Vector
   defineRule(
       'matrix-vector', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
   defineSpecialisedRule(
@@ -1732,39 +1796,47 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'matrix-vector-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
-      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
-      'self::vector', 'count(children/*)<4', 'CQFcellsSimple', '@role!="squarematrix"');
+      'self::vector', 'count(children/*)<4', 'CQFcellsSimple',
+      '@role!="squarematrix"');
   defineRule(
       'matrix-vector-simple', 'clearspeak.Matrix_SilentColNum',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "column matrix"; [p] (pause:long);' +
-      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
 
   defineRule(
       'matrix-row-vector', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
-      ' [m] children/*[1]/children/* (ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
+      '[p] (pause:long); [m] children/*[1]/children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
   defineSpecialisedRule(
-      'matrix-row-vector', 'clearspeak.default', 'clearspeak.Matrix_SpeakColNum');
+      'matrix-row-vector', 'clearspeak.default',
+      'clearspeak.Matrix_SpeakColNum');
   defineRule(
       'matrix-row-vector-simple', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
-      ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
+      '[p] (pause:long); [m] children/*[1]/children/* ' +
+      '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
-      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
+      'CQFcellsSimple');
   defineRule(
       'matrix-row-vector-simple', 'clearspeak.Matrix_SilentColNum',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "row matrix"; [p] (pause:long);' +
-      ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
+      '[p] (pause:long); [m] children/*[1]/children/* ' +
+      '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
 
@@ -1809,27 +1881,31 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'vector', 'clearspeak.Matrix_Vector',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "column vector"; [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
-      ' [p] (pause:long)',
+      '[t] count(children/*[1]/children/*); [t] "column vector"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet); ' +
+      '[p] (pause:long)',
       'self::vector');
   defineSpecialisedRule(
       'vector', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
   defineRule(
       'vector-simple', 'clearspeak.Matrix_Vector',
-      '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "column vector"; [p] (pause:long);' +
-      ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
-      ' [p] (pause:long)',
+      '[t] "the"; [t] count(children/*);  [t] "by"; ' +
+      '[t] count(children/*[1]/children/*); [t] "column vector"; ' +
+      '[p] (pause:long); [m] children/* ' +
+      '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet); ' +
+      '[p] (pause:long)',
       'self::vector', 'count(children/*)<4', 'CQFcellsSimple');
   defineSpecialisedRule(
-      'vector-simple', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
+      'vector-simple', 'clearspeak.Matrix_Vector',
+      'clearspeak.Matrix_EndVector');
 
   defineRule(
       'row-vector', 'clearspeak.Matrix_Vector',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "row vector"; [p] (pause:long);' +
-      ' [m] children/*[1]/children/* (ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "row vector";' +
+      ' [p] (pause:long); [m] children/*[1]/children/* ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
   defineSpecialisedRule(
@@ -1837,12 +1913,15 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'row-vector-simple', 'clearspeak.Matrix_Vector',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
-      '[t] count(children/*[1]/children/*); [t] "row vector"; [p] (pause:long);' +
-      ' [m] children/*[1]/children/* (sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+      '[t] count(children/*[1]/children/*); [t] "row vector";' +
+      ' [p] (pause:long); [m] children/*[1]/children/* ' +
+      '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
       ' [p] (pause:long)',
-      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
+      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
+      'CQFcellsSimple');
   defineSpecialisedRule(
-      'row-vector-simple', 'clearspeak.Matrix_Vector', 'clearspeak.Matrix_EndVector');
+      'row-vector-simple', 'clearspeak.Matrix_Vector',
+      'clearspeak.Matrix_EndVector');
 
   // TODO: Consider the nesting problem!
   defineRule(
@@ -1953,7 +2032,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'cases', 'clearspeak.default',
       '[p] (pause:short); ' +
-        ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::cases');
 
@@ -2150,7 +2229,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
   // defineRule(
   //   'underscript', 'clearspeak.default',
-  //   '[n] children/*[1]; [t] "with"; [n] children/*[2]; [t] "below" (pause:short)',
+  //   '[n] children/*[1]; [t] "with"; [n] children/*[2];' +
+  //     ' [t] "below" (pause:short)',
   //   'self::underscore', ''
   // );
 
@@ -2318,21 +2398,24 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'combinatorics', 'clearspeak.default',
       '[n] children/*[2] (grammar:combinatorics); [n] children/*[1]; ' +
       '[n] children/*[4] (grammar:combinatorics)',
-      'self::tensor', 'name(children/*[3])="empty"', 'name(children/*[5])="empty"',
+      'self::tensor', 'name(children/*[3])="empty"',
+      'name(children/*[5])="empty"',
       'children/*[1][text()="P" or text()="C"]'
   );
   defineRule(
       'choose', 'clearspeak.CombinationPermutation_ChoosePermute',
       '[n] children/*[2] (grammar:combinatorics); [t] "choose"; ' +
       '[n] children/*[4] (grammar:combinatorics)',
-      'self::tensor', 'name(children/*[3])="empty"', 'name(children/*[5])="empty"',
+      'self::tensor', 'name(children/*[3])="empty"',
+      'name(children/*[5])="empty"',
       'children/*[1][text()="C"]'
   );
   defineRule(
       'permute', 'clearspeak.CombinationPermutation_ChoosePermute',
       '[n] children/*[2] (grammar:combinatorics); [t] "permute"; ' +
       '[n] children/*[4] (grammar:combinatorics)',
-      'self::tensor', 'name(children/*[3])="empty"', 'name(children/*[5])="empty"',
+      'self::tensor', 'name(children/*[3])="empty"',
+      'name(children/*[5])="empty"',
       'children/*[1][text()="P"]'
   );
 

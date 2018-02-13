@@ -2406,10 +2406,16 @@ sre.SemanticProcessor.prototype.font = function(font) {
 };
 
 
+/**
+ * Finds composed functions, i.e., simple functions that are either composed
+ * with an infix operation or fraction and rewrites their role accordingly.
+ * Currently restricted to Clearspeak!
+ * @param {!sre.SemanticNode} node The semantic node to test.
+ */
 // TODO: (MS2.3|simons): This needs to be a special annotator!
 sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
   if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return node;
+    return;
   }
   if ((node.type === sre.SemanticAttr.Type.INFIXOP ||
        node.type === sre.SemanticAttr.Type.FRACTION) &&
@@ -2419,10 +2425,15 @@ sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
 };
 
 
+/**
+ * Propagates the role of composed function to surrounding fences.
+ * Currently restricted to Clearspeak!
+ * @param {!sre.SemanticNode} node The semantic node to test.
+ */
 // TODO: (MS2.3|simons): This needs to be a special annotator!
 sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
   if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return node;
+    return;
   }
   if (node.type === sre.SemanticAttr.Type.FENCED &&
       node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {

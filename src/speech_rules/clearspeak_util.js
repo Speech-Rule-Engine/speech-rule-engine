@@ -344,6 +344,12 @@ sre.ClearspeakUtil.isInteger_ = function(node) {
 };
 
 
+/**
+ * Decides if a node is an index structure, i.e., identifier or integer.
+ * @param {Node} node The node in question.
+ * @return {boolean} True if the node is an index.
+ * @private
+ */
 sre.ClearspeakUtil.allIndices_ = function(node) {
   var nodes = sre.XpathUtil.evalXPath('children/*', node);
   return nodes.every(function(x) {
@@ -389,11 +395,11 @@ sre.ClearspeakUtil.isSmallVulgarFraction = function(node) {
   return sre.MathspeakUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
 };
 
+
 /**
  * Checks if a semantic subtree represents a unit expression.
  * @param {sre.SemanticNode} node The semantic node in question.
  * @return {boolean} True if the node is a unit expression.
- * @private
  */
 sre.ClearspeakUtil.isUnitExpression = function(node) {
   return node.type === sre.SemanticAttr.Type.TEXT ||
@@ -438,6 +444,11 @@ sre.ClearspeakUtil.unitExpression = function() {
 };
 
 
+/**
+ * Translates a node into a word for an ordinal exponent.
+ * @param {Element} node The node to translate.
+ * @return {string} The ordinal exponent as a word.
+ */
 sre.ClearspeakUtil.ordinalExponent = function(node) {
   var number = parseInt(node.textContent, 10);
   if (isNaN(number)) {
@@ -489,6 +500,11 @@ sre.ClearspeakUtil.nestingDepth = function(node) {
 };
 
 
+/**
+ * Query function for matching fences.
+ * @param {!Node} node The node to test.
+ * @return {Array.<Node>} The node if it has matching fences.
+ */
 sre.ClearspeakUtil.matchingFences = function(node) {
   var sibling = node.previousSibling;
   if (sibling) {
@@ -506,6 +522,13 @@ sre.ClearspeakUtil.matchingFences = function(node) {
 };
 
 
+/**
+ * Correction function for inserting nesting depth (second, third, etc.) between
+ * open and close fence indicator.
+ * @param {string} text The original text, e.g., open paren, close paren.
+ * @param {string} correction The nesting depth as correction text.
+ * @return {string} The corrected text. E.g., open second paren.
+ */
 sre.ClearspeakUtil.insertNesting = function(text, correction) {
   if (!correction || !text) {
     return text;
@@ -514,6 +537,7 @@ sre.ClearspeakUtil.insertNesting = function(text, correction) {
   if (!start) {
     return correction + ' ' + text;
   }
+  console.log(start[0] + correction + ' ' + text.substring(start[0].length));
   return start[0] + correction + ' ' + text.substring(start[0].length);
 };
 
@@ -522,6 +546,12 @@ sre.Grammar.getInstance().setCorrection('insertNesting',
                                         sre.ClearspeakUtil.insertNesting);
 
 
+/**
+ * Query function that decides for an implicit times node, if it has fenced
+ * arguments only.
+ * @param {Node} node The implicit times node.
+ * @return {Array.<Node>} The node if it has fenced arguments only.
+ */
 sre.ClearspeakUtil.fencedArguments = function(node) {
   var content = sre.DomUtil.toArray(node.parentNode.childNodes);
   var children = sre.XpathUtil.evalXPath('../../children/*', node);
@@ -532,6 +562,12 @@ sre.ClearspeakUtil.fencedArguments = function(node) {
 };
 
 
+/**
+ * Query function that decides for an implicit times node, if it has simple (in
+ * the clearspeak sense) arguments only.
+ * @param {Node} node The implicit times node.
+ * @return {Array.<Node>} The node if it has at most three simple arguments.
+ */
 sre.ClearspeakUtil.simpleArguments = function(node) {
   var content = sre.DomUtil.toArray(node.parentNode.childNodes);
   var children = sre.XpathUtil.evalXPath('../../children/*', node);
@@ -552,66 +588,51 @@ sre.ClearspeakUtil.simpleArguments = function(node) {
       [node] : [];
 };
 
+
+/**
+ * Decides if node has a simple factor.
+ * @param {Node} node The node in question.
+ * @return {boolean} True if the node is a number, identifier, function or
+ *     applicatio or a fraction.
+ * @private
+ */
 sre.ClearspeakUtil.simpleFactor_ = function(node) {
-  return node && (node.tagName === sre.SemanticAttr.Type.NUMBER ||
-                  node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
-                  node.tagName === sre.SemanticAttr.Type.FUNCTION ||
-                  node.tagName === sre.SemanticAttr.Type.APPL ||
-                  // This works as fractions take care of their own surrounding
-                  // pauses!
-                  node.tagName === sre.SemanticAttr.Type.FRACTION
+  return !!node && (node.tagName === sre.SemanticAttr.Type.NUMBER ||
+                    node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
+                    node.tagName === sre.SemanticAttr.Type.FUNCTION ||
+                    node.tagName === sre.SemanticAttr.Type.APPL ||
+                    // This works as fractions take care of their own
+                    // surrounding pauses!
+                    node.tagName === sre.SemanticAttr.Type.FRACTION
   );
 };
 
 
+/**
+ * Decides if node has a fenced factor expression.
+ * @param {Node} node The node in question.
+ * @return {boolean} True if the node is a fenced on both sides or a matrix or
+ *     vector.
+ * @private
+ */
 sre.ClearspeakUtil.fencedFactor_ = function(node) {
-  return node && ((node.tagName === sre.SemanticAttr.Type.FENCED ||
-                   (node.hasAttribute('role') &&
-                    node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT)) ||
-                  sre.ClearspeakUtil.layoutFactor_(node));
+  return node &&
+      ((node.tagName === sre.SemanticAttr.Type.FENCED ||
+      (node.hasAttribute('role') &&
+       node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT)) ||
+      sre.ClearspeakUtil.layoutFactor_(node));
 };
 
+
+/**
+ * Decides if node has a layout factor, i.e., matrix or vector.
+ * @param {Node} node The node in question.
+ * @return {boolean} True if the node is a matrix or vector.
+ * @private
+ */
 sre.ClearspeakUtil.layoutFactor_ = function(node) {
-  return node && (node.tagName === sre.SemanticAttr.Type.MATRIX ||
-                  node.tagName === sre.SemanticAttr.Type.VECTOR);
-};
-
-
-/// TODO: This one did not work as expected. Remove!
-sre.ClearspeakUtil.contentIterator = function(nodes, context) {
-  console.log('Clearspeak Iterator');
-  if (nodes.length > 0) {
-    var contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
-    var childNodes = sre.XpathUtil.evalXPath('../../children/*', nodes[0]);
-  } else {
-    contentNodes = [];
-    childNodes = [];
-  }
-  return function() {
-    var content = contentNodes.shift();
-    var contextDescr = context ?
-        [sre.AuditoryDescription.create(
-            {text: context}, {translate: true})] :
-        [];
-    var child = childNodes.shift();
-    if (!content) {
-      return contextDescr;
-    }
-    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
-    if (!(sre.ClearspeakUtil.simpleNode(child) ||
-          child.tagName === sre.SemanticAttr.Type.SUBSCRIPT ||
-          child.tagName === sre.SemanticAttr.Type.SUPERSCRIPT)) {
-      descrs.unshift(new sre.AuditoryDescription(
-          {text: '', personality: {pause: 'short'}}));
-    }
-    if (childNodes[0] && !(sre.ClearspeakUtil.simpleNode(childNodes[0]) ||
-        childNodes[0].tagName === sre.SemanticAttr.Type.SUBSCRIPT ||
-        childNodes[0].tagName === sre.SemanticAttr.Type.SUPERSCRIPT)) {
-      descrs.push(new sre.AuditoryDescription(
-          {text: '', personality: {pause: 'short'}}));
-    }
-    return contextDescr.concat(descrs);
-  };
+  return !!node && (node.tagName === sre.SemanticAttr.Type.MATRIX ||
+                    node.tagName === sre.SemanticAttr.Type.VECTOR);
 };
 
 
@@ -652,6 +673,11 @@ sre.ClearspeakUtil.isLogarithmWithBase = function(node) {
 // TODO: (Simons) Add these into a category test constraint with xpath argument.
 
 
+/**
+ * Translates a node into a word for an ordinal number.
+ * @param {Element} node The node to translate.
+ * @return {string} The ordinal as a word.
+ */
 sre.ClearspeakUtil.wordOrdinal = function(node) {
   return sre.MathspeakUtil.wordOrdinal(parseInt(node.textContent, 10));
 };
