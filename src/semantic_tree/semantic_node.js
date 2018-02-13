@@ -114,7 +114,8 @@ sre.SemanticNode.Attribute = {
   ROLE: 'role',
   TYPE: 'type',
   CHILDREN: 'children',
-  CONTENT: 'content'
+  CONTENT: 'content',
+  TEXT: '$t'
 };
 
 
@@ -220,6 +221,32 @@ sre.SemanticNode.prototype.xmlMeaning = function() {
     });
   }
   return result.join(';');
+};
+
+
+/**
+ * Turns node into JSON format.
+ * @return {JSONType} The JSON object for the node. 
+ */
+sre.SemanticNode.prototype.toJson = function() {
+  var json = /** @type {JSONType} */({});
+  json[sre.SemanticNode.Attribute.TYPE] = this.type;
+  var attributes = this.attributes();
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    json[attr[0]] = attr[1].toString();
+  }
+  if (this.textContent) {
+    json[sre.SemanticNode.Attribute.TEXT] = this.textContent;
+  }
+  if (this.childNodes.length) {
+    json[sre.SemanticNode.Attribute.CHILDREN] =
+      this.childNodes.map(function(child) {return child.toJson();});
+  }
+  if (this.contentNodes.length) {
+    json[sre.SemanticNode.Attribute.CONTENT] =
+      this.contentNodes.map(function(child) {return child.toJson();});
+  }
+  return json;
 };
 
 
