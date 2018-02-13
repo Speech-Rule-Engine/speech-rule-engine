@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakFractions = function() {
-sre.ClearspeakFractions.base(this, 'constructor');
+  sre.ClearspeakFractions.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakFractions rule tests.';
+  */
+  this.information = 'ClearspeakFractions rule tests.';
 
 };
 goog.inherits(sre.ClearspeakFractions, sre.ClearspeakRuleTest);
@@ -1448,12 +1448,12 @@ sre.ClearspeakFractions.prototype.testFracfunct007 = function() {
 
 /**
  * Testing ClearspeakFractions Example Fracfunct008
- * 
+ *
  * This is the same as 011. Mistake in Examples file.
  */
 sre.ClearspeakFractions.prototype.untestFracfunct008 = function() {
   var preference = 'Fraction_Auto';
-  var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow><mrow><mi>cos</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow></mfrac></mrow></math>';;
+  var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow><mrow><mi>cos</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow></mfrac></mrow></math>';
   var speech = 'sine, open paren, x plus y, close paren, over, cosine, open paren, x plus y, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };

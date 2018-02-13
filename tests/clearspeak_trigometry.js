@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakTrigometry = function() {
-sre.ClearspeakTrigometry.base(this, 'constructor');
+  sre.ClearspeakTrigometry.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakTrigometry rule tests.';
+  */
+  this.information = 'ClearspeakTrigometry rule tests.';
 
 };
 goog.inherits(sre.ClearspeakTrigometry, sre.ClearspeakRuleTest);

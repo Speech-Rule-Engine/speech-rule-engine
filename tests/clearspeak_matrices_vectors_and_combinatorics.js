@@ -28,7 +28,7 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakMatricesVectorsAndCombinatorics = function() {
-sre.ClearspeakMatricesVectorsAndCombinatorics.base(this, 'constructor');
+  sre.ClearspeakMatricesVectorsAndCombinatorics.base(this, 'constructor');
 
   /**
    * @override
@@ -285,7 +285,7 @@ sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix019 = function
 
 
 /**
- * Testing ClearspeakMatricesVectorsAndCombinatorics Example 
+ * Testing ClearspeakMatricesVectorsAndCombinatorics Example
  */
 sre.ClearspeakMatricesVectorsAndCombinatorics.prototype.testMatrix019b = function() {
   var preference = 'Matrix_Auto';

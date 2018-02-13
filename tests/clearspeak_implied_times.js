@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakImpliedTimes = function() {
-sre.ClearspeakImpliedTimes.base(this, 'constructor');
+  sre.ClearspeakImpliedTimes.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakImpliedTimes rule tests.';
+  */
+  this.information = 'ClearspeakImpliedTimes rule tests.';
 
 };
 goog.inherits(sre.ClearspeakImpliedTimes, sre.ClearspeakRuleTest);
@@ -1647,9 +1647,10 @@ sre.ClearspeakImpliedTimes.prototype.testImpTimesSilPar024 = function() {
 //
 
 // TODO: QUESTION What is exact speech? From MathType?
-// 
+//
 //       There is no preference ImpliedTimes_Rules. Reverted to Implied
 //       Times_Auto.
+
 
 /**
  * Testing ClearspeakImpliedTimes Example Extra001
@@ -1700,7 +1701,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra004 = function() {
  */
 sre.ClearspeakImpliedTimes.prototype.testExtra005 = function() {
   var preference = 'ImpliedTimes_Auto';
-  preference = 'Functions_None'; 
+  preference = 'Functions_None';
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow></math>';
   var speech = 'a times negative 1, equals negative a';
   this.executeRuleTest(mathml, speech, preference);

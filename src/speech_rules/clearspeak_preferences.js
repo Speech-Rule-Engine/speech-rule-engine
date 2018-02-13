@@ -39,7 +39,6 @@ sre.ClearspeakPreferences = function(cstr, preference) {
 goog.inherits(sre.ClearspeakPreferences, sre.DynamicCstr);
 
 
-
 /**
  * @override
  */
@@ -97,25 +96,26 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Trig: ['Auto', 'ArcTrig', 'TrigInverse'],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
-  
+
 
 // Comparator
 // compare: c1 c2
 // 0 if equal
 // -1
-// 1 
+// 1
 // match:
 //
-// 
+//
 
 sre.ClearspeakPreferences.comparator = function() {
   return new sre.ClearspeakPreferences.Comparator(
-    sre.Engine.getInstance().dynamicCstr,
-    sre.DynamicProperties.create(
+      sre.Engine.getInstance().dynamicCstr,
+      sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       ['mathspeak', 'default'],
       ['short', 'default']));
 };
+
 
 
 /**
@@ -179,15 +179,16 @@ sre.ClearspeakPreferences.Comparator.prototype.compare = function(cstr1, cstr2) 
 };
 
 
+
 /**
  * @constructor
  * @extends {sre.DynamicCstr.Parser}
  */
 sre.ClearspeakPreferences.Parser = function() {
   sre.ClearspeakPreferences.Parser.base(
-    this, 'constructor',
-    [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.DOMAIN,
-     sre.DynamicCstr.Axis.STYLE]);
+      this, 'constructor',
+      [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.DOMAIN,
+       sre.DynamicCstr.Axis.STYLE]);
 };
 goog.inherits(sre.ClearspeakPreferences.Parser, sre.DynamicCstr.Parser);
 
@@ -201,8 +202,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var locale = initial.getValue(sre.DynamicCstr.Axis.LOCALE);
   if (style === sre.DynamicCstr.DEFAULT_VALUE) {
     return new sre.ClearspeakPreferences(
-      {'locale': locale, 'domain': 'clearspeak',
-       'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+        {'locale': locale, 'domain': 'clearspeak',
+          'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
   var pairs = style.split(':');
   var preferences = {};
@@ -220,8 +221,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
     }
   }
   return new sre.ClearspeakPreferences(
-    {'locale': locale, 'domain': 'clearspeak',
-     'style': this.combine_(preferences)}, preferences);
+      {'locale': locale, 'domain': 'clearspeak',
+        'style': this.combine_(preferences)}, preferences);
 };
 
 

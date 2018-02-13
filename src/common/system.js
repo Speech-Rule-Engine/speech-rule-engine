@@ -129,7 +129,7 @@ sre.System.prototype.setupEngine = function(feature) {
       engine.locale + '.' + engine.domain + '.' + engine.style);
   var comparator = engine.comparators[engine.domain];
   engine.comparator = comparator ? comparator() :
-    new sre.DynamicCstr.DefaultComparator(
+      new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
       sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],

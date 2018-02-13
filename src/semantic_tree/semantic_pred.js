@@ -108,8 +108,8 @@ sre.SemanticPred.isSimpleFunctionScope = function(node) {
  */
 sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
   return sre.SemanticPred.isOperator(node) ||
-    sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
-    sre.SemanticPred.isGeneralFunctionBoundary(node);
+      sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
+      sre.SemanticPred.isGeneralFunctionBoundary(node);
 };
 
 
@@ -295,7 +295,7 @@ sre.SemanticPred.isTableOrMultiline = function(node) {
  */
 sre.SemanticPred.tableIsMatrixOrVector = function(node) {
   return !!node && sre.SemanticPred.isFencedElement(node) &&
-    sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
+      sre.SemanticPred.isTableOrMultiline(node.childNodes[0]);
 };
 
 
@@ -307,9 +307,9 @@ sre.SemanticPred.tableIsMatrixOrVector = function(node) {
  */
 sre.SemanticPred.isFencedElement = function(node) {
   return !!node && sre.SemanticPred.isAttribute('type', 'FENCED')(node) &&
-    (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
-     sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
-    node.childNodes.length === 1;
+      (sre.SemanticPred.isAttribute('role', 'LEFTRIGHT')(node) ||
+      sre.SemanticPred.isAttribute('role', 'NEUTRAL')(node)) &&
+      node.childNodes.length === 1;
 };
 
 
@@ -392,9 +392,9 @@ sre.SemanticPred.isSimpleFunctionHead = function(node) {
  */
 sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
   return puncts.length === 1 &&
-    (nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION ||
-     nodes[position].embellished === sre.SemanticAttr.Type.PUNCTUATION) &&
-    nodes[position] === puncts[0];
+      (nodes[position].type === sre.SemanticAttr.Type.PUNCTUATION ||
+      nodes[position].embellished === sre.SemanticAttr.Type.PUNCTUATION) &&
+      nodes[position] === puncts[0];
 };
 
 
@@ -405,23 +405,23 @@ sre.SemanticPred.singlePunctAtPosition = function(nodes, puncts, position) {
  */
 sre.SemanticPred.isSimpleFunction = function(node) {
   return sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
-    sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node);
+      sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node);
 };
 
 
 sre.SemanticPred.isLeftBrace = function(node) {
-  var leftBrace = [ '{', '﹛', '｛' ]; // ['0x007B', '0xFE5B', '0xFF5B'];
+  var leftBrace = ['{', '﹛', '｛']; // ['0x007B', '0xFE5B', '0xFF5B'];
   return leftBrace.indexOf(node.textContent) !== -1;
 };
 
 
 sre.SemanticPred.isRightBrace = function(node) {
-  var rightBrace = [ '}', '﹜', '｝' ]; // ['0x007D', '0xFE5C', '0xFF5D'];
+  var rightBrace = ['}', '﹜', '｝']; // ['0x007D', '0xFE5C', '0xFF5D'];
   return rightBrace.indexOf(node.textContent) !== -1;
 };
 
 
 sre.SemanticPred.isSetNode = function(node) {
   return sre.SemanticPred.isLeftBrace(node.contentNodes[0]) &&
-    sre.SemanticPred.isRightBrace(node.contentNodes[1]);
+      sre.SemanticPred.isRightBrace(node.contentNodes[1]);
 };

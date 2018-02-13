@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakLogarithms = function() {
-sre.ClearspeakLogarithms.base(this, 'constructor');
+  sre.ClearspeakLogarithms.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakLogarithms rule tests.';
+  */
+  this.information = 'ClearspeakLogarithms rule tests.';
 
 };
 goog.inherits(sre.ClearspeakLogarithms, sre.ClearspeakRuleTest);

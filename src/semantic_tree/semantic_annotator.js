@@ -40,13 +40,13 @@ sre.SemanticAnnotator = function(domain, func) {
    * @type {function(sre.SemanticNode)}
    */
   this.func = func;
-  
+
   /**
    * This can be changed to a unique name.
    * @type {string}
    */
   this.name = domain;
-    
+
 };
 
 

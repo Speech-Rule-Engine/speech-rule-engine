@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakPart3Adornments = function() {
-sre.ClearspeakPart3Adornments.base(this, 'constructor');
+  sre.ClearspeakPart3Adornments.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakPart3Adornments rule tests.';
+  */
+  this.information = 'ClearspeakPart3Adornments rule tests.';
 };
 goog.inherits(sre.ClearspeakPart3Adornments, sre.ClearspeakRuleTest);
 
@@ -572,10 +572,11 @@ sre.ClearspeakPart3Adornments.prototype.testPrime047 = function() {
 // Combinations and Permutations
 //
 
+
 // These 8 tests come out of the clearspeak documents from MathType.  The MathML
 // has a redundant use of subscripts leaving the actual correct placing of the
 // right index in the multiscript empty.
-// 
+//
 // TODO: (Simons) Have a cleanup heuristic to combine multiscripts with
 //                sub/superscripts.
 /**
@@ -956,6 +957,7 @@ sre.ClearspeakPart3Adornments.prototype.testBar018 = function() {
   var speech = 'the complex conjugate of 3 minus 2 i, equals 3 plus 2 i';
   this.executeRuleTest(mathml, speech, preference);
 };
+
 
 // Added! Test that still decimal period still works.
 /**

@@ -396,7 +396,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  * @private
  */
 sre.SpeechRuleEngine.prototype.addPersonality_ = function(
-  descrs, props, multi) {
+    descrs, props, multi) {
   var personality = {};
   for (var key in sre.Engine.personalityProps) {
     var value = props[sre.Engine.personalityProps[key]];
@@ -408,9 +408,9 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     //   personality[sre.Engine.personalityProps[key]] = numeral;
     // }
     personality[sre.Engine.personalityProps[key]] =
-      isNaN(numeral) ?
-      ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
-    numeral;
+        isNaN(numeral) ?
+        ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
+        numeral;
   }
   // TODO: Deal with non-numeric values for personalities here.
   //       Possibly use simply an overwrite mechanism without adding.

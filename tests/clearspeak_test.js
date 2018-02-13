@@ -43,6 +43,7 @@ goog.require('sre.ClearspeakTrigometry');
 */
 sre.ClearspeakTest = function() { };
 
+
 /**
  * List of clearspeak tests to run.
  * @type {Array}

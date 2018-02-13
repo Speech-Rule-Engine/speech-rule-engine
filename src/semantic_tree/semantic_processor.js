@@ -173,7 +173,7 @@ sre.SemanticProcessor.prototype.prefixNode_ = function(node, prefixes) {
       prefixes, sre.SemanticPred.isAttribute('role', 'SUBTRACTION'));
   var newNode = sre.SemanticProcessor.getInstance().concatNode_(
       node, negatives.comp.pop(), sre.SemanticAttr.Type.PREFIXOP);
-  if (newNode.contentNodes.length === 1 && 
+  if (newNode.contentNodes.length === 1 &&
       newNode.contentNodes[0].role === sre.SemanticAttr.Role.ADDITION &&
       newNode.contentNodes[0].textContent === '+') {
     newNode.role = sre.SemanticAttr.Role.POSITIVE;
@@ -966,9 +966,9 @@ sre.SemanticProcessor.prototype.setExtension_ = function(set) {
   if (extender && extender.type === sre.SemanticAttr.Type.INFIXOP &&
       extender.contentNodes.length === 1 &&
       extender.contentNodes[0].role === sre.SemanticAttr.Role.UNKNOWN
-     ) {
-       extender.contentNodes[0].role = sre.SemanticAttr.Role.SETEXT;
-     }
+  ) {
+    extender.contentNodes[0].role = sre.SemanticAttr.Role.SETEXT;
+  }
 };
 
 
@@ -1709,7 +1709,7 @@ sre.SemanticProcessor.tableToMultiline = function(table) {
   if (table.childNodes.length === 1 &&
       sre.SemanticPred.isFencedElement(table.childNodes[0].childNodes[0])) {
     sre.SemanticProcessor.tableToMatrixOrVector_(
-      sre.SemanticProcessor.rewriteFencedLine_(table));
+        sre.SemanticProcessor.rewriteFencedLine_(table));
   }
   sre.SemanticProcessor.binomialForm_(table);
   sre.SemanticProcessor.classifyMultiline(table);
@@ -2004,7 +2004,7 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
       sre.SemanticAttr.Type.FRACTION, [denom, enume], []);
   newNode.role = newNode.childNodes.every(function(x) {
     return sre.SemanticPred.isAttribute('type', 'NUMBER')(x) &&
-      sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
+        sre.SemanticPred.isAttribute('role', 'INTEGER')(x);
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(function(x) {
         return sre.SemanticPred.isAttribute('role', 'UNIT')(x);

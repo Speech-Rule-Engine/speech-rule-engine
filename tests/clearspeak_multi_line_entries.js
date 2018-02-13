@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakMultiLineEntries = function() {
-sre.ClearspeakMultiLineEntries.base(this, 'constructor');
+  sre.ClearspeakMultiLineEntries.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakMultiLineEntries rule tests.'; 
+  */
+  this.information = 'ClearspeakMultiLineEntries rule tests.';
 };
 goog.inherits(sre.ClearspeakMultiLineEntries, sre.ClearspeakRuleTest);
 
@@ -269,7 +269,7 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline019a = function() {
  */
 sre.ClearspeakMultiLineEntries.prototype.testMultiline020 = function() {
   var preference = 'MultiLinePausesBetweenColumns_Auto:MultiLineOverview_Auto:MultiLineLabel_Line';
-  var mathml = '<math style="background-color:#"><semantics><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></semantics></math>'
+  var mathml = '<math style="background-color:#"><semantics><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></semantics></math>';
   var speech = '2 lines, Line 1: x plus y equals 7. Line 2: 2 x, plus 3 y, equals 17';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -280,7 +280,7 @@ sre.ClearspeakMultiLineEntries.prototype.testMultiline020 = function() {
  */
 sre.ClearspeakMultiLineEntries.prototype.testMultiline021 = function() {
   var preference = 'MultiLineOverview_Auto:MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Line';
-    var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr></mtable></mrow></math>';
+  var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mn>7</mn></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd><mrow><mn>17</mn></mrow></mtd></mtr></mtable></mrow></math>';
   var speech = '2 lines, Line 1: x plus y; equals; 7. Line 2: 2 x, plus 3 y; equals; 17';
   this.executeRuleTest(mathml, speech, preference);
 };

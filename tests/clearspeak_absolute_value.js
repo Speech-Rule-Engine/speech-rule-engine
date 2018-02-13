@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakAbsoluteValue = function() {
-sre.ClearspeakAbsoluteValue.base(this, 'constructor');
+  sre.ClearspeakAbsoluteValue.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakAbsoluteValue rule tests.';
+  */
+  this.information = 'ClearspeakAbsoluteValue rule tests.';
 
 };
 goog.inherits(sre.ClearspeakAbsoluteValue, sre.ClearspeakRuleTest);
@@ -62,7 +62,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs01 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbs02 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
-        '</mrow><mo>|</mo></mrow></mrow>';
+      '</mrow><mo>|</mo></mrow></mrow>';
   var speech = 'the absolute value of x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -74,7 +74,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs02 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbs03 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
-        '<mn>1</mn></mrow>';
+      '<mn>1</mn></mrow>';
   var speech = 'the absolute value of x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -86,10 +86,10 @@ sre.ClearspeakAbsoluteValue.prototype.testAbs03 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbs04 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
-        '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
-        '</mo><mi>z</mi><mo>|</mo></mrow></mrow>';
+      '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
+      '</mo><mi>z</mi><mo>|</mo></mrow></mrow>';
   var speech = 'the absolute value of x, plus, the absolute value of y, is' +
-        ' greater than or equal to, the absolute value of z';
+      ' greater than or equal to, the absolute value of z';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -111,7 +111,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd01 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsEnd02 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
-        '</mrow><mo>|</mo></mrow></mrow>';
+      '</mrow><mo>|</mo></mrow></mrow>';
   var speech = 'the absolute value of x plus 1, end absolute value';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -123,7 +123,7 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd02 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsEnd03 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
-        '<mn>1</mn></mrow>';
+      '<mn>1</mn></mrow>';
   var speech = 'the absolute value of x, end absolute value, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -135,11 +135,11 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsEnd03 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsEnd04 = function() {
   var preference = 'AbsoluteValue_AbsEnd';
   var mathml = '<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo>' +
-        '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
-        '</mo><mi>z</mi><mo>|</mo></mrow></mrow>';
+      '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|' +
+      '</mo><mi>z</mi><mo>|</mo></mrow></mrow>';
   var speech = 'the absolute value of x, end absolute value, plus, the' +
-        ' absolute value of y, end absolute value, is greater than or equal' +
-        ' to, the absolute value of z, end absolute value';
+      ' absolute value of y, end absolute value, is greater than or equal' +
+      ' to, the absolute value of z, end absolute value';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -177,8 +177,8 @@ sre.ClearspeakAbsoluteValue.prototype.testDeterminant01 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsDet01 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
-        '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
-        '<mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
+      '</mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd>' +
+      '<mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
   var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -190,12 +190,12 @@ sre.ClearspeakAbsoluteValue.prototype.testAbsDet01 = function() {
 sre.ClearspeakAbsoluteValue.prototype.testAbsDet02 = function() {
   var preference = 'AbsoluteValue_Auto';
   var mathml = '<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn>' +
-        '</mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
-        '<mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr>' +
-        '<mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
-        '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
+      '</mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd>' +
+      '<mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr>' +
+      '<mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
+      '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>';
   var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-        ' 3, 5, 2 Row 3: 1, 4, 7';
+      ' 3, 5, 2 Row 3: 1, 4, 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 

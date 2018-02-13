@@ -28,11 +28,11 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakCapitalLetters = function() {
-sre.ClearspeakCapitalLetters.base(this, 'constructor');
-/**
+  sre.ClearspeakCapitalLetters.base(this, 'constructor');
+  /**
 * @override
-*/
-this.information = 'ClearspeakCapitalLetters rule tests.';
+  */
+  this.information = 'ClearspeakCapitalLetters rule tests.';
 
 };
 goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);

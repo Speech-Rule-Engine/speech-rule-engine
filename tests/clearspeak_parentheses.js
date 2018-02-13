@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakParentheses = function() {
-sre.ClearspeakParentheses.base(this, 'constructor');
+  sre.ClearspeakParentheses.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakParentheses rule tests.';
+  */
+  this.information = 'ClearspeakParentheses rule tests.';
 
 };
 goog.inherits(sre.ClearspeakParentheses, sre.ClearspeakRuleTest);

@@ -31,7 +31,7 @@ goog.require('sre.Semantic');
  */
 sre.ClearspeakAnnotationTest = function() {
   sre.ClearspeakAnnotationTest.base(this, 'constructor');
-  
+
   /**
    * @override
    */
@@ -170,7 +170,7 @@ sre.ClearspeakAnnotationTest.prototype.testNegativeNumbers = function() {
   this.executeTest('<mo>-</mo><mn>1.5e+10</mn>', false);
   this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>', true);
   this.executeTest('<mo>-</mo><mfrac><mn>5</mn><mn>3</mn></mfrac>', true);
-  this.executeTest('<mo>-</mo><mfrac><mi>a</mi><mn>2</mn></mfrac>', false) ;
+  this.executeTest('<mo>-</mo><mfrac><mi>a</mi><mn>2</mn></mfrac>', false);
   this.executeTest('<mo>-</mo><mfrac><mi>5</mi><mn>3.5</mn></mfrac>', false);
   this.executeTest('<mn>2</mn><mo>-</mo><mn>1</mn>', false);
   this.executeTest('<mo>--</mo><mn>1</mn>', false);
@@ -242,6 +242,6 @@ sre.ClearspeakAnnotationTest.prototype.testNegativeMixed = function() {
 };
 
 
-  // this.executeTest('<mo>-</mo><mi>x</mi><mi>y</mi><mo>°</mo>', false);
-  // this.executeTest('<mo>-</mo><mi>sin</mi><mn>x</mn>', false);
+// this.executeTest('<mo>-</mo><mi>x</mi><mi>y</mi><mo>°</mo>', false);
+// this.executeTest('<mo>-</mo><mi>sin</mi><mn>x</mn>', false);
 

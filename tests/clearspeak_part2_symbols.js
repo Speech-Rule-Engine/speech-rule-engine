@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakPart2Symbols = function() {
-sre.ClearspeakPart2Symbols.base(this, 'constructor');
+  sre.ClearspeakPart2Symbols.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakPart2Symbols rule tests.';
+  */
+  this.information = 'ClearspeakPart2Symbols rule tests.';
 };
 goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 
@@ -45,7 +45,7 @@ goog.inherits(sre.ClearspeakPart2Symbols, sre.ClearspeakRuleTest);
 
 
 //
-// Multiplication Symbol 
+// Multiplication Symbol
 //
 
 
@@ -127,7 +127,7 @@ sre.ClearspeakPart2Symbols.prototype.testX007 = function() {
 
 
 //
-// Multiplication Symbol 
+// Multiplication Symbol
 //
 
 

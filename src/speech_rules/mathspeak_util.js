@@ -55,7 +55,7 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
     // We ignore Greek characters for now!
     var type = sre.Semantic.Type.NUMBER;
     var role = chr.match(/\W/) ?
-          sre.SemanticAttr.lookupMeaning(chr).role :
+        sre.SemanticAttr.lookupMeaning(chr).role :
         sre.Semantic.Role.PROTECTED;
     var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
                                  chr + '</' + type + '>', 'text/xml');
