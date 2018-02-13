@@ -102,6 +102,23 @@ sre.SemanticNode.prototype.querySelectorAll = function(pred) {
 
 
 /**
+ * The attributes of a semantic node.
+ * @enum {string}
+ */
+sre.SemanticNode.Attribute = {
+  EMBELLISHED: 'embellished',
+  FENCEPOINTER: 'fencepointer',
+  FONT: 'font',
+  ID: 'id',
+  MEANING: 'meaning',
+  ROLE: 'role',
+  TYPE: 'type',
+  CHILDREN: 'children',
+  CONTENT: 'content'
+};
+
+
+/**
   * An XML tree representation of the current node.
   * @param {Document} xml The XML document.
   * @param {boolean=} opt_brief If set attributes are omitted.
@@ -128,10 +145,12 @@ sre.SemanticNode.prototype.xml = function(xml, opt_brief) {
   }
   node.textContent = this.textContent;
   if (this.contentNodes.length > 0) {
-    node.appendChild(xmlNodeList('content', this.contentNodes));
+    node.appendChild(xmlNodeList(sre.SemanticNode.Attribute.CONTENT,
+                                 this.contentNodes));
   }
   if (this.childNodes.length > 0) {
-    node.appendChild(xmlNodeList('children', this.childNodes));
+    node.appendChild(xmlNodeList(sre.SemanticNode.Attribute.CHILDREN,
+                                 this.childNodes));
   }
   return node;
 };
@@ -156,20 +175,36 @@ sre.SemanticNode.prototype.toString = function(opt_brief) {
  * @private
  */
 sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
-  node.setAttribute('role', this.role);
+  var attributes = this.attributes();
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    node.setAttribute(attr[0], attr[1]);
+  }
+};
+
+
+/**
+ * Computes a list of attributes of the semantic node.
+ * @return {!Array.<Array.<sre.SemanticNode.Attribute, string>>} A list of
+ *     pairs.
+ */
+sre.SemanticNode.prototype.attributes = function() {
+  var attributes = [];
+  attributes.push([sre.SemanticNode.Attribute.ROLE, this.role]);
   if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
-    node.setAttribute('font', this.font);
+    attributes.push([sre.SemanticNode.Attribute.FONT, this.font]);
   }
   if (Object.keys(this.meaning).length) {
-    node.setAttribute('meaning', this.xmlMeaning());
+    attributes.push([sre.SemanticNode.Attribute.MEANING, this.xmlMeaning()]);
   }
   if (this.embellished) {
-    node.setAttribute('embellished', this.embellished);
+    attributes.push([sre.SemanticNode.Attribute.EMBELLISHED, this.embellished]);
   }
   if (this.fencePointer) {
-    node.setAttribute('fencepointer', this.fencePointer);
+    attributes.push([sre.SemanticNode.Attribute.FENCEPOINTER,
+                     this.fencePointer]);
   }
-  node.setAttribute('id', this.id);
+  attributes.push([sre.SemanticNode.Attribute.ID, this.id]);
+  return attributes;
 };
 
 
