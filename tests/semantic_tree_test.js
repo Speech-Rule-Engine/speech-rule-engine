@@ -12849,6 +12849,9 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
 };
 
 
+/**
+ * Tests for vulgar fractions.
+ */
 sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
   this.executeTreeTest(
       '<mfrac><mn>1</mn><mn>2</mn></mfrac>',

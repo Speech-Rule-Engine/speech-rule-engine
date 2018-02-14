@@ -17,6 +17,11 @@
 //
 
 
+/**
+ * @fileoverview Test simple annotations for Clearspeak.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
 goog.provide('sre.ClearspeakAnnotationTest');
 
 goog.require('sre.AbstractTest');
@@ -43,6 +48,11 @@ sre.ClearspeakAnnotationTest = function() {
 goog.inherits(sre.ClearspeakAnnotationTest, sre.AbstractTest);
 
 
+/**
+ * Tests simple annotator for Clearspeak.
+ * @param {string} mml Snippet of a MathML expression.
+ * @param {boolean} expected The expression is simple or not.
+ */
 sre.ClearspeakAnnotationTest.prototype.executeTest = function(mml, expected) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
@@ -53,6 +63,9 @@ sre.ClearspeakAnnotationTest.prototype.executeTest = function(mml, expected) {
 };
 
 
+/**
+ * Test numbers.
+ */
 sre.ClearspeakAnnotationTest.prototype.testNumbers = function() {
   this.executeTest('<mn>1</mn>', true);
   this.executeTest('<mn>1.5</mn>', true);
@@ -64,6 +77,9 @@ sre.ClearspeakAnnotationTest.prototype.testNumbers = function() {
 };
 
 
+/**
+ * Test letters.
+ */
 sre.ClearspeakAnnotationTest.prototype.testLetters = function() {
   this.executeTest('<mi>a</mi>', true);
   this.executeTest('<mi>A</mi>', true);
@@ -93,6 +109,9 @@ sre.ClearspeakAnnotationTest.prototype.testLetters = function() {
 };
 
 
+/**
+ * Test mixed expressions.
+ */
 sre.ClearspeakAnnotationTest.prototype.testMixed = function() {
   this.executeTest('<mn>1</mn><mi>a</mi>', true);
   this.executeTest('<mn>1</mn><mi>a</mi><mi>b</mi>', true);
@@ -114,8 +133,10 @@ sre.ClearspeakAnnotationTest.prototype.testMixed = function() {
   this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac>' +
                    '<mi>a</mi><mi>b</mi><mi>c</mi>', false);
 
-  this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi><mi>b</mi>', false);
-  this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>3</mi>', false);
+  this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi><mi>b' +
+                   '</mi>', false);
+  this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>3' +
+                   '</mi>', false);
   this.executeTest('<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi>', false);
 
   this.executeTest('<mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi>', false);
@@ -127,6 +148,9 @@ sre.ClearspeakAnnotationTest.prototype.testMixed = function() {
 };
 
 
+/**
+ * Test expressions with degree sign.
+ */
 sre.ClearspeakAnnotationTest.prototype.testDegree = function() {
   this.executeTest('<mn>45</mn><mo>°</mo>', true);
   this.executeTest('<mo>-</mo><mn>32.5</mn><mo>°</mo>', true);
@@ -140,30 +164,42 @@ sre.ClearspeakAnnotationTest.prototype.testDegree = function() {
 };
 
 
+/**
+ * Test function expressions.
+ */
 sre.ClearspeakAnnotationTest.prototype.testFunctions = function() {
   this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>', true);
   this.executeTest('<mi>sin</mi><mi>x</mi>', true);
-  this.executeTest('<mi>sin</mi><mo>(</mo><mn>45</mn><mo>°</mo><mo>)</mo>', true);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mn>45</mn><mo>°</mo><mo>)</mo>',
+                   true);
   this.executeTest('<msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi>', true);
-
   this.executeTest('<mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>', true);
-  this.executeTest('<msup><mi>f</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo>', true);
+  this.executeTest('<msup><mi>f</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi>' +
+                   '<mo>)</mo>', true);
   this.executeTest('<mo>-</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>', false);
 
-  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo>', true);
-  this.executeTest('<mi>sin</mi><mo>(</mo><mn>3</mn><mi>x</mi><mi>y</mi><mo>)</mo>', true);
-  this.executeTest('<mi>sin</mi><mo>(</mo><mo>-</mo><mi>x</mi><mi>y</mi><mo>)</mo>', true);
-  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>', false);
-  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mi>z</mi><mo>)</mo>', false);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo>',
+                   true);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mn>3</mn><mi>x</mi><mi>y</mi>' +
+                   '<mo>)</mo>', true);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mo>-</mo><mi>x</mi><mi>y</mi>' +
+                   '<mo>)</mo>', true);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mo>', false);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mi>z</mi>' +
+                   '<mo>)</mo>', false);
 
   // Not sure if these should be like that!
-  this.executeTest('<mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo>', true);
+  this.executeTest('<mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)' +
+                   '</mo><mo>)</mo>', true);
   this.executeTest('<mi>sin</mi><mi>cos</mi><mi>x</mi>', true);
 
   this.executeTest('<mo>-</mo><mi>sin</mi><mi>cos</mi><mi>x</mi>', false);
 };
 
 
+/**
+ * Test negative numbers.
+ */
 sre.ClearspeakAnnotationTest.prototype.testNegativeNumbers = function() {
   this.executeTest('<mo>-</mo><mn>1</mn>', true);
   this.executeTest('<mo>-</mo><mn>1.5</mn>', true);
@@ -179,6 +215,9 @@ sre.ClearspeakAnnotationTest.prototype.testNegativeNumbers = function() {
 };
 
 
+/**
+ * Test negative letters.
+ */
 sre.ClearspeakAnnotationTest.prototype.testNegativeLetters = function() {
   this.executeTest('<mo>-</mo><mi>a</mi>', true);
   this.executeTest('<mo>-</mo><mi>A</mi>', true);
@@ -208,32 +247,42 @@ sre.ClearspeakAnnotationTest.prototype.testNegativeLetters = function() {
 };
 
 
+/**
+ * Test negative mixed expressions.
+ */
 sre.ClearspeakAnnotationTest.prototype.testNegativeMixed = function() {
   this.executeTest('<mo>-</mo><mn>1</mn><mi>a</mi>', true);
   this.executeTest('<mo>-</mo><mn>1</mn><mi>a</mi><mi>b</mi>', true);
   this.executeTest('<mo>-</mo><mn>1</mn><mi>a</mi><mi>b</mi><mi>c</mi>', false);
   this.executeTest('<mo>-</mo><mn>1.5</mn><mi>a</mi>', true);
   this.executeTest('<mo>-</mo><mn>1.5</mn><mi>a</mi><mi>b</mi>', true);
-  this.executeTest('<mo>-</mo><mn>1.5</mn><mi>a</mi><mi>b</mi><mi>c</mi>', false);
+  this.executeTest('<mo>-</mo><mn>1.5</mn><mi>a</mi><mi>b</mi><mi>c</mi>',
+                   false);
   this.executeTest('<mo>-</mo><mn>1.5e+10</mn><mi>a</mi>', false);
   this.executeTest('<mo>-</mo><mn>1.5e+10</mn><mi>a</mi><mi>b</mi>', false);
-  this.executeTest('<mo>-</mo><mn>1.5e+10</mn><mi>a</mi><mi>b</mi><mi>c</mi>', false);
+  this.executeTest('<mo>-</mo><mn>1.5e+10</mn><mi>a</mi><mi>b</mi><mi>c' +
+                   '</mi>', false);
 
   this.executeTest('<mo>-</mo><mn>1</mn><mi>2</mi><mi>b</mi>', false);
   this.executeTest('<mo>-</mo><mn>1</mn><mi>a</mi><mi>3</mi>', false);
   this.executeTest('<mo>-</mo><mn>1</mn><mi>2</mi>', false);
 
-  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>', true);
+  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a' +
+                   '</mi>', true);
   this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
                    '<mi>a</mi><mi>b</mi>', true);
   this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>' +
                    '<mi>a</mi><mi>b</mi><mi>c</mi>', false);
 
-  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi><mi>b</mi>', false);
-  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>3</mi>', false);
-  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi>', false);
+  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi>' +
+                   '<mi>b</mi>', false);
+  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>' +
+                   '<mi>3</mi>', false);
+  this.executeTest('<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2' +
+                   '</mi>', false);
 
-  this.executeTest('<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi>', false);
+  this.executeTest('<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a' +
+                   '</mi>', false);
   this.executeTest('<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac>' +
                    '<mi>a</mi><mi>b</mi>', false);
   this.executeTest('<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac>' +

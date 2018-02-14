@@ -61,7 +61,8 @@ sre.ClearspeakRoots.prototype.testRoot001 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot002 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus the square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -72,7 +73,8 @@ sre.ClearspeakRoots.prototype.testRoot002 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot003 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus or minus the square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -83,7 +85,8 @@ sre.ClearspeakRoots.prototype.testRoot003 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot004 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus or plus the square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -105,7 +108,8 @@ sre.ClearspeakRoots.prototype.testRoot005 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot006 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus the square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -116,7 +120,8 @@ sre.ClearspeakRoots.prototype.testRoot006 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot007 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 plus the negative square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -127,7 +132,8 @@ sre.ClearspeakRoots.prototype.testRoot007 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot008 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 minus the negative square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -138,7 +144,8 @@ sre.ClearspeakRoots.prototype.testRoot008 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot009 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '3 plus, open paren, the negative square root of 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -149,8 +156,10 @@ sre.ClearspeakRoots.prototype.testRoot009 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot010 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 minus, open paren, the negative square root of 2, close paren';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = '3 minus, open paren, the negative square root of 2, close' +
+      ' paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -160,7 +169,8 @@ sre.ClearspeakRoots.prototype.testRoot010 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot011 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the square root of x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -171,7 +181,8 @@ sre.ClearspeakRoots.prototype.testRoot011 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot011a = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
+      '</mrow></math>';
   var speech = 'the square root of x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -193,7 +204,9 @@ sre.ClearspeakRoots.prototype.testRoot012 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot013 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
+  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
+      '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
+      '</math>';
   var speech = 'open paren, the square root of x, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -204,8 +217,11 @@ sre.ClearspeakRoots.prototype.testRoot013 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot014 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'negative, open paren, the square root of x, close paren, squared';
+  var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
+      '</msup></mrow></math>';
+  var speech = 'negative, open paren, the square root of x, close paren,' +
+      ' squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -215,7 +231,8 @@ sre.ClearspeakRoots.prototype.testRoot014 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot015 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>';
+  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
+      '<mn>2</mn></msup></mrow></math>';
   var speech = 'the square root of x, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -226,7 +243,8 @@ sre.ClearspeakRoots.prototype.testRoot015 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot016 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the square root of x squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -237,7 +255,9 @@ sre.ClearspeakRoots.prototype.testRoot016 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot017 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
+      '</math>';
   var speech = 'the square root of x squared plus y squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -248,7 +268,9 @@ sre.ClearspeakRoots.prototype.testRoot017 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot018 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
+      '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
+      '</msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
   var speech = 'the square root of, x sub 1, squared plus, x sub 2, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -259,8 +281,15 @@ sre.ClearspeakRoots.prototype.testRoot018 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot019 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
+      '</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+' +
+      '</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn>' +
+      '</msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo>' +
+      '</mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the square root of, open paren, x sub 2, minus, x sub 1,' +
+      ' close paren, squared plus, open paren, y sub 2, minus, y sub 1,' +
+      ' close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -270,7 +299,8 @@ sre.ClearspeakRoots.prototype.testRoot019 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot020 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
+      '</mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the square root of one half';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -281,7 +311,8 @@ sre.ClearspeakRoots.prototype.testRoot020 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot021 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
+      '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the square root of, 23 over 66';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -292,8 +323,11 @@ sre.ClearspeakRoots.prototype.testRoot021 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot022 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
+      '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
+      '</mrow></mfrac></mrow></msqrt></mrow></math>';
+  var speech = 'the square root of, the fraction with numerator x plus 1,' +
+      ' and denominator 2 x, plus 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -303,8 +337,12 @@ sre.ClearspeakRoots.prototype.testRoot022 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot023 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, and denominator 2 a';
+  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
+      '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
+      '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
+      '</mrow></mfrac></mrow></math>';
+  var speech = 'the fraction with numerator negative b plus or minus the' +
+      ' square root of b squared minus 4 a c, and denominator 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -325,7 +363,8 @@ sre.ClearspeakRoots.prototype.testRoot024 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot025 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus the positive square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -336,7 +375,8 @@ sre.ClearspeakRoots.prototype.testRoot025 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus or minus the square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -347,7 +387,8 @@ sre.ClearspeakRoots.prototype.testRoot026 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus or plus the square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -369,7 +410,8 @@ sre.ClearspeakRoots.prototype.testRoot028 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot029 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus the positive square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -380,7 +422,8 @@ sre.ClearspeakRoots.prototype.testRoot029 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 plus the negative square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -391,7 +434,8 @@ sre.ClearspeakRoots.prototype.testRoot030 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot031 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 minus the negative square root of 2';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -402,7 +446,8 @@ sre.ClearspeakRoots.prototype.testRoot031 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot032 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
   var speech = '3 plus, open paren, the negative square root of 2, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -413,8 +458,10 @@ sre.ClearspeakRoots.prototype.testRoot032 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot033 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 minus, open paren, the negative square root of 2, close paren';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = '3 minus, open paren, the negative square root of 2, close' +
+      ' paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -424,7 +471,8 @@ sre.ClearspeakRoots.prototype.testRoot033 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot034 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of x plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -435,7 +483,8 @@ sre.ClearspeakRoots.prototype.testRoot034 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot034a = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
+      '</mrow></math>';
   var speech = 'the positive square root of x, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -457,8 +506,11 @@ sre.ClearspeakRoots.prototype.testRoot035 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot036 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'open paren, the positive square root of x, close paren, squared';
+  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
+      '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
+      '</math>';
+  var speech = 'open paren, the positive square root of x, close paren,' +
+      ' squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -468,8 +520,11 @@ sre.ClearspeakRoots.prototype.testRoot036 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot037 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'open paren, the negative square root of x, close paren, squared';
+  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
+      '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
+      '</msup></mrow></math>';
+  var speech = 'open paren, the negative square root of x, close paren,' +
+      ' squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -479,8 +534,11 @@ sre.ClearspeakRoots.prototype.testRoot037 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot038 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'negative, open paren, the positive square root of x, close paren, squared';
+  var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
+      '</msup></mrow></math>';
+  var speech = 'negative, open paren, the positive square root of x, close' +
+      ' paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -490,7 +548,8 @@ sre.ClearspeakRoots.prototype.testRoot038 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot039 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>';
+  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
+      '<mn>2</mn></msup></mrow></math>';
   var speech = 'the positive square root of x, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -501,7 +560,8 @@ sre.ClearspeakRoots.prototype.testRoot039 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot040 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of x squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -512,7 +572,9 @@ sre.ClearspeakRoots.prototype.testRoot040 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot041 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
+      '</math>';
   var speech = 'the positive square root of x squared plus y squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -523,8 +585,11 @@ sre.ClearspeakRoots.prototype.testRoot041 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot042 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the positive square root of, x sub 1, squared plus, x sub 2, squared';
+  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
+      '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
+      '</msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the positive square root of, x sub 1, squared plus, x sub' +
+      ' 2, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -534,8 +599,15 @@ sre.ClearspeakRoots.prototype.testRoot042 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot043 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the positive square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
+      '</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+' +
+      '</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn>' +
+      '</msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo>' +
+      '</mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the positive square root of, open paren, x sub 2, minus, x' +
+      ' sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub' +
+      ' 1, close paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -545,7 +617,8 @@ sre.ClearspeakRoots.prototype.testRoot043 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot044 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
+      '</mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of one half';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -556,7 +629,8 @@ sre.ClearspeakRoots.prototype.testRoot044 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot045 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
+      '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of, 23 over 66';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -567,8 +641,11 @@ sre.ClearspeakRoots.prototype.testRoot045 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot046 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the positive square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
+      '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
+      '</mrow></mfrac></mrow></msqrt></mrow></math>';
+  var speech = 'the positive square root of, the fraction with numerator x' +
+      ' plus 1, and denominator 2 x, plus 5';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -578,8 +655,12 @@ sre.ClearspeakRoots.prototype.testRoot046 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot047 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, and denominator 2 a';
+  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
+      '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
+      '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
+      '</mrow></mfrac></mrow></math>';
+  var speech = 'the fraction with numerator negative b plus or minus the' +
+      ' square root of b squared minus 4 a c, and denominator 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -600,7 +681,8 @@ sre.ClearspeakRoots.prototype.testRoot048 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot049 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus the square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -611,7 +693,8 @@ sre.ClearspeakRoots.prototype.testRoot049 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot050 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus or minus the square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -622,7 +705,8 @@ sre.ClearspeakRoots.prototype.testRoot050 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot051 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus or plus the square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -644,7 +728,8 @@ sre.ClearspeakRoots.prototype.testRoot052 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot053 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus the square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -655,7 +740,8 @@ sre.ClearspeakRoots.prototype.testRoot053 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot054 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 plus the negative square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -666,7 +752,8 @@ sre.ClearspeakRoots.prototype.testRoot054 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot055 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 minus the negative square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -677,8 +764,10 @@ sre.ClearspeakRoots.prototype.testRoot055 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot056 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 plus, open paren, the negative square root of 2, end root, close paren';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = '3 plus, open paren, the negative square root of 2, end' +
+      ' root, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -688,8 +777,10 @@ sre.ClearspeakRoots.prototype.testRoot056 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot057 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 minus, open paren, the negative square root of 2, end root, close paren';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = '3 minus, open paren, the negative square root of 2, end' +
+      ' root, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -699,7 +790,8 @@ sre.ClearspeakRoots.prototype.testRoot057 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot058 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the square root of x plus 1, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -710,7 +802,8 @@ sre.ClearspeakRoots.prototype.testRoot058 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot058a = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
+      '</mrow></math>';
   var speech = 'the square root of x, end root, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -732,8 +825,11 @@ sre.ClearspeakRoots.prototype.testRoot059 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot060 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'open paren, the square root of x, end root, close paren, squared';
+  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
+      '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
+      '</math>';
+  var speech = 'open paren, the square root of x, end root, close paren,' +
+      ' squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -743,8 +839,11 @@ sre.ClearspeakRoots.prototype.testRoot060 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot061 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'negative, open paren, the square root of x, end root, close paren, squared';
+  var mathml = '<math><mrow><mo>−</mo><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
+      '</msup></mrow></math>';
+  var speech = 'negative, open paren, the square root of x, end root, close' +
+      ' paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -754,7 +853,8 @@ sre.ClearspeakRoots.prototype.testRoot061 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot062 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>';
+  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
+      '<mn>2</mn></msup></mrow></math>';
   var speech = 'the square root of x, end root, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -765,7 +865,8 @@ sre.ClearspeakRoots.prototype.testRoot062 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot063 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the square root of x squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -776,7 +877,9 @@ sre.ClearspeakRoots.prototype.testRoot063 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot064 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
+      '</math>';
   var speech = 'the square root of x squared plus y squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -787,8 +890,11 @@ sre.ClearspeakRoots.prototype.testRoot064 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot065 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the square root of, x sub 1, squared plus, x sub 2, squared, end root';
+  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
+      '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
+      '</msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the square root of, x sub 1, squared plus, x sub 2,' +
+      ' squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -798,8 +904,15 @@ sre.ClearspeakRoots.prototype.testRoot065 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot066 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared, end root';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
+      '</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+' +
+      '</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn>' +
+      '</msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo>' +
+      '</mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the square root of, open paren, x sub 2, minus, x sub 1,' +
+      ' close paren, squared plus, open paren, y sub 2, minus, y sub 1,' +
+      ' close paren, squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -809,7 +922,8 @@ sre.ClearspeakRoots.prototype.testRoot066 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot067 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
+      '</mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the square root of one half, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -820,7 +934,8 @@ sre.ClearspeakRoots.prototype.testRoot067 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot068 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
+      '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the square root of, 23 over 66, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -831,8 +946,11 @@ sre.ClearspeakRoots.prototype.testRoot068 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot069 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5, end root';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
+      '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
+      '</mrow></mfrac></mrow></msqrt></mrow></math>';
+  var speech = 'the square root of, the fraction with numerator x plus 1,' +
+      ' and denominator 2 x, plus 5, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -842,8 +960,12 @@ sre.ClearspeakRoots.prototype.testRoot069 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot070 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, end root, and denominator 2 a';
+  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
+      '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
+      '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
+      '</mrow></mfrac></mrow></math>';
+  var speech = 'the fraction with numerator negative b plus or minus the' +
+      ' square root of b squared minus 4 a c, end root, and denominator 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -864,7 +986,8 @@ sre.ClearspeakRoots.prototype.testRoot071 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot072 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus the positive square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -875,7 +998,8 @@ sre.ClearspeakRoots.prototype.testRoot072 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot073 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>±</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 plus or minus the square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -886,7 +1010,8 @@ sre.ClearspeakRoots.prototype.testRoot073 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot074 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>∓</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus or plus the square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -908,7 +1033,8 @@ sre.ClearspeakRoots.prototype.testRoot075 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot076 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><msqrt><mn>2</mn></msqrt>' +
+      '</mrow></math>';
   var speech = '3 minus the positive square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -919,7 +1045,8 @@ sre.ClearspeakRoots.prototype.testRoot076 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot077 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 plus the negative square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -930,7 +1057,8 @@ sre.ClearspeakRoots.prototype.testRoot077 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot078 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></math>';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mo>−</mo><msqrt><mn>2</mn>' +
+      '</msqrt></mrow></math>';
   var speech = '3 minus the negative square root of 2, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -941,8 +1069,10 @@ sre.ClearspeakRoots.prototype.testRoot078 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot079 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 plus, open paren, the negative square root of 2, end root, close paren';
+  var mathml = '<math><mrow><mn>3</mn><mo>+</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = '3 plus, open paren, the negative square root of 2, end' +
+      ' root, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -952,8 +1082,10 @@ sre.ClearspeakRoots.prototype.testRoot079 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot080 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 minus, open paren, the negative square root of 2, end root, close paren';
+  var mathml = '<math><mrow><mn>3</mn><mo>−</mo><mrow><mo>(</mo><mrow><mo>−' +
+      '</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow></mrow></math>';
+  var speech = '3 minus, open paren, the negative square root of 2, end' +
+      ' root, close paren';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -963,7 +1095,8 @@ sre.ClearspeakRoots.prototype.testRoot080 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot081 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>1</mn>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of x plus 1, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -974,7 +1107,8 @@ sre.ClearspeakRoots.prototype.testRoot081 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot081a = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mn>1</mn>' +
+      '</mrow></math>';
   var speech = 'the positive square root of x, end root, plus 1';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -996,8 +1130,11 @@ sre.ClearspeakRoots.prototype.testRoot082 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot083 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'open paren, the positive square root of x, end root, close paren, squared';
+  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><msqrt><mi>x' +
+      '</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow>' +
+      '</math>';
+  var speech = 'open paren, the positive square root of x, end root, close' +
+      ' paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1007,8 +1144,11 @@ sre.ClearspeakRoots.prototype.testRoot083 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot084 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo><msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></math>';
-  var speech = 'open paren, the negative square root of x, end root, close paren, squared';
+  var mathml = '<math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mo>−</mo>' +
+      '<msqrt><mi>x</mi></msqrt></mrow><mo>)</mo></mrow></mrow><mn>2</mn>' +
+      '</msup></mrow></math>';
+  var speech = 'open paren, the negative square root of x, end root, close' +
+      ' paren, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1018,7 +1158,8 @@ sre.ClearspeakRoots.prototype.testRoot084 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot085 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow><mn>2</mn></msup></mrow></math>';
+  var mathml = '<math><mrow><msup><mrow><msqrt><mi>x</mi></msqrt></mrow>' +
+      '<mn>2</mn></msup></mrow></math>';
   var speech = 'the positive square root of x, end root, squared';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1029,7 +1170,8 @@ sre.ClearspeakRoots.prototype.testRoot085 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot086 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '</mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of x squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1040,7 +1182,9 @@ sre.ClearspeakRoots.prototype.testRoot086 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot087 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup>' +
+      '<mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow>' +
+      '</math>';
   var speech = 'the positive square root of x squared plus y squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1051,8 +1195,11 @@ sre.ClearspeakRoots.prototype.testRoot087 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot088 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the positive square root of, x sub 1, squared plus, x sub 2, squared, end root';
+  var mathml = '<math><mrow><msqrt><mrow><msub><mi>x</mi><mn>1</mn></msub>' +
+      '<msup><mrow/><mn>2</mn></msup><mo>+</mo><msub><mi>x</mi><mn>2</mn>' +
+      '</msub><msup><mrow/><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the positive square root of, x sub 1, squared plus, x sub' +
+      ' 2, squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1062,8 +1209,15 @@ sre.ClearspeakRoots.prototype.testRoot088 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot089 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
-  var speech = 'the positive square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared, end root';
+  var mathml = '<math><mrow><msqrt><mrow><msup><mrow><mrow><mo>(</mo><mrow>' +
+      '<msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1' +
+      '</mn></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>+' +
+      '</mo><msup><mrow><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>2</mn>' +
+      '</msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>)</mo>' +
+      '</mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>';
+  var speech = 'the positive square root of, open paren, x sub 2, minus, x' +
+      ' sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub' +
+      ' 1, close paren, squared, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1073,7 +1227,8 @@ sre.ClearspeakRoots.prototype.testRoot089 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot090 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mn>1</mn><mn>2</mn>' +
+      '</mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of one half, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1084,7 +1239,8 @@ sre.ClearspeakRoots.prototype.testRoot090 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot091 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow><mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mn>23</mn></mrow>' +
+      '<mrow><mn>66</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
   var speech = 'the positive square root of, 23 over 66, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1095,8 +1251,11 @@ sre.ClearspeakRoots.prototype.testRoot091 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot092 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></mfrac></mrow></msqrt></mrow></math>';
-  var speech = 'the positive square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5, end root';
+  var mathml = '<math><mrow><msqrt><mrow><mfrac><mrow><mi>x</mi><mo>+</mo>' +
+      '<mn>1</mn></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>' +
+      '</mrow></mfrac></mrow></msqrt></mrow></math>';
+  var speech = 'the positive square root of, the fraction with numerator x' +
+      ' plus 1, and denominator 2 x, plus 5, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1106,8 +1265,12 @@ sre.ClearspeakRoots.prototype.testRoot092 = function() {
  */
 sre.ClearspeakRoots.prototype.testRoot093 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>';
-  var speech = 'the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, end root, and denominator 2 a';
+  var mathml = '<math><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo>' +
+      '<msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn>' +
+      '<mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi>' +
+      '</mrow></mfrac></mrow></math>';
+  var speech = 'the fraction with numerator negative b plus or minus the' +
+      ' square root of b squared minus 4 a c, end root, and denominator 2 a';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1144,7 +1307,8 @@ sre.ClearspeakRoots.prototype.testHighRoot002 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot003 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the fifth root of 35';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1155,7 +1319,8 @@ sre.ClearspeakRoots.prototype.testHighRoot003 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot004 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the ninth root of 146';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1177,7 +1342,8 @@ sre.ClearspeakRoots.prototype.testHighRoot005 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot006 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the mth root of 243';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1188,7 +1354,8 @@ sre.ClearspeakRoots.prototype.testHighRoot006 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot007 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
+      '</mrow><mi>i</mi></mroot></mrow></math>';
   var speech = 'the ith root of 2 to the ith power';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1199,7 +1366,8 @@ sre.ClearspeakRoots.prototype.testHighRoot007 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot008 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the jth root of 125';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1210,7 +1378,8 @@ sre.ClearspeakRoots.prototype.testHighRoot008 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot009 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the cube root of y';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1221,7 +1390,8 @@ sre.ClearspeakRoots.prototype.testHighRoot009 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot010 = function() {
   var preference = 'Roots_Auto';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the fourth root of n';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1254,7 +1424,8 @@ sre.ClearspeakRoots.prototype.testHighRoot012 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot013 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the fifth root of 35, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1265,7 +1436,8 @@ sre.ClearspeakRoots.prototype.testHighRoot013 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot014 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the ninth root of 146, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1287,7 +1459,8 @@ sre.ClearspeakRoots.prototype.testHighRoot015 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot016 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the mth root of 243, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1298,7 +1471,8 @@ sre.ClearspeakRoots.prototype.testHighRoot016 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot017 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
+      '</mrow><mi>i</mi></mroot></mrow></math>';
   var speech = 'the ith root of 2 to the ith power, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1309,7 +1483,8 @@ sre.ClearspeakRoots.prototype.testHighRoot017 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot018 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the jth root of 125, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1320,7 +1495,8 @@ sre.ClearspeakRoots.prototype.testHighRoot018 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot019 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the cube root of y, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1331,7 +1507,8 @@ sre.ClearspeakRoots.prototype.testHighRoot019 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot020 = function() {
   var preference = 'Roots_RootEnd';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the fourth root of n, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1364,7 +1541,8 @@ sre.ClearspeakRoots.prototype.testHighRoot022 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot023 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the fifth root of 35';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1375,7 +1553,8 @@ sre.ClearspeakRoots.prototype.testHighRoot023 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot024 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the ninth root of 146';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1397,7 +1576,8 @@ sre.ClearspeakRoots.prototype.testHighRoot025 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot026 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the mth root of 243';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1408,7 +1588,8 @@ sre.ClearspeakRoots.prototype.testHighRoot026 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot027 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
+      '</mrow><mi>i</mi></mroot></mrow></math>';
   var speech = 'the ith root of 2 to the ith power';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1419,7 +1600,8 @@ sre.ClearspeakRoots.prototype.testHighRoot027 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot028 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the jth root of 125';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1430,7 +1612,8 @@ sre.ClearspeakRoots.prototype.testHighRoot028 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot029 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the cube root of y';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1441,7 +1624,8 @@ sre.ClearspeakRoots.prototype.testHighRoot029 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot030 = function() {
   var preference = 'Roots_PosNegSqRoot';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the fourth root of n';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1474,7 +1658,8 @@ sre.ClearspeakRoots.prototype.testHighRoot032 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot033 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>35</mn></mrow><mn>5</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the fifth root of 35, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1485,7 +1670,8 @@ sre.ClearspeakRoots.prototype.testHighRoot033 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot034 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>146</mn></mrow><mn>9</mn>' +
+      '</mroot></mrow></math>';
   var speech = 'the ninth root of 146, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1507,7 +1693,8 @@ sre.ClearspeakRoots.prototype.testHighRoot035 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot036 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>243</mn></mrow><mi>m</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the mth root of 243, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1518,7 +1705,8 @@ sre.ClearspeakRoots.prototype.testHighRoot036 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot037 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><mi>i</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><msup><mn>2</mn><mi>i</mi></msup>' +
+      '</mrow><mi>i</mi></mroot></mrow></math>';
   var speech = 'the ith root of 2 to the ith power, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1529,7 +1717,8 @@ sre.ClearspeakRoots.prototype.testHighRoot037 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot038 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi></mroot></mrow></math>';
+  var mathml = '<math><mrow><mroot><mrow><mn>125</mn></mrow><mi>j</mi>' +
+      '</mroot></mrow></math>';
   var speech = 'the jth root of 125, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1540,7 +1729,8 @@ sre.ClearspeakRoots.prototype.testHighRoot038 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot039 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>y</mi><mn>3</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the cube root of y, end root';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -1551,7 +1741,8 @@ sre.ClearspeakRoots.prototype.testHighRoot039 = function() {
  */
 sre.ClearspeakRoots.prototype.testHighRoot040 = function() {
   var preference = 'Roots_PosNegSqRootEnd';
-  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot></mrow></math>';
+  var mathml = '<math><mrow><mo>−</mo><mroot><mi>n</mi><mn>4</mn></mroot>' +
+      '</mrow></math>';
   var speech = 'negative the fourth root of n, end root';
   this.executeRuleTest(mathml, speech, preference);
 };

@@ -311,7 +311,7 @@ sre.SemanticMathml.prototype.identifier_ = function(node, children) {
       sre.SemanticProcessor.getInstance().font(
       node.getAttribute('mathvariant')),
       node.getAttribute('class'));
-  // TODO: MS2.3 Handle this separately in an additional parser:
+  // TODO: (MS2.3|simons) Handle this separately in an additional parser:
   if (sre.Engine.getInstance().domain !== 'clearspeak') {
     return sem;
   }
