@@ -396,7 +396,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  * @private
  */
 sre.SpeechRuleEngine.prototype.addPersonality_ = function(
-  descrs, props, multi) {
+    descrs, props, multi) {
   var personality = {};
   for (var key in sre.Engine.personalityProps) {
     var value = props[sre.Engine.personalityProps[key]];
@@ -408,18 +408,20 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     //   personality[sre.Engine.personalityProps[key]] = numeral;
     // }
     personality[sre.Engine.personalityProps[key]] =
-      isNaN(numeral) ?
-      ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
-    numeral;
+        isNaN(numeral) ?
+        ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
+        numeral;
   }
   // TODO: Deal with non-numeric values for personalities here.
   //       Possibly use simply an overwrite mechanism without adding.
   for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
   }
-  // MOSS: Removes the last joiner in a multi node element. This should be reviewed.
+  // MOSS: Removes the last joiner in a multi node element. This should be
+  //       reviewed.
   if (multi) {
-    delete descrs[descrs.length - 1].personality[sre.Engine.personalityProps.JOIN];
+    delete descrs[descrs.length - 1].
+        personality[sre.Engine.personalityProps.JOIN];
   }
   return descrs;
 };
@@ -662,6 +664,14 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
 };
 
 
+/**
+ * Splits preference form style names into set of preference settings.
+ * @param {string} value The value of the style setting.
+ * @param {?Object.<string>} preferences Set of Clearspeak preferences or null.
+ * @return {Array.<string>} The style settings. Either a single element or a
+ *      pair associating a Clearspeak preference with a value.
+ * @private
+ */
 sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
   if (!preferences || !Object.keys(preferences).length) {
     return [value];

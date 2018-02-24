@@ -28,15 +28,15 @@ goog.provide('sre.AudioUtil');
  * @param {{pause: (number|string)}} newPause New pause annotation.
  * @param {(function((number|string), (number|string)): (number|string))=}
  *     opt_merge Function to combine pauses. By default we add them.
- * @return {{pause: (number|string)}} A personality annotation with the merged pause
- *     values.
+ * @return {{pause: (number|string)}} A personality annotation with the merged
+ *     pause values.
  */
 sre.AudioUtil.mergePause = function(oldPause, newPause, opt_merge) {
   if (!oldPause) {
     return newPause;
   }
   return {pause: sre.AudioUtil.mergePause_(
-    oldPause.pause, newPause.pause, opt_merge)};
+      oldPause.pause, newPause.pause, opt_merge)};
 };
 
 
@@ -159,6 +159,14 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
 };
 
 
+/**
+ * Appends an element to the partial markup list. If the last markup entry and
+ * the new element are either both string or pause elements it joins
+ * them. Otherwise the new element is appended.
+ * @param {!Array.<Object>} markup The markup list.
+ * @param {!Object} element A single markup element.
+ * @private
+ */
 sre.AudioUtil.appendElement_ = function(markup, element) {
   var last = markup[markup.length - 1];
   if (!last) {
@@ -213,7 +221,7 @@ sre.AudioUtil.simplifyMarkup_ = function(markup) {
       continue;
     }
     var pauseElement = sre.AudioUtil.isPauseElement(nextElement) ?
-          nextElement : null;
+        nextElement : null;
     if (pauseElement) {
       nextElement = markup[i + 2];
     }
@@ -234,7 +242,13 @@ sre.AudioUtil.simplifyMarkup_ = function(markup) {
   return result;
 };
 
-// TODO: Make that generic!
+
+/**
+ * Copies values from one markup object to the other.
+ * @param {Object} from Source element.
+ * @param {Object} to Target element.
+ * @private
+ */
 sre.AudioUtil.copyValues_ = function(from, to) {
   if (from['rate']) {
     to['rate'] = from['rate'];
@@ -301,8 +315,8 @@ sre.AudioUtil.isPauseElement = function(element) {
 sre.AudioUtil.isStringElement = function(element) {
   var keys = Object.keys(element);
   return typeof element === 'object' &&
-    ((keys.length === 1 && keys[0] === 'string') ||
-     (keys.length === 2 &&
+      ((keys.length === 1 && keys[0] === 'string') ||
+      (keys.length === 2 &&
       ((keys[0] === 'string' && keys[1] === 'join') ||
        (keys[1] === 'string' && keys[0] === 'join'))));
 };
@@ -333,7 +347,8 @@ sre.AudioUtil.appendMarkup_ = function(
         sre.AudioUtil.isPauseElement(last)) {
       var pauseProp = sre.Engine.personalityProps.PAUSE;
       // Merging could be done using max or min or plus.
-      last[pauseProp] = sre.AudioUtil.mergePause_(last[pauseProp], pause[pauseProp]);
+      last[pauseProp] = sre.AudioUtil.mergePause_(last[pauseProp],
+                                                  pause[pauseProp]);
       pause = null;
     }
     if (last && str && Object.keys(pers).length === 0 &&

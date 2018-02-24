@@ -12682,8 +12682,8 @@ sre.SemanticTreeTest.prototype.testStreeRelationTables = function() {
  */
 sre.SemanticTreeTest.prototype.testStreeSets = function() {
   this.executeTreeTest(
-    '<mo>{</mo><mo>}</mo>',
-    '<fenced role="set empty" id="3">' +
+      '<mo>{</mo><mo>}</mo>',
+      '<fenced role="set empty" id="3">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="1">}</fence>' +
@@ -12694,8 +12694,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mo>}</mo>',
-    '<fenced role="set singleton" id="3">' +
+      '<mo>{</mo><mi>x</mi><mo>}</mo>',
+      '<fenced role="set singleton" id="3">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="2">}</fence>' +
@@ -12706,8 +12706,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>}</mo>',
-    '<fenced role="set collection" id="6">' +
+      '<mo>{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>}</mo>',
+      '<fenced role="set collection" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12727,8 +12727,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>',
-    '<fenced role="set extended" id="6">' +
+      '<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>',
+      '<fenced role="set extended" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12748,8 +12748,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>',
-    '<fenced role="set extended" id="6">' +
+      '<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>',
+      '<fenced role="set extended" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12769,8 +12769,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>',
-    '<fenced role="leftright" id="6">' +
+      '<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>',
+      '<fenced role="leftright" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12789,8 +12789,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
-    '<fenced role="leftright" id="6">' +
+      '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
+      '<fenced role="leftright" id="6">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="3">}</fence>' +
@@ -12809,8 +12809,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
-    '<fenced role="leftright" id="5">' +
+      '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
+      '<fenced role="leftright" id="5">' +
       '<content>' +
       '<fence role="open" id="0">{</fence>' +
       '<fence role="close" id="4">}</fence>' +
@@ -12826,8 +12826,8 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
       '</fenced>'
   );
   this.executeTreeTest(
-    '<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>',
-    '<appl role="simple function" id="6">' +
+      '<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>',
+      '<appl role="simple function" id="6">' +
       '<content>' +
       '<punctuation role="application" id="5">⁡</punctuation>' +
       '<identifier role="simple function" font="italic" id="0">P</identifier>' +
@@ -12849,10 +12849,13 @@ sre.SemanticTreeTest.prototype.testStreeSets = function() {
 };
 
 
+/**
+ * Tests for vulgar fractions.
+ */
 sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
   this.executeTreeTest(
-    '<mfrac><mn>1</mn><mn>2</mn></mfrac>',
-    '<fraction role="vulgar" id="2">' +
+      '<mfrac><mn>1</mn><mn>2</mn></mfrac>',
+      '<fraction role="vulgar" id="2">' +
       '<children>' +
       '<number role="integer" font="normal" id="0">1</number>' +
       '<number role="integer" font="normal" id="1">2</number>' +
@@ -12860,8 +12863,8 @@ sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
       '</fraction>'
   );
   this.executeTreeTest(
-    '<mfrac><mn>1.5</mn><mn>2</mn></mfrac>',
-    '<fraction role="division" id="2">' +
+      '<mfrac><mn>1.5</mn><mn>2</mn></mfrac>',
+      '<fraction role="division" id="2">' +
       '<children>' +
       '<number role="float" font="normal" id="0">1.5</number>' +
       '<number role="integer" font="normal" id="1">2</number>' +
@@ -12869,17 +12872,17 @@ sre.SemanticTreeTest.prototype.testStreeVulgarFractions = function() {
       '</fraction>'
   );
   this.executeTreeTest(
-    '<mfrac><mn>1</mn><mn>2.5</mn></mfrac>',
-    '<fraction role="division" id="2">' +
+      '<mfrac><mn>1</mn><mn>2.5</mn></mfrac>',
+      '<fraction role="division" id="2">' +
       '<children>' +
       '<number role="integer" font="normal" id="0">1</number>' +
       '<number role="float" font="normal" id="1">2.5</number>' +
       '</children>' +
       '</fraction>');
   this.executeTreeTest(
-    '<mfrac><msup><mn>3</mn><mn>4</mn></msup>' +
+      '<mfrac><msup><mn>3</mn><mn>4</mn></msup>' +
       '<msup><mn>8</mn><mn>10</mn></msup></mfrac>',
-    '<fraction role="division" id="6">' +
+      '<fraction role="division" id="6">' +
       '<children>' +
       '<superscript role="integer" id="2">' +
       '<children>' +

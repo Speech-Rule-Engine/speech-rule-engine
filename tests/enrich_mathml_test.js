@@ -50,7 +50,8 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
   // Make sure the engine is in a default mode.
   sre.System.getInstance().setupEngine({semantics: true});
   this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
-                        'data-semantic-fencepointer', 'data-semantic-meaning'];
+                        'data-semantic-fencepointer',
+                        'data-semantic-annotation'];
   sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
@@ -11139,24 +11140,24 @@ sre.EnrichMathmlTest.prototype.testMathmlSpacesAndEmptyFences = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
   this.executeMathmlTest(
-    '<mo>{</mo><mo>}</mo>',
-    '<math type="fenced" role="set empty" id="3" children="2"' +
+      '<mo>{</mo><mo>}</mo>',
+      '<math type="fenced" role="set empty" id="3" children="2"' +
       ' content="0,1"><mo type="fence" role="open" id="0" parent="3"' +
       ' operator="fenced">{</mo><mrow type="empty" role="unknown" id="2"' +
       ' parent="3"/><mo type="fence" role="close" id="1" parent="3"' +
       ' operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mo>{</mo><mi>x</mi><mo>}</mo>',
-    '<math type="fenced" role="set singleton" id="3" children="1"' +
+      '<mo>{</mo><mi>x</mi><mo>}</mo>',
+      '<math type="fenced" role="set singleton" id="3" children="1"' +
       ' content="0,2"><mo type="fence" role="open" id="0" parent="3"' +
       ' operator="fenced">{</mo><mi type="identifier" role="latinletter"' +
       ' id="1" parent="3">x</mi><mo type="fence" role="close" id="2"' +
       ' parent="3" operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>',
-    '<math type="fenced" role="set extended" id="6" children="5"' +
+      '<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>',
+      '<math type="fenced" role="set extended" id="6" children="5"' +
       ' content="0,4"><mo type="fence" role="open" id="0" parent="6"' +
       ' operator="fenced">{</mo><mrow type="punctuated" role="sequence"' +
       ' id="5" children="1,2,3" content="2" parent="6"><mi' +
@@ -11167,8 +11168,8 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' role="close" id="4" parent="6" operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>',
-    '<math type="fenced" role="set extended" id="6" children="5"' +
+      '<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>',
+      '<math type="fenced" role="set extended" id="6" children="5"' +
       ' content="0,4"><mo type="fence" role="open" id="0" parent="6"' +
       ' operator="fenced">{</mo><mrow type="punctuated" role="sequence"' +
       ' id="5" children="1,2,3" content="2" parent="6"><mi' +
@@ -11179,8 +11180,8 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' role="close" id="4" parent="6" operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>',
-    '<math type="fenced" role="leftright" id="6" children="5"' +
+      '<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>',
+      '<math type="fenced" role="leftright" id="6" children="5"' +
       ' content="0,4"><mo type="fence" role="open" id="0" parent="6"' +
       ' operator="fenced">{</mo><mrow type="infixop" role="addition" id="5"' +
       ' children="1,3" content="2" parent="6"><mi type="identifier"' +
@@ -11191,8 +11192,8 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
-    '<math type="fenced" role="leftright" id="6" children="5"' +
+      '<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>',
+      '<math type="fenced" role="leftright" id="6" children="5"' +
       ' content="0,3"><mo type="fence" role="open" id="0" parent="6"' +
       ' operator="fenced">{</mo><mrow type="infixop" role="implicit" id="5"' +
       ' children="1,2" content="4" parent="6"><mi type="identifier"' +
@@ -11203,8 +11204,8 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' parent="6" operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
-    '<math type="fenced" role="leftright" id="5" children="3"' +
+      '<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>',
+      '<math type="fenced" role="leftright" id="5" children="3"' +
       ' content="0,4"><mo type="fence" role="open" id="0" parent="5"' +
       ' operator="fenced">{</mo><mfrac type="fraction" role="division"' +
       ' id="3" children="1,2" parent="5"><mi type="identifier"' +
@@ -11213,8 +11214,8 @@ sre.EnrichMathmlTest.prototype.testMathmlSets = function() {
       ' role="close" id="4" parent="5" operator="fenced">}</mo></math>'
   );
   this.executeMathmlTest(
-    '<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>',
-    '<math type="appl" role="simple function" id="6" children="0,4"' +
+      '<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>',
+      '<math type="appl" role="simple function" id="6" children="0,4"' +
       ' content="5,0"><mi type="identifier" role="simple function" id="0"' +
       ' parent="6" operator="appl">P</mi><mo type="punctuation"' +
       ' role="application" id="5" parent="6" added="true" operator="appl">⁡' +

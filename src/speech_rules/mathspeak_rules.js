@@ -380,7 +380,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
       'self::fenced', '@role="set empty" or @role="set extended"' +
       ' or @role="set singleton" or @role="set collection"',
-    // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
+      // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
       // 'content/*[2][text()]="}"', 'count(children/*)=1',
       'not(name(../..)="appl")');
   defineSpecialisedRule(

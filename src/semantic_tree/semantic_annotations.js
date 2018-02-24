@@ -34,15 +34,14 @@ sre.SemanticAnnotations = function() {
    * @type {Object.<sre.SemanticAnnotator>}
    */
   this.annotators = {};
-  
+
   /**
    * @type {number}
    */
   this.counter = 0;
-  
+
 };
 goog.addSingletonGetter(sre.SemanticAnnotations);
-
 
 
 /**

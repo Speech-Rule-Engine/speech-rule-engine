@@ -61,13 +61,18 @@ sre.PunctuationRenderer.prototype.markup = function(descrs) {
       pause = null;
     }
     str += (string ? this.getSeparator() : '') +
-      descr.string.join(this.getSeparator());
+        descr.string.join(this.getSeparator());
     string = true;
   }
   return str;
 };
 
 
+/**
+ * Alpha values for pauses.
+ * @enum {string}
+ * @private
+ */
 sre.PunctuationRenderer.PAUSE_PUNCTUATION_ = {
   'short' : ',',
   'medium': ';',
@@ -75,15 +80,22 @@ sre.PunctuationRenderer.PAUSE_PUNCTUATION_ = {
 };
 
 
+/**
+ * Transforms numeric pauses into alpha versions.
+ * @param {number} pause The pause length.
+ * @return {string} The alpha equivalent.
+ */
 sre.PunctuationRenderer.prototype.pause = function(pause) {
   if (typeof pause === 'number') {
     if (pause <= 250) {
-      pause = 'short';
+      var newPause = 'short';
     } else if (pause <= 500) {
-      pause = 'medium';
+      newPause = 'medium';
     } else {
-      pause = 'long';
+      newPause = 'long';
     }
+  } else {
+    newPause = pause;
   }
-  return sre.PunctuationRenderer.PAUSE_PUNCTUATION_[pause] || '';
+  return sre.PunctuationRenderer.PAUSE_PUNCTUATION_[newPause] || '';
 };
