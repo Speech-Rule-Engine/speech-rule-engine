@@ -195,7 +195,7 @@ sre.ClearspeakUtil.isSimpleLetters_ = function(node) {
  * @private
  */
 sre.ClearspeakUtil.isSimple_ = function(node) {
-  return node.hasMeaning('clearspeak', 'simple');
+  return node.hasAnnotation('clearspeak', 'simple');
 };
 
 
@@ -292,14 +292,14 @@ sre.ClearspeakUtil.simpleExpression = function() {
 /**
  * Decides if node has markup of simple node in clearspeak.
  * @param {Node} node The node in question.
- * @return {boolean} True if the node has a meaning entry of simple.
+ * @return {boolean} True if the node has a annotation entry of simple.
  */
 sre.ClearspeakUtil.simpleNode = function(node) {
-  if (!node.hasAttribute('meaning')) {
+  if (!node.hasAttribute('annotation')) {
     return false;
   }
-  var meaning = node.getAttribute('meaning');
-  return !!/clearspeak:simple$|clearspeak:simple;/.exec(meaning);
+  var annotation = node.getAttribute('annotation');
+  return !!/clearspeak:simple$|clearspeak:simple;/.exec(annotation);
 };
 
 

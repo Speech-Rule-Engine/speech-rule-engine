@@ -56,5 +56,5 @@ sre.SemanticAnnotator = function(domain, func) {
  */
 sre.SemanticAnnotator.prototype.annotate = function(node) {
   node.childNodes.forEach(goog.bind(this.annotate, this));
-  node.addMeaning(this.domain, this.func(node));
+  node.addAnnotation(this.domain, this.func(node));
 };

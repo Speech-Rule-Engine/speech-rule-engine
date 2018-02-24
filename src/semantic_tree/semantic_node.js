@@ -77,7 +77,7 @@ sre.SemanticNode = function(id) {
   /**
    * @type {!Object.<Array.<string>>}
    */
-  this.meaning = {};
+  this.annotation = {};
 
 };
 
@@ -160,8 +160,8 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
   if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
     node.setAttribute('font', this.font);
   }
-  if (Object.keys(this.meaning).length) {
-    node.setAttribute('meaning', this.xmlMeaning());
+  if (Object.keys(this.annotation).length) {
+    node.setAttribute('annotation', this.xmlAnnotation());
   }
   if (this.embellished) {
     node.setAttribute('embellished', this.embellished);
@@ -174,13 +174,13 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
 
 
 /**
- * Turns meaning structure into an attribute.
- * @return {string} XML string for meaning.
+ * Turns annotation structure into an attribute.
+ * @return {string} XML string for annotation.
  */
-sre.SemanticNode.prototype.xmlMeaning = function() {
+sre.SemanticNode.prototype.xmlAnnotation = function() {
   var result = [];
-  for (var key in this.meaning) {
-    this.meaning[key].forEach(function(mean) {
+  for (var key in this.annotation) {
+    this.annotation[key].forEach(function(mean) {
       result.push(key + ':' + mean);
     });
   }
@@ -368,68 +368,68 @@ sre.SemanticNode.prototype.mathmlTreeString_ = function() {
 
 
 /**
- * Adds a new meaning annotation if meaning is not empty.
+ * Adds a new annotation annotation if annotation is not empty.
  * @param {string} domain The domain.
- * @param {string} meaning The meaning.
+ * @param {string} annotation The annotation.
  */
-sre.SemanticNode.prototype.addMeaning = function(domain, meaning) {
-  if (meaning) {
-    this.addMeaning_(domain, meaning);
+sre.SemanticNode.prototype.addAnnotation = function(domain, annotation) {
+  if (annotation) {
+    this.addAnnotation_(domain, annotation);
   }
 };
 
 
 /**
- * Adds a new meaning annotation.
+ * Adds a new annotation annotation.
  * @param {string} domain The domain.
- * @param {string} meaning The meaning.
+ * @param {string} annotation The annotation.
  * @private
  */
-sre.SemanticNode.prototype.addMeaning_ = function(domain, meaning) {
-  var content = this.meaning[domain];
+sre.SemanticNode.prototype.addAnnotation_ = function(domain, annotation) {
+  var content = this.annotation[domain];
   if (content) {
-    content.push(meaning);
+    content.push(annotation);
   } else {
-    this.meaning[domain] = [meaning];
+    this.annotation[domain] = [annotation];
   }
 };
 
 
 /**
- * Retrieves the meaning annotations for a particular domain.
+ * Retrieves the annotation annotations for a particular domain.
  * @param {string} domain The domain.
- * @return {Array.<string>} The meaning annotations.
+ * @return {Array.<string>} The annotation annotations.
  */
-sre.SemanticNode.prototype.getMeaning = function(domain) {
-  var content = this.meaning[domain];
+sre.SemanticNode.prototype.getAnnotation = function(domain) {
+  var content = this.annotation[domain];
   return content ? content : [];
 };
 
 
 /**
- * Checks if a node has a particular meaning.
+ * Checks if a node has a particular annotation.
  * @param {string} domain The domain.
- * @param {string} meaning The meaning.
- * @return {boolean} True if the meaning is contained.
+ * @param {string} annotation The annotation.
+ * @return {boolean} True if the annotation is contained.
  */
-sre.SemanticNode.prototype.hasMeaning = function(domain, meaning) {
-  var content = this.meaning[domain];
+sre.SemanticNode.prototype.hasAnnotation = function(domain, annotation) {
+  var content = this.annotation[domain];
   if (!content) {
     return false;
   }
-  return content.indexOf(meaning) !== -1;
+  return content.indexOf(annotation) !== -1;
 };
 
 
 /**
- * Parses a meaning string as given, for example, in an attribute.
- * @param {!string} stateStr The state string for the meaning.
+ * Parses a annotation string as given, for example, in an attribute.
+ * @param {!string} stateStr The state string for the annotation.
  */
-sre.SemanticNode.prototype.parseMeaning = function(stateStr) {
-  var meanings = stateStr.split(';');
-  for (var i = 0, l = meanings.length; i < l; i++) {
-    var meaning = meanings[i].split(':');
-    this.addMeaning(meaning[0], meaning[1]);
+sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
+  var annotations = stateStr.split(';');
+  for (var i = 0, l = annotations.length; i < l; i++) {
+    var annotation = annotations[i].split(':');
+    this.addAnnotation(annotation[0], annotation[1]);
   }
 };
 

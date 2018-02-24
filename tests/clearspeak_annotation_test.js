@@ -58,7 +58,7 @@ sre.ClearspeakAnnotationTest.prototype.executeTest = function(mml, expected) {
           mml + '</math>';
   var semantic = sre.Semantic.getTreeFromString(mathMl);
   this.annotator.annotate(semantic.root);
-  this.assert.equal(semantic.root.hasMeaning('clearspeak', 'simple'),
+  this.assert.equal(semantic.root.hasAnnotation('clearspeak', 'simple'),
                     expected);
 };
 

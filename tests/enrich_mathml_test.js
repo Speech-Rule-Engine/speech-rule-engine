@@ -50,7 +50,8 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
   // Make sure the engine is in a default mode.
   sre.System.getInstance().setupEngine({semantics: true});
   this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
-                        'data-semantic-fencepointer', 'data-semantic-meaning'];
+                        'data-semantic-fencepointer',
+                        'data-semantic-annotation'];
   sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
