@@ -39,7 +39,6 @@ sre.ClearspeakPreferences = function(cstr, preference) {
 goog.inherits(sre.ClearspeakPreferences, sre.DynamicCstr);
 
 
-
 /**
  * @override
  */
@@ -78,17 +77,21 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   CombinationPermutation: ['Auto', 'ChoosePermute'],
   Ellipses: ['Auto', 'AndSoOn'],
   Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower'],
-  Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac', 'Ordinal', 'Over', 'OverEndFrac', 'Per'],
+  Fraction: ['Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac',
+             'Ordinal', 'Over', 'OverEndFrac', 'Per'],
   Functions: ['Auto', 'None'],
   ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
   Log: ['Auto', 'LnAsNaturalLog'],
-  Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum', 'SpeakColNum', 'Vector'],
-  MultiLineLabel: ['Auto', 'Case', 'Constraint', 'Equation', 'Line', 'None', 'Row', 'Step'],
+  Matrix: ['Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum',
+           'SpeakColNum', 'Vector'],
+  MultiLineLabel: ['Auto', 'Case', 'Constraint', 'Equation', 'Line', 'None',
+                   'Row', 'Step'],
   MultiLineOverview: ['Auto', 'None'],
   MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
   MultsymbolDot: ['Auto', 'Dot'],
   MultsymbolX: ['Auto', 'By', 'Cross'],
-  Paren: ['Auto', 'CoordPoint', 'Interval', 'Silent', 'Speak', 'SpeakNestingLevel'],
+  Paren: ['Auto', 'CoordPoint', 'Interval', 'Silent', 'Speak',
+          'SpeakNestingLevel'],
   Prime: ['Auto', 'Angle', 'Length'],
   Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
   SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
@@ -97,25 +100,21 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   Trig: ['Auto', 'ArcTrig', 'TrigInverse'],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
-  
 
-// Comparator
-// compare: c1 c2
-// 0 if equal
-// -1
-// 1 
-// match:
-//
-// 
 
+/**
+ * Exports the Clearspeak comparator with default settings.
+ * @return {sre.ClearspeakPreferences.Comparator} The clearspeak comparator.
+ */
 sre.ClearspeakPreferences.comparator = function() {
   return new sre.ClearspeakPreferences.Comparator(
-    sre.Engine.getInstance().dynamicCstr,
-    sre.DynamicProperties.create(
+      sre.Engine.getInstance().dynamicCstr,
+      sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       ['mathspeak', 'default'],
       ['short', 'default']));
 };
+
 
 
 /**
@@ -132,7 +131,8 @@ sre.ClearspeakPreferences.Comparator = function(cstr, props) {
   this.preference = cstr.preference || {};
 
 };
-goog.inherits(sre.ClearspeakPreferences.Comparator, sre.DynamicCstr.DefaultComparator);
+goog.inherits(sre.ClearspeakPreferences.Comparator,
+              sre.DynamicCstr.DefaultComparator);
 
 
 /**
@@ -159,8 +159,10 @@ sre.ClearspeakPreferences.Comparator.prototype.match = function(cstr) {
 /**
  * @override
  */
-sre.ClearspeakPreferences.Comparator.prototype.compare = function(cstr1, cstr2) {
-  var top = sre.ClearspeakPreferences.Comparator.base(this, 'compare', cstr1, cstr2);
+sre.ClearspeakPreferences.Comparator.prototype.compare = function(
+    cstr1, cstr2) {
+  var top = sre.ClearspeakPreferences.Comparator.base(
+      this, 'compare', cstr1, cstr2);
   if (top !== 0) {
     return top;
   }
@@ -179,15 +181,16 @@ sre.ClearspeakPreferences.Comparator.prototype.compare = function(cstr1, cstr2) 
 };
 
 
+
 /**
  * @constructor
  * @extends {sre.DynamicCstr.Parser}
  */
 sre.ClearspeakPreferences.Parser = function() {
   sre.ClearspeakPreferences.Parser.base(
-    this, 'constructor',
-    [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.DOMAIN,
-     sre.DynamicCstr.Axis.STYLE]);
+      this, 'constructor',
+      [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.DOMAIN,
+       sre.DynamicCstr.Axis.STYLE]);
 };
 goog.inherits(sre.ClearspeakPreferences.Parser, sre.DynamicCstr.Parser);
 
@@ -201,8 +204,8 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var locale = initial.getValue(sre.DynamicCstr.Axis.LOCALE);
   if (style === sre.DynamicCstr.DEFAULT_VALUE) {
     return new sre.ClearspeakPreferences(
-      {'locale': locale, 'domain': 'clearspeak',
-       'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+        {'locale': locale, 'domain': 'clearspeak',
+          'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
   var pairs = style.split(':');
   var preferences = {};
@@ -215,16 +218,25 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
     }
     var value = pair[1];
     if (value && value !== sre.ClearspeakPreferences.AUTO &&
-        properties[/** @type {sre.DynamicCstr.Axis} */(pair[0])].indexOf(value) !== -1) {
+        properties[
+        /** @type {sre.DynamicCstr.Axis} */(pair[0])].indexOf(value) !== -1) {
       preferences[pair[0]] = pair[1];
     }
   }
   return new sre.ClearspeakPreferences(
-    {'locale': locale, 'domain': 'clearspeak',
-     'style': this.combine_(preferences)}, preferences);
+      {'locale': locale, 'domain': 'clearspeak',
+        'style': this.combine_(preferences)}, preferences);
 };
 
 
+/**
+ * Creates a style string from a set of preference mappings, by joining them via
+ * underscore and colon in the form:
+ * preference1_setting1:preference2_settting2:....:preferenceN_settingN
+ * @param {!Object.<string>} preferences A preference mapping.
+ * @return {string} A style string created from the preferences.
+ * @private
+ */
 sre.ClearspeakPreferences.Parser.prototype.combine_ = function(preferences) {
   var keys = Object.keys(preferences);
   var str = [];

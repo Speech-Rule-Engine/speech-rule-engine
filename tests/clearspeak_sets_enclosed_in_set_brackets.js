@@ -28,12 +28,12 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakSetsEnclosedInSetBrackets = function() {
-sre.ClearspeakSetsEnclosedInSetBrackets.base(this, 'constructor');
+  sre.ClearspeakSetsEnclosedInSetBrackets.base(this, 'constructor');
 
-/**
+  /**
 * @override
-*/
-this.information = 'ClearspeakSetsEnclosedInSetBrackets rule tests.';
+  */
+  this.information = 'ClearspeakSetsEnclosedInSetBrackets rule tests.';
 
 };
 goog.inherits(sre.ClearspeakSetsEnclosedInSetBrackets, sre.ClearspeakRuleTest);
@@ -50,8 +50,11 @@ goog.inherits(sre.ClearspeakSetsEnclosedInSetBrackets, sre.ClearspeakRuleTest);
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet001 = function() {
   var preference = 'Sets_Auto';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the integers such that 2 is less than x is less than 7';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
+      '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
+      '</mo></mrow></math>';
+  var speech = 'the set of all x in the integers such that 2 is less than x' +
+      ' is less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -61,8 +64,10 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet001 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet002 = function() {
   var preference = 'Sets_Auto';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x such that, the absolute value of x, is greater than 2';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
+      '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
+  var speech = 'the set of all x such that, the absolute value of x, is' +
+      ' greater than 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -72,8 +77,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet002 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet003 = function() {
   var preference = 'Sets_Auto';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the integers such that 2 is less than x is less than 7';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
+      '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
+      '</mo></mrow></math>';
+  var speech = 'the set of all x in the integers such that 2 is less than x' +
+      ' is less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -83,8 +91,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet003 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet004 = function() {
   var preference = 'Sets_Auto';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the natural numbers such that x is an even number';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:' +
+      '</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow>' +
+      '</math>';
+  var speech = 'the set of all x in the natural numbers such that x is an' +
+      ' even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -94,7 +105,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet004 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet005 = function() {
   var preference = 'Sets_Auto';
-  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext><mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
+      '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
+      '<mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = 'the set 1 comma 2 comma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -105,7 +118,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet005 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet006 = function() {
   var preference = 'Sets_Auto';
-  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
+      '<mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mn>253' +
+      '</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = 'the set 1 comma 112 comma 1 comma 253';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -116,8 +131,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet006 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet007 = function() {
   var preference = 'Sets_woAll';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of x in the integers such that 2 is less than x is less than 7';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
+      '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
+      '</mo></mrow></math>';
+  var speech = 'the set of x in the integers such that 2 is less than x is' +
+      ' less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -127,8 +145,10 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet007 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet008 = function() {
   var preference = 'Sets_woAll';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of x such that, the absolute value of x, is greater than 2';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
+      '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
+  var speech = 'the set of x such that, the absolute value of x, is greater' +
+      ' than 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -138,8 +158,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet008 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet009 = function() {
   var preference = 'Sets_woAll';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of x in the integers such that 2 is less than x is less than 7';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
+      '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
+      '</mo></mrow></math>';
+  var speech = 'the set of x in the integers such that 2 is less than x is' +
+      ' less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -149,7 +172,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet009 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet010 = function() {
   var preference = 'Sets_woAll';
-  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext><mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
+      '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
+      '<mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = 'the set 1 comma 2 comma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -160,7 +185,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet010 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet011 = function() {
   var preference = 'Sets_woAll';
-  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
+      '<mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
+      '</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = 'the set 1 comma 112 comma 1 comma 253';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -171,8 +198,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet011 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet012 = function() {
   var preference = 'Sets_SilentBracket';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the integers such that 2 is less than x is less than 7';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|' +
+      '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
+      '</mo></mrow></math>';
+  var speech = 'the set of all x in the integers such that 2 is less than x' +
+      ' is less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -182,8 +212,10 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet012 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet013 = function() {
   var preference = 'Sets_SilentBracket';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x such that, the absolute value of x, is greater than 2';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>|</mo><mrow><mo>|</mo>' +
+      '<mi>x</mi><mo>|</mo></mrow><mo>></mo><mn>2</mn><mo>}</mo></mrow></math>';
+  var speech = 'the set of all x such that, the absolute value of x, is' +
+      ' greater than 2';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -193,8 +225,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet013 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet014 = function() {
   var preference = 'Sets_SilentBracket';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the integers such that 2 is less than x is less than 7';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:' +
+      '</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}' +
+      '</mo></mrow></math>';
+  var speech = 'the set of all x in the integers such that 2 is less than x' +
+      ' is less than 7';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -204,8 +239,11 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet014 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet015 = function() {
   var preference = 'Sets_SilentBracket';
-  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow></math>';
-  var speech = 'the set of all x in the natural numbers such that x is an even number';
+  var mathml = '<math><mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>:' +
+      '</mo><mi>x</mi><mtext> is an even number</mtext><mo>}</mo></mrow>' +
+      '</math>';
+  var speech = 'the set of all x in the natural numbers such that x is an' +
+      ' even number';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -215,7 +253,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet015 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet016 = function() {
   var preference = 'Sets_SilentBracket';
-  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext><mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
+      '<mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mtext></mtext>' +
+      '<mn>3</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = '1 comma 2 comma 3';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -226,7 +266,9 @@ sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet016 = function() {
  */
 sre.ClearspeakSetsEnclosedInSetBrackets.prototype.testSet017 = function() {
   var preference = 'Sets_SilentBracket';
-  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
+  var mathml = '<math><mrow><mrow><mo>{</mo><mrow><mn>1</mn><mo>,</mo>' +
+      '<mtext></mtext><mn>112</mn><mo>,</mo><mtext></mtext><mn>1</mn><mo>,' +
+      '</mo><mtext></mtext><mn>253</mn></mrow><mo>}</mo></mrow></mrow></math>';
   var speech = '1 comma 112 comma 1 comma 253';
   this.executeRuleTest(mathml, speech, preference);
 };

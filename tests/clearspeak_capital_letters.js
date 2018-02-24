@@ -28,11 +28,11 @@ goog.require('sre.ClearspeakRuleTest');
 * @extends {sre.ClearspeakRuleTest}
 */
 sre.ClearspeakCapitalLetters = function() {
-sre.ClearspeakCapitalLetters.base(this, 'constructor');
-/**
-* @override
-*/
-this.information = 'ClearspeakCapitalLetters rule tests.';
+  sre.ClearspeakCapitalLetters.base(this, 'constructor');
+  /**
+   * @override
+   */
+  this.information = 'ClearspeakCapitalLetters rule tests.';
 
 };
 goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);
@@ -50,8 +50,11 @@ goog.inherits(sre.ClearspeakCapitalLetters, sre.ClearspeakRuleTest);
  */
 sre.ClearspeakCapitalLetters.prototype.testCap001 = function() {
   var preference = 'Caps_Auto';
-  var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>';
-  // var speech = 'the fraction with numerator sine A, and denominator a, equals, the fraction with numerator sine B, and denominator b';
+  var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
+      '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
+      '<mi>b</mi></mfrac></mrow></math>';
+  // var speech = 'the fraction with numerator sine A, and denominator a,
+  // equals, the fraction with numerator sine B, and denominator b';
   var speech = 'sine A over a, equals, sine B over b';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -62,7 +65,10 @@ sre.ClearspeakCapitalLetters.prototype.testCap001 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap002 = function() {
   var preference = 'Caps_Auto';
-  var mathml = '<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow></math>';
+  var mathml = '<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo>' +
+      '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
+      '</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi>' +
+      '<mi>C</mi></mrow></math>';
   var speech = 'c squared equals a squared plus b squared minus 2 a b cosine C';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -73,7 +79,8 @@ sre.ClearspeakCapitalLetters.prototype.testCap002 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap003 = function() {
   var preference = 'Caps_Auto';
-  var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>';
+  var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
+      '</mi><mi>b</mi></mfrac></mrow></math>';
   var speech = 'tangent A equals, a over b';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -128,7 +135,8 @@ sre.ClearspeakCapitalLetters.prototype.testCap007 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
   var preference = 'Caps_Auto';
-  var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
+  var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
+      '</math>';
   var speech = 'angle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -139,7 +147,8 @@ sre.ClearspeakCapitalLetters.prototype.testCap008 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap009 = function() {
   var preference = 'Caps_Auto';
-  var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
+  var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
+      '</mi></mrow></math>';
   var speech = 'the measure of angle A B C';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -162,8 +171,11 @@ sre.ClearspeakCapitalLetters.prototype.testCap010 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap011 = function() {
   var preference = 'Caps_SayCaps';
-  var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow><mi>b</mi></mfrac></mrow></math>';
-  // var speech = 'the fraction with numerator sine cap A, and denominator a, equals, the fraction with numerator sine cap B, and denominator b';
+  var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
+      '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
+      '<mi>b</mi></mfrac></mrow></math>';
+  // var speech = 'the fraction with numerator sine cap A, and denominator a,
+  // equals, the fraction with numerator sine cap B, and denominator b';
   var speech = 'sine cap A over a, equals, sine cap B over b';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -174,8 +186,12 @@ sre.ClearspeakCapitalLetters.prototype.testCap011 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap012 = function() {
   var preference = 'Caps_SayCaps';
-  var mathml = '<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi><mi>C</mi></mrow></math>';
-  var speech = 'c squared equals a squared plus b squared minus 2 a b cosine cap C';
+  var mathml = '<math><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo>' +
+      '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
+      '</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi>' +
+      '<mi>C</mi></mrow></math>';
+  var speech = 'c squared equals a squared plus b squared minus 2 a b' +
+      ' cosine cap C';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -185,7 +201,8 @@ sre.ClearspeakCapitalLetters.prototype.testCap012 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap013 = function() {
   var preference = 'Caps_SayCaps';
-  var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>';
+  var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
+      '</mi><mi>b</mi></mfrac></mrow></math>';
   var speech = 'tangent cap A equals, a over b';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -240,7 +257,8 @@ sre.ClearspeakCapitalLetters.prototype.testCap017 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap018 = function() {
   var preference = 'Caps_SayCaps';
-  var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
+  var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
+      '</math>';
   var speech = 'angle cap A, cap B, cap C';
   this.executeRuleTest(mathml, speech, preference);
 };
@@ -251,7 +269,8 @@ sre.ClearspeakCapitalLetters.prototype.testCap018 = function() {
  */
 sre.ClearspeakCapitalLetters.prototype.testCap019 = function() {
   var preference = 'Caps_SayCaps';
-  var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow></math>';
+  var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
+      '</mi></mrow></math>';
   var speech = 'the measure of angle cap A, cap B, cap C';
   this.executeRuleTest(mathml, speech, preference);
 };

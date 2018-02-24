@@ -56,7 +56,7 @@ sre.SemanticTree = function(mml) {
   this.root = this.parser.parse(mml);
 
   sre.SemanticAnnotations.getInstance().annotate(this.root);
-  
+
 };
 
 

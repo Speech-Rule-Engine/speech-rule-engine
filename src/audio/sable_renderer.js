@@ -51,7 +51,7 @@ sre.SableRenderer.prototype.prosodyElement = function(tag, value) {
   value = this.applyScaleFunction(value);
   switch (tag) {
     case sre.Engine.personalityProps.PITCH:
-    // TODO: Experiment with range, base, middle
+      // TODO: Experiment with range, base, middle
       return '<PITCH RANGE="' + value + '%">';
     case sre.Engine.personalityProps.RATE:
       return '<RATE SPEED="' + value + '%">';
