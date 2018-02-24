@@ -27,20 +27,23 @@ goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticNode');
 
 
-
+var fcount = 0;
 /**
  * @constructor
  */
 sre.SemanticNodeFactory = function() {
 
+  this.count = fcount++;
+  console.log('NEW Factory ' + this.count);
   /** ID counter.
    * @type {number}
    * @private
    */
   this.idCounter_ = 0;
 
-};
+  this.leafMap = {};
 
+};
 
 /** Creates a new node object.
  * @return {sre.SemanticNode} The newly created node.
@@ -115,6 +118,7 @@ sre.SemanticNodeFactory.prototype.makeLeafNode = function(content, font) {
   }
   var node = this.makeContentNode(content);
   node.font = font || node.font;
+  this.leafMap[node.id] = node;
   return node;
 };
 

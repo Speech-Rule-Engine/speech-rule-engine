@@ -1,3 +1,21 @@
 Improve:
 \textrm{exp}(A)=I+A+A^2/2!+A^3/3!+\dots
 
+## Second semantic phase
+
+* Semantic ordering: Decides when a type/role combination is stronger than
+  another on the seame symbols.
+* Semantic postprocessor: Combines a semantic ordering with a method that
+  restructures the tree.
+
+
+* __Alternative:__ We could in some instances just reparse the tree, and make
+  decisions on role/type wrt. to the already propagated semantic table. 
+* Only if the semantic table contains twice the same expression with different
+  semantic assignment.
+  
+* Leaf map: id to node, symbol to ids? Maybe directly: Symbol to nodes?
+* Branch map: basic string to nodes.  Here base string is the xml string without
+  attributes.  *Does that make sense?*
+
+* Maps are stored in the factory.
