@@ -27,14 +27,12 @@ goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticNode');
 
 
-var fcount = 0;
+
 /**
  * @constructor
  */
 sre.SemanticNodeFactory = function() {
 
-  this.count = fcount++;
-  console.log('NEW Factory ' + this.count);
   /** ID counter.
    * @type {number}
    * @private
@@ -118,7 +116,11 @@ sre.SemanticNodeFactory.prototype.makeLeafNode = function(content, font) {
   }
   var node = this.makeContentNode(content);
   node.font = font || node.font;
-  this.leafMap[node.id] = node;
+  if (this.leafMap[content]) {
+    this.leafMap[content].push(node);
+  } else {
+    this.leafMap[content] = [node];
+  }
   return node;
 };
 

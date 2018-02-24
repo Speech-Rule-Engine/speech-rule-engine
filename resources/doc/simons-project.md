@@ -19,3 +19,22 @@ Improve:
   attributes.  *Does that make sense?*
 
 * Maps are stored in the factory.
+
+### Semantic Defaults
+
+Default mapping for looking up the semantics of elements. That should overwrite
+the standard intepretations.
+
+  * Map symbol to type/role.
+  * What about fonts? We map symbol + font to what?
+  * Generate defaults from multi-valued mappings.
+
+Three parts: default, collator, ordering
+
+  * Collator collects semantic meanings per node.
+  * Orderings collapse them into a default.
+  * Default is used to either rewrite a tree or to be used for a parse.
+
+
+  * Defaults can also be pre-filled. 
+  * We need to extend the semantic parser to allow for defaults.
