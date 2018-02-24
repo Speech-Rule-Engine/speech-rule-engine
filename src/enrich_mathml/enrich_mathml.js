@@ -85,7 +85,7 @@ sre.EnrichMathml.Attribute = {
   FENCEPOINTER: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'fencepointer',
   FONT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'font',
   ID: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'id',
-  MEANING: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'meaning',
+  ANNOTATION: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'annotation',
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
@@ -536,7 +536,7 @@ sre.EnrichMathml.descendNode_ = function(node) {
 
 
 /**
- * Checks if the node is a unit child, meaning it is the only child of its
+ * Checks if the node is a unit child, annotation it is the only child of its
  * parent modulo ignored nodes.
  * @param {!Element} node The node to be tested.
  * @return {boolean} True if node is a legal unit child.
@@ -634,9 +634,9 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
-  if (Object.keys(semantic.meaning).length) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.MEANING,
-                     semantic.xmlMeaning());
+  if (Object.keys(semantic.annotation).length) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.ANNOTATION,
+                     semantic.xmlAnnotation());
   }
   if (semantic.font != sre.Semantic.Font.UNKNOWN) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);

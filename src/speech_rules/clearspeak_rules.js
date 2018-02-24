@@ -539,7 +539,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[n] children/*[1]; [n] children/*[2]',
       'self::appl', '@role="prefix function"',
       'name(children/*[2])="fenced"',
-      'contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")',
+      'contains(children/*[2]/children/*[1]/@annotation, "clearspeak:simple")',
       'name(children/*[2]/children/*[1])!="number"',
       'name(children/*[2]/children/*[1])!="identifier"',
       'name(children/*[2]/children/*[1])!="appl"'
@@ -558,9 +558,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       ' [n] children/*[2]; [p] (pause:"short")',
       'self::appl', '@role="prefix function"',
       '(name(children/*[2])="fenced" and not(contains(' +
-      'children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
       ' or name(children/*[2])="fraction" or ' +
-      '(name(children/*[2])!="fenced" and not(contains(children/*[2]/@meaning' +
+      '(name(children/*[2])!="fenced" and not(contains(children/*[2]/@annotation' +
       ', "clearspeak:simple")))',
       'self::*');
   defineRule(
@@ -615,9 +615,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::appl', '@role="prefix function"',
       'name(parent::*/parent::*)="superscript"', 'not(following-sibling::*)',
       '(name(children/*[2])="fenced" and not(contains(' +
-      'children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
       ' or name(children/*[2])="fraction" or (name(children/*[2])!="fenced"' +
-      ' and not(contains(children/*[2]/@meaning, "clearspeak:simple")))');
+      ' and not(contains(children/*[2]/@annotation, "clearspeak:simple")))');
   defineRule(
       'function-prefix-subscript-as-exp', 'clearspeak.default',
       '[n] children/*[1]; [t] "of";' +
@@ -677,7 +677,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'name(children/*[2])="fenced"',
       'children/*[2]/children/*[1][@role="prefix function"]',
-      'contains(children/*[2]/children/*[1]/@meaning, "clearspeak:simple")',
+      'contains(children/*[2]/children/*[1]/@annotation, "clearspeak:simple")',
       'not(contains(@grammar, "functions_none"))');
 
 
@@ -692,7 +692,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'children/*[1]/children/*[2]/children/*[1][text()="1"]',
       'not(contains(@grammar, "functions_none"))',
       '(name(children/*[2])="fenced" and not(contains(' +
-      'children/*[2]/children/*[1]/@meaning, "clearspeak:simple")))' +
+      'children/*[2]/children/*[1]/@annotation, "clearspeak:simple")))' +
       ' or (name(children/*[2])="fraction" and ' +
       'children/*[2][@role!="vulgar"])');
 
@@ -754,14 +754,14 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'children/superscript/children/*[2][text()="2"] or ' +
       'children/superscript/children/*[2][text()="3"]',
       'name(children/superscript/children/*[1])="number"',
-      'contains(children/superscript/children/*[1]/@meaning, ' +
+      'contains(children/superscript/children/*[1]/@annotation, ' +
       '"clearspeak:simple")');
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
       'children/superscript/children/*[2][text()="2"] or ' +
       'children/superscript/children/*[2][text()="3"]',
       'name(children/superscript/children/*[1])="fraction"',
-      'contains(children/superscript/children/*[1]/@meaning,' +
+      'contains(children/superscript/children/*[1]/@annotation,' +
       ' "clearspeak:simple")');
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
@@ -772,12 +772,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRuleAlias(
       'superscript-simple-exponent', 'self::superscript',
       'children/*[2][@role="implicit"]', 'count(children/*[2]/children/*)=2',
-      'contains(children/*[2]/children/*[1]/@meaning, "simple")',
+      'contains(children/*[2]/children/*[1]/@annotation, "simple")',
       // 'name(children/*[2]/children/*[1])="number" or ' +
       //   'name(children/*[2]/children/*[1])="identifier"',
       'name(children/*[2]/children/*[2])="superscript"',
       '(name(children/*[2]/children/*[2]/children/*[1])="number" and ' +
-      'contains(children/*[2]/children/*[2]/children/*[1]/@meaning,' +
+      'contains(children/*[2]/children/*[2]/children/*[1]/@annotation,' +
       ' "clearspeak:simple")) or ' +
       'name(children/*[2]/children/*[2]/children/*[1])="identifier"',
       'children/*[2]/children/*[2]/children/*[2][text()="2"] or ' +
@@ -967,7 +967,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'paren-simple', 'clearspeak.default',
       '[n] children/*[1]',
       'self::fenced', '@role="leftright"',
-      'contains(children/*[1]/@meaning, "clearspeak:simple")',
+      'contains(children/*[1]/@annotation, "clearspeak:simple")',
       'name(../..)!="superscript" and name(../..)!="subscript"'
   );
   defineRule(
@@ -976,7 +976,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::fenced', '@role="leftright"',
       'name(../..)="superscript"',
       'children/*[1][@role="integer"] or children/*[1][@role="float"] or ' +
-      '(children/*[1][@role="vulgar"] and contains(children/*[1]/@meaning,' +
+      '(children/*[1][@role="vulgar"] and contains(children/*[1]/@annotation,' +
       ' "clearspeak:simple")) or children/*[1][@role="latinletter"] or ' +
       'children/*[1][@role="greekletter"] or children/*[1][@role="otherletter"]'
   );
@@ -987,7 +987,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(../*[1])="identifier" or name(../*[1])="function"',
       'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
       'children/*[1][@role="simple function" or @role="prefix function"]',
-      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning,' +
+      'contains(children/*[1]/children/*[2]/children/*[1]/@annotation,' +
       ' "clearspeak:simple") or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="subscript" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
@@ -1002,7 +1002,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'children/*[1][@role="simple function" or @role="prefix function"]',
       'name(children/*[1]/children/*[1])="identifier" or' +
       ' name(children/*[1]/children/*[1])="function"',
-      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning,' +
+      'contains(children/*[1]/children/*[2]/children/*[1]/@annotation,' +
       ' "clearspeak:simple")',
       'name(children/*[1]/children/*[2]/children/*[1])="identifier" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="number"'
@@ -1024,7 +1024,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::fenced', '@role="leftright"',
       'name(../*[1])="identifier" or name(../*[1])="function"',
       'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
-      'not(contains(children/*[1]/@meaning, "clearspeak:simple"))');
+      'not(contains(children/*[1]/@annotation, "clearspeak:simple"))');
   defineRule(
       'paren-simple-nested-func', 'clearspeak.Functions_None',
       '[p] (pause:"short"); [n] content/*[1] (grammar:spokenFence);' +
@@ -1035,7 +1035,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'name(../*[1])="identifier" or name(../*[1])="function"',
       'parent::*/parent::*[@role="simple function" or @role="prefix function"]',
       'children/*[1][@role="simple function" or @role="prefix function"]',
-      'contains(children/*[1]/children/*[2]/children/*[1]/@meaning,' +
+      'contains(children/*[1]/children/*[2]/children/*[1]/@annotation,' +
       ' "clearspeak:simple") or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="subscript" or ' +
       'name(children/*[1]/children/*[2]/children/*[1])="superscript" or ' +
@@ -1252,10 +1252,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[p] (pause:short); [n] children/*[1]; [t] "over";' +
       ' [n] children/*[2]; [p] (pause:short)',
       'self::fraction',
-      'contains(children/*[1]/@meaning, "clearspeak:simple")' +
-      ' or contains(children/*[1]/@meaning, "clearspeak:unit")',
-      'contains(children/*[2]/@meaning, "clearspeak:simple")' +
-      ' or contains(children/*[2]/@meaning, "clearspeak:unit")');
+      'contains(children/*[1]/@annotation, "clearspeak:simple")' +
+      ' or contains(children/*[1]/@annotation, "clearspeak:unit")',
+      'contains(children/*[2]/@annotation, "clearspeak:simple")' +
+      ' or contains(children/*[2]/@annotation, "clearspeak:unit")');
   defineRule(
       'simple-vulgar-fraction', 'clearspeak.default',
       '[p] (pause:short); [n] children/*[1]; [t] "over";' +
@@ -1322,20 +1322,20 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[p] (pause:short); [n] . (grammar:endfrac); [t] "end fraction";' +
       ' [p] (pause:short)',
       'self::fraction', 'not(contains(@grammar, "endfrac"))',
-      'not(contains(children/*[1]/@meaning, "clearspeak:unit"))',
-      'not(contains(children/*[2]/@meaning, "clearspeak:unit"))');
+      'not(contains(children/*[1]/@annotation, "clearspeak:unit"))',
+      'not(contains(children/*[2]/@annotation, "clearspeak:unit"))');
   defineRule(
       'vulgar-fraction', 'clearspeak.Fraction_EndFrac',
       '[p] (pause:short); [n] children/*[1]; [t] "over"; [n] children/*[2];' +
       ' [p] (pause:short)',
       'self::fraction', 'name(children/*[1])="fraction"',
       'name(children/*[2])="fraction"',
-      'contains(children/*[1]/@meaning, "clearspeak:simple")',
-      'contains(children/*[2]/@meaning, "clearspeak:simple")');
+      'contains(children/*[1]/@annotation, "clearspeak:simple")',
+      'contains(children/*[2]/@annotation, "clearspeak:simple")');
   defineRule(
       'simple-vulgar-fraction', 'clearspeak.Fraction_EndFrac',
       '[t] CSFvulgarFraction', 'self::fraction', '@role="vulgar"',
-      'contains(@meaning, "clearspeak:simple")', 'self::*');
+      'contains(@annotation, "clearspeak:simple")', 'self::*');
 
 
   // Roots
@@ -1464,7 +1464,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'negative', 'clearspeak.default',
       '[t] "negative"; [n] children/*[1]',
       'self::prefixop', '@role="negative"');
-  //, 'contains(@meaning, "clearspeak:simple")');
+  //, 'contains(@annotation, "clearspeak:simple")');
   defineRule(
       'positive', 'clearspeak.default',
       '[t] "positive"; [n] children/*[1]',
@@ -1570,13 +1570,13 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'binary-operation-simple', 'clearspeak.default',
       '[m] children/* (rate:"0.5"); [p] (pause:short)',
       'self::infixop', '@role="implicit"',
-      'contains(@meaning, "clearspeak:simple")',
+      'contains(@annotation, "clearspeak:simple")',
       'not(contains(@grammar, "inFrac"))');
 
   defineRule(
       'simple-in-fraction', 'clearspeak.default',
       '[n] . (rate:"0.5",grammar:inFrac)',
-      'self::*', 'contains(@meaning, "clearspeak:simple")',
+      'self::*', 'contains(@annotation, "clearspeak:simple")',
       'not(contains(@grammar, "inFrac"))',
       'name(.)!="identifier"', 'name(.)!="function"', 'name(.)!="number"',
       'name(parent::*/parent::*)="fraction"',
