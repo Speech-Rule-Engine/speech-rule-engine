@@ -1567,6 +1567,19 @@ sre.SemanticMeaning;
 
 
 /**
+ * Equality on meaning objects.
+ * @param {sre.SemanticMeaning} meaning1 First meaning.
+ * @param {sre.SemanticMeaning} meaning2 Second meaning.
+ * @return {boolean} True if both contain the same field entries.
+ */
+sre.SemanticAttr.equal = function(meaning1, meaning2) {
+  return meaning1.type === meaning2.type &&
+    meaning1.role === meaning2.role &&
+    meaning1.font === meaning2.font;
+};
+
+
+/**
  * Lookup the semantic type of a symbol.
  * @param {string} symbol The symbol to which we want to determine the type.
  * @return {sre.SemanticAttr.Type} The semantic type of the symbol.

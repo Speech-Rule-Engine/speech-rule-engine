@@ -18,9 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticCollator');
 goog.provide('sre.SemanticDefault');
+goog.provide('sre.SemanticMeaningCollator');
+goog.provide('sre.SemanticNodeCollator');
 
+goog.require('sre.SemanticMeaning');
 goog.require('sre.SemanticNode');
 
 
@@ -31,7 +33,7 @@ goog.require('sre.SemanticNode');
 sre.SemanticDefault = function() {
   
   /**
-   * @type {Object.<{type: string, role: string}>}
+   * @type {!Object.<sre.SemanticMeaning>}
    * @private
    */
   this.map_ = {};
@@ -39,11 +41,247 @@ sre.SemanticDefault = function() {
 };
 
 
-sre.SemanticDefault.prototype.add = function(symbol, font) {
+/**
+ * Adds a semantic meaning to the structure. It will overwrite existing content.
+ * @param {string} symbol A symbol.
+ * @param {sre.SemanticMeaning} meaning It's semantic meaning.
+ */
+sre.SemanticDefault.prototype.add = function(symbol, meaning) {
+  this.map_[sre.SemanticDefault.key_(symbol, meaning.font)] = meaning;
+};
+
+
+/**
+ * Adds a semantic node to the default structure.
+ * @param {sre.SemanticNode} node A semantic node.
+ */
+sre.SemanticDefault.prototype.addNode = function(node) {
+  this.add(node.textContent,
+           {type: node.type, role: node.role, font: node.font});
+};
+
+
+/**
+ * Retrieves a semantic meaning for a symbol and its font.
+ * @param {string} symbol A symbol.
+ * @param {sre.SemanticAttr.Font} font The font of the symbol.
+ * @return {sre.SemanticMeaning} The semantic meaning of the symbol if it is in
+ *     the structure.
+ */
+sre.SemanticDefault.prototype.retrieve = function(symbol, font) {
+  return this.map_[sre.SemanticDefault.key_(symbol, font)];
+};
+
+
+/**
+ * Retrieves a semantic node to the default structure.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {sre.SemanticMeaning} The semantic meaning of the symbol if it is in
+ *     the structure.
+ */
+sre.SemanticDefault.prototype.retrieveNode = function(node) {
+  return this.retrieve(node.textContent, node.font);
+};
+
+
+/**
+ * Generates the key from symbol and font.
+ * @param {string} symbol The symbol or text content of a node.
+ * @param {sre.SemanticAttr.Font} font The name of its font if it exists.
+ * @return {string} A uniform key for the default mapping.
+ */
+sre.SemanticDefault.key_ = function(symbol, font) {
+  return font ? symbol + ':' + font : symbol;
+};
+
+
+
+/**
+ * @constructor
+ * @private
+ * @template T
+ */
+sre.SemanticCollator_ = function() {
+  
+  /**
+   * @type {!Object.<Array.<T>>}
+   * @private
+   */
+  this.map_ = {};
   
 };
 
 
-sre.SemanticDefault.key_ = function(symbol, font) {
-  return symbol + ':' + font;
+/**
+ * Adds a semantic node to the structure by appending it to the already existing
+ * one for a particular the symbol.
+ * @param {string} symbol A symbol.
+ * @param {T} entry A semantic entry.
+ */
+sre.SemanticCollator_.prototype.add = function(symbol, entry) {
+  var key = sre.SemanticDefault.key_(symbol, entry.font);
+  var list = this.map_[key];
+  // var entry = sre.SemanticCollator_.entry(entry);
+  if (list) {
+    list.push(entry);
+  } else {
+    this.map_[key] = [entry];
+  }
+};
+
+
+/**
+ * Adds a semantic node to the default structure.
+ * @param {sre.SemanticNode} node A semantic node.
+ */
+sre.SemanticCollator_.prototype.addNode = function(node) {
+  this.add(node.textContent, node);
+};
+
+
+/**
+ * Retrieves a semantic meaning for a symbol and its font.
+ * @param {string} symbol A symbol.
+ * @param {sre.SemanticAttr.Font} font The font of the symbol.
+ * @return {Array.<T>} A list of semantic nodes.
+ */
+sre.SemanticCollator_.prototype.retrieve = function(symbol, font) {
+  return this.map_[sre.SemanticDefault.key_(symbol, font)];
+};
+
+
+/**
+ * Retrieves a semantic node to the default structure.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {Array.<T>} The semantic meaning of the symbol if it is in
+ *     the structure.
+ */
+sre.SemanticCollator_.prototype.retrieveNode = function(node) {
+  return this.retrieve(node.textContent, node.font);
+};
+
+
+/**
+ * Minimizes a semantic collator, removing every non-ambiguous entry.
+ */
+sre.SemanticCollator_.prototype.minimize = function() {
+  for (var key in this.map_) {
+    if (this.map_[key].length === 1) {
+      delete this.map_[key];
+    }
+  }
+};
+
+
+/**
+ * @return {boolean} True if the collator is multi-valued.
+ */
+sre.SemanticCollator_.prototype.isMultiValued = function() {
+  for (var key in this.map_) {
+    if (this.map_[key].length > 1) {
+      return true;
+    }
+  }
+  return false;
+};
+
+
+/**
+ * @return {boolean} True if the collator is empty.
+ */
+sre.SemanticCollator_.prototype.isEmpty = function() {
+  return !Object.keys(this.map_).length;
+};
+
+
+/**
+ * @constructor
+ * @extends {sre.SemanticCollator_<sre.SemanticNode>}
+ */
+sre.SemanticNodeCollator = function() {
+  sre.SemanticNodeCollator.base(this, 'constructor');
+};
+goog.inherits(sre.SemanticNodeCollator, sre.SemanticCollator_);
+
+
+/**
+ * @override
+ */
+sre.SemanticNodeCollator.prototype.toString = function() {
+  var outer = [];
+  for (var key in this.map_) {
+    var length = Array(key.length + 3).join(' ');
+    var nodes = this.map_[key];
+    var inner = [];
+    for (var i = 0, node; node = nodes[i]; i++) {
+      inner.push(node.toString());
+    }
+    outer.push(key + ': ' + inner.join('\n' + length));
+  }
+  return outer.join('\n');
+};
+
+
+/**
+ * @return {sre.SemanticMeaningCollator} Collation of the meaning of the nodes.
+ */
+sre.SemanticNodeCollator.prototype.collateMeaning = function() {
+  var collator = new sre.SemanticMeaningCollator();
+  for (var key in this.map_) {
+    this.map_[key].forEach(goog.bind(collator.addNode, collator));
+  }
+  return collator;
+};
+
+
+/**
+ * @constructor
+ * @extends {sre.SemanticCollator_<sre.SemanticMeaning>}
+ */
+sre.SemanticMeaningCollator = function() {
+  sre.SemanticMeaningCollator.base(this, 'constructor');
+};
+goog.inherits(sre.SemanticMeaningCollator, sre.SemanticCollator_);
+
+
+/**
+ * @override
+ */
+sre.SemanticMeaningCollator.prototype.add = function(symbol, entry) {
+  var list = this.retrieve(symbol, entry.font);
+  if (!list ||
+      !list.find(
+        function(x) {return sre.SemanticAttr.equal(x, entry);}
+      )) {
+    sre.SemanticMeaningCollator.base(this,'add', symbol, entry);
+  }
+};
+
+
+/**
+ * @override
+ */
+sre.SemanticMeaningCollator.prototype.addNode = function(node) {
+  this.add(node.textContent,
+           {type: node.type, role: node.role, font: node.font});
+};
+
+
+/**
+ * @override
+ */
+sre.SemanticMeaningCollator.prototype.toString = function() {
+  var outer = [];
+  for (var key in this.map_) {
+    var length = Array(key.length + 3).join(' ');
+    var nodes = this.map_[key];
+    var inner = [];
+    for (var i = 0, node; node = nodes[i]; i++) {
+      inner.push('{type: ' + node.type +
+                 ', role: ' + node.role +
+                 ', font: ' + node.font + '}');
+    }
+    outer.push(key + ': ' + inner.join('\n' + length));
+  }
+  return outer.join('\n');
 };
