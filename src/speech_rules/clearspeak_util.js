@@ -537,7 +537,6 @@ sre.ClearspeakUtil.insertNesting = function(text, correction) {
   if (!start) {
     return correction + ' ' + text;
   }
-  console.log(start[0] + correction + ' ' + text.substring(start[0].length));
   return start[0] + correction + ' ' + text.substring(start[0].length);
 };
 
