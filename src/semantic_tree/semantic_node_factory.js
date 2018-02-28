@@ -24,7 +24,10 @@
 goog.provide('sre.SemanticNodeFactory');
 
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticDefault');
+goog.require('sre.SemanticMeaningCollator');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticNodeCollator');
 
 
 
@@ -39,7 +42,20 @@ sre.SemanticNodeFactory = function() {
    */
   this.idCounter_ = 0;
 
-  this.leafMap = {};
+  /**
+   * @type {sre.SemanticNodeCollator}
+   */
+  this.leafMap = new sre.SemanticNodeCollator();
+
+  // /**
+  //  * @type {sre.SemanticMeaningCollator}
+  //  */
+  // this.leafMeaning = new sre.SemanticMeaningCollator();
+
+  // /**
+  //  * @type {sre.SemanticDefault}
+  //  */
+  // this.defaultMap = new sre.SemanticDefault();
 
 };
 
@@ -116,11 +132,7 @@ sre.SemanticNodeFactory.prototype.makeLeafNode = function(content, font) {
   }
   var node = this.makeContentNode(content);
   node.font = font || node.font;
-  if (this.leafMap[content]) {
-    this.leafMap[content].push(node);
-  } else {
-    this.leafMap[content] = [node];
-  }
+  this.leafMap.addNode(node);
   return node;
 };
 

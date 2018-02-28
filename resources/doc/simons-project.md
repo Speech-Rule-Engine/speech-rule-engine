@@ -38,3 +38,13 @@ Three parts: default, collator, ordering
 
   * Defaults can also be pre-filled. 
   * We need to extend the semantic parser to allow for defaults.
+
+
+# Continued Fraction notations!
+
+Push info through from cfrac macro.
+
+https://tex.stackexchange.com/questions/73195/how-to-typeset-a-continued-fraction-in-the-following-format
+
+https://tex.stackexchange.com/questions/196574/a-notation-for-continued-fractions
+

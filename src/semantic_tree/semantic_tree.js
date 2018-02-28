@@ -57,6 +57,11 @@ sre.SemanticTree = function(mml) {
 
   sre.SemanticAnnotations.getInstance().annotate(this.root);
 
+  var collator = this.parser.getFactory().leafMap.collateMeaning();
+  collator.minimize();
+  if (!collator.isEmpty()) {
+    console.log(collator.toString());
+  }
 };
 
 
