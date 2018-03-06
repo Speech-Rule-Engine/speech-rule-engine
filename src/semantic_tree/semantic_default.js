@@ -24,9 +24,11 @@ goog.provide('sre.SemanticNodeCollator');
 
 goog.require('sre.SemanticMeaning');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticOrdering');
 
 
 
+// TODO: Combine default and collator with a common superclass mapping.
 /**
  * @constructor
  */
@@ -56,8 +58,7 @@ sre.SemanticDefault.prototype.add = function(symbol, meaning) {
  * @param {sre.SemanticNode} node A semantic node.
  */
 sre.SemanticDefault.prototype.addNode = function(node) {
-  this.add(node.textContent,
-           {type: node.type, role: node.role, font: node.font});
+  this.add(node.textContent, node.meaning());
 };
 
 
@@ -95,6 +96,13 @@ sre.SemanticDefault.key_ = function(symbol, font) {
 };
 
 
+/**
+ * @return {number} Size of the default mapping.
+ */
+sre.SemanticDefault.prototype.size = function() {
+  return Object.keys(this.map_).length;
+};
+
 
 /**
  * @constructor
@@ -120,6 +128,7 @@ sre.SemanticCollator_ = function() {
  */
 sre.SemanticCollator_.prototype.add = function(symbol, entry) {
   var key = sre.SemanticDefault.key_(symbol, entry.font);
+  // var key = symbol;
   var list = this.map_[key];
   // var entry = sre.SemanticCollator_.entry(entry);
   if (list) {
@@ -162,6 +171,26 @@ sre.SemanticCollator_.prototype.retrieveNode = function(node) {
 
 
 /**
+ * @return {sre.SemanticCollator_} An empty copy of the collator. 
+ * @protected
+ */
+sre.SemanticCollator_.prototype.copy_ = goog.abstractMethod;
+
+
+/**
+ * @return {sre.SemanticCollator_} A copy of the collator. Note, this is NOT a
+ *     deep copy!
+ */
+sre.SemanticCollator_.prototype.copy = function() {
+  var collator = this.copy_();
+  for (var key in this.map_) {
+    collator.map_[key] = this.map_[key];
+  }
+  return collator;
+};
+
+
+/**
  * Minimizes a semantic collator, removing every non-ambiguous entry.
  */
 sre.SemanticCollator_.prototype.minimize = function() {
@@ -170,6 +199,35 @@ sre.SemanticCollator_.prototype.minimize = function() {
       delete this.map_[key];
     }
   }
+};
+
+
+/**
+ * Reduces a semantic collator to one meaning per entry.
+ */
+sre.SemanticCollator_.prototype.reduce = function() {
+  for (var key in this.map_) {
+    if (this.map_[key].length !== 1) {
+      this.map_[key] =
+        sre.SemanticOrdering.getInstance().reduce(this.map_[key]);
+    }
+  }
+};
+
+
+/**
+ * Minimizes a semantic collator, removing every non-ambiguous entry.
+ * As opposed to minimize this is non-destructive.
+ * @return {sre.SemanticCollator_} The new collator.
+ */
+sre.SemanticCollator_.prototype.minimalCollator = function() {
+  var collator = this.copy();
+  for (var key in collator.map_) {
+    if (collator.map_[key].length === 1) {
+      delete collator.map_[key];
+    }
+  }
+  return collator;
 };
 
 
@@ -207,6 +265,14 @@ goog.inherits(sre.SemanticNodeCollator, sre.SemanticCollator_);
 /**
  * @override
  */
+sre.SemanticNodeCollator.prototype.copy_ = function() {
+  return new sre.SemanticNodeCollator();
+};
+
+
+/**
+ * @override
+ */
 sre.SemanticNodeCollator.prototype.toString = function() {
   var outer = [];
   for (var key in this.map_) {
@@ -228,8 +294,10 @@ sre.SemanticNodeCollator.prototype.toString = function() {
 sre.SemanticNodeCollator.prototype.collateMeaning = function() {
   var collator = new sre.SemanticMeaningCollator();
   for (var key in this.map_) {
-    this.map_[key].forEach(goog.bind(collator.addNode, collator));
-  }
+    collator.map_[key] = this.map_[key].map(function(node) {
+      return node.meaning();
+    });
+  };
   return collator;
 };
 
@@ -242,6 +310,19 @@ sre.SemanticMeaningCollator = function() {
   sre.SemanticMeaningCollator.base(this, 'constructor');
 };
 goog.inherits(sre.SemanticMeaningCollator, sre.SemanticCollator_);
+
+
+/**
+ * @override
+ */
+sre.SemanticMeaningCollator.prototype.copy_ = function() {
+  return new sre.SemanticMeaningCollator();
+};
+
+
+sre.SemanticMeaningCollator.prototype.addKey = function(key, entry) {
+  
+};
 
 
 /**
@@ -262,8 +343,7 @@ sre.SemanticMeaningCollator.prototype.add = function(symbol, entry) {
  * @override
  */
 sre.SemanticMeaningCollator.prototype.addNode = function(node) {
-  this.add(node.textContent,
-           {type: node.type, role: node.role, font: node.font});
+  this.add(node.textContent, node.meaning());
 };
 
 
@@ -284,4 +364,33 @@ sre.SemanticMeaningCollator.prototype.toString = function() {
     outer.push(key + ': ' + inner.join('\n' + length));
   }
   return outer.join('\n');
+};
+
+
+/**
+ * Derives a default mapping from the collator.
+ * @return {sre.SemanticDefault} The unambiguous default mapping. 
+ */
+sre.SemanticMeaningCollator.prototype.default = function() {
+  var def = new sre.SemanticDefault();
+  for (var key in this.map_) {
+    if (this.map_[key].length === 1) {
+      def.map_[key] = this.map_[key][0];
+    }
+  }
+  return def;
+};
+
+
+/**
+ * Derives a default mapping from the collator if there is a possible reduction.
+ * @return {?sre.SemanticDefault} The unambiguous default mapping. Null, if not
+ *     reduction can be achieved.
+ */
+sre.SemanticMeaningCollator.prototype.newDefault = function() {
+  var oldDefault = this.default();
+  this.reduce();
+  var newDefault = this.default();
+  return (oldDefault.size() !== newDefault.size()) ?
+    newDefault : null;
 };

@@ -496,3 +496,9 @@ sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
 };
 
 
+/**
+ * @return {sre.SemanticMeaning} The semantic meaning of the node.
+ */
+sre.SemanticNode.prototype.meaning = function() {
+  return {type: this.type, role: this.role, font: this.font};
+};

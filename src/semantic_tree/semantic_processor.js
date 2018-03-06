@@ -1308,8 +1308,16 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       break;
     case 'prefix':
       if (rest[0] && rest[0].type === sre.SemanticAttr.Type.FENCED) {
+        // TODO: (MS2.3|simons) This needs to be made more robust!  Currently we
+        //       reset to eliminate sets. Once we include bra-ket heuristics,
+        //       this might be incorrect.
+        //
+        var arg = rest.shift();
+        if (arg.role !== sre.SemanticAttr.Role.NEUTRAL) {
+          arg.role = sre.SemanticAttr.Role.LEFTRIGHT;
+        }
         funcNode = sre.SemanticProcessor.getInstance().functionNode_(
-            func, /** @type {!sre.SemanticNode} */ (rest.shift()));
+            func, /** @type {!sre.SemanticNode} */ (arg));
         rest.unshift(funcNode);
         return rest;
       }
@@ -1328,7 +1336,12 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
           partition.tail.unshift(partition.div);
         }
       }
-      funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
+    // TODO: (simons) If we have a prefix/simple function or implicit with
+    //       prefix/simple function children only (i.e., a function composition)
+    //       then we combine them via a function composition. Function
+    //       composition is currently implicit, but we might want to remember
+    //       this a bit better.
+    funcNode = sre.SemanticProcessor.getInstance().functionNode_(func, arg);
       partition.tail.unshift(funcNode);
       return partition.tail;
       break;

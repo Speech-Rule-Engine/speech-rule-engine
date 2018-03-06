@@ -52,10 +52,10 @@ sre.SemanticNodeFactory = function() {
   //  */
   // this.leafMeaning = new sre.SemanticMeaningCollator();
 
-  // /**
-  //  * @type {sre.SemanticDefault}
-  //  */
-  // this.defaultMap = new sre.SemanticDefault();
+  /**
+   * @type {sre.SemanticDefault}
+   */
+  this.defaultMap = new sre.SemanticDefault();
 
 };
 
@@ -132,6 +132,13 @@ sre.SemanticNodeFactory.prototype.makeLeafNode = function(content, font) {
   }
   var node = this.makeContentNode(content);
   node.font = font || node.font;
+  // Lookup alternative meaning here!
+  var meaning = this.defaultMap.retrieveNode(node);
+  if (meaning) {
+    node.type = meaning.type;
+    node.role = meaning.role;
+    node.font = meaning.font;
+  }
   this.leafMap.addNode(node);
   return node;
 };
