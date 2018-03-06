@@ -382,7 +382,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));
   } catch (err) {
-    console.log('Parse Error: ' + err.message);
+    console.error('Parse Error: ' + err.message);
   }
   return xml;
 };
@@ -449,7 +449,7 @@ sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
   var result = processor(expr);
   if (!opt_output) {
-    console.log(result);
+    console.info(result);
     return;
   }
   try {
@@ -494,7 +494,7 @@ sre.System.prototype.processFileAsync_ = function(
       goog.bind(function(expr) {
         var result = processor(expr);
         if (!opt_output) {
-          console.log(result);
+          console.info(result);
           return;
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {

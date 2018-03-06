@@ -142,7 +142,6 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     var pers = descr.personality;
     var join = pers[sre.Engine.personalityProps.JOIN];
     delete pers[sre.Engine.personalityProps.JOIN];
-    // console.log(join);
     if (typeof pers[sre.Engine.personalityProps.PAUSE] !== 'undefined') {
       pause = {};
       pause[sre.Engine.personalityProps.PAUSE] =

@@ -110,7 +110,7 @@ sre.Cli.prototype.commandLine = function() {
         output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
             values[axis].slice().sort().join(', ') + '\n';
       }
-      console.log(output);
+      console.info(output);
       sre.SystemExternal.process.exit(0);
     }
     system.setupEngine(
@@ -135,7 +135,7 @@ sre.Cli.prototype.commandLine = function() {
       processor(commander.input, commander.output);
     }
   } catch (err) {
-    console.log(err.name + ': ' + err.message);
+    console.error(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit(
         function() {sre.SystemExternal.process.exit(1);});
   }

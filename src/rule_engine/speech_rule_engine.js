@@ -111,7 +111,7 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
     this.activeStore_ = this.combineStores_(ruleSets);
   } catch (err) {
     if (err.name == 'StoreError') {
-      console.log('Store Error:', err.message);
+      console.error('Store Error:', err.message);
     }
     else {
       throw err;

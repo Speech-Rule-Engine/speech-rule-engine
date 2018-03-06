@@ -838,10 +838,10 @@ sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
 sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
   var output = sre.DomUtil.formatXml(element.toString());
   if (!wiki) {
-    console.log(output);
+    console.info(output);
     return;
   }
-  console.log(name + ':\n```html\n' +
+  console.info(name + ':\n```html\n' +
               sre.EnrichMathml.removeAttributePrefix(output) + '\n```\n');
 };
 
@@ -871,7 +871,7 @@ sre.EnrichMathml.removeAttributePrefix = function(mml) {
  * @param {!NodeList} nodes A list of nodes.
  */
 sre.EnrichMathml.printNodeList__ = function(title, nodes) {
-  console.log(title);
-  sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
-  console.log('<<<<<<<<<<<<<<<<<');
+  console.info(title);
+  sre.DomUtil.toArray(nodes).forEach(function(x) {console.info(x.toString());});
+  console.info('<<<<<<<<<<<<<<<<<');
 };
