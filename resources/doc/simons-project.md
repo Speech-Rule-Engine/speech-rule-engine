@@ -48,3 +48,8 @@ https://tex.stackexchange.com/questions/73195/how-to-typeset-a-continued-fractio
 
 https://tex.stackexchange.com/questions/196574/a-notation-for-continued-fractions
 
+
+# Function composition vs implicit multiplication.
+
+    * Work out the cases for implicit function compoistion.
+    *  Add some appropriate meaning element. (general?)
