@@ -20,6 +20,7 @@
  */
 goog.provide('sre.Cli');
 
+goog.require('sre.Api');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
@@ -51,6 +52,8 @@ sre.Cli.prototype.commandLine = function() {
   /** @type {!string} */
   commander.input = '';
   /** @type {!string} */
+  commander.locale = '';
+  /** @type {!string} */
   commander.log = '';
   /** @type {!string} */
   commander.output = '';
@@ -64,6 +67,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.audit = false;
   /** @type {!boolean} */
   commander.mathml = false;
+  /** @type {!string} */
+  commander.generate = sre.Engine.Speech.NONE;
   /** @type {!boolean} */
   commander.json = false;
   /** @type {!boolean} */
@@ -80,12 +85,15 @@ sre.Cli.prototype.commandLine = function() {
       option('').
       option('-d, --dom [name]', 'Domain or subject area [name].').
       option('-t, --style [name]', 'Speech style [name].').
+      option('-c, --locale [code]', 'Locale [code].').
       option('-s, --semantics', 'Switch OFF semantics interpretation.').
       option('-e, --enumerate', 'Enumerates available domains and styles.').
       option('').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).').
       option('-j, --json', 'Generate JSON of semantic tree.').
       option('-m, --mathml', 'Generate enriched MathML.').
+      option('-g, --generate [depth]', 'Include generated speech in enriched' +
+             ' MathML (currently only makes sense with -m option).').
       option('-p, --speech', 'Generate speech output (default).').
       option('-k, --markup [name]', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
@@ -109,8 +117,10 @@ sre.Cli.prototype.commandLine = function() {
         {
           'semantics': !commander.semantics,
           'domain': commander.dom,
+          'locale': commander.locale,
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,
+          'speech': commander.generate,
           'markup': commander.markup
         });
     if (commander.verbose) {
@@ -134,4 +144,6 @@ sre.Cli.prototype.commandLine = function() {
 };
 
 
-(new sre.Cli()).commandLine();
+if (process.env.SRE_TOP_PATH) {
+  (new sre.Cli()).commandLine();
+}

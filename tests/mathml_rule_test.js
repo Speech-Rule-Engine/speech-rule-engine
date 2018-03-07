@@ -38,11 +38,6 @@ sre.MathmlRuleTest = function() {
   /**
    * @override
    */
-  this.domain = 'default';
-
-  /**
-   * @override
-   */
   this.semantics = false;
 
   /**

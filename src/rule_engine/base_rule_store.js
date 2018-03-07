@@ -86,6 +86,18 @@ sre.BaseRuleStore = function() {
    * @type {!sre.DynamicCstr.Parser}
    */
   this.parser = new sre.DynamicCstr.Parser(this.parseOrder);
+
+  /**
+   * Default locale.
+   * @type {string}
+   */
+  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+
+  /**
+   * @type {boolean}
+   */
+  this.initialized = false;
+
 };
 
 
@@ -98,7 +110,7 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.trie.lookupRules(node, dynamic);
+  var matchingRules = this.trie.lookupRules(node, dynamic.allProperties());
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
 };
@@ -114,7 +126,7 @@ sre.BaseRuleStore.prototype.defineRule = function(
     var postc = sre.SpeechRule.Action.fromString(action);
     var cstrList = Array.prototype.slice.call(arguments, 4);
     var fullPrec = new sre.SpeechRule.Precondition(prec, cstrList);
-    var dynamicCstr = this.parser.parse(dynamic);
+    var dynamicCstr = this.parseCstr(dynamic);
     rule = new sre.SpeechRule(name, dynamicCstr, fullPrec, postc);
   } catch (err) {
     if (err.name == 'RuleError') {
@@ -367,4 +379,15 @@ sre.BaseRuleStore.prototype.getSpeechRules = function() {
  */
 sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
   this.speechRules_ = rules;
+};
+
+
+/**
+ * Default constraint parser that adds the locale to the rest constraint
+ * (generally, domain.style).
+ * @param {string} cstr The constraint string.
+ * @return {!sre.DynamicCstr} The parsed constraint including locale.
+ */
+sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
+  return this.parser.parse(this.locale + '.' + cstr);
 };

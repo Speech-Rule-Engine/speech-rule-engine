@@ -1,4 +1,3 @@
-bin/
 lib/
 tmp/
 *.bak
@@ -11,3 +10,4 @@ src/closure-library
 *.html
 *.aux
 *.log
+node_modules/

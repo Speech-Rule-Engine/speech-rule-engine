@@ -69,6 +69,13 @@ sre.SpeechRuleEngine = function() {
    */
   this.ready_ = true;
 
+  /**
+   * Caches combined stores that have already been constructed.
+   * @type {Object.<sre.BaseRuleStore>}
+   * @private
+   */
+  this.combinedStores_ = {};
+
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 
@@ -81,11 +88,12 @@ goog.addSingletonGetter(sre.SpeechRuleEngine);
  * @param {!Array.<string>} ruleSetNames The name of rule sets to use.
  */
 sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
-  var ruleSets = [];
+  var ruleSets = {};
   for (var i = 0, m = ruleSetNames.length; i < m; i++) {
-    var set = sre.SpeechRuleStores.getConstructor(ruleSetNames[i]);
+    var name = ruleSetNames[i];
+    var set = sre.SpeechRuleStores.getConstructor(name);
     if (set && set.getInstance) {
-      ruleSets.push(set.getInstance());
+      ruleSets[name] = set.getInstance();
     }
   }
   this.parameterize_(ruleSets);
@@ -94,7 +102,8 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
 
 /**
  * Parameterizes the speech rule engine.
- * @param {!Array.<sre.BaseRuleStore>} ruleSets A list of rule sets to use.
+ * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
+ *     name to constructor mapping.
  * @private
  */
 sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
@@ -239,6 +248,8 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
   if (!node) {
     return [];
   }
+  // Update the preferences of the dynamic constraint.
+  this.updateConstraint_();
   return this.evaluateTree_(node);
 };
 
@@ -492,7 +503,8 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(
+      engine.locale, engine.domain, engine.style);
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -500,20 +512,27 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  engine.dynamicCstr = sre.DynamicCstr.create(engine.domain, engine.style);
+  engine.dynamicCstr = sre.DynamicCstr.create(
+      engine.locale, engine.domain, engine.style);
   return result;
 };
 
 
 /**
  * Initializes the combined rule store
- * @param {!Array.<sre.BaseRuleStore>} ruleSets The rule sets to use.
+ * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
+ *     name to constructor mapping.
  * @return {!sre.BaseRuleStore} The combined math store.
  * @private
  */
 sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
-  var combined = new sre.MathStore();
-  for (var i = 0, store; store = ruleSets[i]; i++) {
+  var combined = this.cachedStore_(ruleSets);
+  if (combined) {
+    return combined;
+  }
+  combined = new sre.MathStore();
+  for (var name in ruleSets) {
+    var store = ruleSets[name];
     store.initialize();
     store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
     combined.contextFunctions.addStore(store.contextFunctions);
@@ -521,7 +540,38 @@ sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
     combined.customStrings.addStore(store.customStrings);
   }
   combined.setSpeechRules(combined.trie.collectRules());
+  this.combinedStores_[this.combinedStoreName_(Object.keys(ruleSets))] =
+      combined;
   return combined;
+};
+
+
+/**
+ * Compute a standardized name for combined stores.
+ * @param {!Array.<string>} names A list of individual store names.
+ * @return {string} The combined name.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.combinedStoreName_ = function(names) {
+  return names.sort().join('-');
+};
+
+
+/**
+ * Retrieves a cached combined store if it exists. If one of the individual
+ * stores is not yet initialized or needs reinitialization, it also returns
+ * null.
+ * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
+ *     name to constructor mapping.
+ * @return {?sre.BaseRuleStore} The combined store if it exists.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.cachedStore_ = function(ruleSets) {
+  var names = Object.keys(ruleSets);
+  if (names.some(function(name) {return !ruleSets[name].initialized;})) {
+    return null;
+  }
+  return this.combinedStores_[this.combinedStoreName_(names)];
 };
 
 
@@ -556,3 +606,34 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(node, grammar) {
   }
   sre.Grammar.getInstance().pushState(assignment);
 };
+
+
+/**
+ * Enriches the dynamic constraint with default properties.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
+  var dynamic = sre.Engine.getInstance().dynamicCstr;
+  var strict = sre.Engine.getInstance().strict;
+  var props = {};
+  var values = [dynamic.getValue(sre.DynamicCstr.Axis.LOCALE),
+                dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN)];
+  var defLocale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+  var defDomain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+  var exists = this.activeStore_.trie.hasSubtrie(values);
+  // Get the trie exceptions
+  props[sre.DynamicCstr.Axis.LOCALE] = [exists ? values[0] : defLocale];
+  exists = exists ? exists :
+      this.activeStore_.trie.hasSubtrie([defLocale, values[1]]);
+  props[sre.DynamicCstr.Axis.DOMAIN] = [exists ? values[1] : defDomain];
+  var order = dynamic.getOrder();
+  order.forEach(function(axis) {
+    if (!props[axis]) {
+      var value = dynamic.getValue(axis);
+      var def = sre.DynamicCstr.DEFAULT_VALUES[axis];
+      props[axis] = (strict || value === def) ? [value] : [value, def];
+    }});
+  dynamic.updateProperties(props);
+};
+
+

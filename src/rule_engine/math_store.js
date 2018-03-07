@@ -39,11 +39,6 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {boolean}
-   */
-  this.initialized = false;
-
-  /**
    * @type {Array.<function()>}
    */
   this.initializer = [];
@@ -74,7 +69,7 @@ sre.MathStore.prototype.initialize = function() {
  */
 sre.MathStore.prototype.defineUniqueRuleAlias = function(
     name, dynamic, query, var_args) {
-  var dynamicCstr = this.parser.parse(dynamic);
+  var dynamicCstr = this.parseCstr(dynamic);
   var rule = this.findRule(
       goog.bind(
           function(rule) {
@@ -160,7 +155,7 @@ sre.MathStore.prototype.addAlias_ = function(rule, query, cstrList) {
  */
 sre.MathStore.prototype.defineSpecialisedRule = function(
     name, oldDynamic, newDynamic, opt_action) {
-  var dynamicCstr = this.parser.parse(oldDynamic);
+  var dynamicCstr = this.parseCstr(oldDynamic);
   var rule = this.findRule(
       goog.bind(
           function(rule) {
@@ -172,7 +167,7 @@ sre.MathStore.prototype.defineSpecialisedRule = function(
         'Rule named ' + name + ' with style ' +
         oldDynamic + ' does not exist.');
   }
-  var newCstr = this.parser.parse(newDynamic);
+  var newCstr = this.parseCstr(newDynamic);
   var action = opt_action ? sre.SpeechRule.Action.fromString(opt_action) :
           rule.action;
   var newRule = new sre.SpeechRule(

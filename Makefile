@@ -27,7 +27,6 @@ SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
 
-START = $(BIN_DIR)/sre
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
@@ -39,6 +38,12 @@ TEST_TARGET = $(LIB_DIR)/test.js
 TEST_DEPS = $(TEST_DIR)/deps.js
 TEST = $(BIN_DIR)/test_sre
 TEST_SRC = $(TEST_DIR)/*.js
+
+JSDOC = $(NODE_MODULES)/.bin/jsdoc
+JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
+DOCS = $(PREFIX)/docs
+DOCS_SRC = $(DOCS)/src
+DOCS_TESTS = $(DOCS)/tests
 
 ##################################################################
 # Error flags.
@@ -111,18 +116,7 @@ $(DEPS):
 	@$(DEPSWRITER) --root_with_prefix="$(SRC_DIR) $(SRC_DIR)" > $(DEPS)
 
 
-start_files: directories $(START) $(INTERACTIVE)
-
-start: $(START)
-
-$(START): 
-	@echo "Making startup script."
-	@echo "#!/bin/bash" > $@
-	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_DIR)\n" >> $@
-	@echo $(NODEJS) $(TARGET) "\$$@" >> $@
-	@chmod 755 $@
-
+start_files: directories $(INTERACTIVE)
 
 interactive: directories $(INTERACTIVE) deps
 
@@ -147,7 +141,6 @@ $(INTERACTIVE):
 clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
 	rm -f $(TARGET)
 	rm -f $(DEPS)
-	rm -f $(START)
 	rm -f $(INTERACTIVE)
 	$(foreach map, $(MAPS), rm -rf $(LIB_DIR)/$(map))
 
@@ -197,7 +190,7 @@ clean_test:
 # Publish the API via npm.
 ##################################################################
 
-publish: api maps
+publish: compile maps
 
 maps: $(MAPS)
 
@@ -263,3 +256,10 @@ clean_enrich:
 
 emacs: publish
 	@cp $(TARGET) ../emacs-math-speak/
+
+docs: $(JSDOC)
+	@$(JSDOC) $(JSDOC_FLAGS) $(SRC) -r -d $(DOCS_SRC)
+	@$(JSDOC) $(JSDOC_FLAGS) $(TEST_DIR) -r -d $(DOCS_TESTS)
+
+clean_docs:
+	rm -rf $(DOCS)
