@@ -2097,6 +2097,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
 };
 
 
+// TODO: (Simons) a is categorised as function!
 /**
  * Testing ClearspeakImpliedTimes Example Extra009
  */
