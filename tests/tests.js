@@ -20,6 +20,8 @@
 goog.provide('sre.Tests');
 
 goog.require('sre.ApiTest');
+goog.require('sre.ClearspeakAnnotationTest');
+goog.require('sre.ClearspeakTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.DomTest');
 goog.require('sre.EnrichMathmlTest');
@@ -77,6 +79,7 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.ApiTest,
+  sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.DomTest,
   sre.EnrichMathmlTest,
@@ -99,6 +102,8 @@ sre.Tests.testList = [
   sre.SpeechRuleTest,
   sre.WalkerTest
 ];
+sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+// sre.Tests.testList = sre.ClearspeakTest.testList;
 
 
 /**

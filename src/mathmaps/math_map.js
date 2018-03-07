@@ -262,7 +262,7 @@ sre.MathMap.loadFile = function(file) {
   try {
     return sre.MathMap.readJSON_(file);
   } catch (x) {
-    console.log('Unable to load file: ' + file + ', error: ' + x);
+    console.error('Unable to load file: ' + file + ', error: ' + x);
   }
 };
 

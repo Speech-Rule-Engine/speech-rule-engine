@@ -51,7 +51,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '2.2.1';
+  this.version = '2.3.0-beta.0';
 
 };
 goog.addSingletonGetter(sre.System);
@@ -101,7 +101,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
   var setIf = function(feat) {
-    if (feature[feat] !== undefined) {
+    if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
     }
   };
@@ -125,9 +125,11 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.domain, engine.style);
-  engine.comparator = new sre.DynamicCstr.DefaultComparator(
+  engine.dynamicCstr = engine.parser.parse(
+      engine.locale + '.' + engine.domain + '.' + engine.style);
+  var comparator = engine.comparators[engine.domain];
+  engine.comparator = comparator ? comparator() :
+      new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
       sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
@@ -380,7 +382,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));
   } catch (err) {
-    console.log('Parse Error: ' + err.message);
+    console.error('Parse Error: ' + err.message);
   }
   return xml;
 };
@@ -447,7 +449,7 @@ sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
   var result = processor(expr);
   if (!opt_output) {
-    console.log(result);
+    console.info(result);
     return;
   }
   try {
@@ -492,7 +494,7 @@ sre.System.prototype.processFileAsync_ = function(
       goog.bind(function(expr) {
         var result = processor(expr);
         if (!opt_output) {
-          console.log(result);
+          console.info(result);
           return;
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {

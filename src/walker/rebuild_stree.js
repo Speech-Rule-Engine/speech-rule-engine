@@ -129,6 +129,8 @@ sre.RebuildStree.prototype.makeNode = function(node) {
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
+  var annotation = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.ANNOTATION) || '';
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
   var embellished = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.EMBELLISHED);
@@ -139,6 +141,7 @@ sre.RebuildStree.prototype.makeNode = function(node) {
   snode.role = /** @type {sre.SemanticAttr.Role} */(role);
   snode.font = font ? /** @type {sre.SemanticAttr.Font} */(font) :
       sre.SemanticAttr.Font.UNKNOWN;
+  snode.parseAnnotation(annotation);
   if (fencepointer) {
     snode.fencePointer = fencepointer;
   }

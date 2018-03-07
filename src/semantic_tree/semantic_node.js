@@ -73,6 +73,12 @@ sre.SemanticNode = function(id) {
    * @type {!Array.<sre.SemanticNode>}
    */
   this.contentNodes = [];
+
+  /**
+   * @type {!Object.<Array.<string>>}
+   */
+  this.annotation = {};
+
 };
 
 
@@ -139,7 +145,7 @@ sre.SemanticNode.prototype.xml = function(xml, opt_brief) {
 sre.SemanticNode.prototype.toString = function(opt_brief) {
   var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
   var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var xml = dp.parseFromString('', 'text/xml');
+  var xml = dp.parseFromString('<snode/>', 'text/xml');
   return xmls.serializeToString(this.xml(xml, opt_brief));
 };
 
@@ -154,6 +160,9 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
   if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
     node.setAttribute('font', this.font);
   }
+  if (Object.keys(this.annotation).length) {
+    node.setAttribute('annotation', this.xmlAnnotation());
+  }
   if (this.embellished) {
     node.setAttribute('embellished', this.embellished);
   }
@@ -161,6 +170,21 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
     node.setAttribute('fencepointer', this.fencePointer);
   }
   node.setAttribute('id', this.id);
+};
+
+
+/**
+ * Turns annotation structure into an attribute.
+ * @return {string} XML string for annotation.
+ */
+sre.SemanticNode.prototype.xmlAnnotation = function() {
+  var result = [];
+  for (var key in this.annotation) {
+    this.annotation[key].forEach(function(mean) {
+      result.push(key + ':' + mean);
+    });
+  }
+  return result.join(';');
 };
 
 
@@ -312,24 +336,35 @@ sre.SemanticNode.prototype.equals = function(node) {
 
 /**
  * Convenience method to display the whole tree and its elements.
- * @param {!number} depth The depth of the tree.
  */
-sre.SemanticNode.prototype.displayTree = function(depth) {
+sre.SemanticNode.prototype.displayTree = function() {
+  console.info(this.displayTree_(0));
+};
+
+
+/**
+ * Convenience method to display the whole tree and its elements.
+ * @param {!number} depth The depth of the tree.
+ * @return {string} String with nested tree display.
+ */
+sre.SemanticNode.prototype.displayTree_ = function(depth) {
   depth++;
   var depthString = Array(depth).join('  ');
-  console.log(depthString + this.toString());
-  console.log(depthString + 'MathmlTree:');
-  console.log(depthString + this.mathmlTreeString_());
-  console.log(depthString + 'MathML:');
+  var result = '';
+  result += '\n' + depthString + this.toString();
+  result += '\n' + depthString + 'MathmlTree:';
+  result += '\n' + depthString + this.mathmlTreeString_();
+  result += '\n' + depthString + 'MathML:';
   for (var i = 0, mml; mml = this.mathml[i]; i++) {
-    console.log(depthString + mml.toString());
+    result += '\n' + depthString + mml.toString();
   }
-  console.log(depthString + 'Begin Content');
-  this.contentNodes.forEach(function(x) {x.displayTree(depth);});
-  console.log(depthString + 'End Content');
-  console.log(depthString + 'Begin Children');
-  this.childNodes.forEach(function(x) {x.displayTree(depth);});
-  console.log(depthString + 'End Children');
+  result += '\n' + depthString + 'Begin Content';
+  this.contentNodes.forEach(function(x) {result += x.displayTree_(depth);});
+  result += '\n' + depthString + 'End Content';
+  result += '\n' + depthString + 'Begin Children';
+  this.childNodes.forEach(function(x) {result += x.displayTree_(depth);});
+  result += '\n' + depthString + 'End Children';
+  return result;
 };
 
 
@@ -340,6 +375,73 @@ sre.SemanticNode.prototype.displayTree = function(depth) {
  */
 sre.SemanticNode.prototype.mathmlTreeString_ = function() {
   return this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY';
+};
+
+
+/**
+ * Adds a new annotation annotation if annotation is not empty.
+ * @param {string} domain The domain.
+ * @param {string} annotation The annotation.
+ */
+sre.SemanticNode.prototype.addAnnotation = function(domain, annotation) {
+  if (annotation) {
+    this.addAnnotation_(domain, annotation);
+  }
+};
+
+
+/**
+ * Adds a new annotation annotation.
+ * @param {string} domain The domain.
+ * @param {string} annotation The annotation.
+ * @private
+ */
+sre.SemanticNode.prototype.addAnnotation_ = function(domain, annotation) {
+  var content = this.annotation[domain];
+  if (content) {
+    content.push(annotation);
+  } else {
+    this.annotation[domain] = [annotation];
+  }
+};
+
+
+/**
+ * Retrieves the annotation annotations for a particular domain.
+ * @param {string} domain The domain.
+ * @return {Array.<string>} The annotation annotations.
+ */
+sre.SemanticNode.prototype.getAnnotation = function(domain) {
+  var content = this.annotation[domain];
+  return content ? content : [];
+};
+
+
+/**
+ * Checks if a node has a particular annotation.
+ * @param {string} domain The domain.
+ * @param {string} annotation The annotation.
+ * @return {boolean} True if the annotation is contained.
+ */
+sre.SemanticNode.prototype.hasAnnotation = function(domain, annotation) {
+  var content = this.annotation[domain];
+  if (!content) {
+    return false;
+  }
+  return content.indexOf(annotation) !== -1;
+};
+
+
+/**
+ * Parses a annotation string as given, for example, in an attribute.
+ * @param {!string} stateStr The state string for the annotation.
+ */
+sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
+  var annotations = stateStr.split(';');
+  for (var i = 0, l = annotations.length; i < l; i++) {
+    var annotation = annotations[i].split(':');
+    this.addAnnotation(annotation[0], annotation[1]);
+  }
 };
 
 

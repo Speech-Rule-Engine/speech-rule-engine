@@ -85,6 +85,7 @@ sre.EnrichMathml.Attribute = {
   FENCEPOINTER: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'fencepointer',
   FONT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'font',
   ID: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'id',
+  ANNOTATION: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'annotation',
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
@@ -535,7 +536,7 @@ sre.EnrichMathml.descendNode_ = function(node) {
 
 
 /**
- * Checks if the node is a unit child, meaning it is the only child of its
+ * Checks if the node is a unit child, annotation it is the only child of its
  * parent modulo ignored nodes.
  * @param {!Element} node The node to be tested.
  * @return {boolean} True if node is a legal unit child.
@@ -633,6 +634,10 @@ sre.EnrichMathml.makeIdList = function(nodes) {
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
   mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
+  if (Object.keys(semantic.annotation).length) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.ANNOTATION,
+                     semantic.xmlAnnotation());
+  }
   if (semantic.font != sre.Semantic.Font.UNKNOWN) {
     mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
   }
@@ -833,10 +838,10 @@ sre.EnrichMathml.formattedOutput = function(mml, expr, tree, opt_wiki) {
 sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
   var output = sre.DomUtil.formatXml(element.toString());
   if (!wiki) {
-    console.log(output);
+    console.info(output);
     return;
   }
-  console.log(name + ':\n```html\n' +
+  console.info(name + ':\n```html\n' +
               sre.EnrichMathml.removeAttributePrefix(output) + '\n```\n');
 };
 
@@ -866,7 +871,7 @@ sre.EnrichMathml.removeAttributePrefix = function(mml) {
  * @param {!NodeList} nodes A list of nodes.
  */
 sre.EnrichMathml.printNodeList__ = function(title, nodes) {
-  console.log(title);
-  sre.DomUtil.toArray(nodes).forEach(function(x) {console.log(x.toString());});
-  console.log('<<<<<<<<<<<<<<<<<');
+  console.info(title);
+  sre.DomUtil.toArray(nodes).forEach(function(x) {console.info(x.toString());});
+  console.info('<<<<<<<<<<<<<<<<<');
 };

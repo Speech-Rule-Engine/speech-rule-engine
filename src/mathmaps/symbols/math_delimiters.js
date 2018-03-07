@@ -11,6 +11,9 @@
         "brief": "left-p'ren",
         "sbrief": "L p'ren",
         "nemeth": "⠷"
+      },
+      "clearspeak": {
+        "default": "open paren"
       }
     },
     "key": "0028"
@@ -27,6 +30,9 @@
         "brief": "right-p'ren",
         "sbrief": "R p'ren",
         "nemeth": "⠾"
+      },
+      "clearspeak": {
+        "default": "close paren"
       }
     },
     "key": "0029"
@@ -43,6 +49,9 @@
         "brief": "left-brack",
         "sbrief": "L brack",
         "nemeth": "⠈⠷"
+      },
+      "clearspeak": {
+        "default": "open bracket"
       }
     },
     "key": "005B"
@@ -59,6 +68,9 @@
         "brief": "right-brack",
         "sbrief": "R brack",
         "nemeth": "⠈⠾"
+      },
+      "clearspeak": {
+        "default": "close bracket"
       }
     },
     "key": "005D"
@@ -74,6 +86,9 @@
         "default": "left-brace",
         "sbrief": "L brace",
         "nemeth": "⠨⠷"
+      },
+      "clearspeak": {
+        "default": "open brace"
       }
     },
     "key": "007B"
@@ -89,6 +104,9 @@
         "default": "right-brace",
         "sbrief": "R brace",
         "nemeth": "⠨⠾"
+      },
+      "clearspeak": {
+        "default": "close brace"
       }
     },
     "key": "007D"

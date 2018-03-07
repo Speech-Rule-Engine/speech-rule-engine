@@ -28,6 +28,7 @@ goog.provide('sre.SemanticTree');
 
 goog.require('sre.DomUtil');
 goog.require('sre.MathUtil');
+goog.require('sre.SemanticAnnotations');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticNode');
 goog.require('sre.SystemExternal');
@@ -53,6 +54,8 @@ sre.SemanticTree = function(mml) {
 
   /** @type {!sre.SemanticNode} */
   this.root = this.parser.parse(mml);
+
+  sre.SemanticAnnotations.getInstance().annotate(this.root);
 
 };
 
@@ -147,7 +150,7 @@ sre.SemanticTree.prototype.formatXml = function(opt_brief) {
  * Convenience method to display the whole tree and its elements.
  */
 sre.SemanticTree.prototype.displayTree = function() {
-  this.root.displayTree(0);
+  this.root.displayTree();
 };
 
 

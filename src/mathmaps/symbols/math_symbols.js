@@ -10,6 +10,9 @@
       "mathspeak": {
         "default": "exclamation-mark",
         "nemeth": "⠸⠖"
+      },
+      "clearspeak": {
+        "default": "exclamation mark"
       }
     },
     "key": "0021"
@@ -22,6 +25,9 @@
       },
       "mathspeak": {
         "default": "quotation-mark"
+      },
+      "clearspeak": {
+        "default": "quotation mark"
       }
     },
     "key": "0022"
@@ -39,6 +45,9 @@
         "brief": "num-sign",
         "sbrief": "num-sign",
         "nemeth": "⠨⠼"
+      },
+      "clearspeak": {
+        "default": "number sign"
       }
     },
     "key": "0023"
@@ -53,6 +62,9 @@
       "mathspeak": {
         "default": "dollar-sign",
         "nemeth": "⠈⠎"
+      },
+      "clearspeak": {
+        "default": "dollar sign"
       }
     },
     "key": "0024"
@@ -67,6 +79,9 @@
       "mathspeak": {
         "default": "percent-sign",
         "nemeth": "⠈⠴"
+      },
+      "clearspeak": {
+        "default": "percent sign"
       }
     },
     "key": "0025"
@@ -213,6 +228,9 @@
       "mathspeak": {
         "default": "less-than",
         "nemeth": "⠀⠐⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is less than"
       }
     },
     "key": "003C"
@@ -240,6 +258,9 @@
       "mathspeak": {
         "default": "greater-than",
         "nemeth": "⠀⠨⠂⠀"
+      },
+      "clearspeak": {
+        "default": "is greater than"
       }
     },
     "key": "003E"
@@ -253,6 +274,9 @@
       "mathspeak": {
         "default": "question-mark",
         "nemeth": "⠸⠦"
+      },
+      "clearspeak": {
+        "default": "question mark"
       }
     },
     "key": "003F"
@@ -334,6 +358,9 @@
       },
       "mathspeak": {
         "default": "vertical-bar"
+      },
+      "clearspeak": {
+        "default": "divides"
       }
     },
     "key": "007C"
@@ -355,6 +382,9 @@
       },
       "mathspeak": {
         "default": "inverted-exclamation-mark"
+      },
+      "clearspeak": {
+        "default": "inverted exclamation mark"
       }
     },
     "key": "00A1"
@@ -368,6 +398,9 @@
       },
       "mathspeak": {
         "default": "cent-sign"
+      },
+      "clearspeak": {
+        "default": "cent sign"
       }
     },
     "key": "00A2"
@@ -381,6 +414,9 @@
       },
       "mathspeak": {
         "default": "pound-sign"
+      },
+      "clearspeak": {
+        "default": "pound sign"
       }
     },
     "key": "00A3"
@@ -394,6 +430,9 @@
       },
       "mathspeak": {
         "default": "currency-sign"
+      },
+      "clearspeak": {
+        "default": "currency sign"
       }
     },
     "key": "00A4"
@@ -433,6 +472,9 @@
       },
       "mathspeak": {
         "default": "section-sign"
+      },
+      "clearspeak": {
+        "default": "section sign"
       }
     },
     "key": "00A7"
@@ -460,6 +502,9 @@
       },
       "mathspeak": {
         "default": "copyright-sign"
+      },
+      "clearspeak": {
+        "default": "copyright sign"
       }
     },
     "key": "00A9"
@@ -498,6 +543,9 @@
       },
       "mathspeak": {
         "default": "not-sign"
+      },
+      "clearspeak": {
+        "default": "not sign"
       }
     },
     "key": "00AC"
@@ -512,6 +560,9 @@
       },
       "mathspeak": {
         "default": "registered-trade-mark-sign"
+      },
+      "clearspeak": {
+        "default": "trade mark sign"
       }
     },
     "key": "00AE"
@@ -538,6 +589,9 @@
       },
       "mathspeak": {
         "default": "degree"
+      },
+      "clearspeak": {
+        "default": "degrees"
       }
     },
     "key": "00B0"
@@ -553,6 +607,9 @@
       "mathspeak": {
         "default": "plus-or-minus",
         "nemeth": "⠬⠤"
+      },
+      "clearspeak": {
+        "default": "plus or minus"
       }
     },
     "key": "00B1"
@@ -580,6 +637,9 @@
       },
       "mathspeak": {
         "default": "micro-sign"
+      },
+      "clearspeak": {
+        "default": "micro sign"
       }
     },
     "key": "00B5"
@@ -594,6 +654,9 @@
       },
       "mathspeak": {
         "default": "paragraph-sign"
+      },
+      "clearspeak": {
+        "default": "paragraph sign"
       }
     },
     "key": "00B6"
@@ -606,6 +669,9 @@
       },
       "mathspeak": {
         "default": "dot"
+      },
+      "clearspeak": {
+        "default": "times"
       }
     },
     "key": "00B7"
@@ -656,6 +722,9 @@
       },
       "mathspeak": {
         "default": "inverted-question-mark"
+      },
+      "clearspeak": {
+        "default": "inverted question mark"
       }
     },
     "key": "00BF"
@@ -669,6 +738,11 @@
       },
       "mathspeak": {
         "default": "times"
+      },
+      "clearspeak": {
+        "default": "times",
+        "MultsymbolX_By": "by",
+        "MultsymbolX_Cross": "cross"
       }
     },
     "key": "00D7"
@@ -682,6 +756,9 @@
       },
       "mathspeak": {
         "default": "division-sign"
+      },
+      "clearspeak": {
+        "default": "division sign"
       }
     },
     "key": "00F7"
@@ -1038,6 +1115,9 @@
       },
       "mathspeak": {
         "default": "ellipsis"
+      },
+      "clearspeak": {
+        "default": "dot dot dot"
       }
     },
     "key": "2026"
@@ -1097,6 +1177,9 @@
       },
       "mathspeak": {
         "default": "double-prime"
+      },
+      "clearspeak": {
+        "default": "double prime"
       }
     },
     "key": "2033"
@@ -1109,6 +1192,9 @@
       },
       "mathspeak": {
         "default": "triple-prime"
+      },
+      "clearspeak": {
+        "default": "triple prime"
       }
     },
     "key": "2034"
@@ -1486,6 +1572,9 @@
       },
       "mathspeak": {
         "default": "quadruple-prime"
+      },
+      "clearspeak": {
+        "default": "quadruple prime"
       }
     },
     "key": "2057"
@@ -1854,6 +1943,13 @@
       },
       "mathspeak": {
         "default": "element-of"
+      },
+      "clearspeak": {
+        "default": "is a member of",
+        "SetMemberSymbol_Member": "is a member of",
+        "SetMemberSymbol_Element": "is an element of",
+        "SetMemberSymbol_In": "is in",
+        "SetMemberSymbol_Belongs": "belongs to"
       }
     },
     "key": "2208"
@@ -1866,6 +1962,13 @@
       },
       "mathspeak": {
         "default": "not-an-element-of"
+      },
+      "clearspeak": {
+        "default": "is not a member of",
+        "SetMemberSymbol_Member": "is not a member of",
+        "SetMemberSymbol_Element": "is not an element of",
+        "SetMemberSymbol_In": "is not in",
+        "SetMemberSymbol_Belongs": "does not belong to"
       }
     },
     "key": "2209"
@@ -1878,6 +1981,13 @@
       },
       "mathspeak": {
         "default": "small-element-of"
+      },
+      "clearspeak": {
+        "default": "is a member of",
+        "SetMemberSymbol_Member": "is a member of",
+        "SetMemberSymbol_Element": "is an element of",
+        "SetMemberSymbol_In": "is in",
+        "SetMemberSymbol_Belongs": "belongs to"
       }
     },
     "key": "220A"
@@ -1963,6 +2073,9 @@
       "mathspeak": {
         "default": "sigma-summation",
         "nemeth": "⠨⠠⠎"
+      },
+      "clearspeak": {
+        "default": "sum"
       }
     },
     "key": "2211"
@@ -1989,6 +2102,9 @@
       },
       "mathspeak": {
         "default": "minus-or-plus"
+      },
+      "clearspeak": {
+        "default": "minus or plus"
       }
     },
     "key": "2213"
@@ -2049,6 +2165,9 @@
       },
       "mathspeak": {
         "default": "ring"
+      },
+      "clearspeak": {
+        "default": "composed with"
       }
     },
     "key": "2218"
@@ -2805,6 +2924,9 @@
       },
       "mathspeak": {
         "default": "equiangular-to"
+      },
+      "clearspeak": {
+        "default": "is equiangular to"
       }
     },
     "key": "225A"
@@ -2817,6 +2939,9 @@
       },
       "mathspeak": {
         "default": "star-equals"
+      },
+      "clearspeak": {
+        "default": "star equals"
       }
     },
     "key": "225B"
@@ -2829,6 +2954,9 @@
       },
       "mathspeak": {
         "default": "delta-equals"
+      },
+      "clearspeak": {
+        "default": "delta equals"
       }
     },
     "key": "225C"
@@ -2841,6 +2969,9 @@
       },
       "mathspeak": {
         "default": "equals-by-definition"
+      },
+      "clearspeak": {
+        "default": "is defined to be"
       }
     },
     "key": "225D"
@@ -2853,6 +2984,9 @@
       },
       "mathspeak": {
         "default": "measured-by"
+      },
+      "clearspeak": {
+        "default": "is measured by"
       }
     },
     "key": "225E"
@@ -2865,6 +2999,9 @@
       },
       "mathspeak": {
         "default": "questioned-equals"
+      },
+      "clearspeak": {
+        "default": "questioned equals"
       }
     },
     "key": "225F"
@@ -2877,6 +3014,9 @@
       },
       "mathspeak": {
         "default": "not-equals"
+      },
+      "clearspeak": {
+        "default": "not equals"
       }
     },
     "key": "2260"
@@ -2889,6 +3029,9 @@
       },
       "mathspeak": {
         "default": "identical-to"
+      },
+      "clearspeak": {
+        "default": "is identical to"
       }
     },
     "key": "2261"
@@ -2901,6 +3044,9 @@
       },
       "mathspeak": {
         "default": "not-identical-to"
+      },
+      "clearspeak": {
+        "default": "is not identical to"
       }
     },
     "key": "2262"
@@ -2913,6 +3059,9 @@
       },
       "mathspeak": {
         "default": "strictly-equivalent-to"
+      },
+      "clearspeak": {
+        "default": "is strictly equivalent to"
       }
     },
     "key": "2263"
@@ -2927,6 +3076,9 @@
       "mathspeak": {
         "default": "less-than-or-equal-to",
         "nemeth": "⠀⠐⠅⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is less than or equal to"
       }
     },
     "key": "2264"
@@ -2941,6 +3093,9 @@
       "mathspeak": {
         "default": "greater-than-or-equal-to",
         "nemeth": "⠀⠨⠂⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is greater than or equal to"
       }
     },
     "key": "2265"
@@ -2955,6 +3110,9 @@
       "mathspeak": {
         "default": "less-than-over-equals",
         "nemeth": "⠀⠐⠅⠨⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is less than over equals"
       }
     },
     "key": "2266"
@@ -2969,6 +3127,9 @@
       "mathspeak": {
         "default": "greater-than-over-equals",
         "nemeth": "⠀⠨⠂⠨⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is greater than over equals"
       }
     },
     "key": "2267"
@@ -2983,6 +3144,9 @@
       "mathspeak": {
         "default": "less-than-but-not-equals",
         "nemeth": "⠀⠐⠅⠌⠨⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is less than but not equals"
       }
     },
     "key": "2268"
@@ -2997,6 +3161,9 @@
       "mathspeak": {
         "default": "greater-than-but-not-equals",
         "nemeth": "⠀⠨⠂⠌⠨⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is greater than but not equals"
       }
     },
     "key": "2269"
@@ -3011,6 +3178,9 @@
       "mathspeak": {
         "default": "much-less-than",
         "nemeth": "⠀⠐⠅⠈⠐⠅⠻⠀"
+      },
+      "clearspeak": {
+        "default": "is much less than"
       }
     },
     "key": "226A"
@@ -3025,6 +3195,9 @@
       "mathspeak": {
         "default": "much-greater-than",
         "nemeth": "⠀⠨⠂⠈⠨⠂⠻⠀"
+      },
+      "clearspeak": {
+        "default": "is much greater than"
       }
     },
     "key": "226B"
@@ -3047,6 +3220,9 @@
       "mathspeak": {
         "default": "not-equivalent-to",
         "nemeth": "⠀⠌⠈⠣⠠⠣⠀"
+      },
+      "clearspeak": {
+        "default": "is not equivalent to"
       }
     },
     "key": "226D"
@@ -3061,6 +3237,9 @@
       "mathspeak": {
         "default": "not-less-than",
         "nemeth": "⠀⠌⠐⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is not less than"
       }
     },
     "key": "226E"
@@ -3075,6 +3254,9 @@
       "mathspeak": {
         "default": "not-greater-than",
         "nemeth": "⠀⠌⠨⠂⠀"
+      },
+      "clearspeak": {
+        "default": "is not greater than"
       }
     },
     "key": "226F"
@@ -3089,6 +3271,9 @@
       "mathspeak": {
         "default": "neither-less-than-nor-equal-to",
         "nemeth": "⠀⠌⠐⠅⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is neither less than nor equal to"
       }
     },
     "key": "2270"
@@ -3103,6 +3288,9 @@
       "mathspeak": {
         "default": "neither-greater-than-nor-equal-to",
         "nemeth": "⠀⠌⠨⠂⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is neither greater than nor equal to"
       }
     },
     "key": "2271"
@@ -3117,6 +3305,9 @@
       "mathspeak": {
         "default": "less-than-or-equivalent-to",
         "nemeth": "⠀⠐⠅⠈⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is less than or equivalent to"
       }
     },
     "key": "2272"
@@ -3131,6 +3322,9 @@
       "mathspeak": {
         "default": "greater-than-or-equivalent-to",
         "nemeth": "⠀⠨⠂⠈⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is greater than or equivalent to"
       }
     },
     "key": "2273"
@@ -3145,6 +3339,9 @@
       "mathspeak": {
         "default": "neither-less-than-nor-equivalent-to",
         "nemeth": "⠀⠌⠐⠅⠈⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is neither less than nor equivalent to"
       }
     },
     "key": "2274"
@@ -3159,6 +3356,9 @@
       "mathspeak": {
         "default": "neither-greater-than-nor-equivalent-to",
         "nemeth": "⠀⠌⠨⠂⠈⠱⠀"
+      },
+      "clearspeak": {
+        "default": "is neither greater than nor equivalent to"
       }
     },
     "key": "2275"
@@ -3173,6 +3373,9 @@
       "mathspeak": {
         "default": "less-than-or-greater-than",
         "nemeth": "⠀⠐⠅⠨⠂⠀"
+      },
+      "clearspeak": {
+        "default": "is less than or greater than"
       }
     },
     "key": "2276"
@@ -3187,6 +3390,9 @@
       "mathspeak": {
         "default": "greater-than-or-less-than",
         "nemeth": "⠀⠨⠂⠐⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is greater than or less than"
       }
     },
     "key": "2277"
@@ -3201,6 +3407,9 @@
       "mathspeak": {
         "default": "neither-less-than-nor-greater-than",
         "nemeth": "⠀⠌⠐⠅⠨⠂⠀"
+      },
+      "clearspeak": {
+        "default": "is neither less than nor greater than"
       }
     },
     "key": "2278"
@@ -3215,6 +3424,9 @@
       "mathspeak": {
         "default": "neither-greater-than-nor-less-than",
         "nemeth": "⠀⠌⠨⠂⠐⠅⠀"
+      },
+      "clearspeak": {
+        "default": "is neither greater than nor less than"
       }
     },
     "key": "2279"
@@ -4083,6 +4295,10 @@
       },
       "mathspeak": {
         "default": "dot"
+      },
+      "clearspeak": {
+        "default": "times",
+        "MultsymbolDot_Dot": "dot"
       }
     },
     "key": "22C5"
@@ -4593,6 +4809,9 @@
       },
       "mathspeak": {
         "default": "midline-horizontal-ellipsis"
+      },
+      "clearspeak": {
+        "default": "dot dot dot"
       }
     },
     "key": "22EF"
@@ -10015,7 +10234,7 @@
         "default": "fullwidth less than sign"
       },
       "mathspeak": {
-        "default": "less-than-sign"
+        "default": "less-than"
       }
     },
     "key": "FF1C"
@@ -10039,7 +10258,7 @@
         "default": "fullwidth greater than sign"
       },
       "mathspeak": {
-        "default": "greater-than-sign"
+        "default": "greater-than"
       }
     },
     "key": "FF1E"
@@ -10178,6 +10397,9 @@
       },
       "mathspeak": {
         "default": "not-sign"
+      },
+      "clearspeak": {
+        "default": "not sign"
       }
     },
     "key": "FFE2"
@@ -10216,6 +10438,9 @@
       },
       "mathspeak": {
         "default": "yen-sign"
+      },
+      "clearspeak": {
+        "default": "yen sign"
       }
     },
     "key": "FFE5"
@@ -10228,6 +10453,9 @@
       },
       "mathspeak": {
         "default": "won-sign"
+      },
+      "clearspeak": {
+        "default": "won sign"
       }
     },
     "key": "FFE6"

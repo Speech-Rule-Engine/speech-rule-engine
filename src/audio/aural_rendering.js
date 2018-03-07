@@ -25,6 +25,7 @@ goog.provide('sre.AuralRendering');
 goog.require('sre.AcssRenderer');
 goog.require('sre.AudioRenderer');
 goog.require('sre.Engine');
+goog.require('sre.PunctuationRenderer');
 goog.require('sre.SableRenderer');
 goog.require('sre.SsmlRenderer');
 goog.require('sre.StringRenderer');
@@ -121,6 +122,8 @@ sre.AuralRendering.rendererMapping_ = {};
 
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.NONE, new sre.StringRenderer());
+sre.AuralRendering.registerRenderer(
+    sre.Engine.Markup.PUNCTUATION, new sre.PunctuationRenderer());
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.ACSS, new sre.AcssRenderer());
 sre.AuralRendering.registerRenderer(

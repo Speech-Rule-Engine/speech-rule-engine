@@ -63,7 +63,7 @@ sre.Locale.nestingToString = function(count) {
  * @return {!boolean} True if a vulgar fraction.
  */
 sre.Locale.vulgarNestingDepth = function(node) {
-  return sre.MathspeakUtil.vulgarFractionSmall(node);
+  return !!sre.MathspeakUtil.isSmallVulgarFraction(node).length;
 };
 
 

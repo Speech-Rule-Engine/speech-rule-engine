@@ -52,6 +52,11 @@ sre.Engine = function() {
   this.evaluator = sre.Engine.defaultEvaluator;
 
   /**
+   * @type {!sre.DynamicCstr.Parser}
+   */
+  this.parser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+
+  /**
    * @type {!sre.DynamicCstr}
    */
   this.dynamicCstr = sre.DynamicCstr.defaultCstr();
@@ -60,6 +65,12 @@ sre.Engine = function() {
    * @type {sre.DynamicCstr.Comparator}
    */
   this.comparator = null;
+
+  /**
+   * Maps domains to comparators.
+   * @type {Object.<string, function():sre.DynamicCstr.Comparator>}
+   */
+  this.comparators = {};
 
   /**
    * Current domain.
@@ -73,13 +84,11 @@ sre.Engine = function() {
    */
   this.style = 'short';
 
-
   /**
    * Current locale.
    * @type {string}
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-
 
   /**
    * Current walker mode.
@@ -160,7 +169,8 @@ sre.Engine.personalityProps = {
   PITCH: 'pitch',
   RATE: 'rate',
   VOLUME: 'volume',
-  PAUSE: 'pause'
+  PAUSE: 'pause',
+  JOIN: 'join'
 };
 
 
@@ -194,6 +204,7 @@ sre.Engine.Speech = {
  */
 sre.Engine.Markup = {
   NONE: 'none',
+  PUNCTUATION: 'punctuation',
   SSML: 'ssml',
   ACSS: 'acss',
   SABLE: 'sable',
