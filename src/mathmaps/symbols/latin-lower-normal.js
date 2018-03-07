@@ -291,7 +291,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter a",
-        "short": "a"
+        "short": "a",
+        "nemeth": "⠁"
       }
     }
   },
@@ -301,7 +302,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter b",
-        "short": "b"
+        "short": "b",
+        "nemeth": "⠃"
       }
     }
   },
@@ -311,7 +313,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter c",
-        "short": "c"
+        "short": "c",
+        "nemeth": "⠉"
       }
     }
   },
@@ -321,7 +324,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter d",
-        "short": "d"
+        "short": "d",
+        "nemeth": "⠙"
       }
     }
   },
@@ -331,7 +335,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter e",
-        "short": "e"
+        "short": "e",
+        "nemeth": "⠑"
       }
     }
   },
@@ -341,7 +346,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter f",
-        "short": "f"
+        "short": "f",
+        "nemeth": "⠋"
       }
     }
   },
@@ -351,7 +357,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter g",
-        "short": "g"
+        "short": "g",
+        "nemeth": "⠛"
       }
     }
   },
@@ -361,7 +368,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter h",
-        "short": "h"
+        "short": "h",
+        "nemeth": "⠓"
       }
     }
   },
@@ -371,7 +379,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter i",
-        "short": "i"
+        "short": "i",
+        "nemeth": "⠊"
       }
     }
   },
@@ -381,7 +390,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter j",
-        "short": "j"
+        "short": "j",
+        "nemeth": "⠚"
       }
     }
   },
@@ -391,7 +401,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter k",
-        "short": "k"
+        "short": "k",
+        "nemeth": "⠅"
       }
     }
   },
@@ -401,7 +412,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter l",
-        "short": "l"
+        "short": "l",
+        "nemeth": "⠇"
       }
     }
   },
@@ -411,7 +423,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter m",
-        "short": "m"
+        "short": "m",
+        "nemeth": "⠍"
       }
     }
   },
@@ -421,7 +434,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter n",
-        "short": "n"
+        "short": "n",
+        "nemeth": "⠝"
       }
     }
   },
@@ -431,7 +445,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter o",
-        "short": "o"
+        "short": "o",
+        "nemeth": "⠕"
       }
     }
   },
@@ -441,7 +456,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter p",
-        "short": "p"
+        "short": "p",
+        "nemeth": "⠏"
       }
     }
   },
@@ -451,7 +467,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter q",
-        "short": "q"
+        "short": "q",
+        "nemeth": "⠟"
       }
     }
   },
@@ -461,7 +478,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter r",
-        "short": "r"
+        "short": "r",
+        "nemeth": "⠗"
       }
     }
   },
@@ -471,7 +489,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter s",
-        "short": "s"
+        "short": "s",
+        "nemeth": "⠎"
       }
     }
   },
@@ -481,7 +500,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter t",
-        "short": "t"
+        "short": "t",
+        "nemeth": "⠞"
       }
     }
   },
@@ -491,7 +511,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter u",
-        "short": "u"
+        "short": "u",
+        "nemeth": "⠥"
       }
     }
   },
@@ -501,7 +522,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter v",
-        "short": "v"
+        "short": "v",
+        "nemeth": "⠧"
       }
     }
   },
@@ -511,7 +533,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter w",
-        "short": "w"
+        "short": "w",
+        "nemeth": "⠺"
       }
     }
   },
@@ -521,7 +544,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter x",
-        "short": "x"
+        "short": "x",
+        "nemeth": "⠭"
       }
     }
   },
@@ -531,7 +555,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter y",
-        "short": "y"
+        "short": "y",
+        "nemeth": "⠽"
       }
     }
   },
@@ -541,7 +566,8 @@
     "mappings": {
       "default": {
         "default": "fullwidth latin small letter z",
-        "short": "z"
+        "short": "z",
+        "nemeth": "⠵"
       }
     }
   }
