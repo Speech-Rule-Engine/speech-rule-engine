@@ -633,15 +633,11 @@ sre.EnrichMathml.makeIdList = function(nodes) {
  */
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
-  mml.setAttribute(sre.EnrichMathml.Attribute.ROLE, semantic.role);
-  if (Object.keys(semantic.annotation).length) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.ANNOTATION,
-                     semantic.xmlAnnotation());
+  var attributes = semantic.attributes();
+  for (var i = 0, attr; attr = attributes[i]; i++) {
+    mml.setAttribute(sre.EnrichMathml.Attribute[attr[0].toUpperCase()],
+                     attr[1]);
   }
-  if (semantic.font != sre.Semantic.Font.UNKNOWN) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.FONT, semantic.font);
-  }
-  mml.setAttribute(sre.EnrichMathml.Attribute.ID, semantic.id);
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
                      sre.EnrichMathml.makeIdList(semantic.childNodes));
@@ -652,14 +648,6 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   }
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
-  }
-  if (semantic.embellished) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.EMBELLISHED,
-                     semantic.embellished);
-  }
-  if (semantic.fencePointer) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.FENCEPOINTER,
-                     semantic.fencePointer);
   }
 };
 
