@@ -24,15 +24,15 @@ goog.require('sre.ClearspeakRuleTest');
 
 
 /**
-* @constructor
-* @extends {sre.ClearspeakRuleTest}
-*/
+ * @constructor
+ * @extends {sre.ClearspeakRuleTest}
+ */
 sre.ClearspeakImpliedTimes = function() {
   sre.ClearspeakImpliedTimes.base(this, 'constructor');
 
   /**
-* @override
-  */
+   * @override
+   */
   this.information = 'ClearspeakImpliedTimes rule tests.';
 
 };
@@ -2100,7 +2100,7 @@ sre.ClearspeakImpliedTimes.prototype.untestExtra008 = function() {
 /**
  * Testing ClearspeakImpliedTimes Example Extra009
  */
-sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
+sre.ClearspeakImpliedTimes.prototype.untestExtra009 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math style="background-color:#"> <semantics>  <mrow>   ' +
       '<mo>−</mo><mi>u</mi><mrow><mo>(</mo>    <mi>v</mi>   <mo>)</mo>' +
@@ -2108,7 +2108,7 @@ sre.ClearspeakImpliedTimes.prototype.testExtra009 = function() {
       '<mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(' +
       '</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow>' +
       '</mrow>   </semantics></math>';
-  var speech = 'negative u of v, equals u of negative v, equals negative u v';
+  var speech = 'negative u times v, equals u times negative v, equals negative u v';
   this.executeRuleTest(mathml, speech, preference);
 };
 

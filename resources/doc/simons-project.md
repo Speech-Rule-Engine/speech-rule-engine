@@ -52,4 +52,6 @@ https://tex.stackexchange.com/questions/196574/a-notation-for-continued-fraction
 # Function composition vs implicit multiplication.
 
     * Work out the cases for implicit function compoistion.
-    *  Add some appropriate meaning element. (general?)
+    * Add some appropriate meaning element. (general?)
+    * Get feedback loop if a function occurs in operation with other clearly non-functions
+      (e.g., Clearspeak ). This would need a branch node lookup/comparison.
