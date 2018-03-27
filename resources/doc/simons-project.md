@@ -48,10 +48,19 @@ https://tex.stackexchange.com/questions/73195/how-to-typeset-a-continued-fractio
 
 https://tex.stackexchange.com/questions/196574/a-notation-for-continued-fractions
 
-
 # Function composition vs implicit multiplication.
 
     * Work out the cases for implicit function compoistion.
     * Add some appropriate meaning element. (general?)
     * Get feedback loop if a function occurs in operation with other clearly non-functions
       (e.g., Clearspeak ). This would need a branch node lookup/comparison.
+
+# Improved removal of mrows: 
+  * bracketing goes wrong in:
+  sre.NobleEnglishTest.prototype.testSample_38
+
+  * Mfenced stuff: some enrichment problems.
+  * Improved recognition of fences: What about empty vs not empty?
+    sre.ClearspeakPart2Symbols.prototype.testVertLine003 is a good example.
+  *
+
