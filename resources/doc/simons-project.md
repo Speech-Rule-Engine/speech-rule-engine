@@ -64,3 +64,6 @@ https://tex.stackexchange.com/questions/196574/a-notation-for-continued-fraction
     sre.ClearspeakPart2Symbols.prototype.testVertLine003 is a good example.
   *
 
+
+Try this:
+https://math.meta.stackexchange.com/questions/28253/how-to-set-name-above-a-part-of-a-matrix
