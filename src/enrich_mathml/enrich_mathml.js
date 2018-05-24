@@ -108,7 +108,7 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   // deleted.
   var oldMml = mml.cloneNode(true);
   sre.EnrichMathml.walkTree(semantic.root);
-  sre.EnrichMathml.addCollapsedAttribute(mml, sre.SemanticSkeleton.tree(semantic));
+  sre.EnrichMathml.addCollapsedAttribute(mml, sre.SemanticSkeleton.tree(semantic.root));
   sre.Debugger.getInstance().generateOutput(
       function() {
         sre.EnrichMathml.formattedOutput(oldMml, mml, semantic, true);

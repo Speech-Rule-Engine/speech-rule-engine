@@ -258,8 +258,9 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
 
 
 sre.SemanticSkeleton.tree = function(node) {
+  console.log(node);
   var skeleton = [node.id];
-  if (node.childNodes.length()) {
+  if (node.childNodes.length) {
     for (var i = 0, child; child = node.childNodes[i]; i++) {
       skeleton.push(sre.SemanticSkeleton.tree(child));
     }
