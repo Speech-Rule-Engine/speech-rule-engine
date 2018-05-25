@@ -258,12 +258,59 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
 
 
 sre.SemanticSkeleton.tree = function(node) {
-  console.log(node);
   var skeleton = [node.id];
   if (node.childNodes.length) {
-    for (var i = 0, child; child = node.childNodes[i]; i++) {
+    var children = sre.SemanticSkeleton.combineContentChildren_(node);
+    for (var i = 0, child; child = children[i]; i++) {
       skeleton.push(sre.SemanticSkeleton.tree(child));
     }
   }
   return skeleton;
 };
+
+
+sre.SemanticSkeleton.combineContentChildren_ = function(semantic) {
+  var children = semantic.childNodes; // .map(function(x) {return x.id;});
+  var content = semantic.contentNodes; // .map(function(x) {return x.id;});
+  switch (semantic.type) {
+    case sre.Semantic.Type.RELSEQ:
+    case sre.Semantic.Type.INFIXOP:
+    case sre.Semantic.Type.MULTIREL:
+      return sre.BaseUtil.interleaveLists(children, content);
+    case sre.Semantic.Type.PREFIXOP:
+      return content.concat(children);
+    case sre.Semantic.Type.POSTFIXOP:
+      return children.concat(content);
+    case sre.Semantic.Type.FENCED:
+      children.unshift(content[0]);
+      children.push(content[1]);
+      return children;
+    case sre.Semantic.Type.PUNCTUATED:
+      if (semantic.role === sre.Semantic.Role.TEXT) {
+        return sre.BaseUtil.interleaveLists(children, content);
+      }
+      var markupList = [];
+      for (var i = 0, j = 0, child, cont;
+           child = children[i], cont = content[j]; i++) {
+        if (child === cont) {
+          j++;
+          markupList.push(child);
+        }
+      }
+      return children;
+    case sre.Semantic.Type.APPL:
+      return [children[0], content[0], children[1]];
+    case sre.Semantic.Type.ROOT:
+      return [children[1], children[0]];
+    case sre.Semantic.Type.ROW:
+    case sre.Semantic.Type.LINE:
+      if (content.length) {
+        children.unshift(content[0]);
+      }
+      return children;
+    default:
+      return children;
+  }
+};
+
+
