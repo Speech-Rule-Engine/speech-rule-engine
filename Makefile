@@ -18,6 +18,7 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
+RES_DIR = $(abspath ./resources)
 SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
@@ -26,6 +27,7 @@ MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
+LICENSE = $(RES_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
@@ -72,7 +74,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js'
+CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
