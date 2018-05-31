@@ -31,12 +31,12 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "black letter capital c",
-        "alternative": "black letter c",
-        "short": "black letter cap c"
+        "default": "fraktur capital c",
+        "alternative": "fraktur c",
+        "short": "fraktur cap c"
       },
       "mathspeak": {
-        "default": "black letter upper C"
+        "default": "fraktur upper C"
       }
     },
     "key": "212D"
@@ -101,12 +101,12 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "black letter capital h",
-        "alternative": "black letter h",
-        "short": "black letter cap h"
+        "default": "fraktur capital h",
+        "alternative": "fraktur h",
+        "short": "fraktur cap h"
       },
       "mathspeak": {
-        "default": "black letter upper H"
+        "default": "fraktur upper H"
       }
     },
     "key": "210C"
@@ -115,12 +115,12 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "black letter capital i",
-        "alternative": "black letter i",
-        "short": "black letter cap i"
+        "default": "fraktur capital i",
+        "alternative": "fraktur i",
+        "short": "fraktur cap i"
       },
       "mathspeak": {
-        "default": "black letter upper I"
+        "default": "fraktur upper I"
       }
     },
     "key": "2111"
@@ -241,12 +241,12 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "black letter capital r",
-        "alternative": "black letter r",
-        "short": "black letter cap r"
+        "default": "fraktur capital r",
+        "alternative": "fraktur r",
+        "short": "fraktur cap r"
       },
       "mathspeak": {
-        "default": "black letter upper R"
+        "default": "fraktur upper R"
       }
     },
     "key": "211C"
@@ -353,12 +353,12 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "black letter capital z",
-        "alternative": "black letter z",
-        "short": "black letter cap z"
+        "default": "fraktur capital z",
+        "alternative": "fraktur z",
+        "short": "fraktur cap z"
       },
       "mathspeak": {
-        "default": "black letter upper Z"
+        "default": "fraktur upper Z"
       }
     },
     "key": "2128"
