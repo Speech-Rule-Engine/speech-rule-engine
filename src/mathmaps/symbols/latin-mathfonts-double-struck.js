@@ -31,6 +31,20 @@
     "category": "Lu",
     "mappings": {
       "default": {
+        "default": "mathematical double struck capital c",
+        "alternative": "double struck capital c",
+        "short": "double struck cap c"
+      },
+      "mathspeak": {
+        "default": "double struck upper C"
+      }
+    },
+    "key": "2102"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
         "default": "mathematical double struck capital d",
         "alternative": "double struck capital d",
         "short": "double struck cap d"
@@ -82,6 +96,20 @@
       }
     },
     "key": "1D53E"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "double struck capital h",
+        "alternative": "double struck h",
+        "short": "double struck cap h"
+      },
+      "mathspeak": {
+        "default": "double struck upper H"
+      }
+    },
+    "key": "210D"
   },
   {
     "category": "Lu",
@@ -157,6 +185,20 @@
     "category": "Lu",
     "mappings": {
       "default": {
+        "default": "double struck capital n",
+        "alternative": "double struck n",
+        "short": "double struck cap n"
+      },
+      "mathspeak": {
+        "default": "double struck upper N"
+      }
+    },
+    "key": "2115"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
         "default": "mathematical double struck capital o",
         "alternative": "double struck capital o",
         "short": "double struck cap o"
@@ -166,6 +208,48 @@
       }
     },
     "key": "1D546"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "double struck capital p",
+        "alternative": "double struck p",
+        "short": "double struck cap p"
+      },
+      "mathspeak": {
+        "default": "double struck upper P"
+      }
+    },
+    "key": "2119"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "double struck capital q",
+        "alternative": "double struck q",
+        "short": "double struck cap q"
+      },
+      "mathspeak": {
+        "default": "double struck upper Q"
+      }
+    },
+    "key": "211A"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "double struck capital r",
+        "alternative": "double struck r",
+        "short": "double struck cap r"
+      },
+      "mathspeak": {
+        "default": "double struck upper R"
+      }
+    },
+    "key": "211D"
   },
   {
     "category": "Lu",
@@ -264,6 +348,20 @@
       }
     },
     "key": "1D550"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "double struck capital z",
+        "alternative": "double struck z",
+        "short": "double struck cap z"
+      },
+      "mathspeak": {
+        "default": "double struck upper Z"
+      }
+    },
+    "key": "2124"
   },
   {
     "category": "Ll",

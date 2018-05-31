@@ -31,6 +31,20 @@
     "category": "Lu",
     "mappings": {
       "default": {
+        "default": "black letter capital c",
+        "alternative": "black letter c",
+        "short": "black letter cap c"
+      },
+      "mathspeak": {
+        "default": "black letter upper C"
+      }
+    },
+    "key": "212D"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
         "default": "mathematical fraktur capital d",
         "alternative": "fraktur capital d",
         "short": "fraktur cap d"
@@ -82,6 +96,34 @@
       }
     },
     "key": "1D50A"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "black letter capital h",
+        "alternative": "black letter h",
+        "short": "black letter cap h"
+      },
+      "mathspeak": {
+        "default": "black letter upper H"
+      }
+    },
+    "key": "210C"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "black letter capital i",
+        "alternative": "black letter i",
+        "short": "black letter cap i"
+      },
+      "mathspeak": {
+        "default": "black letter upper I"
+      }
+    },
+    "key": "2111"
   },
   {
     "category": "Lu",
@@ -199,6 +241,20 @@
     "category": "Lu",
     "mappings": {
       "default": {
+        "default": "black letter capital r",
+        "alternative": "black letter r",
+        "short": "black letter cap r"
+      },
+      "mathspeak": {
+        "default": "black letter upper R"
+      }
+    },
+    "key": "211C"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
         "default": "mathematical fraktur capital s",
         "alternative": "fraktur capital s",
         "short": "fraktur cap s"
@@ -292,6 +348,20 @@
       }
     },
     "key": "1D51C"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "black letter capital z",
+        "alternative": "black letter z",
+        "short": "black letter cap z"
+      },
+      "mathspeak": {
+        "default": "black letter upper Z"
+      }
+    },
+    "key": "2128"
   },
   {
     "category": "Ll",

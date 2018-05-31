@@ -17,6 +17,20 @@
     "category": "Lu",
     "mappings": {
       "default": {
+        "default": "script capital b",
+        "alternative": "script b",
+        "short": "script cap b"
+      },
+      "mathspeak": {
+        "default": "script upper B"
+      }
+    },
+    "key": "212C"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
         "default": "mathematical script capital c",
         "alternative": "script capital c",
         "short": "script cap c"
@@ -45,6 +59,34 @@
     "category": "Lu",
     "mappings": {
       "default": {
+        "default": "script capital e",
+        "alternative": "script e",
+        "short": "script cap e"
+      },
+      "mathspeak": {
+        "default": "script upper E"
+      }
+    },
+    "key": "2130"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "script capital f",
+        "alternative": "script f",
+        "short": "script cap f"
+      },
+      "mathspeak": {
+        "default": "script upper F"
+      }
+    },
+    "key": "2131"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
         "default": "mathematical script capital g",
         "alternative": "script capital g",
         "short": "script cap g"
@@ -54,6 +96,34 @@
       }
     },
     "key": "1D4A2"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "script capital h",
+        "alternative": "script h",
+        "short": "script cap h"
+      },
+      "mathspeak": {
+        "default": "script upper H"
+      }
+    },
+    "key": "210B"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "script capital i",
+        "alternative": "script i",
+        "short": "script cap i"
+      },
+      "mathspeak": {
+        "default": "script upper I"
+      }
+    },
+    "key": "2110"
   },
   {
     "category": "Lu",
@@ -82,6 +152,34 @@
       }
     },
     "key": "1D4A6"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "script capital l",
+        "alternative": "script l",
+        "short": "script cap l"
+      },
+      "mathspeak": {
+        "default": "script upper L"
+      }
+    },
+    "key": "2112"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "script capital m",
+        "alternative": "script m",
+        "short": "script cap m"
+      },
+      "mathspeak": {
+        "default": "script upper M"
+      }
+    },
+    "key": "2133"
   },
   {
     "category": "Lu",
@@ -138,6 +236,20 @@
       }
     },
     "key": "1D4AC"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "script capital r",
+        "alternative": "script r",
+        "short": "script cap r"
+      },
+      "mathspeak": {
+        "default": "script upper R"
+      }
+    },
+    "key": "211B"
   },
   {
     "category": "Lu",
@@ -299,12 +411,32 @@
     "category": "Ll",
     "mappings": {
       "default": {
+        "default": "script small e",
+        "short": "script e"
+      }
+    },
+    "key": "212F"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
         "default": "mathematical script small f",
         "alternative": "script small f",
         "short": "script f"
       }
     },
     "key": "1D4BB"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "script small g",
+        "short": "script g"
+      }
+    },
+    "key": "210A"
   },
   {
     "category": "Ll",
@@ -382,6 +514,16 @@
       }
     },
     "key": "1D4C3"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "script small o",
+        "short": "script o"
+      }
+    },
+    "key": "2134"
   },
   {
     "category": "Ll",

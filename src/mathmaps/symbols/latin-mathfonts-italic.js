@@ -444,6 +444,20 @@
     "category": "Ll",
     "mappings": {
       "default": {
+        "default": "mathematical italic small h",
+        "alternative": "italic small h",
+        "short": "italic h"
+      },
+      "physics": {
+        "default": "planck constant"
+      }
+    },
+    "key": "210E"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
         "default": "mathematical italic small i",
         "alternative": "italic small i",
         "short": "italic i"
@@ -637,27 +651,5 @@
       }
     },
     "key": "1D467"
-  },
-   {
-    "category": "Ll",
-    "mappings": {
-      "default": {
-        "default": "mathematical italic small dotless i",
-        "alternative": "italic small dotless i",
-        "short": "italic dotless i"
-      }
-    },
-    "key": "1D6A4"
-  },
-  {
-    "category": "Ll",
-    "mappings": {
-      "default": {
-        "default": "mathematical italic small dotless j",
-        "alternative": "italic small dotless j",
-        "short": "italic dotless j"
-      }
-    },
-    "key": "1D6A5"
   }
 ]
