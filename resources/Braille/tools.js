@@ -12,7 +12,7 @@ Tools = {};
 Tools.GREEK_FILES_ = [
   // Greek
   'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
-  'greek-mathfonts.js', 'greek-symbols.js',
+  'greek-mathfonts.js', 'greek-symbols.js'
 ];
 
 /**
@@ -23,7 +23,7 @@ Tools.GREEK_FILES_ = [
  */
 Tools.HEBREW_FILES_ = [
 // Hebrew
-  'hebrew_letters.js',
+  'hebrew_letters.js'
 ];
 
 
@@ -38,7 +38,7 @@ Tools.LATIN_FILES_ = [
   'latin-lower-double-accent.js', 'latin-lower-normal.js',
   'latin-lower-phonetic.js', 'latin-lower-single-accent.js',
   'latin-rest.js', 'latin-upper-double-accent.js',
-  'latin-upper-normal.js', 'latin-upper-single-accent.js',
+  'latin-upper-normal.js', 'latin-upper-single-accent.js'
 ];
   
 Tools.MATH_FONTS = 'latin-mathfonts.js';
@@ -54,7 +54,7 @@ Tools.SYMBOLS_FILES_ = [
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
   'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js',
+  'math_whitespace.js', 'other_stars.js'
 ];
 
 
@@ -110,7 +110,7 @@ Tools.translateCharacter = function(char) {
 
 Tools.translateAll = function(opt_files) {
   opt_files = opt_files ||
-    [].concat(Tools.GREEK_FILES_, Tools.HEBREW_FILES, Tools.LATIN_FILES_, Tools.SYMBOLS_FILES_);
+    [].concat(Tools.GREEK_FILES_, Tools.HEBREW_FILES_, Tools.LATIN_FILES_, Tools.SYMBOLS_FILES_);
   // Tools.FUNCTIONS_FILES_, Tools.UNITS_FILES_);
   Tools.retrieveFiles(
     opt_files, sre.MathMap.SYMBOLS_PATH_,
