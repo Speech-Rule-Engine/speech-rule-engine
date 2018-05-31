@@ -115,7 +115,14 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'latin-lower-phonetic.js', 'latin-lower-single-accent.js',
   'latin-rest.js', 'latin-upper-double-accent.js',
   'latin-upper-normal.js', 'latin-upper-single-accent.js',
-  'latin-mathfonts.js',
+
+  // Latin Mathfonts
+  'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
+  'latin-mathfonts-bold-script.js', 'latin-mathfonts-double-struck.js',
+  'latin-mathfonts-fraktur.js', 'latin-mathfonts-italic.js',
+  'latin-mathfonts-monospace.js', 'latin-mathfonts-sans-serif-bold.js',
+  'latin-mathfonts-sans-serif-italic.js', 'latin-mathfonts-sans-serif.js',
+  'latin-mathfonts-script.js',
 
   // Math Symbols
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
