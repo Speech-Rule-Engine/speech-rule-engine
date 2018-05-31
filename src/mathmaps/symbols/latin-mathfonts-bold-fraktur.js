@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital a",
-        "alternative": "bold fraktur capital a",
+        "default": "bold fraktur capital a",
         "short": "bold fraktur cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital b",
-        "alternative": "bold fraktur capital b",
+        "default": "bold fraktur capital b",
         "short": "bold fraktur cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital c",
-        "alternative": "bold fraktur capital c",
+        "default": "bold fraktur capital c",
         "short": "bold fraktur cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital d",
-        "alternative": "bold fraktur capital d",
+        "default": "bold fraktur capital d",
         "short": "bold fraktur cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital e",
-        "alternative": "bold fraktur capital e",
+        "default": "bold fraktur capital e",
         "short": "bold fraktur cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital f",
-        "alternative": "bold fraktur capital f",
+        "default": "bold fraktur capital f",
         "short": "bold fraktur cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital g",
-        "alternative": "bold fraktur capital g",
+        "default": "bold fraktur capital g",
         "short": "bold fraktur cap g"
       },
       "mathspeak": {
@@ -101,8 +94,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital h",
-        "alternative": "bold fraktur capital h",
+        "default": "bold fraktur capital h",
         "short": "bold fraktur cap h"
       },
       "mathspeak": {
@@ -115,8 +107,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital i",
-        "alternative": "bold fraktur capital i",
+        "default": "bold fraktur capital i",
         "short": "bold fraktur cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital j",
-        "alternative": "bold fraktur capital j",
+        "default": "bold fraktur capital j",
         "short": "bold fraktur cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital k",
-        "alternative": "bold fraktur capital k",
+        "default": "bold fraktur capital k",
         "short": "bold fraktur cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital l",
-        "alternative": "bold fraktur capital l",
+        "default": "bold fraktur capital l",
         "short": "bold fraktur cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital m",
-        "alternative": "bold fraktur capital m",
+        "default": "bold fraktur capital m",
         "short": "bold fraktur cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital n",
-        "alternative": "bold fraktur capital n",
+        "default": "bold fraktur capital n",
         "short": "bold fraktur cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital o",
-        "alternative": "bold fraktur capital o",
+        "default": "bold fraktur capital o",
         "short": "bold fraktur cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital p",
-        "alternative": "bold fraktur capital p",
+        "default": "bold fraktur capital p",
         "short": "bold fraktur cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital q",
-        "alternative": "bold fraktur capital q",
+        "default": "bold fraktur capital q",
         "short": "bold fraktur cap q"
       },
       "mathspeak": {
@@ -241,8 +224,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital r",
-        "alternative": "bold fraktur capital r",
+        "default": "bold fraktur capital r",
         "short": "bold fraktur cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital s",
-        "alternative": "bold fraktur capital s",
+        "default": "bold fraktur capital s",
         "short": "bold fraktur cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital t",
-        "alternative": "bold fraktur capital t",
+        "default": "bold fraktur capital t",
         "short": "bold fraktur cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital u",
-        "alternative": "bold fraktur capital u",
+        "default": "bold fraktur capital u",
         "short": "bold fraktur cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital v",
-        "alternative": "bold fraktur capital v",
+        "default": "bold fraktur capital v",
         "short": "bold fraktur cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital w",
-        "alternative": "bold fraktur capital w",
+        "default": "bold fraktur capital w",
         "short": "bold fraktur cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital x",
-        "alternative": "bold fraktur capital x",
+        "default": "bold fraktur capital x",
         "short": "bold fraktur cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital y",
-        "alternative": "bold fraktur capital y",
+        "default": "bold fraktur capital y",
         "short": "bold fraktur cap y"
       },
       "mathspeak": {
@@ -353,8 +328,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur capital z",
-        "alternative": "bold fraktur capital z",
+        "default": "bold fraktur capital z",
         "short": "bold fraktur cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small a",
-        "alternative": "bold fraktur small a",
+        "default": "bold fraktur small a",
         "short": "bold fraktur a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small b",
-        "alternative": "bold fraktur small b",
+        "default": "bold fraktur small b",
         "short": "bold fraktur b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small c",
-        "alternative": "bold fraktur small c",
+        "default": "bold fraktur small c",
         "short": "bold fraktur c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small d",
-        "alternative": "bold fraktur small d",
+        "default": "bold fraktur small d",
         "short": "bold fraktur d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small e",
-        "alternative": "bold fraktur small e",
+        "default": "bold fraktur small e",
         "short": "bold fraktur e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small f",
-        "alternative": "bold fraktur small f",
+        "default": "bold fraktur small f",
         "short": "bold fraktur f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small g",
-        "alternative": "bold fraktur small g",
+        "default": "bold fraktur small g",
         "short": "bold fraktur g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small h",
-        "alternative": "bold fraktur small h",
+        "default": "bold fraktur small h",
         "short": "bold fraktur h"
       }
     },
@@ -455,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small i",
-        "alternative": "bold fraktur small i",
+        "default": "bold fraktur small i",
         "short": "bold fraktur i"
       }
     },
@@ -466,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small j",
-        "alternative": "bold fraktur small j",
+        "default": "bold fraktur small j",
         "short": "bold fraktur j"
       }
     },
@@ -477,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small k",
-        "alternative": "bold fraktur small k",
+        "default": "bold fraktur small k",
         "short": "bold fraktur k"
       }
     },
@@ -488,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small l",
-        "alternative": "bold fraktur small l",
+        "default": "bold fraktur small l",
         "short": "bold fraktur l"
       }
     },
@@ -499,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small m",
-        "alternative": "bold fraktur small m",
+        "default": "bold fraktur small m",
         "short": "bold fraktur m"
       }
     },
@@ -510,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small n",
-        "alternative": "bold fraktur small n",
+        "default": "bold fraktur small n",
         "short": "bold fraktur n"
       }
     },
@@ -521,8 +481,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small o",
-        "alternative": "bold fraktur small o",
+        "default": "bold fraktur small o",
         "short": "bold fraktur o"
       }
     },
@@ -532,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small p",
-        "alternative": "bold fraktur small p",
+        "default": "bold fraktur small p",
         "short": "bold fraktur p"
       }
     },
@@ -543,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small q",
-        "alternative": "bold fraktur small q",
+        "default": "bold fraktur small q",
         "short": "bold fraktur q"
       }
     },
@@ -554,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small r",
-        "alternative": "bold fraktur small r",
+        "default": "bold fraktur small r",
         "short": "bold fraktur r"
       }
     },
@@ -565,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small s",
-        "alternative": "bold fraktur small s",
+        "default": "bold fraktur small s",
         "short": "bold fraktur s"
       }
     },
@@ -576,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small t",
-        "alternative": "bold fraktur small t",
+        "default": "bold fraktur small t",
         "short": "bold fraktur t"
       }
     },
@@ -587,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small u",
-        "alternative": "bold fraktur small u",
+        "default": "bold fraktur small u",
         "short": "bold fraktur u"
       }
     },
@@ -598,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small v",
-        "alternative": "bold fraktur small v",
+        "default": "bold fraktur small v",
         "short": "bold fraktur v"
       }
     },
@@ -609,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small w",
-        "alternative": "bold fraktur small w",
+        "default": "bold fraktur small w",
         "short": "bold fraktur w"
       }
     },
@@ -620,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small x",
-        "alternative": "bold fraktur small x",
+        "default": "bold fraktur small x",
         "short": "bold fraktur x"
       }
     },
@@ -631,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small y",
-        "alternative": "bold fraktur small y",
+        "default": "bold fraktur small y",
         "short": "bold fraktur y"
       }
     },
@@ -642,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold fraktur small z",
-        "alternative": "bold fraktur small z",
+        "default": "bold fraktur small z",
         "short": "bold fraktur z"
       }
     },

@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital a",
-        "alternative": "double struck capital a",
+        "default": "double struck capital a",
         "short": "double struck cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital b",
-        "alternative": "double struck capital b",
+        "default": "double struck capital b",
         "short": "double struck cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital c",
-        "alternative": "double struck capital c",
+        "default": "double struck capital c",
         "short": "double struck cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital d",
-        "alternative": "double struck capital d",
+        "default": "double struck capital d",
         "short": "double struck cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital e",
-        "alternative": "double struck capital e",
+        "default": "double struck capital e",
         "short": "double struck cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital f",
-        "alternative": "double struck capital f",
+        "default": "double struck capital f",
         "short": "double struck cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital g",
-        "alternative": "double struck capital g",
+        "default": "double struck capital g",
         "short": "double struck cap g"
       },
       "mathspeak": {
@@ -102,7 +95,6 @@
     "mappings": {
       "default": {
         "default": "double struck capital h",
-        "alternative": "double struck h",
         "short": "double struck cap h"
       },
       "mathspeak": {
@@ -115,8 +107,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital i",
-        "alternative": "double struck capital i",
+        "default": "double struck capital i",
         "short": "double struck cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital j",
-        "alternative": "double struck capital j",
+        "default": "double struck capital j",
         "short": "double struck cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital k",
-        "alternative": "double struck capital k",
+        "default": "double struck capital k",
         "short": "double struck cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital l",
-        "alternative": "double struck capital l",
+        "default": "double struck capital l",
         "short": "double struck cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital m",
-        "alternative": "double struck capital m",
+        "default": "double struck capital m",
         "short": "double struck cap m"
       },
       "mathspeak": {
@@ -186,7 +173,6 @@
     "mappings": {
       "default": {
         "default": "double struck capital n",
-        "alternative": "double struck n",
         "short": "double struck cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital o",
-        "alternative": "double struck capital o",
+        "default": "double struck capital o",
         "short": "double struck cap o"
       },
       "mathspeak": {
@@ -214,7 +199,6 @@
     "mappings": {
       "default": {
         "default": "double struck capital p",
-        "alternative": "double struck p",
         "short": "double struck cap p"
       },
       "mathspeak": {
@@ -228,7 +212,6 @@
     "mappings": {
       "default": {
         "default": "double struck capital q",
-        "alternative": "double struck q",
         "short": "double struck cap q"
       },
       "mathspeak": {
@@ -242,7 +225,6 @@
     "mappings": {
       "default": {
         "default": "double struck capital r",
-        "alternative": "double struck r",
         "short": "double struck cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital s",
-        "alternative": "double struck capital s",
+        "default": "double struck capital s",
         "short": "double struck cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital t",
-        "alternative": "double struck capital t",
+        "default": "double struck capital t",
         "short": "double struck cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital u",
-        "alternative": "double struck capital u",
+        "default": "double struck capital u",
         "short": "double struck cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital v",
-        "alternative": "double struck capital v",
+        "default": "double struck capital v",
         "short": "double struck cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital w",
-        "alternative": "double struck capital w",
+        "default": "double struck capital w",
         "short": "double struck cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital x",
-        "alternative": "double struck capital x",
+        "default": "double struck capital x",
         "short": "double struck cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical double struck capital y",
-        "alternative": "double struck capital y",
+        "default": "double struck capital y",
         "short": "double struck cap y"
       },
       "mathspeak": {
@@ -354,7 +329,6 @@
     "mappings": {
       "default": {
         "default": "double struck capital z",
-        "alternative": "double struck z",
         "short": "double struck cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small a",
-        "alternative": "double struck small a",
+        "default": "double struck small a",
         "short": "double struck a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small b",
-        "alternative": "double struck small b",
+        "default": "double struck small b",
         "short": "double struck b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small c",
-        "alternative": "double struck small c",
+        "default": "double struck small c",
         "short": "double struck c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small d",
-        "alternative": "double struck small d",
+        "default": "double struck small d",
         "short": "double struck d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small e",
-        "alternative": "double struck small e",
+        "default": "double struck small e",
         "short": "double struck e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small f",
-        "alternative": "double struck small f",
+        "default": "double struck small f",
         "short": "double struck f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small g",
-        "alternative": "double struck small g",
+        "default": "double struck small g",
         "short": "double struck g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small h",
-        "alternative": "double struck small h",
+        "default": "double struck small h",
         "short": "double struck h"
       }
     },
@@ -455,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small i",
-        "alternative": "double struck small i",
+        "default": "double struck small i",
         "short": "double struck i"
       }
     },
@@ -466,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small j",
-        "alternative": "double struck small j",
+        "default": "double struck small j",
         "short": "double struck j"
       }
     },
@@ -477,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small k",
-        "alternative": "double struck small k",
+        "default": "double struck small k",
         "short": "double struck k"
       }
     },
@@ -488,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small l",
-        "alternative": "double struck small l",
+        "default": "double struck small l",
         "short": "double struck l"
       }
     },
@@ -499,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small m",
-        "alternative": "double struck small m",
+        "default": "double struck small m",
         "short": "double struck m"
       }
     },
@@ -510,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small n",
-        "alternative": "double struck small n",
+        "default": "double struck small n",
         "short": "double struck n"
       }
     },
@@ -521,8 +481,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small o",
-        "alternative": "double struck small o",
+        "default": "double struck small o",
         "short": "double struck o"
       }
     },
@@ -532,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small p",
-        "alternative": "double struck small p",
+        "default": "double struck small p",
         "short": "double struck p"
       }
     },
@@ -543,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small q",
-        "alternative": "double struck small q",
+        "default": "double struck small q",
         "short": "double struck q"
       }
     },
@@ -554,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small r",
-        "alternative": "double struck small r",
+        "default": "double struck small r",
         "short": "double struck r"
       }
     },
@@ -565,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small s",
-        "alternative": "double struck small s",
+        "default": "double struck small s",
         "short": "double struck s"
       }
     },
@@ -576,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small t",
-        "alternative": "double struck small t",
+        "default": "double struck small t",
         "short": "double struck t"
       }
     },
@@ -587,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small u",
-        "alternative": "double struck small u",
+        "default": "double struck small u",
         "short": "double struck u"
       }
     },
@@ -598,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small v",
-        "alternative": "double struck small v",
+        "default": "double struck small v",
         "short": "double struck v"
       }
     },
@@ -609,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small w",
-        "alternative": "double struck small w",
+        "default": "double struck small w",
         "short": "double struck w"
       }
     },
@@ -620,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small x",
-        "alternative": "double struck small x",
+        "default": "double struck small x",
         "short": "double struck x"
       }
     },
@@ -631,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small y",
-        "alternative": "double struck small y",
+        "default": "double struck small y",
         "short": "double struck y"
       }
     },
@@ -642,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical double struck small z",
-        "alternative": "double struck small z",
+        "default": "double struck small z",
         "short": "double struck z"
       }
     },

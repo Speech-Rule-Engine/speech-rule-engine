@@ -73,12 +73,12 @@ sre.MathAlphabetsTest.prototype.runCharacterTests = function(chars) {
  */
 sre.MathAlphabetsTest.prototype.testLowerPlaneLatin = function() {
   this.runCharacterTests({
-    'ℂ': 'mathematical double struck capital c',
+    'ℂ': 'double struck capital c',
     'ℊ': 'script small g',
     'ℋ': 'script capital h',
     'ℌ': 'fraktur capital h',
     'ℍ': 'double struck capital h',
-    'ℎ': 'mathematical italic small h',
+    'ℎ': 'italic small h',
     'ℐ': 'script capital i',
     'ℑ': 'fraktur capital i',
     'ℒ': 'script capital l',
@@ -118,8 +118,8 @@ sre.MathAlphabetsTest.prototype.testOtherCharacters = function() {
     'ⅇ': 'double struck italic small e',
     'ⅈ': 'double struck italic small i',
     'ⅉ': 'double struck italic small j',
-    '𝚤': 'mathematical italic small dotless i',
-    '𝚥': 'mathematical italic small dotless j'
+    '𝚤': 'italic small dotless i',
+    '𝚥': 'italic small dotless j'
   });
 };
 
@@ -129,17 +129,17 @@ sre.MathAlphabetsTest.prototype.testOtherCharacters = function() {
  */
 sre.MathAlphabetsTest.prototype.testUpperPlaneAlphabetsCaps = function() {
   this.runCharacterTests({
-    '𝕬': 'mathematical bold fraktur capital a',
-    '𝐀': 'mathematical bold capital a',
-    '𝓐': 'mathematical bold script capital a',
-    '𝔸': 'mathematical double struck capital a',
-    '𝔄': 'mathematical fraktur capital a',
-    '𝐴': 'mathematical italic capital a',
-    '𝙰': 'mathematical monospace capital a',
-    '𝗔': 'mathematical sans serif bold capital a',
-    '𝘈': 'mathematical sans serif italic capital a',
-    '𝖠': 'mathematical sans serif capital a',
-    '𝒜': 'mathematical script capital a'
+    '𝕬': 'bold fraktur capital a',
+    '𝐀': 'bold capital a',
+    '𝓐': 'bold script capital a',
+    '𝔸': 'double struck capital a',
+    '𝔄': 'fraktur capital a',
+    '𝐴': 'italic capital a',
+    '𝙰': 'monospace capital a',
+    '𝗔': 'sans serif bold capital a',
+    '𝘈': 'sans serif italic capital a',
+    '𝖠': 'sans serif capital a',
+    '𝒜': 'script capital a'
   });
 };
 
@@ -149,17 +149,17 @@ sre.MathAlphabetsTest.prototype.testUpperPlaneAlphabetsCaps = function() {
  */
 sre.MathAlphabetsTest.prototype.testUpperPlaneAlphabetsLower = function() {
   this.runCharacterTests({
-    '𝖆': 'mathematical bold fraktur small a',
-    '𝐚': 'mathematical bold small a',
-    '𝓪': 'mathematical bold script small a',
-    '𝕒': 'mathematical double struck small a',
-    '𝔞': 'mathematical fraktur small a',
-    '𝑎': 'mathematical italic small a',
-    '𝚊': 'mathematical monospace small a',
-    '𝗮': 'mathematical sans serif bold small a',
-    '𝘢': 'mathematical sans serif italic small a',
-    '𝖺': 'mathematical sans serif small a',
-    '𝒶': 'mathematical script small a'
+    '𝖆': 'bold fraktur small a',
+    '𝐚': 'bold small a',
+    '𝓪': 'bold script small a',
+    '𝕒': 'double struck small a',
+    '𝔞': 'fraktur small a',
+    '𝑎': 'italic small a',
+    '𝚊': 'monospace small a',
+    '𝗮': 'sans serif bold small a',
+    '𝘢': 'sans serif italic small a',
+    '𝖺': 'sans serif small a',
+    '𝒶': 'script small a'
   });
 };
 

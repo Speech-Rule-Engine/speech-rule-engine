@@ -135,8 +135,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small dotless i",
-        "alternative": "italic small dotless i",
+        "default": "italic small dotless i",
         "short": "italic dotless i"
       }
     },
@@ -146,8 +145,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small dotless j",
-        "alternative": "italic small dotless j",
+        "default": "italic small dotless j",
         "short": "italic dotless j"
       }
     },

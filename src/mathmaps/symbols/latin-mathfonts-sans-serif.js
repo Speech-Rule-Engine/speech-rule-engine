@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital a",
-        "alternative": "sans serif capital a",
+        "default": "sans serif capital a",
         "short": "sans serif cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital b",
-        "alternative": "sans serif capital b",
+        "default": "sans serif capital b",
         "short": "sans serif cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital c",
-        "alternative": "sans serif capital c",
+        "default": "sans serif capital c",
         "short": "sans serif cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital d",
-        "alternative": "sans serif capital d",
+        "default": "sans serif capital d",
         "short": "sans serif cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital e",
-        "alternative": "sans serif capital e",
+        "default": "sans serif capital e",
         "short": "sans serif cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital f",
-        "alternative": "sans serif capital f",
+        "default": "sans serif capital f",
         "short": "sans serif cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital g",
-        "alternative": "sans serif capital g",
+        "default": "sans serif capital g",
         "short": "sans serif cap g"
       },
       "mathspeak": {
@@ -101,8 +94,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital h",
-        "alternative": "sans serif capital h",
+        "default": "sans serif capital h",
         "short": "sans serif cap h"
       },
       "mathspeak": {
@@ -115,8 +107,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital i",
-        "alternative": "sans serif capital i",
+        "default": "sans serif capital i",
         "short": "sans serif cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital j",
-        "alternative": "sans serif capital j",
+        "default": "sans serif capital j",
         "short": "sans serif cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital k",
-        "alternative": "sans serif capital k",
+        "default": "sans serif capital k",
         "short": "sans serif cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital l",
-        "alternative": "sans serif capital l",
+        "default": "sans serif capital l",
         "short": "sans serif cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital m",
-        "alternative": "sans serif capital m",
+        "default": "sans serif capital m",
         "short": "sans serif cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital n",
-        "alternative": "sans serif capital n",
+        "default": "sans serif capital n",
         "short": "sans serif cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital o",
-        "alternative": "sans serif capital o",
+        "default": "sans serif capital o",
         "short": "sans serif cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital p",
-        "alternative": "sans serif capital p",
+        "default": "sans serif capital p",
         "short": "sans serif cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital q",
-        "alternative": "sans serif capital q",
+        "default": "sans serif capital q",
         "short": "sans serif cap q"
       },
       "mathspeak": {
@@ -241,8 +224,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital r",
-        "alternative": "sans serif capital r",
+        "default": "sans serif capital r",
         "short": "sans serif cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital s",
-        "alternative": "sans serif capital s",
+        "default": "sans serif capital s",
         "short": "sans serif cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital t",
-        "alternative": "sans serif capital t",
+        "default": "sans serif capital t",
         "short": "sans serif cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital u",
-        "alternative": "sans serif capital u",
+        "default": "sans serif capital u",
         "short": "sans serif cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital v",
-        "alternative": "sans serif capital v",
+        "default": "sans serif capital v",
         "short": "sans serif cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital w",
-        "alternative": "sans serif capital w",
+        "default": "sans serif capital w",
         "short": "sans serif cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital x",
-        "alternative": "sans serif capital x",
+        "default": "sans serif capital x",
         "short": "sans serif cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital y",
-        "alternative": "sans serif capital y",
+        "default": "sans serif capital y",
         "short": "sans serif cap y"
       },
       "mathspeak": {
@@ -353,8 +328,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif capital z",
-        "alternative": "sans serif capital z",
+        "default": "sans serif capital z",
         "short": "sans serif cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small a",
-        "alternative": "sans serif small a",
+        "default": "sans serif small a",
         "short": "sans serif a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small b",
-        "alternative": "sans serif small b",
+        "default": "sans serif small b",
         "short": "sans serif b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small c",
-        "alternative": "sans serif small c",
+        "default": "sans serif small c",
         "short": "sans serif c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small d",
-        "alternative": "sans serif small d",
+        "default": "sans serif small d",
         "short": "sans serif d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small e",
-        "alternative": "sans serif small e",
+        "default": "sans serif small e",
         "short": "sans serif e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small f",
-        "alternative": "sans serif small f",
+        "default": "sans serif small f",
         "short": "sans serif f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small g",
-        "alternative": "sans serif small g",
+        "default": "sans serif small g",
         "short": "sans serif g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small h",
-        "alternative": "sans serif small h",
+        "default": "sans serif small h",
         "short": "sans serif h"
       }
     },
@@ -455,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small i",
-        "alternative": "sans serif small i",
+        "default": "sans serif small i",
         "short": "sans serif i"
       }
     },
@@ -466,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small j",
-        "alternative": "sans serif small j",
+        "default": "sans serif small j",
         "short": "sans serif j"
       }
     },
@@ -477,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small k",
-        "alternative": "sans serif small k",
+        "default": "sans serif small k",
         "short": "sans serif k"
       }
     },
@@ -488,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small l",
-        "alternative": "sans serif small l",
+        "default": "sans serif small l",
         "short": "sans serif l"
       }
     },
@@ -499,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small m",
-        "alternative": "sans serif small m",
+        "default": "sans serif small m",
         "short": "sans serif m"
       }
     },
@@ -510,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small n",
-        "alternative": "sans serif small n",
+        "default": "sans serif small n",
         "short": "sans serif n"
       }
     },
@@ -521,8 +481,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small o",
-        "alternative": "sans serif small o",
+        "default": "sans serif small o",
         "short": "sans serif o"
       }
     },
@@ -532,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small p",
-        "alternative": "sans serif small p",
+        "default": "sans serif small p",
         "short": "sans serif p"
       }
     },
@@ -543,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small q",
-        "alternative": "sans serif small q",
+        "default": "sans serif small q",
         "short": "sans serif q"
       }
     },
@@ -554,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small r",
-        "alternative": "sans serif small r",
+        "default": "sans serif small r",
         "short": "sans serif r"
       }
     },
@@ -565,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small s",
-        "alternative": "sans serif small s",
+        "default": "sans serif small s",
         "short": "sans serif s"
       }
     },
@@ -576,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small t",
-        "alternative": "sans serif small t",
+        "default": "sans serif small t",
         "short": "sans serif t"
       }
     },
@@ -587,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small u",
-        "alternative": "sans serif small u",
+        "default": "sans serif small u",
         "short": "sans serif u"
       }
     },
@@ -598,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small v",
-        "alternative": "sans serif small v",
+        "default": "sans serif small v",
         "short": "sans serif v"
       }
     },
@@ -609,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small w",
-        "alternative": "sans serif small w",
+        "default": "sans serif small w",
         "short": "sans serif w"
       }
     },
@@ -620,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small x",
-        "alternative": "sans serif small x",
+        "default": "sans serif small x",
         "short": "sans serif x"
       }
     },
@@ -631,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small y",
-        "alternative": "sans serif small y",
+        "default": "sans serif small y",
         "short": "sans serif y"
       }
     },
@@ -642,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical sans serif small z",
-        "alternative": "sans serif small z",
+        "default": "sans serif small z",
         "short": "sans serif z"
       }
     },

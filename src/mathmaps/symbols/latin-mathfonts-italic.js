@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital a",
-        "alternative": "italic capital a",
+        "default": "italic capital a",
         "short": "italic cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital b",
-        "alternative": "italic capital b",
+        "default": "italic capital b",
         "short": "italic cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital c",
-        "alternative": "italic capital c",
+        "default": "italic capital c",
         "short": "italic cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital d",
-        "alternative": "italic capital d",
+        "default": "italic capital d",
         "short": "italic cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital e",
-        "alternative": "italic capital e",
+        "default": "italic capital e",
         "short": "italic cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital f",
-        "alternative": "italic capital f",
+        "default": "italic capital f",
         "short": "italic cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital g",
-        "alternative": "italic capital g",
+        "default": "italic capital g",
         "short": "italic cap g"
       },
       "mathspeak": {
@@ -101,8 +94,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital h",
-        "alternative": "italic capital h",
+        "default": "italic capital h",
         "short": "italic cap h"
       },
       "mathspeak": {
@@ -115,8 +107,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital i",
-        "alternative": "italic capital i",
+        "default": "italic capital i",
         "short": "italic cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital j",
-        "alternative": "italic capital j",
+        "default": "italic capital j",
         "short": "italic cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital k",
-        "alternative": "italic capital k",
+        "default": "italic capital k",
         "short": "italic cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital l",
-        "alternative": "italic capital l",
+        "default": "italic capital l",
         "short": "italic cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital m",
-        "alternative": "italic capital m",
+        "default": "italic capital m",
         "short": "italic cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital n",
-        "alternative": "italic capital n",
+        "default": "italic capital n",
         "short": "italic cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital o",
-        "alternative": "italic capital o",
+        "default": "italic capital o",
         "short": "italic cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital p",
-        "alternative": "italic capital p",
+        "default": "italic capital p",
         "short": "italic cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital q",
-        "alternative": "italic capital q",
+        "default": "italic capital q",
         "short": "italic cap q"
       },
       "mathspeak": {
@@ -241,8 +224,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital r",
-        "alternative": "italic capital r",
+        "default": "italic capital r",
         "short": "italic cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital s",
-        "alternative": "italic capital s",
+        "default": "italic capital s",
         "short": "italic cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital t",
-        "alternative": "italic capital t",
+        "default": "italic capital t",
         "short": "italic cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital u",
-        "alternative": "italic capital u",
+        "default": "italic capital u",
         "short": "italic cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital v",
-        "alternative": "italic capital v",
+        "default": "italic capital v",
         "short": "italic cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital w",
-        "alternative": "italic capital w",
+        "default": "italic capital w",
         "short": "italic cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital x",
-        "alternative": "italic capital x",
+        "default": "italic capital x",
         "short": "italic cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital y",
-        "alternative": "italic capital y",
+        "default": "italic capital y",
         "short": "italic cap y"
       },
       "mathspeak": {
@@ -353,8 +328,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital z",
-        "alternative": "italic capital z",
+        "default": "italic capital z",
         "short": "italic cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small a",
-        "alternative": "italic small a",
+        "default": "italic small a",
         "short": "italic a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small b",
-        "alternative": "italic small b",
+        "default": "italic small b",
         "short": "italic b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small c",
-        "alternative": "italic small c",
+        "default": "italic small c",
         "short": "italic c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small d",
-        "alternative": "italic small d",
+        "default": "italic small d",
         "short": "italic d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small e",
-        "alternative": "italic small e",
+        "default": "italic small e",
         "short": "italic e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small f",
-        "alternative": "italic small f",
+        "default": "italic small f",
         "short": "italic f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small g",
-        "alternative": "italic small g",
+        "default": "italic small g",
         "short": "italic g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small h",
-        "alternative": "italic small h",
+        "default": "italic small h",
         "short": "italic h"
       },
       "physics": {
@@ -458,8 +424,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small i",
-        "alternative": "italic small i",
+        "default": "italic small i",
         "short": "italic i"
       }
     },
@@ -469,8 +434,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small j",
-        "alternative": "italic small j",
+        "default": "italic small j",
         "short": "italic j"
       }
     },
@@ -480,8 +444,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small k",
-        "alternative": "italic small k",
+        "default": "italic small k",
         "short": "italic k"
       }
     },
@@ -491,8 +454,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small l",
-        "alternative": "italic small l",
+        "default": "italic small l",
         "short": "italic l"
       }
     },
@@ -502,8 +464,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small m",
-        "alternative": "italic small m",
+        "default": "italic small m",
         "short": "italic m"
       }
     },
@@ -513,8 +474,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small n",
-        "alternative": "italic small n",
+        "default": "italic small n",
         "short": "italic n"
       }
     },
@@ -524,8 +484,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small o",
-        "alternative": "italic small o",
+        "default": "italic small o",
         "short": "italic o"
       }
     },
@@ -535,8 +494,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small p",
-        "alternative": "italic small p",
+        "default": "italic small p",
         "short": "italic p"
       }
     },
@@ -546,8 +504,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small q",
-        "alternative": "italic small q",
+        "default": "italic small q",
         "short": "italic q"
       }
     },
@@ -557,8 +514,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small r",
-        "alternative": "italic small r",
+        "default": "italic small r",
         "short": "italic r"
       }
     },
@@ -568,8 +524,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small s",
-        "alternative": "italic small s",
+        "default": "italic small s",
         "short": "italic s"
       }
     },
@@ -579,8 +534,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small t",
-        "alternative": "italic small t",
+        "default": "italic small t",
         "short": "italic t"
       }
     },
@@ -590,8 +544,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small u",
-        "alternative": "italic small u",
+        "default": "italic small u",
         "short": "italic u"
       }
     },
@@ -601,8 +554,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small v",
-        "alternative": "italic small v",
+        "default": "italic small v",
         "short": "italic v"
       }
     },
@@ -612,8 +564,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small w",
-        "alternative": "italic small w",
+        "default": "italic small w",
         "short": "italic w"
       }
     },
@@ -623,8 +574,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small x",
-        "alternative": "italic small x",
+        "default": "italic small x",
         "short": "italic x"
       }
     },
@@ -634,8 +584,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small y",
-        "alternative": "italic small y",
+        "default": "italic small y",
         "short": "italic y"
       }
     },
@@ -645,8 +594,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small z",
-        "alternative": "italic small z",
+        "default": "italic small z",
         "short": "italic z"
       }
     },

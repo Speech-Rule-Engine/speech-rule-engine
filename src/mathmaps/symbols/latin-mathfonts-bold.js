@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital a",
-        "alternative": "bold capital a",
+        "default": "bold capital a",
         "short": "bold cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital b",
-        "alternative": "bold capital b",
+        "default": "bold capital b",
         "short": "bold cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital c",
-        "alternative": "bold capital c",
+        "default": "bold capital c",
         "short": "bold cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital d",
-        "alternative": "bold capital d",
+        "default": "bold capital d",
         "short": "bold cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital e",
-        "alternative": "bold capital e",
+        "default": "bold capital e",
         "short": "bold cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital f",
-        "alternative": "bold capital f",
+        "default": "bold capital f",
         "short": "bold cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital g",
-        "alternative": "bold capital g",
+        "default": "bold capital g",
         "short": "bold cap g"
       },
       "mathspeak": {
@@ -101,8 +94,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital h",
-        "alternative": "bold capital h",
+        "default": "bold capital h",
         "short": "bold cap h"
       },
       "mathspeak": {
@@ -115,8 +107,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital i",
-        "alternative": "bold capital i",
+        "default": "bold capital i",
         "short": "bold cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital j",
-        "alternative": "bold capital j",
+        "default": "bold capital j",
         "short": "bold cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital k",
-        "alternative": "bold capital k",
+        "default": "bold capital k",
         "short": "bold cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital l",
-        "alternative": "bold capital l",
+        "default": "bold capital l",
         "short": "bold cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital m",
-        "alternative": "bold capital m",
+        "default": "bold capital m",
         "short": "bold cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital n",
-        "alternative": "bold capital n",
+        "default": "bold capital n",
         "short": "bold cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital o",
-        "alternative": "bold capital o",
+        "default": "bold capital o",
         "short": "bold cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital p",
-        "alternative": "bold capital p",
+        "default": "bold capital p",
         "short": "bold cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital q",
-        "alternative": "bold capital q",
+        "default": "bold capital q",
         "short": "bold cap q"
       },
       "mathspeak": {
@@ -241,8 +224,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital r",
-        "alternative": "bold capital r",
+        "default": "bold capital r",
         "short": "bold cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital s",
-        "alternative": "bold capital s",
+        "default": "bold capital s",
         "short": "bold cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital t",
-        "alternative": "bold capital t",
+        "default": "bold capital t",
         "short": "bold cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital u",
-        "alternative": "bold capital u",
+        "default": "bold capital u",
         "short": "bold cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital v",
-        "alternative": "bold capital v",
+        "default": "bold capital v",
         "short": "bold cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital w",
-        "alternative": "bold capital w",
+        "default": "bold capital w",
         "short": "bold cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital x",
-        "alternative": "bold capital x",
+        "default": "bold capital x",
         "short": "bold cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital y",
-        "alternative": "bold capital y",
+        "default": "bold capital y",
         "short": "bold cap y"
       },
       "mathspeak": {
@@ -353,8 +328,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital z",
-        "alternative": "bold capital z",
+        "default": "bold capital z",
         "short": "bold cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small a",
-        "alternative": "bold small a",
+        "default": "bold small a",
         "short": "bold a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small b",
-        "alternative": "bold small b",
+        "default": "bold small b",
         "short": "bold b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small c",
-        "alternative": "bold small c",
+        "default": "bold small c",
         "short": "bold c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small d",
-        "alternative": "bold small d",
+        "default": "bold small d",
         "short": "bold d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small e",
-        "alternative": "bold small e",
+        "default": "bold small e",
         "short": "bold e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small f",
-        "alternative": "bold small f",
+        "default": "bold small f",
         "short": "bold f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small g",
-        "alternative": "bold small g",
+        "default": "bold small g",
         "short": "bold g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small h",
-        "alternative": "bold small h",
+        "default": "bold small h",
         "short": "bold h"
       }
     },
@@ -455,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small i",
-        "alternative": "bold small i",
+        "default": "bold small i",
         "short": "bold i"
       }
     },
@@ -466,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small j",
-        "alternative": "bold small j",
+        "default": "bold small j",
         "short": "bold j"
       }
     },
@@ -477,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small k",
-        "alternative": "bold small k",
+        "default": "bold small k",
         "short": "bold k"
       }
     },
@@ -488,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small l",
-        "alternative": "bold small l",
+        "default": "bold small l",
         "short": "bold l"
       }
     },
@@ -499,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small m",
-        "alternative": "bold small m",
+        "default": "bold small m",
         "short": "bold m"
       }
     },
@@ -510,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small n",
-        "alternative": "bold small n",
+        "default": "bold small n",
         "short": "bold n"
       }
     },
@@ -521,8 +481,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small o",
-        "alternative": "bold small o",
+        "default": "bold small o",
         "short": "bold o"
       }
     },
@@ -532,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small p",
-        "alternative": "bold small p",
+        "default": "bold small p",
         "short": "bold p"
       }
     },
@@ -543,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small q",
-        "alternative": "bold small q",
+        "default": "bold small q",
         "short": "bold q"
       }
     },
@@ -554,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small r",
-        "alternative": "bold small r",
+        "default": "bold small r",
         "short": "bold r"
       }
     },
@@ -565,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small s",
-        "alternative": "bold small s",
+        "default": "bold small s",
         "short": "bold s"
       }
     },
@@ -576,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small t",
-        "alternative": "bold small t",
+        "default": "bold small t",
         "short": "bold t"
       }
     },
@@ -587,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small u",
-        "alternative": "bold small u",
+        "default": "bold small u",
         "short": "bold u"
       }
     },
@@ -598,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small v",
-        "alternative": "bold small v",
+        "default": "bold small v",
         "short": "bold v"
       }
     },
@@ -609,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small w",
-        "alternative": "bold small w",
+        "default": "bold small w",
         "short": "bold w"
       }
     },
@@ -620,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small x",
-        "alternative": "bold small x",
+        "default": "bold small x",
         "short": "bold x"
       }
     },
@@ -631,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small y",
-        "alternative": "bold small y",
+        "default": "bold small y",
         "short": "bold y"
       }
     },
@@ -642,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical bold small z",
-        "alternative": "bold small z",
+        "default": "bold small z",
         "short": "bold z"
       }
     },

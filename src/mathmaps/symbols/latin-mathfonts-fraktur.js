@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital a",
-        "alternative": "fraktur capital a",
+        "default": "fraktur capital a",
         "short": "fraktur cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital b",
-        "alternative": "fraktur capital b",
+        "default": "fraktur capital b",
         "short": "fraktur cap b"
       },
       "mathspeak": {
@@ -32,7 +30,6 @@
     "mappings": {
       "default": {
         "default": "fraktur capital c",
-        "alternative": "fraktur c",
         "short": "fraktur cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital d",
-        "alternative": "fraktur capital d",
+        "default": "fraktur capital d",
         "short": "fraktur cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital e",
-        "alternative": "fraktur capital e",
+        "default": "fraktur capital e",
         "short": "fraktur cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital f",
-        "alternative": "fraktur capital f",
+        "default": "fraktur capital f",
         "short": "fraktur cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital g",
-        "alternative": "fraktur capital g",
+        "default": "fraktur capital g",
         "short": "fraktur cap g"
       },
       "mathspeak": {
@@ -102,7 +95,6 @@
     "mappings": {
       "default": {
         "default": "fraktur capital h",
-        "alternative": "fraktur h",
         "short": "fraktur cap h"
       },
       "mathspeak": {
@@ -116,7 +108,6 @@
     "mappings": {
       "default": {
         "default": "fraktur capital i",
-        "alternative": "fraktur i",
         "short": "fraktur cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital j",
-        "alternative": "fraktur capital j",
+        "default": "fraktur capital j",
         "short": "fraktur cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital k",
-        "alternative": "fraktur capital k",
+        "default": "fraktur capital k",
         "short": "fraktur cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital l",
-        "alternative": "fraktur capital l",
+        "default": "fraktur capital l",
         "short": "fraktur cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital m",
-        "alternative": "fraktur capital m",
+        "default": "fraktur capital m",
         "short": "fraktur cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital n",
-        "alternative": "fraktur capital n",
+        "default": "fraktur capital n",
         "short": "fraktur cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital o",
-        "alternative": "fraktur capital o",
+        "default": "fraktur capital o",
         "short": "fraktur cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital p",
-        "alternative": "fraktur capital p",
+        "default": "fraktur capital p",
         "short": "fraktur cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital q",
-        "alternative": "fraktur capital q",
+        "default": "fraktur capital q",
         "short": "fraktur cap q"
       },
       "mathspeak": {
@@ -242,7 +225,6 @@
     "mappings": {
       "default": {
         "default": "fraktur capital r",
-        "alternative": "fraktur r",
         "short": "fraktur cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital s",
-        "alternative": "fraktur capital s",
+        "default": "fraktur capital s",
         "short": "fraktur cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital t",
-        "alternative": "fraktur capital t",
+        "default": "fraktur capital t",
         "short": "fraktur cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital u",
-        "alternative": "fraktur capital u",
+        "default": "fraktur capital u",
         "short": "fraktur cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital v",
-        "alternative": "fraktur capital v",
+        "default": "fraktur capital v",
         "short": "fraktur cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital w",
-        "alternative": "fraktur capital w",
+        "default": "fraktur capital w",
         "short": "fraktur cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital x",
-        "alternative": "fraktur capital x",
+        "default": "fraktur capital x",
         "short": "fraktur cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur capital y",
-        "alternative": "fraktur capital y",
+        "default": "fraktur capital y",
         "short": "fraktur cap y"
       },
       "mathspeak": {
@@ -354,7 +329,6 @@
     "mappings": {
       "default": {
         "default": "fraktur capital z",
-        "alternative": "fraktur z",
         "short": "fraktur cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small a",
-        "alternative": "fraktur small a",
+        "default": "fraktur small a",
         "short": "fraktur a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small b",
-        "alternative": "fraktur small b",
+        "default": "fraktur small b",
         "short": "fraktur b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small c",
-        "alternative": "fraktur small c",
+        "default": "fraktur small c",
         "short": "fraktur c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small d",
-        "alternative": "fraktur small d",
+        "default": "fraktur small d",
         "short": "fraktur d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small e",
-        "alternative": "fraktur small e",
+        "default": "fraktur small e",
         "short": "fraktur e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small f",
-        "alternative": "fraktur small f",
+        "default": "fraktur small f",
         "short": "fraktur f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small g",
-        "alternative": "fraktur small g",
+        "default": "fraktur small g",
         "short": "fraktur g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small h",
-        "alternative": "fraktur small h",
+        "default": "fraktur small h",
         "short": "fraktur h"
       }
     },
@@ -455,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small i",
-        "alternative": "fraktur small i",
+        "default": "fraktur small i",
         "short": "fraktur i"
       }
     },
@@ -466,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small j",
-        "alternative": "fraktur small j",
+        "default": "fraktur small j",
         "short": "fraktur j"
       }
     },
@@ -477,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small k",
-        "alternative": "fraktur small k",
+        "default": "fraktur small k",
         "short": "fraktur k"
       }
     },
@@ -488,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small l",
-        "alternative": "fraktur small l",
+        "default": "fraktur small l",
         "short": "fraktur l"
       }
     },
@@ -499,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small m",
-        "alternative": "fraktur small m",
+        "default": "fraktur small m",
         "short": "fraktur m"
       }
     },
@@ -510,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small n",
-        "alternative": "fraktur small n",
+        "default": "fraktur small n",
         "short": "fraktur n"
       }
     },
@@ -521,8 +481,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small o",
-        "alternative": "fraktur small o",
+        "default": "fraktur small o",
         "short": "fraktur o"
       }
     },
@@ -532,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small p",
-        "alternative": "fraktur small p",
+        "default": "fraktur small p",
         "short": "fraktur p"
       }
     },
@@ -543,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small q",
-        "alternative": "fraktur small q",
+        "default": "fraktur small q",
         "short": "fraktur q"
       }
     },
@@ -554,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small r",
-        "alternative": "fraktur small r",
+        "default": "fraktur small r",
         "short": "fraktur r"
       }
     },
@@ -565,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small s",
-        "alternative": "fraktur small s",
+        "default": "fraktur small s",
         "short": "fraktur s"
       }
     },
@@ -576,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small t",
-        "alternative": "fraktur small t",
+        "default": "fraktur small t",
         "short": "fraktur t"
       }
     },
@@ -587,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small u",
-        "alternative": "fraktur small u",
+        "default": "fraktur small u",
         "short": "fraktur u"
       }
     },
@@ -598,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small v",
-        "alternative": "fraktur small v",
+        "default": "fraktur small v",
         "short": "fraktur v"
       }
     },
@@ -609,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small w",
-        "alternative": "fraktur small w",
+        "default": "fraktur small w",
         "short": "fraktur w"
       }
     },
@@ -620,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small x",
-        "alternative": "fraktur small x",
+        "default": "fraktur small x",
         "short": "fraktur x"
       }
     },
@@ -631,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small y",
-        "alternative": "fraktur small y",
+        "default": "fraktur small y",
         "short": "fraktur y"
       }
     },
@@ -642,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical fraktur small z",
-        "alternative": "fraktur small z",
+        "default": "fraktur small z",
         "short": "fraktur z"
       }
     },

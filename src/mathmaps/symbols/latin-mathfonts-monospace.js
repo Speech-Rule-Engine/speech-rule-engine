@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital a",
-        "alternative": "monospace capital a",
+        "default": "monospace capital a",
         "short": "monospace cap a"
       },
       "mathspeak": {
@@ -17,8 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital b",
-        "alternative": "monospace capital b",
+        "default": "monospace capital b",
         "short": "monospace cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital c",
-        "alternative": "monospace capital c",
+        "default": "monospace capital c",
         "short": "monospace cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital d",
-        "alternative": "monospace capital d",
+        "default": "monospace capital d",
         "short": "monospace cap d"
       },
       "mathspeak": {
@@ -59,8 +55,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital e",
-        "alternative": "monospace capital e",
+        "default": "monospace capital e",
         "short": "monospace cap e"
       },
       "mathspeak": {
@@ -73,8 +68,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital f",
-        "alternative": "monospace capital f",
+        "default": "monospace capital f",
         "short": "monospace cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital g",
-        "alternative": "monospace capital g",
+        "default": "monospace capital g",
         "short": "monospace cap g"
       },
       "mathspeak": {
@@ -101,8 +94,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital h",
-        "alternative": "monospace capital h",
+        "default": "monospace capital h",
         "short": "monospace cap h"
       },
       "mathspeak": {
@@ -115,8 +107,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital i",
-        "alternative": "monospace capital i",
+        "default": "monospace capital i",
         "short": "monospace cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital j",
-        "alternative": "monospace capital j",
+        "default": "monospace capital j",
         "short": "monospace cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital k",
-        "alternative": "monospace capital k",
+        "default": "monospace capital k",
         "short": "monospace cap k"
       },
       "mathspeak": {
@@ -157,8 +146,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital l",
-        "alternative": "monospace capital l",
+        "default": "monospace capital l",
         "short": "monospace cap l"
       },
       "mathspeak": {
@@ -171,8 +159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital m",
-        "alternative": "monospace capital m",
+        "default": "monospace capital m",
         "short": "monospace cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital n",
-        "alternative": "monospace capital n",
+        "default": "monospace capital n",
         "short": "monospace cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital o",
-        "alternative": "monospace capital o",
+        "default": "monospace capital o",
         "short": "monospace cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital p",
-        "alternative": "monospace capital p",
+        "default": "monospace capital p",
         "short": "monospace cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital q",
-        "alternative": "monospace capital q",
+        "default": "monospace capital q",
         "short": "monospace cap q"
       },
       "mathspeak": {
@@ -241,8 +224,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital r",
-        "alternative": "monospace capital r",
+        "default": "monospace capital r",
         "short": "monospace cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital s",
-        "alternative": "monospace capital s",
+        "default": "monospace capital s",
         "short": "monospace cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital t",
-        "alternative": "monospace capital t",
+        "default": "monospace capital t",
         "short": "monospace cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital u",
-        "alternative": "monospace capital u",
+        "default": "monospace capital u",
         "short": "monospace cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital v",
-        "alternative": "monospace capital v",
+        "default": "monospace capital v",
         "short": "monospace cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital w",
-        "alternative": "monospace capital w",
+        "default": "monospace capital w",
         "short": "monospace cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital x",
-        "alternative": "monospace capital x",
+        "default": "monospace capital x",
         "short": "monospace cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital y",
-        "alternative": "monospace capital y",
+        "default": "monospace capital y",
         "short": "monospace cap y"
       },
       "mathspeak": {
@@ -353,8 +328,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical monospace capital z",
-        "alternative": "monospace capital z",
+        "default": "monospace capital z",
         "short": "monospace cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small a",
-        "alternative": "monospace small a",
+        "default": "monospace small a",
         "short": "monospace a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small b",
-        "alternative": "monospace small b",
+        "default": "monospace small b",
         "short": "monospace b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small c",
-        "alternative": "monospace small c",
+        "default": "monospace small c",
         "short": "monospace c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small d",
-        "alternative": "monospace small d",
+        "default": "monospace small d",
         "short": "monospace d"
       }
     },
@@ -411,8 +381,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small e",
-        "alternative": "monospace small e",
+        "default": "monospace small e",
         "short": "monospace e"
       }
     },
@@ -422,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small f",
-        "alternative": "monospace small f",
+        "default": "monospace small f",
         "short": "monospace f"
       }
     },
@@ -433,8 +401,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small g",
-        "alternative": "monospace small g",
+        "default": "monospace small g",
         "short": "monospace g"
       }
     },
@@ -444,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small h",
-        "alternative": "monospace small h",
+        "default": "monospace small h",
         "short": "monospace h"
       }
     },
@@ -455,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small i",
-        "alternative": "monospace small i",
+        "default": "monospace small i",
         "short": "monospace i"
       }
     },
@@ -466,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small j",
-        "alternative": "monospace small j",
+        "default": "monospace small j",
         "short": "monospace j"
       }
     },
@@ -477,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small k",
-        "alternative": "monospace small k",
+        "default": "monospace small k",
         "short": "monospace k"
       }
     },
@@ -488,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small l",
-        "alternative": "monospace small l",
+        "default": "monospace small l",
         "short": "monospace l"
       }
     },
@@ -499,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small m",
-        "alternative": "monospace small m",
+        "default": "monospace small m",
         "short": "monospace m"
       }
     },
@@ -510,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small n",
-        "alternative": "monospace small n",
+        "default": "monospace small n",
         "short": "monospace n"
       }
     },
@@ -521,8 +481,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small o",
-        "alternative": "monospace small o",
+        "default": "monospace small o",
         "short": "monospace o"
       }
     },
@@ -532,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small p",
-        "alternative": "monospace small p",
+        "default": "monospace small p",
         "short": "monospace p"
       }
     },
@@ -543,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small q",
-        "alternative": "monospace small q",
+        "default": "monospace small q",
         "short": "monospace q"
       }
     },
@@ -554,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small r",
-        "alternative": "monospace small r",
+        "default": "monospace small r",
         "short": "monospace r"
       }
     },
@@ -565,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small s",
-        "alternative": "monospace small s",
+        "default": "monospace small s",
         "short": "monospace s"
       }
     },
@@ -576,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small t",
-        "alternative": "monospace small t",
+        "default": "monospace small t",
         "short": "monospace t"
       }
     },
@@ -587,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small u",
-        "alternative": "monospace small u",
+        "default": "monospace small u",
         "short": "monospace u"
       }
     },
@@ -598,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small v",
-        "alternative": "monospace small v",
+        "default": "monospace small v",
         "short": "monospace v"
       }
     },
@@ -609,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small w",
-        "alternative": "monospace small w",
+        "default": "monospace small w",
         "short": "monospace w"
       }
     },
@@ -620,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small x",
-        "alternative": "monospace small x",
+        "default": "monospace small x",
         "short": "monospace x"
       }
     },
@@ -631,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small y",
-        "alternative": "monospace small y",
+        "default": "monospace small y",
         "short": "monospace y"
       }
     },
@@ -642,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical monospace small z",
-        "alternative": "monospace small z",
+        "default": "monospace small z",
         "short": "monospace z"
       }
     },

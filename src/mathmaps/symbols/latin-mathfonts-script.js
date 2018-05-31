@@ -3,8 +3,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital a",
-        "alternative": "script capital a",
+        "default": "script capital a",
         "short": "script cap a"
       },
       "mathspeak": {
@@ -18,7 +17,6 @@
     "mappings": {
       "default": {
         "default": "script capital b",
-        "alternative": "script b",
         "short": "script cap b"
       },
       "mathspeak": {
@@ -31,8 +29,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital c",
-        "alternative": "script capital c",
+        "default": "script capital c",
         "short": "script cap c"
       },
       "mathspeak": {
@@ -45,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital d",
-        "alternative": "script capital d",
+        "default": "script capital d",
         "short": "script cap d"
       },
       "mathspeak": {
@@ -60,7 +56,6 @@
     "mappings": {
       "default": {
         "default": "script capital e",
-        "alternative": "script e",
         "short": "script cap e"
       },
       "mathspeak": {
@@ -74,7 +69,6 @@
     "mappings": {
       "default": {
         "default": "script capital f",
-        "alternative": "script f",
         "short": "script cap f"
       },
       "mathspeak": {
@@ -87,8 +81,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital g",
-        "alternative": "script capital g",
+        "default": "script capital g",
         "short": "script cap g"
       },
       "mathspeak": {
@@ -102,7 +95,6 @@
     "mappings": {
       "default": {
         "default": "script capital h",
-        "alternative": "script h",
         "short": "script cap h"
       },
       "mathspeak": {
@@ -116,7 +108,6 @@
     "mappings": {
       "default": {
         "default": "script capital i",
-        "alternative": "script i",
         "short": "script cap i"
       },
       "mathspeak": {
@@ -129,8 +120,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital j",
-        "alternative": "script capital j",
+        "default": "script capital j",
         "short": "script cap j"
       },
       "mathspeak": {
@@ -143,8 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital k",
-        "alternative": "script capital k",
+        "default": "script capital k",
         "short": "script cap k"
       },
       "mathspeak": {
@@ -158,7 +147,6 @@
     "mappings": {
       "default": {
         "default": "script capital l",
-        "alternative": "script l",
         "short": "script cap l"
       },
       "mathspeak": {
@@ -172,7 +160,6 @@
     "mappings": {
       "default": {
         "default": "script capital m",
-        "alternative": "script m",
         "short": "script cap m"
       },
       "mathspeak": {
@@ -185,8 +172,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital n",
-        "alternative": "script capital n",
+        "default": "script capital n",
         "short": "script cap n"
       },
       "mathspeak": {
@@ -199,8 +185,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital o",
-        "alternative": "script capital o",
+        "default": "script capital o",
         "short": "script cap o"
       },
       "mathspeak": {
@@ -213,8 +198,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital p",
-        "alternative": "script capital p",
+        "default": "script capital p",
         "short": "script cap p"
       },
       "mathspeak": {
@@ -227,8 +211,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital q",
-        "alternative": "script capital q",
+        "default": "script capital q",
         "short": "script cap q"
       },
       "mathspeak": {
@@ -242,7 +225,6 @@
     "mappings": {
       "default": {
         "default": "script capital r",
-        "alternative": "script r",
         "short": "script cap r"
       },
       "mathspeak": {
@@ -255,8 +237,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital s",
-        "alternative": "script capital s",
+        "default": "script capital s",
         "short": "script cap s"
       },
       "mathspeak": {
@@ -269,8 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital t",
-        "alternative": "script capital t",
+        "default": "script capital t",
         "short": "script cap t"
       },
       "mathspeak": {
@@ -283,8 +263,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital u",
-        "alternative": "script capital u",
+        "default": "script capital u",
         "short": "script cap u"
       },
       "mathspeak": {
@@ -297,8 +276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital v",
-        "alternative": "script capital v",
+        "default": "script capital v",
         "short": "script cap v"
       },
       "mathspeak": {
@@ -311,8 +289,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital w",
-        "alternative": "script capital w",
+        "default": "script capital w",
         "short": "script cap w"
       },
       "mathspeak": {
@@ -325,8 +302,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital x",
-        "alternative": "script capital x",
+        "default": "script capital x",
         "short": "script cap x"
       },
       "mathspeak": {
@@ -339,8 +315,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital y",
-        "alternative": "script capital y",
+        "default": "script capital y",
         "short": "script cap y"
       },
       "mathspeak": {
@@ -353,8 +328,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical script capital z",
-        "alternative": "script capital z",
+        "default": "script capital z",
         "short": "script cap z"
       },
       "mathspeak": {
@@ -367,8 +341,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small a",
-        "alternative": "script small a",
+        "default": "script small a",
         "short": "script a"
       }
     },
@@ -378,8 +351,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small b",
-        "alternative": "script small b",
+        "default": "script small b",
         "short": "script b"
       }
     },
@@ -389,8 +361,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small c",
-        "alternative": "script small c",
+        "default": "script small c",
         "short": "script c"
       }
     },
@@ -400,8 +371,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small d",
-        "alternative": "script small d",
+        "default": "script small d",
         "short": "script d"
       }
     },
@@ -421,8 +391,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small f",
-        "alternative": "script small f",
+        "default": "script small f",
         "short": "script f"
       }
     },
@@ -442,8 +411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small h",
-        "alternative": "script small h",
+        "default": "script small h",
         "short": "script h"
       }
     },
@@ -453,8 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small i",
-        "alternative": "script small i",
+        "default": "script small i",
         "short": "script i"
       }
     },
@@ -464,8 +431,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small j",
-        "alternative": "script small j",
+        "default": "script small j",
         "short": "script j"
       }
     },
@@ -475,8 +441,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small k",
-        "alternative": "script small k",
+        "default": "script small k",
         "short": "script k"
       }
     },
@@ -486,8 +451,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small l",
-        "alternative": "script small l",
+        "default": "script small l",
         "short": "script l"
       }
     },
@@ -497,8 +461,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small m",
-        "alternative": "script small m",
+        "default": "script small m",
         "short": "script m"
       }
     },
@@ -508,8 +471,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small n",
-        "alternative": "script small n",
+        "default": "script small n",
         "short": "script n"
       }
     },
@@ -529,8 +491,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small p",
-        "alternative": "script small p",
+        "default": "script small p",
         "short": "script p"
       }
     },
@@ -540,8 +501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small q",
-        "alternative": "script small q",
+        "default": "script small q",
         "short": "script q"
       }
     },
@@ -551,8 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small r",
-        "alternative": "script small r",
+        "default": "script small r",
         "short": "script r"
       }
     },
@@ -562,8 +521,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small s",
-        "alternative": "script small s",
+        "default": "script small s",
         "short": "script s"
       }
     },
@@ -573,8 +531,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small t",
-        "alternative": "script small t",
+        "default": "script small t",
         "short": "script t"
       }
     },
@@ -584,8 +541,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small u",
-        "alternative": "script small u",
+        "default": "script small u",
         "short": "script u"
       }
     },
@@ -595,8 +551,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small v",
-        "alternative": "script small v",
+        "default": "script small v",
         "short": "script v"
       }
     },
@@ -606,8 +561,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small w",
-        "alternative": "script small w",
+        "default": "script small w",
         "short": "script w"
       }
     },
@@ -617,8 +571,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small x",
-        "alternative": "script small x",
+        "default": "script small x",
         "short": "script x"
       }
     },
@@ -628,8 +581,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small y",
-        "alternative": "script small y",
+        "default": "script small y",
         "short": "script y"
       }
     },
@@ -639,8 +591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical script small z",
-        "alternative": "script small z",
+        "default": "script small z",
         "short": "script z"
       }
     },
