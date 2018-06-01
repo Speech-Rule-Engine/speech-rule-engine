@@ -28,6 +28,7 @@ goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.SystemExternal');
+goog.require('sre.Variables');
 
 
 
@@ -67,15 +68,6 @@ sre.Engine.registerTest(function() {
 sre.MathMap.prototype.stringify = function() {
   return JSON.stringify(this);
 };
-
-
-/**
- * List of locales to load.
- * @type {Array.<string>}
- * @const
- * @private
- */
-sre.MathMap.LOCALES_ = ['en', 'es'];
 
 
 /**
@@ -138,11 +130,6 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
   'math_whitespace.js', 'other_stars.js'
-
-  // TODO: Sort this similar to the above.
-  // Localisation
-  // 'spanish.js', 'spanish_mathfonts.js'
-
 ];
 
 
@@ -154,8 +141,6 @@ sre.MathMap.SYMBOLS_FILES_ = [
  */
 sre.MathMap.FUNCTIONS_FILES_ = [
   'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
-  // ,
-  // 'functions_spanish.js'
 ];
 
 
@@ -168,8 +153,6 @@ sre.MathMap.FUNCTIONS_FILES_ = [
 sre.MathMap.UNITS_FILES_ = [
   'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
   'temperature.js', 'time.js', 'volume.js', 'weight.js'
-  // ,
-  // 'units_spanish.js'
 ];
 
 
@@ -217,8 +200,8 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
  * Retrieves mappings and adds them to the respective stores.
  */
 sre.MathMap.prototype.retrieveMaps = function() {
-  for (var i = 0; i < sre.MathMap.LOCALES_.length; i++) {
-    var locale = sre.MathMap.LOCALES_[i];
+  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
+    var locale = sre.Variables.LOCALES[i];
     sre.MathMap.retrieveFiles(
       sre.MathMap.FUNCTIONS_FILES_,
       locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
