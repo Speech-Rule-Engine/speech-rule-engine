@@ -237,9 +237,12 @@ sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
     }
     return;
   }
-  var json = sre.BrowserUtil.mapsForIE[file];
-  if (json) {
-    json.forEach(function(x) {func(x);});
+  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
+    var locale = sre.Variables.LOCALES[i];
+    var json = sre.BrowserUtil.mapsForIE[locale + '/' + file];
+    if (json) {
+      json.forEach(function(x) {func(x);});
+    }
   }
   sre.MathMap.toFetch_--;
 };

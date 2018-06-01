@@ -213,7 +213,7 @@ iemaps:
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
 			for i in $(JSON_DST)/`basename $$j`/$$dir/*.js; do\
-				echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
+				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 				cat $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
 			done; \
