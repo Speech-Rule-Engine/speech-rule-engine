@@ -18,6 +18,7 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
+RES_DIR = $(abspath ./resources)
 SRC = $(SRC_DIR)/*/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
@@ -26,11 +27,12 @@ MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
+LICENSE = $(RES_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
-IEMAPS_FILE = $(JSON_DIR)/mathmaps_ie.js
+IEMAPS_FILE = $(LIB_DIR)/mathmaps_ie.js
 MAPS_DIRS = $(foreach dir, $(MAPS), $(JSON_DIR)/$(dir))
 
 TEST_DIR = $(abspath ./tests)
@@ -44,6 +46,8 @@ JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
 DOCS = $(PREFIX)/docs
 DOCS_SRC = $(DOCS)/src
 DOCS_TESTS = $(DOCS)/tests
+
+JSON_MINIFY = npx json-minify
 
 ##################################################################
 # Error flags.
@@ -72,7 +76,7 @@ CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/compiler.jar
-CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js'
+CLOSURE_COMPILER = java -jar $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
@@ -138,7 +142,7 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
@@ -190,25 +194,31 @@ clean_test:
 # Publish the API via npm.
 ##################################################################
 
-publish: compile maps
+publish: clean compile browser maps iemaps
 
 maps: $(MAPS)
 
 $(MAPS): 
-	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
+	@echo $@
+	@echo $(LIB_DIR)/$@
+	@mkdir -p $(LIB_DIR)/$@
+	@for i in $(JSON_DIR)/$@/*.js; do\
+		echo $$i; \
+		$(JSON_MINIFY) $$i > $(LIB_DIR)/$@/`basename $$i`; \
+	done
 
 iemaps:
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for dir in $(MAPS); do\
-		for i in $(JSON_DIR)/$$dir/*.js; do\
+		for i in $(LIB_DIR)/$$dir/*.js; do\
 			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 			cat $$i >> $(IEMAPS_FILE); \
 			echo ','  >> $(IEMAPS_FILE); \
 		done; \
 	done
 	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@echo '}\n' >> $(IEMAPS_FILE).tmp
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
-	@echo '}\n' >> $(IEMAPS_FILE)
 
 api: $(SRC)
 	@echo Compiling Speech Rule Engine API
@@ -263,3 +273,6 @@ docs: $(JSDOC)
 
 clean_docs:
 	rm -rf $(DOCS)
+
+clean_iemaps:
+	rm -f $(IEMAPS_FILE)
