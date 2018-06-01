@@ -3,9 +3,6 @@
     "locale": "es"
   },
   {
-    "locale": "es"
-  },
-  {
     "key": "0391",
     "mappings": {
       "mathspeak": {

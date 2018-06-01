@@ -3,9 +3,6 @@
     "locale": "es"
   },
   {
-    "locale": "es"
-  },
-  {
     "key": "deg",
     "names": [
       "deg"

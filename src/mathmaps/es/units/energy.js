@@ -3,9 +3,6 @@
     "locale": "es"
   },
   {
-    "locale": "es"
-  },
-  {
     "key": "W",
     "names": [
       "W",
