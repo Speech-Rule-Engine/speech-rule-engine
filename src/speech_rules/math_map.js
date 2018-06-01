@@ -70,6 +70,15 @@ sre.MathMap.prototype.stringify = function() {
 
 
 /**
+ * List of locales to load.
+ * @type {Array.<string>}
+ * @const
+ * @private
+ */
+sre.MathMap.LOCALES_ = ['en', 'es'];
+
+
+/**
  * Subpath to dir containing ChromeVox JSON definitions for symbols.
  * @type {string}
  * @const
@@ -128,11 +137,11 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
   'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js',
+  'math_whitespace.js', 'other_stars.js'
 
   // TODO: Sort this similar to the above.
   // Localisation
-  'spanish.js', 'spanish_mathfonts.js'
+  // 'spanish.js', 'spanish_mathfonts.js'
 
 ];
 
@@ -144,8 +153,9 @@ sre.MathMap.SYMBOLS_FILES_ = [
  * @private
  */
 sre.MathMap.FUNCTIONS_FILES_ = [
-  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js',
-  'functions_spanish.js'
+  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
+  // ,
+  // 'functions_spanish.js'
 ];
 
 
@@ -157,8 +167,9 @@ sre.MathMap.FUNCTIONS_FILES_ = [
  */
 sre.MathMap.UNITS_FILES_ = [
   'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
-  'temperature.js', 'time.js', 'volume.js', 'weight.js',
-  'units_spanish.js'
+  'temperature.js', 'time.js', 'volume.js', 'weight.js'
+  // ,
+  // 'units_spanish.js'
 ];
 
 
@@ -206,18 +217,21 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
  * Retrieves mappings and adds them to the respective stores.
  */
 sre.MathMap.prototype.retrieveMaps = function() {
-  sre.MathMap.retrieveFiles(
+  for (var i = 0; i < sre.MathMap.LOCALES_.length; i++) {
+    var locale = sre.MathMap.LOCALES_[i];
+    sre.MathMap.retrieveFiles(
       sre.MathMap.FUNCTIONS_FILES_,
-      sre.MathMap.FUNCTIONS_PATH_,
+      locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
       goog.bind(this.store.addFunctionRules, this.store));
-  sre.MathMap.retrieveFiles(
+    sre.MathMap.retrieveFiles(
       sre.MathMap.SYMBOLS_FILES_,
-      sre.MathMap.SYMBOLS_PATH_,
+      locale + '/' + sre.MathMap.SYMBOLS_PATH_,
       goog.bind(this.store.addSymbolRules, this.store));
-  sre.MathMap.retrieveFiles(
+    sre.MathMap.retrieveFiles(
       sre.MathMap.UNITS_FILES_,
-      sre.MathMap.UNITS_PATH_,
+      locale + '/' + sre.MathMap.UNITS_PATH_,
       goog.bind(this.store.addUnitRules, this.store));
+  }
 };
 
 

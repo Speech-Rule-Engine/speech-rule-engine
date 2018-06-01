@@ -177,6 +177,32 @@
    "key": "sup",
    "names": ["sup"]
   },
+  {
+    "key": "lim inf",
+    "names": [
+      "lim inf",
+      "liminf"
+    ],
+    "mappings": {
+      "mathspeak": {
+        "default": "limit inferior"
+      }
+    },
+    "category": "Limits"
+  },
+  {
+    "key": "lim sup",
+    "names": [
+      "lim sup",
+      "limsup"
+    ],
+    "mappings": {
+      "mathspeak": {
+        "default": "limit superior"
+      }
+    },
+    "category": "Limits"
+  },
   {"category": "Limits",
    "mappings": {
      "default": {
