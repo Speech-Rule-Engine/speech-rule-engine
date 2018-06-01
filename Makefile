@@ -140,7 +140,7 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
@@ -265,3 +265,6 @@ docs: $(JSDOC)
 
 clean_docs:
 	rm -rf $(DOCS)
+
+clean_iemaps:
+	rm -f $(IEMAPS_FILE)
