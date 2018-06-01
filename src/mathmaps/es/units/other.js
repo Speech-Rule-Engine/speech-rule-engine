@@ -11,7 +11,7 @@
       "dz."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "docena"
       }
     }
@@ -23,7 +23,7 @@
       "sq."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "al cuadrado"
       }
     }
@@ -34,7 +34,7 @@
       "ha"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "hectarea"
       }
     }

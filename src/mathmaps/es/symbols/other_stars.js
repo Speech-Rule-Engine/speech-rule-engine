@@ -5,7 +5,7 @@
   {
     "key": "2605",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella rellena"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "2606",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella vacía"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2713",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "check mark"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "2717",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ballot x"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "2720",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cruz de Malta"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "2736",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella rellena de seis puntas"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "273D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "heavy teardrop spoked asterisk"
       }
     },

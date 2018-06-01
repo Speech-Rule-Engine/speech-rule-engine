@@ -5,7 +5,7 @@
   {
     "key": "0041",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "0042",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula B"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "0043",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula C"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "0044",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "0045",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "0046",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula F"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "0047",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula G"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "0048",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "0049",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "004A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula J"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "004B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula K"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "004C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "004D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula M"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "004E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "004F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "0050",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula P"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "0051",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "0052",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "0053",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "0054",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "0055",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "0056",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula V"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "0057",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "0058",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula X"
       }
     },
@@ -221,7 +221,7 @@
   {
     "key": "0059",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y",
         "defaultMP": "Ye"
       }
@@ -231,7 +231,7 @@
   {
     "key": "005A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z"
       }
     },

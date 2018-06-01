@@ -5,7 +5,7 @@
   {
     "key": "2500",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador horizontal"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "2502",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador vertical"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "250C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior derecha"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "2510",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior izquierda"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "2514",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior derecha"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "2518",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior izquierda"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "251C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador izquierdo y separador horizontal"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "2524",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador derecho y separador horizontal"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "252C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador superior y separador vertical"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "2534",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador inferior y separador vertical"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "253C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cruce de separadores sencillos"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "2550",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador horizontal doble"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "2551",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador vertical doble"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "2552",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior derecha, vertical doble"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "2553",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior derecha, horizontal doble"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "2554",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior derecha doble"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "2555",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior izquierda, vertical doble"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "2556",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior izquierda, horizontal doble"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "2557",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior izquierda doble"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "2558",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior derecha, vertical doble"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "2559",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior derecha, horizontal doble"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "255A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior derecha doble"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "255B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior izquierda, vertical doble"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "255C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior izquierda, horizontal doble"
       }
     },
@@ -221,7 +221,7 @@
   {
     "key": "255D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior izquierda doble"
       }
     },
@@ -230,7 +230,7 @@
   {
     "key": "255E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador izquierdo con separador doble"
       }
     },
@@ -239,7 +239,7 @@
   {
     "key": "255F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador izquierdo doble con separador horizontal"
       }
     },
@@ -248,7 +248,7 @@
   {
     "key": "2560",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador izquierdo y separador horizontal dobles"
       }
     },
@@ -257,7 +257,7 @@
   {
     "key": "2561",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador derecho con separador doble"
       }
     },
@@ -266,7 +266,7 @@
   {
     "key": "2562",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador derecho doble con separador horizontal"
       }
     },
@@ -275,7 +275,7 @@
   {
     "key": "2563",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador derecho y separador horizontal dobles"
       }
     },
@@ -284,7 +284,7 @@
   {
     "key": "2564",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador superior doble con separador vertical"
       }
     },
@@ -293,7 +293,7 @@
   {
     "key": "2565",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador superior con separador vertical doble"
       }
     },
@@ -302,7 +302,7 @@
   {
     "key": "2566",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador superior y separador vertical dobles"
       }
     },
@@ -311,7 +311,7 @@
   {
     "key": "2567",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador inferior doble con separador vertical"
       }
     },
@@ -320,7 +320,7 @@
   {
     "key": "2568",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador inferior con separador vertical doble"
       }
     },
@@ -329,7 +329,7 @@
   {
     "key": "2569",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delimitador inferior y separador vertical dobles"
       }
     },
@@ -338,7 +338,7 @@
   {
     "key": "256A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cruce de separadores, vertical sencillo y horizontal doble"
       }
     },
@@ -347,7 +347,7 @@
   {
     "key": "256B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cruce de separadores, vertical doble y horizontal sencillo"
       }
     },
@@ -356,7 +356,7 @@
   {
     "key": "256C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cruce de separadores dobles"
       }
     },
@@ -365,7 +365,7 @@
   {
     "key": "2580",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bloque mitad superior"
       }
     },
@@ -374,7 +374,7 @@
   {
     "key": "2584",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bloque mitad inferior"
       }
     },
@@ -383,7 +383,7 @@
   {
     "key": "2588",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bloque"
       }
     },
@@ -392,7 +392,7 @@
   {
     "key": "2591",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sombra ligera"
       }
     },
@@ -401,7 +401,7 @@
   {
     "key": "2592",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sombra media"
       }
     },
@@ -410,7 +410,7 @@
   {
     "key": "2593",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sombra intensa"
       }
     },
@@ -419,7 +419,7 @@
   {
     "key": "25A0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado relleno"
       }
     },
@@ -428,7 +428,7 @@
   {
     "key": "25A1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado"
       }
     },
@@ -437,7 +437,7 @@
   {
     "key": "25AA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado relleno"
       }
     },
@@ -446,7 +446,7 @@
   {
     "key": "25AB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado"
       }
     },
@@ -455,7 +455,7 @@
   {
     "key": "25AD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rectángulo"
       }
     },
@@ -464,7 +464,7 @@
   {
     "key": "25AE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rectángulo relleno vertical"
       }
     },
@@ -473,7 +473,7 @@
   {
     "key": "25AF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rectángulo vertical"
       }
     },
@@ -482,7 +482,7 @@
   {
     "key": "25B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paralelogramo"
       }
     },
@@ -491,7 +491,7 @@
   {
     "key": "25B2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno"
       }
     },
@@ -500,7 +500,7 @@
   {
     "key": "25B3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo"
       }
     },
@@ -509,7 +509,7 @@
   {
     "key": "25B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno"
       }
     },
@@ -518,7 +518,7 @@
   {
     "key": "25B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo"
       }
     },
@@ -527,7 +527,7 @@
   {
     "key": "25B6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno señala derecha"
       }
     },
@@ -536,7 +536,7 @@
   {
     "key": "25B7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo señala derecha"
       }
     },
@@ -545,7 +545,7 @@
   {
     "key": "25B8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno señala derecha"
       }
     },
@@ -554,7 +554,7 @@
   {
     "key": "25B9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo señala derecha"
       }
     },
@@ -563,7 +563,7 @@
   {
     "key": "25BC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno señala abajo"
       }
     },
@@ -572,7 +572,7 @@
   {
     "key": "25BD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo señala abajo"
       }
     },
@@ -581,7 +581,7 @@
   {
     "key": "25BE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno señala abajo"
       }
     },
@@ -590,7 +590,7 @@
   {
     "key": "25BF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo señala abajo"
       }
     },
@@ -599,7 +599,7 @@
   {
     "key": "25C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno señala izquierda"
       }
     },
@@ -608,7 +608,7 @@
   {
     "key": "25C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo señala izquierda"
       }
     },
@@ -617,7 +617,7 @@
   {
     "key": "25C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo relleno señala izquierda"
       }
     },
@@ -626,7 +626,7 @@
   {
     "key": "25C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo señala izquierda"
       }
     },
@@ -635,7 +635,7 @@
   {
     "key": "25C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntero relleno señala izquierda"
       }
     },
@@ -644,7 +644,7 @@
   {
     "key": "25C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntero señala izquierda"
       }
     },
@@ -653,7 +653,7 @@
   {
     "key": "25C6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diamante relleno"
       }
     },
@@ -662,7 +662,7 @@
   {
     "key": "25C7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diamante"
       }
     },
@@ -671,7 +671,7 @@
   {
     "key": "25C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diamante vacío contiene diamante relleno"
       }
     },
@@ -680,7 +680,7 @@
   {
     "key": "25C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ojo de pez"
       }
     },
@@ -689,7 +689,7 @@
   {
     "key": "25CA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rombo"
       }
     },
@@ -698,7 +698,7 @@
   {
     "key": "25CB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo vacío"
       }
     },
@@ -707,7 +707,7 @@
   {
     "key": "25CC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo punteado"
       }
     },
@@ -716,7 +716,7 @@
   {
     "key": "25CD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con relleno vertical"
       }
     },
@@ -725,7 +725,7 @@
   {
     "key": "25CE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "blanco"
       }
     },
@@ -734,7 +734,7 @@
   {
     "key": "25CF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo relleno"
       }
     },
@@ -743,7 +743,7 @@
   {
     "key": "25D0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con mitad izquierda rellena"
       }
     },
@@ -752,7 +752,7 @@
   {
     "key": "25D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con mitad derecha rellena"
       }
     },
@@ -761,7 +761,7 @@
   {
     "key": "25D2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con mitad inferior rellena"
       }
     },
@@ -770,7 +770,7 @@
   {
     "key": "25D3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con mitad superior rellena"
       }
     },
@@ -779,7 +779,7 @@
   {
     "key": "25D4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con cuadrante superior derecho relleno"
       }
     },
@@ -788,7 +788,7 @@
   {
     "key": "25D5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con cuadrante superior izquierdo relleno"
       }
     },
@@ -797,7 +797,7 @@
   {
     "key": "25D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "semicírculo izquierdo relleno"
       }
     },
@@ -806,7 +806,7 @@
   {
     "key": "25D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "semicírculo derecho relleno"
       }
     },
@@ -815,7 +815,7 @@
   {
     "key": "25D8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bullet inversa"
       }
     },
@@ -824,7 +824,7 @@
   {
     "key": "25D9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo vacío inverso"
       }
     },
@@ -833,7 +833,7 @@
   {
     "key": "25DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "semicírculo superior vacío inverso"
       }
     },
@@ -842,7 +842,7 @@
   {
     "key": "25DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "semicírculo superior vacío inverso"
       }
     },
@@ -851,7 +851,7 @@
   {
     "key": "25DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco superior izquierda"
       }
     },
@@ -860,7 +860,7 @@
   {
     "key": "25DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco superior derecha"
       }
     },
@@ -869,7 +869,7 @@
   {
     "key": "25DE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco inferior derecha"
       }
     },
@@ -878,7 +878,7 @@
   {
     "key": "25DF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco inferior izquierda"
       }
     },
@@ -887,7 +887,7 @@
   {
     "key": "25E0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "semicírculo superior"
       }
     },
@@ -896,7 +896,7 @@
   {
     "key": "25E1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "semicírculo inferior"
       }
     },
@@ -905,7 +905,7 @@
   {
     "key": "25E2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo inferior derecha relleno"
       }
     },
@@ -914,7 +914,7 @@
   {
     "key": "25E3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo inferior izquierda relleno"
       }
     },
@@ -923,7 +923,7 @@
   {
     "key": "25E4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo superior izquierda relleno"
       }
     },
@@ -932,7 +932,7 @@
   {
     "key": "25E5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo superior derecha relleno"
       }
     },
@@ -941,7 +941,7 @@
   {
     "key": "25E6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "composición"
       }
     },
@@ -950,7 +950,7 @@
   {
     "key": "25E7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con mitad izquierda rellena"
       }
     },
@@ -959,7 +959,7 @@
   {
     "key": "25E8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con mitad derecha rellena"
       }
     },
@@ -968,7 +968,7 @@
   {
     "key": "25E9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con mitad superior izquierda rellena"
       }
     },
@@ -977,7 +977,7 @@
   {
     "key": "25EA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con mitad inferior derecha rellena"
       }
     },
@@ -986,7 +986,7 @@
   {
     "key": "25EB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con bisectriz"
       }
     },
@@ -995,7 +995,7 @@
   {
     "key": "25EC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo vacío con punto"
       }
     },
@@ -1004,7 +1004,7 @@
   {
     "key": "25ED",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo apuntando arriba con mitad izquierda rellena"
       }
     },
@@ -1013,7 +1013,7 @@
   {
     "key": "25EE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo apuntando arriba con mitad derecha rellena"
       }
     },
@@ -1022,7 +1022,7 @@
   {
     "key": "25EF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo grande"
       }
     },
@@ -1031,7 +1031,7 @@
   {
     "key": "25F8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo superior izquierda"
       }
     },
@@ -1040,7 +1040,7 @@
   {
     "key": "25F9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo superior derecha"
       }
     },
@@ -1049,7 +1049,7 @@
   {
     "key": "25FA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo inferior izquierda"
       }
     },
@@ -1058,7 +1058,7 @@
   {
     "key": "25FB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado mediano vacío"
       }
     },
@@ -1067,7 +1067,7 @@
   {
     "key": "25FC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado mediano relleno"
       }
     },
@@ -1076,7 +1076,7 @@
   {
     "key": "25FD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado mediano vacío"
       }
     },
@@ -1085,7 +1085,7 @@
   {
     "key": "25FE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado mediano relleno"
       }
     },
@@ -1094,7 +1094,7 @@
   {
     "key": "25FF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo inferior derecha"
       }
     },
@@ -1103,7 +1103,7 @@
   {
     "key": "2B50",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella media vacía"
       }
     },
@@ -1112,7 +1112,7 @@
   {
     "key": "2B51",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella pequeña rellena"
       }
     },
@@ -1121,7 +1121,7 @@
   {
     "key": "2B52",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella pequeña vacía"
       }
     },

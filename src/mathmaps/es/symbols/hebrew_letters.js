@@ -5,7 +5,7 @@
   {
     "key": "2135",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "alef"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "2136",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bet"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2137",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "guímel"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "2138",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dálet"
       }
     },

@@ -5,7 +5,7 @@
   {
     "key": "00C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A grave"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "00C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A aguda"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "00C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A acento circunflejo"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "00C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con tilde"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "00C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A diéresis"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "00C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con anillo"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "00C7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula C cedilla"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "00C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E grave"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "00C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E aguda"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "00CA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E acento circunflejo"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "00CB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E diéresis"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "00CC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I grave"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "00CD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I aguda"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "00CE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I acento circumflejo"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "00CF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I diéresis"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "00D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Ñ"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "00D2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O grave"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "00D3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O aguda"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "00D4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O acento circunflejo"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "00D5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O con tilde"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "00D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O diéresis"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "00D9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U grave"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "00DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U aguda"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "00DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U acento circunflejo"
       }
     },
@@ -221,7 +221,7 @@
   {
     "key": "00DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U diéresis"
       }
     },
@@ -230,7 +230,7 @@
   {
     "key": "00DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y aguda"
       }
     },
@@ -239,7 +239,7 @@
   {
     "key": "0100",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A barra"
       }
     },
@@ -248,7 +248,7 @@
   {
     "key": "0102",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con breve"
       }
     },
@@ -257,7 +257,7 @@
   {
     "key": "0104",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con ogonek"
       }
     },
@@ -266,7 +266,7 @@
   {
     "key": "0106",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula C con agudo"
       }
     },
@@ -275,7 +275,7 @@
   {
     "key": "0108",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula C con acento circunflejo"
       }
     },
@@ -284,7 +284,7 @@
   {
     "key": "010A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula C con punto arriba"
       }
     },
@@ -293,7 +293,7 @@
   {
     "key": "010C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula C con carón"
       }
     },
@@ -302,7 +302,7 @@
   {
     "key": "010E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D con carón"
       }
     },
@@ -311,7 +311,7 @@
   {
     "key": "0112",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E barra"
       }
     },
@@ -320,7 +320,7 @@
   {
     "key": "0116",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con punto arriba"
       }
     },
@@ -329,7 +329,7 @@
   {
     "key": "0118",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con ogonek"
       }
     },
@@ -338,7 +338,7 @@
   {
     "key": "011A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con carón"
       }
     },
@@ -347,7 +347,7 @@
   {
     "key": "011C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula G con acento circunflejo"
       }
     },
@@ -356,7 +356,7 @@
   {
     "key": "011E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula G con breve"
       }
     },
@@ -365,7 +365,7 @@
   {
     "key": "0120",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula G con punto arriba"
       }
     },
@@ -374,7 +374,7 @@
   {
     "key": "0122",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula G con cedilla"
       }
     },
@@ -383,7 +383,7 @@
   {
     "key": "0124",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H con acento circunflejo"
       }
     },
@@ -392,7 +392,7 @@
   {
     "key": "0128",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I con tilde"
       }
     },
@@ -401,7 +401,7 @@
   {
     "key": "012A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I barra"
       }
     },
@@ -410,7 +410,7 @@
   {
     "key": "012E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I con ogonek"
       }
     },
@@ -419,7 +419,7 @@
   {
     "key": "0130",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I con punto arriba"
       }
     },
@@ -428,7 +428,7 @@
   {
     "key": "0134",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula J con acento circunflejo"
       }
     },
@@ -437,7 +437,7 @@
   {
     "key": "0136",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula K con cedilla"
       }
     },
@@ -446,7 +446,7 @@
   {
     "key": "0139",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con agudo"
       }
     },
@@ -455,7 +455,7 @@
   {
     "key": "013B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con cedilla"
       }
     },
@@ -464,7 +464,7 @@
   {
     "key": "013D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con carón"
       }
     },
@@ -473,7 +473,7 @@
   {
     "key": "013F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con punto mediano"
       }
     },
@@ -482,7 +482,7 @@
   {
     "key": "0143",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N con agudo"
       }
     },
@@ -491,7 +491,7 @@
   {
     "key": "0145",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N con cedilla"
       }
     },
@@ -500,7 +500,7 @@
   {
     "key": "0147",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula n con carón"
       }
     },
@@ -509,7 +509,7 @@
   {
     "key": "014C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O barra"
       }
     },
@@ -518,7 +518,7 @@
   {
     "key": "0150",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O con doble acento agudo "
       }
     },
@@ -527,7 +527,7 @@
   {
     "key": "0154",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R con agudo"
       }
     },
@@ -536,7 +536,7 @@
   {
     "key": "0156",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R con cedilla"
       }
     },
@@ -545,7 +545,7 @@
   {
     "key": "0158",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R con carón"
       }
     },
@@ -554,7 +554,7 @@
   {
     "key": "015A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S con agudo"
       }
     },
@@ -563,7 +563,7 @@
   {
     "key": "015C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S con acento circunflejo"
       }
     },
@@ -572,7 +572,7 @@
   {
     "key": "015E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S con cedilla"
       }
     },
@@ -581,7 +581,7 @@
   {
     "key": "0160",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S con carón"
       }
     },
@@ -590,7 +590,7 @@
   {
     "key": "0162",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T con cedilla"
       }
     },
@@ -599,7 +599,7 @@
   {
     "key": "0164",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T con carón"
       }
     },
@@ -608,7 +608,7 @@
   {
     "key": "0168",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con tilde"
       }
     },
@@ -617,7 +617,7 @@
   {
     "key": "016A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U barra"
       }
     },
@@ -626,7 +626,7 @@
   {
     "key": "016C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con breve"
       }
     },
@@ -635,7 +635,7 @@
   {
     "key": "016E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con anillo arriba"
       }
     },
@@ -644,7 +644,7 @@
   {
     "key": "0170",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con doble acento agudo"
       }
     },
@@ -653,7 +653,7 @@
   {
     "key": "0172",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con ogonek"
       }
     },
@@ -662,7 +662,7 @@
   {
     "key": "0174",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W con acento circunflejo"
       }
     },
@@ -671,7 +671,7 @@
   {
     "key": "0176",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y con circunflejo"
       }
     },
@@ -680,7 +680,7 @@
   {
     "key": "0178",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y diéresis"
       }
     },
@@ -689,7 +689,7 @@
   {
     "key": "0179",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z con agudo"
       }
     },
@@ -698,7 +698,7 @@
   {
     "key": "017B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z con punto"
       }
     },
@@ -707,7 +707,7 @@
   {
     "key": "017D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z con carón"
       }
     },
@@ -716,7 +716,7 @@
   {
     "key": "1E00",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con anillo debajo"
       }
     },
@@ -725,7 +725,7 @@
   {
     "key": "1E02",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula B con punto arriba"
       }
     },
@@ -734,7 +734,7 @@
   {
     "key": "1E04",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula B con punto debajo"
       }
     },
@@ -743,7 +743,7 @@
   {
     "key": "1E06",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula B con línea debajo"
       }
     },
@@ -752,7 +752,7 @@
   {
     "key": "1E0A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D con punto arriba"
       }
     },
@@ -761,7 +761,7 @@
   {
     "key": "1E0C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D con punto debajo"
       }
     },
@@ -770,7 +770,7 @@
   {
     "key": "1E0E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D con línea debajo"
       }
     },
@@ -779,7 +779,7 @@
   {
     "key": "1E10",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D con cedilla"
       }
     },
@@ -788,7 +788,7 @@
   {
     "key": "1E12",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D con acento circunflejo debajo"
       }
     },
@@ -797,7 +797,7 @@
   {
     "key": "1E18",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con acento circunflejo debajo"
       }
     },
@@ -806,7 +806,7 @@
   {
     "key": "1E1A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con tilde debajo"
       }
     },
@@ -815,7 +815,7 @@
   {
     "key": "1E1E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula F con punto arriba"
       }
     },
@@ -824,7 +824,7 @@
   {
     "key": "1E20",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula G con macrón"
       }
     },
@@ -833,7 +833,7 @@
   {
     "key": "1E22",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H con punto arriba"
       }
     },
@@ -842,7 +842,7 @@
   {
     "key": "1E24",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H con punto debajo"
       }
     },
@@ -851,7 +851,7 @@
   {
     "key": "1E26",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H con diéresis"
       }
     },
@@ -860,7 +860,7 @@
   {
     "key": "1E28",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H con cedilla"
       }
     },
@@ -869,7 +869,7 @@
   {
     "key": "1E2A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula H con breve debajo"
       }
     },
@@ -878,7 +878,7 @@
   {
     "key": "1E2C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I con tilde debajo"
       }
     },
@@ -887,7 +887,7 @@
   {
     "key": "1E30",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula K con agudo"
       }
     },
@@ -896,7 +896,7 @@
   {
     "key": "1E32",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula K con punto debajo"
       }
     },
@@ -905,7 +905,7 @@
   {
     "key": "1E34",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula K con línea debajo"
       }
     },
@@ -914,7 +914,7 @@
   {
     "key": "1E36",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con punto debajo"
       }
     },
@@ -923,7 +923,7 @@
   {
     "key": "1E3A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con línea debajo"
       }
     },
@@ -932,7 +932,7 @@
   {
     "key": "1E3C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula L con acento circunflejo debajo"
       }
     },
@@ -941,7 +941,7 @@
   {
     "key": "1E3E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula M con agudo"
       }
     },
@@ -950,7 +950,7 @@
   {
     "key": "1E40",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula M con punto arriba"
       }
     },
@@ -959,7 +959,7 @@
   {
     "key": "1E42",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula M con punto debajo"
       }
     },
@@ -968,7 +968,7 @@
   {
     "key": "1E44",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N con punto arriba"
       }
     },
@@ -977,7 +977,7 @@
   {
     "key": "1E46",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N con punto debajo"
       }
     },
@@ -986,7 +986,7 @@
   {
     "key": "1E48",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N con línea debajo"
       }
     },
@@ -995,7 +995,7 @@
   {
     "key": "1E4A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula N con acento circunflejo debajo"
       }
     },
@@ -1004,7 +1004,7 @@
   {
     "key": "1E54",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula P con agudo"
       }
     },
@@ -1013,7 +1013,7 @@
   {
     "key": "1E56",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula P con punto arriba"
       }
     },
@@ -1022,7 +1022,7 @@
   {
     "key": "1E58",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R con punto arriba"
       }
     },
@@ -1031,7 +1031,7 @@
   {
     "key": "1E5A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R con punto debajo"
       }
     },
@@ -1040,7 +1040,7 @@
   {
     "key": "1E5E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula R con línea debajo"
       }
     },
@@ -1049,7 +1049,7 @@
   {
     "key": "1E60",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S con punto arriba"
       }
     },
@@ -1058,7 +1058,7 @@
   {
     "key": "1E62",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula S con punto debajo"
       }
     },
@@ -1067,7 +1067,7 @@
   {
     "key": "1E6A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T con punto arriba"
       }
     },
@@ -1076,7 +1076,7 @@
   {
     "key": "1E6C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T con punto debajo"
       }
     },
@@ -1085,7 +1085,7 @@
   {
     "key": "1E6E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T con línea debajo"
       }
     },
@@ -1094,7 +1094,7 @@
   {
     "key": "1E70",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula T con acento circunflejo debajo"
       }
     },
@@ -1103,7 +1103,7 @@
   {
     "key": "1E72",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con diéresis debajo"
       }
     },
@@ -1112,7 +1112,7 @@
   {
     "key": "1E74",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con tilde debajo"
       }
     },
@@ -1121,7 +1121,7 @@
   {
     "key": "1E76",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con acento circunflejo debajo"
       }
     },
@@ -1130,7 +1130,7 @@
   {
     "key": "1E7C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula V con tilde"
       }
     },
@@ -1139,7 +1139,7 @@
   {
     "key": "1E7E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula V con punto debajo"
       }
     },
@@ -1148,7 +1148,7 @@
   {
     "key": "1E80",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W con grave"
       }
     },
@@ -1157,7 +1157,7 @@
   {
     "key": "1E82",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W con agudo"
       }
     },
@@ -1166,7 +1166,7 @@
   {
     "key": "1E84",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W con diéresis"
       }
     },
@@ -1175,7 +1175,7 @@
   {
     "key": "1E86",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W con punto arriba"
       }
     },
@@ -1184,7 +1184,7 @@
   {
     "key": "1E88",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula W con punto debajo"
       }
     },
@@ -1193,7 +1193,7 @@
   {
     "key": "1E8A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula X con punto arriba"
       }
     },
@@ -1202,7 +1202,7 @@
   {
     "key": "1E8C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula X con diéresis"
       }
     },
@@ -1211,7 +1211,7 @@
   {
     "key": "1E8E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y con punto arriba"
       }
     },
@@ -1220,7 +1220,7 @@
   {
     "key": "1E90",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z con acento circunflejo"
       }
     },
@@ -1229,7 +1229,7 @@
   {
     "key": "1E92",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z con punto debajo"
       }
     },
@@ -1238,7 +1238,7 @@
   {
     "key": "1E94",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Z with line below"
       }
     },
@@ -1247,7 +1247,7 @@
   {
     "key": "1EA0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con punto debajo"
       }
     },
@@ -1256,7 +1256,7 @@
   {
     "key": "1EA2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula A con gancho arriba"
       }
     },
@@ -1265,7 +1265,7 @@
   {
     "key": "1EB8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con punto debajo"
       }
     },
@@ -1274,7 +1274,7 @@
   {
     "key": "1EBA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con gancho arriba"
       }
     },
@@ -1283,7 +1283,7 @@
   {
     "key": "1EBC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula E con tilde"
       }
     },
@@ -1292,7 +1292,7 @@
   {
     "key": "1EC8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I con gancho arriba"
       }
     },
@@ -1301,7 +1301,7 @@
   {
     "key": "1ECA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula I con punto debajo"
       }
     },
@@ -1310,7 +1310,7 @@
   {
     "key": "1ECC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O con punto debajo"
       }
     },
@@ -1319,7 +1319,7 @@
   {
     "key": "1ECE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula O con gancho arriba"
       }
     },
@@ -1328,7 +1328,7 @@
   {
     "key": "1EE4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con punto debajo"
       }
     },
@@ -1337,7 +1337,7 @@
   {
     "key": "1EE6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula U con gancho arriba"
       }
     },
@@ -1346,7 +1346,7 @@
   {
     "key": "1EF2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y con grave"
       }
     },
@@ -1355,7 +1355,7 @@
   {
     "key": "1EF4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y con punto debajo"
       }
     },
@@ -1364,7 +1364,7 @@
   {
     "key": "1EF6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y con gancho arriba"
       }
     },
@@ -1373,7 +1373,7 @@
   {
     "key": "1EF8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Y con tilde"
       }
     },

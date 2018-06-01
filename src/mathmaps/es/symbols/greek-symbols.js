@@ -5,7 +5,7 @@
   {
     "key": "03D0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "símbolo beta"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "03D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "theta",
         "defaultMP": "variante de theta"
       }
@@ -24,7 +24,7 @@
   {
     "key": "03D5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "phi recta"
       }
     },
@@ -33,7 +33,7 @@
   {
     "key": "03D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pi",
         "defaultMP": "variante de pi"
       }
@@ -43,7 +43,7 @@
   {
     "key": "03D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "símbolo kai griego"
       }
     },
@@ -52,7 +52,7 @@
   {
     "key": "03F0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kappa",
         "defaultMP": "variante de kappa"
       }
@@ -62,7 +62,7 @@
   {
     "key": "03F1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rho",
         "defaultMP": "variante de rho"
       }
@@ -72,7 +72,7 @@
   {
     "key": "03F5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "épsilon",
         "defaultMP": "variante de épsilon"
       }
@@ -82,7 +82,7 @@
   {
     "key": "03F6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "épsilon invertido"
       }
     },
@@ -91,7 +91,7 @@
   {
     "key": "03F4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Theta"
       }
     },

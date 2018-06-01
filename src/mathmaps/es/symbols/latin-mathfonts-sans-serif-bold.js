@@ -5,7 +5,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula A"
       }
     },
@@ -14,7 +14,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula B"
       }
     },
@@ -23,7 +23,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula C"
       }
     },
@@ -32,7 +32,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula D"
       }
     },
@@ -41,7 +41,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula E"
       }
     },
@@ -50,7 +50,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula F"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula G"
       }
     },
@@ -68,7 +68,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula H"
       }
     },
@@ -77,7 +77,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula I"
       }
     },
@@ -86,7 +86,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula J"
       }
     },
@@ -95,7 +95,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula K"
       }
     },
@@ -104,7 +104,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula L"
       }
     },
@@ -113,7 +113,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula M"
       }
     },
@@ -122,7 +122,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula N"
       }
     },
@@ -131,7 +131,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula O"
       }
     },
@@ -140,7 +140,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula P"
       }
     },
@@ -149,7 +149,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula R"
       }
     },
@@ -167,7 +167,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula S"
       }
     },
@@ -176,7 +176,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula T"
       }
     },
@@ -185,7 +185,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula U"
       }
     },
@@ -194,7 +194,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula V"
       }
     },
@@ -203,7 +203,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula W"
       }
     },
@@ -212,7 +212,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula X"
       }
     },
@@ -221,7 +221,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Y"
       }
     },
@@ -230,7 +230,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Z"
       }
     },
@@ -239,7 +239,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita a"
       }
     },
@@ -248,7 +248,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita b"
       }
     },
@@ -257,7 +257,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita c"
       }
     },
@@ -266,7 +266,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita d"
       }
     },
@@ -275,7 +275,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita e"
       }
     },
@@ -284,7 +284,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita f"
       }
     },
@@ -293,7 +293,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita g"
       }
     },
@@ -302,7 +302,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita h"
       }
     },
@@ -311,7 +311,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita i"
       }
     },
@@ -320,7 +320,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita j"
       }
     },
@@ -329,7 +329,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita k"
       }
     },
@@ -338,7 +338,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita l"
       }
     },
@@ -347,7 +347,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita m"
       }
     },
@@ -356,7 +356,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita n"
       }
     },
@@ -365,7 +365,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita o"
       }
     },
@@ -374,7 +374,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita p"
       }
     },
@@ -383,7 +383,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita q"
       }
     },
@@ -392,7 +392,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita r"
       }
     },
@@ -401,7 +401,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita s"
       }
     },
@@ -410,7 +410,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita t"
       }
     },
@@ -419,7 +419,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita u"
       }
     },
@@ -428,7 +428,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita v"
       }
     },
@@ -437,7 +437,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita w"
       }
     },
@@ -446,7 +446,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita x"
       }
     },
@@ -455,7 +455,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita y"
       }
     },
@@ -464,7 +464,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita z"
       }
     },

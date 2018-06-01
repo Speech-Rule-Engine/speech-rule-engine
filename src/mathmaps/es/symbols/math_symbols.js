@@ -5,7 +5,7 @@
   {
     "key": "0021",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "factorial"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "0022",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comillas"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "0023",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "almuhadilla",
         "defaultMP": "signo de número"
       }
@@ -33,7 +33,7 @@
   {
     "key": "0024",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dólar"
       }
     },
@@ -42,7 +42,7 @@
   {
     "key": "0025",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "porciento"
       }
     },
@@ -51,7 +51,7 @@
   {
     "key": "0026",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ampersand"
       }
     },
@@ -60,7 +60,7 @@
   {
     "key": "0027",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "prima",
         "defaultMP": "apóstrofo"
       }
@@ -70,7 +70,7 @@
   {
     "key": "002A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por"
       }
     },
@@ -79,7 +79,7 @@
   {
     "key": "002B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más"
       }
     },
@@ -88,7 +88,7 @@
   {
     "key": "002C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "coma"
       }
     },
@@ -97,7 +97,7 @@
   {
     "key": "002D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos"
       }
     },
@@ -106,7 +106,7 @@
   {
     "key": "002E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto"
       }
     },
@@ -115,7 +115,7 @@
   {
     "key": "002F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra oblicua"
       }
     },
@@ -124,7 +124,7 @@
   {
     "key": "003A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos puntos"
       }
     },
@@ -133,7 +133,7 @@
   {
     "key": "003B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto y coma"
       }
     },
@@ -142,7 +142,7 @@
   {
     "key": "003C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que"
       }
     },
@@ -151,7 +151,7 @@
   {
     "key": "003D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual"
       }
     },
@@ -160,7 +160,7 @@
   {
     "key": "003E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que"
       }
     },
@@ -169,7 +169,7 @@
   {
     "key": "003F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "interrogación derecho",
         "defaultMP": "cierra interrogación"
       }
@@ -179,7 +179,7 @@
   {
     "key": "0040",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arroba"
       }
     },
@@ -188,7 +188,7 @@
   {
     "key": "005C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra inversa"
       }
     },
@@ -197,7 +197,7 @@
   {
     "key": "005E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "circunflejo"
       }
     },
@@ -206,7 +206,7 @@
   {
     "key": "005F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "subrayado"
       }
     },
@@ -215,7 +215,7 @@
   {
     "key": "0060",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "acento grave"
       }
     },
@@ -224,7 +224,7 @@
   {
     "key": "007C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra vertical"
       }
     },
@@ -233,7 +233,7 @@
   {
     "key": "007E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde"
       }
     },
@@ -242,7 +242,7 @@
   {
     "key": "00A1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "admiración izquierdo",
         "defaultMP": "abre admiración"
       }
@@ -252,7 +252,7 @@
   {
     "key": "00A2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "centavo"
       }
     },
@@ -261,7 +261,7 @@
   {
     "key": "00A3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "libra esterlina"
       }
     },
@@ -270,7 +270,7 @@
   {
     "key": "00A4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "moneda"
       }
     },
@@ -279,7 +279,7 @@
   {
     "key": "00A5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "yen"
       }
     },
@@ -288,7 +288,7 @@
   {
     "key": "00A6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra vertical partida"
       }
     },
@@ -297,7 +297,7 @@
   {
     "key": "00A7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sección"
       }
     },
@@ -306,7 +306,7 @@
   {
     "key": "00A8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diéresis"
       }
     },
@@ -315,7 +315,7 @@
   {
     "key": "00A9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "copyright"
       }
     },
@@ -324,7 +324,7 @@
   {
     "key": "00AA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ordinal femenino"
       }
     },
@@ -333,7 +333,7 @@
   {
     "key": "00AB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comillas angulares izquierda",
         "defaultMP": "abre comillas angulares"
       }
@@ -343,7 +343,7 @@
   {
     "key": "00AC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negación"
       }
     },
@@ -352,7 +352,7 @@
   {
     "key": "00AE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "registrado"
       }
     },
@@ -361,7 +361,7 @@
   {
     "key": "00AF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra"
       }
     },
@@ -370,7 +370,7 @@
   {
     "key": "00B0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "grado"
       }
     },
@@ -379,7 +379,7 @@
   {
     "key": "00B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más menos"
       }
     },
@@ -388,7 +388,7 @@
   {
     "key": "00B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "acento agudo"
       }
     },
@@ -397,7 +397,7 @@
   {
     "key": "00B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "micro"
       }
     },
@@ -406,7 +406,7 @@
   {
     "key": "00B6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "párrafo"
       }
     },
@@ -415,7 +415,7 @@
   {
     "key": "00B7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto medio"
       }
     },
@@ -424,7 +424,7 @@
   {
     "key": "00B8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cedilla"
       }
     },
@@ -433,7 +433,7 @@
   {
     "key": "00BA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ordinal masculino"
       }
     },
@@ -442,7 +442,7 @@
   {
     "key": "00BB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comillas angulares derecha",
         "defaultMP": "cierra comillas angulares"
       }
@@ -452,7 +452,7 @@
   {
     "key": "00BF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "interrogación izquierdo",
         "defaultMP": "abre interrogación"
       }
@@ -462,7 +462,7 @@
   {
     "key": "00D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por"
       }
     },
@@ -471,7 +471,7 @@
   {
     "key": "00F7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dividido"
       }
     },
@@ -480,7 +480,7 @@
   {
     "key": "02D8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "breve"
       }
     },
@@ -489,7 +489,7 @@
   {
     "key": "02D9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto en superescrito"
       }
     },
@@ -498,7 +498,7 @@
   {
     "key": "02DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "anillo en superescrito"
       }
     },
@@ -507,7 +507,7 @@
   {
     "key": "02DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ogonek"
       }
     },
@@ -516,7 +516,7 @@
   {
     "key": "02DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde"
       }
     },
@@ -525,7 +525,7 @@
   {
     "key": "02DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble acento agudo"
       }
     },
@@ -534,7 +534,7 @@
   {
     "key": "2010",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos"
       }
     },
@@ -543,7 +543,7 @@
   {
     "key": "2013",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "en raya"
       }
     },
@@ -552,7 +552,7 @@
   {
     "key": "2014",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "em raya"
       }
     },
@@ -561,7 +561,7 @@
   {
     "key": "2015",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra horizontal"
       }
     },
@@ -570,7 +570,7 @@
   {
     "key": "2016",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble barra vertical"
       }
     },
@@ -579,7 +579,7 @@
   {
     "key": "2018",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comilla izquierda"
       }
     },
@@ -588,7 +588,7 @@
   {
     "key": "2019",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comilla derecha"
       }
     },
@@ -597,7 +597,7 @@
   {
     "key": "201A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comilla bajo 9"
       }
     },
@@ -606,7 +606,7 @@
   {
     "key": "201C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble comilla"
       }
     },
@@ -615,7 +615,7 @@
   {
     "key": "201D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble comilla derecha"
       }
     },
@@ -624,7 +624,7 @@
   {
     "key": "201E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble comilla bajo 9"
       }
     },
@@ -633,7 +633,7 @@
   {
     "key": "2020",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "daga"
       }
     },
@@ -642,7 +642,7 @@
   {
     "key": "2021",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble daga"
       }
     },
@@ -651,7 +651,7 @@
   {
     "key": "2022",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bala"
       }
     },
@@ -660,7 +660,7 @@
   {
     "key": "2025",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos puntos líder"
       }
     },
@@ -669,7 +669,7 @@
   {
     "key": "2026",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntos suspensivos"
       }
     },
@@ -678,7 +678,7 @@
   {
     "key": "2030",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tanto por millar"
       }
     },
@@ -687,7 +687,7 @@
   {
     "key": "2031",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tanto por diez mil"
       }
     },
@@ -696,7 +696,7 @@
   {
     "key": "2032",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "prima"
       }
     },
@@ -705,7 +705,7 @@
   {
     "key": "2033",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "segunda"
       }
     },
@@ -714,7 +714,7 @@
   {
     "key": "2034",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tercera"
       }
     },
@@ -723,7 +723,7 @@
   {
     "key": "2035",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "acento grave"
       }
     },
@@ -732,7 +732,7 @@
   {
     "key": "2036",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble acento grave"
       }
     },
@@ -741,7 +741,7 @@
   {
     "key": "2039",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comillas izquierda",
         "defaultMP": "abre comillas"
       }
@@ -751,7 +751,7 @@
   {
     "key": "203A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comillas derecha",
         "defaultMP": "cierra comillas"
       }
@@ -761,7 +761,7 @@
   {
     "key": "203E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra superior"
       }
     },
@@ -770,7 +770,7 @@
   {
     "key": "2040",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ligadura"
       }
     },
@@ -779,7 +779,7 @@
   {
     "key": "2041",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto de inserción"
       }
     },
@@ -788,7 +788,7 @@
   {
     "key": "2043",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "guión bala"
       }
     },
@@ -797,7 +797,7 @@
   {
     "key": "2044",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra de fracción"
       }
     },
@@ -806,7 +806,7 @@
   {
     "key": "204F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto y coma invertido"
       }
     },
@@ -815,7 +815,7 @@
   {
     "key": "2050",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cierre superior"
       }
     },
@@ -824,7 +824,7 @@
   {
     "key": "2057",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuarta"
       }
     },
@@ -833,7 +833,7 @@
   {
     "key": "2200",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "para todo"
       }
     },
@@ -842,7 +842,7 @@
   {
     "key": "2201",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "complementario"
       }
     },
@@ -851,7 +851,7 @@
   {
     "key": "2202",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "derivada parcial"
       }
     },
@@ -860,7 +860,7 @@
   {
     "key": "2203",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "existe"
       }
     },
@@ -869,7 +869,7 @@
   {
     "key": "2204",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no existe"
       }
     },
@@ -878,7 +878,7 @@
   {
     "key": "2205",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "conjunto vacío"
       }
     },
@@ -887,7 +887,7 @@
   {
     "key": "2206",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incremento"
       }
     },
@@ -896,7 +896,7 @@
   {
     "key": "2207",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "gradiente"
       }
     },
@@ -905,7 +905,7 @@
   {
     "key": "2208",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perteneciente a"
       }
     },
@@ -914,7 +914,7 @@
   {
     "key": "2209",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no perteneciente a"
       }
     },
@@ -923,7 +923,7 @@
   {
     "key": "220A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perteneciente a"
       }
     },
@@ -932,7 +932,7 @@
   {
     "key": "220B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comprende a"
       }
     },
@@ -941,7 +941,7 @@
   {
     "key": "220C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no comprende a"
       }
     },
@@ -950,7 +950,7 @@
   {
     "key": "220D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "comprende a"
       }
     },
@@ -959,7 +959,7 @@
   {
     "key": "220E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "fin de demostración"
       }
     },
@@ -968,7 +968,7 @@
   {
     "key": "220F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto"
       }
     },
@@ -977,7 +977,7 @@
   {
     "key": "2210",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "coproducto"
       }
     },
@@ -986,7 +986,7 @@
   {
     "key": "2211",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sumatorio"
       }
     },
@@ -995,7 +995,7 @@
   {
     "key": "2212",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos"
       }
     },
@@ -1004,7 +1004,7 @@
   {
     "key": "2213",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos más"
       }
     },
@@ -1013,7 +1013,7 @@
   {
     "key": "2214",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto más"
       }
     },
@@ -1022,7 +1022,7 @@
   {
     "key": "2215",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra de división"
       }
     },
@@ -1031,7 +1031,7 @@
   {
     "key": "2216",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos"
       }
     },
@@ -1040,7 +1040,7 @@
   {
     "key": "2217",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "asterisco"
       }
     },
@@ -1049,7 +1049,7 @@
   {
     "key": "2218",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "composición"
       }
     },
@@ -1058,7 +1058,7 @@
   {
     "key": "2219",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bala"
       }
     },
@@ -1067,7 +1067,7 @@
   {
     "key": "221A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "raíz"
       }
     },
@@ -1076,7 +1076,7 @@
   {
     "key": "221B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "raíz cúbica"
       }
     },
@@ -1085,7 +1085,7 @@
   {
     "key": "221C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "raíz cuarta"
       }
     },
@@ -1094,7 +1094,7 @@
   {
     "key": "221D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "proporcional a"
       }
     },
@@ -1103,7 +1103,7 @@
   {
     "key": "221E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "infinito"
       }
     },
@@ -1112,7 +1112,7 @@
   {
     "key": "221F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo recto"
       }
     },
@@ -1121,7 +1121,7 @@
   {
     "key": "2220",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo"
       }
     },
@@ -1130,7 +1130,7 @@
   {
     "key": "2221",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo medido"
       }
     },
@@ -1139,7 +1139,7 @@
   {
     "key": "2222",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo esférico"
       }
     },
@@ -1148,7 +1148,7 @@
   {
     "key": "2223",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "divide a"
       }
     },
@@ -1157,7 +1157,7 @@
   {
     "key": "2224",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no divide a"
       }
     },
@@ -1166,7 +1166,7 @@
   {
     "key": "2225",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paralela a"
       }
     },
@@ -1175,7 +1175,7 @@
   {
     "key": "2226",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no paralela a"
       }
     },
@@ -1184,7 +1184,7 @@
   {
     "key": "2227",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "y"
       }
     },
@@ -1193,7 +1193,7 @@
   {
     "key": "2228",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o"
       }
     },
@@ -1202,7 +1202,7 @@
   {
     "key": "2229",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección"
       }
     },
@@ -1211,7 +1211,7 @@
   {
     "key": "222A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión"
       }
     },
@@ -1220,7 +1220,7 @@
   {
     "key": "222B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral"
       }
     },
@@ -1229,7 +1229,7 @@
   {
     "key": "222C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral doble"
       }
     },
@@ -1238,7 +1238,7 @@
   {
     "key": "222D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral triple"
       }
     },
@@ -1247,7 +1247,7 @@
   {
     "key": "222E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral de contorno"
       }
     },
@@ -1256,7 +1256,7 @@
   {
     "key": "222F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral de superficie"
       }
     },
@@ -1265,7 +1265,7 @@
   {
     "key": "2230",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral de volumen"
       }
     },
@@ -1274,7 +1274,7 @@
   {
     "key": "2231",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral de contorno en sentido horario"
       }
     },
@@ -1283,7 +1283,7 @@
   {
     "key": "2232",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral de contorno en sentido horario"
       }
     },
@@ -1292,7 +1292,7 @@
   {
     "key": "2233",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral de contorno en sentido antihorario"
       }
     },
@@ -1301,7 +1301,7 @@
   {
     "key": "2234",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por lo tanto"
       }
     },
@@ -1310,7 +1310,7 @@
   {
     "key": "2235",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "porque"
       }
     },
@@ -1319,7 +1319,7 @@
   {
     "key": "2236",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "razón"
       }
     },
@@ -1328,7 +1328,7 @@
   {
     "key": "2237",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "proporción"
       }
     },
@@ -1337,7 +1337,7 @@
   {
     "key": "2238",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto menos"
       }
     },
@@ -1346,7 +1346,7 @@
   {
     "key": "2239",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "exceso"
       }
     },
@@ -1355,7 +1355,7 @@
   {
     "key": "223A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "proporción geométrica"
       }
     },
@@ -1364,7 +1364,7 @@
   {
     "key": "223B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "homotecia"
       }
     },
@@ -1373,7 +1373,7 @@
   {
     "key": "223C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde"
       }
     },
@@ -1382,7 +1382,7 @@
   {
     "key": "223D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde invertido"
       }
     },
@@ -1391,7 +1391,7 @@
   {
     "key": "223E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "s horizontal invertida"
       }
     },
@@ -1400,7 +1400,7 @@
   {
     "key": "223F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sinusoide"
       }
     },
@@ -1409,7 +1409,7 @@
   {
     "key": "2240",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto de guirnalda"
       }
     },
@@ -1418,7 +1418,7 @@
   {
     "key": "2241",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no tilde"
       }
     },
@@ -1427,7 +1427,7 @@
   {
     "key": "2242",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos tilde"
       }
     },
@@ -1436,7 +1436,7 @@
   {
     "key": "2243",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "asintóticamente igual a"
       }
     },
@@ -1445,7 +1445,7 @@
   {
     "key": "2244",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no asintóticamente igual a"
       }
     },
@@ -1454,7 +1454,7 @@
   {
     "key": "2245",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "aproximadamente igual a"
       }
     },
@@ -1463,7 +1463,7 @@
   {
     "key": "2246",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "aproximado pero no igual a"
       }
     },
@@ -1472,7 +1472,7 @@
   {
     "key": "2247",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no aproximado a"
       }
     },
@@ -1481,7 +1481,7 @@
   {
     "key": "2248",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "aproximado",
         "defaultMP": "casi igual a"
       }
@@ -1491,7 +1491,7 @@
   {
     "key": "2249",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no es casi igual a"
       }
     },
@@ -1500,7 +1500,7 @@
   {
     "key": "224A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual o casi igual a"
       }
     },
@@ -1509,7 +1509,7 @@
   {
     "key": "224B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triple tilde"
       }
     },
@@ -1518,7 +1518,7 @@
   {
     "key": "224C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "todo igual a"
       }
     },
@@ -1527,7 +1527,7 @@
   {
     "key": "224D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "equivalente a"
       }
     },
@@ -1536,7 +1536,7 @@
   {
     "key": "224E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "geométricamente equivalente a"
       }
     },
@@ -1545,7 +1545,7 @@
   {
     "key": "224F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diferencia entre"
       }
     },
@@ -1554,7 +1554,7 @@
   {
     "key": "2250",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "se acerca al límite"
       }
     },
@@ -1563,7 +1563,7 @@
   {
     "key": "2251",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "geométricamente igual a"
       }
     },
@@ -1572,7 +1572,7 @@
   {
     "key": "2252",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "aproximadamente igual a o imagen de"
       }
     },
@@ -1581,7 +1581,7 @@
   {
     "key": "2253",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "imagen de o aproximadamente igual a"
       }
     },
@@ -1590,7 +1590,7 @@
   {
     "key": "2254",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos puntos igual"
       }
     },
@@ -1599,7 +1599,7 @@
   {
     "key": "2255",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual dos puntos"
       }
     },
@@ -1608,7 +1608,7 @@
   {
     "key": "2256",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual incluyendo anillo"
       }
     },
@@ -1617,7 +1617,7 @@
   {
     "key": "2257",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual anillo a"
       }
     },
@@ -1626,7 +1626,7 @@
   {
     "key": "2258",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corresponde a"
       }
     },
@@ -1635,7 +1635,7 @@
   {
     "key": "2259",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estima a"
       }
     },
@@ -1644,7 +1644,7 @@
   {
     "key": "225A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "equiangular con"
       }
     },
@@ -1653,7 +1653,7 @@
   {
     "key": "225B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con estrella"
       }
     },
@@ -1662,7 +1662,7 @@
   {
     "key": "225C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con delta"
       }
     },
@@ -1671,7 +1671,7 @@
   {
     "key": "225D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual por definición a"
       }
     },
@@ -1680,7 +1680,7 @@
   {
     "key": "225E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "medido por"
       }
     },
@@ -1689,7 +1689,7 @@
   {
     "key": "225F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con interrogante"
       }
     },
@@ -1698,7 +1698,7 @@
   {
     "key": "2260",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no es igual a",
         "defaultMP": "distinto de"
       }
@@ -1708,7 +1708,7 @@
   {
     "key": "2261",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "idéntico a"
       }
     },
@@ -1717,7 +1717,7 @@
   {
     "key": "2262",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no es idéntico a"
       }
     },
@@ -1726,7 +1726,7 @@
   {
     "key": "2263",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente equivalente a"
       }
     },
@@ -1735,7 +1735,7 @@
   {
     "key": "2264",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor o igual que"
       }
     },
@@ -1744,7 +1744,7 @@
   {
     "key": "2265",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o igual que"
       }
     },
@@ -1753,7 +1753,7 @@
   {
     "key": "2266",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor o igual que"
       }
     },
@@ -1762,7 +1762,7 @@
   {
     "key": "2267",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o igual que"
       }
     },
@@ -1771,7 +1771,7 @@
   {
     "key": "2268",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que"
       }
     },
@@ -1780,7 +1780,7 @@
   {
     "key": "2269",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que"
       }
     },
@@ -1789,7 +1789,7 @@
   {
     "key": "226A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mucho menor que"
       }
     },
@@ -1798,7 +1798,7 @@
   {
     "key": "226B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mucho mayor que"
       }
     },
@@ -1807,7 +1807,7 @@
   {
     "key": "226C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "entre"
       }
     },
@@ -1816,7 +1816,7 @@
   {
     "key": "226D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no equivalente a"
       }
     },
@@ -1825,7 +1825,7 @@
   {
     "key": "226E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no menor que"
       }
     },
@@ -1834,7 +1834,7 @@
   {
     "key": "226F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no mayor que"
       }
     },
@@ -1843,7 +1843,7 @@
   {
     "key": "2270",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no menor ni igual a"
       }
     },
@@ -1852,7 +1852,7 @@
   {
     "key": "2271",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no mayor ni igual a"
       }
     },
@@ -1861,7 +1861,7 @@
   {
     "key": "2272",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor o equivalente a"
       }
     },
@@ -1870,7 +1870,7 @@
   {
     "key": "2273",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o equivalente a"
       }
     },
@@ -1879,7 +1879,7 @@
   {
     "key": "2274",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no menor ni equivalente a"
       }
     },
@@ -1888,7 +1888,7 @@
   {
     "key": "2275",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no mayor ni equivalente a"
       }
     },
@@ -1897,7 +1897,7 @@
   {
     "key": "2276",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor o mayor que"
       }
     },
@@ -1906,7 +1906,7 @@
   {
     "key": "2277",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o menor que"
       }
     },
@@ -1915,7 +1915,7 @@
   {
     "key": "2278",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no menor ni mayor que"
       }
     },
@@ -1924,7 +1924,7 @@
   {
     "key": "2279",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no mayor ni menor que"
       }
     },
@@ -1933,7 +1933,7 @@
   {
     "key": "227A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede a"
       }
     },
@@ -1942,7 +1942,7 @@
   {
     "key": "227B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue a"
       }
     },
@@ -1951,7 +1951,7 @@
   {
     "key": "227C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede o es igual a"
       }
     },
@@ -1960,7 +1960,7 @@
   {
     "key": "227D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue o es igual a"
       }
     },
@@ -1969,7 +1969,7 @@
   {
     "key": "227E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede o es equivalente a"
       }
     },
@@ -1978,7 +1978,7 @@
   {
     "key": "227F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue o es equivalente a"
       }
     },
@@ -1987,7 +1987,7 @@
   {
     "key": "2280",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no precede a"
       }
     },
@@ -1996,7 +1996,7 @@
   {
     "key": "2281",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no sigue a"
       }
     },
@@ -2005,7 +2005,7 @@
   {
     "key": "2282",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido en"
       }
     },
@@ -2014,7 +2014,7 @@
   {
     "key": "2283",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene a"
       }
     },
@@ -2023,7 +2023,7 @@
   {
     "key": "2284",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no incluido en"
       }
     },
@@ -2032,7 +2032,7 @@
   {
     "key": "2285",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no contiene a"
       }
     },
@@ -2041,7 +2041,7 @@
   {
     "key": "2286",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido o igual a"
       }
     },
@@ -2050,7 +2050,7 @@
   {
     "key": "2287",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene o es igual a"
       }
     },
@@ -2059,7 +2059,7 @@
   {
     "key": "2288",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no incluido ni igual a"
       }
     },
@@ -2068,7 +2068,7 @@
   {
     "key": "2289",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no contiene ni es igual a"
       }
     },
@@ -2077,7 +2077,7 @@
   {
     "key": "228A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido estrictamente en"
       }
     },
@@ -2086,7 +2086,7 @@
   {
     "key": "228B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene estrictamente a"
       }
     },
@@ -2095,7 +2095,7 @@
   {
     "key": "228C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "familia de conjuntos"
       }
     },
@@ -2104,7 +2104,7 @@
   {
     "key": "228D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto de familia de conjuntos"
       }
     },
@@ -2113,7 +2113,7 @@
   {
     "key": "228E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión de familia de conjuntos"
       }
     },
@@ -2122,7 +2122,7 @@
   {
     "key": "228F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "imagen cuadrada de"
       }
     },
@@ -2131,7 +2131,7 @@
   {
     "key": "2290",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "original cuadrado de"
       }
     },
@@ -2140,7 +2140,7 @@
   {
     "key": "2291",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "imagen cuadrada de o igual a"
       }
     },
@@ -2149,7 +2149,7 @@
   {
     "key": "2292",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "original cuadrado de o igual a"
       }
     },
@@ -2158,7 +2158,7 @@
   {
     "key": "2293",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección cuadrada"
       }
     },
@@ -2167,7 +2167,7 @@
   {
     "key": "2294",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión cuadrada"
       }
     },
@@ -2176,7 +2176,7 @@
   {
     "key": "2295",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más en círculo"
       }
     },
@@ -2185,7 +2185,7 @@
   {
     "key": "2296",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos en círculo"
       }
     },
@@ -2194,7 +2194,7 @@
   {
     "key": "2297",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por en círculo"
       }
     },
@@ -2203,7 +2203,7 @@
   {
     "key": "2298",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra en círculo"
       }
     },
@@ -2212,7 +2212,7 @@
   {
     "key": "2299",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto en círculo"
       }
     },
@@ -2221,7 +2221,7 @@
   {
     "key": "229A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "anillo en círculo"
       }
     },
@@ -2230,7 +2230,7 @@
   {
     "key": "229B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "asterisco en círculo"
       }
     },
@@ -2239,7 +2239,7 @@
   {
     "key": "229C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual en círculo"
       }
     },
@@ -2248,7 +2248,7 @@
   {
     "key": "229D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos en círculo"
       }
     },
@@ -2257,7 +2257,7 @@
   {
     "key": "229E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más en cuadrado"
       }
     },
@@ -2266,7 +2266,7 @@
   {
     "key": "229F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos en cuadrado"
       }
     },
@@ -2275,7 +2275,7 @@
   {
     "key": "22A0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "veces en cuadrado"
       }
     },
@@ -2284,7 +2284,7 @@
   {
     "key": "22A1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto en cuadrado"
       }
     },
@@ -2293,7 +2293,7 @@
   {
     "key": "22A2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "t horizontal hacia la izquierda"
       }
     },
@@ -2302,7 +2302,7 @@
   {
     "key": "22A3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "t horizontal hacia la derecha"
       }
     },
@@ -2311,7 +2311,7 @@
   {
     "key": "22A4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular"
       }
     },
@@ -2320,7 +2320,7 @@
   {
     "key": "22A5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular invertida"
       }
     },
@@ -2329,7 +2329,7 @@
   {
     "key": "22A6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "afirmación"
       }
     },
@@ -2338,7 +2338,7 @@
   {
     "key": "22A7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "modela"
       }
     },
@@ -2347,7 +2347,7 @@
   {
     "key": "22A8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "verdadero"
       }
     },
@@ -2356,7 +2356,7 @@
   {
     "key": "22A9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "obliga"
       }
     },
@@ -2365,7 +2365,7 @@
   {
     "key": "22AA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triple barra vertical torniquete derecho"
       }
     },
@@ -2374,7 +2374,7 @@
   {
     "key": "22AB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble barra vertical doble torniquete derecho"
       }
     },
@@ -2383,7 +2383,7 @@
   {
     "key": "22AC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no prueba"
       }
     },
@@ -2392,7 +2392,7 @@
   {
     "key": "22AD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "falso"
       }
     },
@@ -2401,7 +2401,7 @@
   {
     "key": "22AE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no obliga"
       }
     },
@@ -2410,7 +2410,7 @@
   {
     "key": "22AF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble barra vertical doble torniquete derecho negada"
       }
     },
@@ -2419,7 +2419,7 @@
   {
     "key": "22B0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede respecto de"
       }
     },
@@ -2428,7 +2428,7 @@
   {
     "key": "22B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue respecto de"
       }
     },
@@ -2437,7 +2437,7 @@
   {
     "key": "22B2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "subgrupo normal de"
       }
     },
@@ -2446,7 +2446,7 @@
   {
     "key": "22B3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene como subgrupo normal a"
       }
     },
@@ -2455,7 +2455,7 @@
   {
     "key": "22B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "subgrupo normal o es igual a"
       }
     },
@@ -2464,7 +2464,7 @@
   {
     "key": "22B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene como subgrupo normal o es igual a"
       }
     },
@@ -2473,7 +2473,7 @@
   {
     "key": "22B6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "original de"
       }
     },
@@ -2482,7 +2482,7 @@
   {
     "key": "22B7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "imagen de"
       }
     },
@@ -2491,7 +2491,7 @@
   {
     "key": "22B8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "multifunción"
       }
     },
@@ -2500,7 +2500,7 @@
   {
     "key": "22B9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "matriz hermitiana conjugada"
       }
     },
@@ -2509,7 +2509,7 @@
   {
     "key": "22BA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "interpola"
       }
     },
@@ -2518,7 +2518,7 @@
   {
     "key": "22BB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o excluyente"
       }
     },
@@ -2527,7 +2527,7 @@
   {
     "key": "22BC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no y"
       }
     },
@@ -2536,7 +2536,7 @@
   {
     "key": "22BD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no o"
       }
     },
@@ -2545,7 +2545,7 @@
   {
     "key": "22BF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo rectángulo"
       }
     },
@@ -2554,7 +2554,7 @@
   {
     "key": "22C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "y"
       }
     },
@@ -2563,7 +2563,7 @@
   {
     "key": "22C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o"
       }
     },
@@ -2572,7 +2572,7 @@
   {
     "key": "22C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección"
       }
     },
@@ -2581,7 +2581,7 @@
   {
     "key": "22C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión"
       }
     },
@@ -2590,7 +2590,7 @@
   {
     "key": "22C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "operador diamante"
       }
     },
@@ -2599,7 +2599,7 @@
   {
     "key": "22C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto"
       }
     },
@@ -2608,7 +2608,7 @@
   {
     "key": "22C6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrella"
       }
     },
@@ -2617,7 +2617,7 @@
   {
     "key": "22C7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dividido por"
       }
     },
@@ -2626,7 +2626,7 @@
   {
     "key": "22C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "moño"
       }
     },
@@ -2635,7 +2635,7 @@
   {
     "key": "22C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "factor normal izquierdo producto semidirecto"
       }
     },
@@ -2644,7 +2644,7 @@
   {
     "key": "22CA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "factor normal derecho producto semidirecto"
       }
     },
@@ -2653,7 +2653,7 @@
   {
     "key": "22CB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto semidirecto izquierdo"
       }
     },
@@ -2662,7 +2662,7 @@
   {
     "key": "22CC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto semidirecto derecho"
       }
     },
@@ -2671,7 +2671,7 @@
   {
     "key": "22CD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde invertida igual a"
       }
     },
@@ -2680,7 +2680,7 @@
   {
     "key": "22CE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o rizada"
       }
     },
@@ -2689,7 +2689,7 @@
   {
     "key": "22CF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "y rizada"
       }
     },
@@ -2698,7 +2698,7 @@
   {
     "key": "22D0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble incluido"
       }
     },
@@ -2707,7 +2707,7 @@
   {
     "key": "22D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble contiene"
       }
     },
@@ -2716,7 +2716,7 @@
   {
     "key": "22D2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble intersección"
       }
     },
@@ -2725,7 +2725,7 @@
   {
     "key": "22D3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble unión"
       }
     },
@@ -2734,7 +2734,7 @@
   {
     "key": "22D4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bieldo"
       }
     },
@@ -2743,7 +2743,7 @@
   {
     "key": "22D5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paralela o igual a"
       }
     },
@@ -2752,7 +2752,7 @@
   {
     "key": "22D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que con punto"
       }
     },
@@ -2761,7 +2761,7 @@
   {
     "key": "22D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que con punto"
       }
     },
@@ -2770,7 +2770,7 @@
   {
     "key": "22D8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mucho menor que"
       }
     },
@@ -2779,7 +2779,7 @@
   {
     "key": "22D9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mucho mayor que"
       }
     },
@@ -2788,7 +2788,7 @@
   {
     "key": "22DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor igual o mayor que"
       }
     },
@@ -2797,7 +2797,7 @@
   {
     "key": "22DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor igual o menor que"
       }
     },
@@ -2806,7 +2806,7 @@
   {
     "key": "22DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor o igual que"
       }
     },
@@ -2815,7 +2815,7 @@
   {
     "key": "22DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o igual que"
       }
     },
@@ -2824,7 +2824,7 @@
   {
     "key": "22DE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede o es igual a"
       }
     },
@@ -2833,7 +2833,7 @@
   {
     "key": "22DF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue o es igual a"
       }
     },
@@ -2842,7 +2842,7 @@
   {
     "key": "22E0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no precede ni es igual a"
       }
     },
@@ -2851,7 +2851,7 @@
   {
     "key": "22E1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no sigue ni es igual a"
       }
     },
@@ -2860,7 +2860,7 @@
   {
     "key": "22E2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no es imagen cuadrada ni igual a"
       }
     },
@@ -2869,7 +2869,7 @@
   {
     "key": "22E3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no es original cuadrada ni igual a"
       }
     },
@@ -2878,7 +2878,7 @@
   {
     "key": "22E4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "imagen cuadrada estricta"
       }
     },
@@ -2887,7 +2887,7 @@
   {
     "key": "22E5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "original cuadrada estricta"
       }
     },
@@ -2896,7 +2896,7 @@
   {
     "key": "22E6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que no equivalente a"
       }
     },
@@ -2905,7 +2905,7 @@
   {
     "key": "22E7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que no equivalente a"
       }
     },
@@ -2914,7 +2914,7 @@
   {
     "key": "22E8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede no equivalente a"
       }
     },
@@ -2923,7 +2923,7 @@
   {
     "key": "22E9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue no equivalente a"
       }
     },
@@ -2932,7 +2932,7 @@
   {
     "key": "22EA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no subgrupo normal de"
       }
     },
@@ -2941,7 +2941,7 @@
   {
     "key": "22EB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no contiene como subgrupo normal a"
       }
     },
@@ -2950,7 +2950,7 @@
   {
     "key": "22EC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no es subgrupo normal ni igual a"
       }
     },
@@ -2959,7 +2959,7 @@
   {
     "key": "22ED",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no contiene como subgrupo normal ni es igual a"
       }
     },
@@ -2968,7 +2968,7 @@
   {
     "key": "22EE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntos suspensivos verticales"
       }
     },
@@ -2977,7 +2977,7 @@
   {
     "key": "22EF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntos suspensivos altos"
       }
     },
@@ -2986,7 +2986,7 @@
   {
     "key": "22F0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntos suspensivos diagonales subiendo"
       }
     },
@@ -2995,7 +2995,7 @@
   {
     "key": "22F1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "puntos suspensivos diagonales bajando"
       }
     },
@@ -3004,7 +3004,7 @@
   {
     "key": "22F2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pertenece con trazo horizontal"
       }
     },
@@ -3013,7 +3013,7 @@
   {
     "key": "22F3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pertenece con barra vertical al fin de raya horizontal"
       }
     },
@@ -3022,7 +3022,7 @@
   {
     "key": "22F4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pertenece en pequeño con trazo vertical"
       }
     },
@@ -3031,7 +3031,7 @@
   {
     "key": "22F5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pertenece con punto arriba"
       }
     },
@@ -3040,7 +3040,7 @@
   {
     "key": "22F6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pertenece con barra arriba"
       }
     },
@@ -3049,7 +3049,7 @@
   {
     "key": "22F7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perteneciente subrayado"
       }
     },
@@ -3058,7 +3058,7 @@
   {
     "key": "22F8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perteneciente subrayado"
       }
     },
@@ -3067,7 +3067,7 @@
   {
     "key": "22F9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pertenece con dos trazos horizontales"
       }
     },
@@ -3076,7 +3076,7 @@
   {
     "key": "22FA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene o es igual a"
       }
     },
@@ -3085,7 +3085,7 @@
   {
     "key": "22FB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene con marca"
       }
     },
@@ -3094,7 +3094,7 @@
   {
     "key": "22FC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene con marca"
       }
     },
@@ -3103,7 +3103,7 @@
   {
     "key": "22FD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene con barra"
       }
     },
@@ -3112,7 +3112,7 @@
   {
     "key": "22FE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perteneciente con barra"
       }
     },
@@ -3121,7 +3121,7 @@
   {
     "key": "22FF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "z anotación asociación de bolsa"
       }
     },
@@ -3130,7 +3130,7 @@
   {
     "key": "2300",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diámetro"
       }
     },
@@ -3139,7 +3139,7 @@
   {
     "key": "2302",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "casa"
       }
     },
@@ -3148,7 +3148,7 @@
   {
     "key": "2305",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "en proyectividad con"
       }
     },
@@ -3157,7 +3157,7 @@
   {
     "key": "2306",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "en perspectividad con"
       }
     },
@@ -3166,7 +3166,7 @@
   {
     "key": "2310",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no invertido"
       }
     },
@@ -3175,7 +3175,7 @@
   {
     "key": "2312",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco"
       }
     },
@@ -3184,7 +3184,7 @@
   {
     "key": "2313",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "segmento"
       }
     },
@@ -3193,7 +3193,7 @@
   {
     "key": "27C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo encerrando triángulo"
       }
     },
@@ -3202,7 +3202,7 @@
   {
     "key": "27C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular"
       }
     },
@@ -3211,7 +3211,7 @@
   {
     "key": "27C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido en"
       }
     },
@@ -3220,7 +3220,7 @@
   {
     "key": "27C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene a"
       }
     },
@@ -3229,7 +3229,7 @@
   {
     "key": "27C7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "punto en círculo"
       }
     },
@@ -3238,7 +3238,7 @@
   {
     "key": "27C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "atrás tajo antes de subconjunto"
       }
     },
@@ -3247,7 +3247,7 @@
   {
     "key": "27C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sobreconjunto antes de tajo"
       }
     },
@@ -3256,7 +3256,7 @@
   {
     "key": "27CA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra vertical con golpe horizontal"
       }
     },
@@ -3265,7 +3265,7 @@
   {
     "key": "27CC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "división larga"
       }
     },
@@ -3274,7 +3274,7 @@
   {
     "key": "27D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "y con punto interior"
       }
     },
@@ -3283,7 +3283,7 @@
   {
     "key": "27D2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "elemento de apertura hacia arriba"
       }
     },
@@ -3292,7 +3292,7 @@
   {
     "key": "27D3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo inferior derecho con punto"
       }
     },
@@ -3301,7 +3301,7 @@
   {
     "key": "27D4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo inferior izquierdo con punto"
       }
     },
@@ -3310,7 +3310,7 @@
   {
     "key": "27D5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "izquierdo exterior une"
       }
     },
@@ -3319,7 +3319,7 @@
   {
     "key": "27D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "derecho exterior une"
       }
     },
@@ -3328,7 +3328,7 @@
   {
     "key": "27D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "lleno exterior une"
       }
     },
@@ -3337,7 +3337,7 @@
   {
     "key": "27D8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular inversa"
       }
     },
@@ -3346,7 +3346,7 @@
   {
     "key": "27D9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular"
       }
     },
@@ -3355,7 +3355,7 @@
   {
     "key": "27DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "izquierdo y derecho doble torniquete"
       }
     },
@@ -3364,7 +3364,7 @@
   {
     "key": "27DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble T horizontal"
       }
     },
@@ -3373,7 +3373,7 @@
   {
     "key": "27DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "multifunción por la izquierda"
       }
     },
@@ -3382,7 +3382,7 @@
   {
     "key": "27DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "T horizontal derecha larga"
       }
     },
@@ -3391,7 +3391,7 @@
   {
     "key": "27DE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "T horizontal izquierda larga"
       }
     },
@@ -3400,7 +3400,7 @@
   {
     "key": "27DF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular inversa con círculo arriba"
       }
     },
@@ -3409,7 +3409,7 @@
   {
     "key": "27E0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pastilla dividida por regla horizontal"
       }
     },
@@ -3418,7 +3418,7 @@
   {
     "key": "27E1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diamante cóncavo vacío"
       }
     },
@@ -3427,7 +3427,7 @@
   {
     "key": "27E2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diamante cóncavo con tictac hacia izquierda"
       }
     },
@@ -3436,7 +3436,7 @@
   {
     "key": "27E3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diamante cóncavo con tictac hacia derecha"
       }
     },
@@ -3445,7 +3445,7 @@
   {
     "key": "27E4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con tictac hacia izquierda"
       }
     },
@@ -3454,7 +3454,7 @@
   {
     "key": "27E5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con tictac hacia derecha"
       }
     },
@@ -3463,7 +3463,7 @@
   {
     "key": "299A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "zigzag en vertical"
       }
     },
@@ -3472,7 +3472,7 @@
   {
     "key": "29B0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "conjunto vacío invertido"
       }
     },
@@ -3481,7 +3481,7 @@
   {
     "key": "29B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "conjunto vacío con barra"
       }
     },
@@ -3490,7 +3490,7 @@
   {
     "key": "29B2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "conjunto vacío con círculo"
       }
     },
@@ -3499,7 +3499,7 @@
   {
     "key": "29B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con barra"
       }
     },
@@ -3508,7 +3508,7 @@
   {
     "key": "29B6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra en círculo"
       }
     },
@@ -3517,7 +3517,7 @@
   {
     "key": "29B7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paralelas en círculo"
       }
     },
@@ -3526,7 +3526,7 @@
   {
     "key": "29B9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perpendicular en círculo"
       }
     },
@@ -3535,7 +3535,7 @@
   {
     "key": "29BB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "x superimpresa en círculo"
       }
     },
@@ -3544,7 +3544,7 @@
   {
     "key": "29BC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "circled anticlockwise rotated division"
       }
     },
@@ -3553,7 +3553,7 @@
   {
     "key": "29BE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bullet vacía en círculo"
       }
     },
@@ -3562,7 +3562,7 @@
   {
     "key": "29BF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bullet en círculo"
       }
     },
@@ -3571,7 +3571,7 @@
   {
     "key": "29C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que en círculo"
       }
     },
@@ -3580,7 +3580,7 @@
   {
     "key": "29C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que en círculo"
       }
     },
@@ -3589,7 +3589,7 @@
   {
     "key": "29C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "círculo con círculo a la derecha"
       }
     },
@@ -3598,7 +3598,7 @@
   {
     "key": "29C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "circle with two horizontal strokes to the right"
       }
     },
@@ -3607,7 +3607,7 @@
   {
     "key": "29C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con diagonal ascendente"
       }
     },
@@ -3616,7 +3616,7 @@
   {
     "key": "29C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuadrado con diagonal descendente"
       }
     },
@@ -3625,7 +3625,7 @@
   {
     "key": "29C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos cuadrados unidos"
       }
     },
@@ -3634,7 +3634,7 @@
   {
     "key": "29CD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triangle with serifs at bottom"
       }
     },
@@ -3643,7 +3643,7 @@
   {
     "key": "29CE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "triángulo hacia la derecha sobre triángulo hacia la izquierda"
       }
     },
@@ -3652,7 +3652,7 @@
   {
     "key": "29CF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "subgrupo normal o igual a"
       }
     },
@@ -3661,7 +3661,7 @@
   {
     "key": "29D0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene como subgrupo normal o es igual a"
       }
     },
@@ -3670,7 +3670,7 @@
   {
     "key": "29DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "infinito incompleto"
       }
     },
@@ -3679,7 +3679,7 @@
   {
     "key": "29DE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "no infinito"
       }
     },
@@ -3688,7 +3688,7 @@
   {
     "key": "29E3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual tachado doble "
       }
     },
@@ -3697,7 +3697,7 @@
   {
     "key": "29E4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con tilde, con doble tachado"
       }
     },
@@ -3706,7 +3706,7 @@
   {
     "key": "29E5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "idéntico a con doble tachado"
       }
     },
@@ -3715,7 +3715,7 @@
   {
     "key": "29EB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rombo relleno"
       }
     },
@@ -3724,7 +3724,7 @@
   {
     "key": "29F4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rule delayed"
       }
     },
@@ -3733,7 +3733,7 @@
   {
     "key": "29F6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "solidus with overbar"
       }
     },
@@ -3742,7 +3742,7 @@
   {
     "key": "2A0C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "operador integral cuádruple"
       }
     },
@@ -3751,7 +3751,7 @@
   {
     "key": "2A0D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "finite part integral"
       }
     },
@@ -3760,7 +3760,7 @@
   {
     "key": "2A10",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "circulation function"
       }
     },
@@ -3769,7 +3769,7 @@
   {
     "key": "2A11",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral en sentido antihorario"
       }
     },
@@ -3778,7 +3778,7 @@
   {
     "key": "2A12",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral lineal para rectángulo en polo"
       }
     },
@@ -3787,7 +3787,7 @@
   {
     "key": "2A13",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral lineal para semicírculo en polo"
       }
     },
@@ -3796,7 +3796,7 @@
   {
     "key": "2A14",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral lineal excluyendo el polo"
       }
     },
@@ -3805,7 +3805,7 @@
   {
     "key": "2A15",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral en torno de un punto operador"
       }
     },
@@ -3814,7 +3814,7 @@
   {
     "key": "2A16",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "operador integral para cuaterniones"
       }
     },
@@ -3823,7 +3823,7 @@
   {
     "key": "2A22",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más con círculo"
       }
     },
@@ -3832,7 +3832,7 @@
   {
     "key": "2A23",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más con ángulo"
       }
     },
@@ -3841,7 +3841,7 @@
   {
     "key": "2A24",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde con más suscrito"
       }
     },
@@ -3850,7 +3850,7 @@
   {
     "key": "2A25",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más con punto inferior"
       }
     },
@@ -3859,7 +3859,7 @@
   {
     "key": "2A26",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde con más"
       }
     },
@@ -3868,7 +3868,7 @@
   {
     "key": "2A27",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más con 2 suscrito"
       }
     },
@@ -3877,7 +3877,7 @@
   {
     "key": "2A29",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos con coma"
       }
     },
@@ -3886,7 +3886,7 @@
   {
     "key": "2A2A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos con punto inferior"
       }
     },
@@ -3895,7 +3895,7 @@
   {
     "key": "2A2D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más en semicírculo izquierdo"
       }
     },
@@ -3904,7 +3904,7 @@
   {
     "key": "2A2E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más en semicírculo derecho"
       }
     },
@@ -3913,7 +3913,7 @@
   {
     "key": "2A2F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto vectorial"
       }
     },
@@ -3922,7 +3922,7 @@
   {
     "key": "2A30",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por con punto"
       }
     },
@@ -3931,7 +3931,7 @@
   {
     "key": "2A31",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por con subrayado"
       }
     },
@@ -3940,7 +3940,7 @@
   {
     "key": "2A33",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "smash product"
       }
     },
@@ -3949,7 +3949,7 @@
   {
     "key": "2A34",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por en semicírculo izquierdo"
       }
     },
@@ -3958,7 +3958,7 @@
   {
     "key": "2A35",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por en semicírculo derecho"
       }
     },
@@ -3967,7 +3967,7 @@
   {
     "key": "2A36",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por en círculo con ángulo"
       }
     },
@@ -3976,7 +3976,7 @@
   {
     "key": "2A37",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por en anillo"
       }
     },
@@ -3985,7 +3985,7 @@
   {
     "key": "2A38",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "división en círculo"
       }
     },
@@ -3994,7 +3994,7 @@
   {
     "key": "2A39",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más en triángulo"
       }
     },
@@ -4003,7 +4003,7 @@
   {
     "key": "2A3A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menos en triángulo"
       }
     },
@@ -4012,7 +4012,7 @@
   {
     "key": "2A3B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por en triángulo"
       }
     },
@@ -4021,7 +4021,7 @@
   {
     "key": "2A3C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "producto interior"
       }
     },
@@ -4030,7 +4030,7 @@
   {
     "key": "2A3F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "coproducto"
       }
     },
@@ -4039,7 +4039,7 @@
   {
     "key": "2A40",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección con punto"
       }
     },
@@ -4048,7 +4048,7 @@
   {
     "key": "2A42",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión con barra"
       }
     },
@@ -4057,7 +4057,7 @@
   {
     "key": "2A43",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección con barra"
       }
     },
@@ -4066,7 +4066,7 @@
   {
     "key": "2A44",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección con and"
       }
     },
@@ -4075,7 +4075,7 @@
   {
     "key": "2A45",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión con or"
       }
     },
@@ -4084,7 +4084,7 @@
   {
     "key": "2A46",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión sobre intersección"
       }
     },
@@ -4093,7 +4093,7 @@
   {
     "key": "2A47",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección sobre unión"
       }
     },
@@ -4102,7 +4102,7 @@
   {
     "key": "2A48",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión sobre barra, sobre intersección"
       }
     },
@@ -4111,7 +4111,7 @@
   {
     "key": "2A49",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección sobre barra, sobre unión "
       }
     },
@@ -4120,7 +4120,7 @@
   {
     "key": "2A4A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión y unión"
       }
     },
@@ -4129,7 +4129,7 @@
   {
     "key": "2A4B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección e intersección"
       }
     },
@@ -4138,7 +4138,7 @@
   {
     "key": "2A4C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión cerrada"
       }
     },
@@ -4147,7 +4147,7 @@
   {
     "key": "2A4D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "intersección cerrada"
       }
     },
@@ -4156,7 +4156,7 @@
   {
     "key": "2A50",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "unión cerrada con por"
       }
     },
@@ -4165,7 +4165,7 @@
   {
     "key": "2A53",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "y"
       }
     },
@@ -4174,7 +4174,7 @@
   {
     "key": "2A54",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o"
       }
     },
@@ -4183,7 +4183,7 @@
   {
     "key": "2A55",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "two intersecting logical and"
       }
     },
@@ -4192,7 +4192,7 @@
   {
     "key": "2A56",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "two intersecting logical or"
       }
     },
@@ -4201,7 +4201,7 @@
   {
     "key": "2A57",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sloping large or"
       }
     },
@@ -4210,7 +4210,7 @@
   {
     "key": "2A58",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sloping large and"
       }
     },
@@ -4219,7 +4219,7 @@
   {
     "key": "2A5A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logical and with middle stem"
       }
     },
@@ -4228,7 +4228,7 @@
   {
     "key": "2A5B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logical or with middle stem"
       }
     },
@@ -4237,7 +4237,7 @@
   {
     "key": "2A5C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logical and with horizontal dash"
       }
     },
@@ -4246,7 +4246,7 @@
   {
     "key": "2A5D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logical or with horizontal dash"
       }
     },
@@ -4255,7 +4255,7 @@
   {
     "key": "2A5F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logical and with underbar"
       }
     },
@@ -4264,7 +4264,7 @@
   {
     "key": "2A66",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con punto suscrito"
       }
     },
@@ -4273,7 +4273,7 @@
   {
     "key": "2A6A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde con punto"
       }
     },
@@ -4282,7 +4282,7 @@
   {
     "key": "2A6D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "congruente con punto"
       }
     },
@@ -4291,7 +4291,7 @@
   {
     "key": "2A6F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "casi igual con ángulo"
       }
     },
@@ -4300,7 +4300,7 @@
   {
     "key": "2A71",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con más suscrito"
       }
     },
@@ -4309,7 +4309,7 @@
   {
     "key": "2A72",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con más"
       }
     },
@@ -4318,7 +4318,7 @@
   {
     "key": "2A73",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con operador tilde"
       }
     },
@@ -4327,7 +4327,7 @@
   {
     "key": "2A74",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual con dos puntos"
       }
     },
@@ -4336,7 +4336,7 @@
   {
     "key": "2A75",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual doble"
       }
     },
@@ -4345,7 +4345,7 @@
   {
     "key": "2A77",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "igual entre cuatro puntos"
       }
     },
@@ -4354,7 +4354,7 @@
   {
     "key": "2A78",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "equivalente con cuatro puntos"
       }
     },
@@ -4363,7 +4363,7 @@
   {
     "key": "2A79",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que con círculo interior"
       }
     },
@@ -4372,7 +4372,7 @@
   {
     "key": "2A7A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que con círculo interior"
       }
     },
@@ -4381,7 +4381,7 @@
   {
     "key": "2A7B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que con interrogante"
       }
     },
@@ -4390,7 +4390,7 @@
   {
     "key": "2A7C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que con interrogante"
       }
     },
@@ -4399,7 +4399,7 @@
   {
     "key": "2A7D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que"
       }
     },
@@ -4408,7 +4408,7 @@
   {
     "key": "2A7E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que"
       }
     },
@@ -4417,7 +4417,7 @@
   {
     "key": "2A7F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que con punto interior"
       }
     },
@@ -4426,7 +4426,7 @@
   {
     "key": "2A80",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que con punto interior"
       }
     },
@@ -4435,7 +4435,7 @@
   {
     "key": "2A81",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que con punto"
       }
     },
@@ -4444,7 +4444,7 @@
   {
     "key": "2A82",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que con punto"
       }
     },
@@ -4453,7 +4453,7 @@
   {
     "key": "2A83",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que con punto"
       }
     },
@@ -4462,7 +4462,7 @@
   {
     "key": "2A84",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que con punto"
       }
     },
@@ -4471,7 +4471,7 @@
   {
     "key": "2A89",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que, pero no aproximado a"
       }
     },
@@ -4480,7 +4480,7 @@
   {
     "key": "2A8A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que, pero no aproximado a"
       }
     },
@@ -4489,7 +4489,7 @@
   {
     "key": "2A8D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor, similar o igual a"
       }
     },
@@ -4498,7 +4498,7 @@
   {
     "key": "2A8E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor, similar o igual a"
       }
     },
@@ -4507,7 +4507,7 @@
   {
     "key": "2A8F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor, similar o mayor que"
       }
     },
@@ -4516,7 +4516,7 @@
   {
     "key": "2A90",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor, similar o menor que"
       }
     },
@@ -4525,7 +4525,7 @@
   {
     "key": "2A91",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor, mayor o igual a"
       }
     },
@@ -4534,7 +4534,7 @@
   {
     "key": "2A92",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor, menor o igual a"
       }
     },
@@ -4543,7 +4543,7 @@
   {
     "key": "2A93",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor o mayor que"
       }
     },
@@ -4552,7 +4552,7 @@
   {
     "key": "2A94",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor o menor que"
       }
     },
@@ -4561,7 +4561,7 @@
   {
     "key": "2A97",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que con punto interior"
       }
     },
@@ -4570,7 +4570,7 @@
   {
     "key": "2A98",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que con punto interior"
       }
     },
@@ -4579,7 +4579,7 @@
   {
     "key": "2A99",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor o igual a"
       }
     },
@@ -4588,7 +4588,7 @@
   {
     "key": "2A9A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o igual a"
       }
     },
@@ -4597,7 +4597,7 @@
   {
     "key": "2A9D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "equivalente o menor que"
       }
     },
@@ -4606,7 +4606,7 @@
   {
     "key": "2A9E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o similar a"
       }
     },
@@ -4615,7 +4615,7 @@
   {
     "key": "2A9F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "similar, menor o igual a"
       }
     },
@@ -4624,7 +4624,7 @@
   {
     "key": "2AA0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "similar, mayor o igual a"
       }
     },
@@ -4633,7 +4633,7 @@
   {
     "key": "2AA1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mucho menor que"
       }
     },
@@ -4642,7 +4642,7 @@
   {
     "key": "2AA2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mucho mayor que"
       }
     },
@@ -4651,7 +4651,7 @@
   {
     "key": "2AA4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que, mayor que"
       }
     },
@@ -4660,7 +4660,7 @@
   {
     "key": "2AA5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor o menor que"
       }
     },
@@ -4669,7 +4669,7 @@
   {
     "key": "2AA6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "menor que cerrado con curva"
       }
     },
@@ -4678,7 +4678,7 @@
   {
     "key": "2AA7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayor que cerrado con curva"
       }
     },
@@ -4687,7 +4687,7 @@
   {
     "key": "2AA8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente menor que cerrado con curva"
       }
     },
@@ -4696,7 +4696,7 @@
   {
     "key": "2AA9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "estrictamente mayor que cerrado con curva"
       }
     },
@@ -4705,7 +4705,7 @@
   {
     "key": "2AAA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más reducido que"
       }
     },
@@ -4714,7 +4714,7 @@
   {
     "key": "2AAB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más amplio que"
       }
     },
@@ -4723,7 +4723,7 @@
   {
     "key": "2AAC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más reducido o igual a"
       }
     },
@@ -4732,7 +4732,7 @@
   {
     "key": "2AAD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más amplio o igual a"
       }
     },
@@ -4741,7 +4741,7 @@
   {
     "key": "2AAE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "diferencia entre"
       }
     },
@@ -4750,7 +4750,7 @@
   {
     "key": "2AAF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede o es igual a"
       }
     },
@@ -4759,7 +4759,7 @@
   {
     "key": "2AB5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede estrictamente a"
       }
     },
@@ -4768,7 +4768,7 @@
   {
     "key": "2AB6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue estrictamente a"
       }
     },
@@ -4777,7 +4777,7 @@
   {
     "key": "2ABB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "precede mucho antes"
       }
     },
@@ -4786,7 +4786,7 @@
   {
     "key": "2ABC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigue mucho después"
       }
     },
@@ -4795,7 +4795,7 @@
   {
     "key": "2ABD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "subrelación de"
       }
     },
@@ -4804,7 +4804,7 @@
   {
     "key": "2ABE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene como subrelación a"
       }
     },
@@ -4813,7 +4813,7 @@
   {
     "key": "2ABF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido con más suscrito"
       }
     },
@@ -4822,7 +4822,7 @@
   {
     "key": "2AC0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene con más suscrito"
       }
     },
@@ -4831,7 +4831,7 @@
   {
     "key": "2AC1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido con por suscrito"
       }
     },
@@ -4840,7 +4840,7 @@
   {
     "key": "2AC2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene con por suscrito"
       }
     },
@@ -4849,7 +4849,7 @@
   {
     "key": "2AC3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido con punto o es igual a"
       }
     },
@@ -4858,7 +4858,7 @@
   {
     "key": "2AC4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene con punto o es igual a"
       }
     },
@@ -4867,7 +4867,7 @@
   {
     "key": "2AC7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido aproximadamente en"
       }
     },
@@ -4876,7 +4876,7 @@
   {
     "key": "2AC8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene aproximadamente a"
       }
     },
@@ -4885,7 +4885,7 @@
   {
     "key": "2ACF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido con cierre en"
       }
     },
@@ -4894,7 +4894,7 @@
   {
     "key": "2AD0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene al cierre del subconjunto"
       }
     },
@@ -4903,7 +4903,7 @@
   {
     "key": "2AD1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido el cierre o es igual a"
       }
     },
@@ -4912,7 +4912,7 @@
   {
     "key": "2AD2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene al cierre del subconjunto o es igual a"
       }
     },
@@ -4921,7 +4921,7 @@
   {
     "key": "2AD3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "está incluido o contiene a"
       }
     },
@@ -4930,7 +4930,7 @@
   {
     "key": "2AD4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene o está incluido en"
       }
     },
@@ -4939,7 +4939,7 @@
   {
     "key": "2AD5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "incluido doblemente en"
       }
     },
@@ -4948,7 +4948,7 @@
   {
     "key": "2AD6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene doblemente a"
       }
     },
@@ -4957,7 +4957,7 @@
   {
     "key": "2AD7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene o está incluido en"
       }
     },
@@ -4966,7 +4966,7 @@
   {
     "key": "2AD8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "contiene o está incluido en"
       }
     },
@@ -4975,7 +4975,7 @@
   {
     "key": "2AD9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perteneciente dirigido hacia abajo"
       }
     },
@@ -4984,7 +4984,7 @@
   {
     "key": "2ADA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pitchfork with tee top"
       }
     },
@@ -4993,7 +4993,7 @@
   {
     "key": "2ADB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "transversal intersection"
       }
     },
@@ -5002,7 +5002,7 @@
   {
     "key": "2AE4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "double left turnstile vertical bar"
       }
     },
@@ -5011,7 +5011,7 @@
   {
     "key": "2AE6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "long dash from left member of double vertical"
       }
     },
@@ -5020,7 +5020,7 @@
   {
     "key": "2AE7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "short down tack with overbar"
       }
     },
@@ -5029,7 +5029,7 @@
   {
     "key": "2AE8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra con perpendicular"
       }
     },
@@ -5038,7 +5038,7 @@
   {
     "key": "2AE9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "short up tack above short down tack"
       }
     },
@@ -5047,7 +5047,7 @@
   {
     "key": "2AEB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "double up tack"
       }
     },
@@ -5056,7 +5056,7 @@
   {
     "key": "2AEC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "double stroke not sign"
       }
     },
@@ -5065,7 +5065,7 @@
   {
     "key": "2AED",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "reversed double stroke not sign"
       }
     },
@@ -5074,7 +5074,7 @@
   {
     "key": "2AEE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "does not divide with reversed negation slash"
       }
     },
@@ -5083,7 +5083,7 @@
   {
     "key": "2AEF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra vertical con círculo"
       }
     },
@@ -5092,7 +5092,7 @@
   {
     "key": "2AF0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra con círculo inferior"
       }
     },
@@ -5101,7 +5101,7 @@
   {
     "key": "2AF1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "down tack with circle below"
       }
     },
@@ -5110,7 +5110,7 @@
   {
     "key": "2AF2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paralela con marca"
       }
     },
@@ -5119,7 +5119,7 @@
   {
     "key": "2AF3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paralela con tilde"
       }
     },
@@ -5128,7 +5128,7 @@
   {
     "key": "FE68",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "división entera"
       }
     },
@@ -5137,7 +5137,7 @@
   {
     "key": "FF5C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra vertical"
       }
     },

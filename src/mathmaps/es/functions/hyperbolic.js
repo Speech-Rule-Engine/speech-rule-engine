@@ -8,7 +8,7 @@
       "cosh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "coseno hiperbólico"
       }
     },
@@ -20,7 +20,7 @@
       "coth"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cotangente hiperbólica"
       }
     },
@@ -32,7 +32,7 @@
       "csch"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cosecante hiperbólica"
       }
     },
@@ -44,7 +44,7 @@
       "sech"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "secante hiperbólica"
       }
     },
@@ -56,7 +56,7 @@
       "sinh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "seno hiperbólico"
       }
     },
@@ -68,7 +68,7 @@
       "tanh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tangente hiperbólica"
       }
     },
@@ -81,7 +81,7 @@
       "arccosh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "area coseno hiperbólico"
       }
     },
@@ -94,7 +94,7 @@
       "arccoth"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "area cotangente hiperbólica"
       }
     },
@@ -107,7 +107,7 @@
       "arccsch"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "area cosecante hiperbólica"
       }
     },
@@ -120,7 +120,7 @@
       "arcsech"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "area secante hiperbólica"
       }
     },
@@ -133,7 +133,7 @@
       "arcsinh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "area seno hiperbólico"
       }
     },
@@ -146,7 +146,7 @@
       "arctanh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "area tangente hiperbólica"
       }
     },

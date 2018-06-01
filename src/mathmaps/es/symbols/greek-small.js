@@ -5,7 +5,7 @@
   {
     "key": "03B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "alfa"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "03B2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "beta"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "03B3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "gamma"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "03B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "delta"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "03B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "épsilon"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "03B6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "zeta"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "03B7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "eta"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "03B8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "theta"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "03B9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "iota"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "03BA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kappa"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "03BB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "lambda"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "03BC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mi"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "03BD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ni"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "03BE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "xi"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "03BF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ómicron"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "03C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pi"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "03C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rho"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "03C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigma final"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "03C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sigma"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "03C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tau"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "03C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ípsilon"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "03C6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "phi"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "03C7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ji"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "03C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "psi"
       }
     },
@@ -221,7 +221,7 @@
   {
     "key": "03C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "omega"
       }
     },

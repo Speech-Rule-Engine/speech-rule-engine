@@ -5,7 +5,7 @@
   {
     "key": "24C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "S en círculo"
       }
     },

@@ -5,7 +5,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula A"
       }
     },
@@ -14,7 +14,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula B"
       }
     },
@@ -23,7 +23,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula C"
       }
     },
@@ -32,7 +32,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula D"
       }
     },
@@ -41,7 +41,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula E"
       }
     },
@@ -50,7 +50,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula F"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula G"
       }
     },
@@ -68,7 +68,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula H"
       }
     },
@@ -77,7 +77,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula I"
       }
     },
@@ -86,7 +86,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula J"
       }
     },
@@ -95,7 +95,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula K"
       }
     },
@@ -104,7 +104,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula L"
       }
     },
@@ -113,7 +113,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula M"
       }
     },
@@ -122,7 +122,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula N"
       }
     },
@@ -131,7 +131,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula O"
       }
     },
@@ -140,7 +140,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula P"
       }
     },
@@ -149,7 +149,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula Q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula R"
       }
     },
@@ -167,7 +167,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula S"
       }
     },
@@ -176,7 +176,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula T"
       }
     },
@@ -185,7 +185,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula U"
       }
     },
@@ -194,7 +194,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula V"
       }
     },
@@ -203,7 +203,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula W"
       }
     },
@@ -212,7 +212,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula X"
       }
     },
@@ -221,7 +221,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula Y"
       }
     },
@@ -230,7 +230,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif mayúscula Z"
       }
     },
@@ -239,7 +239,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif a"
       }
     },
@@ -248,7 +248,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif b"
       }
     },
@@ -257,7 +257,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif c"
       }
     },
@@ -266,7 +266,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif d"
       }
     },
@@ -275,7 +275,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif e"
       }
     },
@@ -284,7 +284,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif f"
       }
     },
@@ -293,7 +293,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif g"
       }
     },
@@ -302,7 +302,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif h"
       }
     },
@@ -311,7 +311,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif i"
       }
     },
@@ -320,7 +320,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif j"
       }
     },
@@ -329,7 +329,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif k"
       }
     },
@@ -338,7 +338,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif l"
       }
     },
@@ -347,7 +347,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif m"
       }
     },
@@ -356,7 +356,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif n"
       }
     },
@@ -365,7 +365,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif o"
       }
     },
@@ -374,7 +374,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif p"
       }
     },
@@ -383,7 +383,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif q"
       }
     },
@@ -392,7 +392,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif r"
       }
     },
@@ -401,7 +401,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif s"
       }
     },
@@ -410,7 +410,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif t"
       }
     },
@@ -419,7 +419,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif u"
       }
     },
@@ -428,7 +428,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif v"
       }
     },
@@ -437,7 +437,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif w"
       }
     },
@@ -446,7 +446,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif x"
       }
     },
@@ -455,7 +455,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif y"
       }
     },
@@ -464,7 +464,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif z"
       }
     },

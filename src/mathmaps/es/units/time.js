@@ -8,7 +8,7 @@
       "ns"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "nanosegundos"
       }
     },
@@ -20,7 +20,7 @@
       "µs"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "microsegundos"
       }
     },
@@ -32,7 +32,7 @@
       "ms"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "milisegundos"
       }
     },
@@ -44,7 +44,7 @@
       "s"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "segundos"
       }
     },
@@ -56,7 +56,7 @@
       "min"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "minutos"
       }
     },
@@ -69,7 +69,7 @@
       "hr"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "hora"
       }
     },

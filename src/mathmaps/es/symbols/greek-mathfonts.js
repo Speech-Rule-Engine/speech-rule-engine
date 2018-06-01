@@ -5,7 +5,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Alfa"
       }
     },
@@ -14,7 +14,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Beta"
       }
     },
@@ -23,7 +23,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Gamma"
       }
     },
@@ -32,7 +32,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Delta"
       }
     },
@@ -41,7 +41,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Épsilon"
       }
     },
@@ -50,7 +50,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Zeta"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Eta"
       }
     },
@@ -68,7 +68,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Theta"
       }
     },
@@ -77,7 +77,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Iota"
       }
     },
@@ -86,7 +86,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Kappa"
       }
     },
@@ -95,7 +95,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Lambda"
       }
     },
@@ -104,7 +104,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Mi"
       }
     },
@@ -113,7 +113,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Ni"
       }
     },
@@ -122,7 +122,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Xi"
       }
     },
@@ -131,7 +131,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Ómicron"
       }
     },
@@ -140,7 +140,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Pi"
       }
     },
@@ -149,7 +149,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Rho"
       }
     },
@@ -158,7 +158,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Theta"
       }
     },
@@ -167,7 +167,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Sigma"
       }
     },
@@ -176,7 +176,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Tau"
       }
     },
@@ -185,7 +185,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Ípsilon"
       }
     },
@@ -194,7 +194,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Phi"
       }
     },
@@ -203,7 +203,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Ji"
       }
     },
@@ -212,7 +212,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Psi"
       }
     },
@@ -221,7 +221,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mayúscula Omega"
       }
     },
@@ -230,7 +230,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita alfa"
       }
     },
@@ -239,7 +239,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita beta"
       }
     },
@@ -248,7 +248,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita gamma"
       }
     },
@@ -257,7 +257,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita delta"
       }
     },
@@ -266,7 +266,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita épsilon"
       }
     },
@@ -275,7 +275,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita zeta"
       }
     },
@@ -284,7 +284,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita eta"
       }
     },
@@ -293,7 +293,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita theta"
       }
     },
@@ -302,7 +302,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita iota"
       }
     },
@@ -311,7 +311,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita kappa"
       }
     },
@@ -320,7 +320,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita lambda"
       }
     },
@@ -329,7 +329,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita mi"
       }
     },
@@ -338,7 +338,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita ni"
       }
     },
@@ -347,7 +347,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita xi"
       }
     },
@@ -356,7 +356,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita ómicron"
       }
     },
@@ -365,7 +365,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita pi"
       }
     },
@@ -374,7 +374,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita rho"
       }
     },
@@ -383,7 +383,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita final sigma"
       }
     },
@@ -392,7 +392,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita sigma"
       }
     },
@@ -401,7 +401,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita tau"
       }
     },
@@ -410,7 +410,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita ípsilon"
       }
     },
@@ -419,7 +419,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita phi"
       }
     },
@@ -428,7 +428,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita ji"
       }
     },
@@ -437,7 +437,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita psi"
       }
     },
@@ -446,7 +446,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita omega"
       }
     },
@@ -455,7 +455,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Alfa"
       }
     },
@@ -464,7 +464,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Beta"
       }
     },
@@ -473,7 +473,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Gamma"
       }
     },
@@ -482,7 +482,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Delta"
       }
     },
@@ -491,7 +491,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Épsilon"
       }
     },
@@ -500,7 +500,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Zeta"
       }
     },
@@ -509,7 +509,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Eta"
       }
     },
@@ -518,7 +518,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Theta"
       }
     },
@@ -527,7 +527,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Iota"
       }
     },
@@ -536,7 +536,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Kappa"
       }
     },
@@ -545,7 +545,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Lambda"
       }
     },
@@ -554,7 +554,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Mi"
       }
     },
@@ -563,7 +563,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Ni"
       }
     },
@@ -572,7 +572,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Xi"
       }
     },
@@ -581,7 +581,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Ómicron"
       }
     },
@@ -590,7 +590,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Pi"
       }
     },
@@ -599,7 +599,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Rho"
       }
     },
@@ -608,7 +608,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Theta"
       }
     },
@@ -617,7 +617,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Sigma"
       }
     },
@@ -626,7 +626,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Tau"
       }
     },
@@ -635,7 +635,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Ípsilon"
       }
     },
@@ -644,7 +644,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Phi"
       }
     },
@@ -653,7 +653,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Ji"
       }
     },
@@ -662,7 +662,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Psi"
       }
     },
@@ -671,7 +671,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mayúscula Omega"
       }
     },
@@ -680,7 +680,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva alfa"
       }
     },
@@ -689,7 +689,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva beta"
       }
     },
@@ -698,7 +698,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva gamma"
       }
     },
@@ -707,7 +707,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva delta"
       }
     },
@@ -716,7 +716,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva épsilon"
       }
     },
@@ -725,7 +725,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva zeta"
       }
     },
@@ -734,7 +734,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva eta"
       }
     },
@@ -743,7 +743,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva theta"
       }
     },
@@ -752,7 +752,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva iota"
       }
     },
@@ -761,7 +761,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva kappa"
       }
     },
@@ -770,7 +770,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva lambda"
       }
     },
@@ -779,7 +779,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva mi"
       }
     },
@@ -788,7 +788,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva ni"
       }
     },
@@ -797,7 +797,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva xi"
       }
     },
@@ -806,7 +806,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva ómicron"
       }
     },
@@ -815,7 +815,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva pi"
       }
     },
@@ -824,7 +824,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva rho"
       }
     },
@@ -833,7 +833,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva final sigma"
       }
     },
@@ -842,7 +842,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva sigma"
       }
     },
@@ -851,7 +851,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva tau"
       }
     },
@@ -860,7 +860,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva ípsilon"
       }
     },
@@ -869,7 +869,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva phi"
       }
     },
@@ -878,7 +878,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva ji"
       }
     },
@@ -887,7 +887,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva psi"
       }
     },
@@ -896,7 +896,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva omega"
       }
     },
@@ -905,7 +905,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Alfa"
       }
     },
@@ -914,7 +914,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Beta"
       }
     },
@@ -923,7 +923,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Gamma"
       }
     },
@@ -932,7 +932,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Delta"
       }
     },
@@ -941,7 +941,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Épsilon"
       }
     },
@@ -950,7 +950,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Zeta"
       }
     },
@@ -959,7 +959,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Eta"
       }
     },
@@ -968,7 +968,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Theta"
       }
     },
@@ -977,7 +977,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Iota"
       }
     },
@@ -986,7 +986,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Kappa"
       }
     },
@@ -995,7 +995,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Lambda"
       }
     },
@@ -1004,7 +1004,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Mi"
       }
     },
@@ -1013,7 +1013,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Ni"
       }
     },
@@ -1022,7 +1022,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Xi"
       }
     },
@@ -1031,7 +1031,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Ómicron"
       }
     },
@@ -1040,7 +1040,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Pi"
       }
     },
@@ -1049,7 +1049,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Rho"
       }
     },
@@ -1058,7 +1058,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Theta"
       }
     },
@@ -1067,7 +1067,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Sigma"
       }
     },
@@ -1076,7 +1076,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Tau"
       }
     },
@@ -1085,7 +1085,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Ípsilon"
       }
     },
@@ -1094,7 +1094,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Phi"
       }
     },
@@ -1103,7 +1103,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Ji"
       }
     },
@@ -1112,7 +1112,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Psi"
       }
     },
@@ -1121,7 +1121,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mayúscula Omega"
       }
     },
@@ -1130,7 +1130,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita alfa"
       }
     },
@@ -1139,7 +1139,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita beta"
       }
     },
@@ -1148,7 +1148,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita gamma"
       }
     },
@@ -1157,7 +1157,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita delta"
       }
     },
@@ -1166,7 +1166,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita épsilon"
       }
     },
@@ -1175,7 +1175,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita zeta"
       }
     },
@@ -1184,7 +1184,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita eta"
       }
     },
@@ -1193,7 +1193,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita theta"
       }
     },
@@ -1202,7 +1202,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita iota"
       }
     },
@@ -1211,7 +1211,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita kappa"
       }
     },
@@ -1220,7 +1220,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita lambda"
       }
     },
@@ -1229,7 +1229,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita mi"
       }
     },
@@ -1238,7 +1238,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita ni"
       }
     },
@@ -1247,7 +1247,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita xi"
       }
     },
@@ -1256,7 +1256,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita ómicron"
       }
     },
@@ -1265,7 +1265,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita pi"
       }
     },
@@ -1274,7 +1274,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita rho"
       }
     },
@@ -1283,7 +1283,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita final sigma"
       }
     },
@@ -1292,7 +1292,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita sigma"
       }
     },
@@ -1301,7 +1301,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita tau"
       }
     },
@@ -1310,7 +1310,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita ípsilon"
       }
     },
@@ -1319,7 +1319,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita phi"
       }
     },
@@ -1328,7 +1328,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita ji"
       }
     },
@@ -1337,7 +1337,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita psi"
       }
     },
@@ -1346,7 +1346,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita omega"
       }
     },

@@ -5,7 +5,7 @@
   {
     "key": "22BE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo recto con arco"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "237C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo recto con flecha zigzag hacia abajo"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "27C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo sólido"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "299D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo recto medido con punto"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "29A4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo con barra inferior"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "29A5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo inverso con barra inferior"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "29A6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo oblicuo hacia arriba"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "29A7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo oblicuo hacia abajo"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "29A8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing up and to the right"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "29A9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing up and to the left"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "29AA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing down and to the right"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "29AB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing down and to the left"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "29AC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing right and up"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "29AD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing left and up"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "29AE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing right and down"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "29AF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "measured angle with open arm ending in arrow pointing left and down"
       }
     },

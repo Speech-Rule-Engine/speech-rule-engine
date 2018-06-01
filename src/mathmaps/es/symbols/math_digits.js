@@ -5,7 +5,7 @@
   {
     "key": "00B2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "super 2"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "00B3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "super 3"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "00B9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "super 1"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "00BC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "un cuarto"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "00BD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "un medio"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "00BE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tres cuartos"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "2153",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "un tercio"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "2154",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos tercios"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "2155",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "un quinto"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "2156",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos quintos"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "2157",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tres quintos"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "2158",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuatro quintos"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "2159",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "un sexto"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "215A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cinco sextos"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "215B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "un octavo"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "215C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tres octavos"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "215D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cinco octavos"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "215E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "siete octavos"
       }
     },
@@ -167,7 +167,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 0"
       }
     },
@@ -176,7 +176,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 1"
       }
     },
@@ -185,7 +185,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 2"
       }
     },
@@ -194,7 +194,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 3"
       }
     },
@@ -203,7 +203,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 4"
       }
     },
@@ -212,7 +212,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 5"
       }
     },
@@ -221,7 +221,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 6"
       }
     },
@@ -230,7 +230,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 7"
       }
     },
@@ -239,7 +239,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 8"
       }
     },
@@ -248,7 +248,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita 9"
       }
     },
@@ -257,7 +257,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 0"
       }
     },
@@ -266,7 +266,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 1"
       }
     },
@@ -275,7 +275,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 2"
       }
     },
@@ -284,7 +284,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 3"
       }
     },
@@ -293,7 +293,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 4"
       }
     },
@@ -302,7 +302,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 5"
       }
     },
@@ -311,7 +311,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 6"
       }
     },
@@ -320,7 +320,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 7"
       }
     },
@@ -329,7 +329,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 8"
       }
     },
@@ -338,7 +338,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra 9"
       }
     },
@@ -347,7 +347,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 0"
       }
     },
@@ -356,7 +356,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 1"
       }
     },
@@ -365,7 +365,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 2"
       }
     },
@@ -374,7 +374,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 3"
       }
     },
@@ -383,7 +383,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 4"
       }
     },
@@ -392,7 +392,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 5"
       }
     },
@@ -401,7 +401,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 6"
       }
     },
@@ -410,7 +410,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 7"
       }
     },
@@ -419,7 +419,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 8"
       }
     },
@@ -428,7 +428,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif 9"
       }
     },
@@ -437,7 +437,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 0"
       }
     },
@@ -446,7 +446,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 1"
       }
     },
@@ -455,7 +455,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 2"
       }
     },
@@ -464,7 +464,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 3"
       }
     },
@@ -473,7 +473,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 4"
       }
     },
@@ -482,7 +482,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 5"
       }
     },
@@ -491,7 +491,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 6"
       }
     },
@@ -500,7 +500,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 7"
       }
     },
@@ -509,7 +509,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 8"
       }
     },
@@ -518,7 +518,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "sans-serif negrita 9"
       }
     },
@@ -527,7 +527,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 0"
       }
     },
@@ -536,7 +536,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 1"
       }
     },
@@ -545,7 +545,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 2"
       }
     },
@@ -554,7 +554,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 3"
       }
     },
@@ -563,7 +563,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 4"
       }
     },
@@ -572,7 +572,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 5"
       }
     },
@@ -581,7 +581,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 6"
       }
     },
@@ -590,7 +590,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 7"
       }
     },
@@ -599,7 +599,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 8"
       }
     },
@@ -608,7 +608,7 @@
   {
     "category": "Nd",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio 9"
       }
     },
@@ -617,7 +617,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "0 punto"
       }
     },
@@ -626,7 +626,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "0 coma"
       }
     },
@@ -635,7 +635,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "1 coma"
       }
     },
@@ -644,7 +644,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "2 coma"
       }
     },
@@ -653,7 +653,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "3 coma"
       }
     },
@@ -662,7 +662,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "4 coma"
       }
     },
@@ -671,7 +671,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "5 coma"
       }
     },
@@ -680,7 +680,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "6 coma"
       }
     },
@@ -689,7 +689,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "7 coma"
       }
     },
@@ -698,7 +698,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "8 coma"
       }
     },
@@ -707,7 +707,7 @@
   {
     "category": "No",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "9 coma"
       }
     },

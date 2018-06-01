@@ -2,7 +2,7 @@
   {
     "key": "20A1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos puntos"
       }
     }
@@ -10,7 +10,7 @@
   {
     "key": "20A2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cruceiro"
       }
     }
@@ -18,7 +18,7 @@
   {
     "key": "20A3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "franco"
       }
     }
@@ -26,7 +26,7 @@
   {
     "key": "20A4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "lira"
       }
     }
@@ -34,7 +34,7 @@
   {
     "key": "20A5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "molinos"
       }
     }
@@ -42,7 +42,7 @@
   {
     "key": "20A6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "naira"
       }
     }
@@ -50,7 +50,7 @@
   {
     "key": "20A7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "peseta"
       }
     }
@@ -58,7 +58,7 @@
   {
     "key": "20A8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rupia"
       }
     }
@@ -66,7 +66,7 @@
   {
     "key": "20A9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "won"
       }
     }
@@ -74,7 +74,7 @@
   {
     "key": "20AA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "nuevo sheqel"
       }
     }
@@ -82,7 +82,7 @@
   {
     "key": "20AB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dong"
       }
     }
@@ -90,7 +90,7 @@
   {
     "key": "20AC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "euro"
       }
     }
@@ -98,7 +98,7 @@
   {
     "key": "20AD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kip"
       }
     }
@@ -106,7 +106,7 @@
   {
     "key": "20AE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tugrik"
       }
     }
@@ -114,7 +114,7 @@
   {
     "key": "20AF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dracma"
       }
     }
@@ -122,7 +122,7 @@
   {
     "key": "20B0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "penique alemán"
       }
     }
@@ -130,7 +130,7 @@
   {
     "key": "20B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "peso"
       }
     }
@@ -138,7 +138,7 @@
   {
     "key": "20D0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón hacia la izquierda en superescrito"
       }
     }
@@ -146,7 +146,7 @@
   {
     "key": "20D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón en superescrito"
       }
     }
@@ -154,7 +154,7 @@
   {
     "key": "20D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la izquierda en superescrito"
       }
     }
@@ -162,7 +162,7 @@
   {
     "key": "20D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha en superescrito"
       }
     }
@@ -170,7 +170,7 @@
   {
     "key": "20DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tres puntos en superescrito"
       }
     }
@@ -178,7 +178,7 @@
   {
     "key": "20DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuatro puntos en superescrito"
       }
     }
@@ -186,7 +186,7 @@
   {
     "key": "20E1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble flecha en superescrito"
       }
     }
@@ -194,7 +194,7 @@
   {
     "key": "231A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "reloj"
       }
     }
@@ -202,7 +202,7 @@
   {
     "key": "232D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cilindricidad"
       }
     }
@@ -210,7 +210,7 @@
   {
     "key": "232E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "perfil"
       }
     }
@@ -218,7 +218,7 @@
   {
     "key": "233D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "apl símbolo funcional círculo portillo"
       }
     }
@@ -226,7 +226,7 @@
   {
     "key": "233F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "apl símbolo funcional barra"
       }
     }
@@ -234,7 +234,7 @@
   {
     "key": "260E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "teléfono en negro"
       }
     }
@@ -242,7 +242,7 @@
   {
     "key": "263A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rostro sonriente"
       }
     }
@@ -250,7 +250,7 @@
   {
     "key": "263D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuarto creciente"
       }
     }
@@ -258,7 +258,7 @@
   {
     "key": "263E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuarto menguante"
       }
     }
@@ -266,7 +266,7 @@
   {
     "key": "263F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Mercurio"
       }
     }
@@ -274,7 +274,7 @@
   {
     "key": "266A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "eighth note"
       }
     }
@@ -282,7 +282,7 @@
   {
     "key": "266B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "beamed eighth notes"
       }
     }
@@ -290,7 +290,7 @@
   {
     "key": "266C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "beamed sixteenth notes"
       }
     }
@@ -298,7 +298,7 @@
   {
     "key": "266D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "music flat sign"
       }
     }
@@ -306,7 +306,7 @@
   {
     "key": "266E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "music natural sign"
       }
     }
@@ -314,7 +314,7 @@
   {
     "key": "266F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "music sharp sign"
       }
     }

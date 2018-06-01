@@ -8,7 +8,7 @@
       "mm"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "milímetro"
       }
     },
@@ -20,7 +20,7 @@
       "cm"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "centímetro"
       }
     },
@@ -32,7 +32,7 @@
       "m"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "metro"
       }
     },
@@ -44,7 +44,7 @@
       "km"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilómetro"
       }
     },
@@ -57,7 +57,7 @@
       "ft."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pies"
       }
     },
@@ -70,7 +70,7 @@
       "in."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pulgada"
       }
     },
@@ -83,7 +83,7 @@
       "mi."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "milla"
       }
     },
@@ -96,7 +96,7 @@
       "yd."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "yarda"
       }
     },
@@ -108,7 +108,7 @@
       "n.m."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "millas náuticas"
       }
     }

@@ -5,7 +5,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula A"
       }
     },
@@ -14,7 +14,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula B"
       }
     },
@@ -23,7 +23,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula C"
       }
     },
@@ -32,7 +32,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula D"
       }
     },
@@ -41,7 +41,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula E"
       }
     },
@@ -50,7 +50,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula F"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula G"
       }
     },
@@ -68,7 +68,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula H"
       }
     },
@@ -77,7 +77,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula I"
       }
     },
@@ -86,7 +86,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula J"
       }
     },
@@ -95,7 +95,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula K"
       }
     },
@@ -104,7 +104,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula L"
       }
     },
@@ -113,7 +113,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula M"
       }
     },
@@ -122,7 +122,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula N"
       }
     },
@@ -131,7 +131,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula O"
       }
     },
@@ -140,7 +140,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula P"
       }
     },
@@ -149,7 +149,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula Q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula R"
       }
     },
@@ -167,7 +167,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula S"
       }
     },
@@ -176,7 +176,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula T"
       }
     },
@@ -185,7 +185,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula U"
       }
     },
@@ -194,7 +194,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula V"
       }
     },
@@ -203,7 +203,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula W"
       }
     },
@@ -212,7 +212,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula X"
       }
     },
@@ -221,7 +221,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula Y"
       }
     },
@@ -230,7 +230,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur mayúscula Z"
       }
     },
@@ -239,7 +239,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur a"
       }
     },
@@ -248,7 +248,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur b"
       }
     },
@@ -257,7 +257,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur c"
       }
     },
@@ -266,7 +266,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur d"
       }
     },
@@ -275,7 +275,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur e"
       }
     },
@@ -284,7 +284,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur f"
       }
     },
@@ -293,7 +293,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur g"
       }
     },
@@ -302,7 +302,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur h"
       }
     },
@@ -311,7 +311,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur i"
       }
     },
@@ -320,7 +320,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur j"
       }
     },
@@ -329,7 +329,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur k"
       }
     },
@@ -338,7 +338,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur l"
       }
     },
@@ -347,7 +347,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur m"
       }
     },
@@ -356,7 +356,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur n"
       }
     },
@@ -365,7 +365,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur o"
       }
     },
@@ -374,7 +374,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur p"
       }
     },
@@ -383,7 +383,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur q"
       }
     },
@@ -392,7 +392,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur r"
       }
     },
@@ -401,7 +401,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur s"
       }
     },
@@ -410,7 +410,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur t"
       }
     },
@@ -419,7 +419,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur u"
       }
     },
@@ -428,7 +428,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur v"
       }
     },
@@ -437,7 +437,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur w"
       }
     },
@@ -446,7 +446,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur x"
       }
     },
@@ -455,7 +455,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur y"
       }
     },
@@ -464,7 +464,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita Fraktur z"
       }
     },

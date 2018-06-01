@@ -5,7 +5,7 @@
   {
     "key": "21BC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con arpón arriba"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "21BD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con arpón debajo"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "21BE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba con arpón derecho"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "21BF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba con arpón izquierdo"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "21C0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha con arpón arriba"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "21C1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha con arpón debajo"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "21C2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha abajo con arpón derecho"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "21C3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha abajo con arpón izquierdo"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "21CB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón izquierdo arriba de arpón derecho"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "21CC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón derecho arriba de arpón izquierdo"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "294A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left barb up right barb down harpoon"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "294B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left barb down right barb up harpoon"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "294E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left barb up right barb up harpoon"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "294F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón a la derecha hacia arriba y abajo"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "2950",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left barb down right barb down harpoon"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "2951",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón a la izquierda hacia arriba y abajo"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "2952",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon to bar with barb upwards"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "2953",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon to bar with barb upwards"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "2954",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon to bar with barb rightwards"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "2955",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "downwards harpoon to bar with barb rightwards"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "2956",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon to bar with barb downwards"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "2957",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon to bar with barb downwards"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "2958",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon to bar with barb leftwards"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "2959",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "downwards harpoon to bar with barb leftwards"
       }
     },
@@ -221,7 +221,7 @@
   {
     "key": "295A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon from bar with barb upwards"
       }
     },
@@ -230,7 +230,7 @@
   {
     "key": "295B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon from bar with barb upwards"
       }
     },
@@ -239,7 +239,7 @@
   {
     "key": "295C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon from bar with barb rightwards"
       }
     },
@@ -248,7 +248,7 @@
   {
     "key": "295D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "downwards harpoon from bar with barb rightwards"
       }
     },
@@ -257,7 +257,7 @@
   {
     "key": "295E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon from bar with barb downwards"
       }
     },
@@ -266,7 +266,7 @@
   {
     "key": "295F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon from bar with barb downwards"
       }
     },
@@ -275,7 +275,7 @@
   {
     "key": "2960",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon from bar with barb leftwards"
       }
     },
@@ -284,7 +284,7 @@
   {
     "key": "2961",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "downwards harpoon from bar with barb leftwards"
       }
     },
@@ -293,7 +293,7 @@
   {
     "key": "2962",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon with barb up above leftwards harpoon with barb down"
       }
     },
@@ -302,7 +302,7 @@
   {
     "key": "2963",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon with barb left beside upwards harpoon with barb right"
       }
     },
@@ -311,7 +311,7 @@
   {
     "key": "2964",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon with barb up above rightwards harpoon with barb down"
       }
     },
@@ -320,7 +320,7 @@
   {
     "key": "2965",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "downwards harpoon with barb left beside downwards harpoon with barb right"
       }
     },
@@ -329,7 +329,7 @@
   {
     "key": "2966",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon with barb up above rightwards harpoon with barb up"
       }
     },
@@ -338,7 +338,7 @@
   {
     "key": "2967",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards harpoon with barb down above rightwards harpoon with barb down"
       }
     },
@@ -347,7 +347,7 @@
   {
     "key": "2968",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon with barb up above leftwards harpoon with barb up"
       }
     },
@@ -356,7 +356,7 @@
   {
     "key": "2969",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards harpoon with barb down above leftwards harpoon with barb down"
       }
     },
@@ -365,7 +365,7 @@
   {
     "key": "296A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra con arpón hacia la izquierda"
       }
     },
@@ -374,7 +374,7 @@
   {
     "key": "296B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón hacia la izquierda con barra"
       }
     },
@@ -383,7 +383,7 @@
   {
     "key": "296C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra con arpón hacia la derecha"
       }
     },
@@ -392,7 +392,7 @@
   {
     "key": "296D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arpón hacia la derecha con barra"
       }
     },
@@ -401,7 +401,7 @@
   {
     "key": "296E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon to the left of downwards harpoon"
       }
     },
@@ -410,7 +410,7 @@
   {
     "key": "296F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards harpoon to the right of downwards harpoon"
       }
     },
@@ -419,7 +419,7 @@
   {
     "key": "297C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left fish tail"
       }
     },
@@ -428,7 +428,7 @@
   {
     "key": "297D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right fish tail"
       }
     },
@@ -437,7 +437,7 @@
   {
     "key": "297E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra con doble gancho"
       }
     },
@@ -446,7 +446,7 @@
   {
     "key": "297F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "down fish tail"
       }
     },

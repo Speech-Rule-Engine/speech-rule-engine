@@ -5,7 +5,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula A"
       }
     },
@@ -14,7 +14,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula B"
       }
     },
@@ -23,7 +23,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula C"
       }
     },
@@ -32,7 +32,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula D"
       }
     },
@@ -41,7 +41,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula E"
       }
     },
@@ -50,7 +50,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula F"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula G"
       }
     },
@@ -68,7 +68,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula H"
       }
     },
@@ -77,7 +77,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula I"
       }
     },
@@ -86,7 +86,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula J"
       }
     },
@@ -95,7 +95,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula K"
       }
     },
@@ -104,7 +104,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula L"
       }
     },
@@ -113,7 +113,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula M"
       }
     },
@@ -122,7 +122,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula N"
       }
     },
@@ -131,7 +131,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula O"
       }
     },
@@ -140,7 +140,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula P"
       }
     },
@@ -149,7 +149,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula Q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula R"
       }
     },
@@ -167,7 +167,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula S"
       }
     },
@@ -176,7 +176,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula T"
       }
     },
@@ -185,7 +185,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula U"
       }
     },
@@ -194,7 +194,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula V"
       }
     },
@@ -203,7 +203,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula W"
       }
     },
@@ -212,7 +212,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula X"
       }
     },
@@ -221,7 +221,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula Y"
       }
     },
@@ -230,7 +230,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio mayúscula Z"
       }
     },
@@ -239,7 +239,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio a"
       }
     },
@@ -248,7 +248,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio b"
       }
     },
@@ -257,7 +257,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio c"
       }
     },
@@ -266,7 +266,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio d"
       }
     },
@@ -275,7 +275,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio e"
       }
     },
@@ -284,7 +284,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio f"
       }
     },
@@ -293,7 +293,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio g"
       }
     },
@@ -302,7 +302,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio h"
       }
     },
@@ -311,7 +311,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio i"
       }
     },
@@ -320,7 +320,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio j"
       }
     },
@@ -329,7 +329,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio k"
       }
     },
@@ -338,7 +338,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio l"
       }
     },
@@ -347,7 +347,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio m"
       }
     },
@@ -356,7 +356,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio n"
       }
     },
@@ -365,7 +365,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio o"
       }
     },
@@ -374,7 +374,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio p"
       }
     },
@@ -383,7 +383,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio q"
       }
     },
@@ -392,7 +392,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio r"
       }
     },
@@ -401,7 +401,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio s"
       }
     },
@@ -410,7 +410,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio t"
       }
     },
@@ -419,7 +419,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio u"
       }
     },
@@ -428,7 +428,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio v"
       }
     },
@@ -437,7 +437,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio w"
       }
     },
@@ -446,7 +446,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio x"
       }
     },
@@ -455,7 +455,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio y"
       }
     },
@@ -464,7 +464,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "monoespacio z"
       }
     },

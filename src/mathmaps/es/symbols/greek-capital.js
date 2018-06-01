@@ -5,7 +5,7 @@
   {
     "key": "0391",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Alfa"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "0392",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Beta"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "0393",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Gamma"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "0394",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Delta"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "0395",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Épsilon"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "0396",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Zeta"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "0397",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Eta"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "0398",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Theta"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "0399",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Iota"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "039A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Kappa"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "039B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Lambda"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "039C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Mi"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "039D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Ni"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "039E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Xi"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "039F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Ómicron"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "03A0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Pi"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "03A1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Rho"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "03A3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Sigma"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "03A4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Tau"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "03A5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Ípsilon"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "03A6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Phi"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "03A7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Ji"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "03A8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Psi"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "03A9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula Omega"
       }
     },

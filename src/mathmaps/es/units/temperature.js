@@ -10,7 +10,7 @@
       "°F"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Fahrenheit"
       }
     }
@@ -22,7 +22,7 @@
       "°C"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "centígrados"
       }
     }
@@ -34,7 +34,7 @@
       "°K"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Kelvin"
       }
     }

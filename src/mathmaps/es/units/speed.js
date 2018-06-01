@@ -9,7 +9,7 @@
       "kt."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "nudo"
       }
     }
@@ -20,7 +20,7 @@
       "mph"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "millas por hora"
       }
     }
@@ -31,7 +31,7 @@
       "rpm"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "revoluciones por minuto"
       }
     }
@@ -42,7 +42,7 @@
       "kmh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilómetros por hora"
       }
     }

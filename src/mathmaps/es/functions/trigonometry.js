@@ -9,7 +9,7 @@
       "cosine"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "coseno"
       }
     },
@@ -21,7 +21,7 @@
       "cot"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cotangente"
       }
     },
@@ -33,7 +33,7 @@
       "csc"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cosecante"
       }
     },
@@ -45,7 +45,7 @@
       "sec"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "secant"
       }
     },
@@ -59,7 +59,7 @@
       "sen"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "seno"
       }
     },
@@ -71,7 +71,7 @@
       "tan"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tangente"
       }
     },
@@ -83,7 +83,7 @@
       "arccos"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco coseno"
       }
     },
@@ -95,7 +95,7 @@
       "arccot"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco cotangente"
       }
     },
@@ -107,7 +107,7 @@
       "arccsc"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco cosecante"
       }
     },
@@ -119,7 +119,7 @@
       "arcsec"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco secante"
       }
     },
@@ -131,7 +131,7 @@
       "arcsin"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco seno"
       }
     },
@@ -143,7 +143,7 @@
       "arctan"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "arco tangente"
       }
     },

@@ -8,7 +8,7 @@
       "b"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "bit"
       }
     }
@@ -19,7 +19,7 @@
       "B"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "byte"
       }
     }
@@ -30,7 +30,7 @@
       "KB"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilobyte"
       }
     }
@@ -41,7 +41,7 @@
       "MB"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "megabyte"
       }
     }
@@ -52,7 +52,7 @@
       "GB"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "gigabyte"
       }
     }
@@ -63,7 +63,7 @@
       "TB"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "terabyte"
       }
     }

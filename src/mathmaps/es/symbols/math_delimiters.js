@@ -5,7 +5,7 @@
   {
     "key": "0028",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis izquierdo",
         "defaultMP": "paréntesis"
       }
@@ -15,7 +15,7 @@
   {
     "key": "0029",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis derecho",
         "defaultMP": "cierra paréntesis"
       }
@@ -25,7 +25,7 @@
   {
     "key": "005B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete izquierdo",
         "defaultMP": "abre corchetes"
       }
@@ -35,7 +35,7 @@
   {
     "key": "005D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete derecho",
         "defaultMP": "cierra corchetes"
       }
@@ -45,7 +45,7 @@
   {
     "key": "007B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "llave izquierda",
         "defaultMP": "abre llaves"
       }
@@ -55,7 +55,7 @@
   {
     "key": "007D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "llaves derecha",
         "defaultMP": "cierra llaves"
       }
@@ -65,7 +65,7 @@
   {
     "key": "2308",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior izquierda"
       }
     },
@@ -74,7 +74,7 @@
   {
     "key": "2309",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina superior derecha"
       }
     },
@@ -83,7 +83,7 @@
   {
     "key": "230A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior izquierda"
       }
     },
@@ -92,7 +92,7 @@
   {
     "key": "230B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "esquina inferior derecha"
       }
     },
@@ -101,7 +101,7 @@
   {
     "key": "230C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corte inferior derecho"
       }
     },
@@ -110,7 +110,7 @@
   {
     "key": "230D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corte inferior izquierdo"
       }
     },
@@ -119,7 +119,7 @@
   {
     "key": "230E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corte superior derecho "
       }
     },
@@ -128,7 +128,7 @@
   {
     "key": "230F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corte superior izquierdo"
       }
     },
@@ -137,7 +137,7 @@
   {
     "key": "231C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo superior izquierdo"
       }
     },
@@ -146,7 +146,7 @@
   {
     "key": "231D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo superior derecho"
       }
     },
@@ -155,7 +155,7 @@
   {
     "key": "231E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo inferior izquierdo"
       }
     },
@@ -164,7 +164,7 @@
   {
     "key": "231F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ángulo inferior derecho"
       }
     },
@@ -173,7 +173,7 @@
   {
     "key": "2320",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mitad superior de integral"
       }
     },
@@ -182,7 +182,7 @@
   {
     "key": "2321",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mitad inferior de integral"
       }
     },
@@ -191,7 +191,7 @@
   {
     "key": "2329",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis angular izquierdo"
       }
     },
@@ -200,7 +200,7 @@
   {
     "key": "232A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis angular derecho"
       }
     },
@@ -209,7 +209,7 @@
   {
     "key": "23B0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "izquierda arriba o derecho debajo sección llave"
       }
     },
@@ -218,7 +218,7 @@
   {
     "key": "23B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "derecha arriba o izquierdo debajo sección llave"
       }
     },
@@ -227,7 +227,7 @@
   {
     "key": "23B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete superior"
       }
     },
@@ -236,7 +236,7 @@
   {
     "key": "23B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete inferior"
       }
     },
@@ -245,7 +245,7 @@
   {
     "key": "23DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis superior"
       }
     },
@@ -254,7 +254,7 @@
   {
     "key": "23DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis inferior"
       }
     },
@@ -263,7 +263,7 @@
   {
     "key": "23DE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete rizado superior"
       }
     },
@@ -272,7 +272,7 @@
   {
     "key": "23DF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete rizado inferior"
       }
     },
@@ -281,7 +281,7 @@
   {
     "key": "23E0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete superior en tortuga"
       }
     },
@@ -290,7 +290,7 @@
   {
     "key": "23E1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete inferior en tortuga"
       }
     },
@@ -299,7 +299,7 @@
   {
     "key": "27C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "símbolo delimitador izquierdo de bolsa de s-formó"
       }
     },
@@ -308,7 +308,7 @@
   {
     "key": "27C6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "símbolo delimitador derecho de bolsa de s-formó"
       }
     },
@@ -317,7 +317,7 @@
   {
     "key": "27E6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete vacío izquierdo"
       }
     },
@@ -326,7 +326,7 @@
   {
     "key": "27E7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete vacío derecho"
       }
     },
@@ -335,7 +335,7 @@
   {
     "key": "27E8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete agudo izquierdo"
       }
     },
@@ -344,7 +344,7 @@
   {
     "key": "27E9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete agudo derecho"
       }
     },
@@ -353,7 +353,7 @@
   {
     "key": "27EA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble corchete agudo izquierdo"
       }
     },
@@ -362,7 +362,7 @@
   {
     "key": "27EB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble corchete agudo derecho"
       }
     },
@@ -371,7 +371,7 @@
   {
     "key": "27EC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete de tortuga vacío izquierdo"
       }
     },
@@ -380,7 +380,7 @@
   {
     "key": "27ED",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete de tortuga vacío derecho "
       }
     },
@@ -389,7 +389,7 @@
   {
     "key": "27EE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis plano izquierdo"
       }
     },
@@ -398,7 +398,7 @@
   {
     "key": "27EF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis plano derecho"
       }
     },
@@ -407,7 +407,7 @@
   {
     "key": "2985",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left white paren"
       }
     },
@@ -416,7 +416,7 @@
   {
     "key": "2986",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right white paren"
       }
     },
@@ -425,7 +425,7 @@
   {
     "key": "2989",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "z notation left binding bracket"
       }
     },
@@ -434,7 +434,7 @@
   {
     "key": "298A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "z notation right binding bracket"
       }
     },
@@ -443,7 +443,7 @@
   {
     "key": "298B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left bracket with underbar"
       }
     },
@@ -452,7 +452,7 @@
   {
     "key": "298C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right bracket with underbar"
       }
     },
@@ -461,7 +461,7 @@
   {
     "key": "298D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left bracket with tick in top corner"
       }
     },
@@ -470,7 +470,7 @@
   {
     "key": "298E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right bracket with tick in bottom corner"
       }
     },
@@ -479,7 +479,7 @@
   {
     "key": "298F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left bracket with tick in bottom corner"
       }
     },
@@ -488,7 +488,7 @@
   {
     "key": "2990",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right bracket with tick in top corner"
       }
     },
@@ -497,7 +497,7 @@
   {
     "key": "2991",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left angle bracket with dot"
       }
     },
@@ -506,7 +506,7 @@
   {
     "key": "2992",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right angle bracket with dot"
       }
     },
@@ -515,7 +515,7 @@
   {
     "key": "2993",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left arc less than bracket"
       }
     },
@@ -524,7 +524,7 @@
   {
     "key": "2994",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right arc greater than bracket"
       }
     },
@@ -533,7 +533,7 @@
   {
     "key": "2995",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "double left arc greater than bracket"
       }
     },
@@ -542,7 +542,7 @@
   {
     "key": "2996",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "double right arc less than bracket"
       }
     },
@@ -551,7 +551,7 @@
   {
     "key": "29DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left double wiggly fence"
       }
     },
@@ -560,7 +560,7 @@
   {
     "key": "29DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right double wiggly fence"
       }
     },
@@ -569,7 +569,7 @@
   {
     "key": "300A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis angular doble"
       }
     },
@@ -578,7 +578,7 @@
   {
     "key": "300B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis angular doble derecho",
         "defaultMP": "cierra paréntesis angular doble"
       }
@@ -588,7 +588,7 @@
   {
     "key": "3014",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "left tortoise shell bracket"
       }
     },
@@ -597,7 +597,7 @@
   {
     "key": "3015",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "right tortoise shell bracket"
       }
     },
@@ -606,7 +606,7 @@
   {
     "key": "301A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete vacío"
       }
     },
@@ -615,7 +615,7 @@
   {
     "key": "301B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "corchete vacío derecho",
         "defaultMP": "cierra corchete vacío"
       }
@@ -625,7 +625,7 @@
   {
     "key": "301E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "segunda"
       }
     },
@@ -634,7 +634,7 @@
   {
     "key": "FE35",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis superior"
       }
     },
@@ -643,7 +643,7 @@
   {
     "key": "FE36",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis inferior"
       }
     },
@@ -652,7 +652,7 @@
   {
     "key": "FE37",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "llave superior"
       }
     },
@@ -661,7 +661,7 @@
   {
     "key": "FE38",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "llave inferior"
       }
     },
@@ -670,7 +670,7 @@
   {
     "key": "FE3F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis angular superior"
       }
     },
@@ -679,7 +679,7 @@
   {
     "key": "FE40",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "paréntesis angular inferior"
       }
     },

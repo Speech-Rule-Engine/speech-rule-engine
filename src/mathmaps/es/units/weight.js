@@ -9,7 +9,7 @@
       "lb."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "libra"
       }
     }
@@ -21,7 +21,7 @@
       "L.T."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "libras imperiales"
       }
     }
@@ -33,7 +33,7 @@
       "oz."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "onza"
       }
     }
@@ -45,7 +45,7 @@
       "mcg"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "microgramo"
       }
     }
@@ -57,7 +57,7 @@
       "gr"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "gramo"
       }
     }
@@ -68,7 +68,7 @@
       "kg"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilogramo"
       }
     }
@@ -79,7 +79,7 @@
       "mg"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "miligramo"
       }
     }
@@ -91,7 +91,7 @@
       "T"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tonelada"
       }
     }

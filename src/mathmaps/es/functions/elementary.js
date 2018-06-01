@@ -8,7 +8,7 @@
       "log"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logaritmo"
       }
     },
@@ -20,7 +20,7 @@
       "ln"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logaritmo neperiano"
       }
     },
@@ -32,7 +32,7 @@
       "lg"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "logaritmo base 10"
       }
     },
@@ -45,7 +45,7 @@
       "expt"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "exponente"
       }
     },
@@ -57,7 +57,7 @@
       "gcd"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "MCD"
       }
     },
@@ -69,7 +69,7 @@
       "lcm"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mcm"
       }
     },
@@ -81,7 +81,7 @@
       "arg"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "argumento"
       }
     },
@@ -93,7 +93,7 @@
       "im"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "parte imaginaria"
       }
     },
@@ -105,7 +105,7 @@
       "re"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "residuo"
       }
     },
@@ -117,7 +117,7 @@
       "inf"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "extremo inferior"
       }
     },
@@ -129,7 +129,7 @@
       "lim"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "límite"
       }
     },
@@ -141,7 +141,7 @@
       "max"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "máximo"
       }
     },
@@ -153,7 +153,7 @@
       "min"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mínimo"
       }
     },
@@ -165,7 +165,7 @@
       "sup"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "superior"
       }
     },
@@ -178,7 +178,7 @@
       "liminf"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "límite inferior"
       }
     },
@@ -191,7 +191,7 @@
       "limsup"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "límite superior"
       }
     },
@@ -204,7 +204,7 @@
       "inj lim"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "límite directo"
       }
     },
@@ -217,7 +217,7 @@
       "proj lim"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "límite inverso"
       }
     },
@@ -229,7 +229,7 @@
       "mod"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "módulo"
       }
     },
@@ -241,7 +241,7 @@
       "Pr"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "probabilidad"
       }
     },

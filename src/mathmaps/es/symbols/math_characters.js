@@ -5,7 +5,7 @@
   {
     "key": "2113",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "script l"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "2118",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "p de weierstrass"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2145",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula D"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "2146",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "d"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "2147",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "e"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "2148",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "i"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva dotless i"
       }
     },
@@ -68,7 +68,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cursiva dotless j"
       }
     },

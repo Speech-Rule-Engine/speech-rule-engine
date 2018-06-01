@@ -5,7 +5,7 @@
   {
     "key": "0061",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "a"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "0062",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "b"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "0063",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "c"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "0064",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "d"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "0065",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "e"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "0066",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "f"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "0067",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "g"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "0068",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "h"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "0069",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "i"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "006A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "j"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "006B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "k"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "006C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "l"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "006D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "m"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "006E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "n"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "006F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "0070",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "p"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "0071",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "0072",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "r"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "0073",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "s"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "0074",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "t"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "0075",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "u"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "0076",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "v"
       }
     },
@@ -203,7 +203,7 @@
   {
     "key": "0077",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "w"
       }
     },
@@ -212,7 +212,7 @@
   {
     "key": "0078",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "x"
       }
     },
@@ -221,7 +221,7 @@
   {
     "key": "0079",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "y",
         "defaultMP": "ye"
       }
@@ -231,7 +231,7 @@
   {
     "key": "007A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "z"
       }
     },

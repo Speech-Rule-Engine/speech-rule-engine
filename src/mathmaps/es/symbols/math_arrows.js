@@ -5,7 +5,7 @@
   {
     "key": "2190",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "2191",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2192",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha",
         "defaultMP": "flecha"
       }
@@ -33,7 +33,7 @@
   {
     "key": "2193",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha abajo"
       }
     },
@@ -42,7 +42,7 @@
   {
     "key": "2194",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda y derecha"
       }
     },
@@ -51,7 +51,7 @@
   {
     "key": "2195",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba y abajo"
       }
     },
@@ -60,7 +60,7 @@
   {
     "key": "2196",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a noroeste"
       }
     },
@@ -69,7 +69,7 @@
   {
     "key": "2197",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a nordeste"
       }
     },
@@ -78,7 +78,7 @@
   {
     "key": "2198",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a sureste"
       }
     },
@@ -87,7 +87,7 @@
   {
     "key": "2199",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a suroeste"
       }
     },
@@ -96,7 +96,7 @@
   {
     "key": "219A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda tachada"
       }
     },
@@ -105,7 +105,7 @@
   {
     "key": "219B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha tachada"
       }
     },
@@ -114,7 +114,7 @@
   {
     "key": "219C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha ondulada izquierda"
       }
     },
@@ -123,7 +123,7 @@
   {
     "key": "219D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha ondulada"
       }
     },
@@ -132,7 +132,7 @@
   {
     "key": "219E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con doble punta"
       }
     },
@@ -141,7 +141,7 @@
   {
     "key": "219F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con doble punta hacia arriba"
       }
     },
@@ -150,7 +150,7 @@
   {
     "key": "21A0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derechaa con doble punta"
       }
     },
@@ -159,7 +159,7 @@
   {
     "key": "21A1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con doble punta hacia abajo"
       }
     },
@@ -168,7 +168,7 @@
   {
     "key": "21A2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con cola"
       }
     },
@@ -177,7 +177,7 @@
   {
     "key": "21A3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha con cola"
       }
     },
@@ -186,7 +186,7 @@
   {
     "key": "21A4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda de barra"
       }
     },
@@ -195,7 +195,7 @@
   {
     "key": "21A5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barra con flecha"
       }
     },
@@ -204,7 +204,7 @@
   {
     "key": "21A6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha de barra"
       }
     },
@@ -213,7 +213,7 @@
   {
     "key": "21A7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con barra"
       }
     },
@@ -222,7 +222,7 @@
   {
     "key": "21A8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba y abajo con base"
       }
     },
@@ -231,7 +231,7 @@
   {
     "key": "21A9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con gancho"
       }
     },
@@ -240,7 +240,7 @@
   {
     "key": "21AA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con gancho"
       }
     },
@@ -249,7 +249,7 @@
   {
     "key": "21AB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con lazo"
       }
     },
@@ -258,7 +258,7 @@
   {
     "key": "21AC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con lazo"
       }
     },
@@ -267,7 +267,7 @@
   {
     "key": "21AD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha ondulada izquierda y derecha"
       }
     },
@@ -276,7 +276,7 @@
   {
     "key": "21AE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda y derecha tachada"
       }
     },
@@ -285,7 +285,7 @@
   {
     "key": "21AF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha zigzag abajo"
       }
     },
@@ -294,7 +294,7 @@
   {
     "key": "21B0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba con punta izquierda"
       }
     },
@@ -303,7 +303,7 @@
   {
     "key": "21B1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba con punta derecha"
       }
     },
@@ -312,7 +312,7 @@
   {
     "key": "21B2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha abajo con punta izquierda"
       }
     },
@@ -321,7 +321,7 @@
   {
     "key": "21B3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha abajo con punta derecha"
       }
     },
@@ -330,7 +330,7 @@
   {
     "key": "21B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha desde esquina inferior"
       }
     },
@@ -339,7 +339,7 @@
   {
     "key": "21B5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia abajo desde esquina izquierda"
       }
     },
@@ -348,7 +348,7 @@
   {
     "key": "21B6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha semicircular superior en sentido antihorario"
       }
     },
@@ -357,7 +357,7 @@
   {
     "key": "21B7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha semicircular superior en sentido horario"
       }
     },
@@ -366,7 +366,7 @@
   {
     "key": "21B8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha noroeste a barra larga"
       }
     },
@@ -375,7 +375,7 @@
   {
     "key": "21B9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda a barra arriba de flecha derecha a barra"
       }
     },
@@ -384,7 +384,7 @@
   {
     "key": "21BA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha circular abierta en sentido antihorario"
       }
     },
@@ -393,7 +393,7 @@
   {
     "key": "21BB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha circular abierta en sentido horario"
       }
     },
@@ -402,7 +402,7 @@
   {
     "key": "21C4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha arriba de flecha izquierda"
       }
     },
@@ -411,7 +411,7 @@
   {
     "key": "21C5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha arriba a la izquierda de flecha abajo"
       }
     },
@@ -420,7 +420,7 @@
   {
     "key": "21C6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda arriba de flecha derecha"
       }
     },
@@ -429,7 +429,7 @@
   {
     "key": "21C7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos flechas hacia la izquierda"
       }
     },
@@ -438,7 +438,7 @@
   {
     "key": "21C8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos flechas hacia arriba"
       }
     },
@@ -447,7 +447,7 @@
   {
     "key": "21C9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos flechas"
       }
     },
@@ -456,7 +456,7 @@
   {
     "key": "21CA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos flechas hacia abajo"
       }
     },
@@ -465,7 +465,7 @@
   {
     "key": "21CD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble izquierda tachada"
       }
     },
@@ -474,7 +474,7 @@
   {
     "key": "21CE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble izquierda y derecha tachada"
       }
     },
@@ -483,7 +483,7 @@
   {
     "key": "21CF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble tachada"
       }
     },
@@ -492,7 +492,7 @@
   {
     "key": "21D0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia la izquierda"
       }
     },
@@ -501,7 +501,7 @@
   {
     "key": "21D1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia arriba"
       }
     },
@@ -510,7 +510,7 @@
   {
     "key": "21D2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble"
       }
     },
@@ -519,7 +519,7 @@
   {
     "key": "21D3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia abajo"
       }
     },
@@ -528,7 +528,7 @@
   {
     "key": "21D4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble izquierda-derecha"
       }
     },
@@ -537,7 +537,7 @@
   {
     "key": "21D5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble vertical"
       }
     },
@@ -546,7 +546,7 @@
   {
     "key": "21D6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia noroeste"
       }
     },
@@ -555,7 +555,7 @@
   {
     "key": "21D7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia nordeste"
       }
     },
@@ -564,7 +564,7 @@
   {
     "key": "21D8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia sudeste"
       }
     },
@@ -573,7 +573,7 @@
   {
     "key": "21D9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha doble hacia sudoeste"
       }
     },
@@ -582,7 +582,7 @@
   {
     "key": "21DA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha triple izquierda"
       }
     },
@@ -591,7 +591,7 @@
   {
     "key": "21DB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha triple"
       }
     },
@@ -600,7 +600,7 @@
   {
     "key": "21DC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha ondulada izquierda"
       }
     },
@@ -609,7 +609,7 @@
   {
     "key": "21DD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha ondulada"
       }
     },
@@ -618,7 +618,7 @@
   {
     "key": "21DE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia arriba con doble tachado"
       }
     },
@@ -627,7 +627,7 @@
   {
     "key": "21DF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia abajo con doble tachado"
       }
     },
@@ -636,7 +636,7 @@
   {
     "key": "21E0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha de puntos hacia la izquierda"
       }
     },
@@ -645,7 +645,7 @@
   {
     "key": "21E1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha de puntos hacia arriba"
       }
     },
@@ -654,7 +654,7 @@
   {
     "key": "21E2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha de puntos"
       }
     },
@@ -663,7 +663,7 @@
   {
     "key": "21E3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha de puntos hacia abajo"
       }
     },
@@ -672,7 +672,7 @@
   {
     "key": "21E4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda a barra"
       }
     },
@@ -681,7 +681,7 @@
   {
     "key": "21E5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha derecha a barra"
       }
     },
@@ -690,7 +690,7 @@
   {
     "key": "21E6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha vacía hacia la izquierda"
       }
     },
@@ -699,7 +699,7 @@
   {
     "key": "21E7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha vacía hacia arriba"
       }
     },
@@ -708,7 +708,7 @@
   {
     "key": "21E8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha vacía"
       }
     },
@@ -717,7 +717,7 @@
   {
     "key": "21E9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha vacía hacia abajo"
       }
     },
@@ -726,7 +726,7 @@
   {
     "key": "21EA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha vacía hacia arriba desde barra"
       }
     },
@@ -735,7 +735,7 @@
   {
     "key": "21F5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards arrow to the right of downwards arrow"
       }
     },
@@ -744,7 +744,7 @@
   {
     "key": "21FD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con punta vacía"
       }
     },
@@ -753,7 +753,7 @@
   {
     "key": "21FE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda con punta vacía"
       }
     },
@@ -762,7 +762,7 @@
   {
     "key": "21FF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha izquierda derecha con punta vacía"
       }
     },
@@ -771,7 +771,7 @@
   {
     "key": "27F0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha cuádruple hacia arriba"
       }
     },
@@ -780,7 +780,7 @@
   {
     "key": "27F1",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha cuádruple hacia abajo"
       }
     },
@@ -789,7 +789,7 @@
   {
     "key": "27F2",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la izquierda desde círculo"
       }
     },
@@ -798,7 +798,7 @@
   {
     "key": "27F3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la derecha desde círculo"
       }
     },
@@ -807,7 +807,7 @@
   {
     "key": "27F4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con más en círculo"
       }
     },
@@ -816,7 +816,7 @@
   {
     "key": "27F5",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha larga hacia la izquierda"
       }
     },
@@ -825,7 +825,7 @@
   {
     "key": "27F6",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha larga"
       }
     },
@@ -834,7 +834,7 @@
   {
     "key": "27F7",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha larga hacia izquierda y derecha"
       }
     },
@@ -843,7 +843,7 @@
   {
     "key": "27F8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble flecha larga hacia la izquierda"
       }
     },
@@ -852,7 +852,7 @@
   {
     "key": "27F9",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble flecha larga"
       }
     },
@@ -861,7 +861,7 @@
   {
     "key": "27FA",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble flecha larga hacia izquierda y derecha"
       }
     },
@@ -870,7 +870,7 @@
   {
     "key": "27FB",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha larga hacia la izquierda, desde barra"
       }
     },
@@ -879,7 +879,7 @@
   {
     "key": "27FC",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha larga desde barra"
       }
     },
@@ -888,7 +888,7 @@
   {
     "key": "27FD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble flecha larga hacia la izquierda desde barra"
       }
     },
@@ -897,7 +897,7 @@
   {
     "key": "27FE",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "doble flecha larga desde barra"
       }
     },
@@ -906,7 +906,7 @@
   {
     "key": "27FF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha larga en zigzag"
       }
     },
@@ -915,7 +915,7 @@
   {
     "key": "2905",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards two headed arrow from bar"
       }
     },
@@ -924,7 +924,7 @@
   {
     "key": "290C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards double dash arrow"
       }
     },
@@ -933,7 +933,7 @@
   {
     "key": "290D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards double dash arrow"
       }
     },
@@ -942,7 +942,7 @@
   {
     "key": "290E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "leftwards triple dash arrow"
       }
     },
@@ -951,7 +951,7 @@
   {
     "key": "290F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards triple dash arrow"
       }
     },
@@ -960,7 +960,7 @@
   {
     "key": "2910",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards two headed triple dash arrow"
       }
     },
@@ -969,7 +969,7 @@
   {
     "key": "2911",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards arrow with dotted stem"
       }
     },
@@ -978,7 +978,7 @@
   {
     "key": "2912",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "upwards arrow to bar"
       }
     },
@@ -987,7 +987,7 @@
   {
     "key": "2913",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "downwards arrow to bar"
       }
     },
@@ -996,7 +996,7 @@
   {
     "key": "2916",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "rightwards two headed arrow with tail"
       }
     },
@@ -1005,7 +1005,7 @@
   {
     "key": "2919",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cola de flecha hacia la izquierda"
       }
     },
@@ -1014,7 +1014,7 @@
   {
     "key": "291B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cola de doble flecha hacia la izquierda"
       }
     },
@@ -1023,7 +1023,7 @@
   {
     "key": "291C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cola de doble flecha hacia la derecha"
       }
     },
@@ -1032,7 +1032,7 @@
   {
     "key": "291D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia diamante relleno a la izquierda"
       }
     },
@@ -1041,7 +1041,7 @@
   {
     "key": "291E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia diamante a la derecha"
       }
     },
@@ -1050,7 +1050,7 @@
   {
     "key": "291F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha desde barra hacia diamante a la izquierda"
       }
     },
@@ -1059,7 +1059,7 @@
   {
     "key": "2920",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha desde barra hacia diamante a la derecha"
       }
     },
@@ -1068,7 +1068,7 @@
   {
     "key": "2923",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a noroeste con garfio"
       }
     },
@@ -1077,7 +1077,7 @@
   {
     "key": "2924",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a nordeste con garfio"
       }
     },
@@ -1086,7 +1086,7 @@
   {
     "key": "2925",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a sureste con garfio"
       }
     },
@@ -1095,7 +1095,7 @@
   {
     "key": "2926",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha a suroeste con garfio"
       }
     },
@@ -1104,7 +1104,7 @@
   {
     "key": "2927",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flechas a noroeste y nordeste"
       }
     },
@@ -1113,7 +1113,7 @@
   {
     "key": "2928",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flechas a nordeste y sudeste"
       }
     },
@@ -1122,7 +1122,7 @@
   {
     "key": "2929",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flechas a suddeste y sudoeste"
       }
     },
@@ -1131,7 +1131,7 @@
   {
     "key": "292A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flechas a sudoeste y noroeste"
       }
     },
@@ -1140,7 +1140,7 @@
   {
     "key": "2933",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha ondulada"
       }
     },
@@ -1149,7 +1149,7 @@
   {
     "key": "2935",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la derecha que gira hacia abajo"
       }
     },
@@ -1158,7 +1158,7 @@
   {
     "key": "2936",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia abajo que gira hacia la izquierda"
       }
     },
@@ -1167,7 +1167,7 @@
   {
     "key": "2937",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia abajo que gira hacia la derecha"
       }
     },
@@ -1176,7 +1176,7 @@
   {
     "key": "2938",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha semicircular a la derecha en sentido horario"
       }
     },
@@ -1185,7 +1185,7 @@
   {
     "key": "2939",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha semicircular a la izquierda en sentido antihorario"
       }
     },
@@ -1194,7 +1194,7 @@
   {
     "key": "293C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "giro negativo"
       }
     },
@@ -1203,7 +1203,7 @@
   {
     "key": "293D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "giro positivo"
       }
     },
@@ -1212,7 +1212,7 @@
   {
     "key": "2945",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con más suscrito"
       }
     },
@@ -1221,7 +1221,7 @@
   {
     "key": "2948",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la izquierda a través de círculo"
       }
     },
@@ -1230,7 +1230,7 @@
   {
     "key": "2949",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dos cabezas de flecha hacia arriba desde círculo"
       }
     },
@@ -1239,7 +1239,7 @@
   {
     "key": "2970",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "round implies"
       }
     },
@@ -1248,7 +1248,7 @@
   {
     "key": "2971",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con igual"
       }
     },
@@ -1257,7 +1257,7 @@
   {
     "key": "2972",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con tilde"
       }
     },
@@ -1266,7 +1266,7 @@
   {
     "key": "2973",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde con flecha hacia la izquierda"
       }
     },
@@ -1275,7 +1275,7 @@
   {
     "key": "2974",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "tilde con flecha"
       }
     },
@@ -1284,7 +1284,7 @@
   {
     "key": "2975",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con casi igual a"
       }
     },
@@ -1293,7 +1293,7 @@
   {
     "key": "2976",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la izquierda con menor que"
       }
     },
@@ -1302,7 +1302,7 @@
   {
     "key": "2978",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha con mayor que"
       }
     },
@@ -1311,7 +1311,7 @@
   {
     "key": "2979",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la izquierda con incluido"
       }
     },
@@ -1320,7 +1320,7 @@
   {
     "key": "297B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "flecha hacia la izquierda con contiene"
       }
     },
@@ -1329,7 +1329,7 @@
   {
     "key": "29B3",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "conjunto vacío con flecha"
       }
     },
@@ -1338,7 +1338,7 @@
   {
     "key": "29B4",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "conjunto vacío con flecha inversa"
       }
     },
@@ -1347,7 +1347,7 @@
   {
     "key": "2A17",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "integral con flecha hacia la izquierda con garfio"
       }
     },

@@ -5,7 +5,7 @@
   {
     "key": "00F8",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "o barrada"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "0111",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "d con barra"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "0127",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "h con guión"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "0142",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "l con guión"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "0167",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "t con guión"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "019B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "lambda tachada"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "1E9B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "s larga con punto arriba"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "0138",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kra"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "0192",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "f con gancho"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "019A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "l con barra"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "025B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "e abierta"
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "0149",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "n precedida por apóstrofe"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "014B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "eng"
       }
     },

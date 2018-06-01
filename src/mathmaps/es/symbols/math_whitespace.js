@@ -5,7 +5,7 @@
   {
     "key": "00A0",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": " "
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "00AD",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "guión corto"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2002",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "2003",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "2004",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "2005",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "2007",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "2008",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "2009",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "200A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "200B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -104,7 +104,7 @@
   {
     "key": "200C",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ancho de cero no ensamblador"
       }
     },
@@ -113,7 +113,7 @@
   {
     "key": "200D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ancho de cero ensamblador"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "200E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "marca de izquierda a derecha"
       }
     },
@@ -131,7 +131,7 @@
   {
     "key": "200F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "marca de derecha a izquierda"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "205F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "2060",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "2061",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "de"
       }
     },
@@ -167,7 +167,7 @@
   {
     "key": "2062",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "por"
       }
     },
@@ -176,7 +176,7 @@
   {
     "key": "2063",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "coma"
       }
     },
@@ -185,7 +185,7 @@
   {
     "key": "2064",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "más"
       }
     },
@@ -194,7 +194,7 @@
   {
     "key": "FEFF",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": ""
       }
     },

@@ -9,7 +9,7 @@
       "w"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "watt"
       }
     },
@@ -22,7 +22,7 @@
       "kW"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilowatt"
       }
     },
@@ -35,7 +35,7 @@
       "mW"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "miliwatt"
       }
     },
@@ -48,7 +48,7 @@
       "kWh"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilowatt hora"
       }
     },
@@ -60,7 +60,7 @@
       "J"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Joules"
       }
     },
@@ -72,7 +72,7 @@
       "N"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Newton"
       }
     },
@@ -84,7 +84,7 @@
       "A"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Ampere"
       }
     },
@@ -96,7 +96,7 @@
       "V"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "Voltio"
       }
     },
@@ -108,7 +108,7 @@
       "µΩ"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "microohmio"
       }
     },
@@ -120,7 +120,7 @@
       "mΩ"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "miliohmio"
       }
     },
@@ -133,7 +133,7 @@
       "Ohm"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ohmio"
       }
     },
@@ -146,7 +146,7 @@
       "KΩ"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kiloohmio"
       }
     },
@@ -158,7 +158,7 @@
       "MΩ"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "megaohmio"
       }
     },
@@ -170,7 +170,7 @@
       "GΩ"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "gigaohmio"
       }
     },

@@ -5,7 +5,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula A"
       }
     },
@@ -14,7 +14,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula B"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2102",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula C"
       }
     },
@@ -32,7 +32,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula D"
       }
     },
@@ -41,7 +41,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula E"
       }
     },
@@ -50,7 +50,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula F"
       }
     },
@@ -59,7 +59,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula G"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "210D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula H"
       }
     },
@@ -77,7 +77,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula I"
       }
     },
@@ -86,7 +86,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula J"
       }
     },
@@ -95,7 +95,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula K"
       }
     },
@@ -104,7 +104,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula L"
       }
     },
@@ -113,7 +113,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula M"
       }
     },
@@ -122,7 +122,7 @@
   {
     "key": "2115",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula N"
       }
     },
@@ -131,7 +131,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula O"
       }
     },
@@ -140,7 +140,7 @@
   {
     "key": "2119",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula P"
       }
     },
@@ -149,7 +149,7 @@
   {
     "key": "211A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula Q"
       }
     },
@@ -158,7 +158,7 @@
   {
     "key": "211D",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula R",
         "defaultMP": "R mayúscula negrita"
       }
@@ -168,7 +168,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula S"
       }
     },
@@ -177,7 +177,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula T"
       }
     },
@@ -186,7 +186,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula U"
       }
     },
@@ -195,7 +195,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula V"
       }
     },
@@ -204,7 +204,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula W"
       }
     },
@@ -213,7 +213,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula X"
       }
     },
@@ -222,7 +222,7 @@
   {
     "category": "Lu",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula Y"
       }
     },
@@ -231,7 +231,7 @@
   {
     "key": "2124",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra mayúscula Z"
       }
     },
@@ -240,7 +240,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra a"
       }
     },
@@ -249,7 +249,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra b"
       }
     },
@@ -258,7 +258,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra c"
       }
     },
@@ -267,7 +267,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra d"
       }
     },
@@ -276,7 +276,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra e"
       }
     },
@@ -285,7 +285,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra f"
       }
     },
@@ -294,7 +294,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra g"
       }
     },
@@ -303,7 +303,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra h"
       }
     },
@@ -312,7 +312,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra i"
       }
     },
@@ -321,7 +321,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra j"
       }
     },
@@ -330,7 +330,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra k"
       }
     },
@@ -339,7 +339,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra l"
       }
     },
@@ -348,7 +348,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra m"
       }
     },
@@ -357,7 +357,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra n"
       }
     },
@@ -366,7 +366,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra o"
       }
     },
@@ -375,7 +375,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra p"
       }
     },
@@ -384,7 +384,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra q"
       }
     },
@@ -393,7 +393,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra r"
       }
     },
@@ -402,7 +402,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra s"
       }
     },
@@ -411,7 +411,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra t"
       }
     },
@@ -420,7 +420,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra u"
       }
     },
@@ -429,7 +429,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra v"
       }
     },
@@ -438,7 +438,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra w"
       }
     },
@@ -447,7 +447,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra x"
       }
     },
@@ -456,7 +456,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra y"
       }
     },
@@ -465,7 +465,7 @@
   {
     "category": "Ll",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "negrita de pizarra z"
       }
     },

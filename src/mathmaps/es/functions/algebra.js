@@ -8,7 +8,7 @@
       "deg"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "grados"
       }
     },
@@ -20,7 +20,7 @@
       "det"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "determinante"
       }
     },
@@ -32,7 +32,7 @@
       "dim"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "dimensión"
       }
     },
@@ -45,7 +45,7 @@
       "Hom"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "homomorfismo"
       }
     },
@@ -57,7 +57,7 @@
       "ker"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kernel"
       }
     },
@@ -70,7 +70,7 @@
       "tr"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "traza"
       }
     },

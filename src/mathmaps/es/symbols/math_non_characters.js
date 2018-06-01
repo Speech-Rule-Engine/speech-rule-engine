@@ -5,7 +5,7 @@
   {
     "key": "210F",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "h barra"
       }
     },
@@ -14,7 +14,7 @@
   {
     "key": "2116",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "signo de número"
       }
     },
@@ -23,7 +23,7 @@
   {
     "key": "2117",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "derechos de autor de sonido"
       }
     },
@@ -32,7 +32,7 @@
   {
     "key": "211E",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "receta"
       }
     },
@@ -41,7 +41,7 @@
   {
     "key": "2122",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "registrado"
       }
     },
@@ -50,7 +50,7 @@
   {
     "key": "2125",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "onza"
       }
     },
@@ -59,7 +59,7 @@
   {
     "key": "2126",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ohmio"
       }
     },
@@ -68,7 +68,7 @@
   {
     "key": "2127",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "ohmio invertido"
       }
     },
@@ -77,7 +77,7 @@
   {
     "key": "212A",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "grados kelvin"
       }
     },
@@ -86,7 +86,7 @@
   {
     "key": "212B",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "angstrom"
       }
     },
@@ -95,7 +95,7 @@
   {
     "key": "2132",
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mayúscula F invertida"
       }
     },

@@ -9,7 +9,7 @@
       "bbl"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "barrile"
       }
     },
@@ -22,7 +22,7 @@
       "cu."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cúbico"
       }
     },
@@ -34,7 +34,7 @@
       "fl. oz."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "onzas líquidas"
       }
     },
@@ -47,7 +47,7 @@
       "gal."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "galone"
       }
     },
@@ -60,7 +60,7 @@
       "pt."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "pinta"
       }
     },
@@ -73,7 +73,7 @@
       "qt."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "quart"
       }
     },
@@ -86,7 +86,7 @@
       "tbsp."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cuchara"
       }
     },
@@ -99,7 +99,7 @@
       "tsp."
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "cucharilla"
       }
     },
@@ -111,7 +111,7 @@
       "cc"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "centímetros cúbicos"
       }
     },
@@ -123,7 +123,7 @@
       "kl"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "kilolitro"
       }
     },
@@ -135,7 +135,7 @@
       "l"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "litro"
       }
     },
@@ -147,7 +147,7 @@
       "ml"
     ],
     "mappings": {
-      "mathspeak": {
+      "default": {
         "default": "mililitro"
       }
     },
