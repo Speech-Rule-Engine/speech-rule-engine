@@ -184,8 +184,9 @@
       "liminf"
     ],
     "mappings": {
-      "mathspeak": {
-        "default": "limit inferior"
+      "default": {
+        "default": "limit inferior",
+        "short": "liminf"
       }
     },
     "category": "Limits"
@@ -197,8 +198,9 @@
       "limsup"
     ],
     "mappings": {
-      "mathspeak": {
-        "default": "limit superior"
+      "default": {
+        "default": "limit superior",
+        "short": "limsup"
       }
     },
     "category": "Limits"

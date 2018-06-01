@@ -1044,38 +1044,38 @@ sre.NobleEnglishTest.prototype.testSample_55 = function() {
       '</mn></mrow></munder><munder><mo>&#x22C3;</mo><mrow><mi>k</mi>' +
       '<mo>&#x2265;</mo><mi>n</mi></mrow></munder><msub><mi>E</mi><mrow>' +
       '<mi>k</mi></mrow></msub><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'limit inferior Underscript n right-arrow' +
-                       ' infinity Endscripts upper E Subscript n Baseline' +
-                       ' equals union Underscript n greater-than-or-equal-to' +
-                       ' 1 Endscripts intersection Underscript k' +
-                       ' greater-than-or-equal-to n Endscripts upper E' +
-                       ' Subscript k Baseline comma limit superior' +
-                       ' Underscript n right-arrow infinity Endscripts upper' +
-                       ' E Subscript n Baseline equals intersection' +
-                       ' Underscript n greater-than-or-equal-to 1 Endscripts' +
-                       ' union Underscript k greater-than-or-equal-to n' +
-                       ' Endscripts upper E Subscript k Baseline period',
-                       'default');
-  this.executeRuleTest(mml, 'limit inferior Underscript n right-arrow' +
-                       ' infinity Endscripts upper E Sub n Base equals union' +
-                       ' Underscript n greater-than-or-equal-to 1' +
+  this.executeRuleTest(mml, 'liminf Underscript n right-arrow infinity' +
+                       ' Endscripts upper E Subscript n Baseline equals' +
+                       ' union Underscript n greater-than-or-equal-to 1' +
                        ' Endscripts intersection Underscript k' +
-                       ' greater-than-or-equal-to n Endscripts upper E Sub' +
-                       ' k Base comma limit superior Underscript n' +
-                       ' right-arrow infinity Endscripts upper E Sub n Base' +
-                       ' equals intersection Underscript n' +
+                       ' greater-than-or-equal-to n Endscripts upper E' +
+                       ' Subscript k Baseline comma limsup Underscript n' +
+                       ' right-arrow infinity Endscripts upper E Subscript' +
+                       ' n Baseline equals intersection Underscript n' +
                        ' greater-than-or-equal-to 1 Endscripts union' +
                        ' Underscript k greater-than-or-equal-to n' +
-                       ' Endscripts upper E Sub k Base period', 'brief');
-  this.executeRuleTest(mml, 'limit inferior Underscript n R arrow infinity' +
+                       ' Endscripts upper E Subscript k Baseline period',
+                       'default');
+  this.executeRuleTest(mml, 'liminf Underscript n right-arrow infinity' +
                        ' Endscripts upper E Sub n Base equals union' +
                        ' Underscript n greater-than-or-equal-to 1' +
                        ' Endscripts intersection Underscript k' +
                        ' greater-than-or-equal-to n Endscripts upper E Sub' +
-                       ' k Base comma limit superior Underscript n R arrow' +
+                       ' k Base comma limsup Underscript n right-arrow' +
                        ' infinity Endscripts upper E Sub n Base equals' +
-                       ' intersection Underscript n greater-than-or-equal-to' +
-                       ' 1 Endscripts union Underscript k' +
+                       ' intersection Underscript n' +
+                       ' greater-than-or-equal-to 1 Endscripts union' +
+                       ' Underscript k greater-than-or-equal-to n' +
+                       ' Endscripts upper E Sub k Base period', 'brief');
+  this.executeRuleTest(mml, 'liminf Underscript n R arrow infinity' +
+                       ' Endscripts upper E Sub n Base equals union' +
+                       ' Underscript n greater-than-or-equal-to 1' +
+                       ' Endscripts intersection Underscript k' +
+                       ' greater-than-or-equal-to n Endscripts upper E Sub' +
+                       ' k Base comma limsup Underscript n R arrow infinity' +
+                       ' Endscripts upper E Sub n Base equals intersection' +
+                       ' Underscript n greater-than-or-equal-to 1' +
+                       ' Endscripts union Underscript k' +
                        ' greater-than-or-equal-to n Endscripts upper E Sub' +
                        ' k Base period', 'sbrief');
 };
