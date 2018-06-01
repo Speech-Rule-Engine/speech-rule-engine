@@ -47,6 +47,8 @@ DOCS = $(PREFIX)/docs
 DOCS_SRC = $(DOCS)/src
 DOCS_TESTS = $(DOCS)/tests
 
+JSON_MINIFY = npx json-minify
+
 ##################################################################
 # Error flags.
 # Compiling as rigidly as possible.
@@ -197,20 +199,26 @@ publish: clean compile browser maps iemaps
 maps: $(MAPS)
 
 $(MAPS): 
-	cp -R $(JSON_DIR)/$@ $(LIB_DIR)/$@
+	@echo $@
+	@echo $(LIB_DIR)/$@
+	@mkdir -p $(LIB_DIR)/$@
+	@for i in $(JSON_DIR)/$@/*.js; do\
+		echo $$i; \
+		$(JSON_MINIFY) $$i > $(LIB_DIR)/$@/`basename $$i`; \
+	done
 
 iemaps:
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for dir in $(MAPS); do\
-		for i in $(JSON_DIR)/$$dir/*.js; do\
+		for i in $(LIB_DIR)/$$dir/*.js; do\
 			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
 			cat $$i >> $(IEMAPS_FILE); \
 			echo ','  >> $(IEMAPS_FILE); \
 		done; \
 	done
 	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@echo '}\n' >> $(IEMAPS_FILE).tmp
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
-	@echo '}\n' >> $(IEMAPS_FILE)
 
 api: $(SRC)
 	@echo Compiling Speech Rule Engine API
