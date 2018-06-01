@@ -32,7 +32,7 @@ LICENSE = $(RES_DIR)/license-header.txt
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_DIR = $(SRC_DIR)/mathmaps
 MAPS = functions symbols units
-IEMAPS_FILE = $(JSON_DIR)/mathmaps_ie.js
+IEMAPS_FILE = $(LIB_DIR)/mathmaps_ie.js
 MAPS_DIRS = $(foreach dir, $(MAPS), $(JSON_DIR)/$(dir))
 
 TEST_DIR = $(abspath ./tests)
@@ -192,7 +192,7 @@ clean_test:
 # Publish the API via npm.
 ##################################################################
 
-publish: compile maps
+publish: clean compile browser maps iemaps
 
 maps: $(MAPS)
 
