@@ -458,7 +458,7 @@ sre.MathspeakUtil.wordOrdinal = function(number) {
   } else if (ordinal.match(/nine$/)) {
     ordinal = ordinal.slice(0, -4) + 'ninth';
   } else if (ordinal.match(/twelve$/)) {
-    ordinal = ordinal.slice(0, -5) + 'twelfth';
+    ordinal = ordinal.slice(0, -6) + 'twelfth';
   } else if (ordinal.match(/ty$/)) {
     ordinal = ordinal.slice(0, -2) + 'tieth';
   } else {
