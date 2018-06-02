@@ -33,7 +33,15 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.version = '2.2.2-beta.1';
+sre.Variables.VERSION = '2.2.2-beta.3';
+
+
+/**
+ * List of locales to load.
+ * @const
+ * @type {Array.<string>}
+ */
+sre.Variables.LOCALES = ['en', 'es'];
 
 
 /**
@@ -50,7 +58,7 @@ sre.Variables.mathjaxVersion = '2.7.4';
  * @type {string}
  */
 sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
-  sre.Variables.version + '/lib';
+  sre.Variables.VERSION + '/lib/mathmaps';
 
 
 /**
