@@ -12,7 +12,7 @@
         "default": "logaritmo"
       }
     },
-    "category": "Elementary"
+    "category": "Logarithm"
   },
   {
     "key": "ln",
@@ -24,7 +24,7 @@
         "default": "logaritmo neperiano"
       }
     },
-    "category": "Elementary"
+    "category": "Logarithm"
   },
   {
     "key": "lg",
@@ -36,7 +36,7 @@
         "default": "logaritmo base 10"
       }
     },
-    "category": "Elementary"
+    "category": "Logarithm"
   },
   {
     "key": "exp",

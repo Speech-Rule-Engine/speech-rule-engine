@@ -134,7 +134,7 @@
      }
    },
    "key": "liminf",
-   "names": ["lim inf"]
+   "names": ["lim inf", "liminf"]
   },
   {"category": "Limits",
    "mappings": {
@@ -145,7 +145,7 @@
      }
    },
    "key": "limsup",
-   "names": ["lim sup"]
+   "names": ["lim sup", "limsup"]
   },
   {"category": "Limits",
    "mappings": {
@@ -176,34 +176,6 @@
    },
    "key": "sup",
    "names": ["sup"]
-  },
-  {
-    "key": "lim inf",
-    "names": [
-      "lim inf",
-      "liminf"
-    ],
-    "mappings": {
-      "default": {
-        "default": "limit inferior",
-        "short": "liminf"
-      }
-    },
-    "category": "Limits"
-  },
-  {
-    "key": "lim sup",
-    "names": [
-      "lim sup",
-      "limsup"
-    ],
-    "mappings": {
-      "default": {
-        "default": "limit superior",
-        "short": "limsup"
-      }
-    },
-    "category": "Limits"
   },
   {"category": "Limits",
    "mappings": {
