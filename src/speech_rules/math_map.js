@@ -28,6 +28,7 @@ goog.require('sre.BrowserUtil');
 goog.require('sre.Engine');
 goog.require('sre.MathCompoundStore');
 goog.require('sre.SystemExternal');
+goog.require('sre.Variables');
 
 
 
@@ -128,12 +129,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
   'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js',
-
-  // TODO: Sort this similar to the above.
-  // Localisation
-  'spanish.js', 'spanish_mathfonts.js'
-
+  'math_whitespace.js', 'other_stars.js'
 ];
 
 
@@ -144,8 +140,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
  * @private
  */
 sre.MathMap.FUNCTIONS_FILES_ = [
-  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js',
-  'functions_spanish.js'
+  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
 ];
 
 
@@ -157,8 +152,7 @@ sre.MathMap.FUNCTIONS_FILES_ = [
  */
 sre.MathMap.UNITS_FILES_ = [
   'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
-  'temperature.js', 'time.js', 'volume.js', 'weight.js',
-  'units_spanish.js'
+  'temperature.js', 'time.js', 'volume.js', 'weight.js'
 ];
 
 
@@ -206,18 +200,21 @@ sre.MathMap.retrieveFiles = function(files, path, func) {
  * Retrieves mappings and adds them to the respective stores.
  */
 sre.MathMap.prototype.retrieveMaps = function() {
-  sre.MathMap.retrieveFiles(
-      sre.MathMap.FUNCTIONS_FILES_,
-      sre.MathMap.FUNCTIONS_PATH_,
-      goog.bind(this.store.addFunctionRules, this.store));
-  sre.MathMap.retrieveFiles(
-      sre.MathMap.SYMBOLS_FILES_,
-      sre.MathMap.SYMBOLS_PATH_,
-      goog.bind(this.store.addSymbolRules, this.store));
-  sre.MathMap.retrieveFiles(
-      sre.MathMap.UNITS_FILES_,
-      sre.MathMap.UNITS_PATH_,
-      goog.bind(this.store.addUnitRules, this.store));
+  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
+    var locale = sre.Variables.LOCALES[i];
+    sre.MathMap.retrieveFiles(
+        sre.MathMap.FUNCTIONS_FILES_,
+        locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
+        goog.bind(this.store.addFunctionRules, this.store));
+    sre.MathMap.retrieveFiles(
+        sre.MathMap.SYMBOLS_FILES_,
+        locale + '/' + sre.MathMap.SYMBOLS_PATH_,
+        goog.bind(this.store.addSymbolRules, this.store));
+    sre.MathMap.retrieveFiles(
+        sre.MathMap.UNITS_FILES_,
+        locale + '/' + sre.MathMap.UNITS_PATH_,
+        goog.bind(this.store.addUnitRules, this.store));
+  }
 };
 
 
@@ -240,9 +237,12 @@ sre.MathMap.getJsonIE_ = function(file, func, opt_count) {
     }
     return;
   }
-  var json = sre.BrowserUtil.mapsForIE[file];
-  if (json) {
-    json.forEach(function(x) {func(x);});
+  for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
+    var locale = sre.Variables.LOCALES[i];
+    var json = sre.BrowserUtil.mapsForIE[locale + '/' + file];
+    if (json) {
+      json.forEach(function(x) {func(x);});
+    }
   }
   sre.MathMap.toFetch_--;
 };

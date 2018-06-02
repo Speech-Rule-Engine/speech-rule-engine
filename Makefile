@@ -30,10 +30,11 @@ ENRICH = $(LIB_DIR)/enrich.js
 LICENSE = $(RES_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
-JSON_DIR = $(SRC_DIR)/mathmaps
+JSON_SRC = $(SRC_DIR)/mathmaps
+JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = functions symbols units
-IEMAPS_FILE = $(LIB_DIR)/mathmaps_ie.js
-MAPS_DIRS = $(foreach dir, $(MAPS), $(JSON_DIR)/$(dir))
+IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
+LOCALES = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
@@ -82,7 +83,7 @@ DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 space = $(null) #
 comma = ,
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
-LINT_EXCLUDE_DIRS = $(subst $(space),$(comma),$(strip $(MAPS_DIRS)))
+LINT_EXCLUDE_DIRS = $(JSON_SRC)
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
 GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
@@ -137,7 +138,7 @@ $(INTERACTIVE):
 	@echo "  }" >> $@
 	@echo "  return true;" >> $@
 	@echo "};" >> $@
-	@echo "process.env.SRE_JSON_PATH = '$(JSON_DIR)';" >> $@
+	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.getInstance().setupEngine({'mode': sre.Engine.Mode.ASYNC});" >> $@
@@ -146,7 +147,7 @@ clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
-	$(foreach map, $(MAPS), rm -rf $(LIB_DIR)/$(map))
+	rm -rf $(JSON_DST)
 
 
 ##################################################################
@@ -177,7 +178,7 @@ $(TEST):
 	@echo "Making test script."
 	@echo "#!/bin/bash" > $@
 	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_DIR)\n" >> $@
+	@echo "\nexport SRE_JSON_PATH=$(JSON_SRC)\n" >> $@
 	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
 	@chmod 755 $@
 
@@ -199,21 +200,23 @@ publish: clean compile browser maps iemaps
 maps: $(MAPS)
 
 $(MAPS): 
-	@echo $@
-	@echo $(LIB_DIR)/$@
-	@mkdir -p $(LIB_DIR)/$@
-	@for i in $(JSON_DIR)/$@/*.js; do\
-		echo $$i; \
-		$(JSON_MINIFY) $$i > $(LIB_DIR)/$@/`basename $$i`; \
+	@for j in $(LOCALES); do\
+		dir=$(JSON_DST)/`basename $$j`/$@; \
+		mkdir -p $$dir; \
+		for i in $$j/$@/*.js; do\
+			$(JSON_MINIFY) $$i > $$dir/`basename $$i`; \
+		done; \
 	done
 
 iemaps:
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
-	@for dir in $(MAPS); do\
-		for i in $(LIB_DIR)/$$dir/*.js; do\
-			echo '"'`basename $$i`'": '  >> $(IEMAPS_FILE); \
-			cat $$i >> $(IEMAPS_FILE); \
-			echo ','  >> $(IEMAPS_FILE); \
+	@for j in $(LOCALES); do\
+		for dir in $(MAPS); do\
+			for i in $(JSON_DST)/`basename $$j`/$$dir/*.js; do\
+				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
+				cat $$i >> $(IEMAPS_FILE); \
+				echo ','  >> $(IEMAPS_FILE); \
+			done; \
 		done; \
 	done
 	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp

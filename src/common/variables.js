@@ -37,6 +37,14 @@ sre.Variables.version = '2.3.0-beta.0';
 
 
 /**
+ * List of locales to load.
+ * @const
+ * @type {Array.<string>}
+ */
+sre.Variables.LOCALES = ['en', 'es'];
+
+
+/**
  * MathJax version. This is useful for paths depending on MathJax distribution.
  * @const
  * @type {string}
@@ -50,7 +58,7 @@ sre.Variables.mathjaxVersion = '2.7.4';
  * @type {string}
  */
 sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
-  sre.Variables.version + '/lib';
+    sre.Variables.VERSION + '/lib/mathmaps';
 
 
 /**

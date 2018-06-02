@@ -11272,19 +11272,19 @@ sre.EnrichMathmlTest.prototype.testMathmlHiddenIgnoreElements = function() {
  */
 sre.EnrichMathmlTest.prototype.testMathmlHiddenEmptyTokens = function() {
   this.executeMathmlTest(
-    '<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>', '<math><msub' +
+      '<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>', '<math><msub' +
       ' type="subscript" role="vbar" id="3" children="1,2"><mrow><mo/><mo' +
       ' type="punctuation" role="vbar" id="1" parent="3">|</mo></mrow><mi' +
       ' type="identifier" role="latinletter" id="2" parent="3">t</mi>' +
       '</msub></math>');
   this.executeMathmlTest(
-    '<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>', '<math><msub' +
+      '<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>', '<math><msub' +
       ' type="subscript" role="vbar" id="3" children="1,2"><mrow><mi/><mo' +
       ' type="punctuation" role="vbar" id="1" parent="3">|</mo></mrow><mi' +
       ' type="identifier" role="latinletter" id="2" parent="3">t</mi>' +
       '</msub></math>');
   this.executeMathmlTest(
-    '<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>', '' +
+      '<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>', '' +
       '<math><msub type="subscript" role="vbar" id="4" children="2,3">' +
       '<mrow><mo/><mo/><mo type="punctuation" role="vbar" id="2"' +
       ' parent="4">|</mo></mrow><mi type="identifier" role="latinletter"' +

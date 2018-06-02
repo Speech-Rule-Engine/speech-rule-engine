@@ -24,7 +24,7 @@
 goog.provide('sre.SystemExternal');
 
 goog.require('sre.Variables');
-  
+
 
 
 /**
@@ -118,16 +118,6 @@ sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
  */
 sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
     null : sre.SystemExternal.require('xml-mapping');
-
-
-/**
- * Check if location is already supported in this JS.
- * @return {boolean} True if location is defined.
- * @deprecated
- */
-sre.SystemExternal.locationSupported = function() {
-  return !(typeof(location) == 'undefined');
-};
 
 
 /**

@@ -52,7 +52,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = sre.Variables.version;
+  this.version = sre.Variables.VERSION;
 
 };
 goog.addSingletonGetter(sre.System);

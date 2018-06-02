@@ -6,7 +6,7 @@
     }
   },
   "key": "doz",
-  "names": ["doz", "doz."]
+  "names": ["doz", "doz.", "dz", "dz."]
  },
  {"category": "",
   "mappings": {
