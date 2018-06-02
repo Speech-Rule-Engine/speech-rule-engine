@@ -58,7 +58,7 @@ sre.Variables.mathjaxVersion = '2.7.4';
  * @type {string}
  */
 sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
-  sre.Variables.VERSION + '/lib/mathmaps';
+    sre.Variables.VERSION + '/lib/mathmaps';
 
 
 /**

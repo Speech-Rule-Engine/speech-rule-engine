@@ -203,17 +203,17 @@ sre.MathMap.prototype.retrieveMaps = function() {
   for (var i = 0; i < sre.Variables.LOCALES.length; i++) {
     var locale = sre.Variables.LOCALES[i];
     sre.MathMap.retrieveFiles(
-      sre.MathMap.FUNCTIONS_FILES_,
-      locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
-      goog.bind(this.store.addFunctionRules, this.store));
+        sre.MathMap.FUNCTIONS_FILES_,
+        locale + '/' + sre.MathMap.FUNCTIONS_PATH_,
+        goog.bind(this.store.addFunctionRules, this.store));
     sre.MathMap.retrieveFiles(
-      sre.MathMap.SYMBOLS_FILES_,
-      locale + '/' + sre.MathMap.SYMBOLS_PATH_,
-      goog.bind(this.store.addSymbolRules, this.store));
+        sre.MathMap.SYMBOLS_FILES_,
+        locale + '/' + sre.MathMap.SYMBOLS_PATH_,
+        goog.bind(this.store.addSymbolRules, this.store));
     sre.MathMap.retrieveFiles(
-      sre.MathMap.UNITS_FILES_,
-      locale + '/' + sre.MathMap.UNITS_PATH_,
-      goog.bind(this.store.addUnitRules, this.store));
+        sre.MathMap.UNITS_FILES_,
+        locale + '/' + sre.MathMap.UNITS_PATH_,
+        goog.bind(this.store.addUnitRules, this.store));
   }
 };
 
