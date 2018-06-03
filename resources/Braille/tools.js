@@ -54,6 +54,12 @@ Tools.LATIN_MATH_FONTS = [
   'latin-mathfonts-script.js'
 ];
 
+Tools.GREEK_MATH_FONTS = [
+  // Greek Mathfonts
+  'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+  'greek-mathfonts-sans-serif-bold.js', 
+];
+
 /**
  * Array of JSON filenames containing symbol definitions for math speak.
  * @type {Array.<string>}
@@ -63,10 +69,12 @@ Tools.LATIN_MATH_FONTS = [
 Tools.SYMBOLS_FILES_ = [
   // Math Symbols
   'math_angles.js', 'math_arrows.js', 'math_characters.js',
-  'math_delimiters.js', 'math_digits.js', 'math_geometry.js',
+  'math_delimiters.js', 'math_geometry.js',
   'math_harpoons.js', 'math_non_characters.js', 'math_symbols.js',
-  'math_whitespace.js', 'other_stars.js'
+  'math_whitespace.js', 'other_stars.js',
+  'math_digits.js'
 ];
+// TODO: math_digits, properly. hebrew.
 
 
 /**
@@ -144,9 +152,50 @@ Tools.translateSymbolFiles = function(files, src, dest) {
   Tools.translateSymbols(symbols, dest);
 };
 
-Tools.translateAlphabetFiles = function() {
+Tools.translateAlphabetFiles = function(files, src, dest) {
   let alphabets = Tools.retrieveFiles(files, src);
-  Tools.translateAlphabets(symbols, dest);
+  Tools.translateAlphabets(alphabets, dest);
+};
+
+Tools.GREEKLETTER = {
+  
+};
+
+Tools.LATINLETTER = {
+  
+};
+
+
+Tools.FONT = {
+    'bold': '⠸',
+    'bold-fraktur': '⠸⠀⠸',
+    'bold-italic': '⠸⠨',
+    'bold-script': '⠸⠈',
+    'caligraphic': '',
+    'caligraphic-bold': '⠸',
+    'double-struck': '⠈',
+    'double-struck-italic': '⠈⠨',
+    'fraktur': '⠸',
+    'italic': '⠨',
+    'monospace': '',
+    'normal': '',
+    'oldstyle': '',
+    'oldstyle-bold': '⠸',
+    'script': '⠈',
+    'sans-serif': '⠠⠨',
+    'sans-serif-italic': '⠠⠨⠨',
+    'sans-serif-bold': '⠠⠨⠸',
+    'sans-serif-bold-italic': '⠠⠨⠸⠨',
+    'unknown': ''
+};
+// script is the same as double struck!
+// omitted: caligraphic, oldstyle, unknown, monospace
+
+Tools.translateSymbols = function(alphabets, dest) {
+  for (let file in alphabets) {
+    let alphabet = alphabets[file];
+    let caps = alphabet.slice(0, alphabet/2);
+    let small = 
 };
 
 Tools.stringIs6Cell = function(str) {
