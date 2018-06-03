@@ -1,5 +1,6 @@
 require('/home/sorge/git/speech-rule-engine/lib/sre4node');
 let shell = require('shelljs');
+let fs = require('fs');
 
 Tools = {};
 
@@ -11,8 +12,11 @@ Tools = {};
  */
 Tools.GREEK_FILES_ = [
   // Greek
-  'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
-  'greek-mathfonts.js', 'greek-symbols.js'
+  'greek-capital.js', 'greek-small.js'];
+
+
+Tools.GREEK_MATH_FONTS_ = [
+  'greek-scripts.js', 'greek-mathfonts.js', 'greek-symbols.js'
 ];
 
 /**
@@ -41,7 +45,14 @@ Tools.LATIN_FILES_ = [
   'latin-upper-normal.js', 'latin-upper-single-accent.js'
 ];
   
-Tools.MATH_FONTS = 'latin-mathfonts.js';
+Tools.LATIN_MATH_FONTS = [
+  'latin-mathfonts-bold-fraktur.js', 'latin-mathfonts-bold.js',
+  'latin-mathfonts-bold-script.js', 'latin-mathfonts-double-struck.js',
+  'latin-mathfonts-fraktur.js', 'latin-mathfonts-italic.js',
+  'latin-mathfonts-monospace.js', 'latin-mathfonts-sans-serif-bold.js',
+  'latin-mathfonts-sans-serif-italic.js', 'latin-mathfonts-sans-serif.js',
+  'latin-mathfonts-script.js'
+];
 
 /**
  * Array of JSON filenames containing symbol definitions for math speak.
@@ -65,8 +76,7 @@ Tools.SYMBOLS_FILES_ = [
  * @private
  */
 Tools.FUNCTIONS_FILES_ = [
-  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js',
-  'functions_spanish.js'
+  'algebra.js', 'elementary.js', 'hyperbolic.js', 'trigonometry.js'
 ];
 
 
@@ -78,23 +88,33 @@ Tools.FUNCTIONS_FILES_ = [
  */
 Tools.UNITS_FILES_ = [
   'energy.js', 'length.js', 'memory.js', 'other.js', 'speed.js',
-  'temperature.js', 'time.js', 'volume.js', 'weight.js',
-  'units_spanish.js'
+  'temperature.js', 'time.js', 'volume.js', 'weight.js'
 ];
 
 
 Tools.fileContent = {};
 
-Tools.retrieveFiles = function(files, path, func) {
-  path = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath + path);
-  for (var i = 0; i < files.length; i++) {
-    let result = {};
-    var file = files[i];
-    var fullPath = path + file;
-    var json = JSON.parse(sre.MathMap.loadFile(fullPath));
-    json.map(function(x) {func(x, result);});
-    Tools.fileContent[file] = result;
+Tools.retrieveFile = function(file) {
+  let content = fs.readFileSync(file);
+  let result = [];
+  if (content) {
+    JSON.parse(content).forEach(function(x) {
+      let key = x['key'];
+      if (key) {
+        result.push(x);
+      }
+    }); 
   }
+  return result;
+};
+
+Tools.retrieveFiles = function(files, path) {
+  let result = {};
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+    result[file] = Tools.retrieveFile(path + file);
+  }
+  return result;
 };
 
 
@@ -108,19 +128,26 @@ Tools.translateCharacter = function(char) {
 };
 
 
-Tools.translateAll = function(opt_files) {
-  opt_files = opt_files ||
-    [].concat(Tools.GREEK_FILES_, Tools.HEBREW_FILES_, Tools.LATIN_FILES_, Tools.SYMBOLS_FILES_);
-  // Tools.FUNCTIONS_FILES_, Tools.UNITS_FILES_);
-  Tools.retrieveFiles(
-    opt_files, sre.MathMap.SYMBOLS_PATH_,
-    function(x, y) {
-      if (typeof x.key !== 'undefined') {
-        y[x.key] = sre.SemanticUtil.numberToUnicode(parseInt(x.key, 16));
-      }
-    });
+Tools.translateAll = function() {
+  Tools.file8Cell = {};
+  Tools.fileUntranslated = {};
+  Tools.translateSymbolFiles(
+    [].concat(Tools.GREEK_FILES_),
+    // [].concat(Tools.GREEK_FILES_, Tools.HEBREW_FILES_, Tools.LATIN_FILES_, Tools.SYMBOLS_FILES_),
+    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
+    '/tmp/nemeth/symbols/'
+  );
 };
 
+Tools.translateSymbolFiles = function(files, src, dest) {
+  let symbols = Tools.retrieveFiles(files, src);
+  Tools.translateSymbols(symbols, dest);
+};
+
+Tools.translateAlphabetFiles = function() {
+  let alphabets = Tools.retrieveFiles(files, src);
+  Tools.translateAlphabets(symbols, dest);
+};
 
 Tools.stringIs6Cell = function(str) {
   return !!str.match(/^[\u2800-\u283F]+$/);
@@ -136,40 +163,51 @@ Tools.file8Cell = {};
 
 Tools.fileUntranslated = {};
 
-Tools.translateFiles = function() {
-  for (let key in Tools.fileContent) {
-    let file = Tools.fileContent[key];
-    let result = {};
-    let result8 = {};
-    let resultUn = {};
-    for (let char in file) {
-      let translate = Tools.translateCharacter(file[char]);
-      if (Tools.stringIs6Cell(translate)) {
-        result[char] = translate;
+Tools.translateSymbols = function(symbols, dest) {
+  for (let file in symbols) {
+    let json = symbols[file];
+    let result = [];
+    let result8 = [];
+    let resultUn = [];
+    for (let element of json) {
+      let key = sre.SemanticUtil.numberToUnicode(parseInt(element.key, 16));
+      console.log(key);
+      let nemeth = Tools.translateCharacter(key);
+      console.log(nemeth);
+      element.mappings = {default: {default: nemeth}};
+      if (Tools.stringIs6Cell(nemeth)) {
+        result.push(element);
         continue;
       }
-      if (Tools.stringIs8Cell(translate)) {
-        result[char] = translate;
-        result8[char] = translate;
+      if (Tools.stringIs8Cell(nemeth)) {
+        result.push(element);
+        result8.push(element);
         continue;
       }
-      resultUn[char] = translate;
+      resultUn.push(element);
     }
-    Tools.fileBraille[key] = result;
-    Tools.file8Cell[key] = result8;
-    Tools.fileUntranslated[key] = resultUn;
+    // Tools.fileBraille[file] = result;
+    Tools.writeFile(dest + file, result);
+    Tools.file8Cell[file] = result8;
+    Tools.fileUntranslated[file] = resultUn;
   }
 };
 
 
-Tools.writeFiles = function(path) {
-  for (let key in Tools.fileBraille) {
-    let json = [{"locale": "nemeth"}];
-    let file = Tools.fileBraille[key];
-    for (let code in file) {
-      json.push({key: code, mappings: {nemeth: {default: file[code]}}});
-    }
-    let output = path + '/' + key;
-    fs.writeFileSync(output, JSON.stringify(json, null, 2), function() {});
-  }
+// Tools.writeFiles = function(path) {
+//   for (let key in Tools.fileBraille) {
+//     let json = [{"locale": "nemeth"}];
+//     let file = Tools.fileBraille[key];
+//     for (let code in file) {
+//       json.push({key: code, mappings: {nemeth: {default: file[code]}}});
+//     }
+//     let output = path + '/' + key;
+//     fs.writeFileSync(output, JSON.stringify(json, null, 2), function() {});
+//   }
+// };
+
+
+Tools.writeFile = function(file, json) {
+  json.unshift({"locale": "nemeth"});
+  fs.writeFileSync(file, JSON.stringify(json, null, 2), function() {});
 };
