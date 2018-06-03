@@ -159,15 +159,6 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "sans-serif negrita mayúscula Theta"
-      }
-    },
-    "key": "1D767"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
         "default": "sans-serif negrita mayúscula Sigma"
       }
     },

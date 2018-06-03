@@ -292,23 +292,6 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical bold capital theta symbol",
-        "alternative": "bold capital theta",
-        "short": "bold cap theta"
-      },
-      "mathspeak": {
-        "default": "bold upper Theta"
-      },
-      "clearspeak": {
-        "default": "bold cap Theta"
-      }
-    },
-    "key": "1D6B9"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
         "default": "mathematical bold capital sigma",
         "alternative": "bold capital sigma",
         "short": "bold cap sigma"

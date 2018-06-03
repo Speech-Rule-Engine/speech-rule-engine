@@ -15,8 +15,7 @@
     "key": "03D1",
     "mappings": {
       "default": {
-        "default": "theta",
-        "defaultMP": "variante de theta"
+        "default": "variante de theta"
       }
     },
     "category": "Ll"
@@ -92,9 +91,36 @@
     "key": "03F4",
     "mappings": {
       "default": {
-        "default": "mayúscula Theta"
+        "default": "mayúscula variante de Theta"
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "negrita mayúscula variante de Theta"
+      }
+    },
+    "key": "1D6B9"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "cursiva mayúscula variante de Theta"
+      }
+    },
+    "key": "1D6F3"
+  },
+  {
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "sans-serif negrita mayúscula variante de Theta"
+      }
+    },
+    "key": "1D767"
   }
 ]

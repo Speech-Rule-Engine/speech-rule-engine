@@ -159,15 +159,6 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "cursiva mayúscula Theta"
-      }
-    },
-    "key": "1D6F3"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
         "default": "cursiva mayúscula Sigma"
       }
     },
