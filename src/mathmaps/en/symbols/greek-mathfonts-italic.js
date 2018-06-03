@@ -241,20 +241,6 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "mathematical italic capital theta symbol",
-        "alternative": "italic capital theta",
-        "short": "italic cap theta"
-      },
-      "mathspeak": {
-        "default": "italic upper Theta"
-      }
-    },
-    "key": "1D6F3"
-  },
-  {
-    "category": "Lu",
-    "mappings": {
-      "default": {
         "default": "mathematical italic capital sigma",
         "alternative": "italic capital sigma",
         "short": "italic cap sigma"
