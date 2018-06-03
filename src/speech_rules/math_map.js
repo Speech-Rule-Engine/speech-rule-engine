@@ -106,7 +106,11 @@ sre.MathMap.UNITS_PATH_ = 'units';
 sre.MathMap.SYMBOLS_FILES_ = [
   // Greek
   'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
-  'greek-mathfonts.js', 'greek-symbols.js',
+  'greek-symbols.js',
+
+  // Greek Mathfonts
+  'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+  'greek-mathfonts-sans-serif-bold.js', 
 
   // Hebrew
   'hebrew_letters.js',
