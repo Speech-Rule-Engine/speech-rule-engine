@@ -28,6 +28,7 @@ goog.require('sre.EmacspeakRules');
 goog.require('sre.MathmlStoreRules');
 goog.require('sre.MathspeakRules');
 goog.require('sre.MathspeakSpanish');
+goog.require('sre.NemethRules');
 goog.require('sre.PrefixRules');
 goog.require('sre.PrefixSpanish');
 goog.require('sre.SemanticTreeRules');
@@ -42,6 +43,7 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'SemanticTreeRules': sre.SemanticTreeRules,
   'MathspeakRules': sre.MathspeakRules,
   'MathspeakSpanish': sre.MathspeakSpanish,
+  'NemethRules': sre.NemethRules,
   'ClearspeakRules': sre.ClearspeakRules,
   'EmacspeakRules': sre.EmacspeakRules,
   'AbstractionRules': sre.AbstractionRules,
