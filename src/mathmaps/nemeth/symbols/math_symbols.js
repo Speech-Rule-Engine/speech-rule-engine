@@ -6,7 +6,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠯"
+        "default": "⠖"
       }
     },
     "key": "0021"
@@ -295,7 +295,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠈⠎"
+        "default": "⠈⠠⠎"
       }
     },
     "key": "00A7"

@@ -24,7 +24,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠖⠴⠖⠄"
+        "default": "⠫⠎"
       }
     },
     "key": "2606"

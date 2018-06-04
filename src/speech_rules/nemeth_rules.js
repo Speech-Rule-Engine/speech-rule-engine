@@ -383,9 +383,9 @@ sre.NemethRules.initNemethRules_ = function() {
       'text', 'default.default', '[n] text()', 'self::text');
 
   // Special symbols
-  // defineRule(
-  //     'factorial', 'default.default', '[t] "factorial"', 'self::punctuation',
-  //     'text()="!"', 'name(preceding-sibling::*[1])!="text"');
+  defineRule(
+      'factorial', 'default.default', '[t] "⠯"', 'self::punctuation',
+      'text()="!"', 'name(preceding-sibling::*[1])!="text"');
   // defineRule(
   //     'minus', 'default.default', '[t] "minus"',
   //     'self::operator', 'text()="\u002D"');

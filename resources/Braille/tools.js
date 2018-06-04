@@ -138,7 +138,8 @@ Tools.retrieveFiles = function(files, path) {
 };
 
 
-Tools.SHELL_COMMAND = 'lou_translate unicode.dis,nemeth.ctb ';
+// Tools.SHELL_COMMAND = 'lou_translate unicode.dis,nemeth.ctb ';
+Tools.SHELL_COMMAND = 'lou_translate unicode.dis,en-us-mathtext.ctb ';
 
 Tools.translateCharacter = function(char) {
   let command = 'echo ' + char + ' | ' + Tools.SHELL_COMMAND;
@@ -167,15 +168,20 @@ Tools.translateAll = function() {
   //   '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
   //   '/tmp/nemeth/symbols/'
   // );
+  // Tools.translateSymbolFiles(
+  //   Tools.FUNCTIONS_FILES_,
+  //   '/home/sorge/git/speech-rule-engine/src/mathmaps/en/functions/',
+  //   '/tmp/nemeth/functions/', true
+  // );
+  // Tools.translateSymbolFiles(
+  //   Tools.UNITS_FILES_,
+  //   '/home/sorge/git/speech-rule-engine/src/mathmaps/en/units/',
+  //   '/tmp/nemeth/units/', true
+  // );
   Tools.translateSymbolFiles(
-    Tools.FUNCTIONS_FILES_,
-    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/functions/',
-    '/tmp/nemeth/functions/', true
-  );
-  Tools.translateSymbolFiles(
-    Tools.UNITS_FILES_,
-    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/units/',
-    '/tmp/nemeth/units/', true
+    [].concat(Tools.LATIN_REST_, Tools.SYMBOLS_FILES_),
+    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
+    '/tmp/nemeth-text/symbols/'
   );
 };
 
