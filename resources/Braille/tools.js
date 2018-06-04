@@ -12,11 +12,18 @@ Tools = {};
  */
 Tools.GREEK_FILES_ = [
   // Greek
-  'greek-capital.js', 'greek-small.js'];
+  'greek-capital.js', 'greek-small.js'
+];
+
+Tools.GREEK_REST_ = [
+  'greek-scripts.js', 'greek-symbols.js'
+];
+// TODO: 'greek-scripts.js', 'greek-symbols.js' Make better!
 
 
 Tools.GREEK_MATH_FONTS_ = [
-  'greek-scripts.js', 'greek-mathfonts.js', 'greek-symbols.js'
+  'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+  'greek-mathfonts-sans-serif-bold.js'
 ];
 
 /**
@@ -29,6 +36,7 @@ Tools.HEBREW_FILES_ = [
 // Hebrew
   'hebrew_letters.js'
 ];
+// TODO: cleanup
 
 
 /**
@@ -39,10 +47,14 @@ Tools.HEBREW_FILES_ = [
  */
 Tools.LATIN_FILES_ = [
   // Latin
-  'latin-lower-double-accent.js', 'latin-lower-normal.js',
+  'latin-lower-normal.js', 'latin-upper-normal.js'
+];
+
+Tools.LATIN_REST_ = [
+  'latin-lower-double-accent.js', 
   'latin-lower-phonetic.js', 'latin-lower-single-accent.js',
   'latin-rest.js', 'latin-upper-double-accent.js',
-  'latin-upper-normal.js', 'latin-upper-single-accent.js'
+  'latin-upper-single-accent.js'
 ];
   
 Tools.LATIN_MATH_FONTS = [
@@ -137,19 +149,39 @@ Tools.translateCharacter = function(char) {
 
 
 Tools.translateAll = function() {
-  Tools.file8Cell = {};
-  Tools.fileUntranslated = {};
+  // Tools.file8Cell = {};
+  // Tools.fileUntranslated = {};
+  // Tools.translateSymbolFiles(
+  //   [].concat(Tools.GREEK_FILES_, Tools.LATIN_FILES_),
+  //   // [].concat(Tools.GREEK_FILES_, Tools.HEBREW_FILES_, Tools.LATIN_FILES_, Tools.SYMBOLS_FILES_),
+  //   '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
+  //   '/tmp/nemeth/symbols/'
+  // );
+  // Tools.translateAlphabetFiles(
+  //   [].concat(Tools.LATIN_MATH_FONTS, Tools.GREEK_MATH_FONTS_),
+  //   '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
+  //   '/tmp/nemeth/symbols/'
+  // );
+  // Tools.translateSymbolFiles(
+  //   [].concat(Tools.LATIN_REST_, Tools.SYMBOLS_FILES_),
+  //   '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
+  //   '/tmp/nemeth/symbols/'
+  // );
   Tools.translateSymbolFiles(
-    [].concat(Tools.GREEK_FILES_),
-    // [].concat(Tools.GREEK_FILES_, Tools.HEBREW_FILES_, Tools.LATIN_FILES_, Tools.SYMBOLS_FILES_),
-    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/symbols/',
-    '/tmp/nemeth/symbols/'
+    Tools.FUNCTIONS_FILES_,
+    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/functions/',
+    '/tmp/nemeth/functions/', true
+  );
+  Tools.translateSymbolFiles(
+    Tools.UNITS_FILES_,
+    '/home/sorge/git/speech-rule-engine/src/mathmaps/en/units/',
+    '/tmp/nemeth/units/', true
   );
 };
 
-Tools.translateSymbolFiles = function(files, src, dest) {
+Tools.translateSymbolFiles = function(files, src, dest, decode) {
   let symbols = Tools.retrieveFiles(files, src);
-  Tools.translateSymbols(symbols, dest);
+  Tools.translateSymbols(symbols, dest, decode);
 };
 
 Tools.translateAlphabetFiles = function(files, src, dest) {
@@ -157,13 +189,23 @@ Tools.translateAlphabetFiles = function(files, src, dest) {
   Tools.translateAlphabets(alphabets, dest);
 };
 
-Tools.GREEKLETTER = {
-  
-};
+Tools.GREEKLETTER = [
+  "⠨⠠⠁", "⠨⠠⠃", "⠨⠠⠛", "⠨⠠⠙", "⠨⠠⠑", "⠨⠠⠱", "⠨⠠⠣", "⠨⠠⠹", "⠨⠠⠊", "⠨⠠⠅",
+  "⠨⠠⠇", "⠨⠠⠍", "⠨⠠⠝", "⠨⠠⠭", "⠨⠠⠕", "⠨⠠⠏", "⠨⠠⠗", "⠨⠠⠎", "⠨⠠⠥", "⠨⠠⠥",
+  "⠨⠠⠋", "⠨⠠⠯", "⠨⠠⠫", "⠨⠠⠺",
+  "⠨⠁", "⠨⠃", "⠨⠛", "⠨⠙", "⠨⠑", "⠨⠱", "⠨⠦", "⠨⠹", "⠨⠊", "⠨⠅",
+  "⠨⠇", "⠨⠍", "⠨⠝", "⠨⠭", "⠨⠕", "⠨⠏", "⠨⠗", "⠨⠒", "⠨⠎", "⠨⠞",
+  "⠨⠥", "⠨⠋", "⠨⠯", "⠨⠓", "⠨⠕"
+];
 
-Tools.LATINLETTER = {
-  
-};
+Tools.LATINLETTER = [
+  "⠠⠁", "⠠⠃", "⠠⠉", "⠠⠙", "⠠⠑", "⠠⠋", "⠠⠛", "⠠⠓", "⠠⠊", "⠠⠚",
+  "⠠⠅", "⠠⠇", "⠠⠍", "⠠⠝", "⠠⠕", "⠠⠏", "⠠⠟", "⠠⠗", "⠠⠎", "⠠⠞",
+  "⠠⠥", "⠠⠧", "⠠⠺", "⠠⠭", "⠠⠽", "⠠⠵",
+  "⠁", "⠃", "⠉", "⠙", "⠑", "⠋", "⠛", "⠓", "⠊", "⠚",
+  "⠅", "⠇", "⠍", "⠝", "⠕", "⠏", "⠟", "⠗", "⠎", "⠞",
+  "⠥", "⠧", "⠺", "⠭", "⠽", "⠵"
+];
 
 
 Tools.FONT = {
@@ -191,11 +233,26 @@ Tools.FONT = {
 // script is the same as double struck!
 // omitted: caligraphic, oldstyle, unknown, monospace
 
-Tools.translateSymbols = function(alphabets, dest) {
+Tools.translateAlphabets = function(alphabets, dest) {
   for (let file in alphabets) {
     let alphabet = alphabets[file];
-    let caps = alphabet.slice(0, alphabet/2);
-    let small = 
+    // let caps = alphabet.slice(0, alphabet/2);
+    // let small = alphabet.slice(alphabet/2);
+    console.log(alphabet[0]);
+    let split = alphabet[0].mappings.default.short.split(' ');
+    let font = Tools.FONT[split.slice(0, split.length - 2).join('-')];
+    if (typeof font === 'undefined') {
+      console.log('EERRRRROR: ' + split);
+    }
+    let characters = split[split.length - 1] === 'alpha' ?
+        Tools.GREEKLETTER : Tools.LATINLETTER;
+    let result = [];
+    for (let i = 0, element; element = alphabet[i]; i++) {
+      element.mappings = {default: {default: font + characters[i]}};
+      result.push(element);
+    }
+    Tools.writeFile(dest + file, result);
+  }
 };
 
 Tools.stringIs6Cell = function(str) {
@@ -211,18 +268,17 @@ Tools.fileBraille = {};
 Tools.file8Cell = {};
 
 Tools.fileUntranslated = {};
+//     { category: 'Sk', mappings: [Object], key: '00B4' } ],
 
-Tools.translateSymbols = function(symbols, dest) {
+Tools.translateSymbols = function(symbols, dest, decode) {
   for (let file in symbols) {
     let json = symbols[file];
     let result = [];
     let result8 = [];
     let resultUn = [];
     for (let element of json) {
-      let key = sre.SemanticUtil.numberToUnicode(parseInt(element.key, 16));
-      console.log(key);
+      let key = decode ? element.key : sre.SemanticUtil.numberToUnicode(parseInt(element.key, 16));
       let nemeth = Tools.translateCharacter(key);
-      console.log(nemeth);
       element.mappings = {default: {default: nemeth}};
       if (Tools.stringIs6Cell(nemeth)) {
         result.push(element);
