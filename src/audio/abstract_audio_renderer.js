@@ -73,5 +73,5 @@ sre.AbstractAudioRenderer.prototype.error = function(key) {
  * @override
  */
 sre.AbstractAudioRenderer.prototype.merge = function(strs) {
-  return strs.join(' ');
+  return strs.join(this.getSeparator());
 };
