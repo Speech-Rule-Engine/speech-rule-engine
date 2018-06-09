@@ -23,6 +23,7 @@
 goog.provide('sre.AuralRendering');
 
 goog.require('sre.AcssRenderer');
+goog.require('sre.ArnoRenderer');
 goog.require('sre.AudioRenderer');
 goog.require('sre.Engine');
 goog.require('sre.PunctuationRenderer');
@@ -138,3 +139,5 @@ sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.VOICEXML, sre.AuralRendering.xmlInstance);
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.SSML, sre.AuralRendering.xmlInstance);
+sre.AuralRendering.registerRenderer(
+    sre.Engine.Markup.ARNO, new sre.ArnoRenderer());
