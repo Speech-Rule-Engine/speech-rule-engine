@@ -39,7 +39,8 @@ sre.SsmlRenderer.prototype.markup = function(descrs) {
   var xml = sre.SsmlRenderer.base(this, 'markup', descrs);
   return '<?xml version="1.0"?><speak version="1.1"' +
     ' xmlns="http://www.w3.org/2001/10/synthesis">' +
-    this.getSeparator() + xml + this.getSeparator() + '</speak>';
+    '<prosody rate="' + sre.Engine.getInstance().getRate() + '%">' +
+    this.getSeparator() + xml + this.getSeparator() + '</prosody></speak>';
 };
 
 /**

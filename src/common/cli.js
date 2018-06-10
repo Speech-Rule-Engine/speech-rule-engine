@@ -75,6 +75,8 @@ sre.Cli.prototype.commandLine = function() {
   commander.speech = false;
   /** @type {!string} */
   commander.markup = '';
+  /** @type {!string} */
+  commander.rate = '';
   /** @type {!boolean} */
   commander.xml = false;
 
@@ -97,6 +99,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-p, --speech', 'Generate speech output (default).').
       option('-k, --markup [name]', 'Generate speech output with markup tags.').
       option('-x, --xml', 'Generate XML of semantic tree.').
+      option('-r, --rate [value]', 'Base rate [value] for tagged speech output.').
       option('').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
@@ -121,7 +124,8 @@ sre.Cli.prototype.commandLine = function() {
           'style': commander.style,
           'mode': sre.Engine.Mode.SYNC,
           'speech': commander.generate,
-          'markup': commander.markup
+          'markup': commander.markup,
+          'rate': commander.rate
         });
     if (commander.verbose) {
       sre.Debugger.getInstance().init(commander.log);

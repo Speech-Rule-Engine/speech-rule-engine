@@ -21,6 +21,7 @@
 goog.provide('sre.AbstractAudioRenderer');
 
 goog.require('sre.AudioRenderer');
+goog.require('sre.Engine');
 
 
 
@@ -78,13 +79,20 @@ sre.AbstractAudioRenderer.prototype.merge = function(strs) {
 
 
 sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
+  var numeric;
   switch (value) {
   case 'long':
-    return 750;
+    numeric = 750;
+    break;
   case 'medium':
-    return 500;
+    numeric = 500;
+    break;
   case 'short':
-    return 250;
+    numeric = 250;
+    break;
+  default:
+    numeric = value;
   }
-  return value;
+  return Math.floor(numeric *
+                    parseInt(sre.Engine.getInstance().getRate(), 10) / 100);
 };
