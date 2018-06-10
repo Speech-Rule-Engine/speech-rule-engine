@@ -262,6 +262,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   sre.Debugger.getInstance().output(node.toString());
+  console.log(node.toString());
   var engine = sre.Engine.getInstance();
   if (engine.cache) {
     var result = this.getCacheForNode_(node);
@@ -274,6 +275,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   if (!rule) {
     if (engine.strict) return [];
     result = this.activeStore_.evaluateDefault(node);
+    if (node.attributes) {
+      this.addPersonality_(result, {}, false, node);
+    }
     this.pushCache_(node, result);
     return result;
   }
@@ -363,6 +367,11 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
   if (nodes == []) {
     return [];
   }
+  // console.log('NODELIST');
+  // nodes.forEach(function(x) {console.log(x.toString());});
+  // console.log('NODELIST END');
+  console.log('separator:');
+  console.log(separator);
   var sep = separator || '';
   var cont = context || '';
   var cFunc = this.activeStore_.contextFunctions.lookup(ctxtFunc);
@@ -379,6 +388,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
       result = result.concat(descrs);
       if (i < nodes.length - 1) {
         var text = sepClosure();
+        console.log(text);
         result = result.concat(text);
       }
     }
