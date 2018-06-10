@@ -56,13 +56,13 @@ sre.ArnoRenderer.prototype.merge = function(strs) {
     var str = strs[i];
     var id = str.attributes['ext:id'];
     if (id && !sre.ArnoRenderer.MARKS[id]) {
-      result.push('<MARK name="' + id + '"/>');
+      result.push('<mark name="' + id + '"/>');
       sre.ArnoRenderer.MARKS[id] = true;
     }
     console.log(str.attributes);
     if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
-      result.push('<SAY-AS interpret-as="' + sre.ArnoRenderer.CHARACTER_ATTR_ +
-                  '">' + str.string + "</SAY-AS>");
+      result.push('<say-as interpret-as="' + sre.ArnoRenderer.CHARACTER_ATTR_ +
+                  '">' + str.string + "</say-as>");
     } else {
       result.push(str.string);
     }
