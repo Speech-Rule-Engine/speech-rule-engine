@@ -132,7 +132,6 @@ sre.AudioUtil.LastOpen_ = [];
  * @return {!Array.<Object>} Markup list.
  */
 sre.AudioUtil.personalityMarkup = function(descrs) {
-  console.log(descrs);
   sre.AudioUtil.PersonalityRanges_ = {};
   sre.AudioUtil.LastOpen_ = [];
   var result = [];
@@ -151,12 +150,10 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     }
     var diff = sre.AudioUtil.personalityDiff_(pers, currentPers);
     //TODO: Replace last parameter by global parameter, depending on format.
-    console.log(str);
     sre.AudioUtil.appendMarkup_(result, str, diff, join, pause, true);
   }
   result = result.concat(sre.AudioUtil.finaliseMarkup_());
   result = sre.AudioUtil.simplifyMarkup_(result);
-  console.log(result);
   return result;
 };
 

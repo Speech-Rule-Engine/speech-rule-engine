@@ -64,8 +64,6 @@ sre.PunctuationRenderer.prototype.markup = function(descrs) {
         this.merge(descr.string);
     string = true;
   }
-  console.log('This STRING');
-  console.log(str);
   return str;
 };
 

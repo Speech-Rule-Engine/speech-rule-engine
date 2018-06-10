@@ -108,10 +108,6 @@ sre.SemanticMathml.prototype.addAttributes = function(to, from) {
       }
     }
   }
-  // if (idAttr) {
-  //   newNode.annotation['mark'] = [idAttr];
-  //   console.log(newNode.annotation);
-  // }
 };
 
 
