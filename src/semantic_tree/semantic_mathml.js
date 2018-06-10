@@ -103,7 +103,7 @@ sre.SemanticMathml.prototype.addAttributes = function(to, from) {
     var attrs = from.attributes;
     for(var i = attrs.length - 1; i >= 0; i--) {
       var key = attrs[i].name;
-      if (key.match(/^ext:/)) {
+      if (key.match(/^ext/)) {
         to.attributes[key] = attrs[i].value;
       }
     }

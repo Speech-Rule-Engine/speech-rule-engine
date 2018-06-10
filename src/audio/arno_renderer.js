@@ -54,12 +54,11 @@ sre.ArnoRenderer.prototype.merge = function(strs) {
   var result = [];
   for (var i = 0; i < strs.length; i++) {
     var str = strs[i];
-    var id = str.attributes['ext:id'];
+    var id = str.attributes['extid'];
     if (id && !sre.ArnoRenderer.MARKS[id]) {
       result.push('<mark name="' + id + '"/>');
       sre.ArnoRenderer.MARKS[id] = true;
     }
-    console.log(str.attributes);
     if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
       result.push('<say-as interpret-as="' + sre.ArnoRenderer.CHARACTER_ATTR_ +
                   '">' + str.string + "</say-as>");
