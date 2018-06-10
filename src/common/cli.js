@@ -85,11 +85,12 @@ sre.Cli.prototype.commandLine = function() {
       option('-i, --input [name]', 'Input file [name].').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
       option('').
-      option('-d, --dom [name]', 'Domain or subject area [name].').
+      option('-d, --dom [name]', 'Rule set or domain [name].').
       option('-t, --style [name]', 'Speech style [name].').
       option('-c, --locale [code]', 'Locale [code].').
       option('-s, --semantics', 'Switch OFF semantics interpretation.').
-      option('-e, --enumerate', 'Enumerates available domains and styles.').
+      option('-e, --enumerate', 'Enumerates available rule sets,' +
+             ' with styles and locales.').
       option('').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).').
       option('-j, --json', 'Generate JSON of semantic tree.').
