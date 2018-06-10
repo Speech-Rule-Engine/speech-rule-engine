@@ -47,7 +47,7 @@ sre.SsmlRenderer.prototype.markup = function(descrs) {
  */
 sre.SsmlRenderer.prototype.pause = function(pause) {
   return '<break ' + 'time="' +
-      pause[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
+    this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + 'ms"/>';
 };
 
 

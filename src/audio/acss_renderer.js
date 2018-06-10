@@ -140,5 +140,6 @@ sre.AcssRenderer.prototype.prosodyElement = function(key, value) {
  * @override
  */
 sre.AcssRenderer.prototype.pause = function(pause) {
-  return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
+  return '(pause . ' +
+      this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + ')';
 };

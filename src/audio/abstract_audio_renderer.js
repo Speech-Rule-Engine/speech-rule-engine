@@ -75,3 +75,16 @@ sre.AbstractAudioRenderer.prototype.error = function(key) {
 sre.AbstractAudioRenderer.prototype.merge = function(strs) {
   return strs.map(function(x) {return x.string;}).join(this.getSeparator());
 };
+
+
+sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
+  switch (value) {
+  case 'long':
+    return 750;
+  case 'medium':
+    return 500;
+  case 'short':
+    return 250;
+  }
+  return value;
+};
