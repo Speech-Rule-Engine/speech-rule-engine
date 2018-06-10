@@ -79,6 +79,12 @@ sre.SemanticNode = function(id) {
    */
   this.annotation = {};
 
+  /**
+   * Collection of external attributes.
+   * @type {!Object.<string>}
+   */
+  this.attributes = {};
+  
 };
 
 
@@ -170,8 +176,14 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
     node.setAttribute('fencepointer', this.fencePointer);
   }
   node.setAttribute('id', this.id);
+  this.addExternalAttributes_(node);
 };
 
+sre.SemanticNode.prototype.addExternalAttributes_ = function(node) {
+  for (var attr in this.attributes) {
+    node.setAttribute(attr, this.attributes[attr]);
+  }
+};
 
 /**
  * Turns annotation structure into an attribute.

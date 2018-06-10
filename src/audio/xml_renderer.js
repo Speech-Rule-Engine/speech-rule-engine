@@ -41,11 +41,16 @@ goog.inherits(sre.XmlRenderer, sre.MarkupRenderer);
  */
 sre.XmlRenderer.prototype.markup = function(descrs) {
   // TODO: Include personality range computations.
+  console.log('xml markup');
   this.setScaleFunction(-2, 2, -100, 100, 2);
   var markup = sre.AudioUtil.personalityMarkup(descrs);
+  console.log(markup);
   var result = [];
   var currentOpen = [];
   for (var i = 0, descr; descr = markup[i]; i++) {
+    console.log('Result');
+    console.log(result);
+    console.log(descr);
     if (descr.string) {
       result.push(this.merge(descr.string));
       continue;
@@ -73,9 +78,13 @@ sre.XmlRenderer.prototype.markup = function(descrs) {
       }, this));
     }
   }
-  return this.merge(result);
+  return result.join(' ');  //this.merge(result);
 };
 
+
+sre.XmlRenderer.prototype.merge = function(str) {
+  return str.map(function(x) {return x.string;}).join(this.getSeparator());
+};
 
 /**
  * Computes the closing tag for a personality property.

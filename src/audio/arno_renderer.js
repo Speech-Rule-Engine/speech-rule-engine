@@ -35,12 +35,17 @@ sre.ArnoRenderer = function() {
 goog.inherits(sre.ArnoRenderer, sre.SsmlRenderer);
 
 
+sre.ArnoRenderer.prototype.markup = function(descrs) {
+  sre.ArnoRenderer.MARKS = {};
+  return sre.ArnoRenderer.base(this, 'markup', descrs);
+};
 
 /**
  * @type {string}
  */
 sre.ArnoRenderer.CHARACTER_ATTR_ = 'character';
 
+sre.ArnoRenderer.MARKS = {};
 
 /**
  * @override
@@ -49,11 +54,17 @@ sre.ArnoRenderer.prototype.merge = function(strs) {
   var result = [];
   for (var i = 0; i < strs.length; i++) {
     var str = strs[i];
-    if (str.length === 1 && str.match(/[a-zA-Z]/)) {
+    var id = str.attributes['ext:id'];
+    if (id && !sre.ArnoRenderer.MARKS[id]) {
+      result.push('<MARK name="' + id + '"/>');
+      sre.ArnoRenderer.MARKS[id] = true;
+    }
+    console.log(str.attributes);
+    if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
       result.push('<SAY-AS interpret-as="' + sre.ArnoRenderer.CHARACTER_ATTR_ +
-                  '">' + str + "</SAY-AS>");
+                  '">' + str.string + "</SAY-AS>");
     } else {
-      result.push(str);
+      result.push(str.string);
     }
   }
   return result.join(this.getSeparator());

@@ -61,9 +61,11 @@ sre.PunctuationRenderer.prototype.markup = function(descrs) {
       pause = null;
     }
     str += (string ? this.getSeparator() : '') +
-        descr.string.join(this.getSeparator());
+        this.merge(descr.string);
     string = true;
   }
+  console.log('This STRING');
+  console.log(str);
   return str;
 };
 

@@ -88,7 +88,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
 sre.AcssRenderer.prototype.merge = function(strs) {
   return '(exp ' +
       strs.map(function(str) {
-        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+        return str.string.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
       ')';
 };
 

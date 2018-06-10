@@ -336,7 +336,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       sre.Grammar.getInstance().popState();
     }
     // Adding personality to the auditory descriptions.
-    result = result.concat(this.addPersonality_(descrs, attributes, multi));
+    result = result.concat(this.addPersonality_(descrs, attributes, multi,
+                                                node));
   }
   this.pushCache_(node, result);
   return result;
@@ -392,11 +393,12 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
  *     descriptions.
  * @param {Object} props Property dictionary.
  * @param {boolean} multi Multinode flag.
+ * @param {Node} node The original XML node.
  * @return {Array.<sre.AuditoryDescription>} The modified array.
  * @private
  */
 sre.SpeechRuleEngine.prototype.addPersonality_ = function(
-    descrs, props, multi) {
+    descrs, props, multi, node) {
   var personality = {};
   for (var key in sre.Engine.personalityProps) {
     var value = props[sre.Engine.personalityProps[key]];
@@ -416,6 +418,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
   //       Possibly use simply an overwrite mechanism without adding.
   for (var i = 0, descr; descr = descrs[i]; i++) {
     this.addRelativePersonality_(descr, personality);
+    this.addExternalAttributes_(descr, node);
   }
   // MOSS: Removes the last joiner in a multi node element. This should be
   //       reviewed.
@@ -424,6 +427,19 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
         personality[sre.Engine.personalityProps.JOIN];
   }
   return descrs;
+};
+
+
+sre.SpeechRuleEngine.prototype.addExternalAttributes_ = function(descr, node) {
+  if (node.hasAttributes()) {
+    var attrs = node.attributes;
+    for(var i = attrs.length - 1; i >= 0; i--) {
+      var key = attrs[i].name;
+      if (!descr.attributes[key] && key.match(/^ext:/)) {
+        descr.attributes[key] = attrs[i].value;
+      }
+    }
+  }
 };
 
 

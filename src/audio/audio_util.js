@@ -132,13 +132,14 @@ sre.AudioUtil.LastOpen_ = [];
  * @return {!Array.<Object>} Markup list.
  */
 sre.AudioUtil.personalityMarkup = function(descrs) {
+  console.log(descrs);
   sre.AudioUtil.PersonalityRanges_ = {};
   sre.AudioUtil.LastOpen_ = [];
   var result = [];
   var currentPers = {};
   for (var i = 0, descr; descr = descrs[i]; i++) {
     var pause = null;
-    var str = descr.descriptionString();
+    var str = descr.descriptionSpan();
     var pers = descr.personality;
     var join = pers[sre.Engine.personalityProps.JOIN];
     delete pers[sre.Engine.personalityProps.JOIN];
@@ -150,10 +151,12 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     }
     var diff = sre.AudioUtil.personalityDiff_(pers, currentPers);
     //TODO: Replace last parameter by global parameter, depending on format.
+    console.log(str);
     sre.AudioUtil.appendMarkup_(result, str, diff, join, pause, true);
   }
   result = result.concat(sre.AudioUtil.finaliseMarkup_());
   result = sre.AudioUtil.simplifyMarkup_(result);
+  console.log(result);
   return result;
 };
 
@@ -324,7 +327,8 @@ sre.AudioUtil.isStringElement = function(element) {
 /**
  * Appends content to the current markup list.
  * @param {!Array.<Object>} markup The markup list.
- * @param {string} str A content string.
+ * @param {{string: string,
+ *           attributes: Object.<string>}} str A content span.
  * @param {!Object.<sre.Engine.personalityProps, number>} pers A personality
  *     annotation.
  * @param {?{sre.Engine.personalityProps.JOIN: (string|undefined)}} join An
@@ -342,7 +346,7 @@ sre.AudioUtil.appendMarkup_ = function(
     if (last) {
       var oldJoin = last[sre.Engine.personalityProps.JOIN];
     }
-    if (last && !str && pause &&
+    if (last && !str.string && pause &&
         sre.AudioUtil.isPauseElement(last)) {
       var pauseProp = sre.Engine.personalityProps.PAUSE;
       // Merging could be done using max or min or plus.
@@ -350,18 +354,21 @@ sre.AudioUtil.appendMarkup_ = function(
                                                   pause[pauseProp]);
       pause = null;
     }
-    if (last && str && Object.keys(pers).length === 0 &&
+    if (last && str.string && Object.keys(pers).length === 0 &&
         sre.AudioUtil.isStringElement(last)) {
+      // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
-        str = last['string'].pop() + oldJoin + str;
+        var lastSpan = last['string'].pop();
+        str = {string: lastSpan.string + oldJoin + str.string,
+               attributes: lastSpan.attributes};
       }
       last['string'].push(str);
-      str = '';
+      str = {string: '', attributes: {}};
       last[sre.Engine.personalityProps.JOIN] = join;
     }
   }
   if (Object.keys(pers).length !== 0) markup.push(pers);
-  if (str) markup.push({string: [str], join: join});
+  if (str.string) markup.push({string: [str], join: join});
   if (pause) markup.push(pause);
 };
 

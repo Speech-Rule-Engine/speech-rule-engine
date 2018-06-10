@@ -34,6 +34,7 @@ goog.require('sre.Engine');
  *          text: (string),
  *          userValue: (undefined|string),
  *          annotation: (undefined|string),
+ *          attributes: (undefined|Object),
  *          personality: (undefined|Object)}} kwargs The arguments for this
  *  description.
  *  context The context, for example descriptions of objects
@@ -51,6 +52,7 @@ sre.AuditoryDescription = function(kwargs) {
   this.text = kwargs.text || '';
   this.userValue = kwargs.userValue || '';
   this.annotation = kwargs.annotation || '';
+  this.attributes = kwargs.attributes || {};
   this.personality = kwargs.personality || {};
 };
 
@@ -102,12 +104,20 @@ sre.AuditoryDescription.prototype.clone = function() {
       personality = this.personality[key];
     }
   }
+  var attributes;
+  if (this.attributes) {
+    attributes = {};
+    for (var key in this.attributes) {
+      attributes = this.attributes[key];
+    }
+  }
   return new sre.AuditoryDescription(
       {context: this.context,
         text: this.text,
         userValue: this.userValue,
         annotation: this.annotation,
-        personality: personality
+        personality: personality,
+        attributes: attributes
       });
 };
 
@@ -130,6 +140,16 @@ sre.AuditoryDescription.prototype.descriptionString = function() {
   return this.context && this.text ?
       this.context + ' ' + this.text :
       this.context || this.text;
+};
+
+
+/**
+ * @return {{string: string,
+ *           attributes: Object.<string>}} A span representation
+ *     of this object.
+ */
+sre.AuditoryDescription.prototype.descriptionSpan = function() {
+  return {string: this.descriptionString(), attributes: this.attributes};
 };
 
 
