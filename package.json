@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "make test",
-    "prepublish": "make clean; make publish"
+    "prepublishOnly": "make clean; make publish"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "closure-linter-wrapper": ">=1.1.0",
-    "google-closure-compiler": ">=20160911.0.0",
+    "google-closure-compiler": "^20180506.0.0",
     "google-closure-library": ">=20160822.0.0",
     "jsdoc": ">=3.5.5"
   },
