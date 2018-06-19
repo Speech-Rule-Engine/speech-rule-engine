@@ -75,7 +75,7 @@ sre.SpeechGeneratorUtil.computeSpeechWithoutCache = function(tree) {
  * Computes speech string for a single semantic node, either by retrieving it
  * from the the cache or by recomputing it.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
- * @return {!string} The speech string.
+ * @return {string} The speech string.
  */
 sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic) {
   var descrs = null;
@@ -115,7 +115,7 @@ sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
 /**
  * Computes a speech prefix if it exists.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
- * @return {!string} The prefix speech string.
+ * @return {string} The prefix speech string.
  */
 sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
   var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);

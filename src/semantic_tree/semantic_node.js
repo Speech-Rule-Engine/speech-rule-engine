@@ -312,7 +312,7 @@ sre.SemanticNode.prototype.equals = function(node) {
 
 /**
  * Convenience method to display the whole tree and its elements.
- * @param {!number} depth The depth of the tree.
+ * @param {number} depth The depth of the tree.
  */
 sre.SemanticNode.prototype.displayTree = function(depth) {
   depth++;
@@ -335,7 +335,7 @@ sre.SemanticNode.prototype.displayTree = function(depth) {
 
 /**
  * Returns a display version of the node's associated MathML tree.
- * @return {!string} The MathML tree as string or EMPTY.
+ * @return {string} The MathML tree as string or EMPTY.
  * @private
  */
 sre.SemanticNode.prototype.mathmlTreeString_ = function() {

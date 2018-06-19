@@ -1149,7 +1149,7 @@ sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
  * @param {!Array.<sre.SemanticNode>} restNodes The remainder list of
  *     nodes. They can be useful to look ahead if there is an explicit function
  *     application. If there is one, it will be destructively removed!
- * @return {!string} The string specifying the heuristic.
+ * @return {string} The string specifying the heuristic.
  * @private
  */
 sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
@@ -1206,7 +1206,7 @@ sre.SemanticProcessor.propagateFunctionRole_ = function(funcNode, tag) {
  * @param {!sre.SemanticNode} func A function node.
  * @param {!Array.<sre.SemanticNode>} rest List of nodes to choose
  *     arguments from.
- * @param {!string} heuristic The heuristic to follow.
+ * @param {string} heuristic The heuristic to follow.
  * @return {!Array.<!sre.SemanticNode>} The function and the remainder of
  *     the rest list.
  * @private
@@ -1410,7 +1410,7 @@ sre.SemanticProcessor.prototype.functionalNode_ = function(
 /**
  * Finds the function operator in a partial semantic tree if it exists.
  * @param {!sre.SemanticNode} tree The partial tree.
- * @param {!function(sre.SemanticNode): boolean} pred Predicate for the
+ * @param {function(sre.SemanticNode): boolean} pred Predicate for the
  *    function operator.
  * @return {sre.SemanticNode} The function operator.
  * @private
@@ -1656,7 +1656,7 @@ sre.SemanticProcessor.assignRoleToRow_ = function(row, role) {
 /**
  * Splits a list of nodes wrt. to a given predicate.
  * @param {Array.<sre.SemanticNode>} nodes A list of nodes.
- * @param {!function(sre.SemanticNode): boolean} pred Predicate for the
+ * @param {function(sre.SemanticNode): boolean} pred Predicate for the
  *    partitioning relation.
  * @param {boolean=} opt_reverse If true slicing is done from the end.
  * @return {{head: !Array.<sre.SemanticNode>,
@@ -1693,7 +1693,7 @@ sre.SemanticProcessor.sliceNodes_ = function(nodes, pred, opt_reverse) {
  * Partitions a list of nodes wrt. to a given predicate. Effectively works like
  * a PER on the ordered set of nodes.
  * @param {!Array.<!sre.SemanticNode>} nodes A list of nodes.
- * @param {!function(sre.SemanticNode): boolean} pred Predicate for the
+ * @param {function(sre.SemanticNode): boolean} pred Predicate for the
  *    partitioning relation.
  * @return {{rel: !Array.<sre.SemanticNode>,
  *           comp: !Array.<!Array.<sre.SemanticNode>>}}
@@ -2186,7 +2186,7 @@ sre.SemanticProcessor.classifyByColumns_ = function(
  * Check for a particular end relations, i.e., either a sole relation symbols or
  * the relation ends in an side.
  * @param {!sre.SemanticNode} node The node.
- * @param {!string} relation The relation to be tested.
+ * @param {string} relation The relation to be tested.
  * @param {boolean=} opt_right From the right side?
  * @return {boolean} True if the node is an end relation.
  * @private
@@ -2202,7 +2202,7 @@ sre.SemanticProcessor.isEndRelation_ = function(node, relation, opt_right) {
 /**
  * Check for a particular relations.
  * @param {!sre.SemanticNode} node The node.
- * @param {!string} relation The relation to be tested.
+ * @param {string} relation The relation to be tested.
  * @return {boolean} True if the node is an end relation.
  * @private
  */
