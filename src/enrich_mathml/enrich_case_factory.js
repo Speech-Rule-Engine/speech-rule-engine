@@ -33,8 +33,8 @@ sre.EnrichCaseFactory = function() {};
 /**
  * Type annotation to get around Closure parsing problems for functions as
  * optional parameters.
- * @typedef {{test: !function(!sre.SemanticNode): boolean,
- *      constr: !function(new:sre.AbstractEnrichCase, sre.SemanticNode)}}
+ * @typedef {{test: function(!sre.SemanticNode): boolean,
+ *      constr: function(new:sre.AbstractEnrichCase, sre.SemanticNode)}}
  */
 sre.EnrichCaseFactory.Case;
 

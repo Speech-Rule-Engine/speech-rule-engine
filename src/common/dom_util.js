@@ -129,7 +129,7 @@ sre.DomUtil.replaceNode = function(oldNode, newNode) {
 /**
  * Creates a node in the current document. This is a wrapper function that
  * ensures that a node is created in the correct document tree.
- * @param {!string} tag The tagname of the node.
+ * @param {string} tag The tagname of the node.
  * @return {!Element} The newly create node.
  */
 sre.DomUtil.createElement = function(tag) {
@@ -140,7 +140,7 @@ sre.DomUtil.createElement = function(tag) {
 /**
  * Creates a text node in the current document. This is a wrapper function that
  * ensures that a node is created in the correct document tree.
- * @param {!string} content The text content for the node.
+ * @param {string} content The text content for the node.
  * @return {!Element} The newly create node.
  */
 sre.DomUtil.createTextNode = function(content) {
@@ -186,8 +186,8 @@ sre.DomUtil.formatXml = function(xml) {
 
 /**
  * Transforms a data attribute name into its camel cased version.
- * @param {!string} attr Micro data attributes.
- * @return {!string} The camel cased attribute.
+ * @param {string} attr Micro data attributes.
+ * @return {string} The camel cased attribute.
  */
 sre.DomUtil.dataAttribute = function(attr) {
   if (attr.match(/^data-/)) {
@@ -202,8 +202,8 @@ sre.DomUtil.dataAttribute = function(attr) {
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
  * @param {!Node} node A DOM node.
- * @param {!string} attr The data attribute.
- * @return {!string} The value for that attribute.
+ * @param {string} attr The data attribute.
+ * @return {string} The value for that attribute.
  */
 sre.DomUtil.getDataAttribute = function(node, attr) {
   if (node.dataset) {
@@ -217,7 +217,7 @@ sre.DomUtil.getDataAttribute = function(node, attr) {
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
  * @param {!Node} node A DOM node.
- * @param {!string} attr The data attribute.
+ * @param {string} attr The data attribute.
  * @return {!Array.<Node>} The list of result nodes.
  */
 sre.DomUtil.querySelectorAllByAttr = function(node, attr) {
@@ -231,8 +231,8 @@ sre.DomUtil.querySelectorAllByAttr = function(node, attr) {
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
  * @param {!Node} node A DOM node.
- * @param {!string} attr The data attribute.
- * @param {!string} value The value of the data attribute.
+ * @param {string} attr The data attribute.
+ * @param {string} value The value of the data attribute.
  * @return {!Array.<Node>} The list of result nodes.
  */
 sre.DomUtil.querySelectorAllByAttrValue = function(node, attr, value) {
@@ -247,7 +247,7 @@ sre.DomUtil.querySelectorAllByAttrValue = function(node, attr, value) {
  * A wrapper function for query selector on a node wrt. to a tag name. If
  * query selectors are not implemented on that node it reverts to Xpath.
  * @param {!Node} node A DOM node.
- * @param {!string} tag The tag name.
+ * @param {string} tag The tag name.
  * @return {!Array.<Node>} The list of result nodes.
  */
 sre.DomUtil.querySelectorAll = function(node, tag) {

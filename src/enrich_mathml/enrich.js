@@ -42,7 +42,7 @@ sre.Enrich.semanticMathmlNode = function(mml) {
 
 /**
  * Reads a MathML element from a string and semantically enriches its.
- * @param {!string} expr The MathML expression as a string without math tags.
+ * @param {string} expr The MathML expression as a string without math tags.
  * @return {!Element} The modified MathML element.
  */
 sre.Enrich.semanticMathmlSync = function(expr) {
@@ -53,7 +53,7 @@ sre.Enrich.semanticMathmlSync = function(expr) {
 
 /**
  * Reads a MathML element from a string and semantically enriches its.
- * @param {!string} expr The MathML expression as a string without math tags.
+ * @param {string} expr The MathML expression as a string without math tags.
  * @param {function(!Element)} callback Function to apply on the result.
  */
 sre.Enrich.semanticMathml = function(expr, callback) {

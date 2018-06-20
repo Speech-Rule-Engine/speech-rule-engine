@@ -1128,7 +1128,7 @@ sre.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
 
 /**
  * Creates a walker.
- * @param {!string} type The type of the walker.
+ * @param {string} type The type of the walker.
  * @param {!Node} node The node on which to start the walker.
  * @param {{renderer: string,
  *          browser: (undefined|string)}} renderer

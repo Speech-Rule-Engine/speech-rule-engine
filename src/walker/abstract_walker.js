@@ -47,7 +47,7 @@ goog.require('sre.WalkerUtil');
  *     this walker.
  * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
- * @param {!string} xml The original xml/mathml node on which the walker is
+ * @param {string} xml The original xml/mathml node on which the walker is
  *      called as a string.
  * @override
  */
@@ -486,7 +486,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
 
 /**
  * Finds the focus on the current level for a given node id.
- * @param {!number} id The id number.
+ * @param {number} id The id number.
  * @return {sre.Focus} The focus on a particular level.
  */
 sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;

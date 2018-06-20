@@ -28,7 +28,7 @@ goog.provide('sre.SpeechRuleEvaluator');
 /**
  * @interface
  */
-sre.SpeechRuleEvaluator = goog.abstractMethod;
+sre.SpeechRuleEvaluator = function() { };
 
 
 /**
