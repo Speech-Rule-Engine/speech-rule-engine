@@ -64,7 +64,7 @@ sre.Debugger.prototype.init = function(opt_file) {
 /**
  * Initialises the debug file.
  * This is handled asynchronously.
- * @param {!string} filename The filename to route debug output to.
+ * @param {string} filename The filename to route debug output to.
  * @private
  */
 sre.Debugger.prototype.startDebugFile_ = function(filename) {

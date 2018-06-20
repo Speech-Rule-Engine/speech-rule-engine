@@ -75,8 +75,8 @@ sre.MathspeakSpanishUtil.hundredsOrdinals = [
 
 /**
  * Translates a number into Spanish ordinal
- * @param {!number} num The number to translate.
- * @return {!string} The ordinal of the number as string.
+ * @param {number} num The number to translate.
+ * @return {string} The ordinal of the number as string.
  */
 sre.MathspeakSpanishUtil.numberToOrdinal = function(num) {
   if (num > 1999) {

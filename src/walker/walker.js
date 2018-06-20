@@ -73,7 +73,7 @@ sre.Walker.prototype.setFocus = function(focus) {};
 
 /**
  * Returns the current depth of the walker, starting at 0.
- * @return {!number} The current depth of the walker.
+ * @return {number} The current depth of the walker.
  */
 sre.Walker.prototype.getDepth = function() {};
 
@@ -109,6 +109,6 @@ sre.Walker.move = {
 
 
 /**
- * @typedef {{focus: !sre.Focus, levels: !sre.Levels, undo: !boolean}}
+ * @typedef {{focus: !sre.Focus, levels: !sre.Levels, undo: boolean}}
  */
 sre.Walker.Cursor;

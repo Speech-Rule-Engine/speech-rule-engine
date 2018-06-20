@@ -42,8 +42,8 @@ sre.Locale.Messages;
 
 /**
  * Translation for count word in superbrief nesting description.
- * @param {!number} count The counting parameter.
- * @return {!string} The corresponding string.
+ * @param {number} count The counting parameter.
+ * @return {string} The corresponding string.
  */
 sre.Locale.nestingToString = function(count) {
   switch (count) {
@@ -60,7 +60,7 @@ sre.Locale.nestingToString = function(count) {
 /**
  * Sets the nesting depth of a fraction to end at vulgar fraction.
  * @param {!Node} node The node to check.
- * @return {!boolean} True if a vulgar fraction.
+ * @return {boolean} True if a vulgar fraction.
  */
 sre.Locale.vulgarNestingDepth = function(node) {
   return sre.MathspeakUtil.vulgarFractionSmall(node);

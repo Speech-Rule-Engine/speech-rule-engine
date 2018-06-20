@@ -40,7 +40,7 @@ goog.inherits(sre.HtmlHighlighter, sre.AbstractHighlighter);
 
 /**
  * Set the mode of the highlighter.
- * @param {!string} mode The mode indicator.
+ * @param {string} mode The mode indicator.
  */
 sre.HtmlHighlighter.prototype.setMode = function(mode) {
   this.mode = mode;
