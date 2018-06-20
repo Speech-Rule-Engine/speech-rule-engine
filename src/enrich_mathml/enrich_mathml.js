@@ -617,7 +617,7 @@ sre.EnrichMathml.cloneContentNode = function(content) {
 /**
  * Concatenates node ids into a comma separated lists.
  * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
- * @return {!string} The comma separated lists.
+ * @return {string} The comma separated lists.
  */
 sre.EnrichMathml.makeIdList = function(nodes) {
   return nodes.map(function(node) {
@@ -852,8 +852,8 @@ sre.EnrichMathml.formattedOutput_ = function(element, name, wiki) {
  * overwrite or be shadowed by other attributes already in the node. For
  * example, with both PREFIX-attr and attr present, the latter is overwritten by
  * the operation.
- * @param {!string} mml The MathML node.
- * @return {!string} The MathML node with rewritten attributes.
+ * @param {string} mml The MathML node.
+ * @return {string} The MathML node with rewritten attributes.
  */
 sre.EnrichMathml.removeAttributePrefix = function(mml) {
   return mml.toString().replace(

@@ -123,13 +123,13 @@ function SVGAnimatedString() {}
 
 
 /**
- * @type {!string}
+ * @type {string}
  */
 SVGAnimatedString.prototype.baseVal;
 
 
 /**
- * @type {!string}
+ * @type {string}
  */
 SVGAnimatedString.prototype.animVal;
 

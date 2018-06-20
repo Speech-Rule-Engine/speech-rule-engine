@@ -182,7 +182,7 @@ sre.XpathUtil.evaluateBoolean = function(expression, rootNode) {
  * a string type and returns the result.
  * @param {string} expression The XPath expression to evaluate.
  * @param {Node} rootNode The HTML node to start evaluating the XPath from.
- * @return {!string} The result of evaluating the Xpath expression.
+ * @return {string} The result of evaluating the Xpath expression.
  */
 sre.XpathUtil.evaluateString = function(expression, rootNode) {
   try {

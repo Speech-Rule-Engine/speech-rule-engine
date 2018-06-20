@@ -41,35 +41,35 @@ sre.AbstractExamples = function() {
 
   /**
    * Possible file error.
-   * @type {!string}
+   * @type {string}
    * @private
    */
   this.fileError_ = '';
 
   /**
    * Name of the example output file and function.
-   * @type {!string}
+   * @type {string}
    * @private
    */
   this.fileName_ = 'Examples';
 
   /**
    * File extension. Default html.
-   * @type {!string}
+   * @type {string}
    * @private
    */
   this.fileExtension_ = 'html';
 
   /**
    * Base directory for the output file.
-   * @type {!string}
+   * @type {string}
    * @private
    */
   this.fileDirectory_ = 'resources/www/localisation';
 
   /**
    * Sets example output file for tests.
-   * @type {!string}
+   * @type {string}
    * @private
    */
   this.examplesFile_ = this.fileDirectory_ + '/tests.' + this.fileExtension_;

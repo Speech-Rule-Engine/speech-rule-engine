@@ -65,15 +65,15 @@ sre.Messages.MS_FUNC = {
   /**
    * Method to determine end of nesting depth for nested fraction.
    * @param {!Node} node A node.
-   * @return {!boolean} True if current element should not be considered for
+   * @return {boolean} True if current element should not be considered for
    *     nesting depth.
    */
   FRAC_NEST_DEPTH: function(node) { return false; },
 
   /**
    * Translation for count word nesting description of radicals.
-   * @param {!number} count The counting parameter.
-   * @return {!string} The corresponding string.
+   * @param {number} count The counting parameter.
+   * @return {string} The corresponding string.
    */
   RADICAL_NEST_DEPTH: function(count) { return ''; },
 
