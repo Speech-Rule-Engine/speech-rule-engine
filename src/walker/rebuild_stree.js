@@ -265,9 +265,11 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     this.collapsedChildren_(array);
     return snode;
   }
-  if (snode.type === sre.SemanticAttr.Type.TEXT) {
-    this.makeIndex(snode, array[1], sre.SemanticAttr.Role.TEXT);
-    this.collapsedChildren_(array);
+  if (snode.type === sre.SemanticAttr.Type.PUNCTUATED) {
+    if (sre.RebuildStree.isPunctuated(array)) {
+      var cont = array.splice(1, 1)[0].slice(1);
+      snode.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
+    }
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {

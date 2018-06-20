@@ -769,8 +769,7 @@ sre.EnrichMathml.getInnerNode = function(node) {
   }
   var remainder = children.filter(function(child) {
     return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.SemanticUtil.hasIgnoreTag(child);
-  });
+        !sre.SemanticUtil.hasIgnoreTag(child);});
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
     if (sre.SemanticUtil.hasEmptyTag(remain)) {
@@ -855,6 +854,7 @@ sre.EnrichMathml.removeAttributePrefix = function(mml) {
  *     strings for the collapsed structure is returned, otherwise the node id.
  */
 sre.EnrichMathml.collapsePunctuated = function(semantic, opt_children) {
+  var optional = !!opt_children;
   var children = opt_children || [];
   var parent = semantic.parent;
   var contentIds = semantic.contentNodes.map(function(x) {return x.id;});
@@ -864,7 +864,7 @@ sre.EnrichMathml.collapsePunctuated = function(semantic, opt_children) {
     var mmlChild = sre.EnrichMathml.walkTree(child);
     children.push(mmlChild);
     var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
-    if (parent) {
+    if (parent && !optional) {
       innerNode.setAttribute(sre.EnrichMathml.Attribute.PARENT, parent.id);
     }
     childIds.push(child.id);

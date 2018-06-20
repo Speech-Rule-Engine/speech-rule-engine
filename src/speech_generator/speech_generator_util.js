@@ -165,7 +165,7 @@ sre.SpeechGeneratorUtil.connectMactions = function(node, mml, stree) {
     // Find the corresponding span in node.
     var cspan = sre.WalkerUtil.getBySemanticId(node, mid);
     // If the span exists, the maction is not collapsed and does not need to be
-    // connected. Unless, it is collpased maction (dummy type) and has been
+    // connected. Unless, it is collapsed maction (dummy type) and has been
     // previously linked into the span. Then we still want to mark it as
     // alternative.
     if (cspan &&
