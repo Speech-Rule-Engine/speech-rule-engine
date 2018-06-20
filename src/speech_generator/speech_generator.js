@@ -35,7 +35,7 @@ sre.SpeechGenerator = function() { };
  * Returns the speech string for math node.
  * @param {!Node} node The target element of the event.
  * @param {!Element} xml The base xml element belonging to node.
- * @return {!string} The speech string computed for this element.
+ * @return {string} The speech string computed for this element.
  */
 sre.SpeechGenerator.prototype.getSpeech = function(node, xml) {};
 

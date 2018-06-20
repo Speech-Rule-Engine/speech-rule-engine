@@ -38,7 +38,7 @@ goog.require('sre.Walker');
  *     this walker.
  * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
- * @param {!string} xml The original xml/mathml node on which the walker is
+ * @param {string} xml The original xml/mathml node on which the walker is
  *      called as a string.
  * @return {!sre.Walker} The newly generated walker.
  */

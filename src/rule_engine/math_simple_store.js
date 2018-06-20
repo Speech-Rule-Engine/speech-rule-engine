@@ -233,7 +233,7 @@ sre.MathCompoundStore.prototype.lookupRule = function(node, dynamic) {
  * @param {string} text The text to be translated.
  * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return {!string} The string resulting from the action of speech rule.
+ * @return {string} The string resulting from the action of speech rule.
  */
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var rule = this.lookupRule(text, dynamic);

@@ -102,7 +102,7 @@ sre.SemanticSkeleton.prototype.toString = function() {
 /**
  * Turns collapsed element into an sexp like string.
  * @param {!sre.SemanticSkeleton.Sexp} struct Collapse structure.
- * @return {!string} The structure as string.
+ * @return {string} The structure as string.
  * @private
  */
 sre.SemanticSkeleton.makeSexp_ = function(struct) {
@@ -149,7 +149,7 @@ sre.SemanticSkeleton.fromString = function(skel) {
 
 /**
  * Parses the skeleton structure into an array of integer arrays.
- * @param {!string} skeleton String containing the skeleton structure.
+ * @param {string} skeleton String containing the skeleton structure.
  * @return {!sre.SemanticSkeleton.Sexp} The array of integer arrays.
  * @private
  */
