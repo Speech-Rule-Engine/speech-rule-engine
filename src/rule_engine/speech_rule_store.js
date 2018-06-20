@@ -30,7 +30,7 @@ goog.provide('sre.SpeechRuleStore');
 /**
  * @interface
  */
-sre.SpeechRuleStore = goog.abstractMethod;
+sre.SpeechRuleStore = function() { };
 
 
 /**
