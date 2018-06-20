@@ -265,6 +265,11 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     this.collapsedChildren_(array);
     return snode;
   }
+  if (snode.type === sre.SemanticAttr.Type.TEXT) {
+    this.makeIndex(snode, array[1], sre.SemanticAttr.Role.TEXT);
+    this.collapsedChildren_(array);
+    return snode;
+  }
   if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {
     var score = this.createNode(array[1][0]);
     if (snode.childNodes[1].role === sre.SemanticAttr.Role.OVERACCENT) {
