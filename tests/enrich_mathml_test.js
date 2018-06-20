@@ -120,7 +120,7 @@ sre.EnrichMathmlTest.prototype.testMathmlWrappers = function() {
       '<mo type="operator" role="multiplication" id="13" parent="14"' +
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mpadded type="punctuated" role="text" id="12" children="10,8"' +
-      ' content="11" parent="14">' +
+      ' parent="14" collapsed="(12 (c 11) 10 8)">' +
       '<mrow type="infixop" role="implicit" id="10" children="3,7"' +
       ' content="9" parent="12">' +
       '<mstyle>' +
@@ -145,8 +145,6 @@ sre.EnrichMathmlTest.prototype.testMathmlWrappers = function() {
       '</mrow>' +
       '</mpadded>' +
       '</mrow>' +
-      '<mo type="punctuation" role="dummy" id="11" parent="12" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="8" parent="12">nix</mtext>' +
       '</mpadded>' +
       '</mstyle>' +
@@ -7158,20 +7156,18 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
 
   this.executeMathmlTest(
       '<mi>a</mi><mtext>to</mtext>',
-      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<math type="punctuated" role="text" id="3" children="0,1"' +
+      ' collapsed="(3 (c 2) 0 1)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="3">a</mi>' +
-      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="1" parent="3">to</mtext>' +
       '</math>'
   );
 
   this.executeMathmlTest(
       '<mtext>to</mtext><mi>b</mi>',
-      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<math type="punctuated" role="text" id="3" children="0,1"' +
+      ' collapsed="(3 (c 2) 0 1)">' +
       '<mtext type="text" role="unknown" id="0" parent="3">to</mtext>' +
-      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mi type="identifier" role="latinletter" id="1" parent="3">b</mi>' +
       '</math>'
   );
@@ -7179,19 +7175,11 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
   this.executeMathmlTest(
       '<mi>a</mi><mtext>to</mtext><mi>b</mi><mtext>to</mtext><mi>c</mi>',
       '<math type="punctuated" role="text" id="9" children="0,1,2,3,4"' +
-      ' content="5,6,7,8">' +
+      ' collapsed="(9 (c 5 6 7 8) 0 1 2 3 4)">' +
       '<mi type="identifier" role="latinletter" id="0" parent="9">a</mi>' +
-      '<mo type="punctuation" role="dummy" id="5" parent="9" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="1" parent="9">to</mtext>' +
-      '<mo type="punctuation" role="dummy" id="6" parent="9" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="9">b</mi>' +
-      '<mo type="punctuation" role="dummy" id="7" parent="9" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="3" parent="9">to</mtext>' +
-      '<mo type="punctuation" role="dummy" id="8" parent="9" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mi type="identifier" role="latinletter" id="4" parent="9">c</mi>' +
       '</math>'
   );
@@ -7204,7 +7192,7 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
       '<mrow type="punctuated" role="endpunct" id="13" children="12,6"' +
       ' content="6">' +
       '<mrow type="punctuated" role="text" id="12" children="7,3,9"' +
-      ' content="10,11" parent="13">' +
+      ' parent="13" collapsed="(12 (c 10 11) 7 3 9)">' +
       '<mrow type="infixop" role="addition" id="7" children="0,2"' +
       ' content="1" parent="12">' +
       '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
@@ -7212,12 +7200,8 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
       '</mrow>' +
-      '<mo type="punctuation" role="dummy" id="10" parent="12" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="3" parent="12">is generally' +
       ' not the same as</mtext>' +
-      '<mo type="punctuation" role="dummy" id="11" parent="12" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mrow type="infixop" role="implicit" id="9" children="4,5"' +
       ' content="8" parent="12">' +
       '<mi type="identifier" role="latinletter" id="4" parent="9">a</mi>' +
@@ -7238,7 +7222,7 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
       '<mi>a</mi><mi>b</mi><mtext>in general.</mtext></mrow>',
       '<math>' +
       '<mrow type="punctuated" role="text" id="13" children="7,3,9,6"' +
-      ' content="10,11,12">' +
+      ' collapsed="(13 (c 10 11 12) 7 3 9 6)">' +
       '<mrow type="infixop" role="addition" id="7" children="0,2"' +
       ' content="1" parent="13">' +
       '<mi type="identifier" role="latinletter" id="0" parent="7">a</mi>' +
@@ -7246,12 +7230,8 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
       ' operator="infixop,+">+</mo>' +
       '<mi type="identifier" role="latinletter" id="2" parent="7">b</mi>' +
       '</mrow>' +
-      '<mo type="punctuation" role="dummy" id="10" parent="13" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="3" parent="13">is not the same' +
       ' as</mtext>' +
-      '<mo type="punctuation" role="dummy" id="11" parent="13" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mrow type="infixop" role="implicit" id="9" children="4,5"' +
       ' content="8" parent="13">' +
       '<mi type="identifier" role="latinletter" id="4" parent="9">a</mi>' +
@@ -7259,8 +7239,6 @@ sre.EnrichMathmlTest.prototype.testMathmlText = function() {
       ' added="true" operator="infixop,⁢">⁢</mo>' +
       '<mi type="identifier" role="latinletter" id="5" parent="9">b</mi>' +
       '</mrow>' +
-      '<mo type="punctuation" role="dummy" id="12" parent="13" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="6" parent="13">in' +
       ' general.</mtext>' +
       '</mrow>' +
@@ -10927,45 +10905,33 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
 sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
   this.executeMathmlTest(
       '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
-      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<math type="punctuated" role="text" id="3" children="0,1" collapsed="(3 (c 2) 0 1)">' +
       '<mtext type="text" role="unknown" id="0" parent="3"> </mtext>' +
-      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mo type="punctuation" role="ellipsis" id="1" parent="3">…</mo>' +
       '</math>'
   );
   this.executeMathmlTest(
       '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
-      '<math type="punctuated" role="text" id="3" children="0,1" content="2">' +
+      '<math type="punctuated" role="text" id="3" children="0,1" collapsed="(3 (c 2) 0 1)">' +
       '<mo type="punctuation" role="ellipsis" id="0" parent="3">…</mo>' +
-      '<mo type="punctuation" role="dummy" id="2" parent="3" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="1" parent="3"> </mtext>' +
       '</math>'
   );
   this.executeMathmlTest(
       '<mo>&#x2026;</mo><mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
       '<math type="punctuated" role="text" id="5" children="0,1,2"' +
-      ' content="3,4">' +
+      ' collapsed="(5 (c 3 4) 0 1 2)">' +
       '<mo type="punctuation" role="ellipsis" id="0" parent="5">…</mo>' +
-      '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="1" parent="5"> </mtext>' +
-      '<mo type="punctuation" role="dummy" id="4" parent="5" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mo type="punctuation" role="ellipsis" id="2" parent="5">…</mo>' +
       '</math>'
   );
   this.executeMathmlTest(
       '<mtext>&#xA0;</mtext><mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
       '<math type="punctuated" role="text" id="5" children="0,1,2"' +
-      ' content="3,4">' +
+      ' collapsed="(5 (c 3 4) 0 1 2)">' +
       '<mtext type="text" role="unknown" id="0" parent="5"> </mtext>' +
-      '<mo type="punctuation" role="dummy" id="3" parent="5" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mo type="punctuation" role="ellipsis" id="1" parent="5">…</mo>' +
-      '<mo type="punctuation" role="dummy" id="4" parent="5" added="true"' +
-      ' operator="punctuated">⁣</mo>' +
       '<mtext type="text" role="unknown" id="2" parent="5"> </mtext>' +
       '</math>'
   );

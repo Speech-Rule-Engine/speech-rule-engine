@@ -685,21 +685,6 @@ sre.EnrichMathml.combineContentChildren_ = function(
       children.unshift(content[0]);
       children.push(content[1]);
       return children;
-    case sre.Semantic.Type.PUNCTUATED:
-      if (semantic.role === sre.Semantic.Role.TEXT) {
-        return sre.BaseUtil.interleaveLists(children, content);
-      }
-      var markupList = [];
-      for (var i = 0, j = 0, child, cont;
-           child = children[i], cont = content[j]; i++) {
-        if (child.getAttribute(sre.EnrichMathml.Attribute.ID) ==
-            cont.getAttribute(sre.EnrichMathml.Attribute.ID)) {
-          j++;
-          markupList.push(child);
-        }
-      }
-      sre.EnrichMathml.setOperatorAttribute_(semantic, markupList);
-      return children;
     case sre.Semantic.Type.APPL:
       return [children[0], content[0], children[1]];
     case sre.Semantic.Type.ROOT:
@@ -785,8 +770,7 @@ sre.EnrichMathml.getInnerNode = function(node) {
   }
   var remainder = children.filter(function(child) {
     return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.SemanticUtil.hasIgnoreTag(child);
-  });
+        !sre.SemanticUtil.hasIgnoreTag(child);});
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
     if (sre.SemanticUtil.hasEmptyTag(remain)) {
@@ -860,6 +844,34 @@ sre.EnrichMathml.removeAttributePrefix = function(mml) {
       new RegExp(sre.EnrichMathml.ATTRIBUTE_PREFIX_, 'g'), '');
 };
 
+
+/**
+ * Collapses a punctuated node that only contains invisible separators.
+ * @param {sre.SemanticNode} semantic The punctuated node.
+ * @param {Array.<Element>=} opt_children A list of children where the child
+ * elements of the MathML are appended.
+ * @return {!sre.SemanticSkeleton.Sexp} If the index node was a
+ *     dummy punctuation, i.e. consisted of more than one index, a list of
+ *     strings for the collapsed structure is returned, otherwise the node id.
+ */
+sre.EnrichMathml.collapsePunctuated = function(semantic, opt_children) {
+  var optional = !!opt_children;
+  var children = opt_children || [];
+  var parent = semantic.parent;
+  var contentIds = semantic.contentNodes.map(function(x) {return x.id;});
+  contentIds.unshift('c');
+  var childIds = [semantic.id, contentIds];
+  for (var i = 0, child; child = semantic.childNodes[i]; i++) {
+    var mmlChild = sre.EnrichMathml.walkTree(child);
+    children.push(mmlChild);
+    var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
+    if (parent && !optional) {
+      innerNode.setAttribute(sre.EnrichMathml.Attribute.PARENT, parent.id);
+    }
+    childIds.push(child.id);
+  }
+  return childIds;
+};
 
 /**
  * Prints a list of nodes.
