@@ -107,7 +107,7 @@ sre.Engine = function() {
   this.speech = sre.Engine.Speech.SHALLOW;
 
   /**
-   * Indicates if skeleton structure attributes are added to enriched elements 
+   * Indicates if skeleton structure attributes are added to enriched elements
    * @type {boolean}
    */
   this.structure = false;

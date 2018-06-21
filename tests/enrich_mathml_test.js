@@ -47,8 +47,12 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
  * @override
  */
 sre.EnrichMathmlTest.prototype.setUpTest = function() {
-  this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
-                        'data-semantic-fencepointer', 'data-semantic-structure'];
+  this.attrBlacklist = [
+    'data-semantic-font',
+    'data-semantic-embellished',
+    'data-semantic-fencepointer',
+    'data-semantic-structure'
+  ];
   sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
@@ -10908,14 +10912,16 @@ sre.EnrichMathmlTest.prototype.testMathmlEmptyAccents = function() {
 sre.EnrichMathmlTest.prototype.testMathmlEllipsesExplicitSpacing = function() {
   this.executeMathmlTest(
       '<mtext>&#xA0;</mtext><mo>&#x2026;</mo>',
-      '<math type="punctuated" role="text" id="3" children="0,1" collapsed="(3 (c 2) 0 1)">' +
+      '<math type="punctuated" role="text" id="3" children="0,1"' +
+      ' collapsed="(3 (c 2) 0 1)">' +
       '<mtext type="text" role="unknown" id="0" parent="3"> </mtext>' +
       '<mo type="punctuation" role="ellipsis" id="1" parent="3">…</mo>' +
       '</math>'
   );
   this.executeMathmlTest(
       '<mo>&#x2026;</mo><mtext>&#xA0;</mtext>',
-      '<math type="punctuated" role="text" id="3" children="0,1" collapsed="(3 (c 2) 0 1)">' +
+      '<math type="punctuated" role="text" id="3" children="0,1"' +
+      ' collapsed="(3 (c 2) 0 1)">' +
       '<mo type="punctuation" role="ellipsis" id="0" parent="3">…</mo>' +
       '<mtext type="text" role="unknown" id="1" parent="3"> </mtext>' +
       '</math>'

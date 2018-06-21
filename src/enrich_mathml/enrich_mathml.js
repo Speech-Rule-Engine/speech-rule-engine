@@ -878,6 +878,7 @@ sre.EnrichMathml.collapsePunctuated = function(semantic, opt_children) {
   return childIds;
 };
 
+
 /**
  * Prints a list of nodes.
  * @param {string} title A string to print first.

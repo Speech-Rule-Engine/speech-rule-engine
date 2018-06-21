@@ -257,10 +257,24 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
 };
 
 
+/**
+ * Computes skeletal structure for a semantic tree folding together content and
+ * child nodes in a "syntactic" manner.
+ * @param {!sre.SemanticTree} tree A semantic tree.
+ * @return {!sre.SemanticSkeleton} The skeletal structure.
+ */
 sre.SemanticSkeleton.fromStructure = function(tree) {
   return new sre.SemanticSkeleton(sre.SemanticSkeleton.tree_(tree.root));
 };
 
+
+/**
+ * Recursively computes skeletal structure for a semantic tree starting at the
+ * given node; folding together content and child nodes in a "syntactic" manner.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {!sre.SemanticSkeleton} The skeletal structure.
+ * @private
+ */
 sre.SemanticSkeleton.tree_ = function(node) {
   if (!node) {
     return [];
@@ -270,8 +284,8 @@ sre.SemanticSkeleton.tree_ = function(node) {
   }
   var skeleton = [node.id];
   var children = sre.SemanticSkeleton.combineContentChildren(
-    node, node.contentNodes.map(function(x) {return x;}),
-    node.childNodes.map(function(x) {return x;}));
+      node, node.contentNodes.map(function(x) {return x;}),
+      node.childNodes.map(function(x) {return x;}));
   for (var i = 0, child; child = children[i]; i++) {
     skeleton.push(sre.SemanticSkeleton.tree_(child));
   }
@@ -289,7 +303,7 @@ sre.SemanticSkeleton.tree_ = function(node) {
  * @return {!Array.<!T>} The combined list.
  */
 sre.SemanticSkeleton.combineContentChildren = function(
-  semantic, content, children) {
+    semantic, content, children) {
   switch (semantic.type) {
     case sre.Semantic.Type.RELSEQ:
     case sre.Semantic.Type.INFIXOP:
