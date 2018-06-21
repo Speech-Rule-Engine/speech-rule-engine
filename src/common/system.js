@@ -37,6 +37,7 @@ goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
+goog.require('sre.Variables');
 goog.require('sre.WalkerFactory');
 goog.require('sre.WalkerUtil');
 
@@ -51,7 +52,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '2.2.1';
+  this.version = sre.Variables.VERSION;
 
 };
 goog.addSingletonGetter(sre.System);

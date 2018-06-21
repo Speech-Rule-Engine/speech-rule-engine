@@ -23,6 +23,8 @@
  */
 goog.provide('sre.SystemExternal');
 
+goog.require('sre.Variables');
+
 
 
 /**
@@ -119,22 +121,11 @@ sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
 
 
 /**
- * Check if location is already supported in this JS.
- * @return {boolean} True if location is defined.
- */
-sre.SystemExternal.locationSupported = function() {
-  return !(typeof(location) == 'undefined');
-};
-
-
-/**
  * The URL for SRE resources.
  * @const
  * @type {string}
  */
-sre.SystemExternal.url = sre.SystemExternal.locationSupported() ?
-    location.protocol + '//' + 'progressiveaccess.com/content' :
-    'https://progressiveaccess.com/content';
+sre.SystemExternal.url = sre.Variables.url;
 
 
 /**
@@ -145,7 +136,7 @@ sre.SystemExternal.jsonPath = function() {
   return ((sre.SystemExternal.process && typeof global !== 'undefined') ?
       (sre.SystemExternal.process.env.SRE_JSON_PATH || global.SRE_JSON_PATH ||
          sre.SystemExternal.process.cwd()) :
-          sre.SystemExternal.url + '/mathmaps') +
+          sre.SystemExternal.url) +
       '/';
 }();
 
@@ -154,7 +145,7 @@ sre.SystemExternal.jsonPath = function() {
  * Path to Xpath library file.
  * @type {string}
  */
-sre.SystemExternal.WGXpath = sre.SystemExternal.url + '/wgxpath.install.js';
+sre.SystemExternal.WGXpath = sre.Variables.WGXpath;
 
 
 /**

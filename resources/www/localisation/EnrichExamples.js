@@ -457,4 +457,7 @@ Lab.Examples = ['<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>',
 '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo fence=\'true\'></mo></mrow><mspace width=\'2em\'/><mi>v</mi>',
 '<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>',
 '<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>',
-'<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow><mi>b</mi></mfrac>']
+'<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow><mi>b</mi></mfrac>',
+'<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>',
+'<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>',
+'<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>']
