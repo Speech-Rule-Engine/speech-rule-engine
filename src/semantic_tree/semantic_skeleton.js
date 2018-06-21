@@ -255,3 +255,81 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
         return x.concat(collapseStructure(y));
       }, []);
 };
+
+
+/**
+ * Computes skeletal structure for a semantic tree folding together content and
+ * child nodes in a "syntactic" manner.
+ * @param {!sre.SemanticTree} tree A semantic tree.
+ * @return {!sre.SemanticSkeleton} The skeletal structure.
+ */
+sre.SemanticSkeleton.fromStructure = function(tree) {
+  return new sre.SemanticSkeleton(sre.SemanticSkeleton.tree_(tree.root));
+};
+
+
+/**
+ * Recursively computes skeletal structure for a semantic tree starting at the
+ * given node; folding together content and child nodes in a "syntactic" manner.
+ * @param {sre.SemanticNode} node A semantic node.
+ * @return {!sre.SemanticSkeleton.Sexp} The sexp structure.
+ * @private
+ */
+sre.SemanticSkeleton.tree_ = function(node) {
+  if (!node) {
+    return [];
+  }
+  if (!node.childNodes.length) {
+    return node.id;
+  }
+  var skeleton = [node.id];
+  var children = sre.SemanticSkeleton.combineContentChildren(
+      node, node.contentNodes.map(function(x) {return x;}),
+      node.childNodes.map(function(x) {return x;}));
+  for (var i = 0, child; child = children[i]; i++) {
+    skeleton.push(sre.SemanticSkeleton.tree_(child));
+  }
+  return skeleton;
+};
+
+
+/**
+ * Combines content and children lists depending on the type of the semantic
+ * node.
+ * @template T
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {!Array.<!T>} content The list of content nodes.
+ * @param {!Array.<!T>} children The list of child nodes.
+ * @return {!Array.<!T>} The combined list.
+ */
+sre.SemanticSkeleton.combineContentChildren = function(
+    semantic, content, children) {
+  switch (semantic.type) {
+    case sre.Semantic.Type.RELSEQ:
+    case sre.Semantic.Type.INFIXOP:
+    case sre.Semantic.Type.MULTIREL:
+      return sre.BaseUtil.interleaveLists(children, content);
+    case sre.Semantic.Type.PREFIXOP:
+      return content.concat(children);
+    case sre.Semantic.Type.POSTFIXOP:
+      return children.concat(content);
+    case sre.Semantic.Type.FENCED:
+      children.unshift(content[0]);
+      children.push(content[1]);
+      return children;
+    case sre.Semantic.Type.APPL:
+      return [children[0], content[0], children[1]];
+    case sre.Semantic.Type.ROOT:
+      return [children[1], children[0]];
+    case sre.Semantic.Type.ROW:
+    case sre.Semantic.Type.LINE:
+      if (content.length) {
+        children.unshift(content[0]);
+      }
+      return children;
+    default:
+      return children;
+  }
+};
+
+
