@@ -8,6 +8,7 @@ var commander;
 commander.version;
 commander.option;
 commander.parse;
+commander.args;
 var module;
 module.exports;
 var global;
