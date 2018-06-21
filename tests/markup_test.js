@@ -94,7 +94,7 @@ sre.MarkupTest.QUADRATIC =
 
 /**
  * Executes single markup tests.
- * @param {!string} expr The input expression.
+ * @param {string} expr The input expression.
  * @param {string} result The expected result.
  * @param {sre.Engine.Markup} markup The markup to test.
  * @param {boolean} semantics As semantic markup or not.

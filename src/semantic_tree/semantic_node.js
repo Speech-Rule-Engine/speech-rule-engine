@@ -356,7 +356,7 @@ sre.SemanticNode.prototype.displayTree = function() {
 
 /**
  * Convenience method to display the whole tree and its elements.
- * @param {!number} depth The depth of the tree.
+ * @param {number} depth The depth of the tree.
  * @return {string} String with nested tree display.
  */
 sre.SemanticNode.prototype.displayTree_ = function(depth) {
@@ -382,7 +382,7 @@ sre.SemanticNode.prototype.displayTree_ = function(depth) {
 
 /**
  * Returns a display version of the node's associated MathML tree.
- * @return {!string} The MathML tree as string or EMPTY.
+ * @return {string} The MathML tree as string or EMPTY.
  * @private
  */
 sre.SemanticNode.prototype.mathmlTreeString_ = function() {
@@ -446,7 +446,7 @@ sre.SemanticNode.prototype.hasAnnotation = function(domain, annotation) {
 
 /**
  * Parses a annotation string as given, for example, in an attribute.
- * @param {!string} stateStr The state string for the annotation.
+ * @param {string} stateStr The state string for the annotation.
  */
 sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
   var annotations = stateStr.split(';');

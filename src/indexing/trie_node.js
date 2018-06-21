@@ -60,7 +60,7 @@ sre.TrieNode.prototype.addChild = function(node) { };
 
 /**
  * Get the child registered in the node for the given constraint.
- * @param {!string} constraint The constraint string.
+ * @param {string} constraint The constraint string.
  * @return {?sre.TrieNode} The child node if it exists.
  */
 sre.TrieNode.prototype.getChild = function(constraint) { };

@@ -148,7 +148,7 @@ goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
 /**
  * Checks validity for a custom function name.
  * @param {string} name The name of the custom function.
- * @return {!boolean} True if the name is valid.
+ * @return {boolean} True if the name is valid.
  * @private
  */
 sre.SpeechRuleFunctions.Store_.prototype.

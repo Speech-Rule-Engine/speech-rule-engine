@@ -43,7 +43,7 @@ sre.WalkerUtil.splitAttribute = function(attr) {
  * possible.
  * @param {!Node} node A DOM node.
  * @param {!sre.EnrichMathml.Attribute} attr The semantic data attribute.
- * @return {!string} The value for that attribute.
+ * @return {string} The value for that attribute.
  */
 sre.WalkerUtil.getAttribute = function(node, attr) {
   return sre.DomUtil.getDataAttribute(node, attr);

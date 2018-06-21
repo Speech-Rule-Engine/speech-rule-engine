@@ -44,40 +44,40 @@ sre.Cli.prototype.commandLine = function() {
   /** @type {function(string, string=)} */
   var processor = sre.System.getInstance().fileToSpeech;
   // These are necessary to avoid closure errors.
-  /** @type {!string} */
+  /** @type {string} */
   // commander.domain is already in use by the commander module!
   commander.dom = '';
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.enumerate = false;
-  /** @type {!string} */
+  /** @type {string} */
   commander.input = '';
-  /** @type {!string} */
+  /** @type {string} */
   commander.locale = '';
-  /** @type {!string} */
+  /** @type {string} */
   commander.log = '';
-  /** @type {!string} */
+  /** @type {string} */
   commander.output = '';
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.semantics = false;
-  /** @type {!string} */
+  /** @type {string} */
   commander.style = '';
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.verbose = false;
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.audit = false;
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.mathml = false;
-  /** @type {!string} */
+  /** @type {string} */
   commander.generate = sre.Engine.Speech.NONE;
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.json = false;
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.speech = false;
-  /** @type {!string} */
+  /** @type {string} */
   commander.markup = '';
-  /** @type {!string} */
+  /** @type {string} */
   commander.rate = '';
-  /** @type {!boolean} */
+  /** @type {boolean} */
   commander.xml = false;
 
   commander.version(system.version).

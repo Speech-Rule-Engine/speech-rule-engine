@@ -27,8 +27,8 @@ goog.require('sre.SemanticUtil');
 
 /**
  * Constructs a predicate to check the semantic attribute of a node.
- * @param {!string} prop The property of a node.
- * @param {!string} attr The attribute.
+ * @param {string} prop The property of a node.
+ * @param {string} attr The attribute.
  * @return {function(sre.SemanticNode): boolean} The predicate.
  */
 
