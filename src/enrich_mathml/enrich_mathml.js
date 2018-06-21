@@ -27,6 +27,7 @@ goog.provide('sre.EnrichMathml.Attribute');
 goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
+goog.require('sre.Engine');
 goog.require('sre.EnrichCaseFactory');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticAttr');
@@ -90,6 +91,7 @@ sre.EnrichMathml.Attribute = {
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
   ROLE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'role',
   SPEECH: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'speech',
+  STRUCTURE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'structure',
   TYPE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'type'
 };
 
@@ -108,7 +110,10 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   // deleted.
   var oldMml = mml.cloneNode(true);
   sre.EnrichMathml.walkTree(semantic.root);
-  sre.EnrichMathml.addCollapsedAttribute(mml, sre.SemanticSkeleton.tree(semantic.root));
+  if (sre.Engine.getInstance().structure) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.STRUCTURE,
+                     sre.SemanticSkeleton.fromStructure(semantic).toString());
+  }
   sre.Debugger.getInstance().generateOutput(
       function() {
         sre.EnrichMathml.formattedOutput(oldMml, mml, semantic, true);
@@ -142,9 +147,10 @@ sre.EnrichMathml.walkTree = function(semantic) {
 
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.cloneContentNode));
+  sre.EnrichMathml.setOperatorAttribute_(semantic, newContent);
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
-  var childrenList = sre.EnrichMathml.combineContentChildren_(
+  var childrenList = sre.SemanticSkeleton.combineContentChildren(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
   if (newNode === null) {
@@ -671,7 +677,6 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
  */
 sre.EnrichMathml.combineContentChildren_ = function(
     semantic, content, children) {
-  sre.EnrichMathml.setOperatorAttribute_(semantic, content);
   switch (semantic.type) {
     case sre.Semantic.Type.RELSEQ:
     case sre.Semantic.Type.INFIXOP:

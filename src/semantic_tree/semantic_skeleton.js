@@ -257,21 +257,39 @@ sre.SemanticSkeleton.collapsedLeafs = function(var_args) {
 };
 
 
-sre.SemanticSkeleton.tree = function(node) {
+sre.SemanticSkeleton.fromStructure = function(tree) {
+  return new sre.SemanticSkeleton(sre.SemanticSkeleton.tree_(tree.root));
+};
+
+sre.SemanticSkeleton.tree_ = function(node) {
+  if (!node) {
+    return [];
+  }
+  if (!node.childNodes.length) {
+    return node.id;
+  }
   var skeleton = [node.id];
-  if (node.childNodes.length) {
-    var children = sre.SemanticSkeleton.combineContentChildren_(node);
-    for (var i = 0, child; child = children[i]; i++) {
-      skeleton.push(sre.SemanticSkeleton.tree(child));
-    }
+  var children = sre.SemanticSkeleton.combineContentChildren(
+    node, node.contentNodes.map(function(x) {return x;}),
+    node.childNodes.map(function(x) {return x;}));
+  for (var i = 0, child; child = children[i]; i++) {
+    skeleton.push(sre.SemanticSkeleton.tree_(child));
   }
   return skeleton;
 };
 
 
-sre.SemanticSkeleton.combineContentChildren_ = function(semantic) {
-  var children = semantic.childNodes; // .map(function(x) {return x.id;});
-  var content = semantic.contentNodes; // .map(function(x) {return x.id;});
+/**
+ * Combines content and children lists depending on the type of the semantic
+ * node.
+ * @template T
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {!Array.<!T>} content The list of content nodes.
+ * @param {!Array.<!T>} children The list of child nodes.
+ * @return {!Array.<!T>} The combined list.
+ */
+sre.SemanticSkeleton.combineContentChildren = function(
+  semantic, content, children) {
   switch (semantic.type) {
     case sre.Semantic.Type.RELSEQ:
     case sre.Semantic.Type.INFIXOP:
@@ -284,19 +302,6 @@ sre.SemanticSkeleton.combineContentChildren_ = function(semantic) {
     case sre.Semantic.Type.FENCED:
       children.unshift(content[0]);
       children.push(content[1]);
-      return children;
-    case sre.Semantic.Type.PUNCTUATED:
-      if (semantic.role === sre.Semantic.Role.TEXT) {
-        return sre.BaseUtil.interleaveLists(children, content);
-      }
-      var markupList = [];
-      for (var i = 0, j = 0, child, cont;
-           child = children[i], cont = content[j]; i++) {
-        if (child === cont) {
-          j++;
-          markupList.push(child);
-        }
-      }
       return children;
     case sre.Semantic.Type.APPL:
       return [children[0], content[0], children[1]];

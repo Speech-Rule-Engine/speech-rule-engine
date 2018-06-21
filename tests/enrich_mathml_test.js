@@ -48,7 +48,7 @@ goog.inherits(sre.EnrichMathmlTest, sre.AbstractExamples);
  */
 sre.EnrichMathmlTest.prototype.setUpTest = function() {
   this.attrBlacklist = ['data-semantic-font', 'data-semantic-embellished',
-                        'data-semantic-fencepointer'];
+                        'data-semantic-fencepointer', 'data-semantic-structure'];
   sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
@@ -80,6 +80,9 @@ sre.EnrichMathmlTest.prototype.customizeXml = function(xml) {
   this.attrBlacklist.forEach(
       function(attr) {
         var removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
+        if (xml.hasAttribute(attr)) {
+          removes.push(xml);
+        }
         removes.forEach(
             function(node) {
               node.removeAttribute(attr);

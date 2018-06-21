@@ -108,7 +108,7 @@ sre.System.prototype.setupEngine = function(feature) {
   var setMulti = function(feat) {
     engine[feat] = feature[feat] || engine[feat];
   };
-  var binaryFeatures = ['strict', 'cache', 'semantics'];
+  var binaryFeatures = ['strict', 'cache', 'semantics', 'structure'];
   var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
                         'locale'];
   setMulti('mode');
