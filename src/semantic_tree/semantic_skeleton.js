@@ -272,7 +272,7 @@ sre.SemanticSkeleton.fromStructure = function(tree) {
  * Recursively computes skeletal structure for a semantic tree starting at the
  * given node; folding together content and child nodes in a "syntactic" manner.
  * @param {sre.SemanticNode} node A semantic node.
- * @return {!sre.SemanticSkeleton} The skeletal structure.
+ * @return {!sre.SemanticSkeleton.Sexp} The sexp structure.
  * @private
  */
 sre.SemanticSkeleton.tree_ = function(node) {
