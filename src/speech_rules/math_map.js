@@ -110,7 +110,7 @@ sre.MathMap.SYMBOLS_FILES_ = [
 
   // Greek Mathfonts
   'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
-  'greek-mathfonts-sans-serif-bold.js', 
+  'greek-mathfonts-sans-serif-bold.js',
 
   // Hebrew
   'hebrew_letters.js',
