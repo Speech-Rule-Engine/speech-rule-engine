@@ -146,6 +146,6 @@ sre.Cli.prototype.commandLine = function() {
       function() {sre.SystemExternal.process.exit(0);});
 };
 
-if (process.env.SRE_TOP_PATH) {
+if (sre.SystemExternal.process && sre.SystemExternal.process.env.SRE_TOP_PATH) {
   (new sre.Cli()).commandLine();
 }
