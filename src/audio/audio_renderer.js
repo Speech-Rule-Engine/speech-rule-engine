@@ -60,7 +60,16 @@ sre.AudioRenderer.prototype.error = function(key) {};
 
 /**
  * Merges markup strings.
- * @param {Array.<{string: string, attributes: Object.<string>}>} strs The single markup strings.
+ * @param {Array.<{string: string, attributes: Object.<string>}>} strs The
+ *     single markup strings.
  * @return {string} A single string.
  */
 sre.AudioRenderer.prototype.merge = function(strs) {};
+
+
+/**
+ * Finalizes a markup string. E.g., adds enclosing XML tags.
+ * @param {string} str A single markup string.
+ * @return {string} A single string.
+ */
+sre.AudioRenderer.prototype.finalize = function(str) {};

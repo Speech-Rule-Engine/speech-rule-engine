@@ -80,12 +80,26 @@ sre.AuralRendering.prototype.markup = function(descrs) {
  * @override
  */
 sre.AuralRendering.prototype.merge = function(strs) {
+  var span = strs.map(function(s) {return {string: s, attributes: {}};});
   var renderer = sre.AuralRendering.rendererMapping_[
       sre.Engine.getInstance().markup];
   if (!renderer) {
     return strs.join();
   }
-  return renderer.merge(strs);
+  return renderer.merge(span);
+};
+
+
+/**
+ * @override
+ */
+sre.AuralRendering.prototype.finalize = function(str) {
+  var renderer = sre.AuralRendering.rendererMapping_[
+      sre.Engine.getInstance().markup];
+  if (!renderer) {
+    return str;
+  }
+  return renderer.finalize(str);
 };
 
 

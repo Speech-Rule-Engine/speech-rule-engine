@@ -700,3 +700,28 @@ sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
   }
   return value.split(':');
 };
+
+
+// sre.SpeechRuleEngine.prototype.enumerate = function() {
+//   var root = sre.SpeechRuleEngine.getInstance().activeStore_.trie.root;
+  
+// };
+
+
+sre.SpeechRuleEngine.prototype.enumerate = function() {
+  var root = this.activeStore_.trie.root;
+  return this.enumerate_(root);
+};
+
+
+sre.SpeechRuleEngine.prototype.enumerate_ = function(node) {
+  var result = {};
+  var children = node.getChildren();
+  for (var i = 0, child; child = children[i]; i++) {
+    if (child.kind !== sre.TrieNode.Kind.DYNAMIC) {
+      continue;
+    }
+    result[child.getConstraint()] = this.enumerate_(child);
+  }
+  return result;
+};

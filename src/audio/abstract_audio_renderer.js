@@ -78,6 +78,14 @@ sre.AbstractAudioRenderer.prototype.merge = function(strs) {
 };
 
 
+/**
+ * @override
+ */
+sre.AbstractAudioRenderer.prototype.finalize = function(str) {
+  return str;
+};
+
+
 sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
   var numeric;
   switch (value) {
