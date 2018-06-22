@@ -33,37 +33,66 @@ goog.require('sre.SystemExternal');
  * @constructor
  */
 sre.Cli = function() {
+
+  /**
+   * @type {sre.System}
+   */
   this.system = sre.System.getInstance();
+
+  /**
+   * @type {Object.<string|boolean>}
+   */
   this.setup = {'mode': sre.Engine.Mode.SYNC};
+
+  /**
+   * @type {Array.<function(string, string): *>}
+   */
   this.processors = [];
 };
 
 
+/**
+ * Sets parameters for the speech rule engine.
+ * @param {string|boolean} value The cli option value.
+ * @param {string} arg The option to set.
+ */
 sre.Cli.prototype.set = function(value, arg) {
-  this.setup[arg] =
-    typeof value === 'undefined' ? ((arg === 'semantics') ? false : true) : value;
+  this.setup[arg] = typeof value === 'undefined' ?
+      ((arg === 'semantics') ? false : true) : value;
 };
 
 
+/**
+ * Registers processors for input files.
+ * @param {string} v Unused parameter.
+ * @param {function(string, string): *} processor A processor method.
+ */
 sre.Cli.prototype.processor = function(v, processor) {
   this.processors.push(processor);
 };
 
 
+/**
+ * Prints information on axes values.
+ */
 sre.Cli.prototype.enumerate = function() {
   this.system.setupEngine(this.setup);
   var values = sre.Engine.getInstance().getAxisValues();
   var output = '';
   for (var axis in values) {
     output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
-      values[axis].slice().sort().join(', ') + '\n';
+        values[axis].slice().sort().join(', ') + '\n';
   }
   console.log('\n' + output);
 };
 
 
+/**
+ * Executes all processors on a single file.
+ * @param {string} input The name of the input file.
+ */
 sre.Cli.prototype.execute = function(input) {
-  var commander =  sre.SystemExternal.commander;
+  var commander = sre.SystemExternal.commander;
   try {
     if (!this.processors.length) {
       this.processors.push(this.system.fileToSpeech);
@@ -76,31 +105,22 @@ sre.Cli.prototype.execute = function(input) {
   } catch (err) {
     console.log(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit(
-      function() {sre.SystemExternal.process.exit(1);});
+        function() {sre.SystemExternal.process.exit(1);});
   }
 };
-
 
 
 /**
  * Method for the command line interface of the Speech Rule Engine
  */
 sre.Cli.prototype.commandLine = function() {
-  var commander =  sre.SystemExternal.commander;
+  var commander = sre.SystemExternal.commander;
   var system = this.system;
   var set = goog.bind(this.set, this);
   var processor = goog.bind(this.processor, this);
-  // /** @type {string} */
-  // commander.input = '';
-  // /** @type {string} */
-  // commander.log = '';
-  // /** @type {string} */
-  // commander.output = '';
-  // /** @type {boolean} */
-  // commander.verbose = false;
-  
+
   commander.version(system.version).
-    usage('[options] <file ...>').
+      usage('[options] <file ...>').
       option('').
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
@@ -141,7 +161,7 @@ sre.Cli.prototype.commandLine = function() {
   commander.args.forEach(goog.bind(this.execute, this));
   if (commander.input) {
     this.execute(commander.input);
-  };
+  }
   sre.Debugger.getInstance().exit(
       function() {sre.SystemExternal.process.exit(0);});
 };

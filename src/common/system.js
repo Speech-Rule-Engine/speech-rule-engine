@@ -96,7 +96,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
- * @param {Object.<string,? (string)>} feature An object describing some
+ * @param {Object.<boolean|string>} feature An object describing some
  *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
@@ -140,7 +140,7 @@ sre.System.prototype.setupEngine = function(feature) {
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
- * @param {Object.<string,? (string)>} feature An object describing some
+ * @param {Object.<boolean|string>} feature An object describing some
  *     setup features.
  * @private
  */
