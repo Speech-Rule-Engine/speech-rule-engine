@@ -110,6 +110,29 @@ sre.Cli.prototype.execute = function(input) {
 };
 
 
+sre.Cli.prototype.readline = function() {
+  var commander = sre.SystemExternal.commander;
+  sre.SystemExternal.process.stdin.setEncoding('utf8');
+  var inter = sre.SystemExternal.require('readline').createInterface({
+    input: sre.SystemExternal.process.stdin,
+    output: commander.output ?
+      sre.SystemExternal.fs.createWriteStream(commander.output) :
+      sre.SystemExternal.process.stdout
+  });
+  var input = '';
+  inter.on('line', (expr) => {input += expr;});
+  inter.on('close', () => {
+    try {
+      inter.output.write(sre.System.getInstance().toSpeech(input) + '\n');
+    } catch (err) {
+      console.log(err.name + ': ' + err.message);
+      sre.Debugger.getInstance().exit(
+        function() {sre.SystemExternal.process.exit(1);});
+    }
+  });
+};
+
+
 /**
  * Method for the command line interface of the Speech Rule Engine
  */
@@ -158,9 +181,13 @@ sre.Cli.prototype.commandLine = function() {
   if (commander.verbose) {
     sre.Debugger.getInstance().init(commander.log);
   }
-  commander.args.forEach(goog.bind(this.execute, this));
   if (commander.input) {
     this.execute(commander.input);
+  }
+  if (commander.args.length) {
+    commander.args.forEach(goog.bind(this.execute, this));
+  } else {
+    this.readline();
   }
   sre.Debugger.getInstance().exit(
       function() {sre.SystemExternal.process.exit(0);});
