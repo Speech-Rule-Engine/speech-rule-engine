@@ -98,9 +98,10 @@ sre.Cli.prototype.execute = function(input) {
       this.processors.push(this.system.fileToSpeech);
     }
     if (input) {
-      this.processors.forEach(function(proc) {
-        proc(input, commander.output);
-      });
+      this.processors.forEach(goog.bind(
+        function(proc) {
+          this.system['fileTo' + proc](input, commander.output);
+        }, this));
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);
@@ -110,6 +111,11 @@ sre.Cli.prototype.execute = function(input) {
 };
 
 
+/**
+ * Readline functionality for CLI. Reads an expression from the command line and
+ * runs the given processors on it. Result is either printed to stdout or to the
+ * given output file.
+ */
 sre.Cli.prototype.readline = function() {
   var commander = sre.SystemExternal.commander;
   sre.SystemExternal.process.stdin.setEncoding('utf8');
@@ -119,17 +125,24 @@ sre.Cli.prototype.readline = function() {
       sre.SystemExternal.fs.createWriteStream(commander.output) :
       sre.SystemExternal.process.stdout
   });
+  inter.output.on('close', (src) => {
+    console.error('something is piping into the writer');
+  });
+
   var input = '';
-  inter.on('line', (expr) => {input += expr;});
-  inter.on('close', () => {
+  inter.on('line', function(expr) {input += expr;});
+  inter.on('close', goog.bind(function() {
     try {
-      inter.output.write(sre.System.getInstance().toSpeech(input) + '\n');
+      this.processors.forEach(goog.bind(
+        function(proc) {
+          inter.output.write(this.system['to' + proc](input) + '\n');
+        }, this));
     } catch (err) {
       console.log(err.name + ': ' + err.message);
       sre.Debugger.getInstance().exit(
         function() {sre.SystemExternal.process.exit(1);});
     }
-  });
+  }, this));
 };
 
 
@@ -158,16 +171,16 @@ sre.Cli.prototype.commandLine = function() {
              set, 'markup').
       option('').
       option('-p, --speech', 'Generate speech output (default).',
-             processor, system.fileToSpeech).
+             processor, 'Speech').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).',
-             processor, system.fileToDescription).
+             processor, 'Description').
       option('-j, --json', 'Generate JSON of semantic tree.',
-             processor, system.fileToJson).
+             processor, 'Json').
       option('-x, --xml', 'Generate XML of semantic tree.',
-             processor, system.fileToSemantic).
+             processor, 'Semantic').
       option('').
       option('-m, --mathml', 'Generate enriched MathML.',
-             processor, system.fileToEnriched).
+             processor, 'Enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
              ' MathML (with -m option only).', set, 'speech').
       option('-r, --structure', 'Include structure attribute in enriched' +
