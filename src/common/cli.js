@@ -102,15 +102,29 @@ sre.Cli.prototype.enumerate = function() {
  */
 sre.Cli.prototype.execute = function(input) {
   var commander = sre.SystemExternal.commander;
+  this.runProcessors_(
+    goog.bind(
+      function(proc, file) {
+        this.system['fileTo' + proc](file, commander.output);
+      }, this),
+    input);
+};
+
+
+/**
+ * Runs processor methods on the given input.
+ * @param {function(string, string)} processor Name of a processor.
+ * @param {string} input The input expression or file name
+ * @private
+ */
+sre.Cli.prototype.runProcessors_ = function(processor, input) {
   try {
     if (!this.processors.length) {
       this.processors.push('Speech');
     }
     if (input) {
-      this.processors.forEach(goog.bind(
-        function(proc) {
-          this.system['fileTo' + proc](input, commander.output);
-        }, this));
+      this.processors.forEach(
+        function(proc) {processor(proc, input);});
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);
@@ -138,24 +152,15 @@ sre.Cli.prototype.readline = function() {
   inter.on('line', goog.bind(
     function(expr) {
       input += expr;
-      if (this.readExpression(input)) {
+      if (this.readExpression_(input)) {
         inter.close();
       };
     }, this));
   inter.on('close', goog.bind(function() {
-    try {
-      if (!this.processors.length) {
-        this.processors.push('Speech');
-      }
-      this.processors.forEach(goog.bind(
-        function(proc) {
-          inter.output.write(this.system['to' + proc](input) + '\n');
-        }, this));
-    } catch (err) {
-      console.log(err.name + ': ' + err.message);
-      sre.Debugger.getInstance().exit(
-        function() {sre.SystemExternal.process.exit(1);});
-    }
+    this.runProcessors_(goog.bind(
+      function(proc, expr) {
+        inter.output.write(this.system['to' + proc](expr) + '\n');
+      }, this), input);
   }, this));
 };
 
@@ -164,8 +169,9 @@ sre.Cli.prototype.readline = function() {
  * Checks if the input expression is already complete.
  * @param {string} input The current input on the CLI.
  * @return {boolean} True if input is a complete XML expression.
+ * @private
  */
-sre.Cli.prototype.readExpression = function(input) {
+sre.Cli.prototype.readExpression_ = function(input) {
   try {
     this.dp.parseFromString(input, 'text/xml');
   } catch (err) {
