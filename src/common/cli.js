@@ -48,6 +48,15 @@ sre.Cli = function() {
    * @type {Array.<function(string, string): *>}
    */
   this.processors = [];
+
+  /**
+   * @type {DOMParser}
+   */
+  this.dp = new sre.SystemExternal.xmldom.DOMParser(
+    {errorHandler: function(key,msg) {
+      throw new Error('XML DOM error!');
+    }});
+  
 };
 
 
@@ -125,12 +134,14 @@ sre.Cli.prototype.readline = function() {
       sre.SystemExternal.fs.createWriteStream(commander.output) :
       sre.SystemExternal.process.stdout
   });
-  inter.output.on('close', (src) => {
-    console.error('something is piping into the writer');
-  });
-
   var input = '';
-  inter.on('line', function(expr) {input += expr;});
+  inter.on('line', goog.bind(
+    function(expr) {
+      input += expr;
+      if (this.readExpression(input)) {
+        inter.close();
+      };
+    }, this));
   inter.on('close', goog.bind(function() {
     try {
       this.processors.forEach(goog.bind(
@@ -143,6 +154,21 @@ sre.Cli.prototype.readline = function() {
         function() {sre.SystemExternal.process.exit(1);});
     }
   }, this));
+};
+
+
+/**
+ * Checks if the input expression is already complete.
+ * @param {string} input The current input on the CLI.
+ * @return {boolean} True if input is a complete XML expression.
+ */
+sre.Cli.prototype.readExpression = function(input) {
+  try {
+    this.dp.parseFromString(input, 'text/xml');
+  } catch (err) {
+    return false;
+  }
+  return true;
 };
 
 
