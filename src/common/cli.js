@@ -45,7 +45,7 @@ sre.Cli = function() {
   this.setup = {'mode': sre.Engine.Mode.SYNC};
 
   /**
-   * @type {Array.<function(string, string): *>}
+   * @type {Array.<string>}
    */
   this.processors = [];
 
@@ -74,7 +74,7 @@ sre.Cli.prototype.set = function(value, arg) {
 /**
  * Registers processors for input files.
  * @param {string} v Unused parameter.
- * @param {function(string, string): *} processor A processor method.
+ * @param {string} processor A processor method.
  */
 sre.Cli.prototype.processor = function(v, processor) {
   this.processors.push(processor);
@@ -104,7 +104,7 @@ sre.Cli.prototype.execute = function(input) {
   var commander = sre.SystemExternal.commander;
   try {
     if (!this.processors.length) {
-      this.processors.push(this.system.fileToSpeech);
+      this.processors.push('Speech');
     }
     if (input) {
       this.processors.forEach(goog.bind(
@@ -144,6 +144,9 @@ sre.Cli.prototype.readline = function() {
     }, this));
   inter.on('close', goog.bind(function() {
     try {
+      if (!this.processors.length) {
+        this.processors.push('Speech');
+      }
       this.processors.forEach(goog.bind(
         function(proc) {
           inter.output.write(this.system['to' + proc](input) + '\n');
