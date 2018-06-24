@@ -92,7 +92,7 @@ sre.Cli.prototype.enumerate = function() {
     output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
         values[axis].slice().sort().join(', ') + '\n';
   }
-  console.log('\n' + output);
+  console.info('\n' + output);
 };
 
 
@@ -127,7 +127,7 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
           function(proc) {processor(proc, input);});
     }
   } catch (err) {
-    console.log(err.name + ': ' + err.message);
+    console.info(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit(
         function() {sre.SystemExternal.process.exit(1);});
   }

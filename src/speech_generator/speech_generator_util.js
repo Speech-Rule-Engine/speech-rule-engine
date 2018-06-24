@@ -118,7 +118,6 @@ sre.SpeechGeneratorUtil.addPrefix = function(mml, semantic) {
  * @return {string} The prefix speech string.
  */
 sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
-  console.log(semantic);
   var descrs = sre.SpeechGeneratorUtil.computePrefix_(semantic);
   return sre.AuralRendering.getInstance().markup(descrs);
 };
