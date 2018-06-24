@@ -53,10 +53,10 @@ sre.Cli = function() {
    * @type {DOMParser}
    */
   this.dp = new sre.SystemExternal.xmldom.DOMParser(
-    {errorHandler: function(key,msg) {
-      throw new Error('XML DOM error!');
-    }});
-  
+      {errorHandler: function(key, msg) {
+        throw new Error('XML DOM error!');
+      }});
+
 };
 
 
@@ -103,11 +103,11 @@ sre.Cli.prototype.enumerate = function() {
 sre.Cli.prototype.execute = function(input) {
   var commander = sre.SystemExternal.commander;
   this.runProcessors_(
-    goog.bind(
+      goog.bind(
       function(proc, file) {
         this.system['fileTo' + proc](file, commander.output);
       }, this),
-    input);
+      input);
 };
 
 
@@ -124,7 +124,7 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
     }
     if (input) {
       this.processors.forEach(
-        function(proc) {processor(proc, input);});
+          function(proc) {processor(proc, input);});
     }
   } catch (err) {
     console.log(err.name + ': ' + err.message);
@@ -145,22 +145,22 @@ sre.Cli.prototype.readline = function() {
   var inter = sre.SystemExternal.require('readline').createInterface({
     input: sre.SystemExternal.process.stdin,
     output: commander.output ?
-      sre.SystemExternal.fs.createWriteStream(commander.output) :
-      sre.SystemExternal.process.stdout
+        sre.SystemExternal.fs.createWriteStream(commander.output) :
+        sre.SystemExternal.process.stdout
   });
   var input = '';
   inter.on('line', goog.bind(
-    function(expr) {
-      input += expr;
-      if (this.readExpression_(input)) {
-        inter.close();
-      };
-    }, this));
+      function(expr) {
+        input += expr;
+        if (this.readExpression_(input)) {
+          inter.close();
+        }
+      }, this));
   inter.on('close', goog.bind(function() {
     this.runProcessors_(goog.bind(
-      function(proc, expr) {
-        inter.output.write(this.system['to' + proc](expr) + '\n');
-      }, this), input);
+        function(proc, expr) {
+          inter.output.write(this.system['to' + proc](expr) + '\n');
+        }, this), input);
   }, this));
 };
 
