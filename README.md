@@ -77,7 +77,7 @@ Speech Rule Engine.
 
     setupEngine(options);
 
-Most common options are:
+Most common options are
 
 | Option | Value |
 | ---- | ---- |
@@ -86,11 +86,18 @@ Most common options are:
 | *locale* | Language locale in 639-1. Currently available: en, es |
 | *markup*| Set the markup: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss``` |
 | *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
-| *semantics* | Boolean flag to switch **OFF** semantic interpretation. Non-semantic rule sets are deprecated. |
 
 Observe that some speech rule domains only make sense with semantics switched on
 or off and that not every domain implements every style. See also the
 description of the command line parameters in the next section for more details.
+
+Options for enriched MathML output:
+
+| Option | Value |
+| ---- | ---- |
+| *speech* | Depth to which generated speech is stored in attributes during semantic enrichment. Values are ```none```, ```shallow```, ```deep```. Default is ```none```. |
+| *structure* | If set, includes a `structure` attribute in the enriched MathML that summarises the structure of the semantic tree in form of an sexpression. |
+
 
 Other options to give more fine grained control of the SRE that are useful during development are:
 
@@ -98,11 +105,18 @@ Other options to give more fine grained control of the SRE that are useful durin
 | ---- | ---- |
 | *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. |
 | *strict* | Boolean flag indicating if only a directly matching rule should be used. I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. Default is ```false```. |
-| *speech* | Depth to which generated speech is stored in attributes during semantic enrichment. Values are ```none```, ```shallow```, ```deep```. Default is ```none```. |
 | *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
 | *json* | URL where to pull the json speech rule files from. |
 | *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or Edge. |
-| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. **Always expects a list, even if only one rule set is supplied!** |
+
+Deprecated Options
+
+| Option | Value |
+| ---- | ---- |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation. **Non-semantic rule sets are deprecated.** |
+| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** |
+|| **Note that setting rule sets is no longer useful with the new rule indexing structures.** | 
+
 
 
 #### Experimental methods for navigating math expressions:
@@ -153,6 +167,36 @@ This will make both the command line executable and the interactive load script.
 
 ### Run on command line ############
 
+SRE can be run on the command line by providing a set of processing options and 
+either a list of input files or a inputting an XML expression manually.
+
+    bin/sre [options] infile1 infile2 infile3 ...
+
+For example running
+
+    bin/sre -j -p resources/samples/sample1.xml resources/samples/sample2.xml
+
+will return the semantic tree in JSON as well as the speech translation for the
+expressions in the two sample files.
+(Note, that `-p` is the default option if no processing options are given).
+
+SRE also enables direct input from command line. For example, running 
+
+    bin/sre -j -p 
+
+will wait for a complete XML expression to be input for translation. Similarly, 
+shell piping is allowed:
+
+    bin/sre -j -p < resources/samples/sample1.xml
+
+Note, that when providing the `-o outfile` option output is saved into the given file.
+However, when processing from file only the very last output is saved, while when
+processing via pipes or command line input all output is saved.
+
+### Run on command line (old) ############
+
+__Note that the `-i` option is deprecated and will be removed in future releases.__
+
     bin/sre -i infile -o outfile
 
 As an example run
@@ -175,7 +219,7 @@ The following is a list of command line options for the speech rule engine.
 
 | Short | Long | Meaning | 
 | ----- | ---- | :------- |
-| -i | --input [name]  | Input file [name] |
+| -i | --input [name]  | Input file [name]. **This option is deprecated!** |
 | -o | --output [name] | Output file [name].
 ||| If not given output is printed to stdout. |
 | | |
@@ -189,9 +233,8 @@ The following is a list of command line options for the speech rule engine.
 ||| If no style parameter is provided, style default is used. |
 | -c | --locale | Language locale in ISO 639-1. |
 | -s | --semantics     | Switch on semantics interpretation. |
+||| **This option is deprecated.** |
 ||| Note, that some speech rule domains only make sense with semantics switched on or off. |
-| -e | --enumerate     | Enumerates all available domains and styles. |
-||| Note that not every style is implemented in every domain. |
 | | |
 | | |
 | | |
@@ -210,8 +253,9 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | | |
 | | |
-| -h | --help   | output usage information |
-| -V | --version  |      output the version number |
+| -h | --help   | Usage information and enumerates all available domains and styles. |
+||| Note that not every style is implemented in every domain. |
+| -V | --version  |  Outputs the version number |
 
 
 Browser Library
