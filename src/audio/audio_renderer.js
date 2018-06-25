@@ -20,6 +20,8 @@
  */
 goog.provide('sre.AudioRenderer');
 
+goog.require('sre.Span');
+
 
 
 /**
@@ -60,7 +62,7 @@ sre.AudioRenderer.prototype.error = function(key) {};
 
 /**
  * Merges markup strings.
- * @param {Array.<{string: string, attributes: Object.<string>}>} strs The
+ * @param {Array.<sre.Span>} strs The
  *     single markup strings.
  * @return {string} A single string.
  */

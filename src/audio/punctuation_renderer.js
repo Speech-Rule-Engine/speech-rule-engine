@@ -43,13 +43,13 @@ sre.PunctuationRenderer.prototype.markup = function(descrs) {
   var markup = sre.AudioUtil.personalityMarkup(descrs);
   var str = '';
   var pause = null;
-  var string = false;
+  var span = false;
   for (var i = 0, descr; descr = markup[i]; i++) {
     if (sre.AudioUtil.isMarkupElement(descr)) {
       continue;
     }
     if (sre.AudioUtil.isPauseElement(descr)) {
-      if (string) {
+      if (span) {
         pause = sre.AudioUtil.mergePause(
             pause,
             /** @type {{pause: number}} */(descr), Math.max);
@@ -60,9 +60,9 @@ sre.PunctuationRenderer.prototype.markup = function(descrs) {
       str += this.pause(pause[sre.Engine.personalityProps.PAUSE]);
       pause = null;
     }
-    str += (string ? this.getSeparator() : '') +
-        this.merge(descr.string);
-    string = true;
+    str += (span ? this.getSeparator() : '') +
+        this.merge(descr.span);
+    span = true;
   }
   return str;
 };

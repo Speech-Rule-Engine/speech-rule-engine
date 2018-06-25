@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2014-18 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ goog.provide('sre.AuditoryDescription');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
+goog.require('sre.Span');
 
 
 
@@ -144,12 +145,11 @@ sre.AuditoryDescription.prototype.descriptionString = function() {
 
 
 /**
- * @return {{string: string,
- *           attributes: Object.<string>}} A span representation
+ * @return {sre.Span} A span representation
  *     of this object.
  */
 sre.AuditoryDescription.prototype.descriptionSpan = function() {
-  return {string: this.descriptionString(), attributes: this.attributes};
+  return new sre.Span(this.descriptionString(), this.attributes);
 };
 
 

@@ -46,8 +46,8 @@ sre.XmlRenderer.prototype.markup = function(descrs) {
   var result = [];
   var currentOpen = [];
   for (var i = 0, descr; descr = markup[i]; i++) {
-    if (descr.string) {
-      result.push(this.merge(descr.string));
+    if (descr.span) {
+      result.push(this.merge(descr.span));
       continue;
     }
     if (sre.AudioUtil.isPauseElement(descr)) {
@@ -76,10 +76,6 @@ sre.XmlRenderer.prototype.markup = function(descrs) {
   return result.join(' ');  //this.merge(result);
 };
 
-
-sre.XmlRenderer.prototype.merge = function(str) {
-  return str.map(function(x) {return x.string;}).join(this.getSeparator());
-};
 
 /**
  * Computes the closing tag for a personality property.

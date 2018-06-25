@@ -69,7 +69,10 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
       }
       continue;
     }
+    console.log('here');
+    console.log(descr.string);
     var str = '"' + descr.string.join(this.getSeparator()) + '"';
+    // var str = '"' + descr.string.join(this.getSeparator()) + '"';
     string = true;
     if (pause) {
       result.push(this.pause(pause));
@@ -78,6 +81,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
     var prosody = this.prosody_(currentPers);
     result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
   }
+  console.log(result);
   return '(exp ' + result.join(' ') + ')';
 };
 
@@ -86,6 +90,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
  * @override
  */
 sre.AcssRenderer.prototype.merge = function(strs) {
+  console.log('when?');
   return '(exp ' +
       strs.map(function(str) {
         return str.string.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
