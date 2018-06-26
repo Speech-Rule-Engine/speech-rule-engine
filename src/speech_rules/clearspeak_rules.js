@@ -28,10 +28,6 @@ goog.require('sre.StoreUtil');
 
 
 
-//TODO: (MOSS) WP 2.2
-// * Implement rules from http://www.dessci.com/en/reference/ies-ets/
-// * Implement preference settings
-//
 /**
  * Rule initialization.
  * @constructor
@@ -2233,6 +2229,19 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //     ' [t] "below" (pause:short)',
   //   'self::underscore', ''
   // );
+
+  // Number rules
+  defineRule(
+      'number', 'clearspeak.default', '[n] text()', 'self::number');
+  defineRule(
+      'mixed-number', 'clearspeak.default',
+      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      'self::number', '@role="mixed"');
+  defineRule(
+      'number-with-chars', 'clearspeak.default',
+      '[t] "number"; [m] CQFspaceoutNumber', 'self::number',
+      '"" != translate(text(), "0123456789.,", "")',
+      'text() != translate(text(), "0123456789.,", "")');
 
   // Decimal periods:
   defineRule(
