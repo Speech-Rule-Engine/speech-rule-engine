@@ -24,6 +24,7 @@ goog.require('sre.ClearspeakUtil');
 goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
+goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
 
@@ -152,6 +153,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'stree', 'clearspeak.default',
       '[n] ./*[1]', 'self::stree');
+
+  // Dummy rules
+  defineRule(
+      'unknown', 'clearspeak.default', '[n] text()',
+      'self::unknown');
+
+  defineRule(
+      'protected', 'clearspeak.default', '[t] text()',
+      'self::*', '@role="protected"');
+
   defineRule(
       'omit-empty', 'clearspeak.default',
       '[p] (pause:"short")', 'self::empty');
@@ -2239,9 +2250,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::number', '@role="mixed"');
   defineRule(
       'number-with-chars', 'clearspeak.default',
-      '[t] "number"; [m] CQFspaceoutNumber', 'self::number',
-      '"" != translate(text(), "0123456789.,", "")',
-      'text() != translate(text(), "0123456789.,", "")');
+      '[t] "number"; [m] CQFspaceoutNumber', 'self::number[@role!="protected"]',
+      '"" != translate(text(), "0123456789.,", "")');
 
   // Decimal periods:
   defineRule(
