@@ -221,6 +221,10 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'protected', 'mathspeak.default', '[t] text()',
+      'self::number', 'contains(@grammar, "protected")');
+
+   defineRule(
+      'protected', 'mathspeak.default', '[t] text()',
       'self::*', '@role="protected"');
 
   defineRule(
@@ -278,13 +282,14 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-with-chars', 'mathspeak.default',
-      '[t] "número"; [m] CQFspaceoutNumber', 'self::number',
-      '"" != translate(text(), "0123456789.,", "")',
-      'text() != translate(text(), "0123456789.,", "")');
+      '[t] "número"; [m] CQFspaceoutNumber (grammar:protected)',
+      'self::number', '@role="othernumber"',
+       '"" != translate(text(), "0123456789.,", "")',
+      'not(contains(@grammar, "protected"))');
 
   defineSpecialisedRule(
       'number-with-chars', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "núm"; [m] CQFspaceoutNumber');
+      '[t] "núm"; [m] CQFspaceoutNumber (grammar:protected)');
   defineSpecialisedRule(
       'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
 
@@ -304,6 +309,10 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       '\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E' +
       '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9",' +
       '"")');
+  defineSpecialisedRule(
+      'number-as-upper-word', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'number-as-upper-word', 'mathspeak.default', 'mathspeak.sbrief');
 
   defineRule(
       'number-baseline', 'mathspeak.default',
@@ -339,12 +348,18 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
       'self::identifier', 'string-length(text())>1', '@role!="unit"',
-      '@role!="protected"',
-      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
+      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")',
+      'text()!=translate(text(), ' +
+      '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
+      '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
+      '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0391\u0392\u0393' +
+      '\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E' +
+      '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9", ' +
+      '"")');
 
   defineRule(
-      'identifier', 'mathspeak.default', '[n] text()',
-      'self::identifier', '@role="protected"');
+      'identifier', 'mathspeak.default', '[n] text()', 'self::identifier');
 
   // minus sign
   defineRule(
