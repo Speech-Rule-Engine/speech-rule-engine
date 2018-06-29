@@ -25,6 +25,7 @@ goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
 goog.require('sre.Trie');
 
@@ -203,7 +204,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
-    } else if (s.match(/^[a-zA-Z]+$/)) {
+    } else if (s.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
       descs.push(this.evaluate_(s));
     } else {
       // Break up string even further wrt. symbols vs alphanum substrings.
@@ -211,7 +212,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       while (rest) {
         var num = rest.match(
             /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
-        var alpha = rest.match(/^[a-zA-Z]+/);
+        var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
           descs.push(this.evaluate_(num[0]));
           rest = rest.substring(num[0].length);

@@ -123,6 +123,11 @@ sre.Locale.en = {
     COLLAPSIBLE: 'collapsible',
     EXPANDABLE: 'expandable',
     LEVEL: 'Level'
-  }
+  },
 
+  REGEXP: {
+    TEXT: 'a-zA-Z',
+    NUMBER: ''
+  }
+  
 };

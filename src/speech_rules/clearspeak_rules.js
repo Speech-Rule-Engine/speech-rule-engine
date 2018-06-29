@@ -2289,12 +2289,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
   defineRule(
       'number-with-spaces', 'clearspeak.default',
-      '[m] CQFspaceoutNumber (grammar:!spaceout)', 'self::number',
+      '[m] CQFspaceoutNumber (grammar:!spaceout:number)', 'self::number',
       'contains(@grammar, "spaceout")');
   defineRule(
       'decimal-point', 'clearspeak.default',
-      '[t] "point"', 'self::number', '@role="fullstop"'
-  );
+      '[t] "point"', 'self::punctuation', '@role="fullstop"',
+      'contains(@grammar,"number")');
 
   // Line segments:
   defineRule(

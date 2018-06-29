@@ -42,57 +42,6 @@ goog.addSingletonGetter(sre.MathspeakSpanish);
 
 
 /**
- * @override
- */
-sre.MathspeakSpanish.prototype.evaluateDefault = function(node) {
-  return [sre.AuditoryDescription.create({'text': node.textContent})];
-};
-
-
-// TODO (localize): Default evaluation needs to be refactored, so it actually
-//       uses the default evaluator for the active store instead of a special
-//       text evaluator rule. The regular expression should then simply be a
-//       feature of the locale, so the evaluation is adapted with respect to
-//       accented characters existing in individual languages.
-/**
- * @type {string}
- */
-sre.MathspeakSpanish.SPANISH_REGEXP = 'a-zA-ZáéíóúñÁÉÍÓÚÑ';
-
-
-/**
- * Default evaluation methods for strings that partititions a string into text
- * and non-text.
- * @param {Node} node A node with text content.
- * @return {Array.<Node>} A list of nodes partitioned into stuff text and
- *      non-text nodes according to the regexp for Spanish.
- */
-sre.MathspeakSpanish.evaluateDefault = function(node) {
-  var text = node.textContent;
-  var result = [];
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  var inc = new RegExp('^[' + sre.MathspeakSpanish.SPANISH_REGEXP + ']+');
-  var exc = new RegExp('^[^' + sre.MathspeakSpanish.SPANISH_REGEXP + ']+');
-  while (text) {
-    var word = inc.exec(text);
-    if (word) {
-      var type = sre.Semantic.Type.TEXT;
-      var role = sre.Semantic.Role.PROTECTED;
-    } else {
-      word = exc.exec(text);
-      var type = sre.Semantic.Type.UNKNOWN;
-      role = sre.Semantic.Role.TEXT;
-    }
-    var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 word[0] + '</' + type + '>', 'text/xml');
-    result.push(doc.documentElement);
-    text = text.slice(word[0].length).trimLeft();
-  }
-  return result;
-};
-
-
-/**
  * @type {sre.MathStore}
  */
 sre.MathspeakSpanish.mathStore = sre.MathspeakSpanish.getInstance();
@@ -199,8 +148,6 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
   // Dummy.
   addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
 
-  // TODO (localize): Text evaluator should eventually be default by locale.
-  addCQF('CQFtextEvaluator', sre.MathspeakSpanish.evaluateDefault);
 };
 
 
@@ -222,10 +169,6 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'protected', 'mathspeak.default', '[t] text()',
       'self::number', 'contains(@grammar, "protected")');
-
-   defineRule(
-      'protected', 'mathspeak.default', '[t] text()',
-      'self::*', '@role="protected"');
 
   defineRule(
       'omit-empty', 'mathspeak.default',
@@ -456,7 +399,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   // Text rules
   defineRule(
-      'text', 'mathspeak.default', '[m] CQFtextEvaluator', 'self::text');
+      'text', 'mathspeak.default', '[n] text() (grammar:noTranslateText)',
+      'self::text');
 
   // Special symbols
   defineRule(

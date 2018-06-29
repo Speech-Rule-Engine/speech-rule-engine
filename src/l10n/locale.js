@@ -34,7 +34,8 @@ goog.require('sre.Messages');
  *   FONT: Object.<sre.SemanticAttr.Font>,
  *   ROLE: Object.<sre.SemanticAttr.Role>,
  *   ENCLOSE: Object.<sre.SemanticAttr.Role>,
- *   NAVIGATE: Object.<string>
+ *   NAVIGATE: Object.<string>,
+ *   REGEXP: Object.<string>
  * }}
  */
 sre.Locale.Messages;

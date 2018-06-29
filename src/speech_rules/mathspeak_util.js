@@ -51,7 +51,7 @@ sre.MathspeakUtil.spaceoutText = function(node) {
  *     to the newly created semantic node with single characters.
  * @return {Array.<Node>} List of single nodes.
  */
-sre.MathspeakUtil.spaceoutNodes_ = function(node, correction) {
+sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
   var content = node.textContent.split('');
   var result = [];
   var processor = sre.SemanticProcessor.getInstance();
@@ -72,7 +72,7 @@ sre.MathspeakUtil.spaceoutNodes_ = function(node, correction) {
  * @return {Array.<Node>} List of single number nodes.
  */
 sre.MathspeakUtil.spaceoutNumber = function(node) {
-  return sre.MathspeakUtil.spaceoutNodes_(
+  return sre.MathspeakUtil.spaceoutNodes(
     node,
     function(sn) {
       if (!sn.textContent.match(/\W/)) {
@@ -88,7 +88,7 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  * @return {Array.<Node>} List of single identifier nodes.
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
-  return sre.MathspeakUtil.spaceoutNodes_(
+  return sre.MathspeakUtil.spaceoutNodes(
     node,
     function(sn) {
       sn.font = sre.Semantic.Font.UNKNOWN;

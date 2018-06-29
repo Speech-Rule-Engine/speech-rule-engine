@@ -155,6 +155,11 @@ sre.Locale.es = {
     COLLAPSIBLE: 'plegable',
     EXPANDABLE: 'ampliable',
     LEVEL: 'nivel'
-  }
+  },
 
+  REGEXP: {
+    TEXT: 'a-zA-ZáéíóúñÁÉÍÓÚÑ',
+    NUMBER: ''
+  }
+  
 };

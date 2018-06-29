@@ -191,3 +191,9 @@ sre.Messages.NAVIGATE = {
   EXPANDABLE: '',
   LEVEL: ''
 };
+
+
+sre.Messages.REGEXP = {
+  TEXT: 'a-zA-Z',
+  NUMBER: ''
+};
