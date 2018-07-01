@@ -195,5 +195,7 @@ sre.Messages.NAVIGATE = {
 
 sre.Messages.REGEXP = {
   TEXT: 'a-zA-Z',
-  NUMBER: ''
+  NUMBER: '',
+  DECIMAL_MARK: '',
+  DIGIT_GROUP: ''
 };

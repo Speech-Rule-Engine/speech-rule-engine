@@ -127,7 +127,9 @@ sre.Locale.en = {
 
   REGEXP: {
     TEXT: 'a-zA-Z',
-    NUMBER: ''
+    NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
+    DECIMAL_MARK: '.',
+    DIGIT_GROUP: ','
   }
   
 };

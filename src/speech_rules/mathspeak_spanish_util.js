@@ -28,21 +28,6 @@ goog.require('sre.XpathUtil');
 
 
 /**
- * Rewrites numbers from anglosaxon notation to European notation.
- * @param {string} number The number.
- * @return {string} The rewritten number.
- */
-sre.MathspeakSpanishUtil.europeanNumber = function(number) {
-  number = number.replace(/,/g, '').replace(/\./g, ',');
-  return number;
-};
-
-
-sre.Grammar.getInstance().setCorrection(
-    'euroNum', sre.MathspeakSpanishUtil.europeanNumber);
-
-
-/**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
  */

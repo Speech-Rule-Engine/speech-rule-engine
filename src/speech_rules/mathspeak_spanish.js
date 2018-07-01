@@ -215,8 +215,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   // Number rules
   defineRule(
-      'number', 'mathspeak.default', '[n] text() (grammar:euroNum)',
-      'self::number');
+      'number', 'mathspeak.default', '[n] text()', 'self::number');
 
   defineRule(
       'mixed-number', 'mathspeak.default',

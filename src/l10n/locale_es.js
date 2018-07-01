@@ -159,7 +159,9 @@ sre.Locale.es = {
 
   REGEXP: {
     TEXT: 'a-zA-ZáéíóúñÁÉÍÓÚÑ',
-    NUMBER: ''
+    NUMBER: '((\\d{1,3})(?=(\\.| ))((\\.| )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
+    DECIMAL_MARK: ',',
+    DIGIT_GROUP: ''
   }
   
 };

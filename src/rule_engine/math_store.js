@@ -210,12 +210,16 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
       while (rest) {
-        var num = rest.match(
-            /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
+        var num = this.matchNumber_(rest);
+        // var num = rest.match(
+        //     /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
         var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
-          descs.push(this.evaluate_(num[0]));
-          rest = rest.substring(num[0].length);
+          console.log(num);
+          descs.push(this.evaluate_(num.number));
+          rest = rest.substring(num.length);
+          // descs.push(this.evaluate_(num[0]));
+          // rest = rest.substring(num[0].length);
         } else if (alpha) {
           descs.push(this.evaluate_(alpha[0]));
           rest = rest.substring(alpha[0].length);
@@ -236,6 +240,27 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     }
   }
   return descs;
+};
+
+
+sre.MathStore.prototype.matchNumber_ = function(str) {
+  console.log(sre.Messages.REGEXP.NUMBER);
+  var loc_num = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
+  var en_num =
+      str.match(/^((\d{1,3})(?=(,| ))((,| )\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
+  console.log(loc_num);
+  console.log(en_num);
+  if (!loc_num || !en_num) {
+    return null;
+  }
+  if (!en_num || (loc_num && loc_num[0].length > en_num[0].length)) {
+    return {number: number, length: loc_num[0].length};
+  }
+  // English number:
+  var number = en_num[0].replace(/,/g, 'X').
+      replace(/\./g, sre.Messages.REGEXP.DECIMAL_MARK).
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+  return {number: number, length: en_num[0].length};
 };
 
 
