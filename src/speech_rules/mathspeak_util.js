@@ -975,4 +975,120 @@ sre.MathspeakUtil.removeParens = function(node) {
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };
 
+
+// Generating rules for tensors.
+/**
+ * Component strings for tensor speech rules.
+ * @enum {string}
+ * @private
+ */
+sre.MathspeakUtil.componentString_ = {
+  2 : 'CSFbaseline',
+  1 : 'CSFsubscript',
+  0 : 'CSFsuperscript'
+};
+
+
+/**
+ * Child number translation for tensor speech rules.
+ * @enum {number}
+ * @private
+ */
+sre.MathspeakUtil.childNumber_ = {
+  4 : 2,
+  3 : 3,
+  2 : 1,
+  1 : 4,
+  0 : 5
+};
+
+
+/**
+ * Generates the rule strings and constraints for tensor rules.
+ * @param {string} constellation Bitvector representing of possible tensor
+ *     constellation.
+ * @return {Array.<string>} A list consisting of additional constraints for the
+ *     tensor rule, plus the strings for the verbose and brief rule, in that
+ *     order.
+ * @private
+ */
+sre.MathspeakUtil.generateTensorRuleStrings_ = function(constellation) {
+  var constraints = [];
+  var verbString = '';
+  var briefString = '';
+  var constel = parseInt(constellation, 2);
+
+  for (var i = 0; i < 5; i++) {
+    var childString = 'children/*[' + sre.MathspeakUtil.childNumber_[i] + ']';
+    if (constel & 1) {
+      var compString = sre.MathspeakUtil.componentString_[i % 3];
+      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
+          verbString;
+      briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
+          briefString;
+    } else {
+      constraints.unshift('name(' + childString + ')="empty"');
+    }
+    constel >>= 1;
+  }
+  constraints.push(verbString);
+  constraints.push(briefString);
+  return constraints;
+};
+
+
+/**
+ * Generator for tensor speech rules.
+ * @param {sre.MathStore} store The mathstore to which the rules are added.
+ */
+sre.MathspeakUtil.generateTensorRules = function(store) {
+  // Constellations are built as bitvectors with the meaning:
+  //
+  //  lsub lsuper base rsub rsuper
+  var defineRule = goog.bind(store.defineRule, store);
+  var defineRulesAlias = goog.bind(store.defineRulesAlias, store);
+  var defineSpecialisedRule = goog.bind(store.defineSpecialisedRule, store);
+  var constellations = ['11111', '11110', '11101', '11100',
+                        '10111', '10110', '10101', '10100',
+                        '01111', '01110', '01101', '01100'
+  ];
+  for (var i = 0, constel; constel = constellations[i]; i++) {
+    var name = 'tensor' + constel;
+    var components = sre.MathspeakUtil.generateTensorRuleStrings_(constel);
+    var briefStr = components.pop();
+    var verbStr = components.pop();
+    var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
+        concat(components);
+    var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
+        concat(components);
+    // Rules without neighbour.
+    defineRule.apply(null, verbList);
+    defineRule.apply(null, briefList);
+    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
+    // Rules with baseline.
+    var baselineStr = sre.MathspeakUtil.componentString_[2];
+    verbStr += '; [t]' + baselineStr + 'Verbose';
+    briefStr += '; [t]' + baselineStr + 'Brief';
+    name = name + '-baseline';
+    verbList = [name, 'mathspeak.default', verbStr, 'self::tensor',
+                'following-sibling::*'].
+        concat(components);
+    briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor',
+                 'following-sibling::*'].
+        concat(components);
+    defineRule.apply(null, verbList);
+    defineRule.apply(null, briefList);
+    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
+    // Rules without neighbour but baseline.
+    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
+                     'ancestor::fraction|ancestor::punctuated|' +
+                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
+                     'ancestor::relseq|ancestor::multirel|' +
+                     '@embellished'].
+        concat(components);
+    defineRulesAlias.apply(null, aliasList);
+  }
+};
+
+  
 });  // goog.scope

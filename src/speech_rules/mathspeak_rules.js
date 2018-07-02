@@ -1274,114 +1274,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
 
 /**
- * Component strings for tensor speech rules.
- * @enum {string}
+ * Generates the tensor rules.
  * @private
  */
-sre.MathspeakRules.componentString_ = {
-  2 : 'CSFbaseline',
-  1 : 'CSFsubscript',
-  0 : 'CSFsuperscript'
-};
-
-
-/**
- * Child number translation for tensor speech rules.
- * @enum {number}
- * @private
- */
-sre.MathspeakRules.childNumber_ = {
-  4 : 2,
-  3 : 3,
-  2 : 1,
-  1 : 4,
-  0 : 5
-};
-
-
-/**
- * Generates the rule strings and constraints for tensor rules.
- * @param {string} constellation Bitvector representing of possible tensor
- *     constellation.
- * @return {Array.<string>} A list consisting of additional constraints for the
- *     tensor rule, plus the strings for the verbose and brief rule, in that
- *     order.
- * @private
- */
-sre.MathspeakRules.generateTensorRuleStrings_ = function(constellation) {
-  var constraints = [];
-  var verbString = '';
-  var briefString = '';
-  var constel = parseInt(constellation, 2);
-
-  for (var i = 0; i < 5; i++) {
-    var childString = 'children/*[' + sre.MathspeakRules.childNumber_[i] + ']';
-    if (constel & 1) {
-      var compString = sre.MathspeakRules.componentString_[i % 3];
-      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
-          verbString;
-      briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
-          briefString;
-    } else {
-      constraints.unshift('name(' + childString + ')="empty"');
-    }
-    constel >>= 1;
-  }
-  constraints.push(verbString);
-  constraints.push(briefString);
-  return constraints;
-};
-
-
-/**
- * Generator for tensor speech rules.
- * @private
- */
-sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
-  // Constellations are built as bitvectors with the meaning:
-  //
-  //  lsub lsuper base rsub rsuper
-  var constellations = ['11111', '11110', '11101', '11100',
-                        '10111', '10110', '10101', '10100',
-                        '01111', '01110', '01101', '01100'
-  ];
-  for (var i = 0, constel; constel = constellations[i]; i++) {
-    var name = 'tensor' + constel;
-    var components = sre.MathspeakRules.generateTensorRuleStrings_(constel);
-    var briefStr = components.pop();
-    var verbStr = components.pop();
-    var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
-        concat(components);
-    var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
-        concat(components);
-    // Rules without neighbour.
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
-    // Rules with baseline.
-    var baselineStr = sre.MathspeakRules.componentString_[2];
-    verbStr += '; [t]' + baselineStr + 'Verbose';
-    briefStr += '; [t]' + baselineStr + 'Brief';
-    name = name + '-baseline';
-    verbList = [name, 'mathspeak.default', verbStr, 'self::tensor',
-                'following-sibling::*'].
-        concat(components);
-    briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor',
-                 'following-sibling::*'].
-        concat(components);
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
-    // Rules without neighbour but baseline.
-    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
-                     'ancestor::fraction|ancestor::punctuated|' +
-                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel|' +
-                     '@embellished'].
-        concat(components);
-    defineRuleAlias.apply(null, aliasList);
-  }
-};
+sre.MathspeakRules.generateTensorRules_ = function() {
+  sre.MathspeakUtil.generateTensorRules(sre.MathspeakRules.mathStore);
+};  
 
 });  // goog.scope
 
@@ -1390,5 +1288,5 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
 sre.MathspeakRules.getInstance().initializer = [
   sre.MathspeakRules.initCustomFunctions_,
   sre.MathspeakRules.initMathspeakRules_,
-  sre.MathspeakRules.generateMathspeakTensorRules_
+  sre.MathspeakRules.generateTensorRules_
 ];
