@@ -1,41 +1,41 @@
 [{"locale": "en"},
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "millimeters"
+       "default": "millimeter"
      }
    },
    "key": "mm",
    "names": ["mm"]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "centimeters"
+       "default": "centimeter"
      }
    },
    "key": "cm",
    "names": ["cm"]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "meters"
+       "default": "meter"
      }
    },
    "key": "m",
    "names": ["m"]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "kilometers"
+       "default": "kilometer"
      }
    },
    "key": "km",
    "names": ["km"]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
        "default": "feet"
@@ -44,37 +44,37 @@
    "key": "ft",
    "names": ["ft", "ft."]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "inches"
+       "default": "inche"
      }
    },
    "key": "in",
    "names": ["in", "in."]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "miles"
+       "default": "mile"
      }
    },
    "key": "mi",
    "names": ["mi", "mi."]
   },
-  {"category": "Length",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "yards"
+       "default": "yard"
      }
    },
    "key": "yd",
    "names": ["yd", "yd."]
   },
-  {"category": "",
+  {"category": "length",
    "mappings": {
      "default": {
-       "default": "nautical miles"
+       "default": "nautical mile"
      }
    },
    "key": "n.m.",

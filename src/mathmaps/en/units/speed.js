@@ -1,5 +1,5 @@
 [{"locale": "en"},
-{"category": "",
+{"category": "speed",
  "mappings": {
    "default": {
      "default": "knot"
@@ -8,28 +8,28 @@
  "key": "kt",
  "names": ["kt", "kt."]
 },
-{"category": "",
+{"category": "speed",
  "mappings": {
    "default": {
-     "default": "miles per hour"
+     "default": "mile per hour"
      }
    },
  "key": "mph",
  "names": ["mph"]
 },
-{"category": "",
+{"category": "speed",
  "mappings": {
    "default": {
-     "default": "revolutions per minute"
+     "default": "revolution per minute"
      }
    },
  "key": "rpm",
  "names": ["rpm"]
 },
-{"category": "",
+{"category": "speed",
  "mappings": {
    "default": {
-     "default": "kilometers per hour"
+     "default": "kilometer per hour"
      }
    },
  "key": "kmh",
