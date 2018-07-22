@@ -2250,8 +2250,9 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::number', '@role="mixed"');
   defineRule(
       'number-with-chars', 'clearspeak.default',
-      '[t] "number"; [m] CQFspaceoutNumber', 'self::number[@role!="protected"]',
-      '"" != translate(text(), "0123456789.,", "")');
+      '[t] "number"; [m] CQFspaceoutNumber', 'self::number',
+      '"" != translate(text(), "0123456789.,", "")',
+      'text() != translate(text(), "0123456789.,", "")');
 
   // Decimal periods:
   defineRule(
