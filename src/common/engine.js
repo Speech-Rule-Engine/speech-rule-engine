@@ -104,7 +104,7 @@ sre.Engine = function() {
    * shallow, deep).
    * @type {sre.Engine.Speech}
    */
-  this.speech = sre.Engine.Speech.SHALLOW;
+  this.speech = sre.Engine.Speech.NONE;
 
   /**
    * Indicates if skeleton structure attributes are added to enriched elements
