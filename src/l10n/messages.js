@@ -193,9 +193,29 @@ sre.Messages.NAVIGATE = {
 };
 
 
+/**
+ * Regular expressions for text, digits, decimal marks, etc.
+ * @type {Object.<string>}
+ */
 sre.Messages.REGEXP = {
   TEXT: 'a-zA-Z',
   NUMBER: '',
   DECIMAL_MARK: '',
   DIGIT_GROUP: ''
+};
+
+
+/**
+ * Mapping of units to their plural if they are not built regularly.
+ * @type {Object.<string>}
+ */
+sre.Messages.PLURAL_UNIT = { };
+
+
+/**
+ * Function to build regular plurals for units.
+ * @type {function(string): string}
+ */
+sre.Messages.PLURAL = function(unit) {
+  return (/.*s$/.test(unit)) ? unit : unit + 's';
 };

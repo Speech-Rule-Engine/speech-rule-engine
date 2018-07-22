@@ -1235,7 +1235,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Unit rules.
   defineRule(
       'unit', 'mathspeak.default',
-      '[t] text() (grammar:annotation="unit":translate)',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'mathspeak.default',

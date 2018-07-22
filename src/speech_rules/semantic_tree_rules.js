@@ -470,7 +470,7 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
 
   defineRule(
       'unit', 'default.default',
-      '[t] text() (grammar:annotation="unit":translate)',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'default.default',

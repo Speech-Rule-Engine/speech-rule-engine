@@ -38,7 +38,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "feet"
+       "default": "foot"
      }
    },
    "key": "ft",
@@ -47,7 +47,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "inche"
+       "default": "inch"
      }
    },
    "key": "in",

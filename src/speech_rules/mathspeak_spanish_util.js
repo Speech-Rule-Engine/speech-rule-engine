@@ -200,20 +200,6 @@ sre.MathspeakSpanishUtil.leftMostUnit = function(node) {
 
 
 /**
- * Makes a plural out of a unit denomination.
- * @param {string} unit The unit name.
- * @return {string} The unit set into plural (i.e., append an s if necessary).
- */
-sre.MathspeakSpanishUtil.makePlural = function(unit) {
-  return (/.*s$/.test(unit)) ? unit : unit + 's';
-};
-
-
-sre.Grammar.getInstance().setCorrection(
-    'plural', sre.MathspeakSpanishUtil.makePlural);
-
-
-/**
  * Checks if a given node is preceded by a 1. This is useful to decide if the
  * next text element is singular or plural.
  * @param {Node} node The base node.
