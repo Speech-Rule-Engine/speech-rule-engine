@@ -24,14 +24,11 @@ goog.require('sre.ClearspeakUtil');
 goog.require('sre.Engine');
 goog.require('sre.Grammar');
 goog.require('sre.MathStore');
+goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
 
 
-//TODO: (MOSS) WP 2.2
-// * Implement rules from http://www.dessci.com/en/reference/ies-ets/
-// * Implement preference settings
-//
 /**
  * Rule initialization.
  * @constructor
@@ -156,6 +153,16 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'stree', 'clearspeak.default',
       '[n] ./*[1]', 'self::stree');
+
+  // Dummy rules
+  defineRule(
+      'unknown', 'clearspeak.default', '[n] text()',
+      'self::unknown');
+
+  defineRule(
+      'protected', 'clearspeak.default', '[t] text()',
+      'self::*', '@role="protected"');
+
   defineRule(
       'omit-empty', 'clearspeak.default',
       '[p] (pause:"short")', 'self::empty');
@@ -2233,6 +2240,19 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   //     ' [t] "below" (pause:short)',
   //   'self::underscore', ''
   // );
+
+  // Number rules
+  defineRule(
+      'number', 'clearspeak.default', '[n] text()', 'self::number');
+  defineRule(
+      'mixed-number', 'clearspeak.default',
+      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      'self::number', '@role="mixed"');
+  defineRule(
+      'number-with-chars', 'clearspeak.default',
+      '[t] "number"; [m] CQFspaceoutNumber', 'self::number',
+      '"" != translate(text(), "0123456789.,", "")',
+      'text() != translate(text(), "0123456789.,", "")');
 
   // Decimal periods:
   defineRule(
