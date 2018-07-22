@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '2.2.2';
+sre.Variables.VERSION = '2.2.3-beta.0';
 
 
 /**

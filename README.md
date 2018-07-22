@@ -235,24 +235,26 @@ The following is a list of command line options for the speech rule engine.
 | -s | --semantics     | Switch on semantics interpretation. |
 ||| **This option is deprecated.** |
 ||| Note, that some speech rule domains only make sense with semantics switched on or off. |
+| -k | --markup [name] | Generate speech output with markup tags. Currently supported SSML, VoiceXML, Sable, ACSS (as sexpressions for Emacsspeak) |
 | | |
 | | |
 | | |
+| -p | --speech  | Generate speech output (default). |
 | -a | --audit | Generate auditory descriptions (JSON format). |
 | -j | --json  | Generate JSON of semantic tree. |
-| -m | --mathml  | Generate enriched MathML. |
-| -p | --speech  | Generate speech output (default). |
-| -k | --markup [name] | Generate speech output with markup tags. Currently supported SSML, VoiceXML, Sable, ACSS (as sexpressions for Emacsspeak) |
 | -x | --xml  | Generate XML of semantic tree. |
+| | |
+| | |
+| | |
+| -m | --mathml  | Generate enriched MathML. |
+| -g | --generate [depth] | Include generated speech in enriched MathML. Supported values: none, shallow, deep  (default: none) |
+| -r | --structure | Include structure attribute in enriched MathML. |
 | | |
 | | |
 | | |
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
-| | |
-| | |
-| | |
 | -h | --help   | Usage information and enumerates all available domains and styles. |
 ||| Note that not every style is implemented in every domain. |
 | -V | --version  |  Outputs the version number |
