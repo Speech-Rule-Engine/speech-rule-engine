@@ -69,11 +69,11 @@ sre.SemanticRuleTest.prototype.testUnitsSingle = function() {
   );
   this.executeRuleTest(
       '<mi mathvariant="normal" class="MathML-Unit">\u03A9</mi>',
-      'ohm'
+      'ohms'
   );
   this.executeRuleTest(
       '<mi mathvariant="normal" class="MathML-Unit">k\u03A9</mi>',
-      'kilohm'
+      'kilohms'
   );
   this.executeRuleTest(
       '<mi mathvariant="normal" class="MathML-Unit">\u00B0C</mi>',
@@ -148,7 +148,7 @@ sre.SemanticRuleTest.prototype.testUnitsSuperscript = function() {
       '<mi mathvariant="normal" class="MathML-Unit">N</mi>' +
       '<mfrac><mi mathvariant="normal" class="MathML-Unit">km</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">h</mi></mfrac>',
-      'Newton kilometers per hours');
+      'Newtons kilometers per hours');
   this.executeRuleTest(
       '<mfrac><mi>m</mi>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi></mfrac>',
@@ -204,7 +204,7 @@ sre.SemanticRuleTest.prototype.testUnitsExpressions = function() {
       '<msup>' +
       '<mi mathvariant="normal" class="MathML-Unit">s</mi>' +
       '<mn>2</mn></msup></mfrac>',
-      'three times m times kilometers hours Newton per square seconds'
+      'three times m times kilometers hours Newtons per square seconds'
   );
 };
 
