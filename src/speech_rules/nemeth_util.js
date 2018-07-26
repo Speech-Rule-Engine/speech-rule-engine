@@ -28,7 +28,7 @@ var msg = sre.Messages;
 /**
  * Opening string for fractions in Mathspeak verbose mode.
  * @param {!Node} node The fraction node.
- * @return {!string} The opening string.
+ * @return {string} The opening string.
  */
 sre.NemethUtil.openingFraction = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
@@ -39,7 +39,7 @@ sre.NemethUtil.openingFraction = function(node) {
 /**
  * Closing string for fractions in Mathspeak verbose mode.
  * @param {!Node} node The fraction node.
- * @return {!string} The closing string.
+ * @return {string} The closing string.
  */
 sre.NemethUtil.closingFraction = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
@@ -50,7 +50,7 @@ sre.NemethUtil.closingFraction = function(node) {
 /**
  * Middle string for fractions in Mathspeak verbose mode.
  * @param {!Node} node The fraction node.
- * @return {!string} The middle string.
+ * @return {string} The middle string.
  */
 sre.NemethUtil.overFraction = function(node) {
   var depth = sre.MathspeakUtil.fractionNestingDepth(node);
@@ -62,12 +62,13 @@ sre.NemethUtil.overFraction = function(node) {
  * Nested string for radicals in Mathspeak mode putting together the nesting
  * depth with a pre- and postfix string that depends on the speech style.
  * @param {!Node} node The radical node.
- * @param {!string} prefix A prefix string.
- * @param {!string} postfix A postfix string.
- * @return {!string} The opening string.
+ * @param {string} prefix A prefix string.
+ * @param {string} postfix A postfix string.
+ * @return {string} The opening string.
  */
 sre.NemethUtil.nestedRadical = function(node, prefix, postfix) {
   var depth = sre.MathspeakUtil.radicalNestingDepth(node);
+  console.log(depth);
   var index = sre.MathspeakUtil.getRootIndex(node);
   postfix = index ? msg.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
   console.log(depth);
@@ -81,7 +82,7 @@ sre.NemethUtil.nestedRadical = function(node, prefix, postfix) {
 /**
  * Opening string for radicals in Mathspeak verbose mode.
  * @param {!Node} node The radical node.
- * @return {!string} The opening string.
+ * @return {string} The opening string.
  */
 sre.NemethUtil.openingRadical = function(node) {
   return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.STARTROOT);
@@ -91,7 +92,7 @@ sre.NemethUtil.openingRadical = function(node) {
 /**
  * Closing string for radicals in Nemeth verbose mode.
  * @param {!Node} node The radical node.
- * @return {!string} The closing string.
+ * @return {string} The closing string.
  */
 sre.NemethUtil.closingRadical = function(node) {
   return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.ENDROOT);
@@ -101,7 +102,7 @@ sre.NemethUtil.closingRadical = function(node) {
 /**
  * Middle string for radicals in Nemeth verbose mode.
  * @param {!Node} node The radical node.
- * @return {!string} The middle string.
+ * @return {string} The middle string.
  */
 sre.NemethUtil.indexRadical = function(node) {
   return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.ROOTINDEX);

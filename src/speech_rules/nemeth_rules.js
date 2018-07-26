@@ -1038,36 +1038,21 @@ sre.NemethRules.initNemethRules_ = function() {
 
 
   defineRule(
-      'determinant', 'default.default',
-      '[t] "Start"; [t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndDeterminant"',
+    'determinant', 'default.default',
+    ' [m] children/* (separator:"\n\n");',
       'self::matrix', '@role="determinant"');
-  defineSpecialisedRule(
-      'determinant', 'default.default', 'nemeth.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndDeterminant"');
 
-  defineRule(
-      'determinant-simple', 'default.default',
-      '[t] "Start"; [t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
-      'grammar:simpleDet); [t] "EndDeterminant"',
-      'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
-  defineSpecialisedRule(
-      'determinant-simple', 'default.default', 'nemeth.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
-      'grammar:simpleDet); [t] "EndDeterminant"');
+  // defineRule(
+  //     'determinant-simple', 'default.default',
+  //     '[t] "Start"; [t] count(children/*);  [t] "By";' +
+  //     '[t] count(children/*[1]/children/*); [t] "Determinant";' +
+  //     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
+  //     'grammar:simpleDet); [t] "EndDeterminant"',
+  //     'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
   defineRule(
       'row-simple', 'default.default',
-      '[m] children/*;',
-      'self::row', '@role="determinant"', 'contains(@grammar, "simpleDet")');
+      '[t] "⠠⠳"; [m] children/* (separator:"⠀"); [t] "⠠⠳"',
+      'self::row', '@role="determinant"');
 
   defineRule(
       'layout', 'default.default', '[t] "StartLayout"; ' +
