@@ -139,4 +139,6 @@ module.exports.engineReady = sre.Engine.isReady;
 /**
  * Default setup of the Engine.
  */
-(sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
+if (global && global.SRE_JSON_PATH) {
+  (sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
+}

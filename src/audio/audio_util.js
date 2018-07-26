@@ -145,7 +145,7 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     if (typeof pers[sre.Engine.personalityProps.PAUSE] !== 'undefined') {
       pause = {};
       pause[sre.Engine.personalityProps.PAUSE] =
-          /** @type {!number} */(pers[sre.Engine.personalityProps.PAUSE]);
+          /** @type {number} */(pers[sre.Engine.personalityProps.PAUSE]);
       delete pers[sre.Engine.personalityProps.PAUSE];
     }
     var diff = sre.AudioUtil.personalityDiff_(pers, currentPers);

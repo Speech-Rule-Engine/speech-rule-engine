@@ -572,10 +572,12 @@ sre.ClearspeakUtil.simpleArguments = function(node) {
   var children = sre.XpathUtil.evalXPath('../../children/*', node);
   var index = content.indexOf(node);
   return (sre.ClearspeakUtil.simpleFactor_(children[index]) &&
+          children[index + 1] && 
           (sre.ClearspeakUtil.simpleFactor_(children[index + 1]) ||
            children[index + 1].tagName === sre.SemanticAttr.Type.ROOT ||
            children[index + 1].tagName === sre.SemanticAttr.Type.SQRT ||
-          (children[index + 1].tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+         (children[index + 1].tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+            children[index + 1].childNodes[0].childNodes[0] &&
            (children[index + 1].childNodes[0].childNodes[0].tagName ===
             sre.SemanticAttr.Type.NUMBER ||
             children[index + 1].childNodes[0].childNodes[0].tagName ===

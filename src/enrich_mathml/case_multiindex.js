@@ -113,22 +113,11 @@ sre.CaseMultiindex.createNone_ = function(semantic) {
  * @return {!sre.SemanticSkeleton.Sexp} If the index node was a
  *     dummy punctuation, i.e. consisted of more than one index, a list of
  *     strings for the collapsed structure is returned, otherwise the node id.
- * @protected
  */
 sre.CaseMultiindex.multiscriptIndex = function(index) {
   if (index.type === sre.SemanticAttr.Type.PUNCTUATED &&
       index.contentNodes[0].role === sre.SemanticAttr.Role.DUMMY) {
-    var parentId = index.parent.id;
-    var contentIds = index.contentNodes.map(function(x) {return x.id;});
-    contentIds.unshift('c');
-    var childIds = [index.id, contentIds];
-    for (var i = 0, child; child = index.childNodes[i]; i++) {
-      var mmlChild = sre.EnrichMathml.walkTree(child);
-      var innerNode = sre.EnrichMathml.getInnerNode(mmlChild);
-      innerNode.setAttribute(sre.EnrichMathml.Attribute.PARENT, parentId);
-      childIds.push(child.id);
-    }
-    return childIds;
+    return sre.EnrichMathml.collapsePunctuated(index);
   }
   sre.EnrichMathml.walkTree(index);
   return index.id;

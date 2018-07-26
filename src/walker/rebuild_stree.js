@@ -155,7 +155,7 @@ sre.RebuildStree.prototype.makeNode = function(node) {
 /**
  * Tests is a collapsed attribute belongs to a punctuated index.
  * @param {!sre.SemanticSkeleton.Sexp} collapsed A skeleton structure.
- * @return {!boolean} True if the skeleton indicates a collapsed punctuated
+ * @return {boolean} True if the skeleton indicates a collapsed punctuated
  *     element.
  */
 sre.RebuildStree.isPunctuated = function(collapsed) {
@@ -167,7 +167,7 @@ sre.RebuildStree.isPunctuated = function(collapsed) {
 
 /**
  * Creates a punctuation node containing an invisible comma.
- * @param {!number} id The id of the new node.
+ * @param {number} id The id of the new node.
  * @return {!sre.SemanticNode} The newly created punctuation node.
  */
 sre.RebuildStree.prototype.makePunctuation = function(id) {
@@ -199,7 +199,7 @@ sre.RebuildStree.prototype.makePunctuated = function(snode, collapsed, role) {
 /**
  * Creates an empty node that serves as an index.
  * @param {!sre.SemanticNode} snode The semantic node that is being rebuilt.
- * @param {!number} collapsed A skeleton structure.
+ * @param {number} collapsed A skeleton structure.
  * @param {!sre.SemanticAttr.Role} role The role of the new index node.
  */
 sre.RebuildStree.prototype.makeEmpty = function(snode, collapsed, role) {
@@ -233,7 +233,7 @@ sre.RebuildStree.prototype.makeIndex = function(snode, collapsed, role) {
 /**
  * Rearranges semantic node if there is a collapse structure.
  * @param {!sre.SemanticNode} snode The semantic node.
- * @param {!string} collapsed The collapse structure.
+ * @param {string} collapsed The collapse structure.
  * @return {!sre.SemanticNode} The semantic node.
  */
 sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
@@ -266,6 +266,13 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
     this.makeIndex(snode, array[4], sre.SemanticAttr.Role.RIGHTSUB);
     this.makeIndex(snode, array[5], sre.SemanticAttr.Role.RIGHTSUPER);
     this.collapsedChildren_(array);
+    return snode;
+  }
+  if (snode.type === sre.SemanticAttr.Type.PUNCTUATED) {
+    if (sre.RebuildStree.isPunctuated(array)) {
+      var cont = array.splice(1, 1)[0].slice(1);
+      snode.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
+    }
     return snode;
   }
   if (snode.type === sre.SemanticAttr.Role.UNDEROVER) {
