@@ -108,5 +108,21 @@ sre.NemethUtil.indexRadical = function(node) {
   return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.ROOTINDEX);
 };
 
+  sre.NemethUtil.enlargeFence = function(text) {
+    var start = '⠠';
+    if (text.length === 1) {
+      return start + text;
+    }
+    var neut = '⠳';
+    var split = text.split('');
+    if (split.every(function(x) {return x === neut;})) {
+      return start + split.join(start);
+    }
+    return text.slice(0, 1) + start + text.slice(1);
+  };
+  
+  
+  sre.Grammar.getInstance().setCorrection('enlargeFence',
+                                        sre.NemethUtil.enlargeFence);
 
 });  // goog.scope

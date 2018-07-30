@@ -574,7 +574,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠂⠖⠄"
+        "default": "⠳⠳"
       }
     },
     "key": "2016"
@@ -4030,7 +4030,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠦⠴⠄"
+        "default": "⠳⠳⠳"
       }
     },
     "key": "2980"

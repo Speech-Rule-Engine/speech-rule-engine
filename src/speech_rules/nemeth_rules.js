@@ -985,24 +985,15 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'matrix', 'default.default',
-      '[t] "Start"; [t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndMatrix"',
+      '[m] children/* (separator:"\n", join:"");',
       'self::matrix');
-  defineRule(
-      'matrix', 'nemeth.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndMatrix"', 'self::matrix');
   defineRuleAlias(
       'matrix', 'self::vector');
 
   defineRule(
       'matrix-row', 'default.default',
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column");' +
-      '[p] (pause: 200)',
+      '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:"⠀"); ' +
+      '[n] ../../content/*[2] (grammar:enlargeFence); ',
       'self::row');
   defineRule(
       'row-with-label', 'default.default',
@@ -1023,36 +1014,25 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'default.default',
-      '[t] "Blank"', 'self::row', 'count(children/*)=0');
+      '[t] "⠀" (pause:300)', 'self::row', 'count(children/*)=0');
 
   defineRule(
       'matrix-cell', 'default.default',
-      '[n] children/*[1]; [p] (pause: 300)', 'self::cell');
-
-  // defineRule(
-  //     'empty-cell', 'default.default',
-  //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
+      '[n] children/*[1]', 'self::cell');
   defineRule(
       'empty-cell', 'default.default',
-      '[t] "Blank"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
+      '[t] "⠀" (pause: 300)', 'self::cell', 'count(children/*)=0');
 
-
-  defineRule(
-    'determinant', 'default.default',
-    ' [m] children/* (separator:"\n\n");',
-      'self::matrix', '@role="determinant"');
 
   // defineRule(
-  //     'determinant-simple', 'default.default',
-  //     '[t] "Start"; [t] count(children/*);  [t] "By";' +
-  //     '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-  //     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
-  //     'grammar:simpleDet); [t] "EndDeterminant"',
-  //     'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
-  defineRule(
-      'row-simple', 'default.default',
-      '[t] "⠠⠳"; [m] children/* (separator:"⠀"); [t] "⠠⠳"',
-      'self::row', '@role="determinant"');
+  //     'determinant', 'default.default',
+  //     '[m] children/* (separator:"\n", join:"");',
+  //     'self::matrix', '@role="determinant"');
+  // defineRule(
+  //     'row-simple', 'default.default',
+  //     '[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:"⠀"); ' +
+  //     '[n] ../../content/*[2] (grammar:enlargeFence); ',
+  //     'self::row', '@role="determinant"');
 
   defineRule(
       'layout', 'default.default', '[t] "StartLayout"; ' +
