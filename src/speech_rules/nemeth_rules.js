@@ -215,13 +215,26 @@ sre.NemethRules.initNemethRules_ = function() {
       'number', 'default.default', '[n] text()', 'self::number');
 
   defineRule(
+      'number', 'default.default', '[t] "⠼"; [n] text()',
+      'self::number', 'name(..)="stree"');
+
+  defineRule(
+      'number', 'default.default', '[t] "⠼"; [n] text()',
+      'self::number', 'name(../..)="cell"');
+
+  defineRule(
+      'number', 'default.default', '[t] "⠼"; [n] text()',
+      'self::number', 'name(../..)="punctuated"',
+      'not(ancestor::fenced)');
+
+  defineRule(
       'mixed-number', 'default.default',
-      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      '[n] children/*[1]; [n] children/*[2]; ',
       'self::number', '@role="mixed"');
 
   defineRule(
       'number-with-chars', 'default.default',
-      '[t] "Number"; [m] CQFspaceoutNumber', 'self::number',
+      '[t] "⠼"; [m] CQFspaceoutNumber', 'self::number',
       '"" != translate(text(), "0123456789.,", "")',
       'text() != translate(text(), "0123456789.,", "")');
 
@@ -475,21 +488,9 @@ sre.NemethRules.initNemethRules_ = function() {
       'self::sqrt');
 
   defineRule(
-      'sqrt', 'nemeth.brief',
-      '[t] CSFopenRadicalBrief; [n] children/*[1];' +
-          ' [t] CSFcloseRadicalBrief',
-      'self::sqrt');
-
-  defineRule(
-      'sqrt', 'nemeth.sbrief',
-      '[t] CSFopenRadicalSbrief; [n] children/*[1];' +
-          ' [t] CSFcloseRadicalBrief',
-      'self::sqrt');
-
-  defineRule(
       'root', 'default.default',
       '[t] CSFindexRadicalVerbose; [n] children/*[1];' +
-          '[t] CSFopenRadicalVerbose; [n] children/*[2];' +
+          '[t] "⠜"; [n] children/*[2];' +
           ' [t] CSFcloseRadicalVerbose',
       'self::root');
 
@@ -1043,18 +1044,18 @@ sre.NemethRules.initNemethRules_ = function() {
       '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
       ' [t] "EndLayout"', 'self::table');
 
-  defineRule(
-      'binomial', 'default.default',
-      '[t] "StartBinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
-      ' [t] "EndBinomialOrMatrix"',
-      'self::vector', '@role="binomial"');
-  defineRule(
-      'binomial', 'nemeth.sbrief',
-      '[t] "BinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
-      ' [t] "EndBinomialOrMatrix"',
-      'self::vector', '@role="binomial"');
+  // defineRule(
+  //     'binomial', 'default.default',
+  //     '[t] "StartBinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
+  //     '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
+  //     ' [t] "EndBinomialOrMatrix"',
+  //     'self::vector', '@role="binomial"');
+  // defineRule(
+  //     'binomial', 'nemeth.sbrief',
+  //     '[t] "BinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
+  //     '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
+  //     ' [t] "EndBinomialOrMatrix"',
+  //     'self::vector', '@role="binomial"');
 
   defineRule(
       'cases', 'default.default', '[t] "StartLayout"; ' +

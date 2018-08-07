@@ -59,33 +59,44 @@ sre.NemethUtil.overFraction = function(node) {
 
 
 /**
- * Nested string for radicals in Mathspeak mode putting together the nesting
- * depth with a pre- and postfix string that depends on the speech style.
+ * Nested Braille radicals in Nemeth putting together the nesting counter with
+ * the correct indicator string as postfix.
  * @param {!Node} node The radical node.
- * @param {string} prefix A prefix string.
  * @param {string} postfix A postfix string.
  * @return {string} The opening string.
  */
-sre.NemethUtil.nestedRadical = function(node, prefix, postfix) {
-  var depth = sre.MathspeakUtil.radicalNestingDepth(node);
-  console.log(depth);
-  var index = sre.MathspeakUtil.getRootIndex(node);
-  postfix = index ? msg.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
-  console.log(depth);
+sre.NemethUtil.nestedRadical = function(node, postfix) {
+  var depth = sre.NemethUtil.radicalNestingDepth(node);
   if (depth === 1) {
     return postfix;
   }
-  return prefix + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + postfix;
+  return new Array(depth).join(msg.MS.NESTED) + postfix;
 };
 
 
+/**
+ * Computes and returns the nesting depth of radical nodes.
+ * @param {!Node} node The radical node.
+ * @param {number=} opt_depth The optional depth.
+ * @return {number} The nesting depth. 0 if the node is not a radical.
+ */
+sre.NemethUtil.radicalNestingDepth = function(node, opt_depth) {
+  var depth = opt_depth || 0;
+  if (!node.parentNode) {
+    return depth;
+  }
+  return sre.NemethUtil.radicalNestingDepth(
+    node.parentNode,
+    (node.tagName === 'root' || node.tagName === 'sqrt') ? depth + 1 : depth);
+};
+  
 /**
  * Opening string for radicals in Mathspeak verbose mode.
  * @param {!Node} node The radical node.
  * @return {string} The opening string.
  */
 sre.NemethUtil.openingRadical = function(node) {
-  return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.STARTROOT);
+  return sre.NemethUtil.nestedRadical(node, msg.MS.STARTROOT);
 };
 
 
@@ -95,7 +106,7 @@ sre.NemethUtil.openingRadical = function(node) {
  * @return {string} The closing string.
  */
 sre.NemethUtil.closingRadical = function(node) {
-  return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.ENDROOT);
+  return sre.NemethUtil.nestedRadical(node, msg.MS.ENDROOT);
 };
 
 
@@ -105,7 +116,8 @@ sre.NemethUtil.closingRadical = function(node) {
  * @return {string} The middle string.
  */
 sre.NemethUtil.indexRadical = function(node) {
-  return sre.NemethUtil.nestedRadical(node, msg.MS.NESTED, msg.MS.ROOTINDEX);
+  console.log('index radical');
+  return sre.NemethUtil.nestedRadical(node, msg.MS.ROOTINDEX);
 };
 
   sre.NemethUtil.enlargeFence = function(text) {
