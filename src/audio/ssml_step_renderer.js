@@ -14,11 +14,11 @@
 
 
 /**
- * @fileoverview Class for Arno's SSML rendering of descriptions.
+ * @fileoverview Class for MathLive's SSML rendering of descriptions.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-goog.provide('sre.ArnoRenderer');
+goog.provide('sre.SsmlStepRenderer');
 
 goog.require('sre.Engine');
 goog.require('sre.SsmlRenderer');
@@ -29,38 +29,38 @@ goog.require('sre.SsmlRenderer');
  * @constructor
  * @extends {sre.SsmlRenderer}
  */
-sre.ArnoRenderer = function() {
-  sre.ArnoRenderer.base(this, 'constructor');
+sre.SsmlStepRenderer = function() {
+  sre.SsmlStepRenderer.base(this, 'constructor');
 };
-goog.inherits(sre.ArnoRenderer, sre.SsmlRenderer);
+goog.inherits(sre.SsmlStepRenderer, sre.SsmlRenderer);
 
 
-sre.ArnoRenderer.prototype.markup = function(descrs) {
-  sre.ArnoRenderer.MARKS = {};
-  return sre.ArnoRenderer.base(this, 'markup', descrs);
+sre.SsmlStepRenderer.prototype.markup = function(descrs) {
+  sre.SsmlStepRenderer.MARKS = {};
+  return sre.SsmlStepRenderer.base(this, 'markup', descrs);
 };
 
 /**
  * @type {string}
  */
-sre.ArnoRenderer.CHARACTER_ATTR_ = 'character';
+sre.SsmlStepRenderer.CHARACTER_ATTR_ = 'character';
 
-sre.ArnoRenderer.MARKS = {};
+sre.SsmlStepRenderer.MARKS = {};
 
 /**
  * @override
  */
-sre.ArnoRenderer.prototype.merge = function(strs) {
+sre.SsmlStepRenderer.prototype.merge = function(strs) {
   var result = [];
   for (var i = 0; i < strs.length; i++) {
     var str = strs[i];
     var id = str.attributes['extid'];
-    if (id && !sre.ArnoRenderer.MARKS[id]) {
+    if (id && !sre.SsmlStepRenderer.MARKS[id]) {
       result.push('<mark name="' + id + '"/>');
-      sre.ArnoRenderer.MARKS[id] = true;
+      sre.SsmlStepRenderer.MARKS[id] = true;
     }
     if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
-      result.push('<say-as interpret-as="' + sre.ArnoRenderer.CHARACTER_ATTR_ +
+      result.push('<say-as interpret-as="' + sre.SsmlStepRenderer.CHARACTER_ATTR_ +
                   '">' + str.string + "</say-as>");
     } else {
       result.push(str.string);

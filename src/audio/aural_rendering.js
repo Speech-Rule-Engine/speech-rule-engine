@@ -23,12 +23,12 @@
 goog.provide('sre.AuralRendering');
 
 goog.require('sre.AcssRenderer');
-goog.require('sre.ArnoRenderer');
 goog.require('sre.AudioRenderer');
 goog.require('sre.Engine');
 goog.require('sre.PunctuationRenderer');
 goog.require('sre.SableRenderer');
 goog.require('sre.SsmlRenderer');
+goog.require('sre.SsmlStepRenderer');
 goog.require('sre.StringRenderer');
 
 
@@ -154,4 +154,4 @@ sre.AuralRendering.registerRenderer(
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.SSML, sre.AuralRendering.xmlInstance);
 sre.AuralRendering.registerRenderer(
-    sre.Engine.Markup.ARNO, new sre.ArnoRenderer());
+    sre.Engine.Markup.SSML_STEP, new sre.SsmlStepRenderer());

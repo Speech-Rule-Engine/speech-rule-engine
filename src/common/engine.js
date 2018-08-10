@@ -218,8 +218,8 @@ sre.Engine.Speech = {
 sre.Engine.Markup = {
   NONE: 'none',
   PUNCTUATION: 'punctuation',
-  ARNO: 'arno',
   SSML: 'ssml',
+  SSML_STEP: 'ssml_step',
   ACSS: 'acss',
   SABLE: 'sable',
   VOICEXML: 'voicexml'
