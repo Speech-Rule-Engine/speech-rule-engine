@@ -233,44 +233,44 @@ sre.ApiTest.prototype.testToDescription = function() {
       'toDescription',
       sre.ApiTest.QUADRATIC,
       '[{"context":"","text":"x","userValue":"","annotation":"",' +
-      '"personality":{}},' +
+      '"attributes":{},"personality":{}},' +
       '{"context":"","text":"equals","userValue":"","annotation":"",' +
-      '"personality":{}},' +
+      '"attributes":{},"personality":{}},' +
       '{"context":"","text":"StartFraction","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"",' +
+      '"attributes":{},"personality":{}},{"context":"",' +
       '"text":"negative","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"","text":"b",' +
-      '"userValue":"","annotation":"","personality":{}},' +
+      '"attributes":{},"personality":{}},{"context":"","text":"b",' +
+      '"userValue":"","annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"plus-or-minus",' +
-      '"userValue":"","annotation":"","personality":{}},' +
+      '"userValue":"","annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"StartRoot","userValue":"",' +
-      '"annotation":"","personality":{}},' +
+      '"annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"b","userValue":"","annotation":"",' +
-      '"personality":{}},' +
+      '"attributes":{},"personality":{}},' +
       '{"context":"","text":"squared","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"",' +
+      '"attributes":{},"personality":{}},{"context":"",' +
       '"text":"minus","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"","text":"4",' +
-      '"userValue":"","annotation":"","personality":{}},' +
+      '"attributes":{},"personality":{}},{"context":"","text":"4",' +
+      '"userValue":"","annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"","userValue":"",' +
-      '"annotation":"","personality":{}},' +
+      '"annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"a","userValue":"","annotation":"",' +
-      '"personality":{}},' +
+      '"attributes":{},"personality":{}},' +
       '{"context":"","text":"","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"",' +
+      '"attributes":{},"personality":{}},{"context":"",' +
       '"text":"c","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"","text":"EndRoot",' +
-      '"userValue":"","annotation":"","personality":{}},' +
+      '"attributes":{},"personality":{}},{"context":"","text":"EndRoot",' +
+      '"userValue":"","annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"Over","userValue":"",' +
-      '"annotation":"","personality":{}},' +
+      '"annotation":"","attributes":{},"personality":{}},' +
       '{"context":"","text":"2","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"",' +
+      '"attributes":{},"personality":{}},{"context":"",' +
       '"text":"","userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"","text":"a",' +
+      '"attributes":{},"personality":{}},{"context":"","text":"a",' +
       '"userValue":"","annotation":"",' +
-      '"personality":{}},{"context":"",' +
+      '"attributes":{},"personality":{}},{"context":"",' +
       '"text":"EndFraction","userValue":"","annotation":"",' +
-      '"personality":{}}]',
+      '"attributes":{},"personality":{}}]',
       JSON.stringify
   );
 };
