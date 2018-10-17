@@ -14,6 +14,7 @@
 
 /**
  * @fileoverview Nemeth rules.
+ *               Sponsored by BTAA (Big Ten Academic Alliance).
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
