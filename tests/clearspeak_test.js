@@ -25,6 +25,7 @@ goog.require('sre.ClearspeakExponents');
 goog.require('sre.ClearspeakFractions');
 goog.require('sre.ClearspeakFunctions');
 goog.require('sre.ClearspeakImpliedTimes');
+goog.require('sre.ClearspeakIssues');
 goog.require('sre.ClearspeakLogarithms');
 goog.require('sre.ClearspeakMatricesAndCombinatorics');
 goog.require('sre.ClearspeakMultiLineEntries');
@@ -55,6 +56,7 @@ sre.ClearspeakTest.testList = [
   sre.ClearspeakFractions,
   sre.ClearspeakFunctions,
   sre.ClearspeakImpliedTimes,
+  sre.ClearspeakIssues,
   sre.ClearspeakLogarithms,
   sre.ClearspeakMatricesAndCombinatorics,
   sre.ClearspeakMultiLineEntries,

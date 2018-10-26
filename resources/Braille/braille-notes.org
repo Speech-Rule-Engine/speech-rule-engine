@@ -1,0 +1,15 @@
+Very good:
+
+https://tech.aph.org/nemeth/
+
+Not so good:
+
+http://braillebug.afb.org/nemeth_braille.asp
+
+With use cases:
+
+http://www.tsbvi.edu/nemeth-code
+
+Quite good:
+
+http://www.gh-mathspeak.com/examples/NemethBook/

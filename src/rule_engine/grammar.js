@@ -144,7 +144,7 @@ sre.Grammar.prototype.getCorrection = function(correction) {
 
 
 /**
- * @return {!string} A string version of the grammatical state.
+ * @return {string} A string version of the grammatical state.
  */
 sre.Grammar.prototype.getState = function() {
   var pairs = [];

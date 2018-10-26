@@ -130,7 +130,7 @@ sre.BaseRuleStore.prototype.defineRule = function(
     rule = new sre.SpeechRule(name, dynamicCstr, fullPrec, postc);
   } catch (err) {
     if (err.name == 'RuleError') {
-      console.log('Rule Error ', prec, '(' + dynamic + '):', err.message);
+      console.error('Rule Error ', prec, '(' + dynamic + '):', err.message);
       return null;
     }
     else {

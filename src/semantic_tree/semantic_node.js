@@ -398,30 +398,41 @@ sre.SemanticNode.prototype.equals = function(node) {
 
 /**
  * Convenience method to display the whole tree and its elements.
- * @param {!number} depth The depth of the tree.
  */
-sre.SemanticNode.prototype.displayTree = function(depth) {
+sre.SemanticNode.prototype.displayTree = function() {
+  console.info(this.displayTree_(0));
+};
+
+
+/**
+ * Convenience method to display the whole tree and its elements.
+ * @param {number} depth The depth of the tree.
+ * @return {string} String with nested tree display.
+ */
+sre.SemanticNode.prototype.displayTree_ = function(depth) {
   depth++;
   var depthString = Array(depth).join('  ');
-  console.log(depthString + this.toString());
-  console.log(depthString + 'MathmlTree:');
-  console.log(depthString + this.mathmlTreeString_());
-  console.log(depthString + 'MathML:');
+  var result = '';
+  result += '\n' + depthString + this.toString();
+  result += '\n' + depthString + 'MathmlTree:';
+  result += '\n' + depthString + this.mathmlTreeString_();
+  result += '\n' + depthString + 'MathML:';
   for (var i = 0, mml; mml = this.mathml[i]; i++) {
-    console.log(depthString + mml.toString());
+    result += '\n' + depthString + mml.toString();
   }
-  console.log(depthString + 'Begin Content');
-  this.contentNodes.forEach(function(x) {x.displayTree(depth);});
-  console.log(depthString + 'End Content');
-  console.log(depthString + 'Begin Children');
-  this.childNodes.forEach(function(x) {x.displayTree(depth);});
-  console.log(depthString + 'End Children');
+  result += '\n' + depthString + 'Begin Content';
+  this.contentNodes.forEach(function(x) {result += x.displayTree_(depth);});
+  result += '\n' + depthString + 'End Content';
+  result += '\n' + depthString + 'Begin Children';
+  this.childNodes.forEach(function(x) {result += x.displayTree_(depth);});
+  result += '\n' + depthString + 'End Children';
+  return result;
 };
 
 
 /**
  * Returns a display version of the node's associated MathML tree.
- * @return {!string} The MathML tree as string or EMPTY.
+ * @return {string} The MathML tree as string or EMPTY.
  * @private
  */
 sre.SemanticNode.prototype.mathmlTreeString_ = function() {
@@ -485,7 +496,7 @@ sre.SemanticNode.prototype.hasAnnotation = function(domain, annotation) {
 
 /**
  * Parses a annotation string as given, for example, in an attribute.
- * @param {!string} stateStr The state string for the annotation.
+ * @param {string} stateStr The state string for the annotation.
  */
 sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
   var annotations = stateStr.split(';');

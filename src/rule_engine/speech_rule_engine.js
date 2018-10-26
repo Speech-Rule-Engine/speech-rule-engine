@@ -111,7 +111,7 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
     this.activeStore_ = this.combineStores_(ruleSets);
   } catch (err) {
     if (err.name == 'StoreError') {
-      console.log('Store Error:', err.message);
+      console.error('Store Error:', err.message);
     }
     else {
       throw err;
@@ -261,7 +261,7 @@ sre.SpeechRuleEngine.prototype.evaluateNode_ = function(node) {
  * @private
  */
 sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
-  sre.Debugger.getInstance().output(node.toString());
+  sre.Debugger.getInstance().output(node);
   var engine = sre.Engine.getInstance();
   if (engine.cache) {
     var result = this.getCacheForNode_(node);

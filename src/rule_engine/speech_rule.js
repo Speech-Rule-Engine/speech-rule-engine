@@ -114,7 +114,7 @@ sre.SpeechRule.Type.toString = function(speechType) {
 /**
  * Defines a component within a speech rule.
  * @param {{type: sre.SpeechRule.Type,
- *          content: !string,
+ *          content: string,
  *          attributes: sre.SpeechRule.Attributes,
  *          grammar: sre.Grammar.State}} kwargs The input component in JSON
  *     format.

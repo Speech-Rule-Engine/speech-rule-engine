@@ -70,7 +70,7 @@ sre.MathmlStoreUtil.retrieveMathjaxLeaf = function(jax) {
  * For a given MathJax node it returns the equivalent MathML node,
  * if it is of the right tag.
  * @param {!Node} jax The Mathjax node.
- * @param {!string} tag The required tag.
+ * @param {string} tag The required tag.
  * @return {Array.<Node>} The resulting node list.
  */
 sre.MathmlStoreUtil.checkMathjaxTag = function(jax, tag) {
