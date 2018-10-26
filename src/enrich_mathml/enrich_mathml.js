@@ -641,7 +641,7 @@ sre.EnrichMathml.makeIdList = function(nodes) {
  */
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
-  var attributes = semantic.attributes();
+  var attributes = semantic.allAttributes();
   for (var i = 0, attr; attr = attributes[i]; i++) {
     mml.setAttribute(sre.EnrichMathml.Attribute[attr[0].toUpperCase()],
                      attr[1]);
