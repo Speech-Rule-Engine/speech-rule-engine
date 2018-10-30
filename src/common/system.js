@@ -37,6 +37,7 @@ goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.SpeechRuleEngine');
 goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
+goog.require('sre.Variables');
 goog.require('sre.WalkerFactory');
 goog.require('sre.WalkerUtil');
 
@@ -51,7 +52,7 @@ sre.System = function() {
    * Version number.
    * @type {string}
    */
-  this.version = '2.3.0-beta.0';
+  this.version = sre.Variables.VERSION;
 
 };
 goog.addSingletonGetter(sre.System);
@@ -95,7 +96,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
- * @param {Object.<string,? (string)>} feature An object describing some
+ * @param {Object.<boolean|string>} feature An object describing some
  *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
@@ -108,9 +109,9 @@ sre.System.prototype.setupEngine = function(feature) {
   var setMulti = function(feat) {
     engine[feat] = feature[feat] || engine[feat];
   };
-  var binaryFeatures = ['strict', 'cache', 'semantics'];
+  var binaryFeatures = ['strict', 'cache', 'semantics', 'structure'];
   var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
-                        'locale'];
+                        'locale', 'rate'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
   binaryFeatures.forEach(setIf);
@@ -141,7 +142,7 @@ sre.System.prototype.setupEngine = function(feature) {
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
- * @param {Object.<string,? (string)>} feature An object describing some
+ * @param {Object.<boolean|string>} feature An object describing some
  *     setup features.
  * @private
  */
@@ -350,7 +351,8 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  */
 sre.System.prototype.processXml = function(xml) {
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return sre.AuralRendering.getInstance().markup(descrs);
+  var aural = sre.AuralRendering.getInstance();
+  return aural.finalize(aural.markup(descrs));
 };
 
 
@@ -372,7 +374,7 @@ sre.System.prototype.parseExpression_ = function(expr, semantic) {
     sre.Debugger.getInstance().generateOutput(
         goog.bind(function() {return xml.toString();}, this));
   } catch (err) {
-    console.log('Parse Error: ' + err.message);
+    console.error('Parse Error: ' + err.message);
   }
   return xml;
 };
@@ -439,7 +441,7 @@ sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
   var result = processor(expr);
   if (!opt_output) {
-    console.log(result);
+    console.info(result);
     return;
   }
   try {
@@ -484,7 +486,7 @@ sre.System.prototype.processFileAsync_ = function(
       goog.bind(function(expr) {
         var result = processor(expr);
         if (!opt_output) {
-          console.log(result);
+          console.info(result);
           return;
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {

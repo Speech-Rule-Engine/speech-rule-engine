@@ -88,12 +88,26 @@ sre.SemanticMathml.prototype.parse = function(mml) {
   var tag = sre.DomUtil.tagName(mml);
   var func = this.parseMap_[tag];
   var newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
+  this.addAttributes(newNode, mml);
   if (['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1) {
     return newNode;
   }
   newNode.mathml.unshift(mml);
   newNode.mathmlTree = mml;
   return newNode;
+};
+
+
+sre.SemanticMathml.prototype.addAttributes = function(to, from) {
+  if (from.hasAttributes()) {
+    var attrs = from.attributes;
+    for(var i = attrs.length - 1; i >= 0; i--) {
+      var key = attrs[i].name;
+      if (key.match(/^ext/)) {
+        to.attributes[key] = attrs[i].value;
+      }
+    }
+  }
 };
 
 

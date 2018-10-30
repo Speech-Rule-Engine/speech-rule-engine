@@ -238,7 +238,19 @@ sre.SemanticRuleTest.prototype.testMultiline = function() {
 
 
 /**
- * Testing the quadratic for different locales.
+ * Tests for mixed numbers. MJ a11y issue #225. 
+ */
+sre.SemanticRuleTest.prototype.testMixedNumbers = function() {
+  this.executeRuleTest(
+      '<mn>4</mn><mfrac><mn>1</mn><mn>3</mn></mfrac>',
+      'four and one divided by three'
+  );
+};
+
+
+/**
+ * Testing the quadratic for different locales. For the base rules we generally
+ * get mixed language output.
  */
 sre.SemanticRuleTest.prototype.testQuadratic = function() {
   var mml = '<mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>&#x2212;</mo>' +
@@ -253,7 +265,7 @@ sre.SemanticRuleTest.prototype.testQuadratic = function() {
   this.locale = 'es';
   this.executeRuleTest(
       mml,
-      'x equals negative b plus minus Square root of b squared minus four' +
-      ' times a times c divided by two times a'
+      'x igual negative b más menos Square root of b squared menos four por' +
+      ' a por c divided by two por a'
   );
 };

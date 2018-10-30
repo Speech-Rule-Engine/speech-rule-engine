@@ -54,7 +54,7 @@ sre.SemanticParser.prototype.setFactory = function(factory) { };
 
 
 /**
- * @return {!string} The type of the parser.
+ * @return {string} The type of the parser.
  */
 sre.SemanticParser.prototype.getType = function() { };
 
@@ -63,7 +63,7 @@ sre.SemanticParser.prototype.getType = function() { };
 /**
  * @constructor
  * @implements {sre.SemanticParser}
- * @param {!string} type The type of the parser.
+ * @param {string} type The type of the parser.
  */
 sre.SemanticAbstractParser = function(type) {
 

@@ -27,6 +27,7 @@ goog.require('sre.DomTest');
 goog.require('sre.EnrichMathmlTest');
 goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MarkupTest');
+goog.require('sre.MathAlphabetsTest');
 goog.require('sre.MathmlStoreTest');
 goog.require('sre.MathspeakEmbellishSpanishTest');
 goog.require('sre.MathspeakEmbellishTest');
@@ -44,6 +45,7 @@ goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechRuleTest');
 goog.require('sre.System');
 goog.require('sre.TestRunner');
+goog.require('sre.WalkerMarkupTest');
 goog.require('sre.WalkerTest');
 
 
@@ -85,6 +87,7 @@ sre.Tests.testList = [
   sre.EnrichMathmlTest,
   sre.EnrichSpeechTest,
   sre.MarkupTest,
+  sre.MathAlphabetsTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
   sre.MathspeakEmbellishSpanishTest,
@@ -100,6 +103,7 @@ sre.Tests.testList = [
   sre.SemanticRuleTest,
   sre.SemanticTreeTest,
   sre.SpeechRuleTest,
+  sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
 sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),

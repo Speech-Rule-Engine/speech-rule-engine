@@ -41,7 +41,6 @@ sre.RebuildStreeTest = function() {
    */
   this.information = 'Semantic tree rebuilding tests.';
 
-  sre.Engine.getInstance().mathmlSpeech = false;
 };
 goog.inherits(sre.RebuildStreeTest, sre.AbstractTest);
 

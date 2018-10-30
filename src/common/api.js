@@ -137,6 +137,20 @@ module.exports.engineReady = sre.Engine.isReady;
 
 
 /**
+ * Setting engine to async mode once it is ready.
+ */
+sre.Api.setAsync = function() {
+  if (!sre.Engine.isReady()) {
+    setTimeout(sre.Api.setAsync, 500);
+  }
+  (sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
+};
+
+
+/**
  * Default setup of the Engine.
  */
-(sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
+if (global && global.SRE_JSON_PATH) {
+  sre.Api.setAsync();
+}
+
