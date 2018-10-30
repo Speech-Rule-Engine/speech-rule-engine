@@ -116,8 +116,8 @@ sre.SystemExternal.fs = sre.SystemExternal.documentSupported() ?
  * XML mappings for JSON output. 
  * @type {Object}
  */
-sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
-    null : sre.SystemExternal.require('xml-mapping');
+// sre.SystemExternal.xm = sre.SystemExternal.documentSupported() ?
+//     null : sre.SystemExternal.require('xml-mapping');
 
 
 /**
