@@ -160,7 +160,7 @@ sre.SemanticTree.prototype.formatXml = function(opt_brief) {
  * Convenience method to display the whole tree and its elements.
  */
 sre.SemanticTree.prototype.displayTree = function() {
-  this.root.displayTree(0);
+  this.root.displayTree();
 };
 
 

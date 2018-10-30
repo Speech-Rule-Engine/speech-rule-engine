@@ -184,6 +184,7 @@ sre.ClearspeakAnnotationTest.prototype.testFunctions = function() {
                    '<mo>)</mo>', true);
   this.executeTest('<mi>sin</mi><mo>(</mo><mo>-</mo><mi>x</mi><mi>y</mi>' +
                    '<mo>)</mo>', true);
+  this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi>', false);
   this.executeTest('<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mi>z</mi>' +
                    '<mo>)</mo>', false);
   this.executeTest('<mi>sin</mi><mo>(</mo><mo>-</mo><mi>x</mi><mi>y</mi>' +

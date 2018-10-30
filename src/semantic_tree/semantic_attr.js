@@ -1704,7 +1704,7 @@ sre.SemanticAttr.isEmbellishedType = function(type) {
 // TODO (sorge) Make this depended on position in the alphabets.
 /**
  * Check if a character is a small 'd' in some font.
- * @param {!string} chr The character string.
+ * @param {string} chr The character string.
  * @return {boolean} True if the character is indeed a single small d.
  */
 sre.SemanticAttr.isCharacterD = function(chr) {
@@ -1717,8 +1717,8 @@ sre.SemanticAttr.isCharacterD = function(chr) {
 /**
  * Decide when opening and closing fences match. For neutral fences they have to
  * be the same.
- * @param {!string} open Opening fence.
- * @param {!string} close Closing fence.
+ * @param {string} open Opening fence.
+ * @param {string} close Closing fence.
  * @return {boolean} True if the fences are matching.
  * @private
  */
@@ -1753,7 +1753,7 @@ sre.SemanticAttr.prototype.initMeaning_ = function() {
 
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
- * @param {!string} symbol The symbol to which we want to determine the meaning.
+ * @param {string} symbol The symbol to which we want to determine the meaning.
  * @return {sre.SemanticMeaning} The semantic meaning of the symbol.
  * @private
  */

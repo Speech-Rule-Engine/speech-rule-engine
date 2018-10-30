@@ -47,7 +47,7 @@ goog.require('sre.WalkerUtil');
  *     this walker.
  * @param {!sre.Highlighter} highlighter The currently active
  *     highlighter.
- * @param {!string} xml The original xml/mathml node on which the walker is
+ * @param {string} xml The original xml/mathml node on which the walker is
  *      called as a string.
  * @override
  */
@@ -248,11 +248,12 @@ sre.AbstractWalker.prototype.speech = function() {
 sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
   var pre = opt_pre || [];
   var prefix = this.prefix_();
+  var aural = sre.AuralRendering.getInstance();
   if (prefix) speech.unshift(prefix);
-  return sre.AuralRendering.getInstance().merge(pre.concat(speech));
+  return aural.finalize(aural.merge(pre.concat(speech)));
 };
 
-
+  
 /**
  * @return {string} The prefix of the currently focused element.
  * @private
@@ -369,11 +370,12 @@ sre.AbstractWalker.prototype.depth_ = function() {
         personality: {}})])];
   var snodes = this.focus_.getSemanticNodes();
   var prefix = sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+  var aural = sre.AuralRendering.getInstance();
   if (prefix) {
     level.push(prefix);
   }
   sre.Grammar.getInstance().setParameter('depth', oldDepth);
-  return sre.AuralRendering.getInstance().merge(level.concat(expand));
+  return aural.finalize(aural.merge(level.concat(expand)));
 };
 
 
@@ -486,7 +488,7 @@ sre.AbstractWalker.prototype.restoreState = function() {
 
 /**
  * Finds the focus on the current level for a given node id.
- * @param {!number} id The id number.
+ * @param {number} id The id number.
  * @return {sre.Focus} The focus on a particular level.
  */
 sre.AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;

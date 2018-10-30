@@ -21,6 +21,7 @@
 goog.provide('sre.AbstractAudioRenderer');
 
 goog.require('sre.AudioRenderer');
+goog.require('sre.Engine');
 
 
 
@@ -72,6 +73,34 @@ sre.AbstractAudioRenderer.prototype.error = function(key) {
 /**
  * @override
  */
-sre.AbstractAudioRenderer.prototype.merge = function(strs) {
-  return strs.join(' ');
+sre.AbstractAudioRenderer.prototype.merge = function(spans) {
+  return spans.map(function(x) {return x.string;}).join(this.getSeparator());
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractAudioRenderer.prototype.finalize = function(str) {
+  return str;
+};
+
+
+sre.AbstractAudioRenderer.prototype.pauseValue = function(value) {
+  var numeric;
+  switch (value) {
+  case 'long':
+    numeric = 750;
+    break;
+  case 'medium':
+    numeric = 500;
+    break;
+  case 'short':
+    numeric = 250;
+    break;
+  default:
+    numeric = value;
+  }
+  return Math.floor(numeric *
+                    parseInt(sre.Engine.getInstance().getRate(), 10) / 100);
 };

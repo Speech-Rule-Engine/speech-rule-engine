@@ -113,7 +113,13 @@ sre.Engine = function() {
    * shallow, deep).
    * @type {sre.Engine.Speech}
    */
-  this.speech = sre.Engine.Speech.SHALLOW;
+  this.speech = sre.Engine.Speech.NONE;
+
+  /**
+   * Indicates if skeleton structure attributes are added to enriched elements
+   * @type {boolean}
+   */
+  this.structure = false;
 
   /**
    * List of rule sets given as the constructor functions.
@@ -150,6 +156,13 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.isEdge = false;
+
+  /**
+   * Percentage of default rate used by external TTS. This can be used to scale
+   * pauses.
+   * @type {string}
+   */
+  this.rate = '100';
 
   /**
    * List of predicates for checking if the engine is set up.
@@ -206,6 +219,7 @@ sre.Engine.Markup = {
   NONE: 'none',
   PUNCTUATION: 'punctuation',
   SSML: 'ssml',
+  SSML_STEP: 'ssml_step',
   ACSS: 'acss',
   SABLE: 'sable',
   VOICEXML: 'voicexml'
@@ -262,4 +276,10 @@ sre.Engine.prototype.getAxisValues = function() {
  */
 sre.Engine.defaultEvaluator = function(str, cstr) {
   return str;
+};
+
+
+sre.Engine.prototype.getRate = function() {
+  var numeric = parseInt(this.rate, 10);
+  return isNaN(numeric) ? 100 : numeric;
 };

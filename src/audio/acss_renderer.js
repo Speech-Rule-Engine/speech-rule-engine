@@ -69,7 +69,9 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
       }
       continue;
     }
-    var str = '"' + descr.string.join(this.getSeparator()) + '"';
+    var str = '"' + this.merge(descr.span) + '"';
+    // var str = '"' + descr.span.join(this.getSeparator()) + '"';
+    // var str = '"' + descr.string.join(this.getSeparator()) + '"';
     string = true;
     if (pause) {
       result.push(this.pause(pause));
@@ -85,12 +87,13 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
 /**
  * @override
  */
-sre.AcssRenderer.prototype.merge = function(strs) {
-  return '(exp ' +
-      strs.map(function(str) {
-        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
-      ')';
-};
+// sre.AcssRenderer.prototype.merge = function(strs) {
+//   console.log('when');
+//   return '(exp ' +
+//       strs.map(function(str) {
+//         return str.string.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+//       ')';
+// };
 
 
 /**
@@ -140,5 +143,6 @@ sre.AcssRenderer.prototype.prosodyElement = function(key, value) {
  * @override
  */
 sre.AcssRenderer.prototype.pause = function(pause) {
-  return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
+  return '(pause . ' +
+      this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + ')';
 };
