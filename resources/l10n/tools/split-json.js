@@ -39,8 +39,9 @@ SplitJson.UNITS_PATH_ = 'units';
 SplitJson.SYMBOLS_FILES_ = [
   // Greek
   'greek-capital.js', 'greek-small.js', 'greek-scripts.js',
-  'greek-mathfonts.js', 'greek-symbols.js',
-
+  'greek-mathfonts-bold.js', 'greek-mathfonts-italic.js',
+  'greek-mathfonts-sans-serif-bold.js', 'greek-symbols.js',
+  
   // Hebrew
   'hebrew_letters.js',
 
@@ -180,3 +181,65 @@ SplitJson.allFiles = function(symbols, functions, units, path, iso) {
                       SplitJson.UNITS_FILES_, locale, iso, 'units');
 };
 
+
+SplitJson.toHTML = function(file, content, path = '/tmp/') {
+  let filename = path + file + '.html';
+  let table = [];
+  for (let key in content) {
+    let mappings = content[key].mappings;
+    if (!mappings) {
+      console.log('Missing: ' + key);
+      continue;
+    }
+    let text = mappings.mathspeak ? mappings.mathspeak.default :
+        (mappings.default.short ? mappings.default.short :
+         mappings.default.default);
+    table.push('<tr><td>&#x' + key + ';</td><td>' + text + '</td></tr>');
+  }
+  var style = '\n<style>\n' +
+      'table, th, td {\n' +
+      '  border: 1px solid black;' +
+      '}\n</style>\n';
+  let output = '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">';
+  output += '\n<html><head>';
+  output += '\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>';
+  output += '\n<title>' + file + '</title>\n';
+  output += style;
+  output += '\n<body>';
+  output += '\n<h2>' + file + '</h2>';
+  output += '\n<table>\n';
+  output += table.join('\n');
+  output += '</body></html>';
+  fs.writeFileSync(filename, output);
+};
+
+SplitJson.symbolsToHTML = function(path = '/tmp/symbols/') {
+  let files = [];
+  for (let file of SplitJson.SYMBOLS_FILES_) {
+    let content = SplitJson.loadLocale([file], SplitJson.PATH_ + '/en/symbols/');
+    let name = file.split('.')[0];
+    files.push(name);
+    SplitJson.toHTML(name, content, path);
+  }
+  let index = '<html><head><title>Symbols</title></head>';
+  index += '\n<body><ul>';
+  for (let file of files) {
+    index += '\n<li><a href="' + file + '.html">'  + file + '</a></li>';
+  }
+  index += '\n</ul></body></html>';
+  fs.writeFileSync(path + 'index.html', index);
+};
+
+
+SplitJson.odsTable = function() {
+  for (let file of SplitJson.SYMBOLS_FILES_) {
+    let name = file.split('.')[0];
+    console.log('<table:table table:name="' + name + '" table:style-name="ta1"><table:table-column table:style-name="co1" table:default-cell-style-name="Default"/><table:table-row table:style-name="ro1"><table:table-cell/></table:table-row></table:table><table:named-expressions/>');
+  }
+};
+
+// SplitJson.defaultFiles = function() {
+//   SplitJson.allFiles(SplitJson.SYMBOLS_FILES_, SplitJson.FUNCTIONS_FILES_)
+// };
+
+module.exports = SplitJson;
