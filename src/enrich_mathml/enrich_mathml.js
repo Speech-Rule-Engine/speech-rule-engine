@@ -97,8 +97,6 @@ sre.EnrichMathml.Attribute = {
 };
 
 
-sre.EnrichMathml.overNode = null;
-
 /**
  * Enriches a MathML element with semantics from the tree.
  *
@@ -112,10 +110,6 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
   // The first line is only to preserve output. This should eventually be
   // deleted.
   var oldMml = mml.cloneNode(true);
-  console.log(semantic.xml());
-  console.log(oldMml);
-  sre.EnrichMathml.overNode = mml;
-  console.log(sre.EnrichMathml.overNode.toString());
   sre.EnrichMathml.walkTree(semantic.root);
   if (sre.Engine.getInstance().structure) {
     mml.setAttribute(sre.EnrichMathml.Attribute.STRUCTURE,
@@ -139,13 +133,8 @@ sre.EnrichMathml.enrich = function(mml, semantic) {
  * @return {!Element} The enriched MathML element.
  */
 sre.EnrichMathml.walkTree = function(semantic) {
-  console.log('STARTING: ' + semantic.type);
-  console.log(semantic.mathmlTree.toString());
-  console.log(sre.EnrichMathml.overNode.toString());
   var specialCase = sre.EnrichCaseFactory.getCase(semantic);
   var newNode;
-  console.log('here');
-  console.log(!!specialCase);
   if (specialCase) {
     newNode = specialCase.getMathml();
     return sre.EnrichMathml.ascendNewNode(newNode);
@@ -183,8 +172,6 @@ sre.EnrichMathml.walkTree = function(semantic) {
   sre.EnrichMathml.mergeChildren_(newNode, childrenList);
   sre.EnrichMathml.setAttributes(newNode, semantic);
   let res = sre.EnrichMathml.ascendNewNode(newNode);
-  console.log('STOPPING: ' + semantic.type);
-  console.log(sre.EnrichMathml.overNode.toString());
   return res;
 };
 
@@ -523,14 +510,10 @@ sre.EnrichMathml.validLca_ = function(left, right) {
  * @return {!Element} The parent node.
  */
 sre.EnrichMathml.ascendNewNode = function(newNode) {
-  console.log('Ascending');
   while (!sre.SemanticUtil.hasMathTag(newNode) &&
          sre.EnrichMathml.unitChild_(newNode)) {
-    console.log(newNode.tagName);
-
     newNode = sre.EnrichMathml.parentNode_(newNode);
   }
-    console.log(newNode.tagName);
   return newNode;
 };
 

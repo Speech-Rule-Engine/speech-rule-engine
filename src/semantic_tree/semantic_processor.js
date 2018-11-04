@@ -2445,16 +2445,12 @@ sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
 // Inference rules (Simons)
 // 
 sre.SemanticProcessor.proof = function(node, semantics, parse) {
-  console.log('Before semantics');
-  console.log(node);
   var attrs = sre.SemanticProcessor.separateSemantics(semantics);
   return sre.SemanticProcessor.getInstance().proof(node, attrs, parse);
 };
 
 
 sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
-  console.log(node);
-  console.log(semantics);
   if (!semantics['inference']) {
     console.log('Noise');
     // do some preprocessing!
