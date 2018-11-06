@@ -31,6 +31,14 @@ SplitJson.FUNCTIONS_PATH_ = 'functions';
 SplitJson.UNITS_PATH_ = 'units';
 
 /**
+ * Subpath to dir containing ChromeVox JSON definitions for unused.
+ * @type {string}
+ * @const
+ * @private
+ */
+SplitJson.UNUSED_PATH_ = 'unused';
+
+/**
  * Array of JSON filenames containing symbol definitions for math speak.
  * @type {Array.<string>}
  * @const
@@ -90,6 +98,19 @@ SplitJson.UNITS_FILES_ = [
   'temperature.js', 'time.js', 'volume.js', 'weight.js'
 ];
 
+
+/**
+ * Array of JSON filenames containing unit unused unicode translations.
+ * @type {Array.<string>}
+ * @const
+ * @private
+ */
+SplitJson.UNUSED_FILES_ = [
+  'accented_characters.js', 'currencies_music.js', 'greek_accented.js',
+  'private_area.js', 'special_symbols.js'
+];
+
+
 //  'units_spanish.js'
 // TODO: Sort this similar to the above.
 // Localisation
@@ -148,8 +169,8 @@ SplitJson.splitContent = function(list, locale) {
 };
 
 
-SplitJson.splitFile = function(path, files, locale, iso) {
-  let fullPath = SplitJson.PATH_ + '/en/' + path + '/';
+SplitJson.splitFile = function(path, files, locale, iso, model) {
+  let fullPath = SplitJson.PATH_ + '/' + model + '/' + path + '/';
   let tmp = '/tmp/' + path + '/';
   shell.mkdir('-p', tmp);
   files.forEach(function(x) {
@@ -158,27 +179,31 @@ SplitJson.splitFile = function(path, files, locale, iso) {
 };
 
 
-SplitJson.splitFiles = function(path, files, locale, iso, type) {
-  SplitJson.splitFile(path, files, locale, iso);
+SplitJson.splitFiles = function(path, files, locale, iso, type, model) {
+  SplitJson.splitFile(path, files, locale, iso, model);
   let values = [];
   for(var key in locale) {
     values.push(locale[key]);
   }
   console.log(values.length);
-  fs.writeFileSync('/tmp/rest-' + type + '.json', JSON.stringify(values, null, 2));
+  // Here we do the unused ones.
+  fs.writeFileSync('/tmp/rest-' + type + '.js', JSON.stringify(values, null, 2));
 };
+
+
 
 
 SplitJson.allFiles = function(symbols, functions, units, path, iso) {
   let locale = SplitJson.loadLocale(symbols, path);
   SplitJson.splitFiles(SplitJson.SYMBOLS_PATH_,
-                      SplitJson.SYMBOLS_FILES_, locale, iso, 'symbols');
+                       SplitJson.SYMBOLS_FILES_, locale, iso, 'symbols', 'en');
   locale = SplitJson.loadLocale(functions, path);
   SplitJson.splitFiles(SplitJson.FUNCTIONS_PATH_,
-                      SplitJson.FUNCTIONS_FILES_, locale, iso, 'functions');
+                       SplitJson.FUNCTIONS_FILES_, locale, iso, 'functions', 'en');
   locale = SplitJson.loadLocale(units, path);
   SplitJson.splitFiles(SplitJson.UNITS_PATH_,
-                      SplitJson.UNITS_FILES_, locale, iso, 'units');
+                       SplitJson.UNITS_FILES_, locale, iso, 'units', 'en');
+  
 };
 
 
@@ -243,3 +268,18 @@ SplitJson.odsTable = function() {
 // };
 
 module.exports = SplitJson;
+
+// SplitJson.splitFiles(SplitJson.SYMBOLS_PATH_,
+//                       SplitJson.SYMBOLS_FILES_, french, 'fr', 'symbols');
+// where french contained the locale.
+// TODO: make an outer directory of the iso locale.
+
+
+// Missing maths fonts:
+// latin:
+// bold-italic: seq 0x1d468 0x1d49b | while read n; do printf "%04X\n" $n; done
+// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do printf "%04X\n" $n; done
+//
+// greek:
+// Bold Italic : seq 0X1D71C 0X1D755 | while read n; do printf "%04X\n" $n; done
+// sans-serif bold italic: seq 0X1D790 0X1D7C9 | while read n; do printf "%04X\n" $n; done
