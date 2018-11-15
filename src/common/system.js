@@ -111,7 +111,7 @@ sre.System.prototype.setupEngine = function(feature) {
   };
   var binaryFeatures = ['strict', 'cache', 'semantics', 'structure'];
   var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
-                        'locale'];
+                        'locale', 'rate'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
   binaryFeatures.forEach(setIf);
@@ -351,7 +351,8 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  */
 sre.System.prototype.processXml = function(xml) {
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return sre.AuralRendering.getInstance().markup(descrs);
+  var aural = sre.AuralRendering.getInstance();
+  return aural.finalize(aural.markup(descrs));
 };
 
 

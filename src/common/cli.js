@@ -204,6 +204,8 @@ sre.Cli.prototype.commandLine = function() {
              set, 'semantics').
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
              set, 'markup').
+      option('-r, --rate [value]', 'Base rate [value] for tagged speech output.',
+             set, 'rate').
       option('').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'Speech').

@@ -158,6 +158,13 @@ sre.Engine = function() {
   this.isEdge = false;
 
   /**
+   * Percentage of default rate used by external TTS. This can be used to scale
+   * pauses.
+   * @type {string}
+   */
+  this.rate = '100';
+
+  /**
    * List of predicates for checking if the engine is set up.
    * @type {!Array.<function():boolean>}
    * @private
@@ -212,6 +219,7 @@ sre.Engine.Markup = {
   NONE: 'none',
   PUNCTUATION: 'punctuation',
   SSML: 'ssml',
+  SSML_STEP: 'ssml_step',
   ACSS: 'acss',
   SABLE: 'sable',
   VOICEXML: 'voicexml'
@@ -268,4 +276,10 @@ sre.Engine.prototype.getAxisValues = function() {
  */
 sre.Engine.defaultEvaluator = function(str, cstr) {
   return str;
+};
+
+
+sre.Engine.prototype.getRate = function() {
+  var numeric = parseInt(this.rate, 10);
+  return isNaN(numeric) ? 100 : numeric;
 };

@@ -20,6 +20,9 @@
  */
 goog.provide('sre.AudioUtil');
 
+goog.require('sre.Span');
+
+
 
 // TODO: Refactor into dedicated personality/markup data structure.
 /**
@@ -138,7 +141,7 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
   var currentPers = {};
   for (var i = 0, descr; descr = descrs[i]; i++) {
     var pause = null;
-    var str = descr.descriptionString();
+    var span = descr.descriptionSpan();
     var pers = descr.personality;
     var join = pers[sre.Engine.personalityProps.JOIN];
     delete pers[sre.Engine.personalityProps.JOIN];
@@ -150,7 +153,7 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
     }
     var diff = sre.AudioUtil.personalityDiff_(pers, currentPers);
     //TODO: Replace last parameter by global parameter, depending on format.
-    sre.AudioUtil.appendMarkup_(result, str, diff, join, pause, true);
+    sre.AudioUtil.appendMarkup_(result, span, diff, join, pause, true);
   }
   result = result.concat(sre.AudioUtil.finaliseMarkup_());
   result = sre.AudioUtil.simplifyMarkup_(result);
@@ -160,7 +163,7 @@ sre.AudioUtil.personalityMarkup = function(descrs) {
 
 /**
  * Appends an element to the partial markup list. If the last markup entry and
- * the new element are either both string or pause elements it joins
+ * the new element are either both span or pause elements it joins
  * them. Otherwise the new element is appended.
  * @param {!Array.<Object>} markup The markup list.
  * @param {!Object} element A single markup element.
@@ -172,16 +175,16 @@ sre.AudioUtil.appendElement_ = function(markup, element) {
     markup.push(element);
     return;
   }
-  if (sre.AudioUtil.isStringElement(element) &&
-      sre.AudioUtil.isStringElement(last)) {
+  if (sre.AudioUtil.isSpanElement(element) &&
+      sre.AudioUtil.isSpanElement(last)) {
     if (typeof last.join === 'undefined') {
-      last.string = last.string.concat(element.string);
+      last.span = last.span.concat(element.span);
       return;
     }
-    var lstr = last['string'].pop();
-    var fstr = element['string'].shift();
-    last['string'].push(lstr + last.join + fstr);
-    last['string'] = last['string'].concat(element.string);
+    var lstr = last['span'].pop();
+    var fstr = element['span'].shift();
+    last['span'].push(lstr + last.join + fstr);
+    last['span'] = last['span'].concat(element.span);
     last.join = element.join;
     return;
   }
@@ -214,7 +217,7 @@ sre.AudioUtil.simplifyMarkup_ = function(markup) {
       continue;
     }
     var nextElement = markup[i + 1];
-    if (!nextElement || sre.AudioUtil.isStringElement(nextElement)) {
+    if (!nextElement || sre.AudioUtil.isSpanElement(nextElement)) {
       sre.AudioUtil.copyValues_(element, lastPers);
       result.push(element);
       continue;
@@ -307,24 +310,24 @@ sre.AudioUtil.isPauseElement = function(element) {
 
 
 /**
- * Predicate to check if the markup element is a string.
+ * Predicate to check if the markup element is a span.
  * @param {!Object} element An element of the markup list.
- * @return {boolean} True if this is a string element.
+ * @return {boolean} True if this is a span element.
  */
-sre.AudioUtil.isStringElement = function(element) {
+sre.AudioUtil.isSpanElement = function(element) {
   var keys = Object.keys(element);
   return typeof element === 'object' &&
-      ((keys.length === 1 && keys[0] === 'string') ||
+      ((keys.length === 1 && keys[0] === 'span') ||
       (keys.length === 2 &&
-      ((keys[0] === 'string' && keys[1] === 'join') ||
-       (keys[1] === 'string' && keys[0] === 'join'))));
+      ((keys[0] === 'span' && keys[1] === 'join') ||
+       (keys[1] === 'span' && keys[0] === 'join'))));
 };
 
 
 /**
  * Appends content to the current markup list.
  * @param {!Array.<Object>} markup The markup list.
- * @param {string} str A content string.
+ * @param {sre.Span} span A content span.
  * @param {!Object.<sre.Engine.personalityProps, number>} pers A personality
  *     annotation.
  * @param {?{sre.Engine.personalityProps.JOIN: (string|undefined)}} join An
@@ -336,13 +339,13 @@ sre.AudioUtil.isStringElement = function(element) {
  * @private
  */
 sre.AudioUtil.appendMarkup_ = function(
-    markup, str, pers, join, pause, opt_merge) {
+    markup, span, pers, join, pause, opt_merge) {
   if (opt_merge) {
     var last = markup[markup.length - 1];
     if (last) {
       var oldJoin = last[sre.Engine.personalityProps.JOIN];
     }
-    if (last && !str && pause &&
+    if (last && !span.string && pause &&
         sre.AudioUtil.isPauseElement(last)) {
       var pauseProp = sre.Engine.personalityProps.PAUSE;
       // Merging could be done using max or min or plus.
@@ -350,18 +353,21 @@ sre.AudioUtil.appendMarkup_ = function(
                                                   pause[pauseProp]);
       pause = null;
     }
-    if (last && str && Object.keys(pers).length === 0 &&
-        sre.AudioUtil.isStringElement(last)) {
+    if (last && span.string && Object.keys(pers).length === 0 &&
+        sre.AudioUtil.isSpanElement(last)) {
+      // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
-        str = last['string'].pop() + oldJoin + str;
+        var lastSpan = last['span'].pop();
+        span = new sre.Span(lastSpan.string + oldJoin + span.string,
+                            lastSpan.attributes);
       }
-      last['string'].push(str);
-      str = '';
+      last['span'].push(span);
+      span = new sre.Span('', {});
       last[sre.Engine.personalityProps.JOIN] = join;
     }
   }
   if (Object.keys(pers).length !== 0) markup.push(pers);
-  if (str) markup.push({string: [str], join: join});
+  if (span.string) markup.push({span: [span], join: join});
   if (pause) markup.push(pause);
 };
 

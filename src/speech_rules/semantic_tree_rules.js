@@ -184,6 +184,11 @@ sre.SemanticTreeRules.initSemanticRules_ = function() {
       'number', 'default.default',
       '[n] text()', 'self::number');
 
+  defineRule(
+      'mixed-number', 'default.default',
+      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      'self::number', '@role="mixed"');
+
   // Font rules
   defineRule(
       'font', 'default.default',
