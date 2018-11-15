@@ -171,7 +171,8 @@ sre.EnrichMathml.walkTree = function(semantic) {
   newNode = sre.EnrichMathml.rewriteMfenced(newNode);
   sre.EnrichMathml.mergeChildren_(newNode, childrenList);
   sre.EnrichMathml.setAttributes(newNode, semantic);
-  return sre.EnrichMathml.ascendNewNode(newNode);
+  let res = sre.EnrichMathml.ascendNewNode(newNode);
+  return res;
 };
 
 
@@ -641,7 +642,7 @@ sre.EnrichMathml.makeIdList = function(nodes) {
  */
 sre.EnrichMathml.setAttributes = function(mml, semantic) {
   mml.setAttribute(sre.EnrichMathml.Attribute.TYPE, semantic.type);
-  var attributes = semantic.attributes();
+  var attributes = semantic.allAttributes();
   for (var i = 0, attr; attr = attributes[i]; i++) {
     mml.setAttribute(sre.EnrichMathml.Attribute[attr[0].toUpperCase()],
                      attr[1]);

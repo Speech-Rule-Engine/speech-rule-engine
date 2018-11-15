@@ -81,6 +81,7 @@ sre.HighlighterFactory.highlighterMapping_ = {
   'NativeMML': new sre.MmlHighlighter(),
   'HTML-CSS': new sre.HtmlHighlighter(),
   'MML-CSS': new sre.MmlCssHighlighter(),
-  'CommonHTML': new sre.CssHighlighter()
+  'CommonHTML': new sre.CssHighlighter(),
+  'CHTML': new sre.CssHighlighter()
 };
 

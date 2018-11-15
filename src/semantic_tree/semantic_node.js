@@ -176,7 +176,7 @@ sre.SemanticNode.prototype.toString = function(opt_brief) {
  * @private
  */
 sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
-  var attributes = this.attributes();
+  var attributes = this.allAttributes();
   for (var i = 0, attr; attr = attributes[i]; i++) {
     node.setAttribute(attr[0], attr[1]);
   }
@@ -188,7 +188,7 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
  * @return {!Array.<Array.<sre.SemanticNode.Attribute, string>>} A list of
  *     pairs.
  */
-sre.SemanticNode.prototype.attributes = function() {
+sre.SemanticNode.prototype.allAttributes = function() {
   var attributes = [];
   attributes.push([sre.SemanticNode.Attribute.ROLE, this.role]);
   if (this.font != sre.SemanticAttr.Font.UNKNOWN) {
@@ -231,7 +231,7 @@ sre.SemanticNode.prototype.xmlAnnotation = function() {
 sre.SemanticNode.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});
   json[sre.SemanticNode.Attribute.TYPE] = this.type;
-  var attributes = this.attributes();
+  var attributes = this.allAttributes();
   for (var i = 0, attr; attr = attributes[i]; i++) {
     json[attr[0]] = attr[1].toString();
   }

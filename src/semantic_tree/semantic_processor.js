@@ -2440,3 +2440,141 @@ sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
     node.role = sre.SemanticAttr.Role.COMPFUNC;
   }
 };
+
+
+// Inference rules (Simons)
+// 
+sre.SemanticProcessor.proof = function(node, semantics, parse) {
+  var attrs = sre.SemanticProcessor.separateSemantics(semantics);
+  return sre.SemanticProcessor.getInstance().proof(node, attrs, parse);
+};
+
+
+sre.SemanticProcessor.prototype.proof = function(node, semantics, parse) {
+  if (!semantics['inference']) {
+    console.log('Noise');
+    // do some preprocessing!
+    // Put in an invisible comma!
+  }
+  var inference = this.inference(node, semantics, parse);
+  if (semantics['proof']) {
+    inference.role = sre.SemanticAttr.Role.PROOF;
+  }
+  return inference;
+};
+
+
+sre.SemanticProcessor.prototype.inference = function(node, semantics, parse) {
+  if (semantics['inferenceRule']) {
+    var [conclusion, premises] = this.getTable(node, [], parse);
+    var inference = this.factory_.makeBranchNode(
+      sre.SemanticAttr.Type.INFERENCE, [conclusion, premises], []);
+  // Setting role
+    return inference;
+  }
+  var label = semantics['labelledRule'];
+  var children = sre.DomUtil.toArray(node.childNodes);
+  var content = [];
+  if (label === 'left' || label === 'both') {
+    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.LEFT));
+  }
+  if (label === 'right' || label === 'both') {
+    content.push(this.getLabel(node, children, parse, sre.SemanticAttr.Role.RIGHT));
+  }
+  // TODO: Up vs Down
+  var [conclusion, premises] = this.getTable(node, children, parse);
+  var inference = this.factory_.makeBranchNode(
+    sre.SemanticAttr.Type.INFERENCE, [conclusion, premises], content);
+  // Setting role
+  inference.mathmlTree = node;
+  return inference;
+};
+
+sre.SemanticProcessor.prototype.getLabel = function(node, children, parse, side) {
+  var label = children.find(function(x) {
+    return sre.SemanticProcessor.findSemantics(x, 'prooflabel', side);
+  });
+  console.log(label);
+  var sem = this.factory_.makeBranchNode(sre.SemanticAttr.Type.RULELABEL,
+                                         parse(label.childNodes), []);
+  sem.role = side;
+  return sem;
+};
+
+
+sre.SemanticProcessor.prototype.getTable = function(node, children, parse) {
+  console.log('Getting table');
+  console.log(node);
+  var inf = children.length ? children.find(function(x) {
+    return sre.SemanticProcessor.findSemantics(x, 'inferenceRule');
+  }) : node;
+  console.log('Getting top row');
+  console.log(inf);
+  var premTable = inf.childNodes[0].childNodes[0].childNodes[0];
+  var topRow = sre.DomUtil.toArray(premTable.childNodes[0].childNodes);
+  console.log(premTable);
+  console.log(topRow);
+  var premNodes = [];
+  var i = 1;
+  for (var cell of topRow) {
+    if (i % 2) {
+      premNodes.push(cell.childNodes[0]);
+    }
+    i++;
+  }
+  var premises = parse(premNodes);
+  var botRow = inf.childNodes[1];
+  var conclusion = parse(botRow.childNodes[0].childNodes)[0];
+  var prem = this.factory_.makeBranchNode(
+    sre.SemanticAttr.Type.PREMISES, premises, []);
+  prem.mathmlTree = premTable;
+  var conc = this.factory_.makeBranchNode(
+    sre.SemanticAttr.Type.CONCLUSION, [conclusion], []);
+  conc.mathmlTree = botRow.childNodes[0].childNodes[0];
+  return [conc, prem];
+};
+
+// Utilities
+// This one should be prefix specific!
+/**
+ * 
+ * @param {Element} node The mml node.
+ * @param {string} attr The attribute name.
+ * @param {string=} opt_value The attribute value.
+ * @return {boolean} True if the semantic attribute is in the node.
+ */
+sre.SemanticProcessor.findSemantics = function(node, attr, opt_value) {
+  let value = (opt_value == null) ? null : opt_value;
+  let semantics = sre.SemanticProcessor.getSemantics(node);
+  if (!semantics) {
+    return false;
+  }
+  if (!semantics[attr]) {
+    return false;
+  }
+  return value == null ? true : semantics[attr] === value;
+};
+
+
+sre.SemanticProcessor.getSemantics = function(node) {
+  let semantics = node.getAttribute('semantics');
+  if (!semantics) {
+    return null;
+  }
+  return sre.SemanticProcessor.separateSemantics(semantics);
+}
+
+sre.SemanticProcessor.removePrefix = function(name) {
+  var [prefix, ...rest] = name.split('_');
+  return rest.join('_');
+};
+
+sre.SemanticProcessor.separateSemantics = function(attr) {
+  var result = {};
+  attr.split(';').
+    forEach(function(x) {
+      var [name, value] = x.split(':');
+      result[sre.SemanticProcessor.removePrefix(name)] = value;
+    });
+  return result;
+};
