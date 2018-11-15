@@ -103,9 +103,9 @@ sre.NemethRules.initCustomFunctions_ = function() {
 
   addCSF('CSFspaceoutText', sre.MathspeakUtil.spaceoutText);
   // Fraction function.
-  addCSF('CSFopenFracVerbose', sre.NemethUtil.openingFraction);
-  addCSF('CSFcloseFracVerbose', sre.NemethUtil.closingFraction);
-  addCSF('CSFoverFracVerbose', sre.NemethUtil.overFraction);
+  addCSF('CSFopenFraction', sre.NemethUtil.openingFraction);
+  addCSF('CSFcloseFraction', sre.NemethUtil.closingFraction);
+  addCSF('CSFoverFraction', sre.NemethUtil.overFraction);
   addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
@@ -425,14 +425,14 @@ sre.NemethRules.initNemethRules_ = function() {
 
   defineRule(
       'fraction', 'default.default',
-      '[t] CSFopenFracVerbose; [n] children/*[1];' +
-          ' [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose',
+      '[t] CSFopenFraction; [n] children/*[1];' +
+          ' [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFraction',
       'self::fraction');
 
   defineRule(
       'fraction', 'nemeth.brief',
       '[t] CSFopenFracBrief; [n] children/*[1];' +
-          ' [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief',
+          ' [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFracBrief',
       'self::fraction');
 
   defineRule(
