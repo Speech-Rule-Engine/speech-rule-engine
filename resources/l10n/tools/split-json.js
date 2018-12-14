@@ -207,8 +207,7 @@ SplitJson.allFiles = function(symbols, functions, units, path, iso) {
 };
 
 
-SplitJson.toHTML = function(file, content, path = '/tmp/') {
-  let filename = path + file + '.html';
+SplitJson.localeToTable = function(content) {
   let table = [];
   for (let key in content) {
     let mappings = content[key].mappings;
@@ -216,12 +215,43 @@ SplitJson.toHTML = function(file, content, path = '/tmp/') {
       console.log('Missing: ' + key);
       continue;
     }
+    // Not sure what that does.
     let text = mappings.mathspeak ? mappings.mathspeak.default :
         (mappings.default.short ? mappings.default.short :
          mappings.default.default);
     table.push('<tr><td>&#x' + key + ';</td><td>' + text + '</td></tr>');
   }
-  var style = '\n<style>\n' +
+  return table;
+};
+
+SplitJson.compareLocaleToTable = function(english, locale) {
+  let table = [];
+  for (let key in english) {
+    let mappings = english[key].mappings;
+    if (!mappings) {
+      console.log('Missing: ' + key);
+      continue;
+    }
+    // Not sure what that does.
+    let eng_text = mappings.mathspeak ? mappings.mathspeak.default :
+        (mappings.default.short ? mappings.default.short :
+         mappings.default.default);
+    let loc_map = locale[key];
+    let loc_text = '';
+    if (loc_map) {
+      loc_map = loc_map.mappings;
+      loc_text = loc_map.mathspeak ? loc_map.mathspeak.default :
+        (loc_map.default.short ? loc_map.default.short :
+         loc_map.default.default);
+    }
+    table.push(`<tr><td>&#x${key};</td><td>${loc_text}</td><td>${eng_text}</td></tr>`);
+  }
+  return table;
+};
+
+SplitJson.toHTML = function(file, table, path = '/tmp/') {
+  let filename = path + file + '.html';
+  let style = '\n<style>\n' +
       'table, th, td {\n' +
       '  border: 1px solid black;' +
       '}\n</style>\n';
@@ -238,13 +268,22 @@ SplitJson.toHTML = function(file, content, path = '/tmp/') {
   fs.writeFileSync(filename, output);
 };
 
-SplitJson.symbolsToHTML = function(path = '/tmp/symbols/') {
+SplitJson.symbolsToHTML = function(compare = false,
+                                   locale = 'en',
+                                   path = '/tmp/symbols/') {
   let files = [];
+  let localeContent = null;
   for (let file of SplitJson.SYMBOLS_FILES_) {
-    let content = SplitJson.loadLocale([file], SplitJson.PATH_ + '/en/symbols/');
+    let content = SplitJson.loadLocale([file], `${SplitJson.PATH_}/${locale}/symbols/`);
+    if (compare) {
+      localeContent = SplitJson.loadLocale([file], `${SplitJson.PATH_}/en/symbols/`);
+    }
     let name = file.split('.')[0];
     files.push(name);
-    SplitJson.toHTML(name, content, path);
+    let table = compare ?
+        SplitJson.compareLocaleToTable(localeContent, content) :
+        SplitJson.localeToTable(content);
+    SplitJson.toHTML(name, table, path);
   }
   let index = '<html><head><title>Symbols</title></head>';
   index += '\n<body><ul>';
