@@ -295,12 +295,159 @@ SplitJson.symbolsToHTML = function(compare = false,
 };
 
 
-SplitJson.odsTable = function() {
+/************************************************************
+/*   Create ods files directly 
+/*********************************************/
+
+SplitJson.symbolsToOds = function(locale = 'en',
+                                  path = '/tmp/symbols/') {
+  let tables = [];
   for (let file of SplitJson.SYMBOLS_FILES_) {
+    let content = SplitJson.loadLocale([file], `${SplitJson.PATH_}/${locale}/symbols/`);
+    let english = SplitJson.loadLocale([file], `${SplitJson.PATH_}/en/symbols/`);
     let name = file.split('.')[0];
-    console.log('<table:table table:name="' + name + '" table:style-name="ta1"><table:table-column table:style-name="co1" table:default-cell-style-name="Default"/><table:table-row table:style-name="ro1"><table:table-cell/></table:table-row></table:table><table:named-expressions/>');
+    tables.push(SplitJson.odsTable(name, english, content));
   }
+  SplitJson.odsFile(tables.join(''), path);
 };
+
+
+SplitJson.odsTable = function(name, english, locale) {
+  let start = `<table:table table:name="${name}" table:style-name="ta1">` +
+      '<table:table-column table:style-name="co1"' +
+      ' table:number-columns-repeated="3"' +
+      ' table:default-cell-style-name="Default"/>';
+  let secure = {
+    '003C': '&lt;',
+    '003E': '&gt;',
+    '0026': '&amp;'
+  };
+  let table = [];
+  for (let key in english) {
+    let mappings = english[key].mappings;
+    if (!mappings) {
+      console.log('Missing: ' + key);
+      continue;
+    }
+    // Not sure what that does.
+    let eng_text = mappings.mathspeak ? mappings.mathspeak.default :
+        (mappings.default.short ? mappings.default.short :
+         mappings.default.default);
+    let loc_map = locale[key];
+    let loc_text = '';
+    if (loc_map) {
+      loc_map = loc_map.mappings;
+      loc_text = loc_map.mathspeak ? loc_map.mathspeak.default :
+        (loc_map.default.short ? loc_map.default.short :
+         loc_map.default.default);
+    }
+    let row = '<table:table-row table:style-name="ro1">';
+    row += '<table:table-cell office:value-type="string" calcext:value-type="string">';
+    row += '<text:p>';
+    console.log(secure[key]);
+    row += secure[key] || SplitJson.numberToUnicode(parseInt(key, 16));
+    row += '</text:p>';
+    row += '</table:table-cell>';
+    row += '<table:table-cell office:value-type="string" calcext:value-type="string">';
+    row += `<text:p>${loc_text}</text:p></table:table-cell>`;
+    row += '<table:table-cell office:value-type="string" calcext:value-type="string">';
+    row += `<text:p>${eng_text}</text:p></table:table-cell></table:table-row>`;
+    table.push(row);
+  }
+  return start + table.join('') + '</table:table>';
+};
+
+
+SplitJson.odsFile = function(table, path = '/tmp/') {
+  let content = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  content += '<office:document-content' +
+    ' xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"' +
+    ' xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"' +
+    ' xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"' +
+    ' xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"' +
+    ' xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"' +
+    ' xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"' +
+    ' xmlns:xlink="http://www.w3.org/1999/xlink"' +
+    ' xmlns:dc="http://purl.org/dc/elements/1.1/"' +
+    ' xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0"' +
+    ' xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"' +
+    ' xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0"' +
+    ' xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"' +
+    ' xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0"' +
+    ' xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"' +
+    ' xmlns:math="http://www.w3.org/1998/Math/MathML"' +
+    ' xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"' +
+    ' xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0"' +
+    ' xmlns:ooo="http://openoffice.org/2004/office"' +
+    ' xmlns:ooow="http://openoffice.org/2004/writer"' +
+    ' xmlns:oooc="http://openoffice.org/2004/calc"' +
+    ' xmlns:dom="http://www.w3.org/2001/xml-events"' +
+    ' xmlns:xforms="http://www.w3.org/2002/xforms"' +
+    ' xmlns:xsd="http://www.w3.org/2001/XMLSchema"' +
+    ' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"' +
+    ' xmlns:rpt="http://openoffice.org/2005/report"' +
+    ' xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2"' +
+    ' xmlns:xhtml="http://www.w3.org/1999/xhtml"' +
+    ' xmlns:grddl="http://www.w3.org/2003/g/data-view#"' +
+    ' xmlns:tableooo="http://openoffice.org/2009/table"' +
+    ' xmlns:drawooo="http://openoffice.org/2010/draw"' +
+    ' xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0"' +
+    ' xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0"' +
+    ' xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0"' +
+    ' xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0"' +
+    ' xmlns:css3t="http://www.w3.org/TR/css3-text/"' +
+    ' office:version="1.2"><office:scripts/><office:font-face-decls>' +
+    '<style:font-face style:name="Liberation Sans"' +
+    ' svg:font-family="&apos;Liberation Sans&apos;"' +
+    ' style:font-family-generic="swiss" style:font-pitch="variable"/>' +
+    '<style:font-face style:name="AR PL SungtiL GB"' +
+    ' svg:font-family="&apos;AR PL SungtiL GB&apos;"' +
+    ' style:font-family-generic="system" style:font-pitch="variable"/>' +
+    '<style:font-face style:name="DejaVu Sans"' +
+    ' svg:font-family="&apos;DejaVu Sans&apos;"' +
+    ' style:font-family-generic="system" style:font-pitch="variable"/>' +
+    '<style:font-face style:name="Lohit Devanagari"' +
+    ' svg:font-family="&apos;Lohit Devanagari&apos;"' +
+    ' style:font-family-generic="system" style:font-pitch="variable"/>' +
+    '</office:font-face-decls><office:automatic-styles><style:style' +
+    ' style:name="co1" style:family="table-column">' +
+    '<style:table-column-properties fo:break-before="auto"' +
+    ' style:column-width="64.01pt"/></style:style><style:style' +
+    ' style:name="co2" style:family="table-column">' +
+    '<style:table-column-properties fo:break-before="auto"' +
+    ' style:column-width="299.51pt"/></style:style><style:style' +
+    ' style:name="co3" style:family="table-column">' +
+    '<style:table-column-properties fo:break-before="auto"' +
+    ' style:column-width="341.94pt"/></style:style><style:style' +
+    ' style:name="co4" style:family="table-column">' +
+    '<style:table-column-properties fo:break-before="auto"' +
+    ' style:column-width="279.41pt"/></style:style><style:style' +
+    ' style:name="ro1" style:family="table-row"><style:table-row-properties' +
+    ' style:row-height="12.81pt" fo:break-before="auto"' +
+    ' style:use-optimal-row-height="true"/></style:style><style:style' +
+    ' style:name="ta1" style:family="table"' +
+    ' style:master-page-name="Default"><style:table-properties' +
+    ' table:display="true" style:writing-mode="lr-tb"/></style:style>' +
+    '</office:automatic-styles><office:body><office:spreadsheet>' +
+    '<table:calculation-settings table:automatic-find-labels="false"' +
+    ' table:use-regular-expressions="false" table:use-wildcards="true"/>';
+  content += table;
+  content += '<table:named-expressions/></office:spreadsheet></office:body>' +
+    '</office:document-content>';
+  fs.writeFileSync(`${path}content.xml`, content);
+};
+
+
+SplitJson.numberToUnicode = function(number) {
+  if (number < 0x10000) {
+    return String.fromCharCode(number);
+  }
+  var hi = (number - 0x10000) / 0x0400 + 0xD800;
+  var lo = (number - 0x10000) % 0x0400 + 0xDC00;
+  return String.fromCharCode(hi, lo);
+};
+
+
 
 // SplitJson.defaultFiles = function() {
 //   SplitJson.allFiles(SplitJson.SYMBOLS_FILES_, SplitJson.FUNCTIONS_FILES_)
@@ -317,8 +464,11 @@ module.exports = SplitJson;
 // Missing maths fonts:
 // latin:
 // bold-italic: seq 0x1d468 0x1d49b | while read n; do printf "%04X\n" $n; done
-// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do printf "%04X\n" $n; done
+// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do print
+// "%04X\n" $n; done
 //
 // greek:
 // Bold Italic : seq 0X1D71C 0X1D755 | while read n; do printf "%04X\n" $n; done
 // sans-serif bold italic: seq 0X1D790 0X1D7C9 | while read n; do printf "%04X\n" $n; done
+
+
