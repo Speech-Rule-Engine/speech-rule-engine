@@ -1,5 +1,6 @@
 let fs = require('fs');
 let shell = require('shelljs');
+let xmldom = require('xmldom-sre');
 let SplitJson = {};
 
 SplitJson.PATH_ = '/home/sorge/git/speech-rule-engine/src/mathmaps';
