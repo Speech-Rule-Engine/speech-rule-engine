@@ -7,8 +7,8 @@ tmp2=`mktemp`
 
 declare -a languages=("cs" "da" "de" "el" "es" "fi" "fr" "is" "it" "ja" "nl" "no" "se" "zh")
 
-extract_functions () {
-    grep UIInput $functions | grep -v wordRef > $tmp
+extract_units () {
+    grep UIInput $units | grep -v wordRef > $tmp
     grep -v \? $tmp | awk -F\" '{print "\""$4"\":\""$2"\""}' | sed s/RR_// > $tmp2
     grep \? $tmp | awk -F\" '{print "\""$(NF-1)"\":\""$(NF-3)"\""}' | sed s/RR_// >> $tmp2
     mv $tmp2 $tmp
@@ -36,10 +36,10 @@ output_json () {
 for i in ${languages[@]}; do
     lang=$i
     echo $lang
-    functions=$indir/$lang/functions.tdl
+    units=$indir/$lang/units.tdl
     mkdir -p $outdir/$lang
-    out=$outdir/$lang/functions.json
-    extract_functions
+    out=$outdir/$lang/units.json
+    extract_units
     # extract_exists
     sort $tmp > $tmp2
     output_json
