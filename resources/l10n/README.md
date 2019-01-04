@@ -7,7 +7,8 @@
 Create both online forms and spreadsheets for
 
 * Symbols. 3 columns: symbol, English, Locale (form JSON)
-* Units. 4 columns: key, names, English, Locale (from JSON)
+* Units. 6 columns: key, names, English, Locale: singular, plural, dual/special (from JSON)
+  Separate spreadsheet for prefixes?
 * Functions. 4 columns: key, names, English, Locale (from JSON)
 * Fonts, Roles, Enclose, Navigate, MS. 3 columns: key, English, Locale (from Messages)
 * Numbers, Ordinals. 2 columns: English, Locale (from special files)

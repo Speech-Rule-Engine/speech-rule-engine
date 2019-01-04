@@ -5,24 +5,50 @@ outdir=$2
 tmp=`mktemp`
 tmp2=`mktemp`
 
-declare -a languages=("cs" "da" "de" "el" "es" "fi" "fr" "is" "it" "ja" "nl" "no" "se" "zh")
+declare -a languages=("cs" "da" "de" "el" "en" "es" "fi" "fr" "is" "it" "ja" "nl" "no" "se" "zh")
+# declare -a languages=("en")
 
 extract_units () {
-    grep UIInput $units | grep -v wordRef > $tmp
-    grep -v \? $tmp | awk -F\" '{print "\""$4"\":\""$2"\""}' | sed s/RR_// > $tmp2
-    grep \? $tmp | awk -F\" '{print "\""$(NF-1)"\":\""$(NF-3)"\""}' | sed s/RR_// >> $tmp2
+    grep UIWord $units > $tmp
+    grep unitsPrefix $tmp | grep MatchString | awk -F\" '{print "\""$4"\":\""$(NF-1)"\""}' > $tmp2-prefix
+    grep unitsPrefix $tmp | grep \"unicode\" | awk -F\" '{print "\""$6"\":\""$(NF-1)"\""}' >> $tmp2-prefix
+    grep unitsBase $tmp | grep singular | grep -v Less > $tmp2-singular
+    grep MatchString $tmp2-singular | awk -F\" '{print "\""$4"\":\""$(NF-1)"\":\""$(NF-3)"\":\"\""}' > $tmp2
+    grep \"unicode\" $tmp2-singular | awk -F\" '{print "\""$6"\":\""$(NF-1)"\":\""$(NF-3)"\":\"\""}' >> $tmp2
+    grep unitsBase $tmp | grep Less > $tmp2-dual
+    grep MatchString $tmp2-dual | awk -F\" '{print "\""$4"\":\""$(NF-1)"\":\""$(NF-5)"\":\""$(NF-3)"\""}' >> $tmp2
+    grep \"unicode\" $tmp2-dual | awk -F\" '{print "\""$6"\":\""$(NF-1)"\":\""$(NF-5)"\":\""$(NF-3)"\""}' >> $tmp2
+    grep unitsBase $tmp | grep -v singular | grep -v Less > $tmp2-plural
+    grep MatchString $tmp2-plural | awk -F\" '{print "\""$4"\":\""$(NF-1)"\":\"\":\"\""}' >> $tmp2
+    grep \"unicode\" $tmp2-plural | awk -F\" '{print "\""$6"\":\""$(NF-1)"\":\"\":\"\""}' >> $tmp2
+    mv $tmp2-prefix $tmp-prefix
+    cp $tmp2 jetzt
     mv $tmp2 $tmp
+    
 }
 
-## Units:
-## grep -A1 UIWord fr/units.tdl | grep -v "\-\-" | sed 'N;s/\n//;'
 
-output_json () {
+output_prefix_json () {
+    echo "[" > $prefix
+    echo " {" >> $prefix
+    echo "  \"locale\":\""$lang"\"" >> $prefix
+    echo " }," >> $prefix
+    awk -F: '{print " {\n  \"key\": "$1",\n  \"mappings\": {\n    \"default\" : {\n     \"default\": "$2"\n   }\n  }\n },"}' $tmp2-prefix >> $prefix
+    sed -i '$ s/.$//' $prefix
+    echo "]" >> $prefix
+
+    for i in $lines; do
+        echo $i
+    done
+}
+
+
+output_unit_json () {
     echo "[" > $out
     echo " {" >> $out
     echo "  \"locale\":\""$lang"\"" >> $out
     echo " }," >> $out
-    awk -F: '{print " {\n  \"key\": "$1",\n  \"mappings\": {\n    \"default\" : {\n     \"default\": "$2"\n   }\n  }\n },"}' $tmp2 >> $out
+    awk -F: '{print " {\n  \"key\": "$1",\n  \"mappings\": {\n    \"default\" : {\n     \"default\": "$2",\n      \"singular\": "$3",\n      \"dual\": "$4"\n   }\n  }\n },"}' $tmp2 >> $out
     sed -i '$ s/.$//' $out
     echo "]" >> $out
 
@@ -38,11 +64,13 @@ for i in ${languages[@]}; do
     echo $lang
     units=$indir/$lang/units.tdl
     mkdir -p $outdir/$lang
+    prefix=$outdir/$lang/prefix.json
     out=$outdir/$lang/units.json
     extract_units
-    # extract_exists
+    sort $tmp-prefix > $tmp2-prefix
     sort $tmp > $tmp2
-    output_json
+    output_prefix_json
+    output_unit_json
 done
 
 

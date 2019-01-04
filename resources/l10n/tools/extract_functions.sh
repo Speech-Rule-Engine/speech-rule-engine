@@ -14,9 +14,6 @@ extract_functions () {
     mv $tmp2 $tmp
 }
 
-## Units:
-## grep -A1 UIWord fr/units.tdl | grep -v "\-\-" | sed 'N;s/\n//;'
-
 output_json () {
     echo "[" > $out
     echo " {" >> $out

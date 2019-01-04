@@ -3,7 +3,20 @@ let shell = require('shelljs');
 let xmldom = require('xmldom-sre');
 let SplitJson = {};
 
+// Mathmaps path
 SplitJson.PATH_ = '/home/sorge/git/speech-rule-engine/src/mathmaps';
+
+SplitJson.OUTPUT_PATH_ = '/tmp/output';
+
+SplitJson.HTML_PATH_ = '/tmp/html';
+
+SplitJson.TEMPLATE_PATH_ = '/tmp/ods';
+
+SplitJson.ODS_PATH_ = '/tmp/spreadsheets';
+
+SplitJson.ODS_TEMPLATE_ = '/home/sorge/git/speech-rule-engine/resources/l10n/templates/ods';
+
+SplitJson.INPUT_PATH_ = '/tmp/input';
 
 /**
  * Subpath to dir containing ChromeVox JSON definitions for symbols.
@@ -11,25 +24,35 @@ SplitJson.PATH_ = '/home/sorge/git/speech-rule-engine/src/mathmaps';
  * @const
  * @private
  */
-SplitJson.SYMBOLS_PATH_ = 'symbols';
+SplitJson.SYMBOLS_ = 'symbols';
 
 
 /**
- * Subpath to dir containing ChromeVox JSON definitions for functions.
+ * Name of functions file/directory.
  * @type {string}
  * @const
  * @private
  */
-SplitJson.FUNCTIONS_PATH_ = 'functions';
+SplitJson.FUNCTIONS_ = 'functions';
 
 
 /**
- * Subpath to dir containing ChromeVox JSON definitions for units.
+ * Name of units file/directory.
  * @type {string}
  * @const
  * @private
  */
-SplitJson.UNITS_PATH_ = 'units';
+SplitJson.UNITS_ = 'units';
+
+
+/**
+ * Name of prefix for units file.
+ * @type {string}
+ * @const
+ * @private
+ */
+SplitJson.PREFIX_ = 'prefix';
+
 
 /**
  * Subpath to dir containing ChromeVox JSON definitions for unused.
@@ -112,6 +135,12 @@ SplitJson.UNUSED_FILES_ = [
 ];
 
 
+SplitJson.FILES_MAP_ = new Map([
+  [SplitJson.SYMBOLS_, SplitJson.SYMBOLS_FILES_],
+  [SplitJson.FUNCTIONS_, SplitJson.FUNCTIONS_FILES_],
+  [SplitJson.UNITS_, SplitJson.UNITS_FILES_]
+]);
+
 //  'units_spanish.js'
 // TODO: Sort this similar to the above.
 // Localisation
@@ -170,45 +199,54 @@ SplitJson.splitContent = function(list, locale) {
 };
 
 
-SplitJson.splitFile = function(path, files, locale, iso, model) {
-  let fullPath = SplitJson.PATH_ + '/' + model + '/' + path + '/';
-  let tmp = '/tmp/' + path + '/';
-  shell.mkdir('-p', tmp);
+SplitJson.makePath = function(base, iso, kind) {
+  let outputPath = `${base}/${iso}/${kind}/`;
+  shell.mkdir('-p', outputPath);
+  return outputPath;
+};
+
+SplitJson.splitFile = function(kind, files, locale, iso, model) {
+  let inputPath = `${SplitJson.PATH_}/${model}/${kind}/`;
+  let outputPath = SplitJson.makePath(SplitJson.OUTPUT_PATH_, iso, kind);
   files.forEach(function(x) {
-    SplitJson.intoFile(fullPath + x, tmp + x, locale, iso);
+    SplitJson.intoFile(inputPath + x, outputPath + x, locale, iso);
   });
 };
 
 
-SplitJson.splitFiles = function(path, files, locale, iso, type, model) {
-  SplitJson.splitFile(path, files, locale, iso, model);
+SplitJson.splitFiles = function(kind, iso, model) {
+  let files = SplitJson.FILES_MAP_.get(kind);
+  let locale = SplitJson.loadLocale(
+    [`${kind}.json`], `${SplitJson.INPUT_PATH_}/${iso}/`);
+  SplitJson.splitFile(kind, files, locale, iso, model);
   let values = [];
   for(var key in locale) {
     values.push(locale[key]);
   }
   console.log(values.length);
   // Here we do the unused ones.
-  fs.writeFileSync('/tmp/rest-' + type + '.js', JSON.stringify(values, null, 2));
+  fs.writeFileSync(`${SplitJson.OUTPUT_PATH_}/rest-${kind}-${iso}.js`,
+                   JSON.stringify(values, null, 2));
 };
 
 
 
 
-SplitJson.allFiles = function(symbols, functions, units, path, iso) {
-  let locale = SplitJson.loadLocale(symbols, path);
-  SplitJson.splitFiles(SplitJson.SYMBOLS_PATH_,
-                       SplitJson.SYMBOLS_FILES_, locale, iso, 'symbols', 'en');
-  locale = SplitJson.loadLocale(functions, path);
-  SplitJson.splitFiles(SplitJson.FUNCTIONS_PATH_,
-                       SplitJson.FUNCTIONS_FILES_, locale, iso, 'functions', 'en');
-  locale = SplitJson.loadLocale(units, path);
-  SplitJson.splitFiles(SplitJson.UNITS_PATH_,
-                       SplitJson.UNITS_FILES_, locale, iso, 'units', 'en');
-  
+SplitJson.allFiles = function(iso) {
+  SplitJson.splitFiles(SplitJson.SYMBOLS_, iso, 'en');
+  SplitJson.splitFiles(SplitJson.FUNCTIONS_, iso, 'en');
+  SplitJson.splitFiles(SplitJson.UNITS_, iso, 'en');
 };
 
 
-SplitJson.localeToTable = function(content) {
+SplitJson.getFromMapping = function(mappings) {
+  return (mappings.mathspeak && mappings.mathspeak.default) ?
+    mappings.mathspeak.default :
+    (mappings.default.short ? mappings.default.short :
+     mappings.default.default);
+};
+
+SplitJson.localeToTable = function(content, kind) {
   let table = [];
   for (let key in content) {
     let mappings = content[key].mappings;
@@ -216,41 +254,59 @@ SplitJson.localeToTable = function(content) {
       console.log('Missing: ' + key);
       continue;
     }
-    // Not sure what that does.
-    let text = mappings.mathspeak ? mappings.mathspeak.default :
-        (mappings.default.short ? mappings.default.short :
-         mappings.default.default);
+    // TODO: Sort this out for kind!
+    let text = SplitJson.getFromMapping(mappings);
     table.push('<tr><td>&#x' + key + ';</td><td>' + text + '</td></tr>');
   }
   return table;
 };
 
-SplitJson.compareLocaleToTable = function(english, locale) {
+SplitJson.htmlRow = function(...row) {
+  return '<tr><td>' + row.join('</td><td>') + '</td></tr';
+};
+
+SplitJson.HTML_CAPTIONS_ = new Map([
+  [SplitJson.SYMBOLS_, ['Char', 'English', 'Locale']],
+  [SplitJson.FUNCTIONS_, ['Function', 'Alt. Names', 'English', 'Locale']],
+  [SplitJson.UNITS_, ['Unit', 'Alt. Names', 'English', 'Plural', 'Singular', 'Dual']]
+]);
+
+SplitJson.compareLocaleToTable = function(english, locale, kind) {
   let table = [];
+  table.push(SplitJson.htmlRow(...SplitJson.HTML_CAPTIONS_.get(kind)).replace(/td/g, 'th'));
   for (let key in english) {
     let mappings = english[key].mappings;
     if (!mappings) {
       console.log('Missing: ' + key);
       continue;
     }
-    // Not sure what that does.
-    let eng_text = mappings.mathspeak ? mappings.mathspeak.default :
-        (mappings.default.short ? mappings.default.short :
-         mappings.default.default);
+    let eng_text = SplitJson.getFromMapping(mappings);
     let loc_map = locale[key];
     let loc_text = '';
     if (loc_map) {
       loc_map = loc_map.mappings;
-      loc_text = loc_map.mathspeak ? loc_map.mathspeak.default :
-        (loc_map.default.short ? loc_map.default.short :
-         loc_map.default.default);
+      loc_text = SplitJson.getFromMapping(loc_map);
     }
-    table.push(`<tr><td>&#x${key};</td><td>${loc_text}</td><td>${eng_text}</td></tr>`);
+    let names = '';
+    switch (kind) {
+    case 'units':
+      names = english[key].names.join(', ');
+      let singular = loc_map ? loc_map.default.singular : '';
+      let dual = loc_map ? loc_map.default.dual : '';
+      table.push(SplitJson.htmlRow(key, names, eng_text, loc_text, singular, dual));
+      break;
+    case 'functions':
+      names = english[key].names.join(', ');
+      table.push(SplitJson.htmlRow(key, names, eng_text, loc_text));
+      break;
+    default:
+      table.push(SplitJson.htmlRow(`&#x${key};`, eng_text, loc_text));
+    }
   }
   return table;
 };
 
-SplitJson.toHTML = function(file, table, path = '/tmp/') {
+SplitJson.tableToHTML = function(file, table, path = '/tmp/') {
   let filename = path + file + '.html';
   let style = '\n<style>\n' +
       'table, th, td {\n' +
@@ -269,51 +325,94 @@ SplitJson.toHTML = function(file, table, path = '/tmp/') {
   fs.writeFileSync(filename, output);
 };
 
-SplitJson.symbolsToHTML = function(compare = false,
-                                   locale = 'en',
-                                   path = '/tmp/symbols/') {
+SplitJson.localeToHTML = function(locale = 'en',
+                                  kind = SplitJson.SYMBOLS_,
+                                  compare = true) {
+  let fileList = SplitJson.FILES_MAP_.get(kind);
   let files = [];
   let localeContent = null;
-  for (let file of SplitJson.SYMBOLS_FILES_) {
-    let content = SplitJson.loadLocale([file], `${SplitJson.PATH_}/${locale}/symbols/`);
+  let path = SplitJson.makePath(SplitJson.HTML_PATH_, locale, kind);
+  for (let file of fileList) {
+    let content = SplitJson.loadLocale([file], `${SplitJson.PATH_}/${locale}/${kind}/`);
     if (compare) {
-      localeContent = SplitJson.loadLocale([file], `${SplitJson.PATH_}/en/symbols/`);
+      localeContent = SplitJson.loadLocale([file], `${SplitJson.PATH_}/en/${kind}/`);
     }
     let name = file.split('.')[0];
     files.push(name);
     let table = compare ?
-        SplitJson.compareLocaleToTable(localeContent, content) :
+        SplitJson.compareLocaleToTable(localeContent, content, kind) :
         SplitJson.localeToTable(content);
-    SplitJson.toHTML(name, table, path);
+    SplitJson.tableToHTML(name, table, path);
   }
-  let index = '<html><head><title>Symbols</title></head>';
+  let index = `<html><head><title>${kind}</title></head>`;
   index += '\n<body><ul>';
   for (let file of files) {
     index += '\n<li><a href="' + file + '.html">'  + file + '</a></li>';
   }
   index += '\n</ul></body></html>';
-  fs.writeFileSync(path + 'index.html', index);
+  fs.writeFileSync(`${path}/index.html`, index);
 };
 
+
+SplitJson.toHTML = function(iso = 'en', compare = true) {
+  SplitJson.localeToHTML(iso, SplitJson.SYMBOLS_, compare);
+  SplitJson.localeToHTML(iso, SplitJson.FUNCTIONS_, compare);
+  SplitJson.localeToHTML(iso, SplitJson.UNITS_, compare);
+  // SplitJson.localeToHTML(iso, SplitJson.PREFIX_, compare);
+};
 
 /************************************************************
 /*   Create ods files directly 
 /*********************************************/
 
-SplitJson.symbolsToOds = function(locale = 'en',
-                                  path = '/tmp/symbols/') {
+
+SplitJson.toOds = function(iso = 'en') {
+  console.log('doing it');
+  shell.cp('-R', SplitJson.ODS_TEMPLATE_, '/tmp/');
+  SplitJson.odsCreate(iso, SplitJson.SYMBOLS_);
+  SplitJson.odsCreate(iso, SplitJson.FUNCTIONS_);
+  SplitJson.odsCreate(iso, SplitJson.UNITS_);
+  // SplitJson.localeToHTML(iso, SplitJson.PREFIX_, compare);
+};
+
+SplitJson.odsCreate = function(iso, kind) {
+  SplitJson.localeToOds(iso, SplitJson.TEMPLATE_PATH_, kind);
+  let outputPath = `${SplitJson.ODS_PATH_}/${iso}/`;
+  shell.mkdir('-p', outputPath);
+  let file = `${kind}-${iso}.ods`;
+  shell.cd(SplitJson.TEMPLATE_PATH_);
+  shell.exec(`zip -r ../${file} .`);
+  shell.mv(`/tmp/${file}`, outputPath);
+};
+
+
+SplitJson.localeToOds = function(locale = 'en',
+                                 path = '/tmp/ods',
+                                 kind = SplitJson.SYMBOLS_) {
   let tables = [];
-  for (let file of SplitJson.SYMBOLS_FILES_) {
-    let content = SplitJson.loadLocale([file], `${SplitJson.PATH_}/${locale}/symbols/`);
-    let english = SplitJson.loadLocale([file], `${SplitJson.PATH_}/en/symbols/`);
+  let fileList = SplitJson.FILES_MAP_.get(kind);
+  for (let file of fileList) {
+    let content = SplitJson.loadLocale([file], `${SplitJson.PATH_}/${locale}/${kind}/`);
+    let english = SplitJson.loadLocale([file], `${SplitJson.PATH_}/en/${kind}/`);
     let name = file.split('.')[0];
-    tables.push(SplitJson.odsTable(name, english, content));
+    tables.push(SplitJson.odsTable(name, english, content, kind));
   }
   SplitJson.odsFile(tables.join(''), path);
 };
 
 
-SplitJson.odsTable = function(name, english, locale) {
+SplitJson.odsRow = function(...row) {
+  let cellStart = '<table:table-cell office:value-type="string" calcext:value-type="string"><text:p>';
+  let cellEnd = '</text:p></table:table-cell>';
+  return '<table:table-row table:style-name="ro1">' +
+    cellStart +
+    row.join(cellEnd + cellStart) +
+    cellEnd +
+    '</table:table-row>';
+};
+
+
+SplitJson.odsTable = function(name, english, locale, kind) {
   let start = `<table:table table:name="${name}" table:style-name="ta1">` +
       '<table:table-column table:style-name="co1"' +
       ' table:number-columns-repeated="3"' +
@@ -331,35 +430,36 @@ SplitJson.odsTable = function(name, english, locale) {
       continue;
     }
     // Not sure what that does.
-    let eng_text = mappings.mathspeak ? mappings.mathspeak.default :
-        (mappings.default.short ? mappings.default.short :
-         mappings.default.default);
+    let eng_text = SplitJson.getFromMapping(mappings);
     let loc_map = locale[key];
     let loc_text = '';
     if (loc_map) {
       loc_map = loc_map.mappings;
-      loc_text = loc_map.mathspeak ? loc_map.mathspeak.default :
-        (loc_map.default.short ? loc_map.default.short :
-         loc_map.default.default);
+      loc_text = SplitJson.getFromMapping(loc_map);
     }
-    let row = '<table:table-row table:style-name="ro1">';
-    row += '<table:table-cell office:value-type="string" calcext:value-type="string">';
-    row += '<text:p>';
-    console.log(secure[key]);
-    row += secure[key] || SplitJson.numberToUnicode(parseInt(key, 16));
-    row += '</text:p>';
-    row += '</table:table-cell>';
-    row += '<table:table-cell office:value-type="string" calcext:value-type="string">';
-    row += `<text:p>${loc_text}</text:p></table:table-cell>`;
-    row += '<table:table-cell office:value-type="string" calcext:value-type="string">';
-    row += `<text:p>${eng_text}</text:p></table:table-cell></table:table-row>`;
-    table.push(row);
+    let names = '';
+    let row = '';
+    switch (kind) {
+    case 'units':
+      names = english[key].names.join(', ');
+      let singular = loc_map ? loc_map.default.singular : '';
+      let dual = loc_map ? loc_map.default.dual : '';
+      table.push(SplitJson.odsRow(key, names, eng_text, loc_text, singular, dual));
+      break;
+    case 'functions':
+      names = english[key].names.join(', ');
+      table.push(SplitJson.odsRow(key, names, eng_text, loc_text));
+      break;
+    default:
+      table.push(SplitJson.odsRow(
+      secure[key] || SplitJson.numberToUnicode(parseInt(key, 16)),
+        eng_text, loc_text));
+    }
   }
   return start + table.join('') + '</table:table>';
 };
 
-
-SplitJson.odsFile = function(table, path = '/tmp/') {
+SplitJson.odsFile = function(table, path = '/tmp/ods') {
   let content = '<?xml version="1.0" encoding="UTF-8"?>\n';
   content += '<office:document-content' +
     ' xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"' +
@@ -435,7 +535,7 @@ SplitJson.odsFile = function(table, path = '/tmp/') {
   content += table;
   content += '<table:named-expressions/></office:spreadsheet></office:body>' +
     '</office:document-content>';
-  fs.writeFileSync(`${path}content.xml`, content);
+  fs.writeFileSync(`${path}/content.xml`, content);
 };
 
 
