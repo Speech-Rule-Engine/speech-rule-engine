@@ -435,7 +435,6 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
     return plural ? 'halves' : 'half';
   }
   var ordinal = sre.MathspeakUtil.numberToWords(num);
-  console.log(ordinal);
   if (ordinal.match(/one$/)) {
     ordinal = ordinal.slice(0, -3) + 'first';
   } else if (ordinal.match(/two$/)) {
