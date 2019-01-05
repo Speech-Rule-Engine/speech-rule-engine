@@ -63,16 +63,16 @@ sre.AbstractExamples = function() {
   /**
    * Base directory for the output file.
    * @type {string}
-   * @private
+   * @protected
    */
-  this.fileDirectory_ = 'resources/www/localisation';
+  this.fileDirectory = 'resources/www/localisation';
 
   /**
    * Sets example output file for tests.
    * @type {string}
    * @private
    */
-  this.examplesFile_ = this.fileDirectory_ + '/tests.' + this.fileExtension_;
+  this.examplesFile_ = this.fileDirectory + '/tests.' + this.fileExtension_;
 
   /**
    * The output values.
@@ -89,7 +89,7 @@ goog.inherits(sre.AbstractExamples, sre.AbstractTest);
  */
 sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
   var ext = opt_ext || this.fileExtension_;
-  this.examplesFile_ = this.fileDirectory_ + '/' + file + '.' + ext;
+  this.examplesFile_ = this.fileDirectory + '/' + file + '.' + ext;
 };
 
 

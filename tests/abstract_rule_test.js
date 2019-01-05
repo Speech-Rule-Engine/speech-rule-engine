@@ -72,6 +72,15 @@ goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
 
 
 /**
+ * @override
+ */
+sre.AbstractRuleTest.prototype.setActive = function(file, opt_ext) {
+  this.fileDirectory = this.fileDirectory + '/' + this.locale;
+  sre.AbstractRuleTest.base(this, 'setActive', file, opt_ext);
+};
+
+
+/**
  * Tests if for speech translation of a given html snippet is equal to the
  * answer provided.
  * @param {string} mml Snippet of a MathML expression.
