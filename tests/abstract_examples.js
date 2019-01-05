@@ -98,7 +98,6 @@ sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
  */
 sre.AbstractExamples.prototype.startExamples = function() {
   if (!this.active_) return;
-  console.log('FILE: '+ this.examplesFile_);
   try {
     sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
   } catch (err) {
