@@ -29,13 +29,17 @@ goog.require('sre.EnrichSpeechTest');
 goog.require('sre.MarkupTest');
 goog.require('sre.MathAlphabetsTest');
 goog.require('sre.MathmlStoreTest');
+goog.require('sre.MathspeakEmbellishFrenchTest');
 goog.require('sre.MathspeakEmbellishSpanishTest');
 goog.require('sre.MathspeakEmbellishTest');
 goog.require('sre.MathspeakEnglishTest');
+goog.require('sre.MathspeakFrenchTest');
 goog.require('sre.MathspeakSpanishTest');
 goog.require('sre.MmlcloudEnglishTest');
+goog.require('sre.MmlcloudFrenchTest');
 goog.require('sre.MmlcloudSpanishTest');
 goog.require('sre.NobleEnglishTest');
+goog.require('sre.NobleFrenchTest');
 goog.require('sre.NobleSpanishTest');
 goog.require('sre.PrefixRuleTest');
 goog.require('sre.RebuildStreeTest');
@@ -90,12 +94,16 @@ sre.Tests.testList = [
   sre.MathAlphabetsTest,
   sre.MathmlStoreTest,
   sre.MathspeakEmbellishTest,
+  sre.MathspeakEmbellishFrenchTest,
   sre.MathspeakEmbellishSpanishTest,
   sre.MathspeakEnglishTest,
+  sre.MathspeakFrenchTest,
   sre.MathspeakSpanishTest,
   sre.MmlcloudEnglishTest,
+  sre.MmlcloudFrenchTest,
   sre.MmlcloudSpanishTest,
   sre.NobleEnglishTest,
+  sre.NobleFrenchTest,
   sre.NobleSpanishTest,
   sre.PrefixRuleTest,
   sre.RebuildStreeTest,
