@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2014-18 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ goog.provide('sre.AuditoryDescription');
 
 goog.require('sre.BaseUtil');
 goog.require('sre.Engine');
+goog.require('sre.Span');
 
 
 
@@ -34,6 +35,7 @@ goog.require('sre.Engine');
  *          text: (string),
  *          userValue: (undefined|string),
  *          annotation: (undefined|string),
+ *          attributes: (undefined|Object),
  *          personality: (undefined|Object)}} kwargs The arguments for this
  *  description.
  *  context The context, for example descriptions of objects
@@ -51,6 +53,7 @@ sre.AuditoryDescription = function(kwargs) {
   this.text = kwargs.text || '';
   this.userValue = kwargs.userValue || '';
   this.annotation = kwargs.annotation || '';
+  this.attributes = kwargs.attributes || {};
   this.personality = kwargs.personality || {};
 };
 
@@ -102,12 +105,20 @@ sre.AuditoryDescription.prototype.clone = function() {
       personality = this.personality[key];
     }
   }
+  var attributes;
+  if (this.attributes) {
+    attributes = {};
+    for (var key in this.attributes) {
+      attributes = this.attributes[key];
+    }
+  }
   return new sre.AuditoryDescription(
       {context: this.context,
         text: this.text,
         userValue: this.userValue,
         annotation: this.annotation,
-        personality: personality
+        personality: personality,
+        attributes: attributes
       });
 };
 
@@ -130,6 +141,15 @@ sre.AuditoryDescription.prototype.descriptionString = function() {
   return this.context && this.text ?
       this.context + ' ' + this.text :
       this.context || this.text;
+};
+
+
+/**
+ * @return {sre.Span} A span representation
+ *     of this object.
+ */
+sre.AuditoryDescription.prototype.descriptionSpan = function() {
+  return new sre.Span(this.descriptionString(), this.attributes);
 };
 
 

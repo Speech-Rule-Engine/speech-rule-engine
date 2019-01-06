@@ -238,6 +238,17 @@ sre.SemanticRuleTest.prototype.testMultiline = function() {
 
 
 /**
+ * Tests for mixed numbers. MJ a11y issue #225. 
+ */
+sre.SemanticRuleTest.prototype.testMixedNumbers = function() {
+  this.executeRuleTest(
+      '<mn>4</mn><mfrac><mn>1</mn><mn>3</mn></mfrac>',
+      'four and one divided by three'
+  );
+};
+
+
+/**
  * Testing the quadratic for different locales. For the base rules we generally
  * get mixed language output.
  */
