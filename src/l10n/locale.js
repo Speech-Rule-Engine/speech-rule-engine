@@ -34,7 +34,8 @@ goog.require('sre.Messages');
  *   FONT: Object.<sre.SemanticAttr.Font>,
  *   ROLE: Object.<sre.SemanticAttr.Role>,
  *   ENCLOSE: Object.<sre.SemanticAttr.Role>,
- *   NAVIGATE: Object.<string>
+ *   NAVIGATE: Object.<string>,
+ *   REGEXP: Object.<string>
  * }}
  */
 sre.Locale.Messages;
@@ -124,3 +125,20 @@ sre.Locale.localEnclose = function(enclose) {
 sre.Grammar.getInstance().setCorrection(
     'localEnclose', sre.Locale.localEnclose
 );
+
+
+/**
+ * Makes a plural out of a unit denomination.
+ * @param {string} unit The unit name.
+ * @return {string} The unit set into plural (i.e., append an s if necessary).
+ */
+sre.Locale.makePlural = function(unit) {
+  var plural = sre.Messages.PLURAL_UNIT[unit];
+  return plural ? plural : sre.Messages.PLURAL(unit);
+};
+
+
+sre.Grammar.getInstance().setCorrection(
+    'plural', sre.Locale.makePlural);
+
+

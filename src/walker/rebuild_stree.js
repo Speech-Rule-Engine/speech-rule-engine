@@ -24,7 +24,8 @@ goog.provide('sre.RebuildStree');
 
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
+goog.require('sre.SemanticNodeFactory');
+goog.require('sre.SemanticProcessor');
 goog.require('sre.SemanticSkeleton');
 goog.require('sre.SemanticTree');
 goog.require('sre.WalkerUtil');
@@ -38,6 +39,11 @@ goog.require('sre.WalkerUtil');
  * @param {!Element} mathml The enriched MathML node.
  */
 sre.RebuildStree = function(mathml) {
+
+  /**
+   * @type {sre.SemanticNodeFactory}
+   */
+  this.factory = new sre.SemanticNodeFactory();
 
   /**
    * @type {!Object.<!sre.SemanticNode>}
@@ -68,6 +74,7 @@ sre.RebuildStree = function(mathml) {
    * @type {!Node}
    */
   this.xml = this.stree.xml();
+  sre.SemanticProcessor.getInstance().setNodeFactory(this.factory);
 
 };
 
@@ -300,7 +307,7 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
  * @return {sre.SemanticNode} The newly created node.
  */
 sre.RebuildStree.prototype.createNode = function(id) {
-  var node = new sre.SemanticNode(id);
+  var node = this.factory.makeNode(id);
   this.nodeDict[id.toString()] = node;
   return node;
 };

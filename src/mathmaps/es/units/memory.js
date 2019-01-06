@@ -11,7 +11,8 @@
       "default": {
         "default": "bit"
       }
-    }
+    },
+    "category": "memory"
   },
   {
     "key": "B",
@@ -22,7 +23,8 @@
       "default": {
         "default": "byte"
       }
-    }
+    },
+    "category": "memory"
   },
   {
     "key": "KB",
@@ -33,7 +35,8 @@
       "default": {
         "default": "kilobyte"
       }
-    }
+    },
+    "category": "memory"
   },
   {
     "key": "MB",
@@ -44,7 +47,8 @@
       "default": {
         "default": "megabyte"
       }
-    }
+    },
+    "category": "memory"
   },
   {
     "key": "GB",
@@ -55,7 +59,8 @@
       "default": {
         "default": "gigabyte"
       }
-    }
+    },
+    "category": "memory"
   },
   {
     "key": "TB",
@@ -66,6 +71,7 @@
       "default": {
         "default": "terabyte"
       }
-    }
+    },
+    "category": "memory"
   }
 ]

@@ -14,7 +14,8 @@
       "default": {
         "default": "docena"
       }
-    }
+    },
+    "category": "other"
   },
   {
     "key": "sq",
@@ -26,7 +27,8 @@
       "default": {
         "default": "al cuadrado"
       }
-    }
+    },
+    "category": "other"
   },
   {
     "key": "ha",
@@ -37,6 +39,7 @@
       "default": {
         "default": "hectarea"
       }
-    }
+    },
+    "category": "other"
   }
 ]

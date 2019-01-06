@@ -1524,7 +1524,6 @@ sre.SemanticAttr.Role = {
 
   // General
   UNKNOWN: 'unknown',
-  PROTECTED: 'protected'
 };
 
 
