@@ -246,7 +246,7 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
     return null;
   }
   if (!en_num || (loc_num && loc_num[0].length > en_num[0].length)) {
-    return {number: number, length: loc_num[0].length};
+    return {number: loc_num, length: loc_num[0].length};
   }
   // English number:
   var number = en_num[0].replace(/,/g, 'X').
