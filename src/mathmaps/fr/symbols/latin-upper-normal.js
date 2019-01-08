@@ -222,7 +222,7 @@
     "key": "0059",
     "mappings": {
       "default": {
-        "default": "i grec majuscule"
+        "default": "y majuscule"
       }
     },
     "category": "Lu"

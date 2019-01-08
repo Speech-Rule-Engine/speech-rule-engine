@@ -222,7 +222,7 @@
     "key": "0079",
     "mappings": {
       "default": {
-        "default": "i grec"
+        "default": "y"
       }
     },
     "category": "Ll"
