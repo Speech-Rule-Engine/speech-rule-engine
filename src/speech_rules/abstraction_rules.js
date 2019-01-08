@@ -84,7 +84,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-collapsed', 'mathspeak.default',
       '[t] "collapsed"; [n] . (grammar:collapsed)',
       'self::*', '@alternative', 'not(@alternative="summary")',
-      'not(contains(@grammar, "collapsed"))'
+      'not(contains(@grammar, "collapsed"))', 'self::*', 'self::*',
+      'self::*', 'self::*'
   );
 
   // Identifier
