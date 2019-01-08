@@ -28,21 +28,6 @@ goog.require('sre.XpathUtil');
 
 
 /**
- * Rewrites numbers from anglosaxon notation to European notation.
- * @param {string} number The number.
- * @return {string} The rewritten number.
- */
-sre.MathspeakSpanishUtil.europeanNumber = function(number) {
-  number = number.replace(/,/g, '').replace(/\./g, ',');
-  return number;
-};
-
-
-sre.Grammar.getInstance().setCorrection(
-    'euroNum', sre.MathspeakSpanishUtil.europeanNumber);
-
-
-/**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
  */
@@ -212,20 +197,6 @@ sre.MathspeakSpanishUtil.leftMostUnit = function(node) {
   }
   return false;
 };
-
-
-/**
- * Makes a plural out of a unit denomination.
- * @param {string} unit The unit name.
- * @return {string} The unit set into plural (i.e., append an s if necessary).
- */
-sre.MathspeakSpanishUtil.makePlural = function(unit) {
-  return (/.*s$/.test(unit)) ? unit : unit + 's';
-};
-
-
-sre.Grammar.getInstance().setCorrection(
-    'plural', sre.MathspeakSpanishUtil.makePlural);
 
 
 /**

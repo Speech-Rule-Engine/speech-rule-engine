@@ -1,53 +1,53 @@
 [{"locale": "en"},
-  {"category": "",
+  {"category": "memory",
    "mappings": {
      "default": {
-       "default": "bits"
+       "default": "bit"
      }
    },
    "key": "b",
    "names": ["b"]
   },
-  {"category": "",
+  {"category": "memory",
    "mappings": {
      "default": {
-       "default": "bytes"
+       "default": "byte"
      }
    },
    "key": "B",
    "names": ["B"]
   },
-  {"category": "",
+  {"category": "memory",
    "mappings": {
      "default": {
-       "default": "kilobytes"
+       "default": "kilobyte"
      }
    },
    "key": "KB",
    "names": ["KB"]
   },
-  {"category": "",
+  {"category": "memory",
    "mappings": {
      "default": {
-       "default": "megabytes"
+       "default": "megabyte"
      }
    },
    "key": "MB",
    "names": ["MB"]
   },
-  {"category": "",
+  {"category": "memory",
    "mappings": {
      "default": {
-       "default": "gigabytes"
+       "default": "gigabyte"
      }
    },
    "key": "GB",
    "names": ["GB"]
   },
-  {"category": "",
+  {"category": "memory",
    "mappings": {
      "default": {
-       "default": "terabytes"
+       "default": "terabyte"
      }
    },
    "key": "TB",

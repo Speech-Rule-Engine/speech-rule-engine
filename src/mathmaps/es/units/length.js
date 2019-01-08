@@ -12,7 +12,7 @@
         "default": "milímetro"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "cm",
@@ -24,7 +24,7 @@
         "default": "centímetro"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "m",
@@ -36,7 +36,7 @@
         "default": "metro"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "km",
@@ -48,7 +48,7 @@
         "default": "kilómetro"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "ft",
@@ -61,7 +61,7 @@
         "default": "pies"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "in",
@@ -74,7 +74,7 @@
         "default": "pulgada"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "mi",
@@ -87,7 +87,7 @@
         "default": "milla"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "yd",
@@ -100,7 +100,7 @@
         "default": "yarda"
       }
     },
-    "category": "Length"
+    "category": "length"
   },
   {
     "key": "n.m.",
@@ -111,6 +111,7 @@
       "default": {
         "default": "millas náuticas"
       }
-    }
+    },
+    "category": "length"
   }
 ]

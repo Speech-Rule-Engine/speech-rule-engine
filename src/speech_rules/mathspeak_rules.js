@@ -155,7 +155,6 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'stree', 'mathspeak.default',
       '[n] ./*[1]', 'self::stree', 'CQFresetNesting');
 
-
   // Dummy rules
   defineRule(
       'unknown', 'mathspeak.default', '[n] text()',
@@ -163,7 +162,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'protected', 'mathspeak.default', '[t] text()',
-      'self::*', '@role="protected"');
+      'self::number', 'contains(@grammar, "protected")');
 
   defineRule(
       'omit-empty', 'mathspeak.default',
@@ -231,13 +230,14 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'number-with-chars', 'mathspeak.default',
-      '[t] "Number"; [m] CQFspaceoutNumber', 'self::number',
+      '[t] "Number"; [m] CQFspaceoutNumber (grammar:protected)',
+      'self::number', '@role="othernumber"',
       '"" != translate(text(), "0123456789.,", "")',
-      'text() != translate(text(), "0123456789.,", "")');
+      'not(contains(@grammar, "protected"))');
 
   defineSpecialisedRule(
       'number-with-chars', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Num"; [m] CQFspaceoutNumber');
+      '[t] "Num"; [m] CQFspaceoutNumber (grammar:protected)');
   defineSpecialisedRule(
       'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
 
@@ -256,6 +256,10 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       '\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E' +
       '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9",' +
       '"")');
+  defineSpecialisedRule(
+      'number-as-upper-word', 'mathspeak.default', 'mathspeak.brief');
+  defineSpecialisedRule(
+      'number-as-upper-word', 'mathspeak.default', 'mathspeak.sbrief');
 
   defineRule(
       'number-baseline', 'mathspeak.default',
@@ -286,16 +290,21 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
-  // identifier
   defineRule(
       'identifier', 'mathspeak.default', '[m] CQFspaceoutIdentifier',
       'self::identifier', 'string-length(text())>1', '@role!="unit"',
-      '@role!="protected"',
-      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")');
+      'not(@font) or @font="normal" or contains(@grammar, "ignoreFont")',
+      'text()!=translate(text(), ' +
+      '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
+      '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
+      '\u03C0\u03C1\u03C2\u03C3\u03C4\u03C5\u03C6\u03C7\u03C8\u03C9' +
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0391\u0392\u0393' +
+      '\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E' +
+      '\u039F\u03A0\u03A1\u03A3\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9", ' +
+      '"")');
 
   defineRule(
-      'identifier', 'mathspeak.default', '[n] text()',
-      'self::identifier', '@role="protected"');
+      'identifier', 'mathspeak.default', '[n] text()', 'self::identifier');
 
   // minus sign
   defineRule(
@@ -1226,7 +1235,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
   // Unit rules.
   defineRule(
       'unit', 'mathspeak.default',
-      '[t] text() (grammar:annotation="unit":translate)',
+      '[t] text() (grammar:annotation="unit":translate:plural)',
       'self::identifier', '@role="unit"');
   defineRule(
       'unit-square', 'mathspeak.default',
@@ -1265,114 +1274,12 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
 
 /**
- * Component strings for tensor speech rules.
- * @enum {string}
+ * Generates the tensor rules.
  * @private
  */
-sre.MathspeakRules.componentString_ = {
-  2 : 'CSFbaseline',
-  1 : 'CSFsubscript',
-  0 : 'CSFsuperscript'
-};
-
-
-/**
- * Child number translation for tensor speech rules.
- * @enum {number}
- * @private
- */
-sre.MathspeakRules.childNumber_ = {
-  4 : 2,
-  3 : 3,
-  2 : 1,
-  1 : 4,
-  0 : 5
-};
-
-
-/**
- * Generates the rule strings and constraints for tensor rules.
- * @param {string} constellation Bitvector representing of possible tensor
- *     constellation.
- * @return {Array.<string>} A list consisting of additional constraints for the
- *     tensor rule, plus the strings for the verbose and brief rule, in that
- *     order.
- * @private
- */
-sre.MathspeakRules.generateTensorRuleStrings_ = function(constellation) {
-  var constraints = [];
-  var verbString = '';
-  var briefString = '';
-  var constel = parseInt(constellation, 2);
-
-  for (var i = 0; i < 5; i++) {
-    var childString = 'children/*[' + sre.MathspeakRules.childNumber_[i] + ']';
-    if (constel & 1) {
-      var compString = sre.MathspeakRules.componentString_[i % 3];
-      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
-          verbString;
-      briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
-          briefString;
-    } else {
-      constraints.unshift('name(' + childString + ')="empty"');
-    }
-    constel >>= 1;
-  }
-  constraints.push(verbString);
-  constraints.push(briefString);
-  return constraints;
-};
-
-
-/**
- * Generator for tensor speech rules.
- * @private
- */
-sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
-  // Constellations are built as bitvectors with the meaning:
-  //
-  //  lsub lsuper base rsub rsuper
-  var constellations = ['11111', '11110', '11101', '11100',
-                        '10111', '10110', '10101', '10100',
-                        '01111', '01110', '01101', '01100'
-  ];
-  for (var i = 0, constel; constel = constellations[i]; i++) {
-    var name = 'tensor' + constel;
-    var components = sre.MathspeakRules.generateTensorRuleStrings_(constel);
-    var briefStr = components.pop();
-    var verbStr = components.pop();
-    var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
-        concat(components);
-    var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
-        concat(components);
-    // Rules without neighbour.
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
-    // Rules with baseline.
-    var baselineStr = sre.MathspeakRules.componentString_[2];
-    verbStr += '; [t]' + baselineStr + 'Verbose';
-    briefStr += '; [t]' + baselineStr + 'Brief';
-    name = name + '-baseline';
-    verbList = [name, 'mathspeak.default', verbStr, 'self::tensor',
-                'following-sibling::*'].
-        concat(components);
-    briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor',
-                 'following-sibling::*'].
-        concat(components);
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
-    // Rules without neighbour but baseline.
-    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
-                     'ancestor::fraction|ancestor::punctuated|' +
-                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel|' +
-                     '@embellished'].
-        concat(components);
-    defineRuleAlias.apply(null, aliasList);
-  }
-};
+sre.MathspeakRules.generateTensorRules_ = function() {
+  sre.MathspeakUtil.generateTensorRules(sre.MathspeakRules.mathStore);
+};  
 
 });  // goog.scope
 
@@ -1381,5 +1288,5 @@ sre.MathspeakRules.generateMathspeakTensorRules_ = function() {
 sre.MathspeakRules.getInstance().initializer = [
   sre.MathspeakRules.initCustomFunctions_,
   sre.MathspeakRules.initMathspeakRules_,
-  sre.MathspeakRules.generateMathspeakTensorRules_
+  sre.MathspeakRules.generateTensorRules_
 ];
