@@ -26,6 +26,7 @@ goog.require('sre.BaseRuleStore');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.EmacspeakRules');
 goog.require('sre.MathmlStoreRules');
+goog.require('sre.MathspeakFrench');
 goog.require('sre.MathspeakRules');
 goog.require('sre.MathspeakSpanish');
 goog.require('sre.PrefixRules');

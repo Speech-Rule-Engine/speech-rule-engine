@@ -100,6 +100,7 @@ goog.addSingletonGetter(sre.System.LocalStorage_);
  *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
+  console.log(feature);
   var engine = sre.Engine.getInstance();
   var setIf = function(feat) {
     if (typeof feature[feat] !== 'undefined') {
