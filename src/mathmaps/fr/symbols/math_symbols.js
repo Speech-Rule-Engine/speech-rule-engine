@@ -330,7 +330,7 @@
     "key": "00AB",
     "mappings": {
       "default": {
-        "default": "guillemet chevron pointant vers la gauche"
+        "default": "guillemet chevron pointant gauche"
       }
     },
     "category": "Pi"
@@ -438,7 +438,7 @@
     "key": "00BB",
     "mappings": {
       "default": {
-        "default": "guillemet chevron pointant vers la droite"
+        "default": "guillemet chevron pointant droite"
       }
     },
     "category": "Pf"
@@ -735,7 +735,7 @@
     "key": "2039",
     "mappings": {
       "default": {
-        "default": "guillemet simple vers la gauche"
+        "default": "guillemet simple gauche"
       }
     },
     "category": "Pi"
@@ -744,7 +744,7 @@
     "key": "203A",
     "mappings": {
       "default": {
-        "default": "guillemet simple vers la droite"
+        "default": "guillemet simple droite"
       }
     },
     "category": "Pf"

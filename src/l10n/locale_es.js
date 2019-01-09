@@ -63,7 +63,9 @@ sre.Locale.es = {
   MS_FUNC: {
     FRAC_NEST_DEPTH: function(node) { return false; },
     RADICAL_NEST_DEPTH: function(count) { return ''; },
-    COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex
+    COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
+    COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + c;}
   },
 
   //  That is female ending!
@@ -161,7 +163,8 @@ sre.Locale.es = {
     TEXT: 'a-zA-ZáéíóúñÁÉÍÓÚÑ',
     NUMBER: '((\\d{1,3})(?=(\\.| ))((\\.| )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
     DECIMAL_MARK: ',',
-    DIGIT_GROUP: ''
+    DIGIT_GROUP: '',
+    JOINER_SUBSUPER: ' '
   }
   
 };

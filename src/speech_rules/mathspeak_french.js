@@ -19,9 +19,12 @@
 
 goog.provide('sre.MathspeakFrench');
 
+goog.require('sre.ClearspeakUtil');
 goog.require('sre.MathStore');
 goog.require('sre.MathmlStoreUtil');
 goog.require('sre.MathspeakFrenchUtil');
+goog.require('sre.MathspeakUtil');
+goog.require('sre.SystemExternal');
 
 
 
@@ -32,6 +35,8 @@ goog.require('sre.MathspeakFrenchUtil');
  */
 sre.MathspeakFrench = function() {
   sre.MathspeakFrench.base(this, 'constructor');
+
+  this.locale = 'fr';
 };
 goog.inherits(sre.MathspeakFrench, sre.MathStore);
 goog.addSingletonGetter(sre.MathspeakFrench);
@@ -107,7 +112,7 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
-  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.MathspeakFrenchUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
@@ -119,20 +124,21 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   addCSF('CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief);
   addCSF('CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief);
   addCSF('CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief);
+  addCQF('CQFisSmallRoot', sre.MathspeakFrenchUtil.smallRoot);
 
   // Sub- Superscript.
   addCSF('CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
   addCSF('CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
   addCSF('CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
   addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
-  addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
-  addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
+  addCSF('CSFbaselineVerbose', sre.MathspeakFrenchUtil.baselineVerbose);
+  addCSF('CSFbaselineBrief', sre.MathspeakFrenchUtil.baselineBrief);
 
   // Over- Underscore.
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
-  addCTXF('CTXFordinalCounter', sre.MathspeakUtil.ordinalCounter);
+  addCTXF('CTXFordinalCounter', sre.MathspeakFrenchUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
 
   // Layout related.
@@ -142,6 +148,7 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   // Dummy.
   addCQF('CQFresetNesting', sre.MathspeakUtil.resetNestingDepth);
 
+  addCQF('CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase);
 };
 
 
@@ -171,19 +178,19 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'self::empty');
   defineRule(
       'blank-empty', 'mathspeak.default',
-      '[t] "Blank"', 'self::empty', 'count(../*)=1',
+      '[t] "vide"', 'self::empty', 'count(../*)=1',
       'name(../..)="cell" or name(../..)="line"');
 
   // Font rules
   defineRule(
       'font', 'mathspeak.default',
-      '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
+      '[n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font (grammar:localFont)',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier-short', 'mathspeak.default',
-      '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
+      '[n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font (grammar:localFont);',
       'self::identifier', 'string-length(text())=1',
       '@font', 'not(contains(@grammar, "ignoreFont"))', '@font="normal"',
       '""=translate(text(), ' +
@@ -197,7 +204,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'font-identifier', 'mathspeak.default',
-      '[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)',
+      '[n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font (grammar:localFont)',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -208,43 +215,31 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
 
-  defineRule(
-      'german-font', 'mathspeak.default',
-      '[t] "German"; [n] . (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font="fraktur"');
-
-  defineRule(
-      'german-font', 'mathspeak.default',
-      '[t] "bold German"; [n] . (grammar:ignoreFont=@font)',
-      'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-      '@font="bold-fraktur"');
-
   // Number rules
   defineRule(
       'number', 'mathspeak.default', '[n] text()', 'self::number');
 
   defineRule(
       'mixed-number', 'mathspeak.default',
-      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      '[n] children/*[1]; [t] "et"; [n] children/*[2]; ',
       'self::number', '@role="mixed"');
 
   defineRule(
       'number-with-chars', 'mathspeak.default',
-      '[t] "Number"; [m] CQFspaceoutNumber', 'self::number',
+      '[t] "nombre"; [m] CQFspaceoutNumber', 'self::number',
       '"" != translate(text(), "0123456789.,", "")',
       'text() != translate(text(), "0123456789.,", "")');
 
-  defineSpecialisedRule(
-      'number-with-chars', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Num"; [m] CQFspaceoutNumber');
-  defineSpecialisedRule(
-      'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
+  // defineSpecialisedRule(
+  //     'number-with-chars', 'mathspeak.default', 'mathspeak.brief',
+  //     '[t] "Num"; [m] CQFspaceoutNumber');
+  // defineSpecialisedRule(
+  //     'number-with-chars', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Maybe duplicate this rule for self::text
   defineRule(
       'number-as-upper-word', 'mathspeak.default',
-      '[t] "UpperWord"; [t] CSFspaceoutText', 'self::number',
+      '[t] "MotMajuscule"; [t] CSFspaceoutText', 'self::number',
       'string-length(text())>1', 'text()=translate(text(), ' +
       '"abcdefghijklmnopqrstuvwxyz\u03B1\u03B2\u03B3\u03B4' +
       '\u03B5\u03B6\u03B7\u03B8\u03B9\u03BA\u03BB\u03BC\u03BD\u03BE\u03BF' +
@@ -259,22 +254,22 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'number-baseline', 'mathspeak.default',
-      '[t] "Baseline"; [n] text()',
+      '[t] "position de base"; [n] . (grammar:baseline)',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
-      'preceding-sibling::identifier',
+      'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
       'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Base"; [n] text()');
+      '[t] "position de base"; [n] . (grammar:baseline)');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
 
 
   defineRule(
       'number-baseline-font', 'mathspeak.default',
-      '[t] "Baseline"; [t] @font; [n] . (grammar:ignoreFont=@font)',
+      '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
       'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
@@ -282,7 +277,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Base"; [n] text()');
+      '[t] "position de base"; [n] . (grammar:ignoreFont=@font); [t] "en"; [t] @font');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
@@ -300,7 +295,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // minus sign
   defineRule(
       'negative', 'mathspeak.default',
-      '[t] "negative"; [n] children/*[1]',
+      '[t] "négatif"; [n] children/*[1]',
       'self::prefixop', '@role="negative"', 'children/identifier');
   defineRuleAlias(
       'negative',
@@ -310,9 +305,10 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'self::prefixop', '@role="negative"',
       'children/fraction[@role="vulgar"]');
 
+  // TODO: collapse?
   defineRule(
       'negative', 'mathspeak.default',
-      '[t] "minus"; [n] children/*[1]',
+      '[t] "négatif"; [n] children/*[1]',
       'self::prefixop', '@role="negative"');
 
   // Operator rules
@@ -338,7 +334,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       ' @role="leftsub" or @role="rightsuper" or @role="rightsub"');
 
   defineRule('subtraction', 'mathspeak.default',
-             '[m] children/* (separator:"minus");', 'self::infixop',
+             '[m] children/* (separator:"moins");', 'self::infixop',
              '@role="subtraction"');
 
   // Function rules
@@ -361,13 +357,13 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'fences-neutral', 'mathspeak.default',
-      '[t] "StartAbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"',
+      '[t] "début valeur absolue"; [n] children/*[1]; [t] "fin valeur absolue"',
       'self::fenced', '@role="neutral"',
       'content/*[1][text()]="|" or content/*[1][text()]="❘" or' +
       ' content/*[1][text()]="｜"');
   defineSpecialisedRule(
       'fences-neutral', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] "AbsoluteValue"; [n] children/*[1]; [t] "EndAbsoluteValue"');
+      '[t] "valeur absolue"; [n] children/*[1]; [t] "fin valeur absolue"');
   defineRule(
       'fences-neutral', 'mathspeak.default',
       '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
@@ -377,7 +373,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // TODO (sorge) Maybe check for punctuated element and singleton?
   defineRule(
       'fences-set', 'mathspeak.default',
-      '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
+      '[t] "début ensemble"; [n] children/*[1]; [t] "fin ensemble"',
       'self::fenced', '@role="set empty" or @role="set extended"' +
       ' or @role="set singleton" or @role="set collection"',
       // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
@@ -385,7 +381,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'not(name(../..)="appl")');
   defineSpecialisedRule(
       'fences-set', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] "Set"; [n] children/*[1]; [t] "EndSet"');
+      '[t] "ensemble"; [n] children/*[1]; [t] "fin ensemble"');
 
 
   // Text rules
@@ -397,7 +393,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'factorial', 'mathspeak.default', '[t] "factorial"', 'self::punctuation',
       'text()="!"', 'name(preceding-sibling::*[1])!="text"');
   defineRule(
-      'minus', 'mathspeak.default', '[t] "minus"',
+      'minus', 'mathspeak.default', '[t] "moins"',
       'self::operator', 'text()="\u002D"');
 
   defineRule(
@@ -448,33 +444,33 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'continued-fraction-outer', 'mathspeak.default',
-      '[t] "ContinuedFraction"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]',
+      '[t] "fraction continue"; [n] children/*[1];' +
+      '[t] "sur"; [n] children/*[2]',
       'self::fraction', 'not(ancestor::fraction)',
       'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
       'not(following-sibling::*)]');
   defineSpecialisedRule(
       'continued-fraction-outer', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ContinuedFrac"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]');
+      '[t] "frac continue"; [n] children/*[1];' +
+      '[t] "sur"; [n] children/*[2]');
   defineSpecialisedRule(
       'continued-fraction-outer', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'continued-fraction-inner', 'mathspeak.default',
-      '[t] "StartFraction"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]',
+      '[t] "début fraction"; [n] children/*[1];' +
+      '[t] "sur"; [n] children/*[2]',
       'self::fraction', 'ancestor::fraction',
       'children/*[2]/descendant-or-self::*[@role="ellipsis" and ' +
       'not(following-sibling::*)]');
   defineSpecialisedRule(
       'continued-fraction-inner', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "StartFrac"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]');
+      '[t] "début frac"; [n] children/*[1];' +
+      '[t] "sur"; [n] children/*[2]');
   defineSpecialisedRule(
       'continued-fraction-inner', 'mathspeak.brief', 'mathspeak.sbrief',
-      '[t] "Frac"; [n] children/*[1];' +
-      '[t] "Over"; [n] children/*[2]');
+      '[t] "frac"; [n] children/*[1];' +
+      '[t] "sur"; [n] children/*[2]');
 
   // Radical rules
 
@@ -495,6 +491,24 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       '[t] CSFopenRadicalSbrief; [n] children/*[1];' +
           ' [t] CSFcloseRadicalBrief',
       'self::sqrt');
+
+  defineRule(
+      'root-small', 'mathspeak.default',
+      '[t] CSFopenRadicalVerbose; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalVerbose',
+      'self::root', 'CQFisSmallRoot');
+
+  defineRule(
+      'root-small', 'mathspeak.brief',
+      '[t] CSFopenRadicalBrief; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::root', 'CQFisSmallRoot');
+
+  defineRule(
+      'root-small', 'mathspeak.sbrief',
+      '[t] CSFopenRadicalSbrief; [n] children/*[2];' +
+          ' [t] CSFcloseRadicalBrief',
+      'self::root', 'CQFisSmallRoot');
 
   defineRule(
       'root', 'mathspeak.default',
@@ -550,17 +564,17 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   defineRule(
       'limboth-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      '[t] CSFoverscript; [n] children/*[3]; [t] "Endscripts"',
+      '[t] CSFoverscript; [n] children/*[3]; [t] "fin script"',
       'self::limboth');
   defineRule(
       'limlower-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];' +
-      ' [t] "Endscripts"',
+      ' [t] "fin script"',
       'self::limlower');
   defineRule(
       'limupper-end', 'mathspeak.default',
       '[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];' +
-      ' [t] "Endscripts"',
+      ' [t] "fin script"',
       'self::limupper');
   defineRuleAlias(
       'limlower-end', 'self::underscore', '@role="limit function"');
@@ -576,13 +590,13 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'self::integral');
   defineRule(
       'integral', 'mathspeak.default',
-      '[n] children/*[1]; [t] "Subscript"; [n] children/*[2];' +
-      '[t] "Superscript"; [n] children/*[3]; [t] "Baseline";',
+      '[n] children/*[1]; [t] "indice inférieur"; [n] children/*[2];' +
+      '[t] "indice supérieur"; [n] children/*[3]; [t] "position de base";',
       'self::limboth', '@role="integral"');
   defineSpecialisedRule(
       'integral', 'mathspeak.default', 'mathspeak.brief',
-      '[n] children/*[1]; [t] "Sub"; [n] children/*[2];' +
-      '[t] "Sup"; [n] children/*[3]; [t] "Base";');
+      '[n] children/*[1]; [t] "inf"; [n] children/*[2];' +
+      '[t] "sup"; [n] children/*[3]; [t] "position de base";');
   defineSpecialisedRule(
       'integral', 'mathspeak.brief', 'mathspeak.sbrief');
 
@@ -627,18 +641,24 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       'subscript', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
-      'subscript-simple', 'mathspeak.default',
-      '[n] children/*[1]; [n] children/*[2]',
-      'self::subscript',
-      'name(./children/*[1])="identifier"',
-      // Second child is a number but not mixed or other.
-      'name(./children/*[2])="number"',
-      './children/*[2][@role!="mixed"]',
-      './children/*[2][@role!="othernumber"]');
-  defineSpecialisedRule(
-      'subscript-simple', 'mathspeak.default', 'mathspeak.brief');
-  defineSpecialisedRule(
-      'subscript-simple', 'mathspeak.default', 'mathspeak.sbrief');
+      'subscript-base', 'mathspeak.default',
+      '[n] children/*[1]; [t] "base"; [n] children/*[2]',
+      'self::subscript', 'CQFisLogarithm', 'self::*', 'self::*', 'self::*');
+
+  // Commented out for Lise. 
+  // defineRule(
+  //     'subscript-simple', 'mathspeak.default',
+  //     '[n] children/*[1]; [n] children/*[2]',
+  //     'self::subscript',
+  //     'name(./children/*[1])="identifier"',
+  //     // Second child is a number but not mixed or other.
+  //     'name(./children/*[2])="number"',
+  //     './children/*[2][@role!="mixed"]',
+  //     './children/*[2][@role!="othernumber"]');
+  // defineSpecialisedRule(
+  //     'subscript-simple', 'mathspeak.default', 'mathspeak.brief');
+  // defineSpecialisedRule(
+  //     'subscript-simple', 'mathspeak.default', 'mathspeak.sbrief');
 
   defineRule(
       'subscript-baseline', 'mathspeak.default',
@@ -763,7 +783,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // Square
   defineRule(
       'square', 'mathspeak.default',
-      '[n] children/*[1]; [t] "squared"',
+      '[n] children/*[1]; [t] "au carré"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=2]',
       'name(children/*[1])!="text" or ' +
@@ -787,7 +807,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // Cube
   defineRule(
       'cube', 'mathspeak.default',
-      '[n] children/*[1]; [t] "cubed"',
+      '[n] children/*[1]; [t] "cubique"',
       'self::superscript', 'children/*[2]',
       'children/*[2][text()=3]',
       'name(children/*[1])!="text" or ' +
@@ -872,120 +892,72 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // Modifiers
   defineRule(
       'overscore', 'mathspeak.default',
-      '[t] "ModifyingAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
+      '[t] "suscrire"; [n] children/*[1]; [t] "avec"; [n] children/*[2]',
       'self::overscore', 'children/*[2][@role="overaccent"]'
   );
-  defineSpecialisedRule(
-      'overscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModAbove"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'overscore', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'double-overscore', 'mathspeak.default',
-      '[t] "ModifyingAbove Above"; [n] children/*[1]; [t] "With";' +
+      '[t] "sus-suscrire"; [n] children/*[1]; [t] "avec";' +
       ' [n] children/*[2]',
       'self::overscore', 'children/*[2][@role="overaccent"]',
       'name(children/*[1])="overscore"',
       'children/*[1]/children/*[2][@role="overaccent"]'
   );
-  defineSpecialisedRule(
-      'double-overscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModAbove Above"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'double-overscore', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'underscore', 'mathspeak.default',
-      '[t] "ModifyingBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]',
+      '[t] "souscrire"; [n] children/*[1]; [t] "avec"; [n] children/*[2]',
       'self::underscore', 'children/*[2][@role="underaccent"]'
   );
-  defineSpecialisedRule(
-      'underscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModBelow"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'underscore', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'double-underscore', 'mathspeak.default',
-      '[t] "ModifyingBelow Below"; [n] children/*[1]; [t] "With";' +
+      '[t] "sous-souscrire"; [n] children/*[1]; [t] "avec";' +
       ' [n] children/*[2]',
       'self::underscore', 'children/*[2][@role="underaccent"]',
       'name(children/*[1])="underscore"',
       'children/*[1]/children/*[2][@role="underaccent"]');
-  defineSpecialisedRule(
-      'double-underscore', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "ModBelow Below"; [n] children/*[1]; [t] "With"; [n] children/*[2]'
-  );
-  defineSpecialisedRule(
-      'double-underscore', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'overbar', 'mathspeak.default',
-      '[n] children/*[1]; [t] "overbar"',
+      '[n] children/*[1]; [t] "trait sus"',
       'self::overscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][@role="overaccent"]',   // redundancy
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
       ' or text()="\u005F" or text()="\u203E"]'
   );
-  defineSpecialisedRule(
-      'overbar', 'mathspeak.default', 'mathspeak.brief',
-      '[n] children/*[1]; [t] "overBar"'
-  );
-  defineSpecialisedRule(
-      'overbar', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'underbar', 'mathspeak.default',
-      '[n] children/*[1]; [t] "underbar"',
+      '[n] children/*[1]; [t] "trait sous"',
       'self::underscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][@role="underaccent"]',   // redundancy
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
       ' or text()="\u005F" or text()="\u203E"]'
   );
-  defineSpecialisedRule(
-      'underbar', 'mathspeak.default', 'mathspeak.brief',
-      '[n] children/*[1]; [t] "underBar"'
-  );
-  defineSpecialisedRule(
-      'underbar', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'overtilde', 'mathspeak.default',
-      '[n] children/*[1]; [t] "overTilde"',
+      '[n] children/*[1]; [t] "tilde sus"',
       'self::overscore',
       'children/*[2][@role="overaccent"]',   // redundancy
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
       ' or text()="\uFF5E"]'
   );
-  defineSpecialisedRule(
-      'overtilde', 'mathspeak.default', 'mathspeak.brief',
-      '[n] children/*[1]; [t] "overtilde"'
-  );
-  defineSpecialisedRule(
-      'overtilde', 'mathspeak.brief', 'mathspeak.sbrief');
 
   defineRule(
       'undertilde', 'mathspeak.default',
-      '[n] children/*[1]; [t] "underTilde"',
+      '[n] children/*[1]; [t] "tilde sous"',
       'self::underscore',
       '@role="latinletter" or @role="greekletter" or @role="otherletter"',
       'children/*[2][@role="underaccent"]',   // redundancy
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
       ' or text()="\uFF5E"]'
   );
-  defineSpecialisedRule(
-      'undertilde', 'mathspeak.default', 'mathspeak.brief',
-      '[n] children/*[1]; [t] "undertilde"'
-  );
-  defineSpecialisedRule(
-      'undertilde', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Layout Elements
   defineRule(
@@ -995,45 +967,45 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'matrix', 'mathspeak.default',
-      '[t] "Start"; [t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndMatrix"',
+      '[t] "début matrice"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*); ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin matrice"',
       'self::matrix');
   defineRule(
       'matrix', 'mathspeak.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Matrix"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndMatrix"', 'self::matrix');
+      '[t] "matrice"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*); ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin matrice"', 'self::matrix');
   defineRuleAlias(
       'matrix', 'self::vector');
 
   defineRule(
       'matrix-row', 'mathspeak.default',
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne");' +
       '[p] (pause: 200)',
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
-      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      '[t] "avec étiquette"; [n] content/*[1]; [t] "fin étiquette"(pause: 200); ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
       'self::row', 'content');
   defineRule(
       'row-with-label', 'mathspeak.brief',
-      '[t] "Label"; [n] content/*[1]; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      '[t] "étiquette"; [n] content/*[1]; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
       'self::row', 'content');
   defineSpecialisedRule(
       'row-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'row-with-text-label', 'mathspeak.sbrief',
-      '[t] "Label"; [t] CSFRemoveParens;' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+      '[t] "étiquette"; [t] CSFRemoveParens;' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
       'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'mathspeak.default',
-      '[t] "Blank"', 'self::row', 'count(children/*)=0');
+      '[t] "vide"', 'self::row', 'count(children/*)=0');
 
   defineRule(
       'matrix-cell', 'mathspeak.default',
@@ -1041,76 +1013,77 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   // defineRule(
   //     'empty-cell', 'mathspeak.default',
-  //     '[t] "Blank"', 'self::cell', 'count(children/*)=1', 'children/empty');
+  //     '[t] "vide"', 'self::cell', 'count(children/*)=1', 'children/empty');
   defineRule(
       'empty-cell', 'mathspeak.default',
-      '[t] "Blank"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
+      '[t] "vide"; [p] (pause: 300)', 'self::cell', 'count(children/*)=0');
 
 
   defineRule(
       'determinant', 'mathspeak.default',
-      '[t] "Start"; [t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndDeterminant"',
+      '[t] "début déterminant"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*); [t] "";' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin déterminant"',
       'self::matrix', '@role="determinant"');
   defineSpecialisedRule(
       'determinant', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndDeterminant"');
+      '[t] "déterminant"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*);' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin déterminant"');
 
   defineRule(
       'determinant-simple', 'mathspeak.default',
-      '[t] "Start"; [t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
-      'grammar:simpleDet); [t] "EndDeterminant"',
+      '[t] "début déterminant"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*);' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée",' +
+      'grammar:simpleDet); [t] "fin déterminant"',
       'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
   defineSpecialisedRule(
       'determinant-simple', 'mathspeak.default', 'mathspeak.sbrief',
-      '[t] count(children/*);  [t] "By";' +
-      '[t] count(children/*[1]/children/*); [t] "Determinant";' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row",' +
-      'grammar:simpleDet); [t] "EndDeterminant"');
+      '[t] "déterminant"; [t] count(children/*);  [t] "par";' +
+      '[t] count(children/*[1]/children/*);' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée",' +
+      'grammar:simpleDet); [t] "fin déterminant"');
   defineRule(
       'row-simple', 'mathspeak.default',
       '[m] children/*;',
       'self::row', '@role="determinant"', 'contains(@grammar, "simpleDet")');
 
   defineRule(
-      'layout', 'mathspeak.default', '[t] "StartLayout"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndLayout"', 'self::table');
+      'layout', 'mathspeak.default', '[t] "début tableau"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin tableau"', 'self::table');
   defineRule(
-      'layout', 'mathspeak.sbrief', '[t] "Layout"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndLayout"', 'self::table');
+      'layout', 'mathspeak.sbrief', '[t] "tableau"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin tableau"', 'self::table');
 
   defineRule(
       'binomial', 'mathspeak.default',
-      '[t] "StartBinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
-      ' [t] "EndBinomialOrMatrix"',
+      '[t] "début binomiale"; [n] children/*[2]/children/*[1]; ' +
+      '[t] "parmi"; [n] children/*[1]/children/*[1]; ' +
+      ' [t] "fin binomiale"',
       'self::vector', '@role="binomial"');
   defineRule(
       'binomial', 'mathspeak.sbrief',
-      '[t] "BinomialOrMatrix"; [n] children/*[1]/children/*[1]; ' +
-      '[t] "Choose"; [n] children/*[2]/children/*[1]; ' +
-      ' [t] "EndBinomialOrMatrix"',
+      '[t] "binomiale"; [n] children/*[1]/children/*[1]; ' +
+      '[t] "parmi"; [n] children/*[2]/children/*[1]; ' +
+      ' [t] "fin binomiale"',
       'self::vector', '@role="binomial"');
 
+  // TODO: Currently élargi is female. Could be male: chevron!
   defineRule(
-      'cases', 'mathspeak.default', '[t] "StartLayout"; ' +
-      '[t] "Enlarged"; [n] content/*[1];' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndLayout"', 'self::cases');
+      'cases', 'mathspeak.default', '[t] "début tableau"; ' +
+      '[n] content/*[1]; [t] "élargie";' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin tableau"', 'self::cases');
   defineRule(
-      'cases', 'mathspeak.sbrief', '[t] "Layout"; ' +
-      '[t] "Enlarged"; [n] content/*[1];' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Row ");' +
-      ' [t] "EndLayout"', 'self::cases');
+      'cases', 'mathspeak.sbrief', '[t] "tableau"; ' +
+      '[n] content/*[1]; [t] "élargie"; ' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+      ' [t] "fin tableau"', 'self::cases');
 
   // Multiline rules.
   defineRuleAlias(
@@ -1121,38 +1094,38 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       '[m] children/*', 'self::line');
   defineRule(
       'line-with-label', 'mathspeak.default',
-      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel" (pause: 200); ' +
+      '[t] "avec etiquette"; [n] content/*[1]; [t] "fin etiquette" (pause: 200); ' +
       '[m] children/*',
       'self::line', 'content');
   defineSpecialisedRule(
       'line-with-label', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Label"; [n] content/*[1] (pause: 200); [m] children/*');
+      '[t] "etiquette"; [n] content/*[1] (pause: 200); [m] children/*');
   defineSpecialisedRule(
       'line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'line-with-text-label', 'mathspeak.sbrief',
-      '[t] "Label"; [t] CSFRemoveParens; [m] children/*',
+      '[t] "etiquette"; [t] CSFRemoveParens; [m] children/*',
       'self::line', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-line', 'mathspeak.default',
-      '[t] "Blank"', 'self::line', 'count(children/*)=0', 'not(content)');
+      '[t] "vide"', 'self::line', 'count(children/*)=0', 'not(content)');
   defineSpecialisedRule('empty-line', 'mathspeak.default', 'mathspeak.brief');
   defineSpecialisedRule('empty-line', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'empty-line-with-label', 'mathspeak.default',
-      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
-      '[t] "Blank"', 'self::line', 'count(children/*)=0', 'content');
+      '[t] "avec etiquette"; [n] content/*[1]; [t] "fin etiquette" (pause: 200); ' +
+      '[t] "vide"', 'self::line', 'count(children/*)=0', 'content');
   defineSpecialisedRule(
       'empty-line-with-label', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Label"; [n] content/*[1] (pause: 200); [t] "Blank"');
+      '[t] "etiquette"; [n] content/*[1] (pause: 200); [t] "vide"');
   defineSpecialisedRule(
       'empty-line-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
 
   // Enclose
   defineRule(
       'enclose', 'mathspeak.default',
-      '[t] "StartEnclose"; [t] @role (grammar:localEnclose);' +
-      ' [n] children/*[1]; [t] "EndEnclose"',
+      '[t] "débutEnclose"; [t] @role (grammar:localEnclose);' +
+      ' [n] children/*[1]; [t] "fin Enclose"',
       'self::enclose');
   defineRuleAlias(
       'overbar', 'self::enclose', '@role="top"');
@@ -1170,13 +1143,13 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   // Crossout
   defineRule(
       'crossout', 'mathspeak.default',
-      '[t] "CrossOut"; [n] children/*[1]; [t] "EndCrossOut"',
+      '[t] "CrossOut"; [n] children/*[1]; [t] "fin CrossOut"',
       'self::enclose', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineRule(
       'cancel', 'mathspeak.default',
       '[t] "CrossOut"; [n] children/*[1]/children/*[1]; [t] "With";' +
-      ' [n] children/*[2]; [t] "EndCrossOut"',
+      ' [n] children/*[2]; [t] "fin CrossOut"',
       'self::overscore', '@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"');
   defineSpecialisedRule(
@@ -1189,7 +1162,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   defineRule(
       'cancel-reverse', 'mathspeak.default',
       '[t] "CrossOut"; [n] children/*[2]/children/*[1]; [t] "With";' +
-      ' [n] children/*[1]; [t] "EndCrossOut"',
+      ' [n] children/*[1]; [t] "fin CrossOut"',
       'self::overscore', 'name(children/*[2])="enclose"',
       'children/*[2][@role="updiagonalstrike" or' +
       ' @role="downdiagonalstrike" or @role="horizontalstrike"]');

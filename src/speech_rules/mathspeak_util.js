@@ -134,6 +134,7 @@ sre.MathspeakUtil.nestingDepth = {};
  * @return {Array.<Node>} Array containing the original node only.
  */
 sre.MathspeakUtil.resetNestingDepth = function(node) {
+  console.log('Ever used?');
   sre.MathspeakUtil.nestingDepth = {};
   return [node];
 };
@@ -315,8 +316,9 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_S;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.FRAC_S;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+    msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+    msg.MS.FRAC_S);
 };
 
 
@@ -330,8 +332,10 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.ENDFRAC;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.ENDFRAC;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+    msg.MS.NEST_FRAC,
+    msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+    msg.MS.ENDFRAC);
 };
 
 
@@ -345,8 +349,10 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_OVER;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.OVER;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+    msg.MS.NEST_FRAC,
+    msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+    msg.MS.FRAC_OVER);
 };
 
 
@@ -628,17 +634,18 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
         (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
         (nodeRole === sre.Semantic.Role.LEFTSUB ||
         nodeRole === sre.Semantic.Role.RIGHTSUB))) {
-      init = replace.sub + ' ' + init;
+      init = replace.sub + msg.REGEXP.JOINER_SUBSUPER + init;
     }
     if ((parent.tagName === sre.Semantic.Type.SUPERSCRIPT &&
          node === children.childNodes[1]) ||
         (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
         (nodeRole === sre.Semantic.Role.LEFTSUPER ||
         nodeRole === sre.Semantic.Role.RIGHTSUPER))) {
-      init = replace.sup + ' ' + init;
+      init = replace.sup + msg.REGEXP.JOINER_SUBSUPER + init;
     }
     node = parent;
   }
+  console.log('Nested super: ' + init);
   return init.trim();
 };
 
@@ -736,13 +743,15 @@ sre.MathspeakUtil.radicalNestingDepth = function(node) {
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
+  console.log('Root: ' + prefix + ' : ' + postfix);
   var depth = sre.MathspeakUtil.radicalNestingDepth(node);
   var index = sre.MathspeakUtil.getRootIndex(node);
   postfix = index ? msg.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
   if (depth === 1) {
     return postfix;
   }
-  return prefix + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + postfix;
+  return msg.MS_FUNC.COMBINE_NESTED_RADICAL(
+    prefix, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
 };
 
 

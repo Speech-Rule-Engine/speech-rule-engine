@@ -6,7 +6,8 @@
     "key": "0028",
     "mappings": {
       "default": {
-        "default": "parenthèse ouvrante"
+        "default": "parenthèse gauche",
+        "alternative": "parenthèse ouvrante"
       }
     },
     "category": "Ps"
@@ -15,7 +16,8 @@
     "key": "0029",
     "mappings": {
       "default": {
-        "default": "parenthèse fermante"
+        "default": "parenthèse droite",
+        "alternative": "parenthèse fermante"
       }
     },
     "category": "Pe"
@@ -24,7 +26,8 @@
     "key": "005B",
     "mappings": {
       "default": {
-        "default": "crochet ouvrant"
+        "default": "crochet gauche",
+        "alternative": "crochet ouvrant"
       }
     },
     "category": "Ps"
@@ -33,7 +36,8 @@
     "key": "005D",
     "mappings": {
       "default": {
-        "default": "crochet fermant"
+        "default": "crochet droit",
+        "alternative": "crochet fermant"
       }
     },
     "category": "Pe"
@@ -42,7 +46,8 @@
     "key": "007B",
     "mappings": {
       "default": {
-        "default": "accolade ouvrante"
+        "default": "accolade gauche",
+        "alternative": "accolade ouvrante"
       }
     },
     "category": "Ps"
@@ -51,7 +56,8 @@
     "key": "007D",
     "mappings": {
       "default": {
-        "default": "accolade fermante"
+        "default": "accolade droite",
+        "alternative": "accolade fermante"
       }
     },
     "category": "Pe"
@@ -186,7 +192,7 @@
     "key": "2329",
     "mappings": {
       "default": {
-        "default": "chevron vers la gauche"
+        "default": "chevron gauche"
       }
     },
     "category": "Ps"
@@ -195,7 +201,7 @@
     "key": "232A",
     "mappings": {
       "default": {
-        "default": "chevron vers la droite"
+        "default": "chevron droite"
       }
     },
     "category": "Pe"

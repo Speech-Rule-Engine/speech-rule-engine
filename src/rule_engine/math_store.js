@@ -195,6 +195,7 @@ sre.MathStore.prototype.evaluateDefault = function(node) {
  * @private
  */
 sre.MathStore.prototype.evaluateString_ = function(str) {
+  console.log('Evaluate String');
   var descs = new Array();
   if (str.match(/^\s+$/)) {
     // Nothing but whitespace: Ignore.
@@ -202,6 +203,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
   }
   var split = sre.BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
+    console.log(s);
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
     } else if (s.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
@@ -228,6 +230,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
             rest = rest.substring(2);
           } else {
             descs.push(this.evaluate_(rest[0]));
+            console.log(descs);
             rest = rest.substring(1);
           }
         }

@@ -9,7 +9,7 @@
         "default": "log"
       }
     },
-    "category": "Elementary",
+    "category": "Logarithm",
     "names": [
       "log"
     ]
@@ -21,7 +21,7 @@
         "default": "logarithme népérien"
       }
     },
-    "category": "Elementary",
+    "category": "Logarithm",
     "names": [
       "ln"
     ]

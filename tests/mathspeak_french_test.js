@@ -66,7 +66,7 @@ goog.inherits(sre.MathspeakFrenchTest, sre.AbstractRuleTest);
  * Testing Rule 1.1, Example 1.
  */
 sre.MathspeakFrenchTest.prototype.testSample_1_1_1 = function() {
-  var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow>';
+  var mml = '<mrow><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow>';
   this.executeRuleTest(mml, 'pi aproximado 3,14159', 'default');
   this.executeRuleTest(mml, 'pi aproximado 3,14159', 'brief');
   this.executeRuleTest(mml, 'pi aproximado 3,14159', 'sbrief');
@@ -77,8 +77,8 @@ sre.MathspeakFrenchTest.prototype.testSample_1_1_1 = function() {
  * Testing Rule 1.1, Example 2.
  */
 sre.MathspeakFrenchTest.prototype.testSample_1_1_2 = function() {
-  var mml = '<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn>' +
-      '<mo>=</mo><mn>2,331</mn></mrow>';
+  var mml = '<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn>' +
+      '<mo>=</mo><mn>2331</mn></mrow>';
   this.executeRuleTest(mml, '102 más 2214 más 15 igual 2331', 'default');
   this.executeRuleTest(mml, '102 más 2214 más 15 igual 2331', 'brief');
   this.executeRuleTest(mml, '102 más 2214 más 15 igual 2331', 'sbrief');
@@ -215,9 +215,9 @@ sre.MathspeakFrenchTest.prototype.testSample_2_1_1 = function() {
  */
 sre.MathspeakFrenchTest.prototype.testSample_2_3_1 = function() {
   var mml = '<mrow><mtext>Si</mtext><mspace width="4.pt"/><mi>A</mi>' +
-      '<mo>→</mo><mi>B</mi><mspace width="4.pt"/><mtext>y</mtext>' +
+      '<mo>→</mo><mi>B</mi><mspace width="4.pt"/><mtext>et</mtext>' +
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
-      '<mspace width="4.pt"/><mtext>entonces</mtext><mspace width="4.pt"/>' +
+      '<mspace width="4.pt"/><mtext>alors</mtext><mspace width="4.pt"/>' +
       '<mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>';
   this.executeRuleTest(mml, 'Si mayúscula A flecha derecha mayúscula B y' +
                        ' mayúscula B flecha derecha mayúscula C entonces' +
@@ -290,7 +290,7 @@ sre.MathspeakFrenchTest.prototype.testNegativeVsMinus = function() {
  * Testing Rule 4.2, Example 1.
  */
 sre.MathspeakFrenchTest.prototype.testSample_4_2_1 = function() {
-  var mml = '<mrow><mtext>Mayúscula</mtext><mo>(</mo><mo>{</mo><mi>α</mi>' +
+  var mml = '<mrow><mtext>Majuscule</mtext><mo>(</mo><mo>{</mo><mi>α</mi>' +
       '<mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>δ</mi>' +
       '<mo>,</mo><mi>ϵ</mi><mo>,</mo><mi>φ</mi><mo>}</mo><mo>)</mo>' +
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
@@ -360,7 +360,7 @@ sre.MathspeakFrenchTest.prototype.testSample_5_1_3 = function() {
  * Testing Rule 6.1, Example 1.
  */
 sre.MathspeakFrenchTest.prototype.testSample_6_1_1 = function() {
-  var mml = '<mtext>Los números de Fibonacci son: </mtext><mrow><mo>{</mo>' +
+  var mml = '<mtext>Les numéros de Fibonacci sont : </mtext><mrow><mo>{</mo>' +
       '<mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo>' +
       '<mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo>' +
       '<mn>8</mn><mo>,</mo><mo>&#x2026;</mo><mo>}</mo></mrow>';
@@ -982,7 +982,7 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_2 = function() {
  * Testing Rule 8.5, Example 3.
  */
 sre.MathspeakFrenchTest.prototype.testSample_8_5_3 = function() {
-  var mml = '<msub><mi>x</mi><mrow><mn>10,000</mn></mrow>' +
+  var mml = '<msub><mi>x</mi><mrow><mn>10000</mn></mrow>' +
       '</msub>';
   this.executeRuleTest(mml, 'x subíndice 10000', 'default');
   this.executeRuleTest(mml, 'x sub 10000', 'brief');
@@ -990,11 +990,13 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_3 = function() {
 };
 
 
+// TODO: 1,3 comes out as ,1,3,,,,,
+// There must be something wrong with the regexp.
 /**
  * Testing Rule 8.5, Example 4.
  */
 sre.MathspeakFrenchTest.prototype.testSample_8_5_4 = function() {
-  var mml = '<msub><mi>x</mi><mrow><mn>1.3</mn></mrow>' +
+  var mml = '<msub><mi>x</mi><mrow><mn>1,3</mn></mrow>' +
       '</msub>';
   this.executeRuleTest(mml, 'x subíndice 1,3', 'default');
   this.executeRuleTest(mml, 'x sub 1,3', 'brief');

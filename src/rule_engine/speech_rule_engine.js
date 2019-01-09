@@ -76,6 +76,8 @@ sre.SpeechRuleEngine = function() {
    */
   this.combinedStores_ = {};
 
+  // sre.Debugger.getInstance().init();
+  
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 

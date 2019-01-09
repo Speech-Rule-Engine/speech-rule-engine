@@ -6,7 +6,7 @@
     "key": "1D56C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse a"
+        "default": "majuscule a en gothique grasse"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D56D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse b"
+        "default": "majuscule b en gothique grasse"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D56E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse c"
+        "default": "majuscule c en gothique grasse"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D56F",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse d"
+        "default": "majuscule d en gothique grasse"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D570",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse e"
+        "default": "majuscule e en gothique grasse"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D571",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse f"
+        "default": "majuscule f en gothique grasse"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D572",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse g"
+        "default": "majuscule g en gothique grasse"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D573",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse h"
+        "default": "majuscule h en gothique grasse"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D574",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse i"
+        "default": "majuscule i en gothique grasse"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D575",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse j"
+        "default": "majuscule j en gothique grasse"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D576",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse k"
+        "default": "majuscule k en gothique grasse"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D577",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse l"
+        "default": "majuscule l en gothique grasse"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D578",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse m"
+        "default": "majuscule m en gothique grasse"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D579",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse n"
+        "default": "majuscule n en gothique grasse"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D57A",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse o"
+        "default": "majuscule o en gothique grasse"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D57B",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse p"
+        "default": "majuscule p en gothique grasse"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D57C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse q"
+        "default": "majuscule q en gothique grasse"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D57D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse r"
+        "default": "majuscule r en gothique grasse"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D57E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse s"
+        "default": "majuscule s en gothique grasse"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D57F",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse t"
+        "default": "majuscule t en gothique grasse"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D580",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse u"
+        "default": "majuscule u en gothique grasse"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D581",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse v"
+        "default": "majuscule v en gothique grasse"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D582",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse w"
+        "default": "majuscule w en gothique grasse"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D583",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse x"
+        "default": "majuscule x en gothique grasse"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D584",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse y"
+        "default": "majuscule y en gothique grasse"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1D585",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique gothique grasse z"
+        "default": "majuscule z en gothique grasse"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D586",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse a"
+        "default": "a en gothique grasse"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D587",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse b"
+        "default": "b en gothique grasse"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D588",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse c"
+        "default": "c en gothique grasse"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D589",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse d"
+        "default": "d en gothique grasse"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D58A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse e"
+        "default": "e en gothique grasse"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D58B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse f"
+        "default": "f en gothique grasse"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D58C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse g"
+        "default": "g en gothique grasse"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D58D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse h"
+        "default": "h en gothique grasse"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D58E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse i"
+        "default": "i en gothique grasse"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D58F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse j"
+        "default": "j en gothique grasse"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D590",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse k"
+        "default": "k en gothique grasse"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D591",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse l"
+        "default": "l en gothique grasse"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D592",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse m"
+        "default": "m en gothique grasse"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D593",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse n"
+        "default": "n en gothique grasse"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D594",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse o"
+        "default": "o en gothique grasse"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D595",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse p"
+        "default": "p en gothique grasse"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D596",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse q"
+        "default": "q en gothique grasse"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D597",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse r"
+        "default": "r en gothique grasse"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D598",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse s"
+        "default": "s en gothique grasse"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D599",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse t"
+        "default": "t en gothique grasse"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D59A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse u"
+        "default": "u en gothique grasse"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D59B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse v"
+        "default": "v en gothique grasse"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D59C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse w"
+        "default": "w en gothique grasse"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D59D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse x"
+        "default": "x en gothique grasse"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D59E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse y"
+        "default": "y en gothique grasse"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D59F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique gothique grasse z"
+        "default": "z en gothique grasse"
       }
     },
     "category": "Ll"

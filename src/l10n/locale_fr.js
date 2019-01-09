@@ -30,120 +30,148 @@ goog.require('sre.Messages');
 sre.Locale.fr = {
 
   MS: {
-    START: 'Start',
-    FRAC_V: 'Fraction',
-    FRAC_B: 'Frac',
-    FRAC_S: 'Frac',
-    END: 'End',
-    FRAC_OVER: 'Over',
-    TWICE: 'Twice',
-    NEST_FRAC: 'Nest',
-    ENDFRAC: 'EndFrac',
-    SUPER: 'Super',
-    SUB: 'Sub',
-    SUP: 'Sup',
-    SUPERSCRIPT: 'Superscript',
-    SUBSCRIPT: 'Subscript',
-    BASELINE: 'Baseline',
-    BASE: 'Base',
-    NESTED: 'Nested',
-    NEST_ROOT: 'Nest',
-    STARTROOT: 'StartRoot',
-    ENDROOT: 'EndRoot',
-    ROOTINDEX: 'RootIndex',
-    ROOT: 'Root',
-    INDEX: 'Index',
-    UNDER: 'Under',
-    UNDERSCRIPT: 'Underscript',
-    OVER: 'Over',
-    OVERSCRIPT: 'Overscript'
+    START: 'début ',
+    FRAC_V: 'fraction',
+    FRAC_B: 'frac',
+    FRAC_S: 'frac',
+    END: 'fin ',
+    FRAC_OVER: 'sur ',
+    ONCE: '1',
+    TWICE: '2',
+    NEST_FRAC: 'imbriquée',
+    ENDFRAC: 'fin frac',
+    SUPER: 'super',
+    SUB: 'inf',
+    // SUB: 'inf-', // Short
+    SUP: 'sup',
+    SUPERSCRIPT: 'exposant',
+    SUBSCRIPT: 'indice',
+    BASELINE: 'position de base',
+    BASE: 'base',
+    NESTED: 'imbriquée',
+    NEST_ROOT: 'imbriquée',
+    STARTROOT: 'début racine',
+    ENDROOT: 'fin racine',
+    ROOTINDEX: 'indice du radical',
+    ROOT: 'racine',
+    INDEX: 'indice',
+    UNDER: 'sous',
+    UNDERSCRIPT: 'souscrit',
+    OVER: 'sus',
+    OVERSCRIPT: 'suscrit'
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: sre.Locale.vulgarNestingDepth,
+    FRAC_NEST_DEPTH: function(node) { return false; },
     RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
+    COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
+    COMBINE_NESTED_FRACTION: function(a, b, c) {return c.replace(/ $/g, '') + b + a;},
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return c + ' ' + a;}
   },
 
 
-  MS_ROOT_INDEX: { },
-
+  MS_ROOT_INDEX: {
+    '2': 'carrée',
+    '3': 'cubique'
+  },
+    
   FONT: {
-    'bold': '',
-    'bold-fraktur': '',
-    'bold-italic': '',
-    'bold-script': '',
-    'caligraphic': '',
-    'caligraphic-bold': '',
-    'double-struck': '',
-    'double-struck-italic': '',
-    'fraktur': '',
-    'italic': '',
-    'monospace': '',
-    'normal': '',
-    'oldstyle': '',
-    'oldstyle-bold': '',
-    'script': '',
-    'sans-serif': '',
-    'sans-serif-italic': '',
-    'sans-serif-bold': '',
-    'sans-serif-bold-italic': '',
-    'unknown': ''
+    'bold': 'gras',
+    'bold-fraktur': 'gothique gras',
+    'bold-italic': 'italique gras',
+    'bold-script': 'scripte gras',
+    'caligraphic': 'calligraphique',
+    'caligraphic-bold': 'calligraphique gras',
+    'double-struck': 'ajouré',
+    'double-struck-italic': 'ajouré italique',
+    'fraktur': 'gothique',
+    'italic': 'italique',
+    'monospace': 'chasse fixe',
+    'normal': 'normale',
+    'oldstyle': 'ancien',
+    'oldstyle-bold': 'ancien gras',
+    'script': 'scripte',
+    'sans-serif': 'sans empattement',
+    'sans-serif-italic': 'sans empattement italique',
+    'sans-serif-bold': 'sans empattement gras',
+    'sans-serif-bold-italic': 'sans empattement italique gras',
+    'unknown': 'inconnu'
   },
 
   ROLE: {
     // Infixoperators
     'addition': 'addition',
     'multiplication': 'multiplication',
-    'subtraction': 'subtraction',
+    'subtraction': 'soustraction',
     'division': 'division',
     // Relations.
-    'equality': 'equality',
-    'inequality': 'inequality',
-    'element': 'element',
-    'arrow': 'arrow',
+    'equality': 'égalité',
+    'inequality': 'inégalité',
+    'element': 'élément',
+    'arrow': 'flèche',
     // Roles of matrices or vectors.
-    'determinant': 'determinant',
-    'rowvector': 'row vector',
+    'determinant': 'déterminant',
+    'rowvector': 'vecteur-rangée',
     'binomial': 'binomial',
-    'squarematrix': 'square matrix',
+    'squarematrix': 'matrice carrée',
+    // Sets
+    'set empty': 'ensemble vide',
+    'set extended': 'extension',
+    'set singleton': 'singleton',
+    'set collection': 'collection',
     // Roles of rows, lines, cells.
-    'multiline': 'multiple lines',
-    'matrix': 'matrix',
-    'vector': 'vector',
-    'cases': 'case statement',
-    'table': 'table',
+    'label': 'étiquette',
+    'multiline': 'multi-ligne',
+    'matrix': 'matrice',
+    'vector': 'vecteur',
+    'cases': 'déclaration de cas',
+    'table': 'tableau',
     // Unknown
-    'unknown': 'unknown'
+    'unknown': 'inconnu'
   },
 
 
   ENCLOSE: {
-    'longdiv': 'long division',
-    'actuarial': 'actuarial symbol',
-    'radical': 'square root',
-    'box': 'box',
-    'roundedbox': 'rounded box',
-    'circle': 'circle',
-    'left': 'left vertical-line',
-    'right': 'right vertical-line',
-    'top': 'overbar',
-    'bottom': 'underbar',
-    'updiagonalstrike': 'crossout',
-    'downdiagonalstrike': 'crossout',
-    'verticalstrike': 'vertical strikeout',
-    'horizontalstrike': 'crossout',
-    'madruwb': 'Arabic factorial symbol',
-    'updiagonalarrow': 'diagonal arrow',
-    'phasorangle': 'phasor angle',
+    'longdiv': 'longue division',
+    'actuarial': 'notation actuarielle',
+    'radical': 'radical',
+    'box': 'boîte',
+    'roundedbox': 'boîte arrondie',
+    'circle': 'cercle',
+    'left': 'barre verticale gauche',
+    'right': 'barre verticale droite',
+    'top': 'trait suscrit',
+    'bottom': 'trait souscrit',
+    'updiagonalstrike': 'texte biffé diagonal montant',
+    'downdiagonalstrike': 'texte biffé diagonal descendant',
+    'verticalstrike': 'texte biffé vertical',
+    'horizontalstrike': 'texte biffé horizontal',
+    'madruwb': 'symbole factorielle arabe',
+    'updiagonalarrow': 'flèche diagonale montante',
+    'phasorangle': 'angle de phase',
     // Unknown
-    'unknown': 'long division'
+    'unknown': 'longue division'
   },
 
-  NAVIGATE: {
-    COLLAPSIBLE: 'collapsible',
-    EXPANDABLE: 'expandable',
-    LEVEL: 'Level'
-  }
 
+  NAVIGATE: {
+    COLLAPSIBLE: 'compressible',
+    EXPANDABLE: 'décompressible',
+    LEVEL: 'niveau'
+  },
+
+  REGEXP: {
+    TEXT: 'a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ',
+    NUMBER: '((\\d{1,3})(?=(\\.| ))((\\.| )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
+    DECIMAL_MARK: ',',
+    DIGIT_GROUP: '',
+    JOINER_SUBSUPER: '-'
+  },
+
+  // TODO: These!
+  PLURAL_UNIT: {
+    'foot': 'feet',
+    'inch': 'inches'
+  }
+  
 };
