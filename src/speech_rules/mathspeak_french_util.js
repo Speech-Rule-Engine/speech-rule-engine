@@ -150,6 +150,7 @@ sre.MathspeakFrenchUtil.numberToWords = function(number) {
  */
 sre.MathspeakFrenchUtil.numberToOrdinal = function(num, plural) {
   // TODO: dictionary based.
+  console.log('here we are!');
   if (num === 1) {
     return plural ? 'unièmes' : 'unième';
   }
@@ -157,7 +158,10 @@ sre.MathspeakFrenchUtil.numberToOrdinal = function(num, plural) {
     return plural ? 'demis' : 'demi';
   }
   if (num === 3) {
-    return plural ? 'tiers' : 'tier';
+    return 'tiers';
+  }
+  if (num === 4) {
+    return plural ? 'quarts' : 'quart';
   }
   var ordinal = sre.MathspeakFrenchUtil.wordOrdinal(num);
   return plural ? ordinal + 's' : ordinal;
@@ -170,26 +174,18 @@ sre.MathspeakFrenchUtil.numberToOrdinal = function(num, plural) {
  * @return {string} The ordinal string.
  */
 sre.MathspeakFrenchUtil.wordOrdinal = function(number) {
-  var ordinal = sre.MathspeakFrenchUtil.numberToWords(number);
-  if (ordinal.match(/one$/)) {
-    ordinal = ordinal.slice(0, -3) + 'first';
-  } else if (ordinal.match(/two$/)) {
-    ordinal = ordinal.slice(0, -3) + 'second';
-  } else if (ordinal.match(/three$/)) {
-    ordinal = ordinal.slice(0, -5) + 'third';
-  } else if (ordinal.match(/five$/)) {
-    ordinal = ordinal.slice(0, -4) + 'fifth';
-  } else if (ordinal.match(/eight$/)) {
-    ordinal = ordinal.slice(0, -5) + 'eighth';
-  } else if (ordinal.match(/nine$/)) {
-    ordinal = ordinal.slice(0, -4) + 'ninth';
-  } else if (ordinal.match(/twelve$/)) {
-    ordinal = ordinal.slice(0, -6) + 'twelfth';
-  } else if (ordinal.match(/ty$/)) {
-    ordinal = ordinal.slice(0, -2) + 'tieth';
-  } else {
-    ordinal = ordinal + 'th';
+  if (number === 1) {
+    return 'première';
   }
+  var ordinal = sre.MathspeakFrenchUtil.numberToWords(number);
+  if (ordinal.match(/^neuf$/)) {
+    ordinal = ordinal.slice(0, -1) + 'v';
+  } else if (ordinal.match(/cinq$/)) {
+    ordinal = ordinal + 'u';
+  } else if (ordinal.match(/e$/)) {
+    ordinal = ordinal.slice(0, -1);
+  }
+  ordinal = ordinal + 'ième';
   return ordinal;
 };
 
@@ -200,21 +196,7 @@ sre.MathspeakFrenchUtil.wordOrdinal = function(number) {
  * @return {string} The ordinal string.
  */
 sre.MathspeakFrenchUtil.simpleOrdinal = function(number) {
-  var tens = number % 100;
-  var numStr = number.toString();
-  if (tens > 10 && tens < 20) {
-    return numStr + 'th';
-  }
-  switch (number % 10) {
-    case 1:
-      return numStr + 'st';
-    case 2:
-      return numStr + 'nd';
-    case 3:
-      return numStr + 'rd';
-    default:
-      return numStr + 'th';
-  }
+  return number === 1 ? number.toString() + 're' : number.toString() + 'e';
 };
 
 
@@ -336,16 +318,64 @@ sre.MathspeakFrenchUtil.smallRoot = function(node) {
 
 sre.MathspeakFrenchUtil.baselineVerbose = function(node) {
   var baseline = sre.MathspeakUtil.baselineVerbose(node);
-  return baseline === msg.MS.BASELINE ? baseline :
-    'position-' + baseline.replace(/\-$/, '');
+  // return baseline === msg.MS.BASELINE ? baseline :
+  //   'position-' + baseline.replace(/\-$/, '');
+  return baseline.replace(/\-$/, '');
 };
 
 
 sre.MathspeakFrenchUtil.baselineBrief = function(node) {
   var baseline = sre.MathspeakUtil.baselineBrief(node);
-  return baseline === msg.MS.BASE ? baseline :
-    'position-' + baseline.replace(/\-$/, '');
+  // return baseline === msg.MS.BASE ? baseline :
+  //   'position-' + baseline.replace(/\-$/, '');
+  return baseline.replace(/\-$/, '');
 };
 
+  sre.MathspeakFrenchUtil.leftSuperscriptVerbose = function(node) {
+    var leftIndex = sre.MathspeakUtil.superscriptVerbose(node);
+    return leftIndex.replace(/^exposant/, 'exposant gauche');
+  };
+
+  sre.MathspeakFrenchUtil.leftSubscriptVerbose = function(node) {
+    var leftIndex = sre.MathspeakUtil.subscriptVerbose(node);
+    return leftIndex.replace(/^indice/, 'indice gauche');
+  };
+  
+  sre.MathspeakFrenchUtil.rightSuperscriptVerbose = function(node) {
+    // var rightIndex = sre.MathspeakUtil.superscriptVerbose(node);
+    // return rightIndex.replace(/^exposant/, 'exposant droite');
+    return sre.MathspeakUtil.superscriptVerbose(node);
+  };
+
+  sre.MathspeakFrenchUtil.rightSubscriptVerbose = function(node) {
+    // var rightIndex = sre.MathspeakUtil.subscriptVerbose(node);
+    // return rightIndex.replace(/^indice/, 'indice inférieur droite');
+    return sre.MathspeakUtil.subscriptVerbose(node);
+  };
+  
+  sre.MathspeakFrenchUtil.leftSuperscriptBrief = function(node) {
+    // var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
+    // return leftIndex.replace(/^exposant/, 'IndSupGauche');
+    return sre.MathspeakUtil.superscriptBrief(node);
+  };
+
+  sre.MathspeakFrenchUtil.leftSubscriptBrief = function(node) {
+    // var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
+    // return leftIndex.replace(/^indice/, 'IndInfGauche');
+    return sre.MathspeakUtil.subscriptBrief(node);
+  };
+  
+  sre.MathspeakFrenchUtil.rightSuperscriptBrief = function(node) {
+    // var rightIndex = sre.MathspeakUtil.superscriptBrief(node);
+    // return rightIndex.replace(/^exposant/, 'IndSupDroit');
+    return sre.MathspeakUtil.superscriptBrief(node);
+  };
+
+  sre.MathspeakFrenchUtil.rightSubscriptBrief = function(node) {
+    // var rightIndex = sre.MathspeakUtil.subscriptBrief(node);
+    // return rightIndex.replace(/^indice/, 'IndInfDroit');
+    return sre.MathspeakUtil.subscriptBrief(node);
+  };
+  
 
 });  // goog.scope

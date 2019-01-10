@@ -1572,8 +1572,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_12_2 = function() {
  * Testing Rule 8.13, Example 1.
  */
 sre.MathspeakFrenchTest.prototype.testSample_8_13_1 = function() {
-  var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><msup>' +
-      '<mrow/><mi>b</mi></msup><mi>x</mi></mrow>';
+  var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><mmultiscripts>' +
+      '<mi>x</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mrow>';
   this.executeRuleTest(mml, 'logaritmo superíndice 4 superíndice b línea' +
                        ' base x', 'default');
   this.executeRuleTest(mml, 'logaritmo sup 4 sup b x', 'brief');
@@ -1585,8 +1585,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_13_1 = function() {
  * Testing Rule 8.13, Example 2.
  */
 sre.MathspeakFrenchTest.prototype.testSample_8_13_2 = function() {
-  var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><msub><mrow/><mi>a</mi>' +
-      '</msub><mi>y</mi></mrow>';
+  var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><mmultiscripts><mi>y</mi>' +
+      '<mprescripts/><mi>a</mi></mmultiscripts></mrow>';
   this.executeRuleTest(mml, 'mayúscula T subíndice n subíndice a línea base' +
                        ' y', 'default');
   this.executeRuleTest(mml, 'mayúscula T sub n sub a y', 'brief');

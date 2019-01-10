@@ -40,14 +40,14 @@ sre.Locale.fr = {
     TWICE: '2',
     NEST_FRAC: 'imbriquée',
     ENDFRAC: 'fin frac',
-    SUPER: 'super',
-    SUB: 'inf',
+    SUPER: 'sup',
+    SUB: 'sub',
     // SUB: 'inf-', // Short
     SUP: 'sup',
     SUPERSCRIPT: 'exposant',
     SUBSCRIPT: 'indice',
     BASELINE: 'position de base',
-    BASE: 'base',
+    BASE: 'position de base',
     NESTED: 'imbriquée',
     NEST_ROOT: 'imbriquée',
     STARTROOT: 'début racine',
@@ -56,9 +56,9 @@ sre.Locale.fr = {
     ROOT: 'racine',
     INDEX: 'indice',
     UNDER: 'sous',
-    UNDERSCRIPT: 'souscrit',
+    UNDERSCRIPT: 'souscript',
     OVER: 'sus',
-    OVERSCRIPT: 'suscrit'
+    OVERSCRIPT: 'suscript'
   },
 
   MS_FUNC: {
@@ -79,7 +79,7 @@ sre.Locale.fr = {
     'bold': 'gras',
     'bold-fraktur': 'gothique gras',
     'bold-italic': 'italique gras',
-    'bold-script': 'scripte gras',
+    'bold-script': 'script gras',
     'caligraphic': 'calligraphique',
     'caligraphic-bold': 'calligraphique gras',
     'double-struck': 'ajouré',
@@ -87,10 +87,10 @@ sre.Locale.fr = {
     'fraktur': 'gothique',
     'italic': 'italique',
     'monospace': 'chasse fixe',
-    'normal': 'normale',
+    'normal': 'normal',
     'oldstyle': 'ancien',
     'oldstyle-bold': 'ancien gras',
-    'script': 'scripte',
+    'script': 'script',
     'sans-serif': 'sans empattement',
     'sans-serif-italic': 'sans empattement italique',
     'sans-serif-bold': 'sans empattement gras',
@@ -150,7 +150,7 @@ sre.Locale.fr = {
     'updiagonalarrow': 'flèche diagonale montante',
     'phasorangle': 'angle de phase',
     // Unknown
-    'unknown': 'longue division'
+    'unknown': 'division longue'
   },
 
 

@@ -60,7 +60,8 @@
     "key": "0027",
     "mappings": {
       "default": {
-        "default": "apostrophe"
+        "default": "prime",
+        "alternative": "apostrophe"
       }
     },
     "category": "Po"
