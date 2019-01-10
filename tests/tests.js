@@ -21,6 +21,7 @@ goog.provide('sre.Tests');
 
 goog.require('sre.ApiTest');
 goog.require('sre.ClearspeakAnnotationTest');
+goog.require('sre.ClearspeakFrenchTest');
 goog.require('sre.ClearspeakTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.DomTest');
@@ -84,37 +85,38 @@ sre.Tests.prototype.run = function() {
  * @type {Array}
  */
 sre.Tests.testList = [
-  sre.ApiTest,
-  sre.ClearspeakAnnotationTest,
-  sre.ColorPickerTest,
-  sre.DomTest,
-  sre.EnrichMathmlTest,
-  sre.EnrichSpeechTest,
-  sre.MarkupTest,
-  sre.MathAlphabetsTest,
-  sre.MathmlStoreTest,
-  sre.MathspeakEmbellishTest,
-  sre.MathspeakEmbellishFrenchTest,
-  sre.MathspeakEmbellishSpanishTest,
-  sre.MathspeakEnglishTest,
-  sre.MathspeakFrenchTest,
-  sre.MathspeakSpanishTest,
-  sre.MmlcloudEnglishTest,
-  sre.MmlcloudFrenchTest,
-  sre.MmlcloudSpanishTest,
-  sre.NobleEnglishTest,
-  sre.NobleFrenchTest,
-  sre.NobleSpanishTest,
-  sre.PrefixRuleTest,
-  sre.RebuildStreeTest,
-  sre.SemanticApiTest,
-  sre.SemanticRuleTest,
-  sre.SemanticTreeTest,
-  sre.SpeechRuleTest,
-  sre.WalkerMarkupTest,
+  // sre.ApiTest,
+  // sre.ClearspeakAnnotationTest,
+  // sre.ColorPickerTest,
+  // sre.DomTest,
+  // sre.EnrichMathmlTest,
+  // sre.EnrichSpeechTest,
+  // sre.MarkupTest,
+  // sre.MathAlphabetsTest,
+  // sre.MathmlStoreTest,
+  // sre.MathspeakEmbellishTest,
+  // sre.MathspeakEmbellishFrenchTest,
+  // sre.MathspeakEmbellishSpanishTest,
+  // sre.MathspeakEnglishTest,
+  // sre.MathspeakFrenchTest,
+  // sre.MathspeakSpanishTest,
+  // sre.MmlcloudEnglishTest,
+  // sre.MmlcloudFrenchTest,
+  // sre.MmlcloudSpanishTest,
+  // sre.NobleEnglishTest,
+  // sre.NobleFrenchTest,
+  // sre.NobleSpanishTest,
+  // sre.PrefixRuleTest,
+  // sre.RebuildStreeTest,
+  // sre.SemanticApiTest,
+  // sre.SemanticRuleTest,
+  // sre.SemanticTreeTest,
+  // sre.SpeechRuleTest,
+  // sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakFrenchTest.testList),
 // sre.Tests.testList = sre.ClearspeakTest.testList;
 
 

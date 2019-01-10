@@ -19,7 +19,7 @@
     "key": "cot",
     "mappings": {
       "default": {
-        "default": "co-tangente"
+        "default": "cotangente"
       }
     },
     "category": "Trigonometric",
@@ -31,7 +31,7 @@
     "key": "csc",
     "mappings": {
       "default": {
-        "default": "co-sécante"
+        "default": "cosécante"
       }
     },
     "category": "Trigonometric",
