@@ -80,6 +80,7 @@ sre.AbstractExamples = function() {
    * @private
    */
   this.examples_ = [];
+
 };
 goog.inherits(sre.AbstractExamples, sre.AbstractTest);
 
@@ -100,6 +101,7 @@ sre.AbstractExamples.prototype.startExamples = function() {
   if (!this.active_) return;
   try {
     sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
+    sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.header());
   } catch (err) {
     this.fileError_ = 'Bad file name ' + this.examplesFile_;
   }
@@ -135,6 +137,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
         sre.SystemExternal.fs.appendFileSync(
             this.examplesFile_, this.join(this.examples_[key]));
       }
+      sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.footer());
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
     }
@@ -182,3 +185,20 @@ sre.AbstractExamples.prototype.join = function(examples) {
   return 'Lab.' + this.fileName_ +
       ' = [\'' + examples.join('\',\n\'') + '\']';
 };
+
+
+/**
+ * @return {string} Output file header.
+ */
+sre.AbstractExamples.prototype.header = function() {
+  return '';  
+};
+
+
+/**
+ * @return {string} Output file footer.
+ */
+sre.AbstractExamples.prototype.footer = function() {
+  return '';  
+};
+  
