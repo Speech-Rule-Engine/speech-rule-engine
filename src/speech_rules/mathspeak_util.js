@@ -134,7 +134,6 @@ sre.MathspeakUtil.nestingDepth = {};
  * @return {Array.<Node>} Array containing the original node only.
  */
 sre.MathspeakUtil.resetNestingDepth = function(node) {
-  console.log('Ever used?');
   sre.MathspeakUtil.nestingDepth = {};
   return [node];
 };
@@ -645,7 +644,6 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
     }
     node = parent;
   }
-  console.log('Nested super: ' + init);
   return init.trim();
 };
 
@@ -743,7 +741,6 @@ sre.MathspeakUtil.radicalNestingDepth = function(node) {
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
-  console.log('Root: ' + prefix + ' : ' + postfix);
   var depth = sre.MathspeakUtil.radicalNestingDepth(node);
   var index = sre.MathspeakUtil.getRootIndex(node);
   postfix = index ? msg.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
