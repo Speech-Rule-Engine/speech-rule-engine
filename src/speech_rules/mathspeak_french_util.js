@@ -65,9 +65,9 @@ sre.MathspeakFrenchUtil.tensNumbers = {
  * @type {Array.<string>}
  */
 sre.MathspeakFrenchUtil.largeNumbers = [
-  '', 'mille', 'milliard', 'billion', 'mille billions', 'trillion',
-  'mille trillions', 'quadrillion', 'mille quadrillions', 'quintillion',
-  'mille quintillions'
+  '', 'mille', 'millions', 'milliards', 'billions', 'mille billions',
+  'trillions', 'mille trillions', 'quadrillions', 'mille quadrillions',
+  'quintillions', 'mille quintillions'
 ];
 
 
@@ -105,9 +105,6 @@ sre.MathspeakFrenchUtil.hundredsToWords = function(number) {
     str.replace(/\-un$/, '-et-un');
 };
 
-  // Algorithm:
-  // Deal with large numbers up to 
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -120,24 +117,40 @@ sre.MathspeakFrenchUtil.numberToWords = function(number) {
   }
   var pos = 0;
   var str = '';
-  // var mille = '';
   while (number > 0) {
     var hundreds = number % 1000;
     if (hundreds) {
       var large = sre.MathspeakFrenchUtil.largeNumbers[pos];
-      var huns = sre.MathspeakFrenchUtil.hundredsToWords(number % 1000);
-      str = huns + (pos ? '-' + large + '-' : '') + str;
-    }
+      var huns = sre.MathspeakFrenchUtil.hundredsToWords(hundreds);
+      if (large && large.match(/^mille /)) {
+        var rest = large.replace(/^mille /, '');
+        if (str.match(RegExp(rest))) {
+          str = huns + (pos ? '-mille-' : '') + str;
+        } else if (str.match(RegExp(rest.replace(/s$/, '')))) {
+          str = huns + (pos ? '-mille-' : '') + str.replace(rest.replace(/s$/, ''), rest);
+        } else {
+          str = huns + (pos ? '-' + large + '-' : '') + str;
+        }
+      } else {
+        large = (hundreds === 1 && large) ? large.replace(/s$/, '') : large;
+        str = huns + (pos ? '-' + large + '-' : '') + str;
+      }
+    } 
     number = Math.floor(number / 1000);
     pos++;
   }
-      // if (large.match(/^mille /)) {
-      //   mille = str ? str + '-mille' : '';
-      // } else {
-      //   str = (mille ? mille + '-' + str : str) + (pos ? '-' + large + '-' : '') + str;
-      //   mille = '';
-      // }
   return str.replace(/-$/, '');
+};
+
+
+/**
+ * @type {Object.<string>}
+ */
+sre.MathspeakFrenchUtil.SMALL_ORDINAL = {
+  1: 'unième',
+  2: 'demi',
+  3: 'tiers',
+  4: 'quart'
 };
 
 
@@ -149,22 +162,10 @@ sre.MathspeakFrenchUtil.numberToWords = function(number) {
  * @return {string} The ordinal of the number as string.
  */
 sre.MathspeakFrenchUtil.numberToOrdinal = function(num, plural) {
-  // TODO: dictionary based.
-  console.log('here we are!');
-  if (num === 1) {
-    return plural ? 'unièmes' : 'unième';
-  }
-  if (num === 2) {
-    return plural ? 'demis' : 'demi';
-  }
-  if (num === 3) {
-    return 'tiers';
-  }
-  if (num === 4) {
-    return plural ? 'quarts' : 'quart';
-  }
-  var ordinal = sre.MathspeakFrenchUtil.wordOrdinal(num);
-  return plural ? ordinal + 's' : ordinal;
+  var ordinal = sre.MathspeakFrenchUtil.SMALL_ORDINAL[num] ||
+      sre.MathspeakFrenchUtil.wordOrdinal(num);
+  return (num === 3) ? ordinal :
+    (plural ? ordinal + 's' : ordinal);
 };
 
 
@@ -182,7 +183,7 @@ sre.MathspeakFrenchUtil.wordOrdinal = function(number) {
     ordinal = ordinal.slice(0, -1) + 'v';
   } else if (ordinal.match(/cinq$/)) {
     ordinal = ordinal + 'u';
-  } else if (ordinal.match(/e$/)) {
+  } else if (ordinal.match(/e$/) || ordinal.match(/s$/)) {
     ordinal = ordinal.slice(0, -1);
   }
   ordinal = ordinal + 'ième';
