@@ -258,9 +258,9 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'number-baseline', 'mathspeak.default',
-      '[t] "línea base"; [n] text()',
+      '[t] "línea base"; [n] . (grammar:baseline)',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
-      'preceding-sibling::identifier',
+      'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
       'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
@@ -282,7 +282,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "base"; [n] text()');
+      '[t] "base"; [t] @font; [n] . (grammar:ignoreFont=@font)');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 

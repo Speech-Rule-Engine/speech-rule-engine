@@ -437,6 +437,9 @@ sre.MathspeakUtil.numberToWords = function(number) {
  * @return {string} The ordinal of the number as string.
  */
 sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
+  if (num === 1) {
+    return plural ? 'oneths' : 'oneth';
+  }
   if (num === 2) {
     return plural ? 'halves' : 'half';
   }

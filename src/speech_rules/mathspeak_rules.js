@@ -263,15 +263,15 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
 
   defineRule(
       'number-baseline', 'mathspeak.default',
-      '[t] "Baseline"; [n] text()',
+      '[t] "Baseline"; [n] . (grammar:baseline)',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
-      'preceding-sibling::identifier',
+      'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
       'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Base"; [n] text()');
+      '[t] "Base"; [n] . (grammar:baseline)');
   defineSpecialisedRule(
       'number-baseline', 'mathspeak.brief', 'mathspeak.sbrief');
 
@@ -286,7 +286,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "Base"; [n] text()');
+      '[t] "Base"; [t] @font; [n] . (grammar:ignoreFont=@font)');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
