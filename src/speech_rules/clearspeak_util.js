@@ -455,8 +455,7 @@ sre.ClearspeakUtil.ordinalExponent = function(node) {
     return node.textContent;
   }
   return number > 10 ? sre.MathspeakUtil.simpleOrdinal(number) :
-      // sre.MathspeakUtil.wordOrdinal(number);
-      sre.MathspeakUtil.numberToOrdinal(number, false);
+      sre.MathspeakUtil.wordOrdinal(number);
 };
 
 
