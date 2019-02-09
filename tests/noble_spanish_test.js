@@ -2540,7 +2540,7 @@ sre.NobleSpanishTest.prototype.testSample_87 = function() {
                        ' finalizar frac entre entre empezar frac 3 entre 4' +
                        ' finalizar frac finalizar finalizar frac igual' +
                        ' empezar frac 2 entre 3 finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'frac frac 1 entre  2 sobre frac 3 entre  4' +
+  this.executeRuleTest(mml, 'frac frac 1 entre  2 entre  frac 3 entre  4' +
                        ' igual frac 2 entre  3', 'sbrief');
 };
 
@@ -3461,7 +3461,7 @@ sre.NobleSpanishTest.prototype.testSample_100 = function() {
                        ' paréntesis izquierdo 3 menos v paréntesis derecho' +
                        ' al cuadrado c al cuadrado entre  paréntesis' +
                        ' izquierdo 1 más v paréntesis derecho a al cuadrado' +
-                       ' sobre paréntesis izquierdo 1 menos v paréntesis' +
+                       ' entre  paréntesis izquierdo 1 menos v paréntesis' +
                        ' derecho paréntesis izquierdo 1 menos frac c sup 4' +
                        ' entre  a sup 4 paréntesis derecho paréntesis' +
                        ' izquierdo 1 menos frac c al cuadrado entre  a al' +
@@ -3882,13 +3882,13 @@ sre.NobleSpanishTest.prototype.testSample_105 = function() {
                        ' finalizar esquema', 'brief');
   this.executeRuleTest(mml, 'esquema primera fila primera columna mayúscula' +
                        ' B segunda columna igual frac frac mayúscula F sub' +
-                       ' 0 entre  m sobre raíz cuadrada paréntesis' +
+                       ' 0 entre  m entre  raíz cuadrada paréntesis' +
                        ' izquierdo omega sub 0 al cuadrado menos omega al' +
                        ' cuadrado paréntesis derecho al cuadrado más 4 n al' +
                        ' cuadrado omega al cuadrado finalizar raíz cuadrada' +
                        ' segunda fila primera columna espacio segunda' +
                        ' columna igual frac frac mayúscula F sub 0 entre  k' +
-                       ' sobre raíz cuadrada paréntesis izquierdo 1 menos' +
+                       ' entre  raíz cuadrada paréntesis izquierdo 1 menos' +
                        ' paréntesis izquierdo omega barra oblicua omega sub' +
                        ' 0 al cuadrado paréntesis derecho al cuadrado' +
                        ' paréntesis derecho al cuadrado más 4 paréntesis' +

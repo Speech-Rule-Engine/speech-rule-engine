@@ -469,8 +469,8 @@ sre.MathspeakSpanishTest.prototype.testSample_7_2_1 = function() {
                        ' frac no es igual a empezar empezar frac x entre' +
                        ' entre empezar frac y entre z finalizar frac' +
                        ' finalizar finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'frac frac x entre  y sobre z no es igual a' +
-                       ' frac x sobre frac y entre  z', 'sbrief');
+  this.executeRuleTest(mml, 'frac frac x entre  y entre  z no es igual a' +
+                       ' frac x entre  frac y entre  z', 'sbrief');
 };
 
 
@@ -520,8 +520,8 @@ sre.MathspeakSpanishTest.prototype.testSample_7_3_1 = function() {
                        ' paréntesis derecho frac d entre  d x paréntesis' +
                        ' izquierdo 2 x paréntesis derecho menos 2 x frac d' +
                        ' entre  d x paréntesis izquierdo 1 menos x' +
-                       ' paréntesis derecho sobre paréntesis izquierdo 1' +
-                       ' menos x paréntesis derecho al cuadrado sobre 1 más' +
+                       ' paréntesis derecho entre  paréntesis izquierdo 1' +
+                       ' menos x paréntesis derecho al cuadrado entre  1 más' +
                        ' paréntesis izquierdo frac 2 x entre  1 menos x' +
                        ' paréntesis derecho al cuadrado', 'sbrief');
 };
@@ -555,8 +555,8 @@ sre.MathspeakSpanishTest.prototype.testSample_7_3_2 = function() {
                        ' finalizar frac finalizar finalizar frac finalizar' +
                        ' finalizar finalizar frac finalizar finalizar' +
                        ' finalizar finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'a sub 0 más frac 1 sobre a sub 1 más frac 1' +
-                       ' sobre a sub 2 más frac 1 sobre puntos suspensivos' +
+  this.executeRuleTest(mml, 'a sub 0 más frac 1 entre  a sub 1 más frac 1' +
+                       ' entre  a sub 2 más frac 1 entre  puntos suspensivos' +
                        ' más frac 1 entre  a sub n', 'sbrief');
 };
 
@@ -630,7 +630,7 @@ sre.MathspeakSpanishTest.prototype.testSample_7_4_3 = function() {
                        ' finalizar frac entre entre 8 finalizar finalizar' +
                        ' frac igual empezar frac 3 entre 5 finalizar frac' +
                        ' por empezar frac 1 entre 8 finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'frac frac 3 entre  5 sobre 8 igual frac 3' +
+  this.executeRuleTest(mml, 'frac frac 3 entre  5 entre  8 igual frac 3' +
                        ' entre  5 por frac 1 entre  8', 'sbrief');
 };
 
