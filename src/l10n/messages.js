@@ -86,6 +86,8 @@ sre.Messages.MS_FUNC = {
    */
   COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
 
+  // TODO: Add new functions.
+
 };
 
 

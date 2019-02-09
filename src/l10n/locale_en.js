@@ -64,7 +64,10 @@ sre.Locale.en = {
     RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
     COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;},
     COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
-    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + b + c;}
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + b + c;},
+    FONT_REGEXP: function(font) {
+      return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
+    }
   },
 
 

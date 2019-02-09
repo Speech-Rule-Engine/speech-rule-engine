@@ -65,7 +65,8 @@ sre.Locale.es = {
     RADICAL_NEST_DEPTH: function(count) { return ''; },
     COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
     COMBINE_NESTED_FRACTION: function(a, b, c) {return a + b + c;},
-    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + c;}
+    COMBINE_NESTED_RADICAL: function(a, b, c) {return a + c;},
+    FONT_REGEXP: function(font) {return RegExp('^' + font + ' ');}
   },
 
   //  That is female ending!
