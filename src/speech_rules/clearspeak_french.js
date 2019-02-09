@@ -2235,8 +2235,8 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::bigop');
   defineRule(
       'limboth', 'clearspeak.default',
-      '[n] children/*[1]; [t] "from"; [n] children/*[2];' +
-      '[t] "to"; [n] children/*[3];',
+      '[n] children/*[1]; [t] "de"; [n] children/*[2];' +
+      '[t] "à"; [n] children/*[3];',
       'self::limboth');
   defineRule(
       'limlower', 'clearspeak.default',
@@ -2244,7 +2244,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::limlower');
   defineRule(
       'limupper', 'clearspeak.default',
-      '[n] children/*[1]; [t] "under"; [n] children/*[2]; [p] (pause:short)',
+      '[n] children/*[1]; [t] "sous"; [n] children/*[2]; [p] (pause:short)',
       'self::limupper');
   defineRule(
       'integral', 'clearspeak.default',

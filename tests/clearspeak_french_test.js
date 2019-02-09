@@ -55,16 +55,16 @@ sre.ClearspeakFrenchTest.testList = [
   sre.ClearspeakFrenchExponents,  // Fine
   sre.ClearspeakFrenchFractions,
   sre.ClearspeakFrenchFunctions,  // Fine
-  // sre.ClearspeakFrenchImpliedTimes,
-  // sre.ClearspeakFrenchIssues,
-  // sre.ClearspeakFrenchLogarithms,
+  sre.ClearspeakFrenchImpliedTimes,
+  sre.ClearspeakFrenchIssues,
+  sre.ClearspeakFrenchLogarithms,
   sre.ClearspeakFrenchMatricesAndCombinatorics,  // Fine
-  // sre.ClearspeakFrenchMultiLineEntries,
-  // sre.ClearspeakFrenchNamedSets,
+  sre.ClearspeakFrenchMultiLineEntries,
+  sre.ClearspeakFrenchNamedSets,
   sre.ClearspeakFrenchParentheses, // Fine
-  // sre.ClearspeakFrenchPart2Symbols,
-  // sre.ClearspeakFrenchPart3Adornments,
+  sre.ClearspeakFrenchPart2Symbols,
+  sre.ClearspeakFrenchPart3Adornments,
   sre.ClearspeakFrenchRoots,  
-  // sre.ClearspeakFrenchSetsEnclosedInSetBrackets,
+  sre.ClearspeakFrenchSetsEnclosedInSetBrackets,
   sre.ClearspeakFrenchTrigometry  // Fine
 ];
