@@ -282,7 +282,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "base"; [t] @font; [n] . (grammar:ignoreFont=@font)');
+      '[t] "base"; [t] @font (grammar:localFont); ' +
+      '[n] . (grammar:ignoreFont=@font)');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 

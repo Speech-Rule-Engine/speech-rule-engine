@@ -228,7 +228,6 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
             rest = rest.substring(2);
           } else {
             descs.push(this.evaluate_(rest[0]));
-            console.log(descs);
             rest = rest.substring(1);
           }
         }
