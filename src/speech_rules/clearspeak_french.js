@@ -2256,7 +2256,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Default rules:
   defineRule(
       'overscript', 'clearspeak.default',
-      '[n] children/*[1]; [t] "under"; [n] children/*[2]; [p] (pause:short)',
+      '[n] children/*[1]; [t] "sous"; [n] children/*[2]; [p] (pause:short)',
       'self::overscore'
   );
   defineRule(
