@@ -171,16 +171,17 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[p] (pause:"short")', 'self::empty');
 
   // Font rules
-  // TODO: Fix font rules like in MathSpeak
   defineRule(
       'font', 'clearspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[n] . (grammar:ignoreFont=@font); [t] "en";' +
+      ' [t] @font (grammar:localFont,pause:"short")',
       'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"');
 
   defineRule(
       'font-identifier', 'clearspeak.default',
-      '[t] @font; [n] self::* (grammar:ignoreFont=@font,pause:"short")',
+      '[n] . (grammar:ignoreFont=@font); [t] "en";' +
+      ' [t] @font (grammar:localFont,pause:"short")',
       'self::identifier', 'string-length(text())=1',
       '@font', '@font="normal"', 'not(contains(@grammar, "ignoreFont"))',
       '@role!="unit"');
@@ -190,18 +191,6 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[n] self::* (grammar:ignoreFont=@font)',
       'self::identifier', 'string-length(text())=1', '@font',
       'not(contains(@grammar, "ignoreFont"))', '@font="italic"');
-
-  // defineRule(
-  //     'german-font', 'clearspeak.default',
-  //     '[t] "German"; [n] self::* (grammar:ignoreFont=@font)',
-  //     'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font="fraktur"');
-
-  // defineRule(
-  //     'german-font', 'clearspeak.default',
-  //     '[t] "bold German"; [n] self::* (grammar:ignoreFont=@font)',
-  //     'self::*', '@font', 'not(contains(@grammar, "ignoreFont"))',
-  //     '@font="bold-fraktur"');
 
   //
   // Text rules
