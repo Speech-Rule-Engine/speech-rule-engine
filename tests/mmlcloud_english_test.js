@@ -650,12 +650,14 @@ sre.MmlcloudEnglishTest.prototype.testLatinMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D504;</mi>', 'German upper A', 'default');
   this.executeRuleTest('<mi>&#x1D56C;</mi>', 'bold German upper A', 'default');
   this.executeRuleTest('<mi>&#x1D4D0;</mi>', 'bold-script upper A', 'default');
+  this.executeRuleTest('<mi>&#x1D468;</mi>', 'bold-italic upper A', 'default');
   this.executeRuleTest('<mi>&#x1D400;</mi>', 'bold upper A', 'default');
   this.executeRuleTest('<mi>&#x1D538;</mi>', 'double-struck upper A', 'default');
   this.executeRuleTest('<mi>&#x1D434;</mi>', 'italic upper A', 'default');
   this.executeRuleTest('<mi>&#x1D670;</mi>', 'monospace upper A', 'default');
   this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'sans-serif-bold upper A', 'default');
   this.executeRuleTest('<mi>&#x1D608;</mi>', 'sans-serif-italic upper A', 'default');
+  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'sans-serif-bold-italic upper A', 'default');
   this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'sans-serif upper A', 'default');
   this.executeRuleTest('<mi>&#x1D49C;</mi>', 'script upper A', 'default');
 };
@@ -667,5 +669,7 @@ sre.MmlcloudEnglishTest.prototype.testLatinMathfonts = function() {
 sre.MmlcloudEnglishTest.prototype.testGreekMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D6A8;</mi>', 'bold upper Alpha', 'default');
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'italic upper Alpha', 'default');
+  this.executeRuleTest('<mi>&#x1D71C;</mi>', 'bold-italic upper Alpha', 'default');
   this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans-serif-bold upper Alpha', 'default');
+  this.executeRuleTest('<mi>&#x1D790;</mi>', 'sans-serif-bold-italic upper Alpha', 'default');
 };

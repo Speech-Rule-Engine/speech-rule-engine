@@ -690,11 +690,13 @@ sre.MmlcloudFrenchTest.prototype.testLatinMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D56C;</mi>', 'A majuscule en gras gothique', 'default');
   this.executeRuleTest('<mi>&#x1D4D0;</mi>', 'A majuscule en gras script', 'default');
   this.executeRuleTest('<mi>&#x1D400;</mi>', 'A majuscule en gras', 'default');
-  this.executeRuleTest('<mi>&#x1D538;</mi>', 'ajouré majuscule A', 'default');
+  this.executeRuleTest('<mi>&#x1D468;</mi>', 'A majuscule en gras italique', 'default');
+  this.executeRuleTest('<mi>&#x1D538;</mi>', 'A majuscule ajouré', 'default');
   this.executeRuleTest('<mi>&#x1D434;</mi>', 'A majuscule en italique', 'default');
   this.executeRuleTest('<mi>&#x1D670;</mi>', 'A majuscule en chasse fixe', 'default');
   this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'A majuscule en sans empattement gras', 'default');
   this.executeRuleTest('<mi>&#x1D608;</mi>', 'A majuscule en sans empattement italique', 'default');
+  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'A majuscule en sans empattement italique gras', 'default');
   this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'A majuscule en sans empattement', 'default');
   this.executeRuleTest('<mi>&#x1D49C;</mi>', 'A majuscule en script', 'default');
 };
@@ -706,5 +708,7 @@ sre.MmlcloudFrenchTest.prototype.testLatinMathfonts = function() {
 sre.MmlcloudFrenchTest.prototype.testGreekMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D6A8;</mi>', 'Alpha majuscule en gras', 'default');
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'Alpha majuscule en italique', 'default');
+  this.executeRuleTest('<mi>&#x1D71C;</mi>', 'Alpha majuscule en italique gras', 'default');
   this.executeRuleTest('<mi>&#x1D756;</mi>', 'Alpha majuscule en sans empattement gras', 'default');
+  this.executeRuleTest('<mi>&#x1D790;</mi>', 'Alpha majuscule en sans empattement italique gras', 'default');
 };

@@ -688,12 +688,14 @@ sre.MmlcloudSpanishTest.prototype.testLatinMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D504;</mi>', 'Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D56C;</mi>', 'negrita Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D4D0;</mi>', 'negrita script mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D468;</mi>', 'negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D400;</mi>', 'negrita mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D538;</mi>', 'negrita de pizarra mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D434;</mi>', 'cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D670;</mi>', 'monoespacio mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'sans-serif negrita mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D608;</mi>', 'sans-serif cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'sans-serif negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'sans-serif mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D49C;</mi>', 'script mayúscula A', 'default');
 };
@@ -705,5 +707,7 @@ sre.MmlcloudSpanishTest.prototype.testLatinMathfonts = function() {
 sre.MmlcloudSpanishTest.prototype.testGreekMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D6A8;</mi>', 'negrita mayúscula Alfa', 'default');
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'cursiva mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D71C;</mi>', 'negrita cursiva mayúscula Alfa', 'default');
   this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans-serif negrita mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D790;</mi>', 'sans-serif negrita cursiva mayúscula Alfa', 'default');
 };

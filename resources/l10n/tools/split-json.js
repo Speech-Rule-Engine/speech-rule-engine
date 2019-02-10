@@ -564,11 +564,16 @@ module.exports = SplitJson;
 
 // Missing maths fonts:
 // latin:
-// bold-italic: seq 0x1d468 0x1d49b | while read n; do printf "%04X\n" $n; done
-// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do printf "%04X\n" $n; done
+// bold-italic: seq 0x1d468 0x1d49b | while read n; do printf "%04X\n" $n; done > /tmp/latin-mathfonts-bold-italic
+// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do printf "%04X\n" $n; done > /tmp/latin-mathfonts-sans-serif-bold-italic
 //
 // greek:
-// Bold Italic : seq 0X1D71C 0X1D755 | while read n; do printf "%04X\n" $n; done
-// sans-serif bold italic: seq 0X1D790 0X1D7C9 | while read n; do printf "%04X\n" $n; done
-
-
+// Bold Italic : seq 0X1D71C 0X1D755 | while read n; do printf "%04X\n" $n; done > /tmp/greek-mathfonts-bold-italic
+// sans-serif bold italic: seq 0X1D790 0X1D7C9 | while read n; do printf "%04X\n" $n; done > /tmp/greek-mathfonts-sans-serif-bold-italic
+//
+// cp latin-mathfonts-bold-script.js latin-mathfonts-bold-italic.js
+// cp latin-mathfonts-sans-serif-bold.js latin-mathfonts-sans-serif-bold-italic.js
+// 
+// cp greek-mathfonts-bold.js greek-mathfonts-bold-italic.js
+// cp greek-mathfonts-sans-serif-bold.js greek-mathfonts-sans-serif-bold-italic.js
+//

@@ -3,469 +3,469 @@
     "locale": "fr"
   },
   {
-    "key": "1D538",
+    "key": "1D468",
     "mappings": {
       "default": {
-        "default": "A majuscule ajouré"
+        "default": "A majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D539",
+    "key": "1D469",
     "mappings": {
       "default": {
-        "default": "B majuscule ajouré"
+        "default": "B majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "2102",
+    "key": "1D46A",
     "mappings": {
       "default": {
-        "default": "C majuscule ajouré"
+        "default": "C majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D53B",
+    "key": "1D46B",
     "mappings": {
       "default": {
-        "default": "D majuscule ajouré"
+        "default": "D majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D53C",
+    "key": "1D46C",
     "mappings": {
       "default": {
-        "default": "E majuscule ajouré"
+        "default": "E majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D53D",
+    "key": "1D46D",
     "mappings": {
       "default": {
-        "default": "F majuscule ajouré"
+        "default": "F majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D53E",
+    "key": "1D46E",
     "mappings": {
       "default": {
-        "default": "G majuscule ajouré"
+        "default": "G majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "210D",
+    "key": "1D46F",
     "mappings": {
       "default": {
-        "default": "H majuscule ajouré"
+        "default": "H majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D540",
+    "key": "1D470",
     "mappings": {
       "default": {
-        "default": "I majuscule ajouré"
+        "default": "I majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D541",
+    "key": "1D471",
     "mappings": {
       "default": {
-        "default": "J majuscule ajouré"
+        "default": "J majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D542",
+    "key": "1D472",
     "mappings": {
       "default": {
-        "default": "K majuscule ajouré"
+        "default": "K majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D543",
+    "key": "1D473",
     "mappings": {
       "default": {
-        "default": "L majuscule ajouré"
+        "default": "L majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D544",
+    "key": "1D474",
     "mappings": {
       "default": {
-        "default": "M majuscule ajouré"
+        "default": "M majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "2115",
+    "key": "1D475",
     "mappings": {
       "default": {
-        "default": "N majuscule ajouré"
+        "default": "N majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D546",
+    "key": "1D476",
     "mappings": {
       "default": {
-        "default": "O majuscule ajouré"
+        "default": "O majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "2119",
+    "key": "1D477",
     "mappings": {
       "default": {
-        "default": "P majuscule ajouré"
+        "default": "P majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "211A",
+    "key": "1D478",
     "mappings": {
       "default": {
-        "default": "Q majuscule ajouré"
+        "default": "Q majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "211D",
+    "key": "1D479",
     "mappings": {
       "default": {
-        "default": "R majuscule ajouré"
+        "default": "R majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D54A",
+    "key": "1D47A",
     "mappings": {
       "default": {
-        "default": "S majuscule ajouré"
+        "default": "S majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D54B",
+    "key": "1D47B",
     "mappings": {
       "default": {
-        "default": "T majuscule ajouré"
+        "default": "T majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D54C",
+    "key": "1D47C",
     "mappings": {
       "default": {
-        "default": "U majuscule ajouré"
+        "default": "U majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D54D",
+    "key": "1D47D",
     "mappings": {
       "default": {
-        "default": "V majuscule ajouré"
+        "default": "V majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D54E",
+    "key": "1D47E",
     "mappings": {
       "default": {
-        "default": "W majuscule ajouré"
+        "default": "W majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D54F",
+    "key": "1D47F",
     "mappings": {
       "default": {
-        "default": "X majuscule ajouré"
+        "default": "X majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D550",
+    "key": "1D480",
     "mappings": {
       "default": {
-        "default": "Y majuscule ajouré"
+        "default": "Y majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "2124",
+    "key": "1D481",
     "mappings": {
       "default": {
-        "default": "Z majuscule ajouré"
+        "default": "Z majuscule en italique gras"
       }
     },
     "category": "Lu"
   },
   {
-    "key": "1D552",
+    "key": "1D482",
     "mappings": {
       "default": {
-        "default": "a ajouré"
+        "default": "a en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D553",
+    "key": "1D483",
     "mappings": {
       "default": {
-        "default": "b ajouré"
+        "default": "b en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D554",
+    "key": "1D484",
     "mappings": {
       "default": {
-        "default": "c ajouré"
+        "default": "c en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D555",
+    "key": "1D485",
     "mappings": {
       "default": {
-        "default": "d ajouré"
+        "default": "d en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D556",
+    "key": "1D486",
     "mappings": {
       "default": {
-        "default": "e ajouré"
+        "default": "e en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D557",
+    "key": "1D487",
     "mappings": {
       "default": {
-        "default": "f ajouré"
+        "default": "f en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D558",
+    "key": "1D488",
     "mappings": {
       "default": {
-        "default": "g ajouré"
+        "default": "g en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D559",
+    "key": "1D489",
     "mappings": {
       "default": {
-        "default": "h ajouré"
+        "default": "h en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D55A",
+    "key": "1D48A",
     "mappings": {
       "default": {
-        "default": "i ajouré"
+        "default": "i en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D55B",
+    "key": "1D48B",
     "mappings": {
       "default": {
-        "default": "j ajouré"
+        "default": "j en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D55C",
+    "key": "1D48C",
     "mappings": {
       "default": {
-        "default": "k ajouré"
+        "default": "k en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D55D",
+    "key": "1D48D",
     "mappings": {
       "default": {
-        "default": "l ajouré"
+        "default": "l en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D55E",
+    "key": "1D48E",
     "mappings": {
       "default": {
-        "default": "m ajouré"
+        "default": "m en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D55F",
+    "key": "1D48F",
     "mappings": {
       "default": {
-        "default": "n ajouré"
+        "default": "n en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D560",
+    "key": "1D490",
     "mappings": {
       "default": {
-        "default": "o ajouré"
+        "default": "o en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D561",
+    "key": "1D491",
     "mappings": {
       "default": {
-        "default": "p ajouré"
+        "default": "p en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D562",
+    "key": "1D492",
     "mappings": {
       "default": {
-        "default": "q ajouré"
+        "default": "q en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D563",
+    "key": "1D493",
     "mappings": {
       "default": {
-        "default": "r ajouré"
+        "default": "r en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D564",
+    "key": "1D494",
     "mappings": {
       "default": {
-        "default": "s ajouré"
+        "default": "s en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D565",
+    "key": "1D495",
     "mappings": {
       "default": {
-        "default": "t ajouré"
+        "default": "t en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D566",
+    "key": "1D496",
     "mappings": {
       "default": {
-        "default": "u ajouré"
+        "default": "u en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D567",
+    "key": "1D497",
     "mappings": {
       "default": {
-        "default": "v ajouré"
+        "default": "v en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D568",
+    "key": "1D498",
     "mappings": {
       "default": {
-        "default": "w ajouré"
+        "default": "w en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D569",
+    "key": "1D499",
     "mappings": {
       "default": {
-        "default": "x ajouré"
+        "default": "x en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D56A",
+    "key": "1D49A",
     "mappings": {
       "default": {
-        "default": "y ajouré"
+        "default": "y en italique gras"
       }
     },
     "category": "Ll"
   },
   {
-    "key": "1D56B",
+    "key": "1D49B",
     "mappings": {
       "default": {
-        "default": "z ajouré"
+        "default": "z en italique gras"
       }
     },
     "category": "Ll"

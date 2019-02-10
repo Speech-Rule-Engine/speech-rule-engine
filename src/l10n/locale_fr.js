@@ -84,7 +84,7 @@ sre.Locale.fr = {
     'caligraphic': 'calligraphique',
     'caligraphic-bold': 'calligraphique gras',
     'double-struck': 'ajouré',
-    'double-struck-italic': 'ajouré italique',
+    'double-struck-italic': 'ajouré en italique',  // TODO: Get the ajoure fonts right!
     'fraktur': 'gothique',
     'italic': 'italique',
     'monospace': 'chasse fixe',
