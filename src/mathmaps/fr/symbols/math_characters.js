@@ -6,7 +6,7 @@
     "key": "2113",
     "mappings": {
       "default": {
-        "default": "l minuscule script"
+        "default": "l minuscule en script"
       }
     },
     "category": "Ll"
