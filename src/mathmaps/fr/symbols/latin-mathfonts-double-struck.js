@@ -3,6 +3,15 @@
     "locale": "fr"
   },
   {
+    "key": "1D538",
+    "mappings": {
+      "default": {
+        "default": "majuscule mathématique ajourée a"
+      }
+    },
+    "category": "Lu"
+  },
+  {
     "key": "1D539",
     "mappings": {
       "default": {

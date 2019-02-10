@@ -565,7 +565,7 @@ module.exports = SplitJson;
 // Missing maths fonts:
 // latin:
 // bold-italic: seq 0x1d468 0x1d49b | while read n; do printf "%04X\n" $n; done
-// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do print "%04X\n" $n; done
+// sans-serif bold italic: seq 0X1D63C 0X1D66F | while read n; do printf "%04X\n" $n; done
 //
 // greek:
 // Bold Italic : seq 0X1D71C 0X1D755 | while read n; do printf "%04X\n" $n; done
