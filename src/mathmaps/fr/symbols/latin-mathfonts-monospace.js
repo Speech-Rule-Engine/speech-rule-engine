@@ -6,7 +6,7 @@
     "key": "1D670",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe a"
+        "default": "A majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D671",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe b"
+        "default": "B majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D672",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe c"
+        "default": "C majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D673",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe d"
+        "default": "D majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D674",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe e"
+        "default": "E majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D675",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe f"
+        "default": "F majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D676",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe g"
+        "default": "G majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D677",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe h"
+        "default": "H majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D678",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe i"
+        "default": "I majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D679",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe j"
+        "default": "J majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D67A",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe k"
+        "default": "K majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D67B",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe l"
+        "default": "L majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D67C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe m"
+        "default": "M majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D67D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe n"
+        "default": "N majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D67E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe o"
+        "default": "O majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D67F",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe p"
+        "default": "P majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D680",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe q"
+        "default": "Q majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D681",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe r"
+        "default": "R majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D682",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe s"
+        "default": "S majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D683",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe t"
+        "default": "T majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D684",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe u"
+        "default": "U majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D685",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe v"
+        "default": "V majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D686",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe w"
+        "default": "W majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D687",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe x"
+        "default": "X majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D688",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe y"
+        "default": "Y majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1D689",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique à chasse fixe z"
+        "default": "Z majuscule en chasse fixe"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D68A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe a"
+        "default": "a en chasse fixe"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D68B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe b"
+        "default": "b en chasse fixe"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D68C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe c"
+        "default": "c en chasse fixe"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D68D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe d"
+        "default": "d en chasse fixe"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D68E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe e"
+        "default": "e en chasse fixe"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D68F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe f"
+        "default": "f en chasse fixe"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D690",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe g"
+        "default": "g en chasse fixe"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D691",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe h"
+        "default": "h en chasse fixe"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D692",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe i"
+        "default": "i en chasse fixe"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D693",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe j"
+        "default": "j en chasse fixe"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D694",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe k"
+        "default": "k en chasse fixe"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D695",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe l"
+        "default": "l en chasse fixe"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D696",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe m"
+        "default": "m en chasse fixe"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D697",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe n"
+        "default": "n en chasse fixe"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D698",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe o"
+        "default": "o en chasse fixe"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D699",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe p"
+        "default": "p en chasse fixe"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D69A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe q"
+        "default": "q en chasse fixe"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D69B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe r"
+        "default": "r en chasse fixe"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D69C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe s"
+        "default": "s en chasse fixe"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D69D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe t"
+        "default": "t en chasse fixe"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D69E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe u"
+        "default": "u en chasse fixe"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D69F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe v"
+        "default": "v en chasse fixe"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D6A0",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe w"
+        "default": "w en chasse fixe"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D6A1",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe x"
+        "default": "x en chasse fixe"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D6A2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe y"
+        "default": "y en chasse fixe"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D6A3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique à chasse fixe z"
+        "default": "z en chasse fixe"
       }
     },
     "category": "Ll"

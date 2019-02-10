@@ -6,7 +6,7 @@
     "key": "1D400",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse a"
+        "default": "A majuscule en gras"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D401",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse b"
+        "default": "B majuscule en gras"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D402",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse c"
+        "default": "C majuscule en gras"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D403",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse d"
+        "default": "D majuscule en gras"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D404",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse e"
+        "default": "E majuscule en gras"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D405",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse f"
+        "default": "F majuscule en gras"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D406",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse g"
+        "default": "G majuscule en gras"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D407",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse h"
+        "default": "H majuscule en gras"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D408",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse i"
+        "default": "I majuscule en gras"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D409",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse j"
+        "default": "J majuscule en gras"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D40A",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse k"
+        "default": "K majuscule en gras"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D40B",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse l"
+        "default": "L majuscule en gras"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D40C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse m"
+        "default": "M majuscule en gras"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D40D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse n"
+        "default": "N majuscule en gras"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D40E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse o"
+        "default": "O majuscule en gras"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D40F",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse p"
+        "default": "P majuscule en gras"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D410",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse q"
+        "default": "Q majuscule en gras"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D411",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse r"
+        "default": "R majuscule en gras"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D412",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse s"
+        "default": "S majuscule en gras"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D413",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse t"
+        "default": "T majuscule en gras"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D414",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse u"
+        "default": "U majuscule en gras"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D415",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse v"
+        "default": "V majuscule en gras"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D416",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse w"
+        "default": "W majuscule en gras"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D417",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse x"
+        "default": "X majuscule en gras"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D418",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse y"
+        "default": "Y majuscule en gras"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1D419",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse z"
+        "default": "Z majuscule en gras"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D41A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse a"
+        "default": "a en gras"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D41B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse b"
+        "default": "b en gras"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D41C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse c"
+        "default": "c en gras"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D41D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse c"
+        "default": "c en gras"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D41E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse e"
+        "default": "e en gras"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D41F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse f"
+        "default": "f en gras"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D420",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse g"
+        "default": "g en gras"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D421",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse h"
+        "default": "h en gras"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D422",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse i"
+        "default": "i en gras"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D423",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse j"
+        "default": "j en gras"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D424",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse k"
+        "default": "k en gras"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D425",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse l"
+        "default": "l en gras"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D426",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse m"
+        "default": "m en gras"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D427",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse n"
+        "default": "n en gras"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D428",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse o"
+        "default": "o en gras"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D429",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse p"
+        "default": "p en gras"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D42A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse q"
+        "default": "q en gras"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D42B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse r"
+        "default": "r en gras"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D42C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse s"
+        "default": "s en gras"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D42D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse t"
+        "default": "t en gras"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D42E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse u"
+        "default": "u en gras"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D42F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse v"
+        "default": "v en gras"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D430",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse w"
+        "default": "w en gras"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D431",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse x"
+        "default": "x en gras"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D432",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse y"
+        "default": "y en gras"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D433",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse z"
+        "default": "z en gras"
       }
     },
     "category": "Ll"

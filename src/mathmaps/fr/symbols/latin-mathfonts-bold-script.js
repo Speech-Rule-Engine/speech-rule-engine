@@ -6,7 +6,7 @@
     "key": "1D4D0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse a de ronde"
+        "default": "A majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D4D1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse b de ronde"
+        "default": "B majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D4D2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse c de ronde"
+        "default": "C majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D4D3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse d de ronde"
+        "default": "D majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D4D4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse e de ronde"
+        "default": "E majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D4D5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse f de ronde"
+        "default": "F majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D4D6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse g de ronde"
+        "default": "G majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D4D7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse h de ronde"
+        "default": "H majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D4D8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse i de ronde"
+        "default": "I majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D4D9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse j de ronde"
+        "default": "J majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D4DA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse k de ronde"
+        "default": "K majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D4DB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse l de ronde"
+        "default": "L majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D4DC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse m de ronde"
+        "default": "M majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D4DD",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse n de ronde"
+        "default": "N majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D4DE",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse o de ronde"
+        "default": "O majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D4DF",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse p de ronde"
+        "default": "P majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D4E0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse q de ronde"
+        "default": "Q majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D4E1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse r de ronde"
+        "default": "R majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D4E2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse s de ronde"
+        "default": "S majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D4E3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse t de ronde"
+        "default": "T majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D4E4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse u de ronde"
+        "default": "U majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D4E5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse v de ronde"
+        "default": "V majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D4E6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse w de ronde"
+        "default": "W majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D4E7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse x de ronde"
+        "default": "X majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D4E8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse y de ronde"
+        "default": "Y majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1D4E9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse z de ronde"
+        "default": "Z majuscule en script gras"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D4EA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse a de ronde"
+        "default": "a en script gras"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D4EB",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse b de ronde"
+        "default": "b en script gras"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D4EC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse c de ronde"
+        "default": "c en script gras"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D4ED",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse d de ronde"
+        "default": "d en script gras"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D4EE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse e de ronde"
+        "default": "e en script gras"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D4EF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse f de ronde"
+        "default": "f en script gras"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D4F0",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse g de ronde"
+        "default": "g en script gras"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D4F1",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse h de ronde"
+        "default": "h en script gras"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D4F2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse i de ronde"
+        "default": "i en script gras"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D4F3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse j de ronde"
+        "default": "j en script gras"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D4F4",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse k de ronde"
+        "default": "k en script gras"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D4F5",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse l de ronde"
+        "default": "l en script gras"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D4F6",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse m de ronde"
+        "default": "m en script gras"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D4F7",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse n de ronde"
+        "default": "n en script gras"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D4F8",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse o de ronde"
+        "default": "o en script gras"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D4F9",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse p de ronde"
+        "default": "p en script gras"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D4FA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse q de ronde"
+        "default": "q en script gras"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D4FB",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse r de ronde"
+        "default": "r en script gras"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D4FC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse s de ronde"
+        "default": "s en script gras"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D4FD",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse t de ronde"
+        "default": "t en script gras"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D4FE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse u de ronde"
+        "default": "u en script gras"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D4FF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse v de ronde"
+        "default": "v en script gras"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D500",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse w de ronde"
+        "default": "w en script gras"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D501",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse x de ronde"
+        "default": "x en script gras"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D502",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse y de ronde"
+        "default": "y en script gras"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D503",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse z de ronde"
+        "default": "z en script gras"
       }
     },
     "category": "Ll"

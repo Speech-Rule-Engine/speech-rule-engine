@@ -6,7 +6,7 @@
     "key": "1D538",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée a"
+        "default": "A majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D539",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée b"
+        "default": "B majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "2102",
     "mappings": {
       "default": {
-        "default": "c majuscule ajouré"
+        "default": "C majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D53B",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée d"
+        "default": "D majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D53C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée e"
+        "default": "E majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D53D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée f"
+        "default": "F majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D53E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée g"
+        "default": "G majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "210D",
     "mappings": {
       "default": {
-        "default": "h majuscule ajouré"
+        "default": "H majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D540",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée i"
+        "default": "I majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D541",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée j"
+        "default": "J majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D542",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée k"
+        "default": "K majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D543",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée l"
+        "default": "L majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D544",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée m"
+        "default": "M majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "2115",
     "mappings": {
       "default": {
-        "default": "n majuscule ajouré"
+        "default": "N majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D546",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée o"
+        "default": "O majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "2119",
     "mappings": {
       "default": {
-        "default": "p majuscule ajouré"
+        "default": "P majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "211A",
     "mappings": {
       "default": {
-        "default": "q majuscule ajouré"
+        "default": "Q majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "211D",
     "mappings": {
       "default": {
-        "default": "r majuscule ajouré"
+        "default": "R majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D54A",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée s"
+        "default": "S majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D54B",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée t"
+        "default": "T majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D54C",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée u"
+        "default": "U majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D54D",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée v"
+        "default": "V majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D54E",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée w"
+        "default": "W majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D54F",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée x"
+        "default": "X majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D550",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique ajourée y"
+        "default": "Y majuscule en ajouré"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "2124",
     "mappings": {
       "default": {
-        "default": "z majuscule ajouré"
+        "default": "Z majuscule ajouré"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D552",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée a"
+        "default": "a en ajouré"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D553",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée b"
+        "default": "b en ajouré"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D554",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée c"
+        "default": "c en ajouré"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D555",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée d"
+        "default": "d en ajouré"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D556",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée e"
+        "default": "e en ajouré"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D557",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée f"
+        "default": "f en ajouré"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D558",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée g"
+        "default": "g en ajouré"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D559",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée h"
+        "default": "h en ajouré"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D55A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée i"
+        "default": "i en ajouré"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D55B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée j"
+        "default": "j en ajouré"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D55C",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée k"
+        "default": "k en ajouré"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D55D",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée l"
+        "default": "l en ajouré"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D55E",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée m"
+        "default": "m en ajouré"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D55F",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée n"
+        "default": "n en ajouré"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D560",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée o"
+        "default": "o en ajouré"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D561",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée p"
+        "default": "p en ajouré"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D562",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée q"
+        "default": "q en ajouré"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D563",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée r"
+        "default": "r en ajouré"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D564",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée s"
+        "default": "s en ajouré"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D565",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée t"
+        "default": "t en ajouré"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D566",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée u"
+        "default": "u en ajouré"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D567",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée v"
+        "default": "v en ajouré"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D568",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée w"
+        "default": "w en ajouré"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D569",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée x"
+        "default": "x en ajouré"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D56A",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée y"
+        "default": "y en ajouré"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D56B",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique ajourée z"
+        "default": "z en ajouré"
       }
     },
     "category": "Ll"

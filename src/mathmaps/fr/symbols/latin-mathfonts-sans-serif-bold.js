@@ -6,7 +6,7 @@
     "key": "1D5D4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement a"
+        "default": "A majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1D5D5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement b"
+        "default": "B majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1D5D6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement c"
+        "default": "C majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1D5D7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement d"
+        "default": "D majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1D5D8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement e"
+        "default": "E majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1D5D9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement f"
+        "default": "F majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1D5DA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement g"
+        "default": "G majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1D5DB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement h"
+        "default": "H majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1D5DC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement i"
+        "default": "I majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1D5DD",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement j"
+        "default": "J majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1D5DE",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement k"
+        "default": "K majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1D5DF",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement l"
+        "default": "L majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1D5E0",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement m"
+        "default": "M majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1D5E1",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement n"
+        "default": "N majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1D5E2",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement o"
+        "default": "O majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1D5E3",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement p"
+        "default": "P majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1D5E4",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement q"
+        "default": "Q majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1D5E5",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement r"
+        "default": "R majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1D5E6",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement s"
+        "default": "S majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1D5E7",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement t"
+        "default": "T majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1D5E8",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement u"
+        "default": "U majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1D5E9",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement v"
+        "default": "V majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1D5EA",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement w"
+        "default": "W majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1D5EB",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement x"
+        "default": "X majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1D5EC",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement y"
+        "default": "Y majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1D5ED",
     "mappings": {
       "default": {
-        "default": "majuscule mathématique grasse sans empattement z"
+        "default": "Z majuscule en sans empattement gras"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1D5EE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement a"
+        "default": "a en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "1D5EF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement b"
+        "default": "b en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "1D5F0",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement c"
+        "default": "c en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "1D5F1",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement d"
+        "default": "d en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "1D5F2",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement e"
+        "default": "e en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "1D5F3",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement f"
+        "default": "f en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "1D5F4",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement g"
+        "default": "g en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "1D5F5",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement h"
+        "default": "h en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "1D5F6",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement i"
+        "default": "i en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "1D5F7",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement j"
+        "default": "j en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -330,7 +330,7 @@
     "key": "1D5F8",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement k"
+        "default": "k en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -339,7 +339,7 @@
     "key": "1D5F9",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement l"
+        "default": "l en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "1D5FA",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement m"
+        "default": "m en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "1D5FB",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement n"
+        "default": "n en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "1D5FC",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement o"
+        "default": "o en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "1D5FD",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement p"
+        "default": "p en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "1D5FE",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement q"
+        "default": "q en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -393,7 +393,7 @@
     "key": "1D5FF",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement r"
+        "default": "r en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -402,7 +402,7 @@
     "key": "1D600",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement s"
+        "default": "s en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -411,7 +411,7 @@
     "key": "1D601",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement t"
+        "default": "t en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "1D602",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement u"
+        "default": "u en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -429,7 +429,7 @@
     "key": "1D603",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement v"
+        "default": "v en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1D604",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement w"
+        "default": "w en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1D605",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement x"
+        "default": "x en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1D606",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement y"
+        "default": "y en sans empattement gras"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1D607",
     "mappings": {
       "default": {
-        "default": "minuscule mathématique grasse sans empattement z"
+        "default": "z en sans empattement gras"
       }
     },
     "category": "Ll"
