@@ -226,6 +226,8 @@ sre.SemanticProcessor.prototype.text = function(content, font, type) {
     leaf.role = sre.SemanticAttr.Role.STRING;
   }
   sre.SemanticProcessor.exprFont_(leaf);
+  // TODO (simons): Process single element in text. E.g., check if a text
+  //      element represents a function or a single letter, number, etc.
   return leaf;
 };
 

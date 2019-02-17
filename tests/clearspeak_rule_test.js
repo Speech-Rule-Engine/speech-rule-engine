@@ -49,6 +49,7 @@ sre.ClearspeakRuleTest = function() {
   this.rules = ['ClearspeakRules'];
 
   this.setActive('ClearspeakExamples');
+  this.startExamples();
 };
 goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
 

@@ -35,7 +35,6 @@ sre.Variables = function() {};
  */
 sre.Variables.VERSION = '3.0.0-beta.1';
 
-
 /**
  * List of locales to load.
  * @const

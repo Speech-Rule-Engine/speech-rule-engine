@@ -2,7 +2,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "watts"
+       "default": "watt"
      }
    },
    "key": "W",
@@ -11,7 +11,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "kilowatts"
+       "default": "kilowatt"
      }
    },
    "key": "kW",
@@ -20,7 +20,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "milliwatts"
+       "default": "milliwatt"
      }
    },
    "key": "mW",
@@ -29,7 +29,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "kilowatt hours"
+       "default": "kilowatt hour"
      }
    },
    "key": "kwh",
@@ -38,7 +38,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "joules"
+       "default": "joule"
      }
    },
    "key": "J",
@@ -56,7 +56,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "amperes"
+       "default": "ampere"
      }
    },
    "key": "A",
@@ -65,7 +65,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "volts"
+       "default": "volt"
      }
    },
    "key": "V",

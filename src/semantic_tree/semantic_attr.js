@@ -1543,9 +1543,8 @@ sre.SemanticAttr.Role = {
   AXIOM: 'axiom',
 
   // General
-  UNKNOWN: 'unknown',
-  PROTECTED: 'protected'
-
+  UNKNOWN: 'unknown'
+  
 };
 
 

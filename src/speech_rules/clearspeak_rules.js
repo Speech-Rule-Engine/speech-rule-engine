@@ -160,8 +160,8 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::unknown');
 
   defineRule(
-      'protected', 'clearspeak.default', '[t] text()',
-      'self::*', '@role="protected"');
+      'protected', 'mathspeak.default', '[t] text()',
+      'self::number', 'contains(@grammar, "protected")');
 
   defineRule(
       'omit-empty', 'clearspeak.default',
@@ -2250,9 +2250,10 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::number', '@role="mixed"');
   defineRule(
       'number-with-chars', 'clearspeak.default',
-      '[t] "number"; [m] CQFspaceoutNumber', 'self::number',
+      '[t] "number"; [m] CQFspaceoutNumber (grammar:protected)',
+      'self::number', '@role="othernumber"',
       '"" != translate(text(), "0123456789.,", "")',
-      'text() != translate(text(), "0123456789.,", "")');
+      'not(contains(@grammar, "protected"))');
 
   // Decimal periods:
   defineRule(
@@ -2309,12 +2310,12 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   );
   defineRule(
       'number-with-spaces', 'clearspeak.default',
-      '[m] CQFspaceoutNumber (grammar:!spaceout)', 'self::number',
+      '[m] CQFspaceoutNumber (grammar:!spaceout:number)', 'self::number',
       'contains(@grammar, "spaceout")');
   defineRule(
       'decimal-point', 'clearspeak.default',
-      '[t] "point"', 'self::number', '@role="fullstop"'
-  );
+      '[t] "point"', 'self::punctuation', '@role="fullstop"',
+      'contains(@grammar,"number")');
 
   // Line segments:
   defineRule(
