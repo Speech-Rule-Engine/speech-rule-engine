@@ -8,6 +8,9 @@
       },
       "mathspeak": {
         "default": "bold script upper A"
+      },
+      "clearspeak": {
+        "default": "bold script cap A"
       }
     },
     "key": "1D4D0"
@@ -21,6 +24,9 @@
       },
       "mathspeak": {
         "default": "bold script upper B"
+      },
+      "clearspeak": {
+        "default": "bold script cap B"
       }
     },
     "key": "1D4D1"
@@ -34,6 +40,9 @@
       },
       "mathspeak": {
         "default": "bold script upper C"
+      },
+      "clearspeak": {
+        "default": "bold script cap C"
       }
     },
     "key": "1D4D2"
@@ -47,6 +56,9 @@
       },
       "mathspeak": {
         "default": "bold script upper D"
+      },
+      "clearspeak": {
+        "default": "bold script cap D"
       }
     },
     "key": "1D4D3"
@@ -60,6 +72,9 @@
       },
       "mathspeak": {
         "default": "bold script upper E"
+      },
+      "clearspeak": {
+        "default": "bold script cap E"
       }
     },
     "key": "1D4D4"
@@ -73,6 +88,9 @@
       },
       "mathspeak": {
         "default": "bold script upper F"
+      },
+      "clearspeak": {
+        "default": "bold script cap F"
       }
     },
     "key": "1D4D5"
@@ -86,6 +104,9 @@
       },
       "mathspeak": {
         "default": "bold script upper G"
+      },
+      "clearspeak": {
+        "default": "bold script cap G"
       }
     },
     "key": "1D4D6"
@@ -99,6 +120,9 @@
       },
       "mathspeak": {
         "default": "bold script upper H"
+      },
+      "clearspeak": {
+        "default": "bold script cap H"
       }
     },
     "key": "1D4D7"
@@ -112,6 +136,9 @@
       },
       "mathspeak": {
         "default": "bold script upper I"
+      },
+      "clearspeak": {
+        "default": "bold script cap I"
       }
     },
     "key": "1D4D8"
@@ -125,6 +152,9 @@
       },
       "mathspeak": {
         "default": "bold script upper J"
+      },
+      "clearspeak": {
+        "default": "bold script cap J"
       }
     },
     "key": "1D4D9"
@@ -138,6 +168,9 @@
       },
       "mathspeak": {
         "default": "bold script upper K"
+      },
+      "clearspeak": {
+        "default": "bold script cap K"
       }
     },
     "key": "1D4DA"
@@ -151,6 +184,9 @@
       },
       "mathspeak": {
         "default": "bold script upper L"
+      },
+      "clearspeak": {
+        "default": "bold script cap L"
       }
     },
     "key": "1D4DB"
@@ -164,6 +200,9 @@
       },
       "mathspeak": {
         "default": "bold script upper M"
+      },
+      "clearspeak": {
+        "default": "bold script cap M"
       }
     },
     "key": "1D4DC"
@@ -177,6 +216,9 @@
       },
       "mathspeak": {
         "default": "bold script upper N"
+      },
+      "clearspeak": {
+        "default": "bold script cap N"
       }
     },
     "key": "1D4DD"
@@ -190,6 +232,9 @@
       },
       "mathspeak": {
         "default": "bold script upper O"
+      },
+      "clearspeak": {
+        "default": "bold script cap O"
       }
     },
     "key": "1D4DE"
@@ -203,6 +248,9 @@
       },
       "mathspeak": {
         "default": "bold script upper P"
+      },
+      "clearspeak": {
+        "default": "bold script cap P"
       }
     },
     "key": "1D4DF"
@@ -216,6 +264,9 @@
       },
       "mathspeak": {
         "default": "bold script upper Q"
+      },
+      "clearspeak": {
+        "default": "bold script cap Q"
       }
     },
     "key": "1D4E0"
@@ -229,6 +280,9 @@
       },
       "mathspeak": {
         "default": "bold script upper R"
+      },
+      "clearspeak": {
+        "default": "bold script cap R"
       }
     },
     "key": "1D4E1"
@@ -242,6 +296,9 @@
       },
       "mathspeak": {
         "default": "bold script upper S"
+      },
+      "clearspeak": {
+        "default": "bold script cap S"
       }
     },
     "key": "1D4E2"
@@ -255,6 +312,9 @@
       },
       "mathspeak": {
         "default": "bold script upper T"
+      },
+      "clearspeak": {
+        "default": "bold script cap T"
       }
     },
     "key": "1D4E3"
@@ -268,6 +328,9 @@
       },
       "mathspeak": {
         "default": "bold script upper U"
+      },
+      "clearspeak": {
+        "default": "bold script cap U"
       }
     },
     "key": "1D4E4"
@@ -281,6 +344,9 @@
       },
       "mathspeak": {
         "default": "bold script upper V"
+      },
+      "clearspeak": {
+        "default": "bold script cap V"
       }
     },
     "key": "1D4E5"
@@ -294,6 +360,9 @@
       },
       "mathspeak": {
         "default": "bold script upper W"
+      },
+      "clearspeak": {
+        "default": "bold script cap W"
       }
     },
     "key": "1D4E6"
@@ -307,6 +376,9 @@
       },
       "mathspeak": {
         "default": "bold script upper X"
+      },
+      "clearspeak": {
+        "default": "bold script cap X"
       }
     },
     "key": "1D4E7"
@@ -320,6 +392,9 @@
       },
       "mathspeak": {
         "default": "bold script upper Y"
+      },
+      "clearspeak": {
+        "default": "bold script cap Y"
       }
     },
     "key": "1D4E8"
@@ -333,6 +408,9 @@
       },
       "mathspeak": {
         "default": "bold script upper Z"
+      },
+      "clearspeak": {
+        "default": "bold script cap Z"
       }
     },
     "key": "1D4E9"

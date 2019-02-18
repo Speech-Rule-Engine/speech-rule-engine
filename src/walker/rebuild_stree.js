@@ -24,7 +24,8 @@ goog.provide('sre.RebuildStree');
 
 goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticNode');
+goog.require('sre.SemanticNodeFactory');
+goog.require('sre.SemanticProcessor');
 goog.require('sre.SemanticSkeleton');
 goog.require('sre.SemanticTree');
 goog.require('sre.WalkerUtil');
@@ -38,6 +39,11 @@ goog.require('sre.WalkerUtil');
  * @param {!Element} mathml The enriched MathML node.
  */
 sre.RebuildStree = function(mathml) {
+
+  /**
+   * @type {sre.SemanticNodeFactory}
+   */
+  this.factory = new sre.SemanticNodeFactory();
 
   /**
    * @type {!Object.<!sre.SemanticNode>}
@@ -68,6 +74,7 @@ sre.RebuildStree = function(mathml) {
    * @type {!Node}
    */
   this.xml = this.stree.xml();
+  sre.SemanticProcessor.getInstance().setNodeFactory(this.factory);
 
 };
 
@@ -129,6 +136,8 @@ sre.RebuildStree.prototype.makeNode = function(node) {
   var type = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.TYPE);
   var role = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ROLE);
   var font = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.FONT);
+  var annotation = sre.WalkerUtil.getAttribute(
+      node, sre.EnrichMathml.Attribute.ANNOTATION) || '';
   var id = sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.ID);
   var embellished = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.EMBELLISHED);
@@ -139,6 +148,7 @@ sre.RebuildStree.prototype.makeNode = function(node) {
   snode.role = /** @type {sre.SemanticAttr.Role} */(role);
   snode.font = font ? /** @type {sre.SemanticAttr.Font} */(font) :
       sre.SemanticAttr.Font.UNKNOWN;
+  snode.parseAnnotation(annotation);
   if (fencepointer) {
     snode.fencePointer = fencepointer;
   }
@@ -297,7 +307,7 @@ sre.RebuildStree.prototype.postProcess = function(snode, collapsed) {
  * @return {sre.SemanticNode} The newly created node.
  */
 sre.RebuildStree.prototype.createNode = function(id) {
-  var node = new sre.SemanticNode(id);
+  var node = this.factory.makeNode(id);
   this.nodeDict[id.toString()] = node;
   return node;
 };

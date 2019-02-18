@@ -8,6 +8,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper A"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap A"
       }
     },
     "key": "1D56C"
@@ -21,6 +24,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper B"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap B"
       }
     },
     "key": "1D56D"
@@ -34,6 +40,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper C"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap C"
       }
     },
     "key": "1D56E"
@@ -47,6 +56,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper D"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap D"
       }
     },
     "key": "1D56F"
@@ -60,6 +72,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper E"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap E"
       }
     },
     "key": "1D570"
@@ -73,6 +88,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper F"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap F"
       }
     },
     "key": "1D571"
@@ -86,6 +104,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper G"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap G"
       }
     },
     "key": "1D572"
@@ -99,6 +120,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper H"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap H"
       }
     },
     "key": "1D573"
@@ -112,6 +136,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper I"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap I"
       }
     },
     "key": "1D574"
@@ -125,6 +152,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper J"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap J"
       }
     },
     "key": "1D575"
@@ -138,6 +168,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper K"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap K"
       }
     },
     "key": "1D576"
@@ -151,6 +184,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper L"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap L"
       }
     },
     "key": "1D577"
@@ -164,6 +200,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper M"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap M"
       }
     },
     "key": "1D578"
@@ -177,6 +216,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper N"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap N"
       }
     },
     "key": "1D579"
@@ -190,6 +232,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper O"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap O"
       }
     },
     "key": "1D57A"
@@ -203,6 +248,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper P"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap P"
       }
     },
     "key": "1D57B"
@@ -216,6 +264,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper Q"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap Q"
       }
     },
     "key": "1D57C"
@@ -229,6 +280,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper R"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap R"
       }
     },
     "key": "1D57D"
@@ -242,6 +296,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper S"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap S"
       }
     },
     "key": "1D57E"
@@ -255,6 +312,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper T"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap T"
       }
     },
     "key": "1D57F"
@@ -268,6 +328,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper U"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap U"
       }
     },
     "key": "1D580"
@@ -281,6 +344,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper V"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap V"
       }
     },
     "key": "1D581"
@@ -294,6 +360,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper W"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap W"
       }
     },
     "key": "1D582"
@@ -307,6 +376,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper X"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap X"
       }
     },
     "key": "1D583"
@@ -320,6 +392,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper Y"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap Y"
       }
     },
     "key": "1D584"
@@ -333,6 +408,9 @@
       },
       "mathspeak": {
         "default": "bold fraktur upper Z"
+      },
+      "clearspeak": {
+        "default": "bold fraktur cap Z"
       }
     },
     "key": "1D585"

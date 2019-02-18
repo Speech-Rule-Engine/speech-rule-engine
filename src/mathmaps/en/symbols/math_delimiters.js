@@ -10,6 +10,9 @@
         "default": "left-parenthesis",
         "brief": "left-p'ren",
         "sbrief": "L p'ren"
+      },
+      "clearspeak": {
+        "default": "open paren"
       }
     },
     "key": "0028"
@@ -25,6 +28,9 @@
         "default": "right-parenthesis",
         "brief": "right-p'ren",
         "sbrief": "R p'ren"
+      },
+      "clearspeak": {
+        "default": "close paren"
       }
     },
     "key": "0029"
@@ -40,6 +46,9 @@
         "default": "left-bracket",
         "brief": "left-brack",
         "sbrief": "L brack"
+      },
+      "clearspeak": {
+        "default": "open bracket"
       }
     },
     "key": "005B"
@@ -55,6 +64,9 @@
         "default": "right-bracket",
         "brief": "right-brack",
         "sbrief": "R brack"
+      },
+      "clearspeak": {
+        "default": "close bracket"
       }
     },
     "key": "005D"
@@ -69,6 +81,9 @@
       "mathspeak": {
         "default": "left-brace",
         "sbrief": "L brace"
+      },
+      "clearspeak": {
+        "default": "open brace"
       }
     },
     "key": "007B"
@@ -83,6 +98,9 @@
       "mathspeak": {
         "default": "right-brace",
         "sbrief": "R brace"
+      },
+      "clearspeak": {
+        "default": "close brace"
       }
     },
     "key": "007D"

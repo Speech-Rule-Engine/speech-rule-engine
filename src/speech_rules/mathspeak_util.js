@@ -23,6 +23,7 @@ goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
 goog.require('sre.Messages');
 goog.require('sre.Semantic');
+goog.require('sre.SemanticProcessor');
 goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
@@ -43,51 +44,56 @@ sre.MathspeakUtil.spaceoutText = function(node) {
 
 
 /**
- * Query function that splits into number nodes and content nodes.
+ * Spaces out content of the given node into new elements with single character
+ * content.
  * @param {!Node} node The node to be processed.
- * @return {Array.<Node>} List of number and content nodes.
+ * @param {function(sre.SemanticNode)} correction A correction function applied
+ *     to the newly created semantic node with single characters.
+ * @return {Array.<Node>} List of single nodes.
  */
-sre.MathspeakUtil.spaceoutNumber = function(node) {
+sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
   var content = node.textContent.split('');
   var result = [];
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var processor = sre.SemanticProcessor.getInstance();
+  var doc = node.ownerDocument;
   for (var i = 0, chr; chr = content[i]; i++) {
-    // We ignore Greek characters for now!
-    var type = sre.Semantic.Type.NUMBER;
-    var role = chr.match(/\W/) ?
-        sre.Semantic.Role.UNKNOWN :
-        sre.Semantic.Role.PROTECTED;
-    var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 chr + '</' + type + '>', 'text/xml');
-    result.push(doc.documentElement);
+    var sn = processor.identifierNode(chr, sre.Semantic.Font.UNKNOWN, '');
+    correction(sn);
+    result.push(sn.xml(doc));
   }
   return result;
+  
 };
 
 
 /**
  * Query function that splits into number nodes and content nodes.
  * @param {!Node} node The node to be processed.
- * @return {Array.<Node>} List of number and content nodes.
+ * @return {Array.<Node>} List of single number nodes.
+ */
+sre.MathspeakUtil.spaceoutNumber = function(node) {
+  return sre.MathspeakUtil.spaceoutNodes(
+    node,
+    function(sn) {
+      if (!sn.textContent.match(/\W/)) {
+        sn.type = sre.Semantic.Type.NUMBER;
+      }
+    });
+};
+
+
+/**
+ * Query function that splits into number nodes and content nodes.
+ * @param {!Node} node The node to be processed.
+ * @return {Array.<Node>} List of single identifier nodes.
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
-  var textContent = node.textContent;
-  if (!textContent.match(/[a-zA-Z]+/)) {
-    node.setAttribute('role', sre.SemanticAttr.Role.PROTECTED);
-    return [node];
-  }
-  var content = textContent.split('');
-  var result = [];
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
-  for (var i = 0, chr; chr = content[i]; i++) {
-    // We ignore Greek characters for now!
-    var type = sre.Semantic.Type.IDENTIFIER;
-    var role = sre.Semantic.Role.UNKNOWN;
-    var doc = dp.parseFromString('<' + type + ' role="' + role + '">' +
-                                 chr + '</' + type + '>', 'text/xml');
-    result.push(doc.documentElement);
-  }
-  return result;
+  return sre.MathspeakUtil.spaceoutNodes(
+    node,
+    function(sn) {
+      sn.font = sre.Semantic.Font.UNKNOWN;
+      sn.type = sre.Semantic.Type.IDENTIFIER;
+    });
 };
 
 
@@ -390,8 +396,8 @@ sre.MathspeakUtil.hundredsToWords = function(number) {
   if (n) {
     str += str ? '-' : '';
     str += sre.MathspeakUtil.onesNumbers[n] ||
-        (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] + '-' +
-        sre.MathspeakUtil.onesNumbers[n % 10]);
+      (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
+       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
   }
   return str;
 };
@@ -412,13 +418,14 @@ sre.MathspeakUtil.numberToWords = function(number) {
     var hundreds = number % 1000;
     if (hundreds) {
       str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-          (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] + '-' : '') +
+        (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
+         '-' : '') +
           str;
     }
     number = Math.floor(number / 1000);
     pos++;
   }
-  return str;
+  return str.replace(/-$/, '');
 };
 
 
@@ -430,10 +437,24 @@ sre.MathspeakUtil.numberToWords = function(number) {
  * @return {string} The ordinal of the number as string.
  */
 sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
+  if (num === 1) {
+    return plural ? 'oneths' : 'oneth';
+  }
   if (num === 2) {
     return plural ? 'halves' : 'half';
   }
-  var ordinal = sre.MathspeakUtil.numberToWords(num);
+  var ordinal = sre.MathspeakUtil.wordOrdinal(num);
+  return plural ? ordinal + 's' : ordinal;
+};
+
+
+/**
+ * Creates a word ordinal string from a number.
+ * @param {number} number The number to be converted.
+ * @return {string} The ordinal string.
+ */
+sre.MathspeakUtil.wordOrdinal = function(number) {
+  var ordinal = sre.MathspeakUtil.numberToWords(number);
   if (ordinal.match(/one$/)) {
     ordinal = ordinal.slice(0, -3) + 'first';
   } else if (ordinal.match(/two$/)) {
@@ -453,7 +474,7 @@ sre.MathspeakUtil.numberToOrdinal = function(num, plural) {
   } else {
     ordinal = ordinal + 'th';
   }
-  return plural ? ordinal + 's' : ordinal;
+  return ordinal;
 };
 
 
@@ -540,14 +561,16 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
  * @param {!Node} node Fraction node to be translated.
+ * @param {string=} opt_sep Separator string.
  * @return {string} The string representation if it is a valid vulgar fraction.
  */
-sre.MathspeakUtil.vulgarFraction = function(node) {
+sre.MathspeakUtil.vulgarFraction = function(node, opt_sep) {
+  var sep = (typeof opt_sep === 'undefined') ? '-' : opt_sep;
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible &&
       conversion.enumerator &&
       conversion.denominator) {
-    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + '-' +
+    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + sep +
         sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
         conversion.enumerator !== 1);
   }
@@ -559,15 +582,17 @@ sre.MathspeakUtil.vulgarFraction = function(node) {
  * Checks if a vulgar fraction is small enough to be convertible to string in
  * MathSpeak, i.e. enumerator in [1..9] and denominator in [1..99].
  * @param {!Node} node Fraction node to be tested.
+ * @param {number} enumer Enumerator maximum.
+ * @param {number} denom Denominator maximum.
  * @return {boolean} True if it is a valid, small enough fraction.
  */
-sre.MathspeakUtil.vulgarFractionSmall = function(node) {
+sre.MathspeakUtil.vulgarFractionSmall = function(node, enumer, denom) {
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible) {
     var enumerator = conversion.enumerator;
     var denominator = conversion.denominator;
-    return enumerator > 0 && enumerator < 10 &&
-        denominator > 0 && denominator < 100;
+    return enumerator > 0 && enumerator < enumer &&
+        denominator > 0 && denominator < denom;
   }
   return false;
 };
@@ -581,7 +606,7 @@ sre.MathspeakUtil.vulgarFractionSmall = function(node) {
  *     empty.
  */
 sre.MathspeakUtil.isSmallVulgarFraction = function(node) {
-  return sre.MathspeakUtil.vulgarFractionSmall(node) ? [node] : [];
+  return sre.MathspeakUtil.vulgarFractionSmall(node, 10, 100) ? [node] : [];
 };
 
 
@@ -954,4 +979,120 @@ sre.MathspeakUtil.removeParens = function(node) {
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 };
 
+
+// Generating rules for tensors.
+/**
+ * Component strings for tensor speech rules.
+ * @enum {string}
+ * @private
+ */
+sre.MathspeakUtil.componentString_ = {
+  2 : 'CSFbaseline',
+  1 : 'CSFsubscript',
+  0 : 'CSFsuperscript'
+};
+
+
+/**
+ * Child number translation for tensor speech rules.
+ * @enum {number}
+ * @private
+ */
+sre.MathspeakUtil.childNumber_ = {
+  4 : 2,
+  3 : 3,
+  2 : 1,
+  1 : 4,
+  0 : 5
+};
+
+
+/**
+ * Generates the rule strings and constraints for tensor rules.
+ * @param {string} constellation Bitvector representing of possible tensor
+ *     constellation.
+ * @return {Array.<string>} A list consisting of additional constraints for the
+ *     tensor rule, plus the strings for the verbose and brief rule, in that
+ *     order.
+ * @private
+ */
+sre.MathspeakUtil.generateTensorRuleStrings_ = function(constellation) {
+  var constraints = [];
+  var verbString = '';
+  var briefString = '';
+  var constel = parseInt(constellation, 2);
+
+  for (var i = 0; i < 5; i++) {
+    var childString = 'children/*[' + sre.MathspeakUtil.childNumber_[i] + ']';
+    if (constel & 1) {
+      var compString = sre.MathspeakUtil.componentString_[i % 3];
+      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
+          verbString;
+      briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
+          briefString;
+    } else {
+      constraints.unshift('name(' + childString + ')="empty"');
+    }
+    constel >>= 1;
+  }
+  constraints.push(verbString);
+  constraints.push(briefString);
+  return constraints;
+};
+
+
+/**
+ * Generator for tensor speech rules.
+ * @param {sre.MathStore} store The mathstore to which the rules are added.
+ */
+sre.MathspeakUtil.generateTensorRules = function(store) {
+  // Constellations are built as bitvectors with the meaning:
+  //
+  //  lsub lsuper base rsub rsuper
+  var defineRule = goog.bind(store.defineRule, store);
+  var defineRulesAlias = goog.bind(store.defineRulesAlias, store);
+  var defineSpecialisedRule = goog.bind(store.defineSpecialisedRule, store);
+  var constellations = ['11111', '11110', '11101', '11100',
+                        '10111', '10110', '10101', '10100',
+                        '01111', '01110', '01101', '01100'
+  ];
+  for (var i = 0, constel; constel = constellations[i]; i++) {
+    var name = 'tensor' + constel;
+    var components = sre.MathspeakUtil.generateTensorRuleStrings_(constel);
+    var briefStr = components.pop();
+    var verbStr = components.pop();
+    var verbList = [name, 'mathspeak.default', verbStr, 'self::tensor'].
+        concat(components);
+    var briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor'].
+        concat(components);
+    // Rules without neighbour.
+    defineRule.apply(null, verbList);
+    defineRule.apply(null, briefList);
+    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
+    // Rules with baseline.
+    var baselineStr = sre.MathspeakUtil.componentString_[2];
+    verbStr += '; [t]' + baselineStr + 'Verbose';
+    briefStr += '; [t]' + baselineStr + 'Brief';
+    name = name + '-baseline';
+    verbList = [name, 'mathspeak.default', verbStr, 'self::tensor',
+                'following-sibling::*'].
+        concat(components);
+    briefList = [name, 'mathspeak.brief', briefStr, 'self::tensor',
+                 'following-sibling::*'].
+        concat(components);
+    defineRule.apply(null, verbList);
+    defineRule.apply(null, briefList);
+    defineSpecialisedRule(name, 'mathspeak.brief', 'mathspeak.sbrief');
+    // Rules without neighbour but baseline.
+    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
+                     'ancestor::fraction|ancestor::punctuated|' +
+                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
+                     'ancestor::relseq|ancestor::multirel|' +
+                     '@embellished'].
+        concat(components);
+    defineRulesAlias.apply(null, aliasList);
+  }
+};
+
+  
 });  // goog.scope

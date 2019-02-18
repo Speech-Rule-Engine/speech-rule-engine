@@ -9,6 +9,9 @@
       },
       "mathspeak": {
         "default": "italic upper Alpha"
+      },
+      "clearspeak": {
+        "default": "italic cap Alpha"
       }
     },
     "key": "1D6E2"
@@ -23,6 +26,9 @@
       },
       "mathspeak": {
         "default": "italic upper Beta"
+      },
+      "clearspeak": {
+        "default": "italic cap Beta"
       }
     },
     "key": "1D6E3"
@@ -37,6 +43,9 @@
       },
       "mathspeak": {
         "default": "italic upper Gamma"
+      },
+      "clearspeak": {
+        "default": "italic cap Gamma"
       }
     },
     "key": "1D6E4"
@@ -51,6 +60,9 @@
       },
       "mathspeak": {
         "default": "italic upper Delta"
+      },
+      "clearspeak": {
+        "default": "italic cap Delta"
       }
     },
     "key": "1D6E5"
@@ -65,6 +77,9 @@
       },
       "mathspeak": {
         "default": "italic upper Epsilon"
+      },
+      "clearspeak": {
+        "default": "italic cap Epsilon"
       }
     },
     "key": "1D6E6"
@@ -79,6 +94,9 @@
       },
       "mathspeak": {
         "default": "italic upper Zeta"
+      },
+      "clearspeak": {
+        "default": "italic cap Zeta"
       }
     },
     "key": "1D6E7"
@@ -93,6 +111,9 @@
       },
       "mathspeak": {
         "default": "italic upper Eta"
+      },
+      "clearspeak": {
+        "default": "italic cap Eta"
       }
     },
     "key": "1D6E8"
@@ -107,6 +128,9 @@
       },
       "mathspeak": {
         "default": "italic upper Theta"
+      },
+      "clearspeak": {
+        "default": "italic cap Theta"
       }
     },
     "key": "1D6E9"
@@ -121,6 +145,9 @@
       },
       "mathspeak": {
         "default": "italic upper Iota"
+      },
+      "clearspeak": {
+        "default": "italic cap Iota"
       }
     },
     "key": "1D6EA"
@@ -135,6 +162,9 @@
       },
       "mathspeak": {
         "default": "italic upper Kappa"
+      },
+      "clearspeak": {
+        "default": "italic cap Kappa"
       }
     },
     "key": "1D6EB"
@@ -149,6 +179,9 @@
       },
       "mathspeak": {
         "default": "italic upper Lamda"
+      },
+      "clearspeak": {
+        "default": "italic cap Lamda"
       }
     },
     "key": "1D6EC"
@@ -163,6 +196,9 @@
       },
       "mathspeak": {
         "default": "italic upper Mu"
+      },
+      "clearspeak": {
+        "default": "italic cap Mu"
       }
     },
     "key": "1D6ED"
@@ -177,6 +213,9 @@
       },
       "mathspeak": {
         "default": "italic upper Nu"
+      },
+      "clearspeak": {
+        "default": "italic cap Nu"
       }
     },
     "key": "1D6EE"
@@ -191,6 +230,9 @@
       },
       "mathspeak": {
         "default": "italic upper Xi"
+      },
+      "clearspeak": {
+        "default": "italic cap Xi"
       }
     },
     "key": "1D6EF"
@@ -205,6 +247,9 @@
       },
       "mathspeak": {
         "default": "italic upper Omicron"
+      },
+      "clearspeak": {
+        "default": "italic cap Omicron"
       }
     },
     "key": "1D6F0"
@@ -219,6 +264,9 @@
       },
       "mathspeak": {
         "default": "italic upper Pi"
+      },
+      "clearspeak": {
+        "default": "italic cap Pi"
       }
     },
     "key": "1D6F1"
@@ -233,6 +281,9 @@
       },
       "mathspeak": {
         "default": "italic upper Rho"
+      },
+      "clearspeak": {
+        "default": "italic cap Rho"
       }
     },
     "key": "1D6F2"
@@ -247,6 +298,9 @@
       },
       "mathspeak": {
         "default": "italic upper Sigma"
+      },
+      "clearspeak": {
+        "default": "italic cap Sigma"
       }
     },
     "key": "1D6F4"
@@ -261,6 +315,9 @@
       },
       "mathspeak": {
         "default": "italic upper Tau"
+      },
+      "clearspeak": {
+        "default": "italic cap Tau"
       }
     },
     "key": "1D6F5"
@@ -275,6 +332,9 @@
       },
       "mathspeak": {
         "default": "italic upper Upsilon"
+      },
+      "clearspeak": {
+        "default": "italic cap Upsilon"
       }
     },
     "key": "1D6F6"
@@ -289,6 +349,9 @@
       },
       "mathspeak": {
         "default": "italic upper Phi"
+      },
+      "clearspeak": {
+        "default": "italic cap Phi"
       }
     },
     "key": "1D6F7"
@@ -303,6 +366,9 @@
       },
       "mathspeak": {
         "default": "italic upper Chi"
+      },
+      "clearspeak": {
+        "default": "italic cap Chi"
       }
     },
     "key": "1D6F8"
@@ -317,6 +383,9 @@
       },
       "mathspeak": {
         "default": "italic upper Psi"
+      },
+      "clearspeak": {
+        "default": "italic cap Psi"
       }
     },
     "key": "1D6F9"
@@ -331,6 +400,9 @@
       },
       "mathspeak": {
         "default": "italic upper Omega"
+      },
+      "clearspeak": {
+        "default": "italic cap Omega"
       }
     },
     "key": "1D6FA"

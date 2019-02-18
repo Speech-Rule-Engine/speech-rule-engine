@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '2.2.2';
+sre.Variables.VERSION = '2.3.0';
 
 
 /**
@@ -49,7 +49,7 @@ sre.Variables.LOCALES = ['en', 'es'];
  * @const
  * @type {string}
  */
-sre.Variables.mathjaxVersion = '2.7.4';
+sre.Variables.mathjaxVersion = '2.7.5';
 
 
 /**

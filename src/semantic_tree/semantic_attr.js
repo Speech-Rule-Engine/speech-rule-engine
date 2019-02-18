@@ -79,6 +79,13 @@ sre.SemanticAttr = function() {
         '；', '？', '＠', '＼'
       ];
   /**
+   * @type {Array.<string>}
+   */
+  this.colons =
+      [
+        ':', '：', '﹕'
+      ];
+  /**
    * @type {string}
    * @private
    */
@@ -117,6 +124,13 @@ sre.SemanticAttr = function() {
   this.primes =
       [
         '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.degrees =
+      [
+        '°'
       ];
 
   // Fences.
@@ -919,6 +933,10 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.UNKNOWN
     },
+    {set: this.colons,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.COLON
+    },
     {set: this.commas,
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.COMMA
@@ -938,6 +956,10 @@ sre.SemanticAttr = function() {
     {set: this.primes,
       type: sre.SemanticAttr.Type.PUNCTUATION,
       role: sre.SemanticAttr.Role.PRIME
+    },
+    {set: this.degrees,
+      type: sre.SemanticAttr.Type.PUNCTUATION,
+      role: sre.SemanticAttr.Role.DEGREE
     },
     // Fences
     {set: this.leftFences,
@@ -1387,7 +1409,9 @@ sre.SemanticAttr.Role = {
   FULLSTOP: 'fullstop',
   DASH: 'dash',
   PRIME: 'prime',   // Superscript.
+  DEGREE: 'degree',   // Superscript.
   VBAR: 'vbar',  // A vertical bar.
+  COLON: 'colon',  // A vertical bar.
   OPENFENCE: 'openfence',
   CLOSEFENCE: 'closefence',
   APPLICATION: 'application', // Function Application.
@@ -1434,6 +1458,12 @@ sre.SemanticAttr.Role = {
   LEFTRIGHT: 'leftright',
   ABOVEBELOW: 'abovebelow',
 
+  // Sets.
+  SETEMPTY: 'set empty',
+  SETEXT: 'set extended',
+  SETSINGLE: 'set singleton',
+  SETCOLLECT: 'set collection',
+
   // Text.
   STRING: 'string',
 
@@ -1445,6 +1475,7 @@ sre.SemanticAttr.Role = {
 
   // Operators.
   NEGATIVE: 'negative',
+  POSITIVE: 'positive',
   NEGATION: 'negation',
   MULTIOP: 'multiop',
 
@@ -1454,6 +1485,7 @@ sre.SemanticAttr.Role = {
   PREFIXFUNC: 'prefix function',
   POSTFIXFUNC: 'postfix function',
   SIMPLEFUNC: 'simple function',
+  COMPFUNC: 'composed function',
 
   // Large operators.
   SUM: 'sum',
@@ -1492,7 +1524,6 @@ sre.SemanticAttr.Role = {
 
   // General
   UNKNOWN: 'unknown',
-  PROTECTED: 'protected'
 };
 
 

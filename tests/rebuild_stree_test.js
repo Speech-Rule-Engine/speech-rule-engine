@@ -41,9 +41,17 @@ sre.RebuildStreeTest = function() {
    */
   this.information = 'Semantic tree rebuilding tests.';
 
-  sre.Engine.getInstance().mathmlSpeech = false;
 };
 goog.inherits(sre.RebuildStreeTest, sre.AbstractTest);
+
+
+/**
+ * @override
+ */
+sre.RebuildStreeTest.prototype.setUpTest = function() {
+  // Make sure the engine is in a default mode.
+  sre.System.getInstance().setupEngine({semantics: true});
+};
 
 
 /**
@@ -2260,5 +2268,21 @@ sre.RebuildStreeTest.prototype.testRebuildSpacesAndEmptyFences = function() {
   this.executeRebuildTest(
       '<mrow><mo>{</mo><mtable><mtr><mtd><mi>u</mi></mtd></mtr></mtable><mo' +
       ' fence="true"></mo></mrow><mspace width="2em"/><mi>v</mi>');
-
 };
+
+
+/**
+ * Set expressions.
+ */
+sre.RebuildStreeTest.prototype.testRebuildSets = function() {
+  this.executeRebuildTest('<mo>{</mo><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>');
+  this.executeRebuildTest('<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac>' +
+      '<mo>}</mo>');
+  this.executeRebuildTest('<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>');
+};
+

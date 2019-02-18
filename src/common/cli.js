@@ -92,7 +92,7 @@ sre.Cli.prototype.enumerate = function() {
     output += axis.charAt(0).toUpperCase() + axis.slice(1) + ' options: ' +
         values[axis].slice().sort().join(', ') + '\n';
   }
-  console.log('\n' + output);
+  console.info('\n' + output);
 };
 
 
@@ -127,7 +127,7 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
           function(proc) {processor(proc, input);});
     }
   } catch (err) {
-    console.log(err.name + ': ' + err.message);
+    console.info(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit(
         function() {sre.SystemExternal.process.exit(1);});
   }
@@ -204,6 +204,8 @@ sre.Cli.prototype.commandLine = function() {
              set, 'semantics').
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
              set, 'markup').
+      option('-r, --rate [value]', 'Base rate [value] for tagged speech output.',
+             set, 'rate').
       option('').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'Speech').

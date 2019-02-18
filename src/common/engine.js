@@ -52,6 +52,11 @@ sre.Engine = function() {
   this.evaluator = sre.Engine.defaultEvaluator;
 
   /**
+   * @type {!sre.DynamicCstr.Parser}
+   */
+  this.parser = new sre.DynamicCstr.Parser(sre.DynamicCstr.DEFAULT_ORDER);
+
+  /**
    * @type {!sre.DynamicCstr}
    */
   this.dynamicCstr = sre.DynamicCstr.defaultCstr();
@@ -60,6 +65,12 @@ sre.Engine = function() {
    * @type {sre.DynamicCstr.Comparator}
    */
   this.comparator = null;
+
+  /**
+   * Maps domains to comparators.
+   * @type {Object.<string, function():sre.DynamicCstr.Comparator>}
+   */
+  this.comparators = {};
 
   /**
    * Current domain.
@@ -73,13 +84,11 @@ sre.Engine = function() {
    */
   this.style = 'short';
 
-
   /**
    * Current locale.
    * @type {string}
    */
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-
 
   /**
    * Current walker mode.
@@ -104,7 +113,7 @@ sre.Engine = function() {
    * shallow, deep).
    * @type {sre.Engine.Speech}
    */
-  this.speech = sre.Engine.Speech.SHALLOW;
+  this.speech = sre.Engine.Speech.NONE;
 
   /**
    * Indicates if skeleton structure attributes are added to enriched elements
@@ -149,6 +158,13 @@ sre.Engine = function() {
   this.isEdge = false;
 
   /**
+   * Percentage of default rate used by external TTS. This can be used to scale
+   * pauses.
+   * @type {string}
+   */
+  this.rate = '100';
+
+  /**
    * List of predicates for checking if the engine is set up.
    * @type {!Array.<function():boolean>}
    * @private
@@ -166,7 +182,8 @@ sre.Engine.personalityProps = {
   PITCH: 'pitch',
   RATE: 'rate',
   VOLUME: 'volume',
-  PAUSE: 'pause'
+  PAUSE: 'pause',
+  JOIN: 'join'
 };
 
 
@@ -200,7 +217,9 @@ sre.Engine.Speech = {
  */
 sre.Engine.Markup = {
   NONE: 'none',
+  PUNCTUATION: 'punctuation',
   SSML: 'ssml',
+  SSML_STEP: 'ssml_step',
   ACSS: 'acss',
   SABLE: 'sable',
   VOICEXML: 'voicexml'
@@ -257,4 +276,10 @@ sre.Engine.prototype.getAxisValues = function() {
  */
 sre.Engine.defaultEvaluator = function(str, cstr) {
   return str;
+};
+
+
+sre.Engine.prototype.getRate = function() {
+  var numeric = parseInt(this.rate, 10);
+  return isNaN(numeric) ? 100 : numeric;
 };

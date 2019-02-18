@@ -25,8 +25,10 @@ goog.provide('sre.AuralRendering');
 goog.require('sre.AcssRenderer');
 goog.require('sre.AudioRenderer');
 goog.require('sre.Engine');
+goog.require('sre.PunctuationRenderer');
 goog.require('sre.SableRenderer');
 goog.require('sre.SsmlRenderer');
+goog.require('sre.SsmlStepRenderer');
 goog.require('sre.StringRenderer');
 
 
@@ -78,12 +80,26 @@ sre.AuralRendering.prototype.markup = function(descrs) {
  * @override
  */
 sre.AuralRendering.prototype.merge = function(strs) {
+  var span = strs.map(function(s) {return {string: s, attributes: {}};});
   var renderer = sre.AuralRendering.rendererMapping_[
       sre.Engine.getInstance().markup];
   if (!renderer) {
     return strs.join();
   }
-  return renderer.merge(strs);
+  return renderer.merge(span);
+};
+
+
+/**
+ * @override
+ */
+sre.AuralRendering.prototype.finalize = function(str) {
+  var renderer = sre.AuralRendering.rendererMapping_[
+      sre.Engine.getInstance().markup];
+  if (!renderer) {
+    return str;
+  }
+  return renderer.finalize(str);
 };
 
 
@@ -122,6 +138,8 @@ sre.AuralRendering.rendererMapping_ = {};
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.NONE, new sre.StringRenderer());
 sre.AuralRendering.registerRenderer(
+    sre.Engine.Markup.PUNCTUATION, new sre.PunctuationRenderer());
+sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.ACSS, new sre.AcssRenderer());
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.SABLE, new sre.SableRenderer());
@@ -135,3 +153,5 @@ sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.VOICEXML, sre.AuralRendering.xmlInstance);
 sre.AuralRendering.registerRenderer(
     sre.Engine.Markup.SSML, sre.AuralRendering.xmlInstance);
+sre.AuralRendering.registerRenderer(
+    sre.Engine.Markup.SSML_STEP, new sre.SsmlStepRenderer());

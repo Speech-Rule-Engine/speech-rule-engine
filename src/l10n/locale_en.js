@@ -123,6 +123,18 @@ sre.Locale.en = {
     COLLAPSIBLE: 'collapsible',
     EXPANDABLE: 'expandable',
     LEVEL: 'Level'
-  }
+  },
 
+  REGEXP: {
+    TEXT: 'a-zA-Z',
+    NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
+    DECIMAL_MARK: '.',
+    DIGIT_GROUP: ','
+  },
+
+  PLURAL_UNIT: {
+    'foot': 'feet',
+    'inch': 'inches'
+  }
+  
 };

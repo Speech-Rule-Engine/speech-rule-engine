@@ -1272,7 +1272,6 @@ sre.EnrichSpeechTest.prototype.testSpeechBigOps = function() {
  * Big operators without Arguments.
  */
 sre.EnrichSpeechTest.prototype.testSpeechBigOpsNoArgs = function() {
-  this.brief = true;
   this.executeSpeechTest(
       '<mi>&#x2211;</mi>');
   this.executeSpeechTest(
@@ -1831,7 +1830,6 @@ sre.EnrichSpeechTest.prototype.testSpeechMunderOver = function() {
  * Simple embellished arguments.
  */
 sre.EnrichSpeechTest.prototype.testSpeechSimpleEmbellishment = function() {
-  this.brief = false;
   this.executeSpeechTest(
       '<msup><mi>\u222B</mi><mn>2</mn></msup>');
   this.executeSpeechTest(
@@ -1851,7 +1849,6 @@ sre.EnrichSpeechTest.prototype.testSpeechSimpleEmbellishment = function() {
  * Multi embellished arguments.
  */
 sre.EnrichSpeechTest.prototype.testSpeechMultiEmbellishment = function() {
-  this.brief = false;
   this.executeSpeechTest(
       '<msub><msup><mo>+</mo><mn>2</mn></msup><mi>x</mi></msub>');
   this.executeSpeechTest(
@@ -2066,4 +2063,20 @@ sre.EnrichSpeechTest.prototype.testSpeechComplexEmbellRight = function() {
   this.executeSpeechTest(
       '<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo>' +
       '<mn>4</mn></msub>');
+};
+
+
+/**
+ * Set expressions.
+ */
+sre.EnrichSpeechTest.prototype.testSpeechSets = function() {
+  this.executeSpeechTest('<mo>{</mo><mo>}</mo>');
+  this.executeSpeechTest('<mo>{</mo><mi>x</mi><mo>}</mo>');
+  this.executeSpeechTest('<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>');
+  this.executeSpeechTest('<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>');
+  this.executeSpeechTest('<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>');
+  this.executeSpeechTest('<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>');
+  this.executeSpeechTest('<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac>' +
+                         '<mo>}</mo>');
+  this.executeSpeechTest('<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>');
 };

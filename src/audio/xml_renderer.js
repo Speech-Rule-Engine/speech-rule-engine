@@ -46,8 +46,8 @@ sre.XmlRenderer.prototype.markup = function(descrs) {
   var result = [];
   var currentOpen = [];
   for (var i = 0, descr; descr = markup[i]; i++) {
-    if (descr.string) {
-      result.push(descr.string);
+    if (descr.span) {
+      result.push(this.merge(descr.span));
       continue;
     }
     if (sre.AudioUtil.isPauseElement(descr)) {
@@ -73,7 +73,7 @@ sre.XmlRenderer.prototype.markup = function(descrs) {
       }, this));
     }
   }
-  return result.join(this.getSeparator());
+  return result.join(' ');  //this.merge(result);
 };
 
 

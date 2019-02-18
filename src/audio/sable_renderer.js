@@ -40,7 +40,7 @@ goog.inherits(sre.SableRenderer, sre.XmlRenderer);
  */
 sre.SableRenderer.prototype.pause = function(pause) {
   return '<BREAK ' + 'MSEC="' +
-      pause[sre.Engine.personalityProps.PAUSE] + '"/>';
+      this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + '"/>';
 };
 
 
@@ -51,7 +51,8 @@ sre.SableRenderer.prototype.prosodyElement = function(tag, value) {
   value = this.applyScaleFunction(value);
   switch (tag) {
     case sre.Engine.personalityProps.PITCH:
-      return '<PITCH BASE="' + value + '%">';
+      // TODO: Experiment with range, base, middle
+      return '<PITCH RANGE="' + value + '%">';
     case sre.Engine.personalityProps.RATE:
       return '<RATE SPEED="' + value + '%">';
     case sre.Engine.personalityProps.VOLUME:

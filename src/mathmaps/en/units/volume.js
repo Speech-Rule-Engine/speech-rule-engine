@@ -2,7 +2,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "barrels"
+       "default": "barrel"
      }
    },
    "key": "bbl",
@@ -11,7 +11,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubics"
+       "default": "cubic"
      }
    },
    "key": "cu",
@@ -20,7 +20,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "fluid ounces"
+       "default": "fluid ounce"
      }
    },
    "key": "fl. oz.",
@@ -29,7 +29,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "gallons"
+       "default": "gallon"
      }
    },
    "key": "gal",
@@ -38,7 +38,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "pints"
+       "default": "pint"
      }
    },
    "key": "pt",
@@ -47,7 +47,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "quarts"
+       "default": "quart"
      }
    },
    "key": "qt",
@@ -56,7 +56,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "tablespoons"
+       "default": "tablespoon"
      }
    },
    "key": "tbsp",
@@ -65,7 +65,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "teaspoons"
+       "default": "teaspoon"
      }
    },
    "key": "tsp",
@@ -74,7 +74,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic centimeters"
+       "default": "cubic centimeter"
      }
    },
    "key": "cc",
@@ -83,7 +83,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "kiloliters"
+       "default": "kiloliter"
      }
    },
    "key": "kl",
@@ -92,7 +92,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "liters"
+       "default": "liter"
      }
    },
    "key": "l",
@@ -101,7 +101,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "milliliters"
+       "default": "milliliter"
      }
    },
    "key": "ml",

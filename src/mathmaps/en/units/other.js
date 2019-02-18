@@ -1,5 +1,5 @@
 [{"locale": "en"},
-  {"category": "",
+ {"category": "other",
   "mappings": {
     "default": {
       "default": "dozen"
@@ -8,7 +8,7 @@
   "key": "doz",
   "names": ["doz", "doz.", "dz", "dz."]
  },
- {"category": "",
+ {"category": "other",
   "mappings": {
     "default": {
       "default": "square"
@@ -17,7 +17,7 @@
   "key": "sq",
   "names": ["sq", "sq."]
  },
- {"category": "",
+ {"category": "other",
   "mappings": {
     "default": {
       "default": "hectare"

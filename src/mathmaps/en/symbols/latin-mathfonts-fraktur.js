@@ -8,6 +8,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper A"
+      },
+      "clearspeak": {
+        "default": "fraktur cap A"
       }
     },
     "key": "1D504"
@@ -21,6 +24,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper B"
+      },
+      "clearspeak": {
+        "default": "fraktur cap B"
       }
     },
     "key": "1D505"
@@ -34,6 +40,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper C"
+      },
+      "clearspeak": {
+        "default": "fraktur cap D"
       }
     },
     "key": "212D"
@@ -47,6 +56,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper D"
+      },
+      "clearspeak": {
+        "default": "fraktur cap E"
       }
     },
     "key": "1D507"
@@ -60,6 +72,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper E"
+      },
+      "clearspeak": {
+        "default": "fraktur cap F"
       }
     },
     "key": "1D508"
@@ -73,6 +88,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper F"
+      },
+      "clearspeak": {
+        "default": "fraktur cap G"
       }
     },
     "key": "1D509"
@@ -86,6 +104,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper G"
+      },
+      "clearspeak": {
+        "default": "fraktur cap G"
       }
     },
     "key": "1D50A"
@@ -99,6 +120,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper H"
+      },
+      "clearspeak": {
+        "default": "fraktur cap H"
       }
     },
     "key": "210C"
@@ -112,6 +136,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper I"
+      },
+      "clearspeak": {
+        "default": "fraktur cap I"
       }
     },
     "key": "2111"
@@ -125,6 +152,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper J"
+      },
+      "clearspeak": {
+        "default": "fraktur cap J"
       }
     },
     "key": "1D50D"
@@ -138,6 +168,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper K"
+      },
+      "clearspeak": {
+        "default": "fraktur cap K"
       }
     },
     "key": "1D50E"
@@ -151,6 +184,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper L"
+      },
+      "clearspeak": {
+        "default": "fraktur cap L"
       }
     },
     "key": "1D50F"
@@ -164,6 +200,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper M"
+      },
+      "clearspeak": {
+        "default": "fraktur cap M"
       }
     },
     "key": "1D510"
@@ -177,6 +216,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper N"
+      },
+      "clearspeak": {
+        "default": "fraktur cap N"
       }
     },
     "key": "1D511"
@@ -190,6 +232,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper O"
+      },
+      "clearspeak": {
+        "default": "fraktur cap O"
       }
     },
     "key": "1D512"
@@ -203,6 +248,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper P"
+      },
+      "clearspeak": {
+        "default": "fraktur cap P"
       }
     },
     "key": "1D513"
@@ -216,6 +264,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper Q"
+      },
+      "clearspeak": {
+        "default": "fraktur cap Q"
       }
     },
     "key": "1D514"
@@ -229,6 +280,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper R"
+      },
+      "clearspeak": {
+        "default": "fraktur cap R"
       }
     },
     "key": "211C"
@@ -242,6 +296,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper S"
+      },
+      "clearspeak": {
+        "default": "fraktur cap S"
       }
     },
     "key": "1D516"
@@ -255,6 +312,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper T"
+      },
+      "clearspeak": {
+        "default": "fraktur cap T"
       }
     },
     "key": "1D517"
@@ -268,6 +328,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper U"
+      },
+      "clearspeak": {
+        "default": "fraktur cap U"
       }
     },
     "key": "1D518"
@@ -281,6 +344,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper V"
+      },
+      "clearspeak": {
+        "default": "fraktur cap V"
       }
     },
     "key": "1D519"
@@ -294,6 +360,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper W"
+      },
+      "clearspeak": {
+        "default": "fraktur cap W"
       }
     },
     "key": "1D51A"
@@ -307,6 +376,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper X"
+      },
+      "clearspeak": {
+        "default": "fraktur cap X"
       }
     },
     "key": "1D51B"
@@ -320,6 +392,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper Y"
+      },
+      "clearspeak": {
+        "default": "fraktur cap Y"
       }
     },
     "key": "1D51C"
@@ -333,6 +408,9 @@
       },
       "mathspeak": {
         "default": "fraktur upper Z"
+      },
+      "clearspeak": {
+        "default": "fraktur cap Z"
       }
     },
     "key": "2128"

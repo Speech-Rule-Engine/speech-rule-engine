@@ -104,6 +104,9 @@
       },
       "mathspeak": {
         "default": "upper Theta"
+      },
+      "clearspeak": {
+        "default": "cap Theta"
       }
     },
     "key": "03F4"
@@ -118,6 +121,9 @@
       },
       "mathspeak": {
         "default": "bold upper Theta"
+      },
+      "clearspeak": {
+        "default": "bold cap Theta"
       }
     },
     "key": "1D6B9"
@@ -132,6 +138,9 @@
       },
       "mathspeak": {
         "default": "italic upper Theta"
+      },
+      "clearspeak": {
+        "default": "italic cap Theta"
       }
     },
     "key": "1D6F3"
@@ -146,6 +155,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Theta"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Theta"
       }
     },
     "key": "1D767"
@@ -423,6 +435,9 @@
       },
       "mathspeak": {
         "default": "bold upper Digamma"
+      },
+      "clearspeak": {
+        "default": "bold cap Digamma"
       }
     },
     "key": "1D7CA"

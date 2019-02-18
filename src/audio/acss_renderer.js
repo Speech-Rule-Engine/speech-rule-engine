@@ -62,13 +62,16 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
     }
     if (sre.AudioUtil.isPauseElement(descr)) {
       if (string) {
-        pause = sre.AudioUtil.mergePause(
+        // TODO: (MS 2.3) Sort out this type and the merge function!
+        pause = /** @type {{pause: number}} */(sre.AudioUtil.mergePause(
             pause,
-            /** @type {{pause: number}} */(descr), Math.max);
+            /** @type {{pause: number}} */(descr), Math.max));
       }
       continue;
     }
-    var str = '"' + descr.string + '"';
+    var str = '"' + this.merge(descr.span) + '"';
+    // var str = '"' + descr.span.join(this.getSeparator()) + '"';
+    // var str = '"' + descr.string.join(this.getSeparator()) + '"';
     string = true;
     if (pause) {
       result.push(this.pause(pause));
@@ -77,19 +80,20 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
     var prosody = this.prosody_(currentPers);
     result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
   }
-  return '(exp ' + result.join(this.getSeparator()) + ')';
+  return '(exp ' + result.join(' ') + ')';
 };
 
 
 /**
  * @override
  */
-sre.AcssRenderer.prototype.merge = function(strs) {
-  return '(exp ' +
-      strs.map(function(str) {
-        return str.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
-      ')';
-};
+// sre.AcssRenderer.prototype.merge = function(strs) {
+//   console.log('when');
+//   return '(exp ' +
+//       strs.map(function(str) {
+//         return str.string.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+//       ')';
+// };
 
 
 /**
@@ -139,5 +143,6 @@ sre.AcssRenderer.prototype.prosodyElement = function(key, value) {
  * @override
  */
 sre.AcssRenderer.prototype.pause = function(pause) {
-  return '(pause . ' + pause[sre.Engine.personalityProps.PAUSE] + ')';
+  return '(pause . ' +
+      this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + ')';
 };

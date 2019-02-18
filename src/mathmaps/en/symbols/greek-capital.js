@@ -9,6 +9,9 @@
       },
       "mathspeak": {
         "default": "upper Alpha"
+      },
+      "clearspeak": {
+        "default": "cap Alpha"
       }
     }
   },
@@ -22,6 +25,9 @@
       },
       "mathspeak": {
         "default": "upper Beta"
+      },
+      "clearspeak": {
+        "default": "cap Beta"
       }
     }
   },
@@ -35,6 +41,9 @@
       },
       "mathspeak": {
         "default": "upper Gamma"
+      },
+      "clearspeak": {
+        "default": "cap Gamma"
       }
     }
   },
@@ -48,6 +57,10 @@
       },
       "mathspeak": {
         "default": "upper Delta"
+      },
+      "clearspeak": {
+        "default": "triangle",
+        "TriangleSymbol_Delta": "cap Delta"
       }
     }
   },
@@ -61,6 +74,9 @@
       },
       "mathspeak": {
         "default": "upper Epsilon"
+      },
+      "clearspeak": {
+        "default": "cap Epsilon"
       }
     }
   },
@@ -74,6 +90,9 @@
       },
       "mathspeak": {
         "default": "upper Zeta"
+      },
+      "clearspeak": {
+        "default": "cap Zeta"
       }
     }
   },
@@ -87,6 +106,9 @@
       },
       "mathspeak": {
         "default": "upper Eta"
+      },
+      "clearspeak": {
+        "default": "cap Eta"
       }
     }
   },
@@ -100,6 +122,9 @@
       },
       "mathspeak": {
         "default": "upper Theta"
+      },
+      "clearspeak": {
+        "default": "cap Theta"
       }
     }
   },
@@ -113,6 +138,9 @@
       },
       "mathspeak": {
         "default": "upper Iota"
+      },
+      "clearspeak": {
+        "default": "cap Iota"
       }
     }
   },
@@ -126,6 +154,9 @@
       },
       "mathspeak": {
         "default": "upper Kappa"
+      },
+      "clearspeak": {
+        "default": "cap Kappa"
       }
     }
   },
@@ -140,6 +171,9 @@
       },
       "mathspeak": {
         "default": "upper Lamda"
+      },
+      "clearspeak": {
+        "default": "cap Lamda"
       }
     }
   },
@@ -153,6 +187,9 @@
       },
       "mathspeak": {
         "default": "upper Mu"
+      },
+      "clearspeak": {
+        "default": "cap Mu"
       }
     }
   },
@@ -166,6 +203,9 @@
       },
       "mathspeak": {
         "default": "upper Nu"
+      },
+      "clearspeak": {
+        "default": "cap Nu"
       }
     }
   },
@@ -179,6 +219,9 @@
       },
       "mathspeak": {
         "default": "upper Xi"
+      },
+      "clearspeak": {
+        "default": "cap Xi"
       }
     }
   },
@@ -192,6 +235,9 @@
       },
       "mathspeak": {
         "default": "upper Omicron"
+      },
+      "clearspeak": {
+        "default": "cap Omicron"
       }
     }
   },
@@ -205,6 +251,9 @@
       },
       "mathspeak": {
         "default": "upper Pi"
+      },
+      "clearspeak": {
+        "default": "cap Pi"
       }
     }
   },
@@ -218,6 +267,9 @@
       },
       "mathspeak": {
         "default": "upper Rho"
+      },
+      "clearspeak": {
+        "default": "cap Rho"
       }
     }
   },
@@ -231,6 +283,9 @@
       },
       "mathspeak": {
         "default": "upper Sigma"
+      },
+      "clearspeak": {
+        "default": "cap Sigma"
       }
     }
   },
@@ -244,6 +299,9 @@
       },
       "mathspeak": {
         "default": "upper Tau"
+      },
+      "clearspeak": {
+        "default": "cap Tau"
       }
     }
   },
@@ -257,6 +315,9 @@
       },
       "mathspeak": {
         "default": "upper Upsilon"
+      },
+      "clearspeak": {
+        "default": "cap Upsilon"
       }
     }
   },
@@ -270,6 +331,9 @@
       },
       "mathspeak": {
         "default": "upper Phi"
+      },
+      "clearspeak": {
+        "default": "cap Phi"
       }
     }
   },
@@ -283,6 +347,9 @@
       },
       "mathspeak": {
         "default": "upper Chi"
+      },
+      "clearspeak": {
+        "default": "cap Chi"
       }
     }
   },
@@ -296,6 +363,9 @@
       },
       "mathspeak": {
         "default": "upper Psi"
+      },
+      "clearspeak": {
+        "default": "cap Psi"
       }
     }
   },
@@ -309,6 +379,9 @@
       },
       "mathspeak": {
         "default": "upper Omega"
+      },
+      "clearspeak": {
+        "default": "cap Omega"
       }
     }
   }

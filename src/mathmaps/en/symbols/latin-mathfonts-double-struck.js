@@ -8,6 +8,9 @@
       },
       "mathspeak": {
         "default": "double struck upper A"
+      },
+      "clearspeak": {
+        "default": "double struck cap A"
       }
     },
     "key": "1D538"
@@ -21,6 +24,9 @@
       },
       "mathspeak": {
         "default": "double struck upper B"
+      },
+      "clearspeak": {
+        "default": "double struck cap B"
       }
     },
     "key": "1D539"
@@ -34,6 +40,9 @@
       },
       "mathspeak": {
         "default": "double struck upper C"
+      },
+      "clearspeak": {
+        "default": "double struck cap C"
       }
     },
     "key": "2102"
@@ -47,6 +56,9 @@
       },
       "mathspeak": {
         "default": "double struck upper D"
+      },
+      "clearspeak": {
+        "default": "double struck cap D"
       }
     },
     "key": "1D53B"
@@ -60,6 +72,9 @@
       },
       "mathspeak": {
         "default": "double struck upper E"
+      },
+      "clearspeak": {
+        "default": "double struck cap E"
       }
     },
     "key": "1D53C"
@@ -73,6 +88,9 @@
       },
       "mathspeak": {
         "default": "double struck upper F"
+      },
+      "clearspeak": {
+        "default": "double struck cap F"
       }
     },
     "key": "1D53D"
@@ -86,6 +104,9 @@
       },
       "mathspeak": {
         "default": "double struck upper G"
+      },
+      "clearspeak": {
+        "default": "double struck cap G"
       }
     },
     "key": "1D53E"
@@ -99,6 +120,9 @@
       },
       "mathspeak": {
         "default": "double struck upper H"
+      },
+      "clearspeak": {
+        "default": "double struck cap H"
       }
     },
     "key": "210D"
@@ -112,6 +136,9 @@
       },
       "mathspeak": {
         "default": "double struck upper I"
+      },
+      "clearspeak": {
+        "default": "double struck cap I"
       }
     },
     "key": "1D540"
@@ -125,6 +152,9 @@
       },
       "mathspeak": {
         "default": "double struck upper J"
+      },
+      "clearspeak": {
+        "default": "double struck cap J"
       }
     },
     "key": "1D541"
@@ -138,6 +168,9 @@
       },
       "mathspeak": {
         "default": "double struck upper K"
+      },
+      "clearspeak": {
+        "default": "double struck cap K"
       }
     },
     "key": "1D542"
@@ -151,6 +184,9 @@
       },
       "mathspeak": {
         "default": "double struck upper L"
+      },
+      "clearspeak": {
+        "default": "double struck cap L"
       }
     },
     "key": "1D543"
@@ -164,6 +200,9 @@
       },
       "mathspeak": {
         "default": "double struck upper M"
+      },
+      "clearspeak": {
+        "default": "double struck cap M"
       }
     },
     "key": "1D544"
@@ -177,6 +216,9 @@
       },
       "mathspeak": {
         "default": "double struck upper N"
+      },
+      "clearspeak": {
+        "default": "double struck cap N"
       }
     },
     "key": "2115"
@@ -190,6 +232,9 @@
       },
       "mathspeak": {
         "default": "double struck upper O"
+      },
+      "clearspeak": {
+        "default": "double struck cap O"
       }
     },
     "key": "1D546"
@@ -203,6 +248,9 @@
       },
       "mathspeak": {
         "default": "double struck upper P"
+      },
+      "clearspeak": {
+        "default": "double struck cap P"
       }
     },
     "key": "2119"
@@ -216,6 +264,9 @@
       },
       "mathspeak": {
         "default": "double struck upper Q"
+      },
+      "clearspeak": {
+        "default": "double struck cap Q"
       }
     },
     "key": "211A"
@@ -229,6 +280,9 @@
       },
       "mathspeak": {
         "default": "double struck upper R"
+      },
+      "clearspeak": {
+        "default": "double struck cap R"
       }
     },
     "key": "211D"
@@ -242,6 +296,9 @@
       },
       "mathspeak": {
         "default": "double struck upper S"
+      },
+      "clearspeak": {
+        "default": "double struck cap S"
       }
     },
     "key": "1D54A"
@@ -255,6 +312,9 @@
       },
       "mathspeak": {
         "default": "double struck upper T"
+      },
+      "clearspeak": {
+        "default": "double struck cap T"
       }
     },
     "key": "1D54B"
@@ -268,6 +328,9 @@
       },
       "mathspeak": {
         "default": "double struck upper U"
+      },
+      "clearspeak": {
+        "default": "double struck cap U"
       }
     },
     "key": "1D54C"
@@ -281,6 +344,9 @@
       },
       "mathspeak": {
         "default": "double struck upper V"
+      },
+      "clearspeak": {
+        "default": "double struck cap V"
       }
     },
     "key": "1D54D"
@@ -294,6 +360,9 @@
       },
       "mathspeak": {
         "default": "double struck upper W"
+      },
+      "clearspeak": {
+        "default": "double struck cap W"
       }
     },
     "key": "1D54E"
@@ -307,6 +376,9 @@
       },
       "mathspeak": {
         "default": "double struck upper X"
+      },
+      "clearspeak": {
+        "default": "double struck cap X"
       }
     },
     "key": "1D54F"
@@ -320,6 +392,9 @@
       },
       "mathspeak": {
         "default": "double struck upper Y"
+      },
+      "clearspeak": {
+        "default": "double struck cap Y"
       }
     },
     "key": "1D550"
@@ -333,6 +408,9 @@
       },
       "mathspeak": {
         "default": "double struck upper Z"
+      },
+      "clearspeak": {
+        "default": "double struck cap Z"
       }
     },
     "key": "2124"

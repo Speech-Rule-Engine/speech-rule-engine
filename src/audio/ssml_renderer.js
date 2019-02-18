@@ -35,12 +35,19 @@ sre.SsmlRenderer = function() {
 goog.inherits(sre.SsmlRenderer, sre.XmlRenderer);
 
 
+sre.SsmlRenderer.prototype.finalize = function(str) {
+  return '<?xml version="1.0"?><speak version="1.1"' +
+    ' xmlns="http://www.w3.org/2001/10/synthesis">' +
+    '<prosody rate="' + sre.Engine.getInstance().getRate() + '%">' +
+    this.getSeparator() + str + this.getSeparator() + '</prosody></speak>';
+};
+
 /**
  * @override
  */
 sre.SsmlRenderer.prototype.pause = function(pause) {
-  return '<BREAK ' + 'TIME="' +
-      pause[sre.Engine.personalityProps.PAUSE] + 'ms"/>';
+  return '<break ' + 'time="' +
+    this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + 'ms"/>';
 };
 
 
@@ -50,7 +57,7 @@ sre.SsmlRenderer.prototype.pause = function(pause) {
 sre.SsmlRenderer.prototype.prosodyElement = function(attr, value) {
   value = this.applyScaleFunction(value);
   var valueStr = value < 0 ? value.toString() : '+' + value;
-  return '<PROSODY ' + attr.toUpperCase() + '="' + valueStr +
+  return '<prosody ' + attr.toLowerCase() + '="' + Math.floor(valueStr) +
       (attr === sre.Engine.personalityProps.VOLUME ? '>' : '%">');
 };
 
@@ -59,5 +66,5 @@ sre.SsmlRenderer.prototype.prosodyElement = function(attr, value) {
  * @override
  */
 sre.SsmlRenderer.prototype.closeTag = function(tag) {
-  return '</PROSODY>';
+  return '</prosody>';
 };

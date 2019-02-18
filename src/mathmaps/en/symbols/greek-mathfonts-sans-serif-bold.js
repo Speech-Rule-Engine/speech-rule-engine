@@ -9,6 +9,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Alpha"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Alpha"
       }
     },
     "key": "1D756"
@@ -23,6 +26,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Beta"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Beta"
       }
     },
     "key": "1D757"
@@ -37,6 +43,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Gamma"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Gamma"
       }
     },
     "key": "1D758"
@@ -51,6 +60,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Delta"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Delta"
       }
     },
     "key": "1D759"
@@ -65,6 +77,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Epsilon"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Epsilon"
       }
     },
     "key": "1D75A"
@@ -79,6 +94,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Zeta"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Zeta"
       }
     },
     "key": "1D75B"
@@ -93,6 +111,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Eta"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Eta"
       }
     },
     "key": "1D75C"
@@ -107,6 +128,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Theta"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Theta"
       }
     },
     "key": "1D75D"
@@ -121,6 +145,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Iota"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Iota"
       }
     },
     "key": "1D75E"
@@ -135,6 +162,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Kappa"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Kappa"
       }
     },
     "key": "1D75F"
@@ -149,6 +179,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Lamda"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Lamda"
       }
     },
     "key": "1D760"
@@ -163,6 +196,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Mu"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Mu"
       }
     },
     "key": "1D761"
@@ -177,6 +213,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Nu"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Nu"
       }
     },
     "key": "1D762"
@@ -191,6 +230,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Xi"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Xi"
       }
     },
     "key": "1D763"
@@ -205,6 +247,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Omicron"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Omicron"
       }
     },
     "key": "1D764"
@@ -219,6 +264,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Pi"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Pi"
       }
     },
     "key": "1D765"
@@ -233,6 +281,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Rho"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Rho"
       }
     },
     "key": "1D766"
@@ -247,6 +298,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Sigma"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Sigma"
       }
     },
     "key": "1D768"
@@ -261,6 +315,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Tau"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Tau"
       }
     },
     "key": "1D769"
@@ -275,6 +332,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Upsilon"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Upsilon"
       }
     },
     "key": "1D76A"
@@ -289,6 +349,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Phi"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Phi"
       }
     },
     "key": "1D76B"
@@ -303,6 +366,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Chi"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Chi"
       }
     },
     "key": "1D76C"
@@ -317,6 +383,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Psi"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Psi"
       }
     },
     "key": "1D76D"
@@ -331,6 +400,9 @@
       },
       "mathspeak": {
         "default": "sans serif bold upper Omega"
+      },
+      "clearspeak": {
+        "default": "sans serif bold cap Omega"
       }
     },
     "key": "1D76E"

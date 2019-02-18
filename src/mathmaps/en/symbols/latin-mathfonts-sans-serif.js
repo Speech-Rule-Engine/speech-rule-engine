@@ -8,6 +8,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper A"
+      },
+      "clearspeak": {
+        "default": "sans serif cap A"
       }
     },
     "key": "1D5A0"
@@ -21,6 +24,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper B"
+      },
+      "clearspeak": {
+        "default": "sans serif cap B"
       }
     },
     "key": "1D5A1"
@@ -34,6 +40,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper C"
+      },
+      "clearspeak": {
+        "default": "sans serif cap C"
       }
     },
     "key": "1D5A2"
@@ -47,6 +56,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper D"
+      },
+      "clearspeak": {
+        "default": "sans serif cap D"
       }
     },
     "key": "1D5A3"
@@ -60,6 +72,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper E"
+      },
+      "clearspeak": {
+        "default": "sans serif cap E"
       }
     },
     "key": "1D5A4"
@@ -73,6 +88,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper F"
+      },
+      "clearspeak": {
+        "default": "sans serif cap F"
       }
     },
     "key": "1D5A5"
@@ -86,6 +104,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper G"
+      },
+      "clearspeak": {
+        "default": "sans serif cap G"
       }
     },
     "key": "1D5A6"
@@ -99,6 +120,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper H"
+      },
+      "clearspeak": {
+        "default": "sans serif cap H"
       }
     },
     "key": "1D5A7"
@@ -112,6 +136,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper I"
+      },
+      "clearspeak": {
+        "default": "sans serif cap I"
       }
     },
     "key": "1D5A8"
@@ -125,6 +152,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper J"
+      },
+      "clearspeak": {
+        "default": "sans serif cap J"
       }
     },
     "key": "1D5A9"
@@ -138,6 +168,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper K"
+      },
+      "clearspeak": {
+        "default": "sans serif cap K"
       }
     },
     "key": "1D5AA"
@@ -151,6 +184,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper L"
+      },
+      "clearspeak": {
+        "default": "sans serif cap L"
       }
     },
     "key": "1D5AB"
@@ -164,6 +200,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper M"
+      },
+      "clearspeak": {
+        "default": "sans serif cap M"
       }
     },
     "key": "1D5AC"
@@ -177,6 +216,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper N"
+      },
+      "clearspeak": {
+        "default": "sans serif cap N"
       }
     },
     "key": "1D5AD"
@@ -190,6 +232,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper O"
+      },
+      "clearspeak": {
+        "default": "sans serif cap O"
       }
     },
     "key": "1D5AE"
@@ -203,6 +248,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper P"
+      },
+      "clearspeak": {
+        "default": "sans serif cap P"
       }
     },
     "key": "1D5AF"
@@ -216,6 +264,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper Q"
+      },
+      "clearspeak": {
+        "default": "sans serif cap Q"
       }
     },
     "key": "1D5B0"
@@ -229,6 +280,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper R"
+      },
+      "clearspeak": {
+        "default": "sans serif cap R"
       }
     },
     "key": "1D5B1"
@@ -242,6 +296,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper S"
+      },
+      "clearspeak": {
+        "default": "sans serif cap S"
       }
     },
     "key": "1D5B2"
@@ -255,6 +312,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper T"
+      },
+      "clearspeak": {
+        "default": "sans serif cap T"
       }
     },
     "key": "1D5B3"
@@ -268,6 +328,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper U"
+      },
+      "clearspeak": {
+        "default": "sans serif cap U"
       }
     },
     "key": "1D5B4"
@@ -281,6 +344,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper V"
+      },
+      "clearspeak": {
+        "default": "sans serif cap V"
       }
     },
     "key": "1D5B5"
@@ -294,6 +360,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper W"
+      },
+      "clearspeak": {
+        "default": "sans serif cap W"
       }
     },
     "key": "1D5B6"
@@ -307,6 +376,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper X"
+      },
+      "clearspeak": {
+        "default": "sans serif cap X"
       }
     },
     "key": "1D5B7"
@@ -320,6 +392,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper Y"
+      },
+      "clearspeak": {
+        "default": "sans serif cap Y"
       }
     },
     "key": "1D5B8"
@@ -333,6 +408,9 @@
       },
       "mathspeak": {
         "default": "sans serif upper Z"
+      },
+      "clearspeak": {
+        "default": "sans serif cap Z"
       }
     },
     "key": "1D5B9"

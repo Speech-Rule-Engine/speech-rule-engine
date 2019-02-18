@@ -88,12 +88,26 @@ sre.SemanticMathml.prototype.parse = function(mml) {
   var tag = sre.DomUtil.tagName(mml);
   var func = this.parseMap_[tag];
   var newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
+  this.addAttributes(newNode, mml);
   if (['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1) {
     return newNode;
   }
   newNode.mathml.unshift(mml);
   newNode.mathmlTree = mml;
   return newNode;
+};
+
+
+sre.SemanticMathml.prototype.addAttributes = function(to, from) {
+  if (from.hasAttributes()) {
+    var attrs = from.attributes;
+    for(var i = attrs.length - 1; i >= 0; i--) {
+      var key = attrs[i].name;
+      if (key.match(/^ext/)) {
+        to.attributes[key] = attrs[i].value;
+      }
+    }
+  }
 };
 
 
@@ -306,11 +320,20 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
-  return sre.SemanticProcessor.getInstance().identifierNode(
+  var sem = sre.SemanticProcessor.getInstance().identifierNode(
       node.textContent,
       sre.SemanticProcessor.getInstance().font(
-          node.getAttribute('mathvariant')),
+      node.getAttribute('mathvariant')),
       node.getAttribute('class'));
+  // TODO: (MS2.3|simons) Handle this separately in an additional parser:
+  if (sre.Engine.getInstance().domain !== 'clearspeak') {
+    return sem;
+  }
+  var specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
+  if (specialFunctions.indexOf(sem.textContent) !== -1) {
+    sem.role = sre.SemanticAttr.Role.SIMPLEFUNC;
+  }
+  return sem;
 };
 
 
