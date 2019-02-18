@@ -53,9 +53,8 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap001 = function() {
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
       '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
       '<mi>b</mi></mfrac></mrow></math>';
-  // var speech = 'the fraction with numerator sine A, and denominator a,
-  // equals, the fraction with numerator sine B, and denominator b';
-  var speech = 'sine A over a, equals, sine B over b';
+  // var speech = '';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -69,7 +68,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap002 = function() {
       '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
       '</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi>' +
       '<mi>C</mi></mrow></math>';
-  var speech = 'c squared equals a squared plus b squared minus 2 a b cosine C';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -81,7 +80,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap003 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
       '</mi><mi>b</mi></mfrac></mrow></math>';
-  var speech = 'tangent A equals, a over b';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -92,7 +91,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap003 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap004 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
-  var speech = 'A B';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -103,7 +102,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap004 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap005 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>a</mi><mi>A</mi></mrow></math>';
-  var speech = 'a A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -114,7 +113,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap005 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap006 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>b</mi><mi>A</mi></mrow></math>';
-  var speech = 'b A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -125,7 +124,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap006 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap007 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>B</mi><mi>a</mi></mrow></math>';
-  var speech = 'B a';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -137,7 +136,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap008 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = 'angle A B C';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -149,7 +148,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap009 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
-  var speech = 'the measure of angle A B C';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -160,7 +159,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap009 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap010 = function() {
   var preference = 'Caps_Auto';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = 'the measure of angle A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -174,9 +173,8 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap011 = function() {
   var mathml = '<math><mrow><mfrac><mrow><mi>sin</mi><mi>A</mi></mrow><mi>a' +
       '</mi></mfrac><mo>=</mo><mfrac><mrow><mi>sin</mi><mi>B</mi></mrow>' +
       '<mi>b</mi></mfrac></mrow></math>';
-  // var speech = 'the fraction with numerator sine cap A, and denominator a,
-  // equals, the fraction with numerator sine cap B, and denominator b';
-  var speech = 'sine cap A over a, equals, sine cap B over b';
+  // var speech = '';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -190,8 +188,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap012 = function() {
       '<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2' +
       '</mn></msup><mo>−</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>cos</mi>' +
       '<mi>C</mi></mrow></math>';
-  var speech = 'c squared equals a squared plus b squared minus 2 a b' +
-      ' cosine cap C';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -203,7 +200,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap013 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>tan</mi><mi>A</mi><mo>=</mo><mfrac><mi>a' +
       '</mi><mi>b</mi></mfrac></mrow></math>';
-  var speech = 'tangent cap A equals, a over b';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -214,7 +211,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap013 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap014 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>A</mi><mi>B</mi></mrow></math>';
-  var speech = 'cap A, cap B';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -225,7 +222,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap014 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap015 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>a</mi><mi>A</mi></mrow></math>';
-  var speech = 'a, cap A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -236,7 +233,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap015 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap016 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>b</mi><mi>A</mi></mrow></math>';
-  var speech = 'b, cap A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -247,7 +244,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap016 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap017 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>B</mi><mi>a</mi></mrow></math>';
-  var speech = 'cap B, a';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -259,7 +256,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap018 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C</mi></mrow>' +
       '</math>';
-  var speech = 'angle cap A, cap B, cap C';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -271,7 +268,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap019 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mi>B</mi><mi>C' +
       '</mi></mrow></math>';
-  var speech = 'the measure of angle cap A, cap B, cap C';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -282,7 +279,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap019 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap020 = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mi>m</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = 'the measure of angle cap A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -293,7 +290,7 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap020 = function() {
 sre.ClearspeakFrenchCapitalLetters.prototype.testCap020a = function() {
   var preference = 'Caps_SayCaps';
   var mathml = '<math><mrow><mo>∠</mo><mi>A</mi></mrow></math>';
-  var speech = 'angle cap A';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -304,6 +301,6 @@ sre.ClearspeakFrenchCapitalLetters.prototype.testCap020a = function() {
 // sre.ClearspeakFrenchCapitalLetters.prototype.testCap020b = function() {
 //   var preference = 'Caps_SayCaps';
 //   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';
-//   var speech = 'angle cap A';
+//   var speech = '';
 //   this.executeRuleTest(mathml, speech, preference);
 // };

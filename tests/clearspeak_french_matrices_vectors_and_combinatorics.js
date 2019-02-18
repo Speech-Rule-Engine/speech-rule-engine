@@ -61,7 +61,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix001 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -75,7 +75,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix002 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -89,7 +89,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix003 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -103,7 +103,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix004 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -116,7 +116,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix005 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. 1, 2, 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -129,7 +129,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix006 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. 1, 2, 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -142,7 +142,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix007 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. 3, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -155,7 +155,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix008 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. 3, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -167,7 +167,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix008a = function
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3' +
       '</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>';
-  var speech = 'the 1 by 1 matrix with entry 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -180,7 +180,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix008b = function
   var preference = 'Matrix_Auto';
   var mathml = '<math><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3' +
       '</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>';
-  var speech = 'the 1 by 1 matrix with entry 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -194,7 +194,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix009 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 column matrix. Row 1: x plus 1 Row 2: x minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -208,7 +208,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix010 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column matrix. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -222,7 +222,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix011 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 1 by 2 row matrix. Column 1: x plus 1 Column 2: 2 x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -235,8 +235,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix012 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 4 row matrix. Column 1: 3 Column 2: 6 Column 3: 1' +
-      ' Column 4: 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -251,8 +250,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix013 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1,' +
-      ' 4, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -270,10 +268,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix014 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column' +
-      ' 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0;' +
-      ' Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column' +
-      ' 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -288,9 +283,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix015 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 5 matrix. Row 1: Column 1, 2; Column 2, 1; Column' +
-      ' 3, 0; Column 4, 5; Column 5, 3. Row 2: Column 1, 3; Column 2, 4;' +
-      ' Column 3, 2; Column 4, 7; Column 5, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -305,9 +298,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix016 = function(
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2:' +
-      ' Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4:' +
-      ' Column 1, 0; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -321,8 +312,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix017 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2:' +
-      ' Column 1, 7; Column 2, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -337,8 +327,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix018 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x;' +
-      ' Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -352,7 +341,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix019 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -367,7 +356,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix019b = function
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -383,8 +372,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix020 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three' +
-      ' fourths, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -401,8 +389,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix021 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: b sub 1 1, b sub 1 2 Row 2: b sub' +
-      ' 2 1, b sub 2 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -419,11 +406,8 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix022 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  // var speech = '3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times the
-  // 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column
-  // 1, 0; Column 2, 2; Column 3, 6';
-  var speech = '3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times' +
-      ' the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6';
+  // var speech = '';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -443,10 +427,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix023 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three' +
-      ' fourths, one fifth. times the 2 by 3 matrix. Row 1: Column 1, 3;' +
-      ' Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2;' +
-      ' Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -468,13 +449,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix024 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column' +
-      ' 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0;' +
-      ' Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column' +
-      ' 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0.' +
-      ' times the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2:' +
-      ' Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4:' +
-      ' Column 1, 0; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -488,7 +463,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix025 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -502,7 +477,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix026 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -517,8 +492,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix027 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-      ' 3, 5, 2 Row 3: 1, 4, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -533,8 +507,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix028 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-      ' 3, 5, 2 Row 3: 1, 4, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -552,11 +525,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix029 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: Column 1, 0;' +
-      ' Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column' +
-      ' 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0;' +
-      ' Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column' +
-      ' 3, 9; Column 4, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -574,11 +543,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix030 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: Column 1, 0;' +
-      ' Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column' +
-      ' 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0;' +
-      ' Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column' +
-      ' 3, 9; Column 4, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -592,8 +557,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix031 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -607,8 +571,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix032 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -622,8 +585,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix033 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2:' +
-      ' 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -637,8 +599,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix034 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2:' +
-      ' 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -653,8 +614,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix035 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2:' +
-      ' one half, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -669,8 +629,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix036 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2:' +
-      ' one half, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -686,8 +645,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix037 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: one half, two' +
-      ' thirds Row 2: three fourths, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -703,8 +661,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix038 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: one half, two' +
-      ' thirds Row 2: three fourths, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -718,8 +675,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix039 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2:' +
-      ' Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -733,8 +689,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix040 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2:' +
-      ' Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -748,8 +703,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix041 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column' +
-      ' 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -763,8 +717,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix042 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column' +
-      ' 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -777,7 +730,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix043 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -790,7 +743,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix044 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -803,7 +756,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix045 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. Column 1: 3 Column 2: 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -816,7 +769,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix046 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. Column 1: 3 Column 2: 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -829,8 +782,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix047 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 4 row matrix. Column 1: 1 Column 2: 2 Column 3: 3' +
-      ' Column 4: 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -843,8 +795,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix048 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 4 row matrix. Column 1: 1 Column 2: 2 Column 3: 3' +
-      ' Column 4: 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -858,7 +809,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix049 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3 Row 4: 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -872,7 +823,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix050 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable></mrow>' +
       '<mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3 Row 4: 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -886,7 +837,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix051 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 column matrix. Row 1: x plus 1 Row 2: x minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -900,7 +851,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix052 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column matrix. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -914,7 +865,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix053 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 1 by 2 row matrix. Column 1: x plus 1 Column 2: 2 x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -927,8 +878,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix054 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 4 row matrix. Column 1: 3 Column 2: 6 Column 3: 1' +
-      ' Column 4: 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -943,9 +893,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix055 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: Column 1, 2; Column 2, 4; Column' +
-      ' 3, 1. Row 2: Column 1, 3; Column 2, 5; Column 3, 2. Row 3: Column' +
-      ' 1, 1; Column 2, 4; Column 3, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -963,10 +911,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix056 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column' +
-      ' 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0;' +
-      ' Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column' +
-      ' 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -981,9 +926,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix057 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 5 matrix. Row 1: Column 1, 2; Column 2, 1; Column' +
-      ' 3, 0; Column 4, 5; Column 5, 3. Row 2: Column 1, 3; Column 2, 4;' +
-      ' Column 3, 2; Column 4, 7; Column 5, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -998,9 +941,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix057a = function
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2:' +
-      ' Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4:' +
-      ' Column 1, 0; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1014,8 +955,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix058 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2:' +
-      ' Column 1, 7; Column 2, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1030,8 +970,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix059 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x;' +
-      ' Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1045,8 +984,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix060 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, 1. Row' +
-      ' 2: Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1061,8 +999,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix061 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, y. Row' +
-      ' 2: Column 1, one half; Column 2, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1078,8 +1015,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix062 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, one half; Column 2, two' +
-      ' thirds. Row 2: Column 1, three fourths; Column 2, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1096,8 +1032,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix063 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, b sub 1 1; Column 2, b' +
-      ' sub 1 2. Row 2: Column 1, b sub 2 1; Column 2, b sub 2 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1114,10 +1049,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix064 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '3 times the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1.' +
-      ' Row 2: Column 1, 7; Column 2, 5. times the 2 by 3 matrix. Row 1:' +
-      ' Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column 1, 0; Column' +
-      ' 2, 2; Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1137,10 +1069,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix065 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, one half; Column 2, two' +
-      ' thirds. Row 2: Column 1, three fourths; Column 2, one fifth. times' +
-      ' the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column' +
-      ' 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1162,13 +1091,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix066 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column' +
-      ' 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0;' +
-      ' Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column' +
-      ' 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0.' +
-      ' times the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2:' +
-      ' Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4:' +
-      ' Column 1, 0; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1182,8 +1105,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix067 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1197,8 +1119,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix068 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1213,9 +1134,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix069 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 4; Column 3, 1. Row 2: Column 1, 3; Column 2, 5; Column' +
-      ' 3, 2. Row 3: Column 1, 1; Column 2, 4; Column 3, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1230,9 +1149,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix070 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 4; Column 3, 1. Row 2: Column 1, 3; Column 2, 5; Column' +
-      ' 3, 2. Row 3: Column 1, 1; Column 2, 4; Column 3, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1250,11 +1167,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix071 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: Column 1, 0;' +
-      ' Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column' +
-      ' 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0;' +
-      ' Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column' +
-      ' 3, 9; Column 4, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1272,11 +1185,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix072 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: Column 1, 0;' +
-      ' Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column' +
-      ' 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0;' +
-      ' Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column' +
-      ' 3, 9; Column 4, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1290,8 +1199,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix073 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1305,8 +1213,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix074 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1320,8 +1227,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix075 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1335,8 +1241,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix076 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1351,8 +1256,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix077 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x;' +
-      ' Column 2, y. Row 2: Column 1, one half; Column 2, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1367,8 +1271,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix078 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x;' +
-      ' Column 2, y. Row 2: Column 1, one half; Column 2, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1384,9 +1287,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix079 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, one' +
-      ' half; Column 2, two thirds. Row 2: Column 1, three fourths; Column' +
-      ' 2, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1402,9 +1303,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix080 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, one' +
-      ' half; Column 2, two thirds. Row 2: Column 1, three fourths; Column' +
-      ' 2, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1418,7 +1317,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix081 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1432,7 +1331,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix082 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1446,7 +1345,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix083 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1460,7 +1359,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix084 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1473,7 +1372,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix085 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. 1, 2, 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1486,7 +1385,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix086 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. 1, 2, 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1499,7 +1398,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix087 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. 3, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1512,7 +1411,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix088 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. 3, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1526,7 +1425,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix089 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 column matrix. x plus 1, x minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1540,7 +1439,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix090 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column matrix. 3, 6, 1, 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1554,7 +1453,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix091 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 1 by 2 row matrix. x plus 1, 2 x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1567,7 +1466,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix092 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 4 row matrix. 3, 6, 1, 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1582,8 +1481,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix092a = function
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1,' +
-      ' 4, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1601,8 +1499,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix093 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row 2: 2, 1, 0, 9 Row' +
-      ' 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1617,7 +1514,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix094 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 5 matrix. Row 1: 2, 1, 0, 5, 3 Row 2: 3, 4, 2, 7, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1632,8 +1529,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix095 = function(
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 2 matrix. Row 1: 1, 3 Row 2: 4, 2 Row 3: 2, 1 Row' +
-      ' 4: 0, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1647,7 +1543,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix096 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1662,7 +1558,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix097 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1 minus x, 4 Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1676,7 +1572,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix098 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1691,7 +1587,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix099 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1707,8 +1603,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix100 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three' +
-      ' fourths, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1725,8 +1620,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix101 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: b sub 1 1, b sub 1 2 Row 2: b sub' +
-      ' 2 1, b sub 2 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1743,8 +1637,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix102 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times' +
-      ' the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1764,9 +1657,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix103 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three' +
-      ' fourths, one fifth. times the 2 by 3 matrix. Row 1: 3, 1 minus x, 4' +
-      ' Row 2: 0, 2, 6';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1788,9 +1679,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix104 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row 2: 2, 1, 0, 9 Row' +
-      ' 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0. times the 4 by 2 matrix. Row 1: 1,' +
-      ' 3 Row 2: 4, 2 Row 3: 2, 1 Row 4: 0, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1804,7 +1693,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix105 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1818,7 +1707,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix106 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1833,8 +1722,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix107 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-      ' 3, 5, 2 Row 3: 1, 4, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1849,8 +1737,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix108 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-      ' 3, 5, 2 Row 3: 1, 4, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1868,8 +1755,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix109 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row' +
-      ' 2: 2, 1, 0, 9 Row 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1887,8 +1773,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix110 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row' +
-      ' 2: 2, 1, 0, 9 Row 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1902,8 +1787,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix111 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7,' +
-      ' 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1917,8 +1801,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix112 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7,' +
-      ' 5 plus x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1932,8 +1815,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix113 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2:' +
-      ' 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1947,8 +1829,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix114 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2:' +
-      ' 7, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1963,8 +1844,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix115 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2:' +
-      ' one half, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1979,8 +1859,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix116 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2:' +
-      ' one half, two thirds';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1996,8 +1875,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix117 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: one half, two' +
-      ' thirds Row 2: three fourths, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2013,8 +1891,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix118 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: one half, two' +
-      ' thirds Row 2: three fourths, one fifth';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2028,7 +1905,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix119 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2042,7 +1919,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix120 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2056,7 +1933,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix121 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2070,7 +1947,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix122 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr>' +
       '<mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2083,7 +1960,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix123 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. 1, 2, 3. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2096,7 +1973,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix124 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column matrix. 1, 2, 3. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2109,7 +1986,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix125 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. 3, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2122,7 +1999,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix126 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row matrix. 3, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2136,8 +2013,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix127 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 column matrix. Row 1: x plus 1 Row 2: x minus 1.' +
-      ' end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2151,8 +2027,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix128 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column matrix. Row 1: 3 Row 2: 6 Row 3: 1 Row 4:' +
-      ' 2. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2166,8 +2041,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix129 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 1 by 2 row matrix. Column 1: x plus 1 Column 2: 2 x.' +
-      ' end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2180,8 +2054,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix130 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 4 row matrix. Column 1: 3 Column 2: 6 Column 3: 1' +
-      ' Column 4: 2. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2196,8 +2069,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix131 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1,' +
-      ' 4, 7. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2215,11 +2087,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix132 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column' +
-      ' 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0;' +
-      ' Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column' +
-      ' 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0.' +
-      ' end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2234,9 +2102,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix133 = function(
       '</mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd>' +
       '<mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 5 matrix. Row 1: Column 1, 2; Column 2, 1; Column' +
-      ' 3, 0; Column 4, 5; Column 5, 3. Row 2: Column 1, 3; Column 2, 4;' +
-      ' Column 3, 2; Column 4, 7; Column 5, 0. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2251,9 +2117,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix134 = function(
       '<mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2:' +
-      ' Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4:' +
-      ' Column 1, 0; Column 2, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2267,8 +2131,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix135 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2:' +
-      ' Column 1, 7; Column 2, 5 plus x. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2283,8 +2146,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix136 = function(
       '<mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn>' +
       '</mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x;' +
-      ' Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2298,7 +2160,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix137 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2313,8 +2175,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix138 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two' +
-      ' thirds. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2330,8 +2191,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix139 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three' +
-      ' fourths, one fifth. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2350,8 +2210,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix140 = function(
       '<mn>2</mn><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub>' +
       '<mi>b</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: b sub 1 1, b sub 1 2 Row 2: b sub' +
-      ' 2 1, b sub 2 2. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2368,9 +2227,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix141 = function(
       '</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd>' +
       '<mtd><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end' +
-      ' matrix times the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6. end' +
-      ' matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2390,10 +2247,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix142 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>6</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three' +
-      ' fourths, one fifth. end matrix times the 2 by 3 matrix. Row 1:' +
-      ' Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0;' +
-      ' Column 2, 2; Column 3, 6. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2415,13 +2269,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix143 = function(
       '</mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>5</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column' +
-      ' 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0;' +
-      ' Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column' +
-      ' 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0.' +
-      ' end matrix times the 4 by 2 matrix. Row 1: Column 1, 1; Column 2,' +
-      ' 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2,' +
-      ' 1. Row 4: Column 1, 0; Column 2, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2435,8 +2283,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix144 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7,' +
-      ' 5. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2450,8 +2297,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix145 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7,' +
-      ' 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2466,8 +2312,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix146 = function(
       '<mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn>' +
       '</mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-      ' 3, 5, 2 Row 3: 1, 4, 7. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2482,8 +2327,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix147 = function(
       '</mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd>' +
       '<mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2:' +
-      ' 3, 5, 2 Row 3: 1, 4, 7. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2501,11 +2345,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix148 = function(
       '</mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd>' +
       '<mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: Column 1, 0;' +
-      ' Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column' +
-      ' 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0;' +
-      ' Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column' +
-      ' 3, 9; Column 4, 0. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2523,11 +2363,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix149 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd>' +
       '<mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 4 by 4 matrix. Row 1: Column 1, 0;' +
-      ' Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column' +
-      ' 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0;' +
-      ' Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column' +
-      ' 3, 9; Column 4, 0. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2541,8 +2377,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix150 = function(
       '</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd>' +
       '<mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2556,8 +2391,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix151 = function(
       '<mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn>' +
       '</mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: Column 1, 2;' +
-      ' Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2571,8 +2405,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix152 = function(
       '<mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr>' +
       '<mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>' +
       '|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2:' +
-      ' 7, 5. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2586,8 +2419,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix153 = function(
       '<mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable>' +
       '</mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2:' +
-      ' 7, 5. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2602,8 +2434,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix154 = function(
       '<mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2:' +
-      ' one half, two thirds. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2618,8 +2449,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix155 = function(
       '</mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>' +
       '</mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd>' +
       '</mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2:' +
-      ' one half, two thirds. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2635,8 +2465,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix156 = function(
       '<mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac>' +
       '<mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|' +
       '</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: one half, two' +
-      ' thirds Row 2: three fourths, one fifth. end determinant';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2652,8 +2481,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix157 = function(
       '<mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd>' +
       '<mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the determinant of the 2 by 2 matrix. Row 1: one half, two' +
-      ' thirds Row 2: three fourths, one fifth. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2666,7 +2494,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix158 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column vector. 1, 2, 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2679,7 +2507,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix159 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column vector. 1, 2, 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2692,7 +2520,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix160 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row vector. 3, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2705,7 +2533,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix161 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row vector. 3, 5';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2719,7 +2547,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix162 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 column vector. Row 1: x plus 1 Row 2: x minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2733,7 +2561,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix163 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column vector. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2747,7 +2575,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix164 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 1 by 2 row vector. Column 1: x plus 1 Column 2: 2 x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2762,8 +2590,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix165 = function(
       '</mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd>' +
       '<mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 row vector. 3, 2. times the 2 by 2 matrix. Row' +
-      ' 1: 0, 5 Row 2: 9, 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2780,8 +2607,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix166 = function(
       '<mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 3 row vector. 1, 2, 7. times the 3 by 3 matrix.' +
-      ' Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2796,8 +2622,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix167 = function(
       '<mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow>' +
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. times the 2 by' +
-      ' 1 column vector. 3, 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2815,8 +2640,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix168 = function(
       '<mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1,' +
-      ' 4, 2. times the 3 by 1 column vector. 1, 2, 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2829,7 +2653,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix169 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column vector. 1, 2, 3. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2842,7 +2666,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix170 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3' +
       '</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'the 3 by 1 column vector. 1, 2, 3. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2855,7 +2679,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix171 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row vector. 3, 5. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2868,7 +2692,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix172 = function(
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>3' +
       '</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 1 by 2 row vector. 3, 5. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2882,8 +2706,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix173 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 1 column vector. Row 1: x plus 1 Row 2: x minus 1.' +
-      ' end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2897,8 +2720,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix174 = function(
       '</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>1' +
       '</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 4 by 1 column vector. Row 1: 3 Row 2: 6 Row 3: 1 Row 4:' +
-      ' 2. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2912,8 +2734,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix175 = function(
       '<mi>x</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>2</mn>' +
       '<mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the 1 by 2 row vector. Column 1: x plus 1 Column 2: 2 x.' +
-      ' end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2928,8 +2749,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix176 = function(
       '</mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd>' +
       '<mn>5</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 2 row vector. 3, 2. end vector times the 2 by 2' +
-      ' matrix. Row 1: 0, 5 Row 2: 9, 4. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2946,8 +2766,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix177 = function(
       '<mtr><mtd><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd>' +
       '</mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>2</mn>' +
       '</mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 1 by 3 row vector. 1, 2, 7. end vector times the 3 by 3' +
-      ' matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. end matrix';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2962,8 +2781,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix178 = function(
       '<mtd><mn>4</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow>' +
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd>' +
       '<mn>2</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. end matrix' +
-      ' times the 2 by 1 column vector. 3, 2. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2981,8 +2799,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix179 = function(
       '<mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd>' +
       '</mtr><mtr><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1,' +
-      ' 4, 2. end matrix times the 3 by 1 column vector. 1, 2, 7. end vector';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2995,7 +2812,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix180 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>n' +
       '</mi></mtd></mtr><mtr><mtd><mi>r</mi></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'n choose r';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3008,7 +2825,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix181 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>10</mn></mrow></mtd></mtr><mtr><mtd><mn>7</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '10 choose 7';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3021,7 +2838,7 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix182 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mrow>' +
       '<mn>15</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '15 choose 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -3034,6 +2851,6 @@ sre.ClearspeakFrenchMatricesAndCombinatorics.prototype.testMatrix183 = function(
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>8' +
       '</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = '8 choose 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };

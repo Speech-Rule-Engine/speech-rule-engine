@@ -52,7 +52,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes001 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2 times 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -64,7 +64,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes002 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2 times 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -76,7 +76,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes003 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 to the fourth power, times 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -88,7 +88,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes004 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, 3 plus 4, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -100,7 +100,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes005 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2 times, open bracket, 3 plus 4, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -112,7 +112,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes006 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 times 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -125,7 +125,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes007 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2 times, open paren, 3 plus 4, close paren, squared';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -138,8 +138,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes008 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, 2 plus 7, close paren, times, open paren, 3' +
-      ' minus 6, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -152,8 +151,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes009 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'open bracket, 2 plus 7, close bracket, times, open bracket,' +
-      ' 3 minus 6, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -166,7 +164,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestImpTimes010 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x times, y z';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -178,7 +176,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes011 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x times, open paren, y plus z, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -190,7 +188,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes012 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, y plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -202,7 +200,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes013 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'open paren, 2 minus 1, close paren, times x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -215,7 +213,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes014 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1, times, open paren, 3 plus 7, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -228,8 +226,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes015 = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
       '<mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>';
-  var speech = 'p sub 1, raised to the, a sub 1, power, p sub 2, raised to' +
-      ' the, a sub 2, power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -244,8 +241,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes016 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'open paren, x plus y, close paren, to the negative 4 power,' +
-      ' times, open paren, x minus y, close paren, to the negative 4 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -258,8 +254,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes017 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 raised to the 4 times, open paren, x plus y, close paren,' +
-      ' power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -270,7 +265,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes017 = function() {
 sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes018 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'x y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -282,7 +277,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes019 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
-  var speech = 'x squared, y cubed';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -295,7 +290,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes020 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = 'x raised to the y plus 1 power, x raised to the y plus 2 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -308,8 +303,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes021 = function() {
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
       '</mrow></math>';
-  var speech = 'the square root of a, the square root of b, equals the' +
-      ' square root of a b';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -322,8 +316,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes022 = function() {
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
       '</msqrt></mrow></math>';
-  var speech = 'the square root of 3, the square root of 10, equals the' +
-      ' square root of 30';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -334,7 +327,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes022 = function() {
 sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes023 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
-  var speech = '2 the square root of 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -346,7 +339,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes024 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
-  var speech = '1 plus 2 the square root of 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -360,8 +353,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes025 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of x, equals x squared times, open paren, x plus 1, close' +
-      ' paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -375,8 +367,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes026 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times x, equals x squared times, open paren, x plus 1,' +
-      ' close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -388,7 +379,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes027 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'sine x cosine y, plus, cosine x sine y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -402,8 +393,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes027a = function() {
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the sine of, open paren, x plus y, close paren, the cosine' +
-      ' of, open paren, x plus y, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -415,7 +405,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes028 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log base 10 of, x y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -428,8 +418,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes029 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log of, open paren, x plus y, close paren, equals, log' +
-      ' x log y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -445,8 +434,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes030 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. times the 2 by' +
-      ' 2 matrix. Row 1: 7, 4 Row 2: 0, 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -460,8 +448,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes031 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, 3 times, open paren, open paren, 4' +
-      ' plus 5, close paren, plus 6, close paren, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -475,9 +462,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes032 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, 3 times, open second paren, open third' +
-      ' paren, 4 plus 5, close third paren, plus 6, close second paren,' +
-      ' close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -491,8 +476,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes033 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2 times, open bracket, 3 times, open paren, open paren, 4' +
-      ' plus 5, close paren, plus 6, close paren, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -506,9 +490,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes034 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2 times, open bracket, 3 times, open paren, open second' +
-      ' paren, 4 plus 5, close second paren, plus 6, close paren, close' +
-      ' bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -520,7 +502,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes035 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2 times, the absolute value of x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -532,7 +514,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes036 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x, times, the absolute value of y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -545,8 +527,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes037 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x plus 1, times, the absolute value' +
-      ' of y minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -559,8 +540,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes037a = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x plus 1, end absolute value, times,' +
-      ' the absolute value of y minus 1, end absolute value';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -573,8 +553,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes038 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'the absolute value of x plus 1, times, the absolute value' +
-      ' of y, minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -587,8 +566,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes0381 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'the absolute value of x plus 1, end absolute value, times,' +
-      ' the absolute value of y, end absolute value, minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -600,7 +578,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes039 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2 times 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -612,7 +590,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes040 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2 times 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -624,7 +602,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes041 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 to the fourth power, times 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -636,7 +614,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes042 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, 3 plus 4, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -648,7 +626,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes043 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2 times, open bracket, 3 plus 4, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -660,7 +638,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes044 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 times 2';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -673,7 +651,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes045 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2 times, open paren, 3 plus 4, close paren, squared';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -686,8 +664,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes046 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, 2 plus 7, close paren, times, open paren, 3' +
-      ' minus 6, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -700,8 +677,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes047 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'open bracket, 2 plus 7, close bracket, times, open bracket,' +
-      ' 3 minus 6, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -714,7 +690,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestImpTimes048 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x times y times z';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -726,7 +702,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes049 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x times, open paren, y plus z, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -738,7 +714,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes050 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, y plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -750,7 +726,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes051 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'open paren, 2 minus 1, close paren, times x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -763,7 +739,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes052 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1, times, open paren, 3 plus 7, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -776,8 +752,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes053 = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
       '<mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>';
-  var speech = 'p sub 1, raised to the, a sub 1, power, times, p sub 2,' +
-      ' raised to the, a sub 2, power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -792,8 +767,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes054 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'open paren, x plus y, close paren, to the negative 4 power,' +
-      ' times, open paren, x minus y, close paren, to the negative 4 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -806,8 +780,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes055 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 raised to the 4 times, open paren, x plus y, close paren,' +
-      ' power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -818,7 +791,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes055 = function() {
 sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes056 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'x times y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -830,7 +803,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes057 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
-  var speech = 'x squared times y cubed';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -843,8 +816,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes058 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = 'x raised to the y plus 1 power, times x raised to the y' +
-      ' plus 2 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -857,8 +829,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes059 = function() {
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
       '</mrow></math>';
-  var speech = 'the square root of a, times the square root of b, equals' +
-      ' the square root of a times b';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -871,8 +842,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes060 = function() {
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
       '</msqrt></mrow></math>';
-  var speech = 'the square root of 3, times the square root of 10, equals' +
-      ' the square root of 30';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -883,7 +853,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes060 = function() {
 sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes061 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
-  var speech = '2 times the square root of 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -895,7 +865,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes062 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
-  var speech = '1 plus 2 times the square root of 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -909,8 +879,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes063 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of x, equals x squared times, open paren, x plus 1, close' +
-      ' paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -924,8 +893,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes064 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f times x, equals x squared times, open paren, x plus 1,' +
-      ' close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -937,7 +905,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes065 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'sine x, times cosine y plus cosine x, times sine y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -951,8 +919,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes065a = function() {
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mi>cos</mi><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'the sine of, open paren, x plus y, close paren, times, the' +
-      ' cosine of, open paren, x plus y, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -964,7 +931,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes066 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log base 10 of, x times y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -977,8 +944,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes067 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log of, open paren, x plus y, close paren, equals log' +
-      ' x, times log y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -994,8 +960,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes068 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. times the 2 by' +
-      ' 2 matrix. Row 1: 7, 4 Row 2: 0, 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1009,8 +974,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes069 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, 3 times, open paren, open paren, 4' +
-      ' plus 5, close paren, plus 6, close paren, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1024,9 +988,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes070 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 times, open paren, 3 times, open second paren, open third' +
-      ' paren, 4 plus 5, close third paren, plus 6, close second paren,' +
-      ' close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1040,8 +1002,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes070a = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2 times, open bracket, 3 times, open paren, open paren, 4' +
-      ' plus 5, close paren, plus 6, close paren, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1055,9 +1016,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes071 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2 times, open bracket, 3 times, open paren, open second' +
-      ' paren, 4 plus 5, close second paren, plus 6, close paren, close' +
-      ' bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1069,7 +1028,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes072 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2 times, the absolute value of x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1081,7 +1040,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes073 = function() {
   var preference = 'ImpliedTimes_MoreImpliedTimes';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x, times, the absolute value of y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1094,8 +1053,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes074 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x plus 1, times, the absolute value' +
-      ' of y minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1108,8 +1066,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes074a = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x plus 1, end absolute value, times,' +
-      ' the absolute value of y minus 1, end absolute value';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1122,8 +1079,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes075 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'the absolute value of x plus 1, times, the absolute value' +
-      ' of y, minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1136,8 +1092,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes076 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'the absolute value of x plus 1, end absolute value, times,' +
-      ' the absolute value of y, end absolute value, minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1149,7 +1104,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes077 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, open paren, 3, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1161,7 +1116,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes078 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, open bracket, 3, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1173,7 +1128,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes079 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 to the fourth power, open paren, 3, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1185,7 +1140,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes080 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, 3 plus 4, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1197,7 +1152,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes081 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, open bracket, 3 plus 4, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1209,7 +1164,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes082 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, 3, close paren, open paren, 2, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1222,7 +1177,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes083 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2, open paren, 3 plus 4, close paren, squared';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1235,8 +1190,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes084 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, 2 plus 7, close paren, open paren, 3 minus 6,' +
-      ' close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1249,8 +1203,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes085 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'open bracket, 2 plus 7, close bracket, open bracket, 3' +
-      ' minus 6, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1263,7 +1216,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestImpTimes086 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x, open paren, y z, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1275,7 +1228,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes087 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x, open paren, y plus z, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1287,7 +1240,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes088 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, y plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1299,7 +1252,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes089 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'open paren, 2 minus 1, close paren, x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1312,7 +1265,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes090 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1, open paren, 3 plus 7, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1325,8 +1278,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes091 = function() {
   var mathml = '<math><mrow><msubsup><mi>p</mi><mn>1</mn><mrow><msub><mi>a' +
       '</mi><mn>1</mn></msub></mrow></msubsup><msubsup><mi>p</mi><mn>2</mn>' +
       '<mrow><msub><mi>a</mi><mn>2</mn></msub></mrow></msubsup></mrow></math>';
-  var speech = 'p sub 1, raised to the, a sub 1, power, p sub 2, raised to' +
-      ' the, a sub 2, power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1341,8 +1293,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes092 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'open paren, x plus y, close paren, to the negative 4 power,' +
-      ' open paren, x minus y, close paren, to the negative 4 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1355,7 +1306,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes093 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 raised to the 4, open paren, x plus y, close paren, power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1366,7 +1317,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes093 = function() {
 sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes094 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'x y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1378,7 +1329,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes095 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y' +
       '</mi><mn>3</mn></msup></mrow></math>';
-  var speech = 'x squared y cubed';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1391,7 +1342,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes096 = function() {
   var mathml = '<math><mrow><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>1' +
       '</mn></mrow></msup><msup><mi>x</mi><mrow><mi>y</mi><mo>+</mo><mn>2' +
       '</mn></mrow></msup></mrow></math>';
-  var speech = 'x raised to the y plus 1 power, x raised to the y plus 2 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1404,8 +1355,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes097 = function() {
   var mathml = '<math><mrow><msqrt><mi>a</mi></msqrt><msqrt><mi>b</mi>' +
       '</msqrt><mo>=</mo><msqrt><mrow><mi>a</mi><mi>b</mi></mrow></msqrt>' +
       '</mrow></math>';
-  var speech = 'the square root of a, the square root of b, equals the' +
-      ' square root of a b';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1418,8 +1368,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes098 = function() {
   var mathml = '<math><mrow><msqrt><mn>3</mn></msqrt><msqrt><mrow><mn>10' +
       '</mn></mrow></msqrt><mo>=</mo><msqrt><mrow><mn>30</mn></mrow>' +
       '</msqrt></mrow></math>';
-  var speech = 'the square root of 3, the square root of 10, equals the' +
-      ' square root of 30';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1430,7 +1379,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes098 = function() {
 sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes099 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><msqrt><mn>3</mn></msqrt></mrow></math>';
-  var speech = '2 the square root of 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1442,7 +1391,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes100 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msqrt><mn>3</mn>' +
       '</msqrt></mrow></math>';
-  var speech = '1 plus 2 the square root of 3';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1456,7 +1405,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes101 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of x, equals x squared, open paren, x plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1471,8 +1420,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestImpTimes102 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f, open paren, x, close paren, equals x squared, open' +
-      ' paren, x plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1484,7 +1432,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes103 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi>' +
       '<mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>';
-  var speech = 'sine x cosine y, plus, cosine x sine y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1496,7 +1444,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes104 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10' +
       '</mn></mrow></msub><mi>x</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log base 10 of, x y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1509,8 +1457,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes105 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log of, open paren, x plus y, close paren, equals, log' +
-      ' x log y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1526,8 +1473,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes106 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2' +
-      ' matrix. Row 1: 7, 4 Row 2: 0, 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1541,8 +1487,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes107 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, 3, open paren, open paren, 4 plus 5, close' +
-      ' paren, plus 6, close paren, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1556,8 +1501,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes108 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, 3, open second paren, open third paren, 4' +
-      ' plus 5, close third paren, plus 6, close second paren, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1571,8 +1515,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes109 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, open bracket, 3, open paren, open paren, 4 plus 5, close' +
-      ' paren, plus 6, close paren, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1586,8 +1529,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes110 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, open bracket, 3, open paren, open second paren, 4 plus' +
-      ' 5, close second paren, plus 6, close paren, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1599,7 +1541,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes111 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>|</mo><mi>x</mi><mo>|</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, the absolute value of x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1611,7 +1553,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes112 = function() {
   var preference = 'ImpliedTimes_None';
   var mathml = '<math><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow>' +
       '<mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x, the absolute value of y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1624,8 +1566,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes113 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mrow><mi>y</mi><mo>−' +
       '</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow></math>';
-  var speech = 'the absolute value of x plus 1, the absolute value of y' +
-      ' minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1638,8 +1579,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimes114 = function() {
   var mathml = '<math><mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1' +
       '</mn></mrow><mo>|</mo></mrow><mrow><mo>|</mo><mi>y</mi><mo>|</mo>' +
       '</mrow><mo>−</mo><mn>1</mn></mrow></math>';
-  var speech = 'the absolute value of x plus 1, the absolute value of y,' +
-      ' minus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1656,7 +1596,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar001 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, open paren, 3, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1668,7 +1608,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar002 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mn>3</mn><mo>]</mo>' +
       '</mrow></mrow></math>';
-  var speech = '2, open bracket, 3, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1680,7 +1620,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar003 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><msup><mn>2</mn><mn>4</mn></msup><mrow><mo>(' +
       '</mo><mn>3</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '2 to the fourth power, open paren, 3, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1692,7 +1632,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar004 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, 3 plus 4, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1704,7 +1644,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar005 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>[</mo><mrow><mn>3</mn><mo>+' +
       '</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, open bracket, 3 plus 4, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1716,7 +1656,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar006 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow>' +
       '<mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, 3, close paren, open paren, 2, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1729,7 +1669,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar007 = function() {
   var mathml = '<math><mrow><mn>2</mn><msup><mrow><mrow><mo>(</mo><mrow>' +
       '<mn>3</mn><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mn>2' +
       '</mn></msup></mrow></math>';
-  var speech = '2, open paren, 3 plus 4, close paren, squared';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1742,8 +1682,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar008 = function() {
   var mathml = '<math><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'open paren, 2 plus 7, close paren, open paren, 3 minus 6,' +
-      ' close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1756,8 +1695,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar009 = function() {
   var mathml = '<math><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>+</mo><mn>7' +
       '</mn></mrow><mo>]</mo></mrow><mrow><mo>[</mo><mrow><mn>3</mn><mo>−' +
       '</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = 'open bracket, 2 plus 7, close bracket, open bracket, 3' +
-      ' minus 6, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1770,7 +1708,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestImpTimesSilPar010 = function() 
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mi>z' +
       '</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x, open paren, y z, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1782,7 +1720,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar011 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'x, open paren, y plus z, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1794,7 +1732,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar012 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mn>2</mn><mrow><mo>(</mo><mrow><mi>y</mi><mo>+' +
       '</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, y plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1806,7 +1744,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar013 = function() {
   var preference = 'ImpliedTimes_None:Paren_Silent';
   var mathml = '<math><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>−</mo>' +
       '<mn>1</mn><mo stretchy="false">)</mo><mi>x</mi></mrow></math>';
-  var speech = 'open paren, 2 minus 1, close paren, x';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1819,7 +1757,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar014 = function() {
   var mathml = '<math><mrow><msub><mi>p</mi><mn>1</mn></msub><mrow><mo>(' +
       '</mo><mrow><mn>3</mn><mo>+</mo><mn>7</mn></mrow><mo>)</mo></mrow>' +
       '</mrow></math>';
-  var speech = 'p sub 1, open paren, 3 plus 7, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1834,8 +1772,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar015 = function() {
       '<mn>4</mn></mrow></msup><msup><mrow><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>−</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mo>−</mo>' +
       '<mn>4</mn></mrow></msup></mrow></math>';
-  var speech = 'open paren, x plus y, close paren, to the negative 4 power,' +
-      ' open paren, x minus y, close paren, to the negative 4 power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1848,7 +1785,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar016 = function() {
   var mathml = '<math><mrow><msup><mn>2</mn><mrow><mn>4</mn><mrow><mo>(' +
       '</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow>' +
       '</mrow></msup></mrow></math>';
-  var speech = '2 raised to the 4, open paren, x plus y, close paren, power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1863,7 +1800,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar017 = function() {
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f of x, equals x squared, open paren, x plus 1, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1878,8 +1815,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestImpTimesSilPar018 = function() 
       '<mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn>' +
       '</msup><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>' +
       '<mo>)</mo></mrow></mrow></math>';
-  var speech = 'f, open paren, x, close paren, equals, x squared, open' +
-      ' paren, x plus 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1893,8 +1829,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar019 = function() {
   var mathml = '<math><mrow><mi>log</mi><mrow><mo>(</mo><mrow><mi>x</mi>' +
       '<mo>+</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>log</mi>' +
       '<mi>x</mi><mi>log</mi><mi>y</mi></mrow></math>';
-  var speech = 'the log of, open paren, x plus y, close paren, equals, log' +
-      ' x log y';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1910,8 +1845,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar020 = function() {
       '<mo>(</mo><mrow><mtable><mtr><mtd><mn>7</mn></mtd><mtd><mn>4</mn>' +
       '</mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>' +
       '</mtable></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'the 2 by 2 matrix. Row 1: 1, 3 Row 2: 5, 2. the 2 by 2' +
-      ' matrix. Row 1: 7, 4 Row 2: 0, 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1925,8 +1859,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar021 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, 3, open paren, open paren, 4 plus 5, close' +
-      ' paren, plus 6, close paren, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1940,8 +1873,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar022 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = '2, open paren, 3, open second paren, open third paren, 4' +
-      ' plus 5, close third paren, plus 6, close second paren, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1955,8 +1887,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar023 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, open bracket, 3, open paren, open paren, 4 plus 5, close' +
-      ' paren, plus 6, close paren, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1970,8 +1901,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testImpTimesSilPar024 = function() {
       '<mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mn>4</mn><mo>+</mo>' +
       '<mn>5</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>6</mn></mrow><mo>)' +
       '</mo></mrow></mrow><mo>]</mo></mrow></mrow></math>';
-  var speech = '2, open bracket, 3, open paren, open second paren, 4 plus' +
-      ' 5, close second paren, plus 6, close paren, close bracket';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -1995,8 +1925,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra001 = function() {
       '<mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub>' +
       '<mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'A equals h of, open paren, the fraction with numerator, b' +
-      ' sub 1, plus, b sub 2, and denominator 2, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2010,8 +1939,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra002 = function() {
       '<mrow><mfrac><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub>' +
       '<mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow><mo>)' +
       '</mo></mrow></mrow></math>';
-  var speech = 'A equals, h times, open paren, the fraction with numerator,' +
-      ' b sub 1, plus, b sub 2, and denominator 2, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2024,7 +1952,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra003 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn></mrow></math>';
-  var speech = 'a of 0, equals 0 times a equals 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2037,7 +1965,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra004 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn><mrow><mo>(</mo><mi>a</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>0</mn></mrow></math>';
-  var speech = 'a times 0, equals 0 times a equals 0';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2051,7 +1979,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra005 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
       '</math>';
-  var speech = 'a times negative 1, equals negative a';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2064,7 +1992,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra006 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mo>−</mo><mn>1' +
       '</mn></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>a</mi></mrow>' +
       '</math>';
-  var speech = 'a of negative 1, equals negative a';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2078,7 +2006,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestExtra007 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>b</mi><mi>c' +
       '</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>a' +
       '</mi><mi>b</mi></mrow><mo>)</mo></mrow><mi>c</mi></mrow></math>';
-  var speech = 'a times b c, equals, a b times c';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2092,7 +2020,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestExtra008 = function() {
   var mathml = '<math><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mn>1' +
       '</mn><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mn>1</mn>' +
       '</mrow></math>';
-  var speech = 'a times, open paren, 1 over a, close paren, equals, 1';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2108,7 +2036,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra009 = function() {
       '<mi>v</mi></mrow>   <mo>)</mo></mrow><mo>=</mo><mo>−</mo><mrow><mo>(' +
       '</mo>    <mrow>     <mi>u</mi><mi>v</mi></mrow>   <mo>)</mo></mrow>' +
       '</mrow>   </semantics></math>';
-  var speech = 'negative u of v, equals u of negative v, equals negative u v';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2120,7 +2048,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra010 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'B of, open paren, 2 comma 6, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2132,7 +2060,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra012 = function() {
   var preference = 'ImpliedTimes_Auto:Functions_None';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'B times, open paren, 2 comma 6, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2145,7 +2073,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestExtra013 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>B</mi><mrow><mo>(</mo><mrow><mn>2</mn><mo>,' +
       '</mo><mn>6</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'point B, open paren, 2 comma 6, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2157,7 +2085,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra014 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>p</mi><mrow><mo>(</mo><mi>w</mi><mo>)</mo>' +
       '</mrow></mrow></math>';
-  var speech = 'p of w';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2169,7 +2097,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra015 = function() {
   var preference = 'ImpliedTimes_Auto';
   var mathml = '<math><mrow><mi>x</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo>' +
       '</mrow><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>4</mn></mrow></math>';
-  var speech = 'x of t, equals 2 t, plus 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2183,8 +2111,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra016 = function() {
       '</mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>3' +
       '</mn></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>−' +
       '</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow></math>';
-  var speech = 'k of x, equals, open paren, x plus 3, close paren, times,' +
-      ' open paren, x minus 5, close paren';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2199,8 +2126,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestExtra017 = function() {
       '<mo>−</mo><mn>12</mn><mi>a</mi><mo>=</mo><mn>3</mn><mi>a</mi><mrow>' +
       '<mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>−</mo><mn>3</mn><mi>a</mi>' +
       '<mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow></math>';
-  var speech = '3 a squared minus 12 a, equals, 3 a, times a, minus 3 a,' +
-      ' times 4';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2215,8 +2141,7 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra018 = function() {
       '<mo>(</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>−</mo><msub>' +
       '<mi>T</mi><mi>s</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi>' +
       '<mrow><mo>−</mo><mi>k</mi><mi>t</mi></mrow></msup></mrow></math>';
-  var speech = 'T of t, equals, T sub s, plus, open paren, T sub 0, minus,' +
-      ' T sub s, close paren, times e raised to the negative k t, power';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2229,9 +2154,9 @@ sre.ClearspeakFrenchImpliedTimes.prototype.testExtra019 = function() {
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'V equals script l, w of 8';
+  var speech = '';
   // w is considered a simple function.
-  //var speech = 'V, equals, script l, w, times 8';
+  //var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
 
@@ -2245,6 +2170,6 @@ sre.ClearspeakFrenchImpliedTimes.prototype.untestExtra020 = function() {
   var mathml = '<math><mrow><mi>V</mi><mo>=</mo><mi mathvariant="script">l' +
       '</mi><mi>w</mi><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow>' +
       '</math>';
-  var speech = 'V, equals, l w, times 8';
+  var speech = '';
   this.executeRuleTest(mathml, speech, preference);
 };
