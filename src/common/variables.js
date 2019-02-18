@@ -35,6 +35,7 @@ sre.Variables = function() {};
  */
 sre.Variables.VERSION = '3.0.0-beta.1';
 
+
 /**
  * List of locales to load.
  * @const
@@ -48,7 +49,7 @@ sre.Variables.LOCALES = ['en', 'es', 'nemeth'];
  * @const
  * @type {string}
  */
-sre.Variables.mathjaxVersion = '2.7.4';
+sre.Variables.mathjaxVersion = '2.7.5';
 
 
 /**
