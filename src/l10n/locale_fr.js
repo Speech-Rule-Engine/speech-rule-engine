@@ -163,7 +163,7 @@ sre.Locale.fr = {
 
   REGEXP: {
     TEXT: 'a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ',
-    NUMBER: '((\\d{1,3})(?=(\\.| ))((\\.| )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
+    NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
     DECIMAL_MARK: ',',
     DIGIT_GROUP: '',
     JOINER_SUBSUPER: '-'

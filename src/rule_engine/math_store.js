@@ -25,6 +25,7 @@ goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Locale.en');
 goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
 goog.require('sre.Trie');
@@ -200,6 +201,12 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
+  // Case of numbers with whitespace for seperation.
+  var num = this.matchNumber_(str);
+  if (num && num.length === str.length) {
+    descs.push(this.evaluate_(num.number));
+    return descs;
+  }
   var split = sre.BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
@@ -210,7 +217,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
       while (rest) {
-        var num = this.matchNumber_(rest);
+        num = this.matchNumber_(rest);
         var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
           descs.push(this.evaluate_(num.number));
@@ -238,21 +245,29 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
 };
 
 
+/**
+ * Matches a number with respect to locale. If it discovers it is a number in
+ * English writing, it will attempt to translate it.
+ * @param {string} str The string to match.
+ * @return {?{number: string, length: number}} The number and its length.
+ */
 sre.MathStore.prototype.matchNumber_ = function(str) {
-  var loc_num = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
-  var en_num =
-      str.match(/^((\d{1,3})(?=(,| ))((,| )\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
-  if (!loc_num || !en_num) {
+  var locNum = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
+  var enNum = str.match(new RegExp('^' + sre.Locale.en.REGEXP.NUMBER));
+  if (!locNum && !enNum) {
     return null;
   }
-  if (!en_num || (loc_num && loc_num[0].length > en_num[0].length)) {
-    return {number: loc_num, length: loc_num[0].length};
+  var isEn = enNum && enNum[0] === str;
+  var isLoc = (locNum && locNum[0] === str) || !isEn;
+  if (isLoc) {
+    return {number: locNum[0], length: locNum[0].length};
   }
-  // English number:
-  var number = en_num[0].replace(/,/g, 'X').
-      replace(/\./g, sre.Messages.REGEXP.DECIMAL_MARK).
+  var number = enNum[0].
+      replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
+      replace(new RegExp(sre.Locale.en.REGEXP.DECIMAL_MARK, 'g'),
+              sre.Messages.REGEXP.DECIMAL_MARK).
       replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
-  return {number: number, length: en_num[0].length};
+  return {number: number, length: enNum[0].length};
 };
 
 
