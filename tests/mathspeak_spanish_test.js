@@ -76,8 +76,8 @@ sre.MathspeakSpanishTest.prototype.testSample_1_1_1 = function() {
  * Testing Rule 1.1, Example 2.
  */
 sre.MathspeakSpanishTest.prototype.testSample_1_1_2 = function() {
-  var mml = '<mrow><mn>102</mn><mo>+</mo><mn>2,214</mn><mo>+</mo><mn>15</mn>' +
-      '<mo>=</mo><mn>2,331</mn></mrow>';
+  var mml = '<mrow><mn>102</mn><mo>+</mo><mn>2214</mn><mo>+</mo><mn>15</mn>' +
+      '<mo>=</mo><mn>2331</mn></mrow>';
   this.executeRuleTest(mml, '102 más 2214 más 15 igual 2331', 'default');
   this.executeRuleTest(mml, '102 más 2214 más 15 igual 2331', 'brief');
   this.executeRuleTest(mml, '102 más 2214 más 15 igual 2331', 'sbrief');
@@ -981,7 +981,7 @@ sre.MathspeakSpanishTest.prototype.testSample_8_5_2 = function() {
  * Testing Rule 8.5, Example 3.
  */
 sre.MathspeakSpanishTest.prototype.testSample_8_5_3 = function() {
-  var mml = '<msub><mi>x</mi><mrow><mn>10,000</mn></mrow>' +
+  var mml = '<msub><mi>x</mi><mrow><mn>10000</mn></mrow>' +
       '</msub>';
   this.executeRuleTest(mml, 'x subíndice 10000', 'default');
   this.executeRuleTest(mml, 'x sub 10000', 'brief');
@@ -2113,7 +2113,7 @@ sre.MathspeakSpanishTest.prototype.testSample_13_1_1 = function() {
       ' class="MathML-Unit">mi</mi></menclose>' +
       '</mrow><menclose notation="updiagonalstrike"><mi mathvariant="normal"' +
       ' class="MathML-Unit">hr</mi>' +
-      '</menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5,280</mn>' +
+      '</menclose></mfrac><mo>×</mo><mfrac><mrow><mn>5280</mn>' +
       '<mi mathvariant="normal" class="MathML-Unit">ft</mi></mrow><mrow>' +
       '<mn>1</mn><menclose notation="updiagonalstrike">' +
       '<mi mathvariant="normal" class="MathML-Unit">mi</mi></menclose>' +
@@ -2122,7 +2122,7 @@ sre.MathspeakSpanishTest.prototype.testSample_13_1_1 = function() {
       ' class="MathML-Unit">hr</mi></menclose>' +
       '</mrow><mrow><mn>60</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">min</mi></mrow></mfrac><mo>=</mo>' +
-      '<mfrac><mrow><mn>5,280</mn><mi mathvariant="normal"' +
+      '<mfrac><mrow><mn>5280</mn><mi mathvariant="normal"' +
       ' class="MathML-Unit">ft</mi>' +
       '</mrow><mi mathvariant="normal" class="MathML-Unit">min</mi>' +
       '</mfrac></mrow>';
@@ -2177,7 +2177,7 @@ sre.MathspeakSpanishTest.prototype.testSample_13_1_3 = function() {
   var mml = '<mrow><mi>m</mi><mi mathvariant="normal"' +
       ' class="MathML-Unit">m</mi></mrow><mo>=</mo><mn>100</mn>' +
       '<mi>m</mi><mi mathvariant="normal" class="MathML-Unit">cm</mi>' +
-      '<mo>=</mo><mrow><mfrac><mi>m</mi><mn>1,000</mn></mfrac>' +
+      '<mo>=</mo><mrow><mfrac><mi>m</mi><mn>1000</mn></mfrac>' +
       '<mi mathvariant="normal" class="MathML-Unit">km</mi></mrow>';
   this.executeRuleTest(mml, 'm metros igual 100 m centímetros igual empezar' +
                        ' fracción m entre 1000 finalizar fracción kilómetros',
