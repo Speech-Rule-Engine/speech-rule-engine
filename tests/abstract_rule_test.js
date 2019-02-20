@@ -161,7 +161,7 @@ sre.AbstractRuleTest.prototype.cleanup = function(example) {
  */
 sre.AbstractRuleTest.prototype.join = function(examples) {
   var mathjax = '<script type="text/javascript" async ' +
-      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/' +
+      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/' +
       'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
       '</script>';
   var style = '\n<style>\n' +
