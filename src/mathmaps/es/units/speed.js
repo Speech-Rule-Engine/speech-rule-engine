@@ -12,7 +12,8 @@
       "default": {
         "default": "nudo"
       }
-    }
+    },
+    "category": "speed"
   },
   {
     "key": "mph",
@@ -23,7 +24,8 @@
       "default": {
         "default": "millas por hora"
       }
-    }
+    },
+    "category": "speed"
   },
   {
     "key": "rpm",
@@ -34,7 +36,8 @@
       "default": {
         "default": "revoluciones por minuto"
       }
-    }
+    },
+    "category": "speed"
   },
   {
     "key": "kmh",
@@ -45,6 +48,7 @@
       "default": {
         "default": "kilómetros por hora"
       }
-    }
+    },
+    "category": "speed"
   }
 ]

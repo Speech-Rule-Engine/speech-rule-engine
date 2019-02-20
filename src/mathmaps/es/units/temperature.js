@@ -13,7 +13,8 @@
       "default": {
         "default": "Fahrenheit"
       }
-    }
+    },
+    "category": "temperature"
   },
   {
     "key": "C",
@@ -25,7 +26,8 @@
       "default": {
         "default": "centígrados"
       }
-    }
+    },
+    "category": "temperature"
   },
   {
     "key": "K",
@@ -37,6 +39,7 @@
       "default": {
         "default": "Kelvin"
       }
-    }
+    },
+    "category": "temperature"
   }
 ]

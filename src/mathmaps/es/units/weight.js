@@ -12,7 +12,8 @@
       "default": {
         "default": "libra"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "LT",
@@ -24,7 +25,8 @@
       "default": {
         "default": "libras imperiales"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "oz",
@@ -36,7 +38,8 @@
       "default": {
         "default": "onza"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "µg",
@@ -48,7 +51,8 @@
       "default": {
         "default": "microgramo"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "gr",
@@ -60,7 +64,8 @@
       "default": {
         "default": "gramo"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "kg",
@@ -71,7 +76,8 @@
       "default": {
         "default": "kilogramo"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "mg",
@@ -82,7 +88,8 @@
       "default": {
         "default": "miligramo"
       }
-    }
+    },
+    "category": "weight"
   },
   {
     "key": "t",
@@ -94,6 +101,7 @@
       "default": {
         "default": "tonelada"
       }
-    }
+    },
+    "category": "weight"
   }
 ]

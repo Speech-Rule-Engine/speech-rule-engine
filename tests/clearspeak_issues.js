@@ -63,7 +63,7 @@ sre.ClearspeakIssues.prototype.testIssueNumbers = function() {
   this.executeRuleTest(
     '<mrow><mn>#FF0000</mn></mrow>',
     'number number sign F F 0 0 0 0', preference);
-  // this.executeRuleTest(
-  //   '<mrow><mn>#FFFF</mn></mrow>',
-  //   'number number sign F F F F', preference);
+  this.executeRuleTest(
+    '<mrow><mn>#FFFF</mn></mrow>',
+    'number number sign F F F F', preference);
 };

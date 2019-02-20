@@ -25,6 +25,7 @@ goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
 goog.require('sre.Trie');
 
@@ -203,18 +204,17 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
   for (var i = 0, s; s = split[i]; i++) {
     if (s.length == 1) {
       descs.push(this.evaluate_(s));
-    } else if (s.match(/^[a-zA-Z]+$/)) {
+    } else if (s.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
       descs.push(this.evaluate_(s));
     } else {
       // Break up string even further wrt. symbols vs alphanum substrings.
       var rest = s;
       while (rest) {
-        var num = rest.match(
-            /^((\d{1,3})(?=,)(,\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
-        var alpha = rest.match(/^[a-zA-Z]+/);
+        var num = this.matchNumber_(rest);
+        var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
-          descs.push(this.evaluate_(num[0]));
-          rest = rest.substring(num[0].length);
+          descs.push(this.evaluate_(num.number));
+          rest = rest.substring(num.length);
         } else if (alpha) {
           descs.push(this.evaluate_(alpha[0]));
           rest = rest.substring(alpha[0].length);
@@ -235,6 +235,24 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     }
   }
   return descs;
+};
+
+
+sre.MathStore.prototype.matchNumber_ = function(str) {
+  var loc_num = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
+  var en_num =
+      str.match(/^((\d{1,3})(?=(,| ))((,| )\d{3})*(\.\d+)?)|^\d*\.\d+|^\d+/);
+  if (!loc_num || !en_num) {
+    return null;
+  }
+  if (!en_num || (loc_num && loc_num[0].length > en_num[0].length)) {
+    return {number: loc_num, length: loc_num[0].length};
+  }
+  // English number:
+  var number = en_num[0].replace(/,/g, 'X').
+      replace(/\./g, sre.Messages.REGEXP.DECIMAL_MARK).
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+  return {number: number, length: en_num[0].length};
 };
 
 
