@@ -139,18 +139,18 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpTensor = function() {
   mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a exposant gauche 3 position de base plus indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sup 3 position de base plus sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sup 3 position de base plus sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sup gauche 3 position de base plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sup gauche 3 position de base plus sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a indice gauche 3 position de base plus indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sub 3 position de base plus sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sub 3 position de base plus sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sub gauche 3 position de base plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub gauche 3 position de base plus sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a indice gauche 3 exposant gauche n position de base plus indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sub 3 sup n position de base plus sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sub 3 sup n position de base plus sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sub gauche 3 sup gauche n position de base plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub gauche 3 sup gauche n position de base plus sub m sup 2 position de base b', 'sbrief');
 };
 
 
@@ -234,18 +234,18 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelTensor = function() {
   mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a exposant gauche 3 position de base égale indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sup 3 position de base égale sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sup 3 position de base égale sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sup gauche 3 position de base égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sup gauche 3 position de base égale sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a indice gauche 3 position de base égale indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sub 3 position de base égale sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sub 3 position de base égale sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sub gauche 3 position de base égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub gauche 3 position de base égale sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a indice gauche 3 exposant gauche n position de base égale indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sub 3 sup n position de base égale sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sub 3 sup n position de base égale sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sub gauche 3 sup gauche n position de base égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub gauche 3 sup gauche n position de base égale sub m sup 2 position de base b', 'sbrief');
 };
 
 
@@ -346,19 +346,19 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctTensor = function() {
   mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a exposant gauche 3 position de base deux points indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sup 3 position de base deux points sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sup 3 position de base deux points sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sup gauche 3 position de base deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sup gauche 3 position de base deux points sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a indice gauche 3 position de base deux points indice m exposant 2 position de base b', 'default');
-  this.executeRuleTest(mml, 'a sub 3 position de base deux points sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sub 3 position de base deux points sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sub gauche 3 position de base deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub gauche 3 position de base deux points sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
   this.executeRuleTest(mml, 'a indice gauche 3 exposant gauche n position de base deux points indice m exposant 2 position de base b',
                        'default');
-  this.executeRuleTest(mml, 'a sub 3 sup n position de base deux points sub m sup 2 position de base b', 'brief');
-  this.executeRuleTest(mml, 'a sub 3 sup n position de base deux points sub m sup 2 position de base b', 'sbrief');
+  this.executeRuleTest(mml, 'a sub gauche 3 sup gauche n position de base deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub gauche 3 sup gauche n position de base deux points sub m sup 2 position de base b', 'sbrief');
 };
 
 

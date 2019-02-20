@@ -892,8 +892,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_8_1_naive = function() {
       '<mrow><mi>g</mi><mi>h</mi></mrow><mprescripts/><mrow><mi>c</mi>' +
       '<mi>d</mi></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche c d exposant gauche a b position de base x indice e f exposant g h', 'default');
-  this.executeRuleTest(mml, 'sub c d sup a b position de base x sub e f sup g h', 'brief');
-  this.executeRuleTest(mml, 'sub c d sup a b position de base x sub e f sup g h', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'brief');
+  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'sbrief');
 };
 
 
@@ -905,8 +905,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_8_1 = function() {
       '<mi>g</mi><mi>f</mi><mi>h</mi><mprescripts/><mi>c</mi>' +
       '<mi>a</mi><mi>d</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche c d exposant gauche a b position de base x indice e f exposant g h', 'default');
-  this.executeRuleTest(mml, 'sub c d sup a b position de base x sub e f sup g h', 'brief');
-  this.executeRuleTest(mml, 'sub c d sup a b position de base x sub e f sup g h', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'brief');
+  this.executeRuleTest(mml, 'sub gauche c d sup gauche a b position de base x sub e f sup g h', 'sbrief');
 };
 
 
@@ -917,8 +917,8 @@ sre.MathspeakFrenchTest.prototype.testSampleTensorMultiSimpleABC = function() {
   var mml = '<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-exposant l', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sup l', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sup l', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l', 'sbrief');
 };
 
 
@@ -929,8 +929,8 @@ sre.MathspeakFrenchTest.prototype.testSampleTensorMultiSub = function() {
   var mml = '<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub>' +
       '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-indice l exposant d', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sub l sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sub l sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sup d', 'sbrief');
 };
 
 
@@ -942,8 +942,8 @@ sre.MathspeakFrenchTest.prototype.testSampleTensorMultiSubSup = function() {
       '<mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-indice l sub-sub-exposant k sub e exposant d', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sub l sub-sub-sup k sub e sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sub l sub-sub-sup k sub e sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sub-sub-sup k sub e sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sub l sub-sub-sup k sub e sup d', 'sbrief');
 };
 
 
@@ -955,8 +955,8 @@ sre.MathspeakFrenchTest.prototype.testSampleTensorMultiSimple = function() {
       '<mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c sub-exposant l exposant d',
                        'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sup l sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sub-sup l sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sub-sup l sup d', 'sbrief');
 };
 
 
@@ -969,8 +969,8 @@ sre.MathspeakFrenchTest.prototype.testSampleTensorMultiComplex = function() {
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c k sub-exposant l exposant d',
                        'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c k sub-sup l sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c k sub-sup l sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c k sub-sup l sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c k sub-sup l sup d', 'sbrief');
 };
 
 
@@ -984,8 +984,8 @@ sre.MathspeakFrenchTest.prototype.testSampleTwoTensors = function() {
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c exposant d position de base indice gauche a exposant gauche b position de base x indice c exposant d',
                        'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sup d position de base sub a sup b position de base x sub c sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sup d position de base sub a sup b position de base x sub c sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base sub gauche a sup gauche b position de base x sub c sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base sub gauche a sup gauche b position de base x sub c sup d', 'sbrief');
 };
 
 
@@ -1003,8 +1003,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCD = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c exposant d', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d', 'sbrief');
 };
 
 
@@ -1015,8 +1015,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABC = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c', 'sbrief');
 };
 
 
@@ -1027,8 +1027,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABD = function() {
   var mml = '<mmultiscripts><mi>x</mi><none/><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x exposant d', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sup d', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sup d', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sup d', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sup d', 'sbrief');
 };
 
 
@@ -1040,8 +1040,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorAB = function() {
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x',
                        'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x', 'sbrief');
 };
 
 
@@ -1052,8 +1052,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCR = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c position de base r', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c position de base r', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c position de base r', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c position de base r', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c position de base r', 'sbrief');
 };
 
 
@@ -1064,8 +1064,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDR = function() {
   var mml = '<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>';
   this.executeRuleTest(mml, 'indice gauche a exposant gauche b position de base x indice c exposant d position de base r', 'default');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sup d position de base r', 'brief');
-  this.executeRuleTest(mml, 'sub a sup b position de base x sub c sup d position de base r', 'sbrief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base r', 'brief');
+  this.executeRuleTest(mml, 'sub gauche a sup gauche b position de base x sub c sup d position de base r', 'sbrief');
 };
 
 
@@ -1077,8 +1077,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDRoot =
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>';
   this.executeRuleTest(mml, 'début racine carrée indice gauche a exposant gauche b position de base x indice c exposant d position de base fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'début racine carrée sub a sup b position de base x sub c sup d position de base fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'racine carrée sub a sup b position de base x sub c sup d position de base fin racine carrée', 'sbrief');
+  this.executeRuleTest(mml, 'début racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée', 'sbrief');
 };
 
 
@@ -1090,8 +1090,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDRootR =
   var mml = '<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>';
   this.executeRuleTest(mml, 'début racine carrée indice gauche a exposant gauche b position de base x indice c exposant d position de base fin racine carrée r', 'default');
-  this.executeRuleTest(mml, 'début racine carrée sub a sup b position de base x sub c sup d position de base fin racine carrée r', 'brief');
-  this.executeRuleTest(mml, 'racine carrée sub a sup b position de base x sub c sup d position de base fin racine carrée r', 'sbrief');
+  this.executeRuleTest(mml, 'début racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée r', 'brief');
+  this.executeRuleTest(mml, 'racine carrée sub gauche a sup gauche b position de base x sub c sup d position de base fin racine carrée r', 'sbrief');
 };
 
 
@@ -1103,8 +1103,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDFrac =
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
   this.executeRuleTest(mml, 'début fraction 1 sur indice gauche a exposant gauche b position de base x indice c exposant d position de base fin fraction', 'default');
-  this.executeRuleTest(mml, 'début frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac',
+  this.executeRuleTest(mml, 'début frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac', 'brief');
+  this.executeRuleTest(mml, 'frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac',
       'sbrief');
 };
 
@@ -1117,8 +1117,8 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDFracR =
   var mml = '<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi>' +
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
   this.executeRuleTest(mml, 'début fraction 1 sur indice gauche a exposant gauche b position de base x indice c exposant d position de base fin fraction r', 'default');
-  this.executeRuleTest(mml, 'début frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac r', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac r',
+  this.executeRuleTest(mml, 'début frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac r', 'brief');
+  this.executeRuleTest(mml, 'frac 1 sur sub gauche a sup gauche b position de base x sub c sup d position de base fin frac r',
       'sbrief');
 };
 
@@ -1276,8 +1276,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_13_1 = function() {
   var mml = '<mrow><msup><mo form="prefix">log</mo><mn>4</mn></msup><mmultiscripts>' +
       '<mi>x</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mrow>';
   this.executeRuleTest(mml, 'log exposant 4 position de base exposant gauche b position de base x', 'default');
-  this.executeRuleTest(mml, 'log sup 4 position de base sup b position de base x', 'brief');
-  this.executeRuleTest(mml, 'log sup 4 position de base sup b position de base x', 'sbrief');
+  this.executeRuleTest(mml, 'log sup 4 position de base sup gauche b position de base x', 'brief');
+  this.executeRuleTest(mml, 'log sup 4 position de base sup gauche b position de base x', 'sbrief');
 };
 
 
@@ -1288,8 +1288,8 @@ sre.MathspeakFrenchTest.prototype.testSample_8_13_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><mmultiscripts><mi>y</mi>' +
       '<mprescripts/><mi>a</mi></mmultiscripts></mrow>';
   this.executeRuleTest(mml, 'T majuscule indice n position de base indice gauche a position de base y', 'default');
-  this.executeRuleTest(mml, 'T majuscule sub n position de base sub a position de base y', 'brief');
-  this.executeRuleTest(mml, 'T majuscule sub n position de base sub a position de base y', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule sub n position de base sub gauche a position de base y', 'brief');
+  this.executeRuleTest(mml, 'T majuscule sub n position de base sub gauche a position de base y', 'sbrief');
 };
 
 

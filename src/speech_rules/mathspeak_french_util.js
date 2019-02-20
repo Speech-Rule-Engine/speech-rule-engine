@@ -343,15 +343,13 @@ sre.MathspeakFrenchUtil.baselineBrief = function(node) {
   };
   
   sre.MathspeakFrenchUtil.leftSuperscriptBrief = function(node) {
-    // var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
-    // return leftIndex.replace(/^exposant/, 'IndSupGauche');
-    return sre.MathspeakUtil.superscriptBrief(node);
+    var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
+    return leftIndex.replace(/^sup/, 'sup gauche');
   };
 
   sre.MathspeakFrenchUtil.leftSubscriptBrief = function(node) {
-    // var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
-    // return leftIndex.replace(/^indice/, 'IndInfGauche');
-    return sre.MathspeakUtil.subscriptBrief(node);
+    var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
+    return leftIndex.replace(/^sub/, 'sub gauche');
   };
   
 });  // goog.scope
