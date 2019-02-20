@@ -342,18 +342,6 @@ sre.MathspeakFrenchUtil.baselineBrief = function(node) {
     return leftIndex.replace(/^indice/, 'indice gauche');
   };
   
-  sre.MathspeakFrenchUtil.rightSuperscriptVerbose = function(node) {
-    // var rightIndex = sre.MathspeakUtil.superscriptVerbose(node);
-    // return rightIndex.replace(/^exposant/, 'exposant droite');
-    return sre.MathspeakUtil.superscriptVerbose(node);
-  };
-
-  sre.MathspeakFrenchUtil.rightSubscriptVerbose = function(node) {
-    // var rightIndex = sre.MathspeakUtil.subscriptVerbose(node);
-    // return rightIndex.replace(/^indice/, 'indice inférieur droite');
-    return sre.MathspeakUtil.subscriptVerbose(node);
-  };
-  
   sre.MathspeakFrenchUtil.leftSuperscriptBrief = function(node) {
     // var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
     // return leftIndex.replace(/^exposant/, 'IndSupGauche');
@@ -366,17 +354,4 @@ sre.MathspeakFrenchUtil.baselineBrief = function(node) {
     return sre.MathspeakUtil.subscriptBrief(node);
   };
   
-  sre.MathspeakFrenchUtil.rightSuperscriptBrief = function(node) {
-    // var rightIndex = sre.MathspeakUtil.superscriptBrief(node);
-    // return rightIndex.replace(/^exposant/, 'IndSupDroit');
-    return sre.MathspeakUtil.superscriptBrief(node);
-  };
-
-  sre.MathspeakFrenchUtil.rightSubscriptBrief = function(node) {
-    // var rightIndex = sre.MathspeakUtil.subscriptBrief(node);
-    // return rightIndex.replace(/^indice/, 'IndInfDroit');
-    return sre.MathspeakUtil.subscriptBrief(node);
-  };
-  
-
 });  // goog.scope

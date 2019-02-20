@@ -1005,9 +1005,11 @@ sre.MathspeakUtil.removeParens = function(node) {
  * @private
  */
 sre.MathspeakUtil.componentString_ = {
+  3 : 'CSFleftsuperscript',
+  4 : 'CSFleftsubscript',
   2 : 'CSFbaseline',
-  1 : 'CSFsubscript',
-  0 : 'CSFsuperscript'
+  1 : 'CSFrightsubscript',
+  0 : 'CSFrightsuperscript'
 };
 
 
@@ -1043,7 +1045,7 @@ sre.MathspeakUtil.generateTensorRuleStrings_ = function(constellation) {
   for (var i = 0; i < 5; i++) {
     var childString = 'children/*[' + sre.MathspeakUtil.childNumber_[i] + ']';
     if (constel & 1) {
-      var compString = sre.MathspeakUtil.componentString_[i % 3];
+      var compString = sre.MathspeakUtil.componentString_[i % 5];
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
           verbString;
       briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +
