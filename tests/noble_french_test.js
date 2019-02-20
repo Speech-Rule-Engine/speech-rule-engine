@@ -56,7 +56,6 @@ sre.NobleFrenchTest = function() {
    */
   this.rules = ['MathspeakRules', 'MathspeakFrench'];
 
-  this.actual = true;
   this.setActive('NobleSamplesFrench');
 
 };
@@ -78,9 +77,9 @@ sre.NobleFrenchTest.prototype.testSample_1 = function() {
       '</mfrac>' +
       '<mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 5 et un-cinquième moins 6 et deux-tiers égale', 'default');
+  this.executeRuleTest(mml, 'négatif 5 et un-cinquième moins 6 et deux-tiers égale', 'brief');
+  this.executeRuleTest(mml, 'négatif 5 et un-cinquième moins 6 et deux-tiers égale', 'sbrief');
 };
 
 
@@ -102,9 +101,9 @@ sre.NobleFrenchTest.prototype.testSample_2 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow><mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 7 et trois-quarts moins parenthèse gauche négatif 4 et sept-huitièmes parenthèse droite égale', 'default');
+  this.executeRuleTest(mml, 'négatif 7 et trois-quarts moins parenthèse gauche négatif 4 et sept-huitièmes parenthèse droite égale', 'brief');
+  this.executeRuleTest(mml, 'négatif 7 et trois-quarts moins parenthèse gauche négatif 4 et sept-huitièmes parenthèse droite égale', 'sbrief');
 };
 
 
@@ -119,9 +118,9 @@ sre.NobleFrenchTest.prototype.testSample_3 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow><mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 24,15 moins parenthèse gauche 13,7 parenthèse droite égale', 'default');
+  this.executeRuleTest(mml, 'négatif 24,15 moins parenthèse gauche 13,7 parenthèse droite égale', 'brief');
+  this.executeRuleTest(mml, 'négatif 24,15 moins parenthèse gauche 13,7 parenthèse droite égale', 'sbrief');
 };
 
 
@@ -137,9 +136,9 @@ sre.NobleFrenchTest.prototype.testSample_4 = function() {
       '<mo>)</mo></mrow><mo>&#x00D7;</mo><mn>3</mn><mo>=</mo><mo>&#x2212;' +
       '</mo><mn>12</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'parenthèse gauche négatif 4 parenthèse droite multiplié par 3 égale négatif 12', 'default');
+  this.executeRuleTest(mml, 'parenthèse gauche négatif 4 parenthèse droite multiplié par 3 égale négatif 12', 'brief');
+  this.executeRuleTest(mml, 'parenthèse gauche négatif 4 parenthèse droite multiplié par 3 égale négatif 12', 'sbrief');
 };
 
 
@@ -151,9 +150,9 @@ sre.NobleFrenchTest.prototype.testSample_5 = function() {
       '<mo>&#x2212;</mo><mn>12</mn><mo>&#x00F7;</mo><mn>3</mn><mo>=</mo>' +
       '<mo>&#x2212;</mo><mn>4</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 12 divisé par 3 égale négatif 4', 'default');
+  this.executeRuleTest(mml, 'négatif 12 divisé par 3 égale négatif 4', 'brief');
+  this.executeRuleTest(mml, 'négatif 12 divisé par 3 égale négatif 4', 'sbrief');
 };
 
 
@@ -168,9 +167,9 @@ sre.NobleFrenchTest.prototype.testSample_6 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow><mo>=</mo><mn>3</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 12 divisé par parenthèse gauche négatif 4 parenthèse droite égale 3', 'default');
+  this.executeRuleTest(mml, 'négatif 12 divisé par parenthèse gauche négatif 4 parenthèse droite égale 3', 'brief');
+  this.executeRuleTest(mml, 'négatif 12 divisé par parenthèse gauche négatif 4 parenthèse droite égale 3', 'sbrief');
 };
 
 
@@ -181,9 +180,9 @@ sre.NobleFrenchTest.prototype.testSample_7 = function() {
   var mml = '<mrow>' +
       '<mn>6</mn><mo>&#x00D7;</mo><mn>5</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '6 multiplié par 5', 'default');
+  this.executeRuleTest(mml, '6 multiplié par 5', 'brief');
+  this.executeRuleTest(mml, '6 multiplié par 5', 'sbrief');
 };
 
 
@@ -198,9 +197,9 @@ sre.NobleFrenchTest.prototype.testSample_8 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '6 multiplié par parenthèse gauche négatif 5 parenthèse droite', 'default');
+  this.executeRuleTest(mml, '6 multiplié par parenthèse gauche négatif 5 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, '6 multiplié par parenthèse gauche négatif 5 parenthèse droite', 'sbrief');
 };
 
 
@@ -211,9 +210,9 @@ sre.NobleFrenchTest.prototype.testSample_9 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>6</mn><mo>&#x00D7;</mo><mn>5</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 6 multiplié par 5', 'default');
+  this.executeRuleTest(mml, 'négatif 6 multiplié par 5', 'brief');
+  this.executeRuleTest(mml, 'négatif 6 multiplié par 5', 'sbrief');
 };
 
 
@@ -228,9 +227,9 @@ sre.NobleFrenchTest.prototype.testSample_10 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 6 multiplié par parenthèse gauche négatif 5 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'négatif 6 multiplié par parenthèse gauche négatif 5 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'négatif 6 multiplié par parenthèse gauche négatif 5 parenthèse droite', 'sbrief');
 };
 
 
@@ -241,9 +240,9 @@ sre.NobleFrenchTest.prototype.testSample_11 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2212;</mo><mn>8</mn><mo>&#x00D7;</mo><mn>7</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 8 multiplié par 7', 'default');
+  this.executeRuleTest(mml, 'négatif 8 multiplié par 7', 'brief');
+  this.executeRuleTest(mml, 'négatif 8 multiplié par 7', 'sbrief');
 };
 
 
@@ -258,9 +257,9 @@ sre.NobleFrenchTest.prototype.testSample_12 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'négatif 8 multiplié par parenthèse gauche négatif 7 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'négatif 8 multiplié par parenthèse gauche négatif 7 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'négatif 8 multiplié par parenthèse gauche négatif 7 parenthèse droite', 'sbrief');
 };
 
 
@@ -275,9 +274,9 @@ sre.NobleFrenchTest.prototype.testSample_13 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '8 multiplié par parenthèse gauche négatif 7 parenthèse droite', 'default');
+  this.executeRuleTest(mml, '8 multiplié par parenthèse gauche négatif 7 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, '8 multiplié par parenthèse gauche négatif 7 parenthèse droite', 'sbrief');
 };
 
 
@@ -287,9 +286,9 @@ sre.NobleFrenchTest.prototype.testSample_13 = function() {
 sre.NobleFrenchTest.prototype.testSample_14 = function() {
   var mml = '<mrow><mn>8</mn><mo>&#x00D7;</mo><mn>7</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '8 multiplié par 7', 'default');
+  this.executeRuleTest(mml, '8 multiplié par 7', 'brief');
+  this.executeRuleTest(mml, '8 multiplié par 7', 'sbrief');
 };
 
 
@@ -300,9 +299,9 @@ sre.NobleFrenchTest.prototype.testSample_15 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>1</mn><mo>=</mo><mi>30°</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'm angle 1 égale 30 degrés', 'default');
+  this.executeRuleTest(mml, 'm angle 1 égale 30 degrés', 'brief');
+  this.executeRuleTest(mml, 'm angle 1 égale 30 degrés', 'sbrief');
 };
 
 
@@ -313,9 +312,9 @@ sre.NobleFrenchTest.prototype.testSample_16 = function() {
   var mml = '<mrow>' +
       '<mi>m</mi><mo>&#x2220;</mo><mn>2</mn><mo>=</mo>' +
       '<mi>60°</mi>  </mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'm angle 2 égale 60 degrés', 'default');
+  this.executeRuleTest(mml, 'm angle 2 égale 60 degrés', 'brief');
+  this.executeRuleTest(mml, 'm angle 2 égale 60 degrés', 'sbrief');
 };
 
 
@@ -327,11 +326,11 @@ sre.NobleFrenchTest.prototype.testSample_17 = function() {
       '<mi>m</mi><mo>&#x2220;</mo><mn>1</mn><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mn>2</mn><mo>=</mo>' +
       '<mi>90°</mi>  </mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'm angle 1 plus m angle 2 égale 90 degrés',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'm angle 1 plus m angle 2 égale 90 degrés',
                        'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'm angle 1 plus m angle 2 égale 90 degrés',
                        'sbrief');
 };
 
@@ -344,9 +343,9 @@ sre.NobleFrenchTest.prototype.testSample_18 = function() {
       '<mi>m</mi><mo>&#x2220;</mo><mi>M</mi><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mi>N</mi><mo>=</mo>' +
       '<mi>180°</mi>  </mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'm angle m majuscule plus m angle n majuscule égale 180 degrés', 'default');
+  this.executeRuleTest(mml, 'm angle m majuscule plus m angle n majuscule égale 180 degrés', 'brief');
+  this.executeRuleTest(mml, 'm angle m majuscule plus m angle n majuscule égale 180 degrés', 'sbrief');
 };
 
 
@@ -361,9 +360,9 @@ sre.NobleFrenchTest.prototype.testSample_19 = function() {
       '</mfrac>' +
       '<mi>b</mi><mi>h</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a majuscule égale un-demi b h', 'default');
+  this.executeRuleTest(mml, 'a majuscule égale un-demi b h', 'brief');
+  this.executeRuleTest(mml, 'a majuscule égale un-demi b h', 'sbrief');
 };
 
 
@@ -399,9 +398,9 @@ sre.NobleFrenchTest.prototype.testSample_20 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début fraction area of triangle sur area of square fin fraction égale début fraction 1 unit au carré sur 16 units au carré fin fraction', 'default');
+  this.executeRuleTest(mml, 'début frac area of triangle sur area of square fin frac égale début frac 1 unit au carré sur 16 units au carré fin frac', 'brief');
+  this.executeRuleTest(mml, 'frac area of triangle sur  area of square fin frac égale frac 1 unit au carré sur  16 units au carré fin frac', 'sbrief');
 };
 
 
@@ -417,9 +416,9 @@ sre.NobleFrenchTest.prototype.testSample_21 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '0,6 au carré', 'default');
+  this.executeRuleTest(mml, '0,6 au carré', 'brief');
+  this.executeRuleTest(mml, '0,6 au carré', 'sbrief');
 };
 
 
@@ -435,9 +434,9 @@ sre.NobleFrenchTest.prototype.testSample_22 = function() {
       '<mn>2</mn>' +
       '</msup>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '1,5 au carré', 'default');
+  this.executeRuleTest(mml, '1,5 au carré', 'brief');
+  this.executeRuleTest(mml, '1,5 au carré', 'sbrief');
 };
 
 
@@ -452,9 +451,9 @@ sre.NobleFrenchTest.prototype.testSample_23 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '4 parenthèse gauche 2 x plus 3 x parenthèse droite', 'default');
+  this.executeRuleTest(mml, '4 parenthèse gauche 2 x plus 3 x parenthèse droite', 'brief');
+  this.executeRuleTest(mml, '4 parenthèse gauche 2 x plus 3 x parenthèse droite', 'sbrief');
 };
 
 
@@ -474,9 +473,9 @@ sre.NobleFrenchTest.prototype.testSample_24 = function() {
       '</msup>' +
       '<mo>&#x2212;</mo><mn>2</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '36 plus 4 y moins 1 y au carré plus 5 y au carré moins 2', 'default');
+  this.executeRuleTest(mml, '36 plus 4 y moins 1 y au carré plus 5 y au carré moins 2', 'brief');
+  this.executeRuleTest(mml, '36 plus 4 y moins 1 y au carré plus 5 y au carré moins 2', 'sbrief');
 };
 
 
@@ -492,9 +491,9 @@ sre.NobleFrenchTest.prototype.testSample_25 = function() {
       '<mo>)</mo></mrow><mo>&#x2212;</mo><mn>4</mn><mo>+</mo><mn>3</mn>' +
       '<mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'parenthèse gauche 5 plus 9 parenthèse droite moins 4 plus 3 égale', 'default');
+  this.executeRuleTest(mml, 'parenthèse gauche 5 plus 9 parenthèse droite moins 4 plus 3 égale', 'brief');
+  this.executeRuleTest(mml, 'parenthèse gauche 5 plus 9 parenthèse droite moins 4 plus 3 égale', 'sbrief');
 };
 
 
@@ -510,9 +509,9 @@ sre.NobleFrenchTest.prototype.testSample_26 = function() {
       '<mo stretchy="true">&#x2194;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire b majuscule c majuscule avec flèche bilatérale', 'default');
+  this.executeRuleTest(mml, 'suscrire b majuscule c majuscule avec flèche bilatérale', 'brief');
+  this.executeRuleTest(mml, 'suscrire b majuscule c majuscule avec flèche bilatérale', 'sbrief');
 };
 
 
@@ -528,9 +527,9 @@ sre.NobleFrenchTest.prototype.testSample_27 = function() {
       '<mo stretchy="true">&#x2192;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire p majuscule q majuscule avec flèche droite', 'default');
+  this.executeRuleTest(mml, 'suscrire p majuscule q majuscule avec flèche droite', 'brief');
+  this.executeRuleTest(mml, 'suscrire p majuscule q majuscule avec flèche droite', 'sbrief');
 };
 
 
@@ -546,9 +545,9 @@ sre.NobleFrenchTest.prototype.testSample_28 = function() {
       '<mo stretchy="true">&#x00AF;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire g majuscule h majuscule avec macron', 'default');
+  this.executeRuleTest(mml, 'suscrire g majuscule h majuscule avec macron', 'brief');
+  this.executeRuleTest(mml, 'suscrire g majuscule h majuscule avec macron', 'sbrief');
 };
 
 
@@ -570,10 +569,10 @@ sre.NobleFrenchTest.prototype.testSample_29 = function() {
       '<mo stretchy="true">&#x00AF;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'suscrire w majuscule x majuscule avec macron approximativement égal à suscrire y majuscule z majuscule avec macron',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire w majuscule x majuscule avec macron approximativement égal à suscrire y majuscule z majuscule avec macron', 'brief');
+  this.executeRuleTest(mml, 'suscrire w majuscule x majuscule avec macron approximativement égal à suscrire y majuscule z majuscule avec macron', 'sbrief');
 };
 
 
@@ -584,11 +583,11 @@ sre.NobleFrenchTest.prototype.testSample_30 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle b majuscule e majuscule f majuscule',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle b majuscule e majuscule f majuscule',
                        'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle b majuscule e majuscule f majuscule',
                        'sbrief');
 };
 
@@ -600,11 +599,11 @@ sre.NobleFrenchTest.prototype.testSample_31 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>D</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle b majuscule e majuscule d majuscule',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle b majuscule e majuscule d majuscule',
                        'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle b majuscule e majuscule d majuscule',
                        'sbrief');
 };
 
@@ -616,11 +615,11 @@ sre.NobleFrenchTest.prototype.testSample_32 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>D</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle d majuscule e majuscule f majuscule',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle d majuscule e majuscule f majuscule',
                        'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'angle d majuscule e majuscule f majuscule',
                        'sbrief');
 };
 
@@ -660,9 +659,9 @@ sre.NobleFrenchTest.prototype.testSample_33 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x égale début fraction négatif b plus ou moins début racine carrée b au carré moins 4 a c fin racine carrée sur 2 a fin fraction', 'default');
+  this.executeRuleTest(mml, 'x égale début frac négatif b plus ou moins début racine carrée b au carré moins 4 a c fin racine carrée sur 2 a fin frac', 'brief');
+  this.executeRuleTest(mml, 'x égale frac négatif b plus ou moins racine carrée b au carré moins 4 a c fin racine carrée sur  2 a fin frac', 'sbrief');
 };
 
 
@@ -673,9 +672,9 @@ sre.NobleFrenchTest.prototype.testSample_34 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow>' +
       '<mn>2</mn></mrow></msup><mo>+</mo><mn>8</mn><mi>x</mi><mo>+</mo>' +
       '<mn>16</mn></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale x au carré plus 8 x plus 16', 'default');
+  this.executeRuleTest(mml, 'y égale x au carré plus 8 x plus 16', 'brief');
+  this.executeRuleTest(mml, 'y égale x au carré plus 8 x plus 16', 'sbrief');
 };
 
 
@@ -686,10 +685,10 @@ sre.NobleFrenchTest.prototype.testSample_35 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow>' +
       '<mn>3</mn></mrow></mfrac><mrow><mo>(</mo><msup><mrow><mn>3</mn>' +
       '</mrow><mrow><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'y égale un-tiers parenthèse gauche 3 exposant x position de base parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale un-tiers parenthèse gauche 3 sup x position de base parenthèse droite',
                        'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale un-tiers parenthèse gauche 3 sup x position de base parenthèse droite', 'sbrief');
 };
 
 
@@ -699,9 +698,9 @@ sre.NobleFrenchTest.prototype.testSample_35 = function() {
 sre.NobleFrenchTest.prototype.testSample_36 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>10</mn><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 10 moins 2 x', 'default');
+  this.executeRuleTest(mml, 'y égale 10 moins 2 x', 'brief');
+  this.executeRuleTest(mml, 'y égale 10 moins 2 x', 'sbrief');
 };
 
 
@@ -711,9 +710,9 @@ sre.NobleFrenchTest.prototype.testSample_36 = function() {
 sre.NobleFrenchTest.prototype.testSample_37 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>2</mn><msup><mrow><mi>x</mi>' +
       '</mrow><mrow><mn>3</mn></mrow></msup><mo>+</mo><mn>5</mn></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 2 x cubique plus 5', 'default');
+  this.executeRuleTest(mml, 'y égale 2 x cubique plus 5', 'brief');
+  this.executeRuleTest(mml, 'y égale 2 x cubique plus 5', 'sbrief');
 };
 
 
@@ -725,9 +724,9 @@ sre.NobleFrenchTest.prototype.testSample_38 = function() {
       '</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn>' +
       '<mrow><mo>)</mo><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2' +
       '</mn></mrow></msup></mrow><mo>+</mo><mn>3</mn><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche x au carré plus 1 parenthèse droite parenthèse gauche x au carré plus 3 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche x au carré plus 1 parenthèse droite parenthèse gauche x au carré plus 3 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche x au carré plus 1 parenthèse droite parenthèse gauche x au carré plus 3 parenthèse droite', 'sbrief');
 };
 
 
@@ -737,9 +736,9 @@ sre.NobleFrenchTest.prototype.testSample_38 = function() {
 sre.NobleFrenchTest.prototype.testSample_39 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mn>0.5</mn></mrow>' +
       '<mrow><mi>x</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 0,5 exposant x', 'default');
+  this.executeRuleTest(mml, 'y égale 0,5 sup x', 'brief');
+  this.executeRuleTest(mml, 'y égale 0,5 sup x', 'sbrief');
 };
 
 
@@ -749,9 +748,9 @@ sre.NobleFrenchTest.prototype.testSample_39 = function() {
 sre.NobleFrenchTest.prototype.testSample_40 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>22</mn><mo>−</mo><mn>2</mn><mi>x' +
       '</mi></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 22 moins 2 x', 'default');
+  this.executeRuleTest(mml, 'y égale 22 moins 2 x', 'brief');
+  this.executeRuleTest(mml, 'y égale 22 moins 2 x', 'sbrief');
 };
 
 
@@ -761,9 +760,9 @@ sre.NobleFrenchTest.prototype.testSample_40 = function() {
 sre.NobleFrenchTest.prototype.testSample_41 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow>' +
       '<mi>x</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale début fraction 3 sur x fin fraction', 'default');
+  this.executeRuleTest(mml, 'y égale début frac 3 sur x fin frac', 'brief');
+  this.executeRuleTest(mml, 'y égale frac 3 sur  x fin frac', 'sbrief');
 };
 
 
@@ -774,9 +773,9 @@ sre.NobleFrenchTest.prototype.testSample_42 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>4' +
       '</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche x plus 4 parenthèse droite parenthèse gauche x plus 4 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche x plus 4 parenthèse droite parenthèse gauche x plus 4 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche x plus 4 parenthèse droite parenthèse gauche x plus 4 parenthèse droite', 'sbrief');
 };
 
 
@@ -787,9 +786,9 @@ sre.NobleFrenchTest.prototype.testSample_43 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mo>(</mo><mn>4</mn><mi>x</mi><mo>−' +
       '</mo><mn>3</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn>' +
       '<mo>)</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche 4 x moins 3 parenthèse droite parenthèse gauche x plus 1 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche 4 x moins 3 parenthèse droite parenthèse gauche x plus 1 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'y égale parenthèse gauche 4 x moins 3 parenthèse droite parenthèse gauche x plus 1 parenthèse droite', 'sbrief');
 };
 
 
@@ -800,9 +799,9 @@ sre.NobleFrenchTest.prototype.testSample_44 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>20</mn><mi>x</mi><mo>−</mo><mn>4' +
       '</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 20 x moins 4 x au carré', 'default');
+  this.executeRuleTest(mml, 'y égale 20 x moins 4 x au carré', 'brief');
+  this.executeRuleTest(mml, 'y égale 20 x moins 4 x au carré', 'sbrief');
 };
 
 
@@ -812,9 +811,9 @@ sre.NobleFrenchTest.prototype.testSample_44 = function() {
 sre.NobleFrenchTest.prototype.testSample_45 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow>' +
       '<mn>2</mn></mrow></msup></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale x au carré', 'default');
+  this.executeRuleTest(mml, 'y égale x au carré', 'brief');
+  this.executeRuleTest(mml, 'y égale x au carré', 'sbrief');
 };
 
 
@@ -824,9 +823,9 @@ sre.NobleFrenchTest.prototype.testSample_45 = function() {
 sre.NobleFrenchTest.prototype.testSample_46 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><msup><mrow><mn>3</mn></mrow><mrow>' +
       '<mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 3 exposant x moins 1', 'default');
+  this.executeRuleTest(mml, 'y égale 3 sup x moins 1', 'brief');
+  this.executeRuleTest(mml, 'y égale 3 sup x moins 1', 'sbrief');
 };
 
 
@@ -836,9 +835,9 @@ sre.NobleFrenchTest.prototype.testSample_46 = function() {
 sre.NobleFrenchTest.prototype.testSample_47 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>16</mn><mo>−</mo><mn>2</mn><mo>(' +
       '</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 16 moins 2 parenthèse gauche x plus 3 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale 16 moins 2 parenthèse gauche x plus 3 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'y égale 16 moins 2 parenthèse gauche x plus 3 parenthèse droite', 'sbrief');
 };
 
 
@@ -849,10 +848,10 @@ sre.NobleFrenchTest.prototype.testSample_48 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>4</mn><msup><mrow><mi>x</mi>' +
       '</mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mi>x</mi><mo>−' +
       '</mo><mn>3</mn></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'y égale 4 x au carré moins x moins 3',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'y égale 4 x au carré moins x moins 3', 'brief');
+  this.executeRuleTest(mml, 'y égale 4 x au carré moins x moins 3',
                        'sbrief');
 };
 
@@ -863,9 +862,9 @@ sre.NobleFrenchTest.prototype.testSample_48 = function() {
 sre.NobleFrenchTest.prototype.testSample_49 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mfrac><mrow>' +
       '<mn>1</mn></mrow><mrow><mi>x</mi></mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale x plus début fraction 1 sur x fin fraction', 'default');
+  this.executeRuleTest(mml, 'y égale x plus début frac 1 sur x fin frac', 'brief');
+  this.executeRuleTest(mml, 'y égale x plus frac 1 sur  x fin frac', 'sbrief');
 };
 
 
@@ -875,9 +874,9 @@ sre.NobleFrenchTest.prototype.testSample_49 = function() {
 sre.NobleFrenchTest.prototype.testSample_50 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>4</mn><mi>x</mi><mo>(</mo><mn>5' +
       '</mn><mo>−</mo><mi>x</mi><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 4 x parenthèse gauche 5 moins x parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale 4 x parenthèse gauche 5 moins x parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'y égale 4 x parenthèse gauche 5 moins x parenthèse droite', 'sbrief');
 };
 
 
@@ -888,9 +887,9 @@ sre.NobleFrenchTest.prototype.testSample_51 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mn>2</mn><mo>(</mo><mi>x</mi><mo>−' +
       '</mo><mn>3</mn><mo>)</mo><mo>+</mo><mn>6</mn><mo>(</mo><mn>1</mn>' +
       '<mo>−</mo><mi>x</mi><mo>)</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'y égale 2 parenthèse gauche x moins 3 parenthèse droite plus 6 parenthèse gauche 1 moins x parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'y égale 2 parenthèse gauche x moins 3 parenthèse droite plus 6 parenthèse gauche 1 moins x parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'y égale 2 parenthèse gauche x moins 3 parenthèse droite plus 6 parenthèse gauche 1 moins x parenthèse droite', 'sbrief');
 };
 
 
@@ -906,9 +905,9 @@ sre.NobleFrenchTest.prototype.testSample_52 = function() {
       '</mrow>' +
       '</mfrac>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '0,25 supérieur à cinq-seizièmes', 'default');
+  this.executeRuleTest(mml, '0,25 supérieur à cinq-seizièmes', 'brief');
+  this.executeRuleTest(mml, '0,25 supérieur à cinq-seizièmes', 'sbrief');
 };
 
 
@@ -923,9 +922,9 @@ sre.NobleFrenchTest.prototype.testSample_53 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '32 opérateur point parenthèse gauche 5 opérateur point 7 parenthèse droite', 'default');
+  this.executeRuleTest(mml, '32 opérateur point parenthèse gauche 5 opérateur point 7 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, '32 opérateur point parenthèse gauche 5 opérateur point 7 parenthèse droite', 'sbrief');
 };
 
 
@@ -939,10 +938,10 @@ sre.NobleFrenchTest.prototype.testSample_54 = function() {
       '</mn><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mn>2</mn><mo>×' +
       '</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac>' +
       '<mo>×</mo><mi>π</mi><mo>×</mo><mn>5</mn><mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'parenthèse gauche un-demi multiplié par un-demi multiplié par pi multiplié par 2 parenthèse droite plus parenthèse gauche 2 multiplié par un-demi multiplié par pi multiplié par 5 parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'parenthèse gauche un-demi multiplié par un-demi multiplié par pi multiplié par 2 parenthèse droite plus parenthèse gauche 2 multiplié par un-demi multiplié par pi multiplié par 5 parenthèse droite',
                        'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'parenthèse gauche un-demi multiplié par un-demi multiplié par pi multiplié par 2 parenthèse droite plus parenthèse gauche 2 multiplié par un-demi multiplié par pi multiplié par 5 parenthèse droite', 'sbrief');
 };
 
 
@@ -963,9 +962,9 @@ sre.NobleFrenchTest.prototype.testSample_55 = function() {
       '</mn></mrow></munder><munder><mo>&#x22C3;</mo><mrow><mi>k</mi>' +
       '<mo>&#x2265;</mo><mi>n</mi></mrow></munder><msub><mi>E</mi><mrow>' +
       '<mi>k</mi></mrow></msub><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts e majuscule indice n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts e majuscule indice k position de base virgule limsup début souscript n flèche droite infini fin scripts e majuscule indice n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts e majuscule indice k position de base point', 'default');
+  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base point', 'brief');
+  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base point', 'sbrief');
 };
 
 
@@ -992,9 +991,9 @@ sre.NobleFrenchTest.prototype.testSample_56 = function() {
       '<mi>E</mi><mrow><mn>1</mn></mrow></msub><mo>&#x222A;</mo><msub>' +
       '<mi>E</mi><mrow><mn>2</mn></mrow></msub><mo>&#x2208;</mo>' +
       '<mi>&#x1D49C;</mi><mo>.</mo></mrow></mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if e majuscule appartient à A majuscule en script then suscrire e majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if e majuscule indice 1 position de base virgule e majuscule indice 2 position de base appartient à A majuscule en script then e majuscule indice 1 position de base union e majuscule indice 2 position de base appartient à A majuscule en script point fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if e majuscule appartient à A majuscule en script then suscrire e majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if e majuscule 1 virgule e majuscule 2 appartient à A majuscule en script then e majuscule 1 union e majuscule 2 appartient à A majuscule en script point fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if e majuscule appartient à A majuscule en script then suscrire e majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if e majuscule 1 virgule e majuscule 2 appartient à A majuscule en script then e majuscule 1 union e majuscule 2 appartient à A majuscule en script point fin tableau', 'sbrief');
 };
 
 
@@ -1036,9 +1035,9 @@ sre.NobleFrenchTest.prototype.testSample_57 = function() {
       '</mtext></mrow></mtd><mtd columnalign="left"><mo' +
       ' stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo>' +
       '</mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 1 parenthèse droite i majuscule f a majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à p majuscule accolade gauche a majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 2 parenthèse droite p majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 3 parenthèse droite i majuscule f accolade gauche e majuscule indice n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 1 parenthèse droite i majuscule f a majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à p majuscule accolade gauche a majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 2 parenthèse droite p majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 3 parenthèse droite i majuscule f accolade gauche e majuscule sub n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 1 parenthèse droite i majuscule f a majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à p majuscule accolade gauche a majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 2 parenthèse droite p majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 3 parenthèse droite i majuscule f accolade gauche e majuscule sub n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'sbrief');
 };
 
 
@@ -1060,10 +1059,10 @@ sre.NobleFrenchTest.prototype.testSample_58 = function() {
       '</mo><mi>A</mi><mi>|</mi><msub><mi>B</mi><mrow><mi>j</mi>' +
       '<mo>&#x2032;</mo></mrow></msub><mo stretchy="false">}</mo></mrow>' +
       '</mfrac><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'p majuscule accolade gauche b majuscule indice j position de base barre verticale a majuscule accolade droite égale début fraction p majuscule accolade gauche b majuscule indice j position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule indice j position de base accolade droite sur sommation début souscript j prime appartient à j majuscule fin scripts p majuscule accolade gauche b majuscule indice j prime position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule indice j prime position de base accolade droite fin fraction point',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'p majuscule accolade gauche b majuscule sub j position de base barre verticale a majuscule accolade droite égale début frac p majuscule accolade gauche b majuscule sub j position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j position de base accolade droite sur sommation début souscript j prime appartient à j majuscule fin scripts p majuscule accolade gauche b majuscule sub j prime position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j prime position de base accolade droite fin frac point', 'brief');
+  this.executeRuleTest(mml, 'p majuscule accolade gauche b majuscule sub j position de base barre verticale a majuscule accolade droite égale frac p majuscule accolade gauche b majuscule sub j position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j position de base accolade droite sur  sommation début souscript j prime appartient à j majuscule fin scripts p majuscule accolade gauche b majuscule sub j prime position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j prime position de base accolade droite fin frac point', 'sbrief');
 };
 
 
@@ -1078,9 +1077,9 @@ sre.NobleFrenchTest.prototype.testSample_59 = function() {
       '</mo><mi>d</mi><msub><mi>&#x03BC;</mi><mrow><mn>2</mn></mrow>' +
       '</msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)' +
       '</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'mû indice 1 position de base parenthèse gauche b majuscule parenthèse droite égale intégrale début souscript b majuscule fin scripts f parenthèse gauche x parenthèse droite d mû indice 2 position de base parenthèse gauche x parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'mû 1 parenthèse gauche b majuscule parenthèse droite égale intégrale début souscript b majuscule fin scripts f parenthèse gauche x parenthèse droite d mû 2 parenthèse gauche x parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'mû 1 parenthèse gauche b majuscule parenthèse droite égale intégrale début souscript b majuscule fin scripts f parenthèse gauche x parenthèse droite d mû 2 parenthèse gauche x parenthèse droite', 'sbrief');
 };
 
 
@@ -1098,9 +1097,9 @@ sre.NobleFrenchTest.prototype.testSample_60 = function() {
       '<mrow><mi>n</mi></mrow></msub><mo>&#x2212;</mo><mi>X</mi>' +
       '<mo>&#x007C;</mo><mo>}</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts e majuscule accolade gauche début valeur absolue x majuscule indice n position de base moins x majuscule fin valeur absolue accolade droite égale e majuscule accolade gauche limite début souscript n flèche droite infini fin scripts début valeur absolue x majuscule indice n position de base moins x majuscule fin valeur absolue accolade droite égale 0 point', 'default');
+  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts e majuscule accolade gauche début valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale e majuscule accolade gauche limite début souscript n flèche droite infini fin scripts début valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale 0 point', 'brief');
+  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts e majuscule accolade gauche valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale e majuscule accolade gauche limite début souscript n flèche droite infini fin scripts valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale 0 point', 'sbrief');
 };
 
 
@@ -1133,9 +1132,9 @@ sre.NobleFrenchTest.prototype.testSample_61 = function() {
       ' columnalign="right" columnspan="1"><mrow /></mtd><mtd' +
       ' columnalign="left"><mo stretchy="false">(</mo><mn>1</mn><mo' +
       ' stretchy="false">)</mo></mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne p majuscule indice mû virgule sigma position de base accolade gauche y majuscule plus grand ou égal à l indice bêta position de base parenthèse gauche suscrire y majuscule avec tiret en chef indice n position de base virgule s majuscule indice n position de base parenthèse droite accolade droite égale p majuscule indice mû virgule sigma position de base accolade gauche parenthèse gauche y majuscule moins suscrire y majuscule avec tiret en chef indice n position de base parenthèse droite barre oblique parenthèse gauche s majuscule point médian parenthèse gauche 1 plus début fraction 1 sur n fin fraction parenthèse droite exposant 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t indice bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne p majuscule sub mû virgule sigma position de base accolade gauche y majuscule plus grand ou égal à l sub bêta position de base parenthèse gauche suscrire y majuscule avec tiret en chef sub n position de base virgule s majuscule sub n position de base parenthèse droite accolade droite égale p majuscule sub mû virgule sigma position de base accolade gauche parenthèse gauche y majuscule moins suscrire y majuscule avec tiret en chef sub n position de base parenthèse droite barre oblique parenthèse gauche s majuscule point médian parenthèse gauche 1 plus début frac 1 sur n fin frac parenthèse droite sup 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t sub bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne p majuscule sub mû virgule sigma position de base accolade gauche y majuscule plus grand ou égal à l sub bêta position de base parenthèse gauche suscrire y majuscule avec tiret en chef sub n position de base virgule s majuscule sub n position de base parenthèse droite accolade droite égale p majuscule sub mû virgule sigma position de base accolade gauche parenthèse gauche y majuscule moins suscrire y majuscule avec tiret en chef sub n position de base parenthèse droite barre oblique parenthèse gauche s majuscule point médian parenthèse gauche 1 plus frac 1 sur  n fin frac parenthèse droite sup 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t sub bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'sbrief');
 };
 
 
@@ -1180,11 +1179,11 @@ sre.NobleFrenchTest.prototype.testSample_62 = function() {
       ' columnalign="center"><mrow><mspace width="0.2em" /><mo>&#x2212;' +
       '</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>.' +
       '</mo></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'l majuscule égale début matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'l majuscule égale début matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point',
                        'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'l majuscule égale matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point', 'sbrief');
 };
 
 
@@ -1213,9 +1212,9 @@ sre.NobleFrenchTest.prototype.testSample_63 = function() {
       '</mi></mrow></msqrt><mspace width="0.2em" /><msub><mi>z</mi><mrow>' +
       '<mn>1</mn><mo>&#x2212;</mo><mi>&#x03B2;</mi></mrow></msub><mo' +
       ' stretchy="false">]</mo><mo>,</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'début racine carrée n fin racine carrée crochet gauche suscrire y majuscule avec tiret en chef indice n position de base moins parenthèse gauche mû plus z indice bêta position de base sigma parenthèse droite crochet droit barre oblique s majuscule indice n position de base tilde début fraction u majuscule plus début racine carrée n fin racine carrée z indice 1 moins bêta position de base sur parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite exposant 1 barre oblique 2 position de base fin fraction tilde t crochet gauche n moins 1 point virgule début racine carrée n fin racine carrée z indice 1 moins bêta position de base crochet droit virgule', 'default');
+  this.executeRuleTest(mml, 'début racine carrée n fin racine carrée crochet gauche suscrire y majuscule avec tiret en chef sub n position de base moins parenthèse gauche mû plus z sub bêta position de base sigma parenthèse droite crochet droit barre oblique s majuscule sub n position de base tilde début frac u majuscule plus début racine carrée n fin racine carrée z sub 1 moins bêta position de base sur parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite sup 1 barre oblique 2 position de base fin frac tilde t crochet gauche n moins 1 point virgule début racine carrée n fin racine carrée z sub 1 moins bêta position de base crochet droit virgule', 'brief');
+  this.executeRuleTest(mml, 'racine carrée n fin racine carrée crochet gauche suscrire y majuscule avec tiret en chef sub n position de base moins parenthèse gauche mû plus z sub bêta position de base sigma parenthèse droite crochet droit barre oblique s majuscule sub n position de base tilde frac u majuscule plus racine carrée n fin racine carrée z sub 1 moins bêta position de base sur  parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite sup 1 barre oblique 2 position de base fin frac tilde t crochet gauche n moins 1 point virgule racine carrée n fin racine carrée z sub 1 moins bêta position de base crochet droit virgule',
                        'sbrief');
 };
 
@@ -1251,9 +1250,9 @@ sre.NobleFrenchTest.prototype.testSample_64 = function() {
       '<mo>&#x2212;</mo><mi>s</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>s' +
       '</mi><mo>&#x2212;</mo><mi>r</mi><mo>&#x2212;</mo><mi>j</mi><mo' +
       ' stretchy="false">)</mo><mo>.</mo></mrow></mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne gamma 2e colonne égale p majuscule accolade gauche e majuscule indice p virgule q position de base sous-ensemble de parenthèse gauche x majuscule indice parenthèse gauche r parenthèse droite position de base virgule x majuscule indice parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale début fraction n factorielle sur parenthèse gauche r moins 1 parenthèse droite factorielle fin fraction sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite exposant j position de base début fraction p exposant r plus j position de base sur parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin fraction i majuscule indice 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne gamma 2e colonne égale p majuscule accolade gauche e majuscule sub p virgule q position de base sous-ensemble de parenthèse gauche x majuscule sub parenthèse gauche r parenthèse droite position de base virgule x majuscule sub parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale début frac n factorielle sur parenthèse gauche r moins 1 parenthèse droite factorielle fin frac sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite sup j position de base début frac p sup r plus j position de base sur parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin frac i majuscule sub 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne gamma 2e colonne égale p majuscule accolade gauche e majuscule sub p virgule q position de base sous-ensemble de parenthèse gauche x majuscule sub parenthèse gauche r parenthèse droite position de base virgule x majuscule sub parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale frac n factorielle sur  parenthèse gauche r moins 1 parenthèse droite factorielle fin frac sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite sup j position de base frac p sup r plus j position de base sur  parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin frac i majuscule sub 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'sbrief');
 };
 
 
@@ -1277,9 +1276,9 @@ sre.NobleFrenchTest.prototype.testSample_65 = function() {
       ' stretchy="false">/</mo><mi>m</mi></mtd></mtr><mtr><mtd><msub>' +
       '<mrow><mi>b</mi></mrow><mrow><mi>i</mi></mrow></msub></mtd></mtr>' +
       '</mtable></mrow></mfenced><mo>,</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 's majuscule indice i position de base début binomiale x parmi t fin binomiale égale début matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a indice i position de base 2e colonne r indice i position de base fin matrice début binomiale x parmi t fin binomiale plus début binomiale b indice i position de base parmi parenthèse gauche i moins 1 parenthèse droite barre oblique m fin binomiale virgule', 'default');
+  this.executeRuleTest(mml, 's majuscule sub i position de base début binomiale x parmi t fin binomiale égale début matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a sub i position de base 2e colonne r sub i position de base fin matrice début binomiale x parmi t fin binomiale plus début binomiale b sub i position de base parmi parenthèse gauche i moins 1 parenthèse droite barre oblique m fin binomiale virgule', 'brief');
+  this.executeRuleTest(mml, 's majuscule sub i position de base binomiale t parmi x fin binomiale égale matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a sub i position de base 2e colonne r sub i position de base fin matrice binomiale t parmi x fin binomiale plus binomiale parenthèse gauche i moins 1 parenthèse droite barre oblique m parmi b sub i position de base fin binomiale virgule', 'sbrief');
 };
 
 
@@ -1301,9 +1300,9 @@ sre.NobleFrenchTest.prototype.testSample_66 = function() {
       '<mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn>' +
       '</mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn>' +
       '<mo>&#x2212;</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 t majuscule fin fraction intégrale indice inférieur négatif t majuscule indice supérieur t majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c indice 2 position de base h exposant 4 moins 2 s', 'default');
+  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 t majuscule fin frac intégrale inf négatif t majuscule sup t majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c 2 h sup 4 moins 2 s', 'brief');
+  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur  2 t majuscule fin frac intégrale inf négatif t majuscule sup t majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c 2 h sup 4 moins 2 s', 'sbrief');
 };
 
 
@@ -1316,9 +1315,9 @@ sre.NobleFrenchTest.prototype.testSample_67 = function() {
       ' stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo>' +
       '<mo>&#x2243;</mo><mi>c</mi><msup><mrow><mi>h</mi></mrow><mrow>' +
       '<mn>4</mn><mo>&#x2212;</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'c majuscule parenthèse gauche 0 parenthèse droite moins c majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h exposant 4 moins 2 s', 'default');
+  this.executeRuleTest(mml, 'c majuscule parenthèse gauche 0 parenthèse droite moins c majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h sup 4 moins 2 s', 'brief');
+  this.executeRuleTest(mml, 'c majuscule parenthèse gauche 0 parenthèse droite moins c majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h sup 4 moins 2 s', 'sbrief');
 };
 
 
@@ -1338,9 +1337,9 @@ sre.NobleFrenchTest.prototype.testSample_68 = function() {
       ' mathvariant="italic">it</mi><mi>&#x03C9;</mi></mrow></msup><mi' +
       ' mathvariant="normal">d</mi><mi>t</mi></mfenced></mrow><mrow><mn>2' +
       '</mn></mrow></msup><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 's majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript t majuscule flèche droite infini fin scripts début fraction 1 sur 2 t majuscule fin fraction début valeur absolue intégrale indice inférieur négatif t majuscule indice supérieur t majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal exposant i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'default');
+  this.executeRuleTest(mml, 's majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript t majuscule flèche droite infini fin scripts début frac 1 sur 2 t majuscule fin frac début valeur absolue intégrale inf négatif t majuscule sup t majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal sup i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'brief');
+  this.executeRuleTest(mml, 's majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript t majuscule flèche droite infini fin scripts frac 1 sur  2 t majuscule fin frac valeur absolue intégrale inf négatif t majuscule sup t majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal sup i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'sbrief');
 };
 
 
@@ -1363,11 +1362,11 @@ sre.NobleFrenchTest.prototype.testSample_69 = function() {
       ' stretchy="false">/</mo><mn>2</mn></mrow></msup><mi' +
       ' mathvariant="normal">d</mi><mi>t</mi><mi mathvariant="normal">d' +
       '</mi><mi>u</mi><mo>&lt;</mo><mi>&#x221E;</mi></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'intégrale indice inférieur 0 indice supérieur 1 position de base intégrale indice inférieur 0 indice supérieur 1 position de base crochet gauche début valeur absolue f parenthèse gauche t parenthèse droite moins f parenthèse gauche u parenthèse droite fin valeur absolue au carré plus début valeur absolue t moins u fin valeur absolue au carré crochet droit exposant négatif s barre oblique 2 position de base d en normal t d en normal u inférieur à infini',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'intégrale inf 0 sup 1 position de base intégrale inf 0 sup 1 position de base crochet gauche début valeur absolue f parenthèse gauche t parenthèse droite moins f parenthèse gauche u parenthèse droite fin valeur absolue au carré plus début valeur absolue t moins u fin valeur absolue au carré crochet droit sup négatif s barre oblique 2 position de base d en normal t d en normal u inférieur à infini',
                        'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'intégrale inf 0 sup 1 position de base intégrale inf 0 sup 1 position de base crochet gauche valeur absolue f parenthèse gauche t parenthèse droite moins f parenthèse gauche u parenthèse droite fin valeur absolue au carré plus valeur absolue t moins u fin valeur absolue au carré crochet droit sup négatif s barre oblique 2 position de base d en normal t d en normal u inférieur à infini', 'sbrief');
 };
 
 
@@ -1391,10 +1390,10 @@ sre.NobleFrenchTest.prototype.testSample_70 = function() {
       '<mn>1</mn></mrow><mrow><mi>s</mi></mrow></msubsup><mo>+</mo>' +
       '<msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>s' +
       '</mi></mrow></msubsup><mo stretchy="false">)</mo><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule indice k plus 1 position de base fin scripts début valeur absolue i majuscule fin valeur absolue exposant s position de base parenthèse droite égale e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule indice k position de base fin scripts début valeur absolue i majuscule fin valeur absolue exposant s position de base parenthèse droite e majuscule en sans empattement parenthèse gauche r majuscule indice 1 exposant s position de base plus r majuscule indice 2 exposant s position de base parenthèse droite point', 'default');
+  this.executeRuleTest(mml, 'e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k plus 1 position de base fin scripts début valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite égale e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k position de base fin scripts début valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite e majuscule en sans empattement parenthèse gauche r majuscule 1 sup s position de base plus r majuscule 2 sup s position de base parenthèse droite point',
                        'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k plus 1 position de base fin scripts valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite égale e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k position de base fin scripts valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite e majuscule en sans empattement parenthèse gauche r majuscule 1 sup s position de base plus r majuscule 2 sup s position de base parenthèse droite point', 'sbrief');
 };
 
 
@@ -1412,10 +1411,10 @@ sre.NobleFrenchTest.prototype.testSample_71 = function() {
       '<mn>1</mn>' +
       '</msub>' +
       '<mo stretchy="false">)</mo></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'parenthèse gauche x indice 1 position de base virgule y indice 1 position de base parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'parenthèse gauche x 1 virgule y 1 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'parenthèse gauche x 1 virgule y 1 parenthèse droite', 'sbrief');
 };
 
 
@@ -1433,10 +1432,10 @@ sre.NobleFrenchTest.prototype.testSample_72 = function() {
       '<mn>2</mn>' +
       '</msub>' +
       '<mo stretchy="false">)</mo></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'parenthèse gauche x indice 2 position de base virgule y indice 2 position de base parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'parenthèse gauche x 2 virgule y 2 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'parenthèse gauche x 2 virgule y 2 parenthèse droite', 'sbrief');
 };
 
 
@@ -1476,9 +1475,9 @@ sre.NobleFrenchTest.prototype.testSample_73 = function() {
       '</mrow>' +
       '</msqrt>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche x indice 2 position de base moins x indice 1 position de base parenthèse droite au carré plus parenthèse gauche y indice 2 position de base moins y indice 1 position de base parenthèse droite au carré fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche x 2 moins x 1 parenthèse droite au carré plus parenthèse gauche y 2 moins y 1 parenthèse droite au carré fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'd égale racine carrée parenthèse gauche x 2 moins x 1 parenthèse droite au carré plus parenthèse gauche y 2 moins y 1 parenthèse droite au carré fin racine carrée', 'sbrief');
 };
 
 
@@ -1487,9 +1486,9 @@ sre.NobleFrenchTest.prototype.testSample_73 = function() {
  */
 sre.NobleFrenchTest.prototype.testSample_74 = function() {
   var mml = '<mi>&#x211D;</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'R majuscule en ajouré', 'default');
+  this.executeRuleTest(mml, 'R majuscule en ajouré', 'brief');
+  this.executeRuleTest(mml, 'R majuscule en ajouré', 'sbrief');
 };
 
 
@@ -1502,9 +1501,9 @@ sre.NobleFrenchTest.prototype.testSample_75 = function() {
       '<mrow>' +
       '<mo>&#x2212;</mo><mi>&#x221E;</mi><mo>,</mo><mi>&#x221E;</mi></mrow>' +
       '<mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'R majuscule en ajouré égale parenthèse gauche négatif infini virgule infini parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'R majuscule en ajouré égale parenthèse gauche négatif infini virgule infini parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'R majuscule en ajouré égale parenthèse gauche négatif infini virgule infini parenthèse droite', 'sbrief');
 };
 
 
@@ -1515,9 +1514,9 @@ sre.NobleFrenchTest.prototype.testSample_76 = function() {
   var mml = '<mrow><mrow><mo>{</mo> <mrow>' +
       '<mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow> <mo>}</mo>' +
       '</mrow></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début ensemble 1 virgule 2 virgule 3 fin ensemble', 'default');
+  this.executeRuleTest(mml, 'début ensemble 1 virgule 2 virgule 3 fin ensemble', 'brief');
+  this.executeRuleTest(mml, 'ensemble 1 virgule 2 virgule 3 fin ensemble', 'sbrief');
 };
 
 
@@ -1527,9 +1526,9 @@ sre.NobleFrenchTest.prototype.testSample_76 = function() {
 sre.NobleFrenchTest.prototype.testSample_77 = function() {
   var mml = '<mrow>' +
       '<mn>1</mn><mo>&#x2208;</mo><mi>S</mi></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '1 appartient à s majuscule', 'default');
+  this.executeRuleTest(mml, '1 appartient à s majuscule', 'brief');
+  this.executeRuleTest(mml, '1 appartient à s majuscule', 'sbrief');
 };
 
 
@@ -1539,9 +1538,9 @@ sre.NobleFrenchTest.prototype.testSample_77 = function() {
 sre.NobleFrenchTest.prototype.testSample_78 = function() {
   var mml = '<mrow>' +
       '<mn>3</mn><mo>&#x2208;</mo><mi>S</mi></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '3 appartient à s majuscule', 'default');
+  this.executeRuleTest(mml, '3 appartient à s majuscule', 'brief');
+  this.executeRuleTest(mml, '3 appartient à s majuscule', 'sbrief');
 };
 
 
@@ -1551,9 +1550,9 @@ sre.NobleFrenchTest.prototype.testSample_78 = function() {
 sre.NobleFrenchTest.prototype.testSample_79 = function() {
   var mml = '<mrow>' +
       '<mn>4</mn><mo>&#x2209;</mo><mi>S</mi></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '4 n\'appartient pas à s majuscule', 'default');
+  this.executeRuleTest(mml, '4 n\'appartient pas à s majuscule', 'brief');
+  this.executeRuleTest(mml, '4 n\'appartient pas à s majuscule', 'sbrief');
 };
 
 
@@ -1573,9 +1572,9 @@ sre.NobleFrenchTest.prototype.testSample_80 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale début racine carrée 3 x moins 1 fin racine carrée plus parenthèse gauche 1 plus x parenthèse droite au carré', 'default');
+  this.executeRuleTest(mml, 'a égale début racine carrée 3 x moins 1 fin racine carrée plus parenthèse gauche 1 plus x parenthèse droite au carré', 'brief');
+  this.executeRuleTest(mml, 'a égale racine carrée 3 x moins 1 fin racine carrée plus parenthèse gauche 1 plus x parenthèse droite au carré', 'sbrief');
 };
 
 
@@ -1611,9 +1610,9 @@ sre.NobleFrenchTest.prototype.testSample_81 = function() {
       '<mi>g</mi>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale début fraction parenthèse gauche b plus c parenthèse droite au carré sur d fin fraction plus début fraction parenthèse gauche e plus f parenthèse droite au carré sur g fin fraction', 'default');
+  this.executeRuleTest(mml, 'a égale début frac parenthèse gauche b plus c parenthèse droite au carré sur d fin frac plus début frac parenthèse gauche e plus f parenthèse droite au carré sur g fin frac', 'brief');
+  this.executeRuleTest(mml, 'a égale frac parenthèse gauche b plus c parenthèse droite au carré sur  d fin frac plus frac parenthèse gauche e plus f parenthèse droite au carré sur  g fin frac', 'sbrief');
 };
 
 
@@ -1656,11 +1655,11 @@ sre.NobleFrenchTest.prototype.testSample_82 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow> <mo>]</mo></mrow></mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré parenthèse gauche c moins b parenthèse droite au carré crochet droit plus crochet gauche parenthèse gauche d plus e parenthèse droite au carré parenthèse gauche f moins e parenthèse droite au carré crochet droit',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré parenthèse gauche c moins b parenthèse droite au carré crochet droit plus crochet gauche parenthèse gauche d plus e parenthèse droite au carré parenthèse gauche f moins e parenthèse droite au carré crochet droit',
                        'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré parenthèse gauche c moins b parenthèse droite au carré crochet droit plus crochet gauche parenthèse gauche d plus e parenthèse droite au carré parenthèse gauche f moins e parenthèse droite au carré crochet droit',
                        'sbrief');
 };
 
@@ -1689,9 +1688,9 @@ sre.NobleFrenchTest.prototype.testSample_83 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow> <mo>]</mo></mrow></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré crochet droit plus crochet gauche parenthèse gauche f moins e parenthèse droite au carré crochet droit', 'default');
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré crochet droit plus crochet gauche parenthèse gauche f moins e parenthèse droite au carré crochet droit', 'brief');
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré crochet droit plus crochet gauche parenthèse gauche f moins e parenthèse droite au carré crochet droit', 'sbrief');
 };
 
 
@@ -1710,9 +1709,9 @@ sre.NobleFrenchTest.prototype.testSample_84 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow> <mo>]</mo></mrow></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré crochet droit', 'default');
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré crochet droit', 'brief');
+  this.executeRuleTest(mml, 'x égale crochet gauche parenthèse gauche a plus b parenthèse droite au carré crochet droit', 'sbrief');
 };
 
 
@@ -1730,9 +1729,9 @@ sre.NobleFrenchTest.prototype.testSample_85 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x égale parenthèse gauche a plus b parenthèse droite au carré', 'default');
+  this.executeRuleTest(mml, 'x égale parenthèse gauche a plus b parenthèse droite au carré', 'brief');
+  this.executeRuleTest(mml, 'x égale parenthèse gauche a plus b parenthèse droite au carré', 'sbrief');
 };
 
 
@@ -1745,9 +1744,9 @@ sre.NobleFrenchTest.prototype.testSample_86 = function() {
       '<mn>2</mn>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x égale a plus b au carré', 'default');
+  this.executeRuleTest(mml, 'x égale a plus b au carré', 'brief');
+  this.executeRuleTest(mml, 'x égale a plus b au carré', 'sbrief');
 };
 
 
@@ -1775,9 +1774,9 @@ sre.NobleFrenchTest.prototype.testSample_87 = function() {
       '<mn>3</mn>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début début fraction un-demi sur sur trois-quarts fin fin fraction égale deux-tiers', 'default');
+  this.executeRuleTest(mml, 'début début frac un-demi sur sur trois-quarts fin fin frac égale deux-tiers', 'brief');
+  this.executeRuleTest(mml, 'frac1imbriquée un-demi sur1imbriquée trois-quarts fin frac1imbriquée égale deux-tiers', 'sbrief');
 };
 
 
@@ -1805,9 +1804,9 @@ sre.NobleFrenchTest.prototype.testSample_88 = function() {
       '<mo>)</mo></mrow><mo>&#x2212;</mo><mn>3</mn></mrow>' +
       '<mo>)</mo></mrow></mrow>' +
       '<mo>)</mo></mrow><mo>=</mo><mi>y</mi></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, '2 parenthèse gauche parenthèse gauche x plus 1 parenthèse droite parenthèse gauche x plus 3 parenthèse droite moins 4 parenthèse gauche parenthèse gauche x moins 1 parenthèse droite parenthèse gauche x plus 2 parenthèse droite moins 3 parenthèse droite parenthèse droite égale y', 'default');
+  this.executeRuleTest(mml, '2 parenthèse gauche parenthèse gauche x plus 1 parenthèse droite parenthèse gauche x plus 3 parenthèse droite moins 4 parenthèse gauche parenthèse gauche x moins 1 parenthèse droite parenthèse gauche x plus 2 parenthèse droite moins 3 parenthèse droite parenthèse droite égale y', 'brief');
+  this.executeRuleTest(mml, '2 parenthèse gauche parenthèse gauche x plus 1 parenthèse droite parenthèse gauche x plus 3 parenthèse droite moins 4 parenthèse gauche parenthèse gauche x moins 1 parenthèse droite parenthèse gauche x plus 2 parenthèse droite moins 3 parenthèse droite parenthèse droite égale y', 'sbrief');
 };
 
 
@@ -1837,9 +1836,9 @@ sre.NobleFrenchTest.prototype.testSample_89 = function() {
       '<mn>4</mn><mo>!</mo></mrow>' +
       '</mfrac>' +
       '<mo>&#x2212;</mo><mo>&#x2026;</mo></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'cosinus x égale 1 moins début fraction x au carré sur 2 factorielle fin fraction plus début fraction x exposant 4 position de base sur 4 factorielle fin fraction moins points de suspension', 'default');
+  this.executeRuleTest(mml, 'cosinus x égale 1 moins début frac x au carré sur 2 factorielle fin frac plus début frac x sup 4 position de base sur 4 factorielle fin frac moins points de suspension', 'brief');
+  this.executeRuleTest(mml, 'cosinus x égale 1 moins frac x au carré sur  2 factorielle fin frac plus frac x sup 4 position de base sur  4 factorielle fin frac moins points de suspension', 'sbrief');
 };
 
 
@@ -1862,9 +1861,9 @@ sre.NobleFrenchTest.prototype.testSample_90 = function() {
       '<mn>2</mn><mi>a</mi></mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x égale début fraction négatif b plus ou moins début racine carrée b au carré moins 4 a c fin racine carrée sur 2 a fin fraction', 'default');
+  this.executeRuleTest(mml, 'x égale début frac négatif b plus ou moins début racine carrée b au carré moins 4 a c fin racine carrée sur 2 a fin frac', 'brief');
+  this.executeRuleTest(mml, 'x égale frac négatif b plus ou moins racine carrée b au carré moins 4 a c fin racine carrée sur  2 a fin frac', 'sbrief');
 };
 
 
@@ -1883,9 +1882,9 @@ sre.NobleFrenchTest.prototype.testSample_91 = function() {
       '</mrow>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'x plus y exposant début fraction 2 sur k plus 1 fin fraction', 'default');
+  this.executeRuleTest(mml, 'x plus y sup début frac 2 sur k plus 1 fin frac', 'brief');
+  this.executeRuleTest(mml, 'x plus y sup frac 2 sur  k plus 1 fin frac', 'sbrief');
 };
 
 
@@ -1905,9 +1904,9 @@ sre.NobleFrenchTest.prototype.testSample_92 = function() {
       '<mi>x</mi>' +
       '</mfrac>' +
       '<mo>=</mo><mn>1</mn></mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'limite début souscript x flèche droite 0 fin scripts début fraction sinus x sur x fin fraction égale 1', 'default');
+  this.executeRuleTest(mml, 'limite début souscript x flèche droite 0 fin scripts début frac sinus x sur x fin frac égale 1', 'brief');
+  this.executeRuleTest(mml, 'limite début souscript x flèche droite 0 fin scripts frac sinus x sur  x fin frac égale 1', 'sbrief');
 };
 
 
@@ -1946,9 +1945,9 @@ sre.NobleFrenchTest.prototype.testSample_93 = function() {
       '</mrow>' +
       '</msqrt>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche x indice 2 position de base moins x indice 1 position de base parenthèse droite au carré plus parenthèse gauche y indice 2 position de base moins y indice 1 position de base parenthèse droite au carré fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche x 2 moins x 1 parenthèse droite au carré plus parenthèse gauche y 2 moins y 1 parenthèse droite au carré fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'd égale racine carrée parenthèse gauche x 2 moins x 1 parenthèse droite au carré plus parenthèse gauche y 2 moins y 1 parenthèse droite au carré fin racine carrée', 'sbrief');
 };
 
 
@@ -1972,9 +1971,9 @@ sre.NobleFrenchTest.prototype.testSample_94 = function() {
       '<mi>n</mi><mo>&#x2212;</mo><mn>2</mn></mrow>' +
       '</msub>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'f majuscule indice n position de base égale f majuscule indice n moins 1 position de base plus f majuscule indice n moins 2', 'default');
+  this.executeRuleTest(mml, 'f majuscule sub n position de base égale f majuscule sub n moins 1 position de base plus f majuscule sub n moins 2', 'brief');
+  this.executeRuleTest(mml, 'f majuscule sub n position de base égale f majuscule sub n moins 1 position de base plus f majuscule sub n moins 2', 'sbrief');
 };
 
 
@@ -2146,9 +2145,9 @@ sre.NobleFrenchTest.prototype.testSample_95 = function() {
       '</mtable>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'pi majuscule en gras égale début matrice 6 par 6 1re rangée 1re colonne pi indice 11 position de base 2e colonne pi indice 12 position de base 3e colonne pi indice 12 position de base 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi indice 12 position de base 2e colonne pi indice 11 position de base 3e colonne pi indice 12 position de base 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi indice 12 position de base 2e colonne pi indice 12 position de base 3e colonne pi indice 11 position de base 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi indice 44 position de base 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi indice 44 position de base 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi indice 44 fin matrice', 'default');
+  this.executeRuleTest(mml, 'pi majuscule en gras égale début matrice 6 par 6 1re rangée 1re colonne pi 11 2e colonne pi 12 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi 12 2e colonne pi 11 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi 12 2e colonne pi 12 3e colonne pi 11 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi 44 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi 44 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi 44 fin matrice', 'brief');
+  this.executeRuleTest(mml, 'pi majuscule en gras égale matrice 6 par 6 1re rangée 1re colonne pi 11 2e colonne pi 12 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi 12 2e colonne pi 11 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi 12 2e colonne pi 12 3e colonne pi 11 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi 44 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi 44 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi 44 fin matrice', 'sbrief');
 };
 
 
@@ -2207,10 +2206,10 @@ sre.NobleFrenchTest.prototype.testSample_96 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 's indice 11 position de base égale début fraction c indice 11 position de base plus c indice 12 position de base sur parenthèse gauche c indice 11 position de base moins c indice 12 position de base parenthèse droite parenthèse gauche c indice 11 position de base plus 2 c indice 12 position de base parenthèse droite fin fraction',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 's 11 égale début frac c 11 plus c 12 sur parenthèse gauche c 11 moins c 12 parenthèse droite parenthèse gauche c 11 plus 2 c 12 parenthèse droite fin frac', 'brief');
+  this.executeRuleTest(mml, 's 11 égale frac c 11 plus c 12 sur  parenthèse gauche c 11 moins c 12 parenthèse droite parenthèse gauche c 11 plus 2 c 12 parenthèse droite fin frac', 'sbrief');
 };
 
 
@@ -2244,9 +2243,9 @@ sre.NobleFrenchTest.prototype.testSample_97 = function() {
       '</msub>' +
       '<mi mathvariant="normal">O</mi>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 's majuscule i o majuscule en normal indice 2 position de base plus 6 h majuscule en normal f majuscule en normal flèche droite h majuscule en normal indice 2 position de base s majuscule i f majuscule en normal indice 6 position de base plus 2 h majuscule en normal indice 2 position de base o majuscule en normal', 'default');
+  this.executeRuleTest(mml, 's majuscule i o majuscule en normal 2 plus 6 h majuscule en normal f majuscule en normal flèche droite h majuscule en normal 2 s majuscule i f majuscule en normal 6 plus 2 h majuscule en normal 2 o majuscule en normal', 'brief');
+  this.executeRuleTest(mml, 's majuscule i o majuscule en normal 2 plus 6 h majuscule en normal f majuscule en normal flèche droite h majuscule en normal 2 s majuscule i f majuscule en normal 6 plus 2 h majuscule en normal 2 o majuscule en normal', 'sbrief');
 };
 
 
@@ -2297,9 +2296,9 @@ sre.NobleFrenchTest.prototype.testSample_98 = function() {
       '<mo>=</mo>' +
       '<mn>0</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début fraction d sur d x fin fraction parenthèse gauche e majuscule parenthèse gauche x parenthèse droite a majuscule parenthèse gauche x parenthèse droite début fraction d w parenthèse gauche x parenthèse droite sur d x fin fraction parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'default');
+  this.executeRuleTest(mml, 'début frac d sur d x fin frac parenthèse gauche e majuscule parenthèse gauche x parenthèse droite a majuscule parenthèse gauche x parenthèse droite début frac d w parenthèse gauche x parenthèse droite sur d x fin frac parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'brief');
+  this.executeRuleTest(mml, 'frac d sur  d x fin frac parenthèse gauche e majuscule parenthèse gauche x parenthèse droite a majuscule parenthèse gauche x parenthèse droite frac d w parenthèse gauche x parenthèse droite sur  d x fin frac parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'sbrief');
 };
 
 
@@ -2343,10 +2342,10 @@ sre.NobleFrenchTest.prototype.testSample_99 = function() {
       '</mrow>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'TCS indice gas position de base égale négatif un-demi parenthèse gauche début fraction p majuscule indice seal position de base sur p majuscule indice max position de base fin fraction parenthèse droite parenthèse gauche début fraction 1 sur t majuscule indice seal position de base fin fraction parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche début frac p majuscule sub seal position de base sur p majuscule sub max position de base fin frac parenthèse droite parenthèse gauche début frac 1 sur t majuscule sub seal position de base fin frac parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche frac p majuscule sub seal position de base sur  p majuscule sub max position de base fin frac parenthèse droite parenthèse gauche frac 1 sur  t majuscule sub seal position de base fin frac parenthèse droite', 'sbrief');
 };
 
 
@@ -2478,9 +2477,9 @@ sre.NobleFrenchTest.prototype.testSample_100 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'b majuscule indice p position de base égale début début fraction début fraction 7 moins v au carré sur 3 fin fraction parenthèse gauche 1 plus début fraction c au carré sur a au carré fin fraction plus début fraction c exposant 4 position de base sur a exposant 4 position de base fin fraction parenthèse droite plus début fraction parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur parenthèse gauche 1 plus v parenthèse droite a au carré fin fraction sur sur parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins début fraction c exposant 4 position de base sur a exposant 4 position de base fin fraction parenthèse droite parenthèse gauche 1 moins début fraction c au carré sur a au carré fin fraction parenthèse droite fin fin fraction', 'default');
+  this.executeRuleTest(mml, 'b majuscule sub p position de base égale début début frac début frac 7 moins v au carré sur 3 fin frac parenthèse gauche 1 plus début frac c au carré sur a au carré fin frac plus début frac c sup 4 position de base sur a sup 4 position de base fin frac parenthèse droite plus début frac parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur parenthèse gauche 1 plus v parenthèse droite a au carré fin frac sur sur parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins début frac c sup 4 position de base sur a sup 4 position de base fin frac parenthèse droite parenthèse gauche 1 moins début frac c au carré sur a au carré fin frac parenthèse droite fin fin frac', 'brief');
+  this.executeRuleTest(mml, 'b majuscule sub p position de base égale frac1imbriquée frac 7 moins v au carré sur  3 fin frac parenthèse gauche 1 plus frac c au carré sur  a au carré fin frac plus frac c sup 4 position de base sur  a sup 4 position de base fin frac parenthèse droite plus frac parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur  parenthèse gauche 1 plus v parenthèse droite a au carré fin frac sur1imbriquée parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins frac c sup 4 position de base sur  a sup 4 position de base fin frac parenthèse droite parenthèse gauche 1 moins frac c au carré sur  a au carré fin frac parenthèse droite fin frac1imbriquée', 'sbrief');
 };
 
 
@@ -2517,9 +2516,9 @@ sre.NobleFrenchTest.prototype.testSample_101 = function() {
       '</msqrt>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'q majuscule indice tank exposant series position de base égale début fraction 1 sur r majuscule indice s position de base fin fraction début racine carrée début fraction l majuscule indice s position de base sur c majuscule indice s position de base fin fraction fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'q majuscule sub tank sup series position de base égale début frac 1 sur r majuscule sub s position de base fin frac début racine carrée début frac l majuscule sub s position de base sur c majuscule sub s position de base fin frac fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'q majuscule sub tank sup series position de base égale frac 1 sur  r majuscule sub s position de base fin frac racine carrée frac l majuscule sub s position de base sur  c majuscule sub s position de base fin frac fin racine carrée', 'sbrief');
 };
 
 
@@ -2552,9 +2551,9 @@ sre.NobleFrenchTest.prototype.testSample_102 = function() {
       '</msubsup>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'delta majuscule phi droit indice peak position de base égale tangente exposant négatif 1 position de base parenthèse gauche k au carré q majuscule indice tank exposant series position de base parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'delta majuscule phi droit sub peak position de base égale tangente sup négatif 1 position de base parenthèse gauche k au carré q majuscule sub tank sup series position de base parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'delta majuscule phi droit sub peak position de base égale tangente sup négatif 1 position de base parenthèse gauche k au carré q majuscule sub tank sup series position de base parenthèse droite', 'sbrief');
 };
 
 
@@ -2599,9 +2598,9 @@ sre.NobleFrenchTest.prototype.testSample_103 = function() {
       '<mo>)</mo>' +
       '</msqrt>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'f égale 1,013 début fraction w majuscule sur l majuscule au carré fin fraction début racine carrée début fraction e majuscule sur rho fin fraction fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début fraction l majuscule au carré sur EW au carré fin fraction sigma parenthèse droite fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'f égale 1,013 début frac w majuscule sur l majuscule au carré fin frac début racine carrée début frac e majuscule sur rho fin frac fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début frac l majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'f égale 1,013 frac w majuscule sur  l majuscule au carré fin frac racine carrée frac e majuscule sur  rho fin frac fin racine carrée racine carrée parenthèse gauche 1 plus 0,293 frac l majuscule au carré sur  EW au carré fin frac sigma parenthèse droite fin racine carrée',
                        'sbrief');
 };
 
@@ -2672,9 +2671,9 @@ sre.NobleFrenchTest.prototype.testSample_104 = function() {
       '</mfenced>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'u indice n position de base parenthèse gauche x parenthèse droite égale gamma indice n position de base parenthèse gauche cosinus hyperbolique k indice n position de base x moins cosinus k indice n position de base x parenthèse droite plus parenthèse gauche sinus hyperbolique k indice n position de base x moins sinus k indice n position de base x parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'u sub n position de base parenthèse gauche x parenthèse droite égale gamma sub n position de base parenthèse gauche cosinus hyperbolique k sub n position de base x moins cosinus k sub n position de base x parenthèse droite plus parenthèse gauche sinus hyperbolique k sub n position de base x moins sinus k sub n position de base x parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'u sub n position de base parenthèse gauche x parenthèse droite égale gamma sub n position de base parenthèse gauche cosinus hyperbolique k sub n position de base x moins cosinus k sub n position de base x parenthèse droite plus parenthèse gauche sinus hyperbolique k sub n position de base x moins sinus k sub n position de base x parenthèse droite', 'sbrief');
 };
 
 
@@ -2793,9 +2792,9 @@ sre.NobleFrenchTest.prototype.testSample_105 = function() {
       '</mtd>' +
       '</mtr>' +
       '</mtable>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne b majuscule 2e colonne égale début début fraction début fraction f majuscule indice 0 position de base sur m fin fraction sur sur début racine carrée parenthèse gauche oméga indice 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin fin fraction 2e rangée 1re colonne vide 2e colonne égale début début fraction début fraction f majuscule indice 0 position de base sur k fin fraction sur sur début racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga indice 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga indice 0 position de base parenthèse droite au carré parenthèse gauche oméga barre oblique oméga indice 0 position de base parenthèse droite au carré fin racine carrée fin fin fraction fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne b majuscule 2e colonne égale début début frac début frac f majuscule 0 sur m fin frac sur sur début racine carrée parenthèse gauche oméga 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin fin frac 2e rangée 1re colonne vide 2e colonne égale début début frac début frac f majuscule 0 sur k fin frac sur sur début racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga 0 parenthèse droite au carré parenthèse gauche oméga barre oblique oméga 0 parenthèse droite au carré fin racine carrée fin fin frac fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne b majuscule 2e colonne égale frac1imbriquée frac f majuscule 0 sur  m fin frac sur1imbriquée racine carrée parenthèse gauche oméga 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin frac1imbriquée 2e rangée 1re colonne vide 2e colonne égale frac1imbriquée frac f majuscule 0 sur  k fin frac sur1imbriquée racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga 0 parenthèse droite au carré parenthèse gauche oméga barre oblique oméga 0 parenthèse droite au carré fin racine carrée fin frac1imbriquée fin tableau', 'sbrief');
 };
 
 
@@ -2825,11 +2824,11 @@ sre.NobleFrenchTest.prototype.testSample_106 = function() {
       '<mi>A</mi>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'p en normal parenthèse gauche a majuscule a n d b majuscule parenthèse droite égale p en normal parenthèse gauche a majuscule parenthèse droite p en normal parenthèse gauche b majuscule barre verticale a majuscule parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'p en normal parenthèse gauche a majuscule a n d b majuscule parenthèse droite égale p en normal parenthèse gauche a majuscule parenthèse droite p en normal parenthèse gauche b majuscule barre verticale a majuscule parenthèse droite',
                        'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'p en normal parenthèse gauche a majuscule a n d b majuscule parenthèse droite égale p en normal parenthèse gauche a majuscule parenthèse droite p en normal parenthèse gauche b majuscule barre verticale a majuscule parenthèse droite',
                        'sbrief');
 };
 
@@ -2856,9 +2855,9 @@ sre.NobleFrenchTest.prototype.testSample_107 = function() {
       '<mi>α</mi>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'p majuscule m majuscule f majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche début fraction 1 sur x fin fraction parenthèse droite exposant alpha', 'default');
+  this.executeRuleTest(mml, 'p majuscule m majuscule f majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche début frac 1 sur x fin frac parenthèse droite sup alpha', 'brief');
+  this.executeRuleTest(mml, 'p majuscule m majuscule f majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche frac 1 sur  x fin frac parenthèse droite sup alpha', 'sbrief');
 };
 
 
@@ -2894,10 +2893,10 @@ sre.NobleFrenchTest.prototype.testSample_108 = function() {
       '<mo>/2)</mo>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale début fraction 1 sur début racine carrée 2 pi fin racine carrée fin fraction exp parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale début frac 1 sur début racine carrée 2 pi fin racine carrée fin frac exp parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'f parenthèse gauche x parenthèse droite égale frac 1 sur  racine carrée 2 pi fin racine carrée fin frac exp parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite',
                        'sbrief');
 };
 
@@ -2928,9 +2927,9 @@ sre.NobleFrenchTest.prototype.testSample_109 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'début fraction d x sur d thêta fin fraction égale début fraction bêta sur cosinus au carré thêta fin fraction', 'default');
+  this.executeRuleTest(mml, 'début frac d x sur d thêta fin frac égale début frac bêta sur cosinus au carré thêta fin frac', 'brief');
+  this.executeRuleTest(mml, 'frac d x sur  d thêta fin frac égale frac bêta sur  cosinus au carré thêta fin frac', 'sbrief');
 };
 
 
@@ -2951,8 +2950,8 @@ sre.NobleFrenchTest.prototype.testSample_110 = function() {
       '</mrow>' +
       '</msqrt>' +
       '</mrow>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 's barre oblique début racine carrée 2 parenthèse gauche n moins 1 parenthèse droite fin racine carrée', 'default');
+  this.executeRuleTest(mml, 's barre oblique début racine carrée 2 parenthèse gauche n moins 1 parenthèse droite fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 's barre oblique racine carrée 2 parenthèse gauche n moins 1 parenthèse droite fin racine carrée', 'sbrief');
 };
 

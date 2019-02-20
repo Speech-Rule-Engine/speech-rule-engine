@@ -55,7 +55,6 @@ sre.MathspeakEmbellishFrenchTest = function() {
    */
   this.rules = ['MathspeakRules', 'MathspeakFrench'];
 
-  this.actual = true;
   this.setActive('EmbellishedSymbolsFrench');
 
 };
@@ -67,9 +66,9 @@ goog.inherits(sre.MathspeakEmbellishFrenchTest, sre.AbstractRuleTest);
  */
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpSubscript = function() {
   var mml = '<mi>a</mi><msub><mo>+</mo><mn>2</mn></msub><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus indice 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a plus sub 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sub 2 position de base b', 'sbrief');
 };
 
 
@@ -80,21 +79,21 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpSubscript = function() {
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpSuperscript = function()
     {
   var mml = '<mi>a</mi><msup><mo>+</mo><mn>2</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a plus sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>+</mo><mn>3</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus exposant 3 position de base b', 'default');
+  this.executeRuleTest(mml, 'a plus sup 3 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sup 3 position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>+</mo><mn>n</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus exposant n position de base b', 'default');
+  this.executeRuleTest(mml, 'a plus sup n position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sup n position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>+</mo><mo>\'</mo></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus prime b', 'default');
+  this.executeRuleTest(mml, 'a plus prime b', 'brief');
+  this.executeRuleTest(mml, 'a plus prime b', 'sbrief');
 };
 
 
@@ -105,25 +104,25 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpSuperscript = function()
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpSubSuper = function() {
   var mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '</msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a plus indice m exposant 2 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>3</mn></msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a plus indice m exposant 3 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus sub m sup 3 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sub m sup 3 position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>n</mn></msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a plus indice m exposant n position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus sub m sup n position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sub m sup n position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>+</mo><mi>m</mi><mn>\'</mn>' +
       '</msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus prime indice m position de base b', 'default');
+  this.executeRuleTest(mml, 'a plus prime sub m position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus prime sub m position de base b', 'sbrief');
 };
 
 
@@ -133,25 +132,25 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpSubSuper = function() {
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpTensor = function() {
   var mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '</mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a plus indice m exposant 2 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a plus sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a exposant gauche 3 position de base plus indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sup 3 position de base plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sup 3 position de base plus sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a indice gauche 3 position de base plus indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sub 3 position de base plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub 3 position de base plus sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>+</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a indice gauche 3 exposant gauche n position de base plus indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sub 3 sup n position de base plus sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub 3 sup n position de base plus sub m sup 2 position de base b', 'sbrief');
 };
 
 
@@ -161,9 +160,9 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellOpTensor = function() {
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelSubscript = function()
     {
   var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale indice 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a égale sub 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sub 2 position de base b', 'sbrief');
 };
 
 
@@ -174,21 +173,21 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelSubscript = function()
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelSuperscript =
     function() {
   var mml = '<mi>a</mi><msup><mo>=</mo><mn>2</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a égale sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>=</mo><mn>3</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale exposant 3 position de base b', 'default');
+  this.executeRuleTest(mml, 'a égale sup 3 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sup 3 position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>=</mo><mn>n</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale exposant n position de base b', 'default');
+  this.executeRuleTest(mml, 'a égale sup n position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sup n position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>=</mo><mo>\'</mo></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale prime b', 'default');
+  this.executeRuleTest(mml, 'a égale prime b', 'brief');
+  this.executeRuleTest(mml, 'a égale prime b', 'sbrief');
 };
 
 
@@ -199,26 +198,26 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelSuperscript =
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelSubSuper = function() {
   var mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '</msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a égale indice m exposant 2 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>3</mn></msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a égale indice m exposant 3 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale sub m sup 3 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sub m sup 3 position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>n</mn></msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a égale indice m exposant n position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale sub m sup n position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sub m sup n position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>=</mo><mi>m</mi><mn>\'</mn>' +
       '</msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a égale prime indice m position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale prime sub m position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale prime sub m position de base b', 'sbrief');
 };
 
 
@@ -228,25 +227,25 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelSubSuper = function() {
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellRelTensor = function() {
   var mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '</mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a égale indice m exposant 2 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a égale sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a exposant gauche 3 position de base égale indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sup 3 position de base égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sup 3 position de base égale sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a indice gauche 3 position de base égale indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sub 3 position de base égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub 3 position de base égale sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>=</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a indice gauche 3 exposant gauche n position de base égale indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sub 3 sup n position de base égale sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub 3 sup n position de base égale sub m sup 2 position de base b', 'sbrief');
 };
 
 
@@ -257,10 +256,10 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellMultRelSubscript =
     function() {
   var mml = '<mi>a</mi><msub><mo>=</mo><mn>2</mn></msub><mi>b</mi>' +
           '<mo>=</mo><mi>c</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a égale indice 2 position de base b égale c',
       'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a égale sub 2 position de base b égale c', 'brief');
+  this.executeRuleTest(mml, 'a égale sub 2 position de base b égale c', 'sbrief');
 };
 
 
@@ -270,10 +269,10 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellMultRelSubscript =
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctSubscript =
     function() {
   var mml = '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a deux points indice 2 position de base b',
       'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points sub 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sub 2 position de base b', 'sbrief');
 };
 
 
@@ -284,24 +283,24 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctSubscript =
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctSuperscript =
     function() {
   var mml = '<mi>a</mi><msup><mo>:</mo><mn>2</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a deux points exposant 2 position de base b',
       'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>:</mo><mn>3</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a deux points exposant 3 position de base b',
       'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points sup 3 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sup 3 position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>:</mo><mn>n</mn></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a deux points exposant n position de base b',
       'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points sup n position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sup n position de base b', 'sbrief');
   mml = '<mi>a</mi><msup><mo>:</mo><mo>\'</mo></msup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points prime b', 'default');
+  this.executeRuleTest(mml, 'a deux points prime b', 'brief');
+  this.executeRuleTest(mml, 'a deux points prime b', 'sbrief');
 };
 
 
@@ -313,25 +312,25 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctSubSuper =
     function() {
   var mml = '<mi>a</mi><msubsup><mo>:</mo><mi>m</mi><mn>2</mn>' +
           '</msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>:</mo><mi>m</mi><mn>3</mn></msubsup><mi>b' +
       '</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points indice m exposant 3 position de base b', 'default');
+  this.executeRuleTest(mml, 'a deux points sub m sup 3 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sub m sup 3 position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>:</mo><mi>m</mi><mn>n</mn></msubsup><mi>b' +
       '</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points indice m exposant n position de base b', 'default');
+  this.executeRuleTest(mml, 'a deux points sub m sup n position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sub m sup n position de base b', 'sbrief');
   mml = '<mi>a</mi><msubsup><mo>:</mo><mi>m</mi><mn>\'</mn>' +
       '</msubsup><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a deux points prime indice m position de base b',
       'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points prime sub m position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points prime sub m position de base b', 'sbrief');
 };
 
 
@@ -341,25 +340,25 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctSubSuper =
 sre.MathspeakEmbellishFrenchTest.prototype.testEmbellPunctTensor = function() {
   var mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '</mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a deux points sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><none/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a exposant gauche 3 position de base deux points indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sup 3 position de base deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sup 3 position de base deux points sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a indice gauche 3 position de base deux points indice m exposant 2 position de base b', 'default');
+  this.executeRuleTest(mml, 'a sub 3 position de base deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub 3 position de base deux points sub m sup 2 position de base b', 'sbrief');
   mml = '<mi>a</mi><mmultiscripts><mo>:</mo><mi>m</mi><mn>2</mn>' +
       '<mprescripts/><mn>3</mn><mi>n</mi></mmultiscripts><mi>b</mi>';
-  this.executeRuleTest(mml, '',
+  this.executeRuleTest(mml, 'a indice gauche 3 exposant gauche n position de base deux points indice m exposant 2 position de base b',
                        'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a sub 3 sup n position de base deux points sub m sup 2 position de base b', 'brief');
+  this.executeRuleTest(mml, 'a sub 3 sup n position de base deux points sub m sup 2 position de base b', 'sbrief');
 };
 
 
@@ -370,9 +369,9 @@ sre.MathspeakEmbellishFrenchTest.prototype.testEmbellMultPunctSubscript =
     function() {
   var mml = '<mi>a</mi><msub><mo>:</mo><mn>2</mn></msub><mi>b</mi>' +
           '<mo>:</mo><mi>c</mi>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a deux points indice 2 position de base b deux points c', 'default');
+  this.executeRuleTest(mml, 'a deux points sub 2 position de base b deux points c', 'brief');
+  this.executeRuleTest(mml, 'a deux points sub 2 position de base b deux points c', 'sbrief');
 };
 
 
@@ -385,17 +384,17 @@ sre.MathspeakEmbellishFrenchTest.prototype.testSemanticsElement = function() {
   this.executeRuleTest(mml, '', 'brief');
   this.executeRuleTest(mml, '', 'sbrief');
   mml = '<semantics><mi>a</mi></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
   mml = '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
   mml = '<mi>a</mi><mo>+</mo><semantics><mi>b</mi></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
 };
 
 
@@ -411,23 +410,23 @@ sre.MathspeakEmbellishFrenchTest.prototype.testSemanticsAnnotation = function()
   this.executeRuleTest(mml, '', 'sbrief');
   mml = '<mi>a</mi><semantics><annotation><content>something</content>' +
       '</annotation></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
   mml = '<semantics><mi>a</mi><annotation>something</annotation></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
   mml = '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
       '<annotation>something</annotation></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
   mml = '<mi>a</mi><mo>+</mo><semantics><mi>b</mi>' +
       '<annotation>something</annotation></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
 };
 
 
@@ -439,28 +438,28 @@ sre.MathspeakEmbellishFrenchTest.prototype.testSemanticsAnnotationXml =
   // This is not really legal markup.
   var mml = '<semantics><annotation-xml><content>something</content>' +
           '</annotation-xml></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'something', 'default');
+  this.executeRuleTest(mml, 'something', 'brief');
+  this.executeRuleTest(mml, 'something', 'sbrief');
   mml = '<mi>a</mi><semantics><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a something', 'default');
+  this.executeRuleTest(mml, 'a something', 'brief');
+  this.executeRuleTest(mml, 'a something', 'sbrief');
   mml = '<semantics><mi>a</mi><annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a', 'default');
+  this.executeRuleTest(mml, 'a', 'brief');
+  this.executeRuleTest(mml, 'a', 'sbrief');
   mml = '<semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>' +
       '<annotation-xml><content>something</content>' +
       '</annotation-xml></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
   mml = '<mi>a</mi><mo>+</mo><semantics><mi>b</mi><annotation-xml>' +
       '<content>something</content></annotation-xml></semantics>';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  this.executeRuleTest(mml, 'a plus b', 'default');
+  this.executeRuleTest(mml, 'a plus b', 'brief');
+  this.executeRuleTest(mml, 'a plus b', 'sbrief');
 };
