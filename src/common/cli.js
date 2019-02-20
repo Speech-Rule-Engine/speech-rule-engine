@@ -159,7 +159,9 @@ sre.Cli.prototype.readline = function() {
   inter.on('close', goog.bind(function() {
     this.runProcessors_(goog.bind(
         function(proc, expr) {
-          inter.output.write(this.system['to' + proc](expr) + '\n');
+          inter.output.write((proc === 'Json' ?
+                              JSON.stringify(this.system['to' + proc](expr)) :
+                              this.system['to' + proc](expr))+ '\n');
         }, this), input);
   }, this));
 };

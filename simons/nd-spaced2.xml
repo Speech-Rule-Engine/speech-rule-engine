@@ -1,0 +1,271 @@
+<math display="block"><mspace width="+5em"></mspace>
+  <mrow>
+    <mtable align="top 2" rowlines="solid" framespacing="0 0">
+      <mtr>
+        <mtd><mspace width="-5em"></mspace>
+          <mtable framespacing="0 0">
+            <mtr>
+              <mtd rowalign="bottom">
+                <mrow>
+                  <mtable align="top 2" rowlines="solid" framespacing="0 0">
+                    <mtr>
+                      <mtd>
+                        <mtable framespacing="0 0">
+                          <mtr>
+                            <mtd rowalign="bottom">
+                              <mrow>
+                                <mtable align="top 2" rowlines="solid" framespacing="0 0">
+                                  <mtr>
+                                    <mtd>
+                                      <mtable framespacing="0 0">
+                                        <mtr>
+                                          <mtd rowalign="bottom">
+                                            <mrow>
+                                              <mtable align="top 2" rowlines="solid" framespacing="0 0">
+                                                <mtr>
+                                                  <mtd>
+                                                    <mtable framespacing="0 0">
+                                                      <mtr>
+                                                        <mtd rowalign="bottom">
+                                                          <mrow>
+                                                            <mtable align="top 2" rowlines="solid" framespacing="0 0">
+                                                              <mtr>
+                                                                <mtd>
+                                                                  <mtable framespacing="0 0">
+                                                                    <mtr>
+                                                                      <mtd rowalign="bottom">
+                                                                        <mstyle displaystyle="false" scriptlevel="0">
+
+                                                                        </mstyle>
+                                                                      </mtd>
+                                                                    </mtr>
+                                                                  </mtable>
+                                                                </mtd>
+                                                              </mtr>
+                                                              <mtr>
+                                                                <mtd>
+                                                                  <mstyle displaystyle="false" scriptlevel="0">
+                                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                                      <mi>P</mi>
+                                                                    </mrow>
+                                                                  </mstyle>
+                                                                </mtd>
+                                                              </mtr>
+                                                            </mtable>
+                                                            <mpadded height="+.5em" width="+.5em" voffset="-.15em">
+                                                              <mstyle displaystyle="false" scriptlevel="0">
+                                                                <mrow class="MJX-TeXAtom-ORD">
+                                                                  <mrow class="MJX-TeXAtom-ORD">
+                                                                    <mstyle displaystyle="false" scriptlevel="1">
+                                                                      <mi>H</mi>
+                                                                      <mi>y</mi>
+                                                                      <msup>
+                                                                        <mi>p</mi>
+                                                                        <mrow class="MJX-TeXAtom-ORD">
+                                                                          <mn>1</mn>
+                                                                        </mrow>
+                                                                      </msup>
+                                                                    </mstyle>
+                                                                  </mrow>
+                                                                </mrow>
+                                                              </mstyle>
+                                                            </mpadded>
+                                                          </mrow>
+                                                        </mtd>
+                                                        <mtd>
+                                                          <mspace width=".5em"></mspace>
+                                                        </mtd>
+                                                        <mtd rowalign="bottom">
+                                                          <mstyle displaystyle="false" scriptlevel="0">
+                                                            <mrow class="MJX-TeXAtom-ORD">
+                                                              <mi>P</mi>
+                                                              <mo stretchy="false">→</mo>
+                                                              <mi>Q</mi>
+                                                            </mrow>
+                                                          </mstyle>
+                                                        </mtd>
+                                                      </mtr>
+                                                    </mtable>
+                                                  </mtd>
+                                                </mtr>
+                                                <mtr>
+                                                  <mtd>
+                                                    <mstyle displaystyle="false" scriptlevel="0">
+                                                      <mrow class="MJX-TeXAtom-ORD">
+                                                        <msup>
+                                                          <mi>Q</mi>
+                                                          <mn>2</mn>
+                                                        </msup>
+                                                      </mrow>
+                                                    </mstyle>
+                                                  </mtd>
+                                                </mtr>
+                                              </mtable>
+                                              <mpadded height="+.5em" width="+.5em" voffset="-.15em">
+                                                <mstyle displaystyle="false" scriptlevel="0">
+                                                  <mrow class="MJX-TeXAtom-ORD">
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                      <msub>
+                                                        <mo stretchy="false">→</mo>
+                                                        <mi>E</mi>
+                                                      </msub>
+                                                    </mrow>
+                                                  </mrow>
+                                                </mstyle>
+                                              </mpadded>
+                                            </mrow>
+                                          </mtd>
+                                          <mtd>
+                                            <mspace width=".5em"></mspace>
+                                          </mtd>
+                                          <mtd rowalign="bottom">
+                                            <mstyle displaystyle="false" scriptlevel="0">
+                                              <mrow class="MJX-TeXAtom-ORD">
+                                                <mi>Q</mi>
+                                                <mo stretchy="false">→</mo>
+                                                <mi>R</mi>
+                                              </mrow>
+                                            </mstyle>
+                                          </mtd>
+                                        </mtr>
+                                      </mtable>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr>
+                                    <mtd>
+                                      <mstyle displaystyle="false" scriptlevel="0">
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi>R</mi>
+                                        </mrow>
+                                      </mstyle>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mpadded height="+.5em" width="+.5em" voffset="-.15em">
+                                  <mstyle displaystyle="false" scriptlevel="0">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <msub>
+                                          <mo stretchy="false">→</mo>
+                                          <mi>E</mi>
+                                        </msub>
+                                      </mrow>
+                                    </mrow>
+                                  </mstyle>
+                                </mpadded>
+                              </mrow>
+                            </mtd>
+                            <mtd>
+                              <mspace width=".5em"></mspace>
+                            </mtd>
+                            <mtd rowalign="bottom">
+                              <mrow>
+                                <mtable align="top 2" rowlines="solid" framespacing="0 0">
+                                  <mtr>
+                                    <mtd>
+                                      <mtable framespacing="0 0">
+                                        <mtr>
+                                          <mtd rowalign="bottom">
+                                            <mstyle displaystyle="false" scriptlevel="0">
+                                              <mrow class="MJX-TeXAtom-ORD">
+                                                <mi>Q</mi>
+                                              </mrow>
+                                            </mstyle>
+                                          </mtd>
+                                        </mtr>
+                                      </mtable>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr>
+                                    <mtd>
+                                      <mstyle displaystyle="false" scriptlevel="0">
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi>Q</mi>
+                                        </mrow>
+                                      </mstyle>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mpadded height="+.5em" width="+.5em" voffset="-.15em">
+                                  <mstyle displaystyle="false" scriptlevel="0">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <msup>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mstyle displaystyle="false" scriptlevel="1">
+                                            <mi>R</mi>
+                                            <mi>i</mi>
+                                            <mi>t</mi>
+                                          </mstyle>
+                                        </mrow>
+                                        <mn>2</mn>
+                                      </msup>
+                                    </mrow>
+                                  </mstyle>
+                                </mpadded>
+                              </mrow>
+                            </mtd>
+                          </mtr>
+                        </mtable>
+                      </mtd>
+                    </mtr>
+                    <mtr>
+                      <mtd>
+                        <mstyle displaystyle="false" scriptlevel="0">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>Q</mi>
+                            <mo>∧</mo>
+                            <mi>R</mi>
+                          </mrow>
+                        </mstyle>
+                      </mtd>
+                    </mtr>
+                  </mtable>
+                  <mpadded height="+.5em" width="+.5em" voffset="-.15em">
+                    <mstyle displaystyle="false" scriptlevel="0">
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <msub>
+                            <mo>∧</mo>
+                            <mi>I</mi>
+                          </msub>
+                        </mrow>
+                      </mrow>
+                    </mstyle>
+                  </mpadded>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mstyle displaystyle="false" scriptlevel="0">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>P</mi>
+              <mo stretchy="false">→</mo>
+              <mi>Q</mi>
+              <mo>∧</mo>
+              <mi>R</mi>
+            </mrow>
+          </mstyle>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mpadded height="+.5em" width="+.5em" voffset="-.15em">
+      <mstyle displaystyle="false" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msup>
+            <mrow class="MJX-TeXAtom-ORD">
+              <msub>
+                <mo stretchy="false">→</mo>
+                <mi>I</mi>
+              </msub>
+            </mrow>
+            <mn>1</mn>
+          </msup>
+        </mrow>
+      </mstyle>
+    </mpadded>
+  </mrow>
+</math>

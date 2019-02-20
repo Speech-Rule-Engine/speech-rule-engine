@@ -180,10 +180,6 @@ sre.System.prototype.configBlocks_ = function(feature) {
 //
 // Output for the file version are strings.
 //
-// Deprecated:
-//  processExpression: same as toSpeech.
-//  processFile: same as fileToSpeech.
-//
 //TODO: (sorge) Need an async versions of these.
 /**
  * Main function to translate expressions into auditory descriptions.
@@ -218,17 +214,13 @@ sre.System.prototype.toSemantic = function(expr) {
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
- *
- * WARNING: API only works with Node!
  * @param {string} expr Processes a given MathML expression for translation.
  * @return {JSONType} The semantic tree as Json.
  */
 sre.System.prototype.toJson = function(expr) {
-  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
-    throw new sre.System.Error('JSON translation not possible in browser.');
-  }
-  var stree = sre.System.getInstance().parseExpression_(expr, true);
-  return stree ? sre.SystemExternal.xm.tojson(stree.toString()) : {};
+  var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
+  var stree = sre.Semantic.getTree(mml);
+  return stree.toJson();
 };
 
 
@@ -309,15 +301,14 @@ sre.System.prototype.fileToSemantic = function(input, opt_output) {
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree to
  * a file.
- *
- * WARNING: API only works with Node!
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToJson = function(input, opt_output) {
   sre.System.getInstance().processFile_(
       function(x) {
-        return JSON.stringify(sre.System.getInstance().toJson(x));
+        return opt_output ? JSON.stringify(sre.System.getInstance().toJson(x))
+          : sre.System.getInstance().toJson(x);
       },
       input, opt_output);
 };

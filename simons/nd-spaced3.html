@@ -1,0 +1,140 @@
+<html> <head>
+<title></title>
+<style>
+#output {
+  border: 1px solid black;
+  padding: 10px;
+  width: auto;
+  min-width: 50%;
+  display: inline-block;
+  font-size: 200%;
+}
+#container {
+  display: inline-block;
+  text-align: right;
+}
+</style><script src="v3/lib/traceur.min.js"></script>
+<script src="v3/lib/system.js"></script>
+<script>
+(function () {
+  var args = (location.search.substr(1) || 'main.js').split(/&/);
+  var argv = ['browser','load.html'].concat(args.map(x => decodeURIComponent(x)));
+  window.process = {argv: argv};
+  System.import('v3/samples/mml-doc.js')
+    .catch(function (error) {console.log(error.message)});
+})();
+</script>
+<div id="output">
+<math display="block">
+  <mrow semantics="bspr_labelledRule:right;bspr_inference:2;bspr_proof:true">
+      <mspace width="1.418em"></mspace>
+      <mtable align="top 2" rowlines="solid" framespacing="0 0" semantics="bspr_inferenceRule:down">
+        <mtr>
+          <mtd>
+            <mtable framespacing="0 0">
+              <mtr>
+                <mtd rowalign="bottom">
+                  <mrow semantics="bspr_labelledRule:right;bspr_inference:2">
+                      <mspace width="-1.418em"></mspace>
+                      <mtable align="top 2" rowlines="solid" framespacing="0 0" semantics="bspr_inferenceRule:down">
+                        <mtr>
+                          <mtd>
+                            <mtable framespacing="0 0">
+                              <mtr>
+                                <mtd rowalign="bottom">
+                                  <mstyle displaystyle="false" scriptlevel="0">
+                                    <mtext>D</mtext>
+                                  </mstyle>
+                                </mtd>
+                                <mtd>
+
+                                </mtd>
+                                <mtd rowalign="bottom">
+                                  <mstyle displaystyle="false" scriptlevel="0">
+                                    <mtext>A1</mtext>
+                                  </mstyle>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <mstyle displaystyle="false" scriptlevel="0">
+                              <mtext>Q</mtext>
+                            </mstyle>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    <mpadded height="+.5em" width="+.5em" voffset="-.15em" semantics="bspr_prooflabel:right">
+                      <mstyle displaystyle="false" scriptlevel="0">
+                        <mtext>AAAA</mtext>
+                      </mstyle>
+                    </mpadded>
+                  </mrow>
+                </mtd>
+                <mtd>
+
+                </mtd>
+                <mtd rowalign="bottom">
+                  <mrow semantics="bspr_labelledRule:right;bspr_inference:2">
+                    <mtable align="top 2" rowlines="solid" framespacing="0 0" semantics="bspr_inferenceRule:down">
+                      <mtr>
+                        <mtd>
+                          <mtable framespacing="0 0">
+                            <mtr>
+                              <mtd rowalign="bottom">
+                                <mstyle displaystyle="false" scriptlevel="0">
+                                  <mtext>D2</mtext>
+                                </mstyle>
+                              </mtd>
+                              <mtd>
+
+                              </mtd>
+                              <mtd rowalign="bottom">
+                                <mstyle displaystyle="false" scriptlevel="0">
+                                  <mtext>A2</mtext>
+                                </mstyle>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mstyle displaystyle="false" scriptlevel="0">
+                            <mtext>E</mtext>
+                          </mstyle>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mpadded height="+.5em" width="+.5em" voffset="-.15em" semantics="bspr_prooflabel:right">
+                      <mstyle displaystyle="false" scriptlevel="0">
+                        <mtext>BBB</mtext>
+                      </mstyle>
+                    </mpadded>
+                    <mspace width="-4.3405em"></mspace>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mstyle displaystyle="false" scriptlevel="0">
+              <mtext>R</mtext>
+            </mstyle>
+          </mtd>
+        </mtr>
+      </mtable>
+    <mpadded height="+.5em" width="+.5em" voffset="-.15em" semantics="bspr_prooflabel:right">
+      <mstyle displaystyle="false" scriptlevel="0">
+        <mtext>QERE</mtext>
+      </mstyle>
+    </mpadded>
+    <mspace width="4.3405em"></mspace>
+  </mrow>
+</math>
+</div>
+</body> </html>
