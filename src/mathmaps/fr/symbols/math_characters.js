@@ -24,7 +24,7 @@
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "d majuscule"
+        "default": "D majuscule"
       }
     },
     "category": "Lu"

@@ -6,7 +6,7 @@
     "key": "1E08",
     "mappings": {
       "default": {
-        "default": "c cédille et accent aigu majuscule"
+        "default": "C cédille et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "1E14",
     "mappings": {
       "default": {
-        "default": "e macron et accent grave majuscule"
+        "default": "E macron et accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "1E16",
     "mappings": {
       "default": {
-        "default": "e macron et accent aigu majuscule"
+        "default": "E macron et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "1E1C",
     "mappings": {
       "default": {
-        "default": "e cédille et brève majuscule"
+        "default": "E cédille et brève majuscule"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "1E2E",
     "mappings": {
       "default": {
-        "default": "i tréma et accent aigu majuscule"
+        "default": "I tréma et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "1E38",
     "mappings": {
       "default": {
-        "default": "l point souscrit et macron majuscule"
+        "default": "L point souscrit et macron majuscule"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "1E4C",
     "mappings": {
       "default": {
-        "default": "o tilde et accent aigu majuscule"
+        "default": "O tilde et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "1E4E",
     "mappings": {
       "default": {
-        "default": "o tilde et tréma majuscule"
+        "default": "O tilde et tréma majuscule"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "1E50",
     "mappings": {
       "default": {
-        "default": "o macron et accent grave majuscule"
+        "default": "O macron et accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "1E52",
     "mappings": {
       "default": {
-        "default": "o macron et accent aigu majuscule"
+        "default": "O macron et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "1E5C",
     "mappings": {
       "default": {
-        "default": "r point souscrit et macron majuscule"
+        "default": "R point souscrit et macron majuscule"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "1E64",
     "mappings": {
       "default": {
-        "default": "s accent aigu et point en chef majuscule"
+        "default": "S accent aigu et point en chef majuscule"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "1E66",
     "mappings": {
       "default": {
-        "default": "s caron et point en chef majuscule"
+        "default": "S caron et point en chef majuscule"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1E68",
     "mappings": {
       "default": {
-        "default": "s point souscrit et point en chef majuscule"
+        "default": "S point souscrit et point en chef majuscule"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "1E78",
     "mappings": {
       "default": {
-        "default": "u tilde et accent aigu majuscule"
+        "default": "U tilde et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "1E7A",
     "mappings": {
       "default": {
-        "default": "u macron et tréma majuscule"
+        "default": "U macron et tréma majuscule"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1EA4",
     "mappings": {
       "default": {
-        "default": "a accent circonflexe et accent aigu majuscule"
+        "default": "A accent circonflexe et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "1EA6",
     "mappings": {
       "default": {
-        "default": "a accent circonflexe et accent grave majuscule"
+        "default": "A accent circonflexe et accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "1EA8",
     "mappings": {
       "default": {
-        "default": "a accent circonflexe et crochet en chef majuscule"
+        "default": "A accent circonflexe et crochet en chef majuscule"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1EAA",
     "mappings": {
       "default": {
-        "default": "a accent circonflexe et tilde majuscule"
+        "default": "A accent circonflexe et tilde majuscule"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1EAC",
     "mappings": {
       "default": {
-        "default": "a accent circonflexe et point souscrit majuscule"
+        "default": "A accent circonflexe et point souscrit majuscule"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1EAE",
     "mappings": {
       "default": {
-        "default": "a brève et accent aigu majuscule"
+        "default": "A brève et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "1EB0",
     "mappings": {
       "default": {
-        "default": "a brève et accent grave majuscule"
+        "default": "A brève et accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "1EB2",
     "mappings": {
       "default": {
-        "default": "a brève et crochet en chef majuscule"
+        "default": "A brève et crochet en chef majuscule"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "1EB4",
     "mappings": {
       "default": {
-        "default": "a brève et tilde majuscule"
+        "default": "A brève et tilde majuscule"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "1EB6",
     "mappings": {
       "default": {
-        "default": "a brève et point souscrit majuscule"
+        "default": "A brève et point souscrit majuscule"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1EBE",
     "mappings": {
       "default": {
-        "default": "e accent circonflexe et accent aigu majuscule"
+        "default": "E accent circonflexe et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -249,7 +249,7 @@
     "key": "1EC0",
     "mappings": {
       "default": {
-        "default": "e accent circonflexe et accent grave majuscule"
+        "default": "E accent circonflexe et accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -258,7 +258,7 @@
     "key": "1EC2",
     "mappings": {
       "default": {
-        "default": "e accent circonflexe et crochet en chef majuscule"
+        "default": "E accent circonflexe et crochet en chef majuscule"
       }
     },
     "category": "Lu"
@@ -267,7 +267,7 @@
     "key": "1EC4",
     "mappings": {
       "default": {
-        "default": "e accent circonflexe et tilde majuscule"
+        "default": "E accent circonflexe et tilde majuscule"
       }
     },
     "category": "Lu"
@@ -276,7 +276,7 @@
     "key": "1EC6",
     "mappings": {
       "default": {
-        "default": "e accent circonflexe et point souscrit majuscule"
+        "default": "E accent circonflexe et point souscrit majuscule"
       }
     },
     "category": "Lu"
@@ -285,7 +285,7 @@
     "key": "1ED0",
     "mappings": {
       "default": {
-        "default": "o accent circonflexe et accent aigu majuscule"
+        "default": "O accent circonflexe et accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -294,7 +294,7 @@
     "key": "1ED2",
     "mappings": {
       "default": {
-        "default": "o accent circonflexe et accent grave majuscule"
+        "default": "O accent circonflexe et accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -303,7 +303,7 @@
     "key": "1ED4",
     "mappings": {
       "default": {
-        "default": "o accent circonflexe et crochet en chef majuscule"
+        "default": "O accent circonflexe et crochet en chef majuscule"
       }
     },
     "category": "Lu"
@@ -312,7 +312,7 @@
     "key": "1ED6",
     "mappings": {
       "default": {
-        "default": "o accent circonflexe et tilde majuscule"
+        "default": "O accent circonflexe et tilde majuscule"
       }
     },
     "category": "Lu"
@@ -321,7 +321,7 @@
     "key": "1ED8",
     "mappings": {
       "default": {
-        "default": "o accent circonflexe et point souscrit majuscule"
+        "default": "O accent circonflexe et point souscrit majuscule"
       }
     },
     "category": "Lu"
@@ -330,7 +330,7 @@
     "key": "1EDA",
     "mappings": {
       "default": {
-        "default": "o cornu accent aigu majuscule"
+        "default": "O cornu accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -339,7 +339,7 @@
     "key": "1EDC",
     "mappings": {
       "default": {
-        "default": "o cornu accent grave majuscule"
+        "default": "O cornu accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -348,7 +348,7 @@
     "key": "1EDE",
     "mappings": {
       "default": {
-        "default": "o cornu crochet en chef majuscule"
+        "default": "O cornu crochet en chef majuscule"
       }
     },
     "category": "Lu"
@@ -357,7 +357,7 @@
     "key": "1EE0",
     "mappings": {
       "default": {
-        "default": "o cornu tilde majuscule"
+        "default": "O cornu tilde majuscule"
       }
     },
     "category": "Lu"
@@ -366,7 +366,7 @@
     "key": "1EE2",
     "mappings": {
       "default": {
-        "default": "o cornu point souscrit majuscule"
+        "default": "O cornu point souscrit majuscule"
       }
     },
     "category": "Lu"
@@ -375,7 +375,7 @@
     "key": "1EE8",
     "mappings": {
       "default": {
-        "default": "u cornu accent aigu majuscule"
+        "default": "U cornu accent aigu majuscule"
       }
     },
     "category": "Lu"
@@ -384,7 +384,7 @@
     "key": "1EEA",
     "mappings": {
       "default": {
-        "default": "u cornu accent grave majuscule"
+        "default": "U cornu accent grave majuscule"
       }
     },
     "category": "Lu"
@@ -393,7 +393,7 @@
     "key": "1EEC",
     "mappings": {
       "default": {
-        "default": "u cornu crochet en chef majuscule"
+        "default": "U cornu crochet en chef majuscule"
       }
     },
     "category": "Lu"
@@ -402,7 +402,7 @@
     "key": "1EEE",
     "mappings": {
       "default": {
-        "default": "u cornu tilde majuscule"
+        "default": "U cornu tilde majuscule"
       }
     },
     "category": "Lu"
@@ -411,7 +411,7 @@
     "key": "1EF0",
     "mappings": {
       "default": {
-        "default": "u cornu point souscrit majuscule"
+        "default": "U cornu point souscrit majuscule"
       }
     },
     "category": "Lu"

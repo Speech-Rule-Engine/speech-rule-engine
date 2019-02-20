@@ -6,7 +6,7 @@
     "key": "0391",
     "mappings": {
       "default": {
-        "default": "alpha majuscule"
+        "default": "Alpha majuscule"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "0392",
     "mappings": {
       "default": {
-        "default": "bêta majuscule"
+        "default": "Bêta majuscule"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "0393",
     "mappings": {
       "default": {
-        "default": "gamma majuscule"
+        "default": "Gamma majuscule"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "0394",
     "mappings": {
       "default": {
-        "default": "delta majuscule"
+        "default": "Delta majuscule"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "0395",
     "mappings": {
       "default": {
-        "default": "epsilon majuscule"
+        "default": "Epsilon majuscule"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "0396",
     "mappings": {
       "default": {
-        "default": "zêta majuscule"
+        "default": "Zêta majuscule"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "0397",
     "mappings": {
       "default": {
-        "default": "êta majuscule"
+        "default": "Êta majuscule"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "0398",
     "mappings": {
       "default": {
-        "default": "thêta majuscule"
+        "default": "Thêta majuscule"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "0399",
     "mappings": {
       "default": {
-        "default": "iota majuscule"
+        "default": "Iota majuscule"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "039A",
     "mappings": {
       "default": {
-        "default": "kappa majuscule"
+        "default": "Kappa majuscule"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "039B",
     "mappings": {
       "default": {
-        "default": "lambda majuscule"
+        "default": "Lambda majuscule"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "039C",
     "mappings": {
       "default": {
-        "default": "mû majuscule"
+        "default": "Mû majuscule"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "039D",
     "mappings": {
       "default": {
-        "default": "nû majuscule"
+        "default": "Nû majuscule"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "039E",
     "mappings": {
       "default": {
-        "default": "xi majuscule"
+        "default": "Xi majuscule"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "039F",
     "mappings": {
       "default": {
-        "default": "omicron majuscule"
+        "default": "Omicron majuscule"
       }
     },
     "category": "Lu"
@@ -141,7 +141,7 @@
     "key": "03A0",
     "mappings": {
       "default": {
-        "default": "pi majuscule"
+        "default": "Pi majuscule"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "03A1",
     "mappings": {
       "default": {
-        "default": "rho majuscule"
+        "default": "Rho majuscule"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "03A3",
     "mappings": {
       "default": {
-        "default": "sigma majuscule"
+        "default": "Sigma majuscule"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "03A4",
     "mappings": {
       "default": {
-        "default": "tau majuscule"
+        "default": "Tau majuscule"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "03A5",
     "mappings": {
       "default": {
-        "default": "upsilon majuscule"
+        "default": "Upsilon majuscule"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "03A6",
     "mappings": {
       "default": {
-        "default": "phi majuscule"
+        "default": "Phi majuscule"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "03A7",
     "mappings": {
       "default": {
-        "default": "chi majuscule"
+        "default": "Chi majuscule"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "03A8",
     "mappings": {
       "default": {
-        "default": "psi majuscule"
+        "default": "Psi majuscule"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "03A9",
     "mappings": {
       "default": {
-        "default": "oméga majuscule"
+        "default": "Oméga majuscule"
       }
     },
     "category": "Lu"

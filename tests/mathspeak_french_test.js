@@ -144,9 +144,9 @@ sre.MathspeakFrenchTest.prototype.testSample_1_4_1 = function() {
  */
 sre.MathspeakFrenchTest.prototype.testSample_1_4_2 = function() {
   var mml = '<mrow><mn>#FF0000</mn></mrow>';
-  this.executeRuleTest(mml, 'nombre dièse f majuscule f majuscule 0 0 0 0', 'default');
-  this.executeRuleTest(mml, 'nombre dièse f majuscule f majuscule 0 0 0 0', 'brief');
-  this.executeRuleTest(mml, 'nombre dièse f majuscule f majuscule 0 0 0 0', 'sbrief');
+  this.executeRuleTest(mml, 'nombre dièse F majuscule F majuscule 0 0 0 0', 'default');
+  this.executeRuleTest(mml, 'nombre dièse F majuscule F majuscule 0 0 0 0', 'brief');
+  this.executeRuleTest(mml, 'nombre dièse F majuscule F majuscule 0 0 0 0', 'sbrief');
 };
 
 
@@ -156,9 +156,9 @@ sre.MathspeakFrenchTest.prototype.testSample_1_4_2 = function() {
 sre.MathspeakFrenchTest.prototype.testSample_1_4_3 = function() {
   var mml = '<mrow><mn>0x15FF</mn><mo>+</mo><mn>0x2B01</mn><mo>=</mo>' +
       '<mn>0x4100</mn></mrow>';
-  this.executeRuleTest(mml, 'nombre 0 x 1 5 f majuscule f majuscule plus nombre 0 x 2 b majuscule 0 1 égale nombre 0 x 4 1 0 0', 'default');
-  this.executeRuleTest(mml, 'nombre 0 x 1 5 f majuscule f majuscule plus nombre 0 x 2 b majuscule 0 1 égale nombre 0 x 4 1 0 0', 'brief');
-  this.executeRuleTest(mml, 'nombre 0 x 1 5 f majuscule f majuscule plus nombre 0 x 2 b majuscule 0 1 égale nombre 0 x 4 1 0 0', 'sbrief');
+  this.executeRuleTest(mml, 'nombre 0 x 1 5 F majuscule F majuscule plus nombre 0 x 2 B majuscule 0 1 égale nombre 0 x 4 1 0 0', 'default');
+  this.executeRuleTest(mml, 'nombre 0 x 1 5 F majuscule F majuscule plus nombre 0 x 2 B majuscule 0 1 égale nombre 0 x 4 1 0 0', 'brief');
+  this.executeRuleTest(mml, 'nombre 0 x 1 5 F majuscule F majuscule plus nombre 0 x 2 B majuscule 0 1 égale nombre 0 x 4 1 0 0', 'sbrief');
 };
 
 
@@ -168,11 +168,11 @@ sre.MathspeakFrenchTest.prototype.testSample_1_4_3 = function() {
 sre.MathspeakFrenchTest.prototype.testSample_1_5_1 = function() {
   var mml = '<mrow><mn>I</mn><mo>,</mo><mn>II</mn><mo>,</mo><mn>III</mn>' +
       '<mo>,</mo><mn>IV</mn><mo>,</mo><mn>V</mn><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'i majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule v majuscule point',
+  this.executeRuleTest(mml, 'I majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule V majuscule point',
                        'default');
-  this.executeRuleTest(mml, 'i majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule v majuscule point',
+  this.executeRuleTest(mml, 'I majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule V majuscule point',
                        'brief');
-  this.executeRuleTest(mml, 'i majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule v majuscule point',
+  this.executeRuleTest(mml, 'I majuscule virgule MotMajuscule I I virgule MotMajuscule I I I virgule MotMajuscule I V virgule V majuscule point',
                        'sbrief');
 };
 
@@ -185,9 +185,9 @@ sre.MathspeakFrenchTest.prototype.testSample_2_1_1 = function() {
       '<mi>X</mi><mo>-</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup>' +
       '<mo>-</mo><msup><mrow><mo>(</mo><mi>Y</mi><mo>-</mo><mi>y</mi>' +
       '<mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow>';
-  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche x majuscule moins x parenthèse droite au carré moins parenthèse gauche y majuscule moins y parenthèse droite au carré fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche x majuscule moins x parenthèse droite au carré moins parenthèse gauche y majuscule moins y parenthèse droite au carré fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'd égale racine carrée parenthèse gauche x majuscule moins x parenthèse droite au carré moins parenthèse gauche y majuscule moins y parenthèse droite au carré fin racine carrée', 'sbrief');
+  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche X majuscule moins x parenthèse droite au carré moins parenthèse gauche Y majuscule moins y parenthèse droite au carré fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'd égale début racine carrée parenthèse gauche X majuscule moins x parenthèse droite au carré moins parenthèse gauche Y majuscule moins y parenthèse droite au carré fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'd égale racine carrée parenthèse gauche X majuscule moins x parenthèse droite au carré moins parenthèse gauche Y majuscule moins y parenthèse droite au carré fin racine carrée', 'sbrief');
 };
 
 
@@ -200,11 +200,11 @@ sre.MathspeakFrenchTest.prototype.testSample_2_3_1 = function() {
       '<mspace width="4.pt"/><mi>B</mi><mo>→</mo><mi>C</mi>' +
       '<mspace width="4.pt"/><mtext>alors</mtext><mspace width="4.pt"/>' +
       '<mi>A</mi><mo>→</mo><mi>C</mi><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'Si a majuscule flèche droite b majuscule et b majuscule flèche droite c majuscule alors a majuscule flèche droite c majuscule point',
+  this.executeRuleTest(mml, 'Si A majuscule flèche droite B majuscule et B majuscule flèche droite C majuscule alors A majuscule flèche droite C majuscule point',
                        'default');
-  this.executeRuleTest(mml, 'Si a majuscule flèche droite b majuscule et b majuscule flèche droite c majuscule alors a majuscule flèche droite c majuscule point',
+  this.executeRuleTest(mml, 'Si A majuscule flèche droite B majuscule et B majuscule flèche droite C majuscule alors A majuscule flèche droite C majuscule point',
                        'brief');
-  this.executeRuleTest(mml, 'Si a majuscule flèche droite b majuscule et b majuscule flèche droite c majuscule alors a majuscule flèche droite c majuscule point',
+  this.executeRuleTest(mml, 'Si A majuscule flèche droite B majuscule et B majuscule flèche droite C majuscule alors A majuscule flèche droite C majuscule point',
                        'sbrief');
 };
 
@@ -229,10 +229,10 @@ sre.MathspeakFrenchTest.prototype.testSample_2_6_2 = function() {
       '<mi mathvariant="bold">l</mi><mo>=</mo><mo>-</mo><mfrac><mrow>' +
       '<mi>d</mi><mi>Φ</mi><mi>B</mi></mrow><mrow><mi>d</mi><mi>t</mi>' +
       '</mrow></mfrac></mrow>';
-  this.executeRuleTest(mml, 'intégrale de contour e majuscule point médian d l en gras égale négatif début fraction d phi majuscule b majuscule sur d t fin fraction',
+  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif début fraction d Phi majuscule B majuscule sur d t fin fraction',
                        'default');
-  this.executeRuleTest(mml, 'intégrale de contour e majuscule point médian d l en gras égale négatif début frac d phi majuscule b majuscule sur d t fin frac', 'brief');
-  this.executeRuleTest(mml, 'intégrale de contour e majuscule point médian d l en gras égale négatif frac d phi majuscule b majuscule sur  d t fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif début frac d Phi majuscule B majuscule sur d t fin frac', 'brief');
+  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif frac d Phi majuscule B majuscule sur  d t fin frac', 'sbrief');
 };
 
 
@@ -259,10 +259,10 @@ sre.MathspeakFrenchTest.prototype.testSample_4_2_1 = function() {
       '<mo>=</mo><mo>{</mo><mi>Α</mi><mo>,</mo><mi>Β</mi><mo>,</mo>' +
       '<mi>Γ</mi><mo>,</mo><mi>Δ</mi><mo>,</mo><mi>Ε</mi><mo>,</mo>' +
       '<mi>Φ</mi><mo>}</mo></mrow>';
-  this.executeRuleTest(mml, 'Majuscule parenthèse gauche début ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale début ensemble alpha majuscule virgule bêta majuscule virgule gamma majuscule virgule delta majuscule virgule epsilon majuscule virgule phi majuscule fin ensemble', 'default');
-  this.executeRuleTest(mml, 'Majuscule parenthèse gauche début ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale début ensemble alpha majuscule virgule bêta majuscule virgule gamma majuscule virgule delta majuscule virgule epsilon majuscule virgule phi majuscule fin ensemble',
+  this.executeRuleTest(mml, 'Majuscule parenthèse gauche début ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale début ensemble Alpha majuscule virgule Bêta majuscule virgule Gamma majuscule virgule Delta majuscule virgule Epsilon majuscule virgule Phi majuscule fin ensemble', 'default');
+  this.executeRuleTest(mml, 'Majuscule parenthèse gauche début ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale début ensemble Alpha majuscule virgule Bêta majuscule virgule Gamma majuscule virgule Delta majuscule virgule Epsilon majuscule virgule Phi majuscule fin ensemble',
                        'brief');
-  this.executeRuleTest(mml, 'Majuscule parenthèse gauche ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale ensemble alpha majuscule virgule bêta majuscule virgule gamma majuscule virgule delta majuscule virgule epsilon majuscule virgule phi majuscule fin ensemble', 'sbrief');
+  this.executeRuleTest(mml, 'Majuscule parenthèse gauche ensemble alpha virgule bêta virgule gamma virgule delta virgule epsilon virgule phi fin ensemble parenthèse droite égale ensemble Alpha majuscule virgule Bêta majuscule virgule Gamma majuscule virgule Delta majuscule virgule Epsilon majuscule virgule Phi majuscule fin ensemble', 'sbrief');
 };
 
 
@@ -585,9 +585,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_3_1 = function() {
 sre.MathspeakFrenchTest.prototype.testSample_8_3_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn>' +
       '</mrow></msub><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow>';
-  this.executeRuleTest(mml, 't majuscule indice n moins 1 position de base plus 5 égale 0', 'default');
-  this.executeRuleTest(mml, 't majuscule sub n moins 1 position de base plus 5 égale 0', 'brief');
-  this.executeRuleTest(mml, 't majuscule sub n moins 1 position de base plus 5 égale 0',
+  this.executeRuleTest(mml, 'T majuscule indice n moins 1 position de base plus 5 égale 0', 'default');
+  this.executeRuleTest(mml, 'T majuscule sub n moins 1 position de base plus 5 égale 0', 'brief');
+  this.executeRuleTest(mml, 'T majuscule sub n moins 1 position de base plus 5 égale 0',
                        'sbrief');
 };
 
@@ -734,10 +734,10 @@ sre.MathspeakFrenchTest.prototype.testSample_8_4_8 = function() {
   var mml = '<msup><mi>T</mi><mfenced separators="" open="(" close=")">' +
       '<msup><mi>x</mi><mi>a</mi></msup><mo>+</mo><msup><mi>y</mi>' +
       '<mi>b</mi></msup></mfenced></msup>';
-  this.executeRuleTest(mml, 't majuscule exposant parenthèse gauche x sup-exposant a sup plus y sup-exposant b sup parenthèse droite',
+  this.executeRuleTest(mml, 'T majuscule exposant parenthèse gauche x sup-exposant a sup plus y sup-exposant b sup parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, 't majuscule sup parenthèse gauche x sup-sup a sup plus y sup-sup b sup parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 't majuscule sup parenthèse gauche x sup-sup a sup plus y sup-sup b sup parenthèse droite', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule sup parenthèse gauche x sup-sup a sup plus y sup-sup b sup parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'T majuscule sup parenthèse gauche x sup-sup a sup plus y sup-sup b sup parenthèse droite', 'sbrief');
 };
 
 
@@ -796,11 +796,11 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_5 = function() {
   var mml = '<mrow><mn>4</mn><mi>Fe</mi><mo>+</mo><mn>3</mn><msub>' +
       '<mi>O</mi><mn>2</mn></msub><mo>→</mo><mn>2</mn><msub><mi>Fe</mi>' +
       '<mn>2</mn></msub><msub><mi>O</mi><mn>3</mn></msub></mrow>';
-  this.executeRuleTest(mml, '4 f majuscule e plus 3 o majuscule indice 2 position de base flèche droite 2 f majuscule e indice 2 position de base o majuscule indice 3',
+  this.executeRuleTest(mml, '4 F majuscule e plus 3 O majuscule indice 2 position de base flèche droite 2 F majuscule e indice 2 position de base O majuscule indice 3',
                        'default');
-  this.executeRuleTest(mml, '4 f majuscule e plus 3 o majuscule 2 flèche droite 2 f majuscule e 2 o majuscule 3',
+  this.executeRuleTest(mml, '4 F majuscule e plus 3 O majuscule 2 flèche droite 2 F majuscule e 2 O majuscule 3',
                        'brief');
-  this.executeRuleTest(mml, '4 f majuscule e plus 3 o majuscule 2 flèche droite 2 f majuscule e 2 o majuscule 3',
+  this.executeRuleTest(mml, '4 F majuscule e plus 3 O majuscule 2 flèche droite 2 F majuscule e 2 O majuscule 3',
                        'sbrief');
 };
 
@@ -823,10 +823,10 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_6 = function() {
 sre.MathspeakFrenchTest.prototype.testSample_8_5_7 = function() {
   var mml = '<msub><mi>T</mi><mrow><msub><mi>n</mi><mn>1</mn></msub>' +
       '<mo>+</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msub>';
-  this.executeRuleTest(mml, 't majuscule indice n sub-indice 1 sub plus n sub-indice 0', 'default');
-  this.executeRuleTest(mml, 't majuscule sub n 1 plus n 0',
+  this.executeRuleTest(mml, 'T majuscule indice n sub-indice 1 sub plus n sub-indice 0', 'default');
+  this.executeRuleTest(mml, 'T majuscule sub n 1 plus n 0',
                        'brief');
-  this.executeRuleTest(mml, 't majuscule sub n 1 plus n 0',
+  this.executeRuleTest(mml, 'T majuscule sub n 1 plus n 0',
                        'sbrief');
 };
 
@@ -852,9 +852,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_8 = function() {
  */
 sre.MathspeakFrenchTest.prototype.testSample_8_5_9 = function() {
   var mml = '<msub><mi>Φ</mi><mn>5</mn></msub>';
-  this.executeRuleTest(mml, 'phi majuscule indice 5', 'default');
-  this.executeRuleTest(mml, 'phi majuscule 5', 'brief');
-  this.executeRuleTest(mml, 'phi majuscule 5', 'sbrief');
+  this.executeRuleTest(mml, 'Phi majuscule indice 5', 'default');
+  this.executeRuleTest(mml, 'Phi majuscule 5', 'brief');
+  this.executeRuleTest(mml, 'Phi majuscule 5', 'sbrief');
 };
 
 
@@ -1128,12 +1128,12 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDFracR =
  */
 sre.MathspeakFrenchTest.prototype.testSampleSimpleSquare = function() {
   var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>2</mn></msubsup>';
-  this.executeRuleTest(mml, 't majuscule indice 0 au carré', 'default');
+  this.executeRuleTest(mml, 'T majuscule indice 0 au carré', 'default');
   mml = '<msup><msub><mi>T</mi><mn>0</mn></msub><mn>2</mn></msup>';
-  this.executeRuleTest(mml, 't majuscule indice 0 position de base au carré',
+  this.executeRuleTest(mml, 'T majuscule indice 0 position de base au carré',
                        'default');
-  this.executeRuleTest(mml, 't majuscule 0 au carré', 'brief');
-  this.executeRuleTest(mml, 't majuscule 0 au carré', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule 0 au carré', 'brief');
+  this.executeRuleTest(mml, 'T majuscule 0 au carré', 'sbrief');
 };
 
 
@@ -1142,12 +1142,12 @@ sre.MathspeakFrenchTest.prototype.testSampleSimpleSquare = function() {
  */
 sre.MathspeakFrenchTest.prototype.testSampleSimpleCube = function() {
   var mml = '<msubsup><mi>T</mi><mn>0</mn><mn>3</mn></msubsup>';
-  this.executeRuleTest(mml, 't majuscule indice 0 cubique', 'default');
+  this.executeRuleTest(mml, 'T majuscule indice 0 cubique', 'default');
   mml = '<msup><msub><mi>T</mi><mn>0</mn></msub><mn>3</mn></msup>';
-  this.executeRuleTest(mml, 't majuscule indice 0 position de base cubique',
+  this.executeRuleTest(mml, 'T majuscule indice 0 position de base cubique',
                        'default');
-  this.executeRuleTest(mml, 't majuscule 0 cubique', 'brief');
-  this.executeRuleTest(mml, 't majuscule 0 cubique', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule 0 cubique', 'brief');
+  this.executeRuleTest(mml, 'T majuscule 0 cubique', 'sbrief');
 };
 
 
@@ -1157,10 +1157,10 @@ sre.MathspeakFrenchTest.prototype.testSampleSimpleCube = function() {
 sre.MathspeakFrenchTest.prototype.testSample_8_8_2 = function() {
   var mml = '<msubsup><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>' +
       '<mn>2</mn></msubsup>';
-  this.executeRuleTest(mml, 't majuscule indice n moins 1 exposant 2',
+  this.executeRuleTest(mml, 'T majuscule indice n moins 1 exposant 2',
                        'default');
-  this.executeRuleTest(mml, 't majuscule sub n moins 1 sup 2', 'brief');
-  this.executeRuleTest(mml, 't majuscule sub n moins 1 sup 2', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule sub n moins 1 sup 2', 'brief');
+  this.executeRuleTest(mml, 'T majuscule sub n moins 1 sup 2', 'sbrief');
 };
 
 
@@ -1219,9 +1219,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_10_2 = function() {
  */
 sre.MathspeakFrenchTest.prototype.testSample_8_10_3 = function() {
   var mml = '<msubsup><mi>T</mi><mi>n</mi><mo>\'</mo></msubsup>';
-  this.executeRuleTest(mml, 't majuscule prime indice n', 'default');
-  this.executeRuleTest(mml, 't majuscule prime sub n', 'brief');
-  this.executeRuleTest(mml, 't majuscule prime sub n', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule prime indice n', 'default');
+  this.executeRuleTest(mml, 'T majuscule prime sub n', 'brief');
+  this.executeRuleTest(mml, 'T majuscule prime sub n', 'sbrief');
 };
 
 
@@ -1287,9 +1287,9 @@ sre.MathspeakFrenchTest.prototype.testSample_8_13_1 = function() {
 sre.MathspeakFrenchTest.prototype.testSample_8_13_2 = function() {
   var mml = '<mrow><msub><mi>T</mi><mi>n</mi></msub><mmultiscripts><mi>y</mi>' +
       '<mprescripts/><mi>a</mi></mmultiscripts></mrow>';
-  this.executeRuleTest(mml, 't majuscule indice n position de base indice gauche a position de base y', 'default');
-  this.executeRuleTest(mml, 't majuscule sub n position de base sub a position de base y', 'brief');
-  this.executeRuleTest(mml, 't majuscule sub n position de base sub a position de base y', 'sbrief');
+  this.executeRuleTest(mml, 'T majuscule indice n position de base indice gauche a position de base y', 'default');
+  this.executeRuleTest(mml, 'T majuscule sub n position de base sub a position de base y', 'brief');
+  this.executeRuleTest(mml, 'T majuscule sub n position de base sub a position de base y', 'sbrief');
 };
 
 
@@ -1776,9 +1776,9 @@ sre.MathspeakFrenchTest.prototype.testSample_14_1_1 = function() {
       '<mtext>fluorine</mtext></mtd><mtd/><mtd><mrow>' +
       '<mtext>hydrogen</mtext><mspace width="4.pt"/>' +
       '<mtext>fluoride</mtext></mrow></mtd></mtr></mtable>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne h majuscule indice 2 2e colonne plus 3e colonne f majuscule indice 2 4e colonne flèche droite 5e colonne 2 h majuscule f majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne h majuscule 2 2e colonne plus 3e colonne f majuscule 2 4e colonne flèche droite 5e colonne 2 h majuscule f majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne h majuscule 2 2e colonne plus 3e colonne f majuscule 2 4e colonne flèche droite 5e colonne 2 h majuscule f majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne H majuscule indice 2 2e colonne plus 3e colonne F majuscule indice 2 4e colonne flèche droite 5e colonne 2 H majuscule F majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne H majuscule 2 2e colonne plus 3e colonne F majuscule 2 4e colonne flèche droite 5e colonne 2 H majuscule F majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne H majuscule 2 2e colonne plus 3e colonne F majuscule 2 4e colonne flèche droite 5e colonne 2 H majuscule F majuscule 2e rangée 1re colonne hydrogen 2e colonne vide 3e colonne fluorine 4e colonne vide 5e colonne hydrogen fluoride fin tableau', 'sbrief');
 };
 
 

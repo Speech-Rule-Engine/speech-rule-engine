@@ -6,7 +6,7 @@
     "key": "24C8",
     "mappings": {
       "default": {
-        "default": "s majuscule cerclée"
+        "default": "S majuscule cerclée"
       }
     },
     "category": "So"

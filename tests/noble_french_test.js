@@ -343,9 +343,9 @@ sre.NobleFrenchTest.prototype.testSample_18 = function() {
       '<mi>m</mi><mo>&#x2220;</mo><mi>M</mi><mo>+</mo><mi>m</mi>' +
       '<mo>&#x2220;</mo><mi>N</mi><mo>=</mo>' +
       '<mi>180°</mi>  </mrow>';
-  this.executeRuleTest(mml, 'm angle m majuscule plus m angle n majuscule égale 180 degrés', 'default');
-  this.executeRuleTest(mml, 'm angle m majuscule plus m angle n majuscule égale 180 degrés', 'brief');
-  this.executeRuleTest(mml, 'm angle m majuscule plus m angle n majuscule égale 180 degrés', 'sbrief');
+  this.executeRuleTest(mml, 'm angle M majuscule plus m angle N majuscule égale 180 degrés', 'default');
+  this.executeRuleTest(mml, 'm angle M majuscule plus m angle N majuscule égale 180 degrés', 'brief');
+  this.executeRuleTest(mml, 'm angle M majuscule plus m angle N majuscule égale 180 degrés', 'sbrief');
 };
 
 
@@ -360,9 +360,9 @@ sre.NobleFrenchTest.prototype.testSample_19 = function() {
       '</mfrac>' +
       '<mi>b</mi><mi>h</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'a majuscule égale un-demi b h', 'default');
-  this.executeRuleTest(mml, 'a majuscule égale un-demi b h', 'brief');
-  this.executeRuleTest(mml, 'a majuscule égale un-demi b h', 'sbrief');
+  this.executeRuleTest(mml, 'A majuscule égale un-demi b h', 'default');
+  this.executeRuleTest(mml, 'A majuscule égale un-demi b h', 'brief');
+  this.executeRuleTest(mml, 'A majuscule égale un-demi b h', 'sbrief');
 };
 
 
@@ -509,9 +509,9 @@ sre.NobleFrenchTest.prototype.testSample_26 = function() {
       '<mo stretchy="true">&#x2194;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'suscrire b majuscule c majuscule avec flèche bilatérale', 'default');
-  this.executeRuleTest(mml, 'suscrire b majuscule c majuscule avec flèche bilatérale', 'brief');
-  this.executeRuleTest(mml, 'suscrire b majuscule c majuscule avec flèche bilatérale', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire B majuscule C majuscule avec flèche bilatérale', 'default');
+  this.executeRuleTest(mml, 'suscrire B majuscule C majuscule avec flèche bilatérale', 'brief');
+  this.executeRuleTest(mml, 'suscrire B majuscule C majuscule avec flèche bilatérale', 'sbrief');
 };
 
 
@@ -527,9 +527,9 @@ sre.NobleFrenchTest.prototype.testSample_27 = function() {
       '<mo stretchy="true">&#x2192;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'suscrire p majuscule q majuscule avec flèche droite', 'default');
-  this.executeRuleTest(mml, 'suscrire p majuscule q majuscule avec flèche droite', 'brief');
-  this.executeRuleTest(mml, 'suscrire p majuscule q majuscule avec flèche droite', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire P majuscule Q majuscule avec flèche droite', 'default');
+  this.executeRuleTest(mml, 'suscrire P majuscule Q majuscule avec flèche droite', 'brief');
+  this.executeRuleTest(mml, 'suscrire P majuscule Q majuscule avec flèche droite', 'sbrief');
 };
 
 
@@ -545,9 +545,9 @@ sre.NobleFrenchTest.prototype.testSample_28 = function() {
       '<mo stretchy="true">&#x00AF;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'suscrire g majuscule h majuscule avec macron', 'default');
-  this.executeRuleTest(mml, 'suscrire g majuscule h majuscule avec macron', 'brief');
-  this.executeRuleTest(mml, 'suscrire g majuscule h majuscule avec macron', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire G majuscule H majuscule avec macron', 'default');
+  this.executeRuleTest(mml, 'suscrire G majuscule H majuscule avec macron', 'brief');
+  this.executeRuleTest(mml, 'suscrire G majuscule H majuscule avec macron', 'sbrief');
 };
 
 
@@ -569,10 +569,10 @@ sre.NobleFrenchTest.prototype.testSample_29 = function() {
       '<mo stretchy="true">&#x00AF;</mo>' +
       '</mover>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'suscrire w majuscule x majuscule avec macron approximativement égal à suscrire y majuscule z majuscule avec macron',
+  this.executeRuleTest(mml, 'suscrire W majuscule X majuscule avec macron approximativement égal à suscrire Y majuscule Z majuscule avec macron',
                        'default');
-  this.executeRuleTest(mml, 'suscrire w majuscule x majuscule avec macron approximativement égal à suscrire y majuscule z majuscule avec macron', 'brief');
-  this.executeRuleTest(mml, 'suscrire w majuscule x majuscule avec macron approximativement égal à suscrire y majuscule z majuscule avec macron', 'sbrief');
+  this.executeRuleTest(mml, 'suscrire W majuscule X majuscule avec macron approximativement égal à suscrire Y majuscule Z majuscule avec macron', 'brief');
+  this.executeRuleTest(mml, 'suscrire W majuscule X majuscule avec macron approximativement égal à suscrire Y majuscule Z majuscule avec macron', 'sbrief');
 };
 
 
@@ -583,11 +583,11 @@ sre.NobleFrenchTest.prototype.testSample_30 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'angle b majuscule e majuscule f majuscule',
+  this.executeRuleTest(mml, 'angle B majuscule E majuscule F majuscule',
                        'default');
-  this.executeRuleTest(mml, 'angle b majuscule e majuscule f majuscule',
+  this.executeRuleTest(mml, 'angle B majuscule E majuscule F majuscule',
                        'brief');
-  this.executeRuleTest(mml, 'angle b majuscule e majuscule f majuscule',
+  this.executeRuleTest(mml, 'angle B majuscule E majuscule F majuscule',
                        'sbrief');
 };
 
@@ -599,11 +599,11 @@ sre.NobleFrenchTest.prototype.testSample_31 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>B</mi><mi>E</mi><mi>D</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'angle b majuscule e majuscule d majuscule',
+  this.executeRuleTest(mml, 'angle B majuscule E majuscule D majuscule',
                        'default');
-  this.executeRuleTest(mml, 'angle b majuscule e majuscule d majuscule',
+  this.executeRuleTest(mml, 'angle B majuscule E majuscule D majuscule',
                        'brief');
-  this.executeRuleTest(mml, 'angle b majuscule e majuscule d majuscule',
+  this.executeRuleTest(mml, 'angle B majuscule E majuscule D majuscule',
                        'sbrief');
 };
 
@@ -615,11 +615,11 @@ sre.NobleFrenchTest.prototype.testSample_32 = function() {
   var mml = '<mrow>' +
       '<mo>&#x2220;</mo><mi>D</mi><mi>E</mi><mi>F</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'angle d majuscule e majuscule f majuscule',
+  this.executeRuleTest(mml, 'angle D majuscule E majuscule F majuscule',
                        'default');
-  this.executeRuleTest(mml, 'angle d majuscule e majuscule f majuscule',
+  this.executeRuleTest(mml, 'angle D majuscule E majuscule F majuscule',
                        'brief');
-  this.executeRuleTest(mml, 'angle d majuscule e majuscule f majuscule',
+  this.executeRuleTest(mml, 'angle D majuscule E majuscule F majuscule',
                        'sbrief');
 };
 
@@ -962,9 +962,9 @@ sre.NobleFrenchTest.prototype.testSample_55 = function() {
       '</mn></mrow></munder><munder><mo>&#x22C3;</mo><mrow><mi>k</mi>' +
       '<mo>&#x2265;</mo><mi>n</mi></mrow></munder><msub><mi>E</mi><mrow>' +
       '<mi>k</mi></mrow></msub><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts e majuscule indice n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts e majuscule indice k position de base virgule limsup début souscript n flèche droite infini fin scripts e majuscule indice n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts e majuscule indice k position de base point', 'default');
-  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base point', 'brief');
-  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts e majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts e majuscule sub k position de base point', 'sbrief');
+  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts E majuscule indice n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule indice k position de base virgule limsup début souscript n flèche droite infini fin scripts E majuscule indice n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule indice k position de base point', 'default');
+  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base point', 'brief');
+  this.executeRuleTest(mml, 'liminf début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale réunion de la famille début souscript n plus grand ou égal à 1 fin scripts intersection de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base virgule limsup début souscript n flèche droite infini fin scripts E majuscule sub n position de base égale intersection de la famille début souscript n plus grand ou égal à 1 fin scripts réunion de la famille début souscript k plus grand ou égal à n fin scripts E majuscule sub k position de base point', 'sbrief');
 };
 
 
@@ -991,9 +991,9 @@ sre.NobleFrenchTest.prototype.testSample_56 = function() {
       '<mi>E</mi><mrow><mn>1</mn></mrow></msub><mo>&#x222A;</mo><msub>' +
       '<mi>E</mi><mrow><mn>2</mn></mrow></msub><mo>&#x2208;</mo>' +
       '<mi>&#x1D49C;</mi><mo>.</mo></mrow></mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if e majuscule appartient à A majuscule en script then suscrire e majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if e majuscule indice 1 position de base virgule e majuscule indice 2 position de base appartient à A majuscule en script then e majuscule indice 1 position de base union e majuscule indice 2 position de base appartient à A majuscule en script point fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if e majuscule appartient à A majuscule en script then suscrire e majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if e majuscule 1 virgule e majuscule 2 appartient à A majuscule en script then e majuscule 1 union e majuscule 2 appartient à A majuscule en script point fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if e majuscule appartient à A majuscule en script then suscrire e majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if e majuscule 1 virgule e majuscule 2 appartient à A majuscule en script then e majuscule 1 union e majuscule 2 appartient à A majuscule en script point fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if E majuscule appartient à A majuscule en script then suscrire E majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if E majuscule indice 1 position de base virgule E majuscule indice 2 position de base appartient à A majuscule en script then E majuscule indice 1 position de base union E majuscule indice 2 position de base appartient à A majuscule en script point fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if E majuscule appartient à A majuscule en script then suscrire E majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if E majuscule 1 virgule E majuscule 2 appartient à A majuscule en script then E majuscule 1 union E majuscule 2 appartient à A majuscule en script point fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne parenthèse gauche i parenthèse droite 2e colonne S majuscule en script appartient à A majuscule en script point virgule 2e rangée 1re colonne parenthèse gauche ii parenthèse droite 2e colonne if E majuscule appartient à A majuscule en script then suscrire E majuscule avec tiret en chef appartient à A majuscule en script point virgule 3e rangée 1re colonne parenthèse gauche iii parenthèse droite 2e colonne if E majuscule 1 virgule E majuscule 2 appartient à A majuscule en script then E majuscule 1 union E majuscule 2 appartient à A majuscule en script point fin tableau', 'sbrief');
 };
 
 
@@ -1035,9 +1035,9 @@ sre.NobleFrenchTest.prototype.testSample_57 = function() {
       '</mtext></mrow></mtd><mtd columnalign="left"><mo' +
       ' stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo>' +
       '</mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 1 parenthèse droite i majuscule f a majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à p majuscule accolade gauche a majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 2 parenthèse droite p majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 3 parenthèse droite i majuscule f accolade gauche e majuscule indice n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 1 parenthèse droite i majuscule f a majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à p majuscule accolade gauche a majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 2 parenthèse droite p majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 3 parenthèse droite i majuscule f accolade gauche e majuscule sub n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 1 parenthèse droite i majuscule f a majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à p majuscule accolade gauche a majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 2 parenthèse droite p majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche a majuscule en normal point 3 parenthèse droite i majuscule f accolade gauche e majuscule sub n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 1 parenthèse droite I majuscule f A majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à P majuscule accolade gauche A majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 2 parenthèse droite P majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 3 parenthèse droite I majuscule f accolade gauche E majuscule indice n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 1 parenthèse droite I majuscule f A majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à P majuscule accolade gauche A majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 2 parenthèse droite P majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 3 parenthèse droite I majuscule f accolade gauche E majuscule sub n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 1 parenthèse droite I majuscule f A majuscule appartient à F ronde majuscule en script t h e n 0 plus petit ou égal à P majuscule accolade gauche A majuscule accolade droite plus petit ou égal à 1 point 4e colonne parenthèse gauche 1 parenthèse droite 2e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 2 parenthèse droite P majuscule accolade gauche S majuscule en script accolade droite égale 1 point 4e colonne parenthèse gauche 2 parenthèse droite 3e rangée 1re colonne vide 2e colonne vide 3e colonne parenthèse gauche A majuscule en normal point 3 parenthèse droite I majuscule f accolade gauche E majuscule sub n position de base virgule n plus grand ou égal à 1 accolade droite appartient à F ronde majuscule en script is a sequence of disjoint 4e colonne parenthèse gauche 3 parenthèse droite fin tableau', 'sbrief');
 };
 
 
@@ -1059,10 +1059,10 @@ sre.NobleFrenchTest.prototype.testSample_58 = function() {
       '</mo><mi>A</mi><mi>|</mi><msub><mi>B</mi><mrow><mi>j</mi>' +
       '<mo>&#x2032;</mo></mrow></msub><mo stretchy="false">}</mo></mrow>' +
       '</mfrac><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'p majuscule accolade gauche b majuscule indice j position de base barre verticale a majuscule accolade droite égale début fraction p majuscule accolade gauche b majuscule indice j position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule indice j position de base accolade droite sur sommation début souscript j prime appartient à j majuscule fin scripts p majuscule accolade gauche b majuscule indice j prime position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule indice j prime position de base accolade droite fin fraction point',
+  this.executeRuleTest(mml, 'P majuscule accolade gauche B majuscule indice j position de base barre verticale A majuscule accolade droite égale début fraction P majuscule accolade gauche B majuscule indice j position de base accolade droite P majuscule accolade gauche A majuscule barre verticale B majuscule indice j position de base accolade droite sur sommation début souscript j prime appartient à J majuscule fin scripts P majuscule accolade gauche B majuscule indice j prime position de base accolade droite P majuscule accolade gauche A majuscule barre verticale B majuscule indice j prime position de base accolade droite fin fraction point',
                        'default');
-  this.executeRuleTest(mml, 'p majuscule accolade gauche b majuscule sub j position de base barre verticale a majuscule accolade droite égale début frac p majuscule accolade gauche b majuscule sub j position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j position de base accolade droite sur sommation début souscript j prime appartient à j majuscule fin scripts p majuscule accolade gauche b majuscule sub j prime position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j prime position de base accolade droite fin frac point', 'brief');
-  this.executeRuleTest(mml, 'p majuscule accolade gauche b majuscule sub j position de base barre verticale a majuscule accolade droite égale frac p majuscule accolade gauche b majuscule sub j position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j position de base accolade droite sur  sommation début souscript j prime appartient à j majuscule fin scripts p majuscule accolade gauche b majuscule sub j prime position de base accolade droite p majuscule accolade gauche a majuscule barre verticale b majuscule sub j prime position de base accolade droite fin frac point', 'sbrief');
+  this.executeRuleTest(mml, 'P majuscule accolade gauche B majuscule sub j position de base barre verticale A majuscule accolade droite égale début frac P majuscule accolade gauche B majuscule sub j position de base accolade droite P majuscule accolade gauche A majuscule barre verticale B majuscule sub j position de base accolade droite sur sommation début souscript j prime appartient à J majuscule fin scripts P majuscule accolade gauche B majuscule sub j prime position de base accolade droite P majuscule accolade gauche A majuscule barre verticale B majuscule sub j prime position de base accolade droite fin frac point', 'brief');
+  this.executeRuleTest(mml, 'P majuscule accolade gauche B majuscule sub j position de base barre verticale A majuscule accolade droite égale frac P majuscule accolade gauche B majuscule sub j position de base accolade droite P majuscule accolade gauche A majuscule barre verticale B majuscule sub j position de base accolade droite sur  sommation début souscript j prime appartient à J majuscule fin scripts P majuscule accolade gauche B majuscule sub j prime position de base accolade droite P majuscule accolade gauche A majuscule barre verticale B majuscule sub j prime position de base accolade droite fin frac point', 'sbrief');
 };
 
 
@@ -1077,9 +1077,9 @@ sre.NobleFrenchTest.prototype.testSample_59 = function() {
       '</mo><mi>d</mi><msub><mi>&#x03BC;</mi><mrow><mn>2</mn></mrow>' +
       '</msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)' +
       '</mo></mrow>';
-  this.executeRuleTest(mml, 'mû indice 1 position de base parenthèse gauche b majuscule parenthèse droite égale intégrale début souscript b majuscule fin scripts f parenthèse gauche x parenthèse droite d mû indice 2 position de base parenthèse gauche x parenthèse droite', 'default');
-  this.executeRuleTest(mml, 'mû 1 parenthèse gauche b majuscule parenthèse droite égale intégrale début souscript b majuscule fin scripts f parenthèse gauche x parenthèse droite d mû 2 parenthèse gauche x parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 'mû 1 parenthèse gauche b majuscule parenthèse droite égale intégrale début souscript b majuscule fin scripts f parenthèse gauche x parenthèse droite d mû 2 parenthèse gauche x parenthèse droite', 'sbrief');
+  this.executeRuleTest(mml, 'mû indice 1 position de base parenthèse gauche B majuscule parenthèse droite égale intégrale début souscript B majuscule fin scripts f parenthèse gauche x parenthèse droite d mû indice 2 position de base parenthèse gauche x parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'mû 1 parenthèse gauche B majuscule parenthèse droite égale intégrale début souscript B majuscule fin scripts f parenthèse gauche x parenthèse droite d mû 2 parenthèse gauche x parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'mû 1 parenthèse gauche B majuscule parenthèse droite égale intégrale début souscript B majuscule fin scripts f parenthèse gauche x parenthèse droite d mû 2 parenthèse gauche x parenthèse droite', 'sbrief');
 };
 
 
@@ -1097,9 +1097,9 @@ sre.NobleFrenchTest.prototype.testSample_60 = function() {
       '<mrow><mi>n</mi></mrow></msub><mo>&#x2212;</mo><mi>X</mi>' +
       '<mo>&#x007C;</mo><mo>}</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts e majuscule accolade gauche début valeur absolue x majuscule indice n position de base moins x majuscule fin valeur absolue accolade droite égale e majuscule accolade gauche limite début souscript n flèche droite infini fin scripts début valeur absolue x majuscule indice n position de base moins x majuscule fin valeur absolue accolade droite égale 0 point', 'default');
-  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts e majuscule accolade gauche début valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale e majuscule accolade gauche limite début souscript n flèche droite infini fin scripts début valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale 0 point', 'brief');
-  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts e majuscule accolade gauche valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale e majuscule accolade gauche limite début souscript n flèche droite infini fin scripts valeur absolue x majuscule sub n position de base moins x majuscule fin valeur absolue accolade droite égale 0 point', 'sbrief');
+  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts E majuscule accolade gauche début valeur absolue X majuscule indice n position de base moins X majuscule fin valeur absolue accolade droite égale E majuscule accolade gauche limite début souscript n flèche droite infini fin scripts début valeur absolue X majuscule indice n position de base moins X majuscule fin valeur absolue accolade droite égale 0 point', 'default');
+  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts E majuscule accolade gauche début valeur absolue X majuscule sub n position de base moins X majuscule fin valeur absolue accolade droite égale E majuscule accolade gauche limite début souscript n flèche droite infini fin scripts début valeur absolue X majuscule sub n position de base moins X majuscule fin valeur absolue accolade droite égale 0 point', 'brief');
+  this.executeRuleTest(mml, 'limite début souscript n flèche droite infini fin scripts E majuscule accolade gauche valeur absolue X majuscule sub n position de base moins X majuscule fin valeur absolue accolade droite égale E majuscule accolade gauche limite début souscript n flèche droite infini fin scripts valeur absolue X majuscule sub n position de base moins X majuscule fin valeur absolue accolade droite égale 0 point', 'sbrief');
 };
 
 
@@ -1132,9 +1132,9 @@ sre.NobleFrenchTest.prototype.testSample_61 = function() {
       ' columnalign="right" columnspan="1"><mrow /></mtd><mtd' +
       ' columnalign="left"><mo stretchy="false">(</mo><mn>1</mn><mo' +
       ' stretchy="false">)</mo></mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne p majuscule indice mû virgule sigma position de base accolade gauche y majuscule plus grand ou égal à l indice bêta position de base parenthèse gauche suscrire y majuscule avec tiret en chef indice n position de base virgule s majuscule indice n position de base parenthèse droite accolade droite égale p majuscule indice mû virgule sigma position de base accolade gauche parenthèse gauche y majuscule moins suscrire y majuscule avec tiret en chef indice n position de base parenthèse droite barre oblique parenthèse gauche s majuscule point médian parenthèse gauche 1 plus début fraction 1 sur n fin fraction parenthèse droite exposant 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t indice bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne p majuscule sub mû virgule sigma position de base accolade gauche y majuscule plus grand ou égal à l sub bêta position de base parenthèse gauche suscrire y majuscule avec tiret en chef sub n position de base virgule s majuscule sub n position de base parenthèse droite accolade droite égale p majuscule sub mû virgule sigma position de base accolade gauche parenthèse gauche y majuscule moins suscrire y majuscule avec tiret en chef sub n position de base parenthèse droite barre oblique parenthèse gauche s majuscule point médian parenthèse gauche 1 plus début frac 1 sur n fin frac parenthèse droite sup 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t sub bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne p majuscule sub mû virgule sigma position de base accolade gauche y majuscule plus grand ou égal à l sub bêta position de base parenthèse gauche suscrire y majuscule avec tiret en chef sub n position de base virgule s majuscule sub n position de base parenthèse droite accolade droite égale p majuscule sub mû virgule sigma position de base accolade gauche parenthèse gauche y majuscule moins suscrire y majuscule avec tiret en chef sub n position de base parenthèse droite barre oblique parenthèse gauche s majuscule point médian parenthèse gauche 1 plus frac 1 sur  n fin frac parenthèse droite sup 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t sub bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne P majuscule indice mû virgule sigma position de base accolade gauche Y majuscule plus grand ou égal à l indice bêta position de base parenthèse gauche suscrire Y majuscule avec tiret en chef indice n position de base virgule S majuscule indice n position de base parenthèse droite accolade droite égale P majuscule indice mû virgule sigma position de base accolade gauche parenthèse gauche Y majuscule moins suscrire Y majuscule avec tiret en chef indice n position de base parenthèse droite barre oblique parenthèse gauche S majuscule point médian parenthèse gauche 1 plus début fraction 1 sur n fin fraction parenthèse droite exposant 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t indice bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne P majuscule sub mû virgule sigma position de base accolade gauche Y majuscule plus grand ou égal à l sub bêta position de base parenthèse gauche suscrire Y majuscule avec tiret en chef sub n position de base virgule S majuscule sub n position de base parenthèse droite accolade droite égale P majuscule sub mû virgule sigma position de base accolade gauche parenthèse gauche Y majuscule moins suscrire Y majuscule avec tiret en chef sub n position de base parenthèse droite barre oblique parenthèse gauche S majuscule point médian parenthèse gauche 1 plus début frac 1 sur n fin frac parenthèse droite sup 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t sub bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne P majuscule sub mû virgule sigma position de base accolade gauche Y majuscule plus grand ou égal à l sub bêta position de base parenthèse gauche suscrire Y majuscule avec tiret en chef sub n position de base virgule S majuscule sub n position de base parenthèse droite accolade droite égale P majuscule sub mû virgule sigma position de base accolade gauche parenthèse gauche Y majuscule moins suscrire Y majuscule avec tiret en chef sub n position de base parenthèse droite barre oblique parenthèse gauche S majuscule point médian parenthèse gauche 1 plus frac 1 sur  n fin frac parenthèse droite sup 1 barre oblique 2 position de base parenthèse droite plus grand ou égal à négatif t sub bêta position de base crochet gauche n moins 1 crochet droit accolade droite égale bêta virgule 2e rangée 1re colonne vide 2e colonne parenthèse gauche 1 parenthèse droite fin tableau', 'sbrief');
 };
 
 
@@ -1179,11 +1179,11 @@ sre.NobleFrenchTest.prototype.testSample_62 = function() {
       ' columnalign="center"><mrow><mspace width="0.2em" /><mo>&#x2212;' +
       '</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>.' +
       '</mo></mrow>';
-  this.executeRuleTest(mml, 'l majuscule égale début matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point',
+  this.executeRuleTest(mml, 'L majuscule égale début matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point',
                        'default');
-  this.executeRuleTest(mml, 'l majuscule égale début matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point',
+  this.executeRuleTest(mml, 'L majuscule égale début matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point',
                        'brief');
-  this.executeRuleTest(mml, 'l majuscule égale matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point', 'sbrief');
+  this.executeRuleTest(mml, 'L majuscule égale matrice 5 par 6 1re rangée 1re colonne 1 2e colonne négatif 1 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 2e rangée 1re colonne vide 2e colonne 1 3e colonne négatif 1 4e colonne vide 5e colonne 0 6e colonne vide 3e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 4e rangée 1re colonne vide 2e colonne 0 3e colonne vide 4e colonne vide 5e colonne vide 6e colonne vide 5e rangée 1re colonne vide 2e colonne vide 3e colonne vide 4e colonne vide 5e colonne 1 6e colonne négatif 1 fin matrice point', 'sbrief');
 };
 
 
@@ -1212,9 +1212,9 @@ sre.NobleFrenchTest.prototype.testSample_63 = function() {
       '</mi></mrow></msqrt><mspace width="0.2em" /><msub><mi>z</mi><mrow>' +
       '<mn>1</mn><mo>&#x2212;</mo><mi>&#x03B2;</mi></mrow></msub><mo' +
       ' stretchy="false">]</mo><mo>,</mo></mrow>';
-  this.executeRuleTest(mml, 'début racine carrée n fin racine carrée crochet gauche suscrire y majuscule avec tiret en chef indice n position de base moins parenthèse gauche mû plus z indice bêta position de base sigma parenthèse droite crochet droit barre oblique s majuscule indice n position de base tilde début fraction u majuscule plus début racine carrée n fin racine carrée z indice 1 moins bêta position de base sur parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite exposant 1 barre oblique 2 position de base fin fraction tilde t crochet gauche n moins 1 point virgule début racine carrée n fin racine carrée z indice 1 moins bêta position de base crochet droit virgule', 'default');
-  this.executeRuleTest(mml, 'début racine carrée n fin racine carrée crochet gauche suscrire y majuscule avec tiret en chef sub n position de base moins parenthèse gauche mû plus z sub bêta position de base sigma parenthèse droite crochet droit barre oblique s majuscule sub n position de base tilde début frac u majuscule plus début racine carrée n fin racine carrée z sub 1 moins bêta position de base sur parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite sup 1 barre oblique 2 position de base fin frac tilde t crochet gauche n moins 1 point virgule début racine carrée n fin racine carrée z sub 1 moins bêta position de base crochet droit virgule', 'brief');
-  this.executeRuleTest(mml, 'racine carrée n fin racine carrée crochet gauche suscrire y majuscule avec tiret en chef sub n position de base moins parenthèse gauche mû plus z sub bêta position de base sigma parenthèse droite crochet droit barre oblique s majuscule sub n position de base tilde frac u majuscule plus racine carrée n fin racine carrée z sub 1 moins bêta position de base sur  parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite sup 1 barre oblique 2 position de base fin frac tilde t crochet gauche n moins 1 point virgule racine carrée n fin racine carrée z sub 1 moins bêta position de base crochet droit virgule',
+  this.executeRuleTest(mml, 'début racine carrée n fin racine carrée crochet gauche suscrire Y majuscule avec tiret en chef indice n position de base moins parenthèse gauche mû plus z indice bêta position de base sigma parenthèse droite crochet droit barre oblique S majuscule indice n position de base tilde début fraction U majuscule plus début racine carrée n fin racine carrée z indice 1 moins bêta position de base sur parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite exposant 1 barre oblique 2 position de base fin fraction tilde t crochet gauche n moins 1 point virgule début racine carrée n fin racine carrée z indice 1 moins bêta position de base crochet droit virgule', 'default');
+  this.executeRuleTest(mml, 'début racine carrée n fin racine carrée crochet gauche suscrire Y majuscule avec tiret en chef sub n position de base moins parenthèse gauche mû plus z sub bêta position de base sigma parenthèse droite crochet droit barre oblique S majuscule sub n position de base tilde début frac U majuscule plus début racine carrée n fin racine carrée z sub 1 moins bêta position de base sur parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite sup 1 barre oblique 2 position de base fin frac tilde t crochet gauche n moins 1 point virgule début racine carrée n fin racine carrée z sub 1 moins bêta position de base crochet droit virgule', 'brief');
+  this.executeRuleTest(mml, 'racine carrée n fin racine carrée crochet gauche suscrire Y majuscule avec tiret en chef sub n position de base moins parenthèse gauche mû plus z sub bêta position de base sigma parenthèse droite crochet droit barre oblique S majuscule sub n position de base tilde frac U majuscule plus racine carrée n fin racine carrée z sub 1 moins bêta position de base sur  parenthèse gauche chi au carré crochet gauche n moins 1 crochet droit barre oblique parenthèse gauche n moins 1 parenthèse droite parenthèse droite sup 1 barre oblique 2 position de base fin frac tilde t crochet gauche n moins 1 point virgule racine carrée n fin racine carrée z sub 1 moins bêta position de base crochet droit virgule',
                        'sbrief');
 };
 
@@ -1250,9 +1250,9 @@ sre.NobleFrenchTest.prototype.testSample_64 = function() {
       '<mo>&#x2212;</mo><mi>s</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>s' +
       '</mi><mo>&#x2212;</mo><mi>r</mi><mo>&#x2212;</mo><mi>j</mi><mo' +
       ' stretchy="false">)</mo><mo>.</mo></mrow></mtd></mtr></mtable></mrow>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne gamma 2e colonne égale p majuscule accolade gauche e majuscule indice p virgule q position de base sous-ensemble de parenthèse gauche x majuscule indice parenthèse gauche r parenthèse droite position de base virgule x majuscule indice parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale début fraction n factorielle sur parenthèse gauche r moins 1 parenthèse droite factorielle fin fraction sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite exposant j position de base début fraction p exposant r plus j position de base sur parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin fraction i majuscule indice 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne gamma 2e colonne égale p majuscule accolade gauche e majuscule sub p virgule q position de base sous-ensemble de parenthèse gauche x majuscule sub parenthèse gauche r parenthèse droite position de base virgule x majuscule sub parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale début frac n factorielle sur parenthèse gauche r moins 1 parenthèse droite factorielle fin frac sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite sup j position de base début frac p sup r plus j position de base sur parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin frac i majuscule sub 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne gamma 2e colonne égale p majuscule accolade gauche e majuscule sub p virgule q position de base sous-ensemble de parenthèse gauche x majuscule sub parenthèse gauche r parenthèse droite position de base virgule x majuscule sub parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale frac n factorielle sur  parenthèse gauche r moins 1 parenthèse droite factorielle fin frac sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite sup j position de base frac p sup r plus j position de base sur  parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin frac i majuscule sub 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne gamma 2e colonne égale P majuscule accolade gauche E majuscule indice p virgule q position de base sous-ensemble de parenthèse gauche X majuscule indice parenthèse gauche r parenthèse droite position de base virgule X majuscule indice parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale début fraction n factorielle sur parenthèse gauche r moins 1 parenthèse droite factorielle fin fraction sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite exposant j position de base début fraction p exposant r plus j position de base sur parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin fraction I majuscule indice 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne gamma 2e colonne égale P majuscule accolade gauche E majuscule sub p virgule q position de base sous-ensemble de parenthèse gauche X majuscule sub parenthèse gauche r parenthèse droite position de base virgule X majuscule sub parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale début frac n factorielle sur parenthèse gauche r moins 1 parenthèse droite factorielle fin frac sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite sup j position de base début frac p sup r plus j position de base sur parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin frac I majuscule sub 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne gamma 2e colonne égale P majuscule accolade gauche E majuscule sub p virgule q position de base sous-ensemble de parenthèse gauche X majuscule sub parenthèse gauche r parenthèse droite position de base virgule X majuscule sub parenthèse gauche s parenthèse droite position de base accolade droite 2e rangée 1re colonne vide 2e colonne égale frac n factorielle sur  parenthèse gauche r moins 1 parenthèse droite factorielle fin frac sommation début souscript j égale 0 début suscript s moins r moins 1 fin scripts parenthèse gauche négatif 1 parenthèse droite sup j position de base frac p sup r plus j position de base sur  parenthèse gauche n moins r moins j parenthèse droite factorielle j factorielle fin frac I majuscule sub 1 moins q position de base parenthèse gauche n moins s plus 1 virgule s moins r moins j parenthèse droite point fin tableau', 'sbrief');
 };
 
 
@@ -1276,9 +1276,9 @@ sre.NobleFrenchTest.prototype.testSample_65 = function() {
       ' stretchy="false">/</mo><mi>m</mi></mtd></mtr><mtr><mtd><msub>' +
       '<mrow><mi>b</mi></mrow><mrow><mi>i</mi></mrow></msub></mtd></mtr>' +
       '</mtable></mrow></mfenced><mo>,</mo></mrow>';
-  this.executeRuleTest(mml, 's majuscule indice i position de base début binomiale x parmi t fin binomiale égale début matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a indice i position de base 2e colonne r indice i position de base fin matrice début binomiale x parmi t fin binomiale plus début binomiale b indice i position de base parmi parenthèse gauche i moins 1 parenthèse droite barre oblique m fin binomiale virgule', 'default');
-  this.executeRuleTest(mml, 's majuscule sub i position de base début binomiale x parmi t fin binomiale égale début matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a sub i position de base 2e colonne r sub i position de base fin matrice début binomiale x parmi t fin binomiale plus début binomiale b sub i position de base parmi parenthèse gauche i moins 1 parenthèse droite barre oblique m fin binomiale virgule', 'brief');
-  this.executeRuleTest(mml, 's majuscule sub i position de base binomiale t parmi x fin binomiale égale matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a sub i position de base 2e colonne r sub i position de base fin matrice binomiale t parmi x fin binomiale plus binomiale parenthèse gauche i moins 1 parenthèse droite barre oblique m parmi b sub i position de base fin binomiale virgule', 'sbrief');
+  this.executeRuleTest(mml, 'S majuscule indice i position de base début binomiale x parmi t fin binomiale égale début matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a indice i position de base 2e colonne r indice i position de base fin matrice début binomiale x parmi t fin binomiale plus début binomiale b indice i position de base parmi parenthèse gauche i moins 1 parenthèse droite barre oblique m fin binomiale virgule', 'default');
+  this.executeRuleTest(mml, 'S majuscule sub i position de base début binomiale x parmi t fin binomiale égale début matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a sub i position de base 2e colonne r sub i position de base fin matrice début binomiale x parmi t fin binomiale plus début binomiale b sub i position de base parmi parenthèse gauche i moins 1 parenthèse droite barre oblique m fin binomiale virgule', 'brief');
+  this.executeRuleTest(mml, 'S majuscule sub i position de base binomiale t parmi x fin binomiale égale matrice 2 par 2 1re rangée 1re colonne 1 barre oblique m 2e colonne 0 2e rangée 1re colonne a sub i position de base 2e colonne r sub i position de base fin matrice binomiale t parmi x fin binomiale plus binomiale parenthèse gauche i moins 1 parenthèse droite barre oblique m parmi b sub i position de base fin binomiale virgule', 'sbrief');
 };
 
 
@@ -1300,9 +1300,9 @@ sre.NobleFrenchTest.prototype.testSample_66 = function() {
       '<mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn>' +
       '</mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn>' +
       '<mo>&#x2212;</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 t majuscule fin fraction intégrale indice inférieur négatif t majuscule indice supérieur t majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c indice 2 position de base h exposant 4 moins 2 s', 'default');
-  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 t majuscule fin frac intégrale inf négatif t majuscule sup t majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c 2 h sup 4 moins 2 s', 'brief');
-  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur  2 t majuscule fin frac intégrale inf négatif t majuscule sup t majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c 2 h sup 4 moins 2 s', 'sbrief');
+  this.executeRuleTest(mml, 'c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction intégrale indice inférieur négatif T majuscule indice supérieur T majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c indice 2 position de base h exposant 4 moins 2 s', 'default');
+  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac intégrale inf négatif T majuscule sup T majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c 2 h sup 4 moins 2 s', 'brief');
+  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac intégrale inf négatif T majuscule sup T majuscule position de base parenthèse gauche f parenthèse gauche t plus h parenthèse droite moins f parenthèse gauche t parenthèse droite parenthèse droite au carré d en normal t plus petit ou égal à c 2 h sup 4 moins 2 s', 'sbrief');
 };
 
 
@@ -1315,9 +1315,9 @@ sre.NobleFrenchTest.prototype.testSample_67 = function() {
       ' stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo>' +
       '<mo>&#x2243;</mo><mi>c</mi><msup><mrow><mi>h</mi></mrow><mrow>' +
       '<mn>4</mn><mo>&#x2212;</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>';
-  this.executeRuleTest(mml, 'c majuscule parenthèse gauche 0 parenthèse droite moins c majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h exposant 4 moins 2 s', 'default');
-  this.executeRuleTest(mml, 'c majuscule parenthèse gauche 0 parenthèse droite moins c majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h sup 4 moins 2 s', 'brief');
-  this.executeRuleTest(mml, 'c majuscule parenthèse gauche 0 parenthèse droite moins c majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h sup 4 moins 2 s', 'sbrief');
+  this.executeRuleTest(mml, 'C majuscule parenthèse gauche 0 parenthèse droite moins C majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h exposant 4 moins 2 s', 'default');
+  this.executeRuleTest(mml, 'C majuscule parenthèse gauche 0 parenthèse droite moins C majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h sup 4 moins 2 s', 'brief');
+  this.executeRuleTest(mml, 'C majuscule parenthèse gauche 0 parenthèse droite moins C majuscule parenthèse gauche h parenthèse droite asymptotiquement égal à c h sup 4 moins 2 s', 'sbrief');
 };
 
 
@@ -1337,9 +1337,9 @@ sre.NobleFrenchTest.prototype.testSample_68 = function() {
       ' mathvariant="italic">it</mi><mi>&#x03C9;</mi></mrow></msup><mi' +
       ' mathvariant="normal">d</mi><mi>t</mi></mfenced></mrow><mrow><mn>2' +
       '</mn></mrow></msup><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 's majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript t majuscule flèche droite infini fin scripts début fraction 1 sur 2 t majuscule fin fraction début valeur absolue intégrale indice inférieur négatif t majuscule indice supérieur t majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal exposant i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'default');
-  this.executeRuleTest(mml, 's majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript t majuscule flèche droite infini fin scripts début frac 1 sur 2 t majuscule fin frac début valeur absolue intégrale inf négatif t majuscule sup t majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal sup i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'brief');
-  this.executeRuleTest(mml, 's majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript t majuscule flèche droite infini fin scripts frac 1 sur  2 t majuscule fin frac valeur absolue intégrale inf négatif t majuscule sup t majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal sup i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'sbrief');
+  this.executeRuleTest(mml, 'S majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript T majuscule flèche droite infini fin scripts début fraction 1 sur 2 T majuscule fin fraction début valeur absolue intégrale indice inférieur négatif T majuscule indice supérieur T majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal exposant i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'default');
+  this.executeRuleTest(mml, 'S majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript T majuscule flèche droite infini fin scripts début frac 1 sur 2 T majuscule fin frac début valeur absolue intégrale inf négatif T majuscule sup T majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal sup i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'brief');
+  this.executeRuleTest(mml, 'S majuscule parenthèse gauche oméga parenthèse droite égale limite début souscript T majuscule flèche droite infini fin scripts frac 1 sur  2 T majuscule fin frac valeur absolue intégrale inf négatif T majuscule sup T majuscule position de base virgule f virgule parenthèse gauche virgule t virgule parenthèse droite virgule e en normal sup i t en italique oméga position de base virgule d en normal virgule t fin valeur absolue au carré point', 'sbrief');
 };
 
 
@@ -1390,10 +1390,10 @@ sre.NobleFrenchTest.prototype.testSample_70 = function() {
       '<mn>1</mn></mrow><mrow><mi>s</mi></mrow></msubsup><mo>+</mo>' +
       '<msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>s' +
       '</mi></mrow></msubsup><mo stretchy="false">)</mo><mo>.</mo></mrow>';
-  this.executeRuleTest(mml, 'e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule indice k plus 1 position de base fin scripts début valeur absolue i majuscule fin valeur absolue exposant s position de base parenthèse droite égale e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule indice k position de base fin scripts début valeur absolue i majuscule fin valeur absolue exposant s position de base parenthèse droite e majuscule en sans empattement parenthèse gauche r majuscule indice 1 exposant s position de base plus r majuscule indice 2 exposant s position de base parenthèse droite point', 'default');
-  this.executeRuleTest(mml, 'e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k plus 1 position de base fin scripts début valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite égale e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k position de base fin scripts début valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite e majuscule en sans empattement parenthèse gauche r majuscule 1 sup s position de base plus r majuscule 2 sup s position de base parenthèse droite point',
+  this.executeRuleTest(mml, 'E majuscule en sans empattement parenthèse gauche sommation début souscript I majuscule appartient à E majuscule indice k plus 1 position de base fin scripts début valeur absolue I majuscule fin valeur absolue exposant s position de base parenthèse droite égale E majuscule en sans empattement parenthèse gauche sommation début souscript I majuscule appartient à E majuscule indice k position de base fin scripts début valeur absolue I majuscule fin valeur absolue exposant s position de base parenthèse droite E majuscule en sans empattement parenthèse gauche R majuscule indice 1 exposant s position de base plus R majuscule indice 2 exposant s position de base parenthèse droite point', 'default');
+  this.executeRuleTest(mml, 'E majuscule en sans empattement parenthèse gauche sommation début souscript I majuscule appartient à E majuscule sub k plus 1 position de base fin scripts début valeur absolue I majuscule fin valeur absolue sup s position de base parenthèse droite égale E majuscule en sans empattement parenthèse gauche sommation début souscript I majuscule appartient à E majuscule sub k position de base fin scripts début valeur absolue I majuscule fin valeur absolue sup s position de base parenthèse droite E majuscule en sans empattement parenthèse gauche R majuscule 1 sup s position de base plus R majuscule 2 sup s position de base parenthèse droite point',
                        'brief');
-  this.executeRuleTest(mml, 'e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k plus 1 position de base fin scripts valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite égale e majuscule en sans empattement parenthèse gauche sommation début souscript i majuscule appartient à e majuscule sub k position de base fin scripts valeur absolue i majuscule fin valeur absolue sup s position de base parenthèse droite e majuscule en sans empattement parenthèse gauche r majuscule 1 sup s position de base plus r majuscule 2 sup s position de base parenthèse droite point', 'sbrief');
+  this.executeRuleTest(mml, 'E majuscule en sans empattement parenthèse gauche sommation début souscript I majuscule appartient à E majuscule sub k plus 1 position de base fin scripts valeur absolue I majuscule fin valeur absolue sup s position de base parenthèse droite égale E majuscule en sans empattement parenthèse gauche sommation début souscript I majuscule appartient à E majuscule sub k position de base fin scripts valeur absolue I majuscule fin valeur absolue sup s position de base parenthèse droite E majuscule en sans empattement parenthèse gauche R majuscule 1 sup s position de base plus R majuscule 2 sup s position de base parenthèse droite point', 'sbrief');
 };
 
 
@@ -1526,9 +1526,9 @@ sre.NobleFrenchTest.prototype.testSample_76 = function() {
 sre.NobleFrenchTest.prototype.testSample_77 = function() {
   var mml = '<mrow>' +
       '<mn>1</mn><mo>&#x2208;</mo><mi>S</mi></mrow>';
-  this.executeRuleTest(mml, '1 appartient à s majuscule', 'default');
-  this.executeRuleTest(mml, '1 appartient à s majuscule', 'brief');
-  this.executeRuleTest(mml, '1 appartient à s majuscule', 'sbrief');
+  this.executeRuleTest(mml, '1 appartient à S majuscule', 'default');
+  this.executeRuleTest(mml, '1 appartient à S majuscule', 'brief');
+  this.executeRuleTest(mml, '1 appartient à S majuscule', 'sbrief');
 };
 
 
@@ -1538,9 +1538,9 @@ sre.NobleFrenchTest.prototype.testSample_77 = function() {
 sre.NobleFrenchTest.prototype.testSample_78 = function() {
   var mml = '<mrow>' +
       '<mn>3</mn><mo>&#x2208;</mo><mi>S</mi></mrow>';
-  this.executeRuleTest(mml, '3 appartient à s majuscule', 'default');
-  this.executeRuleTest(mml, '3 appartient à s majuscule', 'brief');
-  this.executeRuleTest(mml, '3 appartient à s majuscule', 'sbrief');
+  this.executeRuleTest(mml, '3 appartient à S majuscule', 'default');
+  this.executeRuleTest(mml, '3 appartient à S majuscule', 'brief');
+  this.executeRuleTest(mml, '3 appartient à S majuscule', 'sbrief');
 };
 
 
@@ -1550,9 +1550,9 @@ sre.NobleFrenchTest.prototype.testSample_78 = function() {
 sre.NobleFrenchTest.prototype.testSample_79 = function() {
   var mml = '<mrow>' +
       '<mn>4</mn><mo>&#x2209;</mo><mi>S</mi></mrow>';
-  this.executeRuleTest(mml, '4 n\'appartient pas à s majuscule', 'default');
-  this.executeRuleTest(mml, '4 n\'appartient pas à s majuscule', 'brief');
-  this.executeRuleTest(mml, '4 n\'appartient pas à s majuscule', 'sbrief');
+  this.executeRuleTest(mml, '4 n\'appartient pas à S majuscule', 'default');
+  this.executeRuleTest(mml, '4 n\'appartient pas à S majuscule', 'brief');
+  this.executeRuleTest(mml, '4 n\'appartient pas à S majuscule', 'sbrief');
 };
 
 
@@ -1971,9 +1971,9 @@ sre.NobleFrenchTest.prototype.testSample_94 = function() {
       '<mi>n</mi><mo>&#x2212;</mo><mn>2</mn></mrow>' +
       '</msub>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'f majuscule indice n position de base égale f majuscule indice n moins 1 position de base plus f majuscule indice n moins 2', 'default');
-  this.executeRuleTest(mml, 'f majuscule sub n position de base égale f majuscule sub n moins 1 position de base plus f majuscule sub n moins 2', 'brief');
-  this.executeRuleTest(mml, 'f majuscule sub n position de base égale f majuscule sub n moins 1 position de base plus f majuscule sub n moins 2', 'sbrief');
+  this.executeRuleTest(mml, 'F majuscule indice n position de base égale F majuscule indice n moins 1 position de base plus F majuscule indice n moins 2', 'default');
+  this.executeRuleTest(mml, 'F majuscule sub n position de base égale F majuscule sub n moins 1 position de base plus F majuscule sub n moins 2', 'brief');
+  this.executeRuleTest(mml, 'F majuscule sub n position de base égale F majuscule sub n moins 1 position de base plus F majuscule sub n moins 2', 'sbrief');
 };
 
 
@@ -2145,9 +2145,9 @@ sre.NobleFrenchTest.prototype.testSample_95 = function() {
       '</mtable>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'pi majuscule en gras égale début matrice 6 par 6 1re rangée 1re colonne pi indice 11 position de base 2e colonne pi indice 12 position de base 3e colonne pi indice 12 position de base 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi indice 12 position de base 2e colonne pi indice 11 position de base 3e colonne pi indice 12 position de base 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi indice 12 position de base 2e colonne pi indice 12 position de base 3e colonne pi indice 11 position de base 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi indice 44 position de base 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi indice 44 position de base 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi indice 44 fin matrice', 'default');
-  this.executeRuleTest(mml, 'pi majuscule en gras égale début matrice 6 par 6 1re rangée 1re colonne pi 11 2e colonne pi 12 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi 12 2e colonne pi 11 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi 12 2e colonne pi 12 3e colonne pi 11 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi 44 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi 44 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi 44 fin matrice', 'brief');
-  this.executeRuleTest(mml, 'pi majuscule en gras égale matrice 6 par 6 1re rangée 1re colonne pi 11 2e colonne pi 12 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi 12 2e colonne pi 11 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi 12 2e colonne pi 12 3e colonne pi 11 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi 44 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi 44 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi 44 fin matrice', 'sbrief');
+  this.executeRuleTest(mml, 'Pi majuscule en gras égale début matrice 6 par 6 1re rangée 1re colonne pi indice 11 position de base 2e colonne pi indice 12 position de base 3e colonne pi indice 12 position de base 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi indice 12 position de base 2e colonne pi indice 11 position de base 3e colonne pi indice 12 position de base 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi indice 12 position de base 2e colonne pi indice 12 position de base 3e colonne pi indice 11 position de base 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi indice 44 position de base 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi indice 44 position de base 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi indice 44 fin matrice', 'default');
+  this.executeRuleTest(mml, 'Pi majuscule en gras égale début matrice 6 par 6 1re rangée 1re colonne pi 11 2e colonne pi 12 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi 12 2e colonne pi 11 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi 12 2e colonne pi 12 3e colonne pi 11 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi 44 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi 44 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi 44 fin matrice', 'brief');
+  this.executeRuleTest(mml, 'Pi majuscule en gras égale matrice 6 par 6 1re rangée 1re colonne pi 11 2e colonne pi 12 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 2e rangée 1re colonne pi 12 2e colonne pi 11 3e colonne pi 12 4e colonne 0 5e colonne 0 6e colonne 0 3e rangée 1re colonne pi 12 2e colonne pi 12 3e colonne pi 11 4e colonne 0 5e colonne 0 6e colonne 0 4e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne pi 44 5e colonne 0 6e colonne 0 5e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne pi 44 6e colonne 0 6e rangée 1re colonne 0 2e colonne 0 3e colonne 0 4e colonne 0 5e colonne 0 6e colonne pi 44 fin matrice', 'sbrief');
 };
 
 
@@ -2243,9 +2243,9 @@ sre.NobleFrenchTest.prototype.testSample_97 = function() {
       '</msub>' +
       '<mi mathvariant="normal">O</mi>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, 's majuscule i o majuscule en normal indice 2 position de base plus 6 h majuscule en normal f majuscule en normal flèche droite h majuscule en normal indice 2 position de base s majuscule i f majuscule en normal indice 6 position de base plus 2 h majuscule en normal indice 2 position de base o majuscule en normal', 'default');
-  this.executeRuleTest(mml, 's majuscule i o majuscule en normal 2 plus 6 h majuscule en normal f majuscule en normal flèche droite h majuscule en normal 2 s majuscule i f majuscule en normal 6 plus 2 h majuscule en normal 2 o majuscule en normal', 'brief');
-  this.executeRuleTest(mml, 's majuscule i o majuscule en normal 2 plus 6 h majuscule en normal f majuscule en normal flèche droite h majuscule en normal 2 s majuscule i f majuscule en normal 6 plus 2 h majuscule en normal 2 o majuscule en normal', 'sbrief');
+  this.executeRuleTest(mml, 'S majuscule i O majuscule en normal indice 2 position de base plus 6 H majuscule en normal F majuscule en normal flèche droite H majuscule en normal indice 2 position de base S majuscule i F majuscule en normal indice 6 position de base plus 2 H majuscule en normal indice 2 position de base O majuscule en normal', 'default');
+  this.executeRuleTest(mml, 'S majuscule i O majuscule en normal 2 plus 6 H majuscule en normal F majuscule en normal flèche droite H majuscule en normal 2 S majuscule i F majuscule en normal 6 plus 2 H majuscule en normal 2 O majuscule en normal', 'brief');
+  this.executeRuleTest(mml, 'S majuscule i O majuscule en normal 2 plus 6 H majuscule en normal F majuscule en normal flèche droite H majuscule en normal 2 S majuscule i F majuscule en normal 6 plus 2 H majuscule en normal 2 O majuscule en normal', 'sbrief');
 };
 
 
@@ -2296,9 +2296,9 @@ sre.NobleFrenchTest.prototype.testSample_98 = function() {
       '<mo>=</mo>' +
       '<mn>0</mn>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'début fraction d sur d x fin fraction parenthèse gauche e majuscule parenthèse gauche x parenthèse droite a majuscule parenthèse gauche x parenthèse droite début fraction d w parenthèse gauche x parenthèse droite sur d x fin fraction parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'default');
-  this.executeRuleTest(mml, 'début frac d sur d x fin frac parenthèse gauche e majuscule parenthèse gauche x parenthèse droite a majuscule parenthèse gauche x parenthèse droite début frac d w parenthèse gauche x parenthèse droite sur d x fin frac parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'brief');
-  this.executeRuleTest(mml, 'frac d sur  d x fin frac parenthèse gauche e majuscule parenthèse gauche x parenthèse droite a majuscule parenthèse gauche x parenthèse droite frac d w parenthèse gauche x parenthèse droite sur  d x fin frac parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'sbrief');
+  this.executeRuleTest(mml, 'début fraction d sur d x fin fraction parenthèse gauche E majuscule parenthèse gauche x parenthèse droite A majuscule parenthèse gauche x parenthèse droite début fraction d w parenthèse gauche x parenthèse droite sur d x fin fraction parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'default');
+  this.executeRuleTest(mml, 'début frac d sur d x fin frac parenthèse gauche E majuscule parenthèse gauche x parenthèse droite A majuscule parenthèse gauche x parenthèse droite début frac d w parenthèse gauche x parenthèse droite sur d x fin frac parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'brief');
+  this.executeRuleTest(mml, 'frac d sur  d x fin frac parenthèse gauche E majuscule parenthèse gauche x parenthèse droite A majuscule parenthèse gauche x parenthèse droite frac d w parenthèse gauche x parenthèse droite sur  d x fin frac parenthèse droite plus p parenthèse gauche x parenthèse droite égale 0', 'sbrief');
 };
 
 
@@ -2342,10 +2342,10 @@ sre.NobleFrenchTest.prototype.testSample_99 = function() {
       '</mrow>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'TCS indice gas position de base égale négatif un-demi parenthèse gauche début fraction p majuscule indice seal position de base sur p majuscule indice max position de base fin fraction parenthèse droite parenthèse gauche début fraction 1 sur t majuscule indice seal position de base fin fraction parenthèse droite',
+  this.executeRuleTest(mml, 'TCS indice gas position de base égale négatif un-demi parenthèse gauche début fraction P majuscule indice seal position de base sur P majuscule indice max position de base fin fraction parenthèse droite parenthèse gauche début fraction 1 sur T majuscule indice seal position de base fin fraction parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche début frac p majuscule sub seal position de base sur p majuscule sub max position de base fin frac parenthèse droite parenthèse gauche début frac 1 sur t majuscule sub seal position de base fin frac parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche frac p majuscule sub seal position de base sur  p majuscule sub max position de base fin frac parenthèse droite parenthèse gauche frac 1 sur  t majuscule sub seal position de base fin frac parenthèse droite', 'sbrief');
+  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche début frac P majuscule sub seal position de base sur P majuscule sub max position de base fin frac parenthèse droite parenthèse gauche début frac 1 sur T majuscule sub seal position de base fin frac parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'TCS sub gas position de base égale négatif un-demi parenthèse gauche frac P majuscule sub seal position de base sur  P majuscule sub max position de base fin frac parenthèse droite parenthèse gauche frac 1 sur  T majuscule sub seal position de base fin frac parenthèse droite', 'sbrief');
 };
 
 
@@ -2477,9 +2477,9 @@ sre.NobleFrenchTest.prototype.testSample_100 = function() {
       '</mrow>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'b majuscule indice p position de base égale début début fraction début fraction 7 moins v au carré sur 3 fin fraction parenthèse gauche 1 plus début fraction c au carré sur a au carré fin fraction plus début fraction c exposant 4 position de base sur a exposant 4 position de base fin fraction parenthèse droite plus début fraction parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur parenthèse gauche 1 plus v parenthèse droite a au carré fin fraction sur sur parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins début fraction c exposant 4 position de base sur a exposant 4 position de base fin fraction parenthèse droite parenthèse gauche 1 moins début fraction c au carré sur a au carré fin fraction parenthèse droite fin fin fraction', 'default');
-  this.executeRuleTest(mml, 'b majuscule sub p position de base égale début début frac début frac 7 moins v au carré sur 3 fin frac parenthèse gauche 1 plus début frac c au carré sur a au carré fin frac plus début frac c sup 4 position de base sur a sup 4 position de base fin frac parenthèse droite plus début frac parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur parenthèse gauche 1 plus v parenthèse droite a au carré fin frac sur sur parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins début frac c sup 4 position de base sur a sup 4 position de base fin frac parenthèse droite parenthèse gauche 1 moins début frac c au carré sur a au carré fin frac parenthèse droite fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'b majuscule sub p position de base égale frac1imbriquée frac 7 moins v au carré sur  3 fin frac parenthèse gauche 1 plus frac c au carré sur  a au carré fin frac plus frac c sup 4 position de base sur  a sup 4 position de base fin frac parenthèse droite plus frac parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur  parenthèse gauche 1 plus v parenthèse droite a au carré fin frac sur1imbriquée parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins frac c sup 4 position de base sur  a sup 4 position de base fin frac parenthèse droite parenthèse gauche 1 moins frac c au carré sur  a au carré fin frac parenthèse droite fin frac1imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'B majuscule indice p position de base égale début début fraction début fraction 7 moins v au carré sur 3 fin fraction parenthèse gauche 1 plus début fraction c au carré sur a au carré fin fraction plus début fraction c exposant 4 position de base sur a exposant 4 position de base fin fraction parenthèse droite plus début fraction parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur parenthèse gauche 1 plus v parenthèse droite a au carré fin fraction sur sur parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins début fraction c exposant 4 position de base sur a exposant 4 position de base fin fraction parenthèse droite parenthèse gauche 1 moins début fraction c au carré sur a au carré fin fraction parenthèse droite fin fin fraction', 'default');
+  this.executeRuleTest(mml, 'B majuscule sub p position de base égale début début frac début frac 7 moins v au carré sur 3 fin frac parenthèse gauche 1 plus début frac c au carré sur a au carré fin frac plus début frac c sup 4 position de base sur a sup 4 position de base fin frac parenthèse droite plus début frac parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur parenthèse gauche 1 plus v parenthèse droite a au carré fin frac sur sur parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins début frac c sup 4 position de base sur a sup 4 position de base fin frac parenthèse droite parenthèse gauche 1 moins début frac c au carré sur a au carré fin frac parenthèse droite fin fin frac', 'brief');
+  this.executeRuleTest(mml, 'B majuscule sub p position de base égale frac1imbriquée frac 7 moins v au carré sur  3 fin frac parenthèse gauche 1 plus frac c au carré sur  a au carré fin frac plus frac c sup 4 position de base sur  a sup 4 position de base fin frac parenthèse droite plus frac parenthèse gauche 3 moins v parenthèse droite au carré c au carré sur  parenthèse gauche 1 plus v parenthèse droite a au carré fin frac sur1imbriquée parenthèse gauche 1 moins v parenthèse droite parenthèse gauche 1 moins frac c sup 4 position de base sur  a sup 4 position de base fin frac parenthèse droite parenthèse gauche 1 moins frac c au carré sur  a au carré fin frac parenthèse droite fin frac1imbriquée', 'sbrief');
 };
 
 
@@ -2516,9 +2516,9 @@ sre.NobleFrenchTest.prototype.testSample_101 = function() {
       '</msqrt>' +
       '</mrow>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'q majuscule indice tank exposant series position de base égale début fraction 1 sur r majuscule indice s position de base fin fraction début racine carrée début fraction l majuscule indice s position de base sur c majuscule indice s position de base fin fraction fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'q majuscule sub tank sup series position de base égale début frac 1 sur r majuscule sub s position de base fin frac début racine carrée début frac l majuscule sub s position de base sur c majuscule sub s position de base fin frac fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'q majuscule sub tank sup series position de base égale frac 1 sur  r majuscule sub s position de base fin frac racine carrée frac l majuscule sub s position de base sur  c majuscule sub s position de base fin frac fin racine carrée', 'sbrief');
+  this.executeRuleTest(mml, 'Q majuscule indice tank exposant series position de base égale début fraction 1 sur R majuscule indice s position de base fin fraction début racine carrée début fraction L majuscule indice s position de base sur C majuscule indice s position de base fin fraction fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'Q majuscule sub tank sup series position de base égale début frac 1 sur R majuscule sub s position de base fin frac début racine carrée début frac L majuscule sub s position de base sur C majuscule sub s position de base fin frac fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'Q majuscule sub tank sup series position de base égale frac 1 sur  R majuscule sub s position de base fin frac racine carrée frac L majuscule sub s position de base sur  C majuscule sub s position de base fin frac fin racine carrée', 'sbrief');
 };
 
 
@@ -2551,9 +2551,9 @@ sre.NobleFrenchTest.prototype.testSample_102 = function() {
       '</msubsup>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'delta majuscule phi droit indice peak position de base égale tangente exposant négatif 1 position de base parenthèse gauche k au carré q majuscule indice tank exposant series position de base parenthèse droite', 'default');
-  this.executeRuleTest(mml, 'delta majuscule phi droit sub peak position de base égale tangente sup négatif 1 position de base parenthèse gauche k au carré q majuscule sub tank sup series position de base parenthèse droite', 'brief');
-  this.executeRuleTest(mml, 'delta majuscule phi droit sub peak position de base égale tangente sup négatif 1 position de base parenthèse gauche k au carré q majuscule sub tank sup series position de base parenthèse droite', 'sbrief');
+  this.executeRuleTest(mml, 'Delta majuscule phi droit indice peak position de base égale tangente exposant négatif 1 position de base parenthèse gauche k au carré Q majuscule indice tank exposant series position de base parenthèse droite', 'default');
+  this.executeRuleTest(mml, 'Delta majuscule phi droit sub peak position de base égale tangente sup négatif 1 position de base parenthèse gauche k au carré Q majuscule sub tank sup series position de base parenthèse droite', 'brief');
+  this.executeRuleTest(mml, 'Delta majuscule phi droit sub peak position de base égale tangente sup négatif 1 position de base parenthèse gauche k au carré Q majuscule sub tank sup series position de base parenthèse droite', 'sbrief');
 };
 
 
@@ -2598,9 +2598,9 @@ sre.NobleFrenchTest.prototype.testSample_103 = function() {
       '<mo>)</mo>' +
       '</msqrt>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'f égale 1,013 début fraction w majuscule sur l majuscule au carré fin fraction début racine carrée début fraction e majuscule sur rho fin fraction fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début fraction l majuscule au carré sur EW au carré fin fraction sigma parenthèse droite fin racine carrée', 'default');
-  this.executeRuleTest(mml, 'f égale 1,013 début frac w majuscule sur l majuscule au carré fin frac début racine carrée début frac e majuscule sur rho fin frac fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début frac l majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée', 'brief');
-  this.executeRuleTest(mml, 'f égale 1,013 frac w majuscule sur  l majuscule au carré fin frac racine carrée frac e majuscule sur  rho fin frac fin racine carrée racine carrée parenthèse gauche 1 plus 0,293 frac l majuscule au carré sur  EW au carré fin frac sigma parenthèse droite fin racine carrée',
+  this.executeRuleTest(mml, 'f égale 1,013 début fraction W majuscule sur L majuscule au carré fin fraction début racine carrée début fraction E majuscule sur rho fin fraction fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début fraction L majuscule au carré sur EW au carré fin fraction sigma parenthèse droite fin racine carrée', 'default');
+  this.executeRuleTest(mml, 'f égale 1,013 début frac W majuscule sur L majuscule au carré fin frac début racine carrée début frac E majuscule sur rho fin frac fin racine carrée début racine carrée parenthèse gauche 1 plus 0,293 début frac L majuscule au carré sur EW au carré fin frac sigma parenthèse droite fin racine carrée', 'brief');
+  this.executeRuleTest(mml, 'f égale 1,013 frac W majuscule sur  L majuscule au carré fin frac racine carrée frac E majuscule sur  rho fin frac fin racine carrée racine carrée parenthèse gauche 1 plus 0,293 frac L majuscule au carré sur  EW au carré fin frac sigma parenthèse droite fin racine carrée',
                        'sbrief');
 };
 
@@ -2792,9 +2792,9 @@ sre.NobleFrenchTest.prototype.testSample_105 = function() {
       '</mtd>' +
       '</mtr>' +
       '</mtable>';
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne b majuscule 2e colonne égale début début fraction début fraction f majuscule indice 0 position de base sur m fin fraction sur sur début racine carrée parenthèse gauche oméga indice 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin fin fraction 2e rangée 1re colonne vide 2e colonne égale début début fraction début fraction f majuscule indice 0 position de base sur k fin fraction sur sur début racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga indice 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga indice 0 position de base parenthèse droite au carré parenthèse gauche oméga barre oblique oméga indice 0 position de base parenthèse droite au carré fin racine carrée fin fin fraction fin tableau', 'default');
-  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne b majuscule 2e colonne égale début début frac début frac f majuscule 0 sur m fin frac sur sur début racine carrée parenthèse gauche oméga 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin fin frac 2e rangée 1re colonne vide 2e colonne égale début début frac début frac f majuscule 0 sur k fin frac sur sur début racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga 0 parenthèse droite au carré parenthèse gauche oméga barre oblique oméga 0 parenthèse droite au carré fin racine carrée fin fin frac fin tableau', 'brief');
-  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne b majuscule 2e colonne égale frac1imbriquée frac f majuscule 0 sur  m fin frac sur1imbriquée racine carrée parenthèse gauche oméga 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin frac1imbriquée 2e rangée 1re colonne vide 2e colonne égale frac1imbriquée frac f majuscule 0 sur  k fin frac sur1imbriquée racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga 0 parenthèse droite au carré parenthèse gauche oméga barre oblique oméga 0 parenthèse droite au carré fin racine carrée fin frac1imbriquée fin tableau', 'sbrief');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne B majuscule 2e colonne égale début début fraction début fraction F majuscule indice 0 position de base sur m fin fraction sur sur début racine carrée parenthèse gauche oméga indice 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin fin fraction 2e rangée 1re colonne vide 2e colonne égale début début fraction début fraction F majuscule indice 0 position de base sur k fin fraction sur sur début racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga indice 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga indice 0 position de base parenthèse droite au carré parenthèse gauche oméga barre oblique oméga indice 0 position de base parenthèse droite au carré fin racine carrée fin fin fraction fin tableau', 'default');
+  this.executeRuleTest(mml, 'début tableau 1re rangée 1re colonne B majuscule 2e colonne égale début début frac début frac F majuscule 0 sur m fin frac sur sur début racine carrée parenthèse gauche oméga 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin fin frac 2e rangée 1re colonne vide 2e colonne égale début début frac début frac F majuscule 0 sur k fin frac sur sur début racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga 0 parenthèse droite au carré parenthèse gauche oméga barre oblique oméga 0 parenthèse droite au carré fin racine carrée fin fin frac fin tableau', 'brief');
+  this.executeRuleTest(mml, 'tableau 1re rangée 1re colonne B majuscule 2e colonne égale frac1imbriquée frac F majuscule 0 sur  m fin frac sur1imbriquée racine carrée parenthèse gauche oméga 0 au carré moins oméga au carré parenthèse droite au carré plus 4 n au carré oméga au carré fin racine carrée fin frac1imbriquée 2e rangée 1re colonne vide 2e colonne égale frac1imbriquée frac F majuscule 0 sur  k fin frac sur1imbriquée racine carrée parenthèse gauche 1 moins parenthèse gauche oméga barre oblique oméga 0 au carré parenthèse droite au carré parenthèse droite au carré plus 4 parenthèse gauche n barre oblique oméga 0 parenthèse droite au carré parenthèse gauche oméga barre oblique oméga 0 parenthèse droite au carré fin racine carrée fin frac1imbriquée fin tableau', 'sbrief');
 };
 
 
@@ -2824,11 +2824,11 @@ sre.NobleFrenchTest.prototype.testSample_106 = function() {
       '<mi>A</mi>' +
       '<mo>)</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'p en normal parenthèse gauche a majuscule a n d b majuscule parenthèse droite égale p en normal parenthèse gauche a majuscule parenthèse droite p en normal parenthèse gauche b majuscule barre verticale a majuscule parenthèse droite',
+  this.executeRuleTest(mml, 'p en normal parenthèse gauche A majuscule a n d B majuscule parenthèse droite égale p en normal parenthèse gauche A majuscule parenthèse droite p en normal parenthèse gauche B majuscule barre verticale A majuscule parenthèse droite',
                        'default');
-  this.executeRuleTest(mml, 'p en normal parenthèse gauche a majuscule a n d b majuscule parenthèse droite égale p en normal parenthèse gauche a majuscule parenthèse droite p en normal parenthèse gauche b majuscule barre verticale a majuscule parenthèse droite',
+  this.executeRuleTest(mml, 'p en normal parenthèse gauche A majuscule a n d B majuscule parenthèse droite égale p en normal parenthèse gauche A majuscule parenthèse droite p en normal parenthèse gauche B majuscule barre verticale A majuscule parenthèse droite',
                        'brief');
-  this.executeRuleTest(mml, 'p en normal parenthèse gauche a majuscule a n d b majuscule parenthèse droite égale p en normal parenthèse gauche a majuscule parenthèse droite p en normal parenthèse gauche b majuscule barre verticale a majuscule parenthèse droite',
+  this.executeRuleTest(mml, 'p en normal parenthèse gauche A majuscule a n d B majuscule parenthèse droite égale p en normal parenthèse gauche A majuscule parenthèse droite p en normal parenthèse gauche B majuscule barre verticale A majuscule parenthèse droite',
                        'sbrief');
 };
 
@@ -2855,9 +2855,9 @@ sre.NobleFrenchTest.prototype.testSample_107 = function() {
       '<mi>α</mi>' +
       '</msup>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'p majuscule m majuscule f majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche début fraction 1 sur x fin fraction parenthèse droite exposant alpha', 'default');
-  this.executeRuleTest(mml, 'p majuscule m majuscule f majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche début frac 1 sur x fin frac parenthèse droite sup alpha', 'brief');
-  this.executeRuleTest(mml, 'p majuscule m majuscule f majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche frac 1 sur  x fin frac parenthèse droite sup alpha', 'sbrief');
+  this.executeRuleTest(mml, 'P majuscule M majuscule F majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche début fraction 1 sur x fin fraction parenthèse droite exposant alpha', 'default');
+  this.executeRuleTest(mml, 'P majuscule M majuscule F majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche début frac 1 sur x fin frac parenthèse droite sup alpha', 'brief');
+  this.executeRuleTest(mml, 'P majuscule M majuscule F majuscule parenthèse gauche x parenthèse droite proportionnel à parenthèse gauche frac 1 sur  x fin frac parenthèse droite sup alpha', 'sbrief');
 };
 
 
