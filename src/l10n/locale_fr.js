@@ -30,12 +30,12 @@ goog.require('sre.Messages');
 sre.Locale.fr = {
 
   MS: {
-    START: 'début ',
+    START: 'début',
     FRAC_V: 'fraction',
     FRAC_B: 'frac',
     FRAC_S: 'frac',
-    END: 'fin ',
-    FRAC_OVER: 'sur ',
+    END: 'fin',
+    FRAC_OVER: 'sur',
     ONCE: '1',
     TWICE: '2',
     NEST_FRAC: 'imbriquée',
@@ -166,7 +166,8 @@ sre.Locale.fr = {
     NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
     DECIMAL_MARK: ',',
     DIGIT_GROUP: '',
-    JOINER_SUBSUPER: '-'
+    JOINER_SUBSUPER: '-',
+    JOINER_FRAC: ' '
   },
 
   // TODO: These!

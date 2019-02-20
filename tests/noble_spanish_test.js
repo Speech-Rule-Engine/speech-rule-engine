@@ -83,8 +83,8 @@ sre.NobleSpanishTest.prototype.testSample_1 = function() {
   this.executeRuleTest(mml, 'menos 5 más empezar frac 1 entre 5 finalizar' +
                        ' frac menos 6 más empezar frac 2 entre 3 finalizar' +
                        ' frac igual', 'brief');
-  this.executeRuleTest(mml, 'menos 5 más frac 1 entre  5 menos 6 más frac 2' +
-                       ' entre  3 igual', 'sbrief');
+  this.executeRuleTest(mml, 'menos 5 más frac 1 entre 5 menos 6 más frac 2' +
+                       ' entre 3 igual', 'sbrief');
 };
 
 
@@ -114,8 +114,8 @@ sre.NobleSpanishTest.prototype.testSample_2 = function() {
                        ' frac menos paréntesis izquierdo menos 4 más' +
                        ' empezar frac 7 entre 8 finalizar frac paréntesis' +
                        ' derecho igual', 'brief');
-  this.executeRuleTest(mml, 'menos 7 más frac 3 entre  4 menos paréntesis' +
-                       ' izquierdo menos 4 más frac 7 entre  8 paréntesis' +
+  this.executeRuleTest(mml, 'menos 7 más frac 3 entre 4 menos paréntesis' +
+                       ' izquierdo menos 4 más frac 7 entre 8 paréntesis' +
                        ' derecho igual', 'sbrief');
 };
 
@@ -401,7 +401,7 @@ sre.NobleSpanishTest.prototype.testSample_19 = function() {
                        ' finalizar fracción b h', 'default');
   this.executeRuleTest(mml, 'mayúscula A igual empezar frac 1 entre 2' +
                        ' finalizar frac b h', 'brief');
-  this.executeRuleTest(mml, 'mayúscula A igual frac 1 entre  2 b h', 'sbrief');
+  this.executeRuleTest(mml, 'mayúscula A igual frac 1 entre 2 b h', 'sbrief');
 };
 
 
@@ -445,8 +445,8 @@ sre.NobleSpanishTest.prototype.testSample_20 = function() {
                        ' square finalizar frac igual empezar frac 1 unit al' +
                        ' cuadrado entre 16 units al cuadrado finalizar' +
                        ' frac', 'brief');
-  this.executeRuleTest(mml, 'frac area of triangle entre  area of square' +
-                       ' igual frac 1 unit al cuadrado entre  16 units al' +
+  this.executeRuleTest(mml, 'frac area of triangle entre area of square' +
+                       ' igual frac 1 unit al cuadrado entre 16 units al' +
                        ' cuadrado', 'sbrief');
 };
 
@@ -739,7 +739,7 @@ sre.NobleSpanishTest.prototype.testSample_33 = function() {
                        ' raíz cuadrada entre 2 a finalizar frac', 'brief');
   this.executeRuleTest(mml, 'x igual frac menos b más menos raíz cuadrada b' +
                        ' al cuadrado menos 4 a c finalizar raíz cuadrada' +
-                       ' entre  2 a', 'sbrief');
+                       ' entre 2 a', 'sbrief');
 };
 
 
@@ -769,7 +769,7 @@ sre.NobleSpanishTest.prototype.testSample_35 = function() {
   this.executeRuleTest(mml, 'y igual empezar frac 1 entre 3 finalizar frac' +
                        ' paréntesis izquierdo 3 sup x paréntesis derecho',
                        'brief');
-  this.executeRuleTest(mml, 'y igual frac 1 entre  3 paréntesis izquierdo 3' +
+  this.executeRuleTest(mml, 'y igual frac 1 entre 3 paréntesis izquierdo 3' +
                        ' sup x paréntesis derecho', 'sbrief');
 };
 
@@ -852,7 +852,7 @@ sre.NobleSpanishTest.prototype.testSample_41 = function() {
                        ' fracción', 'default');
   this.executeRuleTest(mml, 'y igual empezar frac 3 entre x finalizar' +
                        ' frac', 'brief');
-  this.executeRuleTest(mml, 'y igual frac 3 entre  x', 'sbrief');
+  this.executeRuleTest(mml, 'y igual frac 3 entre x', 'sbrief');
 };
 
 
@@ -971,7 +971,7 @@ sre.NobleSpanishTest.prototype.testSample_49 = function() {
                        ' finalizar fracción', 'default');
   this.executeRuleTest(mml, 'y igual x más empezar frac 1 entre x finalizar' +
                        ' frac', 'brief');
-  this.executeRuleTest(mml, 'y igual x más frac 1 entre  x', 'sbrief');
+  this.executeRuleTest(mml, 'y igual x más frac 1 entre x', 'sbrief');
 };
 
 
@@ -1025,7 +1025,7 @@ sre.NobleSpanishTest.prototype.testSample_52 = function() {
                        ' finalizar fracción', 'default');
   this.executeRuleTest(mml, '0,25 mayor que empezar frac 5 entre 16' +
                        ' finalizar frac', 'brief');
-  this.executeRuleTest(mml, '0,25 mayor que frac 5 entre  16', 'sbrief');
+  this.executeRuleTest(mml, '0,25 mayor que frac 5 entre 16', 'sbrief');
 };
 
 
@@ -1071,9 +1071,9 @@ sre.NobleSpanishTest.prototype.testSample_54 = function() {
                        ' paréntesis izquierdo 2 por empezar frac 1 entre 2' +
                        ' finalizar frac por pi por 5 paréntesis derecho',
                        'brief');
-  this.executeRuleTest(mml, 'paréntesis izquierdo frac 1 entre  2 por frac' +
-                       ' 1 entre  2 por pi por 2 paréntesis derecho más' +
-                       ' paréntesis izquierdo 2 por frac 1 entre  2 por pi' +
+  this.executeRuleTest(mml, 'paréntesis izquierdo frac 1 entre 2 por frac' +
+                       ' 1 entre 2 por pi por 2 paréntesis derecho más' +
+                       ' paréntesis izquierdo 2 por frac 1 entre 2 por pi' +
                        ' por 5 paréntesis derecho', 'sbrief');
 };
 
@@ -1356,7 +1356,7 @@ sre.NobleSpanishTest.prototype.testSample_58 = function() {
                        ' frac mayúscula P llave izquierda mayúscula B sub j' +
                        ' llaves derecha mayúscula P llave izquierda' +
                        ' mayúscula A barra vertical mayúscula B sub j' +
-                       ' llaves derecha entre  sumatorio bajoíndice j prima' +
+                       ' llaves derecha entre sumatorio bajoíndice j prima' +
                        ' perteneciente a mayúscula J finalizar índices' +
                        ' mayúscula P llave izquierda mayúscula B sub j' +
                        ' prima llaves derecha mayúscula P llave izquierda' +
@@ -1515,7 +1515,7 @@ sre.NobleSpanishTest.prototype.testSample_61 = function() {
                        ' izquierdo mayúscula Y menos mayúscula Y barra sub' +
                        ' n paréntesis derecho barra oblicua paréntesis' +
                        ' izquierdo mayúscula S punto medio paréntesis' +
-                       ' izquierdo 1 más frac 1 entre  n paréntesis derecho' +
+                       ' izquierdo 1 más frac 1 entre n paréntesis derecho' +
                        ' sup 1 barra oblicua 2 paréntesis derecho mayor o' +
                        ' igual que menos t sub beta corchete izquierdo n' +
                        ' menos 1 corchete derecho llaves derecha igual beta' +
@@ -1684,7 +1684,7 @@ sre.NobleSpanishTest.prototype.testSample_63 = function() {
                        ' paréntesis derecho corchete derecho barra oblicua' +
                        ' mayúscula S sub n tilde frac mayúscula U más raíz' +
                        ' cuadrada n finalizar raíz cuadrada z sub 1 menos' +
-                       ' beta entre  paréntesis izquierdo ji al cuadrado' +
+                       ' beta entre paréntesis izquierdo ji al cuadrado' +
                        ' corchete izquierdo n menos 1 corchete derecho' +
                        ' barra oblicua paréntesis izquierdo n menos 1' +
                        ' paréntesis derecho paréntesis derecho sup 1 barra' +
@@ -1773,12 +1773,12 @@ sre.NobleSpanishTest.prototype.testSample_64 = function() {
                        ' paréntesis derecho coma mayúscula X sub paréntesis' +
                        ' izquierdo s paréntesis derecho llaves derecha' +
                        ' segunda fila primera columna espacio segunda' +
-                       ' columna igual frac n factorial entre  paréntesis' +
+                       ' columna igual frac n factorial entre paréntesis' +
                        ' izquierdo r menos 1 paréntesis derecho factorial' +
                        ' sumatorio bajoíndice j igual 0 sobreíndice s menos' +
                        ' r menos 1 finalizar índices paréntesis izquierdo' +
                        ' menos 1 paréntesis derecho sup j frac p sup r más' +
-                       ' j entre  paréntesis izquierdo n menos r menos j' +
+                       ' j entre paréntesis izquierdo n menos r menos j' +
                        ' paréntesis derecho factorial j factorial mayúscula' +
                        ' I sub 1 menos q paréntesis izquierdo n menos s más' +
                        ' 1 coma s menos r menos j paréntesis derecho punto' +
@@ -1873,7 +1873,7 @@ sre.NobleSpanishTest.prototype.testSample_66 = function() {
                        ' al cuadrado normal d t menor o igual que c sub 2 h' +
                        ' sup 4 menos 2 s', 'brief');
   this.executeRuleTest(mml, 'c sub 1 h sup 4 menos 2 s menor o igual que' +
-                       ' frac 1 entre  2 mayúscula T integral Sub menos' +
+                       ' frac 1 entre 2 mayúscula T integral Sub menos' +
                        ' mayúscula T Sup mayúscula T Base paréntesis' +
                        ' izquierdo f paréntesis izquierdo t más h' +
                        ' paréntesis derecho menos f paréntesis izquierdo t' +
@@ -1947,7 +1947,7 @@ sre.NobleSpanishTest.prototype.testSample_68 = function() {
   this.executeRuleTest(mml, 'mayúscula S paréntesis izquierdo omega' +
                        ' paréntesis derecho igual límite bajoíndice' +
                        ' mayúscula T flecha derecha infinito finalizar' +
-                       ' índices frac 1 entre  2 mayúscula T valor absoluto' +
+                       ' índices frac 1 entre 2 mayúscula T valor absoluto' +
                        ' integral Sub menos mayúscula T Sup mayúscula T' +
                        ' Base coma f coma paréntesis izquierdo coma t coma' +
                        ' paréntesis derecho coma normal e sup cursiva i t' +
@@ -2328,9 +2328,9 @@ sre.NobleSpanishTest.prototype.testSample_81 = function() {
                        ' izquierdo e más f paréntesis derecho al cuadrado' +
                        ' entre g finalizar frac', 'brief');
   this.executeRuleTest(mml, 'a igual frac paréntesis izquierdo b más c' +
-                       ' paréntesis derecho al cuadrado entre  d más frac' +
+                       ' paréntesis derecho al cuadrado entre d más frac' +
                        ' paréntesis izquierdo e más f paréntesis derecho al' +
-                       ' cuadrado entre  g', 'sbrief');
+                       ' cuadrado entre g', 'sbrief');
 };
 
 
@@ -2540,8 +2540,8 @@ sre.NobleSpanishTest.prototype.testSample_87 = function() {
                        ' finalizar frac entre entre empezar frac 3 entre 4' +
                        ' finalizar frac finalizar finalizar frac igual' +
                        ' empezar frac 2 entre 3 finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'frac frac 1 entre  2 entre  frac 3 entre  4' +
-                       ' igual frac 2 entre  3', 'sbrief');
+  this.executeRuleTest(mml, 'frac frac 1 entre 2 entre frac 3 entre 4' +
+                       ' igual frac 2 entre 3', 'sbrief');
 };
 
 
@@ -2629,7 +2629,7 @@ sre.NobleSpanishTest.prototype.testSample_89 = function() {
                        ' empezar frac x sup 4 entre 4 factorial finalizar' +
                        ' frac menos puntos suspensivos', 'brief');
   this.executeRuleTest(mml, 'coseno x igual 1 menos frac x al cuadrado' +
-                       ' entre  2 factorial más frac x sup 4 entre  4' +
+                       ' entre 2 factorial más frac x sup 4 entre 4' +
                        ' factorial menos puntos suspensivos', 'sbrief');
 };
 
@@ -2662,7 +2662,7 @@ sre.NobleSpanishTest.prototype.testSample_90 = function() {
                        ' raíz cuadrada entre 2 a finalizar frac', 'brief');
   this.executeRuleTest(mml, 'x igual frac menos b más menos raíz cuadrada b' +
                        ' al cuadrado menos 4 a c finalizar raíz cuadrada' +
-                       ' entre  2 a', 'sbrief');
+                       ' entre 2 a', 'sbrief');
 };
 
 
@@ -2685,7 +2685,7 @@ sre.NobleSpanishTest.prototype.testSample_91 = function() {
                        ' más 1 finalizar fracción', 'default');
   this.executeRuleTest(mml, 'x más y sup empezar frac 2 entre k más 1' +
                        ' finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'x más y sup frac 2 entre  k más 1', 'sbrief');
+  this.executeRuleTest(mml, 'x más y sup frac 2 entre k más 1', 'sbrief');
 };
 
 
@@ -2712,7 +2712,7 @@ sre.NobleSpanishTest.prototype.testSample_92 = function() {
                        ' índices empezar frac seno x entre x finalizar frac' +
                        ' igual 1', 'brief');
   this.executeRuleTest(mml, 'límite bajoíndice x flecha derecha 0 finalizar' +
-                       ' índices frac seno x entre  x igual 1', 'sbrief');
+                       ' índices frac seno x entre x igual 1', 'sbrief');
 };
 
 
@@ -3099,7 +3099,7 @@ sre.NobleSpanishTest.prototype.testSample_96 = function() {
                        ' 11 más 2 c sub 12 paréntesis derecho finalizar' +
                        ' frac', 'brief');
   this.executeRuleTest(mml, 's sub 11 igual frac c sub 11 más c sub 12' +
-                       ' entre  paréntesis izquierdo c sub 11 menos c sub' +
+                       ' entre paréntesis izquierdo c sub 11 menos c sub' +
                        ' 12 paréntesis derecho paréntesis izquierdo c sub' +
                        ' 11 más 2 c sub 12 paréntesis derecho', 'sbrief');
 };
@@ -3218,11 +3218,11 @@ sre.NobleSpanishTest.prototype.testSample_98 = function() {
                        ' entre d x finalizar frac paréntesis derecho más p' +
                        ' paréntesis izquierdo x paréntesis derecho igual' +
                        ' 0', 'brief');
-  this.executeRuleTest(mml, 'frac d entre  d x paréntesis izquierdo' +
+  this.executeRuleTest(mml, 'frac d entre d x paréntesis izquierdo' +
                        ' mayúscula E paréntesis izquierdo x paréntesis' +
                        ' derecho mayúscula A paréntesis izquierdo x' +
                        ' paréntesis derecho frac d w paréntesis izquierdo x' +
-                       ' paréntesis derecho entre  d x paréntesis derecho' +
+                       ' paréntesis derecho entre d x paréntesis derecho' +
                        ' más p paréntesis izquierdo x paréntesis derecho' +
                        ' igual 0', 'sbrief');
 };
@@ -3283,10 +3283,10 @@ sre.NobleSpanishTest.prototype.testSample_99 = function() {
                        ' finalizar frac paréntesis derecho paréntesis' +
                        ' izquierdo empezar frac 1 entre mayúscula T sub' +
                        ' seal finalizar frac paréntesis derecho', 'brief');
-  this.executeRuleTest(mml, 'TCS sub gas igual menos frac 1 entre  2' +
+  this.executeRuleTest(mml, 'TCS sub gas igual menos frac 1 entre 2' +
                        ' paréntesis izquierdo frac mayúscula P sub seal' +
-                       ' entre  mayúscula P sub max paréntesis derecho' +
-                       ' paréntesis izquierdo frac 1 entre  mayúscula T sub' +
+                       ' entre mayúscula P sub max paréntesis derecho' +
+                       ' paréntesis izquierdo frac 1 entre mayúscula T sub' +
                        ' seal paréntesis derecho', 'sbrief');
 };
 
@@ -3455,16 +3455,16 @@ sre.NobleSpanishTest.prototype.testSample_100 = function() {
                        ' cuadrado finalizar frac paréntesis derecho' +
                        ' finalizar finalizar frac', 'brief');
   this.executeRuleTest(mml, 'mayúscula B sub p igual frac frac 7 menos v al' +
-                       ' cuadrado entre  3 paréntesis izquierdo 1 más frac' +
-                       ' c al cuadrado entre  a al cuadrado más frac c sup' +
-                       ' 4 entre  a sup 4 paréntesis derecho más frac' +
+                       ' cuadrado entre 3 paréntesis izquierdo 1 más frac' +
+                       ' c al cuadrado entre a al cuadrado más frac c sup' +
+                       ' 4 entre a sup 4 paréntesis derecho más frac' +
                        ' paréntesis izquierdo 3 menos v paréntesis derecho' +
-                       ' al cuadrado c al cuadrado entre  paréntesis' +
+                       ' al cuadrado c al cuadrado entre paréntesis' +
                        ' izquierdo 1 más v paréntesis derecho a al cuadrado' +
-                       ' entre  paréntesis izquierdo 1 menos v paréntesis' +
+                       ' entre paréntesis izquierdo 1 menos v paréntesis' +
                        ' derecho paréntesis izquierdo 1 menos frac c sup 4' +
-                       ' entre  a sup 4 paréntesis derecho paréntesis' +
-                       ' izquierdo 1 menos frac c al cuadrado entre  a al' +
+                       ' entre a sup 4 paréntesis derecho paréntesis' +
+                       ' izquierdo 1 menos frac c al cuadrado entre a al' +
                        ' cuadrado paréntesis derecho', 'sbrief');
 };
 
@@ -3515,8 +3515,8 @@ sre.NobleSpanishTest.prototype.testSample_101 = function() {
                        ' s entre mayúscula C sub s finalizar frac finalizar' +
                        ' raíz cuadrada', 'brief');
   this.executeRuleTest(mml, 'mayúscula Q sub tank sup series igual frac 1' +
-                       ' entre  mayúscula R sub s raíz cuadrada frac' +
-                       ' mayúscula L sub s entre  mayúscula C sub s' +
+                       ' entre mayúscula R sub s raíz cuadrada frac' +
+                       ' mayúscula L sub s entre mayúscula C sub s' +
                        ' finalizar raíz cuadrada', 'sbrief');
 };
 
@@ -3624,11 +3624,11 @@ sre.NobleSpanishTest.prototype.testSample_103 = function() {
                        ' empezar frac mayúscula L al cuadrado entre EW al' +
                        ' cuadrado finalizar frac sigma paréntesis derecho' +
                        ' finalizar raíz cuadrada', 'brief');
-  this.executeRuleTest(mml, 'f igual 1,013 frac mayúscula W entre ' +
+  this.executeRuleTest(mml, 'f igual 1,013 frac mayúscula W entre' +
                        ' mayúscula L al cuadrado raíz cuadrada frac' +
-                       ' mayúscula E entre  rho finalizar raíz cuadrada' +
+                       ' mayúscula E entre rho finalizar raíz cuadrada' +
                        ' raíz cuadrada paréntesis izquierdo 1 más 0,293' +
-                       ' frac mayúscula L al cuadrado entre  EW al cuadrado' +
+                       ' frac mayúscula L al cuadrado entre EW al cuadrado' +
                        ' sigma paréntesis derecho finalizar raíz cuadrada',
                        'sbrief');
 };
@@ -3882,13 +3882,13 @@ sre.NobleSpanishTest.prototype.testSample_105 = function() {
                        ' finalizar esquema', 'brief');
   this.executeRuleTest(mml, 'esquema primera fila primera columna mayúscula' +
                        ' B segunda columna igual frac frac mayúscula F sub' +
-                       ' 0 entre  m entre  raíz cuadrada paréntesis' +
+                       ' 0 entre m entre raíz cuadrada paréntesis' +
                        ' izquierdo omega sub 0 al cuadrado menos omega al' +
                        ' cuadrado paréntesis derecho al cuadrado más 4 n al' +
                        ' cuadrado omega al cuadrado finalizar raíz cuadrada' +
                        ' segunda fila primera columna espacio segunda' +
-                       ' columna igual frac frac mayúscula F sub 0 entre  k' +
-                       ' entre  raíz cuadrada paréntesis izquierdo 1 menos' +
+                       ' columna igual frac frac mayúscula F sub 0 entre k' +
+                       ' entre raíz cuadrada paréntesis izquierdo 1 menos' +
                        ' paréntesis izquierdo omega barra oblicua omega sub' +
                        ' 0 al cuadrado paréntesis derecho al cuadrado' +
                        ' paréntesis derecho al cuadrado más 4 paréntesis' +
@@ -3980,7 +3980,7 @@ sre.NobleSpanishTest.prototype.testSample_107 = function() {
                        ' finalizar frac paréntesis derecho sup alfa', 'brief');
   this.executeRuleTest(mml, 'mayúscula P mayúscula M mayúscula F paréntesis' +
                        ' izquierdo x paréntesis derecho proporcional a' +
-                       ' paréntesis izquierdo frac 1 entre  x paréntesis' +
+                       ' paréntesis izquierdo frac 1 entre x paréntesis' +
                        ' derecho sup alfa', 'sbrief');
 };
 
@@ -4029,7 +4029,7 @@ sre.NobleSpanishTest.prototype.testSample_108 = function() {
                        ' exponente paréntesis izquierdo menos x al cuadrado' +
                        ' barra oblicua 2 paréntesis derecho', 'brief');
   this.executeRuleTest(mml, 'f paréntesis izquierdo x paréntesis derecho' +
-                       ' igual frac 1 entre  raíz cuadrada 2 pi finalizar' +
+                       ' igual frac 1 entre raíz cuadrada 2 pi finalizar' +
                        ' raíz cuadrada exponente paréntesis izquierdo menos' +
                        ' x al cuadrado barra oblicua 2 paréntesis derecho',
                        'sbrief');
@@ -4068,7 +4068,7 @@ sre.NobleSpanishTest.prototype.testSample_109 = function() {
   this.executeRuleTest(mml, 'empezar frac d x entre d theta finalizar frac' +
                        ' igual empezar frac beta entre coseno al cuadrado' +
                        ' theta finalizar frac', 'brief');
-  this.executeRuleTest(mml, 'frac d x entre  d theta igual frac beta entre ' +
+  this.executeRuleTest(mml, 'frac d x entre d theta igual frac beta entre' +
                        ' coseno al cuadrado theta', 'sbrief');
 };
 

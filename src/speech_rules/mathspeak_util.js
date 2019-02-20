@@ -251,13 +251,29 @@ sre.MathspeakUtil.fractionNestingDepth = function(node) {
 
 
 /**
+ * Computes disambiguations for nested fractions.
+ * @param {!Node} node The fraction node.
+ * @param {string} expr The disambiguating expression.
+ * @param {string=} opt_end Optional end expression.
+ * @return {string} The disambiguating string.
+ */
+sre.MathspeakUtil.nestedFraction = function(node, expr, opt_end) {
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
+  var annotation = Array.apply(null, Array(depth)).map(x => expr);
+  if (opt_end) {
+    annotation.push(opt_end);
+  }
+  return annotation.join(msg.REGEXP.JOINER_FRAC);
+};
+
+
+/**
  * Opening string for fractions in Mathspeak verbose mode.
  * @param {!Node} node The fraction node.
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.openingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_V;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.START, msg.MS.FRAC_V);
 };
 
 
@@ -267,8 +283,7 @@ sre.MathspeakUtil.openingFractionVerbose = function(node) {
  * @return {string} The closing string.
  */
 sre.MathspeakUtil.closingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_V;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.END, msg.MS.FRAC_V);
 };
 
 
@@ -278,8 +293,7 @@ sre.MathspeakUtil.closingFractionVerbose = function(node) {
  * @return {string} The middle string.
  */
 sre.MathspeakUtil.overFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.FRAC_OVER).trim();
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.FRAC_OVER);
 };
 
 
@@ -289,8 +303,7 @@ sre.MathspeakUtil.overFractionVerbose = function(node) {
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.openingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_B;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.START, msg.MS.FRAC_B);
 };
 
 
@@ -300,8 +313,7 @@ sre.MathspeakUtil.openingFractionBrief = function(node) {
  * @return {string} The closing string.
  */
 sre.MathspeakUtil.closingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_B;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.END, msg.MS.FRAC_B);
 };
 
 

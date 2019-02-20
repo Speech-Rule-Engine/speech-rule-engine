@@ -135,7 +135,8 @@ sre.Locale.en = {
     NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
     DECIMAL_MARK: '\\.',
     DIGIT_GROUP: ',',
-    JOINER_SUBSUPER: ' '
+    JOINER_SUBSUPER: ' ',
+    JOINER_FRAC: ''
   },
 
   PLURAL_UNIT: {

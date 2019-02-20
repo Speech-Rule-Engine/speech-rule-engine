@@ -232,7 +232,7 @@ sre.MathspeakFrenchTest.prototype.testSample_2_6_2 = function() {
   this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif début fraction d Phi majuscule B majuscule sur d t fin fraction',
                        'default');
   this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif début frac d Phi majuscule B majuscule sur d t fin frac', 'brief');
-  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif frac d Phi majuscule B majuscule sur  d t fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'intégrale de contour E majuscule point médian d l en gras égale négatif frac d Phi majuscule B majuscule sur d t fin frac', 'sbrief');
 };
 
 
@@ -355,7 +355,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_1_1 = function() {
   var mml = '<mfrac><mn>1</mn><mi>x</mi></mfrac>';
   this.executeRuleTest(mml, 'début fraction 1 sur x fin fraction', 'default');
   this.executeRuleTest(mml, 'début frac 1 sur x fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur  x fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'frac 1 sur x fin frac', 'sbrief');
 };
 
 
@@ -368,7 +368,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_1_2 = function() {
       '</mfrac><mo>×</mo><mi>f</mi></mrow>';
   this.executeRuleTest(mml, 'a moins début fraction b plus c sur d moins e fin fraction multiplié par f', 'default');
   this.executeRuleTest(mml, 'a moins début frac b plus c sur d moins e fin frac multiplié par f', 'brief');
-  this.executeRuleTest(mml, 'a moins frac b plus c sur  d moins e fin frac multiplié par f',
+  this.executeRuleTest(mml, 'a moins frac b plus c sur d moins e fin frac multiplié par f',
                        'sbrief');
 };
 
@@ -383,7 +383,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_2_1 = function() {
   this.executeRuleTest(mml, 'début début fraction début fraction x sur y fin fraction sur sur z fin fin fraction pas égal à début début fraction x sur sur début fraction y sur z fin fraction fin fin fraction',
                        'default');
   this.executeRuleTest(mml, 'début début frac début frac x sur y fin frac sur sur z fin fin frac pas égal à début début frac x sur sur début frac y sur z fin frac fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac1imbriquée frac x sur  y fin frac sur1imbriquée z fin frac1imbriquée pas égal à frac1imbriquée x sur1imbriquée frac y sur  z fin frac fin frac1imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'frac1imbriquée frac x sur y fin frac sur1imbriquée z fin frac1imbriquée pas égal à frac1imbriquée x sur1imbriquée frac y sur z fin frac fin frac1imbriquée', 'sbrief');
 };
 
 
@@ -406,7 +406,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_3_1 = function() {
       '<mi>x</mi></mrow></mfrac></mfenced><mn>2</mn></msup></mrow></mfrac>';
   this.executeRuleTest(mml, 'début début début fraction début début fraction parenthèse gauche 1 moins x parenthèse droite début fraction d sur d x fin fraction parenthèse gauche 2 x parenthèse droite moins 2 x début fraction d sur d x fin fraction parenthèse gauche 1 moins x parenthèse droite sur sur parenthèse gauche 1 moins x parenthèse droite au carré fin fin fraction sur sur sur 1 plus parenthèse gauche début fraction 2 x sur 1 moins x fin fraction parenthèse droite au carré fin fin fin fraction', 'default');
   this.executeRuleTest(mml, 'début début début frac début début frac parenthèse gauche 1 moins x parenthèse droite début frac d sur d x fin frac parenthèse gauche 2 x parenthèse droite moins 2 x début frac d sur d x fin frac parenthèse gauche 1 moins x parenthèse droite sur sur parenthèse gauche 1 moins x parenthèse droite au carré fin fin frac sur sur sur 1 plus parenthèse gauche début frac 2 x sur 1 moins x fin frac parenthèse droite au carré fin fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac2imbriquée frac1imbriquée parenthèse gauche 1 moins x parenthèse droite frac d sur  d x fin frac parenthèse gauche 2 x parenthèse droite moins 2 x frac d sur  d x fin frac parenthèse gauche 1 moins x parenthèse droite sur1imbriquée parenthèse gauche 1 moins x parenthèse droite au carré fin frac1imbriquée sur2imbriquée 1 plus parenthèse gauche frac 2 x sur  1 moins x fin frac parenthèse droite au carré fin frac2imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'frac2imbriquée frac1imbriquée parenthèse gauche 1 moins x parenthèse droite frac d sur d x fin frac parenthèse gauche 2 x parenthèse droite moins 2 x frac d sur d x fin frac parenthèse gauche 1 moins x parenthèse droite sur1imbriquée parenthèse gauche 1 moins x parenthèse droite au carré fin frac1imbriquée sur2imbriquée 1 plus parenthèse gauche frac 2 x sur 1 moins x fin frac parenthèse droite au carré fin frac2imbriquée', 'sbrief');
 };
 
 
@@ -422,7 +422,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_3_2 = function() {
       '</mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'a indice 0 position de base plus début début début début fraction 1 sur sur sur sur a indice 1 position de base plus début début début fraction 1 sur sur sur a indice 2 position de base plus début début fraction 1 sur sur points de suspension plus début fraction 1 sur a indice n position de base fin fraction fin fin fraction fin fin fin fraction fin fin fin fin fraction', 'default');
   this.executeRuleTest(mml, 'a 0 plus début début début début frac 1 sur sur sur sur a 1 plus début début début frac 1 sur sur sur a 2 plus début début frac 1 sur sur points de suspension plus début frac 1 sur a sub n position de base fin frac fin fin frac fin fin fin frac fin fin fin fin frac', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus frac3imbriquée 1 sur3imbriquée a 1 plus frac2imbriquée 1 sur2imbriquée a 2 plus frac1imbriquée 1 sur1imbriquée points de suspension plus frac 1 sur  a sub n position de base fin frac fin frac1imbriquée fin frac2imbriquée fin frac3imbriquée', 'sbrief');
+  this.executeRuleTest(mml, 'a 0 plus frac3imbriquée 1 sur3imbriquée a 1 plus frac2imbriquée 1 sur2imbriquée a 2 plus frac1imbriquée 1 sur1imbriquée points de suspension plus frac 1 sur a sub n position de base fin frac fin frac1imbriquée fin frac2imbriquée fin frac3imbriquée', 'sbrief');
 };
 
 
@@ -440,7 +440,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_4_1 = function() {
   this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts début fraction n sur 2 fin fraction',
                        'default');
   this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts début frac n sur 2 fin frac', 'brief');
-  this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts frac n sur  2 fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'un-demi plus deux-demis plus trois-demis plus quatre-demis plus points de suspension égale sommation début souscript n égale 1 début suscript infini fin scripts frac n sur 2 fin frac', 'sbrief');
 };
 
 
@@ -453,7 +453,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_4_2 = function() {
       '<mn>25</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'début fraction 20 sur 5 fin fraction multiplié par début fraction 1 sur 100 fin fraction égale un-vingt-cinquième', 'default');
   this.executeRuleTest(mml, 'début frac 20 sur 5 fin frac multiplié par début frac 1 sur 100 fin frac égale un-vingt-cinquième', 'brief');
-  this.executeRuleTest(mml, 'frac 20 sur  5 fin frac multiplié par frac 1 sur  100 fin frac égale un-vingt-cinquième', 'sbrief');
+  this.executeRuleTest(mml, 'frac 20 sur 5 fin frac multiplié par frac 1 sur 100 fin frac égale un-vingt-cinquième', 'sbrief');
 };
 
 
@@ -479,7 +479,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_5_1 = function() {
   this.executeRuleTest(mml, '3 et cinq-huitièmes égale début fraction 29 sur 8 fin fraction', 'default');
   this.executeRuleTest(mml, '3 et cinq-huitièmes égale début frac 29 sur 8 fin frac',
                        'brief');
-  this.executeRuleTest(mml, '3 et cinq-huitièmes égale frac 29 sur  8 fin frac',
+  this.executeRuleTest(mml, '3 et cinq-huitièmes égale frac 29 sur 8 fin frac',
                        'sbrief');
 };
 
@@ -500,7 +500,7 @@ sre.MathspeakFrenchTest.prototype.testSample_7_6_1 = function() {
       '<mn>2</mn></msub></mfrac><mo>+</mo><mo>&#x2026;</mo></mrow>';
   this.executeRuleTest(mml, 'a indice 0 position de base plus fraction continue b indice 1 position de base sur a indice 1 position de base plus début fraction b indice 2 position de base sur a indice 2 position de base plus début fraction b indice 3 position de base sur a indice 3 position de base plus points de suspension égale a indice 0 position de base plus début fraction b indice 1 position de base sur a indice 1 position de base fin fraction plus début fraction b indice 2 position de base sur a indice 2 position de base fin fraction plus points de suspension', 'default');
   this.executeRuleTest(mml, 'a 0 plus frac continue b 1 sur a 1 plus début frac b 2 sur a 2 plus début frac b 3 sur a 3 plus points de suspension égale a 0 plus début frac b 1 sur a 1 fin frac plus début frac b 2 sur a 2 fin frac plus points de suspension', 'brief');
-  this.executeRuleTest(mml, 'a 0 plus frac continue b 1 sur a 1 plus frac b 2 sur a 2 plus frac b 3 sur a 3 plus points de suspension égale a 0 plus frac b 1 sur  a 1 fin frac plus frac b 2 sur  a 2 fin frac plus points de suspension', 'sbrief');
+  this.executeRuleTest(mml, 'a 0 plus frac continue b 1 sur a 1 plus frac b 2 sur a 2 plus frac b 3 sur a 3 plus points de suspension égale a 0 plus frac b 1 sur a 1 fin frac plus frac b 2 sur a 2 fin frac plus points de suspension', 'sbrief');
 };
 
 
@@ -529,7 +529,7 @@ sre.MathspeakFrenchTest.prototype.testSample_8_1_2 = function() {
       '<mn>0</mn></mrow>';
   this.executeRuleTest(mml, 'début fraction d au carré y sur d x au carré fin fraction plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'default');
   this.executeRuleTest(mml, 'début frac d au carré y sur d x au carré fin frac plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'brief');
-  this.executeRuleTest(mml, 'frac d au carré y sur  d x au carré fin frac plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'sbrief');
+  this.executeRuleTest(mml, 'frac d au carré y sur d x au carré fin frac plus parenthèse gauche a x au carré plus b x plus c parenthèse droite y égale 0', 'sbrief');
 };
 
 
@@ -843,7 +843,7 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_8 = function() {
       '<mn>2</mn><mo>)</mo></mrow></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale début fraction log base 10 parenthèse gauche x parenthèse droite sur log base 10 parenthèse gauche 2 parenthèse droite fin fraction', 'default');
   this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale début frac log base 10 parenthèse gauche x parenthèse droite sur log base 10 parenthèse gauche 2 parenthèse droite fin frac', 'brief');
-  this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale frac log base 10 parenthèse gauche x parenthèse droite sur  log base 10 parenthèse gauche 2 parenthèse droite fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'log base 2 parenthèse gauche x parenthèse droite égale frac log base 10 parenthèse gauche x parenthèse droite sur log base 10 parenthèse gauche 2 parenthèse droite fin frac', 'sbrief');
 };
 
 
@@ -868,7 +868,7 @@ sre.MathspeakFrenchTest.prototype.testSample_8_5_10 = function() {
   this.executeRuleTest(mml, 'logarithme népérien x égale intégrale indice inférieur 1 indice supérieur x position de base début fraction d t sur t fin fraction', 'default');
   this.executeRuleTest(mml, 'logarithme népérien x égale intégrale inf 1 sup x position de base début frac d t sur t fin frac',
                        'brief');
-  this.executeRuleTest(mml, 'logarithme népérien x égale intégrale inf 1 sup x position de base frac d t sur  t fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'logarithme népérien x égale intégrale inf 1 sup x position de base frac d t sur t fin frac', 'sbrief');
 };
 
 
@@ -1104,7 +1104,7 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDFrac =
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>';
   this.executeRuleTest(mml, 'début fraction 1 sur indice gauche a exposant gauche b position de base x indice c exposant d position de base fin fraction', 'default');
   this.executeRuleTest(mml, 'début frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur  sub a sup b position de base x sub c sup d position de base fin frac',
+  this.executeRuleTest(mml, 'frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac',
       'sbrief');
 };
 
@@ -1118,7 +1118,7 @@ sre.MathspeakFrenchTest.prototype.testSamplePartialTensorABCDFracR =
       '<mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>';
   this.executeRuleTest(mml, 'début fraction 1 sur indice gauche a exposant gauche b position de base x indice c exposant d position de base fin fraction r', 'default');
   this.executeRuleTest(mml, 'début frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac r', 'brief');
-  this.executeRuleTest(mml, 'frac 1 sur  sub a sup b position de base x sub c sup d position de base fin frac r',
+  this.executeRuleTest(mml, 'frac 1 sur sub a sup b position de base x sub c sup d position de base fin frac r',
       'sbrief');
 };
 
@@ -1186,7 +1186,7 @@ sre.MathspeakFrenchTest.prototype.testSample_8_9_2 = function() {
       '<mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow>';
   this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale début fraction d f double-prime parenthèse gauche y parenthèse droite sur d y fin fraction', 'default');
   this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale début frac d f double-prime parenthèse gauche y parenthèse droite sur d y fin frac', 'brief');
-  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale frac d f double-prime parenthèse gauche y parenthèse droite sur  d y fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'f triple-prime parenthèse gauche y parenthèse droite égale frac d f double-prime parenthèse gauche y parenthèse droite sur d y fin frac', 'sbrief');
 };
 
 
@@ -1342,7 +1342,7 @@ sre.MathspeakFrenchTest.prototype.testSample_9_2_2 = function() {
       '</msup><mo>,</mo><mi>x</mi><mo>></mo><mn>0</mn></mrow>';
   this.executeRuleTest(mml, 'indice du radical n début racine x exposant m position de base fin racine égale parenthèse gauche indice du radical n début racine x fin racine parenthèse droite exposant m position de base égale x exposant début fraction m sur n fin fraction position de base virgule x supérieur à 0', 'default');
   this.executeRuleTest(mml, 'indice du radical n début racine x sup m position de base fin racine égale parenthèse gauche indice du radical n début racine x fin racine parenthèse droite sup m position de base égale x sup début frac m sur n fin frac position de base virgule x supérieur à 0', 'brief');
-  this.executeRuleTest(mml, 'indice n racine x sup m position de base fin racine égale parenthèse gauche indice n racine x fin racine parenthèse droite sup m position de base égale x sup frac m sur  n fin frac position de base virgule x supérieur à 0', 'sbrief');
+  this.executeRuleTest(mml, 'indice n racine x sup m position de base fin racine égale parenthèse gauche indice n racine x fin racine parenthèse droite sup m position de base égale x sup frac m sur n fin frac position de base virgule x supérieur à 0', 'sbrief');
 };
 
 
@@ -1416,7 +1416,7 @@ sre.MathspeakFrenchTest.prototype.testSample_9_3_4 = function() {
       '<mo>&#x2026;</mo></mrow>';
   this.executeRuleTest(mml, 'début fraction 2 sur pi fin fraction égale début fraction début racine carrée 2 fin racine carrée sur 2 fin fraction début fraction début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée sur 2 fin fraction début fraction début racine carrée imbriquée 2 plus début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur 2 fin fraction points de suspension', 'default');
   this.executeRuleTest(mml, 'début frac 2 sur pi fin frac égale début frac début racine carrée 2 fin racine carrée sur 2 fin frac début frac début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée sur 2 fin frac début frac début racine carrée imbriquée 2 plus début racine carrée imbriquée 2 plus début racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur 2 fin frac points de suspension', 'brief');
-  this.executeRuleTest(mml, 'frac 2 sur  pi fin frac égale frac racine carrée 2 fin racine carrée sur  2 fin frac frac racine carrée imbriquée 2 plus racine carrée 2 fin racine carrée fin racine carrée imbriquée sur  2 fin frac frac racine carrée imbriquée 2 plus racine carrée imbriquée 2 plus racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur  2 fin frac points de suspension', 'sbrief');
+  this.executeRuleTest(mml, 'frac 2 sur pi fin frac égale frac racine carrée 2 fin racine carrée sur 2 fin frac frac racine carrée imbriquée 2 plus racine carrée 2 fin racine carrée fin racine carrée imbriquée sur 2 fin frac frac racine carrée imbriquée 2 plus racine carrée imbriquée 2 plus racine carrée 2 fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée sur 2 fin frac points de suspension', 'sbrief');
 };
 
 
@@ -1432,7 +1432,7 @@ sre.MathspeakFrenchTest.prototype.testSample_10_1_1 = function() {
   this.executeRuleTest(mml, 'début fraction 5 x début biffé y fin biffé sur 2 début biffé y fin biffé fin fraction égale cinq-demis x', 'default');
   this.executeRuleTest(mml, 'début frac 5 x début biffé y fin biffé sur 2 début biffé y fin biffé fin frac égale cinq-demis x',
                        'brief');
-  this.executeRuleTest(mml, 'frac 5 x début biffé y fin biffé sur  2 début biffé y fin biffé fin frac égale cinq-demis x', 'sbrief');
+  this.executeRuleTest(mml, 'frac 5 x début biffé y fin biffé sur 2 début biffé y fin biffé fin frac égale cinq-demis x', 'sbrief');
 };
 
 
@@ -1448,7 +1448,7 @@ sre.MathspeakFrenchTest.prototype.testSample_10_2_1 = function() {
   this.executeRuleTest(mml, 'début fraction 12 sur 18 fin fraction égale début fraction début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin fraction égale deux-tiers', 'default');
   this.executeRuleTest(mml, 'début frac 12 sur 18 fin frac égale début frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers',
                        'brief');
-  this.executeRuleTest(mml, 'frac 12 sur  18 fin frac égale frac début biffé 12 avec 2 fin biffé sur  début biffé 18 avec 3 fin biffé fin frac égale deux-tiers', 'sbrief');
+  this.executeRuleTest(mml, 'frac 12 sur 18 fin frac égale frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers', 'sbrief');
 };
 
 
@@ -1466,7 +1466,7 @@ sre.MathspeakFrenchTest.prototype.testSample_10_2_2 = function() {
   this.executeRuleTest(mml, 'début fraction 12 sur 18 fin fraction égale début fraction début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin fraction égale deux-tiers', 'default');
   this.executeRuleTest(mml, 'début frac 12 sur 18 fin frac égale début frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers',
                        'brief');
-  this.executeRuleTest(mml, 'frac 12 sur  18 fin frac égale frac début biffé 12 avec 2 fin biffé sur  début biffé 18 avec 3 fin biffé fin frac égale deux-tiers', 'sbrief');
+  this.executeRuleTest(mml, 'frac 12 sur 18 fin frac égale frac début biffé 12 avec 2 fin biffé sur début biffé 18 avec 3 fin biffé fin frac égale deux-tiers', 'sbrief');
 };
 
 
@@ -1700,7 +1700,7 @@ sre.MathspeakFrenchTest.prototype.testSample_13_1_1 = function() {
       '</mfrac></mrow>';
   this.executeRuleTest(mml, 'début fraction 60 début biffé miles fin biffé sur début biffé hour fin biffé fin fraction multiplié par début fraction 5,280 pieds sur 1 début biffé miles fin biffé fin fraction multiplié par début fraction 1 début biffé hour fin biffé sur 60 minute fin fraction égale début fraction 5,280 pieds sur minute fin fraction', 'default');
   this.executeRuleTest(mml, 'début frac 60 début biffé miles fin biffé sur début biffé hour fin biffé fin frac multiplié par début frac 5,280 pieds sur 1 début biffé miles fin biffé fin frac multiplié par début frac 1 début biffé hour fin biffé sur 60 minute fin frac égale début frac 5,280 pieds sur minute fin frac', 'brief');
-  this.executeRuleTest(mml, 'frac 60 début biffé miles fin biffé sur  début biffé hour fin biffé fin frac multiplié par frac 5,280 pieds sur  1 début biffé miles fin biffé fin frac multiplié par frac 1 début biffé hour fin biffé sur  60 minute fin frac égale frac 5,280 pieds sur  minute fin frac',
+  this.executeRuleTest(mml, 'frac 60 début biffé miles fin biffé sur début biffé hour fin biffé fin frac multiplié par frac 5,280 pieds sur 1 début biffé miles fin biffé fin frac multiplié par frac 1 début biffé hour fin biffé sur 60 minute fin frac égale frac 5,280 pieds sur minute fin frac',
                        'sbrief');
 };
 
@@ -1734,7 +1734,7 @@ sre.MathspeakFrenchTest.prototype.testSample_13_1_3 = function() {
   this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale début fraction m sur 1,000 fin fraction kilometer',
                        'default');
   this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale début frac m sur 1,000 fin frac kilometer', 'brief');
-  this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale frac m sur  1,000 fin frac kilometer', 'sbrief');
+  this.executeRuleTest(mml, 'm mètres égale 100 m centimeter égale frac m sur 1,000 fin frac kilometer', 'sbrief');
 };
 
 

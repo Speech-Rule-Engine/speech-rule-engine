@@ -288,7 +288,7 @@ sre.MmlcloudFrenchTest.prototype.testSupBaseRelseq = function() {
       '<mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>';
   this.executeRuleTest(mml, 'c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à c indice 2 position de base h exposant 4 moins 2 s', 'default');
   this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à c 2 h sup 4 moins 2 s', 'brief');
-  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac plus petit ou égal à c 2 h sup 4 moins 2 s', 'sbrief');
+  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à c 2 h sup 4 moins 2 s', 'sbrief');
 };
 
 
@@ -307,7 +307,7 @@ sre.MmlcloudFrenchTest.prototype.testSupBaseMultirel = function() {
   this.executeRuleTest(mml, 'c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale c indice 2 position de base h exposant 4 moins 2 s',
                        'default');
   this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale c 2 h sup 4 moins 2 s', 'brief');
-  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac égale c 2 h sup 4 moins 2 s', 'sbrief');
+  this.executeRuleTest(mml, 'c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale c 2 h sup 4 moins 2 s', 'sbrief');
 };
 
 
@@ -321,7 +321,7 @@ sre.MmlcloudFrenchTest.prototype.testSubBaseRelseq = function() {
       '<mo>&#x2264;</mo><msub><mi>h</mi><mi>s</mi></msub>';
   this.executeRuleTest(mml, 'h indice s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à h indice s', 'default');
   this.executeRuleTest(mml, 'h sub s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s', 'brief');
-  this.executeRuleTest(mml, 'h sub s position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac plus petit ou égal à h sub s', 'sbrief');
+  this.executeRuleTest(mml, 'h sub s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s', 'sbrief');
 };
 
 
@@ -335,7 +335,7 @@ sre.MmlcloudFrenchTest.prototype.testSubBaseMultirel = function() {
       '<mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>';
   this.executeRuleTest(mml, 'h indice s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale h indice s', 'default');
   this.executeRuleTest(mml, 'h sub s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale h sub s', 'brief');
-  this.executeRuleTest(mml, 'h sub s position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac égale h sub s', 'sbrief');
+  this.executeRuleTest(mml, 'h sub s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale h sub s', 'sbrief');
 };
 
 
@@ -350,7 +350,7 @@ sre.MmlcloudFrenchTest.prototype.testSubSuperBaseRelseq = function() {
       '<mi>t</mi></msubsup>';
   this.executeRuleTest(mml, 'h indice s exposant t position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à h indice s exposant t', 'default');
   this.executeRuleTest(mml, 'h sub s sup t position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s sup t', 'brief');
-  this.executeRuleTest(mml, 'h sub s sup t position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac plus petit ou égal à h sub s sup t',
+  this.executeRuleTest(mml, 'h sub s sup t position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s sup t',
                        'sbrief');
 };
 
@@ -366,7 +366,7 @@ sre.MmlcloudFrenchTest.prototype.testSubSuperBaseMultirel = function() {
       '<mi>t</mi></msubsup>';
   this.executeRuleTest(mml, 'h indice s exposant t position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale h indice s exposant t', 'default');
   this.executeRuleTest(mml, 'h sub s sup t position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale h sub s sup t', 'brief');
-  this.executeRuleTest(mml, 'h sub s sup t position de base plus petit ou égal à frac 1 sur  2 T majuscule fin frac égale h sub s sup t', 'sbrief');
+  this.executeRuleTest(mml, 'h sub s sup t position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale h sub s sup t', 'sbrief');
 };
 
 
@@ -384,7 +384,7 @@ sre.MmlcloudFrenchTest.prototype.testSquareWithText = function() {
   this.executeRuleTest(mml, 'début fraction area of triangle sur area of square fin fraction égale début fraction 1 unit au carré sur 16 units cubique fin fraction', 'default');
   this.executeRuleTest(mml, 'début frac area of triangle sur area of square fin frac égale début frac 1 unit au carré sur 16 units cubique fin frac',
                        'brief');
-  this.executeRuleTest(mml, 'frac area of triangle sur  area of square fin frac égale frac 1 unit au carré sur  16 units cubique fin frac', 'sbrief');
+  this.executeRuleTest(mml, 'frac area of triangle sur area of square fin frac égale frac 1 unit au carré sur 16 units cubique fin frac', 'sbrief');
 };
 
 

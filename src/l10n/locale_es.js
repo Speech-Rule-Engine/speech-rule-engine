@@ -29,14 +29,14 @@ goog.require('sre.Locale');
 sre.Locale.es = {
 
   MS: {
-    START: 'empezar ',
+    START: 'empezar',
     FRAC_V: 'fracción',
     FRAC_B: 'frac',
     FRAC_S: 'frac',
     // TODO (localize): Could be problematic with space separators. Might need
     // to trim.
-    END: 'finalizar ',
-    FRAC_OVER: 'entre ',
+    END: 'finalizar',
+    FRAC_OVER: 'entre',
     TWICE: '',
     NEST_FRAC: '',
     ENDFRAC: '',
@@ -165,7 +165,8 @@ sre.Locale.es = {
     NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
     DECIMAL_MARK: ',',
     DIGIT_GROUP: '',
-    JOINER_SUBSUPER: ' '
+    JOINER_SUBSUPER: ' ',
+    JOINER_FRAC: ' '
   }
   
 };
