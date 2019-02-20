@@ -1389,24 +1389,24 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // TODO: Deal with the extra pause recursively and reduce number of rules!
   defineRule(
       'sqrt', 'clearspeak.default',
-      '[t] "the square root of"; [n] children/*[1] (grammar:EndRoot=false);' +
+      '[t] "la racine carrée de"; [n] children/*[1] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::sqrt');
   defineRule(
       'sqrt-nested', 'clearspeak.default',
-      '[p] (pause: "short"); [t] "the square root of";' +
+      '[p] (pause: "short"); [t] "la racine carrée de";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root');
   defineRule(
       'negative-sqrt', 'clearspeak.default',
-      '[t] "the negative square root of";' +
+      '[t] "la racine carrée négative de";' +
       ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"');
   defineRule(
       'negative-sqrt', 'clearspeak.default',
-      '[p] (pause: "short"); [t] "the negative square root of";' +
+      '[p] (pause: "short"); [t] "la racine carrée négative de";' +
       ' [n] children/*[1]/children/*[1] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"',
@@ -1414,7 +1414,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'sqrt-plus-minus', 'clearspeak.Roots_PosNegSqRoot',
-      '[t] "the positive square root of";' +
+      '[t] "la racine carrée positive de";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt',
       'parent::stree or not(parent::*/parent::infixop[@role="addition"]) or' +
@@ -1422,7 +1422,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       ' and parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-nested-plus-minus', 'clearspeak.Roots_PosNegSqRoot',
-      '[p] (pause: "short"); [t] "the positive square root of";' +
+      '[p] (pause: "short"); [t] "la racine carrée positive de";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root',
@@ -1431,7 +1431,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       ' and parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-plus-minus', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[t] "the positive square root of";' +
+      '[t] "la racine carrée positive de";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'parent::stree or' +
       ' not(parent::*/parent::infixop[@role="addition"]) or' +
@@ -1439,7 +1439,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       ' parent::*/parent::*/text()!="∓")');
   defineRule(
       'sqrt-nested-plus-minus', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[p] (pause: "short"); [t] "the positive square root of";' +
+      '[p] (pause: "short"); [t] "la racine carrée positive de";' +
       ' [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)',
       'self::sqrt', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root',
@@ -1450,56 +1450,56 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'sqrt-endroot', 'clearspeak.Roots_RootEnd',
-      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:short)',
+      '[n] . (grammar:EndRoot); [t] "fin racine"; [p] (pause:short)',
       'self::sqrt', 'not(contains(@grammar, "EndRoot"))');
   defineRule(
       'negative-sqrt-endroot', 'clearspeak.Roots_RootEnd',
-      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:short)',
+      '[n] . (grammar:EndRoot); [t] "fin racine"; [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"',
       'not(contains(@grammar, "EndRoot"))');
   defineRule(
       'sqrt-endroot', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:short)',
+      '[n] . (grammar:EndRoot); [t] "fin racine"; [p] (pause:short)',
       'self::sqrt', 'not(contains(@grammar, "EndRoot"))');
   defineRule(
       'negative-sqrt-endroot', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:short)',
+      '[n] . (grammar:EndRoot); [t] "fin racine"; [p] (pause:short)',
       'self::prefixop', '@role="negative"', 'name(children/*[1])="sqrt"',
       'not(contains(@grammar, "EndRoot"))');
 
   // Cube roots
   defineRule(
       'cube', 'clearspeak.default',
-      '[t] "the cube root of"; [n] children/*[2] (grammar:EndRoot=false);' +
+      '[t] "la racine cubique de"; [n] children/*[2] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::root', 'children/*[1][text()="3"]');
   defineRule(
       'cube-nested', 'clearspeak.default',
-      '[p] (pause:short); [t] "the cube root of"; ' +
+      '[p] (pause:short); [t] "la racine cubique de"; ' +
       '[n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
       'self::root', 'children/*[1][text()="3"]', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root');
   // Higher roots
   defineRule(
       'root', 'clearspeak.default',
-      '[t] "le"; [n] children/*[1] (grammar:ordinal); [t] "root of";' +
+      '[t] "la"; [n] children/*[1] (grammar:ordinal); [t] "racine de";' +
       ' [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)',
       'self::root');
   defineRule(
       'root-nested', 'clearspeak.default',
-      '[p] (pause:short); [t] "le"; [n] children/*[1] (grammar:ordinal); ' +
-      '[t] "root of"; [n] children/*[2] (grammar:EndRoot=false);' +
+      '[p] (pause:short); [t] "la"; [n] children/*[1] (grammar:ordinal); ' +
+      '[t] "racine de"; [n] children/*[2] (grammar:EndRoot=false);' +
       ' [p] (pause:short)',
       'self::root', 'not(preceding-sibling::*)',
       'ancestor::sqrt|ancestor::root');
 
   defineRule(
       'root-endroot', 'clearspeak.Roots_RootEnd',
-      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:short)',
+      '[n] . (grammar:EndRoot); [t] "fin racine"; [p] (pause:short)',
       'self::root', 'not(contains(@grammar, "EndRoot"))');
   defineRule(
       'root-endroot', 'clearspeak.Roots_PosNegSqRootEnd',
-      '[n] . (grammar:EndRoot); [t] "end root"; [p] (pause:short)',
+      '[n] . (grammar:EndRoot); [t] "fin racine"; [p] (pause:short)',
       'self::root', 'not(contains(@grammar, "EndRoot"))');
 
 
