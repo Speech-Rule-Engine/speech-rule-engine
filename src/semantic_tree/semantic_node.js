@@ -79,12 +79,6 @@ sre.SemanticNode = function(id) {
    */
   this.annotation = {};
 
-  /**
-   * Collection of external attributes.
-   * @type {!Object.<string>}
-   */
-  this.attributes = {};
-  
 };
 
 
@@ -215,11 +209,13 @@ sre.SemanticNode.prototype.allAttributes = function() {
   return attributes;
 };
 
+
 sre.SemanticNode.prototype.addExternalAttributes_ = function(attributes) {
   for (var attr in this.attributes) {
     attributes.push([attr, this.attributes[attr]]);
   }
 };
+
 
 /**
  * Turns annotation structure into an attribute.
