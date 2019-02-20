@@ -194,32 +194,33 @@ sre.ApiTest.prototype.testToJson = function() {
   this.executeTest(
       'toJson',
       sre.ApiTest.QUADRATIC,
-      '{"stree":{"relseq":{"role":"equality","id":"24","$t":"=",' +
-      '"content":{"relation":{"role":"equality","id":"1","$t":"="}},' +
-      '"children":{"identifier":{"role":"latinletter","font":"italic",' +
-      '"id":"0","$t":"x"},"fraction":{"role":"division","id":"23",' +
-      '"children":{"infixop":[{"role":"addition","id":"18","$t":"±",' +
-      '"content":{"operator":{"role":"addition","id":"4","$t":"±"}},' +
-      '"children":{"prefixop":{"role":"negative","id":"17","$t":"−",' +
-      '"content":{"operator":{"role":"subtraction","id":"2","$t":"−"}},' +
-      '"children":{"identifier":{"role":"latinletter","font":"italic",' +
-      '"id":"3","$t":"b"}}},"sqrt":{"role":"unknown","id":"16",' +
-      '"children":{"infixop":{"role":"subtraction","id":"15",' +
-      '"$t":"−","content":{"operator":{"role":"subtraction",' +
-      '"id":"8","$t":"−"}},"children":{"superscript":{"role":"latinletter",' +
-      '"id":"7","children":{"identifier":{"role":"latinletter",' +
-      '"font":"italic","id":"5","$t":"b"},"number":{"role":"integer",' +
-      '"font":"normal","id":"6","$t":"2"}}},"infixop":{"role":"implicit",' +
-      '"id":"14","$t":"⁢","content":{"operator":[{"role":"multiplication",' +
-      '"id":"12","$t":"⁢"},{"role":"multiplication","id":"13","$t":"⁢"}]},' +
-      '"children":{"number":{"role":"integer","font":"normal","id":"9",' +
-      '"$t":"4"},"identifier":[{"role":"latinletter","font":"italic",' +
-      '"id":"10","$t":"a"},{"role":"latinletter","font":"italic","id":"11",' +
-      '"$t":"c"}]}}}}}}}},{"role":"implicit","id":"22","$t":"⁢",' +
-      '"content":{"operator":{"role":"multiplication","id":"21","$t":"⁢"}},' +
-      '"children":{"number":{"role":"integer","font":"normal","id":"19",' +
-      '"$t":"2"},"identifier":{"role":"latinletter","font":"italic",' +
-      '"id":"20","$t":"a"}}}]}}}}}}',
+      '{"stree":{"type":"relseq","role":"equality","id":"24","$t":"=",' +
+      '"children":[{"type":"identifier","role":"latinletter","font":"italic",' +
+      '"id":"0","$t":"x"},{"type":"fraction","role":"division","id":"23",' +
+      '"children":[{"type":"infixop","role":"addition","id":"18","$t":"±",' +
+      '"children":[{"type":"prefixop","role":"negative","id":"17","$t":"−",' +
+      '"children":[{"type":"identifier","role":"latinletter","font":"italic",' +
+      '"id":"3","$t":"b"}],"content":[{"type":"operator","role":"subtraction",' +
+      '"id":"2","$t":"−"}]},{"type":"sqrt","role":"unknown","id":"16",' +
+      '"children":[{"type":"infixop","role":"subtraction","id":"15","$t":"−",' +
+      '"children":[{"type":"superscript","role":"latinletter","id":"7",' +
+      '"children":[{"type":"identifier","role":"latinletter","font":"italic",' +
+      '"id":"5","$t":"b"},{"type":"number","role":"integer","font":"normal",' +
+      '"id":"6","$t":"2"}]},{"type":"infixop","role":"implicit","id":"14",' +
+      '"$t":"⁢","children":[{"type":"number","role":"integer","font":"normal",' +
+      '"id":"9","$t":"4"},{"type":"identifier","role":"latinletter",' +
+      '"font":"italic","id":"10","$t":"a"},{"type":"identifier",' +
+      '"role":"latinletter","font":"italic","id":"11","$t":"c"}],' +
+      '"content":[{"type":"operator","role":"multiplication","id":"12",' +
+      '"$t":"⁢"},{"type":"operator","role":"multiplication","id":"13",' +
+      '"$t":"⁢"}]}],"content":[{"type":"operator","role":"subtraction",' +
+      '"id":"8","$t":"−"}]}]}],"content":[{"type":"operator","role":"addition",' +
+      '"id":"4","$t":"±"}]},{"type":"infixop","role":"implicit","id":"22",' +
+      '"$t":"⁢","children":[{"type":"number","role":"integer","font":"normal",' +
+      '"id":"19","$t":"2"},{"type":"identifier","role":"latinletter",' +
+      '"font":"italic","id":"20","$t":"a"}],"content":[{"type":"operator",' +
+      '"role":"multiplication","id":"21","$t":"⁢"}]}]}],"content":' +
+      '[{"type":"relation","role":"equality","id":"1","$t":"="}]}}',
       JSON.stringify
   );
 };
