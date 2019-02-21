@@ -428,7 +428,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
   }
   // MOSS: Removes the last joiner in a multi node element. This should be
   //       reviewed.
-  if (multi) {
+  if (multi && descrs.length) {
     delete descrs[descrs.length - 1].
         personality[sre.Engine.personalityProps.JOIN];
   }
