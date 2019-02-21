@@ -67,3 +67,11 @@ sre.ClearspeakIssues.prototype.testIssueNumbers = function() {
     '<mrow><mn>#FFFF</mn></mrow>',
     'number number sign F F F F', preference);
 };
+
+
+sre.ClearspeakIssues.prototype.testIssueNumbers = function() {
+  var preference = 'MultiLineLabel_Auto';
+  this.executeRuleTest(
+    '<mtable><mtr><mtd /><mtd><mi>A</mi></mtd></mtr></mtable>',
+    '1 lines, Line 1: blank; A', preference);
+};
