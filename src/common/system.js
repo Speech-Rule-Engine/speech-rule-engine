@@ -41,6 +41,8 @@ goog.require('sre.Variables');
 goog.require('sre.WalkerFactory');
 goog.require('sre.WalkerUtil');
 
+goog.require('sre.Processor');
+goog.require('sre.Processors');
 
 
 /**
@@ -187,12 +189,15 @@ sre.System.prototype.configBlocks_ = function(feature) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.toSpeech = function(expr) {
-  var xml = sre.System.getInstance().parseExpression_(
-      expr, sre.Engine.getInstance().semantics);
-  if (!xml) {
-    return '';
-  }
-  return sre.System.getInstance().processXml(xml);
+  console.log(sre.Processors['speech']);
+  var processor = sre.Processors['speech'];
+  return processor.file(processor.processor(expr));
+  // var xml = sre.System.getInstance().parseExpression_(
+  //     expr, sre.Engine.getInstance().semantics);
+  // if (!xml) {
+  //   return '';
+  // }
+  // return sre.System.getInstance().processXml(xml);
 };
 
 
