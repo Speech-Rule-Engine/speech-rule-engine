@@ -31,6 +31,8 @@ goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.L10n');
 goog.require('sre.MathStore');
+goog.require('sre.Processor');
+goog.require('sre.Processors');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
 goog.require('sre.SpeechGeneratorUtil');
@@ -41,8 +43,6 @@ goog.require('sre.Variables');
 goog.require('sre.WalkerFactory');
 goog.require('sre.WalkerUtil');
 
-goog.require('sre.Processor');
-goog.require('sre.Processors');
 
 
 /**
@@ -111,7 +111,7 @@ sre.System.prototype.setupEngine = function(feature) {
   var setMulti = function(feat) {
     engine[feat] = feature[feat] || engine[feat];
   };
-  var binaryFeatures = ['strict', 'cache', 'semantics', 'structure'];
+  var binaryFeatures = ['strict', 'cache', 'semantics', 'structure', 'pprint'];
   var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
                         'locale', 'rate'];
   setMulti('mode');
@@ -189,9 +189,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.toSpeech = function(expr) {
-  console.log(sre.Processors['speech']);
-  var processor = sre.Processors['speech'];
-  return processor.file(processor.processor(expr));
+  return sre.Processors['speech'].processor(expr);
   // var xml = sre.System.getInstance().parseExpression_(
   //     expr, sre.Engine.getInstance().semantics);
   // if (!xml) {
@@ -213,7 +211,8 @@ sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
  * @return {Node} The semantic tree as Xml.
  */
 sre.System.prototype.toSemantic = function(expr) {
-  return sre.System.getInstance().parseExpression_(expr, true);
+  return sre.Processors['semantic'].processor(expr);
+  // return sre.System.getInstance().parseExpression_(expr, true);
 };
 
 
@@ -223,9 +222,10 @@ sre.System.prototype.toSemantic = function(expr) {
  * @return {JSONType} The semantic tree as Json.
  */
 sre.System.prototype.toJson = function(expr) {
-  var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
-  var stree = sre.Semantic.getTree(mml);
-  return stree.toJson();
+  return sre.Processors['json'].processor(expr);
+  // var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
+  // var stree = sre.Semantic.getTree(mml);
+  // return stree.toJson();
 };
 
 
@@ -235,13 +235,14 @@ sre.System.prototype.toJson = function(expr) {
  * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  */
 sre.System.prototype.toDescription = function(expr) {
-  var xml = sre.System.getInstance().parseExpression_(
-      expr, sre.Engine.getInstance().semantics);
-  if (!xml) {
-    return [];
-  }
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return descrs;
+  return sre.Processors['description'].processor(expr);
+  // var xml = sre.System.getInstance().parseExpression_(
+  //     expr, sre.Engine.getInstance().semantics);
+  // if (!xml) {
+  //   return [];
+  // }
+  // var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+  // return descrs;
 };
 
 
@@ -251,22 +252,23 @@ sre.System.prototype.toDescription = function(expr) {
  * @return {!Element} The enriched MathML node.
  */
 sre.System.prototype.toEnriched = function(expr) {
-  var enr = sre.Enrich.semanticMathmlSync(expr);
-  var root = sre.WalkerUtil.getSemanticRoot(enr);
-  switch (sre.Engine.getInstance().speech) {
-    case sre.Engine.Speech.SHALLOW:
-      var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
-      generator.getSpeech(root, enr);
-      break;
-    case sre.Engine.Speech.DEEP:
-      var generator = sre.SpeechGeneratorFactory.generator('Tree');
-      generator.getSpeech(root, enr);
-      break;
-    case sre.Engine.Speech.NONE:
-    default:
-      break;
-  }
-  return enr;
+  return sre.Processors['enriched'].processor(expr);
+  // var enr = sre.Enrich.semanticMathmlSync(expr);
+  // var root = sre.WalkerUtil.getSemanticRoot(enr);
+  // switch (sre.Engine.getInstance().speech) {
+  //   case sre.Engine.Speech.SHALLOW:
+  //     var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
+  //     generator.getSpeech(root, enr);
+  //     break;
+  //   case sre.Engine.Speech.DEEP:
+  //     var generator = sre.SpeechGeneratorFactory.generator('Tree');
+  //     generator.getSpeech(root, enr);
+  //     break;
+  //   case sre.Engine.Speech.NONE:
+  //   default:
+  //     break;
+  // }
+  // return enr;
 };
 
 
@@ -370,20 +372,20 @@ sre.System.prototype.processXml = function(xml) {
  * @return {Node} The Xml node.
  * @private
  */
-sre.System.prototype.parseExpression_ = function(expr, semantic) {
-  var xml = null;
-  try {
-    xml = sre.DomUtil.parseInput(expr, sre.System.Error);
-    if (semantic) {
-      xml = sre.System.getInstance().getSemanticTree(xml);
-    }
-    sre.Debugger.getInstance().generateOutput(
-        goog.bind(function() {return xml.toString();}, this));
-  } catch (err) {
-    console.error('Parse Error: ' + err.message);
-  }
-  return xml;
-};
+// sre.System.prototype.parseExpression_ = function(expr, semantic) {
+//   var xml = null;
+//   try {
+//     xml = sre.DomUtil.parseInput(expr, sre.System.Error);
+//     if (semantic) {
+//       xml = sre.System.getInstance().getSemanticTree(xml);
+//     }
+//     sre.Debugger.getInstance().generateOutput(
+//         goog.bind(function() {return xml.toString();}, this));
+//   } catch (err) {
+//     console.error('Parse Error: ' + err.message);
+//   }
+//   return xml;
+// };
 
 
 /**

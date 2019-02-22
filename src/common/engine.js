@@ -165,6 +165,11 @@ sre.Engine = function() {
   this.rate = '100';
 
   /**
+   * @type {boolean}
+   */
+  this.pprint = false;
+
+  /**
    * List of predicates for checking if the engine is set up.
    * @type {!Array.<function():boolean>}
    * @private

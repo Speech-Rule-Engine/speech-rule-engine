@@ -126,6 +126,11 @@ sre.AuralRendering.registerRenderer = function(type, renderer) {
 };
 
 
+sre.AuralRendering.prototype.currentRenderer = function(type) {
+  return sre.AuralRendering.rendererMapping_[
+    sre.Engine.getInstance().markup] instanceof type;
+};
+
 /**
  * @type {Object.<sre.Engine.Markup, sre.AudioRenderer>}
  * @private
