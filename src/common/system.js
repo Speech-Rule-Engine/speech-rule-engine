@@ -279,8 +279,7 @@ sre.System.prototype.toEnriched = function(expr) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSpeech = function(input, opt_output) {
-  sre.System.getInstance().processFile_(sre.System.getInstance().toSpeech,
-                                        input, opt_output);
+  sre.System.getInstance().processFile_('speech', input, opt_output);
 };
 
 
@@ -297,11 +296,7 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSemantic = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return (sre.System.getInstance().toSemantic(x)).toString();
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile_('semantic', input, opt_output);
 };
 
 
@@ -312,12 +307,7 @@ sre.System.prototype.fileToSemantic = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToJson = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return opt_output ? JSON.stringify(sre.System.getInstance().toJson(x))
-          : sre.System.getInstance().toJson(x);
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile_('json', input, opt_output);
 };
 
 
@@ -328,11 +318,7 @@ sre.System.prototype.fileToJson = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToDescription = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return JSON.stringify(sre.System.getInstance().toDescription(x));
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile_('description', input, opt_output);
 };
 
 
@@ -343,11 +329,7 @@ sre.System.prototype.fileToDescription = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToEnriched = function(input, opt_output) {
-  sre.System.getInstance().processFile_(
-      function(x) {
-        return (sre.System.getInstance().toEnriched(x)).toString();
-      },
-      input, opt_output);
+  sre.System.getInstance().processFile_('enriched', input, opt_output);
 };
 
 
@@ -401,7 +383,7 @@ sre.System.prototype.getSemanticTree = function(mml) {
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout.
- * @param {function(string): *} processor The input filename.
+ * @param {string} processor The name of the processor to call.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  * @private
@@ -440,20 +422,22 @@ sre.System.prototype.inputFileSync_ = function(file) {
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in synchronous mode.
- * @param {function(string): *} processor The input filename.
+ * @param {string} processor The name of the processor.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  * @private
  */
 sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
-  var result = processor(expr);
+  var proc = sre.Processors[processor.toLowerCase()];
+  var print = sre.Engine.getInstance().pprint ? proc.pprint : proc.print;
+  var result = print(proc.processor(expr));
   if (!opt_output) {
     console.info(result);
     return;
   }
   try {
-    sre.SystemExternal.fs.writeFileSync(opt_output, result, function() {});
+    sre.SystemExternal.fs.writeFileSync(opt_output, result);
   } catch (err) {
     throw new sre.System.Error('Can not write to file: ' + opt_output);
   }
@@ -482,7 +466,7 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in asynchronous mode.
- * @param {function(string): *} processor The input filename.
+ * @param {string} processor The name of the processor.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  * @private
@@ -492,7 +476,9 @@ sre.System.prototype.processFileAsync_ = function(
   sre.System.getInstance().inputFileAsync_(
       input,
       goog.bind(function(expr) {
-        var result = processor(expr);
+        var proc = sre.Processors[processor.toLowerCase()];
+        var print = sre.Engine.getInstance().pprint ? proc.pprint : proc.print;
+        var result = print(proc.processor(expr));
         if (!opt_output) {
           console.info(result);
           return;
