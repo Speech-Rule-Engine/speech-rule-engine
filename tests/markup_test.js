@@ -93,6 +93,38 @@ sre.MarkupTest.QUADRATIC =
 
 
 /**
+ * The quadratic equation as a MathML string.
+ * @type {string}
+ */
+sre.MarkupTest.QUADRATIC_MARKED =
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<mi>x</mi>' +
+    '<mo>=</mo>' +
+    '<mfrac>' +
+    '<mrow extid="0">' +
+    '<mo>&#x2212;<!-- − --></mo>' +
+    '<mi extid="1">b</mi>' +
+    '<mo extid="2">&#x00B1;<!-- ± --></mo>' +
+    '<msqrt>' +
+    '<msup>' +
+    '<mi>b</mi>' +
+    '<mn>2</mn>' +
+    '</msup>' +
+    '<mo>&#x2212;<!-- − --></mo>' +
+    '<mn>4</mn>' +
+    '<mi>a</mi>' +
+    '<mi>c</mi>' +
+    '</msqrt>' +
+    '</mrow>' +
+    '<mrow>' +
+    '<mn>2</mn>' +
+    '<mi>a</mi>' +
+    '</mrow>' +
+    '</mfrac>' +
+    '</math>';
+
+
+/**
  * Executes single markup tests.
  * @param {string} expr The input expression.
  * @param {string} result The expected result.
@@ -235,3 +267,33 @@ sre.MarkupTest.prototype.testVoiceXml = function() {
       ' rate="-18%"> two times a </prosody> <break time="400ms"/>',
       sre.Engine.Markup.VOICEXML, true);
 };
+
+
+/**
+ * Test for SSML Step markup.
+ */
+sre.MarkupTest.prototype.testSsmlStep = function() {
+  sre.System.getInstance().setupEngine({domain: 'clearspeak', style: 'default'});
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC_MARKED,
+      '<say-as interpret-as="character">x</say-as> equals <break' +
+      ' time="250ms"/> the fraction with numerator <mark name="0"/>' +
+      ' negative <mark name="1"/> <say-as interpret-as="character">b' +
+      '</say-as> <mark name="2"/> plus or minus the square root of <say-as' +
+      ' interpret-as="character">b</say-as> squared minus <prosody' +
+      ' rate="25%"> 4 <say-as interpret-as="character">a</say-as> <say-as' +
+      ' interpret-as="character">c</say-as> </prosody> <break' +
+      ' time="250ms"/> and denominator <prosody rate="25%"> 2 <say-as' +
+      ' interpret-as="character">a</say-as> </prosody> <break time="250ms"/>',
+      sre.Engine.Markup.SSML_STEP, true);
+  this.executeTest(
+      sre.MarkupTest.QUADRATIC_MARKED,
+      'x equals <break time="250ms"/> the fraction with numerator negative' +
+      ' b plus or minus the square root of b squared minus <prosody' +
+      ' rate="25%"> 4 a c </prosody> <break time="250ms"/> and denominator ' +
+      '<prosody rate="25%"> 2 a </prosody> <break time="250ms"/>',
+      sre.Engine.Markup.SSML, true);
+  sre.System.getInstance().setupEngine({domain: 'default', style: 'short'});
+};
+
+

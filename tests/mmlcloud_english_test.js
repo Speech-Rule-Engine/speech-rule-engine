@@ -669,3 +669,20 @@ sre.MmlcloudEnglishTest.prototype.testGreekMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'italic upper Alpha', 'default');
   this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans-serif-bold upper Alpha', 'default');
 };
+
+
+// Not localised from here!
+/**
+ * Tests for issue #279.
+ */
+sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
+  // mglyph is ignored!
+  this.executeRuleTest('<mtext>&#xA0;</mtext><mtext>&#xA0;</mtext>', '');
+  this.executeRuleTest(
+    '<mtable><mlabeledtr><mtd><mtext>(3.1.10)</mtext></mtd><mtd>' +
+      '<mrow><mglyph src="Images/img2354b563c08bcdd40777a6bbee95ac36.svg"' +
+      ' width="148pt" height="16pt"></mglyph></mrow>' +
+      '<mrow id="texmlid28" /></mtd></mlabeledtr></mtable>',
+    'StartLayout 1st Row  with Label left-parenthesis 3.1 .10' +
+      ' right-parenthesis EndLabel EndLayout');
+};
