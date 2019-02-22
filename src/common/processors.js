@@ -65,13 +65,7 @@ sre.Processor = function(name, methods) {
 };
 
 
-//  toSpeech: Aural rendering string.
-//  toSemantic: XML of semantic tree.
-//  toJson: Json version of the semantic tree.
-//  toEnriched: Enriched MathML node.
-//  toDescription: List of auditory descriptions.
-
-
+//  semantic: XML of semantic tree.
 new sre.Processor(
   'semantic',
   {
@@ -85,6 +79,8 @@ new sre.Processor(
   }
 );
 
+
+//  speech: Aural rendering string.
 new sre.Processor(
   'speech',
   {
@@ -93,14 +89,19 @@ new sre.Processor(
       var xml = sre.Semantic.xmlTree(mml);
       var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
       var aural = sre.AuralRendering.getInstance();
-      // console.log(aural.currentRenderer(sre.SsmlRenderer));
       return aural.finalize(aural.markup(descrs));
+    },
+    pprint: function(speech) {
+      var str = speech.toString();
+      return sre.AuralRendering.ofType(sre.XmlRenderer) ?
+        sre.DomUtil.formatXml(str) : str;
     }
     // Pretty Printing wrt. markup renderer.
   }
 );
 
 
+//  json: Json version of the semantic tree.
 new sre.Processor(
   'json',
   {
@@ -119,6 +120,7 @@ new sre.Processor(
 );
                   
 
+//  description: List of auditory descriptions.
 new sre.Processor(
   'description',
   {
@@ -138,6 +140,7 @@ new sre.Processor(
 );
 
 
+//  enriched: Enriched MathML node.
 new sre.Processor(
   'enriched',
   {
