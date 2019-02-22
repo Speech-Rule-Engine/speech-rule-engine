@@ -128,6 +128,9 @@ new sre.Processor(
       var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
       return descrs;
     },
+    print: function(descrs) {
+      return JSON.stringify(descrs);
+    },
     pprint: function(descrs) {
       return JSON.stringify(descrs, null, 2);
     }
