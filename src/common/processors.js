@@ -86,7 +86,7 @@ new sre.Processor(
   {
     processor: function(expr) {
       var mml = sre.DomUtil.parseInput(expr);
-      var xml = sre.Semantic.xmlTree(mml);
+      var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
       var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
       var aural = sre.AuralRendering.getInstance();
       return aural.finalize(aural.markup(descrs));
@@ -126,7 +126,7 @@ new sre.Processor(
   {
     processor: function(expr) {
       var mml = sre.DomUtil.parseInput(expr);
-      var xml = sre.Semantic.xmlTree(mml);
+      var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
       var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
       return descrs;
     },
