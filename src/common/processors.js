@@ -18,13 +18,71 @@
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-goog.provide('sre.Processor');
-goog.provide('sre.Processors');
+goog.provide('sre.ProcessorFactory');
 
 goog.require('sre.Engine');
 
 
-sre.Processors = {};
+/**
+ * @type {Object.<sre.Processor>}
+ * @private
+ */
+sre.ProcessorFactory.PROCESSORS_ = {};
+
+
+/**
+ * Gets the named processor. Throws an error if the processor does not exist!
+ * @param {string} name The name of the processor.
+ * @return {sre.Processor} The processor.
+ */
+sre.ProcessorFactory.get_ = function(name) {
+  var processor = sre.ProcessorFactory.PROCESSORS_[name.toLowerCase()];
+  if (!processor) {
+    throw new sre.Engine.Error('Unknown processor ' + name);
+  }
+  return processor;
+};
+
+/**
+ * Processes an expression with the given processor.
+ * @param {string} name The name of the processor.
+ * @param {string} expr The expression to process.
+ * @return {T} The data structure resulting from the processing the expression.
+ * @template T
+ */
+sre.ProcessorFactory.process = function(name, expr) {
+  var processor = sre.ProcessorFactory.get_(name);
+  return processor.processor(expr);
+};
+
+
+/**
+ * Prints a processed expression with given processor.
+ * @param {string} name The name of the processor.
+ * @param {T} data The data structure that's the result of this processor.
+ * @return {string} A string representation of the result.
+ * @template T
+ */
+sre.ProcessorFactory.print = function(name, data) {
+  var processor = sre.ProcessorFactory.get_(name);
+  return sre.Engine.getInstance().pprint ?
+    processor.pprint(data) : processor.print(data);
+};
+
+
+/**
+ * Convenience method that combines processing and printing.
+ * @param {string} name The name of the processor.
+ * @param {string} expr The expression to process.
+ * @return {string} A string representation of the result.
+ */
+sre.ProcessorFactory.output = function(name, expr) {
+  var processor = sre.ProcessorFactory.get_(name);
+  var data = processor.processor(expr);
+  return sre.Engine.getInstance().pprint ?
+    processor.pprint(data) : processor.print(data);
+};
+
 
 /**
  * Processors bundles a processing method with a collection of output methods.
@@ -37,6 +95,7 @@ sre.Processors = {};
  *    * processor The actual processing method.
  *    * print The printing method. If none is given, defaults to toString().
  *    * pprint The pretty printing method. If none is given, defaults print.
+ * @private
  */
 sre.Processor = function(name, methods) {
 
@@ -61,7 +120,7 @@ sre.Processor = function(name, methods) {
    */
   this.pprint = methods.pprint || this.print;
 
-  sre.Processors[this.name] = this;
+  sre.ProcessorFactory.PROCESSORS_[this.name] = this;
 };
 
 

@@ -24,7 +24,7 @@ goog.require('sre.Api');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
-goog.require('sre.Processors');
+goog.require('sre.ProcessorFactory');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
 
@@ -106,7 +106,7 @@ sre.Cli.prototype.execute = function(input) {
   this.runProcessors_(
       goog.bind(
       function(proc, file) {
-        this.system['fileTo' + proc](file, commander.output);
+        this.system.processFile_(proc, file, commander.output);
       }, this),
       input);
 };
@@ -121,7 +121,7 @@ sre.Cli.prototype.execute = function(input) {
 sre.Cli.prototype.runProcessors_ = function(processor, input) {
   try {
     if (!this.processors.length) {
-      this.processors.push('Speech');
+      this.processors.push('speech');
     }
     if (input) {
       this.processors.forEach(
@@ -160,10 +160,7 @@ sre.Cli.prototype.readline = function() {
   inter.on('close', goog.bind(function() {
     this.runProcessors_(goog.bind(
       function(proc, expr) {
-        var processor = sre.Processors[proc.toLowerCase()];
-        var print = sre.Engine.getInstance().pprint ?
-            processor.pprint : processor.print;
-        inter.output.write(print(processor.processor(expr))+ '\n');
+        inter.output.write(sre.ProcessorFactory.output(proc, expr)+ '\n');
       }, this), input);
   }, this));
 };
@@ -212,16 +209,16 @@ sre.Cli.prototype.commandLine = function() {
              set, 'rate').
       option('').
       option('-p, --speech', 'Generate speech output (default).',
-             processor, 'Speech').
+             processor, 'speech').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).',
-             processor, 'Description').
+             processor, 'description').
       option('-j, --json', 'Generate JSON of semantic tree.',
-             processor, 'Json').
+             processor, 'json').
       option('-x, --xml', 'Generate XML of semantic tree.',
-             processor, 'Semantic').
+             processor, 'semantic').
       option('').
       option('-m, --mathml', 'Generate enriched MathML.',
-             processor, 'Enriched').
+             processor, 'enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
              ' MathML (with -m option only).', set, 'speech').
       option('-r, --structure', 'Include structure attribute in enriched' +

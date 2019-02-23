@@ -31,8 +31,7 @@ goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.L10n');
 goog.require('sre.MathStore');
-goog.require('sre.Processor');
-goog.require('sre.Processors');
+goog.require('sre.ProcessorFactory');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorFactory');
 goog.require('sre.SpeechGeneratorUtil');
@@ -174,7 +173,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.toSpeech = function(expr) {
-  return sre.Processors['speech'].processor(expr);
+  return sre.ProcessorFactory.process('speech', expr);
 };
 
 
@@ -190,7 +189,7 @@ sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
  * @return {Node} The semantic tree as Xml.
  */
 sre.System.prototype.toSemantic = function(expr) {
-  return sre.Processors['semantic'].processor(expr);
+  return sre.ProcessorFactory.process('semantic', expr);
 };
 
 
@@ -200,7 +199,7 @@ sre.System.prototype.toSemantic = function(expr) {
  * @return {JSONType} The semantic tree as Json.
  */
 sre.System.prototype.toJson = function(expr) {
-  return sre.Processors['json'].processor(expr);
+  return sre.ProcessorFactory.process('json', expr);
 };
 
 
@@ -210,7 +209,7 @@ sre.System.prototype.toJson = function(expr) {
  * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  */
 sre.System.prototype.toDescription = function(expr) {
-  return sre.Processors['description'].processor(expr);
+  return sre.ProcessorFactory.process('description', expr);
 };
 
 
@@ -220,7 +219,7 @@ sre.System.prototype.toDescription = function(expr) {
  * @return {!Element} The enriched MathML node.
  */
 sre.System.prototype.toEnriched = function(expr) {
-  return sre.Processors['enriched'].processor(expr);
+  return sre.ProcessorFactory.process('enriched', expr);
 };
 
 
@@ -380,9 +379,7 @@ sre.System.prototype.inputFileSync_ = function(file) {
  */
 sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   var expr = sre.System.getInstance().inputFileSync_(input);
-  var proc = sre.Processors[processor.toLowerCase()];
-  var print = sre.Engine.getInstance().pprint ? proc.pprint : proc.print;
-  var result = print(proc.processor(expr));
+  var result = sre.ProcessorFactory.output(processor, expr);
   if (!opt_output) {
     console.info(result);
     return;
@@ -427,9 +424,7 @@ sre.System.prototype.processFileAsync_ = function(
   sre.System.getInstance().inputFileAsync_(
       input,
       goog.bind(function(expr) {
-        var proc = sre.Processors[processor.toLowerCase()];
-        var print = sre.Engine.getInstance().pprint ? proc.pprint : proc.print;
-        var result = print(proc.processor(expr));
+        var result = sre.ProcessorFactory.output(processor, expr);
         if (!opt_output) {
           console.info(result);
           return;
