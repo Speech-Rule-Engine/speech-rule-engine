@@ -177,7 +177,6 @@ sre.DomUtil.formatXml = function(xml) {
       // Start node with trailing content.
       var match = sre.DomUtil.matchingStartEnd_(node, split[0]);
       if (match[0]) {    // Combine with end node
-        console.log(match[1].length);
         if (match[1]) {  // Trailing mixed content after end node.
           node = node + split.shift().slice(0, - match[1].length);
           if (match[1].trim()) {  // In case of trailing spaces.
