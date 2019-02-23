@@ -19,7 +19,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.System');
-goog.provide('sre.System.Error');
 
 goog.require('sre.AuralRendering');
 goog.require('sre.BaseUtil');
@@ -27,6 +26,7 @@ goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
+goog.require('sre.Engine.Error');
 goog.require('sre.Enrich');
 goog.require('sre.HighlighterFactory');
 goog.require('sre.L10n');
@@ -58,21 +58,6 @@ sre.System = function() {
 
 };
 goog.addSingletonGetter(sre.System);
-
-
-
-/**
- * Error object for signaling parsing errors.
- * @param {string} msg The error message.
- * @constructor
- * @extends {Error}
- */
-sre.System.Error = function(msg) {
-  sre.System.Error.base(this, 'constructor');
-  this.message = msg || '';
-  this.name = 'System Error';
-};
-goog.inherits(sre.System.Error, Error);
 
 
 
@@ -337,14 +322,14 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
 // };
 
 
-/**
- * Creates a clean Xml version of the semantic tree for a given MathML node.
- * @param {!Element} mml The MathML node.
- * @return {Node} Semantic tree for input node as newly created Xml node.
- */
-sre.System.prototype.getSemanticTree = function(mml) {
-  return sre.Semantic.xmlTree(mml);
-};
+// /**
+//  * Creates a clean Xml version of the semantic tree for a given MathML node.
+//  * @param {!Element} mml The MathML node.
+//  * @return {Node} Semantic tree for input node as newly created Xml node.
+//  */
+// sre.System.prototype.getSemanticTree = function(mml) {
+//   return sre.Semantic.xmlTree(mml);
+// };
 
 
 /**
@@ -353,7 +338,6 @@ sre.System.prototype.getSemanticTree = function(mml) {
  * @param {string} processor The name of the processor to call.
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
- * @private
  */
 sre.System.prototype.processFile_ = function(processor, input, opt_output) {
   if (!sre.Engine.isReady()) {
@@ -380,7 +364,7 @@ sre.System.prototype.inputFileSync_ = function(file) {
   try {
     var expr = sre.SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
   } catch (err) {
-    throw new sre.System.Error('Can not open file: ' + file);
+    throw new sre.Engine.Error('Can not open file: ' + file);
   }
   return expr;
 };
@@ -406,7 +390,7 @@ sre.System.prototype.processFileSync_ = function(processor, input, opt_output) {
   try {
     sre.SystemExternal.fs.writeFileSync(opt_output, result);
   } catch (err) {
-    throw new sre.System.Error('Can not write to file: ' + opt_output);
+    throw new sre.Engine.Error('Can not write to file: ' + opt_output);
   }
 };
 
@@ -422,7 +406,7 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
       file, {encoding: 'utf8'},
       goog.bind(function(err, data) {
         if (err) {
-          throw new sre.System.Error('Can not open file: ' + file);
+          throw new sre.Engine.Error('Can not open file: ' + file);
         }
         callback(data);
       }, this)
@@ -452,13 +436,14 @@ sre.System.prototype.processFileAsync_ = function(
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {
           if (err) {
-            throw new sre.System.Error('Can not write to file: ' + opt_output);
+            throw new sre.Engine.Error('Can not write to file: ' + opt_output);
           }
         });
       }, this));
 };
 
 
+// These are experimental and do not yet fit into the new processor setup.
 /**
  * Walk a math expression provided by an external system.
  * @param {string} expr The string containing a MathML representation.

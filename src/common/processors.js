@@ -106,7 +106,7 @@ new sre.Processor(
   'json',
   {
     processor: function(expr) {
-      var mml = sre.DomUtil.parseInput(expr, sre.System.Error);
+      var mml = sre.DomUtil.parseInput(expr, sre.Engine.Error);
       var stree = sre.Semantic.getTree(mml);
       return stree.toJson();
     },

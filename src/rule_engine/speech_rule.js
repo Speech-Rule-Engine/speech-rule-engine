@@ -30,6 +30,7 @@
 goog.provide('sre.SpeechRule');
 
 goog.require('sre.DynamicCstr');
+goog.require('sre.Engine.Error');
 goog.require('sre.Grammar');
 
 
@@ -431,11 +432,10 @@ sre.SpeechRule.splitString_ = function(str, sep) {
  * Error object for signaling parsing errors.
  * @param {string} msg The error message.
  * @constructor
- * @extends {Error}
+ * @extends {sre.Engine.Error}
  */
 sre.SpeechRule.OutputError = function(msg) {
-  sre.SpeechRule.OutputError.base(this, 'constructor');
-  this.message = msg || '';
+  sre.SpeechRule.OutputError.base(this, 'constructor', msg);
   this.name = 'RuleError';
 };
-goog.inherits(sre.SpeechRule.OutputError, Error);
+goog.inherits(sre.SpeechRule.OutputError, sre.Engine.Error);

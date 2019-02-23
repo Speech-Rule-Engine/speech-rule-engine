@@ -70,14 +70,13 @@ sre.DomUtil.XML_ENTITIES =
  * @return {!Element} The XML document structure corresponding to the node.
  */
 sre.DomUtil.parseInput = function(input, opt_error) {
-  var error = opt_error || Error;
+  var error = opt_error || sre.Engine.Error;
   var dp = new sre.SystemExternal.xmldom.DOMParser();
   var clean_input = sre.DomUtil.trimInput_(input);
   var allValues = clean_input.match(/\&(?!lt|gt|amp|quot|apos)\w+;/g);
   var html = !!allValues;
   if (!clean_input) {
-    var newError = new error('Empty input!');
-    throw newError;
+    throw new error('Empty input!');
   }
   try {
     var doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');

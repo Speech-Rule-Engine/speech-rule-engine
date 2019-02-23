@@ -55,7 +55,7 @@ sre.Cli = function() {
    */
   this.dp = new sre.SystemExternal.xmldom.DOMParser(
       {errorHandler: function(key, msg) {
-        throw new Error('XML DOM error!');
+        throw new sre.Engine.Error('XML DOM error!');
       }});
 
 };
@@ -128,7 +128,7 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
         function(proc) {processor(proc, input);});
     }
   } catch (err) {
-    console.info(err.name + ': ' + err.message);
+    console.error(err.name + ': ' + err.message);
     sre.Debugger.getInstance().exit(
         function() {sre.SystemExternal.process.exit(1);});
   }
@@ -164,7 +164,7 @@ sre.Cli.prototype.readline = function() {
         var print = sre.Engine.getInstance().pprint ?
             processor.pprint : processor.print;
         inter.output.write(print(processor.processor(expr))+ '\n');
-        }, this), input);
+      }, this), input);
   }, this));
 };
 
