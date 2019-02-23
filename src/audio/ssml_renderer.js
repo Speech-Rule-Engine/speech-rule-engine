@@ -35,12 +35,16 @@ sre.SsmlRenderer = function() {
 goog.inherits(sre.SsmlRenderer, sre.XmlRenderer);
 
 
+/**
+ * @override
+ */
 sre.SsmlRenderer.prototype.finalize = function(str) {
   return '<?xml version="1.0"?><speak version="1.1"' +
     ' xmlns="http://www.w3.org/2001/10/synthesis">' +
     '<prosody rate="' + sre.Engine.getInstance().getRate() + '%">' +
     this.getSeparator() + str + this.getSeparator() + '</prosody></speak>';
 };
+
 
 /**
  * @override
