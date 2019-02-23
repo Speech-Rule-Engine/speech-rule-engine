@@ -222,6 +222,7 @@ sre.DomUtil.formatXml = function(xml) {
  * @param {string} end The next, possible end tag.
  * @return {Array.<boolean| string>} A pair indicating success and the possible
  *     remainder after the end tag, in case it is followed by mixed content.
+ * @private
  */
 sre.DomUtil.matchingStartEnd_ = function(start, end) {
   if (!end) {

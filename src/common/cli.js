@@ -125,21 +125,6 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
     }
     if (input) {
       this.processors.forEach(
-          function(proc) {processor(proc, input);});
-    }
-  } catch (err) {
-    console.info(err.name + ': ' + err.message);
-    sre.Debugger.getInstance().exit(
-        function() {sre.SystemExternal.process.exit(1);});
-  }
-};
-sre.Cli.prototype.runProcessorsNew_ = function(processor, input) {
-  try {
-    if (!this.processors.length) {
-      this.processors.push('Speech');
-    }
-    if (input) {
-      this.processors.forEach(
         function(proc) {processor(proc, input);});
     }
   } catch (err) {
@@ -173,19 +158,13 @@ sre.Cli.prototype.readline = function() {
         }
       }, this));
   inter.on('close', goog.bind(function() {
-    this.runProcessorsNew_(goog.bind(
+    this.runProcessors_(goog.bind(
       function(proc, expr) {
         var processor = sre.Processors[proc.toLowerCase()];
         var print = sre.Engine.getInstance().pprint ?
             processor.pprint : processor.print;
         inter.output.write(print(processor.processor(expr))+ '\n');
         }, this), input);
-    // this.runProcessors_(goog.bind(
-    //     function(proc, expr) {
-    //       inter.output.write((proc === 'Json' ?
-    //                           JSON.stringify(this.system['to' + proc](expr)) :
-    //                           this.system['to' + proc](expr))+ '\n');
-    //     }, this), input);
   }, this));
 };
 
