@@ -106,7 +106,7 @@ sre.Cli.prototype.execute = function(input) {
   this.runProcessors_(
       goog.bind(
       function(proc, file) {
-        this.system.processFile_(proc, file, commander.output);
+        this.system.processFile(proc, file, commander.output);
       }, this),
       input);
 };

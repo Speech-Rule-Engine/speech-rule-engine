@@ -230,7 +230,7 @@ sre.System.prototype.toEnriched = function(expr) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSpeech = function(input, opt_output) {
-  sre.System.getInstance().processFile_('speech', input, opt_output);
+  sre.System.getInstance().processFile('speech', input, opt_output);
 };
 
 
@@ -247,7 +247,7 @@ sre.System.prototype.processFile = sre.System.prototype.fileToSpeech;
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToSemantic = function(input, opt_output) {
-  sre.System.getInstance().processFile_('semantic', input, opt_output);
+  sre.System.getInstance().processFile('semantic', input, opt_output);
 };
 
 
@@ -258,7 +258,7 @@ sre.System.prototype.fileToSemantic = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToJson = function(input, opt_output) {
-  sre.System.getInstance().processFile_('json', input, opt_output);
+  sre.System.getInstance().processFile('json', input, opt_output);
 };
 
 
@@ -269,7 +269,7 @@ sre.System.prototype.fileToJson = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToDescription = function(input, opt_output) {
-  sre.System.getInstance().processFile_('description', input, opt_output);
+  sre.System.getInstance().processFile('description', input, opt_output);
 };
 
 
@@ -280,7 +280,7 @@ sre.System.prototype.fileToDescription = function(input, opt_output) {
  * @param {string=} opt_output The output filename if one is given.
  */
 sre.System.prototype.fileToEnriched = function(input, opt_output) {
-  sre.System.getInstance().processFile_('enriched', input, opt_output);
+  sre.System.getInstance().processFile('enriched', input, opt_output);
 };
 
 
@@ -338,10 +338,10 @@ sre.System.prototype.fileToEnriched = function(input, opt_output) {
  * @param {string} input The input filename.
  * @param {string=} opt_output The output filename if one is given.
  */
-sre.System.prototype.processFile_ = function(processor, input, opt_output) {
+sre.System.prototype.processFile = function(processor, input, opt_output) {
   if (!sre.Engine.isReady()) {
     setTimeout(goog.bind(function() {
-      this.processFile_(processor, input, opt_output);
+      this.processFile(processor, input, opt_output);
     }, this), 100);
     return;
   }
