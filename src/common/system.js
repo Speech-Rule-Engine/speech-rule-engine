@@ -75,7 +75,6 @@ sre.System.LocalStorage_ = function() {
 goog.addSingletonGetter(sre.System.LocalStorage_);
 
 
-
 /**
  *  Setup Methods functionality.
  */
@@ -427,10 +426,9 @@ sre.System.prototype.walk = function(expr) {
   sre.System.LocalStorage_.getInstance().speechGenerator = generator;
   var highlighter = /** @type {!sre.Highlighter} */ (
       sre.HighlighterFactory.highlighter(
-      {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
-  var node = sre.System.getInstance().toEnriched(expr);
-  var eml = new sre.SystemExternal.xmldom.XMLSerializer().
-      serializeToString(node);
+          {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
+  var node = sre.ProcessorFactory.process('enriched', expr);
+  var eml = sre.ProcessorFactory.print('enriched', node);
   sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
       sre.Engine.getInstance().walker, node, generator, highlighter, eml);
   return sre.System.LocalStorage_.getInstance().walker.speech();
