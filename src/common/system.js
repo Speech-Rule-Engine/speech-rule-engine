@@ -75,10 +75,12 @@ sre.System.LocalStorage_ = function() {
 goog.addSingletonGetter(sre.System.LocalStorage_);
 
 
+
+/**
+ *  Setup Methods functionality.
+ */
 // These are all API interface functions. Therefore, avoid any usage of "this"
 // in the code.
-//
-//TODO: Put in a full explanation of all the elements of the feature vector.
 /**
  * Method to setup and intialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
@@ -153,6 +155,17 @@ sre.System.prototype.configBlocks_ = function(feature) {
 };
 
 
+/**
+ * Setting engine to async mode once it is ready.
+ */
+sre.System.setAsync = function() {
+  if (!sre.Engine.isReady()) {
+    setTimeout(sre.System.setAsync, 500);
+  }
+  (sre.System.getInstance()).setupEngine({'mode': sre.Engine.Mode.ASYNC});
+};
+
+
 //
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
@@ -173,7 +186,7 @@ sre.System.prototype.configBlocks_ = function(feature) {
  * @return {string} The aural rendering of the expression.
  */
 sre.System.prototype.toSpeech = function(expr) {
-  return sre.ProcessorFactory.process('speech', expr);
+  return sre.System.getInstance().processString('speech', expr);
 };
 
 
@@ -189,7 +202,7 @@ sre.System.prototype.processExpression = sre.System.prototype.toSpeech;
  * @return {Node} The semantic tree as Xml.
  */
 sre.System.prototype.toSemantic = function(expr) {
-  return sre.ProcessorFactory.process('semantic', expr);
+  return sre.System.getInstance().processString('semantic', expr);
 };
 
 
@@ -199,7 +212,7 @@ sre.System.prototype.toSemantic = function(expr) {
  * @return {JSONType} The semantic tree as Json.
  */
 sre.System.prototype.toJson = function(expr) {
-  return sre.ProcessorFactory.process('json', expr);
+  return sre.System.getInstance().processString('json', expr);
 };
 
 
@@ -209,7 +222,7 @@ sre.System.prototype.toJson = function(expr) {
  * @return {!Array.<sre.AuditoryDescription>} The auditory descriptions.
  */
 sre.System.prototype.toDescription = function(expr) {
-  return sre.ProcessorFactory.process('description', expr);
+  return sre.System.getInstance().processString('description', expr);
 };
 
 
@@ -219,7 +232,19 @@ sre.System.prototype.toDescription = function(expr) {
  * @return {!Element} The enriched MathML node.
  */
 sre.System.prototype.toEnriched = function(expr) {
-  return sre.ProcessorFactory.process('enriched', expr);
+  return sre.System.getInstance().processString('enriched', expr);
+};
+
+
+/**
+ * Processes an input string with the given processor.
+ * @param {string} processor The name of the processor to call.
+ * @param {string} input The input string.
+ * @return {T} The computed data structure.
+ * @template T
+ */
+sre.System.prototype.processString = function(processor, input) {
+  return sre.ProcessorFactory.process(processor, input);
 };
 
 
@@ -282,53 +307,6 @@ sre.System.prototype.fileToDescription = function(input, opt_output) {
 sre.System.prototype.fileToEnriched = function(input, opt_output) {
   sre.System.getInstance().processFile('enriched', input, opt_output);
 };
-
-
-// /**
-//  * Computes auditory descriptions for a given Xml node. This is a private method
-//  * as it might depend on a particular implementation of Xml Node API.
-//  * @param {!Node} xml The Xml node to describe.
-//  * @return {string} The aural rendering of the expression.
-//  */
-// sre.System.prototype.processXml = function(xml) {
-//   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-//   var aural = sre.AuralRendering.getInstance();
-//   return aural.finalize(aural.markup(descrs));
-// };
-
-
-// /**
-//  * Parses a string into a MathML expressions or a semantic tree.
-//  * @param {string} expr The string containing a MathML representation.
-//  * @param {boolean} semantic Replace parsed MathML by semantic tree
-//  *     representation.
-//  * @return {Node} The Xml node.
-//  * @private
-//  */
-// sre.System.prototype.parseExpression_ = function(expr, semantic) {
-//   var xml = null;
-//   try {
-//     xml = sre.DomUtil.parseInput(expr, sre.System.Error);
-//     if (semantic) {
-//       xml = sre.System.getInstance().getSemanticTree(xml);
-//     }
-//     sre.Debugger.getInstance().generateOutput(
-//         goog.bind(function() {return xml.toString();}, this));
-//   } catch (err) {
-//     console.error('Parse Error: ' + err.message);
-//   }
-//   return xml;
-// };
-
-
-// /**
-//  * Creates a clean Xml version of the semantic tree for a given MathML node.
-//  * @param {!Element} mml The MathML node.
-//  * @return {Node} Semantic tree for input node as newly created Xml node.
-//  */
-// sre.System.prototype.getSemanticTree = function(mml) {
-//   return sre.Semantic.xmlTree(mml);
-// };
 
 
 /**
