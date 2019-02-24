@@ -61,18 +61,17 @@ goog.addSingletonGetter(sre.System);
 
 
 /**
- * A storage to hide members of the system class.
- * @constructor
+ * A state object for stateful processors.
+ * @type {{walker: sre.Walker,
+ *         speechGenerator: sre.SpeechGenerator,
+ *         highlighter: sre.Highlighter}}
  * @private
  */
-sre.System.LocalStorage_ = function() {
-
-  this.walker = null;
-
-  this.speechGenerator = null;
-
+sre.System.LocalState_ =  {
+  walker: null,
+  speechGenerator: null,
+  highlighter: null
 };
-goog.addSingletonGetter(sre.System.LocalStorage_);
 
 
 /**
@@ -423,15 +422,16 @@ sre.System.prototype.processFileAsync_ = function(
  */
 sre.System.prototype.walk = function(expr) {
   var generator = sre.SpeechGeneratorFactory.generator('Node');
-  sre.System.LocalStorage_.getInstance().speechGenerator = generator;
-  var highlighter = /** @type {!sre.Highlighter} */ (
+  sre.System.LocalState_.speechGenerator = generator;
+  sre.System.LocalState_.highlighter = 
       sre.HighlighterFactory.highlighter(
-          {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}));
+          {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'});
   var node = sre.ProcessorFactory.process('enriched', expr);
   var eml = sre.ProcessorFactory.print('enriched', node);
-  sre.System.LocalStorage_.getInstance().walker = sre.WalkerFactory.walker(
-      sre.Engine.getInstance().walker, node, generator, highlighter, eml);
-  return sre.System.LocalStorage_.getInstance().walker.speech();
+  sre.System.LocalState_.walker = sre.WalkerFactory.walker(
+    sre.Engine.getInstance().walker, node, generator,
+    sre.System.LocalState_.highlighter, eml);
+  return sre.System.LocalState_.walker.speech();
 };
 
 
@@ -443,12 +443,12 @@ sre.System.prototype.walk = function(expr) {
  *     is hit.
  */
 sre.System.prototype.move = function(direction) {
-  if (!sre.System.LocalStorage_.getInstance().walker) {
+  if (!sre.System.LocalState_.walker) {
     return null;
   }
   var key = (typeof direction === 'string') ?
       sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
-  var move = sre.System.LocalStorage_.getInstance().walker.move(key);
+  var move = sre.System.LocalState_.walker.move(key);
   return move === false ? sre.AuralRendering.getInstance().error(direction) :
-      sre.System.LocalStorage_.getInstance().walker.speech();
+      sre.System.LocalState_.walker.speech();
 };
