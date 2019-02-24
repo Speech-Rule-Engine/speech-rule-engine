@@ -116,7 +116,7 @@ sre.Processor = function(name, methods) {
   /**
    * @type {function(T): string}
    */
-  this.print = methods.print || sre.Proessor.stringify_;
+  this.print = methods.print || sre.Processor.stringify_;
 
   /**
    * @type {function(T): string}

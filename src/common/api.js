@@ -126,6 +126,7 @@ module.exports.setupEngine = sre.System.getInstance().setupEngine;
 
 /**
  * Exporting XML pretty printer.
+ * @deprecated
  */
 module.exports.pprintXML = sre.DomUtil.formatXml;
 
