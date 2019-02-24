@@ -124,7 +124,7 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
     }
     if (input) {
       this.processors.forEach(
-        function(proc) {processor(proc, input);});
+          function(proc) {processor(proc, input);});
     }
   } catch (err) {
     console.error(err.name + ': ' + err.message);
@@ -158,9 +158,9 @@ sre.Cli.prototype.readline = function() {
       }, this));
   inter.on('close', goog.bind(function() {
     this.runProcessors_(goog.bind(
-      function(proc, expr) {
-        inter.output.write(sre.ProcessorFactory.output(proc, expr)+ '\n');
-      }, this), input);
+        function(proc, expr) {
+          inter.output.write(sre.ProcessorFactory.output(proc, expr) + '\n');
+        }, this), input);
   }, this));
 };
 
@@ -204,8 +204,8 @@ sre.Cli.prototype.commandLine = function() {
              set, 'semantics').
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
              set, 'markup').
-      option('-r, --rate [value]', 'Base rate [value] for tagged speech output.',
-             set, 'rate').
+      option('-r, --rate [value]', 'Base rate [value] for tagged speech' +
+             ' output.', set, 'rate').
       option('').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'speech').

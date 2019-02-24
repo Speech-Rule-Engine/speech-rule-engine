@@ -167,12 +167,12 @@ sre.DomUtil.formatXml = function(xml) {
   var split = xml.split('\r\n');
   reg = /(\.)*(<)(\/*)/g;    // Separate at any remaining tags.
   split = split.map(x => x.replace(reg, '$1\r\n$2$3').split('\r\n')).
-    reduce(function(x, y) {return x.concat(y);}, []);
+      reduce(function(x, y) {return x.concat(y);}, []);
   while (split.length) {
     var node = split.shift();
     if (!node) continue;
     var indent = 0;
-    if (node.match( /^<\w[^>\/]*>[^>]+$/ )) {
+    if (node.match(/^<\w[^>\/]*>[^>]+$/)) {
       // Start node with trailing content.
       var match = sre.DomUtil.matchingStartEnd_(node, split[0]);
       if (match[0]) {    // Combine with end node
@@ -187,15 +187,15 @@ sre.DomUtil.formatXml = function(xml) {
       } else {
         indent = 1;
       }
-    } else if (node.match( /^<\/\w/ )) {
+    } else if (node.match(/^<\/\w/)) {
       // End node.
       if (pad != 0) {
         pad -= 1;
       }
-    } else if (node.match( /^<\w[^>]*[^\/]>.*$/ )) {
+    } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
       // Simple start node.
       indent = 1;
-    } else if (node.match( /^<\w[^>]*\/>.+$/ )) {
+    } else if (node.match(/^<\w[^>]*\/>.+$/)) {
       // Empty tag node with trailing mixed content.
       let position = node.indexOf('>') + 1;
       let rest = node.slice(position);
@@ -209,8 +209,7 @@ sre.DomUtil.formatXml = function(xml) {
     }
     formatted += new Array(pad + 1).join('  ') + node + '\r\n';
     pad += indent;
-  };
-
+  }
   return formatted;
 };
 
@@ -230,7 +229,7 @@ sre.DomUtil.matchingStartEnd_ = function(start, end) {
   var tag1 = start.match(/^<([^> ]+).*>/);
   var tag2 = end.match(/^<\/([^>]+)>(.*)/);
   return (tag1 && tag2 && tag1[1] === tag2[1]) ?
-    [true, tag2[2]] : [false, ''];
+      [true, tag2[2]] : [false, ''];
 };
 
 

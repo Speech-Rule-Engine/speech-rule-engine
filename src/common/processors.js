@@ -34,6 +34,7 @@ sre.ProcessorFactory.PROCESSORS_ = {};
  * Gets the named processor. Throws an error if the processor does not exist!
  * @param {string} name The name of the processor.
  * @return {sre.Processor} The processor.
+ * @private
  */
 sre.ProcessorFactory.get_ = function(name) {
   var processor = sre.ProcessorFactory.PROCESSORS_[name.toLowerCase()];
@@ -42,6 +43,7 @@ sre.ProcessorFactory.get_ = function(name) {
   }
   return processor;
 };
+
 
 /**
  * Processes an expression with the given processor.
@@ -152,10 +154,10 @@ new sre.Processor(
     },
     pprint: function(speech) {
       var str = speech.toString();
+      // Pretty Printing wrt. markup renderer.
       return sre.AuralRendering.ofType(sre.XmlRenderer) ?
         sre.DomUtil.formatXml(str) : str;
     }
-    // Pretty Printing wrt. markup renderer.
   }
 );
 
