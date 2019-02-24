@@ -18,6 +18,7 @@
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
+goog.provide('sre.Processor');
 goog.provide('sre.ProcessorFactory');
 
 goog.require('sre.Engine');
@@ -98,7 +99,6 @@ sre.ProcessorFactory.output = function(name, expr) {
  *    * processor The actual processing method.
  *    * print The printing method. If none is given, defaults to toString().
  *    * pprint The pretty printing method. If none is given, defaults print.
- * @private
  */
 sre.Processor = function(name, methods) {
 
@@ -116,7 +116,7 @@ sre.Processor = function(name, methods) {
   /**
    * @type {function(T): string}
    */
-  this.print = methods.print || function(x) {return x.toString();};
+  this.print = methods.print || sre.Proessor.stringify_;
 
   /**
    * @type {function(T): string}
@@ -124,6 +124,18 @@ sre.Processor = function(name, methods) {
   this.pprint = methods.pprint || this.print;
 
   sre.ProcessorFactory.PROCESSORS_[this.name] = this;
+};
+
+
+/**
+ * Default method to stringify processed data.
+ * @param {T} x Input data.
+ * @return {string} Resulting string.
+ * @template T
+ * @private
+ */
+sre.Processor.stringify_ = function(x) {
+  return x.toString();
 };
 
 
@@ -148,7 +160,8 @@ new sre.Processor(
     {
       processor: function(expr) {
         var mml = sre.DomUtil.parseInput(expr);
-        var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
+        var xml = sre.Engine.getInstance().semantics ?
+            sre.Semantic.xmlTree(mml) : mml;
         var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
         var aural = sre.AuralRendering.getInstance();
         return aural.finalize(aural.markup(descrs));
@@ -188,7 +201,8 @@ new sre.Processor(
     {
       processor: function(expr) {
         var mml = sre.DomUtil.parseInput(expr);
-        var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
+        var xml = sre.Engine.getInstance().semantics ?
+            sre.Semantic.xmlTree(mml) : mml;
         var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
         return descrs;
       },
