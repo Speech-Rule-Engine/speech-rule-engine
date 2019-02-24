@@ -23,7 +23,6 @@ goog.provide('sre.AudioUtil');
 goog.require('sre.Span');
 
 
-
 // TODO: Refactor into dedicated personality/markup data structure.
 /**
  * Merges pause personality annotations.

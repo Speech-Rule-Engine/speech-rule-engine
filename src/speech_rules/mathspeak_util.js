@@ -62,7 +62,7 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
     result.push(sn.xml(doc));
   }
   return result;
-  
+
 };
 
 
@@ -73,12 +73,12 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
  */
 sre.MathspeakUtil.spaceoutNumber = function(node) {
   return sre.MathspeakUtil.spaceoutNodes(
-    node,
-    function(sn) {
-      if (!sn.textContent.match(/\W/)) {
-        sn.type = sre.Semantic.Type.NUMBER;
-      }
-    });
+      node,
+      function(sn) {
+        if (!sn.textContent.match(/\W/)) {
+          sn.type = sre.Semantic.Type.NUMBER;
+        }
+      });
 };
 
 
@@ -89,11 +89,11 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
   return sre.MathspeakUtil.spaceoutNodes(
-    node,
-    function(sn) {
-      sn.font = sre.Semantic.Font.UNKNOWN;
-      sn.type = sre.Semantic.Type.IDENTIFIER;
-    });
+      node,
+      function(sn) {
+        sn.font = sre.Semantic.Font.UNKNOWN;
+        sn.type = sre.Semantic.Type.IDENTIFIER;
+      });
 };
 
 
@@ -396,8 +396,8 @@ sre.MathspeakUtil.hundredsToWords = function(number) {
   if (n) {
     str += str ? '-' : '';
     str += sre.MathspeakUtil.onesNumbers[n] ||
-      (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
-       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
+        (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
+        (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
   }
   return str;
 };
@@ -418,8 +418,8 @@ sre.MathspeakUtil.numberToWords = function(number) {
     var hundreds = number % 1000;
     if (hundreds) {
       str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-        (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
-         '-' : '') +
+          (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
+          '-' : '') +
           str;
     }
     number = Math.floor(number / 1000);
@@ -1094,5 +1094,5 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
   }
 };
 
-  
+
 });  // goog.scope

@@ -133,7 +133,7 @@ sre.AuralRendering.registerRenderer = function(type, renderer) {
  */
 sre.AuralRendering.ofType = function(type) {
   return sre.AuralRendering.rendererMapping_[
-    sre.Engine.getInstance().markup] instanceof type;
+      sre.Engine.getInstance().markup] instanceof type;
 };
 
 

@@ -68,7 +68,7 @@ sre.ProcessorFactory.process = function(name, expr) {
 sre.ProcessorFactory.print = function(name, data) {
   var processor = sre.ProcessorFactory.get_(name);
   return sre.Engine.getInstance().pprint ?
-    processor.pprint(data) : processor.print(data);
+      processor.pprint(data) : processor.print(data);
 };
 
 
@@ -82,8 +82,9 @@ sre.ProcessorFactory.output = function(name, expr) {
   var processor = sre.ProcessorFactory.get_(name);
   var data = processor.processor(expr);
   return sre.Engine.getInstance().pprint ?
-    processor.pprint(data) : processor.print(data);
+      processor.pprint(data) : processor.print(data);
 };
+
 
 
 /**
@@ -92,7 +93,7 @@ sre.ProcessorFactory.output = function(name, expr) {
  * @template T
  * @param {string} name The name of the processor.
  * @param {{processor: function(string): T,
- *          print: (undefined|function(T): string), 
+ *          print: (undefined|function(T): string),
  *          pprint: (undefined|function(T): string)}} methods Has as components:
  *    * processor The actual processing method.
  *    * print The printing method. If none is given, defaults to toString().
@@ -105,7 +106,7 @@ sre.Processor = function(name, methods) {
    * @type {string}
    */
   this.name = name;
-  
+
   /**
    * Version number.
    * @type {function(string): T}
@@ -128,103 +129,103 @@ sre.Processor = function(name, methods) {
 
 //  semantic: XML of semantic tree.
 new sre.Processor(
-  'semantic',
-  {
-    processor: function(expr) {
-      var mml = sre.DomUtil.parseInput(expr);
-      return sre.Semantic.xmlTree(mml);
-    },
-    pprint: function(tree) {
-      return sre.DomUtil.formatXml(tree.toString());
+    'semantic',
+    {
+      processor: function(expr) {
+        var mml = sre.DomUtil.parseInput(expr);
+        return sre.Semantic.xmlTree(mml);
+      },
+      pprint: function(tree) {
+        return sre.DomUtil.formatXml(tree.toString());
+      }
     }
-  }
 );
 
 
 //  speech: Aural rendering string.
 new sre.Processor(
-  'speech',
-  {
-    processor: function(expr) {
-      var mml = sre.DomUtil.parseInput(expr);
-      var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
-      var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-      var aural = sre.AuralRendering.getInstance();
-      return aural.finalize(aural.markup(descrs));
-    },
-    pprint: function(speech) {
-      var str = speech.toString();
-      // Pretty Printing wrt. markup renderer.
-      return sre.AuralRendering.ofType(sre.XmlRenderer) ?
-        sre.DomUtil.formatXml(str) : str;
+    'speech',
+    {
+      processor: function(expr) {
+        var mml = sre.DomUtil.parseInput(expr);
+        var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
+        var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+        var aural = sre.AuralRendering.getInstance();
+        return aural.finalize(aural.markup(descrs));
+      },
+      pprint: function(speech) {
+        var str = speech.toString();
+        // Pretty Printing wrt. markup renderer.
+        return sre.AuralRendering.ofType(sre.XmlRenderer) ?
+            sre.DomUtil.formatXml(str) : str;
+      }
     }
-  }
 );
 
 
 //  json: Json version of the semantic tree.
 new sre.Processor(
-  'json',
-  {
-    processor: function(expr) {
-      var mml = sre.DomUtil.parseInput(expr, sre.Engine.Error);
-      var stree = sre.Semantic.getTree(mml);
-      return stree.toJson();
-    },
-    print: function(json) {
-      return JSON.stringify(json);
-    },
-    pprint: function(json) {
-      return JSON.stringify(json, null, 2);
+    'json',
+    {
+      processor: function(expr) {
+        var mml = sre.DomUtil.parseInput(expr, sre.Engine.Error);
+        var stree = sre.Semantic.getTree(mml);
+        return stree.toJson();
+      },
+      print: function(json) {
+        return JSON.stringify(json);
+      },
+      pprint: function(json) {
+        return JSON.stringify(json, null, 2);
+      }
     }
-  }
 );
-                  
+
 
 //  description: List of auditory descriptions.
 new sre.Processor(
-  'description',
-  {
-    processor: function(expr) {
-      var mml = sre.DomUtil.parseInput(expr);
-      var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
-      var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-      return descrs;
-    },
-    print: function(descrs) {
-      return JSON.stringify(descrs);
-    },
-    pprint: function(descrs) {
-      return JSON.stringify(descrs, null, 2);
+    'description',
+    {
+      processor: function(expr) {
+        var mml = sre.DomUtil.parseInput(expr);
+        var xml = sre.Engine.getInstance().semantics ? sre.Semantic.xmlTree(mml) : mml;
+        var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+        return descrs;
+      },
+      print: function(descrs) {
+        return JSON.stringify(descrs);
+      },
+      pprint: function(descrs) {
+        return JSON.stringify(descrs, null, 2);
+      }
     }
-  }
 );
 
 
 //  enriched: Enriched MathML node.
 new sre.Processor(
-  'enriched',
-  {
-    processor: function(expr) {
-      var enr = sre.Enrich.semanticMathmlSync(expr);
-      var root = sre.WalkerUtil.getSemanticRoot(enr);
-      switch (sre.Engine.getInstance().speech) {
-      case sre.Engine.Speech.SHALLOW:
-        var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
-        generator.getSpeech(root, enr);
-        break;
-      case sre.Engine.Speech.DEEP:
-        generator = sre.SpeechGeneratorFactory.generator('Tree');
-        generator.getSpeech(root, enr);
-        break;
-      case sre.Engine.Speech.NONE:
-      default:
-        break;
+    'enriched',
+    {
+      processor: function(expr) {
+        var enr = sre.Enrich.semanticMathmlSync(expr);
+        var root = sre.WalkerUtil.getSemanticRoot(enr);
+        switch (sre.Engine.getInstance().speech) {
+          case sre.Engine.Speech.SHALLOW:
+            var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
+            generator.getSpeech(root, enr);
+            break;
+          case sre.Engine.Speech.DEEP:
+            generator = sre.SpeechGeneratorFactory.generator('Tree');
+            generator.getSpeech(root, enr);
+            break;
+          case sre.Engine.Speech.NONE:
+          default:
+            break;
+        }
+        return enr;
+      },
+      pprint: function(tree) {
+        return sre.DomUtil.formatXml(tree.toString());
       }
-      return enr;
-    },
-    pprint: function(tree) {
-      return sre.DomUtil.formatXml(tree.toString());
     }
-  }
 );

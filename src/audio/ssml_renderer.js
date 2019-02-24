@@ -40,9 +40,9 @@ goog.inherits(sre.SsmlRenderer, sre.XmlRenderer);
  */
 sre.SsmlRenderer.prototype.finalize = function(str) {
   return '<?xml version="1.0"?><speak version="1.1"' +
-    ' xmlns="http://www.w3.org/2001/10/synthesis">' +
-    '<prosody rate="' + sre.Engine.getInstance().getRate() + '%">' +
-    this.getSeparator() + str + this.getSeparator() + '</prosody></speak>';
+      ' xmlns="http://www.w3.org/2001/10/synthesis">' +
+      '<prosody rate="' + sre.Engine.getInstance().getRate() + '%">' +
+      this.getSeparator() + str + this.getSeparator() + '</prosody></speak>';
 };
 
 
@@ -51,7 +51,7 @@ sre.SsmlRenderer.prototype.finalize = function(str) {
  */
 sre.SsmlRenderer.prototype.pause = function(pause) {
   return '<break ' + 'time="' +
-    this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + 'ms"/>';
+      this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + 'ms"/>';
 };
 
 

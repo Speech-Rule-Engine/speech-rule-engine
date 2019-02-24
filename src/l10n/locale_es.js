@@ -163,5 +163,5 @@ sre.Locale.es = {
     DECIMAL_MARK: ',',
     DIGIT_GROUP: ''
   }
-  
+
 };
