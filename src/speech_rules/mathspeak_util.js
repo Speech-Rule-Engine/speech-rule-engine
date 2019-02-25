@@ -561,16 +561,14 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
  * @param {!Node} node Fraction node to be translated.
- * @param {string=} opt_sep Separator string.
  * @return {string} The string representation if it is a valid vulgar fraction.
  */
-sre.MathspeakUtil.vulgarFraction = function(node, opt_sep) {
-  var sep = (typeof opt_sep === 'undefined') ? '-' : opt_sep;
+sre.MathspeakUtil.vulgarFraction = function(node) {
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible &&
       conversion.enumerator &&
       conversion.denominator) {
-    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + sep +
+    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + ' ' +
         sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
         conversion.enumerator !== 1);
   }
