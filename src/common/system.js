@@ -149,6 +149,35 @@ sre.System.setAsync = function() {
 };
 
 
+sre.System.prototype.engineSetup = function() {
+  var engineFeatures = ['mode',
+                        'locale',
+                        'domain',
+                        'style',
+                        'walker',
+                        'markup',
+                        'rate',
+                        'semantics',
+                        'speech',
+                        'pprint',
+                        'structure',
+                        'strict',
+                        'cache'
+                       ];
+  var engine = sre.Engine.getInstance();
+  var features = {};
+  engineFeatures.forEach(function(x) {features[x] = engine[x];});
+  features.json = sre.SystemExternal.jsonPath;
+  features.xpath = sre.SystemExternal.WGXpath;
+  features.rules = engine.ruleSets;
+  return features;
+};
+
+
+sre.System.prototype.engineReady = function() {
+  return sre.Engine.isReady();
+};
+
 //
 // Naming convention:
 // Input is either an XML expression as a string or from a file.

@@ -134,7 +134,13 @@ module.exports.pprintXML = sre.DomUtil.formatXml;
 /**
  * Exporting readiness flag.
  */
-module.exports.engineReady = sre.Engine.isReady;
+module.exports.engineReady = sre.System.getInstance().engineReady;
+
+
+/**
+ * Returns the current setup.
+ */
+module.exports.engineSetup = sre.System.getInstance().engineSetup;
 
 
 /**
