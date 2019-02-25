@@ -18,6 +18,8 @@
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
+
+goog.provide('sre.KeyProcessor');
 goog.provide('sre.Processor');
 goog.provide('sre.ProcessorFactory');
 
@@ -87,6 +89,21 @@ sre.ProcessorFactory.output = function(name, expr) {
 };
 
 
+/**
+ * Convenience method that combines key processing, processing and printing.
+ * @param {string} name The name of the processor.
+ * @param {sre.EventUtil.KeyCode|string} expr The key stroke to process.
+ * @return {string} A string representation of the result.
+ */
+sre.ProcessorFactory.keypress = function(name, expr) {
+  var processor = sre.ProcessorFactory.get_(name);
+  var key = processor.key ? processor.key(expr) : expr;
+  var data = processor.processor(key);
+  return sre.Engine.getInstance().pprint ?
+      processor.pprint(data) : processor.print(data);
+};
+
+
 
 /**
  * Processors bundles a processing method with a collection of output methods.
@@ -108,7 +125,6 @@ sre.Processor = function(name, methods) {
   this.name = name;
 
   /**
-   * Version number.
    * @type {function(string): T}
    */
   this.processor = methods.processor;
@@ -127,6 +143,62 @@ sre.Processor = function(name, methods) {
 };
 
 
+
+/**
+ * @constructor
+ * @extends {sre.Processor}
+ * @param {string} name The name of the processor.
+ * @param {{processor: function(string): T,
+ *          key: (undefined|function((sre.EventUtil.KeyCode|string)):
+ *                              sre.EventUtil.KeyCode),
+ *          print: (undefined|function(T): string),
+ *          pprint: (undefined|function(T): string)}} methods Has as components:
+ *    * processor The actual processing method.
+ *    * print The printing method. If none is given, defaults to toString().
+ *    * pprint The pretty printing method. If none is given, defaults print.
+ * @template T
+ */
+sre.KeyProcessor = function(name, methods) {
+  sre.KeyProcessor.base(this, 'constructor', name, methods);
+
+  /**
+   * Transforms key values into strings.
+   * @type {function((sre.EventUtil.KeyCode|string)): sre.EventUtil.KeyCode}
+   */
+  this.key = methods.key || sre.KeyProcessor.getKey_;
+
+};
+goog.inherits(sre.KeyProcessor, sre.Processor);
+
+
+/**
+ * Default method to stringify input key codes. If the key code is already a
+ * string, it is returned.
+ * @param {sre.EventUtil.KeyCode|string} key The key code.
+ * @return {sre.EventUtil.KeyCode} The corresponding string.
+ * @private
+ */
+sre.KeyProcessor.getKey_ = function(key) {
+  console.log('key: ' + key);
+  return (typeof key === 'string') ?
+      sre.EventUtil.KeyCode[key.toUpperCase()] : key;
+};
+
+
+/**
+ * A state object for stateful processors.
+ * @type {{walker: sre.Walker,
+ *         speechGenerator: sre.SpeechGenerator,
+ *         highlighter: sre.Highlighter}}
+ * @private
+ */
+sre.Processor.LocalState_ = {
+  walker: null,
+  speechGenerator: null,
+  highlighter: null
+};
+
+
 /**
  * Default method to stringify processed data.
  * @param {T} x Input data.
@@ -135,7 +207,7 @@ sre.Processor = function(name, methods) {
  * @private
  */
 sre.Processor.stringify_ = function(x) {
-  return x.toString();
+  return x ? x.toString() : x;
 };
 
 
@@ -240,6 +312,46 @@ new sre.Processor(
       },
       pprint: function(tree) {
         return sre.DomUtil.formatXml(tree.toString());
+      }
+    }
+);
+
+
+new sre.Processor(
+    'walker',
+    {
+      processor: function(expr) {
+        var generator = sre.SpeechGeneratorFactory.generator('Node');
+        sre.Processor.LocalState_.speechGenerator = generator;
+        sre.Processor.LocalState_.highlighter =
+            sre.HighlighterFactory.highlighter(
+            {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'});
+        var node = sre.ProcessorFactory.process('enriched', expr);
+        var eml = sre.ProcessorFactory.print('enriched', node);
+        sre.Processor.LocalState_.walker = sre.WalkerFactory.walker(
+            sre.Engine.getInstance().walker, node, generator,
+            sre.Processor.LocalState_.highlighter, eml);
+        return sre.Processor.LocalState_.walker;
+      },
+      print: function(walker) {
+        return sre.Processor.LocalState_.walker.speech();
+      }
+    }
+);
+
+
+// TODO: This one should probably return the now highlighted node.
+new sre.KeyProcessor(
+    'move',
+    {
+      processor: function(direction) {
+        if (!sre.Processor.LocalState_.walker) {
+          return null;
+        }
+        var move = sre.Processor.LocalState_.walker.move(direction);
+        return move === false ?
+            sre.AuralRendering.getInstance().error(direction) :
+            sre.Processor.LocalState_.walker.speech();
       }
     }
 );

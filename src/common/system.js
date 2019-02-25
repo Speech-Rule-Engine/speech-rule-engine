@@ -59,21 +59,6 @@ sre.System = function() {
 goog.addSingletonGetter(sre.System);
 
 
-
-/**
- * A state object for stateful processors.
- * @type {{walker: sre.Walker,
- *         speechGenerator: sre.SpeechGenerator,
- *         highlighter: sre.Highlighter}}
- * @private
- */
-sre.System.LocalState_ =  {
-  walker: null,
-  speechGenerator: null,
-  highlighter: null
-};
-
-
 /**
  *  Setup Methods functionality.
  */
@@ -421,17 +406,7 @@ sre.System.prototype.processFileAsync_ = function(
  * @return {string} The initial speech string for that expression.
  */
 sre.System.prototype.walk = function(expr) {
-  var generator = sre.SpeechGeneratorFactory.generator('Node');
-  sre.System.LocalState_.speechGenerator = generator;
-  sre.System.LocalState_.highlighter = 
-      sre.HighlighterFactory.highlighter(
-          {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'});
-  var node = sre.ProcessorFactory.process('enriched', expr);
-  var eml = sre.ProcessorFactory.print('enriched', node);
-  sre.System.LocalState_.walker = sre.WalkerFactory.walker(
-    sre.Engine.getInstance().walker, node, generator,
-    sre.System.LocalState_.highlighter, eml);
-  return sre.System.LocalState_.walker.speech();
+  return sre.ProcessorFactory.output('walker', expr);
 };
 
 
@@ -443,12 +418,5 @@ sre.System.prototype.walk = function(expr) {
  *     is hit.
  */
 sre.System.prototype.move = function(direction) {
-  if (!sre.System.LocalState_.walker) {
-    return null;
-  }
-  var key = (typeof direction === 'string') ?
-      sre.EventUtil.KeyCode[direction.toUpperCase()] : direction;
-  var move = sre.System.LocalState_.walker.move(key);
-  return move === false ? sre.AuralRendering.getInstance().error(direction) :
-      sre.System.LocalState_.walker.speech();
+  return sre.ProcessorFactory.keypress('move', direction);
 };
