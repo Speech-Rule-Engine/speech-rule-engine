@@ -95,7 +95,7 @@ sre.Engine = function() {
    * Current walker mode.
    * @type {string}
    */
-  this.walker = 'Syntax';
+  this.walker = 'Table';
 
   /**
    * Semantics flag.
