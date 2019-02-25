@@ -399,7 +399,7 @@ sre.System.prototype.processFileAsync_ = function(
 };
 
 
-// These are experimental and do not yet fit into the new processor setup.
+// These are still considered experimental.
 /**
  * Walk a math expression provided by an external system.
  * @param {string} expr The string containing a MathML representation.
