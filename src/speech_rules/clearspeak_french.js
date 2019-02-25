@@ -2015,7 +2015,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
 
   defineRule(
       'cases-summary', 'clearspeak.default',
-      '[p] (pause:short); [t] count(children/*); [t] "cases";' +
+      '[p] (pause:short); [t] count(children/*); [t] "cas";' +
       '  [n] . (grammar:layoutSummary)',
       'self::cases', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2067,16 +2067,16 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // TODO: Get rid of blank!
   defineRule(
       'blank-cell', 'clearspeak.default',
-      '[t] "blank"', 'self::cell', 'count(children/*)=0');
+      '[t] "vide"', 'self::cell', 'count(children/*)=0');
   defineRule(
       'blank-empty', 'clearspeak.default',
-      '[t] "blank"', 'self::empty', 'count(../*)=1',
+      '[t] "vide"', 'self::empty', 'count(../*)=1',
       'name(../..)="cell" or name(../..)="line"');
 
   defineRule(
       'cases', 'clearspeak.default',
       '[p] (pause:short); ' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Cas-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::cases');
 
@@ -2084,7 +2084,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Case
   defineRule(
       'lines-cases-summary', 'clearspeak.MultiLineLabel_Case',
-      '[p] (pause:short); [t] count(children/*); [t] "cases";' +
+      '[p] (pause:short); [t] count(children/*); [t] "cas";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2095,7 +2095,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-cases', 'clearspeak.MultiLineLabel_Case',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Cas-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2104,7 +2104,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Equation
   defineRule(
       'lines-equations-summary', 'clearspeak.MultiLineLabel_Equation',
-      '[p] (pause:short); [t] count(children/*); [t] "equations";' +
+      '[p] (pause:short); [t] count(children/*); [t] "équations";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2115,7 +2115,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-equations', 'clearspeak.MultiLineLabel_Equation',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Equation-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Équation-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2124,7 +2124,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Step
   defineRule(
       'lines-steps-summary', 'clearspeak.MultiLineLabel_Step',
-      '[p] (pause:short); [t] count(children/*); [t] "steps";' +
+      '[p] (pause:short); [t] count(children/*); [t] " étapes";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2135,7 +2135,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-steps', 'clearspeak.MultiLineLabel_Step',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Step-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:" Étape-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2144,7 +2144,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Row
   defineRule(
       'lines-rows-summary', 'clearspeak.MultiLineLabel_Row',
-      '[p] (pause:short); [t] count(children/*); [t] "rows";' +
+      '[p] (pause:short); [t] count(children/*); [t] "colonnes";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2164,7 +2164,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Step
   defineRule(
       'lines-steps-summary', 'clearspeak.MultiLineLabel_Step',
-      '[p] (pause:short); [t] count(children/*); [t] "steps";' +
+      '[p] (pause:short); [t] count(children/*); [t] " étapes";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2175,7 +2175,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-steps', 'clearspeak.MultiLineLabel_Step',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Step-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:" Étape-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2184,7 +2184,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   // Constraint
   defineRule(
       'lines-constraints-summary', 'clearspeak.MultiLineLabel_Constraint',
-      '[p] (pause:short); [t] count(children/*); [t] "constraints";' +
+      '[p] (pause:short); [t] count(children/*); [t] "contraintes";' +
       '  [n] . (grammar:layoutSummary)',
       'self::multiline', 'not(contains(@grammar, "layoutSummary"))'
   );
@@ -2195,7 +2195,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-constraints', 'clearspeak.MultiLineLabel_Constraint',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Constraint-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Contrainte-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2255,7 +2255,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'overscript-limits', 'clearspeak.default',
-      '[n] children/*[1]; [t] "to"; [n] children/*[2]',
+      '[n] children/*[1]; [t] "à"; [n] children/*[2]',
       'self::overscore', 'children/*[2][@role!="overaccent"]',
       'name(children/*[1])="underscore"',
       'children/*[1]/children/*[2][@role!="underaccent"]'
@@ -2267,7 +2267,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   );
   defineRule(
       'underscript-limits', 'clearspeak.default',
-      '[n] children/*[1]; [t] "from"; [n] children/*[2]',
+      '[n] children/*[1]; [t] "de"; [n] children/*[2]',
       'self::underscore', '@role="underover"',
       'children/*[2][@role!="underaccent"]'
   );
@@ -2283,7 +2283,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'number', 'clearspeak.default', '[n] text()', 'self::number');
   defineRule(
       'mixed-number', 'clearspeak.default',
-      '[n] children/*[1]; [t] "and"; [n] children/*[2]; ',
+      '[n] children/*[1]; [t] "et"; [n] children/*[2]; ',
       'self::number', '@role="mixed"');
   defineRule(
       'number-with-chars', 'clearspeak.default',
