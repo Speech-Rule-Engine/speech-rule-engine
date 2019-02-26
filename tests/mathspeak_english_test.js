@@ -279,7 +279,7 @@ sre.MathspeakEnglishTest.prototype.testNegativeVsMinus = function() {
   this.executeRuleTest(mml, 'minus StartFraction a Over b EndFraction',
                        'default');
   mml = '<mrow><mo>-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'negative 3 and one-half', 'default');
+  this.executeRuleTest(mml, 'negative 3 and one half', 'default');
 };
 
 
@@ -575,17 +575,17 @@ sre.MathspeakEnglishTest.prototype.testSample_7_4_1 = function() {
       '<mo>=</mo><mn>1</mn></mrow>' +
       '<mo movablelimits="true" form="prefix">∞</mo></munderover><mfrac>' +
       '<mi>n</mi><mn>2</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
-                       ' four-halves plus ellipsis equals sigma-summation' +
+  this.executeRuleTest(mml, 'one half plus two halves plus three halves plus' +
+                       ' four halves plus ellipsis equals sigma-summation' +
                        ' Underscript n equals 1 Overscript infinity' +
                        ' Endscripts StartFraction n Over 2 EndFraction',
                        'default');
-  this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
-                       ' four-halves plus ellipsis equals sigma-summation' +
+  this.executeRuleTest(mml, 'one half plus two halves plus three halves plus' +
+                       ' four halves plus ellipsis equals sigma-summation' +
                        ' Underscript n equals 1 Overscript infinity' +
                        ' Endscripts StartFrac n Over 2 EndFrac', 'brief');
-  this.executeRuleTest(mml, 'one-half plus two-halves plus three-halves plus' +
-                       ' four-halves plus ellipsis equals sigma-summation' +
+  this.executeRuleTest(mml, 'one half plus two halves plus three halves plus' +
+                       ' four halves plus ellipsis equals sigma-summation' +
                        ' Underscript n equals 1 Overscript infinity' +
                        ' Endscripts Frac n Over 2 EndFrac', 'sbrief');
 };
@@ -600,11 +600,11 @@ sre.MathspeakEnglishTest.prototype.testSample_7_4_2 = function() {
       '<mn>25</mn></mfrac></mrow>';
   this.executeRuleTest(mml, 'StartFraction 20 Over 5 EndFraction times' +
                        ' StartFraction 1 Over 100 EndFraction equals' +
-                       ' one-twenty-fifth', 'default');
+                       ' one twenty-fifth', 'default');
   this.executeRuleTest(mml, 'StartFrac 20 Over 5 EndFrac times StartFrac 1' +
-                       ' Over 100 EndFrac equals one-twenty-fifth', 'brief');
+                       ' Over 100 EndFrac equals one twenty-fifth', 'brief');
   this.executeRuleTest(mml, 'Frac 20 Over 5 EndFrac times Frac 1 Over 100' +
-                       ' EndFrac equals one-twenty-fifth', 'sbrief');
+                       ' EndFrac equals one twenty-fifth', 'sbrief');
 };
 
 
@@ -615,12 +615,12 @@ sre.MathspeakEnglishTest.prototype.testSample_7_4_3 = function() {
   var mml = '<mrow><mfrac><mfrac><mn>3</mn><mn>5</mn></mfrac><mn>8</mn>' +
       '</mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>×</mo>' +
       '<mfrac><mn>1</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, 'StartFraction three-fifths Over 8 EndFraction' +
-                       ' equals three-fifths times one-eighth', 'default');
-  this.executeRuleTest(mml, 'StartFrac three-fifths Over 8 EndFrac equals' +
-                       ' three-fifths times one-eighth', 'brief');
-  this.executeRuleTest(mml, 'Frac three-fifths Over 8 EndFrac equals' +
-                       ' three-fifths times one-eighth', 'sbrief');
+  this.executeRuleTest(mml, 'StartFraction three fifths Over 8 EndFraction' +
+                       ' equals three fifths times one eighth', 'default');
+  this.executeRuleTest(mml, 'StartFrac three fifths Over 8 EndFrac equals' +
+                       ' three fifths times one eighth', 'brief');
+  this.executeRuleTest(mml, 'Frac three fifths Over 8 EndFrac equals' +
+                       ' three fifths times one eighth', 'sbrief');
 };
 
 
@@ -630,11 +630,11 @@ sre.MathspeakEnglishTest.prototype.testSample_7_4_3 = function() {
 sre.MathspeakEnglishTest.prototype.testSample_7_5_1 = function() {
   var mml = '<mrow><mn>3</mn><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>=</mo>' +
       '<mfrac><mn>29</mn><mn>8</mn></mfrac></mrow>';
-  this.executeRuleTest(mml, '3 and five-eighths equals StartFraction 29 Over' +
+  this.executeRuleTest(mml, '3 and five eighths equals StartFraction 29 Over' +
                        ' 8 EndFraction', 'default');
-  this.executeRuleTest(mml, '3 and five-eighths equals StartFrac 29 Over 8' +
+  this.executeRuleTest(mml, '3 and five eighths equals StartFrac 29 Over 8' +
                        ' EndFrac', 'brief');
-  this.executeRuleTest(mml, '3 and five-eighths equals Frac 29 Over 8' +
+  this.executeRuleTest(mml, '3 and five eighths equals Frac 29 Over 8' +
                        ' EndFrac', 'sbrief');
 };
 
@@ -714,9 +714,9 @@ sre.MathspeakEnglishTest.prototype.testSample_8_1_2 = function() {
  */
 sre.MathspeakEnglishTest.prototype.testSample_8_2_1 = function() {
   var mml = '<msup><mi>x</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup>';
-  this.executeRuleTest(mml, 'x Superscript one-half', 'default');
-  this.executeRuleTest(mml, 'x Sup one-half', 'brief');
-  this.executeRuleTest(mml, 'x Sup one-half', 'sbrief');
+  this.executeRuleTest(mml, 'x Superscript one half', 'default');
+  this.executeRuleTest(mml, 'x Sup one half', 'brief');
+  this.executeRuleTest(mml, 'x Sup one half', 'sbrief');
 };
 
 
@@ -1623,10 +1623,10 @@ sre.MathspeakEnglishTest.prototype.testSample_9_2_3 = function() {
   var mml = '<mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup>' +
       '<mi>x</mi><mfrac><mn>1</mn><mn>3</mn></mfrac></msup></mrow>';
   this.executeRuleTest(mml, 'RootIndex 3 StartRoot x EndRoot equals x' +
-                       ' Superscript one-third', 'default');
+                       ' Superscript one third', 'default');
   this.executeRuleTest(mml, 'RootIndex 3 StartRoot x EndRoot equals x Sup' +
-                       ' one-third', 'brief');
-  this.executeRuleTest(mml, 'Index 3 Root x EndRoot equals x Sup one-third',
+                       ' one third', 'brief');
+  this.executeRuleTest(mml, 'Index 3 Root x EndRoot equals x Sup one third',
                        'sbrief');
 };
 
@@ -1745,12 +1745,12 @@ sre.MathspeakEnglishTest.prototype.testSample_10_1_1 = function() {
       '</mfrac><mi>x</mi></mrow>';
   this.executeRuleTest(mml, 'StartFraction 5 x CrossOut y EndCrossOut Over 2' +
                        ' CrossOut y EndCrossOut EndFraction equals' +
-                       ' five-halves x', 'default');
+                       ' five halves x', 'default');
   this.executeRuleTest(mml, 'StartFrac 5 x CrossOut y EndCrossOut Over 2' +
-                       ' CrossOut y EndCrossOut EndFrac equals five-halves' +
+                       ' CrossOut y EndCrossOut EndFrac equals five halves' +
                        ' x', 'brief');
   this.executeRuleTest(mml, 'Frac 5 x CrossOut y EndCrossOut Over 2 CrossOut' +
-                       ' y EndCrossOut EndFrac equals five-halves x', 'sbrief');
+                       ' y EndCrossOut EndFrac equals five halves x', 'sbrief');
 };
 
 
@@ -1766,14 +1766,14 @@ sre.MathspeakEnglishTest.prototype.testSample_10_2_1 = function() {
   this.executeRuleTest(mml, 'StartFraction 12 Over 18 EndFraction equals' +
                        ' StartFraction CrossOut 12 With 2 EndCrossOut Over' +
                        ' CrossOut 18 With 3 EndCrossOut EndFraction equals' +
-                       ' two-thirds', 'default');
+                       ' two thirds', 'default');
   this.executeRuleTest(mml, 'StartFrac 12 Over 18 EndFrac equals StartFrac' +
                        ' CrossOut 12 With 2 EndCrossOut Over CrossOut 18' +
-                       ' With 3 EndCrossOut EndFrac equals two-thirds',
+                       ' With 3 EndCrossOut EndFrac equals two thirds',
                        'brief');
   this.executeRuleTest(mml, 'Frac 12 Over 18 EndFrac equals Frac CrossOut 12' +
                        ' With 2 EndCrossOut Over CrossOut 18 With 3' +
-                       ' EndCrossOut EndFrac equals two-thirds', 'sbrief');
+                       ' EndCrossOut EndFrac equals two thirds', 'sbrief');
 };
 
 
@@ -1791,14 +1791,14 @@ sre.MathspeakEnglishTest.prototype.testSample_10_2_2 = function() {
   this.executeRuleTest(mml, 'StartFraction 12 Over 18 EndFraction equals' +
                        ' StartFraction CrossOut 12 With 2 EndCrossOut Over' +
                        ' CrossOut 18 With 3 EndCrossOut EndFraction equals' +
-                       ' two-thirds', 'default');
+                       ' two thirds', 'default');
   this.executeRuleTest(mml, 'StartFrac 12 Over 18 EndFrac equals StartFrac' +
                        ' CrossOut 12 With 2 EndCrossOut Over CrossOut 18' +
-                       ' With 3 EndCrossOut EndFrac equals two-thirds',
+                       ' With 3 EndCrossOut EndFrac equals two thirds',
                        'brief');
   this.executeRuleTest(mml, 'Frac 12 Over 18 EndFrac equals Frac CrossOut 12' +
                        ' With 2 EndCrossOut Over CrossOut 18 With 3' +
-                       ' EndCrossOut EndFrac equals two-thirds', 'sbrief');
+                       ' EndCrossOut EndFrac equals two thirds', 'sbrief');
 };
 
 
@@ -2021,11 +2021,11 @@ sre.MathspeakEnglishTest.prototype.untestSample_11_9_1 = function() {
       '<mn>.58</mn><mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover>' +
       '<mover accent="true"><mn>3</mn><mo>˙</mo></mover></mrow>';
-  this.executeRuleTest(mml, 'seven-twelfths equals .58 ModifyingEachAbove 3' +
+  this.executeRuleTest(mml, 'seven twelfths equals .58 ModifyingEachAbove 3' +
                        ' 3 3 With dot', 'default');
-  this.executeRuleTest(mml, 'seven-twelfths equals .58 ModEachAbove 3 3 3' +
+  this.executeRuleTest(mml, 'seven twelfths equals .58 ModEachAbove 3 3 3' +
                        ' With dot', 'brief');
-  this.executeRuleTest(mml, 'seven-twelfths equals .58 ModEachAbove 3 3 3' +
+  this.executeRuleTest(mml, 'seven twelfths equals .58 ModEachAbove 3 3 3' +
                        ' With dot', 'sbrief');
 };
 

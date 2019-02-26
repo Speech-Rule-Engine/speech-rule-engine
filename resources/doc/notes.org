@@ -142,3 +142,5 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 
 
 
+
+* TODO Separate CQF function calls etc. clearly by rule set.
