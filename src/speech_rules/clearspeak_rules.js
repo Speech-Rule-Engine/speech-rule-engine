@@ -925,7 +925,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Square
   defineRule(
       'square', 'clearspeak.default',
-      '[n] children/*[1]; [t] "squared"',
+      '[n] children/*[1]; [t] "squared" (span:children/*[2])',
       'self::superscript', 'children/*[2][text()="2"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.
@@ -948,7 +948,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   // Cube
   defineRule(
       'cube', 'clearspeak.default',
-      '[n] children/*[1]; [t] "cubed"',
+      '[n] children/*[1]; [t] "cubed" (span:children/*[2])',
       'self::superscript', 'children/*[2][text()="3"]',
       'name(children/*[1])!="text" or ' +
       // Special exception dealing with footnotes.

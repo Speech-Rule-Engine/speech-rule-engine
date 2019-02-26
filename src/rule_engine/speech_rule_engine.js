@@ -318,7 +318,17 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
         break;
     case sre.SpeechRule.Type.TEXT:
         // TODO: We need the span concept here as a parameter with xpath.
-        selected = this.constructString(node, content);
+      var xpath = attributes['span'];
+      var attrs = {};
+      if (xpath) {
+        var nodes = sre.XpathUtil.evalXPath(xpath, node);
+        // TODO: Those could be multiple nodes!
+        //       We need the right xpath expression and combine their
+        //       attributes.
+        // Generalise the following:
+        if (nodes.length) attrs.extid = nodes[0].getAttribute('extid');
+      }
+      selected = this.constructString(node, content);
         if (selected) {
           if (Array.isArray(selected)) {
             descrs = selected.map(function(span) {
@@ -328,7 +338,7 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
             });
           } else {
             descrs = [sre.AuditoryDescription.create(
-              {text: selected}, {adjust: true})];
+              {text: selected, attributes: attrs}, {adjust: true})];
           }
         }
         break;
