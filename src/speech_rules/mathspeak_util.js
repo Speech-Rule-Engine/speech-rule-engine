@@ -24,6 +24,7 @@ goog.require('sre.DomUtil');
 goog.require('sre.Messages');
 goog.require('sre.Semantic');
 goog.require('sre.SemanticProcessor');
+goog.require('sre.Span');
 goog.require('sre.SystemExternal');
 goog.require('sre.XpathUtil');
 
@@ -552,8 +553,8 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
       content: enumStr + ' ' + msg.MS.FRAC_OVER + ' ' + denStr};
   }
   return {convertible: true,
-    enumerator: enumerator,
-    denominator: denominator};
+          enumerator: enumerator,
+          denominator: denominator};
 };
 
 
@@ -561,18 +562,25 @@ sre.MathspeakUtil.convertVulgarFraction_ = function(node) {
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
  * @param {!Node} node Fraction node to be translated.
- * @return {string} The string representation if it is a valid vulgar fraction.
+ * @return {string|Array.<sre.Span>} The string representation if it is a valid vulgar fraction.
  */
 sre.MathspeakUtil.vulgarFraction = function(node) {
   var conversion = sre.MathspeakUtil.convertVulgarFraction_(node);
   if (conversion.convertible &&
       conversion.enumerator &&
       conversion.denominator) {
-    return sre.MathspeakUtil.numberToWords(conversion.enumerator) + ' ' +
-        sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
-        conversion.enumerator !== 1);
+    // enumerator: new sre.Span(enumerator, {extid: node.getAttribute('extid')}),
+    // denominator: new sre.Span(denominator, {extid: node.getAttribute('extid')})};
+    return [new sre.Span(sre.MathspeakUtil.numberToWords(conversion.enumerator),
+                         {extid: node.childNodes[0].childNodes[0].getAttribute('extid')}),
+            new sre.Span(sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
+                                                           conversion.enumerator !== 1),
+                         {extid: node.childNodes[0].childNodes[1].getAttribute('extid')})];
+    // return sre.MathspeakUtil.numberToWords(conversion.enumerator) + ' ' +
+    //     sre.MathspeakUtil.numberToOrdinal(conversion.denominator,
+    //     conversion.enumerator !== 1);
   }
-  return conversion.content || '';
+  return [new sre.Span(conversion.content || '', {extid: node.getAttribute('extid')})];
 };
 
 

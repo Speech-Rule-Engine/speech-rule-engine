@@ -126,7 +126,7 @@ sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
  * @param {!Node} node The initial node.
  * @param {string} expr An Xpath expression string, a name of a custom
  *     function or a string.
- * @return {string} The result of applying expression to node.
+ * @return {string|Array.<sre.Span>} The result of applying expression to node.
  */
 sre.SpeechRuleEngine.prototype.constructString = function(node, expr) {
   if (!expr) {
@@ -311,16 +311,25 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
           descrs = this.evaluateNodeList_(
               selected,
               attributes['sepFunc'],
-              this.constructString(node, attributes['separator']),
+              /** @type{string} */(this.constructString(node, attributes['separator'])),
               attributes['ctxtFunc'],
-              this.constructString(node, attributes['context']));
+              /** @type{string} */(this.constructString(node, attributes['context'])));
         }
         break;
-      case sre.SpeechRule.Type.TEXT:
+    case sre.SpeechRule.Type.TEXT:
+        // TODO: We need the span concept here as a parameter with xpath.
         selected = this.constructString(node, content);
         if (selected) {
-          descrs = [sre.AuditoryDescription.create(
+          if (Array.isArray(selected)) {
+            descrs = selected.map(function(span) {
+              return sre.AuditoryDescription.create(
+                {text: span.string, attributes: span.attributes},
+                {adjust: true});
+            });
+          } else {
+            descrs = [sre.AuditoryDescription.create(
               {text: selected}, {adjust: true})];
+          }
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:

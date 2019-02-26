@@ -144,3 +144,9 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 
 
 * TODO Separate CQF function calls etc. clearly by rule set.
+
+* TODO Replace strings with spans consistently
+
+** [t] need to be able to take a new parameter that can provide the associated node via an xpath expression.
+
+** Custom string functions needs to return spans rather than strings.
