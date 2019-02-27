@@ -134,7 +134,7 @@ sre.ClearspeakFrench.initCustomFunctions_ = function() {
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   // TODO: Fix ordinals.
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
-  addCSF('CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal);
+  addCSF('CSFwordOrdinal', sre.Messages.NUMBERS.wordOrdinal);
   addCQF('CQFisCapital', sre.ClearspeakUtil.isCapitalLetter);
   addCQF('CQFmatchingFences', sre.ClearspeakUtil.matchingFences);
   addCSF('CSFnestingDepth', sre.ClearspeakUtil.nestingDepth);

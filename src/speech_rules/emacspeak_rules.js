@@ -94,7 +94,7 @@ sre.EmacspeakRules.initCustomFunctions_ = function() {
 
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
-  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.NumbersUtil.vulgarFraction);
 };
 
 

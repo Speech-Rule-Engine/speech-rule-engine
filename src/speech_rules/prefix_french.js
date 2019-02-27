@@ -72,7 +72,7 @@ sre.PrefixFrench.addCustomString_ = goog.bind(
  */
 sre.PrefixFrench.ordinalPosition = function(node) {
   var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.MathspeakUtil.simpleOrdinal(children.indexOf(node) + 1).toString();
+  return sre.Messages.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
 };
 
 
