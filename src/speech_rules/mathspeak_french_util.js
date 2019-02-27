@@ -36,8 +36,9 @@ goog.scope(function() {
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakFrenchUtil.onesNumbers = [
+sre.MathspeakFrenchUtil.onesNumbers_ = [
   '', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept',
   'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze',
   'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'
@@ -47,8 +48,9 @@ sre.MathspeakFrenchUtil.onesNumbers = [
 /**
  * String representation of twenty to ninety.
  * @type {Object.<Array.<string>>}
+ * @private
  */
-sre.MathspeakFrenchUtil.tensNumbers = {
+sre.MathspeakFrenchUtil.tensNumbers_ = {
   'fr': [
     '', '', 'vingt', 'trente', 'quarante', 'cinquante',
     'soixante', 'soixante-dix', 'quatre-vingts', 'quatre-vingt-dix'
@@ -63,8 +65,9 @@ sre.MathspeakFrenchUtil.tensNumbers = {
 /**
  * String representation of thousand to decillion.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakFrenchUtil.largeNumbers = [
+sre.MathspeakFrenchUtil.largeNumbers_ = [
   '', 'mille', 'millions', 'milliards', 'billions', 'mille billions',
   'trillions', 'mille trillions', 'quadrillions', 'mille quadrillions',
   'quintillions', 'mille quintillions'
@@ -75,28 +78,29 @@ sre.MathspeakFrenchUtil.largeNumbers = [
  * Translates a number of up to twelve digits into a string representation.
  * @param {number} number The number to translate.
  * @return {string} The string representation of that number.
+ * @private
  */
-sre.MathspeakFrenchUtil.hundredsToWords = function(number) {
+sre.MathspeakFrenchUtil.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var str = '';
-  str += sre.MathspeakFrenchUtil.onesNumbers[Math.floor(n / 100)] ?
-      sre.MathspeakFrenchUtil.onesNumbers[Math.floor(n / 100)] + '-cent' : '';
+  str += sre.MathspeakFrenchUtil.onesNumbers_[Math.floor(n / 100)] ?
+      sre.MathspeakFrenchUtil.onesNumbers_[Math.floor(n / 100)] + '-cent' : '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
-    var ones = sre.MathspeakFrenchUtil.onesNumbers[n];
+    var ones = sre.MathspeakFrenchUtil.onesNumbers_[n];
     if (ones) {
       str += ones;
     } else {
       // -dix case!
-      var tens = sre.MathspeakFrenchUtil.tensNumbers[
+      var tens = sre.MathspeakFrenchUtil.tensNumbers_[
         sre.MathspeakFrenchUtil.SUB_ISO][Math.floor(n / 10)];
       if (tens.match(/\-dix$/)) {
-        ones = sre.MathspeakFrenchUtil.onesNumbers[(n % 10 + 10)];
+        ones = sre.MathspeakFrenchUtil.onesNumbers_[(n % 10 + 10)];
         str += tens.replace(/\-dix$/, '') + '-' + ones;
       } else {
         str += tens +
-          (n % 10 ? '-' + sre.MathspeakFrenchUtil.onesNumbers[n % 10] : '');
+          (n % 10 ? '-' + sre.MathspeakFrenchUtil.onesNumbers_[n % 10] : '');
       }
     }
   }
@@ -120,8 +124,8 @@ sre.MathspeakFrenchUtil.numberToWords = function(number) {
   while (number > 0) {
     var hundreds = number % 1000;
     if (hundreds) {
-      var large = sre.MathspeakFrenchUtil.largeNumbers[pos];
-      var huns = sre.MathspeakFrenchUtil.hundredsToWords(hundreds);
+      var large = sre.MathspeakFrenchUtil.largeNumbers_[pos];
+      var huns = sre.MathspeakFrenchUtil.hundredsToWords_(hundreds);
       if (large && large.match(/^mille /)) {
         var rest = large.replace(/^mille /, '');
         if (str.match(RegExp(rest))) {

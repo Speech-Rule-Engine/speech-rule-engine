@@ -367,11 +367,13 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
 };
 
 
+// Number transformation
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakUtil.onesNumbers = [
+sre.MathspeakUtil.onesNumbers_ = [
   '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
   'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
   'seventeen', 'eighteen', 'nineteen'
@@ -381,8 +383,9 @@ sre.MathspeakUtil.onesNumbers = [
 /**
  * String representation of twenty to ninety.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakUtil.tensNumbers = [
+sre.MathspeakUtil.tensNumbers_ = [
   '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
   'ninety'
 ];
@@ -391,8 +394,9 @@ sre.MathspeakUtil.tensNumbers = [
 /**
  * String representation of thousand to decillion.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakUtil.largeNumbers = [
+sre.MathspeakUtil.largeNumbers_ = [
   '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
   'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
   'decillion'
@@ -403,18 +407,19 @@ sre.MathspeakUtil.largeNumbers = [
  * Translates a number of up to twelve digits into a string representation.
  * @param {number} number The number to translate.
  * @return {string} The string representation of that number.
+ * @private
  */
-sre.MathspeakUtil.hundredsToWords = function(number) {
+sre.MathspeakUtil.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var str = '';
-  str += sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] ?
-      sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] + '-hundred' : '';
+  str += sre.MathspeakUtil.onesNumbers_[Math.floor(n / 100)] ?
+      sre.MathspeakUtil.onesNumbers_[Math.floor(n / 100)] + '-hundred' : '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
-    str += sre.MathspeakUtil.onesNumbers[n] ||
-      (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
-       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
+    str += sre.MathspeakUtil.onesNumbers_[n] ||
+      (sre.MathspeakUtil.tensNumbers_[Math.floor(n / 10)] +
+       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers_[n % 10] : ''));
   }
   return str;
 };
@@ -434,8 +439,8 @@ sre.MathspeakUtil.numberToWords = function(number) {
   while (number > 0) {
     var hundreds = number % 1000;
     if (hundreds) {
-      str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-        (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
+      str = sre.MathspeakUtil.hundredsToWords_(number % 1000) +
+        (pos ? '-' + sre.MathspeakUtil.largeNumbers_[pos] +
          '-' : '') +
           str;
     }
