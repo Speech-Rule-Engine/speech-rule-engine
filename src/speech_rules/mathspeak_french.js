@@ -112,7 +112,7 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   addCSF('CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief);
   addCSF('CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief);
   addCSF('CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief);
-  addCSF('CSFvulgarFraction', sre.MathspeakFrenchUtil.vulgarFraction);
+  addCSF('CSFvulgarFrFraction', sre.MathspeakFrenchUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction);
 
   // Radical function.
@@ -478,7 +478,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
 
   defineRule(
       'vulgar-fraction', 'mathspeak.default',
-      '[t] CSFvulgarFraction',
+      '[t] CSFvulgarFrFraction',
       'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall');
   defineSpecialisedRule(
       'vulgar-fraction', 'mathspeak.default', 'mathspeak.brief');

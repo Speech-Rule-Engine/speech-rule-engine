@@ -129,7 +129,7 @@ sre.ClearspeakFrench.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.MathspeakFrenchUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   // TODO: Fix ordinals.
