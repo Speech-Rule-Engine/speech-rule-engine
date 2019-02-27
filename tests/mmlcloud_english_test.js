@@ -146,12 +146,12 @@ sre.MmlcloudEnglishTest.prototype.testAbsValueVsNeutral = function() {
  */
 sre.MmlcloudEnglishTest.prototype.testNegativeVulgarFraction = function() {
   var mml = '<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'negative five-eighteenths', 'default');
-  this.executeRuleTest(mml, 'negative five-eighteenths', 'brief');
-  this.executeRuleTest(mml, 'negative five-eighteenths', 'sbrief');
+  this.executeRuleTest(mml, 'negative five eighteenths', 'default');
+  this.executeRuleTest(mml, 'negative five eighteenths', 'brief');
+  this.executeRuleTest(mml, 'negative five eighteenths', 'sbrief');
   mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
       '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
-  this.executeRuleTest(mml, 'one-half minus five-eighteenths', 'default');
+  this.executeRuleTest(mml, 'one half minus five eighteenths', 'default');
   mml = '<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>';
   this.executeRuleTest(mml, 'minus StartFraction 5.2 Over a EndFraction',
                        'default');
@@ -672,4 +672,21 @@ sre.MmlcloudEnglishTest.prototype.testGreekMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D71C;</mi>', 'bold-italic upper Alpha', 'default');
   this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans-serif-bold upper Alpha', 'default');
   this.executeRuleTest('<mi>&#x1D790;</mi>', 'sans-serif-bold-italic upper Alpha', 'default');
+};
+
+
+// Not localised from here!
+/**
+ * Tests for issue #279.
+ */
+sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
+  // mglyph is ignored!
+  this.executeRuleTest('<mtext>&#xA0;</mtext><mtext>&#xA0;</mtext>', '');
+  this.executeRuleTest(
+    '<mtable><mlabeledtr><mtd><mtext>(3.1.10)</mtext></mtd><mtd>' +
+      '<mrow><mglyph src="Images/img2354b563c08bcdd40777a6bbee95ac36.svg"' +
+      ' width="148pt" height="16pt"></mglyph></mrow>' +
+      '<mrow id="texmlid28" /></mtd></mlabeledtr></mtable>',
+    'StartLayout 1st Row  with Label left-parenthesis 3.1 .10' +
+      ' right-parenthesis EndLabel EndLayout');
 };

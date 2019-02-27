@@ -173,7 +173,7 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
  */
 sre.AbstractRuleTest.prototype.header = function() {
   var mathjax = '<script type="text/javascript" async ' +
-      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/' +
+      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/' +
       'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
       '</script>';
   var style = '\n<style>\n table, th, td {\n' +

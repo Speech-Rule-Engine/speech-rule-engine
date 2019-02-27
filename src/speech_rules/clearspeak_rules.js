@@ -127,7 +127,7 @@ sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
   addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
-  addCSF('CSFvulgarFraction', sre.ClearspeakUtil.vulgarFraction);
+  addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
   addCQF('CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple);
   addCSF('CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent);
