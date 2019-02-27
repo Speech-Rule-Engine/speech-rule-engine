@@ -251,13 +251,29 @@ sre.MathspeakUtil.fractionNestingDepth = function(node) {
 
 
 /**
+ * Computes disambiguations for nested fractions.
+ * @param {!Node} node The fraction node.
+ * @param {string} expr The disambiguating expression.
+ * @param {string=} opt_end Optional end expression.
+ * @return {string} The disambiguating string.
+ */
+sre.MathspeakUtil.nestedFraction = function(node, expr, opt_end) {
+  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
+  var annotation = Array.apply(null, Array(depth)).map(x => expr);
+  if (opt_end) {
+    annotation.push(opt_end);
+  }
+  return annotation.join(msg.REGEXP.JOINER_FRAC);
+};
+
+
+/**
  * Opening string for fractions in Mathspeak verbose mode.
  * @param {!Node} node The fraction node.
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.openingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_V;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.START, msg.MS.FRAC_V);
 };
 
 
@@ -267,8 +283,7 @@ sre.MathspeakUtil.openingFractionVerbose = function(node) {
  * @return {string} The closing string.
  */
 sre.MathspeakUtil.closingFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_V;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.END, msg.MS.FRAC_V);
 };
 
 
@@ -278,8 +293,7 @@ sre.MathspeakUtil.closingFractionVerbose = function(node) {
  * @return {string} The middle string.
  */
 sre.MathspeakUtil.overFractionVerbose = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.FRAC_OVER).trim();
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.FRAC_OVER);
 };
 
 
@@ -289,8 +303,7 @@ sre.MathspeakUtil.overFractionVerbose = function(node) {
  * @return {string} The opening string.
  */
 sre.MathspeakUtil.openingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.START) + msg.MS.FRAC_B;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.START, msg.MS.FRAC_B);
 };
 
 
@@ -300,8 +313,7 @@ sre.MathspeakUtil.openingFractionBrief = function(node) {
  * @return {string} The closing string.
  */
 sre.MathspeakUtil.closingFractionBrief = function(node) {
-  var depth = sre.MathspeakUtil.fractionNestingDepth(node);
-  return new Array(depth + 1).join(msg.MS.END) + msg.MS.FRAC_B;
+  return sre.MathspeakUtil.nestedFraction(node, msg.MS.END, msg.MS.FRAC_B);
 };
 
 
@@ -315,8 +327,9 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_S;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.FRAC_S;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+    msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+    msg.MS.FRAC_S);
 };
 
 
@@ -330,8 +343,10 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.ENDFRAC;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.ENDFRAC;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+    msg.MS.NEST_FRAC,
+    msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+    msg.MS.ENDFRAC);
 };
 
 
@@ -345,16 +360,20 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
   if (depth === 1) {
     return msg.MS.FRAC_OVER;
   }
-  return msg.MS.NEST_FRAC + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) +
-      msg.MS.OVER;
+  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
+    msg.MS.NEST_FRAC,
+    msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+    msg.MS.FRAC_OVER);
 };
 
 
+// Number transformation
 /**
  * String representation of zero to nineteen.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakUtil.onesNumbers = [
+sre.MathspeakUtil.onesNumbers_ = [
   '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
   'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
   'seventeen', 'eighteen', 'nineteen'
@@ -364,8 +383,9 @@ sre.MathspeakUtil.onesNumbers = [
 /**
  * String representation of twenty to ninety.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakUtil.tensNumbers = [
+sre.MathspeakUtil.tensNumbers_ = [
   '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
   'ninety'
 ];
@@ -374,8 +394,9 @@ sre.MathspeakUtil.tensNumbers = [
 /**
  * String representation of thousand to decillion.
  * @type {Array.<string>}
+ * @private
  */
-sre.MathspeakUtil.largeNumbers = [
+sre.MathspeakUtil.largeNumbers_ = [
   '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
   'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
   'decillion'
@@ -386,18 +407,19 @@ sre.MathspeakUtil.largeNumbers = [
  * Translates a number of up to twelve digits into a string representation.
  * @param {number} number The number to translate.
  * @return {string} The string representation of that number.
+ * @private
  */
-sre.MathspeakUtil.hundredsToWords = function(number) {
+sre.MathspeakUtil.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var str = '';
-  str += sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] ?
-      sre.MathspeakUtil.onesNumbers[Math.floor(n / 100)] + '-hundred' : '';
+  str += sre.MathspeakUtil.onesNumbers_[Math.floor(n / 100)] ?
+      sre.MathspeakUtil.onesNumbers_[Math.floor(n / 100)] + '-hundred' : '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
-    str += sre.MathspeakUtil.onesNumbers[n] ||
-      (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
-       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
+    str += sre.MathspeakUtil.onesNumbers_[n] ||
+      (sre.MathspeakUtil.tensNumbers_[Math.floor(n / 10)] +
+       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers_[n % 10] : ''));
   }
   return str;
 };
@@ -417,8 +439,8 @@ sre.MathspeakUtil.numberToWords = function(number) {
   while (number > 0) {
     var hundreds = number % 1000;
     if (hundreds) {
-      str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-        (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
+      str = sre.MathspeakUtil.hundredsToWords_(number % 1000) +
+        (pos ? '-' + sre.MathspeakUtil.largeNumbers_[pos] +
          '-' : '') +
           str;
     }
@@ -626,14 +648,14 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
         (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
         (nodeRole === sre.Semantic.Role.LEFTSUB ||
         nodeRole === sre.Semantic.Role.RIGHTSUB))) {
-      init = replace.sub + ' ' + init;
+      init = replace.sub + msg.REGEXP.JOINER_SUBSUPER + init;
     }
     if ((parent.tagName === sre.Semantic.Type.SUPERSCRIPT &&
          node === children.childNodes[1]) ||
         (parent.tagName === sre.Semantic.Type.TENSOR && nodeRole &&
         (nodeRole === sre.Semantic.Role.LEFTSUPER ||
         nodeRole === sre.Semantic.Role.RIGHTSUPER))) {
-      init = replace.sup + ' ' + init;
+      init = replace.sup + msg.REGEXP.JOINER_SUBSUPER + init;
     }
     node = parent;
   }
@@ -740,7 +762,8 @@ sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
   if (depth === 1) {
     return postfix;
   }
-  return prefix + msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1) + postfix;
+  return msg.MS_FUNC.COMBINE_NESTED_RADICAL(
+    prefix, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
 };
 
 
@@ -985,9 +1008,11 @@ sre.MathspeakUtil.removeParens = function(node) {
  * @private
  */
 sre.MathspeakUtil.componentString_ = {
+  3 : 'CSFleftsuperscript',
+  4 : 'CSFleftsubscript',
   2 : 'CSFbaseline',
-  1 : 'CSFsubscript',
-  0 : 'CSFsuperscript'
+  1 : 'CSFrightsubscript',
+  0 : 'CSFrightsuperscript'
 };
 
 
@@ -1023,7 +1048,7 @@ sre.MathspeakUtil.generateTensorRuleStrings_ = function(constellation) {
   for (var i = 0; i < 5; i++) {
     var childString = 'children/*[' + sre.MathspeakUtil.childNumber_[i] + ']';
     if (constel & 1) {
-      var compString = sre.MathspeakUtil.componentString_[i % 3];
+      var compString = sre.MathspeakUtil.componentString_[i % 5];
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
           verbString;
       briefString = '[t] ' + compString + 'Brief; [n] ' + childString + ';' +

@@ -130,6 +130,15 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
   addCSF('CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
   addCSF('CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose);
   addCSF('CSFbaselineBrief', sre.MathspeakUtil.baselineBrief);
+  // Tensor specific.
+  addCSF('CSFleftsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFleftsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
+  addCSF('CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose);
+  addCSF('CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose);
+  addCSF('CSFleftsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFleftsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
+  addCSF('CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
+  addCSF('CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
 
   // Over- Underscore.
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
@@ -282,7 +291,8 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.default', 'mathspeak.brief',
-      '[t] "base"; [t] @font; [n] . (grammar:ignoreFont=@font)');
+      '[t] "base"; [t] @font (grammar:localFont); ' +
+      '[n] . (grammar:ignoreFont=@font)');
   defineSpecialisedRule(
       'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief');
 
