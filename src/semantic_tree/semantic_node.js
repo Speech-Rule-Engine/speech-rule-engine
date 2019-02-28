@@ -79,6 +79,12 @@ sre.SemanticNode = function(id) {
    */
   this.annotation = {};
 
+  /**
+   * Collection of external attributes.
+   * @type {!Object.<string>}
+   */
+  this.attributes = {};
+
 };
 
 
@@ -180,6 +186,7 @@ sre.SemanticNode.prototype.xmlAttributes_ = function(node) {
   for (var i = 0, attr; attr = attributes[i]; i++) {
     node.setAttribute(attr[0], attr[1]);
   }
+  this.addExternalAttributes_(node);
 };
 
 
@@ -205,14 +212,17 @@ sre.SemanticNode.prototype.allAttributes = function() {
                      this.fencePointer]);
   }
   attributes.push([sre.SemanticNode.Attribute.ID, this.id]);
-  this.addExternalAttributes_(attributes);
   return attributes;
 };
 
 
-sre.SemanticNode.prototype.addExternalAttributes_ = function(attributes) {
+/**
+ * Adds the external attributes for this node to its XML representation.
+ * @param {Node} node The XML node.
+ */
+sre.SemanticNode.prototype.addExternalAttributes_ = function(node) {
   for (var attr in this.attributes) {
-    attributes.push([attr, this.attributes[attr]]);
+    node.setAttribute(attr, this.attributes[attr]);
   }
 };
 
