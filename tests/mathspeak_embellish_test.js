@@ -45,11 +45,6 @@ sre.MathspeakEmbellishTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules'];
-
   this.setActive('EmbellishedSymbolsEnglish');
 };
 goog.inherits(sre.MathspeakEmbellishTest, sre.AbstractRuleTest);

@@ -34,19 +34,19 @@ goog.require('sre.StaticTrieNode');
  * Generates a trie node of a given kind in the given rule store.
  * @param {sre.TrieNode.Kind} kind The kind of trie nodes.
  * @param {string} constraint The constraint the trie node is generated for.
- * @param {sre.SpeechRuleStore} store The rule store.
+ * @param {sre.SpeechRuleContext} context A function context.
  * @return {?sre.TrieNode} The newly generated trie node.
  */
-sre.TrieNodeFactory.getNode = function(kind, constraint, store) {
+sre.TrieNodeFactory.getNode = function(kind, constraint, context) {
   switch (kind) {
     case sre.TrieNode.Kind.ROOT:
       return new sre.RootTrieNode();
     case sre.TrieNode.Kind.DYNAMIC:
       return new sre.DynamicTrieNode(constraint);
     case sre.TrieNode.Kind.QUERY:
-      return new sre.QueryTrieNode(constraint, store);
+      return new sre.QueryTrieNode(constraint, context);
     case sre.TrieNode.Kind.BOOLEAN:
-      return new sre.BooleanTrieNode(constraint, store);
+      return new sre.BooleanTrieNode(constraint, context);
     default:
       return null;
   }
@@ -160,10 +160,10 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
  * @constructor
  * @extends {sre.StaticTrieNode}
  * @param {string} constraint The constraint the node represents.
- * @param {sre.SpeechRuleStore} store The rule store.
+ * @param {sre.SpeechRuleContext} context The rule context.
  */
-sre.QueryTrieNode = function(constraint, store) {
-  this.store_ = store;
+sre.QueryTrieNode = function(constraint, context) {
+  this.context_ = context;
   sre.QueryTrieNode.base(this, 'constructor', constraint,
                          sre.TrieNodeFactory.constraintTest_(constraint));
   this.kind = sre.TrieNode.Kind.QUERY;
@@ -176,7 +176,7 @@ goog.inherits(sre.QueryTrieNode, sre.StaticTrieNode);
  */
 sre.QueryTrieNode.prototype.applyTest = function(object) {
   return this.test ? this.test(object) :
-      this.store_.applyQuery(object, this.constraint) === object;
+      this.context_.applyQuery(object, this.constraint) === object;
 };
 
 
@@ -185,10 +185,10 @@ sre.QueryTrieNode.prototype.applyTest = function(object) {
  * @constructor
  * @extends {sre.StaticTrieNode}
  * @param {string} constraint The constraint the node represents.
- * @param {sre.SpeechRuleStore} store The rule store.
+ * @param {sre.SpeechRuleContext} context The rule context.
  */
-sre.BooleanTrieNode = function(constraint, store) {
-  this.store_ = store;
+sre.BooleanTrieNode = function(constraint, context) {
+  this.context_ = context;
   sre.BooleanTrieNode.base(
       this, 'constructor', constraint,
       sre.TrieNodeFactory.constraintTest_(constraint));
@@ -202,5 +202,5 @@ goog.inherits(sre.BooleanTrieNode, sre.StaticTrieNode);
  */
 sre.BooleanTrieNode.prototype.applyTest = function(object) {
   return this.test ? this.test(object) :
-      this.store_.applyConstraint(object, this.constraint);
+      this.context_.applyConstraint(object, this.constraint);
 };

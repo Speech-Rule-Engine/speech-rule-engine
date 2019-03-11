@@ -47,11 +47,6 @@ sre.MmlcloudEnglishTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules'];
-
   this.setActive('MathmlCloudEnglish');
 };
 goog.inherits(sre.MmlcloudEnglishTest, sre.AbstractRuleTest);
