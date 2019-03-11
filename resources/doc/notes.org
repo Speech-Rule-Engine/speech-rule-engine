@@ -18,7 +18,7 @@
    http://codepen.io/pkra/pen/jEodYw
    http://codepen.io/mathjax/pen/dgJHx
 
-* TODO List for mathml integration
+* DONE List for mathml integration
 
 ** [DONE] Parent attribute in outermost wrapped node should go to inner node.
 
@@ -143,7 +143,7 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 
 
 
-* TODO Separate CQF function calls etc. clearly by rule set.
+* DONE Separate CQF function calls etc. clearly by rule set.
 
 ** Separate all Number methods properly.
 
