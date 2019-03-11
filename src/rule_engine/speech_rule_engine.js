@@ -76,7 +76,7 @@ sre.SpeechRuleEngine = function() {
   this.combinedStores_ = {};
 
   // sre.Debugger.getInstance().init();
-  
+
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 
@@ -417,7 +417,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
 sre.SpeechRuleEngine.prototype.addExternalAttributes_ = function(descr, node) {
   if (node.hasAttributes()) {
     var attrs = node.attributes;
-    for(var i = attrs.length - 1; i >= 0; i--) {
+    for (var i = attrs.length - 1; i >= 0; i--) {
       var key = attrs[i].name;
       if (!descr.attributes[key] && key.match(/^ext/)) {
         descr.attributes[key] = attrs[i].value;
@@ -684,7 +684,7 @@ sre.SpeechRuleEngine.prototype.makeSet_ = function(value, preferences) {
 
 // sre.SpeechRuleEngine.prototype.enumerate = function() {
 //   var root = sre.SpeechRuleEngine.getInstance().activeStore_.trie.root;
-  
+
 // };
 
 

@@ -191,7 +191,7 @@ sre.AbstractExamples.prototype.join = function(examples) {
  * @return {string} Output file header.
  */
 sre.AbstractExamples.prototype.header = function() {
-  return '';  
+  return '';
 };
 
 
@@ -199,6 +199,6 @@ sre.AbstractExamples.prototype.header = function() {
  * @return {string} Output file footer.
  */
 sre.AbstractExamples.prototype.footer = function() {
-  return '';  
+  return '';
 };
-  
+

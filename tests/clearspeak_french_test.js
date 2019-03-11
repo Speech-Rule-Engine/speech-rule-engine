@@ -64,7 +64,7 @@ sre.ClearspeakFrenchTest.testList = [
   sre.ClearspeakFrenchParentheses, // Fine
   sre.ClearspeakFrenchPart2Symbols,
   sre.ClearspeakFrenchPart3Adornments,
-  sre.ClearspeakFrenchRoots,  
+  sre.ClearspeakFrenchRoots,
   sre.ClearspeakFrenchSetsEnclosedInSetBrackets,
   sre.ClearspeakFrenchTrigometry  // Fine
 ];

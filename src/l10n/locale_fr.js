@@ -75,7 +75,7 @@ sre.Locale.fr = {
     '2': 'carrée',
     '3': 'cubique'
   },
-    
+
   FONT: {
     'bold': 'gras',
     'bold-fraktur': 'gothique gras',
@@ -175,5 +175,5 @@ sre.Locale.fr = {
     'foot': 'feet',
     'inch': 'inches'
   }
-  
+
 };

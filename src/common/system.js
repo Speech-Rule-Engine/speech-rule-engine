@@ -307,8 +307,8 @@ sre.System.prototype.fileToSemantic = function(input, opt_output) {
 sre.System.prototype.fileToJson = function(input, opt_output) {
   sre.System.getInstance().processFile_(
       function(x) {
-        return opt_output ? JSON.stringify(sre.System.getInstance().toJson(x))
-          : sre.System.getInstance().toJson(x);
+        return opt_output ? JSON.stringify(sre.System.getInstance().toJson(x)) :
+            sre.System.getInstance().toJson(x);
       },
       input, opt_output);
 };

@@ -143,7 +143,7 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
   addCSF('CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief);
   addCSF('CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief);
 
-  
+
   // Over- Underscore.
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
@@ -311,7 +311,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
       ' @role="otherletter"]',
       'parent::*/parent::infixop[@role="implicit"]');
   defineSpecialisedRule(
-    'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief',
+      'number-baseline-font', 'mathspeak.brief', 'mathspeak.sbrief',
       '[t] "base"; [n] . (grammar:ignoreFont=@font); [t] "en"; ' +
       '[t] @font (grammar:localFont)');
   defineSpecialisedRule(
@@ -692,7 +692,7 @@ sre.MathspeakFrench.initMathspeakFrench_ = function() {
   defineSpecialisedRule(
       'subscript-base', 'mathspeak.default', 'mathspeak.sbrief');
 
-  // Commented out for Lise. 
+  // Commented out for Lise.
   // defineRule(
   //     'subscript-simple', 'mathspeak.default',
   //     '[n] children/*[1]; [n] children/*[2]',

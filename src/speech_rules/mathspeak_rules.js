@@ -1288,7 +1288,7 @@ sre.MathspeakRules.initMathspeakRules_ = function() {
  */
 sre.MathspeakRules.generateTensorRules_ = function() {
   sre.MathspeakUtil.generateTensorRules(sre.MathspeakRules.mathStore);
-};  
+};
 
 });  // goog.scope
 

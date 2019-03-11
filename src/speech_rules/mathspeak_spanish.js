@@ -235,7 +235,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'number-with-chars', 'mathspeak.default',
       '[t] "número"; [m] CQFspaceoutNumber (grammar:protected)',
       'self::number', '@role="othernumber"',
-       '"" != translate(text(), "0123456789.,", "")',
+      '"" != translate(text(), "0123456789.,", "")',
       'not(contains(@grammar, "protected"))');
 
   defineSpecialisedRule(
@@ -1288,7 +1288,7 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 sre.MathspeakSpanish.generateTensorRules_ = function() {
   sre.MathspeakUtil.generateTensorRules(sre.MathspeakSpanish.mathStore);
 };
-  
+
 });  // goog.scope
 
 

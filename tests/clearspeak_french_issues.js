@@ -13,7 +13,7 @@
 // limitations under the License.
 
 //
-// Tests from the issues discovered in ClearspeakFrench rules. 
+// Tests from the issues discovered in ClearspeakFrench rules.
 //
 
 
@@ -48,20 +48,20 @@ goog.inherits(sre.ClearspeakFrenchIssues, sre.ClearspeakFrenchRuleTest);
 sre.ClearspeakFrenchIssues.prototype.testIssue230 = function() {
   var preference = 'default';
   this.executeRuleTest(
-    '<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>',
-    '', preference);
+      '<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>',
+      '', preference);
   this.executeRuleTest(
-    '<mn>5</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>',
-    '', preference);
+      '<mn>5</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>',
+      '', preference);
 };
 
 
 sre.ClearspeakFrenchIssues.prototype.testIssueNumbers = function() {
   var preference = 'default';
   this.executeRuleTest(
-    '<mrow><mn>t2e4</mn></mrow>', '', preference);
+      '<mrow><mn>t2e4</mn></mrow>', '', preference);
   this.executeRuleTest(
-    '<mrow><mn>#FF0000</mn></mrow>', '', preference);
+      '<mrow><mn>#FF0000</mn></mrow>', '', preference);
   this.executeRuleTest(
-    '<mrow><mn>#FFFF</mn></mrow>', '', preference);
+      '<mrow><mn>#FFFF</mn></mrow>', '', preference);
 };

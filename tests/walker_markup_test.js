@@ -77,20 +77,20 @@ sre.WalkerMarkupTest.prototype.tearDownTest = function() {
 
 
 sre.WalkerMarkupTest.DIV_MML =
-  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-  '<mfrac><mi>x</mi><mi>y</mi></mfrac></math>';
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<mfrac><mi>x</mi><mi>y</mi></mfrac></math>';
 
 
 sre.WalkerMarkupTest.DIV_RENDERED =
-  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-  '<mfrac data-semantic-type="fraction" data-semantic-role="division"' +
-  ' data-semantic-id="2" data-semantic-children="0,1">' +
-  '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="0"' +
-  ' data-semantic-parent="2">x</mi>' +
-  '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
-  ' data-semantic-font="italic" data-semantic-id="1"' +
-  ' data-semantic-parent="2">y</mi></mfrac></math>';
+    '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<mfrac data-semantic-type="fraction" data-semantic-role="division"' +
+    ' data-semantic-id="2" data-semantic-children="0,1">' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="0"' +
+    ' data-semantic-parent="2">x</mi>' +
+    '<mi data-semantic-type="identifier" data-semantic-role="latinletter"' +
+    ' data-semantic-font="italic" data-semantic-id="1"' +
+    ' data-semantic-parent="2">y</mi></mfrac></math>';
 
 
 /**
@@ -112,7 +112,7 @@ sre.WalkerMarkupTest.prototype.startWalker_ = function() {
   this.walker = sre.WalkerFactory.walker(
       'Syntax', this.div, sre.SpeechGeneratorFactory.generator('Node'),
       /** @type {!sre.Highlighter} */(sre.HighlighterFactory.highlighter(
-        {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'})),
+      {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'})),
       sre.WalkerMarkupTest.DIV_RENDERED);
 };
 

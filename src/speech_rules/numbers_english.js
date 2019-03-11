@@ -72,8 +72,8 @@ sre.NumbersEnglish.hundredsToWords_ = function(number) {
   if (n) {
     str += str ? '-' : '';
     str += sre.NumbersEnglish.onesNumbers_[n] ||
-      (sre.NumbersEnglish.tensNumbers_[Math.floor(n / 10)] +
-       (n % 10 ? '-' + sre.NumbersEnglish.onesNumbers_[n % 10] : ''));
+        (sre.NumbersEnglish.tensNumbers_[Math.floor(n / 10)] +
+        (n % 10 ? '-' + sre.NumbersEnglish.onesNumbers_[n % 10] : ''));
   }
   return str;
 };
@@ -94,8 +94,8 @@ sre.NumbersEnglish.numberToWords = function(number) {
     var hundreds = number % 1000;
     if (hundreds) {
       str = sre.NumbersEnglish.hundredsToWords_(number % 1000) +
-        (pos ? '-' + sre.NumbersEnglish.largeNumbers_[pos] +
-         '-' : '') +
+          (pos ? '-' + sre.NumbersEnglish.largeNumbers_[pos] +
+          '-' : '') +
           str;
     }
     number = Math.floor(number / 1000);

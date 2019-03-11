@@ -143,5 +143,5 @@ sre.Locale.en = {
     'foot': 'feet',
     'inch': 'inches'
   }
-  
+
 };

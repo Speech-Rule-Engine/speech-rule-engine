@@ -1192,8 +1192,6 @@ sre.ClearspeakFrenchExponents.prototype.testExp084 = function() {
 };
 
 
-
-
 /**
  * Testing ClearspeakFrenchExponents Example Exp036
  */

@@ -40,12 +40,14 @@ sre.SsmlStepRenderer.prototype.markup = function(descrs) {
   return sre.SsmlStepRenderer.base(this, 'markup', descrs);
 };
 
+
 /**
  * @type {string}
  */
 sre.SsmlStepRenderer.CHARACTER_ATTR_ = 'character';
 
 sre.SsmlStepRenderer.MARKS = {};
+
 
 /**
  * @override
@@ -61,7 +63,7 @@ sre.SsmlStepRenderer.prototype.merge = function(strs) {
     }
     if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
       result.push('<say-as interpret-as="' + sre.SsmlStepRenderer.CHARACTER_ATTR_ +
-                  '">' + str.string + "</say-as>");
+                  '">' + str.string + '</say-as>');
     } else {
       result.push(str.string);
     }
