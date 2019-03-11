@@ -179,7 +179,6 @@ goog.inherits(sre.KeyProcessor, sre.Processor);
  * @private
  */
 sre.KeyProcessor.getKey_ = function(key) {
-  console.log('key: ' + key);
   return (typeof key === 'string') ?
       sre.EventUtil.KeyCode[key.toUpperCase()] : key;
 };
