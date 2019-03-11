@@ -50,13 +50,7 @@ sre.MathspeakEmbellishSpanishTest = function() {
    */
   this.locale = 'es';
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules', 'MathspeakSpanish'];
-
   this.setActive('EmbellishedSymbolsSpanish');
-
 };
 goog.inherits(sre.MathspeakEmbellishSpanishTest, sre.AbstractRuleTest);
 

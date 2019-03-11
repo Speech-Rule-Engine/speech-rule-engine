@@ -48,12 +48,6 @@ sre.ClearspeakFrenchRuleTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['ClearspeakRules', 'ClearspeakFrench'];
-
-
   this.actual = true;
   this.setActive('ClearspeakFrench');
   this.startExamples();

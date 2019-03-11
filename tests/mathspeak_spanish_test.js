@@ -50,11 +50,6 @@ sre.MathspeakSpanishTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules', 'MathspeakSpanish'];
-
   this.setActive('MathspeakSpanish');
 
 };

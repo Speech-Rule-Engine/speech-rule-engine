@@ -144,7 +144,7 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
   addCSF('CSFunderscript', sre.MathspeakUtil.nestedUnderscore);
   addCSF('CSFoverscript', sre.MathspeakUtil.nestedOverscore);
 
-  addCTXF('CTXFordinalCounterEs', sre.MathspeakSpanishUtil.ordinalCounter);
+  addCTXF('CTXFordinalCounter', sre.MathspeakSpanishUtil.ordinalCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
   addCTXF('CTXFunitMultipliers', sre.MathspeakSpanishUtil.unitMultipliers);
 
@@ -997,40 +997,40 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'matrix', 'mathspeak.default',
       '[t] "empezar matriz"; [t] count(children/*);  [t] "por";' +
       '[t] count(children/*[1]/children/*); ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar matriz"',
       'self::matrix');
   defineRule(
       'matrix', 'mathspeak.sbrief',
       '[t] "matriz"; [t] count(children/*);  [t] "por";' +
       '[t] count(children/*[1]/children/*); ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:" ");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:" ");' +
       ' [t] "finalizar matriz"', 'self::matrix');
   defineRuleAlias(
       'matrix', 'self::vector');
 
   defineRule(
       'matrix-row', 'mathspeak.default',
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"columna");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna");' +
       '[p] (pause: 200)',
       'self::row');
   defineRule(
       'row-with-label', 'mathspeak.default',
       '[t] "con etiqueta"; [n] content/*[1]; ' +
       '[t] "finalizar etiqueta" (pause: 200); ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"columna")',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna")',
       'self::row', 'content');
   defineRule(
       'row-with-label', 'mathspeak.brief',
       '[t] "etiqueta"; [n] content/*[1]; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"columna")',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna")',
       'self::row', 'content');
   defineSpecialisedRule(
       'row-with-label', 'mathspeak.brief', 'mathspeak.sbrief');
   defineRule(
       'row-with-text-label', 'mathspeak.sbrief',
       '[t] "etiqueta"; [t] CSFRemoveParens;' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"columna")',
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"columna")',
       'self::row', 'content', 'name(content/cell/children/*[1])="text"');
   defineRule(
       'empty-row', 'mathspeak.default',
@@ -1049,28 +1049,28 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
       'determinant', 'mathspeak.default',
       '[t] "empezar determinante"; [t] count(children/*);  [t] "por";' +
       '[t] count(children/*[1]/children/*);' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar determinante"',
       'self::matrix', '@role="determinant"');
   defineSpecialisedRule(
       'determinant', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] "determinante"; [t] count(children/*);  [t] "por";' +
       '[t] count(children/*[1]/children/*);' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar determinante"');
 
   defineRule(
       'determinant-simple', 'mathspeak.default',
       '[t] "empezar determinante"; [t] count(children/*);  [t] "por";' +
       '[t] count(children/*[1]/children/*);' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila",' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila",' +
       'grammar:simpleDet); [t] "finalizar determinante"',
       'self::matrix', '@role="determinant"', 'CQFdetIsSimple');
   defineSpecialisedRule(
       'determinant-simple', 'mathspeak.default', 'mathspeak.sbrief',
       '[t] "determinante"; [t] count(children/*);  [t] "por";' +
       '[t] count(children/*[1]/children/*);' +
-      ' [m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila",' +
+      ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila",' +
       'grammar:simpleDet); [t] "finalizar determinante"');
   defineRule(
       'row-simple', 'mathspeak.default',
@@ -1079,11 +1079,11 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
 
   defineRule(
       'layout', 'mathspeak.default', '[t] "empezar esquema"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar esquema"', 'self::table');
   defineRule(
       'layout', 'mathspeak.sbrief', '[t] "esquema"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar esquema"', 'self::table');
 
   defineRule(
@@ -1102,12 +1102,12 @@ sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'cases', 'mathspeak.default', '[t] "empezar esquema"; ' +
       '[n] content/*[1]; [t] "alargada"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar esquema"', 'self::cases');
   defineRule(
       'cases', 'mathspeak.sbrief', '[t] "esquema"; ' +
       '[n] content/*[1]; [t] "alargada"; ' +
-      '[m] children/* (ctxtFunc:CTXFordinalCounterEs,context:"fila ");' +
+      '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"fila ");' +
       ' [t] "finalizar esquema"', 'self::cases');
 
   // Multiline rules.

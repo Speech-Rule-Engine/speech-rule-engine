@@ -45,11 +45,6 @@ sre.MathspeakEnglishTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules'];
-
   this.setActive('MathspeakEnglish');
 };
 goog.inherits(sre.MathspeakEnglishTest, sre.AbstractRuleTest);

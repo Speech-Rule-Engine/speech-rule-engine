@@ -43,11 +43,6 @@ sre.ClearspeakRuleTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['ClearspeakRules'];
-
   this.setActive('ClearspeakExamples');
   this.startExamples();
 };

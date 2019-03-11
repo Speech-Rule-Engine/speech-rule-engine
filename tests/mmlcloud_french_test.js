@@ -51,13 +51,7 @@ sre.MmlcloudFrenchTest = function() {
    */
   this.locale = 'fr';
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules', 'MathspeakFrench'];
-
   this.setActive('MathmlCloudFrench');
-
 };
 goog.inherits(sre.MmlcloudFrenchTest, sre.AbstractRuleTest);
 
