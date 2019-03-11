@@ -19,7 +19,7 @@ SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
 RES_DIR = $(abspath ./resources)
-SRC = $(SRC_DIR)/*/*.js
+SRC = $(SRC_DIR)/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -40,7 +40,7 @@ TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
 TEST_DEPS = $(TEST_DIR)/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/*.js
+TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -170,6 +170,7 @@ test_compile: $(TEST_TARGET)
 
 $(TEST_TARGET): $(TEST_SRC) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
+	@echo $^
 	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
 
 test_script: $(TEST)
