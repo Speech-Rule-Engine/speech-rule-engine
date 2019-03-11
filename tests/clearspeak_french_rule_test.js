@@ -37,7 +37,7 @@ sre.ClearspeakFrenchRuleTest = function() {
    * @override
    */
   this.locale = 'fr';
-  
+
   /**
    * @override
    */

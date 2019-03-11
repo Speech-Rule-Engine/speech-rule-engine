@@ -253,7 +253,7 @@ sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
   return aural.finalize(aural.merge(pre.concat(speech)));
 };
 
-  
+
 /**
  * @return {string} The prefix of the currently focused element.
  * @private

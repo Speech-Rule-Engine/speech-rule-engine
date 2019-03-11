@@ -161,7 +161,7 @@ sre.Cli.prototype.readline = function() {
         function(proc, expr) {
           inter.output.write((proc === 'Json' ?
                               JSON.stringify(this.system['to' + proc](expr)) :
-                              this.system['to' + proc](expr))+ '\n');
+                              this.system['to' + proc](expr)) + '\n');
         }, this), input);
   }, this));
 };

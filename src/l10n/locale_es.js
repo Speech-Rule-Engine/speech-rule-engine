@@ -168,5 +168,5 @@ sre.Locale.es = {
     JOINER_SUBSUPER: ' ',
     JOINER_FRAC: ' '
   }
-  
+
 };

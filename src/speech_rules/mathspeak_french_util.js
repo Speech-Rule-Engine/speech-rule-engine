@@ -29,9 +29,10 @@ goog.require('sre.XpathUtil');
 
 
 goog.scope(function() {
-  var msg = sre.Messages;
+var msg = sre.Messages;
 
-  sre.MathspeakFrenchUtil.SUB_ISO = 'fr';
+sre.MathspeakFrenchUtil.SUB_ISO = 'fr';
+
 
 /**
  * String representation of zero to nineteen.
@@ -61,7 +62,7 @@ sre.MathspeakFrenchUtil.tensNumbers_ = {
          'soixante', 'septante', 'huitante', 'nonante']
 };
 
-  
+
 /**
  * String representation of thousand to decillion.
  * @type {Array.<string>}
@@ -94,19 +95,19 @@ sre.MathspeakFrenchUtil.hundredsToWords_ = function(number) {
     } else {
       // -dix case!
       var tens = sre.MathspeakFrenchUtil.tensNumbers_[
-        sre.MathspeakFrenchUtil.SUB_ISO][Math.floor(n / 10)];
+          sre.MathspeakFrenchUtil.SUB_ISO][Math.floor(n / 10)];
       if (tens.match(/\-dix$/)) {
         ones = sre.MathspeakFrenchUtil.onesNumbers_[(n % 10 + 10)];
         str += tens.replace(/\-dix$/, '') + '-' + ones;
       } else {
         str += tens +
-          (n % 10 ? '-' + sre.MathspeakFrenchUtil.onesNumbers_[n % 10] : '');
+            (n % 10 ? '-' + sre.MathspeakFrenchUtil.onesNumbers_[n % 10] : '');
       }
     }
   }
   let match = str.match(/s\-\w+$/);
-  return  match ? str.replace(/s\-\w+$/, match[0].slice(1)) :
-    str.replace(/\-un$/, '-et-un');
+  return match ? str.replace(/s\-\w+$/, match[0].slice(1)) :
+      str.replace(/\-un$/, '-et-un');
 };
 
 
@@ -139,7 +140,7 @@ sre.MathspeakFrenchUtil.numberToWords = function(number) {
         large = (hundreds === 1 && large) ? large.replace(/s$/, '') : large;
         str = huns + (pos ? '-' + large + '-' : '') + str;
       }
-    } 
+    }
     number = Math.floor(number / 1000);
     pos++;
   }
@@ -169,7 +170,7 @@ sre.MathspeakFrenchUtil.numberToOrdinal = function(num, plural) {
   var ordinal = sre.MathspeakFrenchUtil.SMALL_ORDINAL[num] ||
       sre.MathspeakFrenchUtil.wordOrdinal(num);
   return (num === 3) ? ordinal :
-    (plural ? ordinal + 's' : ordinal);
+      (plural ? ordinal + 's' : ordinal);
 };
 
 
@@ -336,24 +337,24 @@ sre.MathspeakFrenchUtil.baselineBrief = function(node) {
   return baseline.replace(/\-$/, '');
 };
 
-  sre.MathspeakFrenchUtil.leftSuperscriptVerbose = function(node) {
-    var leftIndex = sre.MathspeakUtil.superscriptVerbose(node);
-    return leftIndex.replace(/^exposant/, 'exposant gauche');
-  };
+sre.MathspeakFrenchUtil.leftSuperscriptVerbose = function(node) {
+  var leftIndex = sre.MathspeakUtil.superscriptVerbose(node);
+  return leftIndex.replace(/^exposant/, 'exposant gauche');
+};
 
-  sre.MathspeakFrenchUtil.leftSubscriptVerbose = function(node) {
-    var leftIndex = sre.MathspeakUtil.subscriptVerbose(node);
-    return leftIndex.replace(/^indice/, 'indice gauche');
-  };
-  
-  sre.MathspeakFrenchUtil.leftSuperscriptBrief = function(node) {
-    var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
-    return leftIndex.replace(/^sup/, 'sup gauche');
-  };
+sre.MathspeakFrenchUtil.leftSubscriptVerbose = function(node) {
+  var leftIndex = sre.MathspeakUtil.subscriptVerbose(node);
+  return leftIndex.replace(/^indice/, 'indice gauche');
+};
 
-  sre.MathspeakFrenchUtil.leftSubscriptBrief = function(node) {
-    var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
-    return leftIndex.replace(/^sub/, 'sub gauche');
-  };
-  
+sre.MathspeakFrenchUtil.leftSuperscriptBrief = function(node) {
+  var leftIndex = sre.MathspeakUtil.superscriptBrief(node);
+  return leftIndex.replace(/^sup/, 'sup gauche');
+};
+
+sre.MathspeakFrenchUtil.leftSubscriptBrief = function(node) {
+  var leftIndex = sre.MathspeakUtil.subscriptBrief(node);
+  return leftIndex.replace(/^sub/, 'sub gauche');
+};
+
 });  // goog.scope

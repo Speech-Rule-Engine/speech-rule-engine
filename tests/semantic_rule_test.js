@@ -233,7 +233,7 @@ sre.SemanticRuleTest.prototype.testMultiline = function() {
 
 
 /**
- * Tests for mixed numbers. MJ a11y issue #225. 
+ * Tests for mixed numbers. MJ a11y issue #225.
  */
 sre.SemanticRuleTest.prototype.testMixedNumbers = function() {
   this.executeRuleTest(

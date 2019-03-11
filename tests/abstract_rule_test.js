@@ -179,11 +179,11 @@ sre.AbstractRuleTest.prototype.header = function() {
   var style = '\n<style>\n table, th, td {\n' +
       '  border: 1px solid black; }\n</style>\n';
   return '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
-    '<html> <head>\n' +
-    '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
-    mathjax +
-    '\n<title>' + this.information + '</title>\n' + style + 
-    '\n</head>\n<body>\n';
+      '<html> <head>\n' +
+      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
+      mathjax +
+      '\n<title>' + this.information + '</title>\n' + style +
+      '\n</head>\n<body>\n';
 };
 
 

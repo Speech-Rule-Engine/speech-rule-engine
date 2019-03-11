@@ -62,7 +62,7 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
     result.push(sn.xml(doc));
   }
   return result;
-  
+
 };
 
 
@@ -73,12 +73,12 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
  */
 sre.MathspeakUtil.spaceoutNumber = function(node) {
   return sre.MathspeakUtil.spaceoutNodes(
-    node,
-    function(sn) {
-      if (!sn.textContent.match(/\W/)) {
-        sn.type = sre.Semantic.Type.NUMBER;
-      }
-    });
+      node,
+      function(sn) {
+        if (!sn.textContent.match(/\W/)) {
+          sn.type = sre.Semantic.Type.NUMBER;
+        }
+      });
 };
 
 
@@ -89,11 +89,11 @@ sre.MathspeakUtil.spaceoutNumber = function(node) {
  */
 sre.MathspeakUtil.spaceoutIdentifier = function(node) {
   return sre.MathspeakUtil.spaceoutNodes(
-    node,
-    function(sn) {
-      sn.font = sre.Semantic.Font.UNKNOWN;
-      sn.type = sre.Semantic.Type.IDENTIFIER;
-    });
+      node,
+      function(sn) {
+        sn.font = sre.Semantic.Font.UNKNOWN;
+        sn.type = sre.Semantic.Type.IDENTIFIER;
+      });
 };
 
 
@@ -328,8 +328,8 @@ sre.MathspeakUtil.openingFractionSbrief = function(node) {
     return msg.MS.FRAC_S;
   }
   return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
-    msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-    msg.MS.FRAC_S);
+      msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      msg.MS.FRAC_S);
 };
 
 
@@ -344,9 +344,9 @@ sre.MathspeakUtil.closingFractionSbrief = function(node) {
     return msg.MS.ENDFRAC;
   }
   return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
-    msg.MS.NEST_FRAC,
-    msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-    msg.MS.ENDFRAC);
+      msg.MS.NEST_FRAC,
+      msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      msg.MS.ENDFRAC);
 };
 
 
@@ -361,9 +361,9 @@ sre.MathspeakUtil.overFractionSbrief = function(node) {
     return msg.MS.FRAC_OVER;
   }
   return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
-    msg.MS.NEST_FRAC,
-    msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-    msg.MS.FRAC_OVER);
+      msg.MS.NEST_FRAC,
+      msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      msg.MS.FRAC_OVER);
 };
 
 
@@ -418,8 +418,8 @@ sre.MathspeakUtil.hundredsToWords_ = function(number) {
   if (n) {
     str += str ? '-' : '';
     str += sre.MathspeakUtil.onesNumbers_[n] ||
-      (sre.MathspeakUtil.tensNumbers_[Math.floor(n / 10)] +
-       (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers_[n % 10] : ''));
+        (sre.MathspeakUtil.tensNumbers_[Math.floor(n / 10)] +
+        (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers_[n % 10] : ''));
   }
   return str;
 };
@@ -440,8 +440,8 @@ sre.MathspeakUtil.numberToWords = function(number) {
     var hundreds = number % 1000;
     if (hundreds) {
       str = sre.MathspeakUtil.hundredsToWords_(number % 1000) +
-        (pos ? '-' + sre.MathspeakUtil.largeNumbers_[pos] +
-         '-' : '') +
+          (pos ? '-' + sre.MathspeakUtil.largeNumbers_[pos] +
+          '-' : '') +
           str;
     }
     number = Math.floor(number / 1000);
@@ -763,7 +763,7 @@ sre.MathspeakUtil.nestedRadical = function(node, prefix, postfix) {
     return postfix;
   }
   return msg.MS_FUNC.COMBINE_NESTED_RADICAL(
-    prefix, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
+      prefix, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
 };
 
 
@@ -1117,5 +1117,5 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
   }
 };
 
-  
+
 });  // goog.scope

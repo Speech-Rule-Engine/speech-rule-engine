@@ -66,7 +66,7 @@ sre.Grammar = function() {
    *         translate: (undefined|boolean)}}
    */
   this.currentFlags = {};
-  
+
 };
 goog.addSingletonGetter(sre.Grammar);
 
@@ -283,7 +283,7 @@ sre.Grammar.prototype.apply = function(text, opt_flags) {
   }
   text = (this.currentFlags.adjust || this.currentFlags.correct) ?
       sre.Grammar.getInstance().correct(text) :
-    text;
+      text;
   this.currentFlags = {};
   return text;
 };

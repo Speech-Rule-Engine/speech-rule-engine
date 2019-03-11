@@ -183,7 +183,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-lim', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   // TODO: Missing simple function
-  
+
 
   // Fraction
   defineRule(

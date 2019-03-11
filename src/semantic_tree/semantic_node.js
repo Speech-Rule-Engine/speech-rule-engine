@@ -244,7 +244,7 @@ sre.SemanticNode.prototype.xmlAnnotation = function() {
 
 /**
  * Turns node into JSON format.
- * @return {JSONType} The JSON object for the node. 
+ * @return {JSONType} The JSON object for the node.
  */
 sre.SemanticNode.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});
@@ -258,11 +258,11 @@ sre.SemanticNode.prototype.toJson = function() {
   }
   if (this.childNodes.length) {
     json[sre.SemanticNode.Attribute.CHILDREN] =
-      this.childNodes.map(function(child) {return child.toJson();});
+        this.childNodes.map(function(child) {return child.toJson();});
   }
   if (this.contentNodes.length) {
     json[sre.SemanticNode.Attribute.CONTENT] =
-      this.contentNodes.map(function(child) {return child.toJson();});
+        this.contentNodes.map(function(child) {return child.toJson();});
   }
   return json;
 };
