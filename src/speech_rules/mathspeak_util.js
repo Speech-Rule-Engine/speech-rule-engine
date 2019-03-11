@@ -417,9 +417,9 @@ sre.MathspeakUtil.hundredsToWords_ = function(number) {
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
-    str += sre.MathspeakUtil.onesNumbers[n] ||
-        (sre.MathspeakUtil.tensNumbers[Math.floor(n / 10)] +
-        (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers[n % 10] : ''));
+    str += sre.MathspeakUtil.onesNumbers_[n] ||
+        (sre.MathspeakUtil.tensNumbers_[Math.floor(n / 10)] +
+        (n % 10 ? '-' + sre.MathspeakUtil.onesNumbers_[n % 10] : ''));
   }
   return str;
 };
@@ -439,8 +439,8 @@ sre.MathspeakUtil.numberToWords = function(number) {
   while (number > 0) {
     var hundreds = number % 1000;
     if (hundreds) {
-      str = sre.MathspeakUtil.hundredsToWords(number % 1000) +
-          (pos ? '-' + sre.MathspeakUtil.largeNumbers[pos] +
+      str = sre.MathspeakUtil.hundredsToWords_(number % 1000) +
+          (pos ? '-' + sre.MathspeakUtil.largeNumbers_[pos] +
           '-' : '') +
           str;
     }
