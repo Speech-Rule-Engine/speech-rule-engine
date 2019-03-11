@@ -52,6 +52,8 @@ sre.SpeechRule = function(name, dynamic, prec, action) {
   this.precondition = prec;
   /** @type {sre.SpeechRule.Action} */
   this.action = action;
+  /** @type {sre.SpeechRuleContext} */
+  this.context = null;
 };
 
 

@@ -46,11 +46,6 @@ sre.NobleEnglishTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules'];
-
   this.setActive('NobleSamplesEnglish');
 };
 goog.inherits(sre.NobleEnglishTest, sre.AbstractRuleTest);
@@ -71,12 +66,12 @@ sre.NobleEnglishTest.prototype.testSample_1 = function() {
       '</mfrac>' +
       '<mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'negative 5 and one-fifth minus 6 and' +
-                       ' two-thirds equals', 'default');
-  this.executeRuleTest(mml, 'negative 5 and one-fifth minus 6 and' +
-                       ' two-thirds equals', 'brief');
-  this.executeRuleTest(mml, 'negative 5 and one-fifth minus 6 and' +
-                       ' two-thirds equals', 'sbrief');
+  this.executeRuleTest(mml, 'negative 5 and one fifth minus 6 and' +
+                       ' two thirds equals', 'default');
+  this.executeRuleTest(mml, 'negative 5 and one fifth minus 6 and' +
+                       ' two thirds equals', 'brief');
+  this.executeRuleTest(mml, 'negative 5 and one fifth minus 6 and' +
+                       ' two thirds equals', 'sbrief');
 };
 
 
@@ -98,14 +93,14 @@ sre.NobleEnglishTest.prototype.testSample_2 = function() {
       '</mrow>' +
       '<mo>)</mo></mrow><mo>=</mo>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'negative 7 and three-fourths minus' +
-                       ' left-parenthesis negative 4 and seven-eighths' +
+  this.executeRuleTest(mml, 'negative 7 and three fourths minus' +
+                       ' left-parenthesis negative 4 and seven eighths' +
                        ' right-parenthesis equals', 'default');
-  this.executeRuleTest(mml, 'negative 7 and three-fourths minus left-p\'ren' +
-                       ' negative 4 and seven-eighths right-p\'ren equals',
+  this.executeRuleTest(mml, 'negative 7 and three fourths minus left-p\'ren' +
+                       ' negative 4 and seven eighths right-p\'ren equals',
                        'brief');
-  this.executeRuleTest(mml, 'negative 7 and three-fourths minus L p\'ren' +
-                       ' negative 4 and seven-eighths R p\'ren equals',
+  this.executeRuleTest(mml, 'negative 7 and three fourths minus L p\'ren' +
+                       ' negative 4 and seven eighths R p\'ren equals',
                        'sbrief');
 };
 
@@ -388,9 +383,9 @@ sre.NobleEnglishTest.prototype.testSample_19 = function() {
       '</mfrac>' +
       '<mi>b</mi><mi>h</mi>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'upper A equals one-half b h', 'default');
-  this.executeRuleTest(mml, 'upper A equals one-half b h', 'brief');
-  this.executeRuleTest(mml, 'upper A equals one-half b h', 'sbrief');
+  this.executeRuleTest(mml, 'upper A equals one half b h', 'default');
+  this.executeRuleTest(mml, 'upper A equals one half b h', 'brief');
+  this.executeRuleTest(mml, 'upper A equals one half b h', 'sbrief');
 };
 
 
@@ -734,11 +729,11 @@ sre.NobleEnglishTest.prototype.testSample_35 = function() {
   var mml = '<mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow>' +
       '<mn>3</mn></mrow></mfrac><mrow><mo>(</mo><msup><mrow><mn>3</mn>' +
       '</mrow><mrow><mi>x</mi></mrow></msup><mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, 'y equals one-third left-parenthesis 3' +
+  this.executeRuleTest(mml, 'y equals one third left-parenthesis 3' +
                        ' Superscript x Baseline right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'y equals one-third left-p\'ren 3 Sup x Base' +
+  this.executeRuleTest(mml, 'y equals one third left-p\'ren 3 Sup x Base' +
                        ' right-p\'ren', 'brief');
-  this.executeRuleTest(mml, 'y equals one-third L p\'ren 3 Sup x Base R' +
+  this.executeRuleTest(mml, 'y equals one third L p\'ren 3 Sup x Base R' +
                        ' p\'ren', 'sbrief');
 };
 
@@ -980,9 +975,9 @@ sre.NobleEnglishTest.prototype.testSample_52 = function() {
       '</mrow>' +
       '</mfrac>    ' +
       '</mrow>';
-  this.executeRuleTest(mml, '0.25 greater-than five-sixteenths', 'default');
-  this.executeRuleTest(mml, '0.25 greater-than five-sixteenths', 'brief');
-  this.executeRuleTest(mml, '0.25 greater-than five-sixteenths', 'sbrief');
+  this.executeRuleTest(mml, '0.25 greater-than five sixteenths', 'default');
+  this.executeRuleTest(mml, '0.25 greater-than five sixteenths', 'brief');
+  this.executeRuleTest(mml, '0.25 greater-than five sixteenths', 'sbrief');
 };
 
 
@@ -1014,15 +1009,15 @@ sre.NobleEnglishTest.prototype.testSample_54 = function() {
       '</mn><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mn>2</mn><mo>×' +
       '</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac>' +
       '<mo>×</mo><mi>π</mi><mo>×</mo><mn>5</mn><mo>)</mo></mrow></mrow>';
-  this.executeRuleTest(mml, 'left-parenthesis one-half times one-half times' +
+  this.executeRuleTest(mml, 'left-parenthesis one half times one half times' +
                        ' pi times 2 right-parenthesis plus left-parenthesis' +
-                       ' 2 times one-half times pi times 5' +
+                       ' 2 times one half times pi times 5' +
                        ' right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'left-p\'ren one-half times one-half times pi' +
+  this.executeRuleTest(mml, 'left-p\'ren one half times one half times pi' +
                        ' times 2 right-p\'ren plus left-p\'ren 2 times' +
-                       ' one-half times pi times 5 right-p\'ren', 'brief');
-  this.executeRuleTest(mml, 'L p\'ren one-half times one-half times pi' +
-                       ' times 2 R p\'ren plus L p\'ren 2 times one-half' +
+                       ' one half times pi times 5 right-p\'ren', 'brief');
+  this.executeRuleTest(mml, 'L p\'ren one half times one half times pi' +
+                       ' times 2 R p\'ren plus L p\'ren 2 times one half' +
                        ' times pi times 5 R p\'ren', 'sbrief');
 };
 
@@ -2340,12 +2335,12 @@ sre.NobleEnglishTest.prototype.testSample_87 = function() {
       '<mn>3</mn>' +
       '</mfrac>' +
       '</mrow>';
-  this.executeRuleTest(mml, 'StartFraction one-half Over three-fourths' +
-                       ' EndFraction equals two-thirds', 'default');
-  this.executeRuleTest(mml, 'StartFrac one-half Over three-fourths EndFrac' +
-                       ' equals two-thirds', 'brief');
-  this.executeRuleTest(mml, 'Frac one-half Over three-fourths EndFrac' +
-                       ' equals two-thirds', 'sbrief');
+  this.executeRuleTest(mml, 'StartFraction one half Over three fourths' +
+                       ' EndFraction equals two thirds', 'default');
+  this.executeRuleTest(mml, 'StartFrac one half Over three fourths EndFrac' +
+                       ' equals two thirds', 'brief');
+  this.executeRuleTest(mml, 'Frac one half Over three fourths EndFrac' +
+                       ' equals two thirds', 'sbrief');
 };
 
 
@@ -3023,18 +3018,18 @@ sre.NobleEnglishTest.prototype.testSample_99 = function() {
       '</mrow>' +
       '</mrow>';
   this.executeRuleTest(mml, 'TCS Subscript gas Baseline equals minus' +
-                       ' one-half left-parenthesis StartFraction upper P' +
+                       ' one half left-parenthesis StartFraction upper P' +
                        ' Subscript seal Baseline Over upper P Subscript max' +
                        ' Baseline EndFraction right-parenthesis' +
                        ' left-parenthesis StartFraction 1 Over upper T' +
                        ' Subscript seal Baseline EndFraction' +
                        ' right-parenthesis', 'default');
-  this.executeRuleTest(mml, 'TCS Sub gas Base equals minus one-half' +
+  this.executeRuleTest(mml, 'TCS Sub gas Base equals minus one half' +
                        ' left-p\'ren StartFrac upper P Sub seal Base Over' +
                        ' upper P Sub max Base EndFrac right-p\'ren' +
                        ' left-p\'ren StartFrac 1 Over upper T Sub seal Base' +
                        ' EndFrac right-p\'ren', 'brief');
-  this.executeRuleTest(mml, 'TCS Sub gas Base equals minus one-half L' +
+  this.executeRuleTest(mml, 'TCS Sub gas Base equals minus one half L' +
                        ' p\'ren Frac upper P Sub seal Base Over upper P Sub' +
                        ' max Base EndFrac R p\'ren L p\'ren Frac 1 Over' +
                        ' upper T Sub seal Base EndFrac R p\'ren', 'sbrief');

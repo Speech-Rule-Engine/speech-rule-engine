@@ -342,10 +342,10 @@ sre.Grammar.correctFont_ = function(text, correction) {
     return text;
   }
   // TODO: Combine with localFont.
-  correction = sre.L10n.getLocale().FONT[correction] || correction;
-  var correctionComp = correction.split(/ |-/);
-  var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
-  return text.replace(regExp, '');
+  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.L10n.getLocale().FONT[correction] || correction);
+  // var correctionComp = correction.split(/ |-/);
+  // var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  return text.replace(correction, '');
 };
 
 

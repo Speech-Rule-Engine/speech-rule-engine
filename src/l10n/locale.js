@@ -49,7 +49,7 @@ sre.Locale.Messages;
 sre.Locale.nestingToString = function(count) {
   switch (count) {
     case 1:
-      return '';
+      return sre.Messages.MS.ONCE || '';
     case 2:
       return sre.Messages.MS.TWICE;
     default:

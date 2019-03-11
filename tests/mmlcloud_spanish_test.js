@@ -51,11 +51,6 @@ sre.MmlcloudSpanishTest = function() {
    */
   this.locale = 'es';
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules', 'MathspeakSpanish'];
-
   this.setActive('MathmlCloudSpanish');
 
 };
@@ -160,7 +155,7 @@ sre.MmlcloudSpanishTest.prototype.testNegativeVulgarFraction = function() {
                        ' fracción', 'default');
   this.executeRuleTest(mml, 'menos empezar frac 5 entre 18 finalizar frac',
                        'brief');
-  this.executeRuleTest(mml, 'menos frac 5 entre  18', 'sbrief');
+  this.executeRuleTest(mml, 'menos frac 5 entre 18', 'sbrief');
   mml = '<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo>' +
       '<mfrac><mn>5</mn><mn>18</mn></mfrac>';
   this.executeRuleTest(mml, 'empezar fracción 1 entre 2 finalizar fracción' +
@@ -326,7 +321,7 @@ sre.MmlcloudSpanishTest.prototype.testSupBaseRelseq = function() {
                        ' empezar frac 1 entre 2 mayúscula T finalizar frac' +
                        ' menor o igual que c sub 2 h sup 4 menos 2 s', 'brief');
   this.executeRuleTest(mml, 'c sub 1 h sup 4 menos 2 s menor o igual que' +
-                       ' frac 1 entre  2 mayúscula T menor o igual que c' +
+                       ' frac 1 entre 2 mayúscula T menor o igual que c' +
                        ' sub 2 h sup 4 menos 2 s', 'sbrief');
 };
 
@@ -352,7 +347,7 @@ sre.MmlcloudSpanishTest.prototype.testSupBaseMultirel = function() {
                        ' empezar frac 1 entre 2 mayúscula T finalizar frac' +
                        ' igual c sub 2 h sup 4 menos 2 s', 'brief');
   this.executeRuleTest(mml, 'c sub 1 h sup 4 menos 2 s menor o igual que' +
-                       ' frac 1 entre  2 mayúscula T igual c sub 2 h sup 4' +
+                       ' frac 1 entre 2 mayúscula T igual c sub 2 h sup 4' +
                        ' menos 2 s', 'sbrief');
 };
 
@@ -371,7 +366,7 @@ sre.MmlcloudSpanishTest.prototype.testSubBaseRelseq = function() {
   this.executeRuleTest(mml, 'h sub s menor o igual que empezar frac 1 entre' +
                        ' 2 mayúscula T finalizar frac menor o igual que h' +
                        ' sub s', 'brief');
-  this.executeRuleTest(mml, 'h sub s menor o igual que frac 1 entre  2' +
+  this.executeRuleTest(mml, 'h sub s menor o igual que frac 1 entre 2' +
                        ' mayúscula T menor o igual que h sub s', 'sbrief');
 };
 
@@ -389,7 +384,7 @@ sre.MmlcloudSpanishTest.prototype.testSubBaseMultirel = function() {
                        ' fracción igual h subíndice s', 'default');
   this.executeRuleTest(mml, 'h sub s menor o igual que empezar frac 1 entre' +
                        ' 2 mayúscula T finalizar frac igual h sub s', 'brief');
-  this.executeRuleTest(mml, 'h sub s menor o igual que frac 1 entre  2' +
+  this.executeRuleTest(mml, 'h sub s menor o igual que frac 1 entre 2' +
                        ' mayúscula T igual h sub s', 'sbrief');
 };
 
@@ -410,7 +405,7 @@ sre.MmlcloudSpanishTest.prototype.testSubSuperBaseRelseq = function() {
   this.executeRuleTest(mml, 'h sub s sup t menor o igual que empezar frac 1' +
                        ' entre 2 mayúscula T finalizar frac menor o igual' +
                        ' que h sub s sup t', 'brief');
-  this.executeRuleTest(mml, 'h sub s sup t menor o igual que frac 1 entre ' +
+  this.executeRuleTest(mml, 'h sub s sup t menor o igual que frac 1 entre' +
                        ' 2 mayúscula T menor o igual que h sub s sup t',
                        'sbrief');
 };
@@ -432,7 +427,7 @@ sre.MmlcloudSpanishTest.prototype.testSubSuperBaseMultirel = function() {
   this.executeRuleTest(mml, 'h sub s sup t menor o igual que empezar frac 1' +
                        ' entre 2 mayúscula T finalizar frac igual h sub s' +
                        ' sup t', 'brief');
-  this.executeRuleTest(mml, 'h sub s sup t menor o igual que frac 1 entre ' +
+  this.executeRuleTest(mml, 'h sub s sup t menor o igual que frac 1 entre' +
                        ' 2 mayúscula T igual h sub s sup t', 'sbrief');
 };
 
@@ -456,8 +451,8 @@ sre.MmlcloudSpanishTest.prototype.testSquareWithText = function() {
                        ' square finalizar frac igual empezar frac 1 unit al' +
                        ' cuadrado entre 16 units al cubo finalizar frac',
                        'brief');
-  this.executeRuleTest(mml, 'frac area of triangle entre  area of square' +
-                       ' igual frac 1 unit al cuadrado entre  16 units al' +
+  this.executeRuleTest(mml, 'frac area of triangle entre area of square' +
+                       ' igual frac 1 unit al cuadrado entre 16 units al' +
                        ' cubo', 'sbrief');
 };
 
@@ -688,12 +683,14 @@ sre.MmlcloudSpanishTest.prototype.testLatinMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D504;</mi>', 'Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D56C;</mi>', 'negrita Fraktur mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D4D0;</mi>', 'negrita script mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D468;</mi>', 'negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D400;</mi>', 'negrita mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D538;</mi>', 'negrita de pizarra mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D434;</mi>', 'cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D670;</mi>', 'monoespacio mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D5D4;</mi>', 'sans-serif negrita mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D608;</mi>', 'sans-serif cursiva mayúscula A', 'default');
+  this.executeRuleTest('<mi>&#x1D63C;</mi>', 'sans-serif negrita cursiva mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D5A0;</mi>', 'sans-serif mayúscula A', 'default');
   this.executeRuleTest('<mi>&#x1D49C;</mi>', 'script mayúscula A', 'default');
 };
@@ -705,5 +702,7 @@ sre.MmlcloudSpanishTest.prototype.testLatinMathfonts = function() {
 sre.MmlcloudSpanishTest.prototype.testGreekMathfonts = function() {
   this.executeRuleTest('<mi>&#x1D6A8;</mi>', 'negrita mayúscula Alfa', 'default');
   this.executeRuleTest('<mi>&#x1D6E2;</mi>', 'cursiva mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D71C;</mi>', 'negrita cursiva mayúscula Alfa', 'default');
   this.executeRuleTest('<mi>&#x1D756;</mi>', 'sans-serif negrita mayúscula Alfa', 'default');
+  this.executeRuleTest('<mi>&#x1D790;</mi>', 'sans-serif negrita cursiva mayúscula Alfa', 'default');
 };

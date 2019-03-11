@@ -86,6 +86,8 @@ sre.Messages.MS_FUNC = {
    */
   COMBINE_ROOT_INDEX: function(postfix, index) {return postfix;}
 
+  // TODO: Add new functions.
+
 };
 
 
@@ -144,7 +146,13 @@ sre.Messages.ROLE = {
   'rowvector': '',
   'binomial': '',
   'squarematrix': '',
+  // Sets
+  'set empty': '',
+  'set extended': '',
+  'set singleton': '',
+  'set collection': '',
   // Roles of rows, lines, cells.
+  'label': '',
   'multiline': '',
   'matrix': '',
   'vector': '',
@@ -201,7 +209,8 @@ sre.Messages.REGEXP = {
   TEXT: 'a-zA-Z',
   NUMBER: '',
   DECIMAL_MARK: '',
-  DIGIT_GROUP: ''
+  DIGIT_GROUP: '',
+  JOINER_SUBSUPER: ' '
 };
 
 

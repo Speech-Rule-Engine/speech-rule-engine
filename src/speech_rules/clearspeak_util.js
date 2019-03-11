@@ -375,16 +375,6 @@ sre.ClearspeakUtil.allCellsSimple = function(node) {
 
 
 /**
- * String function that translates a vulgar fraction.
- * @param {!Node} node The node with the vulgar fraction
- * @return {string} Speech string for the vulgar fraction.
- */
-sre.ClearspeakUtil.vulgarFraction = function(node) {
-  return sre.MathspeakUtil.vulgarFraction(node, ' ');
-};
-
-
-/**
  * Custom query function to check if a vulgar fraction is small enough to be
  * spoken as numbers in MathSpeak.
  * @param {!Node} node Fraction node to be tested.

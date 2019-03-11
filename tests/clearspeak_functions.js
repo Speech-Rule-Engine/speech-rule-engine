@@ -31,8 +31,8 @@ sre.ClearspeakFunctions = function() {
   sre.ClearspeakFunctions.base(this, 'constructor');
 
   /**
-* @override
-  */
+   * @override
+   */
   this.information = 'ClearspeakFunctions rule tests.';
 
 };

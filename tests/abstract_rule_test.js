@@ -112,14 +112,13 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
  * @private
  */
 sre.AbstractRuleTest.prototype.appendExample_ = function(input, output, style) {
-  this.appendExamples('<h2>' + this.information + ' Locale: ' + this.locale +
-                      ', Style: ' +
-                      sre.AbstractRuleTest.htmlCell_(
-      sre.AbstractRuleTest.styleMap_(style)) +
-                      '.</h2>',
+  var key = '<h2>' + this.information + ' Locale: ' + this.locale +
+      ', Style: ' +
+      sre.AbstractRuleTest.htmlCell_(sre.AbstractRuleTest.styleMap_(style)) +
+      '.</h2>';
+  this.appendExamples(key,
                       sre.AbstractRuleTest.htmlCell_(input) +
-                      sre.AbstractRuleTest.htmlCell_(output)
-  );
+                      sre.AbstractRuleTest.htmlCell_(output));
 };
 
 
@@ -160,25 +159,38 @@ sre.AbstractRuleTest.prototype.cleanup = function(example) {
  * @override
  */
 sre.AbstractRuleTest.prototype.join = function(examples) {
-  var mathjax = '<script type="text/javascript" async ' +
-      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/' +
-      'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
-      '</script>';
-  var style = '\n<style>\n' +
-      'table, th, td {\n' +
-      '  border: 1px solid black;' +
-      '}\n</style>\n';
-  var head = '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
-      '<html> <head>\n' +
-      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
-      mathjax +
-      '\n<title>' + this.information + '</title>\n' +
-      '\n</head>\n<body>\n<table>\n';
-  var end = '\n</table>\n</body>\n</html>';
   for (var i = 0, l = examples.length; i < l; i++) {
     examples[i] = '<tr>' +
         sre.AbstractRuleTest.htmlCell_(i) + examples[i] +
         '</tr>';
   }
-  return head + style + examples.join('\n') + end;
+  return '\n<table>\n' + examples.join('\n') + '\n</table>\n';
 };
+
+
+/**
+ * @override
+ */
+sre.AbstractRuleTest.prototype.header = function() {
+  var mathjax = '<script type="text/javascript" async ' +
+      'src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/' +
+      'MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">' +
+      '</script>';
+  var style = '\n<style>\n table, th, td {\n' +
+      '  border: 1px solid black; }\n</style>\n';
+  return '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
+      '<html> <head>\n' +
+      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
+      mathjax +
+      '\n<title>' + this.information + '</title>\n' + style +
+      '\n</head>\n<body>\n';
+};
+
+
+/**
+ * @override
+ */
+sre.AbstractRuleTest.prototype.footer = function() {
+  return '\n</body>\n</html>';
+};
+
