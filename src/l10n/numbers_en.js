@@ -17,7 +17,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.NumbersEnglish');
+goog.provide('sre.Numbers.en');
 
 goog.require('sre.Messages');
 
@@ -27,7 +27,7 @@ goog.require('sre.Messages');
  * @type {Array.<string>}
  * @private
  */
-sre.NumbersEnglish.onesNumbers_ = [
+sre.Numbers.en.onesNumbers_ = [
   '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
   'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
   'seventeen', 'eighteen', 'nineteen'
@@ -39,7 +39,7 @@ sre.NumbersEnglish.onesNumbers_ = [
  * @type {Array.<string>}
  * @private
  */
-sre.NumbersEnglish.tensNumbers_ = [
+sre.Numbers.en.tensNumbers_ = [
   '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
   'ninety'
 ];
@@ -50,7 +50,7 @@ sre.NumbersEnglish.tensNumbers_ = [
  * @type {Array.<string>}
  * @private
  */
-sre.NumbersEnglish.largeNumbers_ = [
+sre.Numbers.en.largeNumbers_ = [
   '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
   'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
   'decillion'
@@ -63,17 +63,17 @@ sre.NumbersEnglish.largeNumbers_ = [
  * @return {string} The string representation of that number.
  * @private
  */
-sre.NumbersEnglish.hundredsToWords_ = function(number) {
+sre.Numbers.en.hundredsToWords_ = function(number) {
   var n = number % 1000;
   var str = '';
-  str += sre.NumbersEnglish.onesNumbers_[Math.floor(n / 100)] ?
-      sre.NumbersEnglish.onesNumbers_[Math.floor(n / 100)] + '-hundred' : '';
+  str += sre.Numbers.en.onesNumbers_[Math.floor(n / 100)] ?
+      sre.Numbers.en.onesNumbers_[Math.floor(n / 100)] + '-hundred' : '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
-    str += sre.NumbersEnglish.onesNumbers_[n] ||
-        (sre.NumbersEnglish.tensNumbers_[Math.floor(n / 10)] +
-        (n % 10 ? '-' + sre.NumbersEnglish.onesNumbers_[n % 10] : ''));
+    str += sre.Numbers.en.onesNumbers_[n] ||
+        (sre.Numbers.en.tensNumbers_[Math.floor(n / 10)] +
+        (n % 10 ? '-' + sre.Numbers.en.onesNumbers_[n % 10] : ''));
   }
   return str;
 };
@@ -84,7 +84,7 @@ sre.NumbersEnglish.hundredsToWords_ = function(number) {
  * @param {number} number The number to translate.
  * @return {string} The string representation of that number.
  */
-sre.NumbersEnglish.numberToWords = function(number) {
+sre.Numbers.en.numberToWords = function(number) {
   if (number >= Math.pow(10, 36)) {
     return number.toString();
   }
@@ -93,8 +93,8 @@ sre.NumbersEnglish.numberToWords = function(number) {
   while (number > 0) {
     var hundreds = number % 1000;
     if (hundreds) {
-      str = sre.NumbersEnglish.hundredsToWords_(number % 1000) +
-          (pos ? '-' + sre.NumbersEnglish.largeNumbers_[pos] +
+      str = sre.Numbers.en.hundredsToWords_(number % 1000) +
+          (pos ? '-' + sre.Numbers.en.largeNumbers_[pos] +
           '-' : '') +
           str;
     }
@@ -112,14 +112,14 @@ sre.NumbersEnglish.numberToWords = function(number) {
  * @param {boolean} plural A flag indicating if the ordinal is in plural.
  * @return {string} The ordinal of the number as string.
  */
-sre.NumbersEnglish.numberToOrdinal = function(num, plural) {
+sre.Numbers.en.numberToOrdinal = function(num, plural) {
   if (num === 1) {
     return plural ? 'oneths' : 'oneth';
   }
   if (num === 2) {
     return plural ? 'halves' : 'half';
   }
-  var ordinal = sre.NumbersEnglish.wordOrdinal(num);
+  var ordinal = sre.Numbers.en.wordOrdinal(num);
   return plural ? ordinal + 's' : ordinal;
 };
 
@@ -129,8 +129,8 @@ sre.NumbersEnglish.numberToOrdinal = function(num, plural) {
  * @param {number} number The number to be converted.
  * @return {string} The ordinal string.
  */
-sre.NumbersEnglish.wordOrdinal = function(number) {
-  var ordinal = sre.NumbersEnglish.numberToWords(number);
+sre.Numbers.en.wordOrdinal = function(number) {
+  var ordinal = sre.Numbers.en.numberToWords(number);
   if (ordinal.match(/one$/)) {
     ordinal = ordinal.slice(0, -3) + 'first';
   } else if (ordinal.match(/two$/)) {
@@ -159,7 +159,7 @@ sre.NumbersEnglish.wordOrdinal = function(number) {
  * @param {number} number The number to be converted.
  * @return {string} The ordinal string.
  */
-sre.NumbersEnglish.simpleOrdinal = function(number) {
+sre.Numbers.en.simpleOrdinal = function(number) {
   var tens = number % 100;
   var numStr = number.toString();
   if (tens > 10 && tens < 20) {
@@ -179,8 +179,8 @@ sre.NumbersEnglish.simpleOrdinal = function(number) {
 
 
 sre.Messages.NUMBERS = {};
-sre.Messages.NUMBERS.wordOrdinal = sre.NumbersEnglish.wordOrdinal;
-sre.Messages.NUMBERS.simpleOrdinal = sre.NumbersEnglish.simpleOrdinal;
-sre.Messages.NUMBERS.numberToWords = sre.NumbersEnglish.numberToWords;
-sre.Messages.NUMBERS.numberToOrdinal = sre.NumbersEnglish.numberToOrdinal;
+sre.Messages.NUMBERS.wordOrdinal = sre.Numbers.en.wordOrdinal;
+sre.Messages.NUMBERS.simpleOrdinal = sre.Numbers.en.simpleOrdinal;
+sre.Messages.NUMBERS.numberToWords = sre.Numbers.en.numberToWords;
+sre.Messages.NUMBERS.numberToOrdinal = sre.Numbers.en.numberToOrdinal;
 

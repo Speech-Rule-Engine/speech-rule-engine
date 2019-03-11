@@ -20,7 +20,6 @@
 goog.provide('sre.NumbersUtil');
 
 goog.require('sre.Messages');
-goog.require('sre.NumbersEnglish');
 
 
 // Number transformation
