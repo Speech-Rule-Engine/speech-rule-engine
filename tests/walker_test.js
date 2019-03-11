@@ -1114,13 +1114,13 @@ sre.WalkerTest.QUADRATIC_SVG =
 /**
  * Executes single walker moves and tests the resulting speech.
  * @param {sre.Walker} walker The walker.
- * @param {?string} move The move of the walker.
+ * @param {?(string|sre.EventUtil.KeyCode)} move The move of the walker.
  * @param {?(string)} result The expected result.
  * @private
  */
 sre.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
   if (move) {
-    walker.move(sre.EventUtil.KeyCode[move]);
+    walker.move((typeof move === 'string') ? sre.EventUtil.KeyCode[move] : move);
   }
   this.assert.equal(walker.speech(), result);
 };
@@ -1181,6 +1181,47 @@ sre.WalkerTest.prototype.runSyntaxQuadraticMoveTests_ = function(walker) {
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   this.executeTest_(walker, 'DOWN', 'x');
   this.executeTest_(walker, 'X', 'identifier');
+  this.executeTest_(walker, 'UP',
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+};
+
+
+/**
+ * Runs a series of walker tests on a quadratic formula using key codes.
+ * @param {sre.Walker} walker The walker.
+ * @private
+ */
+sre.WalkerTest.prototype.runSyntaxQuadraticKeyTests_ = function(walker) {
+  this.executeTest_(walker, null,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'equality');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 'x');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.RIGHT, 'equals');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.RIGHT,
+      'StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.SPACE, 'Level 1 collapsible');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'fraction');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN,
+      'Numerator negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.SPACE, 'Level 2 Numerator');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.UP,
+      'StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'equals');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'x');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'x');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.HOME,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 'x');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'identifier');
+  this.executeTest_(walker, sre.EventUtil.KeyCode.UP,
+      'x equals StartFraction negative b plus-or-minus StartRoot' +
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
 
 
@@ -1192,6 +1233,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMml = function() {
       'Syntax', this.quadratic.mml, {renderer: 'NativeMML'},
       sre.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
+  this.runSyntaxQuadraticKeyTests_(walker);
 };
 
 
@@ -1204,6 +1246,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMmlCss = function() {
       {renderer: 'NativeMML', browser: 'Safari'},
       sre.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
+  this.runSyntaxQuadraticKeyTests_(walker);
 };
 
 
@@ -1215,6 +1258,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticHtmlCss = function() {
       'Syntax', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
       sre.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
+  this.runSyntaxQuadraticKeyTests_(walker);
 };
 
 
@@ -1227,6 +1271,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticCommonHtml = function() {
       {renderer: 'CommonHTML'},
       sre.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
+  this.runSyntaxQuadraticKeyTests_(walker);
 };
 
 
@@ -1239,6 +1284,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticSvg = function() {
       {renderer: 'SVG'},
       sre.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
+  this.runSyntaxQuadraticKeyTests_(walker);
 };
 
 

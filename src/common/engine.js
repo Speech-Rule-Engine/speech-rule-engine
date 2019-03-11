@@ -20,6 +20,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 goog.provide('sre.Engine');
+goog.provide('sre.Engine.Error');
 goog.provide('sre.Engine.Mode');
 
 goog.require('sre.BrowserUtil');
@@ -94,7 +95,7 @@ sre.Engine = function() {
    * Current walker mode.
    * @type {string}
    */
-  this.walker = 'Syntax';
+  this.walker = 'Table';
 
   /**
    * Semantics flag.
@@ -163,6 +164,11 @@ sre.Engine = function() {
    * @type {string}
    */
   this.rate = '100';
+
+  /**
+   * @type {boolean}
+   */
+  this.pprint = false;
 
   /**
    * List of predicates for checking if the engine is set up.
@@ -279,7 +285,26 @@ sre.Engine.defaultEvaluator = function(str, cstr) {
 };
 
 
+// TODO: This might need a better place.
+/**
+ * @return {number} The current base rate.
+ */
 sre.Engine.prototype.getRate = function() {
   var numeric = parseInt(this.rate, 10);
   return isNaN(numeric) ? 100 : numeric;
 };
+
+
+
+/**
+ * The base error class for signaling SRE errors.
+ * @param {string} msg The error message.
+ * @constructor
+ * @extends {Error}
+ */
+sre.Engine.Error = function(msg) {
+  sre.Engine.Error.base(this, 'constructor');
+  this.message = msg || '';
+  this.name = 'SRE Error';
+};
+goog.inherits(sre.Engine.Error, Error);
