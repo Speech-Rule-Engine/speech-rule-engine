@@ -127,7 +127,7 @@ sre.ClearspeakFrench.addComparator_ = function() {
  */
 sre.ClearspeakFrench.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
-  addCTXF('CTXFnodeCounterCS', sre.ClearspeakUtil.nodeCounter);
+  addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.MathspeakFrenchUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
@@ -1791,7 +1791,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'matrix', 'clearspeak.default',
       '[t] "la matrice de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"rangée-:");' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"rangée-:");' +
       ' [p] (pause:long)',
       'self::matrix');
   defineRule(
@@ -1799,7 +1799,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "la matrice de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); ' +
       ' [p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"rangée-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', 'count(children/*)<4',
       'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
@@ -1814,7 +1814,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "le déterminant de la matrice de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"rangée-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"', 'count(children/*)<4',
       'CQFcellsSimple');
@@ -1823,7 +1823,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "le déterminant de la matrice de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"rangée-:");' +
+      '(ctxtFunc:CTXFnodeCounter,context:"rangée-:");' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"');
   // Vector
@@ -1832,7 +1832,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "la matrice colonne de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"rangée-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
   defineSpecialisedRule(
@@ -1860,7 +1860,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "la matrice ligne de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"colonne-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
   defineSpecialisedRule(
@@ -1899,7 +1899,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       'self::line', 'contains(@grammar, "simpleDet")');
   defineRule(
       'matrix-row', 'clearspeak.default',
-      '[m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"colonne-,- ",' +
+      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"colonne-,- ",' +
       'sepFunc:CTXFpauseSeparator,separator:"medium"); [p] (pause:long)',
       'self::row');
   defineSpecialisedRule(
@@ -1927,7 +1927,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "le vecteur colonne de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*); ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"rangée-:",grammar:simpleDet); ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"rangée-:",grammar:simpleDet); ' +
       '[p] (pause:long)',
       'self::vector');
   defineSpecialisedRule(
@@ -1949,7 +1949,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
       '[t] "le vecteur ligne de dimension"; [t] count(children/*);  [t] "par";' +
       '[t] count(children/*[1]/children/*);' +
       ' [p] (pause:long); [m] children/*[1]/children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"colonne-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"colonne-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
   defineSpecialisedRule(
@@ -2040,7 +2040,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines', 'clearspeak.default',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Line-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Line-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2076,7 +2076,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'cases', 'clearspeak.default',
       '[p] (pause:short); ' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Cas-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Cas-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::cases');
 
@@ -2095,7 +2095,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-cases', 'clearspeak.MultiLineLabel_Case',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Cas-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Cas-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2115,7 +2115,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-equations', 'clearspeak.MultiLineLabel_Equation',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Équation-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Équation-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2135,7 +2135,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-steps', 'clearspeak.MultiLineLabel_Step',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:" Étape-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:" Étape-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2155,7 +2155,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-rows', 'clearspeak.MultiLineLabel_Row',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"rangée-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"rangée-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2175,7 +2175,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-steps', 'clearspeak.MultiLineLabel_Step',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:" Étape-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:" Étape-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2195,7 +2195,7 @@ sre.ClearspeakFrench.initClearspeakFrench_ = function() {
   defineRule(
       'lines-constraints', 'clearspeak.MultiLineLabel_Constraint',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Contrainte-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Contrainte-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(

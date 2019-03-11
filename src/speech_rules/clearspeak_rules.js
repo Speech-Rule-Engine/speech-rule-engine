@@ -125,7 +125,7 @@ sre.ClearspeakRules.addComparator_ = function() {
  */
 sre.ClearspeakRules.initCustomFunctions_ = function() {
   addCTXF('CTXFpauseSeparator', sre.StoreUtil.pauseSeparator);
-  addCTXF('CTXFnodeCounterCS', sre.ClearspeakUtil.nodeCounter);
+  addCTXF('CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter);
   addCTXF('CTXFcontentIterator', sre.MathmlStoreUtil.contentIterator);
   addCSF('CSFvulgarFraction', sre.MathspeakUtil.vulgarFraction);
   addCQF('CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction);
@@ -1754,7 +1754,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'matrix', 'clearspeak.default',
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Row-:");' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
       ' [p] (pause:long)',
       'self::matrix');
   defineRule(
@@ -1762,7 +1762,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "matrix";' +
       ' [p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Row-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', 'count(children/*)<4',
       'count(children/*[1]/children/*)<4', 'CQFcellsSimple');
@@ -1777,7 +1777,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "matrix"; ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Row-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"', 'count(children/*)<4',
       'CQFcellsSimple');
@@ -1786,7 +1786,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "matrix"; ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Row-:");' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
       ' [p] (pause:long)',
       'self::matrix', '@role="determinant"');
   // Vector
@@ -1795,7 +1795,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Row-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::vector');
   defineSpecialisedRule(
@@ -1823,7 +1823,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
       '[p] (pause:long); [m] children/*[1]/children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Column-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
   defineSpecialisedRule(
@@ -1862,7 +1862,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       'self::line', 'contains(@grammar, "simpleDet")');
   defineRule(
       'matrix-row', 'clearspeak.default',
-      '[m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Column-,- ",' +
+      '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"Column-,- ",' +
       'sepFunc:CTXFpauseSeparator,separator:"medium"); [p] (pause:long)',
       'self::row');
   defineSpecialisedRule(
@@ -1890,7 +1890,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "column vector"; ' +
       '[p] (pause:long); [m] children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Row-:",grammar:simpleDet); ' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet); ' +
       '[p] (pause:long)',
       'self::vector');
   defineSpecialisedRule(
@@ -1912,7 +1912,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
       '[t] "the"; [t] count(children/*);  [t] "by";' +
       '[t] count(children/*[1]/children/*); [t] "row vector";' +
       ' [p] (pause:long); [m] children/*[1]/children/* ' +
-      '(ctxtFunc:CTXFnodeCounterCS,context:"Column-:",grammar:simpleDet);' +
+      '(ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
       ' [p] (pause:long)',
       'self::matrix', '@role="rowvector"');
   defineSpecialisedRule(
@@ -2003,7 +2003,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines', 'clearspeak.default',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Line-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Line-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2039,7 +2039,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'cases', 'clearspeak.default',
       '[p] (pause:short); ' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Case-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::cases');
 
@@ -2058,7 +2058,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines-cases', 'clearspeak.MultiLineLabel_Case',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Case-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2078,7 +2078,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines-equations', 'clearspeak.MultiLineLabel_Equation',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Equation-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Equation-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2098,7 +2098,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines-steps', 'clearspeak.MultiLineLabel_Step',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Step-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Step-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2118,7 +2118,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines-rows', 'clearspeak.MultiLineLabel_Row',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Row-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2138,7 +2138,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines-steps', 'clearspeak.MultiLineLabel_Step',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Step-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Step-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(
@@ -2158,7 +2158,7 @@ sre.ClearspeakRules.initClearspeakRules_ = function() {
   defineRule(
       'lines-constraints', 'clearspeak.MultiLineLabel_Constraint',
       '[p] (pause:short);' +
-      ' [m] children/* (ctxtFunc:CTXFnodeCounterCS,context:"Constraint-:",' +
+      ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Constraint-:",' +
       'sepFunc:CTXFpauseSeparator,separator:"long");' +
       ' [p] (pause:long)', 'self::table');
   defineRuleAlias(

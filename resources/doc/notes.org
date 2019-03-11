@@ -149,8 +149,6 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
 
 *** In particular ordinalCounter + Prefix methods.
 
-*** nodeCounter in MS vs nodeCounterCS in CS.
-
 *** the tensor methods
 
 ** We need to generate unique names for the constraint functions. That means we can't share!
