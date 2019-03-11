@@ -20,8 +20,8 @@
 goog.provide('sre.AbstractExamples');
 
 goog.require('sre.AbstractTest');
+goog.require('sre.Engine');
 goog.require('sre.ExamplesOutput');
-goog.require('sre.System');
 
 
 
@@ -145,7 +145,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
   this.examples_ = [];
   this.active_ = false;
   if (this.fileError_) {
-    throw new sre.System.Error(this.fileError_);
+    throw new sre.Engine.Error(this.fileError_);
   }
 };
 
