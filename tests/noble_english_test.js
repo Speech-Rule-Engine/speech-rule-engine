@@ -46,11 +46,6 @@ sre.NobleEnglishTest = function() {
    */
   this.semantics = true;
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules'];
-
   this.setActive('NobleSamplesEnglish');
 };
 goog.inherits(sre.NobleEnglishTest, sre.AbstractRuleTest);

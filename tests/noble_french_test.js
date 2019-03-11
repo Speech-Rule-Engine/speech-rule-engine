@@ -51,13 +51,7 @@ sre.NobleFrenchTest = function() {
    */
   this.locale = 'fr';
 
-  /**
-   * @override
-   */
-  this.rules = ['MathspeakRules', 'MathspeakFrench'];
-
   this.setActive('NobleSamplesFrench');
-
 };
 goog.inherits(sre.NobleFrenchTest, sre.AbstractRuleTest);
 
