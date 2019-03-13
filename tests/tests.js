@@ -42,7 +42,7 @@ goog.require('sre.MmlcloudSpanishTest');
 goog.require('sre.NobleEnglishTest');
 goog.require('sre.NobleFrenchTest');
 goog.require('sre.NobleSpanishTest');
-goog.require('sre.PrefixRuleTest');
+goog.require('sre.PrefixEnglishTest');
 goog.require('sre.PrefixSpanishTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticApiTest');
@@ -107,7 +107,7 @@ sre.Tests.testList = [
   sre.NobleEnglishTest,
   sre.NobleFrenchTest,
   sre.NobleSpanishTest,
-  sre.PrefixRuleTest,
+  sre.PrefixEnglishTest,
   sre.PrefixSpanishTest,
   sre.RebuildStreeTest,
   sre.SemanticApiTest,

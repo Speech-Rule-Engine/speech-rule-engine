@@ -19,7 +19,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.PrefixRuleTest');
+goog.provide('sre.PrefixEnglishTest');
 
 goog.require('sre.AbstractTest');
 goog.require('sre.AuralRendering');
@@ -31,8 +31,8 @@ goog.require('sre.DynamicCstr');
  * @constructor
  * @extends {sre.AbstractTest}
  */
-sre.PrefixRuleTest = function() {
-  sre.PrefixRuleTest.base(this, 'constructor');
+sre.PrefixEnglishTest = function() {
+  sre.PrefixEnglishTest.base(this, 'constructor');
 
   /**
    * @override
@@ -40,7 +40,7 @@ sre.PrefixRuleTest = function() {
   this.information = 'Prefix rule tests.';
 
 };
-goog.inherits(sre.PrefixRuleTest, sre.AbstractTest);
+goog.inherits(sre.PrefixEnglishTest, sre.AbstractTest);
 
 
 /**
@@ -49,7 +49,7 @@ goog.inherits(sre.PrefixRuleTest, sre.AbstractTest);
  * @param {number} id The id of the node to be considered.
  * @param {string} result The expected result.
  */
-sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
+sre.PrefixEnglishTest.prototype.executeTest = function(expr, id, result) {
   var xml = sre.DomUtil.parseInput('<stree>' + expr + '</stree>',
                                    sre.EnrichMathml.Error);
   var node = sre.XpathUtil.evalXPath('.//*[@id="' + id + '"]', xml)[0];
@@ -74,7 +74,7 @@ sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
 /**
  * Testing sub/superscripts.
  */
-sre.PrefixRuleTest.prototype.testSubSuper = function() {
+sre.PrefixEnglishTest.prototype.testSubSuper = function() {
   var subscript = '<subscript id="2"><children>' +
       '<identifier id="1">a</identifier>' +
       '<identifier id="0">b</identifier>' +
@@ -95,7 +95,7 @@ sre.PrefixRuleTest.prototype.testSubSuper = function() {
 /**
  * Testing over/underscripts.
  */
-sre.PrefixRuleTest.prototype.testOverUnder = function() {
+sre.PrefixEnglishTest.prototype.testOverUnder = function() {
   var overscore = '<overscore id="2"><children>' +
       '<identifier id="1">a</identifier>' +
       '<identifier id="0">b</identifier>' +
@@ -116,7 +116,7 @@ sre.PrefixRuleTest.prototype.testOverUnder = function() {
 /**
  * Testing fractions.
  */
-sre.PrefixRuleTest.prototype.testFractions = function() {
+sre.PrefixEnglishTest.prototype.testFractions = function() {
   var fraction = '<fraction id="2"><children>' +
       '<identifier id="1">a</identifier>' +
       '<identifier id="0">b</identifier>' +
@@ -130,7 +130,7 @@ sre.PrefixRuleTest.prototype.testFractions = function() {
 /**
  * Testing roots.
  */
-sre.PrefixRuleTest.prototype.testRoots = function() {
+sre.PrefixEnglishTest.prototype.testRoots = function() {
   var sqrt = '<sqrt id="1"><children>' +
       '<identifier id="0">a</identifier>' +
       '</children></sqrt>';
@@ -149,7 +149,7 @@ sre.PrefixRuleTest.prototype.testRoots = function() {
 /**
  * Testing simple tensors.
  */
-sre.PrefixRuleTest.prototype.testSimpleTensors = function() {
+sre.PrefixEnglishTest.prototype.testSimpleTensors = function() {
   var tensor = '<tensor role="latinletter" id="5">' +
       '<children>' +
       '<identifier id="0">A</identifier>' +
@@ -170,7 +170,7 @@ sre.PrefixRuleTest.prototype.testSimpleTensors = function() {
 /**
  * Testing complex tensors.
  */
-sre.PrefixRuleTest.prototype.testComplexTensors = function() {
+sre.PrefixEnglishTest.prototype.testComplexTensors = function() {
   var tensor = '<tensor role="latinletter" id="17">' +
       '<children>' +
       '<identifier role="latinletter" font="italic" id="0">A</identifier>' +
@@ -228,7 +228,7 @@ sre.PrefixRuleTest.prototype.testComplexTensors = function() {
 /**
  * Testing binomial coefficients.
  */
-sre.PrefixRuleTest.prototype.testBinomials = function() {
+sre.PrefixEnglishTest.prototype.testBinomials = function() {
   var binomial = '<vector role="binomial" id="6">' +
       '<content>' +
       '<fence role="open" id="7">(</fence>' +
@@ -258,7 +258,7 @@ sre.PrefixRuleTest.prototype.testBinomials = function() {
 /**
  * Testing vectors.
  */
-sre.PrefixRuleTest.prototype.testVectors = function() {
+sre.PrefixEnglishTest.prototype.testVectors = function() {
   var vector = '<vector role="unknown" id="10">' +
       '<content>' +
       '<fence role="open" id="0">[</fence>' +
@@ -294,7 +294,7 @@ sre.PrefixRuleTest.prototype.testVectors = function() {
 /**
  * Testing matrices.
  */
-sre.PrefixRuleTest.prototype.testMatrices = function() {
+sre.PrefixEnglishTest.prototype.testMatrices = function() {
   var matrix = '<matrix role="squarematrix" id="13">' +
       '<content>' +
       '<fence role="open" id="2">[</fence>' +
