@@ -72,7 +72,10 @@ sre.PrefixFrench.addCustomString_ = goog.bind(
  */
 sre.PrefixFrench.ordinalPosition = function(node) {
   var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.MathspeakUtil.simpleOrdinal(children.indexOf(node) + 1).toString();
+  var gender = /** @type{string} */(
+      sre.Grammar.getInstance().getParameter('gender'));
+  return sre.MathspeakFrenchUtil.simpleOrdinal(
+      children.indexOf(node) + 1, gender).toString();
 };
 
 
@@ -161,7 +164,8 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
       '@role="leftsub"');
   defineRule(
       'leftsub', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice inférieur gauche"; [p] (pause:200)',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice inférieur gauche"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsub"');
   defineRule(
@@ -171,7 +175,8 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
       '@role="leftsuper"');
   defineRule(
       'leftsuper', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice supérieur gauche"; [p] (pause:200)',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice supérieur gauche"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsuper"');
   defineRule(
@@ -181,7 +186,8 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
       '@role="rightsub"');
   defineRule(
       'rightsub', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice inférieur droite"; [p] (pause:200)',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice inférieur droite"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsub"');
   defineRule(
@@ -191,7 +197,8 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
       '@role="rightsuper"');
   defineRule(
       'rightsuper', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "indice supérieur droite"; [p] (pause:200)',
+      '[t] CSFordinalPosition (grammar:gender="male");' +
+      ' [t] "indice supérieur droite"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
   defineRule(
@@ -208,7 +215,8 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
   // Positions in tables
   defineRule(
       'row', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "rangée"; [p] (pause:200)',
+      '[t] CSFordinalPosition (grammar:gender="female");' +
+      ' [t] "rangée"; [p] (pause:200)',
       'self::row'
   );
   defineRuleAlias(
@@ -216,12 +224,14 @@ sre.PrefixFrench.initPrefixFrench_ = function() {
   );
   defineRule(
       'cell', 'prefix.default',
-      '[n] ../..; [t] CSFordinalPosition; [t] "colonne"; [p] (pause:200)',
+      '[n] ../..; [t] CSFordinalPosition (grammar:gender="female"); ' +
+      '[t] "colonne"; [p] (pause:200)',
       'self::cell', 'contains(@grammar,"depth")'
   );
   defineRule(
       'cell', 'prefix.default',
-      '[t] CSFordinalPosition; [t] "colonne"; [p] (pause:200)',
+      '[t] CSFordinalPosition (grammar:gender="female"); ' +
+      '[t] "colonne"; [p] (pause:200)',
       'self::cell'
   );
 };

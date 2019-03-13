@@ -199,10 +199,13 @@ sre.MathspeakFrenchUtil.wordOrdinal = function(number) {
 /**
  * Creates a simple ordinal string from a number.
  * @param {number} number The number to be converted.
+ * @param {string=} opt_gender The gender of the ordinal.
  * @return {string} The ordinal string.
  */
-sre.MathspeakFrenchUtil.simpleOrdinal = function(number) {
-  return number === 1 ? number.toString() + 're' : number.toString() + 'e';
+sre.MathspeakFrenchUtil.simpleOrdinal = function(number, opt_gender) {
+  return number === 1 ?
+    number.toString() + (opt_gender === 'male' ? 'er' : 're') :
+  number.toString() + 'e';
 };
 
 
