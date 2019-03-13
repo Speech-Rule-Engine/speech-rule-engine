@@ -43,6 +43,7 @@ goog.require('sre.NobleEnglishTest');
 goog.require('sre.NobleFrenchTest');
 goog.require('sre.NobleSpanishTest');
 goog.require('sre.PrefixRuleTest');
+goog.require('sre.PrefixSpanishTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
@@ -107,6 +108,7 @@ sre.Tests.testList = [
   sre.NobleFrenchTest,
   sre.NobleSpanishTest,
   sre.PrefixRuleTest,
+  sre.PrefixSpanishTest,
   sre.RebuildStreeTest,
   sre.SemanticApiTest,
   sre.SemanticRuleTest,

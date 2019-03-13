@@ -170,7 +170,6 @@ test_compile: $(TEST_TARGET)
 
 $(TEST_TARGET): $(TEST_SRC) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
-	@echo $^
 	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
 
 test_script: $(TEST)
