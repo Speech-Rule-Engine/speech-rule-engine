@@ -119,8 +119,8 @@ sre.Tests.testList = [
   sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
-// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
-// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakFrenchTest.testList),
+sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakFrenchTest.testList),
 // sre.Tests.testList = sre.ClearspeakTest.testList;
 
 
