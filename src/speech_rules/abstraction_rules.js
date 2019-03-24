@@ -581,7 +581,8 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineRule(
       'abstr-relation', 'mathspeak.default',
       '[t] @role (grammar:localRole);',
-      'self::relseq', '@alternative', 'count(./children/*)=2'
+      'self::relseq', '@alternative', 'count(./children/*)=2',
+      'self::*'
   );
   defineSpecialisedRule(
       'abstr-relation', 'mathspeak.default', 'mathspeak.brief'
