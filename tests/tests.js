@@ -42,7 +42,9 @@ goog.require('sre.MmlcloudSpanishTest');
 goog.require('sre.NobleEnglishTest');
 goog.require('sre.NobleFrenchTest');
 goog.require('sre.NobleSpanishTest');
-goog.require('sre.PrefixRuleTest');
+goog.require('sre.PrefixEnglishTest');
+goog.require('sre.PrefixFrenchTest');
+goog.require('sre.PrefixSpanishTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
@@ -106,7 +108,9 @@ sre.Tests.testList = [
   sre.NobleEnglishTest,
   sre.NobleFrenchTest,
   sre.NobleSpanishTest,
-  sre.PrefixRuleTest,
+  sre.PrefixEnglishTest,
+  sre.PrefixFrenchTest,
+  sre.PrefixSpanishTest,
   sre.RebuildStreeTest,
   sre.SemanticApiTest,
   sre.SemanticRuleTest,
@@ -115,8 +119,8 @@ sre.Tests.testList = [
   sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
-sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakFrenchTest.testList),
+// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakTest.testList),
+// sre.Tests.testList = sre.Tests.testList.concat(sre.ClearspeakFrenchTest.testList),
 // sre.Tests.testList = sre.ClearspeakTest.testList;
 
 
