@@ -80,7 +80,6 @@ sre.WalkerTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
       {semantics: false, domain: 'default', style: 'short',
         speech: sre.Engine.Speech.NONE});
-  // TODO: Reset the rule sets.
 };
 
 
