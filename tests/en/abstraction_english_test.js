@@ -56,8 +56,8 @@ goog.inherits(sre.AbstractionEnglishTest, sre.AbstractRuleTest);
 /**
  * @override
  */
-sre.AbstractionEnglishTest.prototype.executeRuleTest = function(mml, expected,
-                                                                opt_style) {
+sre.AbstractionEnglishTest.prototype.executeRuleTest = function(
+    mml, expected, opt_style, opt_steps) {
   var style = opt_style || this.style;
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: style,
@@ -65,6 +65,11 @@ sre.AbstractionEnglishTest.prototype.executeRuleTest = function(mml, expected,
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
       mml + '</math>';
   sre.ProcessorFactory.process('walker', mathMl);
+  if (opt_steps) {
+    opt_steps.forEach(function(step) {
+      sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
+    });
+  }
   var actual = sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
   this.compareResult(mathMl, actual, expected, style);
 };
@@ -123,10 +128,12 @@ sre.AbstractionEnglishTest.prototype.testAbstrCases = function() {
  * Testing Abstraction Rule for abstr-cell.
  */
 sre.AbstractionEnglishTest.prototype.testAbstrCell = function() {
-  var mml = '';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  var mml = '<mtable><mtr><mtd><mi>a</mi></mtd>' +
+      '<mtd><mi>b</mi></mtd></mtr></mtable>';
+  var move = ['DOWN', 'DOWN'];
+  this.executeRuleTest(mml, '1st Column in table', 'default', move);
+  this.executeRuleTest(mml, '1st Column in table', 'brief', move);
+  this.executeRuleTest(mml, '1st Column in table', 'sbrief', move);
 };
 
 
@@ -233,10 +240,11 @@ sre.AbstractionEnglishTest.prototype.testAbstrLim = function() {
  * Testing Abstraction Rule for abstr-line.
  */
 sre.AbstractionEnglishTest.prototype.testAbstrLine = function() {
-  var mml = '';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  var mml = '<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>';
+  var move = ['DOWN'];
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'default', move);
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'brief', move);
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'sbrief', move);
 };
 
 
@@ -360,10 +368,12 @@ sre.AbstractionEnglishTest.prototype.testAbstrRootNested = function() {
  * Testing Abstraction Rule for abstr-row.
  */
 sre.AbstractionEnglishTest.prototype.testAbstrRow = function() {
-  var mml = '';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  var mml = '<mtable><mtr><mtd><mi>a</mi></mtd>' +
+      '<mtd><mi>b</mi></mtd></mtr></mtable>';
+  var move = ['DOWN'];
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'default', move);
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'brief', move);
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'sbrief', move);
 };
 
 
@@ -487,10 +497,12 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarAddition = function() {
  * Testing Abstraction Rule for abstr-var-cases.
  */
 sre.AbstractionEnglishTest.prototype.testAbstrVarCases = function() {
-  var mml = '';
-  this.executeRuleTest(mml, '', 'default');
-  this.executeRuleTest(mml, '', 'brief');
-  this.executeRuleTest(mml, '', 'sbrief');
+  var mml = '<mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd>' +
+      '<mo>&#x2026;</mo></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>';
+  this.executeRuleTest(
+      mml, 'case statement with variable number of cases', 'default');
+  this.executeRuleTest(mml, 'case statement', 'brief');
+  this.executeRuleTest(mml, 'case statement', 'sbrief');
 };
 
 
@@ -527,7 +539,8 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarMatrix = function() {
  */
 sre.AbstractionEnglishTest.prototype.testAbstrVarMultiplication = function() {
   var mml = '<mi>a</mi><mo>*</mo><mo>&#x2026;</mo><mo>*</mo><mi>b</mi>';
-  this.executeRuleTest(mml, 'product with variable number of factors', 'default');
+  this.executeRuleTest(
+      mml, 'product with variable number of factors', 'default');
   this.executeRuleTest(mml, 'product', 'brief');
   this.executeRuleTest(mml, 'product', 'sbrief');
 };
@@ -538,7 +551,8 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarMultiplication = function() {
  */
 sre.AbstractionEnglishTest.prototype.testAbstrVarMultirel = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>';
-  this.executeRuleTest(mml, 'relation sequence with variable number of elements', 'default');
+  this.executeRuleTest(
+      mml, 'relation sequence with variable number of elements', 'default');
   this.executeRuleTest(mml, 'relation sequence', 'brief');
   this.executeRuleTest(mml, 'relation sequence', 'sbrief');
 };
@@ -549,7 +563,8 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarMultirel = function() {
  */
 sre.AbstractionEnglishTest.prototype.testAbstrVarPunctuated = function() {
   var mml = '<mi>a</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi>';
-  this.executeRuleTest(mml, 'comma separated list of variable length', 'default');
+  this.executeRuleTest(
+      mml, 'comma separated list of variable length', 'default');
   this.executeRuleTest(mml, 'comma separated list', 'brief');
   this.executeRuleTest(mml, 'comma separated list', 'sbrief');
 };
@@ -560,7 +575,8 @@ sre.AbstractionEnglishTest.prototype.testAbstrVarPunctuated = function() {
  */
 sre.AbstractionEnglishTest.prototype.testAbstrVarRelation = function() {
   var mml = '<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>';
-  this.executeRuleTest(mml, 'equality sequence with variable number of elements', 'default');
+  this.executeRuleTest(
+      mml, 'equality sequence with variable number of elements', 'default');
   this.executeRuleTest(mml, 'equality sequence', 'brief');
   this.executeRuleTest(mml, 'equality sequence', 'sbrief');
 };
