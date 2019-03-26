@@ -183,7 +183,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-lim', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   // TODO: Missing simple function
-
+  // TODO: Application
 
   // Fraction
   defineRule(
@@ -249,8 +249,13 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   defineRule(
       'abstr-root', 'mathspeak.default',
       '[t] "root of index"; [n] children/*[1]; [t] "endindex"',
-      'self::root', '@alternative',
+      'self::root', '@alternative', 'not(@alternative="summary")',
       'following-sibling::* or ancestor::*/following-sibling::*'
+  );
+  defineRule(
+      'abstr-root', 'mathspeak.default',
+      '[t] "root of index"; [n] children/*[1]',
+      'self::root', '@alternative'
   );
   defineRule(
       'abstr-root', 'mathspeak.brief',
@@ -592,18 +597,19 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
 
   defineRule(
-      'abstr-relation', 'mathspeak.default',
+      'abstr-relation-seq', 'mathspeak.default',
       '[t] @role (grammar:localRole); [t] "sequence";' +
       ' [t] "with"; [t] count(./children/*); [t] "elements"',
-      'self::relseq', '@alternative', 'count(./children/*)>2'
+      'self::relseq', '@alternative', 'count(./children/*)>2',
+      'self::*'
   );
   defineRule(
-      'abstr-relation', 'mathspeak.brief',
+      'abstr-relation-seq', 'mathspeak.brief',
       '[t] @role (grammar:localRole); [t] "sequence"',
       'self::relseq', '@alternative', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
+      'abstr-relation-seq', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRule(
       'abstr-var-relation', 'mathspeak.default',

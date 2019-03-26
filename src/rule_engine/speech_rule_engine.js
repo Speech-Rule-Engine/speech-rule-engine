@@ -260,7 +260,8 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
-        return [rule.name, rule.dynamicCstr.toString(), node.toString()];},
+        return ['Apply Rule:',
+                rule.name, rule.dynamicCstr.toString(), node.toString()];},
       this));
   var context = rule.context || this.activeStore_.context;
   var components = rule.action.components;
