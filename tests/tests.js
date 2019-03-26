@@ -19,6 +19,7 @@
 
 goog.provide('sre.Tests');
 
+goog.require('sre.AbstractionEnglishTest');
 goog.require('sre.ApiTest');
 goog.require('sre.ClearspeakAnnotationTest');
 goog.require('sre.ClearspeakFrenchTest');
@@ -88,6 +89,7 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [
   sre.ApiTest,
+  sre.AbstractionEnglishTest,
   sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.DomTest,

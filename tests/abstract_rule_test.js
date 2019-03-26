@@ -97,9 +97,23 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
       {semantics: this.semantics, domain: this.domain, style: style,
         rules: this.rules, locale: this.locale});
   var result = sre.System.getInstance().toSpeech(mathMl);
-  this.appendExample_(mathMl, this.actual ? result : answer, style);
+  this.compareResult(mathMl, result, answer, style);
+};
+
+
+/**
+ * Performs the actual assertion test. Appends the example to the output.
+ * @param {string} mml A MathML expression.
+ * @param {string} actual The actual test result.
+ * @param {string} expected The expected test result.
+ * @param {string=} opt_style Style used for translation.
+ */
+sre.AbstractRuleTest.prototype.compareResult = function(
+  mml, actual, expected, opt_style) {
+  this.appendExample_(mml, this.actual ? actual : expected,
+                      opt_style || this.style);
   if (!this.actual) {
-    this.assert.equal(result, answer);
+    this.assert.equal(actual, expected);
   }
 };
 

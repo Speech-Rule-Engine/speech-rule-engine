@@ -69,7 +69,6 @@ goog.inherits(sre.WalkerTest, sre.AbstractTest);
 sre.WalkerTest.prototype.setUpTest = function() {
   this.system.setupEngine(
       {semantics: true, locale: 'en', domain: 'mathspeak', style: 'default',
-        rules: ['AbstractionRules', 'MathspeakRules'],
         speech: sre.Engine.Speech.NONE});
 };
 
@@ -81,7 +80,6 @@ sre.WalkerTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
       {semantics: false, domain: 'default', style: 'short',
         speech: sre.Engine.Speech.NONE});
-  // TODO: Reset the rule sets.
 };
 
 

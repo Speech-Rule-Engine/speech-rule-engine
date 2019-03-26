@@ -181,3 +181,25 @@ https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation
      Context functions need to be looked up in the rule context.
 
 *** Ultimately we only need combined tries, not stores as custom functions will not be added.
+
+* TODO Multimodalities: 
+
+** Make modalities a node above the locales inthe trie.
+
+*** Default is regular speech.
+
+*** Other modalities are, e.g., Braille, Abstraction, Prefixes
+
+** We can then run prefixes or abstractions by simply setting up the engine. 
+
+*** Eg. for prefixes: 
+    set modality to prefix and run engine in strict mode to not get full speech
+    for prefixes, if there aren't any.
+
+*** Eg. for abstractions: 
+    set modality to abstraction (summary?) and run engine in normal mode. This
+    will default to full speech for an expression, if no summary is available.
+
+** Ulitmately we could make collapsed and summary modalities and do away with the @alternative role.
+
+** Currently we test abstraction rules with mathspeak, all three styles, just in case.
