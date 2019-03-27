@@ -526,8 +526,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   }
   //TODO: This needs to be refactored as a message signal for the speech rule
   //      engine to update itself.
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.modality, engine.domain, engine.style);
+  engine.setDynamicCstr();
   var result = callback();
   for (key in save) {
     engine[key] = save[key];
@@ -535,8 +534,7 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   if (store) {
     this.activeStore_ = store;
   }
-  engine.dynamicCstr = sre.DynamicCstr.create(
-      engine.locale, engine.modality, engine.domain, engine.style);
+  engine.setDynamicCstr();
   return result;
 };
 
