@@ -82,7 +82,7 @@ sre.System.prototype.setupEngine = function(feature) {
   };
   var binaryFeatures = ['strict', 'cache', 'semantics', 'structure', 'pprint'];
   var stringFeatures = ['markup', 'style', 'domain', 'speech', 'walker',
-                        'locale', 'rate'];
+                        'locale', 'modality', 'rate'];
   setMulti('mode');
   sre.System.prototype.configBlocks_(feature);
   binaryFeatures.forEach(setIf);
