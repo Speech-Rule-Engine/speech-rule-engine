@@ -99,14 +99,14 @@ sre.System.prototype.setupEngine = function(feature) {
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.dynamicCstr = engine.parser.parse(
       engine.locale + '.' + engine.domain + '.' + engine.style);
+  var fallback = sre.DynamicProperties.create(
+    [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+    [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
+    ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]);
+  engine.dynamicCstr.updateProperties(fallback.getProperties());
   var comparator = engine.comparators[engine.domain];
   engine.comparator = comparator ? comparator() :
-      new sre.DynamicCstr.DefaultComparator(
-      engine.dynamicCstr,
-      sre.DynamicProperties.create(
-      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
-      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
-      ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
+      new sre.DynamicCstr.DefaultComparator(engine.dynamicCstr);
   sre.L10n.setLocale();
 };
 

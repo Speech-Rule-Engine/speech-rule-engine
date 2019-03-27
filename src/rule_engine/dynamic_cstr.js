@@ -104,7 +104,7 @@ sre.DynamicProperties.prototype.updateProperties = function(props) {
 sre.DynamicProperties.prototype.allProperties = function() {
   var propLists = [];
   this.order_.forEach(goog.bind(function(key) {
-    propLists.push(this.getProperty(key));
+    propLists.push(this.getProperty(key).slice());
   }, this));
   return propLists;
 };
@@ -180,6 +180,21 @@ sre.DynamicCstr.prototype.getValues = function() {
     cstrStrings.push(this.getValue(key));
   }, this));
   return cstrStrings;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.prototype.allProperties = function() {
+  var propLists = sre.DynamicCstr.base(this, 'allProperties');
+  for (var i = 0, props, key; props = propLists[i], key = this.order_[i]; i++) {
+    var value = this.getValue(key);
+    if (props.indexOf(value) === -1) {
+      props.unshift(value);
+    }
+  }
+  return propLists;
 };
 
 

@@ -1,0 +1,62 @@
+* Dynamic Constraints:
+
+** Components:
+
+Basic stuff:
+*** 5 axes: for order and constraint values.
+*** comparator: does matching and comparison
+*** parser: Parses things like mathspeak.default to values, with respect to the given order.
+
+** DynamicProperties:
+
+*** Order: list of axes in the properties
+
+*** properties: mapping from axes to lists of constraint values
+
+** DynamicCstr:
+
+Type of dynamic properties which also has a single mapping for the actual constraint.
+
+*** Components: Maps axes to unique constraint values
+
+Equality of the constraint is tested on the components.
+
+** Comparator: 
+
+*** Implements match (true/false) and compare (1/0/-1)
+    Match is used to get a set of matching constraints. Compare is used to order
+    the matching constraints wrt to the reference constraint, i.e., the closest
+    first.
+
+*** Works wrt to a reference constraint and  a reference property
+    The former is used for comparison, the latter is a relaxed version of the former 
+    and is used for matching.
+
+*** Implementations: 
+
+**** DefaultComparator:
+
+***** Has a reference constraint (and its order) and fallback properties. 
+      The latter is either the properties from the reference constraint or a
+      separate set of properties.
+
+***** Matching:
+      A constraint matches, if it
+      (1) has the same number of axes
+      (2.1) each axis value is either equal to the reference constraint value
+      (2.2) or is contained in the fallback values.
+
+***** Compare: 
+      Two constraints c1, c2 are compared wrt. to the reference constraint r
+      c1 < c2 if c1 == r and c2 != r
+      c1 > c2 if c1 != r and c2 == r
+      c1 == c2 if c1 == r and c2 == r (move to next value)
+      if c1 != r and c2 != r then we compare wrt to fallback properties:
+      c1 < c2 if c1 is before c2,
+      c1 > c2 if c1 is after c2,
+      otherwise c1 == c2 and continue comparing until end of constraint.
+      
+
+**** ClearspeakPreferences
+     Implements a constraint type, parser, and comparator to take properties
+     into account.
