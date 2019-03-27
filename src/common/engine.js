@@ -92,6 +92,12 @@ sre.Engine = function() {
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
   /**
+   * Current modality.
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+
+  /**
    * Current walker mode.
    * @type {string}
    */

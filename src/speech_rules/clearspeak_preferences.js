@@ -111,6 +111,7 @@ sre.ClearspeakPreferences.comparator = function() {
       sre.Engine.getInstance().dynamicCstr,
       sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],
       ['mathspeak', 'default'],
       ['short', 'default']));
 };
@@ -189,8 +190,8 @@ sre.ClearspeakPreferences.Comparator.prototype.compare = function(
 sre.ClearspeakPreferences.Parser = function() {
   sre.ClearspeakPreferences.Parser.base(
       this, 'constructor',
-      [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.DOMAIN,
-       sre.DynamicCstr.Axis.STYLE]);
+      [sre.DynamicCstr.Axis.LOCALE, sre.DynamicCstr.Axis.MODALITY,
+       sre.DynamicCstr.Axis.DOMAIN, sre.DynamicCstr.Axis.STYLE]);
 };
 goog.inherits(sre.ClearspeakPreferences.Parser, sre.DynamicCstr.Parser);
 
@@ -204,8 +205,10 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var locale = initial.getValue(sre.DynamicCstr.Axis.LOCALE);
   if (style === sre.DynamicCstr.DEFAULT_VALUE) {
     return new sre.ClearspeakPreferences(
-        {'locale': locale, 'domain': 'clearspeak',
-          'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
+        {'locale': locale,
+         'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+         'domain': 'clearspeak',
+         'style': sre.DynamicCstr.DEFAULT_VALUE}, {});
   }
   var pairs = style.split(':');
   var preferences = {};
@@ -224,8 +227,10 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
     }
   }
   return new sre.ClearspeakPreferences(
-      {'locale': locale, 'domain': 'clearspeak',
-        'style': this.combine_(preferences)}, preferences);
+    {'locale': locale,
+     'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+     'domain': 'clearspeak',
+     'style': this.combine_(preferences)}, preferences);
 };
 
 

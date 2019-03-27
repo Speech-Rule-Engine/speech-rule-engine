@@ -302,10 +302,10 @@ sre.DynamicCstr.Order;
  */
 sre.DynamicCstr.DEFAULT_ORDER = [
   sre.DynamicCstr.Axis.LOCALE,
+  sre.DynamicCstr.Axis.MODALITY,
   sre.DynamicCstr.Axis.DOMAIN,
   sre.DynamicCstr.Axis.STYLE,
-  sre.DynamicCstr.Axis.TOPIC,
-  sre.DynamicCstr.Axis.MODALITY
+  sre.DynamicCstr.Axis.TOPIC
 ];
 
 
@@ -327,7 +327,7 @@ sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE] =
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.TOPIC] =
     sre.DynamicCstr.DEFAULT_VALUE;
 sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] =
-    sre.DynamicCstr.DEFAULT_VALUE;
+    'speech';// sre.DynamicCstr.DEFAULT_VALUE;
 
 
 
@@ -358,6 +358,8 @@ sre.DynamicCstr.Parser.prototype.parse = function(str) {
   var order = str.split('.');
   var cstr = {};
   if (order.length > this.order_.length) {
+    console.log(order);
+    console.log(this.order_);
     throw new Error('Invalid dynamic constraint: ' + cstr);
   }
   for (var i = 0, key; key = this.order_[i], order.length; i++) {

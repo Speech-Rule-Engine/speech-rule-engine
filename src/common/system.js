@@ -98,13 +98,14 @@ sre.System.prototype.setupEngine = function(feature) {
       sre.SpeechRuleStores.availableSets();
   sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.dynamicCstr = engine.parser.parse(
-      engine.locale + '.' + engine.domain + '.' + engine.style);
+      engine.locale + '.' + engine.modality + '.' + engine.domain + '.' + engine.style);
   var comparator = engine.comparators[engine.domain];
   engine.comparator = comparator ? comparator() :
       new sre.DynamicCstr.DefaultComparator(
       engine.dynamicCstr,
       sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
+      [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]],
       ['short', sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]]));
   sre.L10n.setLocale();
@@ -152,6 +153,7 @@ sre.System.setAsync = function() {
 sre.System.prototype.engineSetup = function() {
   var engineFeatures = ['mode',
                         'locale',
+                        'modality',
                         'domain',
                         'style',
                         'walker',
