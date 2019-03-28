@@ -89,14 +89,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-identifier', 'default.default',
       '[t] "identifier"',
       'self::identifier'
-
-  );
-  defineRule(
-      'abstr-identifier', 'mathspeak.brief',
-      '[t] "identifier"',
-      'self::identifier');
-  defineSpecialisedRule(
-      'abstr-identifier', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   // Numbers
@@ -110,14 +102,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] "number"',
       'self::number'
   );
-  defineRule(
-      'abstr-number', 'mathspeak.brief',
-      '[t] "number"',
-      'self::number'
-  );
-  defineSpecialisedRule(
-      'abstr-number', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
 
   defineRule(  // collapsed??
       'abstr-mixed-number', 'default.default',
@@ -125,12 +109,9 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'self::number',  '@role="mixed"'
   );
   defineRule(
-      'abstr-mixed-number', 'mathspeak.brief',
+      'abstr-mixed-number', 'default.default',
       '[t] "mixed number"',
       'self::number',  '@role="mixed"'
-  );
-  defineSpecialisedRule(
-      'abstr-mixed-number', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   // Text
@@ -213,24 +194,13 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] "square root"',
       'self::sqrt'
   );
-  defineSpecialisedRule(
-      'abstr-sqrt', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-sqrt', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
+
   defineRule(
       'abstr-sqrt-nested', 'default.default',
       '[t] "nested square root"',
       'self::sqrt',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
-  );
-  defineSpecialisedRule(
-      'abstr-sqrt-nested', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-sqrt-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
   // Content following the root expression.
@@ -286,13 +256,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-superscript', 'default.default',
       '[t] "power"',
       'self::superscript');
-  defineSpecialisedRule(
-      'abstr-superscript', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-superscript', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
-
 
   // Subscript
   defineRule(
@@ -300,13 +263,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] "subscript"',
       'self::subscript'
   );
-  defineSpecialisedRule(
-      'abstr-subscript', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-subscript', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
-
 
   // Subsuperscript
   defineRule(
@@ -314,13 +270,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] "power with subscript"',
       'self::superscript',
       'name(children/*[1])="subscript"');
-  defineSpecialisedRule(
-      'abstr-subsup', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-subsup', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
-
 
   // Infixop
   defineRule(
@@ -420,6 +369,7 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] "binomial"',
       'self::vector',  '@role="binomial"'
   );
+  // These two are needed to avoid the vector rule firing.
   defineSpecialisedRule(
       'abstr-binomial', 'default.default', 'mathspeak.brief');
   defineSpecialisedRule(
@@ -572,12 +522,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
     'self::relseq', //
     'count(./children/*)=2'
   );
-  defineSpecialisedRule(
-      'abstr-relation', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
 
   defineRule(
       'abstr-relation-seq', 'default.default',
@@ -605,13 +549,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'abstr-relation', 'default.default',
       'self::multirel',
       '@role!="unknown"', 'count(./children/*)>2'
-  );
-  defineUniqueRuleAlias(
-      'abstr-relation', 'mathspeak.brief', 'self::multirel',
-      '@role!="unknown"', 'count(./children/*)>2'
-  );
-  defineSpecialisedRule(
-      'abstr-relation', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRuleAlias(
       'abstr-var-relation',
@@ -647,12 +584,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] count(children/*[1]/children/*); [t] "columns"',
       'self::table'
   );
-  defineSpecialisedRule(
-      'abstr-table', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-table', 'mathspeak.brief', 'mathspeak.sbrief'
-  );
   defineRule(
       'abstr-line', 'default.default',
       '[t] "in"; [t] @role (grammar:localRole);',
@@ -664,12 +595,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       '[t] count(preceding-sibling::..); [t] "with";' +
       '[t] count(children/*); [t] "columns"',
       'self::row'
-  );
-  defineSpecialisedRule(
-      'abstr-row', 'default.default', 'mathspeak.brief'
-  );
-  defineSpecialisedRule(
-      'abstr-row', 'default.default', 'mathspeak.sbrief'
   );
   defineRule(
       'abstr-cell', 'default.default',

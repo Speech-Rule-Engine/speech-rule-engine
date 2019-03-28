@@ -268,7 +268,7 @@ sre.AbstractionEnglishTest.prototype.testAbstrMatrix = function() {
  */
 sre.AbstractionEnglishTest.prototype.testAbstrMixedNumber = function() {
   var mml = '<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>';
-  this.executeRuleTest(mml, 'long mixed number', 'default');
+  this.executeRuleTest(mml, 'mixed number', 'default');
   this.executeRuleTest(mml, 'mixed number', 'brief');
   this.executeRuleTest(mml, 'mixed number', 'sbrief');
 };
