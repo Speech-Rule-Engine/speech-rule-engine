@@ -167,7 +167,7 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
 sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
   defineRule(
       'collapsed', 'mathspeak.default',
-      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
+      '[n] . (engine:modality=summary,grammar:collapsed); [t] "plegado";',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
   );
