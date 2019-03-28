@@ -86,7 +86,7 @@ sre.SemanticTreeRules.initCustomFunctions_ = function() {
 sre.SemanticTreeRules.initSemanticRules_ = function() {
   defineRule(
       'collapsed', 'default.default',
-      '[t] "collapsed"; [n] . (engine:modality=abstraction,grammar:collapsed)',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
   );

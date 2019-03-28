@@ -14,11 +14,11 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstraction rules for collapsed elements.
+ * @fileoverview Summary rules for collapsed elements.
  * @author v.sorge@mathjax.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractionRules');
+goog.provide('sre.SummaryRules');
 
 goog.require('sre.MathStore');
 
@@ -29,56 +29,56 @@ goog.require('sre.MathStore');
  * @constructor
  * @extends {sre.MathStore}
  */
-sre.AbstractionRules = function() {
-  sre.AbstractionRules.base(this, 'constructor');
-  this.modality = 'abstraction';
+sre.SummaryRules = function() {
+  sre.SummaryRules.base(this, 'constructor');
+  this.modality = 'summary';
 };
-goog.inherits(sre.AbstractionRules, sre.MathStore);
-goog.addSingletonGetter(sre.AbstractionRules);
+goog.inherits(sre.SummaryRules, sre.MathStore);
+goog.addSingletonGetter(sre.SummaryRules);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.AbstractionRules.mathStore = sre.AbstractionRules.getInstance();
+sre.SummaryRules.mathStore = sre.SummaryRules.getInstance();
 
 
 /** @private */
-sre.AbstractionRules.defineRule_ = goog.bind(
-    sre.AbstractionRules.mathStore.defineRule,
-    sre.AbstractionRules.mathStore);
+sre.SummaryRules.defineRule_ = goog.bind(
+    sre.SummaryRules.mathStore.defineRule,
+    sre.SummaryRules.mathStore);
 
 
 /** @private */
-sre.AbstractionRules.defineRuleAlias_ = goog.bind(
-    sre.AbstractionRules.mathStore.defineRulesAlias,
-    sre.AbstractionRules.mathStore);
+sre.SummaryRules.defineRuleAlias_ = goog.bind(
+    sre.SummaryRules.mathStore.defineRulesAlias,
+    sre.SummaryRules.mathStore);
 
 
 /** @private */
-sre.AbstractionRules.defineSpecialisedRule_ = goog.bind(
-    sre.AbstractionRules.mathStore.defineSpecialisedRule,
-    sre.AbstractionRules.mathStore);
+sre.SummaryRules.defineSpecialisedRule_ = goog.bind(
+    sre.SummaryRules.mathStore.defineSpecialisedRule,
+    sre.SummaryRules.mathStore);
 
 
 /** @private */
-sre.AbstractionRules.defineUniqueRuleAlias_ = goog.bind(
-    sre.AbstractionRules.mathStore.defineUniqueRuleAlias,
-    sre.AbstractionRules.mathStore);
+sre.SummaryRules.defineUniqueRuleAlias_ = goog.bind(
+    sre.SummaryRules.mathStore.defineUniqueRuleAlias,
+    sre.SummaryRules.mathStore);
 
 
 goog.scope(function() {
-var defineRule = sre.AbstractionRules.defineRule_;
-var defineRuleAlias = sre.AbstractionRules.defineRuleAlias_;
-var defineSpecialisedRule = sre.AbstractionRules.defineSpecialisedRule_;
-var defineUniqueRuleAlias = sre.AbstractionRules.defineUniqueRuleAlias_;
+var defineRule = sre.SummaryRules.defineRule_;
+var defineRuleAlias = sre.SummaryRules.defineRuleAlias_;
+var defineSpecialisedRule = sre.SummaryRules.defineSpecialisedRule_;
+var defineUniqueRuleAlias = sre.SummaryRules.defineUniqueRuleAlias_;
 
 
 /**
- * Abstraction rules.
+ * Summary rules.
  * @private
 */
-sre.AbstractionRules.initAbstractionRules_ = function() {
+sre.SummaryRules.initSummaryRules_ = function() {
 
   // Identifier
   defineRule(
@@ -610,6 +610,6 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
 });  // goog.scope
 
 
-sre.AbstractionRules.getInstance().initializer = [
-  sre.AbstractionRules.initAbstractionRules_
+sre.SummaryRules.getInstance().initializer = [
+  sre.SummaryRules.initSummaryRules_
 ];

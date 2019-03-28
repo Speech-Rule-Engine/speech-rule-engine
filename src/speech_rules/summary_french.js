@@ -14,11 +14,11 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstraction rules for collapsed elements.
+ * @fileoverview Summary rules for collapsed elements.
  * @author v.sorge@mathjax.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractionSpanish');
+goog.provide('sre.SummaryFrench');
 
 goog.require('sre.MathStore');
 
@@ -29,82 +29,83 @@ goog.require('sre.MathStore');
  * @constructor
  * @extends {sre.MathStore}
  */
-sre.AbstractionSpanish = function() {
-  sre.AbstractionSpanish.base(this, 'constructor');
+sre.SummaryFrench = function() {
+  sre.SummaryFrench.base(this, 'constructor');
 
-  this.locale = 'es';
+  this.locale = 'fr';
 };
-goog.inherits(sre.AbstractionSpanish, sre.MathStore);
-goog.addSingletonGetter(sre.AbstractionSpanish);
+goog.inherits(sre.SummaryFrench, sre.MathStore);
+goog.addSingletonGetter(sre.SummaryFrench);
 
 
 /**
  * @type {sre.MathStore}
  */
-sre.AbstractionSpanish.mathStore = sre.AbstractionSpanish.getInstance();
+sre.SummaryFrench.mathStore = sre.SummaryFrench.getInstance();
 
 
 /** @private */
-sre.AbstractionSpanish.defineRule_ = goog.bind(
-    sre.AbstractionSpanish.mathStore.defineRule,
-    sre.AbstractionSpanish.mathStore);
+sre.SummaryFrench.defineRule_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineRule,
+    sre.SummaryFrench.mathStore);
 
 
 /** @private */
-sre.AbstractionSpanish.defineRuleAlias_ = goog.bind(
-    sre.AbstractionSpanish.mathStore.defineRulesAlias,
-    sre.AbstractionSpanish.mathStore);
+sre.SummaryFrench.defineRuleAlias_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineRulesAlias,
+    sre.SummaryFrench.mathStore);
 
 
 /** @private */
-sre.AbstractionSpanish.defineSpecialisedRule_ = goog.bind(
-    sre.AbstractionSpanish.mathStore.defineSpecialisedRule,
-    sre.AbstractionSpanish.mathStore);
+sre.SummaryFrench.defineSpecialisedRule_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineSpecialisedRule,
+    sre.SummaryFrench.mathStore);
 
 
 /** @private */
-sre.AbstractionSpanish.defineUniqueRuleAlias_ = goog.bind(
-    sre.AbstractionSpanish.mathStore.defineUniqueRuleAlias,
-    sre.AbstractionSpanish.mathStore);
+sre.SummaryFrench.defineUniqueRuleAlias_ = goog.bind(
+    sre.SummaryFrench.mathStore.defineUniqueRuleAlias,
+    sre.SummaryFrench.mathStore);
 
 
 goog.scope(function() {
-var defineRule = sre.AbstractionSpanish.defineRule_;
-var defineRuleAlias = sre.AbstractionSpanish.defineRuleAlias_;
-var defineSpecialisedRule = sre.AbstractionSpanish.defineSpecialisedRule_;
-var defineUniqueRuleAlias = sre.AbstractionSpanish.defineUniqueRuleAlias_;
+var defineRule = sre.SummaryFrench.defineRule_;
+var defineRuleAlias = sre.SummaryFrench.defineRuleAlias_;
+var defineSpecialisedRule = sre.SummaryFrench.defineSpecialisedRule_;
+var defineUniqueRuleAlias = sre.SummaryFrench.defineUniqueRuleAlias_;
 
 
 /**
- * Abstraction rules.
+ * Summary rules.
  * @private
 */
-sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
+sre.SummaryFrench.initSummaryFrench_ = function() {
   //TODO: Need some means to prioritise these rules over other rules.
   // Collapsed prefix
   defineRule(
       'abstr-collapsed', 'mathspeak.default',
-      '[n] . (grammar:collapsed); [t] "plegado"',
+      '[t] "collapsed"; [n] . (grammar:collapsed)',
       'self::*', '@alternative', 'not(@alternative="summary")',
-      'not(contains(@grammar, "collapsed"))'
+      'not(contains(@grammar, "collapsed"))', 'self::*', 'self::*',
+      'self::*', 'self::*'
   );
 
   // Identifier
   defineRule(
       'abstr-identifier', 'mathspeak.default',
-      '[t] "identificador largo"',
+      '[t] "long identifier"',
       'self::identifier', '@alternative',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
   defineRule(
       'abstr-identifier', 'mathspeak.default',
-      '[t] "identificador"',
+      '[t] "identifier"',
       'self::identifier', '@alternative="summary"', '@alternative',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
   defineRule(
       'abstr-identifier', 'mathspeak.brief',
-      '[t] "identificador"',
+      '[t] "identifier"',
       'self::identifier', '@alternative',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
@@ -115,17 +116,17 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Numbers
   defineRule(
       'abstr-number', 'mathspeak.default',
-      '[t] "número largo"',
+      '[t] "long number"',
       'self::number', '@alternative'
   );
   defineRule(
       'abstr-number', 'mathspeak.default',
-      '[t] "número"',
+      '[t] "number"',
       'self::number', '@alternative', '@alternative="summary"'
   );
   defineRule(
       'abstr-number', 'mathspeak.brief',
-      '[t] "número"',
+      '[t] "number"',
       'self::number', '@alternative'
   );
   defineSpecialisedRule(
@@ -134,12 +135,12 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-mixed-number', 'mathspeak.default',
-      '[t] "número largo mixto"',
+      '[t] "long mixed number"',
       'self::number', '@alternative', '@role="mixed"'
   );
   defineRule(
       'abstr-mixed-number', 'mathspeak.brief',
-      '[t] "numero mixto"',
+      '[t] "mixed number"',
       'self::number', '@alternative', '@role="mixed"'
   );
   defineSpecialisedRule(
@@ -149,20 +150,20 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Text
   defineRule(
       'abstr-text', 'mathspeak.default',
-      '[t] "texto"',
+      '[t] "text"',
       'self::text', '@alternative'
   );
 
   // Functions
   defineRule(
       'abstr-function', 'mathspeak.default',
-      '[t] "expresión funcional"',
+      '[t] "functional expression"',
       'self::function', '@alternative',
       'self::*'
   );
   defineRule(
       'abstr-function', 'mathspeak.brief',
-      '[t] "función"',
+      '[t] "function"',
       'self::function', '@alternative',
       'self::*'
   );
@@ -172,12 +173,12 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-lim', 'mathspeak.default',
-      '[t] "función de límite"',
+      '[t] "limit function"',
       'self::function', '@alternative', '@role="limit function"'
   );
   defineRule(
       'abstr-lim', 'mathspeak.brief',
-      '[t] "límite"',
+      '[t] "lim"',
       'self::function', '@alternative', '@role="limit function"'
   );
   defineSpecialisedRule(
@@ -188,7 +189,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Fraction
   defineRule(
       'abstr-fraction', 'mathspeak.default',
-      '[t] "fracción"',
+      '[t] "fraction"',
       'self::fraction', '@alternative'
   );
   defineRule(
@@ -202,14 +203,14 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-continued-fraction', 'mathspeak.default',
-      '[t] "fracción continua"',
+      '[t] "continued fraction"',
       'self::fraction', '@alternative',
       'children/*[2]/descendant-or-self::*[@role="ellipsis"]',
       'self::*', 'self::*'
   );
   defineRule(
       'abstr-continued-fraction', 'mathspeak.brief',
-      '[t] "frac continua"',
+      '[t] "continued frac"',
       'self::fraction', '@alternative',
       'children/*[2]/descendant-or-self::*[@role="ellipsis"]',
       'self::*', 'self::*'
@@ -222,7 +223,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Roots
   defineRule(
       'abstr-sqrt', 'mathspeak.default',
-      '[t] "raíz cuadrada"',
+      '[t] "square root"',
       'self::sqrt', '@alternative'
   );
   defineSpecialisedRule(
@@ -233,7 +234,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-sqrt-nested', 'mathspeak.default',
-      '[t] "raíz cuadrada anidada"',
+      '[t] "nested square root"',
       'self::sqrt', '@alternative',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
@@ -245,15 +246,16 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
       'abstr-sqrt-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
+  // Content following the root expression.
   defineRule(
       'abstr-root', 'mathspeak.default',
-      '[t] "raíz del índice"; [n] children/*[1]; [t] "finalizar de índice"',
+      '[t] "root of index"; [n] children/*[1]; [t] "endindex"',
       'self::root', '@alternative',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
       'abstr-root', 'mathspeak.brief',
-      '[t] "raíz"',
+      '[t] "root"',
       'self::root', '@alternative'
   );
   defineSpecialisedRule(
@@ -261,7 +263,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-root-nested', 'mathspeak.default',
-      '[t] "raíz anidada del índice"; [n] children/*[1]',
+      '[t] "nested root of index"; [n] children/*[1]',
       'self::root', '@alternative',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
@@ -269,8 +271,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Content following the root expression.
   defineRule(
       'abstr-root-nested', 'mathspeak.default',
-      '[t] "raíz anidada del índice"; [n] children/*[1];' +
-      ' [t] "finalizar de índice"',
+      '[t] "nested root of index"; [n] children/*[1]; [t] "endindex"',
       'self::root', '@alternative',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root',
@@ -278,7 +279,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-root-nested', 'mathspeak.brief',
-      '[t] "raíz anidada"',
+      '[t] "nested root"',
       'self::root', '@alternative',
       'children/*/descendant-or-self::sqrt or ' +
       'children/*/descendant-or-self::root'
@@ -291,7 +292,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Superscript
   defineRule(
       'abstr-superscript', 'mathspeak.default',
-      '[t] "potencia"',
+      '[t] "power"',
       'self::superscript', '@alternative',
       'self::*', 'self::*', 'self::*', 'self::*'
   );
@@ -306,7 +307,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Subscript
   defineRule(
       'abstr-subscript', 'mathspeak.default',
-      '[t] "subíndice"',
+      '[t] "subscript"',
       'self::subscript', '@alternative',
       'self::*', 'self::*', 'self::*'
   );
@@ -321,7 +322,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Subsuperscript
   defineRule(
       'abstr-subsup', 'mathspeak.default',
-      '[t] "potencia con subíndice"',
+      '[t] "power with subscript"',
       'self::superscript', '@alternative',
       'name(children/*[1])="subscript"',
       'self::*', 'self::*', 'self::*'
@@ -337,14 +338,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Infixop
   defineRule(
       'abstr-infixop', 'mathspeak.default',
-      '[t] @role (grammar:localRole); [t] "con"; [t] count(./children/*);' +
-      ' [t] "elementos"',
+      '[t] @role (grammar:localRole); [t] "with"; [t] count(./children/*);' +
+      ' [t] "elements"',
       'self::infixop', '@alternative'
   );
   defineRule(
       'abstr-infixop', 'mathspeak.default',
-      '[t] @role (grammar:localRole); [t] "con una cantidad variable de' +
-      ' elementos"',
+      '[t] @role (grammar:localRole); [t] "with variable number of elements"',
       'self::infixop', '@alternative', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
@@ -359,12 +359,12 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-addition', 'mathspeak.default',
-      '[t] "suma con"; [t] count(./children/*); [t] "sumandos"',
+      '[t] "sum with"; [t] count(./children/*); [t] "summands"',
       'self::infixop', '@alternative', '@role="addition"'
   );
   defineRule(
       'abstr-addition', 'mathspeak.brief',
-      '[t] "suma"',
+      '[t] "sum"',
       'self::infixop', '@alternative', '@role="addition"'
   );
   defineSpecialisedRule(
@@ -372,19 +372,19 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-addition', 'mathspeak.default',
-      '[t] "suma con número variable de sumandos"',
+      '[t] "sum with variable number of summands"',
       'self::infixop', '@alternative', '@role="addition"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-multiplication', 'mathspeak.default',
-      '[t] "producto con"; [t] count(./children/*); [t] "factores"',
+      '[t] "product with"; [t] count(./children/*); [t] "factors"',
       'self::infixop', '@alternative', '@role="multiplication"'
   );
   defineRule(
       'abstr-multiplication', 'mathspeak.brief',
-      '[t] "producto"',
+      '[t] "product"',
       'self::infixop', '@alternative', '@role="multiplication"'
   );
   defineSpecialisedRule(
@@ -396,7 +396,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-multiplication', 'mathspeak.default',
-      '[t] "producto con una cantidad variable de factores"',
+      '[t] "product with variable number of factors"',
       'self::infixop', '@alternative', '@role="multiplication"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
@@ -410,7 +410,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Vector
   defineRule(
       'abstr-vector', 'mathspeak.default',
-      '[t] "vector de dimensión"; [t] count(./children/*)',
+      '[t] "vecteur de dimension"; [t] count(./children/*)',
       'self::vector', '@alternative'
   );
   defineRule(
@@ -423,14 +423,14 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-vector', 'mathspeak.default',
-      '[t] "vector de dimensión n"',
+      '[t] "n dimensional vector"',
       'self::vector', '@alternative',
       './children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-binomial', 'mathspeak.default',
-      '[t] "binomio"',
+      '[t] "binomial"',
       'self::vector', '@alternative', '@role="binomial"'
   );
   defineSpecialisedRule(
@@ -442,12 +442,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Matrix
   defineRule(
       'abstr-determinant', 'mathspeak.default',
-      '[t] "determinante de dimensión"; [t] count(./children/*)',
+      '[t] count(./children/*);' +
+      ' [t] "dimensional determinant"',
       'self::matrix', '@alternative', '@role="determinant"', 'self::*'
   );
   defineRule(
       'abstr-determinant', 'mathspeak.brief',
-      '[t] "determinante"',
+      '[t] "determinant"',
       'self::matrix', '@alternative', '@role="determinant"', 'self::*'
   );
   defineSpecialisedRule(
@@ -455,19 +456,20 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-determinant', 'mathspeak.default',
-      '[t] "determinante de dimensión n"',
+      '[t] "n dimensional determinant"',
       'self::matrix', '@alternative', '@role="determinant"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-squarematrix', 'mathspeak.default',
-      '[t] "matriz cuadrada de dimensión"; [t] count(./children/*)',
+      '[t] count(./children/*);' +
+      ' [t] "dimensional square matrix"',
       'self::matrix', '@alternative', '@role="squarematrix"'
   );
   defineRule(
       'abstr-squarematrix', 'mathspeak.brief',
-      '[t] "matriz cuadrada"',
+      '[t] "square matrix"',
       'self::matrix', '@alternative', '@role="squarematrix"'
   );
   defineSpecialisedRule(
@@ -476,12 +478,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-rowvector', 'mathspeak.default',
-      '[t] "vector fila de dimensión"; [t] count(./children/row/children/*) ',
+      '[t] count(./children/row/children/*); ' +
+      '[t] "dimensional row vector"',
       'self::matrix', '@alternative', '@role="rowvector"'
   );
   defineRule(
       'abstr-rowvector', 'mathspeak.brief',
-      '[t] "vector fila"',
+      '[t] "row vector"',
       'self::matrix', '@alternative', '@role="rowvector"'
   );
   defineSpecialisedRule(
@@ -489,20 +492,20 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-matrix', 'mathspeak.default',
-      '[t] "vector fila de dimensión n"',
+      '[t] "n dimensional row vector"',
       'self::matrix', '@alternative', '@role="rowvector"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-matrix', 'mathspeak.default',
-      '[t] count(children/*);  [t] "por";' +
-      '[t] count(children/*[1]/children/*); [t] "matriz"',
+      '[t] count(children/*);  [t] "by";' +
+      '[t] count(children/*[1]/children/*); [t] "matrix"',
       'self::matrix', '@alternative'
   );
   defineRule(
       'abstr-matrix', 'mathspeak.brief',
-      '[t] "matriz"',
+      '[t] "matrix"',
       'self::matrix', '@alternative'
   );
   defineSpecialisedRule(
@@ -510,7 +513,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-matrix', 'mathspeak.default',
-      '[t] "matriz de dimensión n por m"',
+      '[t] "n by m dimensional matrix"',
       'self::matrix', '@alternative',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
@@ -519,13 +522,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Cases
   defineRule(
       'abstr-cases', 'mathspeak.default',
-      '[t] "declaración de caso";' +
-      '[t] "con"; [t] count(children/*); [t] "casos"',
+      '[t] "case statement";' +
+      '[t] "with"; [t] count(children/*); [t] "cases"',
       'self::cases', '@alternative'
   );
   defineRule(
       'abstr-cases', 'mathspeak.brief',
-      '[t] "declaración de caso"',
+      '[t] "case statement"',
       'self::cases', '@alternative'
   );
   defineSpecialisedRule(
@@ -533,7 +536,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-cases', 'mathspeak.default',
-      '[t] "declaración de caso con número variable de casos"',
+      '[t] "case statement with variable number of cases"',
       'self::cases', '@alternative',
       './children/row/children/cell/children/punctuation[@role="ellipsis"]' +
       'or ./children/line/children/punctuation[@role="ellipsis"]'
@@ -543,13 +546,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   // Punctuated
   defineRule(
       'abstr-punctuated', 'mathspeak.default',
-      '[t] "lista separada por"; [n] content/*[1]; ' +
-      '[t] "de longitud"; [t] count(children/*) - count(content/*)',
+      '[n] content/*[1]; [t] "separated list";' +
+      '[t] "of length"; [t] count(children/*) - count(content/*)',
       'self::punctuated', '@alternative'
   );
   defineRule(
       'abstr-punctuated', 'mathspeak.brief',
-      '[t] "lista separada por"; [n] content/*[1]',
+      '[n] content/*[1]; [t] "separated list"',
       'self::punctuated', '@alternative'
   );
   defineSpecialisedRule(
@@ -557,8 +560,8 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-punctuated', 'mathspeak.default',
-      '[t] "lista separada por"; [n] content/*[1]',
-      '[t] "de longitud variable"',
+      '[n] content/*[1]; [t] "separated list";' +
+      '[t] "of variable length"',
       'self::punctuated', '@alternative',
       './children/punctuation[@role="ellipsis"]'
   );
@@ -590,13 +593,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-relation', 'mathspeak.default',
-      '[t] "secuencia de"; [t] @role (grammar:localRole);' +
-      ' [t] "con"; [t] count(./children/*); [t] "elementos"',
+      '[t] @role (grammar:localRole); [t] "sequence";' +
+      ' [t] "with"; [t] count(./children/*); [t] "elements"',
       'self::relseq', '@alternative', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-relation', 'mathspeak.brief',
-      '[t] "secuencia de"; [t] @role (grammar:localRole)',
+      '[t] @role (grammar:localRole); [t] "sequence"',
       'self::relseq', '@alternative', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
@@ -604,8 +607,8 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-relation', 'mathspeak.default',
-      '[t] "secuencia de"; [t] @role (grammar:localRole);' +
-      ' [t] "con una cantidad variable de elementos"',
+      '[t] @role (grammar:localRole); [t] "sequence";' +
+      ' [t] "with variable number of elements"',
       'self::relseq', '@alternative', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
@@ -630,13 +633,13 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 
   defineRule(
       'abstr-multirel', 'mathspeak.default',
-      '[t] "secuencia de relación";' +
-      ' [t] "con"; [t] count(./children/*); [t] "elementos"',
+      '[t] "relation sequence";' +
+      ' [t] "with"; [t] count(./children/*); [t] "elements"',
       'self::multirel', '@alternative', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-multirel', 'mathspeak.brief',
-      '[t] "secuencia de relación"',
+      '[t] "relation sequence"',
       'self::multirel', '@alternative', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
@@ -644,16 +647,16 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-var-multirel', 'mathspeak.default',
-      '[t] "secuencia de relación con número variable de elementos"',
+      '[t] "relation sequence with variable number of elements"',
       'self::multirel', '@alternative', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-table', 'mathspeak.default',
-      '[t] "mesa con"; ' +
-      '[t] count(children/*); [t] "filas y";' +
-      '[t] count(children/*[1]/children/*); [t] "columnas"',
+      '[t] "table with"; ' +
+      '[t] count(children/*); [t] "rows and";' +
+      '[t] count(children/*[1]/children/*); [t] "columns"',
       'self::table', '@alternative'
   );
   defineSpecialisedRule(
@@ -664,14 +667,14 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-line', 'mathspeak.default',
-      '[t] "en"; [t] @role (grammar:localRole);',
+      '[t] "in"; [t] @role (grammar:localRole);',
       'self::line', '@alternative'
   );
   defineRule(
       'abstr-row', 'mathspeak.default',
-      '[t] "en"; [t] @role (grammar:localRole);' +
-      '[t] count(preceding-sibling::..); [t] "con";' +
-      '[t] count(children/*); [t] "columnas"',
+      '[t] "in"; [t] @role (grammar:localRole);' +
+      '[t] count(preceding-sibling::..); [t] "with";' +
+      '[t] count(children/*); [t] "columns"',
       'self::row', '@alternative', '*'
   );
   defineSpecialisedRule(
@@ -682,7 +685,7 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
   );
   defineRule(
       'abstr-cell', 'mathspeak.default',
-      '[t] "en"; [t] @role (grammar:localRole);',
+      '[t] "in"; [t] @role (grammar:localRole);',
       'self::cell', '@alternative'
   );
 
@@ -691,6 +694,6 @@ sre.AbstractionSpanish.initAbstractionSpanish_ = function() {
 });  // goog.scope
 
 
-sre.AbstractionSpanish.getInstance().initializer = [
-  sre.AbstractionSpanish.initAbstractionSpanish_
+sre.SummaryFrench.getInstance().initializer = [
+  sre.SummaryFrench.initSummaryFrench_
 ];

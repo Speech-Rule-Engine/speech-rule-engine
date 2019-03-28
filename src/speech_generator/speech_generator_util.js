@@ -226,7 +226,7 @@ sre.SpeechGeneratorUtil.retrieveSummary = function(node) {
 sre.SpeechGeneratorUtil.computeSummary_ = function(node) {
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'modality': 'abstraction',
+      {'modality': 'summary',
         'strict': false, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :

@@ -161,7 +161,7 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
 sre.MathspeakRules.initMathspeakRules_ = function() {
   defineRule(
       'collapsed', 'mathspeak.default',
-      '[t] "collapsed"; [n] . (engine:modality=abstraction,grammar:collapsed)',
+      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
       'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
       'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
   );
