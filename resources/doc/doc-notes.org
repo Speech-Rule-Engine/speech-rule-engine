@@ -60,3 +60,12 @@ Equality of the constraint is tested on the components.
 **** ClearspeakPreferences
      Implements a constraint type, parser, and comparator to take properties
      into account.
+
+
+* Grammar annotations:
+
+** Syntax: 
+   grammar:x:y=a:z=xpath:r="string"
+   results in 
+   { x: true, y: 'a', z: 'xpath', r: '"string"' }
+   

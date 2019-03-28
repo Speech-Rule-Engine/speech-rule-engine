@@ -327,10 +327,26 @@ sre.Engine.STRING_FEATURES = [
 ];
 
 
-sre.Engine.prototype.setDynamicCstr = function() {
+/**
+ * Sets the dynamic constraint for the engine.
+ * @param {Object.<sre.DynamicCstr.Axis, string>=} opt_dynamic An optional
+ *    constraint mapping. If given it is parsed into the engines constraint
+ *    parameters.
+ */
+sre.Engine.prototype.setDynamicCstr = function(opt_dynamic) {
+  if (opt_dynamic) {
+    var keys = Object.keys(opt_dynamic);
+    for (var i = 0; i < keys.length; i++) {
+      var feature = /** @type{sre.DynamicCstr.Axis} */(keys[i]);
+      // Checks that we only have correct components.
+      if (sre.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
+        var value = opt_dynamic[feature];
+        this[feature] = value;
+      }
+    }
+  }
   var dynamic = [this.locale, this.modality, this.domain, this.style].join('.');
-  this.dynamicCstr = this.parser.parse(dynamic
-      );
+  this.dynamicCstr = this.parser.parse(dynamic);
   var fallback = sre.DynamicProperties.create(
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]],
       [sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]],

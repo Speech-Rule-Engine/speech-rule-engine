@@ -167,6 +167,13 @@ sre.MathspeakFrench.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakFrench.initMathspeakFrench_ = function() {
+  defineRule(
+      'collapsed', 'mathspeak.default',
+      '[t] "collapsed"; [n] . (engine:modality=abstraction,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
+
   // Initial rule
   defineRule(
       'stree', 'mathspeak.default',

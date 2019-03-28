@@ -81,10 +81,11 @@ var defineUniqueRuleAlias = sre.AbstractionRules.defineUniqueRuleAlias_;
 sre.AbstractionRules.initAbstractionRules_ = function() {
 
   // Identifier
-  defineRule(  // collapsed
+  defineRule(
       'abstr-identifier', 'default.default',
       '[t] "long identifier"',
-      'self::identifier');
+      'self::identifier', 'contains(@grammar, "collapsed")'
+  );
   defineRule(
       'abstr-identifier', 'default.default',
       '[t] "identifier"',
@@ -92,10 +93,10 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
 
   // Numbers
-  defineRule(  // collapsed
+  defineRule(
       'abstr-number', 'default.default',
       '[t] "long number"',
-      'self::number'
+      'self::number', 'contains(@grammar, "collapsed")'
   );
   defineRule(
       'abstr-number', 'default.default',
@@ -103,10 +104,10 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
       'self::number'
   );
 
-  defineRule(  // collapsed??
+  defineRule(
       'abstr-mixed-number', 'default.default',
       '[t] "long mixed number"',
-      'self::number',  '@role="mixed"'
+      'self::number',  '@role="mixed"', 'contains(@grammar, "collapsed")'
   );
   defineRule(
       'abstr-mixed-number', 'default.default',
@@ -204,15 +205,16 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
 
   // Content following the root expression.
-  defineRule(  // collapsed
+  defineRule(
       'abstr-root', 'default.default',
-      '[t] "root of index"; [n] children/*[1]; [t] "endindex"',
-      'self::root',  'not(@alternative="summary")',
+      '[t] "root of index"; [n] children/*[1] (engine:modality="speech");' +
+      ' [t] "endindex"',
+      'self::root', 'contains(@grammar, "collapsed")',
       'following-sibling::* or ancestor::*/following-sibling::*'
   );
   defineRule(
       'abstr-root', 'default.default',
-      '[t] "root of index"; [n] children/*[1]',
+      '[t] "root of index"; [n] children/*[1] (engine:modality=speech)',
       'self::root'
   );
   defineRule(
@@ -225,15 +227,16 @@ sre.AbstractionRules.initAbstractionRules_ = function() {
   );
   defineRule(
       'abstr-root-nested', 'default.default',
-      '[t] "nested root of index"; [n] children/*[1]',
-      'self::root',
-      'children/*/descendant-or-self::sqrt or' +
+      '[t] "nested root of index"; ' +
+      '[n] children/*[1] (engine:modality="speech")',
+      'self::root', 'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
   );
   // Content following the root expression.
   defineRule(
       'abstr-root-nested', 'default.default',
-      '[t] "nested root of index"; [n] children/*[1]; [t] "endindex"',
+      '[t] "nested root of index"; ' +
+      '[n] children/*[1] (engine:modality="speech"); [t] "endindex"',
       'self::root',
       'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root',

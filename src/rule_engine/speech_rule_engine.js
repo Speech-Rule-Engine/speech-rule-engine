@@ -274,6 +274,13 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     if (component.grammar) {
       this.processGrammar(context, node, component.grammar);
     }
+    var saveEngine = null;
+    // Retooling the engine
+    if (attributes.engine) {
+      saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
+      var features = sre.Grammar.parseInput(attributes.engine);
+      sre.Engine.getInstance().setDynamicCstr(features);
+    }
     switch (component.type) {
       case sre.SpeechRule.Type.NODE:
         var selected = context.applyQuery(node, content);
@@ -322,6 +329,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     // Adding personality to the auditory descriptions.
     result = result.concat(this.addPersonality_(descrs, attributes, multi,
                                                 node));
+    if (saveEngine) {
+      sre.Engine.getInstance().setDynamicCstr(saveEngine);
+    }
   }
   this.pushCache_(node, result);
   return result;

@@ -165,6 +165,13 @@ sre.MathspeakSpanish.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakSpanish.initMathspeakSpanish_ = function() {
+  defineRule(
+      'collapsed', 'mathspeak.default',
+      '[t] "collapsed"; [n] . (engine:modality=abstraction,grammar:collapsed)',
+      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
+      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+  );
+
   // Initial rule
   defineRule(
       'stree', 'mathspeak.default',
