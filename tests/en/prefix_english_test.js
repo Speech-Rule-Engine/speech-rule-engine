@@ -58,12 +58,9 @@ sre.PrefixEnglishTest.prototype.executeTest = function(expr, id, result) {
     return;
   }
   var descrs = sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'domain': 'prefix', 'style': 'default', locale: 'en',
-        'strict': true, 'cache': false, 'speech': true,
-        'comparator': new sre.DynamicCstr.DefaultComparator(
-            new sre.DynamicCstr({'locale': 'en', 'domain': 'prefix',
-              'style': 'default'})),
-        'rules': ['PrefixRules']},
+      {'modality': 'prefix', 'domain': 'default', 'style': 'default', locale: 'en',
+       'strict': true, 'cache': false, 'speech': true
+      },
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       );
   var speech = sre.AuralRendering.getInstance().markup(descrs);

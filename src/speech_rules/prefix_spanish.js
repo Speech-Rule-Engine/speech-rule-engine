@@ -35,6 +35,7 @@ sre.PrefixSpanish = function() {
   sre.PrefixSpanish.base(this, 'constructor');
 
   this.locale = 'es';
+  this.modality = 'prefix';
 };
 goog.inherits(sre.PrefixSpanish, sre.MathStore);
 goog.addSingletonGetter(sre.PrefixSpanish);
@@ -102,114 +103,114 @@ sre.PrefixSpanish.initCustomFunctions_ = function() {
 */
 sre.PrefixSpanish.initPrefixSpanish_ = function() {
   defineRule(
-      'numerator', 'prefix.default',
+      'numerator', 'default.default',
       '[t] "numerador"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'denominator', 'prefix.default',
+      'denominator', 'default.default',
       '[t] "denominador"; [p] (pause:200)',
       'self::*', 'name(../..)="fraction"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'base', 'prefix.default',
+      'base', 'default.default',
       '[t] "base"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript" or name(../..)="subscript"' +
       ' or name(../..)="overscore" or name(../..)="underscore"' +
       ' or name(../..)="tensor"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'exponent', 'prefix.default',
+      'exponent', 'default.default',
       '[t] "exponente"; [p] (pause:200)',
       'self::*', 'name(../..)="superscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'subscript', 'prefix.default',
+      'subscript', 'default.default',
       '[t] "subíndice"; [p] (pause:200)',
       'self::*', 'name(../..)="subscript"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'overscript', 'prefix.default',
+      'overscript', 'default.default',
       '[t] "sobreíndice"; [p] (pause:200)',
       'self::*', 'name(../..)="overscore"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'underscript', 'prefix.default',
+      'underscript', 'default.default',
       '[t] "bajoíndice"; [p] (pause:200)',
       'self::*', 'name(../..)="underscore"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'radicand', 'prefix.default',
+      'radicand', 'default.default',
       '[t] "radicand"; [p] (pause:200)',
       'self::*', 'name(../..)="sqrt"');
   defineRule(
-      'radicand', 'prefix.default',
+      'radicand', 'default.default',
       '[t] "radicand"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=1');
   defineRule(
-      'index', 'prefix.default',
+      'index', 'default.default',
       '[t] "índice"; [p] (pause:200)',
       'self::*', 'name(../..)="root"',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'leftsub', 'prefix.default',
+      'leftsub', 'default.default',
       '[t] "subíndice izquierdo"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsub"');
   defineRule(
-      'leftsub', 'prefix.default',
+      'leftsub', 'default.default',
       '[t] CSFordinalPosition (grammar:gender="male"); ' +
       '[t] "subíndice izquierdo"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsub"');
   defineRule(
-      'leftsuper', 'prefix.default',
+      'leftsuper', 'default.default',
       '[t] "superíndice izquierdo"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="leftsuper"');
   defineRule(
-      'leftsuper', 'prefix.default',
+      'leftsuper', 'default.default',
       '[t] CSFordinalPosition (grammar:gender="male"); ' +
       '[t] "superíndice izquierdo"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="leftsuper"');
   defineRule(
-      'rightsub', 'prefix.default',
+      'rightsub', 'default.default',
       '[t] "subíndice derecho"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsub"');
   defineRule(
-      'rightsub', 'prefix.default',
+      'rightsub', 'default.default',
       '[t] CSFordinalPosition (grammar:gender="male"); ' +
       '[t] "subíndice derecho"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsub"');
   defineRule(
-      'rightsuper', 'prefix.default',
+      'rightsuper', 'default.default',
       '[t] "superíndice derecho"; [p] (pause:200)',
       'self::*', 'name(../..)="tensor"',
       '@role="rightsuper"');
   defineRule(
-      'rightsuper', 'prefix.default',
+      'rightsuper', 'default.default',
       '[t] CSFordinalPosition (grammar:gender="male"); ' +
       '[t] "superíndice derecho"; [p] (pause:200)',
       'self::*', 'name(../..)="punctuated"', 'name(../../../..)="tensor"',
       '../../@role="rightsuper"');
   defineRule(
-      'choice', 'prefix.default',
+      'choice', 'default.default',
       '[t] "cantidad de elección"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=0');
   defineRule(
-      'select', 'prefix.default',
+      'select', 'default.default',
       '[t] "cantidad de selección"; [p] (pause:200)',
       'self::line', '@role="binomial"', 'parent::*/parent::vector',
       'count(preceding-sibling::*)=1');
 
   // Positions in tables
   defineRule(
-      'row', 'prefix.default',
+      'row', 'default.default',
       '[t] CSFordinalPosition (grammar:gender="female");' +
       ' [t] "fila"; [p] (pause:200)',
       'self::row'
@@ -218,13 +219,13 @@ sre.PrefixSpanish.initPrefixSpanish_ = function() {
       'row', 'self::line'
   );
   defineRule(
-      'cell', 'prefix.default',
+      'cell', 'default.default',
       '[n] ../..; [t] CSFordinalPosition (grammar:gender="female");' +
       ' [t] "columna"; [p] (pause:200)',
       'self::cell', 'contains(@grammar,"depth")'
   );
   defineRule(
-      'cell', 'prefix.default',
+      'cell', 'default.default',
       '[t] CSFordinalPosition (grammar:gender="female"); ' +
       '[t] "columna"; [p] (pause:200)',
       'self::cell'

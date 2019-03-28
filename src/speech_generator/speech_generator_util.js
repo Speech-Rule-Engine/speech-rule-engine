@@ -136,9 +136,8 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
                                      tree.xml())[0];
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'domain': 'prefix', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true,
-        'rules': ['PrefixRules', 'PrefixSpanish', 'PrefixFrench']},
+      {'modality': 'prefix', 'domain': 'default', 'style': 'default',
+       'strict': true, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];

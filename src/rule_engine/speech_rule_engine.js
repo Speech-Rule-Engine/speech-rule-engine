@@ -668,7 +668,8 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
   props[sre.DynamicCstr.Axis.MODALITY] =
-    [modality === sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] ?
+    // TODO: Improve, only summary allows fallback to speech.
+    [modality !== 'summary' ?
      modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
   props[sre.DynamicCstr.Axis.DOMAIN] =
     [modality !== 'speech' ?
