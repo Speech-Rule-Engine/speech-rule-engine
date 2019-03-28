@@ -524,8 +524,6 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
     save[key] = engine[key];
     engine[key] = settings[key];
   }
-  //TODO: This needs to be refactored as a message signal for the speech rule
-  //      engine to update itself.
   engine.setDynamicCstr();
   var result = callback();
   for (key in save) {
@@ -633,8 +631,8 @@ sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar)
 
 /**
  * Enriches the dynamic constraint with default properties.
- * @private
  */
+ // * @private
 // TODO: Exceptions and ordering between locale and modality?
 //       E.g, missing clearspeak defaults to mathspeak.
 //       What if there is no default for a particular locale or modality?
@@ -660,8 +658,10 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
   props[sre.DynamicCstr.Axis.MODALITY] = [modality];
+  props[sre.DynamicCstr.Axis.MODALITY] =
+    [modality === sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] ?
+     modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
   props[sre.DynamicCstr.Axis.DOMAIN] = [domain];
-  // TODO: Why are we using the order only here?
   var order = dynamic.getOrder();
   for (var i = 0, axis; axis = order[i]; i++) {
     if (!props[axis]) {

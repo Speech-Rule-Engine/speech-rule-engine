@@ -610,14 +610,8 @@ sre.AbstractWalker.prototype.summary_ = function() {
   var sid = sprimary.id.toString();
   var snode = this.rebuilt.xml.getAttribute('id') === sid ? this.rebuilt.xml :
       sre.DomUtil.querySelectorAllByAttrValue(this.rebuilt.xml, 'id', sid)[0];
-  var oldAlt = snode.getAttribute('alternative');
-  snode.setAttribute('alternative', 'summary');
-  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
-      /** @type {!Node} */(snode));
-  var summary = sre.AuralRendering.getInstance().markup(descrs);
+  var summary = sre.SpeechGeneratorUtil.retrieveSummary(snode);
   var speech = this.mergePrefix_([summary]);
-  oldAlt ? snode.setAttribute('alternative', oldAlt) :
-      snode.removeAttribute('alternative');
   return speech;
 };
 

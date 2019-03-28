@@ -373,8 +373,6 @@ sre.DynamicCstr.Parser.prototype.parse = function(str) {
   var order = str.split('.');
   var cstr = {};
   if (order.length > this.order_.length) {
-    console.log(order);
-    console.log(this.order_);
     throw new Error('Invalid dynamic constraint: ' + cstr);
   }
   for (var i = 0, key; key = this.order_[i], order.length; i++) {
@@ -537,6 +535,14 @@ sre.DynamicCstr.DefaultComparator.prototype.compare = function(cstr1, cstr2) {
     }
   }
   return 0;
+};
+
+
+/**
+ * @override
+ */
+sre.DynamicCstr.DefaultComparator.prototype.toString = function() {
+  return this.reference_.toString() + '\n' + this.fallback_.toString();
 };
 
 

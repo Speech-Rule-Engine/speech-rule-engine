@@ -203,3 +203,32 @@ sre.SpeechGeneratorUtil.connectAllMactions = function(mml, stree) {
     cst.setAttribute('alternative', mid);
   }
 };
+
+
+/**
+ * Computes a speech summary if it exists.
+ * @param {Node} node The XML node.
+ * @return {string} The summary speech string.
+ */
+sre.SpeechGeneratorUtil.retrieveSummary = function(node) {
+  var descrs = sre.SpeechGeneratorUtil.computeSummary_(node);
+  return sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * Adds a speech summary if necessary.
+ * @param {Node} node The XML node.
+ * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
+ *     for the summary.
+ * @private
+ */
+sre.SpeechGeneratorUtil.computeSummary_ = function(node) {
+  return node ?
+      sre.SpeechRuleEngine.getInstance().runInSetting(
+      {'modality': 'abstraction',
+        'strict': false, 'cache': false, 'speech': true},
+      function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
+      ) :
+      [];
+};

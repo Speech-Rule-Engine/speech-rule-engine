@@ -159,6 +159,14 @@ sre.MathspeakRules.initCustomFunctions_ = function() {
  * @private
 */
 sre.MathspeakRules.initMathspeakRules_ = function() {
+  defineRule(
+      'collapsed', 'mathspeak.default',
+      '[t] "collapsed"; [n] . (grammar:collapsed)',
+      'self::*', '@alternative', 'not(@alternative="summary")',
+      'not(contains(@grammar, "collapsed"))', 'self::*', 'self::*',
+      'self::*', 'self::*'
+  );
+
   // Initial rule
   defineRule(
       'stree', 'mathspeak.default',
