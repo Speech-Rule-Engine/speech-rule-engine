@@ -46,32 +46,33 @@ sre.AbstractionEnglishTest = function() {
   /**
    * @override
    */
+  this.modality = 'summary';
+
+  /**
+   * @override
+   */
   this.semantics = true;
+
+  /**
+   * Keyboard steps preceding speech computation.
+   * @type {Array.<string>}
+   */
+  this.steps = null;
 
   this.setActive('AbstractionEnglish');
 };
 goog.inherits(sre.AbstractionEnglishTest, sre.AbstractRuleTest);
 
 
-/**
- * @override
- */
-sre.AbstractionEnglishTest.prototype.executeRuleTest = function(
-    mml, expected, opt_style, opt_steps) {
-  var style = opt_style || this.style;
-  sre.System.getInstance().setupEngine(
-      {semantics: this.semantics, domain: this.domain, style: style,
-       locale: this.locale});
-  var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-      mml + '</math>';
-  sre.ProcessorFactory.process('walker', mathMl);
-  if (opt_steps) {
-    opt_steps.forEach(function(step) {
-      sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
-    });
+sre.AbstractionEnglishTest.prototype.toSpeech = function(mathMl) {
+  if (!this.steps) {
+    return sre.AbstractionEnglishTest.base(this, 'toSpeech', mathMl);
   }
-  var actual = sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
-  this.compareResult(mathMl, actual, expected, style);
+  sre.ProcessorFactory.process('walker', mathMl);
+  this.steps.forEach(function(step) {
+    sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
+  });
+  return sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
 };
 
 
@@ -130,10 +131,11 @@ sre.AbstractionEnglishTest.prototype.testAbstrCases = function() {
 sre.AbstractionEnglishTest.prototype.testAbstrCell = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd>' +
       '<mtd><mi>b</mi></mtd></mtr></mtable>';
-  var move = ['DOWN', 'DOWN'];
-  this.executeRuleTest(mml, '1st Column in table', 'default', move);
-  this.executeRuleTest(mml, '1st Column in table', 'brief', move);
-  this.executeRuleTest(mml, '1st Column in table', 'sbrief', move);
+  this.steps = ['DOWN', 'DOWN'];
+  this.executeRuleTest(mml, '1st Column in table', 'default');
+  this.executeRuleTest(mml, '1st Column in table', 'brief');
+  this.executeRuleTest(mml, '1st Column in table', 'sbrief');
+  this.steps = null;
 };
 
 
@@ -241,10 +243,11 @@ sre.AbstractionEnglishTest.prototype.testAbstrLim = function() {
  */
 sre.AbstractionEnglishTest.prototype.testAbstrLine = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>';
-  var move = ['DOWN'];
-  this.executeRuleTest(mml, '1st Row in multiple lines', 'default', move);
-  this.executeRuleTest(mml, '1st Row in multiple lines', 'brief', move);
-  this.executeRuleTest(mml, '1st Row in multiple lines', 'sbrief', move);
+  this.steps = ['DOWN'];
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'default');
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'brief');
+  this.executeRuleTest(mml, '1st Row in multiple lines', 'sbrief');
+  this.steps = null;
 };
 
 
@@ -370,10 +373,11 @@ sre.AbstractionEnglishTest.prototype.testAbstrRootNested = function() {
 sre.AbstractionEnglishTest.prototype.testAbstrRow = function() {
   var mml = '<mtable><mtr><mtd><mi>a</mi></mtd>' +
       '<mtd><mi>b</mi></mtd></mtr></mtable>';
-  var move = ['DOWN'];
-  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'default', move);
-  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'brief', move);
-  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'sbrief', move);
+  this.steps = ['DOWN'];
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'default');
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'brief');
+  this.executeRuleTest(mml, '1st Row in table with 2 columns', 'sbrief');
+  this.steps = null;
 };
 
 

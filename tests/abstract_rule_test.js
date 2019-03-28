@@ -49,6 +49,11 @@ sre.AbstractRuleTest = function() {
   this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
 
   /**
+   * @type {string}
+   */
+  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+
+  /**
    * @type {boolean}
    */
   this.semantics = false;
@@ -95,11 +100,14 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
       {semantics: this.semantics, domain: this.domain, style: style,
-        rules: this.rules, locale: this.locale});
-  var result = sre.System.getInstance().toSpeech(mathMl);
+        modality: this.modality, rules: this.rules, locale: this.locale});
+  var result = this.toSpeech(mathMl);
   this.compareResult(mathMl, result, answer, style);
 };
 
+sre.AbstractRuleTest.prototype.toSpeech = function(mathMl) {
+  return sre.System.getInstance().toSpeech(mathMl);
+};
 
 /**
  * Performs the actual assertion test. Appends the example to the output.
