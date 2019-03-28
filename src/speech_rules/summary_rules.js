@@ -107,12 +107,12 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-mixed-number', 'default.default',
       '[t] "long mixed number"',
-      'self::number',  '@role="mixed"', 'contains(@grammar, "collapsed")'
+      'self::number', '@role="mixed"', 'contains(@grammar, "collapsed")'
   );
   defineRule(
       'abstr-mixed-number', 'default.default',
       '[t] "mixed number"',
-      'self::number',  '@role="mixed"'
+      'self::number', '@role="mixed"'
   );
 
   // Text
@@ -126,14 +126,12 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-function', 'default.default',
       '[t] "functional expression"',
-      'self::function',
-
+      'self::function'
   );
   defineRule(
       'abstr-function', 'mathspeak.brief',
       '[t] "function"',
-      'self::function',
-
+      'self::function'
   );
   defineSpecialisedRule(
       'abstr-function', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -142,12 +140,12 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-lim', 'default.default',
       '[t] "limit function"',
-      'self::function',  '@role="limit function"'
+      'self::function', '@role="limit function"'
   );
   defineRule(
       'abstr-lim', 'mathspeak.brief',
       '[t] "lim"',
-      'self::function',  '@role="limit function"'
+      'self::function', '@role="limit function"'
   );
   defineSpecialisedRule(
       'abstr-lim', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -174,15 +172,13 @@ sre.SummaryRules.initSummaryRules_ = function() {
       'abstr-continued-fraction', 'default.default',
       '[t] "continued fraction"',
       'self::fraction',
-      'children/*[2]/descendant-or-self::*[@role="ellipsis"]',
-
+      'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
   );
   defineRule(
       'abstr-continued-fraction', 'mathspeak.brief',
       '[t] "continued frac"',
       'self::fraction',
-      'children/*[2]/descendant-or-self::*[@role="ellipsis"]',
-
+      'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
   );
   defineSpecialisedRule(
       'abstr-continued-fraction', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -225,6 +221,16 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineSpecialisedRule(
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
   );
+  // Content following the root expression.
+  defineRule(
+      'abstr-root-nested', 'default.default',
+      '[t] "nested root of index"; ' +
+      '[n] children/*[1] (engine:modality="speech"); [t] "endindex"',
+      'self::root', 'contains(@grammar, "collapsed")',
+      'children/*/descendant-or-self::sqrt or' +
+      ' children/*/descendant-or-self::root',
+      'following-sibling::* or ancestor::*/following-sibling::*'
+  );
   defineRule(
       'abstr-root-nested', 'default.default',
       '[t] "nested root of index"; ' +
@@ -232,33 +238,22 @@ sre.SummaryRules.initSummaryRules_ = function() {
       'self::root', 'children/*/descendant-or-self::sqrt or' +
       ' children/*/descendant-or-self::root'
   );
-  // Content following the root expression.
-  defineRule(
-      'abstr-root-nested', 'default.default',
-      '[t] "nested root of index"; ' +
-      '[n] children/*[1] (engine:modality="speech"); [t] "endindex"',
-      'self::root',
-      'children/*/descendant-or-self::sqrt or' +
-      ' children/*/descendant-or-self::root',
-      'following-sibling::* or ancestor::*/following-sibling::*'
-  );
   defineRule(
       'abstr-root-nested', 'mathspeak.brief',
       '[t] "nested root"',
-      'self::root',
-      'children/*/descendant-or-self::sqrt or ' +
+      'self::root', 'children/*/descendant-or-self::sqrt or ' +
       'children/*/descendant-or-self::root'
   );
   defineSpecialisedRule(
       'abstr-root-nested', 'mathspeak.brief', 'mathspeak.sbrief'
   );
 
-
   // Superscript
   defineRule(
       'abstr-superscript', 'default.default',
       '[t] "power"',
-      'self::superscript');
+      'self::superscript'
+  );
 
   // Subscript
   defineRule(
@@ -272,7 +267,8 @@ sre.SummaryRules.initSummaryRules_ = function() {
       'abstr-subsup', 'default.default',
       '[t] "power with subscript"',
       'self::superscript',
-      'name(children/*[1])="subscript"');
+      'name(children/*[1])="subscript"'
+  );
 
   // Infixop
   defineRule(
@@ -284,7 +280,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-infixop', 'default.default',
       '[t] @role (grammar:localRole); [t] "with variable number of elements"',
-      'self::infixop',  'count(./children/*)>2',
+      'self::infixop', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
   defineRule(
@@ -299,12 +295,12 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-addition', 'default.default',
       '[t] "sum with"; [t] count(./children/*); [t] "summands"',
-      'self::infixop',  '@role="addition"'
+      'self::infixop', '@role="addition"'
   );
   defineRule(
       'abstr-addition', 'mathspeak.brief',
       '[t] "sum"',
-      'self::infixop',  '@role="addition"'
+      'self::infixop', '@role="addition"'
   );
   defineSpecialisedRule(
       'abstr-addition', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -312,36 +308,36 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-var-addition', 'default.default',
       '[t] "sum with variable number of summands"',
-      'self::infixop',  '@role="addition"',
+      'self::infixop', '@role="addition"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-multiplication', 'default.default',
       '[t] "product with"; [t] count(./children/*); [t] "factors"',
-      'self::infixop',  '@role="multiplication"'
+      'self::infixop', '@role="multiplication"'
   );
   defineRule(
       'abstr-multiplication', 'mathspeak.brief',
       '[t] "product"',
-      'self::infixop',  '@role="multiplication"'
+      'self::infixop', '@role="multiplication"'
   );
   defineSpecialisedRule(
       'abstr-multiplication', 'mathspeak.brief', 'mathspeak.sbrief'
   );
   defineRuleAlias(
       'abstr-multiplication',
-      'self::infixop',  '@role="implicit"'
+      'self::infixop', '@role="implicit"'
   );
   defineRule(
       'abstr-var-multiplication', 'default.default',
       '[t] "product with variable number of factors"',
-      'self::infixop',  '@role="multiplication"',
+      'self::infixop', '@role="multiplication"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
   defineRuleAlias(
       'abstr-var-multiplication',
-      'self::infixop',  '@role="implicit"',
+      'self::infixop', '@role="implicit"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
@@ -370,7 +366,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-binomial', 'default.default',
       '[t] "binomial"',
-      'self::vector',  '@role="binomial"'
+      'self::vector', '@role="binomial"'
   );
   // These two are needed to avoid the vector rule firing.
   defineSpecialisedRule(
@@ -382,14 +378,13 @@ sre.SummaryRules.initSummaryRules_ = function() {
   // Matrix
   defineRule(
       'abstr-determinant', 'default.default',
-      '[t] count(./children/*);' +
-      ' [t] "dimensional determinant"',
-      'self::matrix',  '@role="determinant"'
+      '[t] count(./children/*); [t] "dimensional determinant"',
+      'self::matrix', '@role="determinant"'
   );
   defineRule(
       'abstr-determinant', 'mathspeak.brief',
       '[t] "determinant"',
-      'self::matrix',  '@role="determinant"'
+      'self::matrix', '@role="determinant"'
   );
   defineSpecialisedRule(
       'abstr-determinant', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -397,20 +392,19 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-var-determinant', 'default.default',
       '[t] "n dimensional determinant"',
-      'self::matrix',  '@role="determinant"',
+      'self::matrix', '@role="determinant"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
   defineRule(
       'abstr-squarematrix', 'default.default',
-      '[t] count(./children/*);' +
-      ' [t] "dimensional square matrix"',
-      'self::matrix',  '@role="squarematrix"'
+      '[t] count(./children/*); [t] "dimensional square matrix"',
+      'self::matrix', '@role="squarematrix"'
   );
   defineRule(
       'abstr-squarematrix', 'mathspeak.brief',
       '[t] "square matrix"',
-      'self::matrix',  '@role="squarematrix"'
+      'self::matrix', '@role="squarematrix"'
   );
   defineSpecialisedRule(
       'abstr-squarematrix', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -418,14 +412,13 @@ sre.SummaryRules.initSummaryRules_ = function() {
 
   defineRule(
       'abstr-rowvector', 'default.default',
-      '[t] count(./children/row/children/*); ' +
-      '[t] "dimensional row vector"',
-      'self::matrix',  '@role="rowvector"'
+      '[t] count(./children/row/children/*); [t] "dimensional row vector"',
+      'self::matrix', '@role="rowvector"'
   );
   defineRule(
       'abstr-rowvector', 'mathspeak.brief',
       '[t] "row vector"',
-      'self::matrix',  '@role="rowvector"'
+      'self::matrix', '@role="rowvector"'
   );
   defineSpecialisedRule(
       'abstr-rowvector', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -433,7 +426,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-var-matrix', 'default.default',
       '[t] "n dimensional row vector"',
-      'self::matrix',  '@role="rowvector"',
+      'self::matrix', '@role="rowvector"',
       './children/*/children/*/children/punctuation[@role="ellipsis"]'
   );
 
@@ -486,7 +479,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
   // Punctuated
   defineRule(
       'abstr-punctuated', 'default.default',
-      '[n] content/*[1]; [t] "separated list";' +
+      '[n] content/*[1]; [t] "separated list"; ' +
       '[t] "of length"; [t] count(children/*) - count(content/*)',
       'self::punctuated'
   );
@@ -516,26 +509,25 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-integral', 'default.default',
       '[t] "integral"',
-    '@role="integral"'
+      '@role="integral"'
   );
 
   defineRule(
       'abstr-relation', 'default.default',
       '[t] @role (grammar:localRole);',
-    'self::relseq', //
-    'count(./children/*)=2'
+      'self::relseq', 'count(./children/*)=2'
   );
 
   defineRule(
       'abstr-relation-seq', 'default.default',
       '[t] @role (grammar:localRole); [t] "sequence";' +
       ' [t] "with"; [t] count(./children/*); [t] "elements"',
-      'self::relseq',  'count(./children/*)>2',
+      'self::relseq', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-relation-seq', 'mathspeak.brief',
       '[t] @role (grammar:localRole); [t] "sequence"',
-      'self::relseq',  'count(./children/*)>2'
+      'self::relseq', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
       'abstr-relation-seq', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -544,7 +536,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
       'abstr-var-relation', 'default.default',
       '[t] @role (grammar:localRole); [t] "sequence";' +
       ' [t] "with variable number of elements"',
-      'self::relseq',  'count(./children/*)>2',
+      'self::relseq', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
 
@@ -555,7 +547,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
   );
   defineRuleAlias(
       'abstr-var-relation',
-      'self::multirel',  '@role!="unknown"',
+      'self::multirel', '@role!="unknown"',
       'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
   );
 
@@ -563,12 +555,12 @@ sre.SummaryRules.initSummaryRules_ = function() {
       'abstr-multirel', 'default.default',
       '[t] "relation sequence";' +
       ' [t] "with"; [t] count(./children/*); [t] "elements"',
-      'self::multirel',  'count(./children/*)>2'
+      'self::multirel', 'count(./children/*)>2'
   );
   defineRule(
       'abstr-multirel', 'mathspeak.brief',
       '[t] "relation sequence"',
-      'self::multirel',  'count(./children/*)>2'
+      'self::multirel', 'count(./children/*)>2'
   );
   defineSpecialisedRule(
       'abstr-multirel', 'mathspeak.brief', 'mathspeak.sbrief'
@@ -576,7 +568,7 @@ sre.SummaryRules.initSummaryRules_ = function() {
   defineRule(
       'abstr-var-multirel', 'default.default',
       '[t] "relation sequence with variable number of elements"',
-      'self::multirel',  'count(./children/*)>2',
+      'self::multirel', 'count(./children/*)>2',
       './children/punctuation[@role="ellipsis"]'
   );
 
