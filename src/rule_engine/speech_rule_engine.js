@@ -657,11 +657,12 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
     }
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
-  props[sre.DynamicCstr.Axis.MODALITY] = [modality];
   props[sre.DynamicCstr.Axis.MODALITY] =
     [modality === sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY] ?
      modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
-  props[sre.DynamicCstr.Axis.DOMAIN] = [domain];
+  props[sre.DynamicCstr.Axis.DOMAIN] =
+    [modality !== 'speech' ?
+     sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
   var order = dynamic.getOrder();
   for (var i = 0, axis; axis = order[i]; i++) {
     if (!props[axis]) {
