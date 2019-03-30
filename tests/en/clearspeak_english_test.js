@@ -17,7 +17,7 @@
 //
 
 
-goog.provide('sre.ClearspeakTest');
+goog.provide('sre.ClearspeakEnglishTest');
 
 goog.require('sre.ClearspeakAbsoluteValue');
 goog.require('sre.ClearspeakCapitalLetters');
@@ -42,14 +42,14 @@ goog.require('sre.ClearspeakTrigometry');
 /**
 * @constructor
 */
-sre.ClearspeakTest = function() { };
+sre.ClearspeakEnglishTest = function() { };
 
 
 /**
  * List of clearspeak tests to run.
  * @type {Array}
  */
-sre.ClearspeakTest.testList = [
+sre.ClearspeakEnglishTest.testList = [
   sre.ClearspeakAbsoluteValue,
   sre.ClearspeakCapitalLetters,
   sre.ClearspeakExponents,
