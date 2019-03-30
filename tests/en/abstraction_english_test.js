@@ -64,9 +64,12 @@ sre.AbstractionEnglishTest = function() {
 goog.inherits(sre.AbstractionEnglishTest, sre.AbstractRuleTest);
 
 
-sre.AbstractionEnglishTest.prototype.toSpeech = function(mathMl) {
+/**
+ * @override
+ */
+sre.AbstractionEnglishTest.prototype.getSpeech = function(mathMl) {
   if (!this.steps) {
-    return sre.AbstractionEnglishTest.base(this, 'toSpeech', mathMl);
+    return sre.AbstractionEnglishTest.base(this, 'getSpeech', mathMl);
   }
   sre.ProcessorFactory.process('walker', mathMl);
   this.steps.forEach(function(step) {
