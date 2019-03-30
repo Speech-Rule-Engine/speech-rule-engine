@@ -15,20 +15,19 @@
 // Funded by the Mozilla Foundation.
 
 /**
- * @fileoverview Abstract class for clearspeak rule tests.
+ * @fileoverview Abstract class for French clearspeak rule tests.
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
 goog.provide('sre.ClearspeakFrenchRuleTest');
 
-goog.require('sre.AbstractRuleTest');
-goog.require('sre.ClearspeakPreferences');
+goog.require('sre.ClearspeakRuleTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.ClearspeakRuleTest}
  */
 sre.ClearspeakFrenchRuleTest = function() {
   sre.ClearspeakFrenchRuleTest.base(this, 'constructor');
@@ -38,28 +37,8 @@ sre.ClearspeakFrenchRuleTest = function() {
    */
   this.locale = 'fr';
 
-  /**
-   * @override
-   */
-  this.domain = 'clearspeak';
-
-  /**
-   * @override
-   */
-  this.semantics = true;
-
   this.actual = true;
   this.setActive('ClearspeakFrench');
   this.startExamples();
 };
-goog.inherits(sre.ClearspeakFrenchRuleTest, sre.AbstractRuleTest);
-
-
-/**
- * @override
- */
-sre.ClearspeakFrenchRuleTest.prototype.setUpTest = function() {
-  sre.System.getInstance().setupEngine(
-      {markup: sre.Engine.Markup.PUNCTUATION});
-  sre.Engine.getInstance().parser = new sre.ClearspeakPreferences.Parser();
-};
+goog.inherits(sre.ClearspeakFrenchRuleTest, sre.ClearspeakRuleTest);
